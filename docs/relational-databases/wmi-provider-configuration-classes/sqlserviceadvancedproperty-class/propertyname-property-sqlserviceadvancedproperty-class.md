@@ -1,6 +1,6 @@
 ---
-title: PropertyName プロパティ (SqlServiceAdvancedProperty クラス) |Microsoft Docs
-ms.custom: ''
+title: PropertyName プロパティ (Sqlserviceadvanced プロパティ)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e51d3475-e998-47f3-837b-4b4bd7635dcb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fbf22e7fd5db0a3af1128386940571c9fb0d30b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf217949ef987c26c81ca034a098ebe4182a52de
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045769"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880518"
 ---
 # <a name="propertyname-property-sqlserviceadvancedproperty-class"></a>PropertyName プロパティ (SqlServiceAdvancedProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   詳細プロパティの名前を取得または設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +35,16 @@ ms.locfileid: "68045769"
 object.PropertyName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  詳細プロパティを表す [SqlServiceAdvancedProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  詳細プロパティの名前を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

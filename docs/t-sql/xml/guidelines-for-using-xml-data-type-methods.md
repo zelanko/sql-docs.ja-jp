@@ -1,5 +1,5 @@
 ---
-title: xml データ型メソッドの使用に関するガイドライン | Microsoft Docs
+title: xml データ型メソッドの使用に関するガイドライン
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2360243c2499d5b9cb274ab7dccfed9626783829
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051302"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393080"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml データ型メソッドの使用に関するガイドライン
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、**xml** データ型のメソッドの使用に関するガイドラインを説明します。
 
@@ -60,7 +60,7 @@ Msg errorNumber, Level levelNumber, State stateNumber:
 XQuery [database.table.method]: description_of_error
 ```
 
-例:
+次に例を示します。
 
 ```
 Msg 2396, Level 16, State 1:

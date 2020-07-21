@@ -1,5 +1,5 @@
 ---
-title: コレクションのプロパティ、メソッド、およびイベントをグループ化 |Microsoft Docs
+title: グループコレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Groups collection [ADOX], members
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3e3b7147593cc6d6f1654ccdb0f9d362bd7b421
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 424a57e47b9e9f788126680a2090071f517abeeb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966163"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761720"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Groups コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
- [Append メソッド (グループ)](../../../ado/reference/adox-api/append-method-adox-groups.md)  
+ [Append メソッド (Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)  
   
  [Delete メソッド (コレクション)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   
@@ -35,5 +35,5 @@ ms.locfileid: "67966163"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)

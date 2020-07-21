@@ -1,5 +1,6 @@
 ---
 title: Database Mail XPs サーバー構成オプション | Microsoft Docs
+description: "\"DatabaseMail XPs\" オプションについて説明します。 このオプションをオンにして、SQL Server でデータベース メールを使用できるようにするさまざまな方法について説明します。"
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 - Database Mail XPs option
 - Database Mail [SQL Server], enabling
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d495017b9bf2a5f58a5a880f1ce9696976ebd50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772568"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs サーバー構成オプション
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 可能な値は次のとおりです。  
+**Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 指定できる値は、  
   
 - `0`:データベース メールを使用できません (既定)。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68011959"
   
  **Database Mail XPs** オプションを `0` に設定すると、データベース メールは開始されません。 データベース メールが実行されている場合にこのオプションを `0` に設定すると、`DatabaseMailExeMinimumLifeTime` オプションで設定したアイドル状態の時間が続くまで、データベース メールは継続して実行され、メールが送信されます。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
  次の例では、データベース メール拡張ストアド プロシージャが有効になります。  
   
 ```  

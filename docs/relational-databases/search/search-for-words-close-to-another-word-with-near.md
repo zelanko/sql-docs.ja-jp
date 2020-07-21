@@ -20,18 +20,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 401be9b8f231704dc5fd44860d03208cc1fa7a5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629184"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述語または [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 関数で*近接語句* (**NEAR**) を使用すると、互いに似た単語や語句を検索できます。 
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  *CONTAINS* 述語または **CONTAINSTABLE** 関数で "[近接語句](../../t-sql/queries/contains-transact-sql.md)" ([NEAR](../../relational-databases/system-functions/containstable-transact-sql.md)) を使用すると、互いに似た単語や語句を検索できます。 
   
-##  <a name="Custom_NEAR"></a> NEAR の概要  
+##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> NEAR の概要  
 **NEAR** には次の機能があります。  
 -   最初の検索語句と最後の検索語句を分離する非検索用語の最大数を指定することができます。
 
@@ -71,7 +71,7 @@ ms.locfileid: "68702830"
 
 構文の詳細については、「[CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)」を参照してください。  
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 ### <a name="example-1"></a>例 1
  たとえば、次のように "Smith" から 2 つの語の範囲内にある "John" を検索できます。  
   
@@ -109,7 +109,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>NEAR と他の語句を組み合わせる  
- NEAR と他のいくつかの語句を組み合わせることができます。 AND (&)、OR (|)、または AND NOT (&!) を使用して、カスタム近接語句と他のカスタム近接語句、単純語句、またはプレフィックス語句を組み合わせることができます。 例:  
+ NEAR と他のいくつかの語句を組み合わせることができます。 AND (&)、OR (|)、または AND NOT (&!) を使用して、カスタム近接語句と他のカスタム近接語句、単純語句、またはプレフィックス語句を組み合わせることができます。 次に例を示します。  
   
 -   CONTAINS('NEAR((*term1*, *term2*),5) AND *term3*')  
   
@@ -121,7 +121,7 @@ GO
   
 -   CONTAINS('NEAR((*term1*, *term2*),5) OR NEAR((*term3*, *term4*),2, TRUE)')  
   
- 例を次に示します。  
+ たとえば、次のように入力します。  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -129,7 +129,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
  NEAR を生成語句 (ISABOUT ...) や重み付け語句 (FORMSOF ...) と組み合わせることはできません。  
   
-##  <a name="Additional_Considerations"></a> 近接検索に関する詳細情報  
+##  <a name="more-info-about-proximity-searches"></a><a name="Additional_Considerations"></a> 近接検索に関する詳細情報  
    
 -   検索語句の出現の重複  
   

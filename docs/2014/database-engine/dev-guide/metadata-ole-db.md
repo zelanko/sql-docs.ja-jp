@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 27511f209dbf73906f77c0c5b1721d3cceec287f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88a5dcd54dac7a0886d1c33d2e121af8779bf6b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933473"
 ---
 # <a name="metadata-ole-db"></a>メタデータ (OLE DB)
   ここでは、パラメーターのメタデータ、結果セット列のメタデータ、およびスキーマ行セットのメタデータについて説明します。  
@@ -27,7 +26,7 @@ ms.locfileid: "62780896"
  [パラメーターと行セットのメタデータ](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)  
  OLE DB の日付と時刻の機能強化に関連する構造体およびコマンドの情報について説明します。  
   
- [日付と時刻、およびスキーマ行セット](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
+ [日付と時刻およびスキーマ行セット](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
  OLE DB スキーマ行セットの更新について説明します。  
   
 ## <a name="see-also"></a>参照  

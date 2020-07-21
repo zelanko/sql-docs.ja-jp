@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLGetTypeInfo
 ms.assetid: 6e9ce02b-97c7-4c1a-91e0-829df7459c84
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43319f7f23741a1533321c9369077d42a2484395
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 711652e22318d089b02fe8e79cb592f0a42dfff9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898750"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81295132"
 ---
 # <a name="sqlgettypeinfo-dbase-driver"></a>SQLGetTypeInfo (dBASE ドライバー)
 > [!NOTE]  
->  このトピックでは、dBASE ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックでは、dBASE ドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- によって生成されたテーブルの型 (TYPE_NAME) の名前が返される**SQLGetTypeInfo**データ ソースで最もよく使用する名前になります。  
+ **SQLGetTypeInfo**によって生成されるテーブルに返される型の名前 (TYPE_NAME) は、データソースで最もよく使用される名前になります。  
   
- SQL_ALL_EXCEPT_LIKE が返されます、検索可能な列で、バイトのカウンター、Double、1 つ、Long、Short データ型。 (LIKE 機能は、値を比較を実行し、ODBC 標準変換関数を使用する文字に変換することで実現できます)。
+ SQL_ALL_EXCEPT_LIKE は、Byte、Counter、Double、Single、Long、Short の各データ型の検索可能な列に返されます。 (LIKE 機能は、ODBC 正規変換関数を使用して値を文字に変換してから、比較を実行することで実現できます)。

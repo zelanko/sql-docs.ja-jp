@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f2b9006c03ec0d22ab9194c385d95a2829c023e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: baaaaf3966841fb1ff97e9b8b29bb115ff0b4be4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762413"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553372"
 ---
-# <a name="mssqlserver7907"></a>MSSQLSERVER_7907
+# <a name="mssqlserver_7907"></a>MSSQLSERVER_7907
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7907|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー:パーティション ID PN_ID のディレクトリ 'DIRECTORY' は、有効な Filestream ディレクトリではありません。|  
+|メッセージ テキスト|テーブル エラー:パーティション ID PN_ID のディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
   
 ## <a name="explanation"></a>説明  
  列ディレクトリの名前は、パーティションのリレーショナル エンジン列 ID です。 列ディレクトリ名を列 ID に変換できない場合、このディレクトリは有効な列ディレクトリではありません。  
@@ -48,6 +47,6 @@ ms.locfileid: "62762413"
  問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
- 該当なし。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
+ 適用不可。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   
   

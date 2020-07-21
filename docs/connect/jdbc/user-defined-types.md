@@ -1,21 +1,21 @@
 ---
-title: ユーザー定義型 |Microsoft Docs
+title: ユーザー定義型 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae4ada0ee18b9066df27a130a8f68405b760159d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ce45cb7fb76c1b01b57d96d86e34b051dc73043
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004099"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916948"
 ---
 # <a name="user-defined-types"></a>ユーザー定義型
 

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47b8e4b87ab3150ae7bf67d3c3a2f9c5e0732294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23ea130b9d2033128adc99413c053d66936e3ccc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064556"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>ストアド プロシージャに対する権限の許可
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ストアド プロシージャに対する権限を許可する方法について説明します。 権限は、データベース内の既存のユーザー、データベース ロール、またはアプリケーション ロールに許可することができます。  
@@ -28,7 +27,7 @@ ms.locfileid: "63015586"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ストアド プロシージャに対する権限を許可するために使用するもの:**  
   
@@ -36,18 +35,18 @@ ms.locfileid: "63015586"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、システム プロシージャやシステム関数に対する権限を許可することはできません。 代わりに、 [GRANT (オブジェクト権限の許可)](/sql/t-sql/statements/grant-object-permissions-transact-sql) を使用してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。 プロシージャが属しているスキーマに対する ALTER 権限、またはプロシージャに対する CONTROL 権限が必要です。 詳細については、「 [GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql)を使用して、ストアド プロシージャに対する権限を許可する方法について説明します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-grant-permissions-on-a-stored-procedure"></a>ストアド プロシージャに対して権限を許可するには  
   
@@ -69,7 +68,7 @@ ms.locfileid: "63015586"
   
  **[許可]** を選択すると、指定した権限が与えられます。 **[許可の有無]** を選択すると、指定した権限をさらに他のプリンシパルにも許可できるようになります。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-grant-permissions-on-a-stored-procedure"></a>ストアド プロシージャに対して権限を許可するには  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86add979aa790e438454c319dee68b8df95a6669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d4750f030dc1193ef8ed8be1b14198ca21e99be6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968095"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71288724"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 式)
 
@@ -41,7 +41,7 @@ NULL(typespec)
 ## <a name="result-types"></a>戻り値の型  
  NULL 値である任意の有効なデータ型です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、NULL 関数は NULL を返します。  
   
  一部のデータ型の NULL 値を要求する場合は、パラメーターが必要となります。 次の表に、パラメーターが必要なデータ型とそのパラメーターの一覧を示します。  
@@ -56,7 +56,7 @@ NULL(typespec)
 |DT_TEXT|*codepage*|(DT_TEXT,1252) は、1252 コード ページを使用して、値を DT_TEXT データ型にキャストします。|  
   
 ## <a name="expression-examples"></a>式の例  
- これらの例は、DT_STR、DT_DATE、DT_BOOL データ型の NULL 値を返します。  
+ これらの例は、DT_STR、DT_DATE、および DT_BOOL データ型の NULL 値を返します。  
   
 ```  
 NULL(DT_STR,10,1252)  

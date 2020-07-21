@@ -1,5 +1,5 @@
 ---
-title: 何かテーブル以外のアイテム (Visual Database Tools) を使用してクエリを作成する |Microsoft Docs
+title: テーブル以外のものを使用してクエリを作成する方法 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d28b8b6ba540ae361c3c6ab74a1a45763f7bee2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63184326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058130"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>テーブル以外のアイテムを使用したクエリの作成 (Visual Database Tools)
   検索クエリを作成するときは常に、必要な列、必要な行、およびクエリ プロセッサが基になるデータを検索する場所を明示します。 通常、この基になるデータは 1 つのテーブル、または相互に結合された複数のテーブルで構成されています。 ただし、基になるデータは、テーブル以外のソースを使用してもかまいません。 実際、ビュー、クエリ、シノニム、またはテーブルを返すユーザー定義関数のデータを使用できます。  
@@ -147,6 +146,6 @@ FROM
   
 ```  
   
- "VPA30890F" は、取得の対象となる組織の管理者の emp_id を示しています。 ユーザー定義関数をクエリに追加する方法については、「[クエリへのテーブルの追加 (Visual Database Tools)](visual-database-tools.md)」を参照してください。 ユーザー定義関数の詳しい説明については、「[ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)」を参照してください。  
+ "VPA30890F" は、取得の対象となる組織の管理者の emp_id を示しています。 ユーザー定義関数をクエリに追加する方法については、「[クエリへのテーブルの追加 (Visual Database Tools)](visual-database-tools.md)」を参照してください。 ユーザー定義関数の詳しい説明については、「 [ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)」を参照してください。  
   
   

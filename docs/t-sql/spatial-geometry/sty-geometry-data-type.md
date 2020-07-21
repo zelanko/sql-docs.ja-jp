@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 05f4ddd6366fbb09b4c5f0c9dd186f415fdc16ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf8def807299a766ab66506c4c0769705f2d0462
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762095"
 ---
 # <a name="sty-geometry-data-type"></a>STY (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **Point** インスタンスの Y 座標プロパティ。
   
@@ -39,12 +39,12 @@ ms.locfileid: "68066143"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型:**SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスが地点である場合、このプロパティの値は null になります。 このプロパティは読み取り専用です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Point` インスタンスを作成し、`STY` を使用して、このインスタンスの Y 座標を取得する例を次に示します。  
   
 ```  

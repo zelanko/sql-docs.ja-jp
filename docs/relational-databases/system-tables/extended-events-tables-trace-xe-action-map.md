@@ -1,5 +1,5 @@
 ---
-title: trace_xe_action_map (TRANSACT-SQL) |Microsoft Docs
+title: trace_xe_action_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,29 +16,29 @@ helpviewer_keywords:
 - extended events [SQL Server], tables
 - trace_xe_action_map
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 835ca342cabc37826c4425391e531820c8600b11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750207"
 ---
-# <a name="extended-events-tables---tracexeactionmap"></a>拡張イベント テーブル - trace_xe_action_map
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="extended-events-tables---trace_xe_action_map"></a>拡張イベント テーブル - trace_xe_action_map
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  SQL トレース列 ID に割り当てられている拡張イベントのアクションごとに 1 行のデータを格納します。 このテーブルは、sys スキーマ内の master データベースに格納されます。  
+  SQL トレース列 ID に割り当てられている拡張イベントのアクションごとに 1 行のデータを格納します。 このテーブルは、sys スキーマの master データベースに格納されます。  
   
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|マップされる SQL トレース列の ID。|  
 |package_name|**nvarchar(60)**|マップされたアクションがある拡張イベント パッケージの名前です。|  
-|xe_action_name|**nvarchar(60)**|SQL トレース列にマップされている拡張イベントのアクションの名前。|  
+|xe_action_name|**nvarchar(60)**|SQL トレース列にマップされる拡張イベントアクションの名前です。|  
   
-## <a name="remarks"></a>コメント  
- SQL トレース列に相当する拡張イベントのアクションを識別するためには、次のクエリを使用することができます。  
+## <a name="remarks"></a>Remarks  
+ 次のクエリを使用して、SQL トレース列に相当する拡張イベントアクションを特定できます。  
   
 ```  
 SELECT tc.name AS trace_column, am.package_name, am.xe_action_name  

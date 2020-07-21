@@ -1,5 +1,5 @@
 ---
-title: getMaxColumnNameLength メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getMaxColumnNameLength メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 67fb5407-55b9-48b6-87f3-112700f304ba
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab90493a897d5b9561f3e1f4f58413a5de8e8b9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d8120f586f0b4bac3e5951cc49a7c5bb74927146
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982311"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926687"
 ---
 # <a name="getmaxcolumnnamelength-method-sqlserverdatabasemetadata"></a>getMaxColumnNameLength メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public int getMaxColumnNameLength()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMaxColumnNameLength メソッドは、getMaxColumnNameLength メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getMaxColumnNameLength メソッドは、java.sql.DatabaseMetaData インターフェイスの getMaxColumnNameLength メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

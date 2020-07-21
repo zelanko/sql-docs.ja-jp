@@ -1,6 +1,7 @@
 ---
-title: 別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード) | Microsoft Docs
-ms.date: 05/30/2017
+title: 別のコンピューターへのレポート サーバー データベースの移動 (ネイティブ モード) | Microsoft Docs
+description: SQL Server データベース エンジンのインストールで使用されるレポート サーバー データベースは、別のコンピューター上のインスタンスに移動できます。
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619686"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254582"
 ---
-# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
+# <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインストールで使用されるレポート サーバー データベースは、別のコンピューター上のインスタンスに移動できます。 reportserver と reportservertempdb データベースは、一緒に移動またはコピーする必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の使用環境には、両方のデータベースが必要です。reportservertempdb データベースは、移動する reportserver プライマリ データベースに名前を関連付ける必要があります。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のネイティブ モード。  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
   
  データベースの移動は、レポート サーバー アイテムに現在定義されているスケジュールされた操作には影響しません。  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65619686"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>レポート サーバー データベースのバックアップと復元  
  レポート サーバーをオフラインにできない場合は、バックアップと復元を使用して、レポート サーバー データベースを再配置できます。 バックアップと復元を実行するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用する必要があります。 データベースを復元した後、新しいサーバー インスタンスのデータベースを使用できるように、レポート サーバーを構成する必要があります。 詳細については、このトピックの最後にある手順を参照してください。  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>レポート サーバー データベースをバックアップする BACKUP および COPY_ONLY の使用  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>レポート サーバー データベースをバックアップする BACKUP および COPY_ONLY の使用  
  データベースをバックアップする場合、COPY_ONLY 引数を設定します。 データベースとログ ファイルの両方を必ずバックアップしてください。  
   
 ```  
@@ -215,7 +216,7 @@ GO
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスに **RSExecRole** ロールが含まれている必要があります。 ロールの作成、ログインの登録、およびロールの割り当ては、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールでレポート サーバー データベースの接続を設定する際に行います。 別の方法 (特に、rsconfig.exe コマンド プロンプト ユーティリティを使用する場合) で接続を構成する場合は、レポート サーバーが非動作状態になります。 場合によっては、レポート サーバーを利用可能な状態にするための WMI コードを作成する必要があります。 詳細については、「 [Reporting Service WMI プロバイダーへのアクセス](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)」を参照してください。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [RSExecRole の作成](../../reporting-services/security/create-the-rsexecrole.md)   
 [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   

@@ -1,5 +1,5 @@
 ---
-title: 制御フロー タブ |Microsoft Docs
+title: '[制御フロー] タブ |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.controlflowwindow.f1
 ms.assetid: 986e8fbe-f6ca-469a-9c7b-ad9b0b89f832
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4838abd00dcde10f78587647b5ea980a3b3ce456
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060360"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438289"
 ---
 # <a name="control-flow-tab"></a>[制御フロー] タブ
   **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの制御フローを構築できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "66060360"
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してこれらの機能をそれぞれのタスクまたはコンテナーに追加するには、デザイン画面上でオブジェクトを右クリックし、目的のオプションを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [優先順位制約](control-flow/precedence-constraints.md)   
  [SSIS デザイナー](ssis-designer.md)   
  [制御フロー](control-flow/control-flow.md)  

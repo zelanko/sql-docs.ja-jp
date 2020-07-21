@@ -1,5 +1,5 @@
 ---
-title: UDT を削除&#39;s が予約されている ORDPATH データ型の後に名前付き |Microsoft Docs
+title: Reserved ORDPATH data type | の後に指定された UDT&#39;s を削除します。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 474e910a-6abb-4e28-acc2-055338c011d4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ee155c70a8b10d4437d6b2f374c8b9497bf3faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0528d19de17781d863e3a42fdef7db558fe5d190
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092918"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059133"
 ---
-# <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>UDT を削除&#39;予約 ORDPATH データ型の後に名前付き s
+# <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Reserved ORDPATH データ型の後に指定された UDT&#39;s を削除します。
   アップグレード アドバイザーによって、`ORDPATH` データ型に予約されている語句に基づいて名前が付けられたユーザー定義型 (UDT) が検出されました。  
   
 ## <a name="component"></a>コンポーネント  

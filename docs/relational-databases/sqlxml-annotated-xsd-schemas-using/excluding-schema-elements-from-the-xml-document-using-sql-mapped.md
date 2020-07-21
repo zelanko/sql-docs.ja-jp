@@ -1,6 +1,6 @@
 ---
-title: 'Sql を使用して XML ドキュメントからスキーマ要素の除外: マップ |Microsoft Docs'
-ms.custom: ''
+title: 'Sql: マップされた XML ドキュメントからスキーマ要素を除外する'
+description: 'Sql: マップされた注釈を使用して、データベーステーブル (ビュー) または列にマップしない XSD スキーマに要素を作成する方法について説明します。'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,31 +22,32 @@ ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e92b8b90793a82df9c38b819630070373e6e8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84e6c1b0b5530ed33ade4a3ac4813b1a3fe6d251
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750789"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>sql:mapped を使用した XML ドキュメントからのスキーマ要素の除外
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  既定のマッピングでは、XSD スキーマのすべての要素と属性が、データベースのテーブルまたはビューと列にマップされます。 XSD スキーマをデータベース テーブル (ビュー) または列にマップされないと、XML で表示しない要素を作成するかどうかを指定できます、 **sql: マップ**注釈。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  既定のマッピングでは、XSD スキーマのすべての要素と属性が、データベースのテーブルまたはビューと列にマップされます。 XSD スキーマで、データベーステーブル (ビュー) または列にマップされていない、XML には表示されない要素を作成する場合は、 **sql:** map 注釈を指定できます。  
   
- **Sql: マップ**注釈は、スキーマを変更することはできません、またはその他のソースし、まだデータベースに格納されていないデータが含まれていますから XML を検証するスキーマを使用する場合に特に便利です。 **Sql: マップ**注釈とは異なります**sql: は定数**ことで、XML ドキュメントにマップされない要素と属性が表示されません。  
+ **Sql: マップ**された注釈は、スキーマを変更できない場合や、スキーマを使用して他のソースから XML を検証する場合や、データベースに格納されていないデータが含まれている場合に特に便利です。 **Sql: マップ**された注釈は、マップされていない要素と属性が XML ドキュメントに表示されないという点で、 **sql とは**異なります。  
   
- **Sql: マップ**注釈はブール値 (0 = false、1 = true)。 指定できる値は 0、1、true、false です。  
+ **Sql: マップ**された注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 注釈を指定する  
- 他のソースからの XSD スキーマがあるとします。 この XSD スキーマから成る、  **\<Person.Contact >** を持つ要素**ContactID**、 **FirstName**、 **LastName**と**HomeAddress**属性。  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>A: sql:mapped 注釈を指定する  
+ 他のソースからの XSD スキーマがあるとします。 この XSD スキーマは **\<Person.Contact>** 、 **ContactID**、 **FirstName**、 **LastName**、および**ホームアドレス**属性を持つ要素で構成されています。  
   
- この XSD スキーマを AdventureWorks データベースの Person.Contact テーブルにマッピング**sql: マップ**が指定されて、 **HomeAddress** Employees テーブルは、ホームを格納していないため、属性従業員の住所。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
+ この XSD スキーマを AdventureWorks データベースの Person. Contact テーブルにマップする場合、Employee テーブルには従業員の自宅の住所が格納されていないため、 **sql:** mapping がホーム**アドレス**属性に指定されています。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
   
- スキーマの残りの部分に対しては、既定のマッピングが適用されます。 **\<Person.Contact >** 要素は Person.Contact テーブルにマップされ、すべての属性は Person.Contact テーブル内の同じ名前の列にマップします。  
+ スキーマの残りの部分に対しては、既定のマッピングが適用されます。 **\<Person.Contact>** 要素は person. contact テーブルにマップされ、すべての属性は、person. contact テーブル内の同じ名前の列にマップされます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -85,11 +86,9 @@ ms.locfileid: "68067136"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     詳細については、「ADO を使用した[SQLXML クエリの実行](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- これは、結果セットです。  
+ 結果セットは次のようになります。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -105,9 +104,9 @@ ms.locfileid: "68067136"
 </ROOT>  
 ```  
   
- ContactID、FirstName、LastName は存在するが、HomeAddress はマッピング スキーマの場合は 0 を指定するためではなく、 **sql: マップ**属性。  
+ ContactID、FirstName、LastName は存在しますが、このマッピングスキーマでは**sql:** mapping 属性に0が指定されていないため、ホームアドレスが指定されていないことに注意してください。  
   
-## <a name="see-also"></a>参照  
- [XSD 要素および属性からテーブルと列の既定のマッピング&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>関連項目  
+ [テーブルおよび列への XSD 要素と属性の既定のマッピング &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

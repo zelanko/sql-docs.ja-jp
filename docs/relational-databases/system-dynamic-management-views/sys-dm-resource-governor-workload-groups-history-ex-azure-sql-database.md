@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL データベース) |Microsoft Docs
+title: dm_resource_governor_workload_groups_history_ex (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -18,77 +18,77 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: ac776813cb817d1357948091bfc48c981fa8e730
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41378ba13c6c85059313595161aeeb4226c6731e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718733"
 ---
-# <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+# <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-リソースの最後の 30 分 15 秒間隔でスナップショットを返しますでは、Azure SQL Database の統計をプールします。
+Azure SQL Database のリソースプール統計の最後の32分 (合計 128) の20秒間隔でスナップショットを返します。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**pool_id**| ssNoversion |リソース プールの ID。 NULL 値は許可されません。|
-|**group_id**| ssNoversion |ワークロード グループの ID。 NULL 値は許可されません。|
-|**name**| nvarchar (256) |ワークロード グループの名前。 NULL 値は許可されません。|
-|**snapshot_time**| DATETIME |作成されたリソース グループの統計情報のスナップショットの日時。|
-|**duration_ms**| ssNoversion |現在と以前のスナップショット間の期間。|
-|**active_worker_count**| ssNoversion |現在のスナップショットで worker の合計数。|
-|**active_request_count**| ssNoversion |現在の要求数。 NULL 値は許可されません。|
-|**active_session_count**| ssNoversion |現在のスナップショットのアクティブなセッションの合計。|
-|**total_request_count**| BIGINT |ワークロード グループで完了した要求の累積数。 NULL 値は許可されません。|
-|**delta_request_count**| ssNoversion |最後のスナップショットからのワークロード グループで完了した要求の数。 NULL 値は許可されません。|
-|**total_cpu_usage_ms**| BIGINT |累積 CPU 使用率、このワークロード グループで、(ミリ秒)。 NULL 値は許可されません。|
-|**delta_cpu_usage_ms**| ssNoversion |最後のスナップショット以降のミリ秒単位の CPU 使用率。 NULL 値は許可されません。|
-|**delta_cpu_usage_preemptive_ms**| ssNoversion |Preemptive win32 呼び出しは最後のスナップショット以降しない SQL CPU の RG によって制御します。|
-|**delta_reads_reduced_memgrant_count**| ssNoversion |最大クエリ サイズの上限を最新のスナップショット以降に達しているメモリ許可の数。 NULL 値は許可されません。|
-|**reads_throttled**| ssNoversion |調整の読み取りの合計数。|
-|**delta_reads_queued**| ssNoversion |合計には、最後のスナップショット以降の IOs エンキューが読み取られました。 NULL 値が許可されます。 IO リソース グループが制御されていない場合は null です。|
-|**delta_reads_issued**| ssNoversion |読み取り最後のスナップショット以降に発行された Io の合計。 NULL 値が許可されます。 IO リソース グループが制御されていない場合は null です。|
-|**delta_reads_completed**| ssNoversion |読み取り Io の最後のスナップショット以降に完了の合計。 NULL 値は許可されません。|
-|**delta_read_bytes**| BIGINT |最後のスナップショットから読み取られたバイト数の合計。 NULL 値は許可されません。|
-|**delta_read_stall_ms**| ssNoversion |読み取り IO の到着から最後のスナップショットから完了までのミリ秒単位で合計時間。 NULL 値は許可されません。|
-|**delta_read_stall_queued_ms**| ssNoversion |読み取りの IO の到着から最後のスナップショットから発行までのミリ秒単位で合計時間。 NULL 値が許可されます。 IO リソース グループが制御されていない場合は null です。 0 以外の delta_read_stall_queued_ms RG IO が影響されるを意味します。|
-|**delta_writes_queued**| ssNoversion |最後のスナップショットから IOs のエンキューされたを書き込みの合計。 NULL 値が許可されます。 IO リソース グループが制御されていない場合は null です。|
-|**delta_writes_issued**| ssNoversion |IOs の最新のスナップショット以降に発行された書き込みの合計。 NULL 値が許可されます。 IO リソース グループが制御されていない場合は null です。|
-|**delta_writes_completed**| ssNoversion |合計書き込み IOs は、最後のスナップショット以降に完了します。 NULL 値は許可されません。|
-|**delta_writes_bytes**| BIGINT |最後のスナップショット以降に書き込まれたバイト数の合計数。 NULL 値は許可されません。|
-|**delta_write_stall_ms**| ssNoversion |書き込み IO の到着から最後のスナップショットから完了までのミリ秒単位の合計時間。 NULL 値は許可されません。|
-|**delta_background_writes**| ssNoversion |最後のスナップショット以降のバック グラウンド タスクによって実行される書き込みの合計。|
-|**delta_background_write_bytes**| BIGINT |書き込みの合計サイズ (バイト単位) の最後のスナップショット以降のバック グラウンド タスクによって実行されます。|
-|**delta_log_bytes_used**| BIGINT |使用 (バイト単位) の最後のスナップショット以降のログです。|
-|**delta_log_temp_db_bytes_used**| BIGINT |Tempdb のログ (バイト単位) の最後のスナップショット以降を使用します。|
-|**delta_query_optimizations**| BIGINT |このワークロード グループで最新のスナップショット以降のクエリの最適化の数。 NULL 値は許可されません。|
-|**delta_suboptimal_plan_generations**| BIGINT |最後のスナップショット以降にメモリ不足のためには、このワークロード グループで発生する最適なプラン生成結果の数。 NULL 値は許可されません。
-|**max_memory_grant_kb**| BIGINT |最大メモリは、(KB 単位) グループに付与します。|
-|**max_request_cpu_msec**| BIGINT |最大 CPU 使用率、1 つの要求 (ミリ秒)。 NULL 値は許可されません。|
-|**max_concurrent_request**| ssNoversion |最大同時要求数の現在の設定。 NULL 値は許可されません。|
-|**max_io**| ssNoversion |グループの最大の IO 制限。|
-|**max_global_io**| ssNoversion |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。
-|**max_queued_io**| ssNoversion |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。|
-|**max_log_rate_kb**| BIGINT |リソース グループ レベルでログの最大速度 (キロのバイト数/秒)。|
-|**max_session**| ssNoversion |グループのセッションの制限。|
-|**max_worker**| ssNoversion |グループのワーカーの上限。|
+|**pool_id**| INT |リソースプールの ID。 NULL 値は許可されません。|
+|**group_id**| INT |ワークロードグループの ID。 NULL 値は許可されません。|
+|**name**| nvarchar(256) |ワークロードグループの名前。 NULL 値は許可されません。|
+|**snapshot_time**| DATETIME |取得したリソースグループの統計スナップショットの Datetime。|
+|**duration_ms**| INT |現在のスナップショットから以前のスナップショットまでの期間。|
+|**active_worker_count**| INT |現在のスナップショット内の worker の合計数。|
+|**active_request_count**| INT |現在の要求数。 NULL 値は許可されません。|
+|**active_session_count**| INT |現在のスナップショット内のアクティブなセッションの合計数。|
+|**total_request_count**| bigint |ワークロードグループ内の完了した要求の累積数。 NULL 値は許可されません。|
+|**delta_request_count**| INT |前回のスナップショット以降のワークロードグループ内の完了した要求の数。 NULL 値は許可されません。|
+|**total_cpu_usage_ms**| bigint |このワークロードグループによる累積 CPU 使用率 (ミリ秒単位)。 NULL 値は許可されません。|
+|**delta_cpu_usage_ms**| INT |前回のスナップショットからの CPU 使用率 (ミリ秒)。 NULL 値は許可されません。|
+|**delta_cpu_usage_preemptive_ms**| INT |前回のスナップショット以降、プリエンプティブ win32 呼び出しは SQL CPU RG によって制御されません。|
+|**delta_reads_reduced_memgrant_count**| INT |最後のスナップショット以降のクエリサイズの上限に達したメモリ許可の数。 NULL 値は許可されません。|
+|**reads_throttled**| INT |スロットルされた読み取りの合計数。|
+|**delta_reads_queued**| INT |前回のスナップショット以降にエンキューされた読み取り Io の合計。 NULL 値が許可されます。 リソースグループに IO が適用されていない場合は Null です。|
+|**delta_reads_issued**| INT |前回のスナップショット以降に発行された読み取り Io の合計。 NULL 値が許可されます。 リソースグループに IO が適用されていない場合は Null です。|
+|**delta_reads_completed**| INT |前回のスナップショット以降に完了した読み取り Io の合計。 NULL 値は許可されません。|
+|**delta_read_bytes**| bigint |前回のスナップショット以降に読み取られたバイト数の合計です。 NULL 値は許可されません。|
+|**delta_read_stall_ms**| INT |前回のスナップショット以降の読み取り IO の到着から完了までの合計時間 (ミリ秒)。 NULL 値は許可されません。|
+|**delta_read_stall_queued_ms**| INT |読み取り IO の到着から最後のスナップショット以降の問題までの合計時間 (ミリ秒単位)。 NULL 値が許可されます。 リソースグループに IO が適用されていない場合は Null です。 0以外の delta_read_stall_queued_ms は、RG によって IO が影響を受けていることを意味します。|
+|**delta_writes_queued**| INT |前回のスナップショット以降にエンキューされた書き込み Io の合計。 NULL 値が許可されます。 リソースグループに IO が適用されていない場合は Null です。|
+|**delta_writes_issued**| INT |前回のスナップショット以降に発行された書き込み Io の合計。 NULL 値が許可されます。 リソースグループに IO が適用されていない場合は Null です。|
+|**delta_writes_completed**| INT |前回のスナップショット以降に完了した書き込み Io の合計。 NULL 値は許可されません。|
+|**delta_writes_bytes**| bigint |前回のスナップショット以降に書き込まれたバイト数の合計です。 NULL 値は許可されません。|
+|**delta_write_stall_ms**| INT |前回のスナップショット以降の書き込み IO の到着から完了までの合計時間 (ミリ秒)。 NULL 値は許可されません。|
+|**delta_background_writes**| INT |前回のスナップショット以降にバックグラウンドタスクによって実行された書き込みの合計数。|
+|**delta_background_write_bytes**| bigint |前回のスナップショット以降にバックグラウンドタスクで実行された書き込みサイズの合計 (バイト単位)。|
+|**delta_log_bytes_used**| bigint |最後のスナップショット以降に使用されたログ (バイト単位)。|
+|**delta_log_temp_db_bytes_used**| bigint |最後のスナップショットから使用された Tempdb ログ (バイト単位)。|
+|**delta_query_optimizations**| bigint |前回のスナップショット以降にこのワークロードグループで行われたクエリの最適化の数。 NULL 値は許可されません。|
+|**delta_suboptimal_plan_generations**| bigint |前回のスナップショット以降のメモリ不足が原因で、このワークロードグループで発生した最適ではないプランの生成の数。 NULL 値は許可されません。
+|**max_memory_grant_kb**| bigint |グループの最大メモリ許可 (KB 単位)。|
+|**max_request_cpu_msec**| bigint |1つの要求に対する最大 CPU 使用率 (ミリ秒単位)。 NULL 値は許可されません。|
+|**max_concurrent_request**| INT |同時要求の最大数の現在の設定です。 NULL 値は許可されません。|
+|**max_io**| INT |グループの最大 IO 制限。|
+|**max_global_io**| INT |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。
+|**max_queued_io**| INT |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。|
+|**max_log_rate_kb**| bigint |リソースグループレベルでの最大ログレート (1 秒あたりのキロバイト数)。|
+|**max_session**| INT |グループのセッション制限。|
+|**max_worker**| INT |グループの Worker 制限。|
 |||
 
 ## <a name="permissions"></a>アクセス許可
 
-このビューには、VIEW SERVER STATE 権限が必要です。
+このビューには VIEW SERVER STATE 権限が必要です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-ユーザーは、ワークロード プールのユーザーとして Azure SQL Database インスタンスのシステムの内部プール リソースの消費量をリアルタイムに近いを監視するには、この動的管理ビューにアクセスできます。
+ユーザーは、この動的管理ビューにアクセスして、ユーザーワークロードプールと Azure SQL Database インスタンスのシステム内部プールについて、ほぼリアルタイムのリソース消費を監視できます。
 
 > [!IMPORTANT]
-> この DMV によって表示されるデータのほとんどは、社内従量課金プラン向けで、変更される可能性があります。
+> この DMV によって提示されるデータのほとんどは、内部使用を目的としており、変更される可能性があります。
 
 ## <a name="examples"></a>使用例
 
-次の例では、ユーザー プールによってログ率の最大のデータと各スナップショットの消費量を返します。
+次の例では、ユーザープールによって各スナップショットの最大ログレートデータと消費量を返します。
 
 ```sql
 SELECT snapshot_time,
@@ -102,6 +102,6 @@ ORDER BY snapshot_time DESC;
 
 ## <a name="see-also"></a>関連項目
 
-- [翻訳ログ レートのガバナンス](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [エラスティック プール DTU のリソース制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [エラスティック プールの vCore のリソース制限](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [翻訳ログレートガバナンス](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [エラスティック プールの DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [エラスティック プールの仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

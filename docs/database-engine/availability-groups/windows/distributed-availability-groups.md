@@ -2,7 +2,7 @@
 title: 分散型可用性グループとは
 description: 分散型可用性グループは、2 つの異なる可用性グループにまたがるもので、特殊な種類の可用性グループです。 分散型可用性グループに参加する可用性グループは、同じ場所に存在している必要はありません。
 ms.custom: seodec18
-ms.date: 07/31/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 5d14e41c0650043febdddb904813d76be4d7c714
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702738"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894503"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)を補完します。
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](https://docs.microsoft.com/sql/sql-server/)を補完します。
 
 > [!NOTE]
 > "DAG" は、Exchange のデータベース可用性グループ機能で既に使われているため、"*分散型可用性グループ*" の正式な省略形ではありません。 Exchange のこの機能は、SQL Server の可用性グループまたは分散型可用性グループとは関係がありません。
@@ -45,7 +45,7 @@ ms.locfileid: "68702738"
 
 ![分散型可用性グループとそのデータ移動](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
-AG 2 のプライマリ レプリカが挿入、更新、削除を受け付けるようにする唯一の方法は、AG 1 から分散型可用性グループを手動でフェールオーバーすることです。 上の図で、AG 1 にはデータベースの書き込み可能なコピーが含まれるため、フェールオーバーを発行すると、AG 2 は挿入、更新、削除を処理できる可用性グループになります。 1 つの分散型可用性グループを別の分散型可用性グループにフェールオーバーする方法については、「[セカンダリ可用性グループにフェールオーバーする]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)」を参照してください。
+AG 2 のプライマリ レプリカが挿入、更新、削除を受け付けるようにする唯一の方法は、AG 1 から分散型可用性グループを手動でフェールオーバーすることです。 上の図で、AG 1 にはデータベースの書き込み可能なコピーが含まれるため、フェールオーバーを発行すると、AG 2 は挿入、更新、削除を処理できる可用性グループになります。 1 つの分散型可用性グループを別の分散型可用性グループにフェールオーバーする方法については、「[セカンダリ可用性グループにフェールオーバーする](configure-distributed-availability-groups.md#failover)」を参照してください。
 
 > [!NOTE]
 > SQL Server 2016 の分散型可用性グループは、FORCE_FAILOVER_ALLOW_DATA_LOSS オプションを使った可用性グループ間のフェールオーバーのみをサポートします。
@@ -140,7 +140,7 @@ SQL Server 2012 または 2014 には分散型可用性グループ機能が存�
 
 ![分散型可用性グループでの読み取りのスケールアウト](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-次の図の AG 1 は、次の 2 つの異なる分散型可用性グループのプライマリ レプリカになっています:分散型 AG 1 (AG 1 と AG2 で構成) および分散型 AG 2 (AG 1 と AG 3 で構成)。
+次の図の AG 1 は、2 つの異なる分散型可用性グループ (分散型 AG 1 (AG 1 と AG2 で構成) および分散型 AG 2 (AG 1 と AG 3 で構成)) のプライマリ レプリカになっています。
 
 
 ![分散型可用性グループを使った読み取りのスケールアウトのもう 1 つの例]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
@@ -148,7 +148,7 @@ SQL Server 2012 または 2014 には分散型可用性グループ機能が存�
 
 上のどちらの例でも、3 つの可用性グループ全体で最大 27 個のレプリカを持つことができ、そのすべてを読み取り専用クエリに使うことができます。 
 
-[読み取り専用ルーティング]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)は、分散型可用性グループでは正しく動作しません。 より詳細な情報:
+[読み取り専用ルーティング]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)は、分散型可用性グループでは正しく動作しません。 具体的には次のとおりです。
 
 1. 読み取り専用ルーティングを構成することができ、分散型可用性グループのプライマリ可用性グループに対して動作します。 
 2. 読み取り専用ルーティングを構成できますが、分散型可用性グループのセカンダリ可用性グループには動作しません。 すべてのクエリがリスナーを使ってセカンダリ可用性グループに接続する場合は、セカンダリ可用性グループのプライマリ レプリカに移動します。 それ以外の場合は、各レプリカがすべての接続をセカンダリ レプリカとして許可し、それらに直接アクセスするように、構成する必要があります。 ただし、フェールオーバー後に、セカンダリ可用性グループがプライマリになっている場合は、読み取り専用ルーティングは動作します。 この動作は、SQL Server 2016 の更新プログラムまたは SQL Server の将来のバージョンで、変更される可能性があります。
@@ -231,7 +231,7 @@ INNER JOIN sys.availability_replicas AS ar
 GO
 ```
 
-次の図は、分散型可用性グループに参加している 2 つ目の WSFC クラスターの出力例です。 SPAG1 は、次の 2 つのレプリカで構成されています:DENNIS と JY。 一方、SPDistAG という分散型可用性グループには、従来の可用性グループのようにインスタンス名ではなく、2 つの参加している可用性グループ (SPAG1 と SPAG2) の名前が表示されます。 
+次の図は、分散型可用性グループに参加している 2 つ目の WSFC クラスターの出力例です。 SPAG1 は、DENNIS と JY という 2 つのレプリカで構成されています。 一方、SPDistAG という分散型可用性グループには、従来の可用性グループのようにインスタンス名ではなく、2 つの参加している可用性グループ (SPAG1 と SPAG2) の名前が表示されます。 
 
 ![上記のクエリの出力例](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
@@ -404,7 +404,7 @@ GO
 
 
 
-### <a name="next-steps"></a>次の手順 
+### <a name="next-steps"></a>次のステップ 
 
 * [可用性グループ ウィザードの使用 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 

@@ -1,5 +1,5 @@
 ---
-title: メンバー グループの定義 |Microsoft Docs
+title: メンバーグループを定義する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2da7f19fa9626792a117ffa0108a28c50f32c5f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95f9516c7a0077e97af348afa863fe15c8d4528b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077301"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544754"
 ---
 # <a name="define-member-groups"></a>メンバー グループを定義する
   特定の属性に多数のメンバーが存在する場合は、そのメンバーをバケットにグループ化すると、階層内のデータを参照するときに表示されるメンバーの数を減らすことができます。 メンバーをグループ化するバケットの数を指定したり、バケットの名前付けスキーマを設定したりできます。 詳細については、[「属性メンバーのグループ化 (分離)](attribute-properties-group-attribute-members.md)」を参照してください。  
   
- メンバーをグループ化するには、**DiscretizationMethod** プロパティを設定します。このプロパティには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の **[プロパティ]** ウィンドウからアクセスできます。  
+ メンバーをグループ化するには、 **DiscretizationMethod** プロパティを設定します。このプロパティには、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ウィンドウからアクセスできます。  
   
- メンバー グループを作成した場合、ディメンションを処理するまで他のユーザーは変更内容を利用できません。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
+ メンバー グループを作成した場合、ディメンションを処理するまで他のユーザーは変更内容を利用できません。 詳細については、「[多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
   
 ### <a name="to-create-member-groups"></a>メンバー グループを作成するには  
   

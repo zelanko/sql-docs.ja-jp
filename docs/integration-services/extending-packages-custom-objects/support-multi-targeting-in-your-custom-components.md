@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e416575b77cfa4a944bfb6feadf98e74b898db26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 91524408998df8be0df4ee5d4ede0b641dbaa2a4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062952"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71287224"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントの複数バージョン対応のサポート
 
@@ -37,7 +37,7 @@ SSIS カスタム拡張機能の 5 種類すべてで、複数バージョン対
 -   ログ プロバイダー
 -   データ フロー コンポーネント
 
-マネージド拡張機能の場合、SSIS デザイナーが、指定されたターゲット バージョンの拡張機能のバージョンを読み込みます。 例:
+マネージド拡張機能の場合、SSIS デザイナーが、指定されたターゲット バージョンの拡張機能のバージョンを読み込みます。 次に例を示します。
 -   対応バージョンが SQL Server 2012 の場合、デザイナーは、拡張機能の2012 バージョンを読み込みます。
 -   対応バージョンが SQL Server 2016 の場合、デザイナーは、拡張機能の2016 バージョンを読み込みます。
 

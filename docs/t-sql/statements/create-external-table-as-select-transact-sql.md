@@ -20,23 +20,23 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98257dc148bbcedf58365267914704fb1f9e006d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073146"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197152"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   外部テーブルを作成してから、Hadoop または Azure Storage Blob に [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの結果を並列でエクスポートします。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] table_name   
     WITH (   
@@ -102,7 +102,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  例:  
   
- この例は、REJECT の 3 つのオプションが相互にどのように作用するかを示しています。 たとえば、REJECT_TYPE = percentage、REJECT_VALUE = 30、REJECT_SAMPLE_VALUE = 100 の場合、次のようなシナリオとなる可能性があります。  
+ この例は、REJECT の 3 つのオプションが相互にどのように作用するかを示しています。 たとえば、REJECT_TYPE = percentage で REJECT_VALUE = 30、かつ REJECT_SAMPLE_VALUE = 100 の場合、次のシナリオが発生する可能性があります。  
   
 -   データベースは、最初の 100 行の読み込みを試みます。この場合、失敗が 25、成功が 75 です。  
   
@@ -117,7 +117,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  WITH *common_table_expression*  
  共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、「[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)」を参照してください。  
   
- SELECT \<select_criteria> 新しいテーブルに SELECT ステートメントの結果を設定します。 *select_criteria* は、新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントについては、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
+ SELECT \<select_criteria> SELECT ステートメントの結果を新しいテーブルに追加します。 *select_criteria* は、新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントについては、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  このコマンドを実行するには、**データベース ユーザー**は以下のすべての権限またはメンバーシップが必要です。  
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  データベースは、データのエクスポート時に外部データ ソースで発生したすべての Java エラーを報告します。  
   
-##  <a name="GeneralRemarks"></a> 全般的な解説  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> 全般的な解説  
  CETAS ステートメントが完了したら、外部テーブルに対して [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行できます。 CREATE TABLE AS SELECT ステートメントを使用してインポートする場合を除き、これらの操作ではクエリの実行中にデータをデータベースにインポートします。  
   
  外部テーブルの名前と定義は、データベースのメタデータに格納されます。 データは外部データ ソースに格納されます。  
@@ -189,7 +189,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="locking"></a>ロック  
  SCHEMARESOLUTION オブジェクトの共有ロックを取得します。  
   
-##  <a name="Examples"></a> 使用例  
+##  <a name="examples"></a><a name="Examples"></a> 使用例  
   
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. CREATE EXTERNAL TABLE AS SELECT (CETAS) を使用して Hadoop テーブルを作成する  
  次の例では、ソース テーブル `dimCustomer` の列の定義とデータを使用して、`hdfsCustomer` という名前の新しい外部テーブルを作成します。  

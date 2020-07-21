@@ -1,5 +1,5 @@
 ---
-title: アドレス帳のサンプル アプリケーションを実行している |。Microsoft Docs
+title: アドレス帳サンプルアプリケーションを実行する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,37 +11,37 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 45324642d2f323297ecbe091617fbb14cc5fc785
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3a2c971f952a7c3f13b058bb3937201d323746d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922247"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758988"
 ---
 # <a name="running-the-address-book-sample-application"></a>アドレス帳のサンプル アプリケーションの実行
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- アドレス帳アプリケーションを実行するには、次の手順を実行します。  
+ アドレス帳アプリケーションを実行するには、次の手順に従います。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ### <a name="to-run-this-application"></a>このアプリケーションを実行するには  
   
-1.  Microsoft SQL Server が実行されていることを確認します。 クリックして**開始**、 をポイント**プログラム**、 をポイント**Microsoft SQL Server 7.0**、順にクリックします**Service Manager**します。 白い円の中で緑色の矢印がある場合は SQL Server を実行します。 ない場合 (がありますの赤い四角形、白い丸で)、をクリックして**開始/再開**します。  
+1.  Microsoft SQL Server が実行されていることを確認します。 [**スタート**] をクリックし、[**プログラム**]、[ **Microsoft SQL Server 7.0**] の順にポイントし、[ **Service Manager**] をクリックします。 白の円に緑色の矢印がある場合は、SQL Server が実行されています。 表示されていない場合は (白い丸の中に赤色の四角形が表示されます)、[**開始/続行**] をクリックします。  
   
-2.  Microsoft Internet Explorer 4.0 以降では、次のアドレスを入力します。  
+2.  Microsoft Internet Explorer 4.0 以降で、次のアドレスを入力します。  
   
-     **https://** *webserver* **/RDS/AddressBook/AddrBook.asp**  
+     **https://** *web*サーバー **/RDS/AddressBook/AddrBook.asp**  
   
-     場所*webserver* RDS サーバー コンポーネントがインストールされている Web サーバーの名前を指定します。  
+     ここで、 *webserver*は、RDS サーバーコンポーネントがインストールされている Web サーバーの名前です。  
   
-3.  「プログラム マネージャー」というタイトルのすべてのユーザーの一覧を表示する自分の電子メール名に基づく人を検索または編集の既存のレコードなど、アドレス帳のサンプル アプリケーションでさまざまなシナリオを試行できます。 クリックして**検索**データ グリッドを使用可能なすべての名前を入力します。  
+3.  その後、アドレス帳のサンプルアプリケーションでさまざまなシナリオを試すことができます。たとえば、電子メール名に基づいて個人を検索したり、"プログラムマネージャー" というタイトルのすべてのユーザーを一覧表示したり、既存のレコードを編集したりします。 [**検索**] をクリックすると、使用可能なすべての名前がデータグリッドに表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アドレス帳のデータ バインディング オブジェクト](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
 
 

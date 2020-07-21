@@ -1,6 +1,8 @@
 ---
-title: DENY (検索プロパティ リスト権限の拒否) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY (検索プロパティ リスト アクセス許可の拒否)
+description: 検索プロパティ リストに対する権限を拒否します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,12 +20,12 @@ ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad51052db3f5e86f5d349f8a4fc10fb46a5e311e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49c28bdc297ebf8292fabd3bc69ff4eab8461e15
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114813"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633096"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>DENY (検索プロパティ リスト権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -35,7 +37,7 @@ ms.locfileid: "68114813"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] ON  
         SEARCH PROPERTY LIST :: search_property_list_name  
     TO database_principal [ ,...n ] [ CASCADE ]  
@@ -76,7 +78,7 @@ CASCADE
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="search-property-list-permissions"></a>SEARCH PROPERTY LIST 権限  
  検索プロパティ リストは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、検索プロパティ リストで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  

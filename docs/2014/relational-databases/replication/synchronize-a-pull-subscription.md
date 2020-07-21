@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 826622cd17862c0535e60c01baab756af2b2996b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004705"
 ---
 # <a name="synchronize-a-pull-subscription"></a>プル サブスクリプションの同期
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [レプリケーション エージェント](agents/replication-agents-overview.md)、またはレプリケーション管理オブジェクト (RMO) を使用して、プル サブスクリプションを同期する方法について説明します。  
   
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  サブスクリプションは、ディストリビューション エージェント (スナップショット レプリケーションおよびトランザクション レプリケーションの場合) またはマージ エージェント (マージ レプリケーションの場合) で同期されます。 エージェントは継続的に実行、要求時に実行、またはスケジュールで実行できます。 同期スケジュールの指定の詳細については、「[同期スケジュールの指定](specify-synchronization-schedules.md)」を参照してください。  
   
  **の** [ローカル サブスクリプション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]フォルダーから、サブスクリプションを要求時に同期します。  
@@ -38,11 +37,11 @@ ms.locfileid: "63186232"
   
 3.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]** をクリックします。  
   
-4.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、 **[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
+4.  [**同期の状態の表示 \<Subscriber> - \<SubscriptionDatabase> :** ] ダイアログボックスで、[**開始**] をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   
 5.  **[閉じる]** をクリックします。  
   
-##  <a name="ReplProg"></a> Replication Agents  
+##  <a name="replication-agents"></a><a name="ReplProg"></a>レプリケーションエージェント  
  コマンド プロンプトから適切なレプリケーション エージェント実行可能ファイルを呼び出すことにより、プル サブスクリプションを要求時にプログラムで同期できます。 呼び出されるレプリケーション エージェント実行可能ファイルは、プル サブスクリプションが属するパブリケーションの種類によって異なります。 詳しくは、「 [Replication Agents](agents/replication-agents-overview.md)」をご覧ください。  
   
 > [!NOTE]  
@@ -52,21 +51,21 @@ ms.locfileid: "63186232"
   
 1.  コマンド プロンプトまたはバッチ ファイルから、次のコマンド ライン引数を指定して [distrib.exe](agents/replication-distribution-agent.md) を実行し、 **レプリケーション ディストリビューション エージェント**を起動します。  
   
-    -   **-Publisher**  
+    -   **-パブリッシャー**  
   
     -   **-PublisherDB**  
   
-    -   **-Distributor**  
+    -   **-ディストリビューター**  
   
-    -   **-DistributorSecurityMode** = **1**  
+    -   **-DistributorSecurityMode**  = **1**  
   
-    -   **-Subscriber**  
+    -   **-サブスクライバー**  
   
-    -   **-SubscriberDB**  
+    -   **-お持ちのデータベース**  
   
-    -   **-SubscriberSecurityMode** = **1**  
+    -   **-SubscriberSecurityMode**  = **1**  
   
-    -   **-SubscriptionType** = **1**  
+    -   **-Subscriptiontype**  = **1**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、さらに、次の引数を指定する必要があります。  
   
@@ -74,43 +73,43 @@ ms.locfileid: "63186232"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode**  = **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  = **0**  
   
     -   **-SubscriberLogin**  
   
     -   **-SubscriberPassword**  
   
-    -   **-SubscriberSecurityMode** = **0**  
+    -   **-SubscriberSecurityMode**  = **0**  
   
 #### <a name="to-start-the-merge-agent-from-the-command-prompt-or-from-a-batch-file"></a>マージ エージェントをコマンド プロンプトまたはバッチ ファイルから起動するには  
   
 1.  コマンド プロンプトまたはバッチ ファイルから、次のコマンド ライン引数を指定して [replmerg.exe](agents/replication-merge-agent.md) を実行し、 **レプリケーション マージ エージェント**を起動します。  
   
-    -   **-Publisher**  
+    -   **-パブリッシャー**  
   
     -   **-PublisherDB**  
   
-    -   **-PublisherSecurityMode** = **1**  
+    -   **-PublisherSecurityMode**  = **1**  
   
-    -   **-Publication**  
+    -   **-パブリケーション**  
   
-    -   **-Distributor**  
+    -   **-ディストリビューター**  
   
-    -   **-DistributorSecurityMode** = **1**  
+    -   **-DistributorSecurityMode**  = **1**  
   
-    -   **-Subscriber**  
+    -   **-サブスクライバー**  
   
-    -   **-SubscriberSecurityMode** = **1**  
+    -   **-SubscriberSecurityMode**  = **1**  
   
-    -   **-SubscriberDB**  
+    -   **-お持ちのデータベース**  
   
-    -   **-SubscriptionType** = **1**  
+    -   **-Subscriptiontype**  = **1**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、さらに、次の引数を指定する必要があります。  
   
@@ -118,21 +117,21 @@ ms.locfileid: "63186232"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode**  = **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  = **0**  
   
     -   **-SubscriberLogin**  
   
     -   **-SubscriberPassword**  
   
-    -   **-SubscriberSecurityMode** = **0**  
+    -   **-SubscriberSecurityMode**  = **0**  
   
-###  <a name="TsqlExample"></a> 例 (レプリケーション エージェント)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> 例 (レプリケーション エージェント)  
  次の例では、ディストリビューション エージェントを起動して、プル サブスクリプションを同期します。 接続はすべて Windows 認証を使用して確立されます。  
   
  [!code-sql[HowTo#bat_synctranpullsub_10](../../snippets/tsql/SQL15/replication/howto/tsql/synctranpullsub_10.bat)]  
@@ -141,7 +140,7 @@ ms.locfileid: "63186232"
   
  [!code-sql[HowTo#bat_syncmergepullsub_10](../../snippets/tsql/SQL15/replication/howto/tsql/syncmergepullsub_10.bat)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーション管理オブジェクト (RMO) およびマネージド コードを使用してレプリケーション エージェント機能にアクセスすることで、プル サブスクリプションをプログラムから同期できます。 プル サブスクリプションを同期する際に使用するクラスは、サブスクリプションが属しているパブリケーションの種類によって異なります。  
   
 > [!NOTE]  
@@ -172,7 +171,7 @@ ms.locfileid: "63186232"
     -   <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> プロパティから <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> クラスのインスタンスを取得し、 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> メソッドを呼び出します。 このメソッドにより、エージェントが同期的に起動され、制御は実行中のエージェント ジョブに残ります。 同期実行の間、エージェントの実行中に <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> イベントを処理できます。  
   
         > [!NOTE]  
-        >  値が指定されている場合`false`の<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>(既定) も指定する必要があります、プル サブスクリプションを作成したときに<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A>、 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A>、および必要に応じて<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A>と<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A>エージェント ジョブに関連するので、サブスクリプションのメタデータが記載されていない[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)します。  
+        >  プルサブスクリプションを作成するときにの値を (既定値) に指定した場合は `false` <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 、、、およびオプションで指定する必要があり <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor%2A> <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode%2A> <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin%2A> <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword%2A> ます。これは、サブスクリプションのエージェントジョブに関連するメタデータが[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)で使用できないためです。  
   
 #### <a name="to-synchronize-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションを同期するには  
   
@@ -199,9 +198,9 @@ ms.locfileid: "63186232"
     -   <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> プロパティから <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> クラスのインスタンスを取得し、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> メソッドを呼び出します。 このメソッドにより、マージ エージェントが同期的に起動され、制御は実行中のエージェント ジョブに残ります。 同期実行の間、エージェントの実行中に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> イベントを処理できます。  
   
         > [!NOTE]  
-        >  値が指定されている場合`false`の<xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>(既定) も指定する必要があります、プル サブスクリプションを作成したときに<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>、<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>と必要に応じて<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A>、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A>、および<xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A>エージェント ジョブに関連するメタデータ、サブスクリプションがで使用できないため、 [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)します。  
+        >  プルサブスクリプションの作成時に (既定値) を指定した場合は、、、、、、、およびオプションで、、、 `false` <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> およびを指定する必要もあり <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> ます。これは、サブスクリプションのエージェントジョブに関連するメタデータが[MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql)で使用できないためです。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a>例 (RMO)  
  次の例では、トランザクション パブリケーションへのプル サブスクリプションを同期します。エージェントはエージェント ジョブを使用して非同期的に起動されます。  
   
  [!code-csharp[HowTo#rmo_SyncTranPullSub_WithJob](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_synctranpullsub_withjob)]  
@@ -232,9 +231,9 @@ ms.locfileid: "63186232"
   
  [!code-vb[HowTo#rmo_vb_SyncMergePullSub_NoJobWebSync](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepullsub_nojobwebsync)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データの同期](synchronize-data.md)   
- [プル サブスクリプションの作成](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)  
   
   

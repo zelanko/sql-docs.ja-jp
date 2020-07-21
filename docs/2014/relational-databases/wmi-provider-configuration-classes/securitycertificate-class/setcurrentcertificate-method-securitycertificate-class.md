@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 32af70857eac43a99257444081c1bcbdc842a2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a38c151663dc76921e791b614922a8b52ecfadab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270640"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059987"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate メソッド (SecurityCertificate クラス)
   現在のセキュリティ証明書を設定します。  
@@ -39,9 +38,9 @@ SHA , SQLInstance
   
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- [SecurityCertificate クラス] securitycertificate-class.md) セキュリティ証明書を表すオブジェクト。  
+ セキュリティ証明書を表す [SecurityCertificate Class] securitycertificate-class.md) オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
   
@@ -53,9 +52,9 @@ SHA , SQLInstance
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  uint32 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

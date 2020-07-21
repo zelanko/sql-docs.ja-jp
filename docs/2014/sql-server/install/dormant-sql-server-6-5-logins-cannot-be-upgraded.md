@@ -1,5 +1,5 @@
 ---
-title: 休止中の SQL Server 6.5 ログインはアップグレードできません |Microsoft Docs
+title: 休止 SQL Server 6.5 ログインをアップグレードすることはできません |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e2865607f058c077fc3d12c2e3c2f778450511d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f78bca9bf2b99b2ab6f530613b64bc0e46c4001c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095398"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054818"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>休止している SQL Server 6.5 ログインはアップグレードできない
   アップグレード アドバイザーによって、パスワードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に直接アップグレードできない [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ログインが検出されました。  
@@ -41,8 +40,8 @@ SELECT * FROM sysxlogins WHERE (xstatus & 2048) = 2048;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>参照  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

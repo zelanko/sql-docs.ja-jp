@@ -10,18 +10,17 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 08b79888eb47634deaccc910b2ea3c93800b7c78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046812"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
-  `xml`データ型は組み込みのデータ型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの他の組み込み型に少し似ていますが、`int`と`varchar`します。 他の組み込み型で使用できるように、`xml`変数の型、パラメーターの型、関数の戻り値の型、またはテーブルを作成するときに、データ型列の型として[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)します。  
+  `xml`データ型は、の組み込みデータ型で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] やなどの他の組み込み型と似てい `int` `varchar` ます。 他の組み込み型と同様に、変数の型 `xml` 、パラメーターの型、関数の戻り値の型、または[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)としてテーブルを作成するときに、列の型としてデータ型を使用できます。  
   
 ## <a name="creating-columns-and-variables"></a>列と変数の作成  
  テーブルの一部として `xml` 型の列を作成するには、 `CREATE TABLE` ステートメントを使用します。次に例を示します。  
@@ -66,7 +65,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`xml` 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例 :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`xml` 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 次に例を示します。  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -127,9 +126,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>同じテーブルと別のテーブル  
- `xml`他にリレーショナル列を含むテーブルで、またはメイン テーブルに外部キー リレーションシップを持つ別のテーブルで、データ型の列を作成できます。  
+ `xml`データ型の列は、他のリレーショナル列を含むテーブル、またはメインテーブルとの外部キーリレーションシップを持つ別のテーブルに作成できます。  
   
- 作成、`xml`次の条件のいずれかが true の場合は、同じテーブル内のデータ型の列。  
+ `xml`次のいずれかの条件に該当する場合は、同じテーブルにデータ型の列を作成します。  
   
 -   XML 列のデータを取得するが、その列に XML インデックスは不要な場合。  
   

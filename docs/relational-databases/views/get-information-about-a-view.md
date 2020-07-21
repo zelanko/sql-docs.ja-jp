@@ -22,12 +22,12 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22a591c770a09e0bd57f4c92116fcf72af45758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123407"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "72909891"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "68123407"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  `sp_helptext` を使用してビューの定義を返すには、 **public** ロールのメンバーシップが必要です。 `sys.sql_expression_dependencies` を使用してビューのすべての依存関係を見つけるには、データベースに対する VIEW DEFINITION 権限とデータベースの `sys.sql_expression_dependencies` に対する SELECT 権限が必要です。 SELECT OBJECT_DEFINITION で返されるようなシステム オブジェクトの定義は公開されます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用してビューのプロパティを取得する  
   
@@ -63,42 +63,40 @@ ms.locfileid: "68123407"
   
 2.  プロパティを表示するビューを右クリックし、 **[プロパティ]** を選択します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties show in the **View Properties** dialog box.  
+     **[ビューのプロパティ]** ダイアログ ボックスに次のプロパティが表示されます。  
   
-     **Database**  
-     The name of the database containing this view.  
+     **[データベース]**  
+     このビューを含むデータベースの名前です。  
   
-     **Server**  
-     The name of the current server instance.  
+     **[サーバー]**  
+     現在のサーバー インスタンスの名前です。  
   
      **User**  
-     The name of the user of this connection.  
+     この接続のユーザーの名前です。  
   
-     **Created date**  
-     Displays the date the view was created.  
+     **[作成日]**  
+     ビューが作成された日付を表示します。  
   
      **Name**  
-     The name of the current view.  
+     現在のビューの名前です。  
   
-     **Schema**  
-     Displays the schema that owns the view.  
+     **[スキーマ]**  
+     ビューを所有するスキーマを表示します。  
   
-     **System object**  
-     Indicates whether the view is a system object. Values are True and False.  
+     **[システム オブジェクト]**  
+     ビューがシステム オブジェクトかどうかを指定します。 値は True と False です。  
   
-     **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     **[ANSI NULL]**  
+     オブジェクトが ANSI NULL オプションで作成されたかどうかを指定します。  
   
      **Encrypted**  
-     Indicates whether the view is encrypted. Values are True and False.  
+     ビューが暗号化されているかどうかを指定します。 値は True と False です。  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **[引用符で囲まれた識別子]**  
+     オブジェクトが引用符で囲まれた識別子オプションで作成されたかどうかを指定します。  
   
-     **Schema bound**  
-     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+     **[スキーマ バインド]**  
+     ビューがスキーマ バインドされているかどうかを指定します。 値は True と False です。 スキーマ バインド ビューの詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」の SCHEMABINDING のトピックを参照してください。  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>ビュー デザイナー ツールを使用したビューのプロパティの取得  
   
@@ -113,10 +111,10 @@ ms.locfileid: "68123407"
      **[(名前)]**  
      現在のビューの名前です。  
   
-     **Database Name**  
+     **データベース名**  
      このビューを含むデータベースの名前です。  
   
-     **[説明]**  
+     **説明**  
      現在のビューの簡単な説明です。  
   
      **[スキーマ]**  
@@ -179,7 +177,7 @@ ms.locfileid: "68123407"
   
 4.  ビューによって参照されるオブジェクトを表示するには、 **[[ビュー名] が依存するオブジェクト]** を選択します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>ビューの定義およびプロパティを取得するには  
   

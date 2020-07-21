@@ -1,5 +1,5 @@
 ---
-title: XTP Phantom Processor |Microsoft Docs
+title: XTP ファントムプロセッサ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 14c34bb0d7520b914d8dbfc1cfc8174341722ece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14158b7097427b6704cf5e747fa998a11217ecd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016793"
 ---
 # <a name="xtp-phantom-processor"></a>XTP Phantom Processor
   XTP Phantom Processor パフォーマンス オブジェクトには、XTP エンジンのファントム処理サブシステムに関連するカウンターが含まれています。 このコンポーネントには、SERIALIZABLE 分離レベルで実行されているトランザクション内のファントム行を検出する役割があります。  
   
- この表は、 **XTP Phantom Processor**カウンター。  
+ 次の表では、 **XTP ファントムプロセッサ**カウンターについて説明します。  
   
 |カウンター|説明|  
 |-------------|-----------------|  
@@ -32,6 +31,6 @@ ms.locfileid: "63150986"
 |**Phantom scans started/sec**|ファントム スキャンが開始された回数に関する 1 秒あたりの平均です。|  
   
 ## <a name="see-also"></a>参照  
- [XTP &#40;、インメモリ OLTP&#41;パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;インメモリ OLTP&#41; パフォーマンスカウンター](../../integration-services/performance/performance-counters.md)  
   
   

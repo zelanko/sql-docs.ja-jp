@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59ab03f1c869f37ea92b3be1fe0fc30d86284a03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953211"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
   データ層アプリケーション (DAC) ファイル (.bacpac ファイル) をインポートすると、データを含んだ元のデータベースのコピーを、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンス上または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に作成することができます。 エクスポートとインポートという操作を組み合わせることで、DAC またはデータベースをインスタンス間で移行したり論理バックアップを作成したりすることが可能です。たとえば、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  
@@ -45,7 +44,7 @@ ms.locfileid: "62918186"
   
  
 ## <a name="sql-server-utility"></a>SQL Server ユーティリティ (SQL Server Utility)  
- データベース エンジンのマネージド インスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は、 **の** ユーティリティ エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **の** details page.  
+ データベース エンジンのマネージド インスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は  **の**ユーティリティ エクスプローラー[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、 **[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
   
 ## <a name="database-options-and-settings"></a>データベースのオプションと設定  
  既定では、インポート時に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定がすべて適用されます。ただし、データベースの照合順序および互換性レベルは、DAC のエクスポート ファイルで定義された値に設定されます。 DAC のエクスポート ファイルには、元のデータベースに基づく値が使用されます。  
@@ -58,7 +57,7 @@ ms.locfileid: "62918186"
 ## <a name="prerequisites"></a>前提条件  
  ソースが不明または信頼されていない DAC エクスポート ファイルはインポートしないことをお勧めします。 こうしたファイルには、意図しない Transact-SQL コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 エクスポート ファイルのソースが不明または信頼されていない場合は、使用する前に、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードも確認してください。 これらのチェックの実行方法の詳細については、「 [Validate a DAC Package](validate-a-dac-package.md)」をご覧ください。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  セキュリティを強化するために、SQL Server 認証のログインは、パスワードなしで DAC エクスポート ファイルに格納されます。 ファイルがインポートされると、ログインは、生成されたパスワードを伴う無効なログインとして作成されます。 ログインを有効にするには、ALTER ANY LOGIN 権限を持つユーザーとしてログインし、ALTER LOGIN を使用してログインを有効にします。さらに、新しいパスワードを割り当て、そのパスワードを該当ユーザーに通知します。 Windows 認証ログインの場合、ログインのパスワードは SQL Server で管理されていないため、この操作は必要ありません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -85,10 +84,10 @@ ms.locfileid: "62918186"
   
     -   [[結果] ページ](#Results)  
   
-###  <a name="Introduction"></a> [説明] ページ  
+###  <a name="introduction-page"></a><a name="Introduction"></a> [説明] ページ  
  このページには、データ層アプリケーションのインポート ウィザードの手順が表示されます。  
   
- **オプション**  
+ **[オプション]**  
   
 -   **[次回からこのページを表示しない]** : 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
   
@@ -96,18 +95,18 @@ ms.locfileid: "62918186"
   
 -   **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
   
-###  <a name="Import_settings"></a> [インポートの設定] ページ  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> [インポートの設定] ページ  
  このページを使用して、インポートする .bacpac ファイルの場所を指定します。  
   
 -   **[ローカル ディスクからインポート]** : **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
   
--   **Windows Azure からインポート**-Windows Azure コンテナーから BACPAC ファイルをインポートします。 このオプションを検証するためには、Windows Azure コンテナーに接続する必要があります。 このオプションでは、一時ファイル用のローカル ディレクトリを指定する必要もあります。 一時ファイルは、指定した場所に作成され、操作の完了後も残ります。  
+-   **Azure からインポート**-BACPAC ファイルを azure コンテナーからインポートします。 このオプションを検証するためには、Azure コンテナーに接続する必要があります。 このオプションでは、一時ファイル用のローカル ディレクトリを指定する必要もあります。 一時ファイルは、指定した場所に作成され、操作の完了後も残ります。  
   
-     Windows Azure を参照するときに、1 つのアカウント内のコンテナーを切り替えることができます。 インポート操作を続行するには、1 つの .bacpac ファイルを指定する必要があります。 列は、 **名前**、 **サイズ**、または **更新日時**で並べ替えることができます。  
+     Azure を参照するときに、1 つのアカウント内のコンテナーを切り替えることができます。 インポート操作を続行するには、1 つの .bacpac ファイルを指定する必要があります。 列は、 **名前**、 **サイズ**、または **更新日時**で並べ替えることができます。  
   
      続行するには、インポートする .bacpac ファイルを指定し、 **[開く]** をクリックします。  
   
-###  <a name="Database_settings"></a> [データベースの設定] ページ  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> [データベースの設定] ページ  
  このページを使用すると、作成されるデータベースの詳細を指定できます。  
   
  **SQLServer のローカル インスタンスの場合**  
@@ -120,13 +119,13 @@ ms.locfileid: "62918186"
   
  続行するには、 **[次へ]** をクリックします。  
   
- **SQL database の場合。**  
+ **SQL データベースの場合:**  
   
--   **[新しいデータベース名]** : インポートするデータベースの名前を指定します。  
+-   [**新しいデータベース名**-インポートされたデータベースの名前を指定します。  
   
--   **エディションの[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -指定[!INCLUDE[ssSDS](../../includes/sssds-md.md)]ビジネスまたは[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Web です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディションの詳細については、Web サイト「 [SQL データベース](http://www.windowsazure.com/home/tour/database/) 」を参照してください。  
+-   **の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] エディション**- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business または Web を指定し [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のエディションの詳細については、Web サイト「 [SQL データベース](https://www.windowsazure.com/home/tour/database/) 」を参照してください。  
   
--   **データベースの最大サイズ (GB)** -ドロップダウン メニューを使用して、データベースの最大サイズを指定します。  
+-   [**データベースの最大サイズ (GB)** ]: ドロップダウンメニューを使用して、データベースの最大サイズを指定します。  
   
  続行するには、 **[次へ]** をクリックします。  
   
@@ -135,21 +134,20 @@ ms.locfileid: "62918186"
   
  続行するには、 **[次へ]** をクリックします。  
   
-###  <a name="Summary"></a> [概要] ページ  
+###  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定でインポート操作を実行するには、 **[完了]** をクリックします。 インポート操作をキャンセルしてウィザードを終了するには、 **[キャンセル]** をクリックします。  
   
-###  <a name="Progress"></a> [進行状況] ページ  
+###  <a name="progress-page"></a><a name="Progress"></a> [進行状況] ページ  
  このページには、操作の進行状況を示す進行状況バーが表示されます。 詳細な状態を表示するには、 **[詳細表示]** をクリックします。  
   
  続行するには、 **[次へ]** をクリックします。  
   
-###  <a name="Results"></a> [結果] ページ  
+###  <a name="results-page"></a><a name="Results"></a>[結果] ページ  
  このページでは、データベースのインポートや作成操作の成功と失敗が報告され、各アクションの成功または失敗が示されます。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  
   
- **[閉じる]** をクリックしてウィザードを閉じます。  
+ [**閉じる**] をクリックしてウィザードを閉じます。  
   
-## <a name="see-also"></a>関連項目  
- [[データ層アプリケーション]](data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [データ層アプリケーション](data-tier-applications.md)   
  [データ層アプリケーションのエクスポート](export-a-data-tier-application.md)  
-  
   

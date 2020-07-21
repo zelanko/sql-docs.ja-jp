@@ -1,6 +1,5 @@
 ---
-title: DQS ログ ファイルの管理 | Microsoft Docs
-ms.custom: ''
+title: DQS ログ ファイルの管理
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,24 +11,24 @@ helpviewer_keywords:
 - log files
 - dqs log files
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 3ddd910ea613c6ef9fcac3a4cfbb02c3e3244294
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: e4b5864129d25754fb2177376e011be1972078e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991931"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898119"
 ---
 # <a name="manage-dqs-log-files"></a>DQS ログ ファイルの管理
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のログ ファイルは、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]、および [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]の問題を診断およびトラブルシューティングする際に役に立ちます。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]、および [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]ごとに異なるログ ファイルが生成されます。  
   
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を使用して、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] の機能とモジュールのログの重大度設定を構成できます。 また、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] コンピューターで DQS_MAIN データベースと XML ファイルの DQS ログ構成設定を手動で変更して、DQS ログ ファイルのその他の (詳細) 設定の一部を構成することもできます。  
   
-##  <a name="DQSServer"></a> Data Quality Server のログ ファイル  
+##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a>Data Quality Server のログファイル  
  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ ファイルである DQServerLog.DQS_MAIN.log には、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]で実行されるアクティビティのログが含まれます。 SQL Server の既定のインスタンスをインストールした場合、DQServerLog.DQS_MAIN.log ファイルは C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log に格納されます。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ ファイルには、それぞれパイプ (|) で区切られた次の種類の情報が含まれています。  
   
 -   日付と時刻  
@@ -45,11 +44,11 @@ ms.locfileid: "67991931"
   
 -   UID (内部 DQS インフラストラクチャ ID)  
   
--   Namespace  
+-   名前空間  
   
 -   クラスとメソッド  
   
--   メッセージ  
+-   Message  
   
  これらに加えて、ログ ファイルには、アプリケーションのバージョン、コンピューター名、ユーザー名、およびオペレーティング システムに関する情報も表示されます。  
   
@@ -61,15 +60,15 @@ ms.locfileid: "67991931"
   
  DQServerLog.DQS_MAIN.log ファイルはローリング ファイルです。既存のログ ファイルが、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ログ構成設定で指定されたローリング ファイルのサイズを超えると、新しいログ ファイルが作成されます。 詳細については、「 [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)」を参照してください。  
   
-##  <a name="DQSClient"></a> Data Quality Client のログ ファイル  
+##  <a name="data-quality-client-log-file"></a><a name="DQSClient"></a>ログファイルの Data Quality Client  
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ ファイルである DQClientLog.log には、クライアント側のログが含まれます。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ ファイルは %APPDATA%\SSDQS\Log に格納されます。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ログ ファイルには、サーバー ログ ファイルと同様の情報が含まれますが、内容はクライアント側に関するものになります。  
   
  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ログ ファイルと同様に、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ログ ファイルもローリング ファイルです。既存のログ ファイルが、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ログ構成設定で指定されたローリング ファイルのサイズを超えると、新しいログ ファイルが作成されます。 詳細については、「 [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)」を参照してください。  
   
-##  <a name="DQSCleansing"></a> DQS クレンジング コンポーネントのログ ファイル  
+##  <a name="dqs-cleansing-component-log-file"></a><a name="DQSCleansing"></a>DQS クレンジングコンポーネントのログファイル  
  [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] のログ ファイルである DQSSSISLog.log には、 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]を使用して実行されたアクティビティのログが含まれます。 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] コンポーネントのログ ファイルは %APPDATA%\SSDQS\Log に格納されます。 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] ログ ファイルには、サーバー ログ ファイルと同様の情報が含まれますが、内容は [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]に関するものになります。  
   
-##  <a name="RT"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RT"></a> 関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

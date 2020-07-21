@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 790fa1b969f933890e050311173fcde3f12c37ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066398"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>ユーザー定義関数の作成 (データベース エンジン)
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してユーザー定義関数を作成する方法について説明します。  
@@ -34,15 +33,15 @@ ms.locfileid: "68211716"
   
      [Security](#Security)  
   
--   **ユーザー定義関数を作成します。**  
+-   **ユーザー定義関数を作成するには:**  
   
-     [スカラー関数を作成します。](#Scalar)  
+     [スカラー関数の作成](#Scalar)  
   
-     [テーブル値関数を作成します。](#TVF)  
+     [テーブル値関数の作成](#TVF)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   ユーザー定義関数は、データベースの状態を変更するアクションの実行に使用することはできません。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "68211716"
   
 -   ユーザー定義関数では複数の結果セットは返せません。 複数の結果セットを返す必要がある場合は、ストアド プロシージャを使用します。  
   
--   エラー処理は、ユーザー定義の関数では制限されます。 UDF は、TRY をサポートしていません.キャッチ、@ERRORまたは RAISERROR です。  
+-   エラー処理は、ユーザー定義の関数では制限されます。 UDF は試行をサポートしていません...CATCH @ERROR または RAISERROR。  
   
 -   ユーザー定義関数はストアド プロシージャを呼び出すことができませんが、拡張ストアド プロシージャを呼び出すことはできます。  
   
@@ -76,12 +75,12 @@ ms.locfileid: "68211716"
   
     -   SEND  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースの CREATE FUNCTION 権限と、関数を作成するスキーマの ALTER 権限が必要です。 関数でユーザー定義型が指定されている場合は、その型に対する EXECUTE 権限が必要です。  
   
-##  <a name="Scalar"></a> スカラー関数  
+##  <a name="scalar-functions"></a><a name="Scalar"></a>スカラー関数  
  次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに複数ステートメントのスカラー関数を作成します。 この関数は、1 つの入力値 `ProductID`を受け取り、単一のデータ値 (在庫品目中の指定された製品に関する集計量) を返します。  
   
 ```  
@@ -115,7 +114,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 ```  
   
-##  <a name="TVF"></a> テーブル値関数  
+##  <a name="table-valued-functions"></a><a name="TVF"></a>テーブル値関数  
  次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにインライン テーブル値関数を作成します。 この関数は、入力パラメーターとして 1 つの顧客 (商店) ID を受け取り、 `ProductID`列と `Name`列、および過去 1 年間の集計である `YTD Total` を商店に販売した製品ごとに返します。  
   
 ```  
@@ -192,7 +191,7 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ユーザー定義関数](user-defined-functions.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   

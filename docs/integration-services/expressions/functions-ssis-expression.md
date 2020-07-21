@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2d106d69de37da310dbb1d7ebdf06d0542490dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a271b9dd9da2a4b21040a89145d9f2ab1fe84b68
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088744"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297590"
 ---
 # <a name="functions-ssis-expression"></a>関数 (SSIS 式)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68088744"
   
  式言語には、次の数学関数が用意されています。  
   
-|機能|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS 式&#41;](../../integration-services/expressions/abs-ssis-expression.md)|数値式の正の絶対値を返します。|  
 |[EXP &#40;SSIS 式&#41;](../../integration-services/expressions/exp-ssis-expression.md)|指定した式の e を基数とする指数を返します。|  
@@ -58,7 +58,7 @@ ms.locfileid: "68088744"
   
  式エバリュエーターには、次の文字列関数が用意されています。  
   
-|機能|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS 式&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|文字式の左端の文字の Unicode コード値を返します。|  
 |[FINDSTRING &#40;SSIS 式&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|文字式内のある文字列が指定回数目に検出された場所を、1 を基点とするインデックスで返します。|  
@@ -78,20 +78,20 @@ ms.locfileid: "68088744"
   
  式エバリュエーターには、次の日付と時刻関数が用意されています。  
   
-|機能|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
-|[DATEADD &#40;SSIS 式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|指定された日付に日付または期間を加えて、新しい DT_DBTIMESTAMP 値を返します。|  
-|[DATEDIFF &#40;SSIS 式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|指定された 2 つの日付間の差を、日付および時刻の単位で返します。|  
-|[DATEPART &#40;SSIS 式&#41;](../../integration-services/expressions/datepart-ssis-expression.md)|ある日付の、特定の日付要素を整数で返します。|  
-|[DAY &#40;SSIS 式&#41;](../../integration-services/expressions/day-ssis-expression.md)|指定された日付の日を整数で返します。|  
-|[GETDATE &#40;SSIS 式&#41;](../../integration-services/expressions/getdate-ssis-expression.md)|システムの現在の日付を返します。|  
-|[GETUTCDATE &#40;SSIS 式&#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)|システムの現在の日付を UTC 時刻 (協定世界時またはグリニッジ標準時) で返します。|  
-|[MONTH &#40;SSIS 式&#41;](../../integration-services/expressions/month-ssis-expression.md)|指定された日付の月を表す整数を返します。|  
-|[YEAR &#40;SSIS 式&#41;](../../integration-services/expressions/year-ssis-expression.md)|指定された日付の年を表す整数を返します。|  
+|[DATEADD (SSIS 式)](../../integration-services/expressions/dateadd-ssis-expression.md)|指定された日付に日付または期間を加えて、新しい DT_DBTIMESTAMP 値を返します。|  
+|[DATEDIFF (SSIS 式)](../../integration-services/expressions/datediff-ssis-expression.md)|指定された 2 つの日付間の差を、日付および時刻の単位で返します。|  
+|[DATEPART (SSIS 式)](../../integration-services/expressions/datepart-ssis-expression.md)|ある日付の、特定の日付要素を整数で返します。|  
+|[DAY (SSIS 式)](../../integration-services/expressions/day-ssis-expression.md)|指定された日付の日を整数で返します。|  
+|[GETDATE (SSIS 式)](../../integration-services/expressions/getdate-ssis-expression.md)|システムの現在の日付を返します。|  
+|[GETUTCDATE (SSIS 式)](../../integration-services/expressions/getutcdate-ssis-expression.md)|システムの現在の日付を UTC 時刻 (協定世界時またはグリニッジ標準時) で返します。|  
+|[MONTH (SSIS 式)](../../integration-services/expressions/month-ssis-expression.md)|指定された日付の月を表す整数を返します。|  
+|[YEAR (SSIS 式)](../../integration-services/expressions/year-ssis-expression.md)|指定された日付の年を表す整数を返します。|  
   
  式エバリュエーターには、次の NULL 関数が用意されています。  
   
-|機能|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS 式&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|式が NULL かどうかに基づいてブール型の結果を返します。|  
 |[NULL &#40;SSIS 式&#41;](../../integration-services/expressions/null-ssis-expression.md)|要求されたデータ型の NULL 値を返します。|  

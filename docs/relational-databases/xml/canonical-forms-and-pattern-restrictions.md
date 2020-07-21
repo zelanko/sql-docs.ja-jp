@@ -1,5 +1,6 @@
 ---
 title: 正規の形式とパターン制限 | Microsoft Docs
+description: プリミティブ値型の正規表現が XSD パターン ファセットからのパターン制限に準拠しないときに発生する問題を防ぐ方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fcabc89e268e9ce5ed93211ccf89eed53e245c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e6042ae1a63b61cd47fa42470c0707877625c5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68029351"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775623"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>正規の形式とパターン制限
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XSD パターン ファセットを使用すると、単純型の字句空間を制限できます。 複数の字句表現が可能であるような型にパターン制限を適用すると、一部の値が原因で検証時に予想外の動作が発生することがあります。  
   
  このような動作は、その値の字句表現がデータベースに格納されていないために発生します。 したがって、このような値は、出力としてシリアル化される際に、それぞれの正規表現に変換されます。 ドキュメントに含まれる値の正規の形式が型のパターン制限に準拠していない場合に、ユーザーがそのドキュメントの再挿入を試みると、そのドキュメントは拒否されます。  

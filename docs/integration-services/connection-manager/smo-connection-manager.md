@@ -14,21 +14,21 @@ helpviewer_keywords:
 - SMO connection manager
 - connection managers [Integration Services], SMO
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d91dd8952b1dccbfd0c78f0b0b0fa8aa7c26d53c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 87400e2216b51bfab0132f369e452f27447b0572
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904242"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294400"
 ---
 # <a name="smo-connection-manager"></a>SMO 接続マネージャー
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  SMO 接続マネージャーを使用すると、パッケージは、SQL 管理オブジェクト (SMO) サーバーに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる転送タスクでは、SMO 接続マネージャーを使用します。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを転送するログイン転送タスクでは、SMO 接続マネージャーを使用します。  
+  SMO 接続マネージャーを使用すると、パッケージは、SQL 管理オブジェクト (SMO) サーバーに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる転送タスクでは、SMO 接続マネージャーが使用されます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを転送するログイン転送タスクでは、SMO 接続マネージャーを使用します。  
   
  SMO 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に SMO 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。 接続マネージャーの **ConnectionManagerType** プロパティは、 **SMOServer**に設定されます。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "67904242"
  **[SQL Server 認証を使用する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して、選択されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
- **User name**  
+ **ユーザー名**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択している場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名を入力します。  
   
  **パスワード**  

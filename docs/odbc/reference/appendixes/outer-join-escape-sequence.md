@@ -1,5 +1,5 @@
 ---
-title: 外部結合エスケープ シーケンス |Microsoft Docs
+title: 外部結合のエスケープシーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,41 +12,41 @@ helpviewer_keywords:
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 576fe7268ccf71a8c926f6b1124ebbf8a8c711b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 37ce446328d263f492cdfd369f6e8f9f64fe6dfc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100637"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303613"
 ---
 # <a name="outer-join-escape-sequence"></a>外部結合のエスケープ シーケンス
-ODBC では、外部結合のエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
+ODBC では外部結合にエスケープシーケンスを使用します。 このエスケープシーケンスの構文は次のとおりです。  
   
 ```  
 {oj outer-join}  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- BNF 表記では、構文がとおりです。  
+ BNF 表記では、構文は次のようになります。  
   
- *ODBC の外部の結合のエスケープ*:: =  
+ *ODBC 外部結合-エスケープ*:: =  
   
- *ODBC のイニシエーター esc* oj*外部結合 ODBC esc 終端*  
+ *Odbc-esc-イニシエーター* oj*外部結合 odbc-esc-ターミネータ*  
   
- *外部結合*:: =*テーブル名*[*相関名*] {左&#124;右&#124;完全}  
+ *外部結合*:: =*テーブル名*[*相関名*] {LEFT &#124; RIGHT &#124; FULL}  
   
- 外部結合 {*テーブル名*[*相関名*] &#124; *外部結合*} ON  
+ 外部結合 {*テーブル名*[*相関名*] &#124;*外部結合*} ON  
   
- *検索-*  
+ *サーチ*  
   
- *条件*  
+ *フィルター*  
   
- *相関名*:: =*ユーザー定義名*  
+ *相関名*:: =*ユーザー定義-名前*  
   
- *ODBC のイニシエーター esc* :: = {  
+ *ODBC-esc-イニシエーター* :: = {  
   
- *Esc 終端の ODBC* :: =}  
+ *ODBC-esc-ターミネータ*:: =}  
   
- このステートメントのどの部分がサポートされているかを判断するアプリケーションを呼び出す**SQLGetInfo** SQL_OJ_CAPABILITIES 情報の種類にします。 外部結合の*検索条件*間、指定された結合条件のみを含める必要があります*テーブル名*します。
+ このステートメントのどの部分がサポートされているかを判断するために、アプリケーションは SQL_OJ_CAPABILITIES 情報の種類を使用して**SQLGetInfo**を呼び出します。 外部結合の場合、*検索条件*には、指定された*テーブル名*間の結合条件だけを含める必要があります。

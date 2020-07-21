@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28409675fda41f030e82337b1fcf0f1a6ec5821e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0eec5e65c161a41e104ca558d7150a9478caca5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927725"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766877"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   データベースにスキーマ コンポーネントをインポートします。  
   
@@ -56,7 +56,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  *[式]*  
  文字列定数またはスカラー変数を指定します。 **varchar**、**varbinary**、**nvarchar**、または **xml** 型です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) を使用して、新しい名前空間をコレクションに追加したり、コレクションの既存の名前空間に新しいコンポーネントを追加したりすることもできます。  
   
  コレクションを削除するには、[DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md) を使用します。  
@@ -76,7 +76,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
   
 -   リレーショナル スキーマに対する ALTER 権限または CONTROL 権限と、データベースに対する CREATE XML SCHEMA COLLECTION 権限  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. データベースに XML スキーマ コレクションを作成する  
  次の例では、XML スキーマ コレクション `ManuInstructionsSchemaCollection` を作成します。 コレクションにはスキーマ名前空間が 1 つだけ含まれます。  
@@ -171,7 +171,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
  CREATE XML SCHEMA COLLECTION には、SQL Server で認識されるスキーマ コンポーネントだけが格納されます。XML スキーマ内のすべてがデータベースに格納されるわけではありません。 したがって、XML スキーマ コレクションを、提供されたときと同じ状態に戻す場合は、データベース列またはコンピューター上の他のフォルダーに XML スキーマを保存することをお勧めします。  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. スキーマ コレクションに複数のスキーマ名前空間を指定する  
- XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例:  
+ XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 次に例を示します。  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  

@@ -1,5 +1,5 @@
 ---
-title: データ マイニング構造およびモデル (Analysis Services) に対する権限の付与 |Microsoft Docs
+title: データマイニング構造およびデータマイニングモデルに対する権限の付与 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25eb8fe00c523d4a94b7f6f0325bfd2c1f55e7be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0db849551bdb38615f280b123c98f0e9d3053d6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074938"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546640"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>データ マイニング構造およびデータ マイニング モデルに対する権限の付与 (Analysis Services)
   既定では、Analysis Services サーバー管理者にのみ、データベースのデータ マイニング構造またはマイニング モデルを表示する権限があります。 管理者以外のユーザーに権限を付与するには、次の手順に従ってください。  
@@ -40,7 +39,7 @@ ms.locfileid: "66074938"
   
 4.  [全般] ページで、名前を入力し、必要に応じて説明を入力します。 このページには、フル コントロール、データベースの処理、定義の読み取りなどデータベース権限もいくつか含まれています。 これらのいずれの権限も、データ マイニングのアクセスには必要ありません。 データべース権限の詳細については、「[データベース権限の付与 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)」を参照してください。  
   
-5.  **[マイニング構造]** ペインで、データ マイニング構造ごとに **[読み取り]** または **[読み取り/書き込み]** を選択します。  
+5.  **[マイニング構造]** ペインで、データ マイニング構造ごとに **[読み取り]** または **[読み取り/書き込み]**  を選択します。  
   
 6.  **[メンバーシップ]** ペインで、このロールを使用して Analysis Services に接続する Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
@@ -53,23 +52,23 @@ ms.locfileid: "66074938"
   
  データベース ロールに読み取り権限または読み取り/書き込み権限を与えるには、ユーザーが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー ロールのメンバーであるか、フル コントロール (管理者) 権限を持つ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース ロールのメンバーである必要があります。  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーで適切なデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、新しいデータベース ロールを作成します。  
+1.  で、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のインスタンスに接続し [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、オブジェクトエクスプローラーで適切なデータベースの [**ロール**] を展開します。次に、データベースロールをクリックするか、新しいデータベースロールを作成します。  
   
-2.  **[マイニング構造]** ペインで、 **[マイニング モデル]** ボックスの一覧からマイニング モデルを見つけ、そのマイニング モデルの **[読み取り]** 、 **[読み取り/書き込み]** 、 **[ドリルスルー]** 、または **[参照]** を選択します。  
+2.  **[マイニング構造]** ペインで、 **[マイニング モデル]** ボックスの一覧からマイニング モデルを見つけ、そのマイニング モデルの **[読み取り]**、 **[読み取り/書き込み]**、 **[ドリルスルー]**、または **[参照]** を選択します。  
   
 3.  **[メンバーシップ]** ペインで、このロールを使用して Analysis Services に接続する Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
 4.  **[OK]** をクリックして、ロールの作成を終了します。  
   
- データ マイニング拡張機能 (DMX) の OPENQUERY 句を使用するドリルスルー クエリでデータ ソースを使用するには、適切なデータ ソース オブジェクトに対する読み取り/書き込み権限もデータベース ロールに与える必要があります。 詳細については、「[データ ソース オブジェクトに対する権限の付与 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)」および[OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery)」を参照してください。  
+ データ マイニング拡張機能 (DMX) の OPENQUERY 句を使用するドリルスルー クエリでデータ ソースを使用するには、適切なデータ ソース オブジェクトに対する読み取り/書き込み権限もデータベース ロールに与える必要があります。 詳細については、「[データ ソース オブジェクトに対する権限の付与 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)」および[OPENQUERY & #40;DMX& #41;](/sql/dmx/source-data-query-openquery)」を参照してください。  
   
 > [!NOTE]  
 >  既定では、OPENROWSET を使った DMX クエリの送信が無効になっています。  
   
 ## <a name="see-also"></a>参照  
- [サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [ディメンション データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [サーバー管理者のアクセス許可を付与 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [キューブまたはモデルの権限を &#40;Analysis Services に付与する&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [ディメンションデータへのカスタムアクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

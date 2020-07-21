@@ -1,30 +1,29 @@
 ---
-title: 'クイック スタート: Azure SQL Data Warehouse に対する接続およびクエリ'
-titleSuffix: Azure Data Studio
+title: Azure SQL Data Warehouse への接続とクエリの実行
 description: このクイック スタートでは、Azure Data Studio を使用して Azure SQL Data Warehouse に接続し、クエリを実行する方法を示します
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
+ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728011"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用した Azure SQL Data Warehouse のデータに対する接続およびクエリ
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート:Azure Data Studio を使用して、Azure SQL Data Warehouse のデータに接続してクエリを実行する
 
-このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して Azure SQL Data Warehouse に接続し、Transact-SQL ステートメントを使用してデータを作成、挿入、選択する方法について説明します。 
+このクイック スタートでは、Azure Data Studio を使用して Azure SQL Data Warehouse に接続し、Transact-SQL ステートメントを使用してデータを作成、挿入、選択する方法について説明します。 
 
-## <a name="prerequisites"></a>Prerequisites
-このクイック スタートを完了するには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] と Azure SQL Data Warehouse が必要です。
+## <a name="prerequisites"></a>前提条件
+このクイック スタートを完了するには、Azure Data Studio と Azure SQL Data Warehouse が必要です。
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] をインストールする](download.md)。
+- [Azure Data Studio をインストールする](download.md)。
 
 SQL Data Warehouse がまだない場合は、[SQL Data Warehouse の作成](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision)に関するページを参照してください。
 
@@ -33,19 +32,19 @@ SQL Data Warehouse がまだない場合は、[SQL Data Warehouse の作成](htt
 
 ## <a name="connect-to-your-data-warehouse"></a>データ ウェアハウスに接続する
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して、Azure SQL Data Warehouse サーバーへの接続を確立します。
+Azure Data Studio を使用して、Azure SQL Data Warehouse サーバーへの接続を確立します。
 
-1. 最初に [!INCLUDE[name-sos](../includes/name-sos-short.md)] を実行すると、 **[接続]** ページが開きます。 **[接続]** ページが表示されない場合は、 **[接続の追加]** をクリックするか、 **[サーバー]** サイドバーの **[新しい接続]** アイコンをクリックします。
+1. 最初に Azure Data Studio を実行すると、 **[接続]** ページが開きます。 **[接続]** ページが表示されない場合は、 **[接続の追加]** をクリックするか、 **[サーバー]** サイドバーの **[新しい接続]** アイコンをクリックします。
    
    ![新しい接続アイコン](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. この記事では、*SQL ログイン*を使用しますが、*Windows 認証*もサポートされています。 *ご利用の* Azure SQL サーバーのサーバー名、ユーザー名、パスワードを使用して、次のようにフィールドに入力します。
 
-   | 設定       | 提案される値 | [説明] |
+   | 設定       | 推奨値 | 説明 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバー名** | 完全修飾サーバー名 | 名前は次のようになります: **sqldwsample.database.windows.net** |
-   | **[認証]** | SQL ログイン| このチュートリアルでは、SQL 認証を使用します。 |
-   | **User name** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
+   | **認証** | SQL ログイン| このチュートリアルでは、SQL 認証を使用します。 |
+   | **ユーザー名** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
    | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
    | **パスワードを保存しますか?** | はい、いいえ | 毎回パスワードを入力したくない場合は、[はい] を選択します。 |
    | **データベース名** | *空白のままにする* | 接続先となるデータベースの名前。 |
@@ -78,7 +77,7 @@ SQL Data Warehouse がまだない場合は、[SQL Data Warehouse の作成](htt
    ```
 
 
-## <a name="create-a-table"></a>テーブルの作成
+## <a name="create-a-table"></a>テーブルを作成する
 
 クエリ エディターはまだ *master* データベースに接続されていますが、*TutorialDB* データベースにテーブルを作成する必要があります。 
 
@@ -144,6 +143,6 @@ SQL Data Warehouse がまだない場合は、[SQL Data Warehouse の作成](htt
 不要になったリソース グループを削除することで、リソースをクリーンアップします。 詳細については、「[リソースのクリーンアップ](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)」を参照してください。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure SQL Data Warehouse に正常に接続してクエリを実行したので、[コード エディターのチュートリアル](tutorial-sql-editor.md)をお試しください。

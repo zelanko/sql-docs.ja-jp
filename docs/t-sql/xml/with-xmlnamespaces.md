@@ -1,5 +1,5 @@
 ---
-title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
+title: WITH XMLNAMESPACES (Transact-SQL)
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2883be875b827cc38e0412ba8ca75851b11543e8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048139"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392690"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1 つまたは複数の XML 名前空間を宣言します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68048139"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 WITH XMLNAMESPACES ( <XML namespace declaration item>  
 [ { , <XML namespace declaration item> }...] )   
@@ -48,26 +48,28 @@ WITH XMLNAMESPACES ( <XML namespace declaration item>
 <xml_namespace_uri> ::= <character string literal>  
 ```  
   
-```  
+```syntaxsql
   
 <xml_namespace_prefix> ::= <identifier>  
 ```  
   
-```  
+```syntaxsql
   
 <XML default namespace declaration item> ::=  
 DEFAULT <xml_namespace_uri>  
   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *xml_namespace_uri*  
  宣言する XML 名前空間を識別する Uniform Resource Identifier (URI) を指定します。 *xml_namespace_uri* は SQL 文字列です。  
   
  *xml_namespace_prefix*  
  *xml_namespace_uri* で指定した名前空間 URI 値にマップされ、関連付けられるプレフィックスを指定します。 *xml_namespace_prefix* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子にする必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  共通テーブル式を含むステートメントで WITH XMLNAMESPACES 句を使用する場合は、ステートメント内で WITH XMLNAMESPACES 句を共通テーブル式より前に置く必要があります。  
   
  次は、WITH XMLNAMESPACES 句を使用するときに適用される一般的な構文規則です。  
@@ -98,7 +100,7 @@ DEFAULT <xml_namespace_uri>
   
 -   XMLNAMESPACES キーワードは WITH 句のコンテキストでは予約されています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  例については、「 [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

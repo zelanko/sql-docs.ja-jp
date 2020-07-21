@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97ba04b8d41c3e5ca4927abb53cf27cfa3013fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211500"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036990"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server アクセス用のマルチホーム コンピューターの構成
   サーバーが複数のネットワークまたはネットワーク サブネットへの接続を提供する必要がある場合、一般的なシナリオではマルチホーム コンピューターを使用します。 通常、このコンピューターは、境界ネットワーク (DMZ、非武装地帯、またはスクリーン サブネットとも呼ばれます) にあります。 このトピックでは、マルチホーム環境内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。  
@@ -55,7 +54,7 @@ ms.locfileid: "68211500"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>コンピューターで使用可能な IP アドレスを特定するには  
   
-1.  コンピューターに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされている場合、をクリックして**開始**、 をクリックして**実行**、型`cmd`し[!INCLUDE[clickOK](../../includes/clickok-md.md)]します。  
+1.  がインストールされているコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[**スタート**] をクリックし、[**実行**] をクリックして、「」と入力し `cmd` [!INCLUDE[clickOK](../../includes/clickok-md.md)] ます。  
   
 2.  コマンド プロンプト ウィンドウで、「`ipconfig,`」と入力し、Enter キーを押してこのコンピューターで使用可能な IP アドレスを一覧表示します。  
   
@@ -64,11 +63,11 @@ ms.locfileid: "68211500"
   
 3.  使用中の IPv4 アドレスおよび IPv6 アドレスに注意してください。 一時アドレス、サブネット マスク、既定のゲートウェイなど一覧内の他の情報は、TCP/IP ネットワークを構成する際の重要な情報です。 ただし、この情報はこの例では使用されません。  
   
-#### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>使用される IP アドレスおよびポートを特定するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+#### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>使用される IP アドレスおよびポートを特定するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**をクリックします。  
   
-2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構成マネージャー**のコンソール ペインで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ネットワークの構成]** 、 **[\<instance name> のプロトコル]** を順に展開し、 **[TCP/IP]** をダブルクリックします。  
+2.  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**のコンソールウィンドウで、[ネットワークの** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成**]、[ ** \<instance name> のプロトコル**] の順に展開し、[ **tcp/ip**] をダブルクリックします。  
   
 3.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブに、 **IP1**、 **IP2**という形式で **IPAll**まで IP アドレスが表示されます。 このうちいずれかが、ループバック アダプターの IP アドレス 127.0.0.1 です。 追加の IP アドレスがコンピューターで構成される各 IP アドレスとして表示されます。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "68211500"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているコンピューターで、管理者としてログオンします。  
   
-2.  をクリックして**開始**、 をクリックして**実行**、型`wf.msc`、 をクリック**OK**します。  
+2.  [**スタート**]、[**実行**] の順にクリックし、「 `wf.msc` 」と入力して [ **OK]** をクリックします。  
   
 3.  **[ユーザー アカウント制御]** ダイアログ ボックスの **[続行]** をクリックし、管理者資格情報を使用して、セキュリティが強化された Windows ファイアウォールのスナップインを開きます。  
   
@@ -138,7 +137,7 @@ ms.locfileid: "68211500"
   
 9. マルチホーム コンピューターで他の IP アドレスを構成するには、別の IP アドレスと別のルールを使用して、この手順を繰り返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Browser サービス &#40;データベース エンジンと SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [プロキシ サーバーを介して SQL Server に接続する方法 &#40;SQL Server 構成マネージャー&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   

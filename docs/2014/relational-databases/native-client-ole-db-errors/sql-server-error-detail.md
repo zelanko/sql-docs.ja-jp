@@ -1,5 +1,5 @@
 ---
-title: SQL Server エラーの詳細 |マイクロソフトのドキュメント
+title: SQL Server エラーの詳細 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,17 @@ helpviewer_keywords:
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c7535e4579204834fc8024b7c37c46675320b8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4c03cf62dd274f9bcca213d33fb8969b26c9d980
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156392"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043520"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server エラーの詳細
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、プロバイダー固有のエラー インターフェイスを定義します。 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)します。 このインターフェイスにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの詳細が返されるので、コマンドの実行や行セットの操作が失敗したときに役立ちます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、プロバイダー固有のエラーインターフェイス[ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)を定義します。 このインターフェイスにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの詳細が返されるので、コマンドの実行や行セットの操作が失敗したときに役立ちます。  
   
  **ISQLServerErrorInfo** インターフェイスにアクセスする方法は 2 つあります。  
   
@@ -44,7 +43,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  コンシューマーでは SSERRORINFO 構造体のメンバーが次のように解釈されます。  
   
-|Member|説明|  
+|メンバー|説明|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー メッセージです。 このエラー メッセージは、**IErrorInfo::GetDescription** で返される文字列と同じです。|  
 |*pwszServer*|セッションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
@@ -55,7 +54,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*wLineNumber*|該当する場合は、ストアド プロシージャでエラーが発生した行番号です。|  
   
 ## <a name="see-also"></a>参照  
- [エラー](errors.md)   
+ [誤り](errors.md)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  
   
   

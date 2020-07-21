@@ -1,21 +1,20 @@
 ---
-title: ブレークポイントの有効化、無効化、および削除 | Microsoft Docs
-ms.custom: ''
+title: ブレークポイントの有効化、無効化、および削除
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edc19f948689fafea8cde0fb4ae2fd5f79de3242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f9ab795149344eec1d7cbbdf88cbd749bd6d73e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064059"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068474"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>ブレークポイントの有効化、無効化、および削除
   開かれているすべてのブレークポイントを表示および管理するには、 **[ブレークポイント]** ウィンドウを使用します。 ブレークポイントの情報を表示し、各種の操作 (ブレークポイントの削除、無効化、有効化など) を実行するには、このウィンドウを使用します。  

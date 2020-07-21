@@ -1,5 +1,5 @@
 ---
-title: テキスト ファイル ドライバーのプログラミングに関する考慮事項 |Microsoft Docs
+title: テキストファイルドライバーのプログラミングに関する考慮事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba56db60d38f6babc52f81f65f9b94e2c3a2f531
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 72f624f65cadd6d7cbd5eb9d9354c84200733de0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939695"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81279842"
 ---
 # <a name="text-file-driver-programming-considerations"></a>テキスト ファイル ドライバーのプログラミングに関する考慮事項
-このセクションでは、次のトピックについて説明します。  
+このセクションのトピックは次のとおりです。  
   
 -   [テキスト ファイル ドライバーのプログラムでオプションの設定](../../odbc/microsoft/setting-options-programmatically-for-the-text-file-driver.md)  
   

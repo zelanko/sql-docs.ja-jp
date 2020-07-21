@@ -1,5 +1,6 @@
 ---
 title: ピア ツー ピア トランザクション レプリケーション | Microsoft Docs
+description: SQL Server では、ピア ツー ピア レプリケーションは、データのコピーを複数のサーバー インスタンスで保持することにより、可用性の高いスケールアウト ソリューションを実現します。
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121334"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901240"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>ピア ツー ピア トランザクション レプリケーション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   ピア ツー ピア レプリケーションは、データのコピーを複数のサーバー インスタンス ( *ノード*) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。 ピア ツー ピア レプリケーションはトランザクション レプリケーションを基礎としており、トランザクション的に一貫性のある変更がほぼリアルタイムで反映されます。 これにより、読み取り操作のスケールアウトを必要とするアプリケーションで、クライアントからの読み取りを複数のノードに分散することができます。 また、データがほぼリアルタイムで複数のノードに保持されるため、データの冗長性が実現され、データの可用性が向上します。  
   
@@ -42,10 +43,10 @@ ms.locfileid: "68121334"
   
 -   変更がレプリケートされるときには常にある程度の遅延が生じます。 最新の変更が直ちに反映される必要があるアプリケーションでは、複数のノードで動的に負荷を分散すると問題が発生する場合があります。  
   
- ピア ツー ピア レプリケーションには、ピア ツー ピア トポロジの競合の検出を有効にするオプションが含まれています。 このオプションは、検出されない競合によって引き起こされる問題 (アプリケーションの動作の矛盾や更新データの喪失など) の防止に役立ちます。 このオプションを有効にすると、競合する変更が、ディストリビューション エージェントの障害を引き起こす重大なエラーとして既定で扱われるようになります。 競合が発生した場合は、その競合が手動で解決されて、トポロジでデータの一貫性が確保されるまで、トポロジが一貫性のない状態のままになります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
+ ピア ツー ピア レプリケーションには、ピア ツー ピア トポロジの競合の検出を有効にするオプションが含まれています。 このオプションは、検出されない競合によって引き起こされる問題 (アプリケーションの動作の矛盾や更新データの喪失など) の防止に役立ちます。 このオプションを有効にすると、競合する変更が、ディストリビューション エージェントの障害を引き起こす重大なエラーとして既定で扱われるようになります。 競合が発生した場合は、その競合が手動で解決されて、トポロジでデータの一貫性が確保されるまで、トポロジが一貫性のない状態のままになります。 詳細については、「 [ピア ツー ピア レプリケーションにおける競合検出](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
   
 > [!NOTE]  
->  データの不整合が生じないようにするため、競合の検出を有効にしている場合でも、ピア ツー ピア トポロジで競合を発生させないようにしてください。 特定の行の書き込み操作が 1 つのノードだけで行われるようにするには、データにアクセスしてそのデータを変更するアプリケーションで、挿入、更新、および削除の各操作をパーティション分割する必要があります。 これにより、1 つのノードの特定の行に対する変更は、トポロジ内の他のすべてのノードと同期されてから、別のノードでその行が変更されるようになります。 競合の検出と解決のための高度な機能がアプリケーションに必要な場合は、マージ レプリケーションを使用します。 詳細については、「[Merge Replication](../../../relational-databases/replication/merge/merge-replication.md)」 (マージ レプリケーション) と「[Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」 (マージ レプリケーションの競合の検出と解決) を参照してください。  
+>  データの不整合が生じないようにするため、競合の検出を有効にしている場合でも、ピア ツー ピア トポロジで競合を発生させないようにしてください。 特定の行の書き込み操作が 1 つのノードだけで行われるようにするには、データにアクセスしてそのデータを変更するアプリケーションで、挿入、更新、および削除の各操作をパーティション分割する必要があります。 これにより、1 つのノードの特定の行に対する変更は、トポロジ内の他のすべてのノードと同期されてから、別のノードでその行が変更されるようになります。 競合の検出と解決のための高度な機能がアプリケーションに必要な場合は、マージ レプリケーションを使用します。 詳細については、「[Merge Replication](../../../relational-databases/replication/merge/merge-replication.md)」 (マージ レプリケーション) と「[マージ レプリケーションの競合の検出と解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」 を参照してください。  
   
 ## <a name="peer-to-peer-topologies"></a>ピア ツー ピア トポロジ  
  次のシナリオは、ピア ツー ピア レプリケーションの典型的な使用方法を示しています。  
@@ -94,7 +95,7 @@ ms.locfileid: "68121334"
 ## <a name="considerations-for-using-peer-to-peer-replication"></a>ピア ツー ピア レプリケーションの使用に関する注意点  
  ここでは、ピア ツー ピア レプリケーションを使用する際に考慮する必要がある情報とガイドラインを示します。  
   
-### <a name="general-considerations"></a>全般的な注意点  
+### <a name="general-considerations"></a>一般的な考慮事項  
   
 -   ピア ツー ピア レプリケーションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の Enterprise バージョンでのみ使用できます。  
   
@@ -112,7 +113,7 @@ ms.locfileid: "68121334"
   
 -   サブスクリプションを作成するには、パブリケーションをピア ツー ピア レプリケーションで有効にする必要があります。  
   
--   サブスクリプションは、バックアップを使用するか、 **[レプリケーションのサポートのみ]** オプションで初期化する必要があります。 詳細については、「[Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)」 (スナップショットを使用しないトランザクション サブスクリプションの初期化) を参照してください。  
+-   サブスクリプションは、バックアップを使用するか、 **[レプリケーションのサポートのみ]** オプションで初期化する必要があります。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 -   ID 列の使用はお勧めできません。 ID を使用する場合は、各参加データベースのテーブルに割り当てられた範囲を手動で管理する必要があります。 詳細については、「[Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) で、"Assigning Ranges for Manual Identity Range Management" (手動で ID 範囲を管理する場合の範囲の割り当て) セクションを参照してください。  
   
@@ -139,19 +140,19 @@ ms.locfileid: "68121334"
   
 -   ディストリビューション エージェントのパラメーター **-SubscriptionStreams** とログ リーダー エージェントのパラメーター **-MaxCmdsInTran**  
   
--   アーティクルのプロパティ **@destination_owner** 」および「 **@destination_table** ) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。
+-   アーティクルの `@destination_owner` および `@destination_table` プロパティ。
 
 -   ピア ツー ピア トランザクション レプリケーションでは、ピア ツー ピア パブリケーションの一方向トランザクション サブスクリプションを作成できません   
   
  次のプロパティには特別な注意が必要です。  
   
--   パブリケーションのプロパティ **@allow_initialize_from_backup** には値 **true**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
+-   パブリケーションの `@allow_initialize_from_backup` プロパティの値は、**true** にする必要があります。  
   
--   アーティクルのプロパティ **@replicate_ddl** には値 **true**が必要です。 **@identityrangemanagementoption** には値 **manual**が必要です。 **@status** にはオプション **24** を設定する必要があります。  
+-   アーティクルでは、`@replicate_ddl` プロパティを値 **true** にし、`@identityrangemanagementoption` を値 **manual** にして、`@status` のオプション **24** を設定する必要があります。  
   
--   アーティクルのプロパティ **@ins_cmd** 、 **@del_cmd** 、および **@upd_cmd** の値は **SQL**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
+-   アーティクルのプロパティ `@ins_cmd`、`@del_cmd`、および `@upd_cmd` の値を、**SQL** に設定することはできません。  
   
--   サブスクリプションのプロパティ **@sync_type** には値 **none** または **automatic**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
+-   サブスクリプションの `@sync_type` プロパティの値は、**none** または **automatic** にする必要があります。  
   
 ### <a name="maintenance-considerations"></a>メンテナンスの注意事項  
  いくつかのアクションを実行する場合は、システムを休止状態にする必要があります。 システムの停止を実行するには、すべてのノードのパブリッシュされたテーブルで処理を停止し、他のすべてのノードからのすべての変更を各ノードが受信しているかどうかを確認します。  

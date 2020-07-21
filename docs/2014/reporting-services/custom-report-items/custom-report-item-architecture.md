@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a053eb55547da9030eebe9036667cca2e14606f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264964"
 ---
 # <a name="custom-report-item-architecture"></a>カスタム レポート アイテムのアーキテクチャ
@@ -32,9 +32,9 @@ ms.locfileid: "63264964"
   
  ![カスタム レポート アイテムのデザイン時コンポーネント](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "カスタム レポート アイテムのデザイン時コンポーネント")  
   
-## <a name="see-also"></a>関連項目  
- [カスタム レポート アイテムの実行時コンポーネントの作成](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [カスタム レポート アイテムのデザイン時コンポーネントの作成](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [方法:カスタム レポート アイテムを配置する](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+## <a name="see-also"></a>参照  
+ [カスタムレポートアイテムの実行時コンポーネントの作成](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [カスタムレポートアイテムのデザイン時コンポーネントの作成](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [方法: カスタム レポート アイテムを配置する](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Linux デプロイでの SQL Server 可用性の基本
-description: ''
+title: Linux デプロイでの SQL Server の高可用性
+description: Always On 可用性グループ、フェールオーバー クラスター インスタンス (FCI)、ログ配布など、SQL Server on Linux の高可用性オプションについて説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,20 +9,20 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952618"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196855"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイでの SQL Server 可用性の基本
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 以降では、Linux と Windows の両方で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] がサポートされています。 Windows ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイと同様に、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] のデータベースとインスタンスは、Linux 下でも高可用性を備えている必要があります。 この記事では、高可用性を備えた Linux ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] データベースとインスタンスを計画し、デプロイするうえでの技術的な側面について説明すると共に、Windows ベースのインストールとの違いについて説明します。 Linux プロフェッショナルは [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] について聞き慣れなかったり、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] プロフェッショナルは Linux について聞き慣れない場合があるかもしれないため、この記事では、一部のプロフェッショナルにとっては馴染みのある概念についても説明しています。
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>Linux デプロイでの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 可用性オプション
+## <a name="ssnoversion-md-availability-options-for-linux-deployments"></a>Linux デプロイでの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 可用性オプション
 バックアップと復元に加えて、Linux では、Windows ベースのデプロイと同じ、3 つの可用性機能を使用できます。
 -   Always On 可用性グループ (AG)
 -   Always On フェールオーバー クラスター インスタンス (FCI)
@@ -50,7 +51,7 @@ Linux では、多くのコマンドを昇格された特権で実行する必�
 -   `systemctl` - サービスを開始、停止、または有効化します
 -   テキスト エディター コマンド。 Linux には、vi や emacs など、さまざまなテキスト エディター オプションがあります。
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Linux 上の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の可用性構成に関する一般的なタスク
+## <a name="common-tasks-for-availability-configurations-of-ssnoversion-md-on-linux"></a>Linux 上の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の可用性構成に関する一般的なタスク
 このセクションでは、Linux ベースのすべての [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイに共通するタスクについて説明します。
 
 ### <a name="ensure-that-files-can-be-copied"></a>ファイルをコピーできることを確認する
@@ -76,14 +77,14 @@ scp MyAGCert.cer username@servername:/folder/subfolder
 
 Windows ベースの SMB 共有を使用することもできます。[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] をホストしている Linux サーバー 上で Samba のクライアント部分が適切に構成されていて、共有に適切なアクセス権があれば、SMB 共有が Linux ベースである必要はありません。 混合環境では、これは Linux ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイの既存のインフラストラクチャを利用するための 1 つの方法です。
 
-重要なのは、デプロイされた Samba のバージョンが SMB 3.0 に準拠している必要があるということです。 [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] で SMB サポートが追加されたときには、すべての共有で SMB 3.0 をサポートする必要がありました。 Windows Server ではなく、共有に Samba を使用する場合は、Samba ベースの共有で、SMB 3.1.1 をサポートしている Samba 4.0 以降 (できれば 4.3 以降) を使用する必要があります。 「[SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)」は、SMB と Linux に関する情報源として有用です。
+重要なのは、デプロイされた Samba のバージョンが SMB 3.0 に準拠している必要があるということです。 [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] で SMB サポートが追加されたときには、すべての共有で SMB 3.0 をサポートする必要がありました。 Windows Server ではなく、共有に Samba を使用する場合は、Samba ベースの共有で、SMB 3.1.1 をサポートしている Samba 4.0 以降 (できれば 4.3 以降) を使用する必要があります。 「[SMB3 in Samba](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)」は、SMB と Linux に関する情報源として有用です。
 
 最後に、ネットワーク ファイル システム (NFS) 共有を使用することもできます。 NFS は、Windows ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイでは使用できず、Linux ベースのデプロイでのみ使用できます。
 
 ### <a name="configure-the-firewall"></a>ファイアウォールの構成
 Windows と同様に、Linux ディストリビューションにはファイアウォールが組み込まれています。 組織のサーバーに外部ファイアウォールが使用されている場合は、Linux でファイアウォールを無効にすることが許容される可能性もあります。 ただし、ファイアウォールがどこで有効になっているかに関係なく、ポートは開いている必要があります。 次の表は、Linux 上の高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイに必要な、一般的なポートを示したものです。
 
-| [ポート番号] | 型     | [説明]                                                                                                                 |
+| ポート番号 | Type     | 説明                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (使用されている場合) - End Point Mapper                                                                                          |
@@ -119,7 +120,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>可用性のための [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] パッケージをインストールする
+### <a name="install-ssnoversion-md-packages-for-availability"></a>可用性のための [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] パッケージをインストールする
 Windows ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] インストールでは、一部のコンポーネントは基本的なエンジンのインストールでもインストールされますが、それ以外はインストールされません。 Linux では、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] エンジンのみがインストール プロセスの一部としてインストールされます。 その他はすべてオプションです。 Linux 下の高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] インスタンスの場合、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] と共に 2 つのパッケージをインストールする必要があります。[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent (*mssql-server-agent*) と高可用性 (HA) パッケージ (*mssql-server-ha*) です。 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent は厳密にはオプションですが、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] のジョブのスケジューラであり、ログ配布で必要とされるため、インストールすることをお勧めします。 Windows ベースのインストールでは、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Agent はオプションではありません。
 
 >[!NOTE]
@@ -145,7 +146,7 @@ Linux 上の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用のそ
 
 このソリューションは、ある意味では Windows を使用したクラスター化構成のデプロイと似ていますが、異なる点も多くあります。 Windows では、クラスタリングの可用性形式 (Windows Server フェールオーバー クラスター (WSFC)) がオペレーティング システムに組み込まれており、WSFC の作成を可能にする機能 (フェールオーバー クラスタリング) は既定で無効になっています。 Windows では、AG と FCI は WSFC の上に構築されており、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] によって提供される特定のリソース DLL により、緊密な統合が共有されます。 この密結合のソリューションは、1 つのベンダーから提供されているからこそ実現できているとも言えます。
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![HA の基本](./media/sql-server-linux-ha-basics/image1.png)
 
 Linux では、サポートされている各ディストリビューションで Pacemaker を利用できますが、それぞれのディストリビューションでカスタマイズすることができ、実装とバージョンが少し異なる場合があります。 相違点の一部は、この記事の手順に反映されています。 クラスタリング レイヤーはオープンソースであるため、ディストリビューションに付属している場合でも、Windows 下の WSFC と同じ方法で緊密に統合されてはいません。 そのため、Microsoft では *mssql-server-ha* を提供してします。これにより、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] と Pacemaker スタックでも、Windows 下の AG や FCI に近いエクスペリエンスを提供できるようになっています (ただし、完全に同じではありません)。
 
@@ -160,7 +161,7 @@ Ubuntu には、可用性に関するガイドはありません。
 ### <a name="pacemaker-concepts-and-terminology"></a>Pacemaker の概念と用語
 このセクションでは、Pacemaker の実装に関する一般的な概念と用語について説明します。
 
-#### <a name="node"></a>ノード
+#### <a name="node"></a>Node
 ノードとは、クラスターに参加しているサーバーのことです。 Pacemaker クラスターでは、最大 16 のノードがネイティブにサポートされています。 この数は、Corosync が追加のノードで実行されていなけば超えることもできますが、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] には Corosync が必須です。 したがって、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ベースの構成に対してクラスターで設定できるノードの最大数は 16 になります。これは Pacemaker の制限であり、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] によって課せられる AG または FCI の最大制限とは関係ありません。 
 
 #### <a name="resource"></a>リソース
@@ -168,10 +169,13 @@ Ubuntu には、可用性に関するガイドはありません。
 
 Pacemaker には、標準リソースとクローン リソースがあります。 クローン リソースとは、すべてのノードで同時に実行されるリソースのことです。 たとえば、負荷分散のために複数のノードで実行される IP アドレスなどがこれに該当します。 FCI 用に作成されたリソースでは、標準リソースが使用されます。これは、FCI は 1 つのノードでしか同時にホストできないためです。
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
+
 AG を作成する際には、マルチステート リソースと呼ばれる特殊な形式の複製リソースが必要になります。 AG のプライマリ レプリカは 1 つだけですが、AG 自体は、動作元として構成されたすべてのノードで実行され、場合によっては、読み取り専用アクセスなども使用することができます。 これはノードを "ライブで" で使用する手法なので、リソースの状態は、マスターとスレーブという 2 つの概念で表されます。 詳細については、「[多状態のリソース:複数モードのリソース](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html)」を参照してください。
 
 #### <a name="resource-groupssets"></a>リソース グループ/セット
-WSFC のロールのように、Pacemaker クラスターにはリソース グループという概念があります。 リソース グループ (SLES ではセットと呼ばれます) とは、連携的に機能し、1 つのノードから別のノードにフェールオーバーすることができる、リソースのコレクションのことを指します。 リソース グループには、マスター/スレーブとして構成されたリソースを含めることはできません。したがって、リソース グループは AG には使用できません。 リソース グループは FCI には使用できますが、通常は推奨される構成ではありません。
+
+WSFC のロールのように、Pacemaker クラスターにはリソース グループという概念があります。 リソース グループ (SLES では "_セット_" と呼ばれます) とは、連携的に機能し、1 つのノードから別のノードに 1 つの単位としてフェールオーバーすることができる、リソースのコレクションです。 リソース グループには、マスターまたはスレーブとして構成されたリソースを含めることはできないため、これを AG に使用することはできません。 リソース グループは FCI には使用できますが、通常は推奨される構成ではありません。
 
 #### <a name="constraints"></a>制約
 WSFC には、リソースに関する各種パラメーターに加え、依存関係などの概念もあります。これにより、2 つの異なるリソース間の親子関係が WSFC に伝えられます。 依存関係とは、どのリソースを最初にオンラインにする必要があるかを WSFC に指示するルールのことです。
@@ -203,10 +207,10 @@ Pacemaker クラスターのログの場所は、ディストリビューショ�
 
 ログの既定の場所を変更するには、`corosync.conf` に変更を加えます。
 
-## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Pacemaker クラスターを [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用に計画 する
+## <a name="plan-pacemaker-clusters-for-ssnoversion-md"></a>Pacemaker クラスターを [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用に計画 する
 このセクションでは、Pacemaker クラスターの重要な計画ポイントについて説明します。
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Linux ベースの Pacemaker クラスターを [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用に仮想化する
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-ssnoversion-md"></a>Linux ベースの Pacemaker クラスターを [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用に仮想化する
 仮想マシンを使用して Linux ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイを AG と FCI 用にデプロイする際には、Windows ベースの場合と同じ規則が適用されます。 仮想化された [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイのサポートに関する一連の基本規則は、[Microsoft サポート KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment) で公開されています。 Microsoft の Hyper-V や VMware の ESXi など、異なるハイパーバイザー間では、プラットフォーム自体の違いによって異なる規則が生じる場合もあります。
 
 仮想化環境で AG と FCI を使用する場合は、指定された Pacemaker クラスターのノードに対して、アンチアフィニティが設定されていることを確認してください。 AG または FCI の構成で高可用性向けに構成された場合、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] をホストしている各 VM は、同じハイパーバイザー ホストで実行されないようにする必要があります。 たとえば、2 ノードの FCI がデプロイされている場合、特にライブ マイグレーションや vMotion のような機能を使用している場合には、ホストで障害が発生したときに、ノードをホストしている VM のいずれかに対して移行先を確保できるよう、"*少なくとも*" 3 つのハイパーバイザー ホストを確保する必要があります。
@@ -214,9 +218,6 @@ Pacemaker クラスターのログの場所は、ディストリビューショ�
 詳細については、以下を参照してください。
 -   Hyper-V のドキュメント - [高可用性のためのゲスト クラスタリングの使用](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
 -   ホワイトペーパー (Windows ベースのデプロイ向けに記述されていますが、ほとんどの概念が適用されます) - [VMware vSphere を使用したミッション クリティカルな高可用性 SQL Server デプロイの計画](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
-
->[!NOTE]
->Pacemaker クラスターと STONITH を使用した RHEL は、Hyper-V ではまだサポートされていません。 これがサポートされるまでは、「[RHEL 高可用性クラスターのサポート ポリシー](https://access.redhat.com/articles/29440#3physical_host_mixing)」で詳細と更新情報を確認してください。
 
 ### <a name="networking"></a>ネットワーク
 WSFC とは異なり、Pacemaker では、Pacemaker クラスター自体に対して専用の名前を付けたり、少なくとも 1 つの専用 IP アドレスを持たせる必要はありません。 AG と FCI には IP アドレスが必要 (詳細については、それぞれのドキュメントを参照してください) ですが、ネットワーク名リソースがないので、名前は必要ありません。 SLES では、管理目的で IP アドレスを構成することができますが、「[Pacemaker クラスターを作成する](sql-server-linux-deploy-pacemaker-cluster.md#create)」で示されているように、必須ではありません。
@@ -230,9 +231,6 @@ WSFC と同様に、Pacemaker では冗長ネットワークの使用が推奨�
 
 サポートされている Pacemaker クラスターには STONITH が必須です。 STONITH を構成するには、ディストリビューションのドキュメントを使用します。 たとえば、SLES の場合なら「[ストレージベースのフェンス](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html)」を使用します。 ESXI ベースのソリューションの場合は、VMware vCenter 用の STONITH エージェントもあります。 詳細については、「[VMWare VM VCenter SOAP フェンス向け STONITH プラグイン エージェント (非公式)](https://github.com/olafrv/fence_vmware_soap)」を参照してください。
 
-> [!NOTE]
-> この記事の執筆時点では、Hyper-V には STONITH 向けのソリューションがありません。 これはオンプレミスのデプロイについても同様で、特定のディストリビューション (RHEL など) を使用した Azure ベースの Pacemaker デプロイにも影響します。
-
 ### <a name="interoperability"></a>相互運用性
 このセクションでは、Linux ベースのクラスターで、WSFC や他の Linux ディストリビューションとどのように連携できるかについて説明します。
 
@@ -244,5 +242,5 @@ WSFC と同様に、Pacemaker では冗長ネットワークの使用が推奨�
 #### <a name="other-linux-distributions"></a>他の Linux ディストリビューション
 Linux では、Pacemaker クラスターのすべてのノードが同じディストリビューション上に存在している必要があります。 たとえば、RHEL ノードは、SLES ノードを持つ Pacemaker クラスターの一部にすることはできません。 この問題の主な理由は、前に説明したとおりです。つまり、ディストリビューションのバージョンと機能が異なることで、正常に機能しない可能性があるためです。 ディストリビューションの混合については、WSFC と Linux の混合と同じ条件が適用されます。つまり、None または 分散型 AG を使用してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 [SQL Server on Linux 用の Pacemaker クラスターをデプロイする](sql-server-linux-deploy-pacemaker-cluster.md)

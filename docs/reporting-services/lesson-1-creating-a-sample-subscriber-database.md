@@ -9,10 +9,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62513164"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>レッスン 1 : サンプル サブスクライバー データベースの作成
@@ -55,16 +55,16 @@ ms.locfileid: "62513164"
     GO  
     ```  
   
-7.  ツール バーの **[実行]** をクリックします。  
+7.  ツールバーの **[実行]** をクリックします。  
   
 8.  SELECT ステートメントを使用して、3 行のデータがあることを確認します。 例: `select * from OrderInfo`  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 + 以上の操作で、レポートを配信し、各サブスクライバーごとにレポート出力を変えるサブスクリプション データを作成できました。 
 + 次に、格納された資格情報を使用するレポートのデータ ソースのプロパティを変更します。 
 + また、レポートのデザインを変更して、サブスクリプションがサブスクライバーのデータと共に使用するパラメーターを含めます。 [レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [データ ドリブン サブスクリプションの作成](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
 [データベースの作成](../relational-databases/databases/create-a-database.md)  

@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c50a1cba2a2fcc44fab6a9836704c9da8d9798bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056965"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423979"
 ---
 # <a name="package-configurations-organizer"></a>[パッケージ構成オーガナイザー]
   **[パッケージ構成オーガナイザー]** ダイアログ ボックスを使用すると、パッケージ構成を有効にし、現在のパッケージの構成の一覧を表示して、構成の優先読み込み順序を指定できます。  
@@ -32,25 +31,25 @@ ms.locfileid: "66056965"
 > [!NOTE]  
 >  パッケージ構成を優先順序で読み込むと、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスに表示された一覧の上から下へと構成が読み込まれます。 ただし、実行時にパッケージ構成が優先順序で読み込まれるとは限りません。 具体的には、親のパッケージ構成は他の種類の構成の後に読み込まれます。  
   
- パッケージ オブジェクトのプロパティの値は、パッケージ構成によって実行時に更新されます。 パッケージが読み込まれると、パッケージの開発時に設定された値は、構成の値に置き換えられます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、さまざまな種類の構成がサポートされます。 たとえば、複数の構成を含むことができる XML ファイルや、単一の構成を含む環境変数を使用できます。 詳細については、「[パッケージ構成](../../2014/integration-services/package-configurations.md)」を参照してください。  
+ パッケージ オブジェクトのプロパティの値は、パッケージ構成によって実行時に更新されます。 パッケージが読み込まれると、パッケージの開発時に設定された値は、構成の値に置き換えられます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、さまざまな種類の構成がサポートされます。 たとえば、複数の構成を含むことができる XML ファイルや、単一の構成を含む環境変数を使用できます。 詳細については、「 [パッケージ構成](../../2014/integration-services/package-configurations.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[パッケージの構成を有効にする]**  
  パッケージで使用する構成を選択します。  
   
- **[構成名]**  
+ **構成名**  
  構成の名前を表示します。  
   
- **[構成の種類]**  
+ **構成の種類**  
  構成を格納する場所の種類を表示します。  
   
- **[構成文字列]**  
+ **構成文字列**  
  構成値を格納する場所を表示します。 場所には、ファイルのパス、環境変数の名前、親パッケージ変数の名前、レジストリ キー、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルの名前を使用できます。  
   
- **[対象になるオブジェクト]**  
+ **ターゲットオブジェクト**  
  構成を更新するオブジェクトの名前を表示します。 構成が XML 構成ファイルまたは SQL Server テーブルである場合は、構成に複数のオブジェクトを含むことができるため、この列は空白になります。  
   
- **[対象になるプロパティ]**  
+ **Target プロパティ**  
  構成によって変更されるプロパティの名前を表示します。 構成の種類が複数の構成をサポートしている場合、この列は空白になります。  
   
  **[追加]**  

@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c04d0295fa6add80eb471d8c4c06b2d588b915bb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774782"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930480"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>ソース管理からソリューションやプロジェクトを開く方法
-  使用することができます[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]をソース管理から直接ソリューションまたはプロジェクトを開きます。 ソース管理からソリューションを開くと、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境によって自動的に最新バージョンのソリューションが取得され、指定した場所にそれがコピーされます。  
+  を使用すると [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 、ソリューションまたはプロジェクトをソース管理から直接開くことができます。 ソース管理からソリューションを開くと、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境によって自動的に最新バージョンのソリューションが取得され、指定した場所にそれがコピーされます。  
   
- ソリューションのローカル コピーを持っていない場合は、ソース管理操作を実行する前に、ソース管理からそのソリューションを開く必要があります。 ソリューションのローカル コピーを取得した後は再度; ソース管理から開く必要はありません。ローカル コピーを開くし、など、標準的なソース管理コマンドを使用することができます**最新バージョンの取得**または**チェック アウト**を目的の操作を実行します。  
+ ソリューションのローカル コピーを持っていない場合は、ソース管理操作を実行する前に、ソース管理からそのソリューションを開く必要があります。 ソリューションのローカルコピーを取得した後、ソース管理から再度開く必要はありません。ローカルコピーを開き、[**最新バージョンの取得** **] や [チェックアウト]** などの標準のソース管理コマンドを使用して目的の操作を実行できます。  
   
  このトピックでは、次の内容について紹介します。  
   

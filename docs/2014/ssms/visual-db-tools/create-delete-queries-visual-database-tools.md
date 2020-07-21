@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1103e1715c01cfc868c59af17ee0f95fa7cedff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a76c3aaef623365e419f40f3058308f6217d75d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661686"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067159"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>削除クエリの作成 (Visual Database Tools)
   削除クエリを使用すると、テーブル内の行をすべて削除できます。  
@@ -48,7 +47,7 @@ ms.locfileid: "62661686"
  削除クエリを実行しても、 [結果ペイン](results-pane-visual-database-tools.md)には結果が表示されません。 代わりに、削除された行数を示すメッセージが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [クエリの種類がサポートされている&#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [Visual Database Tools &#40;サポートされているクエリの種類&#41;](supported-query-types-visual-database-tools.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
+description: SQL Server で無効なパスワードまたはユーザー名によるエラーが発生したため、接続が拒否されました。 エラーの説明と、考えられる解決策をご確認ください。
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3e1ad2ab6cda565e59268b063494c17941a81e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780630"
 ---
-# <a name="mssqlserver18456"></a>MSSQLSERVER_18456
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|18456|  
 |イベント ソース|MSSQLSERVER|  
@@ -60,7 +61,7 @@ ms.locfileid: "68137091"
 ## <a name="additional-error-information"></a>エラーに関する追加情報  
 セキュリティ向上のために、クライアントに返されるエラー メッセージでは、認証エラーの性質を意図的に非表示にしています。 ただし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログでは、対応するエラーに、認証失敗条件と対応付けられるエラー状態が含まれています。 ログインできない理由を判断するには、エラー状態を次の一覧と比較してください。  
   
-|状態|[説明]|  
+|State|説明|  
 |---------|---------------|  
 |1|エラー情報を表示できません。 通常、この状態は、エラーの詳細情報を受け取る権限がないことを意味します。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者に問い合わせてください。|  
 |2|ユーザー ID が無効です。|  
@@ -73,6 +74,7 @@ ms.locfileid: "68137091"
 |12|ログインは有効なログインですが、サーバー アクセスに失敗しました。|  
 |18|パスワードを変更する必要があります。|  
 |38, 46|ユーザーによって要求されたデータベースを見つけることができませんでした。|
+|58| SQL Server は Windows 認証のみを使用するように設定されているのに、SQL 認証を使用したログインがクライアントで試みられた場合です。 別の原因として、SID が一致しない場合があります。|
 |102 - 111|AAD のエラーです。|
 |122 - 124|空のユーザー名またはパスワードによるエラーです。|
 |126|ユーザーによって要求されたデータベースは存在しません。|
@@ -90,10 +92,10 @@ ms.locfileid: "68137091"
   
 この問題を解決するには、接続文字列に **TRUSTED_CONNECTION = TRUE** を含めます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、認証エラー状態は 8 です。 これは、パスワードが正しくないことを示します。  
   
-|date|Source|メッセージ|  
+|Date|source|Message|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|ログオン|エラー:18456、重大度:14、状態:8.|  
 |2007-12-05 20:12:56.34|ログオン|ユーザー '<user_name>' はログインできませんでした。 [CLIENT: <ip address>]|  

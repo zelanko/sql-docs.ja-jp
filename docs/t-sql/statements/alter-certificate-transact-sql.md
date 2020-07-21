@@ -22,16 +22,17 @@ helpviewer_keywords:
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2711a9b2bb1530b979a8294b2d3f9a08f764ec6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: e983b85c4017ab282988142010770cc3f1e16378
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065960"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381226"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+
+[!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
 
   証明書の秘密キーの暗号化に使用するパスワードを変更したり、秘密キーを削除したり、秘密キーが存在しない場合はインポートします。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] に対して、証明書を使用できるようにするかどうかを変更します。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68065960"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER CERTIFICATE certificate_name   
@@ -58,10 +59,13 @@ ALTER CERTIFICATE certificate_name
          [ DECRYPTION BY PASSWORD = 'current_password' ]  
          [ [ , ] ENCRYPTION BY PASSWORD = 'new_password' ]  
       }  
-```  
-  
-```  
--- Syntax for Parallel Data Warehouse  
+``` 
+ 
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
+ 
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  
@@ -72,7 +76,10 @@ ALTER CERTIFICATE certificate_name
 }  
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *certificate_name*  
  データベースに認識される証明書の一意な名前を指定します。  
   
@@ -87,7 +94,7 @@ ALTER CERTIFICATE certificate_name
  ファイル名だけを指定した場合、そのファイルがインスタンスの既定のユーザー データ フォルダーに保存されます。 このフォルダーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA フォルダーであってもなくても構いません。 SQL Server Express LocalDB の場合、インスタンスの既定のユーザー データ フォルダーは、インスタンスを作成したアカウントの `%USERPROFILE%` 環境変数で指定されたパスです。  
   
  BINARY ='*private_key_bits*'  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  バイナリ定数として指定された秘密キーのビット。 これらのビットは暗号化された形式でもかまいません。 暗号化されている場合は、ユーザーは暗号化解除パスワードを指定する必要があります。 パスワード ポリシーのチェックは、このパスワードに対しては実行されません。 秘密キーのビットは PVK ファイル形式にする必要があります。  
   
@@ -100,7 +107,7 @@ ALTER CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の発信側で証明書を使用できるようにします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  秘密キーは、*certificate_name* で指定する公開キーに対応している必要があります。  
   
  DECRYPTION BY PASSWORD 句は、ファイル内のパスワードが NULL パスワードで保護されている場合は省略できます。  
@@ -121,7 +128,7 @@ ALTER CERTIFICATE certificate_name
 ## <a name="permissions"></a>アクセス許可  
  証明書に対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-removing-the-private-key-of-a-certificate"></a>A. 証明書の秘密キーを削除する  
   

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67957683"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE コード アクセラレータを使用したデータ ラングリング
@@ -45,7 +45,7 @@ import prose.codeaccelerator as cx
 
 PROSE コード アクセラレータでは、データ ファイルの構造を分析し、ファイルを読み込むコードを自動的に生成することで、この問題を解決します。 ほとんどの場合、生成されたコードでデータが正しく解析されます。 場合によっては、ニーズに合わせてコードの調整が必要になることがあります。
 
-次の例を参照してください。
+次の例を確認してください。
 
  ```python
 import prose.codeaccelerator as cx
@@ -113,7 +113,7 @@ builder.learn().code()
 もう 1 つの一般的なシナリオは、クリーニングまたはグループ化の目的で文字列の列のパターンを検出することです。 たとえば、日付が複数の異なる形式の日付列があるとします。 値を標準化するために、正規表現を使用して条件付きステートメントを記述することが必要な場合があります。
 
 
-|   |[オブジェクト名]                      |BirthDate      |
+|   |Name                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |

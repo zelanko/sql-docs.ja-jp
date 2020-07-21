@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 275a38b70a8215d3ffb9d35530cd0bd5df4ffb70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054130"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966012"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>クラスター化インデックスのサイズの見積もり
   クラスター化インデックスにデータを格納するために必要な領域を見積もるには、次の手順を実行します。  
@@ -174,21 +173,21 @@ ms.locfileid: "66054130"
   
 7.  次の式で、インデックス内のレベル数を計算します。  
   
-     ***Non-leaf_levels*** = 1 + ログ Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***非 leaf_Levels*** = 1 + ログ Index_Rows_Per_Page (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      この値を最も近い整数に切り上げます。 この値には、クラスター化インデックスのリーフ レベルは含まれません。  
   
 8.  次の式で、インデックス内の非リーフ ページ数を計算します。  
   
-     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages/(Index_Rows_Per_Page***<sup>レベル</sup>***))***  
+     ***Num_Index_Pages =*** ∑ level ***(Num_Leaf_Pages/(Index_Rows_Per_Page***<sup>レベル</sup>***))***  
   
      ここで、1 <= Level <= ***Non-leaf_Levels***  
   
      それぞれの値を最も近い整数に切り上げます。 簡単な例として、 ***Num_Leaf_Pages*** = 1000、 ***Index_Rows_Per_Page*** = 25 のインデックスを例に取ります。 リーフ レベルより上位の最初のインデックス レベルでは、1000 行のインデックス行が格納されます。リーフ ページあたり 1 行のインデックス行で、1 ページあたり 25 行のインデックス行を納めることができます。 つまり、1,000 行のインデックス行を格納するために 40 ページが必要になります。 次のレベルのインデックスでは、40 行のインデックス行を格納する必要があります。 つまり、2 ページが必要になります。 最上位レベルのインデックスでは、2 行のインデックス行を格納する必要があります。 つまり、1 ページが必要になります。 その結果、非リーフ インデックス ページは 43 ページとなります。 このような数値を前の式で使用すると、次のような結果になります。  
   
-     ***Non-leaf_levels*** = 1 + log25 (1000/25) = 3  
+     ***非 leaf_Levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43、これは、例で説明したページ数。  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43 (例で説明したページ数)。  
   
 9. 次の式で、インデックスのサイズを計算します (1 ページあたりの総バイト数は 8,192 です)。  
   

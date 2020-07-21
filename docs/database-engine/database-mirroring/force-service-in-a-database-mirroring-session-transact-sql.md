@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッションでのサービスの強制 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリング サービスの強制
+description: ミラー サーバーが使用可能になっている間にプリンシパル サーバーで障害が発生した場合は、ミラー化されたデータベースにフェールオーバーするサービスを強制することで、データベースを使用できるようにします。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8be517127e297fb72e8010cdad953c8a955d8815
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ac9ebf9538ad7800deb5807ac5bb1980b2f472b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997867"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754622"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>データベース ミラーリング セッションでのサービスの強制 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   高パフォーマンス モードおよび自動フェールオーバーを伴わない高い安全性モードでは、ミラー サーバーが使用可能であるときにプリンシパル サーバーで障害が発生した場合、データベース所有者はサービスを強制的にミラー データベースにフェールオーバーして、データベースを直ちに使用可能な状態にできます (ただし、データが損失する場合があります)。 この方法は、次のすべての条件に一致する場合にのみ使用できます。  
   
 -   プリンシパル サーバーが停止している。  

@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - SQL property [ADO], VBScript example
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c4974d6509a0ba864f0159271d9c8cc90e2c4047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 759dff00a5ae540a535c51d55b51c454cd2353d9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963406"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750689"
 ---
 # <a name="sql-property-example-vbscript"></a>SQL プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次のコードを設定する方法を示しています、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)デザイン時およびバインドと呼ばれるデータベースを使用してコントロールをデータに対応する SQL パラメーター *Pubs*、Microsoft SQL Server が付属しています。 という名前の例では、テスト、標準の ASP 文書に次のコードをコピーする**SQLDesignVBS.asp** Web サーバーにします。  
+ 次のコードは、RDS を設定する方法を示して[います。](../../../ado/reference/rds-api/datacontrol-object-rds.md)SQL パラメーターをデザイン時に DataControl し、 *Pubs*というデータベースを使用してデータ対応コントロールにバインドします。これは Microsoft SQL Server に付属しています。 例をテストするには、次のコードを Web サーバー上の**Sqldesignvbs .asp**という名前の通常の asp ドキュメントにコピーします。  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -88,7 +88,7 @@ body {
 <!-- EndSQLDesignVBS -->  
 ```  
   
- 次の例は、の必要なパラメーターを設定する方法を示します**rds.DataControl**実行時にします。 この例をテストする切り取りと標準の ASP 文書に次のコードを貼り付けるし、名前を付けます**SQLRuntimeVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
+ 次の例は、RDS の必要なパラメーターを設定する方法を示して**います。** 実行時に DataControl。 この例をテストするには、次のコードを切り取って、通常の ASP ドキュメントに貼り付け、「 **Sqlruntimevbs .asp**」という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginSQLRuntimeVBS -->  
@@ -174,7 +174,7 @@ End Sub
 <!-- EndSQLRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [SQL プロパティ](../../../ado/reference/rds-api/sql-property.md)
 

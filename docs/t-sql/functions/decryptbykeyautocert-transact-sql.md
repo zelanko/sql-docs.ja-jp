@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6b799c8fd5dd4a7f44efc358949166d902f88abd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc3da50d9d0be3c206c6d3e8556021a3b988ad2e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135962"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901655"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この関数は、対称キーでデータを復号します。 その対称キーは、証明書で自動的に復号されます。  
 
@@ -33,7 +33,7 @@ ms.locfileid: "68135962"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DecryptByKeyAutoCert ( cert_ID , cert_password   
     , { 'ciphertext' | @ciphertext }  
@@ -58,24 +58,24 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示します。 データ暗号化プロセス中、[ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に渡された値に一致する必要があります。 *add_authenticator* には、暗号化プロセスで認証子が使用された場合、値 1 が与えられます。 *add_authenticator* には、**int** データ型が与えられます。  
   
 @add_authenticator  
-元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示す変数。 データ暗号化プロセス中、[ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に渡された値に一致する必要があります。 *@add_authenticator* には、**int** データ型が与えられます。  
+元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示す変数。 データ暗号化プロセス中、[ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に渡された値に一致する必要があります。 *\@add_authenticator* には、**int** データ型が与えられます。  
   
 *authenticator*  
 認証子の生成の基礎として使用されるデータ。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *authenticator* には、**sysname** データ型が与えられます。  
   
 @authenticator  
-認証子の生成元となるデータを含む変数。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *@authenticator* には、**sysname** データ型が与えられます。  
+認証子の生成元となるデータを含む変数。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *\@authenticator* には、**sysname** データ型が与えられます。  
   
 ## <a name="return-types"></a>戻り値の型  
 最大サイズが 8,000 バイトの **varbinary**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `DECRYPTBYKEYAUTOCERT` には、`OPEN SYMMETRIC KEY` と `DECRYPTBYKEY` の機能が組み合わされています。 1 つの操作で、最初に非対称キーが復号され、そのキーで暗号化テキストが復号されます。  
   
 ## <a name="permissions"></a>アクセス許可  
 対称キーに対する `VIEW DEFINITION` 権限と、証明書に対する `CONTROL` 権限が必要です。   
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、`DECRYPTBYKEYAUTOCERT` が復号コードを簡略化するしくみを確認できます。 このコードは、データベース マスター キーが存在しない [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで実行する必要があります。  
   
 ```  

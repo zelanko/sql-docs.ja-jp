@@ -37,15 +37,15 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9656fd32711740d8427f80561fa8715716de8740
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86469f1f2b4a8e2d97b79315e2ceb5f4bf690cff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072122"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006298"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   1 つ以上のテーブルの定義、およびそれらのテーブルのすべてのデータ、インデックス、トリガー、制約、権限の仕様を削除します。 削除されたテーブルを参照しているすべてのビューとストアド プロシージャは、[DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) および [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md) を使用して明示的に削除する必要があります。 テーブルへの依存関係を報告するには [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) を使用します。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "68072122"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -71,7 +71,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  *database_name*  
  テーブルが作成されたデータベースの名前を指定します。  
   
- Windows Azure SQL データベースでは、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name をサポートします。 Windows Azure SQL データベースでは、4 つの要素で構成された名前はサポートされません。  
+ Azure SQL Database では、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name がサポートされます。 Azure SQL Database では、4 つの要素で構成された名前はサポートされません。  
   
  *IF EXISTS*  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
@@ -84,7 +84,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  *table_name*  
  削除するテーブル名を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  DROP TABLE を使用して、FOREIGN KEY 制約によって参照されているテーブルを削除することはできません。 まず、参照している FOREIGN KEY 制約または参照テーブルを削除する必要があります。 参照しているテーブルと、主キーを格納しているテーブルの両方を同じ DROP TABLE ステートメントで削除する場合には、参照しているテーブルを先に指定する必要があります。  
   
  任意のデータベースから、複数のテーブルを削除することができます。 削除するテーブルが、同時に削除される別のテーブルの主キーを参照している場合には、外部キーを持つ参照元のテーブルを、参照されている主キーを持つテーブルよりも前に指定する必要があります。  
@@ -103,7 +103,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 ## <a name="permissions"></a>アクセス許可  
  テーブルが属するスキーマに対する ALTER 権限、テーブルに対する CONTROL 権限、または **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-dropping-a-table-in-the-current-database"></a>A. 現在のデータベース内のテーブルを削除する  
  次の例では、現在のデータベースから、`ProductVendor1` テーブルとそのデータおよびインデックスを削除します。  
@@ -113,14 +113,14 @@ DROP TABLE ProductVendor1 ;
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. 他のデータベースのテーブルを削除する  
- 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースにある `SalesPerson2` テーブルを削除します。 この例は、サーバー インスタンス上にあるどのデータベースからでも実行できます。  
+ 次の例では、`SalesPerson2` データベースにある [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを削除します。 この例は、サーバー インスタンス上にあるどのデータベースからでも実行できます。  
   
 ```  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 一時テーブルを削除する  
- 次の例では、一時テーブルを作成して、その存在テストを行います。さらに、このテーブルを削除して、再度存在テストを行います。 この例では、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で使用できる **IF EXISTS** 構文は使用しません。  
+ 次の例では、一時テーブルを作成して、その存在テストを行います。さらに、このテーブルを削除して、再度存在テストを行います。 この例では、**以降で使用できる**IF EXISTS[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 構文は使用しません。  
   
 ```  
 CREATE TABLE #temptable (col1 int);  

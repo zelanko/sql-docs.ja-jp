@@ -10,15 +10,14 @@ helpviewer_keywords:
 - leading blanks
 - LTRIM function
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 541531de470991c84d04a60d6829e3333c78ae3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc2cef2a298b78d3f2186b269b0feb21d3400bcb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897499"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437239"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (SSIS 式)
   先頭のスペースを削除した後の文字式を返します。  
@@ -40,7 +39,7 @@ LTRIM(character expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  LTRIM は、DT_WSTR データ型でのみ機能します。 *character_expression* 引数が DT_STR データ型の文字列リテラルまたはデータ列である場合は、LTRIM による演算の実行前に、暗黙的に DT_WSTR データ型にキャストされます。 その他のデータ型は、明示的に DT_WSTR データ型にキャストされる必要があります。 詳しくは、「[Integration Services のデータ型](../data-flow/integration-services-data-types.md)」および「[Cast &#40;SSIS 式&#41;](cast-ssis-expression.md)」をご覧ください。  
   
  引数が NULL の場合、LTRIM は NULL を返します。  

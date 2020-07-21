@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: errorInfo |Microsoft Docs'
+title: PDOStatement::errorInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15686a93c5e23a476968332479897d2fb5b90220
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d525a3331ccc2e855113460519323142a3c01902
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993070"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907937"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ array PDOStatement::errorInfo();
   
 エラーがない場合、または SQLSTATE が設定されていない場合、ドライバー固有のフィールドは NULL になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  

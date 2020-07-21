@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c242eb77173c628c4bc3752da4d1d9709724aba4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831540"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432889"
 ---
 # <a name="ftp-task"></a>FTP タスク
   FTP タスクは、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理します。 たとえば、パッケージは、リモート サーバーまたはインターネット サイトから、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部としてデータ ファイルをダウンロードできます。 FTP タスクは、次の目的で使用できます。  
@@ -48,7 +47,7 @@ ms.locfileid: "62831540"
 ## <a name="predefined-ftp-operations"></a>定義済みの FTP 操作  
  FTP タスクには、定義済みの操作のセットが含まれています。 次の表では、これらの操作について説明します。  
   
-|操作|説明|  
+|Operation|説明|  
 |---------------|-----------------|  
 |ファイルの送信|ローカル コンピューターのファイルを FTP サーバーに送信します。|  
 |ファイルの受信|FTP サーバーのファイルをローカル コンピューターに保存します。|  
@@ -74,9 +73,9 @@ ms.locfileid: "62831540"
   
  プログラムによってこれらのプロパティを設定する方法の詳細については、「 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [[FTP タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
- [FTP タスク エディター ([ファイル転送] ページ)](../ftp-task-editor-file-transfer-page.md)   
+## <a name="see-also"></a>関連項目  
+ [FTP タスクエディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
+ [FTP タスクエディター &#40;ファイル転送ページ&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

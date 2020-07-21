@@ -1,10 +1,9 @@
 ---
-title: '[フルテキスト インデックスの列] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: '[フルテキスト インデックス列] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 304854a203b4c8e57a9dde003448c526de98bf24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 28426680f0627753ba26a6aba4b36bb2041487bd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254569"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247229"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>[フルテキスト インデックスの列] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68254569"
   
 データ型が **image** の列は、Microsoft Office ファイル (.doc、.xls、および .ppt ファイル)、テキスト ファイル (.txt ファイル)、HTML ファイル (.htm ファイル) を格納でき、その列のデータ型を image に設定することで、ファイルの中身を検索するフルテキスト検索ができるようになります。  
   
-**言語**  
+**Language**  
 使用できる言語を一覧表示します。 列データに適した言語をドロップダウン リストから選択してください。 たとえば、英語のオペレーティング システムを使用している場合に、ドイツ語のテキストを含む列にインデックスを設定するときは、ドロップダウン リストからドイツ語を選択することによりインデックスのパフォーマンスが向上します。  
   
 **[統計的セマンティクス]**  

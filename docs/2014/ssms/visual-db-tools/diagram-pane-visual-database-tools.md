@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c76911b19e48785dfc4d06a91708589c87e2acbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008609"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>ダイアグラム ペイン (Visual Database Tools)
   ダイアグラム ペインには、データ接続で選択したテーブルまたはテーブル値オブジェクトが、グラフィカルに表示されます。 また、テーブル間の結合リレーションシップも示されます。  
@@ -35,7 +34,7 @@ ms.locfileid: "63126597"
   
  ダイアグラム ペインでは、各テーブルまたはテーブル値オブジェクトは、独立したウィンドウとして表示されます。 各ウィンドウ (四角形) のタイトル バーに表示されるアイコンは、その四角形に表示されているオブジェクトの種類を示しています。各アイコンの意味は次のとおりです。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **テーブル**  
  ダイアグラム ペインに追加できるテーブルが一覧表示されます。 テーブルを追加するには、テーブルを選択して **[追加]** をクリックします。 複数のテーブルを一度に追加するには、それらのテーブルを選択して **[追加]** をクリックします。  
   
@@ -96,8 +95,8 @@ ms.locfileid: "63126597"
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbio.gif "Visual Database Tools のアイコン")|クエリおよびビュー デザイナーが種類を特定できない結合|  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [抽出条件ペイン&#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [抽出条件ペイン &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)](sort-and-group-query-results-visual-database-tools.md)  
   
   

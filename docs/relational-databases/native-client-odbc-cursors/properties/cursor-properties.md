@@ -1,5 +1,5 @@
 ---
-title: カーソルのプロパティ |Microsoft Docs
+title: Cursor プロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,19 +13,17 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - ODBC cursors, cursor behaviors
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eefc1981d5a064eeb362dd0781a3f682117125a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: c5115a9e943976e38c84e5df1663a32a7afbc482
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902416"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006510"
 ---
 # <a name="cursor-properties"></a>カーソルのプロパティ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC 形式のカーソルの種類または SQL-92/ISO 形式のカーソルの動作のいずれかを設定することで、カーソルの全体的な特性が決まります。 以下のトピックでは、カーソルの動作に影響を与える追加のステートメントと接続属性について説明しています。  
   
@@ -35,7 +33,7 @@ ms.locfileid: "67902416"
   
 -   [カーソルのトランザクション分離レベル](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>関連項目  
- [カーソルを使用して&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+## <a name="see-also"></a>参照  
+ [ODBC&#41;&#40;カーソルの使用](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

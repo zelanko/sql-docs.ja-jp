@@ -1,7 +1,6 @@
 ---
-title: ADO の動的プロパティ |Microsoft Docs
+title: ADO 動的プロパティ |Microsoft Docs
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,38 +10,39 @@ helpviewer_keywords:
 - dynamic properties [ADO]
 - properties [ADO], dynamic
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 72fa5fd287b285ca7f917c5969b0e27e11837d25
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921092"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749297"
 ---
 # <a name="ado-dynamic-properties"></a>ADO の動的プロパティ
-動的プロパティに追加できる、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 これらのプロパティのソースは、いずれかのデータ プロバイダーをなどが、 [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)、またはサービス プロバイダーの場合など、 [OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)します。 適切なデータ プロバイダーまたは特定の動的プロパティの詳細についてはサービス プロバイダーのマニュアルを参照してください。  
+動的プロパティは、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、または[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加できます。 これらのプロパティのソースは、データプロバイダー ( [SQL Server の OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)、 [OLE DB 用の Microsoft Cursor service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)などのサービスプロバイダー) のいずれかです。 特定の動的プロパティの詳細については、適切なデータプロバイダーまたはサービスプロバイダーのドキュメントを参照してください。  
   
- [ADO Dynamic プロパティ インデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)各標準 OLE DB プロバイダー動的プロパティ用の ADO および OLE DB 名の間の相互参照を提供します。  
+ [Ado 動的プロパティインデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)は、各標準 OLE DB プロバイダー動的プロパティの ado と OLE DB 名の間の相互参照を提供します。  
   
- 次の動的プロパティは、特に興味深いものし、上記のソースにも記載されています。 ADO の特別な機能は、次の一覧で、ADO のヘルプ トピックに記載されています。  
+ 次の動的プロパティは特に興味深いものであり、前述のソースにも記載されています。 ADO を使用した特殊な機能については、次の一覧の ADO ヘルプトピックを参照してください。  
   
 |||  
 |-|-|  
-|[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|このフィールドにインデックスを作成する必要があるかどうかを指定します。|  
-|[プロンプト](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|OLE DB プロバイダーが初期化情報をユーザーのメッセージを表示するかどうかを指定します。|  
-|[名前を変更します。](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|名前を指定します、 **Recordset**オブジェクト。|  
-|[再同期コマンド](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|文字列をユーザーが指定したコマンドを指定します、**再同期**でという名前のテーブルにデータを更新するメソッドの問題、**一意テーブル**動的プロパティ。|  
-|[Unique Table、Unique Schema、Unique Catalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**一意テーブル**更新、挿入、および削除を許可するとなるベース テーブルの名前を指定します。<br /><br /> **一意のスキーマ**スキーマ、またはテーブルの所有者の名前を指定します。<br /><br /> **Unique Catalog**カタログ、またはテーブルを含むデータベースの名前を指定します。|  
-|[更新プログラムの再同期](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|指定するかどうか、 **UpdateBatch**メソッドの後に、暗黙的な**再同期**メソッドの操作であれば、その操作のスコープ。|  
-  
-## <a name="see-also"></a>関連項目  
- [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
- [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
- [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
+|[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|このフィールドにインデックスを作成するかどうかを指定します。|  
+|[プロンプト](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|OLE DB プロバイダーがユーザーに初期化情報の入力を求めるかどうかを指定します。|  
+|[名前のリシェイプ](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|**レコードセット**オブジェクトの名前を指定します。|  
+|[再同期コマンド](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|**一意のテーブル**動的プロパティに指定されたテーブル内のデータを更新するために再**同期**メソッドによって発行される、ユーザーが指定したコマンド文字列を指定します。|  
+|[一意のテーブル、一意のスキーマ、一意のカタログ](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**一意のテーブル**更新、挿入、および削除が許可されるベーステーブルの名前を指定します。<br /><br /> **一意のスキーマ**スキーマ、またはテーブルの所有者の名前を指定します。<br /><br /> **一意のカタログ**カタログ、またはテーブルを含むデータベースの名前を指定します。|  
+|[再同期の更新](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|**UpdateBatch**メソッドの後に暗黙の再**同期**メソッド操作を実行するかどうかを指定します。それを行う場合は、その操作のスコープを指定します。|
+| &nbsp; | &nbsp; |
+
+## <a name="see-also"></a>参照  
+ [ADO API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
+ [ADO コレクション](../../../ado/reference/ado-api/ado-collections.md)   
+ [ADO 列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
  [付録 B: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md)   
- [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   
+ [ADO オブジェクトモデル](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO オブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [ADO のプロパティ](../../../ado/reference/ado-api/ado-properties.md)

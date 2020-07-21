@@ -1,6 +1,7 @@
 ---
-title: SQL Server リソースへの依存関係の追加 | Microsoft Docs
-ms.custom: ''
+title: 依存関係を SQL Server FCI リソースに追加する
+descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dfaad71ac357ed261643267c7eab019b91548fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063823"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74822062"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>SQL Server リソースへの依存関係の追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) リソースに依存関係を追加する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
+  このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、Always On フェールオーバー クラスター インスタンス (FCI) リソースに依存関係を追加する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
 -   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[前提条件](#Prerequisites)  
   
 -   **SQL Server リソースに依存関係を追加するには、次のものを使用します:** [Windows フェールオーバー クラスター マネージャー](#WinClusManager)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループに他のリソースを追加する場合、そのリソースには必ず独自の固有の SQL ネットワーク名リソースと独自の SQL IP アドレス リソースが必要であることに注意してください。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以外の既存の SQL ネットワーク名リソースおよび SQL IP アドレス リソースを使用しないでください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースが他のリソースと共有されると、次の問題が発生する場合があります。  
@@ -54,10 +55,10 @@ ms.locfileid: "68063823"
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループに MS DTC をインストールし、MS DTC に依存する他のリソースがある場合は、このグループがオフラインまたはフェールオーバー中であると、MS DTC を使用できません。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では、可能であれば、独自の物理ディスク リソースがある独自のグループに MS DTC を配置することをお勧めします。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  複数のディスク ドライブで構成される WSFC リソース グループに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールし、いずれかのドライブにデータを保存するように選択すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースはそのドライブにのみ依存するように設定されます。 別のディスクにデータやログを保存するには、まず、そのディスクに対する依存関係を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに追加する必要があります。  
   
-##  <a name="WinClusManager"></a> フェールオーバー クラスター マネージャー スナップインの使用  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WinClusManager"></a> フェールオーバー クラスター マネージャー スナップインの使用  
  **SQL Server リソースに依存関係を追加するには**  
   
 -   フェールオーバー クラスター マネージャー スナップインを開きます。  

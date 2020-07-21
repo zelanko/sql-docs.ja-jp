@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 205b0a7cfeab4d512eac86c39be78bdfd42abe90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be8bdf89171f95662afc29508e2fe0785d613a3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63044245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028880"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter イベント クラス
   RPC Output Parameter イベント クラスは、リモート プロシージャ コール (RPC) を実行した後の出力パラメーター値をトレースします。  
@@ -32,16 +31,16 @@ ms.locfileid: "63044245"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
-|DatabaseID|`int`|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
+|DatabaseID|`int`|USE *database*ステートメントで指定されたデータベースの ID、または特定のインスタンスに対して use *database*ステートメントが発行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 100。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
-|IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|[はい]|  
+|IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
 |LoginSid|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
-|NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|[はい]|  
+|NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |ObjectName|`nvarchar`|参照されているパラメーターの名前。|34|はい|  
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  

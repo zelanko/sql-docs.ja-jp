@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 79d63ac2bca109e1bc1238cee96f8870632c96cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73f17f6388599583439fdb7953306aab01483979
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703201"
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスで表される Open Geospatial Consortium (OGC) の型名を返します。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "68042160"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(4000)**  
   
- CLR の戻り値の型:**SqlString**  
+ CLR の戻り値の型: **SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `STGeometryType()` によって返される OGC の型名は、**Point**、**LineString**、**CircularString**、**CompoundCurve**、**Polygon**、**CurvePolygon**、**GeometryCollection**、**MultiPoint**、**MultiLineString**、**MultiPolygon** および **FullGlobe** です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Polygon` インスタンスを作成し、`STGeometryType()` を使用してこれが多角形であることを確認する例を次に示します。  
   
 ```  

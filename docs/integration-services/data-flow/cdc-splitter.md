@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 40f9fd60bcfd5e25f841d0cda05089da5f73e268
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: beba1f54c4eae683e6b35eb44408d84c5d812b84
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045363"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293229"
 ---
 # <a name="cdc-splitter"></a>CDC スプリッター
 
@@ -26,14 +26,14 @@ ms.locfileid: "68045363"
 
   CDC スプリッターは、CDC ソース データの変更行の単一フローを、挿入、更新、削除の各操作のための個別のデータ フローに分割します。 データベースは、必須の列 `__$operation` と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブル内のその標準の値に基づいて分割されます。  
   
-|操作の値|[出力]|[説明]|  
+|操作の値|Output|説明|  
 |------------------------|------------|-----------------|  
 |1|削除|削除された行|  
-|2|Insert|挿入された行 ( **"結合を含む差分"** CDC モードを使用する場合は使用不可)|  
+|2|挿入|挿入された行 ( **"結合を含む差分"** CDC モードを使用する場合は使用不可)|  
 |3|更新|更新前の行 ( **"古い値を含むすべて"** CDC モードの場合のみ使用可)|  
 |4|更新|更新後の行 (更新前と同じ)|  
 |5|更新|マージ行 ( **"結合を含む差分"** CDC モードを使用する場合のみ使用可)|  
-|その他|Error||  
+|その他|エラー||  
   
  スプリッターを使用して、定義済みの挿入、削除、更新の各出力に接続し、さらに処理を実行することができます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68045363"
   
  コンポーネントのエラー出力には、次の出力列があります。  
   
--   **エラー コード**: 1 に設定します。  
+-   **エラー コード**: 1 に設定されます。  
   
 -   **エラー列**: (変換エラーの) エラーの原因となるソース列。  
   

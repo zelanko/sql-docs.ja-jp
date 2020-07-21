@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fbc7c5cdadfa381cb493c08d4b50500f12f5db92
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62830151"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438139"
 ---
 # <a name="transfer-database-task"></a>データベース転送タスク
   データベース転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つのインスタンスの間で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを転送します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトをコピーして転送するだけの他のタスクに対し、データベース転送タスクでは、データベースをコピーまたは移動できます。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。  
@@ -32,7 +31,7 @@ ms.locfileid: "62830151"
 ## <a name="transfer-of-databases-between-versions-of-sql-server"></a>SQL Server のバージョン間でのデータベースの転送  
  データベース転送タスクは、異なるバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス間でデータベースを転送できます。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  データベース転送タスクでは、エラー メッセージ転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
@@ -51,7 +50,7 @@ ms.locfileid: "62830151"
   
  さらに、転送先データベースが上書きされたときに、`OnInformation` イベントのログ エントリが書き込まれます。  
   
-## <a name="security-and-permissions"></a>セキュリティおよび権限  
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可  
  オフライン モードを使用してデータベースを転送するには、パッケージを実行するユーザーが sysadmin サーバー ロールのメンバーである必要があります。  
   
  オンライン モードを使用してデータベースを転送するには、パッケージを実行するユーザーが sysadmin サーバー ロールのメンバーであるか、または選択されたデータベースのデータベース所有者 (dbo) である必要があります。  
@@ -71,9 +70,9 @@ ms.locfileid: "62830151"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [データベース転送タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[データベース転送タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [データベース転送タスク エディター &#40;[データベース] ページ&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [データベース転送タスク エディター ([データベース] ページ)](../transfer-database-task-editor-databases-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   

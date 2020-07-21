@@ -1,5 +1,5 @@
 ---
-title: ADO のドキュメントを使用するための前提条件 |Microsoft Docs
+title: ADO ドキュメントを使用するための前提条件 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, prerequisites
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2bddd5570faefba99c451fc60a7448cbfb7e3216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 192c249bfa73c17d32faef7ec925d2704aff3144
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923128"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747952"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>ADO のドキュメントを使用するための前提条件
-このドキュメントを使用するには、が必要、少なくとも、ある程度の経験をガイドの例のほとんどがこの言語で記述されているために、Microsoft Visual Basic でのアプリケーションを開発します。 Microsoft Visual C、Java、Visual Basic Scripting Edition (VBScript) および Microsoft JScript で記述されたいくつかの例もあります。  
+このドキュメントを使用するには、少なくとも Microsoft Visual Basic でアプリケーションを開発する経験がある必要があります。これは、ガイドのほとんどの例がこの言語で記述されているためです。 Microsoft Visual C++、Java、Visual Basic Scripting Edition (VBScript)、および Microsoft JScript で記述されたいくつかの例もあります。  
   
- リレーショナル データベース管理システムとオンライン分析処理 (OLAP) とインターネットとインターネットの基礎知識のいくつかについて理解する必要もさまざまなソースからデータにアクセスするように ADO を使用しているためプロトコル。  
+ ADO はさまざまなソースからのデータにアクセスするために使用されるため、リレーショナルデータベース管理システムとオンライン分析処理 (OLAP) について理解し、インターネットプロトコルとインターネットプロトコルに関する基本的な知識も必要になります。  
   
- ADO および OLE DB の関連のテクノロジは、Microsoft コンポーネント オブジェクト モデル (COM) に基づいていますが、ため、COM の知識は、ADO では高度な概念を理解することでは役立ちます。
+ ADO および関連する OLE DB テクノロジは Microsoft コンポーネントオブジェクトモデル (COM) に基づいているため、COM に関する知識は、ADO の高度な概念を理解するのに役立ちます。

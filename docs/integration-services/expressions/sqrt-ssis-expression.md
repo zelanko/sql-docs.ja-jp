@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQRT function
 - square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5719dbe4fb47bf49f838b687032d6f7e116730d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a13d07fe353c4d10345cce609f4b82cd7019db6c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967780"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297394"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 式)
 
@@ -41,7 +41,7 @@ SQRT(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、SQRT 関数は NULL を返します。  
   
  引数が負の値の場合、SQRT 関数の処理は失敗します。  

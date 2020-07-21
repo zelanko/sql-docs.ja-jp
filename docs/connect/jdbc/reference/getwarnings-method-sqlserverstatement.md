@@ -1,5 +1,5 @@
 ---
-title: getWarnings メソッド (SQLServerStatement) |Microsoft Docs
+title: getWarnings メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3d6decae-2570-4ca5-8ff6-57a2cc3e921f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bdb05e7d538de461596e1e7bc4b2db715825fae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c4a21fd8c35919e28d4b5981860a4b55043b663f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978063"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910198"
 ---
 # <a name="getwarnings-method-sqlserverstatement"></a>getWarnings メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public final java.sql.SQLWarning getWarnings()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getWarnings メソッドは、getWarnings インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getWarnings メソッドは、java.sql.Statement インターフェイスの getWarnings メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

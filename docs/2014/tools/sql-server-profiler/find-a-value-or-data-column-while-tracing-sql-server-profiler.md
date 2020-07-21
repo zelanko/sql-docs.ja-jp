@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4cc5088fdb0bc78a2befff241854e4a2bc354a22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8ddd96d178ebec3d69de184ab06829616b0198f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000036"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>トレース中の値列またはデータ列の検索 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してトレースを実行中に、トレース出力の特定の値列またはデータ列を検索する方法について説明します。  
@@ -40,6 +39,6 @@ ms.locfileid: "63035037"
   
 ## <a name="see-also"></a>参照  
  [[SQL Server Profiler]](sql-server-profiler.md)   
- [SQL Server プロファイラーのテンプレートと権限](sql-server-profiler-templates-and-permissions.md)  
+ [SQL Server プロファイラーのテンプレートとアクセス許可](sql-server-profiler-templates-and-permissions.md)  
   
   

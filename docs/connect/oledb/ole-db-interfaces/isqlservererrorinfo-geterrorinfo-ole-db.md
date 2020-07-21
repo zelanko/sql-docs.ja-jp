@@ -1,5 +1,5 @@
 ---
-title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) |Microsoft Docs'
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015442"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -27,9 +27,9 @@ ms.locfileid: "68015442"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エラーの詳細を含む SQL Server SSERRORINFO 構造体の OLE DB ドライバーへのポインターを返します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラーの詳細を含む OLE DB Driver for SQL Server SSERRORINFO 構造体へのポインターを返します。  
   
- OLE DB Driver for SQL Server では、 **ISQLServerErrorInfo**エラーインターフェイスが定義されています。 このインターフェイスは、重大度や状態など、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラーの詳細情報を返します。  
+ OLE DB Driver for SQL Server では、**ISQLServerErrorInfo** エラー インターフェイスが定義されています。 このインターフェイスは、重大度や状態など、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラーの詳細情報を返します。  
 
   
 ## <a name="syntax"></a>構文  
@@ -53,12 +53,12 @@ HRESULT GetErrorInfo(
  メソッドが成功しました。  
   
  E_INVALIDARG  
- *PpSSErrorInfo*または*Pperrorstrings*引数のいずれかが NULL でした。  
+ *ppSSErrorInfo* または *ppErrorStrings* 引数のいずれかが NULL でした。  
   
  E_OUTOFMEMORY  
- SQL Server の OLE DB ドライバーが、要求を完了するために必要なメモリを割り当てられませんでした。  
+ OLE DB Driver for SQL Server が、要求を完了するために必要なメモリを割り当てることができませんでした。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  OLE DB Driver for SQL Server は、コンシューマーが渡したポインターを使用して返される、SSERRORINFO 文字列と OLECHAR 文字列用にメモリを割り当てます。 コンシューマーはエラー データにアクセスする必要がなくなった時点で、**IMalloc::Free** メソッドを使用してこのメモリの割り当てを解除する必要があります。  
   
  SSERRORINFO 構造体は、次のように定義されています。  
@@ -77,7 +77,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|メンバー|[説明]|  
+|メンバー|説明|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー メッセージ。 このメッセージは、**IErrorInfo::GetDescription** メソッドにより返されます。|  
 |*pwszServer*|エラーが発生した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。|  

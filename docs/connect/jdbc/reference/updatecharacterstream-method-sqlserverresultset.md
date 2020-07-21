@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 78f39ec7-e27c-4534-bb19-fae806afd08c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9c18df5aa5b0b82e14a20489df4afd99636aa2e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d723ed8b45cc3efa47e5936f1d0fa761512d39a8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996691"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919933"
 ---
 # <a name="updatecharacterstream-method-sqlserverresultset"></a>updateCharacterStream メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67996691"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[updateCharacterStream &#40;int, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader.md)|指定された列を文字ストリームの値で更新します。|  
 |[updateCharacterStream (int, java.io.Reader, int) メソッド](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader-int.md)|指定された列を文字ストリームの値で更新します。文字ストリームの値は、指定された文字数を持ちます。|  

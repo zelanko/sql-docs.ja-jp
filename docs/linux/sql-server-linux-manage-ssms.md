@@ -1,6 +1,6 @@
 ---
 title: SSMS を使用して SQL Server on Linux を管理する
-description: ''
+description: この記事では、SQL Server Management Studio について説明します。これは、SQL Server のコンポーネントを構成、管理、開発し、それらのコンポーネントへアクセスするための統合環境です。
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/21/2018
@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68000092"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883916"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows で SQL Server Management Studio を使用して SQL Server on Linux を管理する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) の概要と、いくつかの一般的なタスクについて説明します。 SSMS は Windows アプリケーションです。Linux 上のリモート SQL Server インスタンスに接続できる Windows コンピューターがある場合は SSMS を使用してください。
 
 > [!TIP]
-> SSMS を実行する Windows コンピューターがない場合は、新しい [Azure Data Studio](../azure-data-studio/index.md) の使用を検討してください。 これは SQL Server を管理するためのグラフィカル ツールで、Linux と Windows の両方で実行できます。
+> SSMS を実行する Windows コンピューターがない場合は、新しい [Azure Data Studio](../azure-data-studio/index.yml) の使用を検討してください。 これは SQL Server を管理するためのグラフィカル ツールで、Linux と Windows の両方で実行できます。
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) は、開発や管理上のニーズに向けて Microsoft が無料で提供している一連の SQL ツールの一部です。 SSMS は、SQL Server のすべてのコンポーネントを構成、管理、開発し、それらのコンポーネントへアクセスするための統合環境です。 オンプレミス、Docker コンテナー、クラウドのいずれのプラットフォームで実行されている SQL Server にも接続できます。 また、Azure SQL Database と Azure SQL Data Warehouse にも接続できます。 SSMS では、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターが用意されています。これにより、あらゆるスキル レベルの開発者や管理者が SQL Server にアクセスできるようになっています。
 
@@ -55,17 +55,17 @@ SQL Server を操作する際には、常に最新版の SQL Server Management S
 
 1. **[サーバーに接続]** ウィンドウで、次の情報を入力します (SSMS が既に実行されている場合は、 **[接続] > [データベース エンジン]** をクリックして **[サーバーに接続]** ウィンドウを開きます)。
 
-   | 設定 | [説明] |
+   | 設定 | 説明 |
    |-----|-----|
    | **サーバーの種類** | 既定値はデータベース エンジンです。この値は変更しないでください。 |
-   | **サーバー名** | ターゲットの Linux SQL Server マシンの名前か、その IP アドレスを入力します。 |
-   | **[認証]** | SQL Server on Linux の場合は、 **[SQL Server 認証]** を使用します。 |
+   | **サーバー名** | ターゲットの Linux SQL Server マシンの名前、またはその IP アドレスとポートを `IP,port` の形式で入力します。 |
+   | **認証** | SQL Server on Linux の場合は、 **[SQL Server 認証]** を使用します。 |
    | **Login** | サーバー上のデータベースへのアクセス権を持つユーザーの名前 (たとえば、セットアップ中に作成された既定の **SA** アカウント) を入力します。 |
    | **パスワード** | 指定したユーザーのパスワードを入力します (**SA** アカウントの場合は、セットアップ時に作成したものを入力します)。 |
 
     ![SQL Server Management Studio:SQL Database サーバーへの接続](./media/sql-server-linux-manage-ssms/connect.png)
 
-1. **[接続]** をクリックします。
+1. **[Connect]** をクリックします。
 
     > [!TIP]
     > 接続エラーが発生した場合は、まずエラー メッセージから問題を診断します。 次に、[接続のトラブルシューティングに関する推奨事項](sql-server-linux-troubleshooting-guide.md#connection)を確認します。
@@ -132,7 +132,7 @@ SQL Server Management Studio (SSMS) には、[利用状況モニター](../relat
 利用状況モニターには、展開と折りたたみが可能なペインと、次の情報が表示されます。
 
 - 概要
-- プロセス
+- 処理
 - リソースの待機
 - データ ファイル I/O
 - 最近コストの高いクエリ
@@ -140,9 +140,9 @@ SQL Server Management Studio (SSMS) には、[利用状況モニター](../relat
 
 ペインが展開されると、利用状況モニターによってインスタンスに対して情報のクエリが実行されます。 ペインを折りたたむと、そのペインのすべての利用状況クエリが停止します。 1 つ以上のペインを同時に展開し、インスタンスのさまざまな利用状況を表示することができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [SSMS とは](../ssms/sql-server-management-studio-ssms.md)
 - [SSMS を使用したデータベースのエクスポートとインポート](sql-server-linux-migrate-ssms.md)
-- [チュートリアル: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
-- [チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [チュートリアル:SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [チュートリアル:Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [サーバーのパフォーマンスと利用状況の監視](../relational-databases/performance/server-performance-and-activity-monitoring.md)

@@ -1,5 +1,5 @@
 ---
-title: データ マイニング ディメンションの作成 |Microsoft Docs
+title: データマイニングディメンションを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b642d7a0bdf552d8944602761aa76eec1cf35306
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a21653e55088935539f8dedd4c94078c4c0ffdf9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085497"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523938"
 ---
 # <a name="create-a-data-mining-dimension"></a>データ マイニング ディメンションの作成
   マイニング構造が OLAP キューブに基づいている場合は、マイニング モデルのコンテンツが含まれているディメンションを作成できます。 作成したディメンションは、ソース キューブに戻すことができます。  

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ce8d6ccc83c2fe5d254e72412b37e4e94f640fa3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f69f0553eecb8ebe13dc23f50982ac09ef63e5a0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070599"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71299079"
 ---
 # <a name="working-with-variables-programmatically"></a>プログラムでの変数の使用
 
@@ -166,7 +166,7 @@ End Module
   
  使用できるシステム変数は、コンテナーの種類によって異なります。 パッケージ、コンテナー、タスク、およびイベント ハンドラーで使用できるシステム変数の一覧については、「[システム変数](../../integration-services/system-variables.md)」を参照してください。  
   
-## <a name="value"></a>[値]  
+## <a name="value"></a>値  
  カスタム変数の値には、リテラルまたは式を設定できます。  
   
 -   変数にリテラル値を格納する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> プロパティの値を設定します。  

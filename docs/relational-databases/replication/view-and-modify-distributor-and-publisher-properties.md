@@ -1,6 +1,7 @@
 ---
-title: ディストリビューターとパブリッシャーのプロパティの表示および変更 | Microsoft Docs
-ms.custom: ''
+title: ディストリビューターとパブリッシャーのプロパティの表示および変更
+description: SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、またはレプリケーション管理オブジェクト (RMO) を使用して、ディストリビューターとパブリッシャーのプロパティを変更する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a2d9e5b04164b3e8aab8c8d0a2fa50d154b10345
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 18b5f2e898638823e20aa237d9bbbc43bb025967
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720599"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>ディストリビューターとパブリッシャーのプロパティの表示および変更
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、ディストリビューターとパブリッシャーのプロパティを表示および変更する方法について説明します。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ディストリビューターとパブリッシャーのプロパティを表示または変更するために使用するもの:**  
   
@@ -43,16 +44,16 @@ ms.locfileid: "68769264"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]より前のバージョンのパブリッシャーでは、固定サーバー ロール **sysadmin** のユーザーが、 **[サブスクライバー]** ページでサブスクライバーを登録できます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、サブスクライバーをレプリケーションに明示的に登録する必要はありません。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンのパブリッシャーでは、固定サーバー ロール **sysadmin** のユーザーが、 **[サブスクライバー]** ページでサブスクライバーを登録できます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、サブスクライバーをレプリケーションに明示的に登録する必要はありません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>ディストリビューターのプロパティを表示および変更するには  
   
@@ -66,7 +67,7 @@ ms.locfileid: "68769264"
   
     -   ディストリビューターと関連付けられたパブリッシャーのプロパティを表示および変更するには、ダイアログ ボックスの **[パブリッシャー]** ページでパブリッシャーのプロパティ ボタン ( **[...]** ) をクリックします。  
   
-    -   レプリケーション エージェントのプロファイルにアクセスするには、ダイアログ ボックスの **[全般]** ページの **[プロファイルの既定値]** をクリックします。 詳しくは、「 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
+    -   レプリケーション エージェントのプロファイルにアクセスするには、ダイアログ ボックスの **[全般]** ページの **[プロファイルの既定値]** をクリックします。 詳しくは、「 [レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
   
     -   パブリッシャーで管理用のストアド プロシージャを実行したり、ディストリビューターで情報を更新したりするときに使用するアカウントのパスワードを変更するには、ダイアログ ボックスの **[パブリッシャー]** ページで **[パスワード]** ボックスおよび **[パスワードの確認入力]** ボックスに新しいパスワードを入力します。 詳細については、「[ディストリビューターのセキュリティ保護](../../relational-databases/replication/security/secure-the-distributor.md)」を参照してください。  
   
@@ -84,7 +85,7 @@ ms.locfileid: "68769264"
   
 4.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  パブリッシャーとディストリビューターのプロパティは、プログラムからレプリケーション ストアド プロシージャを使用して表示できます。  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>ディストリビューターとディストリビューション データベースのプロパティを表示するには  
@@ -106,7 +107,7 @@ ms.locfileid: "68769264"
   
 4.  ディストリビューターを使用しているパブリッシャーのプロパティを変更するには、ディストリビューターで [sp_changedistpublisher](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) を実行します。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトによってディストリビューターおよびディストリビューション データベースに関する情報を返します。  
   
  [!code-sql[HowTo#sp_helpdistributor](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_1.sql)]  
@@ -124,7 +125,7 @@ ms.locfileid: "68769264"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/view-and-modify-distribu_5.sql)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>ディストリビューターのプロパティを表示および変更するには  
   
@@ -189,7 +190,7 @@ ms.locfileid: "68769264"
   
     5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> メソッドを呼び出します。 手順 5. の新しいパスワード値を *password* パラメーターに渡します。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例に、ディストリビューションのプロパティおよびディストリビューション データベースのプロパティを変更する方法を示します。  
   
 > [!IMPORTANT]  

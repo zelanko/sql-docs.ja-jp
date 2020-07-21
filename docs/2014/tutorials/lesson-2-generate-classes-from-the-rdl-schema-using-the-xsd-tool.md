@@ -1,5 +1,5 @@
 ---
-title: レッスン 2:Xsd ツールを使用して RDL スキーマからクラスを生成 |Microsoft Docs
+title: 'レッスン 2: xsd ツールを使用して RDL スキーマからクラスを生成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,28 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653750"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>レッスン 2:xsd ツールを使用して RDL スキーマからクラスを作成
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>レッスン 2 : xsd ツールを使用して RDL スキーマからクラスを作成
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトを作成したら、次はレポート定義スキーマのローカル コピーを取得して、XML スキーマ定義ツール (Xsd.exe) を実行します。  
   
 ### <a name="to-generate-the-rdl-classes"></a>RDL クラスを生成するには  
   
-1.  インスタンスを開いて[!INCLUDE[msCoName](../includes/msconame-md.md)]Internet Explorer (または同等の Web ブラウザー)、次の URL に移動します。  
+1.  Internet Explorer のインスタンス[!INCLUDE[msCoName](../includes/msconame-md.md)] (または同等の Web ブラウザー) を開き、次の URL に移動します。  
   
     ```  
     https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
     ```  
   
-2.  RDL スキーマは、ブラウザーで開かれている、したらを参照、**ファイル**メニューを選択し、**付けて**します。  
+2.  RDL スキーマがブラウザーで開かれたら、[**ファイル**] メニューに移動し、[名前を付け**て保存**] を選択します。  
   
 3.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロジェクトを作成した場所に移動して、スキーマをファイル名 ReportDefinition.xsd として保存します。  
   
-4.  インスタンスを開き、ファイルを保存した後、[!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]コマンド プロンプト。 コマンド プロンプトのインスタンスを開くには、スタート ボタンをポイントして**すべてのプログラム**、 をポイント**Microsoft Visual Studio 2010**、 をポイント**Visual Studio Tools**  をクリック**Visual Studio コマンド プロンプト (2010)** します。  
+4.  ファイルが保存されたら、 [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]コマンドプロンプトのインスタンスを開きます。 コマンドプロンプトのインスタンスを開くには、[スタート] ボタンをクリックし、[**すべてのプログラム**]、[ **Microsoft Visual Studio 2010**]、[ **Visual Studio Tools**の順にポイントし、[ **Visual Studio コマンドプロンプト (2010)**] をクリックします。  
   
 5.  現在のパスを、ReportDefinition.xsd ファイルを保存した場所に変更します。  
   
@@ -46,16 +46,16 @@ ms.locfileid: "62653750"
   
      `xsd /c /l:VB /n:SampleRDLSchema ReportDefinition.xsd`  
   
-7.  プロジェクトに ReportDefinition.xsd を追加します。 **プロジェクト** メニューのをクリックして**既存項目の追加**します。 ReportDefinition.xsd ファイルの場所を参照、ReportDefinition.xsd を選択およびクリックして**追加**します。  
+7.  プロジェクトに ReportDefinition.xsd を追加します。 [**プロジェクト**] メニューの [**既存項目の追加**] をクリックします。 ReportDefinition .xsd ファイルの場所を参照し、[ReportDefinition. xsd] を選択して、[**追加**] をクリックします。  
   
     > [!NOTE]  
-    >  ReportDefinition.xsd ファイルをプロジェクトに追加した後でわかります**ソリューション エクスプ ローラー** ReportDefinition.cs (.vb) ファイルがないことがあります。 ファイルを表示するには、ReportDefinition.xsd ファイルの横にある展開/折りたたみのボタンをクリックします。  
+    >  プロジェクトに ReportDefinition .xsd ファイルを追加すると、ReportDefinition.cs (.vb) ファイルが存在しないことが**ソリューションエクスプローラー**わかります。 ファイルを表示するには、ReportDefinition.xsd ファイルの横にある展開/折りたたみのボタンをクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、RDL スキーマから生成したクラスを使って、レポート サーバーからレポート定義を読み込むコードを作成します。 「[レッスン 3:レポート サーバーからレポート定義を読み込む](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)します。  
+ 次のレッスンでは、RDL スキーマから生成したクラスを使って、レポート サーバーからレポート定義を読み込むコードを作成します。 「[レッスン 3: レポートサーバーからレポート定義を読み込む](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+## <a name="see-also"></a>参照  
+ [RDL スキーマから生成されたクラスを使用したレポートの更新 SSRS チュートリアル &#40;&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

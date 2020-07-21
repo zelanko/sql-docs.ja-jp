@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87d3dfc2183bdc00261417a024507b41ea5fde28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5dea8e183cb572bd0d70e9ccce01a203204b26c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952740"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925872"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,10 +50,10 @@ public java.sql.Connection getConnection(java.lang.String username,
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- この getConnection メソッドは、javax.mail インターフェイスの getConnection メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getConnection メソッドは、javax.sql.DataSource インターフェイスの getConnection メソッドによって指定されます。  
   
- Null 以外のユーザー名またはパスワードを使用して getConnection メソッドを呼び出すと、SQLServerConnection オブジェクトを初期化するときに、SQLServerDataSource クラスに設定されているユーザー名とパスワードのプロパティが置き換えられます。 たとえば、データ ソースに対して [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) と [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) を呼び出した後、getConnection を呼び出して null 以外のユーザー名またはパスワードを指定した場合、setUser と setPassword で設定したユーザー名とパスワードが getConnection に渡したユーザー名とパスワードに置き換えられます。  
+ null 値以外のユーザー名またはパスワードを使用して getConnection メソッドを呼び出すと、SQLServerConnection オブジェクトを初期化するときに、SQLServerDataSource クラスに設定されているユーザー名とパスワードのプロパティが置き換えられます。 たとえば、データ ソースに対して [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) と [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) を呼び出した後、getConnection を呼び出して null 以外のユーザー名またはパスワードを指定した場合、setUser と setPassword で設定したユーザー名とパスワードが getConnection に渡したユーザー名とパスワードに置き換えられます。  
   
 > [!NOTE]  
 >  この場合、[setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) メソッドを呼び出して URL 内に設定したユーザー名とパスワードは変更されません。  

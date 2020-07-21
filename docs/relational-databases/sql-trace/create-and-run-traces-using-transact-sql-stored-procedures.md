@@ -1,6 +1,6 @@
 ---
-title: Transact-SQL ストアド プロシージャを使用したトレースの作成と実行 | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL ストアド プロシージャを使用したトレースの作成と実行
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59e0f0a11f063115a897be1f0bb914579b0656f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae33b8b69f3c6da6e6ad86a554c5eb0bf7af9535
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751036"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>Transact-SQL ストアド プロシージャを使用したトレースの作成と実行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   トレースの作成や実行を Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して行うか、システム ストアド プロシージャを使用して行うかによって、SQL トレースでのトレースの処理が異なります。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]の代替手段として、 [!INCLUDE[tsql](../../includes/tsql-md.md)] システム ストアド プロシージャを使用してトレースを作成および実行できます。 システム ストアド プロシージャを使用したトレースの処理は、次のようになります。  
@@ -40,7 +40,7 @@ ms.locfileid: "68072949"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SQL トレースの最適化](../../relational-databases/sql-trace/optimize-sql-trace.md)|システム パフォーマンスへのトレースの影響を軽減する方法について説明します。|  
 |[トレースへのフィルターの適用](../../relational-databases/sql-trace/filter-a-trace.md)|トレースでのフィルターの使用について説明します。|  

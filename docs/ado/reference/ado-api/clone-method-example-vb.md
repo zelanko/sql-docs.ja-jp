@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], Visual Basic example
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 05bd5c203b252909ad4707681aff49181bfde162
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d42d0d9fb4cfc0a46c703e9f7f8be213d5a1a0b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919996"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749027"
 ---
 # <a name="clone-method-example-vb"></a>Clone メソッドの例 (VB)
-この例では、[複製](../../../ado/reference/ado-api/clone-method-ado.md)のコピーを作成する方法、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)し、ユーザーの各コピーのレコード ポインターを個別に配置できるようにします。  
+この例では、 [Clone](../../../ado/reference/ado-api/clone-method-ado.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のコピーを作成し、ユーザーが各コピーのレコードポインターを個別に配置できるようにします。  
   
 ```  
 'BeginCloneVB  
@@ -127,6 +127,6 @@ End Sub
 'EndCloneVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Clone メソッド (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

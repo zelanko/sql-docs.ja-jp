@@ -1,6 +1,6 @@
 ---
-title: ストアド プロシージャを使用した手動トレースの作成 | Microsoft Docs
-ms.custom: ''
+title: ストアド プロシージャを使用した手動トレースの作成
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da62e0c9d752e24bda18c17f7693a08dce6b48b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84006b6585af92291e330a1ac486e44b13f9868a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751023"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>ストアド プロシージャを使用した手動トレースの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のインスタンスでトレースを作成するための [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]システム ストアド プロシージャが用意されています。 これらのシステム ストアド プロシージャを使用して、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]からではなく、ユーザー独自のアプリケーションからトレースを手動で作成することもできます。 これにより、企業のニーズに合わせたカスタム アプリケーションを作成できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -42,8 +42,6 @@ ms.locfileid: "68072945"
 2.  イベント フィルターを指定します。 詳細については、「[トレース フィルターの設定 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md)」を参照してください。  
   
 3.  **sp_trace_create** を使用して、キャプチャされたイベント データの出力先を指定します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  トレース ストアド プロシージャを使用した例については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   

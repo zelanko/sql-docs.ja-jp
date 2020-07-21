@@ -1,6 +1,7 @@
 ---
-title: マージ アーティクルのパラメーター化された行フィルターの定義および変更 | Microsoft Docs
-ms.custom: ''
+title: パラメーター化された行フィルターの定義と変更 (マージ)
+description: SQL Server のマージ パブリケーション アーティクルのパラメーター化された行フィルターを定義および変更する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93d3946f712c3b4287e2589a69b94351dacca049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64e7dc7e271b50b5dc23b97be81b420df2176fdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907762"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882076"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>マージ アーティクルのパラメーター化された行フィルターの定義および変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、パラメーター化された行フィルターを定義および変更する方法について説明します。  
   
  テーブル アーティクルを作成する際には、パラメーター化された行フィルターを使用できます。 このフィルターでは [WHERE](../../../t-sql/queries/where-transact-sql.md) 句を使用して、パブリッシュする適切なデータを選択します。 静的行フィルターのようにこの句でリテラル値を指定するのではなく、システム関数[SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) および [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) のいずれかまたは両方を指定します。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
@@ -43,17 +44,17 @@ ms.locfileid: "67907762"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   パブリケーションに対するサブスクリプションが初期化された後に、パラメーター化された行フィルターを追加、変更、または削除した場合は、変更を行った後で、新しいスナップショットを生成し、すべてのサブスクリプションを再初期化する必要があります。 プロパティ変更の要件の詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) をご覧ください。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   パラメーター化された行フィルター句では列名に関数を適用しないことをお勧めします。これは、 `LEFT([MyColumn]) = SUSER_SNAME()`のように指定すると、パフォーマンスに問題が生じるためです。 フィルター句で HOST_NAME を使用していて、HOST_NAME 値をオーバーライドする場合は、CONVERT を使用するデータ型の変換が必要になる可能性があります。 このようなケースの推奨事項の詳細については、「[Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME() 値のオーバーライド」をご覧ください。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、パラメーター化された行フィルターを定義、変更、または削除します。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>パラメーター化された行フィルターを定義するには  
@@ -102,12 +103,12 @@ ms.locfileid: "67907762"
   
 1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** の **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[削除]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  パラメーター化された行フィルターは、レプリケーション ストアド プロシージャを使用してプログラムから作成し、変更できます。  
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>マージ パブリケーション内のアーティクルにパラメーター化された行フィルターを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行します。 **@publication** を指定し、アーティクルの名前を **@article** に、パブリッシュするテーブルを **@source_object** に、パラメーター化されたフィルターを定義する WHERE 句 (`WHERE` は含めません) を **@subset_filterclause** に指定します。 **@partition_options** に次のいずれかの値を指定します。これにより、パラメーター化された行フィルターによって行われるパーティション分割の種類が指定されます。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行します。 **\@publication** を指定し、アーティクルの名前を **\@article** に、パブリッシュするテーブルを **\@source_object** に、パラメーター化されたフィルターを定義する WHERE 句 (`WHERE` は含めません) を **\@subset_filterclause** に指定します。 **\@partition_options** に次のいずれかの値を指定します。これにより、パラメーター化された行フィルターによって行われるパーティション分割の種類が指定されます。  
   
     -   **0** - アーティクルのフィルター選択が静的であるか、各パーティションに対して一意なデータのサブセットは生成されません ("重複する" パーティション)。  
   
@@ -119,9 +120,9 @@ ms.locfileid: "67907762"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>マージ パブリケーション内のアーティクルに適用するパラメーター化された行フィルターを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@publication** と **@article** を指定し、 **@property** に **subset_filterclause** を指定し、 **@value** にパラメーター化されたフィルターを定義する式 (`WHERE` は含めません) を指定します。さらに **@force_invalidate_snapshot** と **@force_reinit_subscription** の両方に **1** を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **\@publication** と **\@article** を指定し、**subset_filterclause** を **\@property** に、パラメーター化されたフィルターを定義する式 (`WHERE` は含めません) を **\@value** に指定し、 **\@force_invalidate_snapshot** と **\@force_reinit_subscription** に **1** を指定します。  
   
-2.  この変更によって別のパーティション分割が発生した場合、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を再び実行します。 **@publication** と **@article** を指定し、 **@property** に **partition_options** を指定します。そして次の中から最も適切なパーティション分割オプションを **@value** に指定します。  
+2.  この変更によって別のパーティション分割が発生した場合、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を再び実行します。 **\@publication** と **\@article** を指定し、**partition_options** を **\@property** に指定します。次の中から最も適切なパーティション分割オプションを **\@value** に指定します。  
   
     -   **0** - アーティクルのフィルター選択が静的であるか、各パーティションに対して一意なデータのサブセットは生成されません ("重複する" パーティション)。  
   
@@ -131,7 +132,7 @@ ms.locfileid: "67907762"
   
     -   **3** - アーティクルのフィルター選択によって、各サブスクリプションで一意な重複しないパーティションが生成されます。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、 `Employee` テーブルに対して一連の結合フィルターを使用してアーティクルがフィルター選択されるマージ パブリケーションで、アーティクルのグループを定義します。このテーブル自体はパラメーター化された行フィルターを **LoginID** 列に使用してフィルター選択されています。 同期の間、[HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) 関数により返される値はオーバーライドされます。 詳細については、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME() 値のオーバーライド」をご覧ください。  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-para_1.sql)]  
@@ -140,6 +141,6 @@ ms.locfileid: "67907762"
  [マージ アーティクル間の結合フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

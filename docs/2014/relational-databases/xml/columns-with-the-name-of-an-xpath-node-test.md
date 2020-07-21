@@ -10,15 +10,14 @@ helpviewer_keywords:
 - names [SQL Server], columns with
 - XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 804ca2ebe3aa307272645fa5a626ea2212367f87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ebb8d863403d547a1aa45a996db3922c1ecd390
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046854"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>XPath ノード テストの名前が付いた列
   XPath ノード テストのいずれかが列名である場合、内容は次の表に示すようにマップされます。 列名がいずれかの XPath ノード テストであれば、対応するノードに内容がマップされます。 列の SQL 型が `xml` の場合は、エラーが返されます。  

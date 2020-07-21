@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40f9de4108be4defeb2353a9e7835c289641a819
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63162405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025547"
 ---
 # <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、インデックスまたは制約を無効にする方法について説明します。 インデックスを無効にすると、ユーザーはそのインデックスにアクセスできなくなります。クラスター化インデックスの場合は、基になるテーブルのデータにもアクセスできなくなります。 ただし、インデックス定義はメタデータに残り、インデックス統計は非クラスター化インデックス上に保持されます。 ビュー上で非クラスター化インデックスまたはクラスター化インデックスを無効にすると、インデックス データが物理的に削除されます。 テーブルのクラスター化インデックスを無効にすると、データにアクセスできなくなります。つまり、データはテーブルに残りますが、そのインデックスを削除するか再構築するまでは、データ操作言語 (DML) 操作で使用できなくなります。  
@@ -39,7 +38,7 @@ ms.locfileid: "63162405"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してインデックスを無効化するには**  
   
@@ -47,9 +46,9 @@ ms.locfileid: "63162405"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   無効なインデックスは保守されません。  
   
@@ -85,12 +84,12 @@ ms.locfileid: "63162405"
   
 -   新しいクラスター化インデックスを作成すると、以前に無効化された非クラスター化インデックスが有効になります。 詳しくは、「 [Enable Indexes and Constraints](enable-indexes-and-constraints.md)」をご覧ください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ALTER INDEX を実行するには、少なくとも、テーブルまたはビューの ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-disable-an-index"></a>インデックスを無効にするには  
   
@@ -127,9 +126,9 @@ ms.locfileid: "63162405"
  インデックスが作成されているテーブルまたはビューの名前を表示します。  
   
  **[インデックスの種類]**  
- インデックスの種類が表示されます。**クラスター化された**、**非クラスター化**、**空間**、または**XML**します。  
+ インデックスの種類 ( **[クラスター化]** 、 **[非クラスター化]** 、 **[空間]** 、または **[XML]** ) を表示します。  
   
- **ステータス**  
+ **状態**  
  無効化操作の状態を表示します。 実行後の値は、次のいずれかになります。  
   
 -   空白  
@@ -159,7 +158,7 @@ ms.locfileid: "63162405"
   
 -   ハイパーリンクをクリックして、エラー全体を表示するダイアログ ボックスを開きます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-disable-an-index"></a>インデックスを無効にするには  
   

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c3c18f666c4e7b7e5f1d161fb78535e8005f1a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045614"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293799"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
 
@@ -60,7 +60,7 @@ ms.locfileid: "68045614"
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Web サービス タスクで使用できるカスタム ログ メッセージ  
  次の表は、Web サービス タスクに対して有効にできるカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |**WSTaskBegin**|タスクが Web サービスへのアクセスを開始しました。|  
 |**WSTaskEnd**|タスクが Web サービス メソッドを完了しました。|  
@@ -85,7 +85,7 @@ ms.locfileid: "68045614"
 ## <a name="web-service-task-editor-general-page"></a>[Web サービス タスク エディター] ([全般] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、HTTP 接続マネージャーの指定、Web サービス タスクで使用する WSDL (Web サービス記述言語) ファイルの場所の指定、Web サービス タスクの記述、WSDL ファイルのダウンロードなどの操作を実行できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[HTTPConnection]**  
  接続マネージャーを一覧から選択するか、\<[**新しい接続...>]** をクリックして新しい接続マネージャーを作成します。  
   
@@ -115,13 +115,13 @@ ms.locfileid: "68045614"
   
  **[WSDL のダウンロード]** ボタンを使用して WSDL ファイルをダウンロードする場合は、この値を **True**に設定します。  
   
- **[名前]**  
+ **名前**  
  Web サービス タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  Web サービス タスクの説明を入力します。  
   
  **[WSDL のダウンロード]**  
@@ -132,7 +132,7 @@ ms.locfileid: "68045614"
 ## <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター] ([入力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **サービス**  
  Web メソッドを実行するために使用する Web サービスを一覧から選択します。  
   
@@ -142,10 +142,10 @@ ms.locfileid: "68045614"
  **[WebMethodDocumentation]**  
  Web メソッドの説明を入力するか、参照ボタン ( **[...]** ) をクリックして **[Web メソッド ドキュメント]** ダイアログ ボックスに説明を入力します。  
   
- **[名前]**  
+ **名前**  
  Web メソッドへの入力の名前を一覧表示します。  
   
- **型**  
+ **Type**  
  入力のデータ型を一覧表示します。  
   
 > [!NOTE]  
@@ -164,7 +164,7 @@ ms.locfileid: "68045614"
  **[OutputType]**  
  結果を格納するときに使用するストレージ型を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[ファイル接続]**|結果をファイルに格納します。 この値を選択すると、動的オプションの **[ファイル]** が表示されます。|  
 |**変数**|結果を変数に格納します。 この値を選択すると、動的オプションの **[変数]** が表示されます。|  

@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化オブジェクトの持続性の定義 | Microsoft Docs
+description: SQL Server におけるメモリ最適化テーブルの持続性オプションである、既定の SCHEMA_AND_DATA と SCHEMA_ONLY について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 764824a74480b6d17c890f57714b0df9221bf523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6fb32139ff2d3330616d842b092dac13ec1f1b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68219872"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723283"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>メモリ最適化オブジェクトの持続性の定義
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   メモリ最適化テーブルには持続性のオプションが 2 つあります。  
   

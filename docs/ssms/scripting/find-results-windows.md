@@ -1,6 +1,6 @@
 ---
-title: 検索結果ウィンドウ | Microsoft Docs
-ms.custom: ''
+title: 検索結果ウィンドウ
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1162aed479c7c895b21138e882c6fbdce51eec3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 463e2943fbad1b8ad03843d94267c2d0a009104b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265444"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253842"
 ---
 # <a name="find-results-windows"></a>検索結果ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "68265444"
   
 -   完全なパス  
   
--   [ファイル名]  
+-   ファイル名  
   
 -   行番号  
   

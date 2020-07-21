@@ -1,5 +1,5 @@
 ---
-title: カーソル ストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
+title: カーソルストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f817408b30442d85566d094ccbf6491fe260925b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b59c92d6cf66749cd487c3cb175c0534e757bad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646804"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>カーソル ストアド プロシージャ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソル変数の機能を実装する次のシステム ストアド プロシージャをサポートしています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、カーソル変数機能を実装する次のシステムストアドプロシージャをサポートしています。  
   
 |||  
 |-|-|  

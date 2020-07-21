@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: da1c2fd6f1e6732f28f79196b433b8e46a595a85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e18c2348b5d4fe1a791d2a30c691d393a37bdcd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736144"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (geography データ型 )
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geography** インスタンスの外接する円の中心として使用できる点を返します。  
   
@@ -43,9 +43,9 @@ EnvelopeCenter( )
 ## <a name="return-types"></a>戻り値の型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
-CLR の戻り値の型:**SqlGeography**  
+CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 このメソッドは、**地点**を返します。 `EnvelopeAngle()` と共に使用した場合、`EnvelopeCenter()` は、**geography** インスタンスの外接する円を返します。  
   
 > [!NOTE]  
@@ -55,7 +55,7 @@ CLR の戻り値の型:**SqlGeography**
   
 このメソッドは正確ではありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```  
 DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';  

@@ -1,6 +1,7 @@
 ---
-title: 既存のパブリケーションでのアーティクルの追加および削除 | Microsoft Docs
-ms.custom: ''
+title: アーティクルの追加および削除 (既存のパブリケーション)
+description: SQL Server の既存のパブリケーションでアーティクルを追加およびアーティクルを削除する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b47a6c5822cb52e29c7d6f486b75aa2d6be4a63a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4bfaa32b87c5e7cffa60f3eef9d5b20ae85a747e
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764773"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159920"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>既存のパブリケーションでのアーティクルの追加および削除
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   パブリケーションを作成したら、アーティクルを追加および削除できます。 アーティクルはいつでも追加できますが、アーティクルを削除するために必要な操作は、レプリケーションの種類と、アーティクルを削除するタイミングによって異なります。  
   
 ## <a name="adding-articles"></a>アーティクルの追加  
  アーティクルを追加するには、アーティクルへのパブリケーションの追加、パブリケーションの新しいスナップショットの作成、サブスクリプションの同期による新しいアーティクルのスキーマとデータの適用を行います。  
   
 > [!NOTE]
->  マージ パブリケーションにアーティクルを追加する際に、その新しいアーティクルに既存のアーティクルが依存している場合は、 **@processing_order** および [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の [@processing_order](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、 **sp_addmergearticle** の **@processing_order** 」の **sp_changemergearticle**を指定し、 **sp_changemergearticle** の **@processing_order** 」の **@processing_order**を指定します。パラメーター **@article** 」を参照してください。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
+>  マージ パブリケーションにアーティクルを追加する際に、その新しいアーティクルに既存のアーティクルが依存している場合は、[sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) および [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) の **\@processing_order** パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、**sp_addmergearticle** の **\@processing_order** パラメーターに値 **1** を指定し、**sp_changemergearticle** の **\@processing_order** パラメーターに値 **2** を指定します。パラメーター **\@article** にはテーブル名を指定します。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
   
 1.  次のいずれかの方法を使用して、1 つ以上のアーティクルを追加します。  
   
@@ -51,8 +52,6 @@ ms.locfileid: "68764773"
   
 3.  スナップショットを作成したら、サブスクリプションを同期し、新しいアーティクルのスキーマおよびデータをコピーします。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     -   プッシュ サブスクリプションを同期するには、「[Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md)」 (プッシュ サブスクリプションの同期) を参照してください。  
   
     -   プル サブスクリプションを同期するには、「[Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)」 (プル サブスクリプションの同期) を参照してください。  
@@ -60,9 +59,9 @@ ms.locfileid: "68764773"
 ## <a name="dropping-articles"></a>アーティクルのドロップ  
  アーティクルはパブリケーションからいつでも削除できます。ただし、次の動作について考慮する必要があります。  
   
--   パブリケーションからアーティクルを削除しても、パブリケーション データベースからオブジェクトが削除されたり、サブスクリプション データベースから対応するオブジェクトが削除されるわけではありません。 必要に応じて、DROP \<Object> を使用し、これらのオブジェクトを削除します。 パブリッシュされた他のアーティクルに外部キー制約を通じて関連付けられているアーティクルを削除するときは、手動またはオンデマンド スクリプトの実行により、サブスクライバーでテーブルを削除することをお勧めします。適切な DROP \<Object> ステートメントを含むスクリプトを指定してください。 詳細については、「[同期中のスクリプトの実行 (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)」を参照してください。  
+-   パブリケーションからアーティクルを削除しても、パブリケーション データベースからオブジェクトが削除されたり、サブスクリプション データベースから対応するオブジェクトが削除されるわけではありません。 必要に応じて、DROP \<Object> を使用し、これらのオブジェクトを削除します。 パブリッシュされた他のアーティクルに外部キー制約を通じて関連付けられているアーティクルを削除する場合は、手動で、またはオンデマンド スクリプトの実行により、サブスクライバーでテーブルを削除することをお勧めします。適切な DROP \<Object> ステートメントを含むスクリプトを指定してください。 詳細については、「[同期中のスクリプトの実行 (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)」を参照してください。  
   
--   互換性レベル 90RTM 以上のマージ パブリケーションの場合、アーティクルはいつでも削除できますが、新しいスナップショットが必要です。 さらに、次のことを考慮する必要があります。  
+-   互換性レベル 90RTM 以上のマージ パブリケーションの場合、アーティクルはいつでも削除できますが、新しいスナップショットが必要です。 追加として:  
   
     -   アーティクルが結合フィルター リレーションシップまたは論理レコード リレーションシップの親アーティクルの場合、最初にリレーションシップの削除が必要ですが、これには再初期化が必要になります。  
   

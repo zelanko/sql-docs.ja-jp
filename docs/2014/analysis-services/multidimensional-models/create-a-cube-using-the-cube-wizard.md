@@ -1,5 +1,5 @@
 ---
-title: キューブ ウィザードを使用してキューブの作成 |Microsoft Docs
+title: キューブウィザードを使用してキューブを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ffd5880120184249d89c4d702b30c8d6e01e1f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79a675d0d27c5bfe033075c92e7ed06aa9c914c5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076500"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536730"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>キューブ ウィザードを使用したキューブの作成
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のキューブ ウィザードを使用すると、新しいキューブを作成できます。  

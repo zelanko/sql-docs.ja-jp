@@ -1,5 +1,5 @@
 ---
-title: データソースウィザード画面 2 (ODBC Driver for SQL Server) |Microsoft Docs
+title: データ ソース ウィザード画面 2 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-ms.openlocfilehash: c997dd30b6d1e9844843ff4fa626c46b42fed463
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 4ab8be02351a23c78251a99ca707e946ee8944c8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936573"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "70152568"
 ---
 # <a name="data-source-wizard-screen-2"></a>データ ソース ウィザード画面 2
 
@@ -25,35 +25,35 @@ ms.locfileid: "67936573"
 
 ### <a name="with-integrated-windows-authentication"></a>統合 Windows 認証を使う
 
-ドライバーが SQL Server へのセキュリティで保護された (または信頼された) 接続を要求することを指定します。 オンにすると、SQL Server では、サーバーの現在のログイン セキュリティ モードに関係なく、統合ログイン セキュリティを使用して、このデータ ソースを使用する接続を確立します。 指定された任意のログイン ID またはパスワードは無視されます。 SQL Server システム管理者は、Windows ログインを SQL Server ログイン ID (たとえば、SQL Server Management Studio を使用) に関連付けている必要があります。
+ドライバーが SQL Server へのセキュリティで保護された (信頼された) 接続を要求するよう指定します。 オンにすると、SQL Server では、サーバーの現在のログイン セキュリティ モードに関係なく、統合ログイン セキュリティを使用して、このデータ ソースを使用する接続を確立します。 指定された任意のログイン ID またはパスワードは無視されます。 SQL Server システム管理者は、Windows ログインを SQL Server ログイン ID と関連付けておく必要があります (たとえば、SQL Server Management Studio を使用します)。
 
 必要であれば、サーバーのサービス プリンシパル名 (SPN) を指定できます。
 
 ### <a name="with-active-directory-integrated-authentication"></a>Active Directory 統合認証を使用する
 
-ドライバーが Azure Active Directory を使用して SQL Server に認証するように指定します。 オンにすると、SQL Server では、サーバーの現在のログイン セキュリティ モードに関係なく、Azure Active Directory 統合ログイン セキュリティを使用して、このデータ ソースを使用する接続を確立します。
+ドライバーが Azure Active Directory を使用して SQL Server に対する認証を行うように指定します。 オンにすると、SQL Server では、サーバーの現在のログイン セキュリティ モードに関係なく、Azure Active Directory 統合ログイン セキュリティを使用して、このデータ ソースを使用する接続を確立します。
 
 ### <a name="with-sql-server-authentication"></a>SQL Server 認証を使用する
 
-ドライバーがログイン ID とパスワードを使用して SQL Server に認証するように指定します。
+ドライバーがログイン ID とパスワードを使用して SQL Server に対する認証を行うように指定します。
 
 ### <a name="with-active-directory-password-authentication"></a>Active Directory パスワード認証を使用する
 
-ドライバーが Azure Active Directory のログイン ID とパスワードを使用して SQL Server に認証するように指定します。
+ドライバーが Azure Active Directory のログイン ID とパスワードを使用して SQL Server に対する認証を行うように指定します。
 
 ### <a name="with-active-directory-interactive-authentication"></a>Active Directory 対話型認証を使用する
 
-ログイン ID を指定することによって、ドライバーが Azure Active Directory 対話モードで SQL Server を認証するように指定します。 これにより、Windows Azure 認証プロンプトダイアログがトリガーされます。
+ドライバーが Azure Active Directory 対話型モードを使用してログイン ID を指定することによって SQL Server に対する認証を行うように指定します。 これにより、Azure 認証のプロンプト ダイアログがトリガーされます。
 
 ### <a name="login-id"></a>Login ID
 
-ユーザーが入力した**ログイン id とパスワード**、または**ユーザーが入力したログイン id とパスワードを使用して Active Directory パスワード認証を使用して SQL Server 認証を使用している場合に、SQL Server に接続するときにドライバーが使用するログイン id を指定します。** または**Active Directory ユーザーが入力したログイン ID を使用した対話型認証**が選択されています。 これは、サーバーの既定の設定を確認するために確立された接続のみに適用されます。そのため、データ ソースが作成された後にそのデータ ソースを使用して確立された以降の接続には適用されません。
+**[ユーザーが入力する SQL Server 用のログイン ID とパスワードを使う]** 、 **[With Active Directory Password authentication using a login ID and password entered by the user]\(ユーザーが入力する Active Directory パスワード認証用のログイン ID とパスワードを使う\)** 、または **[With Active Directory Interactive authentication using a login ID entered by the user]\(ユーザーが入力する Active Directory 対話型認証用のログイン ID を使う\)** が選択されている場合、SQL Server への接続時にドライバーが使用するログイン ID を指定します。 これは、サーバーの既定の設定を確認するために確立された接続のみに適用されます。そのため、データ ソースが作成された後にそのデータ ソースを使用して確立された以降の接続には適用されません。
 
-### <a name="password"></a>パスワード
+### <a name="password"></a>Password
 
-ユーザーが入力した**ログイン id とパスワード**、または**ユーザーが入力したログイン id とパスワードを使用して Active Directory パスワード認証を使用して SQL Server 認証を使用している場合に、SQL Server に接続するときにドライバーが使用するパスワードを指定します。** が選択されています。 これは、サーバーの既定の設定を確認するために確立された接続のみに適用されます。そのため、新しいデータ ソースを使用して確立された以降の接続には適用されません。
+**[ユーザーが入力する SQL Server 用のログイン ID とパスワードを使う]** または **[With Active Directory Password authentication using a login ID and password entered by the user]\(ユーザーが入力する Active Directory パスワード認証用のログイン ID とパスワードを使う\)** が選択されている場合、SQL Server への接続時にドライバーが使用するパスワードを指定します。 これは、サーバーの既定の設定を確認するために確立された接続のみに適用されます。そのため、新しいデータ ソースを使用して確立された以降の接続には適用されません。
 
-[**ログイン ID** ] ボックスと [**パスワード**] ボックスは、[**統合 Windows 認証**] または [ **Active Directory 統合認証**を使用] が選択されている場合は無効になります。
+**[統合 Windows 認証を使う]** または **[With Active Directory Integrated authentication]\(Active Directory 統合認証を使う\)** が選択されている場合、 **[ログイン ID]** と **[パスワード]** ボックスは両方ともオフになります。
 
 ### <a name="next"></a>Next
 
@@ -63,7 +63,7 @@ ms.locfileid: "67936573"
 
 ウィザードの前の画面に戻ります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [データ ソース ウィザード画面 1](../../../connect/odbc/windows/dsn-wizard-1.md)
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3c6df0bccb7af1d99df2bce82f4211de17f1356a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499577"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73593388"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
-  レポート ビルダーと [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーにはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート データセットの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] からレポート データセットに取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
+  レポート ビルダーと [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーにはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーの両方が用意されていて、レポート データセット用に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] リレーショナル データベース、および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] から取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
   
 > [!NOTE]  
 >  レポート ビルダーでは、データ ソースの種類が Oracle、OLE DB、ODBC、および Teradata の場合にクエリを指定するには、テキスト ベースのクエリ デザイナーを使用する必要があります。 詳細については、「[テキストベースのクエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
@@ -63,13 +63,13 @@ ms.locfileid: "66499577"
  [適用されたフィルター](#AppliedFilters)  
  データベース ビューのテーブルまたはビューのフィールドおよびフィルター条件の一覧を表示します。  
   
- [クエリ結果](#QueryResults)  
+ [クエリの結果](#QueryResults)  
  自動的に生成されたクエリの結果セットのサンプル データを表示します。  
   
-###  <a name="DatabaseView"></a> データベース ビュー ペイン  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> データベース ビュー ペイン  
  データベース ビュー ペインには、表示する権限のあるデータベース オブジェクトのメタデータが表示されます。表示されるメタデータは、データ ソース接続と資格情報によって決まります。 階層ビューに、データベース スキーマ別に編成されたデータベース オブジェクトが表示されます。 各スキーマのノードを展開すると、テーブル、ビュー、ストアド プロシージャ、およびテーブル値関数が表示されます。 テーブルまたはビューを展開すると列が表示されます。  
   
-###  <a name="SelectedFields"></a> 選択されたフィールド ペイン  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> 選択されたフィールド ペイン  
  選択されたフィールド ペインには、クエリに含めるレポート データセットのフィールド、およびグループと集計が表示されます。  
   
  次のオプションが表示されます。  
@@ -87,13 +87,13 @@ ms.locfileid: "66499577"
   
  集計ではデータの要約が返されます。データは、要約データを提供する集計をサポートするためにグループ化されます。 クエリで集計を使用すると、そのクエリによって返される他のフィールドは自動的にグループ化され、クエリには SQL の GROUP BY 句が含まれます。 **[グループ化と集計]** ボックスの一覧では、 **[グループ化]** オプションだけを使用することによって、集計を追加せずにデータを要約できます。 多くの集計には、DISTINCT キーワードを使用するバージョンが含まれています。 DISTINCT を含めることで値の重複を排除できます。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] では [!INCLUDE[DWsql](../../includes/dwsql-md.md)]」を参照してください。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] が使用され、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] では [!INCLUDE[DWsql](../../includes/dwsql-md.md)] が使用されます。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
   
  次の表では、集計の一覧を示し、それらについて簡単に説明します。  
   
-|Aggregate|[説明]|  
+|Aggregate|説明|  
 |---------------|-----------------|  
 |Avg|グループ内の値の平均を返します。 SQL AVG 集計を実装します。|  
 |Count|グループ内のアイテムの数を返します。 SQL COUNT 集計を実装します。|  
@@ -114,14 +114,14 @@ ms.locfileid: "66499577"
 |Var Distinct|一意の統計的変位を返します。 VAR 集計と DISTINCT キーワードの組み合わせを実装します。|  
 |VarP Distinct|一意の統計的変位を返します。 VARP 集計と DISTINCT キーワードの組み合わせを実装します。|  
   
-###  <a name="FunctionParameters"></a> 関数のパラメーター ペイン  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> 関数のパラメーター ペイン  
  関数のパラメーター ペインには、ストアド プロシージャまたはテーブル値関数のパラメーターが表示されます。 次の列が表示されます。  
   
 -   **パラメーター名** : ストアド プロシージャまたはテーブル値関数で定義されるパラメーターの名前を表示します。  
   
 -   **値** : デザイン時にクエリを実行してクエリ結果ペインに表示されるデータを取得する際にパラメーターに使用される値。 この値は、実行時にレポートを実行する際には使用されません。  
   
-###  <a name="Relationships"></a> リレーションシップ ペイン  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> リレーションシップ ペイン  
  リレーションシップ ペインには、結合リレーションシップが表示されます。 リレーションシップは、データベース メタデータから取得された外部キー リレーションシップを基に自動的に検出したり、手動で作成したりできます。  
   
  次のオプションが表示されます。  
@@ -153,13 +153,13 @@ ms.locfileid: "66499577"
   
 -   **左テーブル** : 結合リレーションシップの一部である最初のテーブルの名前を表示します。  
   
--   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。 JOIN の種類の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンラインブック](https://go.microsoft.com/fwlink/?LinkId=141687) の「結合の基礎」を参照してください。  
+-   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。  
   
 -   **右テーブル** : 結合リレーションシップの 2 番目のテーブルの名前を表示します。  
   
 -   **結合フィールド** : 結合されたフィールドのペアをコンマ (,) で区切った結合条件がリレーションシップに複数ある場合に、結合されたフィールドのペアを一覧表示します。  
   
-###  <a name="AppliedFilters"></a> 適用されたフィルター ペイン  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> 適用されたフィルター ペイン  
  適用されたフィルター ペインには、実行時に取得されるデータの行数を制限するために使用される条件が表示されます。 このペインで指定された条件を使用して SQL の WHERE 句が生成されます。 パラメーター オプションを選択すると、レポート パラメーターが自動的に生成されます。 クエリ パラメーターに基づくレポート パラメーターを使用すると、ユーザーがクエリの値を指定してレポートのデータを制御できるようになります。  
   
  次の列が表示されます。  
@@ -172,7 +172,7 @@ ms.locfileid: "66499577"
   
 -   **パラメーター** : クエリ パラメーターをクエリに追加するオプションを表示します。 [データセットのプロパティ] を使用すると、クエリ パラメーターとレポート パラメーターの関係を表示できます。  
   
-###  <a name="QueryResults"></a> クエリ結果ペイン  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> クエリ結果ペイン  
  クエリ結果ペインには、その他のペインの選択内容によって指定されている自動的に生成されたクエリの結果が表示されます。 結果セットの列は選択されたフィールド ペインで指定したフィールドで、行データは適用されたフィルター ペインで指定したフィルターによって制限されます。 クエリに集計が含まれている場合、結果セットには新しい集計の列が含まれます。 たとえば、Count 集計を使用して **[Color]** 列を集計すると、クエリ結果に新しい列が含まれます。 この列には既定で、 **Count_Color**という名前が付けられます。  
   
  このデータは、クエリの実行時にデータ ソースから取得された値を表します。 このデータはレポート定義に保存されません。レポートの実際のデータは、レポートの処理時に取得されます。  
@@ -182,7 +182,7 @@ ms.locfileid: "66499577"
 ### <a name="graphical-query-designer-toolbar"></a>グラフィカル クエリ デザイナーのツール バー  
  リレーショナル クエリ デザイナーのツール バーにある次のボタンを使用すると、クエリを指定したりその結果を表示したりすることができます。  
   
-|ボタン|[説明]|  
+|ボタン|説明|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーに切り替えて、自動的に生成されたクエリの表示や変更を行います。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は .sql と .rdl です。|  

@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:SQL Server Management Studio のコンポーネントと構成
+title: SSMS のコンポーネントと構成
 description: SQL Server Management Studio 環境のコンポーネントと基本的な構成オプションについて説明するチュートリアルです。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -10,30 +10,30 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-ms.openlocfilehash: 68a99d74d96fc4d54c7c97bad8049447761f67c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267078"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247291"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio のコンポーネントと構成
 
-このチュートリアルでは、SQL Server Management Studio (SSMS) 内のさまざまなウィンドウ コンポーネントと、ワークスペースに関する基本的な構成オプションについて説明します。 この記事では、次の方法を学習します。 
+このチュートリアルでは、SQL Server Management Studio (SSMS) 内のさまざまなウィンドウ コンポーネントと、ワークスペースに関する基本的な構成オプションについて説明します。 この記事では、次のことについて説明します。 
 
 > [!div class="checklist"]
 > * SSMS 環境を構成するさまざまなコンポーネントを確認する
 > * 環境レイアウトを変更する/リセットして既定に戻す
 > * クエリ エディターを最大化する
-> * フォントを変更する
+> * フォントの変更
 > * 起動オプションを構成する
 > * 構成をリセットして既定に戻す
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを実行するには、SQL Server Management Studio が必要です。  
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio のコンポーネント
 
@@ -44,22 +44,22 @@ ms.locfileid: "68267078"
 
     ![[表示] メニュー](media/ssms-configuration/viewmenu.png)
 
-* **オブジェクト エクスプローラー** (F8):オブジェクト エクスプローラーには、サーバー上のすべてのデータベース オブジェクトがツリー形式で表示されます。 このビューには、SQL Server Database Engine、SQL Server Analysis Services、SQL Server Reporting Services、SQL Server Integration Services のデータベースが含まれています。 オブジェクト エクスプローラーには、それに接続されているすべてのサーバーの情報が含まれています。 
+* **[オブジェクト エクスプローラー]** (F8): オブジェクト エクスプローラーには、サーバー上のすべてのデータベース オブジェクトがツリー形式で表示されます。 このビューには、SQL Server Database Engine、SQL Server Analysis Services、SQL Server Reporting Services、SQL Server Integration Services のデータベースが含まれています。 オブジェクト エクスプローラーには、それに接続されているすべてのサーバーの情報が含まれています。 
 
     ![オブジェクト エクスプローラー](media/ssms-configuration/objectexplorer.png)
-* **クエリ ウィンドウ** (Ctrl + N): **[新しいクエリ]** を選択したら、このウィンドウに Transact-SQL (T-SQL) クエリを入力します。 クエリの結果もここに表示されます。
+* **クエリ ウィンドウ** (Ctrl+N): **[新しいクエリ]** を選択したら、このウィンドウに Transact-SQL (T-SQL) クエリを入力します。 クエリの結果もここに表示されます。
 
     ![[新しいクエリ] ウィンドウ](media/ssms-configuration/newquery.png)
 
-* **プロパティ** (F4):クエリ ウィンドウが開くと、[プロパティ] ビューが表示されます。 このビューには、クエリの基本的なプロパティが表示されます。 たとえば、クエリの開始時刻、返された行数、接続の詳細などが表示されます。  
+* **プロパティ** (F4): クエリ ウィンドウが開くと、[プロパティ] ビューが表示されます。 このビューには、クエリの基本的なプロパティが表示されます。 たとえば、クエリの開始時刻、返された行数、接続の詳細などが表示されます。  
 
     ![Properties](media/ssms-configuration/properties.png)
 
-* **テンプレート ブラウザー** (Ctrl + Alt + T):テンプレート ブラウザーには、さまざまな既成 T-SQL テンプレートが含まれています。 これらのテンプレートを使うと、データベースの作成やバックアップなど、さまざまな機能を実行できます。 
+* **テンプレート ブラウザー** (Ctrl + Alt + T): テンプレート ブラウザーには、さまざまな既成 T-SQL テンプレートが含まれています。 これらのテンプレートを使うと、データベースの作成やバックアップなど、さまざまな機能を実行できます。 
 
     ![テンプレート ブラウザー](media/ssms-configuration/templates.png)
 
-* **オブジェクト エクスプローラーの詳細** (F7):このビューは、オブジェクト エクスプローラーのビューより詳しくなっています。 オブジェクト エクスプローラーの詳細を使用し、複数のオブジェクトを同時に操作できます。 たとえば、このウィンドウで、複数のデータベースを選択し、その後、全部同時に削除するか、スクリプト化できます。 
+* **オブジェクト エクスプローラーの詳細** (F7): このビューは、オブジェクト エクスプローラーのビューより詳しくなっています。 オブジェクト エクスプローラーの詳細を使用し、複数のオブジェクトを同時に操作できます。 たとえば、このウィンドウで、複数のデータベースを選択し、その後、全部同時に削除するか、スクリプト化できます。 
 
     ![[オブジェクト エクスプローラーの詳細]](media/ssms-configuration/objectexplorerdetails.PNG) 
 
@@ -116,7 +116,7 @@ ms.locfileid: "68267078"
 
     ![ツール バーのカスタマイズ](media/ssms-configuration/toolbar.png)
 
-### <a name="change-the-font"></a>フォントを変更する
+### <a name="change-the-font"></a>フォントの変更
 
 * フォントを変更するには、 **[ツール]**  >  **[オプション]**  >  **[フォントおよび色]** の順に選択します。
 
@@ -134,7 +134,7 @@ ms.locfileid: "68267078"
 
     ![設定のインポートとエクスポート](media/ssms-configuration/settings.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。  以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 

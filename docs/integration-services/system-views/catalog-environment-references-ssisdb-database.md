@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c70439da5ba3f09cd39ea9cec78a14ea366d126d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 23956f548b5bb768260ffc618c86cd93f0e82b23
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673265"
 ---
-# <a name="catalogenvironmentreferences-ssisdb-database"></a>catalog.environment_references (SSISDB データベース)
+# <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **SSISDB** カタログのすべてのプロジェクトに対する環境参照を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |reference_id|**bigint**|参照の一意識別子 (ID)。|  
 |project_id|**bigint**|プロジェクトの一意な ID。|  
@@ -36,7 +36,7 @@ ms.locfileid: "68038412"
 |validation_status|**char(1)**|検証の状態。|  
 |last_validation_time|**datatimeoffset(7)**|前回の検証操作の時刻。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、カタログの各環境参照の行を表示します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -51,7 +51,7 @@ ms.locfileid: "68038412"
 > [!NOTE]  
 >  プロジェクトの READ 権限がある場合は、そのプロジェクトに関連付けられたすべてのパッケージおよび環境の READ 権限もあります。 行レベルのセキュリティが適用されるため、表示する権限がある行のみが表示されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロジェクトでは、相対または絶対環境参照を使用できます。 相対参照は、名前によって環境を参照し、プロジェクトと同じフォルダーに格納されている必要があります。 絶対参照の場合、名前とフォルダーによって環境を参照します。プロジェクトとは異なるフォルダーに格納されている環境を参照する場合があります。 プロジェクトでは複数の環境を参照できます。  
   
   

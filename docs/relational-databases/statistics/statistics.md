@@ -1,7 +1,7 @@
 ---
-title: 統計 | Microsoft Docs
+title: 統計
 ms.custom: ''
-ms.date: 12/18/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -23,28 +23,29 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac146dc20fbbf078a7f71dfdbe81b4489ea1849f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b509109cd155d0990950afbd073709325b01f5b9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934114"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196750"
 ---
 # <a name="statistics"></a>統計
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために統計を使用します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成したり、クエリのデザインを変更したりする必要がある場合もあります。 このトピックでは、クエリ最適化に関する統計の概念と、それを効果的に使用するためのガイドラインについて説明します。  
   
-##  <a name="DefinitionQOStatistics"></a> コンポーネントおよび概念  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> コンポーネントおよび概念  
 ### <a name="statistics"></a>統計  
  クエリ最適化に関する統計は、テーブルまたはインデックス付きビューの 1 つまたは複数の列の値の分布に関する統計情報を格納するバイナリ ラージ オブジェクト (BLOB) です。 クエリ オプティマイザーでは、これらの統計を使用してクエリ結果の*カーディナリティ*、つまり行数を推定します。 これらの*カーディナリティの推定*に基づいて、クエリ オプティマイザーでは高品質なクエリ プランを作成できます。 たとえば、ご利用の述語によっては、クエリ オプティマイザーがカーディナリティの推定を使用して、リソース消費の多い Index Scan 操作ではなく Index Seek 操作を選択することがあります。そうすることで、クエリのパフォーマンスが高まります。  
   
  統計オブジェクトは 1 つ以上のテーブル列で構成されるリストごとに作成され、それぞれに最初の列の値の分布を示す*ヒストグラム*が含まれます。 複数列の統計オブジェクトには、さらに、列間の値の相関関係に関する統計情報も格納されます。 これらの相関関係の統計情報 ( *密度*) は、個別の列値を持つ行の数から得られます。 
 
-#### <a name="histogram"></a> ヒストグラム  
+#### <a name="histogram"></a><a name="histogram"></a> ヒストグラム  
 **ヒストグラム**では、データセットの個別の値ごとに出現頻度を測定します。 クエリ オプティマイザーでは、統計オブジェクトの最初のキー列の列値に基づいてヒストグラムを計算し、行を統計的にサンプリングするかテーブルまたはビュー内のすべての行でフル スキャンを実行することによって列値を選択します。 サンプリングされた行のセットからヒストグラムを作成する場合、格納される行の総数および個別の値の数は推定値であり、必ずしも整数にはなりません。
 
 > [!NOTE]
-> <a name="frequency"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のヒストグラムは、単一の列 (統計オブジェクトのキー列のセットの最初の列) に対してのみ作成されます。
+> <a name="frequency"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のヒストグラムは、単一の列 (統計オブジェクトのキー列のセットの最初の列) に対してのみ作成されます。
   
 ヒストグラムを作成するには、クエリ オプティマイザーで列値を並べ替え、個別の列値ごとに一致する値の数を計算し、列値を最大 200 の連続したヒストグラム区間に集計します。 各ヒストグラム区間には、列値の範囲と上限の列値が順番に含まれます。 この範囲には、境界値の間 (境界値自体は除く) のすべての有効な列値が含まれます。 格納される最小の列値は、最初のヒストグラム区間の上限境界値になります。
 
@@ -59,7 +60,7 @@ ms.locfileid: "67934114"
 
 次の図は、6 つの区間があるヒストグラムを示しています。 最初の上限境界値の左側にある領域が最初の区間です。
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "ヒストグラム") 
+![ヒストグラム](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "ヒストグラム") 
   
 上記のヒストグラムの各区間は、以下のように表されます。
 -   太線は、上限境界値 (*range_high_key*) およびその出現回数 (*equal_rows*) を表します。  
@@ -68,7 +69,7 @@ ms.locfileid: "67934114"
   
 -   点線は、範囲内にある個別の値の総数 (*distinct_range_rows*) および範囲内の値の総数 (*range_rows*) を推定するために使用されるサンプリングされた値を表します。 クエリ オプティマイザーでは、*range_rows* および *distinct_range_rows* を使用して *average_range_rows* を計算します。サンプリングされた値は格納されません。   
   
-#### <a name="density"></a>密度ベクトル  
+#### <a name="density-vector"></a><a name="density"></a>密度ベクトル  
 **密度**とは、特定の列または列の組み合わせにおける重複の数に関する情報であり、1/(個別の値の数) の式で計算されます。 クエリ オプティマイザーでは、同一のテーブルまたはインデックス付きビューから複数の列を返すクエリに対するカーディナリティの推定を向上させるために密度を使用します。 密度が減少するにつれて、値の選択度が高くなります。 たとえば、車を表すテーブルの場合、同メーカーの車がいくつもあります。ただし、VIN (車両番号) はそれぞれの車両固有のものです。 VIN 上のインデックスは、製造元でのインデックスより選択度が高くなります。これは VIN の密度が製造元の場合より低いからです。 
 
 > [!NOTE]
@@ -88,7 +89,7 @@ ms.locfileid: "67934114"
 ### <a name="statistics-options"></a>統計オプション  
  統計の作成と更新のタイミングおよび方法を指定するための 3 つのオプションを設定できます。 これらのオプションは、データベース レベルでのみ設定されます。  
   
-#### <a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS オプション  
+#### <a name="auto_create_statistics-option"></a><a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS オプション  
  統計の自動作成オプション [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) がオンの場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだ[ヒストグラム](#histogram)がない列について作成されます。 AUTO_CREATE_STATISTICS オプションでは、インデックスに対する統計を作成するかどうかは判断されません。 また、フィルター選択された統計情報も生成されません。 このオプションは、テーブル全体の 1 列ずつの統計にのみ適用されます。  
   
  AUTO_CREATE_STATISTICS オプションを使用した結果としてクエリ オプティマイザーによって統計が作成された場合、その統計名は `_WA` で始まります。 次のクエリを使用すると、クエリ オプティマイザーでクエリ述語列の統計が作成されたかどうかを判断できます。  
@@ -104,7 +105,7 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
-#### <a name="autoupdatestatistics-option"></a>AUTO_UPDATE_STATISTICS オプション  
+#### <a name="auto_update_statistics-option"></a>AUTO_UPDATE_STATISTICS オプション  
  統計の自動更新オプション [AUTO_UPDATE_STATISTICS ](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) がオンの場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。  
   
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] まで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は変更された行の割合に基づくしきい値を使用します。 これには、テーブル内の行数は考慮されません。 しきい値は次のようになります。
@@ -114,7 +115,7 @@ ORDER BY s.name;
 * [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。 これは、1,000 と現在のテーブルのカーディナリティの積の平方根として計算されます。 たとえば、テーブルに 200 万行含まれている場合、計算は sqrt (1000 * 2000000) = 44721.359 となります。 この変更により、大規模なテーブルの統計がより頻繁に更新されます。 ただし、データベースの互換性レベルが 130 未満の場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のしきい値が適用されます。 ?
 
 > [!IMPORTANT]
-> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[トレース フラグ 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。
+> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[トレース フラグ 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。
   
 クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリをコンパイルする前は、クエリ オプティマイザーで、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。  
   
@@ -122,7 +123,7 @@ AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成
  
 AUTO_UPDATE_STATISTICS の制御の詳細については、「[SQL Server 内の Autostat (AUTO_UPDATE_STATISTICS) の動作を制御します。](https://support.microsoft.com/help/2754171)」をご覧ください。
   
-#### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
+#### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  統計の非同期更新オプション [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 既定では、統計の非同期更新オプションはオフであり、クエリ オプティマイザーによる統計の更新は同期更新になります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ステートメントを使用して作成された統計に適用されます。  
  
  > [!NOTE]
@@ -137,7 +138,11 @@ AUTO_UPDATE_STATISTICS の制御の詳細については、「[SQL Server 内の
 * アプリケーションで同じクエリ、類似のクエリ、またはキャッシュされた類似のクエリ プランを頻繁に実行する場合。 クエリの応答時間は、統計の同期更新を使用するよりも非同期更新を使用した方が予測しやすくなります。非同期更新の場合、クエリ オプティマイザーでは、統計が最新になるまで待機せずに着信クエリを実行できるためです。 これにより、一部のクエリの遅延については回避することができます。  
   
 * アプリケーションで統計の更新を待機している 1 つ以上のクエリによって、クライアント要求がタイムアウトする場合。 場合によっては、同期統計を待機していることが原因で、厳しいタイムアウト時間が設定されたアプリケーションが失敗することがあります。  
-  
+
+統計の非同期更新は、バックグラウンド要求によって実行されます。 要求は、更新された統計情報をデータベースに書き込む準備ができた時点で、統計メタデータ オブジェクトに対するスキーマ変更ロックの取得を試みます。 別のセッションが同じオブジェクトに対して既にロックを保持している場合、スキーマ変更ロックを取得できるようになるまで、非同期統計の更新がブロックされます。 同様に、クエリをコンパイルするために統計メタデータ オブジェクトに対するスキーマ安定性ロックを取得する必要があるセッションは、既にスキーマ変更ロックの取得を保持しているか待機している非同期統計更新のバックグラウンド セッションによってブロックされる可能性があります。 したがって、クエリのコンパイルや統計の更新が非常に頻繁に行われるワークロードでは、非同期統計を使用すると、ロックのブロックによる同時実行の問題が起きる可能性が高くなる場合があります。
+
+Azure SQL Database では、ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を有効にすると、非同期統計の更新を使用して潜在的な同時実行の問題を回避可能です。 この構成を有効にすると、バックグラウンド要求は、優先度の低い別のキューに対するスキーマ変更ロックの取得を待機します。これにより、他の要求では既存の統計情報を使用したクエリのコンパイルを続行できます。 他のセッションが統計メタデータ オブジェクトのロックを保持しなくなると、バックグラウンド要求はそのスキーマ変更ロックおよび更新統計を取得します。 まれに、バックグラウンド要求が数分のタイムアウト期間内にロックを取得できない場合、非同期統計の更新は中止されます。統計は、別の自動統計更新がトリガーされるか、[手動で更新](update-statistics.md)されるまで更新されません。
+
 #### <a name="incremental"></a>INCREMENTAL  
  CREATE STATISTICS の INCREMENTAL オプションが ON の場合、作成される統計情報はパーティションごとの統計になります。 OFF の場合、統計ツリーが削除され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって統計が再計算されます。 既定値は OFF です。 この設定は、データベース レベルの INCREMENTAL プロパティをオーバーライドします。 増分統計の作成の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。 パーティションごとの統計を自動的に作成する方法の詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic)」と「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。 
   
@@ -153,16 +158,17 @@ AUTO_UPDATE_STATISTICS の制御の詳細については、「[SQL Server 内の
 * 内部テーブルに対して作成された統計。  
 * 空間インデックスまたは XML インデックスを使用して作成された統計。  
   
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。 
   
-## <a name="CreateStatistics"></a> 統計を作成する場合  
+## <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> 統計を作成する場合  
  クエリ オプティマイザーによって、既に次のようにして統計が作成されています。  
   
 1.  インデックスの作成時に、クエリ オプティマイザーによってテーブルまたはビューのインデックスに対する統計が作成されます。 これらの統計は、インデックスのキー列について作成されます。 インデックスがフィルター選択されたインデックスの場合は、フィルター選択されたインデックスに指定された行のサブセットと同じ行のサブセットについて、フィルター選択された統計が作成されます。 フィルター選択されたインデックスの詳細については、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」および 「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
+
+    > [!NOTE]
+    > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降では、パーティション インデックスが作成または再構築された場合、テーブル内のすべての行をスキャンして統計を作成することはできません。 代わりに、クエリ オプティマイザーが既定のサンプリング アルゴリズムを使用して統計を生成します。 パーティション インデックスでデータベースをアップグレードした後で、これらのインデックスのヒストグラム データに違いが見つかる場合があります。 この動作の変更はクエリ パフォーマンスに影響しない可能性があります。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、`FULLSCAN` 句で `CREATE STATISTICS` または `UPDATE STATISTICS` を使用します。 
   
 2.  [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) がオンの場合、クエリ オプティマイザーによってクエリ述語内の列に対して 1 列ずつ統計が作成されます。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ほとんどのクエリでは、これらの 2 つの方法で作成された統計を使用すれば、高品質のクエリ プランになります。ただし、 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) ステートメントを使用して追加の統計を作成することで、クエリ プランが向上する場合もあります。 これらの追加の統計では、クエリ オプティマイザーでインデックスまたは 1 列ずつの統計を作成する場合には考慮されない統計的相関関係を取り込むことができます。 アプリケーションのテーブル データには、計算して統計オブジェクトに含めればクエリ オプティマイザーでクエリ プランを向上させることができる、他の統計的相関関係が含まれている場合があります。 たとえば、データ行のサブセットに関するフィルター選択された統計情報や、クエリ述語列の複数列統計を使用することで、クエリ プランが向上することがあります。  
   
@@ -241,7 +247,7 @@ GO
   
  一時的な統計は **tempdb**に格納されるので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動すると、一時的な統計はすべてなくなります。  
     
-## <a name="UpdateStatistics"></a>統計を更新する場合  
+## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a>統計を更新する場合  
  クエリ オプティマイザーでは、古くなっている可能性がある統計を判断し、それらがクエリ プランに必要な場合は更新します。 場合によっては、 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) をオンにした場合より頻繁に統計を更新することで、クエリ プランが向上し、クエリのパフォーマンスが向上することがあります。 統計は、UPDATE STATISTICS ステートメントまたは sp_updatestats ストアド プロシージャを使用して更新できます。  
   
  統計を更新すると、クエリが最新の統計を使用してコンパイルされるようになります。 ただし、統計の更新によりクエリが再コンパイルされます。 パフォーマンスの向上を目的とする場合、クエリ プランの改善とクエリの再コンパイルに要する時間の間にはトレードオフの関係があるため、あまり頻繁に統計を更新しないようにすることをお勧めします。 実際のトレードオフはアプリケーションによって異なります。  
@@ -276,7 +282,7 @@ GO
 
 [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) のようなソリューションを活用し、1 つまたは複数のデータベースに対するインデックスの最適化と統計更新を自動管理します。 このプロシージャでは、断片化レベルやその他のパラメーターに基づいてインデックスを再構築または再構成するか、線形しきい値で統計を更新するかが自動的に選択されます。
   
-##  <a name="DesignStatistics"></a> 統計を効果的に使用するクエリ  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> 統計を効果的に使用するクエリ  
  クエリ述語にローカル変数や複雑な式が含まれている場合など、特定のクエリ実装では、最適なクエリ プランにならないことがあります。 クエリのデザイン ガイドラインに従って統計を効果的に使用することで、この問題を回避できる場合があります。 クエリ述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」を参照してください。  
   
  クエリのデザイン ガイドラインを適用して統計を効果的に使用することで、クエリ述語で使用される式、変数、および関数に対する *カーディナリティの推定* を向上させると、クエリ プランを向上させることができます。 クエリ オプティマイザーでは、式、変数、または関数の値が不明な場合、ヒストグラムで参照する値を特定できないため、ヒストグラムから最適なカーディナリティの推定を得ることができません。 その場合、クエリ オプティマイザーでは、ヒストグラム内のサンプリングされたすべての行の値ごとの平均行数に基づいてカーディナリティの推定を行います。 その結果、カーディナリティが適切に推定されず、クエリのパフォーマンスが低下することがあります。 ヒストグラムの詳細については、このページの「[ヒストグラム](#histogram)」のセクション、または「[sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)」をご覧ください。

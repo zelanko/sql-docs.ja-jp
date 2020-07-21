@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3336d4c1-d999-43cc-b36b-ff1532e899bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2c1a5a30c6bc303f7e2caf094e9c1d803ab6781
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f86809112c7eb156772c85f639944f8390f3e587
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980682"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925193"
 ---
 # <a name="getprocedureterm-method-sqlserverdatabasemetadata"></a>getProcedureTerm メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public java.lang.String getProcedureTerm()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getProcedureTerm メソッドは、getProcedureTerm メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getProcedureTerm メソッドは、java.sql.DatabaseMetaData インターフェイスの getProcedureTerm メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

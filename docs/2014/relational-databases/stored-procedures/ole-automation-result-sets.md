@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 649731c1dbbe3f52dec899cc47366cfeb15c9c56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7c9bdc4d51d989db2d4d676b29e0824c0e5b59a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062812"
 ---
 # <a name="ole-automation-result-sets"></a>OLE オートメーションの結果セット
   OLE オートメーションのプロパティまたはメソッドがデータを 1 次元か 2 次元の配列で返す場合、その配列は、次のように結果セットとしてクライアントに返されます。  

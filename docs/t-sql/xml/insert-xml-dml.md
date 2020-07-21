@@ -1,5 +1,5 @@
 ---
-title: insert (XML DML) | Microsoft Docs
+title: insert (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051287"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393070"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   *Expression1* で識別される 1 つ以上のノードを、*Expression2* で識別されるノードの子ノードまたは兄弟ノードとして挿入します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 insert   
       Expression1 (  
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *Expression1*  
  挿入する 1 つ以上のノードを識別します。 この引数に指定できるのは、XML の定数インスタンス、modify メソッドが適用されている同じ XML スキーマ コレクションの型指定された XML データ型インスタンスへの参照、スタンドアロンの **sql:column()** /**sql:variable()** 関数を使用する型指定されていない XML データ型インスタンス、または XQuery 式です。 式の結果は、ノード、テキスト ノード、または順序付けられたノードのシーケンスになります。 式をルート (/) ノードに解決することはできません。 式の結果が 1 つの値または値のシーケンスになる場合、シーケンス内の各値がスペースで区切られた 1 つのテキスト ノードとして値が挿入されます。 複数のノードを定数として指定した場合、ノードはかっこ内に含まれ、コンマで区切られます。 一連の要素、属性、値などの異種シーケンスは挿入できません。 *Expression1* が空のシーケンスに解決される場合は、挿入が行われず、エラーも返されません。  
   
@@ -55,7 +57,7 @@ insert
  *Expression2*  
  ノードを識別します。 *Expression1* で識別されるノードの相対位置に、*Expression2* で識別されるノードが挿入されます。 現在参照されているドキュメントに存在するノードへの参照を返す XQuery 式も使用できます。 複数のノードが返されると、挿入は失敗します。 *Expression2* で空のシーケンスが返されると、挿入が行われず、エラーも返されません。 *Expression2* が静的に単一にならないと、静的エラーが返されます。 *Expression2* を、処理命令、コメント、または属性にはできません。 *Expression2* は、構築されたノードではなく、ドキュメント内の既存のノードへの参照にする必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-inserting-element-nodes-into-the-document"></a>A. ドキュメントへの要素ノードの挿入  
  次の例は、ドキュメントに要素を挿入する方法を示します。 まず、XML ドキュメントが **xml** 型の変数に代入されます。 次に、いくつかの **insert** XML DML ステートメントを使用して、要素ノードをドキュメントに挿入する方法を示します。 それぞれの挿入後、SELECT ステートメントによって結果が表示されます。  
@@ -211,7 +213,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. CDATA セクションを使用したデータの挿入  
- < や > など、XML では無効な文字が含まれるテキストを挿入するときは、次のクエリに示すように、CDATA セクションを使用してデータを挿入できます。 クエリでは CDATA セクションが指定されていますが、無効な文字はエンティティに変換され、テキスト ノードとして追加されます。 たとえば、'<' は &lt; として保存されます。  
+ < や > など、XML では無効な文字が含まれるテキストを挿入するときは、次のクエリに示すように、CDATA セクションを使用してデータを挿入できます。 クエリでは CDATA セクションが指定されていますが、無効な文字はエンティティに変換され、テキスト ノードとして追加されます。 たとえば、`<` は `&lt;` として保存されます。  
   
 ```  
 USE AdventureWorks;  
@@ -236,7 +238,7 @@ GO
 ```  
 <Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
-<Features> <notxml> as text </notxml> or cdata </Features>  
+<Features> &lt;notxml@gt; as text &lt;/notxml&gt; or cdata </Features>  
 </ProductDescription>  
 </Root>       
 ```  

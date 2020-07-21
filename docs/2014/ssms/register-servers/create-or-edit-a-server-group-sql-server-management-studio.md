@@ -1,6 +1,6 @@
 ---
-title: サーバー グループの作成または編集 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: サーバー グループの作成または編集
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - server groups [SQL Server]
 - groups [SQL Server], server
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32c91f7b3186543a5a5a053c1aa410648caf0fb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a8fbff8e52fdc91e2ed633ade725ecbb7baa5e9e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297598"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058433"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>サーバー グループの作成または編集 (SQL Server Management Studio)
   このトピックでは、サーバー グループを作成し、サーバーをそのサーバー グループに配置して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、登録済みサーバー内のサーバーを整理する方法について説明します。 登録済みサーバーにはサーバー グループをいつでも作成できます。また、サーバーの登録時にサーバー グループを作成することもできます。  

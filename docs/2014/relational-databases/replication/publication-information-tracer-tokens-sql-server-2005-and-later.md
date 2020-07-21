@@ -1,5 +1,5 @@
 ---
-title: パブリケーション情報、トレーサー トークン (トランザクション パブリケーション、SQL Server 2005 以降) |Microsoft Docs
+title: パブリケーション情報、トレーサートークン (トランザクションパブリケーション、SQL Server 2005 以降) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 520db8f10b9a60d2c8bd48771a5660402be835ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016501"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>パブリケーション情報、トレーサー トークン (トランザクション パブリケーション、SQL Server 2005 以降)
   **[トレーサー トークン]** タブを使用すると、接続の検証と、トランザクション レプリケーションを使用するシステムの待機時間を測定できます。 トークン (小さなデータ) は、通常のレプリケートされたトランザクションのようにマークが付けられてパブリケーション データベースのトランザクション ログに書き込まれ、システムを介して送信されることで、次の計算が可能になります。  
@@ -32,16 +31,16 @@ ms.locfileid: "63021693"
   
 -   トレース トークンを受信することになっているサブスクライバーのうち、受信していないサブスクライバーがあるか。あるとすればどのサブスクライバーか。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
--   **[並べ替え]** : **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
+-   **[並べ替え]**: **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
   
--   **[表示する列の選択]** : **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
+-   **[表示する列の選択]**: **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
+-   **[フィルター]**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター選択します。  
   
--   **[フィルターのクリア]** :グリッドのフィルター設定をすべてクリアします。  
+-   **[フィルターのクリア]**: グリッドのフィルター設定をすべてクリアします。  
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
@@ -63,14 +62,14 @@ ms.locfileid: "63021693"
  **[ディストリビューターからサブスクライバーまで]**  
  ディストリビューション データベース内に挿入されるコマンドと、サブスクライバーでコミットされる対応するトランザクションの間での経過時間です。 **[保留中]** の値は、トークンがまだサブスクライバーに到達していないことを示します。 保留中の状態が続く場合は、ディストリビューション エージェントが実行されていることを確認します。  
   
- **[合計待機時間]**  
+ **合計待機時間**  
  パブリッシャーでコミットされるトランザクションと、サブスクライバーでコミットされる対応するトランザクションの間での経過時間です。 これは、この時間にレプリケーション システムの端末間でサブスクライバーを待機する時間を表しています。 **[保留中]** の値は、トークンがまだサブスクライバーに到達していないことを示します。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [トランザクション レプリケーションの待機時間の計測および接続の検証](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [レプリケーション モニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)   
+ [レプリケーションエージェント &#40;SQL Server Management Studio を開始および停止する&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
+ [レプリケーションモニターを開始する](monitor/start-the-replication-monitor.md)   
+ [トランザクションレプリケーションの待機時間を計測して接続を検証する](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [レプリケーションモニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
   

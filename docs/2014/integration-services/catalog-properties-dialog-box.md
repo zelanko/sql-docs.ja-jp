@@ -1,5 +1,5 @@
 ---
-title: カタログのプロパティ ダイアログ ボックス |Microsoft Docs
+title: '[カタログのプロパティ] ダイアログボックス |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,30 +10,29 @@ f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
 - sql12.ssis.ssms.iscreatecatalog.f1
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9f1a4a9d7a74e47d609c319f90b07d8ebfdce00e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061111"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439139"
 ---
 # <a name="catalog-properties-dialog-box"></a>[カタログのプロパティ] ダイアログ ボックス
-  [カタログのプロパティ] ダイアログ ボックスを使用すると、SSISDB カタログを構成できます。 カタログ プロパティは、機微なデータを暗号化する方法、操作およびプロジェクトのバージョン管理データを保持する方法、および検証操作がタイムアウトするタイミングを定義します。SSISDB カタログは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、パラメーター、および環境のための中央のストレージと管理ポイントです。  
+  [カタログのプロパティ] ダイアログ ボックスを使用すると、SSISDB カタログを構成できます。 カタログプロパティは、機微なデータを暗号化する方法、操作およびプロジェクトのバージョン管理データを保持する方法、および検証操作がタイムアウトするタイミングを定義します。SSISDB カタログは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、パラメーター、および環境のための中央のストレージと管理ポイントです。  
   
  また、カタログ プロパティを catalog.catalog_property ビューで表示し、catalog.configure_catalog ストアド プロシージャを使用してこれらのプロパティを設定できます。 詳細については、「[catalog.catalog_properties (SSISDB データベース)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)」および「[catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)」を参照してください。  
   
  SSISDB カタログを作成する方法の詳細については、「 [SSIS カタログの作成](catalog/ssis-catalog.md)」を参照してください。  
   
- **目的に合ったトピックをクリックしてください**  
+ **どうしたいんですか。**  
   
 -   [[カタログのプロパティ] ダイアログ ボックスを開く](#open_dialog)  
   
 -   [オプションの構成](#options)  
   
-##  <a name="open_dialog"></a> [カタログのプロパティ] ダイアログ ボックスを開く  
+##  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a>[カタログのプロパティ] ダイアログボックスを開く  
   
 1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を開きます。  
   
@@ -41,9 +40,9 @@ ms.locfileid: "66061111"
   
 3.  オブジェクト エクスプローラーで、 **[Integration Services]** ノードを展開します。 **[SSISDB]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-##  <a name="options"></a> オプションの構成  
+##  <a name="configure-the-options"></a><a name="options"></a>オプションを構成する  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  次の表では、ダイアログ ボックスに示される特定のプロパティと、catalog.catalog_property ビュー内の対応するプロパティについて説明します。  
   
 |プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_property ビュー)|説明|  

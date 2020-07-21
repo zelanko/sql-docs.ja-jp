@@ -1,5 +1,5 @@
 ---
-title: 配置ウィザードを使用したモデル ソリューションの配置 |Microsoft Docs
+title: 配置ウィザードを使用したモデルソリューションの配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ff711e8e-971c-43ba-b479-effc034af4a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e18b1786201be9ba671bc08fe7b24ba2207469e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e3dfd0b727fd917c37aa44aa8fd1d29326aaaa1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075377"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546897"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Deploy Model Solutions Using the Deployment Wizard
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトから生成された XML 出力ファイルを入力ファイルとして使用します。 このような入力ファイルは簡単に変更して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの配置をカスタマイズできます。 生成された配置スクリプトは直ちに実行することも、今後の配置のために保存することもできます。  
+  配置ウィザードでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトから生成された XML 出力ファイルを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 入力ファイルとして使用します。 このような入力ファイルは簡単に変更して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの配置をカスタマイズできます。 生成された配置スクリプトは直ちに実行することも、今後の配置のために保存することもできます。  
   
  配置を行うには、ここで説明するウィザードを使用します。 配置を自動化したり、同期機能を使用したりすることもできます。 配置するデータベースが大きい場合は、配置先のシステムでパーティションを使用することを検討してください。 分析管理オブジェクト (AMO) を使用してパーティションの作成および設定を自動化することもできます。  
   
@@ -40,9 +39,9 @@ ms.locfileid: "66075377"
 |[Analysis Services 配置スクリプトについて](understanding-the-analysis-services-deployment-script.md)|配置スクリプトの内容とスクリプトの実行方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [XMLA を使用したモデル ソリューションの配置](deploy-model-solutions-using-xmla.md)   
+ [XMLA を使用したモデルソリューションの配置](deploy-model-solutions-using-xmla.md)   
  [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)   
- [配置スクリプトを作成するための入力ファイルについて](deployment-script-files-input-used-to-create-deployment-script.md)   
+ [配置スクリプトの作成に使用される入力ファイルについて](deployment-script-files-input-used-to-create-deployment-script.md)   
  [配置ユーティリティを使用したモデル ソリューションの配置](deploy-model-solutions-with-the-deployment-utility.md)  
   
   

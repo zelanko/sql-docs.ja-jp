@@ -1,5 +1,5 @@
 ---
-title: sp_helpsort (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpsort (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2da3e78c5fde49a3d83c3813f70c5d56a1915908
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750524"
 ---
-# <a name="sphelpsort-transact-sql"></a>sp_helpsort (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-sql)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの並べ替え順および文字セットを表示します。  
   
@@ -45,14 +45,14 @@ sp_helpsort
 ## <a name="result-sets"></a>結果セット  
  サーバーの既定の照合順序を返します。  
   
-## <a name="remarks"></a>コメント  
- インスタンスの場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のインストールと互換性がある指定された照合順序でインストールされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **sp_helpsort**空の結果が返されます。 この動作が発生した場合、`SELECT SERVERPROPERTY ('Collation');` のように、SERVERPROPERTY オブジェクトに対してクエリを実行して、照合順序を決定できます。  
+## <a name="remarks"></a>Remarks  
+ のインスタンスが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以前ののインストールと互換性があるように指定された照合順序でインストールされている場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_helpsort**は空白の結果を返します。 この動作が発生した場合、`SELECT SERVERPROPERTY ('Collation');` のように、SERVERPROPERTY オブジェクトに対してクエリを実行して、照合順序を決定できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、サーバー、その文字セットと、1 番目の並べ替えの値のテーブルの既定の並べ替え順序の名前が表示されます。  
+## <a name="examples"></a>例  
+ 次の例では、サーバーの既定の並べ替え順序の名前、その文字セット、および主な並べ替え値のテーブルを表示します。  
   
 ```  
 sp_helpsort;  
@@ -67,8 +67,8 @@ sp_helpsort;
  `Latin1-General, case-sensitive, accent-sensitive, kanatype-insensitive, width-insensitive for Unicode Data, SQL Server Sort Order 51 on Code Page 1252 for non-Unicode Data.`  
   
 ## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  

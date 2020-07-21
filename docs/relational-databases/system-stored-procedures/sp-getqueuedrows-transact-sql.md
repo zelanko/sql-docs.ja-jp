@@ -1,5 +1,5 @@
 ---
-title: sp_getqueuedrows (TRANSACT-SQL) |Microsoft Docs
+title: sp_getqueuedrows (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57e4551743a535c78e33b4682f8ea19132bc75a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123940"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881588"
 ---
-# <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  キューで保留中の更新プログラムのあるサブスクライバーの行を取得します。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。  
+  キューで保留中の更新があるサブスクライバーの行を取得します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,36 +39,36 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @tablename = ] 'tablename'` テーブルの名前です。 *tablename*は**sysname**、既定値はありません。 テーブルは、キューに置かれたサブスクリプションの一部である必要があります。  
+`[ @tablename = ] 'tablename'`テーブルの名前を指定します。 *tablename*は**sysname**,、既定値はありません。 テーブルは、キューに登録されたサブスクリプションの一部である必要があります。  
   
-`[ @owner = ] 'owner'` サブスクリプションの所有者です。 *所有者*は**sysname**、既定値は NULL です。  
+`[ @owner = ] 'owner'`はサブスクリプションの所有者です。 *owner*は**sysname**,、既定値は NULL です。  
   
-`[ @tranid = ] 'transaction_id'` 出力をトランザクション ID でフィルター処理できます。 *transaction_id*は**nvarchar (70)** 、既定値は NULL です。 指定した場合は、キューに登録されたコマンドに関連付けられたトランザクション ID が表示されます。 NULL の場合、キュー内のすべてのコマンドが表示されます。  
+`[ @tranid = ] 'transaction_id'`出力をトランザクション ID でフィルター処理できます。 *transaction_id*は**nvarchar (70)**,、既定値は NULL です。 指定した場合、キューに登録されたコマンドに関連付けられているトランザクション ID が表示されます。 NULL の場合、キュー内のすべてのコマンドが表示されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- サブスクライブされたテーブルの少なくとも 1 つのキューに登録されたトランザクションを現在持っているすべての行を示しています。  
+ サブスクライブされたテーブルに対して1つ以上のキューに登録されたトランザクションを現在保持しているすべての行を表示します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**操作**|**nvarchar(10)**|同期を実行するときに行われるアクションの種類。<br /><br /> INS= 挿入<br /><br /> DEL = 削除<br /><br /> UPD = 更新|  
-|**tranid**|**nvarchar(70)**|コマンドを実行したトランザクション ID。|  
-|**テーブルの列 1... n**||指定したテーブルの各列の値*tablename*します。|  
-|**msrepl_tran_version**|**uniqueidentifier**|この列は、レプリケートされたデータをパブリッシャーで競合検出を実行する変更の追跡に使用されます。 この列は、テーブルに自動的に追加されます。|  
+|**操作**|**nvarchar (10)**|同期を実行するときに行われるアクションの種類。<br /><br /> INS= 挿入<br /><br /> DEL = 削除<br /><br /> UPD = 更新|  
+|**Tranid**|**nvarchar (70)**|コマンドが実行されたトランザクション ID。|  
+|**table column1...n**||*Tablename*で指定されたテーブルの各列の値。|  
+|**msrepl_tran_version**|**uniqueidentifier**|この列は、レプリケートされたデータへの変更を追跡し、パブリッシャーで競合検出を実行するために使用されます。 この列は、自動的にテーブルに追加されます。|  
   
-## <a name="remarks"></a>コメント  
- **sp_getqueuedrows**キュー更新に参加しているサブスクライバーで使用されます。  
+## <a name="remarks"></a>Remarks  
+ **sp_getqueuedrows**は、キュー更新に参加しているサブスクライバーで使用されます。  
   
- **sp_getqueuedrows**サブスクリプションで指定されたテーブルの行のデータベースを検索しますが、キュー更新に参加している、まだ現在解決されていない、キュー リーダー エージェントによってです。  
+ **sp_getqueuedrows**は、キュー更新に参加しているサブスクリプションデータベース上の特定のテーブルの行を検索しますが、現在はキューリーダーエージェントによって解決されていません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **sp_getqueuedrows**で指定されたテーブルに対する SELECT 権限が必要です*tablename*します。  
+ **sp_getqueuedrows**には、 *tablename*で指定されたテーブルに対する SELECT 権限が必要です。  
   
 ## <a name="see-also"></a>関連項目  
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [キュー更新における競合の検出と解決](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
+ [トランザクションレプリケーションの更新可能なサブスクリプション](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [キュー更新の競合の検出と解決](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

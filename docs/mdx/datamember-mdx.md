@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892910"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
@@ -28,10 +28,10 @@ Member_Expression.DataMember
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この関数は、任意の階層の非リーフメンバーに対して動作し、 [UPDATE CUBE ステートメント (MDX)](../mdx/mdx-data-manipulation-update-cube.md)コマンドで使用して、リーフメンバーの子孫ではなく、非リーフメンバーに直接データを書き戻すことができます。  
   
 > [!NOTE]  
@@ -49,8 +49,8 @@ SELECT {[Measures].[Sales Amount Quota],[Measures].InvidualQuota} ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [MDX の主な概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   
   

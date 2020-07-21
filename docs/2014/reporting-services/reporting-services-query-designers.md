@@ -1,5 +1,5 @@
 ---
-title: Reporting Services クエリ デザイナー |Microsoft Docs
+title: Reporting Services クエリデザイナー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c004b098f900606c2263391cf9363b6e5be2b97b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102882"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services クエリ デザイナー
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートで各データ ソースの種類のクエリを構築するためにはグラフィカルおよびテキスト ベースのクエリ デザイナーを提供します。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] にはグラフィカルおよびテキスト ベースのクエリ デザイナーが用意されており、レポートのデータ ソースの種類ごとにクエリを作成することができます。  
   
  一部のデータ ソースでは、クエリを対話形式で作成できるグラフィカル デザイナーがサポートされています。 その他のデータ ソースでは、テキスト ベースのクエリ デザイナーを使用します。 グラフィカル クエリ デザイナーでは、データ ソースの基になるデータを表すメタデータ アイテムをクエリ デザイン画面にドラッグできます。 テキスト ベースのクエリ デザイナーでは、コマンド テキストをクエリ ペインに入力できます。 グラフィカル クエリ デザイナーからテキスト ベースのクエリ デザイナーに変更するには、ツール バーのテキスト ベースのクエリ デザイナー アイコンをクリックします。  
   
- レポートで使用できるデータ ソースの種類は、クライアントまたはレポート サーバーにインストールされている [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ拡張機能によって決まります。 詳細については、次を参照してください。 [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md)と[RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)します。  
+ レポートで使用できるデータ ソースの種類は、クライアントまたはレポート サーバーにインストールされている [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ拡張機能によって決まります。 詳細については、「 [Rsreportdesigner 構成ファイル](report-server/rsreportdesigner-configuration-file.md)」と「 [rsreportserver 構成ファイル](report-server/rsreportserver-config-configuration-file.md)」を参照してください。  
   
  データ処理拡張機能および関連するクエリ デザイナーは、次のようにデータ ソースのサポートにおいて異なる場合があります。  
   
 -   **クエリ デザイナーの種類。** たとえば、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ ソースでは、グラフィカルとテキスト ベースの両方のクエリ デザイナーがサポートされます。  
   
--   **クエリ言語のバリエーション。** たとえば、 [!INCLUDE[tsql](../includes/tsql-md.md)] などのクエリ言語は、データ ソースの種類によって構文が異なることがあります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] 言語および Oracle SQL 言語には、クエリ コマンドの構文で若干のバリエーションがあります。  
+-   **クエリ言語のバリエーション。** たとえば、 [!INCLUDE[tsql](../includes/tsql-md.md)] などのクエリ言語は、データ ソースの種類によって構文が異なることがあります。 [!INCLUDE[msCoName](../includes/msconame-md.md)]言語および Oracle SQL 言語には、クエリコマンドの構文のバリエーションがいくつかあり[!INCLUDE[tsql](../includes/tsql-md.md)]ます。  
   
 -   **データベース オブジェクト名のスキーマの部分に対するサポート。** データ ソースでデータベース オブジェクト識別子の一部としてスキーマが使用されている場合、既定のスキーマを使用しない名前については、クエリにスキーマ名を指定する必要があります。 たとえば、`SELECT FirstName, LastName FROM [Person].[Person]` のようにします。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "66102882"
 -   [テキストベースのクエリ デザイナーのユーザー インターフェイス](../../2014/reporting-services/text-based-query-designer-user-interface.md)  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [外部データ ソースのデータを追加する &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md)   
- [データ処理拡張機能と .NET Framework データ プロバイダー &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
+ [Reporting Services &#40;SSRS&#41;でサポートされるデータソース](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [SSRS&#41;&#40;外部データソースからデータを追加する](report-data/add-data-from-external-data-sources-ssrs.md)   
+ [データ処理拡張機能と .NET Framework データプロバイダー &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
  [拡張機能 (SSRS)](extensions-ssrs.md)  
   
   

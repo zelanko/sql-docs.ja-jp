@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a6cac3091dd0b8a28fb646809292c45087f78f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68206566"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017184"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server エージェントの JobSteps オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **JobSteps** パフォーマンス オブジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップについての情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
  次の表は、 **SQLAgent:JobSteps** カウンターの一覧です。  
   
-|名前|説明|  
+|Name|説明|  
 |----------|-----------------|  
 |**Active steps**|このカウンターは、現在実行中のジョブ ステップの数を報告します。|  
 |**Queued steps**|このカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行する準備が整っているジョブ ステップで、まだ実行が開始されていないジョブ ステップの数を報告します。|  
@@ -33,7 +32,7 @@ ms.locfileid: "68206566"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|Instance|説明|  
+|インスタンス|説明|  
 |--------------|-----------------|  
 |**_Total**|すべてのジョブ ステップの情報です。|  
 |**ActiveScripting**|**ActiveScripting** サブシステムを使用するジョブ ステップの情報です。|  
@@ -43,13 +42,13 @@ ms.locfileid: "68206566"
 |**Distribution**|**Distribution** サブシステムを使用するジョブ ステップの情報です。|  
 |**Dts**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サブシステムを使用するジョブ ステップの情報です。|  
 |**LogReader**|**LogReader** サブシステムを使用するジョブ ステップの情報です。|  
-|**Merge**|**Merge** サブシステムを使用するジョブ ステップの情報です。|  
+|**[マージ]**|**Merge** サブシステムを使用するジョブ ステップの情報です。|  
 |**PowerShell**|**PowerShell** サブシステムを使用するジョブ ステップの情報です。|  
 |**QueueReader**|**QueueReader** サブシステムを使用するジョブ ステップの情報です。|  
 |**スナップショット**|**Snapshot** サブシステムを使用するジョブ ステップの情報です。|  
 |**TSQL**|[!INCLUDE[tsql](../../includes/tsql-md.md)]を実行するジョブ ステップの情報です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)   
  [パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)   
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  

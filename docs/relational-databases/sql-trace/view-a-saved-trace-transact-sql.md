@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e8e11ec0256805d8bbe4ac37234660a9ea1a050
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2c89535d15850d528949ae7607f950adb49905b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750870"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>保存されているトレースの表示 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、組み込み関数を使用して、保存されているトレースを表示する方法について説明します。  
   
 ### <a name="to-view-a-specific-trace"></a>特定のトレースを表示するには  
   
 1.  情報が必要なトレースの ID を指定して **fn_trace_getinfo** を実行します。 この関数は、トレース、トレースのプロパティ、およびそのプロパティに関する情報を一覧にしたテーブルを返します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Invoke the function this way:  
+     この関数を呼び出すには、次のステートメントを実行します。  
   
     ```  
     SELECT *  

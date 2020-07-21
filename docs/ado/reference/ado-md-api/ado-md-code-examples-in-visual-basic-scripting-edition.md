@@ -1,5 +1,5 @@
 ---
-title: Visual Basic Scripting Edition での ADO MD コード例 |Microsoft Docs
+title: ADO MD のコード例 Visual Basic, Scripting Edition |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples, VBScript
 ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1248cd86e657b2e038af908ec1023ab8cfa58bd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ad4aac57c2876c8f924044f0f27da79ebdb1d72c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947419"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765318"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic Scripting Edition での ADO MD コード例
-次の例では、Microsoft Internet Information Server 4.0 用 Microsoft Active Server Pages (ASP) が必要です。  
+次の例では、microsoft インターネットインフォメーションサーバー4.0 用の Microsoft Active Server Pages (ASP) が必要です。  
   
 > [!NOTE]
->  全体のコード例は、最初から最後まで、コード エディターに貼り付けます。 例を部分的に使用した場合や段落のフォーマットが失われた場合、この例は正しく動作しない可能性があります。  
+>  コード例全体をコードエディターに貼り付けます。 部分例が使用されている場合や段落の書式設定が失われた場合、この例は正常に実行されない可能性があります。  
   
 -   [軸の例](../../../ado/reference/ado-md-api/axis-example-vbscript.md)  
   

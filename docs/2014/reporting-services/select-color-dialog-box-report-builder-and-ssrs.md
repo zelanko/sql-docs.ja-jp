@@ -1,5 +1,5 @@
 ---
-title: 選択の色 ダイアログ ボックス (レポート ビルダーおよび SSRS) |Microsoft Docs
+title: '[色の選択] ダイアログボックス (レポートビルダーおよび SSRS) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101383"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>[色の選択] ダイアログ ボックス (レポート ビルダーおよび SSRS)
   **[色の選択]** ダイアログ ボックスを使用すると、データ領域やテキスト ボックスにある 1 つまたは複数のセルの背景色や、グラフの色のオプションを指定できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[カラー セレクター]**  
  色の選択方法を指定する 3 つのオプションから選択します。  
   
@@ -45,30 +45,30 @@ ms.locfileid: "66101383"
   
  色を選択すると、正方形の中心で色が決まります。 カラー スライダーを使用して、選択した色の範囲を変更します。 X 座標と Y 座標は、残りの 2 つの色を表します。 たとえば、緑を選択した場合、スライダーでは緑の値の範囲が示され、X 座標と Y 座標では赤と青の値がそれぞれ示されます。  
   
- **パレットの標準色**  
- [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] の `KnownColor` 列挙体の名前付きの色に使用します。  
+ **[パレットの標準色]**  
+ 列挙体の名前付きの[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]色に使用します。 `KnownColor`  
   
  **[カラー システム]**  
  RGB 色または HSB 色を指定します。 ここで行う選択により、RGB 値または HSB 値が表示されるように画面が変更されます。これらの値は、 **[カラー セレクター]** のカラー サークルまたはカラー スクエアを使用する際に対話的に更新されます。  
   
  色に透明度の値を指定できる場合は、いくつかのプロパティで **[アルファ]** 値が表示されます。 たとえば、グラフの系列を塗りつぶす場合などがこれに該当します。 透明度をサポートしていないプロパティでは、この値が無効になっています。  
   
- **[赤]**  
+ **赤**  
  RGB 色の赤の要素を表す 10 進値です。 スピン ボックスを使用して値を変更するか、0 ～ 255 の値を入力します。  
   
- **[緑]**  
+ **緑**  
  RGB 色の緑の要素を表す 10 進値です。 スピン ボックスを使用して値を変更するか、0 ～ 255 の値を入力します。  
   
- **[青]**  
+ **青**  
  RGB 色の青の要素を表す 10 進値です。 スピン ボックスを使用して値を変更するか、0 ～ 255 の値を入力します。  
   
- **アルファ**  
+ **[アルファ]**  
  アルファ (色の透明度) を表す 10 進値です。 この値が有効な場合は、スライダーを使用して透明度を調整できます。  
   
- **[色合い]**  
+ **Hue**  
  HSB 色の色合いを表す 10 進値です。 スピン ボックスを使用して値を変更するか、0 ～ 255 の値を入力します。  
   
- **彩度**  
+ **[鮮やかさ]**  
  HSB 色の鮮やかさを表す 10 進値です。 スピン ボックスを使用して値を変更するか、0 ～ 255 の値を入力します。  
   
  **明るさ**  
@@ -78,7 +78,7 @@ ms.locfileid: "66101383"
  ペインの左半分に現在の色が表示され、ペインの右半分に選択している新しい色が対話的に表示されます。 既定の色がない場合は、ペインの左半分は白くなります。 ほとんどの RDL のプロパティには既定の色がありません。  
   
 ## <a name="see-also"></a>参照  
- [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [レポートアイテムの書式設定 &#40;レポートビルダーと SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

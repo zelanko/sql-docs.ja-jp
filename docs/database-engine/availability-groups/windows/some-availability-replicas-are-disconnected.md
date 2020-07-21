@@ -1,6 +1,7 @@
 ---
-title: いくつかの可用性レプリカが切断されている | Microsoft Docs
-ms.custom: ''
+title: いくつかの可用性レプリカが切断されている
+description: 可用性グループ レプリカが Always On SQL Server 可用性グループに対して切断されている場合の考えられる原因と解決策。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9bac7bdcc3961b3f6996be91062bea5382e11ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 370a8cf6655287c950f0e55c4a69a414de150c06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014110"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883132"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>いくつかの可用性レプリカが切断されている
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  
@@ -32,7 +33,7 @@ ms.locfileid: "68014110"
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性グループ|  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  このポリシーは、すべての可用性レプリカの接続状態をロール アップし、DISCONENCTED 状態の可用性レプリカがないか確認します。 DISCONNECTED の可用性レプリカが存在する場合、ポリシーは異常な状態です。 それ以外の場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee4528d153cb2bef961ed303b7a36a0ecbec6758
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060851"
 ---
 # <a name="replication-agent-administration"></a>レプリケーション エージェントの管理
   レプリケーション エージェントは、レプリケーションに関連した数多くのタスクを実行します。たとえば、スキーマとデータのコピーの作成、パブリッシャーまたはサブスクライバーでの更新の検出、およびサーバー間での変更の反映などを行います。 既定では、レプリケーション エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントのジョブ ステップで実行されます。 エージェントは単なる実行可能ファイルであるため、コマンド ラインやバッチ スクリプトから直接呼び出すこともできます。 各レプリケーション エージェントでは、ランタイム パラメーターのセットを使用して実行方法を制御できます。このパラメーターはエージェント プロファイルまたはコマンド ラインで指定します。  
@@ -39,7 +38,7 @@ ms.locfileid: "62721814"
   
 |エージェント実行可能ファイル|ファイル名|  
 |----------------------|---------------|  
-|[レプリケーション スナップショット エージェント](replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Snapshot Agent](replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](replication-distribution-agent.md)|distrib.exe|  
 |[レプリケーション ログ リーダー エージェント](replication-log-reader-agent.md)|logread.exe|  
 |[レプリケーション キュー リーダー エージェント](replication-queue-reader-agent.md)|qrdrsvc.exe|  
@@ -49,7 +48,7 @@ ms.locfileid: "62721814"
   
  **エージェントおよびメンテナンス ジョブを実行するには**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] およびレプリケーション モニター: [起動し、レプリケーション エージェントを停止&#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)します。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]およびレプリケーションモニター:[レプリケーションエージェント &#40;SQL Server Management Studio&#41;を開始および停止](start-and-stop-a-replication-agent-sql-server-management-studio.md)します。  
   
 -   レプリケーション プログラミング: [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62721814"
   
     -   キュー リーダー エージェント (Queue Reader Agent)  
   
-     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、 **[エージェント]** タブを使用します。詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
+     [**エージェント**] タブを使用して、これらのエージェントに関連付けられている情報とタスクにアクセスします。詳細については、「[レプリケーションモニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 -   以下のエージェントは、レプリケーション モニターでサブスクリプションと関連付けられています。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62721814"
   
     -   [マージ エージェント]  
   
-     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、次のタブを使用します。 **[サブスクリプション ウォッチ リスト]** (各パブリッシャーで使用可能)、または **[すべてのサブスクリプション]** タブ (各パブリケーションで使用可能)。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
+     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、次のタブを使用します。 **[サブスクリプション ウォッチ リスト]** (各パブリッシャーで使用可能)、または **[すべてのサブスクリプション]** タブ (各パブリケーションで使用可能)。 詳細については、「[レプリケーションモニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="independent-and-shared-agents"></a>独立したエージェントと共有エージェント  
  独立したエージェントとは、1 つのサブスクリプションを処理するエージェントのことです。 共有エージェントは複数のサブスクリプションにサービスを提供します。同じ共有エージェントを使用している複数のサブスクリプションで同期する必要がある場合、既定では、それらのサブスクリプションはキューに格納されて待機し、共有エージェントがそれらを一度に 1 つずつ処理します。 独立したエージェントは、サブスクリプションが必要に応じていつでも同期できるように常に待機しているので、待機時間が短くなります。 マージ レプリケーションでは常に独立したエージェントが使用され、トランザクション レプリケーションでは、既定ではパブリケーションの新規作成ウィザードで作成されたパブリケーションに対して独立したエージェントが使用されます (以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、トランザクション レプリケーションは既定で共有エージェントを使用していました)。  

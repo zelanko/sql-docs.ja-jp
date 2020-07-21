@@ -1,5 +1,5 @@
 ---
-title: 行のフェッチ |マイクロソフトのドキュメント
+title: 行のフェッチ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d9abcaf4ad4256fb600e57567ed7e7bf0d54e61e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63140469"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055931"
 ---
 # <a name="fetching-rows"></a>行のフェッチ
   **IRowset** インターフェイスは、行セットの基本インターフェイスです。 **IRowset** インターフェイスには、行を順番にフェッチするメソッド、フェッチした行からデータを取得するメソッド、行を管理するメソッドが用意されています。 コンシューマーは、すべての基本的な行セット操作に **IRowset** のメソッドを使用します。 基本的な操作には、行のフェッチと解放、列値の取得などがあります。  
@@ -63,7 +62,7 @@ ms.locfileid: "63140469"
   
 -   [次のフェッチ位置](fetching-rows-next-fetch-position.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [行セット](rowsets.md)  
   
   

@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718671"
 ---
-# <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-sql)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パブリッシャー側のデータベースでレプリケーションが有効になっているかどうかを示します。 このストアドプロシージャは、パブリッシャー側で任意のデータベースに対して実行されます。 *Oracle パブリッシャーではサポートされていません。*  
   
@@ -39,15 +39,15 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'dbname'`データベースの名前を指定します。 *dbname*は**sysname**,、既定値 **%** はです。 の **%** 場合、結果セットにはパブリッシャーのすべてのデータベースが含まれます。それ以外の場合は、指定されたデータベースに関する情報のみが返されます。 次に示すように、ユーザーが適切な権限を持っていないデータベースについては、情報は返されません。  
+`[ @dbname = ] 'dbname'`データベースの名前を指定します。 *dbname*は**sysname**,、既定値は **%** です。 の場合、 **%** 結果セットにはパブリッシャーのすべてのデータベースが含まれます。それ以外の場合は、指定されたデータベースに関する情報のみが返されます。 次に示すように、ユーザーが適切な権限を持っていないデータベースについては、情報は返されません。  
   
 `[ @type = ] 'type'`指定されたレプリケーションオプションの*種類*の値が有効になっているデータベースのみが含まれるように結果セットを制限します。 *種類*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**投稿**|トランザクションレプリケーションを許可します。|  
-|**マージ発行**|マージレプリケーションが許可されています。|  
-|**レプリケーションの許可**標準|トランザクション レプリケーションまたはマージ レプリケーションを許可します。|  
+|**merge publish**|マージレプリケーションが許可されています。|  
+|**レプリケーションが許可され**ている (既定)|トランザクション レプリケーションまたはマージ レプリケーションを許可します。|  
   
 `[ @reserved = ] reserved`既存のパブリケーションとサブスクリプションに関する情報を返すかどうかを指定します。 *予約済み*の**ビット**,、既定値は0です。 **1**の場合、結果セットには、指定されたデータベースに既存のパブリケーションまたはサブスクリプションがあるかどうかに関する情報が含まれます。  
   
@@ -67,14 +67,14 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_helpreplicationdboption**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーは、任意のデータベースに対して**sp_helpreplicationdboption**を実行できます。 **Db_owner**固定データベースロールのメンバーは、そのデータベースの**sp_helpreplicationdboption**を実行できます。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_replicationdboption &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

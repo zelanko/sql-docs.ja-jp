@@ -1,5 +1,6 @@
 ---
 title: トランザクション ログ バックアップの復元 (SQL Server) | Microsoft Docs
+description: この記事では、SQL Server Management Studio または Transact-SQL を使用して、SQL Server のトランザクション ログ バックアップを復元する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111179"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717952"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>トランザクション ログ バックアップの復元 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、トランザクション ログ バックアップを復元する方法について説明します。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "68111179"
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **トランザクション ログ バックアップを復元するために使用するもの:**  
   
@@ -47,9 +48,9 @@ ms.locfileid: "68111179"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   バックアップは、作成された順序で復元する必要があります。 特定のトランザクション ログ バックアップを復元する前に、まず、次に示す以前のバックアップを復元する必要があります。ただし、コミットされていないトランザクションはロールバックしません (WITH NORECOVERY)。  
   
@@ -59,19 +60,19 @@ ms.locfileid: "68111179"
   
          トランザクション ログ バックアップの詳細については、「[トランザクション ログ バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)」および「[トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 > [!WARNING]  
 >  通常の復元処理では、データ バックアップおよび差分バックアップと共に、 **[データベースの復元]** ダイアログ ボックスでログ バックアップを選択します。  
   
 #### <a name="to-restore-a-transaction-log-backup"></a>トランザクション ログ バックアップを復元するには  
   
-1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
+1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]** を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
@@ -98,25 +99,25 @@ ms.locfileid: "68111179"
   
      次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-    |[ヘッダー]|[値]|  
+    |ヘッダー|値|  
     |------------|-----------|  
     |**復元**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
-    |**[名前]**|バックアップ セットの名前。|  
-    |**コンポーネント**|バックアップされるコンポーネント: **[データベース]** 、 **[ファイル]** 、または \<[空白>] (トランザクション ログ用)。|  
+    |**名前**|バックアップ セットの名前。|  
+    |**コンポーネント**|バックアップされるコンポーネント: **[データベース]** 、 **[ファイル]** 、または \<blank> (トランザクション ログ用)。|  
     |**[データベース]**|バックアップ操作に関係するデータベース名。|  
     |**[開始日]**|バックアップ操作の開始日時 (クライアントの地域設定に準拠)。|  
     |**完了日**|バックアップ操作の完了日時 (クライアントの地域設定に準拠)。|  
-    |**[最初の LSN]**|バックアップ セット内の先頭のトランザクションのログ シーケンス番号。 ファイル バックアップの場合は空白。|  
-    |**[最後の LSN]**|バックアップ セット内の最後のトランザクションのログ シーケンス番号。 ファイル バックアップの場合は空白。|  
+    |**最初の LSN**|バックアップ セット内の先頭のトランザクションのログ シーケンス番号。 ファイル バックアップの場合は空白。|  
+    |**最後の LSN**|バックアップ セット内の最後のトランザクションのログ シーケンス番号。 ファイル バックアップの場合は空白。|  
     |**チェックポイントの LSN**|バックアップが作成された時点における最新チェックポイントのログ シーケンス番号。|  
     |**全 LSN**|データベース全体の最新バックアップのログ シーケンス番号。|  
-    |**[サーバー]**|バックアップ操作を実行したデータベース エンジン インスタンスの名前。|  
-    |**[ユーザー名]**|バックアップ操作を実行したユーザーの名前。|  
-    |**サイズ**|バックアップ セットのサイズ (バイト単位)。|  
-    |**[位置]**|ボリューム内でのバックアップ セットの位置。|  
+    |**サーバー**|バックアップ操作を実行したデータベース エンジン インスタンスの名前。|  
+    |**ユーザー名**|バックアップ操作を実行したユーザーの名前。|  
+    |**[サイズ]**|バックアップ セットのサイズ (バイト単位)。|  
+    |**Position**|ボリューム内でのバックアップ セットの位置。|  
     |**[有効期限]**|バックアップ セットの期限が切れる日付と時刻。|  
   
-7.  次のいずれかを選択します。  
+7.  次のいずれかを選択してください。  
   
     -   **[特定の時点]**  
   
@@ -130,15 +131,15 @@ ms.locfileid: "68111179"
   
          次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-        |[ヘッダー]|[値]|  
+        |ヘッダー|値|  
         |------------|-----------|  
-        |\<空白>|マークを選択するためのチェック ボックスを表示します。|  
+        |\<blank>|マークを選択するためのチェック ボックスを表示します。|  
         |**トランザクション マーク**|トランザクションがコミットされたときにユーザーによって指定された、マークされたトランザクションの名前。|  
         |**Date**|トランザクションがコミットされた日時。 トランザクションの日付と時刻は、クライアント コンピューターの日付と時刻ではなく、 **msdbgmarkhistory** テーブルに記録されたとおりに表示されます。|  
-        |**[説明]**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
+        |**説明**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
         |**LSN (LSN)**|マークされたトランザクションのログ シーケンス番号。|  
         |**[データベース]**|マークされたトランザクションがコミットされたデータベースの名前。|  
-        |**[ユーザー名]**|マークされたトランザクションをコミットしたデータベース ユーザーの名前。|  
+        |**ユーザー名**|マークされたトランザクションをコミットしたデータベース ユーザーの名前。|  
   
 8.  詳細設定オプションを表示または選択するには、 **[ページの選択]** ペインの **[オプション]** をクリックします。  
   
@@ -174,7 +175,7 @@ ms.locfileid: "68111179"
   
          このオプションは、復元するログ ファイルがない場合にのみ選択します。  
   
-    -   **[データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。別のトランザクション ログは復元できます。(RESTORE WITH NORECOVERY)]**  
+    -   **[データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。別のトランザクション ログは復元できます(RESTORE WITH NORECOVERY)]**  
   
          データベースを **RESTORING** 状態で未復旧のままにします。 このオプションは、 **RESTORE** ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)]**NORECOVERY** オプションを使用することと同じです。  
   
@@ -191,7 +192,7 @@ ms.locfileid: "68111179"
   
 11. 必要に応じて、 **[スタンバイ ファイル]** ボックスで、スタンバイ ファイル名を指定します。 このオプションは、データベースを読み取り専用モードのままにする場合に必要です。 スタンバイ ファイルは参照して指定するか、またはテキスト ボックスにパス名を入力します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 > [!IMPORTANT]  
 >  指定があいまいにならないよう、すべての RESTORE ステートメントにおいて WITH NORECOVERY または WITH RECOVERY を常に明示的に指定することをお勧めします。 これは、スクリプトを作成するときに特に重要です。  
@@ -236,7 +237,7 @@ ms.locfileid: "68111179"
     > [!IMPORTANT]  
     >  ミラー データベースを作成している場合は、復旧ステップを省略します。 ミラー データベースは、RESTORING 状態のままにする必要があります。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  既定では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースは単純復旧モデルを使用します。 以下の例では、次に示すように、完全復旧モデルが使用されるようにデータベースを変更する必要があります。  
   
 ```sql  
@@ -289,13 +290,13 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 -   [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
+-   [完全復旧モデルで障害発生時点までデータベースを復元する &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: '&lt;xsd:simpleType&gt; 宣言の値 | Microsoft Docs'
+description: <xsd:simpleType> 宣言の値で、認識されるあらゆる値に適用される制限を表にまとめたものをご覧ください。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4c19a71b12b16ddd408e7cdd356debc5ec87de43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2738ba3387ac167eeadc83071dcce1f4a59304bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096980"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775523"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 宣言の値
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   次の表に、認識されるすべての XSD 単純型を列挙して、適用される制限の概要を示します。  
   
- また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **\<xsd:simpleType>** 宣言で NaN 値がサポートされません。 NaN 値を含むスキーマはサーバーで拒否されます。  
+ また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **\<xsd:simpleType>** 宣言での NaN 値の使用はサポートしません。 NaN 値を含むスキーマはサーバーで拒否されます。  
   
 |単純型|制限事項|  
 |-----------------|----------------|  

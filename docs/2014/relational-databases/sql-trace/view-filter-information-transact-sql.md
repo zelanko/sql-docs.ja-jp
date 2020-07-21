@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: abeeac1dc2c6d06a0b1ce89f4dff35415f7189fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d94a7b4a73c264c1fb3a950aa1c9615a73db956
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060179"
 ---
 # <a name="view-filter-information-transact-sql"></a>フィルター情報の表示 (Transact-SQL)
   このトピックでは、組み込み関数を使用してトレース フィルター情報を表示する方法について説明します。  

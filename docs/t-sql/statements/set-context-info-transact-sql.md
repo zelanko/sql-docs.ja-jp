@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79fc54e65b6e014575b5942a573c4077e8a9c5d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c86a2c5f9bc0ff1a65922f8dcda404fae645e569
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765863"
 ---
-# <a name="set-contextinfo-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   128 バイト以内のバイナリ情報を現在のセッションまたは接続に関連付けます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68041810"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET CONTEXT_INFO { binary_str | @binary_var }  
 ```  
@@ -47,7 +47,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
  **@** *binary_var*  
  現在のセッションまたは接続に関連付けるコンテキスト値を保持するための、**varbinary** または **binary** 変数を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  現在のセッションのコンテキスト情報を取得するには、CONTEXT_INFO 関数を使用することをお勧めします。 セッションのコンテキスト情報は、次のシステム ビューの **context_info** 列にも格納されます。  
   
 -   **sys.dm_exec_requests**  
@@ -62,12 +62,12 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
  ストアド プロシージャまたはトリガーの中で SET CONTEXT_INFO を実行する場合は、他の SET ステートメントの場合とは異なり、コンテキスト情報に設定された新しい値がストアド プロシージャまたはトリガーの終了後も保持されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-setting-context-information-by-using-a-constant"></a>A. 定数を使用してコンテキスト情報を設定する  
  次の例では、`SET CONTEXT_INFO` に値を設定し、結果を表示します。 `sys.dm_exec_sessions` のクエリを実行するには SELECT および VIEW SERVER STATE の権限が必要ですが、CONTEXT_INFO 関数を使用するのにこれらの権限は必要ありません。  
   
-```  
+```sql
 SET CONTEXT_INFO 0x01010101;  
 GO  
 SELECT context_info   
@@ -79,7 +79,7 @@ GO
 ### <a name="b-setting-context-information-by-using-a-function"></a>B. 関数を使用してコンテキスト情報を設定する  
  次の例では、関数の出力を使用してコンテキスト値を設定します。最初に、**binary** 変数に関数からの値を格納する必要があります。  
   
-```  
+```sql
 DECLARE @BinVar varbinary(128);  
 SET @BinVar = CAST(REPLICATE( 0x20, 128 ) AS varbinary(128) );  
 SET CONTEXT_INFO @BinVar;  

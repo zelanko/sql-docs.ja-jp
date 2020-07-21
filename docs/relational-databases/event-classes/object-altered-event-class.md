@@ -12,15 +12,15 @@ ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cdf780816d16450ce9487a80c282fa1a0820631
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9757556741c36f5644d3d58a44744270a02b9c82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756010"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Object:Altered イベント クラスは、ALTER INDEX、ALTER TABLE、ALTER DATABASE などのステートメントによって、オブジェクトが変更されたことを示します。 このイベント クラスは、たとえば、頻繁に一時ストアド プロシージャを作成する ODBC アプリケーションによって、オブジェクトが変更されているかどうかを判断するために使用できます。  
   
  Object:Altered イベント クラスは常に 2 つのイベントとして発生します。 最初のイベントは開始フェーズを示します。 2 番目のイベントはロールバック フェーズまたはコミット フェーズを示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "68115928"
   
 ## <a name="objectaltered-event-class-data-columns"></a>Object:Altered イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |ClientProcessID|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
@@ -44,7 +44,7 @@ ms.locfileid: "68115928"
 |IntegerData|**int**|対応する開始イベントのイベント シーケンス番号。 この列は、コミット型またはロールバック型のイベント サブクラスのみに使用できます。|25|はい|  
 |IsSystem|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 = システム、NULL = ユーザーです。|60|はい|  
 |LoginName|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
-|LoginSid|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginSid|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|**nvarchar**|Windows のユーザー名。|6|はい|  
 |ObjectID|**int**|システムによって割り当てられたオブジェクト ID。|22|はい|  

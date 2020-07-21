@@ -1,6 +1,5 @@
 ---
-title: 値を Excel ファイルからドメインへインポートする | Microsoft Docs
-ms.custom: ''
+title: 値を Excel ファイルからドメインへインポートする
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,20 +11,20 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 59cf81243c76da1747c558c7ab6e0c15323eff62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 2ead2196e2eaa48ee1bdd76e1ca18c3e4e11085d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992052"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882808"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>値を Excel ファイルからドメインへインポートする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (ナレッジ ベースへのドメインのインポートについて詳しくは、「[ナレッジ検出でドメインを Excel ファイルからインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」をご覧ください)。Excel ファイルへのエクスポートはサポートされていません。  
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (ナレッジベースへのドメインのインポートの詳細については、「[ナレッジ検出で Excel ファイルからドメインをインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」を参照してください)。Excel ファイルへのエクスポートはサポートされていません。  
   
  データ値は、次の 2 とおりの方法でインポートできます。  
   
@@ -33,19 +32,19 @@ ms.locfileid: "67992052"
   
 -   値が含まれている既存のドメインに値をインポートします。この場合、新しい値だけがインポートされます。 既に含まれている値はインポートされません。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  Excel ファイルからドメイン値または完全なドメインをインポートするには、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションがインストールされているコンピューターに Excel がインストールされていること、ドメイン値を含む Excel ファイルが作成されていること (「 [How the import works](#How)」を参照)、およびドメインをインポートするナレッジ ベースが作成されていて開いていることが必要です。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Excel ファイルからドメイン値をインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Import"></a> 値を Excel ファイルからドメインへインポートする  
+##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a>Excel ファイルからドメインに値をインポートする  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ドメイン管理アクティビティ内のナレッジ ベースを開きます。  
   
@@ -67,16 +66,16 @@ ms.locfileid: "67992052"
   
 11. **[ドメイン値のインポート]** ダイアログ ボックスに "インポート完了" と表示されていることを確認します。 このダイアログ ボックスで、正常にインポートされた値とインポートされなかった値を確認します。 ファイルの名前とパス、処理の完了状態、正常にインポートされた値の数、インポートされなかった値の数、および処理された値の総数が表示されます。  
   
-12. 正常にインポートされなかった値について、 **[ログ]** をクリックして **[ドメイン値のインポート - 問題のある失敗]** ダイアログ ボックスを表示し、インポート操作が失敗した理由を確認します。 **[問題のある値]** 列に、Excel ファイルからドメインにインポートできなかった値が表示され、 **[理由]** 列に、インポートが失敗した理由が表示されます。 **[クリップボードにコピー]** をクリックすると、 **[問題のある値]** のテーブルをクリップボードにコピーし、Excel のワークシートやメモ帳のファイルなど、別のプログラムにコピーできます。 **[OK]** をクリックして **[問題のある値]** ダイアログ ボックスを閉じます。  
+12. 正常にインポートされなかった値について、**[ログ]** をクリックして **[ドメイン値のインポート - 問題のある失敗]** ダイアログ ボックスを表示し、インポート操作が失敗した理由を確認します。 **[問題のある値]** 列に、Excel ファイルからドメインにインポートできなかった値が表示され、 **[理由]** 列に、インポートが失敗した理由が表示されます。 **[クリップボードにコピー]** をクリックすると、 **[問題のある値]** のテーブルをクリップボードにコピーし、Excel のワークシートやメモ帳のファイルなど、別のプログラムにコピーできます。 **[OK]** をクリックして **[問題のある値]** ダイアログ ボックスを閉じます。  
   
 13. **[OK]** をクリックしてインポート操作を完了し、ダイアログ ボックスを閉じます。 インポートが正常に完了すると、 **[ドメイン値]** ページのドメイン値の一覧が更新され、インポートされた新しい値が表示されます。 フィルターが **[すべての値]** に変わり、 **[新規のみ表示]** が選択されます。 インポート操作の完了後に **[新規のみ表示]** を選択すると、Excel ファイルからインポートされた値だけが表示されます。  
   
 14. **[完了]** をクリックしてナレッジ ベースに値を追加します。  
   
-##  <a name="FollowUp"></a>補足情報: Excel ファイルからドメインに値をインポートした後  
+##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a>補足情報: Excel ファイルからドメインに値をインポートした後  
  ドメインに値をインポートした後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
-##  <a name="Synonyms"></a> シノニムのインポート  
+##  <a name="importing-synonyms"></a><a name="Synonyms"></a>シノニムのインポート  
  シノニムのインポートの動作は次のとおりです。  
   
 -   先にすべての値がインポートされてから、シノニムの関連付けが確立されます。  
@@ -91,7 +90,7 @@ ms.locfileid: "67992052"
   
 -   アプリケーションで何かの理由により手動で値を関連付けることができない場合、インポート操作で適用されません。  
   
-##  <a name="How"></a> インポートのしくみ  
+##  <a name="how-the-import-works"></a><a name="How"></a>インポートのしくみ  
  インポート操作でインポートされる値を次に示します。  
   
  DQS のインポート操作では、Excel ファイルからのインポートが次のように実行されます。  

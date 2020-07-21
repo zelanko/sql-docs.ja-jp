@@ -1,5 +1,5 @@
 ---
-title: コミット モード |Microsoft Docs
+title: コミットモード |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - committing transactions [ODBC]
 - commit modes [ODBC]
 ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22519e6d3be8ab4474fd88309da1b7e8be0fb49e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0bdff581ed20ffd2768f4ebd2a033476873dcfec
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083334"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299122"
 ---
 # <a name="commit-mode"></a>コミット モード
-ODBC でのトランザクションが 2 つのモードのいずれかであることができます。 自動コミット モードまたは手動コミット モード。  
+ODBC でのトランザクションは、自動コミットモードまたは手動コミットモードの2つのモードのいずれかで実行できます。  
   
  このセクションでは、次のトピックを扱います。  
   

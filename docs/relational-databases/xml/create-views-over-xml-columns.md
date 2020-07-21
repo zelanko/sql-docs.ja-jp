@@ -1,5 +1,6 @@
 ---
 title: XML 列でのビューの作成 | Microsoft Docs
+description: xml データ型の value() メソッドを使用して、xml 型の列の値を取得するビューを作成する方法について学習します。
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 64b11563f05347e772d7979c3cb07c9a31f306e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d4a9d8d0aa40f8454a2bd0fd089022630c34ca2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691529"
 ---
 # <a name="create-views-over-xml-columns"></a>XML 列でのビューの作成
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **xml** 型の列を使用して、ビューを作成することもできます。 次の例では、 `xml` xml **データ型の** value() **メソッドを使用して** 型の列の値を取得するビューを作成します。  
   
 ```  

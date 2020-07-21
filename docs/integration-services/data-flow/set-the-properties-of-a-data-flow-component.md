@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2fa1b13f006c5bae86613b56a313376e68bb00a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034100"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291841"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
 
@@ -93,7 +93,7 @@ ms.locfileid: "68034100"
     -   使用できる入力列の一覧を表示して、出力列の名前を更新するには、 **[入力列]** タブをクリックします。  
   
         > [!NOTE]  
-        >  [入力列] タブは、変換または変換先を使用した作業でのみ使用できます。 詳細については、「 [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)」を参照してください。  
+        >  [入力列] タブは、変換または変換先を使用した作業でのみ使用できます。 詳しくは、「 [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)」をご覧ください。  
   
     -   入力、出力、およびエラー出力のプロパティや、列自体のプロパティを表示および変更するには、 **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
@@ -122,110 +122,110 @@ ms.locfileid: "68034100"
 -   [出力列](#outputcolumns)  
   
  
-###  <a name="components"></a> Component properties  
+###  <a name="component-properties"></a><a name="components"></a> Component properties  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー内のコンポーネントに <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントのプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|[説明]|  
+|プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|String|コンポーネントの CLSID。|  
 |ContactInfo|String|コンポーネント開発者の連絡先情報。|  
-|[説明]|String|データ フロー コンポーネントの説明。 このプロパティの既定値は、データ フロー コンポーネントの名前です。|  
-|ID|Integer|コンポーネントのこのインスタンスを一意に識別する値。|  
+|説明|String|データ フロー コンポーネントの説明。 このプロパティの既定値は、データ フロー コンポーネントの名前です。|  
+|id|整数|コンポーネントのこのインスタンスを一意に識別する値。|  
 |[IdentificationString]|String|コンポーネントを識別します。|  
 |IsDefaultLocale|Boolean|コンポーネントが、それ自体が属するデータ フロー タスクのロケールを使用するかどうかを示します。|  
-|LocaleID|Integer|パッケージを実行する際、データ フロー コンポーネントが使用するロケール。 データ フロー コンポーネントでは、すべての Windows ロケールが使用できます。|  
-|[オブジェクト名]|String|データ フロー コンポーネントの名前。|  
-|PipelineVersion|Integer|コンポーネントを実行するように設計されたデータ フロー タスクのバージョン。|  
+|LocaleID|整数|パッケージを実行する際、データ フロー コンポーネントが使用するロケール。 データ フロー コンポーネントでは、すべての Windows ロケールが使用できます。|  
+|Name|String|データ フロー コンポーネントの名前。|  
+|PipelineVersion|整数|コンポーネントを実行するように設計されたデータ フロー タスクのバージョン。|  
 |UsesDispositions|Boolean|コンポーネントにエラー出力があるかどうかを示します。|  
 |[ValidateExternalMetadata]|Boolean|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は **True**です。|  
-|バージョン|Integer|コンポーネントのバージョン。|  
+|Version|整数|コンポーネントのバージョン。|  
   
-###  <a name="inputs"></a> 入力プロパティ  
+###  <a name="input-properties"></a><a name="inputs"></a> 入力プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、変換および変換先には入力があります。 データ フロー内のコンポーネントの入力は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの入力のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|[説明]|  
+|プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
-|[説明]|String|入力の説明。|  
+|説明|String|入力の説明。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
 |HasSideEffects|Boolean|コンポーネントが下流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true**の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
-|ID|Integer|入力を一意に識別する値。|  
+|id|整数|入力を一意に識別する値。|  
 |[IdentificationString]|String|入力を識別する文字列。|  
 |IsSorted|Boolean|入力のデータを並べ替えるかどうかを示します。|  
-|[オブジェクト名]|String|入力の名前。|  
-|SourceLocale|Integer|入力データのロケール ID (LCID)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 です。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
+|Name|String|入力の名前。|  
+|SourceLocale|整数|入力データのロケール ID (LCID)。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
   
  変換先および一部の変換では、エラー出力がサポートされず、これらのコンポーネントの ErrorRowDisposition プロパティおよび TruncationRowDisposition プロパティは読み取り専用です。  
   
-###  <a name="inputcolumns"></a> 入力列プロパティ  
+###  <a name="input-column-properties"></a><a name="inputcolumns"></a> 入力列プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、入力には入力列のコレクションが含まれています。 データ フロー内のコンポーネントの入力列は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの入力列のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|[説明]|  
+|プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
-|ComparisonFlags|Integer|文字データ型を持つ列の比較を示すフラグの組。 詳しくは、「 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)」をご覧ください。|  
-|[説明]|String|入力列を説明します。|  
+|ComparisonFlags|整数|文字データ型を持つ列の比較を示すフラグの組。 詳しくは、「 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)」をご覧ください。|  
+|説明|String|入力列を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|出力列に割り当てられた外部メタデータ列の ID。|  
-|ID|Integer|入力列を一意に識別する値。|  
+|id|整数|入力列を一意に識別する値。|  
 |[IdentificationString]|String|入力列を識別する文字列。|  
-|LineageID|Integer|上流列の ID。|  
+|LineageID|整数|上流列の ID。|  
 |LineageIdentificationString|String|上流列の名前を含む識別文字列。|  
-|[オブジェクト名]|String|入力列の名前。|  
-|SortKeyPosition|Integer|列を並べ替えるかどうか、並べ替える場合はその並べ替え順、および複数の列の並べ替えの順序を示す値。 値 **0** は、その列が並べ替えられないことを示します。  詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
+|Name|String|入力列の名前。|  
+|SortKeyPosition|整数|列を並べ替えるかどうか、並べ替える場合はその並べ替え順、および複数の列の並べ替えの順序を示す値。 値 **0** は、その列が並べ替えられないことを示します。  詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
 |UpstreamComponentName|String|上流コンポーネントの名前。|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|コンポーネントが入力列を使用する方法を指定する値。|  
   
  入力列には、後の「データ型プロパティ」で説明するデータ型プロパティもあります。  
   
-###  <a name="outputs"></a> 出力プロパティ  
+###  <a name="output-properties"></a><a name="outputs"></a> 出力プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、変換元および変換には出力があります。 データ フロー内のコンポーネントの出力は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの出力のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|[説明]|  
+|プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|出力がパスに接続されていない場合に、データ フロー エンジンが出力を削除するかどうかを指定する値。|  
-|[説明]|String|出力を説明します。|  
+|説明|String|出力を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
-|ExclusionGroup|Integer|相互排他的な出力のグループを識別する値。|  
+|ExclusionGroup|整数|相互排他的な出力のグループを識別する値。|  
 |HasSideEffects|Boolean|コンポーネントが上流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true**の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
-|ID|Integer|出力を一意に識別する値。|  
+|id|整数|出力を一意に識別する値。|  
 |[IdentificationString]|String|出力を識別する文字列。|  
 |IsErrorOut|Boolean|出力がエラー出力かどうかを示します。|  
 |IsSorted|Boolean|出力を並べ替えるかどうかを示します。 既定値は **False**です。<br /><br /> **\*\* 重要 \*\*** **IsSorted** プロパティの値を **True** に設定しても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
-|[オブジェクト名]|String|出力の名前。|  
-|SynchronousInputID|Integer|出力に同期する入力の ID。|  
+|Name|String|出力の名前。|  
+|SynchronousInputID|整数|出力に同期する入力の ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
   
-###  <a name="outputcolumns"></a> 出力列プロパティ  
+###  <a name="output-column-properties"></a><a name="outputcolumns"></a> 出力列プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、出力に出力列のコレクションが含まれています。 データ フロー内のコンポーネントの出力列は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> インターフェイスを実装します。  
   
  次の表は、データ フロー内のコンポーネントの出力列のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|[説明]|  
+|プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
-|ComparisonFlags|Integer|文字データ型を持つ列の比較を示すフラグの組。 詳しくは、「 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)」をご覧ください。|  
-|[説明]|String|出力列を説明します。|  
+|ComparisonFlags|整数|文字データ型を持つ列の比較を示すフラグの組。 詳しくは、「 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)」をご覧ください。|  
+|説明|String|出力列を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row** 既定値は **Fail component**です。|  
-|ExternalMetadataColumnID|Integer|出力列に割り当てられた外部メタデータ列の ID。|  
-|ID|Integer|出力列を一意に識別する値。|  
+|ExternalMetadataColumnID|整数|出力列に割り当てられた外部メタデータ列の ID。|  
+|id|整数|出力列を一意に識別する値。|  
 |[IdentificationString]|String|出力列を識別する文字列。|  
-|LineageID|Integer|出力列の ID。 下流コンポーネントは、この値を使用して列を参照します。|  
+|LineageID|整数|出力列の ID。 下流コンポーネントは、この値を使用して列を参照します。|  
 |LineageIdentificationString|String|列の名前を含む識別文字列。|  
-|[オブジェクト名]|String|出力列の名前。|  
-|SortKeyPosition|Integer|列を並べ替えるかどうか、並べ替える場合はその並べ替え順、および複数の列の並べ替えの順序を示す値。 値 **0** は、その列が並べ替えられないことを示します。 詳細については、「 [Sort Data for the Merge and Merge Join Transformations](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」(マージ変換およびマージ結合変換用にデータを並べ替える方法) を参照してください。|  
-|SpecialFlags|Integer|出力列の特殊なフラグを含む値。|  
+|Name|String|出力列の名前。|  
+|SortKeyPosition|整数|列を並べ替えるかどうか、並べ替える場合はその並べ替え順、および複数の列の並べ替えの順序を示す値。 値 **0** は、その列が並べ替えられないことを示します。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
+|SpecialFlags|整数|出力列の特殊なフラグを含む値。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row** 既定値は **Fail component**です。|  
   
  出力列には、データ型プロパティの組も含まれています。  
@@ -235,12 +235,12 @@ ms.locfileid: "68034100"
   
  次の表は、データ フロー内のコンポーネントの外部メタデータ列のプロパティを示しています。 一部のプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
-|プロパティ|データ型|[説明]|  
+|プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
-|[説明]|String|外部列を説明します。|  
-|ID|Integer|列を一意に識別する値。|  
+|説明|String|外部列を説明します。|  
+|id|整数|列を一意に識別する値。|  
 |[IdentificationString]|String|列を識別する文字列。|  
-|[オブジェクト名]|String|外部列の名前。|  
+|Name|String|外部列の名前。|  
   
  外部メタデータ列には、データ型プロパティの組も含まれています。  
   
@@ -249,13 +249,13 @@ ms.locfileid: "68034100"
   
  次の表は、出力列および外部メタデータ列のデータ型プロパティを示しています。  
   
-|プロパティ|データ型|[説明]|  
+|プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
-|CodePage|Integer|Unicode でない文字列データのコード ページを指定します。|  
+|CodePage|整数|Unicode でない文字列データのコード ページを指定します。|  
 |DataType|Integer (列挙)|列の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
-|長さ|Integer|列の長さ (文字数単位)。|  
-|有効桁数|Integer|数値列の有効桁数。|  
-|Scale|Integer|数値列の小数点以下桁数。|  
+|長さ|整数|列の長さ (文字数単位)。|  
+|Precision|整数|数値列の有効桁数。|  
+|スケール|整数|数値列の小数点以下桁数。|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>データ フロー コンポーネントのカスタム プロパティ
 カスタム プロパティの詳細については、次のトピックを参照してください。  
@@ -346,12 +346,12 @@ ms.locfileid: "68034100"
   
 ### <a name="data-flow-sources"></a>データ フローの変換元  
   
-|データ フロー オブジェクト|[プロパティ]|  
+|データ フロー オブジェクト|プロパティ|  
 |----------------------|--------------|  
 |ADO NET ソース|TableOrViewName プロパティ<br /><br /> SqlCommand プロパティ|  
 |XML ソース|XMLData プロパティ<br /><br /> XMLSchemaDefinition プロパティ|  
   
-### <a name="data-flow-transformations"></a>データ フロー変換  
+### <a name="data-flow-transformations"></a>データ フローの変換  
  これらのカスタム プロパティの詳細については、「 [変換のカスタム プロパティ](../../integration-services/data-flow/transformations/transformation-custom-properties.md)」を参照してください。  
   
 |データ フロー オブジェクト|プロパティ|  

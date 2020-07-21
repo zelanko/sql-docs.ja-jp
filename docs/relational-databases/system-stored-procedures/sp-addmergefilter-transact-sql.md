@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergefilter
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0ac36d85a08763903cb42a5b48d0280a6366a1e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769178"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716573"
 ---
-# <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  別のテーブルとの結合に基づいてパーティションを作成するために、新しいマージ フィルターを追加します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  別のテーブルとの結合に基づいてパーティションを作成するために、新しいマージ フィルターを追加します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,22 +45,22 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`マージフィルターを追加するパブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
+`[ @publication = ] 'publication'`マージフィルターを追加するパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
 `[ @article = ] 'article'`マージフィルターを追加するアーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
   
 `[ @filtername = ] 'filtername'`フィルターの名前を指定します。 *filtername*は必須パラメーターです。 *filtername*は**sysname**,、既定値はありません。  
   
-`[ @join_articlename = ] 'join_articlename'`マージフィルターのフィルター条件を満たす子アーティクル内の行を決定するために、*アーティクル*で指定した子アーティクルを*join_filterclause*で指定された結合句を使用して結合する必要がある親アーティクルを指定します。 *join_articlename*は**sysname**,、既定値はありません。 アーティクルは、*パブリケーション*によって指定されたパブリケーションに含まれている必要があります。  
+`[ @join_articlename = ] 'join_articlename'`マージフィルターのフィルター条件を満たす子アーティクル内の行を決定するために、*アーティクル*で指定した子アーティクルが*join_filterclause*で指定された結合句を使用して結合されている必要がある親アーティクルです。 *join_articlename*は**sysname**であり、既定値はありません。 アーティクルは、*パブリケーション*によって指定されたパブリケーションに含まれている必要があります。  
   
-`[ @join_filterclause = ] join_filterclause`マージフィルターに適合する行を決定するために、 *join_article*で指定された*アーティクル*および親アーティクルによって指定された子アーティクルを結合するために使用する必要がある join 句です。 *join_filterclause*は**nvarchar (1000)** です。  
+`[ @join_filterclause = ] join_filterclause`マージフィルターに適合する行を決定するために、 *join_article*によって指定された*アーティクル*および親アーティクルによって指定された子アーティクルを結合するために使用する必要がある join 句です。 *join_filterclause*は**nvarchar (1000)** です。  
   
-`[ @join_unique_key = ] join_unique_key`子アーティクル*アーティクル*と親アーティクル*join_article*間の結合が一対多、一対一、多対一、多対多のいずれであるかを指定します。 *join_unique_key*は**int**,、既定値は0です。 **0**は、多対一または多対多の結合を示します。 **1**一対一または一対多の結合を示します。 この値は、結合する列が*join_article*内で一意のキーを形成する場合、または*join_filterclause*が*アーティクル*内の外部キーと*join_article*内の主キーの間にある場合に**1**になります。  
+`[ @join_unique_key = ] join_unique_key`子アーティクル*アーティクル*と親アーティクル*join_article*間の結合が一対多、一対一、多対一、多対多のいずれであるかを指定します。 *join_unique_key*は**int**,、既定値は0です。 **0**は、多対一または多対多の結合を示します。 **1**一対一または一対多の結合を示します。 結合する列が*join_article*で一意のキーを形成する場合、または*アーティクル*内の外部キーと*join_article*内の主キーの間に*join_filterclause*がある場合、この値は**1**になります。  
   
 > [!CAUTION]  
->  一意性を保証する親アーティクルの基になるテーブルの結合する列に制約がある場合にのみ、このパラメーターを**1**に設定します。 *Join_unique_key*が誤って**1**に設定されている場合、データの非収束が発生する可能性があります。  
+>  一意性を保証する親アーティクルの基になるテーブルの結合する列に制約がある場合にのみ、このパラメーターを**1**に設定します。 *Join_unique_key*が誤って**1**に設定されている場合は、データの非収束が発生する可能性があります。  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot*は**ビット**,、既定値は**0**です。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot*は**ビット**であり、既定値は**0**です。  
   
  **0**を指定すると、マージアーティクルへの変更によってスナップショットが無効になることはありません。 変更に新しいスナップショットが必要であることをストアドプロシージャが検出すると、エラーが発生し、変更は行われません。  
   
@@ -72,7 +72,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
  **1**を指定すると、マージアーティクルへの変更によって既存のサブスクリプションが再初期化され、サブスクリプションの再初期化を実行する権限が与えられます。  
   
-`[ @filter_type = ] filter_type`追加するフィルターの種類を指定します。 *filter_type*は**tinyint**,、値は次のいずれかを指定することができます。  
+`[ @filter_type = ] filter_type`追加するフィルターの種類を指定します。 *filter_type*は**tinyint**で、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -85,10 +85,10 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_addmergefilter**は、マージレプリケーションで使用します。  
   
- **sp_addmergefilter**は、テーブルアーティクルでのみ使用できます。 ビューおよびインデックス付きビューアーティクルはサポートされていません。  
+ **sp_addmergefilter**はテーブルアーティクルでのみ使用できます。 ビューおよびインデックス付きビューアーティクルはサポートされていません。  
   
  また、このプロシージャを使用すると、2つのアーティクル間に結合フィルターを持つことができる論理リレーションシップを追加することもできます。 *filter_type*は、追加するマージフィルターが結合フィルター、論理リレーション、またはその両方であるかどうかを指定するために使用されます。  
   
@@ -107,12 +107,12 @@ sp_addmergefilter [ @publication = ] 'publication'
  **Sp_addmergefilter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [マージ アーティクル間の結合フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
- [sp_changemergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [アーティクルの定義](../../relational-databases/replication/publish/define-an-article.md)   
+ [マージアーティクル間の結合フィルターを定義および変更する](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [結合フィルター](../../relational-databases/replication/merge/join-filters.md)   
+ [sp_changemergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

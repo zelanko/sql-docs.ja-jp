@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1816630332b7691d9d85216df7ac242baa65f4bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748699"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 **LineString**、**CircularString**、**CompoundCurve**、または **MultiLineString** である **geometry** インスタンスから指定された曲線を返します。
   
@@ -40,12 +40,12 @@ ms.locfileid: "67930130"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
  *curve_index* < 1 の場合、`ArgumentOutOfRangeException` がスローされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次のいずれかの場合、**NULL** が返されます。  
   
 -   **geometry** インスタンスが宣言されているが、インスタンス化されていない  
@@ -56,7 +56,7 @@ ms.locfileid: "67930130"
   
 -   **geometry** インスタンスが **Point**、**MultiPoint**、**Polygon**、**CurvePolygon**、または **MultiPolygon** である  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-stcurven-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して STCurveN() を使用する  
  次の例では、`CircularString` インスタンスの 2 番目の曲線が返されます。  

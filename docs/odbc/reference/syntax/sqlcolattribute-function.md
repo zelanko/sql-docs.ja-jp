@@ -17,24 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - SQLColAttribute function [ODBC]
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c94de3dfc7036277f8be56c401326cdab07a9606
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118699"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301292"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン: ODBC 3.0 標準準拠: ISO 92  
   
  **まとめ**  
- **SQLColAttribute**結果セット内の列の記述子の情報を返します。 記述子の情報は、文字列、記述子に依存する値、または整数値として返されます。  
+ **Sqlcolattribute**は、結果セット内の列の記述子情報を返します。 記述子情報は、文字列、記述子に依存する値、または整数値として返されます。  
   
 > [!NOTE]  
->  詳細についてはどのようなドライバー マネージャーのときに、ODBC 3 には、この関数にマップします。*x* ODBC 2 を利用するアプリケーション *。x*ドライバーを参照してください[アプリケーションの旧バージョンと互換性のマッピング置換関数](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)します。  
+>  ドライバーマネージャーが ODBC 3 でこの関数をマップする方法の詳細については、「」を参照してください。*x*アプリケーションは ODBC 2 で動作しています。*x*ドライバー、「[アプリケーションの旧バージョンとの互換性のための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,144 +52,144 @@ SQLRETURN SQLColAttribute (
   
 ## <a name="arguments"></a>引数  
  *StatementHandle*  
- [入力]ステートメント ハンドルです。  
+ 代入ステートメントハンドル。  
   
  *ColumnNumber*  
- [入力]フィールドの値の取得元の IRD 内のレコードの数。 この引数は、1 から始まる、増加の列の順序で順番に順序付けの結果データの列番号に対応します。 列は、任意の順序で記述できます。  
+ 代入フィールド値の取得元となる、IRD 内のレコードの番号。 この引数は、結果データの列数に対応します。列の順序は、1から順に昇順に並べ替えられます。 列は任意の順序で記述できます。  
   
- 列 0 は、この引数で指定できますが、SQL_DESC_TYPE と SQL_DESC_OCTET_LENGTH を除くすべての値は未定義の値を返します。  
+ この引数には列0を指定できますが、SQL_DESC_TYPE と SQL_DESC_OCTET_LENGTH を除くすべての値は、未定義の値を返します。  
   
  *FieldIdentifier*  
- [入力]記述子ハンドル。 このハンドルは、IRD のフィールドは (たとえば、SQL_COLUMN_TABLE_NAME) クエリを実行する必要がありますを定義します。  
+ 代入記述子ハンドル。 このハンドルは、IRD 内のどのフィールドを照会する必要があるかを定義します (SQL_COLUMN_TABLE_NAME など)。  
   
  *CharacterAttributePtr*  
- [出力]値を返すバッファーへのポインター、 *FieldIdentifier*のフィールド、 *ColumnNumber*フィールドが文字の文字列である場合は、IRD の行。 それ以外の場合、フィールドは使用されません。  
+ Outputフィールドが文字列である場合に、IRD の*Columnnumber*行の*FieldIdentifier*フィールドの値を返すバッファーへのポインターです。 それ以外の場合、フィールドは使用されません。  
   
- 場合*CharacterAttributePtr*が null の場合、 *StringLengthPtr*はバイト (文字データの null 終端文字を除く) の合計数を返しますが、バッファーに返される使用可能な指す*CharacterAttributePtr*します。  
+ 文字*attributeptr*が NULL の場合でも、 *stringlength ptr*は、文字*attributeptr*によってポイントされたバッファー内で返されるバイトの合計数 (文字データの NULL 終端文字を除く) を返します。  
   
  *BufferLength*  
- [入力]場合*FieldIdentifier* ODBC で定義されたフィールドと*CharacterAttributePtr*文字の文字列またはバイナリのバッファーを指す、この引数の長さである必要があります\* *CharacterAttributePtr*します。 場合*FieldIdentifier* ODBC で定義されたフィールドと\* *CharacterAttribute*Ptr が整数では、このフィールドは無視されます。 場合、  *\*CharacterAttributePtr*は Unicode 文字列です (呼び出し時に**SQLColAttributeW**)、 *BufferLength*引数は偶数である必要があります。 場合*FieldIdentifier*ドライバーの定義済みのフィールドでは、アプリケーションでは、フィールドには、ドライバー マネージャーの性質を示しますを設定して、 *BufferLength*引数。 *BufferLength*次の値を持つことができます。  
+ 代入*FieldIdentifier*が ODBC で定義されたフィールドであり、文字*attributeptr*が文字列またはバイナリバッファーを指している場合、この\*引数は文字*attributeptr*の長さである必要があります。 *FieldIdentifier*が ODBC で定義されたフィールド\*であり、文字*属性*Ptr が整数である場合、このフィールドは無視されます。 文字 attributeptr が Unicode 文字列の場合 ( **sqlcolattributew**を呼び出すとき)、 *bufferlength*引数は偶数である必要があります。 * \** *FieldIdentifier*がドライバーによって定義されたフィールドである場合、アプリケーションは、 *bufferlength*引数を設定することによって、ドライバーマネージャーに対してフィールドの性質を示します。 *Bufferlength*には次の値を指定できます。  
   
--   場合*CharacterAttributePtr* 、ポインターへのポインターは、 *BufferLength* SQL_IS_POINTER 値でなければなりません。  
+-   文字*Attributeptr*がポインターへのポインターである場合、 *bufferlength*には SQL_IS_POINTER 値を指定する必要があります。  
   
--   場合*CharacterAttributePtr*文字の文字列へのポインター、 *BufferLength*バッファーの長さです。  
+-   文字*Attributeptr*が文字列へのポインターである場合、 *bufferlength*はバッファーの長さです。  
   
--   場合*CharacterAttributePtr*バイナリのバッファー、アプリケーションの場所へのポインター、SQL_LEN_BINARY_ATTR の結果は、(*長さ*) マクロで*BufferLength*します。 これにより、負の値で*BufferLength*します。  
+-   文字*Attributeptr*がバイナリバッファーへのポインターである場合、アプリケーションは、SQL_LEN_BINARY_ATTR (*長さ*) マクロの結果を*bufferlength*に配置します。 これにより、 *Bufferlength*に負の値が挿入されます。  
   
--   場合*CharacterAttributePtr*を固定長データ型へのポインターは、 *BufferLength*次のいずれかを指定する必要があります。SQL_IS_INTEGER、SQL_IS_UNINTEGER、SQL_SMALLINT、または SQLUSMALLINT します。  
+-   文字*Attributeptr*が固定長データ型へのポインターである場合、 *bufferlength*には次のいずれかを指定する必要があります: SQL_IS_INTEGER、SQL_IS_UNINTEGER、SQL_SMALLINT、または sqlus悪意。  
   
- *StringLengthPtr*  
- [出力]バイト (文字データの null 終了バイトを除く) の合計数を返すバッファーへのポインターで返される使用可能な **CharacterAttributePtr*します。  
+ *Stringlength Ptr*  
+ Output* 文字*Attributeptr*で返すことができるバイト数の合計 (文字データの null 終端バイトを除く) を返すバッファーへのポインター。  
   
- 返される使用可能なバイト数がより大きいまたは等しい場合は、文字データ*BufferLength*、記述子の情報で\* *CharacterAttributePtr* に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
+ 文字データの場合、返される使用可能なバイト数が*bufferlength*以上の場合、文字\* *attributeptr*内の記述子情報は*bufferlength*の長さから null 終端文字の長さを引いた値に切り捨てられ、ドライバーによって null で終了されます。  
   
- 他のすべての種類の値のデータの*BufferLength*は無視されますと、ドライバーのサイズを想定しています **CharacterAttributePtr*は 32 ビットです。  
+ 他のすべての種類のデータについては、 *Bufferlength*の値は無視され、ドライバーは * 文字*attributeptr*のサイズが32ビットであることを前提としています。  
   
  *NumericAttributePtr*  
- [出力]値を返す整数バッファーへのポインター、 *FieldIdentifier*のフィールド、 *ColumnNumber*フィールドが SQL_DESC_COLUMN_LENGTH など、数値の記述子の型の場合は、IRD の行。 それ以外の場合、フィールドは使用されません。 一部のドライバーは、下位の 32 ビットを書き込む場合がありますのみまたは 16 ビット バッファーと参加解除の上位ビットに変更されていないことに注意してください。 そのため、アプリケーションでは、この関数を呼び出す前に 0 に値を初期化する必要があります。  
+ Outputフィールドが SQL_DESC_COLUMN_LENGTH などの数値記述子の型である場合、IRD の*Columnnumber*行の*FieldIdentifier*フィールドの値を返す整数バッファーへのポインターです。 それ以外の場合、フィールドは使用されません。 一部のドライバーでは、バッファーの下位の32ビットまたは16ビットのみが書き込まれ、上位ビットは変更されないことに注意してください。 したがって、この関数を呼び出す前に、アプリケーションは値を0に初期化する必要があります。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLColAttribute** SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返します、関連付けられた SQLSTATE 値を呼び出すことによって取得される可能性があります**SQLGetDiagRec**で、 *HandleType*sql_handle_stmt としての*処理*の*StatementHandle*します。 次の表に、一般的にによって返される SQLSTATE 値**SQLColAttribute** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。  
+ **Sqlcolattribute**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、SQL_HANDLE_STMT の*Handletype*と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出すことによって、関連付けられた SQLSTATE 値を取得できます。 次の表に、 **Sqlcolattribute**によって一般的に返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|[エラー]|説明|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01004|文字列データで、右側が切り捨てられました|バッファー \* *CharacterAttributePtr*容量が不足すると、文字列全体の値を返すため、文字列値が切り捨てられました。 切り詰められていない文字列値の長さが返される **StringLengthPtr*します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|07005|準備されたステートメントがない、*カーソルの指定*|関連付けられているステートメント、 *StatementHandle*結果セットを返さなかったと*FieldIdentifier* SQL_DESC_COUNT でした。 記述する列がありませんでした。|  
-|07009|無効な記述子のインデックス|(DM) の指定された値*ColumnNumber*を 0 に等しい、SQL_ATTR_USE_BOOKMARKS ステートメント属性 SQL_UB_OFF のでした。<br /><br /> 引数が指定された値*ColumnNumber*が結果セット内の列の数を超えていました。|  
-|HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagField**診断データから、構造体では、エラーとその原因がについて説明します。|  
-|HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*します。 後でもう一度関数が呼び出された、 *StatementHandle*します。<br /><br /> 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
-|HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数は、SQLColAttribute が呼び出されたときにまだ実行中だった。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) 関数が呼び出す前に呼び出された**SQLPrepare**、 **SQLExecDirect**、またはのカタログ関数、 *StatementHandle*します。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|(DM)  *\*CharacterAttributePtr*文字の文字列と*BufferLength* SQL_NTS 等しくもありませんが、0 より小さいをでした。|  
-|HY091|無効な記述子フィールドの識別子|引数が指定された値*FieldIdentifier*が定義されている値のいずれかと、実装定義の値でした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
-|HYC00|対応していないドライバー|引数が指定された値*FieldIdentifier*ドライバーによってサポートされていませんでした。|  
-|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
-|IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
-|IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
-|IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|01004|文字列データ、右側が切り捨てられました|バッファー \*文字*attributeptr*が文字列値全体を返すのに十分な大きさではないため、文字列値が切り捨てられました。 切り捨てられていない文字列値の長さは、**Stringlength ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|07005|準備されたステートメントが*カーソル指定*ではありません|*StatementHandle*に関連付けられたステートメントで結果セットが返されませんでした。 *FieldIdentifier*は SQL_DESC_COUNT ませんでした。 説明する列がありませんでした。|  
+|07009|無効な記述子のインデックス|(DM) *Columnnumber*に指定された値が0で、SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_OFF でした。<br /><br /> 引数*Columnnumber*に指定された値が、結果セット内の列数を超えています。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 診断データ構造から**SQLGetDiagField**によって返されるエラーメッセージには、エラーとその原因が記述されています。|  
+|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、 **SQLCancel**または**Sqlcancelhandle**が*StatementHandle*で呼び出されました。 次に、 *StatementHandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この aynchronous 関数は、SQLColAttribute が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*StatementHandle*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 関数は、 **SQLPrepare**、 **SQLExecDirect**、または*StatementHandle*のカタログ関数を呼び出す前に呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY090|文字列またはバッファーの長さが無効です|(DM) * \*文字 attributeptr*は文字列であり、 *bufferlength*は0未満ですが SQL_NTS と等しくありません。|  
+|HY091|無効な記述子フィールド識別子|引数*FieldIdentifier*に指定された値が、定義された値の1つではなく、実装定義の値ではありませんでした。|  
+|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
+|HYC00|ドライバーに対応していません|引数*FieldIdentifier*に指定された値は、ドライバーでサポートされていませんでした。|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
+|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して**Sqlcompleteasync**を呼び出す必要があります。|  
   
- 後に呼び出されたときに**SQLPrepare**とする前に**SQLExecute**、 **SQLColAttribute**によって返される任意の SQLSTATE を返すことができます**SQLPrepare**または**SQLExecute**に応じて、データ ソースが SQL ステートメントに関連付けられていると評価される場合、 *StatementHandle*します。  
+ **SQLPrepare**の後、 **sqlexecute**の前に呼び出された場合、データソースが*StatementHandle*に関連付けられている SQL ステートメントを評価するタイミングに応じて、 **Sqlcolattribute**は**SQLPrepare**または**sqlexecute**によって返される SQLSTATE を返すことができます。  
   
- パフォーマンス上の理由から、アプリケーションを呼び出す必要がありますいない**SQLColAttribute**ステートメントを実行する前にします。  
+ パフォーマンス上の理由から、アプリケーションでは、ステートメントを実行する前に**Sqlcolattribute**を呼び出さないでください。  
   
-## <a name="comments"></a>コメント  
- アプリケーションがによって返される情報を使用する方法については**SQLColAttribute**を参照してください[結果セットのメタデータ](../../../odbc/reference/develop-app/result-set-metadata.md)します。  
+## <a name="comments"></a>説明  
+ **Sqlcolattribute**によって返される情報をアプリケーションで使用する方法の詳細については、「[結果セットのメタデータ](../../../odbc/reference/develop-app/result-set-metadata.md)」を参照してください。  
   
- **SQLColAttribute**いずれかの情報を返しますで\* *NumericAttributePtr*または\* *CharacterAttributePtr*します。 整数の情報が返される\* *NumericAttributePtr* SQLLEN 値としては情報の他のすべての形式で返される\* *CharacterAttributePtr*します。 情報が返される場合\* *NumericAttributePtr*、ドライバーを無視*CharacterAttributePtr*、 *BufferLength*、および*StringLengthPtr*します。 情報が返される場合\* *CharacterAttributePtr*、ドライバーを無視*NumericAttributePtr*します。  
+ **Sqlcolattribute**は、 \* *numericattributeptr*または\*文字*attributeptr*の情報を返します。 整数情報は、sqllen 値として\* *numericattributeptr*に返されます。その他のすべての形式の情報\*は、文字*attributeptr*で返されます。 \* *Numericattributeptr*で情報が返されると、ドライバーは、文字*attributeptr*、 *bufferlength*、および*stringlength ptr*を無視します。 文字\* *attributeptr*で情報が返された場合、ドライバーは*numericattributeptr*を無視します。  
   
- **SQLColAttribute** IRD の記述子フィールドの値を返します。 記述子ハンドルではなく、ステートメント ハンドルで呼び出されます。 によって返される値**SQLColAttribute**の*FieldIdentifier*も呼び出すことによってこのセクションの後半に示す値を取得できます**SQLGetDescField**で、適切な IRD ハンドル。  
+ **Sqlcolattribute**は、IRD の記述子フィールドから値を返します。 関数は、記述子ハンドルではなく、ステートメントハンドルで呼び出されます。 このセクションで後述する*FieldIdentifier*値の**sqlcolattribute**によって返される値は、適切な IRD ハンドルを指定して**SQLGetDescField**を呼び出すことによって取得することもできます。  
   
- 現在定義されている記述子フィールド、導入されたれ、それらの情報が返されます引数は; このセクションでは後で示されています、ODBC のバージョン記述子の種類の詳細については、さまざまなデータ ソースを活用するためにドライバーが定義できます。  
+ このセクションでは、現在定義されている記述子フィールド、ODBC のバージョン、および情報が返される引数を後で示します。ドライバーでは、さまざまなデータソースを利用するために、より多くの記述子の種類を定義できます。  
   
- ODBC 3。*x*ドライバーは、各記述子フィールドの値を返す必要があります。 記述子フィールドは、ドライバーまたはデータ ソースには適用されませんし、ドライバーに 0 を返します、明記しない限り場合\* *StringLengthPtr*または空の文字列で **CharacterAttributePtr*します。  
+ ODBC 3.*x*ドライバーは、各記述子フィールドに対して値を返す必要があります。 記述子フィールドがドライバーまたはデータソースに適用されない場合、特に明記されていない\*場合、ドライバーは*stringlength ptr*または空の文字列 (* 文字*attributeptr*) で0を返します。  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- ODBC 3。*x*関数**SQLColAttribute**非推奨の ODBC 2 が置き換えられます *。x*関数**SQLColAttributes**します。 マッピングと**SQLColAttributes**に**SQLColAttribute** (ときに、ODBC 2 *。x*アプリケーションは、ODBC 3 の操作します *。x*ドライバー)、またはマッピング**SQLColAttribute**に**SQLColAttributes** (ときに、ODBC 3 *。x* ODBC 2 を利用するアプリケーション *。x*ドライバー)、ドライバー マネージャーがいずれかの値を渡します*FieldIdentifier*新しい値にマップするか、次のように、エラーが返されます。  
+ ODBC 3.*x*関数**sqlcolattribute**は、非推奨の ODBC 2 を置き換えます。*x*関数**sqlcolattributes**。 **Sqlcolattributes**を**sqlcolattributes**にマップする場合 (ODBC 2 の場合)。*x*アプリケーションは ODBC 3 を使用して動作しています。*x*ドライバー)、または**sqlcolattribute**を**sqlcolattribute** (ODBC 3 の場合) にマッピングします。*x*アプリケーションは ODBC 2 で動作しています。*x*ドライバー) の場合、ドライバーマネージャーは*FieldIdentifier*の値をから渡すか、新しい値にマップするか、次のようにエラーを返します。  
   
 > [!NOTE]  
->  使用されるプレフィックス*FieldIdentifier* ODBC 3 の値 *。x*で使用される ODBC 2 から変更されました *。x*します。 新しいプレフィックスが"SQL_DESC";古いプレフィックス"SQL_COLUMN"が発生しました。  
+>  ODBC 3 の*FieldIdentifier*値で使用されるプレフィックス。*x*は、ODBC 2 で使用されているものから変更されています。*x*。 新しいプレフィックスは "SQL_DESC" です。古いプレフィックスは "SQL_COLUMN" でした。  
   
--   場合、 **#define** ODBC 2 の値 *。x* *FieldIdentifier*と同じ、 **#define** ODBC 3 の値 *。x* *FieldIdentifier*、関数呼び出しで値が渡されるだけです。  
+-   ODBC 2 の **#define**値の場合は。*x* *FIELDIDENTIFIER*は、ODBC 3 の **#define**値と同じです。*x* *FieldIdentifier*の場合、関数呼び出しの値が渡されるだけです。  
   
--   **#Define** ODBC 2 の値 *。x* *FieldIdentifiers* SQL_COLUMN_LENGTH、SQL_COLUMN_PRECISION、および SQL_COLUMN_SCALE が異なる、 **#define** ODBC 3 の値 *。x* *FieldIdentifiers* SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_LENGTH します。 ODBC 2。*x*ドライバーでは、ODBC 2 がサポートのみ必要があります *。x*値。 ODBC 3。*x*ドライバーは、これらの 3 つの"SQL_COLUMN"と"SQL_DESC"の両方の値をサポートする必要があります*FieldIdentifiers*します。 有効桁数、小数点、および長さは、ODBC 3 で異なる方法で定義されるため、これらの値が異なります。*x*よりも ODBC 2 *。x*します。 詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。  
+-   ODBC 2 の **#define**値です。*x* *FieldIdentifiers* SQL_COLUMN_LENGTH、SQL_COLUMN_PRECISION、および SQL_COLUMN_SCALE は、ODBC 3 の **#define**値とは異なります。*x* *FieldIdentifiers* SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_LENGTH。 ODBC 2。*x*ドライバーは ODBC 2 だけをサポートする必要があります。*x*値。 ODBC 3.*x*ドライバーは、これら3つの*FieldIdentifiers*の "SQL_COLUMN" と "SQL_DESC" の両方の値をサポートする必要があります。 有効桁数、小数点以下桁数、および長さは ODBC 3 では異なるため、これらの値は異なります。*x*は ODBC 2 ではありませんでした。*x*。 詳細については、「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。  
   
--   場合、 **#define** ODBC 2 の値 *。x* *FieldIdentifier*とは異なる、 **#define** ODBC 3 の値 *。x* *FieldIdentifier*、として発生数、名前、および null 許容の値、関数呼び出しで値が対応する値にマップされます。 SQL_COLUMN_COUNT を SQL_DESC_COUNT にマップするなど、あり SQL_DESC_COUNT はマッピングの方向に応じて、SQL_COLUMN_COUNT にマップされます。  
+-   ODBC 2 の **#define**値の場合は。*x* *FIELDIDENTIFIER*は、ODBC 3 の **#define**値とは異なります。*x* *FIELDIDENTIFIER*は、COUNT、NAME、および NULLABLE 値と共に発生するため、関数呼び出しの値は対応する値にマップされます。 たとえば、SQL_COLUMN_COUNT は SQL_DESC_COUNT にマップされ、SQL_DESC_COUNT はマッピングの方向に応じて SQL_COLUMN_COUNT にマップされます。  
   
--   場合*FieldIdentifier* ODBC 3 内の新しい値です *。x*、これがなかった対応する値では、ODBC 2 の *。x*、ときに、ODBC 3 はマップできません *。x*アプリケーションでの呼び出しで使用**SQLColAttribute** 、ODBC 2 *。x*ドライバー、および呼び出しは SQLSTATE HY091 を返します (無効な記述子フィールド識別子)。  
+-   *FieldIdentifier*が ODBC 3 の新しい値の場合。*x*。 ODBC 2 では、対応する値がありませんでした。*x*は、ODBC 3 ではマップされません。*x*アプリケーションは、ODBC 2 の**sqlcolattribute**の呼び出しでそれを使用します。*x*ドライバーを呼び出したときに、SQLSTATE HY091 (無効な記述子フィールド識別子) が返されます。  
   
- 次の表に、記述子の種類によって返される**SQLColAttribute**します。 型*NumericAttributePtr*値は**SQLLEN \*** します。  
+ 次の表に、 **Sqlcolattribute**によって返される記述子の種類を示します。 *Numericattributeptr*値の型は** \*sqllen**です。  
   
-|*FieldIdentifier*|[情報]<br /><br /> 返される|説明|  
+|*FieldIdentifier*|情報<br /><br /> 返される値|説明|  
 |-----------------------|---------------------------------|-----------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|列が自動増分列の場合は SQL_TRUE にします。<br /><br /> 列が自動増分列ではないかが数値でない場合は SQL_FALSE にします。<br /><br /> このフィールドは数値データ型の列にのみ有効です。 アプリケーションは、[自動増分] 列を含む行に値を挿入することができますが、通常、列の値を更新することはできません。<br /><br /> [自動増分] 列に挿入が行われる挿入時に、一意の値が列に挿入されます。 増分値は定義されていませんがデータ ソースに固有です。 アプリケーションは特定の値によって、特定の時点またはインクリメントで、[自動増分] 列が開始されると想定する必要があります。|  
-|SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|結果のベースの列名は、列を設定します。 (式である列の場合) のようにベースの列名が存在しない場合、この変数には、空の文字列が含まれます。<br /><br /> この情報は、IRD の読み取り専用フィールドの SQL_DESC_BASE_COLUMN_NAME レコード フィールドから返されます。|  
-|SQL_DESC_BASE_TABLE_NAME (ODBC 3.0)|*CharacterAttributePtr*|列を含むベース テーブルの名前。 ベース テーブルの名前は定義できませんまたは適用可能でないの場合、この変数には、空の文字列が含まれます。<br /><br /> この情報は、IRD の読み取り専用フィールドの SQL_DESC_BASE_TABLE_NAME レコード フィールドから返されます。|  
-|SQL_DESC_CASE_SENSITIVE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE 場合は、列の照合順序との比較と大文字小文字を区別は処理されます。<br /><br /> 列の照合順序との比較と大文字小文字を区別は扱われませんまたは非文字は sql_false になります。|  
-|SQL_DESC_CATALOG_NAME (ODBC 2.0)|*CharacterAttributePtr*|列を含むテーブルのカタログです。 返される値は、実装で定義された列が式の場合、または列がビューの一部である場合です。 データ ソースはカタログをサポートしていないか、カタログ名を特定することはできません、空の文字列が返されます。 この VARCHAR レコードのフィールドでは、128 文字に限定されません。|  
-|SQL_DESC_CONCISE_TYPE (ODBC 1.0)|*NumericAttributePtr*|簡潔なデータを入力します。<br /><br /> Datetime と間隔のデータ型は、このフィールドは、簡潔なデータ型を返します。たとえば、SQL_TYPE_TIME または SQL_INTERVAL_YEAR です。 (詳細については、次を参照してください[データ型識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)付録 d:。データ型です。)<br /><br /> この情報は、IRD の SQL_DESC_CONCISE_TYPE レコード フィールドから返されます。|  
-|SQL_DESC_COUNT (ODBC 1.0)|*NumericAttributePtr*|結果セットで使用できる列の数。 結果セットの列が存在しない場合、0 が返されます。 値、 *ColumnNumber*引数は無視されます。<br /><br /> この情報は、IRD の SQL_DESC_COUNT ヘッダー フィールドから返されます。|  
-|SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|列のデータを表示するために必要な文字の最大数。 表示サイズの詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
-|SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|列がデータ ソースに固有である固定有効桁数とスケールを 0 以外の場合は SQL_TRUE にします。<br /><br /> 列にデータ ソースに固有である固定有効桁数とスケールを 0 以外の値がない場合は sql_false になります。|  
-|SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|列のラベルまたはタイトル。 たとえば、EmpName という名前の列は従業員名ラベルを付けることがあります。 またはエイリアスを持つという場合があります。<br /><br /> 列がラベルを持たない場合、列名が返されます。 列がラベルが付いていない、名前のない場合は、空の文字列が返されます。|  
-|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|いずれかである数値の値を文字の文字列またはバイナリ データの最大値または実際の文字の長さを入力します。 固定長データ型の場合は、最大文字長または可変長データ型の実際の文字の長さになります。 その値は、常に文字列を終了する null 終了バイトを除外します。<br /><br /> この情報は、IRD の SQL_DESC_LENGTH レコード フィールドから返されます。<br /><br /> 長さの詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
-|SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|この varchar (128) レコードのフィールドには、このデータ型のリテラルのプレフィックスとして、ドライバーが認識できる文字が含まれています。 このフィールドには、空の文字列データ型のリテラル プレフィックスは適用されませんが含まれています。 詳細については、次を参照してください。[リテラル プレフィックスおよびサフィックス](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)します。|  
-|SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|この varchar (128) レコードのフィールドには、このデータ型のリテラルのサフィックスとして、ドライバーが認識できる文字が含まれています。 このフィールドには、空の文字列データ型のリテラル サフィックスは適用されませんが含まれています。 詳細については、次を参照してください。[リテラル プレフィックスおよびサフィックス](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)します。|  
-|SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|この varchar (128) レコードのフィールドには、データ型の正規名と異なる可能性があるデータ型の任意のローカライズされた (ネイティブ言語) 名前が含まれています。 ローカライズされた名前がない場合は、空の文字列が返されます。 このフィールドは、表示目的でのみです。 文字列の文字セットは、ロケールに依存するでは通常、サーバーの既定の文字セット。|  
-|SQL_DESC_NAME (ODBC 3.0)|*CharacterAttributePtr*|列の別名、適用される場合。 列の別名が適用されない場合は、列名が返されます。 どちらの場合は、SQL_DESC_UNNAMED ができませんに設定されます。 列名がありませんまたは列の別名がある場合は、空の文字列が返され、SQL_DESC_UNNAMED が SQL_UNNAMED に設定されています。<br /><br /> この情報は、IRD の SQL_DESC_NAME レコード フィールドから返されます。|  
-|SQL_DESC_NULLABLE (ODBC 3.0)|*NumericAttributePtr*|Sql _ null 許容列の NULL 値であることができる場合SQL_NO_NULLS 列に NULL 値がない場合または、SQL_NULLABLE_UNKNOWN 列が NULL 値を受け入れるかどうかが不明である場合。<br /><br /> この情報は、IRD の SQL_DESC_NULLABLE レコード フィールドから返されます。|  
-|SQL_DESC_NUM_PREC_RADIX (ODBC 3.0)|*NumericAttributePtr*|SQL_DESC_TYPE フィールドでのデータ型が概数データ型の場合は、この SQLINTEGER フィールドには、SQL_DESC_PRECISION フィールドには、ビット数が含まれているために、2 の値が含まれています。 SQL_DESC_TYPE フィールドでのデータ型が真数データ型の場合は、このフィールドには、SQL_DESC_PRECISION フィールドには、10 進数字の数が含まれているために、値 10 にはが含まれています。 このフィールドは、すべての数値以外のデータ型の場合は 0 に設定されます。|  
-|SQL_DESC_OCTET_LENGTH (ODBC 3.0)|*NumericAttributePtr*|文字の文字列またはバイナリ データ型の長さ、(バイト単位)。 固定長の文字またはバイナリ型では、これは、実際の長さ (バイト単位)。 可変長の文字またはバイナリ型では、これは、最大長 (バイト単位)。 この値では、null 終端文字は含まれません。<br /><br /> この情報は、IRD の SQL_DESC_OCTET_LENGTH レコード フィールドから返されます。<br /><br /> 長さの詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
-|SQL_DESC_PRECISION (ODBC 3.0)|*NumericAttributePtr*|数値データ型に適用可能な有効桁数を指定する数値。 型のデータ SQL_TYPE_TIME、sql_type_timestamp 型、型し、その値の時間間隔を表すすべての interval データ型は、秒の小数部のコンポーネントの該当する有効桁数。<br /><br /> この情報は、IRD の SQL_DESC_PRECISION レコード フィールドから返されます。|  
-|SQL_DESC_SCALE (ODBC 3.0)|*NumericAttributePtr*|数値データ型の該当する小数点以下桁数を示す数値。 DECIMAL および NUMERIC のデータ型の定義のスケールになります。 場合によっては、その他のすべてのデータ型に定義されていません。<br /><br /> この情報は、IRD のスケールのレコード フィールドから返されます。|  
-|SQL_DESC_SCHEMA_NAME (ODBC 2.0)|*CharacterAttributePtr*|列を含むテーブルのスキーマです。 返される値は、実装で定義された列が式の場合、または列がビューの一部である場合です。 データ ソースがスキーマをサポートしていないか、スキーマ名が確認できない、空の文字列が返されます。 この VARCHAR レコードのフィールドでは、128 文字に限定されません。|  
-|SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|SQL_PRED_NONE WHERE 句で列を使用できない場合。 (これは ODBC 2 で SQL_UNSEARCHABLE 値と同じです。*x*)。<br /><br /> SQL_PRED_CHAR 場合は、列は、WHERE 句では、LIKE 述語と共にのみ使用できます。 (これは ODBC 2 で SQL_LIKE_ONLY 値と同じです。*x*)。<br /><br /> SQL_PRED_BASIC などを除くすべての比較演算子と共に WHERE 句で列を使用できる場合。 (これは ODBC 2 で SQL_EXCEPT_LIKE 値と同じです。*x*)。<br /><br /> SQL_PRED_SEARCHABLE 場合は、列は、任意の比較演算子と共に WHERE 句で使用できます。<br /><br /> 列は、SQL_LONGVARCHAR と SQL_LONGVARBINARY 戻り値は、通常 SQL_PRED_CHAR を入力します。|  
-|SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|列を含むテーブルの名前です。 返される値は、実装で定義された列が式の場合、または列がビューの一部である場合です。<br /><br /> テーブル名を決定できない場合は、空の文字列が返されます。|  
-|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|SQL データ型を指定する数値。<br /><br /> ときに*ColumnNumber*と等しいの可変長のブックマークを 0 に SQL_BINARY が返され、固定長のブックマークの SQL_INTEGER が返されます。<br /><br /> Datetime と間隔のデータ型は、このフィールドは、詳細なデータ型を返します。SQL_DATETIME または SQL_INTERVAL の場合は。 (詳細については、次を参照してください[データ型識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)付録 d:。データ型。<br /><br /> この情報は、IRD の SQL_DESC_TYPE レコード フィールドから返されます。 **注:** ODBC 2 に対して作業します。*x*ドライバー、SQL_DESC_CONCISE_TYPE を代わりに使用します。|  
-|SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|データ ソースに依存するデータ型名です。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、または「CHAR FOR BIT DATA ()」。<br /><br /> 種類が不明な場合は、空の文字列が返されます。|  
-|SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|できませんまたは SQL_UNNAMED します。 列の別名または列名が、IRD の SQL_DESC_NAME フィールドが含まれる場合はできませんが返されます。 列名または列の別名がない場合は、SQL_UNNAMED が返されます。<br /><br /> この情報は、IRD の SQL_DESC_UNNAMED レコード フィールドから返されます。|  
-|SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|列が署名されていない (または数値ではありません) の場合は SQL_TRUE にします。<br /><br /> 列が署名されている場合は SQL_FALSE にします。|  
-|SQL_DESC_UPDATABLE (ODBC 1.0)|*NumericAttributePtr*|列が定義済みの定数の値について説明します。<br /><br /> SQL_ATTR_READONLY SQL_ATTR_WRITE SQL_ATTR_READWRITE_UNKNOWN<br /><br /> SQL_DESC_UPDATABLE では、ベース テーブルの列ではなく、結果セットの列の更新について説明します。 結果セット列の基になる基本列の更新は、このフィールドの値と異なる可能性があります。 列は更新可能かどうかは、データ型、ユーザーの特権と、結果セット自体の定義に基づくことができます。 明確ではありません、列は更新可能かどうか、SQL_ATTR_READWRITE_UNKNOWN が返されます。|  
+|SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|列が自動増分列である場合は SQL_TRUE します。<br /><br /> 列が自動増分列ではないか、または数値でない場合に SQL_FALSE します。<br /><br /> このフィールドは、数値データ型の列に対してのみ有効です。 アプリケーションでは、自動インクリメント列を含む行に値を挿入できますが、通常、列の値を更新することはできません。<br /><br /> 自動インクリメント列に挿入が行われると、挿入時に一意の値が列に挿入されます。 インクリメントは定義されていませんが、データソース固有です。 アプリケーションでは、autoincrement 列が特定のポイントで開始されるか、特定の値によってインクリメントされると想定しないでください。|  
+|SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|結果セット列の基本列名。 ベース列名が存在しない場合 (式である列の場合と同様)、この変数には空の文字列が含まれます。<br /><br /> この情報は、読み取り専用フィールドである IRD の SQL_DESC_BASE_COLUMN_NAME レコードフィールドから返されます。|  
+|SQL_DESC_BASE_TABLE_NAME (ODBC 3.0)|*CharacterAttributePtr*|列を含むベーステーブルの名前。 ベーステーブル名を定義できない場合、または適用できない場合、この変数には空の文字列が含まれます。<br /><br /> この情報は、読み取り専用フィールドである IRD の SQL_DESC_BASE_TABLE_NAME レコードフィールドから返されます。|  
+|SQL_DESC_CASE_SENSITIVE (ODBC 1.0)|*NumericAttributePtr*|列が照合順序と比較で大文字と小文字を区別して扱うかどうかを SQL_TRUE します。<br /><br /> 列が照合順序と比較で大文字と小文字を区別せずに処理されるかどうか、または非文字であるかどうかを SQL_FALSE します。|  
+|SQL_DESC_CATALOG_NAME (ODBC 2.0)|*CharacterAttributePtr*|列を含むテーブルのカタログです。 列が式である場合、または列がビューの一部である場合、戻り値は実装によって定義されます。 データソースでカタログがサポートされていない場合、またはカタログ名を特定できない場合は、空の文字列が返されます。 この VARCHAR レコードフィールドは、128文字に制限されていません。|  
+|SQL_DESC_CONCISE_TYPE (ODBC 1.0)|*NumericAttributePtr*|簡潔なデータ型。<br /><br /> Datetime および interval データ型の場合、このフィールドは簡潔なデータ型を返します。たとえば、SQL_TYPE_TIME や SQL_INTERVAL_YEAR のようになります。 (詳細については、「付録 D: データ型」の「[データ型の識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)」を参照してください)。<br /><br /> この情報は、IRD の SQL_DESC_CONCISE_TYPE レコードフィールドから返されます。|  
+|SQL_DESC_COUNT (ODBC 1.0)|*NumericAttributePtr*|結果セットで使用できる列の数。 結果セットに列がない場合は、0が返されます。 *Columnnumber*引数の値は無視されます。<br /><br /> この情報は、IRD の SQL_DESC_COUNT header フィールドから返されます。|  
+|SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|列のデータを表示するために必要な最大文字数。 表示サイズの詳細については、「付録 D: データ型」の「[列サイズ、10進数、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
+|SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|列の有効桁数が固定され、データソース固有の小数点以下桁数が0以外の場合に SQL_TRUE します。<br /><br /> 列の有効桁数が固定されておらず、データソース固有の小数点以下桁数が0以外の場合に SQL_FALSE します。|  
+|SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|列のラベルまたはタイトル。 たとえば、EmpName という名前の列は、Employee Name というラベルが付けられているか、別名でラベル付けされている可能性があります。<br /><br /> 列にラベルがない場合は、列名が返されます。 列にラベルが付けられていない場合は、空の文字列が返されます。|  
+|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|文字列またはバイナリデータ型の最大文字長または実際の文字長の数値。 固定長データ型の場合は最大文字長、可変長データ型の場合は実際の文字長です。 この値は、文字列を終了する null 終了バイトを常に除外します。<br /><br /> この情報は、IRD の SQL_DESC_LENGTH レコードフィールドから返されます。<br /><br /> 長さの詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
+|SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|この VARCHAR (128) レコードフィールドには、ドライバーがこのデータ型のリテラルのプレフィックスとして認識する文字または文字が含まれています。 このフィールドには、リテラルプレフィックスが適用されないデータ型の空の文字列が含まれています。 詳細については、「[リテラルプレフィックスとサフィックス](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)」を参照してください。|  
+|SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|この VARCHAR (128) レコードフィールドには、ドライバーがこのデータ型のリテラルのサフィックスとして認識する文字または文字が含まれています。 このフィールドには、リテラルサフィックスが適用されないデータ型の空の文字列が含まれています。 詳細については、「[リテラルプレフィックスとサフィックス](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)」を参照してください。|  
+|SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|この VARCHAR (128) レコードフィールドには、データ型の標準名とは異なる可能性がある、ローカライズされた (ネイティブ言語) 名が含まれています。 ローカライズされた名前がない場合は、空の文字列が返されます。 このフィールドは、表示のみを目的としています。 文字列の文字セットはロケールに依存し、通常はサーバーの既定の文字セットです。|  
+|SQL_DESC_NAME (ODBC 3.0)|*CharacterAttributePtr*|列の別名 (適用される場合)。 列の別名が適用されない場合は、列名が返されます。 どちらの場合も、SQL_DESC_UNNAMED は SQL_NAMED に設定されます。 列名または列の別名がない場合は、空の文字列が返され、SQL_DESC_UNNAMED が SQL_UNNAMED に設定されます。<br /><br /> この情報は、IRD の SQL_DESC_NAME レコードフィールドから返されます。|  
+|SQL_DESC_NULLABLE (ODBC 3.0)|*NumericAttributePtr*|列が NULL 値を持つことができるかどうかを SQL_ null 値を許容します。列に NULL 値が含まれていない場合は SQL_NO_NULLS します。列が NULL 値を許容するかどうかが不明な場合は、SQL_NULLABLE_UNKNOWN ます。<br /><br /> この情報は、IRD の SQL_DESC_NULLABLE レコードフィールドから返されます。|  
+|SQL_DESC_NUM_PREC_RADIX (ODBC 3.0)|*NumericAttributePtr*|SQL_DESC_TYPE フィールドのデータ型が概数データ型の場合、この SQLINTEGER フィールドには値2が格納されます。これは、SQL_DESC_PRECISION フィールドにビット数が含まれているためです。 SQL_DESC_TYPE フィールドのデータ型が正確な数値データ型である場合、このフィールドには10の値が格納されます。これは、SQL_DESC_PRECISION フィールドに小数点以下の桁数が含まれているためです。 数値以外のすべてのデータ型では、このフィールドは0に設定されます。|  
+|SQL_DESC_OCTET_LENGTH (ODBC 3.0)|*NumericAttributePtr*|文字列またはバイナリデータ型の長さ (バイト単位)。 固定長の文字型またはバイナリ型の場合、実際のバイト数です。 可変長の文字型またはバイナリ型の場合は、バイト単位の最大長です。 この値には、null 終端文字は含まれません。<br /><br /> この情報は、IRD の SQL_DESC_OCTET_LENGTH レコードフィールドから返されます。<br /><br /> 長さの詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。|  
+|SQL_DESC_PRECISION (ODBC 3.0)|*NumericAttributePtr*|数値データ型の数値は、適用可能な有効桁数を表します。 データ型 SQL_TYPE_TIME、SQL_TYPE_TIMESTAMP、および時間間隔を表すすべての interval データ型の場合、その値は秒の小数部の適用可能な有効桁数になります。<br /><br /> この情報は、IRD の SQL_DESC_PRECISION レコードフィールドから返されます。|  
+|SQL_DESC_SCALE (ODBC 3.0)|*NumericAttributePtr*|数値データ型に適用できる小数点以下桁数を表す数値です。 DECIMAL データ型と NUMERIC データ型の場合、これは定義されたスケールです。 他のすべてのデータ型では定義されていません。<br /><br /> この情報は、IRD の [スケールレコード] フィールドから返されます。|  
+|SQL_DESC_SCHEMA_NAME (ODBC 2.0)|*CharacterAttributePtr*|列を含むテーブルのスキーマです。 列が式である場合、または列がビューの一部である場合、戻り値は実装によって定義されます。 データソースでスキーマがサポートされていない場合、またはスキーマ名を特定できない場合は、空の文字列が返されます。 この VARCHAR レコードフィールドは、128文字に制限されていません。|  
+|SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|WHERE 句で列を使用できない場合は SQL_PRED_NONE します。 (これは、ODBC 2 の SQL_UNSEARCHABLE 値と同じです。*x*)<br /><br /> WHERE 句で列を使用できるが、LIKE 述語でのみ使用できる場合は SQL_PRED_CHAR します。 (これは、ODBC 2 の SQL_LIKE_ONLY 値と同じです。*x*)<br /><br /> WHERE 句で列を使用できるかどうかを SQL_PRED_BASIC します。ただし、のようにすべての比較演算子を使用できます。 (これは、ODBC 2 の SQL_EXCEPT_LIKE 値と同じです。*x*)<br /><br /> 任意の比較演算子を持つ WHERE 句で列を使用できるかどうかを SQL_PRED_SEARCHABLE します。<br /><br /> SQL_LONGVARCHAR 型の列と SQL_LONGVARBINARY は通常 SQL_PRED_CHAR を返します。|  
+|SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|列を含むテーブルの名前です。 列が式である場合、または列がビューの一部である場合、戻り値は実装によって定義されます。<br /><br /> テーブル名を特定できない場合は、空の文字列が返されます。|  
+|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|SQL データ型を示す数値です。<br /><br /> *Columnnumber*が0の場合、可変長のブックマークに対して SQL_BINARY が返され、固定長のブックマークに対して SQL_INTEGER が返されます。<br /><br /> Datetime および interval データ型の場合、このフィールドには、SQL_DATETIME または SQL_INTERVAL の詳細データ型が返されます。 (詳細については、「付録 D: データ型」の「[データ型の識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)」を参照してください。<br /><br /> この情報は、IRD の SQL_DESC_TYPE レコードフィールドから返されます。 **注:** ODBC 2 に対して機能します。*x*ドライバーでは、代わりに SQL_DESC_CONCISE_TYPE を使用します。|  
+|SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|データソースに依存するデータ型の名前。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、"CHAR () FOR BIT DATA" などです。<br /><br /> 型が不明な場合は、空の文字列が返されます。|  
+|SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED または SQL_UNNAMED。 IRD の SQL_DESC_NAME フィールドに列の別名または列の名前が含まれている場合は SQL_NAMED が返されます。 列名または列の別名がない場合は、SQL_UNNAMED が返されます。<br /><br /> この情報は、IRD の SQL_DESC_UNNAMED レコードフィールドから返されます。|  
+|SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|列が符号なし (または数値ではない) の場合に SQL_TRUE します。<br /><br /> 列が署名されている場合は SQL_FALSE します。|  
+|SQL_DESC_UPDATABLE (ODBC 1.0)|*NumericAttributePtr*|列は、定義されている定数の値によって記述されます。<br /><br /> SQL_ATTR_READONLY SQL_ATTR_WRITE SQL_ATTR_READWRITE_UNKNOWN<br /><br /> SQL_DESC_UPDATABLE は、ベーステーブルの列ではなく、結果セットの列の更新可能性について説明します。 結果セットの列の基になるベース列の更新可能性は、このフィールドの値と異なる場合があります。 列を更新できるかどうかは、データ型、ユーザー権限、および結果セット自体の定義に基づいて決まります。 列が更新可能かどうかが不明な場合は、SQL_ATTR_READWRITE_UNKNOWN が返されます。|  
   
- **SQLColAttribute**拡張可能な代替です**SQLDescribeCol**します。 **SQLDescribeCol** ANSI 89 SQL ベースの記述子の情報の固定セットを返します。 **SQLColAttribute**より広範な ANSI sql-92 と DBMS ベンダーの拡張機能で使用できる記述子情報にアクセスできるようにします。  
+ **Sqlcolattribute**は、 **SQLDescribeCol**の拡張可能な代替手段です。 **SQLDescribeCol**は、ANSI-89 SQL に基づいて固定された記述子情報のセットを返します。 **Sqlcolattribute**を使用すると、ANSI SQL-92 および DBMS ベンダーの拡張機能で利用可能な、より広範な記述子情報セットにアクセスできます。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|バッファーを結果セット内の列にバインドします。|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|ステートメントの処理をキャンセル|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|結果セット内の列に関する情報を返す|[SQLDescribeCol 関数](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|データのブロックをフェッチしています。 または、結果をスクロールの設定|[SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|複数行のデータをフェッチしています|[SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|結果セットの列に関する情報を返す|[SQLDescribeCol 関数](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
+|データのブロックのフェッチまたは結果セットのスクロール|[SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|複数行のデータのフェッチ|[SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)|  
   
 ## <a name="example"></a>例  
- 次のサンプル コードでは、ハンドルと接続は解放されません。 参照してください[SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)、 [ODBC のサンプル プログラム](../../../odbc/reference/sample-odbc-program.md)、および[SQLFreeStmt 関数](../../../odbc/reference/syntax/sqlfreestmt-function.md)ハンドルおよびステートメントを解放するコード サンプルについてはします。  
+ 次のサンプルコードでは、ハンドルと接続は解放されません。 ハンドルとステートメントを解放するコードサンプルについては、「 [Sqlfreehandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)」、「[サンプル ODBC プログラム](../../../odbc/reference/sample-odbc-program.md)」、および「 [SQLFreeStmt 関数](../../../odbc/reference/syntax/sqlfreestmt-function.md)」を参照してください。  
   
 ```cpp  
 // SQLColAttibute.cpp  
@@ -307,5 +307,5 @@ int main() {
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)   
+ [ODBC ヘッダーファイル](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC のサンプル プログラム](../../../odbc/reference/sample-odbc-program.md)

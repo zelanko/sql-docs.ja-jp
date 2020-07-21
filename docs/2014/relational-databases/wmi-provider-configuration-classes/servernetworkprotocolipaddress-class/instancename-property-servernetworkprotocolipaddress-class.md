@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 79637e9f891c70a79e5388a4932957cbff8377f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4de61dbbdb123930365a0a5d62974a9e84738386
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62643389"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059828"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName プロパティ (ServerNetworkProtocolIPAddress クラス)
-  サーバー ネットワーク プロトコルがインストールされている [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前を取得します。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サーバーネットワークプロトコルがインストールされているのインスタンスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,16 +35,16 @@ object
 .InstanceName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  [ServerNetworkProtocolIPAdress クラス](servernetworkprotocolipaddress-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

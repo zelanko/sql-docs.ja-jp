@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 293e60f3-15e3-4258-b73a-8baabe15c760
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a868aafff6d9bd389671544b5f1898e82707d933
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774294"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930921"
 ---
 # <a name="manage-checkins"></a>チェックインの管理
   ソース管理の対象ファイルに加えた変更を他のユーザーが利用できるようにするには、そのファイルをチェックインする必要があります。 ファイルをチェックインすると、作成したバージョンがソース管理プロバイダーにコピーされ、それがファイルの最新バージョンになり、適切な権限を持ったユーザーからの利用が可能になります。  
   
- 使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ファイルをチェックインします。 ソース管理ストアを定期的に更新する必要があり、しかも一連のファイルに対する管理を継続しなければならない場合は、チェックインしたファイルをチェックアウト状態のままにするように設定することができます。  
+ を使用して [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ファイルをチェックインします。 ソース管理ストアを定期的に更新する必要があり、しかも一連のファイルに対する管理を継続しなければならない場合は、チェックインしたファイルをチェックアウト状態のままにするように設定することができます。  
   
  このトピックでは、次の内容について紹介します。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62774294"
 |[変更されたファイルの一覧表示](../../2014/database-engine/view-a-list-of-modified-files.md)|修正が加えられているファイルの一覧を表示する方法、および作業の終了時にそれらのファイルを一度にチェックインする方法を説明します。|  
 |[チェックインされているファイルの編集](../../2014/database-engine/edit-checked-in-files.md)|チェックアウトしていないファイルを修正できるように [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境を構成する方法を説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チェックアウトの管理](../../2014/database-engine/manage-checkouts.md)  
   
   

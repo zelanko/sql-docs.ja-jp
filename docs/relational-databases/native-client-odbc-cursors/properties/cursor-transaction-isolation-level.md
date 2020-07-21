@@ -1,5 +1,5 @@
 ---
-title: カーソルのトランザクション分離レベル |Microsoft Docs
+title: カーソルトランザクション分離レベル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,23 +14,21 @@ helpviewer_keywords:
 - ODBC cursors, isolation levels
 - row versioning [SQL Server], ODBC
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ae4ffc9b3a9c0d8122fb46ae9db215bf1560396
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 39dafa9cfde7f11b39e83596929189accb24eae8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078840"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998986"
 ---
 # <a name="cursor-transaction-isolation-level"></a>カーソルのトランザクション分離レベル
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  カーソルのロック動作全体は、コンカレンシー属性とクライアントが設定したトランザクション分離レベルの相互作用の影響を受けます。 トランザクション分離レベルを使用して、ODBC クライアントの設定、 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION または SQL_COPT_SS_TXN_ISOLATION 属性。 特定のカーソル環境のロック動作は、コンカレンシーのロック動作とトランザクション分離レベルのオプションを組み合わせることによって決まります。  
+  カーソルのロック動作全体は、コンカレンシー属性とクライアントが設定したトランザクション分離レベルの相互作用の影響を受けます。 ODBC クライアントでは、 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION または SQL_COPT_SS_TXN_ISOLATION 属性を使用してトランザクション分離レベルを設定します。 特定のカーソル環境のロック動作は、コンカレンシーのロック動作とトランザクション分離レベルのオプションを組み合わせることによって決まります。  
   
- 次のカーソルのトランザクション分離レベルがサポートされている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー。  
+ Native Client ODBC ドライバーでは、次のカーソルトランザクション分離レベルがサポートされてい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
 -   READ COMMITTED (SQL_TXN_READ_COMMITTED)  
   
@@ -42,9 +40,9 @@ ms.locfileid: "68078840"
   
 -   SNAPSHOT (SQL_TXN_SS_SNAPSHOT)  
   
- ODBC API を別のトランザクション分離レベルを指定しますではサポートされていません[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー。  
+ ODBC API では、追加のトランザクション分離レベルが指定されていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または Native CLIENT ODBC ドライバーではサポートされていないことに注意して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カーソルのプロパティ](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ドキュメント マップの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: ドキュメント マップの作成 (レポート ビルダー) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65d4566a7337d25a16f23eb8411e4338dabf7af0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c6f1d18c8559625c6e58b45b4e9810ed29e0ef28
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581569"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082286"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
 
@@ -26,7 +26,7 @@ ms.locfileid: "65581569"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> ドキュメント マップと表示拡張機能  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> ドキュメント マップと表示拡張機能  
  ドキュメント マップは、HTML 表示拡張機能 (プレビュー、レポート ビューアーなど) で使用します。 他の表示拡張機能では、異なる手段でドキュメント マップが表示されます。  
   
 -   PDF では、ドキュメント マップは [しおり] ペインとして表示されます。  
@@ -108,9 +108,9 @@ ms.locfileid: "65581569"
 4.  Web ポータルで URL を貼り付けてから、Enter キーを押します。 レポートが実行され、ドキュメント マップが非表示になります。  
   
 > [!NOTE]  
->  サンプル レポートをダウンロードする方法の詳細については、「 [レポート ビルダーおよびレポート デザイナーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
+>  サンプル レポートをダウンロードする方法の詳細については、「 [レポート ビルダーおよびレポート デザイナーのサンプル レポート](https://social.technet.microsoft.com/wiki/contents/articles/1093.reporting-services-samples-on-codeplex-sql-server-reporting-services-ssrs.aspx)」を参照してください。  
 >   
->  詳細については、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「URL アクセス」を参照してください。  
+  >  詳細については、[URL アクセス](../url-access-ssrs.md)に関するページを参照してください。 
 
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

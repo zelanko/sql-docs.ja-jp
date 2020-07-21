@@ -1,6 +1,6 @@
 ---
-title: Parallel Data Warehouse の T-SQL 言語要素 |Microsoft Docs
-description: T-SQL 言語要素の分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+title: T-SQL 言語要素
+description: 分析プラットフォームシステム (APS) の t-sql 言語要素 SQL Server 並列データウェアハウス (PDW)。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,33 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0f019599e5dde2759da9f1e8f94e71b2fe2b9c9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 148dc3033fdcf0fe9b5e86f4e3efa69717c32dfd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959940"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74399833"
 ---
-# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Parallel Data Warehouse の T-SQL 言語要素
-T-SQL 言語要素の分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Parallel Data Warehouse の t-sql 言語要素
+分析プラットフォームシステム (APS) の t-sql 言語要素 SQL Server 並列データウェアハウス (PDW)。
 
-## <a name="core-elements"></a>主要な要素
+## <a name="core-elements"></a>コア要素
 * [構文表記規則](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-* [オブジェクトの名前付け規則](../relational-databases/databases/database-identifiers.md)
+* [オブジェクト名の規則](../relational-databases/databases/database-identifiers.md)
 * [予約済みキーワード](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [照合順序](https://msdn.microsoft.com/library/ff848763.aspx)
-* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [コメント](../t-sql/language-elements/comment-transact-sql.md)
 * [定数](../t-sql/data-types/constants-transact-sql.md)
 * [データ型](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
+* [式](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [IDENTITY プロパティの代替手段](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
-## <a name="batches-control-of-flow-and-variables"></a>バッチ、フローの制御、および変数
+## <a name="batches-control-of-flow-and-variables"></a>バッチ、フロー制御、および変数
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
 * [BREAK](../t-sql/language-elements/break-transact-sql.md)
 * [DECLARE @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
@@ -44,7 +45,7 @@ T-SQL 言語要素の分析プラットフォーム System (APS) SQL Server 並�
 * [TRY...CATCH](../t-sql/language-elements/try-catch-transact-sql.md)
 * [WHILE](../t-sql/language-elements/while-transact-sql.md)
 
-## <a name="operators"></a>演算子
+## <a name="operators"></a>オペレーター
 * [+ (加算)](../t-sql/language-elements/add-transact-sql.md)
 * [+ (文字列連結)](../t-sql/language-elements/string-concatenation-transact-sql.md)
 * [- (負号)](../t-sql/language-elements/unary-operators-negative.md)
@@ -57,8 +58,8 @@ T-SQL 言語要素の分析プラットフォーム System (APS) SQL Server 並�
 * [= (等しい)](../t-sql/language-elements/equals-transact-sql.md)
 * [> (より大きい)](../t-sql/language-elements/greater-than-transact-sql.md)
 * [< (より小さい)](../t-sql/language-elements/less-than-transact-sql.md)
-* [> = (優れた以上)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
-* [< = (に等しいまたはそれよりも小さい)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
+* [>= (以上)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [<= (以下)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (等しくない)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (等しくない)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
@@ -73,7 +74,7 @@ T-SQL 言語要素の分析プラットフォーム System (APS) SQL Server 並�
 ### <a name="bitwise-operators"></a>ビットごとの演算子
 * [& (ビット演算 AND)](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [| (ビットごとの OR)](../t-sql/language-elements/bitwise-or-transact-sql.md)
-* [^ (ビット演算子排他的 OR)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
+* [^ (ビットごとの排他的 OR)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
 * [~ (ビット演算子 NOT)](../t-sql/language-elements/bitwise-not-transact-sql.md)
 * [^= (ビットごとの排他的 OR 代入)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
 * [|= (ビットごとの OR 代入)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
@@ -274,8 +275,8 @@ T-SQL 言語要素の分析プラットフォーム System (APS) SQL Server 並�
 * [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
-## <a name="next-steps"></a>次の手順
-参照の詳細については、次を参照してください。 [T-SQL ステートメント](tsql-statements.md)と[T-SQL システム ビュー](tsql-system-views.md)します。
+## <a name="next-steps"></a>次のステップ
+詳細については、「 [t-sql ステートメント](tsql-statements.md)と[t-sql システムビュー](tsql-system-views.md)」を参照してください。
 
 <!--Image references-->
 

@@ -17,21 +17,21 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 570ddcb0ebe31f5aaf6a7648060a34cdf4061412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 038976b84b19db44f8eec771ddd3ea6341d59d57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753103"
 ---
 # <a name="create-nonclustered-indexes"></a>非クラスター化インデックスの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して非クラスター化インデックスを作成できます。 非クラスター化インデックスは、テーブルに格納されているデータとは別個の、選択された 1 つまたは複数の列を並べ替えるインデックス構造です。 非クラスター化インデックスを使用すると、基になるテーブルを検索するよりも迅速にデータを検索できるようになります。クエリの結果が非クラスター化インデックスのデータのみによって得られたり、非クラスター化インデックスによって基になるテーブル内の行を [!INCLUDE[ssDE](../../includes/ssde-md.md)] に対して指定できたりする場合があります。 一般に、非クラスター化インデックスは、クラスター化インデックスで対応できない、頻繁に使用されるクエリのパフォーマンスを向上させたり、クラスター化インデックスのないテーブル (ヒープと呼ばれます) 内の行を探すために作成します。 1 つのテーブルまたはインデックス付きビューに複数の非クラスター化インデックスを作成できます。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Implementations"></a> 一般的な実装  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 一般的な実装  
  非クラスター化インデックスは、次のように実装されます。  
   
 -   **UNIQUE 制約**  
@@ -46,12 +46,12 @@ ms.locfileid: "67898603"
   
      非クラスター化インデックスは、ビューで一意なクラスター化インデックスが作成されるまで作成できません。 詳細については、「 [インデックス付きビューの作成](../../relational-databases/views/create-indexed-views.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>テーブル デザイナーを使用して非クラスター化インデックスを作成するには  
   
@@ -73,8 +73,6 @@ ms.locfileid: "67898603"
   
 9. **ファイル** メニューの **テーブル名**_の保存_をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>オブジェクト エクスプ ローラーを使用して非クラスター化インデックスを作成するには  
   
 1.  オブジェクト エクスプローラーで、非クラスター化インデックスを作成するテーブルが格納されているデータベースをプラス記号をクリックして展開します。  
@@ -95,7 +93,7 @@ ms.locfileid: "67898603"
   
 9. **[新しいインデックス]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-nonclustered-index-on-a-table"></a>テーブルに非クラスター化インデックスを作成するには  
   

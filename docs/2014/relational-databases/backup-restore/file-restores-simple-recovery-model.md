@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ed48f48f531e727de5d6e1403ef47f5399f874d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62921827"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958057"
 ---
 # <a name="file-restores-simple-recovery-model"></a>ファイルの復元 (単純復旧モデル)
   このトピックは、1 つ以上の読み取り専用セカンダリ ファイル グループが含まれている単純復旧モデルのデータベースのみに関連しています。  
@@ -50,7 +49,7 @@ ms.locfileid: "62921827"
   
 
   
-##  <a name="Overview"></a> 単純復旧モデルでのファイルとファイル グループの復元の概要  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 単純復旧モデルでのファイルとファイル グループの復元の概要  
  ファイル復元のシナリオは、次に示すように、適切なデータをコピーし、ロールフォワードして、復旧する単一の復元シーケンスで構成されます。  
   
 1.  破損した各ファイルを最新のファイル バックアップから復元します。  
@@ -74,7 +73,7 @@ ms.locfileid: "62921827"
   
      WITH RECOVERY **;**  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;単純復旧モデル&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62921827"
   
  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **ファイルおよびファイル グループを復元するには**  
   
 -   [既存のファイルにファイルとファイル グループを復元する &#40;SQL Server&#41;](restore-files-and-filegroups-over-existing-files-sql-server.md)  
@@ -95,7 +94,7 @@ ms.locfileid: "62921827"
   
   
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [バックアップと復元: 相互運用性と共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差分バックアップ &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [ファイルの完全バックアップ &#40;SQL Server&#41;](full-file-backups-sql-server.md)   

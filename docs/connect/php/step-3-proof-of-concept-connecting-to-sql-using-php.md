@@ -1,5 +1,6 @@
 ---
-title: 'ステップ 3: PHP を使用した SQL への接続を概念実証する | Microsoft Docs'
+title: 手順 3:PHP を使用して SQL に接続する
+description: 手順 3 は概念実証であり、PHP を使用して SQL Server に接続する方法がわかります。 基本的な例で、データの選択と挿入が示されます。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,22 +9,22 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014801"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528586"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>ステップ 3: PHP を使用した SQL への接続を概念実証する
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>手順 3:PHP を使用した SQL への接続を概念実証する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>手順 1: 接続する  
+## <a name="step-1--connect"></a>手順 1:接続する  
   
   
-この**Openconnection**関数は、後続のすべての関数の先頭付近で呼び出されます。  
+**OpenConnection** 関数は、後に続くすべての関数の上部近くで呼び出されます。  
   
   
 ```php 
@@ -45,9 +46,9 @@ ms.locfileid: "68014801"
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>手順 2: クエリを実行する  
+## <a name="step-2--execute-query"></a>手順 2:クエリの実行  
   
-[Sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php)関数を使用すると、SQL Database に対するクエリから結果セットを取得できます。 この関数は、基本的にクエリと接続オブジェクトを受け取り、 [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)を使用して反復処理できる結果セットを返します。  
+[sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) 関数は、SQL Database に対するクエリから結果セットを取得するために使用できます。 この関数では基本的に任意のクエリと接続オブジェクトを受け入れ、[sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php) を使用して反復処理できる結果セットを返します。  
   
 ```php  
     function ReadData()  
@@ -77,10 +78,9 @@ ms.locfileid: "68014801"
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入する  
+## <a name="step-3--insert-a-row"></a>手順 3:行を挿入する  
   
-この例では、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)の値からアプリケーションを保護するパラメーターを渡す方法を確認します。    
-  
+この例では、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、パラメーターを渡す方法について説明します。 パラメーター値により、アプリケーションは [SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)から保護されます。
   
 ```php 
     function InsertData()  
@@ -109,16 +109,16 @@ ms.locfileid: "68014801"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>手順 4: トランザクションをロールバックする  
+## <a name="step-4--roll-back-a-transaction"></a>手順 4:トランザクションをロールバックする  
   
   
-このコード例では、次のようなトランザクションの使用方法を示します。  
+このコード例は、以下のトランザクションの使用について示します。  
   
--トランザクションを開始します  
+\- トランザクションの開始  
   
--データの行を挿入し、別のデータ行を更新します  
+\- データ行の挿入、別のデータ行の更新  
   
--挿入と更新が正常に完了した場合はトランザクションをコミットし、そのうちの1つがトランザクションをロールバックしなかった場合は、  
+\- 挿入と更新が正常に完了した場合はトランザクションをコミットし、それらのいずれかがなかった場合はそのトランザクションをロールバックする  
   
   
 ```php 

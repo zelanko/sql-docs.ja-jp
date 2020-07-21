@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96b3628576e430c2a9d7b5ab7211b3b42229af6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035757"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024424"
 ---
-# <a name="maintenance-cleanup-task-maintenance-plan"></a>[メンテナンス クリーンアップ タスク] \(メンテナンス プラン)
+# <a name="maintenance-cleanup-task-maintenance-plan"></a>[メンテナンス クリーンアップ タスク] (メンテナンス プラン)
   **[メンテナンス クリーンアップ タスク]** を使用すると、メンテナンス プランで作成されたテキスト レポートやデータベースのバックアップ ファイルなど、メンテナンス プランに関連する古いファイルを削除できます。  
   
 > [!NOTE]  
 >  メンテナンス クリーンアップ タスクでは、指定したディレクトリのサブフォルダーにあるファイルは自動的に削除されません。 この機能によって、メンテナンス クリーンアップ タスクを使ってファイルを削除するなど、悪意のある攻撃を受ける危険性を最小限に抑えることができます。 直下のサブフォルダーにあるファイルを削除する場合は、 **[直下のサブフォルダーを含める]** を選択する必要があります。  
   
-## <a name="options"></a>および  
- **接続**  
+## <a name="options"></a>オプション  
+ **Connection**  
  現在の接続を表示します。  
   
- **新規**  
+ **[新規作成]**  
  このタスクを実行するときに使用する新しいサーバー接続を作成します。 **[新しい接続]** ダイアログ ボックスについては、後で説明します。  
   
  **[バックアップ ファイル]**  
@@ -71,13 +70,13 @@ ms.locfileid: "63035757"
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
   
 ## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
- **[接続名]**  
+ **接続名**  
  新しい接続の名前を入力します。  
   
  **[サーバー名の選択または入力]**  
  このタスクを実行するときに接続するサーバーを選択します。  
   
- **[...]**  
+ **...**  
  利用可能なサーバーを一覧表示します。  
   
  **[サーバーにログオンするための情報の入力]**  
@@ -92,10 +91,10 @@ ms.locfileid: "63035757"
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
- **Password**  
+ **パスワード**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
 ## <a name="see-also"></a>参照  
- [のオブジェクト エクスプローラーの](maintenance-plans.md)  
+ [メンテナンス プラン](maintenance-plans.md)  
   
   

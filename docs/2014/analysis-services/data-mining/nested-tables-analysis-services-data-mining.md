@@ -1,5 +1,5 @@
 ---
-title: 入れ子になったテーブル (Analysis Services - データ マイニング) |Microsoft Docs
+title: 入れ子になったテーブル (Analysis Services データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdd83e0a0d24a67fb5389b5c836212bffb3fa424
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083246"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520940"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>入れ子になったテーブル (Analysis Services - データ マイニング)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データを、ケース テーブル内の一連のケースとしてデータ マイニング アルゴリズムに入力する必要があります。 しかし、1 行のデータですべてのケースを表すことはできません。 たとえば、1 つのテーブルに顧客情報、別のテーブルに顧客の購入記録が含まれている 2 つのテーブルから、ケースが派生している場合があります。 顧客情報テーブルの 1 人の顧客が顧客購入記録テーブルに複数の項目を持っている場合、1 行でデータを表すことが難しくなります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 *入れ子になったテーブル*を使用して、このようなケースを扱うための独自の方法が用意されています。 次の図は、入れ子になったテーブルの概念を示しています。  
+  では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、データをケーステーブル内に含まれる一連のケースとしてデータマイニングアルゴリズムに渡す必要があります。 しかし、1 行のデータですべてのケースを表すことはできません。 たとえば、1 つのテーブルに顧客情報、別のテーブルに顧客の購入記録が含まれている 2 つのテーブルから、ケースが派生している場合があります。 顧客情報テーブルの 1 人の顧客が顧客購入記録テーブルに複数の項目を持っている場合、1 行でデータを表すことが難しくなります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]*入れ子になったテーブル*を使用して、これらのケースを処理するための一意の方法を提供します。 次の図は、入れ子になったテーブルの概念を示しています。  
   
- ![入れ子になったテーブルを使用して 2 つのテーブルが結合](../media/nested-tables.gif "入れ子になったテーブルを使用して 2 つのテーブルの結合")  
+ ![入れ子になったテーブルを使用して結合された 2 つのテーブル](../media/nested-tables.gif "入れ子になったテーブルを使用して結合された 2 つのテーブル")  
   
  この図では、親テーブルである最初のテーブルに顧客に関する情報が含まれ、各顧客の一意の識別子が付けられています。 子テーブルである 2 番目のテーブルには、各顧客の購入記録が含まれています。 子テーブルの購入記録は、一意の識別子である **CustomerKey** 列によって親テーブルに関連付けられています。 図の 3 番目のテーブルは、2 つのテーブルが結合されていることを示します。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66083246"
  データ マイニング拡張機能 (DMX) または分析管理オブジェクト (AMO) を使用して、入れ子になったテーブルをプログラムによって作成できます。または、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング ウィザードおよびデータ マイニング デザイナーを使用できます。  
   
 ## <a name="using-nested-table-columns-in-a-mining-model"></a>マイニング モデルでの入れ子になったテーブル列の使用  
- ケース テーブルのキーは多くの場合、顧客 ID、製品名、連続する日付など、テーブルの行を一意に識別するデータです。 を使用して、このようなケースを扱うための独自の方法が用意されています。 しかし、入れ子になったテーブルのキーは、そのリレーショナル キー (外部キー) ではなく、モデル化する属性を表す列であるのが一般的です。  
+ ケース テーブルのキーは多くの場合、顧客 ID、製品名、連続する日付など、テーブルの行を一意に識別するデータです。 . しかし、入れ子になったテーブルのキーは、そのリレーショナル キー (外部キー) ではなく、モデル化する属性を表す列であるのが一般的です。  
   
  たとえば、ケース テーブルに注文が含まれていて、入れ子になったテーブルに注文の品目が含まれている場合、入れ子になったテーブルに格納されている品目間の関係を (ケース テーブルに格納されている) 複数の注文にまたがってモデル化することも考えられます。 したがって、入れ子になったテーブル **Items** がケース テーブル **Orders** にリレーショナル キー **OrderID**で結合されていても、 **OrderID** を入れ子になったテーブルのキーとして使用するべきではありません。 この場合は、モデル化するデータが **Items** 列に含まれているため、代わりにその列を入れ子になったテーブルのキーとして選択します。 ケース テーブルと入れ子になったテーブルの間のリレーションシップはデータ ソース ビュー定義によって既に確立されているため、ほとんどの場合、マイニング モデルで **OrderID** を無視しても問題にはなりません。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66083246"
 ### <a name="using-non-key-nested-columns-from-a-nested-table"></a>入れ子になったテーブルのキー以外の入れ子になった列の使用  
  ケース テーブルと入れ子になったテーブルの間の結合を定義し、入れ子になったテーブルのキーとして使用する興味深い一意の属性を含む列を選択したら、入れ子になったテーブルのその他の列を追加して、モデルへの入力として使用することができます。 入れ子になったテーブルのすべての列を、入力、予測と入力、または予測のみに使用できます。  
   
- たとえば入れ子になったテーブルに、**Product**、**ProductQuantity** **ProductPrice** の各列が含まれていて、入れ子になったテーブルのキーとして **Product** を選択した場合に、**ProductQuantity** をマイニング構造に追加して入力として使用することができます。  
+ たとえば入れ子になったテーブルに、**Product**、**ProductQuantity****ProductPrice** の各列が含まれていて、入れ子になったテーブルのキーとして **Product** を選択した場合に、**ProductQuantity** をマイニング構造に追加して入力として使用することができます。  
   
 ## <a name="filtering-nested-table-data"></a>入れ子になったテーブルのデータのフィルター処理  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データ マイニング モデルのトレーニング用やテスト用のデータに対するフィルターを作成できます。 フィルターを使用すると、モデルの構成に影響を与えたり、ケースのサブセットでモデルをテストしたりできます。 入れ子になったテーブルにフィルターを適用することもできます。 ただし、入れ子になったテーブルで使用できる構文には制限があります。  
@@ -65,8 +64,8 @@ ms.locfileid: "66083246"
   
  モデル フィルターの作成と使用の方法の詳細については、「[マイニング モデルのフィルター選択 &#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>参照  
+ [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング構造 (Analysis Services - データ マイニング)](mining-structures-analysis-services-data-mining.md)  
   
   

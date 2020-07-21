@@ -12,15 +12,14 @@ helpviewer_keywords:
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 78377fe5eaf5b9f0639533f17fa7a45cca69a537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 392b52142992baad8761ec1c25689db6726c8d67
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62833661"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438399"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 接続マネージャー
   MSMQ 接続マネージャーを使用すると、Message Queuing (MSMQ) を使用するメッセージ キューにパッケージが接続できるようになります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれるメッセージ キュー タスクでは、MSMQ 接続マネージャーを使用します。  
@@ -37,8 +36,8 @@ ms.locfileid: "62833661"
   
 |[キューの種類]|パスのサンプル|  
 |----------------|-----------------|  
-|パブリック|\<コンピューター名>\\<キュー名\>|  
-|プライベート|\<コンピューター名>\Private$\\<キュー名\>|  
+|パブリック|\<computer name>\\<キュー名\>|  
+|プライベート|\<computer name>\ プライベート $ \\<キュー名\>|  
   
  ピリオド (.) を使用してローカル コンピューターを表すことができます。  
   
@@ -49,8 +48,8 @@ ms.locfileid: "62833661"
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
-## <a name="see-also"></a>参照  
- [メッセージ キュー タスク](../control-flow/message-queue-task.md)   
+## <a name="see-also"></a>関連項目  
+ [メッセージキュータスク](../control-flow/message-queue-task.md)   
  [Integration Services &#40;SSIS&#41; の接続](integration-services-ssis-connections.md)  
   
   

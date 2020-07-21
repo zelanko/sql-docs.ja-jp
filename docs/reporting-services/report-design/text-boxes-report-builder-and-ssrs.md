@@ -1,5 +1,5 @@
 ---
-title: テキスト ボックス (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: テキスト ボックス (レポート ビルダー) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2c4ad1faa149a384e42c52e7bbd8437dfc03d6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: db8676a7b00b3cfbf70bca4fecee7539437e1bc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573730"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080871"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>テキスト ボックス (レポート ビルダーおよび SSRS)
   テキスト ボックスといえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint のように領域にテキストを含むスタンド アロンのボックスを思い浮かべると思います。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、同じように、タイトル、説明、ラベルの静的なテキストや、式に基づく動的なテキストを表示できます。 ただし、テーブルまたはマトリックス (Tablix データ領域) の各セルにはテキスト ボックスがあり、レポート内のスタンドアロン テキスト ボックスと同じ方法で書式設定することもできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "65573730"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a> テキスト ボックスの拡張と圧縮  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> テキスト ボックスの拡張と圧縮  
  既定では、テキスト ボックスのサイズは固定されています。 テキスト ボックスをその内容に応じて縦に縮小または拡張されるようにすることができます。 詳細については、「 [テキスト ボックスの拡大または縮小 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="rotating-a-text-box"></a>テキスト ボックスの回転  
@@ -53,7 +53,7 @@ ms.locfileid: "65573730"
   
  最初に、「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」のテキストの回転に関するセクション、および「[テキスト ボックスの方向の設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="HowTo"></a> 操作方法に関するトピック  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作方法に関するトピック  
  [テキスト ボックスの追加、移動、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  

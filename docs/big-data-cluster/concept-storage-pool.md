@@ -5,22 +5,22 @@ description: この記事では、SQL Server 2019 ビッグ データ クラス�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 58e6f16a088d6dc6c1fc6bd32297e7bd698acbbf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.openlocfilehash: 114296d0bad77c3bbbb088feed13bd6a4bd5a074
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958656"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "70009329"
 ---
-# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>記憶域プールとは (SQL Server ビッグ データ クラスター)
+# <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>記憶域プールとは ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) での "*SQL Server 記憶域プール*" の役割について説明します。 以下のセクションでは、SQL 記憶域プールのアーキテクチャと機能について説明します。
+この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]での *SQL Server 記憶域プール*の役割について説明します。 以下のセクションでは、SQL 記憶域プールのアーキテクチャと機能について説明します。
 
 ## <a name="storage-pool-architecture"></a>記憶域プールのアーキテクチャ
 
@@ -33,12 +33,12 @@ ms.locfileid: "67958656"
 記憶域ノードの役割は次のとおりです。
 
 - Spark を使用したデータ インジェスト。
-- HDFS でのデータ ストレージ (Parquet 形式)。 HDFS では、HDFS データが SQL ビッグ データ クラスター内のすべての記憶域ノードに分散されるため、データの永続性も提供されます。
+- HDFS のデータ ストレージ (Parquet および区切りテキスト形式)。 HDFS では、HDFS データが SQL ビッグ データ クラスター内のすべての記憶域ノードに分散されるため、データの永続性も提供されます。
 - HDFS と SQL Server エンドポイントを使用したデータ アクセス。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-SQL Server ビッグ データ クラスターの詳細については、次のリソースを参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] の詳細については、次のリソースを参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
-- [ワークショップ: Microsoft SQL Server ビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)
+- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] アーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

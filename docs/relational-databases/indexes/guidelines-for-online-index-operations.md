@@ -1,7 +1,7 @@
 ---
 title: オンライン インデックス操作のガイドライン | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dde42d927732e0209fed114e6d8d50451ab6379
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629615"
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 インデックス操作をオンラインで実行するときは、次のガイドラインに従ってください。  
 
@@ -84,7 +84,7 @@ SQL Server 2016 を実行するマルチプロセッサ コンピューターで
   
 S-Lock または Sch-M ロックはインデックス操作の最後のフェーズで保持されるので、BEGIN TRANSACTION...COMMIT ブロックなど、明示的なユーザー トランザクション内でのオンラインのインデックス操作を実行する場合は十分に注意してください。 この場合、ロックがトランザクションの最後まで保持され、その結果ユーザーのコンカレンシーが損なわれます。  
   
-インデックスをオンラインで再構築すると、 `MAX DOP > 1` オプションと `ALLOW_PAGE_LOCKS = OFF` オプションでの実行が許可されたときに断片化が増加する可能性があります。 詳細については、「[How It Works:Online Index Rebuild - Can Cause Increased Fragmentation (しくみ: オンラインでのインデックス再構築 - 断片化が増加する可能性)](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)」をご覧ください。  
+インデックスをオンラインで再構築すると、 `MAX DOP > 1` オプションと `ALLOW_PAGE_LOCKS = OFF` オプションでの実行が許可されたときに断片化が増加する可能性があります。 詳細については、「 [動作方法: オンラインでのインデックス再構築 - 断片化が増加する可能性](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)」を参照してください。  
   
 ## <a name="transaction-log-considerations"></a>トランザクション ログに関する注意点
 
@@ -93,7 +93,7 @@ S-Lock または Sch-M ロックはインデックス操作の最後のフェー
 ## <a name="resumable-index-considerations"></a>再開可能なインデックスに関する考慮事項
 
 > [!NOTE]
-> 再開可能なインデックス オプションは、SQL Server (SQL Server 2017 以降) (インデックスの再構築のみ) と SQL Database (CREATE INDEX およびインデックスの再構築) に該当します。 「[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)」 ([!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] で現在パブリック プレビュー) および「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。
+> インデックス作成とインデックス再構築の再開可能インデックス オプションは SQL Server と SQL Database で利用できます (インデックス再構築は SQL Server 2017 以降。インデックス作成は SQL Server 2019 でもサポートされています)。 「[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)」および「[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。
 
 再開可能なオンライン インデックスの作成または再構築を実行するときは、次のガイドラインが適用されます。
 

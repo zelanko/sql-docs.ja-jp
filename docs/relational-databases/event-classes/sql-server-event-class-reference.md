@@ -1,5 +1,6 @@
 ---
 title: SQL Server イベント クラスの参照 | Microsoft Docs
+description: SQL Server Profiler を使用して、SQL Server データベース エンジンのインスタンスで発生したイベントを記録します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 0f0fe567-e115-4ace-b63c-73dc3428c0f6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be602e61cfd34e8daf97200628df7fa3147c809a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b54c964f2bfb7be96f061a3b4eee5e59a9b5fefe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85791001"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server イベント クラスの参照
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで発生したイベントを記録できます。 記録されるイベントは、トレース定義におけるイベント クラスのインスタンスです。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]では、イベント クラスとそのイベント カテゴリが **[トレース ファイルのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブに表示されます。  
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスで発生したイベントを記録できます。 記録されるイベントは、トレース定義におけるイベント クラスのインスタンスです。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]では、イベント クラスとそのイベント カテゴリが **[トレース ファイルのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブに表示されます。  
   
  次の表は、イベント カテゴリとそのイベント クラスを示しています。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "68120458"
 |[Stored Procedures イベント カテゴリ](../../relational-databases/event-classes/stored-procedures-event-category.md) には、ストアド プロシージャの実行によって生成されるイベント クラスが含まれます。|[PreConnect:Completed イベント クラス](../../relational-databases/event-classes/preconnect-completed-event-class.md)<br /><br /> [PreConnect:Starting イベント クラス](../../relational-databases/event-classes/preconnect-starting-event-class.md)<br /><br /> [RPC:Completed イベント クラス](../../relational-databases/event-classes/rpc-completed-event-class.md)<br /><br /> [RPC Output Parameter イベント クラス](../../relational-databases/event-classes/rpc-output-parameter-event-class.md)<br /><br /> [RPC:Starting イベント クラス](../../relational-databases/event-classes/rpc-starting-event-class.md)<br /><br /> [SP:CacheHit イベント クラス](../../relational-databases/event-classes/sp-cachehit-event-class.md)<br /><br /> [SP:CacheInsert イベント クラス](../../relational-databases/event-classes/sp-cacheinsert-event-class.md)<br /><br /> [SP:CacheMiss イベント クラス](../../relational-databases/event-classes/sp-cachemiss-event-class.md)<br /><br /> [SP:CacheRemove イベント クラス](../../relational-databases/event-classes/sp-cacheremove-event-class.md)<br /><br /> [SP:Completed イベント クラス](../../relational-databases/event-classes/sp-completed-event-class.md)<br /><br /> [SP:Recompile イベント クラス](../../relational-databases/event-classes/sp-recompile-event-class.md)<br /><br /> [SP:Starting イベント クラス](../../relational-databases/event-classes/sp-starting-event-class.md)<br /><br /> [SP:StmtCompleted イベント クラス](../../relational-databases/event-classes/sp-stmtcompleted-event-class.md)<br /><br /> [SP:StmtStarting イベント クラス](../../relational-databases/event-classes/sp-stmtstarting-event-class.md)|  
 |[Transactions イベント カテゴリ](../../relational-databases/event-classes/transactions-event-category.md) には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーターのトランザクションの実行またはトランザクション ログへの書き込みによって生成されるイベント クラスが含まれます。|[DTCTransaction イベント クラス](../../relational-databases/event-classes/dtctransaction-event-class.md)<br /><br /> [SQLTransaction イベント クラス](../../relational-databases/event-classes/sqltransaction-event-class.md)<br /><br /> [TM:Begin Tran Completed イベント クラス](../../relational-databases/event-classes/tm-begin-tran-completed-event-class.md)<br /><br /> [TM:Begin Tran Starting イベント クラス](../../relational-databases/event-classes/tm-begin-tran-starting-event-class.md)<br /><br /> [TM:Commit Tran Completed イベント クラス](../../relational-databases/event-classes/tm-commit-tran-completed-event-class.md)<br /><br /> [TM:Commit Tran Starting イベント クラス](../../relational-databases/event-classes/tm-commit-tran-starting-event-class.md)<br /><br /> [TM:Promote Tran Completed イベント クラス](../../relational-databases/event-classes/tm-promote-tran-completed-event-class.md)<br /><br /> [TM:Promote Tran Starting イベント クラス](../../relational-databases/event-classes/tm-promote-tran-starting-event-class.md)<br /><br /> [TM:Rollback Tran Completed イベント クラス](../../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md)<br /><br /> [TM:Rollback Tran Starting イベント クラス](../../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md)<br /><br /> [TM:Save Tran Completed イベント クラス](../../relational-databases/event-classes/tm-save-tran-completed-event-class.md)<br /><br /> [TM:Save Tran Starting イベント クラス](../../relational-databases/event-classes/tm-save-tran-starting-event-class.md)<br /><br /> [TransactionLog イベント クラス](../../relational-databases/event-classes/transactionlog-event-class.md)|  
 |[TSQL イベント カテゴリ](../../relational-databases/event-classes/tsql-event-category.md) には、クライアントから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに渡された Transact-SQL ステートメントの実行によって生成されるイベント クラスが含まれます。|[Exec Prepared SQL イベント クラス](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)<br /><br /> [Prepare SQL イベント クラス](../../relational-databases/event-classes/prepare-sql-event-class.md)<br /><br /> [SQL:BatchCompleted イベント クラス](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)<br /><br /> [SQL:BatchStarting イベント クラス](../../relational-databases/event-classes/sql-batchstarting-event-class.md)<br /><br /> [SQL:StmtCompleted イベント クラス](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)<br /><br /> [SQL:StmtRecompile イベント クラス](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)<br /><br /> [SQL:StmtStarting イベント クラス](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)<br /><br /> [Unprepare SQL イベント クラス](../../relational-databases/event-classes/unprepare-sql-event-class.md)<br /><br /> [XQuery Static Type イベント クラス](../../relational-databases/event-classes/xquery-static-type-event-class.md)|  
-|[User-Configurable イベント カテゴリ](../../relational-databases/event-classes/user-configurable-event-category.md) には、ユーザーが定義できるイベント クラスが含まれています。|[User configurable イベント クラス](../../relational-databases/event-classes/user-configurable-event-class.md)|  
+|[User-Configurable イベント カテゴリ](../../relational-databases/event-classes/user-configurable-event-category.md) には、ユーザーが定義できるイベント クラスが含まれています。|[ユーザー構成可能イベント クラス](../../relational-databases/event-classes/user-configurable-event-class.md)|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

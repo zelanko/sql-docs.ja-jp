@@ -1,6 +1,6 @@
 ---
-title: '[エラー一覧] ウィンドウ (Management Studio) | Microsoft Docs'
-ms.custom: ''
+title: '[エラー一覧] ウィンドウ'
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - error list window
 - SQL Server Management Studio [SQL Server], error list window
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f7649875faf636d2bbc78834c13d4b5b1b99e72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e204585892fd71ff807361c75e703afcc6208d98
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063349"
 ---
 # <a name="error-list-window-management-studio"></a>[エラー一覧] ウィンドウ (Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[エラー一覧]** には、[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense コードによって生成された構文エラーとセマンティック エラーが表示されます。  
@@ -67,16 +66,16 @@ ms.locfileid: "66063440"
 > [!NOTE]  
 >  **[エラー一覧]** に表示されるのは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターからのエラーのみです。MDX、DMX、または XML/A エディターからのエラーは表示されません。 MDX、DMX、および XML/A のすべてのエラーは、それらのエディターの **[メッセージ]** タブに表示されます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[エラー一覧]** を開くと、次の列に情報が表示されます。  
   
  **[既定の順序]**  
  エントリの作成順を示す整数を表示します。  
   
- **[説明]**  
+ **説明**  
  エラー エントリのテキストを表示します。 説明文が長い場合には、追加の行に折り返されます。  
   
- **ファイル**  
+ **[最近使ったファイル]**  
  エラーを生成したスクリプト ファイルの名前を表示します。  
   
  **線**  

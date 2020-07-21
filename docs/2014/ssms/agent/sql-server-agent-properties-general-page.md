@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667a07744acf4b6d8b0dfa1e83adca738add0b4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058704"
 ---
-# <a name="sql-server-agent-properties-general-page"></a>[SQL Server エージェントのプロパティ]\([全般] ページ)
-  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの全般プロパティを表示したり、変更したりできます。  
+# <a name="sql-server-agent-properties-general-page"></a>[SQL Server エージェントのプロパティ] ([全般] ページ)
+  このページを使用すると、エージェントサービスの全般プロパティを表示および変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
-## <a name="options"></a>および  
- **[サービスの状態]**  
+## <a name="options"></a>オプション  
+ **サービスの状態**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの現在の状態を表示します。  
   
  **[予期しない停止時に SQL Server を自動的に再起動する]**  
@@ -32,10 +31,10 @@ ms.locfileid: "63245781"
  **[予期しない停止時に SQL Server エージェントを自動的に再起動する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが予期せず停止した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを再起動します。  
   
- **Filename**  
+ **/Db**  
  エラー ログのファイル名を指定します。  
   
- **[...]**  
+ **...**  
  エラー ログ ファイルを参照します。  
   
  **[実行トレース メッセージを含める]**  
@@ -48,7 +47,7 @@ ms.locfileid: "63245781"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってログ ファイルに書き込まれるメッセージの、Net Send 通知を受信するオペレーターの名前を入力します。  
   
 ## <a name="see-also"></a>参照  
- [演算子](operators.md)   
+ [通信](operators.md)   
  [SQL Server エージェント エラー ログ](sql-server-agent-error-log.md)  
   
   

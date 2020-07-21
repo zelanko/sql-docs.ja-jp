@@ -13,15 +13,15 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d144129f296a1e5c131bdc90364e3e2a969d3bdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d357ccd46daa402d43d66df76d4955f9dc6349d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048643"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751080"
 ---
 # <a name="multilinestring"></a>MultiLineString
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **MultiLineString** は、0 個以上の **geometry** または **geographyLineString** インスタンスのコレクションです。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString インスタンス  
@@ -66,8 +66,6 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
   
 2.  **MultiLineString** インスタンスを構成する 2 つの **LineString** インスタンスが内部で互いに重ならない。 **LineString** インスタンスは、有限数の接点のみで、互いにまたは他の **LineString** インスタンスと交差するか接することができます。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 次の例に、3 つの有効な **MultiLineString** インスタンスと 1 つの無効な **MultiLineString** インスタンスを示します。  
   
 ```sql  
@@ -80,7 +78,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 `@g4` は、2 番目の **LineString** インスタンスが最初の **LineString** インスタンスと内部で重なっているため、有効ではありません。 有限数の接点で接しています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、2 つの `geometry``MultiLineString` 要素を含む SRID 0 の単純な `LineString` インスタンスを作成しています。  
   
 ```sql  
@@ -99,7 +97,7 @@ SET @g.STSrid = 13;
 ## <a name="see-also"></a>参照  
  [STLength &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
- [MultiLineString](../../relational-databases/spatial/linestring.md)   
+ [LineString](../../relational-databases/spatial/linestring.md)   
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

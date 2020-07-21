@@ -8,29 +8,29 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5dc8e4283a8443c41be994745310114587712e3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d68d8675f6ddc703af982102a0017e7920790b72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110554"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749739"
 ---
-# <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker (SSISDB データベース)
+# <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/applies-to-version/sqlserver2017.md)]
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker を Scale Out 内の実行のインスタンスに追加します。
 
 ## <a name="syntax"></a>構文
 
 ```sql
-catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
+catalog.add_execution_worker [ @execution_id = ] execution_id, [ @workeragent_id = ] workeragent_id
 ```
 
 ## <a name="arguments"></a>引数

@@ -1,5 +1,6 @@
 ---
 title: Audit Logout イベント クラス | Microsoft Docs
+description: Audit Logout イベント クラスは、ユーザーが SQL Server からサインアウトしたことを示します。 この記事では Audit Logout イベント クラスのデータ列について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72a37ac98e6b4c557b06294c1d0ddeb1a3072356
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5848a29de18615da895572bede48014f9aecff2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726337"
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  **Audit Logout** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からログアウト (ログオフ) したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+  **Audit Logout** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からログアウト (ログオフ) したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  
   
 ## <a name="audit-logout-event-class-data-columns"></a>Audit Logout イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
@@ -49,7 +50,7 @@ ms.locfileid: "67897470"
 |**SessionLoginName**|**Nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
 |**StartTime**|**datetime**|使用可能な場合は関連する Audit Login イベントの StartTime。|14|はい|  
-|**成功**|**int**|1 = 成功。 0 = 失敗。 たとえば、値 1 は権限チェックの成功を示し、値 0 は失敗を示します。|23|はい|  
+|**Success**|**int**|1 = 成功。 0 = 失敗。 たとえば、値 1 は権限チェックの成功を示し、値 0 は失敗を示します。|23|はい|  
 |**Writes**|**bigint**|接続時にユーザーが実行した論理書き込み I/O の数です。|17|はい|  
 |**GroupID**|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
   

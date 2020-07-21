@@ -37,15 +37,15 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 881e474fb34edbb438d626a23dbaa507f86fb2b6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117343"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392870"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   バインドを作成し、リモート サービスとのメッセージ交換を開始するときに使用するセキュリティ資格情報を定義します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68117343"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE REMOTE SERVICE BINDING binding_name   
    [ AUTHORIZATION owner_name ]   
@@ -62,7 +62,9 @@ CREATE REMOTE SERVICE BINDING binding_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *binding_name*  
  作成するリモート サービス バインドの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。 *binding_name* は有効な **sysname** とする必要があります。  
   
@@ -78,7 +80,7 @@ CREATE REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  リモート サービスと通信するときに匿名認証を使用するかどうかを指定します。 ANONYMOUS を ON にすると匿名認証が使用され、リモート データベースでの操作は、**public** 固定データベース ロールのメンバーによる操作として実行されます。 ANONYMOUS を OFF にすると、リモート データベースでの操作は、そのデータベース固有のユーザーによる操作として実行されます。 この句を指定しない場合、既定値は OFF になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、リモート サービス バインドを使用して、新しいメッセージ交換に使用する証明書が検索されます。 *user_name* に関連付けられている証明の公開キーは、リモート サービスに送信されるメッセージの認証とセッション キーの暗号化に使用されます。その後、暗号化されたセッション キーを使用して、メッセージ交換が暗号化されます。 *user_name* の証明は、リモート サービスをホストするデータベースに格納されているユーザーの証明と対応している必要があります。  
   
  リモート サービス バインドは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの外部にある対象サービスと通信するサービスを開始する場合にのみ必要です。 開始サービスをホストするデータベースには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの外部にあるすべての対象サービスのリモート サービス バインドが含まれている必要があります。 ただし、対象サービスをホストするデータベースには、対象サービスと通信する開始サービスのリモート サービス バインドが含まれている必要はありません。 開始サービスと対象サービスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の同じインスタンス内にある場合、リモート サービス バインドは必要ありません。 ただし、TO SERVICE に指定された *service_name* とローカル サービスの名前が一致する場所にリモート サービス バインドが存在する場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではそのバインドが使用されます。  
@@ -94,7 +96,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  リモート サービス バインドは一時オブジェクトとして指定できません。 **#** で始まるリモート サービス バインド名は許可されますが、パーマネント オブジェクトになります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-remote-service-binding"></a>A. リモート サービス バインドを作成する  
  次の例では、サービス `//Adventure-Works.com/services/AccountsPayable` のバインドを作成します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、データベース プリンシパル `APUser` が所有する証明を使用してリモート サービスへの認証が行われ、リモート サービスとの間でセッション暗号化キーが交換されます。  

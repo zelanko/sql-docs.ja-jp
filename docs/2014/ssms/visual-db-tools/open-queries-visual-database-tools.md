@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a60950a079be98ed00bbf5f20b0f2024d4cda400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001225"
 ---
 # <a name="open-queries-visual-database-tools"></a>クエリを開く方法 (Visual Database Tools)
   クエリおよびビュー デザイナーで **[開く]** コマンドを使用すると、既存のクエリを開くことができます。  
@@ -35,8 +34,8 @@ ms.locfileid: "63195040"
 >  クエリおよびビュー デザイナーでは、既定ですべてのペイン (SQL、抽出条件、ダイアグラム、および結果) が開きますが、この動作は **[オプション]** ダイアログ ボックスで変更できます。 開いていないペインを開くには、 **[クエリ デザイナー]** メニューの **[ペイン]** をポイントし、開くペインをクリックします。  
   
 ## <a name="see-also"></a>参照  
- [クエリに関する基本操作を実行&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [クエリの保存&#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリで基本的な操作を実行&#41;](visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;クエリを保存する](save-queries-visual-database-tools.md)   
  [結果ペインのデータの操作 (Visual Database Tools)](results-pane-visual-database-tools.md)  
   
   

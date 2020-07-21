@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャ (OLE DB) の呼び出し |Microsoft Docs
+title: ストアド プロシージャの呼び出し (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,17 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 695848c8633d310f5e8ee21e9e738749d1550e4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68206586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055863"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>ストアド プロシージャの呼び出し (OLE DB)
-  ストアド プロシージャは、0 個以上のパラメーターを受け取ることができます。 また、値を返すこともできます。 使用する場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、ストアド プロシージャのパラメーターは、渡すことができます。  
+  ストアド プロシージャは、0 個以上のパラメーターを受け取ることができます。 また、値を返すこともできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーを使用する場合、ストアドプロシージャのパラメーターは次の方法で渡すことができます。  
   
 -   データ値をハードコーディングする。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "68206586"
 5.  **ICommand::Execute** を使用してコマンドを実行します。  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>ストアド プロシージャを呼び出す方法  
- 内のストアド プロシージャを実行するときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーをサポートします。  
+ でストアドプロシージャを実行すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは次の機能をサポートします。  
   
 -   ODBC CALL エスケープ シーケンス。  
   
@@ -91,9 +90,9 @@ ms.locfileid: "68206586"
   
  ODBC CALL エスケープ シーケンスを使用してプロシージャを呼び出す場合の一般的な構文は、次のとおりです。  
   
- { **[? =]** **呼び出す**_procedure_name_[ **(** [*パラメーター*] [ **、** [*パラメーター*]. **)** ]}  
+ {[**? =**]**呼び出し**_procedure_name_[**(**[*parameter*] [**,**[*parameter*]]...**)**]}  
   
- 以下に例を示します。  
+ 次に例を示します。  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  
@@ -104,7 +103,7 @@ ms.locfileid: "68206586"
   
  RPC エスケープ シーケンスを使用してストアド プロシージャを実行する場合、プロバイダーはパラメーター情報の決定にヘルパー関数を呼び出しません (ODBC CALL 構文では、ヘルパー関数が呼び出されます)。 RPC 構文は ODBC CALL 構文よりも簡単です。そのためコマンドが高速に解析され、パフォーマンスが向上します。 この場合は、**ICommandWithParameters::SetParameterInfo** を実行してパラメーター情報を提供する必要があります。  
   
- RPC エスケープ シーケンスを使用する場合は、戻り値が必要です。 ストアド プロシージャが値を返さない場合、サーバーが既定で 0 を返します。 また、ストアド プロシージャ上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルを開くことはできません。 ストアド プロシージャは暗黙的に準備され、**ICommandPrepare::Prepare** の呼び出しは失敗します。 RPC 呼び出しを準備することができないのためにできるクエリを実行しない列のメタデータ。Icolumnsinfo::getcolumninfo と icolumnsrowset::getcolumnsrowset は DB_E_NOTPREPARED を返します。  
+ RPC エスケープ シーケンスを使用する場合は、戻り値が必要です。 ストアド プロシージャが値を返さない場合、サーバーが既定で 0 を返します。 また、ストアド プロシージャ上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルを開くことはできません。 ストアド プロシージャは暗黙的に準備され、**ICommandPrepare::Prepare** の呼び出しは失敗します。 RPC 呼び出しを準備できないため、列のメタデータをクエリすることはできません。IColumnsInfo::GetColumnInfo と IColumnsRowset::GetColumnsRowset によって DB_E_NOTPREPARED が返されます。  
   
  パラメーターのメタデータを把握できている場合は、ストアド プロシージャの実行方法として RPC エスケープ シーケンスの使用をお勧めします。  
   
@@ -114,18 +113,18 @@ ms.locfileid: "68206586"
 {rpc SalesByCategory}  
 ```  
   
- RPC エスケープ シーケンスを示すサンプル アプリケーションを参照してください。[ストアド プロシージャの実行&#40;RPC 構文を使用して&#41;しプロセスのリターン コードと出力パラメーター &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)します。  
+ RPC エスケープ シーケンスを示すサンプル アプリケーションについては、[ストアド プロシージャの実行 &#40;RPC 構文を使用&#41; とリターン コードおよび出力パラメーターの処理 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md) に関するページを参照してください。  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE ステートメント  
- ストアド プロシージャを呼び出す方法としては、[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) ステートメントよりも、ODBC CALL エスケープ シーケンスや RPC エスケープ シーケンスをお勧めします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの RPC メカニズムを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コマンド処理を最適化します。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  
+ ストアド プロシージャを呼び出す方法としては、[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) ステートメントよりも、ODBC CALL エスケープ シーケンスや RPC エスケープ シーケンスをお勧めします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、の RPC 機構を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンド処理を最適化します。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  
   
- 次に、[!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** ステートメントの例を示します。  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** ステートメントの例を次に示します。  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ストアド プロシージャ](stored-procedures.md)  
   
   

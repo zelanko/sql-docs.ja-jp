@@ -1,38 +1,38 @@
 ---
-title: 'クイック スタート: PostgreSQL に対する接続およびクエリ'
-titleSuffix: Azure Data Studio
+title: クイック スタート:PostgreSQL に対する接続およびクエリ
 description: このクイック スタートでは、Azure Data Studio を使用して PostgreSQL に接続し、クエリを実行する方法を示します
 ms.custom: seodec18
-ms.date: 03/19/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.date: 09/18/2019
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717154"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して PostgreSQL に接続し、クエリを実行する
-このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して Postgres に接続し、SQL ステートメントを使用して、データベース *tutorialdb* を作成し、クエリを実行する方法を示します。
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>クイック スタート:Azure Data Studio を使用して、PostgreSQL に接続してクエリを実行する
 
-## <a name="prerequisites"></a>Prerequisites
+このクイック スタートでは、Azure Data Studio を使用して Postgres に接続し、SQL ステートメントを使用して、データベース *tutorialdb* を作成し、クエリを実行する方法を示します。
 
-このクイック スタートを完了するには、[!INCLUDE[name-sos](../includes/name-sos-short.md)]、[!INCLUDE[name-sos](../includes/name-sos-short.md) 用の PostgreSQL 拡張機能、PostgreSQL サーバーへのアクセス権が必要です。
+## <a name="prerequisites"></a>前提条件
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] をインストールする](download.md)。
+このクイック スタートを完了するには、Azure Data Studio、Azure Data Studio 用の PostgreSQL 拡張機能、PostgreSQL サーバーへのアクセス権が必要です。
+
+- [Azure Data Studio をインストールする](download.md)。
 - [Azure Data Studio 用の PostgreSQL 拡張機能をインストールする](postgres-extension.md)。
 - [PostgreSQL をインストールする](https://www.postgresql.org/download/)。 (または、[az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli) を使用して、クラウドに Postgres データベースを作成することもできます)。 
 
 ## <a name="connect-to-postgresql"></a>PostgreSQL への接続
 
-1. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** を起動します。
+1. **Azure Data Studio** を起動します。
 
-2. 初めて [!INCLUDE[name-sos](../includes/name-sos-short.md)] を起動すると、 **[接続]** ダイアログが開きます。 **[接続]** ダイアログが開いていない場合は、 **[サーバー]** ページの **[新しい接続]** アイコンをクリックします。
+2. 初めて Azure Data Studio を起動すると、 **[接続]** ダイアログが開きます。 **[接続]** ダイアログが開いていない場合は、 **[サーバー]** ページの **[新しい接続]** アイコンをクリックします。
 
    ![新しい接続アイコン](media/quickstart-postgresql/new-connection-icon.png)
 
@@ -43,14 +43,14 @@ ms.locfileid: "67959469"
 
    ![新しい接続画面](media/quickstart-postgresql/new-connection-screen.png)  
 
-   | 設定       | 値の例 | [説明] |
+   | 設定       | 値の例 | 説明 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバー名** | localhost | 完全修飾サーバー名 |
-   | **User name** | postgres | ログインに使用するユーザー名。 |
+   | **ユーザー名** | postgres | ログインに使用するユーザー名。 |
    | **パスワード (SQL ログイン)** | *password* | ログインに使用するアカウントのパスワード。 |
-   | **パスワード** | *[確認]* | 接続するたびにパスワードを入力したくない場合は、このボックスをオンにします。 |
-   | **データベース名** | \<[Default]\> | 接続でデータベースを指定する必要がある場合は、これを入力します。 |
-   | **[サーバー グループ]** | \<[Default]\> | このオプションを使用すると、作成した特定のサーバー グループにこの接続を割り当てることができます。 | 
+   | **パスワード** | *確認事項* | 接続するたびにパスワードを入力したくない場合は、このボックスをオンにします。 |
+   | **データベース名** | \<Default\> | 接続でデータベースを指定する必要がある場合は、これを入力します。 |
+   | **[サーバー グループ]** | \<Default\> | このオプションを使用すると、作成した特定のサーバー グループにこの接続を割り当てることができます。 | 
    | **名前 (省略可能)** | *空白のままにする* | このオプションを使用すると、サーバーのフレンドリ名を指定できます。 | 
 
 5. **[接続]** を選択します。 
@@ -58,7 +58,7 @@ ms.locfileid: "67959469"
 接続が正常に行われると、ご利用のサーバーが **[サーバー]** サイドバーに表示されます。
 
 
-## <a name="create-a-database"></a>データベースの作成
+## <a name="create-a-database"></a>データベースを作成する
 
 次の手順では、**tutorialdb** という名前のデータベースを作成します。
 
@@ -78,7 +78,7 @@ ms.locfileid: "67959469"
 クエリが完了したら、 **[データベース]** を右クリックし、 **[最新の情報に更新]** を選択すると、 **[データベース]** ノードの下の一覧に **tutorialdb** が表示されます。
 
 
-## <a name="create-a-table"></a>テーブルの作成
+## <a name="create-a-table"></a>テーブルを作成する
 
  次の手順では、**tutorialdb** でテーブルを作成します。
 
@@ -118,7 +118,7 @@ ms.locfileid: "67959469"
       ( 4, 'Janet', 'United States','janet1@adventure-works.com');
    ```
 
-## <a name="query-the-data"></a>データのクエリ
+## <a name="query-the-data"></a>データにクエリを実行する
 
 1. クエリ エディターに次のスニペットを貼り付けて、 **[実行]** をクリックします。
    
@@ -131,6 +131,6 @@ ms.locfileid: "67959469"
 
    ![結果の表示](media/quickstart-postgresql/view-results.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 
 [Azure Data Studio で Postgres に使用できるシナリオ](postgres-extension.md)について学習します。 

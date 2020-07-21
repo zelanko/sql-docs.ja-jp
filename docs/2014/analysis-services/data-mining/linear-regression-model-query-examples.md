@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02d4b7309d7b5ea3d6295089f0fb2e778b1c9b4b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084297"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522337"
 ---
 # <a name="linear-regression-model-query-examples"></a>線形回帰モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえばコンテンツ クエリを使用すると、回帰式に関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントがモデルに適合するかどうかを調べることができます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -29,7 +28,7 @@ ms.locfileid: "66084297"
 > [!NOTE]  
 >  線形回帰アルゴリズムは、Microsoft デシジョン ツリー アルゴリズムの特殊なケースに基づいているため、これと多くの類似点があります。また、連続する予測可能属性を使用する一部のデシジョン ツリーには、回帰式を含めることができます。 詳細については、「 [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](microsoft-decision-trees-algorithm-technical-reference.md)」を参照してください。  
   
- **コンテンツ クエリ**  
+ **コンテンツクエリ**  
   
  [データ マイニング スキーマ行セットを使用してモデルに対して使用されたパラメーターを特定する](#bkmk_Query1)  
   
@@ -43,12 +42,12 @@ ms.locfileid: "66084297"
   
  [回帰モデルで予測関数を使用する](#bkmk_Query5)  
   
-##  <a name="bkmk_top"></a> 線形回帰モデルに関する情報の入手  
- 線形回帰モデルの構造は非常に単純であり、マイニング モデルではデータを単一のノードとして表現されます。このノードは回帰式を定義します。 詳細については、「[ロジスティック回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-logistic-regression-models.md)」を参照してください。  
+##  <a name="finding-information-about-the-linear-regression-model"></a><a name="bkmk_top"></a>線形回帰モデルに関する情報の検索  
+ 線形回帰モデルの構造は非常に単純であり、マイニング モデルではデータを単一のノードとして表現されます。このノードは回帰式を定義します。 詳細については、「 [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-logistic-regression-models.md)」を参照してください。  
   
  [トップに戻る](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a> サンプル クエリ 1:データ マイニング スキーマ行セットを使用してモデルに使用されるパラメーターを確認するには  
+###  <a name="sample-query-1-using-the-data-mining-schema-rowset-to-determine-parameters-used-for-a-model"></a><a name="bkmk_Query1"></a>サンプルクエリ 1: データマイニングスキーマ行セットを使用してモデルに使用されるパラメーターを特定する  
  データ マイニング スキーマ行セットに対してクエリを実行すると、モデルに関するメタデータを取得できます。 このメタデータには、モデルが作成された日時、モデルが最後に処理された日時、モデルの基になるマイニング構造の名前、予測可能な属性として使用されている列の名前などが含まれます。 モデルが最初に作成されたときに使用されたパラメーターを取得することもできます。  
   
 ```  
@@ -68,7 +67,7 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
   
  [トップに戻る](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a> サンプル クエリ 2:モデルの回帰式を取得します。  
+###  <a name="sample-query-2-retrieving-the-regression-formula-for-the-model"></a><a name="bkmk_Query2"></a>サンプルクエリ 2: モデルの回帰式を取得する  
  次のクエリでは、「 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)」で使用したものと同じ Targeted Mailing データ ソースを使用して作成された線形回帰モデルのマイニング モデル コンテンツを返します。 このモデルでは、年齢に基づいて顧客の収入を予測します。  
   
  このクエリは、回帰式を含むノードのコンテンツを返します。 各変数と係数は、入れ子になった NODE_DISTRIBUTION テーブルの個別の行に保存されます。 完全な回帰式を表示する場合は、 [Microsoft ツリー ビューアー](browse-a-model-using-the-microsoft-tree-viewer.md)を使用します。 **[(すべて)]** ノードをクリックして **[マイニング凡例]** を開くと表示されます。  
@@ -116,7 +115,7 @@ FROM LR_PredictIncome.CONTENT
   
  [トップに戻る](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a> サンプル クエリ 3:モデルの係数のみを取得します。  
+###  <a name="sample-query-3-returning-only-the-coefficient-for-the-model"></a><a name="bkmk_Query3"></a>サンプルクエリ 3: モデルの係数のみを取得する  
  VALUETYPE 列挙を使用すると、次のクエリに示すように回帰式の係数のみを返すことができます。  
   
 ```  
@@ -145,8 +144,8 @@ FROM LR_PredictIncome.CONTENT
   
  [トップに戻る](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a> サンプル クエリ 4:単一クエリを使用して収入を予測します。  
- 回帰モデルで単一クエリを作成する最も簡単な方法は、 **[単一クエリ入力]** ダイアログ ボックスを使用することです。 など、適切な回帰モデルを選択して次の DMX クエリを作成する選択**単一クエリ**、」と入力し、`20`の値として**年齢**します。  
+###  <a name="sample-query-4-predicting-income-using-a-singleton-query"></a><a name="bkmk_Query4"></a> サンプル クエリ 4: 単一クエリを使用して収入を予測する  
+ 回帰モデルで単一クエリを作成する最も簡単な方法は、 **[単一クエリ入力]** ダイアログ ボックスを使用することです。 たとえば、次の DMX クエリを作成するには、適切な回帰モデルを選択し、[**単一クエリ**] を選択して、 `20` **Age**の値として「」と入力します。  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -163,7 +162,7 @@ NATURAL PREDICTION JOIN
   
  [トップに戻る](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a> サンプル クエリ 5:回帰モデルで予測関数を使用します。  
+###  <a name="sample-query-5-using-prediction-functions-with-a-regression-model"></a><a name="bkmk_Query5"></a>サンプルクエリ 5: 回帰モデルで予測関数を使用する  
  線形回帰モデルでは多くの標準の予測関数を使用できます。 次の例は、予測クエリの結果にいくつかの説明的な統計情報を追加する方法を示しています。 これらの結果から、このモデルの平均からの偏差が相当あることがわかります。  
   
 ```  
@@ -189,7 +188,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
+|予測関数|使用法|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|指定された列に対して、予測された値、または値のセットを返します。|  
@@ -202,8 +201,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>参照  
  [Microsoft 線形回帰アルゴリズム](microsoft-linear-regression-algorithm.md)   
- [データ マイニング クエリ](data-mining-queries.md)   
- [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [データマイニングクエリ](data-mining-queries.md)   
+ [Microsoft 線形回帰アルゴリズムテクニカルリファレンス](microsoft-linear-regression-algorithm-technical-reference.md)   
  [線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

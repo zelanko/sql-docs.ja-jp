@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 03f868d679f1d51dbb672cfdab5dbeaa2b4fc8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17fe28bc0c6e8e1b38b938996787b39c5690e159
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478861"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971112"
 ---
 # <a name="require-attribute-values-master-data-services"></a>属性値を要求する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、マスター データが完全であることを保証するために属性値を要求します。  
@@ -29,9 +28,9 @@ ms.locfileid: "65478861"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-require-attribute-values"></a>属性値を要求するには  
   
@@ -53,7 +52,7 @@ ms.locfileid: "65478861"
   
 9. **[コンポーネント]** ペインで **[アクション]** ノードを展開します。  
   
-10. をクリックして**が必要な**ドラッグして、**し**ペインの**アクション**ラベル。  
+10. [**必須**] をクリックし、 **[THEN** ] ペインの [**アクション**] ラベルにドラッグします。  
   
 11. **[属性]** ペインで属性をクリックして、 **[アクションの編集]** ペインの **[属性の選択]** ラベルにドラッグします。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "65478861"
   
 13. **[戻る]** をクリックします。  
   
-14. 必要に応じて、 **[ビジネス ルールのメンテナンス]** ページで、ビジネス ルールを含む行の **[名前]** 、 **[説明]** 、または **[通知]** 列のセルをダブルクリックして値を更新します。  
+14. 必要に応じて、 **[ビジネス ルールのメンテナンス]** ページで、ビジネス ルールを含む行の **[名前]**、 **[説明]**、または **[通知]** 列のセルをダブルクリックして値を更新します。  
   
 15. **[ビジネス ルールのパブリッシュ]** をクリックします。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "65478861"
     -   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [ビジネスルール &#40;マスターデータサービス&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
   

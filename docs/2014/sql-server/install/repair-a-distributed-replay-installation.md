@@ -1,5 +1,5 @@
 ---
-title: 分散再生のインストールの修復 |Microsoft Docs
+title: 分散再生のインストールを修復する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fcd8ca8-1ceb-457d-9545-096c74e274d7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f8002bfe0f1142cea43704dc88aacb99316eca6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059110"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>分散再生のインストールの修復
   分散再生コンポーネント (コントローラーまたはクライアント) を修復すると、次の処理が行われます。  
@@ -24,15 +23,15 @@ ms.locfileid: "66092961"
   
 2.  対応するサービス アカウントが削除された場合、Windows サービス アカウントを再作成します。  
   
- 修復操作を利用してコンポーネントを追加または削除することはできません。 コンポーネントを追加または削除を確認するかの機能ツリーに対応する要素をオフに、**機能の選択**ページ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップします。  
+ 修復操作を利用してコンポーネントを追加または削除することはできません。 コンポーネントを追加または削除するには、セットアップの [**機能の選択**] ページにある機能ツリーで、対応するコンポーネントをオンまたはオフにし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ### <a name="to-repair-a-failed-installation-of-distributed-replay"></a>分散再生のインストールの失敗を修復するには  
   
-1.  **開始**] メニューのをクリックして**コントロール パネルの [** 、し、ダブルクリック**プログラム追加と削除**します。  
+1.  [**スタート**] メニューの [**コントロールパネル**] をクリックし、[**プログラムの追加と削除**] をダブルクリックします。  
   
-2.  選択[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で、**のアンインストールまたは変更するプログラム**ウィンドウで、し、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ダイアログ ボックスで、をクリックして**修復**。  
+2.  [ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] プログラムの**アンインストールまたは変更**] ウィンドウでを選択し、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ダイアログボックスで [**修復**] をクリックします。  
   
-3.  手順に従って、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ウィザード、し、**機能の選択**を修復するには、[分散再生コンポーネントを選択] ページで、 **[次へ]。** 。  
+3.  ウィザードの手順に従い、[ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] **機能の選択**] ページで、修復する分散再生コンポーネントを選択し、[**次へ**] をクリックします。  
   
 4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードを完了すると、選択した 分散再生の機能が修復されます。  
   

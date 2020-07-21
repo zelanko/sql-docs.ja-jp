@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb369ea6a2d1edf1ed8f4377b627fb1ba7339a03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064999"
 ---
 # <a name="change-an-operator39s-availability"></a>オペレーターの可用性の変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、オペレーターの警告通知受信スケジュールを変更する方法について説明します。  
@@ -44,14 +43,14 @@ ms.locfileid: "63017103"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  オペレーターを編集できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-change-an-operators-availability"></a>オペレーターが通知を受信できるかどうかを設定するには  
   
@@ -63,11 +62,11 @@ ms.locfileid: "63017103"
   
 4.  有効または無効にするオペレーターを右クリックし、 **[プロパティ]** を選択した後、 **[全般]** タブをクリックします。  
   
-5.  [_operator_name_ **のプロパティ**] ダイアログ ボックスで、 **[有効]** チェック ボックスをオンまたはオフにします。  
+5.  [ _Operator_name_の**プロパティ**] ダイアログボックスで、[**有効**] チェックボックスをオンまたはオフにします。  
   
 6.  **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-change-an-operators-availability"></a>オペレーターが通知を受信できるかどうかを設定するには  
   
@@ -88,6 +87,6 @@ ms.locfileid: "63017103"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)します。  
+ 詳細については、「 [sp_update_operator &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)」を参照してください。  
   
   

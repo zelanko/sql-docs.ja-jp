@@ -1,5 +1,5 @@
 ---
-title: IRow::Open と ISequentialStream を使用した BLOB データのフェッチ | Microsoft Docs
+title: 'BLOB、IRow:: Open、ISequentialStream'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,25 +13,23 @@ helpviewer_keywords:
 - ISequentialStream interface
 - BLOBs, fetching
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29522484c0286c3febcae79ec1a4d423220f425f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: ccbb94d392e1465638841222f7b2f91a05188746
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967475"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998465"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>IRow::Open と ISequentialStream を使用した BLOB データのフェッチ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRow::Open** は、DBGUID_STREAM 型と DBGUID_NULL 型のオブジェクトを開くことだけをサポートします。  
   
  次の関数では、**IRow::Open** と **ISequentialStream** を使用して大きなデータをフェッチします。  
   
-```  
+```cpp
 void InitializeAndExecuteCommand()  
 {  
     ULONG iidx;  
@@ -82,7 +80,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
   
  大きなデータは、**ISequentialStream** インターフェイスを使用してバインドまたは取得できます。 バインドされた列の場合、DBSTATUS_S_TRUNCATED を設定してデータが切り捨てられるかどうかが状態フラグで示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IRow を使用した BLOB データのフェッチ](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

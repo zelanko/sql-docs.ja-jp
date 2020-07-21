@@ -1,5 +1,6 @@
 ---
 title: FOR XML 句の基本構文 | Microsoft Docs
+description: FOR XML 句の基本構文と、この句を使用して SQL クエリの結果として得られる XML の構造を確認する方法について説明します。
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3ed13483746d2a3592f8c37380862719103d438a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1364b5b8c7f0a95c9e3710082feae10defc37dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68029372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661978"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 句の基本構文
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 FOR XML モードには、RAW、AUTO、EXPLICIT、または PATH を使用できます。 このモードにより、結果の XML の構造が決まります。  
   

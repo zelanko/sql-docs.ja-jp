@@ -1,5 +1,5 @@
 ---
-title: SQL Server エージェントで SSAS 管理タスクのスケジュール |Microsoft Docs
+title: SQL Server エージェント | で SSAS 管理タスクのスケジュールを設定するMicrosoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd751efccc038c131bc61338d7adcd8e10a67d93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079682"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543774"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う
   SQL Server エージェント サービスを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理タスクのスケジュールを設定して、必要なときに必要な順序で実行できます。 定期タスクは、一定の周期または指定した周期で実行されるプロセスを自動化するのに役立ちます。 キューブ処理などの管理タスクは、ビジネス活動が盛んでない時間帯に実行されるようにスケジュールできます。 また、SQL Server エージェント ジョブでジョブ ステップを作成することにより、タスクの実行順序を指定できます。 たとえば、キューブを処理した後でバックアップを実行できます。  
@@ -27,16 +26,16 @@ ms.locfileid: "66079682"
 ## <a name="prerequisites"></a>前提条件  
  SQL Server エージェント サービスがインストールされている必要があります。  
   
- 既定では、ジョブはサービス アカウントで実行されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQL Server エージェントの既定のアカウントは NT service \sqlagent$\<instancename > です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、次を参照してください。[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)します。  
+ 既定では、ジョブはサービス アカウントで実行されます。 で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は、SQL Server エージェントの既定のアカウントは NT Service\ SQLAgent $ \<instancename> です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、「 [Analysis Services&#41;&#40;サーバー管理者のアクセス許可を付与](grant-server-admin-rights-to-an-analysis-services-instance.md)する」を参照してください。  
   
  操作対象のテスト データベースも必要です。 AdventureWorks 多次元サンプル データベースまたはプロジェクトを Analysis Services 多次元チュートリアルから配置して、このチュートリアルで使用できます。 詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../install-sample-data-and-projects.md)」を参照してください。  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>例 1 : スケジュールされたタスクでのディメンションの処理  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>例 1: 定期タスクでのディメンションの処理  
  この例では、ディメンションを処理するジョブを作成し、スケジュール設定を行う方法を示します。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の定期タスクは、SQL Server エージェント ジョブに組み込まれる XMLA スクリプトです。 このジョブは、指定した時刻と頻度で実行されるようにスケジュールされます。 SQL Server エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の一部なので、管理タスクの作成およびスケジュール設定には、データベース エンジンおよび [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を使用します。  
   
-###  <a name="bkmk_CreateScript"></a> SQL Server エージェント ジョブでディメンションを処理するスクリプトを作成する  
+###  <a name="create-a-script-for-processing-a-dimension-in-a-sql-server-agent-job"></a><a name="bkmk_CreateScript"></a>SQL Server エージェントジョブでディメンションを処理するスクリプトを作成する  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に接続します。 データベース フォルダーを開き、ディメンションを検索します。 ディメンションを右クリックし、 **[処理]** をクリックします。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079682"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a> ディメンション処理ジョブを作成してスケジュールを設定する  
+###  <a name="create-and-schedule-the-dimension-processing-job"></a><a name="bkmk_ProcessJob"></a>ディメンション処理ジョブの作成とスケジュール設定  
   
 1.  データベース エンジンのインスタンスに接続し、オブジェクト エクスプローラーを開きます。  
   
@@ -81,9 +80,9 @@ ms.locfileid: "66079682"
   
 6.  **[新しいジョブ ステップ]** ダイアログ ボックスで、 **[ステップ名]** にステップ名を入力します。  
   
-7.  **[サーバー]** で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスの **localhost** と、名前付きインスタンスの **localhost\\** \<*インスタンス名*> を入力します。  
+7.  [**サーバー**] で、既定のインスタンスの場合は「 **localhost** 」、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 名前付きインスタンスの場合は「 **localhost \\ ** 」と入力し \<*instance name*> ます。  
   
-     リモート コンピューターからジョブを実行する場合は、ジョブが実行されるサーバー名およびインスタンス名を使用します。 形式を使用して\<*サーバー名*> 既定のインスタンスと\<*サーバー名*>\\<*インスタンス名前*> 名前付きインスタンス。  
+     リモート コンピューターからジョブを実行する場合は、ジョブが実行されるサーバー名およびインスタンス名を使用します。 既定のインスタンスの場合は形式を使用し、 \<*server name*> \<*server name*> \\ < 名前付きインスタンスの場合は*インスタンス名*> を使用します。  
   
 8.  **[種類]** で、 **[SQL Server Analysis Services コマンド]** を選択します。  
   
@@ -105,10 +104,10 @@ ms.locfileid: "66079682"
   
 15. ジョブが完了したら、 **[閉じる]** をクリックします。  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>例 2:ディメンションと、スケジュールされたタスクでのパーティションをバッチ処理  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>例 2: 定期タスクでのディメンションおよびパーティションのバッチ処理  
  この例の手順では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース ディメンションをバッチ処理するジョブを作成してスケジュールを設定する方法と、そのディメンションに集計で依存するキューブ パーティションを処理する方法を示します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのバッチ処理の詳細については、「[バッチ処理 (Analysis Services)](../multidimensional-models/batch-processing-analysis-services.md)」を参照してください。  
   
-###  <a name="bkmk_BatchProcess"></a> SQL Server エージェント ジョブでディメンションとパーティションをバッチ処理するスクリプトを作成する  
+###  <a name="create-a-script-for-batch-processing-a-dimension-and-partition-in-a-sql-server-agent-job"></a><a name="bkmk_BatchProcess"></a>SQL Server エージェントジョブでディメンションとパーティションをバッチ処理するためのスクリプトを作成する  
   
 1.  同じデータベースを使用して、 **[ディメンション]** を展開し、 **[Customer]** ディメンションを右クリックして **[処理]** をクリックします。  
   
@@ -120,7 +119,7 @@ ms.locfileid: "66079682"
   
 4.  **[ディメンションの処理]** ダイアログ ボックスで、 **[キャンセル]** をクリックしてダイアログ ボックスを閉じます。  
   
-5.  **[キューブ]** 、 **[Adventure Works]** 、 **[メジャー グループ]** 、 **[インターネット販売]** 、 **[パーティション]** の順に展開し、一覧の最後のパーティションを右クリックして **[処理]** をクリックします。  
+5.  **[キューブ]**、 **[Adventure Works]**、 **[メジャー グループ]**、 **[インターネット販売]**、 **[パーティション]** の順に展開し、一覧の最後のパーティションを右クリックして **[処理]** をクリックします。  
   
 6.  **[パーティションの処理]** ダイアログ ボックスにある **[オブジェクト一覧]** の **[処理オプション]** 列で、この列のオプションが **[完全処理]** であることを確認します。  
   
@@ -183,7 +182,7 @@ ms.locfileid: "66079682"
   
 12. この手順により、XMLA スクリプトが Windows クリップボードにコピーされます。 XMLA スクリプトをクリップボードに残しておくか、ファイルに保存するか、メモ帳または別のテキスト エディターに貼り付けます。  
   
-###  <a name="bkmk_Scheduling"></a> バッチ処理ジョブを作成してスケジュールを設定する  
+###  <a name="create-and-schedule-the-batch-processing-job"></a><a name="bkmk_Scheduling"></a>バッチ処理ジョブの作成とスケジュール設定  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーを開きます。  
   
@@ -222,7 +221,7 @@ ms.locfileid: "66079682"
 16. ジョブが完了したら、 **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [処理オプションと設定 (Analysis Services)](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [処理オプションと設定 &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Analysis Services の管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)  
   
   

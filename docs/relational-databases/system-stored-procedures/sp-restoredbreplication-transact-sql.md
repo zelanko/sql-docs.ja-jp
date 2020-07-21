@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_restoredbreplication
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0aeb3d94bf1b67674b59f756f330e1d460f0cde7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8d83d2aad9227993df29774d3140376514319ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633936"
 ---
-# <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   バックアップ元以外のサーバー、データベース、またはシステムにデータベースを復元するとき、レプリケーション プロセスを実行できない場合に、レプリケーションの設定を削除します。 レプリケートされたデータベースを、バックアップが作成されたサーバーやデータベースとは別のサーバーまたはデータベースに復元する場合、レプリケーションの設定は保持できません。 復元時に、サーバーは**sp_restoredbreplication**を直接呼び出して、復元されたデータベースからレプリケーションメタデータを自動的に削除します。  
   
@@ -40,18 +40,22 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @srv_orig = ] 'original_server_name'`バックアップが作成されたサーバーの名前。 *original_server_name*は**sysname**,、既定値はありません。  
+`[ @srv_orig = ] 'original_server_name'`  
+ バックアップが作成されたサーバーの名前を指定します。 *original_server_name*は**sysname**であり、既定値はありません。  
   
-`[ @db_orig = ] 'original_database_name'`バックアップされたデータベースの名前。 *original_database_name*は**sysname**,、既定値はありません。  
+`[ @db_orig = ] 'original_database_name'`  
+ バックアップされたデータベースの名前。 *original_database_name*は**sysname**であり、既定値はありません。  
   
-`[ @keep_replication = ] keep_replication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @keep_replication = ] keep_replication`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @perform_upgrade = ] perform_upgrade` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @perform_upgrade = ] perform_upgrade`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_restoredbreplication**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  

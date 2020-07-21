@@ -1,5 +1,6 @@
 ---
 title: データ コレクション | Microsoft Docs
+description: データ コレクターの概要について説明します。これは、さまざまなデータのセットを収集する SQL Server 2019 のコンポーネントです。
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -7,21 +8,21 @@ ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
 keywords:
-- データ コレクション
+- データ収集
 helpviewer_keywords:
 - data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1cba83176d921846f1eac55ef84a70eebd5af42a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733836"
 ---
-# <a name="data-collection"></a>データ コレクション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="data-collection"></a>データ収集
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データ コレクターは、さまざまなデータのセットを収集する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のコンポーネントです。 データ コレクションは、継続的に実行されるかユーザー定義のスケジュールに基づいて実行されます。 データ コレクターは、収集したデータを管理データ ウェアハウスというリレーショナル データベースに格納します。  
   
 ## <a name="what-is-data-collector"></a>データ コレクターとは何ですか。 
@@ -40,13 +41,13 @@ ms.locfileid: "68140745"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、コレクション ジョブのスケジュールおよび実行のために使用されます。 次の概念を理解しておく必要があります。  
   
--   [ジョブ]  
+-   ジョブ  
   
--   [ジョブ ステップ]  
+-   ジョブ ステップ  
   
 -   ジョブ スケジュール  
   
--   [サブシステム]  
+-   Subsystem  
   
 -   プロキシ アカウント  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68140745"
  詳細については、「[Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)」を参照してください。  
   
 ## <a name="terminology"></a>用語  
- **移行先**  
+ **target**  
  データ コレクションをサポートする [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエディションにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。 サポートされるエディションの詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」の「管理の容易性」を参照してください。  
   
  *対象ルート* では、対象となる階層内のサブツリーを定義します。 *対象セット* は、対象ルートで定義されたサブツリーにフィルターを適用した結果の対象のグループです。 対象ルートはデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス) またはコンピューター インスタンスです。  
@@ -89,7 +90,7 @@ ms.locfileid: "68140745"
   
  データ コレクター コンポーネント間の依存関係およびリレーションシップを次の図に示します。  
   
- ![データ コレクターの機能の依存関係](../../relational-databases/data-collection/media/dc-functional-dependencies.gif "データ コレクターの機能の依存関係")  
+ ![データ コレクターの機能依存](../../relational-databases/data-collection/media/dc-functional-dependencies.gif "データ コレクターの機能依存")  
   
  図に示すように、データ プロバイダーはデータ コレクターの外部にあり、定義することによって対象との暗黙的なリレーションシップを持ちます。 データ プロバイダーは特定の対象 (たとえばリレーショナル エンジンなどの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス) に固有で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のシステム ビュー、パフォーマンス モニター カウンター、WMI プロバイダーなど、データ コレクターが使用できるデータを提供します。  
   
@@ -111,11 +112,11 @@ ms.locfileid: "68140745"
   
 ## <a name="things-you-can-do"></a>可能な操作  
   
-|[説明]|トピック|  
+|説明|トピック|  
 |----------------------|-----------|  
 |データ コレクションの有効化または無効化、コレクション セットの構成の変更、管理データ ウェアハウスのデータの表示など、データ コレクションのさまざまな側面を管理します。|[データ コレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)|  
 |レポートを使用し、システム容量の監視やシステム パフォーマンスのトラブルシューティングに役立つ情報を取得します。|[システム データ コレクション セット レポート](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
-|管理データ ウェアハウスを使用し、データ コレクションの対象であるサーバーからデータを収集します。|[管理データ ウェアハウス (management data warehouse)](../../relational-databases/data-collection/management-data-warehouse.md)| 
+|管理データ ウェアハウスを使用し、データ コレクションの対象であるサーバーからデータを収集します。|[管理データ ウェアハウス](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |SQL Server Profiler のサーバー側のトレース機能を利用し、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。| [SQL Server Profiler を使用して SQL トレース コレクション セットを作成する (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   

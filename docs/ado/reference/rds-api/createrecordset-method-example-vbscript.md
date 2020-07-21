@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - CreateRecordset method [RDS], VBScript example
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8dde6e14283195ef3b56d545a58a95c307774223
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 485413a9fee94998d76f24829298faffe00c8dab
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964529"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758578"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- このコード例を作成、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)サーバー側でします。 次の 4 つの行を含む 2 つの列があります。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**CreateRecordsetVBS.asp**します。  
+ このコード例では、サーバー側に[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を作成します。 2つの列があり、それぞれに4つの行があります。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **CreateRecordsetVBS**として保存します。  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -167,7 +167,7 @@ End Sub
 <!-- EndCreateRecordsetVBS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CreateRecordset メソッド (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 

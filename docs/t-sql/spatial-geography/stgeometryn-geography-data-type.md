@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 249639ef13d9200d1d6cedc189044c30ba8ff7ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c05ded2f6c00dd4c2f28336fb5054796f40607d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703257"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **GeometryCollection** またはそのサブタイプのいずれかに含まれる、指定した **geography** 要素を返します。 **MultiPoint** や **MultiLineString** のように、STGeometryN() が **GeometryCollection** のサブタイプで使用されるとき、このメソッドは N=1 で呼び出された場合、**geography** インスタンスを返します。  
   
@@ -42,12 +42,12 @@ ms.locfileid: "68042263"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パラメーターが [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) の結果よりも大きい場合、このメソッドは null を返します。*expression* パラメーターが 1 より小さい場合は、**ArgumentOutOfRangeException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `MultiPoint``geography` インスタンスを作成し、`STGeometryN()` を使用して **GeometryCollection** の 2 番目の `geography` インスタンスを見つける例を次に示します。  
   
 ```  

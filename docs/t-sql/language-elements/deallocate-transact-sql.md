@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92153155be5761e804c6d62cece4d392b40a1412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 049a3db0f57b4c2c0e8a3fba809241b352991a61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706514"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   カーソル参照を削除します。 最後のカーソル参照の割り当てが解除されると、カーソルを構成するデータ構造は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解放されます。  
   
@@ -37,18 +37,18 @@ ms.locfileid: "67894898"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   
 ## <a name="arguments"></a>引数  
  *cursor_name*  
- 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、`GLOBAL` を指定すると *cursor_name* ではグローバル カーソルが参照され、`GLOBAL` を指定しないとローカル カーソルが参照されます。  
+ 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、*を指定すると*cursor_name`GLOBAL` ではグローバル カーソルが参照され、`GLOBAL` を指定しないとローカル カーソルが参照されます。  
   
  @*cursor_variable_name*  
  **cursor** 変数の名前を指定します。 @*cursor_variable_name* は **cursor** 型である必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 カーソルを操作するステートメントでは、カーソル名またはカーソル変数を使用してカーソルを参照します。 `DEALLOCATE` を実行すると、カーソルと、カーソル名またはカーソル変数との間の関係が削除されます。 名前または変数がカーソルを参照する最後のものである場合は、カーソルの割り当てが解除され、カーソルが使用しているリソースが解放されます。 フェッチの孤立を防ぐために使用するスクロール ロックは、`DEALLOCATE` で解放されます。 カーソルを介して行われる位置指定更新を含め、更新を保護するために使用するトランザクション ロックは、トランザクションの終了時まで保持されます。  
   
 `DECLARE CURSOR` ステートメントでは、カーソルを割り当て、カーソル名と関連付けます。  
@@ -99,7 +99,7 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  `DEALLOCATE` のアクセス許可は、既定ですべての有効なユーザーに与えられます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、最後の名前まで、またはカーソルを参照している変数の割り当てが解除されるまで、カーソルが保持されます。  
   
 ```sql  

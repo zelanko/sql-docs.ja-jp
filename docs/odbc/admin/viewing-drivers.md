@@ -11,14 +11,14 @@ helpviewer_keywords:
 - viewing drivers [ODBC]
 - ODBC data source administrator [ODBC], viewing drivers
 ms.assetid: 6d43ae52-c6f8-4f07-8911-4d5278dd439e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13a560b4278a0e90b3416c1ecb31b22d77ce33fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 58b8d13b158ba7140812b1ae3576770635ed1cd7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901624"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307173"
 ---
 # <a name="viewing-drivers"></a>ドライバーの表示
-でデータ ソースを構成するには、システム上に少なくとも 1 つのドライバーがインストールされてがする必要があります。 **ドライバー**  タブで、 **ODBC データ ソース アドミニストレーター**  ダイアログ ボックスに、名前、バージョン、会社、ファイル名、および各ドライバーのファイルの作成日など、コンピューターにインストールされているすべてのドライバーが一覧表示されます。 ドライバーのセットアップ プログラムを使用して、追加またはシステムからドライバーを削除する必要があります。 ドライバーを変更する方法の詳細については、次を参照してください。[データ ソースを管理する](../../odbc/admin/managing-data-sources.md)します。
+データソースを構成するには、システムに少なくとも1つのドライバーをインストールしておく必要があります。 [ **ODBC データソースアドミニストレーター** ] ダイアログボックスの [**ドライバー** ] タブには、コンピューターにインストールされているすべてのドライバーが一覧表示されます。これには、各ドライバーの名前、バージョン、会社名、ファイル名、ファイル作成日が含まれます。 ドライバーのセットアッププログラムを使用して、システムのドライバーを追加または削除する必要があります。 ドライバーの変更の詳細については、「[データソースの管理](../../odbc/admin/managing-data-sources.md)」を参照してください。

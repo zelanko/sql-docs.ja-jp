@@ -1,11 +1,12 @@
 ---
-title: PREDICT (Transact-SQL) | Microsoft Docs
+title: PREDICT (Transact-SQL)
+titleSuffix: SQL machine learning
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 06/26/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - PREDICT
@@ -14,28 +15,30 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: VanMSFT
-ms.author: vanto
-monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c50bdedab94a2bd9dd1c6da6556fbd882412fe45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
+ms.openlocfilehash: e570c7cbc06c6d2e384d34571e0af7ca93003ceb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141305"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012571"
 ---
-# <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+# <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
-格納されているモデルに基づいて予測値やスコアを生成します。  
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
+
+格納されているモデルに基づいて予測値やスコアを生成します。 詳細については、「[PREDICT T-SQL 関数を使用したネイティブ スコアリング](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 PREDICT  
 (  
   MODEL = @model | model_literal,  
-  DATA = object AS <table_alias>  
+  DATA = object AS <table_alias>
+  [, RUNTIME = ONNX ]
 )  
 WITH ( <result_set_definition> )  
 
@@ -54,21 +57,32 @@ MODEL = @model | model_literal
 
 ### <a name="arguments"></a>引数
 
-**model**
+**MODEL**
 
 `MODEL` パラメーターは、スコア付けまたは予測に使用するモデルを指定するために使用されます。 モデルは、変数、リテラル、またはスカラー式として指定されます。
 
-モデル オブジェクトは、R、Python または他のツールを使用して作成できます。
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+`PREDICT` は [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) と [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) パッケージを使用してトレーニングされたモデルをサポートします。
+::: moniker-end
 
-**data**
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Azure SQL Managed Instance では、`PREDICT` は [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) 形式のモデル、または [revoscalepy](../../machine-learning/r/ref-r-revoscaler.md) および [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) パッケージを使用してトレーニングされたモデルをサポートしています。
+::: moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+Azure Synapse Analytics では、`PREDICT` は [Open Neural Network Exchange (ONNX)](https://onnx.ai/get-started.html) 形式のモデルをサポートしています。
+::: moniker-end
+
+**データ**
 
 DATA パラメーターは、スコア付けまたは予測に使用するモデルを指定するために使用されます。 データは、クエリ内でテーブル ソースの形式で指定されます。 テーブル ソースには、テーブル、テーブルの別名、CTE の別名、ビュー、またはテーブル値関数のいずれかを指定できます。
 
-**parameters**
+**RUNTIME = ONNX**
 
-PARAMETERS パラメーターは、スコア付けまたは予測に使用される省略可能なユーザー定義のパラメーターを指定するために使用されます。
+> [!IMPORTANT]
+> `RUNTIME = ONNX` 引数は [Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) および [Azure SQL Edge](/azure/sql-database-edge/onnx-overview) でのみ使用できます。
 
-各パラメーターの名前は、モデルの種類に固有です。 たとえば、RevoScaleR の [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 関数は、パラメーター `@computeResiduals` をサポートしています。これは、ロジスティック回帰モデルのスコア付け時に残差を計算するかどうかを示します。 互換性のあるモデルを呼び出している場合、そのパラメーター名と TRUE または FALSE 値を `PREDICT` 関数に渡すことができます。
+モデルの実行に使用される機械学習エンジンを示します。 `RUNTIME` パラメーターの値は常に `ONNX` です。 Azure SQL Edge にはこのパラメーターが必須です。 Azure SQL Managed Instance では、パラメーターは省略可能で、ONNX モデルを使用する場合にのみ使用されます。
 
 **WITH ( <result_set_definition> )**
 
@@ -78,33 +92,36 @@ WITH 句は、`PREDICT` 関数によって返される出力のスキーマを�
 
 ### <a name="return-values"></a>戻り値
 
-定義済みのスキーマは使用できません。SQL Server では、モデルのコンテンツも返された列の値も検証しません。
+定義済みのスキーマは使用できません。モデルのコンテンツは検証されず、返された列の値も検証されません。
 
 - `PREDICT` 関数は入力として列を通過します。
 - `PREDICT` 関数では、新しい列も生成されますが、列の数とそのデータ型は、予測に使用されたモデルの種類に依存します。
 
 データ、モデル、または列形式に関連するすべてのエラー メッセージは、モデルに関連付けられている基になる予測関数から返されます。
 
-- RevoScaleR の場合、同等の関数は [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)  
-- MicrosoftML の場合、同等の関数は [rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict)  
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+## <a name="remarks"></a>解説
 
-`PREDICT` を使用してモデルの内部構造を表示することはできません。 モデル自体のコンテンツを理解するには、モデル オブジェクトを読み込み、逆シリアル化し、適切な R コードを使用してモデルを解析する必要があります。
-
-## <a name="remarks"></a>Remarks
-
-`PREDICT` 関数は、SQL Server 2017 以降のすべてのエディションでサポートされています。 このサポートには、SQL Server 2017 on Linux が含まれます。 `PREDICT` は、クラウドの Azure SQL Database でもサポートされます。 これらのサポートはすべて、他の機械学習機能が有効になっているかどうかに関係なく機能します。
-
-`PREDICT` 関数を使用するサーバーに、R、Python、または別の機械学習言語をインストールする必要はありません。 別の環境でモデルをトレーニングし、`PREDICT` で使用するためにそれを SQL Server テーブルに保存することも、保存されたモデルがある SQL Server の別のインスタンスからモデルを呼び出すこともできます。
+`PREDICT` 関数は、SQL Server 2017 以降のすべてのエディションで、Windows および Linux 上でサポートされています。 `PREDICT` を使用するために、[Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) を有効にする必要はありません。
+::: moniker-end
 
 ### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
-使用するモデルは、RevoScaleR パッケージからサポートされているアルゴリズムのいずれかを使用して作成されている必要があります。 現在サポートされているモデルの一覧は、「[リアルタイム スコアリング](../../advanced-analytics/real-time-scoring.md)」を参照してください。
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
+使用するモデルは、[RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) または [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) パッケージからサポートされているアルゴリズムのいずれかを使用して作成されている必要があります。 現在サポートされているモデルの一覧については、[PREDICT T-SQL 関数を使用したネイティブ スコアリング](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)に関するページを参照してください。
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+[ONNX](https://onnx.ai/) モデル形式に変換できるアルゴリズムがサポートされています。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+[ONNX](https://onnx.ai/) モデル形式、および[RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) または [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) パッケージからサポートされているアルゴリズムのいずれかを使用して作成したモデルに変換できるアルゴリズムがサポートされています。 RevoScaleR および revoscalepy で現在サポートされているアルゴリズムの一覧については、[PREDICT T-SQL 関数を使用したネイティブ スコアリング](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)に関するページを参照してください。
+::: moniker-end
 
 ### <a name="permissions"></a>アクセス許可
 
 `PREDICT` にはアクセス許可は必要ありませんが、ユーザーは、データベースに対する `EXECUTE` アクセス許可と、入力として使用される任意のデータをクエリするためのアクセス許可が必要です。 モデルがテーブルに格納されている場合、ユーザーはテーブルからモデルを読み込める必要もあります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例は、`PREDICT` を呼び出す構文を示しています。
 
@@ -114,68 +131,38 @@ WITH 句は、`PREDICT` 関数によって返される出力のスキーマを�
 
 ```sql
 SELECT d.*, p.Score
-FROM PREDICT(MODEL = @logit_model, 
-  DATA = dbo.mytable AS d) WITH (Score float) AS p;
+FROM PREDICT(MODEL = @model,
+    DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-`DATA` パラメーターでテーブル ソースに指定された別名 **d** は、dbo.mytable に属する列を参照するために使用されます。 **PREDICT** 関数に指定された別名 **p** は、PREDICT 関数によって返される列を参照するために使用されます。
+`DATA` パラメーターでテーブル ソースに指定された別名 **d** は、`dbo.mytable` に属する列を参照するために使用されます。 `PREDICT` 関数に指定された別名 **p** は、`PREDICT` 関数によって返される列を参照するために使用されます。
+
+- モデルは `varbinary(max)` 列として **Models** という名前のテーブルに格納されます。 モードを識別するために、**ID** や**説明**などの追加情報がテーブルに保存されます。
+- `DATA` パラメーターでテーブル ソースに指定された別名 **d** は、`dbo.mytable` に属する列を参照するために使用されます。 入力データ列の名前は、モデルの入力名と一致している必要があります。
+- `PREDICT` 関数に指定された別名 **p** は、`PREDICT` 関数によって返される予測される列を参照するために使用されます。 列名は、モデルの出力名と同じ名前にする必要があります。
+- すべての入力データ列と予測される列は、SELECT ステートメントで表示できるようになります。
 
 ### <a name="combining-predict-with-an-insert-statement"></a>PREDICT を INSERT ステートメントと結合する
 
-予測の一般的なユース ケースの 1 つは、入力データ用のスコアを生成してから、予測された値をテーブルに挿入することです。 次の例では、呼び出し元のアプリケーションがストアド プロシージャを使用して予測値を含む行をテーブルに挿入することを前提としています。
+予測の一般的なユース ケースは、入力データ用のスコアを生成してから、予測した値をテーブルに挿入する方法です。 次の例では、呼び出し元のアプリケーションがストアド プロシージャを使用して予測値を含む行をテーブルに挿入することを前提としています。
 
 ```sql
-CREATE PROCEDURE InsertLoanApplication
-(@p1 varchar(100), @p2 varchar(200), @p3 money, @p4 int)
-AS
-BEGIN
-  DECLARE @model varbinary(max) = (select model
-  FROM scoring_model
-  WHERE model_name = 'ScoringModelV1');
-  WITH d as ( SELECT * FROM (values(@p1, @p2, @p3, @p4)) as t(c1, c2, c3, c4) )
+DECLARE @model varbinary(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
-  INSERT INTO loan_applications (c1, c2, c3, c4, score)
-  SELECT d.c1, d.c2, d.c3, d.c4, p.score
-  FROM PREDICT(MODEL = @model, DATA = d) WITH(score float) as p;
-END;
+INSERT INTO loan_applications (c1, c2, c3, c4, score)
+SELECT d.c1, d.c2, d.c3, d.c4, p.score
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
 ```
 
-プロシージャが、テーブル値パラメーターを通じて複数の行を受け取る場合、次のように記述できます。
+- `PREDICT` の結果は、PredictionResults という名前のテーブルに格納されます。 
+- モデルは `varbinary(max)` 列として **Models** という名前のテーブルに格納されます。 モデルを識別するために、ID や説明などの追加情報がテーブルに保存されます。
+- `DATA` パラメーターのテーブル ソースに指定された別名 **d** は、`dbo.mytable` 内の列を参照するために使用されます。入力データ列の名前は、モデルの入力の名前と一致している必要があります。
+- `PREDICT` 関数に指定された別名 **p** は、`PREDICT` 関数によって返される予測される列を参照するために使用されます。 列名は、モデルの出力名と同じ名前にする必要があります。
+- すべての入力列と予測される列は、SELECT ステートメントで表示できるようになります。
 
-```sql
-CREATE PROCEDURE InsertLoanApplications (@new_applications dbo.loan_application_type)
-AS
-BEGIN
-  DECLARE @model varbinary(max) = (SELECT model_bin FROM scoring_models WHERE model_name = 'ScoringModelV1');
-  INSERT INTO loan_applications (c1, c2, c3, c4, score)
-  SELECT d.c1, d.c2, d.c3, d.c4, p.score
-  FROM PREDICT(MODEL = @model, DATA = @new_applications as d)
-  WITH (score float) as p;
-END;
-```
+## <a name="next-steps"></a>次のステップ
 
-### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>省略可能なモデル パラメーターを使用して、R モデルを作成しスコアを生成する
-
-この例では、次のような RevoScaleR への呼び出しを使用して、共分散マトリックスと一致するロジスティック回帰モデルを作成していることを前提としています。
-
-```R
-logitObj <- rxLogit(Kyphosis ~ Age + Start + Number, data = kyphosis, covCoef = TRUE)
-```
-
-モデルをバイナリ形式で SQL Server に格納する場合は、PREDICT 関数を使用して、予測だけでなく、モデルの種類でサポートされている、エラーや信頼区間などの追加の情報も生成することができます。
-
-次のコードは、R から [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) への同等の呼び出しです。
-
-```R
-rxPredict(logitObj, data = new_kyphosis_data, computeStdErr = TRUE, interval = "confidence")
-```
-
-`PREDICT` 関数を使用した同等の呼び出しでは、スコア (予測値)、エラー、および信頼区間も提供されます。
-
-```sql
-SELECT d.Age, d.Start, d.Number, p.pred AS Kyphosis_Pred, p.stdErr, p.pred_lower, p.pred_higher
-FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
-  PARAMETERS = N'computeStdErr bit, interval varchar(30)',
-  computeStdErr = 1, interval = 'confidence')
-WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
-```
+- [PREDICT T-SQL 関数を使用したネイティブ スコアリング](../../machine-learning/predictions/native-scoring-predict-transact-sql.md)
+::: moniker range="=azure-sqldw-latest||=azuresqldb-mi-current||=sqlallproducts-allversions"
+-   [ONNX モデルの詳細情報](/azure/machine-learning/concept-onnx#get-onnx-models)
+::: moniker-end

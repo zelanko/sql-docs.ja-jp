@@ -1,5 +1,5 @@
 ---
-title: IsReadOnly プロパティ (SqlServiceAdvancedProperty クラス) |Microsoft Docs
+title: IsReadOnly プロパティ (Sqlserviceadvanced Property クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fea64ffe80475bf1dca380c3ca416a9e2a449213
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84e742a04dc3a019e27818e921beb694ca77b9af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62911711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061294"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly プロパティ (SqlServiceAdvancedProperty クラス)
   詳細プロパティが読み取り専用かどうかを指定するブール型のプロパティを取得または設定します。  
@@ -36,16 +35,16 @@ object
 .IsReadOnly [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  詳細プロパティを表す [SqlServiceAdvancedProperty クラス](sqlserviceadvancedproperty-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  詳細プロパティが読み取り専用かどうかを指定するブール値。詳細プロパティが読み取り専用の場合は `true`、詳細プロパティが変更可能な場合は `false` です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

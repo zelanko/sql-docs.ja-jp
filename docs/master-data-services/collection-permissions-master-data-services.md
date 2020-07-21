@@ -1,5 +1,5 @@
 ---
-title: コレクション アクセス許可 (Master Data Services) | Microsoft Docs
+title: コレクション権限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e2e1dbbf51533e03d3e1f5a6930dd0a022cf215
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811623"
 ---
 # <a name="collection-permissions-master-data-services"></a>コレクション権限 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   コレクション権限は、エンティティのすべてのコレクションに適用されます。 特定のコレクションに権限を与えることはできません。つまり、権限はすべてのコレクションに適用されます。  
   
@@ -40,8 +40,8 @@ ms.locfileid: "67941100"
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除が割り当てられると、読み取り権限が自動的に割り当てられます。  
   
 ## <a name="see-also"></a>関連項目  
- [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)   
+ [モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [コレクション &#40;マスターデータサービス&#41;](../master-data-services/collections-master-data-services.md)   
  [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

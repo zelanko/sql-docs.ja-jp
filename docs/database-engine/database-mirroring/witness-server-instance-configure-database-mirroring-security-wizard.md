@@ -1,6 +1,7 @@
 ---
-title: ミラーリング監視サーバー インスタンス (データベース ミラーリング セキュリティ構成ウィザード) | Microsoft Docs
-ms.custom: ''
+title: 'セキュリティの構成ウィザード: ミラーリング監視サーバー インスタンス'
+description: '[データベース ミラーリング セキュリティ構成ウィザード] の [ミラーリング監視サーバー インスタンス] について説明します。 '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e50362e86273f00c6bcfe13a3d6c2120ee36e33d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1209600e4803d0d5bed5e506f4af64b782648787
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650919"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>[ミラーリング監視サーバー インスタンス] (データベース ミラーリング セキュリティ構成ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、セッションのミラーリング監視サーバーとして機能するサーバー インスタンスの情報を指定できます。  
   
 > [!NOTE]
@@ -32,7 +33,7 @@ ms.locfileid: "68050580"
   
 -   [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[ミラーリング監視サーバー インスタンス]**  
  **[データベースのプロパティ]** ダイアログ ボックスの **[ミラー化]** ページで、ミラーリング監視サーバー インスタンスが既に指定されている場合、そのインスタンスが表示されます。詳細については、「[[データベースのプロパティ] &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)」を参照してください。  
   
@@ -46,12 +47,12 @@ ms.locfileid: "68050580"
 > [!NOTE]  
 >  データベース ミラーリング セキュリティ構成ウィザードは、 **[サーバーへの接続]** ダイアログ ボックスで指定された資格情報を使ってサーバー インスタンスに接続します。 これらは、ミラーリング セッションの資格情報とは異なります。ミラーリング セッションでは、サーバー インスタンスをサービスとして実行している開始アカウントの資格情報が使用されます。  
   
- **[リスナー ポート]**  
+ **リスナー ポート**  
  このオプションでは、このサーバー インスタンスに対するミラーリング エンドポイントが存在するかどうかに応じて、次のような内容が表示されます。  
   
 -   サーバー インスタンスに対するリスナー ポートが存在しない場合、 **[ポート]** テキスト ボックスにはポート番号 5022 が表示されます。 使用可能な任意のポート番号を入力できます (7022 など)。  
   
--   ミラーリング エンドポイントが既に存在する場合、そのエンドポイントからのポート番号が表示されます。 ポートを変更する必要がある場合は、ALTER ENDPOINT ステートメントを使用します。 詳細については、「[ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)」を参照してください。  
+-   ミラーリング エンドポイントが既に存在する場合、そのエンドポイントからのポート番号が表示されます。 ポートを変更する必要がある場合は、ALTER ENDPOINT ステートメントを使用します。 詳細については、「 [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)」を参照してください。  
   
     > [!NOTE]  
     >  ポート番号は必須です。  

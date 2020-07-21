@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_principalprofile_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_principalprofile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_principalprofile_sp
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 024eec5c9e74eb48ac57dcf16a40a7783d79f5b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044520"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890893"
 ---
-# <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メール プロファイルと msdb データベース プリンシパルとの関連付けに関する情報を表示します。  
   
@@ -41,13 +41,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @principal_id = ] principal_id` データベース ユーザーまたはロールの id、 **msdb**リストにアソシエーションのデータベースです。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定することがあります。  
+`[ @principal_id = ] principal_id`関連付けを表示する**msdb**データベースのデータベースユーザーまたはロールの ID を示します。 *principal_id*は**int**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定できます。  
   
-`[ @principal_name = ] 'principal_name'` データベース ユーザーまたはロールの名前を指定します、 **msdb**リストにアソシエーションのデータベースです。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定することがあります。  
+`[ @principal_name = ] 'principal_name'`関連付けを表示する**msdb**データベースのデータベースユーザーまたはロールの名前を指定します。 *principal_name*は**sysname**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定できます。  
   
-`[ @profile_id = ] profile_id` 一覧への関連付けのプロファイルの ID です。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定することがあります。  
+`[ @profile_id = ] profile_id`関連付けを一覧表示するプロファイルの ID を示します。 *profile_id*は**int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定できます。  
   
-`[ @profile_name = ] 'profile_name'` 一覧への関連付けのプロファイルの名前です。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定することがあります。  
+`[ @profile_name = ] 'profile_name'`関連付けを一覧表示するプロファイルの名前を指定します。 *profile_name*は**sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -59,22 +59,22 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |-|-|-|  
 |列名|データ型|説明|  
 |**principal_id**|**int**|データベース ユーザーの ID|  
-|**principal_name**|**sysname**|データベース ユーザーの名前。|  
-|**profile_id**|**int**|データベース メール プロファイルの ID 番号。|  
-|**profile_name**|**sysname**|データベース メール プロファイルの名前。|  
+|**principal_name**|**sysname**|データベースユーザーの名前。|  
+|**profile_id**|**int**|データベースメールプロファイルの ID 番号。|  
+|**profile_name**|**sysname**|データベースメールプロファイルの名前。|  
 |**is_default**|**bit**|このプロファイルがユーザーの既定のプロファイルかどうかを示すフラグ|  
   
-## <a name="remarks"></a>コメント  
- 場合**sysmail_help_principalprofile_sp**が呼び出されたパラメーターを指定せず、返される結果セットすべてのインスタンス内の関連付けの一覧表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 それ以外の場合、結果セットには、指定されたパラメーターと一致する関連付けについての情報が含まれています。 たとえば、手順すべてを一覧表示プロファイルの関連付けのプロファイル名を指定します。  
+## <a name="remarks"></a>注釈  
+ パラメーターを指定せずに**sysmail_help_principalprofile_sp**が呼び出された場合、返される結果セットには、のインスタンス内のすべての関連付けが一覧表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 それ以外の場合、結果セットには、指定されたパラメーターに一致するアソシエーションの情報が含まれます。 たとえば、プロファイル名が指定されている場合、このプロシージャはプロファイルのすべての関連付けを一覧表示します。  
   
- **sysmail_help_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
+ **sysmail_help_principalprofile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-listing-information-for-a-specific-association"></a>A. 特定のアソシエーションに関する情報を表示  
+### <a name="a-listing-information-for-a-specific-association"></a>A. 特定の関連付けに関する情報を一覧表示する  
  次の例では、`AdventureWorks Administrator` データベース内の `ApplicationLogin` プロファイルと `msdb` プリンシパルのすべての関連付けについて、その情報を表示します。  
   
 ```  
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_help_principalprofile_sp
     @profile_name = 'AdventureWorks Administrator' ;  
 ```  
   
- 行の長さを再フォーマット、サンプルの結果セットを次に示します。  
+ 次に示すのは、行の長さに対して再フォーマットされる、結果セットのサンプルです。  
   
 ```  
 principal_id principal_name     profile_id  profile_name                   is_default  
@@ -91,14 +91,14 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-### <a name="b-listing-information-for-all-associations"></a>B. すべての関連付けについての情報を一覧表示します。  
+### <a name="b-listing-information-for-all-associations"></a>B: すべての関連付けに関する情報を一覧表示する  
  次の例では、インスタンス内のすべての関連付けについての情報を表示します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_principalprofile_sp ;  
 ```  
   
- 行の長さを再フォーマット、サンプルの結果セットを次に示します。  
+ 次に示すのは、行の長さに対して再フォーマットされる、結果セットのサンプルです。  
   
 ```  
 principal_id principal_name     profile_id  profile_name                   is_default  
@@ -109,6 +109,6 @@ principal_id principal_name     profile_id  profile_name                   is_de
   
 ## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

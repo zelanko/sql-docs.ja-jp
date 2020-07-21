@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b61af738-f144-4992-b0b2-d44cb7240991
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0d725f95fc8e9de0865ad895abd860d5f03687b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2860e1434611393c941a639280343f736073c709
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62662930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029789"
 ---
 # <a name="database-event-category"></a>Database イベント カテゴリ
   **Database** イベント カテゴリには、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]を監視するためのイベント クラスが含まれています。  

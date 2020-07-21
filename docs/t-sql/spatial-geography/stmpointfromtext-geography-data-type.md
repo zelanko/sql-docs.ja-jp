@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 869ddd79f3c4f7ca2eea30ddaf1f704a233c15fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6ef49da5803e47ba2f42ab713c1e363ff5dde9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702956"
 ---
 # <a name="stmpointfromtext-geography-data-type"></a>STMPointFromText (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geography** インスタンスを返します。インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完されています。
   
@@ -46,14 +46,14 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
- OGC の型:**MultiPoint**  
+ OGC の型: **MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STMPointFromText()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

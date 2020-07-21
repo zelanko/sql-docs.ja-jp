@@ -1,5 +1,6 @@
 ---
-title: マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する | Microsoft Docs
+title: マークされたトランザクションへのデータベースの復元
+description: 関連する更新を複数の関連したデータベースに対して実行する場合、SQL Server でトランザクション マークを使用して、それらのデータベースを論理的に一貫した状態に復旧できます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 94d4a76233304347865049c118d7b956b8416a44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d456054b4edd45b15182a511235e640a03337b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631235"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのみに関連しています。  
   
@@ -63,8 +65,6 @@ ms.locfileid: "68041332"
   
 5.  WITH STOPATMARK を指定してログを復元します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="considerations-for-using-marked-transactions"></a>マークされたトランザクションの使用に関する考慮事項  
  名前付きマークをトランザクション ログに挿入する前に、次の点を考慮してください。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68041332"
   
      BEGIN TRAN...WITH MARK ステートメントが実行されるサーバー インスタンス上でのみ、特定のトランザクションのマークがトランザクション ログに挿入されます。 トランザクション マークは、そのサーバー インスタンス上のマーク付きトランザクションによって更新されたすべてのデータベースのトランザクション ログに配置されます。 データベースが他のサーバー インスタンス上にある場合は、それらのサーバー インスタンスで同一のマークを作成する必要があります。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  次の例では、トランザクション ログを `ListPriceUpdate`というマーク付きトランザクションのマークまで復元します。  
   
 ```sql  
@@ -184,6 +184,6 @@ GO
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [データベースの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
+ [マークされたトランザクションを含む関連データベースの復旧](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
   
   

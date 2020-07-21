@@ -1,5 +1,5 @@
 ---
-title: カスタマイズ (Visual Database Tools) をダイアグラムに表示される情報量 |Microsoft Docs
+title: ダイアグラムに表示される情報の量をカスタマイズする (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbf419209e4a297e3b7a2dfdcce6d4aa5daefb23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061820"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>ダイアグラムに表示される情報の量のカスタマイズ (Visual Database Tools)
   データベース ダイアグラムにテーブルを追加すると、設定した数のプロパティが表示されます。 表示する情報の量をメニューから選択するか、プロパティのカスタム セットを作成できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "63270559"
   
 -   [テーブル名のみ]  
   
--   カスタム  
+-   Custom  
   
 -   カスタムの変更  
   

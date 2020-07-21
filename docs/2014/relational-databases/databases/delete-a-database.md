@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 633d97815cf69da12f1aa67fd8ef626a2d46e0b0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62871924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970072"
 ---
 # <a name="delete-a-database"></a>データベースの削除
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ユーザー定義のデータベースを削除する方法について説明します。  
@@ -35,7 +34,7 @@ ms.locfileid: "62871924"
   
      [前提条件](#Prerequisites)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
      [Security](#Security)  
   
@@ -47,30 +46,30 @@ ms.locfileid: "62871924"
   
 -   **補足情報:** [データベースを削除した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   システム データベースは削除できません。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
--   データベース上に存在するデータベース スナップショットをすべて削除します。 詳細については、「[データベース スナップショットの削除&#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)」を参照してください。  
+-   データベース上に存在するデータベース スナップショットをすべて削除します。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)」を参照してください。  
   
 -   データベースがログ配布に関係している場合は、ログ配布を削除します。  
   
 -   データベースをトランザクション レプリケーション用にパブリッシュしている場合、またはマージ レプリケーションにパブリッシュしたりサブスクライブしている場合は、レプリケーションをデータベースから削除します。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   データベースの完全バックアップを行うことを検討します。 削除したデータベースの再作成は、バックアップを復元することによってのみ可能です。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  DROP DATABASE を実行するには、少なくともユーザーがデータベースで CONTROL 権限を持っている必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-delete-a-database"></a>データベースを削除するには  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62871924"
   
 3.  適切なデータベースが選択されていることを確認して、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-a-database"></a>データベースを削除するには  
   
@@ -97,7 +96,7 @@ DROP DATABASE Sales, NewSales ;
 GO  
 ```  
   
-##  <a name="FollowUp"></a>補足情報: データベースを削除した後  
+##  <a name="follow-up-after-deleting-a-database"></a><a name="FollowUp"></a>補足情報: データベースを削除した後  
  **master** データベースをバックアップします。 **master** データベースを復元する必要がある場合、 **master** データベースが最後にバックアップされてから削除されたデータベースがあると、システム カタログ ビュー内にそのデータベースの参照が残っているので、エラー メッセージが表示されることがあります。  
   
 ## <a name="see-also"></a>参照  

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: aa9f08af-df24-4c80-8298-c4007339b20a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d959dc2f9372aa723089dc87bea66424c4d2ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 313ae3564d79861d43ccb02e7e79d1e18da27a67
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984023"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927937"
 ---
 # <a name="getdate-method-int"></a>getDate (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,17 +35,17 @@ public java.sql.Date getDate(int index)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- Date オブジェクトです。  
+ Date オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getDate メソッドは、java.sql.CallableStatement インターフェイスの getDate メソッドで規定されています。  
   
  このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **datetime** または **smalldatetime** データ型の有効な日付部分が返されます。時刻部分は Java のベースラインの時刻である 00:00 (午前 0 時) に設定されます。  

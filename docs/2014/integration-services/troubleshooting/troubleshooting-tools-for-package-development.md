@@ -13,15 +13,14 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6198e73fa7f22be92a45ea9de8c02d82bc768dd9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62886462"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420589"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>パッケージ開発のトラブルシューティング ツール
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開発する際にトラブルシューティングを実行できる機能とツールが用意されています。  
@@ -41,7 +40,7 @@ ms.locfileid: "62886462"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、検証エラーを回避するための以下の追加機能が備わっています。  
   
--   **データ ソースが使用できないときは、オフラインで動作するようにすべてのパッケージとすべての接続を設定します**。 **[SSIS]** メニューの **[オフライン作業]** を有効にできます。 異なり、`DelayValidation`プロパティ、**オフライン作業**オプションは、パッケージを開く前でもに、使用できます。 また、 **[オフライン作業]** を有効にしてデザイナーでの操作を高速化し、パッケージを検証するときだけこのオプションを無効にすることもできます。  
+-   **データ ソースが使用できないときは、オフラインで動作するようにすべてのパッケージとすべての接続を設定します**。 **[SSIS]** メニューの **[オフライン作業]** を有効にできます。 プロパティとは異なり、[ `DelayValidation` **オフライン作業**] オプションはパッケージを開く前でも使用できます。 また、 **[オフライン作業]** を有効にしてデザイナーでの操作を高速化し、パッケージを検証するときだけこのオプションを無効にすることもできます。  
   
 -   **実行時まで無効なパッケージ要素の DelayValidation プロパティを構成する**。 デザイン時には構成が有効でないパッケージ要素の `DelayValidation` を `True` に設定すると、検証エラーが発生するのを防ぐことができます。 たとえば、SQL 実行タスクが実行時に作成するまで存在しないテーブルを、データ フロー タスクで使用する場合があります。 `DelayValidation` プロパティはパッケージ ベル、またはパッケージに含まれている個別のタスクやコンテナーのレベルで有効にできます。 実行時に同じ検証エラーが発生するのを防ぐため、パッケーを配置するときは、同一パッケージ内の要素についてこのプロパティを `True` に設定しておく必要があります。  
   
@@ -83,12 +82,12 @@ ms.locfileid: "62886462"
     > [!NOTE]  
     >  複数のスクリプト タスクを含むパッケージをデバッグする場合、デバッガーは 1 つのスクリプト タスクにあるブレークポイントのみにヒットし、他のスクリプト タスクにあるブレークポイントを無視します。 スクリプト タスクが Foreach ループ コンテナーまたは For ループ コンテナーの一部である場合、デバッガーは、ループの最初の繰り返し後にスクリプト タスクにあるブレークポイントを無視します。  
   
- 詳細については、「 [スクリプトのデバッグ](debugging-script.md)」を参照してください。 スクリプト コンポーネントをデバッグする方法に関する推奨事項は、[コーディングとスクリプト コンポーネントのデバッグ] を参照してください (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md です。  
+ 詳細については、「 [スクリプトのデバッグ](debugging-script.md)」を参照してください。 スクリプトコンポーネントをデバッグする方法の推奨事項については、「スクリプトコンポーネントのコーディングおよびデバッグ」 (.) を参照してください。/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ## <a name="troubleshooting-errors-without-a-description"></a>説明のないエラーのトラブルシューティング  
  パッケージ開発中、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー番号に対応する説明のないエラーが発生した場合は、その説明を「 [Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)」で確認できます。 現時点では、この一覧にトラブルシューティング情報は含まれていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージ実行のトラブルシューティング ツール](troubleshooting-tools-for-package-execution.md)   
  [データ フロー パフォーマンス機能](../data-flow/data-flow-performance-features.md)  
   

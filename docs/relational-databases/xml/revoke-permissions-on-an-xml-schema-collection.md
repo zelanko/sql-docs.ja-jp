@@ -1,5 +1,6 @@
 ---
 title: XML スキーマ コレクションに対する権限の取り消し | Microsoft Docs
+description: XML スキーマ コレクションに対する権限を取り消す方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5d2cdfdf47aad32c9fc669ae054cf84c061c0ee5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7952b6d917494f8d73edb24290c2f43f5f0d5d94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752528"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の取り消し
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML スキーマ コレクションを作成する権限は、次のいずれかの方法で取り消すことができます。  
   
 -   リレーショナル スキーマの ALTER 権限を取り消します。 その結果、プリンシパルはリレーショナル スキーマで XML スキーマ コレクションを作成できなくなります。 ただし、同じデータベースの他のリレーショナル スキーマでは作成できます。  
@@ -42,7 +43,7 @@ ms.locfileid: "68000755"
   
 -   EXECUTE 権限を取り消すと、XML コレクションによって型指定または制約された列、変数、およびパラメーターの値を挿入または更新するプリンシパルの権限が取り消されます。 これにより、そのような **xml** 型の列、変数、またはパラメーターにクエリする権限も取り消されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例に示すシナリオでは、XML スキーマ権限のしくみを説明します。 各例では、必要なテスト データベース、リレーショナル スキーマ、およびログインを作成します。 それらのログインには、必要な XML スキーマ コレクション権限が許可されています。 最後に必要なクリーンアップを行います。  
   
 ### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. XML スキーマ コレクションを作成するための権限の取り消し  

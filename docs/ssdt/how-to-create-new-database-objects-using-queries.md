@@ -1,26 +1,27 @@
 ---
-title: 方法:クエリを使用して新しいデータベース オブジェクトを作成する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: クエリを使用して新しいデータベース オブジェクトを作成する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 778783c61be2d3b9cfac784d271bce584ef37f68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 38a7165eb1145c6da08902d06a8483b0e26abf5b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897197"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241490"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>方法:クエリを使用して新しいデータベース オブジェクトを作成する
+# <a name="how-to-create-new-database-objects-using-queries"></a>クエリを使用して新しいデータベース オブジェクトを作成する方法
+
 スクリプトを使用して、ビュー、ストアド プロシージャ、関数、トリガー、ユーザー定義型などを作成または編集する場合は、Transact\-SQL エディターを使用します。 Transact\-SQL エディターは IntelliSense およびその他の言語サポートを提供します。 詳しくは、「[Transact-SQL エディターを使用したスクリプトの編集と実行](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)」をご覧ください。  
   
-Transact\-SQL エディターは、 **[コードの表示]** コンテキスト メニューを使用して、接続されているデータベースまたはプロジェクトのデータベース エンティティを開くと起動されます。 SQL Server オブジェクト エクスプローラーの **[新しいクエリ]** コンテキスト メニューを使用するときと、データベース プロジェクトに新しいスクリプト オブジェクトを追加するときにも、このエディターが自動的に開きます。 データベースに対するクエリを実行するときに、まだデータベースに接続していない場合にも、 **[SQL]** メニューの **[Transact-SQL エディター]** メニューを選択して **[新しいクエリ接続]** ダイアログ ボックスからデータベースに接続し、Transact\-SQL エディターを起動できます。  
+Transact\-SQL エディターは、 **[コードの表示]** コンテキスト メニューを使用して、接続されているデータベースまたはプロジェクトのデータベース エンティティを開くと起動されます。 SQL Server オブジェクト エクスプローラーの **[新しいクエリ]** コンテキスト メニューを使用するときと、データベース プロジェクトに新しいスクリプト オブジェクトを追加するときにも、このエディターが自動的に開きます。 データベースに対するクエリを実行するときに、まだデータベースに接続していない場合にも、**[SQL]** メニューの **[Transact-SQL エディター]** メニューを選択して **[新しいクエリ接続]** ダイアログ ボックスからデータベースに接続し、Transact\-SQL エディターを起動できます。  
   
 > [!WARNING]  
 > 以下に示す手順では、「[接続されているデータベース開発](../ssdt/connected-database-development.md)」に示されているこれまでの手順で作成したエンティティを使用します。  
@@ -43,7 +44,7 @@ Transact\-SQL エディターは、 **[コードの表示]** コンテキスト 
   
 3.  Transact\-SQL エディターのツール バーにある **[クエリの実行]** ボタンをクリックして、このクエリを実行します。  
   
-4.  **SQL Server オブジェクト エクスプローラー**で **Trade** データベースを右クリックし、 **[更新]** をクリックします。 新しく **Fruits** テーブルがデータベースに追加されていることを確認します。  
+4.  **SQL Server オブジェクト エクスプローラー**で **Trade** データベースを右クリックし、**[更新]** をクリックします。 新しく **Fruits** テーブルがデータベースに追加されていることを確認します。  
   
 ### <a name="to-create-a-new-function"></a>新しい関数を作成するには  
   

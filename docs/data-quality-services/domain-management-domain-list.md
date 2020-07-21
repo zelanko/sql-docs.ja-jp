@@ -1,6 +1,5 @@
 ---
-title: ドメイン管理:ドメイン リスト | Microsoft Docs
-ms.custom: ''
+title: ドメイン管理:ドメイン リスト
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,25 +9,25 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: bc5c1c283055655b84a70ec040861fce7fcca182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: f90d13f65fbdd9f0c3f6626f15f65fa6d18d641a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935333"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882841"
 ---
 # <a name="domain-management-domain-list"></a>ドメイン管理:ドメイン リスト
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **(DQS) の** [ドメイン管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ページの [ドメイン] リスト内のコントロールについて説明します。 このペインを使用して管理操作を実行するドメインを選択します。 これと同じペインが、 **[ドメイン管理]** ページのすべてのタブ ページで使用されています。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 ### <a name="domains-list"></a>[ドメイン] リスト  
- **[ドメイン]**  
+ **ドメイン**  
  この一覧にはナレッジ ベースのすべてのドメインが表示されます。 右側のペインのタブ ページで実行する操作は、この一覧で選択されているドメインに対して実行されます。 詳細については、「  
   
  **複合ドメインの作成**  

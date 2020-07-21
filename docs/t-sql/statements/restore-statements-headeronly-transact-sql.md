@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742969"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279510"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -42,7 +42,7 @@ ms.locfileid: "68742969"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 RESTORE HEADERONLY   
 FROM <backup_device>   
@@ -97,9 +97,9 @@ FROM <backup_device>
 |**BackupDescription**|**nvarchar (255)**|バックアップ セットの説明。|  
 |**BackupType**|**smallint**|バックアップの種類:<br /><br /> **1** = データベース<br /><br /> **2** = トランザクション ログ<br /><br /> **4** = ファイル<br /><br /> **5** = データベースの差分<br /><br /> **6** = ファイルの差分<br /><br /> **7** = 部分的<br /><br /> **8** = 部分的な差分|  
 |**ExpirationDate**|**datetime**|バックアップ セットの失効日。|  
-|**Compressed**|**BYTE(1)**|ソフトウェア ベースの圧縮によりバックアップ セットが圧縮されているかどうか:<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
-|**[位置]**|**smallint**|ボリューム内でのバックアップ セットの位置 (FILE = のオプションで使用)。|  
-|**DeviceType**|**tinyint**|バックアップ操作で使用するデバイスに対応する値。<br /><br /> ディスク:<br /><br /> **2** = 論理<br /><br /> **102** = 物理<br /><br /> テープ:<br /><br /> **5** = 論理<br /><br /> **105** = 物理<br /><br /> 仮想デバイス:<br /><br /> **7** = 論理<br /><br /> **107** = 物理<br /><br /> 論理デバイス名とデバイス番号は **sys.backup_devices** です。詳細については、「[sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)」を参照してください。|  
+|**Compressed**|**BIT(1)**|ソフトウェア ベースの圧縮によりバックアップ セットが圧縮されているかどうか:<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
+|**Position**|**smallint**|ボリューム内でのバックアップ セットの位置 (FILE = のオプションで使用)。|  
+|**DeviceType**|**tinyint**|バックアップ操作で使用するデバイスに対応する値。<br /><br /> ディスク:<br /><br /> **2** = 論理<br /><br /> **102** = 物理<br /><br /> テープ:<br /><br /> **5** = 論理<br /><br /> **105** = 物理<br /><br /> 仮想デバイス:<br /><br /> **7** = 論理<br /><br /> **107** = 物理<br /><br /> URL<br /><br /> **9** = 論理<br /><br /> **109** = 物理<br /><br />  論理デバイス名とデバイス番号は **sys.backup_devices** です。詳細については、「[sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)」を参照してください。|  
 |**UserName**|**nvarchar(128)**|バックアップ操作を実行したユーザーの名前。|  
 |**ServerName**|**nvarchar(128)**|バックアップ セットを作成したサーバーの名前。|  
 |**DatabaseName**|**nvarchar(128)**|バックアップの作成元であるデータベースの名前。|  
@@ -122,10 +122,10 @@ FROM <backup_device>
 |**SoftwareVersionMinor**|**int**|バックアップ セットを作成したサーバーのマイナー バージョン番号。|  
 |**SoftwareVersionBuild**|**int**|バックアップ セットを作成したサーバーのビルド番号。|  
 |**MachineName**|**nvarchar(128)**|バックアップ操作を実行したコンピューターの名前。|  
-|**フラグ**|**int**|**1** に設定されている場合の個々のフラグ ビットの意味は次のとおりです。<br /><br /> **1** = ログ バックアップに一括ログ操作が含まれている。<br /><br /> **2** = スナップショット バックアップ。<br /><br /> **4** = データベースがバックアップ時に読み取り専用だった。<br /><br /> **8** = データベースがバックアップ時にシングル ユーザー モードだった。<br /><br /> **16** = バックアップにバックアップ チェックサムが含まれている。<br /><br /> **32** = データベースがバックアップ時に損傷したが、エラーに関係なくバックアップ操作の続行が要求された。<br /><br /> **64** = ログ末尾のバックアップ。<br /><br /> **128** = 不完全なメタデータでのログ末尾のバックアップ。<br /><br /> **256** = NORECOVERY でのログ末尾のバックアップ。<br /><br /> **重要:** **Flags** ではなく、下に示す **HasBulkLoggedData** から **IsCopyOnly** までのブール値をとる各列の使用をお勧めします。|  
+|**Flags**|**int**|**1** に設定されている場合の個々のフラグ ビットの意味は次のとおりです。<br /><br /> **1** = ログ バックアップに一括ログ操作が含まれている。<br /><br /> **2** = スナップショット バックアップ。<br /><br /> **4** = データベースがバックアップ時に読み取り専用だった。<br /><br /> **8** = データベースがバックアップ時にシングル ユーザー モードだった。<br /><br /> **16** = バックアップにバックアップ チェックサムが含まれている。<br /><br /> **32** = データベースがバックアップ時に損傷したが、エラーに関係なくバックアップ操作の続行が要求された。<br /><br /> **64** = ログ末尾のバックアップ。<br /><br /> **128** = 不完全なメタデータでのログ末尾のバックアップ。<br /><br /> **256** = NORECOVERY でのログ末尾のバックアップ。<br /><br /> **重要:** **Flags** ではなく、下に示す **HasBulkLoggedData** から **IsCopyOnly** までのブール値をとる各列の使用をお勧めします。|  
 |**BindingID**|**uniqueidentifier**|データベースに割り当てられたバインド ID。 これは、**sys.database_recovery_status database_guid** に対応します。 データベースが復元されると、新しい値が割り当てられます。 **FamilyGUID** (下記) も参照してください。|  
 |**RecoveryForkID**|**uniqueidentifier**|最後の復旧分岐の ID。 この列は、[backupset](../../relational-databases/system-tables/backupset-transact-sql.md) テーブル内の **last_recovery_fork_guid** に対応します。<br /><br /> データのバックアップでは、**RecoveryForkID** は **FirstRecoveryForkID** と同じです。|  
-|**[照合順序]**|**nvarchar(128)**|データベースで使用されている照合順序。|  
+|**Collation**|**nvarchar(128)**|データベースで使用されている照合順序。|  
 |**FamilyGUID**|**uniqueidentifier**|元のデータベースに関する作成時の ID。 この値は、データベースが復元されても変わりません。|  
 |**HasBulkLoggedData**|**bit**|**1** = 一括ログ記録操作を含むログ バッグアップ。|  
 |**IsSnapshot**|**bit**|**1** = スナップショット バックアップ。|  
@@ -145,18 +145,18 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|バックアップの種類を表す文字列。次のいずれかになります。<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|メディア上のバックアップ セットを識別する、バックアップ セットの一意識別番号。|  
 |**CompressedBackupSize**|**bigint**|バックアップ セットのバイト数。 圧縮されていないバックアップの場合、この値は **BackupSize** と同じです。<br /><br /> 圧縮比率を計算するには、**CompressedBackupSize** と **BackupSize** を使用します。<br /><br /> この値は、**msdb** のアップグレード中に、**BackupSize** 列の値と一致するように設定されます。|  
-|**containment**|**tinyint** not NULL|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> データベースの包含状態を示します。<br /><br /> 0 = データベースの包含がオフ<br /><br /> 1 = データベースは部分的な包含|  
+|**containment**|**tinyint** not NULL|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> データベースの包含状態を示します。<br /><br /> 0 = データベースの包含がオフ<br /><br /> 1 = データベースは部分的な包含|  
 |**KeyAlgorithm**|**nvarchar(32)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) から現在のバージョンまで)。<br /><br /> バックアップの暗号化に使用される暗号化アルゴリズム。 NO_Encryption では、バックアップが暗号化されていないことを示します。 システムに正しい値を特定できない場合、値は NULL になります。|  
 |**EncryptorThumbprint**|**varbinary(20)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) から現在のバージョンまで)。<br /><br /> データベースに保存されている証明書や非対称キーを検索するために使用される暗号化機能の拇印。 バックアップが暗号化されていない場合、この値は NULL となります。|  
 |**EncryptorType**|**nvarchar(32)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) から現在のバージョンまで)。<br /><br /> 使用される暗号化の種類:証明書キーまたは非対称キー。 バックアップが暗号化されていない場合、この値は NULL となります。|  
   
 > [!NOTE]  
->  バックアップ セットにパスワードが定義されている場合、RESTORE HEADERONLY によって完全な情報が返されるのは、コマンドの PASSWORD オプションと同じパスワードが指定されているバックアップ セットに対してのみです。 また保護されていないバックアップ セットについても、RESTORE HEADERONLY では完全な情報が返されます。 メディア上にある、他のパスワードで保護されているバックアップ セットについては、**BackupName** 列が ' ** _** ' に設定され、他の列は NULL になります。  
+>  バックアップ セットにパスワードが定義されている場合、RESTORE HEADERONLY によって完全な情報が返されるのは、コマンドの PASSWORD オプションと同じパスワードが指定されているバックアップ セットに対してのみです。 また保護されていないバックアップ セットについても、RESTORE HEADERONLY では完全な情報が返されます。 メディア上にある、他のパスワードで保護されているバックアップ セットについては、**BackupName** 列が '**_Password Protected_**' に設定され、他の列は NULL になります。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  クライアントは RESTORE HEADERONLY を使用して、特定のバックアップ デバイス上のすべてのバックアップについて、バックアップ ヘッダーに関するすべての情報を取得できます。 バックアップ デバイス上にあるバックアップごとに、ヘッダー情報が 1 行のデータとしてサーバーから送信されます。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  バックアップ操作では、オプションで、メディア セットとバックアップ セットにそれぞれパスワードを設定できます。 メディア セットまたはバックアップ セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 これらのパスワードを設定しておくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、パスワードでメディアの上書きを防ぐことはできません。  
   
 > [!IMPORTANT]  
@@ -165,13 +165,12 @@ FROM <backup_device>
 ### <a name="permissions"></a>アクセス許可  
  バックアップ セットやバックアップ デバイスに関する情報の取得には CREATE DATABASE 権限が必要になります。 詳細については、「[GRANT (データベースの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ディスク ファイル `C:\AdventureWorks-FullBackup.bak` のヘッダー情報を返します。  
   
 ```  
 RESTORE HEADERONLY   
-FROM DISK = N'C:\AdventureWorks-FullBackup.bak'   
-WITH NOUNLOAD;  
+FROM DISK = N'C:\AdventureWorks-FullBackup.bak';  
 GO  
 ```  
   

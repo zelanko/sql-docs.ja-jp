@@ -1,6 +1,7 @@
 ---
-title: WMI Provider for Configuration Management の理解 |Microsoft Docs
-ms.custom: ''
+title: WMI Provider for Configuration Management
+description: WMI Provider for Configuration Management が WMI を使用して、SQL Server のサービス、サーバーの別名、およびクライアント/サーバーのネットワーク設定を管理する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de76b774083c6744e5bfad34aa0fed24952793be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 643cfdcca57bc6427cf92f2ca96f1c9e4716ced9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139399"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888222"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>WMI Provider for Configuration Management について
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成管理用 WMI プロバイダーを提供します。 これにより、WMI (Windows Management Instrumentation) を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクライアントおよびサーバーのネットワーク設定、およびサーバー別名を管理することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、ネットワーク設定、および別名は、\microsoft\sqlserver\computermanagement WMI オブジェクトによって表される*nn*コンピューターの名前空間。 指定されたコンピューター上で WMI プロバイダーを使用して接続が確立された後、サービス、ネットワーク設定、別名は、WQL またはスクリプティング言語を使用してクエリを行うことができます。  
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、構成管理用の WMI プロバイダーが用意されています。 これにより、WMI (Windows Management Instrumentation) を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクライアントおよびサーバーのネットワーク設定、およびサーバー別名を管理することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス、ネットワーク設定、およびエイリアスは、コンピューターの root\Microsoft\SqlServer\ComputerManagement*nn*名前空間の WMI オブジェクトによって表されます。 指定されたコンピューター上で WMI プロバイダーを使用して接続が確立された後、サービス、ネットワーク設定、別名は、WQL またはスクリプティング言語を使用してクエリを行うことができます。  
   
- WMI プロバイダーは、インスタンス プロバイダーです。 インスタンスを提供、 [WMI クラス](../../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md)次の非同期操作をサポートしています。  
+ WMI プロバイダーは、インスタンス プロバイダーです。 [WMI クラス](../../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md)のインスタンスを提供し、次の非同期操作をサポートします。  
   
  インスタンスの取得  
  特定のクラス型インスタンスの取得です。  
   
- 列挙値  
+ 列挙  
  クラス型のすべてのインスタンスの列挙です。  
   
  変更  
@@ -42,11 +43,11 @@ ms.locfileid: "68139399"
  クエリ処理  
  フィルターに基づいたクラス型のインスタンスの列挙です。  
   
- 構成管理用 WMI プロバイダーを使用して管理アプリケーションの例については、次を参照してください。 [WQL を使用して、WMI Provider for Configuration Management でのスクリプト言語](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)します。  
+ 構成管理用の WMI プロバイダーを使用した管理アプリケーションの例については、「 [Wmi provider For Configuration management での WQL およびスクリプト言語の使用](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)」を参照してください。  
   
- WMI プロバイダーを使用して管理アプリケーションのプログラミングの詳細については、WMI のドキュメントを参照してください、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK。  
+ WMI プロバイダーを使用した管理アプリケーションのプログラミングの詳細については、.NET Framework SDK の WMI のドキュメントを参照してください [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WMI Provider for Configuration Management の使用](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   
  [WQL およびスクリプティング言語での WMI Provider for Configuration Management の使用](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   

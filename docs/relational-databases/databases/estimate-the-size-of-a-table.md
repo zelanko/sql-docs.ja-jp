@@ -1,5 +1,6 @@
 ---
 title: テーブル サイズの見積もり | Microsoft Docs
+description: SQL Server でテーブルにデータを格納するために必要な領域を見積もるには、次の手順を実行します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -26,15 +27,15 @@ ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb75aede7c32d8217bcae71b55997d3700a04a7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2cec3c9f67a07cb36c6ba7f4a11225b5544b252
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934474"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002198"
 ---
 # <a name="estimate-the-size-of-a-table"></a>テーブル サイズの見積もり
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   次の手順を実行して、テーブルにデータを格納するために必要な領域を見積もることができます。  
   
 1.  「 [ヒープ サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-heap.md) 」または「 [クラスター化インデックスのサイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)」の説明に従って、ヒープまたはクラスター化インデックスに必要な領域を計算します。  
@@ -42,8 +43,6 @@ ms.locfileid: "67934474"
 2.  「 [非クラスター化インデックスのサイズの算出](../../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)」に記載されている手順に従って、非クラスター化インデックスごとに必要な領域を計算します。  
   
 3.  手順 1. と手順 2. で計算した値を加算します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>参照  
  [データベース サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-database.md)   

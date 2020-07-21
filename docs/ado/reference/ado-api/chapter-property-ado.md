@@ -15,17 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - Chapter property [ADO]
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04991b5246b338b89008e0188463dee580f81e3e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920106"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763153"
 ---
 # <a name="chapter-property-ado"></a>Chapter プロパティ (ADO)
-OLE DB の設定を取得または**章**オブジェクトとの間で、 [ADORecordsetConstruction インターフェイス](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)オブジェクト。 使用すると**put_Chapter**を設定する、**章**オブジェクト、ADO に行のサブセットになって[Recordset オブジェクト](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 これにより、設定の現在の章、**行セット**オブジェクト。 このプロパティは読み取り/書き込み可能です。  
+[ADORecordsetConstruction Interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)オブジェクトから OLE DB**チャプター**オブジェクトを取得します。値の設定もできます。 **Put_Chapter**を使用して**チャプター**オブジェクトを設定すると、行のサブセットが ADO[レコードセットオブジェクト](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトに変換されます。 これにより、**行セット**オブジェクトの現在のチャプターが設定されます。 このプロパティは読み取り/書き込み可能です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ HRESULT put_Chapter([in] long lChapter);
  チャプターのハンドル。  
   
 ## <a name="return-values"></a>戻り値  
- このプロパティのメソッドでは、S_OK および E_FAIL を含む、標準の HRESULT 値を返します。  
+ このプロパティメソッドは、S_OK および E_FAIL を含む標準の HRESULT 値を返します。  
   
 ## <a name="applies-to"></a>適用対象  
  [ADORecordsetConstruction インターフェイス](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

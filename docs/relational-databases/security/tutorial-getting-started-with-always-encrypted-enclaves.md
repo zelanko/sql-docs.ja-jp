@@ -1,7 +1,8 @@
 ---
-title: チュートリアル:SSMS を使用したセキュア エンクレーブを使用する Always Encrypted の概要 | Microsoft Docs
-ms.custom: ''
-ms.date: 08/07/2019
+title: チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
+description: このチュートリアルでは、セキュリティで保護されたエンクレーブが設定された基本的な Always Encrypted を作成する方法、インプレースでデータを暗号化する方法、SQL Server Management Studio (SSMS) を利用し、暗号化された列に対して高度なクエリを実行する方法について説明します。
+ms.custom: seo-lt-2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,21 +13,21 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e70dc6ddf897b34f5ffd0cf3c573ea973a1a36ad
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888885"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279368"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 このチュートリアルでは、[セキュア エンクレーブを使用する Always Encrypted](encryption/always-encrypted-enclaves.md) の開始方法について説明します。 次のことを示します。
 - セキュア エンクレーブを使用する Always Encrypted をテストおよび評価する基本的な環境を作成する方法。
 - SQL Server Management Studio (SSMS) を使用して、データのインプレース暗号化を行い、暗号化された列に対して高度なクエリを実行する方法。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 セキュア エンクレーブを使用する Always Encrypted を開始するには、少なくとも 2 台のコンピューター (仮想マシンも可) が必要です。
 
@@ -36,19 +37,16 @@ ms.locfileid: "68888885"
 ### <a name="sql-server-computer-requirements"></a>SQL Server コンピューターの要件
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 以降。
-- Windows 10 Enterprise バージョン 1809、または Windows Server 2019 Datacenter。
-- SQL Server コンピューターが物理マシンの場合は、[Hyper-V のハードウェア要件](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)を満たしている必要があります。
-   - 第 2 レベル アドレス変換 (SLAT) 付き 64 ビット プロセッサ
-   - VM モニター モード拡張機能 (Intel CPU 上の VT-c) の CPU サポート
-   - 仮想化のサポートが有効になりました (Intel VT-x または AMD-V)
-- 使用している SQL Server コンピューターが仮想マシンの場合は、仮想化ベースのセキュリティをサポートするように VM を構成する必要があります。
-   - Hyper-V 2016 以降では、第 1 世代の VM を使用して VM プロセッサ上で[入れ子になった仮想化拡張機能を有効にする](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)か、第 2 世代の VM を使用します。 VM の世代の詳細については、「[Hyper-V で第 1 世代または第 2 世代のどちらの仮想マシンを作成するか](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v)」を参照してください。 
-   - Azure では、次のいずれかをサポートする VM サイズを実行している必要があります。
-      - 入れ子になった仮想化。たとえば、Dv3 と Ev3 シリーズの VM です。 [入れ子対応の Azure VM の作成](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)に関するページを参照してください。
-      - 第 2 世代の VM (例: Dsv3 または Esv3 シリーズの VM)。 [Azure での第 2 世代 VM のサポート](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2)に関するページを参照してください。
-   - VMWare vSphere 6.7 以降では、[VMware のドキュメント](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)の説明に従って、仮想化ベースのセキュリティによる VM のサポートを有効にします。
-   - 仮想化拡張機能 (入れ子になった仮想化とも呼ばれます) が VM に公開されている限り、その他のハイパーバイザーとパブリック クラウドは、VM でのセキュリティで保護されたエンクレーブとの Always Encrypted を使用してサポートする可能性があります。 互換性と構成手順については、仮想化ソリューションのドキュメントを確認してください。
-- [SQL Server Management Studio (SSMS) 18.0 以降](../../ssms/download-sql-server-management-studio-ssms.md)。
+- Windows 10 Enterprise バージョン 1809 以降、または Windows Server 2019 Datacenter エディション。 Windows 10 および Windows Server の他のエディションでは、HGS を使用した構成証明はサポートされていません。
+- 仮想化テクノロジの CPU サポート:
+  - Extended Page Tables を備えた Intel VT-x。
+  - Rapid Virtualization Indexing を備えた AMD-V。
+  - VM で [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] を実行する場合、ハイパーバイザーおよび物理 CPU には入れ子になった仮想化機能が用意されている必要があります。 
+    - Hyper-V 2016 以降では、VM プロセッサ上で[入れ子にされた仮想化拡張機能](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)を有効にします。
+    - Azure では、入れ子になった仮想化をサポートする VM サイズを選択します。 これには、Dv3 や Ev3 など、すべての v3 シリーズの VM が含まれます。 [入れ子対応の Azure VM の作成](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)に関するページを参照してください。
+    - VMWare vSphere 6.7 以降では、[VMware のドキュメント](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)の説明に従って、仮想化ベースのセキュリティによる VM のサポートを有効にします。
+    - 他のハイパーバイザーおよびパブリック クラウドでは、VBS エンクレーブが設定された Always Encrypted を有効にする入れ子になった仮想化機能がサポートされている場合もあります。 互換性と構成手順については、仮想化ソリューションのドキュメントを確認してください。
+- [SQL Server Management Studio (SSMS) 18.3 以降](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 代わりに、別のコンピューター上に SSMS をインストールすることができます。
 
@@ -90,8 +88,6 @@ ms.locfileid: "68888885"
 
 4. 次のコマンドを実行して、HGS コンピューターの IP アドレスを検索します。 後の手順で使用するために、この IP アドレスを保存します。
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    ```powershell
    Get-NetIPAddress  
    ```
@@ -119,14 +115,14 @@ ms.locfileid: "68888885"
 
 3. Hyper-V のインストールを完了するように求められたら、SQL Server コンピューターを再起動します。
 
-4. 使用している SQL Server コンピューターが仮想マシンの場合、または UEFI セキュア ブートをサポートしていないか IOMMU が搭載されていない従来の物理マシンの場合は、プラットフォームのセキュリティ機能に関する VBS 要件を削除する必要があります。
-    1. Windows レジストリの要件を削除します。
+4. 使用している SQL Server コンピューターが仮想マシンの場合、UEFI セキュア ブートをサポートしていない物理マシンの場合、または IOMMU が搭載されていない物理マシンの場合は、プラットフォームのセキュリティ機能に関する VBS 要件を削除する必要があります。
+    1. SQL Server コンピューター上で、管理者特権の PowerShell コンソールで次のコマンドを実行して、セキュアブートと IOMMU の要件を削除します。
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. コンピューターを再起動し、要件を低くして VBS をオンラインにします。
+    1. SQL Server コンピューターを再起動し、要件を低くして VBS をオンラインにします。
 
         ```powershell
        Restart-Computer
@@ -160,7 +156,7 @@ HostUnreachable エラーが発生する場合、SQL Server コンピュータ�
 
 UnauthorizedHost エラーは、公開キーが HGS サーバーに登録されていないことを示します。手順 5. と 6. を繰り返してエラーを解決します。
 
-他のすべてに失敗した場合は、Clear-HgsClientHostKey を実行し、手順 4. から 7. を繰り返します。
+他のすべてに失敗した場合は、Remove-HgsClientHostKey を実行し、手順 4. から 7. を繰り返します。
 
 ## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>手順 3:SQL Server 上でセキュア エンクレーブを使用する Always Encrypted を有効にする
 
@@ -191,7 +187,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 
     クエリでは、次の結果が返されるはずです。  
 
-    | NAME                           | value | value_in_use |
+    | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | 列暗号化エンクレーブの型 | 1     | 1              |
 
@@ -344,11 +340,13 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 
 3. Always Encrypted が有効になっていない SSMS インスタンスで同じクエリをもう一度試し、発生するエラーに注意します。
 
-## <a name="next-steps"></a>Next Steps
-「[チュートリアル: ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)」に進みます。これは、このチュートリアルの続きです。
+## <a name="next-steps"></a>次の手順
+このチュートリアルを完了すると、次のいずれかのチュートリアルに進むことができます。
+- [チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET Framework アプリケーションの開発](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-セキュリティで保護されたエンクレーブが設定された Always Encrypted の他のユース ケースについては、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する](encryption/configure-always-encrypted-enclaves.md)」をご覧ください。 例:
-
-- [TPM 構成証明を構成する。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [HGS インスタンスに対して HTTPS を構成する。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
-- 暗号化された列に対して高度なクエリを発行するアプリケーションを開発する。
+## <a name="see-also"></a>参照
+- [Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+- [エンクレーブ対応キーをプロビジョニングする](encryption/always-encrypted-enclaves-provision-keys.md)
+- [Transact-SQL を使用してインプレースでの列の暗号化を構成する](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](encryption/always-encrypted-enclaves-query-columns.md)

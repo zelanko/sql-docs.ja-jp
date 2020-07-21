@@ -1,10 +1,8 @@
 ---
-title: パーティション分割要素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Partitioning 要素 (DTA)
+description: dta ユーティリティでは、Partitioning 要素に、データベース エンジン チューニング アドバイザーでの分析時に使用するパーティション分割構成が含まれます。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b7114d3c2efe53bd14028e1b326bd90434ff2e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: b9c07012e71b28caac02cef3f9a4e6bc729c667c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034579"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151835"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 要素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  データベース エンジン チューニング アドバイザーでの分析時に使用するパーティション分割構成が含まれます。  
+
+データベース エンジン チューニング アドバイザーでの分析時に使用するパーティション分割構成が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +41,7 @@ ms.locfileid: "68034579"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、長さは無制限です。|  
 |**指定できる値**|**NONE**<br /> パーティション分割なし。<br /><br /> **FULL**<br /> 完全パーティション分割 (パフォーマンスが向上します)。<br /><br /> **ALIGNED**<br /> 固定パーティション分割 (管理が容易になります)。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。<br /><br /> **ALIGNED** の場合、データベース エンジン チューニング アドバイザーによって生成される推奨設定では、すべての推奨インデックスが、インデックス定義の基になるテーブルとまったく同じ方法で分割されます。 インデックス付きビューの非クラスター化インデックスは、インデックス付きビューに準じます。|  

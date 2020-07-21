@@ -1,5 +1,5 @@
 ---
-title: あいまい参照変換エディター ([参照テーブル] タブ) |Microsoft Docs
+title: '[あいまい参照変換エディター] ([参照テーブル] タブ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb86e4a6382095bb8bb0edc744fe6d16650581fd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058307"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425209"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>[あいまい参照変換エディター] ([参照テーブル] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照に使用する変換元テーブルとインデックスを指定できます。 参照データ ソースは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのテーブルである必要があります。  
@@ -28,12 +27,12 @@ ms.locfileid: "66058307"
 >  あいまい参照変換では、参照テーブルの作業用コピーが作成されます。 以降に説明するインデックスは、通常の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インデックスではなく、特別なテーブルを使用してこの作業用テーブルに作成されるものです。 **[保存されたインデックスを維持する]** を選択しないと、既存の変換元テーブルは変更されません。 この場合、参照テーブルに加えられた変更に基づいて作業用テーブルと参照インデックス テーブルを更新するトリガーが、参照テーブルに作成されます。  
   
 > [!NOTE]  
->  `Exhaustive`と`MaxMemoryUsage`、あいまい参照変換のプロパティでは使用できません、**あいまい参照変換エディター**を使用して設定できますが、**詳細エディター**。 さらに、100 より大きい値`MaxOutputMatchesPerInput`でのみ指定できます、**高度なエディター**します。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
+>  `Exhaustive` `MaxMemoryUsage` あいまい参照変換のおよびプロパティは、[**あいまい参照変換エディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 また、の100より大きい値は、 `MaxOutputMatchesPerInput` **詳細エディター**でのみ指定できます。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
   
  あいまい参照変換の詳細については、「 [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **[キャッシュなし]**  
+## <a name="options"></a>オプション  
+ **OLE DB 接続マネージャー**  
  一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  
@@ -66,8 +65,8 @@ ms.locfileid: "66058307"
  以前に作成した参照インデックスを一覧から選択します。  
   
 ## <a name="see-also"></a>関連項目  
- [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [あいまい参照変換エディター &#40;[列] タブ&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [あいまい参照変換エディター ([詳細設定] タブ)](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [[あいまい参照変換エディター] &#40;[詳細設定] タブ&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

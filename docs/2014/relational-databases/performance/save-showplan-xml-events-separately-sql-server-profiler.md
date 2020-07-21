@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 858e74ce3b39a24d4faeecd889a35b56952c993c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047841"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Showplan XML イベントを個別に保存する方法 (SQL Server Profiler)
   このトピックでは、トレースにキャプチャされた **Showplan XML** イベントを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で個別の .SQLPlan ファイルに保存する方法について説明します。 **で** Showplan XML [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]イベント ファイルを開くことができ、これによって各イベントのグラフィカル実行プランを表示できます。  
@@ -39,15 +38,15 @@ ms.locfileid: "63150430"
   
 4.  次のいずれかの操作を行います。  
   
-    -   トレースをファイルにキャプチャするには、 **[ファイルに保存]** チェック ボックスをオンにします。 **[最大ファイル サイズの設定]** ボックスに値を指定します。 必要に応じて、 **[ファイル ロールオーバーを有効にする]** および **[サーバーがトレース データを処理する]** チェック ボックスをオンにします。  
+    -   トレースをファイルにキャプチャするには、**[ファイルに保存]** チェック ボックスをオンにします。 **[最大ファイル サイズの設定]** ボックスに値を指定します。 必要に応じて、 **[ファイル ロールオーバーを有効にする]** および **[サーバーがトレース データを処理する]** チェック ボックスをオンにします。  
   
-    -   トレースをデータベース テーブルにキャプチャするには、 **[テーブルに保存する]** チェック ボックスをオンにします。 必要に応じて、 **[最大行数の設定 (1000 行単位)]** チェック ボックスをオンにし、値を指定します。  
+    -   トレースをデータベース テーブルにキャプチャするには、**[テーブルに保存する]** チェック ボックスをオンにします。 必要に応じて、[**最大行数の設定**] をクリックし、値を指定します。  
   
 5.  必要に応じて、 **[トレース停止時刻を有効にする]** チェック ボックスをオンにして、停止日時を指定します。  
   
 6.  **[イベントの選択]** タブをクリックします。  
   
-7.  **[Events]** データ列で **[Performance]** イベント カテゴリを展開し、 **[Showplan XML]** チェック ボックスをオンにします。 **[Performance]** イベント カテゴリが表示されない場合は、 **[すべてのイベントを表示する]** チェック ボックスをオンにしてください。  
+7.  **[Events]** データ列で **[Performance]** イベント カテゴリを展開し、 **[Showplan XML]** チェック ボックスをオンにします。 **Performance** イベント カテゴリが表示されない場合は、 **[すべてのイベントを表示する]** チェック ボックスをオンにしてください。  
   
      **[トレースのプロパティ]** ダイアログ ボックスに **[イベント抽出の設定]** タブが追加されます。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "63150430"
   
 11. SQL Server Management Studio で **Showplan XML** イベント ファイルを表示するには、 **[ファイル]** メニューの **[開く]** をポイントして、 **[ファイル]** をクリックします。 **Showplan XML** イベント ファイルを保存したディレクトリに移動し、イベント ファイルを選択して開きます。 **Showplan XML** イベント ファイルには .SQLPlan ファイル拡張子が付いています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler での Showplan 結果を使用したクエリの分析](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

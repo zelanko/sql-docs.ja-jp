@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: f33f514c-56aa-42e2-841b-e91244da90e2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bea6901e999f1bb236e94e220c3cfeac53119e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f43490c8896442f81309b292206f97ecd13bbf02
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870558"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554067"
 ---
-# <a name="mssqlserver107"></a>MSSQLSERVER_107
+# <a name="mssqlserver_107"></a>MSSQLSERVER_107
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|107|  
@@ -35,7 +34,7 @@ ms.locfileid: "62870558"
 ## <a name="explanation"></a>説明  
  クエリの選択リストに、不適切な列プレフィックスで修飾されたアスタリスク (*) が含まれています。 このエラーは、次のような状況で返される可能性があります。  
   
--   列プレフィックス とクエリで使用されているテーブル名または別名が一致しない。 たとえば、次のステートメントでは、FROM 句で定義していない別名 (`T1`) を列プレフィックスとして使用しています。  
+-   列プレフィックス '%.*ls' とクエリで使用されているテーブル名または別名が一致しない。 たとえば、次のステートメントでは、FROM 句で定義していない別名 (`T1`) を列プレフィックスとして使用しています。  
   
     ```  
     SELECT T1.* FROM dbo.ErrorLog;  
@@ -56,7 +55,7 @@ ms.locfileid: "62870558"
 SELECT T1.* FROM dbo.ErrorLog AS T1;  
 ```  
   
- または  
+ or  
   
 ```  
 SELECT ErrorLog.* FROM dbo.ErrorLog;  

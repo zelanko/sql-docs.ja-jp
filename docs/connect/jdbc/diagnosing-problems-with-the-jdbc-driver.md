@@ -1,23 +1,23 @@
 ---
-title: JDBC Driver に関する問題の診断 |Microsoft Docs
+title: JDBC ドライバーに関する問題の診断 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 39523acba6f13bd73130a3786f1421e0468084f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3728ac03477099b81ee51e8cbb779d9773984dbb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956697"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922428"
 ---
-# <a name="diagnosing-problems-with-the-jdbc-driver"></a>JDBC ドライバーで発生した問題の診断
+# <a name="diagnosing-problems-with-the-jdbc-driver"></a>JDBC ドライバーに関する問題の診断
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   アプリケーションの設計および開発がいかに優れていても、問題は必然的に発生します。 問題が発生した場合に備え、それらを診断するための手法を知っておくことが重要になります。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用する場合に発生する一般的な問題として、適切なバージョンのドライバーがないことや、データベースに接続できないことなどがあります。  
@@ -26,7 +26,7 @@ ms.locfileid: "67956697"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[エラーの処理](../../connect/jdbc/handling-errors.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から返されたエラーを処理する方法について説明します。|  
 |[ドライバー バージョンの取得](../../connect/jdbc/getting-the-driver-version.md)|インストールされている JDBC ドライバーのバージョンを特定する方法について説明します。|  
@@ -34,7 +34,7 @@ ms.locfileid: "67956697"
 |[接続のトラブルシューティング](../../connect/jdbc/troubleshooting-connectivity.md)|データベース接続のトラブルシューティングを行う方法について説明します。|  
 |[拡張イベント ログの診断情報へのアクセス](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|サーバーの拡張イベント ログを使用して、接続エラーに関する情報を得る方法について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照 
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

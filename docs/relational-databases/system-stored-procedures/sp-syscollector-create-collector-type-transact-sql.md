@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_create_collector_type (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_create_collector_type (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ba0086ac19daa4118bb411a4d2cb091ec9f1ce86
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032635"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892957"
 ---
-# <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  データ コレクターのコレクター型を作成します。 コレクター型はの論理ラッパー、[!INCLUDE[ssIS](../../includes/ssis-md.md)]データの収集および管理データ ウェアハウスにアップロードすることの実際のメカニズムを提供するパッケージ。  
+  データコレクターのコレクター型を作成します。 コレクター型は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] データを収集して管理データウェアハウスにアップロードするための実際のメカニズムを提供する、パッケージの論理ラッパーです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,29 +46,29 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collector_type_uid = ] '*collector_type_uid*'  
- コレクター型の GUID です。 *collector_type_uid*は**uniqueidentifier**しする場合は NULL それが自動的に作成され出力として返されます。  
+ [ @collector_type_uid =] '*collector_type_uid*'  
+ コレクター型の GUID を示します。 *collector_type_uid*は**UNIQUEIDENTIFIER**で、NULL の場合は自動的に作成され、出力として返されます。  
   
- [ @name = ] '*name*'  
- コレクター型の名前を指定します。 *名前*は**sysname**と指定する必要があります。  
+ [ @name =] '*name*'  
+ コレクター型の名前を指定します。 *名前*は**sysname**ので、指定する必要があります。  
   
  [ @parameter_schema =] '*parameter_schema*'  
- このコレクター型の XML スキーマを指定します。 *parameter_schema*は**xml**既定値は NULL です。  
+ このコレクター型の XML スキーマを指定します。 *parameter_schema*は**xml**で、既定値は NULL です。  
   
  [ @parameter_formatter =] '*parameter_formatter*'  
- コレクション セットのプロパティ ページで使用するために XML を変換するときのテンプレートです。 *parameter_formatter*は**xml**既定値は NULL です。  
+ コレクション セットのプロパティ ページで使用するために XML を変換するときのテンプレートです。 *parameter_formatter*は**xml**で、既定値は NULL です。  
   
- [@collection_package_id =] *collection_package_id*  
- ローカル一意識別子が指すは、[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクション パッケージのコレクション セットによって使用されます。 *collection_package_id*は**uniqueidentifer**必要があります。  
+ [ @collection_package_id =] *collection_package_id*  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるコレクションパッケージを指すローカル一意識別子です。 *collection_package_id*は**uniqueidentifer**であり、必須です。  
   
- [@upload_package_id =] *upload_package_id*  
- ローカル一意識別子が指すは、[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクション セットによって使用されるパッケージをアップロードします。 *upload_package_id*は**uniqueidentifier**必要があります。  
+ [ @upload_package_id =] *upload_package_id*  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるアップロードパッケージを指すローカル一意識別子です。 *upload_package_id*は**uniqueidentifier**であり、必須です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin 固定データベース ロールのメンバーシップが必要です。  
+ このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="example"></a>例  
  ジェネリック T-SQL Query コレクター型を作成します。  
@@ -109,7 +109,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [データコレクション](../../relational-databases/data-collection/data-collection.md)  
   
   

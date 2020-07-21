@@ -1,6 +1,6 @@
 ---
-title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,14 +12,14 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ddbb104690c4ded69b1c15628e2f509644c11cb3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: ae14a33194a5cd18251c4cf1425bfdcec1d46fe1
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809872"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632379"
 ---
-# <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql-preview"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL) (プレビュー)
+# <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "68809872"
   
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_name  " )
 [;]
 ```
@@ -42,23 +42,25 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 具体化されたビューの名前です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-具体化されたビューの定義内の基になるテーブルが変更されても、具体化されたビューのベース テーブル内のすべての増分変更は維持されます。  具体化されたビューから選択を行うには、具体化されたビューのクラスター化列ストアの構造をスキャンして、これらの増分変更を適用する必要があります。   維持されている増分変更の数が多い場合は、選択のパフォーマンスが低下します。  クラスター化列ストアの構造を再作成して、ベース テーブル内のすべての増分変更を統合するには、具体化されたビューを再構築します。
-  
+ベース テーブルでのデータ変更によって具体化されたビューを更新し続けるため、データ ウェアハウス エンジンにより影響を受ける各ビューに追跡行が追加され、変更が反映されます。 具体化されたビューからの選択には、クラスター化列ストア インデックスのスキャンと増分変更の適用が含まれます。  追跡行 (TOTAL_ROWS - BASE_VIEW_ROWS) は、ユーザーが具体化されたビューを再構築するまで削除されません。  
+
+overhead_ratio は、TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS) として計算されます。  高い場合は、SELECT のパフォーマンスが低下します。  ユーザーは、具体化されたビューを再構築して、オーバーヘッドの比率を下げることができます。
+
 ## <a name="permissions"></a>アクセス許可  
   
 VIEW DATABASE STATE 権限が必要です。  
 
-## <a name="example"></a>例  
+## <a name="examples"></a>例  
 
-この例では、具体化されたビューで使用される差分のスペースが返されます。
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. この例では、具体化されたビューのオーバーヘッド比率が返されます。
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
 ```
 
-出力結果:
+出力:
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  
@@ -66,18 +68,86 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
 
 </br>
 
-|OBJECT_ID |BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|4567|0|0|0.0|
+### <a name="b-this-example-shows-how-the-materialized-view-overhead-increases-as-data-changes-in-base-tables"></a>B. この例では、ベース テーブルのデータ変更に応じて、具体化されたビューのオーバーヘッドがどのように増加するかを示します
 
-</br>
+テーブルを作成する
+```sql
+CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+```
+t1 に 5 行を挿入
+```sql
+INSERT INTO t1 VALUES (1, 1, 1)
+INSERT INTO t1 VALUES (2, 2, 2) 
+INSERT INTO t1 VALUES (3, 3, 3) 
+INSERT INTO t1 VALUES (4, 4, 4) 
+INSERT INTO t1 VALUES (5, 5, 5) 
+```
+具体化されたビュー MV1 の作成
+```sql
+CREATE materialized view MV1 
+WITH (DISTRIBUTION = HASH(c1))  
+AS
+SELECT c1, count(*) total_number 
+FROM dbo.t1 where c1 < 3
+GROUP BY c1  
+```
+具体化されたビューから選択すると、2 つの行が返されます。
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+ベース テーブルのデータが変更される前に、具体化されたビューのオーバーヘッドを確認します。
+```sql
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+出力:
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|789|0|2|2.0|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1.00000000000000000 |
 
-## <a name="see-also"></a>参照
+ベース テーブルを更新します。  このクエリにより、同じ行の同じ列が 100 回同じ値に更新されます。  具体化されたビューの内容は変更されません。
+```sql
+DECLARE @p int
+SELECT @p = 1
+WHILE (@p < 101)
+BEGIN
+UPDATE t1 SET c1 = 1 WHERE c1 = 1
+SELECT @p = @p+1
+END  
+```
 
+具体化されたビューから選択すると、以前と同じ結果が返されます。  
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1") からの出力を次に示します。  具体化されたビュー (total_row - base_view_rows) に 100 行が追加され、その overhead_ratio が増加します。 
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|102 |51.00000000000000000 |
+
+具体化されたビューを再構築すると、データの増分変更の追跡行がすべて削除され、ビューのオーバーヘッド比率が減少します。  
+
+```sql
+ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
+go
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+出力
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1.00000000000000000 |
+
+## <a name="see-also"></a>関連項目
+
+[具体化されたビューを使用したパフォーマンス チューニング](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

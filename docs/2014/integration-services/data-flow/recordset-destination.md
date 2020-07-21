@@ -14,15 +14,14 @@ helpviewer_keywords:
 - destinations [Integration Services], Recordset
 - in-memory ADO recordsets [Integration Services]
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0553b1cbbd75196fa8534cf6bf64c58c1dad206b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1acc29c904e9020721e8ac62dff09a8ec29a392
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770908"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431489"
 ---
 # <a name="recordset-destination"></a>レコードセット変換先
   レコードセット変換先は、インメモリ ADO レコードセットを作成して設定します。 レコードセットの形態は、レコードセット変換先への入力によってデザイン時に定義されます。  
@@ -38,7 +37,7 @@ ms.locfileid: "62770908"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [レコードセット変換先のカスタム プロパティ](recordset-destination-custom-properties.md)  
   

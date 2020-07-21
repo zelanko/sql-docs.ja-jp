@@ -1,10 +1,8 @@
 ---
-title: '[クイック ウォッチ] ダイアログ ボックス | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/14/2017
+title: '[クイック ウォッチ] ダイアログ ボックス'
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
@@ -13,19 +11,27 @@ helpviewer_keywords:
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cffe35d5d46b76ef049538710961898d1832b7d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9cfd48c59a928481be28d03d970fb399ea10b720
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253329"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253024"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL デバッガー - [クイック ウォッチ] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **コードのデバッグ時に** [クイック ウォッチ] [!INCLUDE[tsql](../../includes/tsql-md.md)] ダイアログ ボックスを使用すると、変数やパラメーターなど、1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] 式のデータ型や値をすばやく表示できます。 複数の式を確認するために、 **[ウォッチ]** ウィンドウに式を追加することもできます。  
-  
-## <a name="task-list"></a>タスク一覧  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+**コードのデバッグ時に** [クイック ウォッチ] [!INCLUDE[tsql](../../includes/tsql-md.md)] ダイアログ ボックスを使用すると、変数やパラメーターなど、1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] 式のデータ型や値をすばやく表示できます。 複数の式を確認するために、 **[ウォッチ]** ウィンドウに式を追加することもできます。  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="task-list"></a>タスク一覧
+
  **[クイック ウォッチ] ダイアログ ボックスにアクセスするには**  
   
 -   **[デバッグ]** メニューの **[クイック ウォッチ]** をクリックします。  
@@ -42,7 +48,7 @@ ms.locfileid: "68253329"
   
     -   1 つまたは複数の変数、パラメーター、またはシステム関数に演算子を適用して作成された式 (@IntegerCounter + 1、FirstName + LastName など)。  
   
-    -   単一の値を返す Transact-SQL ステートメント(SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1 など)。  
+    -   単一の値を返す Transact-SQL ステートメント (SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1 など)。  
   
 2.  **[再評価]** をクリックします。  
   
@@ -61,7 +67,7 @@ ms.locfileid: "68253329"
  **[値グリッド]**  
  現在監視されている式のプロパティを表示します。  
   
- **[名前]**  
+ **Name**  
  監視対象の [!INCLUDE[tsql](../../includes/tsql-md.md)] 式です。  
   
  **Value**  
@@ -71,7 +77,7 @@ ms.locfileid: "68253329"
   
  **[値]** セルの虫眼鏡アイコンは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガー ビジュアライザーが使用可能であることを示します。 一覧では、 **[テキスト ビジュアライザー]** 、 **[XML ビジュアライザー]** 、または **[HTML ビジュアライザー]** を指定できます。 デバッガー ビジュアライザーを開始するには、虫眼鏡アイコンをクリックします。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーによりダイアログ ボックスが開き、データがそのデータ型に適した形式で表示されます。  
   
- **型**  
+ **Type**  
  式のデータ型を表示します。  
   
 ## <a name="see-also"></a>参照  

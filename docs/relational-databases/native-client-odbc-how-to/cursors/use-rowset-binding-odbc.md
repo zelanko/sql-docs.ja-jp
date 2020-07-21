@@ -1,5 +1,5 @@
 ---
-title: 行セットのバインド (ODBC) を使用して、|マイクロソフトのドキュメント
+title: 行セットのバインドの使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,19 +10,17 @@ ms.topic: reference
 helpviewer_keywords:
 - rowset binding [ODBC]
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6e10c45331e1a2d4395506a0b687ecfd3510d77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 86fd861f50b86b502c52b916c2944a9719424798
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898565"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009498"
 ---
 # <a name="use-rowset-binding-odbc"></a>行セットのバインドの使用 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### <a name="to-use-column-wise-binding"></a>列方向のバインドを使用するには  
@@ -33,9 +31,9 @@ ms.locfileid: "67898565"
   
     -   必要に応じて、データ長を格納するための R 個以上の列バッファーの配列を割り当てます。  
   
-    -   呼び出す[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)列のデータ値とデータ長の配列を行セットの列にバインドします。  
+    -   [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)を呼び出して、列のデータ値とデータ長の配列を行セットの列にバインドします。  
   
-2.  呼び出す[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)次の属性を設定します。  
+2.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出して、次の属性を設定します。  
   
     -   SQL_ATTR_ROW_ARRAY_SIZE を、行セットの行の数 (R) に設定します。  
   
@@ -47,9 +45,7 @@ ms.locfileid: "67898565"
   
 3.  ステートメントを実行します。  
   
-4.  呼び出しごとに[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) R の行を取得し、バインドされた列にデータを転送します。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4.  [Sqlfetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[sqlfetchscroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)を呼び出すたびに R 行が取得され、データがバインドされた列に転送されます。  
 
 ### <a name="to-use-row-wise-binding"></a>行方向のバインドを使用するには  
   
@@ -59,7 +55,7 @@ ms.locfileid: "67898565"
   
     -   2 つ目の部分は、列状態インジケーターを格納する SQLINTEGER 変数です。  
   
-2.  呼び出す[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)次の属性を設定します。  
+2.  [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出して、次の属性を設定します。  
   
     -   SQL_ATTR_ROW_ARRAY_SIZE を、行セットの行の数 (R) に設定します。  
   
@@ -69,15 +65,15 @@ ms.locfileid: "67898565"
   
     -   SQL_ATTR_PARAMS_STATUS_PTR を、行状態インジケーターを格納する SQLUSSMALLINT 変数の配列 [R] を指すように設定します。  
   
-3.  結果セット内の各列に対して呼び出す[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)に手順 1. で割り当てた構造体の配列の最初の要素では、その変数にデータ値と列のデータ長のポインターをポイントします。  
+3.  結果セットの各列に対して、 [SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)を呼び出して、列のデータ値とデータ長のポインターが、手順 1. で割り当てられた構造体の配列の最初の要素にある変数を指すようにします。  
   
 4.  ステートメントを実行します。  
   
-5.  呼び出しごとに[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) R の行を取得し、バインドされた列にデータを転送します。  
+5.  [Sqlfetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[sqlfetchscroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)を呼び出すたびに R 行が取得され、データがバインドされた列に転送されます。  
   
-## <a name="see-also"></a>関連項目  
- [カーソルの操作方法に関するトピックを使用して&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+## <a name="see-also"></a>参照  
+ [カーソルの使用方法に関するトピック &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [カーソルの実装方法](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [カーソルを使用して&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+ [ODBC &#40;カーソルの使用&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

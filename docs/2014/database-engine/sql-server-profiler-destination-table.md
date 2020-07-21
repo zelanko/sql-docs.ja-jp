@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - 変換先テーブル |Microsoft Docs
+title: SQL Server プロファイラー-変換先テーブル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,28 +13,27 @@ helpviewer_keywords:
 ms.assetid: 88ee6090-b2f5-4dc5-997a-1d45fa7e3e84
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 802d39742b932b3721941e3d3c314b209b4e823c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70849b85b391f46fd22e659b1b6b367c63b8f7ac
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928743"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - [挿入先テーブル]
   **[挿入先テーブル]** ダイアログ ボックスを使用すると、トレースを格納するテーブルを指定できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **SQL Server**  
  現在接続されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 このフィールドには自動的に値が入力され、更新することはできません。 サーバーを変更するには、 **[キャンセル]** をクリックして、トレース テーブルを格納する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
  **[データベース]**  
  トレース テーブルを格納するデータベースを指定します。  
   
- **[所有者]**  
+ **所有者**  
  Specifies the owner of the trace table. このフィールドは、 **dbo**として自動的に入力されます。  
   
- **Table**  
+ **テーブル**  
  トレースを格納するテーブルの名前を指定します。  
   
 ## <a name="see-also"></a>参照  

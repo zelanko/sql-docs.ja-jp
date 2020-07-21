@@ -1,5 +1,5 @@
 ---
-title: トレースのプロパティ (イベントの選択 タブ) |Microsoft Docs
+title: '[トレースのプロパティ] ([イベントの選択] タブ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3644ecee04dd177c792efcb02ad75f91baa46c9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928297"
 ---
 # <a name="trace-properties-events-selection-tab"></a>[トレースのプロパティ] ([イベントの選択] タブ)
   **[トレースのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブを使用すると、トレースの対象となるイベントとデータ列を表示および指定できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[イベント]** 列  
  イベント列のチェック ボックスをオンまたはオフにして、トレースするイベントを指定します。 **[イベント]** 列は、イベント カテゴリ別に分類されています。 テンプレートで指定されているイベント クラスが自動的に選択されます。 詳しくは、「 [SQL Server イベント クラスの参照](../relational-databases/event-classes/sql-server-event-class-reference.md)」をご覧ください。  
   
@@ -46,11 +45,11 @@ ms.locfileid: "66089577"
  トレースとグループ化の結果で、1 つ以上の列を使用して列の順序を変更します。  
   
 ## <a name="see-also"></a>参照  
- [トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [トレースに表示される列を整理&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [トレース内のイベントをフィルター処理&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
- [フィルター情報の表示 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
- [フィルターを変更する&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
+ [トレースファイルのイベントとデータ列を指定する &#40;SQL Server プロファイラー&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [トレース &#40;SQL Server プロファイラーに表示される列の構成&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
+ [トレース &#40;SQL Server プロファイラーのイベントをフィルター処理し&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [フィルター情報の表示 &#40;SQL Server プロファイラー&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
+ [フィルター &#40;SQL Server プロファイラーの変更&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

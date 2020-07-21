@@ -1,6 +1,6 @@
 ---
-title: ローカル ウィンドウ | Microsoft Docs
-ms.custom: ''
+title: '[ローカル] ウィンドウ'
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 503a92349f7b7cfecdd4bd72de507da0a5835f7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f8f62eb69a50d7543af41dddb9c62c842d17151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063300"
 ---
-# <a name="locals-window"></a>[ローカル] ウィンドウ
+# <a name="locals-window"></a>ローカル ウィンドウ
   **[ローカル]** ウィンドウには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの現在のスコープ内にあるローカル式についての情報が表示されます。 スコープは、 **[呼び出し履歴]** ウィンドウで選択された現在の呼び出し履歴フレームに設定されます。 ローカル式を表示するには、デバッグ モードである必要があります。  
   
 ## <a name="task-list"></a>タスク一覧  
@@ -32,7 +31,7 @@ ms.locfileid: "66063380"
 -   式を右クリックし、 **[値の編集]** を選択します。  
   
 ## <a name="columns"></a>[列]  
- **名前**  
+ **Name**  
  ローカル式の名前です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、変数、パラメーター、および名前が @@ で始まるシステム関数が一覧表示されます。  
   
  **Value**  
@@ -42,7 +41,7 @@ ms.locfileid: "66063380"
   
  **[値]** セルの虫眼鏡アイコンは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガー ビジュアライザーが使用可能であることを示します。 一覧では、 **[テキスト ビジュアライザー]** 、 **[XML ビジュアライザー]** 、または **[HTML ビジュアライザー]** を指定できます。 デバッガー ビジュアライザーを開始するには、虫眼鏡アイコンをクリックします。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーによりダイアログ ボックスが開き、データがそのデータ型に適した形式で表示されます。  
   
- **型**  
+ **Type**  
  式のデータ型を表示します。  
   
 ## <a name="see-also"></a>参照  

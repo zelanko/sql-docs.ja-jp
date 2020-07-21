@@ -1,6 +1,7 @@
 ---
-title: 一部の可用性レプリカでデータが同期されない | Microsoft Docs
-ms.custom: ''
+title: 可用性レプリカでデータが同期されない
+description: Always On 可用性グループ内の 1 つまたは複数の可用性レプリカが、プライマリ レプリカとデータを同期していない場合に考えられる原因と解決策。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f026decc6463e477f95fe86bdda234c1d5d09c2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b4c07e6a275d1208d553fb49b38e3c27a584bf7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014105"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883122"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>一部の可用性レプリカでデータが同期されない
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  
@@ -32,7 +33,7 @@ ms.locfileid: "68014105"
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性グループ|  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  このポリシーは、可用性グループのすべての可用性レプリカのデータ同期状態をロール アップし、可用性レプリカの同期が稼働しているかどうかを確認します。 可用性レプリカのデータ同期状態が NOT SYNCHRONIZING の場合、ポリシーは通常とは異なる状態です。  
   
  可用性レプリカのデータ同期状態が NOT SYNCHRONIZING でない場合、ポリシーは正常な状態です。  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 02f5056aae7eb7691be3842481ee8381198ddaeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 251394047af1e37c505308c830e1428f163b81c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984300"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766565"
 ---
 # <a name="drop-application-role-transact-sql"></a>DROP APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   アプリケーション ロールを現在のデータベースから削除します。  
   
@@ -46,7 +46,7 @@ DROP APPLICATION ROLE rolename
  *rolename*  
  削除するアプリケーション ロールの名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  アプリケーション ロールが保護可能なアイテムを所有している場合は削除できません。 セキュリティ保護可能なリソースを所有しているアプリケーション ロールを削除するには、先にセキュリティ保護可能なリソースの所有権を譲渡するか削除する必要があります。  
   
 > [!CAUTION]  
@@ -55,7 +55,7 @@ DROP APPLICATION ROLE rolename
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  データベースからアプリケーション ロール "weekly_ledger" を削除します。  
   
 ```  

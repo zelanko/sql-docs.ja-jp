@@ -1,5 +1,5 @@
 ---
-title: 時間テーブルの生成による時間ディメンションの作成 |Microsoft Docs
+title: 時間テーブルを生成して時間ディメンションを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af1cc0c5838c942d8f04eb5246c9c1714d08d786
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076291"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536484"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、ソース データベースに使用できる時間テーブルがない場合に、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して時間ディメンションを作成できます。 この操作を行うには、 **[作成方法の選択]** ページで次のいずれかのオプションを選択します。  
+  では [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ソースデータベースに使用できる時間テーブルがない場合に、のディメンションウィザードを使用して時間ディメンションを作成できます。 この操作を行うには、 **[作成方法の選択]** ページで次のいずれかのオプションを選択します。  
   
 -   **[データ ソースに時間テーブルを生成]** 基になるデータ ソースにオブジェクトを作成する権限がある場合に、このオプションを選択します。 ウィザードによって時間テーブルが生成され、このテーブルがデータ ソースに格納されます。 次に、ウィザードによってこの時間テーブルから時間ディメンションが作成されます。  
   
--   **[サーバーに時間テーブルを生成]** 基になるデータ ソースにオブジェクトを作成する権限がない場合に、このオプションを選択します。 ウィザードによってテーブルが生成され、データ ソースではなくサーバーに格納されます (時間テーブルからサーバーに作成されたディメンションを*サーバー時間ディメンション*と呼びます)。次に、ウィザードによってこのテーブルからサーバー時間ディメンションが作成されます。  
+-   **[サーバーに時間テーブルを生成]** 基になるデータ ソースにオブジェクトを作成する権限がない場合に、このオプションを選択します。 ウィザードによってテーブルが生成され、データ ソースではなくサーバーに格納されます (時間テーブルからサーバーに作成されたディメンションを *サーバー時間ディメンション*と呼びます)。次に、ウィザードによってこのテーブルからサーバー時間ディメンションが作成されます。  
   
  時間ディメンションを作成する場合は、時間間隔と、ディメンションの開始日および終了日を指定します。 ウィザードでは、指定された時間間隔を使用して、時間属性を作成します。 ディメンションを処理すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では指定された日付と時間間隔のサポートに必要なデータを生成して格納します。 ウィザードでは、時間ディメンション用に作成された属性を使用して、ディメンションの階層が推奨されます。 この階層は、異なる時間間隔の関係を反映しており、また各種のカレンダーを考慮しています。 たとえば、標準のカレンダー階層では、週レベルは年レベルの下に表示されますが、月レベルの下には表示されません。これは、週は年に均一に分割されますが、月には均一に分割されないためです。 一方、製造カレンダーまたはレポート カレンダー階層では、週は均一に月に分割されるので、週レベルは月レベルの下に表示されます。  
   
@@ -53,12 +52,12 @@ ms.locfileid: "66076291"
 ## <a name="completing-the-dimension-wizard"></a>ディメンション ウィザードの完了  
  **[ウィザードの完了]** ページで、ウィザードによって作成された属性と階層を確認し、時間ディメンションに名前を付けます。 **[完了]** をクリックしてウィザードを終了し、ディメンションを作成します。 ディメンションが完成したら、ディメンション デザイナーを使用してそのディメンションを変更できます。  
   
-## <a name="see-also"></a>関連項目  
- [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
+## <a name="see-also"></a>参照  
+ [多次元モデルのデータソースビュー](data-source-views-in-multidimensional-models.md)   
  [日付型ディメンションの作成](database-dimensions-create-a-date-type-dimension.md)   
- [データベース ディメンション プロパティ](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
- [ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [既存のテーブルを使用したディメンションを作成します。](create-a-dimension-by-using-an-existing-table.md)   
+ [データベースディメンションのプロパティ](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
+ [ディメンションのリレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [既存のテーブルを使用してディメンションを作成する](create-a-dimension-by-using-an-existing-table.md)   
  [データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

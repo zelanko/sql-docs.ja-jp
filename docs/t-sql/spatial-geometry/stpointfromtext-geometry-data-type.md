@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a198292700fdda1e5dc092afc4a5bb1948e7192a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc24a1ed9998c478b7ca7a272c00d68656a2285e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075051"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762242"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geometry** インスタンスを返します。
   
@@ -46,14 +46,14 @@ STPointFromText ( 'point_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- OGC の型:**Point**  
+ OGC の型: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STPointFromText()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  

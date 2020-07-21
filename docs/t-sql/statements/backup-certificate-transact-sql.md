@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -27,24 +27,24 @@ helpviewer_keywords:
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7b2559ca1eee0f2787fbf74adba97b03671d6faf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest'
+ms.openlocfilehash: 734de238f38520ad31923a9d4ed45edd5d807336
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091765"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380935"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
 
   証明書をファイルにエクスポートします。  
   
- ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "[リンク] アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 BACKUP CERTIFICATE certname TO FILE = 'path_to_file'  
@@ -57,8 +57,11 @@ BACKUP CERTIFICATE certname TO FILE = 'path_to_file'
     ]  
 ```  
   
-```  
--- Syntax for Parallel Data Warehouse  
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
+   
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 BACKUP CERTIFICATE certname TO FILE ='path_to_file'  
       WITH PRIVATE KEY   
@@ -68,7 +71,9 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
       )   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *certname*  
  バックアップする証明書の名前。
 
@@ -86,7 +91,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  DECRYPTION BY PASSWORD = '*decryption_password*'  
  秘密キーをバックアップする前に、秘密キーの暗号化を解除するため使用するパスワードを指定します。 証明書がマスター キーによって暗号化されている場合、この引数は必要ありません。 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベースで秘密キーがパスワードによって暗号化されている場合は、暗号化解除パスワードを指定する必要があります。  
   
  秘密キーをファイルにバックアップする場合は、暗号化が必要です。 ファイル内の秘密キーの保護に使用するパスワードは、データベースで証明書の秘密キーの暗号化に使用するパスワードとは異なります。  
@@ -102,12 +107,12 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ## <a name="permissions"></a>アクセス許可  
  証明書に対する CONTROL 権限と、秘密キーの暗号化に使用するパスワードの情報が必要です。 証明書のパブリックの部分だけをバックアップする場合、このコマンドには証明書に関する権限の一部が必要です。また、呼び出し元に対して証明書の VIEW 権限が拒否されていないことも必要になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-exporting-a-certificate-to-a-file"></a>A. 証明書をファイルにエクスポートする  
  次の例では、証明書をファイルにエクスポートします。  
   
-```  
+```sql
 BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert';  
 GO  
 ```  
@@ -115,7 +120,7 @@ GO
 ### <a name="b-exporting-a-certificate-and-a-private-key"></a>B. 証明書と秘密キーをエクスポートする  
  次の例では、バックアップする証明書の秘密キーをパスワード `997jkhUbhk$w4ez0876hKHJH5gh` で暗号化します。  
   
-```  
+```sql
 BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert'  
     WITH PRIVATE KEY ( FILE = 'c:\storedkeys\sales05key' ,   
     ENCRYPTION BY PASSWORD = '997jkhUbhk$w4ez0876hKHJH5gh' );  
@@ -125,7 +130,7 @@ GO
 ### <a name="c-exporting-a-certificate-that-has-an-encrypted-private-key"></a>C. 秘密キーが暗号化されている証明書をエクスポートする  
  次の例では、データベースで証明書の秘密キーが暗号化されています。 この秘密キーは、パスワード `9875t6#6rfid7vble7r` を使って暗号化を解除する必要があります。 証明書をバックアップ ファイルに保存するときには、秘密キーをパスワード `9n34khUbhk$w4ecJH5gh` で暗号化します。  
   
-```  
+```sql
 BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'   
     WITH PRIVATE KEY ( DECRYPTION BY PASSWORD = '9875t6#6rfid7vble7r' ,  
     FILE = 'c:\storedkeys\sales09key' ,   

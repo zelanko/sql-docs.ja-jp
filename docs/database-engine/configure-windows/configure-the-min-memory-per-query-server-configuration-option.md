@@ -1,5 +1,6 @@
 ---
 title: min memory per query サーバー構成オプションの構成 | Microsoft Docs
+description: min memory per query オプションを使用して、最小のメモリ許可を指定する方法や、SQL Server によってクエリに割り当てられる最小キロバイト数を指定する方法について説明します。
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - min memory per query option
 - min memory grant
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9e7a08defb9ff222ac1699c924691c923a7f2c2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 784dc57403cdb5c8dad6ba3e8f910ecd6d4dee26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696850"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>min memory per query サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] min memory per query [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **min memory per query** オプションは、クエリの実行用に割り当てる最小メモリ容量 (KB 単位) を指定します。 これは、最小メモリ許可とも呼ばれます。 たとえば、 **min memory per query** を 2,048 KB に設定すると、クエリには少なくともその値分のメモリが必ず割り当てられます。 既定値は 1,024 KB です。 最小値は 512 KB、最大値は 2,147,483,647 KB (2 GB) です。  
   
@@ -34,9 +35,9 @@ ms.locfileid: "68012515"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して min memory per query オプションを構成するには:**  
   
@@ -46,13 +47,13 @@ ms.locfileid: "68012515"
   
 -   **補足情報:** [min memory per query オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   min memory per query オプションの値は、[index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) オプションよりも優先順位が高くなります。 両方のオプションを変更し、index create memory の設定値を min memory per query より小さくした場合は、警告メッセージが表示されます。ただし、値はそのまま設定されます。 クエリ実行中にも同様の警告が表示されます。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   このオプションは詳細設定オプションであるため、熟練したデータベース管理者または認定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロフェッショナルだけが変更するようにしてください。  
   
@@ -62,12 +63,12 @@ ms.locfileid: "68012515"
 
 <sup>1</sup> このシナリオの場合、待機の種類は一般的に RESOURCE_SEMAPHORE になります。 詳細については、「[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。
 
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを指定して **sp_configure** を実行し構成オプションを変更したり RECONFIGURE ステートメントを実行したりするには、ALTER SETTINGS サーバーレベル権限がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>min memory per query オプションを構成するには  
   
@@ -77,7 +78,7 @@ ms.locfileid: "68012515"
   
 3.  **[クエリごとに使用する最小メモリ (KB 単位)]** ボックスで、クエリの実行用に割り当てる最小メモリ容量 (KB 単位) を指定します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>min memory per query オプションを構成するには  
   
@@ -100,7 +101,7 @@ RECONFIGURE;
 GO    
 ```  
   
-##  <a name="FollowUp"></a>補足情報: min memory per query オプションを構成した後  
+##  <a name="follow-up-after-you-configure-the-min-memory-per-query-option"></a><a name="FollowUp"></a>補足情報: min memory per query オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

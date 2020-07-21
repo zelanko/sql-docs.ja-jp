@@ -1,5 +1,5 @@
 ---
-title: エラー情報の取得 |Microsoft Docs
+title: エラー情報の取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,17 @@ helpviewer_keywords:
 - errors [OLE DB], retrieving information
 - OLE DB error handling, examples
 ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ffc13d634c5f213980f837db958860ea7ff51b32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e99842237bee512d3489e83be07612715a5a6e1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186122"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048074"
 ---
 # <a name="retrieving-error-information"></a>エラー情報の取得
-  この例では、によって公開されるさまざまなエラー インターフェイスから情報を取得、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー。  
+  この例では、Native Client OLE DB プロバイダーによって公開されるさまざまなエラーインターフェイスから情報を取得し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  
@@ -64,7 +63,7 @@ void DumpErrorInfo
     SSERRORINFO*            pSSErrorInfo = NULL;  
     OLECHAR*                pSSErrorStrings = NULL;  
   
-    // Hard-code an American English locale for the example.  
+    // Hard-code an English (United States) locale for the example.  
     DWORD                   MYLOCALEID = 0x0409;  
   
     // Only ask for error information if the interface supports  

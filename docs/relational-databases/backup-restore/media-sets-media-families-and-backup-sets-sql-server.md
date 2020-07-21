@@ -1,10 +1,11 @@
 ---
-title: メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2016
-ms.prod: sql
+title: メディア セット、メディア ファミリ、およびバックアップ セット
+description: この記事では、SQL Server でのバックアップと復元で使用される、メディア セット、メディア ファミリ、およびバックアップ セットの概要について説明します。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod_service: backup-restore
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,22 +24,23 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a7abc9ffe6cdcc8f33c54ae8ce971330b9f9fee8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8dd7099a8460d72104a3e6616d75bc5586c82c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718056"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を初めて使用するユーザーを対象とし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。** 
   
   ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でバックアップ メディアに使用する形式、バックアップ メディアとバックアップ デバイス間の対応付け、バックアップ メディアでのバックアップの構成、メディア セットとメディア ファミリに関するいくつかの注意点について説明します。 古いメディア セットを新しいメディア セットと交換する前に行うバックアップ メディアの初期化およびフォーマット処理の手順、メディア セット内の古いバックアップ セットを上書きする方法、新しいバックアップ セットをメディア セットに追加する方法についても説明します。  
   
->**注:** Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップについては、 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)をご覧ください。  
+>**注:** Azure Blob Storage サービスへの SQL Server のバックアップについて詳しくは、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
    
-##  <a name="TermsAndDefinitions"></a> 用語  
+##  <a name="terms"></a><a name="TermsAndDefinitions"></a> 用語  
  **メディア セット (media set)**  
  テープやディスク ファイルなどのバックアップ メディアに順番を付けてまとめたもの。バックアップ メディアには、1 回以上のバックアップ操作によって、固定型の複数のバックアップ デバイスを使用して書き込まれます。  
   
@@ -49,14 +51,14 @@ ms.locfileid: "68033787"
  正常に完了したバックアップ操作によってメディア セットに追加されるバックアップ コンテンツ。  
   
 
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> メディア セット、メディア ファミリ、およびバックアップ セットの概要  
+##  <a name="overview-of-media-sets-media-families-and-backup-sets"></a><a name="OvMediaSetsFamiliesBackupSets"></a> メディア セット、メディア ファミリ、およびバックアップ セットの概要  
  1 つまたは複数の一連のバックアップ メディアにあるバックアップによって、1 つのメディア セットが構成されます。 *"メディア セット"* とは、テープやディスク ファイル、Azure BLOB などの *"バックアップ メディア"* の順序付きコレクションのことです。バックアップ メディアは、1 つまたは複数のバックアップ操作によって、固定型の多数のバックアップ デバイスを使用して書き込まれています。 1 つのメディア セットでは、テープ ドライブ、ディスク ドライブ、または Azure BLOB を使用しますが、これらの複数を組み合わせることはありません。 
  
 **例:** あるメディア セットに関連付けられているバックアップ デバイスが、`\\.\TAPE0`、`\\.\TAPE1`、`\\.\TAPE2` という 3 台のテープ ドライブである場合を想定します。 このメディア セットにはテープのみが含まれます。テープの数は最低 3 本です (デバイスごとに 1 本)。 バックアップ デバイスの種類と台数はメディア セットの作成時に決定され、変更できません。 ただし、必要に応じて、バックアップ操作と復元操作の間に特定のデバイスを同じ種類のデバイスと交換できます。  
   
  メディア セットは、バックアップ メディアをフォーマットすることによって、バックアップ操作中にバックアップ メディア上に作成されます。 詳細については、このトピックの「 [新しいメディア セットの作成](#CreatingMediaSet)」をご覧ください。 フォーマットが終了すると、各ファイルまたはテープにメディア セット用のメディア ヘッダーが書き込まれ、バックアップ コンテンツの受け入れ準備が整います。 ヘッダーが書き込まれると、バックアップ操作用に指定されているすべてのバックアップ デバイス上のバックアップ メディアに指定のデータをバックアップする作業に進みます。  
   
-> **注:** メディア セットは、メディア ボリューム (テープまたはディスク ファイル) の破損に備えてミラー化できます。 詳細については、このトピックの「 [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。  
+> **注:** メディア セットは、メディア ボリューム (テープまたはディスク ファイル) の破損に備えてミラー化できます。 詳細については、「 [ミラー化バックアップ メディア セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」を参照してください。  
   
  圧縮されたバックアップと圧縮されていないバックアップを 1 つのメディア セット内で同時に作成することはできません。 圧縮されたバックアップは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のどのエディションでも読み取ることができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)」を参照してください。  
 
@@ -64,14 +66,14 @@ ms.locfileid: "68033787"
 ## <a name="media-families"></a>メディア ファミリ  
  *メディア ファミリ*とは、ミラー化されていない単一のデバイスまたはメディア セット内のミラー化されている一連のデバイスで作成されたバックアップの集合です。 メディア セット用に使用されているバックアップ デバイスの数によって、メディア セット内のメディア ファミリの数が決まります。 たとえば、ミラー化されていない 2 つのバックアップ デバイスを使用しているメディア セットには、2 つのメディア ファミリが含まれます。  
   
-ミラー化メディア セットでは、各メディア ファミリがミラー化されます。 たとえば、6 つのバックアップ デバイスを使用して 1 つのメディア セットをフォーマットし、そのメディア セットで 2 つのミラーが使用されている場合は、3 つのメディア ファミリがあります。各ファミリには、2 つの同等のバックアップ データ コピーが含まれています。 ミラー化メディア セットの詳細については、 [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。  
+ミラー化メディア セットでは、各メディア ファミリがミラー化されます。 たとえば、6 つのバックアップ デバイスを使用して 1 つのメディア セットをフォーマットし、そのメディア セットで 2 つのミラーが使用されている場合は、3 つのメディア ファミリがあります。各ファミリには、2 つの同等のバックアップ データ コピーが含まれています。 ミラー化メディア セットの詳細については、[ミラー化バックアップ メディア セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」を参照してください。  
   
- メディア ファミリ内の各テープまたはディスクには、 *メディア シーケンス番号*が割り当てられています。 ディスクのメディア シーケンス番号は常に 1 です。 テープ メディア ファミリでは、先頭テープのシーケンス番号が 1、2 番目のテープのシーケンス番号が 2 のように割り当てられます。 詳細については、このトピックの「 [メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。
+ メディア ファミリ内の各テープまたはディスクには、 *メディア シーケンス番号*が割り当てられています。 ディスクのメディア シーケンス番号は常に 1 です。 テープ メディア ファミリでは、先頭テープのシーケンス番号が 1、2 番目のテープのシーケンス番号が 2 のように割り当てられます。 詳細については、このトピックの「 [メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。
   
 ## <a name="the-media-header"></a>メディア ヘッダー  
  バックアップ メディアの各ボリューム (ディスク ファイルまたはテープ) には、メディア ヘッダーが含まれています。メディア ヘッダーは、そのテープ (またはディスク) を使用する最初のバックアップ操作によって作成されます。 このヘッダーは、メディアが再フォーマットされるまでそのままの状態で維持されます。  
   
- メディア ヘッダーには、メディア (ディスク ファイルまたはテープ) を識別するために必要な情報と、そのメディアが属するメディア ファミリ内での位置を識別するために必要な情報がすべて含まれています。 この情報には、次の項目が含まれています。  
+ メディア ヘッダーには、メディア (ディスク ファイルまたはテープ) を識別するために必要な情報と、そのメディアが属するメディア ファミリ内での位置を識別するために必要な情報がすべて含まれています。 次の情報が表示されます。  
   
 -   メディア名。  
   
@@ -118,7 +120,7 @@ WITH
   
  このバックアップ操作が正常に実行されると、新しいメディア ヘッダーを含む 1 つの新しいメディア セットと、3 つのテープに分散されている 1 つのバックアップ セットが作成されます。 次の図は、この結果を示しています。  
   
- ![3 つのテープでのメディア ヘッダーと最初のバックアップ設定](../../relational-databases/backup-restore/media/bnr-mediaset-new.gif "3 つのテープでのメディア ヘッダーと最初のバックアップ設定")  
+ ![メディア ヘッダーと最初のバックアップ セットを 3 つのテープに記録](../../relational-databases/backup-restore/media/bnr-mediaset-new.gif "メディア ヘッダーと最初のバックアップ セットを 3 つのテープに記録")  
   
  通常、メディア セットが作成されると、その後のバックアップ操作では、そのメディア セットにバックアップ セットが 1 つずつ追加されます。 関連するメディアまたはバックアップ デバイスの数にかかわらず、バックアップ セットで使用されるすべてのメディアによってメディア セットが構成されます。 バックアップ セットは、メディア セット内での位置に従ってシーケンス番号が付けられています。この番号により、どのバックアップ セットを復元するかを指定できます。  
   
@@ -137,7 +139,7 @@ WITH
   
  2 番目のバックアップ操作が正常に終了すると、次のようにバックアップ内容を分散して、2 番目のバックアップ セットがメディア セットに書き込まれます。  
   
- ![3 つのメディア セット テープにまたがる 2 番目のバックアップ セット](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "3 つのメディア セット テープにまたがる 2 番目のバックアップ セット")  
+ ![2 つ目のバックアップ セットを 3 つのメディア セット テープにまたがって記録](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "2 つ目のバックアップ セットを 3 つのメディア セット テープにまたがって記録")  
   
  バックアップを復元するとき、使用するバックアップを FILE オプションで指定できます。 次の例は、 **=** _データベースの完全バックアップを復元した後、同じメディア セットで差分バックアップを行う場合の FILE_ backup_set_file_number [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 句の使用法を示しています。 メディア セットでは 3 つのバックアップ テープが使用されます。テープが装着されているテープ ドライブは `\\.\tape0`、 `tape1`、および `tape2`です。  
   
@@ -155,7 +157,7 @@ RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1',
 GO  
 ```  
   
- メディア セット、メディア ファミリ、およびバックアップ セットに関する情報が保存される履歴テーブルの詳細については、 [バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。  
+ メディア セット、メディア ファミリ、およびバックアップ セットに関する情報が保存される履歴テーブルの詳細については、[バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)」を参照してください。  
   
  メディア セット内のバックアップ メディアの数は、次のような要因によって決まります。  
   
@@ -166,7 +168,7 @@ GO
 -   バックアップ セットの数  
 
   
-##  <a name="CreatingMediaSet"></a> Creating a new media set  
+##  <a name="creating-a-new-media-set"></a><a name="CreatingMediaSet"></a> Creating a new media set  
  新しいメディア セットを作成するには、バックアップ メディア (テープまたはディスク ファイル) をフォーマットする必要があります。 フォーマットを実行すると、バックアップ メディアが次のように変化します。  
   
 1.  古いヘッダー (存在する場合) が削除され、その結果バックアップ メディアの以前の内容が削除されます。  
@@ -176,7 +178,7 @@ GO
 2.  各バックアップ デバイスのバックアップ メディア (テープまたはディスク ファイル) に新しいメディア ヘッダーが書き込まれます。  
 
   
-##  <a name="UseExistingMediaSet"></a> 既存のメディア セットへのバックアップ  
+##  <a name="backing-up-to-an-existing-media-set"></a><a name="UseExistingMediaSet"></a> 既存のメディア セットへのバックアップ  
  既存のメディア セットにバックアップする場合、次の 2 つの方法があります。  
   
 -   既存のバックアップ セットに追加します。  
@@ -193,7 +195,7 @@ GO
 
     >  既存のバックアップ セットの上書きは、BACKUP ステートメントの INIT オプションを使用して指定します。  
   
-##  <a name="Appending"></a> Appending to existing backup sets  
+##  <a name="appending-to-existing-backup-sets"></a><a name="Appending"></a> Appending to existing backup sets  
  異なる時間に作成されたバックアップは、同じデータベースでも異なるデータベースでも同じメディアに記憶できます。 他のバックアップ セットを既存のメディアに追加すると、メディアの既存のコンテンツはそのまま保持され、メディア上の最後のバックアップの後に新しいバックアップが書き込まれます。  
   
  既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により常に新しいバックアップがメディアに追加されます。 追加は、必ずメディアの最後に行われます。 たとえば、メディア ボリュームに 5 個のバックアップ セットが含まれている場合、最初の 3 個のバックアップ セットをスキップして、4 番目のバックアップ セットに新しいバックアップ セットを上書きすることはできません。  
@@ -205,7 +207,7 @@ GO
 > **重要:** 圧縮されたバックアップと圧縮されていないバックアップを 1 つのメディア セット内で同時に作成することはできません。 圧縮されたバックアップは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンのどのエディションでも読み取ることができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)」を参照してください。  
   
  
-##  <a name="Overwriting"></a> Overwriting backup sets  
+##  <a name="overwriting-backup-sets"></a><a name="Overwriting"></a> Overwriting backup sets  
  既存のバックアップ セットの上書きは、BACKUP ステートメントの INIT オプションを使用して指定します。 このオプションでは、メディア上のすべてのバックアップ セットが上書きされ、メディア ヘッダーがある場合は保持されます。 メディア ヘッダーが存在しない場合は作成されます。  
   
  テープ ヘッダーの場合は、ヘッダーをそのまま残すことに意味があります。 ディスク バックアップ メディアの場合、バックアップ操作で指定されたバックアップ デバイスが使用したファイルだけが上書きされます。ディスク上のそれ以外のファイルは上書きされません。 バックアップを上書きする場合、既存のメディア ヘッダーを保持し、新しいバックアップをバックアップ デバイスの初めてのバックアップとして作成できます。 既存のメディア ヘッダーがない場合、関連付けられたメディア名とメディアの説明が入った有効なメディア ヘッダーが自動的に書き込まれます。 既存のメディア ヘッダーが無効な場合、バックアップ操作は終了します。 メディアが空の場合、MEDIANAME、MEDIAPASSWORD、および MEDIADESCRIPTION が指定されていれば、それらを使用して新しいメディア ヘッダーが生成されます。  
@@ -215,7 +217,7 @@ GO
   
 -   メディア上の既存のバックアップ セットが失効していない (SKIP が指定されている場合、有効期限はチェックされません)。  
   
-     有効期限は、バックアップの有効期間の完了日を指定しており、期限を過ぎると別のバックアップで上書きできるようになります。 有効期限はバックアップの作成時に指定できます。 既定では、有効期限は **sp_configure** で設定された **media retention**オプションによって決まります。 詳細については、このトピックの「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。  
+     有効期限は、バックアップの有効期間の完了日を指定しており、期限を過ぎると別のバックアップで上書きできるようになります。 有効期限はバックアップの作成時に指定できます。 既定では、有効期限は **sp_configure** で設定された **media retention**オプションによって決まります。 詳細については、「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」を参照してください。  
   
 -   メディア名が指定されても、バックアップ メディア上の名前とは一致していない。  
   
@@ -227,7 +229,7 @@ GO
   
 
   
-##  <a name="SequenceNumbers"></a> シーケンス番号  
+##  <a name="sequence-numbers"></a><a name="SequenceNumbers"></a> シーケンス番号  
  メディア セット内の複数のメディア ファミリ、またはメディア ファミリ内の複数のバックアップ メディアは、正しい順序で配置することが重要です。 このため、バックアップ時に次のようにシーケンス番号が割り当てられます。  
   
 -   メディア セット内のシーケンシャル メディア ファミリ  
@@ -238,7 +240,7 @@ GO
   
      メディア シーケンス番号は、メディア ファミリ内の物理メディアの順序を示しています。 先頭のバックアップ メディアのシーケンス番号は 1 なので、 1 が割り当てられます。2 番目のメディア、つまり最初の後続テープには 2 が割り当てられます。 バックアップ セットを復元するとき、このメディア シーケンス番号によって、オペレーターは適切なメディアを正しい順序でマウントできます。  
   
-###  <a name="MultipleDevices"></a> 複数のデバイス  
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> 複数のデバイス  
  複数のテープ ドライブまたはディスク ファイルを使用する場合は、次の点に注意してください。  
   
 -   バックアップの場合  
@@ -249,7 +251,7 @@ GO
   
      ディスク バックアップからの復元とオンライン復元の場合、すべてのメディア ファミリを同時にマウントする必要があります。 テープ バックアップからのオフライン復元の場合は、ディスクの場合よりも少数のバックアップ デバイスを使用してメディア ファミリを処理できます。 1 つのメディア ファミリの処理が完了してから、別のメディア ファミリを処理する必要があります。 1 台のデバイスで復元する場合を除き、メディア ファミリは常に並列処理されます。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **新しいメディア セットを作成する**  
   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) ( **[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]** オプション)  
@@ -293,7 +295,7 @@ GO
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   

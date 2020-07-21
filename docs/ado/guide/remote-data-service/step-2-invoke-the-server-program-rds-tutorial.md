@@ -1,5 +1,5 @@
 ---
-title: 手順 2:サーバーのプログラム (RDS チュートリアル) を呼び出す |Microsoft Docs
+title: '手順 2: サーバープログラムを起動する (RDS チュートリアル) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,26 +10,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], invoking server program
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ca35b952cdb228e70a2e747026214dc1cf020f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c0e85b276ed8cc38419035d48357180c7952ff98
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922097"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764683"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>手順 2:サーバー プログラムを呼び出す (RDS チュートリアル)
-クライアント上のメソッドを呼び出すと*プロキシ*サーバー上の実際のプログラムは、メソッドを実行します。 この手順では、サーバーでクエリを実行します。  
+クライアント*プロキシ*でメソッドを呼び出すと、サーバー上の実際のプログラムによってメソッドが実行されます。 この手順では、サーバーでクエリを実行します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- **パート A**を使用していない場合[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)でこのチュートリアルでは、この手順を実行する最も簡単な方法は使用すること、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。 **Rds.DataControl**プロキシを作成するこの手順でクエリを発行の前の手順を結合します。  
+ **パート A**このチュートリアルで RDSServer を使用して[い](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)ない場合、この手順を実行する最も便利な方法は、RDS を使用することです。 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。 **RDS。DataControl**は、プロキシを作成する前の手順を結合します。この手順では、クエリを発行します。  
   
- 設定、 **rds.DataControl**オブジェクト[Server](../../../ado/reference/rds-api/server-property-rds.md)場所サーバー プログラムをインスタンス化する必要があります使用するには、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) ; データ ソースへのアクセスへの接続文字列を指定するプロパティと。[SQL](../../../ado/reference/rds-api/sql-property.md)プロパティをクエリ コマンド テキストを指定します。 続いて、[更新](../../../ado/reference/rds-api/refresh-method-rds.md)サーバー プログラムのデータ ソースへの接続、クエリで指定された行を取得して返すメソッドを**レコード セット**クライアントにオブジェクト。  
+ RDS を設定し**ます。** サーバープログラムをインスタンス化する必要がある場所を識別する DataControl Object[サーバー](../../../ado/reference/rds-api/server-property-rds.md)プロパティ。接続[プロパティを](../../../ado/reference/rds-api/connect-property-rds.md)使用して、データソースにアクセスするための接続文字列を指定します。クエリコマンドテキストを指定する[SQL](../../../ado/reference/rds-api/sql-property.md)プロパティ。 次に、 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md)メソッドを発行して、サーバープログラムがデータソースに接続し、クエリで指定された行を取得し、**レコードセット**オブジェクトをクライアントに返すようにします。  
   
- このチュートリアルでは使用しません、 **rds.DataControl**がどのようにした場合の外観は。  
+ このチュートリアルでは、RDS は使用しません **。DataControl**ですが、次のようになります。  
   
 ```vb
 Sub RDSTutorial2A()  
@@ -41,7 +41,7 @@ Sub RDSTutorial2A()
 ...  
 ```  
   
- チュートリアルを呼び出す RDS、ADO オブジェクトとがどのようにした場合の外観になります。  
+ また、このチュートリアルでは ADO オブジェクトを使用して RDS を呼び出しますが、次のようになります。  
   
 ```vb
 Dim rs as New ADODB.Recordset  
@@ -49,9 +49,9 @@ rs.Open "SELECT * FROM Authors","Provider=MS Remote;Data Source=Pubs;" & _
         "Remote Server=https://yourServer;Remote Provider=SQLOLEDB;"  
 ```  
   
- **パート B**のこの手順を実行する一般的な方法を呼び出す、 **RDSServer.DataFactory**オブジェクト[クエリ](../../../ado/reference/rds-api/query-method-rds.md)メソッド。 このメソッドにはデータ ソースへの接続に使用される、接続文字列であり、コマンド テキスト、データ ソースから返される行を指定するために使用します。  
+ **パート B**この手順を実行する一般的な方法は、 **DataFactory**オブジェクト[クエリ](../../../ado/reference/rds-api/query-method-rds.md)メソッドを呼び出すことです。 このメソッドは、データソースへの接続に使用される接続文字列と、データソースから返される行を指定するために使用されるコマンドテキストを受け取ります。  
   
- このチュートリアルでは、 **DataFactory**オブジェクト**クエリ**メソッド。  
+ このチュートリアルでは、 **DataFactory** object**クエリ**メソッドを使用します。  
   
 ```vb
 Sub RDSTutorial2B()  
@@ -63,6 +63,6 @@ Sub RDSTutorial2B()
 ...  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [手順 3:サーバーは、レコード セット (RDS チュートリアル) を取得します。](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
+## <a name="see-also"></a>参照  
+ [手順 3: サーバーがレコードセットを取得する (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [RDS のチュートリアル (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

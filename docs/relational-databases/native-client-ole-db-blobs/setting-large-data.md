@@ -1,5 +1,5 @@
 ---
-title: 大きなデータの設定 |Microsoft Docs
+title: 大きなデータの設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,21 +14,19 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac0d1d370951ea5daa2d1849d833dcc50abf83bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 8de78c3d4218c3f5ef37e1e2d7a0e197f8c2d1c0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128873"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002854"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマー ストレージ オブジェクトへのポインターを渡すことによって BLOB データを設定することができます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーでは、コンシューマーストレージオブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
   
  コンシューマーは、データを保持するストレージ オブジェクトを作成し、このストレージ オブジェクトへのポインターをプロバイダーに渡します。 次に、プロバイダーがコンシューマー ストレージ オブジェクトからデータを読み取り、BLOB 列に書き込みます。  
   
@@ -45,7 +43,7 @@ ms.locfileid: "68128873"
 ## <a name="how-to-set-large-data"></a>大きなデータを設定する方法  
  コンシューマーは、独自のストレージ オブジェクトへのポインターを渡すために、BLOB 列の値をバインドするアクセサーを作成します。次に、**IRowsetChange::SetData** メソッドまたは **IRowsetChange::InsertRow** メソッドを呼び出します。 BLOB データを設定するには、次の手順を実行します。  
   
-1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の *dwFlag* 要素に STGM_READ を設定し、*iid* 要素に IID_ISequentialStream (公開されるインターフェイス) を設定します。  
+1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の*Dwflag*要素を STGM_READ に設定し、 *iid*要素を IID_ISequentialStream (公開するインターフェイス) に設定します。  
   
 2.  行セットが更新可能になるように、DBPROPSET_ROWSET プロパティ グループのプロパティを設定します。  
   
@@ -56,8 +54,6 @@ ms.locfileid: "68128873"
 5.  **GetNextRows** を呼び出して、次の行を行セットにフェッチします。 **GetData** を呼び出して、その行セットからデータを読み取ります。  
   
 6.  データ (および長さのインジケーター) を保持するストレージ オブジェクトを作成し、次に BLOB 列をバインドするアクセサーを指定して **IRowsetChange::SetData** (または **IRowsetChange::InsertRow**) を呼び出し、データを設定します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>例  
  次の例は、BLOB データを設定する方法を示しています。 この例では、テーブルを作成し、サンプル レコードを追加して、行セット内のそのレコードをフェッチし、BLOB フィールドの値を設定しています。  
@@ -723,8 +719,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [BLOB と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [大きな値の型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
+## <a name="see-also"></a>参照  
+ [Blob と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [大きな値をとるデータ型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

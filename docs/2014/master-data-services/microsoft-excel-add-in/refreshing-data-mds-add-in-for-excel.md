@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b5f1297927510fe6f0f5b15ac185316687326ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78adfdc6d19844eecd5ce13f6d9cee7367dfcf08
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960952"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>データの更新 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、MDS リポジトリから最新の情報を取得する必要があるときに、新しいワークシートを開くことなくデータを更新できます。 すべてのセルを更新することも、選択したセルだけを更新することもできます。 これは、カスタム式や MDS で管理されないその他のデータを含む列を挿入し、そのデータを保存する必要がある場合に便利です。  
@@ -46,14 +45,14 @@ ms.locfileid: "65482745"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへの接続を作成します。|[MDS リポジトリへの接続 &#40;Excel 用 MDS アドイン&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへの接続を作成します。|[MDS リポジトリへの接続 (Excel 用 MDS アドイン)](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |MDS データを Excel に読み込みます。|[MDS から Excel へのデータの読み込み](export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
 -   [接続 (Excel 用 MDS アドイン)](connections-mds-add-in-for-excel.md)  
   
--   [データの読み込み&#40;MDS アドインの Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [データ &#40;Excel 用 MDS アドインの読み込み&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [Microsoft Excel 用マスター データ サービス アドイン](master-data-services-add-in-for-microsoft-excel.md)  
   

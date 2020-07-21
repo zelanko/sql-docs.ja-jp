@@ -1,5 +1,5 @@
 ---
-title: '[エクスプローラー] 機能領域 (マスター データ マネージャー) | Microsoft Docs'
+title: '[エクスプローラー] 機能領域'
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 19ffb4b29de5e343234bdf77b3c324a766e72ee7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da27d391ac6f0a77f839e60b439c4b195f6a5b5a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915875"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811517"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>[エクスプローラー] 機能領域 (マスター データ マネージャー)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [エクスプローラー] 機能領域では、データを更新し、階層とコレクションを操作できます。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "67915875"
   
  [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)  
   
- [リーフ メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-leaf-member-master-data-services.md)  
+ [リーフ メンバーを作成する &#40;マスター データ サービス&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)  
   
  [メンバーまたはコレクションを削除する (マスター データ サービス)](../master-data-services/delete-a-member-or-collection-master-data-services.md)  
   

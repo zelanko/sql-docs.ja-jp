@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c992148017f6a3ecb383e85ad5bbfcc3a3ec3c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108908"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services のバックアップおよび復元操作
@@ -58,7 +58,7 @@ ms.locfileid: "66108908"
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバーが SharePoint モードの場合は、SharePoint 構成データベースや [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警告データベースなど、考慮する必要があるデータベースがあります。 SharePoint モードでは、それぞれの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションに対して 3 つのデータベースが作成されます。 その 3 つのデータベースとは、 **reportserver**、 **reportservertempdb**、および **dataalerting** です。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションのバックアップと復元](../backup-and-restore-reporting-services-sharepoint-service-applications.md)」を参照してください。  
   
 ## <a name="backing-up-the-encryption-keys"></a>暗号化キーのバックアップ  
- インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を初めて構成するときは、暗号化キーをバックアップする必要があります。 サービス アカウントの ID やコンピューターの名前を変更する際にも、そのつど暗号化キーをバックアップする必要があります。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。 SharePoint モードのレポート サーバーについては、「[Reporting Services SharePoint サービス アプリケーションの管理](../manage-a-reporting-services-sharepoint-service-application.md)」の「キー管理」のセクションを参照してください。  
+ インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を初めて構成するときは、暗号化キーをバックアップする必要があります。 サービス アカウントの ID やコンピューターの名前を変更する際にも、そのつど暗号化キーをバックアップする必要があります。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。 SharePoint モードのレポートサーバーについては、「 [Reporting Services Sharepoint サービスアプリケーションの管理](../manage-a-reporting-services-sharepoint-service-application.md)」の「キー管理」のセクションを参照してください。  
   
 ## <a name="backing-up-the-configuration-files"></a>構成ファイルのバックアップ  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、構成ファイルを使用してアプリケーション設定を格納します。 初めてサーバーを構成するときおよびカスタム拡張機能を配置した後は常に、ファイルをバックアップする必要があります。 バックアップするのは次のファイルです。  
@@ -83,11 +83,11 @@ ms.locfileid: "66108908"
  使用しているカスタム拡張機能およびカスタム アセンブリのバックアップ コピーが存在していることを確認します。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [レポートサーバーデータベース &#40;SSRS ネイティブモード&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Reporting Services 構成ファイル](../report-server/reporting-services-configuration-files.md)   
- [rskeymgmt ユーティリティ &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
+ [rskeymgmt Utility &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
  [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [レポート サーバー データベースを管理する &#40;SSRS ネイティブ モード&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [SSRS ネイティブモードでのレポートサーバーデータベースの管理 &#40;&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

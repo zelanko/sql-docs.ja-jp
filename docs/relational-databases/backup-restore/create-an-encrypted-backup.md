@@ -1,5 +1,6 @@
 ---
 title: 暗号化されたバックアップの作成 | Microsoft Docs
+description: この記事では、暗号化されたバックアップを SQL Server で Transact-SQL を使用して作成する方法について説明します。 ディスクまたは Azure Storage にバックアップできます。
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90dd03d9db824204bc4904e90af4e74055f6fa79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748428"
 ---
 # <a name="create-an-encrypted-backup"></a>暗号化されたバックアップの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、暗号化されたバックアップを Transact-SQL で作成するために必要な手順について説明します。  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の使用例については、「 [データベースの完全バックアップの作成 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」を参照してください。 
   
 ## <a name="backup-to-disk-with-encryption"></a>暗号化の使用によるディスクへのバックアップ  
@@ -55,9 +56,7 @@ ms.locfileid: "68076030"
   
 3.  **データベースのバックアップ:** 使用する暗号化アルゴリズムと証明書を指定します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    ```  
+    ```
     BACKUP DATABASE [MyTestDB]  
     TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
     WITH  
@@ -68,18 +67,17 @@ ms.locfileid: "68076030"
        SERVER CERTIFICATE = MyTestDBBackupEncryptCert  
        ),  
       STATS = 10  
-    GO  
-  
+    GO
     ```  
   
  EKM で保護されているバックアップの暗号化の例については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。  
   
-### <a name="backup-to-windows-azure-storage-with-encryption"></a>暗号化の使用による Windows Azure ストレージへのバックアップ  
- **[SQL Server Backup to URL]** オプションを使用して Windows Azure ストレージへのバックアップを作成する場合、暗号化の手順は同じですが、バックアップ先として URL を使用し、Windows Azure ストレージへの認証用に SQL 資格情報を指定する必要があります。 暗号化のオプションを使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を構成する場合は、「[Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
+### <a name="backup-to-azure-storage-with-encryption"></a>暗号化して Azure Storage にバックアップする  
+ **[SQL Server Backup to URL]** オプションを使用して Azure Storage へのバックアップを作成する場合、暗号化の手順は同じですが、バックアップ先として URL を使用し、Azure Storage への認証用に SQL 資格情報を指定する必要があります。 暗号化のオプションを使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を構成する場合は、「[Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
   
  **前提条件:**  
   
--   Windows ストレージ アカウントとコンテナー。 詳細については、以下を参照してください。 [レッスン 1:Windows Azure ストレージ オブジェクトの作成](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)。  
+-   Windows ストレージ アカウントとコンテナー。 詳細については、以下を参照してください。 [レッスン 1:Azure ストレージ オブジェクトの作成](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)。  
   
 -   master データベースのデータベース マスター キー、SQL Server インスタンス上の証明書または非対称キー。 暗号化の要件と権限については、「 [バックアップの暗号化](../../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
   

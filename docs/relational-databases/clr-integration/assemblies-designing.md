@@ -1,7 +1,8 @@
 ---
 title: アセンブリのデザイン |Microsoft Docs
+description: この記事では、アセンブリのパッケージ化、管理、制限など、SQL Server でホストするアセンブリを設計するときに考慮する必要がある要素について説明します。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -12,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76ca67598f2cb8c03c5d0e423ded66e2fe4dc700
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727667"
 ---
 # <a name="assemblies---designing"></a>アセンブリ - デザイン
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、アセンブリをデザインするときに考慮する必要がある次の項目について説明します。  
   
 -   アセンブリのパッケージ化  
   
--   アセンブリのセキュリティを管理します。  
+-   アセンブリセキュリティの管理  
   
 -   アセンブリに関する制限事項  
   
@@ -34,19 +35,19 @@ ms.locfileid: "68028018"
   
  コードをアセンブリにパッケージ化しているときは、次のことを考慮する必要があります。  
   
--   CLR ユーザー定義関数に依存する CLR ユーザー定義型とインデックスにより、アセンブリに依存する持続データがデータベースに格納される可能性があります。 多くの場合、アセンブリに依存する持続データがデータベースに存在すると、アセンブリのコードを変更することが複雑になることがあります。 そのため、一般に、持続データの依存関係があるコード (ユーザー定義関数を使用するユーザー定義型やインデックスなど) とそのような持続データの依存関係がないコードは切り離した方が適切です。 詳細については、次を参照してください。[を実装するアセンブリ](../../relational-databases/clr-integration/assemblies-implementing.md)と[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)します。  
+-   CLR ユーザー定義関数に依存する CLR ユーザー定義型とインデックスにより、アセンブリに依存する持続データがデータベースに格納される可能性があります。 多くの場合、アセンブリに依存する持続データがデータベースに存在すると、アセンブリのコードを変更することが複雑になることがあります。 そのため、一般に、持続データの依存関係があるコード (ユーザー定義関数を使用するユーザー定義型やインデックスなど) とそのような持続データの依存関係がないコードは切り離した方が適切です。 詳細については、「[アセンブリの実装](../../relational-databases/clr-integration/assemblies-implementing.md)」および「 [transact-sql&#41;&#40;の ALTER ASSEMBLY ](../../t-sql/statements/alter-assembly-transact-sql.md)」を参照してください。  
   
 -   マネージド コードの一部分で上位の権限が必要な場合、そのコードは、上位の権限を必要としないコードとは別のアセンブリにパッケージ化することをお勧めします。  
   
 ## <a name="managing-assembly-security"></a>アセンブリのセキュリティ管理  
- アセンブリでマネージド コードが実行されるときに、.NET コード アクセス セキュリティによって保護されているリソースにアセンブリがアクセスできる程度を制御できます。 作成またはアセンブリを変更するときに、次の 3 つのアクセス許可セットのいずれかのファイルを指定することによって行います。SAFE、EXTERNAL_ACCESS、または UNSAFE です。  
+ アセンブリでマネージド コードが実行されるときに、.NET コード アクセス セキュリティによって保護されているリソースにアセンブリがアクセスできる程度を制御できます。 この制御は、アセンブリを作成または変更するときに、SAFE、EXTERNAL_ACCESS、または UNSAFE の 3 つの中のいずれかの権限セットを指定して行います。  
   
 ### <a name="safe"></a>SAFE  
  SAFE は既定の権限セットであり、最も強い制限です。 SAFE 権限を指定したアセンブリによって実行されるコードでは、ファイル、ネットワーク、環境変数、またはレジストリなどの外部システム リソースにアクセスできません。 SAFE コードでは、ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータにアクセスしたり、ローカル データベースの外部にあるリソースへのアクセスを必要としない計算やビジネス ロジックを実行したりすることができます。  
   
  ほとんどのアセンブリでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部にあるリソースにアクセスしなくても計算やデータ管理タスクを実行できます。 そのため、アセンブリの権限セットとして SAFE を使用することをお勧めします。  
   
-### <a name="externalaccess"></a>EXTERNAL_ACCESS  
+### <a name="external_access"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS を使用すると、アセンブリでファイル、ネットワーク、Web サービス、環境変数、およびレジストリなどの特定の外部システム リソースにアクセスできます。 EXTERNAL ACCESS 権限を持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインだけが EXTERNAL_ACCESS アセンブリを作成できます。  
   
  SAFE アセンブリおよび EXTERNAL_ACCESS アセンブリには検証可能なタイプ セーフのコードしか格納できません。 つまり、これらのアセンブリでクラスにアクセスするには、型定義で有効な整形式のエントリ ポイントを使用する必要があります。 そのため、これらのアセンブリでは、コードによって所有されていないメモリ バッファーに自由にアクセスすることはできません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの堅牢性に悪影響を与える可能性がある操作を実行することもできません。  
@@ -54,7 +55,7 @@ ms.locfileid: "68028018"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE を使用すると、アセンブリでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内外を問わずどちらのリソースにも無制限にアクセスできます。 UNSAFE アセンブリの内部で実行されているコードで、アンマネージ コードを呼び出すことができます。  
   
- また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または共通言語ランタイムのいずれかのセキュリティ システムが妨害されるおそれもあります。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 メンバーのみ、 **sysadmin**固定サーバー ロールは、UNSAFE アセンブリを作成できます。  
+ また、UNSAFE を指定すると、CLR 検証機能によってタイプ セーフではないと見なされる操作をアセンブリのコードで実行できます。 これらの操作により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス空間のメモリ バッファーに制御なしにアクセスされる可能性があります。 UNSAFE アセンブリでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または共通言語ランタイムのいずれかのセキュリティ システムが妨害されるおそれもあります。 UNSAFE 権限は、経験豊かな開発者や管理者によって信頼性の高いアセンブリにのみ与えるようにする必要があります。 UNSAFE アセンブリを作成できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="restrictions-on-assemblies"></a>アセンブリに関する制限事項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、アセンブリのマネージド コードに特定の制限を設けて、これらのコードを信頼性および拡張性の高い方法で実行できるようにしています。 つまり、SAFE アセンブリと EXTERNAL_ACCESS アセンブリでは、サーバーの堅牢性を侵害する可能性のある操作を実行できません。  
@@ -83,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>禁止されている .NET Framework API  
- すべて[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]注釈が付けられた、許可されていないのいずれかの API **HostProtectionAttributes** SAFE と EXTERNAL_ACCESS アセンブリから呼び出すことはできません。  
+ 許可されていない [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **hostprotectionattributes**のいずれかで注釈が付けられている API は、SAFE および EXTERNAL_ACCESS アセンブリからは呼び出せません。  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -101,23 +102,26 @@ eUI
  カスタム アセンブリで参照されているアセンブリは、CREATE ASSEMBLY を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込む必要があります。 次の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリは既に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれているため、CREATE ASSEMBLY を使用しなくてもカスタム アセンブリで参照できます。  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
-## <a name="see-also"></a>参照  
- [アセンブリ&#40;データベース エンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>関連項目  
+ [アセンブリ &#40;データベースエンジン&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

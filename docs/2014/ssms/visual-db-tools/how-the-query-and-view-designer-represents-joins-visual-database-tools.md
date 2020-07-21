@@ -1,5 +1,5 @@
 ---
-title: 結合 (Visual Database Tools) のクエリおよびビュー デザイナーの表示方法 |Microsoft Docs
+title: クエリおよびビューデザイナーでの結合の表示方法 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f91e8f226fe97cdced78deb6b8c239806461d426
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63155259"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067190"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>クエリおよびビュー デザイナーでの結合の表示方法 (Visual Database Tools)
   テーブルを結合すると、 [クエリおよびビュー デザイナー](visual-database-tools.md) は、 [ダイアグラム ペイン](diagram-pane-visual-database-tools.md) にその結合をグラフィカル表示します。また、SQL 構文を使用して [SQL ペイン](sql-pane-visual-database-tools.md)にも表示します。  
@@ -31,13 +30,13 @@ ms.locfileid: "63155259"
   
  複数の結合条件を使用してテーブルが結合されている場合は、次の図に示すように、複数の結合線が表示されます。  
   
- ![複数の結合条件を使用して結合されたテーブル](../../database-engine/media//dv3w9n1.gif "複数の結合条件を使用して結合されたテーブル")  
+ ![複数の結合条件で結合されたテーブル](../../database-engine/media//dv3w9n1.gif "複数の結合条件を使用して結合されたテーブル")  
   
  結合されたデータ列が表示されていない場合 (テーブルまたはテーブル構造オブジェクトを表す四角形が最小化されている場合や、結合に式が含まれる場合など)、クエリおよびビュー デザイナーは、テーブルまたはテーブル構造オブジェクトを表す四角形のタイトル バーに結合線を表示します。  
   
  結合線の中央に表示されるアイコンの形は、テーブルまたはテーブル構造オブジェクトの結合方法を示しています。 等号 (=) 以外の演算子が結合句で使用されている場合は、その演算子が結合線のアイコンに表示されます。 結合線に表示されるアイコンは、次の表のとおりです。  
   
-|**結合線のアイコン**|**[説明]**|  
+|**結合線のアイコン**|**説明**|  
 |------------------------|---------------------|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbih.gif "Visual Database Tools のアイコン")|内部結合 (等号を使用して作成)。|  
 |![Visual Database Tools のアイコン](../../database-engine/media//dv3wbii.gif "Visual Database Tools のアイコン")|"大なり" 演算子 (>) による内部結合|  
@@ -81,7 +80,7 @@ ms.locfileid: "63155259"
     ```  
   
 ## <a name="see-also"></a>参照  
- [結合を使用したクエリ&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+ [Visual Database Tools &#40;Join を使用したクエリ&#41;](query-with-joins-visual-database-tools.md)   
  [[結合] ダイアログ ボックス (Visual Database Tools)](join-dialog-box-visual-database-tools.md)  
   
   

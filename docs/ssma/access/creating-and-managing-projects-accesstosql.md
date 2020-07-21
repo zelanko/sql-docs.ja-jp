@@ -1,5 +1,5 @@
 ---
-title: 作成して、プロジェクト (AccessToSQL) の管理 |Microsoft Docs
+title: プロジェクトの作成と管理 (管理用 Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,44 +18,44 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006615"
 ---
-# <a name="creating-and-managing-projects-accesstosql"></a>作成して、プロジェクト (AccessToSQL) の管理
-Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure では、SSMA プロジェクトを最初に作成する必要があります。 プロジェクトに移行する Access データベースに関するメタデータを含むファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure でのターゲット インスタンスに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure 移行済みのオブジェクトとデータを受信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続情報、およびプロジェクトの設定。  
+# <a name="creating-and-managing-projects-accesstosql"></a>プロジェクトの作成と管理 (管理用 Sql)
+Access データベースをまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure に移行するには、まず ssma プロジェクトを作成する必要があります。 このプロジェクトは、移行先[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のアクセスデータベースに関するメタデータ、移行されたオブジェクトとデータ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続情報、およびプロジェクト設定を受け取る SQL Azure の対象インスタンスに関するメタデータを含むファイルです。  
   
-## <a name="reviewing-default-project-settings"></a>既定のプロジェクト設定を確認します。  
-SSMA には、データを変換するために、いくつかのオプション変換すると、データベース オブジェクトの同期にはが含まれています。 これらのオプションの既定の設定は、多くのユーザーにとって適切です。 ただし、新しい SSMA プロジェクトを作成する前にする必要があります、オプションを確認し、する場合は、すべての新しいプロジェクトに使用される既定の設定を変更します。  
+## <a name="reviewing-default-project-settings"></a>既定のプロジェクト設定の確認  
+SSMA には、データベースオブジェクトを変換および同期したり、データを変換したりするためのオプションがいくつか用意されています。 これらのオプションの既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前に、オプションを確認し、必要に応じて、すべての新しいプロジェクトで使用される既定の設定を変更する必要があります。  
   
 **既定のプロジェクト設定を確認するには**  
   
-1.  **ツール**メニューの **プロジェクト設定の既定の**します。  
+1.  [**ツール**] メニューの [**既定のプロジェクト設定**] をクリックします。  
   
-2.  プロジェクトの種類を選択します。**移行ターゲット バージョン**設定が表示/変更するには、クリックのドロップダウン**全般**タブ。  
+2.  設定を表示または変更する [**移行ターゲットバージョン**] ドロップダウンでプロジェクトの種類を選択し、[**全般**] タブをクリックします。  
   
-3.  左側のウィンドウで次のようにクリックします。**変換**します。  
+3.  左側のウィンドウで、[**変換**] をクリックします。  
   
-4.  右側のウィンドウで、オプションを確認します。 これらのオプションの詳細については、次を参照してください。[プロジェクトの設定 (変換)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)します。  
+4.  右ペインで、オプションを確認します。 これらのオプションの詳細については、「[プロジェクトの設定 (変換)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)」を参照してください。  
   
 5.  必要に応じてオプションを変更します。  
   
-6.  前の手順を繰り返して、**移行**、 **GUI**、および**型マッピングの**ページ。  
+6.  **移行**、 **GUI**、および**種類のマッピング**ページに対して、前の手順を繰り返します。  
   
-    -   移行オプションについては、次を参照してください。[プロジェクトの設定 (移行)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)します。  
+    -   移行オプションの詳細については、「[プロジェクトの設定 (移行)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)」を参照してください。  
   
-    -   ユーザー インターフェイス オプションについては、次を参照してください。[プロジェクトの設定 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)します。  
+    -   ユーザーインターフェイスオプションの詳細については、「[プロジェクトの設定 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)」を参照してください。  
   
-    -   データ型マッピングの設定の詳細については、次を参照してください。[プロジェクトの設定 (型のマッピング)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)します。  
+    -   データ型マッピングの設定の詳細については、「[プロジェクトの設定 (型のマッピング)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)」を参照してください。  
   
-    -   SQL Azure の設定については、次を参照してください。[プロジェクトの設定 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)します。  
+    -   SQL Azure 設定の詳細については、「[プロジェクトの設定 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)」を参照してください。  
   
-**注**プロジェクトを作成するときに SQL Azure への移行を選択する場合にのみに、SQL Azure の設定が使用できます。  
+**メモ**SQL Azure 設定は、プロジェクトの作成中に [SQL Azure に移行] を選択した場合にのみ使用できます。  
   
 ## <a name="creating-new-projects"></a>新しいプロジェクトの作成  
-SSMA は、既定のプロジェクトを読み込むことがなく起動します。 Access データベースからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のプロジェクトを作成する必要があります。  
+SSMA は、既定のプロジェクトを読み込まずに起動します。 Access データベースからまたは SQL Azure に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行するには、プロジェクトを作成する必要があります。  
   
 **新しいプロジェクトを作成するには**  
   
@@ -63,55 +63,55 @@ SSMA は、既定のプロジェクトを読み込むことがなく起動しま
   
     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  **名前**ボックスに、プロジェクトの名前を入力します。  
+2.  [**名前**] ボックスに、プロジェクトの名前を入力します。  
   
-3.  **場所**ボックスで、入力するか、プロジェクトのフォルダーを選択します。  
+3.  [**場所**] ボックスで、プロジェクトのフォルダーを入力または選択します。  
   
-4.  移行をドロップ ダウン、SQL Server 2005 のいずれかを選択/SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016 または Azure SQL DB、順にクリックします**OK**します。  
+4.  [移行先] ドロップダウンで、SQL Server 2005/SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016/Azure SQL DB のいずれかを選択し、[ **OK**] をクリックします。  
   
-SSMA は、プロジェクト ファイルを作成します。 次の手順を実行できるようになりました[1 つ以上の Access データベースを追加する](adding-and-removing-access-database-files-accesstosql.md)します。  
+SSMA により、プロジェクトファイルが作成されます。 これで、 [1 つ以上の Access データベースを追加](adding-and-removing-access-database-files-accesstosql.md)する次の手順を実行できます。  
   
 ## <a name="customizing-project-settings"></a>プロジェクト設定のカスタマイズ  
-すべての新しい SSMA プロジェクトに適用するの既定のプロジェクト設定を定義するだけでなく、各プロジェクトの設定をカスタマイズすることもできます。 詳細については、次を参照してください。[設定の変換と移行オプション](setting-conversion-and-migration-options-accesstosql.md)します。  
+すべての新しい SSMA プロジェクトに適用される既定のプロジェクト設定を定義するだけでなく、各プロジェクトの設定をカスタマイズすることもできます。 詳細については、「[変換オプションと移行オプションの設定](setting-conversion-and-migration-options-accesstosql.md)」を参照してください。  
   
-ソースとターゲット データベース間のデータ型マッピングをカスタマイズするときに、プロジェクト、データベース、またはオブジェクト レベルでは、マッピングを定義できます。 型のマッピングの詳細については、次を参照してください。[マッピング ソースとターゲットのデータ型](mapping-source-and-target-data-types-accesstosql.md)します。  
+ソースデータベースとターゲットデータベース間のデータ型マッピングをカスタマイズする場合は、プロジェクト、データベース、またはオブジェクトレベルでマッピングを定義できます。 型マッピングの詳細については、「[ソースとターゲットのデータ型のマッピング](mapping-source-and-target-data-types-accesstosql.md)」を参照してください。  
   
 ## <a name="saving-projects"></a>プロジェクトの保存  
-プロジェクトを保存するときに、SSMA は、プロジェクトの設定と、必要に応じて、プロジェクト ファイルに、データベースのメタデータを保持します。  
+プロジェクトを保存すると、SSMA によってプロジェクトの設定が保持され、必要に応じてデータベースのメタデータをプロジェクトファイルに保存できます。  
   
 **プロジェクトを保存するには**  
   
--   **ファイル**メニューの **プロジェクトの保存**します。  
+-   [**ファイル**] メニューの [**プロジェクトの保存**] をクリックします。  
   
-    場合は、プロジェクト内のデータベースが変更されたか、変換されていない、SSMA は、プロジェクトにメタデータを保存することを求められます。 メタデータの保存には、オフラインで作業することができます。 テクニカル サポート担当者など、他のユーザーに完全なプロジェクト ファイルを送信することもできます。 メタデータを保存する場合は、次の操作を行います。  
+    プロジェクト内のデータベースが変更された場合、または変換されていない場合は、SSMA によってメタデータをプロジェクトに保存するように求められます。 メタデータを保存すると、オフラインで作業できるようになります。 また、テクニカルサポート担当者を含む、他のユーザーに完全なプロジェクトファイルを送信することもできます。 メタデータを保存するかどうかを確認するメッセージが表示されたら、次の手順を実行します。  
   
-    1.  状態を表示する各データベースに対して**メタデータが不足している**データベース名の横にあるチェック ボックスをオンにします。  
+    1.  [**メタデータが存在しません**] の状態を示すデータベースごとに、データベース名の横にあるチェックボックスをオンにします。  
   
-        メタデータの保存には数分かかる場合があります。 この時点でのメタデータを保存したくない場合は、チェック ボックスをオンされません。  
+        メタデータの保存には数分かかる場合があります。 この時点でメタデータを保存しない場合は、チェックボックスをオンにしないでください。  
   
-    2.  **[保存]** をクリックします。  
+    2.  **[Save]** (保存) をクリックします。  
   
-        SSMA は Access スキーマを解析し、プロジェクト ファイルにメタデータを保存します。  
+        SSMA は、アクセススキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   
 ## <a name="opening-projects"></a>プロジェクトを開く  
-切断されているプロジェクトを開くときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 これにより、オフラインで作業できます。 メタデータの読み込みデータベース オブジェクトを更新する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 データを移行するに再接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
+プロジェクトを開くと、そのプロジェクトはまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure から切断されます。 これにより、オフラインで作業できるようになります。 メタデータを更新するに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、データベースオブジェクトをまたは SQL Azure に読み込みます。 データを移行するには、また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は SQL Azure に再接続する必要があります。  
   
-**プロジェクトを開く**  
+**プロジェクトを開くには**  
   
 1.  次の手順のいずれかを使用します。  
   
-    -   **ファイル**メニューで、**最近使ったプロジェクト**、開きたいプロジェクトを選択します。  
+    -   [**ファイル**] メニューの [**最近使ったプロジェクト**] をポイントし、開くプロジェクトを選択します。  
   
-    -   **ファイル**メニューの **プロジェクトを開く**、.a2ssproj のプロジェクト ファイルの検索、ファイルを選択およびクリックして**オープン**します。  
+    -   [**ファイル**] メニューの [**プロジェクトを開く**] を選択し、a2ssproj プロジェクトファイルを見つけて、ファイルを選択し、[**開く**] をクリックします。  
   
-2.  再接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**ファイル**メニューの  **SQL Server に再接続**します。  
+2.  に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再接続するには、[**ファイル**] メニューの [ **SQL Server に再接続**] を選択します。  
   
-3.  上の SQL Azure に再接続する、**ファイル**メニューの  **SQL Azure に再接続します。**  
+3.  SQL Azure に再接続するには、[**ファイル**] メニューの [ **SQL Azure に再接続**] を選択します。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [1 つ以上の Access データベースの追加](adding-and-removing-access-database-files-accesstosql.md)します。  
+移行プロセスの次の手順では、 [Access データベースを1つ以上追加](adding-and-removing-access-database-files-accesstosql.md)します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[追加して、Access データベース ファイルを削除します。](adding-and-removing-access-database-files-accesstosql.md)  
+[Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Access データベースファイルの追加と削除](adding-and-removing-access-database-files-accesstosql.md)  
   

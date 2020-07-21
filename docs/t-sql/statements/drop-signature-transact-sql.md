@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f36f0bc8b70a371e61f309ac61b7b0d769135429
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b6b39adb0239730b9a53b5d4ac53059bf78a10c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766099"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   ストアド プロシージャ、関数、トリガー、またはアセンブリからデジタル署名を削除します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67929204"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP [ COUNTER ] SIGNATURE FROM module_name   
     BY <crypto_list> [ ,...n ]  
@@ -58,13 +58,13 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
  ASYMMETRIC KEY *Asym_key_name*  
  ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名に使用されている非対称キーの名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  署名に関する情報は、sys.crypt_properties カタログ ビューで確認できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  オブジェクトに対する ALTER 権限と、証明書または非対称キーに対する CONTROL 権限が必要です。 関連付けられている秘密キーがパスワードで保護されている場合、ユーザーはそのパスワードも保持している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、証明書 `HumanResourcesDP` の署名を、ストアド プロシージャ `HumanResources.uspUpdateEmployeeLogin` から削除します。  
   
 ```  

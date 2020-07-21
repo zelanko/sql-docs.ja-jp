@@ -1,5 +1,6 @@
 ---
 title: メモリ使用量の監視とトラブルシューティング | Microsoft Docs
+description: インメモリ OLTP のメモリ使用量の監視とトラブルシューティングについて説明します。SQL Server のディスク ベース テーブルとは異なるパターンがあります。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a362e060eb9fc9d8e39459007e50a0c81fba393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc6f2d5a0dbd24295d92bb53cbbf4003043be4db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722477"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>メモリ使用量の監視とトラブルシューティング
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] は、ディスク ベース テーブルとは異なるパターンでメモリを消費します。 メモリおよびガベージ コレクション サブシステムに提供される DMV またはパフォーマンス カウンターを使用して、データベース内のメモリ最適化テーブルとインデックス向けに割り当てられて使用されているメモリの量を監視できます。  これによって、システム レベルとデータベース レベルの両方で状況を表示でき、メモリの枯渇による問題を回避できます。  
   
  このトピックでは、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] のメモリ使用量の監視について説明します。  
@@ -38,7 +39,7 @@ ms.locfileid: "68069662"
   
 -   [メモリに関する問題のトラブルシューティング](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
-##  <a name="bkmk_CreateDB"></a> メモリ最適化テーブルが含まれるサンプル データベースの作成  
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a> メモリ最適化テーブルが含まれるサンプル データベースの作成  
  既にメモリ最適化テーブルが含まれるデータベースがある場合は、このセクションを省略できます。  
   
  以下の手順では、このトピックの残りのセクションで使用する、3 つのメモリ最適化テーブルが含まれるデータベースを作成します。 例では、メモリ最適化テーブルで使用できるメモリの量を制御できるように、データベースをリソース プールにマップしました。  
@@ -48,8 +49,6 @@ ms.locfileid: "68069662"
 2.  **[新しいクエリ]** をクリックします。  
   
 3.  次のコードを新しいクエリ ウィンドウに貼り付け、各セクションを実行します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     -- create a database to be used  
@@ -127,9 +126,9 @@ ms.locfileid: "68069662"
     GO  
     ```  
   
-##  <a name="bkmk_Monitoring"></a> メモリ使用率の監視  
+##  <a name="monitoring-memory-usage"></a><a name="bkmk_Monitoring"></a> メモリ使用率の監視  
   
-###  <a name="bkmk_UsingSSMS"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+###  <a name="using-ssmanstudiofull"></a><a name="bkmk_UsingSSMS"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] には、インメモリ テーブルによって消費されるメモリを監視するための標準レポートが組み込まれています。 これらのレポートには、オブジェクト エクスプローラーを使用してアクセスできます。 オブジェクト エクスプローラーを使用すると、個々のメモリ最適化テーブルで消費されるメモリも監視できます。  
   
 #### <a name="consumption-at-the-database-level"></a>データベース レベルでの消費量  
@@ -147,7 +146,7 @@ ms.locfileid: "68069662"
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
-###  <a name="bkmk_UsingDMVs"></a> DMV の使用  
+###  <a name="using-dmvs"></a><a name="bkmk_UsingDMVs"></a> DMV の使用  
  メモリ最適化テーブル、インデックス、システム オブジェクト、およびランタイム構造によって消費されるメモリを監視するために、いくつかの DMV を使用できます。  
   
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>メモリ最適化テーブルおよびインデックスによるメモリ消費  
@@ -248,7 +247,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  詳細については、「 [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)」 を参照してください。  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>インスタンス全体で [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンによって消費されるメモリ  
+#### <a name="memory-consumed-by-hek_2-engine-across-the-instance"></a>インスタンス全体で [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンによって消費されるメモリ  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンとメモリ最適化オブジェクトに割り当てられたメモリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の他のメモリ コンシューマーと同様に管理されます。 MEMORYCLERK_XTP 型のクラークによって、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンに割り当てられたすべてのメモリについて確認できます。 次のクエリを使用して、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンによって使用されるすべてのメモリを確認します。  
   
 ```sql  
@@ -274,10 +273,10 @@ MEMORYCLERK_XTP      Default    64             0
   
  詳細については、「 [sys.dm_os_memory_clerks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)」を参照してください。  
   
-##  <a name="bkmk_MemOptObjects"></a> メモリ最適化オブジェクトに消費されるメモリの管理  
+##  <a name="managing-memory-consumed-by-memory-optimized-objects"></a><a name="bkmk_MemOptObjects"></a> メモリ最適化オブジェクトに消費されるメモリの管理  
  トピック「 [メモリ最適化テーブルを持つデータベースのリソース プールへのバインド](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)」で説明しているように、名前付きリソース プールにバインドすることでメモリ最適化テーブルによって消費されるメモリの合計を制御できます。  
   
-##  <a name="bkmk_Troubleshooting"></a> メモリに関する問題のトラブルシューティング  
+##  <a name="troubleshooting-memory-issues"></a><a name="bkmk_Troubleshooting"></a> メモリに関する問題のトラブルシューティング  
  メモリに関する問題のトラブルシューティングは、次の 3 つの手順で行います。  
   
 1.  データベースまたはインスタンスのオブジェクトによって消費されているメモリ量を特定します。 前に説明したように、メモリ最適化テーブルで使用可能な豊富な監視ツール セットを使用できます。  たとえば、DMV の `sys.dm_db_xtp_table_memory_stats` または `sys.dm_os_memory_clerks`を使用できます。  
@@ -287,7 +286,7 @@ MEMORYCLERK_XTP      Default    64             0
 3.  発生する可能性があるメモリの問題を軽減するアクションを実行します。 詳細については、「 [メモリ不足の問題の解決](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルを持つデータベースのリソース プールへのバインド](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [データベースを作成してリソース プールにバインドする方法については、「](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [既存のプール内での MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の変更](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   
   

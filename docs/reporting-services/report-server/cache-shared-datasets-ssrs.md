@@ -1,5 +1,5 @@
 ---
-title: 複数の共有データセットのキャッシュ (SSRS) | Microsoft Docs
+title: 共有データセットのキャッシュ | Microsoft Docs
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9436fd4963c5c9af86f3ea4ede200952fb6deb59
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175601"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082552"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>複数の共有データセットのキャッシュ (SSRS)
   共有データセットのクエリ結果をキャッシュにコピーしておくと、複数のレポートに一貫性のあるデータを提供し、データセット クエリの応答時間を短縮できます。 レポートと同様に、初回使用時または指定されたスケジュールによってキャッシュされるように共有データセットを構成できます。  

@@ -1,9 +1,6 @@
 ---
 title: bcp ユーティリティを使用した一括データのインポートとエクスポート (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/14/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +8,21 @@ helpviewer_keywords:
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b291b24d18420005cdda4e5b079eb08abee27b8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/14/2017
+ms.openlocfilehash: 7d1892b26f3c638a696d8ed15e739f56ac2e682f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011926"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026793"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>bcp ユーティリティを使用した一括データのインポートとエクスポート (SQL Server)
-  このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内の SELECT ステートメントで指定できる任意の場所 (パーティション ビューを含む) からデータをエクスポートする方法について説明します。  
+
+このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内の SELECT ステートメントで指定できる任意の場所 (パーティション ビューを含む) からデータをエクスポートする方法について説明します。  
   
  bcp ユーティリティ (Bcp.exe) は、一括コピー プログラム (BCP) API を使用するコマンド ライン ツールです。 bcp ユーティリティは次のタスクを実行します。  
   
@@ -45,7 +45,8 @@ ms.locfileid: "66011926"
   
  **bcp** コマンドの構文の説明については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例
+
  **bcp** の例については、次のトピックを参照してください。  
   
 -   [bcp ユーティリティ](../../tools/bcp-utility.md)  
@@ -69,15 +70,14 @@ ms.locfileid: "66011926"
 -   [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
-  
-## <a name="see-also"></a>参照  
- [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [SELECT 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
- [bcp Utility](../../tools/bcp-utility.md)   
- [データの一括インポートの準備 &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md)   
- [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
-  
-  
+
+## <a name="see-also"></a>参照
+
+[Transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql) 
+ の挿入 &#40;[SELECT 句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+[Bcp ユーティリティ](../../tools/bcp-utility.md)   
+[データ &#40;SQL Server の一括インポートの準備&#41;](prepare-to-bulk-import-data-sql-server.md) 
+[BULK INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
+[データ &#40;SQL Server&#41;の一括インポートと一括エクスポート](bulk-import-and-export-of-data-sql-server.md) 
+[OPENROWSET &#40;transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+[フォーマットファイル &#40;SQL Server を作成し&#41;](create-a-format-file-sql-server.md)

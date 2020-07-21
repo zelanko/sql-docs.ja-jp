@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3b1a0e08c5850b9e31202965909dfcfe1273e47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774304"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931273"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>ログ配布とレプリケーション (SQL Server)
   ログ配布では単一のデータベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプライマリ データベースと呼ばれます。 クライアントがプライマリ データベースに対して加えた更新は、ログ配布によってセカンダリ データベースと呼ばれるもう一方のコピー データベースに適用されます。 プライマリ データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ログ配布によってこのトランザクション ログがセカンダリ データベースに適用されます。  
@@ -54,7 +53,7 @@ ms.locfileid: "62774304"
   
 1.  パブリケーション データベースで sync with backup オプションが設定されていない場合は、 `sp_replicationdboption '<publicationdatabasename>', 'sync with backup', 'true'`を実行します。 詳細については、「[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)」を参照してください。  
   
-2.  パブリケーション データベースに対してログ配布を構成します。 詳細については、「[ログ配布の構成 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)」を参照してください。  
+2.  パブリケーション データベースに対してログ配布を構成します。 詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)で導入されました。  
   
 3.  パブリッシャーに障害が発生した場合は、RESTORE LOG の KEEP_REPLICATION オプションを使用して、データベースの最新のログをセカンダリ サーバーに復元します。 これにより、データベースのレプリケーション設定がすべて保持されます。 詳細については、「[ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)」および「[RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62774304"
   
  **sync with backup オプションを使用しないでトランザクション レプリケーションとログ配布を構成するには**  
   
-1.  パブリケーション データベースに対してログ配布を構成します。 詳細については、「[ログ配布の構成 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)」を参照してください。  
+1.  パブリケーション データベースに対してログ配布を構成します。 詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)で導入されました。  
   
 2.  パブリッシャーに障害が発生した場合は、RESTORE LOG の KEEP_REPLICATION オプションを使用して、データベースの最新のログをセカンダリ サーバーに復元します。 これにより、データベースのレプリケーション設定がすべて保持されます。 詳細については、「[ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)」および「[RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "62774304"
   
     -   パブリケーションがフィルター選択されていない場合は、最新のサブスクライバーと同期することでパブリケーション データベースを最新の状態に更新できます。  
   
-    -   パブリケーションがフィルター選択されている場合は、パブリケーションを最新の状態に更新できない場合があります。 各サブスクリプションが 1 つの地域の顧客データのみを受信できるようにパーティション分割されているテーブルがあるとします。北、東、南、西のいずれかです。 データの各パーティションに 1 つ以上のサブスクライバーがある場合、各パーティションのサブスクライバーと同期することにより、パブリケーション データベースを最新の状態に更新できます。 ただし、たとえば、西パーティションのデータがすべてのサブスクライバーにレプリケートされていない場合は、パブリッシャーでこのデータを最新の状態に更新することはできません。 この場合、パブリッシャーとサブスクライバーのデータが集約するように、すべてのサブスクリプションを再初期化することをお勧めします。 詳細については、「 [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
+    -   パブリケーションがフィルター選択されている場合は、パブリケーションを最新の状態に更新できない場合があります。 たとえば、各サブスクリプションが 1 つの地域 (北、東、南、西のいずれか) の顧客データのみを受信できるようにパーティション分割されているテーブルがあるとします。 データの各パーティションに 1 つ以上のサブスクライバーがある場合、各パーティションのサブスクライバーと同期することにより、パブリケーション データベースを最新の状態に更新できます。 ただし、たとえば、西パーティションのデータがすべてのサブスクライバーにレプリケートされていない場合は、パブリッシャーでこのデータを最新の状態に更新することはできません。 この場合、パブリッシャーとサブスクライバーのデータが集約するように、すべてのサブスクリプションを再初期化することをお勧めします。 詳細については、「 [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)」を参照してください。  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を実行しているサブスクライバーと同期する場合は、サブスクリプションを匿名にすることはできません。このサブスクリプションはクライアント サブスクリプションまたはサーバー サブスクリプション (以前のリリースではローカル サブスクリプションとグローバル サブスクリプションと呼ばれていました) にする必要があります。 詳細については、「 [データの同期](../../relational-databases/replication/synchronize-data.md)」を参照してください。   
   

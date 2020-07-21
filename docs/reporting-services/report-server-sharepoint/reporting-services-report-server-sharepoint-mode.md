@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68262353"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services レポート サーバー (SharePoint モード)
@@ -134,7 +134,7 @@ ms.locfileid: "68262353"
 |SharePoint でレポート サーバーの電子メールを構成します。|[Reporting Services サービス アプリケーションの電子メールの構成](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
 |TechNet Wiki に掲載されている、今リリース向けの最新情報。|[SQL Server 2012 Reporting Services の役立つヒントおよびトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=221297)。|  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
 [SharePoint サイトのレポート ビューアー Web パーツ ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)

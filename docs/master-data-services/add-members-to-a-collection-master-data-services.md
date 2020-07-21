@@ -1,5 +1,5 @@
 ---
-title: コレクションにメンバーを追加する (マスター データ サービス) | Microsoft Docs
+title: コレクションにメンバーを追加する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0c750efb1570db2e8b1f6e2d521cdb24773f01da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69f218494a40878e4e24e86a34ebd834de0f8abd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047886"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813746"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>コレクションにメンバーを追加する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーおよび統合メンバーをコレクションに追加できます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  

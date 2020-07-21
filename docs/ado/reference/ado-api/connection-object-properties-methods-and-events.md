@@ -1,5 +1,5 @@
 ---
-title: 接続オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: Connection オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd6c95c7c761e2aadf9d42befcd4e2f740877196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eebe25e0950bcec0699160754c7be0b84e6b55e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919513"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760288"
 ---
-# <a name="connection-object-properties-methods-and-events"></a>接続オブジェクトのプロパティ、メソッド、およびイベント
+# <a name="connection-object-properties-methods-and-events"></a>Connection オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
  [Attributes プロパティ](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
@@ -29,11 +29,11 @@ ms.locfileid: "67919513"
   
  [ConnectionTimeout プロパティ](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)  
   
- [CursorLocation プロパティ](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [カーソル位置プロパティ](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
   
  [DefaultDatabase プロパティ](../../../ado/reference/ado-api/defaultdatabase-property.md)  
   
- [エラーのコレクション](../../../ado/reference/ado-api/errors-collection-ado.md)  
+ [Errors コレクション](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
  [IsolationLevel プロパティ](../../../ado/reference/ado-api/isolationlevel-property.md)  
   
@@ -63,15 +63,15 @@ ms.locfileid: "67919513"
 ## <a name="events"></a>イベント  
  [BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete および Disconnect イベント](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [ConnectComplete イベントと Disconnect イベント](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
  [ExecuteComplete イベント](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   
- [InfoMessage イベント](../../../ado/reference/ado-api/infomessage-event-ado.md)  
+ [インフォメッセージイベント](../../../ado/reference/ado-api/infomessage-event-ado.md)  
   
- [WillConnect イベント](../../../ado/reference/ado-api/willconnect-event-ado.md)  
+ [接続イベント](../../../ado/reference/ado-api/willconnect-event-ado.md)  
   
- [WillExecute イベント](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+ [イベントの実行](../../../ado/reference/ado-api/willexecute-event-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

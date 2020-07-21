@@ -1,5 +1,5 @@
 ---
-title: IRow::GetColumns (または IRow::Open) と ISequentialStream を使用した列のフェッチ | Microsoft Docs
+title: 'Fetch、IRow:: GetColumns および ISequentialStream'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +12,17 @@ helpviewer_keywords:
 - ISequentialStream interface, samples
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8aeb097f2cabac01b0d4108dbcf07ed46f15f971
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: b778ba143c2157278df2d8c0d8c7cbcbf3fd8bda
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110258"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011192"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns (または IRow::Open) と ISequentialStream を使用した列のフェッチ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   大きなデータは、**ISequentialStream** インターフェイスを使用してバインドまたは取得できます。 バインドされた列の場合、状態フラグ DBSTATUS_S_TRUNCATED は、データが切り捨てられたことを示します。  
   
@@ -37,13 +35,13 @@ ms.locfileid: "68110258"
   
 2.  コマンドを実行します (この例では、**ICommandExecute::Execute()** が IID_IRow を使用して呼び出されます)。  
   
-3.  使用して列データをフェッチ**IRow::Open()** または**irow::getcolumns()** します。  
+3.  **IRow::Open()** または **IRow::GetColumns()** を使用し、列データをフェッチします。  
   
-    -   **IRow::Open()** を開くために使用できる、 **ISequentialStream**行にします。 列にバイナリ データのストリームが含まれることを示す DBGUID_STREAM を指定します (これによって、**IStream** または **ISequentialStream** を使用して、列からデータを読み取ることができます)。  
+    -   **IRow::Open()** を使用し、行で **ISequentialStream** を開くことができます。 列にバイナリ データのストリームが含まれることを示す DBGUID_STREAM を指定します (これによって、**IStream** または **ISequentialStream** を使用して、列からデータを読み取ることができます)。  
   
     -   **IRow::GetColumns()** を使用すると、DBCOLUMNACCESS 構造体の **pData** 要素が、ストリーム オブジェクトを指すように設定されます。  
   
-4.  使用**ISequentialStream::Read()** 繰り返しに指定したバイト数をコンシューマーのバッファーに読み込みます。  
+4.  **ISequentialStream::Read()** を繰り返し使用し、指定したバイト数をコンシューマー バッファーに読み込みます。  
   
 ## <a name="example"></a>例  
  この例では、IRow を使用して単一の行をフェッチする方法を示します。 また、行から一度に 1 つの列を取得します。 この例では、IRow::GetColumns() および IRow::Open() の使用方法も示します。 列のデータの読み取りには ISequentialStream::Read を使用しています。  
@@ -52,11 +50,11 @@ ms.locfileid: "68110258"
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用したテーブルを削除します。  
   
-```  
+```sql
 USE AdventureWorks  
 GO  
   
@@ -97,7 +95,7 @@ values
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #define DBINITCONSTANTS  
 #define INITGUID  
@@ -664,7 +662,7 @@ int InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 GO  
   
@@ -673,7 +671,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [OLE DB の使用法に関するトピック](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

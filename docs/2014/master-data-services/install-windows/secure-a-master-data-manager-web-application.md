@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bcbdacd6d08a6139975c20bb8f1d5010195375b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2653ec7ef399083f750d80d9ba7a27e361ecc327
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961642"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーションのセキュリティ保護
   HTTPS を使用して [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションをセキュリティ保護できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "65479354"
   
 -   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がインストールされている Web サーバーの管理者である必要があります。  
   
--   MDS が Web サーバーにインストールされていて、Web アプリケーションが存在する必要があります。 詳細については、「[マスター データ サービスのインストール](install-master-data-services.md)」および「[マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](create-a-master-data-manager-web-application-master-data-services.md)」を参照してください。  
+-   MDS が Web サーバーにインストールされていて、Web アプリケーションが存在する必要があります。 詳細については、「 [マスター データ サービスのインストール](install-master-data-services.md) 」および「 [マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](create-a-master-data-manager-web-application-master-data-services.md)」を参照してください。  
   
 ### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>HTTPS を使用してマスター データ マネージャー Web アプリケーションをセキュリティ保護するには  
   
@@ -36,7 +35,7 @@ ms.locfileid: "65479354"
   
 2.  **[接続]** ペインの **[サイト]** で、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションをホストするサイトをクリックします。  
   
-3.  **[アクション]** ペインで、 **[バインド]** をクリックします。  
+3.  **[操作]** ウィンドウで、**[バインド]** をクリックします。  
   
 4.  **[追加]** をクリックします。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "65479354"
   
 6.  SSL 証明書を選択します。  
   
-7.  [**OK**] をクリックします。  
+7.  **[OK]** をクリックします。  
   
 8.  任意。 HTTP を削除してユーザーが HTTPS のみを使用してサイトにアクセスできるようにするには、一覧の **[http]** の行をクリックします。 **[削除]** をクリックし、確認のダイアログ ボックスで **[はい]** をクリックします。  
   
@@ -53,13 +52,13 @@ ms.locfileid: "65479354"
   
 9. **[サイト バインド]** ダイアログ ボックスを閉じるには、 **[閉じる]** をクリックします。  
   
-10. Web.config ファイルを開くようになりました*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \webapplication です。  
+10. ここで、*ドライブ*: services\webapplication です。からファイル web.config を開きます。  
   
 11. " `<security mode="Message">` " という文字列を探して、" `<security mode="Transport">`" に変更します。  
   
 12. ファイルを保存して閉じます。 エラーが発生した場合は、UAC が有効になっている可能性があります。 詳細については、 [ユーザー アカウント制御の無効化](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx)に関する記事を参照してください。 これで、ユーザーが HTTPS を使用してサイトにアクセスできるようになりました。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](create-a-master-data-manager-web-application-master-data-services.md)  
   
   

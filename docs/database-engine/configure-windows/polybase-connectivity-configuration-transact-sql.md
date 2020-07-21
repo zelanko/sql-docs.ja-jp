@@ -1,24 +1,25 @@
 ---
 title: PolyBase 接続構成 (Transact-SQL) | Microsoft Docs
+description: sp_configure を使用して PolyBase での Hadoop と Azure BLOB ストレージの接続に対するグローバル構成設定を表示または変更する方法について説明します。
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.technology: configuration
-ms.topic: conceptual
+ms.technology: polybase
+ms.topic: reference
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3daf000381fbfaa5481ae18f348bd987689e46b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997918"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938973"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 接続構成 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -58,9 +59,9 @@ RECONFIGURE
   
 -   オプション 0:Hadoop 接続の無効化  
   
--   オプション 1:Windows Server 上の Hortonworks HDP 1.3  
+-   オプション 1: Windows Server 上の Hortonworks HDP 1.3  
   
--   オプション 1:Azure BLOB ストレージ (WASB[S])  
+-   オプション 1: Azure BLOB ストレージ (WASB[S])  
   
 -   オプション 2:Linux 上の Hortonworks HDP 1.3  
   
@@ -88,10 +89,10 @@ RECONFIGURE
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-##  <a name="ResultSets"></a> 結果セット  
+##  <a name="result-sets"></a><a name="ResultSets"></a> 結果セット  
  パラメーターなしで実行されると、 **sp_configure** は 5 つの列を含む結果セットを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|構成オプションの名前。|  
 |**minimum**|**int**|構成オプションの最小値。|  
@@ -111,7 +112,7 @@ RECONFIGURE
   
  構成値を変更する、または RECONFIGURE を実行するには、 **sysadmin** 固定サーバー ロールに **ALTER SETTINGS** サーバー レベルの権限またはメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-list-all-available-configuration-settings"></a>A. すべての使用可能な構成設定を一覧表示する  
  次の例では、すべての構成オプションを一覧表示する方法を示します。  

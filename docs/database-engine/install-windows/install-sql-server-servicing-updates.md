@@ -1,5 +1,6 @@
 ---
 title: SQL Server サービス更新プログラムのインストール | Microsoft Docs
+description: この記事では、新規インストール時、または SQL Server のインストール後に、SQL Server の更新プログラムをインストールする方法について説明します。
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d88350f00b90156cd1e33a4d816ae649cc6910f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5067ed61243e777cd2d0a4f9fab76830f6207a6e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990936"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899685"
 ---
 # <a name="install-sql-server-servicing-updates"></a>SQL Server サービス更新プログラムのインストール
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 この記事では、[!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] の更新プログラムのインストールについて説明します。 このセクションでは、次の項目について説明します。
   
@@ -29,7 +30,7 @@ ms.locfileid: "67990936"
   
 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムをインストールします。  
   
-## <a name="installing-updates-for-includenoversionincludesssnoversion-mdmd-during-a-new-installation"></a>新規インストール時に [!INCLUDE[noVersion](../../includes/ssNoVersion-md.md)] の更新プログラムをインストールする  
+## <a name="installing-updates-for-noversion-during-a-new-installation"></a>新規インストール時に [!INCLUDE[noVersion](../../includes/ssNoVersion-md.md)] の更新プログラムをインストールする  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、メインの製品とそれに適用可能な更新プログラムが同時にインストールされるように、最新の製品の更新プログラムとメインの製品のインストールが統合されています。 製品の更新プログラムでは、次の場所から適用可能な更新プログラムが検索されます。  
   
 - [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update  
@@ -42,7 +43,7 @@ ms.locfileid: "67990936"
   
 セットアップで最新バージョンの適用可能な更新プログラムが検出されると、ダウンロードが実行されて、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ プロセスと統合されます。 製品の更新プログラムには、累積更新プログラム、サービス パック、またはサービス パックと累積更新プログラムが含まれる場合があります。  
   
-## <a name="installing-updates-for-includessnoversionincludesssnoversion-mdmd-after-it-has-already-been-installed"></a>既にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] の更新プログラムをインストールする  
+## <a name="installing-updates-for-ssnoversion-after-it-has-already-been-installed"></a>既にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] の更新プログラムをインストールする  
 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]のインストール済みインスタンスでは、一般配布リリース (GDR)、サービス パック (SP)、および累積的な更新プログラム (CU) を含む最新のセキュリティ更新プログラムと重要な更新プログラムを適用することをお勧めします。 詳しくは、[2016 年 3 月の SQL Server 増分サービス モデル (ISM) に関するお知らせ](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)のページをご覧ください。
 
 > [!NOTE]

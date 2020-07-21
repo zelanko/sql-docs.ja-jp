@@ -1,5 +1,5 @@
 ---
-title: スキーマ生成ウィザードの F1 ヘルプ (Analysis Services - 多次元データ) |Microsoft Docs
+title: スキーマ生成ウィザードの F1 ヘルプ (Analysis Services 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4529ed3a9c7bb2e4110435dfc9d6b9078e825a4e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069944"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538795"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>スキーマ生成ウィザードの F1 ヘルプ (Analysis Services - 多次元データ)
   スキーマ生成ウィザードを使用すると、既存のキューブとディメンションに基づくサブジェクト領域データベースのリレーショナル スキーマが自動的に生成されます。 さらに、ウィザードで生成されたテーブルに時間ディメンションを入力したり、サブジェクト領域データベースの名前付け規則やオプションを管理したりできます。  
@@ -36,15 +35,15 @@ ms.locfileid: "66069944"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ターゲット指定&#40;スキーマ生成ウィザード&#41; &#40;Analysis Services - 多次元データ&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Analysis Services-多次元データを&#41; &#40;して、スキーマ生成ウィザードのターゲット &#40;指定し&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
--   [サブジェクト領域データベース スキーマのオプション&#40;スキーマ生成ウィザード&#41; &#40;Analysis Services - 多次元データ&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
+-   [サブジェクト領域データベーススキーマオプション &#40;スキーマ生成ウィザード&#41; &#40;Analysis Services-多次元データ&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
   
--   [名前付け規則を指定&#40;スキーマ生成ウィザード&#41; &#40;Analysis Services - 多次元データ&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
+-   [スキーマ生成ウィザード&#41; &#40;Analysis Services 多次元データ &#40;名前付け規則を指定し&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
   
--   [ウィザードの完了&#40;スキーマ生成ウィザード&#41; &#40;Analysis Services - 多次元データ&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [[ウィザードの完了] &#40;スキーマ生成ウィザード&#41; &#40;Analysis Services-多次元データ&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services のウィザード &#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

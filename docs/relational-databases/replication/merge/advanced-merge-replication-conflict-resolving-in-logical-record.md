@@ -1,6 +1,7 @@
 ---
-title: 論理レコードの競合の検出および解決 | Microsoft Docs
-ms.custom: ''
+title: 論理レコードの競合の検出および解決 (マージ)
+description: マージ レプリケーションでの論理レコードの使用時に利用できる、競合検出および競合解決方法のさまざまな組み合わせについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62c862fdd67d7b4432595572175d87ae0bd44304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f076f67c09d28ff4725587e3470d56e81b1c9aef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033318"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883820"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>マージ レプリケーションの競合の詳細 - 論理レコードの解決
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   ここでは、論理レコードの使用時に利用できる、競合検出および競合解決方法のさまざまな組み合わせを紹介します。 マージ レプリケーションでの競合は、複数のノードが同じデータを変更したとき、またはマージ レプリケーションが変更をレプリケートするときに制約違反などの特定の種類のエラーに遭遇したときに発生します。 競合の検出および解決の詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
  アーティクルに対して競合の追跡と競合解決のレベルを指定するには、[マージ レプリケーションのオプションの変更](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)に関する記事を参照してください。  
@@ -31,7 +32,7 @@ ms.locfileid: "68033318"
   
  **logical_record_level_conflict_detection** アーティクル プロパティは TRUE または FALSE のいずれかに設定できます。 この値はトップ レベルの親アーティクルに対してのみ設定してください。子アーティクルでは無視されます。 この値が FALSE の場合、マージ レプリケーションは以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のように、アーティクルの **column_tracking** プロパティの値のみに基づいて、競合を検出します。 この値が TRUE の場合、マージ レプリケーションはアーティクルの **column_tracking** プロパティを無視し、論理レコードのどこかで変更が行われた場合に競合を検出します。 たとえば、次のシナリオについて考えてみます。  
   
- ![値を持つ論理レコードの 3 つのテーブル](../../../relational-databases/replication/merge/media/logical-records-05.gif "Three table logical record with values")  
+ ![値を持つ 3 つのテーブルの論理レコード](../../../relational-databases/replication/merge/media/logical-records-05.gif "値を持つ 3 つのテーブルの論理レコード")  
   
  **Customers**、 **Orders**、または **OrderItems** テーブルの Customer2 論理レコードに対して 2 人のユーザーが値を変更した場合に競合が検出されます。 この例では、UPDATE ステートメントにより変更が行われていますが、INSERT または DELETE ステートメントによる変更でも競合が検出されることがあります。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "68033318"
   
  競合は論理レコード レベルで解決されるため、レプリケーション処理中にパブリッシャー側で行われた変更が優先され、サブスクライバー テーブルの変更を置換します。  
   
- ![関連する行への変更を示す一連のテーブル](../../../relational-databases/replication/merge/media/logical-records-06.gif "Series of tables showing changes to related rows")  
+ ![関連する行に対する変更を示す一連のテーブル](../../../relational-databases/replication/merge/media/logical-records-06.gif "関連する行に対する変更を示す一連のテーブル")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>行レベルの検出、論理レコード レベルの解決  
  この例では、パブリケーションは次のように構成されています。  
@@ -90,7 +91,7 @@ ms.locfileid: "68033318"
   
  競合は論理レコード レベルで解決されるため、同期中にパブリッシャー側で行われた変更が優先され、サブスクライバー テーブルの変更を置換します。  
   
- ![関連する行への変更を示す一連のテーブル](../../../relational-databases/replication/merge/media/logical-records-07.gif "Series of tables showing changes to related rows")  
+ ![関連する行に対する変更を示す一連のテーブル](../../../relational-databases/replication/merge/media/logical-records-07.gif "関連する行に対する変更を示す一連のテーブル")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>論理レコード レベルの検出、論理レコード レベルの解決  
  この例では、パブリケーションは次のように構成されています。  
@@ -103,7 +104,7 @@ ms.locfileid: "68033318"
   
  競合は論理レコード レベルでも解決されるため、同期中にパブリッシャー側で行われた変更が優先され、サブスクライバー テーブルの変更を置換します。  
   
- ![関連する行への変更を示す一連のテーブル](../../../relational-databases/replication/merge/media/logical-records-08.gif "Series of tables showing changes to related rows")  
+ ![関連する行に対する変更を示す一連のテーブル](../../../relational-databases/replication/merge/media/logical-records-08.gif "関連する行に対する変更を示す一連のテーブル")  
   
 ## <a name="see-also"></a>参照  
  [論理レコードによる関連行への変更のグループ化](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

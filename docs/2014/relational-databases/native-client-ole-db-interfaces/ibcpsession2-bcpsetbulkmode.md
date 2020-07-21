@@ -1,5 +1,5 @@
 ---
-title: Ibcpsession 2::bcpsetbulkmode |Microsoft Docs
+title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6d4619dc87bf7dfbc34f4d835ee21bced27f1a52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62989988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056236"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
-  Ibcpsession 2::bcpsetbulkmode の代替を提供する[ibcpsession::bcpcolfmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md)列の形式を指定するためです。 個々 の列形式属性を設定するには、ibcpsession::bcpcolfmt とは異なり、ibcpsession 2::bcpsetbulkmode はすべての属性を設定します。  
+  IBCPSession2::BCPSetBulkMode には、列形式を指定するために [IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) の代替手段が用意されています。 個々の列形式属性を設定する IBCPSession::BCPColFmt とは異なり、IBCPSession2::BCPSetBulkMode では、すべての属性を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +35,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>引数  
- *property*  
+ *プロパティ*  
  BYTE 型の定数です。 定数の一覧については、「解説」の表を参照してください。  
   
  *pField*  
@@ -52,35 +51,35 @@ HRESULT BCPSetBulkMode (
  行ターミネータ値の長さです (バイト単位)。  
   
 ## <a name="returns"></a>戻り値  
- Ibcpsession 2::bcpsetbulkmode には、次のいずれかを返すことができます。  
+ IBCPSession2::BCPSetBulkMode では、次のいずれかを返すことができます。  
   
 |||  
 |-|-|  
 |`S_OK`|メソッドが成功しました。|  
 |`E_FAIL`|プロバイダー固有のエラーが発生しました。詳細を確認するには、ISQLServerErrorInfo インターフェイスを使用してください。|  
-|`E_UNEXPECTED`|メソッドの呼び出しが予期されませんでした。 たとえば、 `IBCPSession2::BCPInit` ibcpsession 2::bcpsetbulkmode を呼び出す前に、メソッドは呼び出されませんでした。|  
+|`E_UNEXPECTED`|メソッドの呼び出しが予期されませんでした。 たとえば、 `IBCPSession2::BCPInit` IBCPSession2:: BCPSetBulkMode を呼び出す前に、メソッドが呼び出されませんでした。|  
 |`E_INVALIDARG`|引数が無効です。|  
 |`E_OUTOFMEMORY`|メモリ不足エラー。|  
   
-## <a name="remarks"></a>コメント  
- 一括コピー出力、クエリまたはテーブルには、ibcpsession 2::bcpsetbulkmode を使用できます。 IBCPSession2::BCPSetBulkMode を使用してクエリ ステートメントを一括コピー出力する場合は、`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` を呼び出してクエリ ステートメントを指定する前に、これを呼び出す必要があります。  
+## <a name="remarks"></a>Remarks  
+ IBCPSession2::BCPSetBulkMode を使用して、クエリまたはテーブルを一括コピーできます。 IBCPSession2::BCPSetBulkMode を使用してクエリ ステートメントを一括コピー出力する場合は、`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` を呼び出してクエリ ステートメントを指定する前に、これを呼び出す必要があります。  
   
- RPC 呼び出し構文とバッチ クエリ構文 (`{rpc func};SELECT * from Tbl` など) を 1 つのコマンド テキスト内で組み合わせて使用しないでください。  Icommandprepare::prepare にエラーが返され、メタデータの取得できなくなります。 ストアド プロシージャの実行とバッチ クエリを 1 つのコマンド テキストで組み合わせて使用する必要がある場合は、ODBC CALL 構文 (`{call func}; SELECT * from Tbl` など) を使用します。  
+ RPC 呼び出し構文とバッチ クエリ構文 (`{rpc func};SELECT * from Tbl` など) を 1 つのコマンド テキスト内で組み合わせて使用しないでください。  ICommandPrepare::Prepare からエラーが返され、メタデータを取得できなくなるためです。 ストアド プロシージャの実行とバッチ クエリを 1 つのコマンド テキストで組み合わせて使用する必要がある場合は、ODBC CALL 構文 (`{call func}; SELECT * from Tbl` など) を使用します。  
   
  *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で-c オプションに対応します。EXE とでは、ibcpsession::bcpcolfmt *eUserDataType*プロパティに設定`BCP_TYPE_SQLCHARACTER`します。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の-w オプションに対応します。EXE およびでは、ibcpsession::bcpcolfmt *eUserDataType*プロパティに設定`BCP_TYPE_SQLNCHAR`します。|  
-|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP で-n オプションに対応します。EXE およびでは、ibcpsession::bcpcolfmt *eUserDataType*プロパティに設定`BCP_TYPE_SQLNCHAR`列の型が文字列の場合または`BCP_TYPE_DEFAULT`場合文字列ではありません。|  
-|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP で-n オプションに対応します。EXE およびでは、ibcpsession::bcpcolfmt *eUserDataType*プロパティに設定`BCP_TYPE_DEFAULT`します。|  
+|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP.EXE の-c オプション、および*Euserdatatype*プロパティがに設定された IBCPSession:: BCPColFmt に対応し `BCP_TYPE_SQLCHARACTER` ます。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP.EXE の-w オプションと*Euserdatatype*プロパティがに設定された IBCPSession:: BCPColFmt に対応し `BCP_TYPE_SQLNCHAR` ます。|  
+|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> 列の型が文字列の場合、または文字列でない場合は、 *Euserdatatype*プロパティをに設定して、BCP.EXE の-N オプションと IBCPSession:: BCPColFmt に対応し `BCP_TYPE_SQLNCHAR` `BCP_TYPE_DEFAULT` ます。|  
+|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP.EXE の-n オプションと、 *Euserdatatype*プロパティがに設定された IBCPSession:: BCPColFmt に対応し `BCP_TYPE_DEFAULT` ます。|  
   
- Ibcpsession 2::bcpsetbulkmode と競合しない ibcpsession::bcpcontrol オプションについては、ibcpsession::bcpcontrol および ibcpsession 2::bcpsetbulkmode を呼び出すことができます。 たとえば、ibcpsession::bcpcontrol でを呼び出すことができます`BCP_OPTION_FIRST`ibcpsession 2::bcpsetbulkmode とします。  
+ IBCPSession::BCPControl と IBCPSession2::BCPSetBulkMode は、IBCPSession2::BCPSetBulkMode と競合しない IBCPSession::BCPControl オプションに対して呼び出すことができます。 たとえば、 `BCP_OPTION_FIRST` および IBCPSession2:: BCPSetBulkMode を使用して、IBCPSession:: BCPControl を呼び出すことができます。  
   
- Ibcpsession::bcpcontrol でを呼び出すことはできません`BCP_OPTION_TEXTFILE`ibcpsession 2::bcpsetbulkmode とします。  
+ `BCP_OPTION_TEXTFILE`と IBCPSession2:: BCPSetBulkMode を使用して IBCPSession:: BCPControl を呼び出すことはできません。  
   
- Ibcpsession::bcpcolfmt、ibcpsession::bcpcontrol、および ibcpsession::bcpreadfmt を含む関数呼び出しのシーケンスで ibcpsession 2::bcpsetbulkmode を呼び出すしようとした場合、シーケンス エラーが関数呼び出しの 1 つ戻ります。 このエラーを解決するには、IBCPSession::BCPInit を呼び出して設定をリセットし、最初からやり直してください。  
+ IBCPSession::BCPColFmt、IBCPSession::BCPControl、および IBCPSession::BCPReadFmt が含まれる関数呼び出しのシーケンスを使用して IBCPSession2::BCPSetBulkMode を呼び出そうとすると、関数呼び出しの 1 つでシーケンス エラーが返されます。 このエラーを解決するには、IBCPSession::BCPInit を呼び出して設定をリセットし、最初からやり直してください。  
   
  次の表に、関数のシーケンス エラーが発生する関数呼び出しの例をいくつか示します。  
   
@@ -360,7 +359,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IBCPSession2 &#40;OLE DB&#41;](ibcpsession2-ole-db.md)  
   
   

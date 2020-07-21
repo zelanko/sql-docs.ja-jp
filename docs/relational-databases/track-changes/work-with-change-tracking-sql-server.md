@@ -1,5 +1,6 @@
 ---
-title: 変更の追跡のしくみ (SQL Server) | Microsoft Docs
+title: 変更の追跡のしくみ
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,19 +22,19 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8348f5d0f77006697abec72b084b36cb7b24e1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 766503222750e991cb24bcdffebbc6bcdee28954
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731553"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>変更の追跡のしくみ (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   変更の追跡を使用するアプリケーションは、追跡した変更を取得し、その変更を別のデータ ストアに適用して、ソース データベースを更新できる必要があります。 このトピックでは、これらのタスクの実行方法について説明します。また、フェールオーバーが発生してデータベースをバックアップから復元する必要がある場合に、変更の追跡が果たす役割についても説明します。  
   
-##  <a name="Obtain"></a> 変更追跡関数を使用した変更の取得  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> 変更追跡関数を使用した変更の取得  
  変更追跡関数を使用して、データベースに加えられた変更およびその変更に関する情報を取得する方法について説明します。  
   
 ### <a name="about-the-change-tracking-functions"></a>変更追跡関数について  
@@ -64,26 +65,29 @@ ms.locfileid: "68057937"
  次の例は、初期同期バージョンと初期データセットを取得する方法を示しています。  
   
 ```sql  
-    -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
-    SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
+declare @synchronization_version bigint;
+
+-- Obtain the current synchronization version. This will be used next time that changes are obtained.  
+SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
-    -- Obtain initial data set.  
-    SELECT  
-        P.ProductID, P.Name, P.ListPrice  
-    FROM  
-        SalesLT.Product AS P  
+-- Obtain initial data set.  
+SELECT  
+    P.ProductID, P.Name, P.ListPrice  
+FROM  
+   SalesLT.Product AS P  
 ```  
   
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>変更追跡関数を使用した変更の取得  
  テーブルの変更された行およびその変更に関する情報を取得するには、CHANGETABLE(CHANGES…) を使用します。たとえば、次のクエリは、 `SalesLT.Product` テーブルの変更を取得します。  
   
 ```sql  
+declare @last_synchronization_version bigint;
+
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
 FROM  
-    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT  
-  
+    CHANGETABLE(CHANGES SalesLT.Product, @last_synchronization_version) AS CT
 ```  
   
  通常、クライアントでは、行の主キーだけでなく、行の最新のデータを取得する必要があります。 そのため、アプリケーションで CHANGETABLE(CHANGES …) の結果をユーザー テーブルのデータと結合します。 たとえば、次のクエリでは、 `SalesLT.Product` テーブルと結合して、 `Name` 列と `ListPrice` 列の値を取得します。 `OUTER JOIN`が使用されていることに注意してください。 これは、ユーザー テーブルから削除された行の変更情報が返されるようにするために必要です。  
@@ -102,11 +106,11 @@ ON
 ```  
   
  次回の変更の列挙で使用するバージョンを取得するには、次の例に示すように、CHANGE_TRACKING_CURRENT_VERSION() を使用します。  
-  
+
 ```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
-  
+ 
  アプリケーションで変更を取得する際は、次の例に示すように、CHANGETABLE(CHANGES…) と CHANGE_TRACKING_CURRENT_VERSION() の両方を使用する必要があります。  
   
 ```sql  
@@ -182,7 +186,7 @@ SELECT
       END AS CT_ThumbNailPhoto,  
       CHANGE_TRACKING_IS_COLUMN_IN_MASK(  
                      @PhotoColumnId, CT.SYS_CHANGE_COLUMNS) AS  
-                                   CT_ThumbNailPhoto_Changed  
+                                   CT_ThumbNailPhoto_Changed,  
      CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
      CT.SYS_CHANGE_CONTEXT  
 FROM  
@@ -206,8 +210,6 @@ ON
 3.  CHANGETABLE(CHANGES ...) を使用して Sales テーブルの変更を取得します。  
   
 4.  CHANGETABLE(CHANGES ...) を使用して SalesOrders テーブルの変更を取得します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  データベースで実行される次の 2 つのプロセスが、上記の手順で返される結果に影響する場合があります。  
   
@@ -267,6 +269,10 @@ COMMIT TRAN
   
  スナップショット トランザクションの詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
+#### <a name="cleanup-and-snapshot-isolation"></a>クリーンアップとスナップショット分離   
+同じデータベース、または同じインスタンス内の 2 つの異なるデータベースのどちらかで、スナップショット分離と変更の追跡を両方有効にすると、スナップショット分離を使用したデータベース内に開かれたトランザクションがある場合に、クリーンアップ プロセスで sys.syscommittab 内の期限切れの行が残される可能性があります。 これが発生するのは、変更の追跡のクリーンアップ プロセスでは、クリーンアップの実行時に、インスタンス全体の低レベルのウォーター マーク (安全なクリーンアップのバージョン) が考慮されるためです。 これが行われるのは、変更の追跡の自動クリーンアップ プロセスによって、スナップショット分離が有効になっているデータベース内の開かれたトランザクションで必要となる場合がある行が削除されないようにするためです。 sys.syscommittab 内の期限切れの行が適切なタイミングでクリーンアップされるように、READ COMMITTED スナップショット分離とスナップショット分離のトランザクションを、できるだけ短いまま維持してください。 
+
+
 #### <a name="alternatives-to-using-snapshot-isolation"></a>スナップショット分離の使用に代わる方法  
  スナップショット分離の使用に代わる方法がありますが、すべてのアプリケーション要件を満たしていることを確認するための作業が必要になります。 *last_synchronization_version* が有効であり、クリーンアップ プロセスでデータが削除されていないことを変更の取得前に確認するには、次の手順を実行します。  
   
@@ -289,7 +295,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  変更の追跡 (または任意のカスタムの追跡メカニズム) を使用する場合にアプリケーションで使用する方法を選択する際には、十分な分析が必要です。 したがって、スナップショット分離を使用した方がはるかに簡単です。  
   
-##  <a name="Handles"></a> 変更の追跡でデータベースへの変更が処理されるしくみ  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a> 変更の追跡でデータベースへの変更が処理されるしくみ  
  変更の追跡を使用するアプリケーションの中には、別のデータ ストアとの双方向の同期を行うものもあります。 この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで行われた変更が他のデータ ストアで更新され、他のデータ ストアで行われた変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで更新されます。  
   
  別のデータ ストアからの変更でローカル データベースを更新する際には、アプリケーションで次の操作を実行する必要があります。  
@@ -364,20 +370,20 @@ END
  コンテキスト情報は通常、変更のソースを識別するために使用されます。 変更のソースを識別できれば、その情報をデータ ストアで使用して、再び同期される際に変更が取得されないようにすることができます。  
   
 ```sql  
-  -- Try to update the row and check for a conflict.  
-  WITH CHANGE_TRACKING_CONTEXT (@source_id)  
-  UPDATE  
-     SalesLT.Product  
-  SET  
-      ListPrice = @new_listprice  
-  FROM  
-      SalesLT.Product AS P  
-  WHERE  
-     ProductID = @product_id AND  
-     @last_sync_version >= ISNULL (  
-         (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
-         (ProductID), (P.ProductID)) AS CT),  
-         0)  
+-- Try to update the row and check for a conflict.  
+WITH CHANGE_TRACKING_CONTEXT (@source_id)  
+UPDATE  
+  SalesLT.Product  
+SET  
+  ListPrice = @new_listprice  
+FROM  
+  SalesLT.Product AS P  
+WHERE  
+  ProductID = @product_id AND  
+    @last_sync_version >= ISNULL (  
+    (SELECT CT.SYS_CHANGE_VERSION FROM CHANGETABLE(VERSION SalesLT.Product,  
+    (ProductID), (P.ProductID)) AS CT),  
+       0)  
 ```  
   
 ### <a name="ensuring-consistent-and-correct-results"></a>一貫性のある正しい結果の確保  
@@ -408,7 +414,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  スナップショット トランザクション内で更新の対象になっている行は、スナップショット トランザクションの開始後に別のトランザクションで更新されている可能性があります。 この場合はスナップショット分離の更新の競合が発生し、トランザクションは終了します。 この状況が発生した場合は、更新を再試行してください。 その結果、変更の追跡の競合が検出されることになり、行は変更されません。  
   
-##  <a name="DataRestore"></a> 変更の追跡とデータの復元  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a> 変更の追跡とデータの復元  
  同期が必要なアプリケーションでは、変更の追跡が有効になっているデータベースが以前のバージョンのデータに戻るケースを考える必要があります。 この状況は、非同期データベース ミラーへのフェールオーバーや、ログ配布の使用時のエラーに伴い、データベースがバックアップから復元された後に発生する可能性があります。 この問題を説明するシナリオを次に示します。  
   
 1.  テーブル T1 は変更の追跡の対象になっており、このテーブルの有効な最小バージョンは 50 になっています。  

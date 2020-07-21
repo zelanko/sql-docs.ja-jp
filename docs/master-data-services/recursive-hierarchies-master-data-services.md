@@ -1,5 +1,6 @@
 ---
-title: 再帰型階層 (マスター データ サービス) | Microsoft Docs
+title: 再帰型階層
+description: マスターデータサービスでは、再帰型階層に再帰リレーションシップが含まれています。これは、エンティティにエンティティに基づくドメインベースの属性がある場合に存在します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8c0f2770665a27db226b9da9f7253d602c90afd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69f65e0ab8a84d51552f50e1cee3f66933de9da4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812347"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>再帰型階層 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の再帰型階層は、再帰リレーションシップを含む派生階層です。 再帰リレーションシップは、エンティティ自体に基づくドメインベースの属性がエンティティにある場合に存在します。  
   

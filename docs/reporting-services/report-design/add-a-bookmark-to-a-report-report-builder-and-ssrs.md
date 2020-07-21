@@ -1,5 +1,5 @@
 ---
-title: レポートへのブックマークの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: レポートへのブックマークの追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 176d4318cad92d74fb7bfdeeadab5e9690843458
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: e95f4fc90e35668270f9a126f284f0b9aef1f107
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582244"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080812"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>レポートへのブックマークの追加 (レポート ビルダーおよび SSRS)
   カスタマイズされた目次を指定したり、レポートにカスタマイズされた内部ナビゲーション リンクを指定したりする場合は、レポートにブックマークおよびブックマーク リンクを追加します。 通常、各テーブルやグラフ、テーブルやマトリックスに表示される固有のグループ値など、ユーザーが直接アクセスするレポート内の場所にブックマークを追加します。 ブックマークとして使用する独自の文字列を作成できます。また、グループの場合はブックマークをグループ式に設定できます。  

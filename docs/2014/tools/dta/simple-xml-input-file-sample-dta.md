@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46a51a1ead140209145635e422d3ea1033b117e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00a973732c296cadd3d38a6ac7d9c50b7da3c90b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007624"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>XML 入力ファイルの簡単なサンプル (DTA)
   この簡単な XML 入力ファイルのサンプルをコピーして、お使いの XML エディターやテキスト エディターに貼り付け、ワークロードのチューニングのために使用することができます。 サンプルを貼り付けた後に、 **Server**、 **Database**、 **Schema**、 **Table**、 **Workload**、および **TuningOptions** 要素で指定する値を、特定のチューニング セッションの値に置き換えてください。 これらの要素で使用できる属性および子要素の詳細については、「 [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。 以下のサンプルでは、使用できる属性や子要素の一部だけを使用しています。  

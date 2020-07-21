@@ -1,5 +1,5 @@
 ---
-title: レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d22a5971d2becebec841c5e343e2361cbe2f26a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c6bc3c94923c3ebdb6e2897c4d3aaedbc58621c9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500503"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082583"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS)
   データセット フィールドは、外部データ ソースにデータセット クエリを実行するときに返されるデータを表すフィールド名の組み込みのコレクションです。  
@@ -88,7 +88,7 @@ ms.locfileid: "66500503"
      レポート サーバーで、共有データセット クエリを実行し、現在のフィールド コレクションを返します。  
   
 ## <a name="see-also"></a>参照  
- [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Reporting Services クエリ デザイナー](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   

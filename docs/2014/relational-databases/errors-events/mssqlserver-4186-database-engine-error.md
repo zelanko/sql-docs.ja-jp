@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53a8e0ab728c1fee0033ef86dbf6b7dfc22bdc8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df48de66d3b962966f9ea298a5fcf797f2a7cf06
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62867846"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551327"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|4186|  
@@ -41,7 +40,7 @@ ms.locfileid: "62867846"
   
 -   ユーザー データやシステム データにアクセスするユーザー定義関数を定義に含む計算列  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  **サブクエリで定義されたビュー列**  
   
  次の例では、選択リストでサブクエリを使用して `State` 列を定義するビューを作成します。 次に、UPDATE ステートメントで OUTPUT 句の `State` 列を参照すると、選択リストのサブクエリが原因でエラーが発生します。  

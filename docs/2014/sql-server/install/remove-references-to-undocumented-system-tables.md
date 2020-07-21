@@ -1,5 +1,5 @@
 ---
-title: 文書化されていないシステム テーブルへの参照の削除 |Microsoft Docs
+title: ドキュメントに記載されていないシステムテーブルへの参照を削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45c38038ee3d3214e4303c0ddbe0110be926c37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059200"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>ドキュメントに記載されていないシステム テーブルへの参照の削除
   以前のリリースのドキュメントには記載されていなかった多くのシステム テーブルが変更されたか、存在しなくなりました。そのため、アップグレード後にそのようなシステム テーブルを使用すると、エラーが発生する場合があります。 アップグレード アドバイザーはシステム テーブル名への参照を検索するので、システム テーブルと同じ名前のユーザー テーブルへの参照を報告します。  
@@ -80,16 +79,16 @@ ms.locfileid: "66093144"
 ## <a name="corrective-action"></a>修正措置  
  次の表に従ってアプリケーションを修正してください。  
   
-|以前のシステム ストアド プロシージャ|新しく使用する機能|  
+|以前のシステム ストアド プロシージャ|用途|  
 |----------------|---------|  
-|**sysfulltextnotify**|**TableFulltextPendingChanges** OBJECTPROPERTYEX 関数のプロパティ。|  
-|**syslocks**|**sys.dm_tran_locks**動的管理ビューまたは sp_lock、または**sys.syslockinfo**互換性ビューです。|  
-|**sysproperties**|**sys.extended_properties**カタログ ビューまたは**fn_listextendedproperty**関数|  
-|**sysxlogins**|**sys.server_principals**カタログ ビューまたは**syslogins**互換性ビューです。|  
-|すべて**spt _** テーブル|使用可能な交換はありません。|  
+|**sysfulltextnotify**|OBJECTPROPERTYEX 関数の**TableFulltextPendingChanges**プロパティ。|  
+|**syslocks**|**dm_tran_locks**動的管理ビュー、sp_lock、または**sys.syslockinfo**互換性ビュー。|  
+|**sysproperties**|**extended_properties**カタログビューまたは**fn_listextendedproperty**関数|  
+|**sysxlogins**|**server_principals**カタログビューまたは**syslogins**互換性ビュー。|  
+|すべての**spt_** テーブル|置き換えることはできません|  
   
-## <a name="see-also"></a>関連項目  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>参照  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9bef8a000619284cc46f96659d2ca6fd03ea5af7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 610f75fa8b706dab60b9691b4f5e5e82c2bdb93f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084361"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294623"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>変更データのクエリを準備する
 
@@ -27,7 +27,7 @@ ms.locfileid: "68084361"
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、3 番目に行う最後のタスクは、変更データのクエリを準備してデータ フロー タスクを追加することです。  
   
 > [!NOTE]  
->  制御フローの 2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 このタスクの詳細については、「[データの変更の準備ができているかどうかを判断する](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)」を参照してください。 制御フローをデザインするプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
+>  制御フローの 2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 このタスクの詳細については、「 [データの変更の準備ができているかどうかを判断する](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)」を参照してください。 制御フローをデザインするプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
   
 ## <a name="design-considerations"></a>デザインに関する考慮事項  
  変更データを取得するには、間隔のエンドポイントを入力パラメーターとして受け取り、指定した間隔の変更データを返す Transact-SQL テーブル値関数を呼び出します。 この関数は、データ フローの変換元コンポーネントによって呼び出されます。 この変換元コンポーネントに関する詳細については、「 [変更データを取得および理解する](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)」を参照してください。  

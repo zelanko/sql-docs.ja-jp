@@ -1,5 +1,5 @@
 ---
-title: getResultSet メソッド (SQLServerStatement) |Microsoft Docs
+title: getResultSet メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 929a14e2-8e98-4c32-89aa-86733c717ec1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d739a9c8c531259d526829f1f8ebeba94ca28f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 406584b73f954ed130f76aae4c4040d21b7b4174
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980397"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921838"
 ---
 # <a name="getresultset-method-sqlserverstatement"></a>getResultSet メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public final java.sql.ResultSet getResultSet()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getResultSet メソッドは、java. .sql. Statement インターフェイスの getResultSet メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getResultSet メソッドは、java.sql.Statement インターフェイスの getResultSet メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

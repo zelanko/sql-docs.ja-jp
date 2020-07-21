@@ -1,6 +1,6 @@
 ---
-title: フォントの色、サイズ、およびスタイルを変更する方法 | Microsoft Docs
-ms.custom: ''
+title: フォントの色、サイズ、およびスタイルを変更する方法
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing fonts
 - text fonts [SQL Server Management Studio]
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a4f7f2e80afd3f5f879813eeb5e19ce6eaa6e979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d43c0e2e1489974c0eacc7839429b70dfbfde9f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064180"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063467"
 ---
 # <a name="change-font-color-size-and-style"></a>フォントの色、サイズ、およびスタイルを変更する方法
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の他の領域と同様に、エディターのテキストの表示方法もカスタマイズできます。  

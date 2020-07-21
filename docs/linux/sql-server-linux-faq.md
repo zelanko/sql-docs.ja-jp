@@ -3,20 +3,20 @@ title: SQL Server on Linux に関する FAQ
 description: この記事では、Linux で実行されている SQL Server に関してよく寄せられる質問への回答を提供します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952630"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895344"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux に関してよく寄せられる質問 (FAQ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 以下のセクションでは、Linux で実行されている SQL Server についてよく寄せられる質問と回答を提供します。
 
@@ -28,11 +28,11 @@ ms.locfileid: "67952630"
 
 1. **SQL Server on Linux は他のプラットフォームで動作しますか?**
 
-   前述のディストリビューションについては、Linux で SQL Server がテストおよびサポートされています。 その他の Linux ディストリビューションは密接に関連しており、SQL Server を実行できる場合があります (たとえば、CentOS は Red Hat Enterprise Server に密接に関連しています)。 しかし、サポートされていないオペレーティング システムに SQL Server をインストールすることを選択した場合は、サポートの影響を理解するために、「[Microsoft SQL Server のテクニカル サポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)」の「**サポート ポリシー** 」セクションを確認してください。 また、コミュニティによって管理されるいくつかの Linux ディストリビューションには、基になるオペレーティング システムが問題である場合にサポートを受けるための正式な方法がないことに注意してください。
+   SQL Server は、前述のディストリビューションの Linux 上でテストが行われ、それらでサポートされています。 その他の Linux ディストリビューションは密接に関連しており、SQL Server を実行できる場合があります (たとえば、CentOS は Red Hat Enterprise Server に密接に関連しています)。 しかし、サポートされていないオペレーティング システムに SQL Server をインストールすることを選択した場合は、サポートの影響を理解するために、「[Microsoft SQL Server のテクニカル サポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)」の「**サポート ポリシー** 」セクションを確認してください。 また、コミュニティによって管理されるいくつかの Linux ディストリビューションには、基になるオペレーティング システムが問題である場合にサポートを受けるための正式な方法がないことに注意してください。
 
 1. **SQL Server on Linux は Windows の場合と同じですか?**
 
-   Linux 上の SQL Server のコア データベース エンジンは、Windows の場合と同じです。 しかし、一部の機能は現在、Linux ではサポートされていません。 Linux でサポートされていない機能のリストについては、「[サポートされていない機能 & サービス](sql-server-linux-release-notes.md#Unsupported)」を参照してください。 また、「[既知の問題](sql-server-linux-release-notes.md#known-issues)」も確認してください。 これらのリストで指定されていない限り、Linux では他の SQL Server 機能やサービスがサポートされます。
+   Linux 上の SQL Server のコア データベース エンジンは、Windows の場合と同じです。 しかし、一部の機能は現在、Linux ではサポートされていません。 Linux でサポートされていない機能のリストについては、「[サポートされていない機能 & サービス](sql-server-linux-editions-and-components-2019.md#Unsupported)」を参照してください。 また、「[既知の問題](sql-server-linux-release-notes.md#known-issues)」も確認してください。 これらのリストで指定されていない限り、Linux では他の SQL Server 機能やサービスがサポートされます。
 
 1. **SQL Server のサポート ポリシーは何ですか?**
 
@@ -83,7 +83,7 @@ ms.locfileid: "67952630"
 
 1. **Linux Subsystem for Windows 10 に SQL Server をインストールできますか?**
 
-   不可。 Windows 10 で実行されている Linux は、現在、SQL Server および関連ツールでサポートされているプラットフォームではありません。
+   いいえ。 Windows 10 で実行されている Linux は、現在、SQL Server および関連ツールでサポートされているプラットフォームではありません。
 
 1. **SQL Server では、データ ファイルに対してどの Linux ファイル システムを使用できますか?**
 
@@ -91,11 +91,11 @@ ms.locfileid: "67952630"
 
 1. **インストール パッケージをダウンロードして SQL Server をオフラインでインストールすることはできますか?**
 
-   可能。 詳細については、[リリース ノート](sql-server-linux-release-notes.md)に関するページのパッケージ ダウンロード リンクを参照してください。 また、[オフライン インストールの手順](sql-server-linux-setup.md#offline)を確認してください。
+   はい。 詳細については、[リリース ノート](sql-server-linux-release-notes.md)に関するページのパッケージ ダウンロード リンクを参照してください。 また、[オフライン インストールの手順](sql-server-linux-setup.md#offline)を確認してください。
 
 1. **SQL Server on Linux の無人インストールを実行できますか?**
 
-   可能。 無人インストールの詳細については、「[SQL Server on Linux のインストール ガイダンス](sql-server-linux-setup.md#unattended)」を参照してください。 [Red Hat](sample-unattended-install-redhat.md)、[SUSE Linux Enterprise Server](sample-unattended-install-suse.md)、[Ubuntu](sample-unattended-install-ubuntu.md) のサンプル スクリプトを参照してください。 SQL Server Customer Advisory Team によって作成された[このサンプル スクリプト](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)を確認することもできます。
+   はい。 無人インストールの詳細については、「[SQL Server on Linux のインストール ガイダンス](sql-server-linux-setup.md#unattended)」を参照してください。 [Red Hat](sample-unattended-install-redhat.md)、[SUSE Linux Enterprise Server](sample-unattended-install-suse.md)、[Ubuntu](sample-unattended-install-ubuntu.md) のサンプル スクリプトを参照してください。 SQL Server Customer Advisory Team によって作成された[このサンプル スクリプト](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)を確認することもできます。
 
 ## <a name="tools"></a>ツール
 
@@ -134,7 +134,7 @@ ms.locfileid: "67952630"
 
 1. **Linux では Active Directory 認証がサポートされていますか?**
 
-   可能。 詳細については、[SQL Server on Linux での Active Directory 認証](sql-server-linux-active-directory-authentication.md)に関するページを参照してください。
+   はい。 詳細については、[SQL Server on Linux での Active Directory 認証](sql-server-linux-active-directory-authentication.md)に関するページを参照してください。
 
 1. **Linux では Always On とクラスタリングがサポートされていますか?**
 
@@ -150,7 +150,7 @@ ms.locfileid: "67952630"
 
 1. **Oracle や他のデータベース エンジンから SQL Server on Linux にデータを移行することはできますか?**
 
-   可能。 SSMA では、次のいくつかの種類のデータベース エンジンからの移行がサポートされています:Microsoft Access、DB2、MySQL、Oracle、および SAP ASE (旧称: SAP Sybase ASE)。 SSMA の使用方法の例については、[SQL Server Migration Assistant を使用した SQL Server on Linux への Oracle スキーマの移行](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)に関するページを参照してください。
+   はい。 SSMA では、次のいくつかの種類のデータベース エンジンからの移行がサポートされています:Microsoft Access、DB2、MySQL、Oracle、および SAP ASE (旧称: SAP Sybase ASE)。 SSMA の使用方法の例については、[SQL Server Migration Assistant を使用した SQL Server on Linux への Oracle スキーマの移行](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)に関するページを参照してください。
 
 1. **SQL Server ファイルにはどのようなアクセス許可が必要ですか?**
 

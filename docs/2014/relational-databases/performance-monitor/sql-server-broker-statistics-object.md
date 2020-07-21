@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f500429659f7f2960140286e102fbf252e86a448
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 947468b55b60a4ca843156438cae304446663cb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68206552"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064713"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server: Broker Statistics オブジェクト
   SQLServer:Broker Statistics パフォーマンス オブジェクトには、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスに関する [!INCLUDE[ssDE](../../includes/ssde-md.md)]の一般的な情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターの一覧です。  
@@ -63,7 +62,7 @@ ms.locfileid: "68206552"
 |**SQL SEND Total**|実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] の SEND ステートメントの総数。|  
 |**SQL SENDs/sec**|1 秒あたりに実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] の SEND ステートメントの数。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   

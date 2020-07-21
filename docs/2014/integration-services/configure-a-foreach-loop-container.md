@@ -1,5 +1,5 @@
 ---
-title: Foreach ループ コンテナーの構成 |Microsoft Docs
+title: Foreach ループコンテナーを構成する |Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - Foreach Loop containers
 - containers [Integration Services], Foreach Loop
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ef95ca29b9e502950326b095f56f26e1a508831
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060876"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434879"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Foreach ループ コンテナーを構成する
   この手順では、列挙子レベルおよびコンテナー レベルでのプロパティ式など、Foreach ループ コンテナーを構成する方法について説明します。  
@@ -65,16 +64,16 @@ ms.locfileid: "66060876"
   
     -   Foreach SMO 列挙子を使用するには、 **[接続]** 一覧で既存の ADO.NET 接続を選択するか、 **[新しい接続]** をクリックします。次に、使用する文字列を入力するか、 **[参照]** をクリックします。 **[参照]** をクリックした場合は、 **[SMO 列挙の選択]** ダイアログ ボックスで、列挙するオブジェクトの種類と列挙型を選択し、 **[OK]** をクリックします。  
   
-6.  必要に応じて、 **[コレクション]** ページの **[式]** テキスト ボックスにある参照ボタン ( **[...]** ) をクリックし、プロパティ値を更新する式を作成します。 詳細については、「 [プロパティ式を追加または変更する](expressions/add-or-change-a-property-expression.md)」を参照してください。  
+6.  必要に応じて、[**コレクション**] ページの [**式**] テキストボックスにある参照ボタン **([...])** をクリックして、プロパティ値を更新する式を作成します。 詳細については、「 [プロパティ式を追加または変更する](expressions/add-or-change-a-property-expression.md)」を参照してください。  
   
     > [!NOTE]  
     >  **[プロパティ]** 一覧に表示されるプロパティは、列挙子ごとに異なります。  
   
-7.  必要に応じて、 **[変数のマッピング]** をクリックし、オブジェクトのプロパティをコレクションの値にマップします。その後、次の操作を行います。  
+7.  必要に応じて、**[変数のマッピング]** をクリックし、オブジェクトのプロパティをコレクションの値にマップします。その後、次の操作を行います。  
   
-    1.  **[変数]** 一覧で変数を選択するか、 **[\<新しい変数>]** をクリックして新しい変数を作成します。  
+    1.  [**変数**] の一覧で変数を選択するか、をクリックして **\<New Variable>** 新しい変数を作成します。  
   
-    2.  新しい変数を追加する場合、 **[変数の追加]** ダイアログ ボックスで変数のプロパティを設定し、 **[OK]** をクリックします。  
+    2.  新しい変数を追加する場合、**[変数の追加]** ダイアログ ボックスで変数のプロパティを設定し、**[OK]** をクリックします。  
   
     3.  Foreach Item 列挙子を使用する場合、 **[インデックス]** の一覧で、インデックス値を更新できます。  
   

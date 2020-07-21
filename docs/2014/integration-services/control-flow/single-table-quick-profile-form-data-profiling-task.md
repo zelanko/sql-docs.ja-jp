@@ -11,29 +11,28 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5cd76f42424836114bc5b8ed32862d5e1d84869e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8e6626040cfd51a2119a3c1b3b4dfd9203a6b0a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62830184"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432659"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク)
   **[単一テーブル クイック プロファイル フォーム]** を使用すると、既定の設定を使用して単一のテーブルまたはビューをプロファイルするように、データ プロファイル タスクをすばやく構成できます。  
   
  データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **Connection**  
  プロファイル対象のテーブルまたはビューを含む [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データベースに接続するには、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用する既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続マネージャーを選択します。  
   
  **[テーブルまたはビュー]**  
  選択した接続マネージャーの接続先となる、データベース内の既存のテーブルまたはビューを選択します。  
   
- **[計算]**  
+ **Compute**  
  計算するプロファイルを選択します。  
   
 |値|説明|  
@@ -51,8 +50,8 @@ ms.locfileid: "62830184"
 > [!NOTE]  
 >  値包含プロファイル型は、 **[単一テーブル クイック プロファイル フォーム]** では使用できません。  
   
-## <a name="see-also"></a>関連項目  
- [データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
+## <a name="see-also"></a>参照  
+ [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
  [データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;](data-profiling-task-editor-profile-requests-page.md)  
   
   

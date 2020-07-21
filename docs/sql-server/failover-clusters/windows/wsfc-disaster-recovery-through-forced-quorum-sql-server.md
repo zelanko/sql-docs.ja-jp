@@ -1,6 +1,7 @@
 ---
-title: WSFC の強制クォーラムによる災害復旧 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 強制クォーラムによるディザスター リカバリー
+description: クォーラム障害からの復旧には、手動による介入が必要になります。 この記事では、SQL Server フェールオーバー クラスター インスタンス (FCI) の障害が発生した場合にクォーラムを強制する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904952"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74821983"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC の強制クォーラムによる災害復旧 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,26 +27,26 @@ ms.locfileid: "67904952"
   
 -   **開始前の準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
   
--   **WSFC の強制クォーラムの手順による災害復旧** [WSFC の強制クォーラムの手順による災害復旧](#Main)  
+-   **強制クォーラムの手順による WSFC のディザスター リカバリー**[強制クォーラムの手順による WSFC のディザスター リカバリー](#Main)  
   
 -   [関連タスク](#RelatedTasks)  
   
 -   [関連コンテンツ](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> 開始前の準備  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 開始前の準備  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  強制クォーラムの手順では、クォーラム障害の発生前に、正常なクォーラムが存在していたことを前提としています。  
   
 > [!WARNING]  
 >  ユーザーは、Windows Server フェールオーバー クラスタリング、WSFC クォーラム モデル、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、および環境に固有の配置構成の概念および操作に関する十分な知識を持っている必要があります。  
 >   
->  詳細については、以下をご覧ください。「[Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)」、「[WSFC クォーラム モードと投票の構成 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)」  
+>  詳細については、次を参照してください。「[Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)」、「[WSFC クォーラム モードと投票の構成 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)」  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  ユーザーは、WSFC クラスターの各ノードのローカル Administrators グループのメンバーであるドメイン アカウントを使用する必要があります。  
   
-##  <a name="Main"></a> WSFC の強制クォーラムの手順による災害復旧  
+##  <a name="wsfc-disaster-recovery-through-the-forced-quorum-procedure"></a><a name="Main"></a> WSFC の強制クォーラムの手順による災害復旧  
  クォーラム障害が発生すると、クラスターの構成どおりにノード レベルのフォールト トレランスを確保できなくなるため、WSFC クラスター内のクラスター化されているサービス、SQL Server インスタンス、および [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]がすべてオフラインになります。  クォーラム障害は、WSFC クラスター内の正常な投票ノードがクォーラム モデルを満たさなくなったことを意味します。 ノードによって、まったく機能しなくなるものもあれば、WSFC サービスがシャットダウンしただけで、クォーラムと通信できなくなったことを除けば正常なものもあります。  
   
  WSFC クラスターをオンラインに戻すには、既存の構成でクォーラム障害の根本的な原因を解決し、影響を受けたデータベースを必要に応じて復元する必要があります。また、稼働しているクラスター トポロジを反映させるために、WSFC クラスター内の残りのノードの再構成が必要になることもあります。  
@@ -65,7 +66,7 @@ ms.locfileid: "67904952"
   
      このノードで、強制クォーラムの手順に従って、クラスターを手動で強制的にオンラインにします。  データ損失の可能性を最小限に抑えるには、可用性グループのプライマリ レプリカを最後にホストしていたノードを選択します。  
   
-     詳細については、以下をご覧ください。[クォーラムを使用せずに WSFC クラスターを強制的に起動する](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     詳細については、次を参照してください。[クォーラムを使用せずに WSFC クラスターを強制的に起動する](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  強制クォーラムの設定はクラスター全体に影響します。論理的 WSFC クラスターの投票が過半数に達し、通常のクォーラム モードの動作に自動的に切り替わるまで、クラスター全体のクォーラムのチェックがブロックされます。  
@@ -103,7 +104,7 @@ ms.locfileid: "67904952"
   
 8.  **RPO/RTO 分析を実行します。** SQL Server システム ログ、データベースのタイムスタンプ、および Windows イベント ログを分析して、障害の根本的な原因を特定し、実際の復旧ポイントと復旧時間を文書化します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [クォーラムを使用せずに WSFC クラスターを強制的に起動する](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -115,7 +116,7 @@ ms.locfileid: "67904952"
   
 -   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

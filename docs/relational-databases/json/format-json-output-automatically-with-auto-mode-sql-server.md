@@ -1,9 +1,7 @@
 ---
-title: AUTO モードで自動的に JSON 出力を書式設定する (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/17/2017
+title: AUTO モードで自動的に JSON 出力を書式設定する
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +9,18 @@ helpviewer_keywords:
 ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 284da6ca5e2d94feca65a6d57fbbd7a8ee2d79b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 083e8503b659be0f03af08c5f514e30baf012ae8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722305"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>AUTO モードで自動的に JSON 出力を書式設定する (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **SELECT** ステートメントの構造に基づいて **FOR JSON** 句の出力を自動的に書式設定するには、**AUTO** オプションを指定します。  
   
@@ -28,13 +28,13 @@ ms.locfileid: "67909430"
  
 または、**PATH** オプションを使用して出力の制御を維持します。
 -   **PATH** オプションの詳細については、「[Format Nested JSON Output with PATH Mode](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)」 (PATH モードで入れ子になった JSON 出力を書式設定する) を参照してください。
--   両方のオプションの概要については、「[Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」(FOR JSON を使用してクエリ結果を JSON として書式設定する) を参照してください。
+-   両方のオプションの概要については、「[Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」 (FOR JSON を使用してクエリ結果を JSON として書式設定する) を参照してください。
 
 **FOR JSON AUTO** オプションを使用するクエリには、 **FROM** 句を含める必要があります。  
   
 以下に、 **FOR JSON** 句で **AUTO** オプションを使用した例を示します。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="example-1"></a>例 1
  **クエリ**  

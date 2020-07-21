@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 91d07c6bbb4eb4731c9a802e47cd8f4c71aa5aeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68031229"
 ---
 # <a name="error-mdx"></a>Error (MDX)
 
 
-  必要に応じて指定したエラー メッセージを提供するエラーが発生します。  
+  指定されたエラーメッセージを提供して、オプションでエラーを生成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,7 +32,7 @@ Error( [ Error_Text ] )
  返すエラー メッセージを格納した有効な文字列式です。  
   
 ## <a name="examples"></a>使用例  
- 次のクエリを使用する方法を示しています、**エラー**計算されるメジャー内の関数。  
+ 次のクエリは、計算されるメジャー内で**Error**関数を使用する方法を示しています。  
   
  `WITH MEMBER MEASURES.ERRORDEMO AS ERROR("THIS IS AN ERROR")`  
   
@@ -42,7 +42,7 @@ Error( [ Error_Text ] )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

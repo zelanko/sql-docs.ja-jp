@@ -1,5 +1,5 @@
 ---
-title: 汎用拡張ストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
+title: 一般的な拡張ストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: daa3dc088a4a448e6b20cdf2ade73e64e86d491d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a2a59d30dfc86a84d76ebd25143f4d7d1090a4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942196"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634848"
 ---
-# <a name="general-extended-stored-procedures-transact-sql"></a>汎用拡張ストアド プロシージャ (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="general-extended-stored-procedures-transact-sql"></a>一般的な拡張ストアドプロシージャ (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステム ストアド プロシージャのインスタンスからインターフェイスを提供する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]さまざまなメンテナンスのための外部のプログラムにします。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、のインスタンスから外部プログラムへのインターフェイスを提供する次のシステムストアドプロシージャをサポートしてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 |||  
 |-|-|  

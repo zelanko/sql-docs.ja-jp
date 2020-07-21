@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bc1307c49bca581c3ec036d28067dafa62b7a5b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 359e5f8f8916a698be802cd7cc05d800e5997d82
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049638"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294542"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC インスタンス
 
@@ -26,7 +26,7 @@ ms.locfileid: "68049638"
   
  Oracle CDC インスタンスによって実行されるタスクを次に示します。  
   
--   **サービス開始時の検証の処理**: 起動した CDC インスタンスは、**xdbcdc_config** テーブルから構成を読み込み、一連の状態検証を実行します。この検証で、CDC インスタンスの永続化された状態に一貫性があり、変更の処理を開始できることを確実にします。  
+-   **サービス開始時の検証の処理**: 起動した CDC インスタンスは、 **xdbcdc_config** テーブルから構成を読み込み、一連の状態検証を実行します。この検証で、CDC インスタンスの永続化された状態に一貫性があり、変更の処理を開始できることを確認します。  
   
 -   **変更のキャプチャの準備**: 検証が正常に終了した場合、Oracle CDC インスタンスは現在定義されているすべてのキャプチャ インスタンスをスキャンし、変更のキャプチャに必要な Oracle LogMiner クエリおよびその他のサポート構造を準備します。 また、Oracle インスタンスは Oracle CDC インスタンスが最後に実行されたときに保存された内部キャプチャ状態を再度読み込みます。  
   

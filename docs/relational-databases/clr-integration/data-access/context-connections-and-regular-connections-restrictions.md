@@ -1,5 +1,6 @@
 ---
-title: 標準モードとコンテキスト接続に関する制限事項 |Microsoft Docs
+title: 通常の接続とコンテキスト接続に関する制限事項 |Microsoft Docs
+description: この記事では、コンテキストと通常の接続を使用して Microsoft SQL Server プロセスで実行されるコードに関連する制限事項について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8cbdd195f698090602b98cdb6e5bab0a86556ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17f95da5b152dd73939dcdf8552f72c20f199f20
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68216409"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882187"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>コンテキスト接続と通常の接続 - 制限
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックで説明して実行するコードに関する制限事項、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンテキストと通常の接続を処理します。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  このトピックでは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] コンテキストと通常の接続を使用してプロセスで実行されるコードに関連する制限事項について説明し [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="restrictions-on-context-connections"></a>コンテキスト接続に関する制限事項  
  アプリケーションを開発するときは、コンテキスト接続に適用される次の制限事項を考慮してください。  
@@ -34,20 +35,20 @@ ms.locfileid: "68216409"
   
 -   コンテキスト接続では、更新バッチ処理がサポートされません。  
   
--   **SqlNotificationRequest**コンテキスト接続に対して実行するコマンドでは使用できません。  
+-   **Sqlnotificationrequest**は、コンテキスト接続に対して実行されるコマンドでは使用できません。  
   
--   コンテキスト接続に対して実行しているコマンドはキャンセルできません。 **SqlCommand.Cancel**メソッドは、要求をサイレント モードでは無視されます。  
+-   コンテキスト接続に対して実行しているコマンドはキャンセルできません。 **SqlCommand**メソッドは、要求を自動的に無視します。  
   
 -   "context connection=true" を使用する場合は、他の接続文字列キーワードを使用できません。  
   
--   **SqlConnection.DataSource**プロパティの接続文字列の場合は null を返します、 **SqlConnection**は"コンテキスト接続 = true"のインスタンスの名前ではなく[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+-   Sqlconnection**プロパティは**、のインスタンスの名前ではなく、 **sqlconnection**の接続文字列が "context connection = true" の場合に null を返します [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
--   設定、 **SqlCommand.CommandTimeout**プロパティには効果がないコンテキスト接続に対してコマンドを実行します。  
+-   コンテキスト接続に対してコマンドを実行した場合、 **CommandTimeout**プロパティを設定しても効果はありません。  
   
 ## <a name="restrictions-on-regular-connections"></a>通常の接続に関する制限事項  
  アプリケーションを開発するときは、通常の接続に適用される次の制限事項を考慮してください。  
   
--   内部サーバーに対する非同期コマンドの実行はサポートされません。 含む"async = true"のコマンドを実行して、接続文字列で、コマンドの結果で**System.NotSupportedException**がスローされます。 このメッセージが表示されます。"内部で実行される非同期処理はサポートされていません、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プロセスです"。  
+-   内部サーバーに対する非同期コマンドの実行はサポートされません。 コマンドの接続文字列に "async = true" を含め、コマンドを実行すると、 **NotSupportedException**がスローされます。 このメッセージが表示されます。 "プロセス内で実行中の非同期処理はサポートされていません [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。"  
   
 -   **SqlDependency**オブジェクトはサポートされていません。  
   

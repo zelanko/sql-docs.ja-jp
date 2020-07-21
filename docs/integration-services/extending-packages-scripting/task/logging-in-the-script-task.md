@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f55c4b022d0656575c6807660e3b342532786822
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 44cb3b54aae756d00d56e16b3637000b1cae9af5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102819"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087402"
 ---
 # <a name="logging-in-the-script-task"></a>スクリプト タスクでのログ記録
 
@@ -95,10 +95,6 @@ public class ScriptMain
 ```  
   
  }  
-  
-## <a name="external-resources"></a>外部リソース  
-  
--   dougbert.com のブログ [「Integration Services タスクのカスタム イベントのログ記録」](https://go.microsoft.com/fwlink/?LinkId=165644)。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; のログ記録](../../../integration-services/performance/integration-services-ssis-logging.md)  

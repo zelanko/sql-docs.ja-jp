@@ -1,77 +1,71 @@
 ---
-title: SQL Server、Azure SQL Database、および Azure SQL Data Warehouse 用の SQL ツールとユーティリティ |Microsoft Docs
-ms.custom: ''
-ms.date: 11/19/2018
+title: SQL ツールの概要
+description: SQL Server、Azure SQL (Azure SQL データベース、Azure SQL マネージド インスタンス、SQL 仮想マシン)、および Azure SQL データ ウェアハウス用の SQL クエリおよび管理ツール。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe249e4df9c33fcbb292fc93f218e16ae111b0bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 3f457b485994d2619e68b4315a308e66a05715cb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105658"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77051672"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL Server、Azure SQL Database、および Azure SQL Data Warehouse 用の SQL ツールとユーティリティ
+# <a name="sql-tools-overview"></a>SQL ツールの概要
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-データベースの管理 (クエリ、監視など) を行うには、ツールが必要です。 データベースはクラウド、Windows、または[Linux](../linux/sql-server-linux-overview.md)で実行できますが、ツールをデータベースと同じプラットフォームで実行する必要はありません。 
+データベースを管理するには、ツールが必要です。 クラウド内、Windows 上、macOS 上、または [Linux](../linux/sql-server-linux-overview.md) 上のいずれでデータベースが実行されているかにかかわらず、ツールをデータベースと同じプラットフォーム上で実行する必要はありません。
 
-使用できるデータベースツールは多数あります。この記事では、SQL データベースを操作するために使用できるツールについて説明します。 必要なツールを決定する際には、[どのツールを使用すればよいでしょうか](#which-tool-should-i-choose)。
+次の表にまとめたさまざまな SQL ツールのリンクを参照してください。
 
-## <a name="gui-tools-to-manage-databases"></a>データベースを管理するための GUI ツール  
+> [!Note]
+> SQL Server をダウンロードするには、[SQL Server のインストール](../database-engine/install-windows/install-sql-server.md)に関する記事を参照してください。
 
-次に、グラフィカルユーザーインターフェイス (GUI) の主要なツールを示します。
+## <a name="recommended-tools"></a>推奨されるツール
 
-| ツール | [説明] | 実行 |
+次のツールには、グラフィカル ユーザー インターフェイス (GUI) が用意されています。
+
+| ツール | 説明 | オペレーティング システム |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]は、実行されている任意の場所でデータベースを管理するための、無料の軽量ツールです。 このプレビューリリースでは、拡張された Transact-sql エディターや、データベースの運用状態に対するカスタマイズ可能な洞察など、データベース管理機能を利用できます。 | **Windows、macOS、Linux で実行されます。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]**|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | SQL Server Management Studio (SSMS) を使用して、SQL Server、Azure SQL Database、および Azure SQL Data Warehouse のクエリ、設計、管理を行います。 | **SSMS は Windows 上で実行**されます。|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server、Azure SQL Database、および Azure SQL Data Warehouse のために、Visual Studio を強力な開発環境にします。| **SSDT は Windows 上で実行されます**。|
-| [Visual Studio Code](https://code.visualstudio.com/)| Visual Studio Code のインストール後、Microsoft SQL Server、Azure SQL Database、および SQL Data Warehouse を開発するための[mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)をインストールします。| **Visual Studio Code は、Windows、macOS、Linux で実行**されます。|
+| [ **![ADS の画像](../tools/media/overview-sql-tools/azure-data-studio.svg)</br></br>Azure Data Studio**](../azure-data-studio/download.md) | 必要に応じて SQL クエリを実行し、テキスト、JSON、または Excel 形式で結果を表示および保存できる軽量のエディターです。 使い慣れたオブジェクト ブラウズ エクスペリエンスで、データの編集、お気に入りのデータベース接続の整理、データベース オブジェクトの参照を行います。 | **Windows</br>macOS</br>Linux** |
+| [ **![SSMS の画像](../tools/media/overview-sql-tools/ssms.svg)</br></br>SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) | GUI を完全にサポートし、SQL Server インスタンスまたはデータベースを管理します。 SQL Server、Azure SQL Database、および SQL Data Warehouse のすべてコンポーネントのアクセス、構成、管理、運営、および開発を行います。 さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターを結合して、あらゆるスキル レベルの開発者やデータベース管理者が SQL にアクセスできる包括的なユーティリティが 1 つ用意されています。 | **Windows** |
+| [ **![SSDT の画像](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)** ](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server リレーショナル データベース、Azure SQL データベース、Analysis Services (AS) データ モデル、Integration Services (IS) パッケージ、Reporting Services (RS) レポートをビルドするための、最新の開発ツールです。 SSDT を使うと、 **[Visual Studio](https://visualstudio.microsoft.com/downloads/)** でアプリケーションを開発する場合と同じくらい簡単に、任意の SQL Server コンテンツ タイプを設計および展開できます。 | **Windows** |
+| [ **![VS Code の画像](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | Visual Studio Code 用の **[mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)** は、SQL Server への接続と、Visual Studio Code での T-SQL の豊富な編集エクスペリエンスをサポートする公式の SQL Server 拡張機能です。 軽量エディターで T-SQL スクリプトを作成できます。 | **Windows</br>macOS</br>Linux** |
 
+## <a name="command-line-tools"></a>コマンドライン ツール
 
-## <a name="command-line-tools-to-manage-databases"></a>データベースを管理するためのコマンドラインツール
+次のツールは、主なコマンドライン ツールです。
 
-主なコマンドラインツールを次に示します。
-
-| ツール | [説明] | 実行 |
+| ツール | 説明 | オペレーティング システム |
 |:--|:--|:--|
-|[**mssql-cli (プレビュー)** ](mssql-cli.md)|**mssql-cli**は、SQL Server クエリを実行するための対話型コマンドラインツールです。 | Windows、macOS、Linux|
-| [**sqlpackage**](sqlpackage.md) |**sqlpackage**は、いくつかのデータベース開発タスクを自動化するコマンドラインユーティリティです。 sqlpackage の macOS および Linux バージョンは、現在プレビューの段階です。 | Windows、macOS、Linux|
-|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell**は、SQL を操作するためのコマンドレットを提供します。| Windows、macOS、Linux|
-| [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd**ユーティリティを使用すると、transact-sql ステートメント、システムプロシージャ、およびスクリプトファイルをコマンドプロンプトで入力できます。 | Windows、macOS、Linux|
-|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|**b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) では、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。|Windows、macOS、Linux|
-|[**mssql-scripter (プレビュー)** ](https://github.com/Microsoft/mssql-scripter)|**scripter**は、SQL Server データベースをスクリプト化するためのマルチプラットフォームコマンドラインエクスペリエンスです。|Windows、macOS、Linux|
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql は、** Linux で実行されている SQL Server を構成します。|Linux|
+|[**bcp**](bcp-utility.md)|**b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) は、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。| **Windows</br>macOS</br>Linux** |
+|[**mssql-cli (プレビュー)** ](mssql-cli.md)|**mssql-cli** は、SQL Server のクエリを実行するための対話型コマンドライン ツールです。 また、IntelliSense、構文の強調表示などの機能を備えたコマンドライン ツールを使用して SQL Server のクエリを実行できます。 | **Windows</br>macOS</br>Linux** |
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** を使うと、Linux 上で実行される SQL Server を構成できます。 | **Linux** |
+|[**mssql-scripter (プレビュー)** ](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** は、SQL Server データベースのスクリプトを作成するためのマルチプラットフォーム コマンドライン エクスペリエンスです。 | **Windows</br>macOS</br>Linux** |
+| [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** ユーティリティを使用すると、Transact-SQL ステートメントやシステム プロシージャ、スクリプト ファイルをコマンド プロンプトから入力することができます。 | **Windows</br>macOS</br>Linux** |
+| [**sqlpackage**](sqlpackage.md) |**sqlpackage** は、一部のデータベース開発タスクを自動化するコマンドライン ユーティリティです。 |**Windows</br>macOS</br>Linux** |
+|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** には、SQL を操作するためのコマンドレットが用意されています。 | **Windows</br>macOS</br>Linux** |
 
+## <a name="migration-and-other-tools"></a>移行とその他のツール
 
+これらのツールは、SQL Database の移行、構成、およびその他の機能の提供に使用されます。
 
-## <a name="which-tool-should-i-choose"></a>どのツールを選択すればよいですか?
-
-- Windows、Linux、または Mac で軽量エディターを使用して、SQL Server インスタンスまたはデータベースを管理しますか? [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) を選択します。
-- 完全な GUI サポートを使用して、Windows 上の SQL Server インスタンスまたはデータベースを管理しますか? [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) を選択します。
-- Windows でのコンパイル時の検証、リファクタリング、デザイナーのサポートなど、データベースコードを作成または管理しますか? [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) を選択します。
-- IntelliSense、高光灯などの機能を備えたコマンドラインツールを使用して SQL Server に対してクエリを実行しますか? [Mssql-cli の](mssql-cli.md)選択
-- Windows、Linux、または Mac の軽量エディターで T-sql スクリプトを作成しますか? [Visual Studio Code](https://code.visualstudio.com/)と[mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)を選択します。
-
-
-
-## <a name="additional-tools"></a>その他のツール
-
-| ツール | [説明] |
+| ツール | 説明 |
 |:--|:--|
-| [構成マネージャー](../tools/configuration-manager/sql-server-configuration-manager-help.md) | SQL Server 構成マネージャーを使用して SQL Server サービスを構成し、ネットワーク接続を構成します。 Windows での Configuration Manager の実行|
-| [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | SQL Server Migration Assistant を使用して、Microsoft Access、DB2、MySQL、Oracle、Sybase から SQL Server へのデータベースの移行を自動化します。|
-| [Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md) | Database Experimentation Assistant を使用して、特定のワークロードの対象となる SQL のバージョンを評価します。 |
-| [分散再生](../tools/distributed-replay/install-distributed-replay-overview.md) | 分散再生の機能を使用すると、今後の SQL Server アップグレードの影響を評価するのに役立ちます。 また、分散再生を使用して、ハードウェアとオペレーティングシステムのアップグレード、および SQL Server チューニングの影響を評価することもできます。 |
-| [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Ssbdiagnose ユーティリティは、Service Broker メッセージ交換または Service Broker サービスの構成の問題を報告します。 |
+| **[構成マネージャー](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | SQL Server 構成マネージャーを使用して、SQL Server サービスを構成し、ネットワーク接続を構成します。 Windows 上での構成マネージャーの実行|
+| **[Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md)** | Database Experimentation Assistant を使用して、特定のワークロードの対象となる SQL のバージョンを評価します。 |
+| **[Data Migration Assistant](../dma/dma-overview.md)** | Data Migration Assistant ツールを使用すると、SQL Server または Azure SQL Database の新しいバージョンでデータベースの機能に影響する可能性がある互換性の問題を検出することによって、最新のデータ プラットフォームにアップグレードすることができます。 |
+| **[分散再生](../tools/distributed-replay/install-distributed-replay-overview.md)** | 分散再生機能を使用すると、今後の SQL Server アップグレードの影響を評価するために役立ちます。 また、分散再生を使用して、ハードウェアとオペレーティング システムのアップグレード、および SQL Server のチューニングの影響を評価することもできます。 |
+| **[ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)** | ssbdiagnose ユーティリティからは、Service Broker のメッセージ好感や Service Broker サービスの構成の問題が報告されます。 |
+| **[SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)** | SQL Server Migration Assistant を使用して、Microsoft Access、DB2、MySQL、Oracle、Sybase から SQL Server へのデータベースの移行を自動化します。|
 
-このページに記載されていないその他のツールについては、「 [SQL コマンドプロンプトユーティリティ](command-prompt-utility-reference-database-engine.md)」を参照してください。
-
+このページに記載されていないその他のツールについては、[SQL コマンド プロンプト ユーティリティ](command-prompt-utility-reference-database-engine.md)に関するページ、および「[SQL Server の拡張機能とツールのダウンロード](download-sql-feature-packs.md)」を参照してください。

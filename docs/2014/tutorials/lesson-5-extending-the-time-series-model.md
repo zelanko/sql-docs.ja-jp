@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 5: タイム シリーズの拡張モデル |Microsoft Docs'
+title: 'レッスン 5: タイムシリーズモデルの拡張 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822072"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>レッスン 5: 時系列モデルの拡張
+# <a name="lesson-5-extending-the-time-series-model"></a>レッスン 5 : 時系列モデルの拡張
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition では、時系列モデルに新しいデータを追加し、モデルに新しいデータを自動的に組み込むことができます。 次の 2 つの方法のいずれかで、時系列マイニング モデルに新しいデータを追加します。  
   
 -   PREDICTION JOIN を使用してトレーニング データに外部ソースのデータを結合します。  
@@ -26,7 +26,7 @@ ms.locfileid: "62822072"
   
  たとえば、数か月前に既存の売上データでマイニング モデルをトレーニングしたとします。 新たな売上があったときに、新しいデータを組み込んで売上予測を更新する必要があります。 この処理は 1 回の操作で実行できます。具体的には、新しい売上数値を入力データとして指定し、複合データセットに基づいて新しい予測を生成します。  
   
-## <a name="making-predictions-with-extendmodelcases"></a>EXTEND_MODEL_CASES を使用した予測の作成  
+## <a name="making-predictions-with-extend_model_cases"></a>EXTEND_MODEL_CASES を使用した予測の作成  
  次に示すのは、EXTEND_MODEL_CASES を使用する時系列予測の汎用例です。 最初の例では、元のモデルの最後の時間ステップから始まる予測の数を指定します。  
   
 ```  
@@ -49,7 +49,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>時系列モデルに対する単一予測クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを右クリックし、[**新しいクエリ**] をポイントして [ **DMX**] をクリックします。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -61,7 +61,7 @@ PREDICTION JOIN <source query>
     SELECT [<model columns>,] PredictTimeSeries(<table column reference>, n, EXTEND_MODEL_CASES)   
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     SELECT [Model Region],  
@@ -78,7 +78,7 @@ PREDICTION JOIN <source query>
     FROM <mining model>  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     FROM [Forecasting_MIXED]  
@@ -90,7 +90,7 @@ PREDICTION JOIN <source query>
     PREDICTION JOIN <source query>  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     NATURAL PREDICTION JOIN   
@@ -111,7 +111,7 @@ PREDICTION JOIN <source query>
     [WHERE <criteria>]  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  
@@ -138,15 +138,15 @@ PREDICTION JOIN <source query>
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-7.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
+7.  [**ファイル**] メニューの [**名前を付けて DMXQuery1 を保存**] をクリックします。  
   
-8.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Singleton_TimeSeries_Query.dmx`します。  
+8.  [名前を**付けて保存**] ダイアログボックスで、適切なフォルダーを参照し`Singleton_TimeSeries_Query.dmx`、ファイル名を指定します。  
   
-9. ツールバーの**Execute**ボタンをクリックします。  
+9. ツールバーの [**実行**] ボタンをクリックします。  
   
      クエリから、ヨーロッパ地域および太平洋地域での M200 自転車の販売数量の予測が返されます。  
   
-## <a name="understanding-prediction-start-with-extendmodelcases"></a>EXTEND_MODEL_CASES を使用した予測の開始について  
+## <a name="understanding-prediction-start-with-extend_model_cases"></a>EXTEND_MODEL_CASES を使用した予測の開始について  
  元のモデルを基に新しいデータで予測を作成しました。次に、結果を比較して、売上データの更新が予測に与える影響を確認します。 その前に、作成したコードを確認し、次の点を確認してください。  
   
 -   ヨーロッパ地域についてのみ新しいデータを指定しています。  
@@ -155,29 +155,29 @@ PREDICTION JOIN <source query>
   
  "M200 Europe" に対して指定した新しい値が予測に与える影響を次の表に示します。 太平洋地域の M200 製品には新しいデータを指定していませんが、比較のためにこの系列も示されています。  
   
- **製品と地域:M200 Europe**  
+ **製品と地域: M200 ヨーロッパ**  
   
 |||||  
 |-|-|-|-|  
 |||既存のモデル (`PredictTimeSeries`)|更新された売上データを使用するモデル (`PredictTimeSeries` が指定された `EXTEND_MODEL_CASES`)|  
-|M200 Europe|7/25/2008 12:00:00 AM|77|10|  
-|M200 Europe|8/25/2008 12:00:00 AM|64|15|  
-|M200 Europe|9/25/2008 12:00:00 AM|59|72|  
-|M200 Europe|10/25/2008 12:00:00 AM|56|69|  
-|M200 Europe|11/25/2008 12:00:00 AM|56|68|  
-|M200 Europe|12/25/2008 12:00:00 AM|74|89|  
+|M200 ヨーロッパ|7/25/2008 12:00:00 AM|77|10|  
+|M200 ヨーロッパ|8/25/2008 12:00:00 AM|64|15|  
+|M200 ヨーロッパ|9/25/2008 12:00:00 AM|59|72|  
+|M200 ヨーロッパ|10/25/2008 12:00:00 AM|56|69|  
+|M200 ヨーロッパ|11/25/2008 12:00:00 AM|56|68|  
+|M200 ヨーロッパ|12/25/2008 12:00:00 AM|74|89|  
   
- **製品と地域:M200 Pacific**  
+ **製品と地域: M200 太平洋**  
   
 |||||  
 |-|-|-|-|  
 |||既存のモデル (`PredictTimeSeries`)|更新された売上データを使用するモデル (`PredictTimeSeries` が指定された `EXTEND_MODEL_CASES`)|  
-|M200 Pacific|7/25/2008 12:00:00 AM|41|41|  
-|M200 Pacific|8/25/2008 12:00:00 AM|44|44|  
-|M200 Pacific|9/25/2008 12:00:00 AM|38|38|  
-|M200 Pacific|10/25/2008 12:00:00 AM|41|41|  
-|M200 Pacific|11/25/2008 12:00:00 AM|36|36|  
-|M200 Pacific|12/25/2008 12:00:00 AM|39|39|  
+|M200 太平洋|7/25/2008 12:00:00 AM|41|41|  
+|M200 太平洋|8/25/2008 12:00:00 AM|44|44|  
+|M200 太平洋|9/25/2008 12:00:00 AM|38|38|  
+|M200 太平洋|10/25/2008 12:00:00 AM|41|41|  
+|M200 太平洋|11/25/2008 12:00:00 AM|36|36|  
+|M200 太平洋|12/25/2008 12:00:00 AM|39|39|  
   
  これらの結果から、次の 2 つのことがわかります。  
   
@@ -192,7 +192,7 @@ PREDICTION JOIN <source query>
   
 -   4 つのタイム スライスについて予測を要求します。この場合、開始位置がタイム スライス 3、終了位置がタイム スライス 6 です。  
   
- つまり、新しいデータには、n 個のタイム スライスが含まれています。 1 ~ n 時間ステップの予測を要求する場合は、予測は新しいデータと同じ期間と一致します。 データに含まれていない期間の新しい予測を取得するには、新しいデータ系列後のタイム スライス n+1 から予測を開始するか、他のタイム スライスの要求を行うようにする必要があります。  
+ つまり、新しいデータに n 個のタイムスライスが含まれていて、時間ステップ 1 ~ n の予測を要求した場合、予測は新しいデータと同じ期間になります。 データに含まれていない期間の新しい予測を取得するには、新しいデータ系列後のタイム スライス n+1 から予測を開始するか、他のタイム スライスの要求を行うようにする必要があります。  
   
 > [!NOTE]  
 >  新しいデータを追加するときは履歴予測を作成することはできません。  
@@ -218,22 +218,22 @@ WHERE [ModelRegion] = 'M200 Europe'
   
  予測結果はタイム スライス 3、つまり指定した 2 か月分の新しいデータの後から開始しています。  
   
- **製品と地域:M200 Europe**  
+ **製品と地域: M200 ヨーロッパ**  
   
  更新されたデータを使用するモデル (EXTEND_MODEL_CASES を指定した PredictTimeSeries)  
   
 ||||  
 |-|-|-|  
-|M200 Europe|9/25/2008 12:00:00 AM|72|  
-|M200 Europe|10/25/2008 12:00:00 AM|69|  
-|M200 Europe|11/25/2008 12:00:00 AM|68|  
-|M200 Europe|12/25/2008 12:00:00 AM|89|  
+|M200 ヨーロッパ|9/25/2008 12:00:00 AM|72|  
+|M200 ヨーロッパ|10/25/2008 12:00:00 AM|69|  
+|M200 ヨーロッパ|11/25/2008 12:00:00 AM|68|  
+|M200 ヨーロッパ|12/25/2008 12:00:00 AM|89|  
   
-## <a name="making-predictions-with-replacemodelcases"></a>REPLACE_MODEL_CASES を使用した予測の作成  
- 1 セットのケースでモデルをトレーニングし、そのモデルを別のデータ系列に適用するときは、モデル ケースの置換が便利です。 このシナリオの詳細なチュートリアルを示した[レッスン 2。予測シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)します。  
+## <a name="making-predictions-with-replace_model_cases"></a>REPLACE_MODEL_CASES を使用した予測の作成  
+ 1 セットのケースでモデルをトレーニングし、そのモデルを別のデータ系列に適用するときは、モデル ケースの置換が便利です。 このシナリオの詳細なチュートリアルについては、 [「レッスン 2: 予測シナリオの構築 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)」で説明されています。  
   
-## <a name="see-also"></a>関連項目  
- [タイム シリーズ モデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+## <a name="see-also"></a>参照  
+ [タイムシリーズモデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

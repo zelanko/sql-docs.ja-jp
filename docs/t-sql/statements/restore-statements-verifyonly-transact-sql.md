@@ -23,12 +23,12 @@ ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1fec8542ec7575013f8dd101c1e50e3a7b6a13a6
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 6d3ceae764bd65d03d56db32fb28f8855cc2ebfe
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742995"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634756"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE ステートメント - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -44,7 +44,7 @@ ms.locfileid: "68742995"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 RESTORE VERIFYONLY  
 FROM <backup_device> [ ,...n ]  
@@ -121,7 +121,7 @@ FROM <backup_device> [ ,...n ]
 ### <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、バックアップ セットやバックアップ デバイスに関する情報の取得には CREATE DATABASE 権限が必要になります。 詳細については、「[GRANT (データベースの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  
  
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例ではディスクからのバックアップを検証します。
   
 ```  

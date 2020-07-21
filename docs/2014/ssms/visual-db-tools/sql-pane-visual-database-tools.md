@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c2d7d92f389b595f149951de6af1dac7fddd6df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63275965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057984"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL ペイン (Visual Database Tools)
   SQL ペインでは、任意の SQL ステートメントを作成できます。抽出条件ペインおよびダイアグラム ペインでも SQL ステートメントを作成できますが、どちらの場合も SQL ステートメントは SQL ペインに作成されます。 クエリを作成すると、SQL ペインは自動的に更新され、読みやすいように書式が変更されます。  
@@ -54,11 +53,11 @@ ms.locfileid: "63275965"
 >  SQL ステートメントを入力した後に、ダイアグラム ペインと抽出条件ペインでクエリを変更した場合、クエリおよびビュー デザイナーでは SQL ステートメントのリビルドおよび再表示が行われます。 この処理の結果、最初に入力した SQL ステートメントとは異なるステートメントが作成されることがあります。ただし、ステートメントの実行結果は常に同じになります。 この現象は、AND または OR で連結された複数の句を含む検索条件がある場合によく発生します。  
   
 ## <a name="see-also"></a>参照  
- [クエリを作成する&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [クエリを実行して&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [ダイアグラム ペイン&#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [抽出条件ペイン&#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリの作成&#41;](visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリの実行&#41;](run-queries-visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [ダイアグラムペイン &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
+ [抽出条件ペイン &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [結果ペイン (Visual Database Tools)](results-pane-visual-database-tools.md)  
   
   

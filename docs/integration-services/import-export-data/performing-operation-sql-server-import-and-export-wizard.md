@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 04cbee02e86d1715e7f411e39c9988172baf51bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 22f9918800930be9534441d2bb3706ad7844e9f7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901823"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71285366"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -28,28 +28,28 @@ ms.locfileid: "67901823"
 ## <a name="screen-shot---operation-in-progress"></a>スクリーン ショット - 実行中の操作 
  次のスクリーンショットは、操作がまだ進行中の間に表示されるウィザードの **[操作を実行しています]** ページを示します。  
   
- ![インポートおよびエクスポート ウィザードの[操作を実行しています] ページ](../../integration-services/import-export-data/media/performing-operation1.png "インポートおよびエクスポート ウィザードの [操作を実行しています] ページ")  
+ ![インポートおよびエクスポート ウィザードの [操作を実行しています] ページ](../../integration-services/import-export-data/media/performing-operation1.png "インポートおよびエクスポート ウィザードの [操作を実行しています] ページ")  
 
 ## <a name="screen-shot---operation-completed"></a>スクリーン ショット - 操作の完了 
  次のスクリーンショットは、操作が完了した後に表示されるウィザードの **[操作を実行しています]** ページを示します。 **[メッセージ]** 列のアイテムをクリックすると、対応する手順の詳細が表示されます。  
   
- ![インポートおよびエクスポート ウィザードの[操作を実行しています] ページ](../../integration-services/import-export-data/media/performing-operation2.png "インポートおよびエクスポート ウィザードの [操作を実行しています] ページ")  
+ ![インポートおよびエクスポート ウィザードの [操作を実行しています] ページ](../../integration-services/import-export-data/media/performing-operation2.png "インポートおよびエクスポート ウィザードの [操作を実行しています] ページ")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>操作の進行状況を確認する
  **操作**  
  操作の各手順が表示されます。  
   
- **ステータス**  
+ **状態**  
  各手順が成功したか、失敗したかを表示します。  
   
  **メッセージ**  
  手順に関する情報メッセージおよびエラー メッセージが表示されます。 この列のアイテムをクリックすると、対応する手順の詳細が表示されます。
 
 ## <a name="interrupt-the-operation-or-save-the-results"></a>操作を中断するか結果を保存する
- **停止**  
+ **Stop**  
  必要に応じて、 **[停止]** ボタンをクリックして操作を中断できます。  
   
- **レポート**  
+ **Report**  
  結果レポートを表示したり、ファイルに保存することができます。さらに、レポートをクリップボードにコピーすることも、電子メールで送信することもできます。  
   
 ## <a name="whats-next"></a>次の操作  

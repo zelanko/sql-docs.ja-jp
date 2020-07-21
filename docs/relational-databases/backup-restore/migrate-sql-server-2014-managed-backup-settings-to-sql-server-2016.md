@@ -1,7 +1,8 @@
 ---
-title: SQL Server 2014 マネージド バックアップの設定を SQL Server 2016 に移行する | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: マネージド バックアップの設定を移行する
+description: このトピックでは、SQL Server 2014 から SQL Server 2016 にアップグレードするときに、Microsoft Azure への SQL Server マネージド バックアップの移行に関する考慮事項について説明します。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d8945b0e37185f5ec0433a9780aa876d4be526c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b5b2a0c1aa13b634d23628ff693e8ef42226df5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670771"
 ---
-# <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>SQL Server 2014 マネージド バックアップの設定を SQL Server 2016 に移行する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="migrate-managed-backup-settings"></a>マネージド バックアップの設定を移行する
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードする際の [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の移行に関する考慮事項について説明します。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] のプロシージャと基になる動作は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]で変更されています。 次のセクションで、機能の変更点とその関連事項について説明します。  
@@ -33,7 +34,7 @@ ms.locfileid: "68033751"
 |**セキュリティ:**|Microsoft Azure ストレージ アカウントとアクセス キーを使用した SQL 資格情報。|Microsoft Azure Shared Access Signature (SAS) トークンを使用した SQL 資格情報。|  
 |**基になるストレージ:**|ページ BLOB を使用した Microsoft Azure Storage。|ブロック BLOB を使用した Microsoft Azure Storage。|  
   
-## <a name="benefits"></a>利点  
+## <a name="benefits"></a>メリット  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の新機能の使用には、いくつかの利点があります。  
   
 -   ブロック BLOB により、格納のコストを抑えることができます。  

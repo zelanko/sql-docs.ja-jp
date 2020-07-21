@@ -10,15 +10,14 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9e7800193222b8c9060fee1b247cc5585654cde4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637762"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046946"
 ---
 # <a name="create-xml-indexes"></a>XML インデックスの作成
   このトピックでは、プライマリ XML インデックスとセカンダリ XML インデックスの作成方法について説明します。  
@@ -44,7 +43,7 @@ ms.locfileid: "62637762"
   
 -   プライマリ XML インデックスの名前にはビュー名と同じ制限事項が適用されます。  
   
- XML インデックスを作成することはできません、`xml`で、ビューの列を入力、**テーブル**を持つ変数の値を持つ`xml`種類の列、または`xml`変数を入力します。  
+ ビューの型の列、型の `xml` 列を持つ**テーブル**値変数 `xml` 、または型の変数に XML インデックスを作成することはできません `xml` 。  
   
 -   ALTER TABLE ALTER COLUMN オプションを使用して、`xml` 型の列を型指定されていない XML から型指定された XML に変更する場合、またはその逆の変更を行う場合は、その列に XML インデックスが存在してはいけません。 XML インデックスが存在する場合は、列の型を変更する前にその XML インデックスを削除する必要があります。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62637762"
   
  **以降のバージョンでは、プライマリ XML インデックスを作成または再作成する XML データ型の列に、XML スキーマ型** xs:date **または** xs:dateTime [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはこれらのサブタイプ) で 1 未満の年の値が含まれていると、インデックスの作成が失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではこれらの値が許可されていたため、この問題は、生成されたデータベースでインデックスを作成する際に発生する可能性があります。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
-### <a name="example-creating-a-primary-xml-index"></a>例:プライマリ XML インデックスの作成  
+### <a name="example-creating-a-primary-xml-index"></a>例: プライマリ XML インデックスの作成  
  ここからはほとんどの例で、型指定されていない XML 列を含んだテーブル T (pk INT PRIMARY KEY, xCol XML) を使用します。 XML 列は、型指定された XML に簡単に拡張できます。 説明を簡単にするため、次に示す XML データ インスタンスに対するクエリについて説明します。  
   
 ```  

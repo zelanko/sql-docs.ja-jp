@@ -1,30 +1,32 @@
 ---
 title: SharePoint 用 Reporting Services アドインのインストールまたはアンインストール | Microsoft Docs
-ms.date: 08/17/2017
+description: SharePoint サーバー上で SharePoint 製品向けインストール パッケージ Microsoft SQL Server Reporting Services アドイン (rsSharePoint.msi) を実行して、SharePoint デプロイ内で Reporting Services 機能を有効にする方法について説明します。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41a93cfdac331830477171dfdfc4f306c073bda3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893374"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79286246"
 ---
-# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>SharePoint 用 Reporting Services アドインのインストールまたはアンインストール
+# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>SharePoint 用 Reporting Services アドイン (SSRS) のインストールまたはアンインストール
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  SharePoint サーバー上で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products (rsSharePoint.msi) on SharePoint servers to enable [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features within a SharePoint deployment. 提供される機能には、Power View、レポート ビューアー Web パーツ、URL プロキシ エンドポイント、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンテンツの種類、アプリケーション ページなどがあります。これにより、レポート、データ ソース、その他のレポート サーバー コンテンツを SharePoint サイト上で作成、表示、管理できます。 SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは、SharePoint モードで実行されるレポート サーバーに必要なコンポーネントです。 アドインは、SQL Server 2016 セットアップ ウィザードからインストールするか、SQL Server 2016 機能パックから rsSharePoint.msi をダウンロードしてインストールすることができます。 アドインのバージョンの一覧およびダウンロード ページについては、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
+  SharePoint サーバー上で SharePoint 製品向けインストール パッケージ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン (rsSharePoint.msi) を実行して、SharePoint デプロイ内で [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能を有効にします。 提供される機能には、Power View、レポート ビューアー Web パーツ、URL プロキシ エンドポイント、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンテンツの種類、アプリケーション ページなどがあります。これにより、レポート、データ ソース、その他のレポート サーバー コンテンツを SharePoint サイト上で作成、表示、管理できます。 SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは、SharePoint モードで実行されるレポート サーバーに必要なコンポーネントです。 アドインは、SQL Server 2016 セットアップ ウィザードからインストールするか、SQL Server 2016 機能パックから rsSharePoint.msi をダウンロードしてインストールすることができます。 アドインのバージョンの一覧およびダウンロード ページについては、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
-##  <a name="bkmk_prereq"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 前提条件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインのインストールは、レポート サーバーと SharePoint 製品のインスタンスを統合するために必要ないくつかの手順の 1 つです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールと構成について詳しくは、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」をご覧ください。  
   
 -   複数の Web フロントエンド アプリケーションがある SharePoint ファームに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を統合する場合は、Web サーバー フロントエンドがあるファームの各コンピューターにアドインをインストールします。 この作業は、レポート サーバー コンテンツのアクセスに使用する Web フロントエンドに対してのみ行ってください。  
@@ -35,7 +37,7 @@ ms.locfileid: "68893374"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 統合機能をアクティブ化するには、サイト コレクションの管理者である必要があります。   
   
-##  <a name="bkmk_whatinstalled"></a> アドインがインストールする内容  
+##  <a name="what-does-the-add-in-install"></a><a name="bkmk_whatinstalled"></a> アドインがインストールする内容  
  アドインのセットアップ プロセスは、2 つのフェーズで構成されます。標準インストールが完了すると、どちらのフェーズも自動的に完了します。  
   
 -   最初のフェーズでは、正しいフォルダーにファイルをインストールします。 それらのフォルダーは、SharePoint 配置では標準です。 インストールされるファイルの 1 つに rsCustomAction.exe ファイルがあります。  
@@ -48,17 +50,17 @@ ms.locfileid: "68893374"
 > [!NOTE]  
 >  SharePoint 製品より前にアドインをインストールする利点は、新しいサーバーをファームに追加すると、Reporting Services アドインが SharePoint ファームによって構成およびアクティブ化されることです。  
   
-##  <a name="bkmk_3ways_to_install"></a> インストール方法の概要  
+##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> インストール方法の概要  
  SharePoint 製品用 SQL Server 2016 Reporting Services アドインは、次の 2 つの方法のいずれかを使ってインストールできます。  
   
--   **インストール ウィザード:** ![メモ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "メモ") SQL Server 2016 では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでアドインをインストールできます。 ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
+-   **インストール ウィザード:** ![メモ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") SQL Server 2016 では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでアドインをインストールできます。 ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
   
--   **rsSharepoint.msi:** インストール メディアまたはダウンロードからアドインを直接インストールする。 rsSharepoint.msi は、グラフィカル ユーザー インターフェイスもコマンド ライン インストールもサポートしています。 .msi を管理者特権を使用して実行する必要があるため、まず高度な権限でコマンド プロンプトを開いてから、コマンド ラインから rsSharepoint.msi を実行します。 アドインのダウンロードの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
+-   **rsSharepoint.msi:** アドインをインストール メディアから直接インストールするか、ダウンロードしてインストールできます。 rsSharepoint.msi は、グラフィカル ユーザー インターフェイスもコマンド ライン インストールもサポートしています。 .msi を管理者特権を使用して実行する必要があるため、まず高度な権限でコマンド プロンプトを開いてから、コマンド ラインから rsSharepoint.msi を実行します。 アドインのダウンロードの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   
     > [!NOTE]  
     >  サイレント コマンド ライン インストールで **/q** スイッチを使用する場合、使用許諾契約書は表示されません。 インストール方法にかかわらず、このソフトウェアの使用は、使用許諾契約に基づいています。ユーザーは使用許諾契約に準拠する責任があります。  
   
-##  <a name="bkmk_install_rssharepoint"></a> rsSharePoint.msi インストール ファイルを使用したアドインのインストール  
+##  <a name="install-the-add-in-using-the-installation-file-rssharepointmsi"></a><a name="bkmk_install_rssharepoint"></a> rsSharePoint.msi インストール ファイルを使用したアドインのインストール  
  このセクションは、.msi インストール ウィザードの実行またはコマンド ライン インストールにより、rssharepoint.msi を直接インストールすることに関連しています。 SQL Server インストール ウィザードを使用してアドインをインストールする場合は、次の手順を実行する必要はありません。  
   
  次のコマンドを実行すると、コマンド ライン スイッチの全リストが表示されます。  
@@ -73,13 +75,13 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\` (SharePoint 2013)
   
-     内の複数の  
+     or  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
 3.  SharePoint サーバーの全体管理で、レポート サーバーの設定と機能のアクティブ化を構成します。 。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのインストールと構成の詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」を参照してください。  
   
-###  <a name="bkmk_files_only_installation"></a> ファイルのみのインストール  
+###  <a name="files-only-installation"></a><a name="bkmk_files_only_installation"></a> ファイルのみのインストール  
  インストールのカスタム アクション フェーズをスキップしてファイルをインストールするには、SKIPCA オプションを指定してコマンド ラインから rssharepoint.msi を実行します。  
   
 1.  **管理者権限を使用して**コマンド プロンプトを開きます。  
@@ -129,7 +131,7 @@ Rssharepoint.msi /?
     Msiexec.exe /i rsSharePoint.msi /q  
     ```  
   
-##  <a name="bkmk_remove_addin"></a> Reporting Services アドインを削除する方法  
+##  <a name="how-to-remove-the-reporting-services-add-in"></a><a name="bkmk_remove_addin"></a> Reporting Services アドインを削除する方法  
  SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコントロール パネルまたはコマンド ラインからアンインストールできます。  
   
 1.  コントロール パネルを使用すると、現在のコンピューター上のファイルが完全にアンインストールされます。 **さらに** 、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のオブジェクトと機能が SharePoint ファームから削除されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のオブジェクトと機能が削除されると、レポートの確認と更新ができなくなります。  
@@ -161,7 +163,7 @@ Rssharepoint.msi /?
   
 3.  **[削除]** をクリックします。  
   
-### <a name="uninstall-from-the-command-line"></a>コマンド ラインからのアンインストール  
+### <a name="uninstall-from-the-command-line"></a>コマンドラインからアンインストールする  
  アドインをコマンド ラインからアンインストールするには、次の手順を実行します。  
   
 1.  **管理者権限を使用して**コマンド プロンプトを開きます。  
@@ -199,7 +201,7 @@ Rssharepoint.msi /?
   
  上記の手順は、SkipCA=1 で .msi がインストールされていること、および rscusstomaction.exe が使用可能であることを前提としています。 詳細については、ファイルのみのインストールを説明したセクションを参照してください。  
   
-##  <a name="bkmk_repair"></a> コマンド ラインから rssharepoint.msi を修復する方法  
+##  <a name="how-to-repair-rssharepointmsi-from-the-command-line"></a><a name="bkmk_repair"></a> コマンド ラインから rssharepoint.msi を修復する方法  
  コマンド ラインを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインを修復またはアンインストールするには、次の手順を実行します。  
   
 1.  **管理者権限を使用して**コマンド プロンプトを開きます。  
@@ -210,7 +212,7 @@ Rssharepoint.msi /?
     msiexec.exe /f rssharepoint.msi  
     ```  
   
-##  <a name="bkmk_logfiles"></a> セットアップ ログ ファイル  
+##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a> セットアップ ログ ファイル  
  セットアップの実行中は、 **アドインをインストールしたユーザーの** %temp% [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] フォルダー内のログ ファイルに情報が記録されます。 このフォルダーのパスは、**C:\Users\\<ユーザー名\>\AppData\Local\Temp** などです。ファイル名の形式は **RS_SP_\<番号>.log** で、実際の名前は **RS_SP_0.log** のようになります。 ログ内では、エラーは "SSRSCustomActionError" という文字列から始まります。  
   
 > [!NOTE]  
@@ -242,9 +244,9 @@ Rssharepoint.msi /?
   
 2.  出力は次のようになります。  
   
-     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`」を参照してください。  
+     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`  
   
-##  <a name="bkmk_upgrade"></a> アップグレード  
+##  <a name="upgrade"></a><a name="bkmk_upgrade"></a> アップグレード  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインの既存のバージョンがインストールされている場合は、最新のバージョンにアップグレードできます。 アドイン セットアップ時に既存のバージョンが検出され、更新するかどうかを確認するメッセージが表示されます。 エラー メッセージは、次のようになります。  
   
  **このシステムから、この製品の古いバージョンが検出されました。インストールされているバージョンをアップグレードしますか?**  
@@ -253,13 +255,13 @@ Rssharepoint.msi /?
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインはインスタンス対応ではありません。 このアドインのインスタンスは 1 台のコンピューターで 1 つだけ実行できます。 異なるバージョンと現在のバージョンとを同時に実行することはできません。  
   
-##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
+##  <a name="rscustomactionexe"></a><a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  次の表は、rscustomaction.exe スイッチについてまとめたものです。  
   
-|スイッチ|[説明]|  
+|Switch|説明|  
 |------------|-----------------|  
 |i|カスタム アクションをインストールします。 これにより、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントが SharePoint に登録されます。 W3SVCservice サービスが再起動されます。|  
-|r|Repair|  
+|r|修復|  
 |u|アンインストール。 これにより、SharePoint ファーム全体から [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントの登録が解除されますが、ファイルはディスクに残ります。 W3SVCservice サービスが再起動されます。|  
 |p|ローカル アンインストール。 これにより、ローカル コンピューターのみから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントの登録が解除されます。 ファイルはディスクに残ります。 W3SVCservice サービスが再起動されます。|  
 |t|SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005 のみ。 レポート サーバーにレポート サーバー データベースに対して機能する接続があるかどうかをテストします。|  

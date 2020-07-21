@@ -1,5 +1,5 @@
 ---
-title: getBestRowIdentifier メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getBestRowIdentifier メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954024"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier メソッド (SQLServerDatabaseMetaData)
@@ -71,12 +71,12 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getBestRowIdentifier メソッドは、getBestRowIdentifier メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getBestRowIdentifier メソッドは、java.sql.DatabaseMetaData インターフェイスの getBestRowIdentifier メソッドで指定されています。  
   
  getBestRowIdentifier メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |SCOPE|short|返される結果のスコープです。 次のいずれかの値を指定できます。<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
 |COLUMN_NAME|String|列の名前です。|  

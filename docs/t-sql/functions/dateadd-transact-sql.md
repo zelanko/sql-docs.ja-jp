@@ -1,6 +1,6 @@
 ---
 title: DATEADD (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: DATEADD 関数の Transact-SQL リファレンス。 この関数では、指定の datepart によって変更されている日付が返されます。
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 386b3af5eb7a5f69ac02c4e07f3318494ad56582
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026196"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011431"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、入力 *date* 値の指定 *datepart* に指定 *number* 値 (符号付き整数として) を追加し、その変更後の値を返します。
   
@@ -134,7 +134,7 @@ SELECT DATEADD(year,-2147483647, '20060731');
 -   **millisecond** の *datepart* と -30001 から +29998 の *number* 値の場合、`DATEADD` によって変更が行われることはありません。  
 -   **second** の *datepart* と、-30001 未満、+29998 超の *number* 値の場合、`DATEADD` は 1 分から始まる加算を実行します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 次の句で `DATEADD` を使用します。
 
 + GROUP BY
@@ -182,7 +182,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
 ## <a name="time-zone-offset"></a>タイム ゾーン オフセット
 `DATEADD` は、タイム ゾーン オフセットの加算を許可しません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>A. datepart を 1 単位増やす  
 次の各ステートメントは、*datepart* を 1 単位増やします。
@@ -368,7 +368,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

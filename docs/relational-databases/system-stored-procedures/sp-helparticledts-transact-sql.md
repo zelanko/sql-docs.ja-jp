@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticledts
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9c489a08291aea3d1c50a6418dc8e1e853dce12
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfacdd363e66401bc9cfbf494f6cb64ab12446fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634538"
 ---
-# <a name="sphelparticledts-transact-sql"></a>sp_helparticledts (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-sql)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Visual Basic を使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]変換サブスクリプションを作成するときに使用する、正しいカスタムタスク名に関する情報を取得するために使用します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  Visual Basic を使用して変換サブスクリプションを作成するときに使用する、正しいカスタムタスク名に関する情報を取得するために使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +37,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
 `[ @article = ] 'article'`パブリケーション内のアーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
   
@@ -54,7 +54,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_helparticledts**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  レプリケーション データ変換サービス (DTS) プログラム内のタスクに名前を付ける場合は、レプリケーション エージェントで要求される名前付け規則に従う必要があります。 SQL 実行タスクなどのカスタムタスクの場合、名前は、アーティクル名、プレフィックス、および省略可能な部分で構成される連結文字列になります。 コードを記述するときに、タスク名がわからない場合、結果セットには使用する必要があるタスク名が示されます。  

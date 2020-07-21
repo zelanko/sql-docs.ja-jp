@@ -1,7 +1,8 @@
 ---
-title: SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/08/2017
+title: インスタンスをホストするコンピューターの名前変更
+description: SQL Server のインスタンスをホストするコンピューターの名前を変更する場合は、sys.servers に格納されているシステム メタデータを更新します。
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,22 +20,22 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84e72edb7aade19cb0daa0b3d9c1282d3bfc84aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ce257e0e40af3d3ba207d4709c5e67f5bfbb619
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990862"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900324"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するコンピューターの名前を変更した場合、変更後の名前は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に認識されます。 コンピューター名を再設定するためにセットアップを再度実行する必要はありません。 代わりに次の手順を実行して、sys.servers に格納され、システム関数 @@SERVERNAME でレポートされるシステム メタデータを更新します。 @@SERVERNAME を使用するか、sys.servers からサーバー名のクエリを実行するリモート接続およびリモート アプリケーションのコンピューター名の変更を反映するには、システム メタデータを更新します。  
   
 ここで示す手順を実行しても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前を変更することはできません。 変更できるのは、インスタンス名のうち、コンピューター名に対応する部分のみです。 たとえば、Instance1 という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをホストする MB1 というコンピューターを、MB2 のような別の名前に変更できます。 ただし、名前のインスタンスの部分 (Instance1) は変更されません。 この例では、 \\\\*ComputerName*\\*InstanceName* が、 \\\MB1\Instance1 から \\\MB2\Instance1 に変更されます。  
   
- **アンインストールの準備**  
+ **Before you begin**  
   
  名前変更のプロセスを開始する前に、次の情報を確認します。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67990862"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動した後、新しいコンピューター名を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続できます。 @@SERVERNAME がローカル サーバー インスタンスの更新後の名前を返すことを確認するには、シナリオに応じて次のプロシージャを手動で実行する必要があります。 使用するプロシージャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスと名前付きインスタンスのどちらをホストするコンピューターを更新しているかによって決まります。  
   
-## <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスをホストするコンピューターの名前を変更する  
+## <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスをホストするコンピューターの名前を変更する  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスをホストする名前変更されたコンピューターの場合は、次のプロシージャを実行します。  
   
@@ -112,7 +113,7 @@ ms.locfileid: "67990862"
   
  **クライアントのエイリアス** - 名前付きパイプを使用するクライアントのエイリアスはコンピューター名の変更操作の影響を受けます。 たとえば、SRVR1 に対するエイリアス "PROD_SRVR" が作成され、名前付きパイプのプロトコルが使用されている場合、パイプ名は `\\SRVR1\pipe\sql\query`のようになります。 コンピューター名が変更された後は、名前付きパイプのパスは無効になります。 名前付きパイプの詳細については、「 [名前付きパイプを使用した有効な接続文字列の作成](https://go.microsoft.com/fwlink/?LinkId=111063)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server のインストール](../../database-engine/install-windows/install-sql-server.md)  
   
   

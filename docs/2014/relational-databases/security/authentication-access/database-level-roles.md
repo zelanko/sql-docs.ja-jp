@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0354f0e55111e078f1682e38c3fb51aea8c365b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055344"
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、データベースでの権限を簡単に管理できるように、いくつかの *ロール* が用意されています。ロールは、セキュリティ プリンシパルとして他のプリンシパルをグループ化します。 ロールは、 ***Windows オペレーティング システムの*** グループ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] に似ています。 データベース レベルのロールは、その権限のスコープがデータベース全体に及びます。  
@@ -79,7 +78,7 @@ ms.locfileid: "63011723"
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|これらのデータベース ロールのメンバーは、データ コレクターを管理および使用できます。 詳細については、「 [Data Collection](../../data-collection/data-collection.md)」を参照してください。|  
 |**PolicyAdministratorRole**|**PolicyAdministratorRole** データベース ロールのメンバーは、ポリシー ベースの管理のポリシーと条件で、すべての構成作業とメンテナンス作業を実行できます。 詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|これらのデータベース ロールのメンバーは、登録済みサーバーのグループを管理および使用できます。|  
-|**dbm_monitor**|作成した、`msdb`データベースのデータベース ミラーリング モニターに最初のデータベースが登録されるとします。 **dbm_monitor** ロールには、メンバーは割り当てられていません。システム管理者がそのロールにユーザーを割り当てる必要があります。|  
+|**dbm_monitor**|`msdb`データベースミラーリングモニターに最初のデータベースが登録されたときにデータベースに作成されます。 **dbm_monitor** ロールには、メンバーは割り当てられていません。システム管理者がそのロールにユーザーを割り当てる必要があります。|  
   
 > [!IMPORTANT]  
 >  db_ssisadmin ロールおよび dc_admin ロールのメンバーは、特権を sysadmin に昇格できる可能性があります。 このような特権の昇格が発生するのは、それらのロールが [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージを変更でき、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] エージェントの sysadmin セキュリティ コンテキストを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パッケージを実行できるためです。 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、db_ssisadmin ロールおよび dc_admin ロールには sysadmin メンバーのみを追加するようにします。  
@@ -87,21 +86,21 @@ ms.locfileid: "63011723"
 ## <a name="working-with-database-level-roles"></a>データベース レベルのロールの操作  
  次の表では、データベース レベルのロールを操作するためのコマンド、ビュー、および関数について説明します。  
   
-|機能|型|説明|  
+|機能|Type|説明|  
 |-------------|----------|-----------------|  
-|[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|メタデータ|固定データベース ロールの一覧を返します。|  
-|[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|メタデータ|固定データベース ロールの権限を表示します。|  
-|[sp_helprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprole-transact-sql)|メタデータ|現在のデータベース内のロールに関する情報を返します。|  
-|[sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|メタデータ|現在のデータベースに含まれるロールのメンバーに関する情報を返します。|  
-|[sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|メタデータ|データベース ロールのメンバーごとに 1 行のデータを返します。|  
-|[IS_MEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-member-transact-sql)|メタデータ|現在のユーザーが、指定された Microsoft Windows グループまたは Microsoft SQL Server データベース ロールのメンバーであるかどうかを示します。|  
+|[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadata|固定データベース ロールの一覧を返します。|  
+|[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadata|固定データベース ロールの権限を表示します。|  
+|[sp_helprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprole-transact-sql)|Metadata|現在のデータベース内のロールに関する情報を返します。|  
+|[sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Metadata|現在のデータベースに含まれるロールのメンバーに関する情報を返します。|  
+|[sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|Metadata|データベース ロールのメンバーごとに 1 行のデータを返します。|  
+|[IS_MEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-member-transact-sql)|Metadata|現在のユーザーが、指定された Microsoft Windows グループまたは Microsoft SQL Server データベース ロールのメンバーであるかどうかを示します。|  
 |[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|コマンド|現在のデータベースに新しいデータベース ロールを作成します。|  
 |[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|コマンド|データベース ロールの名前を変更します。|  
 |[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|コマンド|データベースからロールを削除します。|  
 |[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|コマンド|現在のデータベースに新しいデータベース ロールを作成します。|  
 |[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|コマンド|現在のデータベースからデータベース ロールを削除します。|  
 |[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|コマンド|データベース ユーザー、データベース ロール、Windows ログイン、または Windows グループを、現在のデータベースのデータベース ロールに追加します。|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|コマンド|現在のデータベースの SQL Server ロールからセキュリティ アカウントを削除します。|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|command|現在のデータベースの SQL Server ロールからセキュリティ アカウントを削除します。|  
   
 ## <a name="public-database-role"></a>public データベース ロール  
  データベース ユーザーはすべて、 **public** データベース ロールに属しています。 セキュリティ保護可能なオブジェクトに対する特定の権限が与えられていないか権限が拒否されているユーザーは、そのオブジェクトに対して **public** に付与されている権限を継承します。  

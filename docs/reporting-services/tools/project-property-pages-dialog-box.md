@@ -13,10 +13,10 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578236"
 ---
 # <a name="project-property-pages-dialog-box"></a>[プロパティ ページ] ダイアログ ボックス
@@ -28,15 +28,15 @@ ms.locfileid: "65578236"
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
 ## <a name="options"></a>オプション  
- **Configuration**  
+ **構成**  
  編集する構成を選択します。 初期状態で使用できる構成は、 **[Debug]** 、 **[DebugLocal]** 、および **[Release]** です。 アクティブな構成が、 **Active(Debug)** のように最初に表示されます。  
   
  複数の構成のプロパティを同時に表示するには、 **[すべての構成]** または **[複数の構成]** を選択します。  
   
  新しく構成を作成するには、ツール バーの **[構成マネージャー]** をクリックします。  
   
- **[構成マネージャー]**  
- ソリューション全体の構成を管理するか、さらに構成を追加します。 詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のドキュメントを参照してください。  
+ **構成マネージャー**  
+ ソリューション全体の構成を管理するか、さらに構成を追加します。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のドキュメントを参照してください。  
   
  **[OutputPath]**  
  ビルドの検証、配置、およびレポートのプレビューで使用されるレポート定義の保存先のパスを入力するか、貼り付けます。 このパスは、プロジェクトに使用するパス、およびプロジェクトのパスの下にある子フォルダーの相対パスとは異なる必要があります。  
@@ -61,26 +61,26 @@ ms.locfileid: "65578236"
   
  ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、フォルダー階層の完全なパスをルートから指定します。 たとえば、「Folder1/Folder2/Folder3」のように指定します。  
   
- SharePoint 統合モードで実行されているレポート サーバーにパブリッシュする場合は、SharePoint ライブラリの URL を指定します。 たとえば、 `http:\\<servername>\<site>\Documents\MyFolder`のようにします。  
+ SharePoint 統合モードで実行されているレポート サーバーにパブリッシュする場合は、SharePoint ライブラリの URL を指定します。 たとえば、「 `http:\\<servername>\<site>\Documents\MyFolder` 」のように入力します。  
   
  **[TargetReportFolder]**  
  パブリッシュしたレポートを保存するフォルダーの名前です。 既定値は、レポート プロジェクトの名前です。 フォルダーがレポート サーバー上に存在しない場合は、レポートのパブリッシュ時に、レポート デザイナーによってフォルダーが作成されます。  
   
  ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、フォルダー階層の完全なパスをルートから指定します。 フォルダーが別の場所に存在する場合は、フォルダーへのパスをルートから指定します。たとえば、「Folder1/Folder2/Folder3」のように指定します。  
   
- SharePoint 統合モードで実行されているレポート サーバーにパブリッシュする場合は、SharePoint ライブラリの URL を指定します。 たとえば、 `http:\\<servername>\\<site>\Documents\MyFolder`のようにします。  
+ SharePoint 統合モードで実行されているレポート サーバーにパブリッシュする場合は、SharePoint ライブラリの URL を指定します。 たとえば、「 `http:\\<servername>\\<site>\Documents\MyFolder` 」のように入力します。  
   
  **[TargetServerURL]**  
  対象レポート サーバーの URL です。 レポートをパブリッシュする前に、このプロパティを有効なレポート サーバーの URL に設定する必要があります。  
   
- ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、レポート サーバーの仮想ディレクトリの URL を指定します。 たとえば、 `http:\\<server>\reportserver`のようにします。 これは、レポート マネージャーではなく、レポート サーバーの仮想ディレクトリです。 既定では、レポート サーバーは、"reportserver" という名前の仮想ディレクトリにインストールされます。  
+ ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、レポート サーバーの仮想ディレクトリの URL を指定します。 たとえば、「 `http:\\<server>\reportserver` 」のように入力します。 これは、レポート マネージャーではなく、レポート サーバーの仮想ディレクトリです。 既定では、レポート サーバーは、"reportserver" という名前の仮想ディレクトリにインストールされます。  
   
- SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 例: 
-+ `http:\\<servername>`、 
+ SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 次に例を示します。 
++ `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`  
++ [https://login.microsoftonline.com/consumers/](`http:\\<servername>\<site>\<subsite>`)  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [レポートのパブリッシュ](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [SharePoint ライブラリへのレポートのパブリッシュ](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   

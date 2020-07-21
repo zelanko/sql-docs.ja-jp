@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.scdsupport.f1
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dcf11c5ebb6372ecea9e056577524de50a169747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 945a9b23fd9f5850489184d89d99d4ae24350652
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943998"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291214"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンションの列] (緩やかに変化するディメンション ウィザード)
 
@@ -35,7 +35,7 @@ ms.locfileid: "67943998"
  **[変更の種類]**  
  **[固定属性]** を選択するか、変化する属性の 2 つのうちのいずれかを選択します。 列の値を変更しない場合は **[固定属性]** を使用します。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] は、変更をエラーとして扱います。 **[変化する属性]** を使用して、既存の値を変更後の値で上書きします。 **[履歴属性]** を使用して、変更後の値を新しいレコードに保存し、前のレコードを期限切れにすることができます。  
   
- **[削除]**  
+ **Remove**  
  ディメンション列を選択し、 **[削除]** をクリックして、マップされた列の一覧から削除します。  
   
 ## <a name="see-also"></a>参照  

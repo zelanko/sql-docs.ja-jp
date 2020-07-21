@@ -13,17 +13,17 @@ helpviewer_keywords:
 - CreateParameter method [ADO], Visual Basic example
 - Append method [ADO], Visual Basic example
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60ea4653fac6bd2fada500d562420b1ff705d4d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 72964e1c3c44b389d8aabee9b794fb3dc5e1fd36
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920716"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746980"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append および CreateParameter メソッドの例 (VB)
-この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)と[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドが入力パラメーターを持つストアド プロシージャを実行します。  
+この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)および[createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドを使用して、入力パラメーターを使用してストアドプロシージャを実行します。  
   
 ```  
 'BeginAppendVB  
@@ -119,9 +119,9 @@ End Sub
 'EndAppendVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)

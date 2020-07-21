@@ -1,5 +1,5 @@
 ---
-title: SQL Server でのユーザー定義型の使用 |Microsoft Docs
+title: SQL Server | でのユーザー定義型の使用Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c9fed9ad4e73102eadd1374ff87d2a46d0ff4126
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919959"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954625"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の使用
-  ユーザー定義型 (UDT) の機能にアクセスできます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から、[!INCLUDE[tsql](../../includes/tsql-md.md)]標準のクエリ構文を使用して言語。 UDT は、データベース オブジェクトの定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチの変数、関数とストアド プロシージャ、および関数とストアド プロシージャの引数に使用できます。  
+  のユーザー定義型 (UDT) 機能には [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、通常のクエリ構文を使用して、言語からアクセスでき [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 UDT は、データベース オブジェクトの定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチの変数、関数とストアド プロシージャ、および関数とストアド プロシージャの引数に使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [UDT テーブルと UDT 列の定義](working-with-user-defined-types-defining-udt-tables-and-columns.md)  

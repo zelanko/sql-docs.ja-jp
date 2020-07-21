@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6920920aa603c615cdc5f84a34a93204842052d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995370"
 ---
 # <a name="create-a-multiserver-environment"></a>マルチサーバー環境の作成
   マルチサーバー管理では、マスター サーバー (MSX) 1 台と、ターゲット サーバー (TSX) 1 台以上を設定する必要があります。 すべてのターゲット サーバーで処理されるジョブは、まずマスター サーバーで定義されてからターゲット サーバーにダウンロードされます。  
@@ -37,11 +36,11 @@ ms.locfileid: "63192961"
   
 ||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 以降**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|はい|[はい]|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|**MSX = 8.0 &LT; SP3**|はい|[はい]|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|**MSX = 8.0 SP3 以降**|いいえ|いいえ|はい|[はい]|[はい]|[はい]|はい|  
-|**MSX = 9.0**|いいえ|いいえ|いいえ|はい|[はい]|[はい]|はい|  
-|**MSX = 10.0**|いいえ|いいえ|いいえ|いいえ|はい|[はい]|はい|  
+|**MSX = 7.0**|はい|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
+|**MSX = 8.0 < SP3**|はい|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
+|**MSX = 8.0 SP3 以降**|いいえ|いいえ|はい|はい|はい|はい|はい|  
+|**MSX = 9.0**|いいえ|いいえ|いいえ|はい|はい|はい|はい|  
+|**MSX = 10.0**|いいえ|いいえ|いいえ|いいえ|はい|はい|はい|  
 |**MSX = 10.5**|いいえ|いいえ|いいえ|いいえ|いいえ|はい|はい|  
 |**MSX = 11.0**|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|はい|  
   
@@ -61,11 +60,11 @@ ms.locfileid: "63192961"
 |説明|トピック|  
 |-----------------|-----------|  
 |マスター サーバーを作成する方法について説明します。|[マスター サーバーの作成](make-a-master-server.md)|  
-|ターゲット サーバーを作成する方法について説明します。|[対象サーバーの作成](make-a-target-server.md)|  
-|マスター サーバーにターゲット サーバーを参加させる方法について説明します。|[マスター サーバーへの対象サーバーの参加](enlist-a-target-server-to-a-master-server.md)|  
-|マスター サーバーからターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからの対象サーバーの参加の解除](defect-a-target-server-from-a-master-server.md)|  
-|マスター サーバーから複数のターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからの複数の対象サーバーの参加の解除](defect-multiple-target-servers-from-a-master-server.md)|  
-|ターゲット サーバーの状態を確認する方法について説明します。|[sp_help_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|ターゲット サーバーを作成する方法について説明します。|[ターゲット サーバーの作成](make-a-target-server.md)|  
+|マスター サーバーにターゲット サーバーを参加させる方法について説明します。|[マスター サーバーへのターゲット サーバーの参加](enlist-a-target-server-to-a-master-server.md)|  
+|マスター サーバーからターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからのターゲット サーバーの参加の解除](defect-a-target-server-from-a-master-server.md)|  
+|マスター サーバーから複数のターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからの複数のターゲット サーバーの参加の解除](defect-multiple-target-servers-from-a-master-server.md)|  
+|ターゲット サーバーの状態を確認する方法について説明します。|[sp_help_targetserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>参照  
  [プロキシを使用するマルチサーバー ジョブのトラブルシューティング](troubleshoot-multiserver-jobs-that-use-proxies.md)  

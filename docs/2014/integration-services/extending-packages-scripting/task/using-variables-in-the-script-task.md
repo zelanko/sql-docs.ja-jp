@@ -17,15 +17,14 @@ helpviewer_keywords:
 - SSIS Script task, variables
 - variables [Integration Services], Script task
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aaa704cf3560f504f196840d8b2a31885de179ba
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62894593"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425769"
 ---
 # <a name="using-variables-in-the-script-task"></a>スクリプト タスクでの変数の使用
   スクリプト タスクで変数を使用すると、パッケージ内の別のオブジェクトとデータを交換できます。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../../integration-services-ssis-variables.md)」を参照してください。  
@@ -35,7 +34,7 @@ ms.locfileid: "62894593"
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> クラスの <xref:Microsoft.SqlServer.Dts.Runtime.Variable> プロパティのデータ型は `Object` です。 スクリプト タスクでは `Option Strict` が有効なので、使用する前に、<xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> プロパティを適切な型にキャストする必要があります。  
   
- 既存の変数は、 **[スクリプト タスク エディター]** の <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> の一覧および <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> の一覧に追加することにより、カスタム スクリプトで使用できるようになります。 変数名の大文字と小文字は区別されることに注意してください。 スクリプト内では、`Dts` オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを介して、両方の種類の変数にアクセスできます。 `Value` プロパティを使用して、各変数に対する読み取りおよび書き込みを行います。 スクリプト タスクは、スクリプトが変数の値を読み取ったり変更するときに、ユーザーに意識させずにロックを管理します。  
+ 既存の変数は、**[スクリプト タスク エディター]** の <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> の一覧および <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> の一覧に追加することにより、カスタム スクリプトで使用できるようになります。 変数名の大文字と小文字は区別されることに注意してください。 スクリプト内では、`Dts` オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを介して、両方の種類の変数にアクセスできます。 `Value` プロパティを使用して、各変数に対する読み取りおよび書き込みを行います。 スクリプト タスクは、スクリプトが変数の値を読み取ったり変更するときに、ユーザーに意識させずにロックを管理します。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> プロパティによって返される <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> メソッドを使用すると、変数をコードで使用する前に、その変数の存在を確認できます。  
   
@@ -46,10 +45,10 @@ ms.locfileid: "62894593"
   
  変数を使用すると、Foreach ループ コンテナーとスクリプト タスク間のこうしたやり取りが可能になります。 **[Foreach ループ エディター]** の **[変数のマッピング]** ページでは、単一の列挙アイテムによって返されたデータの各アイテムに、変数が割り当てられます。 たとえば、Foreach File 列挙子の場合は、ファイル名のみがインデックス 0 で返されるためマッピングが必要な変数は 1 つのみですが、各行の複数のデータ列を返す列挙子の場合は、スクリプト タスクで使用する各列に、個別の変数をマップする必要があります。  
   
- 列挙アイテムを変数にマップした後は追加する必要ありますにマップされた変数、`ReadOnlyVariables`プロパティを**スクリプト**のページ、**スクリプト タスク エディター**に利用できるように、スクリプトです。 フォルダー内の画像ファイルを処理する Foreach ループ コンテナー内のスクリプト タスクの例については、「[スクリプト タスクによる画像の操作](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)」を参照してください。  
+ 列挙された項目を変数にマップしたら、[スクリプト `ReadOnlyVariables` **タスクエディター** ] の [**スクリプト**] ページで、マップされた変数をプロパティに追加して、スクリプトで使用できるようにする必要があります。 フォルダー内の画像ファイルを処理する Foreach ループ コンテナー内のスクリプト タスクの例については、「[スクリプト タスクによる画像の操作](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)」を参照してください。  
   
 ## <a name="variables-example"></a>変数の例  
- 次の例では、スクリプト タスク内の変数にアクセスし、その変数を使用してパッケージ ワークフローのパスを決定する方法を示します。 サンプルは、という名前の整数変数を作成することを想定しています`CustomerCount`と`MaxRecordCount`を追加し、`ReadOnlyVariables`内のコレクション、**スクリプト タスク エディター**します。 `CustomerCount` 変数には、インポートされる顧客レコードの数が格納されます。 この値が `MaxRecordCount` の値よりも大きい場合、スクリプト タスクから失敗が報告されます。 `MaxRecordCount` のしきい値を超過したために失敗が発生した場合、ワークフローのエラー パスには、任意の必要なクリーンアップを実装できます。  
+ 次の例では、スクリプト タスク内の変数にアクセスし、その変数を使用してパッケージ ワークフローのパスを決定する方法を示します。 このサンプルでは、とという名前の整数変数を作成し、[ `CustomerCount` `MaxRecordCount` `ReadOnlyVariables` **スクリプトタスクエディター**] でコレクションに追加したことを前提としています。 `CustomerCount` 変数には、インポートされる顧客レコードの数が格納されます。 この値が `MaxRecordCount` の値よりも大きい場合、スクリプト タスクから失敗が報告されます。 `MaxRecordCount` のしきい値を超過したために失敗が発生した場合、ワークフローのエラー パスには、任意の必要なクリーンアップを実装できます。  
   
  サンプルを正常にコンパイルするには、Microsoft.SqlServer.ScriptTask アセンブリへの参照を追加する必要があります。  
   
@@ -114,10 +113,10 @@ public class ScriptMain
   
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; の変数](../../integration-services-ssis-variables.md)   
+## <a name="see-also"></a>関連項目  
+ [SSIS&#41; 変数の Integration Services &#40;](../../integration-services-ssis-variables.md)   
  [パッケージで変数を使用する](../../use-variables-in-packages.md)  
   
   

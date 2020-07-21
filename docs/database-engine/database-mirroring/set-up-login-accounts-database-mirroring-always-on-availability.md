@@ -1,6 +1,7 @@
 ---
-title: ログイン アカウントの設定 - データベース ミラーリングの AlwaysOn 可用性 | Microsoft Docs
-ms.custom: ''
+title: ログイン アカウントの設定 (ミラーリングと可用性グループ)
+description: データベース ミラーまたは Always On 可用性グループのデータベース ミラーリング エンドポイントにアクセスするためのログイン アカウントを構成します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3612f2ef5a736ed2d676b5336ecdd48bdd10de6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6545a639b9bcdfafcc1bdfdd67930014beab00e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735129"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>ログイン アカウントの設定 - データベース ミラーリングの AlwaysOn 可用性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   2 つのサーバー インスタンスが互いにもう一方の [データベース ミラーリング エンドポイント](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) であるポイントに接続するには、各インスタンスのログイン アカウントがもう一方のインスタンスにアクセスできる必要があります。 また、各ログイン アカウントには、他方のインスタンスのデータベース ミラーリング エンドポイントへの接続権限も必要です。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68025225"
     > [!IMPORTANT]  
     >  より安全な環境を作成するには、各サーバー インスタンスに対して個別のドメイン アカウントを使用することを検討してください。  
   
-##  <a name="CreateLogin"></a> 異なるアカウントのログインの作成  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a> 異なるアカウントのログインの作成  
  2 つのサーバー インスタンスが異なるアカウントで実行される場合、システム管理者は CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、リモート インスタンスのスタートアップ サービス アカウント用にログインを作成する必要があります。このログインは、各サーバー インスタンスに作成します。 詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -51,10 +52,10 @@ ms.locfileid: "68025225"
 > [!NOTE]  
 >  ドメイン ユーザーではなくコンピューター アカウントを使用することにより、ネットワーク サービス アカウントで接続できます。 コンピューター アカウントを使用する場合は、そのアカウントを他方のサーバー インスタンスにユーザーとして追加する必要があります。  
   
-##  <a name="GrantConnect"></a> 接続権限の許可  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a> 接続権限の許可  
  サーバー インスタンスでログインを作成した後、サーバー インスタンスのデータベース ミラーリング エンドポイントに接続するための権限をそのログインに許可する必要があります。 システム管理者は、GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して接続権限を許可します。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)  
   
@@ -65,6 +66,6 @@ ms.locfileid: "68025225"
 ## <a name="see-also"></a>参照  
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Always On 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

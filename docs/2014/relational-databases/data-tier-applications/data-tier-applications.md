@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f611367f0b078fb02977c27ee1d61d648de87869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62873103"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970302"
 ---
 # <a name="data-tier-applications"></a>データ層アプリケーション
   データ層アプリケーション (DAC) は、テーブル、ビュー、インスタンス オブジェクト (ログインを含む) など、ユーザーのデータベースに関連付けられたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを定義する論理的なデータベース管理エンティティです。 DAC は、データ層の開発者とデータベース管理者が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを DAC パッケージ (DACPAC とも呼ばれます) という移植可能なアーティファクトにパッケージ化できるようにする自己完結型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース配置単位です。  
@@ -98,7 +97,7 @@ ms.locfileid: "62873103"
 ## <a name="backup-package-bacpac"></a>バックアップ パッケージ (.bacpac)  
  BACPAC は、データベース スキーマおよびデータベースに格納されているデータをカプセル化するアーティファクトです。 BACPAC は、.bacpac 拡張子を持つ Windows ファイルです。 DACPAC と同様に、BACPAC ファイル形式は公開されており、BACPAC のスキーマ コンテンツは DACPAC のスキーマ コンテンツと同じです。 データは JSON 形式で格納されます。  
   
- DACPAC と BACPAC は似ていますが、ターゲットとするシナリオは異なります。 DACPAC は、既存のデータベースのアップグレードなど、スキーマのキャプチャと配置に重点を置きます。 基本的なユース ケースは、DACPAC に開発、テスト、運用環境と、逆の順序に定義されたスキーマを展開する: 運用中のスキーマをキャプチャし、テストおよび開発環境に適用します。  
+ DACPAC と BACPAC は似ていますが、ターゲットとするシナリオは異なります。 DACPAC は、既存のデータベースのアップグレードなど、スキーマのキャプチャと配置に重点を置きます。 DACPAC の主なユースケースは、厳密に定義されたスキーマを開発環境、テスト環境、および運用環境に配置し、その逆に、運用環境のスキーマをキャプチャし、それをテスト環境と開発環境に適用することです。  
   
  一方、BACPAC は、スキーマおよびデータのキャプチャに重点を置きます。 BACPAC は、論理的にはデータベース バックアップに相当し、既存のデータベースのアップグレードには使用できません。 BACPAC の基本的なユース ケースは、あるサーバーから別のサーバーに、またはローカル サーバーからクラウドにデータベースを移動し、既存のデータベースをオープン フォーマットでアーカイブすることです。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62873103"
   
 -   **IMPORT**: ユーザーは、スキーマおよびデータをホスト サーバーの新しいデータベースにインポートできます。  
   
- この両方の機能が、次のデータベース管理ツールでサポートされます:Server Management Studio、Management Portal for SQL Azure、および DACFx API。  
+ この両方の機能が、データベース管理ツール (Server Management Studio、Management Portal for SQL Azure、および DACFx API) でサポートされます。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースを作成 (DAC パッケージを配置することによるデータベースの作成を含む) するには、`dbmanager` ロールのメンバーであるか、`CREATE DATABASE` 権限が割り当てられている必要があります。 データベースを削除するには、`dbmanager` ロールのメンバーであるか、`DROP DATABASE` 権限が割り当てられている必要があります。  
@@ -123,11 +122,11 @@ ms.locfileid: "62873103"
 |SQL Server ユーティリティを使用して、現在配置されている DAC の正常性を表示する方法について説明します。|[データ層アプリケーションの監視](data-tier-applications.md)|  
 |DAC 内のデータとメタデータのアーカイブを含む .bacpac ファイルを作成する方法について説明します。|[データ層アプリケーションのエクスポート](export-a-data-tier-application.md)|  
 |DAC の論理的な復元を実行したり、DAC を[!INCLUDE[ssDE](../../includes/ssde-md.md)]の他のインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に移行したりするために DAC アーカイブ ファイル (.bacpac) を使用する方法について説明します。|[BACPAC ファイルのインポートによる新しいユーザー データベースの作成](import-a-bacpac-file-to-create-a-new-user-database.md)|  
-|BACPAC ファイルをインポートして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内に新しいユーザー データベースを作成する方法について説明します。|[データベースからの DAC の抽出](extract-a-dac-from-a-database.md)|  
-|既存のデータベースを DAC インスタンスに昇格させる方法について説明します。 DAC 定義はビルドされ、システム データベースに格納されます。|[データベースを DAC として登録する方法](register-a-database-as-a-dac.md)|  
+|BACPAC ファイルをインポートして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内に新しいユーザー データベースを作成する方法について説明します。|[データベースから DAC を抽出する](extract-a-dac-from-a-database.md)|  
+|既存のデータベースを DAC インスタンスに昇格させる方法について説明します。 DAC 定義はビルドされ、システム データベースに格納されます。|[データベースを DAC として登録する](register-a-database-as-a-dac.md)|  
 |実稼働システムで DAC パッケージを使用する前に、パッケージの内容と DAC のアップグレードによって行われる動作を確認する方法について説明します。|[DAC パッケージの検証](validate-a-dac-package.md)|  
 |DAC パッケージの内容をフォルダーに配置し、そのフォルダーで、DAC を実稼働サーバーに配置する前に DAC の動作内容をデータベース管理者が確認できるようにする方法について説明します。|[DAC パッケージのアンパック](unpack-a-dac-package.md)|  
-|ウィザードを使用して既存のデータベースを配置する方法について説明します。 ウィザードでは DAC を使用して配置を実行します。|[DAC を使用したデータベースの配置](deploy-a-database-by-using-a-dac.md)|  
+|ウィザードを使用して既存のデータベースを配置する方法について説明します。 ウィザードでは DAC を使用して配置を実行します。|[DAC を使用してデータベースを配置する](deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server オブジェクトとバージョンの DAC サポート](dac-support-for-sql-server-objects-and-versions.md)  

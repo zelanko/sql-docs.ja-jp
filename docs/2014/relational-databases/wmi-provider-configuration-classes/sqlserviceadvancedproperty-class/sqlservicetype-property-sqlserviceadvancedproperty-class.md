@@ -1,5 +1,5 @@
 ---
-title: SqlServiceType プロパティ (SqlServiceAdvancedProperty クラス) |Microsoft Docs
+title: SqlServiceType プロパティ (Sqlserviceadvanced Property クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 769ffe6b74c5b1cc4a2f21842df3e88a9df5af73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17bbcb7e1311d64de518324707c597b7471a40a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061332"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>SqlServiceType プロパティ (SqlServiceAdvancedProperty クラス)
   詳細プロパティに関連付けられたマネージド サービスの型を取得します。  
@@ -39,17 +38,17 @@ NumValue
   
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  詳細プロパティを表す [SqlServiceAdvancedProperty クラス](sqlserviceadvancedproperty-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスの種類を指定する uint32 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  戻り値は次のいずれかです。  
   
-|種類|定義|  
+|Type|定義|  
 |----------|----------------|  
 |*1*|MSSQLSERVER は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスです。|  
 |*2*|SQLSERVERAGENT は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスです。|  
@@ -59,7 +58,7 @@ NumValue
 |*6*|ReportServer は [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービスです。|  
 |*7*|SQLBrowser は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser サービスです。|  
   
-## <a name="see-also"></a>関連項目  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>参照  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

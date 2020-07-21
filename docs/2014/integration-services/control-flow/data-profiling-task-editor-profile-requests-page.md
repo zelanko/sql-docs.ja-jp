@@ -11,20 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 604024a203ba289a0e1213196041cc3f681f4cb4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832066"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433299"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページを使用すると、計算するプロファイルを選択および構成することができます。 単一のデータ プロファイル タスクで、複数のテーブルまたはビューの複数の列または列の組み合わせに対して複数のプロファイルを計算することができます。  
   
- データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer (Data Profile Viewer)](data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
  **[データ プロファイル タスク エディター] の [プロファイル要求] ページを開くには**  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62832066"
 ### <a name="requests-pane-options"></a>要求ペインのオプション  
  要求ペインには次のオプションがあります。  
   
- **[表示]**  
+ **表示**  
  データ プロファイル タスク用に構成されているすべてのプロファイルを表示するか、または 1 つのプロファイルだけを表示するかを選択します。  
   
  要求ペインに表示される列は、選択した **[表示]** に応じて異なります。 各列の詳細については、次のセクション「要求ペインの列」を参照してください。  
@@ -82,14 +81,14 @@ ms.locfileid: "62832066"
  **接続マネージャー**  
  ソース データベースに接続する [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーが表示されます。  
   
- **[要求 ID]**  
+ **要求 ID**  
  要求の識別子が表示されます。 通常、自動生成された値を変更する必要はありません。  
   
 #### <a name="columns-common-to-the-five-individual-column-profiles"></a>5 つの個々の列プロファイルに共通の列  
  **[テーブルまたはビュー]**  
  選択した列を含むテーブルまたはビューが表示されます。  
   
- **[列]**  
+ **列**  
  選択したプロファイル対象の列が表示されます。  
   
 #### <a name="columns-specific-to-the-candidate-key-profile"></a>候補キー プロファイルに固有の列  
@@ -130,24 +129,24 @@ ms.locfileid: "62832066"
   
  これらのオプションは、選択したプロファイルによって異なります。 個々のプロファイルの種類にあるオプションの詳細については、次のトピックを参照してください。  
   
--   [[候補キー プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [[候補キー プロファイル要求] のオプション (データ プロファイル タスク)](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [[列の NULL 比プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [[列の NULL 比プロファイル要求] のオプション (データ プロファイル タスク)](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [[列統計プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [[候補キー プロファイル要求] のオプション (データ プロファイル タスク)](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [[列の値分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [[列の値分布プロファイル要求] のオプション (データ プロファイル タスク)](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [[列長分布プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [[列長分布プロファイル要求] のオプション (データ プロファイル タスク)](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [[列パターン プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [[列パターン プロファイル要求] のオプション (データ プロファイル タスク)](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [[機能依存プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [[機能依存プロファイル要求] のオプション (データ プロファイル タスク)](functional-dependency-profile-request-options-data-profiling-task.md)  
   
 -   [[値包含プロファイル要求] のオプション (データ プロファイル タスク)](value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
- [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

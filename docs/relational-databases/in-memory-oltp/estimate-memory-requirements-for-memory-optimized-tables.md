@@ -1,6 +1,7 @@
 ---
-title: メモリ最適化テーブルのメモリ必要量の推定 | Microsoft Docs
-ms.custom: ''
+title: メモリの要件 - メモリ最適化テーブル
+description: すべての行とインデックスに十分なメモリが必要である SQL Server のメモリ最適化テーブルについて、メモリ使用と管理のシナリオについて説明します。
+ms.custom: seo-dt-2019
 ms.date: 12/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 530d1eacd6c4bb480c8a8932563077b764b027fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723233"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 メモリ最適化テーブルでは、すべての行とインデックスをメモリ内に保持するために十分なメモリが必要です。 メモリは有限のリソースであるため、システム上のメモリ使用量を把握して管理することが重要です。 このセクションのトピックでは、一般的なメモリの使用量と管理シナリオについて説明します。
 
@@ -52,7 +53,7 @@ ms.locfileid: "68811173"
   
 - [成長に対応するメモリ](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="bkmk_ExampleTable"></a> サンプルのメモリ最適化テーブル  
+###  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> サンプルのメモリ最適化テーブル  
 
 次のメモリ最適化テーブルのスキーマを考えてみます。
   
@@ -83,7 +84,7 @@ GO
 
 このスキーマを使用して、このメモリ最適化テーブルで必要とされる最小メモリを決定します。  
   
-###  <a name="bkmk_MemoryForTable"></a> テーブルに対応するメモリ  
+###  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> テーブルに対応するメモリ  
 
 メモリ最適化テーブルの行は、次の 3 つの部分から形成されています。
   
@@ -102,7 +103,7 @@ GO
   
 上記の計算結果から、メモリ最適化テーブル内にある各行のサイズは 24 + 32 + 200、つまり 256 バイトです。  500 万の行があるため、テーブルは 5,000,000 * 256 バイト、つまり 1,280,000,000 バイト、約 1.28 GB を使用します。  
   
-###  <a name="bkmk_IndexMeemory"></a> インデックスに対応するメモリ  
+###  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> インデックスに対応するメモリ  
 
 #### <a name="memory-for-each-hash-index"></a>各ハッシュ インデックスに対応するメモリ  
   
@@ -165,7 +166,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="bkmk_MemoryForRowVersions"></a> 行のバージョン管理に対応するメモリ
+###  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> 行のバージョン管理に対応するメモリ
 
 ロックを回避するために、インメモリ OLTP は行を更新または削除するときに、オプティミスティック コンカレンシーを使用します。 これは、行を更新するときに、行の追加バージョンが作成されることを意味します。 さらに、削除は論理的であり、既存の行が削除済みとしてマークされますが、すぐには削除されません。 以前のバージョンを使用する可能性のあるすべてのトランザクションが実行を完了するまで、システムは (削除された行を含む) 古い行バージョンを使用可能な状態に保ちます。 
   
@@ -181,13 +182,13 @@ SELECT * FRON t_hk
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="bkmk_TableVariables"></a> テーブル変数に対応するメモリ
+###  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> テーブル変数に対応するメモリ
   
 テーブル変数に対応するメモリは、テーブル変数がスコープ外になる場合にのみ解放されます。 テーブル変数から削除された行 (更新の一部として削除された行を含む) には、ガベージ コレクションは適用されません。 テーブル変数がスコープを終了するまでメモリは解放されません。  
   
 プロシージャ スコープとは対照的に、多くのトランザクションで使用される大きな SQL バッチで定義されるテーブル変数は、多くのメモリを消費することがあります。 ガベージ コレクションの対象ではないため、テーブル変数内にある削除された行は多くのメモリを使用し、パフォーマンスが低下することがあります。読み取り操作では、削除されたこれらの行をスキャンで通過させる必要があるためです。  
   
-###  <a name="bkmk_MemoryForGrowth"></a> 成長に対応するメモリ
+###  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> 成長に対応するメモリ
 
 上記の各計算では、現在存在しているテーブルに対応するメモリ必要量を推定しています。 このメモリに加えて、テーブルが成長することを推定し、その成長を収容するために十分なメモリを用意する必要があります。  たとえば、10% の成長を予測している場合は、上記の結果に 1.1 を掛けて、テーブルで必要とされる合計メモリを得ることができます。  
   

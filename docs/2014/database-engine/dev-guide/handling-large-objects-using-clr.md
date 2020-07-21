@@ -1,5 +1,5 @@
 ---
-title: CLR を使用したラージ オブジェクトの処理 |Microsoft Docs
+title: CLR を使用したラージオブジェクトの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc8b2d4c162f3461f6315fd8e747268fcabc32da
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781537"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933583"
 ---
 # <a name="handling-large-objects-using-clr"></a>CLR を使用したラージ オブジェクトの処理
   SQL Server の `HandlingLOBUsingCLR` サンプルでは、共通言語ランタイム (CLR) ストアド プロシージャを使用して、サーバーで使用可能なファイル システムと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間でラージ オブジェクト (LOB) を転送する方法を示します。 このサンプルでは、サーバー側コード内のファイルへのアクセス方法を示し、CLR ベースのストアド プロシージャから動的クエリとストアド プロシージャの両方を呼び出します。 また、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用した、CLR メソッドとアセンブリの登録解除と登録を行う方法も示します。  
@@ -23,9 +22,9 @@ ms.locfileid: "62781537"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/download/details.aspx?id=42299)から無償で入手できます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://archive.codeplex.com/?p=SqlServerSamples)から入手できる AdventureWorks データベース。  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62781537"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -573,7 +572,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`) ストアド プロシージャを使用することにより、例をテストします。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ( `test.sql` ) は、ストアドプロシージャを使用してこの例をテストします。  
   
 ```  
 USE AdventureWorks  

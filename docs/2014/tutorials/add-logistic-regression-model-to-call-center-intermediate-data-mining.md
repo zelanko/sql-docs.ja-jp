@@ -1,5 +1,5 @@
 ---
-title: コール センター構造 (中級者向けデータ マイニング チュートリアル) へのロジスティック回帰モデルの追加 |Microsoft Docs
+title: コールセンター構造へのロジスティック回帰モデルの追加 (中級者向けデータマイニングチュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823279"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>コール センター構造へのロジスティック回帰モデルの追加 (中級者向けデータ マイニング チュートリアル)
@@ -28,45 +28,45 @@ ms.locfileid: "62823279"
   
 ### <a name="to-add-a-new-mining-model-to-the-call-center-mining-structure"></a>コール センターのマイニング構造に新しいマイニング モデルを追加するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、ソリューション エクスプ ローラーで、マイニング構造を右クリックして**Call Center Binned**、選び**デザイナーを開く**します。  
+1.  のソリューションエクスプローラーで、[マイニング構造] を右クリックし、[**コールセンター**] ビンをクリックして、[デザイナーを開く] を選択します。 **Open Designer** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]  
   
-2.  データ マイニング デザイナーでクリックして、**マイニング モデル**タブ。  
+2.  データマイニングデザイナーで、[**マイニングモデル**] タブをクリックします。  
   
-3.  クリックして**関連マイニング モデル作成**です。  
+3.  [**関連マイニングモデルの作成] を**クリックします。  
   
-4.  **マイニング モデルの新しい** ダイアログ ボックスの**モデル名**、型`Call Center - LR`します。  **アルゴリズム名**、 **Microsoft ロジスティック回帰**します。  
+4.  [**新しいマイニングモデル**] ダイアログボックスの [**モデル名**] に`Call Center - LR`、「」と入力します。  [**アルゴリズム名**] で、[ **Microsoft ロジスティック回帰**] を選択します。  
   
 5.  **[OK]** をクリックします。  
   
-     新しいマイニング モデルを表示、**マイニング モデル**タブ。  
+     新しいマイニングモデルが [**マイニングモデル**] タブに表示されます。  
   
 ### <a name="to-customize-the-logistic-regression-model"></a>ロジスティック回帰モデルをカスタマイズするには  
   
-1.  新しいマイニング モデルの列に`Call Center - LR`、キーとしてファクト CallCenter ID のままにします。  
+1.  新しいマイニングモデル`Call Center - LR`の列で、ファクト CALLCENTER ID をキーとして残します。  
   
-2.  ServiceGrade とレベルを 2 つの演算子の値を変更**Predict**します。  
+2.  ServiceGrade の値とレベル2の演算子を**Predict**に変更します。  
   
      これらの列は、入力および予測の両方に使用されます。 本質的には、同じデータについて、2 つの別個のモデルを作成していることになります。ここでは、オペレーターの数を予測するモデルとサービス グレードを予測するモデルを作成しています。  
   
-3.  その他のすべての列を変更**入力**します。  
+3.  他のすべての列を**入力**に変更します。  
   
 ### <a name="to-specify-the-seed-and-process-the-models"></a>シードを指定してモデルを処理するには  
   
-1.  **マイニング モデルの** タブで、名前付き Call Center - LR、モデルの場合は、列を右クリックし、選択**アルゴリズム パラメーターの設定**します。  
+1.  [**マイニングモデル**] タブで、Call CENTER-LR という名前のモデルの列を右クリックし、[**アルゴリズムパラメーターの設定**] を選択します。  
   
-2.  HOLDOUT_SEED パラメーターの行で、空のセルをクリックします。**値**、および種類`1`します。 **[OK]** をクリックします。  
+2.  HOLDOUT_SEED パラメーターの行で、[**値**] の下の空のセルをクリック`1`し、「」と入力します。 **[OK]** をクリックします。  
   
     > [!NOTE]  
     >  関連するすべてのモデルで同じシードを使用する限り、シードとしてどのような値を選択するかは特に重要ではありません。  
   
-3.  **マイニング モデル**メニューの **マイニング構造の処理とすべてのモデル**します。 クリックして**はい**サーバーに更新されたデータ マイニング プロジェクトを配置します。  
+3.  [**マイニングモデル**] メニューで、[**マイニング構造とすべてのモデルの処理**] を選択します。 [**はい**] をクリックして、更新されたデータマイニングプロジェクトをサーバーに配置します。  
   
-4.  **マイニング モデルの処理**ダイアログ ボックスで、をクリックして**実行**します。  
+4.  [**マイニングモデルの処理**] ダイアログボックスで、[**実行**] をクリックします。  
   
-5.  をクリックして**閉じます**を閉じる、**処理の進行状況** ダイアログ ボックスをクリック**閉じます**で再度、**マイニング モデルの処理** ダイアログ ボックス。  
+5.  [**閉じる**] をクリックして [**処理の進行状況**] ダイアログボックスを閉じ、[**マイニングモデルの処理**] ダイアログボックスでもう一度 [**閉じる**] をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [コール センター モデルの予測の作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
+ [「中級者向けデータマイニングチュートリアル &#40;コールセンターモデルの予測の作成&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
  [処理の要件および注意事項 &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  

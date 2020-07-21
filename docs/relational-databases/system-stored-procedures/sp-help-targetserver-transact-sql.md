@@ -1,5 +1,5 @@
 ---
-title: sp_help_targetserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_targetserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_targetserver
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a8b29b5d7698fdaceced322e30048c6c789f076e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085083"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891677"
 ---
-# <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   すべての対象サーバーを一覧表示します。  
   
@@ -40,34 +40,34 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @server_name = ] 'server_name'` 情報を返す対象のサーバーの名前。 *server_name*は**nvarchar (30)** 、既定値は NULL です。  
+`[ @server_name = ] 'server_name'`情報を返すサーバーの名前。 *server_name*は**nvarchar (30)**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 場合*server_name*が指定されていない**sp_help_targetserver**この結果セットを返します。  
+ *Server_name*が指定されていない場合、 **sp_help_targetserver**はこの結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|サーバーの識別番号。|  
 |**server_name**|**nvarchar(30)**|サーバー名。|  
-|**location**|**nvarchar(200)**|指定したサーバーの場所。|  
-|**time_zone_adjustment**|**int**|グリニッジ標準時 (GMT) との時差 (時間単位)。|  
+|**location**|**nvarchar(200)**|指定されたサーバーの場所です。|  
+|**time_zone_adjustment**|**int**|グリニッジ標準時 (GMT) からのタイムゾーンの調整 (時間単位)。|  
 |**enlist_date**|**datetime**|指定したサーバーの参加日。|  
-|**last_poll_date**|**datetime**|サーバーが最後にジョブをポーリングした日付。|  
-|**status**|**int**|指定したサーバーの状態。|  
-|**unread_instructions**|**int**|サーバーに未読の指示があるかどうか。 この列は、すべての行がダウンロードされている場合**0**します。|  
-|**local_time**|**datetime**|ターゲット サーバーのローカル日時。これは、マスター サーバーが最後にポーリングを実行した時点のターゲット サーバーのローカル時間です。|  
-|**enlisted_by_nt_user**|**nvarchar(100)**|ターゲット サーバーに参加した Microsoft Windows のユーザー。|  
-|**poll_interval**|**int**|ジョブをダウンロードし、ジョブ ステータスをアップロードするために、ターゲット サーバーがマスター SQLServerAgent サービスをポーリングする頻度 (秒単位)。|  
+|**last_poll_date**|**datetime**|ジョブに対してサーバーが最後にポーリングされた日付。|  
+|**status**|**int**|指定されたサーバーの状態。|  
+|**unread_instructions**|**int**|サーバーに未読の指示があるかどうか。 すべての行がダウンロードされている場合、この列は**0**になります。|  
+|**local_time**|**datetime**|対象サーバーのローカルの日付と時刻。これは、マスターサーバーの最後のポーリング時点での対象サーバーのローカル時刻に基づいています。|  
+|**enlisted_by_nt_user**|**nvarchar (100)**|ターゲット サーバーに参加した Microsoft Windows のユーザー。|  
+|**poll_interval**|**int**|ジョブをダウンロードしてジョブの状態をアップロードするために、対象サーバーがマスター SQLServerAgent サービスをポーリングする間隔 (秒単位)。|  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-listing-information-for-all-registered-target-servers"></a>A. すべての登録された対象サーバーの情報を一覧表示する  
+### <a name="a-listing-information-for-all-registered-target-servers"></a>A. 登録されているすべての対象サーバーの情報を一覧表示する  
  次の例では、すべての登録されたターゲット サーバーの情報を一覧表示します。  
   
 ```  
@@ -78,8 +78,8 @@ EXEC dbo.sp_help_targetserver ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server"></a>B. 特定のターゲット サーバーの情報を一覧表示する  
- 次の例は、対象サーバーの情報を一覧表示`SEATTLE2`します。  
+### <a name="b-listing-information-for-a-specific-target-server"></a>B: 特定の対象サーバーの情報を一覧表示する  
+ 次の例では、対象サーバーの情報を一覧表示し `SEATTLE2` ます。  
   
 ```  
 USE msdb ;  
@@ -89,12 +89,12 @@ EXEC dbo.sp_help_targetserver N'SEATTLE2' ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_delete_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [dbo.sysdownloadlist &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_add_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [dbo.sysdownloadlist &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

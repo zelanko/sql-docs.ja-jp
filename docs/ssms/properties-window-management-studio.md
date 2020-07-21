@@ -1,6 +1,6 @@
 ---
-title: '[プロパティ] ウィンドウ (Management Studio) | Microsoft Docs'
-ms.custom: ''
+title: '[プロパティ] ウィンドウ (Management Studio)'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51aff80cb84f5ff066917f5ba35d966c0f49d08d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 44110ee4d46cbd0ef25544b3cf410a1c8312d460
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262020"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257591"
 ---
 # <a name="properties-window-management-studio"></a>[プロパティ] ウィンドウ (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "68262020"
   
 ## <a name="options"></a>オプション  
   
-|要素|[説明]|  
+|要素|説明|  
 |-----------|---------------|  
 |**オブジェクト名です。**|現在選択している 1 つまたは複数のオブジェクトを一覧に表示します。 アクティブなエディターまたはデザイナーのオブジェクトのみが表示されます。|  
 |**項目別**|選択したオブジェクトのすべてのプロパティおよびプロパティ値を項目別に表示します。 項目を折りたたんで、表示するプロパティの数を少なくすることができます。 カテゴリの展開または折りたたみを行うと、各カテゴリ名の左側に正符号 (+) または負符号 (-) が表示されます。 項目はアルファベット順に表示されます。|  
 |**アルファベット順**|選択したオブジェクトのデザイン時のすべてのプロパティおよびイベントをアルファベット順に並べ替えます。|  
-|**[プロパティ]**|オブジェクトのプロパティを表示します。|  
+|**Properties**|オブジェクトのプロパティを表示します。|  
 |**説明ペイン**|説明ペインは [プロパティ] ウィンドウの最下部にあり、プロパティの種類と、プロパティの短い説明が表示されます。 ショートカット メニューの **[説明]** を使用して、プロパティの説明の表示と非表示を切り替えることができます。|  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: Getキャラクターストリーム (int) |Microsoft Docs
+title: getCharacterStream (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - SQLServerCallableStatement.getCharacterStream(int paramIndex)
 apitype: Assembly
 ms.assetid: eb20714b-52bc-4b6c-b23f-c9c3c9d73783
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55fab0482e38afc175718a1b729d68124781dac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ff89be87b6a33246628630572357400680f9d0a8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953308"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924953"
 ---
 # <a name="getcharacterstream-int"></a>getCharacterStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public final java.io.Reader getCharacterStream(int paramIndex)
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- リーダーオブジェクト。  
+ Reader オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

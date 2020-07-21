@@ -1,5 +1,5 @@
 ---
-title: Microsoft ツリー ビューアーを使用してモデルの参照 |Microsoft Docs
+title: Microsoft ツリービューアーを使用したモデルの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,30 +22,29 @@ helpviewer_keywords:
 ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d02a4111301dd880999bbcf9e6bea75062ef9599
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085938"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525289"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Microsoft ツリー ビューアーを使用したモデルの参照
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ツリー ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用して作成されたデシジョン ツリーが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、分類と回帰の両方をサポートする複合的なデシジョン ツリー アルゴリズムです。 したがって、このビューアーには [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムに基づくモデルを表示できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方の予測モデリングに使用します。 このアルゴリズムの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]のツリービューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] デシジョンツリーアルゴリズムを使用して作成されたデシジョンツリーが表示され [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、分類と回帰の両方をサポートする複合的なデシジョン ツリー アルゴリズムです。 したがって、このビューアーには [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムに基づくモデルを表示できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方の予測モデリングに使用します。 このアルゴリズムの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)」を参照してください。  
   
 > [!NOTE]  
 >  モデルで使用された式と、検出されたパターンの詳細情報を表示するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーを使用します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」または「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](../microsoft-generic-content-tree-viewer-data-mining.md)」を参照してください。  
   
-##  <a name="BKMK_TabsPanes"></a> ビューアーのタブ  
+##  <a name="viewer-tabs"></a><a name="BKMK_TabsPanes"></a>ビューアーのタブ  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でマイニング モデルを参照すると、そのモデルに適したビューアーを使用してデータ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにモデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ツリー ビューアーには、次のタブとペインがあります。  
   
--   [[デシジョン ツリー]](#BKMK_DecisionTree)  
+-   [デシジョン ツリー](#BKMK_DecisionTree)  
   
 -   [依存関係ネットワーク](#BKMK_DependencyNetwork)  
   
 -   [マイニング凡例](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a> [デシジョン ツリー]  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>デシジョンツリー  
  デシジョン ツリー モデルを作成すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって、予測可能な属性ごとにツリーが個別に作成されます。 個別のツリーを表示するには、ビューアーの **[デシジョン ツリー]** タブにある **[ツリー]** 一覧から表示するツリーを選択します。  
   
  デシジョン ツリーは一連の分割で構成されており、アルゴリズムによって最も重要と判別された分割は、ビューアーの左側にある **[すべて]** ノードに表示されます。 その他の分割は右側に表示されます。 **[すべて]** ノード内の分割は最も重要です。なぜなら、データセット内で最も強い分割発生条件が含まれており、その結果として最初の分割が発生したからです。  
@@ -73,9 +72,9 @@ ms.locfileid: "66085938"
   
  ツリー ビューの画像をクリップボードにコピーして、ドキュメントや画像操作ソフトウェアに貼り付けることができます。 ビューアーに表示されているツリーのセクションだけをコピーするには、 **[グラフ ビューのコピー]** を使用します。ツリーで展開されているすべてのノードをコピーするには、 **[グラフ全体のコピー]** を使用します。  
   
- [トップに戻る](#BKMK_TabsPanes)  
+ [ページのトップへ](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a> 依存関係ネットワーク  
+###  <a name="dependency-network"></a><a name="BKMK_DependencyNetwork"></a>依存関係ネットワーク  
  **[依存関係ネットワーク]** には、モデル内にある入力属性と予測可能属性の間の依存関係が表示されます。 ビューアーの左側にあるスライダーは、依存関係の強さに関連付けられたフィルターとして機能します。 スライダーを下げると、最も強いリンクだけが表示されます。  
   
  ノードを選択すると、そのノードに固有の依存関係が強調表示されます。 たとえば、予測可能なノードを選択した場合は、その予測可能なノードの予測に役立つ各ノードも強調表示されます。  
@@ -84,9 +83,9 @@ ms.locfileid: "66085938"
   
  ビューアーの下部にある凡例は、グラフ内の依存関係の種類に色を関連付けています。 たとえば、予測可能なノードを選択すると、予測可能なノードが水色で網掛けされ、選択したノードを予測するノードがオレンジ色で網掛けされます。  
   
- [トップに戻る](#BKMK_TabsPanes)  
+ [ページのトップへ](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a> マイニング凡例  
+###  <a name="mining-legend"></a><a name="BKMK_MiningLegend"></a>マイニング凡例  
  デシジョン ツリー モデルでノードを選択すると、 **[マイニング凡例]** に次の情報が表示されます。  
   
 -   予測可能な属性の状態によって分類された、ノード内のケースの数。  
@@ -101,13 +100,13 @@ ms.locfileid: "66085938"
   
  ソリューション エクスプローラーと同様の方法で **[マイニング凡例]** をドッキングして操作できます。  
   
- [トップに戻る](#BKMK_TabsPanes)  
+ [ページのトップへ](#BKMK_TabsPanes)  
   
-## <a name="see-also"></a>関連項目  
- [Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)   
- [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](../mining-model-viewers-data-mining-model-designer.md)   
- [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
- [データ マイニング ツール](data-mining-tools.md)   
+## <a name="see-also"></a>参照  
+ [Microsoft デシジョンツリーアルゴリズム](microsoft-decision-trees-algorithm.md)   
+ [データマイニングモデルデザイナー &#40;のマイニングモデルビューアー&#41;](../mining-model-viewers-data-mining-model-designer.md)   
+ [マイニングモデルビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
+ [データマイニングツール](data-mining-tools.md)   
  [データ マイニング モデル ビューアー](data-mining-model-viewers.md)  
   
   

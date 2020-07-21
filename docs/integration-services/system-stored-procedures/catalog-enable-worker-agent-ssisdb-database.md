@@ -8,28 +8,25 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77c0c1218d1bde6c238d65206852f589a2ad8299
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70e6b43703cca696dc6d6617439f16dbc9cf04b1
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007756"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053691"
 ---
-# <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent (SSISDB データベース)
+# <a name="catalogenable_worker_agent-ssisdb-database"></a>catalog.enable_worker_agent (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Scale Out Master でこの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログを操作する場合に Scale Out Worker を有効にします。
 
 ## <a name="syntax"></a>構文
 
 ```sql
-catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
+catalog.enable_worker_agent [ @WorkerAgentId = ] WorkerAgentId
 ```
 ## <a name="arguments"></a>引数
 [@WorkerAgentId =] *WorkerAgentId* Scale Out Worker のワーカー エージェント ID。 *WorkerAgentId* は **uniqueidentifier** です。

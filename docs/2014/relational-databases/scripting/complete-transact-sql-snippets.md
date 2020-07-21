@@ -1,6 +1,6 @@
 ---
-title: Transact-SQL スニペットの作成 | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL スニペットの作成
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - snippets [Transact-SQL], completing
 - Transact-SQL snippets, completing
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 103b8c23dba7119dde28a8d6e87b963400eaf0c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d90c77f72ba8ce80d26503645d9b04d795f5e503
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090584"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055548"
 ---
 # <a name="complete-transact-sql-snippets"></a>Transact-SQL スニペットの作成
   [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットがスクリプトに挿入されると、スニペットのコンテンツを編集して [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成できます。  

@@ -1,5 +1,5 @@
 ---
-title: OLE DB の操作方法に関するトピック |Microsoft Docs
+title: OLE DB の使用法に関するトピック | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,27 +10,25 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB, how-to topics
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f77be346c89a6e3d975a07892d74c0450d164bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 539ad29e5dd3be3ebc5bce165e7480cd2217bf5a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110091"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006475"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB の使用法に関するトピック
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  使用する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、サーバーへの接続、コマンドを実行し、結果を処理する方法を理解する必要があります。  
+  Native Client OLE DB プロバイダーを使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーへの接続を作成し、コマンドを実行して結果を処理する方法を理解する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 -   [結果を処理する方法に関するトピック &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [大きなデータを設定&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
+-   [大きなデータの設定 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [OLE DB データ ソースの列挙 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -52,7 +50,7 @@ ms.locfileid: "68110091"
   
 -   [IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [大きな CLR Udt を使用して、 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [大きな CLR UDT の使用 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [スパース列に対する列およびカタログ メタデータの表示 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
@@ -60,7 +58,7 @@ ms.locfileid: "68110091"
   
 -   [テーブル値パラメーターの使用 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

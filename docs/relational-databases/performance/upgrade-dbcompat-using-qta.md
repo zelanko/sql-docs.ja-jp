@@ -1,6 +1,6 @@
 ---
-title: クエリ調整アシスタントを使用したデータベースのアップグレード | Microsoft Docs
-ms.custom: ''
+title: クエリ調整アシスタントを使用したデータベースのアップグレード
+ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -18,30 +18,30 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3113caec4026547fcf2dca940a3908f64b6efa44
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68231622"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598748"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>クエリ調整アシスタントを使用したデータベースのアップグレード
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降に移行する場合、および[データベース互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)を使用可能な最新のものにアップグレードする場合、ワークロードのパフォーマンスが低下するリスクにさらされる可能性があります。 程度はかなり低くなりますが、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と新しいバージョン間のアップグレード時にもその可能性はあります。
 
-[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降、およびすべての新しいバージョンでは、クエリ オプティマイザーのすべての変更が最新のデータベース互換レベルにゲーティングされるため、実行プランの変更は、アップグレードの時点ではなく、ユーザーが `COMPATIBILITY_LEVEL` データベース オプションを使用可能な最新のものに変更したときに発生します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で導入されたクエリ オプティマイザーの変更の詳細については、[カーディナリティ推定機能](../../relational-databases/performance/cardinality-estimation-sql-server.md)に関するページを参照してください。 互換性レベルとそれがアップグレードにどのように影響する可能性があるかについて詳しくは、「[Compatibility Levels and SQL Server Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)」 (互換性レベルと SQL Server アップグレード) を参照してください。
+[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降、およびすべての新しいバージョンでは、クエリ オプティマイザーのすべての変更が最新のデータベース互換レベルにゲーティングされるため、実行プランの変更は、アップグレードの時点ではなく、ユーザーが `COMPATIBILITY_LEVEL` データベース オプションを使用可能な最新のものに変更したときに発生します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で導入されたクエリ オプティマイザーの変更の詳細については、[カーディナリティ推定機能](../../relational-databases/performance/cardinality-estimation-sql-server.md)に関するページを参照してください。 互換性レベルとそれがアップグレードにどのように影響する可能性があるかについて詳しくは、「[互換性レベルとデータベース エンジンのアップグレード](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)」を参照してください。
 
 データベース互換レベルによって提供されるこのゲーティング機能と、クエリ ストアを組み合わせることで、アップグレードで以下の推奨されるワークフローに従う場合に、アップグレード プロセスのクエリ パフォーマンスを高いレベルで制御できます。 互換性レベルをアップグレードする場合に推奨されるワークフローの詳細については、「[Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)」 (データベース互換モードの変更とクエリ ストアの使用) を参照してください。 
 
-![クエリ ストアを使用するデータベース アップグレードの推奨ワークフロー](../../relational-databases/performance/media/query-store-usage-5.png "クエリ ストアを使用するデータベース アップグレードの推奨ワークフロー") 
+![クエリ ストアを使用した推奨されるデータベース アップグレードのワークフロー](../../relational-databases/performance/media/query-store-usage-5.png "クエリ ストアを使用した推奨されるデータベース アップグレードのワークフロー") 
 
 このアップグレードの制御は、[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)が導入されており、上記の推奨されるワークフローの最後のステップを自動化できる [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] でさらに強化されました。
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、新しい **クエリ調整アシスタント (QTA)** 機能を利用して、推奨されるワークフローに従うことで、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンへのアップグレード時のパフォーマンスの安定性を維持できます。これについては、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」の「*新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する*」セクションに記載されています。 ただし、推奨されるワークフローの最後の手順で示されているように、QTA は以前の既知の適切なプランにロールバックしません。 代わりに、QTA は [クエリ ストアの **[機能低下したクエリ]** ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) ビューで見つかった回帰をすべて追跡し、適用できるオプティマイザー モデル バリエーションの可能な順列を反復処理することで、新しいより良いプランを作成できます。
 
 > [!IMPORTANT]
-> QTA では、ユーザー ワークロードは生成されません。 アプリケーションで使用されていない環境で QTA を実行する場合は、別の方法でターゲットとなる [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で代表的なテスト ワークロードを引き続き確実に実行できるようにします。 
+> QTA では、ユーザー ワークロードは生成されません。 アプリケーションで使用されていない環境で QTA を実行する場合は、別の方法でターゲットとなる [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で代表的なテスト ワークロードを引き続き確実に実行できるようにします。 
 
 ## <a name="the-query-tuning-assistant-workflow"></a>クエリ調整アシスタントのワークフロー
 QTA の開始点では、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータベースが ([CREATE DATABASE ...FOR ATTACH](../..//relational-databases/databases/attach-a-database.md) または [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) を使用して) 新しいバージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に移行され、アップグレード前のデータベース互換レベルがすぐには変更されないことが前提となります。 QTA を使用して、次のステップを行います。
@@ -56,7 +56,7 @@ QTA の開始点では、以前のバージョンの [!INCLUDE[ssNoVersion](../.
 
 前述のクエリ ストアを使用する互換性レベルのアップグレードの際に推奨されるワークロードの最後のステップのみが、QTA では基本的にどのように変わるかについては、以下を参照してください。 現在の非効率な実行プランと最新の既知の適切な実行プランのどちらかを選ぶのではなく、QTA では、選択された機能低下したクエリに固有の調整オプションが示され、調整された実行プランで新しい改善された状態を作成できます。
 
-![QTA を使用するデータベース アップグレードの推奨ワークフロー](../../relational-databases/performance/media/qta-usage.png "QTA を使用するデータベース アップグレードの推奨ワークフロー")
+![QTA を使用した推奨されるデータベース アップグレードのワークフロー](../../relational-databases/performance/media/qta-usage.png "QTA を使用した推奨されるデータベース アップグレードのワークフロー")
 
 ### <a name="qta-tuning-internal-search-space"></a>QTA での内部検索領域の調整
 QTA では、クエリ ストアから実行できる `SELECT` クエリのみがターゲットとなります。 コンパイル済みのパラメーターがわかっている場合は、パラメーター化されたクエリが対象となります。 一時テーブルやテーブル変数などの実行時の構造に依存するクエリは、ここでは対象となりません。 
@@ -89,14 +89,14 @@ QTA はセッション ベースの機能であり、セッションが初めて
         -  QTA ワークフローが完了した後、ユーザー データベースで使用する必要がある、目的のターゲット データベース互換レベルを設定します。
         完了したら、 **[次へ]** をクリックします。
     
-       ![新しいデータベースのアップグレード セッションの [設定] ウィンドウ](../../relational-databases/performance/media/qta-new-session-setup.png "新しいデータベースのアップグレード セッションの [設定] ウィンドウ")  
+       ![新しいデータベース アップグレード セッションの [セットアップ] ウィンドウ](../../relational-databases/performance/media/qta-new-session-setup.png "新しいデータベース アップグレードの [セットアップ] ウィンドウ")  
   
     2.  **[設定]** ウィンドウの 2 つの列には、ターゲットとなるデータベースのクエリ ストアの **[現在]** の状態と、 **[推奨]** 設定が表示されます。 
         -  既定では [推奨] 設定が選択されますが、[現在] 列のラジオ ボタンをクリックすると、現在の設定が受け入れられます。また、現在のクエリ ストア構成を微調整することもできます。 
         -  提案された *[期限切れクエリのしきい値]* 設定は、予期されるワークロード期間の日数の 2 倍になります。 これは、クエリ ストアでベースライン ワークロードとデータベースのアップグレード後のワークロードに関する情報を保持する必要があるためです。
         完了したら、 **[次へ]** をクリックします。
 
-       ![新しいデータベースのアップグレードの [設定] ウィンドウ](../../relational-databases/performance/media/qta-new-session-settings.png "新しいデータベースのアップグレードの [設定] ウィンドウ")
+       ![新しいデータベース アップグレードの [設定] ウィンドウ](../../relational-databases/performance/media/qta-new-session-settings.png "新しいデータベース アップグレードの [設定] ウィンドウ")
 
        > [!IMPORTANT]
        > 提案された *[最大サイズ]* は、短い時間のワークロードに適している可能性がある任意の値です。   
@@ -105,7 +105,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
 
 4.  **[調整]** ウィンドウでセッション構成が終了し、次のステップでセッションを開いて続行するよう指示されます。 完了したら、 **[完了]** をクリックします。
 
-    ![新しいデータベースのアップグレードの [調整] ウィンドウ](../../relational-databases/performance/media/qta-new-session-tuning.png "新しいデータベースのアップグレードの [調整] ウィンドウ")
+    ![新しいデータベース アップグレードの [調整] ウィンドウ](../../relational-databases/performance/media/qta-new-session-tuning.png "新しいデータベース アップグレードの [調整] ウィンドウ")
 
 > [!NOTE]
 > データベースで既に推奨されるデータベース互換アップグレード ワークフローが実行された運用サーバーから、テスト サーバーにデータベース バックアップを復元することで、可能な代替シナリオが開始されます。
@@ -145,19 +145,19 @@ QTA はセッション ベースの機能であり、セッションが初めて
         > [!NOTE]
         > ワークロードの実行中に、QTA ウィンドウを閉じてもかまいません。 後でアクティブ状態のままになっているセッションに戻ると、中断したステップから再開されます。 
 
-        ![QTA のステップ 2 のサブステップ 1](../../relational-databases/performance/media/qta-step2-substep1.png "QTA のステップ 2 のサブステップ 1")
+        ![QTA のステップ 2 サブステップ 1](../../relational-databases/performance/media/qta-step2-substep1.png "QTA のステップ 2 サブステップ 1")
 
     2.  **[データベースのアップグレード]** では、データベース互換レベルを適切なターゲットにアップグレードするための許可が求められます。 次のサブステップに進むには、 **[はい]** をクリックします。
 
-        ![QTA のステップ 2 のサブステップ 2 - データベース互換レベルをアップグレードする](../../relational-databases/performance/media/qta-step2-substep2-prompt.png "QTA のステップ 2 のサブステップ 2 - データベース互換レベルをアップグレードする")
+        ![QTA のステップ 2 サブステップ 2 - データベース互換性レベルのアップグレード](../../relational-databases/performance/media/qta-step2-substep2-prompt.png "QTA のステップ 2 サブステップ 2 - データベース互換性レベルのアップグレード")
 
         次のページでは、データベース互換レベルが正常にアップグレードされたことを確認します。
 
-        ![QTA のステップ 2 のサブステップ 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA のステップ 2 のサブステップ 2")
+        ![QTA のステップ 2 サブステップ 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA のステップ 2 サブステップ 2")
 
     3.  **[観測されたデータの収集]** では、クエリストアで、最適化の機会を見つけるために使用される比較ベースラインを収集できるように、ユーザーに代表的なワークロード サイクルの再実行が要求されます。 ワークロードが実行されたら、 **[更新]** ボタンを使用して、機能低下したクエリ (検出された場合) のリストを更新し続けます。 **[表示するクエリ]** の値を変更し、表示されるクエリの数を制限します。 リストの順序は、 **[メトリック]** (期間または CpuTime) と **[集計]** (平均が既定値) に影響を受けます。 **表示するクエリ**の数も選択します。 そのワークロードが完了したら、 **[Done with workload run]\(ワークロードの実行完了\)** をオンにし、 **[次へ]** をクリックします。
 
-        ![QTA のステップ 2 のサブステップ 3](../../relational-databases/performance/media/qta-step2-substep3.png "QTA のステップ 2 のサブステップ 3")
+        ![QTA のステップ 2 サブステップ 3](../../relational-databases/performance/media/qta-step2-substep3.png "QTA のステップ 2 サブステップ 3")
 
         このリストには、次の情報が含まれています。
         -  **クエリ ID** 
@@ -199,7 +199,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
 
     後日、提案された最適化でロールバックが必要な場合は、関連するクエリを選択してから **[ロールバック]** をクリックします。 そのクエリ プラン ガイドは削除され、リストはロールバックされたクエリを削除するために更新されます。 以下の図でクエリ 8 が削除されていることに注目してください。
 
-    ![QTA のステップ 5 - ロールバックする](../../relational-databases/performance/media/qta-step5-rollback.png "QTA のステップ 5 - ロールバックする") 
+    ![QTA のステップ 5 - ロールバック](../../relational-databases/performance/media/qta-step5-rollback.png "QTA のステップ 5 - ロールバック") 
 
     > [!NOTE]
     > 終了したセッションを削除しても、以前に展開されたプラン ガイドは削除**されません**。   
@@ -210,7 +210,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
 **db_owner** ロールのメンバーシップが必要です。
   
 ## <a name="see-also"></a>参照  
- [互換性レベルと SQL Server アップグレード](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
+ [互換性レベルとデータベース エンジンのアップグレード](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [データベース互換性モードの変更とクエリ ストアの使用](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       

@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], examples
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ef27717471df324afe9b55f0f0a0f56d77849486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d98a0a0293114e1b701ecd90f4a7b1ab058b0aa4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112391"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296406"
 ---
 # <a name="developing-specific-types-of-script-components"></a>特定の種類のスクリプト コンポーネントの開発
 

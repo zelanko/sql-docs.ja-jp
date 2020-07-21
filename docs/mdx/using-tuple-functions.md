@@ -1,5 +1,5 @@
 ---
-title: タプル関数の使用 |Microsoft Docs
+title: 組関数の使用 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a329c8786ce580469e4601709509ca8a2de73f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037980"
 ---
-# <a name="using-tuple-functions"></a>タプル関数の使用
+# <a name="using-tuple-functions"></a>組関数の使用
 
 
-  タプル関数は、セットからタプルを取得します。 または、タプルの文字列表記を解決することでタプルを取得します。  
+  組関数は、組の文字列形式を解決することによって、セットから組を取得するか、組を取得します。  
   
- タプル関数は、メンバー関数や集合関数と同様に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用される多次元構造を操作するために不可欠です。  
+ 組関数は、メンバー関数や集合関数と同様に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用される多次元構造を操作するために不可欠です。  
   
- MDX では、次の 3 つのタプル関数がある[Current&#40;MDX&#41;](../mdx/current-mdx.md)、[Item&#40;タプル&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)と[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). 次のクエリは、それぞれの使用方法を示しています。  
+ Mdx には3つの組関数があります。[現在 &#40;mdx&#41;](../mdx/current-mdx.md)、 [Item &#40;組&#41; &#40;Mdx&#41;](../mdx/item-tuple-mdx.md) 、 [strtotuple &#40;mdx&#41;](../mdx/strtotuple-mdx.md)です。 次のクエリの例では、それぞれの使用方法を示しています。  
   
  `WITH`  
   
@@ -46,8 +46,8 @@ ms.locfileid: "68037980"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>関連項目  
- [Functions&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)   
+## <a name="see-also"></a>参照  
+ [関数 &#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)   
  [メンバー関数の使用](../mdx/using-member-functions.md)   
  [集合関数の使用](../mdx/using-set-functions.md)  
   

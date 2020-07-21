@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7082304781a3feab0939b685b16321651b6fda91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773368"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927366"
 ---
 # <a name="view-file-status"></a>ファイルの状態の表示
   ソース管理では、ソース管理の対象であるすべての項目について、状態の詳細な情報が保持されます。 その情報に基づいて、ファイルの現在の状態を確認し、項目の状態レポートを作成できます。  
@@ -32,7 +31,7 @@ ms.locfileid: "62773368"
   
 -   バージョンが作成された日付。  
   
--   任意のバージョンに関連付けられているユーザーのコメント。  
+-   任意のバージョンに関連付けられているユーザーコメント。  
   
 -   ファイルを共有するプロジェクトへのパス  
   
@@ -40,12 +39,12 @@ ms.locfileid: "62773368"
   
 1.  ソリューション エクスプローラーで、項目を選択します。  
   
-2.  **ファイル**メニューで、**ソース管理**、 をクリック**SourceSafe プロパティ**します。  
+2.  [**ファイル**] メニューの [**ソース管理**] をポイントし、[ **SourceSafe のプロパティ**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [設定し、バージョン情報の取得](../../2014/database-engine/set-and-retrieve-version-information.md)   
+ [バージョン情報の設定と取得](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [プロジェクト履歴の表示](../../2014/database-engine/view-project-history.md)   
- [ファイルを取得します。](../../2014/database-engine/retrieve-files.md)   
+ [ファイルの取得](../../2014/database-engine/retrieve-files.md)   
  [ファイルの比較](../../2014/database-engine/compare-files.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_rename を使用して、重複するインデックス名を変更する |Microsoft Docs
+title: Sp_rename を使用して、重複するインデックス名を変更します |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8ffe3b9befd0c7239d32094e5738e0fb2947c5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058814"
 ---
-# <a name="use-sprename-to-rename-duplicate-index-name"></a>sp_rename を使用して重複するインデックス名を変更する
+# <a name="use-sp_rename-to-rename-duplicate-index-name"></a>sp_rename を使用して重複するインデックス名を変更する
   テーブルまたはビューのインデックス名が重複していることをアップグレード アドバイザーが検出しました。 インデックス名を変更して重複を解消した後、アップグレードしてください。  
   
 ## <a name="component"></a>コンポーネント  
@@ -42,7 +41,7 @@ ms.locfileid: "66091356"
           AND i.name = o.name and i.indid < o.indid);  
     ```  
   
-2.  使用**sp_rename**のインデックスの名前を変更します。 インデックス名が同じであるため、どのインデックスの名前が変更されるか判断できません。 このステップによってインデックスを区別できます。  
+2.  インデックス名のいずれかを変更するには、 **sp_rename**を使用します。 インデックス名が同じであるため、どのインデックスの名前が変更されるか判断できません。 このステップによってインデックスを区別できます。  
   
     ```  
     EXEC sp_rename N'table_name.index_name', N'new_index_name', N'INDEX'  
@@ -58,10 +57,10 @@ ms.locfileid: "66091356"
     WHERE i.id = OBJECT_ID('table_or_view_name')  
     ```  
   
-4.  必要に応じて、使用して**sp_rename**インデックス名を修正するには、もう一度です。  
+4.  必要に応じて**sp_rename**を再度使用してインデックス名を修正します。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

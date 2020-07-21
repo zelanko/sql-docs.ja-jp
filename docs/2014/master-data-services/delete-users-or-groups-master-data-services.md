@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0114aa3ca6f6744303c3053003a622185d33f547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fee43f41bb0c0d3755b7b48f374279adb08e140
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971580"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>ユーザーまたはグループを削除する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスする必要のなくなったユーザーまたはグループを削除します。  
@@ -38,7 +37,7 @@ ms.locfileid: "65479902"
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-users-or-groups"></a>ユーザーまたはグループを削除するには  
   
@@ -52,7 +51,7 @@ ms.locfileid: "65479902"
   
 5.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ (マスター データ サービス)](../../2014/master-data-services/security-master-data-services.md)  
   
   

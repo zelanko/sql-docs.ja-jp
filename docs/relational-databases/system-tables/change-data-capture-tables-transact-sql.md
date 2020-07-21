@@ -1,5 +1,5 @@
 ---
-title: 変更データ キャプチャ テーブル (TRANSACT-SQL) |Microsoft Docs
+title: 変更データキャプチャテーブル (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,26 +10,26 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7d6d87ee8b2aa05c3156acb2db9c6604380db887
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c61cc87f293b589f9c3726fcff5c3408774f34bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082683"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890592"
 ---
-# <a name="change-data-capture-tables-transact-sql"></a>変更データ キャプチャのテーブル (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="change-data-capture-tables-transact-sql"></a>変更データキャプチャテーブル (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  変更データ キャプチャでは、変更のデータ操作言語 (DML) と、テーブルに対するデータ定義言語 (DDL) 変更をデータ ウェアハウスに増分読み込むことができるように、テーブルで追跡を有効します。 このセクションのトピックでは、変更データ キャプチャ操作で使用される情報を格納するシステム テーブルについて説明します。  
+  変更データキャプチャを使用すると、テーブルに対するデータ操作言語 (DML) およびデータ定義言語 (DDL) の変更をデータウェアハウスに増分読み込みできるように、テーブルに対する変更の追跡が有効になります。 このセクションのトピックでは、変更データキャプチャ操作で使用される情報を格納するシステムテーブルについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [cdc.<capture_instance>_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
- 関連付けられているソース テーブルにおけるキャプチャ対象列に加えられた変更ごとに 1 つの行を返します。  
+ [cdc. <capture_instance>_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
+ 関連付けられたソーステーブル内のキャプチャ対象列に対して行われた変更ごとに1行の値を返します。  
   
  [cdc.captured_columns](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
- キャプチャ インスタンスで追跡されている各列に対して 1 つの行を返します。  
+ キャプチャインスタンスで追跡されている列ごとに1行の値を返します。  
   
  [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
  データベース内の変更テーブルごとに 1 行を返します。  
@@ -38,16 +38,16 @@ ms.locfileid: "68082683"
  変更データ キャプチャが有効になっているテーブルに対して行われたデータ定義言語 (DDL) の変更について、各変更に対応する 1 行を返します。  
   
  [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)  
- 変更テーブルの行を持つトランザクションごとに 1 つの行を返します。 このテーブルは、トランザクションのコミット ログ シーケンス番号 (LSN) コミットの値と時刻の間でマップを使用します。  
+ 変更テーブル内の行を保持しているトランザクションごとに1行の値を返します。 このテーブルは、ログシーケンス番号 (LSN) のコミット値とトランザクションがコミットされた時刻の間のマッピングに使用されます。  
   
  [cdc.index_columns](../../relational-databases/system-tables/cdc-index-columns-transact-sql.md)  
- 変更テーブルに関連付けられた各インデックス列について、対応する 1 行を返します。  
+ 変更テーブルに関連付けられている各インデックス列に対して1行の値を返します。  
   
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
  変更データ キャプチャのエージェント ジョブの構成パラメーターを返します。  
   
 ## <a name="see-also"></a>関連項目  
- [変更データ キャプチャ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [変更データ キャプチャ関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
+ [変更データキャプチャのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+ [変更データ キャプチャの関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

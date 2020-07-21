@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: メジャー、属性および階層の変更 |Microsoft Docs'
+title: 'レッスン 3: メジャー、属性、および階層の変更 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18312c8c597c783ad3f30dab0bdd386f7e560de6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543354"
 ---
-# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>レッスン 3: メジャー、属性、および階層の修正
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>レッスン 3:メジャー、属性、および階層の修正
   前のレッスンでは、最初のキューブを定義しました。次は、このキューブをさらに使いやすくしましょう。 そのためには、特定のメジャーに書式を適用し、計算やリレーションシップを定義して、さまざまなレベルでのナビゲーションと集計をサポートする階層を追加します。  
   
 > [!NOTE]  
@@ -40,8 +39,8 @@ ms.locfileid: "66078776"
  [配置したキューブの表示](lesson-3-5-browsing-the-deployed-cube.md)  
  この実習では、キューブ デザイナーのブラウザーを使用してキューブ データを表示します。  
   
-## <a name="see-also"></a>関連項目  
- [Analysis Services のチュートリアル シナリオ](analysis-services-tutorial-scenario.md)   
+## <a name="see-also"></a>参照  
+ [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
  [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

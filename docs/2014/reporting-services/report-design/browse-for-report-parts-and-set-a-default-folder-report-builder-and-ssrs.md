@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dd881c13b2398f3a1783f53190097653d04d78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106460"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>レポート パーツの参照と既定のフォルダーの設定 (レポート ビルダーおよび SSRS)
-  レポートを作成する最も簡単な方法では、レポート パーツ ギャラリーからレポートにテーブルやグラフなどの既存のレポート パーツを追加します。 レポートにレポート パーツを追加すると、動作に必要なアイテムもすべて追加されます。 たとえば、データを表示するレポート パーツは、クエリやデータ ソースへの接続などのデータセットに依存しています。 レポートにレポート パーツを追加した後、必要に応じてそのレポート パーツを変更できます。  
+  レポートを作成する最も簡単な方法は、テーブルやグラフなどの既存のレポートパーツをレポートパーツギャラリーからレポートに追加することです。 レポートにレポート パーツを追加すると、動作に必要なアイテムもすべて追加されます。 たとえば、データを表示するレポート パーツは、クエリやデータ ソースへの接続などのデータセットに依存しています。 レポートにレポート パーツを追加した後、必要に応じてそのレポート パーツを変更できます。  
   
  レポート サーバーや、レポート サーバーに統合されている SharePoint サイトにレポート パーツをパブリッシュするための既定のフォルダーを設定できます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66106460"
   
     -   サーバー フォルダー  
   
-    -   型  
+    -   種類  
   
      たとえば、画像を検索するには、 **[条件の追加]** 、 **[種類]** の順にクリックします。 ドロップダウン ボックスの **[画像]** チェック ボックスをオンにし、Enter キーを押してから、検索の虫眼鏡アイコンをクリックします。  
   
@@ -63,10 +63,10 @@ ms.locfileid: "66106460"
  この設定を有効にするためにレポート ビルダーを再起動する必要はありません。  
   
 ## <a name="see-also"></a>参照  
- [更新プログラムまたは更新のチェック&#40;レポート ビルダーおよび SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [更新プログラムを確認するか、&#40;レポートビルダーおよび SSRS&#41;の更新プログラムを無効にする](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [レポート ビルダーのレポート パーツおよびデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [レポートパーツ &#40;レポートビルダーと SSRS&#41;のトラブルシューティング](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [レポート パーツのパブリッシュおよび再パブリッシュ &#40;レポート ビルダーおよび SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

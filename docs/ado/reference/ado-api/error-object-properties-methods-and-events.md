@@ -1,5 +1,5 @@
 ---
-title: エラー オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: Error オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - error object [ADO], members
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: def593c725f2faa004e13bbdb3e6ded3287f51ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2baa9e6dcbc6dd67b93867cdf4f4b5e558cf8861
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933010"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765503"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Error オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Description プロパティ](../../../ado/reference/ado-api/description-property.md)  
   
  [HelpContext、HelpFile プロパティ](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)  
   
- [NativeError プロパティ](../../../ado/reference/ado-api/nativeerror-property-ado.md)  
+ ["エラー" プロパティ](../../../ado/reference/ado-api/nativeerror-property-ado.md)  
   
  [Number プロパティ](../../../ado/reference/ado-api/number-property-ado.md)  
   
@@ -39,5 +39,5 @@ ms.locfileid: "67933010"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)

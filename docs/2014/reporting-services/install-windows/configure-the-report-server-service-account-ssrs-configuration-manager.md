@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261067"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
@@ -22,7 +22,7 @@ ms.locfileid: "63261067"
   
 ## <a name="initial-configuration"></a>初期構成
 
- レポート サーバー サービスのアカウントは、セットアップ時に定義されます。 このサービスは、ドメイン ユーザー アカウントまたは `NetworkService` などのビルトイン アカウントで実行できます。 既定のアカウントはありません。指定した任意のアカウント、[サーバーの構成 - サービス アカウント](../../sql-server/install/server-configuration-service-accounts.md)インストール ウィザードのページがレポート サーバー サービスの初期アカウントになります。  
+ レポート サーバー サービスのアカウントは、セットアップ時に定義されます。 このサービスは、ドメイン ユーザー アカウントまたは `NetworkService` などのビルトイン アカウントで実行できます。 既定のアカウントはありません。インストールウィザードの [サーバーの[構成-サービスアカウント](../../sql-server/install/server-configuration-service-accounts.md)] ページで指定したアカウントは、レポートサーバーサービスの初期アカウントになります。  
   
 > [!IMPORTANT]
 > レポート サーバー Web サービスとレポート マネージャーは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションですが、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アカウントでは実行されません。 単一のサービス アーキテクチャによって、両方の ASP.NET アプリケーションが同じレポート サーバー プロセス ID で実行されます。 これは以前のリリースからの重要な変更です。以前のリリースでは、レポート サーバー Web サービスとレポート マネージャーの両方が、IIS で指定された [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ワーカー プロセス ID で実行されていました。
@@ -44,7 +44,7 @@ ms.locfileid: "63261067"
     > [!NOTE]  
     > レポート サーバーがスケールアウト配置の一部である場合、更新するレポート サーバーのみが影響を受けます。 配置内の他のレポート サーバーの暗号化キーは、サービス アカウントを変更しても影響を受けません。  
   
- アカウントを設定する方法の詳細については、次を参照してください。[サービス アカウントを構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)します。  
+ アカウントを設定する方法については、「[サービスアカウント &#40;SSRS Configuration Manager&#41;を構成](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)する」を参照してください。  
   
 ## <a name="choosing-an-account"></a>アカウントの選択
 
@@ -62,7 +62,7 @@ ms.locfileid: "63261067"
   
  次に示すガイドラインとリンクは、配置に最適な方法を決定するのに役立ちます。  
   
-- [サービス アカウント&#40;SSRS ネイティブ モード&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)します。  
+- [サービスアカウント &#40;SSRS ネイティブモード&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)です。  
   
 - SQL Server のオンライン ブックの「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 」。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "63261067"
   
  パスワードをリセットするには、次の操作を行います。  
   
-1. **開始**メニューで、**コントロール パネルの** 、 をポイント**管理者ツール**、 をクリック**サービス**します。  
+1. [**スタート**] ボタンをクリックし、[**コントロールパネル**]、[**管理ツール**] の順にポイントして、[**サービス**] をクリックします。  
   
-2. 右クリックして**SQL Server Reporting Services**、**プロパティ**します。  
+2. **SQL Server Reporting Services**を右クリックし、[**プロパティ**] を選択します。  
   
-3. クリックして**ログオン**、新しいパスワードを入力します。  
+3. [**ログオン**] をクリックし、新しいパスワードを入力します。  
   
 4. パスワードを変更したら、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動し、[サービス アカウント] ページでパスワードを更新します。 この追加の手順は、レポート サーバーによって内部的に保存されているアカウント情報を更新するために必要です。  
   
@@ -94,29 +94,29 @@ ms.locfileid: "63261067"
   
  データベース アクセス情報を再設定した後は、古い接続が引き続き使用されないように [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] サービスを再起動する必要があります。  
   
-1. **管理ツール**、 をクリックして**SharePoint 2010 サーバーの全体管理**します。  
+1. [**管理ツール**] で、[ **SharePoint 2010 サーバーの全体管理**] をクリックします。  
   
-2. クリックして**アプリケーション管理**します。  
+2. [**アプリケーション管理**] をクリックします。  
   
-3. Reporting Services] セクションで [**データベース アクセスの許可**します。  
+3. [Reporting Services] セクションで、[**データベースアクセスの許可**] をクリックします。  
   
 4. **[OK]** をクリックします。 [資格情報の入力] ダイアログ ボックスが表示されます。  
   
 5. レポート サーバーをホストするコンピューター上のローカルの管理者グループに属しているユーザーの資格情報を入力します。 この資格情報は、サービス アカウント情報を取得する目的のために、レポート サーバー コンピューターへの一度だけの接続に使用されます。 各サービス アカウントに対して作成されたデータベース ログインは、SharePoint データベース内で更新されます。  
   
-6. サービスを再起動するには、次のようにクリックします。**操作**します。  
+6. サービスを再起動するには、[**操作**] をクリックします。  
   
-7. トポロジおよびサービスでは、次のようにクリックします。**サーバーのサービスの**します。  
+7. [トポロジおよびサービス] で、[**サーバーのサービス**] をクリックします。  
   
-8. Windows SharePoint Services の Web アプリケーションをクリックして**停止**します。  
+8. Windows SharePoint Services Web アプリケーションの場合は、[**停止**] をクリックします。  
   
 9. サービスが停止するまで待ちます。  
   
-10. クリックして**開始**します。  
+10. **[開始]** をクリックします。  
   
 > [!NOTE]  
-> SharePoint 製品とテクノロジは、reporting services SharePoint モードのようなサービスの構成にドメイン アカウントが必要です。  
+> SharePoint 製品およびテクノロジでは、reporting services SharePoint モードのようなサービス構成のためにドメインアカウントが必要です。  
   
 ## <a name="next-steps"></a>次の手順
 
- [サービス アカウントを構成&#40;SSRS 構成マネージャー&#41; ](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [サービス アカウント&#40;SSRS ネイティブ モード&#41;](../../sql-server/install/service-account-ssrs-native-mode.md) [レポート サーバー Url の構成&#40;SSRS の構成Manager&#41; ](configure-report-server-urls-ssrs-configuration-manager.md) [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)
+ Ssrs [Configuration Manager&#41;サービスアカウントのサービスアカウントを構成 &#40;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) Ssrs[ネイティブモード &#40;](../../sql-server/install/service-account-ssrs-native-mode.md) [レポートサーバーの url&#41;Ssrs &#40;Configuration Manager](configure-report-server-urls-ssrs-configuration-manager.md)&#41;Reporting Services Configuration Manager[ネイティブモード &#40;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)

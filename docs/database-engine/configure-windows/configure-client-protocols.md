@@ -1,5 +1,6 @@
 ---
 title: クライアント プロトコルの構成 | Microsoft Docs
+description: SQL Server でクライアント アプリケーションによって使用されるプロトコルを構成するさまざまな方法について説明します。 サポートされるプロトコルには、TCP/IP、名前付きパイプ、共有メモリがあります。
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - protocols [SQL Server], client configuration
 - default protocols, client
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2fa898451638503b2f91c97026158e7331a25e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5cca0b54c983fe7a4ef122a45070e53d2143a05e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697980"
 ---
 # <a name="configure-client-protocols"></a>クライアント プロトコルの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 構成マネージャーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクライアント アプリケーションによって使用されるクライアント プロトコルを構成する方法について説明します。 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、TCP/IP ネットワーク プロトコルおよび名前付きパイプ プロトコルを介したクライアント通信をサポートしています。 クライアントが、同じコンピューター上で[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続している場合は、共有メモリ プロトコルも使用できます。 プロトコルの選択には、3 つの一般的な方法があります。  
   
 -   すべてのクライアント アプリケーションを、同じネットワーク プロトコルを使用するように構成します。これを行うには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでプロトコルの順序を設定します。  
@@ -38,9 +39,9 @@ ms.locfileid: "68012811"
   
 -   sqlcmd.exe など、一部のクライアント アプリケーションでは、接続文字列の一部としてプロトコルを指定できます。 詳細については、「[sqlcmd によるデータベース エンジンへの接続](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md)」を参照してください。  
   
-##  <a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
   
-###  <a name="EnableDisable"></a> クライアント プロトコルを有効または無効にするには  
+###  <a name="to-enable-or-disable-a-client-protocol"></a><a name="EnableDisable"></a> クライアント プロトコルを有効または無効にするには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、 **[SQL Server Native Client の構成]** を展開し、 **[クライアント プロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "68012811"
   
 3.  プロトコルを無効にするには、 **[有効なプロトコル]** ボックスでプロトコルをクリックし、 **[無効化]** をクリックします。  
   
-###  <a name="ChangeDefault"></a> 既定のプロトコル、またはクライアント コンピューターのプロトコルの順序を変更するには  
+###  <a name="to-change-the-default-protocol-or-the-protocol-order-for-client-computers"></a><a name="ChangeDefault"></a> 既定のプロトコル、またはクライアント コンピューターのプロトコルの順序を変更するには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、 **[SQL Server Native Client の構成]** を展開し、 **[クライアント プロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68012811"
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーにより、サーバーの別名の構成や既定のクライアント ネットワーク ライブラリのレジストリ エントリが作成されます。 ただし、このアプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ネットワーク ライブラリもネットワーク プロトコルもインストールされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ネットワーク ライブラリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ中にインストールされます。また、ネットワーク プロトコルは、Microsoft Windows セットアップの一部として (または**コントロール パネル**の **[ネットワーク接続]** を使用して) インストールされます。 特定のネットワーク プロトコルは、Windows のセットアップ時にインストールされないことがあります。 そのようなネットワーク プロトコルのインストールの詳細については、製造元のマニュアルを参照してください。  
   
-###  <a name="Configure"></a> TCP/IP を使用するようにクライアントを構成するには  
+###  <a name="to-configure-a-client-to-use-tcpip"></a><a name="Configure"></a> TCP/IP を使用するようにクライアントを構成するには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、 **[SQL Server Native Client の構成]** を展開し、 **[クライアント プロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   

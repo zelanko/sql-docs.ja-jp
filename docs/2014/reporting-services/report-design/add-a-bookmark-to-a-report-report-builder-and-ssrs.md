@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0031e215c0674f87620e283a7bf903b174a40ae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106917"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>レポートへのブックマークの追加 (レポート ビルダーおよび SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66106917"
   
 1.  レポート デザイン ビューで、ブックマークを追加するテキスト ボックス、画像、グラフ、または他のレポート アイテムを選択します。 選択したアイテムのプロパティがプロパティ ペインに表示されます。  
   
-2.  **[ブックマーク]** の隣のテキスト ボックスに、このブックマークのラベルとなる文字列を入力します。 たとえば、レポート内の画像のブックマークとして、「 **BikePhoto** 」と入力できます。 または、式 (**[fx]**) ボタンをクリックして **[式]** ダイアログ ボックスを開き、結果がラベルになる式を指定します。 グループの場合、入力する式はグループ式である必要があります。  
+2.  **[ブックマーク]** の隣のテキスト ボックスに、このブックマークのラベルとなる文字列を入力します。 たとえば、レポート内の画像のブックマークとして、「 **BikePhoto** 」と入力できます。 または、式 ( **[fx]** ) ボタンをクリックして **[式]** ダイアログ ボックスを開き、結果がラベルになる式を指定します。 グループの場合、入力する式はグループ式である必要があります。  
   
     > [!NOTE]  
     >  ブックマークには任意の文字列を使用できますが、レポート内で一意である必要があります。 ブックマークが一意でない場合、そのブックマークへのリンクは、最初に一致したブックマークを参照します。  
@@ -54,7 +54,7 @@ ms.locfileid: "66106917"
   
 7.  リンクをテストするには、 **[実行]** をクリックしてレポートをプレビューし、リンクを設定したレポート アイテムをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  

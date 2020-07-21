@@ -1,5 +1,5 @@
 ---
-title: Web Assistant ストアド プロシージャが削除されました |Microsoft Docs
+title: Web Assistant ストアドプロシージャが削除されました |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 958f5d4c-d9c1-4b38-83c3-ebac60e2a9b6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8bca81e9e02cf7f2bfed14b05a5842ca52a6d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d66b3aa474fe7cc39042680c514ad94627e2eefb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065090"
 ---
 # <a name="web-assistant-stored-procedures-have-been-removed"></a>Web Assistant ストアド プロシージャが削除された
   アップグレード アドバイザーによって Web Assistant ストアド プロシージャの使用が検出されました。  
@@ -24,7 +23,7 @@ ms.locfileid: "66091040"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>説明  
- Web Assistant ストアド プロシージャ**sp_makewebtask**、 **sp_dropwebtask**、 **sp_runwebtask**、および**sp_enumcodepages**されています。削除します。  
+ Web Assistant ストアドプロシージャ**sp_makewebtask**、 **sp_dropwebtask**、 **sp_runwebtask**、および**sp_enumcodepages**が削除されました。  
   
 ## <a name="corrective-action"></a>修正措置  
  代わりに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を使用することをお勧めします。  

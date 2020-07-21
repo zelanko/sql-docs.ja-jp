@@ -11,10 +11,10 @@ ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa1f768e79da36ce681b4096c64e5d46e21f5461
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977741"
 ---
 # <a name="isclosed-method-sqlserverresultset"></a>isClosed メソッド (SQLServerResultSet)
@@ -35,8 +35,8 @@ public boolean isClosed()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この isClosed メソッドは、java. ResultSet インターフェイスの isClosed メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この isClosed メソッドは、java.sql.ResultSet インターフェイスの isClosed メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

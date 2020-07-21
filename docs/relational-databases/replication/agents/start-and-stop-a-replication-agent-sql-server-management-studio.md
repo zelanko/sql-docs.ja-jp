@@ -1,6 +1,7 @@
 ---
-title: レプリケーション エージェントを起動および停止する (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: レプリケーション エージェントを起動および停止する (SSMS)
+description: SQL Server Management Studio とレプリケーション モニターでレプリケーション エージェントの停止を開始する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 339da4b5d9112aa10aa52e12c8a39f6a2adaa30b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5a73fcd84d31a5cde4cfed1e58a611ccac76ed42
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770703"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159360"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>レプリケーション エージェントを起動および停止する (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[ジョブ]** フォルダーと **[レプリケーション]** フォルダーおよびレプリケーション モニターからエージェントを開始および停止します。 以下のエージェントおよびジョブの開始と停止を行うことができます。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[ジョブ]** フォルダーと **[レプリケーション]** フォルダーから、およびレプリケーション モニターからエージェントを開始および停止します。 以下のエージェントおよびジョブの開始と停止を行うことができます。  
   
 -   すべてのパブリケーションで使用されるスナップショット エージェント  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68770703"
   
 2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
-3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。 キュー リーダー エージェントのジョブの名前は、 **[\<ディストリビューター>].\<整数>** という形式になっています。  
+3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。 キュー リーダー エージェントのジョブの名前は、 **[\<Distributor>].\<integer>** という形式になっています。  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>レプリケーション モニターからスナップショット エージェント、ログ リーダー エージェント、またはキュー リーダー エージェントを開始および停止するには  
   
@@ -70,6 +71,6 @@ ms.locfileid: "68770703"
 ## <a name="see-also"></a>参照  
  [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [レプリケーション エージェントの概要](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

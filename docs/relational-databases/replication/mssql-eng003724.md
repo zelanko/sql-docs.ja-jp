@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 10cb119d-92df-4124-b85d-cd2f2666c99c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 774d53b8e11e7daefab7c51e0009739d646303ef
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d692345d5403c805369e8e415863131623694779
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721962"
 ---
-# <a name="mssqleng003724"></a>MSSQL_ENG003724
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="mssql_eng003724"></a>MSSQL_ENG003724
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68766671"
  データベース内のオブジェクトがレプリケートされると、システム テーブル **sysarticles** (スナップショット パブリケーションまたはトランザクション パブリケーションの場合) または **sysmergearticles** (マージ パブリケーションの場合) に、レプリケート済みのマークが付けられています。 レプリケート済みのオブジェクトを削除しようとした場合に、このエラーが発生します。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- データベース オブジェクトを削除する前に、そのオブジェクトがレプリケートされていないことを確認します。 例:  
+ データベース オブジェクトを削除する前に、そのオブジェクトがレプリケートされていないことを確認します。 次に例を示します。  
   
 -   パブリケーション データベースでエラーが発生した場合、オブジェクトを削除する前にパブリケーションからアーティクルを削除します。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
   

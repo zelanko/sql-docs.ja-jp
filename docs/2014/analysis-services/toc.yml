@@ -346,7 +346,7 @@
       items:
         - name: 'レッスン 1:新しいテーブル モデル プロジェクトの作成'
           href: lesson-1-create-a-new-tabular-model-project.md
-        - name: 'レッスン 2:データを追加する'
+        - name: 'レッスン 2: データを追加する'
           href: lesson-2-add-data.md
         - name: 'レッスン 3:列名の変更'
           href: rename-columns.md
@@ -358,7 +358,7 @@
           href: lesson-5-create-calculated-columns.md
         - name: 'レッスン 7: メジャーを作成する'
           href: lesson-6-create-measures.md
-        - name: 'レッスン 8: 主要業績評価指標の作成'
+        - name: 'レッスン 8: 主要業績評価指標を作成する'
           href: lesson-7-create-key-performance-indicators.md
         - name: 'レッスン 9: パースペクティブを作成する'
           href: lesson-8-create-perspectives.md
@@ -397,7 +397,7 @@
               href: lesson-1-3-defining-a-data-source-view.md
             - name: 既定のテーブル名の変更
               href: lesson-1-4-modifying-default-table-names.md
-        - name: 'レッスン 2:キューブの定義と配置'
+        - name: 'レッスン 2: キューブの定義と配置'
           href: lesson-2-defining-and-deploying-a-cube.md
           items:
             - name: ディメンションの定義

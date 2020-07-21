@@ -18,14 +18,14 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e421382b578d8494f7311414f93fec458014d552
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b873c611c0e997c5033c2efed341f93e0ec5aa5e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057697"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71290727"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS によるパッケージの配置
 
@@ -49,10 +49,10 @@ ms.locfileid: "68057697"
 **このチュートリアルの推定所要時間:** 2 時間
 
 ## <a name="what-you-learn"></a>学習する内容    
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新しいツール、コントロール、機能などに慣れる最良の方法は、実際に使ってみることです。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。    
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新しいツール、コントロール、機能などに慣れる最良の方法は、実際に使ってみることです。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。    
     
-## <a name="prerequisites"></a>Prerequisites    
-このチュートリアルは、ファイル システムの基本的な操作は理解していても、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の新機能はほとんど使用したことがないユーザーを対象にしています。 このチュートリアルで使用する基本的な [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の概念をよく理解するためには、最初に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] チュートリアルの「[SSIS ETL パッケージを作成する方法](../integration-services/ssis-how-to-create-an-etl-package.md)」を終えることをお勧めします。    
+## <a name="prerequisites"></a>前提条件    
+このチュートリアルは、ファイル システムの基本的な操作は理解していても、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新機能はほとんど使用したことがないユーザーを対象にしています。 このチュートリアルで使用する基本的な [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の概念をよく理解するためには、最初に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のチュートリアルの「 [SSIS ETL パッケージを作成する方法](../integration-services/ssis-how-to-create-an-etl-package.md)」を終えることをお勧めします。    
     
 ### <a name="on-the-source-computer"></a>ソース コンピューターの場合
 
@@ -80,22 +80,22 @@ ms.locfileid: "68057697"
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]」を参照してください。 SSIS をインストールする場合は、「[Integration Services のインストール](install-windows/install-integration-services.md)」を参照してください。
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 SSIS をインストールする場合は、「[Integration Services のインストール](install-windows/install-integration-services.md)」を参照してください。
     
 -   AdventureWorks データベースでテーブルを作成および削除するための権限と、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で SSIS パッケージを実行するための権限が必要です。    
     
--   `sysssispackages` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] システム データベースの `msdb` テーブルの読み取り権限と書き込み権限が必要です。    
+-   `sysssispackages` `msdb` システム データベースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルの読み取り権限と書き込み権限が必要です。    
     
 配置バンドルを作成したコンピューターにパッケージを配置する場合は、そのコンピューターが配置元コンピューターと配置先コンピューターの両方の必要条件を満たしている必要があります。    
         
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン    
-[レッスン 1:配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
+[レッスン 1: 配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 このレッスンでは、新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加して、ETL ソリューションを配置する準備を行います。    
     
-[レッスン 2:SSIS での配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[レッスン 2: SSIS での配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 このレッスンでは、配置ユーティリティを構築し、配置バンドルに必要なファイルが含まれていることを確認します。    
     
-[レッスン 3:SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)    
+[レッスン 3: SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)    
 このレッスンでは、配置バンドルをターゲット コンピューターにコピーし、パッケージをインストールして、パッケージを実行します。    
     
 

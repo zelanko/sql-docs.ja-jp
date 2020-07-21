@@ -12,29 +12,28 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fbb47d9ec31d5c912c23e5afa6e04e4ea2e6f43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067300"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)
   このダイアログ ボックスを使用すると、フィルターを指定できます。 フィルターを使用すると、特定の条件を満たす項目だけを表示するようにオブジェクト エクスプローラーとユーティリティ エクスプローラーを構成できます。 たとえば、フィルターを使用して、"Maintenance" という単語を含む名前のジョブだけを表示できます。 **[フィルターの設定]** ダイアログ ボックスのヘッダーにはサーバーの名前が含まれ、場合によってはデータベースの名前が含まれます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **プロパティ**  
  フィルター処理の対象となるプロパティを表示します。  
   
- **[演算子]**  
+ **[オペレーター]**  
  フィルターの値をプロパティに適用する方法を選択します。 次のオプションがあります。  
   
 -   **[等しい]**  
   
      このフィルターは、プロパティとこの値が厳密に一致する項目を表示します。  
   
--   **[値を含む]**  
+-   **Contains**  
   
      このフィルターは、プロパティにこの値が含まれている項目を表示します。 プロパティには他のテキストが含まれていてもかまいません。  
   
@@ -66,14 +65,14 @@ ms.locfileid: "63277083"
   
      日付に使用できるこのフィルターは、指定された 2 つの日付で示される範囲よりも前または後の日付を持つ項目を表示します。 **[次の値の範囲外]** を選択し、Tab キーを押して **[オペレーター]** 列の外に移動すると、2 番目の日付を入力するための行が追加されます。  
   
- **[値]**  
+ **Value**  
  プロパティと比較する値を入力します。 日付の場合は、矢印をクリックして日付を選択するためのカレンダーを表示します。  
   
  **[フィルターのクリア]**  
  現在のすべてのフィルター設定を削除します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Management Studio の使用 [SQL Server]](../sql-server-management-studio-ssms.md)   
+ [SQL Server Management Studio を使用する](../sql-server-management-studio-ssms.md)   
  [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

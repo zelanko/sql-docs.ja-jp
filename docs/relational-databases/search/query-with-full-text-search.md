@@ -17,26 +17,26 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629249"
 ---
 # <a name="query-with-full-text-search"></a>フルテキスト検索でのクエリ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 述語の **CONTAINS** および **FREETEXT** と、行セット値関数の **CONTAINSTABLE** と **FREETEXTTABLE** を **SELECT** ステートメントと使用し、フルテキスト クエリを記述します。 この記事では、各述語と関数の例と、使用に最適なものを選択する方法を説明します。
 
 -   単語や語句と一致させるには、**CONTAINS** と **CONTAINSTABLE** を使用します。
 -   単語そのものではなく意味と一致させるには、**FREETEXT** と **FREETEXTTABLE** を使用します。
 
-## <a name="examples_simple"></a> 各述語と関数の例
+## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> 各述語と関数の例
 
-次の例では、AdventureWorks サンプル データベースを使用します。 AdventureWorks の最終リリースについては、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。 サンプル クエリを実行するには、フルテキスト検索も設定する必要があります。 詳細については、「[Query with Full-Text Search](get-started-with-full-text-search.md)」 (フルテキスト検索でのクエリ) を参照してください。 
+次の例では、AdventureWorks サンプル データベースを使用します。 AdventureWorks の最終リリースについては、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。 サンプル クエリを実行するには、フルテキスト検索も設定する必要があります。 詳細については、「[Query with Full-Text Search](get-started-with-full-text-search.md)」 (フルテキスト検索でのクエリ) を参照してください。 
 
 ### <a name="example---contains"></a>例: CONTAINS  
-次の例では、`"Mountain"` という単語を含み、価格が `$80.99` であるすべての製品を検索します。
+次の例では、`$80.99` という単語を含み、価格が `"Mountain"` であるすべての製品を検索します。
   
 ```sql
 USE AdventureWorks2012  
@@ -172,10 +172,10 @@ GO
 
 **詳細情報**。 これらの関数の構文および引数の詳細については、「[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)」と「[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)」を参照してください。
 
-## <a name="examples_specific"></a> 特定の種類の検索
+## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> 特定の種類の検索
 
-###  <a name="Simple_Term"></a> 特定の語または句 (単純語句) の検索  
- [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)、または [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) を使用すると、テーブルで特定の語または句を検索できます。 たとえば、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの **ProductReview** テーブルで、製品に関する記述から "learning curve" という句が含まれるすべてのコメントを検索するには、次のように CONTAINS 述語を使用します。  
+###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> 特定の語または句 (単純語句) の検索  
+ [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)、または [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) を使用すると、テーブルで特定の語または句を検索できます。 たとえば、**データベースの**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルで、製品に関する記述から "learning curve" という句が含まれるすべてのコメントを検索するには、次のように CONTAINS 述語を使用します。  
   
 ```sql
 USE AdventureWorks2012  
@@ -197,7 +197,7 @@ GO
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) および [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) は、句に完全一致するものを検索します。 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) および [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) は、句を個々の語に分解します。
 
-###  <a name="Prefix_Term"></a> プレフィックス付きの語 (プレフィックス語句) の検索  
+###  <a name="search-for-a-word-with-a-prefix-prefix-term"></a><a name="Prefix_Term"></a> プレフィックス付きの語 (プレフィックス語句) の検索  
  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) または [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) を使用すると、指定したプレフィックスを持つ語または句を検索することができます。 指定したプレフィックスで始まるテキストが含まれる列のすべてのエントリが返されます。 たとえば、 `top`というプレフィックス ( `top``ple`、 `top``ping`、 `top`など) が含まれるすべての行を検索する場合、 クエリは次の例のようになります。  
   
 ```sql  
@@ -224,10 +224,10 @@ GO
 
 プレフィックス検索は [CONTAINS](../../t-sql/queries/contains-transact-sql.md) と [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) でサポートされます。
   
-###  <a name="Inflectional_Generation_Term"></a> 特定の語の変化形 (生成語) の検索  
+###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a> 特定の語の変化形 (生成語) の検索  
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)、または [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) を使用すると、動詞のさまざまな時制および活用、または名詞の単数形と複数形 (変化形検索)、または特定の語のシノニム形 (類義語辞典検索) を検索できます。  
   
-次の例は `AdventureWorks` データベースの `ProductReview` テーブルの `Comments` 列にある "foot" のすべての語形 ("foot"、"feet" など) を検索します。 
+次の例は `Comments` データベースの `ProductReview` テーブルの `AdventureWorks` 列にある "foot" のすべての語形 ("foot"、"feet" など) を検索します。 
   
 ```sql  
 USE AdventureWorks2012  
@@ -267,7 +267,7 @@ GO
 
 近接検索の詳細については、「[NEAR による他の単語の近くにある単語の検索](search-for-words-close-to-another-word-with-near.md)」を参照してください。
 
-###  <a name="Weighted_Term"></a> 重み付け値を使用する語または句 (重み付け語句) の検索  
+###  <a name="search-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a> 重み付け値を使用する語または句 (重み付け語句) の検索  
 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) を使用すると、重み付け値を指定して語または句を検索することができます。 重みは 0.0 ～ 1.0 の数値で指定し、一連の語句内における各語句の重要度を示します。 重み 0.0 は最低値であり、重み 1.0 は最高値です。  
   
 次の例のクエリは、重みを使用して、文字列 "Bay" で始まるテキストに "Street" または "View" が含まれる顧客住所をすべて検索します。 結果では、指定した語が多く含まれている行ほど高い順位が付けられます。  
@@ -297,7 +297,7 @@ GO
 
 重み付け語句検索は [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) でサポートされます。
 
-##  <a name="Using_Boolean_Operators"></a> AND、OR、および NOT (ブール演算子) の使用
+##  <a name="use-and-or-and-not-boolean-operators"></a><a name="Using_Boolean_Operators"></a> AND、OR、および NOT (ブール演算子) の使用
  
 CONTAINS 述語と CONTAINSTABLE 関数は、同じ検索条件を使用します。 どちらも、ブール演算子 AND、OR、AND NOT を使用して複数の検索語句を結合した論理演算をサポートします。 たとえば、AND を使用して "latte" と "New York-style bagel" の両方を含む行を検索できます。 また、AND NOT を使用して "bagel" を含み、かつ "cream cheese" を含まない行を検索することもできます。  
   
@@ -319,7 +319,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> 大文字と小文字、ストップ ワード、言語、および類義語辞典
+##  <a name="case-stopwords-language-and-thesaurus"></a><a name="Additional_Considerations"></a> 大文字と小文字、ストップ ワード、言語、および類義語辞典
 
  フルテキスト クエリを記述する場合は、次のオプションも指定できます。
   
@@ -331,7 +331,7 @@ GO
   
 -   **類義語辞典**。 FREETEXT クエリと FREETEXTTABLE クエリでは、類義語辞典を既定で使用します。 CONTAINS と CONTAINSTABLE では、省略可能な THESAURUS 引数をサポートしています。 詳細については、「[フルテキスト検索に使用する類義語辞典ファイルの構成と管理](configure-and-manage-thesaurus-files-for-full-text-search.md)」を参照してください。
   
-##  <a name="tokens"></a> トークン化の結果の確認
+##  <a name="check-the-tokenization-results"></a><a name="tokens"></a> トークン化の結果の確認
 
 特定のワード ブレーカー、類義語辞典、ストップリストの組み合わせをクエリに適用した後に、**sys.dm_fts_parser** 動的管理ビューを使用すると、フルテキスト検索によって結果がどのようにトークン化されるかを確認できます。 詳細については、「[sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md)」を参照してください。  
   

@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7adffba6294d2639f94f8ebe753248bcb58f39dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f48d933dec2dc87d0171641146f652a4e881045e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084474"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735679"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、関数 (インライン テーブル値関数を除く)、プロシージャ、キュー、トリガーなどのユーザー定義モジュールの実行コンテキストを定義できます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68084474"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- SQL Server Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
@@ -58,9 +58,9 @@ Queues
 { EXEC | EXECUTE } AS { SELF | OWNER | 'user_name' }   
 ```  
   
-```  
+```syntaxsql
   
--- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
@@ -105,7 +105,7 @@ DDL Triggers with Database Scope
   
  *login_name* には、グループ、ロール、証明書、キー、および、NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService、NT AUTHORITY\LocalSystem などのビルトイン アカウントを指定できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]による、モジュール内で参照されるオブジェクトに対する権限の評価方法は、呼び出し元のオブジェクトと参照されるオブジェクト間に存在する所有権の継承によって異なります。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、呼び出し元のユーザーに対して、参照されるすべてのオブジェクトへのアクセスを許可するためには、所有権の継承を使用する方法しかありませんでした。  
   
  所有権の継承には、次のような制限があります。  
@@ -196,7 +196,7 @@ GO
   
  Windows グループのメンバーシップを使ってデータベースに暗黙的にアクセスできる *login_name* または *user_name* を指定するには、そのデータベースに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにストアド プロシージャを作成し、実行コンテキストを `OWNER` に割り当てます。  
   
 ```  

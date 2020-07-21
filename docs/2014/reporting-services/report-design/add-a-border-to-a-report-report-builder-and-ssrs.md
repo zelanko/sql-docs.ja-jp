@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1cf33c00dc9bf0b2fbf588fea9793e0deabfc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106876"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>レポートへの罫線の追加 (レポート ビルダーおよび SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106876"
 1.  ヘッダー内のアイテムの外側で右クリックし、 **[ヘッダーのプロパティ]** をクリックします。 **[罫線]** タブで、左、上、右に、必要なスタイルを指定した罫線を追加します。  
   
     > [!NOTE]  
-    >  レポートでヘッダーを使用しない、のみ、レポート本文の周りに罫線を配置することができます、またはヘッダーを追加することができる場合、**挿入**タブ。  
+    >  レポートでヘッダーを使用しない場合は、レポート本文の周りにのみ罫線を配置することも、[**挿入**] タブからヘッダーを追加することもできます。  
   
 2.  デザイン画面のアイテムの外側の本文で右クリックし、 **[本文のプロパティ]** をクリックします。 **[罫線]** タブで、左および右に、必要なスタイルを指定した罫線を追加します。  
   

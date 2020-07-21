@@ -12,16 +12,16 @@ helpviewer_keywords:
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f3e4a41f3fef4cb8b8d64de6015c5e3011490d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6b6f11ac0a41b52f6b8e197b21279a22df46703d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019533"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903754"
 ---
-# <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>集計変換を使用してデータセットの値を集計する
+# <a name="aggregate-values-in-a-dataset-with-the-aggregate-transformation"></a>集計変換を使用してデータセットの値を集計する
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -76,6 +76,6 @@ ms.locfileid: "68019533"
  [集計変換](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
   
   

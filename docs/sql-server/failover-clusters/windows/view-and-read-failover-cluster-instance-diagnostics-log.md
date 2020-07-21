@@ -1,6 +1,7 @@
 ---
-title: フェールオーバー クラスター インスタンスの診断ログを表示して読む方法 | Microsoft Docs
-ms.custom: ''
+title: フェールオーバー クラスター インスタンスの診断ログを表示して読み取る
+description: SQL Server フェールオーバー クラスター インスタンスによって生成される診断ログを表示し、読み取る方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904990"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242880"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>フェールオーバー クラスター インスタンスの診断ログを表示して読む方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,21 +27,21 @@ ms.locfileid: "67904990"
   
 -   **診断ログ設定を構成するには、次を使用:** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
  既定では、SQLDIAG は、SQL Server インスタンス ディレクトリのローカル ログ フォルダーに保存されます。たとえば、AlwaysOn フェールオーバー クラスター インスタンス (FCI) の所有元ノードの "C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG" です。 各 SQLDIAG ログ ファイルのサイズは 100 MB に固定されています。 10 個のログ ファイルがコンピューターに格納された後、新しいログとして再利用されます。  
   
  ログには、拡張イベント ファイル形式が使用されます。 **sys.fn_xe_file_target_read_file** システム関数は、拡張イベントによって作成されるファイルの読み取りに使用することができます。 行ごとに、XML 形式の 1 つのイベントが返されます。 XML データを結果セットとして解析するには、システム ビューに対してクエリを実行します。 詳細については、「[sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  **fn_xe_file_target_read_file**を実行するには、VIEW SERVER STATE 権限が必要です。  
   
  SQL Server Management Studio を管理者として開きます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **診断ログ ファイルを表示するには**  
   
 1.  **[ファイル]** メニューから、 **[開く]** 、 **[ファイル]** を選択し、表示する診断ログ ファイルを選択します。  
@@ -55,7 +56,7 @@ ms.locfileid: "67904990"
   
 4.  **[ExtendedEvents]** メニューを使用し、 **[フィルター]** オプションを選択することによって、イベント データをフィルター選択したり並べ替えたりすることができます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **診断ログ ファイルを表示するには**  
   
  SQLDIAG ログ ファイル内のすべてのログ アイテムを表示するには、次のクエリを使用します。  
@@ -87,7 +88,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  WHERE 句を使用して、特定のコンポーネントまたは状態の結果にフィルターを適用することができます。  
   
-##  <a name="TsqlConfigure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Transact-SQL の使用  
  **診断ログのプロパティを構成するには**  
   
 > [!NOTE]  
@@ -95,9 +96,9 @@ ORDER BY Time;
   
  データ定義言語 (DDL) ステートメント **ALTER SERVER CONFIGURATION** を使用すると、[sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) プロシージャによってキャプチャされた診断データのログ記録を開始または停止し、SQLDIAG ログの構成パラメーター (ログ ファイルのロールオーバー回数、ログ ファイルのサイズ、ファイルの場所など) を設定できます。 構文の詳細については、「 [Setting diagnostic log options](../../../t-sql/statements/alter-server-configuration-transact-sql.md#Diagnostic)」を参照してください。  
   
-###  <a name="ConfigTsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> 例 (Transact-SQL)  
   
-####  <a name="TsqlExample"></a> Setting diagnostic log options  
+####  <a name="setting-diagnostic-log-options"></a><a name="TsqlExample"></a> Setting diagnostic log options  
  このセクションの例では、診断ログ オプションの値を設定する方法を示します。  
   
 ##### <a name="a-starting-diagnostic-logging"></a>A. 診断ログの記録を開始する  
@@ -131,6 +132,6 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 ```  
   
 ## <a name="see-also"></a>参照  
- [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

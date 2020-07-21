@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53ce2b9804cf86f15ac5cd2290f6ef001e907a48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971792"
 ---
 # <a name="create-a-model-master-data-services"></a>モデルを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルを作成してモデル オブジェクトを含めます。  
@@ -26,7 +25,7 @@ ms.locfileid: "65479934"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
 ### <a name="to-create-a-model"></a>モデルを作成するには  
   
@@ -34,15 +33,15 @@ ms.locfileid: "65479934"
   
 2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[モデル]** をクリックします。  
   
-3.  **モデルのメンテナンス**] ページで [**モデルの追加**します。  
+3.  [**モデルのメンテナンス**] ページで、[**モデルの追加**] をクリックします。  
   
-4.  **モデル名**ボックス モデルの名前を入力します。  
+4.  [**モデル名**] ボックスにモデルの名前を入力します。  
   
 5.  (オプション) **[モデルと同じ名前のエンティティを作成する]** をクリックして、モデルと同じ名前のエンティティを作成します。  
   
-6.  必要に応じて、**モデルと同じ名前の明示的階層を作成する**モデルと同じ名前の明示的階層を作成します。 このオプションを使用すると、コレクションのエンティティも有効になります。  
+6.  必要に応じ**て、[モデルと同じ名前の明示的階層を作成**する] を選択して、モデルと同じ名前の明示的階層を作成します。 このオプションを使用すると、コレクションのエンティティも有効になります。  
   
-7.  必要に応じて、**必須階層 (すべてのリーフ メンバーが含まれる**必須階層として明示的階層を作成します。  
+7.  必要に応じて、[必須階層] を選択します (必須階層として明示的階層を作成するに**は、すべてのリーフメンバーが含ま**れます)。  
   
 8.  **[モデルの保存]** をクリックします。  
   
@@ -50,10 +49,10 @@ ms.locfileid: "65479934"
   
 -   [エンティティを作成する (マスター データ サービス)](create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
- [モデル (マスター データ サービス)](../../2014/master-data-services/models-master-data-services.md)   
- [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)   
- [モデルを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-model-master-data-services.md)   
- [モデル名を変更&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [モデル &#40;マスターデータサービス&#41;](../../2014/master-data-services/models-master-data-services.md)   
+ [エンティティ &#40;マスターデータサービス&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+ [モデル &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
+ [モデル名を変更する &#40;マスターデータサービス&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)  
   
   

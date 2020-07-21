@@ -13,36 +13,36 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766ae29c9024afd31b4c2bf353653f9f6b1a079f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24c45f661afff669e64dae6c800d19a57635aebe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123723"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002180"
 ---
 # <a name="create-primary-keys"></a>主キーの作成
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して主キーを定義できます。 主キーを作成すると、指定に従って対応する一意なクラスター化または非クラスター化インデックスが自動的に作成されます。
 
-## <a name="BeforeYouBegin"></a> はじめに
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに
 
-### <a name="Restrictions"></a> 制限事項と制約事項
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項
 
 - テーブルに含めることができる PRIMARY KEY 制約は 1 つだけです。
 
 - PRIMARY KEY 制約中で定義する列はすべて、NOT NULL として定義する必要があります。 NULL 値を許容するかどうかを指定しない場合、PRIMARY KEY 制約の影響を受けるすべての列は NOT NULL に設定されます。
 
-### <a name="Security"></a> セキュリティ
+### <a name="security"></a><a name="Security"></a> セキュリティ
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 主キーが設定された、新しいテーブルを作成するには、データベースの CREATE TABLE 権限と、テーブルを作成するスキーマの ALTER 権限が必要です。
 
 既存のテーブルに主キーを作成するには、テーブルに対する ALTER 権限が必要です。
 
-## <a name="SSMSProcedure"></a> SQL Server Management Studio の使用
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用
 
 ### <a name="to-create-a-primary-key"></a>主キーを作成するには
 
@@ -59,7 +59,7 @@ ms.locfileid: "68123723"
 
 複合キーを定義する場合は、主キーの列の順序が、テーブルに表示される列の順序と同じになります。 ただし、主キー作成後に列の順序を変更することもできます。 詳細については、「 [主キーの変更](../../relational-databases/tables/modify-primary-keys.md)」を参照してください。
 
-## <a name="TsqlProcedure"></a> Transact-SQL の使用
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
 
 ### <a name="to-create-a-primary-key-in-an-existing-table"></a>既存のテーブルに主キーを作成するには
 
@@ -83,7 +83,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 ;
 ```
 
-### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>新しいテーブルに非クラスター化インデックスの主キーを作成するには
+### <a name="to-create-a-primary-key-with-clustered-index-in-a-new-table"></a>新しいテーブルにクラスター化インデックス付きの主キーを作成するには
 
 次の例では、AdventureWorks データベース内で、テーブルを作成して `CustomerID` 列に主キーを、`TransactionID` にクラスター化インデックスを定義します。
 

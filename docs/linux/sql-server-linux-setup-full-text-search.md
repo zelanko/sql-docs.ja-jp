@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 9a637e6b12c674102bd09239739a137e1d442e12
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065090"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895284"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux に SQL Server フルテキスト検索をインストールする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 以下の手順では、Linux に [SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) をインストールします。 フルテキスト検索を使うと、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行できます。 このリリースの既知の問題については、[リリース ノート](sql-server-linux-release-notes.md)をご覧ください。
 
@@ -30,7 +30,7 @@ ms.locfileid: "68065090"
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">RHEL へのインストール</a>
+## <a name=""></a><a name="RHEL">RHEL へのインストール</a>
 
 次のコマンドを使って、Red Hat Enterprise Linux に **mssql-server-fts** をインストールします。 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 オフライン インストールが必要な場合は、[リリース ノート](sql-server-linux-release-notes.md)に記載されているフルテキスト検索のパッケージのダウンロードを探します。 次に、[SQL Server のインストール](sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
-## <a name="ubuntu">Ubuntu へのインストール</a>
+## <a name=""></a><a name="ubuntu">Ubuntu へのインストール</a>
 
 次のコマンドを使って、Ubuntu に **mssql-server-fts** をインストールします。 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 オフライン インストールが必要な場合は、[リリース ノート](sql-server-linux-release-notes.md)に記載されているフルテキスト検索のパッケージのダウンロードを探します。 次に、[SQL Server のインストール](sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
-## <a name="SLES">SLES へのインストール</a>
+## <a name=""></a><a name="SLES">SLES へのインストール</a>
 
 次のコマンドを使って、SUSE Linux Enterprise Server に **mssql-server-fts** をインストールします。 
 
@@ -86,13 +86,13 @@ sudo zypper update mssql-server-fts
 
 フルテキスト検索では、言語に基づいて個々の単語の識別方法を決定する、[ワード ブレーカー](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)が使われています。 **sys.fulltext_languages** カタログ ビューに対してクエリを実行することで、登録されているワード ブレーカーの一覧を取得できます。 以下の言語のワード ブレーカーが SQL Server と共にインストールされます。
 
-| [言語] | 言語 ID |
+| 言語 | 言語 ID |
 |---|---|
-| ニュートラル | 0 |
+| 中立 | 0 |
 | アラビア語 | 1025 |
 | ベンガル語 (インド) | 1093 |
 | ブークモール | 1044 |
-| Brazilian | 1046 |
+| ポルトガル語 (ブラジル) | 1046 |
 | 英語 (U.K.) | 2057 |
 | Bulgarian | 1026 |
 | カタロニア語 | 1027 |
@@ -128,12 +128,12 @@ sudo zypper update mssql-server-fts
 | Russian | 1049 |
 | セルビア語 (キリル) | 3098 |
 | セルビア語 (ラテン) | 2074 |
-| Simplified Chinese | 2052 |
+| 簡体中国語 | 2052 |
 | Slovak | 1051 |
 | Slovenian | 1060 |
 | Spanish | 3082 |
 | Swedish | 1053 |
-| タミール語 | 1097 |
+| タミル語 | 1097 |
 | テルグ語 | 1098 |
 | Thai | 1054 |
 | Traditional Chinese | 1028 |
@@ -142,13 +142,13 @@ sudo zypper update mssql-server-fts
 | ウルドゥ語 | 1056 |
 | ベトナム語 | 1066 |
 
-## <a id="filters"></a> フィルター
+## <a name="filters"></a><a id="filters"></a> フィルター
 
 フルテキスト検索では、バイナリ ファイルに格納されているテキストも操作できます。 ただし、この場合は、ファイルを処理するためにインストール済みのフィルターが必要です。 フィルターの詳細については、「[検索用フィルターの構成と管理](../relational-databases/search/configure-and-manage-filters-for-search.md)」をご覧ください。
 
 インストールされているフィルターの一覧を確認するには、**sp_help_fulltext_system_components 'filter'** を呼び出します。 SQL Server には、以下のフィルターがインストールされています。
 
-| [コンポーネント名] | クラス ID | バージョン |
+| [コンポーネント名] | クラス ID | Version |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -280,6 +280,6 @@ sudo zypper update mssql-server-fts
     GO
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 フルテキスト検索の詳細については、[SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md)に関する記事をご覧ください。 

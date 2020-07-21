@@ -1,5 +1,6 @@
 ---
 title: ネイティブ コンパイル T-SQL モジュールの変更 | Microsoft Docs
+description: SQL Server と Azure SQL Database でネイティブ コンパイル ストアド プロシージャとネイティブ コンパイル Transact-SQL モジュールに対して ALTER 操作を実行する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03f7e4fd87068e31674e74dc81dd33dadba323cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a91880504a74a7fae9d98018b31994ded63199c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668536"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`ALTER` ステートメントを使用して、ネイティブ コンパイル ストアド プロシージャおよびスカラー UDF やトリガーなどの他のネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールに対して、`ALTER` 操作を実行できます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`ALTER` ステートメントを使用して、ネイティブ コンパイル ストアド プロシージャおよびスカラー UDF やトリガーなどの他のネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールに対して、`ALTER` 操作を実行できます。  
   
 ネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールに対して `ALTER` を実行すると、モジュールは新しい定義を使用して再コンパイルされます。 再コンパイルの進行中、古いバージョンのモジュールは引き続き実行に使用できます。 コンパイルが完了すると、モジュールの実行は削除され、新しいバージョンのモジュールがインストールされます。 ネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールを変更する場合、次のオプションを変更できます。  
   

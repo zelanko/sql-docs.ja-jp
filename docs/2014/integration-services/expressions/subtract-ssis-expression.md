@@ -10,15 +10,14 @@ helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03ede2272de2c574909ed44bb0291b3c56911f0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26cdffc6862ace3bd0c9049ed24e04fce0b8fca9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768734"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428049"
 ---
 # <a name="--subtract-ssis-expression"></a>- (減算) (SSIS 式)
   最初の数値式から 2 番目の数値式を減算します。  
@@ -38,10 +37,10 @@ numeric_expression1 - numeric_expression2
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  式が正しい順序で評価されるようにするために、マイナス単項式はかっこで囲みます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  オペランドのいずれかが NULL の場合、結果は NULL になります。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -57,7 +56,7 @@ numeric_expression1 - numeric_expression2
 ListPrice - StandardCost  
 ```  
   
- この例では、計算した値を **ListPrice** 列から減算します。 変数 **Discount%** は、名前に % 文字が含まれているため、角かっこで囲む必要があります。 詳細については、「[識別子 &#40;SSIS&#41;](identifiers-ssis.md)」を参照してください。  
+ この例では、計算した値を **ListPrice** 列から減算します。 変数 **Discount%** は、名前に % 文字が含まれているため、角かっこで囲む必要があります。 詳しくは、「[識別子 &#40;SSIS&#41;](identifiers-ssis.md)」をご覧ください。  
   
 ```  
 ListPrice - (ListPrice * @[Discount%])  

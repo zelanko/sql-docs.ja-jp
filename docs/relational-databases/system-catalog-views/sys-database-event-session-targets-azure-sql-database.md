@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_targets (Azure SQL データベース) |Microsoft Docs
+title: database_event_session_targets (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -8,45 +8,44 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e736adef1648785ec0d037688c340f31a0e1bda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 83f55f7ebef39866b94606151ea6e8c8d3ab2e83
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915098"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003009"
 ---
-# <a name="sysdatabaseeventsessiontargets-azure-sql-database"></a>sys.database_event_session_targets (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets (Azure SQL Database)
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   イベント セッションのイベント ターゲットごとに 1 行のデータを返します。  
   
 ||  
 |-|  
-|**適用対象**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 およびそれ以降のバージョン。|  
+|**に適用さ**れます: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 およびそれ以降のすべてのバージョン。|  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**int**|イベント セッションの ID。 NULL 値は許可されません。|  
-|target_id|**int**|ターゲットの ID。 ID、イベント セッション オブジェクト内で一意です。 NULL 値は許可されません。|  
-|NAME|**sysname**|イベント ターゲットの名前。 NULL 値は許可されません。|  
-|パッケージ (package)|**sysname**|イベント ターゲットを含むイベント パッケージの名前。 NULL 値は許可されません。|  
-|モジュール|**sysname**|イベント ターゲットを含むモジュールの名前。 NULL 値は許可されません。|  
+|event_session_id|**int**|イベントセッションの ID。 NULL 値は許可されません。|  
+|target_id|**int**|ターゲットの ID。 ID は、イベントセッションオブジェクト内で一意です。 NULL 値は許可されません。|  
+|name|**sysname**|イベントターゲットの名前。 NULL 値は許可されません。|  
+|package|**sysname**|イベントターゲットを含むイベントパッケージの名前。 NULL 値は許可されません。|  
+|name|**sysname**|イベント ターゲットを含むモジュールの名前。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="remarks"></a>コメント  
- このビューには、次のリレーションシップの基数があります。  
+ このビューには、次のリレーションシップ基数があります。  
   
 ||||  
 |-|-|-|  
-|From|変換先|リレーションシップ|  
-|sys.database_event_session_targets.event_session_id|sys.database_event_sessions.event_session_id|多対一|  
+|From|終了|リレーションシップ|  
+|database_event_session_targets。 event_session_id|database_event_sessions。 event_session_id|多対一|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   

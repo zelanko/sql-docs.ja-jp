@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 907fe6a826607fe1cb403ad9b8debe6faf6771fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63162486"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025419"
 ---
 # <a name="guidelines-for-online-index-operations"></a>オンライン インデックス操作のガイドライン
   インデックス操作をオンラインで実行するときは、次のガイドラインに従ってください。  
   
--   クラスター化インデックスを作成または削除は再構築、オフライン基になるテーブルには、次のラージ オブジェクト (LOB) データ型が含まれている場合: `image`、 **ntext**、および`text`します。  
+-   基になるテーブルに次の LOB (ラージオブジェクト) データ型 ( `image` 、 **ntext**、および) が含まれている場合は、クラスター化インデックスを作成、再構築、または削除する必要があり `text` ます。  
   
 -   ローカル一時テーブルのインデックスの作成、再構築、または削除は、オンラインでは実行できません。 この制限は、グローバル一時テーブルのインデックスには当てはまりません。  
   
 > [!NOTE]  
->  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
  次の表に、オンラインで実行可能なインデックス操作と、これらのオンライン操作対象から除外されるインデックスを示します。 また、その他の制限についても記載します。  
   
@@ -67,11 +66,11 @@ ms.locfileid: "63162486"
   
  オンラインでの操作を推奨しますが、実際の環境と特定の要件を評価してください。 オフラインでインデックス操作を実行することが最適な場合もあります。 この場合、操作中にユーザーからのデータ アクセスは制限されますが、操作をより短時間で完了でき、使用するリソースも軽減できます。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を実行するマルチプロセッサ コンピューターでは、他のクエリと同様に、インデックスのステートメントがこのステートメントに関連付けられているスキャン操作や並べ替え操作の実行に、より多くのプロセッサを使用する場合があります。 MAXDOP インデックス オプションを使用して、オンラインでのインデックス操作専用に使用するプロセッサ数を制御できます。 このようにすることで、インデックス操作が使用するリソースと他の同時実行ユーザーが使用するリソースのバランスをとることができます。 詳細については、「 [並列インデックス操作の構成](configure-parallel-index-operations.md)」を参照してください。 サポート並列インデックス操作をする SQL Server のエディションの詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を実行するマルチプロセッサ コンピューターでは、他のクエリと同様に、インデックスのステートメントがこのステートメントに関連付けられているスキャン操作や並べ替え操作の実行に、より多くのプロセッサを使用する場合があります。 MAXDOP インデックス オプションを使用して、オンラインでのインデックス操作専用に使用するプロセッサ数を制御できます。 このようにすることで、インデックス操作が使用するリソースと他の同時実行ユーザーが使用するリソースのバランスをとることができます。 詳細については、「 [並列インデックス操作の構成](configure-parallel-index-operations.md)」を参照してください。 並列インデックス操作をサポートする SQL Server のエディションの詳細については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
  S-Lock または Sch-M ロックはインデックス操作の最後のフェーズで保持されるので、BEGIN TRANSACTION...COMMIT ブロックなど、明示的なユーザー トランザクション内でのオンラインのインデックス操作を実行する場合は十分に注意してください。 この場合、ロックがトランザクションの最後まで保持され、その結果ユーザーのコンカレンシーが損なわれます。  
   
- インデックスをオンラインで再構築すると、 `MAX DOP > 1` オプションと `ALLOW_PAGE_LOCKS = OFF` オプションでの実行が許可されたときに断片化が増加する可能性があります。 詳細については、「[How It Works:Online Index Rebuild - Can Cause Increased Fragmentation (しくみ: オンラインでのインデックス再構築 - 断片化が増加する可能性)](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)」をご覧ください。  
+ インデックスをオンラインで再構築すると、 `MAX DOP > 1` オプションと `ALLOW_PAGE_LOCKS = OFF` オプションでの実行が許可されたときに断片化が増加する可能性があります。 詳細については、「 [動作方法: オンラインでのインデックス再構築 - 断片化が増加する可能性](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)」を参照してください。  
   
 ## <a name="transaction-log-considerations"></a>トランザクション ログに関する注意点  
  オフライン、オンラインを問わず、大規模なインデックス操作を行うと、大量のデータ読み込みが発生し、トランザクション ログがすぐにいっぱいになってしまうことがあります。 インデックス操作をロールバックできるようにするため、インデックス操作が完了するまでは、トランザクション ログを切り捨てることはできません。ただし、インデックス操作中にログをバックアップすることはできます。 したがって、トランザクション ログには、インデックス操作中にインデックス操作によるトランザクションと、同時実行ユーザーによるトランザクションの両方を格納できるだけの十分な領域が割り当てられている必要があります。 詳細については、「 [インデックス操作用のトランザクション ログのディスク領域](transaction-log-disk-space-for-index-operations.md)」を参照してください。  

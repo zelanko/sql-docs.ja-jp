@@ -1,6 +1,6 @@
 ---
-title: bcp を使用したデータ ファイルのプレフィックス長の指定 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: bcp を使用したデータ ファイルのプレフィックス長の指定
+description: この記事では、ネイティブ形式でデータ ファイルに一括エクスポートするためのコンパクトなファイル ストレージを提供するために、フィールドの長さをエンコードするプレフィックス フィールドについて説明します。
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -16,15 +16,16 @@ ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a3aa4fba82638e262800f458f4b7d73298ddfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e6692984d0383a671ed66b9a7b36032e185aea0b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062466"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003141"
 ---
-# <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp を使用したデータ ファイルのプレフィックス長の指定 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>bcp を使用したデータ ファイルのプレフィックス長の指定 (SQL Server)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   **bcp** コマンドでは、ネイティブ形式のデータをデータ ファイルに一括エクスポートするためのファイル ストレージが最も少なくなるように、各フィールドの前にそのフィールドの長さを 1 文字以上の文字列で指定します。 このような文字列を、 *プレフィックス長文字列*と呼びます。  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>プレフィックス長の bcp プロンプト  
@@ -43,7 +44,7 @@ ms.locfileid: "68062466"
 > [!IMPORTANT]  
 >  ネイティブ形式を使用するときは、フィールド ターミネータではなくプレフィックス長を使用します。 ネイティブ形式のデータ ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部バイナリ データ形式で格納されるので、ネイティブ形式のデータがターミネータと競合することがあります。  
   
-##  <a name="PrefixLengthsExport"></a> 一括エクスポートのプレフィックス長  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> 一括エクスポートのプレフィックス長  
   
 > [!NOTE]  
 >  フィールドをエクスポートするときにプレフィックス長のプロンプトに表示される既定値は、フィールドの最も効率的なプレフィックス長を示します。  
@@ -60,7 +61,7 @@ ms.locfileid: "68062466"
 |**nvarchar**|2|2|2|2|  
 |**text***|4|4|4|4|  
 |**ntext***|4|4|4|4|  
-|**binary**|2|2|2|2|  
+|**[バイナリ]**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
 |**image***|4|4|4|4|  
 |**datetime**|0|1|0|1|  
@@ -86,7 +87,7 @@ ms.locfileid: "68062466"
   
  \***ntext**、 **text**、および **image** データ型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 **nvarchar(max)** 、 **varchar(max)** 、 **varbinary(max)** を使用してください。  
   
-##  <a name="PrefixLengthsImport"></a> 一括インポートのプレフィックス長  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> 一括インポートのプレフィックス長  
  データが一括インポートされるときは、プレフィックス長はデータ ファイルが作成されたときに指定された値になります。 **bcp** コマンドでデータ ファイルが作成されなかった場合、プレフィックス長文字列が存在しない場合があります。 この場合は、プレフィックス長に 0 を指定します。  
   
 > [!NOTE]  

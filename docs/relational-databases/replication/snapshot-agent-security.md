@@ -15,15 +15,15 @@ ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab40ebb4935616ff8960c3348756e36d45203c03
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2eeaa27bc549be57503bfa13ec1de5807b9c7e35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767647"
 ---
 # <a name="snapshot-agent-security"></a>[スナップショット エージェントのセキュリティ]
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[スナップショット エージェントのセキュリティ]** ダイアログ ボックスを使用すると、次の項目を指定できます。  
   
 -   ディストリビューターでスナップショット エージェントを実行するときに使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウント。 エージェント プロセスがこのアカウントで実行されるため、Windows アカウントは *プロセス アカウント*とも呼ばれます。  
@@ -38,7 +38,7 @@ ms.locfileid: "68769550"
  各アカウントに正しいパスワードが指定され、すべてのアカウントが有効である必要があります。 アカウントとパスワードは、エージェントが実行されるまで検証されません。  
   
 ## <a name="options"></a>オプション  
- **Process account**  
+ **[プロセス アカウント]**  
  ディストリビューターでスナップショット エージェントを実行するときに使用される  Windows アカウントを入力します。 指定する Windows アカウントは、次の条件を満たしている必要があります。  
   
 -   最低でも、ディストリビューション データベースで **db_owner** 固定データベース ロールのメンバーである。  

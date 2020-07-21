@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;サービス名&gt;プロパティ ([ログオン] タブ) |Microsoft Docs
+title: NS $ &lt; サービス名 &gt; プロパティ ([ログオン] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a811e815cf4321dca126ecb584cd226a225a306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008011"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;サービス名&gt; プロパティ ([ログオン] タブ)
   **[Notification Services のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、 [!INCLUDE[ssNS](../../includes/ssns-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ローカル システム アカウント]**  
  ローカル システム アカウントを指定します。このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスと他のサーバーとの対話が制限されることもあります。  
   
@@ -30,7 +29,7 @@ ms.locfileid: "63049239"
  **アカウント名**  
  ローカル ユーザー アカウント名またはドメイン ユーザー アカウント名を指定します。  
   
- **Password**  
+ **パスワード**  
  アカウントのパスワードを入力します。  
   
  **[パスワードの確認入力]**  
@@ -39,7 +38,7 @@ ms.locfileid: "63049239"
  **[開始]**  
  サービスを開始します。  
   
- **[停止]**  
+ **Stop**  
  サービスを停止します。  
   
  **[一時停止]**  

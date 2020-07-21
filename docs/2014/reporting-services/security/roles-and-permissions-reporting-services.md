@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0e6098a51afde04164e3ef0dfa5e5297457b4440
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101796"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>ロールと権限 (Reporting Services)
@@ -43,7 +43,7 @@ ms.locfileid: "66101796"
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  SharePoint グループ、権限レベル、および権限を使用してレポート サーバーへのアクセスを制御する方法を説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポート サーバーでの認証](authentication-with-the-report-server.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   

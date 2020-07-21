@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dec2e73de3c4c3525b29b44b7c4563a7fd6887ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d42f95c8a7df87f20ebaa30501b96b5f2a00815a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127300"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050730"
 ---
-# <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (拡張ストアド プロシージャ API)
+# <a name="srv_getbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -60,7 +59,7 @@ bindtoken
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="to-bind-an-extended-stored-procedure-session-to-the-client-session-that-called-it-so-they-share-the-same-transaction-lock-space"></a>同じトランザクション ロック領域を共有するために、拡張ストアド プロシージャのセッションを呼び出し元のクライアント セッションにバインドするには  
   

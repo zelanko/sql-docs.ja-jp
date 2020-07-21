@@ -1,5 +1,5 @@
 ---
-title: テーブルまたはデータ ソース ビュー (Analysis Services) の名前付きクエリの置換 |Microsoft Docs
+title: データソースビューでのテーブルまたは名前付きクエリの置換 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b625081a4b7cafaab537e91f9c2730578d37efab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073128"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545757"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>データ ソース ビュー内のテーブルまたは名前付きクエリの置換 (Analysis Services)
   データ ソース ビュー デザイナーでは、データ ソース ビュー (DSV) 内のテーブル、ビュー、または名前付きクエリを、同じデータ ソースまたは異なるデータ ソースの別のテーブルやビュー、あるいは DSV で定義されている名前付きクエリに置換できます。 テーブルを置換した場合、DSV 内のテーブルのオブジェクト ID は変更されないので、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースまたはプロジェクト内でそのテーブルを参照している他のすべてのオブジェクトは、引き続きそのテーブルを参照します。 名前や列の型の一致に基づいて、引き続き関連のあるリレーションシップは維持されます。 これに対して、テーブルを削除して追加した場合、参照とリレーションシップは失われるので、再作成する必要があります。  
@@ -33,7 +32,7 @@ ms.locfileid: "66073128"
 > [!IMPORTANT]  
 >  データ ソース内のテーブルの名前を変更した場合は、DSV を更新する前に、テーブルの置換手順を実行し、名前を変更したテーブルを DSV 内の対応するテーブルのソースとして指定します。 置換および名前変更の手順を行うと、DSV 内のテーブル、テーブルの参照、およびテーブルのリレーションシップは維持されます。 この手順を実行しないと、DSV を更新したときに、データ ソース内の名前を変更したテーブルは削除されたと見なされます。 詳細については、「[データ ソース ビューでのスキーマの更新 (Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)」を参照してください。  
   
-##  <a name="bkmk_nq"></a> テーブルを名前付きクエリで置換する  
+##  <a name="replace-a-table-with-a-named-query"></a><a name="bkmk_nq"></a> テーブルを名前付きクエリで置換する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でプロジェクトを開くか、テーブルまたは名前付きクエリを置換するデータ ソース ビューが含まれているデータベースに接続します。  
   
@@ -64,6 +63,6 @@ ms.locfileid: "66073128"
 6.  変更したデータ ソース ビューを保存します。  
   
 ## <a name="see-also"></a>参照  
- [「多次元モデルのデータ ソース ビュー」](data-source-views-in-multidimensional-models.md)  
+ [多次元モデル内のデータ ソース ビュー](data-source-views-in-multidimensional-models.md)  
   
   

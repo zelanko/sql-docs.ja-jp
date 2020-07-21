@@ -1,5 +1,5 @@
 ---
-title: sp_adduser (TRANSACT-SQL) |Microsoft Docs
+title: sp_adduser (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c917889a4ed435e59e7d165841234b80390dc7e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117904"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85875417"
 ---
-# <a name="spadduser-transact-sql"></a>sp_adduser (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースに新しいユーザーを追加します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[CREATE USER](../../t-sql/statements/create-user-transact-sql.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,29 +44,29 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login'` 名前を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。 *ログイン*は、 **sysname**、既定値はありません。 *ログイン*既存する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。  
+`[ @loginame = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインの名前を指定します。 *login*は**sysname**であり、既定値はありません。 *ログイン*には、既存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたは Windows ログインを指定する必要があります。  
   
-`[ @name_in_db = ] 'user'` 新しいデータベース ユーザーの名前です。 *ユーザー*は、 **sysname**、既定値は NULL です。 場合*ユーザー*が指定されていない、既定で、新しいデータベース ユーザーの名前、*ログイン*名。 指定する*ユーザー*サーバー レベルのログイン名と異なるデータベースの名前を新しいユーザーに与えます。  
+`[ @name_in_db = ] 'user'`新しいデータベースユーザーの名前を指定します。 *user*は**sysname**,、既定値は NULL です。 *User*が指定されていない場合、新しいデータベースユーザーの名前は既定で*ログイン*名になります。 *ユーザー*を指定すると、新しいユーザーには、サーバーレベルのログイン名とは異なる名前が付けられます。  
   
-`[ @grpname = ] 'role'` データベースの役割、新しいユーザーがメンバーになります。 *ロール*は**sysname**、既定値は NULL です。 *ロール*現在のデータベースで有効なデータベース ロールである必要があります。  
+`[ @grpname = ] 'role'`新しいユーザーがメンバーになるデータベースロールを指定します。 *role*の部分は**sysname**で、既定値は NULL です。 *ロール*は、現在のデータベースの有効なデータベースロールである必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_adduser**もユーザーの名前を持つスキーマが作成されます。  
+## <a name="remarks"></a>解説  
+ また、 **sp_adduser**では、ユーザーの名前を持つスキーマも作成されます。  
   
- ユーザーを追加した後は、GRANT、DENY を使用し、REVOKE ステートメントをユーザーによって実行されたアクティビティを制御するアクセス許可を定義します。  
+ ユーザーが追加されたら、GRANT、DENY、および REVOKE ステートメントを使用して、ユーザーが実行するアクティビティを制御するアクセス許可を定義します。  
   
- 使用**sys.server_principals**有効なログイン名の一覧を表示します。  
+ 有効なログイン名の一覧を表示するには、 **server_principals**を使用します。  
   
- 使用**sp_helprole**有効なロール名の一覧を表示します。 ロールを指定すると、そのロールに対して定義されている権限が自動的にユーザーに与えられます。 ロールが指定されていない場合、ユーザーは、既定値に付与されるアクセス許可を取得**パブリック**ロール。 値、ロールにユーザーを追加する、*ユーザー名*指定する必要があります。 (*username*と同じであることができます*login_id*)。  
+ **Sp_helprole**を使用して、有効なロール名の一覧を表示します。 ロールを指定すると、そのロールに対して定義されている権限が自動的にユーザーに与えられます。 ロールが指定されていない場合は、既定の**public**ロールに付与されている権限がユーザーに与えられます。 ユーザーをロールに追加するには、*ユーザー名*の値を指定する必要があります。 (*ユーザー名*は*login_id*と同じにすることができます)。  
   
- ユーザー**ゲスト**すべてのデータベースに既に存在します。 ユーザーの追加**ゲスト**無効だった場合、このユーザーが有効になります。 既定では、ユーザー**ゲスト**新しいデータベースでは無効です。  
+ ユーザー **guest**はすべてのデータベースに既に存在します。 ユーザー**ゲスト**を追加すると、このユーザーが既に無効になっている場合に有効になります。 既定では、ユーザー **guest**は新しいデータベースで無効になっています。  
   
- **sp_adduser**ユーザー定義のトランザクション内で実行することはできません。  
+ **sp_adduser**は、ユーザー定義のトランザクション内では実行できません。  
   
- 追加することはできません、**ゲスト**ユーザーのため、**ゲスト**ユーザーが各データベース内に既に存在します。 有効にする、**ゲスト**ユーザー、grant**ゲスト**に示すように CONNECT 権限。  
+ Guest ユーザーは、**すべてのデータベース**内に既に存在するため、**ゲスト**ユーザーを追加することはできません。 **ゲスト**ユーザーを有効にするには、次のように**ゲスト**接続のアクセス許可を付与します。  
   
 ```  
 GRANT CONNECT TO guest;  
@@ -76,37 +76,37 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  データベースの所有権が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-adding-a-database-user"></a>A. データベース ユーザーを追加します。  
- 次の例は、データベース ユーザーを追加します。`Vidur`既存`Recruiting`既存を使用して、現在のデータベース内のロール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`Vidur`します。  
+### <a name="a-adding-a-database-user"></a>A. データベースユーザーの追加  
+ 次の例では、 `Vidur` 既存のログインを `Recruiting` 使用して、現在のデータベースの既存のロールにデータベースユーザーを追加し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Vidur` ます。  
   
 ```  
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
-### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. 同じログイン ID を持つデータベース ユーザーを追加します。  
- 次の例では、ユーザー `Arvind` を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン `Arvind` として現在のデータベースに追加します。 既定値をこのユーザーが属している**パブリック**ロール。  
+### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B: 同じログイン ID を持つデータベースユーザーを追加する  
+ 次の例では、ユーザー `Arvind` を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン `Arvind` として現在のデータベースに追加します。 このユーザーは、既定の**public**ロールに属しています。  
   
 ```  
 EXEC sp_adduser 'Arvind';  
 ```  
   
-### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>C. サーバー レベル ログインとは異なる名前を持つデータベース ユーザーを追加します。  
- 次の例では、追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`BjornR`のユーザー名を持つ現在のデータベースに`Bjorn`、データベース ユーザーを追加および`Bjorn`を`Production`データベース ロール。  
+### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>C: サーバーレベルのログインとは異なる名前のデータベースユーザーを追加する  
+ 次の例で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は `BjornR` 、ユーザー名がである現在のデータベースにログインを追加し、データベース `Bjorn` ユーザーを `Bjorn` データベースロールに追加し `Production` ます。  
   
 ```  
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sp_addrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [ユーザー &#40;Transact-sql&#41;の作成](../../t-sql/statements/create-user-transact-sql.md)   
+ [sp_dropuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

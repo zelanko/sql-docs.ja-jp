@@ -1,5 +1,5 @@
 ---
-title: タスクまたはコンテナーのプロパティを設定 |Microsoft Docs
+title: タスクまたはコンテナーのプロパティを設定する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 278ce3d1a7f1fafeb3c378559e5ec88da62895c8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66055670"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421469"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>タスクまたはコンテナーのプロパティを設定する
   タスクおよびコンテナーのほとんどのプロパティは、 **[プロパティ]** ウィンドウを使用して設定できます。 例外は、タスク コレクションのプロパティと、 **[プロパティ]** ウィンドウを使用して設定するには複雑すぎるプロパティです。 たとえば、Foreach ループ コンテナーが使用する列挙子を **[プロパティ]** ウィンドウで構成することはできません。 これらの複雑なプロパティを設定するには、タスク エディターまたはコンテナー エディターを使用する必要があります。 ほとんどの場合、タスク エディターとコンテナー エディターには複数のノードがあり、各ノードには関連プロパティが含まれています。 ノードの名前は、ノードに含まれるプロパティの対象を示します。  
@@ -55,7 +54,7 @@ ms.locfileid: "66055670"
   
      For ループ コンテナーの構成方法については、「 [Configure a For Loop Container](control-flow/for-loop-container.md)」(For ループ コンテナーを構成する) を参照してください。  
   
-     Foreach ループ コンテナーの構成方法については、「 [Configure a Foreach Loop Container](control-flow/foreach-loop-container.md)」(Foreach ループ コンテナーを構成する) を参照してください。  
+     Foreach ループコンテナーの構成方法については、「 [Foreach ループコンテナーを構成](control-flow/foreach-loop-container.md)する」を参照してください。  
   
     > [!NOTE]  
     >  シーケンス コンテナーには、カスタム エディターはありません。  

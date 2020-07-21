@@ -17,14 +17,14 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d0e3f3106b7f4a51cf4423497c248c801ed7d6f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f064ad734e90d2748b959e7fdc9d5868b22c25cf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891426"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293119"
 ---
 # <a name="data-mining-model-training-destination"></a>データ マイニング モデル トレーニング変換先
 
@@ -34,14 +34,14 @@ ms.locfileid: "68891426"
   データ マイニング モデル トレーニング変換先は、変換先が受け取るデータをデータ マイニング モデル アルゴリズムに渡すことにより、データ マイニング モデルのトレーニングを行います。 複数のデータ マイニング モデルが同じデータ マイニング構造に基づいて構築されている場合は、1 つの変換先を使用してトレーニングできます。 詳細については、「 [マイニング構造列](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) 」と「 [マイニング モデル列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」を参照してください。  
   
 ## <a name="configuration-of-the-data-mining-model-training-destination"></a>データ マイニング モデル トレーニング変換先の構成  
- 対象になる構造とその構造に基づいて構築されているモデルのケース レベル列で、コンテンツの種類が KEY TIME または KEY SEQUENCE の列がある場合、入力データをその列で並べ替える必要があります。 たとえば、Microsoft タイム シリーズ アルゴリズムを使用して構築されたモデルでは、コンテンツの種類に KEY TIME が使用されます。 入力データが並べ替えられていない場合、そのモデルの処理が失敗する場合があります。 データを並べ替える必要がある場合、データ フロー内で事前に並べ替え変換を使用してデータを並べ替えることができます。 コンテンツの種類が KEY である列には、この要件は適用されません。 詳細については、「[コンテンツの種類 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)」と「[並べ替え変換](../../integration-services/data-flow/transformations/sort-transformation.md)」を参照してください。  
+ 対象になる構造とその構造に基づいて構築されているモデルのケース レベル列で、コンテンツの種類が KEY TIME または KEY SEQUENCE の列がある場合、入力データをその列で並べ替える必要があります。 たとえば、Microsoft Time Series アルゴリズムを使用して構築されたモデルでは、コンテンツの種類に KEY TIME が使用されます。 入力データが並べ替えられていない場合、そのモデルの処理が失敗する場合があります。 データを並べ替える必要がある場合、データ フロー内で事前に並べ替え変換を使用してデータを並べ替えることができます。 コンテンツの種類が KEY である列には、この要件は適用されません。 詳細については、「[コンテンツの種類 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)」と「[並べ替え変換](../../integration-services/data-flow/transformations/sort-transformation.md)」を参照してください。  
   
 > [!NOTE]  
 >  データ マイニング モデル トレーニング変換先への入力は、並べ替えられている必要があります。 データを並べ替えるため、データ フロー内のデータ マイニング モデル トレーニング変換先の上流に、並べ替え変換を含めることができます。 詳細については、「 [Sort Transformation](../../integration-services/data-flow/transformations/sort-transformation.md)」を参照してください。  
   
  この変換先は 1 つの入力をとりますが、出力はありません。  
   
- データ マイニング モデル トレーニング変換先を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを使用します。 詳しくは、「 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
+ データ マイニング モデル トレーニング変換先では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーの使用により、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト、または変換先によってトレーニングされるマイニング構造とマイニング モデルを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスへの接続が行われます。 詳しくは、「 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68891426"
   **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、トレーニング用のマイニング モデルを選択できます。  
   
 ### <a name="options"></a>オプション  
- **[ODBC 入力先エディター]**  
+ **Connection manager**  
  既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続の一覧から選択するか、次に示す手順で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [新規作成] **ボタンを使用して新しい** 接続を作成します。  
   
  **[新規作成]**  
@@ -66,7 +66,7 @@ ms.locfileid: "68891426"
  **マイニング構造**  
  使用できるマイニング構造の一覧から選択するか、 **[新規作成]** をクリックして新しいマイニング構造を作成します。  
   
- **ボタンを使用して新しい**  
+ **[新規作成]**  
  **データ マイニング ウィザード**を使用して、新しいマイニング構造とマイニング モデルを作成します。  
   
  **[マイニング モデル]**  

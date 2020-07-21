@@ -1,6 +1,7 @@
 ---
-title: WMI Provider for Configuration Management の使用 |Microsoft Docs
-ms.custom: ''
+title: WMI Provider for Configuration Management の使用
+description: バインド、接続文字列の指定、アクセス許可/サーバー認証など、構成管理のための WMI プロバイダーについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,33 +20,33 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e6736c73f7cda435d91e3ec9c9f523bdc08f1b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da0f68133473e746b7eaae898273b3c8a8bab0cd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139265"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880462"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>WMI Provider for Configuration Management の操作
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-この記事では、コンピューターの管理用 WMI プロバイダーを使用してプログラミングする方法についてガイダンスを提供します。
+この記事では、コンピューターの管理のために WMI プロバイダーを使用してプログラミングする方法に関するガイダンスを提供します。
 
-## <a name="binding"></a>Binding  
- WMI Provider for Configuration Management は、COM オブジェクト モデルであり、事前バインドも遅延バインドもサポートしています。 遅延バインドを行う場合、VBScript などのスクリプト言語を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、ネットワーク設定、別名をプログラムで操作することができます。  
+## <a name="binding"></a>バインド  
+  WMI Provider for Configuration Management は、COM オブジェクト モデルであり、事前バインドも遅延バインドもサポートしています。 遅延バインドを行う場合、VBScript などのスクリプト言語を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス、ネットワーク設定、別名をプログラムで操作することができます。  
   
-## <a name="specifying-a-connection-string"></a>接続文字列を指定します。
+## <a name="specifying-a-connection-string"></a>接続文字列の指定
 
-アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することで、WMI Provider for Configuration Management を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、プロバイダー DLL でこの名前空間にマップし、メモリに DLL を読み込みます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはすべて、1 つの WMI 名前空間で表されます。
+アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することで、WMI Provider for Configuration Management を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL にマップし、DLL をメモリに読み込みます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはすべて、1 つの WMI 名前空間で表されます。
 
-名前空間の既定値は、次の形式です。 形式で`VV`は SQL Server のメジャー バージョン番号です。 実行して、番号が探索可能な`SELECT @@VERSION;`します。
+名前空間の既定の形式は次のとおりです。 形式では、 `VV` は SQL Server のメジャーバージョン番号です。 この数は、を実行することで検出 `SELECT @@VERSION;` できます。
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-PowerShell では、先頭を使用して接続すると`\\.\`削除する必要があります。 たとえば、次の PowerShell コードを一覧表示すべての WMI クラスを SQL Server 2016 のメジャー バージョン 13 であります。
+PowerShell を使用して接続する場合は、先頭を `\\.\` 削除する必要があります。 たとえば、次の PowerShell コードは、SQL Server 2016 のすべての WMI クラス (メジャーバージョン 13) を一覧表示します。
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -63,13 +64,13 @@ Thus from here I (GeneMi = MightyPen) removed the following text about 'instance
 where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 -->
 
-次の PowerShell コードを使用すると、使用可能なすべての WMI ComputerManagement 名前空間のクエリを実行します。
+次の PowerShell コードを使用して、使用可能なすべての WMI ComputerManagement 名前空間を照会できます。
 
 ```powershell
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **注:** Windows ファイアウォール経由で接続する場合は、コンピューターが適切に構成されているかどうかを確認する必要があります。 Windows Management Instrumentation のドキュメントの「Windows ファイアウォール経由の接続」記事を参照してください[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN [Web サイト](https://go.microsoft.com/fwlink/?linkid=15426)します。  
+ **注:** Windows ファイアウォールを介して接続している場合は、コンピューターが適切に構成されていることを確認する必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN [Web サイト](https://go.microsoft.com/fwlink/?linkid=15426)の Windows Management Instrumentation のドキュメントで、Windows ファイアウォール経由の接続に関する記事を参照してください。  
   
 ## <a name="permissions-and-server-authentication"></a>権限とサーバー認証  
  WMI Provider for Configuration Management にアクセスするには、クライアント WMI 管理スクリプトが、ターゲット コンピューター上の管理者のコンテキストで実行されている必要があります。 アクセスするユーザーは、管理するコンピューターのローカル Windows 管理者グループのメンバーである必要があります。  
@@ -78,9 +79,9 @@ gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerMan
   
  WMI 管理スクリプトを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されるアカウントを更新することができます。  
   
- WMI Provider for Configuration Management では、セキュリティ証明書がサポートされています。 証明書の詳細については、次を参照してください。[暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)します。  
+ WMI Provider for Configuration Management では、セキュリティ証明書がサポートされています。 証明書の詳細については、「 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)  
   
   

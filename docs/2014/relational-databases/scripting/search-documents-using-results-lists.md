@@ -1,6 +1,6 @@
 ---
-title: 結果一覧を使用してドキュメントを検索する方法 | Microsoft Docs
-ms.custom: ''
+title: 結果一覧を使用してドキュメントを検索する方法
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], multiple files
 - Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 957b6e46cb8c3b4cc551c616a1b547c3c1cbdeb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0885c5061bc4844839eab25dfaf211e56e3e31a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009421"
 ---
 # <a name="search-documents-using-results-lists"></a>結果一覧を使用してドキュメントを検索する方法
   **[検索と置換]** ダイアログ ボックスでは、プロジェクト内、ソリューション内、ファイル システム フォルダー内のすべてのファイルを対象にしてテキストの検索と置換を実行できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開いていないファイルも対象になります。 **[検索と置換]** ダイアログ ボックスで実行した検索の一致項目は、[検索結果 1] ウィンドウと [検索結果 2] ウィンドウに表示されるので、一致項目を含んだ行のテキストを実際に確認できます。  

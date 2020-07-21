@@ -1,5 +1,5 @@
 ---
-title: リターン コードと出力パラメーター (ODBC) の処理 |マイクロソフトのドキュメント
+title: リターンコードと出力パラメーターの処理 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,17 @@ helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4aebcc06fe8442070ae55da81fbb914fea2e2df2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68205579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048199"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>リターン コードと出力パラメーターの処理 (ODBC)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーター、サーバーから最後のパケットで送信され、までアプリケーションをご利用いただけません[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) sql_no_data が返されます。 ストアド プロシージャからエラーが返された場合は、SQL_NO_DATA が返されるまでは、次の結果に進めておく SQLMoreResults を呼び出します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターンコードと出力パラメーターはサーバーからの最後のパケットで送信され、 [Sqlmoreresults](../native-client-odbc-api/sqlmoreresults.md)が SQL_NO_DATA を返すまではアプリケーションで使用できません。 ストアドプロシージャからエラーが返された場合は、SQLMoreResults を呼び出して、SQL_NO_DATA が返されるまで次の結果に進みます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -30,7 +29,7 @@ ms.locfileid: "68205579"
   
 1.  ODBC CALL エスケープ シーケンスを使用する SQL ステートメントを作成します。 このステートメントでは、各入力、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合) に対してパラメーター マーカーを使用する必要があります。  
   
-2.  呼び出す[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 、それぞれの入力入出力、出力パラメーター、およびプロシージャの戻り値 (ある場合)。  
+2.  各入力、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合) に対して[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)を呼び出します。  
   
 3.  `SQLExecDirect` を使用してステートメントを実行します。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "68205579"
 ## <a name="example"></a>例  
  このサンプルでは、リターン コードおよび出力パラメーターの処理を示します。 このサンプルは IA64 ではサポートされていません。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
@@ -188,7 +187,7 @@ DROP PROCEDURE TestParm
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [ストアド プロシージャの操作方法に関するトピックを実行している&#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+## <a name="see-also"></a>参照  
+ [ストアドプロシージャの実行方法に関するトピック &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2ccafe7a306eab53aff4f68cd440621c6c10f85
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965922"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>[トランザクション ログのバックアップの設定]
   このダイアログ ボックスを使用すると、ログ配布構成のトランザクション ログ バックアップ設定を構成および変更できます。  
   
  ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  **[バックアップ フォルダーのネットワーク パス (例: \\\\primaryserver\\backup)]**  
  このボックスに、バックアップ フォルダーへのネットワーク共有を入力します。 トランザクション ログ バックアップが保存されるローカル フォルダーを共有することにより、ログ配布コピー ジョブでこれらのファイルをセカンダリ サーバーにコピーできます。 セカンダリ サーバー インスタンスでコピー ジョブを実行できるように、このネットワーク共有での読み取り権限をプロキシ アカウントに与えてください。 既定では、このアカウントは、セカンダリ サーバー インスタンスの SQLServer エージェント サービス アカウントですが、管理者はジョブに対して別のプロキシ アカウントを選択できます。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62916890"
  **ジョブ名**  
  ログ配布用のトランザクション ログ バックアップを作成する際に使用される SQL Server エージェント ジョブの名前を表示します。 最初にジョブを作成するときに、ボックスに別の名前を入力して名前を変更できます。  
   
- **スケジュール**  
+ **[スケジュール]**  
  プライマリ データベースのトランザクション ログのバックアップに関する現在のスケジュールを表示します。 バックアップ ジョブが作成される前に、 **[スケジュール]** をクリックしてこのスケジュールを変更できます。バックアップ ジョブが作成された後は、 **[ジョブの編集]** をクリックしてこのスケジュールを変更できます。  
   
 ### <a name="backup-job"></a>バックアップ ジョブ  
@@ -67,7 +66,7 @@ ms.locfileid: "62916890"
 |||  
 |-|-|  
 |**[既定のサーバー設定を使用する]**|オンにすると、サーバー レベルの既定値が使用されます。<br /><br /> この既定値は、 **backup compression default** サーバー構成オプションで設定されます。 このオプションの現在の設定を表示する方法については、「 [backup compression default サーバー構成オプションの表示または構成](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)」を参照してください。|  
-|**[バックアップを圧縮する]**|オンにすると、サーバー レベルの既定値に関係なく、バックアップが圧縮されます。<br /><br /> **\*\* 重要 \*\*** 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、 [リソース ガバナー](../resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションで、優先度の低い圧縮バックアップを作成することができます。 詳細については、このトピックの「 [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。|  
+|**[バックアップを圧縮する]**|オンにすると、サーバー レベルの既定値に関係なく、バックアップが圧縮されます。<br /><br /> **\*\* 重要 \*\*** 既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、 [リソース ガバナー](../resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションで、優先度の低い圧縮バックアップを作成することができます。 詳細については、「 [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)」を参照してください。|  
 |**[バックアップを圧縮しない]**|オンにすると、サーバー レベルの既定値に関係なく、圧縮されていないバックアップが作成されます。|  
   
 ## <a name="see-also"></a>参照  

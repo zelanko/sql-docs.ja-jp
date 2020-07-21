@@ -1,11 +1,7 @@
 ---
-title: データベース プロジェクトへのインポート | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: データベース プロジェクトへのインポート
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTSNAPSHOTSUMMARYDIALOG.DIALOG
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119842"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75246447"
 ---
 # <a name="import-into-a-database-project"></a>データベース プロジェクトへのインポート
+
 [インポート] を使用すると、ライブ データベースや .dacpac から新しいオブジェクトをプロジェクトに取り込んだり、スクリプトの新しい定義でプロジェクト内の既存のオブジェクトを更新したりできます。 次の 3 つの方法の動作には、注意が必要な相違点がいくつかあります。これらの方法について以下で説明します。  
   
 **[インポート] メニュー**  
@@ -36,7 +37,7 @@ ms.locfileid: "68119842"
   
 [暗号化されたオブジェクトのインポート](#bkmk_import_encrypted)  
   
-## <a name="bkmk_import_source_db"></a>インポート元: データベースまたはデータ層アプリケーション (*.dacpac)  
+## <a name="import-source-database-or-data-tier-application-dacpac"></a><a name="bkmk_import_source_db"></a>インポート元: データベースまたはデータ層アプリケーション (*.dacpac)  
 データベースや .dacpac ファイルからスキーマをインポートする機能を使用できるのは、プロジェクト内でスキーマ オブジェクトが定義されていない場合のみです。 これには、RefactorLog、または配置前や配置後のスクリプトは含まれません。  
   
 インポート時に、オブジェクトの定義は、SSDT で構成する新しいオブジェクトに関する既定値を使用してスクリプト化され、プロジェクト ファイルに含まれます。新しいオブジェクトには、トップ レベル オブジェクト用の新しいファイル、親と同じファイルで定義された階層の子、可能な場合はインラインで定義されたテーブル/列の制約が含まれます。 各オブジェクトの表示設定と制御に対象に絞る場合は、[インポート] ではなく [スキーマ比較] を使用してください。  
@@ -47,7 +48,7 @@ ms.locfileid: "68119842"
   
 ![SSDT の [インポート時に無視] フォルダー](../ssdt/media/ssdt-ignoredonimport.gif "SSDT の [インポート時に無視] フォルダー")  
   
-## <a name="bkmk_import_source_script"></a>インポート元: スクリプト (*.sql)  
+## <a name="import-source-script-sql"></a><a name="bkmk_import_source_script"></a>インポート元: スクリプト (*.sql)  
 インポート元のオブジェクトのうち、プロジェクト内に存在*しない*オブジェクトはすべて追加され、プロジェクト内*に存在する*オブジェクトはすべて、プロジェクト内のオブジェクト定義を上書きします。  
   
 > [!NOTE]  
@@ -59,7 +60,7 @@ ms.locfileid: "68119842"
 スクリプトからのインポート プロセスでは、配置前スクリプトと配置後スクリプト、SQLCMD 変数、または RefactorLog ファイルが認識されません。 インポート時に検出される、このようにサポートされていないコンストラクターは、プロジェクトの **Scripts** フォルダー内の **ScriptsIgnoredOnImport.sql** ファイルに配置されます。  
   
  
-## <a name="bkmk_import_encrypted"></a>暗号化されたオブジェクトのインポート  
+## <a name="import-encrypted-objects"></a><a name="bkmk_import_encrypted"></a>暗号化されたオブジェクトのインポート  
 暗号化されたオブジェクトをデータベース プロジェクトにインポートする際、必ずしも、オブジェクト定義の本体を完全にサーバーから取得できるとは限りません。 このように、インポートの動作は、このクラスのオブジェクトを処理する際に異なる場合があります。  
   
 定義本体を完全に取得できないと、オブジェクトのヘッダーとフッターは、本体のダミーと共にスクリプト化されます。 この現象は、インポートしたり、インポート元がライブ データベースまたはデータベースから抽出された .dacpac に指定されているスキーマ比較を使用したりすると発生する場合があります。  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107208"
 ---
 # <a name="manage-shared-datasets"></a>共有データセットを管理する
@@ -86,15 +86,15 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 ## <a name="how-to-work-with-shared-dataset-properties-on-a-report-server"></a>レポート サーバーで共有データセット プロパティを操作する方法  
  さまざまなツールを使用して、共有データセットを操作できます。 次の表に、それらの方法およびツールと、詳しい手順へのリンクを示します。  
   
-|タスク|ツール|リンク|  
+|タスク|ツール|Link|  
 |----------|----------|----------|  
 |共有データセットの追加、または共有データセット定義プロパティの変更|レポート ビルダーでの保存<br /><br /> レポート デザイナーでの配置<br /><br /> レポート マネージャーでの .rsd ファイルのアップロード|msdn.microsoft.com の[レポート ビルダーに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=154494)の「[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」<br /><br /> [[ファイルのアップロード] ページ (レポート マネージャー)](../upload-file-page-report-manager.md)<br /><br /> 依存する共有データ ソースがパブリッシュされる前に共有データセットをアップロードする場合は、共有データセットを共有データ ソースに手動でバインドする必要があります。 詳細については、msdn.microsoft.com の [[全般] プロパティ ページ、共有データセット (レポート マネージャー)](../general-properties-page-shared-datasets-report-manager.md)」を参照してください。|  
 |共有データセット アイテムのプロパティの変更|レポート マネージャー|[[全般] プロパティ ページ、共有データセット (レポート マネージャー)](../general-properties-page-shared-datasets-report-manager.md)|  
 |レポート内の共有データセット インスタンスに対する、追加の共有データセット プロパティの指定|レポート ビルダー、レポート デザイナー|[[クエリ] ([データセットのプロパティ] ダイアログ ボックス)](../dataset-properties-dialog-box-query.md)|  
 |共有データセットでの、異なる共有データ ソースへのバインド|レポート マネージャー|[[データ ソースの選択] ページ (レポート マネージャー)](../data-source-selection-page-report-manager.md)|  
-|データセット パラメーターの既定値の検証|レポート ビルダーでのオープン、または URL アクセスの構文の使用|以下に例を示します。<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|キャッシュの有効化|レポート マネージャー|[共有データセットのキャッシュ (SSRS)](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [共有データセットの [キャッシュ] ページ (レポート マネージャー)](../caching-page-shared-datasets-report-manager.md)|  
-|キャッシュ更新計画の作成または編集|レポート マネージャー|[キャッシュ更新オプション (レポート マネージャー)](../cache-refresh-options-report-manager.md)|  
+|データセット パラメーターの既定値の検証|レポート ビルダーでのオープン、または URL アクセスの構文の使用|次に例を示します。<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|キャッシュの有効化|レポート マネージャー|[共有データセットのキャッシュ &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [共有データセットの [キャッシュ] ページ (レポート マネージャー)](../caching-page-shared-datasets-report-manager.md)|  
+|キャッシュ更新計画の作成または編集|レポート マネージャー|[[キャッシュ更新オプション] &#40;レポート マネージャー&#41;](../cache-refresh-options-report-manager.md)|  
 |共有データセット定義スキーマの表示|レポート マネージャー|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |SharePoint 統合モードでの、レポート サーバーと SharePoint サイト間における共有データセット定義の同期|SharePoint アプリケーション ページ|共有データセット アイテムのプロパティの変更<br /><br /> キャッシュ オプションの変更<br /><br /> 共有データ ソースの変更|  
   
@@ -105,7 +105,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   共有データ ソースと同様に、共有データセットは、使用されているレポートとは独立して管理されます。 レポート サーバー上の共有データセットの管理には、共有データセット定義を編集せずに、依存する共有データ ソースを変更する機能が含まれています。  
   
--   レポートと同様に、共有データセットをキャッシュすることができます。 データ ソースが必要とする資格情報はキャッシュの制限事項を満たしている必要があり、すべてのパラメーターに既定値が指定されている必要があります。 詳細については、msdn.microsoft.com の [共有データセットのキャッシュ (SSRS)](../report-server/cache-shared-datasets-ssrs.md)」を参照してください。  
+-   レポートと同様に、共有データセットをキャッシュすることができます。 データ ソースが必要とする資格情報はキャッシュの制限事項を満たしている必要があり、すべてのパラメーターに既定値が指定されている必要があります。 詳細については、「[複数の共有データセットのキャッシュ (SSRS)](../report-server/cache-shared-datasets-ssrs.md)」を参照してください。  
   
 -   レポートと同様に、処理が行われる場合は、必ずレポート サーバーにあるアイテムの現在の定義が使用されます。 共有データセットを変更すると、その共有データセットを使用する各レポートでは、レポートの処理時にレポート サーバーにある現在の定義が使用されます。 共有データセットに対してキャッシュが有効化されている場合は、共有データセット定義を変更しても、キャッシュ内のデータの有効期限が切れるまでは変更された定義が使用されません。 キャッシュ更新計画を使用すると、複数のレポートでデータの一貫性を維持することができます。  
   
@@ -119,8 +119,8 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   共有データセットでは、サブスクリプションと同じルールに従ってパラメーター値が指定されます。  
   
-## <a name="see-also"></a>関連項目  
- [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../report-server/report-server-content-management-ssrs-native-mode.md)   
+## <a name="see-also"></a>参照  
+ [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: GEOMETRY、geography 型、および HIERARCHYID のクライアント側の使用状況についての警告 |Microsoft Docs
+title: GEOMETRY、GEOGRAPHY、および HIERARCHYID のクライアント側での使用に関する警告Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,28 +9,27 @@ ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66898aa056800c0a7573b5afa73762785706ff7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044620"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>幾何学、地理学、HIERARCHYID のクライアント側の使用に関する警告
-  アセンブリ**Microsoft.SqlServer.Types.dll**、バージョン 11.0 に、バージョン 10.0 からアップグレードされましたが、空間データ型が含まれています。 このアセンブリを参照するカスタム アプリケーションは、特定の条件に該当する場合に失敗します。  
+  空間データ型を含むアセンブリ**Microsoft.SqlServer.Types.dll**が、バージョン10.0 からバージョン11.0 にアップグレードされました。 このアセンブリを参照するカスタム アプリケーションは、特定の条件に該当する場合に失敗します。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>説明  
- アセンブリ**Microsoft.SqlServer.Types.dll**、バージョン 11.0 に、バージョン 10.0 からアップグレードされましたが、空間データ型が含まれています。 このアセンブリを参照するカスタム アプリケーションは、次の条件に該当する場合に失敗します。  
+ 空間データ型を含むアセンブリ**Microsoft.SqlServer.Types.dll**が、バージョン10.0 からバージョン11.0 にアップグレードされました。 このアセンブリを参照するカスタム アプリケーションは、次の条件に該当する場合に失敗します。  
   
--   移動すると、カスタム アプリケーション、コンピューターを[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のみをコンピューターにインストールされた[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]がインストールされている、ためアプリケーションが失敗の参照されるバージョン 10.0、 **SqlTypes**アセンブリ存在しません。 この場合、次のエラー メッセージが返されることがあります: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   がインストールされているコンピューターから、がインストールされているコンピューターにカスタムアプリケーションを移動すると、参照されている [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョン10.0 の**SqlTypes**アセンブリが存在しないため、アプリケーションは失敗します。 この場合、次のエラー メッセージが返されることがあります: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
--   参照するとき、 **SqlTypes**アセンブリ バージョン 11.0、バージョン 10.0 もインストールしは、このエラー メッセージを表示することがあります。 `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
+-   **SqlTypes**アセンブリバージョン11.0 を参照するときに、バージョン10.0 もインストールされていると、次のエラーメッセージが表示されることがあります。`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
--   参照するとき、 **SqlTypes**アセンブリ バージョン 11.0 を .NET 3.5、4、または 4.5 を対象とするカスタム アプリケーションから、アプリケーションは SqlClient が仕様は、バージョン 10.0 のアセンブリを読み込むために失敗します。 このエラーは、アプリケーションが次のいずれかのメソッドを呼び出したときに発生します。  
+-   .NET 3.5、4、または4.5 を対象とするカスタムアプリケーションから**SqlTypes**アセンブリバージョン11.0 を参照する場合、アプリケーションは失敗します。これは、の仕様では、アセンブリのバージョン10.0 が読み込まれるためです。 このエラーは、アプリケーションが次のいずれかのメソッドを呼び出したときに発生します。  
   
     -   `GetValue` クラスの `SqlDataReader` メソッド  
   
@@ -82,9 +81,9 @@ ms.locfileid: "66091089"
   
 -   この問題を回避するには、接続文字列内で、"Type System Version" 属性の値を "SQL Server 2012" と指定することにより、SqlClient がバージョン 11.0 のアセンブリを読み込むようにします。 この接続文字列属性は、.NET 4.5 以上でのみ使用可能です。  
   
-## <a name="see-also"></a>関連項目  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md
+## <a name="see-also"></a>参照  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md
 )  
   
   

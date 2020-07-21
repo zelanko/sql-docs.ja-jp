@@ -1,5 +1,5 @@
 ---
-title: サンプルのコンソール スクリプト ファイル (SybaseToSQL) の使用 |Microsoft Docs
+title: サンプルのコンソールスクリプトファイルの操作 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,117 +12,117 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fe9e05f0078f0d1a9d3ab5ea6e2763ac28207085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091791"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>サンプルのコンソール スクリプト ファイルの操作 (SybaseToSQL)
-いくつかのサンプル ファイルは、ユーザーの参照と使用状況の製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
+ユーザー参照および使用のために、いくつかのサンプルファイルが製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせて、これらのスクリプトを簡単にカスタマイズする方法について説明します。  
   
-## <a name="sample-console-script-files"></a>サンプルのコンソール スクリプト ファイル  
-さまざまなシナリオをカバーする次のサンプル コンソール スクリプト ファイルがユーザーの参照用に用意されています。  
+## <a name="sample-console-script-files"></a>サンプルコンソールスクリプトファイル  
+さまざまなシナリオをカバーする次のサンプルコンソールスクリプトファイルは、ユーザー参照用に用意されています。  
   
--   ServersConnectionFileSample.xml  
+-   すべてのファイル  
   
--   VariableValueFileSample.xml  
+-   変数の形式  
   
--   AssessmentReportGenerationSample.xml  
+-   AssessmentReportGenerationSample  
   
--   SqlStatementConversionSample.xml  
+-   SqlStatementConversionSample  
   
--   ConversionAndDataMigrationSample.xml  
+-   ConversionAndDataMigrationSample  
   
--   **ServersConnectionFileSample.xml:**  
+-   **次のようにします。**  
   
-    -   このサンプルでは、利用可能な接続の別のモードをソースとターゲット データベースにして、ユーザーは、必要に応じて、どのモードを選択できます。 このサンプルには、サーバーの定義が含まれています。  
+    -   このサンプルでは、ソースとターゲットのデータベースで使用できるさまざまなモードの接続を提供し、ユーザーは要件に従って任意のモードを選択できます。 このサンプルには、サーバー定義が含まれています。  
   
-    -   ユーザーは、必要なソースとターゲット サーバーの定義に値を変更するだけで、必要なデータベースに接続できます。 例ではすべての値が用意されています、変数の値にある、 **VariableValueFileSample.xml**します。  その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
+    -   ユーザーは、必要なソースとターゲットのサーバー定義に値を変更するだけで、必要なデータベースに接続できます。 この例では、すべての値が変数の値として指定されて**います。これは、変数**に使用できます。  その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
   
-    -   ソースとターゲット サーバーに接続する方法の詳細については、次を参照してください。[サーバー接続ファイルを作成する&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)します。  
+    -   ソースサーバーとターゲットサーバーへの接続の詳細については、「 [SybaseToSQL&#41;&#40;サーバー接続ファイルを作成する](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)」を参照してください。  
   
--   **VariableValueFileSample.xml:**  
-    スクリプト ファイルのサンプルのコンソールで使用されているすべての変数と`ServersConnectionFileSample.xml`このファイルで照合されています。 ユーザーがサンプルの変数を置き換えるだけです、サンプルのコンソール スクリプトを実行するには、ユーザーに値は定義されているものとスクリプト ファイルと共に追加のコマンドライン引数としてこのファイルを渡します。  
+-   **変数 Valuefiles. .xml:**  
+    サンプルコンソールスクリプトファイルで使用されており、 `ServersConnectionFileSample.xml`このファイルで照合されているすべての変数。 サンプルのコンソールスクリプトを実行するには、ユーザーがサンプル変数の値をユーザー定義の変数に置き換えるだけで、このファイルを追加のコマンドライン引数としてスクリプトファイルと共に渡す必要があります。  
   
-    変数値ファイルの詳細については、次を参照してください。[変数値ファイルの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)します。  
+    変数値ファイルの詳細については、「 [&#40;SybaseToSQL&#41;の変数値ファイルの作成](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)」を参照してください。  
   
--   **AssessmentReportGenerationSample.xml:**  
-    このサンプルで使用できるユーザー分析のために変換し、データの移行を始める前にこの xml 評価レポートを生成できます。  
+-   **AssessmentReportGenerationSample:**  
+    このサンプルを使用すると、データの変換と移行を開始する前にユーザーが分析に使用できる xml 評価レポートを生成できます。  
   
-    `generate-assessment-report`コマンド、ユーザーが mandatorily 変数の値を変更する必要があります (参照**VariableValueFileSample.xml**) で、`object-name`属性をユーザーによって使用されているデータベース名。 指定すると、オブジェクトの種類に応じて、`object-type`値を変更する必要があります。  
+    この`generate-assessment-report`コマンドでは、ユーザーは属性の`object-name`変数値 (mandatorily を**参照)** をユーザーが使用しているデータベース名に変更する必要があります。 指定されたオブジェクトの種類によっ`object-type`ては、値も変更する必要があります。  
   
-    場合、ユーザーが複数のオブジェクトを評価する必要があります/データベースは複数を指定できます`metabase-object`ノードに示すように、`generate-assessment-report`サンプルのコンソール スクリプト ファイルのコマンドの例 4。  
+    ユーザーが複数のオブジェクトまたはデータベースを評価する必要がある`metabase-object`場合は、サンプルの`generate-assessment-report`コンソールスクリプトファイルの例4に示すように、複数のノードを指定できます。  
   
-    レポートを生成する方法の詳細については、次を参照してください。[レポートを生成する&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)します。  
-  
-    > [!NOTE]  
-    > -   コンソール アプリケーションに渡される変数値ファイルのコマンドライン引数を使用すると、し VariableValueFileSample.xml が指定したユーザーに更新された値。  
-    > -   サーバー接続ファイルのコマンドライン引数は、コンソール アプリケーションに渡される、ServersConnectionFileSample.xml が適切なサーバー パラメーターの値で更新されることを確認します。  
-  
--   **SqlStatementConversionSample.xml:**  
-    このサンプルには、ユーザーが、対応する生成ができるように`t-sql`ソース データベースのスクリプトを`sql`コマンドの入力として提供します。  
-  
-    `convert-sql-statement`コマンド、ユーザーが mandatorily 変数の値を変更する必要があります (参照**VariableValueFileSample.xml**) で、`context`属性をユーザーによって使用されているデータベースの名前にします。 ユーザーを変更する必要もが、`sql`属性値をソース データベースに`sql`を変換する自分が必要とするコマンド。  
-  
-    ユーザーは、sql ファイルを変換も提供できます。 これにはされている、`convert-sql-statement`サンプルのコンソール スクリプト ファイルのコマンドの例 4。  
+    レポートの生成の詳細については、「 [SybaseToSQL&#41;&#40;レポートの生成](../../ssma/sybase/generating-reports-sybasetosql.md)」を参照してください。  
   
     > [!NOTE]  
-    > コンソール アプリケーションに渡される変数値ファイルのコマンドライン引数を使用すると、し VariableValueFileSample.xml が指定したユーザーに更新された値。  
+    > -   変数値ファイルのコマンドライン引数がコンソールアプリケーションに渡され、変数がユーザーが指定した値で更新されていることを確認します。  
+    > -   サーバー接続ファイルのコマンドライン引数がコンソールアプリケーションに渡され、サーバーのパラメーター値が正しいことを確認します。  
   
--   **ConversionAndDataMigrationSample.xml:**  
-     このサンプルでは、データの移行に変換する、エンド ツー エンドの移行を実行するユーザーができるようにします。 変更が必要とされる必須の属性値の一覧は、次に示します。  
+-   **SqlStatementConversionSample:**  
+    このサンプルを使用すると、入力と`t-sql`して指定され`sql`たソースデータベースコマンドの対応するスクリプトをユーザーが生成できます。  
+  
+    この`convert-sql-statement`コマンドでは、ユーザーは属性の`context`変数値 **(参照変数**mandatorily) を、ユーザーが使用しているデータベース名に変更する必要があります。 ユーザーは、変換する必要があるソース`sql`データベース`sql`コマンドに属性値を変更する必要もあります。  
+  
+    ユーザーは、変換する sql ファイルを指定することもできます。 これについては、 `convert-sql-statement`サンプルのコンソールスクリプトファイルのコマンド例4で説明しました。  
+  
+    > [!NOTE]  
+    > 変数値ファイルのコマンドライン引数がコンソールアプリケーションに渡され、変数がユーザーが指定した値で更新されていることを確認します。  
+  
+-   **ConversionAndDataMigrationSample:**  
+     このサンプルを使用すると、ユーザーはデータ移行への変換からエンドツーエンドの移行を実行できます。 変更する必要がある必須の属性値の一覧を次に示します。  
   
     **コマンド名**  
   
     `map-schema`  
   
-    ターゲット スキーマにソース データベースのスキーマ マッピングです。  
+    転送元データベースから送信先スキーマへのスキーママッピング。  
   
     **属性**  
   
-    -   `source-schema:` 変換に必要となる、ソース データベースを指定します。  
+    -   `source-schema:`を変換する必要があるソースデータベースを指定します。  
   
-    -   `sql-server-schema`:ターゲット データベースへの移行を指定します  
+    -   `sql-server-schema`: 移行先のターゲットデータベースを指定します。  
   
     **コマンド名**  
   
     `convert-schema`  
   
-    -   ソースからターゲット スキーマへのスキーマの変換を実行します。  
+    -   送信元スキーマから送信先スキーマへのスキーマ変換を実行します。  
   
-    -   場合、ユーザーが複数のオブジェクトを評価する必要があります/データベースは複数を指定できます`metabase-object`ノードに示すように、`convert-schema`サンプルのコンソール スクリプト ファイルのコマンドの例 4。  
+    -   ユーザーが複数のオブジェクトまたはデータベースを評価する必要がある`metabase-object`場合は、サンプルの`convert-schema`コンソールスクリプトファイルの例4に示すように、複数のノードを指定できます。  
   
     **属性**  
   
-    `object-name`:ソース データベースを指定/オブジェクト名を変換する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`  
+    `object-name`: 変換する必要があるソースデータベースまたはオブジェクトの名前を指定します。 に指定され`object-type`ているオブジェクトの型に基づいて、対応するが変更されていることを確認します。`object-name`  
   
     **コマンド名**  
   
     `synchronize-target`  
   
-    -   ターゲット オブジェクトは、ターゲット データベースと同期されます。  
+    -   ターゲットデータベースとターゲットオブジェクトを同期します。  
   
-    -   場合、ユーザーが複数のオブジェクトを評価する必要があります/データベース彼複数を指定できます`metabase-object`ノードに示すように、`synchronize-target`サンプルのコンソール スクリプト ファイルのコマンドの例 3。  
+    -   ユーザーが複数のオブジェクトまたはデータベースを評価する必要がある`metabase-object`場合は、サンプルコンソール`synchronize-target`スクリプトファイルのコマンド例3に示すように、複数のノードを指定できます。  
   
     **属性**  
   
-    `object-name:` Sql server データベースを指定/オブジェクト名を作成する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`  
+    `object-name:`を作成する必要がある sql server データベースまたはオブジェクトの名前を指定します。 に指定され`object-type`ているオブジェクトの型に基づいて、対応するが変更されていることを確認します。`object-name`  
   
     **コマンド名**  
   
     `migrate-data`  
   
-    -   ソース データをターゲットに移行します。  
+    -   ソースデータをターゲットに移行します。  
   
-    -   場合、ユーザーが複数のオブジェクトを評価する必要があります/データベースは複数を指定できます`metabase-object`ノードに示すように、`migrate-data`サンプルのコンソール スクリプト ファイルのコマンドの例 2。  
+    -   ユーザーが複数のオブジェクトまたはデータベースを評価する必要がある`metabase-object`場合は、サンプルの`migrate-data`コンソールスクリプトファイルの例2に示すように、複数のノードを指定できます。  
   
     **属性**  
   
-    `object-name:` ソース データベースを指定します]、[テーブル名を移行する必要があります。 対応することを確認します`object-type`で指定されているオブジェクトの種類に応じて変化は、 `object-name`  
+    `object-name:`移行する必要があるソースデータベースまたはテーブルの名前を指定します。 に指定され`object-type`ているオブジェクトの型に基づいて、対応するが変更されていることを確認します。`object-name`  
   
 ## <a name="see-also"></a>参照  
-[変数値ファイルを作成する&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
-[サーバー接続ファイルを作成する&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
-[レポートを生成する&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
+[&#40;SybaseToSQL&#41;の変数値ファイルを作成する](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
+[サーバー接続ファイルの作成 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+[SybaseToSQL&#41;&#40;レポートを生成しています](../../ssma/sybase/generating-reports-sybasetosql.md)  
   

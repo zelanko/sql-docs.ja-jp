@@ -1,10 +1,14 @@
-- name: APS の概要 (PDW)
+- name: SQL Server >>
+  href: ../sql-server/index.yml
+- name: APS の概要
   href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md
-- name: SQL Server へようこそ >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: RAPS の新機能
   href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
+    - name: APS CU7.6
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.6'
+    - name: APS CU7.5
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.5'
     - name: APS CU7.4
       href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.4'
     - name: APS CU7.3
@@ -102,7 +106,7 @@
           href: ../analytics-platform-system/reserved-database-names.md
         - name: tempdb データベース
           href: ../analytics-platform-system/tempdb-database.md
-        - name: master データベース (master database)
+        - name: master データベース
           href: ../analytics-platform-system/master-database.md
     - name: ユーザー セッション
       href: ../analytics-platform-system/user-sessions.md

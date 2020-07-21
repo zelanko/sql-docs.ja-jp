@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95ca1cbd0929607b45c8f9cc429d4224a60b555c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82d21d961f623ee20625f0fefd9fc4403f000e96
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781502"
 ---
-# <a name="mssqlserver10507"></a>MSSQLSERVER_10507
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|10507|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_STMT_DOES_NOT_MATCH|  
-|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。 **@stmt** と **@module_or_batch** または **@plan_handle** と **@statement_start_offset** で指定したステートメントが、指定したモジュールまたはバッチのステートメントと一致しません。 モジュールまたはバッチのステートメントと一致するように値を変更してください。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls を作成できません。 **\@stmt** と **\@module_or_batch** または **\@plan_handle** と **\@statement_start_offset** で指定されたステートメントが、指定されたモジュールまたはバッチのどのステートメントとも一致しません。 モジュールまたはバッチのステートメントと一致するように値を変更してください。|  
   
 ## <a name="explanation"></a>説明  
 指定したモジュールまたはバッチのステートメントが、指定したステートメントまたはステートメントのオフセット値と一致しませんでした。  

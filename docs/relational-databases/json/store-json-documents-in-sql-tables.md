@@ -1,27 +1,33 @@
 ---
-title: SQL Server または SQL Database に JSON ドキュメントを保存する | Microsoft Docs
-ms.description: This article describes why and how to store and index JSON documents in SQL Server or SQL Database, and how to optimize queries over the JSON documents.
-ms.custom: ''
-ms.date: 01/04/2018
+title: SQL Server または SQL Database に JSON ドキュメントを保存する
+description: この記事では、SQL Server または SQL Database での JSON ドキュメントの格納およびインデックス付けの理由とその方法、および JSON ドキュメントに対するクエリを最適化する方法について説明します。
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 1809ea2c3f99528eb15518808e13387c519878da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760764"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server または SQL Database に JSON ドキュメントを保存する
 SQL Server と Azure SQL Database には、ネイティブ JSON 機能があります。標準 SQL 言語を利用し、JSON ドキュメントを解析できます。 SQL Server または SQL Database に JSON ドキュメントを保存したり、NoSQL データベースの場合のように JSON データを問い合わせたりできます。 この記事では、SQL Server または SQL Database に JSON ドキュメントを保存するためのオプションについて説明します。
 
+## <a name="json-storage-format"></a>JSON ストレージの形式
+
+最初のストレージ設計では、JSON ドキュメントをテーブルに格納する方法を決定します。 次の 2 つのオプションを使用できます。
+- **LOB ストレージ** - JSON ドキュメントは、`NVARCHAR` 列にそのまま格納できます。 この方法では、読み込み速度が文字列型の列の読み込みに匹敵するため、データの読み込みと取り込みをすばやく行うのに最適です。 この方法では、クエリの実行中に未加工の JSON ドキュメントを解析する必要があるため、JSON 値のインデックス作成が実行されていない場合は、クエリ/分析時間のパフォーマンスがさらに低下する可能性があります。 
+- **リレーショナル ストレージ** - JSON ドキュメントは、`OPENJSON`、`JSON_VALUE`、または `JSON_QUERY` 関数を使用してテーブルに挿入されるときに解析できます。 入力 JSON ドキュメントのフラグメントは、SQL データ型の列、または JSON サブ要素を含む NVARCHAR 列に格納できます。 この方法では、読み込み中に JSON の解析が行われるため読み込み時間が長くなります。ただし、クエリは、リレーショナル データに対する従来のクエリのパフォーマンスに匹敵します。
+
 ## <a name="classic-tables"></a>クラシック テーブル
 
-SQL Server または SQL Database に JSON ドキュメントを保存する最も簡単な方法は、ドキュメントの ID とドキュメントのコンテンツが含まれる 2 列のテーブルを作成することです。 例:
+SQL Server または SQL Database に JSON ドキュメントを保存する最も簡単な方法は、ドキュメントの ID とドキュメントのコンテンツが含まれる 2 列のテーブルを作成することです。 次に例を示します。
 
 ```sql
 create table WebSite.Logs (
@@ -34,7 +40,7 @@ create table WebSite.Logs (
 
 nvarchar(max) データ型では、サイズが最大 2 GB の JSON ドキュメントを保存できます。 ただし、JSON ドキュメントが間違いなく 8 KB を超えない場合、パフォーマンス上の理由から、NVARCHAR(max) ではなく NVARCHAR(4000) を利用することをお勧めします。
 
-先の例で作成したサンプル テーブルでは、有効な JSON ドキュメントが `log` 列に保存されているものと想定しています。 有効な JSON が `log` 列に間違いなく保存されている場合、その列で CHECK 制約を追加できます。 例:
+先の例で作成したサンプル テーブルでは、有効な JSON ドキュメントが `log` 列に保存されているものと想定しています。 有効な JSON が `log` 列に間違いなく保存されている場合、その列で CHECK 制約を追加できます。 次に例を示します。
 
 ```sql
 ALTER TABLE WebSite.Logs
@@ -44,7 +50,7 @@ ALTER TABLE WebSite.Logs
 
 誰かがテーブルにドキュメントを挿入したり、テーブルのドキュメントを更新したりするたびに、JSON ドキュメントが正しく書式設定されていることがこの制約により検証されます。 制約がないとき、テーブルは挿入のために最適化されます。JSON ドキュメントは何の処理もなく列に直接追加されるためです。
 
-テーブルに JSON ドキュメントを保存するとき、標準の Transact-SQL 言語を使用し、ドキュメントにクエリを実行できます。 例:
+テーブルに JSON ドキュメントを保存するとき、標準の Transact-SQL 言語を使用し、ドキュメントにクエリを実行できます。 次に例を示します。
 
 ```sql
 SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
@@ -63,7 +69,7 @@ SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.durat
 
 クエリを実行する際、一部のプロパティでドキュメントが検索されることがよくある場合 (JSON ドキュメントの `severity` プロパティなど)、そのプロパティに従来の NONCLUSTERED インデックスを追加し、クエリを速めることができます。
 
-指定のパスで (つまり、パス `$.severity` で) JSON 列から JSON 値を公開する計算列を作成し、この計算列で標準インデックスを作成できます。 例:
+指定のパスで (つまり、パス `$.severity` で) JSON 列から JSON 値を公開する計算列を作成し、この計算列で標準インデックスを作成できます。 次に例を示します。
 
 ```sql
 create table WebSite.Logs (
@@ -119,7 +125,7 @@ create table WebSite.Logs (
 
 メモリ最適化テーブルは、頻繁に変更するドキュメントに最適な選択肢です。 メモリ最適化テーブルの利用を検討するとき、パフォーマンスについても考慮してください。 メモリ最適化コレクションでは、可能であれば、JSON ドキュメントに NVARCHAR(max) ではなく NVARCHAR(4000) を使用してください。パフォーマンスが劇的に改善されることがあります。
 
-クラシック テーブルの場合と同様に、計算列を使用して、メモリ最適化テーブルで公開するフィールドでインデックスを追加できます。 例:
+クラシック テーブルの場合と同様に、計算列を使用して、メモリ最適化テーブルで公開するフィールドでインデックスを追加できます。 次に例を示します。
 
 ```sql
 create table WebSite.Logs (
@@ -135,7 +141,7 @@ create table WebSite.Logs (
 
 パフォーマンスを最大化するために、プロパティの値を保持できるよう、JSON 値をできるだけ小さい型にキャスト変換します。 先の例では、**tinyint** が使用されていました。
 
-また、ストアド プロシージャに JSON ドキュメントを更新する SQL クエリを置き、ネイティブ コンパイルの利点を活かすことができます。 例:
+また、ストアド プロシージャに JSON ドキュメントを更新する SQL クエリを置き、ネイティブ コンパイルの利点を活かすことができます。 次に例を示します。
 
 ```sql
 CREATE PROCEDURE WebSite.UpdateData(@Id int, @Property nvarchar(100), @Value nvarchar(100))

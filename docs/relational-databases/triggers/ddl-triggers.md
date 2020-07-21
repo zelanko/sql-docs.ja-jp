@@ -12,15 +12,15 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4647814765225a2c1deeedd05f77bed80d7e992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89845e119f40b0a339bdeb7d6809ad0c017afc0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757601"
 ---
 # <a name="ddl-triggers"></a>DDL トリガー
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   DDL トリガーは、さまざまなデータ定義言語 (DDL) イベントに対応して起動されます。 これらのイベントは主に、CREATE、ALTER、DROP、GRANT、DENY、REVOKE、UPDATE STATISTICS のいずれかのキーワードで始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対応します。 DDL と同様の操作を実行する特定のシステム ストアド プロシージャも DDL トリガーを起動できます。  
   
  DDL トリガーは、次のような場合に使用します。  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b8d19d1f1fc33bfcd90f7cd801b2256a88859c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105726"
 ---
 # <a name="grouping-pane-report-builder"></a>グループ化ペイン (レポート ビルダー)
@@ -62,13 +62,13 @@ ms.locfileid: "66105726"
   
 -   **KeepTogether**。 Boolean です。 可能な場合、Tablix メンバー全体および入れ子になっているすべてのメンバーを 1 ページにまとめるように指定します。  
   
--   `KeepWithGroup`。 Boolean です。 静的行メンバーにのみ使用します。 可能な場合、非表示でなければ、この行が前の動的な兄弟メンバーまたは次の動的な兄弟メンバーに付随するようにします。 行ヘッダーをその関連グループと一緒に表示するには KeepWithGroup を **After**に設定します。  
+-   `KeepWithGroup`. Boolean です。 静的行メンバーにのみ使用します。 可能な場合、非表示でなければ、この行が前の動的な兄弟メンバーまたは次の動的な兄弟メンバーに付随するようにします。 行ヘッダーをその関連グループと一緒に表示するには KeepWithGroup を **After**に設定します。  
   
--   `RepeatOnNewPage`。 Boolean です。 静的行メンバー専用であり、KeepWithGroup の値が [なし] 以外の場合に使用します。 可能な場合、KeepWithGroup で指定された動的メンバーのインスタンスが少なくとも 1 つ含まれるページごとに、この静的行を繰り返します。 行ヘッダーをその関連グループと一緒に表示するには RepeatOnNewPage を **True**に設定します。  
+-   `RepeatOnNewPage`. Boolean です。 静的行メンバー専用であり、KeepWithGroup の値が [なし] 以外の場合に使用します。 可能な場合、KeepWithGroup で指定された動的メンバーのインスタンスが少なくとも 1 つ含まれるページごとに、この静的行を繰り返します。 行ヘッダーをその関連グループと一緒に表示するには RepeatOnNewPage を **True**に設定します。  
   
--   `Hidden`。 Boolean です。 行または列を初期設定で非表示にしておくかどうかを示します。  
+-   `Hidden`. Boolean です。 行または列を初期設定で非表示にしておくかどうかを示します。  
   
--   **ToggleItem。** [String]。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
+-   **ToggleItem。** 文字列 をオンにします。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
   
  詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)」、「[グループ単位でのヘッダーとフッターの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)」、「[複数のページへの行および列ヘッダーの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -79,8 +79,8 @@ ms.locfileid: "66105726"
 -   **(Static)** 静的メンバーにはヘッダー セルがなく、非表示静的と呼ばれます。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [ダイアログボックス、ペイン、およびウィザードのヘルプのレポートビルダー](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [データのフィルター処理、グループ化、並べ替え &#40;レポートビルダーと SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

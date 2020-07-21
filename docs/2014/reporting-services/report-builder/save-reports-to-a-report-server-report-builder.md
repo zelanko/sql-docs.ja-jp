@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107635"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>レポートのレポート サーバーへの保存 (レポート ビルダー)
@@ -25,7 +25,7 @@ ms.locfileid: "66107635"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>レポートをレポート サーバーに保存するには  
   
-1.  レポート ビルダーのボタンの **[保存]** をクリックします。 **付けて** _\<レポート アイテム\>_  ダイアログ ボックスが表示されます。  
+1.  レポート ビルダーのボタンの **[保存]** をクリックします。 [_\<レポートアイテム\> _ **として保存**] ダイアログボックスが表示されます。  
   
     > [!NOTE]  
     >  レポートを再保存すると、自動的に以前の場所に再保存されます。 場所を変更するには、[名前を付けて保存] を使用します。  
@@ -40,7 +40,7 @@ ms.locfileid: "66107635"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>レポートを別の名前で保存するには  
   
-1.  レポート ビルダーのボタンの **[名前を付けて保存]** をクリックします。 **付けて** _\<レポート アイテム\>_  ダイアログ ボックスが表示されます。  
+1.  レポート ビルダー のボタンの **[名前を付けて保存]** をクリックします。 [_\<レポートアイテム\> _ **として保存**] ダイアログボックスが表示されます。  
   
 2.  レポートを保存するレポート サーバーの場所またはファイル共有を参照します。  
   
@@ -48,10 +48,10 @@ ms.locfileid: "66107635"
   
 4.  **[アイテムの種類]** で、保存するレポート アイテムの種類を選択します。 レポートの種類はレポート (*.rdl) です。  
   
-## <a name="see-also"></a>関連項目  
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [レポートの保存 (レポート ビルダー)](saving-reports-report-builder.md)   
- [別の種類のファイルとしてレポートをエクスポートする (レポート ビルダーおよび SSRS)](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>参照  
+ [レポートの検索、表示、および管理 &#40;レポートビルダーと SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [レポートの保存 &#40;レポートビルダー&#41;](saving-reports-report-builder.md)   
+ [別の種類のファイルとしてレポートをエクスポートする &#40;レポート ビルダーおよび SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

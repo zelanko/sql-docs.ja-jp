@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 329ba87fea8229d8ab5849fcdb728495e1bc1c5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 5b5f7722daf7ebbdda988cf3fb41ac1ab5b06049
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755851"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (拡張ストアド プロシージャ API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -58,15 +58,15 @@ count
  *srvproc*  
  特定のクライアント接続のためのハンドル (この場合は、言語要求を受け取るハンドル) である SRV_PROC 構造体を指すポインターです。 この構造体には、アプリケーションとクライアントの間の通信やデータを管理するために、拡張ストアド プロシージャ API ライブラリで使用する情報が格納されます。  
   
- *ステータス*  
+ *status*  
  各種の *status* フラグに使用する 2 バイトのフィールドです。 *status* フラグの値に AND 論理演算子や OR 論理演算子を使用することにより、複数のフラグを設定できます。 次の表は、使用可能な *status* フラグを示しています。  
   
-|status フラグ|[説明]|  
+|status フラグ|説明|  
 |-----------------|-----------------|  
 |SRV_DONE_COUNT|*count* パラメーターに有効なカウントを格納します。|  
 |SRV_DONE_ERROR|現在のクライアント コマンドがエラーを受け取ったことを示します。|  
   
- *info*  
+ *インフォメーション*  
  2 バイトの予約フィールドです。 この値は 0 に設定します。  
   
  *count*  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105352"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)
@@ -79,11 +79,11 @@ ms.locfileid: "66105352"
   
      ヘッダーはフッターよりも優先されます。 繰り返し表示されるグループが入れ子になっている場合は、内側のグループの方が、外側のグループよりも優先されます。 `RepeatWith` プロパティが設定されたアイテムでは、対象となるデータ領域に近い方のアイテムが、遠い方のアイテムよりも優先されます。  
   
--   テキスト ボックス、四角形の場合は、明示的な KeepTogether プロパティに設定されたなどの小さなレポート アイテム`true`します。  
+-   明示的な KeepTogether プロパティがに`true`設定された、テキストボックスや四角形などの小さなレポートアイテム。  
   
--   サブレポートまたは明示的な KeepTogether プロパティに設定のない最も内側の tablix メンバーなどの大きなレポート アイテム`true`します。  
+-   明示的な KeepTogether プロパティがに`true`設定された、サブレポートや最も内側でない tablix メンバーなど、大きなレポートアイテム。  
   
--   Tablix データ領域の KeepTogether プロパティが明示的に設定`true`します。  
+-   明示的な KeepTogether プロパティがに`true`設定された Tablix データ領域。  
   
 ### <a name="subreports"></a>サブレポート  
  サブレポートは、別途レポート (.rdl) ファイルに定義された他のレポートを含んだ四角形としてレンダリングされます。 親レポートからアクセスできるようにするには、あらかじめサブレポート ファイルをレポート サーバーにパブリッシュしておく必要があります。  

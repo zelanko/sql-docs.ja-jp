@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6c854560982ceddf7d6237d77ba81562e97fc9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705943"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   クエリで返される列を指定します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68141064"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SELECT [ ALL | DISTINCT ]  
 [ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   
@@ -145,7 +145,7 @@ FROM Cities;
   
  *column_alias* は、ORDER BY 句の中で使用できます。 ただし、WHERE 句、GROUP BY 句、または HAVING 句の中では使用できません。 クエリ式が DECLARE CURSOR ステートメントに含まれている場合、FOR UPDATE 句の中で *column_alias* を使用することはできません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  選択リストに含まれる **text** または **ntext** 列に対して返されるデータの長さは、**text** 列の実際のサイズ、既定の TEXTSIZE セッションの設定値、またはハードコーディングされたアプリケーションの制限値のうちの最小値に設定されます。 セッション用に、返されるテキストの長さを変更するには、SET ステートメントを使ってください。 既定では、SELECT ステートメントが返すテキスト データの長さの制限は 4,000 バイトです。  
   
  次の動作のいずれかが発生した場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では例外 511 が発生し、現在実行中のステートメントがロールバックされます。  

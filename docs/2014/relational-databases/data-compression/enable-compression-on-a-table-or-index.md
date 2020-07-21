@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a51c3b5e0c4e9b5624911310ce20db5a8e060a0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918304"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970352"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の有効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルまたはインデックスで圧縮を有効にする方法について説明します。  
@@ -38,7 +37,7 @@ ms.locfileid: "62918304"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **次を使用してテーブルまたはインデックスの圧縮を有効にするには:**  
   
@@ -46,9 +45,9 @@ ms.locfileid: "62918304"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   システム テーブルで圧縮を有効にすることはできません。  
   
@@ -56,12 +55,12 @@ ms.locfileid: "62918304"
   
 -   固定されていないインデックスがテーブルにある場合、そのパーティションの圧縮設定を変更できません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはインデックスに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮を有効にするには  
   
@@ -142,7 +141,7 @@ ms.locfileid: "62918304"
   
                 -   **[日]** を選択した場合は、ジョブ スケジュールを実行する日付と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の 15 日にジョブ スケジュールを実行する場合は、 **[日]** を選択し、1 番目のボックスに「15」と入力し、2 番目のボックスに「2」と入力します。 2 番目のボックスで使用できる最大の値は "99" であることに注意してください。  
   
-                -   **[曜日]** を選択した場合は、ジョブ スケジュールを実行する曜日と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の最後の平日にジョブ スケジュールを実行する場合は、 **[日]** を選択し、リストから **[最終]** を選択します。次に 2 番目のリストから **[平日]** を選択し、最後のボックスに「2」と入力します。 **[第 1]** 、 **[第 2]** 、 **[第 3]** 、または **[第 4]** も、特定の平日 (たとえば、日曜日や水曜日) に加えて、最初の 2 つのリストから選択できます。 最後のボックスで使用できる最大の値は "99" であることに注意してください。  
+                -   **[曜日]** を選択した場合は、ジョブ スケジュールを実行する曜日と、ジョブ スケジュールを繰り返す頻度を月単位で指定します。 たとえば、隔月の最後の平日にジョブ スケジュールを実行する場合は、 **[日]** を選択し、リストから **[最終]** を選択します。次に 2 番目のリストから **[平日]** を選択し、最後のボックスに「2」と入力します。 最初の 2 つのリストでは、特定の平日 (たとえば、日曜日や水曜日) に加えて、 **[第 1]** 、 **[第 2]** 、 **[第 3]** 、または **[第 4]** を選択できます。 最後のボックスで使用できる最大の値は "99" であることに注意してください。  
   
         2.  **[一日のうちの頻度]** で、頻度、ジョブ スケジュールを実行する当日にジョブ スケジュールを繰り返す頻度を指定します。  
   
@@ -174,13 +173,13 @@ ms.locfileid: "62918304"
      **操作**  
      各アクションの種類と名前を指定します。  
   
-     **ステータス**  
+     **状態**  
      全体としてウィザードのアクションが **[成功]** または **[失敗]** のいずれの値を返したかを示します。  
   
      **メッセージ**  
      プロセスから返されたすべてのエラー メッセージまたは警告メッセージを提供します。  
   
-     **レポート**  
+     **Report**  
      パーティションの作成ウィザードの結果を含むレポートを作成します。 **[レポートの表示]** 、 **[レポートをファイルに保存]** 、 **[レポートをクリップボードにコピー]** 、 **[レポートを電子メールとして送信]** の各オプションがあります。  
   
      **[レポートの表示]**  
@@ -197,7 +196,7 @@ ms.locfileid: "62918304"
   
      完了したら、 **[閉じる]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-enable-compression-on-a-table"></a>テーブルで圧縮を有効にするには  
   

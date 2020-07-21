@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 083fa7998e347b3aa3abe7aacbf9585a18047b20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100226"
 ---
 # <a name="new-shared-schedule-management-studio"></a>[新しい共有スケジュール] (Management Studio)
@@ -31,11 +31,11 @@ ms.locfileid: "66100226"
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
-## <a name="options"></a>および  
- **名前**  
+## <a name="options"></a>オプション  
+ **Name**  
  共有スケジュールの名前を入力します。 この名前は、ユーザーがレポートおよびサブスクリプションの共有スケジュールを選択するときにドロップダウン リストに表示されます。 リスト内に納まり、共有スケジュールと別のスケジュールとを簡単に区別できるわかりやすい名前を付けてください。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよびいくつかの記号を含めることもできます。 名前を指定するときに使用できない記号は次のとおりです。  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? : \@ & = +、$/*\< >  
   
  " /  
   
@@ -45,10 +45,10 @@ ms.locfileid: "66100226"
  **[このスケジュールの終了日]**  
  このスケジュールの有効期限を指定します。  
   
- **型**  
+ **Type**  
  定期的なパターンが主に時間、日、週、または月のどれに基づくかを指定します。  
   
- **[時間] ([定期的なパターン])**  
+ **[時間]\([定期的なパターン])**  
  スケジュール設定した操作を一定時間ごとに実行する (たとえば 6 時間ごとにレポートを実行する) ためのオプションを選択します。 間隔は時間と分で指定できます。  
   
  **[日]\([定期的なパターン])**  
@@ -63,7 +63,7 @@ ms.locfileid: "66100226"
  **1 回。**  
  特定の日時に 1 回のみスケジュールを実行する場合にこのオプションを選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
  [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)   

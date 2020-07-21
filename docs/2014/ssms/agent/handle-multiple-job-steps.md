@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fef0fb69b5bfd028977276d8efabc333a21e0feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63074057"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044562"
 ---
 # <a name="handle-multiple-job-steps"></a>複数のジョブ ステップの処理
   ジョブに複数のジョブ ステップがある場合、ジョブ ステップを実行する順序を指定する必要があります。 この順序指定を*フロー制御*と呼びます。 いつでも新しいジョブ ステップを追加して、フローを再構成できます。変更が有効になるのは、次にジョブを実行するときです。 次の図は、データベース バックアップ ジョブのフロー制御を示しています。  
@@ -42,11 +41,11 @@ ms.locfileid: "63074057"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントにより、ジョブとジョブ ステップの情報がジョブ履歴に記録されます。  
   
-## <a name="see-also"></a>関連項目  
- [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
- [dbo.sysjobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
- [dbo.sysjobs &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
- [dbo.sysjobsteps &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
+## <a name="see-also"></a>参照  
+ [sp_add_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
+ [dbo.sysjobhistory &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)   
+ [Transact-sql&#41;&#40;ジョブのdbo.sys](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)   
+ [dbo.sysjobsteps &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobsteps-transact-sql)   
  [ジョブの実装](implement-jobs.md)   
  [ジョブ ステップの管理](manage-job-steps.md)  
   

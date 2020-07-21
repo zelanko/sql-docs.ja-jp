@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bec815372c77e8433fdfdaeedc2cc95a41901738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3fe4dd0be7b453bfa01feac2b60f1ec6a915320b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084415"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899178"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   次に受信するメッセージのメッセージ交換グループの識別子を返すと共に、そのメッセージが含まれるメッセージ交換のメッセージ交換グループをロックします。 メッセージ交換グループの識別子は、メッセージ自体を取得する前にメッセージ交換の状態情報を取得する場合に使用できます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68084415"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
@@ -56,7 +56,7 @@ ms.locfileid: "68084415"
  WAITFOR  
  現在メッセージが存在しない場合、GET CONVERSATION GROUP ステートメントが、キューにメッセージが到着するのを待機するように指定します。  
   
- *@conversation_group_id*  
+ *\@conversation_group_id*  
  GET CONVERSATION GROUP ステートメントによって返されるメッセージ交換グループ ID が格納される変数です。 この変数は、**uniqueidentifier** 型である必要があります。 使用できるメッセージ交換グループがない場合、この変数は NULL に設定されます。  
   
  FROM  
@@ -72,12 +72,12 @@ ms.locfileid: "68084415"
  メッセージ交換グループを取得するキューの名前を指定します。  
   
  TIMEOUT *timeout*  
- Service Broker が、キューにメッセージが到着するのを待機する時間を指定します (ミリ秒単位)。 この句は WAITFOR 句と共に使用する必要があります。 WAITFOR 句を使用するステートメントにこの句が含まれないか、*timeout* が -1 の場合、待機時間は無制限になります。 タイムアウトになると、GET CONVERSATION GROUP では *@conversation_group_id* 変数に NULL が設定されます。  
+ Service Broker が、キューにメッセージが到着するのを待機する時間を指定します (ミリ秒単位)。 この句は WAITFOR 句と共に使用する必要があります。 WAITFOR 句を使用するステートメントにこの句が含まれないか、*timeout* が -1 の場合、待機時間は無制限になります。 タイムアウトになると、GET CONVERSATION GROUP では *\@conversation_group_id* 変数に NULL が設定されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
->  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン ( **;** ) を指定する必要があります。  
+>  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、 **ステートメントのターミネータであるセミコロン (** ;[!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定する必要があります。  
   
  GET CONVERSATION GROUP ステートメントで指定したキューが使用できない場合、ステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)] エラーが返されます。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68084415"
 ## <a name="permissions"></a>アクセス許可  
  メッセージ交換グループの識別子をキューから取得する場合、現在のユーザーは、そのキューに対する RECEIVE 権限を持っている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. 無制限に待機して、メッセージ交換グループを取得する  
  次の例では、`@conversation_group_id` にメッセージ交換グループの識別子を設定します。このメッセージ交換グループは、`ExpenseQueue` 上にあり、次に使用できるメッセージで使用されます。 このコマンドは、メッセージが使用できるようになるまで待機します。  

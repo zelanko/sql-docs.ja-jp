@@ -1,5 +1,5 @@
 ---
-title: 設定のグローバル トレース オプション (SQL Server Profiler) |Microsoft Docs
+title: グローバルトレースオプションの設定 (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d580b5ebef26ce91fee23b3b920715d354cb4046
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048281"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>グローバル トレース オプションの設定 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]の特定のインスタンスで作成したすべてのトレースに適用するオプションの設定方法について説明します。  

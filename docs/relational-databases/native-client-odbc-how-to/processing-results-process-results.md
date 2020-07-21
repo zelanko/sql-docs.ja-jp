@@ -1,5 +1,5 @@
 ---
-title: 計算 (ODBC) の処理 |Microsoft Docs
+title: 結果の処理 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,21 +10,19 @@ ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfd7e36ca2bad2e067d82fa5ad0751f2ef7aef34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: a0afae97770982f4ecd6b08d53f8df04e6e2e7ac
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133444"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006561"
 ---
 # <a name="processing-results---process-results"></a>結果の処理 - 処理結果
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-ODBC アプリケーションの結果の処理は、まず、結果セットの特性を確認し、いずれかを使用してプログラム変数にデータを取得する[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
+ODBC アプリケーションでの結果の処理では、最初に結果セットの特性を判断し、次に[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)のいずれかを使用してプログラム変数にデータを取得します。  
   
 ### <a name="to-process-results"></a>結果を処理するには  
   
@@ -59,12 +57,10 @@ ODBC アプリケーションの結果の処理は、まず、結果セットの
   
 6.  別の結果セットが使用できる場合は、手順 1 に戻ります。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) によって SQL_NO_DATA が返される前に結果セットの処理を取り消すには、[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md) を呼び出します。  
   
-## <a name="see-also"></a>関連項目  
-[結果セットの情報を取得&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+## <a name="see-also"></a>参照  
+[ODBC&#41;&#40;結果セットの情報を取得します。](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bebeec974bff46333662708952d0a8b6fa841a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9f71d1c017e2be711690f8c8c4ea59ef8370d277
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835222"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435439"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>インスタンスの作成のための SQL サーバー接続
   Oracle CDC インスタンスを作成するときの最初の手順の 1 つは、ターゲットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで CDC データベースを作成することです。 この CDC データベースは、SQL Server CDC に対して有効になります。このように有効にするには、ログインが `sysadmin` 固定サーバー ロールのメンバーである必要があります。  
@@ -28,8 +27,8 @@ ms.locfileid: "62835222"
  **[サーバー名]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在するサーバーの名前を入力します。  
   
- **[認証]**  
- 次のいずれかを選択します。  
+ **認証**  
+ 次のいずれかを選択してください。  
   
 -   **[Windows 認証]**  
   
@@ -50,8 +49,8 @@ ms.locfileid: "62835222"
   
      [高度な接続プロパティ] ダイアログ ボックスの詳細については、「 [高度な接続プロパティ](advanced-connection-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 変更データベースの作成](create-the-sql-server-change-database.md)   
- [CDC デザイナーで使用する SQL Server 接続に必要な権限](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [CDC デザイナーで使用する SQL Server 接続に必要なアクセス許可](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

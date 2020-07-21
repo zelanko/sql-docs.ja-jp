@@ -1,5 +1,5 @@
 ---
-title: setMaxFieldSize メソッド (SQLServerStatement) |Microsoft Docs
+title: setMaxFieldSize メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 38f7fc1d-acad-4d10-9fc8-3c0669d93b07
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8958ffe76adbea75959dd15f87db58f28f0893b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 74d306815016e58d57418f5b72b4d4901553e8d6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973995"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925705"
 ---
 # <a name="setmaxfieldsize-method-sqlserverstatement"></a>setMaxFieldSize メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,8 +42,8 @@ public final void setMaxFieldSize(int max)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setMaxFieldSize メソッドは、setMaxFieldSize インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setMaxFieldSize メソッドは、java.sql.Statement インターフェイスの setMaxFieldSize メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

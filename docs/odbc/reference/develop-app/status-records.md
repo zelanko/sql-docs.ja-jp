@@ -12,17 +12,17 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 4a987f69-158f-4cc4-a31b-2b7dd8dcbb87
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6ed360c39b87efe851bcbbb5c60762288ea1719
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4afef16137404fcdfd3e1d328642f1d314829538
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114279"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301373"
 ---
 # <a name="status-records"></a>状態レコード
-状態レコードのフィールドは、特定のエラーまたは SQLSTATE、ネイティブ エラー番号、診断メッセージ、列番号、および行番号を含む、ドライバー マネージャー、ドライバー、またはデータ ソースによって返される警告に関する情報を格納します。 状態レコードは、関数には、SQL_ERROR、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA、または SQL_STILL_EXECUTING が返される場合にのみ作成できます。 状態レコードのフィールドの完全な一覧を参照してください、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明。  
+ステータスレコードのフィールドには、SQLSTATE、ネイティブエラー番号、診断メッセージ、列番号、行番号など、ドライバーマネージャー、ドライバー、またはデータソースによって返された特定のエラーまたは警告に関する情報が含まれます。 状態レコードを作成できるのは、関数が SQL_ERROR、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA、または SQL_STILL_EXECUTING を返した場合のみです。 状態レコード内のフィールドの完全な一覧については、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

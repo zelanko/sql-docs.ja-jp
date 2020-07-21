@@ -1,10 +1,9 @@
 ---
-title: ダイアグラム ペインでの列名の表示 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: ダイアグラム ペインでの列名の表示
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 672157677f280f908f97467a9ced245f484e2c70
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 23f64d0a64c2e881267775e2046b5a99ef0e1329
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256420"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255070"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>ダイアグラム ペインでの列名の表示 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

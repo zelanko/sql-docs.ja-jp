@@ -1,5 +1,6 @@
 ---
 title: レプリケーション エージェントの管理 | Microsoft Docs
+description: スキーマとデータのコピーの作成やサーバー間での変更の反映など、レプリケーションのタスクを実行するレプリケーション エージェントの管理について説明します。
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -22,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f0a59dff4420aa4cab9a7ce62a99315196007691
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768221"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159690"
 ---
 # <a name="replication-agent-administration"></a>レプリケーション エージェントの管理
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   レプリケーション エージェントは、レプリケーションに関連した数多くのタスクを実行します。たとえば、スキーマとデータのコピーの作成、パブリッシャーまたはサブスクライバーでの更新の検出、およびサーバー間での変更の反映などを行います。 既定では、レプリケーション エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントのジョブ ステップで実行されます。 エージェントは単なる実行可能ファイルであるため、コマンド ラインやバッチ スクリプトから直接呼び出すこともできます。 各レプリケーション エージェントでは、ランタイム パラメーターのセットを使用して実行方法を制御できます。このパラメーターはエージェント プロファイルまたはコマンド ラインで指定します。  
   
 > [!IMPORTANT]  
@@ -39,9 +40,9 @@ ms.locfileid: "68768221"
   
  レプリケーション エージェントのファイルは、 [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]\COM に保存されています。 次の表は、レプリケーション実行可能ファイル名およびファイル名を示しています。 パラメーター参照を表示するにはエージェントのリンクをクリックしてください。  
   
-|エージェント実行可能ファイル|[ファイル名]|  
+|エージェント実行可能ファイル|ファイル名|  
 |----------------------|---------------|  
-|[レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
@@ -87,7 +88,7 @@ ms.locfileid: "68768221"
 ## <a name="replication-maintenance-jobs"></a>レプリケーション メンテナンス ジョブ  
  レプリケーションでは、次のジョブを使用して定期的なメンテナンスおよび要求時メンテナンスを実行します。  
   
-|クリーンアップ ジョブ|[説明]|既定のスケジュール|  
+|クリーンアップ ジョブ|説明|既定のスケジュール|  
 |------------------|-----------------|----------------------|  
 |エージェント履歴のクリーンアップ: Distribution|ディストリビューション データベースからレプリケーション エージェントの履歴を削除します。|10 分おきに実行されます。|  
 |ディストリビューションのクリーンアップ: Distribution|ディストリビューション データベースからレプリケートされたトランザクションを削除します。 |10 分おきに実行されます。|  

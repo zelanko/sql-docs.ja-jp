@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 83ac357d01b616a0010b9c2132f77bbcf89b479b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd36b3bc56bcd48c53871c9bc1e334d72c80ac78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917003"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970112"
 ---
-# <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] \([トランザクション ログの配布] ページ)
+# <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] ([トランザクション ログの配布] ページ)
   このページを使用すると、データベースのログ配布のプロパティを構成および変更できます。  
   
  ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ログ配布構成のプライマリ データベースとして有効にする]**  
  このデータベースをログ配布のプライマリ データベースとして有効にします。 オンにした場合は、このページの残りのオプションを構成します。 このチェック ボックスをオフにした場合、このデータベースのログ配布構成は削除されます。  
   
@@ -40,10 +39,10 @@ ms.locfileid: "62917003"
  **[セカンダリ サーバー インスタンスとデータベース]**  
  このプライマリ データベースに対して現在構成されているセカンダリ サーバーおよびセカンダリ データベースを表示します。 セカンダリ データベースに関連付けられているパラメーターを変更するには、データベースを強調表示し、 **[...]** をクリックします。  
   
- **[追加]**  
+ **追加**  
  このプライマリ データベースのログ配布構成にセカンダリ データベースを追加するには、 **[追加]** をクリックします。  
   
- **[削除]**  
+ **Remove**  
  選択されているデータベースをこのログ配布構成から削除します。 データベースを選択してから、 **[削除]** をクリックします。  
   
  **[監視サーバー インスタンスを使用する]**  
@@ -61,7 +60,7 @@ ms.locfileid: "62917003"
 > [!IMPORTANT]  
 >  セカンダリ データベースの設定スクリプトを生成するには、 **[セカンダリ データベースの設定]** ダイアログ ボックスを呼び出す必要があります。 このダイアログ ボックスを呼び出すことにより、セカンダリ サーバーに接続して、スクリプトの生成に必要なセカンダリ データベースの現在の設定を取得できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ログ配布ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql)   
  [ログ配布テーブル &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-tables-transact-sql)  
   

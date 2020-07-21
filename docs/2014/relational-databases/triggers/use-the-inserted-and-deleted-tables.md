@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: facc534177113bd93e56e50fca3ae14c3e6b2cfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62524378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014390"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted テーブルと deleted テーブルの使用
   DML トリガー ステートメントでは、deleted テーブルおよび inserted テーブルという 2 つの特殊なテーブルが使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、これらのテーブルを自動的に作成および管理します。 これらの一時的なメモリ常駐型のテーブルを使用して、特定のデータ変更の影響をテストしたり、DML トリガー操作に条件を設定したりできます。 これらのテーブル内のデータを直接変更したり、これらのテーブルに対して CREATE INDEX などのデータ定義言語 (DDL) 操作を実行することはできません。  
@@ -74,7 +73,7 @@ ms.locfileid: "62524378"
   
  INSERT、UPDATE、または DELETE の各ステートメントが INSTEAD OF トリガーを含むビューを参照する場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、どのテーブルに対しても直接に動作を実行するのではなく、そのトリガーを呼び出します。 呼び出されたトリガーは、inserted テーブルおよび deleted テーブルの情報を使用して、ベース テーブルで要求された動作を実装するために必要なステートメントを作成する必要があります。その際、ビューに作成された inserted テーブルおよび deleted テーブルの情報の形式がベース テーブルのデータ形式と異なっていてもかまいません。  
   
- ビューに定義された INSTEAD OF トリガーに渡される inserted テーブルおよび deleted テーブルの形式は、ビューに定義された SELECT ステートメントの選択リストに一致します。 例 :  
+ ビューに定義された INSTEAD OF トリガーに渡される inserted テーブルおよび deleted テーブルの形式は、ビューに定義された SELECT ステートメントの選択リストに一致します。 次に例を示します。  
   
 ```  
 USE AdventureWorks2012;  

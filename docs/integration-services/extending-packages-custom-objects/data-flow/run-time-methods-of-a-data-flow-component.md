@@ -14,14 +14,14 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 483b5374238490cfa9c416f252d67d24b5a7a89d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0657cf413c9a7c9d9e12584aacc08b4600a83a56
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116447"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297189"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>データ フロー コンポーネントの実行時のメソッド
 

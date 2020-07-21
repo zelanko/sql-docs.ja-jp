@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_reconcile_columns (TRANSACT-SQL) |Microsoft Docs
+title: sp_rda_reconcile_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,21 +14,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7ad2fd6c51f5b5463e4e4c10745b2ff245bd691d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a528609b8ab33f913a45e9bd61a1409bc3927930
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083675"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053123"
 ---
-# <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sp_rda_reconcile_columns (Transact-sql)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Stretch 対応 SQL Server テーブル内の列には、リモート Azure テーブルの列を調整します。  
+  リモート Azure テーブルの列を、Stretch が有効な SQL Server テーブルの列に調整します。  
     
-  **sp_rda_reconcile_columns**リモート テーブルではなく Stretch 対応 SQL Server テーブルに存在するリモート テーブルに列を追加します。 これらの列には、列をリモート テーブルから誤って削除した可能性があります。 ただし、 **sp_rda_reconcile_columns** SQL Server テーブルではなく、リモート テーブルに存在するリモート テーブルから列を削除しません。
+  **sp_rda_reconcile_columns**では、リモートテーブルではなく、Stretch が有効な SQL Server テーブルに存在するリモートテーブルに列が追加されます。 これらの列は、リモートテーブルから誤って削除した列である場合があります。 ただし、リモートテーブルには存在するが SQL Server テーブルには存在しない列は、リモートテーブルからは削除されません**sp_rda_reconcile_columns** 。
   
   > [!IMPORTANT]
   > **sp_rda_reconcile_columns** がリモート テーブルから誤って削除した列を再作成する場合、削除された列に属していたデータは復元されません。
@@ -44,20 +43,20 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>引数  
- \@objname = ' *\@objname*'  
- Stretch 対応 SQL Server テーブルの名前。  
+ \@objname = '* \@ objname*'  
+ Stretch が有効な SQL Server テーブルの名前。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または > 0 (失敗)  
+ 0 (成功) または >0 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- Db_owner アクセス許可が必要です。  
+ Db_owner のアクセス許可が必要です。  
    
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>注釈  
  Stretch 対応の SQL Server テーブルに存在しなくなったリモートの Azure テーブルに列が存在している場合、これらの余分な列が Stretch Database の正常な動作を妨げることはありません。 必要に応じて余分の列を手動で削除できます。  
   
 ## <a name="example"></a>例  
- リモートの Azure テーブルの列を調整するには、次のステートメントを実行します。  
+ リモート Azure テーブルの列を調整するには、次のステートメントを実行します。  
   
 ```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9ed0db394f63594937ad923734b07fed8050955
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064992"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でジョブ カテゴリのメンバーシップを変更する方法について説明します。  
@@ -41,12 +40,12 @@ ms.locfileid: "63017170"
   
      [SQL Server 管理オブジェクト](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>ジョブ カテゴリのメンバーシップを変更するには  
   
@@ -56,15 +55,15 @@ ms.locfileid: "63017170"
   
 3.  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]** をクリックします。  
   
-4.  **_server_name_** ダイアログ ボックスで、編集するジョブ カテゴリを選択し、 **ジョブの表示**をクリックします。  
+4.  **server_name**_]_ ダイアログ ボックスで、編集するジョブ カテゴリを選択し、 **[ジョブの表示]** をクリックします。  
   
 5.  **[すべてのジョブを表示]** チェック ボックスをオンにします。  
   
-6.  カテゴリにジョブを追加するには、メイン グリッドで、ジョブに対応する **[選択]** 列のチェック ボックスをオンにします。 カテゴリからジョブを削除するには、チェック ボックスをオフにします。 完了したら、 **[OK]** をクリックします。  
+6.  カテゴリにジョブを追加するには、メイン グリッドで、ジョブに対応する **[選択]** 列のチェック ボックスをオンにします。 カテゴリからジョブを削除するには、チェック ボックスをオフにします。 完了したら、[**OK**] をクリックします。  
   
-7.  **[ジョブ カテゴリの管理 - _<server_name>_ ]** ダイアログ ボックスを閉じます。  
+7.  [**ジョブカテゴリ**の_server_name_の管理] ダイアログボックスを閉じます。  
   
-##  <a name="TSQL"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL の使用  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>ジョブ カテゴリのメンバーシップを変更するには  
   
@@ -74,7 +73,7 @@ ms.locfileid: "63017170"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     -- adding a new job category to the "NightlyBackups" job  
     USE msdb ;  
     GO  
@@ -84,11 +83,9 @@ ms.locfileid: "63017170"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)します。  
+ 詳細については、「 [sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)」を参照してください。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ジョブ カテゴリのメンバーシップを変更するには**  
   
- 使用して、 `JobCategory` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。  
-  
-  
+ `JobCategory`Visual Basic、Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。  

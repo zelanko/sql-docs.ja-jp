@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 46d6fd5d4ecd821a3ccfeb35679e8fa7bab6104e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: feff922ac12e46a8b78f30ca46bc02a4fd23b4f6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771722"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439119"
 ---
 # <a name="browse-all-principals-dialog-box"></a>[すべてのプリンシパルを参照] ダイアログ ボックス
   **[すべてのプリンシパルを参照]** ダイアログ ボックスを使用して、データベースのプリンシパルを選択し、選択したプロジェクトに対する、または選択したフォルダーに格納されたすべてのプロジェクトに対するプリンシパルの権限を変更できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "62771722"
   
 -   [オプションの構成](#options)  
   
-##  <a name="open_dialog"></a> [すべてのプリンシパルを参照] ダイアログ ボックスを開く  
+##  <a name="open-the-browse-all-principals-dialog-box"></a><a name="open_dialog"></a> [すべてのプリンシパルを参照] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62771722"
   
 5.  **[権限]** ページを選択し、 **[参照]** をクリックします。  
   
-##  <a name="options"></a> オプションの構成  
+##  <a name="configure-the-options"></a><a name="options"></a> オプションの構成  
  このページには、SSISDB データベースのカタログ ビュー sys.database_principals から返されたプリンシパルが表示されます。  
   
  プリンシパルを選択した状態で、 **[OK]** をクリックして、 **[すべてのプリンシパルを参照]** ダイアログ ボックスを閉じると、そのプリンシパルが親ダイアログ ボックスの **[権限]** ページにある **[ログインまたはロール]** の一覧に追加されます。 **[ログインまたはロール]** の一覧にプリンシパルを追加すると、そのプリンシパルの選択したプロジェクトに対する権限を変更できます。  
@@ -55,10 +54,10 @@ ms.locfileid: "62771722"
  **[アイコン列]**  
  プリンシパルの **[種類]** に対応したアイコンです。  
   
- **名前**  
+ **Name**  
  プリンシパルの名前です。  
   
- **型**  
+ **Type**  
  プリンシパルの種類。 一般的な種類を次に示します。  
   
 -   SQL ユーザー  

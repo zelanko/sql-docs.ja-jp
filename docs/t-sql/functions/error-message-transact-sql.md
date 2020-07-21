@@ -19,18 +19,18 @@ helpviewer_keywords:
 - TRY...CATCH [SQL Server]
 - CATCH block
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e38e57bf64d20dcc4e16a8d7b31c372d877c038f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35241a392ef91c13b48da1bcdfa66a707d4c7680
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904390"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010388"
 ---
-# <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、TRY...CATCH 構造の CATCH ブロックが実行される原因となったエラーのメッセージ テキストを返します。  
   
@@ -50,16 +50,16 @@ ERROR_MESSAGE ( )
   
 `ERROR_MESSAGE` は、CATCH ブロックの範囲外で呼び出されると、NULL を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `ERROR_MESSAGE` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
 `ERROR_MESSAGE` は、実行回数に関係なく、あるいは `CATCH` ブロックのスコープ内の実行場所に関係なく、関連エラー メッセージを返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  
   
 `CATCH` ブロックが入れ子になっている場合、`ERROR_MESSAGE` は、`CATCH` ブロックを参照した `CATCH` ブロックのスコープに固有のエラー メッセージを返します。 たとえば、外側の TRY...CATCH 構造の `CATCH` ブロックの中に `TRY...CATCH` 構造が含まれることがあります。 その内側の `CATCH` ブロック内では、`ERROR_MESSAGE` は内側の `CATCH` ブロックを呼び出したエラーからのメッセージを返します。 `ERROR_MESSAGE` が外側の `CATCH` ブロック内で実行される場合、外側の `CATCH` ブロックを呼び出したエラーからのメッセージを返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-errormessage-in-a-catch-block"></a>A. CATCH ブロックで ERROR_MESSAGE を使用する  
+### <a name="a-using-error_message-in-a-catch-block"></a>A. CATCH ブロックで ERROR_MESSAGE を使用する  
 この例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `CATCH` ブロックはエラー メッセージを返します。  
   
 ```sql   
@@ -86,7 +86,7 @@ Divide by zero error encountered.
 
 ```  
   
-### <a name="b-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_MESSAGE を使用する  
+### <a name="b-using-error_message-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_MESSAGE を使用する  
 この例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `CATCH` ブロックは、エラー メッセージと共にそのエラーに関する情報を返します。  
   
 ```sql  

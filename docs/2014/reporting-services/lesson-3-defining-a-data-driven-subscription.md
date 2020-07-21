@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: データ ドリブン サブスクリプションの定義 | Microsoft Docs'
+title: 'レッスン 3 : データ ドリブン サブスクリプションの定義 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108504"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3: データ ドリブン サブスクリプションの定義
@@ -23,33 +23,33 @@ ms.locfileid: "66108504"
 > [!NOTE]  
 >  開始する前に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービスが実行されていることを確認します。 実行されていない場合は、サブスクリプションを保存できません。  
   
- このレッスンを行うには、レッスン 1 とレッスン 2 を完了していることと、レポート データ ソースに、保存された資格情報が使用されていることが必要です。  詳細については、「[レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)」を参照してください  
+ このレッスンを行うには、レッスン 1 とレッスン 2 を完了していることと、レポート データ ソースに、保存された資格情報が使用されていることが必要です。  詳細については、「 [レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)」を参照してください。  
   
- このトピックの内容  
+ このトピックの内容:  
   
--   [データ ドリブン サブスクリプション ウィザードを開始します。](#bkmk_startwizard)  
+-   [データドリブンサブスクリプションウィザードの開始](#bkmk_startwizard)  
   
--   [手順 1 - 説明の定義](#bkmk_definesubscription)  
+-   [ステップ 1 - 説明の定義](#bkmk_definesubscription)  
   
--   [手順 2 - サブスクライバー データ ソースへの接続を定義します。](#bkmk_defineconnectiontosubscriber)  
+-   [ステップ 2 - サブスクライバー データ ソースへの接続の定義](#bkmk_defineconnectiontosubscriber)  
   
--   [手順 3 - データのサブスクライバーを取得するクエリの定義](#bkmk_definequery)  
+-   [ステップ 3 - サブスクライバー データを取得するためのクエリの定義](#bkmk_definequery)  
   
--   [手順 4 - 配信オプションの設定](#bkmk_set_deliveryoptions)  
+-   [ステップ 4 - 配信オプションの設定](#bkmk_set_deliveryoptions)  
   
--   [手順 5 - レポート出力を変化させるパラメーター値を構成します。](#bkmk_configure_parameter)  
+-   [ステップ 5 - レポート出力を変化させるパラメーター値の構成](#bkmk_configure_parameter)  
   
--   [手順 6 - サブスクリプションのスケジュール設定するには](#bkmk_schedule_subscription)  
+-   [ステップ 6 - サブスクリプションのスケジュールの設定](#bkmk_schedule_subscription)  
   
-##  <a name="bkmk_startwizard"></a> データ ドリブン サブスクリプション ウィザードを開始します。  
+##  <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>データドリブンサブスクリプションウィザードの開始  
   
 1.  レポート マネージャーで **[ホーム]** をクリックして **Sales Orders** レポートのあるフォルダーに移動します。  
   
 2.  レポートのショートカット メニューで、 **[管理]** をクリックし、 **[サブスクリプション]** タブをクリックします。  
   
-3.  クリックして**新しいデータ ドリブン サブスクリプション**します。 このボタンが表示されない場合は、コンテンツ マネージャーの権限がありません。  
+3.  [**新しいデータドリブンサブスクリプション**] をクリックします。 このボタンが表示されない場合は、コンテンツ マネージャーの権限がありません。  
   
-##  <a name="bkmk_definesubscription"></a> 手順 1 - 説明の定義  
+##  <a name="step-1---define-a-description"></a><a name="bkmk_definesubscription"></a>手順 1-説明を定義する  
   
 1.  説明に「 **Sales Order delivery** 」と入力します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108504"
   
 3.  **[このサブスクリプションのみを対象とします]** を選択し、 **[次へ]** をクリックします。  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a> 手順 2 - サブスクライバー データ ソースへの接続を定義します。  
+##  <a name="step-2---define-a-connection-to-the-subscriber-data-source"></a><a name="bkmk_defineconnectiontosubscriber"></a>手順 2-サブスクライバーデータソースへの接続を定義する  
   
 1.  データ ソースの種類として **[Microsoft SQL Server]** を選択します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66108504"
     ```  
   
     > [!NOTE]  
-    >  サブスクライバーは、レッスン 1 で作成したデータベースです。  
+    >   サブスクライバーはレッスン 1 で作成したデータベースです。  
   
 3.  **[レポート サーバーに保存され、セキュリティで保護された資格情報]** をクリックします。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66108504"
   
 5.  **[データ ソースへの接続時に Windows 資格情報として使用する]** をクリックし、 **[次へ]** をクリックします。  
   
-##  <a name="bkmk_definequery"></a> 手順 3 - データのサブスクライバーを取得するクエリの定義  
+##  <a name="step-3---define-a-query-to-retrieve-subscriber-data"></a><a name="bkmk_definequery"></a>手順 3-サブスクライバーデータを取得するクエリの定義  
   
 1.  クエリ ボックスに次のクエリを入力します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108504"
   
 3.  **[検証]** をクリックし、 **[次へ]** をクリックします。  
   
-##  <a name="bkmk_set_deliveryoptions"></a> 手順 4 - 配信オプションの設定  
+##  <a name="step-4---set-delivery-options"></a><a name="bkmk_set_deliveryoptions"></a>手順 4-配信オプションを設定する  
   
 1.  **[ファイル名]** で、 **[データベースから値を取得]** を選択します。 **Order**フィールドをクリックします。  
   
@@ -107,13 +107,13 @@ ms.locfileid: "66108504"
   
 7.  **[パスワード]** で、 **[静的な値を指定]** を選択します。 パスワードを入力します。 パスワードは正確に入力してください。 このウィザードでは、パスワードは検証されません。  
   
-8.  **[次へ].**  
+8.  [**次へ] をクリックします。**  
   
-##  <a name="bkmk_configure_parameter"></a> 手順 5 - レポート出力を変化させるパラメーター値を構成します。  
+##  <a name="step-5---configure-a-parameter-value-to-very-report-output"></a><a name="bkmk_configure_parameter"></a>手順 5-レポート出力を非常に大きくするようにパラメーター値を構成する  
   
-1.  **[OrderNumber]** には、 **[データベースから値を取得]** を選択します。 [値] で、 **[Order]** をクリックします。 **[次へ].**  
+1.  **[OrderNumber]** には、 **[データベースから値を取得]** を選択します。 [値] で、 **[Order]** をクリックします。 [**次へ] をクリックします。**  
   
-##  <a name="bkmk_schedule_subscription"></a> 手順 6 - サブスクリプションのスケジュール設定するには  
+##  <a name="step-6---to-schedule-a-subscription"></a><a name="bkmk_schedule_subscription"></a>手順 6-サブスクリプションのスケジュールを設定する  
   
 1.  **[このサブスクリプション用に作成されたスケジュールで実行]** をクリックし、 **[次へ]** をクリックします。  
   
@@ -126,22 +126,22 @@ ms.locfileid: "66108504"
 ## <a name="next-steps"></a>次の手順  
  サブスクリプションを実行すると、 *Subscribers* データ ソースの注文ごとに 1 つずつ、4 つのレポート ファイルが、指定したファイル共有に配信されます。 各配信では、データ (注文固有のデータ)、表示形式、ファイル形式がそれぞれ異なっています。 各レポートを共有フォルダーから開き、定義したサブスクリプション オプションに基づいて各バージョンがカスタマイズされているかどうかを確認できます。  
   
- ![サブスクリプションによって作成されるファイルの一覧](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-filelist.gif "サブスクリプションによって作成されるファイルの一覧")  
+ ![サブスクリプションによって作成されたファイルの一覧](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-filelist.gif "サブスクリプションによって作成されたファイルの一覧")  
   
  レポート マネージャーのサブスクリプション ページには、サブスクリプションの **[最終実行]** 日付と **[状態]** が表示されます。  
   
 > [!NOTE]  
 >  サブスクリプションを実行した後、ページを更新して更新後の情報を表示します。  
   
- ![レポート マネージャーでのサブスクリプションの結果](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.gif "レポート マネージャーでのサブスクリプションの結果")  
+ ![レポート マネージャーに表示されるサブスクリプションの結果](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.gif "レポート マネージャーに表示されるサブスクリプションの結果")  
   
- これで、「データ ドリブン サブスクリプションの定義」のチュートリアルは終了します。 詳細については、その他は[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]チュートリアルを参照してください[Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)します。  
+ これで、「データ ドリブン サブスクリプションの定義」のチュートリアルは終了します。 その他のチュートリアルの[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]詳細については、 [REPORTING SERVICES チュートリアル &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [データ ドリブン サブスクリプション](subscriptions/data-driven-subscriptions.md)   
- [作成、変更、およびデータ ドリブン サブスクリプションの削除](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
+ [データドリブンサブスクリプションの作成、変更、および削除](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [サブスクライバー データに対して外部データ ソースを使用する &#40;データ ドリブン サブスクリプション&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

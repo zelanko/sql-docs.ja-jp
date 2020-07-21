@@ -1,18 +1,19 @@
 ---
-title: 複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 複数のページへの行および列ヘッダーの表示 (レポート ビルダー) | Microsoft Docs
+description: Tablix データ領域 (テーブル、マトリックス、リスト) が複数のページにわたる場合、Reporting Services のページ分割されたレポートの各ページで行ヘッダーおよび列ヘッダーを繰り返すかどうかを制御できます。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
-ms.date: 03/01/2017
-ms.openlocfilehash: 1f1ae9d45e98cc847a89562c93040c4465e51efe
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 12/09/2019
+ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263332"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254591"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)
 
@@ -20,7 +21,7 @@ ms.locfileid: "68263332"
   
  行および列を制御する方法は、Tablix データ領域にグループ ヘッダーがあるかどうかによって異なります。 グループ ヘッダーを含む Tablix データ領域内でクリックすると、次の図に示すように点線で Tablix 領域が示されます。  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Tablix データ領域部分](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix データ領域部分")  
   
  行グループ ヘッダーと列グループ ヘッダーは、テーブルまたはマトリックスの新規作成ウィザードかグラフの新規作成ウィザードでグループを追加するときに、フィールドをグループ化ペインに追加するか、コンテキスト メニューを使用すると、自動的に作成されます。 Tablix データ領域に Tablix 本体領域のみがあり、グループ ヘッダーがない場合、行および列は Tablix メンバーになります。  
   

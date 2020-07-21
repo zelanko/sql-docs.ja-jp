@@ -1,56 +1,44 @@
 ---
-title: エージェントのマスター ジョブに関連付けられているターゲット サーバーの変更 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更する
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: def60f3aab59fad8fa3ce5af54d83724ce63463a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 390e2325b1a65d7c1cb33e873df297734bb6a740
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267531"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245229"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーの変更
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更する方法について説明します。  
+
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
-**このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-    [制限事項と制約事項](#Restrictions)  
-  
-    [セキュリティ](#Security)  
-  
--   **SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更するために使用するもの:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
-  
-## <a name="BeforeYouBegin"></a>はじめに  
-  
-### <a name="Restrictions"></a>制限事項と制約事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>制限事項と制約事項  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブの対象サーバーを、ローカル サーバーとリモート サーバーの両方に設定することはできません。  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>アクセス許可  
+#### <a name="permissions"></a><a name="Permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
-## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更するには  
   
@@ -62,11 +50,11 @@ ms.locfileid: "68267531"
   
 4.  ターゲット サーバーを変更するジョブを右クリックし、 **[プロパティ]** を選択します。  
   
-5.  **[ジョブのプロパティ - <_ジョブ名_>]** ダイアログ ボックスで、 **[ページの選択]** の **[対象サーバー]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
+5.  **[ジョブのプロパティ - <_ジョブ名_>]** ダイアログ ボックスで、**[ページの選択]** の **[対象サーバー]** を選択します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   
-## <a name="TsqlProcedure"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL の使用  
   
 #### <a name="to-delete-a-target-server-currently-associated-with-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブに現在関連付けられているターゲット サーバーを削除するには  
   

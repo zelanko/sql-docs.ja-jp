@@ -1,6 +1,7 @@
 ---
-title: メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成 | Microsoft Docs
-ms.custom: ''
+title: メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャ
+description: このサンプルでは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャを作成するためのインメモリ OLTP の構文について説明します。
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a1e096d09865693661659a91875728baefdf92d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba66306b4ce798e48e22d77c5b1ae0c37c8ec91b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723312"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、インメモリ OLTP の構文を紹介する例を示します。  
 

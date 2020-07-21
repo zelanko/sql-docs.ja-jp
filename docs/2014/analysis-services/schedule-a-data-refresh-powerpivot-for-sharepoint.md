@@ -1,5 +1,5 @@
 ---
-title: データ更新 (PowerPivot for SharePoint) のスケジュール |Microsoft Docs
+title: データ更新のスケジュール (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1cfbd8496a700f03ae91e81f1fcf442c1a12bcfa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070008"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538924"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>データ更新のスケジュール (PowerPivot for SharePoint)
   データ更新をスケジュールすると、SharePoint サイトにパブリッシュした Excel ブック内の PowerPivot データが自動更新されるようになります。  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010  
   
  **このトピックの内容:**  
   
@@ -34,12 +33,12 @@ ms.locfileid: "66070008"
   
  [データ更新の有効化とスケジュール](#drenablesched)  
   
- [データ更新を確認します。](#drverify)  
+ [データ更新の確認](#drverify)  
   
 > [!NOTE]  
 >  PowerPivot データ更新は、SharePoint ファーム内の Analysis Services サーバー インスタンスによって実行されます。 Excel Services のデータ更新機能とは関係ありません。 PowePivot スケジュールのデータ更新機能では、PowerPivot 以外のデータは更新されません。  
   
-##  <a name="prereq"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="prereq"></a> 前提条件  
  データ更新スケジュールを作成するには、ブックの投稿レベル以上の権限を持っている必要があります。  
   
  データ更新時にアクセスされる外部データ ソースが使用可能であること、およびスケジュールに指定した資格情報がそれらのデータ ソースにアクセスする権限を持っていることが必要です。 スケジュールされたデータ更新には、ネットワーク接続を介してアクセスできるデータ ソースの場所が必要になります (たとえば、ワークステーションのローカル フォルダーではなく、ネットワーク ファイル共有など)。  
@@ -51,9 +50,9 @@ ms.locfileid: "66070008"
  更新操作の終了時に、ブックがチェックインされている必要があります。 ブックに対するロックは、データ更新の最後に、ファイルに対して行われます (更新の開始時ではなく、ファイルが保存されるときに実行されます)。  
   
 > [!NOTE]  
->  データ更新の進行中に、サーバーによってブックがロックされることはありません。 ただし、更新されたファイルをチェックインするために、ファイルはデータ更新の終了時にロックされます。 この時点でファイルが別のユーザーにチェックアウトされると、更新されたデータは破棄されます。同様に、データ更新の開始時にサーバーが取得したコピーと大幅に異なるファイルがチェックインされた場合、更新されたデータは破棄されます。  
+>  データ更新の進行中に、サーバーによってブックがロックされることはありません。 ただし、更新されたファイルをチェックインするために、ファイルはデータ更新の終了時にロックされます。 この時点で、ファイルが別のユーザーにチェックアウトされると、更新されたデータが破棄されます。同様に、ファイルがチェックインされているが、データ更新の開始時にサーバーによって取得されたコピーと大幅に異なる場合、更新されたデータは破棄されます。  
   
-##  <a name="intro"></a> データ更新の概要  
+##  <a name="data-refresh-overview"></a><a name="intro"></a>データ更新の概要  
  Excel ブックの PowerPivot データは、リモート サーバーやネットワーク ファイル共有からアクセスされる外部のデータベースやデータ ファイルなど、複数の外部データ ソースから取得できます。 接続された外部データ ソースからインポートされたデータを含む PowerPivot ブックの場合は、データ更新を構成して、元のソースで更新されたデータを自動的にインポートするようにスケジュールできます。  
   
  外部データ ソースには、PowerPivot クライアント アプリケーションを使用してブックに元のデータをインポートしたときに指定した、埋め込まれた接続文字列、URL、または UNC パスを通してアクセスします。 PowerPivot ブックに格納された元の接続情報が、その後のデータ更新操作に再利用されます。 データ ソースへの接続に使用される資格情報を上書きできますが、データ更新の目的で接続文字列を上書きすることはできません。既存の接続情報のみが使用されます。  
@@ -72,7 +71,7 @@ ms.locfileid: "66070008"
   
  個々のデータ ソースに対して詳細なスケジュールを作成することで、外部データ ソースでの変動に合わせた更新スケジュールを作成できます。 たとえば、1 日をとおして生成されるトランザクション データが含まれる外部データ ソースに対しては、更新された情報を毎晩取得するようなデータ更新スケジュールを個別に作成できます。  
   
-##  <a name="drenablesched"></a> データ更新の有効化とスケジュール  
+##  <a name="enable-and-schedule-data-refresh"></a><a name="drenablesched"></a>データ更新の有効化とスケジュール  
  SharePoint ライブラリにパブリッシュした Excel ブック内の PowerPivot データ用にデータ更新をスケジュールするには、次の手順に従ってください。  
   
 1.  ブックが含まれているライブラリで、ブックを選択して下矢印をクリックし、コマンドの一覧を表示します。  
@@ -90,7 +89,7 @@ ms.locfileid: "66070008"
   
     1.  **[営業時間後]** は、営業時間外の処理期間を示します。これは、その日の営業時間に生成された最新のデータがデータベース サーバーに保存されている可能性が高い期間です。  
   
-    2.  **[特定の最も早い開始時刻]** は、データ更新要求が処理キューに追加される最も早い開始時刻です。 15 分間隔で指定できます。 この設定は、現在の日付や将来の日付に適用されます。 たとえば、午前 6 時 30 分の値を指定して 現在の時間が午後 4 時 30 分である場合、午後 4 時 30 分は午前 6 時 30 分の後であるため、更新要求は現在の日付のキューに追加されます。 午前 6 時 30 分後にします。  
+    2.  **[特定の最も早い開始時刻]** は、データ更新要求が処理キューに追加される最も早い開始時刻です。 15 分間隔で指定できます。 この設定は、現在の日付や将来の日付に適用されます。 たとえば、午前 6 時 30 分の値を指定して 現在の時間が午後 4 時 30 分である場合、午後 4 時 30 分は午前 6 時 30 分の後であるため、更新要求は現在の日付のキューに追加されます。 午前6:30 時より後  
   
      最も早い開始時刻は、要求が処理キューに追加される時間を表します。 実際の処理は、データ処理の開始に適したリソースがサーバーに存在する時点で行われます。 処理完了後に、実際の処理時間がデータ更新の履歴に記録されます。  
   
@@ -130,7 +129,7 @@ ms.locfileid: "66070008"
   
 11. **[OK]** をクリックして、スケジュールを保存します。  
   
-##  <a name="drverify"></a> データ更新を確認します。  
+##  <a name="verify-data-refresh"></a><a name="drverify"></a>データ更新の確認  
  データ更新を確認する最善の方法は、データ更新をすぐに実行し、履歴ページを確認して、データ更新が正常に完了したかどうかを確認することです。 スケジュールの **[さらに、できるだけ早く更新を行います]** チェック ボックスをオンにすると、データ更新が動作することを確認できます。  
   
  データ更新操作の現在と過去のレコードは、ブックの [データ更新の履歴] ページで表示できます。 このページは、ブックにデータ更新がスケジュールされている場合にだけ表示されます。 データ更新スケジュールがない場合は、代わりにスケジュール定義ページが表示されます。  
@@ -159,8 +158,8 @@ ms.locfileid: "66070008"
 >  SharePoint 管理者は、サーバーの全体管理で PowerPivot 管理ダッシュボードにある統合データ更新レポートを表示して、データ更新の問題をトラブルシューティングできます。 詳細については、「 [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」をご参照ください。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint 2010 で PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)   
- [データ更新履歴表示&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
- [PowerPivot データ更新用の保存された資格情報の構成&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
+ [SharePoint 2010 での PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [データ更新履歴の表示 &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
+ [PowerPivot データ更新用の保存された資格情報を構成する &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

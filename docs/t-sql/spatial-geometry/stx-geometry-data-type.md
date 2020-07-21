@@ -1,7 +1,7 @@
 ---
 title: STX (geometry データ型) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/03/2017
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b870071f474203a699494993f56f87109f9baf43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762108"
 ---
 # <a name="stx-geometry-data-type"></a>STX (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-**Point** インスタンスの X 座標プロパティです。
+**Point** インスタンスの X 座標プロパティ。
   
 ## <a name="syntax"></a>構文  
   
@@ -41,12 +41,12 @@ ms.locfileid: "68066157"
   
  CLR の型:**SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスが地点ではない場合、このプロパティの値は NULL になります。  
   
  このプロパティは読み取り専用です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Point` インスタンスを作成し、`STX` を使用して、このインスタンスの X 座標を取得する例を次に示します。  
   
 ```  

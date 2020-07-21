@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a4bbbb9b08c63e6ab6f8b68d304b611847707558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c374478297dac43375ae2958430e1ac87fa4968a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141245"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897821"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   バックアップ ファイルからサービス マスター キーをインポートします。  
   
@@ -55,7 +55,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  データが失われる可能性があっても、強制的にサービス マスター キーを置換します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サービス マスター キーを復元するとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、現在のサービス マスター キーで暗号化されているすべてのキーとシークレットの暗号化が解除され、次にそれらがバックアップ ファイルから読み込まれたサービス マスター キーで暗号化されます。  
   
  暗号化解除が 1 つでも失敗した場合、復元は失敗します。 FORCE オプションを使用するとエラーを無視できますが、暗号化を解除できないデータが失われる可能性があります。  
@@ -68,7 +68,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、バックアップ ファイルからサービス マスター キーを復元します。  
   
 ```  

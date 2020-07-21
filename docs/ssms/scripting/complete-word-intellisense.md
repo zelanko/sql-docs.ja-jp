@@ -1,6 +1,6 @@
 ---
-title: 入力候補 (IntelliSense) | Microsoft Docs
-ms.custom: ''
+title: 入力候補 (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: daf84e726e9b27fba25b20974017b5b255aa3a10
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7b516e75ce312dbc2970ccb31975d892f7ab98cb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256471"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253989"
 ---
 # <a name="complete-word-intellisense"></a>入力候補 (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

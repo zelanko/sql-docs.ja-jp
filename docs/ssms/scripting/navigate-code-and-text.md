@@ -1,6 +1,6 @@
 ---
-title: コード内とテキスト内の移動 | Microsoft Docs
-ms.custom: ''
+title: コード内とテキスト内の移動
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4171d67bafa5b2f692a0a1a0b7e87dc9ed9b8525
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 4c1a77dfbe88a3018d7ae170675b84461f69a12b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258191"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261848"
 ---
 # <a name="navigate-code-and-text"></a>コード内とテキスト内の移動
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68258191"
 -   **[ジャンプ]** コマンド  
   
 > [!NOTE]  
->  キーボード ショートカット キーの完全な一覧については、「 [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)」を参照してください。  
+>  キーボード ショートカット キーの完全な一覧については、「 [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)」を参照してください。  
   
 ## <a name="navigating-with-bookmarks"></a>ブックマークを使用した移動  
  ドキュメントの任意の箇所を編集した後に、元の位置に戻れるようにするには、ブックマークを追加します。 ブックマークの設定と、ブックマークへの移動には、キーボード ショートカットを使用できます。 ブックマーク ウィンドウでブックマークを表示できます。  

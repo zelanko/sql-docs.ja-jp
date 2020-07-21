@@ -1,66 +1,67 @@
 ---
-title: ODBC Driver | を使用した Azure Active Directory の使用 |SQL Server の Microsoft Docs
+title: ODBC ドライバーでの Azure Active Directory の使用
+description: Microsoft ODBC Driver for SQL Server を使用すると、ODBC アプリケーションで、Azure Active Directory を使用して Azure SQL Database のインスタンスに接続できるようになります。
 ms.custom: ''
-ms.date: 11/08/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9e60c376e0bced63241674b82d05700281a06ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b829cb837eafb1a47283d50ede3ee789471e5f7f
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008489"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886309"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC ドライバーでの Azure Active Directory の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-## <a name="purpose"></a>用途
+## <a name="purpose"></a>目的
 
-バージョン13.1 以降の Microsoft ODBC Driver for SQL Server では、ODBC アプリケーションは、ユーザー名/パスワード、Azure Active Directory アクセストークン、Azure Active を使用して Azure Active Directory のフェデレーション id を使用して SQL Azure のインスタンスに接続できます。ディレクトリ管理対象サービス id、または Windows 統合認証 (_windows ドライバーのみ_)。 ODBC ドライバーバージョン13.1 では、Azure Active Directory アクセストークン認証は_Windows のみ_です。 ODBC ドライバーバージョン17以降では、すべてのプラットフォーム (Windows、Linux、Mac) でこの認証がサポートされています。 ログイン ID を使用した新しい Azure Active Directory 対話型認証は、ODBC Driver version 17.1 for Windows で導入されました。 新しい Azure Active Directory 管理されたサービス id の認証方法が、システムによって割り当てられた id とユーザーが割り当てられた id の両方について、ODBC Driver version 17.3.1.1 に追加されました。 これらはすべて、新しい DSN および接続文字列キーワードと接続属性を使用して実現されます。
+バージョン 13.1 以降の Microsoft ODBC Driver for SQL Server を使用すると、ODBC アプリケーションで、Azure Active Directory のフェデレーション ID を使用して、ユーザー名/パスワード、Azure Active Directory アクセス トークン、Azure Active Directory マネージド サービス ID、または Windows 統合認証 ("_Windows ドライバーのみ_") によって Azure SQL Database のインスタンスに接続できるようになります。 ODBC ドライバー バージョン 13.1 の場合、Azure Active Directory アクセス トークン認証は _Windows のみ_です。 ODBC ドライバー バージョン 17 以降では、すべてのプラットフォーム (Windows、Linux、macOS) でこの認証がサポートされます。 ログイン ID を使用した新しい Azure Active Directory 対話型認証は、Windows で ODBC ドライバー バージョン 17.1 に導入されています。 新しい Azure Active Directory マネージド サービス ID 認証方法は、ODBC ドライバー バージョン 17.3.1.1 で、システム割り当てとユーザー割り当ての両方の ID に対して追加されました。 これらはすべて、新しい DSN と接続文字列のキーワード、および接続属性を使用することによって実現します。
 
 > [!NOTE]
-> Linux および macOS の ODBC ドライバーでは、Active Directory フェデレーションサービス (AD FS) はサポートされていません。 Linux または macOS クライアントから Azure Active Directory ユーザー名/パスワード認証を使用しており、Active Directory 構成にフェデレーションサービスが含まれている場合、認証が失敗する可能性があります。
+> Linux および macOS の ODBC ドライバーでは、Azure Active Directory に対する直接の Azure Active Directory 認証のみがサポートされます。 Linux または macOS クライアントから Azure Active Directory のユーザー名とパスワード認証を使用しており、Active Directory 構成によって、クライアントに Active Directory フェデレーション サービス エンドポイントに対する認証が要求されている場合は、認証が失敗する可能性があります。
 
-## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>新規または変更された DSN と接続文字列のキーワード
+## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>新しいまたは変更された DSN と接続文字列のキーワード
 
-`Authentication`キーワードは、認証モードを制御するために、DSN または接続文字列を使用して接続するときに使用できます。 接続文字列に設定されている値は、DSN 内で指定されている場合にオーバーライドされます。 `Authentication`設定の_属性前の値_は、接続文字列と DSN の値から計算された値です。
+DSN または接続文字列を使用して接続する場合、`Authentication` キーワードを使用して認証モードを制御できます。 接続文字列で設定された値は、DSN の値 (指定されている場合) をオーバーライドします。 `Authentication` 設定の "_事前属性値_" は、接続文字列および DSN の値から計算された値です。
 
-|[オブジェクト名]|値|既定|[説明]|
+|名前|値|Default|説明|
 |-|-|-|-|
-|`Authentication`|(設定されていません)、 `SqlPassword`(空`ActiveDirectoryIntegrated`の`ActiveDirectoryInteractive`文字列)、 `ActiveDirectoryPassword`、、、、`ActiveDirectoryMsi` |(未設定)|認証モードを制御します。<table><tr><th>[値]<th>[説明]<tr><td>(未設定)<td>他のキーワードによって決定される認証モード (既存の従来の接続オプション)。<tr><td>(空の文字列)<td>接続文字列: "{0}"DSN で設定さ`Authentication`れた値をオーバーライドおよび設定解除します。<tr><td>`SqlPassword`<td>ユーザー名とパスワードを使用して、SQL Server インスタンスに直接認証します。<tr><td>`ActiveDirectoryPassword`<td>ユーザー名とパスワードを使用して Azure Active Directory id で認証します。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows ドライバーのみ_。 統合認証を使用して Azure Active Directory id で認証します。<tr><td>`ActiveDirectoryInteractive`<td>_Windows ドライバーのみ_。 対話型認証を使用して Azure Active Directory id で認証します。<tr><td>`ActiveDirectoryMsi`<td>マネージドサービス id 認証を使用して Azure Active Directory id で認証します。 ユーザー割り当て ID の場合、UID はユーザー ID のオブジェクト ID に設定されます。</table>|
-|`Encrypt`|(未設定)、`Yes`、`No`|(説明を参照)|接続の暗号化を制御します。 `Authentication`設定の事前属性値が DSN または接続文字列で_none_でない場合、既定値は`Yes`になります。 それ以外の場合、既定値は `No` です。 属性`SQL_COPT_SS_AUTHENTICATION`がの`Authentication`事前属性値をオーバーライドする場合は、DSN または接続文字列または接続属性で Encryption の値を明示的に設定します。 値が DSN または接続文字列の`Yes`いずれかでに設定さ`Yes`れている場合、暗号化の事前属性値はになります。|
+|`Authentication`|(未設定)、(空の文字列)、`SqlPassword`、`ActiveDirectoryPassword`、`ActiveDirectoryIntegrated`、`ActiveDirectoryInteractive`、`ActiveDirectoryMsi` |(未設定)|認証モードを制御します。<table><tr><th>値<th>説明<tr><td>(未設定)<td>認証モードは他のキーワード (既存のレガシ接続オプション) によって決定されます。<tr><td>(空の文字列)<td>(接続文字列のみ。)DSN で設定されている `Authentication` 値をオーバーライドおよび設定解除します。<tr><td>`SqlPassword`<td>ユーザー名とパスワードを使用して、SQL Server インスタンスに対して直接認証を行います。<tr><td>`ActiveDirectoryPassword`<td>ユーザー名とパスワードを使用して、Azure Active Directory の ID で認証を行います。<tr><td>`ActiveDirectoryIntegrated`<td>"_Windows ドライバーのみ_"。 統合認証を使用して、Azure Active Directory の ID で認証を行います。<tr><td>`ActiveDirectoryInteractive`<td>"_Windows ドライバーのみ_"。 対話型認証を使用して、Azure Active Directory の ID で認証を行います。<tr><td>`ActiveDirectoryMsi`<td>マネージド サービス ID 認証を使用して、Azure Active Directory の ID で認証を行います。 ユーザー割り当て ID の場合、UID はユーザー ID のオブジェクト ID に設定されます。</table>|
+|`Encrypt`|(未設定)、`Yes`、`No`|(説明を参照)|接続の暗号化を制御します。 DSN または接続文字列で `Authentication` 設定の事前属性値が _none_ でない場合、既定値は `Yes` です。 それ以外の場合、既定値は `No` です。 属性 `SQL_COPT_SS_AUTHENTICATION` によって `Authentication` の事前属性値がオーバーライドされる場合は、DSN か接続文字列または接続属性で暗号化の値を明示的に設定します。 暗号化の事前属性値は、その値が DSN または接続文字列のいずれかで `Yes` に設定されている場合は `Yes` です。|
 
-## <a name="new-andor-modified-connection-attributes"></a>新規または変更された接続属性
+## <a name="new-andor-modified-connection-attributes"></a>新しいまたは変更された接続属性
 
-次の接続前接続属性は、Azure Active Directory 認証をサポートするために導入または変更されています。 接続属性に対応する接続文字列または DSN キーワードがあり、が設定されている場合、接続属性が優先されます。
+次の接続前接続属性は、Azure Active Directory 認証をサポートするために導入または変更されています。 接続属性に対応する接続文字列または DSN キーワードがあり、接続属性が設定されている場合は、接続属性が優先されます。
 
-|属性|型|値|既定|[説明]|
+|属性|Type|値|Default|説明|
 |-|-|-|-|-|
-|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`､`SQL_AU_PASSWORD`、`SQL_AU_AD_INTEGRATED`、`SQL_AU_AD_PASSWORD`、`SQL_AU_AD_INTERACTIVE`、`SQL_AU_AD_MSI`、`SQL_AU_RESET`|(未設定)|上のキーワード`Authentication`の説明を参照してください。 `SQL_AU_NONE`は、dsn または接続文字列`Authentication` `SQL_AU_RESET`の設定値を明示的にオーバーライドするために用意されています。設定されている場合は、属性が解除され、dsn または接続文字列の値が優先されるようになります。|
-|`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|または`ACCESSTOKEN` NULL へのポインター|NULL|Null 以外の場合は、使用する AzureAD アクセストークンを指定します。 アクセス`UID`トークンと`PWD` `Authentication` 、、、、または接続文字列キーワードまたは同等の属性を指定すると、エラーになります。 `Trusted_Connection` <br> **注:** ODBC ドライバーバージョン13.1 では、 _Windows_でのみサポートされています。|
-|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(説明を参照)|接続の暗号化を制御します。 `SQL_EN_OFF`暗号化`SQL_EN_ON`を無効にして有効にします。 `Authentication`設定の事前属性値が_none_でない場合、また`SQL_COPT_SS_ACCESS_TOKEN`はが設定されていて`Encrypt` 、DSN または接続文字列でが指定され`SQL_EN_ON`ていない場合、既定値はになります。 それ以外の場合、既定値は `SQL_EN_OFF` です。 接続属性`SQL_COPT_SS_AUTHENTICATION`が _[なし_] に設定されている`SQL_COPT_SS_ENCRYPT`場合は、DSN または接続文字列でが指定されていない場合`Encrypt`は、目的の値に明示的にを設定します。 この属性の有効値は、[接続に暗号化を使用するかどうかを制御します。](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
-|`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Azure Active Directory ではサポートされていません。 AAD プリンシパルへのパスワード変更は、ODBC 接続を使用して行うことはできません。 <br><br>SQL Server 2005 では、SQL Server 認証におけるパスワードの期限切れが導入されました。 `SQL_COPT_SS_OLDPWD`属性が追加され、クライアントが接続に古いパスワードと新しいパスワードの両方を提供できるようになりました。 この属性が設定されている場合、接続文字列には変更された "古いパスワード" が含まれているので、プロバイダーは最初の接続またはそれ以降の接続で接続プールを使用しません。|
-|`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`、`SQL_IS_ON`|`SQL_IS_OFF`|_非推奨_です。代わりに`SQL_COPT_SS_AUTHENTICATION` set を`SQL_AU_AD_INTEGRATED`使用してください。 <br><br>サーバーログインのアクセスを検証するために、Windows 認証 (Linux および macOS では Kerberos) を強制的に使用します。 Windows 認証を使用すると、、 `SQLConnect` `SQLDriverConnect`、またはの処理の一部として指定され`SQLBrowseConnect`たユーザー識別子とパスワードの値は、ドライバーによって無視されます。|
+|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`､`SQL_AU_PASSWORD`、`SQL_AU_AD_INTEGRATED`、`SQL_AU_AD_PASSWORD`、`SQL_AU_AD_INTERACTIVE`、`SQL_AU_AD_MSI`、`SQL_AU_RESET`|(未設定)|上記の `Authentication` キーワードの説明を参照してください。 `SQL_AU_NONE` は、DSN または接続文字列で設定された `Authentication` 値を明示的にオーバーライドするために用意されています。それに対し、`SQL_AU_RESET` は、属性が設定されている場合にそれを設定解除し、DSN または接続文字列の値が優先されるようにします。|
+|`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|`ACCESSTOKEN` へのポインターまたは NULL|NULL|null 以外の場合は、使用する AzureAD アクセス トークンを指定します。 アクセス トークンを指定し、同時に `UID`、`PWD`、`Trusted_Connection`、または `Authentication` 接続文字列キーワードまたはそれと同等の属性を指定すると、エラーになります。 <br> **注:** ODBC ドライバー バージョン 13.1 では、_Windows_ でのみこれがサポートされます。|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(説明を参照)|接続の暗号化を制御します。 `SQL_EN_OFF` を指定すると暗号化が無効になり、`SQL_EN_ON` を指定すると有効になります。 `Authentication` 設定の事前属性値が _none_ でないか、または `SQL_COPT_SS_ACCESS_TOKEN` が設定されていて、DSN または接続文字列のいずれかで `Encrypt` が指定されていなかった場合、既定値は `SQL_EN_ON` です。 それ以外の場合、既定値は `SQL_EN_OFF` です。 接続属性 `SQL_COPT_SS_AUTHENTICATION` が _none_ 以外に設定されていて、DSN または接続文字列で `Encrypt` が指定されていなかった場合は、`SQL_COPT_SS_ENCRYPT` を必要な値に明示的に設定してください。 この属性の有効な値によって、[接続に暗号化を使用するかどうか](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)が制御されます。|
+|`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Azure Active Directory ではサポートされません。AAD プリンシパルに対するパスワードの変更は、ODBC 接続を通じて行うことができないためです。 <br><br>SQL Server 2005 では、SQL Server 認証におけるパスワードの期限切れが導入されました。 クライアントから接続の古いパスワードと新しいパスワードの両方を提供できるようにするために、`SQL_COPT_SS_OLDPWD` 属性が追加されました。 この属性が設定されている場合、接続文字列には変更された "古いパスワード" が含まれているので、プロバイダーは最初の接続またはそれ以降の接続で接続プールを使用しません。|
+|`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`、`SQL_IS_ON`|`SQL_IS_OFF`|"_非推奨_" です。代わりに `SQL_COPT_SS_AUTHENTICATION` を `SQL_AU_AD_INTEGRATED` に設定して使用してください。 <br><br>サーバー ログインでのアクセス検証に Windows 認証 (Linux と macOS では Kerberos) を使用するように強制します。 Windows 認証を使用すると、ドライバーでは `SQLConnect`、`SQLDriverConnect`、または `SQLBrowseConnect` の処理の一環として提供されるユーザー ID とパスワードが無視されます。|
 
-## <a name="ui-additions-for-azure-active-directory-windows-driver-only"></a>Azure Active Directory 用の UI の追加 (Windows ドライバーのみ)
+## <a name="ui-additions-for-azure-active-directory-windows-driver-only"></a>Azure Active Directory での UI の追加 (Windows ドライバーのみ)
 
-Azure AD で認証を使用するために必要な追加オプションを使用して、ドライバーの DSN セットアップと接続の Ui が強化されました。
+ドライバーの DSN セットアップと接続の UI が拡張され、Azure AD による認証を使用するために必要なオプションが追加されました。
 
-### <a name="creating-and-editing-dsns-in-the-ui"></a>UI での Dsn の作成と編集
+### <a name="creating-and-editing-dsns-in-the-ui"></a>UI で DSN を作成および編集する
 
-新しい Azure AD 認証オプションは、ドライバーのセットアップ UI を使用して既存の DSN を作成または編集するときに使用できます。
+ドライバーのセットアップ UI を使用して既存の DSN を作成または編集する際に、新しい Azure AD 認証オプションを使用できます。
 
 SQL Azure への Azure Active Directory 統合認証の場合: `Authentication=ActiveDirectoryIntegrated`
 
 ![CreateNewDSN_ADIntegrated.png](windows/CreateNewDSN_ADIntegrated.png)
 
-`Authentication=ActiveDirectoryPassword`Azure Active Directory のユーザー名/パスワード認証を SQL Azure にするには
+SQL Azure に対する Azure Active Directory ユーザー名/パスワード認証の場合: `Authentication=ActiveDirectoryPassword`
 
 ![CreateNewDSN_ADPassword.png](windows/CreateNewDSN_ADPassword.png)
 
@@ -68,58 +69,58 @@ SQL Azure への Azure Active Directory 統合認証の場合: `Authentication=A
 
 ![CreateNewDSN_ADInteractive.png](windows/CreateNewDSN_ADInteractive.png)
 
-`Authentication=SqlPassword`SQL Server に対するユーザー名/パスワード認証の場合 (Azure またはそれ以外)
+SQL Server に対するユーザー名/パスワード認証の場合 (Azure またはそれ以外): `Authentication=SqlPassword`
 
 ![CreateNewDSN_SQLServer.png](windows/CreateNewDSN_SQLServer.png)
 
-`Trusted_Connection=Yes`Windows 従来の SSPI 統合認証の場合
+Windows レガシ SSPI 統合認証の場合: `Trusted_Connection=Yes`
 
 ![CreateNewDSN_winSSPI.png](windows/CreateNewDSN_winSSPI.png)
 
-5つのオプションは`Trusted_Connection=Yes` 、(既存のレガシ Windows SSPI のみの統合認証`Authentication=` ) `SqlPassword`と`ActiveDirectoryPassword` `ActiveDirectoryIntegrated`、、 `ActiveDirectoryInteractive`、、およびのそれぞれに対応しています。
+5 つのオプションは、それぞれ `Trusted_Connection=Yes` (既存のレガシ Windows SSPI のみの統合認証) と `Authentication=` `ActiveDirectoryIntegrated`、`SqlPassword`、`ActiveDirectoryPassword`、および `ActiveDirectoryInteractive` に対応しています。
 
-### <a name="sqldriverconnect-prompt-windows-driver-only"></a>SQLDriverConnect Prompt (Windows ドライバーのみ)
+### <a name="sqldriverconnect-prompt-windows-driver-only"></a>SQLDriverConnect プロンプト (Windows ドライバーのみ)
 
-接続を完了するために必要な情報を要求するときに SQLDriverConnect によって表示されるプロンプトダイアログには、Azure AD 認証に関する3つの新しいオプションが含まれています。
+接続を完了するために必要な情報を要求するときに SQLDriverConnect によって表示されるプロンプト ダイアログには、Azure AD 認証に関する 3 つの新しいオプションが含まれています。
 
 ![ServerLogin.png](windows/ServerLogin.png)
 
-これらのオプションは、上記の DSN セットアップ UI で使用できるのと同じ5つのオプションに対応しています。
+これらのオプションは、上記の DSN セットアップ UI で使用できるものと同じ 5 つのオプションに対応しています。
 
 ### <a name="example-connection-strings"></a>接続文字列の例
-1. SQL Server 認証-レガシ構文。 サーバー証明書は検証されず、暗号化はサーバーで適用される場合にのみ使用されます。 ユーザー名/パスワードは接続文字列で渡されます。
+1. SQL Server 認証 - レガシ構文。 サーバー証明書は検証されず、暗号化はサーバーで適用される場合にのみ使用されます。 ユーザー名/パスワードは接続文字列内で渡されます。
 `server=Server;database=Database;UID=UserName;PWD=Password;`
-2. SQL 認証-新しい構文。 クライアントが暗号化を要求する`Encrypt` (の既定値は)。がに`true`設定されている場合を除き`TrustServerCertificate` 、暗号化の設定に関係なく、サーバー証明書が検証さ`true`れます。 ユーザー名/パスワードは接続文字列で渡されます。
+2. SQL 認証 - 新しい構文。 クライアントが暗号化を要求します (`Encrypt` の既定値は `true` です)。サーバー証明書は、暗号化の設定に関係なく検証されます (`TrustServerCertificate` が `true` に設定されている場合を除きます)。 ユーザー名/パスワードは接続文字列内で渡されます。
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
-3. SSPI (SQL Server または SQL IaaS) を使用した統合 Windows 認証 (Linux および macOS の Kerberos)-現在の構文。 暗号化を使用しない限り、サーバー証明書は検証されません。 
+3. (SQL Server または SQL IaaS に対する) SSPI を使用した統合 Windows 認証 (Linux と macOS では Kerberos) - 現在の構文。 暗号化を使用しない限り、サーバー証明書は検証されません。 
 `server=Server;database=Database;Trusted_Connection=yes;`
-4. (_Windows ドライバーのみ_)。SSPI を使用した統合 Windows 認証 (ターゲットデータベースが SQL Server または SQL IaaS の場合)-新しい構文。 クライアントが暗号化を要求する`Encrypt` (の既定値は)。がに`true`設定されている場合を除き`TrustServerCertificate` 、暗号化の設定に関係なく、サーバー証明書が検証さ`true`れます。 
+4. ("_Windows ドライバーのみ_"。)SSPI を使用した統合 Windows 認証 (ターゲット データベースが SQL Server または SQL IaaS 内にある場合) - 新しい構文。 クライアントが暗号化を要求します (`Encrypt` の既定値は `true` です)。サーバー証明書は、暗号化の設定に関係なく検証されます (`TrustServerCertificate` が `true` に設定されている場合を除きます)。 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-5. AAD のユーザー名/パスワード認証 (ターゲットデータベースが Azure SQL DB 内にある場合)。 サーバー証明書は、暗号化の設定に関係なく検証`TrustServerCertificate`されます`true`(がに設定されている場合を除く)。 ユーザー名/パスワードは接続文字列で渡されます。 
+5. AAD のユーザー名/パスワード認証 (ターゲット データベースが Azure SQL DB 内にある場合)。 暗号化の設定に関係なく、サーバー証明書は検証されます (`TrustServerCertificate` が `true` に設定されている場合を除きます)。 ユーザー名/パスワードは接続文字列内で渡されます。 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
-6. (_Windows ドライバーのみ_)。ADAL を使用した統合 Windows 認証。ターゲットデータベースが Azure SQL Database であると仮定して、AAD によって発行されたアクセストークンの Windows アカウント資格情報を引き換えます。 サーバー証明書は、暗号化の設定に関係なく検証`TrustServerCertificate`されます`true`(がに設定されている場合を除く)。 
+6. ("_Windows ドライバーのみ_"。)ADAL を使用した統合 Windows 認証。ターゲット データベースが Azure SQL Database 内にあると想定して、AAD によって発行されたアクセス トークンの Windows アカウント資格情報を使用します。 暗号化の設定に関係なく、サーバー証明書は検証されます (`TrustServerCertificate` が `true` に設定されている場合を除きます)。 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-7. (_Windows ドライバーのみ_)。AAD Interactive Authentication は、Azure Multi-factor Authentication テクノロジを使用して接続をセットアップします。 このモードでは、ログイン ID を指定することで、Windows Azure 認証ダイアログがトリガーされ、ユーザーはパスワードを入力して接続を完了できるようになります。 ユーザー名は接続文字列で渡されます。
+7. ("_Windows ドライバーのみ_"。)AAD 対話型認証では、Azure Multi-factor Authentication テクノロジを使用して接続をセットアップします。 このモードでは、ログイン ID を指定することで Azure 認証ダイアログがトリガーされ、ユーザーがパスワードを入力して接続を完了できます。 ユーザー名は接続文字列内で渡されます。
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
-8. AAD マネージドサービス ID 認証では、認証のためにシステムによって割り当てられた id またはユーザーが割り当てた id を使用して接続を設定します。 ユーザー割り当て ID の場合、UID はユーザー ID のオブジェクト ID に設定されます。<br>
+8. AAD マネージド サービス ID 認証では、システム割り当てまたはユーザー割り当ての ID を認証に使用して接続をセットアップします。 ユーザー割り当て ID の場合、UID はユーザー ID のオブジェクト ID に設定されます。<br>
 システムによって割り当てられた ID の場合:<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
-オブジェクト ID が myObjectId と等しいユーザー割り当て id の場合、<br>
+オブジェクト ID が myObjectId であるユーザー割り当て ID の場合:<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
 
-> [!NOTE] 
->- Windows ODBC ドライバーで新しい Active Directory オプションを使用する場合は、 [SQL Server の Active Directory 認証ライブラリ](https://go.microsoft.com/fwlink/?LinkID=513072)がインストールされていることを確認してください。 Linux および macOS ドライバーを使用する場合`libcurl`は、がインストールされていることを確認します。 ドライバーバージョン17.2 以降では、他の認証方法や ODBC 操作には必要ないため、これは明示的な依存関係ではありません。
->- SQL Server アカウントのユーザー名とパスワードを使用して接続するには、 `SqlPassword` [新規] オプションを使用することができます。このオプションは、より安全な接続の既定値を有効にするため、特に SQL Azure に対して推奨されます。
->- Azure Active Directory アカウントのユーザー名とパスワードを使用して`Authentication=ActiveDirectoryPassword`接続するには、接続文字列`PWD`にを指定し、ユーザー名とパスワードを使用してとの`UID`キーワードをそれぞれ指定します。
->- Windows 統合または Active Directory 統合 (windows ドライバーのみ) 認証を使用して`Authentication=ActiveDirectoryIntegrated`接続するには、接続文字列でを指定します。 ドライバーは自動的に適切な認証モードを選択します。 `UID`および`PWD`を指定することはできません。
->- Active Directory Interactive (Windows driver only) 認証を使用して`UID`接続するには、を指定する必要があります。
+> [!NOTE]
+>- バージョン 17.4.2 ***より前の*** Windows ODBC ドライバーで Active Directory オプションを使用する場合は、[SQL Server 用 Active Directory 認証ライブラリ](https://go.microsoft.com/fwlink/?LinkID=513072)がインストールされていることを確認します。 Linux および macOS ドライバーを使用する場合は、`libcurl` がインストールされていることを確認します。 ドライバー バージョン 17.2 以降では、これが明示的な依存関係にはなりません。他の認証方法や ODBC 操作では不要であるためです。
+>- SQL Server アカウントのユーザー名とパスワードを使用して接続する場合、新しい `SqlPassword` オプションを使用できるようになりました。このオプションは、より安全性の高い接続の既定値が有効になるので、SQL Azure では特にお勧めします。
+>- Azure Active Directory アカウントのユーザー名とパスワードを使用して接続するには、接続文字列に `Authentication=ActiveDirectoryPassword` を指定し、ユーザー名とパスワードではそれぞれ `UID` と `PWD` キーワードを指定します。
+>- Windows 統合または Active Directory 統合 (Windows ドライバーのみ) 認証を使用して接続するには、接続文字列に `Authentication=ActiveDirectoryIntegrated` を指定します。 ドライバーによって適切な認証モードが自動的に選択されます。 `UID` と `PWD` は指定できません。
+>- Active Directory 対話型 (Windows ドライバーのみ) 認証を使用して接続するには、`UID` を指定する必要があります。
 
-## <a name="authenticating-with-an-access-token"></a>アクセストークンを使用した認証
+## <a name="authenticating-with-an-access-token"></a>アクセス トークンを使用した認証
 
-`SQL_COPT_SS_ACCESS_TOKEN`事前接続属性を使用すると、ユーザー名とパスワードの代わりに Azure AD から取得したアクセストークンを認証に使用できるようになります。また、ドライバーによるアクセストークンのネゴシエーションと取得もバイパスされます。 アクセストークンを使用するには、 `SQL_COPT_SS_ACCESS_TOKEN`接続属性を`ACCESSTOKEN`構造体へのポインターに設定します。
+`SQL_COPT_SS_ACCESS_TOKEN` 接続前属性を使用すると、ユーザー名とパスワードではなく Azure AD から取得したアクセス トークンを認証に使用できます。また、ドライバーによるアクセス トークンのネゴシエーションと取得もバイパスされます。 アクセス トークンを使用するには、`SQL_COPT_SS_ACCESS_TOKEN` 接続属性を `ACCESSTOKEN` 構造体へのポインターに設定します。
 
 ~~~
 typedef struct AccessToken
@@ -129,22 +130,22 @@ typedef struct AccessToken
 } ACCESSTOKEN;
 ~~~
 
-は、4バイトの_長さ_の後にアクセストークンを形成する不透明なデータの_長さ_ (バイト) で構成される可変長構造体です。  `ACCESSTOKEN` SQL Server がアクセストークンを処理する方法により、各バイトの後には、ASCII 文字のみを含む UCS 2 の文字列に似た0個の埋め込みバイトが続くように、 [OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) JSON 応答を介して取得されたものを展開する必要があります。ただし、トークンは不透明な値で、指定された長さ (バイト単位) に null 終端文字を含めることはできません。 この認証方法は、長い長さと形式の制約により、接続属性を介して`SQL_COPT_SS_ACCESS_TOKEN`プログラムでのみ使用できます。対応する DSN または接続文字列のキーワードはありません。 `UID`接続文字列には`PWD` `Trusted_Connection` 、、、、またはキーワードを含めることはできません。 `Authentication`
+`ACCESSTOKEN` は、4 バイト_長_と、その後のアクセス トークンを形成する不透明データのバイト_長_によって構成される、可変長構造体です。 SQL Server によるアクセス トークンの処理方法が原因で、[OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios) JSON 応答を介して取得されたものを拡張して、ASCII 文字のみを含む UCS 2 文字列のように、各バイトの後に 0 埋め込みバイトを挿入することが必要です。ただし、トークンは不透明値であり、バイト単位で指定する長さに null 終端文字を含めることはできません。 この認証方法は、長さと形式の制約が非常に多いため、`SQL_COPT_SS_ACCESS_TOKEN` 接続属性を使用してプログラムでのみ使用できます。対応する DSN または接続文字列のキーワードはありません。 接続文字列には、`UID`、`PWD`、`Authentication`、または `Trusted_Connection` キーワードを含めることはできません。
 
 > [!NOTE]
-> ODBC ドライバーバージョン13.1 では、この認証は_Windows_でのみサポートされています。
+> ODBC ドライバー バージョン 13.1 では、_Windows_ でのみこの認証がサポートされます。
 
 ## <a name="azure-active-directory-authentication-sample-code"></a>Azure Active Directory 認証サンプル コード
 
-次のサンプルは、Azure Active Directory を接続キーワードと共に使用して SQL Server に接続するために必要なコードを示しています。 アプリケーションコード自体を変更する必要はないことに注意してください。認証に AAD を使用するために必要な変更は、接続文字列、または DSN が使用されている場合は DSN だけです。
+次のサンプルは、Azure Active Directory を使用して接続キーワードによって SQL Server に接続するために必要なコードを示しています。 アプリケーション コード自体を変更する必要はないことに注意してください。認証に AAD を使用するために必要な変更は、接続文字列または DSN (使用されている場合) だけです。
 ~~~
     ...
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);    
     ...
 ~~~
-次のサンプルは、アクセストークン認証で Azure Active Directory を使用して SQL Server に接続するために必要なコードを示しています。 この場合、アクセストークンを処理し、関連付けられている接続属性を設定するようにアプリケーションコードを変更する必要があります。
+次のサンプルは、Azure Active Directory を使用してアクセス トークン認証によって SQL Server に接続するために必要なコードを示しています。 この場合、アクセス トークンを処理し、関連する接続属性を設定するためにアプリケーション コードの変更が必要です。
 ~~~
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server}"
     SQLCHAR accessToken[] = "eyJ0eXAiOi..."; // In the format extracted from an OAuth JSON response
@@ -159,15 +160,15 @@ typedef struct AccessToken
     }
     ...
     SQLSetConnectAttr(hDbc, SQL_COPT_SS_ACCESS_TOKEN, (SQLPOINTER)pAccToken, SQL_IS_POINTER);
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);      
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);        
     ...
     free(pAccToken);
 ~~~
-Azure Active Directory 対話型認証で使用するための接続文字列の例を次に示します。 Windows Azure 認証画面を使用してパスワードを入力すると、PWD フィールドは含まれないことに注意してください。
+以下は、Azure Active Directory 対話型認証で使用するサンプルの接続文字列です。 パスワードは Azure 認証画面を使用して入力されるため、PWD フィールドが含まれていないことに注意してください。
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
-Azure Active Directory マネージドサービス ID 認証で使用するための接続文字列の例を次に示します。 ユーザー割り当て ID に対して、UID がユーザー ID のオブジェクト ID に設定されていることに注意してください。
+以下は、Azure Active Directory マネージド サービス ID 認証で使用するサンプルの接続文字列です。 ユーザー割り当て ID に対して、UID がユーザー ID のオブジェクト ID に設定されていることに注意してください。
 ~~~
 // For system-assigned identity,
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"
@@ -177,5 +178,5 @@ SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};U
 ~~~
 
 ## <a name="see-also"></a>参照
-[Azure AD auth を使用した Azure SQL DB でのトークンベースの認証のサポート](https://blogs.msdn.microsoft.com/sqlsecurity/2016/02/09/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
 
+[Azure AD 認証を使用した Azure SQL DB のトークンベース認証のサポート](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)

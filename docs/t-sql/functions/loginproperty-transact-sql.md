@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ded0a1ea68f150d1e2f55e4d032394203d0ad5e4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059763"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896595"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ログインのポリシー設定に関する情報を返します。  
   
@@ -60,7 +60,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  ログインに返されるプロパティ情報を含む式を指定します。 *propertyname* 値は次のいずれかを指定することができます。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**BadPasswordCount**|正しくないパスワードで連続してログインが試行された回数を返します。|  
 |**BadPasswordTime**|正しくないパスワードで最後にログインが試行された時刻を返します。|  
@@ -111,13 +111,13 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   ログインが有効な SQL Server ログインでない場合は NULL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この組み込み関数では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインのパスワード ポリシー設定に関する情報が返されます。 プロパティの名前の大文字と小文字は区別されません。したがって、**BadPasswordCount** と **badpasswordcount** は同じ意味です。 **PasswordHash、PasswordHashAlgorithm**、および **PasswordLastSetTime** プロパティの値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサポート対象の全構成で使用できますが、その他のプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] で実行され、CHECK_POLICY と CHECK_EXPIRATION の両方が有効な場合にのみ使用できます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
 ## <a name="permissions"></a>アクセス許可  
  ログインに対する VIEW 権限が必要です。 パスワードのハッシュを要求する場合、CONTROL SERVER 権限も必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. ログインがパスワードを変更する必要があるかどうかを確認する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `John3` が、次回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するときにパスワードを変更する必要があるかどうかを確認します。  

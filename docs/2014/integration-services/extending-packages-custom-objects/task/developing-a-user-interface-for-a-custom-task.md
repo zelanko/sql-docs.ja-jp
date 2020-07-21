@@ -18,15 +18,14 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a460e70865f9018361f307ab42049b72c3a4602
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768918"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427219"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>カスタム タスク用ユーザー インターフェイスの開発
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルを使用すると、カスタム タスクの開発者は、タスク用のユーザー インターフェイスを容易に作成できます。作成後、このユーザー インターフェイスは [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に統合して表示することができます。 このユーザー インターフェイスでは、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーのユーザーに役に立つ情報を提供でき、カスタム タスクのプロパティや設定を正しく構成するための指針とすることができます。  
@@ -54,7 +53,7 @@ ms.locfileid: "62768918"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|制御フロー ツールボックスに表示するタスク名。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|タスクの説明 (<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute> から継承)。 ツールヒントに表示されるプロパティです。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーに表示するアイコン。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|使用する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列挙のいずれかの値に設定します。 たとえば、`RequiredProductLevel = DTSProductLevel.None` のようにします。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|使用する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列挙のいずれかの値に設定します。 たとえば、「 `RequiredProductLevel = DTSProductLevel.None` 」のように入力します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|タスクでテクニカル サポートが必要な場合の連絡先に関する情報。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|タスクに割り当てる型。|  
 |Attribute.TypeId|派生クラスに実装した場合、この属性の一意の識別子を取得します。 詳細については、.NET Framework クラス ライブラリの「`Attribute.TypeID` プロパティ」を参照してください。|  
@@ -197,11 +196,11 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
- [カスタム タスクの作成](creating-a-custom-task.md)   
- [カスタム タスクのコーディング](coding-a-custom-task.md)   
+## <a name="see-also"></a>関連項目  
+ [カスタムタスクの作成](creating-a-custom-task.md)   
+ [カスタムタスクのコーディング](coding-a-custom-task.md)   
  [カスタム タスク用ユーザー インターフェイスの開発](developing-a-user-interface-for-a-custom-task.md)  
   
   

@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, getting data
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 56bcbc1bc1ba5f46fb02ca7520f98320586d70e2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925256"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758158"
 ---
 # <a name="getting-data"></a>データの取得
-[ADO の基礎](../../../ado/guide/data/ado-fundamentals.md)、および[HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md)例が具体的には、ADO アプリケーションの作成に関連する 4 つの主な操作を導入: データの取得、データを調べる、データを編集、およびデータを更新します。 このセクションでは、さらに詳しくデータの取得について説明します。  
+[Ado の基礎](../../../ado/guide/data/ado-fundamentals.md)、および特に[HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md)の例では、ado アプリケーションの作成に関連する4つの主要な操作 (データの取得、データの検査、データの編集、データの更新) が導入されました。 ここでは、データの取得について詳しく説明します。  
   
- 基本的なレベルでは、いくつかの ADO オブジェクトは、データの取得の操作に貢献します。 ADO を使用してデータ ソースに接続する必要がありますまず**接続**オブジェクト。 ADO を使用してデータ ソースに指示を渡す**コマンド**オブジェクト。 最後に、最も多くの場合、データを受信する ADO で**Recordset**オブジェクト。  
+ 基本レベルでは、いくつかの ADO オブジェクトがデータ取得操作に寄与します。 まず、ADO **Connection**オブジェクトを使用してデータソースに接続する必要があります。 次に、ADO**コマンド**オブジェクトを使用して、データソースに命令を渡します。 最後に、ほとんどの場合、ADO**レコードセット**オブジェクトのデータを受け取ります。  
   
  このセクションでは、次のトピックを扱います。  
   

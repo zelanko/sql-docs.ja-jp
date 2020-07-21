@@ -1,21 +1,20 @@
 ---
-title: Transact-SQL スニペットの追加 | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL スニペットの追加
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3d79989e37483342e5cc1624a0529f9df98ae980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f2606af57bc4a63b86b1066176cbebd886f7d5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064289"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063530"
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL スニペットの追加
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、定義済みの Transact-SQL コード スニペット一式が同梱されていますが、それ以外にも、独自のスニペットを追加することができます。  
@@ -46,11 +45,11 @@ ms.locfileid: "66064289"
   
 2.  **[ツール]** メニューを選択し、 **[コード スニペット マネージャー]** をクリックします。  
   
-3.  **[インポート]** をクリックします。  
+3.  **[Import]\(インポート\)** ボタンをクリックします。  
   
 4.  スニペットがあるフォルダーに移動し、.snippet ファイルをクリックして、 **[開く]** をクリックします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`TRY-CATCH` ブロックの挿入スニペットを作成し、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にインポートします。  
   
 1.  次のコードをメモ帳に貼り付け、TryCatch.snippet というファイル名で保存します。  
@@ -106,7 +105,7 @@ ms.locfileid: "66064289"
   
 3.  **[ツール]** メニューを選択し、 **[コード スニペット マネージャー]** をクリックします。  
   
-4.  **[インポート]** をクリックします。  
+4.  **[Import]\(インポート\)** ボタンをクリックします。  
   
 5.  TryCatch.snippet があるフォルダーに移動し、TryCatch.snippet ファイルをクリックして、 **[開く]** をクリックします。 **[マイ コード スニペット]** フォルダーに既存の TryCatch スニペットがないことが前提になります。  
   

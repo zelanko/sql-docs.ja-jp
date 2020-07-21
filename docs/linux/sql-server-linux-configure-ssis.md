@@ -8,22 +8,22 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0266318c73c9bb912da4251f2988f00e1c588a62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077532"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898041"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>ssis-conf を使用して Linux で SQL Server Integration Services を構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Red Hat Enterprise Linux および Ubuntu 用の SQL Server Integration Services (SSIS) をインストールするときは、`ssis-conf` 構成スクリプトを実行します。 SSIS のインストールについて詳しくは、「[SQL Server Integration Services (SSIS) を Linux にインストールする](sql-server-linux-setup-ssis.md)」をご覧ください。
 
 `ssis-conf` ユーティリティを使用して、次のプロパティを構成することもできます。
 
-| コマンド | [説明] |
+| command | 説明 |
 |-------------|---------------------------------------------------------------------|
 | set-edition | SQL Server のエディションを設定します。                                       |
 | telemetry   | SQL Server Integration Services のテレメトリ サービスを有効または無効にします。 |
@@ -141,7 +141,7 @@ lcid = 2052
 ```
 
 ## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS の関連コンテンツ
--   [SSIS で Linux 上のデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
--   [Linux に SQL Server Integration Services (SSIS) をインストールする](sql-server-linux-setup-ssis.md)
--   [Linux の SSIS の制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
--   [cron を利用して Linux で SQL Server Integration Services パッケージのスケジュールを設定する](sql-server-linux-schedule-ssis-packages.md)
+-   [SSIS を使用して Linux 上でデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
+-   [SQL Server Integration Services (SSIS) on Linux をインストールする](sql-server-linux-setup-ssis.md)
+-   [SSIS on Linux の制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
+-   [cron を使用して Linux 上で SQL Server Integration Services パッケージの実行スケジュールを設定する](sql-server-linux-schedule-ssis-packages.md)

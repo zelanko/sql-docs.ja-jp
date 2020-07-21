@@ -1,5 +1,5 @@
 ---
-title: 既定の SQL Server データ型 |Microsoft Docs
+title: 既定の SQL Server のデータ型 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69c138e7eb5d2c4f6dbace0db59ce235e1c0a5f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dcfe4dd998f320da7e23ea28df99a28c48d2abba
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993660"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928015"
 ---
 # <a name="default-sql-server-data-types"></a>既定の SQL Server のデータ型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "67993660"
   
 |PHP のデータ型|SQLSRV ドライバーの SQL Server の既定の型|PDO_SQLSRV ドライバーの SQL Server の既定の型|  
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
-|NULL|varchar (1)|サポートされていません|  
+|NULL|varchar (1)|サポート対象外|  
 |Boolean|bit|bit|  
-|Integer|INT|INT|  
-|float|float(24)|サポートされていません|  
+|整数|INT|INT|  
+|Float|float(24)|サポート対象外|  
 |文字列 (長さ 8000 バイト未満)|varchar(<string length>)|varchar(<string length>)|  
 |文字列 (8000 バイトを超える長さ)|varchar(max)|varchar(max)|  
 |リソース|サポートされていません。|サポートされていません。|  

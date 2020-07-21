@@ -1,5 +1,5 @@
 ---
-title: dbo.systargetservergroupmembers (TRANSACT-SQL) |Microsoft Docs
+title: dbo.systargetservergroupmembers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ dev_langs:
 helpviewer_keywords:
 - systargetservergroupmembers system table
 ms.assetid: ee1b2ebd-03cb-4b91-a5d2-98d4d38f82ec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ee6aba8417570c9d75f683efdbfcf10c54b82792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d6b61dac079e612e447b98010bd297b8a848b349
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095875"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750235"
 ---
-# <a name="dbosystargetservergroupmembers-transact-sql"></a>dbo.systargetservergroupmembers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="dbosystargetservergroupmembers-transact-sql"></a>dbo.systargetservergroupmembers (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   マルチサーバー グループに現在参加しているターゲット サーバーを記録します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**servergroup_id**|**int**|サーバー グループ ID。|  
-|**server_id**|**int**|サーバー ID。|  
+|**servergroup_id**|**int**|サーバーグループ ID|  
+|**server_id**|**int**|サーバー ID|  
   
   

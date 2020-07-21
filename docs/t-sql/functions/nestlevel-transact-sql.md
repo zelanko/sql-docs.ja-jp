@@ -17,17 +17,17 @@ helpviewer_keywords:
 - nesting stored procedures
 - stored procedure nesting levels [SQL Server]
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4d9b391d58d8a55b7486cda447d13246df16093b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: f0be9ab485c6fab9ac8e09331f8421b3242d3a21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784403"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のストアド プロシージャがローカル サーバーで実行中のトランザクションの入れ子レベルを返します (初期値は 0)。  
   
@@ -42,12 +42,12 @@ ms.locfileid: "68130153"
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ストアド プロシージャが、別のストアド プロシージャを呼び出すか、または共通言語ランタイム (CLR) ルーチン、型、集計を参照してマネージド コードを実行するたびに、入れ子のレベルがインクリメントされます。 最大の 32 を超えると、トランザクションが終了します。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字列内で @@NESTLEVEL が実行されると、返される値は、現在の入れ子レベルに 1 を加えた値になります。 sp_executesql を使用して @@NESTLEVEL が動的に実行されると、返される値は、現在の入れ子レベルに 2 を加えた値になります。  
+ @NESTLEVEL 文字列内で @[!INCLUDE[tsql](../../includes/tsql-md.md)] が実行されると、返される値は、現在の入れ子レベルに 1 を加えた値になります。 sp_executesql を使用して @@NESTLEVEL が動的に実行されると、返される値は、現在の入れ子レベルに 2 を加えた値になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-nestlevel-in-a-procedure"></a>A. プロシージャで @@NESTLEVEL を使用する  
  次の例では、別のプロシージャを呼び出すプロシージャと、それぞれの `@@NESTLEVEL` 設定を表示するプロシージャの、2 つのプロシージャを作成します。  

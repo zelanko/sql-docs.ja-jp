@@ -1,5 +1,6 @@
 ---
 title: アセンブリを作成する |Microsoft Docs
+description: CREATE ASSEMBLY を使用して SQL Server にアセンブリを登録し、そのセキュリティ設定を指定します。 機能を使用するようにアセンブリを登録します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87416b9cea3aee133493f93f97c9ccf11823cde7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 724f0fc6a38388d9366f3c46090ddaf22cd64a34
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027928"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887814"
 ---
 # <a name="creating-an-assembly"></a>アセンブリの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  ストアド プロシージャやトリガーなどのマネージド データベース オブジェクトは、コンパイルされた後、アセンブリと呼ばれる単位で配置されます。 マネージ DLL アセンブリを登録する必要があります[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アセンブリが提供する機能を使用する前にします。 アセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに登録するには、CREATE ASSEMBLY ステートメントを使用します。 ここでは、CREATE ASSEMBLY ステートメントを使用してアセンブリをデータベースに登録する方法と、アセンブリのセキュリティ設定を指定する方法について説明します。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  ストアド プロシージャやトリガーなどのマネージド データベース オブジェクトは、コンパイルされた後、アセンブリと呼ばれる単位で配置されます。 マネージ DLL アセンブリは、アセンブリによって提供される機能を使用する前に、に登録する必要があり [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 アセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに登録するには、CREATE ASSEMBLY ステートメントを使用します。 ここでは、CREATE ASSEMBLY ステートメントを使用してアセンブリをデータベースに登録する方法と、アセンブリのセキュリティ設定を指定する方法について説明します。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY ステートメント  
- データベースにアセンブリを作成するには、CREATE ASSEMBLY ステートメントを使用します。 以下に例を示します。  
+ データベースにアセンブリを作成するには、CREATE ASSEMBLY ステートメントを使用します。 たとえば次のようになります。  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -50,9 +51,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   呼び出し先または参照先のアセンブリが同じデータベースに作成されている。  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>アセンブリ作成時のセキュリティの指定  
- アセンブリを作成するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベースを指定できます、コードが実行できるセキュリティの 3 つの異なるレベルのいずれか。**安全な**、 **EXTERNAL_ACCESS**、または**UNSAFE**します。 ときに、 **CREATE ASSEMBLY**ステートメントを実行すると、サーバーの登録に失敗するアセンブリを引き起こす可能性のあるコード アセンブリで特定のチェックを実行します。 詳細については、の Impersonation サンプルを参照してください。 [CodePlex](https://msftengprodsamples.codeplex.com/)します。  
+ アセンブリをデータベースに作成するときは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、コードを実行できる3種類のセキュリティレベル ( **SAFE**、 **EXTERNAL_ACCESS**、 **UNSAFE**) のいずれかを指定できます。 **CREATE ASSEMBLY**ステートメントを実行すると、コードアセンブリに対して特定のチェックが実行され、アセンブリがサーバーに登録できなくなる可能性があります。 詳細については、 [CodePlex](https://msftengprodsamples.codeplex.com/)の Impersonation サンプルを参照してください。  
   
- **安全な**は、既定の権限セットと、ほとんどのシナリオで機能します。 特定のセキュリティ レベルを指定するには、CREATE ASSEMBLY ステートメントの構文を次のように変更します。  
+ **SAFE**は既定のアクセス許可セットであり、ほとんどのシナリオで機能します。 特定のセキュリティ レベルを指定するには、CREATE ASSEMBLY ステートメントの構文を次のように変更します。  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -60,33 +61,31 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- アセンブリを作成することも、**セーフ**上記のコードの 3 行目を省略するだけでアクセス許可セットします。  
+ 上記のコードの3行目を省略するだけで、**安全**なアクセス許可セットを持つアセンブリを作成することもできます。  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
 FROM 'C:\MyDBApp\SQLCLRTest.dll';  
 ```  
   
- アセンブリのコードを実行すると、**セーフ**アクセス許可設定のみを実行できます計算と、インプロセス マネージ プロバイダーを使用してサーバー内のデータ アクセス。  
+ アセンブリ内のコードが**安全**なアクセス許可セットで実行されている場合は、インプロセスマネージプロバイダーを使用して、サーバー内での計算とデータアクセスのみを実行できます。  
   
-### <a name="creating-externalaccess-and-unsafe-assemblies"></a>EXTERNAL_ACCESS および UNSAFE アセンブリの作成  
- **EXTERNAL_ACCESS**ファイル、ネットワーク、レジストリ、および環境変数など、サーバーの外部リソースにアクセスするコードが必要なシナリオに対処します。 サーバーから外部リソースにアクセスする場合、常にマネージド コードの呼び出し元のユーザーのセキュリティ コンテキストが借用されます。  
+### <a name="creating-external_access-and-unsafe-assemblies"></a>EXTERNAL_ACCESS および UNSAFE アセンブリの作成  
+ **EXTERNAL_ACCESS**は、ファイル、ネットワーク、レジストリ、環境変数など、コードがサーバー外部のリソースにアクセスする必要があるシナリオに対処します。 サーバーから外部リソースにアクセスする場合、常にマネージド コードの呼び出し元のユーザーのセキュリティ コンテキストが借用されます。  
   
- **安全でない**など、アセンブリが検証可能な安全ではありませんまたはへの追加アクセスが必要です。 そのような状況に、リソースが制限されているコード権限は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 API です。  
+ **UNSAFE** code アクセス許可は、アセンブリが安全でない場合、または Win32 API などの制限されたリソースへの追加アクセスが必要な場合に使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] します。  
   
- 作成する、 **EXTERNAL_ACCESS**または**UNSAFE**でアセンブリ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、次の 2 つの条件のいずれかを満たす必要があります。  
+ で**EXTERNAL_ACCESS**または**安全でない**アセンブリを作成するには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、次の2つの条件のいずれかが満たされている必要があります。  
   
-1.  アセンブリが、厳密な名前で署名されているか、または証明書を使用して Authenticode で署名されている。 この厳密な名前 (または証明書) 内に作成[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]非対称キー (または証明書) として、対応するログインを使用して**EXTERNAL ACCESS ASSEMBLY** (外部アクセス アセンブリ) のアクセス許可または**UNSAFE ASSEMBLY** (unsafe アセンブリ) のアクセスを許可します。  
+1.  アセンブリが、厳密な名前で署名されているか、または証明書を使用して Authenticode で署名されている。 この厳密な名前 (または証明書) は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、非対称キー (または証明書) として作成されます。また、対応するログイン **(外部**アクセスアセンブリの場合) または**unsafe アセンブリ**アクセス許可 (unsafe アセンブリの場合) が含まれています。  
   
-2.  データベース所有者 (DBO) が**EXTERNAL ACCESS ASSEMBLY** (の**外部アクセス**アセンブリ) または**UNSAFE ASSEMBLY** (の**UNSAFE**アセンブリの場合) のアクセス許可、およびデータベースが、 [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md)設定**ON**します。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+2.  データベース所有者 (DBO) に**外部アクセスアセンブリ**(**外部アクセス**アセンブリの場合) または**安全でないアセンブリ**( **unsafe**アセンブリの場合) アクセス許可があり、データベースの信頼可能な[データベースプロパティ](../../../relational-databases/security/trustworthy-database-property.md)が**ON**に設定されている。  
 
  上に示した 2 つの条件は、アセンブリの読み込み時 (実行も含む) にもチェックされます。 アセンブリを読み込むには、これらの条件の少なくとも 1 つが満たされている必要があります。  
   
- お勧め、 [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md)データベースでないに設定する**ON**ランタイム (CLR) がサーバー プロセス内のコードに共通の言語を実行するだけです。 代わりに、master データベースのアセンブリ ファイルから非対称キーを作成してください。 この非対称キーにマップされるログインを作成し、必要があります、およびログインを許可する必要があります**EXTERNAL ACCESS ASSEMBLY**または**UNSAFE ASSEMBLY**権限。  
+ サーバープロセスで共通言語ランタイム (CLR) コードを実行する場合にのみ、データベースの[信頼可能データベースプロパティ](../../../relational-databases/security/trustworthy-database-property.md)を**on**に設定しないことをお勧めします。 代わりに、master データベースのアセンブリ ファイルから非対称キーを作成してください。 その後、この非対称キーにマップされたログインを作成する必要があります。また、このログインには、 **EXTERNAL ACCESS assembly**権限または**UNSAFE assembly**権限が許可されている必要があります。  
   
- 次[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントには、非対称キーを作成、このキーに、ログインをマップおよび許可し、必要な手順を実行する**EXTERNAL_ACCESS**権限をログインします。 次に示す [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、CREATE ASSEMBLY ステートメントを実行する前に実行する必要があります。  
+ 次のステートメントでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 非対称キーを作成し、ログインをこのキーにマップして、ログインに**EXTERNAL_ACCESS**権限を付与するために必要な手順を実行します。 次に示す [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、CREATE ASSEMBLY ステートメントを実行する前に実行する必要があります。  
   
 ```  
 USE master;   
@@ -101,7 +100,7 @@ GO
 > [!NOTE]  
 >  非対称キーに関連付ける新しいログインを作成する必要があります。 このログインは、権限を許可するためにのみ使用します。このログインをユーザーに関連付けたり、アプリケーション内で使用したりする必要はありません。  
   
- 作成する、**外部アクセス**は、アセンブリの作成者は、必要**外部アクセス**権限。 この権限は、アセンブリの作成時に次のように指定します。  
+ **外部アクセス**アセンブリを作成するには、作成者が**外部アクセス**許可を持っている必要があります。 この権限は、アセンブリの作成時に次のように指定します。  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -109,7 +108,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- 次[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントには、非対称キーを作成、このキーに、ログインをマップおよび許可し、必要な手順を実行する**UNSAFE**権限をログインします。 次に示す [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、CREATE ASSEMBLY ステートメントを実行する前に実行する必要があります。  
+ 次のステートメントでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 非対称キーを作成し、ログインをこのキーにマップして、 **UNSAFE**権限をログインに付与するために必要な手順を実行します。 次に示す [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、CREATE ASSEMBLY ステートメントを実行する前に実行する必要があります。  
   
 ```  
 USE master;   
@@ -121,7 +120,7 @@ GRANT UNSAFE ASSEMBLY TO SQLCLRTestLogin ;
 GO  
 ```  
   
- アセンブリが読み込まれることを指定する**UNSAFE** 、アクセス許可を指定する、 **UNSAFE**のアクセス許可、サーバーにアセンブリを読み込むときの設定。  
+ アセンブリが**unsafe**権限で読み込まれるように指定するには、アセンブリをサーバーに読み込むときに、 **unsafe**権限セットを指定します。  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -129,13 +128,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = UNSAFE;  
 ```  
   
- 各設定のアクセス許可の詳細については、次を参照してください。 [CLR 統合セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)します。  
+ 各設定のアクセス許可の詳細については、「 [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [アセンブリの変更](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
+ [アセンブリを変更する](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [アセンブリの削除](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ [CLR 統合のコードアクセスセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md)   
  [部分的に信頼される呼び出し元の許容](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   

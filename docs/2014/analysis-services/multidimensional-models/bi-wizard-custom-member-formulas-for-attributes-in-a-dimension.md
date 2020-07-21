@@ -1,5 +1,5 @@
 ---
-title: ディメンションの属性に対するカスタム メンバー式の設定 |Microsoft Docs
+title: ディメンションの属性にカスタムメンバー式を設定する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08db0d81ac198795386391f977d09d20ff8d22ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 112f8944bd20b2b6a464b0d84fb8ac1a0e89d976
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076876"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544574"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>ディメンションの属性に対するカスタム メンバー式の設定
   キューブまたはディメンションにカスタム メンバー式の拡張機能を追加して、多次元式 (MDX) の式の結果を持つディメンション メンバーに関連付けられている既定の集計を置換します (この拡張機能により、ディメンションの指定した属性で `CustomRollupColumn` プロパティが設定されます)。  

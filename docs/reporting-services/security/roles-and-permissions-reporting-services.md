@@ -17,10 +17,10 @@ ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2fc536de2312bc9adf1cba103ffde0999a83609e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570664"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>ロールと権限 (Reporting Services)

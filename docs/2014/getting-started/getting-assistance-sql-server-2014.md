@@ -8,15 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ce3a9e88e9de4bf3a825b5f5a02e4268f4f137d0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62837692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927003"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>参考資料 (SQL Server 2014)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] に関して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供している主な情報ソースは次の 3 つです。  
@@ -40,7 +39,7 @@ ms.locfileid: "62837692"
  製品の機能やユーザー インターフェイスに関するご意見や不具合の報告の送信、ドキュメントに関するフィードバックの送信、エラー レポートや機能の使用状況のデータを分析できるようにするための [!INCLUDE[msCoName](../includes/msconame-md.md)] への自動送信などの方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 の新機能新機能](../sql-server/what-s-new-in-sql-server-2016.md)   
+ [SQL Server 2014 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)   
  [SQL Server 2014 のインストール](../database-engine/install-windows/installation-for-sql-server.md)  
   
   

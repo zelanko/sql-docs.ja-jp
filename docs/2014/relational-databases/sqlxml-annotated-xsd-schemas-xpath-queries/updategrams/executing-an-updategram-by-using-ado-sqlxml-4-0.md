@@ -1,5 +1,5 @@
 ---
-title: ADO (SQLXML 4.0) を使用してアップデート グラムの実行 |Microsoft Docs
+title: ADO を使用したアップデートグラムの実行 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,29 @@ helpviewer_keywords:
 - updategrams [SQLXML], ADO
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fb903ddd3d8639b3e33d04d9d8853585f83fc894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009435"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO を使用した、アップデートグラムの実行 (SQLXML 4.0)
   この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションでは、ADO を使用して Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立した後、アップデートグラムを実行します。 このアップデートグラムでは、特定の従業員の名前が更新されます。 この例では、AdventureWorks サンプル データベースを使用します。  
   
  サンプル アプリケーションの処理は次のとおりです。  
   
--   **Conn**オブジェクト (**ADODB します。接続**) の実行中のインスタンスへの接続を確立[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定のサーバー コンピューターにします。  
+-   **Conn**オブジェクト (**ADODB接続**) 特定のサーバーコンピューター上にある実行中のインスタンスへの接続を確立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] します。  
   
--   **Cmd**オブジェクト (**ADODB.Command**) で確立された接続を実行します。  
+-   **Cmd**オブジェクト (**ADODB**) は、確立された接続で実行されます。  
   
 -   コマンド言語が DBGUID_MSSQLXML に設定されます。  
   
--   アップデート グラムがコマンド ストリームにコピーされます (**strmIn**)。  
+-   アップデートグラムはコマンドストリーム (**Strmin**) にコピーされます。  
   
--   設定されているコマンドの出力ストリーム、 **StrmOut**オブジェクト (**ADODB します。Stream**) が表示されるデータが返されます。  
+-   コマンドの出力ストリームは、 **Strmout**オブジェクト (ADODB) に設定され**ます。ストリーム**) が返されます。  
   
 -   最後にコマンド (アップデートグラム) が実行されます。  
   
@@ -182,7 +181,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>パラメーターの引き渡し  
- 上の Visual Basic アプリケーションでは、パラメーターを渡しません。 このアプリケーションで、 **ContactID**と**MiddleName**値は、アップデート グラムにパラメーター化された入力として渡されます。  
+ 上の Visual Basic アプリケーションでは、パラメーターを渡しません。 このアプリケーションでは、 **ContactID**と**MiddleName**の値がパラメーター化された入力としてアップデートグラムに渡されます。  
   
 ```vb  
 Private Sub Form_Load()  

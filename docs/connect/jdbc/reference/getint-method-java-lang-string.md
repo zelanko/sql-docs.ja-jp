@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1705812f-1f04-4e84-b6c8-d164dded47b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5d3e6fc2abd8ab7ccd7c4a27622108ac3d79f18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 667d415989f0af00d0c97f1a5cda1defab41bcc7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982743"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921491"
 ---
 # <a name="getint-method-javalangstring"></a>getInt (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public int getInt(java.lang.String sCol)
  パラメーターの名前を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- **Int**値。  
+ **int** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getInt メソッドは、java.sql.CallableStatement インターフェイスの getInt メソッドで規定されています。  
   
  このメソッドは、int、smallint、tinyint、bit などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  

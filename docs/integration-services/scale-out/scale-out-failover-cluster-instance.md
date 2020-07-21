@@ -1,5 +1,5 @@
 ---
-title: SQL Server フェールオーバー クラスター インスタンスを介した高可用性を実現するための SQL Server Integration Services (SSIS) Scale Out のサポート | Microsoft Docs
+title: SQL Server フェールオーバー クラスター インスタンスを介した高可用性の Scale Out のサポート | Microsoft Docs
 description: この記事では、SQL Server フェールオーバー クラスター インスタンスを使用して高可用性を実現するための SSIS Scale Out を構成する方法について説明します
 ms.custom: performance
 ms.date: 04/10/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811201"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924866"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>SQL Server フェールオーバー クラスター インスタンスを介した高可用性の Scale Out のサポート
 
@@ -25,8 +25,8 @@ ms.locfileid: "68811201"
 
 SQL Server フェールオーバー クラスター インスタンスを使用して Scale Out Master 側の高可用性を設定するには、次の手順を実行します。
 
-## <a name="1-prerequisites"></a>1.Prerequisites
-Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
+## <a name="1-prerequisites"></a>1.前提条件
+Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2.SQL Server フェールオーバー クラスターをインストールする
 SQL Server フェールオーバー クラスターをインストールします。 手順については、「[SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)」を参照してください。 インストール時に、[機能の選択] ページで [データベース エンジン サービス] を選択します。 今後の構成のために SQL Server ネットワーク名を記録します。
@@ -75,7 +75,7 @@ SQL Server フェールオーバー クラスター内のすべてのノード�
 > [!NOTE]
 > Scale Out Master は SQL Server フェールオーバー クラスターをサポートしていません。 Scale Out Manager を使用して Scale Out Worker を追加する場合は、すべてのマスター ノードにワーカー証明書を手動でインストールする必要があります。
 
-## <a name="next-steps"></a>次の手順
-詳細については、次の記事をご覧ください。
+## <a name="next-steps"></a>次のステップ
+詳細については、次の記事を参照してください。
 -   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
 -   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

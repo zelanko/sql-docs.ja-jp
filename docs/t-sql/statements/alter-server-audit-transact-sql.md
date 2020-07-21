@@ -20,15 +20,15 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f61833c4c532056d7af9980360e04e9d124854d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070309"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381296"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能を使用して、サーバー監査オブジェクトを変更します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
 
@@ -36,7 +36,7 @@ ms.locfileid: "68070309"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ALTER SERVER AUDIT audit_name  
 {  
     [ TO { { FILE ( <file_options> [, ...n] ) } | APPLICATION_LOG | SECURITY_LOG } | URL]  
@@ -73,9 +73,11 @@ ALTER SERVER AUDIT audit_name
 <predicate_factor>::=   
     event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
 ```  
-  
-## <a name="arguments"></a>引数  
- TO { FILE | APPLICATION_LOG | SECURITY |URL}  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
+ TO { FILE \| APPLICATION_LOG \| SECURITY \|URL}  
  監査ターゲットの場所を指定します。 オプションは、バイナリ ファイル、Windows アプリケーション ログ、または Windows セキュリティ ログです。  
 
 > [!IMPORTANT]
@@ -92,7 +94,7 @@ ALTER SERVER AUDIT audit_name
   
  MAX_FILES =*integer*  
  作成できる監査ファイルの最大数を指定します。 制限に達しても、最初のファイルへのロールオーバーは行われません。 MAX_FILES の制限に達すると、追加の監査イベントを生成させるアクションは失敗し、エラーが発生します。  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  このオプションは、ディスク上のファイルを MAXSIZE 値に事前に割り当てます。 MAXSIZE が UNLIMITED でない場合にのみ適用されます。 既定値は OFF です。  
@@ -111,7 +113,7 @@ SHUTDOWN
   
  FAIL_OPERATION  
  監査イベントを発生させるデータベース アクションを失敗させます。 監査イベントを発生させないアクションは続行できますが、監査イベントを発生させることはできません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]へのフル アクセスより、完全な監査の維持の方が重要である場合に、このオプションを使用します。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]   
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。   
   
  STATE **=** { ON | OFF }  
  監査によるレコードの収集を有効または無効にします。 実行中の監査の状態を (ON から OFF に) 変更すると、監査が停止されたこと示す監査エントリ、監査を停止したプリンシパル、および監査が停止された時間が作成されます。  
@@ -121,21 +123,21 @@ SHUTDOWN
   
  predicate_expression  
  イベントを処理する必要があるかどうかを判定するために使用する述語式を指定します。 述語式は 3,000 文字に制限され、これにより文字列引数が制限されます。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  event_field_name  
  述語ソースを識別するイベント フィールドの名前を指定します。 監査フィールドについては、「[sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)」で説明されています。 `file_name` と `audit_file_offset` 以外のすべてのフィールドは、監査できます。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  number  
  **decimal** を含む任意の数値型です。 制限として、使用可能な物理メモリの不足、または 64 ビット整数として表すのに大きすぎる数字が挙げられます。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  ' string '  
  述語の比較に必要な ANSI 文字列または Unicode 文字列です。 述語比較関数に対しては、暗黙の文字列型変換は行われません。 無効な型を渡すとエラーになります。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER AUDIT を呼び出すときは、TO 句、WITH 句、MODIFY NAME 句のうち少なくとも 1 つを指定する必要があります。  
   
  監査を変更する場合は、監査の状態を OFF オプションに設定する必要があります。 STATE=OFF 以外のオプションを使用して監査を有効にしているときに ALTER AUDIT を実行すると、MSG_NEED_AUDIT_DISABLED エラー メッセージが表示されます。  
@@ -143,11 +145,13 @@ SHUTDOWN
  監査仕様の追加、変更、および削除は、監査を停止せずに実行できます。  
   
  監査を作成した後で、監査の GUID を変更することはできません。  
-  
+ 
+ **ALTER SERVER AUDIT** ステートメントはユーザー トランザクション内では使用できません。
+ 
 ## <a name="permissions"></a>アクセス許可  
  サーバー監査のプリンシパルを作成、変更、または削除するには、ALTER ANY SERVER AUDIT 権限または CONTROL SERVER 権限を持っている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-changing-a-server-audit-name"></a>A. サーバー監査の名前を変更する  
  次の例では、サーバー監査 `HIPAA_Audit` の名前を `HIPAA_Audit_Old` に変更します。  

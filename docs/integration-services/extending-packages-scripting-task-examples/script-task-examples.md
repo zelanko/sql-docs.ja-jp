@@ -14,14 +14,14 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fc3e16e766544de52b56de39424a8b1d99f8fdff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4994edf3598bdaf551c0401edb37ded69952db7f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906077"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297031"
 ---
 # <a name="script-task-examples"></a>スクリプト タスクの例
 

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a827e8f15627e986008e57ecb9a180b715a8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106810"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>複数の値を持つパラメーターのレポートへの追加
@@ -44,7 +44,7 @@ ms.locfileid: "66106810"
     ```  
   
     > [!IMPORTANT]  
-    >  上記のように、変数をかっこを含めないでください、レポートを表示するために失敗し、「スカラー変数を宣言する必要があります」というエラーが表示されます。  
+    >  上に示したように、変数をかっこで囲まないと、レポートは表示されず、"スカラー変数を宣言する必要があります" というエラーが表示されます。  
   
      埋め込みデータセットまたは共有データセットのデータセット パラメーターは、クエリ変数に対して自動的に作成されます。 レポート パラメーターは、データセット パラメーターに対して自動的に作成されます。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66106810"
     ```  
   
     > [!IMPORTANT]  
-    >  上記のように、変数をかっこを含めないでください、レポートを表示するために失敗し、「スカラー変数を宣言する必要があります」というエラーが表示されます。  
+    >  上に示したように、変数をかっこで囲まないと、レポートは表示されず、"スカラー変数を宣言する必要があります" というエラーが表示されます。  
   
      埋め込みデータセットまたは共有データセットのデータセット パラメーターは、クエリ変数に対して自動的に作成されます。 レポート パラメーターは、データセット パラメーターに対して自動的に作成されます。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66106810"
      詳細については、「[レポート パラメーターの値の追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [カスケード型パラメーターをレポートに追加する &#40;レポートビルダーと SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

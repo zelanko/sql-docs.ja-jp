@@ -1,6 +1,8 @@
 ---
-title: ReportViewer 2016 Cortana の概要 | Microsoft Docs
-ms.date: 09/18/2018
+title: レポート ビューアー コントロールの概要
+description: Report Viewer コントロールを使用して、Reporting Services の RDL レポートを WebForms アプリと WinForms アプリに統合できます。
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -8,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1fd408e5459aea50c04c29d234fce54d8a3ab772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503908"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241827"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>ReportViewer コントロールを使用した Reporting Services の統合 - 概要
 
@@ -48,7 +50,7 @@ Report Viewer コントロールを使用して、Reporting Services の RDL レ
     
 最終的なページは次のようになります。
 
-```
+```html
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Sample" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
@@ -69,7 +71,6 @@ Report Viewer コントロールを使用して、Reporting Services の RDL レ
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>ReportViewer コントロールを使用するように既存のプロジェクトを更新する
@@ -78,7 +79,7 @@ Report Viewer コントロールを使用して、Reporting Services の RDL レ
 
 ### <a name="sample-webconfig-changes"></a>サンプル web.config の変更
 
-```
+```xml
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
@@ -145,9 +146,9 @@ Report Viewer コントロールを使用して、Reporting Services の RDL レ
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. コードから新しいコントロールを追加するか、[コントロールをツールボックスに追加](##adding-control-to-visual-studio-toolbar)します。
+3. コードから新しいコントロールを追加するか、[コントロールをツールボックスに追加](#adding-control-to-visual-studio-toolbar)します。
 
-    ```
+    ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     
     private void InitializeComponent()
@@ -175,7 +176,7 @@ Report Viewer コントロールを使用して、Reporting Services の RDL レ
 
 ### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>すべての先祖の高さを 100% に設定
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -196,14 +197,13 @@ Report Viewer コントロールを使用して、Reporting Services の RDL レ
     </form>
 </body>
 </html>
-
 ```
 
 ### <a name="setting-the-parents-height-attribute"></a>親の height 属性を設定
 
 ビューポートの割合の長さについては、「[Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths)」(ビューポートの割合の長さ) を参照してください。
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -219,7 +219,6 @@ Report Viewer コントロールを使用して、Reporting Services の RDL レ
     </form>
 </body>
 </html>
-
 ```
 
 ## <a name="adding-control-to-visual-studio-toolbar"></a>Visual Studio ツール バーにコントロールを追加する

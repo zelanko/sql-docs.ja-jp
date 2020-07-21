@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_233 | Microsoft Docs
+description: SQL Server クライアントがサーバーに接続できません。 エラーの説明と、考えられる解決策をご確認ください。
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 201665dc-7ac8-4c19-90d3-33354c5caa72
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d724f74c659fee878965f261f6b9b28f04181be2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 87c312289b9a2a8ed7e0ae9d97a4993121772721
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780465"
 ---
-# <a name="mssqlserver233"></a>MSSQLSERVER_233
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_233"></a>MSSQLSERVER_233
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|233|  
 |イベント ソース|MSSQLSERVER|  

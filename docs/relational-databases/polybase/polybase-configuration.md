@@ -1,29 +1,30 @@
 ---
 title: PolyBase の構成と Hadoop 用のセキュリティ | Microsoft Docs
+description: これらの設定を Hadoop への PolyBase 接続に使用します。これには、Hadoop.RPC.Protection、CDH 5.x クラスター用の XML ファイルの例、Kerberos 構成が含まれます。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 386c56fcbc53c26d3beea359558f62265940259a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 489a53c9dba5cb645652fe9cf04f96563d1529fe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048977"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882102"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>PolyBase の構成と Hadoop 用のセキュリティ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 この記事では、Hadoop への PolyBase 接続に影響するさまざまな構成設定のリファレンスを示します。 PolyBase と Hadoop の連携方法に関するチュートリアルについては、「[Hadoop 内の外部データにアクセスするように PolyBase を構成する](polybase-configure-hadoop.md)」を参照してください。
 
-## <a id="rpcprotection"></a> Hadoop.RPC.Protection 設定
+## <a name="hadooprpcprotection-setting"></a><a id="rpcprotection"></a> Hadoop.RPC.Protection 設定
 
-Hadoop クラスターで通信を保護する一般的な方法は、hadoop.rpc.protection 構成を "Privacy" または "Integrity" に変更することです。 既定では、PolyBase は構成が "Authenticate" に設定されているものと想定します。 この既定値をオーバーライドするには、次のプロパティを core-site.xml ファイルに追加します。 この構成を変更すると、Hadoop ノード間の安全なデータ転送と、SQL Server への SSL 接続が有効になります。
+Hadoop クラスターで通信を保護する一般的な方法は、hadoop.rpc.protection 構成を "Privacy" または "Integrity" に変更することです。 既定では、PolyBase は構成が "Authenticate" に設定されているものと想定します。 この既定値をオーバーライドするには、次のプロパティを core-site.xml ファイルに追加します。 この構成を変更すると、Hadoop ノード間の安全なデータ転送と、SQL Server への TLS 接続が有効になります。
 
 ```xml
 <!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
@@ -160,20 +161,18 @@ MIT KDC を使用して、Kerberos でセキュリティ保護された Hadoop �
    |**#**|**構成ファイル**|**構成キー**|**操作**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|KDC のホスト名を指定します。 例: kerberos.your-realm.com.|  
-   |2|core-site.xml|polybase.kerberos.realm|Kerberos 領域を指定します。 例:YOUR-REALM.COM|  
-   |3|core-site.xml|hadoop.security.authentication|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例:KERBEROS<br></br>**セキュリティに関する注意:** KERBEROS は大文字で記述する必要があります。 小文字の場合、機能しない可能性があります。|   
+   |2|core-site.xml|polybase.kerberos.realm|Kerberos 領域を指定します。 次に例を示します。YOUR-REALM.COM <br><br>**構成に関する注意**: 領域名は大文字で記述する必要があります。|  
+   |3|core-site.xml|hadoop.security.authentication|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 次に例を示します。KERBEROS<br></br>**セキュリティに関する注意:** KERBEROS は大文字で記述する必要があります。 小文字の場合、機能しない可能性があります。|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: mapred/_HOST@YOUR-REALM.COM|  
-   |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例:10.193.26.174:10020|  
+   |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 次に例を示します。10.193.26.174:10020|  
    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Hadoop 側の構成を検出して SQL Server コンピューターにコピーします。 例: yarn/_HOST@YOUR-REALM.COM|  
 
 4. 各 Hadoop ユーザーの認証情報を指定するデータベース スコープ資格情報オブジェクトを作成します。 「 [PolyBase T-SQL オブジェクト](../../relational-databases/polybase/polybase-t-sql-objects.md)」を参照してください。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+## <a name="next-steps"></a>次のステップ  
 
-## <a name="next-steps"></a>次の手順  
-
-詳細については、次の各資料を参照してください。
+詳細については、次の記事を参照してください。
 
 [Hadoop 内の外部データにアクセスするように PolyBase を構成する](polybase-configure-hadoop.md)
 [PolyBase の概要](../../relational-databases/polybase/polybase-guide.md)

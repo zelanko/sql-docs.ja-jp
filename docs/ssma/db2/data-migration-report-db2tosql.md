@@ -10,37 +10,37 @@ ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2fb50ca8cab409e117becdc1335d956d05cb818b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989748"
 ---
 # <a name="data-migration-report-db2tosql"></a>データ移行レポート (DB2ToSQL)
-**データ移行レポート**へのデータを移行した後、ダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+[**データ移行レポート**] ダイアログボックスは、にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行した後に表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **状態**  
-ソースからターゲット データベースへのデータ移行の状態が表示されます。  
+転送元データベースから転送先データベースへのデータ移行の状態が表示されます。  
   
 **From**  
-ソース テーブル。  
+ソーステーブルです。  
   
-**変換先**  
+**To**  
 対象のテーブル。  
   
 **行の合計数**  
-ソース テーブル内のデータ行の数。  
+ソーステーブル内のデータ行の数。  
   
-**正常に移行済みの行の数**  
-データの行の数は、対象のテーブルを正常に移行します。  
+**正常に移行された行の数**  
+ターゲットテーブルに正常に移行されたデータの行の数。  
   
 **比率**  
-行の割合が正常に移行します。  
+正常に移行された行の割合。  
   
 **詳細**  
-データ移行に失敗した場合は、レポートで選択した行の移行の詳細を表示する をクリックします。 SSMA は、失敗の理由で表示されます。  
+データの移行に失敗した場合は、クリックすると、レポート内の選択した行の移行の詳細が表示されます。 SSMA には、エラーの理由が表示されます。  
   
-**レポートを保存します。**  
-レポートを保存します。CSV (コンマ区切り値) のファイルは、Microsoft Excel を使用して調べることができます。  
+**[レポートの保存]**  
+レポートをに保存します。CSV (コンマ区切り値) ファイル。 Microsoft Excel を使用して調べることができます。  
   

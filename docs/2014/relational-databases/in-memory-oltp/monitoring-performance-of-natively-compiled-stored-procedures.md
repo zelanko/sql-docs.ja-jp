@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d14d27cdc20c0f090c7a030efe05cfce4842f437
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63161953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026082"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
   このトピックでは、ネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視する方法を説明します。  
@@ -29,7 +28,7 @@ ms.locfileid: "63161953"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 詳細については、`sp_statement_completed`イベントを拡張するを参照してください[イベントの原因となったステートメントを取得する方法](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)します。  
+ 拡張イベントの詳細につい `sp_statement_completed` ては、「[イベントの原因となったステートメントを取得する方法](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)」を参照してください。  
   
 ## <a name="using-data-management-views"></a>データ管理ビューの使用  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、プロシージャ レベルとクエリ レベルの両方で、ネイティブ コンパイル ストアド プロシージャに関する実行の統計の収集をサポートしています。 パフォーマンスに与える影響が原因で、実行の統計の収集は既定では有効になっていません。  
@@ -114,6 +113,6 @@ GO
  ネイティブ コンパイル ストアド プロシージャに対応する推定実行プランでは、プロシージャ内に存在するクエリに関するクエリ演算子と式が表示されます。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、ネイティブ コンパイル ストアド プロシージャに対して、すべての SHOWPLAN_XML をサポートしているわけではありません。 たとえば、クエリ オプティマイザー コストに関連する属性は、プロシージャに対応する SHOWPLAN_XML の一部ではありません。  
   
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  
+ [ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)  
   
   

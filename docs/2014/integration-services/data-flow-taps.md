@@ -1,5 +1,5 @@
 ---
-title: データ フロー タップ |Microsoft Docs
+title: データフローのタップ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 053b34add45354d0df71fa73a72f8786cc706d15
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059906"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432439"
 ---
 # <a name="data-flow-taps"></a>データ フロー タップ
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] の新機能を使用して、ランタイム時にパッケージのデータ フロー パスのデータ タップを追加し、データ タップから外部ファイルに出力できます。 この機能を使用するには、プロジェクト配置モデルを使用して、SSIS サーバーに SSIS プロジェクトを配置する必要があります。 サーバーにパッケージを配置した後、そのパッケージを実行する前に、SSISDB データベースに対して T-SQL スクリプトを実行してデータ タップを追加する必要があります。 次にシナリオの例を示します。  
@@ -51,7 +50,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap ストアド プロシージャの dataflow_path_id_string パラメーターは、データ タップを追加するデータ フロー パスの IdentificationString プロパティに対応しています。 dataflow_path_id_string を取得するには、データ フロー パス (データ フローのタスク間の矢印) をクリックし、[プロパティ] ウィンドウで **IdentificationString** プロパティの値を確認します。  
   
- スクリプトを実行すると、出力ファイルは \<Program Files>\Microsoft の SQL Server\110\DTS\DataDumps に格納されます。 その名前のファイルが既に存在する場合、新しいファイルはサフィックス付きで (例: output[1].txt) 作成されます。  
+ このスクリプトを実行すると、出力ファイルは \Microsoft SQL server に格納され \<Program Files> ます。 その名前のファイルが既に存在する場合、新しいファイルはサフィックス付きで (例: output[1].txt) 作成されます。  
   
  既に説明したように、add_data_tap ストアド プロシージャを使用する代わりに、 [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid)ストアド プロシージャを使用することもできます。 このストアド プロシージャは、task_package_path の代わりにデータ フロー タスクの ID をパラメーターとして取得します。 Visual Studio プロパティ ウィンドウからデータ フロー タスクの ID を取得できます。  
   

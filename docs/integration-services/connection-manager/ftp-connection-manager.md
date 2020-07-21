@@ -14,21 +14,21 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e955e931903a56a1f4ac24ce66bd206f4b5a032a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f1380370862b735e00799cbcb6a9ba46d69fd3f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904765"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294423"
 ---
 # <a name="ftp-connection-manager"></a>FTP 接続マネージャー
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  FTP 接続マネージャーを使用すると、パッケージは、ファイル転送プロトコル (FTP) サーバーに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる FTP タスクでは、この接続マネージャーを使用します。  
+  FTP 接続マネージャーを使用すると、パッケージは、ファイル転送プロトコル (FTP) サーバーに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる FTP タスクでは、この接続マネージャーが使用されます。  
   
  FTP 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に FTP 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。  
   
@@ -71,14 +71,14 @@ ms.locfileid: "67904765"
   
  FTP 接続マネージャーの詳細については、「 [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **サーバー名**  
  FTP サーバーの名前を指定します。  
   
  **[サーバー ポート]**  
  接続に使用する FTP サーバーのポート番号を指定します。 このプロパティの既定値は **21**です。  
   
- **User name**  
+ **ユーザー名**  
  FTP サーバーにアクセスするために使用するユーザー名を指定します。 このプロパティの既定値は **anonymous**です。  
   
  **パスワード**  
@@ -90,7 +90,7 @@ ms.locfileid: "67904765"
  **[パッシブ モードを使用する]**  
  サーバーまたはクライアントのどちらが接続を開始するかを指定します。 アクティブ モードではサーバーが接続を開始し、パッシブ モードではクライアントが接続を開始します。 このプロパティの既定値は **アクティブ モード**です。  
   
- **[再試行の回数]**  
+ **再試行**  
  接続を試行する回数を指定します。 値 **0** は、無制限に再試行を行うことを示します。  
   
  **[チャンク サイズ (KB)]**  

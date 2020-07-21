@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b4946ebec1b9f66ba0a680e97b00cb185bc7e65
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815425"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937123"
 ---
 # <a name="availability-group-is-offline"></a>可用性グループがオフライン
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  
-|**ポリシー名**|可用性グループのオンライン状態|  
-|**問題**|可用性グループはオフラインです。|  
+|**[ポリシー名]**|可用性グループのオンライン状態|  
+|**問題点**|可用性グループはオフラインです。|  
 |**カテゴリ**|**重大**|  
-|**ファセット**|可用性グループ|  
+|**面し**|可用性グループ|  
   
 ## <a name="description"></a>説明  
  このポリシーは、可用性グループのオンライン状態またはオフライン状態をチェックします。 可用性グループのクラスター リソースがオフライン状態である場合、または可用性グループがプライマリ レプリカを持たない場合、ポリシーは通常とは異なる状態で、アラートが発生します。  
@@ -72,8 +71,8 @@ ms.locfileid: "62815425"
   
 -   フェールオーバーが進行中の場合は、フェールオーバーが完了するのを待ちます。  
   
-## <a name="see-also"></a>関連項目  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

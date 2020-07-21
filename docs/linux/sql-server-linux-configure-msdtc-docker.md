@@ -1,22 +1,23 @@
 ---
-title: Docker 上で SQL Server による分散トランザクションを使用する方法
-description: この記事では、Docker 上の SQL Server コンテナーの分散トランザクションで Microsoft 分散トランザクション コーディネーター (MSDTC) を使用する方法について説明します。
+title: Docker 上の SQL Server による分散トランザクション (MSDTC)
+description: Docker 上の SQL Server コンテナーの分散トランザクションで Microsoft 分散トランザクション コーディネーター (MSDTC) を使用する方法について説明します。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e4d9d52541b6f9c9ca87bcbe4dc1db3c4448725c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5529412dd1c575f25fb372aba3428edcce55431a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770845"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900082"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Docker 上で SQL Server による分散トランザクションを使用する方法
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、分散トランザクションのために Docker 上に SQL Server Linux コンテナーをセットアップする方法について説明します。
 
@@ -38,7 +39,7 @@ Docker に対するコンテナーにおいて MSDTC トランザクションを
 
 ```bash
 docker run \
-   -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
    -d mcr.microsoft.com/mssql/server:2017-latest
@@ -46,7 +47,7 @@ docker run \
 
 ```PowerShell
 docker run `
-   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
    -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
    -p 51433:1433 -p 135:135 -p 51000:51000  `
    -d mcr.microsoft.com/mssql/server:2017-latest
@@ -56,22 +57,22 @@ docker run `
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-次の例では、これらの環境変数を使用して、MSDTC 用に構成された 1 つの SQL Server 2019 プレビュー コンテナーをプルして実行する方法を示しています。 これにより、任意のホスト上の任意のアプリケーションと通信できるようになります。
+次の例では、これらの環境変数を使用して、MSDTC 用に構成された 1 つの SQL Server 2019 コンテナーをプルして実行する方法を示しています。 これにより、任意のホスト上の任意のアプリケーションと通信できるようになります。
 
 ```bash
 docker run \
-   -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ```PowerShell
 docker run `
-   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
    -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
    -p 51433:1433 -p 135:135 -p 51000:51000  `
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
@@ -107,10 +108,15 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing-on-the-host"></a>ホスト上にポートのルーティングを構成する
 
-前の例では、1 つの Docker コンテナーが RPC ポート 135 をホスト上のポート 135 にマップするため、それ以上構成しなくても、ホストによる分散トランザクションが機能するようになっています。 コンテナーでは昇格された特権によって SQL Server が実行されるため、コンテナー内でポート 135 を直接使用できることに注意してください。 コンテナー外にある SQL Server の場合、別の一時的なポートが使用される必要があり、ポート 135 へのトラフィックはそのポートにルーティングされる必要があります。
+前の例では、1 つの Docker コンテナーが RPC ポート 135 をホスト上のポート 135 にマップするため、それ以上構成しなくても、ホストによる分散トランザクションが機能するようになっています。 それらのコンテナーでは昇格された特権によって SQL Server が実行されるため、ルートとして実行されているコンテナー内でポート 135 を直接使用できることに注意してください。 コンテナー外にある SQL Server の場合、または非ルート コンテナーの場合、別の一時的なポート (13500 など) が使用される必要があり、ポート 135 へのトラフィックはそのポートにルーティングされる必要があります。 コンテナー内のポート ルーティング規則を、コンテナー ポート 135 から一時的なポートに構成する必要もあります。
 
-ただし、コンテナーのポート 135 をホスト上の別のポート (13500 など) にマップすることに決めた場合は、ホスト上にポートのルーティングを構成する必要があります。 これにより、ホストやその他の外部サーバーでの分散トランザクションに、Docker コンテナーを利用できるようになります。 詳細については、「[ポート ルーティングの構成](sql-server-linux-configure-msdtc.md#configure-port-routing)」を参照してください。
+また、コンテナーのポート 135 をホスト上の別のポート (13500 など) にマップすることに決めた場合は、ホスト上にポートのルーティングを構成する必要があります。 これにより、ホストやその他の外部サーバーでの分散トランザクションに、Docker コンテナーを利用できるようになります。
 
-## <a name="next-steps"></a>次の手順
+ポートのルーティングの詳細については、「[ポートのルーティングを構成する](sql-server-linux-configure-msdtc.md#configure-port-routing)」を参照してください。
+
+> [!NOTE]
+> SQL Server 2017 は既定でルート コンテナーで実行されるのに対し、SQL Server 2019 コンテナーは非ルート ユーザーとして実行されます。
+
+## <a name="next-steps"></a>次のステップ
 
 Linux 上での MSDTC に関する詳細については、「[Linux 上の Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法](sql-server-linux-configure-msdtc.md)」を参照してください。

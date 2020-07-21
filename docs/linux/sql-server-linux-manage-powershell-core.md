@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3f70d69e58d513abcba8f27bbda53ab09d5e00ab
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952537"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807656"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core で SQL Server on Linux を管理する
 
@@ -54,13 +54,13 @@ pwsh
 
 SQL Server からは、**SqlServer** という名前の PowerShell モジュールが提供されます。 **SqlServer** モジュールを使用し、SQL Server コンポーネント (SQL Server プロバイダーとコマンドレット) を PowerShell 環境またはスクリプトにインポートできます。
 
-PowerShell プロンプトで次のコマンドをコピーし、貼り付けると、**SqlServer** モジュールが現在の PowerShell セッションにインポートされます。
+現在の PowerShell セッションに **SqlServer** モジュールをインポートするには、次のコマンドをコピーして PowerShell プロンプトに貼り付けます。
 
 ```powershell
 Import-Module SqlServer
 ```
 
-**SqlServer** が正しくインポートされたことを確認するには、PowerShell プロンプトで次のコマンドを入力します。
+**SqlServer** モジュールが正しくインポートされたことを確認するには、PowerShell プロンプトで次のコマンドを入力します。
 
 ```powershell
 Get-Module -Name SqlServer
@@ -78,12 +78,12 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 次の手順では、PowerShell Core を使用して Linux 上の SQL Server インスタンスに接続し、いくつかのサーバー プロパティを表示します。
 
-PowerShell プロンプトで次のコマンドをコピーして貼り付けます。 これらのコマンドを実行すると、PowerShell では、次のことが行われます。
+次のコマンドをコピーして PowerShell プロンプトに貼り付けます。 これらのコマンドを実行すると、PowerShell では、次のことが行われます。
 - インスタンスのホスト名または IP アドレスの入力を求めるダイアログが表示されます
-- *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 *SQL ユーザー名*と *SQL パスワード*を使用し、Linux 上の SQL Server インスタンスに接続できます
+- *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 "*SQL ユーザー名*" と "*SQL パスワード*" を使って、Linux 上の SQL Server インスタンスに接続できます
 - **Get-SqlInstance** コマンドレットを使用して **Server** に接続し、いくつかのプロパティを表示します
 
-任意で、`$serverInstance` 変数を SQL Server インスタンスの IP アドレスまたはホスト名に置換できます。
+必要に応じて、`$serverInstance` 変数をお使いの SQL Server インスタンスの IP アドレスまたはホスト名に置き換えることができます。
 
 ```powershell
 # Prompt for instance & credentials to login into SQL Server
@@ -180,12 +180,12 @@ tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
 
 次の手順では、PowerShell Core を使用し、Linux 上の SQL Server インスタンスで接続されているエラー ログを調べます。
 
-PowerShell プロンプトで次のコマンドをコピーして貼り付けます。 実行に数分かかる場合があります これらのコマンドで次の手順が実行されます。
+次のコマンドをコピーして PowerShell プロンプトに貼り付けます。 実行に数分かかる場合があります。 これらのコマンドで次の手順が実行されます。
 - インスタンスのホスト名または IP アドレスの入力を求めるダイアログが表示されます
-- *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 *SQL ユーザー名*と *SQL パスワード*を使用し、Linux 上の SQL Server インスタンスに接続できます
-- **Get-SqlErrorLog** コマンドレットを使用して Linux 上の SQL Server インスタンスに接続し、**昨日**以降のエラー ログを取得します。
+- *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 "*SQL ユーザー名*" と "*SQL パスワード*" を使って、Linux 上の SQL Server インスタンスに接続できます
+- **Get-SqlErrorLog** コマンドレットを使用して Linux 上の SQL Server インスタンスに接続し、**昨日**以降のエラー ログを取得します
 
-任意で、`$serverInstance` 変数を SQL Server インスタンスの IP アドレスまたはホスト名と置換できます。
+必要に応じて、`$serverInstance` 変数をお使いの SQL Server インスタンスの IP アドレスまたはホスト名に置き換えることができます。
 
 ```powershell
 # Prompt for instance & credentials to login into SQL Server
@@ -198,13 +198,13 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>PS Core で現在利用できるコマンドレットを試す
-SqlServer モジュールには現在、Windows PowerShell で利用できるコマンドレットが 106 個用意されていますが、106 個のうちの 59 個だけが PSCore で利用できます。 現在利用できる 59 個のコマンドレットの完全な一覧は以下のようになります。  SqlServer モジュールの全コマンドレットを詳しく記録したものが必要な場合、SqlServer [コマンドレット リファレンス](https://docs.microsoft.com/powershell/module/sqlserver/)を参照してください。
+SqlServer モジュールには現在、Windows PowerShell で利用できるコマンドレットが 109 個用意されていますが、109 個のうちの 62 個だけが PSCore で利用できます。 現在利用できる 62 個のコマンドレットの完全なリストは、以下に含まれています。  SqlServer モジュールの全コマンドレットを詳しく記録したものが必要な場合、SqlServer [コマンドレット リファレンス](https://docs.microsoft.com/powershell/module/sqlserver/)を参照してください。
 
 次のコマンドでは、お使いのバージョンの PowerShell で利用できるすべてのコマンドレットが表示されます。
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |
-SORT -Property Noun |
+Sort-Object -Property Noun |
 SELECT Name
 ```
 
@@ -216,6 +216,8 @@ SELECT Name
 - Get-SqlAgentJobSchedule
 - Get-SqlAgentJobStep
 - Get-SqlAgentSchedule
+- Invoke-SqlAssessment
+- Get-SqlAssessmentItem
 - Remove-SqlAvailabilityDatabase
 - Resume-SqlAvailabilityDatabase
 - Add-SqlAvailabilityDatabase
@@ -266,7 +268,8 @@ SELECT Name
 - Read-SqlTableData
 - Write-SqlTableData
 - Read-SqlViewData
+- Read-SqlXEvent
 - Convert-UrnToPath
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

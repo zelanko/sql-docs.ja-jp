@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bedd6ec66a188738ac9a522b4802b3b431e82f36
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62731914"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528628"
 ---
-# <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 行セット
+# <a name="discover_xevent_trace_definition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 行セット
   サーバー上で現在アクティブになっている XEvent トレースに関する情報を提供します。  
   
- **適用対象:** 表形式モデル、多次元モデル  
+ **適用対象:** テーブルモデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
  `DISCOVER_XEVENT_TRACE_DEFINITION`行セットには、次の列が含まれています。  
@@ -43,7 +42,7 @@ ms.locfileid: "62731914"
   
 ## <a name="see-also"></a>参照  
  [XML for Analysis スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
- [SQL Server 拡張イベントを使用して、 &#40;Xevent&#41;サービス モニターは分析するには](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [SQL Server 拡張イベント &#40;Xevent&#41; を使用して監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
  [動的管理ビュー (DMV) を使用した Analysis Services の監視](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

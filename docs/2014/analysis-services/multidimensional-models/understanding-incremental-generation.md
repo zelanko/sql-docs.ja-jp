@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 6f302a41612b19e9412fc52fbe6813c4e8ee2d26
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811060"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547306"
 ---
 # <a name="understanding-incremental-generation"></a>増分生成の理解
   スキーマを初めて生成した後は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用してキューブやディメンションの定義を変更し、その後スキーマ生成ウィザードを再実行できます。 ウィザードは、サブジェクト領域データベースおよび関連するデータ ソース ビュー内のスキーマを更新して変更を反映し、再生成するテーブル内の既存のデータを可能な限り保持します。 最初の生成後にテーブルを変更した場合、スキーマ生成ウィザードは、可能な限り以下のルールに従ってそれらの変更を保持します。  
@@ -83,8 +82,8 @@ ms.locfileid: "68811060"
   
  一方、データ ソース接続文字列を以前の生成後に別のデータベースに変更した場合は、エラーは発生しません。 この場合は新しいデータベースが使用され、以前のデータベースには変更は行われません。  
   
-## <a name="see-also"></a>関連項目  
- [データ ソース ビューおよびデータ ソースへの変更の管理](manage-changes-to-data-source-views-and-data-sources.md)   
- [スキーマ生成ウィザード (Analysis Services)](schema-generation-wizard-analysis-services.md)  
+## <a name="see-also"></a>参照  
+ [データソースビューとデータソースに対する変更の管理](manage-changes-to-data-source-views-and-data-sources.md)   
+ [スキーマ生成ウィザード &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

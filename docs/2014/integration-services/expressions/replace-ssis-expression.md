@@ -10,15 +10,14 @@ helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1970fae04a4dff260fe9eafa30125e63e9cf1a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f052e6aadcbd7bc2ed8f81e61a66c7cbb629c54a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897476"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428289"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (SSIS 式)
   式に含まれている文字列を別の文字列または空の文字列で置き換えた文字式を返します。  
@@ -46,7 +45,7 @@ REPLACE(character_expression,searchstring,replacementstring)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *searchstring* の長さを 0 にすることはできません。  
   
  *replacementstring* の長さは 0 にすることができます。  

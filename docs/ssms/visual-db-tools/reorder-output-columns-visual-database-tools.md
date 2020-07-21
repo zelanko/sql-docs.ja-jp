@@ -1,10 +1,9 @@
 ---
-title: 列の出力順の変更 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 列の出力順の変更
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8ea54ee09a6e2c03548779e591aed5d260b54d49
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 33739ef70de87ece117d57a9091dda83d60138fb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255892"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255190"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>列の出力順の変更 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68255892"
   
 2.  行セレクター ボタンにポインターを置き、行を新しい場所にドラッグします。  
   
-    \- または -  
+    または  
   
     [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)で列名の順序を編集します。  
   

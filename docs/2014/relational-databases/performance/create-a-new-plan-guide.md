@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60ba31e2a63575a316db5befb397bea59c0ad1e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066047"
 ---
 # <a name="create-a-new-plan-guide"></a>新しいプラン ガイドの作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してプラン ガイドを作成できます。 プラン ガイドは、クエリ ヒントまたは固定クエリ プランをクエリにアタッチすることにより、クエリの最適化を促します。 プラン ガイドでは、最適化する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、使用するクエリ ヒントを含む OPTION 句またはクエリの最適化に使用する特定のクエリ プランのいずれかを指定します。 クエリが実行されると、クエリ オプティマイザーにより [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがプラン ガイドと照合され、実行時にクエリに OPTION 句がアタッチされるか、指定されたクエリ プランが使用されます。  
@@ -33,15 +32,15 @@ ms.locfileid: "63151196"
   
      [Security](#Security)  
   
--   **使用して、プラン ガイドを作成します。**  
+-   **以下を使用してプラン ガイドを作成するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 `sp_create_plan_guide` のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、`@name =` を指定する場合は、`@stmt =`、`@type =` なども指定する必要があります。 同様に、`@name =` を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
   
@@ -51,18 +50,18 @@ ms.locfileid: "63151196"
   
 -   有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。 プラン ガイドで参照され、トリガーが定義されているテーブルを削除しようとする場合もエラーが発生します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  OBJECT 型のプラン ガイドを作成するには、参照先オブジェクトに対する ALTER 権限が必要です。 SQL または TEMPLATE タイプのプラン ガイドを作成するには、現在のデータベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-plan-guide"></a>プラン ガイドを作成するには  
   
 1.  プラス記号をクリックして、作成するプラン ガイドのあるデータベースを展開し、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
-2.  右クリックし、**のプラン ガイド**フォルダーと選択**新しいプラン ガイドしています.** .  
+2.  [**プランガイド**] フォルダーを右クリックし、[**新しいプランガイド**] をクリックします。  
   
 3.  **[新しいプラン ガイド]** ダイアログ ボックスの **[名前]** ボックスに、プラン ガイドの名前を入力します。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "63151196"
   
 11. **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-plan-guide"></a>プラン ガイドを作成するには  
   

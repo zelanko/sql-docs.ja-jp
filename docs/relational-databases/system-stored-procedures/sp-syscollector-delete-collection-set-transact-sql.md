@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_delete_collection_set は (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_delete_collection_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collecton_set
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e60fb13244d6740b7d52c568835e54155eeb8c46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9adfe94e791f8c0b0bb38305c538bd72918a71e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000877"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892916"
 ---
-# <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syscollector_delete_collection_set-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザー定義のコレクション セットとそのすべてのコレクション アイテムを削除します。  
   
@@ -41,27 +41,27 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collection_set_id = ] *collection_set_id*  
- コレクション セットの一意の識別子を指定します。 *collection_set_id*は**int**場合、値が必要と*名前*は NULL です。  
+ [ @collection_set_id =] *collection_set_id*  
+ コレクション セットの一意の識別子を指定します。 *collection_set_id*は**int**で、 *name*が NULL の場合は値が必要です。  
   
- [ @name = ] '*name*'  
- コレクション セットの名前を指定します。 *名前*は**sysname**場合、値が必要と*collection_set_id*は NULL です。  
+ [ @name =] '*name*'  
+ コレクションセットの名前を指定します。 *名前*は**sysname**であり、 *collection_set_id*が NULL の場合は値を持つ必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  sp_syscollector_delete_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
- いずれか*collection_set_id*または*名前*する必要があります値を持つ、どちらも NULL をすることはできません。 これらの値を取得するには、syscollector_collection_set システム ビューにクエリを実行します。  
+ *Collection_set_id*または*名前*には値を指定する必要があります。どちらも NULL にすることはできません。 これらの値を取得するには、syscollector_collection_set システム ビューにクエリを実行します。  
   
- システム定義のコレクション セットを削除できません。  
+ システム定義のコレクションセットを削除することはできません。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin 固定データベース ロールのメンバーシップが必要です。  
+ このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、設定を指定するユーザー定義のコレクションの削除、 *collection_set_id*します。  
+ 次の例では、 *collection_set_id*を指定して、ユーザー定義のコレクションセットを削除します。  
   
 ```  
 USE msdb;  
@@ -71,8 +71,8 @@ EXEC dbo.sp_syscollector_delete_collection_set
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
+ [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [データコレクション](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

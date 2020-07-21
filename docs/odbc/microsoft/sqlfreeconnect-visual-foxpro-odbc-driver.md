@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5ecfbbed-43f6-4875-a6a7-732f36431e91
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bba68f2accd12afd2328234577c93d623bcf8529
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 06810ba9ac7086a6c9fdd59f8183cdca5f66db5b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053734"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292852"
 ---
 # <a name="sqlfreeconnect-visual-foxpro-odbc-driver"></a>SQLFreeConnect (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- サポート:[完全]  
+ サポート: 完全  
   
- ODBC API 準拠:コア レベル  
+ ODBC API の準拠: コアレベル  
   
- 接続ハンドルを解放し、ハンドルに割り当てられたすべてのメモリを解放します。  
+ 接続ハンドルを解放し、そのハンドルに割り当てられたすべてのメモリを解放します。  
   
- 詳細については、次を参照してください。 [SQLFreeConnect](../../odbc/reference/syntax/sqlfreeconnect-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、 *ODBC プログラマーリファレンス*の「 [SQLFreeConnect](../../odbc/reference/syntax/sqlfreeconnect-function.md) 」を参照してください。

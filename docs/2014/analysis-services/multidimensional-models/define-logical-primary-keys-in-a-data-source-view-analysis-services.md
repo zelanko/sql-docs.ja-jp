@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビュー (Analysis Services) での論理主キーの定義 |Microsoft Docs
+title: データソースビューでの論理主キーの定義 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f3fa1ce62b3c7402e1f938bea8e400173ef79f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fde91a51fd3dcde87da2ede2b0c936256c718fc0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075640"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547010"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの論理主キーの定義 (Analysis Services)
   データ ソース ビュー ウィザードとデータ ソース ビュー デザイナーでは、データベース テーブルから生成されたデータ ソース ビューにテーブルを追加した場合、そのテーブルの主キーが自動的に定義されます。  
@@ -36,7 +35,7 @@ ms.locfileid: "66075640"
   
 2.  ソリューション エクスプローラーで、 **[データ ソース ビュー]** フォルダーを展開し、データ ソース ビューをダブルクリックします。  
   
-     テーブルまたはビューを検索するには、 **[データ ソース ビュー]** メニューをクリックするか、 **テーブル**  ペインまたは **ダイアグラム** ペインの空いている領域を右クリックして、 **[テーブルの検索]** をクリックします。  
+     テーブルまたはビューを検索するには、[**データソースビュー** ] メニューをクリックするか、[**テーブル**] ペインまたは**ダイアグラム**ペインの空いている領域を右クリックして、[**テーブルの検索**] オプションを使用します。  
   
 3.  **テーブル** ペインまたは **ダイアグラム** ペインで、論理主キーの定義に使用する列を右クリックし、 **[論理主キーの設定]** をクリックします。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66075640"
      これで、キーの設定後、キー アイコンによって主キー列を識別できるようになりました。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
+ [多次元モデルのデータソースビュー](data-source-views-in-multidimensional-models.md)   
  [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

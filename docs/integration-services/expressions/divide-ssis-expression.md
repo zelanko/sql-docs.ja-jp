@@ -11,14 +11,14 @@ helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6d0569234b3ba6fbfde102bb5e71a419cd9f4f5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7341a6dad3633b95882ba1b06e5f27e8c7af50db
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081077"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71289924"
 ---
 # <a name="divide-ssis-expression"></a>除算 (SSIS 式)
 
@@ -45,7 +45,7 @@ dividend / divisor
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  オペランドのいずれかが NULL の場合、結果は NULL になります。  
   
  0 による除算は無効です。 *divisor* サブ式の評価方法に応じて、次のいずれかのエラーが発生します。  

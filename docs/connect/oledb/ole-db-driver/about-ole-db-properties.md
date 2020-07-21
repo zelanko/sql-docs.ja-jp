@@ -1,5 +1,5 @@
 ---
-title: OLE DB のプロパティについて |Microsoft Docs
+title: OLE DB プロパティについて | Microsoft Docs
 description: OLE DB プロパティについて
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 53d34483d8af029dd147b82da7611ddec616d641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995055"
 ---
 # <a name="about-ole-db-properties"></a>OLE DB プロパティについて

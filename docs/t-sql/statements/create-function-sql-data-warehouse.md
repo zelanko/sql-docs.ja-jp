@@ -10,18 +10,18 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-author: CarlRabeler
-ms.author: carlrab
+author: juliemsft
+ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 23949aec32acce44cd139ab8505cd1ffc743e64d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae8c2994e43ff6a90105dd39c203a455da2c9468
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912704"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196772"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でユーザー定義関数を作成します。 ユーザー定義の関数は、パラメーターを受け取り、複雑な計算などの操作を実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンであり、そのアクションの結果を値として返します。 戻り値は、スカラー (単一) 値である必要があります。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67912704"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 --Transact-SQL Scalar Function Syntax  
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
@@ -150,12 +150,12 @@ RETURNS return_data_type
   
  ユーザー定義関数は入れ子にすることができます。つまり、1 つのユーザー定義関数で、別のユーザー定義関数を呼び出すことができます。 呼び出された関数が実行を開始すると入れ子レベルが 1 つ上がり、呼び出された関数が実行を終了するとレベルが 1 つ下がります。 ユーザー定義関数は、32 レベルまで入れ子にすることができます。 入れ子レベルが最大値を超えると、関数チェーン全体の呼び出しが失敗します。   
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  このセクションでは、ユーザー定義関数に関するメタデータを返すために使用できるシステム カタログ ビューを示します。  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数の定義を表示します。 例:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数の定義を表示します。 次に例を示します。  
   
-```  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o   
@@ -172,12 +172,12 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  データベースの CREATE FUNCTION 権限と、関数を作成するスキーマの ALTER 権限が必要です。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. データ型を変更するために、スカラー値ユーザー定義関数を使用する  
  この単純な関数は、**int** データ型として入力を取り、**decimal(10,2)** データ型として出力を返します。  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
 RETURNS decimal(10,2)  
 AS  

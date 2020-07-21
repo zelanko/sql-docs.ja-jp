@@ -12,22 +12,22 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45c72a45776abb6a6f3215560d2b1aafd974d720
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e7851febee7a47c57a5e376cfe5b92ed2999927
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773534"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **CursorOpen** イベント クラスでは、アプリケーション プログラミング インターフェイス (API) のカーソルで発生する、カーソルを開くイベントが示されます。 カーソルを開くイベントは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が、カーソルやカーソル オプションに関連する SQL ステートメントを定義し、カーソルを作成した時点で発生します。  
   
  カーソルのパフォーマンスを記録しているトレースに、 **CursorOpen** イベント クラスを含めます。 **CursorOpen** イベント クラスをトレースに含めた場合、発生するオーバーヘッドの量は、トレース中にデータベースに対してカーソルを使用する頻度によって異なります。 カーソルの使用頻度が高い場合は、トレースによってパフォーマンスが大幅に低下する可能性があります。  
   
 ## <a name="cursoropen-event-class-data-columns"></a>CursorOpen イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
@@ -41,7 +41,7 @@ ms.locfileid: "68093701"
 |**IntegerData**|**int**|カーソルの種類。 値は次のとおりです。<br /><br /> 1 = キー セット<br /><br /> 2 = 動的<br /><br /> 4 = 順方向専用<br /><br /> 8 = 静的<br /><br /> 16 = 高速順方向|25|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
-|**LoginSid**|**image**|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**画像**|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**RequestID**|**int**|カーソルを開いた要求 ID。|49|はい|  

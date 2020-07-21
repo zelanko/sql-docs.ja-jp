@@ -1,5 +1,6 @@
 ---
 title: SQL Server レプリケーションのインストール | Microsoft Docs
+description: SQL Server インストール ウィザードまたはコマンド プロンプト ウィンドウを使用してレプリケーション コンポーネントをインストールします。
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 336566cdcdedd378199716cc1369e148e0239863
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5635065e77921b661d5b60e5ebcd0aad850295b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991050"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883491"
 ---
 # <a name="install-sql-server-replication"></a>SQL Server レプリケーションのインストール
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 レプリケーション コンポーネントのインストールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードまたはコマンド プロンプトを使用して行うことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールする場合、または既存のインスタンスを変更する場合はレプリケーションをインストールします。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "67991050"
   
 - 「[コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server のインストール](../../database-engine/install-windows/install-sql-server.md)   
  [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [SQL Server の各エディションでサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md)  

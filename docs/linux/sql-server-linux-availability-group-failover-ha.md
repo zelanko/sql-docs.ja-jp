@@ -1,30 +1,30 @@
 ---
 title: 可用性グループのフェールオーバーを管理する - SQL Server on Linux
-description: ''
-author: MikeRayMSFT
-ms.author: mikeray
+description: この記事では、フェールオーバーの種類、すなわち、自動フェールオーバー、計画的な手動フェールオーバー、強制手動フェールオーバーについて説明します。 自動と計画的な手動では、すべてのデータが保持されます。
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027221"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892300"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux での Always On 可用性グループのフェールオーバー
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 可用性グループ (AG) のコンテキストでは、可用性レプリカのプライマリ ロールとセカンダリ ロールは、通常、フェールオーバーと呼ばれるプロセスで入れ替えることができます。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 AG は、可用性レプリカのレベルでフェールオーバーされます。 つまり、AG はセカンダリ レプリカのいずれか (現在のフェールオーバー ターゲット) にフェールオーバーされます。 
 
 フェールオーバーの背景情報については、「[フェールオーバーとフェールオーバー モード](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)」をご覧ください。
 
-## <a name="failover"></a>手動フェールオーバー
+## <a name="manual-failover"></a><a name="failover"></a>手動フェールオーバー
 
 外部のクラスター マネージャーによって管理されている AG をフェールオーバーするには、クラスター管理ツールを使います。 たとえば、ソリューションで Pacemaker を使って Linux クラスターが管理されている場合、RHEL または Ubuntu で手動フェールオーバーを実行するには、`pcs` を使います。 SLES では `crm` を使います。 
 
@@ -43,7 +43,7 @@ ms.locfileid: "68027221"
 
    次に、[場所の制約を削除](#removeLocConstraint)します。
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">ステップ 1. 可用性グループ リソースを移動することにより手動でフェールオーバーを行う
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> 手順 1. 可用性グループ リソースを移動することにより手動でフェールオーバーを行う
 
 *ag_cluster* という名前の AG リソースを *nodeName2* という名前のクラスター ノードに手動でフェールオーバーするには、ディストリビューションに適したコマンドを実行します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "68027221"
 >[!IMPORTANT]
 >手動でリソースをフェールオーバーした後、自動的に追加される場所の制約を削除する必要があります。
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint">ステップ 2. 場所の制約の削除
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> 手順 2. 場所の制約の削除
 
 手動フェールオーバーの間に、`pcs` のコマンド `move` または `crm` のコマンド `migrate` によって、新しいターゲット ノードに配置されるリソースに対する場所の制約が追加されます。 新しい制約を表示するには、リソースを手動で移動した後に次のコマンドを実行します。
 
@@ -81,14 +81,29 @@ ms.locfileid: "68027221"
 手動フェールオーバーによって作成される制約の例。 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > Red Hat Enterprise Linux 8. x および Ubuntu 18.04 上の Pacemaker クラスターの AG リソース名は、リソースに関する用語体系が*昇格可能な複製*を使用するように進化しているため、*ag_cluster-clone* に似ています。 
+
 - **RHEL/Ubuntu の例**
 
    次のコマンドで、`cli-prefer-ag_cluster-master` は削除が必要な制約の ID です。 `sudo pcs constraint list --full` によってこの ID が返されます。 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   または
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   また、次のように、自動生成された制約の移動と消去の両方を 1 行で実行することもできます。 次の例では、Red Hat Enterprise Linux 8.x に準拠した*複製*の用語を使用します。 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **SLES の例**
 
    次のコマンドで、`cli-prefer-ms-ag_cluster` は制約の ID です。 `crm config show` によってこの ID が返されます。 
@@ -102,12 +117,12 @@ ms.locfileid: "68027221"
 >[!NOTE]
 >自動フェールオーバーでは場所の制約が追加されないため、削除は不要です。 
 
-詳細:
+詳細情報:
 - [Red Hat - クラスター リソースの管理](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
-- [Pacemaker - リソースを手動で移動する](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
+- [Pacemaker - リソースを手動で移動する](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES 管理ガイド - リソース](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> フェールオーバーを強制的に実行する 
+## <a name="force-failover"></a><a name="forceFailover"></a> フェールオーバーを強制的に実行する 
 
 強制フェールオーバーは、厳密にディザスター リカバリーを目的としたものです。 この場合、プライマリ データセンターがダウンしているため、クラスター管理ツールでフェールオーバーを行うことはできません。 非同期のセカンダリ レプリカに対して強制フェールオーバーを実行した場合、データ損失の可能性があります。 強制フェールオーバーは、AG にサービスをすぐに復元する必要があり、データが失われてもかまわない場合に限り、実行してください。
 
@@ -117,13 +132,13 @@ ms.locfileid: "68027221"
 
 1. AG リソースがクラスターによって管理されなくなっていることを確認します。 
 
-      - ターゲット クラスター ノードで、リソースをアンマネージド モードに設定します。 このコマンドでは、リソースの監視と管理を停止するように、リソース エージェントに通知されます。 例: 
+      - ターゲット クラスター ノードで、リソースをアンマネージド モードに設定します。 このコマンドでは、リソースの監視と管理を停止するように、リソース エージェントに通知されます。 次に例を示します。 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - リソース モードをアンマネージド モードに設定しようとして失敗する場合は、リソースを削除します。 例:
+      - リソース モードをアンマネージド モードに設定しようとして失敗する場合は、リソースを削除します。 次に例を示します。
 
       ```bash
       sudo pcs resource delete <resourceName>
@@ -166,7 +181,7 @@ ms.locfileid: "68027221"
 
 自動フェールオーバーには、少なくとも 1 つの同期レプリカが必要です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 可用性グループ クラスター リソースに対して Red Hat Enterprise Linux クラスターを構成する](sql-server-linux-availability-group-cluster-rhel.md)
 

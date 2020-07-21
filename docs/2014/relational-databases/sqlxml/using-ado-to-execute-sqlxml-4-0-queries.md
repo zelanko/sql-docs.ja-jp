@@ -1,7 +1,7 @@
 ---
-title: SQLXML 4.0 を実行するために ADO を使用してクエリを実行します。マイクロソフトのドキュメント
+title: ADO を使用した、SQLXML 4.0 クエリの実行
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 50fea140fec2b59e1869d8aaf15e37220ac28bd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065651"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO を使用した、SQLXML 4.0 クエリの実行
   以前のバージョンの SQLXML では、SQLXML IIS 仮想ディレクトリと SQLXML ISAPI フィルターを使用して、HTTP ベースのクエリを実行することができました。 SQLXML 4.0 では、重複する類似の機能が [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のネイティブ XML Web サービスに付属しているため、これらのコンポーネントが削除されました。  
@@ -35,9 +34,9 @@ ms.locfileid: "66012146"
   
 #### <a name="to-create-the-sqlxml-40-query-tester-using-ado-vbscript"></a>ADO を使用した SQLXML 4.0 クエリのテスト スクリプト (VBScript) を作成するには  
   
-1.  次のコードをコピーして、テキスト ファイルに貼り付け、 Sqlxml4test.vbs として保存します。  
+1.  次の VBScript コードをコピーし、テキストファイルに貼り付けます。 Sqlxml4test.vbs として保存します。  
   
-    ```  
+    ```vb
     WScript.Echo "Query process may take a few seconds to complete. Please be patient."  
   
     ' Note that for SQL Server Native Client to be used as the data provider,  
@@ -112,16 +111,16 @@ ms.locfileid: "66012146"
   
 1.  次の方法で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client がインストールされていること確認します。  
   
-    1.  **開始** メニューの 作成 をポイント**設定**、 をクリックし、**コントロール パネルの** 。  
+    1.  [**スタート**] メニューの [**設定**] をポイントし、[**コントロールパネル**] をクリックします。  
   
-    2.  [コントロール パネル] を開くには**の追加とプログラムの削除**  
+    2.  コントロールパネルで、[**プログラムの追加と削除**] を開きます。  
   
-    3.  現在インストールされているプログラムの一覧であることを確認**Microsoft SQL Server ネイティブ クライアント**リストに表示されます。  
+    3.  現在インストールされているプログラムの一覧で、[ **Microsoft SQL Server Native Client** ] が一覧に表示されていることを確認します。  
   
         > [!NOTE]  
-        >  インストールする必要がある場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントを参照してください[SQL Server ネイティブ クライアントをインストールする](../native-client/applications/installing-sql-server-native-client.md)です。  
+        >  Native Client をインストールする必要がある場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [SQL Server Native Client のインストール](../native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
   
-2.  クライアント コンピューターにインストールされている MDAC のバージョンが 2.6 以降であることを確認します。 MDAC のバージョン情報を確認する必要がある場合は、MDAC Component Checker ツールを使用します。このツールは Microsoft の Web サイト (www.microsoft.com) から無償でダウンロードできます。 詳細については、Microsoft の Web サイトで "MDAC Component Checker" を検索してください。  
+2.  クライアント コンピューターにインストールされている MDAC のバージョンが 2.6 以降であることを確認します。 MDAC のバージョン情報を確認する必要がある場合は、MDAC コンポーネントチェッカーツールを使用できます。このツールは、Microsoft Web サイトから無料でダウンロードでき [https://www.microsoft.com/](https://www.microsoft.com/) ます。 詳細については、Microsoft Web サイトの「MDAC Component Checker」を検索してください。  
   
 3.  スクリプトを実行します。  
   

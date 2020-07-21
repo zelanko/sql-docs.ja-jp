@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルの表示のコピー |Microsoft Docs
+title: マイニングモデルのビューをコピーする |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b91ee04b375a1329eb5f215e65a607ced8415ca
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085597"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524008"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>マイニング モデルの表示のコピー
   **のデータ マイニング デザイナーの** [マイニング モデル ビューアー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブでは、マイニング モデルの種類ごとに異なるビューアーを使用します。 これらのビューアーの一部には、コンテンツをクリップボードにコピーし、そこからドキュメントやイメージ操作ソフトウェアに貼り付けるためのコンポーネントがあります。 この機能は次のコンポーネントで使用可能です。  

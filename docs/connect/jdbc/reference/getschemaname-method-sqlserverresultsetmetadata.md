@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2d0063ab-d5d7-420f-b388-36d5169b1358
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69e5183ceea19693205dc7f30a97e29bfb2bb70d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 407f993aba800e3835eb92fe6b9539818a26d2fe
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980144"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921746"
 ---
 # <a name="getschemaname-method-sqlserverresultsetmetadata"></a>getSchemaName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.lang.String getSchemaName(int column)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getSchemaName メソッドは、java.sql.ResultSetMetaData インターフェイスの getSchemaName メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

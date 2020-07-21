@@ -1,6 +1,7 @@
 ---
-title: ポリシー ベースの管理を使用したベスト プラクティスの監視と実行 | Microsoft Docs
-ms.custom: ''
+title: ポリシーベースの管理を使用したベスト プラクティスの監視と実行
+description: ポリシーベースの管理では、ベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルが提供され、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーが評価されます。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d261f84f23131ab9bce11081e1c9d6d1c8dda8d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785088"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ポリシー ベースの管理では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のベスト プラクティスを監視できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルを提供し、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>データベース エンジンのポリシーとルール  

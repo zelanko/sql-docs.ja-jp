@@ -16,10 +16,10 @@ ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aac5b7a237c5aa21b79c1204d7d4560736da56d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580966"
 ---
 # <a name="configurationsetting-method---setunattendedexecutionaccount"></a>ConfigurationSetting メソッド - SetUnattendedExecutionAccount
@@ -41,7 +41,7 @@ public void SetUnattendedExecutionAccount (string UserName,
  *UserName*  
  自動実行で使用する Windows アカウント。  
   
- *Password*  
+ *パスワード*  
  指定したアカウントのパスワード。  
   
  *HRESULT*  
@@ -50,7 +50,7 @@ public void SetUnattendedExecutionAccount (string UserName,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SetUnattendedExecutionAccount メソッドは、レポート サーバーが指定されたユーザーとしてログインできるかどうかを検証しません。  
   
  SetUnattendedExecutionAccount メソッドを使用してレポート サーバー Windows サービスのコンテキストで自動実行を行うことはできません。  

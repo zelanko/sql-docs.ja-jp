@@ -1,5 +1,5 @@
 ---
-title: getPropertyInfo メソッド (SQLServerDriver) |Microsoft Docs
+title: getPropertyInfo メソッド (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d89a29af5aa3d2518f94101854371cea757e135c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fefcbd719689879ece66fe43df7d546d315d1e5f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980668"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925191"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>getPropertyInfo メソッド (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,13 +45,13 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
  プロパティ値のペアの一覧です。初回使用時には null です。  
   
 ## <a name="return-value"></a>戻り値  
- DriverPropertyInfo オブジェクトの配列。  
+ DriverPropertyInfo オブジェクトの配列です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getPropertyInfo メソッドは、getPropertyInfo インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getPropertyInfo メソッドは、java.sql.Driver インターフェイスの getPropertyInfo メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDriver のメソッド](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

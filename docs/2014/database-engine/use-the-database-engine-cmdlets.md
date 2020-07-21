@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 190b8f0ec6ac647ee45a07181af1bd7094199dcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efd59bc8c0d6bb748b9ae6c314b0a75cc6d98c5f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927894"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>データベース エンジン コマンドレットの使用
-  Windows PowerShell コマンドレットは、単一の機能を実現するコマンドで、通常は **Get-Help** や **Set-MachineName** のように動詞と名詞を組み合わせた名前付け規則に従います。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 固有のコマンドレットは、Windows PowerShell 用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]プロバイダーによって提供されます。  
+   Windows PowerShell コマンドレットは、単一の機能を実現するコマンドで、通常は **Get-Help** や **Set-MachineName** のように動詞と名詞を組み合わせた名前付け規則に従います。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 固有のコマンドレットは、Windows PowerShell 用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]プロバイダーによって提供されます。  
   
 ## <a name="database-engine-cmdlets"></a>データベース エンジンのコマンドレット  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssDE](../includes/ssde-md.md)]用の少数のコマンドレットが実装されます。 これらのコマンドレットは、主に新しい PowerShell スクリプトからの既存の Transact-SQL スクリプトの実行、ポリシー ベースの管理ポリシーの評価、および SQL Server プロバイダー パスでの SQL Server 識別子の指定の支援に使用されます。  
   
- Windows PowerShell スクリプトの多くは、SQL Server PowerShell プロバイダーおよび SQL Server 管理オブジェクト モデルを使用して、 [!INCLUDE[ssDE](../includes/ssde-md.md)] と共に動作します。 詳細については、「 [SQL Server PowerShell](../powershell/sql-server-powershell.md)」を参照してください。  
+ Windows PowerShell スクリプトの多くは、SQL Server PowerShell プロバイダーおよび SQL Server 管理オブジェクト モデルを使用して、 [!INCLUDE[ssDE](../includes/ssde-md.md)] と共に動作します。 詳細については、「[SQL Server PowerShell](../powershell/sql-server-powershell.md)」を参照してください。  
   
 ### <a name="get-cmdlet-help"></a>コマンドレットのヘルプの利用  
  Windows PowerShell 環境では、 **Get-Help** コマンドレットを使用して各コマンドレットのヘルプ情報を参照できます。 **Get-Help** を実行すると、構文、パラメーター定義、入力と出力の種類、コマンドレットで実行される処理の説明などの情報が返されます。 詳細については、「 [Get Help SQL Server PowerShell](../../2014/database-engine/get-help-sql-server-powershell.md)」を参照してください。  
@@ -43,7 +42,7 @@ ms.locfileid: "66088680"
 ### <a name="partial-parameter-names"></a>部分的なパラメーター名  
  コマンドレット パラメーターの完全な名前を指定する必要はありません。 そのコマンドレットでサポートされている他のパラメーターと区別するのに足りる名前の一部のみを指定するだけでかまいません。 たとえば、次の例は、 **Invoke-Sqlcmd -QueryTimeout** パラメーターを指定する 3 つの方法を示します。  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTimeout 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTime 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3  
@@ -61,6 +60,6 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell プロバイダー](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [AlwaysOn 可用性グループの PowerShell コマンドレットの概要&#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性グループ &#40;SQL Server の PowerShell コマンドレットの概要&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

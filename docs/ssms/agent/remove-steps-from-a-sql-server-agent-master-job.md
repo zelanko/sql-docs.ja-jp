@@ -1,22 +1,23 @@
 ---
-title: SQL Server エージェントのマスター ジョブからのステップの削除 | Microsoft Docs
-ms.custom: ''
+title: Remove Steps from a SQL Server Agent Master Job
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fc570af660379ac86b6f67ece7d1f5fdf64efdc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 80ad67f6a180aaab688f38c7504c1f9338f5f4b2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264791"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75246321"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -26,31 +27,17 @@ ms.locfileid: "68264791"
 
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で SQL Server エージェントのマスター ジョブからステップを削除する方法について説明します。  
   
-**このトピックの内容**  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
--   **作業を開始する準備:**  
-  
-    [制限事項と制約事項](#Restrictions)  
-  
-    [セキュリティ](#Security)  
-  
--   **以下を使用して SQL Server エージェントのマスター ジョブからステップを削除するには:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
-  
-## <a name="BeforeYouBegin"></a>はじめに  
-  
-### <a name="Restrictions"></a>制限事項と制約事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>制限事項と制約事項  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブの対象サーバーを、ローカル サーバーとリモート サーバーの両方に設定することはできません。  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>アクセス許可  
+#### <a name="permissions"></a><a name="Permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
-## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-remove-steps-from-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブからステップを削除するには  
   
@@ -68,7 +55,7 @@ ms.locfileid: "68264791"
   
 7.  完了したら、 **[OK]** をクリックします。  
   
-## <a name="TsqlProcedure"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL の使用  
   
 #### <a name="to-remove-steps-from-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブからステップを削除するには  
   

@@ -1,5 +1,5 @@
 ---
-title: データセットに LevelDepth プロパティ (ADO MD) |Microsoft Docs
+title: LevelDepth プロパティ (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,27 +14,27 @@ f1_keywords:
 helpviewer_keywords:
 - LevelDepth property [ADO MD]
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a1e62432f5d5d91cbce2079eb161a152773ed1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1daadfc3839bffdfcfd6f085e2cf4900b8251044
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949591"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753450"
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth プロパティ (ADO MD)
-階層のルートの間のレベルの数を示す、[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)します。  
+階層のルートと[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)の間のレベル数を示します。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**長い**整数は読み取り専用とします。  
+ は**長**整数を返し、は読み取り専用です。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **LevelDepth**までの距離を決定するプロパティ、[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)階層のルート レベルからのオブジェクト。 **LevelDepth**ルートにあるメンバーのレベルは 0。 これに対応して、[深さ](../../../ado/reference/ado-md-api/depth-property-ado-md.md)のプロパティを[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクト。  
+## <a name="remarks"></a>Remarks  
+ **Leveldepth**プロパティを使用して、階層のルートレベルからの[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクトの距離を決定します。 ルートレベルのメンバーの**Leveldepth**は0です。 これは、 [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクトの[Depth](../../../ado/reference/ado-md-api/depth-property-ado-md.md)プロパティに対応します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Depth プロパティ (ADO MD)](../../../ado/reference/ado-md-api/depth-property-ado-md.md)   
  [Level オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

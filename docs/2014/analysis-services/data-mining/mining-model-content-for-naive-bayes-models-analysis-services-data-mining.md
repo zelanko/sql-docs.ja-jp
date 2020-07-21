@@ -1,5 +1,5 @@
 ---
-title: Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
+title: Naive Bayes モデルのマイニングモデルコンテンツ (Analysis Services データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b32f122933e03992afdc287fa064f78d5d22c0e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083646"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521458"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -33,12 +32,12 @@ ms.locfileid: "66083646"
 > [!NOTE]  
 >  Naive Bayes モデルでは、連続するデータ型が許可されないため、入力列のすべての値が不連続値または分離された値として処理されます。 値を分離する方法は指定できます。 詳細については、「 [マイニング モデルでの列の分離の変更](change-the-discretization-of-a-column-in-a-mining-model.md)」を参照してください。  
   
- ![単純ベイズのモデル コンテンツの構造体](../media/modelcontentstructure-nb.gif "単純ベイズのモデル コンテンツの構造")  
+ ![naive bayes のモデル コンテンツの構造](../media/modelcontentstructure-nb.gif "naive bayes のモデル コンテンツの構造")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Naive Bayes モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、Naive Bayes モデルに関連する列についてのみ詳細と例を紹介します。  
   
- ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -60,7 +59,7 @@ ms.locfileid: "66083646"
  **入力属性の状態** 入力属性の名前のみ。 状態を取得するには、MSOLAP_NODE_SHORT_CAPTION を使用します。  
   
  NODE_NAME  
- ノードの名前。  
+ ノード名。  
   
  この列には NODE_UNIQUE_NAME と同じ値が格納されます。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66083646"
   
  **モデル ルート** 空白。  
   
- **マージナル統計** 空白。  
+ **統計の限界**なし  
   
  **予測可能な属性** 予測可能な属性の名前。  
   
@@ -172,26 +171,26 @@ ms.locfileid: "66083646"
  MSOLAP_NODE_SHORT_CAPTION  
  列の名前または値を表すテキスト文字列。  
   
- **モデル ルート** 空白。  
+ **モデルルート**省略  
   
  **マージナル統計** 空白。  
   
- **予測可能な属性**  予測可能な属性の名前。  
+ **予測可能な属性** 予測可能な属性の名前。  
   
  **入力属性** 入力属性の名前。  
   
  **入力属性の状態** 入力属性の値または分離された値。  
   
-##  <a name="bkmk_nodenames"></a> ノードの名前と ID の使用  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_nodenames"></a>ノード名と Id の使用  
  Naive Bayes モデルのノードの名前付けでは、モデル内の情報間のリレーションシップをわかりやすくするために、ノードの種類に関する追加情報が提供されます。 次の表に、さまざまなノードの種類に割り当てられる ID の規則を示します。  
   
 |ノードの種類|ノード ID の規則|  
 |---------------|----------------------------|  
 |モデル ルート (1)|常に 0 です。|  
 |マージナル統計ノード (26)|任意の ID 値。|  
-|予測可能な属性 (9)|10000000 で始まる 16 進数。<br /><br /> 例:100000001、10000000b です。|  
-|入力属性 (10)|2 つの部分で構成される 16 進数。最初の部分は常に 20000000 であり、2 番目の部分は関連する予測可能な属性の 16 進数の識別子で始まります。<br /><br /> 例:20000000b00000000<br /><br /> この場合、関連する予測可能な属性は 10000000b です。|  
-|入力属性の状態 (11)|3 つの部分で構成される 16 進数。最初の部分は常に 30000000 であり、2 番目の部分は関連する予測可能な属性の 16 進数の識別子で始まります。3 番目の部分は値の識別子を表します。<br /><br /> 例:30000000b00000000200000000<br /><br /> この場合、関連する予測可能な属性は 10000000b です。|  
+|予測可能な属性 (9)|10000000 で始まる 16 進数。<br /><br /> 例 :100000001、10000000b|  
+|入力属性 (10)|2 つの部分で構成される 16 進数。最初の部分は常に 20000000 であり、2 番目の部分は関連する予測可能な属性の 16 進数の識別子で始まります。<br /><br /> 例 :20000000b00000000<br /><br /> この場合、関連する予測可能な属性は 10000000b です。|  
+|入力属性の状態 (11)|3 つの部分で構成される 16 進数。最初の部分は常に 30000000 であり、2 番目の部分は関連する予測可能な属性の 16 進数の識別子で始まります。3 番目の部分は値の識別子を表します。<br /><br /> 例 :30000000b00000000200000000<br /><br /> この場合、関連する予測可能な属性は 10000000b です。|  
   
  これらの ID を使用すると、入力属性と状態を予測可能な属性に関連付けることができます。 たとえば、次のクエリでは、 `TM_NaiveBayes`というモデルについて、入力属性と予測可能な属性の考えられる組み合わせを表すノードの名前とキャプションが返されます。  
   
@@ -233,7 +232,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Marital Status = S|0.457504004|  
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0.542495996|  
   
-##  <a name="bkmk_nodedist"></a> NODE_DISTRIBUTION テーブル  
+##  <a name="node_distribution-table"></a><a name="bkmk_nodedist"></a>NODE_DISTRIBUTION テーブル  
  入れ子になったテーブル列である NODE_DISTRIBUTION には、通常、ノード内の値の分布に関する統計が含まれます。 Naive Bayes モデルでは、このテーブルは次のノードに対してのみ作成されます。  
   
 |ノードの種類|入れ子になったテーブルの内容|  
@@ -265,10 +264,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  これらの結果の SUPPORT 列の値は、指定した結婚歴に当てはまる顧客のうち、自転車を購入した顧客の数を示します。 PROBABILITY 列には、このノードのみについて計算された各属性値の確率が格納されます。 NODE_DISTRIBUTION テーブルで使用される用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
-###  <a name="bkmk_margstats"></a> マージナル統計ノードの情報  
+###  <a name="information-in-the-marginal-statistics-node"></a><a name="bkmk_margstats"></a>[最低限の統計情報ノードの情報を参照してください。  
  Naive Bayes モデルでは、マージナル統計ノードの入れ子になったテーブルに、トレーニング データのセット全体の値の分布が含まれます。 たとえば、次の表は、 `TM_NaiveBayes`モデルの入れ子になった NODE_DISTRIBUTION テーブルに含まれる統計の一部を示しています。  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
@@ -288,9 +287,9 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  トレーニング データには存在しなかった有効な値を表すために、すべての入力属性と出力属性に `Missing` 値 (VALUE_TYPE = 1) が追加されます。 "missing" という文字列と既定の `Missing` 値を区別するように注意する必要があります。 詳細については、「 [不足値 &#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)であらかじめ定義されているフラグに加えて他のモデリング フラグがある場合もあります。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
- [データ マイニング モデル ビューアー](data-mining-model-viewers.md)   
- [データ マイニング クエリ](data-mining-queries.md)   
+ [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [データマイニングモデルビューアー](data-mining-model-viewers.md)   
+ [データマイニングクエリ](data-mining-queries.md)   
  [Microsoft Naive Bayes アルゴリズム](microsoft-naive-bayes-algorithm.md)  
   
   

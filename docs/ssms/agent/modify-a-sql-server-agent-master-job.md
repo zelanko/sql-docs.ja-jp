@@ -1,10 +1,9 @@
 ---
-title: SQL Server エージェントのマスター ジョブの変更 | Microsoft Docs
-ms.custom: ''
+title: SQL Server エージェントのマスター ジョブの変更
+ms.custom: seo-lt-2019
 ms.date: 02/28/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ef8ca56120197c6f21908b60eccba25043c75596
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 721b9fb2849763dedd8787cc7e24cec4fab90094
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267554"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255826"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブの変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,11 +31,11 @@ ms.locfileid: "68267554"
 
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント マスター ジョブを変更する方法については、次のトピックを参照してください。  
   
-[Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
+[SQL Server エージェントのマスター ジョブのスケジューリングの詳細の変更](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
 [SQL Server エージェントのマスター ジョブへのステップの追加](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   
-[Change Steps of a SQL Server Agent Master Job](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
+[SQL Server エージェントのマスター ジョブのステップの変更](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
   
 [Remove Steps from a SQL Server Agent Master Job](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
   

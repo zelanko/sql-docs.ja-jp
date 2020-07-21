@@ -25,12 +25,12 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67a4a4ad32e1d9471dc9a5b3d2f1c7b067cf480b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 428e6370a7e4afc1b43be1edb86b8fb032f9dd3e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122120"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896001"
 ---
 # <a name="-modulus-transact-sql"></a>% (剰余) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,17 +55,16 @@ dividend % divisor
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  剰余算術演算子は、SELECT ステートメントの選択リストの中で、列名、数値定数、整数や通貨型に分類されるデータ型、または **numeric** データ型の有効な式と組み合わせて使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-simple-example"></a>A. 簡単な例  
  次の例では、38 を 5 で割ります。 この結果は、答えの整数部分である 7 となります。また、剰余演算子を使用して余り 3 を返す方法も示しています。  
   
 ```  
-SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
-  
+SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder;
 ```  
   
 ### <a name="b-example-using-columns-in-a-table"></a>B. テーブルの列を使用した例  
@@ -80,9 +79,9 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C: 簡単な例  
+### <a name="c-simple-example"></a>C. 簡単な例  
  次の例は、3 を 2 で割ったときの `%` 演算子の結果を示しています。  
   
 ```  

@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e35cf86a91be42a2a39a38642e34e747d7d13fe7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949622"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753914"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item プロパティ (ADO MD セルセット)
-セルを取得します、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)の座標を使用します。  
+セルの座標を使用して、セル[セット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)からセルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,38 +35,38 @@ Cell = Cellset.Item ( Positions)
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *位置*  
- A **VariantArray**のセルを一意に指定する値。 *位置*次のいずれかを指定できます。  
+ *Positions*  
+ セルを一意に指定する値の**VariantArray** 。 *位置*は、次のいずれかになります。  
   
--   位置の数値の配列  
+-   位置番号の配列  
   
 -   メンバー名の配列  
   
 -   序数の位置  
   
-## <a name="remarks"></a>コメント  
- 使用して、**項目**プロパティを返す、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)オブジェクト内を[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクト。 場合、**項目**に対応するセル プロパティを見つけられない、*位置*引数、エラーが発生します。  
+## <a name="remarks"></a>解説  
+ **アイテム**プロパティを使用して、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)[セット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクト内の Cell オブジェクトを返します。 **Item**プロパティが*位置*引数に対応するセルを見つけることができない場合は、エラーが発生します。  
   
- **項目**プロパティの既定のプロパティは、**セルセット**オブジェクト。 次の構文形式は交換できます。  
+ **アイテム**プロパティは、**セルセット**オブジェクトの既定のプロパティです。 次の構文形式は置き換えることができます。  
   
 ```  
   
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>コメント  
- *位置*引数が返されるセルを指定します。 セルの序数位置または各軸に沿った位置を指定できます。 各軸に沿った位置を指定してセルを指定する場合は、位置の数値の値または各位置のメンバーの名前を指定できます。  
+## <a name="remarks"></a>解説  
+ *位置*引数は、返すセルを指定します。 セルは、序数位置または各軸に沿った位置によって指定できます。 各軸に沿って位置によってセルを指定する場合は、位置の数値または各位置のメンバーの名前を指定できます。  
   
- 序数の位置は内で 1 つのセルを一意に識別する番号、**セルセット**します。 内のセルの番号付け概念的には、**セルセット**場合と、**セルセット**された、 *p*-次元の配列場所*p*軸の数です。 セルは、行優先順で指定されます。 セルの序数を計算する数式を次に示します。  
+ 序数位置は、セル**セット**内の1つのセルを一意に識別する数値です。 概念的には、セルセット内のセルには、セル**セット**が*p*次元配列であるか**のように番号が付けら**れます。ここで、 *p*は軸の数です。 セルは、行優先順で指定されます。 セルの序数を計算するための式を次に示します。  
   
- として文字列をメンバー名が渡された場合**項目**軸の数値識別子の増加順に、メンバーを一覧表示する必要があります。 軸内で、メンバーは、ディメンションの入れ子の増加順に一覧表示する必要があります - は、最も外側にあるディメンションのメンバーは、最初に、内部のディメンションのメンバーが従います。 別個の文字列によって表される各ディメンションおよびメンバーの文字列のリストをコンマで区切る必要があります。  
+ メンバー名が文字列として**Item**に渡される場合、メンバーは数値軸識別子の昇順に表示される必要があります。 軸内では、メンバーはディメンションの入れ子の昇順に表示される必要があります。つまり、最も外側のディメンションのメンバーが最初になり、その後に内側のディメンションのメンバーが続きます。 各次元は個別の文字列で表す必要があり、メンバー文字列のリストはコンマで区切る必要があります。  
   
 > [!NOTE]
->  データ プロバイダーによってセル メンバー名の取得をサポートされていない可能性があります。 詳細については、プロバイダーのマニュアルを参照してください。  
+>  メンバー名でセルを取得することは、データプロバイダーでサポートされていない可能性があります。 詳細については、プロバイダーのドキュメントを参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

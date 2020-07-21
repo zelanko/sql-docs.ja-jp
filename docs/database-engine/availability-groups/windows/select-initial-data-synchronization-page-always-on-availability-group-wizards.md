@@ -1,6 +1,7 @@
 ---
-title: '[最初のデータの同期を選択] ページ - AlwaysOn 可用性グループ ウィザード | Microsoft Docs'
-ms.custom: ''
+title: '[最初のデータの同期を選択] ページ (可用性グループ ウィザード)'
+description: SQL Server Management Studio (SSMS) の Always On 可用性グループ ウィザードの [最初のデータの同期を選択] ページの説明。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,21 +14,21 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 995191f37a40bbc1b3cd0fb11ddf79f3952527ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014177"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883153"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>[最初のデータの同期を選択] ページ (AlwaysOn 可用性グループ ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   新しいセカンダリ データベースの初期データ同期のユーザー設定を指定するには、AlwaysOn の **[最初のデータの同期を選択]** ページを使用します。 このページは、[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] の 3 つのウィザードで共有されています。  
   
  選択肢には、 **[自動シード処理]** 、 **[完全なデータベースとログ バックアップ]** 、 **[参加のみ]** 、 **[最初のデータの同期をスキップ]** があります。 **[自動シード処理]** 、 **[完全]** 、 **[参加のみ]** を選択する前に、使用している環境が前提条件を満たしていることを確認してください。  
     
-##  <a name="Recommendations"></a> 推奨事項  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   初期データ同期の実行中は、プライマリ データベースのログ バックアップ タスクを中断します。  
   
@@ -37,11 +38,11 @@ ms.locfileid: "68014177"
   
      バックアップおよび復元操作を高いセキュリティで保護する必要がある場合は、 **[参加のみ]** または **[最初のデータの同期をスキップ]** オプションのどちらかを選択することをお勧めします。  
   
-## <a name="Auto"></a> 自動シード処理
+## <a name="automatic-seeding"></a><a name="Auto"></a> 自動シード処理
  
  グループの各データベースのセカンダリ レプリカが SQL Server で自動的に作成されます。 自動シード処理には、データとログ ファイルのパスが、グループに参加しているすべての SQL Server インスタンスで同じである必要があります。 [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] 以降で使用できます。 「[AlwaysOn 可用性グループを自動的に初期化する](automatically-initialize-always-on-availability-group.md)」を参照してください。
 
-##  <a name="Full"></a> 完全なデータベースとログ バックアップ 
+##  <a name="full-database-and-log-backup"></a><a name="Full"></a> 完全なデータベースとログ バックアップ 
  各プライマリ データベースに対して **[完全なデータベースとログ バックアップ]** オプションを選択すると、1 つのワークフローで、プライマリ データベースの完全バックアップとログ バックアップを作成する、セカンダリ レプリカをホストする各サーバー インスタンスでこれらのバックアップを復元して、対応するセカンダリ データベースを作成する、各セカンダリ データベースを可用性グループに参加させる、という操作を実行します。  
   
  使用している環境が、次の「初期データの完全同期を使用するための前提条件」を満たしており、ウィザードでデータ同期を自動的に開始する場合にのみ、このオプションを選択してください。  
@@ -74,18 +75,18 @@ ms.locfileid: "68014177"
 > [!IMPORTANT]  
 >  ログ バックアップは、ログ バックアップ チェーンの一部になります。 それらのバックアップ ファイルは、適切に保存してください。  
   
-##  <a name="Joinonly"></a> [参加のみ]  
+##  <a name="join-only"></a><a name="Joinonly"></a> [参加のみ]  
  このオプションは、可用性グループのセカンダリ レプリカをホストする各サーバー インスタンス上に、新しいセカンダリ データベースが既に存在する場合にのみ選択します。 セカンダリ データベースの準備については、このセクションの「 [セカンダリ データベースを手動で準備するには](#PrepareSecondaryDbs)」を参照してください。  
   
  **[参加のみ]** を選択すると、既存の各セカンダリ データベースを可用性グループに参加させます。  
   
-## <a name="Skip"></a> [最初のデータの同期をスキップ]  
+## <a name="skip-initial-data-synchronization"></a><a name="Skip"></a> [最初のデータの同期をスキップ]  
  このオプションは、各プライマリ データベースのデータベースおよびログ バックアップを実行し、セカンダリ レプリカをホストする各サーバー インスタンスに復元する場合に選択します。 ウィザードの終了後、各セカンダリ レプリカのすべてのセカンダリ データベースを参加させる必要があります。  
   
 > [!NOTE]  
->  詳細については、このトピックの「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)の 3 つのウィザードで共有されています。  
+>  詳細については、「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
-##  <a name="PrepareSecondaryDbs"></a> セカンダリ データベースを手動で準備するには  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a> セカンダリ データベースを手動で準備するには  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ウィザードを使用せずにセカンダリ データベースを準備するには、次の方法のどちらかを使用できます。  
   
 -   RESTORE WITH NORECOVERY を使用してプライマリ データベースの最新のデータベース バックアップを手動で復元し、その後、RESTORE WITH NORECOVERY を使用して後続のログ バックアップを復元する。 プライマリ データベースとセカンダリ データベースのファイル パスが異なる場合は、WITH MOVE オプションを使用する必要があります。 可用性グループのセカンダリ レプリカをホストする各サーバー インスタンスで、この復元シーケンスを実行します。  これらのバックアップ操作と復元操作は、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] または PowerShell を使用して実行できます。  
@@ -109,7 +110,7 @@ ms.locfileid: "68014177"
   
  すべてのセカンダリ データベースを準備してから、ウィザードを実行することもできます。 この場合、ウィザードの **[最初のデータの同期を選択]** ページで **[参加のみ]** を選択して、準備した新しいセカンダリ データベースを可用性グループに自動的に参加させます。  
   
-##  <a name="LaunchWiz"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 関連タスク  
   
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
@@ -126,6 +127,6 @@ ms.locfileid: "68014177"
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

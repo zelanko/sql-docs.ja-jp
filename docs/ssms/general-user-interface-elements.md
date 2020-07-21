@@ -1,6 +1,6 @@
 ---
-title: 一般的なユーザー インターフェイス要素 | Microsoft Docs
-ms.custom: ''
+title: 一般的なユーザー インターフェイス要素
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f8832355b2ef5ae1969d3bd98e84f654ba9cde16
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8a046f3f94e6c1ab59342f61fac1750bd6da1459
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265060"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75246890"
 ---
 # <a name="general-user-interface-elements"></a>一般的なユーザー インターフェイス要素
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

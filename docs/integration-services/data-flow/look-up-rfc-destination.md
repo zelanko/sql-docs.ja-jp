@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3851f85bf353e1ebe39f9bb24c88406550e1c286
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 518835df5ae78a39360cad1a6aab1db35be675ec
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941285"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292298"
 ---
 # <a name="look-up-rfc-destination"></a>[RFC 転送先の参照]
 
@@ -42,7 +42,7 @@ ms.locfileid: "67941285"
      **[SAP BW 変換元エディター]** で、 **[RFC 転送先]** は、 **[実行モード]** の値が **[P - プロセス チェーンをトリガー]** または **[W - 通知を待機]** である場合にのみ表示されます。  
   
 ## <a name="options"></a>オプション  
- **変換先**  
+ **宛先**  
  SAP Netweaver BW システムで定義された RFC 転送先の名前を表示します。  
   
  **ゲートウェイ ホスト**  

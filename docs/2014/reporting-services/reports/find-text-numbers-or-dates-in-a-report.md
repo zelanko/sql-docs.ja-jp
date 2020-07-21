@@ -1,5 +1,5 @@
 ---
-title: (追加する Reporting Services SharePoint 統合モードで) レポート内のテキスト、数値、または日付の検索 |Microsoft Docs
+title: レポート内のテキスト、数値、または日付の検索 (SharePoint 統合モードでの Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6cf40f4d3baa60caa0d9d44f372e41521497e33e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102668"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>レポート内のテキスト、数値、または日付を検索する (Reporting Services の SharePoint 統合モード)

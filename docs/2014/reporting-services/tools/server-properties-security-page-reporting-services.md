@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a49f56c4e898b0189ce0f8bf5008873e13dc6223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099556"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>[サーバーのプロパティ]\([セキュリティ] ページ) - Reporting Services
   このページを使用すると、レポート サーバーを危険にさらす可能性のある機能を無効にできます。 これらの機能を無効にすることで一部の機能が制限されますが、特定の脅威を緩和することで、レポート サーバー全体のセキュリティを向上させることができます。  
   
- このページを開くには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を起動してレポート サーバー インスタンスに接続し、レポート サーバー名を右クリックして **[プロパティ]** をクリックします。 **[セキュリティ]** をクリックすると、このページが開きます。  
+ このページを開くには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を起動してレポート サーバー インスタンスに接続し、レポート サーバー名を右クリックして **[プロパティ]** をクリックします。 **[セキュリティ]** をクリックすると、このページが開きます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[レポート データ ソースで Windows 統合セキュリティを有効にする]**  
  レポートを要求したユーザーの Windows セキュリティ トークンを使用してレポート データ ソースに接続するかどうかを指定します。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "66099556"
   
  この機能を無効にすることで、悪意のあるユーザーによる `LoadReportDefinition` 要求でレポート サーバーが過負荷になるサービス拒否攻撃の脅威を軽減することができます。  
   
-## <a name="see-also"></a>関連項目  
- [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)   
- [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
- [資格情報とレポート データ ソースの接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md[のレポート サーバーの Management Studio の F1 ヘルプ](report-server-in-management-studio-f1-help.md)  
+## <a name="see-also"></a>参照  
+ [レポートサーバーのプロパティ &#40;Management Studio の設定&#41;](set-report-server-properties-management-studio.md)   
+ [Management Studio でレポートサーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
+ [レポートデータソースの資格情報と接続情報を指定してください](..[Management Studio の F1 ヘルプでレポートサーバーを](report-server-in-management-studio-f1-help.md)作成します (& o)。これには、レポートサーバーを使用します。  
   
   

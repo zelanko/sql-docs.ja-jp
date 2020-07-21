@@ -1,5 +1,5 @@
 ---
-title: SQLServerPooledConnection Members |Microsoft Docs
+title: SQLServerPooledConnection のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8aa2b24d-68ed-488f-ad33-e2c688f945cc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a1c1c6a6330fec261de12a1ee64f7384f7e2ab59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 25371fdc7146d74a2796bf06963592515fd400a1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970811"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923465"
 ---
 # <a name="sqlserverpooledconnection-members"></a>SQLServerPooledConnection のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67970811"
   
 ## <a name="methods"></a>メソッド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) オブジェクトでイベントが発生した場合に通知を受けるように、渡されたイベント リスナーを登録します。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) オブジェクトが表す物理的な接続を終了します。|  

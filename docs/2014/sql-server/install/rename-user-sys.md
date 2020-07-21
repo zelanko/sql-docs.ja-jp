@@ -1,5 +1,5 @@
 ---
-title: ユーザー sys の名前を変更する |Microsoft Docs
+title: ユーザー sys | の名前を変更します。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3af9d31a54adc5645cab6fcc7104ae7ff27a61b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092858"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059099"
 ---
 # <a name="rename-user-sys"></a>ユーザー sys の名前変更が必要
-  アップグレード アドバイザーには、ユーザー名が検出された**sys**データベースにします。 この名前は予約されています。 このユーザー名を変更した後、アップグレードしてください。 ユーザー名が変更されていないと、データベースはアップグレード処理後に問題ありの状態となり、データベースをオンラインにするまで使用できません。  
+  アップグレードアドバイザーによって、データベースにユーザー名**sys**が検出されました。 この名前は予約されています。 このユーザー名を変更した後、アップグレードしてください。 ユーザー名が変更されていないと、データベースはアップグレード処理後に問題ありの状態となり、データベースをオンラインにするまで使用できません。  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -31,11 +30,11 @@ ms.locfileid: "66092858"
 ## <a name="corrective-action"></a>修正措置  
   
 ### <a name="before-upgrade-procedure"></a>アップグレード前に行う手順  
- ユーザーを含む各データベースでアップグレードする前に**sys**次の操作を行います。  
+ をアップグレードする前に、ユーザー **sys**を含む各データベースで、次の操作を行います。  
   
 1.  新しいユーザーを作成します。  
   
-2.  次のステートメントを使用して、ユーザーが与えられているすべてのアクセス許可を表示する**sys**し、ユーザーに与えられた**sys**します。  
+2.  次のステートメントを使用して、ユーザー **sys**によって付与され、ユーザー **sys**に付与されるすべてのアクセス許可を表示します。  
   
     ```  
     -- Return permissions granted by user sys.  
@@ -44,16 +43,16 @@ ms.locfileid: "66092858"
     SELECT * FROM sysprotects WHERE uid = USER_ID('sys')  
     ```  
   
-3.  によって所有されているすべてのオブジェクトの所有権を譲渡する**sys** 、新しいユーザーを使用して**sp_changeobjectowner**します。  
+3.  **Sys**が所有するすべてのオブジェクトの所有権を新しいユーザーに転送するには、 **sp_changeobjectowner**を使用します。  
   
-4.  ユーザーを削除して**sys**します。  
+4.  ユーザー **sys**を削除します。  
   
-5.  手順 2. でキャプチャされた元のアクセス許可を復元するために、AS を使用して、 *new_user* GRANT ステートメントの句。  
+5.  手順 2. でキャプチャした元のアクセス許可を復元するには、GRANT ステートメントの AS *new_user*句を使用します。  
   
 6.  新しいユーザーを参照するようにスクリプトを修正します。 たとえば、`SELECT * FROM sys.my`_`table` などのステートメントを含むスクリプトを `SELECT * FROM new_user.my_table` に変更する必要があります。  
   
 ### <a name="after-upgrade-procedure"></a>アップグレード後に行う手順  
- 場合、ユーザー **sys**が、次の操作をアップグレードする前に名前を変更できません。  
+ アップグレードの前にユーザー **sys**の名前を変更しなかった場合は、次の手順を実行します。  
   
 1.  ステートメント `ALTER DATABASE db_name SET ONLINE` を実行します。 データベースが SINGLE_USER モードになります。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66092858"
 3.  ステートメント `ALTER DATABASE db_name SET MULTI_USER` を実行します。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

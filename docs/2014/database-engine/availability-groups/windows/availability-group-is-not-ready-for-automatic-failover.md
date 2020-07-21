@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcbff0c10d6e58e12474ce3c514a38e74c7119f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791866"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937133"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性グループの自動フェールオーバーの準備ができていない
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  
-|**ポリシー名**|可用性グループの自動フェールオーバーの準備|  
-|**問題**|可用性グループで自動フェールオーバーの準備ができていません。|  
+|**[ポリシー名]**|可用性グループの自動フェールオーバーの準備|  
+|**問題点**|可用性グループで自動フェールオーバーの準備ができていません。|  
 |**カテゴリ**|**重大**|  
-|**ファセット**|可用性グループ|  
+|**面し**|可用性グループ|  
   
 ## <a name="description"></a>説明  
  このポリシーは、フェールオーバーの準備が整っているセカンダリ レプリカが 1 つ以上可用性グループに存在するかどうかを確認します。 プライマリ レプリカのフェールオーバー モードが自動モードである一方で、可用性グループのセカンダリ レプリカのいずれもフェールオーバーの準備ができていない場合、ポリシーは通常とは異なる状態で、アラートが発生します。  
@@ -51,7 +50,7 @@ ms.locfileid: "62791866"
 -   ポリシーを使用して、データが同期状態にあり、自動フェールオーバー ターゲットが SYNCHRONIZED 状態であることを確認した後、可用性レプリカの問題を解決します。  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

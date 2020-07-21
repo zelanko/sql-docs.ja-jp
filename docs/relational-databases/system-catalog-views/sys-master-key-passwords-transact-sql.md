@@ -1,7 +1,7 @@
 ---
-title: sys.master_key_passwords (TRANSACT-SQL) |Microsoft Docs
+title: master_key_passwords (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,35 +17,35 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_key_passwords catalog view
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 87bb4a97db318330f253d068febb1309e4eda12a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a29e6db2af545f919ad176f3b7453e237b08888b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102402"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883808"
 ---
-# <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmaster_key_passwords-transact-sql"></a>master_key_passwords (Transact-sql)
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  各データベースのマスター _ キーのパスワードを使用して追加の行を返します、 **sp_control_dbmasterkey_password**ストアド プロシージャ。 マスター _ キーを保護するために使用されるパスワードは、資格情報ストアに格納されます。 資格情報名がこの形式に従います: ##dbmkey_ < database_family_guid > _ < random_password_guid > ## します。 パスワードは、資格情報シークレットとして格納されます。 使用して追加された各パスワード**sp_control_dbmasterkey_password**、内の行がある**sys.credentials**します。  
+  **Sp_control_dbmasterkey_password**ストアドプロシージャを使用して追加されたデータベースマスターキーのパスワードごとに1行のデータを返します。 マスターキーを保護するために使用されるパスワードは、資格情報ストアに格納されます。 資格情報名は、# #DBMKEY_<database_family_guid>_<random_password_guid # # の形式に従います。 パスワードは、資格情報のシークレットとして保存されます。 **Sp_control_dbmasterkey_password**を使用して追加されたパスワードごとに、 **sys. 資格情報**に行があります。  
   
- このビューの各行を示しています、 **credential_id**と**family_guid**のうち、マスター _ キーがその資格情報に関連付けられているパスワードで保護されたデータベース。 参加**sys.credentials**上、 **credential_id**など有用なフィールドを返す、 **create_date**と資格情報の名前。  
+ このビューの各行には、 **credential_id**と、その資格情報に関連付けられているパスワードによって保護されているデータベースの**family_guid**が表示されます。 **Credential_id**での**sys. 資格情報**の結合では、 **create_date**や資格情報名などの便利なフィールドが返されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**credential_id**|**int**|パスワードが属する資格情報の ID。 この ID はサーバー インスタンス内で一意です。|  
-|**family_guid**|**uniqueidentifier**|作成時の元のデータベースの一意 ID。 この GUID は、データベースが復元または添付されたり、データベース名が変更されたりしても変わりません。<br /><br /> サービス マスター_キーによる自動暗号化解除が失敗した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して、 **family_guid**データベース マスター _ キーを保護するために使用するパスワードを含む可能性のある資格情報を識別するためにします。|  
+|**family_guid**|**uniqueidentifier**|作成時の元のデータベースの一意の ID。 この GUID は、データベースが復元または添付されたり、データベース名が変更されたりしても変わりません。<br /><br /> サービスマスターキーによる自動暗号化解除が失敗した場合、は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **family_guid**を使用して、データベースマスターキーの保護に使用されるパスワードを含む可能性のある資格情報を識別します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)   
- [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [sp_control_dbmasterkey_password &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md)   
+ [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [CREATE SYMMETRIC KEY &#40;Transact-sql&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

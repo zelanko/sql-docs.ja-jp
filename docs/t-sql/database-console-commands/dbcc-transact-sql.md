@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 22b7963d17039e029ac88ae6f9bc4c2bd9005275
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37dfa0e39a2c0f42def2fcb4d0b9256a69a9f835
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040521"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85638323"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] プログラミング言語には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース コンソール コマンドとして機能する DBCC ステートメントが用意されています。
   
@@ -54,7 +54,7 @@ ms.locfileid: "68040521"
 |---|---|
 |メンテナンス|データベース、インデックスまたはファイル グループを対象とするメンテナンス タスク。|  
 |その他|トレース フラグの有効化やメモリからの DLL の削除など、その他のタスク。|  
-|情報提供|さまざまな種類の情報を収集および表示するタスク。|  
+|Informational|さまざまな種類の情報を収集および表示するタスク。|  
 |検証|データベース、テーブル、インデックス、カタログ、ファイル グループ、またはデータベース ページの割り当ての検証操作。|  
   
 DBCC コマンドは入力パラメーターをと受け取り、値を返します。 すべての DBCC コマンド パラメーターには、Unicode と DBCS の両方のリテラルを使用できます。
@@ -96,7 +96,7 @@ DBCC コマンドを次の対象に実行する場合は、内部データベー
   
 レポートされる進行状況のレベルは、DBCC コマンド実行の現在のフェーズによって異なります。 たとえば、フェーズによって、進行状況がデータベース ページ レベルでレポートされる場合と、データベース レベルまたはアロケーション修復レベルでレポートされる場合があります。 次の表は、実行の各フェーズと、コマンドでレポートされる進行状況のレベルです。
   
-|実行フェーズ|[説明]|進行状況レポートの単位|  
+|実行フェーズ|説明|進行状況レポートの単位|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|このフェーズでは、データベースのオブジェクトの論理的および物理的な一貫性がチェックされます。|進行状況はデータベース ページ レベルでレポートされます。<br /><br /> 進行状況レポートの値は、1,000 データベース ページがチェックされるたびに更新されます。|  
 |DBCC TABLE REPAIR|このフェーズでは、REPAIR_FAST、REPAIR_REBUILD、または REPAIR_ALLOW_DATA_LOSS が指定され、修復が必要なオブジェクト エラーがある場合に、データベース修復が実行されます。|進行状況は個々の修復レベルでレポートされます。<br /><br /> カウンターは修復が完了するたびに更新されます。|  
@@ -143,6 +143,6 @@ DBCC コマンドを次の対象に実行する場合は、内部データベー
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **適用対象**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **適用対象**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降。|  
   
   

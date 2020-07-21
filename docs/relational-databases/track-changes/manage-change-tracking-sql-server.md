@@ -1,5 +1,6 @@
 ---
-title: 変更の追跡の管理 (SQL Server) | Microsoft Docs
+title: 変更の追跡の管理
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,15 +16,15 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c613d8590334216215b0de24320d94612a7b6e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58093593dc2824d67e4b04cb6a02e52a1422555a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725357"
 ---
 # <a name="manage-change-tracking-sql-server"></a>変更の追跡の管理 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このトピックでは、変更の追跡を管理する方法について説明します。 また、セキュリティを構成する方法、および変更の追跡を使用する場合のストレージとパフォーマンスへの影響を判断する方法について説明します。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68058031"
 ## <a name="understanding-change-tracking-overhead"></a>変更の追跡のオーバーヘッドについて  
  テーブルの変更の追跡を有効にすると、一部の管理操作が影響を受けます。 次の表に、考慮する必要がある操作と影響を示します。  
   
-|演算|変更の追跡が有効になっている場合|  
+|操作|変更の追跡が有効になっている場合|  
 |---------------|-------------------------------------|  
 |DROP TABLE|削除するテーブルのすべての変更追跡情報が削除されます。|  
 |ALTER TABLE DROP CONSTRAINT|PRIMARY KEY 制約を削除しようとすると失敗します。 PRIMARY KEY 制約を削除する前に、変更の追跡を無効にする必要があります。|  
@@ -107,7 +108,7 @@ sp_spaceused 'sys.syscommittab'
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

@@ -1,6 +1,6 @@
 ---
 title: ROW_NUMBER (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: ROW_NUMBER 関数の Transact-SQL リファレンス。 この関数では、結果セットの出力に番号を設定します。
 ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed067b55bf96a50f612370ce2d3caa56f9be728b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095381"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003694"
 ---
-# <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 結果セットの出力に番号を設定します。 具体的には、結果セットのパーティション内の行について、各パーティションの最初の行を 1 とした連続する数値を返します。 
   
@@ -43,17 +43,17 @@ ms.locfileid: "68095381"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ROW_NUMBER ( )   
     OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 ```  
   
 ## <a name="arguments"></a>引数  
  PARTITION BY *value_expression*  
- [FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットを、ROW_NUMBER 関数が適用されるパーティションに分割します。 *value_expression* は、結果セットをパーティションに分割するときに使用する列を指定します。 `PARTITION BY` を指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 詳しくは、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関する記事をご覧ください。  
+ [FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットを、ROW_NUMBER 関数が適用されるパーティションに分割します。 *value_expression* は、結果セットをパーティションに分割するときに使用する列を指定します。 `PARTITION BY` を指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  *order_by_clause*  
- `ORDER BY` 句は、指定したパーティション内の行に一意の `ROW_NUMBER` を割り当てる順序を決定します。 この引数は必須です。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。  
+ `ORDER BY` 句は、指定したパーティション内の行に一意の `ROW_NUMBER` を割り当てる順序を決定します。 この引数は必須です。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
@@ -69,7 +69,7 @@ ROW_NUMBER ( )
   
  `ROW_NUMBER()` は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-simple-examples"></a>A. 簡単な例 
 
@@ -85,7 +85,7 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|NAME    |recovery_model_desc |  
+|name    |recovery_model_desc |  
 |-----------  |------------ |  
 |master |SIMPLE |
 |model |FULL |
@@ -104,7 +104,7 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |master |SIMPLE |
 |2 |model |FULL |
@@ -123,7 +123,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
 |1 |master |SIMPLE |
@@ -182,7 +182,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>D. ROW_NUMBER() を PARTITION と共に使用する  
+### <a name="d-using-row_number-with-partition"></a>D. ROW_NUMBER() を PARTITION と共に使用する  
  次の例では、`PARTITION BY` 引数を使用して、列 `TerritoryName` を基準にクエリ結果セットをパーティションに分割します。 `ORDER BY` 句に指定した `OVER` 句によって、列 `SalesYTD` を基準に各パーティション内の行の順序付けが行われます。 `ORDER BY` ステートメントの `SELECT` 句によって、`TerritoryName` を基準にクエリ結果セット全体の順序付けが行われます。  
   
 ```sql  
@@ -218,7 +218,7 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. 販売員の行番号を返す  
  次の例は、割り当てられている販売ノルマに基づいて営業担当者の `ROW_NUMBER`を返します。  
@@ -249,7 +249,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>F. ROW_NUMBER() を PARTITION と共に使用する  
+### <a name="f-using-row_number-with-partition"></a>F. ROW_NUMBER() を PARTITION と共に使用する  
  次の例では、`ROW_NUMBER` 関数を `PARTITION BY` 引数と共に使用します。 これにより、`ROW_NUMBER` 関数は各パーティション内の行に番号を付けます。  
   
 ```sql  

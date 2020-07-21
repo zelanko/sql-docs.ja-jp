@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eabf47faee7f6dbd0916680b378a653a1ae9c619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704381"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **LineString**、**CircularString**、または **CompoundCurve** である **geography** インスタンスから指定された曲線を返します。  
   
@@ -43,12 +43,12 @@ ms.locfileid: "68042451"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
  n < 1 のとき、**ArgumentOutOfRangeException** がスローされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の条件が発生するとき、**NULL** が返されます。  
   
 -   **geography** インスタンスが宣言されるが、インスタンス化されない  
@@ -59,7 +59,7 @@ ms.locfileid: "68042451"
   
 -   **geography** インスタンスのディメンションが等しくない (「[STDimension &#40;geography データ型&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)」参照)  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-stcurven-on-a-circularstring"></a>A. CircularString に対して STCurveN() を使用する  
  次の例では、**CircularString** インスタンスで 2 番目の曲線を返します。  

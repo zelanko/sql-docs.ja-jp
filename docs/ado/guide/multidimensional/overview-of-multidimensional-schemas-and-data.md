@@ -10,35 +10,35 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923186"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748089"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多次元スキーマとデータの概要
-## <a name="understanding-multidimensional-schemas"></a>多次元スキーマの理解  
- ADO MD の中心的なメタデータ オブジェクトが、*キューブ*、構造化された一連の関連するディメンション、階層、レベル、およびメンバーから構成されます。  
+## <a name="understanding-multidimensional-schemas"></a>多次元スキーマについて  
+ ADO MD の中央のメタデータオブジェクトは、*キューブ*です。これは、関連するディメンション、階層、レベル、およびメンバーの構造化されたセットで構成されます。  
   
- A*ディメンション*は、独立したビジネス エンティティから派生した、多次元データベースからのデータのカテゴリ。 通常、ディメンションには、データベースのメジャーのクエリ条件として使用する項目が含まれます。  
+ *ディメンション*は、ビジネスエンティティから派生した多次元データベースのデータの独立したカテゴリです。 ディメンションには、通常、データベースのメジャーのクエリ条件として使用するアイテムが含まれています。  
   
- A*階層*はディメンションの集計のパスです。 ディメンションの親子関係のある、粒度の複数のレベルがあります。 階層では、これらのレベルの関係を定義します。  
+ *階層*は、ディメンションの集計のパスです。 ディメンションには、親子リレーションシップを持つ複数レベルの粒度があります。 階層は、これらのレベルがどのように関連しているかを定義します。  
   
- A*レベル*は階層内の集計の 1 ステップです。 情報の複数の層を持つディメンションでは、各レイヤーはレベルです。  
+ *レベル*は、階層内の集計の手順です。 複数層の情報が含まれているディメンションの場合は、各レイヤーがレベルです。  
   
- A*メンバー*がディメンション内のデータ項目。 通常、キャプションを作成したり、メンバーを使用して、データベースのメジャーを記述します。  
+ *メンバー*とは、ディメンション内のデータアイテムのことです。 通常は、キャプションを作成するか、メンバーを使用してデータベースのメジャーを記述します。  
   
- キューブがによって表される[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ADO MD オブジェクト ディメンション、階層、レベル、およびメンバーは、対応する ADO MD オブジェクトによっても表されます。[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、および[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)します。  
+ キューブは ADO MD の[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)オブジェクトによって表されます。 ディメンション、階層、レベル、およびメンバーも、対応する ADO MD オブジェクト ([ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、および[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)) によって表されます。  
   
-### <a name="dimensions"></a>ディメンション  
- キューブのディメンションは、ビジネス エンティティと、データベースでモデル化するデータの種類によって異なります。 通常、各ディメンションは、独立したエントリ ポイントまたはデータを選択するためのメカニズムです。  
+### <a name="dimensions"></a>Dimensions  
+ キューブのディメンションは、ビジネスエンティティと、データベースでモデル化されるデータの種類によって異なります。 通常、各ディメンションは、データを選択するための独立したエントリポイントまたはメカニズムです。  
   
- たとえば、売上データを含むキューブでは、次の 5 つのディメンションがあります。販売員、Geography、時刻、製品、およびメジャー。 メジャー ディメンションには、他のディメンションが分類して売上データの値をグループ化する方法を表すときに、実際の売上データの値が含まれています。  
+ たとえば、売上データを含むキューブには、営業担当者、地理、時間、製品、メジャーの5つのディメンションがあります。 Measure ディメンションには実際の売上データ値が含まれ、他のディメンションは売上データ値を分類およびグループ化する方法を表します。  
   
- Geography ディメンションでは、次のメンバーのセットがあります。  
+ Geography ディメンションには、次のメンバーのセットがあります。  
   
 ```console
 {All, North America, Europe, Canada, USA, UK, Germany, Canada-West,  
@@ -51,25 +51,25 @@ Hamburg, Munich, Stuttgart}
 ```  
   
 ### <a name="hierarchies"></a>階層  
- 階層では、ディメンションのレベルを「ロール アップ」またはグループ化の方法を定義します。 ディメンションには、1 つ以上の階層を持つことができます。 Geography ディメンションの自然階層が存在します。  
+ 階層は、ディメンションのレベルを "ロールアップ" またはグループ化する方法を定義します。 ディメンションには、複数の階層を含めることができます。 Geography ディメンションには自然階層が存在します。  
   
-### <a name="levels"></a>Levels  
- 前の図に示されている例の Geography ディメンションでは、各ボックスは、階層のレベルを表します。  
+### <a name="levels"></a>レベル  
+ 前の図に示されている Geography ディメンションの例では、各ボックスは階層内のレベルを表します。  
   
- 各レベルでは、メンバーのセットを次のようには。  
+ 各レベルには、次のようにメンバーのセットがあります。  
   
--   世界中 `= {All}`  
+-   世界`= {All}`  
   
--   大陸 `= {North America, Europe}`  
+-   世界`= {North America, Europe}`  
   
--   国 `= {Canada, USA, UK, Germany}`  
+-   国々`= {Canada, USA, UK, Germany}`  
   
--   リージョン `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   報酬`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   市区町村 `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   地域`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Members  
- 階層のリーフ レベルのメンバーに子がありますしないと、ルート レベルのメンバーには、親はいません。 その他のすべてのメンバーは、少なくとも 1 つの親と少なくとも 1 つの子があります。 たとえば、部分、Geography ディメンションの階層ツリーを走査では、次の親子リレーションシップが得られます。  
+### <a name="members"></a>メンバー  
+ 階層のリーフレベルのメンバーには子がなく、ルートレベルのメンバーには親がありません。 他のすべてのメンバーには少なくとも1つの親と少なくとも1つの子があります。 たとえば、Geography ディメンションの階層ツリーを部分的に検査すると、次の親子関係が生成されます。  
   
 -   `{All} (parent of) {Europe, North America}`  
   
@@ -79,13 +79,13 @@ Hamburg, Munich, Stuttgart}
   
 -   `{USA-NW} (parent of) {Boise, Seattle}`  
   
- メンバーは、ディメンションごとに 1 つまたは複数の階層に統合できます。 時間ディメンションを検討してください。 ある日レベルの Year レベルにロールアップする 2 つの方法。  
+ メンバーは、ディメンションごとに1つ以上の階層に沿って統合できます。 日レベルから年レベルにロールアップする2つの方法がある時間ディメンションを考えてみましょう。  
   
- この例では、もう 1 つの特性も示しています。年度の四半期の階層のあらゆるレベルでは、年、週階層の週レベルの一部のメンバーは表示されません。 そのため、階層はディメンションのすべてのメンバーを含める必要はありません。  
+ この例では、もう1つの特性も示しています。週単位階層の週レベルの一部のメンバーは、Quarter 階層のどのレベルにも表示されません。 したがって、階層にはディメンションのすべてのメンバーを含める必要はありません。  
   
-## <a name="see-also"></a>関連項目  
- [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+## <a name="see-also"></a>参照  
+ [ADO MD オブジェクトモデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [ADO MD を使用したプログラミング](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [ADO MD と ADO の併用](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
+ [ADO MD での ADO の使用](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [多次元データの操作](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

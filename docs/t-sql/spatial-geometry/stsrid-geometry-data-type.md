@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f1119c0c906e3a3825882e3fe1043e9bdaceb0f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2611f5bfee1a74e961fee69af3dfb58d0530fcd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762165"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **STSrid** はインスタンスの SRID (spatial reference identifier) を表す整数です。  
   
@@ -41,9 +41,9 @@ STSrid
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **int**  
   
- CLR の型:**SqlInt32**  
+ CLR 型: **SqlInt32**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  最初に、SRID 値が 13 の **geometry** インスタンスを作成し、`STSrid` を使用して SRID を確認する例を示します。  
   
 ```  

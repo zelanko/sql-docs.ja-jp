@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c3a05d8b23a6e1f0790e5a9799d0608052f7fcae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 976c495cca321a5731a59ff69e3d7935323cdce5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096694"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294657"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle の補足ログ スクリプト
 
@@ -31,13 +31,13 @@ ms.locfileid: "68096694"
 ## <a name="options"></a>オプション  
  スクリプトの実行方法について使用可能なオプションを次に示します。  
   
- **[スクリプトの実行]**  
+ **スクリプトを実行**  
  CDC インスタンスに定義されているテーブルで補足ログ スクリプトを実行します。 このスクリプトを実行するには、キャプチャするすべてのテーブルに対する ALTER TABLE 権限と、DBA_LOG_GROUPS ビューに対する SELECT 権限が Oracle ユーザーに必要です。 さらに、必要な権限と共に使用する Oracle データベースの資格情報が Oracle ユーザーに必要です。 プログラムに Oracle 資格情報を要求させ、スクリプトを実行させることができます。  
   
  **[名前を付けて保存]**  
  スクリプトをテキスト ファイルに保存します。 このオプションは、Oracle データベース管理者 (DBA) が補足ログ スクリプトを調べて実行する必要がある場合に使用されます。ユーザーはスクリプトをテキスト ファイルに保存し、そのテキスト ファイルを後で Oracle DBA に電子メールまたはその他の方法で送信して実行してもらうことができます (SQL*Plus Oracle ユーティリティまたは Oracle データベースでスクリプトを実行するためのその他のツールを使用)。  
   
- **[コピー]**  
+ **Copy** に設定する必要があります  
  スクリプトをクリップボードにコピーします。 Oracle 管理者 (DBA) が補足ログ スクリプトを調べて実行する必要がある場合は、必要な場所にスクリプトを貼り付けることができます。  
   
 ## <a name="see-also"></a>参照  

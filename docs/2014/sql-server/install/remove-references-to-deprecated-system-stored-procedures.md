@@ -1,5 +1,5 @@
 ---
-title: 非推奨のシステム ストアド プロシージャへの参照の削除 |Microsoft Docs
+title: 非推奨のシステムストアドプロシージャへの参照を削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65e7da666beaf84050dd8d60caf4cac5bfc013c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036606"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>非推奨ｎおシステム ストアド プロシージャの参照の削除
   アップグレード アドバイザーによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できなくなった、ドキュメントに記載されていないシステム ストアド プロシージャおよび拡張ストアド プロシージャを参照するステートメントが検出されました。 これらのオブジェクトを参照するステートメントは失敗します。 今後のリリースで予告なしに機能が変更または削除される可能性があるので、ドキュメントに記載されていないシステム オブジェクトまたは API を使用しないでください。  
@@ -98,11 +97,11 @@ ms.locfileid: "66093111"
 |sp_addalias|別名をユーザー アカウントとデータベース ロールの組み合わせで置き換えてください。 詳細については、SQL Server オンライン ブックの「CREATE USER (Transact-SQL)」および「CREATE ROLE (Transact-SQL)」を参照してください。 アップグレードされたデータベースで別名を削除するには、sp_dropalias を使用します。|  
 |sp_addgroupsp_changegroup<br /><br /> sp_dropgroup<br /><br /> sp_helpgroup|ロールを使用します。 詳細については、SQL Server オンライン ブックの「サーバー レベルのロール」および「データベース レベルのロール」を参照してください。|  
   
-### <a name="undocmented-system-stored-procedures"></a>Undocmented システム ストアド プロシージャ  
+### <a name="undocmented-system-stored-procedures"></a>Undocmented システムストアドプロシージャ  
  ドキュメントに記載されていないシステム ストアド プロシージャの代わりに、同じ機能を持つ CLR ストアド プロシージャを作成できます。 詳細については、SQL Server オンライン ブックの「CLR ストアド プロシージャ」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

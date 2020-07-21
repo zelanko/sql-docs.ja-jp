@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105159"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 関数 (レポート ビルダーおよび SSRS)
@@ -43,7 +43,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>戻り値の型  
  *function* パラメーターに指定された集計関数によって決まります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  `RunningValue` の値は、スコープの新しいインスタンスごとに 0 にリセットされます。 グループが指定された場合は、累計値はグループ式の変更時にリセットされます。 データ領域が指定された場合は、累計値はデータ領域の新しいインスタンスごとにリセットされます。 データセットが指定された場合は、累計値はデータセット全体にわたってリセットされません。  
   
  `RunningValue` は、フィルター式または並べ替え式では使用できません。  
@@ -58,7 +58,7 @@ RunningValue(expression, function, scope)
   
 -   入れ子集計のスコープには、データセット名は使用できません。  
   
--   *式*する必要がありますが含まれていない`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
+-   *式*には、 `First`、 `Last`、 `Previous`、また`RunningValue`は関数を含めることはできません。  
   
 -   *Expression* には、 *recursive*を指定する入れ子集計を含めることができません。  
   
@@ -68,7 +68,7 @@ RunningValue(expression, function, scope)
   
  再帰的集計については、「[複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のコード例では、最も外側のスコープ (データセット) の `Cost` フィールドの累計が返されます。  
   
 ```  
@@ -87,7 +87,7 @@ RunningValue(expression, function, scope)
 =RunningValue(Fields!Traffic Charges.Value, Sum, Nothing)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   

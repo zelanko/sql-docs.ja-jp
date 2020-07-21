@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0c914c31f760021a10c4f26a85bcd1d995f3ef07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106483"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>面グラフ (レポート ビルダーおよび SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106483"
   
 -   一般的な面グラフでは、複数の系列の値が同じ場合、面が重なり、データ ポイントの重要な値がわかりにくくなる可能性があります。 この問題を解決するには、グラフの種類を積み上げ面グラフに変更します。積み上げ面グラフは、面グラフで複数の系列を示すようにデザインされています。  
   
--   積み上げ面グラフ内にギャップがある場合は、データセットに空の値が含まれている可能性があります。空の値は、積み上げ面グラフ上に空白部分として表示されます。 データセット内に空の値がある場合は、グラフ上に空のポイントを挿入することを検討してください。 空のポイントを追加すると、グラフ上の空白領域が、NULL 値または 0 を示す別の色で塗りつぶされます。 詳細については、次を参照してください。[グラフに空のポイントを追加&#40;レポート ビルダーおよび SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)します。  
+-   積み上げ面グラフ内にギャップがある場合は、データセットに空の値が含まれている可能性があります。空の値は、積み上げ面グラフ上に空白部分として表示されます。 データセット内に空の値がある場合は、グラフ上に空のポイントを挿入することを検討してください。 空のポイントを追加すると、グラフ上の空白領域が、NULL 値または 0 を示す別の色で塗りつぶされます。 詳細については、「[空のポイントをグラフに追加する &#40;レポートビルダーと SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
 -   面グラフの動作は、縦棒グラフや折れ線グラフとよく似ています。 複数の系列間の比較を行う場合は、縦棒グラフの使用を検討してください。 一定期間の傾向を分析する場合は、折れ線グラフの使用を検討してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66106483"
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [折れ線グラフ &#40;レポート ビルダーおよび SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
- [グラフの種類の変更 (レポート ビルダーおよび SSRS)](change-a-chart-type-report-builder-and-ssrs.md)   
+ [グラフの種類の変更 &#40;レポート ビルダーおよび SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

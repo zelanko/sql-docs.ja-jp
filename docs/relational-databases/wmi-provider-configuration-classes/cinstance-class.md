@@ -1,5 +1,5 @@
 ---
-title: CInstance クラス |Microsoft Docs
+title: CInstance クラス
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9052245314a5faae2e6b3c331082bd1ee30f84f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b4504b3e014a5d23dd20ae72ebec6768e06058e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044289"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881202"
 ---
 # <a name="cinstance-class"></a>CInstance クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [CInstance クラス](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスを表します。  
   
  このクラスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスに関連付けられたプロトコルおよびネットワーク ライブラリを管理することができます。  

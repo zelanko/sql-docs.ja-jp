@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da842fbc6240b072c7fe907aaa344d8d2ff1c6e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b4edd69c4712c1842163bcb48797edc154cc5cf
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974651"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929024"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>setCharacterStream メソッド (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public java.io.Writer setCharacterStream(long pos)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *po*  
+ *pos*  
   
  CLOB オブジェクトへの書き込みを開始する位置です。  
   
@@ -45,7 +45,7 @@ public java.io.Writer setCharacterStream(long pos)
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setCharacterStream メソッドは、java.sql.Clob インターフェイスの setCharacterStream メソッドで規定されています。  
   
  CLOB の文字データは指定された開始位置からライターによって上書きされ、CLOB の初期データの長さをオーバーランすることができます。 開始位置に CLOB の長さ + 1 の値を指定すると、文字が追加されます。 開始位置に CLOB の長さ + 2 以上 (または 0 以下) の値を指定すると、位置エラーがスローされます。  

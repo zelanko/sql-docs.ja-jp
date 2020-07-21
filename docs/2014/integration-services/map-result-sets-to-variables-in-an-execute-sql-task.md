@@ -1,5 +1,5 @@
 ---
-title: マップの結果セット内の変数を SQL 実行タスク |Microsoft Docs
+title: 結果セットを SQL 実行タスクの変数にマップする |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c93d7f38b44b2eb4535a84a91651c4564b96e5f1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057757"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440229"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>結果セットを SQL 実行タスクの変数にマップする
   このトピックでは、結果セットと SQL 実行タスクの変数との間のマッピングを作成する方法について説明します。 結果セットを変数にマップすることで、結果セットをパッケージ内の他の要素で使用できるようになります。 たとえば、スクリプト タスクのスクリプトでは、変数を読み取ってから、結果セットからの値を使用できます。XML ソースでは、変数に格納された結果セットを利用できます。 親パッケージで結果セットが生成される場合、パッケージ実行タスクから呼び出された子パッケージでその結果セットを使用できるようにするには、結果セットを親パッケージ内の変数にマップしてから、子パッケージ内で親パッケージの変数構成を作成して、親変数の値を格納します。  
@@ -30,16 +29,16 @@ ms.locfileid: "66057757"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
-2.  **ソリューション エクスプローラー**で、パッケージをダブルクリックして開きます。  
+2.  **ソリューションエクスプローラー**で、パッケージをダブルクリックして開きます。  
   
 3.  **[制御フロー]** タブをクリックします。  
   
-4.  SQL 実行タスクがまだパッケージに含まれていない場合、SQL 実行タスクをパッケージの制御フローに追加します。 詳細については、次を参照してください[タスクまたはコンテナーの制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  SQL 実行タスクがまだパッケージに含まれていない場合、SQL 実行タスクをパッケージの制御フローに追加します。 詳細については、「[制御フローでのタスクまたはコンテナーの追加または削除](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   .  
   
 5.  SQL 実行タスクをダブルクリックします。  
   
-6.  **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページで、 **[単一行]** 、 **[完全な結果セット]** 、 **[XML]** のいずれかの種類の結果セットを選択します。  
+6.  **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページで、 **[単一行]**、 **[完全な結果セット]**、 **[XML]** のいずれかの種類の結果セットを選択します。  
   
      結果セットの種類の説明については、「 [SQL 実行タスクにおける結果セット](result-sets-in-the-execute-sql-task.md)」を参照してください。  
   
@@ -61,11 +60,11 @@ ms.locfileid: "66057757"
   
 ## <a name="see-also"></a>参照  
  [SQL 実行タスク](control-flow/execute-sql-task.md)   
- [結果セットで、SQL 実行タスク](result-sets-in-the-execute-sql-task.md)   
+ [SQL 実行タスクの結果セット](result-sets-in-the-execute-sql-task.md)   
  [パッケージ実行タスク](control-flow/execute-package-task.md)   
- [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
- [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)   
- [子パッケージで変数とパラメーターの値を使用します。](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
+ [パッケージの構成](../../2014/integration-services/package-configurations.md)   
+ [パッケージ構成の作成](../../2014/integration-services/create-package-configurations.md)   
+ [子パッケージでの変数とパラメーターの値の使用](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
  [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bbce09bb5c76d29bf56defb3c5403665e5226558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65576759"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Reporting Services WMI プロバイダーへのアクセス
@@ -28,7 +28,7 @@ ms.locfileid: "65576759"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] リリース以降では、WMI プロバイダーはネイティブ モードのレポート サーバーに対してのみサポートされています。 SharePoint モードのレポート サーバーは、SharePoint サーバーの全体管理ページおよび PowerShell スクリプトを使用して管理できます。  
   
-|クラス|Namespace|[説明]|  
+|クラス|名前空間|説明|  
 |-----------|---------------|-----------------|  
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13|インストールされているレポート サーバーに接続するための基本情報をクライアントに提供します。|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13\Admin|レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。<br /><br /> **\*\* 重要 \*\*** このクラスは管理者権限でのみアクセス可能です。|  
@@ -66,7 +66,7 @@ PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\Repor
 ```  
   
 ## <a name="query-the-available-methods-and-properties"></a>使用可能なメソッドとプロパティの照会  
- 特定の Reporting Services WMI クラスで使用できるメソッドとプロパティを確認するには、Get-WmiObject から Get-Member へと結果をパイプします。 例:  
+ 特定の Reporting Services WMI クラスで使用できるメソッドとプロパティを確認するには、Get-WmiObject から Get-Member へと結果をパイプします。 次に例を示します。  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  

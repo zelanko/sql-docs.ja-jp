@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1324fb5e048c8bbaa14e113d998f9b76e47d9b6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f7434afe50772f5696d7799b3c079353ff1e00e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674566"
 ---
-# <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project (SSISDB データベース)
+# <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロジェクトを前のバージョンに復元します。  
   
@@ -40,7 +40,7 @@ catalog.restore_project [ @folder_name = ] folder_name
  プロジェクトを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
  [ @project _name = ] *project_name*  
- プロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
+ プロジェクトの名前です。 *project_name* は **nvarchar(128)** です。  
   
  [ @object_version_lsn = ] *object_version_lsn*  
  プロジェクトのバージョン。 *object_version_lsn* は **bigint** です。  
@@ -71,7 +71,7 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロジェクトを復元すると、すべてのパラメーターが既定値としてが割り当てられ、すべての環境参照は変更されないままになります。 カタログに保持されるプロジェクト バージョンの最大数は、カタログ プロパティ **MAX_VERSIONS_PER_PROJECT** によって決まります。[catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) ビューに表示されます。  
   
 > [!WARNING]  

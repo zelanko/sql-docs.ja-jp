@@ -1,5 +1,5 @@
 ---
-title: sp_grant_proxy_to_subsystem (TRANSACT-SQL) |Microsoft Docs
+title: sp_grant_proxy_to_subsystem (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d772c66af8dfbab805124e4a07d26243865330a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123819"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891853"
 ---
-# <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
+# <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サブシステムに対するアクセス権をプロキシに与えます。  
   
@@ -41,16 +41,16 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @proxy_id = ] id` アクセス権を与えるプロキシのプロキシ識別番号。 *Proxy_id*は**int**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
+`[ @proxy_id = ] id`アクセス権を付与するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。 *Proxy_id*または*proxy_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @proxy_name = ] 'proxy_name'` アクセス権を与えるプロキシの名前。 *Proxy_name*は**sysname**、既定値は NULL です。 いずれか*proxy_id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。  
+`[ @proxy_name = ] 'proxy_name'`アクセス権を付与するプロキシの名前。 *Proxy_name*は**sysname**で、既定値は NULL です。 *Proxy_id*または*proxy_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @subsystem_id = ] id` アクセスを許可するサブシステムの id 番号。 *Subsystem_id*は**int**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表では、各サブシステムの値を示します。  
+`[ @subsystem_id = ] id`アクセスを許可するサブシステムの id 番号。 *Subsystem_id*は**int**,、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 次の表に、各サブシステムの値を示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX スクリプト<br /><br /> **\*\* 重要な \*\*** ActiveX スクリプティング サブシステムはから削除する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の将来のバージョンのエージェント[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
-|**3**|オペレーティング システム (**CmdExec**)|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX スクリプト<br /><br /> 重要 ActiveX スクリプティングサブシステムは、の将来のバージョンでエージェントから削除される予定** \* \* です。 \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
+|**3**|オペレーティングシステム (**CmdExec**)|  
 |**4**|レプリケーション スナップショット エージェント|  
 |**5**|レプリケーション ログ リーダー エージェント|  
 |**6**|レプリケーション ディストリビューション エージェント|  
@@ -62,16 +62,16 @@ sp_grant_proxy_to_subsystem
 |**12**|PowerShell スクリプト|  
 | &nbsp; | &nbsp; |
   
-`[ @subsystem_name = ] 'subsystem_name'` アクセスを許可するサブシステムの名前。 **Subsystem_name**は**sysname**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表では、各サブシステムの値を示します。  
+`[ @subsystem_name = ] 'subsystem_name'`アクセスを許可するサブシステムの名前。 **Subsystem_name**は**sysname**で、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 次の表に、各サブシステムの値を示します。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|**ActiveScripting**|ActiveX スクリプト|  
-|**CmdExec**|オペレーティング システム (**CmdExec**)|  
+|**ActiveScripting**| ActiveX スクリプト|  
+|**CmdExec**|オペレーティングシステム (**CmdExec**)|  
 |**スナップショット**|レプリケーション スナップショット エージェント|  
-|**LogReader**|レプリケーション ログ リーダー エージェント|  
-|**Distribution**|レプリケーション ディストリビューション エージェント|  
-|**Merge**|Replication Merge Agent|  
+|**リーダー**|レプリケーション ログ リーダー エージェント|  
+|**配布**|レプリケーションディストリビューションエージェント|  
+|**マージ**|Replication Merge Agent|  
 |**QueueReader**|Replication Queue Reader Agent|  
 |**ANALYSISQUERY**|Analysis Services クエリ|  
 |**ANALYSISCOMMAND**|Analysis Services コマンド|  
@@ -79,16 +79,16 @@ sp_grant_proxy_to_subsystem
 |**PowerShell**|PowerShell スクリプト|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>コメント  
- サブシステムに対するプロキシ アクセスを許可する場合は、プロキシで指定されるプリンシパルのアクセス許可は変更されません。  
+## <a name="remarks"></a>Remarks  
+ サブシステムへのプロキシアクセスを許可しても、プロキシで指定されたプリンシパルのアクセス許可は変更されません。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_grant_proxy_to_subsystem**します。  
+ **Sp_grant_proxy_to_subsystem**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. 使用して ID サブシステムへのアクセスを許可  
- 次の例は、プロキシを許可`Catalog application proxy`ActiveX スクリプティング サブシステムにアクセスします。  
+### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. ID によってサブシステムへのアクセス権を付与する  
+ 次の例では、プロキシ `Catalog application proxy` に ActiveX スクリプティングサブシステムへのアクセスを許可します。  
   
 ```sql
 USE msdb ;  
@@ -100,8 +100,8 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-### <a name="b-granting-access-to-a-subsystem-by-name"></a>B. 名前では、サブシステムへのアクセスを許可します。  
- 次の例は、プロキシを許可`Catalog application proxy`SSIS パッケージ実行サブシステムへのアクセス。  
+### <a name="b-granting-access-to-a-subsystem-by-name"></a>B: 名前によってサブシステムへのアクセスを許可します。  
+ 次の例では、 `Catalog application proxy` SSIS パッケージ実行サブシステムへのアクセス権をプロキシに付与します。  
   
 ```sql
 USE msdb ;  
@@ -114,10 +114,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [SQL Server エージェントのセキュリティを実装します。](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_revoke_proxy_from_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
- [sp_add_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [sp_update_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
+ [SQL Server エージェントセキュリティを実装する](../../ssms/agent/implement-sql-server-agent-security.md)   
+ [sp_revoke_proxy_from_subsystem &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
+ [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_update_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
   
   

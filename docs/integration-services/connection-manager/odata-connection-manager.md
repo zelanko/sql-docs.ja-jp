@@ -11,14 +11,14 @@ ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2382495a0d30e6daae07a9a6865403249981e484
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104101"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74542181"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
 
@@ -51,7 +51,7 @@ ms.locfileid: "68104101"
   
 匿名アクセスを使用するには、[Windows 認証] オプションを選択します。  
 
-Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、 **[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。
+Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、 **[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。 現時点では、先進認証はサポートされていません。 
   
 ### <a name="specifying-and-securing-credentials"></a>資格情報の指定とセキュリティ保護  
  OData サービスで基本認証が必要とされる場合は、 [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)でユーザー名とパスワードを指定できます。 エディターに入力した値は、パッケージ内に保存されます。 パスワードの値は、パッケージの保護レベルに応じて暗号化されます。  
@@ -63,10 +63,10 @@ Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続�
   
 |||  
 |-|-|  
-|プロパティ|[説明]|  
-|URL|サービス ドキュメントに対応する URL。|  
+|プロパティ|説明|  
+|url|サービス ドキュメントに対応する URL。|  
 |UserName|認証に使用するユーザー名 (必要な場合)。|  
-|パスワード|認証に使用するパスワード (必要な場合)。|  
+|Password|認証に使用するパスワード (必要な場合)。|  
 |ConnectionString|接続マネージャーの他のプロパティが含まれます。|  
   
 ## <a name="odata-connection-manager-editor"></a>[OData 接続マネージャー エディター]
@@ -77,9 +77,9 @@ Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続�
  接続マネージャーの名前です。  
   
  **サービス ドキュメントの場所**  
- OData サービスに対応する URL。 例: https://services.odata.org/V3/Northwind/Northwind.svc/ 」を参照してください。  
+ OData サービスに対応する URL。 (例: https://services.odata.org/V3/Northwind/Northwind.svc/ )。  
   
- **[認証]**  
+ **認証**  
 以下のオプションの 1 つを選択します。
 -   **Windows 認証**。 匿名アクセスの場合は、このオプションを選択します。
 -   **基本認証** 

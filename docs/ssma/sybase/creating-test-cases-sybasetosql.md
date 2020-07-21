@@ -1,5 +1,5 @@
 ---
-title: テスト_ケース (SybaseToSQL) の作成 |Microsoft Docs
+title: テストケースの作成 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,35 +12,35 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: b3f54a38ae995dd2c83fd36647393f81b802fde2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948450"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>テスト ケースの作成 (SybaseToSQL)
-テストを作成するのにには、テスト_ケースのウィザードを使用します。 このウィザードを使用して、テストおよび検証オブジェクトを選択し、テストのパラメーターを指定して、テスト_ケースを作成できます。  
+テストケースウィザードを使用して、テストを作成します。 このウィザードでは、テスト済みオブジェクトと検証済みオブジェクトを選択し、テストパラメーターを指定することによって、テストケースを作成できます。  
   
-## <a name="starting-the-test-case-wizard"></a>テスト_ケースのウィザードを開始します。  
-テスト_ケースのウィザードを起動する **新しいテスト_ケース** から、 **テスター** メニュー。  
+## <a name="starting-the-test-case-wizard"></a>テストケースウィザードの開始  
+テストケースウィザードを開始するには、[テスト**担当**者] メニューの [**新しいテストケース**] をクリックします。  
   
-起動すると、ウィザードは、データベース ssmatester2005db または元の Sybase サーバーで (プロジェクトの種類に応じて ssmatester2008db を検索します。 テスト担当者拡張機能のスキーマの補助オブジェクトの格納に使用することをお勧めします。 テスト_ケースが見つかりません。 ssmatester2005db または ssmatester2008db、テスト担当者の拡張機能のデータベースを作成することを提案する ダイアログ ウィンドウが表示されます。 (そのような状況通常発生 SSMA テスターの最初の実行中にします。)  
+ウィザードを開始すると、ソースの Sybase サーバーでデータベースの ssmatester2005db または ssmatester2008db (プロジェクトの種類によって異なります) が検索されます。 補助オブジェクトを格納するために使用される Tester 拡張機能スキーマです。 テストケースウィザードで ssmatester2005db または ssmatester2008db が見つからない場合は、テスト担当者拡張データベースを作成するように提案するダイアログウィンドウが表示されます。 (通常、この状況は SSMA Tester の初回実行時に発生します)。  
   
-ダイアログ ウィンドウが表示された場合にクリックします**はい**Sybase テスト担当者データベース移行元サーバーを作成します。 新しいダイアログ ウィンドウでは、テスト担当者の新しいデータベースを配置する 1 つまたは複数のデバイスを追加する必要があるされます。 クリックして**追加**デバイスを追加します。 **テスト担当者のデータベースの割り当て領域**ダイアログは、デバイスを選択し、テスト担当者のデータベースで使用されるサイズを指定します。 さらに、データベースのログを別のデバイスを設定することができます。 データベースを作成するには Sybase 特権がありますに注意してください。  
+ダイアログウィンドウが表示されたら、[**はい**] をクリックして、ソースサーバーに Sybase tester データベースを作成します。 新しいダイアログウィンドウが表示され、新しいテスト担当者データベースを検索するデバイスを1つ以上追加する必要があります。 [**追加**] をクリックしてデバイスを追加します。 [ **Tester データベースの割り当て領域**] ダイアログボックスで、デバイスを選択し、テスターデータベースで使用されるサイズを指定します。 また、データベースログ用に個別のデバイスを設定することもできます。 データベースを作成するには、Sybase 特権が必要です。  
   
-## <a name="overview-of-creating-test-cases-using-the-wizard"></a>ウィザードを使用してテスト_ケースの作成の概要  
-テスト_ケースの作成のプロセスは、5 つの手順で構成されます。  
+## <a name="overview-of-creating-test-cases-using-the-wizard"></a>ウィザードを使用したテストケースの作成の概要  
+テストケースを作成するプロセスは、次の5つの手順で構成されます。  
   
-1.  [テスト_ケースの初期化&#40;SybaseToSQL&#41;](../../ssma/sybase/initializing-test-cases-sybasetosql.md)します。  
+1.  [テストケース &#40;SybaseToSQL&#41;を初期化](../../ssma/sybase/initializing-test-cases-sybasetosql.md)しています。  
   
-2.  [選択し、テストするオブジェクトを構成する&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)します。  
+2.  [&#40;SybaseToSQL&#41;をテストするオブジェクトを選択して構成して](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)います。  
   
-3.  [影響を受けるオブジェクトの選択と構成&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)します。  
+3.  [影響を受けるオブジェクトの選択と構成 &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)。  
   
-4.  [呼び出し順序のカスタマイズ&#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)します。  
+4.  [&#40;SybaseToSQL&#41;の呼び出し順序をカスタマイズ](../../ssma/sybase/customizing-calls-order-sybasetosql.md)しています。  
   
-5.  [テスト_ケースの準備の終了&#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)します。  
+5.  [SybaseToSQL&#41;&#40;テストケースの準備を完了](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)しています。  
   
-## <a name="see-also"></a>関連項目  
-[移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>参照  
+[&#40;SybaseToSQL&#41;の移行されたデータベースオブジェクトのテスト](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

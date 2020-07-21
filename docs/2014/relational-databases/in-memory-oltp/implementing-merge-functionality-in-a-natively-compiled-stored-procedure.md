@@ -1,5 +1,5 @@
 ---
-title: マージ機能を実装する |Microsoft Docs
+title: MERGE 機能の実装 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 14a57452c7b2f5234e230665734d5048b5421b51
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050141"
 ---
 # <a name="implementing-merge-functionality"></a>MERGE 機能の実装
   データベースは、特定の行がデータベースに既に存在するかどうかによって、挿入か更新のどちらかの実行が必要になる場合があります。  

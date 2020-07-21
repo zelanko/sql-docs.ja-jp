@@ -11,14 +11,14 @@ helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 54de500bc6cda16126fcf7b680c7443f947301e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2a44d6e7245108c16442e30a67aaea13aae8293
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027444"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297506"
 ---
 # <a name="log-ssis-expression"></a>LOG (SSIS 式)
 
@@ -41,7 +41,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この *数値式* は、対数の計算前に DT_R8 データ型にキャストされます。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
  *numeric_expression* が 0 または負の値に評価される場合、返される結果は NULL になります。  

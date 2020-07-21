@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 73cd348f9cb1f22eca30c28cee97ce8e81a20b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52ac6d145638ff6d003724793487be46afc7191b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014509"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901294"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>ログ配布を Always On 可用性グループに変換する前提条件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、ログ配布プライマリ データベースと 1 つまたは複数のセカンダリ データベースを、AlwaysOn プライマリ データベースとセカンダリ データベースに変換するための前提条件について説明します。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68014509"
 >  可用性グループのプライマリまたはセカンダリ データベース (場合によっては読み取り可能) は、ログ配布プライマリ データベースとして構成できます。  
   
   
-##  <a name="AGPrereqsRealAddress"></a> 可用性グループの前提条件  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a> 可用性グループの前提条件  
  バックアップ ジョブを可用性グループのプライマリ レプリカ上で実行できるようにするには、AlwaysOn 可用性グループの次のバックアップ設定を使用します。  
   
 |プロパティ|設定|  
@@ -43,7 +43,7 @@ ms.locfileid: "68014509"
   
  [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a> ログ配布の前提条件  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a> ログ配布の前提条件  
   
 -   ログ配布プライマリ データベースは、可用性グループの初期/現在のプライマリ レプリカをホストしている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに存在している必要があります。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68014509"
   
  [可用性グループへのログ配布構成の変換](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (SQL Server ブログ)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **ログ配布**  
   
 -   [SQL Server 2016 へのログ配布のアップグレード &#40;Transact-SQL&#41;](../../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
@@ -82,7 +82,7 @@ ms.locfileid: "68014509"
   
 -   [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **ブログ:**  
   
@@ -90,13 +90,13 @@ ms.locfileid: "68014509"
   
      [Add a Log Shipping Primary Database and Secondary Database(s) to an Existing Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
   
-     [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ホワイト ペーパー:**  
   
-     [移行ガイド:以前の配置の結合データベース ミラーリングとログ配布から Always On 可用性グループに移行する](https://msdn.microsoft.com/library/jj635217)  
+     [移行ガイド: 以前の配置の結合データベース ミラーリングとログ配布から AlwaysOn 可用性グループに移行する](https://msdn.microsoft.com/library/jj635217)  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   

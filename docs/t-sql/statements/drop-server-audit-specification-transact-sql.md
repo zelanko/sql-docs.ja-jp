@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bdba5db08472a137362300c48faa242c189e6db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c64f4f9f9ce8af6f7626e6da0c3bbabb10084e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929298"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880350"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能を使用して、サーバー監査仕様オブジェクトを削除します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67929298"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP SERVER AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
@@ -45,13 +45,13 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  既存のサーバー監査仕様オブジェクトの名前。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  DROP SERVER AUDIT SPECIFICATION では、監査仕様のメタデータを削除しますが、DROP コマンドが発行される前に収集された監査データは削除されません。 サーバー監査仕様を削除するには、ALTER SERVER AUDIT SPECIFICATION を使って状態を OFF に設定しておく必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  ALTER ANY SERVER AUDIT 権限を持つユーザーは、サーバー監査仕様を削除できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`HIPAA_Audit_Specification` というサーバー監査仕様を削除します。  
   
 ```  

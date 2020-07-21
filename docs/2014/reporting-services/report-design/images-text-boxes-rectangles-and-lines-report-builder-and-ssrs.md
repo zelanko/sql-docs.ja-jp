@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4bb06da4582b5b93f027ac49c8b761705ad4b22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105686"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>画像、テキスト ボックス、四角形、および罫線 (レポート ビルダーおよび SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105686"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [テキスト ボックス &#40;レポート ビルダーおよび SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
+ [テキスト ボックス (レポート ビルダーおよび SSRS)](text-boxes-report-builder-and-ssrs.md)  
  テキスト ボックスは、レポートの任意の場所に配置できます。また、テキスト ボックスには、ラベル、フィールド、計算されたデータを含めることができます。 レポートを表示するときにテキスト ボックスに表示する値を定義するには、式を使用します。  
   
  テーブルまたはマトリックスの各セルもテキスト ボックスで、スタンドアロン テキスト ボックスと同じ方法で書式設定できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "66105686"
   
  **四角形** は、グラフィック要素、またはその他のレポート アイテムのコンテナーとして使用できます。 グラフィック要素の場合、四角形には罫線と同じプロパティがあります。 コンテナーの場合、四角形は、その中にあるすべてのレポート アイテムの親コンテナーとして機能します。 親コンテナーにレポート アイテムを配置すると、各レポート ページでのアイテムの表示方法を制御できます。  
   
- [画像 &#40;レポート ビルダーおよび SSRS&#41;](images-report-builder-and-ssrs.md)  
+ [画像 (レポート ビルダーおよび SSRS)](images-report-builder-and-ssrs.md)  
  画像には、レポートに含まれる画像のバイナリ データが表示されます。 画像のソースを指定します。 ソースには、Web サーバー上に保存された画像への URL 参照、埋め込み画像データへの参照、またはデータベース内のバイナリの画像データへの参照を指定できます。 レポート ビルダーおよびレポート デザイナーでは、.bmp ファイル、.jpeg ファイル、.gif ファイル、および .png ファイルがサポートされています。  
   
 ## <a name="see-also"></a>参照  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94cdaba9319ed683dafcf3e8e29903b1d1957100
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56adbb10af74ef8e0e71012378b4aa13a2d818d2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019829"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79428183"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68019829"
   
  どのインストール方法を使用するかにかかわらず、個人として、または組織を代表して、ソフトウェア ライセンス条項に同意するかどうかを確認する必要があります。ただし、ソフトウェアの使用に別の契約 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ボリューム ライセンス契約、ISV や OEM とのサード パーティ契約など) が適用される場合を除きます。  
   
- ライセンス条項は、セットアップのユーザー インターフェイスで確認し、同意することができます。 無人インストール (`/Q` または `/QS` パラメーターを使用) には、`/IAcceptSQLServerLicenseTerms` パラメーターを含める必要があります。 「[Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)」で、ライセンス条項を個別にダウンロードして確認することができます。 ボリューム ライセンス条項については、「[Licensing Terms and Documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)」 (ライセンス条項とドキュメント) を参照してください。 SQL Server の以前のバージョンについては、「[マイクロソフト ソフトウェア ライセンス条項](https://go.microsoft.com/fwlink/?LinkID=148209)」を参照してください。  
+ ライセンス条項は、セットアップのユーザー インターフェイスで確認し、同意することができます。 無人インストール (`/Q` または `/QS` パラメーターを使用) には、`/IAcceptSQLServerLicenseTerms` パラメーターを含める必要があります。 「[Microsoft SQL Server ライセンス条項および情報](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)」で、ライセンス条項を個別にダウンロードして確認することができます。 ボリューム ライセンス条項については、「[ライセンス条項とドキュメント](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)」を参照してください。 SQL Server の以前のバージョンについては、「[マイクロソフト ソフトウェア ライセンス条項](https://go.microsoft.com/fwlink/?LinkID=148209)」を参照してください。  
   
 > [!NOTE]  
 >  ソフトウェアの入手方法 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] のボリューム ライセンスを通じて入手した場合など) によっては、ソフトウェアの使用に追加の条件が課されることがあります。  
@@ -40,8 +40,7 @@ ms.locfileid: "68019829"
  [SQL Server インストールの新機能](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  この記事では、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのインストールに関する、新しい機能や強化された機能について説明します。  
   
- [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- この記事では、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスのインストールおよび実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。  
+ [SQL Server 2016 および 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、または [SQL Server on Linux](../../linux/sql-server-linux-setup.md) のインストールのためのハードウェアとソフトウェアの要件。この記事では、SQL Server のインスタンスをインストールして実行するためのハードウェアとソフトウェアの最小要件について説明します。 。  
   
  [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール前と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール後で考慮する必要があるセキュリティのベスト プラクティスについて説明します。  

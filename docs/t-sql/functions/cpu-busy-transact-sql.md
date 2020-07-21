@@ -21,17 +21,17 @@ helpviewer_keywords:
 - statistical information [SQL Server], CPU
 - CPU [SQL Server], activity
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b385caa4146f40a1395c74fa0f26b5be518ff149
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5f763ac74b32fd641791a45d1805b95a99230fbb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026477"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895812"
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この関数は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後の起動以降にアクティブな操作に使用した時間を返します。 `@@CPU_BUSY` は、CPU 時間の増分 (つまり "ティック") 単位の結果を返します。 この値はすべての CPU 時間を累積したものなので、実際の経過時間を超える場合があります。 マイクロ秒に変換するには、[@@TIMETICKS](./timeticks-transact-sql.md) を乗算します。
   
@@ -47,12 +47,12 @@ ms.locfileid: "68026477"
 ```  
   
 ## <a name="return-types"></a>戻り値の型
-**整数 (integer)**
+**integer**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 CPU アクティビティなどの複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計情報を含むレポートを表示するには、[sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md) を実行します。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、現在の日付と時刻の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU アクティビティを返します。 この例では、値の 1 つを `float` データ型に変換します。 こうすることで、マイクロ秒単位の値を計算する際の算術オーバーフローの問題を回避できます。
   
 ```sql

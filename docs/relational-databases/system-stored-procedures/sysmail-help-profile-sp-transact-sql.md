@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_profile_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_profile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profile_sp
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 061016b3a9f1283f82263a4f89fdb81acfc86889
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044503"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890913"
 ---
-# <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1 つ以上のメール プロファイルに関する情報を一覧表示します。  
   
@@ -39,9 +39,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @profile_id = ] profile_id` 情報を返すプロファイル id です。 *profile_id*は**int**、既定値は NULL です。  
+`[ @profile_id = ] profile_id`情報を返すプロファイル id。 *profile_id*は**int**,、既定値は NULL です。  
   
-`[ @profile_name = ] 'profile_name'` 情報を返すプロファイル名。 *profile_name*は**sysname**、既定値は NULL です。  
+`[ @profile_name = ] 'profile_name'`情報を返すプロファイル名。 *profile_name*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -52,28 +52,28 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ||||  
 |-|-|-|  
 |列名|データ型|説明|  
-|**profile_id**|**int**|プロファイルのプロファイル id です。|  
+|**profile_id**|**int**|プロファイルのプロファイル id。|  
 |**name**|**sysname**|プロファイルのプロファイル名。|  
-|**description**|**nvarchar (256)**|プロファイルの説明。|  
+|**description**|**nvarchar(256)**|プロファイルの説明。|  
   
-## <a name="remarks"></a>コメント  
- プロファイル名またはプロファイル id を指定すると、 **sysmail_help_profile_sp**そのプロファイルに関する情報を返します。 それ以外の場合、 **sysmail_help_profile_sp**のすべてのプロファイルに関する情報を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
+## <a name="remarks"></a>注釈  
+ プロファイル名またはプロファイル id が指定されている場合、 **sysmail_help_profile_sp**はそのプロファイルに関する情報を返します。 それ以外の場合、 **sysmail_help_profile_sp**は、インスタンス内のすべてのプロファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- ストアド プロシージャ**sysmail_help_profile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
+ ストアドプロシージャ**sysmail_help_profile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
+ このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
- **A.すべてのプロファイルを一覧表示**  
+## <a name="examples"></a>例  
+ **A. すべてのプロファイルを一覧表示する**  
   
- 次の例では、インスタンス内のすべてのプロファイルを一覧表示を示します。  
+ 次の例では、インスタンス内のすべてのプロファイルを一覧表示します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_profile_sp;  
 ```  
   
- 行の長さを再フォーマット、サンプルの結果セットを次に示します。  
+ 次に示すのは、行の長さに対して再フォーマットされる、結果セットのサンプルです。  
   
 ```  
 profile_id  name                          description  
@@ -82,7 +82,7 @@ profile_id  name                          description
 57          AdventureWorks Operator       Operator mail profile.          
 ```  
   
- **B.特定のプロファイルを一覧表示します。**  
+ **B. 特定のプロファイルを一覧表示する**  
   
  次の例では、プロファイル `AdventureWorks Administrator` に関する情報を一覧表示します。  
   
@@ -91,7 +91,7 @@ EXECUTE msdb.dbo.sysmail_help_profile_sp
     @profile_name = 'AdventureWorks Administrator' ;  
 ```  
   
- 行の長さを再フォーマット、サンプルの結果セットを次に示します。  
+ 次に示すのは、行の長さに対して再フォーマットされる、結果セットのサンプルです。  
   
 ```  
 profile_id  name                          description  
@@ -101,6 +101,6 @@ profile_id  name                          description
   
 ## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

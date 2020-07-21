@@ -1,5 +1,5 @@
 ---
-title: SetStringValue メソッド (SqlServiceAdvancedProperty クラス) |Microsoft Docs
+title: SetStringValue メソッド (Sqlserviceadvanced Property クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b0209f3d8e77cfe893a0e462fc9ccf3761da8dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15570e88d688fb80be7a8889d77fc403ee5c2462
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62911394"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059633"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue メソッド (SqlServiceAdvancedProperty クラス)
   プロパティの文字列値を設定します。  
@@ -39,7 +38,7 @@ StrValue
   
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  詳細プロパティを表す [SqlServiceAdvancedProperty クラス](sqlserviceadvancedproperty-class.md) オブジェクト。  
   
@@ -47,15 +46,15 @@ StrValue
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*strValue*|詳細プロパティの値を指定する文字列値|  
+|*StrValue*|詳細プロパティの値を指定する文字列値|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
- プロパティ値の型である必要があります`string`文字列値にプロパティを設定できるようにします。  
+## <a name="remarks"></a>Remarks  
+ プロパティ値の型は、 `string` プロパティを文字列値に設定できるようにする必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>参照  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

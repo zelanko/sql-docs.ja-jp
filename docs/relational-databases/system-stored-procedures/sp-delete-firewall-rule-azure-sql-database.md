@@ -1,6 +1,6 @@
 ---
-title: sp_delete_firewall_rule (Azure SQL データベース) |Microsoft Docs
-ms.custom: ''
+title: sp_delete_firewall_rule
+titleSuffix: Azure SQL Database
 ms.date: 07/27/2016
 ms.service: sql-database
 ms.reviewer: ''
@@ -17,18 +17,19 @@ helpviewer_keywords:
 ms.assetid: cf93eed1-ba97-4850-9fcc-b9c5a9317908
 author: VanMSFT
 ms.author: vanto
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 01bc61c37fcde1e23c1b1c962dae7a985d053c03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f25cd3da648785ad25309c2c3943dbec7390c3d9
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130659"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627418"
 ---
-# <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL データベース)
+# <a name="sp_delete_firewall_rule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーからサーバー レベルのファイアウォール設定を削除します。 このストアド プロシージャは、サーバー レベル プリンシパル ログインに master データベースにできるだけです。  
+  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーからサーバー レベルのファイアウォール設定を削除します。 このストアド プロシージャは、マスター データベースのサーバーレベル プリンシパル ログインでのみ利用できます。  
 
   
 ## <a name="syntax"></a>構文  
@@ -39,29 +40,29 @@ sp_delete_firewall_rule [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- ストアド プロシージャの引数です。  
+ このストアド プロシージャの引数は次のとおりです。  
   
- [@name =] '*名前*'  
- サーバー レベルのファイアウォール設定の名前は削除されます。 *名前*は**nvarchar (128)** 既定値はありません。  
+ [ @name =] '*name*'  
+ 削除されるサーバーレベルのファイアウォール設定の名前。 *名前*は**nvarchar (128)** で、既定値はありません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、接続の認証に必要なログイン データおよびサーバー レベルのファイアウォール規則は、各データベースで一時的にキャッシュされます。 このキャッシュは定期的に更新されます。 認証キャッシュを強制的に更新し、データベースにログイン テーブルの最新バージョンがあることを確認するには、[DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) を実行します。  
   
 ## <a name="permissions"></a>アクセス許可  
- サーバー レベル プリンシパル ログインだけプロビジョニング プロセスによって作成されるには、サーバー レベルのファイアウォール ルールを削除できます。 ユーザーは、sp_delete_firewall_rule を実行する master データベースに接続する必要があります。  
+ サーバー レベルのファイアウォール ルールを削除できるのは、プロビジョニング処理で作成されたサーバーレベル プリンシパル ログインのみです。 Sp_delete_firewall_rule を実行するには、ユーザーが master データベースに接続されている必要があります。  
   
 ## <a name="example"></a>例  
- 次の例では、サーバー レベルのファイアウォール 'Example setting 1' という名前の設定を削除します。 仮想 master データベースでは、ステートメントを実行します。  
+ 次の例では、"Example setting 1" という名前のサーバーレベルのファイアウォール設定を削除します。 仮想 master データベースでステートメントを実行します。  
   
 ```   
 EXEC sp_delete_firewall_rule N'Example setting 1';   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Azure SQL Database ファイアウォール](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [方法:ファイアウォールの設定 (Azure SQL データベース) を構成します。](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [方法: ファイアウォール設定を構成する (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sys.firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
+ [firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
   
   
 

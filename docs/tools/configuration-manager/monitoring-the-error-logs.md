@@ -1,6 +1,6 @@
 ---
-title: エラーログの監視 |Microsoft Docs
-ms.custom: ''
+title: エラー ログの監視
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -25,12 +25,12 @@ ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 80cee3338046bcfd1259e68e98cdbb9212eed010
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f953f91d7def8c0363fe131540640047ef41f889
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010163"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306454"
 ---
 # <a name="monitoring-the-error-logs"></a>エラー ログの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68010163"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SQL Server エラー ログの表示](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログとその表示方法について説明します。|  
 |[Windows アプリケーション ログの表示](../../tools/configuration-manager/viewing-the-windows-application-log.md)|Windows アプリケーション ログとその表示方法について説明します。|  

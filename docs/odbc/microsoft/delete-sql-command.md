@@ -1,5 +1,5 @@
 ---
-title: DELETE - SQL コマンド |Microsoft Docs
+title: DELETE-SQL コマンド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DELETE [ODBC]
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79a9c9a86e290f568f205a7e7678122f9089a7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9757fd57d999815964266c035963de1129eaf5e8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096331"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303553"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL コマンド
-レコードの削除をマークします。  
+削除対象のレコードをマークします。  
   
- Visual FoxPro ODBC ドライバーでは、このコマンドのネイティブの Visual FoxPro 言語の構文をサポートしています。 ドライバー固有の情報は、「解説」を参照してください。  
+ Visual FoxPro ODBC ドライバーでは、このコマンドのネイティブな Visual FoxPro 言語構文がサポートされています。 ドライバー固有の情報については、「解説」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,23 +33,23 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>引数  
- FROM [ *DatabaseName!* ] *TableName*  
- レコードが削除対象としてマークするテーブルを指定します。  
+ [ *DatabaseName!*] から*TableName*  
+ レコードを削除対象としてマークするテーブルを指定します。  
   
- *DatabaseName!* 包含データベースは、データ ソースと指定されたデータベースがない場合は、テーブルを含むデータベースの名前を指定します。 データベースが、データ ソースと指定されたデータベースではない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後に、テーブル名の前に感嘆符 (!) 区切り記号が含まれます。  
+ *DatabaseName!* 包含データベースがデータソースで指定されたデータベースでない場合に、テーブルを含むデータベースの名前を指定します。 データベースがデータソースで指定されたデータベースでない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後とテーブル名の前に、感嘆符 (!) の区切り記号を含めます。  
   
- 場所*FilterCondition1*[AND&#124;または*FilterCondition2*...]  
- Visual FoxPro が特定のレコードの削除だけをマークすることを指定します。  
+ WHERE *FilterCondition1*[および &#124; または*FilterCondition2*...]  
+ Visual FoxPro が特定のレコードのみを削除するようにマークすることを指定します。  
   
- *FilterCondition*レコードが削除対象としてマークを満たす必要のある条件を指定します。 AND で接続して、必要な数のフィルター条件を含めることができますか、OR 演算子。 NOT 演算子を使用して、論理式の値を反転するかを使用することができます**空**空のフィールドを確認する ()。  
+ *Filtercondition*は、削除対象としてマークするためにレコードが満たす必要のある条件を指定します。 フィルター条件はいくつでも含めることができ、AND または OR 演算子を使用して接続できます。 また、NOT 演算子を使用して論理式の値を反転させることも、 **empty**() を使用して空のフィールドをチェックすることもできます。  
   
-## <a name="remarks"></a>コメント  
- 削除設定は、ON に設定されている場合、レコードが削除対象としてマークは、スコープが含まれているすべてのコマンドによって無視されます。  
+## <a name="remarks"></a>Remarks  
+ [削除の設定] が ON に設定されている場合、削除用にマークされたレコードは、スコープを含むすべてのコマンドで無視されます。  
   
- 削除 - 共有アクセス用の複数レコードのテーブルの削除をマークするときに、レコード ロックを開く SQL 使用します。 これにより、マルチ ユーザーの状況でレコードの競合が減少が、パフォーマンスが低下することができます。 最高のパフォーマンスを排他的にテーブルを開きます。  
+ DELETE-SQL は、共有アクセス用に開かれたテーブルで複数のレコードの削除をマークするときに、レコードロックを使用します。 これにより、マルチユーザー環境でのレコードの競合が減少しますが、パフォーマンスが低下する可能性があります。 パフォーマンスを最大にするには、テーブルを排他的に使用するために開きます。  
   
 ## <a name="driver-remarks"></a>ドライバーの解説  
- アプリケーションでは、ODBC SQL ステートメントの削除をデータ ソースに送信するときに、Visual FoxPro ODBC ドライバーを翻訳しないで、Visual FoxPro の削除のコマンドに、コマンドに変換します。  
+ アプリケーションが ODBC SQL ステートメントの削除をデータソースに送信すると、Visual FoxPro ODBC ドライバーはコマンドを変換せずに Visual FoxPro DELETE コマンドに変換します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SET DELETED コマンド](../../odbc/microsoft/set-deleted-command.md)

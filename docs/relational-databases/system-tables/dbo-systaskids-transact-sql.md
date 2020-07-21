@@ -1,5 +1,5 @@
 ---
-title: dbo.systaskids (TRANSACT-SQL) |Microsoft Docs
+title: dbo.systaskids (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,19 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - systaskids system table
 ms.assetid: 45c56d89-4160-4d84-80bf-a7a05488792d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ed9ac8e81abaf6367d3a9c5518f1f18cb94ef8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2efb1920074ab0a15c14f1910cf8eb03ed3ef1f2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990400"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890344"
 ---
-# <a name="dbosystaskids-transact-sql"></a>dbo.systaskids (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="dbosystaskids-transact-sql"></a>dbo.systaskids (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成されたタスクと、現在のバージョンの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ジョブとのマッピングを格納します。 このテーブルに格納されます、 **msdb**データベース。  
+  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成されたタスクと、現在のバージョンの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ジョブとのマッピングを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
   
 |列名|データ型|説明|  

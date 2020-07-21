@@ -1,7 +1,8 @@
 ---
-title: バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/15/2017
+title: メディア エラー:バックアップと復元 | Microsoft Docs
+description: SQL Server 2019 では、エラーが検出されてもデータベースを復旧できます。 バックアップ チェックサムと RESTORE および RESTORE VERIFYONLY を使用して、エラーの有無をチェックします。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -23,22 +24,22 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ba9cba3a56a76fee51b6b21aec99f8019b59157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670111"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、エラーが検出されてもデータベースを復旧するオプションを選択できるようになりました。 エラー検出の重要なメカニズムとして、バックアップ チェックサムを任意で作成できるようになりました。バックアップ チェックサムは、バックアップ操作で生成して、復元操作で検証できます。 操作中にエラーを検出するかどうかと、エラー発生時に操作を停止するか続行するかを制御できます。 バックアップにバックアップ チェックサムが含まれている場合、RESTORE ステートメントおよび RESTORE VERIFYONLY ステートメントでエラーを検査できます。  
   
 > [!NOTE]  
->  ミラー化バックアップでは、メディア セットのコピー (ミラー) が最大で 4 つ作成され、メディアの破損によるエラーから復旧するために使用する代替コピーが提供されます。 詳細については、「 [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」を参照してください。  
+>  ミラー化バックアップでは、メディア セットのコピー (ミラー) が最大で 4 つ作成され、メディアの破損によるエラーから復旧するために使用する代替コピーが提供されます。 詳細については、「 [ミラー化バックアップ メディア セット &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)」を参照してください。  
   
   
-##  <a name="BckChecksums"></a> バックアップ チェックサム  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> バックアップ チェックサム  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているチェックサムは、ページ チェックサム、ログ ブロック チェックサム、およびバックアップ チェックサムの 3 種類です。 バックアップ チェックサムの生成時には、データベースから読み取ったデータについて、データベース内に存在するチェックサムや破損ページ情報との整合性が BACKUP によって検証されます。  
   
  BACKUP ステートメントではオプションで、バックアップ ストリームのバックアップ チェックサムを計算できます。特定のページにページ チェックサムまたは破損ページ情報がある場合、ページのバックアップ時に、そのページのチェックサムおよび破損ページの状態とページ ID も検証されます。 バックアップ操作でバックアップ チェックサムを作成する際に、チェックサムがページに追加されることはありません。 ページはデータベースに存在するままの状態でバックアップされます。バックアップでページは変更されません。  
@@ -60,8 +61,6 @@ ms.locfileid: "68033645"
   
 3.  バックアップ セットは ( **msdb..backupset** の **has_backup_checksums**列に) バックアップ チェックサムがあるものとしてフラグが付けられます。 詳細については、「 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)」を参照してください。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  復元操作中、バックアップ メディアにバックアップ チェックサムがある場合、既定では RESTORE ステートメントと RESTORE VERIFYONLY ステートメントの両方でバックアップ チェックサムとページ チェックサムが検証されます。 バックアップ チェックサムがない場合、いずれの復元操作も検証が行われずに続行されます。これは、バックアップ チェックサムがないと、ページ チェックサムの検証を確実に実行できないためです。  
   
 ## <a name="response-to-page-checksum-errors-during-a-backup-or-restore-operation"></a>バックアップまたは復元操作中のページ チェックサム エラーへの応答  
@@ -69,7 +68,7 @@ ms.locfileid: "68033645"
   
  エラー発生後に BACKUP 操作を続行する場合は、次の手順が実行されます。  
   
-1.  バックアップ メディア上のバックアップ セットに対し、エラーが存在するというフラグを設定し、**msdb** データベースの **suspect_pages** テーブルでそのページを追跡します。 詳細については、「[suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)」を参照してください。  
+1.  バックアップ メディア上のバックアップ セットに対し、エラーが存在するというフラグを設定し、 **msdb** データベースの **suspect_pages** テーブルでそのページを追跡します。 詳細については、「[suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)」を参照してください。  
   
 2.  SQL Server エラー ログにエラーを記録します。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "68033645"
   
 4.  正常にバックアップが生成されたがページ エラーが含まれていることを示すメッセージを表示します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **バックアップ チェックサムを有効または無効にするには**  
   
 -   [バックアップ中または復元中にバックアップ チェックサムを有効または無効にする &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

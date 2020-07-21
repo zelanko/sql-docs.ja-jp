@@ -13,21 +13,20 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b20ac056894066114883153030943bec1c05963
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62889837"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423299"
 ---
 # <a name="performance-counters"></a>パフォーマンス カウンター
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、データ フロー エンジンのパフォーマンスを監視するために使用できるパフォーマンス カウンターのセットがインストールされます。 たとえば、"Buffers spooled" カウンターを調べると、パッケージの実行中にデータ バッファーがディスクに一時的に書き込まれているかどうかを判断できます。 このスワップは、パフォーマンスを低下させると共に、コンピューターのメモリが不足していることを示しています。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を実行するコンピューターに [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] をインストールした後、コンピューターを [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] にアップグレードすると、アップグレード プロセスにより [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のパフォーマンス カウンターがコンピューターから削除されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のパフォーマンス カウンターをコンピューターに復元するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップを修復モードで実行してください。  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を実行するコンピューターに [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]をインストールした後、コンピューターを [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]にアップグレードすると、アップグレード プロセスにより [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のパフォーマンス カウンターがコンピューターから削除されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のパフォーマンス カウンターをコンピューターに復元するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップを修復モードで実行してください。  
   
  次の表では、パフォーマンス カウンターについて説明します。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62889837"
   
  Microsoft 管理コンソール (MMC) のパフォーマンス スナップインを使用して、パフォーマンス カウンターの値を取得するログを作成します。  
   
- パフォーマンスを向上させる方法については、「[データ フロー パフォーマンス機能](../data-flow/data-flow-performance-features.md)」を参照してください。  
+ パフォーマンスを向上させる方法については、「 [データ フロー パフォーマンス機能](../data-flow/data-flow-performance-features.md)」を参照してください。  
   
 ## <a name="obtain-performance-counter-statistics"></a>パフォーマンス カウンター統計の取得  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトについて、[dm_execution_performance_counters (SSISDB データベース)](/sql/integration-services/functions-dm-execution-performance-counters) 関数を使用してパフォーマンス カウンター統計を取得できます。  
@@ -71,11 +70,11 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   codeplex.com のツール ([Business Intelligence Development Studio のための SSIS パフォーマンス ビジュアライゼーション (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626))  
+-   codeplex.com のツール ( [Business Intelligence Development Studio のための SSIS パフォーマンス ビジュアライゼーション (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626))  
   
--   msdn.microsoft.com のビデオ ([社内の SSIS パッケージのパフォーマンスの測定と理解 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=150497))  
+-   msdn.microsoft.com のビデオ ( [社内の SSIS パッケージのパフォーマンスの測定と理解 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=150497))  
   
--   support.microsoft.com のサポート技術情報 ([Windows Server 2008 へのアップグレード後にパフォーマンス モニターで SSIS パフォーマンス カウンターが使用できなくなる](https://go.microsoft.com/fwlink/?LinkId=235319))  
+-   support.microsoft.com のサポート技術情報 ( [Windows Server 2008 へのアップグレード後にパフォーマンス モニターで SSIS パフォーマンス カウンターが使用できなくなる](https://go.microsoft.com/fwlink/?LinkId=235319))  
   
 ## <a name="see-also"></a>関連項目  
  [プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md)  

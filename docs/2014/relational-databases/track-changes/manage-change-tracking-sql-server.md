@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36409f2ce256325da1c9849e5bec7e7ce114cf25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62670843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014712"
 ---
 # <a name="manage-change-tracking-sql-server"></a>変更の追跡の管理 (SQL Server)
   このトピックでは、変更の追跡を管理する方法について説明します。 また、セキュリティを構成する方法、および変更の追跡を使用する場合のストレージとパフォーマンスへの影響を判断する方法について説明します。  
@@ -37,7 +36,7 @@ ms.locfileid: "62670843"
   
  また、 [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) カタログ ビューには、ユーザー テーブルの変更の追跡を有効にしたときに作成された内部テーブルが表示されます。  
   
-### <a name="security"></a>セキュリティ  
+### <a name="security"></a>Security  
  [変更追跡関数](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)を使用して変更追跡情報にアクセスするには、プリンシパルに次の権限が必要です。  
   
 -   少なくともクエリ対象テーブルへの変更の追跡対象テーブルの主キー列に対する SELECT 権限。  
@@ -105,7 +104,7 @@ sp_spaceused 'sys.syscommittab'
  [データ変更の追跡 &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../databases/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables)   
  [データ変更の追跡 &#40;SQL Server&#41;](track-data-changes-sql-server.md)   

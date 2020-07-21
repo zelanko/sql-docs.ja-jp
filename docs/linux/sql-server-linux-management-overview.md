@@ -8,22 +8,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: e38e51eb1db6c335175b2fc55636532df88ac27d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 51feab9c5cc38f1e9b67b3de68ce29c597cdb83a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68000057"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883910"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>SQL Server on Linux を管理するための適切なツールの選択
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server on Linux を管理するには、いくつかの方法があります。 以下のセクションでは、各種管理ツールについて概説すると共に、他の資料へのリンクを示します。
 
 ## <a name="mssql-conf"></a>mssql-conf 
 
-**mssql-conf** ツールでは、SQL Server on Linux の構成を行うことができます。 詳しくは、「[mssql-conf ツールを利用して Linux 上で SQL Server を構成する](sql-server-linux-configure-mssql-conf.md)」をご覧ください。
+**mssql-conf** ツールでは、SQL Server on Linux の構成を行うことができます。 詳しくは、「[mssql-conf ツールを利用して SQL Server on Linux を構成する](sql-server-linux-configure-mssql-conf.md)」をご覧ください。
 
 ## <a name="transact-sql"></a>Transact-SQL
 
@@ -45,6 +45,6 @@ Microsoft は、SQL Server 用の新しいクロスプラットフォーム ス�
 
 PowerShell には、SQL Server on Linux を管理するための高機能なコマンドライン環境が用意されています。 詳細については、[PowerShell を使用した SQL Server on Linux の管理](sql-server-linux-manage-powershell.md)に関するページを参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server on Linux について詳しくは、「[SQL Server on Linux](sql-server-linux-overview.md)」をご覧ください。

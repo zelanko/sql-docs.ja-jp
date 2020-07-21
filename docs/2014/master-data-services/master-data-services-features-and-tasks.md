@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ca1c22abff9c86d53d1c502d776709df80b49fc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971232"
 ---
 # <a name="master-data-services-features-and-tasks"></a>マスター データ サービスの機能とタスク
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を使用して組織のマスター データを管理する方法について説明します。 データのコンテナーとなるモデル プロジェクトを作成し操作する方法を説明します。 マスター データ自体を編成して管理する方法を説明します。 マスター データおよび、テスト環境と運用環境間の共有モデルをインポートおよびエクスポートする方法を説明します。 最後に、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスにアクセスするカスタム アプリケーションを開発する方法を説明します。  
@@ -58,17 +57,17 @@ ms.locfileid: "65482890"
   
 -   [セキュリティ (マスター データ サービス)](../../2014/master-data-services/security-master-data-services.md)  
   
-## <a name="move-data"></a>データの移動  
+## <a name="move-data"></a>データを移動する  
   
--   [データのインポート&#40;マスター データ サービス&#41;](overview-importing-data-from-tables-master-data-services.md)  
+-   [データのインポート &#40;マスターデータサービス&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
--   [データのエクスポート&#40;マスター データ サービス&#41;](overview-exporting-data-master-data-services.md)  
+-   [データのエクスポート &#40;マスターデータサービス&#41;](overview-exporting-data-master-data-services.md)  
   
 -   [モデルの配置 (マスター データ サービス)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
 ## <a name="develop-a-custom-application"></a>カスタム アプリケーションの開発  
   
--   [Developer's Guide&#40;マスター データ サービス&#41;](develop/master-data-services-developer-documentation.md)  
+-   [開発者ガイド &#40;マスターデータサービス&#41;](develop/master-data-services-developer-documentation.md)  
   
 -   <xref:Microsoft.MasterDataServices>  
   

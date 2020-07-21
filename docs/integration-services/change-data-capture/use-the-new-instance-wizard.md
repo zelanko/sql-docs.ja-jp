@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2cb7bc4b2d828861c4b772a03306d07486da327e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d964639bbcf7679c71191d4b3a8e2a455a4635e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049593"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298561"
 ---
 # <a name="use-the-new-instance-wizard"></a>新しいインスタンス ウィザードの使用
 

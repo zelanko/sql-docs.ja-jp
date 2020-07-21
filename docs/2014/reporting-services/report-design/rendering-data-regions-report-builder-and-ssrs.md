@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 918aa5eee3aada465e904cf7f1627f93d1b9bb6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105366"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>データ領域の表示 (レポート ビルダーおよび SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105366"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>Tablix データ領域  
- Tablix データ領域では、テーブル、マトリックス、および一覧を作成でき、列と行で構成されたグリッドとして表示されます。 行と列の交差部分がセルになります。 表示されると、このセルには、データや他のレポート アイテム (画像、四角形、テキスト ボックス、サブレポートなど) が含まれます。 Tablix データ領域は、縦方向にも横方向にも拡張可能です。 さらに、コーナーのセル、データ領域のヘッダー セル、およびデータ領域の本文セルも、その内容に基づいて拡張できます。 データ領域が複数ページにわたる場合、データ領域で繰り返し使用するように設定されているレポート アイテムは、データ領域が表示される各ページに表示されます。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)します。  
+ Tablix データ領域では、テーブル、マトリックス、および一覧を作成でき、列と行で構成されたグリッドとして表示されます。 行と列の交差部分がセルになります。 表示されると、このセルには、データや他のレポート アイテム (画像、四角形、テキスト ボックス、サブレポートなど) が含まれます。 Tablix データ領域は、縦方向にも横方向にも拡張可能です。 さらに、コーナーのセル、データ領域のヘッダー セル、およびデータ領域の本文セルも、その内容に基づいて拡張できます。 データ領域が複数ページにわたる場合、データ領域で繰り返し使用するように設定されているレポート アイテムは、データ領域が表示される各ページに表示されます。 詳細については、「 [&#40;レポートビルダーと SSRS&#41;の一覧](tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="right-to-left"></a>右から左  
  右から左に表示するように設定された Tablix データ領域は、左から右に表示された場合のデータ領域のミラー イメージのような構造で表示されます。 データ領域のコーナーは、右上隅に表示されます。 動的な列がレポートに存在する場合、その列は左に展開されます。 右から左方向の設定は、データ領域内のデータの順序には影響しません。単純に、列の順序が異なります。  
@@ -51,8 +51,8 @@ ms.locfileid: "66105366"
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
  [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
- [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [&#40;レポートビルダーと SSRS の一覧を表示&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)  
+ [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)  
   
   

@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c4886ba812a18ea6571e10c8b1fe2060fa8fc5ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 8aa971142e1154f50ebc0cf17107682b47529c68
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015614"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "70874623"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>スパース列に対する列およびカタログ メタデータの表示 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68015614"
 
   このサンプルでは、スパース列、非スパース列、columnset 列の 3 つの列を持ったテーブルを作成します。 その後、非スパース列および columnset 列に対する列およびカタログ メタデータを示す OLE DB フラグを表示します。  
   
- このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、「 [OLE DB Driver for SQL Server」の「スパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)」を参照してください。  
+ このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、「[OLE DB Driver for SQL Server のスパース列のサポート](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  INCLUDE 環境変数に、msoledbsql.h が保存されているディレクトリが含まれていることを確認します。  
@@ -116,7 +116,7 @@ void DumpErrorInfo ( IUnknown* pObjectWithError, REFIID IID_InterfaceWithError )
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    // Only ask for error information if the interface supports it.  

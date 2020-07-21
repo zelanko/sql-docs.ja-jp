@@ -11,14 +11,14 @@ helpviewer_keywords:
 - '| (bitwise inclusive OR)'
 - bitwise inclusive OR (|)
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ce9f7bf141a4db582c368de26a8465c884b169dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17a92a32fba02d8c4da167d412d02eed0d5f6b77
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034046"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71290414"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (ビット演算包含的 OR) (SSIS 式)
 
@@ -44,7 +44,7 @@ integer_expression1 | integer_expression2
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  条件のいずれかが NULL の場合、式の結果は NULL になります。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -98,7 +98,7 @@ ReorderPoint | SafetyStockLevel
   
 ## <a name="see-also"></a>参照  
  [&#124;&#124; (論理 OR) (SSIS 式)](../../integration-services/expressions/logical-or-ssis-expression.md)   
- [^ (ビット演算子排他的 OR) (SSIS 式)](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
+ [^ &#40;ビット演算子排他的 OR&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

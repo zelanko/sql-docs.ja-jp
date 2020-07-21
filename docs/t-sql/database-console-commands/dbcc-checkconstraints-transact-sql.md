@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8653b197e0fa16b4e939ab94865395d68bf1f852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786560"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 現在のデータベースで、指定した制約や指定したテーブルのすべての制約に関する整合性をチェックします。
   
@@ -39,7 +39,7 @@ ms.locfileid: "68102119"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC CHECKCONSTRAINTS  
 [   
     (   
@@ -69,7 +69,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 DBCC CHECKCONSTRAINTS では、テーブルのすべての FOREIGN KEY 制約および CHECK 制約に対してクエリが作成され実行されます。
   
 たとえば、外部キー クエリは次のような形式になります。
@@ -88,11 +88,11 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 クエリ データは temp テーブルに格納されます。 指定したすべてのテーブルまたは制約がチェックされた後、結果セットが返されます。
 DBCC CHECKCONSTRAINTS では、FOREIGN KEY 制約と CHECK 制約の整合性はチェックされますが、テーブルのディスク上のデータ構造に関する整合性はチェックされません。 このようなデータ構造のチェックは、[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) および [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) で実行できます。
   
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降
   
-*table_name* または *table_id* が指定されており、システムのバージョン管理で有効になっている場合、DBCC CHECKCONSTRAINTS では、指定したテーブルで、テンポラル データの整合性チェックも行います。 このコマンドでは、*NO_INFOMSGS* が指定されていない場合、それぞれの整合性違反を別の行に出力します。 出力の形式は ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...)AND \<一時的なテーブルのレコードに関する問題> です。
+*table_name* または *table_id* が指定されており、システムのバージョン管理で有効になっている場合、DBCC CHECKCONSTRAINTS では、指定したテーブルで、テンポラル データの整合性チェックも行います。 このコマンドでは、*NO_INFOMSGS* が指定されていない場合、それぞれの整合性違反を別の行に出力します。 出力の形式は、([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record> になります。
   
-|[確認]|チェックが失敗した場合の出力の追加情報|  
+|○|チェックが失敗した場合の出力の追加情報|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
@@ -105,16 +105,16 @@ DBCC CHECKCONSTRAINTS では、FOREIGN KEY 制約と CHECK 制約の整合性は
 ## <a name="result-sets"></a>結果セット  
 DBCC CHECKCONSTRAINTS では、次の列を含む行セットが返されます。
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |テーブル名|**varchar**|テーブルの名前。|  
 |Constraint Name|**varchar**|違反している制約の名前。|  
-|場所|**varchar**|制約に違反している 1 つ以上の行を識別する列値の割り当て。<br /><br /> この列の値は、制約に違反する行をクエリする SELECT ステートメントの WHERE 句で使用できます。|  
+|Where|**varchar**|制約に違反している 1 つ以上の行を識別する列値の割り当て。<br /><br /> この列の値は、制約に違反する行をクエリする SELECT ステートメントの WHERE 句で使用できます。|  
   
 ## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-checking-a-table"></a>A. テーブルをチェックする  
 次の例では、`Table1` データベースにある `AdventureWorks` テーブルの制約の整合性をチェックします。

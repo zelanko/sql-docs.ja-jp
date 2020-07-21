@@ -6,15 +6,15 @@ ms.prod: sql
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ms.reviewer: ''
-ms.openlocfilehash: 581c664b32fae7a79d4eaa49a872ca6b33f1351b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac10ace82a38110d2038f95c3514aa8271d5b88c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902633"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283745"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>レッスン 1-6:参照変換を追加し、構成する
 
@@ -112,8 +112,8 @@ ms.locfileid: "67902633"
   
 12. **[プロパティ]** ウィンドウで、 **[LocaleID]** プロパティが **[英語 (米国)]** に、 **[DefaultCodePage]** プロパティが **[1252]** に設定されていることを確認します。  
   
-## <a name="go-to-next-task"></a>次の実習に進む
+## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 7:OLE DB 変換先を追加し、構成する](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [参照変換](../integration-services/data-flow/transformations/lookup-transformation.md)  

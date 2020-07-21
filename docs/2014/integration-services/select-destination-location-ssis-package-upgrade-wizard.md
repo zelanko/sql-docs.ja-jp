@@ -1,5 +1,5 @@
 ---
-title: アップグレード先の場所 (SSIS パッケージ アップグレード ウィザード) を選択します |。Microsoft Docs
+title: '[バックアップ先の場所の選択] (SSIS パッケージアップグレードウィザード)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abe5be4a11e0f7db4f6e8078395aef0fbdf8d10a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056007"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422039"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>[アップグレード先の場所を選択] (SSIS パッケージ アップグレード ウィザード)
   **[アップグレード先の場所を選択]** ページを使用すると、アップグレードされたパッケージの保存先を指定できます。  
@@ -41,16 +40,16 @@ ms.locfileid: "66056007"
  **[パッケージ ソース]**  
  アップグレード パッケージが格納される場所を指定します。 このオプションには、次の表に示す値があります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**[ファイル システム]**|アップグレードされたパッケージをローカル コンピューター上のフォルダーに保存することを示します。|  
-|**[SSIS パッケージ ストア]**|アップグレードされたパッケージを Integration Services パッケージ ストア内に保存することを示します。 パッケージ ストアは、Integration Services サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
+|**ファイル システム**|アップグレードされたパッケージをローカル コンピューター上のフォルダーに保存することを示します。|  
+|**SSIS パッケージストア**|アップグレードされたパッケージを Integration Services パッケージ ストア内に保存することを示します。 パッケージ ストアは、Integration Services サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
 |**Microsoft SQL Server**|アップグレードされたパッケージを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の既存のインスタンスに保存することを示します。<br /><br /> この値を選択すると、対応する **パッケージ ソース** 動的オプションが表示されます。|  
   
  **フォルダー**  
  アップグレードされたパッケージを保存するフォルダーの名前を入力するか、 **[参照]** をクリックしてフォルダーを指定します。  
   
- **[参照]**  
+ **参照**  
  アップグレードされたパッケージを保存するフォルダーを、参照して指定します。  
   
 ## <a name="package-source-dynamic-options"></a>パッケージ ソース動的オプション  
@@ -63,7 +62,7 @@ ms.locfileid: "66056007"
  **[サーバー]**  
  アップグレード パッケージを保存するサーバーの名前を入力するか、一覧からこのサーバーを選択します。  
   
- **[Windows 認証を使用する]**  
+ **Windows 認証を使用する**  
  Windows 認証を使用してサーバーに接続する場合に選択します。  
   
  **[SQL Server 認証を使用する]**  
@@ -72,10 +71,10 @@ ms.locfileid: "66056007"
  **ユーザー名**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するユーザー名を入力します。  
   
- **Password**  
+ **パスワード**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するパスワードを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages.md)  
   
   

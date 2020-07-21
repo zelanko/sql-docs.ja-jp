@@ -1,5 +1,5 @@
 ---
-title: setNull (int, int) メソッドMicrosoft Docs
+title: setNull メソッド (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7e7f08e9-278a-495a-8ce3-ca173d055021
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3299dc2063cd63498af7f3e03aa9dafec4d9b972
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f250113f83ea51c2705d81780c2207f63149a292
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973548"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920456"
 ---
 # <a name="setnull-method-int-int"></a>setNull (int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public final void setNull(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターの番号を示す **int** です。  
   
@@ -47,7 +47,7 @@ public final void setNull(int index,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setNull メソッドは、java.sql.PreparedStatement インターフェイスの setNull メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  

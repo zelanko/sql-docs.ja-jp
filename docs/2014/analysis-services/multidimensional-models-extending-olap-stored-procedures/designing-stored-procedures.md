@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャの設計 |Microsoft Docs
+title: ストアドプロシージャの設計 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: af4e7bd5-041b-4a40-9942-0ef6a3af46c6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2948b255f6b6cab85ae5dad71cc9b2f59e547b63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42b33873d6bdf28f7f702bcf186d681f57d6024d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62727662"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545365"
 ---
 # <a name="designing-stored-procedures"></a>ストアド プロシージャのデザイン
-  ストアド プロシージャでは、管理オブジェクト モデルである分析管理オブジェクト (AMO) とクライアント指向のオブジェクト モデルである [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® Data Objects (Multidimensional) (ADO MD) の両方を使用できます。  
+  ストアド プロシージャでは、管理オブジェクト モデルである分析管理オブジェクト (AMO) とクライアント指向のオブジェクト モデルである [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX&#xAE; Data Objects (Multidimensional) (ADO MD) の両方を使用できます。  
   
  ストアド プロシージャを呼び出すには、多次元式 (MDX) レベルで表示できるスコープ内 (サーバーまたはデータベース) に存在する必要があります。 ただし、ストアド プロシージャを呼び出した後、そのスコープがその親のアクションに制限されることはありません。 ストアド プロシージャは、サーバー上のどこでも変更を行うことができ、そのストアド プロシージャを呼び出すユーザー プロセスのセキュリティ制限と、そのストアド プロシージャが実行されるトランザクションの制限のみを受けます。  
   

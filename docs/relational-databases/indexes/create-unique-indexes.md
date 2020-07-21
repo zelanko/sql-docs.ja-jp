@@ -18,15 +18,15 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f9b897de6d5d833a485e976592f5776972a212f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760815"
 ---
 # <a name="create-unique-indexes"></a>一意のインデックスの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルに一意のインデックスを作成する方法について説明します。 一意インデックスを使用すると、インデックス キーの値が重複することがないので、テーブルのすべての行を一意にすることができます。 UNIQUE 制約を作成することと、制約に依存しない一意インデックスを作成することの間に大きな違いはありません。 データ検証動作も同じ方式で行われます。また、クエリ オプティマイザーでは、制約によって作成された一意インデックスと手動で作成された一意インデックスは区別されません。 ただし、列に UNIQUE 制約を作成すると、インデックスの目的が明確になります。 UNIQUE 制約の詳細については、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」を参照してください。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "67898602"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Benefits"></a> 一意インデックスの利点  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> 一意インデックスの利点  
   
 -   複数列の一意なインデックスにより、インデックス キーのそれぞれの値の組み合わせが一意であることが保証されます。 たとえば、 **LastName**列、 **FirstName**列、および **MiddleName** 列の組み合わせに一意インデックスを作成した場合、テーブル内の 2 つの行がこれらの列に対して同じ値の組み合わせを持つことはできません。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67898602"
   
 -   一意インデックスにより、より効率的な実行プランを生成できるクエリ オプティマイザーの役に立つ追加情報が提供されます。  
   
-###  <a name="Implementations"></a> 一般的な実装  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> 一般的な実装  
  一意インデックスは、次のように実装されます。  
   
 -   **PRIMARY KEY 制約または UNIQUE 制約**  
@@ -86,18 +86,18 @@ ms.locfileid: "67898602"
   
      インデックス付きビューを作成するには、1 つ以上のビュー列で一意のクラスター化インデックスを定義します。 このビューを実行すると、テーブル データがクラスター化インデックスに格納されるときと同じ方法で、結果セットがインデックスのリーフ レベルに格納されます。 詳細については、「 [インデックス付きビューの作成](../../relational-databases/views/create-indexed-views.md)」を参照してください。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   重複するキー値がデータに存在する場合は、一意インデックス、UNIQUE 制約、または PRIMARY KEY 制約を作成できません。  
   
 -   一意非クラスター化インデックスには、付加非キー列を含めることができます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>テーブル デザイナーを使用して一意のインデックスを作成するには  
   
@@ -111,7 +111,7 @@ ms.locfileid: "67898602"
   
 5.  **[インデックス/キー]** ダイアログ ボックスで、 **[追加]** をクリックします。  
   
-6.  **[選択された主/一意キーまたはインデックス]** ボックスで、新しいインデックスを選択します。  
+6.  **[Selected Primary/Unique Key or Index (選択された主/一意キーまたはインデックス)]** ボックスで、新しいインデックスを選択します。  
   
 7.  メイン グリッドの **[(全般)]** で、 **[種類]** を選択し、一覧から **[インデックス]** を選択します。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "67898602"
   
 11. グリッドの **[(全般)]** で、 **[一意である]** を選択し、一覧から **[はい]** を選択します。  
   
-12. 省略可能:メイン グリッドの **[テーブル デザイナー]** で、 **[重複するキーを無視する]** を選択し、一覧から **[はい]** を選択します。 この操作は、一意のインデックスに重複キーが作成される可能性のあるデータを追加する操作を無視する場合に実行します。  
+12. 省略可能: メイン グリッドの **[テーブル デザイナー]** で、select **[重複するキーを無視]** を選択し、一覧から **[はい]** を選択します。 この操作は、一意のインデックスに重複キーが作成される可能性のあるデータを追加する操作を無視する場合に実行します。  
   
 13. **[閉じる]** をクリックします。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "67898602"
   
 10. **[新しいインデックス]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>テーブルに一意のインデックスを作成するには  
   

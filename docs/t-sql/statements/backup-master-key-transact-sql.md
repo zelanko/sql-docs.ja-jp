@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 276ce1b24afc58be960f7c9f580204f7b329fe4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 536195389a6a2015fd365f4ec5c33e724655707d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091746"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380925"
 ---
 # <a name="backup-master-key-transact-sql"></a>BACKUP MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースのマスター キーをエクスポートします。  
   
@@ -46,14 +46,16 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  FILE ='*path_to_file*'  
  マスター キーのエクスポート先ファイルの完全なパスを、ファイル名を含めて指定します。 ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。  
   
  PASSWORD ='*password*'  
  ファイル内のマスター キーの暗号化に使用されているパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  マスター キーは開かれている必要があります。したがって、バックアップ前に暗号化を解除する必要があります。 マスター キーがサービス マスター キーで暗号化されている場合は、明示的に開く必要はありません。 パスワードのみで暗号化されている場合は、明示的に開く必要があります。  
   
  マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
@@ -61,7 +63,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AdventureWorks2012` マスター キーのバックアップを作成します。 このマスター キーはサービス マスター キーによって暗号化されているので、マスター キーを開くときにはパスワードを指定する必要があります。  
   
 ```  

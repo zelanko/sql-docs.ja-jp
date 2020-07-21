@@ -20,14 +20,14 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f3f1d43a1f77317e1852a2b261ec960df4908c4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908740"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71287777"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>データ フロー コンポーネント用ユーザー インターフェイスの開発
 
@@ -93,7 +93,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS デザイナーのサービスの使用  
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> メソッドの **IServiceProvider** パラメーターにより、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの、次のサービスにアクセスすることができます。  
   
-|サービス|[説明]|  
+|サービス|説明|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|コンポーネントがコピー/貼り付け、または切り取り/貼り付け操作の一部として生成されたかどうかを判別するために使用します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|パッケージ内の既存の接続へのアクセス、または新しい接続の作成に使用します。|  

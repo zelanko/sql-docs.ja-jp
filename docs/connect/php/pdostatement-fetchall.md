@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: fetchAll |Microsoft Docs'
+title: PDOStatement::fetchAll | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5bd53aedf65bd1e7935c7e51eb90fb78d65d2bed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 71b4bd02d09ee8ab9b4637d0d555cc5b862d84a8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936030"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928592"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ $*ctor_args*: $*fetch_style* が PDO::FETCH_CLASS または PDO::FETCH_OBJ の�
 ## <a name="return-value"></a>戻り値  
 結果セットの残りの行の配列、またはメソッドの呼び出しが失敗した場合は false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  

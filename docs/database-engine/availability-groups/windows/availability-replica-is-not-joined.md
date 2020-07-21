@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da14149b9518a14fa4b7a50072ba35c0b8dcefe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0902212b2f1ab8cf7d7c16c1d1e0c811b6d6b78
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991369"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896192"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>可用性レプリカが Always On 可用性グループに参加していない
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ ms.locfileid: "67991369"
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性レプリカ|  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  このポリシーは、可用性レプリカの参加状態をチェックします。 可用性レプリカが可用性グループに追加されていても、適切に参加していない場合、ポリシーは異常な状態です。 それ以外の場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  

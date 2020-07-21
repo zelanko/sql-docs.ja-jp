@@ -1,21 +1,21 @@
 ---
-title: JDBC Driver | でステートメントを使用するMicrosoft Docs
+title: JDBC ドライバーでのステートメントの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7646903fc9efcbdb838b4a2d585735dc3a105639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b94782d6e36f6ef6fb2997ceb195bf9ecdb1e947
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005925"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923954"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>JDBC ドライバーでのステートメントの使用
 
@@ -35,7 +35,7 @@ JDBC ドライバーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
-| トピック                                                                                                    | [説明]                                                                                                                                            |
+| トピック                                                                                                    | 説明                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [SQL でのステートメントの使用](../../connect/jdbc/using-statements-with-sql.md)                             | JDBC ドライバーで SQL ステートメントを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを処理する方法について説明します。    |
 | [ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md) | JDBC ドライバーでストアド プロシージャを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを処理する方法について説明します。 |

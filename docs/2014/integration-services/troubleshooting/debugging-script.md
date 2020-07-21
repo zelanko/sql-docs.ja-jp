@@ -11,18 +11,17 @@ helpviewer_keywords:
 - debugging [Integration Services], scripts
 - scripts [Integration Services], debugging
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c8eee57be7c7bb9167c24bec117fd2f88a5bb745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a7926f806f20f76c7aaac0c22b970addc5e93a78
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62926337"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420619"
 ---
 # <a name="debugging-script"></a>スクリプトのデバッグ
-  スクリプト タスクやスクリプト コンポーネントで使うスクリプトは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) で作成します。  
+  スクリプト タスクやスクリプト コンポーネントで使うスクリプトは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) で作成します。  
   
  VSTA では、ブレークポイントを設定してスクリプト化します。 ブレークポイントは VSTA で管理できますが、 **デザイナーで用意されている** [ブレークポイントの設定] [!INCLUDE[ssIS](../../includes/ssis-md.md)] ダイアログ ボックスを使用しても管理できます。 詳細については、「 [制御フローのデバッグ](debugging-control-flow.md)」を参照してください。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62926337"
   
 -   [スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする](../extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージ開発のトラブルシューティング ツール](troubleshooting-tools-for-package-development.md)  
   
   

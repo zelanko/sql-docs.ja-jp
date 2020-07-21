@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edb36bbf0f1a637551a7316748f58f9ed1c7f912
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047734"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージド コード アセンブリです。 RMO は <xref:Microsoft.SqlServer.Replication> 名前空間により実装されます。  
@@ -35,7 +34,7 @@ ms.locfileid: "62721794"
  [[ディストリビューションの構成]](../configure-distribution.md)  
  このセクションのトピックでは、RMO を使用してパブリッシングおよびディストリビューションを構成する方法について説明します。  
   
- [パブリケーションの作成](../publish/create-a-publication.md)  
+ [パブリケーションを作成する](../publish/create-a-publication.md)  
  このセクションのトピックでは、RMO を使用してパブリケーションおよびアーティクルを作成、削除、および変更する方法について説明します。  
   
  [パブリケーションのサブスクライブ](../subscribe-to-publications.md)  
@@ -186,7 +185,7 @@ ms.locfileid: "62721794"
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
 ## <a name="see-also"></a>参照  
- [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)   
+ [レプリケーションシステムストアドプロシージャの概念](replication-system-stored-procedures-concepts.md)   
  [レプリケーションのプログラミング概念](replication-programming-concepts.md)  
   
   

@@ -13,26 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectTypeEnum enumeration [ADOX]
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04c7b1d1cb5d07a300b82d13a7e80158498bbd5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d493218f31965c04b5a64321c4a1bf87a2518f6f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965654"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763793"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
-アクセス許可または所有権を設定する対象のデータベース オブジェクトの種類を指定します。  
+権限または所有権を設定するデータベースオブジェクトの種類を指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adPermObjColumn**|2|オブジェクトは、列です。|  
-|**adPermObjDatabase**|3|オブジェクトは、データベースです。|  
-|**adPermObjProcedure**|4|オブジェクトは、手順です。|  
-|**adPermObjProviderSpecific**|-1|オブジェクトは、プロバイダーによって定義された型です。 場合、エラーが発生、 *ObjectType*パラメーターが**adPermObjProviderSpecific**と*ObjectTypeId*が指定されていません。|  
-|**adPermObjTable**|1|オブジェクトは、テーブルです。|  
-|**adPermObjView**|5|オブジェクトは、ビューです。|  
+|**adPermObjColumn**|2|オブジェクトは列です。|  
+|**adPermObjDatabase**|3|オブジェクトはデータベースです。|  
+|**adPermObjProcedure**|4|オブジェクトはプロシージャです。|  
+|**adPermObjProviderSpecific**|-1|オブジェクトは、プロバイダーによって定義された型です。 *ObjectType*パラメーターが**Adpermobjproviderspecific**で*objecttypeid*が指定されていない場合、エラーが発生します。|  
+|**adPermObjTable**|1|オブジェクトはテーブルです。|  
+|**adPermObjView**|5|オブジェクトはビューです。|  
   
 ## <a name="applies-to"></a>適用対象  
   

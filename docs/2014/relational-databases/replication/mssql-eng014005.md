@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: f168f0d6-cb11-45d4-9781-c374d7f388ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 418628c33764c6e765e8ba855da20f0890f6191a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d820fd26cceee72b0d08204d6f6ce73a76508e9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666882"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049288"
 ---
-# <a name="mssqleng014005"></a>MSSQL_ENG014005
+# <a name="mssql_eng014005"></a>MSSQL_ENG014005
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62666882"
   
  パブリケーションに存在するサブスクリプションが表示されない場合や、パブリケーションの作成時にこのエラーが表示される場合は、前のサブスクリプションを削除したときに完全にクリーンアップされていない可能性があります。 レプリケーションに関連するすべてのオブジェクトと設定を削除するには、データベースで [sp_removedbreplication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   
   

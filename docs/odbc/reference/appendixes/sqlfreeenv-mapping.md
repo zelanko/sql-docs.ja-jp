@@ -1,5 +1,5 @@
 ---
-title: SQLFreeEnv のマッピング |Microsoft Docs
+title: SQLFreeEnv マッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - SQLFreeEnv function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeEnv
 ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef89943f95a6492614972c3e89fe2129becc1aa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f56bfeaee32e83ded6d8269873c9c4c33ed434e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086423"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302033"
 ---
 # <a name="sqlfreeenv-mapping"></a>SQLFreeEnv のマッピング
-アプリケーションを呼び出すと**SQLFreeEnv** ODBC を通じて*3.x*ドライバーへの呼び出し  
+アプリケーションが ODBC 3.x ドライバーを使用して**Sqlfreeenv**を呼び出すときは、を呼び出します *。*  
   
 ```  
 SQLFreeEnv(henv)   
 ```  
   
- をマップされます。  
+ がにマップされています  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_ENV,Handle)  
 ```  
   
- *処理*引数の値に設定*henv*します。
+ *ハンドル*引数を*henv*の値に設定します。

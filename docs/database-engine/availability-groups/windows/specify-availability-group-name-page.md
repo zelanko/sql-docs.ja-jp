@@ -1,7 +1,7 @@
 ---
-title: '[可用性グループ オプションの指定] ページ (可用性グループ ウィザード) - SQL Server | Microsoft Docs'
-ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
-ms.custom: seodec18
+title: '可用性グループ ウィザード: 可用性グループ オプションの指定'
+description: SQL Server Management Studio の可用性グループ ウィザードの [可用性グループ名の指定] ページにあるオプションについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,18 +13,18 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da34edca55f4f21c3323e621eecf2aa6983cbf79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 202493fb2ee8a05408f82927f82f2b696aa19331
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014017"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883087"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 可用性グループの [可用性グループ オプションの指定] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 **[可用性グループ名の指定]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] と [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の両方です。  
   
-##  <a name="PageOptions"></a> 可用性グループ オプションの指定  
+##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> 可用性グループ オプションの指定  
  **[可用性グループ名]**  
  可用性グループの名前を指定します。 新しい可用性グループには、Windows Server フェールオーバー クラスター (WSFC) のすべての可用性グループ内で一意の、有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別子を指定してください。 可用性グループ名の最大文字数は 128 文字です。  
 
@@ -47,12 +47,12 @@ ms.locfileid: "68014017"
 
 [データベースの選択] ページ (新しい可用性グループ ウィザードおよびデータベース追加ウィザード)  
   
-##  <a name="LaunchWiz"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 関連タスク  
   
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 -   [可用性グループへのデータベース追加ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   

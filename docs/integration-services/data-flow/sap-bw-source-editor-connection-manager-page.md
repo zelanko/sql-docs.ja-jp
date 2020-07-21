@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: af093b4d46e658e0673352201c9499be77da6b5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b4fa1d2dd8219c28a1fd9c8f3f403c6098d96e4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023635"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298074"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>[SAP BW ソース エディター] ([接続マネージャー] ページ)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68023635"
 
   **[SAP BW ソース エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換元の SAP BW 接続マネージャーを選択できます。 このページでは、実行モードと SAP Netweaver BW システムからデータを抽出するためのパラメーターも選択します。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の SAP BW 変換元コンポーネントの詳細については、「 [SAP BW 転送元](../../integration-services/data-flow/sap-bw-source.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の SAP BW 変換元コンポーネントの詳細については、「 [SAP BW Source](../../integration-services/data-flow/sap-bw-source.md)」(SAP BW 変換元) をご覧ください。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW に関するドキュメントでは、SAP Netweaver BW 環境について理解していることを前提としています。 SAP Netweaver BW の詳細または SAP Netweaver BW オブジェクトやプロセスを構成する方法については、SAP のマニュアルを参照してください。  
@@ -61,7 +61,7 @@ ms.locfileid: "68023635"
  **実行モード**  
  ソースからデータを抽出する方法を指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**P - プロセス チェーンをトリガー**|プロセス チェーンをトリガーします。 この場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージが抽出プロセスを開始します。|  
 |**W - 通知を待機**|SAP Netweaver BW システムから、データ抽出の開始する通知を待ちます。 この場合、SAP Netweaver BW システムが抽出プロセスを開始します。|  
@@ -130,7 +130,7 @@ ms.locfileid: "68023635"
 ## <a name="see-also"></a>参照  
  [SAP BW ソース エディター ([列] ページ)](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
  [SAP BW ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [SAP BW ソース エディター ([詳細設定] ページ)](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [SAP BW ソース エディター &#40;[詳細設定] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

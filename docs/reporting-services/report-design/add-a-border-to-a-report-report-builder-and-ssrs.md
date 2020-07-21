@@ -1,5 +1,5 @@
 ---
-title: レポートへの罫線の追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: レポートへの罫線の追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c319bf967cb11c775456c2b596424d8b7df515b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7790d44cc4160d7f61562cf470da43bb49a82cf2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574880"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080785"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>レポートへの罫線の追加 (レポート ビルダーおよび SSRS)
   線や四角形を追加せずに、ヘッダー、フッター、およびレポート本文自体に罫線を追加することで、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートに罫線を追加できます。    

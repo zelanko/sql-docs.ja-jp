@@ -15,10 +15,10 @@ ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 28695a4849b29c6e593f42489fc149efd9a8db53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570644"
 ---
 # <a name="role-assignments---modify-or-delete"></a>ロールの割り当て - 変更または削除

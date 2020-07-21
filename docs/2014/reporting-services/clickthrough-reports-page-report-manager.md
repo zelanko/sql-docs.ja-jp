@@ -1,5 +1,5 @@
 ---
-title: クリックスルー レポート ページ (レポート マネージャー) |Microsoft Docs
+title: '[クリックスルーレポート] ページ (レポートマネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109796"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>[クリックスルー レポート] ページ (レポート マネージャー)
@@ -31,9 +31,9 @@ ms.locfileid: "66109796"
  アクセス可能な任意のレポートを選択できますが、構成する対象のモデル用に作成されたレポートのみを選択してください。  
   
 > [!NOTE]  
->  クリックスルー レポートは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 組織で実行している [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションが不明な場合は、データベース管理者に問い合わせてください。  
+>  クリックスルー レポートは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。 組織で実行している [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションが不明な場合は、データベース管理者に問い合わせてください。  
   
-## <a name="navigation"></a>ナビゲーション  
+## <a name="navigation"></a>「ナビゲーション」  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
   
 ###### <a name="to-open-the-clickthrough-reports-page"></a>[クリックスルー レポート] ページを表示するには  
@@ -42,21 +42,21 @@ ms.locfileid: "66109796"
   
 2.  モデルの上にマウス ポインターを移動し、下矢印をクリックします。  
   
-3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、モデルの **[全般]** プロパティ ページが開きます。  
+3.  ドロップダウン メニューの **[管理]** をクリックします。 これにより、モデルの **[全般**] プロパティページが開きます。  
   
 4.  **[クリックスルー]** タブをクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **モデル アイテムの階層**  
  カスタマイズされたレポートを提供する、対象のモデル名前空間内のエンティティ、フォルダー、およびアイテムを表示します。  
   
- **単一インスタンス レポート**  
+ **[単一インスタンスのレポート]**  
  ユーザーの移動によって単一インスタンス データのビューが必要な場合は、使用するカスタム レポートを指定します。 参照ボタンをクリックして、使用するレポートを選択します。  
   
- **複数インスタンスのレポート**  
+ **[複数インスタンスのレポート]**  
  ユーザーの移動によって複数インスタンス データのビューが必要な場合は、使用するカスタム レポートを指定します。 参照ボタンをクリックして、使用するレポートを選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポートのパブリッシュ](../../2014/reporting-services/publish-reports.md)  
   
   

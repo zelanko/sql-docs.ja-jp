@@ -13,28 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - StringFormatEnum enumeration [ADO]
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85bef64902f014e7b5269d6df328128bc8fe8d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 67814e1236bc10e9b008d1684586796dd62950b4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937883"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759558"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
-取得するときに、形式を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を文字列として。  
+[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を文字列として取得する場合の形式を指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adClipString**|2|行を区切ります*RowDelimiter*、列、 *ColumnDelimiter*、および null 値によって*NullExpr*します。 これら 3 つのパラメーターの[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドはでのみ有効ですが、 *StringFormat*の**adClipString**します。|  
+|**adClipString**|2|*Rowdelimiter*で行を区切り、 *columndelimiter*で列を区切り、Null 値を*nullexpr*で区切ります。 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドのこれら3つのパラメーターは、 **Adclipstring**の*StringFormat*でのみ有効です。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
 |定数|  
 |--------------|  
-|AdoEnums.StringFormat.CLIPSTRING|  
+|AdoEnums StringFormat|  
   
 ## <a name="applies-to"></a>適用対象  
  [GetString メソッド (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)

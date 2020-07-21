@@ -20,10 +20,10 @@ ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0b07cc17344e27d82155ceaae8e55494deb0bd57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68065668"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
@@ -110,7 +110,7 @@ FOR DATABASE_MIRRORING (
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  **ALTER ENDPOINT** ではペイロードの種類を変更できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER ENDPOINT を使用する場合、更新するパラメーターのみを指定します。 既存のエンドポイントのすべてのプロパティは、明示的に変更しない限り変更されません。  
   
  ENDPOINT DDL ステートメントは、ユーザー トランザクション内部では実行できません。  

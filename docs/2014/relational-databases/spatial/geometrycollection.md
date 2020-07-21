@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b882aad6557eb812ee44eeeb46ecbbbda86061c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996322"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
   `GeometryCollection` は、0 個以上の `geometry` インスタンスまたは `geography` インスタンスのコレクションです。 `GeometryCollection` は空にできます。  
@@ -54,7 +53,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
  受け取られる有効なインスタンスについては、 [Point](point.md)、 [MultiPoint](multipoint.md)、 [LineString](linestring.md)、 [MultiLineString](multilinestring.md)、 [Polygon](polygon.md)、 [MultiPolygon](multipolygon.md)を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `geometry``GeometryCollection` を、 `Point` インスタンスと `Polygon` インスタンスを含む SRID 1 の Z 値でインスタンス化する例を次に示します。  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_get_rpo_duration (TRANSACT-SQL) |Microsoft Docs
+title: sp_rda_get_rpo_duration (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,21 +14,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_get_rpo_duration stored procedure
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 15a188a912d9338b6e786248e9242914d5759196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8e903c3b41a8a191122fdf8499ee6b4c82dbe308
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905082"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053032"
 ---
-# <a name="syssprdagetrpoduration-transact-sql"></a>sys.sp_rda_get_rpo_duration (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sp_rda_get_rpo_duration (Transact-sql)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  ポイントイン タイム リストアが必要な場合、リモート Azure データベースの完全復元をことを確認するためにステージング テーブルでは、SQL Server を保持する移行されたデータの時間数を取得します。 
+  特定の時点への復元が必要な場合に、リモートの Azure データベースの完全な復元を確実に行うために、ステージングテーブルに保持 SQL Server れる、移行されたデータの時間数を取得します。 
   
-  詳細については、次を参照してください。 [Stretch Database は、移行済みの行を一時的に保持して、Azure のデータのデータ損失のリスクを軽減](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md#stretchRPO)します。  
+  詳細については、「Stretch Database」を参照してください。移行され[た行を一時的に保持することで、Azure データのデータ損失のリスクが軽減](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md#stretchRPO)されます。  
     
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -41,18 +40,18 @@ sp_rda_get_rpo_duration @durationinhours output
 ```    
     
 ## <a name="output-parameter"></a>出力パラメーター    
- *@durationinhours*    
-  時間数です (null 以外の整数値) の現在の Stretch 対応データベースの SQL Server を保持する移行されたデータ。    
+ *\@durationinhours*    
+  現在の Stretch が有効なデータベースについて SQL Server 保持する、移行されたデータの時間数 (null 以外の整数値) を指定します。    
     
 ## <a name="permissions"></a>アクセス許可    
- Db_owner アクセス許可が必要です。    
+ Db_owner のアクセス許可が必要です。    
     
-## <a name="remarks"></a>コメント    
- 実行して、値を変更する[sys.sp_rda_set_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)します。    
+## <a name="remarks"></a>注釈    
+ [Transact-sql&#41;&#40;sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)を実行して値を変更します。    
     
 ## <a name="see-also"></a>参照    
- [sys.sp_rda_set_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
- [Stretch 対応データベース (Stretch Database) の復元します。](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
+ [sp_rda_set_rpo_duration &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+ [Stretch 対応データベースの復元 (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     
   

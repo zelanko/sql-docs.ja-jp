@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4f4d2fbf448dc34d687359724e3ec19d3023262a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b1f4f85fbd4806c164faef0c8bcac7a982cc4fe
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967876"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71288494"
 ---
 # <a name="property-expressions-editor"></a>[プロパティ式エディター]
 
@@ -32,14 +32,14 @@ ms.locfileid: "67967876"
  **プロパティ**  
  オブジェクト プロパティを一覧から選択します。  
   
- **式**  
+ **[式]**  
  プロパティの値を更新するリテラルまたは式を入力します。  
   
 > [!NOTE]  
 >  ユーザー定義変数およびシステム変数の名前では、大文字と小文字が区別されます。  
   
  **式 (...)**  
- [...] をクリックすると、 **[式ビルダー]** ダイアログ ボックスが表示されます。 詳細については、「 [[式ビルダー]](../../integration-services/expressions/expression-builder.md)」を参照してください。  
+ [...] をクリックすると、 **[式ビルダー]** ダイアログ ボックスが表示されます。 詳細については、「 [式ビルダー](../../integration-services/expressions/expression-builder.md)」を参照してください。  
   
  **削除**  
  プロパティを選択してから、 **[削除]** をクリックします。  

@@ -1,6 +1,6 @@
 ---
-title: '[フォルダーを指定して置換] | Microsoft Docs'
-ms.custom: ''
+title: '[フォルダーを指定して置換]'
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b53a95f29495388f31ca833b992f8afe3fd9450c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 062fd4a1ecdf9e858e75d4d36292296bdee619fc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265980"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261681"
 ---
 # <a name="replace-in-files"></a>[フォルダーを指定して置換]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68265980"
 ## <a name="find-what"></a>[検索する文字列]  
  **[フォルダーを指定して置換]** タブの次のコントロールを使用して、検索する文字列または正規表現を指定します。  
   
- **Find what**  
+ **[検索する文字列]**  
  検索するテキストを入力します。 ダイアログ ボックスを開く前にカーソルで選択されていたテキスト、近接するテキスト、または以前に検索したテキストが、検索テキストの候補として示されます。 ドロップダウン リストを使用して、直前の 20 回の検索文字列の中から 1 つを再選択することができます。  
   
  **ワイルドカード付き文字列**  
@@ -37,19 +37,19 @@ ms.locfileid: "68265980"
  **正規表現**  
  検索エンジンが検索文字列を正規表現として解釈するようにするには、 **[検索オプション]** の下にある **[条件]** チェック ボックスをオンにして、 **[正規表現]** をクリックします。  
   
- **[式ビルダー]**  
+ **式ビルダー**  
  **[検索オプション]** で **[条件]** チェック ボックスがオンになっている場合、 **[検索する文字列]** ボックスの横にある三角形のボタンを使用できます。 このボタンをクリックすると、選択した **[条件]** オプションに応じて、ワイルドカードまたは正規表現の一覧が表示されます。 この一覧から項目を選択すると、 **[検索する文字列]** ボックスに指定した文字列にその項目が追加されます。  
   
-## <a name="replace-with"></a>[置換後の文字列]  
+## <a name="replace-with"></a>置換後の文字列  
  次のコントロールを使用して、検索で一致した文字列や正規表現に置き換えて挿入する文字列を指定します。  
   
  **Replace with**  
  **[検索する文字列]** で指定した文字列のインスタンスを別の文字列で置き換えるには、このフィールドに置換後の文字列を入力します。 **[検索する文字列]** で指定した文字列のインスタンスを削除するには、このボックスを空白にしておきます。 ドロップダウン リストを選択すると、直前の 20 回の入力項目が表示されます。 **[置換後の文字列]** ボックスで指定する文字列で正規表現を使用するには、 **[条件]** チェック ボックスをオンにしてから **[正規表現]** オプションをクリックします。  
   
- **[式ビルダー]**  
+ **式ビルダー**  
  **[検索オプション]** で **[条件]** チェック ボックスがオンになっている場合、 **[置換後の文字列]** ボックスの横にある三角形のボタンを使用できます。 このボタンをクリックすると、選択した **[条件]** オプションに応じて、ワイルドカードまたは正規表現の一覧が表示されます。 この一覧から項目を選択すると、 **[置換後の文字列]** ボックスに指定されている文字列にその項目が追加されます。  
   
- **[置換]**  
+ **Replace**  
  このボタンをクリックすると、 **[検索する文字列]** に指定された文字列の現在のインスタンスが **[置換後の文字列]** ボックスで指定した文字列で置き換えられ、 **[検索対象]** で指定された範囲内で次のインスタンスが検索されます。  
   
  **[すべて置換]**  
@@ -99,13 +99,13 @@ ms.locfileid: "68265980"
  **[単語単位]**  
  このチェック ボックスをオンにすると、 **[検索する文字列]** で指定した文字列に単語単位で一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、「 **MyObject** 」を検索すると、"CMyObject" や "MyObjectC" ではなく "MyObject" のみが返されます。  
   
- **[検索オプション]**  
+ **用途**  
  **[検索する文字列]** ボックスまたは **[置換後の文字列]** ボックスに入力された特殊文字を解釈する方法を指定します。 オプションは **[ワイルドカード]** と **[正規表現]** です。  
   
  **Regular Expressions**  
  検索するテキストのパターンを定義する、特殊な表記です。 一覧については、「 [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)」を参照してください。  
   
- **[ワイルドカード]**  
+ **ワイルドカード**  
  アスタリスク (`*`) や疑問符 (`?`) などの特殊文字は、1 つまたは複数の文字を表します。 一覧については、「 [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
   
  **[次のファイルの種類を参照]**  
@@ -154,4 +154,4 @@ ms.locfileid: "68265980"
  このツール バー タブを使用すると、ダイアログ ボックスが **[シンボルの検索]** ダイアログ ボックスに変わります。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 132989905006dbf6640473a808998a94f9216f97
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065731"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301931"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックには、セカンダリ データベースで [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] オプションを設定するための ALTER DATABASE 構文が含まれています。 ALTER DATABASE ステートメントごとに SET HADR オプションが 1 つだけ許可されます。 これらのオプションは、セカンダリ レプリカ上でのみサポートされます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68065731"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER DATABASE database_name  
    SET HADR   
@@ -50,7 +50,9 @@ ALTER DATABASE database_name
 [;]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *database_name*  
  変更するセカンダリ データベースの名前です。  
   
@@ -131,7 +133,7 @@ ALTER DATABASE database_name
 ### <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER 権限が必要です。 データベースを可用性グループに参加させるには、**db_owner** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、セカンダリ データベース `AccountsDb1` を、`AccountsAG` 可用性グループのローカル セカンダリ レプリカに参加させます。  
   
 ```  
@@ -145,6 +147,6 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Always On 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

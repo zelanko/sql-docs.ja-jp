@@ -1,7 +1,8 @@
 ---
-title: SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: Backup to URL に関するベスト プラクティスとトラブルシューティング
+description: Azure BLOB ストレージとの間の SQL Server のバックアップと復元に関するベスト プラクティスとトラブルシューティングのヒントを学習します。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,53 +11,54 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4c93f36ca78bbd6cdeedf8d88314f7374f34a9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98507653332b0dc221a0f1c93b189607e50574e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759019"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  このトピックには、Windows Azure BLOB サービスとの間の SQL Server のバックアップと復元に関するベスト プラクティスとトラブルシューティングのヒントを示しています。  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+
+  このトピックでは、Azure Blob service との間の SQL Server のバックアップと復元に関するベスト プラクティスとトラブルシューティングのヒントを示します。  
   
- SQL Server のバックアップ操作または復元操作に Windows Azure BLOB スレージ サービスを使用する方法の詳細については、次のトピックを参照してください。  
+ SQL Server のバックアップ操作または復元操作に Azure Blob Storage サービスを使用する方法の詳細については、次のトピックを参照してください。  
   
 -   [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [チュートリアル:Azure Blob Storage サービスへの SQL Server のバックアップと復元](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups"></a>バックアップの管理  
+## <a name="managing-backups"></a><a name="managing-backups-mb1"></a> バックアップの管理  
  バックアップを管理するための一般的な推奨事項を次に示します。  
   
 -   BLOB を誤って上書きしないように、各バックアップに一意なファイル名を付けることをお勧めします。  
   
 -   コンテナーを作成する際は、アクセス レベルを **private**に設定し、必要な認証情報を指定できるユーザーまたはアカウントだけがコンテナー内の BLOB の読み取りや書き込みを実行できるようにすることをお勧めします。  
   
--   Windows Azure 仮想マシンで実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの場合、仮想マシンと同じ地域のストレージ アカウントを使用して、地域間のデータ転送コストを回避してください。 また、同じ地域を使用すると、バックアップ操作と復元操作で最適なパフォーマンスを得ることができます。  
+-   Azure 仮想マシンで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの場合、仮想マシンと同じリージョンのストレージ アカウントを使用して、リージョン間のデータ転送のコストがかからないようにします。 また、同じ地域を使用すると、バックアップ操作と復元操作で最適なパフォーマンスを得ることができます。  
   
 -   バックアップ処理に失敗すると、無効なバックアップ ファイルが生成されます。 失敗したバックアップを定期的に確認し、BLOB ファイルを削除することをお勧めします。 詳細については、「 [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)」をご覧ください。  
   
 -   バックアップ中に `WITH COMPRESSION` オプションを使用すると、ストレージ コストとストレージのトランザクション コストを最小限に抑えることができます。 また、バックアップ プロセスが完了するまでにかかる時間を短縮することもできます。  
 
-- 「[SQL Server Backup to URL](./sql-server-backup-to-url.md)」で推奨されているように、`MAXTRANSFERSIZE` と `BLOCKSIZE` の引数を設定します。
+- 「[SQL Server Backup to URL](./sql-server-backup-to-url.md)」で推奨されているように、`MAXTRANSFERSIZE` 引数と `BLOCKSIZE` 引数を設定します。
   
 ## <a name="handling-large-files"></a>大きなファイルの処理  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ操作では、複数のスレッドを使用して、Windows Azure BLOB ストレージ サービスへのデータ転送を最適化します。  ただし、パフォーマンスは ISV の帯域幅やデータベースのサイズなどのさまざまな要因によって異なります。 内部設置型の SQL Server データベースから大きなデータベースまたはファイル グループをバックアップする場合は、最初にスループットのテストを行うことをお勧めします。 [SLA for Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) には BLOB の最大処理時間が示されているため、考慮に入れておくことができます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ操作では、複数のスレッドを使用して、Azure Blob Storage サービスへのデータ転送が最適化されます。  ただし、パフォーマンスは ISV の帯域幅やデータベースのサイズなどのさまざまな要因によって異なります。 内部設置型の SQL Server データベースから大きなデータベースまたはファイル グループをバックアップする場合は、最初にスループットのテストを行うことをお勧めします。 [SLA for Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) には BLOB の最大処理時間が示されているため、考慮に入れておくことができます。  
   
--   「[バックアップの管理](##managing-backups)」セクションで推奨されているように `WITH COMPRESSION` オプションを使用することは、大きなファイルをバックアップするときに非常に重要です。  
+-   「[バックアップの管理](#managing-backups-mb1)」セクションで推奨されているように `WITH COMPRESSION` オプションを使用することは、大きなファイルをバックアップするときに非常に重要です。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>BACKUP TO URL または RESTORE FROM URL のトラブルシューティング  
- ここでは、Windows Azure BLOB ストレージ サービスへのバックアップまたは Windows Azure BLOB ストレージ サービスからの復元を実行する際に発生するエラーを簡単にトラブルシューティングする方法をいくつか示します。  
+ ここでは、Azure Blob Storage サービスへのバックアップまたは Azure Blob Storage サービスからの復元を実行するときに発生するエラーを簡単にトラブルシューティングする方法をいくつか示します。  
   
  サポートされないオプションまたは制限事項によるエラーを回避するには、「 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 」の記事で、制限事項の一覧および BACKUP コマンドと RESTORE コマンドのサポート情報を確認してください。  
   
  **認証エラー:**  
   
--   `WITH CREDENTIAL` は新しいオプションで、Windows Azure BLOB ストレージ サービスへのバックアップまたは Windows Azure BLOB ストレージ サービスからの復元に必要です。 資格情報に関連するエラーには、次のようなものがあります。  
+-   `WITH CREDENTIAL` は新しいオプションで、Azure Blob Storage サービスへのバックアップまたは Azure Blob Storage サービスからの復元に必要です。 資格情報に関連するエラーには、次のようなものがあります。  
   
      **BACKUP** コマンドまたは **RESTORE** コマンドで指定された資格情報が存在しません。 この問題を回避するには、資格情報が BACKUP ステートメントに存在しない場合に資格情報を作成する T-SQL ステートメントを含めることができます。 使用可能な例を次に示します。  
   
@@ -70,13 +72,13 @@ ms.locfileid: "68041382"
   
 -   資格情報は存在しますが、BACKUP コマンドの実行に使用されるログイン アカウントに資格情報へのアクセス権限がありません。 **Alter any credential** 権限がある ***db_backupoperator*** ロールのログイン アカウントを使用してください。  
   
--   ストレージ アカウントの名前とキーの値を確認してください。 資格情報に格納されている情報は、バックアップ操作と復元操作で使用する Windows Azure ストレージ アカウントのプロパティ値と一致する必要があります。  
+-   ストレージ アカウントの名前とキーの値を確認してください。 資格情報に格納されている情報は、バックアップ操作と復元操作で使用する Azure ストレージ アカウントのプロパティの値と一致する必要があります。  
   
  **バックアップ エラー/障害:**  
   
 -   同じ BLOB への並列バックアップを実行すると、バックアップの 1 つが " **初期化に失敗しました** " エラーで失敗します。  
   
--   次のエラー ログを使用して、バックアップ エラーのトラブルシューティングに役立ててください。  
+-   ページ BLOB (`BACKUP... TO URL... WITH CREDENTIAL` など) を使用している場合は、次のエラー ログを使用して、バックアップ エラーのトラブルシューティングに役立ててください。  
   
     -   トレース フラグ 3051 を設定して、次の形式の特定のエラー ログへの記録を有効にします。  
   
@@ -92,7 +94,7 @@ ms.locfileid: "68041382"
 
     -   大規模なデータベースをバックアップする場合には、COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE、および複数の URL 引数を検討してください。  「[Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)」(VLDB を Azure Blob Storage にバックアップする) を参照してください
   
-        ```
+        ```console
         Msg 3202, Level 16, State 1, Line 1
         Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
         Msg 3013, Level 16, State 1, Line 1
@@ -133,11 +135,11 @@ ms.locfileid: "68041382"
   
  プロキシ サーバーで、1 分あたりの接続数を制限する設定が使用されている場合があります。 Backup to URL プロセスはマルチスレッド プロセスであるため、この制限を超える可能性があります。 制限を超えた場合、プロキシ サーバーは接続を切断します。 この問題を解決するには、プロキシ設定を変更し、SQL Server がプロキシを使用しないようにします。 エラー ログに表示される可能性のある種類またはエラー メッセージの例を次に示します。  
   
-```
+```console
 Write on "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   
-```
+```console
 A nonrecoverable I/O error occurred on file "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint.  
   
 Msg 3013, Level 16, State 1, Line 2  
@@ -145,7 +147,7 @@ Msg 3013, Level 16, State 1, Line 2
 BACKUP DATABASE is terminating abnormally.  
 ```
 
-```
+```console
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   

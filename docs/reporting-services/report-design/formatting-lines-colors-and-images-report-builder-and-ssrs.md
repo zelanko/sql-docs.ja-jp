@@ -1,5 +1,5 @@
 ---
-title: 線、色、および画像の書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 線、色、および画像の書式設定 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3bc6e9b634ce9872b069381d58ed2dc89a0dc1d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 8567c1f331c17cd0875c2d4f1b94423b3c3ce347
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576004"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079861"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>線、色、および画像の書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、線、色、データ領域、画像、その他のレポート アイテムの書式を設定する機能が用意されています。  
@@ -56,7 +56,7 @@ ms.locfileid: "65576004"
 ## <a name="see-also"></a>参照  
  [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [テキスト ボックス内のテキストの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [[塗りつぶし] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/library/93a91d02-d558-4a0e-8d17-3fdf21e208d3)  
   
   

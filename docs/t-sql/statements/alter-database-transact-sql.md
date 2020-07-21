@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2019
+ms.date: 06/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 65db5c98447e9c6cfef461f9ef2f2e213adf22b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db4649b67404e5f8cb50cbd13290fda78e475b62
+ms.sourcegitcommit: 7679d0c5cc0edd35274a2b29e4d09347bfbefac6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065713"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664654"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "68065713"
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -76,7 +76,7 @@ ALTER DATABASE: この記事では、データベースの名前と照合順序�
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- SQL Server Syntax
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -127,7 +127,7 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > このオプションは、包含データベースでは使用できません。
 
-CURRENT **適用対象** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+現在の**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
 使用中の現在のデータベースを変更することを指定します。
 
@@ -143,13 +143,14 @@ COLLATE *collation_name*: データベースの照合順序を指定します。
 Windows 照合順序名および SQL 照合順序名について詳しくは、「[COLLATE](~/t-sql/statements/collations.md)」をご覧ください。
 
 **\<delayed_durability_option> ::=** 
-** 適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。
 
 詳しくは、「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)」および「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。
 
-**\<file_and_filegroup_options>::=** 詳細については、[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)に関するページを参照してください。
+**\<file_and_filegroup_options>::=** 詳しくは、[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)に関する記事をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
+
 データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。
 
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
@@ -217,7 +218,7 @@ Windows 照合順序名および SQL 照合順序名について詳しくは、�
 
 データベースに対する `ALTER` 権限が必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-changing-the-name-of-a-database"></a>A. データベースの名前を変更する
 
@@ -235,7 +236,7 @@ GO
 
 次の例では、`testdb`S 照合順序で `SQL_Latin1_General_CP1_CI_A` という名前のデータベースを作成した後、`testdb` データベースの照合順序を `COLLATE French_CI_AI` に変更します。
 
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。
 
 ```sql
 USE master;
@@ -272,7 +273,7 @@ GO
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />単一データベース/エラスティック プール\*_** &nbsp;|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br /> 単一データベース/エラスティック プール \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -291,7 +292,7 @@ ALTER DATABASE: この記事では、データベースの名前と照合順序�
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- Azure SQL Database Syntax
 ALTER DATABASE { database_name | CURRENT }
 {
@@ -310,7 +311,7 @@ ALTER DATABASE { database_name | CURRENT }
 {
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'}
+  | EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'}
   | SERVICE_OBJECTIVE =
        { <service-objective>
        | { ELASTIC_POOL (name = <elastic_pool_name>) }
@@ -326,18 +327,23 @@ ALTER DATABASE { database_name | CURRENT }
        }
    }
 
-<service-objective> ::={ 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+<service-objective> ::={ 'Basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
-       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
-       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
-       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
-       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
-       | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
-       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
-       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
-       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
-       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+      | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
+      | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
+      | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
+      | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
+      | 'GP_Fsv2_72'
+      | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
+      | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
+      | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
+      | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
+      | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
+      | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
+      | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
+      | 'BC_M_128'
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) }
       }
 
@@ -376,13 +382,13 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']): データベースのサービス レベルを変更します。
+MODIFY (EDITION **=** ['Basic' | 'Standard' | 'Premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale']) データベースのサービス レベルを変更します。
 
-次の例では、エディションを `premium` に変更します。
+次の例では、エディションを `Premium` に変更します。
 
 ```sql
 ALTER DATABASE current
-    MODIFY (EDITION = 'premium');
+    MODIFY (EDITION = 'Premium');
 ```
 
 > [!IMPORTANT]
@@ -393,111 +399,147 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB): データベー�
 > [!NOTE]
 > **MAXSIZE** 引数は、ハイパースケール サービス層の単一データベースには適用されません。 ハイパースケール サービス層のデータベースは、必要に応じて 100 TB まで拡張できます。 SQL Database サービスによってストレージが自動的に追加されます。最大サイズを設定する必要はありません。
 
-**DTU に基づくモデル**
+**DTU モデル**
 
-|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|
 |100 MB|√|√|√|√|√|
 |250 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|
 |1 GB|√|√|√|√|√|
 |2 GB|√ (D)|√|√|√|√|
-|5 GB|なし|√|√|√|√|
-|10 GB|なし|√|√|√|√|
-|20 GB|なし|√|√|√|√|
-|30 GB|なし|√|√|√|√|
-|40 GB|なし|√|√|√|√|
-|50 GB|なし|√|√|√|√|
-|100 GB|なし|√|√|√|√|
-|150 GB|なし|√|√|√|√|
-|200 GB|なし|√|√|√|√|
-|250 GB|なし|√ (D)|√ (D)|√|√|
-|300 GB|なし|√|√|√|√|
-|400 GB|なし|√|√|√|√|
-|500 GB|なし|√|√|√ (D)|√|
-|750 GB|なし|√|√|√|√|
-|1024 GB|なし|√|√|√|√ (D)|
-|1024 GB から 4096 GB (256 GB ずつ増分)*|なし|なし|なし|なし|√|
+|5 GB|該当なし|√|√|√|√|
+|10 GB|該当なし|√|√|√|√|
+|20 GB|該当なし|√|√|√|√|
+|30 GB|該当なし|√|√|√|√|
+|40 GB|該当なし|√|√|√|√|
+|50 GB|該当なし|√|√|√|√|
+|100 GB|該当なし|√|√|√|√|
+|150 GB|該当なし|√|√|√|√|
+|200 GB|該当なし|√|√|√|√|
+|250 GB|該当なし|√ (D)|√ (D)|√|√|
+|300 GB|該当なし|√|√|√|√|
+|400 GB|該当なし|√|√|√|√|
+|500 GB|該当なし|√|√|√ (D)|√|
+|750 GB|該当なし|√|√|√|√|
+|1024 GB|該当なし|√|√|√|√ (D)|
+|1024 GB から 4096 GB (256 GB ずつ増分)*|該当なし|該当なし|該当なし|該当なし|√|
 
-\* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、米国政府バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU に基づくモデルのリソースの制限事項に関する詳細については、「[DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(DTU に基づくリソースの制限) を参照してください。
+\* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
 
-DTU に基づくモデルの MAXSIZE 値。指定すると、上記の表に示すように指定されたサービス層で有効な値である必要があります。
+DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示すように指定されたサービス レベルで有効な値である必要があります。
 
-**vCore に基づくモデル**
+**仮想コア モデル**
 
-**General Purpose サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 1)**
+**General Purpose - プロビジョニング済みコンピューティング - Gen4 (パート 1)**
 
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |データの最大サイズ (GB)|1024|1024|1024|1536|1536|1536|
 
-**General Purpose サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 2)**
+**General Purpose - プロビジョニング済みコンピューティング - Gen4 (パート 2)**
 
 |MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |データの最大サイズ (GB)|1536|3072|3072|3072|4096|4096|
 
-**General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 1)**
+**General Purpose - プロビジョニング済みコンピューティング - Gen5 (パート 1)**
 
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |データの最大サイズ (GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**General Purpose サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 2)**
+**General Purpose - プロビジョニング済みコンピューティング - Gen5 (パート 2)**
 
 |MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |データの最大サイズ (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Business Critical サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 1)**
+**General Purpose - プロビジョニング済みコンピューティング - Fsv2 シリーズ (プレビュー)**
 
-|パフォーマンス レベル|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
+|MAXSIZE|GP_Fsv2_72|
+|:----- | ------: |
+|データの最大サイズ (GB)|4096|
+
+**General Purpose - サーバーレス コンピューティング - Gen5 (パート 1)**
+
+|MAXSIZE|GP_S_Gen5_1|GP_S_Gen5_2|GP_S_Gen5_4|GP_S_Gen5_6|GP_S_Gen5_8|
+|:----- | ------: |-------: |-------: |-------: |--------: |
+|最大仮想コア数|1|2|4|6|8|
+
+**General Purpose - サーバーレス コンピューティング - Gen5 (パート 2)**
+
+|MAXSIZE|GP_S_Gen5_10|GP_S_Gen5_12|GP_S_Gen5_14|GP_S_Gen5_16|
+|:----- | ------: |-------: |-------: |-------: |
+|最大仮想コア数|10|12|14|16|
+
+**General Purpose - サーバーレス コンピューティング - Gen5 (パート 3)**
+
+|MAXSIZE|GP_S_Gen5_18|GP_S_Gen5_20|GP_S_Gen5_24|GP_S_Gen5_32|GP_S_Gen5_40|
+|:----- | ------: |-------: |-------: |-------: |--------: |
+|最大仮想コア数|18|20|24|32|40|
+
+**Business Critical - プロビジョニング済みコンピューティング - Gen4 (パート 1)**
+
+|コンピューティング サイズ (サービス目標)|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |データの最大サイズ (GB)|1024|1024|1024|1024|1024|1024|
 
-**Business Critical サービス層 - 第 4 世代のコンピューティング プラットフォーム (パート 2)**
+**Business Critical - プロビジョニング済みコンピューティング - Gen4 (パート 2)**
 
-|パフォーマンス レベル|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
+|コンピューティング サイズ (サービス目標)|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |データの最大サイズ (GB)|1024|1024|1024|1024|1024|1024|
 
-**Business Critical サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 1)**
+**Business Critical - プロビジョニング済みコンピューティング - Gen5 (パート 1)**
 
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
 |データの最大サイズ (GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**Business Critical サービス層 - 第 5 世代のコンピューティング プラットフォーム (パート 2)**
+**Business Critical - プロビジョニング済みコンピューティング - Gen5 (パート 2)**
 
 |MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |データの最大サイズ (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コアに基づくモデルのリソースの制限事項の詳細については、[仮想コアに基づくリソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
+**Business Critical - プロビジョニング済みコンピューティング - M シリーズ (プレビュー)**
+
+|MAXSIZE|BC_M_128|
+|:----- | -------: |
+|データの最大サイズ (GB)|4096|
+
+vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コア モデルのリソースの制限事項の詳細については、[仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
 
 引数 MAXSIZE および EDITION には、以下の規則が適用されます。
 
 - EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえば、EDITION が Standard に設定されていて、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 250 MB に設定されます。
 - MAXSIZE も EDITION も指定されていない場合、EDITION は General Purpose に設定され、MAXSIZE は 32 GB に設定されます。
 
-MODIFY (SERVICE_OBJECTIVE = \<service-objective>): パフォーマンス レベルを指定します。 次の例では、Premium データベースのサービスの目標を `P6` に変更します。
+MODIFY (SERVICE_OBJECTIVE = \<service-objective>): コンピューティング サイズ (サービス目標) を指定します。 次の例では、Premium データベースのサービスの目標を `P6` に変更します。
 
 ```sql
 ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```
 
+SERVICE_OBJECTIVE
+
 - **単一のデータベースおよびプールされたデータベースの場合**
 
-  - パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80` です。
+  - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`GP_Fsv2_72`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80`、`BC_M_128` です。
 
-  - **ハイパースケール サービス層の単一データベースの場合**
+- **サーバーレス コンピューティング層の単一データベースの場合**
 
-  パフォーマンス レベルを指定します。 サービスの目標に使用できる値は、`HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80` です。
+  - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`GP_S_Gen5_1`、`GP_S_Gen5_2`、`GP_S_Gen5_4`、`GP_S_Gen5_6`、`GP_S_Gen5_8`、`GP_S_Gen5_10`、`GP_S_Gen5_12`、`GP_S_Gen5_14`、`GP_S_Gen5_16`、`GP_S_Gen5_18`、`GP_S_Gen5_20`、`GP_S_Gen5_24`、`GP_S_Gen5_32`、`GP_S_Gen5_40` です。
 
-サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL Database サービス レベル概要](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」、「[DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(DTU に基づくリソースの制限)、「[vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)」(vCore に基づくリソースの制限) を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
+- **ハイパースケール サービス層の単一データベースの場合**
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>): エラスティック プールに既存のデータベースを追加するには、データベースの SERVICE_OBJECTIVE を ELASTIC_POOL に設定し、エラスティック プールの名前を指定します。 このオプションを使用して、データベースを同じサーバー内の別のエラスティック プールに変更することもできます。 詳しくは、[SQL Database エラスティック プールの作成と管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)に関するページをご覧ください。 エラスティック プールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を 1 つのデータベースのパフォーマンス レベルに設定します。
+  - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80` です。
+
+サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、[Azure SQL Database サービス レベルとパフォーマンス レベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)、[仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
+
+MODIFY (ERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>): エラスティック プールに既存のデータベースを追加するには、データベースの SERVICE_OBJECTIVE を ELASTIC_POOL に設定し、エラスティック プールの名前を指定します。 このオプションを使用して、データベースを同じサーバー内の別のエラスティック プールに変更することもできます。 詳しくは、[SQL Database エラスティック プールの作成と管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)に関するページをご覧ください。 エラスティック プールからデータベースを削除するには、ALTER DATABASE を使用して、SERVICE_OBJECTIVE を単一のデータベースのコンピューティング サイズ (サービス目標) に設定します。
 
 > [!NOTE]
 > ハイパースケール サービス層のデータベースをエラスティック プールに追加することはできません。
@@ -511,7 +553,7 @@ ADD SECONDARY ON SERVER \<partner_server_name>
 
 WITH ALLOW_CONNECTIONS { **ALL** | NO }: ALLOW_CONNECTIONS が指定されていない場合は、これは既定で ALL に設定されます。 ALL に設定されている場合は、適切なアクセス許可を持つすべてのログインに接続を許可する読み取り専用データベースになります。
 
-WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80` }
+WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_72`, `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_128` }
 
 SERVICE_OBJECTIVE が指定されていない場合、セカンダリ データベースがプライマリ データベースと同じサービス レベルで作成します。 SERVICE_OBJECTIVE を指定した場合は、指定したレベルでセカンダリ データベースが作成されます。 このオプションでは、サービス レベルのコストが比較的低い geo レプリケートされたセカンダリの作成がサポートされます。 指定する SERVICE_OBJECTIVE は、ソースと同じエディション内でなければなりません。 たとえば、エディションが Premium の場合、S0 を指定することはできません。
 
@@ -548,7 +590,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS: コマンドを実行する geo レプリケー�
 > [!IMPORTANT]
 > `FORCE_FAILOVER_ALLOW_DATA_LOSS` コマンドを実行するユーザーは、プライマリ サーバーとセカンダリ サーバーの両方で `dbmanager` ロールに属する必要があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
@@ -567,7 +609,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS: コマンドを実行する geo レプリケー�
 
 データベースを変更するには、ログインがサーバーレベル プリンシパル ログイン (プロビジョニング プロセスで作成)、マスターの `dbmanager` データベース ロールのメンバー、現在のデータベースの `db_owner` データベース ロールのメンバー、またはデータベースの `dbo` のいずれかである必要があります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-check-the-edition-options-and-change-them"></a>A. エディション オプションを確認して変更します。
 
@@ -627,13 +669,13 @@ ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
 
 ### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. 単一データベースをサービス層 S0 (標準エディション、パフォーマンス レベル 0) に更新します。
 
-単一データベースをパフォーマンス レベルが S0、最大サイズが 250 GB の標準エディション (サービス層) に更新します。
+単一データベースをコンピューティング サイズ (サービス目標) が S0、最大サイズが 250 GB の標準エディション (サービス層) に更新します。
 
 ```sql
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-currentls)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
@@ -655,7 +697,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -676,7 +718,7 @@ ALTER DATABASE: この記事では、ファイルとファイル グループの
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
 {
@@ -721,7 +763,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 CURRENT: 使用中の現在のデータベースを変更する必要があることを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
@@ -743,7 +785,7 @@ CURRENT: 使用中の現在のデータベースを変更する必要がある�
 > [!IMPORTANT]
 > データベースの所有者であっても `dbcreator` ロールのメンバーでない場合は、データベースを変更できません。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 自動チューニングを設定する方法と、マネージド インスタンスにファイルを追加する方法の例を次に示します。
 
@@ -755,7 +797,7 @@ ALTER DATABASE WideWorldImporters
   ADD FILE (NAME = 'data_17')
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
@@ -776,14 +818,14 @@ ALTER DATABASE WideWorldImporters
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>概要:Azure SQL Data Warehouse
+## <a name="overview-azure-synapse-analytics"></a>概要:Azure Synapse Analytics
 
-Azure SQL Data Warehouse では、'ALTER DATABASE' によりデータベースの名前、最大サイズ、またはサービス目標が変更されます。
+Azure Synapse では、'ALTER DATABASE' によりデータベースの名前、最大サイズ、またはサービス目標が変更されます。
 
 解説が長くなるため、ALTER DATABASE の構文は複数の記事に分けて説明します。
 
@@ -831,7 +873,7 @@ MAXSIZE 既定値は 245,760 GB (240 TB) です。
 
 データベースの行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストア、またはクラスター化列ストア インデックスの非クラスター化インデックスに格納されているデータは MAXSIZE を超えることはできません。 列ストア形式に圧縮されたデータにはサイズ制限はなく、MAXSIZE に制約されません。
 
-SERVICE_OBJECTIVE: パフォーマンス レベルを指定します。 SQL Data Warehouse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
+SERVICE_OBJECTIVE: コンピューティング サイズ (サービス目標) を指定します。 Azure Synapse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -846,7 +888,10 @@ SERVICE_OBJECTIVE: パフォーマンス レベルを指定します。 SQL Data
 
 現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。
 
-SQL Data Warehouse は COMPATIBILITY_LEVEL 130 に設定されており、変更することはできません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」を参照してください。
+SQL Analytics の COMPATIBILITY_LEVEL は既定で 130 に設定されており、変更できません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」を参照してください。
+
+> [!NOTE]
+> COMPATIBILITY_LEVEL はプロビジョニング済みのリソース (プール) にのみ適用されます。
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
@@ -858,7 +903,7 @@ SQL Data Warehouse は COMPATIBILITY_LEVEL 130 に設定されており、変更
 
 データベースの照合順序を変更することはできません。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 これらの例を実行する前に、変更対象のデータベースが現在のデータベースでないことを確認します。 現在のデータベースは、変更対象とは異なるデータベースである必要があります。したがって、**ALTER は master データベースに接続されている間に実行する必要があります**。
 
@@ -875,13 +920,13 @@ MODIFY NAME = Northwind;
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );
 ```
 
-### <a name="c-change-the-performance-level"></a>C. パフォーマンス レベルを変更します。
+### <a name="c-change-the-compute-size-service-objective"></a>C. コンピューティング サイズ (サービス目標) を変更します。
 
 ```sql
 ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ```
 
-### <a name="d-change-the-max-size-and-the-performance-level"></a>D. 最大サイズとパフォーマンス レベルを変更します。
+### <a name="d-change-the-max-size-and-the-compute-size-service-objective"></a>D. 最大サイズとコンピューティング サイズ (サービス目標) を変更します。
 
 ```sql
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
@@ -889,15 +934,15 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ## <a name="see-also"></a>参照
 
-- [CREATE DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
-- [参照記事の SQL Data Warehouse の一覧](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
+- [CREATE DATABASE (Azure Synapse Analytics)](../../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016-au7)
+- [Azure Synapse Analytics 参照記事一覧](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -908,7 +953,7 @@ PDW の複製テーブル、分散テーブル、およびトランザクショ�
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- Analytics Platform System
 ALTER DATABASE database_name
     SET ( <set_database_options> | <db_encryption_option> )
@@ -1037,7 +1082,7 @@ WHERE type = 'CONTROL';
 
 TDE 実装の全手順を包括的な例で見るには、「[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="a-altering-the-autogrow-setting"></a>A. AUTOGROW 設定を変更する
 

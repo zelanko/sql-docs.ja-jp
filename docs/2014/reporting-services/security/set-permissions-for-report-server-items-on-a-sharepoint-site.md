@@ -1,5 +1,5 @@
 ---
-title: SharePoint サイト (Reporting Services SharePoint 統合モードで) 上のレポート サーバー アイテムに対する権限の設定 |Microsoft Docs
+title: SharePoint サイト上のレポートサーバーアイテムに対する権限の設定 (Reporting Services SharePoint 統合モード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c8c0e8f0714efb337d78d4440938dcb5a332fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101561"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)
@@ -59,7 +59,7 @@ ms.locfileid: "66101561"
   
 6.  **[権限を編集]** をクリックします。 **[OK]** をクリックします。  
   
-7.  **[新規]** をクリックします。  
+7.  **[新規作成]** をクリックします。  
   
 8.  **[ユーザーの追加]** をクリックします。  
   

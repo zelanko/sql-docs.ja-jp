@@ -1,5 +1,5 @@
 ---
-title: ドライバーのベース アドレス |Microsoft Docs
+title: ドライバーのベースアドレス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], base address
 - Jet-based ODBC drivers [ODBC], base address
 ms.assetid: 3601c0c7-18ad-4b41-b80b-5839276d0cba
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5026f4a8ece213d4d784e1c62ca6e3e2bfee72ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e9fd4147843aabfc38824de972431bdd186b3490
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138137"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299892"
 ---
 # <a name="base-address-of-drivers"></a>ドライバーのベース アドレス
-各 ODBC デスクトップ データベース ドライバーは、0x04c0000 のベース アドレスにリンクされています。
+各 ODBC Desktop データベースドライバは、0x04c0000 のベースアドレスにリンクされています。

@@ -1,5 +1,6 @@
 ---
 title: XML インデックスの作成 | Microsoft Docs
+description: SQL Server でプライマリとセカンダリの XML インデックスを作成する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8115350b3ead26a28c03fce975d058f393e0411b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2113062f446100fc119f7eab590a610c27800075
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691411"
 ---
 # <a name="create-xml-indexes"></a>XML インデックスの作成
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、プライマリ XML インデックスとセカンダリ XML インデックスの作成方法について説明します。  
   
 ## <a name="creating-a-primary-xml-index"></a>プライマリ XML インデックスの作成  

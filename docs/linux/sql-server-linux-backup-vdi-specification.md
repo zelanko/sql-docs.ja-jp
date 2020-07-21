@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 483173f18bc4a71a482a0e8bc490e7e6684affdb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0ee533d9a0c3dace8f7fe8ec8e0c615b444ea91d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996431"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892284"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server on Linux の VDI クライアント SDK の仕様
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このドキュメントでは、SQL Server on Linux の仮想デバイス インターフェイス (VDI) クライアント SDK によって提供されるインターフェイスについて説明します。 独立系ソフトウェア ベンダー (ISV) は、仮想バックアップ デバイス アプリケーション プログラミング インターフェイス (API) を使用して、自社の製品に SQL Server を統合することができます。 全般的に、Linux 上の VDI は Windows 上の VDI と同様に動作しますが、次の点が変更されます。
 
@@ -29,7 +29,7 @@ ms.locfileid: "67996431"
 - SQL Server on Linux では名前付きインスタンスがサポートされていないため、インスタンス名への参照は削除されました。 
 - 共有ライブラリは、/opt/mssql/lib/libsqlvdi.so にインストールされている libsqlvdi.so に実装されます
 
-このドキュメントは、Windows VDI の仕様について説明している **vbackup.chm** の内容を補うものです。 [Windows VDI の仕様](https://www.microsoft.com/download/details.aspx?id=17282)をダウンロードしてください。
+このドキュメントは、Windows 上の MS SQL Server の VDI の仕様について説明している **vbackup.chm** の内容を補うものです。 [Windows 上の SQL VDI の仕様](https://www.microsoft.com/download/details.aspx?id=17282)をダウンロードしてください。
 
 また、[SQL Server サンプルの GitHub リポジトリ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)で、サンプルの VDI バックアップ ソリューションを参照してください。
 
@@ -65,7 +65,7 @@ Linux では、POSIX プリミティブは、それを作成したユーザー�
 - 関数の構文
 - パラメーター リスト
 - 戻り値
-- Remarks
+- 解説
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
@@ -161,7 +161,7 @@ Linux では、POSIX プリミティブは、それを作成したユーザー�
 | パラメーター | 引数 | 説明
 | ----- | ----- | ------ |
 | |**timeout** |これは、ミリ秒単位の待機時間です。 無期限に待機するには、INFINTE を使用します。 コマンドをポーリングするには、0 を使用します。 現在使用できるコマンドがない場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合は、クライアントによって次のアクションが決定されます。
-| |**Timeout** |これは、ミリ秒単位の待機時間です。 無期限に待機するには、INFINTE または負の値を使用します。 コマンドをポーリングするには、0 を使用します。 タイムアウトするまでにいずれのコマンドも使用可能にならなかった場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合は、クライアントによって次のアクションが決定されます。
+| |**タイムアウト** |これは、ミリ秒単位の待機時間です。 無期限に待機するには、INFINTE または負の値を使用します。 コマンドをポーリングするには、0 を使用します。 タイムアウトするまでにいずれのコマンドも使用可能にならなかった場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合は、クライアントによって次のアクションが決定されます。
 | |**ppCmd** |コマンドが正常に返された場合は、このパラメーターによって、実行するコマンドのアドレスが返されます。 返されるメモリは読み取り専用です。 コマンドが完了すると、このポインターは CompleteCommand ルーチンに渡されます。 各コマンドの詳細については、このドキュメントで後述する「コマンド」を参照してください。
         
 | 戻り値 | 引数 | 説明

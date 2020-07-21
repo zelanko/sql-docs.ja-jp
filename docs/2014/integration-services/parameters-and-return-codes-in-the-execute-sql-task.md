@@ -1,5 +1,5 @@
 ---
-title: パラメーターとリターン コード、SQL 実行タスク |Microsoft Docs
+title: SQL 実行タスクのパラメーターとリターンコード |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - parameterized SQL statements [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cdc32e103642e086e81f6499bf56e5fbb71c3bd1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056789"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423559"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>SQL 実行タスクのパラメーターとリターン コード
   SQL ステートメントとストアド プロシージャでは多くの場合、`input` パラメーター、`output` パラメーター、およびリターン コードを使用します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の SQL 実行タスクでは、`Input`、`Output`、および `ReturnValue` という、パラメーターの型がサポートされています。 入力パラメーターには `Input` 型、出力パラメーターには `Output` 型、およびリターン コードには `ReturnValue` 型を使用します。  
@@ -42,19 +41,19 @@ ms.locfileid: "66056789"
   
 -   [リターン コードの値の取得](#Return_codes)  
   
--   [構成パラメーターとリターン コードで、SQL 実行タスク エディター](#Configure_parameters_and_return_codes)  
+-   [SQL 実行タスクのパラメーターとリターン コードの構成](#Configure_parameters_and_return_codes)  
   
-##  <a name="Parameter_names_and_markers"></a> パラメーター名とパラメーター マーカーを使用します。  
- SQL コマンドの構文では、SQL 実行タスクが使用する接続の種類によって、異なるパラメーター マーカーが使用されます。 たとえば、[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーの場合は、SQL コマンドが使用するパラメーター マーカーの形式を **\@varParameter** にする必要がありますが、OLE DB 接続の場合は疑問符 (?) パラメーター マーカーが必要です。  
+##  <a name="using-parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a>パラメーター名とマーカーの使用  
+ SQL コマンドの構文では、SQL 実行タスクが使用する接続の種類によって、異なるパラメーター マーカーが使用されます。 たとえば、接続マネージャーの種類では、 [!INCLUDE[vstecado](../includes/vstecado-md.md)] SQL コマンドで** \@ varparameter**形式のパラメーターマーカーを使用する必要がありますが、OLE DB 接続の種類には疑問符 (?) パラメーターマーカーが必要です。  
   
  変数とパラメーターの間でのマッピングでパラメーター名として使用できる名前も、接続マネージャーの種類によって異なります。 たとえば、[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーでは \@ プレフィックス付きのユーザー定義名を使用し、OLE DB 接続マネージャーではパラメーター名として 0 から始まる序数の数値を使用する必要があります。  
   
  次の表に、SQL 実行タスクで使用できる接続マネージャーの種類の SQL コマンドの要件をまとめます。  
   
-|接続の種類|パラメーター マーカー|[パラメーター名]|SQL コマンドの例|  
+|接続の種類|パラメーター マーカー|パラメーター名|SQL コマンドの例|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO (ADO)|?|Param1、Param2、...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<パラメーター名>|\@\<パラメーター名>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1、2、3、...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL および OLE DB|?|0、1、2、3、…|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -72,19 +71,19 @@ ms.locfileid: "66056789"
   
  パラメーターに値を提供するプロセスで、変数がパラメーター名にマップされ、SQL 実行タスクがパラメーター名の序数値を使用して、変数からパラメーターに値を読み込みます。  
   
- 接続マネージャーが使用するプロバイダーによっては、一部の OLE DB データ型がサポートされないことがあります。 たとえば、Excel ドライバーは限定されたデータ型のセットしか認識しません。 Excel ドライバーでの Jet プロバイダーの動作の詳細については、「[Excel ソース](data-flow/excel-source.md)」を参照してください。  
+ 接続マネージャーが使用するプロバイダーによっては、一部の OLE DB データ型がサポートされないことがあります。 たとえば、Excel ドライバーは限定されたデータ型のセットしか認識しません。 Excel ドライバーでの Jet プロバイダーの動作の詳細については、「 [Excel ソース](data-flow/excel-source.md)」を参照してください。  
   
 #### <a name="using-parameters-with-ole-db-connection-managers"></a>OLE DB 接続マネージャーでのパラメーターの使用  
  SQL 実行タスクが OLE DB 接続マネージャーを使用する場合は、タスクの BypassPrepare プロパティを使用できます。 SQL 実行タスクが、パラメーターと共に SQL ステートメントを使用する場合は、このプロパティを `true` に設定する必要があります。  
   
  OLE DB 接続マネージャーを使用する場合、パラメーター化サブクエリは使用できません。これは、SQL 実行タスクが OLE DB プロバイダーを介してパラメーター情報を取得できないからです。 ただし、式を使用することで、パラメーター値をクエリ文字列に連結したり、タスクの SqlStatementSource プロパティを設定したりできます。  
   
-##  <a name="Date_and_time_data_types"></a> 日付と時刻のデータ型とパラメーターの使用  
+##  <a name="using-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a>日付と時刻のデータ型でのパラメーターの使用  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 接続マネージャーおよび ADO 接続マネージャーでの日付と時刻のパラメーターの使用  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 型 (`time` および `datetimeoffset`) のデータを読み取る場合、[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーまたは ADO 接続マネージャーのいずれかを使用する SQL 実行タスクには、次の追加要件があります。  
   
--   `time` 、データ、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーは、パラメーターの型がパラメーターに格納するには、このデータを必要と`Input`または`Output`、データ型が`string`します。  
+-   データの場合 `time` 、 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーは、パラメーターの型が `Input` またはで、データ型がであるパラメーターにこのデータを格納する必要があり `Output` `string` ます。  
   
 -   `datetimeoffset` 型のデータの場合、[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーでは、次のいずれかのパラメーターにこのデータを格納する必要があります。  
   
@@ -128,12 +127,12 @@ ms.locfileid: "66056789"
   
  データが適切な入力パラメーターまたは出力パラメーターに格納されないと、パッケージは失敗します。  
   
-##  <a name="WHERE_clauses"></a> パラメーターを使用して、where 句  
+##  <a name="using-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a>WHERE 句でのパラメーターの使用  
  SELECT、INSERT、UPDATE、および DELETE コマンドには、多くの場合、WHERE 句が含まれています。WHERE 句は、SQL コマンドを限定するために、ソース テーブル内の各行が満たすべき条件を定義したフィルターの役割を果たします。 パラメーターは、WHERE 句で使用されるフィルター値を提供します。  
   
  パラメーター マーカーを使用して、パラメーター値を動的に指定できます。 SQL ステートメントで使用できるパラメーター マーカーとパラメーター名に関する規則は、SQL 実行タスクで使用される接続マネージャーの種類によって異なります。  
   
- 次の表に、SELECT コマンドの例を接続マネージャーの種類別に示します。 INSERT、UPDATE、および DELETE ステートメントでも同様です。 この例では、SELECT を使用して、2 つのパラメーターで指定された値よりも **ProductID** の値が大きい製品と小さい製品を、[!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] の **Product** テーブルから返します。  
+ 次の表に、SELECT コマンドの例を接続マネージャーの種類別に示します。 INSERT、UPDATE、および DELETE ステートメントでも同様です。 この例では、SELECT を使用して、2 つのパラメーターで指定された値よりも **ProductID** の値が大きい製品と小さい製品を、 [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] の **Product** テーブルから返します。  
   
 |接続の種類|SELECT 構文|  
 |---------------------|-------------------|  
@@ -149,44 +148,44 @@ ms.locfileid: "66056789"
   
 -   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続では、パラメーター名 \@parmMinProductID と \@parmMaxProductID を使用します。  
   
-##  <a name="Stored_procedures"></a> ストアド プロシージャでパラメーターを使用  
+##  <a name="using-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a>ストアドプロシージャでのパラメーターの使用  
  ストアド プロシージャを実行する SQL コマンドでは、パラメーター マッピングを使用することもできます。 パラメーター マーカーとパラメーター名の使用方法に関する規則は、パラメーター化クエリの規則と同様に、SQL 実行タスクで使用される接続マネージャーの種類によって異なります。  
   
- 次の表に、EXEC コマンドの例を接続マネージャーの種類別に示します。 この例では、 **の** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]ストアド プロシージャを実行します。 このストアド プロシージャでは、`input` パラメーター `@StartProductID` と `@CheckDate` を使用します。  
+ 次の表に、EXEC コマンドの例を接続マネージャーの種類別に示します。 この例では、 **の** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]ストアド プロシージャを実行します。 ストアドプロシージャでは、 `@StartProductID` パラメーターとパラメーターを使用し `@CheckDate` `input` ます。  
   
 |接続の種類|EXEC 構文|  
 |---------------------|-----------------|  
 |EXCEL および OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「[プロシージャのパラメーター](https://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
-|ADO (ADO)|IsQueryStoredProcedure に設定されている場合`False`、 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure に設定されている場合`True`、 `uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|IsQueryStoredProcedure に設定されている場合`False`、 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure に設定されている場合`True`、 `uspGetBillOfMaterials`|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「 [プロシージャのパラメーター](https://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
+|ADO (ADO)|IsQueryStoredProcedure がに設定されている場合 `False` 、`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure がに設定されている場合 `True` 、`uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|IsQueryStoredProcedure がに設定されている場合 `False` 、`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure がに設定されている場合 `True` 、`uspGetBillOfMaterials`|  
   
- 出力パラメーターを使用するには、構文で各パラメーター マーカーの後に OUTPUT キーワードを指定する必要があります。 たとえば、`EXEC myStoredProcedure ? OUTPUT` という出力パラメーターの構文は正しい構文です。  
+ 出力パラメーターを使用するには、構文で各パラメーター マーカーの後に OUTPUT キーワードを指定する必要があります。 たとえば、 `EXEC myStoredProcedure ? OUTPUT`という出力パラメーターの構文は正しい構文です。  
   
  Transact-SQL ストアド プロシージャでの入力パラメーターと出力パラメーターの使用の詳細については、「[EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)」を参照してください。  
   
-##  <a name="Return_codes"></a> リターン コードの値の取得  
+##  <a name="getting-values-of-return-codes"></a><a name="Return_codes"></a>リターンコードの値の取得  
  ストアド プロシージャは、リターン コードという整数値を返してプロシージャの実行状態を表すことができます。 SQL 実行タスクにリターン コードを実装するには、`ReturnValue` 型のパラメーターを使用します。  
   
- 次の表に、リターン コードを実装する EXEC コマンドの一部の例を接続の種類別に示します。 すべての例で、`input` パラメーターを使用します。 パラメーター マーカーとパラメーター名を使用する方法に関する規則は、すべてのパラメーターの種類-同じ`Input`、 `Output`、および`ReturnValue`します。  
+ 次の表に、リターン コードを実装する EXEC コマンドの一部の例を接続の種類別に示します。 すべての例で、`input` パラメーターを使用します。 パラメーターマーカーとパラメーター名の使用方法に関する規則は、すべてのパラメーターの型 (、、および) で同じです `Input` `Output` `ReturnValue` 。  
   
  一部の構文では、パラメーターのリテラルがサポートされません。 その場合は、変数を使用してパラメーター値を指定する必要があります。  
   
 |接続の種類|EXEC 構文|  
 |---------------------|-----------------|  
 |EXCEL および OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「[プロシージャのパラメーター](https://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
-|ADO (ADO)|IsQueryStoreProcedure に設定されている場合`False`、 `EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure に設定されている場合`True`、 `myStoredProcedure`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|IsQueryStoreProcedure に設定されている`True`します。<br /><br /> `myStoredProcedure`|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC の呼び出し構文の詳細については、MSDN ライブラリの ODBC プログラマ リファレンスにある「 [プロシージャのパラメーター](https://go.microsoft.com/fwlink/?LinkId=89462)」を参照してください。|  
+|ADO (ADO)|IsQueryStoreProcedure がに設定されている場合 `False` 、`EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure がに設定されている場合 `True` 、`myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure がに設定されて `True` います。<br /><br /> `myStoredProcedure`|  
   
- 前の表に示した構文では、SQL 実行タスクは **[直接入力]** ソース タイプを使用してストアド プロシージャを実行します。 SQL 実行タスクは **[ファイル接続]** ソース タイプを使用してストアド プロシージャを実行することもできます。 SQL 実行タスクを使用しているかどうかに関係なく、**直接入力**または**ファイル接続**ソース タイプのパラメーターを使用して、`ReturnValue`リターン コードを実装する型。 SQL 実行タスクで実行される SQL ステートメントのソース タイプの構成方法の詳細については、「[[SQL 実行タスク エディター] &#40;[全般] タブ&#41;](general-page-of-integration-services-designers-options.md)」を参照してください。  
+ 前の表に示した構文では、SQL 実行タスクは **[直接入力]** ソース タイプを使用してストアド プロシージャを実行します。 SQL 実行タスクは **[ファイル接続]** ソース タイプを使用してストアド プロシージャを実行することもできます。 SQL 実行タスクが**直接入力**または**ファイル接続**のソースの種類を使用するかどうかにかかわらず、型のパラメーターを使用して `ReturnValue` リターンコードを実装します。 SQL 実行タスクで実行される SQL ステートメントのソース タイプの構成方法の詳細については、「[[SQL 実行タスク エディター] &#40;[全般] タブ&#41;](general-page-of-integration-services-designers-options.md)」を参照してください。  
   
  Transact-SQL ストアド プロシージャでのリターン コードの使用の詳細については、「[RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql)」を参照してください。  
   
-##  <a name="Configure_parameters_and_return_codes"></a> 構成パラメーターとリターン コードで、SQL 実行タスク  
+##  <a name="configuring-parameters-and-return-codes-in-the-execute-sql-task"></a><a name="Configure_parameters_and_return_codes"></a>SQL 実行タスクでのパラメーターとリターンコードの構成  
  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで設定できる、パラメーターとリターン コードのプロパティの詳細については、次のトピックを参照してください。  
   
--   [SQL 実行タスク エディター&#40;パラメーター マッピング ページ&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  
+-   [[SQL 実行タスクエディター] &#40;[パラメーターマッピング] ページ&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
@@ -197,11 +196,11 @@ ms.locfileid: "66056789"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   blogs.msdn.com のブログ「[出力パラメーターを使用するストアド プロシージャ](https://go.microsoft.com/fwlink/?LinkId=157786)」  
+-   blogs.msdn.com のブログ「 [出力パラメーターを使用するストアド プロシージャ](https://go.microsoft.com/fwlink/?LinkId=157786)」  
   
 -   msftisprodsamples.codeplex.com の CodePlex サンプル「 [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL 実行タスク](control-flow/execute-sql-task.md)   
  [SQL 実行タスクにおける結果セット](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   

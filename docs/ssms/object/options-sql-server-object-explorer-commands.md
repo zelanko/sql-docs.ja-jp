@@ -1,6 +1,6 @@
 ---
-title: '[オプション] ([SQL Server オブジェクト エクスプローラー]/[コマンド]) | Microsoft Docs'
-ms.custom: ''
+title: '[オプション] ([SQL Server オブジェクト エクスプローラー]/[コマンド])'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dc85a3ab4dcb5dff673e9e3dd893d529ebb6a69
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5b0d34ac6849f47f841a26736ebc0c0224073c42
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264044"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257121"
 ---
-# <a name="options-sql-server-object-explorer---commands"></a>[オプション] \([SQL Server オブジェクト エクスプローラー]/[コマンド])
+# <a name="options-sql-server-object-explorer---commands"></a>[オプション] ([SQL Server オブジェクト エクスプローラー]/[コマンド])
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 オブジェクト エクスプローラーでテーブルまたはビューを右クリックすると、テーブルでの行の表示に関する次の 2 つのオプションが表示されます。  
   

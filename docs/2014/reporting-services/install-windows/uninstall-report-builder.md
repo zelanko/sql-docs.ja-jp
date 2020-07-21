@@ -1,5 +1,5 @@
 ---
-title: レポート ビルダー (レポート ビルダー) のスタンドアロン バージョンのアンインストール |Microsoft Docs
+title: レポートビルダーのスタンドアロンバージョンをアンインストールする (レポートビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108658"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>スタンドアロン バージョンのレポート ビルダーのアンインストール (レポート ビルダー)
@@ -32,15 +32,15 @@ ms.locfileid: "66108658"
   
 3.  **[名前]** の一覧で、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート ビルダーを見つけてクリックします。  
   
-4.  **[アンインストール]** をクリックします。  
+4.  [**アンインストール**] をクリックします。  
   
 5.  レポート ビルダーをアンインストールするかどうかを確認するメッセージが表示された場合は、 **[はい]** をクリックします。  
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>レポート ビルダーをコマンド ラインからアンインストールするには  
   
-1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
+1.  [**スタート**] メニューの [**ファイル名を指定して実行**] をクリックします。  
   
-2.  **オープン**テキスト ボックスに「 `cmd.`  
+2.  [**名前**] ボックスに「」と入力します。`cmd.`  
   
 3.  コマンド プロンプト ウィンドウで、ReportBuilder3_x86.msi が格納されているフォルダーに移動します。  
   
@@ -52,10 +52,10 @@ ms.locfileid: "66108658"
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-1.  **Enter**キーを押します。  
+1.  [**Enter**] キーを押します。  
   
 ## <a name="see-also"></a>参照  
- [インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)   
- [レポート ビルダーのスタンドアロン バージョンをインストール&#40;レポート ビルダー&#41;](install-report-builder.md)  
+ [インストール、アンインストール、およびレポートビルダーサポート](../install-uninstall-and-report-builder-support.md)   
+ [レポートビルダー &#40;レポートビルダーのスタンドアロンバージョンをインストール&#41;](install-report-builder.md)  
   
   

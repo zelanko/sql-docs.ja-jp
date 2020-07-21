@@ -12,18 +12,17 @@ helpviewer_keywords:
 - updating statistics
 - Update Statistics task [Integration Services]
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: be80af34bc2dc8b5d069406bc13a8f8f9b25c42c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1507ada1e4fa087901383930fce4996c191fb553
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829454"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438069"
 ---
 # <a name="update-statistics-task"></a>統計の更新タスク
-  統計の更新タスクは、指定されたテーブルまたはインデックス付きビュー内の 1 つ以上の統計グループ (コレクション) についてキー値の分布に関する情報を更新します。 詳細については、「 [Statistics](../../relational-databases/statistics/statistics.md)」を参照してください。  
+  統計の更新タスクは、指定されたテーブルまたはインデックス付きビュー内の 1 つ以上の統計グループ (コレクション) についてキー値の分布に関する情報を更新します。 詳細については、[統計](../../relational-databases/statistics/statistics.md)に関する記事を参照してください。  
   
  統計の更新タスクを使用すると、パッケージは単一データベースまたは複数のデータベース内の統計を更新できます。 このタスクにより単一データベース内の統計のみを更新する場合、タスクによって統計を更新するビューおよびテーブルを選択できます。 更新は、すべての統計、列統計のみ、またはインデックス統計のみを対象とするように構成できます。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62829454"
   
 -   インデックス統計にのみ更新が適用される場合、WITH INDEX 句が含められます。  
   
- 統計の更新タスクにより複数データベース内の統計を更新する場合、タスクは複数の UPDATE STATISTICS ステートメントを各テーブルまたはビューに対して 1 つずつ実行します。 UPDATE STATISTICS の全インスタンスで同じ句が使用されますが、*table_name* または *view_name* の値が異なります。 詳細については、「[CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)」および「[UPDATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql)」を参照してください。  
+ 統計の更新タスクにより複数データベース内の統計を更新する場合、タスクは複数の UPDATE STATISTICS ステートメントを各テーブルまたはビューに対して 1 つずつ実行します。 UPDATE STATISTICS の全インスタンスで同じ句が使用されますが、 *table_name* または *view_name* の値が異なります。 詳細については、「[CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)」および「[UPDATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/update-statistics-transact-sql)」を参照してください。  
   
 > [!IMPORTANT]  
 >  実行する Transact-SQL ステートメントを作成するためにタスクが費やす時間は、タスクが更新する統計数に比例します。 多数のインデックスを含むデータベースのすべてのテーブルおよびビュー内の統計の更新、または複数のデータベース内の統計の更新を実行するようにタスクが構成されている場合、タスクが Transact-SQL ステートメントを生成するには非常に長い時間がかかることがあります。  

@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571554"
 ---
 # <a name="data-alert-messages"></a>データ警告メッセージ
@@ -29,12 +29,12 @@ SQL Server Reporting Services データ警告は、2 種類のデータ警告メ
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
-##  <a name="DataAlertMessages"></a> データ警告メッセージ  
+##  <a name="data-alert-messages"></a><a name="DataAlertMessages"></a> データ警告メッセージ  
  次に示すのは、結果を含むデータ警告メッセージと、エラー説明を含む警告メッセージのスクリーン ショットです。  
   
  **結果メッセージ**  
   
- ![結果を含むデータ警告電子メール メッセージ](../reporting-services/media/rs-alertmessageresults.gif "結果を含むデータ警告電子メール メッセージ")  
+ ![結果を含むデータ警告の電子メール メッセージ](../reporting-services/media/rs-alertmessageresults.gif "結果を含むデータ警告の電子メール メッセージ")  
   
  **エラー メッセージ**  
   
@@ -59,7 +59,7 @@ SQL Server Reporting Services データ警告は、2 種類のデータ警告メ
  2 つのメッセージ型の間で唯一異なるのは、項目 5 ( **警告結果**) です。 データ警告インスタンスまたはデータ警告メッセージの作成時にエラーが発生した場合は、問題を説明するエラー メッセージが **[警告結果]** に表示されます。 エラー メッセージ (すべての受信者に送信される) は、業務上の意思決定に有効または必要な警告結果が利用できないことを受信者に知らせます。  
   
   
-##  <a name="HowTo"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="HowTo"></a> 関連タスク  
  データ警告メッセージ内に表示される情報の多くを提供する、データ警告定義を作成および編集するための手順を紹介しているトピックの一覧を次に示します。  
   
 -   [警告デザイナーでのデータ警告の作成](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  

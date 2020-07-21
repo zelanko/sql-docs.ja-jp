@@ -1,6 +1,6 @@
 ---
-title: 新しい登録済みサーバーの作成 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 新しい登録済みサーバーの作成
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Registered Servers [SQL Server], creating new registered servers
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8561eb723337530818f45c5a845f7b352b328653
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2907c33f6d28e5652330051979be6a20aa2be435
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058476"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>新しい登録済みサーバーの作成 (SQL Server Management Studio)
   このトピックでは、サーバーを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の 登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。 ローカル コンピューターのサーバー インスタンスを登録するには、特殊なメニュー オプションを使用します。  
@@ -38,7 +37,7 @@ ms.locfileid: "68188139"
   
      サーバー登録は、ファイル システムではなく中央管理サーバーに保存されます。 中央管理サーバーおよび従属登録済みサーバーは、Windows 認証を使用しないと登録できません。 中央管理サーバーを登録すると、そのサーバーに関連する登録済みサーバーが自動的に表示されます。 中央管理サーバーの詳細については、「 [中央管理サーバーを使用した複数のサーバーの管理](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、中央管理サーバーを指定できません。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>ローカル サーバー インスタンスを自動的に登録するには  
   
@@ -52,15 +51,15 @@ ms.locfileid: "68188139"
      [登録済みサーバー] を使用してサーバーを登録する場合、 **[サーバーの種類]** ボックスは読み取り専用になり、[登録済みサーバー] ペインに表示されているサーバーの種類と一致する値が表示されます。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]** ツール バーの **[データベース エンジン]** 、 **[分析サーバー]** 、 **[Reporting Services]** 、または **[Integration Services]** をクリックします。  
   
      **サーバー名**  
-     登録するサーバー インスタンスを、 *\<servername>* [\\ *\<instancename>* ] という形式で選択します。  
+     登録するサーバーインスタンスを [] という形式で選択し *\<servername>* \\ *\<instancename>* ます。  
   
-     **[認証]**  
+     **認証**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続する際には、2 つの認証モードのいずれかを選択します。  
   
      **[Windows 認証]**  
      Windows 認証モードを使用すると、ユーザーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウントを使用して接続できます。  
   
-     **SQL Server 認証 (SQL Server Authentication)**  
+     **SQL Server 認証**  
      指定されたログイン名とパスワードを使用して、信頼関係の低い接続から接続した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン アカウントが設定されているかどうか、指定されたパスワードが以前に記録されたパスワードと一致しているかどうかを確認することで認証を行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログイン アカウントが設定されていない場合、認証は失敗し、エラー メッセージが返されます。  
   
     > [!IMPORTANT]  
@@ -72,7 +71,7 @@ ms.locfileid: "68188139"
      **Login**  
      接続に使用するログインを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合にのみ使用できます。  
   
-     **Password**  
+     **パスワード**  
      ログインのパスワードを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合にのみ編集できます。  
   
      **[パスワードを保存する]**  
@@ -90,7 +89,7 @@ ms.locfileid: "68188139"
      **テスト**  
      クリックすると、 **[サーバー名]** で選択されたサーバーへの接続をテストします。  
   
-     **[保存]**  
+     **および**  
      クリックすると、登録済みサーバーの設定を保存します。  
   
 ## <a name="multiserver-queries"></a>マルチサーバー クエリ  
@@ -100,7 +99,7 @@ ms.locfileid: "68188139"
   
  中央管理サーバーに登録されているすべてのサーバーに対してクエリを実行するには、中央管理サーバーを展開し、サーバー グループを右クリックして、 **[接続]** をポイントし、 **[新しいクエリ]** をクリックします。 新しいクエリ エディター ウィンドウで実行したクエリは、保存されている接続情報およびユーザーの Windows 認証コンテキストを使用して、サーバー グループ内のすべてのサーバーに対して実行されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [オブジェクト エクスプローラーのシステム オブジェクトの非表示](../object/hide-system-objects-in-object-explorer.md)   
  [登録済みサーバー情報のエクスポート &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [登録済みサーバー情報のインポート &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md)  

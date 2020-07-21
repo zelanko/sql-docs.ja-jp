@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 321859ffa20f9c576635a2c082b5f0d2458e848d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3c0eb5fd5b69d87532770b439c86340dc928fb34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653066"
 ---
 # <a name="filter-table-rows"></a>[テーブル行のフィルター選択]
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[テーブル行のフィルター選択]** ページでは、次のことを行うことができます。  
   
 -   静的行フィルターをスナップショット パブリケーション、トランザクション パブリケーション、およびマージ パブリケーションのテーブル アーティクルに適用します。  
@@ -46,11 +46,11 @@ ms.locfileid: "68770631"
   
  フィルターには、レプリケーションで行の識別に使用される **rowguidcol** を含めることはできません。 既定では、これはマージ レプリケーションのセットアップ時に追加される列であり、 **rowguid**という名前が付けられます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[フィルター選択されたテーブル]**  
  このペインには、パブリケーションのテーブル アーティクルに追加したフィルターが表示されます。 行フィルターが設定されているテーブルは、ペイン内で最上位レベルのノードとして表示されます。 マージ パブリケーションの場合、結合フィルターを介してフィルター選択が拡張されているテーブルは、子ノードとして表示されます。  
   
- **[追加]**  
+ **追加**  
  **[追加]** をクリックすると、テーブル アーティクルをフィルター選択するためのダイアログ ボックスが表示されます。 スナップショット パブリケーションまたはトランザクション パブリケーションに対して **[追加]** をクリックすると、ダイアログ ボックスが即座に表示されます。 マージ パブリケーションのために **[追加]** をクリックすると、次の 3 つの選択肢が表示されます。 **[フィルターの追加]** 、 **[選択したフィルターを拡張するために結合を追加する]** 、 **[フィルターを自動的に生成]** 。  
   
 -   **[フィルターの追加]** をクリックすると、 **[フィルターの追加]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、行フィルターをテーブル アーティクルに適用できます。 たとえば、 **[フィルターの追加]** ダイアログ ボックスを使用して、顧客データ テーブルをサブスクライバーにレプリケートするときにフランスの顧客に関するデータだけを格納するように指定できます。  
@@ -74,7 +74,7 @@ ms.locfileid: "68770631"
  **[テーブルの検索]**  
  結合フィルターを持つマージ パブリケーションのみです。 **[テーブルの検索]** をクリックすると、複雑なフィルター ツリー内でテーブルを検索できます。 複雑なリレーションシップを持つデータベースでは、1 つのテーブルを複数のテーブルに結合できます。その場合、テーブルはフィルター ツリー内で複数の場所に表示されます。  
   
- 実際のテーブルはツリー内の 1 つの場所に表示されます。他の場所では、テーブルがショートカットによって表されます。 テーブルのショートカットはテーブルの単なる参照であり、テーブルの子ノードを示すものではありません。 ショートカット ノードはショートカット矢印付きで示されます。このノードを展開すると、 **[\<tablename> のテーブルを表示するには、[テーブルの検索]** をクリックします。] というテキストが表示されます。  
+ 実際のテーブルはツリー内の 1 つの場所に表示されます。他の場所では、テーブルがショートカットによって表されます。 テーブルのショートカットはテーブルの単なる参照であり、テーブルの子ノードを示すものではありません。 ショートカット ノードはショートカット矢印付きで示されます。このノードを展開すると、 **[\<tablename> のテーブルを表示するには、[テーブルの検索] をクリックします]** というテキストが表示されます。  
   
  ペインでショートカット ノードをクリックし、 **[テーブルの検索]** をクリックします。 ペインが拡張され、テーブルが反転表示されます。 ショートカット ノードを選択せずに **[テーブルの検索]** をクリックすると、 **[テーブルの検索]** ダイアログ ボックスが表示されます。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68770631"
 ## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)   
+ [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

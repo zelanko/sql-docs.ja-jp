@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc19d059d411f6d07ae48b8a4b8e1d851a17ca67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067336"
 ---
 # <a name="projects-sql-server-management-studio"></a>プロジェクト (SQL Server Management Studio)
   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のプロジェクトは、論理的に関連したスクリプトやファイルの集合体であり、データベースの管理と開発のためにスクリプトやファイルをまとめて保存できるようになっています。  
@@ -56,8 +55,8 @@ ms.locfileid: "63035688"
 |接続プロパティを変更する方法について説明します。|[プロジェクト内の接続のプロパティを表示または変更する方法](view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
 ## <a name="see-also"></a>参照  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
- [ソリューション&#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
+ [ソリューション エクスプローラー](solution-explorer.md)   
+ [ソリューション &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [ソリューション エクスプローラーのソース管理](../../database-engine/solution-explorer-source-control.md)  
   
   

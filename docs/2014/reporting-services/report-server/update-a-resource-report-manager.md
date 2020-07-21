@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103054"
 ---
 # <a name="update-a-resource-report-manager"></a>リソースの更新 (レポート マネージャー)
@@ -43,9 +43,9 @@ ms.locfileid: "66103054"
   
  更新するリソースにレポートで使用する画像が含まれる場合、更新された画像を表示するにはレポートを更新する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [[コンテンツ] ページ (レポート マネージャー)](../contents-page-report-manager.md)   
- [[ファイルのアップロード] ページ &#40;レポート マネージャー&#41;](../upload-file-page-report-manager.md)   
+## <a name="see-also"></a>参照  
+ [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../contents-page-report-manager.md)   
+ [[ファイルのアップロード] ページ &#40;レポートマネージャー&#41;](../upload-file-page-report-manager.md)   
  [フォルダーへのファイルのアップロード](upload-files-to-a-folder.md)   
  [レポート マネージャー F1 ヘルプ](../report-manager-f1-help.md)  
   

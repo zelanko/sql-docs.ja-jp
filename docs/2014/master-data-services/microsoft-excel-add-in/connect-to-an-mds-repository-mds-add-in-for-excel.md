@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b040198b4ed152f8fa4ea00571375de911822687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f29cdaad3f362c190372ec510f24cb67efe15f7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482615"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961392"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>MDS リポジトリへの接続 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、データの読み込みまたはパブリッシュの前に MDS リポジトリに接続する必要があります。  
@@ -44,15 +43,15 @@ ms.locfileid: "65482615"
   
 7.  必要であれば、 **[テスト]** をクリックして接続をテストします。 確認ダイアログまたはエラー ダイアログが表示されます。 **[OK]** をクリックして閉じます。  
   
-8.  **[接続]** をクリックします。 **[マスター データ サービス]** ペインが表示されます。  
+8.  **[Connect]** をクリックします。 **[マスター データ サービス]** ペインが表示されます。  
   
 ## <a name="next-steps"></a>次の手順  
   
 -   [MDS から Excel へのデータの読み込み](export-data-to-excel-from-master-data-services.md)  
   
--   [読み込み前にデータをフィルター処理&#40;MDS アドインの Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)  
+-   [&#40;Excel 用 MDS アドインを読み込む前にデータをフィルター処理する&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [接続 (Excel 用 MDS アドイン)](connections-mds-add-in-for-excel.md)  
   
   

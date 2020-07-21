@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd2246ed1a6c2c03e3a9f5c1989ce9e544c8b199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 981014acd2c250406254c53d4e245e9dd3aca280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752217"
 ---
-# <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   対称キー GUID または暗号化テキストから対称キーの名前を返します。  
   
@@ -51,9 +51,9 @@ KEY_NAME ( ciphertext | key_guid )
 ## <a name="permissions"></a>アクセス許可  
  以降で [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], 、メタデータの表示は、セキュリティ保護可能なユーザーが所有しているかをする、ユーザーが権限を許可されてに制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. key_guid を使用して対称キーの名前を表示する  
+### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-key_guid"></a>A. key_guid を使用して対称キーの名前を表示する  
  **master** データベースには、##MS_ServiceMasterKey## という名前の対称キーがあります。 次の例では、sys.symmetric_keys 動的管理ビューからそのキーの GUID を取得し、変数に割り当ててからその変数を KEY_NAME 関数に渡して、GUID に対応する名前を返す方法を示します。  
   
 ```  

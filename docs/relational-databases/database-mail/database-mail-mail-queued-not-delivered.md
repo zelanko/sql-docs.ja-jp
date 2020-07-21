@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c776fd176379e8a65bdc70f6bf4c56fd370bef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8b35c244e086c32cf62882a5e3f09b8fcc410b23
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726520"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>データベース メール:メールがキューされました、配信されません 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 このトピックでは、電子メール メッセージが正常にキューに登録されても、そのメッセージが配信されない問題のトラブルシューティングを行う方法について説明します。
 
@@ -52,7 +52,7 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 ## <a name="message-status-unsent"></a>メッセージの状態 - unsent 
 
-状態 **unsent** は、電子メール メッセージが[データベース メール外部プログラム](database-mail-external-program.md)でまだ処理されていないことを表します。 データベース メール外部プログラムによるメッセージの処理は遅れることがあります。この外部プログラムのメッセージ処理速度は、ネットワークの状態、再試行タイムアウト、メッセージの量、SMTP サーバーの処理能力によって異なります。 問題が解決しない場合は、複数のプロファイルを使用して、複数の SMTP サーバーにメッセージを分散させることを検討します。
+状態 **unsent** は、電子メール メッセージが[データベース メール外部プログラム](database-mail-external-program.md)でまだ処理されていないことを表します。 データベース メール外部プログラムによるメッセージの処理は遅れることがあります。この外部プログラムのメッセージ処理速度は、ネットワークの状態、再試行タイムアウト、メッセージの量、および SMTP サーバーの処理能力によって異なります。 問題が解決しない場合は、複数のプロファイルを使用して、複数の SMTP サーバーにメッセージを分散させることを検討します。
 
 正常に配信されたメッセージを対象に、最終更新日をチェックします。 最後に正常な配信が行われてからしばらく経過している場合は、sysmail_event_log ビューで、この外部プログラムが Service Broker によって正常に開始されたことを確認します。 最後の試行で外部プログラムが開始されなかった場合は、データベース メール外部プログラムが適切なディレクトリにあり、SQL Server のサービス アカウントにこの実行可能ファイルの実行権限があるかどうかを確認します。
 
@@ -73,7 +73,7 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 
 
-##  <a name="RelatedContent"></a> 参照
+##  <a name="see-also"></a><a name="RelatedContent"></a> 参照
   
 -  [データベース メールの概要](database-mail.md)
 

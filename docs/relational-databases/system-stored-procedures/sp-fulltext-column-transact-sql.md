@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_column (TRANSACT-SQL) |Microsoft Docs
+title: sp_fulltext_column (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124338"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820454"
 ---
-# <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (TRANSACT-SQL)
+# <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  テーブルの特定の列がフルテキスト インデックスに参加するかどうかを指定します。  
+  テーブルの特定の列がフルテキストインデックスに参加するかどうかを指定します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、 [ALTER フルテキストインデックス](../../t-sql/statements/alter-fulltext-index-transact-sql.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,26 +47,26 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @tabname = ] 'qualified_table_name'` 1 つまたは 2 つの部分のテーブル名です。 テーブルは、現在のデータベース内に存在している必要があります。 テーブルにフルテキスト インデックスがある。 *qualified_table_name*は**nvarchar (517)** 既定値はありません。  
+`[ @tabname = ] 'qualified_table_name'`1つまたは2つの要素で構成されるテーブル名を指定します。 テーブルは、現在のデータベース内に存在している必要があります。 テーブルにフルテキスト インデックスがある。 *qualified_table_name*は**nvarchar (517)** で、既定値はありません。  
   
-`[ @colname = ] 'column_name'` 内の列の名前を指定*qualified_table_name*します。 列は、いずれかの文字である必要があります**varbinary (max)** または**イメージ**列、計算列にすることはできません。 *column_name*は**sysname**、既定値はありません。  
+`[ @colname = ] 'column_name'`*Qualified_table_name*内の列の名前を指定します。 列には、文字、 **varbinary (max)** 、または**image**型の列を指定する必要があり、計算列にすることはできません。 *column_name*は**sysname**であり、既定値はありません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列に格納されているテキスト データのフルテキスト インデックスを作成できます**varbinary (max)** または**イメージ**データ型。 画像と画像はインデックス作成されません。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 **varbinary (max)** または**image**データ型の列に格納されているテキストデータのフルテキストインデックスを作成できます。 画像と画像にはインデックスが付けられません。  
   
-`[ @action = ] 'action'` 実行する操作です。 *アクション*は**varchar (20)** , で、なし、既定値は、次の値のいずれかを指定します。  
+`[ @action = ] 'action'`実行するアクションを指定します。 *アクション*は**varchar (20)**,、既定値はありません、次の値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**add**|追加*column_name*の*qualified_table_name*テーブルの非アクティブなフルテキスト インデックスにします。 これにより、フルテキスト インデックスの列。|  
-|**drop**|削除*column_name*の*qualified_table_name*テーブルの非アクティブなフルテキスト インデックスから。|  
+|**add**|テーブルの非アクティブなフルテキストインデックスに*qualified_table_name*の*column_name*を追加します。 この操作により、列でフルテキストインデックスを作成できるようになります。|  
+|**」**|テーブルの非アクティブなフルテキストインデックスから*qualified_table_name*の*column_name*を削除します。|  
   
-`[ @language = ] 'language_term'` 列に格納されたデータの言語です。 含まれる言語の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)します。  
+`[ @language = ] 'language_term'`列に格納されているデータの言語を示します。 に含まれる言語の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [Fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
->  列には、複数の言語またはサポートされていない言語でのデータが含まれている場合は、'ニュートラル' を使用します。 既定値は、構成オプション '既定のフルテキスト言語' によって指定されます。  
+>  列に複数の言語またはサポートされていない言語のデータが含まれている場合は、' ニュートラル ' を使用してください。 既定値は、構成オプション ' default full text language ' によって指定されます。  
   
-`[ @type_colname = ] 'type_column_name'` 内の列の名前を指定*qualified_table_name*のドキュメントの種類を保持している*column_name*します。 この列である必要があります**char**、 **nchar**、 **varchar**、または**nvarchar**します。 データ型の場合にのみ使用される*column_name*の種類は**varbinary (max)** または**イメージ**します。 *type_column_name*は**sysname**、既定値はありません。  
+`[ @type_colname = ] 'type_column_name'`*Column_name*のドキュメント型を保持する*qualified_table_name*内の列の名前を指定します。 この列は**char**、 **nchar**、 **varchar**、または**nvarchar**である必要があります。 *Column_name*のデータ型が**varbinary (max)** または**image**型の場合にのみ使用されます。 *type_column_name*は**sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -74,13 +74,13 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- フルテキスト インデックスがアクティブで、実行中の作成は停止します。 また、アクティブなフルテキスト インデックスを持つテーブルで変更の追跡が有効になっている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在のインデックスが維持されます。 たとえば [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、あるテーブルに対して現在行われているインデックス作成がすべて停止され、既存のインデックスの削除、および新しいインデックスの作成が開始されます。  
+## <a name="remarks"></a>解説  
+ フルテキストインデックスがアクティブな場合、実行中の作成は停止されます。 また、アクティブなフルテキスト インデックスを持つテーブルで変更の追跡が有効になっている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在のインデックスが維持されます。 たとえば [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、あるテーブルに対して現在行われているインデックス作成がすべて停止され、既存のインデックスの削除、および新しいインデックスの作成が開始されます。  
   
- 変更の追跡が、列を追加またはインデックスを保持するには、テーブルを非アクティブであり、必要な列を追加または削除する必要があります、フルテキスト インデックスから削除する必要がある場合。 この操作では、インデックスは変化しません。 テーブルは実用的では作成を開始するときに、後でアクティブにできます。  
+ 変更の追跡がオンになっていて、インデックスを保持しながら列をフルテキストインデックスから追加または削除する必要がある場合は、テーブルを非アクティブ化し、必要な列を追加または削除する必要があります。 この操作では、インデックスは変化しません。 作成を開始することが実用的な場合は、テーブルを後でアクティブにすることができます。  
   
 ## <a name="permissions"></a>アクセス許可  
- ユーザーのメンバーである必要があります、 **db_ddladmin**固定データベース ロール、またはのメンバー、 **db_owner**固定データベース ロール、またはテーブルの所有者。  
+ ユーザーは、 **db_ddladmin**固定データベースロールのメンバーであるか、 **db_owner**固定データベースロールのメンバーであるか、テーブルの所有者である必要があります。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`DocumentSummary` テーブルの `Document` 列を、テーブルのフルテキスト インデックスに追加します。  
@@ -92,14 +92,14 @@ EXEC sp_fulltext_column 'Production.Document', DocumentSummary, 'add';
 GO  
 ```  
   
- 次の例では、`spanishTbl` というテーブルにフルテキスト インデックスが作成されていることを前提としています。 追加する、`spanishCol`フルテキスト インデックス列は、次のストアド プロシージャを実行します。  
+ 次の例では、`spanishTbl` というテーブルにフルテキスト インデックスが作成されていることを前提としています。 `spanishCol`列をフルテキストインデックスに追加するには、次のストアドプロシージャを実行します。  
   
 ```  
 EXEC sp_fulltext_column 'spanishTbl', 'spanishCol', 'add', 0xC0A;  
 GO  
 ```  
   
- このクエリを実行するとします。  
+ このクエリを実行すると、次のようになります。  
   
 ```  
 SELECT *   
@@ -107,18 +107,18 @@ FROM spanishTbl
 WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')  
 ```  
   
- 結果セットには異なる形式の行が含まれます`trabajar`に (機能) するなど`trabajo`、 `trabajamos`、および`trabajan`します。  
+ 結果セットには、、、など、さまざまな形式の行が含まれ `trabajar` `trabajo` `trabajamos` `trabajan` ます。  
   
 > [!NOTE]  
->  1 つのフルテキスト クエリ関数句で示されているすべての列には、同じ言語を使用する必要があります。  
+>  1つのフルテキストクエリ関数句に示されているすべての列は、同じ言語を使用する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [照会する&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
- [sp_help_fulltext_columns_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
- [sp_help_fulltext_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [フルテキスト検索およびセマンティック検索ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [sp_help_fulltext_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
+ [sp_help_fulltext_columns_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

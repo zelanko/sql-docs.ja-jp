@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d4e79689b80a40d00958fa557fe51df2adf9c14
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63162384"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025375"
 ---
 # <a name="enable-indexes-and-constraints"></a>インデックスと制約の有効化
   このトピックでは、無効にされている [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインデックスを、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して有効にする方法を説明します。 無効にされたインデックスは、再構築されるか削除されるまで無効な状態のままとなります。  
@@ -33,7 +32,7 @@ ms.locfileid: "63162384"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して無効なインデックスを有効にするには:**  
   
@@ -41,9 +40,9 @@ ms.locfileid: "63162384"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   インデックスの再構築後、インデックスを無効にしたために無効になった制約を手動で有効にする必要があります。 PRIMARY KEY 制約と UNIQUE 制約については、関連するインデックスを再構築すると有効になります。 このインデックスを再構築しないと、PRIMARY KEY 制約や UNIQUE 制約を参照する FOREIGN KEY 制約を有効にすることはできません。 FOREIGN KEY 制約を有効にするには、ALTER TABLE CHECK CONSTRAINT ステートメントを使用します。  
   
@@ -68,12 +67,12 @@ ms.locfileid: "63162384"
     |DROP INDEX|操作は成功します。|操作は成功します。|  
     |CREATE INDEX WITH DROP_EXISTING|操作は失敗します。|操作は成功します。|  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 DBCC DBREINDEX を使用している場合、ユーザーはテーブルを所有しているか、 **sysadmin** 固定サーバー ロールのメンバーであるか、 **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-enable-a-disabled-index"></a>無効なインデックスを有効にするには  
   
@@ -103,7 +102,7 @@ ms.locfileid: "63162384"
   
  **[インデックスの再構築]** ダイアログ ボックスには、次の情報が表示されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>無効にされたインデックスを ALTER INDEX を使用して有効にするには  
   

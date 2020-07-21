@@ -1,5 +1,5 @@
 ---
-title: SQL Server のプロパティ ([起動時のパラメーター] タブ) |Microsoft Docs
+title: SQL Server のプロパティ] ([起動時のパラメーター] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f45a017ab1d04643b4bc85454f9dfe0db0d17792
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62679166"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000524"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([起動時のパラメーター] タブ)
   このダイアログ ボックスを使用すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の起動時のパラメーターを追加または削除できます。 起動時のパラメーターは [!INCLUDE[ssDE](../../includes/ssde-md.md)] のパフォーマンスに大きな影響を及ぼします。 起動時のパラメーターを追加または変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[起動時のパラメーターの指定]**  
  パラメーターを追加するには、パラメーターを入力し、 **[追加]** をクリックします。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62679166"
   
 -   すべての起動時のパラメーターの先頭文字は - (ダッシュ) で、2 番目の値は文字です。  
   
-## <a name="required-parameters"></a>必要なパラメーター  
+## <a name="required-parameters"></a>必須のパラメーター  
  以下のパラメーターが必要です。 これらは変更できますが、削除できません。  
   
 -   -d は、 **master.mdf** ファイル (master データベースのデータ ファイル) のパスです。  
@@ -69,7 +68,7 @@ ms.locfileid: "62679166"
 > [!CAUTION]  
 >  省略可能なパラメーターの中には、サーバーの動作を変更し、パフォーマンスに影響を与えるものもあります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このページは、レジストリの関連エントリを変更できるユーザーのみが使用できます。 該当するユーザーは次のとおりです。  
   
 -   ローカル管理者グループのメンバー。  
@@ -77,6 +76,6 @@ ms.locfileid: "62679166"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって使用されるドメイン アカウント ( [!INCLUDE[ssDE](../../includes/ssde-md.md)] がドメイン アカウントで実行されるように構成されている場合)。  
   
 ## <a name="books-online-references"></a>オンライン ブックの参照  
- 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]起動時のパラメーターを参照してください"する方法。サーバーのスタートアップ オプションの構成 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時のパラメーターの追加情報については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「サーバーのスタートアップ オプションを構成する方法 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー)」を参照してください。  
   
   

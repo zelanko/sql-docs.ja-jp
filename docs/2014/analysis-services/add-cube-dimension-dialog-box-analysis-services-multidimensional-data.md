@@ -1,5 +1,5 @@
 ---
-title: キューブ ディメンション ダイアログ ボックス (Analysis Services - 多次元データ) の追加 |Microsoft Docs
+title: '[キューブディメンションの追加] ダイアログボックス (Analysis Services-多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0de75c02c39b0690184f35f2b0b6a07d7ed9a4f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062944"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528231"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>[キューブ ディメンションの追加] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [キューブ ディメンションの追加] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、キューブにデータベース ディメンションへの参照を追加できます。 **[キューブ ディメンションの追加]** ダイアログ ボックスは、次のいずれかの操作で表示できます。  
@@ -33,14 +32,14 @@ ms.locfileid: "66062944"
 > [!NOTE]  
 >  各キューブ ディメンションには、メジャー グループに対するリレーションシップを 1 つのみ設定できます。 しかし、データ ソース ビューで、キューブ ディメンションの基となるデータベース ディメンションが複数のリレーションシップによりメジャー グループに関連付けられている場合、複数のキューブ ディメンションを作成してキューブに追加できます。 このようなディメンションを多様ディメンションと呼び、一般的には時間ディメンションに使用されます。  
   
-## <a name="options"></a>および  
- **ディメンションの選択**  
+## <a name="options"></a>オプション  
+ **[ディメンションの選択]**  
  選択したキューブに追加されるキューブ ディメンションの基となる、既存のデータベース ディメンションを選択します。 同じデータベース ディメンションから、複数のキューブ ディメンションを定義できます。  
   
 > [!NOTE]  
 >  同じデータベース ディメンションに基づく複数のキューブ ディメンションがキューブに追加される場合、追加されるキューブ ディメンションは多様ディメンションと呼ばれます。  
   
-## <a name="see-also"></a>関連項目  
- [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>参照  
+ [多次元データ &#40;Analysis Services のデザイナーとダイアログボックス&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

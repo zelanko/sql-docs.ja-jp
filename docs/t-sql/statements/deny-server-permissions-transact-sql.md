@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de59423c368bc966fab3958fbeb4b04888f4e2a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32a379b4b8df00f4929fad6bcef53d4504c5324d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766674"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY (サーバーの権限の拒否) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   サーバーの権限を拒否します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68114776"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ]  
     [ CASCADE ]  
@@ -88,7 +88,7 @@ AS <principal> 句は、権限の拒否者として記録されるプリンシ�
  *server_role*  
  サーバー ロールを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー スコープの権限を拒否できるのは、現在のデータベースが master のときだけです。  
   
  サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。 サーバー ロールのメンバーシップに関する情報は、[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) カタログ ビューで確認できます。  
@@ -132,7 +132,7 @@ AS <principal> 句は、権限の拒否者として記録されるプリンシ�
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の 3 つのサーバー権限が、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で追加されました。  
   
  **CONNECT ANY DATABASE** 権限  
@@ -147,7 +147,7 @@ AS <principal> 句は、権限の拒否者として記録されるプリンシ�
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限またはセキュリティ保護可能なリソースの所有権が必要です。 AS 句を使用する場合、指定されたプリンシパルは、権限が拒否されるセキュリティ保護可能なリソースを所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. SQL Server ログインと、このログインが権限を許可したプリンシパルに対して CONNECT SQL 権限を拒否する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `CONNECT SQL` と、このログインが権限を許可したプリンシパルに対して、`Annika` 権限を拒否します。  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b4be2767bd0ae3a2486e598678e7654a50b1dc93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50d0a3ea940347e0d921ba01e4a81aeaef8b4aab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766628"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY (対称キーの権限の拒否) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   対称キーに対する権限を拒否します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67984414"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
         TO <database_principal> [ ,...n ] [ CASCADE ]  
@@ -92,7 +92,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  対称キーに関する情報は、[sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) カタログ ビューで確認できます。  
   
  対称キーは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、対称キーで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
@@ -108,7 +108,7 @@ DENY permission [ ,...n ]
 ## <a name="permissions"></a>アクセス許可  
  対称キーに対する CONTROL 権限、またはデータベースに対する ALTER ANY SYMMETRIC KEY 権限が必要です。 AS オプションを使用する場合は、指定したプリンシパルが対称キーを所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、対称キー `SamInventory42` の `ALTER` 権限を、データベース ユーザー `HamidS` に対して拒否します。  
   
 ```  

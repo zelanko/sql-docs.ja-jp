@@ -1,6 +1,6 @@
 ---
-title: クイック ヒント (IntelliSense) | Microsoft Docs
-ms.custom: ''
+title: クイック ヒント (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -15,12 +15,12 @@ ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68fa2361786103c11aeef9b919f8b13fe4047cf8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9fc27af899dd445f82d081de7c23158217cc7f6a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266018"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253774"
 ---
 # <a name="quick-info-intellisense"></a>クイック ヒント (IntelliSense)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

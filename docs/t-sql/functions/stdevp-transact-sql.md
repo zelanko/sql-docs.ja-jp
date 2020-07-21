@@ -17,18 +17,18 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical standard deviation
 - statistical standard deviation
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d76080b714d2ede1f2368ab2a98e8d3a216bf85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: add6610b1f46d1d84bfb37b176061b0db952d00b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906912"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85995549"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定された式のすべての値を母集団として標準偏差を返します。  
   
@@ -61,15 +61,15 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SELECT ステートメントの中のすべての項目に対して STDEVP を使用すると、結果セット内のすべての値が計算に含まれます。 STDEVP は、数値型列に対して使用できます。 NULL 値は無視されます。  
   
  STDEVP は、OVER 句や ORDER BY 句なしで使用される場合は決定的関数です。 OVER 句や ORDER BY 句と共に使用される場合は、非決定的関数です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-stdevp"></a>A: STDEVP を使用する  
- この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesPerson` テーブル内のすべてのボーナス額を母集団として標準偏差を返します。  
+ この例では、`SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブル内のすべてのボーナス額を母集団として標準偏差を返します。  
   
 ```  
 SELECT STDEVP(Bonus)  
@@ -77,10 +77,10 @@ FROM Sales.SalesPerson;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-stdevp"></a>B: STDEVP を使用する  
- 次の例は、テーブル `dbo.FactSalesQuota` の販売ノルマの値の `STDEVP` を返します。 最初の列にはすべての個別値の標準偏差が含まれ、2 番目の列には重複値を含むすべての値の標準偏差が含まれます。  
+ 次の例は、テーブル `STDEVP` の販売ノルマの値の `dbo.FactSalesQuota` を返します。 最初の列にはすべての個別値の標準偏差が含まれ、2 番目の列には重複値を含むすべての値の標準偏差が含まれます。  
   
 ```  
 -- Uses AdventureWorks  

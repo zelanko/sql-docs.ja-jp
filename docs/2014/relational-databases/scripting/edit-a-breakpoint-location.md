@@ -1,6 +1,6 @@
 ---
-title: ブレークポイントの位置の編集 | Microsoft Docs
-ms.custom: ''
+title: ブレークポイントの位置の編集
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ade5926b8a63c3e5b5bf54dcb02c95260942264b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b4672bd51bb73bcd1af017e8ecd4ad8b6581302c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090468"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037947"
 ---
 # <a name="edit-a-breakpoint-location"></a>ブレークポイントの位置の編集
   ブレークポイントの位置では、ブレークポイントを設定する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイル内の行や文字を指定します。 ブレークポイントの位置を編集して、ブレークポイントを別の位置や別のスクリプトに移動できます。  
@@ -29,7 +28,7 @@ ms.locfileid: "66090468"
   
 1.  エディター ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[場所]** をクリックします。  
   
-     \- または -  
+     または  
   
      **[ブレークポイント]** ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[場所]** をクリックします。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66090468"
      **をデバッグする場合、** [元のバージョンと異なるソース コードを許可する] [!INCLUDE[tsql](../../includes/tsql-md.md)]オプションは無効です。  
   
 ## <a name="see-also"></a>参照  
- [ヒット カウントの指定](specify-a-hit-count.md)   
- [ブレークポイント アクションの指定](specify-a-breakpoint-action.md)   
+ [ヒットカウントの指定](specify-a-hit-count.md)   
+ [ブレークポイントアクションの指定](specify-a-breakpoint-action.md)   
  [ブレークポイント条件の指定](specify-a-breakpoint-condition.md)   
  [ブレークポイント フィルターの指定](specify-a-breakpoint-filter.md)  

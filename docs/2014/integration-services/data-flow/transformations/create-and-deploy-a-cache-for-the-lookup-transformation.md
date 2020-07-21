@@ -11,22 +11,21 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d53f0e72f909d2c12d8f3be8050175394aee7252
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900647"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430909"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>参照変換用のキャッシュを作成および配置する
   参照変換用のキャッシュ ファイル (.caw) を作成および配置できます。 参照データセットはキャッシュ ファイルに格納されます。  
   
  参照変換は、接続されているデータ ソースの入力列のデータを参照データセットの列と結合することにより参照を実行します。  
   
- キャッシュ接続マネージャーおよびキャッシュ変換を使用して、キャッシュ ファイルを作成します。 詳細については、「 [キャッシュ接続マネージャー](../../connection-manager/cache-connection-manager.md) 」と「 [キャッシュ変換](cache-transform.md)」を参照してください。  
+ キャッシュ接続マネージャーおよびキャッシュ変換を使用して、キャッシュ ファイルを作成します。 詳細については、「 [キャッシュ接続マネージャー](../../connection-manager/cache-connection-manager.md) 」および「 [キャッシュ変換](cache-transform.md)」をご覧ください。  
   
  参照変換とキャッシュ ファイルの詳細については、「 [参照変換](lookup-transformation.md)」を参照してください。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62900647"
   
 4.  配置ユーティリティを作成するようにプロジェクトを構成し、プロジェクトをビルドします。 詳細については、「 [配置ユーティリティを作成する](../../create-a-deployment-utility.md)」を参照してください。  
   
-     マニフェスト ファイル \<*プロジェクト名*>.SSISDeploymentManifest.xml が作成されて、プロジェクトに含まれるその他のファイル、パッケージ、およびパッケージ構成の一覧が示されます。  
+     マニフェストファイル \<*project name*>.SSISDeploymentManifest.xml が作成され、プロジェクト内のその他のファイル、パッケージ、およびパッケージの構成が一覧表示されます。  
   
 5.  パッケージをファイル システムに配置します。 詳細については、「 [配置ユーティリティを使用してパッケージを配置する](../../deploy-packages-by-using-the-deployment-utility.md)」を参照してください。  
   

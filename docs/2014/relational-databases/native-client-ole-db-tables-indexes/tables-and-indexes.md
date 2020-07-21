@@ -1,5 +1,5 @@
 ---
-title: テーブルとパーティション インデックス |Microsoft Docs
+title: テーブルとインデックス | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,28 +16,27 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, indexes
 - indexes [OLE DB]
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a4f0b3fcf58f3f2767fbdc653327bec334545bdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abc7c314e433eb9f107bd191738d951706f1b50d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213528"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017795"
 ---
 # <a name="tables-and-indexes"></a>テーブルとインデックス
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **IIndexDefinition**と**ITableDefinition**インターフェイス、され、コンシューマーを作成するには、変更、および削除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルとインデックス。 有効なテーブルやインデックスの定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **iindexdefinition**インターフェイスと**itabledefinition**インターフェイスを公開します。これにより、コンシューマーはテーブルとインデックスを作成、変更、および削除でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 有効なテーブルやインデックスの定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。  
   
  テーブルやインデックスを作成または削除できるかどうかは、コンシューマー アプリケーション ユーザーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセス権によって決まります。 テーブルの削除は、宣言参照整合性制約やその他の要因の指定によってさらに制約できます。  
   
- 対象とするほとんどのアプリケーション[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]これらではなく、SQL-DMO を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのインターフェイス。 SQL-DMO は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての管理機能をサポートする OLE オートメーション オブジェクトの集まりです。 複数の OLE DB プロバイダーを対象とするアプリケーションでは、さまざまな OLE DB プロバイダーでサポートされる、これらの汎用 OLE DB インターフェイスを使用します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を対象とするほとんどのアプリケーションは、これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーインターフェイスではなく、sql-dmo を使用します。 SQL-DMO は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての管理機能をサポートする OLE オートメーション オブジェクトの集まりです。 複数の OLE DB プロバイダーを対象とするアプリケーションでは、さまざまな OLE DB プロバイダーでサポートされる、これらの汎用 OLE DB インターフェイスを使用します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、プロバイダー固有の DBPROPSET_SQLSERVERCOLUMN プロパティ セットで、次のプロパティを定義しています。  
   
 |プロパティ ID|説明|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|型:VT_BSTR<br /><br /> R/W書き込み<br /><br /> 既定値:[Null]<br /><br /> 説明:このプロパティでのみ使用**ITableDefinition**します。 このプロパティに指定した文字列は、[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) ステートメントの作成時に<br /><br /> ステートメントの使用などがあります。|  
+|SSPROP_COL_COLLATIONNAME|型: VT_BSTR<br /><br /> R/W: 書き込み<br /><br /> 既定値 : NULL<br /><br /> 説明 : このプロパティは、**ITableDefinition** でのみ使用します。 このプロパティに指定した文字列は、[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) ステートメントの作成時に<br /><br /> ステートメントの使用などがあります。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

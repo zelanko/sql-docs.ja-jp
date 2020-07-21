@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリングの履歴 | Microsoft Docs
+description: SQL Server Management Studio で、指定したサーバー インスタンスのミラー化されたデータベースについて、ミラーリング状態の履歴を表示する方法について説明します。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,22 +13,22 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2fd21c91577d2e2db1773bbbcbff942842cf043
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751892"
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスは、指定したサーバー インスタンスでミラー化されたデータベースについて、ミラーリング状態の履歴を表示するために使用します。  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **サーバー インスタンス**  
  履歴レポートの対象となるサーバー インスタンスの名前です。  
   
@@ -63,14 +64,14 @@ ms.locfileid: "68006426"
 > [!NOTE]  
 >  このダイアログ ボックスに表示される履歴一覧は、自動的には更新されません。 一覧を更新するには、 **[最新の情報に更新]** をクリックするか、別のフィルター オプションを選択します。 ミラーリング履歴を更新できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
   
- **履歴**  
+ **HISTORY**  
  履歴一覧を表示します。 列のヘッダーをクリックすると、その列のデータを使用してグリッドが並べ替えられます。 一覧には次の列があります。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**[記録された日時]**|履歴行のタイムスタンプです。|  
 |**ロール**|このデータベースに対するサーバー インスタンスの現在のミラーリング ロールです。[プリンシパル] または [ミラー] のいずれかになります。|  
-|**[ミラー化の状態]**|データベースの状態。<br /><br /> 切断済み<br /><br /> [フェールオーバーを保留しています]<br /><br /> 中断<br /><br /> 同期済み<br /><br /> [同期中]<br /><br /> Unknown|  
+|**[ミラー化の状態]**|データベースの状態。<br /><br /> [Disconnected]\(切断済み\)<br /><br /> [フェールオーバーを保留しています]<br /><br /> Suspended<br /><br /> 同期済み<br /><br /> [同期中]<br /><br /> Unknown|  
 |**[ミラーリング監視接続]**|データベースのミラーリング セッションにおけるミラーリング監視接続の状態です。[接続済み] または [接続解除] のいずれかになります。 ミラーリング監視が存在しない場合、値は NULL になります。|  
 |**[未送信のログ]**|プリンシパル サーバー インスタンスの送信キューにある未送信ログのサイズをキロバイト (KB) 単位で表します。|  
 |**[送信する日時]**|プリンシパル サーバー インスタンスが、送信キューに現在存在するログをミラー サーバー インスタンスに送信するために必要な、おおよその時間です。その際の速度は、 *送信比率*で表されます。 入力トランザクションの送信比率は著しく変化するため、ログの送信にかかる時間は、推定値になります。 ただし、送信比率は、手動フェールオーバーに必要な時間を推定する際の目安として使用できます。|  

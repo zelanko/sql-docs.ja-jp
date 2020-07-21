@@ -10,16 +10,16 @@ ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e0ab2e7721522e0671d195ec79a35bba72d462c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68059972"
 ---
 # <a name="troubleshooting-db2tosql"></a>トラブルシューティング (DB2ToSQL)
-コンソールのスクリプトまたはコマンドを実行する移行の問題の途中に実行することは珍しくありません。  
+コンソールスクリプトまたはコマンドの実行中に、移行に関する問題が発生することは珍しくありません。  
   
-修正可能であるエラーの関連する可能性があります。  
+修正可能なエラーは次のように関連している可能性があります。  
   
 1.  関数  
   
@@ -29,9 +29,9 @@ ms.locfileid: "68059972"
   
 4.  トリガー  
   
-5.  データ型を変更します。  
+5.  データ型の変更  
   
-6.  プロジェクトの設定を変更します。  
+6.  プロジェクト設定の変更  
   
-SSMA ユーザー インターフェイスを使用して、コンソールを使って作成されたプロジェクト ファイルを開き、問題を修正できます。  
+この問題は、コンソールで作成されたプロジェクトファイルを開くことによって、SSMA ユーザーインターフェイスを使用して修正できます。  
   

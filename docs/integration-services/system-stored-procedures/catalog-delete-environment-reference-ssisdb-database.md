@@ -8,28 +8,28 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 615a176e915e709fd8d2b70944dbac4179049bcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6354ca6d5326e4b38e18f38be3b6e5095ad8d1b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749643"
 ---
-# <a name="catalogdeleteenvironmentreference-ssisdb-database"></a>catalog.delete_environment_reference (SSISDB データベース)
+# <a name="catalogdelete_environment_reference-ssisdb-database"></a>catalog.delete_environment_reference (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   環境参照を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロジェクトから削除します。  
   
 ## <a name="syntax"></a>構文  
   
 ```sql  
-delete_environment_reference [ @reference_id = ] reference_id  
+catalog.delete_environment_reference [ @reference_id = ] reference_id  
 ```  
   
 ## <a name="arguments"></a>引数  

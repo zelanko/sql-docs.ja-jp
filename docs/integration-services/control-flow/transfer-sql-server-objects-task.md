@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cbde5c7832767f4baf64261973b15dc46513c0bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105591"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293843"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server オブジェクトの転送タスク
 
@@ -79,7 +79,7 @@ ms.locfileid: "68105591"
 ## <a name="transfer-objects-between-instances-of-sql-server"></a>SQL Server のインスタンス間でのオブジェクトの転送  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の転送元および転送先をサポートします。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  このタスクは、転送されたオブジェクトを報告する情報イベントを生成する以外に、オブジェクトが上書きされたときに警告イベントを生成します。 情報イベントは、データベース テーブルの切り捨てなどのアクションに対しても生成されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクでは、オブジェクト転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
@@ -96,7 +96,7 @@ ms.locfileid: "68105591"
   
  また、 **OnInformation** イベントのログ エントリは、転送対象として選択された種類のオブジェクトの数、転送されたオブジェクトの数、およびテーブルと一緒にデータが転送されたときはテーブルの切り捨てなどのアクションを報告します。 **OnWarning** イベントのログ エントリは転送先でオブジェクトが上書きされると書き込まれます。  
   
-## <a name="security-and-permissions"></a>セキュリティおよび権限  
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可  
  ユーザーは、転送元サーバー上でオブジェクトを参照する権限、および転送先サーバー上でオブジェクトを削除および作成する権限を持っていることに加えて、指定したデータベースおよびデータベース オブジェクトにアクセスできる必要があります。  
   
 ## <a name="configuration-of-the-transfer-sql-server-objects-task"></a>SQL Server オブジェクトの転送タスクの構成  
@@ -106,7 +106,7 @@ ms.locfileid: "68105591"
   
  転送するオブジェクトの機能をさらに強化するため、転送するオブジェクトのスキーマ名、データ、拡張プロパティ、および依存オブジェクトを転送に含めるように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクを構成できます。 データをコピーする場合は、既存のデータを置き換えるかまたは追加するかを指定できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクは実行時、2 つの SMO 接続マネージャーを使用して、転送元サーバーおよび転送先サーバーに接続します。 SMO 接続マネージャーの構成は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクとは別に行い、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクは SMO 接続マネージャーを参照します。 SMO 接続マネージャーは、サーバーと、サーバーに接続する際に使用する認証モードを指定します。 詳しくは、「 [SMO 接続マネージャー](../../integration-services/connection-manager/smo-connection-manager.md)」をご覧ください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクは実行時、2 つの SMO 接続マネージャーを使用して、転送元サーバーおよび転送先サーバーに接続します。 SMO 接続マネージャーの構成は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクとは別に行い、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクは SMO 接続マネージャーを参照します。 SMO 接続マネージャーは、サーバーと、サーバーに接続する際に使用する認証モードを指定します。 詳細については、「 [SMO 接続マネージャー](../../integration-services/connection-manager/smo-connection-manager.md)」をご覧ください。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
@@ -131,13 +131,13 @@ ms.locfileid: "68105591"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクを作成するユーザーは、転送元サーバー オブジェクトをコピー用に選択するために必要な権限と、オブジェクトの転送先の転送先サーバー データベースにアクセスするために必要な権限を持っている必要があります。  
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **Name**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトの転送タスクの説明を入力します。  
   
 ## <a name="transfer-sql-server-objects-task-editor-objects-page"></a>[SQL Server オブジェクトの転送タスク エディター] ([オブジェクト] ページ)
@@ -171,10 +171,10 @@ ms.locfileid: "68105591"
  **[ExistingData]**  
  転送先サーバーにデータをどのようにコピーするかを指定します。 このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**[置換]**|転送先サーバー上のデータは上書きされます。|  
-|**追加**|転送元サーバーからコピーされたデータは、転送先サーバー上の既存のデータに追加されます。|  
+|**Replace**|転送先サーバー上のデータは上書きされます。|  
+|**Append**|転送元サーバーからコピーされたデータは、転送先サーバー上の既存のデータに追加されます。|  
   
 > [!NOTE]  
 >  **[ExistingData]** オプションは、 **[CopyData]** が **[True]** に設定されている場合にのみ使用できます。  

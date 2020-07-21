@@ -15,25 +15,24 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f3ad2a94ffe3e0f1db19a8e66f85497e7143dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026491"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
   *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データ ファイルには、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または暗黙的な型変換がサポートされているデータ型のいずれかでデータをエクスポートできます。暗黙的な型変換では、たとえば、`smallint` は `int` としてコピーされます。 ユーザー定義のデータ型は、基本データ型としてエクスポートされます。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>ファイル ストレージ型の bcp プロンプト  
- 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、**-c**、**-w**、または **-N**) のどちらも付けずに **in**または **out**オプションを指定すると、次のように各データ フィールドのファイル ストレージ型を要求するプロンプトが表示されます。  
+ 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、 **-c**、 **-w**、または **-N**) のどちらも付けずに **in**または **out**オプションを指定すると、次のように各データ フィールドのファイル ストレージ型を要求するプロンプトが表示されます。  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
  この要求への応答は、次のように、実行するタスクによって異なります。  
   
--   できるだけコンパクトなストレージ型 (ネイティブ データ形式) で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするには、 **bcp**によって提供される既定のファイル ストレージ型をそのまま使用します。 ネイティブのファイル ストレージ型の一覧については、このトピックの「ネイティブのファイル ストレージ型」を参照してください。  
+-   できるだけコンパクトなストレージ型 (ネイティブ データ形式) で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするには、**bcp** によって提供される既定のファイル ストレージ型をそのまま使用します。 ネイティブのファイル ストレージ型の一覧については、このトピックの「ネイティブのファイル ストレージ型」を参照してください。  
   
 -   文字形式で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするには、テーブルのすべての列にファイル ストレージ型として `char` を指定します。  
   
@@ -73,9 +72,9 @@ ms.locfileid: "66011820"
     |`UDT` (ユーザー定義データ型)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup>フィールド長、プレフィックス長、およびターミネータの相互作用としてエクスポートされた非文字データのデータ ファイルに割り当てられる記憶域スペースの量を決定する、`char`ファイル ストレージ型。  
+     <sup>1</sup>フィールド長、プレフィックス長、およびターミネータの相互作用によって、ファイルストレージ型としてエクスポートされた非文字データのデータファイルに割り当てられる記憶域の容量が決まり `char` ます。  
   
-     <sup>2</sup> 、 `ntext`、 `text`、および`image`データ型はの将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに `nvarchar(max)`、`varchar(max)`、および `varbinary(max)` 型を使用してください。  
+     <sup>2</sup> `ntext` 、 `text` 、および `image` の各データ型は、の将来のバージョンで削除される予定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに `nvarchar(max)`、`varchar(max)`、および `varbinary(max)` 型を使用してください。  
   
 ## <a name="native-file-storage-types"></a>ネイティブのファイル ストレージ型  
  各ネイティブのファイル ストレージ型は、対応するホスト ファイル データ型として、フォーマット ファイルに記録されます。  
@@ -109,16 +108,16 @@ ms.locfileid: "66011820"
 |`timestamp`|SQLBINARY|  
 |UDT (ユーザー定義データ型)|SQLUDT|  
   
- <sup>1</sup>形式の使用を文字に格納されているデータ ファイル`char`ファイル ストレージ型として。 したがって、文字データ ファイルの場合、フォーマット ファイルに表示されるデータ型は SQLCHAR のみです。  
+ 1文字形式で格納された<sup>1 つ</sup>のデータファイルは `char` 、ファイルストレージ型として使用されます。 したがって、文字データ ファイルの場合、フォーマット ファイルに表示されるデータ型は SQLCHAR のみです。  
   
- <sup>2</sup>へデータのインポートを一括できません`text`、 `ntext`、および`image`既定値を持つ列。  
+ <sup>2</sup> `text` `ntext` `image` 既定値が設定されている、、およびの各列にデータを一括インポートすることはできません。  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>ファイル ストレージ型のその他の考慮事項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするときは、次のことを考慮してください。  
   
 -   `char` 型は、常にファイル ストレージ型として指定できます。  
   
--   無効な暗黙的な変換を表すファイル ストレージ型を入力すると**bcp**は失敗します指定できますが、`int`の`smallint`を指定する場合は、データ`smallint`の`int`データ。オーバーフロー エラーの結果。  
+-   無効な暗黙的な変換を表すファイルストレージ型を入力すると、 **bcp**は失敗します。たとえば、データにを指定することはできますが、 `int` `smallint` データにを指定すると `smallint` `int` 、オーバーフローエラーが発生します。  
   
 -   `float`、`money`、`datetime`、または `int` などの非文字データ型をそれぞれのデータベース型として格納すると、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ形式でデータ ファイルに書き込まれます。  
   

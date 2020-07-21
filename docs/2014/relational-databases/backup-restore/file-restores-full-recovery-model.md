@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 488515ec900867f13d33580402e36a3f98747bb2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62921943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958050"
 ---
 # <a name="file-restores-full-recovery-model"></a>ファイル復元 (完全復旧モデル)
   このトピックは、複数のファイルまたはファイル グループが含まれている、完全復旧モデルまたは一括読み込み復旧モデルを使用するデータベースだけに関連しています。  
@@ -54,7 +53,7 @@ ms.locfileid: "62921943"
   
   
   
-##  <a name="Overview"></a> 破損したファイルのファイル バックアップからの復元  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> 破損したファイルのファイル バックアップからの復元  
   
 1.  1 つ以上の破損したファイルを復元するには、 [ログ末尾のバックアップ](tail-log-backups-sql-server.md)を作成してください。  
   
@@ -112,7 +111,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
    WITH RECOVERY;  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 -   [例: 読み取り/書き込みファイルのオンライン復元 &#40;完全復旧モデル&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
@@ -120,7 +119,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [例: プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する &#40;完全復旧モデル&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **ファイルおよびファイル グループを復元するには**  
   
 -   [新しい場所へのファイルの復元 &#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  
@@ -131,7 +130,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [バックアップと復元: 相互運用性と共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差分バックアップ &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [ファイルの完全バックアップ &#40;SQL Server&#41;](full-file-backups-sql-server.md)   

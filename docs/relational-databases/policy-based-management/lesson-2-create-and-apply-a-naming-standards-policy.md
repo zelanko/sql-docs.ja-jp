@@ -1,6 +1,7 @@
 ---
-title: レッスン 2:名前付け基準ポリシーの作成と適用 | Microsoft Docs
-ms.custom: ''
+title: 'レッスン 2: 名前付け基準ポリシーの作成と適用'
+description: このチュートリアルでは、SQL Server でポリシーベース管理に名前付け基準ポリシーを作成して適用する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: security
@@ -10,22 +11,22 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be32b0412b71f4f6e6ca2044bfdd6ead682572c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087176"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785077"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>レッスン 2:名前付け基準ポリシーの作成と適用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>レッスン 2: 名前付け基準ポリシーの作成と適用
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 ポリシー ベースの管理の一部の種類のポリシーでは、ポリシーへの今後の準拠を適用するためのトリガーを作成することができます。 このレッスンでは、テーブルの名前付け基準を適用するポリシーを作成します。 その後に、ポリシーに違反するテーブルを作成してポリシーをテストします。  
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このチュートリアルを完了するには、SQL Server Management Studio と SQL Server を実行しているサーバーへのアクセスが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
   
 ## <a name="create-the-finance-database"></a>Finance データベースの作成  
@@ -39,8 +40,6 @@ ms.locfileid: "68087176"
   
 2.  オブジェクト エクスプローラーで、 **[データベース]** をクリックし、F5 キーを押してデータベースの一覧を更新します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="create-the-finance-tables-condition"></a>Finance テーブルの条件の作成 
 
 1.  オブジェクト エクスプローラーで、 **[管理]** 、 **[ポリシー管理]** の順に展開し、 **[条件]** を右クリックして **[新しい条件]** をクリックします。 
@@ -49,7 +48,7 @@ ms.locfileid: "68087176"
   
 2.  **[新しい条件の作成]** ダイアログ ボックスで、 **[名前]** ボックスに「 **Finance のテーブル**」と入力します。  
     1. **[ファセット]** ボックスの一覧で **[マルチパート名]** を選択します。 
-    1. すべてのテーブル名が文字列 **fintbl** で始まるように、 **[式]** 領域の **[フィールド]** ボックスで **@Name** を選択し、 **[演算子]** ボックスで **[次のパターンに一致]** を選択し、 **[値]** ボックスに ```'fintbl%'``` と入力します。
+    1. すべてのテーブル名が文字列 **fintbl** で始まるように、 **[式]** 領域の **[フィールド]** ボックスで **\@Name** を選択し、 **[演算子]** ボックスで **[次のパターンに一致]** を選択し、 **[値]** ボックスに ```'fintbl%'``` と入力します。
     1. **[説明]** ページで、「 **Finance のテーブル名は必ず fintbl で始める**」と入力し、 **[OK]** をクリックして条件を作成します。  
 
     ![Finance テーブルの条件](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)
@@ -152,7 +151,7 @@ ms.locfileid: "68087176"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] これで Finance カテゴリがすべてのデータベースに適用されるようになります。ただし、作成した条件により、Finance の名前ポリシーは Finance データベースにのみ適用されることになります。 これは、条件を複雑に組み合わせることで、多数のサーバーに対して適切な方法でポリシーを適用できるということを示しています。  
   
-## <a name="summary"></a>[概要]  
+## <a name="summary"></a>まとめ  
 このチュートリアルでは、ポリシー ベースの管理の条件、ポリシー、およびポリシー グループを作成する方法と、フィルターを適用してポリシー ベースの管理対象がポリシーに準拠しているかどうかを調べる方法について学習しました。  
   
 ## <a name="next"></a>Next  

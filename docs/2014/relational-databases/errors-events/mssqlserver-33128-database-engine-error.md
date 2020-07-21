@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a995a68849ed55dbf136191a061ac6f855703a66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 085e96eead1043f17567f4e060387547f834982c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914514"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551657"
 ---
-# <a name="mssqlserver33128"></a>MSSQLSERVER_33128
+# <a name="mssqlserver_33128"></a>MSSQLSERVER_33128
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|33128|  
@@ -42,7 +41,7 @@ ms.locfileid: "62914514"
 > [!NOTE]  
 >  リング バッファーは完全には文書にまとめられていない内部コンポーネントであり、ユーザーが使用するためのものではありません。 リング バッファーからのメッセージは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポートに問い合わせる際に役立ちます。 リング バッファーを表示するには、sys.dm_os_ring_buffers 動的管理ビューに対してクエリを実行します。  
   
-|状態|説明|  
+|State|説明|  
 |-----------|-----------------|  
 |1|RC4 キーは、encryptbykey() 組み込み関数で使用されます。 組み込み関数は NULL を返します。 このメッセージは、リング バッファーにのみ表示されます。|  
 |2|RC4 キーは、decryptbykey() 組み込み関数で使用されます。 このメッセージは、リング バッファーにのみ表示されます。|  

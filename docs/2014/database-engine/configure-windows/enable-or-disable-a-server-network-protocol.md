@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 17b4052b8842225d729bc8de996a7b0649f85a59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6261e223513c4a33362ef41d6977c04bcfb430a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62782405"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935323"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>サーバー ネットワーク プロトコルの有効化または無効化
   すべてのネットワーク プロトコルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによってインストールされますが、必ずしも有効になっているとは限りません。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは PowerShell を使用してサーバー ネットワーク プロトコルを有効または無効にする方法について説明します。 変更を有効にするために [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止し、再起動する必要があります。  
@@ -44,21 +43,21 @@ ms.locfileid: "62782405"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a>SQL Server 構成マネージャーの使用  
   
 #### <a name="to-enable-a-server-network-protocol"></a>サーバー ネットワーク プロトコルを有効にするには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。  
   
-2.  コンソール ペインで、 **[** *\<インスタンス名> のプロトコル]* をクリックします。  
+2.  コンソールウィンドウで、[**のプロトコル**] をクリックし *\<instance name>* ます。  
   
 3.  詳細ペインで、変更するプロトコルを右クリックし、 **[有効化]** または **[無効化]** をクリックします。  
   
-4.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
+4.  コンソール ペインで、**[SQL Server のサービス]** をクリックします。  
   
-5.  詳細ペインで **[SQL Server (***\<インスタンス名>***)]** を右クリックします。次に、 **[再起動]** をクリックして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを停止し、再起動します。  
+5.  詳細ウィンドウで、[ **SQL Server ( ***\<instance name>*** )**] を右クリックし、[**再起動**] をクリックしてサービスを停止し、再起動し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-##  <a name="PowerShellProcedure"></a> SQL Server PowerShell の使用  
+##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> SQL Server PowerShell の使用  
   
 #### <a name="to-enable-a-server-network-protocol-using-powershell"></a>PowerShell を使用してサーバー ネットワーク プロトコルを有効にするには  
   
@@ -66,13 +65,13 @@ ms.locfileid: "62782405"
   
 2.  タスク バーから Windows PowerShell 2.0 を起動するか、[スタート] ボタンをクリックし、[すべてのプログラム]、[アクセサリ]、[Windows PowerShell]、[Windows PowerShell] の順にクリックします。  
   
-3.  インポート、 **sqlps**を入力してモジュール `Import-Module "sqlps"`  
+3.  「」と入力して**sqlps**モジュールをインポートします。`Import-Module "sqlps"`  
   
 4.  次のステートメントを実行して TCP プロトコルおよび名前付きパイプ プロトコルの両方を有効にします。 `<computer_name>` を、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターの名前に置き換えます。 名前付きインスタンスを構成する場合は、 `MSSQLSERVER` をインスタンス名に置き換えます。  
   
      プロトコルを無効にするには、 `IsEnabled` プロパティを `$false`に設定します。  
   
-    ```  
+    ```powershell
     $smo = 'Microsoft.SqlServer.Management.Smo.'  
     $wmi = new-object ($smo + 'Wmi.ManagedComputer').  
   
@@ -98,18 +97,18 @@ ms.locfileid: "62782405"
   
 -   スクリプトをローカルで実行してローカル コンピューターを構成する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell ではローカル コンピューター名を動的に判断でき、スクリプトの柔軟性が向上します。 ローカル コンピューター名を取得するには、 `$uri` 変数の行の設定を次の行に置き換えます。  
   
-    ```  
-    $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
+    ```powershell
+    $uri = "ManagedComputer[@Name='" + (Get-Item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
     ```  
   
 #### <a name="to-restart-the-database-engine-by-using-sql-server-powershell"></a>SQL Server PowerShell を使用してデータベース エンジンを再起動するには  
   
 -   プロトコルを有効または無効にした後は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止してから再起動して、変更を有効にする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell で既定のインスタンスを停止してから起動するには、次のステートメントを実行します。 名前付きインスタンスを停止してから起動するには、 `'MSSQLSERVER'` を `'MSSQL$<instance_name>'`に置き換えます。  
   
-    ```  
+    ```powershell
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\<computer_name>  
-    $Wmi = (get-item .).ManagedComputer  
+    $Wmi = (Get-Item .).ManagedComputer  
     # Get a reference to the default instance of the Database Engine.  
     $DfltInstance = $Wmi.Services['MSSQLSERVER']  
     # Display the state of the service.  
@@ -127,5 +126,3 @@ ms.locfileid: "62782405"
     # Refresh the cache and display the state of the service.  
     $DfltInstance.Refresh(); $DfltInstance  
     ```  
-  
-  

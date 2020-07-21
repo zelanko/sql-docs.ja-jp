@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e8ebfd96d98bff9ed144db33189e141dc0cfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107767"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>レポートの印刷 (レポート ビルダーおよび SSRS)
   レポートをレポート サーバーに保存した後は、ブラウザーやレポート マネージャーのほか、エクスポートされたレポートの表示に使用する任意のアプリケーションで、レポートを表示および印刷できます。 レポートを保存する前にプレビューする場合は、印刷することができます。  
   
- レポートを印刷するときには、使用する用紙のサイズを指定できます。 用紙のサイズによって、レポート内のページ数や各ページに収まるレポート データが決定されます。 用紙のサイズが影響するのは、ハード改ページ レンダラーを使用してレンダリングされるレポートのみです(PDF、画像、または印刷のハード改ページレンダラー)。 用紙サイズの設定はその他のレンダラーには影響しません。 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
+ レポートを印刷するときには、使用する用紙のサイズを指定できます。 用紙のサイズによって、レポート内のページ数や各ページに収まるレポート データが決定されます。 用紙のサイズは、PDF、画像、および印刷などのハード改ページ レンダラーを使用して表示されるレポートのみに影響します。 用紙サイズの設定はその他のレンダラーには影響しません。 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
   
  レポート マネージャーのレポート ビューアー ツール バー、またはレポート ビルダーのプレビューでは、レポートをハード改ページ レンダラーにエクスポートしたり、[印刷] ボタンをクリックしてレポートのコピーを印刷したりすることができます。 用紙のサイズやその他のページ設定プロパティの設定が必要になる場合もあります。 **[レポートのプロパティ]** ダイアログ ボックスを使用すると、用紙のサイズを含むページ設定プロパティを変更できます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66107767"
   
 1.  レポートを開きます。  
   
-2.  [ホーム] タブで **[実行]** をクリックします。  
+2.  [ホーム] タブで、[**実行**] をクリックします。  
   
 3.  (省略可) 印刷するレポートの外観を確認するには、 **[印刷レイアウト]** をクリックします。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66107767"
   
 ## <a name="see-also"></a>参照  
  [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [[ページ設定] ([レポートのプロパティ] ダイアログ ボックス) (レポート ビルダー)](../report-properties-dialog-box-page-setup-report-builder.md)   
  [レポート デザイン ビュー &#40;レポート ビルダー&#41;](report-design-view-report-builder.md)  
   

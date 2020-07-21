@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1a0cb087f5a0cd429d9bc6f30ea08aaef3d07b3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abb667d98ec3777a194226063ca4b203c8d83d02
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483103"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950296"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>モデル オブジェクト権限を削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデル オブジェクトの権限を削除して、作成されている割り当てを削除します。  
@@ -29,7 +28,7 @@ ms.locfileid: "65483103"
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-model-object-permissions"></a>モデル オブジェクト権限を削除するには  
   
@@ -43,15 +42,15 @@ ms.locfileid: "65483103"
   
 5.  **[モデル]** ボックスの一覧からモデルを選択します (オプション)。  
   
-6.  **モデル権限の概要**ウィンドウで、削除する権限の行を選択します。  
+6.  [**モデル権限の概要**] ペインで、削除する権限の行を選択します。  
   
-7.  クリックして**選択されたアクセス許可を削除**します。  
+7.  [**選択したアクセス許可の削除**] をクリックします。  
   
     > [!NOTE]  
     >  権限がグループから継承されている場合、ユーザーから権限を削除できません。 グループから権限を削除する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [モデル オブジェクト権限 (マスター データ サービス)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

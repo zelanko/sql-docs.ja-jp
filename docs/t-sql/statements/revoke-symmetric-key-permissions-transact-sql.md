@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 33c1a7821f532249c13400c3937706267e22bf7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ead3a0c0b9feeeffff7491995c63926ec64ad5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765943"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE (対称キーの権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   対称キーに対して許可および拒否された権限を取り消します。  
    
@@ -32,7 +32,7 @@ ms.locfileid: "67914181"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
@@ -73,7 +73,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  { TO | FROM } \<*database_principal*>  
  権限を取り消すプリンシパルを指定します。  
   
- AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消すには、その権限を派生元のプリンシパルを指定します。  
+ AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  
@@ -99,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  対称キーに関する情報は、[sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) カタログ ビューで確認できます。  
   
  GRANT OPTION で権限が許可されたプリンシパルから権限を取り消すときに CASCADE を指定しない場合、このステートメントは失敗します。  
@@ -117,7 +117,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="permissions"></a>アクセス許可  
  対称キーに対する CONTROL 権限、またはデータベースに対する ALTER ANY SYMMETRIC KEY 権限が必要です。 AS オプションを使用する場合は、指定したプリンシパルが対称キーを所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、対称キー `ALTER` に対する `SamInventory42` 権限を、ユーザー `HamidS` と、`HamidS` が `ALTER` 権限を許可した他のプリンシパルから取り消します。  
   
 ```  

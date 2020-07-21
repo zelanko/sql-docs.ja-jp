@@ -1,6 +1,7 @@
 ---
-title: パブリッシャー情報、[サブスクリプション ウォッチ リスト](マージ パブリケーション) | Microsoft Docs
-ms.custom: ''
+title: サブスクリプション ウォッチ リスト (マージ - SSMS)
+description: SQL Server Management Studio (SSMS) のレプリケーション モニター内の [サブスクリプション ウォッチ リスト] タブについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,25 +13,25 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dca1dfc281ac4ea63c2c28b35dc93805f2c19b2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f44c8b3762b7abae0e79ec213812f5dc31b52ac9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716752"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>パブリッシャー情報、[サブスクリプション ウォッチ リスト]\(マージ パブリケーション)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **以降を実行しているディストリビューターでは、** [サブスクリプション ウォッチ リスト] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。このタブは、選択されているパブリッシャーで使用できるすべてのパブリケーションのサブスクリプションについて情報を表示するために用意されています。 サブスクリプションの一覧にフィルターをかけて、エラー、警告、および動作に問題があるサブスクリプションを確認できます。 このタブは、パブリッシャーにおけるすべてのレプリケーション動作を管理者が一元的に監視できる場所です。レプリケーション モニターは、選択されているレプリケーションの種類と **[表示]** ドロップダウン リスト ボックスで選択されたオプションに基づいて、注意が必要なすべてのサブスクリプションを表示します。 このタブに表示されるアイテムは現在の状態およびパフォーマンスに基づいているので、現時点での **[表示]** ボックスのオプションに一致する場合にのみ、このページにサブスクリプションが表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  サブスクリプションに関する詳細情報やタスクを調べるには、そのサブスクリプションの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
 -   **[並べ替え]** : **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
   
 -   **[表示する列の選択]** : **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
+-   **フィルター**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
   
 -   **[フィルターのクリア]** :グリッドのフィルター設定をすべてクリアします。  
   
@@ -42,12 +43,12 @@ ms.locfileid: "68021404"
  **[表示]**  
  サブスクリプション状態を選択すると、選択した種類の状態のサブスクリプションが表示されます。 たとえば、エラーを含むサブスクリプションのみを表示するように設定できます。  
   
- **ステータス**  
+ **状態**  
  各サブスクリプションの状態です。これは、マージ エージェントの状態により決定されます。  
   
  既定では、サブスクリプションの情報を表示するグリッドは **[状態]** 列の順序で並べられています (同じ状態のサブスクリプションは、 **[パフォーマンス]** 列の順序で並べられています)。 表示される状態の値と、その値の並べ替え順 (たとえば、エラーは常にグリッドの上部に表示されます) を次に示します。  
   
--   [エラー]  
+-   エラー  
   
 -   [パフォーマンス クリティカル]  
   
@@ -73,12 +74,12 @@ ms.locfileid: "68021404"
  各サブスクリプションの名前です。*SubscriberName:SubscriptionDatabaseName* という形式になります。  
   
  **表示名**  
- 各サブスクリプションの説明です。 この説明は、 **[サブスクリプションのプロパティ]** ダイアログ ボックスで入力するか、 **@description** または [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) の [@description](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)と表示されます。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
+ 各サブスクリプションの説明です。 この説明は、**[サブスクリプションのプロパティ]** ダイアログ ボックスで入力するか、[sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) または [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) の `@description` パラメーターで示します。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
   
  **パブリケーション**  
  サブスクリプションと同期するパブリケーションの名前です。*PublicationDatabaseName:PublicationName* という形式になります。  
   
- **[パフォーマンス]**  
+ **パフォーマンス**  
  各サブスクリプションのパフォーマンス評価です。これはレプリケーション モニターにより取得された、最新の配信率の計測結果に基づいています。 パフォーマンス評価は、接続の種類が同じ (ダイヤルアップまたは LAN) パブリケーションに対するサブスクリプションの履歴の平均パフォーマンスと、個々のサブスクリプションのパフォーマンスを比較することで決定されます。 レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続により 5 回行われた後で、値が表示されます。 50 以上の変更を伴う同期が 5 回未満の場合、または最新の同期における変更が 50 未満の場合には、この列は空白になります。  
   
 > [!NOTE]  
@@ -105,7 +106,7 @@ ms.locfileid: "68021404"
  **Duration**  
  最後の同期中におけるマージ エージェントの実行時間です。 マージ エージェントが現在同期中の場合、これは経過時間を表します。マージ エージェントが以前に同期された場合、これは合計時間を表します。  
   
- **[接続]**  
+ **接続**  
  サブスクライバーとパブリッシャーの接続の種類です。 **[LAN]** 、 **[ダイヤルアップ]** 、 **[インターネット]** のいずれかの値になります。 サブスクリプションで Web 同期が使用されている場合、 **[インターネット]** が表示されます。  
   
 ## <a name="see-also"></a>参照  

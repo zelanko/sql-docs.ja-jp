@@ -1,5 +1,5 @@
 ---
-title: クエリ パラメーター ダイアログ ボックス (MDX) |Microsoft Docs
+title: '[クエリパラメーター] ダイアログボックス (MDX) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: e69b9542-7b54-42bf-b2de-c091e81af7ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3be4b3cdfbaf3ed7579fab7a89cc96c5beb0d5e7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070528"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539584"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>[クエリ パラメーター] ダイアログ ボックス (MDX)
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] および [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[クエリ パラメーター]** ダイアログ ボックスを使用すると、セット、ディメンション、およびサブキューブの定義に使用される MDX クエリにパラメーターを追加できます。 **[クエリ パラメーター]** ダイアログ ボックスを表示するには、 **[MDX クエリ ビルダー]** ダイアログ ボックスの **[パラメーター]** アイコンをクリックします。  
+  **および** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [クエリ パラメーター] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、セット、ディメンション、およびサブキューブの定義に使用される MDX クエリにパラメーターを追加できます。 **[クエリ パラメーター]** ダイアログ ボックスを表示するには、 **[MDX クエリ ビルダー]** ダイアログ ボックスの **[パラメーター]** アイコンをクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **パラメーター**  
  新しいパラメーターを作成するには、パラメーター名を入力するか、または既存のパラメーターの名前を編集します。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66070528"
  **Hierarchy**  
  パラメーターが特定の階層に適用される場合は、一覧から階層を選択します。  
   
- **複数の値**  
+ **[複数の値]**  
  説明  
   
  **[Default]**  

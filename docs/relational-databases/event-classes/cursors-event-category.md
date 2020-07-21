@@ -14,20 +14,20 @@ ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6263035a0094f07264774d7acc29da144c4f419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e845b69f6093507898e674ab8f3d87bdea5a3b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719877"
 ---
 # <a name="cursors-event-category"></a>Cursors イベント カテゴリ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Cursors** イベント カテゴリには、カーソルの動作の監視に使用するイベント クラスが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[CursorClose イベント クラス](../../relational-databases/event-classes/cursorclose-event-class.md)|アプリケーション プログラミング インターフェイス (API) のカーソルで発生する、カーソルを閉じるイベントについて説明します。|  
 |[CursorExecute イベント クラス](../../relational-databases/event-classes/cursorexecute-event-class.md)|API のカーソルで発生する、カーソルを実行するイベントについて説明します。|  

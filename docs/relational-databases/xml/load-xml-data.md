@@ -1,5 +1,6 @@
 ---
 title: XML データの読み込む | Microsoft Docs
+description: XML データを SQL Server データベースに転送するためのいくつかの方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 286513b2c78c87a1a0275b94d3e09ad961c4ff8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01790e4eacf793926725770f980c8194013a155a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738408"
 ---
 # <a name="load-xml-data"></a>XML データの読み込み
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 例:  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 次に例を示します。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの [n]text 型または image 型の列にデータが含まれている場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用してテーブルをインポートできます。 ALTER TABLE ステートメントを使用して列の型を XML に変更します。  
   
@@ -44,8 +45,8 @@ FROM    (SELECT *
  AS xCol) AS R(xCol)  
 ```  
   
-## <a name="text-encoding"></a>テキスト エンコード  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では XML データを Unicode (UTF-16) で保存します。 サーバーから取得する XML データは UTF-16 エンコードで出力されます。 それ以外のエンコードが必要な場合、取得したデータに必要な変換を行う必要があります。 変換した XML データのエンコードが異なる場合があります。 その場合は、注意してデータを読み込む必要があります。 例:  
+## <a name="text-encoding"></a>テキストのエンコード  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では XML データを Unicode (UTF-16) で保存します。 サーバーから取得する XML データは UTF-16 エンコードで出力されます。 それ以外のエンコードが必要な場合、取得したデータに必要な変換を行う必要があります。 変換した XML データのエンコードが異なる場合があります。 その場合は、注意してデータを読み込む必要があります。 次に例を示します。  
   
 -   Unicode (UCS-2、UTF-16) のテキスト XML は、問題なく XML 列、変数、またはパラメーターに代入できます。  
   
@@ -63,14 +64,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>文字列エンコードの非互換性  
- XML をコピーし、文字列リテラルとして [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに貼り付けると、[N]VARCHAR 文字列エンコードの非互換性の問題が発生する可能性があります。 この問題が発生するかどうかは、XML インスタンスのエンコードによって決まります。 多くの場合、XML 宣言の削除が必要になります。 例:  
+ XML をコピーし、文字列リテラルとして [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに貼り付けると、[N]VARCHAR 文字列エンコードの非互換性の問題が発生する可能性があります。 この問題が発生するかどうかは、XML インスタンスのエンコードによって決まります。 多くの場合、XML 宣言の削除が必要になります。 次に例を示します。  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema ...  
 ```  
   
- 続いて、N を指定し、XML インスタンスを Unicode 形式のインスタンスにします。 例:  
+ 続いて、N を指定し、XML インスタンスを Unicode 形式のインスタンスにします。 次に例を示します。  
   
 ```  
 -- Assign XML instance to a variable.  

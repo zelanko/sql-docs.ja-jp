@@ -12,20 +12,20 @@ ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c82db194aa2cdd0eb0a162ee358512f2023adb58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 715d385cde6d3f4e8339472c079947c54c149d82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790991"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   SQL:StmtCompleted イベント クラスは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが完了したことを示します。  
   
 ## <a name="sqlstmtcompleted-event-class-data-columns"></a>SQL:StmtCompleted イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |ClientProcessID|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
@@ -43,12 +43,12 @@ ms.locfileid: "68043341"
 |IsSystem|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |LineNumber|**int**|実行されるステートメントの行番号。|5|はい|  
 |LoginName|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
-|LoginSid|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginSid|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NestLevel|**int**|ステートメントがストアド プロシージャ内で実行された場合のストアド プロシージャの入れ子レベル。|29|はい|  
 |NTDomainName|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|**nvarchar**|Windows のユーザー名。|6|はい|  
 |Offset|**int**|ストアド プロシージャ内またはバッチ内のステートメントの開始オフセット。|61|はい|  
-|Reads|**bigint**|SQL ステートメントによるページの読み取り回数。|16|はい|  
+|読み取り|**bigint**|SQL ステートメントによるページの読み取り回数。|16|はい|  
 |RequestID|**int**|ステートメントが含まれている要求の ID。|49|はい|  
 |RowCounts|**bigint**|イベントの影響を受けた行数。|48|はい|  
 |ServerName|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
@@ -57,7 +57,7 @@ ms.locfileid: "68043341"
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|**ntext**|実行されたステートメントのテキスト。|1|はい|  
 |TransactionID|**bigint**|ステートメントがトランザクション内で実行された場合のトランザクションの ID。|4|はい|  
-|Writes|**bigint**|SQL ステートメントによるページの書き込み回数。|17|はい|  
+|書き込み|**bigint**|SQL ステートメントによるページの書き込み回数。|17|はい|  
 |XactSequence|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   
 ## <a name="see-also"></a>参照  

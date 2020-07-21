@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c6e740159d06a18d1ae2ef4fa9788246a4ca60e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 321f857f22f8551056dfec78485e5c372bbdc9e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000158"
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>トレースでのサーバー プロセス ID (SPID) のフィルター選択 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレースでサーバー プロセス ID (SPID) をフィルター選択する方法について説明します。  
@@ -31,7 +30,7 @@ ms.locfileid: "63250864"
      **[トレースのプロパティ]** ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
-    >  **[接続の確立直後にトレースを開始する]** チェック ボックスがオンになっている場合、 **[トレースのプロパティ]** ダイアログ ボックスは表示されず、すぐにトレースが開始されます。 この設定を無効にするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[接続の確立直後にトレースを開始する]** チェック ボックスをオフにします。  
+    >  [**接続の確立直後に**トレースを開始する] を選択すると、[**トレースのプロパティ**] ダイアログボックスが表示されず、トレースが開始されます。 この設定を無効にするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[接続の確立直後にトレースを開始する]** チェック ボックスをオフにします。  
   
 2.  **[トレース名]** ボックスに、トレースの名前を入力します。  
   

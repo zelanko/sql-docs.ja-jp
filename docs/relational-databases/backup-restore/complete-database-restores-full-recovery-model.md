@@ -1,5 +1,6 @@
 ---
 title: データベースの全体復元 (完全復旧モデル) | Microsoft Docs
+description: すべてのデータが一貫性のある時点に復旧される、SQL Server データベースの全体復元について説明します。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1220ec831860baee2221004af19d9fd735c03cec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45146f857c0a5e47fd86f26b7ce7697015ab8a51
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728461"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>データベースの全体復元 (完全復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベースの全体復元の目的は、データベース全体を復元することです。 復元の実行中は、データベース全体がオフラインになります。 データベースの各部がオンラインになる前に、すべてのデータが一貫性のある状態に復旧されます。一貫性のある状態とは、データベースのすべての部分が同じ時点にあり、コミットされていないトランザクションが存在しない状態を示します。  
   
@@ -41,9 +42,7 @@ ms.locfileid: "68081409"
 
 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」の「互換性サポート」のセクションを参照してください。
   
-##  <a name="PointOfFailure"></a> 障害発生時点へのデータベースの復旧  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a> 障害発生時点へのデータベースの復旧  
 
  通常、障害が発生した時点までデータベースを復旧するには、次の基本的な手順が必要です。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "68081409"
 > [!NOTE]  
 >  データベースのバックアップを別のサーバー インスタンスに復元する場合は、「 [バックアップと復元によるデータベースのコピー](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)」を参照してください。  
   
-###  <a name="TsqlSyntax"></a> 基本的な Transact-SQL RESTORE 構文  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 基本的な Transact-SQL RESTORE 構文  
  前の図に示した復元シーケンスの基本的な [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 構文は次のとおりです。  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
@@ -84,7 +83,7 @@ ms.locfileid: "68081409"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> 例: 障害発生時点への復元 (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> 例: 障害発生時点への復元 (Transact-SQL)  
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] の例は、データベースを障害発生時点まで復元する復元シーケンスに不可欠なオプションを示しています。 この例では、データベースのログ末尾のバックアップを作成します。 次に、データベースの完全バックアップとログ バックアップを復元してから、ログ末尾のバックアップを復元します。 最後に、別の手順でデータベースを復旧します。  
   
 > [!NOTE]  
@@ -120,7 +119,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> ログ バックアップ内の特定の時点へのデータベースの復元  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a> ログ バックアップ内の特定の時点へのデータベースの復元  
  一般に、完全復旧モデルでは、データベースの全体復元によって、特定の時点、マークされたトランザクション、またはログ バックアップ内の特定の LSN まで復元することができます。 ただし、一括ログ復旧モデルの場合は、一括ログ操作による変更がログ バックアップに含まれていると、特定の時点への復旧はできません。  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>特定の時点への復元のサンプル シナリオ  
@@ -147,7 +146,7 @@ GO
 > [!NOTE]  
 >  特定の時点への復元の例については、「 [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」の「互換性サポート」のセクションを参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **データベースの完全バックアップを復元するには**  
   
 -   [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  

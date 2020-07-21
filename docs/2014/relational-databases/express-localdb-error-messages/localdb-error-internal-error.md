@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_INTERNAL_ERROR | Microsoft Docs
+title: LOCALDB_ERROR_INTERNAL_ERROR |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 ms.assetid: 60c7a47b-114c-441b-869e-9d8ebfe4148e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 809420b875ebf20b45efb6b297cb198cfed8422b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5656eed2a9a645ebb04808a8a3f09be1c548e346
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62990400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051147"
 ---
-# <a name="localdberrorinternalerror"></a>LOCALDB_ERROR_INTERNAL_ERROR
+# <a name="localdb_error_internal_error"></a>LOCALDB_ERROR_INTERNAL_ERROR
     
 ## <a name="details"></a>詳細  
   

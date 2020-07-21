@@ -1,5 +1,5 @@
 ---
-title: レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: レポート、レポート パーツ、およびレポート定義 (レポート ビルダー) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640cd9bfd39b272e7829cc25b51ee50a82176a65
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.openlocfilehash: 11236a29e22877e1d785d7ac2325898cc11bac7e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037875"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081052"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 初期定義、パブリッシュされたレポート、ユーザーに表示される表示レポートなど、改ページ調整されたレポートの異なる状態を示すさまざまな用語が使用されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "67037875"
   
 -   レポートをサブスクライブします。このレポートは、指定した出力形式で電子メールの受信トレイまたはファイル共有に配信されます。  
   
- レポートをサブスクライブします。このレポートは、指定した出力形式で電子メールの受信トレイまたはファイル共有に配信されます。 レポートの既定の表示形式は HTML 4.0 です。 HTML に加えて、Excel、Word、XML、PDF、TIFF、CSV などのさまざまな出力形式でレポートを表示できます。 パブリッシュされたレポートと同様に、表示レポートは、レポート サーバーに戻って編集したり保存することはできません。 詳細については、「 [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
+ レポートをサブスクライブします。このレポートは、指定した出力形式で電子メールの受信トレイまたはファイル共有に配信されます。 レポートの既定の表示形式は HTML 4.0 です。 HTML に加えて、Excel、Word、XML、PDF、TIFF、CSV などのさまざまな出力形式でレポートを表示できます。 パブリッシュされたレポートと同様に、表示レポートは、レポート サーバーに戻って編集したり保存することはできません。 詳しくは、「 [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)におけるページ割り付けの制御規則を理解しておく必要があります。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md) [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   

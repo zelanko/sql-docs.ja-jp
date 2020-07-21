@@ -1,5 +1,5 @@
 ---
-title: supportsResultSetConcurrency メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsResultSetConcurrency メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43c3fb3800b18af27d811fd7679e4b957f1e2113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 067809bbd5bad3933dd3e7e66f538663ceb4e103
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968955"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919969"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -75,13 +75,13 @@ public boolean supportsResultSetConcurrency(int type,
  CONCUR_SS_OPTIMISTIC_VAL  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この supportsResultSetConcurrency メソッドは、java メタデータインターフェイスの supportsResultSetConcurrency メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsResultSetConcurrency メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsResultSetConcurrency メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

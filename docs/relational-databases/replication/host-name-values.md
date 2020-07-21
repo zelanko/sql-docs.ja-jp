@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3bcfcf089d8a50f9b94498cc68f12a4d6f0ac97f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: c29f51c8fd65eda73d2e54e321e3e476461d0c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652882"
 ---
-# <a name="hostname-values"></a>[HOST_NAME 値]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="host_name-values"></a>[HOST_NAME 値]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 パラメーター化されたフィルター付きのマージ パブリケーションは、SUSER_SNAME() 関数または HOST_NAME() 関数を使用してデータにフィルターをかけます。 関数は、パブリケーションの新規作成ウィザードまたは **[パブリケーションのプロパティ]** ダイアログ ボックスで指定します。  
   

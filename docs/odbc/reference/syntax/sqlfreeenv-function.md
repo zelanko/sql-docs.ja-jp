@@ -17,24 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFreeEnv function [ODBC]
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f5158799441fb0cb8d0ab4f0119b1b1ecdb94dc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6f036c6feca31985afdddddb63df683f6c0daae
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002949"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285802"
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0 標準準拠: 非推奨  
   
- **概要**  
- ODBC で*3.x*、ODBC 2.0 関数**SQLFreeEnv**置き換わりました**SQLFreeHandle**します。 詳細については、次を参照してください。 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)します。  
+ **まとめ**  
+ *Odbc 3.x では、* odbc 2.0 関数**sqlfreeenv**が**sqlfreeenv**に置き換えられました。 詳細については、「 [Sqlfreehandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)」を参照してください。  
   
 > [!NOTE]
->  どのようなドライバー マネージャーは、ときに、マッピングするには、この関数、ODBC の詳細については*2.x* odbc アプリケーションが動作*3.x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  
+>  *Odbc 2.x アプリケーションが*odbc *2.x ドライバーで*動作しているときに、ドライバーマネージャーがこの機能をマップする方法の詳細については、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

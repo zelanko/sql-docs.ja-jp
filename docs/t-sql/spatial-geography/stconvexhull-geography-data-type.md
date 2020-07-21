@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b3d06da6d6f972c64d4bf196699b55a611b0f992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e5f68a89ef0579df0de314c3215ade147d62d0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704362"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスの凸包を表すオブジェクトを返します。  
   
@@ -36,16 +36,16 @@ ms.locfileid: "68042467"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  エンベロープの角度が 90°より大きい **geography** インスタンスに対して `FullGlobe` オブジェクトを返します。  
   
  空の **geography** インスタンスに対して空の **geography** コレクションを返します。  
   
  初期化されていない **geography** インスタンスに対して **null** を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 初期化されていない geography インスタンスに STConvexHull() を使用する  
  次の例では、初期化されていない **geography** インスタンスに `STConvexHull()` を使用します。  

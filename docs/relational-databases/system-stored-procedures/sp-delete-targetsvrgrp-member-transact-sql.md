@@ -1,5 +1,5 @@
 ---
-title: sp_delete_targetsvrgrp_member (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_targetsvrgrp_member (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetsvrgrp_member
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dcf3788480a6e3dbb3bde20ef3f9e6a43269c9e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 51846fabc42e99ab82bd3a9d6312ba6316c9c651
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026729"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861905"
 ---
-# <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ターゲット サーバー グループからターゲット サーバーを削除します。  
   
@@ -39,9 +39,9 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @group_name = ] 'group_name'` グループの名前。 *group_name*は**sysname**、既定値はありません。  
+`[ @group_name = ] 'group_name'`グループの名前。 *group_name*は**sysname**であり、既定値はありません。  
   
-`[ @server_name = ] 'server_name'` 指定されたグループから削除するサーバーの名前。 *server_name*は**nvarchar (30)** 、既定値はありません。  
+`[ @server_name = ] 'server_name'`指定したグループから削除するサーバーの名前。 *server_name*は**nvarchar (30)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -50,10 +50,10 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
  なし  
   
 ## <a name="permissions"></a>アクセス許可  
- このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
+ このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、サーバーを削除する`LONDON1`グループ Servers Maintaining Customer Information からです。  
+ 次の例では、 `LONDON1` 顧客情報グループを保持しているサーバーからサーバーを削除します。  
   
 ```  
 USE msdb ;  
@@ -65,8 +65,8 @@ EXEC sp_delete_targetsvrgrp_member
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [sp_add_targetsvrgrp_member &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_add_targetsvrgrp_member &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

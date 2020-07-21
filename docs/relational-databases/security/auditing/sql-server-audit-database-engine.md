@@ -1,10 +1,11 @@
 ---
 title: SQL Server Audit (データベース エンジン) | Microsoft Docs
+description: SQL Server データベース エンジンまたは個々のデータベースのサーバー監査について説明します。 サーバー監査には、サーバーおよびデータベースの監査の仕様が含まれます。
 ms.custom: ''
-ms.date: 11/21/2016
+ms.date: 01/01/2020
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-author: VanMSFT
-ms.author: vanto
+author: davidtrigano
+ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 439294b36c03d36a2747c17ab53b630d39c8caea
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: ff084ae8b2a34a2f8bcfb7dd8312106a003efa69
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742883"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159870"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] のインスタンスや個々のデータベースの *監査* を行うためには、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で発生するイベントの追跡およびログ記録が必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査では、サーバー レベルのイベントのためのサーバー監査仕様とデータベース レベルのイベントのためのデータベース監査仕様を含めることができる、サーバー監査を作成できます。 監査イベントは、イベント ログまたは監査ファイルへ書き込むことができます。  
   
@@ -110,8 +111,6 @@ ms.locfileid: "68742883"
   
 4.  Windows **イベント ビューアー**、 **[ログ ファイルの表示]** 、または fn_get_audit_file 関数を使用して、監査イベントを閲覧します。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  詳細については、「 [サーバー監査およびサーバー監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 」および「 [サーバー監査およびデータベース監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
   
 ## <a name="considerations"></a>考慮事項  
@@ -129,7 +128,7 @@ ms.locfileid: "68742883"
 ### <a name="database-mirroring-and-sql-server-audit"></a>データベース ミラーリングと SQL Server 監査  
  データベース監査の仕様が定義されていて、データベース ミラーリングを使用するデータベースには、そのデータベース監査の仕様が含まれます。 ミラー化された SQL インスタンスでも正しく機能するようにするには、以下の項目を構成する必要があります。  
   
--   データベース監査の仕様が監査レコードを書き込めるようにするには、同じ GUID を持つ監査をミラー サーバーに作成する必要があります。 これは、CREATE AUDIT WITH GUID **=** _\<ソース Server Audit の GUID_> コマンドを使用して構成できます。  
+-   データベース監査の仕様が監査レコードを書き込めるようにするには、同じ GUID を持つ監査をミラー サーバーに作成する必要があります。 これは、CREATE AUDIT WITH GUID **=** _\<GUID from source Server Audit_> コマンドを使用して構成できます。  
   
 -   バイナリ ファイル ターゲットの場合は、監査記録が書き込まれる場所に対する適切なアクセス許可がミラー サーバーのサービス アカウントに必要です。  
   
@@ -144,18 +143,23 @@ ms.locfileid: "68742883"
 ### <a name="data-definition-language-statements"></a>データ定義言語ステートメント  
  以下の DDL ステートメントを使用して、監査の仕様を作成、変更、および削除することができます。  
   
-|||  
+|DDL ステートメント|説明| 
 |-|-|  
-|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|  
+|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|セキュリティ保護可能なエンティティの所有権を変更します。|  
+|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|SQL Server Audit 機能を使用して、データベース監査仕様オブジェクトを変更します。|  
+|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|SQL Server Audit 機能を使用して、サーバー監査オブジェクトを変更します。|  
+|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|SQL Server Audit 機能を使用して、サーバー監査仕様オブジェクトを変更します。|  
+|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|SQL Server Audit 機能を使用して、データベース監査仕様オブジェクトを作成します。|  
+|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|SQL Server Audit を使用して、サーバー監査オブジェクトを作成します。|  
+|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|SQL Server Audit 機能を使用して、サーバー監査仕様オブジェクトを作成します。|  
+|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|SQL Server Audit 機能を使用して、データベース監査仕様オブジェクトを削除します。|  
+|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|SQL Server の監査機能を使用して、サーバー監査オブジェクトを削除します。|  
+|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|SQL Server Audit 機能を使用して、サーバー監査仕様オブジェクトを削除します。|  
   
 ### <a name="dynamic-views-and-functions"></a>動的ビューと関数  
  次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に使用できる動的ビューと関数の一覧を示します。  
   
-|動的ビューと関数|[説明]|  
+|動的ビューと関数|説明|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|監査ログで報告される可能性のあるすべての監査アクション、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit の一部として構成できるすべての監査アクション グループに対して 1 つの行を返します。|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|監査の現在の状態に関する情報を提供します。|  
@@ -165,7 +169,7 @@ ms.locfileid: "68742883"
 ### <a name="catalog-views"></a>カタログ ビュー  
  次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に使用できるカタログ ビューの一覧を示します。  
   
-|カタログ ビュー|[説明]|  
+|カタログ ビュー|説明|  
 |-------------------|-----------------|  
 |[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|サーバー インスタンス上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に含まれるデータベース監査仕様に関する情報を含みます。|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|すべてのデータベースについてサーバー インスタンス上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査に含まれる、データベース監査仕様に関する情報を含みます。|  
@@ -197,7 +201,7 @@ ms.locfileid: "68742883"
   
 ## <a name="topics-closely-related-to-auditing"></a>監査と密接に関連したトピック  
  [[サーバーのプロパティ] &#40;[セキュリティ] ページ&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログインの監査をオンにする方法について説明します。 監査レコードは Windows アプリケーション ログに格納されます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のログインの監査をオンにする方法について説明します。 監査レコードは Windows アプリケーション ログに格納されます。  
   
  [c2 audit mode サーバー構成オプション](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の C2 セキュリティ準拠の監査モードについて説明します。  
@@ -205,7 +209,7 @@ ms.locfileid: "68742883"
  [Security Audit イベント カテゴリ &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]で使用できる監査イベントについて説明します。 詳細については、「 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)」を参照してください。  
   
- [SQL トレース](../../../relational-databases/sql-trace/sql-trace.md)  
+ [SQL トレース (SQL Trace)](../../../relational-databases/sql-trace/sql-trace.md)  
  SQL トレースを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Profiler からではなく、ユーザー独自のアプリケーションからトレースを手動で作成する方法について説明します。  
   
  [DDL トリガー](../../../relational-databases/triggers/ddl-triggers.md)  

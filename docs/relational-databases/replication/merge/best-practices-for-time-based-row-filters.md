@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6182b480c83b8e6b2d0f0a50217823fd14f30c30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 285b005393c29a81b90a749a89ebf83af8e9c271
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033355"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882538"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>時間ベースの行フィルターの推奨事項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   アプリケーションのユーザーは、テーブルに対して時間ベースのデータ サブセットを要求することがよくあります。 たとえば、販売員が先週の注文データを必要としたり、イベント プランナーが次週のイベントのデータを必要とする場合などです。 多くの場合、アプリケーションでは、 **GETDATE()** 関数を含むクエリを使用して、この処理を実行します。 次の行フィルター ステートメントについて考えてみましょう。  
   
 ```  
@@ -61,7 +61,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|1|  
-|2|Dinner|112|2006-10-10|0|  
+|2|夕食|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
   
@@ -85,7 +85,7 @@ GO
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|1|  
+|2|夕食|112|2006-10-10|1|  
 |3|Party|112|2006-10-11|1|  
 |4|Wedding|112|2006-10-12|1|  
   

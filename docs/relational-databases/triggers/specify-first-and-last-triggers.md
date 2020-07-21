@@ -16,20 +16,20 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cac5567670887a0e0a996b6aed690e17adbbf9a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755418"
 ---
 # <a name="specify-first-and-last-triggers"></a>最初と最後のトリガーの指定
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   テーブルに関連付けられている AFTER トリガーの 1 つを、INSERT、DELETE、および UPDATE の各トリガー動作に対して起動される、最初の AFTER トリガーまたは最後の AFTER トリガーのいずれかに指定できます。 最初と最後のトリガーの間で起動される AFTER トリガーは、任意の順序で実行されます。  
   
  AFTER トリガーの順序を指定するには、 **sp_settriggerorder** ストアド プロシージャを使用します。 **sp_settriggerorder** には次のオプションがあります。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**First**|DML トリガーが、トリガー動作に対して起動される最初の AFTER トリガーであることを指定します。|  
 |**Last**|DML トリガーが、トリガー動作に対して起動される最後の AFTER トリガーであることを指定します。|  
@@ -52,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  ALTER TRIGGER ステートメントによって最初のトリガーまたは最後のトリガーが変更された場合、 **First** 属性または **Last** 属性が削除され、順序の値が **None**に設定されます。 **sp_settriggerorder**を使用して順序をリセットする必要があります。  
   
- OBJECTPROPERTY 関数は、トリガーが最初のトリガーであるか、または最後のトリガーであるかを、次のプロパティを使用して示します: **ExecIsFirstInsertTrigger**、**ExecIsFirstUpdateTrigger**、**ExecIsFirstDeleteTrigger**、**ExecIsLastInsertTrigger**、**ExecIsLastUpdateTrigger**、**ExecIsLastDeleteTrigger**。  
+ OBJECTPROPERTY 関数では次のプロパティを使用してトリガーが最初のトリガーまたは最後のトリガーのいずれであるかをレポートします: **ExecIsFirstInsertTrigger**、**ExecIsFirstUpdateTrigger**、**ExecIsFirstDeleteTrigger**、**ExecIsLastInsertTrigger**、**ExecIsLastUpdateTrigger**、**ExecIsLastDeleteTrigger**。  
   
  レプリケーションは、テーブルが即時更新サブスクリプションまたはキュー更新サブスクリプションに含まれる場合、自動的に最初のトリガーを生成します。 レプリケーションのトリガーは最初のトリガーであることが必要です。 レプリケーションでは、最初のトリガーを持つテーブルを即時更新サブスクリプションまたはキュー更新サブスクリプションに含めるよう設定すると、エラーが発生します。 テーブルをサブスクリプションに含めた後、トリガーを最初のトリガーに設定すると、 **sp_settriggerorder** はエラーを返します。 レプリケーション トリガーに ALTER を使用したり、 **sp_settriggerorder** を使用してレプリケーション トリガーを最後のトリガーまたは順序なしのトリガーに変更すると、サブスクリプションは正しく動作しません。  
   

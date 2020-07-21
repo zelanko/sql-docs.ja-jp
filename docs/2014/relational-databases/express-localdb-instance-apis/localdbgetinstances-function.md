@@ -15,18 +15,17 @@ topic_type:
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53c691495631fd3d39aca464f8f6343f5690af6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032248"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027754"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 関数
   指定したバージョンのすべての SQL Server Express LocalDB インスタンスを返します。  
   
- **ヘッダー ファイル:** sqlncli.h  
+ **ヘッダーファイル:** sqlncli  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,10 +39,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>パラメーター  
  *pInstanceNames*  
- [出力]この関数から制御が戻るときにという名前の両方の名前を格納し、既定のユーザーのワークステーションに LocalDB インスタンス。  
+ Outputこの関数から制御が戻るときに、ユーザーのワークステーション上の名前付き LocalDB インスタンスと既定の LocalDB インスタンスの両方の名前が含まれています。  
   
  *lpdwNumberOfInstances*  
- [入力/出力]入力時にインスタンス名にスロットの数が含まれています。、 *pInstanceNames*バッファー。 出力では、ユーザーのワークステーションで見つかった LocalDB インスタンスの数が含まれています。  
+ [入力/出力]入力時には、 *pInstanceNames*バッファー内のインスタンス名のスロット数が格納されます。 出力時には、ユーザーのワークステーションで見つかった LocalDB インスタンスの数が含まれます。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -70,8 +69,8 @@ HRESULT LocalDBGetInstances(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
+## <a name="remarks"></a>Remarks  
+ LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../sql-server-express-localdb-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

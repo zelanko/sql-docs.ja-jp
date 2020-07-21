@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106077"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>パレットを使用したグラフの色の定義 (レポート ビルダーおよび SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106077"
   
 2.  デザイン画面で、グラフをクリックします。 グラフ オブジェクトのプロパティがプロパティ ペインに表示されます。  
   
-3.  **グラフ**セクションの`Palette`プロパティで、**カスタム**します。  
+3.  [**グラフ**] セクションの`Palette`プロパティで、[**カスタム**] を選択します。  
   
 4.  CustomPaletteColors プロパティで、コレクションの編集ボタン ( **[...]** ) をクリックします。 **[ReportColorExpression コレクション エディター]** が表示されます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66106077"
   
 ## <a name="see-also"></a>参照  
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)   
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [複数の図形グラフでの色の統一 &#40;レポート ビルダーおよび SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   
   

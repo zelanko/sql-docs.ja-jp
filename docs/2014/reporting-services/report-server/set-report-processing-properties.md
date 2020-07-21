@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103238"
 ---
 # <a name="set-report-processing-properties"></a>レポート処理プロパティの設定
   レポート実行プロパティでは、レポートの処理方法を制御します。 実行プロパティは、各レポートごとに設定する必要があります。  
   
- レポート実行プロパティを設定するには、レポート マネージャーでレポートを開き、[実行] プロパティ ページに移動します。 使用してプロパティを設定することもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 詳細については、「[[処理オプション] プロパティ ページ &#40;レポート マネージャー&#41;](../processing-options-properties-page-report-manager.md)」を参照してください。  
+ レポート実行プロパティを設定するには、レポート マネージャーでレポートを開き、[実行] プロパティ ページに移動します。 また、を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]プロパティを設定することもできます。 詳細については、「[[処理オプション] プロパティ ページ &#40;レポート マネージャー&#41;](../processing-options-properties-page-report-manager.md)」を参照してください。  
   
 ## <a name="report-execution-modes"></a>レポート実行モード  
  レポートは、要求時に実行するか、スナップショットとして実行することができます。 以下のセクションでは、各方法について説明します。  
@@ -56,10 +56,10 @@ ms.locfileid: "66103238"
  この条件が存在する場合、レポート サーバーは、次にスケジュールされているサブスクリプションの実行時に、サブスクリプションを無効にします。 サブスクリプションを再度アクティブ化するには、サブスクリプションを開いてから保存します。 サブスクリプションを開くと、レポート サーバーにより、スナップショットに指定されたサブスクリプションのパラメーター値が更新されます。 サブスクリプションの詳細については、「[サブスクリプションと配信 &#40;Reporting Services&#41](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [レポートの実行プロパティを構成する &#40;レポート マネージャー&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Reporting Services の概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [方法:レポート履歴にスナップショットを追加します。](add-a-snapshot-to-report-history-report-manager.md)   
+ [SharePoint 統合モードで Reporting Services &#40;処理オプションを設定&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [レポート &#40;レポートマネージャーの実行プロパティの構成&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [SSRS&#41;&#40;の Reporting Services の概念](../reporting-services-concepts-ssrs.md)   
+ [レポート履歴にスナップショットを追加する方法](add-a-snapshot-to-report-history-report-manager.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

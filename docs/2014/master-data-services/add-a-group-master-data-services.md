@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: df04cd5bcb216a716312783aff3b78d03ea01ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ada37cb662ba38510243798694f812aed892bc28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480143"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972342"
 ---
 # <a name="add-a-group-master-data-services"></a>グループを追加する (マスター データ サービス)
   **で** [グループ] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ボックスの一覧にグループを追加して、Web アプリケーションに権限を割り当てるプロセスを開始します。 グループ内のユーザーが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスできるようにするには、グループの権限を 1 つまたは複数の機能領域およびモデル オブジェクトに付与する必要があります。  

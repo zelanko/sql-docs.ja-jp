@@ -16,18 +16,18 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebe60252bc1f0b950ff2f5b4342c30d99c5bd6c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9224ae75d28a9373cf3c039d0f0d2642bf4d1b28
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058541"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003701"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 指定された長さまたは有効桁数に丸めた数値を返します。  
   
@@ -63,7 +63,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**money** および **smallmoney** カテゴリ|**money**|  
 |**float** および **real** カテゴリ|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ROUND は常に値を返します。 *length* が負の値で、整数部の桁数より大きい場合、ROUND は 0 を返します。  
   
 |例|結果|  
@@ -72,14 +72,14 @@ ROUND ( numeric_expression , length [ ,function ] )
   
  ROUND は、*length* が負の値であるときは、データ型に関係なく、*numeric_expression* を丸めて返します。  
   
-|使用例|結果|  
+|例|結果|  
 |--------------|------------|  
 |ROUND (748.58, -1)|750.00|  
 |ROUND (748.58, -2)|700.00|  
 |ROUND(748.58, -3)|748.58 の既定値は decimal(5,2) となり、1000.00 を返すことができないため、結果は算術オーバーフローになります。|  
-|4 桁までに丸めるには、入力のデータ型を変更します。 例:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+|4 桁までに丸めるには、入力のデータ型を変更します。 次に例を示します。<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-round-and-estimates"></a>A. ROUND と概数を使用する  
  次の例では、`ROUND` を使用することにより最後の桁が常に概数になることを表す 2 つの式を示します。  
@@ -106,8 +106,8 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
  ```
---------  ----------
-123.45    100.00
+----------  ----------
+123.4500    100.00
 ```
   
 ### <a name="c-using-round-to-truncate"></a>C. ROUND を使用して切り捨てを行う  

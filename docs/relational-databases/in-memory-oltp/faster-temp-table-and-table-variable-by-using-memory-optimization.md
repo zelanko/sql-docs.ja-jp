@@ -1,6 +1,7 @@
 ---
-title: メモリ最適化を使用した一時テーブルとテーブル変数の高速化 | Microsoft Docs
-ms.custom: ''
+title: 一時テーブルとテーブル変数の高速化のためのメモリ最適化
+description: 一時テーブル、テーブル変数、またはテーブル値パラメーターをメモリ最適化テーブルとテーブル変数に変換してパフォーマンスを向上させる方法について説明します。
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,20 +12,20 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffea82cc9abdd016ec63771510109046e7da5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8f6369de798c04805e2c5facb01fcfd6dc31153
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723245"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>メモリ最適化を使用した一時テーブルとテーブル変数の高速化
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 一時テーブル、テーブル変数、またはテーブル値パラメーターを使用する場合は、パフォーマンスを向上させるために、これらを変換してメモリ最適化テーブルとテーブル変数を活用することを検討してください。 通常、コードの変更はわずかです。  
   
-この記事では、以下について説明します。  
+この記事では、次の内容について説明します。  
   
 - メモリ内への変換を優先すると主張するシナリオ  
 - メモリ内への変換を実装するための技術的な手順  
@@ -48,7 +49,7 @@ ms.locfileid: "68092229"
 
   
   
-#### <a name="object-types"></a>オブジェクト型  
+#### <a name="object-types"></a>オブジェクトの型  
   
 インメモリ OLTP では、メモリ最適化一時テーブルおよびテーブル変数に使用できる次のオブジェクトを提供します。  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68092229"
 - メモリ最適化テーブル変数  
   - 次の 2 つの手順 (インラインでなく) で宣言する必要があります。  
     - `CREATE TYPE my_type AS TABLE ...;` 、その後  
-    - `DECLARE @mytablevariable my_type;`」 (メモリ最適化テーブルのインデックス) をご覧ください。  
+    - `DECLARE @mytablevariable my_type;`.  
   
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. シナリオ:グローバル tempdb &#x23;&#x23;table の置換  
@@ -124,7 +125,7 @@ CREATE TABLE #tempSessionC
   
   
   
-最初に、次のテーブル値関数を作成して、 **@@spid** にフィルターを適用します。 この関数は、セッションの一時テーブルから変換するすべての SCHEMA_ONLY テーブルで使用可能になります。  
+まず、次のテーブル値関数を作成して、 **\@\@spid** にフィルターを適用します。 この関数は、セッションの一時テーブルから変換するすべての SCHEMA_ONLY テーブルで使用可能になります。  
   
   
   
@@ -190,7 +191,7 @@ go
   
   
   
-## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. シナリオ:テーブル変数は MEMORY_OPTIMIZED=ON にすることができます  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. シナリオ:テーブル変数は MEMORY_OPTIMIZED=ON にすることができます  
   
   
 従来のテーブル変数は、tempdb データベース内のテーブルを表します。 パフォーマンスが高速化するには、テーブル変数のメモリを最適化することができます。  
@@ -298,7 +299,7 @@ go
 ```  
 
 
-次のスクリプトでは、お客様のファイルグループを作成し、推奨されるデータベースの設定を構成します ( [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql))。
+次のスクリプトでは、お客様のファイルグループを作成し、推奨されるデータベースの設定を構成します ( [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql))。
   
 FILE と FILEGROUP の `ALTER DATABASE ... ADD` の詳細については、次を参照してください。  
   
@@ -426,7 +427,7 @@ Batch execution completed 5001 times.
   
 メモリ最適化テーブル変数がアクセスごとに正確なキー値でのみアクセスされる場合、非クラスター化インデックスよりもハッシュ インデックスを選択する方が望ましい可能性があります。 ただし、適切な BUCKET_COUNT を予想できない場合は、NONCLUSTERED インデックスを選択することをお勧めします。  
   
-## <a name="h-see-also"></a>H. 参照  
+## <a name="h-see-also"></a>H. 関連項目  
   
 - [メモリ最適化テーブル。](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 

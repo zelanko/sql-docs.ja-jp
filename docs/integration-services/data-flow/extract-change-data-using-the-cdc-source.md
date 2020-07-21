@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: abecb27ec519c9517fd9e5ee4a3e64dca6b433e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 35e8d152cbffb5a5f34be4cda5c7e97fc8140d2d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941776"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292805"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>CDC ソースを使用した変更データ抽出
 
@@ -75,8 +75,8 @@ ms.locfileid: "67941776"
 15. **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [[CDC ソース エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
+ [CDC ソース エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
  [[CDC ソース エディター] ([列] ページ)](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
- [[CDC ソース エディター] ([エラー出力] ページ)](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ca45017c7afe4b8e877018d0a121211e4eb9700e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3c84997d8ec11a4eb620daf7bf34af7adf3e8de1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045345"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293237"
 ---
 # <a name="comparing-string-data"></a>比較、文字列データ
 
@@ -37,7 +37,7 @@ ms.locfileid: "68045345"
   
 -   条件分割変換は、式の内部で文字列比較を使用し、データ行を送信する出力を決定できます。 詳細については、「 [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)」を参照してください。  
   
--   派生列変換は、式の内部で文字列比較を使用し、新しい列の値を生成できます。 詳細については、「 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
+-   派生列変換は、式の内部で文字列比較を使用し、新しい列の値を生成できます。 詳細については、「 [派生列変換](../../integration-services/data-flow/transformations/derived-column-transformation.md)」を参照してください。  
   
  変数、変数マッピング、および優先順位制約でも、文字列比較を含めた式を使用できます。 式の詳細については、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68045345"
   
  次の表では、比較オプションと並べ替えスタイルについて説明します。  
   
-|比較オプション|[説明]|  
+|比較オプション|説明|  
 |-----------------------|-----------------|  
 |大文字と小文字を区別しない|比較時に、大文字と小文字を区別するかどうかを示します。 このオプションを設定した場合、文字列比較で大文字と小文字は区別されません。 たとえば、"ABC" は "abc" と同一になります。|  
 |カタカナを区別しない|日本語の比較で、2 種類のかな文字である、ひらがなとカタカナを区別するかどうかを指定します。 このオプションを設定した場合、文字列比較でひらがなとカタカナは区別されません。|  

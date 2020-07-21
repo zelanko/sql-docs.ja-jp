@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 099771b9900d4c39de40b176cde5c92fa0c95462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9895206070b7dfd02dae1f4ecef5f28ff2eb6c55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063019"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>空間データに対するニアレスト ネイバーのクエリ
   空間データで使用される一般的なクエリの 1 つに、ニアレスト ネイバー クエリがあります。 ニアレスト ネイバー クエリは、特定の空間オブジェクトに最も近い空間オブジェクトを検索するために使用されます。 たとえば、Web サイトのストア ロケーターは、多くの場合、顧客の場所に最も近い店舗の場所を検索する必要があります。  
@@ -60,7 +59,7 @@ SELECT TOP ( number )
   
 3.  `WHERE` 句は `STDistance()` メソッドを含む必要があります。  
   
-4.  `WHERE` 句に複数の述語がある場合、`STDistance()` メソッドを含む述語は、`AND` 結合で他の述語と接続する必要があります。  `STDistance()` メソッドは、`WHERE` 句のオプションの一部にすることはできません。  
+4.  `WHERE` 句に複数の述語がある場合、`STDistance()` メソッドを含む述語は、`AND` 結合で他の述語と接続する必要があります。 `STDistance()` メソッドは、`WHERE` 句のオプションの一部にすることはできません。  
   
 5.  `ORDER BY` 句の最初の式では `STDistance()` メソッドを使用する必要があります。  
   

@@ -1,5 +1,5 @@
 ---
-title: 可用性グループでのリモート BLOB ストア (RBS) の使用
+title: 可用性グループでのリモート BLOB ストア (RBS)
 description: 'Always On 可用性グループの一部であるデータベースでリモート Blob ストア (RBS) を使用する方法について説明します。 '
 ms.custom: seodec18
 ms.date: 05/17/2016
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2d98c64e94904ddf883f5f7f1a4ce22d3f81c88b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43ed11aebf0114334ce57ed251187912bd43c18c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014429"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888081"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>Always On 可用性グループでのリモート BLOB ストア (RBS) の使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][リモート BLOB ストア (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) の BLOB オブジェクトの高可用性およびディザスター リカバリー ソリューションを提供できます。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] では、可用性データベースに格納されている RBS メタデータとスキーマをセカンダリ レプリカにレプリケートすることによってこれらを保護します。 これは SharePoint コンテンツ データベースです。 一般に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、この RBS メタデータが BLOB とは別に格納されます。  
   
@@ -31,15 +31,15 @@ ms.locfileid: "68014429"
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の別のインスタンスにある別のデータベース (RBS リモート FILESTREAM プロバイダーを使用して格納)|はい<br /><br /> このデータベースは、別の可用性グループに含まれている必要があります。|  
 |サード パーティの BLOB ストア|いいえ<br /><br /> この BLOB データを保護するには、BLOB ストア プロバイダーの高可用性メカニズムを使用します。|  
   
-##  <a name="Limitations"></a> 制限事項  
+##  <a name="limitations"></a><a name="Limitations"></a> 制限事項  
   
 -   RBS Maintainer は、プライマリ レプリカで対象にする必要があります。  
   
-##  <a name="Recommendations"></a> 推奨事項  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   可用性グループ リスナーを使用します。 詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)での 1 つ以上の可用性グループの構成と管理において重要です。  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [リモート BLOB ストアのメンテナンス](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) ( [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] オンライン ブック)  
   

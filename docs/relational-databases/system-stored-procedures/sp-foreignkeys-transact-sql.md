@@ -1,5 +1,5 @@
 ---
-title: sp_foreignkeys (TRANSACT-SQL) |Microsoft Docs
+title: sp_foreignkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124375"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891882"
 ---
-# <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  リンク サーバー内のテーブルに主キーを参照する外部キーを返します。  
+  リンクサーバー内のテーブルの主キーを参照する外部キーを返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,53 +45,53 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @table_server = ] 'table_server'` テーブル情報を返すリンク サーバーの名前です。 *table_server*は**sysname**、既定値はありません。  
+`[ @table_server = ] 'table_server'`テーブル情報を返すリンクサーバーの名前を指定します。 *table_server*は**sysname**であり、既定値はありません。  
   
-`[ @pktab_name = ] 'pktab_name'` 主キーを持つテーブルの名前です。 *pktab_name*は**sysname**、既定値は NULL です。  
+`[ @pktab_name = ] 'pktab_name'`主キーを持つテーブルの名前を指定します。 *pktab_name*は**sysname**,、既定値は NULL です。  
   
-`[ @pktab_schema = ] 'pktab_schema'` 主キーを持つスキーマの名前です。 *pktab_schema*は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、所有者名に相当します。  
+`[ @pktab_schema = ] 'pktab_schema'`主キーを持つスキーマの名前を指定します。 *pktab_schema*は**sysname**,、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、所有者名に相当します。  
   
-`[ @pktab_catalog = ] 'pktab_catalog'` 主キーを持つカタログの名前です。 *pktab_catalog*は**sysname**、既定値は NULL です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース名が含まれます。  
+`[ @pktab_catalog = ] 'pktab_catalog'`主キーを持つカタログの名前を指定します。 *pktab_catalog*は**sysname**,、既定値は NULL です。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これにはデータベース名が含まれます。  
   
-`[ @fktab_name = ] 'fktab_name'` 外部キー テーブルの名前です。 *fktab_name*は**sysname**、既定値は NULL です。  
+`[ @fktab_name = ] 'fktab_name'`外部キーを持つテーブルの名前を指定します。 *fktab_name*は**sysname**,、既定値は NULL です。  
   
-`[ @fktab_schema = ] 'fktab_schema'` 外部キーを持つスキーマの名前です。 *fktab_schema*は**sysname**、既定値は NULL です。  
+`[ @fktab_schema = ] 'fktab_schema'`外部キーを持つスキーマの名前を指定します。 *fktab_schema*は**sysname**,、既定値は NULL です。  
   
-`[ @fktab_catalog = ] 'fktab_catalog'` 外部キーを持つカタログの名前です。 *fktab_catalog*は**sysname**、既定値は NULL です。  
+`[ @fktab_catalog = ] 'fktab_catalog'`外部キーを持つカタログの名前を指定します。 *fktab_catalog*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
- さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_カタログ_ **.** _スキーマ_ **.** _テーブル_)、これは、結果セットで表されます。  
+ さまざまな DBMS 製品では、3つの要素で構成するテーブル (_カタログ_) がサポート**しています。**_スキーマ_**。**_テーブル_)。これは、結果セットで表されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|主キーが設定されたテーブルのカタログです。|  
 |**PKTABLE_SCHEM**|**sysname**|主キーが設定されたテーブルのスキーマです。|  
-|**PKTABLE_NAME**|**sysname**|(主キー) テーブルの名前です。 このフィールドは、常に値を返します。|  
-|**PKCOLUMN_NAME**|**sysname**|各列の主キー列または列の名前、 **TABLE_NAME**が返されます。 このフィールドは、常に値を返します。|  
+|**PKTABLE_NAME**|**sysname**|テーブルの名前 (主キーを含む)。 このフィールドは常に値を返します。|  
+|**PKCOLUMN_NAME**|**sysname**|返される**TABLE_NAME**の各列の主キー列の名前。 このフィールドは常に値を返します。|  
 |**FKTABLE_CAT**|**sysname**|外部キーが設定されたテーブルのカタログです。|  
 |**FKTABLE_SCHEM**|**sysname**|外部キーが設定されたテーブルのスキーマです。|  
-|**FKTABLE_NAME**|**sysname**|外部キーが設定されたテーブルの名前です。 このフィールドは、常に値を返します。|  
-|**FKCOLUMN_NAME**|**sysname**|TABLE_NAME の各列の外部キー列の名前が返されます。 このフィールドは、常に値を返します。|  
-|**KEY_SEQ**|**smallint**|複数列の主キー列のシーケンス番号。 このフィールドは、常に値を返します。|  
-|**UPDATE_RULE**|**smallint**|SQL 操作の更新時に、外部キーに適用される動作です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0、1、またはこれらの列 2 を返します。<br /><br /> 0 = 外部キーに CASCADE 変更します。<br /><br /> 1 = 外部キーが存在する場合は NO ACTION の変更。<br /><br /> 2=SET_NULL: 外部キーを NULL に設定します。|  
-|**DELETE_RULE**|**smallint**|SQL 操作の削除時に、外部キーに適用される動作です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0、1、またはこれらの列 2 を返します。<br /><br /> 0 = 外部キーに CASCADE 変更します。<br /><br /> 1 = 外部キーが存在する場合は NO ACTION の変更。<br /><br /> 2=SET_NULL: 外部キーを NULL に設定します。|  
-|**FK_NAME**|**sysname**|外部キーの識別子。 データ ソースに適用されない場合は NULL になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、FOREIGN KEY 制約の名前を返します。|  
-|**PK_NAME**|**sysname**|主キー識別子。 データ ソースに適用されない場合は NULL になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 主キー制約の名前を返します。|  
-|**遅延**|**smallint**|制約チェックを遅延可能にするかどうかを示します。|  
+|**FKTABLE_NAME**|**sysname**|外部キーが設定されたテーブルの名前です。 このフィールドは常に値を返します。|  
+|**FKCOLUMN_NAME**|**sysname**|返される TABLE_NAME の各列の外部キー列の名前。 このフィールドは常に値を返します。|  
+|**KEY_SEQ**|**smallint**|複数列の主キーの列のシーケンス番号。 このフィールドは常に値を返します。|  
+|**UPDATE_RULE**|**smallint**|SQL 操作が更新である場合に、外部キーに適用されるアクションです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、次の列に対して0、1、または2を返します。<br /><br /> 0 = 外部キーに対して連鎖変更を行います。<br /><br /> 1 = 外部キーが存在する場合、アクションの変更はありません。<br /><br /> 2=SET_NULL: 外部キーを NULL に設定します。|  
+|**DELETE_RULE**|**smallint**|SQL 操作が削除の場合に、外部キーに適用されるアクションです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、次の列に対して0、1、または2を返します。<br /><br /> 0 = 外部キーに対して連鎖変更を行います。<br /><br /> 1 = 外部キーが存在する場合、アクションの変更はありません。<br /><br /> 2=SET_NULL: 外部キーを NULL に設定します。|  
+|**FK_NAME**|**sysname**|外部キー識別子。 データ ソースに適用されない場合は NULL になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、FOREIGN KEY 制約の名前を返します。|  
+|**PK_NAME**|**sysname**|主キー識別子。 データ ソースに適用されない場合は NULL になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PRIMARY KEY 制約の名前を返します。|  
+|**DEFERRABILITY**|**smallint**|制約チェックを遅延できるかどうかを示します。|  
   
- 結果セットの FK_NAME と pk_name の各列は常に NULL を返します。  
+ 結果セットでは、FK_NAME 列と PK_NAME 列は常に NULL を返します。  
   
-## <a name="remarks"></a>コメント  
- **sp_foreignkeys**の FOREIGN_KEYS 行セットのクエリ、 **IDBSchemaRowset**に対応する OLE DB プロバイダーのインターフェイス*table_server*します。 *Table_name*、 *、table_schema、* 、 *table_catalog*、および*列*行を制限するには、このインターフェイスに渡されるパラメーター返されます。  
+## <a name="remarks"></a>注釈  
+ **sp_foreignkeys**は、 *table_server*に対応する OLE DB プロバイダーの**IDBSchemaRowset**インターフェイスの FOREIGN_KEYS 行セットを照会します。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および*列*の各パラメーターがこのインターフェイスに渡されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、外部キーの情報を返しますに関する、`Department`テーブルに、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 、リンク サーバー上のデータベース`Seattle1`します。  
+## <a name="examples"></a>例  
+ 次の例では、 `Department` リンクサーバー上のデータベース内のテーブルに関する外部キー情報を返し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] `Seattle1` ます。  
   
 ```  
 EXEC sp_foreignkeys @table_server = N'Seattle1',   
@@ -100,13 +100,13 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_primarykeys &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_tables_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_indexes &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_primarykeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

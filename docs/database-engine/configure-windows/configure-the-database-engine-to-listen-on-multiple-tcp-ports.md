@@ -1,5 +1,6 @@
 ---
 title: 複数の TCP ポートでリッスンするデータベース エンジンの構成 | Microsoft Docs
+description: 表形式データ ストリーム (TDS) エンドポイントについて説明します。 これを使用して、複数の TCP ポートをリッスンするように SQL Server データベース エンジンを構成する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3055750ac7f52c4dfaaae3cef94021d9d024a50a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dc92b34d57f2406c1b5aa59cce67840af4c21918
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697763"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>複数の TCP ポートでリッスンするデータベース エンジンの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で TCP/IP を有効にしている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
   
  2 つ目の TDS エンドポイントを作成する理由として考えられる点を次に示します。  
@@ -105,7 +106,7 @@ ms.locfileid: "68012722"
 ## <a name="see-also"></a>参照  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
- [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
+ [GRANT (エンドポイントのアクセス許可の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [NUMA ノードへの TCP/IP ポートのマッピング &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)  
   
   

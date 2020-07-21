@@ -1,6 +1,6 @@
 ---
-title: 作成、変更、およびユーザー定義関数の削除 |Microsoft Docs
-ms.custom: ''
+title: ユーザー定義関数の作成、変更、および削除
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,19 +10,18 @@ ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c33572469cfaa37673212d483cc05d15d3a1b828
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 6243fdefcd5e145abc86cc148d8362d616286a47
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111537"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001255"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>ユーザー定義関数の作成、変更、および削除
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>オブジェクトは、ユーザーのユーザー定義関数をプログラムで管理できるようにする機能を提供します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 ユーザー定義関数では、入力パラメーターおよび出力パラメーターに加えて、テーブル列への直接参照もサポートされます。  
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+  オブジェクトは、 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> ユーザーがのユーザー定義関数をプログラムで管理できるようにする機能を提供し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 ユーザー定義関数では、入力パラメーターおよび出力パラメーターに加えて、テーブル列への直接参照もサポートされます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、ストアド プロシージャ、ユーザー定義関数、トリガー、およびユーザー定義データ型内でアセンブリを使用できるようにするには、アセンブリがデータベース内に登録される必要があります。 SMO は、<xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> オブジェクトを使用してこの機能をサポートします。  
   
@@ -31,7 +30,7 @@ ms.locfileid: "68111537"
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> オブジェクトが .NET アセンブリを参照する場合、<xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> オブジェクトを作成し、それを <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> オブジェクトに属する <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトに追加することによって、アセンブリを登録する必要があります。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Visual Basic でのユーザー定義スカラー関数の作成  
  このコード例は、入力の <xref:System.DateTime> オブジェクト パラメーターおよび整数型の戻り値を持つユーザー定義のスカラー関数を [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] で作成および削除する方法を示しています。 ユーザー定義関数は [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] データベースに作成されます。 この例では、日付引数を取得して ISO 週番号を計算するユーザー定義関数 ISOweek が作成されます。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの DATEFIRST オプションが 1 に設定されている必要があります。  
@@ -65,7 +64,7 @@ udf.Drop()
 ``` 
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>Visual C# でのユーザー定義スカラー関数の作成  
- このコード例は、入力の <xref:System.DateTime> オブジェクト パラメーターおよび整数型の戻り値を持つユーザー定義のスカラー関数を [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] で作成および削除する方法を示しています。 ユーザー定義関数は [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] データベースに作成されます。 この例では、次のユーザー定義関数を作成します。 `ISOweek`。 この関数は、日付引数を受け取って、ISO 週番号を計算します。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの `DATEFIRST` オプションが `1` に設定されている必要があります。  
+ このコード例は、入力の <xref:System.DateTime> オブジェクト パラメーターおよび整数型の戻り値を持つユーザー定義のスカラー関数を [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] で作成および削除する方法を示しています。 ユーザー定義関数は [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] データベースに作成されます。 この例では、次のユーザー定義関数を作成します。 `ISOweek`. この関数は、日付引数を受け取って、ISO 週番号を計算します。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの `DATEFIRST` オプションが `1` に設定されている必要があります。  
   
 ```csharp  
 {  
@@ -101,7 +100,7 @@ udf.Drop()
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>PowerShell でのユーザー定義スカラー関数の作成  
- このコード例は、入力の <xref:System.DateTime> オブジェクト パラメーターおよび整数型の戻り値を持つユーザー定義のスカラー関数を [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] で作成および削除する方法を示しています。 ユーザー定義関数は [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] データベースに作成されます。 この例では、次のユーザー定義関数を作成します。 `ISOweek`。 この関数は、日付引数を受け取って、ISO 週番号を計算します。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの `DATEFIRST` オプションが `1` に設定されている必要があります。  
+ このコード例は、入力の <xref:System.DateTime> オブジェクト パラメーターおよび整数型の戻り値を持つユーザー定義のスカラー関数を [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] で作成および削除する方法を示しています。 ユーザー定義関数は [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] データベースに作成されます。 この例では、次のユーザー定義関数を作成します。 `ISOweek`. この関数は、日付引数を受け取って、ISO 週番号を計算します。 この関数で正しい計算を行うためには、関数を呼び出す前に、データベースの `DATEFIRST` オプションが `1` に設定されている必要があります。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

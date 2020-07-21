@@ -12,10 +12,10 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65575238"
 ---
 # <a name="upgrade-a-report-server-database"></a>レポート サーバー データベースのアップグレード
@@ -67,7 +67,7 @@ ms.locfileid: "65575238"
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>スクリプトを使用してネイティブ モードのデータベースをアップグレードするには  
  WMI スクリプトを使用して、レポート サーバー データベースをアップグレードできます。 詳細については、「[GenerateDatabaseUpgradeScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)」を参照してください。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [レポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  

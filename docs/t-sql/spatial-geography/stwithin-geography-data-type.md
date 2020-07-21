@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ab4a3aee5c1828df80fc89f9fc5c230f41ead295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e563a8e5f6d668c6f99c1c2f0ae5afb2bd3cf6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701499"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスが別の **geography** インスタンスに空間的に含まれている場合は 1 を返します。それ以外の場合は 0 を返します。  
   
@@ -40,12 +40,12 @@ ms.locfileid: "68120692"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STWithin()` を使用して、2 つの `geography` インスタンスの一方のインスタンスがもう一方のインスタンスを完全に含むかどうかをテストする例を次に示します。  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: XML スキーマ コレクションに対する権限の許可 | Microsoft Docs
+description: XML スキーマ コレクションを作成する権限、および XML スキーマ コレクション オブジェクトに対する権限を許可する方法について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3beb9b01beafcb247372c49d9219550c95fd1b03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e400caa800f4e3dcb38750513216918d2b8b1d3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772104"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の許可
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML スキーマ コレクションを作成する権限、および XML スキーマ コレクション オブジェクトに対する権限を許可できます。  
   
 ## <a name="granting-permission-to-create-an-xml-schema-collection"></a>XML スキーマ コレクションを作成する権限の許可  
@@ -64,7 +65,7 @@ ms.locfileid: "67986438"
   
 -   EXECUTE 権限。 **xml** 型の列、変数、およびパラメーターの型指定または制約を定義している XML スキーマ コレクションに対して、プリンシパルが挿入または更新した値を検証するために必要です。 また、これらの列や変数に格納されている XML に対してクエリを実行する場合にも必要な権限です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例に示すシナリオでは、XML スキーマ権限のしくみを説明します。 各例では、必要なテスト データベース、リレーショナル スキーマ、およびログインを作成します。 それらのログインには、必要な XML スキーマ コレクション権限が許可されています。 各例の最後には、必要なクリーン アップを行います。  
   
 ### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. XML スキーマ コレクションを作成する権限の許可  

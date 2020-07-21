@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f73b48f0ec2255760b4ee55acfaf91dc02af7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063563"
 ---
 # <a name="move-a-workload-group"></a>ワークロード グループの移動
   リソース ガバナーのワークロード グループを別のリソース プールに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
@@ -29,16 +28,16 @@ ms.locfileid: "63209747"
   
 -   **ワークロード グループの移動に使用するもの:** [SQL Server Management Studio](#MoveWGSSMS)、[Transact-SQL](#MoveWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  リソース ガバナーの保留中の構成操作がある場合、ワークロード グループを移動できません。  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  リソース ガバナーの保留中の構成操作がある場合、ワークロード グループを移動できません。 [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) 動的管理ビューにクエリを実行して is_configuration_pending の現在の状態を取得することにより、構成が保留中かどうかを確認できます。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ワークロード グループを移動するには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="MoveWGSSMS"></a> SQL Server Management Studio を使用してワークロード グループを移動する  
+##  <a name="move-a-workload-group-using-sql-server-management-studio"></a><a name="MoveWGSSMS"></a> SQL Server Management Studio を使用してワークロード グループを移動する  
  **を使用してワークロード グループを移動するには [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
   
 1.  オブジェクト エクスプローラーで、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
@@ -55,7 +54,7 @@ ms.locfileid: "63209747"
   
 7.  リソース プールまたはワークロード グループの作成操作または再構成操作が失敗した場合は、プロパティ ページのタイトルの下に簡単なエラー メッセージが表示されます。 詳細なエラー メッセージを表示するには、エラー メッセージの下矢印をクリックします。  
   
-##  <a name="MoveWGTSQL"></a> Transact-SQL を使用してワークロード グループを移動する  
+##  <a name="move-a-workload-group-using-transact-sql"></a><a name="MoveWGTSQL"></a> Transact-SQL を使用してワークロード グループを移動する  
  **Transact-SQL を使用してワークロード グループを移動するには**  
   
 1.  移動するワークロード グループと移動先とするリソース プールの名前を指定する `ALTER WORKLOAD GROUP` ステートメントを実行します。  

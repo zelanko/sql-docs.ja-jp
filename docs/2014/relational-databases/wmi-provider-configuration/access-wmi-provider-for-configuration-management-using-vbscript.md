@@ -1,5 +1,5 @@
 ---
-title: SQL Server サービスの詳細プロパティ VBScript を使用して変更 |Microsoft Docs
+title: VBScript を使用して SQL Server サービスの詳細プロパティを変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6a4b5fe474481288d8b8edd844be7af12ccbcd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705063"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061313"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>VBScript を使用して SQL Server サービスの詳細プロパティを変更する
-  このセクションのインストール済みインスタンスのバージョンをリストする VBScript プログラムを作成する方法を説明します[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューターで実行されています。  
+  このセクションで [!INCLUDE[msCoName](../../includes/msconame-md.md)] は、コンピューター上で実行されているのインストール済みインスタンスのバージョンを一覧表示する VBScript プログラムを作成する方法について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  コード例では、コンピューター上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスおよびそのバージョンをリストします。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62705063"
   
 5.  ファイルを保存します。  
   
-6.  入力して、スクリプトを実行`cscript test.vbs`コマンド プロンプトでします。  
+6.  コマンドプロンプトで「」と入力して、スクリプトを実行し `cscript test.vbs` ます。  
   
 ## <a name="example"></a>例  
   

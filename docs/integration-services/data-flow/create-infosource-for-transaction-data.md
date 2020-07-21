@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8bfb1d81c83da0e62ced89456b04e234ce2e2c67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 19c8384a389db2032c36291e669d5dd2885ac8dd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049571"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293306"
 ---
 # <a name="create-infosource-for-transaction-data"></a>[トランザクション データのインフォソースの作成]
 
@@ -82,13 +82,13 @@ ms.locfileid: "68049571"
  **インフォオブジェクト**  
  データ フロー列に関連付けられているインフォオブジェクトの名前を表示します。  
   
- **[種類]**  
+ **Type**  
  データ フロー列に関連付けられているインフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |CHA|特性|  
-|UNI|単位|  
+|UNI|Units|  
 |KYF|主要データ|  
 |TIM|時間の特性|  
   

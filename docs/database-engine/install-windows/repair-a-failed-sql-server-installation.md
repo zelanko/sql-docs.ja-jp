@@ -1,5 +1,6 @@
 ---
 title: 失敗した SQL Server のインストールの修復 | Microsoft Docs
+deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9130fd4fae0660008ede059418179b1bb9777a9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba82179f31d8e6cef2e3e318187c26f448e8219
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990839"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900315"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>失敗した SQL Server のインストールの修復
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 修復操作は、以下のシナリオで使用できます。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "67990839"
   
 - 準備操作に失敗した後でフェールオーバー クラスター ノードを修復するには、 **[ノードの削除]** を使用してから準備手順をもう一度実行します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。 
   
-## <a name="repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>インストール センターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復する 
+## <a name="repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>インストール センターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復する 
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラム (setup.exe) を起動します。 
   
@@ -70,7 +71,7 @@ ms.locfileid: "67990839"
   
 8. [修復の進行状況] ページに、修復操作の進行状況が表示されます。 [完了] ページでは、操作が完了したことが示されます。 
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>コマンド プロンプトを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復するには  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>コマンド プロンプトを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復するには  
   
 1. コマンド プロンプトで次のコマンドを実行します。  
   

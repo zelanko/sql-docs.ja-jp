@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 02f2fcfd3534a4ae1902a2984d2bd0fac0fc727c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d5b61aaf23a8e74cb11afbf4e8bdb958fde6abe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62786331"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935883"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>blocked process threshold サーバー構成オプション
   ブロックされたプロセスのレポートを生成するためのしきい値を秒単位で指定するには、 **blocked process threshold** オプションを使用します。 しきい値は 0 ～ 86,400 の範囲で設定できます。 既定では、ブロックされているプロセスのレポートは生成されません。 システム タスクや、検出可能なデッドロックを生成しないリソースで待機しているタスクの場合、このイベントは生成されません。  
@@ -31,7 +30,7 @@ ms.locfileid: "62786331"
   
  この設定は、サーバーを停止して再起動しなくてもすぐに有効になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 `blocked process threshold` を `20` 秒に設定して、ブロックされたタスクごとに、ブロックされたプロセスのレポートを生成します。  
   
 ```  
@@ -45,7 +44,7 @@ RECONFIGURE ;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Blocked Process Report イベント クラス](../../relational-databases/event-classes/blocked-process-report-event-class.md)  
   

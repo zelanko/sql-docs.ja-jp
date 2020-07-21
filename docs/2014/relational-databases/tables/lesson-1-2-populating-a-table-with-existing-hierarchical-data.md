@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 966548b11ad4697abc06de5c5c239a511f80b7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068091"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>既存の階層データを使用したテーブルの設定
-  ここでは、新しいテーブルを作成して、そのテーブルに **EmployeeDemo** テーブルのデータを設定します。 この作業には、次の手順があります。  
+   ここでは、新しいテーブルを作成して、そのテーブルに **EmployeeDemo** テーブルのデータを設定します。 この作業には、次の手順があります。  
   
 -   `hierarchyid` 列を含む新しいテーブルを作成します。 この列を、既存の **EmployeeID** 列や **ManagerID** 列の代わりに使用してもかまいません。 ただし、これらの列は保持する必要があります。 これは、既存のアプリケーションがこれらの列を参照している可能性があるためでもあり、転送後のデータをわかりやすくするためでもあります。 テーブル定義では、 **OrgNode** が主キーであることを指定します。したがって、この列には一意の値を格納する必要があります。 **OrgNode** 列のクラスター化インデックスは、 **OrgNode** シーケンスのデータを格納します。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66110164"
   
      `10        4         2`  
   
-3.  **NewOrg** テーブルを設定します。 GetRoot および ToString メソッドを使用して連結する、 **Num**に値を`hierarchyid`、書式を設定し、更新、 **OrgNode**結果の階層型の値を持つ列。  
+3.  **Neworg**テーブルを設定します。 GetRoot メソッドと ToString メソッドを使用して、 **Num**値を形式に連結し、次に、 `hierarchyid` 結果の階層値で**orgnode**列を更新します。  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -151,7 +150,7 @@ ms.locfileid: "66110164"
   
     ```  
   
-     **LogicalNode**列変換、`hierarchyid`列階層を表す読みやすいテキスト形式にします。 残りの作業では、`ToString()` メソッドを使用して、`hierarchyid` 列の論理形式を表示します。  
+     **Logicalnode**列は、 `hierarchyid` 列を階層を表すより読みやすいテキスト形式に変換します。 残りの作業では、`ToString()` メソッドを使用して、`hierarchyid` 列の論理形式を表示します。  
   
 5.  不要になった一時テーブルを削除します。  
   

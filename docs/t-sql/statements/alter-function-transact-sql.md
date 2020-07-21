@@ -20,12 +20,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33471982d291ba1f57d7d3d64a918cec1cc5e91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b9afe006b96d7b447b508d59a55163f8838caa1e
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067492"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85195819"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68067492"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Transact-SQL Scalar Function Syntax    
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type   
@@ -54,7 +54,7 @@ RETURNS return_data_type
 [ ; ]
 ```  
 
-```
+```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
@@ -69,7 +69,7 @@ RETURNS TABLE
 [ ; ]  
 ```
   
-```
+```syntaxsql
 -- Transact-SQL Multistatement Table-valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type   
@@ -87,7 +87,7 @@ RETURNS @return_variable TABLE <table_type_definition>
 [ ; ]  
 ```
 
-```  
+```syntaxsql
 -- Transact-SQL Function Clauses   
 <function_option>::=   
 {  
@@ -147,7 +147,7 @@ column_name AS computed_column_expression
 }  
 ```
   
-```
+```syntaxsql
 -- CLR Scalar and Table-Valued Function Syntax
 ALTER FUNCTION [ schema_name. ] function_name   
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type   
@@ -160,7 +160,7 @@ RETURNS { return_data_type | TABLE <clr_table_type_definition> }
 [ ; ]  
 ```
   
-```
+```syntaxsql
 -- CLR Function Clauses
 <method_specifier>::=  
     assembly_name.class_name.method_name  
@@ -177,7 +177,7 @@ RETURNS { return_data_type | TABLE <clr_table_type_definition> }
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for In-Memory OLTP: Natively compiled, scalar user-defined function  
 ALTER FUNCTION [ schema_name. ] function_name    
  ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type   
@@ -264,7 +264,7 @@ RETURNS return_data_type
  インライン テーブル値関数の戻り値を定義する単一の SELECT ステートメントです。  
   
  EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  関数にバインドするアセンブリのメソッドを指定します。 *assembly_name* は、表示がオンになっている現在のデータベースに存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアセンブリと一致している必要があります。 *class_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、およびアセンブリにクラスとして存在していることが必要です。 名前空間部分を区切るためにピリオド ( **.** ) を使う名前空間修飾名がクラスにある場合は、クラス名をかっこ ( **[ ]** ) または引用符 ( **""** ) で区切る必要があります。 *method_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、および指定されているクラスの静的メソッドとして存在していることが必要です。  
   
@@ -277,7 +277,7 @@ RETURNS return_data_type
  _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のテーブル データ型を定義します。 テーブルの定義には、列の定義、および列またはテーブルの制約が含まれます。  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部のリージョンではプレビュー](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部のリージョンではプレビュー](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
   
  CLR 関数のテーブル データ型を定義します。 テーブルの定義には、列名およびデータ型のみが含まれます。  
   
@@ -300,12 +300,12 @@ RETURNS return_data_type
  関数に以下のオプションを 1 つ以上指定します。  
   
  ENCRYPTION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  ALTER FUNCTION ステートメントのテキストを含むカタログ ビューの列を、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が暗号化することを示します。 ENCRYPTION を使用すると、その関数を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションの一部としてパブリッシュできなくなります。 CLR 関数には ENCRYPTION を指定できません。  
   
  SCHEMABINDING  
- 参照するデータベース オブジェクトに対して、その関数がバインドされるように指定します。 このバインドによって、他のスキーマ バインド オブジェクトがその関数を参照している場合に関数が変更されるのを防ぐことができます。  
+ 参照するデータベース オブジェクトに対して、その関数がバインドされるように指定します。 SCHEMABINDING を指定した場合、ベース オブジェクトに対して関数定義に影響を与えるような変更は行えません。 まず関数定義を変更または削除して、変更するオブジェクトとの依存関係を解消する必要があります。  
   
  関数が参照するオブジェクトへのバインドは、次のいずれかの操作が行われた場合にのみ削除されます。  
   
@@ -354,7 +354,7 @@ RETURNS return_data_type
  ROWGUIDCOL プロパティは、列に格納されている値の一意性を設定しません。 また、テーブルに挿入される新しい行の値を自動的に生成しません。 各列に対して一意な値を生成するには、INSERT ステートメントで NEWID 関数を使用します。 既定値も指定できますが、NEWID を既定値として指定することはできません。  
   
  IDENTITY  
- 新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は列に一意な増加値を設定します。 ID 列は通常、PRIMARY KEY 制約と共に使用され、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、**tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)** 、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と組み合わせて使用することはできません。 *seed* と *increment* は、両方を指定するか、どちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
+ 新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は列に一意な増加値を設定します。 ID 列は通常、PRIMARY KEY 制約と共に使用され、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、**tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)** 、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と共に使用することはできません。 *seed* と *increment* は、両方を指定するか、どちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
   
  CLR テーブル値関数には IDENTITY を指定できません。  
   
@@ -422,7 +422,7 @@ RETURNS return_data_type
  ALLOW_PAGE_LOCKS = { ON | OFF }  
  ページ ロックを許可するかどうかを指定します。 既定値は ON です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER FUNCTION を使用してスカラー値関数をテーブル値関数に変更することも、その逆の変更を行うこともできません。 さらに、ALTER FUNCTION を使用してインライン関数を複数ステートメント関数に変更することも、その逆の変更を行うこともできません。 ALTER FUNCTION を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数を CLR 関数に変更したり、その逆の変更を行ったりすることもできません。  
   
  以下の Service Broker ステートメントは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数の定義に含めることができません。  

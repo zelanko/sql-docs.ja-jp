@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45c3d5bb9c9c7fdae9abe18ab3cb808cae4c1fa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055374"
 ---
 # <a name="create-a-server-role"></a>サーバー ロールの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]で新しいサーバー ロールを作成する方法について説明します。  
@@ -32,7 +31,7 @@ ms.locfileid: "63011960"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **新しいサーバー ロールを作成する方法:**  
   
@@ -40,14 +39,14 @@ ms.locfileid: "63011960"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  データベース レベルのセキュリティ保護可能なリソースに対する権限をサーバー ロールに付与することはできません。 データベース ロールを作成するには、「[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   CREATE SERVER ROLE 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "63011960"
   
     -   サーバー ロールの所有権を別のサーバー ロールに割り当てるには、割り当て先のサーバー ロールのメンバーシップまたはそのサーバー ロールに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-new-server-role"></a>新しいサーバー ロールを作成するには  
   
@@ -69,13 +68,13 @@ ms.locfileid: "63011960"
   
 3.  **[サーバー ロール]** フォルダーを右クリックし、 **[新しいサーバー ロール]** を選択します。  
   
-4.  **新しいサーバー ロール -** _server_role_name_  ダイアログ ボックスの 、**全般** ページで新しいサーバー ロールの名前を入力、**サーバー ロール名**ボックス。  
+4.  [**新しいサーバーロール-**_server_role_name_ ] ダイアログボックスの **[全般**] ページで、[**サーバーロール名**] ボックスに新しいサーバーロールの名前を入力します。  
   
 5.  **[所有者]** ボックスに、新しいサーバー ロールを所有するサーバー プリンシパルの名前を入力します。 または、省略記号 **[...]** をクリックして **[サーバー ログインまたはロールの選択]** ダイアログ ボックスを開きます。  
   
 6.  **[セキュリティ保護可能なリソース]** で、1 つ以上のサーバーレベルのセキュリティ保護可能なリソースを選択します。 セキュリティ保護可能なリソースを選択すると、サーバー ロールに、そのセキュリティ保護可能なリソースに対する権限を許可または拒否できます。  
   
-7.  **アクセス許可。明示的な**ボックスに、許可、許可の許可、または選択したセキュリティ保護可能なは、このサーバー ロールに権限を拒否する チェック ボックスをオンにします。 選択されたセキュリティ保護可能なリソースすべてに対して権限を許可または拒否できない場合、権限は部分的に選択された形で表されます。  
+7.  **[権限: 明示的]** ボックスで、選択されたセキュリティ保護可能なリソースに対するこのサーバー ロールの権限について、許可、許可の許可、または拒否のいずれかのチェック ボックスをオンにします。 選択されたセキュリティ保護可能なリソースすべてに対して権限を許可または拒否できない場合、権限は部分的に選択された形で表されます。  
   
 8.  **[メンバー]** ページで **[追加]** ボタンを使用して、新しいサーバー ロールに個人またはグループを表すログインを追加します。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "63011960"
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-new-server-role"></a>新しいサーバー ロールを作成するには  
   

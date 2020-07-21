@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5da2cbb9dabef022441ba3927fdb0afc01d04e71
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62807526"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934443"
 ---
 # <a name="database-engine-cross-instance-features"></a>データベース エンジンのインスタンス間機能
   このセクションには、サーバー インスタンスとデータベース インスタンスの管理および監視に関連するツールとタスクが含まれます。  
@@ -27,7 +26,7 @@ ms.locfileid: "62807526"
 [ポリシー ベースの管理を使用したサーバーの管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
 [サーバーの登録](../ssms/register-servers/register-servers.md)  
 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)  
-[データ コレクション](../relational-databases/data-collection/data-collection.md)  
+[データコレクション](../relational-databases/data-collection/data-collection.md)  
 [リソースの利用状況の監視 &#40;システム モニター&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
 [中央管理サーバーを使用した複数のサーバーの管理](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
 [SQL Server 構成マネージャー](../relational-databases/sql-server-configuration-manager.md)  

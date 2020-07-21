@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0534d416d6d821e2d1870e98a42e8281648c6af1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62670485"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066189"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>行グループの集約 (Visual Database Tools)
   基になるデータの行グループ全体に結果の各行が対応するようなクエリ結果を作成することができます。 行を集約するときは、次の点に注意してください。  
@@ -73,7 +72,7 @@ ms.locfileid: "62670485"
      行グループに選択条件を適用する方法については、「[グループの条件を指定する方法 (Visual Database Tools)](specify-conditions-for-groups-visual-database-tools.md)」と「[同一クエリ内で HAVING 句および WHERE 句を使用する (Visual Database Tools)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [検索条件を指定&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Visual Database Tools &#40;検索条件を指定し&#41;](specify-search-criteria-visual-database-tools.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: ドメインの作成 | Microsoft Docs
-ms.custom: ''
+title: ドメインの作成
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,36 +9,36 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 83de355138f694c6c0414362f41676012817d497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 529f0233f95a4f2ee123b2cc3c6974e4f5e6faf4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992315"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887992"
 ---
 # <a name="create-a-domain"></a>ドメインの作成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインを作成する方法について説明します。 ドメインの値は、フィールド内のデータのセマンティック表現です。 ドメインについて詳しくは、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」をご覧ください。  
   
  新しいドメインを作成するには、次の 2 つの方法があります。 1 つ目は、ナレッジ検出アクティビティのマップ手順中に、データ サンプルを分析する過程でナレッジを新しいまたは既存のナレッジ ベースに追加するときに行います。 2 つ目は、ドメイン管理アクティビティの実行中に、既存のドメインを変更するのではなく、新しいドメインを作成するときに行います。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  ドメインを作成するには、ナレッジ ベースを作成して開いておく必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ドメインを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator が必要です。  
   
-##  <a name="Discovery"></a> ナレッジ検出アクティビティでのドメインの作成  
+##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a>ナレッジ検出アクティビティでのドメインの作成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベースを開く]** をクリックし、ナレッジ ベースを選択するか、 **[新しいナレッジ ベース]** をクリックし、新しいナレッジ ベースのプロパティを入力します。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "67992315"
   
 5.  **"マッピング"** テーブルで、空の行の **[ソース列]** 列のドロップダウン リストからソース列を選択します。 対応するドメインが存在しない場合は、 **[ドメインの作成]** アイコンをクリックします。  
   
-##  <a name="DomainManagement"></a> ドメイン管理アクティビティでのドメインの作成  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>ドメイン管理アクティビティでドメインを作成する  
   
 1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベースを開く]** をクリックし、ナレッジ ベースを選択するか、 **[新しいナレッジ ベース]** をクリックし、新しいナレッジ ベースのプロパティを入力します。  
   
@@ -57,14 +56,14 @@ ms.locfileid: "67992315"
   
 3.  **[ドメイン管理]** ページで、ドメイン リストの上にある **[ドメインの作成]** アイコンをクリックします。  
   
-##  <a name="Properties"></a> ドメインのプロパティの設定  
+##  <a name="set-domain-properties"></a><a name="Properties"></a>ドメインのプロパティの設定  
   
 1.  **[ドメインの作成]** ダイアログ ボックスで、ナレッジ ベースに一意の名前と 256 文字までの説明を入力します。  
   
     > [!NOTE]  
     >  ドメインのプロパティの詳細については、「 [Set Domain Properties](../data-quality-services/set-domain-properties.md)」を参照してください。  
   
-2.  **[データ型]** の一覧で、ドメイン内の値に対するデータ型を選択します。 データ型には、 **[String]** (既定値)、 **[Date]** 、 **[Integer]** 、または **[Decimal]** を指定できます。  
+2.  **[データ型]** の一覧で、ドメイン内の値に対するデータ型を選択します。 データ型には、 **[String]** (既定値)、 **[Date]**、 **[Integer]**、または **[Decimal]** を指定できます。  
   
 3.  シノニムの値ではなく、シノニムのグループの先頭の値が出力されることを指定する場合は、 **[先頭の値を使用]** をオンにします。 各シノニムの値が正しいフォームまたは修正されたフォームで出力され、そのグループの先頭の値で置き換えられないことを指定する場合は、 **[先頭の値を使用]** をオフにします。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "67992315"
   
 10. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="FollowUp"></a>補足情報: ドメインを作成した後  
+##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a>補足情報: ドメインを作成した後  
  ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

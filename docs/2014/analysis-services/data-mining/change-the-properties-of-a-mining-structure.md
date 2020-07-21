@@ -1,5 +1,5 @@
 ---
-title: マイニング構造のプロパティの変更 |Microsoft Docs
+title: マイニング構造のプロパティを変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c9ca227753b8ebbd80d4de0c672fc8cab5c1b56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b56fc1d00fe639d78d5f01fe44554b7fe2d7cc7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085860"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524958"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>マイニング構造のプロパティの変更
   マイニング構造には次の 2 種類のプロパティがあり、どちらも変更できます。  

@@ -1,5 +1,5 @@
 ---
-title: DirectQuery モード (SSAS 2014) での DAX 数式の互換性 |Microsoft Docs
+title: DirectQuery モードでの DAX 数式の互換性 (SSAS 2014) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,33 +9,32 @@ ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 3e7712b7a7e861eb3d588f5217baa02bf26746fd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343896"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528903"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery モードでの DAX 数式の互換性 (SSAS 2014)
-Analysis Services 表形式モデルでメジャーと使用するための他のカスタム式を作成する Data Analysis Expression (DAX) 言語を使用できます[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel ブックのデータ モデルと Power BI Desktop データ モデル。 多くの点では、これらの環境を作成するモデルが同じであり、同じメジャー、リレーションシップ、および Kpi を使用するなど。ただし、Analysis Services 表形式のモデルを作成して、DirectQuery モードで展開する場合は、使用できる数式に関していくつかの制限。 このトピックで、これらの違いの概要を説明します、互換性レベル 1100 または 1103 の SQL Server 2014 Analysis Services tabulars モデルおよび DirectQuery モードでは、サポートされていない関数を一覧表示およびサポートされている関数の一覧が可能性があります。異なる結果を返します。  
+Data Analysis Expression 言語 (DAX) を使用すると、Analysis Services テーブルモデル、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel ブックのデータモデル、および Power BI Desktop データモデルで使用するメジャーやその他のカスタム式を作成できます。 ほとんどの場合、これらの環境で作成するモデルは同じであり、同じメジャー、リレーションシップ、および Kpi などを使用できます。ただし、Analysis Services テーブルモデルを作成して DirectQuery モードで配置した場合は、使用できる数式にいくつかの制限があります。 このトピックでは、これらの違いの概要について説明します。 SQL Server 2014 Analysis Services tabulars モデルでサポートされていない機能を互換性レベル1100または1103と DirectQuery モードで一覧表示し、サポートされているが、異なる結果を返す可能性のある関数を示します。  
   
-このトピックでは、内でという用語を使用しました*インメモリ モデルで*ホストされている表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全には表形式モデルを参照します。 使用して*DirectQuery モデル*を作成または DirectQuery モードで配置された表形式モデルを参照してください。 DirectQuery モードの詳細については、次を参照してください。 [DirectQuery モード (SSAS テーブル)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)します。  
+このトピックでは、*インメモリモデル*という用語を使用して、テーブルモデルを参照します。テーブルモデルは、表形式モードで実行されている Analysis Services サーバー上のメモリ内キャッシュされたデータを完全にホストします。 Directquery*モデル*は、directquery モードで作成または配置されたテーブルモデルを参照するために使用します。 DirectQuery モードの詳細については、「 [Directquery モード (SSAS テーブル)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)」を参照してください。  
   
   
-## <a name="bkmk_SemanticDifferences"></a>インメモリと DirectQuery モードの違い  
-DirectQuery モードで配置されたモデルでのクエリは、同じモデルがインメモリで配置されたときとは異なる結果を返す場合があります。 これは DirectQuery を使用すると、リレーショナル データ ストアから直接データをクエリし、xVelocity メモリ内分析エンジン (VertiPaq) ストレージを使用してよりも、関連するリレーショナル エンジンを使用して、数式で必要な集計が実行されるためです。計算します。  
+## <a name="differences-between-in-memory-and-directquery-mode"></a><a name="bkmk_SemanticDifferences"></a>インメモリ モードと DirectQuery モードの違い  
+DirectQuery モードで配置されたモデルでのクエリは、同じモデルがインメモリで配置されたときとは異なる結果を返す場合があります。 これは、DirectQuery では、データがリレーショナルデータストアから直接クエリされ、数式に必要な集計が、ストレージと計算に xVelocity メモリ内分析エンジン (VertiPaq) を使用するのではなく、関連するリレーショナルエンジンを使用して実行されるためです。  
   
 たとえば、特定のリレーショナル データ ストアが数値、日付、null などを処理する方法に違いがあります。  
   
-一方、DAX 言語は、Microsoft Excel での関数の動作をできる限り忠実にエミュレートするようになっています。 たとえば、null、空の文字列、ゼロ値を処理するときに、Excel では正確なデータ型に関係なく最善の結果を提供するようになっているため、xVelocity エンジンも同様に動作します。 ただし、表形式モデルが DirectQuery モードで配置されてし、数式を評価のためのリレーショナル データ ソースに渡す、する必要があるに従ってデータを処理、リレーショナル データ ソースのセマンティクスを空の個別の処理を通常必要とします。文字列と null。 このため、同じ数式でも、キャッシュされたデータに対して評価されるときと、リレーショナル ストアから戻されたデータのみに対して評価されるときでは、異なる結果が返される可能性があります。  
+一方、DAX 言語は、Microsoft Excel での関数の動作をできる限り忠実にエミュレートするようになっています。 たとえば、null、空の文字列、ゼロ値を処理するときに、Excel では正確なデータ型に関係なく最善の結果を提供するようになっているため、xVelocity エンジンも同様に動作します。 ただし、テーブルモデルが DirectQuery モードで配置され、評価のためにリレーショナルデータソースに数式を渡す場合、データはリレーショナルデータソースのセマンティクスに従って処理される必要があります。この場合、通常は空の文字列と null を個別に処理する必要があります。 このため、同じ数式でも、キャッシュされたデータに対して評価されるときと、リレーショナル ストアから戻されたデータのみに対して評価されるときでは、異なる結果が返される可能性があります。  
   
-さらに、一部の関数は使えませんまったく DirectQuery モードで計算が現在のコンテキストでデータをパラメーターとしてのリレーショナル データ ソースに送信必要があるため。 たとえば、メジャー、[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]ブックは多くの場合、ブック内で使用可能な日付範囲を参照するタイム インテリジェンス関数を使用します。 このような数式は、一般に、DirectQuery モードでは使用できません。  
+また、一部の関数は、現在のコンテキストのデータをパラメーターとしてリレーショナルデータソースに送信する必要があるため、DirectQuery モードではまったく使用できません。 たとえば、ブック内のメジャーは、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ブック内で使用できる日付範囲を参照するタイムインテリジェンス関数を使用することがよくあります。 このような数式は、一般に、DirectQuery モードでは使用できません。  
   
 ## <a name="semantic-differences"></a>セマンティックの相違  
 このセクションでは、予想されるセマンティックの相違の種類の一覧を示し、関数の使用方法またはクエリの結果に適用される可能性のある制限について説明します。  
   
-### <a name="bkmk_Comparisons"></a>比較  
+### <a name="comparisons"></a><a name="bkmk_Comparisons"></a>比較  
 インメモリ モデルでの DAX は、異なるデータ型のスカラー値に解決される 2 つの式の比較をサポートします。 一方、DirectQuery モードで配置されるモデルはリレーショナル エンジンのデータ型と比較演算子を使用するので、異なる結果が返される場合があります。  
   
 次の比較は、DirectQuery データ ソースでの計算で使用すると、常にエラーが返されます。  
@@ -55,7 +54,7 @@ DirectQuery モードで配置されたモデルでのクエリは、同じモ�
   
 インメモリ モデルでは、文字列としての数値が数値データ型に暗黙でキャストされて他の数値と比較されるため、結果は **true** です。 SQL も、数値データ型との比較のために、テキストの数値を数値として暗黙的にキャストします。  
   
-最初のバージョンからの動作が変更を表すこのことに注意してください。 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、返されます**false**テキスト"2"常にと思われる任意の数よりも大きいためです。  
+これは、最初のバージョンのからの動作の変更を表します。これは、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] テキスト "2" は常に任意の数値より大きいと見なされるため、 **false**を返します。  
   
 **テキストとブール値の比較**  
 例: `"VERDADERO" = TRUE`  
@@ -69,23 +68,23 @@ DirectQuery モードで配置されたモデルでのクエリは、同じモ�
   
 Transact-SQL では NULL と NULL は等しくならないことに注意してください。 ただし、DAX では空白は別の空白と等しくなります。 この動作はすべてのインメモリ モデルについて同じです。 ほとんどの場合、DirectQuery モードは SQL Server のセマンティックを使用します。しかし、この場合はそうではなく、新しい NULL 比較動作が行われます。  
   
-### <a name="bkmk_Casts"></a>キャスト  
+### <a name="casts"></a><a name="bkmk_Casts"></a>キャスト  
   
-DAX のようなキャスト関数はありませんが、多くの比較演算および算術演算では暗黙のキャストが実行されます。 比較演算または数理演算により、結果のデータ型が決まります。 例えば以下のようにします。  
+DAX のようなキャスト関数はありませんが、多くの比較演算および算術演算では暗黙のキャストが実行されます。 比較演算または数理演算により、結果のデータ型が決まります。 たとえば、次のように入力します。  
   
 -   ブール値は、算術演算では数値として扱われるか (TRUE + 1 など)、ブール値の列に関数 MIN が適用されます。 NOT 演算も数値を返します。  
   
 -   ブール値は、比較において、および EXACT、AND、OR、 &amp;&amp;、または || で使用されるときは、常に論理値として扱われます。  
   
 **文字列からブールへのキャスト**  
-インメモリおよび DirectQuery モデルでは、キャストはこれらの文字列のみから許可をブール値には: **""** (空の文字列)、 **"true"** 、 **"false"** が空の文字列。false の値にキャストします。  
+インメモリモデルと DirectQuery モデルでは、キャストは、 **""** (空の文字列)、 **"true"**、 **"false"** の各文字列からのブール値にのみ許可されます。空の文字列が false 値にキャストされます。  
   
 他のすべての文字列からブール データ型へのキャストはエラーになります。  
   
 **文字列から日付/時刻へのキャスト**  
 DirectQuery モードでは、文字列表現の日時から実際の **datetime** 値へのキャストは、SQL Server と同じように行われます。  
   
-文字列からへのキャストに適用される規則については**datetime**データ型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]モデルを参照してください、 [DAX 構文のリファレンス](/dax/dax-syntax-reference)します。
+モデル内の文字列から**datetime**データ型へのキャストを管理する規則の詳細については、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 「 [DAX 構文リファレンス](/dax/dax-syntax-reference)」を参照してください。
   
 インメモリ データ ストアを使用するモデルで日付に対してサポートされるテキスト形式の範囲は、SQL Server でサポートされる日付の文字列形式より制限されます。 ただし、DAX では日付と時刻のカスタム形式がサポートされます。  
   
@@ -108,7 +107,7 @@ DirectQuery モードでは、文字列表現の日時から実際の **datetime
   
 DirectQuery モードでは、 **string** から **double** への直接キャストだけが試みられます。 このキャストが失敗した場合、数式はエラーを返します。  
   
-### <a name="bkmk_Math"></a>数学関数と算術演算  
+### <a name="math-functions-and-arithmetic-operations"></a><a name="bkmk_Math"></a>数学関数と算術演算  
 基になっているデータ型または演算で適用できるキャストの違いにより、一部の数学関数は、DirectQuery モードでは異なる結果を返します。 また、前に説明した許可される値の範囲についての制限が、算術演算の結果に影響する場合があります。  
   
 **加算の順序**  
@@ -127,11 +126,11 @@ Transact-SQL では、数値オーバーフローになる演算ではオーバ�
 ただし、同じ数式をインメモリ モデルで使用すると、8 バイトの整数が返されます。 これは、数式エンジンが数値オーバーフローのチェックを実行しないためです。  
   
 **異なる結果を返すブランクの LOG 関数**  
-SQL Server では、NULL と空白の処理が xVelocity エンジンとは異なります。 結果として、次の数式がエラーを返しますが、DirectQuery モードでは、無限の (-inf)、インメモリ モードでします。  
+SQL Server では、NULL と空白の処理が xVelocity エンジンとは異なります。 その結果、次の式は、DirectQuery モードではエラーを返しますが、インメモリモードでは無限大 (-inf) を返します。  
   
 `EXAMPLE: LOG(blank())`  
   
-他の対数関数に同じ制限が適用されます。LOG10 および LN にも適用されます。  
+同じ制限が、他の対数関数 LOG10 および LN にも適用されます。  
   
 DAX での **blank** データ型の詳細については、「 [DAX 構文のリファレンス](/dax/dax-syntax-reference)」を参照してください。
   
@@ -154,8 +153,8 @@ Excel モデルおよび [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] モデ
   
 式 `BLANK/BLANK` は特殊なケースであり、インメモリ モデルでも DirectQuery モードでも `BLANK` が返されます。  
   
-### <a name="bkmk_Ranges"></a>サポートされている数値と日付/時刻の範囲  
-数式で[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]され、メモリ内に表形式モデルは最大値に関して、Excel と同じ制限される許可実数および日付の値。 ただし、最大値が計算またはクエリから返される場合、または値の変換、キャスト、丸め、または切り捨てが行われる場合は、相違が発生することがあります。  
+### <a name="supported-numeric-and-date-time-ranges"></a><a name="bkmk_Ranges"></a>サポートされる数値および日付と時刻の範囲  
+[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]メモリ内のおよびテーブルモデルの数式には、実数と日付に許容される最大値に関して、Excel と同じ制限が適用されます。 ただし、最大値が計算またはクエリから返される場合、または値の変換、キャスト、丸め、または切り捨てが行われる場合は、相違が発生することがあります。  
   
 -   **Currency** 型と **Real** 型の値の乗算を行い、結果が最大許容値より大きい場合、DirectQuery モードではエラーは発生せず、NULL が返されます。  
   
@@ -163,9 +162,9 @@ Excel モデルおよび [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] モデ
   
 一般に、Excel と SQL Server では許容される日付の範囲が異なるため、結果が一致することが保証されるのは、共通の日付範囲内の日付の場合だけです。これには、次の日付が含まれます。  
   
--   最も早い日付:1990 年 3 月 1 日  
+-   最も早い日付: 1990 年 3 月 1 日  
   
--   最も遅い日付:9999 年 12 月 31 日  
+-   最も遅い日付: 9999 年 12 月 31 日  
   
 数式で使用されるいずれかの日付がこの範囲内にない場合は、数式がエラーになるか、または結果が一致しません。  
   
@@ -215,16 +214,16 @@ DirectQuery モードでは、結果は SQL Server の規則に従って切り�
 **SQL の時間データ型はサポートされない**  
 インメモリ モデルでは、SQL の新しい **Time** データ型の使用はサポートされません。 DirectQuery モードでは、このデータ型の列を参照する数式はエラーを返します。 時刻データ列をインメモリ モデルにインポートすることはできません。  
   
-ただし、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 、キャッシュされたモデルでも、エンジン、時刻値にキャスト、許容されるデータ型をし、結果が返されます。  
+ただし、およびでは、キャッシュされた [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] モデルでは、エンジンが時刻値を許容されるデータ型にキャストし、数式から結果が返されることがあります。  
   
 この動作は、日付列をパラメーターとして使用するすべての関数に影響します。  
   
-### <a name="bkmk_Currency"></a>Currency  
+### <a name="currency"></a><a name="bkmk_Currency"></a>通貨  
 DirectQuery モードでは、算術演算の結果が **Currency**型の場合、値は次の範囲内である必要があります。  
   
 -   最小: -922337203685477.5808  
   
--   最大:922337203685477.5807  
+-   最大: 922337203685477.5807  
   
 **通貨データ型と REAL データ型の組み合わせ**  
 例: `Currency sample 1`  
@@ -241,7 +240,7 @@ DirectQuery モードでは、算術演算の結果が **Currency**型の場合�
 **通貨データ型と他のデータ型の組み合わせ**  
 通貨値を他の数値型の値で除算した場合、結果が異なる場合があります。  
   
-### <a name="bkmk_Aggregations"></a>集計関数  
+### <a name="aggregation-functions"></a><a name="bkmk_Aggregations"></a>集計関数  
 1 行のテーブルに対する統計関数は異なる結果を返します。 空のテーブルに対する集計関数も、インメモリ モデルと DirectQuery モードでは動作が異なります。  
   
 **1 行のテーブルに対する統計関数**  
@@ -249,7 +248,7 @@ DirectQuery モードでは、算術演算の結果が **Currency**型の場合�
   
 インメモリ モデルでは、1 行だけのテーブルに対して STDEV または VAR を使用する数式はゼロ除算エラーを返します。  
   
-### <a name="bkmk_Text"></a>文字列関数  
+### <a name="text-functions"></a><a name="bkmk_Text"></a>文字列関数  
 リレーショナル データ ストアでは Excel とは異なるテキスト データ型が提供されるので、文字列の検索やサブストリングの処理での結果が異なる場合があります。 文字列の長さも異なる場合があります。  
   
 一般に、固定サイズの列を引数として使用する文字列操作関数は結果が異なる場合があります。  
@@ -311,11 +310,11 @@ DirectQuery モードでは、この関数のパラメーターが 3 つ (列の
   
 入力テキストが **varchar** または **nvarchar**の場合、数式の結果は常に同じになります。  
   
-一方、テキストが固定長の文字列で、 *&lt;num_chars&gt;* の値がターゲット文字列の長さより大きい場合、DirectQuery モードでは、結果の文字列の最後にブランクが追加されます。  
+ただし、テキストが固定長文字で、 * &lt; num_chars &gt; *の値がターゲット文字列の長さよりも大きい場合、DirectQuery モードでは、結果の文字列の末尾に空白が追加されます。  
   
 インメモリ モデルでは、結果は文字列の最後の文字で終了し、ブランクの埋め込みは行われません。  
   
-## <a name="bkmk_SupportedFunc"></a>DirectQuery モードでサポートされる関数  
+## <a name="functions-supported-in-directquery-mode"></a><a name="bkmk_SupportedFunc"></a>DirectQuery モードでサポートされている関数  
 DirectQuery モードでは次の DAX 関数を使用できますが、前のセクションで説明した制限が適用されます。  
   
 **テキスト関数**  
@@ -324,17 +323,17 @@ CONCATENATE
   
 [FIND]  
   
-[LEFT]  
+LEFT  
   
 LEN  
   
 MID  
   
-[REPLACE]  
+REPLACE  
   
 REPT  
   
-[RIGHT]  
+RIGHT  
   
 SUBSTITUTE  
   
@@ -342,7 +341,7 @@ TRIM
   
 **統計関数**  
   
-COUNT  
+[COUNT]  
   
 STDEV.P  
   
@@ -362,17 +361,17 @@ VARX.S
   
 **日付/時刻関数**  
   
-[DATE]  
+DATE  
   
 EDATE  
   
 EOMONTH  
   
-[DATE]  
+DATE  
   
 TIME  
   
-[SECOND]  
+SECOND  
   
 **数学関数と算術関数**  
   
@@ -386,13 +385,13 @@ LOG10
   
 POWER  
   
-**DAX テーブル クエリ**  
+**DAX テーブルクエリ**  
   
 DAX テーブル クエリを使用して DirectQuery モデルに対する数式を評価するときは、いくつかの制限があります。 DirectQuery では、ORDER BY 句で同じ列を 2 回参照することはできません。 同等の Transact-SQL ステートメントを作成できず、クエリは失敗します。  
   
 インメモリ モデルでは、ORDER BY 句を繰り返しても結果に影響はありません。  
   
-## <a name="bkmk_NotSupportedFunc"></a>DirectQuery モードでサポートされていない関数  
+## <a name="functions-not-supported-in-directquery-mode"></a><a name="bkmk_NotSupportedFunc"></a>DirectQuery モードでサポートされていない関数  
 一部の DAX 関数は、DirectQuery モードで配置されたモデルではサポートされません。 特定の関数がサポートされない理由は、次のいずれか、または組み合わせによります。  
   
 -   基になるリレーショナル エンジンが、xVelocity エンジンによって実行されるものと同等の計算を実行できない。  
@@ -427,7 +426,7 @@ RAND
   
 RANDBETWEEN  
   
-**タイム インテリジェンス関数:開始と終了日**  
+**タイム インテリジェンス関数: 開始日と終了日**  
   
 DATESQTD  
   
@@ -451,7 +450,7 @@ SAMEPERIODLASTYEAR
   
 PARALLELPERIOD  
   
-**タイム インテリジェンス関数:残高**  
+**タイムインテリジェンス関数: 残高**  
   
 OPENINGBALANCEMONTH  
   
@@ -465,7 +464,7 @@ CLOSINGBALANCEQUARTER
   
 CLOSINGBALANCEYEAR  
   
-**タイム インテリジェンス関数:前または次の期間**  
+**タイム インテリジェンス関数: 前の期間および次の期間**  
   
 PREVIOUSDAY  
   
@@ -483,7 +482,7 @@ NEXTQUARTER
   
 NEXTYEAR  
   
-**タイム インテリジェンス関数:期間および期間に対する計算**  
+**タイム インテリジェンス関数: 期間および期間に対する計算**  
   
 STARTOFMONTH  
   

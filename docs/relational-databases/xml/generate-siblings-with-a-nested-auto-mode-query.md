@@ -1,5 +1,6 @@
 ---
 title: 入れ子になった AUTO モードのクエリを使用した兄弟の生成 | Microsoft Docs
+description: EXPLICIT モードを使用する代わりに、入れ子になった AUTO モードのクエリを使用して、XML の兄弟を生成する方法について学習します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e278a3ab3f81e1a858830868b310c678f603e0ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f65bb2dab5e00a52943a58686d6f5d448391903
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691325"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>入れ子になった AUTO モードのクエリを使用した兄弟の生成
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   次の例では、入れ子になった AUTO モードのクエリを使用して兄弟を作成する方法を示します。 他の方法では、EXPLICIT モードを使用する以外に、このような XML を生成する方法はありません。 ただし、この方法は複雑になる場合があります。  
   
 ## <a name="example"></a>例  

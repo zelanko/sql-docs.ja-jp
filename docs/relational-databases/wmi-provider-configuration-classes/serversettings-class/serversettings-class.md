@@ -1,5 +1,5 @@
 ---
-title: ServerSettings クラス |Microsoft Docs
+title: ServerSettings クラス
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 74d2371336a19c04ea42e070f77eb68fa6653c65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dbead3497dbbbed3c6c47f629549d7e4627fc72c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052847"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880754"
 ---
 # <a name="serversettings-class"></a>ServerSettings クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [ServerSettings クラス](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)のインスタンス上のサーバー設定を表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [Serversettings クラス](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)は、のインスタンス上のサーバー設定を表し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
- [ServerSettings クラス](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)次のタスクを実行することができます。  
+ [Serversettings クラス](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)を使用すると、次のタスクを実行できます。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対応する一般的なフラグへのアクセス  
   
@@ -37,6 +37,6 @@ ms.locfileid: "68052847"
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに対するセキュリティ証明書の設定  
   
 ## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33e11dde29a9f2b016f5f70fa3c12bd728928f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 283ea523a68a79a7054441c4cc9eb8bf3fdf963e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057655"
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>トレース ファイルに含めるイベントとデータ列の指定 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してトレースに含めるイベント クラスとデータ列を指定する方法について説明します。  
@@ -47,7 +46,7 @@ ms.locfileid: "63267417"
   
 2.  必要に応じて、トレースにフィルターを適用します。 詳細については、「[トレース内のイベントへのフィルターの適用 &#40;SQL Server Profiler&#41;](filter-events-in-a-trace-sql-server-profiler.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

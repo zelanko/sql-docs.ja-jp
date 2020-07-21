@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9c90dbb072ace600258edfb4ff13f99ecadf188
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f670ed5ea57bc61f0509afd58432888c1fdae13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68196519"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014671"
 ---
 # <a name="ddl-events"></a>DDL イベント
   次の表は、DDL トリガーまたはイベント通知を起動するために使用できる DDL イベントの一覧です。 各イベントは、キーワード間にアンダースコア文字 (_) を含めるように変更されたステートメント構文を備えた [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはストアド プロシージャに対応しています。  
@@ -112,7 +111,7 @@ ms.locfileid: "68196519"
 |CREATE_SERVER_AUDIT_SPECIFICATION|ALTER_SERVER_AUDIT_SPECIFICATION|DROP_SERVER_AUDIT_SPECIFICATION|  
 |CREATE_WORKLOAD_GROUP|CREATE_WORKLOAD_GROUP|CREATE_WORKLOAD_GROUP|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DDL トリガー](ddl-triggers.md)   
  [イベント通知](../service-broker/event-notifications.md)   
  [DDL イベント グループ](ddl-event-groups.md)  

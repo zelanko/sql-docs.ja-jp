@@ -15,59 +15,59 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920388"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748732"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF プロパティ (ADO)
--   **BOF**の最初のレコードの前に、現在のレコードの位置があることを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
+-   **BOF**現在のレコード位置が、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの最初のレコードの前にあることを示します。  
   
--   **EOF**の最後のレコードの後、現在のレコードの位置にあることを示します、 **Recordset**オブジェクト。  
+-   **EOF**現在のレコード位置が、**レコードセット**オブジェクトの最後のレコードの後であることを示します。  
   
 ## <a name="return-value"></a>戻り値  
- **BOF**と**EOF**プロパティの戻り値**ブール**値。  
+ **BOF**プロパティと**EOF**プロパティは、**ブール**値を返します。  
   
-## <a name="remarks"></a>コメント  
- 使用、 **BOF**と**EOF**プロパティを確認するかどうかを**レコード セット**レコードまたはかどうかが確認済みの制限を超えるオブジェクトが含まれています、**レコード セット**レコード間を移動するときのオブジェクトします。  
+## <a name="remarks"></a>Remarks  
+ **Recordset**オブジェクトにレコードが含まれているかどうか、またはレコード間の移動時にレコード**セット**オブジェクトの制限を超えていないかどうかを判断するには、 **BOF**プロパティと**EOF**プロパティを使用します。  
   
- **BOF**プロパティが返す**True** (-1) 場合、現在のレコードの位置を先頭レコードの前に、と**False**レコードの現在の位置は 1 つ目以降の場合は (0)レコードです。  
+ **BOF**プロパティは、現在のレコード位置が最初のレコードの前にある場合は**True** (-1) を返し、現在のレコード位置が最初のレコードの前後にある場合は**False** (0) を返します。  
   
- **EOF**プロパティが返す**True**レコードの現在の位置が最後のレコード後がある場合と**False**レコードの現在の位置がまたは最後のレコードの前にある場合。  
+ **EOF**プロパティは、現在のレコード位置が最後のレコードの後にある場合は**True**を返し、現在のレコード位置が最後のレコードの前または最後のレコードの前にある場合は**False**を返します。  
   
- どちらの場合、 **BOF**または**EOF**プロパティは**True**、現在のレコードはありません。  
+ **BOF**プロパティまたは**EOF**プロパティのいずれかが**True**の場合、現在のレコードは存在しません。  
   
- 開く場合、**レコード セット**オブジェクト、レコードが含まれていない、 **BOF**と**EOF**プロパティに設定されます**True** (を参照してください、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティのこの状態の詳細については、 **Recordset**)。 開くと、**レコード セット**に少なくとも 1 つのレコード、最初のレコードを格納しているオブジェクトが現在のレコードと**BOF**と**EOF**プロパティは、 **False**.  
+ レコードを含まない**レコードセット**オブジェクトを開くと、 **BOF**プロパティと**EOF**プロパティが**True**に設定されます (**レコードセット**のこの状態の詳細については、「 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 」プロパティを参照してください)。 少なくとも1つのレコードを含むレコード**セット**オブジェクトを開くと、最初のレコードが現在のレコードになり、 **BOF**プロパティと**EOF**プロパティは**False**になります。  
   
- 最後の残りのレコードを削除する場合、**レコード セット**オブジェクト、 **BOF**と**EOF**プロパティが残る可能性がある**False**まで現在のレコードの位置を変更しようとしてください。  
+ **Recordset**オブジェクト内の最後のレコードを削除すると、現在のレコードの位置を変更しようとしたときに、 **BOF**プロパティと**EOF**プロパティが**False**のままになる場合があります。  
   
- 次の表では**移動**のさまざまな組み合わせで使用できるメソッド、 **BOF**と**EOF**プロパティ。  
+ 次の表は、 **BOF**プロパティと**EOF**プロパティのさまざまな組み合わせで許可される**移動**方法を示しています。  
   
-||MoveFirst、<br /><br /> MoveLast|MovePrevious、<br /><br /> < 0 を移動します。|0 を移動します。|MoveNext、<br /><br /> > 0 を移動します。|  
+||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> < 0 に移動|0の移動|MoveNext<br /><br /> > 0 に移動|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**、 **EOF**=**False**|Allowed|Error|Error|Allowed|  
-|**BOF**=**False**、 **EOF**=**は True。**|Allowed|Allowed|Error|Error|  
-|両方**は True。**|Error|Error|Error|Error|  
-|どちらも**False**|Allowed|Allowed|Allowed|Allowed|  
+|**BOF** =**True**、 **EOF** = **False**|許可|エラー|エラー|許可|  
+|**BOF** =**False**、 **EOF** = **True**|許可|許可|エラー|エラー|  
+|両方**True**|エラー|エラー|エラー|エラー|  
+|両方**False**|許可|許可|許可|許可|  
   
- 許可、**移動**メソッドでは、メソッドが正常にレコードを見つけるは保証されません。 その呼び出し、指定したに過ぎません**移動**メソッドでは、エラーは生成されません。  
+ **Move**メソッドを許可しても、メソッドがレコードを正常に見つけることは保証されません。これは、指定された**Move**メソッドを呼び出すことによってエラーが生成されないことを意味します。  
   
- 次の表は、事象、 **BOF**と**EOF**さまざまな呼び出すときに、プロパティの設定**移動**メソッド、ことはできませんが正常にレコードを検索します。  
+ 次の表は、さまざまな**Move**メソッドを呼び出してもレコードを正常に見つけることができない場合に、 **BOF**プロパティと**EOF**プロパティの設定がどのように行われるかを示しています。  
   
 ||BOF|EOF|  
 |------|---------|---------|  
-|**MoveFirst**、 **MoveLast**|設定**は True。**|設定**は True。**|  
-|**移動**0|変更なし|変更なし|  
-|**MovePrevious**、**移動**< 0|設定**は True。**|変更なし|  
-|**MoveNext**、**移動**> 0|変更なし|設定**は True。**|  
+|**MoveFirst**、 **MoveLast**|**True**に設定|**True**に設定|  
+|0の**移動**|変更なし|変更なし|  
+|**MovePrevious**、**移動**< 0|**True**に設定|変更なし|  
+|**MoveNext**、**移動**> 0|変更なし|**True**に設定|  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BOF、EOF、および Bookmark プロパティの例 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF、EOF、および Bookmark プロパティの例 (vc++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [BOF、EOF、および Bookmark プロパティの例 (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   

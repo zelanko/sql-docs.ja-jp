@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、または、属性リレーションシップの削除 |Microsoft Docs
+title: 属性リレーションシップの作成、変更、または削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35e22807ed64cce3bc6f7c186978d4c9ee82c51d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfeab1166a7554c0e0b721c16ed3bd5b7413e358
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077091"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544684"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>属性リレーションシップの作成、変更、または削除
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーの **[属性リレーションシップ]** タブを使用すると、ディメンションの属性間の属性リレーションシップを作成、変更、または削除することができます。  
+  **のディメンション デザイナーの** [属性リレーションシップ] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブを使用すると、ディメンションの属性間の属性リレーションシップを作成、変更、または削除することができます。  
   
 ### <a name="to-create-an-attribute-relationship"></a>属性リレーションシップを作成するには  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66077091"
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [のディメンション デザイナーの](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+## <a name="see-also"></a>参照  
+ [のディメンション デザイナーでは、[ディメンション構造] ビューの](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

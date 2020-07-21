@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32b32bab5e7105f9f34774c5c59551b30858ee2e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057765"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>トレース定義の既定値の設定 (SQL Server Profiler)
   トレース定義の既定値は、プロバイダーまたはサーバーごとに使用される既定のトレース テンプレートです。 既定のトレース テンプレートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に設定できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "63267436"
   
 6.  **[保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler のテンプレート](sql-server-profiler-templates.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

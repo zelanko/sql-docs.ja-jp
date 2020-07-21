@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 95e7bade956c791feceddc32f2a0423c331fe77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097110"
 ---
-# <a name="issharepointintegrated-property-wmi-msreportserverinstance"></a>IsSharePointIntegrated プロパティ (WMI MSReportServer_Instance)
+# <a name="issharepointintegrated-property-wmi-msreportserver_instance"></a>IsSharePointIntegrated プロパティ (WMI MSReportServer_Instance)
   レポート サーバーが SharePoint 統合モードであるかどうかを示します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、このプロパティは常に `False` を返します。これは、SharePoint モードでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスは SharePoint 共有サービスであり、WMI プロバイダーによって制御されないためです。  
   
 ## <a name="syntax"></a>構文  

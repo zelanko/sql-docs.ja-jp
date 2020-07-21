@@ -1,7 +1,7 @@
 ---
-title: バッチ操作の実行 |Microsoft Docs
+title: バッチ操作の実行 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: a77816598e7c8e3f0589f71cb5c02e40e0e17317
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956222"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69027926"
 ---
 # <a name="performing-batch-operations"></a>バッチ操作の実行
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

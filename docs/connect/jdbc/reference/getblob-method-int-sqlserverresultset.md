@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a00275cb-0299-4a21-a518-2640598a5bbf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70f0faaa9babb4ddaa1512fd18cbbd1f5f34d337
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 959c051d1acd6659d57dff66a3b066fdf6728cd9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953609"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926404"
 ---
 # <a name="getblob-method-int-sqlserverresultset"></a>getBlob (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.sql.Blob getBlob(int i)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getBlob メソッドは、java.sql.ResultSet インターフェイスの getBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

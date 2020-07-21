@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78f3dbabe5d9671d243b7c6f9a295146a047daba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63066310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068659"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   カスタム競合回避モジュールを使用すると、既定の解決メカニズムより高い柔軟性が得られ、レプリケートされたデータを使用するアプリケーションに必要なビジネス ロジックを実装できます。 COM ベースのカスタム競合回避モジュールは、 **ICustomResolver** COM インターフェイス、メソッドとプロパティ、および競合解決専用に設計されたその他のインターフェイスとデータ型定義を実装するダイナミック リンク ライブラリ (DLL) です。  
@@ -41,7 +40,7 @@ ms.locfileid: "63066310"
  カスタム競合回避モジュールを指定するには、「 [マージ アーティクル競合回避モジュールの指定](../publish/specify-a-merge-article-resolver.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーションの競合検出および解決の詳細](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Microsoft COM ベースの競合回避モジュール](advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

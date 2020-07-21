@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6bb9c6f7fddc9ba0d4430b42ba5472a59c29e3cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c4468770227fff4915ed701f6973baeee3cc251
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916237"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552377"
 ---
-# <a name="mssqlserver10519"></a>MSSQLSERVER_10519
+# <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|10519|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|メッセージ テキスト|プラン ガイドを作成することはできません ' % です。\*ls' に指定されたヒントを`@hints`いずれかで指定されたステートメントには適用できません`@stmt`または`@statement_start_offset`します。 ヒントがステートメントに適用可能であることを確認してください。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。`@hints` で指定されたヒントを、`@stmt` または `@statement_start_offset` のいずれかで指定されたステートメントに適用できません。 ヒントがステートメントに適用可能であることを確認してください。|  
   
 ## <a name="explanation"></a>説明  
  `@hints` で指定されたヒントを、`@stmt` または `@statement_start_offset` のいずれかで指定されたステートメントに適用できません。  
@@ -40,7 +39,7 @@ ms.locfileid: "62916237"
   
 ## <a name="see-also"></a>参照  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [プラン ガイド](../performance/plan-guides.md)   
+ [プランガイド](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

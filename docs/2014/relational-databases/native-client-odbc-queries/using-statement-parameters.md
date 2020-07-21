@@ -1,5 +1,5 @@
 ---
-title: ステートメント パラメーターの使用 |マイクロソフトのドキュメント
+title: ステートメントのパラメーターを使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8657c439d35a539892e7f166d8a0a443a5fb759b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049725"
 ---
 # <a name="using-statement-parameters"></a>ステートメント パラメーターの使用
   パラメーターは、ODBC アプリケーションで次の操作を可能にする SQL ステートメント内の変数です。  
@@ -32,9 +31,9 @@ ms.locfileid: "63200246"
   
 -   クエリ条件を作成する際のユーザーとの対話を強化する。  
   
--   管理**テキスト**、 **ntext**、および**イメージ**データと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定の C データ型。  
+-   **Text**、 **ntext**、および**Image**データおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定の C データ型を管理します。  
   
- たとえば、**パーツ**という名前の列がテーブルに**PartID**、**説明**と**価格**します。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
+ たとえば、 **Parts**テーブルには、 **PartID**、 **Description**、および**Price**という名前の列があります。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -55,6 +54,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [パラメーターのバインド](using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>参照  
- [クエリの実行&#40;ODBC&#41;](executing-queries-odbc.md)  
+ [ODBC&#41;&#40;クエリの実行](executing-queries-odbc.md)  
   
   

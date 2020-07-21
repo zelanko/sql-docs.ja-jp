@@ -1,6 +1,7 @@
 ---
-title: SQL Server マルチサブネット クラスタリング (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: SQL Server マルチサブネット クラスタリング
+description: マルチサブネット環境で SQL Server フェールオーバー クラスター インスタンスを構成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16f89fcc50ec7db910d88d8ec807cb28c66cde89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044735"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75258151"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server マルチサブネット クラスタリング (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターとは、各フェールオーバー クラスター ノードが異なるサブネットに接続されているか、異なるサブネットのセットに接続されている構成のことです。 これらのサブネットには、同じ場所や地理的に分散したサイトを指定できます。 地理的に分散したサイトのクラスタリングは、拡張クラスターと呼ばれることがあります。 すべてのノードがアクセスできる共有ストレージがないため、複数のサブネットのデータ ストレージ間でデータをレプリケートする必要があります。 データをレプリケートすることで、使用可能なデータのコピーが複数存在することになります。 そのため、マルチサブネット フェールオーバー クラスターによって、高可用性に加えてディザスター リカバリー ソリューションも実現します。  
   
    
-##  <a name="VisualElement"></a> SQL Server マルチサブネット フェールオーバー クラスター (2 ノード、2 サブネット)  
+##  <a name="sql-server-multi-subnet-failover-cluster-two-nodes-two-subnets"></a><a name="VisualElement"></a> SQL Server マルチサブネット フェールオーバー クラスター (2 ノード、2 サブネット)  
  次の図は、2 ノード、2 サブネットの [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のフェールオーバー クラスター インスタンス (FCI) を表します。  
   
- ![マルチ サブネット アーキテクチャと MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "マルチ サブネット アーキテクチャと MultiSubnetFailover")  
+ ![マルチサブネット アーキテクチャと MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "マルチサブネット アーキテクチャと MultiSubnetFailover")  
   
   
-##  <a name="Configurations"></a> マルチサブネット フェールオーバー クラスター インスタンス構成  
+##  <a name="multi-subnet-failover-cluster-instance-configurations"></a><a name="Configurations"></a> マルチサブネット フェールオーバー クラスター インスタンス構成  
  複数のサブネットを使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI の例を次に示します。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 には Node1 および Node2 が含まれます。 Node1 は Subnet1 に接続されています。 Node2 は Subnet2 に接続されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup ではこの構成をマルチサブネット クラスターと認識し、IP アドレス リソースの依存関係が **OR**に設定されます。  
@@ -46,11 +47,11 @@ ms.locfileid: "68044735"
   
     > **注:** クラスター ノードが同じサブネットのセットに含まれているため、この構成はマルチサブネット フェールオーバー クラスター構成と見なされません。  
   
-##  <a name="ComponentsAndConcepts"></a> IP アドレス リソースに関する考慮事項  
- マルチサブネット フェールオーバー クラスターの構成では、フェールオーバー クラスター内のすべてのノードが IP アドレスを所有するわけではありません。また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の起動時に一部のノードがオンラインにならない場合があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]以降では、IP アドレス リソースの依存関係を **OR**に設定することができます。 そのため、バインドできる有効な IP アドレスが少なくとも 1 つ存在していれば、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をオンラインにすることができます。  
+##  <a name="ip-address-resource-considerations"></a><a name="ComponentsAndConcepts"></a> IP アドレス リソースに関する考慮事項  
+ マルチサブネット フェールオーバー クラスターの構成では、フェールオーバー クラスター内のすべてのノードが IP アドレスを所有するわけではありません。また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の起動時に一部のノードがオンラインにならない場合があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]以降では、IP アドレス リソースの依存関係を **OR**に設定することができます。 そのため、バインドできる有効な IP アドレスが少なくとも 1 つ存在していれば、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をオンラインにすることができます。  
   
   > [!NOTE] 
-  > - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では、フェイル オーバー用の単一の IP アドレスをサイト全体に公開するために、マルチサイト クラスター構成で拡張 V-LAN テクノロジを使用していました。 異なるサブネットにわたるノードをクラスター化するための [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい機能を使用することで、拡張 V-LAN テクノロジを実装することなく、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを複数のサイトを対象として構成できるようになりました。  
+  > - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]では、フェイル オーバー用の単一の IP アドレスをサイト全体に公開するために、マルチサイト クラスター構成で拡張 V-LAN テクノロジを使用していました。 異なるサブネットにわたるノードをクラスター化するための [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい機能を使用することで、拡張 V-LAN テクノロジを実装することなく、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを複数のサイトを対象として構成できるようになりました。  
 
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP アドレス リソースの OR 依存関係に関する考慮事項  
@@ -63,7 +64,7 @@ ms.locfileid: "68044735"
    
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の FCI が [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]のスタンドアロン インスタンスとサイド バイ サイドでインストールされている場合は、IP アドレスで TCP ポート番号が競合しないように注意してください。 競合は通常、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の 2 つのインスタンスが両方とも既定の TCP ポート (1433) を使用するように構成されている場合に発生します。 競合を回避するには、一方のインスタンスが既定以外の固定ポートを使用するように構成します。 通常、固定ポートの構成は、スタンドアロン インスタンスに対して行うのが最も簡単です。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] で異なるポートが使用されるように構成すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の FCI がノードのスタンバイに失敗した場合に、予期しない IP アドレス/TCP ポート競合によってインスタンスの起動がブロックされる問題を回避できます。  
   
-##  <a name="DNS"></a> フェールオーバー中のクライアント回復待機時間  
+##  <a name="client-recovery-latency-during-failover"></a><a name="DNS"></a> フェールオーバー中のクライアント回復待機時間  
  複数サブネットの FCI 既定で RegisterAllProvidersIP のクラスター リソースのネットワーク名を有効にします。 マルチサブネット構成では、ネットワーク名のオンラインおよびオフライン両方の IP アドレスが DNS サーバーに登録されます。 クライアント アプリケーションは、すべての登録済み IP アドレスを DNS サーバーから取得し、受信した順序または並列で使用してアドレスへの接続を試みます。 つまり、マルチサブネット フェールオーバーのクライアント回復時間は DNS 更新の待機時間に依存しません。 既定では、クライアントは IP アドレスを順番に試行します。 クライアントが新しいオプションの **MultiSubnetFailover=True** パラメーターを接続文字列で使用している場合、IP アドレスを同時に試し、最初に応答したサーバーに接続します。 これにより、フェールオーバー発生時のクライアント回復待機時間を最小限に抑えることができます。 詳細については、「 [AlwaysOn クライアント接続 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) 」および「 [可用性グループ リスナーの作成または構成 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」を参照してください。  
   
  レガシ クライアント ライブラリまたはサードパーティ データ プロバイダーでは、接続文字列に **MultiSubnetFailover** パラメーターを使用できません。 クライアント アプリケーションが [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のマルチサブネット FCI と最適な状態で連携して動作するように、クライアント接続文字列の接続タイムアウトを追加の IP アドレスごとに 21 秒で調整を試みてください。 これにより、クライアントの再接続の試みは、マルチサブネット FCI のすべての IP アドレスへの切り替えができるまでタイムアウトしません。  
@@ -74,7 +75,7 @@ ms.locfileid: "68044735"
  > - 複数のサブネットを使用していて、静的 DNS がある場合は、フェールオーバーを実行する前にリスナーに関連付けられている DNS レコードを更新するためのプロセスを、用意する必要があります。そうしないと、ネットワーク名がオンラインになりません。
   
    
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 |コンテンツの説明|トピック|  
 |-------------------------|-----------|  

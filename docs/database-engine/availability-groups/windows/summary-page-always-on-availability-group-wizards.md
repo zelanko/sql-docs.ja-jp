@@ -1,6 +1,7 @@
 ---
-title: '[概要] ページ (AlwaysOn 可用性グループ ウィザード) | Microsoft Docs'
-ms.custom: ''
+title: '可用性グループ ウィザード: [概要] ページ'
+description: SQL Server Management Studio での Always On 可用性グループ ウィザードの [概要] ページのオプションについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,21 +15,21 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a8f18c72deffc33878de95ebc07a80c07cd49d67
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 78fa87e1e36aef2752a6781410adfc5f1384802f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892264"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900734"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>[概要] ページ (AlwaysOn 可用性グループ ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 <a name="Top"></a>  
   
   このヘルプ トピックでは、 **[概要]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 このページのグリッドを使用して、新しい可用性グループに対して選択した内容を確認します。 変更が必要な場合は、 **[戻る]** をクリックして、該当するページに戻ります。 準備ができたら、 **[次へ]** をクリックして、 **[概要]** ページに戻ります。 選択内容に問題がなければ、 **[完了]** をクリックします。  
   
-##  <a name="PageOptions"></a> [概要] ページのオプション  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> [概要] ページのオプション  
  **[スクリプト]**  
  概要グリッドに一覧表示されているアクションのための [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを生成します。 スクリプトの生成先を指定するように求められます。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68892264"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [&#91;トップ&#93;](#Top)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
@@ -56,6 +57,6 @@ ms.locfileid: "68892264"
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [&#91;トップ&#93;](#Top)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

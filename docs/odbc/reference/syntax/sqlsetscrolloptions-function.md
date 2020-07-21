@@ -18,29 +18,29 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC]
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 77a85caefadb54c3db2716c4db18b504e02da996
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 056fc203581e1d5d8323b09ac62d692093d8c0f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342941"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287270"
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions 関数
 **互換性**  
- 導入されたバージョン:ODBC 1.0 標準準拠:非推奨  
+ 導入されたバージョン: ODBC 1.0 標準準拠: 非推奨  
   
- **概要**  
- *Odbc 3.x*では、odbc 2.0 関数**SQLSetScrollOptions**は**SQLGetInfo**と**SQLSetStmtAttr**の呼び出しに置き換えられています。  
+ **まとめ**  
+ ODBC 3.x では、ODBC 2.0 関数**SQLSetScrollOptions**は**SQLGetInfo**と**SQLSetStmtAttr**の呼び出しに置き換えられてい*ます。*  
   
 > [!NOTE]
->  Odbc *2.x アプリケーションが*odbc *2.x ドライバーで*動作しているときに、ドライバーマネージャーがこの関数をマップする方法の詳細については[、「付録](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)G:旧バージョンとの互換性のためのドライバーガイドライン。  
+>  *Odbc 2.x アプリケーションが*odbc *2.x ドライバーで*動作しているときに、ドライバーマネージャーがこの機能をマップする方法の詳細については、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
 > 
 > [!NOTE]
->  ドライバーマネージャーが、 **SQLSetScrollOptions**をサポートしていない ODBC 3.x ドライバーを使用しているアプリケーションの**SQLSetScrollOptions**をマップする場合、ドライバーマネージャーは SQL_ATTR_ROW_ ではなく SQL_ROWSET_SIZE ステートメントオプションを設定し*ます。* ARRAY_SIZE statement 属性を**SQLSetScrollOption**の*RowsetSize*引数に指定します。 結果として、 **Sqlfetch**または**sqlfetchscroll**の呼び出しによって複数の行をフェッチするときに、アプリケーションで**SQLSetScrollOptions**を使用することはできません。 **SQLExtendedFetch**の呼び出しによって複数の行をフェッチする場合にのみ使用できます。  
+>  ドライバーマネージャーが、 **SQLSetScrollOptions**をサポートしていない ODBC 3.x ドライバーを使用しているアプリケーションの**SQLSetScrollOptions**をマップする場合、ドライバーマネージャーは、 **SQLSetScrollOption**の*RowsetSize*引数に、ステートメントの SQL_ATTR_ROW_ARRAY_SIZE の属性ではなく SQL_ROWSET_SIZE ステートメントオプションを設定*します。* 結果として、 **Sqlfetch**または**sqlfetchscroll**の呼び出しによって複数の行をフェッチするときに、アプリケーションで**SQLSetScrollOptions**を使用することはできません。 **SQLExtendedFetch**の呼び出しによって複数の行をフェッチする場合にのみ使用できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アプリケーションが64ビットオペレーティングシステムで実行される場合は、「 [ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

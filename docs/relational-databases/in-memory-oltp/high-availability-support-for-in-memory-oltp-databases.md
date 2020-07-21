@@ -1,6 +1,7 @@
 ---
-title: インメモリ OLTP データベースにおける高可用性のサポート | Microsoft Docs
-ms.custom: ''
+title: 高可用性 - インメモリ OLTP データベース
+description: メモリ最適化テーブルを含んだ SQL Server データベースは、ネイティブ コンパイル ストアド プロシージャの有無に関係なく、AlwaysOn 可用性グループで完全にサポートされます。
+ms.custom: seo-dt-2019
 ms.date: 08/31/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 955cef8cf41afffeceb2a342cb4f11e7c2c69557
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d411bff221ed82f1d31252aa2530efcef68a614a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723212"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>インメモリ OLTP データベースにおける高可用性のサポート
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   メモリ最適化テーブルを含んだデータベースは、ネイティブ コンパイル ストアド プロシージャの有無に関係なく、AlwaysOn 可用性グループで完全にサポートされます。  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] オブジェクトを含んでいる場合とそうでない場合とでデータベースの構成とサポートに違いはありません。  
   
  インメモリ OLTP データベースが AlwaysOn 可用性グループ構成で配置されていると、再実行が行われたときに、プライマリ レプリカ上のメモリ最適化テーブルへの変更がメモリ内でセカンダリ レプリカ上のテーブルに適用されます。 つまり、データが既にメモリ内にあるため、セカンダリ レプリカへのフェールオーバーをすばやく実施できます。 これらのテーブルは、読み取りアクセス用に構成されたセカンダリ レプリカでのクエリにも利用できます。  

@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 811d850127b215e69c3710e7680f655714773f57
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927125"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761700"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO の概要と利点
-ActiveX Data Objects (ADO) は、OLE DB の高度な使いやすいインターフェイスです。 OLE DB には、さまざまなデータ ストアの低レベルで高パフォーマンスのインターフェイスです。 ADO と OLE DB の両方で使えるリレーショナル (表形式) と非リレーショナル (階層またはストリーム) データ。
+ActiveX データオブジェクト (ADO) は、OLE DB するための高レベルで使いやすいインターフェイスです。 OLE DB は、さまざまなデータストアに対する低レベルの高パフォーマンスのインターフェイスです。 ADO と OLE DB はどちらも、リレーショナル (テーブル) データと非リレーショナルデータ (階層またはストリーム) で使用できます。
 
- ADO では、クライアントまたは中間層アプリケーションと低レベルの OLE DB インターフェイスの間の抽象化レイヤーを提供します。 ADO では、少数のオートメーション オブジェクトを使用して、OLE DB にシンプルで効率的なインターフェイスを提供します。 このインターフェイスは、ADO、適切な選択を COM と OLE DB の複雑な作業を習得しなくてもデータにアクセスする Visual Basic、VBScript より高いレベルの言語で開発者のためになります。
+ ADO を使用すると、クライアントまたは中間層アプリケーションと低レベルの OLE DB インターフェイスとの間に抽象化レイヤーが提供されます。 ADO では、少数のオートメーションオブジェクトを使用して、OLE DB に簡単かつ効率的なインターフェイスを提供します。 このインターフェイスにより、ADO は、Visual Basic や VBScript など、より高度な言語の開発者にとって、COM や OLE DB の複雑さを把握しなくても、データにアクセスすることをお勧めします。
 
  このセクションでは、次のトピックを扱います。
 

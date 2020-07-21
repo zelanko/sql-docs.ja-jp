@@ -11,15 +11,15 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d632934b3b350077606d93ca162e8f859f0a533
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e9ca11ccf29cc1f13b5d4c70a229634674b3d9f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912149"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007528"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列ストア インデックス - データ ウェアハウス
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   列ストア インデックスは、パーティション分割と共に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ウェアハウスの構築に不可欠な機能です。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "67912149"
 -   データベース互換性レベル 130 以上でのスナップショット分離。  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>非クラスター化インデックスと列ストア インデックスを組み合わせてパフォーマンスを改善する  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降では、クラスター化列ストア インデックスに非クラスター化インデックスを定義できます。   
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、クラスター化列ストア インデックスに非クラスター化インデックスを定義できます。   
   
-### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>例:非クラスター化インデックスを使用してテーブルの検索効率を改善する  
+### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>例: 非クラスター化インデックスを使用してテーブルの検索効率を改善する  
  データ ウェアハウスでのテーブルの検索効率を改善するために、テーブルの検索でクエリが最高のパフォーマンスを発揮するように設計された非クラスター化インデックスを作成できます。 たとえば、一致する値を見つけるクエリや、値の小さな範囲を返すクエリは、列ストア インデックスではなく B ツリー インデックスに対して実行したほうが高いパフォーマンスを発揮します。 このようなクエリでは、列ストア インデックスを介したフル テーブル スキャンは必要ありません。B ツリー インデックスを介したバイナリ検索を実行すると、よりすばやく正しい結果が返されます。  
   
 ```sql  
@@ -63,8 +63,8 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>例:非クラスター化インデックスを使用して列ストア テーブルに主キー制約を適用する  
- 仕様により、列ストア テーブルに主キー制約を設定することはできません。 ただし、列ストア テーブルで非クラスター化インデックスを使用して、主キー制約を適用できるようになりました。 主キーは非 NULL 列での UNIQUE 制約に相当し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は UNIQUE 制約を非クラスター化インデックスとして実装します。 これらの事実を組み合わせて、次の例では、非 NULL 列 accountkey に UNIQUE 制約を定義しています。 その結果、非クラスター化インデックスにより、非 NULL 列の UNIQUE 制約として主キー制約が適用されます。  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>例: 非クラスター化インデックスを使用して列ストア テーブルに主キー制約を適用する  
+ 仕様により、クラスター化された主キー制約を列ストア テーブルに適用することはできません。 ただし、列ストア テーブルで非クラスター化インデックスを使用して、主キー制約を適用できるようになりました。 主キーは非 NULL 列での UNIQUE 制約に相当し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は UNIQUE 制約を非クラスター化インデックスとして実装します。 これらの事実を組み合わせて、次の例では、非 NULL 列 accountkey に UNIQUE 制約を定義しています。 その結果、非クラスター化インデックスにより、非 NULL 列の UNIQUE 制約として主キー制約が適用されます。  
   
  次に、テーブルはクラスター化列ストア インデックスに変換されます。 変換中は、非クラスター化インデックスが保持されます。 その結果、クラスター化列ストア インデックスに、主キー制約を適用する非クラスター化インデックスが含まれます。 列ストア テーブルでの更新または挿入は非クラスター化インデックスにも影響するため、UNIQUE 制約と非 NULL に違反する操作を行うと、操作全体の失敗につながります。  
   
@@ -131,6 +131,6 @@ END TRAN
  [列ストア インデックスのデータ読み込みガイダンス](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [列ストア インデックスの最適化](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [インデックスの再構成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [列ストア インデックスのアーキテクチャ](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

@@ -1,7 +1,6 @@
 ---
-title: データ コレクションのパラメーターの構成 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/04/2017
+title: データ コレクションのパラメーターの構成 (T-SQL)
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,15 +10,16 @@ helpviewer_keywords:
 ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f266a36b62577103aca0169acd420d2178a31a9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 47d18830d262bc817061aa3637cc3a4871accfd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733890"
 ---
 # <a name="configure-data-collection-parameters-transact-sql"></a>データ コレクションのパラメーターの構成 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   カスタム コレクション セットを作成する前に、データ コレクションのパラメーターを構成しておく必要があります。 これには、データ コレクターで用意されているストアド プロシージャを使用します。 この作業には、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用した次の手順の実行も含まれます。  
   
 > [!NOTE]  
@@ -31,8 +31,6 @@ ms.locfileid: "68140786"
   
 2.  クエリ エディターで、次のステートメントを実行します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```sql  
     USE msdb;  
     EXEC sp_syscollector_set_warehouse_instance_name N'INSTANCE_NAME';-- where instance name is the name of the SQL Server instance  
@@ -41,7 +39,7 @@ ms.locfileid: "68140786"
     ```  
   
 ## <a name="see-also"></a>参照  
- [データ コレクション](../../relational-databases/data-collection/data-collection.md)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

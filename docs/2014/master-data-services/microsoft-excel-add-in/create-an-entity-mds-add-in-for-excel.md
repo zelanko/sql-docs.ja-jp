@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ad6b25d347de4c832097c05f27854bacbebaf6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961312"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>エンティティの作成 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]の管理者は、新しいエンティティを作成してデータを格納することができます。 エンティティを作成する場合、少なくとも、格納するデータのサンプリングを読み込む必要があります。  
@@ -25,7 +24,7 @@ ms.locfileid: "65478942"
   
 -   **[システム管理]** および **[エクスプローラー]** 機能領域に対する権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../administrators-master-data-services.md)」を参照してください。  
   
 -   エンティティの作成先となる既存のモデルが存在する必要があります。 詳細については、「[モデルを作成する (マスター データ サービス)](../create-a-model-master-data-services.md)」を参照してください。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "65478942"
   
 -   想定していたデータ型として属性が作成されたことを確認します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン ベースの属性の作成 (Excel 用 MDS アドイン)](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: 31f8931f6e0eddc67b2e58ae794631a9ae6555b7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d2e759d5cfa0f7b1fa918bde8547d3cbee2439af
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077448"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896509"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Linux 上の SQL エージェントでの DB メールと電子メール アラート
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 次の手順では、Linux 上の SQL Server エージェント (**mssql-server-agent**) で DB メールを設定して使用する方法を示します。 
 
@@ -36,7 +36,7 @@ RECONFIGURE
 GO  
 ```
 
-## <a name="2-create-a-new-account"></a>2.[新しいアカウントを作成する]
+## <a name="2-create-a-new-account"></a>2.新しいアカウントを作成する
 ```sql
 EXECUTE msdb.dbo.sysmail_add_account_sp 
 @account_name = 'SQLAlerts', 
@@ -121,5 +121,5 @@ EXEC msdb.dbo.sp_update_job
 GO
 ```
 
-## <a name="next-steps"></a>次の手順
-SQL Server エージェントを使用してジョブを作成、スケジュール設定、および実行する方法について詳しくは、[Linux での SQL Server エージェント ジョブの実行](sql-server-linux-run-sql-server-agent-job.md)に関するページをご覧ください。
+## <a name="next-steps"></a>次のステップ
+SQL Server エージェントを使用してジョブを作成、スケジュール設定、および実行する方法について詳しくは、[Linux 上での SQL Server エージェント ジョブの実行](sql-server-linux-run-sql-server-agent-job.md)に関するページをご覧ください。

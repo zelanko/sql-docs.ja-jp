@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff5a978fa005f32e5ebe3fd02323be998e2cb71e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62755179"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934803"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server モニターの概要
   SQL Server モニターでは、監視機能を実行するのではなく、監視を行うモジュールをホストします。 SQL Server モニターのモジュールには、レプリケーション モニターやデータベース ミラーリング モニターが含まれます。  
@@ -50,7 +49,7 @@ ms.locfileid: "62755179"
  **操作**  
  ナビゲーション ツリーで選択されたノードのコンテキスト メニューが含まれます。  
   
- **[実行]**  
+ **Go**  
  監視するコンポーネントの一覧が含まれます。  
   
 -   データベース ミラーリング  

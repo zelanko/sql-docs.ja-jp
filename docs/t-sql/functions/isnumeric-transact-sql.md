@@ -20,18 +20,18 @@ helpviewer_keywords:
 - valid numeric type [SQL Server]
 - checking valid numeric type
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4771c6d611292157caf8247288f36648c8ad5179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 813d2b8be0797e510728e9d61f9e2bb965931e29
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109387"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012831"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   式が数値型として有効かどうかを調べます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68109387"
   
 ## <a name="syntax"></a>構文  
   
-```  
+``` 
 ISNUMERIC ( expression )  
 ```  
   
@@ -50,47 +50,44 @@ ISNUMERIC ( expression )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ISNUMERIC は、入力式が有効な数値データ型であると判断される場合に 1 を返します。それ以外の場合は 0 を返します。 有効な[数値データ型](../../t-sql/data-types/numeric-types.md)は次のとおりです。  
 
-|||
+| 領域 | 数値データ型 |
 |-|-|
 | [真数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**、**int**、**smallint**、**tinyint**、**bit** |
 | [固定有効桁数](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) | **decimal**、**numeric** |
 | [概数](../../t-sql/data-types/float-and-real-transact-sql.md) | **float**、**real** |
 | [通貨値](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) | **money**、 **smallmoney** |
 
-  
 > [!NOTE]  
->  ISNUMERIC は、数字以外の一部の文字に対して 1 を返します。たとえばプラス (+)、マイナス (-)、ドル記号 ($) などの通貨記号がこれに該当します。 通貨記号の完全な一覧を参照してください[ money および smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+> ISNUMERIC は、数字以外の一部の文字に対して 1 を返します。たとえばプラス (+)、マイナス (-)、ドル記号 ($) などの通貨記号がこれに該当します。 通貨記号の完全な一覧を参照してください[ money および smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、`ISNUMERIC` を使用して数値型でないすべての郵便番号を返しています。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT City, PostalCode  
 FROM Person.Address   
-WHERE ISNUMERIC(PostalCode)<> 1;  
+WHERE ISNUMERIC(PostalCode) <> 1;  
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  この例では、`ISNUMERIC` を使用して数値型でないすべての郵便番号を返しています。  
   
-```  
+```sql
 USE master;  
 GO  
-SELECT name, isnumeric(name) AS IsNameANumber, database_id, isnumeric(database_id) AS IsIdANumber   
+SELECT name, ISNUMERIC(name) AS IsNameANumber, database_id, ISNUMERIC(database_id) AS IsIdANumber   
 FROM sys.databases;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>関連項目
 
+- [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)
+- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

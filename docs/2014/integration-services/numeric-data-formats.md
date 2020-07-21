@@ -12,21 +12,20 @@ helpviewer_keywords:
 - locale-sensitive parsing [Integration Services]
 - fast parse [Integration Services]
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a0096f34a5815237ed3865e298ecc628083ce408
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057384"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424509"
 ---
 # <a name="numeric-data-formats"></a>数値データ形式
   高速解析は、データを解析するための、高速で単純なロケール非依存型のルーチンのセットです。 高速解析でサポートされているデータ型は、整数データ型の限定された形式のセットのみです。  
   
 ## <a name="integer-data-types"></a>整数データ型  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で用意されている整数データ型は、DT_I1、DT_UI1、DT_I2、DT_UI2、DT_I4、DT_UI4、DT_I8、および DT_UI8 です。 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で用意されている整数データ型は、DT_I1、DT_UI1、DT_I2、DT_UI2、DT_I4、DT_UI4、DT_I8、および DT_UI8 です。 詳細については、「 [Integration Services データ型](data-flow/integration-services-data-types.md)」を参照してください。  
   
  高速解析では、次の形式の整数データ型がサポートされています。  
   

@@ -1,5 +1,5 @@
 ---
-title: 属性と Name プロパティの例 (vc++) |Microsoft Docs
+title: Attributes と Name プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Attributes property [ADO], VC++ example
 - Name property [ADO], VC++ example
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 218103d24bc7fb35e8432743f543ad7bb9558479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b639cafe2f37b365c733f4aabc269f5f09c27918
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920534"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762920"
 ---
-# <a name="attributes-and-name-properties-example-vc"></a>属性と Name プロパティの例 (vc++)
-この例の値を表示、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティ[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、および[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。 使用して、[名前](../../../ado/reference/ado-api/name-property-ado.md)それぞれの名前を表示するプロパティ**フィールド**と**プロパティ**オブジェクト。  
+# <a name="attributes-and-name-properties-example-vc"></a>Attributes と Name プロパティの例 (VC + +)
+この例では、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、および[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトの[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティの値を表示します。 [Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティを使用して、各**フィールド**と**プロパティ**オブジェクトの名前を表示します。  
   
 ```  
 // BeginAttributesCpp.cpp  
@@ -180,9 +180,9 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Name プロパティ (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - UTC time
 - GETUTCDATE function
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cfa01a936ad4c788c48033512d165934775cebdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfef4d05eb95afe0c8ede44df061f95eeb221c41
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080912"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297578"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (SSIS 式)
 

@@ -1,5 +1,5 @@
 ---
-title: 新規または既存のレポートをレポート プロジェクトに追加する (SSRS) | Microsoft Docs
+title: 新規または既存のレポートをレポート プロジェクトに追加する | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d9afb31b4c2793e7196fda36280fed3d590a32cf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576801"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77077893"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>新規または既存のレポートをレポート プロジェクトに追加する (SSRS)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、レポート ウィザードを使用するか、新しい空のレポートをプロジェクトに追加することによって、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割された新しいレポートを追加できます。 既存のレポートを追加することもできます。 レポートを追加すると、そのレポートの名前が、プロジェクトの **[レポート]** フォルダーに表示されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "65576801"
   
 1.  ソリューション エクスプローラーで [レポート] フォルダーを右クリックし、 **[新しいレポートの追加]** をクリックします。 **[レポート ウィザード]** ダイアログ ボックスが表示されます。  
   
-     ウィザードの手順に従うことで、データ ソースを作成したり、クエリでデータセットを作成したり、グループを定義したり、レイアウトを指定したり、レポートを作成したりできます。 次のような手順で構成されます。  
+     ウィザードの手順に従うことで、データ ソースを作成したり、クエリでデータセットを作成したり、グループを定義したり、レイアウトを指定したり、レポートを作成したりできます。 これには次の手順が含まれます。  
   
     -   **データ ソースの選択** レポート作成の最初の手順は、データ ソースを定義することです。 レポート ウィザードにより、レポート プロジェクト内のすべての共有データ ソースが表示されます。同時に、新しいデータ ソースを作成するオプションも表示されます。  
   

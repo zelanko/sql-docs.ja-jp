@@ -17,14 +17,14 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e917a042fc760170b6dabe12bb90c20e2a38bc7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967545"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71287873"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
 
@@ -45,7 +45,7 @@ ms.locfileid: "67967545"
   
 -   式内の変数は、スクリプト タスクおよびスクリプト コンポーネントが実行するスクリプトによって更新できます。  
   
- 式は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式言語を使用して作成します。 式では、式言語で提供される演算子、関数、および型キャストと組み合わせて、システム変数またはユーザー定義変数を使用できます。  
+ 式は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式言語を使用して作成します。 式では、式言語で提供される演算子、関数、および型キャストと組み合わせて、システム変数またはユーザー定義変数を使用できます。  
   
 > [!NOTE]  
 >  ユーザー定義変数およびシステム変数の名前では、大文字と小文字が区別されます。  
@@ -140,11 +140,11 @@ ms.locfileid: "67967545"
   
  Rows Processed:  
   
- NASDAQ:7058  
+ NASDAQ: 7058  
   
- NYSE:3528  
+ NYSE: 3528  
   
- AMEX:1102  
+ AMEX: 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>プロセス実行タスクの Executable プロパティ用のプロパティ式  
  次のプロパティ式を使用すると、プロセス実行タスクの Executable プロパティを設定できます。 この式では、文字列リテラル、演算子、および関数の組み合わせを使用しています。 この式では、DATEPART 関数、GETDATE 関数、および条件演算子を使用しています。  

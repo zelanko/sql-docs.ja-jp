@@ -1,5 +1,6 @@
 ---
 title: Reporting Services のプロパティ | Microsoft Docs
+description: レポート サーバーは、グローバルなシステム プロパティと個々のアイテム プロパティを定義します。 アプリケーションでは、システム プロパティとアイテム プロパティにユーザー定義のプロパティを追加できます。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36a105d3220755dd03ff05a50dd403d4bac25d3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7240bf3e987c5817489035d94879817f5f39569b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62703850"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509713"
 ---
 # <a name="reporting-services-properties"></a>Reporting Services のプロパティ
   レポート サーバーは、レポート サーバーにグローバルなシステム プロパティのセット、およびレポート サーバー データベースに格納された個別のアイテムに関連付けられているアイテム プロパティのセットを定義します。 レポート サーバーによって定義されたプロパティは削除できず、場合によっては読み取り専用です。 アプリケーションでシステム プロパティとアイテム プロパティを拡張するには、ユーザー定義プロパティをシステム プロパティとアイテム プロパティに追加します。  
   
  次の Web サービス メソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のプロパティを取得および設定します。  
   
-|方法|操作|  
+|Method|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.GetProperties%2A>|レポート サーバー データベースのアイテムに関する 1 つ以上のプロパティ値を返します。|  
 |<xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>|1 つ以上のシステム プロパティを返します。|  
@@ -38,7 +39,7 @@ ms.locfileid: "62703850"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[レポート サーバー アイテムのプロパティ](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-item-properties.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のアイテム固有のプロパティについて説明します。|  
 |[レポート サーバーのシステム プロパティ](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のシステム固有のプロパティについて説明します。|  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server インストールにおけるセキュリティの考慮事項 | Microsoft Docs
+title: セキュリティに関する考慮事項
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -25,19 +25,19 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 302b29901b9f20c70799704bdf75938270900173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11b2a788561af2281a7f0967972e63358c4ab82
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019807"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75258964"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server インストールにおけるセキュリティの考慮事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
  セキュリティは、あらゆる製品、あらゆる企業にとって重要です。 単純なベスト プラクティスに従うことで、多くのセキュリティの脆弱性を避けることができます。 この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする前と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした後の両方で考慮する必要があるセキュリティのベスト プラクティスについて説明します。 特定の機能のセキュリティについては、その機能の参照記事で説明しています。  
   
-## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>をインストールする前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  をインストールする前に  
  サーバー環境をセットアップする場合、次のベスト プラクティスに従ってください。  
   
 -   [物理的なセキュリティの強化](#physical_security)  
@@ -52,7 +52,7 @@ ms.locfileid: "68019807"
   
 -   [ドメイン コントローラーへの SQL Server のインストール](../../sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Enhance Physical Security  
+###  <a name="enhance-physical-security"></a><a name="physical_security"></a> Enhance Physical Security  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティは、物理的な分離と論理的な分離に基づいています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールの物理的なセキュリティを強化するには、次のタスクを実行します。  
   
 -   無許可の人が入れない部屋にサーバーを配置します。  
@@ -63,7 +63,7 @@ ms.locfileid: "68019807"
   
 -   すべてのデータを定期的にバックアップし、バックアップを安全な場所に保存します。  
   
-###  <a name="firewalls"></a> Use Firewalls  
+###  <a name="use-firewalls"></a><a name="firewalls"></a> Use Firewalls  
  ファイアウォールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールのセキュリティを確保するために重要です。 次のガイドラインに従った場合、ファイアウォールが最も効果的になります。  
   
 -   ファイアウォールをサーバーとインターネットの間に配置します。 ファイアウォールを有効にします。 ファイアウォールがオフになっている場合はオンにします。 ファイアウォールがオンになっている場合は、オフにしないでください。  
@@ -78,12 +78,12 @@ ms.locfileid: "68019807"
   
  Windows ファイアウォールの既定の設定に関する詳細と、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。  
   
-###  <a name="isolated_services"></a> Isolate Services  
+###  <a name="isolate-services"></a><a name="isolated_services"></a> Isolate Services  
  サービスを分離すると、いずれかのサービスが停止した場合でも、その他のサービスに影響が及ぶのを防ぐことができます。 サービスを分離する場合は、次のガイドラインを考慮してください。  
   
 -   各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを個別の Windows アカウントで実行します。 可能な場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスごとに権限の低い個別の Windows またはローカル ユーザー アカウントを使用します。 詳細については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
-###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
+###  <a name="configure-a-secure-file-system"></a><a name="sa_with_least_privileges"></a> Configure a Secure File System  
  正しいファイル システムを使用することで、セキュリティは向上します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールには、次の作業を行う必要があります。  
   
 -   NTFS ファイル システム (NTFS) を使用します。 NTFS は、FAT ファイル システムに比べて安定性と復旧性が高いことから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールのファイル システムとして推奨されています。 また、NTFS では、ファイルとディレクトリのアクセス制御リスト (ACL) や暗号化ファイル システム (EFS) によるファイル暗号化などのセキュリティ オプションを使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に NTFS が検出されると、レジストリ キーとファイルに対して適切な ACL が設定されます。 これらの権限は変更しないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のリリースでは、FAT ファイル システムを使用するコンピューターへのインストールはサポートされない可能性があります。  
@@ -93,7 +93,7 @@ ms.locfileid: "68019807"
   
 -   重要なデータ ファイルには、RAID (Redundant Array of Independent Disks) を使用します。  
   
-###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
+###  <a name="disable-netbios-and-server-message-block"></a><a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  境界領域ネットワーク内のサーバーでは、NetBIOS とサーバー メッセージ ブロック (SMB) を含め、不要なプロトコルをすべて無効にする必要があります。  
   
  NetBIOS には次のポートを使用します。  
@@ -112,7 +112,7 @@ ms.locfileid: "68019807"
   
  Web サーバーとドメイン ネーム システム (DNS) サーバーは NetBIOS と SMB をいずれも必要としません。 これらのサーバーでは、両方のプロトコルを無効にしてユーザー列挙の脅威を緩和します。  
   
-###  <a name="Install_DC"></a> ドメイン コントローラーへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
+###  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="Install_DC"></a> ドメイン コントローラーへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
  セキュリティ上の理由から、ドメイン コントローラーには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしないことをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にインストールが中止されることはありませんが、次の制限事項が適用されます。  
   
 -   ローカル サービス アカウントを使用して、ドメイン コントローラー上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行することはできません。  
@@ -125,7 +125,7 @@ ms.locfileid: "68019807"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、読み取り専用ドメイン コントローラーにセキュリティ グループを作成したり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを準備したりすることはできません。 この場合、セットアップは失敗します。  
   
-## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>のインストール中またはインストール後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="during-or-after-installation-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  のインストール中またはインストール後  
  インストール後にアカウントと認証モードに関する次のベスト プラクティスに従うと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールのセキュリティを強化できます。  
   
  **サービス アカウント**  

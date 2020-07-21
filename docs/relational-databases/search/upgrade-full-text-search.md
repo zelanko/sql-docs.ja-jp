@@ -16,19 +16,19 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e69d3d2d73a53f6bdd8a3fe7282c1e9ad65b5773
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 841c5bd53f2498a6e057495e3953744784beb211
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095295"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629041"
 ---
 # <a name="upgrade-full-text-search"></a>フルテキスト検索のアップグレード
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのフルテキスト検索のアップグレードは、セットアップ時のほか、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ファイルとフルテキスト カタログのアタッチ時、復元時、またはデータベース コピー ウィザードによるコピー時に行われます。  
   
   
-##  <a name="Upgrade_Server"></a> サーバー インスタンスをアップグレードする  
+##  <a name="upgrade-a-server-instance"></a><a name="Upgrade_Server"></a> サーバー インスタンスをアップグレードする  
  インプレース アップグレードでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の旧バージョンとサイド バイ サイドでセットアップされ、データが移行されます。 旧バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にフルテキスト検索がインストールされている場合、新しいバージョンのフルテキスト検索が自動的にインストールされます。 サイド バイ サイド インストールとは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスごとに次のコンポーネントが存在することを意味します。  
   
  ワード ブレーカー、ステミング機能、フィルター  
@@ -43,7 +43,7 @@ ms.locfileid: "68095295"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]では、各フルテキスト インデックスは、ファイル グループに属するフルテキスト カタログに存在し、物理パスを持ち、データベース ファイルとして扱われます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、フルテキスト カタログは、フルテキスト インデックスのグループを含んだ論理的 (仮想) オブジェクトです。 したがって、新しいフルテキスト カタログは、物理パスを持つデータベース ファイルとしては扱われません。 ただし、データ ファイルを含むフルテキスト カタログのアップグレード時に、新しいファイル グループが同じディスク上に作成されます。 これにより、アップグレード後も以前のディスク I/O 動作が維持されます。 ルート パスが存在する場合、そのカタログのフルテキスト インデックスは、すべて新しいファイル グループに配置されます。 前のフルテキスト カタログのパスが無効の場合、フルテキスト インデックスは、ベース テーブルと同じファイル グループで保持されるか、パーティション テーブルの場合にはプライマリ ファイル グループで保持されます。  
   
   
-##  <a name="FT_Upgrade_Options"></a> フルテキスト アップグレード オプション  
+##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a> フルテキスト アップグレード オプション  
  サーバー インスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする場合、次のいずれかのフルテキスト アップグレード オプションをユーザー インターフェイスで選択できます。  
   
 **[インポート]**  
@@ -56,13 +56,13 @@ ms.locfileid: "68095295"
   
  フルテキスト インデックスのインポートによる影響については、後の「フルテキスト アップグレード オプションの選択に関する注意点」を参照してください。  
   
- **Rebuild**  
+ **リビルド**  
  フルテキスト カタログは、導入された新しい拡張機能であるワード ブレーカーを使用して再構築されます。 インデックスの再構築には時間がかかり、アップグレード後に膨大な量の CPU とメモリが必要になる可能性があります。  
   
  **リセット**  
  フルテキスト カタログがリセットされます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からのアップグレード時には、フルテキスト カタログ ファイルは削除されますが、フルテキスト カタログのメタデータおよびフルテキスト インデックスは保持されます。 アップグレード後、すべてのフルテキスト インデックスで変更の追跡は無効化されており、クロールは自動的には開始されません。 アップグレードの完了後、手動で完全作成を実行するまで、カタログは空のままになります。  
   
-##  <a name="Choosing_Upgade_Option"></a> フルテキスト アップグレード オプションの選択に関する注意点  
+##  <a name="considerations-for-choosing-a-full-text-upgrade-option"></a><a name="Choosing_Upgade_Option"></a> フルテキスト アップグレード オプションの選択に関する注意点  
  アップグレードのためにアップグレード オプションを選択する際は、次の点を考慮してください。  
   
 -   クエリ結果の一貫性が必要かどうか。  
@@ -114,7 +114,7 @@ ms.locfileid: "68095295"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からインポートされたフルテキスト カタログは、元のファイル グループ内のデータベース ファイルのままです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] におけるフルテキスト カタログのバックアップ プロセスが引き続き適用されます。ただし、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]には MSFTESQL サービスが存在しません。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] におけるプロセスの詳細については、SQL Server 2005 オンライン ブックの「 [フルテキスト カタログのバックアップと復元](https://go.microsoft.com/fwlink/?LinkId=209154) 」を参照してください。  
   
-##  <a name="Upgrade_Db"></a> データベースをアップグレードする際のフルテキスト インデックスの移行: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> データベースをアップグレードする際のフルテキスト インデックスの移行: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ファイルおよびフルテキスト カタログは、アタッチ、復元、またはデータベース コピー ウィザードを使用して、既存の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー インスタンスにアップグレードできます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト インデックスがある場合は、インポート、リセット、または再構築されます。 **upgrade_option** サーバー プロパティは、これらのデータベース アップグレード時にサーバー インスタンスで使用されるフルテキスト アップグレード オプションを制御します。  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のデータベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアタッチ、復元、またはコピーした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 なお、アップグレード オプションがインポートに設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。  
@@ -125,7 +125,7 @@ ms.locfileid: "68095295"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **[サーバーのプロパティ]** ダイアログ ボックスの **[フルテキスト アップグレード オプション]** を使用します。 詳細については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
   
-##  <a name="Considerations_for_Restore"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト カタログを復元する際の注意点: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト カタログを復元する際の注意点: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースのフルテキスト データを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするには、データベースの完全バックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元する方法があります。  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] フルテキスト カタログのインポート中に、データベースとカタログ ファイルをバックアップおよび復元できます。 次に示すように、動作は [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同じです。  
@@ -168,7 +168,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a> SQL Server 2005 データベースのアタッチ: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="attaching-a-sql-server-2005-database-to-sscurrent"></a><a name="Attaching_2005_ft_catalogs"></a> SQL Server 2005 データベースのアタッチ: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、フルテキスト カタログは、フルテキスト インデックスのグループを指す論理的概念です。 フルテキスト カタログは、ファイル グループに属さない仮想オブジェクトです。 しかし、フルテキスト カタログ ファイルを含む [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー インスタンスにアタッチする場合、カタログ ファイルは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同様に他のデータベース ファイルと一緒に以前の場所からアタッチされます。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアタッチされた各フルテキスト カタログの状態は、データベースが [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からデタッチされたときと同じです。 フルテキスト インデックスの作成がデタッチ操作により中断されていた場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でその作成が再開され、このフルテキスト インデックスがフルテキスト検索に使用できるようになります。  
@@ -177,7 +177,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  データベースのデタッチとアタッチの詳細については、「[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)」、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」、「[sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)」、「[sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索の概要](../../relational-databases/search/get-started-with-full-text-search.md)   
  [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)  

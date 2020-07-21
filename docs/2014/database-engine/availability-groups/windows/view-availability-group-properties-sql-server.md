@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7d1f57a9bd29b6c65160ec9a163bc77dfca48b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62813253"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936223"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>可用性グループのプロパティの表示 (SQL Server)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して、AlwaysOn 可用性グループの可用性グループのプロパティを表示する方法について説明します。  
   
 
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性グループのプロパティを表示および変更するには**  
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
@@ -33,13 +32,13 @@ ms.locfileid: "62813253"
   
 3.  表示するプロパティを持つ可用性グループを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[可用性グループのプロパティ]** ダイアログ ボックスで、 **[全般]** および **[バックアップの設定]** ページを使用して、選択された可用性グループのプロパティを表示し、必要に応じて変更します。 詳細については、次を参照してください。[可用性グループのプロパティと、新しい可用性グループ&#40;[全般] ページ&#41;](availability-group-properties-new-availability-group-general-page.md)と[可用性グループのプロパティ。新しい可用性グループ&#40;の設定 ページをバックアップ&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)します。  
+4.  **[可用性グループのプロパティ]** ダイアログ ボックスで、**[全般]** および **[バックアップの設定]** ページを使用して、選択された可用性グループのプロパティを表示し、必要に応じて変更します。 詳細については、「[[可用性グループのプロパティ]: [新しい可用性グループ] &#40;[全般] ページ&#41;](availability-group-properties-new-availability-group-general-page.md)」、「[[可用性グループのプロパティ]: [新しい可用性グループ] &#40;[バックアップの設定] ページ&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)」を参照してください。  
   
      **[権限]** ページを使用して、可用性グループに関連付けられている現在のログイン、ロール、および明示的な権限を表示できます。 詳細については、「 [[権限] ページまたは [セキュリティ保護可能なリソース] ページ](../../../relational-databases/security/permissions-or-securables-page.md)」を参照してください。  
   
 
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **可用性グループのプロパティおよび状態を表示するには**  
   
  サーバー インスタンスが可用性レプリカをホストしている可用性グループのプロパティおよび状態を確認するには、次のビューを使用します。  
@@ -61,14 +60,14 @@ ms.locfileid: "62813253"
   
 
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **可用性グループに関する情報を表示するには**  
   
 -   [可用性レプリカのプロパティの表示 &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
 -   [可用性グループ リスナーのプロパティの表示 &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
--   [AlwaysOn 可用性グループの運用上の問題の AlwaysOn ポリシー &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
+-   [AlwaysOn 可用性グループ &#40;SQL Server での運用上の問題のための AlwaysOn ポリシー&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
 -   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
@@ -92,15 +91,15 @@ ms.locfileid: "62813253"
   
 -   [可用性グループの削除 &#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  
   
- **可用性グループで手動フェールオーバーを行うには**  
+ **可用性グループを手動でフェールオーバーするには**  
   
 -   [可用性グループの計画的な手動フェールオーバーの実行 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)  
   
--   [可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+-   [可用性グループ &#40;SQL Server の強制手動フェールオーバーを実行&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
 
   
-## <a name="see-also"></a>関連項目  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [可用性グループの監視&#40;TRANSACT-SQL&#41; ](monitor-availability-groups-transact-sql.md) [AlwaysOn 運用上の問題のポリシー可用性グループ&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
+## <a name="see-also"></a>参照  
+ &#40;&#41;AlwaysOn 可用性グループ[での運用上の問題に対する transact-sql &#40;AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md) SQL Server&#41;SQL Server[可用性グループを監視](monitor-availability-groups-transact-sql.md)する[AlwaysOn 可用性グループ &#40;の概要](overview-of-always-on-availability-groups-sql-server.md)&#41; 
   
   

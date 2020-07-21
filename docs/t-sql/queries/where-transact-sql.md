@@ -22,15 +22,15 @@ ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5ca209108c9f462368ef6fe5bbc38d9557b3599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b27eaa16660058c37cac34173787c7ad51341c87
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948214"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011348"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   クエリによって返される行の検索条件を指定します。  
   
@@ -38,14 +38,14 @@ ms.locfileid: "67948214"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 [ WHERE <search_condition> ]  
 ```  
   
 ## <a name="arguments"></a>引数  
 \< *search_condition* > 返される行が満たす条件を定義します。 検索条件に含まれる述語の数に制限はありません。 検索条件および述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  以下の例は、`WHERE` 句でいくつかの一般的な検索条件を使用する方法を示しています。  
   
 ### <a name="a-finding-a-row-by-using-a-simple-equality"></a>A. 単純な等式を使用して行を検索する  

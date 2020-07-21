@@ -1,5 +1,5 @@
 ---
-title: 属性の順序の変更 | Microsoft Docs
+title: 属性の順序の変更
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,31 +10,31 @@ ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2b95e3200a797ccd078731618ea9da643afacaad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 345b397026cbf4fe4ed993ecd9f8eb349d6bbef5
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814019"
 ---
 # <a name="change-the-order-of-attributes"></a>属性の順序の変更
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の順序を変更できます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>属性の順序を変更するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデルの管理]** ページでグリッドからモデルを選択し、 **[エンティティ]** をクリックします。  
+2.  [**モデルの管理**] ページで、グリッドからモデルを選択し、[**エンティティ**] をクリックします。  
   
 3.  **[エンティティの管理]** ページで、属性を作成するエンティティの行を選択します。  
   

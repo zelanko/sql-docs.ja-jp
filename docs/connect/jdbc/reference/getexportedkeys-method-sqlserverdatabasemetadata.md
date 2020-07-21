@@ -16,10 +16,10 @@ ms.assetid: 26888e61-b243-4a1b-922c-c0a451dcff4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e89d65955c5637bcd566d48b6e54bcae50397d88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983303"
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>getExportedKeys メソッド (SQLServerDatabaseMetaData)
@@ -55,12 +55,12 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getExportedKeys メソッドは、getExportedKeys メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getExportedKeys メソッドは、java.sql.DatabaseMetaData インターフェイスの getExportedKeys メソッドで指定されています。  
   
  getExportedKeys メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|主キー テーブルを含むカタログの名前です。|  
 |PKTABLE_SCHEM|**String**|主キー テーブルのスキーマの名前です。|  

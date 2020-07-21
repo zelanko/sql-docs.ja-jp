@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 753489fe50b6d36f2ac6a6ef1167ecf8f1a6d976
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0184bc84a2a633b5c5b702a8f445615113a0614b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019433"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299992"
 ---
 # <a name="installing-and-configuring"></a>インストールと構成
-Visual FoxPro ODBC ドライバーをダウンロードするには、次を参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)します。  
+Visual FoxPro ODBC ドライバーをダウンロードするには、 [Visual FOXPRO Odbc ドライバーのダウンロードサイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。  
   
- このセクションには、インストールして、Microsoft Visual FoxPro ODBC ドライバーを構成する際に、次のトピックが含まれています。  
+ ここでは、Microsoft Visual FoxPro ODBC ドライバーをインストールして構成する際に役立つ次のトピックについて説明します。  
   
 -   [システム要件](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)  
   
@@ -37,4 +37,4 @@ Visual FoxPro ODBC ドライバーをダウンロードするには、次を参�
   
 -   [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- ドライバーをダウンロードするには、次を参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)します。
+ ドライバーをダウンロードするには、 [Visual FOXPRO ODBC ドライバーのダウンロードサイト](https://go.microsoft.com/fwlink/?LinkId=121318)を参照してください。

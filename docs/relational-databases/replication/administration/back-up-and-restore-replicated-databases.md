@@ -1,5 +1,6 @@
 ---
 title: レプリケートされたデータベースのバックアップと復元 | Microsoft Docs
+description: SQL Server のレプリケーションの種類ごとのバックアップと復元の方法に関する概要情報と追加情報へのリンクを確認します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,23 +26,23 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 101c272e51a4a4fdab4456f87aac297c2ac56476
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 92b64522b9a93f4f58d269c5cfb429478ae660d6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768821"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160040"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>レプリケートされたデータベースのバックアップと復元
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   レプリケートされたデータベースでは、データのバックアップと復元に対する特別な注意が必要です。 このトピックでは、それぞれの種類のレプリケーションのバックアップと復元の方法に関する概要、および詳細情報へのリンクを提供します。  
   
  レプリケーションでは、レプリケートされたデータベースをバックアップ作成元のサーバーおよびデータベースに復元する操作がサポートされます。 レプリケートされたデータベースのバックアップを別のサーバーまたはデータベースに復元する場合は、レプリケーションの設定は保存できません。 この場合、バックアップが復元された後で、すべてのパブリケーションとサブスクリプションを再作成する必要があります。  
   
 > [!NOTE]  
->  ログ配布が使用されている場合は、レプリケートされたデータベースをスタンバイ サーバーに復元できます。 詳細については、「[ログ配布とレプリケーション &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)」 を参照してください。  
+>  ログ配布が使用されている場合は、レプリケートされたデータベースをスタンバイ サーバーに復元できます。 詳細については、[ログ配布とレプリケーション &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md) を参照してください。  
   
  レプリケートされたデータベースと関連付けられているシステム データベースは、定期的にバックアップする必要があります。 次のデータベースをバックアップします。  
   

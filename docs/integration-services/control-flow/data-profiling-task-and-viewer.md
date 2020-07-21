@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 854a6ed0f2ef688643cb7b452696daf6257df89b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bd42f62e51e44e218c39d0907cb16db1ef502c79
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003645"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298325"
 ---
 # <a name="data-profiling-task-and-viewer"></a>データ プロファイル タスクとビューアー
 
@@ -70,7 +70,7 @@ ms.locfileid: "68003645"
  **詳細:** [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>データ プロファイル ワークフローへの条件ロジックの追加  
- データ プロファイル タスクには、プロファイルの出力に基づいてこのタスクを下流のタスクに接続するための条件ロジックを使用できるようにする機能が組み込まれていません。 ただし、スクリプト タスクで少量のプログラミングを行って、このロジックを簡単に追加することができます。 たとえば、スクリプト タスクでは、データ プロファイル タスクの出力ファイルに対して XPath クエリを実行できます。 このクエリによって、特定の列の NULL 値の比率が特定のしきい値を超えていないかどうかを判断できます。 比率がしきい値を超えている場合は、パッケージを中断し、ソース データの問題を解決してから続行することができます。 詳細については、「 [パッケージ ワークフローでデータ プロファイル タスクを使用する](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)」を参照してください。  
+ データ プロファイル タスクには、プロファイルの出力に基づいてこのタスクを下流のタスクに接続するための条件ロジックを使用できるようにする機能が組み込まれていません。 ただし、スクリプト タスクで少量のプログラミングを行って、このロジックを簡単に追加することができます。 たとえば、スクリプト タスクでは、データ プロファイル タスクの出力ファイルに対して XPath クエリを実行できます。 このクエリによって、特定の列の NULL 値の比率が特定のしきい値を超えていないかどうかを判断できます。 比率がしきい値を超えている場合は、パッケージを中断し、ソース データの問題を解決してから続行することができます。 詳細については、「 [パッケージ ワークフローでデータ プロファイル タスクを使用する](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)」をご覧ください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [Data Profiler スキーマ](https://go.microsoft.com/fwlink/?LinkId=251524)  

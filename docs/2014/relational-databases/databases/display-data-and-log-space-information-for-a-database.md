@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1beb8cdedbc2b72eadeeb350ee1c3b6d16218205
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970054"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>データベースのデータ領域とログ領域情報の表示
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースのデータ領域およびログ領域情報を表示する方法について説明します。  
@@ -35,32 +34,32 @@ ms.locfileid: "62917345"
   
      [Security](#Security)  
   
--   **データを表示し、ログ、データベースの領域情報を使用します。**  
+-   **以下を使用してデータベースのデータ領域とログ領域情報を表示するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  **sp_spaceused** の実行権限は、 **public** ロールに与えられています。 **@updateusage** パラメーターを指定できるのは、**db_owner** 固定データベース ロールのメンバーだけです。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-display-data-and-log-space-information-for-a-database"></a>データベースのデータ領域とログ領域情報を表示するには  
   
-1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、そのインスタンスを展開します。  
+1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  **[データベース]** を展開します。  
   
-3.  データベースを右クリックし、 **[レポート]** 、 **[標準レポート]** の順にポイントして、 **[ディスク使用量]** をクリックします。  
+3.  データベースを右クリックし、 **[レポート]**、 **[標準レポート]** の順にポイントして、 **[ディスク使用量]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-spspaceused"></a>sp_spaceused を使用してデータベースのデータ領域とログ領域情報を表示するには  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-using-sp_spaceused"></a>sp_spaceused を使用してデータベースのデータ領域とログ領域情報を表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -75,7 +74,7 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabasefiles"></a>querying sys.database_files をクエリすることによってデータベースのデータ領域とログ領域情報を表示するには  
+#### <a name="to-display-data-and-log-space-information-for-a-database-by-querying-sysdatabase_files"></a>querying sys.database_files をクエリすることによってデータベースのデータ領域とログ領域情報を表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -94,9 +93,9 @@ GO
   
 ## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
- [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
- [データベースに対するデータ ファイルまたはログ ファイルの追加](add-data-or-log-files-to-a-database.md)   
+ [database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [sp_spaceused &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   
+ [データファイルまたはログファイルをデータベースに追加する](add-data-or-log-files-to-a-database.md)   
  [データまたはログ ファイルのデータベースからの削除](delete-data-or-log-files-from-a-database.md)  
   
   

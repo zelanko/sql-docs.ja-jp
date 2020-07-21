@@ -1,7 +1,7 @@
 ---
-title: Linux で読み取りスケールの SQL Server 可用性グループを構成する
-titleSuffix: SQL Server
+title: 読み取りスケール可用性グループを構成する (SQL Server on Linux)
 description: Linux で読み取りスケールのワークロード用に SQL Server Always On 可用性グループ (AG) を構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,16 +9,16 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 332160202b3972339c2d9c668f31e373443d5217
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027260"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892290"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux で読み取りスケールの SQL Server 可用性グループを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Linux で読み取りスケールのワークロード用に SQL Server Always On 可用性グループ (AG) を構成できます。 AG には 2 種類のアーキテクチャがあります。 高可用性向けのアーキテクチャでは、クラスター マネージャーを使用して、向上した事業継続性が提供されます。 また、このアーキテクチャには、読み取りスケールのレプリカを含めることもできます。 高可用性アーキテクチャを作成するには、「[Linux で高可用性を実現するために SQL Server の Always On 可用性グループを構成する](sql-server-linux-availability-group-configure-ha.md)」をご覧ください。 その他のアーキテクチャでは、読み取りスケール ワークロードのみをサポートします。 この記事では、読み取りスケール ワークロードの場合で、クラスター マネージャーがない AG を作成する方法について説明します。 このアーキテクチャは、読み取りスケールのみを提供します。 高可用性は提供されません。
 
@@ -80,7 +80,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [分散型可用性グループを構成する](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
 * [可用性グループの詳細](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

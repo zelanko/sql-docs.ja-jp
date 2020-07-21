@@ -16,10 +16,10 @@ ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38e5a31ccaf493a8800f0e15abd1c21424db07c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954818"
 ---
 # <a name="executequery-method-javalangstring"></a>executeQuery (java.lang.String) メソッド
@@ -45,7 +45,7 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この executeQuery メソッドは、java.sql.Statement インターフェイスの executeQuery メソッドで規定されています。  
   
  このメソッドは、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスで見つかる [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドをオーバーライドします。  

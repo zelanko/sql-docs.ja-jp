@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fb8fde9c20fdab07d7fa77644a7af7463ec6401d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f0ebc393c48562c5fcd783b4c056aa218e8ffaa
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904255"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298477"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 接続マネージャー
 
@@ -40,7 +40,7 @@ ms.locfileid: "67904255"
   
 -   単一のアプリケーション サーバーのホストとシステム数を指定するか、負荷分散されたサーバー グループのメッセージ サーバー、グループ、および SID を指定します。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW のコンポーネントに対する RFC 関数呼び出しのカスタム ログを有効にします (このログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。RFC 関数呼び出しのログを有効にするには、RFC の各関数呼び出しの前後に作成されるログ ファイルを格納するディレクトリを指定します (このログ機能は、XML 形式で多くのログ ファイルを作成します。 これらのログ ファイルには転送されるデータのすべての行も含まれるため、大量のディスク領域を消費する可能性があります)。ログ ディレクトリを選択しないと、ログ記録は有効になりません。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW のコンポーネントに対する RFC 関数呼び出しのカスタム ログを有効にします (このログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。RFC 関数呼び出しのログを有効にするには、RFC の各関数呼び出しの前後に作成されるログ ファイルを格納するディレクトリを指定します (このログ機能は、XML 形式で多くのログ ファイルを作成します。 これらのログ ファイルには転送されるデータのすべての行も含まれるため、大量のディスク領域を消費する可能性があります)。ログ ディレクトリを選択しないと、ログ記録は有効になりません。  
   
     > [!IMPORTANT]  
     >  転送されるデータに機密情報が含まれている場合、ログ ファイルには機密情報も含まれることになります。  
@@ -72,7 +72,7 @@ ms.locfileid: "67904255"
   
     -   [SAP BW 接続マネージャー] をダブルクリックします。  
   
-         \- または -  
+         または  
   
     -   [SAP BW 接続マネージャー] を右クリックし、 **[編集]** を選択します。  
   
@@ -84,10 +84,10 @@ ms.locfileid: "67904255"
  **クライアント**  
  システムのクライアント数を指定します。  
   
- **言語**  
+ **Language**  
  システムが使用する言語を指定します。 たとえば、英語の場合は、 **[EN]** を指定します。  
   
- **User name**  
+ **ユーザー名**  
  システムへの接続に使用するユーザー名を指定します。  
   
  **パスワード**  
@@ -98,7 +98,7 @@ ms.locfileid: "67904255"
   
  負荷分散されたサーバーのグループに接続するには、 **[負荷分散を使用する]** オプションを使用します。  
   
- **ホスト**  
+ **Host**  
  単一のアプリケーション サーバーに接続する場合、ホスト名を指定します。  
   
 > [!NOTE]  
@@ -121,7 +121,7 @@ ms.locfileid: "67904255"
 > [!NOTE]  
 >  このオプションは、 **[負荷分散を使用する]** オプションを選択している場合にのみ使用できます。  
   
- **[グループ]**  
+ **グループ**  
  負荷分散されたサーバーのグループに接続する場合は、サーバー グループの名前を指定します。  
   
 > [!NOTE]  

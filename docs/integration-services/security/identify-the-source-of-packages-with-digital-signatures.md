@@ -16,14 +16,14 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 978e85814e403ea6fe0a510b1791b0b4d1cf9bf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125310"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295695"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>デジタル署名を使用してパッケージのソースを特定する
 
@@ -40,14 +40,14 @@ ms.locfileid: "68125310"
   
 -   デザイン時にすべてのパッケージのデジタル署名を確認してからパッケージを読み込むには、 **で** [パッケージの読み込み時にデジタル署名を確認する] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]チェック ボックスをオンにします。 このオプションは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのすべてのパッケージに対するグローバルな設定です。
   
--   個別のパッケージのデジタル署名を確認するには、 **dtexec** ユーティリティを使用してパッケージを実行するときに **/VerifyS[igned]** オプションを指定します。 詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
+-   個別のパッケージのデジタル署名を確認するには、 **dtexec** ユーティリティを使用してパッケージを実行するときに **/VerifyS[igned]** オプションを指定します。 詳細については、「[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
 ## <a name="set-a-registry-value-to-check-package-signature"></a>パッケージの署名を確認するレジストリ値を設定する  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、オプションのレジストリ値である **BlockedSignatureStates**もサポートされています。このレジストリ値を使用すると、署名付きパッケージと署名がないパッケージの読み込みに関する組織のポリシーを管理できます。 このレジストリ値により、パッケージが署名されていない場合、または無効な署名や信頼できない署名が含まれている場合に、パッケージが読み込まれないようにすることができます。 このレジストリ値を設定する方法の詳細については、「 [レジストリ値を設定して署名ポリシーを実装する](#registry)」を参照してください。  
   
 > **注:** オプションの **BlockedSignatureStates** レジストリ値では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** コマンド ラインで設定されたデジタル署名オプションよりも制限が厳しい設定を指定できます。 この場合、制限が厳しい方のレジストリ設定が他の設定をオーバーライドします。  
 
-## <a name="registry"></a> レジストリ値を設定して署名ポリシーを実装する
+## <a name="implement-a-signing-policy-by-setting-a-registry-value"></a><a name="registry"></a> レジストリ値を設定して署名ポリシーを実装する
   オプションのレジストリ値を使用して、署名付きパッケージまたは署名がないパッケージを読み込む際の組織のポリシーを管理できます。 このレジストリ キーを使用する場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が実行されるコンピューターおよびポリシーを適用するコンピューターごとにこのレジストリ値を作成する必要があります。 レジストリ値が設定されると、パッケージを読み込む前に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって署名が確認されます。  
   
  このトピックの手順では、オプションの **BlockedSignatureStates** DWORD 値をレジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS に追加する方法について説明します。 **BlockedSignatureStates** のデータ値は、署名が信頼できない場合、署名が無効な場合、または署名がない場合に、そのパッケージをブロックするかどうかを決定します。 パッケージの署名に使用される署名のステータスについて、 **BlockedSignatureStates** レジストリ値では以下の定義が適用されます。  
@@ -62,7 +62,7 @@ ms.locfileid: "68125310"
   
  次の表に、DWORD データの有効な値、およびそれらに関連付けられたポリシーを示します。  
   
-|[値]|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0|管理制限はありません。|  
 |1|署名が無効なパッケージをブロックします。<br /><br /> この設定では、署名がないパッケージはブロックしません。|  
@@ -92,7 +92,7 @@ ms.locfileid: "68125310"
   
 9. **[ファイル]** メニューの **[終了]** をクリックします。    
 
-## <a name="cert"></a> デジタル証明書を使用してパッケージに署名する
+## <a name="sign-a-package-by-using-a-digital-certificate"></a><a name="cert"></a> デジタル証明書を使用してパッケージに署名する
   このトピックでは、デジタル証明書を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージに署名する方法について説明します。 デジタル署名を他の設定と共に使用して、有効でないパッケージの読み込みや実行を防ぐことができます。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージに署名する前に、次のタスクを実行する必要があります。  
@@ -137,7 +137,7 @@ ms.locfileid: "68125310"
   
      パッケージは署名されましたが、パッケージを読み込む前にデジタル署名を確認するように、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を構成する必要があります。  
 
-## <a name="signing_dialog"></a> [デジタル署名] ダイアログ ボックスの UI リファレンス
+## <a name="digital-signing-dialog-box-ui-reference"></a><a name="signing_dialog"></a> [デジタル署名] ダイアログ ボックスの UI リファレンス
   **[デジタル署名]** ダイアログ ボックスを使用すると、デジタル署名を使用してパッケージに署名したり、署名を削除したりできます。 **[デジタル署名]** ダイアログ ボックスは、 **の** [SSIS] **メニューの** [デジタル署名] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]から使用できます。  
   
  詳細については、「 [デジタル証明書を使用してパッケージに署名する](#cert)」を参照してください。  
@@ -146,7 +146,7 @@ ms.locfileid: "68125310"
  **[署名]**  
  **[証明書の選択]** ダイアログ ボックスを開き、使用する証明書を選択します。  
   
- **[削除]**  
+ **Remove**  
  デジタル署名を削除します。  
 
 ## <a name="see-also"></a>参照  

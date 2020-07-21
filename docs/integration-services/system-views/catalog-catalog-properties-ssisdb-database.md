@@ -8,33 +8,33 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a44e10601821638acde5997cce8e0b3fbf664076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ce65841f4834278a2bf27086f0c5222afe85988
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673495"
 ---
-# <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB データベース)
+# <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロパティを表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar (256)**|カタログ プロパティの名前。|  
 |property_value|**nvarchar (256)**|カタログ プロパティの値。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、各カタログ プロパティの行を表示します。
   
-|プロパティ名|[説明]|  
+|プロパティ名|説明|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|パッケージのサーバー全体の既定の実行モード - `Server` (0) または `Scale Out` (1)。 |
 |**ENCRYPTION_ALGORITHM**|機密データの暗号化に使用される暗号化アルゴリズムの種類。 サポートされている値は、`DES`、`TRIPLE_DES`、`TRIPLE_DES_3KEY`、`DESX`、`AES_128`、`AES_192`、および `AES_256` です。 注:プロパティを変更するには、カタログ データベースがシングル ユーザー モードである必要があります。|

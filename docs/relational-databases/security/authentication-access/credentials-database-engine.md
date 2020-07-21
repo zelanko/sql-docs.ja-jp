@@ -1,5 +1,6 @@
 ---
 title: 資格情報 (データベース エンジン) | Microsoft Docs
+description: SQL Server の資格情報について説明します。 SQL Server 外部のリソースへの接続に必要な認証情報について理解します。
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
@@ -22,16 +23,16 @@ ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a73728345ba30fefe755bbab53c185804080dc3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f6be70be8c7f2d03c55c5df53fd9f27a32b35fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094921"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005663"
 ---
 # <a name="credentials-database-engine"></a>資格情報 (データベース エンジン)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   資格情報は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]外部のリソースへの接続に必要な認証情報 (資格情報) を含むレコードです。 この情報は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって内部的に使用されます。 通常、資格情報には Windows ユーザー名とパスワードが含まれます。  
   

@@ -1,5 +1,5 @@
 ---
-title: アセンブリの削除 |Microsoft Docs
+title: アセンブリを削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45d02cbb57459a4c1c11330446021c32dc897353
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919626"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953823"
 ---
 # <a name="dropping-an-assembly"></a>アセンブリの削除
   CREATE ASSEMBLY ステートメントを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に登録された各アセンブリは、そのアセンブリで提供される機能が不要になれば削除できます。 アセンブリを削除すると、アセンブリと、デバッグ ファイルなどこれに関連するファイルがすべて、データベースから削除されます。 アセンブリを削除するには、DROP ASSEMBLY ステートメントを次の構文で使用します。  
@@ -43,7 +42,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   WITH SCHEMABINDING 句を使用してデータベースに作成した UDT の変数またはパラメーターを使用する関数、ストアド プロシージャ、またはトリガー。  
   
 ### <a name="finding-udt-dependencies"></a>UDT 依存関係の検出  
- 最初にすべての依存オブジェクトを削除してから、DROP TYPE ステートメントを実行する必要があります。 次[!INCLUDE[tsql](../../../includes/tsql-md.md)]クエリは、すべての列とで UDT を使用するパラメーターを検索、 **AdventureWorks**データベース。  
+ 最初にすべての依存オブジェクトを削除してから、DROP TYPE ステートメントを実行する必要があります。 次のクエリでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **AdventureWorks**データベースで UDT を使用するすべての列とパラメーターを検索します。  
   
 ```  
 USE Adventureworks;  
@@ -65,12 +64,12 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
   
 ## <a name="see-also"></a>参照  
  [CLR 統合アセンブリの管理](managing-clr-integration-assemblies.md)   
- [アセンブリの変更](altering-an-assembly.md)   
- [アセンブリを作成します。](creating-an-assembly.md)   
- [DROP AGGREGATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
- [DROP FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
+ [アセンブリを変更する](altering-an-assembly.md)   
+ [アセンブリの作成](creating-an-assembly.md)   
+ [Transact-sql&#41;の集計 &#40;削除](/sql/t-sql/statements/drop-aggregate-transact-sql)   
+ [DROP FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
+ [DROP PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   
- [ドロップ タイプ&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
+ [DROP TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
   
   

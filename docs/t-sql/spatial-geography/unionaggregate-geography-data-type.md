@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 17c5ec83217c072ada5d112bab1dd4f0105e0971
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e37094620354c86185244326d6dcd3c3cb35640
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701362"
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 geography オブジェクトのセットに対して和集合演算を実行します。
   
@@ -43,7 +43,7 @@ UnionAggregate ( geography_operand )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  入力の SRID が異なる場合、メソッドでは **null** が返されます。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  
@@ -51,7 +51,7 @@ UnionAggregate ( geography_operand )
 > [!NOTE]  
 >  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、都市内の **geography** ロケーション ポイントのセットで `UnionAggregate` を実行します。  
   
  ```

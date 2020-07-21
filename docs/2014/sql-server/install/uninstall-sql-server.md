@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 のアンインストール |Microsoft Docs
+title: SQL Server 2014 | のアンインストールMicrosoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 365ce473045741d9b4ada003917c7bd4797c0b47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062403"
 ---
 # <a name="uninstall-sql-server-2014"></a>SQL Server 2014 のアンインストール
   以下のトピックに従って [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既存のインスタンスを完全にアンインストールし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再インストールできるようにシステムを準備します。  
@@ -46,7 +45,7 @@ ms.locfileid: "62470226"
   
 ## <a name="see-also"></a>参照  
  [SQL Server のインストール計画](planning-a-sql-server-installation.md)   
- [SQL Server 2014 をインストールします。](../../database-engine/install-windows/install-sql-server.md)   
+ [SQL Server 2014 をインストールする](../../database-engine/install-windows/install-sql-server.md)   
  [SQL Server 2014 へのアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

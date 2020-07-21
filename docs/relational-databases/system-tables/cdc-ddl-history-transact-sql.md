@@ -1,5 +1,5 @@
 ---
-title: cdc.ddl_history (TRANSACT-SQL) |Microsoft Docs
+title: cdc. ddl_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,33 +15,33 @@ dev_langs:
 helpviewer_keywords:
 - cdc.ddl_history
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1855120dde6e6f4e9037a6f14832cd24f310d77b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3332c82cdfefad09c4230ae52560f7bdf4e65b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079225"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890622"
 ---
-# <a name="cdcddlhistory-transact-sql"></a>cdc.ddl_history (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="cdcddl_history-transact-sql"></a>cdc. ddl_history (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  変更データ キャプチャが有効になっているテーブルに対して行われたデータ定義言語 (DDL) の変更について、各変更に対応する 1 行を返します。 このテーブルでは、ソース テーブルに対して、いつ、どのような DDL の変更が行われたかを確認できます。 DDL の変更されていないソース テーブルでは、このテーブル内のエントリは必要はありません。  
+  変更データ キャプチャが有効になっているテーブルに対して行われたデータ定義言語 (DDL) の変更について、各変更に対応する 1 行を返します。 このテーブルでは、ソース テーブルに対して、いつ、どのような DDL の変更が行われたかを確認できます。 DDL が変更されていないソーステーブルには、このテーブルのエントリはありません。  
   
- システム テーブルに対して直接クエリを実行することは、できるだけ避けてください。 代わりに、実行、 [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)ストアド プロシージャ。  
+ システムテーブルに対して直接クエリを実行しないことをお勧めします。 代わりに、 [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)ストアドプロシージャを実行します。  
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**source_object_id**|**int**|DDL の変更が適用された元のテーブルの ID。|  
-|**object_id**|**int**|ソース テーブルに対してキャプチャ インスタンスに関連付けられている変更テーブルの ID。|  
-|**required_column_update**|**bit**|ソース テーブルのキャプチャ対象列のデータ型が変更されたことを示します。 この変更は、変更テーブル内の列を変更します。|  
-|**ddl_command**|**nvarchar(max)**|DDL ステートメントは、ソース テーブルに適用します。|  
-|**ddl_lsn**|**binary(10)**|ログ シーケンス番号 (LSN) の DDL 変更のコミットに関連付けられています。|  
-|**ddl_time**|**datetime**|DDL の変更された日付と時刻は、ソース テーブルにしました。|  
+|**source_object_id**|**int**|DDL の変更が適用されたソーステーブルの ID。|  
+|**object_id**|**int**|ソーステーブルのキャプチャインスタンスに関連付けられている変更テーブルの ID。|  
+|**required_column_update**|**bit**|ソース テーブルのキャプチャ対象列のデータ型が変更されたことを示します。 この変更により、変更テーブルの列が変更されています。|  
+|**ddl_command**|**nvarchar(max)**|ソーステーブルに適用される DDL ステートメントです。|  
+|**ddl_lsn**|**binary(10)**|DDL 変更のコミットメントに関連付けられているログシーケンス番号 (LSN)。|  
+|**ddl_time**|**datetime**|DDL の変更がソーステーブルに対して行われた日付と時刻。|  
   
 ## <a name="see-also"></a>関連項目  
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

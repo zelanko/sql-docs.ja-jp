@@ -15,29 +15,29 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO Stream]
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9b996ba4bedbb4ccf1ccb0453e4da33e09206a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: de61f4877dc6adcdfaa9644f5f266cd827a1d096
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938238"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765343"
 ---
 # <a name="type-property-ado-stream"></a>Type プロパティ (ADO Stream)
-含まれるデータの型を示す、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (バイナリまたはテキスト)。  
+[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)に格納されているデータの型 (バイナリまたはテキスト) を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定または取得を[StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md)に含まれるデータの種類を指定する値、 **Stream**オブジェクト。 既定値は**adTypeText**します。 ただし、新しいバイナリ データが書き込まれた最初に空にする**Stream**、**型**に変わります**adTypeBinary**します。  
+ **ストリーム**オブジェクトに格納されているデータの型を指定する[streamtypeenum](../../../ado/reference/ado-api/streamtypeenum.md)値を設定または返します。 既定値は**adTypeText**です。 ただし、バイナリデータが最初に新しい空の**ストリーム**に書き込まれる場合、その**型**は**adtypebinary**に変更されます。  
   
-## <a name="remarks"></a>コメント  
- **型**プロパティは読み取り/書き込みを現在の位置がの先頭にある場合にのみ、 **Stream** ([位置](../../../ado/reference/ado-api/position-property-ado.md)は 0 です)、およびその他の任意の位置に読み取り専用です。  
+## <a name="remarks"></a>Remarks  
+ **Type**プロパティは、現在の位置が**ストリーム**の先頭 ([位置](../../../ado/reference/ado-api/position-property-ado.md)が 0) であり、他の任意の位置で読み取り専用である場合にのみ、読み取り/書き込みになります。  
   
- **型**プロパティは、読み取りと書き込みに使用する方法を決定します。、 **Stream**します。 テキストの**ストリーム**を使用して、 [ReadText](../../../ado/reference/ado-api/readtext-method.md)と[WriteText](../../../ado/reference/ado-api/writetext-method.md)します。 バイナリの**ストリーム**を使用して、[読み取り](../../../ado/reference/ado-api/read-method.md)と[書き込み](../../../ado/reference/ado-api/write-method.md)します。  
+ **Type**プロパティによって、**ストリーム**の読み取りと書き込みに使用するメソッドが決まります。 テキスト**ストリーム**の場合は、 [ReadText](../../../ado/reference/ado-api/readtext-method.md)と[WriteText](../../../ado/reference/ado-api/writetext-method.md)を使用します。 バイナリ**ストリーム**の場合は、[読み取り](../../../ado/reference/ado-api/read-method.md)と[書き込み](../../../ado/reference/ado-api/write-method.md)を使用します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RecordType プロパティ (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

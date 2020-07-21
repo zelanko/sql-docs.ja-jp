@@ -1,5 +1,5 @@
 ---
-title: リーフ アクセス許可 (Master Data Services) | Microsoft Docs
+title: リーフ権限
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813299"
 ---
 # <a name="leaf-permissions-master-data-services"></a>リーフ権限 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   リーフ権限は、エンティティのすべてのリーフ メンバーの属性値に適用されます。  
   
  明示的階層が有効になっていないエンティティの場合、 **リーフ** への権限の割り当ては、エンティティへの権限の割り当てと同じです。  
   
- **注**  
+ **注:**  
   
 -   リーフ権限は、ユーザー インターフェイスの **[エクスプローラー]** 機能領域にのみ適用されます。  
   
@@ -54,17 +54,17 @@ ms.locfileid: "68007194"
 |----------------|-----------------|  
 |**読み取り**|ユーザーは属性の読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成するときに値を割り当てることができます。|  
-|**更新**|ユーザーは属性を更新できます。|  
+|**Update**|ユーザーは属性を更新できます。|  
 |**削除**|影響しません。|  
-|**拒否**|属性が表示されません。<br /><br /> 注:Name および Code 属性へのアクセスを明示的に拒否することはできません。|  
+|**Deny**|属性が表示されません。<br /><br /> 注: Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
   
 ### <a name="example"></a>例  
  Product エンティティの場合、Subcategory 属性に **更新** 権限を割り当てます。 他のすべての属性に対しては権限を拒否します。  
   
 |名前|コード|Subcategory (更新)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} マウンテン バイク|  
-|Mountain-100|BK-M201|{5} マウンテン バイク|  
+|Mountain-100|BK-M101|{5}マウンテンバイク|  
+|Mountain-100|BK-M201|{5}マウンテンバイク|  
   
  **[エクスプローラー]** では、Subcategory 列の属性値を更新できます。 属性に対する権限がない場合、その属性は表示されません。  
   
@@ -74,8 +74,8 @@ ms.locfileid: "68007194"
 ## <a name="see-also"></a>関連項目  
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
- [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)   
- [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   
+ [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [メンバー &#40;マスターデータサービス&#41;](../master-data-services/members-master-data-services.md)   
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
   

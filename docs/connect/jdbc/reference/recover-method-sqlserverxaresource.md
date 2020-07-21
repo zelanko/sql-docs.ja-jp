@@ -1,5 +1,5 @@
 ---
-title: recover メソッド (SQLServerXAResource) |Microsoft Docs
+title: recover メソッド (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b78165b8c199a04d716d18614e6fb56232eca429
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976022"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923121"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>recover メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 #### <a name="parameters"></a>パラメーター  
  *flags*  
   
- 次のいずれかの値を取ることができる**int**値: XARESOURCE. tmstarscan または xaresource. TMENDRSCAN または xaresource. tmstartrscan |XAResource. TMENDRSCAN。  
+ 次の値のいずれかを受け取る可能性がある **int** 値。XAResource.TMSTARTRSCAN または XAResource.TMENDRSCAN または XAResource.TMNOFLAGS または XAResource.TMSTARTTRSCAN | XAResource.TMENDRSCAN。  
   
 ## <a name="return-value"></a>戻り値  
  Xid オブジェクト。  
@@ -45,10 +45,10 @@ public javax.transaction.xa.Xid[] recover(int flags)
 ## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この recover メソッドは、javax.transaction.xa.XAResource インターフェイスの recover メソッドで規定されています。  
   
- パラメーター**フラグ**が XARESOURCE. tmstartrscan または XAResource. tmstartrscan |XAResource. TMENDRSCAN。回復スキャンが進行中である必要があります。  
+ パラメーター **flag** が XAResource.TMSTARTRSCAN または XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN ではない場合、回復スキャンは進行中です。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAResource のメソッド](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

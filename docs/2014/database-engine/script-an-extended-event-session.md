@@ -1,5 +1,5 @@
 ---
-title: 拡張イベント セッションをスクリプト |Microsoft Docs
+title: 拡張イベントセッションのスクリプトを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63b06c9d0564d4e78acf4742e49814c2d39ae6f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088907"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929343"
 ---
 # <a name="script-an-extended-event-session"></a>拡張イベント セッションのスクリプト化
   このトピックでは、イベント セッションをスクリプト化する方法について説明します。 イベント セッションはエクスポート、変更、または削除できるほか、イベント セッションを削除してから新たに作成し、次のような形式で出力することができます。  

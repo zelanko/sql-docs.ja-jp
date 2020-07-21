@@ -1,6 +1,6 @@
 ---
-title: サーバー上の XML スキーマ コレクションの要件と制限 | Microsoft Docs
-ms.custom: ''
+title: 要件と制限 (XML スキーマ コレクション) | Microsoft Docs
+description: SQL Server で XML スキーマ コレクションを変更するための要件と制限事項について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,18 +24,19 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6514ea6acdb2fee96604656ae8f9179570eab35a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b0d0e90f30e05cabed7082f87a6b7474c756a145
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093195"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752562"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>サーバー上の XML スキーマ コレクションの要件と制限
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XSD (XML Schema Definition Language) の検証には、 **xml** データ型を使用する SQL 列に関して制限事項がいくつかあります。 次の表は、このような制限事項に関する詳細と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で機能するように XSD スキーマを変更するためのガイドラインを示しています。 このセクションのトピックでは、具体的な制限事項の詳細とその対処方法について説明します。  
   
-|アイテム|制限事項|  
+|Item|制限事項|  
 |----------|----------------|  
 |**minOccurs** と **maxOccurs**|**minOccurs** 属性と **maxOccurs** 属性の値は、4 バイトの整数に収める必要があります。 これに違反するスキーマはサーバーで拒否されます。|  
 |**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**minOccurs** 属性値に 0 を指定してパーティクルを定義していない限り、子のない **\<xsd:choice>** パーティクルを持つスキーマは拒否します。|  
@@ -63,15 +64,15 @@ ms.locfileid: "68093195"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|正規の形式とパターン制限について説明します。|  
+|[正規の形式とパターン制限](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|正規の形式とパターン制限について説明します。|  
 |[ワイルドカード コンポーネントと内容検証](../../relational-databases/xml/wildcard-components-and-content-validation.md)|XML スキーマ コレクションでのワイルドカード文字、lax 検証、および anyType 要素の使用に関する制限について説明します。|  
 |[&#60;xsd:redefine&#62; 要素](../../relational-databases/xml/the-xsd-redefine-element.md)|\<xsd:redefine> 要素の使用に関する制限とその回避策について説明します。|  
-|[The xs:QName Type](../../relational-databases/xml/the-xs-qname-type.md)|xs:QName 型に関する制限について説明します。|  
+|[xs:QName 型](../../relational-databases/xml/the-xs-qname-type.md)|xs:QName 型に関する制限について説明します。|  
 |[&#60;xsd:simpleType&#62; 宣言の値](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|\<xsd:simpleType> 宣言に適用される制限について説明します。|  
-|[Enumeration Facets](../../relational-databases/xml/enumeration-facets.md)|列挙ファセットに関する制限について説明します。|  
-|[Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)|混合型を単純コンテンツに制限する場合の制限について説明します。|  
+|[列挙ファセット](../../relational-databases/xml/enumeration-facets.md)|列挙ファセットに関する制限について説明します。|  
+|[混合型と単純コンテンツ](../../relational-databases/xml/mixed-type-and-simple-content.md)|混合型を単純コンテンツに制限する場合の制限について説明します。|  
 |[大きな XML スキーマ コレクションとメモリ不足状態](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|大きなスキーマ コレクションで発生することがあるメモリ不足の解決方法について説明します。|  
 |[非決定的コンテンツ モデル](../../relational-databases/xml/non-deterministic-content-models.md)|非決定的コンテンツ モデルに関する制限について説明します。|  
   

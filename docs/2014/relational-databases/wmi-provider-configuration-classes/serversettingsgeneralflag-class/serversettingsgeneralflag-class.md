@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 59bfe26d20ed244c6011a6f4d1f37deccf8607c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3dcae2101d49c2500e26a3ed2c45ef185fe0e30a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63137283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056689"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag クラス
   [ServerSettingsGeneralFlag クラス](serversettingsgeneralflag-class.md) は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上の一般的なフラグ設定を表します。  
@@ -34,7 +33,7 @@ ms.locfileid: "63137283"
   
 -   フラグ値の表示および変更  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

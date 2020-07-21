@@ -11,14 +11,14 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d075cb578046862c4598efd9da3c060891ae7a7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b6033c2d21b10755601f9ef82cabd829db5ad820
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045291"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293221"
 ---
 # <a name="connect-components-in-a-data-flow"></a>データ フロー内でコンポーネントを連結する
 
@@ -30,7 +30,7 @@ ms.locfileid: "68045291"
   
  次の図は、1 つの変換元コンポーネント、2 つの変換、1 つの変換先コンポーネント、およびこれらを連結するパスを持つ、簡単なデータ フローを示しています。  
   
- ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![データ フロー](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
   
  2 つのコンポーネントを連結したら、パスを移動するデータのメタデータおよびパスのプロパティを、 **[データ フロー パス エディター]** で表示できます。 詳細については、「 [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)」を参照してください。  
   

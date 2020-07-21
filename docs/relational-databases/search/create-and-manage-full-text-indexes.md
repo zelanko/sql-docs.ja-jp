@@ -1,7 +1,7 @@
 ---
 title: フルテキスト インデックスの作成と管理 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -13,21 +13,21 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d51f0b31729d6b061c7e8cfd82b5047796c6daa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758070"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>フルテキスト インデックスの作成と管理
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 このトピックでは、SQL Server でフルテキスト インデックスを作成、入力、および管理する方法について説明します。
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>前提条件 - フルテキスト カタログを作成する
-フルテキスト インデックスを作成する前に、フルテキスト カタログを作成する必要があります。 カタログは、1 つまたは複数のフルテキスト インデックス用の仮想コンテナーです。 詳細については、「[Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)」(フルテキスト カタログの作成と管理) を参照してください。
+フルテキスト インデックスを作成する前に、フルテキスト カタログを作成する必要があります。 カタログは、1 つまたは複数のフルテキスト インデックス用の仮想コンテナーです。 詳細については、「[Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)」 (フルテキスト インデックスの作成と管理) を参照してください。
   
-##  <a name="tasks"></a>フルテキスト インデックスを作成、変更、または削除する  
+##  <a name="create-alter-or-drop-a-full-text-index"></a><a name="tasks"></a>フルテキスト インデックスを作成、変更、または削除する  
 ### <a name="create-a-full-text-index"></a>フルテキスト インデックスを作成する  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)  
@@ -46,12 +46,12 @@ ms.locfileid: "68082933"
 -   変更の追跡に基づく作成
 -   タイムスタンプに基づく増分作成
 
-詳細については、「[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)」(フルテキスト インデックスの作成) を参照してください。
+詳細については、「[Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)」 (フルテキスト インデックスの作成) を参照してください。
 
-##  <a name="view"></a> フルテキスト インデックスのプロパティを表示する
+##  <a name="view-the-properties-of-a-full-text-index"></a><a name="view"></a> フルテキスト インデックスのプロパティを表示する
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Transact-SQL で、フルテキスト インデックスのプロパティを表示する
 
-|カタログ ビューまたは動的管理ビュー|[説明]|  
+|カタログ ビューまたは動的管理ビュー|説明|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|フルテキスト カタログからフルテキスト インデックスへの参照ごとに 1 行のデータを返します。|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|フルテキスト インデックスの一部となっている列ごとに 1 行のデータを格納します。|  
@@ -72,7 +72,7 @@ ms.locfileid: "68082933"
   
 5.  **[ページの選択]** ペインでは、次のいずれかのページを選択できます。  
   
-    |ページ|[説明]|  
+    |ページ|説明|  
     |----------|-----------------|  
     |**全般**|フルテキスト インデックスの基本的なプロパティが表示されます。 これには、いくつかの変更可能なプロパティと、データベース名、テーブル名、フルテキスト キー列の名前など多数の変更不可能なプロパティが含まれます。 変更可能なプロパティは次のとおりです。<br /><br /> **フルテキスト インデックス ストップリスト**<br /><br /> **フルテキスト インデックス有効**<br /><br /> **変更の追跡**<br /><br /> **検索プロパティ リスト**|  
     |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「[Populate Full-Text Indexes](populate-full-text-indexes.md)」 (フルテキスト インデックスの作成) を参照してください。|
@@ -80,12 +80,12 @@ ms.locfileid: "68082933"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] をクリックして変更を保存し、 **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを終了します。  
   
-##  <a name="props"></a>インデックスが作成されたテーブルと列のプロパティの表示  
+##  <a name="view-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a>インデックスが作成されたテーブルと列のプロパティの表示  
  OBJECTPROPERTYEX など、[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の中には、さまざまなフルテキスト インデックス プロパティの値を取得できるものがあります。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
   
  次の表に、インデックスが作成されたテーブルおよび列に関連したフルテキスト プロパティと、それに関連する [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の一覧を示します。  
   
-|プロパティ|[説明]|機能|  
+|プロパティ|説明|機能|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|列のドキュメント型情報を保持する、テーブル内の TYPE COLUMN。|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|列に対してフルテキスト インデックスを作成できるかどうかを示します。|COLUMNPROPERTY|  
@@ -102,14 +102,14 @@ ms.locfileid: "68082933"
 |**TableFulltextPopulateStatus**|フルテキスト テーブルの作成状態。|OBJECTPROPERTYEX|  
 |**TableHasActiveFulltextIndex**|テーブルが有効なフルテキスト インデックスを持っているかどうかを示します。|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a>フルテキスト キー列の情報の取得  
+##  <a name="get-info-about-the-full-text-key-column"></a><a name="key"></a>フルテキスト キー列の情報の取得  
  通常、行セット値関数 CONTAINSTABLE または FREETEXTTABLE の結果をベース テーブルと結合します。 その場合、一意なキー列の名前を把握している必要があります。 一意のインデックスがフルテキスト キーとして使用されているかどうかを調査したり、フルテキスト キー列の識別子を取得したりできます。  
   
 ### <a name="determine-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>一意のインデックスがフルテキスト キー列として使用されているかどうかを調査する  
   
 [SELECT](../../t-sql/queries/select-transact-sql.md) ステートメントを使用して、 [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) 関数を呼び出します。 この関数呼び出しでは、次のように、OBJECT_ID 関数を使用してテーブル名 (*table_name*) をテーブル ID に変換します。その際、対象テーブルの一意のインデックスの名前と **IsFulltextKey** インデックス プロパティを指定します。  
   
-```  
+```sql  
 SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
 ```  
   
@@ -117,15 +117,15 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  **例**  
   
- 次の例では、フルテキスト キー列の一意性を確保するために `PK_Document_DocumentID` インデックスが使用されているかどうかを確認します。  
+ 次の例では、フルテキスト キー列の一意性を確保するために `PK_Document_DocumentNode` インデックスが使用されているかどうかを確認します。  
   
-```  
+```sql  
 USE AdventureWorks  
 GO  
-SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentNode',  'IsFulltextKey' )  
 ```  
   
- `PK_Document_DocumentID` インデックスを使用してフルテキスト キー列の一意性が確保されている場合には 1 が返されます。 それ以外のときは 0 または NULL が返されます。 NULL は、無効なインデックス名が使用されている、インデックス名がテーブルに対応していない、テーブルが存在しないなどを意味します。  
+ `PK_Document_DocumentNode` インデックスを使用してフルテキスト キー列の一意性が確保されている場合には 1 が返されます。 それ以外のときは 0 または NULL が返されます。 NULL は、無効なインデックス名が使用されている、インデックス名がテーブルに対応していない、テーブルが存在しないなどを意味します。  
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>フルテキスト キー列の識別子を検索する  
   
@@ -133,7 +133,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
  
 この識別子を取得するには、SELECT ステートメントで OBJECTPROPERTYEX 関数を呼び出します。 次のようにテーブル名 (*table_name*) をテーブル ID に変換する OBJECT_ID 関数を使用し、 **TableFulltextKeyColumn** プロパティを指定します。  
   
-```  
+```sql  
 SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
 ```  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  次の例では、フルテキスト キー列の識別子または NULL が返されます。 NULL は、無効なインデックス名が使用されている、インデックス名がテーブルに対応していない、テーブルが存在しないなどを意味します。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -150,7 +150,7 @@ GO
   
  次の例は、一意のキー列の識別子からその列の名前を取得する方法を示しています。  
   
-```  
+```sql  
 USE AdventureWorks;  
 GO  
 DECLARE @key_column sysname  
@@ -162,7 +162,7 @@ SELECT @key_column AS 'Unique Key Column';
 GO  
 ```  
   
- この例では、 `Unique Key Column`という名前の結果セット列が返され、Document テーブルの一意のキー列の名前 DocumentID を含む単一行が表示されます。 このクエリに無効なインデックス名が使用されている、インデックス名がテーブルに対応していない、テーブルが存在しないなどの場合には、NULL が返されます。  
+ この例では、`Unique Key Column` という名前の結果セット列が返され、Document テーブルの一意のキー列の名前 DocumentNode を含む単一行が表示されます。 このクエリに無効なインデックス名が使用されている、インデックス名がテーブルに対応していない、テーブルが存在しないなどの場合には、NULL が返されます。  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>varbinary(max) 列および xml 列のインデックス  
  **varbinary(max)** 列、 **varbinary**列、または **xml** 列にフルテキスト インデックスが設定されている場合は、他のフルテキスト インデックス列と同様に、フルテキスト述語 (CONTAINS および FREETEXT) とフルテキスト関数 (CONTAINSTABLE および FREETEXTTABLE) を使用して、これらの列に対するクエリを実行できます。
@@ -183,7 +183,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  **xml** 列に対するインデックス作成とクエリの実行の詳細については、「[XML 列でのフルテキスト検索の使用](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
   
-##  <a name="disable"></a>テーブルのフルテキスト インデックスを無効または再度有効にする   
+##  <a name="disable-or-re-enable-full-text-indexing-for-a-table"></a><a name="disable"></a> テーブルのフルテキスト インデックスを無効または再度有効にする   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、既定によりユーザーが作成したすべてのデータベースでフルテキストが有効になります。 さらに、個々のテーブルに対してフルテキスト インデックスを作成し、これに列を追加すると、その時点で、このテーブルでは自動的にフルテキスト インデックスが有効になります。 フルテキスト インデックスから最後の列を削除すると、このテーブルでは自動的にフルテキスト インデックスが無効になります。  
   
  フルテキスト インデックスのあるテーブルでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して手動でフルテキスト インデックスを無効にしたり、再度有効にしたりすることができます。  
@@ -194,7 +194,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 3.  **[フルテキスト インデックス]** を選択し、 **[フルテキスト インデックスを無効化]** または **[フルテキスト インデックスを有効化]** をクリックします。  
   
-##  <a name="remove"></a>テーブルからフルテキスト インデックスを削除する  
+##  <a name="remove-a-full-text-index-from-a-table"></a><a name="remove"></a>テーブルからフルテキスト インデックスを削除する  
   
 1.  オブジェクト エクスプローラーで、削除するフルテキスト インデックスが含まれているテーブルを右クリックします。  
   

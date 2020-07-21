@@ -1,6 +1,6 @@
 ---
-title: 複数行のデータを処理するための DML トリガーの作成 | Microsoft Docs
-ms.custom: ''
+title: 複数行のデータを処理するための DML トリガーの作成
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,15 +17,15 @@ ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bba7a31f880c33ce3f29d4ed2e8fb622ce3ee0b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce1e904ac0d3d5b329fce676218e3133bda60d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757696"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>複数行のデータを処理するための DML トリガーの作成
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   DML トリガーのコードを記述するときは、トリガーを起動するステートメントが、1 行だけではなく複数行のデータに影響する場合があることを考慮してください。 この動作は UPDATE トリガーや DELETE トリガーの場合によく見られます。UPDATE ステートメントや DELETE ステートメントが複数行に影響を与えることが多いためです。 INSERT トリガーの場合は、INSERT ステートメントが 1 行単位で追加を行うため、この動作はあまり見られません。 ただし、INSERT トリガーは INSERT INTO (*table_name*) SELECT ステートメントにより起動されることもあります。その場合は、1 回のトリガーの呼び出しで複数行が挿入される可能性があります。  
   
  複数行への影響について考慮することは、DML トリガーの機能によって 1 つのテーブルから自動的に集計値が再計算され、その結果を他のテーブルに保存して集計を続行するような場合は、特に重要です。  
@@ -33,7 +33,7 @@ ms.locfileid: "68075535"
 > [!NOTE]  
 >  パフォーマンスが低下する可能性があるので、トリガーにカーソルを使用することはお勧めしません。 複数行に影響を与えるトリガーを設計する場合は、カーソルではなく行セットをベースにしたロジックを使用してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例の DML トリガーはどれも、ある列の集計の途中経過を [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースの別のテーブル内に保存するように設計されています。  
   
 ### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>A. 単一の行を挿入する場合の集計途中経過の格納  

@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 728469a4-6523-4a37-925f-a950d75420fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 945d569638db639f350630b424190e3aa38c35e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf13b4b047a463979e012252013cccdc20b678d4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916209"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554087"
 ---
-# <a name="mssqlserver10537"></a>MSSQLSERVER_10537
+# <a name="mssqlserver_10537"></a>MSSQLSERVER_10537
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|10537|  
@@ -40,7 +39,7 @@ ms.locfileid: "62916209"
   
 ## <a name="see-also"></a>参照  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [プラン ガイド](../performance/plan-guides.md)   
+ [プランガイド](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

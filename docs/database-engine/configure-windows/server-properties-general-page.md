@@ -1,5 +1,6 @@
 ---
 title: サーバーのプロパティ ([全般] ページ) - SQL Server Management Studio | Microsoft Docs
+description: SQL Server の読み取り専用プロパティについて説明します。 これには、サーバー名、オペレーティング システム、照合順序、SQL Server バージョンなどが含まれます。
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,23 +13,23 @@ f1_keywords:
 - sql13.swb.serverproperties.activedirectory.f1
 - sql13.swb.serverproperties.prodinfo.f1
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da2180230cfc80775f07a73dbc41f12ad9e46641
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726647"
 ---
 # <a name="server-properties---general-page"></a>[サーバーのプロパティ] - [全般] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、インストールされている [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の読み取り専用情報を表示できます。  
   
 ## <a name="property-grid"></a>[プロパティ] グリッド  
  サーバー名、サーバーのオペレーティング システム、プロセッサ数など、選択したサーバーのプロパティを表示します。  
   
- **[名前]**  
+ **名前**  
  サーバー インスタンスの名前を表示します。  
   
  **Product**  
@@ -40,10 +41,10 @@ ms.locfileid: "68025483"
  **プラットフォーム**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているオペレーティング システムとハードウェアを表示します。  
   
- **バージョン**  
+ **Version**  
  現在実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションのバージョン番号を表示します。  
   
- **言語**  
+ **Language**  
  実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでサポートされる言語を表示します。  
   
  **[メモリ]**  

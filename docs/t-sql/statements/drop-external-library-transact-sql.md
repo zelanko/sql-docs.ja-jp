@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 06/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -16,23 +16,27 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e39accbc9c4d3d45b5842e0431f14cd92908eb0f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ef517db66d5506a47f5d4b3b07c69ac2b3db9e61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766382"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
-
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 既存のパッケージ ライブラリを削除します。 パッケージ ライブラリは、R、Python、Java などのサポートされる外部ランタイムで使用されます。
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows および Linux プラットフォームの R、Python、Java は SQL Server 2019 CTP 2.4 でサポートされています。 
+> SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows および Linux プラットフォームの R、Python、Java は SQL Server 2019 以降でサポートされています。
+::: moniker-end
+
+::: moniker range="=azuresqldb-mi-current"
+> [!NOTE]
+> Azure SQL Managed Instance では、R と Python の言語がサポートされています。
 ::: moniker-end
 
 ## <a name="syntax"></a>構文
@@ -64,11 +68,11 @@ DROP EXTERNAL LIBRARY library_name
 
 ステートメントが成功した場合は、情報メッセージが返されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 SQL Server の他の `DROP` とは異なり、このステートメントは、省略可能な承認句の指定をサポートします。 これにより、**dbo** または **db_owner** ロールのユーザーが、データベース内の正規のユーザーによってアップロードされたパッケージ ライブラリを削除することができます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 カスタムの R パッケージ `customPackage` をデータベースに追加します。
@@ -87,7 +91,7 @@ GO
 DROP EXTERNAL LIBRARY customPackage;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  

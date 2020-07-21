@@ -12,10 +12,10 @@ ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e19691222fd55350bb3f0da7aaf94a983ec620cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193589"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension インターフェイスの実装
@@ -47,7 +47,7 @@ ms.locfileid: "63193589"
 -   *createAndRegisterStream*: 表示するストリームを取得するために呼び出すデリゲート関数。  
   
 ### <a name="deviceinfo-parameter"></a>deviceInfo パラメーター  
- *deviceInfo* パラメーターには、レポート パラメーターではなく、表示パラメーターが含まれます。 表示パラメーターは表示拡張機能に渡されます。 *deviceInfo* 値は、レポート サーバーによって <xref:System.Collections.Specialized.NameValueCollection> オブジェクトに変換されます。 *deviceInfo* パラメーターのアイテムは、大文字と小文字を区別しない値として扱われます。 URL アクセスによる表示要求が行われると、形式 `rc:key=value` の URL パラメーターが *deviceInfo* 辞書オブジェクトのキーと値のペアに変換されます。 ブラウザー検出コードによって、*clientCapabilities* 辞書のアイテムである EcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、Type、および AcceptLanguage も指定されます。 *deviceInfo* パラメーターに表示拡張機能が認識しない名前と値のペアがある場合は、すべて無視されます。 次のコード サンプルは、アイコンを取得する <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを示します。  
+ *deviceInfo* パラメーターには、レポート パラメーターではなく、表示パラメーターが含まれます。 表示パラメーターは表示拡張機能に渡されます。 *deviceInfo* 値は、レポート サーバーによって <xref:System.Collections.Specialized.NameValueCollection> オブジェクトに変換されます。 *deviceInfo* パラメーターのアイテムは、大文字と小文字を区別しない値として扱われます。 URL アクセスによる表示要求が行われると、形式 `rc:key=value` の URL パラメーターが *deviceInfo* 辞書オブジェクトのキーと値のペアに変換されます。 ブラウザー検出コードは、*clientCapabilities* 辞書のEcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、Type および AcceptLanguage の項目も提供しています。 *deviceInfo* パラメーターに表示拡張機能が認識しない名前と値のペアがある場合は、すべて無視されます。 次のコード サンプルは、アイコンを取得する <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを示します。  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
@@ -70,7 +70,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> メソッドは、レポート内の特定のストリームを表示します。 最初の <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> 呼び出しですべてのストリームが作成されますが、ストリームは最初はクライアントに返されません。 このメソッドは、HTML 表示における画像などのセカンダリ ストリームや、画像 (EMF) などの複数ページ表示拡張機能の追加ページに使用します。  
   
 ## <a name="getrenderingresource-method"></a>GetRenderingResource メソッド  
- <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドは、レポート全体を表示せずに情報を取得します。 レポートに情報は必要だが、レポート自体を表示する必要がない場合があります。 たとえば、表示拡張機能に関連付けられたアイコンが必要な場合、 **\<Icon>** タグ 1 つを含む *deviceInfo* パラメーターを使用します。 このような場合に、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを使用できます。  
+ <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドは、レポート全体を表示せずに情報を取得します。 レポートに情報は必要だが、レポート自体を表示する必要がない場合があります。 たとえば、表示拡張機能に関連付けられたアイコンが必要な場合、**\<Icon>** タグ 1 つを含む *deviceInfo* パラメーターを使用します。 このような場合に、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> メソッドを使用できます。  
   
 ## <a name="see-also"></a>参照  
  [表示拡張機能の実装](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   

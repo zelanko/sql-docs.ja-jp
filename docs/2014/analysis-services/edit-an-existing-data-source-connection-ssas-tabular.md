@@ -1,5 +1,5 @@
 ---
-title: 既存のデータ ソース接続 (SSAS テーブル) の編集 |Microsoft Docs
+title: 既存のデータソース接続の編集 (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dd8ac9a27d1bcf46ba14b5f49fee3cc9b3b3b4e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081447"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528458"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>既存のデータ ソース接続の編集 (SSAS テーブル)
   このトピックでは、テーブル モデルの既存のデータ ソース接続のプロパティを編集する方法について説明します。  
@@ -45,7 +44,7 @@ ms.locfileid: "66081447"
   
 4.  **[保存]** をクリックしてから、 **[閉じる]** をクリックします。  
   
-5.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、 **[モデル]** 、 **[処理]** の順にクリックしてから、 **[すべて処理]** をクリックします。  
+5.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、 **[モデル]**、 **[処理]** の順にクリックしてから、 **[すべて処理]** をクリックします。  
   
      新しいデータ ソースと元のデータ選択を使用して、テーブルが再処理されます。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66081447"
      現在のテーブルのプロパティ セットを保存すると、テーブルを処理する必要があることを示すメッセージが表示される場合があります。 **[処理]** をクリックして、更新されたデータをモデルに読み込みます。  
   
 ## <a name="see-also"></a>参照  
- [データの処理 &#40;SSAS テーブル&#41;](process-data-ssas-tabular.md)   
+ [SSAS 表形式&#41;&#40;データを処理する](process-data-ssas-tabular.md)   
  [サポートされているデータ ソース &#40;SSAS テーブル&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

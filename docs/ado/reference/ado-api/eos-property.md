@@ -14,26 +14,26 @@ f1_keywords:
 helpviewer_keywords:
 - EOS property
 ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a19856c957ee0c003e934ff8b2632aa28e32d33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9199563f2a5d6ce594b88577cfb69766cf311492
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918926"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765533"
 ---
 # <a name="eos-property"></a>EOS プロパティ
-現在の位置がの末尾にあるかどうかを示す、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)します。  
+現在の位置が[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)の末尾にあるかどうかを示します。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**ブール**現在の位置がストリームの末尾かどうかを示す値です。 **EOS**返します**True**以上のバイトがストリームである場合を返します**False**現在の位置より多くの容量がある場合。  
+ 現在の位置がストリームの末尾にあるかどうかを示す**ブール**値を返します。 ストリーム内のバイト数がこれ以上ない場合、 **EOS**は**True**を返します。現在の位置の後により多くのバイトがある場合は、 **False**を返します。  
   
- ストリームの位置の末尾を設定するには、使用、 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)メソッド。 現在の位置を調べるには、[位置](../../../ado/reference/ado-api/position-property-ado.md)プロパティ。  
+ ストリームの位置の末尾を設定するには、 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)メソッドを使用します。 現在の位置を確認するには、 [position](../../../ado/reference/ado-api/position-property-ado.md)プロパティを使用します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
- [EOS および LineSeparator プロパティの SkipLine メソッドの例 (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
+## <a name="see-also"></a>参照  
+ [EOS および LineSeparator プロパティと SkipLine メソッドの例 (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

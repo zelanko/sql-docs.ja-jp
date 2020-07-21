@@ -1,6 +1,7 @@
 ---
-title: 行見出しと列見出しの制御 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.date: 05/24/2018
+title: 行見出しと列見出しを制御する (レポート ビルダーおよび SSRS) | Microsoft Docs
+description: ページ分割されたレポートのテーブル、マトリックス、一覧のいずれのデータ領域も、上下または左右に、複数のページにわたって続く場合があります。 行見出しや列見出しを各ページに繰り返し表示するかどうかは、適宜指定することが可能です。
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ed08231f0bfd3cf7b505e3064883393470047e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581575"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245363"
 ---
-# <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>行見出しと列見出しの制御 (レポート ビルダーおよび SSRS)
-  テーブル、マトリックス、一覧のいずれのデータ領域も、上下または左右に、複数のページにわたって続く場合があります。 行見出しや列見出しを各ページに繰り返し表示するかどうかは、適宜指定することが可能です。 また、Web ポータルやレポート プレビューなどの対話的なレンダラーでは、行見出しまたは列見出しを固定することにより、レポートを上下左右にスクロールしても、見出しが隠れないようにすることができます。 通常、テーブルまたはマトリックスでは、先頭行には、列データのラベルとしての列見出しが、先頭列には、行データのラベルとしての行見出しが表示されます。 入れ子構造のグループの場合は、グループ ラベルを含んでいる、先頭から数行分の行見出しまたは列見出しをひとまとめにして、繰り返し表示することもできます。 既定では、一覧データ領域に見出しは含まれません。  
+# <a name="control-row--column-headings-report-builder--ssrs"></a>行見出しと列見出しを制御する (レポート ビルダーおよび SSRS)
+  ページ分割されたレポートのテーブル、マトリックス、一覧のいずれのデータ領域も、上下または左右に、複数のページにわたって続く場合があります。 行見出しや列見出しを各ページに繰り返し表示するかどうかは、適宜指定することが可能です。 また、Web ポータルやレポート プレビューなどの対話的なレンダラーでは、行見出しまたは列見出しを固定することにより、レポートを上下左右にスクロールしても、見出しが隠れないようにすることができます。 通常、テーブルまたはマトリックスでは、先頭行には、列データのラベルとしての列見出しが、先頭列には、行データのラベルとしての行見出しが表示されます。 入れ子構造のグループの場合は、グループ ラベルを含んでいる、先頭から数行分の行見出しまたは列見出しをひとまとめにして、繰り返し表示することもできます。 既定では、一覧データ領域に見出しは含まれません。  
   
  見出しを繰り返し表示するかどうか (または固定するかどうか) の制御方法は、次の条件に依存します。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "65581575"
   
  行グループ領域または列グループ領域を持つ Tablix データ領域では、それに関連付けられている行および列を、Tablix データ領域のプロパティを設定することによって制御します。 それ以外の場合は、選択した Tablix メンバーのプロパティ ペインで、必要なプロパティを設定することにより、行および列を制御することになります。 段階的な手順については、「[複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)」と「[レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Top"></a> 使用例  
+##  <a name="examples"></a><a name="Top"></a> 使用例  
  Tablix データ領域に表示される内容として最も一般的な例としては、マトリックス、グループを持たないテーブル、行グループと行グループ ヘッダーを持つテーブル、行グループはあるが行グループ ヘッダーは持たないテーブルなどがあります。 ヘッダーの繰り返しまたは固定を制御するには、制御の対象となる行または列が、その行グループ領域または列グループ領域でグループ ヘッダーに関連付けられているかどうかを見極める必要があります。  
   
  次のセクションでは、Tablix データ領域の一般的なレイアウトの例を紹介します。  
@@ -57,7 +58,7 @@ ms.locfileid: "65581575"
   
 -   [行グループはあるが行グループ領域を持たないテーブル](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> マトリックス  
+###  <a name="matrix"></a><a name="Matrix"></a> マトリックス  
  既定では、単純なマトリックスには、行グループと列グループが 1 つずつ含まれています。 次の図は、Category (カテゴリ) に基づく行グループと、Geography (地理) に基づく列グループを持つマトリックスを示しています。  
   
  ![Matrix、Category 行および Geography 列グループ](../../reporting-services/report-design/media/rs-basicmatrixdesign.gif "Matrix、Category 行および Geography 列グループ")  
@@ -72,7 +73,7 @@ ms.locfileid: "65581575"
   
  [トップに戻る](#Top)  
   
-###  <a name="TableNoGroups"></a> 行グループを持たないテーブル  
+###  <a name="table-with-no-row-groups"></a><a name="TableNoGroups"></a> 行グループを持たないテーブル  
  既定では、グループを持たない単純なテーブルには、詳細グループが含まれます。 次の図は、カテゴリ、注文番号、および売上データを表示するテーブルを示したものです。  
   
  ![デザイン、1 つの静的行と 1 つの動的行があるテーブル](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "デザイン、1 つの静的行と 1 つの動的行があるテーブル")  
@@ -93,7 +94,7 @@ ms.locfileid: "65581575"
   
  [トップに戻る](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> 行グループおよび行グループ領域を持つテーブル  
+###  <a name="table-with-row-groups-and-a-row-group-area"></a><a name="TableRowGroupsGroupHeader"></a> 行グループおよび行グループ領域を持つテーブル  
  単純なテーブルに行グループを追加した場合、デザイン画面のテーブルに行グループ領域が追加されます。 次の図は、Category に基づいた行グループを持つテーブルを示しています。  
   
  ![デザイン、1 つの行グループと詳細があるテーブル](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "デザイン、1 つの行グループと詳細があるテーブル")  
@@ -114,7 +115,7 @@ ms.locfileid: "65581575"
   
  [トップに戻る](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> 行グループはあるが行グループ領域を持たないテーブル  
+###  <a name="table-with-row-groups-and-no-row-group-area"></a><a name="TableRowGroupsNoGroupHeader"></a> 行グループはあるが行グループ領域を持たないテーブル  
  テーブルに行グループがあるにもかかわらず、行グループ領域が存在しない場合があります。 その原因として、次の 2 点が考えられます。  
   
 -   当初は、行グループと行グループ領域を持つテーブルとして作成したが、後でその行グループ領域から列を削除した (列だけを削除し、グループを削除しなかった)。 たとえば、テーブルを単純なグリッド形式に変更しようとした場合などに起こります。  
@@ -135,7 +136,7 @@ ms.locfileid: "65581575"
   
  しかし、詳細設定モードで見ると、このレイアウト構造が異なる Tablix メンバーで構成されていることがわかります。 次の図は、このテーブルの詳細設定モードでのグループ化ペインを示しています。  
   
- ![行グループ、詳細設定、グループ ヘッダーなし](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行グループ、詳細設定、グループ ヘッダーなし")  
+ ![行グループ、詳細設定、グループ ヘッダーなし。](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行グループ、詳細設定、グループ ヘッダーなし。")  
   
  [行グループ] ペインには、(**Static**)、(Category)、(**Static**)、および (**Details**) の各 Tablix メンバーが一覧表示されます。 列見出しを繰り返し表示するか固定するには、一番上の (**Static**) という Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
   

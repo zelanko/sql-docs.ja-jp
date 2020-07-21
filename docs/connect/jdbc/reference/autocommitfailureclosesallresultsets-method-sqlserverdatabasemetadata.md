@@ -1,5 +1,5 @@
 ---
-title: JDBC ドライバーが開いている結果セットを閉じる |Microsoft Docs
+title: JDBC ドライバーで開いている結果セットを閉じるか |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1739ecb5-e5cb-4807-b5a8-97c0299929d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fded722f558b68e393fc4e0815a35cc7383b8d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a9d76ebdcd4eac2fca67d04693aa2fe24fa279da
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955854"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927985"
 ---
 # <a name="autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata"></a>autoCommitFailureClosesAllResultSets メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,8 +35,8 @@ public boolean autoCommitFailureClosesAllResultSets()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この autoCommitFailureClosesAllResultSets メソッドは、autoCommitFailureClosesAllResultSets メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この autoCommitFailureClosesAllResultSets メソッドは、java.sql.DatabaseMetaData インターフェイスの autoCommitFailureClosesAllResultSets メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

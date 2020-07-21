@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eefab653ee55a3666cac65d24b3a47514c414308
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a98437a88fc81d83c98ec2c3417df6d38bc1b421
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902680"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283822"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>レッスン 1-4:データ フロー タスクをパッケージに追加する
 
@@ -46,7 +46,7 @@ ms.locfileid: "67902680"
 ## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 5:フラット ファイルの変換元を追加し、構成する](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [データ フロー タスク](../integration-services/control-flow/data-flow-task.md)  
   
   

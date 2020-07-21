@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 40af02ce74363fb1df2ae142e7665be8714d181e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036861"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
 
 
-  (N-1 で除算)、バイアスをかけない母集団数式を使用し、セットに対して評価される数値式のサンプル標準偏差を返します。  
+  バイアスをかけない母集団の公式 (n-1 で除算) を使用して、セットに対して評価される数値式のサンプル標準偏差を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,13 +29,13 @@ Stdev(Set_Expression [ ,Numeric_Expression ] )
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Numeric_Expression*  
- 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- **Stdev**関数は、バイアスをかけない母集団を使用しているときに、数式、 [StdevP](../mdx/stdevp-mdx.md)関数は、バイアスをかけた母集団の公式を使用します。  
+## <a name="remarks"></a>Remarks  
+ **Stdev**関数は、バイアスをかける母集団の公式を使用し、 [StdevP](../mdx/stdevp-mdx.md)関数はバイアスをかける母集団の公式を使用します。  
   
 ## <a name="example"></a>例  
  次の例では、バイアスをかけない母集団の公式を使用して、2003 年度の最初の 3 か月に対して評価した、Internet Order Quantity の標準偏差を返します。  
@@ -51,7 +51,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

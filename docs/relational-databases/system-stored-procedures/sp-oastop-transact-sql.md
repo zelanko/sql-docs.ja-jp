@@ -1,5 +1,5 @@
 ---
-title: sp_OAStop (TRANSACT-SQL) |Microsoft Docs
+title: sp_OAStop (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAStop
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ead1a768a89e9b43c02d7e80619dbf52165d2a38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1abb0f8f6407fe2674002821484e58cdbdd183b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097612"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901455"
 ---
-# <a name="spoastop-transact-sql"></a>sp_OAStop (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_oastop-transact-sql"></a>sp_OAStop (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  サーバー全体の OLE オートメーション ストアド プロシージャの実行環境を停止します。  
+  サーバー全体の OLE オートメーションストアドプロシージャの実行環境を停止します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,26 +39,26 @@ sp_OAStop
 ```  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
+ 0 (成功) または0以外の数 (失敗)。これは、OLE オートメーションオブジェクトによって返される HRESULT の整数値です。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
+ HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
-## <a name="remarks"></a>コメント  
- OLE オートメーション ストアド プロシージャを使用しているすべてのクライアントで、1 つの実行環境が共有されます。 1 つのクライアントを呼び出す場合**sp_OAStop**共有実行環境がすべてのクライアントを停止します。 すべての呼び出しに、実行環境を停止すると後、 **sp_OACreate**実行環境を再起動します。  
+## <a name="remarks"></a>注釈  
+ 1つの実行環境は、OLE オートメーションストアドプロシージャを使用するすべてのクライアントによって共有されます。 1つのクライアントがを呼び出すと**sp_OAStop**すべてのクライアントに対して共有実行環境が停止します。 実行環境が停止した後、 **sp_OACreate**を呼び出すと、実行環境が再起動されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **sysadmin**固定サーバー ロールまたはアクセス許可をこのストアド プロシージャを直接実行します。 `Ole Automation Procedures` 構成でなければなりません**有効になっている**OLE オートメーションに関連するすべてのシステム プロシージャを使用します。  
+ **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>使用例  
- 次の例では、共有している OLE オートメーション実行環境を停止します。  
+## <a name="examples"></a>例  
+ 次の例では、共有 OLE オートメーション実行環境を停止します。  
   
 ```  
 EXEC sp_OAStop;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [OLE オートメーション ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

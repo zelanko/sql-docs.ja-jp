@@ -1,6 +1,6 @@
 ---
 title: 可用性グループ SQL Server on Linux を操作する
-description: ''
+description: この記事では、可用性グループを使用し、Linux 上の SQL Server インスタンスでローリング アップグレードを実行する方法について説明します。 アップグレードする前に、ベスト プラクティスを確認してください。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4c382b7f04b063ade451ee54d480db906c62e482
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67916041"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899097"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Linux で Always On 可用性グループを操作する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 ## <a name="upgrade-availability-group"></a>可用性グループのアップグレード
 
@@ -76,13 +76,13 @@ ms.locfileid: "67916041"
 
    可用性グループのクラスターの種類が `NONE` の場合、手動でフェールオーバーします。 次の手順を実行します。
 
-      A. 次のコマンドでは、プライマリ レプリカがセカンダリに設定されます。 `AG1` を実際の可用性グループの名前に置換します。 プライマリ レプリカをホストする SQL Server のインスタンスで Transact-SQL コマンドを実行します。
+      a. 次のコマンドでは、プライマリ レプリカがセカンダリに設定されます。 `AG1` を実際の可用性グループの名前に置換します。 プライマリ レプリカをホストする SQL Server のインスタンスで Transact-SQL コマンドを実行します。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. 次のコマンドでは、同期セカンダリ レプリカがプライマリに設定されます。 SQL Server のターゲット インスタンス (同期セカンダリ レプリカをホストするインスタンス) で次の Transact-SQL コマンドを実行します。
+      b. 次のコマンドでは、同期セカンダリ レプリカがプライマリに設定されます。 SQL Server のターゲット インスタンス (同期セカンダリ レプリカをホストするインスタンス) で次の Transact-SQL コマンドを実行します。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
@@ -134,7 +134,7 @@ ms.locfileid: "67916041"
    ```
  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 可用性グループ クラスター リソースに対して Red Hat Enterprise Linux クラスターを構成する](sql-server-linux-availability-group-cluster-rhel.md)
 

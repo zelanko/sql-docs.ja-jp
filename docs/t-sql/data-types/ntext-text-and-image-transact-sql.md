@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8aaae44a73bc7cd7ccf41bf1c33823664044a2e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2881ad1cc83e7916c325c0492c8243d09833c3b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734211"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext、text、および image (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 大きな非 Unicode 文字および Unicode 文字とバイナリ データを格納するための固定長および可変長のデータ型。 Unicode データでは UNICODE UCS-2 文字セットが使用されます。
   
@@ -38,15 +38,15 @@ ms.locfileid: "68086734"
   
 ## <a name="arguments"></a>引数  
 **ntext**  
-文字列の最大長が 2^30 - 1 (1,073,741,823) の可変長の Unicode データを指定します。 ストレージ サイズは、入力する文字列長の 2 倍のバイト長です。 ISO シノニムは、 **ntext** は **national テキスト**です。
+文字列の最大長が 2^30 - 1 (1,073,741,823) の可変長の Unicode データを指定します。 ストレージ サイズは、入力する文字列長の 2 倍のバイト長です。 ISO シノニムは、 **ntext** は **national text**です。
   
 **text**  
 サーバーのコード ページ内の可変長の非 Unicode データを指定します。最大文字列長は 2^31-1 (2,147,483,647) 文字です。 サーバー コード ページで 2 バイト文字が使用されている場合、ストレージのサイズは 2,147,483,647 バイトのままです。 文字列によっては、格納サイズが 2,147,483,647 バイトより少なくなることもあります。
   
-**image**  
+**画像**  
 0 ～ 2^31-1 (2,147,483,647) バイトの可変長のバイナリ データを指定します。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 次の関数とステートメントで使用できる **ntext**, 、**テキスト**, 、または **イメージ** データ。
   
 |関数|ステートメント|  
@@ -59,7 +59,7 @@ ms.locfileid: "68086734"
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[データ型の変換&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  

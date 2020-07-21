@@ -1,5 +1,5 @@
 ---
-title: コマンドを実行する |Microsoft Docs
+title: コマンドの実行 | Microsoft Docs
 description: コマンドの実行
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: f13c9177a74212b849572881f114e503a9530286
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994990"
 ---
 # <a name="executing-a-command"></a>コマンドの実行
@@ -28,11 +28,11 @@ ms.locfileid: "67994990"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  データソースへの接続が確立されると、コンシューマーは**IDBCreateSession:: CreateSession**メソッドを呼び出してセッションを作成します。 セッションは、コマンド、行セット、またはトランザクションのファクトリとして動作します。  
+  データ ソースへの接続が確立されたら、コンシューマーは **IDBCreateSession::CreateSession** メソッドを呼び出してセッションを作成します。 セッションは、コマンド、行セット、またはトランザクションのファクトリとして動作します。  
   
  個別のテーブルやインデックスを直接操作するには、**IOpenRowset** インターフェイスを要求します。 **IOpenRowset::OpenRowset** メソッドは、1 つのベース テーブルまたはベース インデックスからのすべての行が含まれる行セットを開いて返します。  
   
- SELECT \* FROM Authors などのコマンドを実行するには、**IDBCreateCommand** インターフェイスを要求します。 コンシューマーは、 **IDBCreateCommand:: createcommand**メソッドを実行して、コマンドオブジェクトを作成し、 **ICommandText**インターフェイスの要求を行うことができます。 **ICommandText:: SetCommandText**メソッドを使用して、実行するコマンドを指定します。  
+ SELECT \* FROM Authors などのコマンドを実行するには、**IDBCreateCommand** インターフェイスを要求します。 コンシューマーは **IDBCreateCommand::CreateCommand** メソッドを実行してコマンド オブジェクトを作成し、**ICommandText** インターフェイスを要求できます。 実行するコマンドを指定するには、**ICommandText::SetCommandText** メソッドを使用します。  
   
  コマンドを実行するには、**Execute** コマンドを使用します。 コマンドには、任意の SQL ステートメントやプロシージャ名を指定できます。 コマンドを実行しても、必ず結果セット (行セット) オブジェクトが得られるわけではありません。 SELECT * FROM Authors などのコマンドでは、結果セットが得られます。  
   

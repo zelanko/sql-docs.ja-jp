@@ -1,5 +1,5 @@
 ---
-title: Visio データ マイニング ダイアグラム (SQL Server データ マイニング アドイン) のトラブルシューティング |Microsoft Docs
+title: Visio データマイニングダイアグラムのトラブルシューティング (SQL Server データマイニングアドイン) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c60120c6-0af1-45c5-90d1-0a99b878ff18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f787b4d3bfae12d65897e807f43b76b9b8a7520
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065718"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938253"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Visio データ マイニング図形のトラブルシューティング (SQL Server データ マイニング アドイン)
   このトピックには、Visio のデータ マイニング図形に関するトラブルシューティングに役立つ追加情報が含まれています。  
@@ -32,10 +31,10 @@ ms.locfileid: "66065718"
 ## <a name="common-issues"></a>一般的な問題  
  モデルに接続できない  
   コンテンツが表示されない  
-  詳細を表示することはできません。  
+  詳細を表示できません  
   
 ## <a name="see-also"></a>参照  
- [Visio データ マイニング モデルを表示する&#40;データ マイニング アドイン&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
- [Visio データ マイニング モデルを表示する&#40;データ マイニング アドイン&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+ [Visio &#40;データマイニングアドインのデータマイニングモデルの表示&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
+ [Visio &#40;データマイニングアドインのデータマイニングモデルの表示&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
   

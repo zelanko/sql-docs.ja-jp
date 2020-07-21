@@ -1,5 +1,5 @@
 ---
-title: SharePoint ログ ファイルと診断ログ (PowerPivot for SharePoint) 構成し、表示 |Microsoft Docs
+title: SharePoint ログファイルと診断ログの構成と表示 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 360a8b93c20dd57d3dd3d382c843a2f65d5f3c27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071852"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547584"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>SharePoint ログ ファイルと診断ログの構成と表示 (PowerPivot for SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー操作、イベント、およびメッセージは、SharePoint ログ ファイルに記録されます。 このトピックでは、ログ記録レベルの構成とログ ファイルの情報の表示について説明します。 ログ ファイルに記録される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー イベントを制御できます。 また、ログに記録されるメッセージの重大度も制御できます。 詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー操作、イベント、およびメッセージは、SharePoint ログ ファイルに記録されます。 このトピックでは、ログ記録レベルの構成とログ ファイルの情報の表示について説明します。 ログ ファイルに記録される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー イベントを制御できます。 また、ログに記録されるメッセージの重大度も制御できます。 詳細については、「 [&#40;PowerPivot for SharePoint の使用状況データ収集の構成](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)」を参照してください。  
   
- このトピックの内容  
+ このトピックの内容:  
   
 -   [ログ ファイルの場所](#bkmk_filelocation)  
   
@@ -28,14 +27,14 @@ ms.locfileid: "66071852"
   
 -   [SharePoint ログ ファイルの表示方法](#bkmk_how2viewlogfiles)  
   
-##  <a name="bkmk_filelocation"></a> ログ ファイルの場所  
+##  <a name="log-file-location"></a><a name="bkmk_filelocation"></a>ログファイルの場所  
  既定では、SharePoint ログ ファイルは次の場所に保存されます。  
   
  `C:\Program files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS`  
   
  LOGS フォルダーには、ログ ファイル (`.log`)、データ ファイル (`.txt`)、および使用状況ファイル (`.usage`) が保存されています。 SharePoint トレース ログのファイル名前付け規則では、サーバー名の後に日付とタイム スタンプが続きます。 SharePoint トレース ログは定期的に作成され、IISRESET が実行された場合も作成されます。 一般に、24 時間内で多数のトレース ログが作成されます。  
   
-##  <a name="bkmk_modifyloglevels"></a> 個々のイベント カテゴリに対する診断ログ記録レベルの変更  
+##  <a name="modify-diagnostic-logging-levels-for-individual-event-categories"></a><a name="bkmk_modifyloglevels"></a>個々のイベントカテゴリの診断ログレベルを変更する  
  既定では、PowerPivot イベントの ULS ログは *"中"* に設定されています。 この設定は、SQL Server 2012 の新しい設定です。 サーバーを以前のリリースからアップグレードした場合、ログ レベルはまだ SQL Server 2008 R2 のデフォルト レベルの *"詳細"* が設定されている場合があります。 PowerPivot サーバーの使用状況に対する ULS ログを確認することに慣れている場合、この変更によって PowerPivot サーバーの操作に関する情報が少なくなっていることがわかります。  
   
  *"高"* タイプの例外を除くすべての PowerPivot メッセージは、詳細カテゴリに分類されます。 サーバーのルーチン処理 (接続、要求、クエリ レポートなど) のログ エントリが必要な場合、ログ レベルを詳細に変更する必要があります。  
@@ -66,7 +65,7 @@ ms.locfileid: "66071852"
   
 9. **[OK]** をクリックします。  
   
-##  <a name="bkmk_how2viewlogfiles"></a> SharePoint ログ ファイルの表示方法  
+##  <a name="how-to-view-sharepoint-log-files"></a><a name="bkmk_how2viewlogfiles"></a>SharePoint ログファイルを表示する方法  
  ログ ファイルはテキスト ファイルであり、 テキスト エディターで開くことができます。 サードパーティのログ ビューアー アプリケーションを使用することもできます。  
   
 #### <a name="use-a-text-editor"></a>テキスト エディターの使用  
@@ -76,7 +75,7 @@ ms.locfileid: "66071852"
   
 -   エラーに相関 ID が示されている場合は、ID をコピーしてログ ファイルで検索用語として使用します。  
   
--   「高」または「例外」のエラー状態を検索します。 "PowerPivot Service"を検索します。  
+-   「高」または「例外」のエラー状態を検索します。 "PowerPivot サービス" を検索します。  
   
 -   エラーの発生日時を把握している場合は、日付と時刻の情報を使用して、スクロールするエントリの範囲を絞り込みます。  
   
@@ -116,17 +115,17 @@ ms.locfileid: "66071852"
 #### <a name="entries-for-powerpivot-services"></a>PowerPivot サービスのエントリ  
  次の表では、SharePoint ログ ファイルで検出される可能性が最も高い [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー操作のエントリについて説明します。  
   
-|Process|領域|カテゴリ|Level|メッセージ|詳細|  
+|Process|領域|カテゴリ|Level|Message|詳細|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|[PowerPivot サービス]|[使用状況]|"詳細"|現時点では要求の統計は存在せず、ログに記録するものはありません。|サービスは、事前に定義された間隔でクエリ応答統計を使用状況イベントとして使用状況データ収集システムに報告します。 このメッセージは、報告するクエリ統計がないことを示しています。|  
-|w3wp.exe|[PowerPivot サービス]|Web フロント エンド|"詳細"|アプリケーション サーバーのデータ ソースの検索を開始しています =\<*パス*>|接続要求を受信すると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスは使用できる [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] を識別して要求を処理します。 ファーム内にサーバーが 1 台しかない場合は、すべての要求をローカル サーバーが受け取ります。|  
+|w3wp.exe|[PowerPivot サービス]|使用法|"詳細"|現時点では要求の統計は存在せず、ログに記録するものはありません。|サービスは、事前に定義された間隔でクエリ応答統計を使用状況イベントとして使用状況データ収集システムに報告します。 このメッセージは、報告するクエリ統計がないことを示しています。|  
+|w3wp.exe|[PowerPivot サービス]|Web フロント エンド|"詳細"|データソースのアプリケーションサーバーの検索を開始しています =\<*path*>|接続要求を受信すると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービスは使用できる [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] を識別して要求を処理します。 ファーム内にサーバーが 1 台しかない場合は、すべての要求をローカル サーバーが受け取ります。|  
 |w3wp.exe|[PowerPivot サービス]|Web フロント エンド|"詳細"|アプリケーション サーバーの検索に成功しました。|要求は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションに割り当てられました。|  
-|w3wp.exe|[PowerPivot サービス]|Web フロント エンド|"詳細"|リダイレクトの要求、 \< *PowerPivotdata ソース*> を[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]します。|要求は [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]に転送されました。|  
-|w3wp.exe|[PowerPivot サービス]|[要求の処理]|"詳細"|ユーザー名の要求をリダイレクトする\<*SharePoint ユーザー*> データベースへ|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースへの権限を借用した接続が、SharePoint ユーザーの代わりに作成されました。|  
+|w3wp.exe|[PowerPivot サービス]|Web フロント エンド|"詳細"|の要求をにリダイレクトして \<*PowerPivotdata source*> [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] います。|要求は [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]に転送されました。|  
+|w3wp.exe|[PowerPivot サービス]|[要求の処理]|"詳細"|ユーザー名の要求 \<*SharePoint user*> をデータベースにリダイレクトしています|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースへの権限を借用した接続が、SharePoint ユーザーの代わりに作成されました。|  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot 使用状況データ収集](power-pivot-usage-data-collection.md)   
- [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [使用状況データ収集の構成&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+ [SQL Server セットアップログファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [&#40;PowerPivot for SharePoint の使用状況データ収集の構成](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

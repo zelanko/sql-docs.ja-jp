@@ -7,16 +7,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 232338818620069fc31bb57bc29cf07901d0f712
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579991"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77256690"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 レポート ビューアー Web パーツは、SharePoint サイト内の SQL Server Reporting Services (ネイティブ モード) レポートを参照するために使用できるカスタム Web パーツです。 この Web パーツを使用すると、レポート サーバー上のレポートを表示、移動、印刷、およびエクスポートできます。 レポート ビューアー Web パーツは、SQL Server Reporting Services レポート サーバーまたは Power BI Report Server によって処理されるレポート定義 (.rdl) ファイルに関連付けられています。 このレポート ビューアー Web パーツは、Power BI Report Server にホストされている Power BI レポートでは使用できません。
 
@@ -38,7 +38,7 @@ SharePoint Server 2013、SharePoint Server 2016 または SharePoint Server 2019
 
 **サポートされている Reporting Services のバージョン:**  
 * SQL Server 2008 Reporting Services (ネイティブ モード) 以降。
-* Power BI レポート サーバー
+* Power BI Report Server
 
 ## <a name="download-the-report-viewer-web-part-solution-package"></a>レポート ビューアー Web パーツのソリューション パッケージのダウンロード
 
@@ -102,7 +102,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
         }
 ```
 
-## <a name="remove-the-solution"></a>ソリューションの削除
+## <a name="remove-the-solution"></a>ソリューションを削除する
 
 SharePoint サーバーの全体管理でソリューションの取り消しを実行できますが、インストールや修正プログラムの配置に関する問題のトラブルシューティングを体系的に行う場合を除いて、**ReportViewerWebPart.wsp** ファイルを取り消す必要はありません。
 
@@ -145,7 +145,7 @@ Web パーツでサポートされている言語は以下のとおりです。
 * 韓国語 (ko)
 * ポルトガル語 (pt)
 * ロシア語 (ru)
-* 簡体字中国語 (zh-HANS および zh-CHS)
+* 簡体中国語 (zh-HANS および zh-CHS)
 * 繁体中国語 (zh-HANT および zh-CHT)
 
 ## <a name="troubleshoot"></a>[トラブルシューティング]
@@ -168,7 +168,7 @@ Web パーツでサポートされている言語は以下のとおりです。
     2. SSDT をアンインストールする
     3. レポート ビューアー Web パーツを再インストールする
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 レポート ビューアー Web パーツを展開してアクティブ化したら、SharePoint ページに Web パーツを追加できます。 詳細については、「[SharePoint ページへのレポート ビューアー Web パーツの追加](add-report-viewer-web-part-to-page.md)」を参照してください。
 

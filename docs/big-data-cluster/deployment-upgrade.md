@@ -1,32 +1,131 @@
 ---
 title: 新しいリリースにアップグレードする
-titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) を新しいリリースにアップグレードする方法について説明します。
+titleSuffix: SQL Server Big Data Clusters
+description: SQL Server ビッグ データ クラスターを新しいリリースにアップグレードする方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
-ms.translationtype: MT
+ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731090"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607837"
 ---
-# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターをアップグレードする方法
+# <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server ビッグ データ クラスターを新しいリリースにアップグレードする方法に関するガイダンスを提供します。 この記事の手順は、具体的にはプレビュー リリース間でアップグレードする方法に適用されます。
+アップグレード パスは、SQL Server ビッグ データ クラスター (BDC) の現在のバージョンによって異なります。 一般配布リリース (GDR)、累積的な更新プログラム (CU)、または Quick Fix Engineering (QFE) 更新プログラムを含め、サポートされているリリースからアップグレードするには、インプレース アップグレードを行うことができます。 Customer Technology Preview (CTP) またはリリース候補バージョンの BDC からのインプレース アップグレードはサポートされていません。 クラスターを削除し、再作成する必要があります。 次のセクションでは、各シナリオの手順について説明します。
 
-## <a name="backup-and-delete-the-old-cluster"></a>以前のクラスターをバックアップして削除する
+- [サポートされているリリースからのアップグレード](#upgrade-from-supported-release)
+- [CTP またはリリース候補からの BDC 展開の更新](#update-a-bdc-deployment-from-ctp-or-release-candidate)
 
-現時点では、ビッグ データ クラスターを新しいリリースにアップグレードする唯一の方法は、クラスターを手動で削除して再作成することです。 各リリースには、以前のバージョンと互換性のない **azdata** の一意のバージョンがあります。 また、古いクラスターで新しいノードにイメージをダウンロードする必要があった場合は、最新のイメージがクラスター上の古いイメージと互換性がない可能性があります。 最新のリリースにアップグレードするには、次の手順に従います。
+>[!NOTE]
+>ビッグ データ クラスターの最初のサポートされるリリースは、SQL Server 2019 GDR1 です。
 
-1. 以前のクラスターを削除する前に、SQL Server マスター インスタンス上と HDFS 上のデータをバックアップします。 SQL Server マスター インスタンスの場合は、[SQL Server のバックアップと復元](data-ingestion-restore-database.md)を使用できます。 HDFS の場合は、[**curl** を使用してデータをコピーできます](data-ingestion-curl.md)。
+## <a name="upgrade-release-notes"></a>アップグレードのリリース ノート
+
+次に進む前に、[既知の問題に関するアップグレードのリリース ノート](release-notes-big-data-cluster.md#known-issues)を確認します。
+
+## <a name="upgrade-from-supported-release"></a>サポートされているリリースからのアップグレード
+
+このセクションでは、SQL Server BDC を、サポートされているリリース (SQL Server 2019 GDR1 以降) から新しいサポートされているリリースにアップグレードする方法について説明します。
+
+1. SQL Server マスター インスタンスをバックアップします。
+2. HDFS をバックアップします。
+
+   ```
+   azdata bdc hdfs cp --from-path <path> --to-path <path>
+   ```
+   
+   次に例を示します。 
+
+   ```
+   azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
+   ```
+
+3. `azdata` を更新します。
+
+   `azdata` のインストール手順に従います。 
+   - [Windows インストーラー](deploy-install-azdata-installer.md)
+   - [Linux (apt を使用)](deploy-install-azdata-linux-package.md)
+   - [Linux (yum を使用)](deploy-install-azdata-yum.md)
+   - [Linux (zypper を使用)](deploy-install-azdata-zypper.md)
+
+   >[!NOTE]
+   >`azdata` が `pip` と共にインストールされている場合は、Windows インストーラーまたは Linux パッケージ マネージャーを使ってインストールする前に、手動で削除する必要があります。
+
+1. ビッグ データ クラスターを更新します。
+
+   ```
+   azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
+   ```
+
+   たとえば、次のスクリプトでは `2019-CU4-ubuntu-16.04` イメージ タグを使用しています。
+
+   ```
+   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   ```
+
+>[!NOTE]
+>最新のイメージ タグは、[SQL Server 2019 ビッグ データ クラスターのリリース ノート](release-notes-big-data-cluster.md)で入手できます。
+
+>[!IMPORTANT]
+>プライベート リポジトリを使用して BDC を展開またはアップグレードするためにイメージを事前にプルする場合は、現在のビルド イメージとターゲット ビルド イメージがプライベート リポジトリ内にあることを確認します。 これにより、必要な場合に正常にロールバックすることが可能になります。 また、最初の展開以降にプライベート リポジトリの >資格情報を変更した場合は、対応する環境変数 DOCKER_PASSWORD および >DOCKER_USERNAME を更新します。 現在のビルドとターゲット ビルドに異なるプライベート リポジトリを使用したアップグレードはサポートされていません。
+
+### <a name="increase-the-timeout-for-the-upgrade"></a>アップグレードのタイムアウトを増やす
+
+割り当てられた時間内に特定のコンポーネントがアップグレードされない場合、タイムアウトが発生する可能性があります。 次のコードにエラー例を示します。
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
+   ```
+
+アップグレードのタイムアウトを増やすには、 **--controller-timeout** と **--component-timeout** パラメーターを使用して、アップグレードの発行時に高い値を指定します。 このオプションは、SQL Server 2019 CU2 リリース以降でのみ使用できます。 次に例を示します。
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+**--controller-timeout** では、コントローラーまたはコントローラー db のアップグレードが完了するまでの待機時間を分単位で指定します。
+**--component-timeout** では、これ以降のアップグレードの各フェーズの完了時間を指定します。
+
+SQL Server 2019 CU2 リリースより前の場合にアップグレードのタイムアウトを増やすには、アップグレード構成マップを編集します。 アップグレード構成マップを編集するには:
+
+次のコマンドを実行します。
+
+   ```bash
+   kubectl edit configmap controller-upgrade-configmap
+   ```
+
+次のフィールドを編集します。
+
+   **controllerUpgradeTimeoutInMinutes** コントローラーまたはコントローラー db のアップグレードが完了するまでの待機時間を分単位で指定します。 既定値は 5 です。 20 以上に更新します。
+   **totalUpgradeTimeoutInMinutes**:コントローラーとコントローラー db の両方のアップグレード (コントローラー + コントローラー db のアップグレード) が完了するまでの合計時間を指定します。既定値は 10 です。 40 以上に更新します。
+   **componentUpgradeTimeoutInMinutes**:アップグレードの後続の各フェーズが完了するまでの時間を指定します。 既定値は 30 です。 45 に更新します。
+
+保存して終了します。
+
+## <a name="update-a-bdc-deployment-from-ctp-or-release-candidate"></a>CTP またはリリース候補からの BDC 展開の更新
+
+SQL Server ビッグ データ クラスターの CTP またはリリース候補ビルドからのインプレース アップグレードはサポートされていません。 次のセクションでは、クラスターを手動で削除し、再作成する方法について説明します。
+
+### <a name="backup-and-delete-the-old-cluster"></a>以前のクラスターをバックアップして削除する
+
+SQL Server 2019 GDR1 リリースの前に展開されたビッグ データ クラスターのインプレース アップグレードはありません。 新しいリリースにアップグレードする唯一の方法は、クラスターを手動で削除して再作成することです。 各リリースには、以前のバージョンと互換性のない固有のバージョンの `azdata` があります。 また、別の以前のバージョンで展開されたクラスターに新しいコンテナー イメージをダウンロードした場合、最新のイメージはクラスター上の以前のイメージと互換性がない可能性があります。 コンテナー設定の展開構成ファイルで `latest` イメージ タグを使用している場合は、新しいイメージがプルされます。 既定では、各リリースには、SQl Server のリリース バージョンに対応する固有のイメージ タグがあります。 最新のリリースにアップグレードするには、次の手順に従います。
+
+1. 以前のクラスターを削除する前に、SQL Server マスター インスタンス上と HDFS 上のデータをバックアップします。 SQL Server マスター インスタンスの場合は、[SQL Server のバックアップと復元](data-ingestion-restore-database.md)を使用できます。 HDFS の場合は、[`curl` を使用してデータをコピーできます](data-ingestion-curl.md)。
 
 1. `azdata delete cluster` コマンドを使用して、古いクラスターを削除します。
 
@@ -35,17 +134,18 @@ ms.locfileid: "68731090"
    ```
 
    > [!Important]
-   > お使いのクラスターに一致する **azdata** のバージョンを使用します。 **azdata** の新しいバージョンがある古いクラスターは削除しないでください。
+   > クラスターと一致するバージョンの `azdata` を使用します。 新しいバージョンの `azdata` で古いクラスターを削除しないでください。
 
-1. CTP 3.2 より前では、**azdata** は **mssqlctl** と呼ばれていました。 以前のリリースの **mssqlctl** または **azdata** がインストールされている場合は、**azdata** の最新バージョンをインストールする前に、まずこれらをアンインストールすることが重要です。
+   > [!Note]
+   > `azdata bdc delete` コマンドを発行すると、そのビッグ データ クラスター名で示される名前空間内で作成されたすべてのオブジェクトは削除されますが、名前空間自体は削除されません。 名前空間は、空で、他のアプリケーションが中に作成されていない限り、後の展開に再利用できます。
 
-   CTP 2.3 以降の場合は、次のコマンドを実行します。 コマンド内の `ctp3.1` を、アンインストールする **mssqlctl** のバージョンに置き換えます。 バージョンが CTP 3.1 より前の場合は、バージョン番号の前にダッシュ (例: `ctp-2.5`) を追加します。
+1. 以前のバージョンの `azdata` をアンインストールします。
 
    ```powershell
-   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-rc1/requirements.txt
    ```
 
-1. **azdata** の最新バージョンをインストールします。 次のコマンドを実行すると、CTP 3.2 の **azdata** がインストールされます。
+1. 最新バージョンの `azdata` をインストールします。 次のコマンドでは、最新のリリースから `azdata` がインストールされます。
 
    **Windows:**
 
@@ -60,20 +160,20 @@ ms.locfileid: "68731090"
    ```
 
    > [!IMPORTANT]
-   > 各リリースで、**azdata** へのパスが変更されます。 以前に **azdata** または **mssqlctl** をインストールしている場合でも、新しいクラスターを作成する前に、最新のパスから再インストールする必要があります。
+   > 各リリースで、`azdata` の `n-1` バージョンへのパスが変更されます。 以前に `azdata` をインストールしている場合でも、新しいクラスターを作成する前に、最新のパスから再インストールする必要があります。
 
-## <a id="azdataversion"></a> azdata のバージョンを確認する
+### <a name="verify-the-azdata-version"></a><a id="azdataversion"></a> azdata のバージョンを確認する
 
-新しいビッグ データ クラスターを展開する前に、`--version` パラメーターを指定して、最新バージョンの **azdata** を使用していることを確認します。
+新しいビッグ データ クラスターを展開する前に、`--version` パラメーターを指定して、最新バージョンの `azdata` を使用していることを確認します。
 
 ```bash
 azdata --version
 ```
 
-## <a name="install-the-new-release"></a>新しいリリースをインストールする
+### <a name="install-the-new-release"></a>新しいリリースをインストールする
 
-以前のビッグ データ クラスターを削除し、最新の **azdata** をインストールしたら、現在の展開手順に従って、新しいビッグ データ クラスターを展開します。 詳細については、「[Kubernetes に SQL Server ビッグ データ クラスターを展開する方法](deployment-guidance.md)」を参照してください。 次に、必要なデータベースまたはファイルを復元します。
+以前のビッグ データ クラスターを削除し、最新の `azdata` をインストールしたら、現在の展開手順に従って、新しいビッグ データ クラスターを展開します。 詳細については、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md)」を参照してください。 次に、必要なデータベースまたはファイルを復元します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-ビッグ データ クラスターの詳細については、「[SQL Server ビッグ データ クラスターとは](big-data-cluster-overview.md)」を参照してください。
+ビッグ データ クラスターの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] とは](big-data-cluster-overview.md)の概要に関するページを参照してください。

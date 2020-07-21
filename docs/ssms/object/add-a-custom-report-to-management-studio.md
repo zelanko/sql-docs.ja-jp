@@ -1,6 +1,6 @@
 ---
-title: Management Studio へのカスタム レポートの追加 | Microsoft Docs
-ms.custom: ''
+title: Management Studio へのカスタム レポートの追加
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84aee831cb03ebf419849fca8bf653803e5d5ced
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a7a287cad9b674c55f032a04490a0518f723a797
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263462"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251360"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Management Studio へのカスタム レポートの追加
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,5 +72,5 @@ ms.locfileid: "68263462"
 [Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)  
 [カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
 [カスタム レポート実行時の警告の抑制を解除する方法](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[SQL Server Reporting Services (SQL Server Reporting Services) (SQL Server Reporting Services (SQL Server Reporting Services))](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+[SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

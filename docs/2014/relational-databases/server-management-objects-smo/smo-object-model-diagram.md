@@ -1,5 +1,5 @@
 ---
-title: SMO オブジェクト モデル ダイアグラム |Microsoft Docs
+title: SMO オブジェクトモデルダイアグラム |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: c3de6c94-8ef5-4ac6-9529-8f8c11b72ebb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 716ade5265c2bb3325ad08005c98a1e67c474419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d582db9f9e6604841ca77d948f54608a13abfc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63130645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055220"
 ---
 # <a name="smo-object-model-diagram"></a>SMO オブジェクト モデル ダイアグラム
   このダイアグラムでは、SMO オブジェクト階層およびオブジェクト型間のリレーションシップを示します。 <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトはトップ レベル オブジェクトです。  
   
- ![階層リレーションシップを示す図](../../../2014/database-engine/dev-guide/media/object-diagram.gif "階層リレーションシップを示す図")  
+ ![階層リレーションシップ](../../../2014/database-engine/dev-guide/media/object-diagram.gif "階層リレーションシップ")  
   
  ![オブジェクト モデル、階層を示すツリー ビュー](../../../2014/database-engine/dev-guide/media/object-diagram-02.gif "オブジェクト モデル、階層を示すツリー ビュー")  
   

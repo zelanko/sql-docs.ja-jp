@@ -1,5 +1,5 @@
 ---
-title: 可用性グループのプロパティおよび新しい可用性グループ ([全般] ページ) |Microsoft Docs
+title: 可用性グループのプロパティと [新しい可用性グループ] ([全般] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2159f5eaecd88425fa856e760af412f869186588
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815655"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937103"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>[可用性グループのプロパティ] と [新しい可用性グループ] ([全般] ページ)
-  このトピックは、 **[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
+   このトピックは、**[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
   
  **可用性グループのプロパティを表示するには**  
   
@@ -28,22 +27,22 @@ ms.locfileid: "62815655"
   
 -   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
- **[可用性グループ名]**  
+## <a name="ui-element-list"></a>UI 要素の一覧  
+ **可用性グループ名**  
  可用性グループの名前。 これはユーザー指定の名前であり、Windows Server フェールオーバー クラスター (WSFC) 内で一意であることが必要です。  
   
 ## <a name="availability-databases"></a>可用性データベース  
- **Database Name**  
+ **データベース名**  
  可用性グループに追加されたデータベースの名前。  
   
- **[追加]**  
+ **追加**  
  クリックすると、データベースが可用性グループに追加されます。  
   
- **[削除]**  
+ **削除**  
  クリックすると、選択したデータベースが可用性グループから削除されます。  
   
 ## <a name="availability-replicas"></a>可用性レプリカ  
- **サーバー インスタンス**  
+ **サーバーインスタンス**  
  このレプリカをホストし、既定ではないインスタンスの場合はレプリカのインスタンス名もホストしている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのサーバー名。  
   
  **ロール**  
@@ -59,13 +58,13 @@ ms.locfileid: "62815655"
  **可用性モード**  
  レプリカの可用性モード。次のいずれかです。  
   
- **[非同期コミット]**  
+ **非同期コミット**  
  プライマリ レプリカは、セカンダリがログをディスクに書き込むのを待機することなくトランザクションをコミットできます。  
   
- **[同期コミット]**  
+ **同期コミット**  
  プライマリ レプリカは、セカンダリ レプリカがトランザクションをディスクに書き込むまで、特定のトランザクションのコミットを待機します。  
   
- 詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)します。  
+ 詳細については、「[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)」を参照してください。  
   
  **フェールオーバー モード**  
  レプリカのフェールオーバー モード。次のいずれかです。  
@@ -76,16 +75,16 @@ ms.locfileid: "62815655"
  **手動**  
  手動フェールオーバー。 このレプリカには、データベース管理者が手動でのみフェールオーバーできます。  
   
- **[プライマリ ロールの接続]**  
+ **プライマリロールでの接続**  
  レプリカがプライマリ ロールを所有している場合にサポートされるクライアント接続の種類。  
   
- **[すべての接続を許可]**  
+ **すべての接続を許可する**  
  プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これが既定の設定です。  
   
  **[読み取り/書き込みの接続を許可]**  
  Application Intent 接続プロパティが **ReadOnly** に設定されている接続は許可されません。 Application Intent プロパティが **ReadWrite** に設定されている場合、または Application Intent 接続プロパティが設定されていない場合は、接続が許可されます。 "アプリケーションの目的" 接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
- **[読み取り可能セカンダリ]**  
+ **読み取り可能なセカンダリ**  
  セカンダリ ロールを実行している (つまりセカンダリ レプリカとして機能している) 可用性レプリカがクライアントからの接続を受け入れることができるかどうか。以下のいずれかです。  
   
  **いいえ**  
@@ -97,19 +96,19 @@ ms.locfileid: "62815655"
  **はい**  
  読み取りアクセスに限り、このレプリカのセカンダリ データベースに対するすべての接続が許可されます。 セカンダリ データベースはすべて読み取りアクセスで利用できます。  
   
- **[セッションのタイムアウト (秒)]**  
+ **セッションのタイムアウト (秒)**  
  このレプリカでのセッションのタイムアウト期間の秒数。  
   
  **エンドポイント URL**  
  エンドポイントの URL です。 詳細については、「[可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)」を参照してください。  
   
- **[追加]**  
+ **追加**  
  クリックすると、セカンダリ レプリカが可用性グループに追加されます。  
   
- **[削除]**  
+ **削除**  
  クリックすると、セカンダリ レプリカが可用性グループから削除されます。  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: WSFC クラスター サービスはオフライン | Microsoft Docs
+description: WSFC クラスター サービスでは、Windows Server フェールオーバー クラスターの状態がチェックされます。 クラスターがオフラインであるか、強制クォーラム状態にある場合、ポリシーは異常な状態です。
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,18 +15,18 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c0d069601c36ba46be3c1950300c16b8808c264f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8a5b8b3d7c512ca57cf2bd154f1db6a5d3cc4979
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013351"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439949"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC クラスター サービスはオフライン
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  
@@ -34,7 +35,7 @@ ms.locfileid: "68013351"
 |**カテゴリ**|**重大**|  
 |**ファセット**|SQL Server のインスタンス|  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  このポリシーは、Windows Server フェールオーバー クラスター (WSFC) の状態をチェックします。 WSFC クラスターがオフラインであるか、強制されたクォーラムの状態である場合、ポリシーは異常な状態で、アラートが発生します。 このクラスター内でホストされているすべての可用性グループはオフラインであるか、またはディザスター リカバリー アクションが必要です。  
   
  クラスターの状態が標準のクォーラムである場合、ポリシーは正常な状態です。  

@@ -1,7 +1,7 @@
 ---
 title: 出力パラメーターがあるストアド プロシージャの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916493"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69026832"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>出力パラメーターがあるストアド プロシージャの使用
 
@@ -28,11 +28,11 @@ JDBC ドライバーを使用してこの種類のストアド プロシージ�
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> SQL エスケープシーケンスの詳細については、「 [Sql エスケープシーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)」を参照してください。
+> SQL エスケープ シーケンスの詳細については、「[SQL エスケープシーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)」を参照してください。
 
 `call` エスケープ シーケンスを作成する場合、OUT パラメーターは ? (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 OUT パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。
 
-registerOutParameter メソッドで OUT パラメーターに指定する値は、java.sql.Types に含まれる JDBC データ型のいずれかである必要があります。この値は、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の 1 つに順にマップされます。 Jdbc と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型の詳細については、「 [jdbc ドライバーのデータ型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)について」を参照してください。
+registerOutParameter メソッドで OUT パラメーターに指定する値は、java.sql.Types に含まれる JDBC データ型のいずれかである必要があります。この値は、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の 1 つに順にマップされます。 JDBC データ型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の詳細については、「[JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)」を参照してください。
 
 registerOutParameter メソッドに OUT パラメーターの値を渡す場合は、パラメーターに使用するデータ型だけでなく、ストアド プロシージャ内のパラメーターの順序またはパラメーター名も指定する必要があります。 たとえば、ストアド プロシージャに 1 つの OUT パラメーターがある場合、その序数値は 1 です。ストアド プロシージャに 2 つのパラメーターがある場合、最初の序数値は 1 で、2 番目の序数値は 2 になります。
 
@@ -82,9 +82,9 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 ```
 
 > [!NOTE]  
-> これらの例では、SQLServerCallableStatement クラスの execute メソッドを使用してストアドプロシージャを実行します。 このメソッドを使用しているのは、ストアド プロシージャによって結果セットが返されないためです。 結果セットが返される場合は、[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを使用します。
+> これらの例では、SQLServerCallableStatement クラスの execute メソッドを使用してストアド プロシージャを実行します。 このメソッドを使用しているのは、ストアド プロシージャによって結果セットが返されないためです。 結果セットが返される場合は、[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを使用します。
 
-ストアド プロシージャは、更新数および複数の結果セットを返すことができます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が準拠している JDBC 3.0 仕様は、複数の結果セットと更新数が、OUT パラメーターの取得前に取得されなければならない旨が規定されています。 つまり、アプリケーションは、すべての ResultSet オブジェクトと更新数を取得してから、CallableStatement. getter メソッドを使用して OUT パラメーターを取得する必要があります。 そうしないと、OUT パラメーターの取得時に、未取得の ResultSet オブジェクトおよび更新数が失われます。 更新数および複数の結果セットの詳細については、「Update Count を使用し[たストアドプロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)」および「[複数の結果セットの使用](../../connect/jdbc/using-multiple-result-sets.md)」を参照してください。
+ストアド プロシージャは、更新数および複数の結果セットを返すことができます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が準拠している JDBC 3.0 仕様は、複数の結果セットと更新数が、OUT パラメーターの取得前に取得されなければならない旨が規定されています。 つまり、アプリケーションで CallableStatement.getter メソッドを使用して、OUT パラメーターを取得する前に、すべての ResultSet オブジェクトおよび更新数を取得する必要があります。 そうしないと、OUT パラメーターの取得時に、未取得の ResultSet オブジェクトおよび更新数が失われます。 更新数および複数の結果セットの詳細については、「[更新数があるストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)」と「[複数の結果セットの使用](../../connect/jdbc/using-multiple-result-sets.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
 

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 055bb2e9bc0bc2f1ef70b8a7a7eee07071929ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39386d6052a84118d604c85423918b94f8bb8a07
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971832"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>リンク属性を作成する (マスター データ サービス)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でユーザーに属性値としてハイパーリンク (http://www.contoso.com など) を入力させる場合、リンク属性を作成します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でユーザーに属性値としてハイパーリンク (`http://www.contoso.com` など) を入力させる場合、リンク属性を作成します。  
   
 > [!NOTE]  
 >  ユーザーがリンク属性の値を入力するとき、文字列は **http://** で始まる必要があり、そうでないとエラーが表示されます。  
@@ -29,9 +28,9 @@ ms.locfileid: "65479954"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 -   属性を作成するエンティティが存在する必要があります。 詳細については、「[エンティティを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-entity-master-data-services.md)」を参照してください。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "65479954"
   
 7.  **[属性の追加]** ページで **[自由形式]** オプションを選択します。  
   
-8.  **[名前]** ボックスに属性の名前を入力します。 属性名として使用できない単語の一覧については、「[予約語 (マスター データ サービス)](../../2014/master-data-services/reserved-words-master-data-services.md)」を参照してください。  
+8.  **[名前]** ボックスに属性の名前を入力します。 属性名として使用しない単語の一覧については、「[予約語 &#40;マスターデータサービス&#41;](../../2014/master-data-services/reserved-words-master-data-services.md)」を参照してください。  
   
 9. **[ピクセル幅の表示]** ボックスに、 **[エクスプローラー]** グリッドに表示する属性列の幅を入力します。  
   
@@ -72,9 +71,9 @@ ms.locfileid: "65479954"
 14. **[エンティティのメンテナンス]** ページで **[エンティティの保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)   
- [属性名を変更&#40;マスター データ サービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
- [ドメイン ベースの属性を作成する &#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [属性名を変更する &#40;マスターデータサービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
+ [ドメインベースの属性 &#40;マスターデータサービスを作成&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [ファイル属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャのプロパティの例 (JScript) |Microsoft Docs
+title: ストアドプロシージャプロパティの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c9c474cfe2b1d38154129070cb11c91434ee4fad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0fb389dd9761ff4e310d5047f85085b7f9ff6a43
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921557"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763563"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (JScript)
-この例では、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)、 [サイズ](../../../ado/reference/ado-api/size-property-ado-parameter.md)、および[方向](../../../ado/reference/ado-api/direction-property.md)プロパティをストアド プロシージャを実行します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**ActiveConnectionJS.asp**します。  
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (JScript)
+この例では、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)、および[Direction](../../../ado/reference/ado-api/direction-property.md)プロパティを使用してストアドプロシージャを実行します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Activeconnectionjs .asp**として保存します。  
   
 ```  
 <!-- BeginActiveConnectionJS -->  
@@ -172,15 +172,15 @@ BODY {
 <!-- EndActiveConnectionJS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ActiveCommand プロパティ (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTimeout プロパティ (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
  [CommandType プロパティ (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Direction プロパティ](../../../ado/reference/ado-api/direction-property.md)   
- [パラメーター オブジェクト](../../../ado/reference/ado-api/parameter-object.md)   
+ [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)   
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Size プロパティ (ADO Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

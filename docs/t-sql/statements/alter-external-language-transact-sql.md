@@ -1,24 +1,24 @@
 ---
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 11/04/2019
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: language-extensions
 ms.topic: language-reference
 author: nelgson
 ms.author: negust
+ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a503c77b49b8e57139ded0b29873fc18cd2b342
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 89b0656705528c9dfc4f249d89427fc56a99fb2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761903"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 データベース内の既存の外部言語拡張機能の内容を変更します。
 
@@ -100,21 +100,21 @@ ALTER EXTERNAL LANGUAGE language_name
 
 **external_lang_env_variables**
 
-これにより、外部プロセスの開始前に、外部言語ランタイムに環境変数のセットを提供できます。 環境変数の例は、たとえば、ランタイム自体のホーム ディレクトリです。 例:JRE_HOME。
+これにより、外部プロセスの開始前に、外部言語ランタイムに環境変数のセットを提供できます。 環境変数の例は、たとえば、ランタイム自体のホーム ディレクトリです。 次に例を示します。JRE_HOME。
 
 **platform**
 
 このパラメーターは、ハイブリッド OS のシナリオに必要です。 ハイブリッド アーキテクチャでは、プラットフォームごとに 1 回、言語を登録する必要があります。 プラットフォームと言語の名前は、外部言語ごとの一意のキーになります。 プラットフォームを指定しないと、現在の OS が想定されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-CTP 3.0 では、**PARAMETERS** と **ENVIRONMENT_VARIABLES** はサポートされていません。
+現在、**PARAMETERS** と **ENVIRONMENT_VARIABLES** はサポートされていません。
 
 ## <a name="permissions"></a>アクセス許可
 
 `ALTER ANY EXTERNAL LANGUAGE` アクセス許可が必要です。 既定では、**db_owner** ロールのメンバーである **dbo** を持つすべてのユーザーに、外部言語を変更するためのアクセス許可があります。 他のすべてのユーザーについては、[GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) ステートメントを使用し、特権として ALTER ANY EXTERNAL LANGUAGE を指定して、アクセス許可を明示的に付与する必要があります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="alter-an-external-language-in-a-database"></a>データベース内の外部言語を変更する  
 
@@ -126,7 +126,7 @@ SET (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CREATE EXTERNAL LANGUAGE (Transact-SQL)](create-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  

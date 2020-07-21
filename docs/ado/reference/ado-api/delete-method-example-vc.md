@@ -1,5 +1,5 @@
 ---
-title: Delete メソッドの例 (vc++) |Microsoft Docs
+title: Delete メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADO], VC++ example
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: af20890a9c75ee815145b78f1c10de377b861436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 121db203f5f30abe54bf021f1ecf52784215074d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933102"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755351"
 ---
 # <a name="delete-method-example-vc"></a>Delete メソッドの例 (VC++)
-この例では、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)から指定されたレコードを削除する方法、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
+この例では、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)メソッドを使用して、レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定されたレコードを削除します。  
   
 ## <a name="example"></a>例  
   
@@ -265,7 +265,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>入力のサンプル  
+## <a name="sample-input"></a>サンプル入力  
   
 ```  
 TC4203  
@@ -293,6 +293,6 @@ MC2222
 BU7832  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Delete メソッド (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

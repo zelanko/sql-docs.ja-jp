@@ -1,6 +1,7 @@
 ---
-title: tablediff ユーティリティ |Microsoft Docs
-ms.custom: ''
+title: tablediff ユーティリティ
+description: tablediff ユーティリティを使用して、2 つのテーブル内のデータを比較して非収束の発生を調べ、レプリケーション トポロジ内の非収束をトラブルシューティングします。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,18 +20,18 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: b7f8a136c5aa17b1d7ed32cdc8024cdc44db0d25
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986038"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150514"
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **tablediff** ユーティリティは、2 つのテーブル内のデータを比較して非収束の発生を調べる場合に使用されます。これは、レプリケーション トポロジ内の非収束に対するトラブルシューティングを行うときに特に便利です。 このユーティリティは、コマンド プロンプトから、またはバッチ ファイル内で使用して、次のタスクを実行することができます。  
   
--   レプリケーション パブリッシャーとして動作する [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス内のソース テーブルと、レプリケーション サブスクライバーとして動作する 1 つ以上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスにある対象テーブルの間で、1 行単位の比較を行う。  
+-   レプリケーション パブリッシャーとして動作する [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンス内のソース テーブルと、レプリケーション サブスクライバーとして動作する 1 つ以上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスにある対象テーブルの間で、1 行単位の比較を行う。  
   
 -   行数とスキーマのみを比較することによる高速比較を実行します。  
   
@@ -131,7 +132,7 @@ tablediff
  **-b** _large_object_bytes_  
  ラージ オブジェクト データ型の列に対して比較するバイト数を指定します。列の型は、 **text**、 **ntext**、 **image**、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
   
- **-bf**  _number_of_statements_  
+ **-bf** _number_of_statements_  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] オプションを使用する場合に、現在の **スクリプト ファイルに書き込む** ステートメントの数を指定します。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの数が *number_of_statements*で指定した値を超えると、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルが作成されます。  
   
  **-c**  
@@ -155,7 +156,7 @@ tablediff
  **-rc** _number_of_retries_  
  操作が失敗した場合に、ユーティリティが再試行する回数を指定します。  
   
- **-ri**  _retry_interval_  
+ **-ri** _retry_interval_  
  再試行間隔を指定します (秒単位)。  
   
  **-strict**  
@@ -166,13 +167,13 @@ tablediff
   
 ## <a name="return-value"></a>戻り値  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**0**|成功|  
+|**0**|Success|  
 |**1**|重大なエラー|  
 |**2**|テーブルの差分|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **tablediff** ユーティリティは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のサーバーでは使用できません。  
   
  **sql_variant** データ型列を含むテーブルはサポートされていません。  

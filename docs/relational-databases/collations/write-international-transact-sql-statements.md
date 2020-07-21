@@ -18,24 +18,25 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eb6cf7d397bc8fdc8ab37d17e830ad2b373882e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 72b2d6056d3a48d21804d02677867a9757f4f671
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140822"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003929"
 ---
 # <a name="write-international-transact-sql-statements"></a>国際化に対応した Transact-SQL ステートメントの記述
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   以下のガイドラインに従うと、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するデータベースやデータベース アプリケーションをある言語から別の言語に移行することが容易になり、複数の言語をサポートできます。  
 
--   [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、次のいずれかを使用します。
-    -   [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) が有効になっている照合順序で **char**、**varchar**、**varchar(max)** データ型。
-    -   [補助文字](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) が有効になっている照合順序で **nchar**、**nvarchar**、**nvarchar(max)** データ型。      
+-   [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、次のいずれかを使用します。
+    -   **char**、**varchar**、**varchar(max)** の各データ型では [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 対応の照合順序が使用され、データは UTF-8 を使用してエンコードされます。
+    -   **nchar**、**nvarchar**、**nvarchar(max)** の各データ型では[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 対応の照合順序が使用され、データは UTF-16 を使用してエンコードされます。 SC 以外の照合順序を使用すると、データは UCS-2 を使用してエンコードされます。      
 
     これによりコード ページ変換の問題を回避できます。 他の考慮事項については、「[UTF-8 と UTF-16 でのストレージの相違点](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)」をご覧ください。  
 
--   [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] までは、**char**、**varchar**、**varchar(max)** の各データ型を使用しているすべての個所をそれぞれ **nchar**、**nvarchar**、**nvarchar(max)** データ型に置き換えます。 これによりコード ページ変換の問題を回避できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 
+-   [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] までは、**char**、**varchar**、**varchar(max)** の各データ型を使用しているすべての個所をそれぞれ **nchar**、**nvarchar**、**nvarchar(max)** データ型に置き換えます。 [補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 対応の照合順序を使用する場合、データは UTF-16 を使用してエンコードされます。 SC 以外の照合順序を使用すると、データは UCS-2 を使用してエンコードされます。 これによりコード ページ変換の問題を回避できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 
+
     > [!IMPORTANT]
     > **text** データ型は非推奨で、新しい開発作業では使用できません。 **text** データの **varchar(max)** への変換を検討してください。
   
@@ -45,11 +46,11 @@ ms.locfileid: "68140822"
   
     -   ADO、OLE DB、および ODBC アプリケーションでは、以下に示す ODBC タイムスタンプ、日付、時刻のエスケープ句を使用する必要があります。  
   
-         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** 、例: **{ ts'1998-09-24 10:02:20'}**  
+         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** (例: **{ ts'1998-09-24 10:02:20'}** )  
   
-         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** 、例: **{ d'1998-09-24'}**
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** (例: **{ d'1998-09-24'}** )
   
-         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** 、例: **{ t'10:02:20'}**  
+         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** (例: **{ t'10:02:20'}** )  
   
     -   他の API、または [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト、ストアド プロシージャ、およびトリガーを使用するアプリケーションでは、区切られていない数字列を使用してください。 たとえば、 *yyyymmdd* には 19980924 を使用します。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68140822"
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)     
 [DATEPART &#40;Transact-SQL&#41;](../../t-sql/functions/datepart-transact-sql.md)        
 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)      

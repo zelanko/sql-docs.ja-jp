@@ -1,23 +1,23 @@
 ---
 title: SQL Server on Linux のパフォーマンスに関するベスト プラクティス
 description: この記事では、SQL Server on Linux の実行に関するパフォーマンスのベスト プラクティスとガイドラインを提供します。
-author: rgward
-ms.author: bobward
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68105443"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887828"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、SQL Server on Linux に接続するデータベース アプリケーションのパフォーマンスを最大化するためのベスト プラクティスと推奨事項について説明します。 これらの推奨事項は、Linux プラットフォームでの実行に固有のものです。 インデックスの設計など、通常の SQL Server の推奨事項はすべて引き続き適用されます。
 
@@ -31,7 +31,7 @@ ms.locfileid: "68105443"
 
 - **ノードまたは CPU に PROCESS AFFINITY を使用する**
 
-   Linux オペレーティング システム上の SQL Server (通常はすべてのノードと CPU) に使用しているすべての **NUMANODE**、CPU、または両方に `ALTER SERVER CONFIGURATION` を使用して `PROCESS AFFINITY` を設定することをお勧めします。 プロセッサ関係は、効率的な Linux および SQL スケジューリングの動作を維持するために役立ちます。 **NUMANODE** オプションを使用するのが最も簡単な方法です。 コンピューターに NUMA ノードが 1 つしかない場合でも、**PROCESS AFFINITY** を使用する必要があることに注意してください。  **PROCESS AFFINITY** の設定方法の詳細については、「[ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md)」のドキュメントを参照してください。
+   Linux オペレーティング システム上の SQL Server (通常はすべてのノードと CPU) に使用しているすべての `ALTER SERVER CONFIGURATION`NUMANODE`PROCESS AFFINITY`、CPU、または両方に **を使用して** を設定することをお勧めします。 プロセッサ関係は、効率的な Linux および SQL スケジューリングの動作を維持するために役立ちます。 **NUMANODE** オプションを使用するのが最も簡単な方法です。 コンピューターに NUMA ノードが 1 つしかない場合でも、**PROCESS AFFINITY** を使用する必要があることに注意してください。  [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) の設定方法の詳細については、「**ALTER SERVER CONFIGURATION**」のドキュメントを参照してください。
 
 - **複数の tempdb データ ファイルを構成する**
 
@@ -57,11 +57,11 @@ SQL Server のインストールで最適なパフォーマンスを得るには
 
 
 > [!Note]
-> Red Hat Enterprise Linux (RHEL) のユーザーについては、スループットパフォーマンス プロファイルによって (C-States を除く) これらの設定が自動的に構成されます。
+> Red Hat Enterprise Linux (RHEL) のユーザーについては、[調整された](https://tuned-project.org)スループットパフォーマンス プロファイルによって (C-States を除く) これらの設定が自動的に構成されます。 RHEL 8.0 以降、/usr/lib/tuned 組み込み mssql プロファイルは Red Hat と共に共同開発され、SQL Server ワークロードの調整に関する Linux のパフォーマンスが向上しています。 このプロファイルには、RHEL のスループット パフォーマンス プロファイルが含まれており、このプロファイルを使用しない他の Linux ディストリビューションおよび RHEL リリースについて確認できるように、定義を以下に示します。
 
 次の表に、CPU 設定に関する推奨事項を示します。
 
-| 設定 | [値] | 詳細情報 |
+| 設定 | 値 | 詳細情報 |
 |---|---|---|
 | CPU 周波数ガバナー | パフォーマンス | **cpupower** コマンドを参照してください |
 | ENERGY_PERF_BIAS | パフォーマンス | **x86_energy_perf_policy** コマンドを参照してください |
@@ -70,7 +70,7 @@ SQL Server のインストールで最適なパフォーマンスを得るには
 
 次の表に、ディスク設定に関する推奨事項を示します。
 
-| 設定 | [値] | 詳細情報 |
+| 設定 | 値 | 詳細情報 |
 |---|---|---|
 | ディスク先行読み取り | 4096 | **blockdev** コマンドを参照してください。 |
 | sysctl の設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | **sysctl** コマンドを参照してください |
@@ -91,13 +91,79 @@ sysctl -w kernel.numa_balancing=0
 sysctl -w vm.max_map_count=262144
 ```
 
+### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>調整された mssql プロファイルを使用した Linux 設定の提案
+
+```bash
+#
+# A tuned configuration for SQL Server on Linux
+#
+    
+[main]
+summary=Optimize for Microsoft SQL Server
+include=throughput-performance
+    
+[cpu]
+force_latency=5
+
+[sysctl]
+vm.swappiness = 1
+vm.dirty_background_ratio = 3
+vm.dirty_ratio = 80
+vm.dirty_expire_centisecs = 500
+vm.dirty_writeback_centisecs = 100
+vm.transparent_hugepages=always
+# For , use
+# vm.transparent_hugepages=madvice
+vm.max_map_count=1600000
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048576
+kernel.numa_balancing=0
+kernel.sched_latency_ns = 60000000
+kernel.sched_migration_cost_ns = 500000
+kernel.sched_min_granularity_ns = 15000000
+kernel.sched_wakeup_granularity_ns = 2000000
+```
+
+この調整されたプロファイルを有効にするには、これらの定義を /usr/lib/tuned/mssql フォルダー以下の **tuned.conf** ファイルに保存し、次を使用してプロファイルを有効にします
+
+```bash
+chmod +x /usr/lib/tuned/mssql/tuned.conf
+tuned-adm profile mssql
+```
+
+次を使用して有効であることを確認します
+
+```bash
+tuned-adm active
+```
+or
+```bash
+tuned-adm list
+```
+
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>ファイル システム上で SQL Server のデータ ファイルとログ ファイルについて最終アクセス日時を無効にする
 
 SQL Server のデータ ファイルとログ ファイルを格納するために使用される任意のファイル システムで **noatime** 属性を使用します。 この属性を設定する方法については、Linux のドキュメントを参照してください。
 
 ### <a name="leave-transparent-huge-pages-thp-enabled"></a>Transparent Huge Pages (THP) を有効なままにする
 
-ほとんどの Linux インストールでは、このオプションが既定でオンです。 この構成オプションは有効なままにしておくことをお勧めします。
+ほとんどの Linux インストールでは、このオプションが既定でオンです。 この構成オプションは有効なままにしておくことをお勧めします。 ただし、たとえば複数のインスタンスがある SQL Server 展開でメモリ ページング アクティビティが高い場合や、サーバー上にメモリを多く使用するアプリケーションが他にある SQL Server 実行の場合は、次のコマンドを実行した後、アプリケーションのパフォーマンスをテストすることをお勧めします 
+
+```bash
+echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+```
+または、mssql で調整されたプロファイルを次の行のように変更します
+
+```bash
+vm.transparent_hugepages=madvice
+```
+また、変更後に mssql プロファイルをアクティブにします。
+```bash
+tuned-adm off
+tuned-adm profile mssql
+```
 
 ### <a name="swapfile"></a>swapfile
 
@@ -107,7 +173,7 @@ SQL Server のデータ ファイルとログ ファイルを格納するため�
 
 仮想マシンで SQL Server on Linux を実行している場合は、仮想マシン用に予約されているメモリの量を修正するオプションを必ず選択してください。 Hyper-V 動的メモリのような機能は使用しないでください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 パフォーマンスを向上させる SQL Server の機能の詳細については、「[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)」を参照してください。
 

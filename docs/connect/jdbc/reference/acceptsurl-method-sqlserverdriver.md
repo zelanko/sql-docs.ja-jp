@@ -1,5 +1,5 @@
 ---
-title: acceptsURL メソッド (SQLServerDriver) |Microsoft Docs
+title: acceptsURL メソッド (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c51da69e7218f91630543fe7bee5ec0d7fd6b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68e12a39cb4a27f170b7f12705f17791bb40b649
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956025"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923706"
 ---
 # <a name="acceptsurl-method-sqlserverdriver"></a>acceptsURL メソッド (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public boolean acceptsURL(java.lang.String url)
 #### <a name="parameters"></a>パラメーター  
  *url*  
   
- データベースへの接続に使用する URL を表す**文字列**値です。  
+ データベースへの接続に使用される URL を含む **String** 値です。  
   
 ## <a name="return-value"></a>戻り値  
  渡された URL が有効である場合は **true** です。 それ以外の場合は、 **false**です。  
@@ -45,8 +45,8 @@ public boolean acceptsURL(java.lang.String url)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この acceptsURL メソッドは、acceptsURL インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この acceptsURL メソッドは、java.sql.Driver インターフェイスの acceptsURL メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDriver のメソッド](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

@@ -1,5 +1,6 @@
 ---
 title: パス式 (XQuery) |Microsoft Docs
+description: XQuery パス式で、ドキュメント内の要素、属性、テキストノードなどのノードを検索する方法について説明します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,80 +17,80 @@ helpviewer_keywords:
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9be2fb8752f27164e0e6dbc59e499f4b048d8979
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1eccee8a5acfbb810ed7636f5d073c2644f0342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759488"
 ---
 # <a name="path-expressions-xquery"></a>パス式 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  XQuery パス式では、ドキュメントの要素、属性、およびテキスト ノードなど、ノードを見つけます。 パス式の結果は常に、結果シーケンス内でノードが重複することなく、ドキュメント順で生成されます。 パスを指定するのには、省略と省略しない構文を使用できます。 以下の説明では、主に省略しない構文を取り上げます。 省略構文については、このトピックの後半で説明します。  
+  XQuery パス式は、ドキュメント内の要素、属性、テキストノードなどのノードを検索します。 パス式の結果は常に、結果シーケンス内でノードが重複することなく、ドキュメント順で生成されます。 パスを指定する場合は、省略形または省略構文を使用できます。 以下の説明では、主に省略しない構文を取り上げます。 省略された構文については、このトピックの後半で説明します。  
   
 > [!NOTE]  
->  に対してこのトピックのサンプル クエリを指定するため、 **xml**種類の列、 **CatalogDescription**と**指示**の**ProductModel**テーブルが理解しておく内容とこれらの列に格納された XML ドキュメントの構造を使用します。  
+>  このトピックのサンプルクエリは、 **xml**型の列に対して指定されているので、 **Catalogdescription**と**手順**、 **productmodel**テーブルでは、これらの列に格納されている xml ドキュメントの内容と構造を理解しておく必要があります。  
   
- 相対パスまたは絶対パス式ができます。 これらの両方の説明を次に示します。  
+ パス式には、相対パスまたは絶対パスを指定できます。 これらの両方の説明を次に示します。  
   
--   1 つまたは 2 つのスラッシュ記号で区切られた 1 つまたは複数のステップの相対パス式から成る (/または//)。 たとえば、`child::Features`は相対パス式では、場所`Child`コンテキスト ノードの子ノードのみを参照します。 これは、現在処理されているノードです。 式を取得、\<機能 > コンテキスト ノードの子要素ノード。  
+-   相対パス式は、1つまたは2つのスラッシュ記号 (/または//) で区切られた1つ以上のステップで構成されます。 たとえば、 `child::Features` は、 `Child` コンテキストノードの子ノードのみを参照する相対パス式です。 これは現在処理中のノードです。 式は、 \<Features> コンテキストノードの子要素ノードを取得します。  
   
--   絶対パス式が 1 つまたは 2 つのスラッシュ記号で始まる (/または//)、その後に、必要に応じて相対パス。 たとえば、式 `/child::ProductDescription` の先頭のスラッシュ記号は、この式が絶対パス式であることを示しています。 式の先頭のスラッシュ記号は、コンテキスト ノードのドキュメントのルート ノードを返すため、すべてを返します、式、 \<ProductDescription > ドキュメントのルートの子要素ノード。  
+-   絶対パス式は、1つまたは2つのスラッシュ記号 (/または//) で始まり、その後に省略可能な相対パスが続きます。 たとえば、式 `/child::ProductDescription` の先頭のスラッシュ記号は、この式が絶対パス式であることを示しています。 式の先頭のスラッシュ記号は、コンテキストノードのドキュメントルートノードを返します。そのため、式は、 \<ProductDescription> ドキュメントルートの子要素ノードをすべて返します。  
   
-     絶対パスが 1 つのスラッシュ記号で始まる場合は可能性があります。 または相対パスによって従わないことがあります。 1 つのスラッシュ記号のみを指定すると、式はコンテキスト ノードのルート ノードを返します。 XML データ型の場合、これはドキュメント ノードになります。  
+     絶対パスが1つのスラッシュ記号で始まる場合は、相対パスの後に指定することもできます。 スラッシュ記号を1つだけ指定した場合、式はコンテキストノードのルートノードを返します。 XML データ型の場合、これはドキュメント ノードになります。  
   
- パス式は、通常、ステップで構成されます。 たとえば、絶対パス式`/child::ProductDescription/child::Summary`、スラッシュ記号で区切られた 2 つの手順が含まれています。  
+ パス式は、通常、ステップで構成されます。 たとえば、絶対パス式には、 `/child::ProductDescription/child::Summary` スラッシュ記号で区切られた2つのステップが含まれています。  
   
--   最初の手順の取得、 \<ProductDescription > ドキュメントのルートの子要素ノード。  
+-   最初のステップでは、 \<ProductDescription> ドキュメントルートの子要素ノードを取得します。  
   
--   2 番目の手順の取得、\<概要 > 要素ノードの取得された各子\<ProductDescription > 要素ノードは、コンテキスト ノードになります。  
+-   2番目のステップでは、取得した \<Summary> 各要素ノードの子要素ノードが取得され、そのノードが \<ProductDescription> コンテキストノードになります。  
   
- パス式のステップには、軸ステップまたは汎用ステップを指定できます。  
+ パス式のステップは、軸ステップまたは一般的なステップにすることができます。  
   
 ## <a name="axis-step"></a>軸ステップ  
- パス式の軸ステップは、次の部分です。  
+ パス式の軸ステップには、次の部分があります。  
   
- [axis](../xquery/path-expressions-specifying-axis.md)  
- 移動の方向を定義します。 これらは軸で指定した方向で到達可能なノードにコンテキスト ノードから開始し、移動するパス式での軸ステップ。  
+ [軸](../xquery/path-expressions-specifying-axis.md)  
+ 移動の方向を定義します。 コンテキストノードから開始し、軸によって指定された方向に到達可能なノードに移動するパス式の軸ステップ。  
   
- [ノード テスト](../xquery/path-expressions-specifying-node-test.md)  
+ [ノードテスト](../xquery/path-expressions-specifying-node-test.md)  
  選択するノードの型またはノード名を指定します。  
   
- 0 個以上の省略可能な述語  
- いくつかを選択して、他のユーザーの破棄によって、ノードをフィルター処理します。  
+ 0個以上のオプションの述語  
+ 一部を選択し、他のノードを破棄してノードをフィルター処理します。  
   
- 次の例を使用して、 **axisstep**パス式で。  
+ 次の例では、パス式で**軸手順**を使用します。  
   
--   絶対パス式`/child::ProductDescription`、1 つのステップが含まれています。 これは、軸 (`child`) とノード テスト (`ProductDescription`) を指定しています。  
+-   絶対パス式では、 `/child::ProductDescription` 1 つのステップだけが含まれます。 これは、軸 (`child`) とノード テスト (`ProductDescription`) を指定しています。  
   
--   相対パス式 `child::ProductDescription/child::Features` には、1 つのスラッシュ記号で区切られた 2 つのステップがあります。 両方の手順では、child 軸を指定します。 ProductDescription と Features はノード テストです。  
+-   相対パス式 `child::ProductDescription/child::Features` には、1 つのスラッシュ記号で区切られた 2 つのステップがあります。 どちらの手順でも、子軸を指定します。 ProductDescription と Features はノードテストです。  
   
--   相対パス式では、 `child::root/child::Location[attribute::LocationID=10]`、スラッシュ記号で区切られた 2 つの手順が含まれています。 最初の手順を軸を指定します (`child`) とノード テスト (`root`)。 2 番目のステップは、軸ステップの 3 種類のコンポーネントをすべて指定しています。つまり、軸 (child)、ノード テスト (`Location`)、および述語 (`[attribute::LocationID=10]`) です。  
+-   相対パス式には、 `child::root/child::Location[attribute::LocationID=10]` スラッシュ記号で区切られた2つのステップが含まれています。 最初のステップでは、軸 ( `child` ) とノードテスト () を指定し `root` ます。 2 番目のステップは、軸ステップの 3 種類のコンポーネントをすべて指定しています。つまり、軸 (child)、ノード テスト (`Location`)、および述語 (`[attribute::LocationID=10]`) です。  
   
- 軸ステップの詳細については、コンポーネントは、次を参照してください[パス式のステップで軸を指定する](../xquery/path-expressions-specifying-axis.md)、[パス式のステップでノード テストを指定する](../xquery/path-expressions-specifying-node-test.md)、および[で述語の指定、。パス式のステップ](../xquery/path-expressions-specifying-predicates.md)します。  
+ 軸ステップのコンポーネントの詳細については、「[パス式のステップでの軸の指定](../xquery/path-expressions-specifying-axis.md)」、「[パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)」、および「[パス式のステップで述語を指定する](../xquery/path-expressions-specifying-predicates.md)」を参照してください。  
   
 ## <a name="general-step"></a>一般的な手順  
  汎用ステップは、評価結果がノードのシーケンスになる必要のある式です。  
   
- SQL Server で実装された XQuery では、パス式の最初のステップとして汎用ステップをサポートします。 一般的な手順を使用するパス式の例を次に示します。  
+ SQL Server の XQuery 実装では、パス式の最初のステップとして一般的な手順がサポートされています。 一般的な手順を使用するパス式の例を次に示します。  
   
 ```  
 (/a, /b)/c  
 id(/a/b)  
 ```  
   
- Id 関数」を参照の詳細については[id 関数&#40;XQuery&#41;](../xquery/functions-on-sequences-id.md)します。  
+ Id 関数の詳細については、「 [Id 関数 &#40;XQuery&#41;](../xquery/functions-on-sequences-id.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [パス式のステップで軸を指定します。](../xquery/path-expressions-specifying-axis.md)  
- パス式での軸ステップの操作について説明します。  
+ [パス式のステップでの軸の指定](../xquery/path-expressions-specifying-axis.md)  
+ パス式での軸ステップの使用について説明します。  
   
- [パス式のステップでノード テストの指定](../xquery/path-expressions-specifying-node-test.md)  
- パス式でノード テストを使用した作業をについて説明します。  
+ [パス式のステップでのノードテストの指定](../xquery/path-expressions-specifying-node-test.md)  
+ パス式でのノードテストの使用について説明します。  
   
- [パス式のステップで述語の指定](../xquery/path-expressions-specifying-predicates.md)  
- パス式で述語の使い方について説明します。  
+ [パス式のステップでの述語の指定](../xquery/path-expressions-specifying-predicates.md)  
+ パス式での述語の使用について説明します。  
   
  [パス式での省略構文の使用](../xquery/path-expressions-using-abbreviated-syntax.md)  
  パス式での省略構文の使い方について説明します。  

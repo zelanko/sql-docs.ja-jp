@@ -1,6 +1,5 @@
 ---
-title: クエリを実行する SQL Server にインストールされているストアド プロシージャを拡張 |Microsoft Docs
-ms.custom: ''
+title: 拡張ストアドプロシージャのクエリ
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,33 +11,34 @@ helpviewer_keywords:
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33c2e4d945f4db077df843bd5622d883c719fd85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 8413f071cfb36f5cad9130d3e2b56327d9b3bf45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758095"
 ---
 # <a name="querying-extended-stored-procedures-installed-in-sql-server"></a>SQL Server にインストールされた拡張ストアド プロシージャの照会
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
- A [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]拡張ストアド プロシージャを現在定義されている表示ユーザーを認証しを実行している各 DLL の名前が属している、 **sp_helpextendedproc**システム プロシージャ。 たとえば、次の例が DLL を返しますを**xp_hello**が属しています。  
+ 認証されたユーザーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_helpextendedproc**システムプロシージャを実行することによって、現在定義されている拡張ストアドプロシージャと、それぞれが属している DLL の名前を表示できます。 たとえば、次の例では、 **xp_hello**が属している DLL が返されます。  
   
 ```  
 sp_helpextendedproc 'xp_hello'  
 ```  
   
- 場合**sp_helpextendedproc**拡張ストアド プロシージャをすべての拡張ストアド プロシージャの Dll が表示されるかを指定せずに実行されます。  
+ 拡張ストアドプロシージャを指定せずに**sp_helpextendedproc**を実行すると、すべての拡張ストアドプロシージャとその dll が表示されます。  
   
 > [!IMPORTANT]  
->  ログインしたユーザーが所有しているか、権限を持っている拡張ストアド プロシージャの情報だけが返されます。 メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**、 **db_securityadmin**、および**db_ddladmin**固定データベースロールは、すべての拡張ストアド プロシージャの情報を表示できます。  
+>  ログインしたユーザーが所有しているか、権限を持っている拡張ストアド プロシージャの情報だけが返されます。 すべての拡張ストアドプロシージャの情報を表示できるのは、 **sysadmin**固定サーバーロールのメンバーと、 **db_owner**、 **db_securityadmin**、および**db_ddladmin**の固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_helpextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
- [sp_addextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   
   

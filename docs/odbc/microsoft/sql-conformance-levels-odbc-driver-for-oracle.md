@@ -1,5 +1,5 @@
 ---
-title: SQL への準拠レベル (ODBC Driver for Oracle) |Microsoft Docs
+title: SQL 準拠レベル (ODBC Driver for Oracle) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,54 +12,54 @@ helpviewer_keywords:
 - SQL conformance levels [ODBC]
 - ODBC driver for Oracle [ODBC], conformance levels
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 241f4f3da12f63c15d917a0e47cb13ad0e96e6e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063355"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300682"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL への準拠レベル (ODBC Driver for Oracle)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- ODBC Driver for Oracle では、Minimum SQL 文法と Core SQL 文法をサポートしているしも SQL を次の ODBC 拡張機能をサポートします。  
+ ODBC Driver for Oracle では、sql の構文とコアの SQL 文法がサポートされています。また、次の ODBC 拡張機能もサポートされています。  
   
--   日付、時刻、タイムスタンプ データ  
+-   日付、時刻、およびタイムスタンプデータ  
   
--   左と右外部結合  
+-   左外部結合と右外部結合  
   
 -   数値関数:  
   
     |||||  
     |-|-|-|-|  
-    |Abs|Log|round|tan|  
-    |ceiling|log10|second|truncate|  
-    |Cos|Mod|sign||  
+    |Abs|ログ|round|tan|  
+    |Ceiling|Log10|second|切捨て|  
+    |Cos|Mod|署名||  
     |Exp|Pi|sin||  
-    |floor|Power|sqrt||  
+    |床|Power|sqrt||  
   
--   日付関数:  
+-   日付関数:   
   
     |||||  
     |-|-|-|-|  
     |Curdate|Dayofweek|monthname|second|  
     |Curtime|Dayofyear|minute|week|  
-    |Dayname|Hour|now|year|  
-    |Dayofmonth|Month|quarter||  
+    |Dayname|時|now|year|  
+    |Dayofmonth|月|quarter||  
   
--   文字列関数。  
+-   文字列関数:   
   
     |||||  
     |-|-|-|-|  
-    |Ascii|Left|right|Ucase|  
-    |Char|Length|rtrim||  
-    |Concat|Ltrim|Soundex||  
+    |Ascii|Left|right|ucase|  
+    |Char|長さ|rtrim||  
+    |Concat|Ltrim|soundex||  
     |Lcase|Replace|substring||  
   
--   型変換関数。  
+-   型変換関数:  
   
     ||  
     |-|  
@@ -70,4 +70,4 @@ ms.locfileid: "68063355"
     ||  
     |-|  
     |Ifnull|  
-    |User|
+    |ユーザー|

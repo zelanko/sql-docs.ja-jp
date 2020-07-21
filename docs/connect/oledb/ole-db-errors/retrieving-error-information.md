@@ -1,5 +1,5 @@
 ---
-title: エラー情報の取得 |Microsoft Docs
+title: エラー情報の取得 | Microsoft Docs
 description: OLE DB Driver for SQL Server を使用したエラー情報の取得
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OLE DB error handling, examples
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: eed37b2452ca833c0f2c840aed1294a8957b927f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: efde220b1cdc849eec9c0483453739b47fac7a75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015667"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "70874643"
 ---
 # <a name="retrieving-error-information"></a>エラー情報の取得
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ void DumpErrorInfo
     SSERRORINFO*            pSSErrorInfo = NULL;  
     OLECHAR*                pSSErrorStrings = NULL;  
   
-    // Hard-code an American English locale for the example.  
+    // Hard-code an English (United States) locale for the example.  
     DWORD                   MYLOCALEID = 0x0409;  
   
     // Only ask for error information if the interface supports  

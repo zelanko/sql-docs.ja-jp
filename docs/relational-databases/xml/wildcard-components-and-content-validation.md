@@ -1,5 +1,6 @@
 ---
 title: ワイルドカード コンポーネントと内容検証 | Microsoft Docs
+description: XML 要素と属性のワイルドカード コンポーネントを使用して、コンテンツ モデルで使用できる表現の柔軟性を高める方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ba4e15016ca7b6ae3094b575ee87a1c7508b8aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1fac8a7a0e7eafc4b3bb04809ad51ee2f1b970e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729825"
 ---
 # <a name="wildcard-components-and-content-validation"></a>ワイルドカード コンポーネントと内容検証
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   ワイルドカード コンポーネントは、コンテンツ モデルで使用できる表現の柔軟性を高めるために使用されます。 ワイルドカード コンポーネントは、次のように XSD 言語でサポートされています。  
   
 -   要素ワイルドカード コンポーネント。 これらは **\<xsd:any>** 要素で表現されます。  

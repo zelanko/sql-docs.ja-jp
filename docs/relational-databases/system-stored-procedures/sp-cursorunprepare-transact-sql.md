@@ -1,5 +1,5 @@
 ---
-title: sp_cursorunprepare (TRANSACT-SQL) |Microsoft Docs
+title: sp_cursorunprepare (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorunprepare
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8bfdcafb37b6ff7b495f1306d5d8339725e55e10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c7db4e004f3a350454e25ceefb6c195839e2f6f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108393"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868426"
 ---
-# <a name="spcursorunprepare-transact-sql"></a>sp_cursorunprepare (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_cursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ストアド プロシージャを sp_cursorprepare で作成された実行プランを破棄します。 sp_cursorunprepare は、ID を指定して呼び出される、表形式データ ストリーム (TDS) パケットで 6 を = です。  
+  Sp_cursorprepare ストアドプロシージャで作成された実行プランを破棄します。 sp_cursorunprepare は、ID = 6 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,11 +39,11 @@ sp_cursorunprepare handle
 ```  
   
 ## <a name="arguments"></a>引数  
- *handle*  
- *処理*ステートメントが準備されたときに sp_cursorprepare から返される値。  
+ *扱え*  
+ ステートメントが準備されたときに sp_cursorprepare によって返される*ハンドル*値を指定します。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_cursorprepare &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
+ [sp_cursorprepare &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

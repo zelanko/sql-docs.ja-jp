@@ -1,5 +1,6 @@
 ---
 title: セカンダリ データベースが参加していない | Microsoft Docs
+description: 可用性データベースの参加状態は、Always On 可用性グループのポリシー ベースの管理の一部として、セカンダリ データベースの参加状態を確認します。
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0fa4abf575c847bae10342a3870fc2c3785d16a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0b7ee3ee59a1ebf21854555c8ab75b6a2fc01b6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014231"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899839"
 ---
 # <a name="secondary-database-is-not-joined"></a>セカンダリ データベースが参加していない
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  
@@ -32,7 +33,7 @@ ms.locfileid: "68014231"
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性データベース|  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  このポリシーは、セカンダリ データベース ("セカンダリ データベース レプリカ" とも呼ばれます) の参加状態をチェックします。 データセット レプリカが参加していない場合、ポリシーは通常とは異なる状態です。 それ以外の場合、ポリシーは正常な状態です。  
   
 > [!NOTE]  

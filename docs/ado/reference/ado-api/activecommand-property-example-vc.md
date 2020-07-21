@@ -1,5 +1,5 @@
 ---
-title: ActiveCommand プロパティの例 (vc++) |Microsoft Docs
+title: ActiveCommand プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - ActiveCommand property [ADO], VC++ example
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f0f0b39b26fb349222a3ad04cd1414d9cf3ddafe
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921633"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760768"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand プロパティの例 (VC++)
-この例では、 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)プロパティ。  
+この例では、 [activecommand](../../../ado/reference/ado-api/activecommand-property-ado.md)プロパティを示します。  
   
- サブルーチンを指定、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト**ActiveCommand**コマンド テキストと作成パラメーターを表示するプロパティが使用される、**レコード セット**します。  
+ サブルーチンには、**レコードセット**を作成したコマンドテキストとパラメーターを表示するために**activecommand**プロパティを使用する[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが指定されています。  
   
 ## <a name="example"></a>例  
   
@@ -206,7 +206,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>入力のサンプル  
+## <a name="sample-input"></a>サンプル入力  
   
 ```  
 Ringer  
@@ -220,6 +220,6 @@ Parameter = 'Ringer'
 Name = 'Anne  Ringer'  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ActiveCommand プロパティ (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

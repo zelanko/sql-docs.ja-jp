@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0d25394694fae10b2ff6faeb13d0087eb87d7b0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869189"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553467"
 ---
-# <a name="mssqlserver21879"></a>MSSQLSERVER_21879
+# <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|21879|  
@@ -54,8 +53,8 @@ ms.locfileid: "62869189"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に Kerberos 認証を構成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「**Kerberos 認証と SQL Server**」を参照してください。  
   
--   使用して、 `sp_changedistpublisher` MSdistpublishers の元のパブリッシャーに関連付けられているセキュリティ モードを変更するだけでなく、ログインと、接続に使用するパスワードを指定します。  
+-   を使用して、 `sp_changedistpublisher` MSdistpublishers の元のパブリッシャーに関連付けられているセキュリティモードを変更すると共に、接続に使用するログインとパスワードを指定します。  
   
--   コマンド ライン パラメーターを指定*BypassPublisherValidation*検証をバイパスするマージ エージェント コマンドラインでとき`sp_get_redirected_publisher`ディストリビューターと呼びます。  
+-   マージエージェントコマンドラインでコマンドラインパラメーター *BypassPublisherValidation*を指定すると、 `sp_get_redirected_publisher` ディストリビューターでが呼び出されたときに検証がバイパスされます。  
   
   

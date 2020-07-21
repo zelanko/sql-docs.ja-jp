@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0f607f3111c150bff3d5dc562c77901a381bedc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036604"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
 
 
-  セットを降順で並べ替えおよび指定した数の最大値を持つ要素を返します。  
+  セットを降順で並べ替え、最大値を持つ指定した数の要素を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,24 +29,24 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Count*  
  返す組の数を指定する有効な数値式です。  
   
  *Numeric_Expression*  
- 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- 数値式が指定されている場合、 **TopCount**関数、順序、指定したに対して評価される数値式で指定された値に基づいて指定されたセットで指定されたセット内の組を降順で並べ替えます設定します。 セットを並べ替えて、 **TopCount**関数し、指定した数の最大値を持つタプルを返します。  
+## <a name="remarks"></a>Remarks  
+ 数値式を指定した場合、 **TopCount**関数は、指定されたセットに対して評価されるように、数値式で指定された値に基づいて、指定されたセットの組を降順で並べ替えます。 セットを並べ替えた後、 **TopCount**関数は、最大値を持つ指定された数の組を返します。  
   
 > [!IMPORTANT]  
->  ように、 [BottomCount](../mdx/bottomcount-mdx.md)関数の場合、 **TopCount**関数は常に、階層を解除します。  
+>  下位[カウント](../mdx/bottomcount-mdx.md)関数と同様に、 **TopCount**関数は常に階層を解除します。  
   
- 数値式が指定されていない場合、関数のセットを返しますメンバー、自然な順序で、並べ替えを行わず同様の動作、 [Head (MDX)](../mdx/head-mdx.md)関数。  
+ 数値式が指定されていない場合、関数は、並べ替えを行わずに、 [Head (MDX)](../mdx/head-mdx.md)関数のような自然な順序でメンバーのセットを返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、Internet Sales Amount を上位 10 日を返します。  
+ 次の例では、Internet Sales Amount によって上位10件の日付が返されます。  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -70,7 +70,7 @@ FROM [Adventure Works]
 WHERE([Product].[Product Categories].Bikes)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

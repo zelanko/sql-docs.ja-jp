@@ -1,5 +1,6 @@
 ---
 title: PolyBase スケールアウト グループ | Microsoft Docs
+description: PolyBase グループ機能を使用し、SQL Server インスタンスのクラスターを作成します。 これにより、外部ソースからの大規模なデータ セットのクエリ パフォーマンスが向上します。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -11,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ba155568a2933c7ce74f2aef33e64a9b6905d090
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062101"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818227"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase スケールアウト グループ
 
@@ -57,12 +58,15 @@ PolyBase エンジンは、PolyBase クエリの背後にある重要なコン�
   
 PolyBase データ移動サービスは、PolyBase エンジンから指示を受信し、HDFS と SQL Server の間、およびヘッド ノードとコンピューティング ノード上の SQL Server インスタンス間でデータを転送します。
   
-## <a name="editions-availability"></a>エディションの可用性  
-
-SQL Server をセットアップしたら、インスタンスをヘッド ノードとコンピューティング ノードのどちらかとして指定できます。 指定できるノードは、実行されている SQL Server PolyBase のバージョンによって異なります。 Enterprise Edition インストールでは、インスタンスをヘッド ノードとコンピューティング ノードのどちらかとして指定できます。 Standard Edition では、インスタンスをコンピューティング ノードとしてのみ指定できます。
-
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase スケールアウト グループを構成するには、次のガイドを参照してください。
 
 [Windows で PolyBase スケールアウト グループを改善する](configure-scale-out-groups-windows.md)
+
+## <a name="see-also"></a>参照
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+

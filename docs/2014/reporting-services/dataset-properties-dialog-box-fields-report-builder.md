@@ -1,5 +1,5 @@
 ---
-title: データセットのプロパティ ダイアログ ボックスのフィールド (レポート ビルダー) |Microsoft Docs
+title: '[フィールド] ([データセットのプロパティ] ダイアログボックス) (レポートビルダー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 375d8eda6f0863dbe3852f1a88ea2e58ecc85b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109432"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>[フィールド] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
@@ -24,8 +24,8 @@ ms.locfileid: "66109432"
   
  計算フィールドは埋め込みデータセットでのみサポートされています。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
-## <a name="options"></a>および  
- **[追加]**  
+## <a name="options"></a>Options  
+ **追加**  
  データセットに新しいクエリ フィールドまたは計算フィールドを追加します。  
   
  **削除**  
@@ -46,12 +46,12 @@ ms.locfileid: "66109432"
   
 ## <a name="see-also"></a>参照  
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [データセットのプロパティ ダイアログ ボックス、オプション&#40;レポート ビルダー&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
- [データセットのプロパティ ダイアログ ボックスのフィルター処理&#40;レポート ビルダー&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
- [データセットのプロパティ] ダイアログ ボックスの [パラメーター&#40;レポート ビルダー&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
- [データセットのプロパティ] ダイアログ ボックスの [クエリ&#40;レポート ビルダー&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [レポートビルダーおよび SSRS を &#40;共有データセットまたは埋め込みデータセットを作成&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [ダイアログボックス、ペイン、およびウィザードのヘルプのレポートビルダー](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [[オプション] ([データセットのプロパティ] ダイアログボックス &#40;レポートビルダー&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
+ [[フィルター] ([データセットのプロパティ] ダイアログボックス) &#40;レポートビルダー&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
+ [[パラメーター] ([データセットのプロパティ] ダイアログボックス &#40;レポートビルダー&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
+ [[クエリ &#40;レポートビルダー] ([データセットのプロパティ] ダイアログボックス)&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

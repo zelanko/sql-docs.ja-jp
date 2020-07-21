@@ -1,5 +1,5 @@
 ---
-title: IRow で 1 つの行をフェッチします。マイクロソフトのドキュメント
+title: IRow による 1 行のフェッチ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,19 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: faf887ab5e03d2d0ca8702dc9bd35d0ba094ece4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b5573fe1fef39f29329e373323f5f8aaf15f2c58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183669"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055956"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>IRow による 1 行のフェッチ
-  **IRow**インターフェイスの実装、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーは、パフォーマンスを向上させるのに簡略化されています。 **IRow** では、1 つの行オブジェクトの列に直接アクセスできます。 コマンドの実行結果が正確に 1 行になることが事前にわかっている場合、**IRow** でその行の列を取得できます。 結果セットが複数の行で構成される場合は、**IRow** では先頭の行だけが公開されます。  
+  Native Client OLE DB プロバイダーでの**IRow**インターフェイスの実装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、パフォーマンスを向上させるために簡略化されています。 **IRow** では、1 つの行オブジェクトの列に直接アクセスできます。 コマンドの実行結果が正確に 1 行になることが事前にわかっている場合、**IRow** でその行の列を取得できます。 結果セットが複数の行で構成される場合は、**IRow** では先頭の行だけが公開されます。  
   
- **IRow** 実装では、行を移動することはできません。 行内の各列には、1 つの例外の 1 つだけの時間にアクセスします。列のサイズを確認して、データをフェッチするにより、列に 1 回をアクセスできます。  
+ **IRow** 実装では、行を移動することはできません。 行内の各列には 1 回だけアクセスされます。ただし、例外が 1 つあります。最初に列サイズを確認し、次にデータをフェッチする場合は、列に 2 回アクセスできます。  
   
 > [!NOTE]  
 >  **IRow::Open** は、DBGUID_STREAM 型と DBGUID_NULL 型のオブジェクトを開くことだけをサポートします。  

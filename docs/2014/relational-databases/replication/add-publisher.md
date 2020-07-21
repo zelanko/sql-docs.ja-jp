@@ -1,5 +1,5 @@
 ---
-title: パブリッシャーの追加 ダイアログ ボックス
+title: '[パブリッシャーの追加] ダイアログボックス'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,30 +13,29 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f0401c06d79e7664ad4a06a2a92adcb52edfccb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068788"
 ---
-# <a name="sql-server-replication-add-publisher-dialog-box"></a>SQL Server レプリケーション パブリッシャーの追加 ダイアログ ボックス 
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>[パブリッシャーの追加] ダイアログボックス SQL Server レプリケーション 
   **[パブリッシャーの追加]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに 1 つまたは複数のパブリッシャーを追加できます。 パブリッシャーを追加した後、左ペインでパブリッシャーを選択すると、そのパブリッシャーに関する情報が右ペインに表示されます。  
   
-## <a name="options"></a>および  
- **[追加]**  
- クリックすると、追加するパブリッシャーの種類を選択するための **[サーバーへの接続]** ダイアログ ボックスが表示されます。 使用可能なオプションは次のとおりです。  
+## <a name="options"></a>オプション  
+ **追加**  
+ クリックすると、追加するパブリッシャーの種類を選択するための **[サーバーへの接続]** ダイアログ ボックスが表示されます。 オプションは次のとおりです。  
   
--   **[SQL Server パブリッシャーの追加]**  
+-   **SQL Server パブリッシャーの追加...**  
   
      **[サーバーへの接続]** ダイアログ ボックスを使用して、パブリッシャーに接続します。  
   
--   **[Oracle パブリッシャーの追加]**  
+-   **Oracle パブリッシャーの追加...**  
   
      [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ダイアログ ボックスを使用して、Oracle パブリッシャーに関連付けられている **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
   
--   **[ディストリビューターを指定し、そのパブリッシャーを追加する]**  
+-   **ディストリビューターを指定し、そのパブリッシャーを追加します...**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [サーバーへの接続] **ダイアログ ボックスを使用して、1 つまたは複数のパブリッシャーに関連付けられている** ディストリビューターに接続します。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62676915"
 > [!NOTE]  
 >  通常はディストリビューターとパブリッシャーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同一インスタンス上で実行しますが、ディストリビューターを別のインスタンス上で実行することもできます (この構成をリモート ディストリビューターと呼びます)。  
   
- **[削除]**  
+ **Remove**  
  ダイアログ ボックスの上部のグリッドでパブリッシャーを選択し、 **[削除]** をクリックすると、追加対象のパブリッシャーの一覧からパブリッシャーを削除できます。  
   
 > [!NOTE]  
@@ -66,7 +65,7 @@ ms.locfileid: "62676915"
  **[新しいグループ]**  
  クリックすると、新しいパブリッシャー グループを作成できます。 パブリッシャー グループを利用すると、レプリケーション モニター内でパブリッシャーを容易に整理できます。 グループは、データのレプリケーションや、レプリケーション トポロジ内のサーバー間のリレーションシップには影響を与えません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)  
   

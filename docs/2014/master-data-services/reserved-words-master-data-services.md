@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd1e5bcee01992607cf9bffca1a72dd99bd75fbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482580"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960582"
 ---
 # <a name="reserved-words-master-data-services"></a>予約語 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル オブジェクトまたはメンバーを作成するときに使用できない単語がいくつかあります。 これらの単語を使用すると、エラーが発生する可能性があります。  
@@ -28,7 +27,7 @@ ms.locfileid: "65482580"
   
 -   [モデル](#models)  
   
--   [[エンティティ]](#entities)  
+-   [エンティティ](#entities)  
   
 -   [明示的階層](#exhierarchies)  
   
@@ -36,16 +35,16 @@ ms.locfileid: "65482580"
   
 -   [メンバー](#members)  
   
-##  <a name="models"></a> モデル  
- 名前に設定したモデルを作成するかどうか**名前**、選択しないでください**モデルと同じ名前のエンティティを作成**ため**名前**エンティティの名前を使用することはできません。  
+##  <a name="models"></a><a name="models"></a>モジュール  
+ 名前を "**名前**" に設定したモデルを作成する場合は、[**モデルと同じ名前のエンティティを作成**する] を選択しないでください。エンティティの名前には**名前**を使用できません。  
   
-##  <a name="entities"></a> [エンティティ]  
+##  <a name="entities"></a><a name="entities"></a>事業  
  エンティティ名には **Name** または **Code**を使用できません。  
   
-##  <a name="exhierarchies"></a> 明示的階層  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>明示的階層  
  明示的階層名には **Name** または **Code**を使用できません。  
   
-##  <a name="attributes"></a> 属性  
+##  <a name="attributes"></a><a name="attributes"></a>アトリビュート  
   
 -   **ID**  
   
@@ -69,8 +68,8 @@ ms.locfileid: "65482580"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> メンバー  
- 使用することはできません、メンバーの**MDMMemberStatus**または**ルート**の**コード**属性の値。  
+##  <a name="members"></a><a name="members"></a>属する  
+ メンバーの場合、 **Code**属性値に**MDMMemberStatus**または**ROOT**を使用することはできません。  
   
 ## <a name="see-also"></a>参照  
  [マスター データ サービス概要](master-data-services-overview-mds.md)  

@@ -22,12 +22,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: a81543096bb698bfba3ab7561ca65de73914692d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742979"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635727"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE ステートメント - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -42,7 +42,7 @@ ms.locfileid: "68742979"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 RESTORE FILELISTONLY   
 FROM <backup_device>   
@@ -86,13 +86,13 @@ FROM <backup_device>
 ## <a name="result-sets"></a>結果セット  
  クライアントでは、RESTORE FILELISTONLY を使用して、バックアップ セットに含まれるファイルの一覧を取得できます。 この情報は、ファイル 1 件あたり 1 行のデータで構成される結果セットとして返されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|ファイルの論理名です。|  
 |PhysicalName|**nvarchar(260)**|ファイルの物理名またはオペレーティング システム名です。|  
-|型|**char(1)**|ファイルの種類。次のいずれかになります。<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> **F** = フルテキスト カタログ<br /><br /> **S** = FileStream、FileTable、または [!INCLUDE[hek_2](../../includes/hek-2-md.md)] コンテナー|  
+|種類|**char(1)**|ファイルの種類。次のいずれかになります。<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> **F** = フルテキスト カタログ<br /><br /> **S** = FileStream、FileTable、または [!INCLUDE[hek_2](../../includes/hek-2-md.md)] コンテナー|  
 |FileGroupName|**nvarchar(128)** NULL|このファイルを含むファイル グループの名前。|  
-|サイズ|**numeric(20,0)**|現在のサイズ (バイト単位)。|  
+|Size|**numeric(20,0)**|現在のサイズ (バイト単位)。|  
 |MaxSize|**numeric(20,0)**|最大許容サイズ (バイト単位)。|  
 |FileID|**bigint**|データベース内で一意なファイル識別子。|  
 |CreateLSN|**numeric(25,0)**|ファイルが作成されたときのログ シーケンス番号。|  
@@ -120,7 +120,7 @@ FROM <backup_device>
 ### <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、バックアップ セットやバックアップ デバイスに関する情報の取得には CREATE DATABASE 権限が必要になります。 詳細については、「[GRANT (データベースの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、`AdventureWorksBackups` というバックアップ デバイスから情報を返します。 この例では `FILE` オプションを使用して、デバイスで 2 番目のバックアップ セットを指定しています。  
   
 ```  

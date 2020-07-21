@@ -1,5 +1,5 @@
 ---
-title: AlwaysOn セカンダリ データベース (SQL Server) 上のデータ移動の開始 |Microsoft Docs
+title: AlwaysOn セカンダリデータベースでのデータ移動の開始 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b1ab796d9e48292dfa3426cd102faadecdabb2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62813558"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936373"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>AlwaysOn セカンダリ データベース上のデータ移動の開始 (SQLServer)
   このトピックでは、AlwaysOn 可用性グループにデータベースを追加した後、データの同期を開始する方法について説明します。 新しい各プライマリ レプリカに対して、セカンダリ レプリカをホストするサーバー インスタンス上でセカンダリ データベースを準備する必要があります。 その後、各セカンダリ データベースを手動で可用性グループに参加させる必要があります。  
@@ -42,7 +41,7 @@ ms.locfileid: "62813558"
   
          **詳細:**  
   
-         [AlwaysOn 可用性グループへのログ配布を移行する前提条件&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+         [ログ配布から AlwaysOn 可用性グループ &#40;SQL Server への移行の前提条件&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
          [可用性レプリカでのバックアップの構成 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62813558"
   
      [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="LaunchWiz"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 関連タスク  
   
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
@@ -61,6 +60,6 @@ ms.locfileid: "62813558"
 -   [可用性グループへのデータベース追加ウィザードの使用 &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

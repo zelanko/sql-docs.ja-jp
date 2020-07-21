@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6d77d5db4f53d7dc29a1bc2959feb4770e6899d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a3b721a0ef8ae83d4ca07cb6ae206fc5899c019
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101840"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894866"
 ---
 # <a name="dbcc-freesessioncache-transact-sql"></a>DBCC FREESESSIONCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対する分散クエリで使用される、分散クエリ接続キャッシュをフラッシュします。
   
@@ -48,7 +48,7 @@ DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、分散クエリ キャッシュをフラッシュします。
   
 ```sql

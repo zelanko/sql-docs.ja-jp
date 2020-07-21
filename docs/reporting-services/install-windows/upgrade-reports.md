@@ -1,5 +1,5 @@
 ---
-title: レポートのアップグレード (SSRS) | Microsoft Docs
+title: レポートのアップグレード | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4516effe7308386def1aa7cca885f9fa48547ec5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889738"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082283"
 ---
 # <a name="upgrade-reports-ssrs"></a>レポートのアップグレード (SSRS)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68889738"
   
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] の新機能については、「[SQL Server Reporting Services (SSRS) の新機能](../what-s-new-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
 
-##  <a name="bkmk_versionsupported"></a> アップグレード可能なバージョン  
+##  <a name="versions-supported-by-upgrade"></a><a name="bkmk_versionsupported"></a> アップグレード可能なバージョン  
  以前のどのバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で作成されたレポートもアップグレードできます。 以下のバージョンがあります。  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
@@ -48,7 +48,7 @@ ms.locfileid: "68889738"
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a> レポート定義 (.rdl) ファイルとレポート デザイナー  
+##  <a name="report-definition-rdl-files-and-report-designer"></a><a name="bkmk_rdlfiles"></a> レポート定義 (.rdl) ファイルとレポート デザイナー  
  レポート定義ファイルには、.rdl ファイルの検証に使用するレポート定義スキーマのバージョンを示す RDL 名前空間への参照が含まれています。  
   
  以前の名前空間に対応するレポートが作成済みの場合、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで .rdl ファイルを開くと、レポート デザイナーによって自動的にバックアップ ファイルが作成され、レポートが現在の名前空間にアップグレードされます。 これは、レポート定義ファイルをアップグレードする唯一の方法です。  
@@ -59,20 +59,20 @@ ms.locfileid: "68889738"
   
  レポート、レポート サーバー、またはレポート デザイナーの現在の RDL スキーマを確認するには、「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a> パブリッシュされたレポートおよびレポートのスナップショット  
+##  <a name="published-reports-and-report-snapshots"></a><a name="bkmk_publishedreports_and_snapshots"></a> パブリッシュされたレポートおよびレポートのスナップショット  
  既存のパブリッシュされたレポートおよびレポートのスナップショットは、初めて使用するときに、レポート サーバーによって新しいレポート定義スキーマへのアップグレードが試行されます。ユーザーは何も処理する必要はありません。 ユーザーがレポートまたはレポートのスナップショットを表示するか、レポート サーバーがサブスクリプションを処理すると、アップグレードが試行されます。 レポート定義は置き換えられませんが、元のスキーマのままレポート サーバーに格納されます。 レポートをアップグレードできない場合、レポートは下位互換性モードで実行されます。  
   
-##  <a name="bkmk_backcompat"></a> 下位互換性モード  
- 正常にアップグレードされたレポートは、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサによって処理されます。 アップグレードできないレポートは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサによって下位互換性モードで処理されます。 レポートを両方のレポート プロセッサで処理することはできません。 レポートは、初めて使用するときに、正常にアップグレードされるか、下位互換性モードの対象としてマークされます。  
+##  <a name="backward-compatibility-mode"></a><a name="bkmk_backcompat"></a> 下位互換性モード  
+ 正常にアップグレードされたレポートは、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサによって処理されます。 アップグレードできないレポートは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサによって下位互換性モードで処理されます。 レポートを両方のレポート プロセッサで処理することはできません。 レポートは、初めて使用するときに、正常にアップグレードされるか、下位互換性モードの対象としてマークされます。  
   
  新しい機能をサポートするのは、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサのみです。 レポートをアップグレードできない場合でも表示レポートは表示できますが、新しい機能は利用できません。 新しい機能を利用するには、レポートが正常にアップグレードされる必要があります。  
   
-##  <a name="bkmk_subreports"></a> サブレポートを含むレポートのアップグレード  
+##  <a name="upgrading-a-report-with-subreports"></a><a name="bkmk_subreports"></a> サブレポートを含むレポートのアップグレード  
  レポートにサブレポートが含まれている場合、アップグレード時に次の 4 つのうちのいずれかの状態になります。  
   
 -   メイン レポートおよびすべてのサブレポートを正常にアップグレードできる。 レポートは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサで処理されます。  
   
--   メイン レポートおよびすべてのサブレポートをアップグレードできない。 レポートは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサによって処理されます。  
+-   メイン レポートおよびすべてのサブレポートをアップグレードできない。 レポートは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサによって処理されます。  
   
 -   メイン レポートはアップグレードできるが、1 つ以上のサブレポートをアップグレードできない。 メイン レポートは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサで処理されますが、表示されたレポート内のアップグレードできなかったサブレポートの表示位置に "エラー: サブレポートを処理できませんでした" というメッセージが表示されます。  
   
@@ -82,14 +82,14 @@ ms.locfileid: "68889738"
   
  詳細レポートは独立したレポートとして処理されるため、詳細レポートにはこの制限はありません。  
   
-##  <a name="bkmk_CRIs"></a> カスタム レポート アイテムを含むレポートのアップグレード  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートには、サードパーティのソフトウェア ベンダーによって提供され、システム管理者によってレポート作成コンピューターおよびレポート サーバーにインストールされたカスタム レポート アイテム (CRI) が含まれている場合があります。 CRI を含むレポートは次の方法でアップグレードできます。  
+##  <a name="upgrading-a-report-with-custom-report-items"></a><a name="bkmk_CRIs"></a> カスタム レポート アイテムを含むレポートのアップグレード  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートには、サードパーティのソフトウェア ベンダーによって提供され、システム管理者によってレポート作成コンピューターおよびレポート サーバーにインストールされたカスタム レポート アイテム (CRI) が含まれている場合があります。 CRI を含むレポートは次の方法でアップグレードできます。  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバーにアップグレードします。 レポート サーバー上のパブリッシュされたレポートが、初めて使用するときに自動的にアップグレードされます。  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバーにアップグレードします。 レポート サーバー上のパブリッシュされたレポートが、初めて使用するときに自動的にアップグレードされます。  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバーにアップロードします。 レポートが、初めて使用するときに自動的にアップグレードされます。  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバーにアップロードします。 レポートが、初めて使用するときに自動的にアップグレードされます。  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで開きます。 元のレポートのバックアップ コピーが作成されます。 以下の 2 つのうちのいずれかの状況になります。  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーで開きます。 元のレポートのバックアップ コピーが作成されます。 以下の 2 つのうちのいずれかの状況になります。  
   
     1.  レポート内のどの CRI にも、サポートされていない機能が含まれていない。 CRI が新しいレポート定義スキーマのレポート アイテムに変換され、レポート全体がアップグレードされます。 ファイルを保存すると、現在の RDL 名前空間で保存されます。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "68889738"
  レポート サーバー、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]、またはレポートの現在の RDL 名前空間を確認する方法については、「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>レポート サーバー上のレポートのアップグレード  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにアップグレードしたレポート サーバーで初めて [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポートを実行すると、そのレポートは、レポート サーバーでサポートされている現在のレポート定義の名前空間に自動的にアップグレードされます。 アップグレード前にレポートがレポート サーバーに存在した可能性があります。あるいは、レポートが Web ポータル経由でアップロードされたか、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でレポート デザイナーからレポート サーバーに公開された可能性があります。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] レポート サーバーにアップグレードしたレポート サーバーで初めて [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポートを実行すると、そのレポートは、レポート サーバーでサポートされている現在のレポート定義の名前空間に自動的にアップグレードされます。 アップグレード前にレポートがレポート サーバーに存在していた可能性があります。あるいは、レポートが Web ポータル経由でアップロードされたか、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でレポート デザイナーからレポート サーバーに公開されていた可能性があります。  
   
  次の表に、レポート内の CRI の種類ごとに、レポート サーバーで実行されるアップグレード操作を示します。  
   
@@ -108,14 +108,14 @@ ms.locfileid: "68889738"
 |--------------|----------------------------------|  
 |サードパーティの CRI|アップグレードは実行されません。<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサで処理されます。|  
   
-###  <a name="OpeningaReport"></a> レポート デザイナーで CRI を含むレポートを開く  
+###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> レポート デザイナーで CRI を含むレポートを開く  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーで CRI を含む [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを開くと、レポートは新しいレポート定義スキーマにアップグレードされます。 レポートに含まれる CRI に応じて、次のいずれかの操作が実行されます。  
   
 -   サードパーティの CRI が検出された。 レポート作成コンピューターにインストールされた CRI のバージョンが新しい RDL スキーマと互換性がない場合、デザイン画面に赤い X マークのテキスト ボックスが表示されます。システム管理者に相談して、新しい RDL スキーマと互換性がある新しいバージョンのサードパーティ ベンダーの CRI をインストールする必要があります。  
   
  レポート作成環境でレポートをアップグレード後に保存する以外に、既存のレポートを新しいレポート定義スキーマにアップグレードする方法はありません。  
   
-###  <a name="bkmk_convertCRIdialog"></a> [CRI の変換] ダイアログ ボックス  
+###  <a name="convert-cri-dialog-box"></a><a name="bkmk_convertCRIdialog"></a> [CRI の変換] ダイアログ ボックス  
  このレポートにはサポートされていない機能を持つカスタム レポート アイテム (CRI) が含まれています。 CRI は、レポートにデータを表示するカスタム オブジェクトをサポートするレポート定義言語 (RDL) の拡張機能です。 CRI には、サードパーティのソフトウェア ベンダーによって提供されるデザイン時コンポーネントおよび実行時コンポーネントが含まれます。  
   
 > [!NOTE]  
@@ -133,11 +133,11 @@ ms.locfileid: "68889738"
   
  レポートをレポート サーバーにパブリッシュする代わりに、アップロードする場合、レポート プロセッサはそのレポートを最初の使用時にアップグレードできるかどうかを決定します。 アップグレードできないレポートは下位互換性モードで処理され、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の以前のバージョンと同じように表示されます。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016 における SQL Server Reporting Services の重大な変更](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
-[SQL Server 2016 における SQL Server Reporting Services の動作変更](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
+[SQL Server 2016 における SQL Server Reporting Services の重大な変更](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
+[SQL Server 2016 における SQL Server Reporting Services の動作変更](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [SQL Server 2016 で廃止された SQL Server Reporting Services の機能](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [カスタム レポート アイテム](../../reporting-services/custom-report-items/custom-report-items.md)   
 [レポート サーバー データベースのアップグレード](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  

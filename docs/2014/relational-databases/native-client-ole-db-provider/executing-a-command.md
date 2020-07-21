@@ -1,5 +1,5 @@
 ---
-title: コマンドの実行 |Microsoft Docs
+title: コマンドの実行 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,21 @@ helpviewer_keywords:
 - OLE DB extensions for XML
 - SQL Server Native Client OLE DB provider, command execution
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 41e8da036d5a4b6469a31213247ad7d4edb7dbfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056011"
 ---
 # <a name="executing-a-command"></a>コマンドの実行
-  データ ソースへの接続を確立するには、コンシューマーは呼び出し、 **idbcreatesession::createsession**セッションを作成するメソッド。 セッションは、コマンド、行セット、またはトランザクションのファクトリとして動作します。  
+  データ ソースへの接続が確立されたら、コンシューマーは **IDBCreateSession::CreateSession** メソッドを呼び出してセッションを作成します。 セッションは、コマンド、行セット、またはトランザクションのファクトリとして動作します。  
   
  個別のテーブルやインデックスを直接操作するには、`IOpenRowset` インターフェイスを要求します。 `IOpenRowset::OpenRowset` メソッドは、1 つのベース テーブルまたはベース インデックスからのすべての行が含まれる行セットを開いて返します。  
   
- コマンドを実行する (SELECT など\*FROM Authors)、コンシューマーの要求、`IDBCreateCommand`インターフェイス。 `IDBCreateCommand::CreateCommand` メソッドを実行してコマンド オブジェクトを作成し、`ICommandText` インターフェイスを要求できます。 実行するコマンドを指定するには、`ICommandText::SetCommandText` メソッドを使用します。  
+ コマンド (SELECT FROM Authors など) を実行するために、 \* コンシューマーはインターフェイスを要求し `IDBCreateCommand` ます。 `IDBCreateCommand::CreateCommand` メソッドを実行してコマンド オブジェクトを作成し、`ICommandText` インターフェイスを要求できます。 実行するコマンドを指定するには、`ICommandText::SetCommandText` メソッドを使用します。  
   
  コマンドを実行するには、`Execute` コマンドを使用します。 コマンドには、任意の SQL ステートメントやプロシージャ名を指定できます。 コマンドを実行しても、必ず結果セット (行セット) オブジェクトが得られるわけではありません。 SELECT * FROM Authors などのコマンドでは、結果セットが得られます。  
   

@@ -1,25 +1,26 @@
 ---
-title: 方法:ストアド プロシージャをデバッグする | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: ストアド プロシージャをデバッグする
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3f1cc7e8213f9282680f652512fe78c7bc5e8b44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: efd64369a6a8e666d67f2c277df62dc9af9c4e99
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929622"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241440"
 ---
 # <a name="how-to-debug-stored-procedures"></a>方法:ストアド プロシージャをデバッグする
+
 Transact\-SQL デバッガーでは、SQL ストアド プロシージャの SQL 呼び出し履歴、ローカル変数、およびパラメーターが表示され、ストアド プロシージャをインタラクティブにデバッグできます。 他のプログラミング言語でのデバッグと同様、Transact\-SQL スクリプトのデバッグでも、ローカル変数とパラメーターの表示と修正、グローバル変数の表示、およびブレークポイントの制御と管理を行うことができます。  
   
 この例では、Transact\-SQL ストアド プロシージャを作成し、ステップ インでデバッグする方法を示します。  

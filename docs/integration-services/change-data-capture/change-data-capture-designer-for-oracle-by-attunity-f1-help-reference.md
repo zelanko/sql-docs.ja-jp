@@ -10,14 +10,14 @@ ms.topic: reference
 f1_keywords:
 - f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d75be34aedb21bf2f3f39a1e4ac2fea3e949c0ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 716e82df7167c5ccb8a79119bceac05304ad870e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968359"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298865"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Change Data Capture Designer for Oracle by Attunity の F1 ヘルプ参照
 
@@ -52,7 +52,7 @@ ms.locfileid: "67968359"
   
     -   [ミラー テーブルおよび CDC キャプチャ インスタンスの生成](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
-    -   [完了](../../integration-services/change-data-capture/finish.md)  
+    -   [[完了]](../../integration-services/change-data-capture/finish.md)  
   
 -   [インスタンスのプロパティの編集](../../integration-services/change-data-capture/edit-instance-properties.md)(または、次のいずれかのタスクを直接参照してください)  
   

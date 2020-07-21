@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8382abfb78b67f900101ec27c33abeba988800e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920005"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748999"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone メソッドの例 (VBScript)
-この例では、[複製](../../../ado/reference/ado-api/clone-method-ado.md)のコピーを作成する方法、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)し、ユーザーの各コピーのレコード ポインターを個別に配置できるようにします。  
+この例では、 [Clone](../../../ado/reference/ado-api/clone-method-ado.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のコピーを作成し、ユーザーが各コピーのレコードポインターを個別に配置できるようにします。  
   
- 次の例を Active Server Page (ASP) で使用します。 この例では、 **Northwind** Microsoft アクセス権を持つ分散データベースです。 切り取りとメモ帳または別のテキスト エディターに次のコードを貼り付けるし、CloneVBS.asp として保存します。 結果は、任意のクライアント ブラウザーで表示できます。  
+ Active Server ページ (ASP) で次の例を使用します。 この例では、Microsoft Access と共に配布される**Northwind**データベースを使用します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、CloneVBS として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   
- 行を変更する例を実行するには、`RsCustomerList.Source = "Customers"`に`RsCustomerList.Source = "Products"`に大きなテーブルをカウントします。  
+ この例を実行するには、行をに変更して、 `RsCustomerList.Source = "Customers"` `RsCustomerList.Source = "Products"` より大きなテーブルをカウントします。  
   
 ```  
 <!-- BeginCloneVBS -->  
@@ -117,6 +117,6 @@ ms.locfileid: "67920005"
 <!-- EndCloneVBS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Clone メソッド (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

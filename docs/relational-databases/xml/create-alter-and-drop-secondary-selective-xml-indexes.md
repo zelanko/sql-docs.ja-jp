@@ -1,6 +1,6 @@
 ---
-title: 選択的セカンダリ XML インデックスの作成、変更、および削除 | Microsoft Docs
-ms.custom: ''
+title: セカンダリ選択的 XML インデックスの作成、変更、および削除 | Microsoft Docs
+description: 新しい選択的セカンダリ XML インデックスの作成や、既存の選択的セカンダリ XML インデックスの変更または削除を行う方法について学習します。
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,18 +10,19 @@ ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 481d4a219e1730eb58e899725a7574453b1fa991
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 85c338da45a60221d143012de4b8cff2bf5e716d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692195"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>選択的セカンダリ XML インデックスの作成、変更、および削除
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   新しい選択的セカンダリ XML インデックスの作成や、既存の選択的セカンダリ XML インデックスの変更または削除を行う方法について説明します。  
   
-##  <a name="create"></a> 選択的セカンダリ XML インデックスの作成  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> 選択的セカンダリ XML インデックスの作成  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>方法: 選択的セカンダリ XML インデックスの作成  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを作成する**  
@@ -42,7 +43,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> 選択的セカンダリ XML インデックスの変更  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> 選択的セカンダリ XML インデックスの変更  
  ALTER ステートメントは、選択的セカンダリ XML インデックスではサポートされません。 選択的セカンダリ XML インデックスを変更するには、既存のインデックスを削除し、再作成します。  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>方法:選択的セカンダリ XML インデックスの変更  
@@ -68,7 +69,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> 選択的セカンダリ XML インデックスの削除  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> 選択的セカンダリ XML インデックスの削除  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>方法: 選択的セカンダリ XML インデックスのドロップ  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを削除する**  

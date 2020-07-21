@@ -1,5 +1,5 @@
 ---
-title: レッスン 2:別のコンピューターからの接続 | Microsoft Docs
+title: 'レッスン 2: 別のコンピューターからの接続 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0240c3e4f9f58bfb453e2537695631d8be3aa793
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afa9d06c9f9d2bdf0281fadfc93ec2a550b9f4af
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767740"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2:別のコンピューターからの接続
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
   
 このレッスンの内容は次のとおりです。  
@@ -33,7 +33,7 @@ ms.locfileid: "68073711"
   
 -   [SQL Server Browser サービスを使用した接続](#browser)  
   
-## <a name="protocols"></a>プロトコルの有効化  
+## <a name="enabling-protocols"></a><a name="protocols"></a>プロトコルの有効化  
 セキュリティを強化するために、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]、Developer、および Evaluation は、ネットワーク接続が制限された状態でインストールされます。 [!INCLUDE[ssDE](../includes/ssde-md.md)] には、同じコンピューターで実行しているツールから接続できますが、別のコンピューターからは接続できません。 [!INCLUDE[ssDE](../includes/ssde-md.md)]と同じコンピューターで開発作業を行う場合、他のプロトコルを有効にする必要はありません。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] は、共有メモリ プロトコルを使用して [!INCLUDE[ssDE](../includes/ssde-md.md)] に接続します。 このプロトコルは既に有効になっています。  
   
 別のコンピューターから [!INCLUDE[ssDE](../includes/ssde-md.md)] に接続する場合は、TCP/IP などのプロトコルを有効にする必要があります。  
@@ -49,13 +49,13 @@ ms.locfileid: "68073711"
     > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではないため、新しいバージョンの Windows では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 ファイル名には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のバージョン番号を表す番号が含まれます。 [ファイル名を指定して実行] コマンドから構成マネージャーを開くとき、最新の 4 つのバージョンのパスは次のようになります (Windows が C ドライブにインストールされているとき)。  
   
     |||  
-    |-|-|  
-    |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
+    |-|-|
+    |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
+    |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
     |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-    |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
-2.  **SQL Server 構成マネージャー**で **SQL Server ネットワークの構成**を展開し、 **** _<InstanceName>_ をクリックします。  
+2.  **SQL Server 構成マネージャー**で **[SQL Server ネットワークの構成]** を展開し、 **[ _<InstanceName>_ のプロトコル]** をクリックします。  
   
     既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   
@@ -64,9 +64,7 @@ ms.locfileid: "68073711"
     > [!NOTE]  
     > ネットワーク プロトコルを変更したら [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを再起動する必要がありますが、これは次の作業で実行されます。  
 
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-## <a name="port"></a>固定ポートの構成  
+## <a name="configuring-a-fixed-port"></a><a name="port"></a>固定ポートの構成  
 セキュリティ強化のために、Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]、および Windows 7 では Windows ファイアウォールが有効になっています。 別のコンピューターからこのインスタンスに接続する場合は、ファイアウォールで通信ポートを開放する必要があります。 [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスはポート 1433 でリッスンするので、固定ポートを構成する必要はありません。 ただし、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の名前付きインスタンスは、動的ポートでリッスンします。 ファイアウォールでポートを開く前に、まず [!INCLUDE[ssDE](../includes/ssde-md.md)] が固定ポートまたは静的ポートと呼ばれる特定のポートでリッスンするように構成する必要があります。このように構成しないと、 [!INCLUDE[ssDE](../includes/ssde-md.md)] は起動のたびに異なるポートでリッスンする可能性があります。 ファイアウォール、Windows ファイアウォールの既定の設定の詳細と、データベース エンジン、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
   
 > [!NOTE]  
@@ -88,7 +86,7 @@ ms.locfileid: "68073711"
   
 7.  右ペインで、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスを右クリックし、 **[再起動]** をクリックします。 [!INCLUDE[ssDE](../includes/ssde-md.md)] が再起動すると、ポート **49172**でリッスンするようになります。  
   
-## <a name="firewall"></a>ファイアウォールでポートを開く  
+## <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>ファイアウォールでポートを開く  
 ファイアウォール システムは、コンピューター リソースへの不正アクセスを防ぐのに役立ちます。 ファイアウォールが有効になっている場合、別のコンピューターから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続するには、ファイアウォールでポートを開く必要があります。  
   
 > [!IMPORTANT]  
@@ -114,7 +112,7 @@ ms.locfileid: "68073711"
   
 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]の指示を含む、ファイアウォールの構成に関する詳細については、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。 Windows ファイアウォールの既定の設定の詳細と、データベース エンジン、Analysis Services、Reporting Services、および Integration Services に影響する TCP ポートの説明については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご覧ください。  
   
-## <a name="otherComp"></a>別のコンピューターからのデータベース エンジンへの接続  
+## <a name="connecting-to-the-database-engine-from-another-computer"></a><a name="otherComp"></a>別のコンピューターからのデータベース エンジンへの接続  
 固定ポートで受信待ちするように [!INCLUDE[ssDE](../includes/ssde-md.md)] を構成し、ファイアウォールでそのポートを開いたら、別のコンピューターから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続できます。  
   
 サーバー コンピューターで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser サービスが実行され、ファイアウォールで UDP ポート 1434 が開いている場合は、コンピューター名とインスタンス名を使用して接続を確立できます。 セキュリティ強化のため、今回の例では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser サービスは使用しません。  
@@ -125,14 +123,14 @@ ms.locfileid: "68073711"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスが **[データベース エンジン]** になっていることを確認します。  
   
-3.  **[サーバー名]** ボックスに「**tcp:** 」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:** _<computer_name>_ 」と入力します。 今回の名前付きインスタンスの例では、「**tcp:** _<computer_name>_ **,49172**」と入力します。  
+3.  **[サーバー名]** ボックスに「 **tcp:** 」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:** _<computer_name>_ 」と入力します。 今回の名前付きインスタンスの例では、「**tcp:** _<computer_name>_ **,49172**」と入力します。  
   
     > [!NOTE]  
     > **[サーバー名]** ボックスで **tcp:** を省略した場合、クライアントは、有効になっているすべてのプロトコルをクライアント構成に指定された順番で試行します。  
   
 4.  **[認証]** ボックスで、 **[Windows 認証]** が選択されていることを確認し、 **[接続]** をクリックします。  
   
-## <a name="browser"></a>SQL Server Browser サービスを使用した接続  
+## <a name="connecting-using-the-sql-server-browser-service"></a><a name="browser"></a>SQL Server Browser サービスを使用した接続  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser サービスは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、このコンピューター上にインストールされている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser サービスが実行されている場合、ユーザーはコンピューター名とポート番号の代わりにコンピューター名とインスタンス名を指定して、名前付きインスタンスに接続できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser は、認証されていない UDP 要求を受信します。したがって、セットアップで有効にしない場合もあります。 サービスの説明と、有効にする場合の説明については、「[SQL Server Browser サービス (データベース エンジンと SSAS)](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)」を参照してください。  
   
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser を使用するには、前の作業と同じ手順に従い、ファイアウォールの UDP ポート 1434 を開放します。  

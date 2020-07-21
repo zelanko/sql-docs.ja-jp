@@ -1,5 +1,5 @@
 ---
-title: XMLA を使用してデータ マイニング クエリの作成 |Microsoft Docs
+title: XMLA | を使用してデータマイニングクエリを作成するMicrosoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77b65e8361287ba09fa7f28cd74dd5f88d188f97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085546"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523968"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA を使用したデータ マイニング クエリの作成
   AMO、DMX、または XML/A を使用すると、データ マイニング オブジェクトに対するさまざまなクエリを作成できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66085546"
   
 2.  キューブ アイコンをクリックして、Analysis Services テンプレートの一覧を開きます。  
   
-3.  テンプレート カテゴリの一覧で **[XMLA]** 、 **[スキーマ行セット]** の順に展開し、 **[スキーマ行セットの発見]** をダブルクリックします。コード エディターにこのテンプレートが表示されます。  
+3.  テンプレート カテゴリの一覧で **[XMLA]**、 **[スキーマ行セット]** の順に展開し、 **[スキーマ行セットの発見]** をダブルクリックします。コード エディターにこのテンプレートが表示されます。  
   
 4.  **[Analysis Services への接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、 **[スキーマ行セットの発見]** テンプレートの内容が表示されます。  
   
@@ -44,9 +43,9 @@ ms.locfileid: "66085546"
   
      **[結果]** ペインに返されるスキーマ行セットの一覧には、現在のインスタンスで入手できるすべての行セットの行セット名と行セット列が含まれます。  
   
-2.  **クエリ**ウィンドウで、後にカーソルを置き **\<Restriction List >** し、enter キーを押して新しい行を追加します。  
+2.  **クエリ**ペインで、の後にカーソルを置き、enter **\<Restriction List>** キーを押して新しい行を追加します。  
   
-3.  種類と空白行にカーソルを置き **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  空白行にカーソルを置き、「」と入力し** \<SchemaName> DMSCHEMA_MINING_MODEL_CONTENT \</SchemaName> **  
   
      制限のセクション全体は次のようになります。  
   
@@ -78,9 +77,9 @@ ms.locfileid: "66085546"
   
 2.  制限リストに新しい条件を追加することで、名前でマイニング モデルを指定するように制限リストを変更します。  
   
-3.  テンプレートで、`<Restriction List>` の後ろにカーソルを置き、Enter キーを押して新しい行を追加します。  
+3.  テンプレートで、 `<Restriction List>` の後ろにカーソルを置き、Enter キーを押して新しい行を追加します。  
   
-4.  空白行にカーソルを置き、「 **<MODEL_NAME>My model name</MODEL_NAME>** 」と入力します。  
+4.  空白行にカーソルを置き、「**<MODEL_NAME>My model name</MODEL_NAME>**」と入力します。  
   
      制限のセクション全体は次のようになります。  
   
@@ -98,8 +97,8 @@ ms.locfileid: "66085546"
   
      [結果] ペインに、スキーマ定義および指定したモデルの値が表示されます。  
   
-## <a name="see-also"></a>関連項目  
- [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>参照  
+ [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

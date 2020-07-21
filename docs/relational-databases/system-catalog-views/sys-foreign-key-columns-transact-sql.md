@@ -1,5 +1,5 @@
 ---
-title: sys.foreign_key_columns (TRANSACT-SQL) |Microsoft Docs
+title: foreign_key_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,33 +20,32 @@ ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad5bd8f5391e5903a6f9fd10e0cfb340cf4952b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 08a787de950bb66430799977bed3fb488470ef1d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133978"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85979249"
 ---
-# <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="sysforeign_key_columns-transact-sql"></a>foreign_key_columns (Transact-sql)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  列、または外部キーを構成するには、列のセットごとに行が含まれています。  
+  外部キーを構成する列または列のセットごとに1行の値を格納します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**constraint_object_id**|**int**|FOREIGN KEY 制約の ID。|  
-|**constraint_column_id**|**int**|列、または外部キーを構成するには、列のセットの ID (*1..n*列の数を n =)。|  
-|**parent_object_id**|**int**|制約が参照するオブジェクトの親の ID です。|  
+|**constraint_object_id**|**int**|外部キー制約の ID。|  
+|**constraint_column_id**|**int**|外部キーを構成する*1*つまたは複数の列の ID (n = 列の数) です。|  
+|**parent_object_id**|**int**|参照元のオブジェクトである、制約の親の ID。|  
 |**parent_column_id**|**int**|参照元の列である、親列の ID です。|  
-|**referenced_object_id**|**int**|候補キーには、参照先のオブジェクトの ID です。|  
-|**referenced_column_id**|**int**|(候補キー列) の参照先の列の ID です。|  
+|**referenced_object_id**|**int**|候補キーを持つ、参照先のオブジェクトの ID。|  
+|**referenced_column_id**|**int**|参照される列の ID (候補キー列)。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server システム カタログに対するクエリに関してよくあるご質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

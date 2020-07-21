@@ -15,14 +15,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9fa91aaf4c2788e30c72b77d476d586a78a25e37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4d56ea995caa6c363432169c660c5cb9f07d082d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025991"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297267"
 ---
 # <a name="developing-specific-types-of-data-flow-components"></a>特定の種類のデータ フロー コンポーネントの開発
 

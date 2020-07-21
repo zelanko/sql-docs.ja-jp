@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_gettable (TRANSACT-SQL) |Microsoft Docs
+title: fn_trace_gettable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18a6225bca9539f10c4dfea61e99d147cb188d4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d1bc18704b4f2b239fe590184d58289d66b35fc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059221"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898284"
 ---
-# <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfn_trace_gettable-transact-sql"></a>fn_trace_gettable (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  1 つ以上のトレース ファイルの内容を表形式で返します。  
+  1つ以上のトレースファイルの内容を表形式で返します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
@@ -44,25 +44,25 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>引数  
  '*filename*'  
- 読み取る最初のトレース ファイルを指定します。 *ファイル名*は**nvarchar (256)** 、既定値はありません。  
+ 読み取る最初のトレースファイルを指定します。 *ファイル名*は**nvarchar (256)**,、既定値はありません。  
   
  *number_files*  
- 読み取るロールオーバー ファイルの数を指定します。 この数にはで指定された最初のファイルが含まれています*filename*します。 *number_files*は、 **int**します。  
+ 読み取るロールオーバーファイルの数を指定します。 この数値には、 *filename*で指定された初期ファイルが含まれます。 *number_files*は**int**です。  
   
-## <a name="remarks"></a>コメント  
- 場合*number_files*として指定されて**既定**、 **fn_trace_gettable**トレースの最後に達するまで、すべてのロール オーバー ファイルを読み取ります。 **fn_trace_gettable**指定したトレースの有効なすべての列を含むテーブルを返します。 詳細については、次を参照してください。 [sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)します。  
+## <a name="remarks"></a>注釈  
+ *Number_files*が**default**として指定されている場合、 **fn_trace_gettable**はトレースの最後に達するまですべてのロールオーバーファイルを読み取ります。 **fn_trace_gettable**は、指定されたトレースに対して有効なすべての列を含むテーブルを返します。 詳細については、「 [sp_trace_setevent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)」を参照してください。  
   
- Fn_trace_gettable 関数はロール オーバー ファイルを読み取らないことに注意してください (を使用して、このオプションが指定されている場合、 *number_files*引数) 元のトレース ファイル名がアンダー スコアと数値が終了します。 ただし、この状況は、ファイルがロールオーバーされるときに自動的に追加されたアンダースコアおよび数値については該当しません。この問題に対処するには、元のファイル名のアンダースコアを削除してトレース ファイルの名前を変更します。 たとえば、元のファイルの名前は**Trace_Oct_5.trc**ロール オーバー ファイルの名前は**Trace_Oct_5_1.trc**、ファイルの名前を変更することができます**TraceOct5.trc**と**TraceOct5_1.trc**します。  
+ Fn_trace_gettable 関数はロールオーバーファイルを読み込まないことに注意してください (このオプションが*number_files*引数を使用して指定されている場合)。元のトレースファイル名の末尾には、アンダースコアと数値が使用されます。 (これは、ファイルのロールオーバー時に自動的に追加されるアンダースコアと数字には適用されません)。回避策として、トレースファイルの名前を変更して、元のファイル名のアンダースコアを削除することができます。 たとえば、元のファイルに**Trace_Oct_5 .trc**という名前が付けられていて、ロールオーバーファイルに**Trace_Oct_5_1 .trc**という名前が付けられている場合は、ファイルの名前を**TraceOct5**と**TraceOct5_1**に変更できます。  
   
  この関数は、関数が実行されるインスタンス上でアクティブになっているトレースを読み取ることができます。  
   
 ## <a name="permissions"></a>アクセス許可  
- サーバーの ALTER TRACE 権限が必要です。  
+ サーバーに対する ALTER TRACE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-fntracegettable-to-import-rows-from-a-trace-file"></a>A. fn_trace_gettable を使用してトレース ファイルから行をインポートする  
- 次の例では`fn_trace_gettable`内で、`FROM`の句、`SELECT...INTO`ステートメント。  
+### <a name="a-using-fn_trace_gettable-to-import-rows-from-a-trace-file"></a>A. Fn_trace_gettable を使用したトレースファイルからの行のインポート  
+ 次の例では、 `fn_trace_gettable` ステートメントの句内でを呼び出し `FROM` `SELECT...INTO` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -72,8 +72,8 @@ FROM fn_trace_gettable('c:\temp\mytrace.trc', default);
 GO  
 ```  
   
-### <a name="b-using-fntracegettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>B. fn_trace_gettable を使用して、SQL Server テーブルに読み込むことができる IDENTITY 列を含むテーブルを返す  
- 次の例では、一部として関数を呼び出し、`SELECT...INTO`ステートメントでテーブルを返します、`IDENTITY`列をテーブルに読み込むことができます`temp_trc`。  
+### <a name="b-using-fn_trace_gettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>B: fn_trace_gettable を使用して、SQL Server テーブルに読み込むことができる IDENTITY 列を含むテーブルを返す  
+ 次の例では、ステートメントの一部として関数を呼び出し `SELECT...INTO` 、 `IDENTITY` テーブルに読み込むことのできる列を含むテーブルを返し `temp_trc` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -83,10 +83,10 @@ FROM fn_trace_gettable('c:\temp\mytrace.trc', default);
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
   

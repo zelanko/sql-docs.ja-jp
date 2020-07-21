@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8ec1e724c607a8805b9654f8ade077ab078e4eae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf3c23908b3ec391afc7b9073796ab4c2f47100
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988194"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298265"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>[機能依存プロファイル要求] のオプション (データ プロファイル タスク)
 
@@ -29,12 +29,12 @@ ms.locfileid: "67988194"
 > [!NOTE]  
 >  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
   
 ## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>決定列と依存列の選択について  
  **機能依存プロファイル要求** は、決定側の列または列のセット ( **DeterminantColumns** プロパティで指定) により、依存側の列 ( **DependentColumn** プロパティで指定) の値がどの程度決定されるかを計算します。 たとえば、米国の州の列は米国郵便番号の列に機能的に依存します。 つまり、郵便番号 (決定列) が "98052" である場合、州 (依存列) は必ず "Washington" になります。  
   
- 決定側については、 **DeterminantColumns** プロパティで列または列のセットを指定できます。 たとえば、A 列、B 列、および C 列を含むサンプル テーブルについて考えてみます。**DeterminantColumns** プロパティについて次の選択を行います。  
+ 決定側については、 **DeterminantColumns** プロパティで列または列のセットを指定できます。 たとえば、A 列、B 列、および C 列を含むサンプル テーブルについて考えてみます。 **DeterminantColumns** プロパティについて次の選択を行います。  
   
 -   **[(\*)]** ワイルドカードを選択した場合、データ プロファイル タスクは、各列を依存関係の決定側としてテストします。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67988194"
   
 -   **全般**  
   
--   **Options**  
+-   **[オプション]**  
   
 ### <a name="data-options"></a>[データ] のオプション  
  **[ConnectionManager]**  
@@ -86,9 +86,9 @@ ms.locfileid: "67988194"
  文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
->  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、 **[CompareOptions]** は読み取り専用で、 **[Default]** に設定されます。  
+>  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[Default]**|ソース テーブル内の列の照合順序に基づいてデータを並べ替えて比較します。|  
 |**[BinarySort]**|文字ごとに定義されているビット パターンに基づいてデータを並べ替えて比較します。 バイナリ並べ替え順では、大文字と小文字が区別され、アクセントが区別されます。 また、バイナリは最速の並べ替え順です。|  
@@ -96,7 +96,7 @@ ms.locfileid: "67988194"
   
  **[DictionarySort]** を選択した場合は、次の表に示すオプションの任意の組み合わせも選択できます。 既定では、これらの追加オプションは選択されていません。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**IgnoreCase**|比較時に、大文字と小文字を区別するかどうかを示します。 このオプションを設定した場合、文字列比較で大文字と小文字は区別されません。 たとえば、"ABC" は "abc" と同一になります。|  
 |**IgnoreNonSpace**|比較で、通常の文字と分音文字付きの文字を区別するかどうかを指定します。 このオプションを設定した場合、比較で分音文字は無視されます。 たとえば、"Ã¥" は "a" に等しくなります。|  
@@ -111,9 +111,9 @@ ms.locfileid: "67988194"
  **[ThresholdSetting]**  
  しきい値設定を指定します。 このプロパティの既定値は **[Specified]** です。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**[InclusionThresholdSetting]**|しきい値を指定しません。 機能依存の強さは、その値に関係なく報告されます。|  
+|**なし**|しきい値を指定しません。 機能依存の強さは、その値に関係なく報告されます。|  
 |**[Specified]**|**[FDStrengthThreshold]** で指定したしきい値を使用します。 機能依存の強さは、このしきい値より大きい場合にのみ報告されます。|  
 |**[Exact]**|しきい値を指定しません。 機能依存の強さは、選択した列間の機能依存が完全に一致する場合にのみ報告されます。|  
   
@@ -125,6 +125,6 @@ ms.locfileid: "67988194"
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

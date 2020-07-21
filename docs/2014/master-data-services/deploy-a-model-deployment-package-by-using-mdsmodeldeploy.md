@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e6229b3edebb8800de642272c9aa2adc0ea907f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971600"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy を使用したモデルの配置パッケージの配置
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、MDSModelDeploy ツールを使用して、次のどちらかを含むパッケージを配置します。  
@@ -36,9 +35,9 @@ ms.locfileid: "65483073"
   
 -   モデルの配置パッケージが必要です。 詳細については、「  [MDSModelDeploy を使用したモデルの配置パッケージの作成](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
   
--   モデルを配置する環境の管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデルを配置する環境の管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
--   モデルのデータを更新する場合、配置するバージョンは **ロック解除** することも、**コミット**することもできません。  
+-   データを使用してモデルを更新する場合、配置先のバージョンを**ロック**または**コミット**することはできません。  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>モデルの配置パッケージを配置するには  
   
@@ -46,7 +45,7 @@ ms.locfileid: "65483073"
   
 2.  コマンド プロンプトを開き、MDSModelDeploy.exe のある場所に移動します。  
   
-    -   MDS を既定の場所にインストールする場合、ツールは*ドライブ*: SQL server \120\master Data Services\Configuration\MDSModelDeploy.exe \Program Files\Microsoft  
+    -   MDS が既定の場所にインストールされている場合、このツールは*ドライブ*:、または、マスターデータ Services\Configuration\MDSModelDeploy.exe  
   
     -   MDS を既定の場所にインストールしなかった場合は、ローカル コンピューター内で MDSModelDeploy.exe を検索します。  
   
@@ -91,9 +90,9 @@ ms.locfileid: "65483073"
   
 6.  パッケージが正常に配置されると、"MDSModelDeploy 操作は正常に完了しました" というメッセージが表示されます。  
   
- **注**  
+ **注:**  
   
--   としてビューを作成する場合は、パッケージ内のサブスクリプション ビューでは、既存のモデルにサブスクリプション ビューと同じ名前が含まれる*modelname.subscriptionviewname*します。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
+-   パッケージ内のサブスクリプションビューの名前が、既存のモデル内のサブスクリプションビューと同じである場合、ビューは modelname として作成され*ます。 subscriptionviewname*です。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
   
 -   配置プロセスには、次の 4 つの手順があります。  
   
@@ -110,9 +109,9 @@ ms.locfileid: "65483073"
      モデルを更新する場合、最初の 3 つの手順の実行中にプロセスが失敗すると、そのプロセスは続行されません。ただし、既に行われた変更はロールバックされません。 手順 4. でプロセスが失敗すると、更新可能なメンバーが更新されます。  
   
 ## <a name="next-steps"></a>次の手順  
- ユーザー定義メタデータ、ファイル属性、ユーザーおよびグループの権限はモデル配置パッケージに含まれていません。 モデルを配置した後、これらを手動で更新する必要があります。 詳細については、以下をご覧ください。  
+ ユーザー定義メタデータ、ファイル属性、ユーザーおよびグループの権限はモデル配置パッケージに含まれていません。 モデルを配置した後、これらを手動で更新する必要があります。 詳細については、次を参照してください。  
   
--   [メタデータの追加&#40;マスター データ サービス&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
+-   [メタデータの追加 &#40;マスターデータサービス&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   
 -   [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   

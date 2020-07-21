@@ -1,5 +1,5 @@
 ---
-title: サーバー接続ファイル (AccessToSQL) の作成 |Microsoft Docs
+title: サーバー接続ファイルの作成 (には、Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -10,14 +10,14 @@ ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006604"
 ---
-# <a name="creating-the-server-connection-files-accesstosql"></a>サーバー接続ファイル (AccessToSQL) の作成
-サーバーの情報は、スクリプト ファイルの [サーバー] セクションでいずれかを指定します。 サーバーの情報は、別のサーバー接続ファイルにも指定できます。 サーバー接続ファイルのコマンド ライン パラメーターが`-c <serverconnectionfile>`します。 同じサーバー id がスクリプトとサーバーの両方の接続ファイルに存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
+# <a name="creating-the-server-connection-files-accesstosql"></a>サーバー接続ファイルの作成 (の場合)
+サーバー情報は、スクリプトファイルの [サーバー] セクションで指定できます。 サーバー情報は、別のサーバー接続ファイルで指定することもできます。 サーバー接続ファイルのコマンドラインパラメーターが`-c <serverconnectionfile>`です。 スクリプトファイルとサーバー接続ファイルの両方に同じサーバー id が存在する場合は、スクリプトファイル内のサーバー定義が考慮されます。  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -61,10 +61,10 @@ ms.locfileid: "68006604"
 ```  
   
 ## <a name="server-connection-file-validation"></a>サーバー接続ファイルの検証  
-ユーザーがスキーマ定義ファイルに対して自分のサーバー接続ファイルを簡単に検証できます **'A2SSConsoleScriptServersSchema.xsd'** 'スキーマ' フォルダー内にあります。  
+ユーザーは、' スキーマ ' フォルダーで使用可能なスキーマ定義ファイル **' A2SSConsoleScriptServersSchema '** に対して、サーバー接続ファイルを簡単に検証できます。  
   
-## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[SSMA コンソールの実行&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+## <a name="next-step"></a>次のステップ  
+コンソールを操作する次の手順では、 [SSMA コンソール &#40;実行](../../ssma/access/executing-the-ssma-console-accesstosql.md)して、sql&#41;  
   
 ## <a name="see-also"></a>関連項目  
 [SSMA コンソール (アクセス) の実行](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  

@@ -1,6 +1,6 @@
 ---
 title: SQL Server on Linux 用のアプリケーションを開発する
-description: ''
+description: SQL Server on Linux に接続して使用するアプリケーションは、さまざまなプログラミング言語と一般的な Web フレームワークから作成できます。
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/17/2017
@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 09bdea851ed3b9efeca1c69a09c12108706bbb22
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077412"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896507"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 用のアプリケーションの開発を開始する方法
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server on Linux に接続して使用するアプリケーションは、さまざまなプログラミング言語 (C#、Java、Node.js、PHP、Python、Ruby、C++ など) で作成できます。 一般的な Web フレームワークやオブジェクト リレーショナル マッピング (ORM) フレームワークを使用することもできます。
 
@@ -62,7 +62,7 @@ SQL Server に対するアプリケーションの構築を始める最適な方
 
 [Visual Studio Code](https://code.visualstudio.com) の新しい [mssql 拡張機能](https://aka.ms/mssql-marketplace)が Linux、macOS、および Windows で使用できるようになりました。 手順ごとの説明については、次のチュートリアルをご覧ください。
 
-- [Visual Studio Code の使用](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code を使用する](sql-server-linux-develop-use-vscode.md)
 
 また、Linux のネイティブの新しいコマンドライン ツールを使用することもできます。 以下のツールが含まれています。
 
@@ -70,7 +70,7 @@ SQL Server に対するアプリケーションの構築を始める最適な方
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 開始するには、次のクイックスタートのいずれかを使用して SQL Server on Linux をインストールします。
 

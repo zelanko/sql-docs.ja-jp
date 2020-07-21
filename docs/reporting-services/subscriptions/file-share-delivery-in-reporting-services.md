@@ -1,5 +1,6 @@
 ---
 title: Reporting Services でのファイル共有の配信 | Microsoft Docs
+description: この記事では、フォルダーへのレポートの配信を可能にするファイル共有配信拡張機能を設定する方法を説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a411b818d0b844f3f43ae29db7a3e1ee732be798
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575999"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742046"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services でのファイル共有の配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、フォルダーへのレポートの配信を可能にするファイル共有配信拡張機能が用意されています。 ファイル共有配信拡張機能は既定で使用できるため、追加で構成する必要はありません。 ファイルの配信を正常に実行するためには、共有フォルダーに書き込みアクセス権を設定する必要があります。 ライター権限を必要とするアカウントには、サブスクリプションに構成された資格情報またはレポート サーバー用に構成された **ファイル共有アカウント** を使用できます。 ファイル共有アカウントの詳細については、「 [サブスクリプション設定とファイル共有アカウント &#40;構成マネージャー&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)」を参照してください。 また、レポートへのアクセスを要求するユーザーは、共有フォルダーの読み取り権限を持っている必要があります。  
@@ -25,7 +26,7 @@ ms.locfileid: "65575999"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
   
  **このトピックの内容:**  
   
@@ -37,7 +38,7 @@ ms.locfileid: "65575999"
   
 -   [ファイル オプション](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> 共有フォルダーに配信されるレポートの特性  
+##  <a name="characteristics-reports-delivered-to-shared-folders"></a><a name="bkmk_Characteristics"></a> 共有フォルダーに配信されるレポートの特性  
   
 -   レポート サーバーによってホストおよび管理されるレポートとは異なり、共有フォルダーに配信されるレポートは静的なファイルです。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "65575999"
   
 -   配信したレポートで対話機能を保持するには、代わりに電子メール配信を使用します。 電子メールには、レポート サーバー上のレポートへのリンクが含まれます。これにより、ユーザーは、対話機能を使用できます。 詳細については、「 [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
-##  <a name="bkmk_target_folders"></a> 対象フォルダー  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a> 対象フォルダー  
  ファイル共有の配信を使用するサブスクリプションを定義する場合には、対象フォルダーとして既存のフォルダーを指定する必要があります。 レポート サーバーでは、ファイル システムにフォルダーを作成しません。 指定するフォルダーは、ネットワーク接続を使用してアクセス可能である必要があります。  
   
  共有フォルダーでレポートを **表示** するユーザーに読み取り権限があることを確認します。  
@@ -60,19 +61,19 @@ ms.locfileid: "65575999"
   
  フォルダーを作成するときに、必要な接続の上限を検討します。 レポート サーバーに必要な接続数は 2 つですが、共有フォルダーでレポートを開く追加のユーザーに対応できるように、十分な接続数を指定する必要があります。  
   
-##  <a name="bkmk_file_formats"></a> ファイル形式  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> ファイル形式  
  レポートは、HTML、DOCX、Excel などさまざまなファイル形式で表示されます。 レポートを特定の形式で保存するには、サブスクリプションの作成時に表示形式を選択します。 たとえば **Excel** を選択すると、レポートは [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ファイルとして保存されます。 サポートされている任意の表示形式を選択できますが、一部の形式はファイルの生成で他の形式より優れています。  
   
  ファイル共有配信を使用する場合は、すべての画像および関連するコンテンツが含まれているレポートを、単一のファイルで配信する形式を選択します。 適切な形式は、Web アーカイブ、PDF、TIFF、Excel などです。 HTML4.0 は避けてください。 レポートに画像が含まれている場合、HTML 4.0 形式のファイルにその画像が含まれるようには処理されません。  
   
-##  <a name="bkmk_file_options"></a> ファイル オプション  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> ファイル オプション  
  ファイル共有サブスクリプションを作成するときに、ファイル名の作成方法と、レポートの以前のバージョンをファイルで上書きするかどうかを構成できます。 完全修飾ファイル名は、名前、拡張子、およびファイルに付加されるテキストや数値という 3 つの要素で構成されて一意のファイル名が形成されます。  
   
  **ファイル名:** 既定のファイル名はソース レポート名に基づいて生成されますが、サブスクリプションでは独自の名前を指定することもできます。 拡張子は省略可能です。拡張子を使用する場合は、表示形式に対応する拡張子がレポート サーバーによって生成されます。  
   
  **上書き:** 上書きオプションを指定すると、毎回のレポート配信または新規ファイルの作成時に同じファイル名を再利用できます。 ファイルを上書きするには、同じファイル名と拡張子を使用する必要があります。  
   
- 配信ごとに一意のファイルを作成するための別の方法として、ファイル名にタイムスタンプを含める方法があります。 これを行うには、 **@timestamp** 変数をファイル名に追加します (例 : *CompanySales@timestamp* )。 この方法を使用すると、一意のファイル名が生成されるので、上書きされることはありません。  
+ 配信ごとに一意のファイルを作成するための別の方法として、ファイル名にタイムスタンプを含める方法があります。 これを行うには、 **\@timestamp** 変数をファイル名に追加します (例: *CompanySales@timestamp* )。 この方法を使用すると、一意のファイル名が生成されるので、上書きされることはありません。  
   
  ファイル共有配信用に構成されたサブスクリプションの設定の例を次の図に示します。  
   

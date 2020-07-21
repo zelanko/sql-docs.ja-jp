@@ -1,5 +1,5 @@
 ---
-title: MSpublisher_databases (TRANSACT-SQL) |Microsoft Docs
+title: MSpublisher_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ dev_langs:
 helpviewer_keywords:
 - MSpublisher_databases system table
 ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: da208c7fb83053c1817693bb16d16c3488fe90c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cc73f32e217d7f8b3a5d0b3a23113a8f99531d2b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032613"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889575"
 ---
-# <a name="mspublisherdatabases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="mspublisher_databases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSpublisher_databases**テーブルには、ローカル ディストリビューターによって処理されるパブリッシャー/パブリッシャー データベースの各ペアの 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
+  **MSpublisher_databases**テーブルには、ローカルディストリビューターによって処理されるパブリッシャー/パブリッシャーデータベースのペアごとに1行のデータが格納されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
-|**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
+|**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
 |**id**|**int**|行の ID。|  
-|**publisher_engine_edition**|**int**|エディション、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]発行元は、次のいずれかを指定できます。<br /><br /> **10** personal Edition を =<br /><br /> **11** desktop Engine (MSDE) を =<br /><br /> **20** = 標準<br /><br /> **21**ワークグループを =<br /><br /> **30** = Enterprise (評価)<br /><br /> **31**開発者を =<br /><br /> **40** = express (Express は、パブリッシャーをすることはできません。 この値は完全を期すのために存在します。)|  
+|**publisher_engine_edition**|**int**|パブリッシャーのエディション [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。次のいずれかになります。<br /><br /> **10** = Personal Edition<br /><br /> **11** = デスクトップエンジン (MSDE)<br /><br /> **20** = 標準<br /><br /> **21** = ワークグループ<br /><br /> **30** = Enterprise (評価版)<br /><br /> **31** = Developer<br /><br /> **40** = Express (express をパブリッシャーにすることはできません。 この値は、完全を期すために用意されています)。|  
   
 ## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

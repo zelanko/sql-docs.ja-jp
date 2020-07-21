@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae56e579e96db82d538189f832001b5a80b4f72e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b84cdce4bd540c285211d012a8c08ee364b833de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768798"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428249"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 式)
   指定された文字式の一番右の部分から指定された数の文字を返します。  
@@ -39,7 +38,7 @@ RIGHT(character_expression,integer_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *integer_expression* が *character_expression*より長い場合、関数は *character_expression*を返します。  
   
  *integer_expression* が 0 の場合、関数は長さが 0 の文字列を返します。  

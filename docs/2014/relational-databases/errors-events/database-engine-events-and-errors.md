@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c0e2316d8222709b3b276f3206bf82b4343d24c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb85e25e9a194f71ca96bce244b9c8425bb1e77f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969912"
 ---
 # <a name="database-engine-events-and-errors"></a>データベース エンジンのイベントとエラー
   このトピックでは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のエラーとイベントについて説明します。  

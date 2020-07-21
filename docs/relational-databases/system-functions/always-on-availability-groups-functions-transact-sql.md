@@ -1,5 +1,5 @@
 ---
-title: Always On 可用性グループの関数 (TRANSACT-SQL) |Microsoft Docs
+title: Always On 可用性グループの関数 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ dev_langs:
 ms.assetid: 293cc233-8688-4823-9887-176ed772f53d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7168d2f9842c482ff7474e700d0d1a1aa7fd734f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecf12fccb8e6c252ee4a0abee7dfe3661385d50d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647968"
 ---
-# <a name="always-on-availability-groups-functions-transact-sql"></a>Always On 可用性グループの関数 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="always-on-availability-groups-functions-transact-sql"></a>Always On 可用性グループ関数 (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次の Always On 可用性グループ機能を提供します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、次の Always On 可用性グループ関数が用意されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [sys.fn_hadr_is_primary_replica](../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  

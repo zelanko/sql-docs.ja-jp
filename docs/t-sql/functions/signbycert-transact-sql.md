@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 56d4af001c84fd4f175c0c2504bef39a12015e7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a677a65aeebff4c37688dfbdb2f80d1f6ae1265
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714917"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   証明書を使用してテキストに署名し、その署名を返します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68139139"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  
@@ -48,7 +48,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  *certificate_ID*  
  現在のデータベースでの証明書の ID です。 *certificate_ID* は **int** です。  
   
- *@cleartext*  
+ *\@cleartext*  
  署名されるデータを含む **nvarchar**、**char**、**varchar**、または **nchar** 型の変数です。  
   
  **'** *password* **'**  
@@ -57,11 +57,11 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ## <a name="return-types"></a>戻り値の型  
  **varbinary** 8,000 バイトの最大サイズ。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  証明書に対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、証明書 `ABerglundCert07` を使用して `@SensitiveData` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
+## <a name="examples"></a>例  
+ 次の例では、証明書 `@SensitiveData` を使用して `ABerglundCert07` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  

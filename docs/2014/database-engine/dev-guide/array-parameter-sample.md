@@ -1,5 +1,5 @@
 ---
-title: Array Parameter サンプル |Microsoft Docs
+title: 配列パラメーターのサンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a670b2e4f4a7a276f9e026cb650855c8aa2108a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933741"
 ---
 # <a name="array-parameter-sample"></a>Array パラメーター サンプル
   データベース内の行のセットを作成、更新、または削除すると便利な場合があります。 これを行うには、いくつかの方法があります。 1 つは、共通言語ランタイム (CLR) 統合ユーザー定義データ型を使用して、情報の配列をクライアントからサーバー上の CLR 統合ストアド プロシージャへ渡す方法です。 CLR 統合ユーザー定義データ型の性質によって、サーバーに提供されるデータの大きさは 8,000 バイトに制限されます。 したがって、この方法は、大規模なデータや複雑なデータを扱う場合には適切ではありません。 操作するデータが小規模で単純な場合、この方法は、行ごとにストアド プロシージャを呼び出す方法よりもはるかに効率的です。 データの順序が重要なアプリケーションでは、配列を渡すことでデータの順序を保持できます。このサンプルの内容は次のとおりです。  
@@ -29,9 +28,9 @@ ms.locfileid: "62753734"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/download/details.aspx?id=42299)から無償で入手できます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://archive.codeplex.com/?p=SqlServerSamples)から入手できる AdventureWorks データベース。  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62753734"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62753734"
   
 5.  c:\MySample で、`Program.vb` (Visual Basic サンプル) または `Program.cs` (C# サンプル) を作成し、適切な Visual Basic または C# のサンプル コード (下記) をこのファイルにコピーします。  
   
-6.  (24 行目前後) プログラム ファイルの適切な行を検索し、置換`XXX`のインスタンスの名前に置き換えます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  ファイルプログラム内の適切な行 (24 行目) を探し、を `XXX` のインスタンスの名前に置き換えます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   

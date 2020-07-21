@@ -16,10 +16,10 @@ ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4b88e5006ab772d232f65016033738c0b46848c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579899"
 ---
 # <a name="configurationsetting-method---listreportserversindatabase"></a>ConfigurationSetting メソッド - ListReportServersInDatabase
@@ -66,7 +66,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ListReportServersInDatabase は、セキュリティで保護された情報にアクセスできるかどうかに関係なく、レポート サーバー データベースにあるレポート サーバーの一覧を作成し、各レポート サーバーに関する情報を含む配列セットを返します。  
   
 ## <a name="requirements"></a>必要条件  

@@ -10,15 +10,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0b08e445cf22760f41da3e21e086c20fc927f8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fe209581f1ce57d40c7757333a6da8ea84898e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629471"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>フルテキスト クエリのパフォーマンスの向上
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   フルテキスト クエリのパフォーマンスを向上させるための推奨事項を次に示します。  
   
  フルテキスト クエリのパフォーマンスは、メモリ、ディスク速度、CPU 速度、コンピューター アーキテクチャなど、ハードウェア リソースの影響も受けます。  
@@ -49,7 +49,7 @@ ms.locfileid: "68021158"
 -   選択的リレーションの述語が含まれているアプリケーションにおいて、選択的リレーションの述語と非選択的なフルテキスト述語を使用するクエリでは、クエリ オプティマイザーを使用するように記述した場合に最適なパフォーマンスを得られる可能性があります。 この場合、効果的なクエリ プランを作成するために述語を利用するかプッシュダウンを適用するかが、クエリ オプティマイザーによって判断されます。 この方法は、リレーショナル データをフルテキスト データとしてインデックス作成するよりも単純であり、多くの場合、効率的でもあります。  
   
 ## <a name="related-resources"></a>関連リソース  
- [SQL Server 2008 フルテキスト検索: 内部と機能強化](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 フルテキスト検索: 内部構造と機能強化](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>参照  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   

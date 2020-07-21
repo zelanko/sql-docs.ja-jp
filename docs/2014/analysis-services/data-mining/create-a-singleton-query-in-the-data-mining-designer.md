@@ -1,5 +1,5 @@
 ---
-title: データ マイニング デザイナーで単一クエリの作成 |Microsoft Docs
+title: データマイニングデザイナーでの単一クエリの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1fa1d14c1a96a89cbd890dbf4d133d84897b9197
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085308"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523678"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>データ マイニング デザイナーでの単一クエリの作成
   単一クエリは、1 つのケースに関する予測を作成する場合に便利です。 単一クエリの詳細については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
@@ -57,9 +56,9 @@ AS [t]
   
 4.  **[単一クエリ入力]** テーブルの **[値]** 列で、予測を作成するケースについて説明した値を選択します。  
   
-     たとえば、選択**2**の**Number Children At Home**、し、入力`45`の**年齢**します。  
+     たとえば、[ **Number Children At Home**] で [ **2** ] を選択し、「Age」と入力し `45` ます。 **Age**  
   
-5.  **[マイニング モデル]** テーブルの予測可能列をタブの下部にある **[変換元]** 列にドラッグします。必要に応じて、列の別名を入力できます。  
+5.  [**マイニングモデル**] テーブルの予測可能列を、タブの下部にある [**ソース**] 列にドラッグします。必要に応じて、列の別名を入力できます。  
   
      たとえば、 **[Bike Buyer]** を **[変換元]** 列にドラッグします。  
   
@@ -69,17 +68,17 @@ AS [t]
   
 7.  **PredictProbability** 行の **[条件と引数]** をクリックし、予測する列の名前と、必要に応じて予測する特定の値を入力します。  
   
-     たとえば、「 `[Bike Buyer], 1`」のように入力します。  
+     たとえば、「 `[Bike Buyer], 1`」と入力します。  
   
 8.  **PredictProbability** 行の **[別名]** ボックスをクリックし、新しい列を参照する名前を入力します。  
   
-     たとえば、「 `ProbableBuyer`」のように入力します。  
+     たとえば、「 `ProbableBuyer`」と入力します。  
   
 9. **[マイニング モデル予測]** タブのツール バー上の **[クエリ結果ビューに切り替え]** をクリックします。  
   
      新しい画面が開き、クエリの結果が表示されます。 作成した DMX ステートメントを表示するには、 **[SQL]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [予測クエリ (データ マイニング)](prediction-queries-data-mining.md)  
+ [予測クエリ &#40;データ マイニング&#41;](prediction-queries-data-mining.md)  
   
   

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b1c7cf9bed76a5fef2e9fda837a6df3f75687acd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2eb2a5cdacc32e50e787837b04ad3a7ae2590306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061485"
 ---
 # <a name="cinstance-class"></a>CInstance クラス
-   [CInstance クラス](cinstance-class.md) は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスを表します。  
+  [CInstance クラス](cinstance-class.md) は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスを表します。  
   
  このクラスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスに関連付けられたプロトコルおよびネットワーク ライブラリを管理することができます。  
   

@@ -1,10 +1,9 @@
 ---
-title: オペレーター | Microsoft Docs
-ms.custom: ''
+title: オペレーター
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4059bda6f761171292f2977f7d8e6a3f6896451
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260082"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247632"
 ---
 # <a name="operators"></a>オペレーター
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "68260082"
 オペレーターの連絡先情報では、オペレーターに通知する方法を定義します。 オペレーターへの通知には、電子メール、ポケットベル、または **net send** コマンドを使用できます。  
   
 > [!IMPORTANT]
-> [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントからポケットベル オプションと **net send** オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
+> [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントからポケットベル オプションと **net send** オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
 -   **電子メールによる通知**  
   
@@ -81,7 +82,7 @@ ms.locfileid: "68260082"
   
         **Cc**:  
   
-        **To**:  
+        **[宛先]** :  
   
     > [!NOTE]  
     > 容量の小さい英数字のポケットベル システムを使用している場合は、エラーのテキストをポケットベルの通知から除外することで、送信されるテキストを短縮できます。 容量の小さい英数字のポケットベル システムには、1 ページあたりのバイト数が 64 バイトに制限されているものなどがあります。  

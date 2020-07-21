@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4d4e570f5dda2531ddb7ef5f3089c1bb1c4c05f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088790"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296047"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>レッスン 2-2:Foreach ループ コンテナーを追加して構成する
 
@@ -88,7 +88,7 @@ Foreach ループ コンテナーを追加したら、フォルダー内の各�
 ## <a name="go-to-next-task"></a>次のタスクに進む  
 [ステップ 3:フラット ファイル接続マネージャーの変更](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
 [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   

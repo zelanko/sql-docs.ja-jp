@@ -1,5 +1,6 @@
 ---
 title: 管理データ ウェアハウス | Microsoft Docs
+description: SQL Server の管理データ ウェアハウスは、ターゲット サーバーから収集されたデータを格納するリレーショナル データベースです。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3699812972a7119552a53b76c73a373a89dc0622
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758104"
 ---
 # <a name="management-data-warehouse"></a>管理データ ウェアハウス (management data warehouse)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   管理データ ウェアハウスは、データ コレクションの対象であるサーバーから収集されたデータを格納するリレーショナル データベースです。 このデータは、システム データ コレクション セットのレポートを生成するために使用され、カスタム レポートを作成する際にも使用できます。  
   
  データベース管理者が定義した保有ポリシーを実装するために必要なジョブやメンテナンス プランは、データ コレクターのインフラストラクチャによって定義されます。  
@@ -39,7 +40,7 @@ ms.locfileid: "68133619"
   
  次の表では、core スキーマ内のデータベース テーブルについて説明します。 データ コレクターは、これらのデータベース テーブルで、データの出所、挿入者、データ ウェアハウスにアップロードされた時刻を追跡できます。  
   
-|テーブル名|[説明]|  
+|テーブル名|説明|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|管理データ ウェアハウスのレポートがパフォーマンス カウンターをグループ化および集計する方法に関する情報を格納します。|  
 |core.snapshots_internal|それぞれの新しいスナップショットを識別します。 アップロード パッケージによってデータの新しいバッチのアップロードが開始されるたびに、このテーブルに新しい行が挿入されます。|  
@@ -128,7 +129,7 @@ ms.locfileid: "68133619"
 ## <a name="see-also"></a>参照  
  [管理データ ウェアハウスのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [データ コレクション](../../relational-databases/data-collection/data-collection.md)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
  [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   
   

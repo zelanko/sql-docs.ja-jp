@@ -1,5 +1,5 @@
 ---
-title: WQL を使用して構成管理用 WMI プロバイダーへのアクセス |Microsoft Docs
+title: WQL を使用して構成管理の WMI プロバイダーにアクセスする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b58297c5e292ceb18a6e2e50e2b25b9aa352e2fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68195872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061290"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>WQL を使用して構成管理の WMI プロバイダーにアクセスする
   このセクションでは、WMI Provider for Computer Management に対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] WQL (Windows Management Instrumentation Query Language) ステートメントを実行する方法について説明します。  
@@ -29,13 +28,13 @@ ms.locfileid: "68195872"
   
 ### <a name="querying-services-using-wbemtest"></a>WBEMtest を使用したサービスの照会  
   
-1.  **開始** メニューのをクリックして**実行**、し、入力`WBEMtest`します。  
+1.  [**スタート**] メニューの [**実行**] をクリックし、「」と入力し `WBEMtest` ます。  
   
-2.  WBEMtest.exe のダイアログ ボックスが表示されます。 **[接続]** をクリックします。  
+2.  WBEMtest.exe のダイアログ ボックスが表示されます。 **[Connect]** をクリックします。  
   
-3.  最初のテキスト フィールドに、WMI Provider for Computer Management の名前空間 (「root\Microsoft\SqlServer\ComputerManagement11」) を入力します。 **[接続]** をクリックします。  
+3.  最初のテキスト フィールドに、WMI Provider for Computer Management の名前空間 (「root\Microsoft\SqlServer\ComputerManagement11」) を入力します。 **[Connect]** をクリックします。  
   
-4.  クリックして**クエリ**します。 ローカル コンピューターで実行されている現在のサービスを返すクエリを入力します。**選択\*SqlService から。** **[適用]** をクリックします。  
+4.  **[クエリ]** をクリックします。 ローカルコンピューターで現在実行されているサービスを返すクエリを入力します: **SELECT \* FROM sqlservice。** **[Apply]** をクリックします。  
   
 5.  「`WHERE ServiceName = "MSSQLSERVER"`」を追加することで、クエリを絞り込みます。  
   

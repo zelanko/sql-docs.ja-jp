@@ -1,5 +1,5 @@
 ---
-title: SQL_NO_DATA を返す |Microsoft Docs
+title: SQL_NO_DATA | を返すMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SQL_NO_DATA
 - compatibility [ODBC], SQL_NO_DATA
 ms.assetid: deed0163-9d1a-4e9b-9342-3f82e64477d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2613593d9c2e20d5dfa01c0a0b4f9886dbc8e889
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3e2c806edd5d5647e09c00975ad7207ee5c2c876
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057133"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305113"
 ---
-# <a name="returning-sqlnodata"></a>SQL_NO_DATA を返す
-ときに、ODBC *2.x*アプリケーションを処理する ODBC *3.x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**、検索された update または delete ステートメントが実行されましたが、ODBC データ ソースの行によって影響されなかったと*3.x*ドライバーは SQL_SUCCESS を返す必要があります。 ときに、ODBC *3.x* odbc 作業アプリケーション*3.x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**と同じ結果が、ODBC *3.x*ドライバーが SQL_NO_DATA を返す必要があります。  
+# <a name="returning-sql_no_data"></a>SQL_NO_DATA を返す
+*Odbc 2.x アプリケーションが*odbc 2.x アプリケーションをただし時して**SQLExecDirect**、 **Sqlexecute**、または**sqlparamdata**を呼び出し、検索された update または delete ステートメントが実行されたが、データソースの行に影響を与えていない場合、odbc *3. x* *ドライバーは*SQL_SUCCESS を返す必要があります。 *Odbc 3.x アプリケーションで*odbc *3.x ドライバーを*使用する場合、 **SQLExecDirect**、 **Sqlexecute**、または**SQLPARAMDATA**が同じ結果で呼び出されると、odbc *3. x*ドライバーは SQL_NO_DATA を返す必要があります。  
   
- ステートメントのバッチにし、データ ソースで行が削除されない場合は、検索結果の update または delete のステートメント**SQLMoreResults** SQL_SUCCESS を返します。 SQL_NO_DATA は、するものであり、検索された更新/削除する行が影響を受けませんからの結果は、以上結果があることを意味するために返すことはできません。
+ ステートメントのバッチ内の検索された update ステートメントまたは delete ステートメントがデータソースの行に影響を与えない場合は、 **Sqlmoreresults**によって SQL_SUCCESS が返されます。 SQL_NO_DATA を返すことはできません。これは、結果がそれ以上ないことを意味します。行が影響を受けている検索された更新/削除の結果がないということです。

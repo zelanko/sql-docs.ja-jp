@@ -16,14 +16,14 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9d969db282002919775fa9e77198686e4ee1ef3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 98f0e19bb0e3eb424d742990ce2f63e3fb0af019
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068922"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295704"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS パッケージ アップグレード ウィザードの F1 ヘルプ
 
@@ -52,11 +52,11 @@ ms.locfileid: "68068922"
  **[パッケージ ソース]**  
  アップグレードするパッケージが格納されている場所を選択します。 このオプションには、次の表に示す値があります。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**[ファイル システム]**|アップグレードするパッケージがローカル コンピューター上のフォルダーにあることを示します。<br /><br /> パッケージをアップグレードする前に元のパッケージをウィザードでバックアップするには、元のパッケージがファイル システムに格納されている必要があります。 詳細については、方法に関するトピックを参照してください。|  
-|**[SSIS パッケージ ストア]**|アップグレードするパッケージがパッケージ ストア内にあることを示します。 パッケージ ストアは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 (SSIS サービス)](../integration-services/service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
-|**Microsoft SQL Server**|アップグレードするパッケージが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の既存のインスタンス内にあることを示します。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
+|**ファイル システム**|アップグレードするパッケージがローカル コンピューター上のフォルダーにあることを示します。<br /><br /> パッケージをアップグレードする前に元のパッケージをウィザードでバックアップするには、元のパッケージがファイル システムに格納されている必要があります。 詳細については、方法に関するトピックを参照してください。|  
+|**[SSIS パッケージ ストア]**|アップグレードするパッケージがパッケージ ストア内にあることを示します。 パッケージ ストアは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](../integration-services/service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する **パッケージ ソース** 動的オプションが表示されます。|  
+|**Microsoft SQL Server**|アップグレードするパッケージが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の既存のインスタンス内にあることを示します。<br /><br /> この値を選択すると、対応する **パッケージ ソース** 動的オプションが表示されます。|  
   
  **フォルダー**  
  アップグレードするパッケージが格納されているフォルダーの名前を入力するか、 **[参照]** をクリックしてフォルダーを指定します。  
@@ -80,7 +80,7 @@ ms.locfileid: "68068922"
  **[SQL Server 認証を使用する]**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用してサーバーに接続する場合に選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
   
- **User name**  
+ **ユーザー名**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するユーザー名を入力します。  
   
  **パスワード**  
@@ -104,9 +104,9 @@ ms.locfileid: "68068922"
  **[パッケージ ソース]**  
  アップグレード パッケージが格納される場所を指定します。 このオプションには、次の表に示す値があります。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**[ファイル システム]**|アップグレードされたパッケージをローカル コンピューター上のフォルダーに保存することを示します。|  
+|**ファイル システム**|アップグレードされたパッケージをローカル コンピューター上のフォルダーに保存することを示します。|  
 |**[SSIS パッケージ ストア]**|アップグレードされたパッケージを Integration Services パッケージ ストア内に保存することを示します。 パッケージ ストアは、Integration Services サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](../integration-services/service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
 |**Microsoft SQL Server**|アップグレードされたパッケージを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の既存のインスタンスに保存することを示します。<br /><br /> この値を選択すると、対応する **パッケージ ソース** 動的オプションが表示されます。|  
   
@@ -132,7 +132,7 @@ ms.locfileid: "68068922"
  **[SQL Server 認証を使用する]**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用してサーバーに接続する場合に選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
   
- **User name**  
+ **ユーザー名**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するユーザー名を入力します。  
   
  **パスワード**  
@@ -227,16 +227,16 @@ ms.locfileid: "68068922"
  **操作**  
  アップグレード処理で実行されるアクションを表示します。  
   
- **ステータス**  
+ **状態**  
  各アクションの結果を表示します。  
   
  **メッセージ**  
  各アクションによって生成されるエラー メッセージを表示します。  
   
- **[停止]**  
+ **Stop**  
  パッケージのアップグレードを停止します。  
   
- **レポート**  
+ **Report**  
  パッケージのアップグレード結果を含むレポートの処理を選択します。  
   
 -   レポートをオンラインで表示します。  

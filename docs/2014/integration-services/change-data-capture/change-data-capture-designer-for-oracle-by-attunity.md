@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84bbb04ab823c8ef33b94b8ef46ef6c234865216
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835948"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438859"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity の Change Data Capture Designer for Oracle
   CDC デザイナー コンソールは、Oracle CDC インスタンスを開発および管理するために使用されます。 CDC デザイナー コンソールは、次の要素を含む Microsoft 管理コンソール スナップインです。  
@@ -48,12 +47,12 @@ ms.locfileid: "62835948"
   
 -   [高度な接続プロパティ](advanced-connection-properties.md)  
   
--   [スクリプトを実行するための Oracle 資格情報](oracle-credentials-for-running-script.md)  
+-   [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
   
 -   [Oracle の補足ログ スクリプト](oracle-supplemental-logging-script.md)  
   
--   [CDC インスタンス配置スクリプト](cdc-instance-deployment-script.md)  
+-   [[CDC インスタンス配置スクリプト]](cdc-instance-deployment-script.md)  
   
--   [CDC デザイナーで使用する SQL Server 接続に必要なアクセス許可](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+-   [CDC デザイナーで使用する SQL Server 接続に必要な権限](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

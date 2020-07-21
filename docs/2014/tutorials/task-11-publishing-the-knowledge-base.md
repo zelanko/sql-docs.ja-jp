@@ -1,5 +1,5 @@
 ---
-title: タスク 11:ナレッジ ベースをパブリッシュ |Microsoft Docs
+title: 'タスク 11: ナレッジベースを公開する |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 9ba826a0-11c5-4819-9435-3e17d53cffa7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fb3fa69a552dc00c85e1053cb230ba56ae840ac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1be28a98e9ff0d17cb577736324320819c650b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064788"
 ---
-# <a name="task-11-publishing-the-knowledge-base"></a>タスク 11:ナレッジ ベースをパブリッシュする
+# <a name="task-11-publishing-the-knowledge-base"></a>タスク 11: ナレッジ ベースをパブリッシュする
   ここでは、ナレッジ ベースをパブリッシュします。 パブリッシュされたナレッジ ベースは、データ品質プロジェクトでのクレンジングまたは照合アクティビティに使用できます。  
   
-1.  をクリックして**完了**ウィンドウの下部にあるボタンをクリックします。  
+1.  ウィンドウの下部にある [**完了**] ボタンをクリックします。  
   
-2.  クリックして**発行**で、 **SQL Server Data Quality Services**  ダイアログ ボックス。  
+2.  [ **SQL Server Data Quality Services** ] ダイアログボックスで [**発行**] をクリックします。  
   
 3.  **[OK]** をクリックして、メッセージ ボックスを閉じます。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 12:ナレッジを検出する&#40;ナレッジ検出&#41;](../../2014/tutorials/task-12-discovering-knowledge-knowledge-discovery.md)  
+ [タスク 12: ナレッジ検出 &#40;ナレッジ検出の&#41;](../../2014/tutorials/task-12-discovering-knowledge-knowledge-discovery.md)  
   
   

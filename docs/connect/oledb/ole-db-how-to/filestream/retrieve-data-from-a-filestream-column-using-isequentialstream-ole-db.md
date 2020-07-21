@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 201314f5869b9b1aab52b2f101f2396656448f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994788"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>ISequentialStream を使用した FILESTREAM 列からのデータの取得 (OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "67994788"
 
   このサンプルでは、ICommandText インターフェイス内で ISequentialStream インターフェイスを使用して、Filestream 列から単一のレコードを取得する方法を示します。  
   
- Filestream 機能の詳細については、「 [filestream のサポート](../../../oledb/features/filestream-support.md)」を参照してください。  
+ Filestream 機能の詳細については、「[FILESTREAM サポート](../../../oledb/features/filestream-support.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  INCLUDE 環境変数に、msoledbsql.h が保存されているディレクトリが含まれていることを確認します。  

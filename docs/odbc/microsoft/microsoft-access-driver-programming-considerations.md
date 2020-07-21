@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Access driver [ODBC]
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9adf9fae067ca87db14138fa267563ddd5dd1c79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 52c8a169c950de7c1b5f717c2591fff88add42f3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045125"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81308053"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Microsoft Access ドライバーのプログラミングに関する考慮事項
 このセクションでは、次のトピックを扱います。  

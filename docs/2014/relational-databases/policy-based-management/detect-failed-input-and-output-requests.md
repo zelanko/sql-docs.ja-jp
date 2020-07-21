@@ -1,5 +1,5 @@
 ---
-title: 失敗した入出力要求の検出 |Microsoft Docs
+title: 失敗した入力出力要求の検出 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0abd1541baeda6152a80980e85e6c902b45e886c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b3cdc219de06592924ca74cad33ed0027963ac3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068873"
 ---
-# <a name="detect-failed-input-output-request"></a>失敗した入出力要求を検出します。
+# <a name="detect-failed-input-output-request"></a>失敗した入力出力要求の検出
   このルールでは、システム イベント ログの EventId 50 を確認します。 このエラーは、I/O 要求失敗によって発生します。  
   
 ## <a name="best-practices-recommendations"></a>ベスト プラクティスと推奨事項  

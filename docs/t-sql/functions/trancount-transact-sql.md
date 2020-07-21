@@ -18,18 +18,18 @@ helpviewer_keywords:
 - connections [SQL Server], active transactions
 - active transactions
 ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42e5bd7b00b8d0fb10de9e33576b7e58a47c6bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05fb5d7bcb88d2120e6a9781f95882e5e04d50d9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098846"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85992999"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在の接続で実行された BEGIN TRANSACTION ステートメントの数を返します。  
   
@@ -42,12 +42,12 @@ ms.locfileid: "68098846"
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  @@TRANCOUNT の値は、BEGIN TRANSACTION ステートメントが実行されるごとに 1 ずつ増加します。 ROLLBACK TRANSACTION は、@@TRANCOUNT に影響しない ROLLBACK TRANSACTION *savepoint_name* を除き、@@TRANCOUNT を 0 にデクリメントします。 COMMIT TRANSACTION または COMMIT WORK は、@@TRANCOUNT を 1 ずつデクリメントします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>A. BEGIN と COMMIT ステートメントの影響を確認する  
  次の例では、`BEGIN` ステートメントと `COMMIT` ステートメントを入れ子にした場合の `@@TRANCOUNT` 変数に対する影響を確認します。  
@@ -99,6 +99,6 @@ PRINT @@TRANCOUNT
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

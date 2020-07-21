@@ -1,6 +1,6 @@
 ---
-title: ブックマークの管理 | Microsoft Docs
-ms.custom: ''
+title: ブックマークの管理
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6741660b7b7985356c59ffe47b53c376a55338e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3c20b7008ca447e278dd07e9c483a3147117dbf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063398"
 ---
 # <a name="manage-bookmarks"></a>ブックマークの管理
   コード エディターでの作業中に、 **[ブックマーク]** ウィンドウで、ドキュメント内のコードの特定の行へのリンクを作成できます。 このウィンドウは、 **[表示]** メニューから表示できます。  
@@ -90,5 +89,5 @@ ms.locfileid: "66063908"
  **[すべてのブックマークを有効/無効にします]**  
  **[ブックマーク]** ウィンドウ内のすべてのブックマークに対して、チェック ボックスをオフまたはオンにします。 ブックマークは削除されません。また、ブックマークが付けられたコードの行は変更されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

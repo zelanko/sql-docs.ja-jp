@@ -1,6 +1,8 @@
 ---
-title: REVOKE (可用性グループの権限の取り消し) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE (可用性グループのアクセス許可の取り消し)
+description: Always On 可用性グループに対して権限を取り消します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0910901fbe248714b5cbd11d14e5036c52cf8e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735426"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>可用性グループの権限の取り消し (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Always On 可用性グループに対する権限を取り消します。 
   
@@ -33,7 +35,7 @@ ms.locfileid: "68082352"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON AVAILABILITY GROUP :: availability_group_name  
@@ -55,7 +57,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  ON AVAILABILITY GROUP **::** _availability_group_name_  
  権限を取り消す可用性グループを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
- { FROM | TO } \<server_principal> 取り消される権限の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
+ { FROM | TO } \<server_principal> 権限を取り消す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
  *SQL_Server_login*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。  
@@ -84,7 +86,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  AS *SQL_Server_login*  
  このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー スコープの権限を取り消すことができるのは、現在のデータベースが **master** のときだけです。  
   
  可用性グループに関する情報は、[sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) カタログ ビューで表示できます。 サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。  
@@ -102,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="permissions"></a>アクセス許可  
  可用性グループに対する CONTROL 権限、またはサーバーに対する ALTER ANY AVAILABILITY GROUP 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. 可用性グループの VIEW DEFINITION 権限を取り消す  
  次の例では、可用性グループ `MyAg` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して取り消します。  

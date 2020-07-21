@@ -1,5 +1,5 @@
 ---
-title: SSMA プロジェクト (SybaseToSQL) での作業 |Microsoft Docs
+title: SSMA プロジェクトの使用 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,47 +10,47 @@ ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: eb6f035b4d597e2b648134c195b698554dc78e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68072476"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>SSMA プロジェクトでの作業 (SybaseToSQL)
-Sybase Adaptive Server Enterprise (ASE) のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure では、まずプロジェクトを作成する SSMA またはします。 プロジェクトに移行する ASE のデータベースに関するメタデータを含むファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure でのターゲット インスタンスに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure 移行済みのオブジェクトとデータを受信する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure接続情報、およびプロジェクトの設定。  
+Sybase Adaptive Server Enterprise (ASE) データベースをまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure に移行するには、まず ssma プロジェクトを作成します。 このプロジェクトは、移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL AZURE する ASE データベースに関するメタデータ、移行されたオブジェクトとデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]受け取るまたは SQL Azure のターゲットインスタンスに関するメタデータ、SQL Azure 接続情報、およびプロジェクト設定を含むファイルです。  
   
-切断されているプロジェクトを開くときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 これにより、オフラインで作業できます。 再接続できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 詳細については、次を参照してください。 [SQL Server に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [Azure SQL DB に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)します。  
+プロジェクトを開くと、そのプロジェクトはまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure から切断されます。 これにより、オフラインで作業できるようになります。 または SQL Azure に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再接続できます。 詳細については、「 [Azure sql DB &#40;sybasetosql&#41;に接続](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)するための[SQL Server &#40;sybasetosql&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  / への接続」を参照してください。  
   
-## <a name="reviewing-default-project-settings"></a>既定のプロジェクト設定を確認します。  
-SSMA は、変換、およびデータベース オブジェクトの読み込み、データの移行し、ASE での SSMA を同期するためのいくつかのオプションを含むと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 これらのオプションの既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前にする必要があります、オプションを確認し、する場合は、すべての新しいプロジェクトに使用される既定値を変更します。  
+## <a name="reviewing-default-project-settings"></a>既定のプロジェクト設定の確認  
+SSMA には、データベースオブジェクトの変換と読み込み、データの移行、SSMA と ASE と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同期、または SQL Azure を行うためのオプションがいくつかあります。 これらのオプションの既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前に、オプションを確認し、必要に応じて、すべての新しいプロジェクトで使用される既定値を変更する必要があります。  
   
 **既定のプロジェクト設定を確認するには**  
   
-1.  **ツール**メニューの **プロジェクト設定の既定の**します。  
+1.  [**ツール**] メニューの [**既定のプロジェクト設定**] をクリックします。  
   
-2.  プロジェクトの種類を選択します。**移行ターゲット バージョン**どの設定が表示または変更するために必要とクリックのドロップダウン**全般**タブ。  
+2.  表示または変更が必要な設定について、[**移行ターゲットバージョン**] ドロップダウンでプロジェクトの種類を選択し、[**全般**] タブをクリックします。  
   
-3.  左側のウィンドウで次のようにクリックします。**変換**します。  
+3.  左側のウィンドウで、[**変換**] をクリックします。  
   
-4.  右側のウィンドウで、必要に応じてオプションを変更するオプションを確認します。 これらのオプションの詳細については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)します。  
+4.  右ペインでオプションを確認し、必要に応じてオプションを変更します。 これらのオプションの詳細については、「[プロジェクトの設定 &#40;変換&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)」を参照してください。  
   
-5.  移行、SQL Azure、オブジェクトの読み込み、GUI、およびマッピングの種類のページの手順 1. ~ 3. を繰り返します。  
+5.  移行、SQL Azure、オブジェクトの読み込み、GUI、種類のマッピングの各ページについて、手順1-3 を繰り返します。  
   
-    -   移行オプションについては、次を参照してください。[プロジェクト設定&#40;移行&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)します。  
+    -   移行オプションの詳細については、「[プロジェクトの設定 &#40;migration&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)」を参照してください。  
   
-    -   オブジェクトを読み込むためのオプションについては[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[プロジェクト設定&#40;同期&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)します。  
+    -   オブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込むオプションの詳細については、「[プロジェクト設定 &#40;同期&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)」を参照してください。  
   
-    -   GUI オプションの詳細については、次を参照してください。[プロジェクト設定&#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)します。  
+    -   GUI オプションの詳細については、「[プロジェクト設定 &#40;gui&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)」を参照してください。  
   
-    -   データ型マッピングの設定の詳細についてをクリックして[プロジェクト設定&#40;型マッピング&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)します。  
+    -   データ型マッピングの設定の詳細については、[プロジェクトの設定] をクリックして[&#40;Type mapping&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)] をクリックします。  
   
-    -   SQL Azure のオプションの詳細については、次を参照してください。[プロジェクト設定&#40;Azure SQL DB &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)します。  
+    -   SQL Azure オプションの詳細については、「 [AZURE SQL DB &#41; &#40;SybaseToSQL&#41;&#40;のプロジェクト設定](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)」を参照してください。  
   
     > [!NOTE]  
-    > SQL Azure の設定が選択した場合にのみ表示されます**SQL Azure への移行**してプロジェクトを作成します。  
+    > SQL Azure 設定は、プロジェクトの作成中に [ **SQL Azure に移行**] を選択した場合にのみ表示されます。  
   
 ## <a name="creating-new-projects"></a>新しいプロジェクトの作成  
-ASE データベースからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のプロジェクトを最初に作成する必要があります。  
+ASE データベースからまたは SQL Azure に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行するには、最初にプロジェクトを作成する必要があります。  
   
 **プロジェクトを作成するには**  
   
@@ -58,11 +58,11 @@ ASE データベースからデータを移行する[!INCLUDE[ssNoVersion](../..
   
     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  **名前**ボックスに、プロジェクトの名前を入力します。  
+2.  [**名前**] ボックスに、プロジェクトの名前を入力します。  
   
-3.  **場所**ボックスで、入力するか、プロジェクトのフォルダーを選択します。  
+3.  [**場所**] ボックスで、プロジェクトのフォルダーを入力または選択します。  
   
-4.  **移行に**ドロップダウンで、ターゲットのバージョンを選択します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行に使用します。 使用可能なオプションがあります。  
+4.  [**移行先**] ドロップダウンで、移行に使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットのバージョンを選択します。 次の方法を使用できます。  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -70,57 +70,57 @@ ASE データベースからデータを移行する[!INCLUDE[ssNoVersion](../..
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
-クリックして**OK**します。  
+[ **OK]** をクリックします。  
   
 ## <a name="customizing-project-settings"></a>プロジェクト設定のカスタマイズ  
-すべての新しい SSMA プロジェクトに適用される既定のプロジェクト設定を定義するだけでなく、各プロジェクトの設定をカスタマイズできます。 詳細については、次を参照してください。[プロジェクト オプションの設定&#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)します。  
+すべての新しい SSMA プロジェクトに適用される既定のプロジェクト設定を定義するだけでなく、各プロジェクトの設定をカスタマイズすることもできます。 詳細については、「 [SybaseToSQL&#41;&#40;プロジェクトオプションの設定](../../ssma/sybase/setting-project-options-sybasetosql.md)」を参照してください。  
   
-ソースとターゲット データベース間のデータ型マッピングをカスタマイズするときに、プロジェクト、データベース、またはオブジェクト レベルでは、マッピングを定義できます。 型のマッピングの詳細については、次を参照してください。[マッピング Sybase ASE と SQL Server データ型&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)します。  
+ソースデータベースとターゲットデータベース間のデータ型マッピングをカスタマイズする場合は、プロジェクト、データベース、またはオブジェクトレベルでマッピングを定義できます。 型マッピングの詳細については、「 [SQL&#41;の SYBASE ASE と SQL Server のデータ &#40;型のマッピング](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)」を参照してください。  
   
 ## <a name="saving-projects"></a>プロジェクトの保存  
-プロジェクトを保存するときに、SSMA は、プロジェクトの設定と、必要に応じて、プロジェクト ファイルに、データベースのメタデータを保持します。  
+プロジェクトを保存すると、SSMA によってプロジェクトの設定が保持され、必要に応じてデータベースのメタデータをプロジェクトファイルに保存できます。  
   
 **プロジェクトを保存するには**  
   
--   **ファイル**メニューの **プロジェクトの保存**します。  
+-   [**ファイル**] メニューの [**プロジェクトの保存**] をクリックします。  
   
-    場合は、プロジェクト内のデータベースが変更されたか、変換されていない、SSMA は、プロジェクトにメタデータを保存することを求められます。 メタデータの保存と、オフラインで作業して、テクニカル サポート担当者など、他のユーザーに完全なプロジェクト ファイルを送信します。 メタデータを保存する場合は、次の操作を行います。  
+    プロジェクト内のデータベースが変更された場合、または変換されていない場合は、SSMA によってメタデータをプロジェクトに保存するように求められます。 メタデータを保存することで、オフラインで作業したり、テクニカルサポート担当者などのプロジェクトファイルを他のユーザーに送信したりすることができます。 メタデータを保存するかどうかを確認するメッセージが表示されたら、次の手順を実行します。  
   
-    1.  状態を表示する各データベースに対して**メタデータが不足している**データベース名の横にあるチェック ボックスをオンにします。  
+    1.  [**メタデータが存在しません**] の状態を示すデータベースごとに、データベース名の横にあるチェックボックスをオンにします。  
   
-        メタデータの保存には数分かかる場合があります。 この時点でのメタデータを保存したくない場合は、チェック ボックスをオンされません。  
+        メタデータの保存には数分かかる場合があります。 この時点でメタデータを保存しない場合は、チェックボックスをオンにしないでください。  
   
     2.  **[保存]** ボタンをクリックします。  
   
-        SSMA は Sybase ASE スキーマを解析し、プロジェクト ファイルにメタデータを保存します。  
+        SSMA は Sybase ASE スキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   
 ## <a name="opening-projects"></a>プロジェクトを開く  
-ASE およびからは切断されて、プロジェクトを開いたときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 これにより、オフラインで作業できます。 メタデータを更新するにデータベース オブジェクトを読み込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 データを移行する必要があります、ASE に再接続し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
+プロジェクトを開くと、そのプロジェクトは ASE から切断され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または SQL Azure から切断されます。 これにより、オフラインで作業できるようになります。 メタデータを更新するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースオブジェクトをまたは SQL Azure に読み込みます。 データを移行するに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、ASE または SQL Azure に再接続する必要があります。  
   
-**プロジェクトを開く**  
+**プロジェクトを開くには**  
   
 1.  次の手順のいずれかを使用します。  
   
-    -   **ファイル**メニューで、**最近使ったプロジェクト**、開きたいプロジェクトを選択します。  
+    -   [**ファイル**] メニューの [**最近使ったプロジェクト**] をポイントし、開くプロジェクトを選択します。  
   
-    -   **ファイル**メニューの **プロジェクトを開く**、.s2ssproj のプロジェクト ファイルの検索、ファイルを選択およびクリックして**オープン**します。  
+    -   [**ファイル**] メニューの [**プロジェクトを開く**] を選択し、s2ssproj プロジェクトファイルを見つけて、ファイルを選択し、[**開く**] をクリックします。  
   
-2.  ASE に再接続するには、**ファイル**メニューの  **Sybase への再接続**します。  
+2.  ASE に再接続するには、[**ファイル**] メニューの [ **Sybase に再接続**] を選択します。  
   
-3.  再接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure では、上、**ファイル**メニューの  **SQL Server に再接続** / **SQL Azure に再接続**。  
+3.  再[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続または SQL Azure するには、[**ファイル**] メニューの [再接続] を選択して**SQL Azure に再接続** **SQL Server** / ます。  
   
 ## <a name="next-step"></a>次の手順  
-移行プロセスの次の手順が、 [Sybase ASE への接続](connecting-to-sybase-ase-sybasetosql.md)します。  
+移行プロセスの次の手順は、 [SYBASE ASE に接続](connecting-to-sybase-ase-sybasetosql.md)することです。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-[Sybase ASE への接続&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
-[SQL Server に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  
-[Azure SQL DB に接続する&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+[Sybase ASE データベースの SQL Server への移行-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE &#40;SybaseToSQL&#41;に接続する](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
+[SQL Server &#40;SybaseToSQL&#41;に接続しています](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  
+[Azure SQL DB &#40;SybaseToSQL&#41;に接続しています](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   

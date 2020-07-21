@@ -1,6 +1,7 @@
 ---
-title: 可用性グループの SQL Server ディストリビューション データベースの構成 | Microsoft Docs
-ms.custom: ''
+title: 可用性グループのディストリビューション データベースを構成する
+description: Always On 可用性グループを使用して、SQL Server レプリケーションのディストリビューション データベースを構成します。
+ms.custom: seo-lt-2019
 ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20c6b4a4235e384f9a5c32ee6cef28d0f136f106
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768688"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159830"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事では、Always On 可用性グループ (AG) の SQL Server レプリケーション ディストリビューション データベースを設定する方法について説明します。
 
@@ -54,15 +55,16 @@ AG のディストリビューション データベースを下記の手順に�
 
 ## <a name="limitations-or-exclusions"></a>制限事項または適用除外事項
 
-- ローカル ディストリビューターはサポートされていません。 たとえば、パブリッシャーとディストリビューターは、別々の SQL Server インスタンスでなければなりません。 自身をディストリビューターとして使用するパブリッシャー ( ローカル ディストリビューターとも呼ばれる) では、AG のディストリビューション データベースをサポートすることはできません。
+- ローカル ディストリビューターはサポートされていません。 たとえば、パブリッシャーとディストリビューターは、別々の SQL Server インスタンスでなければなりません。 これらのインスタンスは、同じノード セットでホストできます。  自身をディストリビューターとして使用するパブリッシャー ( ローカル ディストリビューターとも呼ばれる) では、AG のディストリビューション データベースをサポートすることはできません。
 - Oracle パブリッシャーはサポートされていません。
 - マージ レプリケーションはサポートされていません。
 - 即時更新サブスクライバーまたはキュー更新サブスクライバーでのトランザクション レプリケーションはサポートされていません。
 - ピア ツー ピア レプリケーションはサポートされていません。
-- ディストリビューション データベースのレプリカをホストする SQL Server インスタンスはすべて、SQL Server 2017 CU 6 以降とする必要があります。 
+- ディストリビューション データベースのレプリカをホストする SQL Server 2017 インスタンスはすべて、SQL Server 2017 CU 6 以降とする必要があります。 
+- ディストリビューション データベースのレプリカをホストする SQL Server 2016 インスタンスはすべて、SQL Server 2016 SP2-CU3 以降とする必要があります。
 - ディストリビューション データベースのレプリカをホストする SQL Server インスタンスはすべて、同じバージョンである必要があります。ただし、アップグレードが実行される狭いタイムフレームの期間中は例外です。
 - ディストリビューション データベースは、完全復旧モードである必要があります。
-- 復旧の場合に、トランザクション ログの切り捨てを許可するには、完全バックアップとトランザクション ログ バックアップを構成します。
+- 復旧し、トランザクション ログの切り捨てを許可するには、完全バックアップとトランザクション ログ バックアップを構成します。
 - ディストリビューション データベース AG では、リスナーが構成されている必要があります。
 - ディストリビューション データベース AG 内のセカンダリ レプリカは、同期または非同期のいずれにも指定できます。 同期モードが推奨され、優先されます。
 - 双方向のトランザクション レプリケーションはサポートされていません。
@@ -72,7 +74,7 @@ AG のディストリビューション データベースを下記の手順に�
    >[!NOTE]
    >任意のレプリケーション ストアド プロシージャ (たとえば、`sp_dropdistpublisher`、`sp_dropdistributiondb`、`sp_dropdistributor`、 `sp_adddistributiondb`、`sp_adddistpublisher`) をセカンダリ レプリカ上で実行するには、レプリカが完全に同期されていることを事前に確認しておきます。
 
-- ディストリビューション データベース AG 内のセカンダリ レプリカはすべて読み取り可能である必要があります。
+- ディストリビューション データベース AG 内のセカンダリ レプリカは、すべて読み取り可能である必要があります。 セカンダリ レプリカが読み取り可能でない場合は、その特定のセカンダリ レプリカの SQL Server Management Studio の [ディストリビューターのプロパティ] にはアクセスできません。ただし、レプリケーションは引き続き正常に行われます。 
 - ディストリビューション データベース AG 内のノードはすべて同じドメイン アカウントを使用して SQL Server エージェントを実行する必要があります。このドメイン アカウントの権限は各ノードで同じである必要があります。
 - 任意のレプリケーション エージェントをプロキシ アカウントで実行する場合、このプロキシ アカウントがディストリビューション データベース AG 内のすべてのノードに割り当てられており、その権限は各ノードで同じである必要があります。
 - ディストリビューション データベース AG に参加しているすべてのレプリカで、ディストリビューターまたはディストリビューション データベースのプロパティを変更します。
@@ -115,14 +117,18 @@ AG のディストリビューション データベースを下記の手順に�
 
    `@working_directory` の値は、DIST1、DIST2、および DIST3 とは無関係のネットワーク パスとする必要があります。
 
-1. DIST2 および DIST3 上で次を実行します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+1. DIST2 と DIST3 でレプリカがセカンダリとして読み取り可能である場合は、次を実行します。  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   レプリカがセカンダリとして読み取り可能でない場合は、レプリカがプライマリになるようにフェールオーバーを実行し、次を実行します。 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    `@working_directory` の値は、前の手順と同じにする必要があります。
 
 ### <a name="publisher-workflow"></a>パブリッシャーのワークフロー
@@ -196,12 +202,18 @@ PUB 上で、このパブリッシャー用のサブスクリプションとパ�
    sp_adddistributiondb 'distribution'
    ```
 
-4. DIST3 上で次を実行します。 
+4. DIST3 でレプリカがセカンダリとして読み取り可能である場合は、次を実行します。 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   レプリカがセカンダリとして読み取り可能でない場合は、レプリカがプライマリになるようにフェールオーバーを実行して、次を実行します。
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    `@working_directory` の値は、DIST1 および DIST2 に対して指定したものと同じにする必要があります。
 
 4. DIST3 では、サブスクライバ―に対してリンク サーバーを再作成する必要があります。
@@ -372,7 +384,7 @@ WITH IP
 ((N'10.0.0.8', N'255.255.255.0')) , PORT=1500);
 GO
 
--- STEP 5 - Enable SQLNode1 also as a Distributor
+-- STEP 5 - Enable SQLNode2 also as a Distributor
 :CONNECT SQLNODE2
 EXEC sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
 GO
@@ -406,7 +418,7 @@ EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@l
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [ディストリビューターのセキュリティ保護](../../relational-databases/replication/security/secure-the-distributor.md)  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
  [ディストリビューターとパブリッシャーのプロパティの表示および変更](view-and-modify-distributor-and-publisher-properties.md)  
  [パブリッシングおよびディストリビューションの無効化](disable-publishing-and-distribution.md)  
  [レプリケーションのデータベースの有効化 (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md) 

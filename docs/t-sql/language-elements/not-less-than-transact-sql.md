@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e34fe713d44993d3d0349485e9e05783980fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efb3b0d7a6422575df0d13bd15dccdf75834707d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121999"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706276"
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt;(より小さくない) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドが右側のオペランドよりも小さい値ではない場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 どちらか一方、または両方のオペランドが NULL の場合は、トピック「[SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)」を参照してください。  
   

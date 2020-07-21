@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107035"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
@@ -41,7 +41,7 @@ ms.locfileid: "66107035"
 > [!NOTE]  
 >  資格情報は、レポート サーバーにアクセスするユーザーを認証するためにも使用されます。 レポート サーバーへのユーザーの認証に関する情報については、別のトピックで説明します。  
   
- レポートを作成すると、外部データ ソースへの接続が定義されます。 レポートをパブリッシュした後は、この接続を個別に管理できます。 動的な一覧からデータ ソースを選択できるようになる静的な接続文字列または式を指定できます。 データ ソースの種類と接続文字列を指定する方法の詳細については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
+ レポートを作成すると、外部データ ソースへの接続が定義されます。 レポートをパブリッシュした後は、この接続を個別に管理できます。 動的な一覧からデータ ソースを選択できるようになる静的な接続文字列または式を指定できます。 データソースの種類と接続文字列を指定する方法の詳細については、「 [Reporting Services でのデータ接続、データソース、および接続](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)文字列」を参照してください。  
   
 ## <a name="using-remote-data-sources"></a>リモート データ ソースの使用  
  リモートのデータベース サーバーのデータをレポートに取得する場合、次の点を確認します。  
@@ -126,25 +126,25 @@ ms.locfileid: "66107035"
   
  このような条件下では、レポート サーバーは、事前に定義する必要がある自動実行アカウントを使用して、リモート データ ソースに接続します。 レポート サーバーはそのサービス資格情報を使用してリモート サーバーに接続しないため、レポート サーバーが接続のために使用できるアカウントを指定する必要があります。 このアカウントの作成の詳細については、「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
-##  <a name="DataSourceConfigurationConnections"></a> データ ソースの構成とネットワーク接続  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> データ ソースの構成とネットワーク接続  
  次の表は、資格情報の種類とデータ処理拡張機能の特定の組み合わせにおける接続方法を示しています。 カスタム データ処理拡張機能を使用している場合は、「 [カスタム データ処理拡張機能の接続を指定する](specify-connections-for-custom-data-processing-extensions.md)」をご覧ください。  
   
-|**型**|**ネットワーク接続のコンテキスト**|**データ ソースの種類**<br /><br /> **(SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase)**|  
+|**Type**|**ネットワーク接続のコンテキスト**|**データ ソースの種類**<br /><br /> **(SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |統合セキュリティ|現在のユーザーを借用します。|すべてのデータ ソースの種類で、現在のユーザー アカウントを使用して接続します。|  
 |Windows 資格情報|指定したユーザーの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、および OLE DB の場合 : 権限を借用したユーザー アカウントを使用して接続します。|  
-|データベース資格情報|自動実行アカウントまたはサービス アカウントの権限を借用します。<br /><br /> (Reporting Services は、サービス ID を使用して接続要求を送信する際に管理者権限を削除します。)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> ユーザー名とパスワードを接続文字列に追加します。<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の場合:<br /><br /> TCP/IP プロトコルを使用している場合は、接続が正常に行われます。それ以外の場合は、失敗します。<br /><br /> XML の場合 :<br /><br /> データベース資格情報を使用している場合は、レポート サーバーで接続に失敗します。|  
-|なし|自動実行アカウントの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> 接続文字列で定義されている資格情報を使用します。 自動実行アカウントが未定義の場合は、レポート サーバーで接続に失敗します。<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の場合:<br /><br /> 自動実行アカウントが定義されていても、資格情報が指定されていない場合は、必ず接続に失敗します。<br /><br /> XML の場合 :<br /><br /> 自動実行アカウントが定義されている場合は、匿名ユーザーとして接続します。それ以外の場合は、接続に失敗します。|  
+|データベース資格情報|自動実行アカウントまたはサービス アカウントの権限を借用します。<br /><br /> (Reporting Services は、サービス ID を使用して接続要求を送信する際に管理者権限を削除します。)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> ユーザー名とパスワードを接続文字列に追加します。<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の場合:<br /><br /> TCP/IP プロトコルを使用している場合は、接続が正常に行われます。それ以外の場合は、失敗します。<br /><br /> XML の場合 :<br /><br /> データベース資格情報を使用している場合は、レポート サーバーで接続に失敗します。|  
+|None|自動実行アカウントの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> 接続文字列で定義されている資格情報を使用します。 自動実行アカウントが未定義の場合は、レポート サーバーで接続に失敗します。<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の場合:<br /><br /> 自動実行アカウントが定義されていても、資格情報が指定されていない場合は、必ず接続に失敗します。<br /><br /> XML の場合 :<br /><br /> 自動実行アカウントが定義されている場合は、匿名ユーザーとして接続します。それ以外の場合は、接続に失敗します。|  
   
 ## <a name="setting-credentials-programmatically"></a>プログラム上での資格情報の設定  
  コード内で資格情報を設定して、レポートおよびレポート サーバーへのアクセスを制御できます。 詳しくは、「 [データ ソースと接続のメソッド](../report-server-web-service/methods/data-sources-and-connection-methods.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [レポート データ ソースを管理する](../../integration-services/connection-manager/data-sources.md)   
+ [Reporting Services &#40;SSRS&#41;でサポートされるデータソース](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [レポートデータソースの管理](../../integration-services/connection-manager/data-sources.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [共有データソース &#40;レポートマネージャーの作成、削除、または変更&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

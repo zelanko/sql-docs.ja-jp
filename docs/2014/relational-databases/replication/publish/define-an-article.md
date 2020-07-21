@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 21ae1c8019617005bd87e426ec314f6237fdab38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d7ff1f5f516d438ed07a203223acf32970a7961
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065769"
 ---
 # <a name="define-an-article"></a>アーティクルの定義
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、アーティクルを定義する方法について説明します。  
@@ -34,7 +33,7 @@ ms.locfileid: "63128716"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **アーティクルを定義するために使用するもの:**  
   
@@ -44,21 +43,21 @@ ms.locfileid: "63128716"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   アーティクルの名前には % , * , [ , ] , | , : , " , ? を使用できません。 , ' , \ , / , \< , >. データベース内のオブジェクトにこれらの文字が使用されているときに、そのオブジェクトをレプリケートする場合、そのオブジェクト名とは異なる名前をアーティクルに指定する必要があります。  
   
-##  <a name="Security"></a> セキュリティ  
+##  <a name="security"></a><a name="Security"></a> セキュリティ  
  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../../includes/msconame-md.md)] を使用します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションの新規作成ウィザードにより、パブリケーションを作成し、アーティクルを定義します。 パブリケーションを作成したら、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでパブリケーションのプロパティを表示および変更します。 Oracle データベースからパブリケーションを作成する方法については、「[Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md)」(Oracle データベースからパブリケーションを作成する) をご覧ください。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+ パブリケーションの新規作成ウィザードにより、パブリケーションを作成し、アーティクルを定義します。 パブリケーションが作成されたら、[**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスでパブリケーションのプロパティを表示および変更します。 Oracle データベースからパブリケーションを作成する方法については、「[Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md)」(Oracle データベースからパブリケーションを作成する) をご覧ください。  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>パブリケーションを作成し、アーティクルを定義するには  
   
-1.   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
+1.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] でパブリッシャーに接続し、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを右クリックします。  
   
@@ -98,14 +97,14 @@ ms.locfileid: "63128716"
   
     -   パブリケーションの名前を指定します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- パブリケーションが作成された後、プログラムでレプリケーション ストアド プロシージャを使用してアーティクルを作成できます。 アーティクルの作成に使用するストアド プロシージャは、定義するアーティクルのパブリケーションの種類によって決まります。 詳しくは、「 [Create a Publication](create-a-publication.md)」をご覧ください。  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
+ パブリケーションが作成された後、プログラムでレプリケーション ストアド プロシージャを使用してアーティクルを作成できます。 アーティクルの作成に使用するストアド プロシージャは、定義するアーティクルのパブリケーションの種類によって決まります。 詳しくは、「 [パブリケーションを作成](create-a-publication.md)」をご覧ください。  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのアーティクルを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 アーティクルが属しているパブリケーションの名前を **@publication**に、アーティクルの名前を **@article**に、パブリッシュされるデータベース オブジェクトを **@source_object**に指定し、さらにその他のオプション パラメーターを指定します。 **dbo** 以外の場合は、**@source_owner** を使用してオブジェクトのスキーマ所有権を指定します。 アーティクルがログベースのテーブル アーティクルでない場合は、アーティクルの種類を **@type** に指定します。詳細については、「[Specify Article Types &#40;Replication Transact-SQL Programming&#41;](specify-article-types-replication-transact-sql-programming.md)」(アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)) をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)を実行します。 ** \@ パブリケーション**のアーティクルが属しているパブリケーションの名前、**アーティクルのアーティクル名、 \@ ** ** \@ source_object**にパブリッシュされるデータベースオブジェクト、およびその他のオプションパラメーターを指定します。 **Dbo**以外の場合は、 ** \@ source_owner**を使用して、オブジェクトのスキーマ所有権を指定します。 アーティクルがログベースのテーブルアーティクルでない場合は、 ** \@ 種類**にアーティクルの種類を指定します。詳細については、「[レプリケーション Transact-sql プログラミング&#41;&#40;アーティクルの種類を指定](specify-article-types-replication-transact-sql-programming.md)する」を参照してください。  
   
-2.  テーブル内の行を行方向にフィルター選択する場合、またはアーティクルを表示する場合は、 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) を使用してフィルター句を定義します。 詳しくは、「 [静的行フィルターの定義および変更](define-and-modify-a-static-row-filter.md)」をご覧ください。  
+2.  テーブル内の行を行方向にフィルター選択する場合、またはアーティクルを表示する場合は、 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) を使用してフィルター句を定義します。 詳しくは、「 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)」をご覧ください。  
   
 3.  テーブル内の列を列方向にフィルター選択する場合、またはアーティクルを表示する場合は、 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)を使用します。 詳しくは、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。  
   
@@ -120,13 +119,13 @@ ms.locfileid: "63128716"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>マージ パブリケーションのアーティクルを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を実行します。 パブリケーションの名前を **@publication**に、アーティクルの名前を **@article**に、パブリッシュするオブジェクトを **@source_object**」を参照してください。 テーブル行を行方向にフィルター選択する場合は、 **@subset_filterclause**」を参照してください。 詳細については、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 」および「 [静的行フィルターの定義および変更](define-and-modify-a-static-row-filter.md)」を参照してください。 アーティクルがテーブル アーティクルでない場合、 **@type**」を参照してください。 詳細については、「[Specify Article Types &#40;Replication Transact-SQL Programming&#41;](specify-article-types-replication-transact-sql-programming.md)」(アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)) をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を実行します。 ** \@ パブリケーションの**名前、 ** \@ アーティクル**の名前、およびパブリッシュするオブジェクトを指定して、 ** \@ source_object**します。 テーブル行を行方向にフィルター選択するには、 ** \@ subset_filterclause**の値を指定します。 詳細については、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 」および「 [静的行フィルターの定義および変更](define-and-modify-a-static-row-filter.md)」を参照してください。 アーティクルがテーブルアーティクルでない場合は、[ ** \@ 種類**] にアーティクルの種類を指定します。 詳細については、「[Specify Article Types &#40;Replication Transact-SQL Programming&#41;](specify-article-types-replication-transact-sql-programming.md)」(アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)) をご覧ください。  
   
-2.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) を実行し、2 つのアーティクル間に結合フィルターを定義します。 詳細については、「 [マージ アーティクル間の結合フィルターの定義および変更](define-and-modify-a-join-filter-between-merge-articles.md)」をご参照ください。  
+2.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) を実行し、2 つのアーティクル間に結合フィルターを定義します。 詳しくは、「 [マージ アーティクル間の結合フィルターの定義および変更](define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
   
-3.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) を実行し、テーブル列をフィルター選択します。 詳しくは、「 [列フィルターの定義および変更](define-and-modify-a-column-filter.md)」をご覧ください。  
+3.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) を実行し、テーブル列をフィルター選択します。 詳しくは、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、 `Product` テーブルに基づいてトランザクション パブリケーションにアーティクルを定義します。アーティクルは行方向および列方向にフィルター選択されます。  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
@@ -135,10 +134,10 @@ ms.locfileid: "63128716"
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーション管理オブジェクト (RMO) を使用することで、プログラムによってアーティクルを定義できます。 アーティクルの定義に使用する RMO クラスは、アーティクルを定義するパブリケーションの種類によって決まります。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、行フィルターと列フィルターを含むアーティクルをトランザクション パブリケーションに追加します。  
   
  [!code-csharp[HowTo#rmo_CreateTranArticles](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranarticles)]  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a595df602a6506f96d9f645dadecb14c5d5f4b2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773498"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927385"
 ---
 # <a name="view-project-history"></a>プロジェクト履歴の表示
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) プロジェクトの履歴には、ファイルの作成、追加、削除、復元など、各プロジェクト ファイルに対して実行したすべてのアクションの一覧が記録されています。  
@@ -32,11 +31,11 @@ ms.locfileid: "62773498"
   
 ### <a name="to-view-the-history-of-a-vss-project"></a>VSS プロジェクトの履歴を表示するには  
   
-1.  ソリューション エクスプローラーで、プロジェクトを選択します。  
+1.  ソリューション エクスプローラーでプロジェクトを選択します。  
   
-2.  **ファイル**メニューで、**ソース管理** をクリック**履歴の表示**します。  
+2.  [**ファイル**] メニューの [**ソース管理**] をポイントし、[**履歴の表示**] をクリックします。  
   
-3.  **の履歴**\<プロジェクト > ダイアログ ボックスで、次の操作を実行します。  
+3.  [**履歴** \<Project> ] ダイアログボックスで、次のいずれかの操作を実行します。  
   
     -   選択したファイルの、ソース管理システムのコピーを表示します。  
   
@@ -51,9 +50,9 @@ ms.locfileid: "62773498"
     -   プリンター、ファイル、またはクリップボードに、履歴レポートをエクスポートします。  
   
 ## <a name="see-also"></a>参照  
- [設定し、バージョン情報の取得](../../2014/database-engine/set-and-retrieve-version-information.md)   
+ [バージョン情報の設定と取得](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [ファイルの状態の表示](../../2014/database-engine/view-file-status.md)   
- [ファイルを取得します。](../../2014/database-engine/retrieve-files.md)   
+ [ファイルの取得](../../2014/database-engine/retrieve-files.md)   
  [ファイルの比較](../../2014/database-engine/compare-files.md)  
   
   

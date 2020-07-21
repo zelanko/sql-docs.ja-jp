@@ -1,6 +1,7 @@
 ---
-title: .NET Framework 更新後の SQLCLR アセンブリのアップグレード | Microsoft Docs
-ms.custom: ''
+title: .NET Framework の更新後に SQLCLR アセンブリをアップグレードする
+description: .NET framework を更新した後に SQL Server Data Quality Services (DQS) で使用される SQLCLR アセンブリを更新する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,18 +9,18 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: eb7ed3d3c86ff4a6a5ca0d83f33c28c7990e1f88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: f466f699872af9b37447d766c951e5c843af2bd9
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991954"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942846"
 ---
-# <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 更新後の SQLCLR アセンブリのアップグレード
+# <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET framework の更新後に SQLCLR アセンブリをアップグレードする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) は、Microsoft .NET Framework 4 アセンブリを参照する SQL 共通言語ランタイム (SQLCR) ルーチンのコレクションです。 コンピューターの .NET Framework を更新し、それが参照先の .NET Framework アセンブリに影響した場合、グローバル アセンブリ キャッシュ (GAC) 内のアセンブリのモジュール バージョン ID (MVID) が変更されます。 これが起こると、GAC 内の参照先アセンブリと [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]内のアセンブリとの間で MVID の不一致が発生します。  
   

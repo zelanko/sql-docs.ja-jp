@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 68aa51facd21ec09be78e6ad0996131a9ee3cc5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 56ef2f097a5a23edbaab4e64d73b78988db8d9cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835339"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435469"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>補足ログ スクリプトの確認および生成
   補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、 **[スクリプト]** タブを使用します。  
@@ -53,8 +52,8 @@ ms.locfileid: "62835339"
   
 2.  ファイルに名前を付け、 **[保存]** をクリックしてファイルを保存します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CDC インスタンスのプロパティを編集する方法](how-to-edit-the-cdc-instance-properties.md)   
- [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
+ [スクリプトを実行するための Oracle 資格情報](oracle-credentials-for-running-script.md)  
   
   

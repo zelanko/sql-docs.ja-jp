@@ -11,30 +11,30 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], Excel Driver
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e38f2f513b7da2c9342470ba75e2ee11b3d7e52a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1108206bf38183887540b114fda5a1e913aa67d9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053905"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307123"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (Excel ドライバー)
 > [!NOTE]  
->  このトピックでは、Excel ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックでは、Excel ドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- **SQLDriverConnect**データ ソース (DSN) を作成することがなく、ドライバーに接続することができます。  
+ **SQLDriverConnect**を使用すると、データソース (DSN) を作成せずにドライバーに接続できます。  
   
- すべてのドライバーの接続文字列では、次のキーワードがサポートされています。**DSN**、 **DBQ**、および**FIL**します。  
+ すべてのドライバーの接続文字列では、 **DSN**、 **dbq**、および**FIL**の各キーワードがサポートされています。  
   
- 次の表は、各ドライバーでは、接続に必要な最小のキーワードを示しています。 と併用キーワード/値ペアの例を示します**SQLDriverConnect**します。 DRIVERID 値の一覧については、次を参照してください。 [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。  
+ 次の表は、各ドライバーに接続するために必要な最低限のキーワードと、 **SQLDriverConnect**で使用されるキーワードと値のペアの例を示しています。 DRIVERID 値の完全な一覧については、「 [Sqlconfigdatasource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)」を参照してください。  
   
 > [!NOTE]  
->  For Microsoft Excel 3.0 または 4.0 driver DBQ または DefaultDir を指定しない場合、ドライバーは、現在のディレクトリに接続します。  
+>  Microsoft Excel 3.0 または4.0 ドライバーに DBQ または DefaultDir が指定されていない場合、ドライバーは現在のディレクトリに接続します。  
   
-|Driver|必要なキーワード|使用例|  
+|ドライバー|キーワードが必要です|使用例|  
 |------------|-----------------------|--------------|  
-|3\.0 または 4.0、Microsoft Excel|ドライバー、DriverID|ドライバー {0} Microsoft Excel ドライバー (*.xls)} を = です。DBQ c:\temp; を =DriverID 278 を =|  
-|Microsoft Excel 5.0/7.0|ドライバー、DriverID、DBQ|ドライバー {0} Microsoft Excel ドライバー (*.xls)} を = です。DBQ=c:\temp\sample.xls;DriverID 22 を =|  
-|Microsoft Excel 97 以降|ドライバー、DriverID、DBQ|ドライバー {0} Microsoft Excel ドライバー (*.xls)} を = です。DBQ=c:\temp\sample.xls;DriverID 790 を =|
+|Microsoft Excel 3.0 または4.0|ドライバー、DriverID|Driver = {Microsoft Excel Driver (* .xls)};DBQ = c:\temp;DriverID = 278|  
+|Microsoft Excel 5.0/7.0|ドライバー、DriverID、DBQ|Driver = {Microsoft Excel Driver (* .xls)};DBQ = c:\temp\sample.xls;DriverID = 22|  
+|Microsoft Excel 97 以降|ドライバー、DriverID、DBQ|Driver = {Microsoft Excel Driver (* .xls)};DBQ = c:\temp\sample.xls;DriverID = 790|

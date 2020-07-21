@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3e0b4cb1d3602b29f29e0de6d2beea07bc21831d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832967"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434159"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 処理タスク
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクは、テーブル モデル、キューブ、ディメンション、マイニング モデルなどの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを処理します。  
@@ -39,7 +38,7 @@ ms.locfileid: "62832967"
   
 -   [Analysis Services DDL 実行タスク](analysis-services-execute-ddl-task.md)  
   
--   [Data Mining Query Task](data-mining-query-task.md)  
+-   [データ マイニング クエリ タスク](data-mining-query-task.md)  
   
 ## <a name="object-processing"></a>オブジェクト処理  
  複数のオブジェクトを同時に処理できます。 複数のオブジェクトを処理する場合は、バッチ内のすべてのオブジェクトの処理に適用する設定を定義します。  
@@ -57,7 +56,7 @@ ms.locfileid: "62832967"
   
  このタスクは、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに読み込む一括挿入タスク、またはデータをテーブルに読み込むデータ フローを実装するデータ フロー タスクと組み合わせて使用するのが一般的です。 たとえば、オンライン トランザクション処理 (OLTP) データベースからデータを抽出して、データ ウェアハウス内のファクト テーブルに読み込むデータ フローがデータ フロー タスク内にあり、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクがこのタスクの処理後に呼び出され、データ ウェアハウスに構築されたキューブを処理する例などがあります。  
   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクでは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
   
 ## <a name="error-handling"></a>エラー処理  
   

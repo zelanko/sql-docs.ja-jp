@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31ee9136f4c2b0f0864db0ecd3931e2e45ea4fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 924c8bfda456f06e69235a1e2e9a9ec44197d85e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942740"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887919"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle パブリッシャーのパフォーマンス チューニング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Oracle のパブリッシング アーキテクチャは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のパブリッシング アーキテクチャに似ています。したがって、「 [Enhance General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)」で紹介されているチューニング全般の推奨事項に従うことが、Oracle レプリケーションのパフォーマンスをチューニングするための第一歩となります。  
   
  それに加えて、Oracle パブリッシャーには、パフォーマンスに関連するオプションが 2 つあります。  
   
--   適切なパブリッシング オプションの指定: [Oracle] または [Oracle (ゲートウェイ)]。  
+-   パブリッシング オプションとして、[Oracle (完全)] または [Oracle (ゲートウェイ)] のいずれか適切な方を指定します。  
   
 -   パブリッシャーの変更を適切な間隔で処理するようにトランザクション セット ジョブを構成します。  
   

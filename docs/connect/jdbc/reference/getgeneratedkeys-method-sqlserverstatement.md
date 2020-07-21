@@ -1,5 +1,5 @@
 ---
-title: GetSQLServerStatement メソッド () |Microsoft Docs
+title: getGeneratedKeys メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d47ff96fe493053e7a953cfbae53e52be95a0d62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f0c1d8b605cb0decea6c5bfae08d5e27d841217
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982941"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921539"
 ---
 # <a name="getgeneratedkeys-method-sqlserverstatement"></a>getGeneratedKeys メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,10 +40,10 @@ public final java.sql.ResultSet getGeneratedKeys()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Getによって指定されたキーメソッドは、java. .sql. ステートメントインターフェイスの Getのキーメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getGeneratedKeys メソッドは、java.sql.Statement インターフェイスの getGeneratedKeys メソッドで指定されています。  
   
- この方法の使用方法の詳細については、「[自動生成キーの使用](../../../connect/jdbc/using-auto-generated-keys.md)」を参照してください。  
+ このメソッドの使用方法の詳細については、「[自動生成キーの使用](../../../connect/jdbc/using-auto-generated-keys.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

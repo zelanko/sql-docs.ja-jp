@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48f78615e20ac194f6d11d4aa2f31610ff6bb963
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774419"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930845"
 ---
 # <a name="memory-optimized-table-variables"></a>メモリ最適化テーブル変数
   メモリ最適化テーブル (効率的なデータ アクセスのため) とネイティブ コンパイル ストアド プロシージャ (効率的なクエリ処理とビジネス ロジックの実行のため) に加えて、[!INCLUDE[hek_2](../includes/hek-2-md.md)] では、3 つ目のオブジェクトの種類としてメモリ最適化テーブル型が導入されます。 メモリ最適化テーブル型を使用して作成されたテーブル変数は、メモリ最適化テーブル変数です。  
@@ -36,9 +35,9 @@ ms.locfileid: "62774419"
   
 -   テーブル変数を使用して、ネイティブ コンパイル ストアド プロシージャのカーソルをシミュレートすることができ、その結果、ネイティブ コンパイル ストアド プロシージャの対象領域の制限を回避できるようになります。  
   
- メモリ最適化テーブルと同様に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってメモリ最適化テーブル型ごとに DLL が生成されます (コンパイルは、ときではなく、メモリ最適化テーブル変数を作成するために使用し、メモリ最適化テーブル型が作成されたときに呼び出されます)。この DLL には、インデックスにアクセスし、テーブル変数からデータを取得するための関数が含まれます。 メモリ最適化テーブル変数がテーブル型に基づいて宣言されると、テーブルとテーブル型に対応するインデックス構造のインスタンスがユーザー セッションで作成されます。 その後、テーブル変数をディスク ベース テーブル変数と同じ方法で使用できます。 テーブル変数の行を挿入、更新、および削除でき、 [!INCLUDE[tsql](../includes/tsql-md.md)] クエリで変数を使用できます。 また、ネイティブ コンパイル ストアド プロシージャと、インタープリターによって処理されるストアド プロシージャに、テーブル値パラメーター (TVP) として変数を渡すことができます。  
+ メモリ最適化テーブルと同様に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってメモリ最適化テーブル型ごとに DLL が生成されます (メモリ最適化テーブル変数の作成に使用されるときではなく、メモリ最適化テーブル型が作成されるときにコンパイルが呼び出されます)。この DLL には、インデックスにアクセスし、テーブル変数からデータを取得するための関数が含まれています。 メモリ最適化テーブル変数がテーブル型に基づいて宣言されると、テーブルとテーブル型に対応するインデックス構造のインスタンスがユーザー セッションで作成されます。 その後、テーブル変数をディスク ベース テーブル変数と同じ方法で使用できます。 テーブル変数の行を挿入、更新、および削除でき、 [!INCLUDE[tsql](../includes/tsql-md.md)] クエリで変数を使用できます。 また、ネイティブ コンパイル ストアド プロシージャと、インタープリターによって処理されるストアド プロシージャに、テーブル値パラメーター (TVP) として変数を渡すことができます。  
   
- 次の例では、AdventureWorks に基づくインメモリ OLTP のサンプルからメモリ最適化テーブル型 ([SQL Server 2014 のインメモリ OLTP のサンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
+ 次のサンプルでは、AdventureWorks ベースのインメモリ OLTP サンプルのメモリ最適化テーブル型を示します ([SQL Server 2014 インメモリ Oltp サンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
   
 ```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
@@ -186,7 +185,7 @@ GO
   
  メモリは、データベースの単一 PGPOOL メモリ コンシューマーの一部として説明されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-SQL によるインメモリ OLTP のサポート](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

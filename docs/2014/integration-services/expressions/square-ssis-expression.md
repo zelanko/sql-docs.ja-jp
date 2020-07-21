@@ -10,15 +10,14 @@ helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8e457601eafcdd8e363d931d53dfea673254b29f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ea619cb05064788869e211b6cb5ef96cb4f7188d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62896969"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428136"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (SSIS 式)
   数値式の 2 乗値を返します。  
@@ -37,7 +36,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_R8  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、SQUARE は NULL を返します。  
   
  2 乗演算の前に、引数は DT_R8 データ型にキャストされます。  

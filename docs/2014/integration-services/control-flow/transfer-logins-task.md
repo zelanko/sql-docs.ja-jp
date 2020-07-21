@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4551cc4f86f962c3f715398468a7d9a2ce17fbb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62830013"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438119"
 ---
 # <a name="transfer-logins-task"></a>ログイン転送タスク
   ログイン転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間で 1 つ以上のログインを転送します。  
@@ -27,7 +26,7 @@ ms.locfileid: "62830013"
 ## <a name="transfer-logins-between-instances-of-sql-server"></a>SQL Server のインスタンス間でのログインの転送  
  ログイン転送タスクでは、転送元または転送先として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートします。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  ログイン転送タスクでは、転送されたログインの数を報告する情報イベントと、ログインが上書きされた場合の警告イベントが発生します。  
   
  ログインの転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
@@ -44,7 +43,7 @@ ms.locfileid: "62830013"
   
  また、`OnInformation` イベントのログ エントリは転送されたログインの数を報告し、`OnWarning` イベントのログ エントリは転送先でログインが上書きされると書き込まれます。  
   
-## <a name="security-and-permissions"></a>セキュリティおよび権限  
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可  
  転送元サーバーのログインを参照し、転送先サーバーにログインを作成するユーザーは、両方のサーバーのサーバー ロール sysadmin のメンバーでなければなりません。  
   
 ## <a name="configuration-of-the-transfer-logins-task"></a>ログイン転送タスクの構成  
@@ -62,7 +61,7 @@ ms.locfileid: "62830013"
   
 -   重複するログインをスキップします。  
   
- ログイン転送タスクは実行時に、2 つの SMO 接続マネージャーを使用して、転送元および転送先サーバーに接続します。 SMO 接続マネージャーの構成はログイン転送タスクとは別に行い、ログイン転送タスクは SMO 接続マネージャーを参照します。 SMO 接続マネージャーは、サーバーと、サーバーに接続する際に使用する認証モードを指定します。 詳しくは、「 [SMO 接続マネージャー](../connection-manager/smo-connection-manager.md)」をご覧ください。  
+ ログイン転送タスクは実行時に、2 つの SMO 接続マネージャーを使用して、転送元および転送先サーバーに接続します。 SMO 接続マネージャーの構成はログイン転送タスクとは別に行い、ログイン転送タスクは SMO 接続マネージャーを参照します。 SMO 接続マネージャーは、サーバーと、サーバーに接続する際に使用する認証モードを指定します。 詳細については、「 [SMO 接続マネージャー](../connection-manager/smo-connection-manager.md)」をご覧ください。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   

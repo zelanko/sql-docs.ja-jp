@@ -1,7 +1,6 @@
 ---
-title: デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 54e2ce24f4fd0b0d94344029cd2f56e378e579dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e26ca45fb3851926959795675e1dd38a7f3f3a14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726408"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデタッチしたデータベースを別の場所に移動し、同じまたは異なるサーバー インスタンスに再アタッチする方法について説明します。 ただし、データベースを移動するときは、デタッチとアタッチではなく、ALTER DATABASE による計画的再配置手順を使用することをお勧めします。 詳細については、「 [ユーザー データベースの移動](../../relational-databases/databases/move-user-databases.md)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -51,14 +51,14 @@ ms.locfileid: "68067354"
   
 1.  次の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ステートメントを実行して [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースをデタッチします。  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     EXEC sp_detach_db @dbname = N'AdventureWorks2012';  
     GO  
     ```  
   
-2.  任意の方法で、データベース ファイル (AdventureWorks208R2_Data.mdf と AdventureWorks208R2_log) をC:\MySQLServer\AdventureWorks208R2_Data.mdf と C:\MySQLServer\AdventureWorks208R2_Log.ldf にそれぞれコピーします。  
+2.  任意の方法で、データベース ファイル (AdventureWorks208R2_Data.mdf と AdventureWorks208R2_log) を C:\MySQLServer\AdventureWorks208R2_Data.mdf と C:\MySQLServer\AdventureWorks208R2_Log.ldf にそれぞれコピーします。  
   
     > [!IMPORTANT]  
     >  実稼動データベースの場合は、データベースとトランザクション ログを別のディスクに配置します。  
@@ -67,7 +67,7 @@ ms.locfileid: "68067354"
   
 3.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、移動したデータベースとログをアタッチします (ログのアタッチは省略できます)。  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     CREATE DATABASE MyAdventureWorks   

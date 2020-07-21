@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a71d0fd96519550d52016bf8e951e18755b3c341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 686722bcceaaabd69c2293ec48f71df20352b65a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914442"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892173"
 ---
-# <a name="x40x40packeterrors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="x40x40packet_errors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動以降に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続で発生した、ネットワーク パケット エラーの数を返します。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "67914442"
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パケットのエラーなどの統計情報の実行 **sp_monitor**です。  
   
-## <a name="examples"></a>使用例  
- 次に、`@@PACKET_ERRORS` の使用例を示します。  
+## <a name="examples"></a>例  
+ 次の例に、`@@PACKET_ERRORS` の使用方法を示します。  
   
 ```  
 SELECT @@PACKET_ERRORS AS 'Packet Errors';  

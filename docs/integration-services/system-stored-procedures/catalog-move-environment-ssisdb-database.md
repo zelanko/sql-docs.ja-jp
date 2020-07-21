@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4a6d69ef7cc1a10b31cdb03f2dd43e20687a3f96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7646bb7498ed18c2e0e5e28268442b4638ee16bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637727"
 ---
-# <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (SSISDB データベース)
+# <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   特定のフォルダーの環境を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ内の別のフォルダーに移動します。  
   
@@ -68,7 +68,7 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロジェクトの環境参照は、移動中、環境に従って更新されません。 したがって、環境参照を更新する必要があります。 このストアド プロシージャ は、環境を移動することで環境参照が壊れた場合でも成功します。 環境参照は、このストアド プロシージャが完了した後で更新する必要があります。  
   
 > [!NOTE]  

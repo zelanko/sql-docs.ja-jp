@@ -1,7 +1,7 @@
 ---
 title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,15 +22,15 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47df9b8bb3d6beb5706bff8869d92b351e855f5b
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044313"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380985"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   スキーマ間でセキュリティ保護可能なリソースを移動します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68044313"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER SCHEMA schema_name   
@@ -51,7 +51,7 @@ ALTER SCHEMA schema_name
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER SCHEMA schema_name   
@@ -59,7 +59,10 @@ ALTER SCHEMA schema_name
 [;]  
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *schema_name*  
  セキュリティ保護可能なリソースの移動先である、現在のデータベース内にあるスキーマの名前です。 SYS または INFORMATION_SCHEMA は指定できません。  
   
@@ -69,7 +72,7 @@ ALTER SCHEMA schema_name
  *securable_name*  
  移動元のスキーマに含まれているセキュリティ保護可能なリソースの名前を指定します。このリソースが対象のスキーマに移動されます。名前を指定するときは、1 つまたは 2 つの要素で構成される名前を使用します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ユーザーとスキーマは完全に分離されています。  
   
  ALTER SCHEMA は、セキュリティ保護可能なリソースを同じデータベース内のスキーマ間で移動する場合にのみ使用できます。 スキーマ内のセキュリティ保護可能なリソースを変更または削除するには、そのリソースに固有の ALTER または DROP ステートメントを使用します。  
@@ -83,6 +86,8 @@ ALTER SCHEMA schema_name
  テーブルやシノニムなどのオブジェクトを移動しても、そのオブジェクトに対する参照は自動的には更新されません。 移動したオブジェクトを参照しているオブジェクトに対しては、手動で変更を加える必要があります。 たとえば、テーブルを移動するとき、そのテーブルがトリガーで参照されている場合は、新しいスキーマ名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトを移動する前には、[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使ってオブジェクトの従属関係を一覧表示できます。  
 
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してテーブルのスキーマを変更するには、オブジェクト エクスプローラーでテーブルを右クリックし、 **[デザイン]** をクリックします。 **F4** キーを押して [プロパティ] ウィンドウを開きます。 **[スキーマ]** ボックスで新しいスキーマを選択します。  
+ 
+ ALTER SCHEMA では、スキーマ レベル ロックが使用されます。
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -94,10 +99,10 @@ ALTER SCHEMA schema_name
   
  移動するセキュリティ保護可能なリソースに関連付けられているすべての権限は、移動時に削除されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-transferring-ownership-of-a-table"></a>A. テーブルの所有権を譲渡する  
- 次の例では、テーブル `Address` をスキーマ `Person` からスキーマ `HumanResources` に移動し、スキーマを変更します。  
+ 次の例では、テーブル `Address` をスキーマ `Person` からスキーマ "HumanResources" に移動することで、スキーマ `HumanResources` を変更します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -135,7 +140,7 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. テーブルの所有権を譲渡する  
  次の例では、`dbo` スキーマで `Region` テーブルを作成し、`Sales` スキーマを作成し、`Region` テーブルを `dbo` スキーマから `Sales` スキーマに移動します。  

@@ -1,7 +1,7 @@
 ---
-title: 再生結果の確認 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 再生結果の確認
+titleSuffix: SQL Server Distributed Replay
+description: SQL Server 分散再生機能によって分散再生が完了した後、各クライアントの再生アクティビティを各クライアントのトレース ファイルに保存できます。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,18 +10,22 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6b68d6e5376bdf24efb09c50e3df63ed5810373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: e36130f4901b0f5bcbdba7ab82b512c0075e25b1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949930"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152145"
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能が分散再生を完了した後は、各クライアントの再生アクティビティをキャプチャし、クライアントごとに結果トレース ファイルに保存できます。 このアクティビティをキャプチャするには、**replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能による分散再生の完了後、各クライアントの再生アクティビティをキャプチャし、クライアントごとに結果トレース ファイルに保存できます。 このアクティビティをキャプチャするには、 **replay** オプションを使って管理ツールを実行するときに **-o** パラメーターを使用する必要があります。 replay オプションの詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
   
- 結果トレース ファイルの保存場所は、各クライアントにあるクライアント構成ファイル `<ResultDirectory>` 内の `DReplayClient.xml` XML 要素で指定されます。 クライアント結果ディレクトリ内のトレース ファイルは、再生を実行するたびに上書きされます。  
+ 結果トレース ファイルの保存場所は、各クライアントにあるクライアント構成ファイル `<ResultDirectory>` 内の `DReplayClient.xml`XML 要素で指定されます。 クライアント結果ディレクトリ内のトレース ファイルは、再生を実行するたびに上書きされます。  
   
  結果トレース ファイルにキャプチャする必要がある出力の種類を指定するには、再生構成ファイル `DReplay.exe.replay.config`を変更します。 `<OutputOptions>` XML 要素を使用して、行数または結果セットの内容を記録するかどうかを指定できます。  
   
@@ -36,8 +40,8 @@ ms.locfileid: "67949930"
 ||Audit Logout|元のトレース データの各 Audit Logout イベントにつき 1 回|イベントの正常完了時または失敗時|  
 ||SQL:BatchCompleted|元のトレース データの各 SQL:BatchStarting イベントにつき 1 回|イベントの正常完了時または失敗時|  
 ||RPC:Completed|元のトレース データの各 RPC:Starting イベントにつき 1 回|イベントの正常完了時または失敗時|  
-|統計情報と結果|Replay Settings Event|指定日時|結果トレースの最初のイベント|  
-||Replay Statistics Event|指定日時|結果トレースの最後のイベント|  
+|統計情報と結果|Replay Settings Event|1 回|結果トレースの最初のイベント|  
+||Replay Statistics Event|1 回|結果トレースの最後のイベント|  
 ||Replay Result Set Event|各 SQL:BatchStarting および RPC:Starting イベントにつき 1 回。<br /><br /> 再生構成ファイルの `<RecordResultSet>` オプションの値が `Yes`に設定されている場合のみキャプチャされます。||  
 ||Replay Result Row Event|SQL:BatchStarting および RPC:Starting イベントの結果セットの各行につき 1 回。<br /><br /> 再生構成ファイルの `<RecordResultSet>` オプションの値が `Yes`に設定されている場合のみキャプチャされます。||  
 |エラーおよび警告|Replay Internal Error|各内部エラーにつき 1 回|内部エラー条件による|  
@@ -52,12 +56,12 @@ ms.locfileid: "67949930"
 ## <a name="event-class-column-mapping"></a>イベント クラス列マッピング  
  次の図は、再生中にキャプチャされるイベント クラスのそれぞれの種類に対して使用できる結果トレースの列を示しています。  
   
- ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
+ ![イベント クラス列マッピング](../../tools/distributed-replay/media/eventclassmappings.gif "イベント クラス列マッピング")  
   
 ## <a name="column-descriptions-for-result-trace"></a>結果トレースの列の説明  
  次の表では、結果トレース データの列について説明します。  
   
-|データ列名|データ型|[説明]|列 ID|  
+|データ列名|データ型|説明|列 ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|イベント クラスの名前。|1|  
 |EventSequence|**bigint**|プロバイダー エラー、内部エラー、および警告に対しては、これはエラーまたは警告に対応するキャプチャ イベント シーケンスです。<br /><br /> その他のすべてのイベント クラスに対しては、これは元のトレース データ内のイベント シーケンスです。|2|  
@@ -79,8 +83,8 @@ ms.locfileid: "67949930"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Distributed Replay の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

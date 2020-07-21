@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c5451cddba8a1719e9672c0d10ffe4a62c960d38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fada5e47738dd39285f9171fce254147f144a82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766693"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY (フルテキストの権限の拒否) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   フルテキスト カタログおよびフルテキスト ストップリストに対する権限を拒否します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68114819"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] ON  
     FULLTEXT   
         {  
@@ -58,7 +58,7 @@ DENY permission [ ,...n ] ON
  権限を拒否するフルテキスト ストップリストを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を拒否するプリンシパルを指定します。 次のいずれかです。  
+ 権限を拒否するプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
   
@@ -80,7 +80,7 @@ DENY permission [ ,...n ] ON
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
  *denying_principal*  
- このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
   

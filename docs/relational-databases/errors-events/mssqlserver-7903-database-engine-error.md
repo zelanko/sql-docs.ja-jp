@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c3444c213d71f9062f1456471db5d71ba9e842b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d07630414760e8d216365b3f836a24381c99c1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793163"
 ---
-# <a name="mssqlserver7903"></a>MSSQLSERVER_7903
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|7903|  
 |イベント ソース|MSSQLSERVER|  
@@ -48,5 +48,5 @@ FILESTREAM 列ディレクトリ内で FILESTREAM ファイルが検出されま
 問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
-該当なし。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
+適用不可。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   

@@ -21,17 +21,17 @@ helpviewer_keywords:
 - write errors [SQL Server]
 - read/write errors
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a07518edbdfce618fa8bfcff15a49df70f029ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 8cbb2fe7f7d0b5ee0cfc744bea1e2eedc700e923
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098966"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893399"
 ---
-# <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="x40x40total_errors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動してから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生したディスクの書き込みエラーの数を返します。  
   
@@ -44,12 +44,12 @@ ms.locfileid: "68098966"
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数によって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生したすべての書き込みエラーが返されるわけではありません。 致命的ではない書き込みエラーが発生した場合は、サーバー自身によって処理されることがあり、これはエラーとして扱われません。 いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] など、エラーの合計数の統計情報の実行 **sp_monitor**です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のシステム上の日付と時刻において、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生したエラー数を示します。  
   
 ```  

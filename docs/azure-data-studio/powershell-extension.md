@@ -1,22 +1,21 @@
 ---
 title: PowerShell の拡張機能
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 用に PowerShell をインストールして使用する
 ms.custom: seodec18
 ms.date: 04/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "65105946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637734"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>PowerShell エディターによる Azure Data Studio のサポート
 
@@ -25,8 +24,7 @@ Azure Data Studio が提供する、優れた IDE に似たインターフェイ
 
 ![PowerShell の拡張機能](media/powershell-extension/powershell-extension.png)
 
-
-## <a name="features"></a>[機能]
+## <a name="features"></a>特徴
 
 - 構文の強調表示
 - コード スニペット
@@ -38,7 +36,6 @@ Azure Data Studio が提供する、優れた IDE に似たインターフェイ
 - <kbd>F8</kbd> キーを使用して選択した PowerShell コードの選択を実行する
 - <kbd>Ctrl</kbd>+<kbd>F1</kbd> キーを使用してカーソルの下にあるシンボルのオンライン ヘルプを起動する
 - 基本的な対話型コンソールのサポート
-
 
 ## <a name="installing-the-extension"></a>拡張機能のインストール
 
@@ -61,10 +58,10 @@ azuredatastudio --install-extension PowerShell-<version>.vsix
 
 ## <a name="installing-powershell-core"></a>PowerShell Core のインストール
 
-macOS または Linux 上で Azure Data Studio を実行している場合は、必要に応じて PowerShell Core もインストールします。
+macOS または Linux 上で Azure Data Studio を実行している場合は、PowerShell Core のインストールも必要になることがあります。
 
 PowerShell Core は [GitHub](https://github.com/powershell/powershell) のオープン ソース プロジェクトです。
-PowerShell Core を macOS または Linux プラットフォームにインストールする方法について詳細については、次の記事を参照してください。
+PowerShell Core を macOS または Linux プラットフォームにインストールする方法の詳細については、次の記事を参照してください。
 
 - [Linux に PowerShell Core をインストールする](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
 - [macOS に PowerShell Core をインストールする](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
@@ -252,19 +249,18 @@ PowerShell 拡張機能に関する問題が発生した場合は、問題の診
 ## <a name="maintainers"></a>保守担当者
 
 - [Keith Hill](https://github.com/rkeithhill) - [@r_keith_hill](http://twitter.com/r_keith_hill)
-- [Tyler Leonhardt](https://github.com/tylerl0706) - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
+- Tyler Leonhardt - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
 - [Rob Holt](https://github.com/rjmholt)
 
 ## <a name="license"></a>ライセンス
 
 この拡張機能は [MIT ライセンスに従ってライセンスが付与](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt)されます。 このプロジェクトのリリースに含まれているサードパーティ製バイナリの詳細については、[サードパーティに関する通知](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt)のファイルを参照してください。
 
-## <a name="code-of-conductconduct-md"></a>[倫理規定][conduct-md]
+## <a name="code-of-conduct"></a>倫理規定
 
 このプロジェクトは、「[Microsoft のオープン ソースの倫理規定][conduct-code]」を採用しています。
 詳細については、[倫理規定の FAQ][conduct-FAQ] のページを参照してください。また、追加の質問やコメントがある場合は [opencode@microsoft.com][conduct-email] にお問い合わせください。
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

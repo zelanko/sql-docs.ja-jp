@@ -1,5 +1,5 @@
 ---
-title: Filestream と OLE DB |Microsoft Docs
+title: FILESTREAM と OLE DB | Microsoft Docs
 description: FILESTREAM と OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8229c20a500680c1b83304bc2e443c20838b5a02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015595"
 ---
 # <a name="filestream-and-ole-db"></a>FILESTREAM と OLE DB
@@ -22,7 +22,7 @@ ms.locfileid: "68015595"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
-  このセクションには、filestream 機能を使用して SQL Server に OLE DB ドライバーを使用する方法を示す4つのサンプルが含まれています。  
+  ここでは、OLE DB Driver for SQL Server を Filestream 機能と共に使用する方法を示す 4 つのサンプルを紹介します。  
   
 -   [IBCPSession を使用した FILESTREAM 列のファイルへの読み取り &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   

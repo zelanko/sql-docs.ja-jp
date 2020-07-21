@@ -8,21 +8,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 820d4b3dae7643db7f03f4e761b63208f20263e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02892e3768a01ee834598d620300962f1a2bbb56
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102791"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742316"
 ---
-# <a name="functions---dmexecutionperformancecounters"></a>関数 - dm_execution_performance_counters
+# <a name="functions---dm_execution_performance_counters"></a>関数 - dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーで処理中の実行のパフォーマンス統計を返します。  
   
@@ -39,10 +36,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  実行 ID が指定されていない場合は、複数の実行のパフォーマンス統計が返されます。 メンバーである場合、 **ssis_admin** データベース ロール、実行中のすべての実行のパフォーマンス統計が返されます。  メンバーでない場合、 **ssis_admin** データベース ロール、実行中に、アクセス許可を参照する実行のパフォーマンス統計が返されます。 *execution_id* は、**Bigint** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、dm_execution_performance_counter 関数によって返されるカウンター名の値を一覧で示します。  
   
-|カウンター名|[説明]|  
+|カウンター名|説明|  
 |------------------|-----------------|  
 |BLOB bytes read|データ フロー エンジンがすべてのソースから読み取るバイナリ ラージ オブジェクト (BLOB) データのバイト数。|  
 |BLOB bytes written|データ フロー エンジンがすべての出力先に書き込む BLOB データのバイト数。|  
@@ -54,13 +51,13 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |Flat buffers in use|データ フロー エンジンが使用するフラット バッファーの数。 フラット バッファーはすべてプライベート バッファーです。|  
 |Private buffer memory|すべてのプライベート バッファーが使用しているメモリ量。 プライベート バッファーは、変換が一時作業のために使用するバッファーです。<br /><br /> データ フロー エンジンがデータ フローをサポートするためにバッファーを作成する場合、バッファーはプライベートではありません。|  
 |Private buffers in use|変換が一時作業のために使用するバッファー数。|  
-|Rows read|実行準備ができている行の合計数。|  
+|Rows read|実行で読み取られる行の合計数。|  
 |Rows written|実行によって書き込まれた行の合計数。|  
   
 ## <a name="return"></a>戻り値  
  dm_execution_performance_counters 関数は、1 つの処理中の実行に対して次の列を持つ表を返します。 返す情報は、実行に含まれているすべてのパッケージが対象です。 処理中の実行がない場合は、空の表を返します。  
   
-|列名|列の型|[説明]|Remarks|  
+|列名|列の型|説明|解説|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** は無効な値です。|パッケージを含む実行の一意識別子。||  
 |counter_name|**nvarchar(128)**|カウンターの名前。|値の「**解説**」セクションを参照してください。|  

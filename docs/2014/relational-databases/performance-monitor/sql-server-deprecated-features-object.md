@@ -14,25 +14,24 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96abc6def3f4ab8cdb76b548e7717ae6c030c00f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68206958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067015"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQLServer:Deprecated Features オブジェクトには、非推奨に指定された機能を監視するためのカウンターがあります。 いずれの場合も、このカウンターは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してから非推奨の機能が検出された回数を示す使用カウントを表示します。  
   
  次の表に、SQL Server Deprecated Features カウンター インスタンスの説明を示します。  
   
-|SQL Server Deprecated Features カウンター インスタンス|Description|  
+|SQL Server Deprecated Features カウンター インスタンス|説明|  
 |------------------------------------------------------|-----------------|  
 |'#' および ' ##' 一時テーブルおよびストアド プロシージャの名前として|# 以外の文字を含んでいない識別子が見つかりました。 別の文字を少なくとも 1 文字は使用してください。 コンパイルごとに 1 回発生します。|  
-|'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 置き換える`SELECT column_list FROM`  *\< function_name >* `()`します。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
+|'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 をに置き換え `SELECT column_list FROM` *\< function_name>* `()` ます。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子としての '\@' と '\@\@' で始まる名前|\@ または \@\@ で始まる識別子が見つかりました。 \@、\@\@、または \@\@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
-|ADDING TAPE DEVICE|非推奨の機能 sp_addumpdevice'`tape`' が発生しました。 使用して、sp_addumpdevice'`disk`' 代わりにします。 使用するごとに 1 回発生します。|  
+|ADDING TAPE DEVICE|非推奨の機能 sp_addumpdevice ' `tape` ' が見つかりました。 代わりに sp_addumpdevice ' `disk` ' を使用してください。 使用するごとに 1 回発生します。|  
 |ALL 権限|GRANT ALL、DENY ALL、または REVOKE ALL 構文が見つかった合計回数。 特定の権限を拒否するように構文を変更してください。 クエリごとに 1 回発生します。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|サーバー インスタンスの起動後に、ALTER DATABASE の非推奨の機能 TORN_PAGE_DETECTION オプションが使用された合計回数。 代わりに、PAGE_VERIFY 構文を使用してください。 DDL ステートメントで使用するごとに 1 回発生します。|  
 |ALTER LOGIN WITH SET CREDENTIAL|非推奨の機能の構文 ALTER LOGIN WITH SET CREDENTIAL または ALTER LOGIN WITH NO CREDENTIAL が見つかりました。 代わりに、ADD または DROP CREDENTIAL 構文を使用してください。 コンパイルごとに 1 回発生します。|  
@@ -58,7 +57,7 @@ ms.locfileid: "68206958"
 |DBCC INDEXDEFRAG|DBCC INDEXDEFRAG ステートメントが見つかりました。 ALTER INDEX の REORGANIZE オプションを使用してステートメントを書き直してください。 クエリごとに 1 回発生します。|  
 |DBCC SHOWCONTIG|DBCC SHOWCONTIG ステートメントが見つかりました。 この情報については、sys.dm_db_index_physical_stats をクエリしてください。 クエリごとに 1 回発生します。|  
 |既定値としての DEFAULT キーワード|既定値として DEFAULT キーワードを使用する構文が見つかりました。 使用しないでください。 コンパイルごとに 1 回発生します。|  
-|非推奨の暗号化アルゴリズム|非推奨の暗号化アルゴリズム rc4 は、SQL Server の次のバージョンで削除されます。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションでは変更を検討してください。 RC4 アルゴリズムは弱いアルゴリズムで、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。|  
+|非推奨の暗号化アルゴリズム|非推奨の暗号化アルゴリズム rc4 は、SQL Server の次のバージョンで削除されます。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションでは変更を検討してください。 RC4 アルゴリズムは弱いアルゴリズムで、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。|  
 |DESX アルゴリズム|DESX 暗号化アルゴリズムを使用する構文が見つかりました。 別の暗号化アルゴリズムを使用してください。 コンパイルごとに 1 回発生します。|  
 |dm_fts_active_catalogs|sys.dm_fts_active_catalogs ビューの列の中には非推奨ではないものもあるので、dm_fts_active_catalogs カウンターは常に 0 のままです。 非推奨の列を監視するには、dm_fts_active_catalogs.is_paused などの列固有のカウンターを使用してください。|  
 |dm_fts_active_catalogs.is_paused|[sys.dm_fts_active_catalogs](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql) 動的管理ビューの is_paused 列が見つかりました。 この列は使用しないでください。 サーバー インスタンスによって列への参照が検出されるたびに発生します。|  
@@ -102,7 +101,7 @@ ms.locfileid: "68206958"
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。|  
 |Lithuanian_Classic|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。|  
-|Macedonian|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。 代わりに Macedonian_FYROM_90 を使用してください。|  
+|マケドニア語|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。 代わりに Macedonian_FYROM_90 を使用してください。|  
 |MODIFY FILEGROUP READONLY|MODIFY FILEGROUP READONLY 構文が見つかりました。 READ_ONLY 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READWRITE 構文が見つかりました。 READ_WRITE 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |3 つ以上の部分で構成される列名|クエリの列リストで 3 部または 4 部構成の名前が使用されています。 標準に準拠した 2 部構成の名前を使用するようにクエリを変更してください。 コンパイルごとに 1 回発生します。|  
@@ -112,14 +111,14 @@ ms.locfileid: "68206958"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|非推奨の sys.numbered_procedure_parameters への参照が見つかりました。 使用しないでください。 コンパイルごとに 1 回発生します。|  
 |numbered_procedures|非推奨の sys.numbered_procedures への参照が見つかりました。 使用しないでください。 コンパイルごとに 1 回発生します。|  
-|Oldstyle RAISEERROR|非推奨の RAISERROR (形式:RAISERROR 整数文字列) 構文が見つかりました。 現在の RAISERROR 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
+|Oldstyle RAISEERROR|非推奨の RAISERROR (形式 : RAISERROR 整数文字列) 構文が見つかりました。 現在の RAISERROR 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |アドホック接続の OLEDB|SQLOLEDB はサポートされないプロバイダーです。 アドホック接続には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client を使用してください。|  
 |PERMISSIONS|PERMISSIONS 組み込み関数への参照が見つかりました。 代わりに sys.fn_my_permissions をクエリしてください。 クエリごとに 1 回発生します。|  
 |ProcNums|非推奨の ProcNums 構文が見つかりました。 参照を削除してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |READTEXT|READTEXT 構文が見つかりました。 `varchar(max)` データ型を使用し、`text` データ型を削除した構文を使用して、アプリケーションを書き直してください。 クエリごとに 1 回発生します。|  
-|RESTORE DATABASE または LOG WITH DBO_ONLY|RESTORE ...WITH DBO_ONLY 構文が見つかりました。 代わりに RESTORE ...RESTRICTED_USER を使用してください。|  
-|RESTORE DATABASE または LOG WITH MEDIAPASSWORD|RESTORE ...WITH MEDIAPASSWORD 構文が見つかりました。 WITH MEDIAPASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
-|RESTORE DATABASE または LOG WITH PASSWORD|RESTORE ...WITH PASSWORD 構文が見つかりました。 WITH PASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
+|RESTORE DATABASE または LOG WITH DBO_ONLY|復元しています...DBO_ONLY 構文が見つかりました。 復元の使用...代わりに RESTRICTED_USER します。|  
+|RESTORE DATABASE または LOG WITH MEDIAPASSWORD|復元しています...WITH MEDIAPASSWORD 構文が見つかりました。 WITH MEDIAPASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
+|RESTORE DATABASE または LOG WITH PASSWORD|復元しています...WITH PASSWORD 構文が見つかりました。 WITH PASSWORD を使用するとセキュリティが脆弱になるので、削除してください。|  
 |トリガーから結果を返す|このイベントは、トリガーを呼び出すごとに 1 回発生します。 結果セットを返さないようにトリガーを書き直してください。|  
 |ROWGUIDCOL|ROWGUIDCOL 構文が見つかりました。 $rowguid 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |SET ANSI_NULLS OFF|SET ANSI_NULLS OFF 構文が見つかりました。 この非推奨の構文を削除してください。 コンパイルごとに 1 回発生します。|  
@@ -162,7 +161,7 @@ ms.locfileid: "68206958"
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password ストアド プロシージャでは、マスター キーがあるかどうかは確認されません。 これは下位互換性を確保するために許容されていますが、警告が表示されます。 ただし、この動作は非推奨とされます。 今後のリリースでは、マスター キーは存在する必要があり、ストアド プロシージャ sp_control_dbmasterkey_password で使用されるパスワードはデータベース マスター キーを暗号化するために使用されるパスワードの 1 つと同じである必要があります。|  
 |sp_create_removable|sp_create_removable プロシージャが見つかりました。 代わりに CREATE DATABASE を使用してください。 クエリごとに 1 回発生します。|  
 |sp_db_vardecimal_storage_format|`vardecimal` ストレージ形式の使用が見つかりました。 代わりにデータ圧縮を使用してください。|  
-|sp_dbcmptlevel|sp_dbcmptlevel プロシージャが見つかりました。 ALTER DATABASE ...SET COMPATIBILITY_LEVEL を使用してください。 クエリごとに 1 回発生します。|  
+|sp_dbcmptlevel|sp_dbcmptlevel プロシージャが見つかりました。 ALTER DATABASE の使用...代わりに COMPATIBILITY_LEVEL を設定してください。 クエリごとに 1 回発生します。|  
 |sp_dbfixedrolepermission|sp_dbfixedrolepermission プロシージャが見つかりました。 使用しないでください。 クエリごとに 1 回発生します。|  
 |sp_dboption|sp_dboption プロシージャが見つかりました。 代わりに、ALTER DATABASE および DATABASEPROPERTYEX を使用してください。 コンパイルごとに 1 回発生します。|  
 |sp_dbremove|sp_dbremove プロシージャが見つかりました。 代わりに DROP DATABASE を使用してください。 クエリごとに 1 回発生します。|  
@@ -238,7 +237,7 @@ ms.locfileid: "68206958"
 |sysobjects|sysobjects への参照が見つかりました。 代わりに sys.objects を使用してください。 コンパイルごとに 1 回発生します。|  
 |sysoledbusers|sysoledbusers への参照が見つかりました。 代わりに sys.linked_logins を使用してください。 コンパイルごとに 1 回発生します。|  
 |sysopentapes|sysopentapes への参照が見つかりました。 代わりに sys.dm_io_backup_tapes を使用してください。 コンパイルごとに 1 回発生します。|  
-|sysperfinfo|sysperfinfo への参照が見つかりました。 代わりに、sys.dm_os_performance_counters を 使用します。 コンパイルごとに 1 回発生します。|  
+|sysperfinfo|sysperfinfo への参照が見つかりました。 代わりに、sys.dm_os_performance_counters を instead. (要求オブジェクトを解析できませんでした: JSON マップ フィールド base_parameters には 'key' と 'value' が設定されることが予期されていましたが、代わりに 'key: "..."' が設定されました。) コンパイルごとに 1 回発生します。|  
 |syspermissions|syspermissions への参照が見つかりました。 代わりに sys.database_permissions および sys.server_permissions を使用してください。 コンパイルごとに 1 回発生します。|  
 |sysprocesses|sysprocesses への参照が見つかりました。 代わりに sys.dm_exec_connections、sys.dm_exec_sessions、および sys.dm_exec_requests を使用してください。 コンパイルごとに 1 回発生します。|  
 |sysprotects|sysprotects への参照が見つかりました。 代わりに sys.database_permissions および sys.server_permissions を使用してください。 コンパイルごとに 1 回発生します。|  
@@ -262,13 +261,13 @@ ms.locfileid: "68206958"
 |xp_loginconfig|xp_loginconfig プロシージャが見つかりました。 代わりに SERVERPROPERTY の IsIntegratedSecurityOnly 引数を使用してください。 クエリごとに 1 回発生します。|  
 |xp_revokelogin|xp_revokelogin プロシージャが見つかりました。 代わりに ALTER LOGIN DISABLE または DROP LOGIN を使用してください。 コンパイルごとに 1 回発生します。|  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server 2014 で廃止されたデータベース エンジンの機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [SQL Server 2014 で非推奨のフルテキスト検索機能](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
- [Deprecation Announcement イベント クラス](../event-classes/deprecation-announcement-event-class.md)   
- [Deprecation Final Support イベント クラス](../event-classes/deprecation-final-support-event-class.md)   
- [SQL Server 2014 で廃止されたデータベース エンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [廃止された SQL Server 2014 におけるフルテキスト検索機能](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
+## <a name="see-also"></a>参照  
+ [SQL Server 2014 の非推奨のデータベースエンジン機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [SQL Server 2014 の非推奨のフルテキスト検索機能](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
+ [廃止通知イベントクラス](../event-classes/deprecation-announcement-event-class.md)   
+ [廃止の最終サポートイベントクラス](../event-classes/deprecation-final-support-event-class.md)   
+ [SQL Server 2014 で廃止されたデータベースエンジン機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [SQL Server 2014 で廃止されたフルテキスト検索機能](../../database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)   
  [SQL Server オブジェクトの使用](use-sql-server-objects.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: '[データベースのプロパティ] ([オプション] ページ) | Microsoft Docs'
+description: '[データベースのプロパティ] ダイアログ ボックスの [オプション] タブを使用して、データベースの照合順序、復旧モデル、その他の設定を表示または変更する方法について説明します。'
 ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98fcdb49facbc1bae6e7a0b76388c385a0fc05e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630944"
 ---
-# <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="database-properties-options-page"></a>[データベースのプロパティ] ([オプション] ページ)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで利用できるオプションの詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」と「[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」をご覧ください。  
   
 ## <a name="page-header"></a>ページ ヘッダー  
- **[照合順序]**  
+ **Collation**  
  データベースの照合順序を一覧から選択して指定します。 詳細については、「 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)」を参照してください。  
   
  **復旧モデル**  
@@ -121,10 +122,10 @@ Azure SQL Database に接続している場合、このセクションにはサ�
  セカンダリ (存在する場合) のパラメーター スニッフィングを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4136](https://support.microsoft.com/kb/980653)を指定した場合と同じです。  
   
  **クエリ オプティマイザーの修正プログラム**  
- データベースの互換性レベルに関係なく、プライマリ上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](https://support.microsoft.com/kb/974006)を指定した場合と同じです。  
+ データベースの互換性レベルに関係なく、プライマリ上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を指定した場合と同じです。 詳細については「[QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes)」をご覧ください。  
   
  **セカンダリのクエリ オプティマイザーの修正プログラム**  
- データベースの互換性レベルに関係なく、セカンダリ (存在する場合) 上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](https://support.microsoft.com/kb/974006)を指定した場合と同じです。  
+ データベースの互換性レベルに関係なく、セカンダリ (存在する場合) 上のクエリ オプティマイザーの修正プログラムを有効にするか無効にするかを指定します。 これは、 [トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を指定した場合と同じです。 詳細については「[QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes)」をご覧ください。  
   
 ## <a name="filestream"></a>FILESTREAM  
  **[FILESTREAM ディレクトリ名]**  
@@ -199,9 +200,9 @@ Azure SQL Database に接続している場合、このセクションにはサ�
  **[VarDecimal ストレージ形式有効]**  
  このオプションは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降では読み取り専用です。 **[True]** の場合、このデータベースは vardecimal ストレージ形式に対応しています。 データベースのいずれかのテーブルで vardecimal ストレージ形式を使用している場合、vardecimal ストレージ形式を無効にすることはできません。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、すべてのデータベースが vardecimal ストレージ形式に対応します。 このオプションでは、 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)が使用されます。  
   
-## <a name="recovery"></a>復旧  
+## <a name="recovery"></a>Recovery  
  **[ページ確認]**  
- ディスク I/O エラーによる不完全な I/O トランザクションを検出し、報告する場合に使用されるオプションを指定します。 指定できる値は、 **[None]** 、 **[TornPageDetection]** 、および **[Checksum]** です。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
+ ディスク I/O エラーによる不完全な I/O トランザクションを検出し、報告する場合に使用されるオプションを指定します。 指定できる値は、 **[None]** 、 **[TornPageDetection]** 、および **[Checksum]** です。 詳細については、「[suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)」を参照してください。  
   
  **[ターゲットの復旧時間 (秒)]**  
  クラッシュが発生した場合、指定したデータベースが復旧に要する時間の上限を秒単位で指定します。 詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。  
@@ -216,7 +217,7 @@ Service Broker の読み取り専用プロパティです。
 **[Service Broker 識別子]**  
 読み取り専用の識別子です。  
 
-## <a name="state"></a>状態  
+## <a name="state"></a>State  
  **[読み取り専用データベース]**  
  データベースが読み取り専用かどうかを指定します。 指定できる値は、 **[True]** および **[False]** です。 **[True]** を指定すると、ユーザーはデータベースのデータの読み取りのみを実行できます。 データまたはデータベース オブジェクトは変更できませんが、`DROP DATABASE` ステートメントを使用してデータベース自体を削除することはできます。 データベースの使用中には、 **[読み取り専用データベース]** オプションに新しい値を設定することができできません。 master データベースは例外です。このオプションが設定されていても、システム管理者だけは master データベースを使用できます。  
   
@@ -227,13 +228,13 @@ Service Broker の読み取り専用プロパティです。
  **[True]** の場合、このデータベースはデータベース暗号化に対応しています。 暗号化ではデータベース暗号化キーが必要です。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。  
  
  **[アクセスの制限]**  
- データベースにアクセスできるユーザーを指定します。 有効な値は次のとおりです。  
+ データベースにアクセスできるユーザーを指定します。 次のいずれかの値になります。  
   
 -   **複数**  
   
      稼働データベースの通常の状態では、一度に複数のユーザーがデータベースにアクセスできます。  
   
--   **単一**  
+-   **Single**  
   
      メンテナンス アクションで使用されます。データベースには一度に 1 人のユーザーのみがアクセスできます。  
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103208"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66103208"
   
 -   レポート実行タイムアウト値は、レポート処理を停止するまでに続行できる最大秒数です。 この値はシステムレベルで定義されます。 この設定は、レポートごとに変えることができます。  
   
- タイムアウト エラーの大半は、クエリ処理中に発生します。 タイムアウト エラーが発生する場合は、クエリ タイムアウト値を増やしてください。 レポート実行タイムアウト値はクエリ タイムアウト値より大きい値になるように調整してください。レポート実行タイムアウト値には、クエリとレポート処理の両方が完了するのに十分な時間を設定する必要があります。  
+ タイムアウト エラーの大半は、クエリ処理中に発生します。 タイムアウト エラーが発生する場合は、クエリ タイムアウト値を増やしてください。 レポート実行タイムアウト値は、クエリタイムアウトよりも大きくなるように調整してください。クエリとレポート処理の両方を完了するのに十分な期間を指定する必要があります。  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>レポートの埋め込みデータセットに対するクエリ タイムアウトの設定  
  クエリ タイムアウト値は、レポートの作成中、埋め込みデータセットを定義するときに指定します。 タイムアウト値は、レポート定義の `Timeout` 要素の中にレポートと一緒に格納されます。 既定では、この値は 30 秒に設定されます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
@@ -55,9 +55,9 @@ ms.locfileid: "66103208"
 >  RSReportServer.config ファイルの `RunningRequestsDbCycle` 設定で、実行中のジョブが評価される頻度を変更できます。  
   
 ## <a name="see-also"></a>参照  
- [処理オプションの設定 (Reporting Services の SharePoint 統合モード)](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [SharePoint 統合モードで Reporting Services &#40;処理オプションを設定&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](reporting-services-report-server-native-mode.md)   
- [Manage a Running Process](../subscriptions/manage-a-running-process.md)   
+ [実行中のプロセスを管理する](../subscriptions/manage-a-running-process.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)  
   
   

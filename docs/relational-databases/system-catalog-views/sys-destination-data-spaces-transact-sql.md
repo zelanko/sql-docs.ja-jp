@@ -1,5 +1,5 @@
 ---
-title: sys.destination_data_spaces (TRANSACT-SQL) |Microsoft Docs
+title: destination_data_spaces (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,23 +17,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.destination_data_spaces catalog view
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 68a9e46232246c5f3a088765f77f44a9bc018269
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b1cdfa6a75dab86aac70dc859878e593b0906cad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079369"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893992"
 ---
-# <a name="sysdestinationdataspaces-transact-sql"></a>sys.destination_data_spaces (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdestination_data_spaces-transact-sql"></a>destination_data_spaces (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   パーティション構成のデータ領域の転送先ごとに 1 行のデータを保持します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**partition_scheme_id**|**int**|データ領域をパーティション分割されるパーティション構成の ID。|  
+|**partition_scheme_id**|**int**|データ領域にパーティション分割されているパーティション構成の ID。|  
 |**destination_id**|**int**|パーティション構成内で一意な、転送先マッピングの ID (1 から始まる序数) です。|  
 |**data_space_id**|**int**|この構成の転送先のデータがマッピングされるデータ領域の ID です。|  
   

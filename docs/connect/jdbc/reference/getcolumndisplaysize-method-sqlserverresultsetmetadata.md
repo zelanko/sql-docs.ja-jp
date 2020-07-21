@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3de927351c2474c60af8ba1e168b0d7e76f98260
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 60ed53f51ff9fe828944ecfdbadab647501eac5c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952969"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923418"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +45,8 @@ public int getColumnDisplaySize(int column)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getColumnDisplaySize メソッドは、java. ResultSetMetaData インターフェイスの getColumnDisplaySize メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getColumnDisplaySize メソッドは、java.sql.ResultSetMetaData インターフェイスの getColumnDisplaySize メソッドによって指定されます。  
   
  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 では、COLUMN_SIZE 列の動作が変更されています。 詳細については、[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) を参照してください。  
   

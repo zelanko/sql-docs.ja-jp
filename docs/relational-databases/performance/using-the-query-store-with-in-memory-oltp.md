@@ -13,15 +13,15 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fa2f5a4694b8f8f9f59a5663d996777d0c78df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8962776175617293c1acdc979852232dbca95c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737121"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>インメモリ OLTP でのクエリ ストアの使用
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ ストアでは、ネイティブ コンパイル コードのパフォーマンスを監視して、インメモリ OLTP で実行されているワークロードを確認することができます。  
 コンパイルと実行時の統計情報が収集され、ディスク ベースのワークロードと同じように公開されます。   
@@ -33,7 +33,7 @@ ms.locfileid: "67986657"
   
 -   クエリ ストアを有効にすると、クエリ、プランおよびコンパイル時の統計が既定で収集されます。 ただし、実行時統計の収集は、[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) で明示的に有効にしない限り、アクティブになりません。  
   
--   *@new_collection_value* を 0 に設定すると、クエリ ストアは影響を受けるプロシージャまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス全体の実行時統計の収集を停止します。  
+-   *\@new_collection_value* を 0 に設定すると、クエリ ストアでの影響を受けるプロシージャまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス全体の実行時統計の収集が停止されます。  
   
 -   [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) で構成された値は保持されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の再起動後に、統計収集を確認し、再構成するようにしてください。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67986657"
     
 -   混合ワークロードのデータベースでクエリ ストアを実行する場合は、[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) の **is_natively_compiled** フィールドを使用して、ネイティブ コード コンパイルで生成されたクエリ プランをすばやく見つけることができます。  
   
--   クエリ ストアのキャプチャ モード (**ALTER TABLE** ステートメントの *QUERY_CAPTURE_MODE* パラメーター) が、ネイティブ コンパイル モジュールからのクエリに影響することはありません。構成値に関係なく、常にキャプチャされるためです。 これには `QUERY_CAPTURE_MODE = NONE`の設定も含まれます。  
+-   クエリ ストアのキャプチャ モード (*ALTER TABLE* ステートメントの **QUERY_CAPTURE_MODE** パラメーター) が、ネイティブ コンパイル モジュールからのクエリに影響することはありません。構成値に関係なく、常にキャプチャされるためです。 これには `QUERY_CAPTURE_MODE = NONE`の設定も含まれます。  
   
 -   クエリ ストアでキャプチャされるクエリ コンパイルの期間には、ネイティブ コードが生成される前に、クエリ最適化に要した時間のみが含まれます。 もっと正確に言うと、C コードのコンパイルおよび C コードの生成に必要な内部構造の生成に要した時間は含まれません。  
   
@@ -135,7 +135,7 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
 ```  
   
 ## <a name="see-also"></a>参照  
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60c92a237562704e5bc5d43717f863aa78a14b55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066589"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、マージ テーブル アーティクル間に論理レコード リレーションシップを定義する方法について説明します。  
@@ -43,20 +42,20 @@ ms.locfileid: "62691659"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   パブリケーションに対するサブスクリプションが初期化された後に、論理レコードを追加、変更、または削除した場合は、変更を行った後で、新しいスナップショットを生成し、すべてのサブスクリプションを再初期化する必要があります。 プロパティ変更の要件の詳細については、「[Change Publication and Article Properties](change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) をご覧ください。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- **[結合の追加]** ダイアログ ボックスで論理レコードを定義します。このダイアログ ボックスは、パブリケーションの新規作成ウィザードと **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](create-a-publication.md)」および「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+ [**結合の追加**] ダイアログボックスで論理レコードを定義します。このダイアログボックスは、パブリケーションの新規作成ウィザードおよび [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](create-a-publication.md)」および「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
  **[結合の追加]** ダイアログ ボックスで論理レコードを定義できるのは、マージ パブリケーションの結合フィルターに論理レコードが適用されている場合だけです。また、パブリケーションが、事前計算済みパーティションを使用するための要件を満たしている必要もあります。 結合フィルターに適用されていない論理レコードを定義して、論理レコード レベルでの競合の検出と解決を設定するには、ストアド プロシージャを使用する必要があります。  
   
 #### <a name="to-define-a-logical-record-relationship"></a>論理レコード リレーションシップを定義するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内の行フィルターを選択します。  
+1.  パブリケーションの新規作成ウィザードの [**テーブル行のフィルター**選択] ページ、または [**パブリケーションのプロパティ \<Publication> -** ] ダイアログボックスの [**行**のフィルター選択] ページで、[フィルター選択された**テーブル**] ペイン内の行フィルターを選択します。  
   
      論理レコード リレーションシップは、行フィルターを拡張する結合フィルターに関連付けられます。 したがって、先に行フィルターが定義されていないと、行フィルターを結合で拡張して論理レコード リレーションシップを適用することはできません。 1 つの結合フィルターが定義されると、この結合フィルターを別の結合フィルターを使用して拡張できます。 結合フィルターの定義の詳細については、「 [マージ アーティクル間の結合フィルターの定義および変更](define-and-modify-a-join-filter-between-merge-articles.md)」を参照してください。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62691659"
   
 3.  **[結合の追加]** ダイアログ ボックスで結合フィルターを定義してから、 **[論理レコード]** チェック ボックスをオンにします。  
   
-4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
+4.  [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスが表示されている場合は、[ **OK** ] をクリックして保存し、ダイアログボックスを閉じます。  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>論理レコード リレーションシップを削除するには  
   
@@ -72,7 +71,7 @@ ms.locfileid: "62691659"
   
      論理レコード リレーションシップのみを削除するには  
   
-    1.  パブリケーションの新規作成ウィザードの **[行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内の論理レコード リレーションシップに関連付けられている結合フィルターを選択し、 **[編集]** をクリックします。  
+    1.  パブリケーションの新規作成ウィザードの [**行のフィルター**選択] ページ、または [**パブリケーションのプロパティ \<Publication> -** ] ダイアログボックスの [**行**のフィルター選択] ページで、[**フィルター**選択されたテーブル] ペイン内の論理レコードリレーションシップに関連付けられている結合フィルターを選択し、[**編集**] をクリックします。  
   
     2.  **[結合の編集]** ダイアログ ボックスで、 **[論理レコード]** チェック ボックスをオフにします。  
   
@@ -80,9 +79,9 @@ ms.locfileid: "62691659"
   
      論理レコード リレーションシップとそれに関連付けられている結合フィルターを削除するには  
   
-    -   パブリケーションの新規作成ウィザードの **[行のフィルター選択]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[削除]** をクリックします。 削除する結合フィルター自体が他の結合によって拡張されている場合は、それらの結合も削除されます。  
+    -   パブリケーションの新規作成ウィザードまたは [**パブリケーションのプロパティ \<Publication> -** ] ダイアログボックスの [行の**フィルター**選択] ページで、[フィルター選択された**テーブル**] ペイン内のフィルターを選択し、[**削除**] をクリックします。 削除する結合フィルター自体が他の結合によって拡張されている場合は、それらの結合も削除されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  プログラムでレプリケーション ストアド プロシージャを使用して、アーティクル間に論理レコード リレーションシップを指定できます。  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>関連する結合フィルターを使用せずに論理レコード リレーションシップを定義するには  
@@ -91,7 +90,7 @@ ms.locfileid: "62691659"
   
     -   値が **1**の場合、事前計算済みパーティションが既に使用されています。  
   
-    -   値が **0**の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) を実行します。 **@property** に **use_partition_groups** を指定し、 **@value** に **true** を指定します。  
+    -   値が **0**の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) を実行します。 **@property** に **use_partition_groups** を指定し、**@value** に **true** を指定します。  
   
         > [!NOTE]  
         >  パブリケーションで事前計算済みパーティションがサポートされない場合、論理レコードは使用できません。 詳細については、[事前計算済みパーティションによるパラメーター化されたフィルター パフォーマンスの最適化](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)に関するページで、事前計算済みパーティションを使用するための要件をご覧ください。  
@@ -100,13 +99,13 @@ ms.locfileid: "62691659"
   
 2.  論理レコードを構成するアーティクルが存在しない場合は、パブリッシャー側のパブリケーション データベースに対して [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 論理レコードの競合の検出と解決に関するオプションを次の中から 1 つ指定します。  
   
-    -   論理レコードの関連する行で発生する競合を検出し、解決するには、 **@value** には **@logical_record_level_conflict_detection** 」および「 **@logical_record_level_conflict_resolution** 」をご覧ください。  
+    -   論理レコードの関連する行で発生する競合を検出し、解決するには、 **@value** には **@logical_record_level_conflict_detection** 」および「 **@logical_record_level_conflict_resolution**」をご覧ください。  
   
-    -   標準的な行または列レベルの競合の検出と解決を使用するには、値を指定`false`の **@logical_record_level_conflict_detection** と **@logical_record_level_conflict_resolution** 、既定値します。  
+    -   標準の行レベルまたは列レベルの競合の検出と解決を使用するには、との値を指定し `false` **@logical_record_level_conflict_detection** **@logical_record_level_conflict_resolution** ます。これは既定値です。  
   
-3.  論理レコードを構成する各アーティクルに対して、手順 2. を実行します。 論理レコード内の各アーティクルに使用する競合の検出および解決のオプションは、すべて同じである必要があります。 詳しくは、「 [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)」をご覧ください。  
+3.  論理レコードを構成する各アーティクルに対して、手順 2. を実行します。 論理レコード内の各アーティクルに使用する競合の検出および解決のオプションは、すべて同じである必要があります。 詳しくは、「 [論理レコードの競合の検出および解決](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)」をご覧ください。  
   
-4.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)を実行します。 **@publication** を指定します。リレーションシップの 1 つのアーティクルの名前を **@article** に、もう 1 つのアーティクルの名前を **@join_articlename** に指定します。リレーションシップの名前を **@filtername** に、2 つのアーティクル間のリレーションシップを定義する句を **@join_filterclause** に、結合の種類を **@join_unique_key** に指定します。次のいずれかの値を **@filter_type** に指定します。  
+4.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)を実行します。 を指定し、リレーションシップ内の1つのアーティクルの名前をに、に2番目のアーティクルの名前を、にリレーションシップの名前を、に **@publication** **@article** **@join_articlename** **@filtername** 2 つのアーティクル間のリレーションシップを定義する句、に **@join_filterclause** 結合の種類を、に次のいずれかの **@join_unique_key** 値 **@filter_type** を指定します。  
   
     -   **2** - 論理リレーションシップを定義します。  
   
@@ -121,15 +120,15 @@ ms.locfileid: "62691659"
   
 1.  論理レコードの関連する行で発生する競合を検出し、解決するには、次の手順を実行します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **logical_record_level_conflict_detection** を指定し、 **@value** に **true** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **logical_record_level_conflict_detection** を指定し、**@value** に **true** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **logical_record_level_conflict_resolution** を指定し、 **@value** に **true** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **logical_record_level_conflict_resolution** を指定し、**@value** に **true** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
   
 2.  標準の行レベルまたは列レベルの競合の検出と解決を使用するには、次の手順を実行します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 値を指定**logical_record_level_conflict_detection**の **@property** の値と`false`の **@value** します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 に**logical_record_level_conflict_detection**の値を指定し、に値を指定し **@property** `false` **@value** ます。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 値を指定**logical_record_level_conflict_resolution**の **@property** の値と`false`の **@value** します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 に**logical_record_level_conflict_resolution**の値を指定し、に値を指定し **@property** `false` **@value** ます。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>論理レコード リレーションシップを削除するには  
   
@@ -142,14 +141,14 @@ ms.locfileid: "62691659"
     > [!NOTE]  
     >  このクエリは、 [sp_helpmergefilter](/sql/relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql)と同じ情報を返します。ただし、このシステム ストアド プロシージャは、結合フィルターでもある論理レコード リレーションシップに関する情報のみ返します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)を実行します。 **@publication** を指定し、リレーションシップ内の 1 つのアーティクルの名前を **@article** に、手順 1 のリレーションシップの名前を **@filtername** に指定します。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)を実行します。 を指定し、 **@publication** リレーションシップ内のいずれかのアーティクルの名前をに指定し、 **@article** 手順 1. のリレーションシップの名前をに指定し **@filtername** ます。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、既存のパブリケーションで事前計算済みパーティションを有効にし、 `SalesOrderHeader` テーブルと `SalesOrderDetail` テーブルの 2 つの新しいアーティクルを含む論理レコードを作成しています。  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_addmergelogicalrecord)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   
 > [!NOTE]  
 >  マージ レプリケーションを使用して、論理レコード レベルで追跡および解決する競合を指定できますが、これらのオプションは RMO を使用して設定できません。  
@@ -172,7 +171,7 @@ ms.locfileid: "62691659"
   
     -   (省略可) アーティクルが行方向にフィルター選択される場合、 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> プロパティに行フィルター句を指定します。 このプロパティを使用して、静的行フィルターまたはパラメーター化された行フィルターを指定します。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
-     詳しくは、「 [Define an Article](define-an-article.md)」をご覧ください。  
+     詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
 6.  <xref:Microsoft.SqlServer.Replication.Article.Create%2A> メソッドを呼び出します。  
   
@@ -194,19 +193,19 @@ ms.locfileid: "62691659"
   
 10. パブリケーションの他の論理レコード リレーションシップについても、手順 8. と 9. をそれぞれ実行します。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>例 (RMO)  
  この例では、 `SalesOrderHeader` テーブルと `SalesOrderDetail` テーブルの 2 つの新しいアーティクルを含む論理レコードを作成しています。  
   
  [!code-csharp[HowTo#rmo_CreateLogicalRecord](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createlogicalrecord)]  
   
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
-## <a name="see-also"></a>関連項目  
- [マージ アーティクル間の結合フィルターの定義および変更](define-and-modify-a-join-filter-between-merge-articles.md)   
- [マージ アーティクルのパラメーター化された行フィルターの定義と変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [静的行フィルターの定義と変更](define-and-modify-a-static-row-filter.md)   
+## <a name="see-also"></a>参照  
+ [マージアーティクル間の結合フィルターを定義および変更する](define-and-modify-a-join-filter-between-merge-articles.md)   
+ [マージ アーティクルのパラメーター化された行フィルターの定義および変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [静的行フィルターを定義および変更する](define-and-modify-a-static-row-filter.md)   
  [論理レコードによる関連行への変更のグループ化](../merge/group-changes-to-related-rows-with-logical-records.md)   
- [事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)   
+ [事前計算済みパーティションを使用したパラメーター化されたフィルターのパフォーマンスの最適化](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)   
  [論理レコードによる関連行への変更のグループ化](../merge/group-changes-to-related-rows-with-logical-records.md)  
   
   

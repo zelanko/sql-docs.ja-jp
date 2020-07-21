@@ -1,5 +1,5 @@
 ---
-title: XML DML (XML データ変更言語) | Microsoft Docs
+title: XML データ変更言語 (XML DML)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28de1be430d02a9288b0a1fe27567965fb0a32e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce5cb12d755319255497bac7b96cd3945e92a86d
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140889"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391829"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML データ変更言語 (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   XML DML (XML データ変更言語) は、XQuery 言語の拡張言語です。 W3C で定義されているように、XQuery 言語には、データ操作 (DML) の部分がありません。 このトピックで紹介する XML DML および XQuery 言語には、**xml** データ型に対して使用できる完全な機能のクエリおよびデータ変更言語が提供されます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68140889"
   
 -   **modify()** メソッド内に適切な XML DML ステートメントを指定します。  
   
- 一部の属性では、挿入や削除、値の変更ができないので注意してください。 例:  
+ 一部の属性では、挿入や削除、値の変更ができないので注意してください。 次に例を示します。  
   
 -   **xml** の型指定の有無にかかわらず、属性には **xmlns**、**xmlns:\*** 、**xml:base** を使用します。  
   

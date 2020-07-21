@@ -1,6 +1,8 @@
 ---
-title: Linux 上の SQL Server レプリケーションでスナップショット フォルダーの共有を構成する
-description: この記事では、Linux 上で SQL Server レプリケーションのスナップショット フォルダーの共有を構成する方法について説明します。
+title: スナップショット フォルダー共有の構成
+titleSuffix: SQL Server on Linux
+description: Linux 上の SQL Server レプリケーションでスナップショット フォルダーの共有を構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,16 +11,16 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e5f21fee3218977d22a5c3314fe82c5a3e508bfc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093125"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882672"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>共有を含むレプリケーション スナップショット フォルダーを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 スナップショット フォルダーは、共有として指定したディレクトリです。このフォルダーの読み取りと書き込みをするエージェントには、このフォルダーへのアクセスを可能にする十分な権限が必要です。
 
@@ -137,10 +139,10 @@ sudo service smb status
 * レプリケーションを設定するときに、共有パス (`//host1/mssql_data` など) を使用します。
 * `//host1/mssql_data` をローカル ディレクトリにマップすると、マッピングが `mssql.conf` に追加されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [概念:Linux での SQL Server のレプリケーション](sql-server-linux-replication.md)
 
-[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)
+[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
 
 [1]: ./media/sql-server-linux-replication-snapshot-shares/image1.png

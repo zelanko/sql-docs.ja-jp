@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 75713193ae858452ccf3c0fa9f9c6d38091696ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85f97f8e7fe754a4c52b34f52ecb45d142a43c4b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943987"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297781"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩やかに変化するディメンション ウィザードの F1 ヘルプ
 
@@ -28,7 +28,7 @@ ms.locfileid: "67943987"
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
- [[緩やかに変化するディメンション ウィザードへようこそ]](../../../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md)  
+ [緩やかに変化するディメンション ウィザードへようこそ](../../../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md)  
  緩やかに変化するディメンション ウィザードについて紹介します。  
   
  [[ディメンション テーブルおよびキーの選択] &#40;緩やかに変化するディメンション ウィザード&#41;](../../../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "67943987"
  [[推定ディメンション メンバー] &#40;緩やかに変化するディメンション ウィザード&#41;](../../../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md)  
  推定ディメンション メンバーのオプションを指定します。  
   
- [[緩やかに変化するディメンション ウィザードの完了]](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
+ [緩やかに変化するディメンション ウィザードの完了](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
  ユーザーにより選択された構成オプションを表示します。  
   
 ## <a name="see-also"></a>参照  

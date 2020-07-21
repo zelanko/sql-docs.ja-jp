@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 86745aeb-ea0d-42d1-b7d2-141b7b067af9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9a00a79466bb4f53fcef10edb1dd6804542b3eae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 05829760332934f699df68f42940f2d92d949797
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982393"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921304"
 ---
 # <a name="getlong-method-sqlserverresultset"></a>getLong メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67982393"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getLong (int)](../../../connect/jdbc/reference/getlong-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、Java プログラミング言語の **long** として取得します。|  
 |[getLong (java.lang.String)](../../../connect/jdbc/reference/getlong-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、Java プログラミング言語の **long** として取得します。|  

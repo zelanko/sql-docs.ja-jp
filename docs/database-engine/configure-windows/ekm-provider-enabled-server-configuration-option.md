@@ -1,5 +1,6 @@
 ---
 title: EKM provider enabled サーバー構成オプション | Microsoft Docs
+description: "\"EKM provider enabled\" オプションについて説明します。 これによって、SQL Server での拡張キー管理デバイスのサポートが制御されます。 このオプションをオンまたはオフにする方法について説明します。"
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - EKM provider enabled option
 ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f0f2faa0170a892cb48dd91386f8f5155591e71d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: be9e074cd3d58571a0db9646648207b26b1512b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772515"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>EKM provider enabled サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **EKM provider enabled** オプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での拡張キー管理デバイスのサポートを制御します。 既定では、このオプションはオフになっています。  
   

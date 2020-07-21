@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe629bc5d165489f733d0250b0f60bea8a3a677a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2ff0b9740cbdd8eb25bdfa6d8c55e7551fe946a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141277"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897850"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   キューから 1 つ以上のメッセージを受信します。 キューの保有期間の設定に応じて、キューからメッセージを削除するか、キュー内のメッセージの状態を更新します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68141277"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
@@ -105,7 +105,7 @@ ms.locfileid: "68141277"
  TIMEOUT *timeout*  
  ステートメントでメッセージを待機する時間をミリ秒で指定します。 この句は WAITFOR 句と共に使用する必要があります。 この句を指定しないか、タイムアウトが -**1** の場合、待機時間は無制限になります。 タイムアウトの時間を過ぎると、RECEIVE では空の結果セットが返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  RECEIVE ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後にセミコロン (;) を指定する必要があります。  
@@ -155,9 +155,9 @@ ms.locfileid: "68141277"
 ## <a name="queue-columns"></a>キューの列  
  次の表は、キューの列の一覧です。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ステータス**|**tinyint**|メッセージの状態。 RECEIVE コマンドで返されるメッセージの状態は常に **0** です。 キューのメッセージには、次のいずれかの値が含まれます。<br /><br /> **0** = 準備完了。**1** = 受信メッセージ。**2** = 未完了。**3** = 保持されている送信済みメッセージ。|  
+|**status**|**tinyint**|メッセージの状態。 RECEIVE コマンドで返されるメッセージの状態は常に **0** です。 キューのメッセージには、次のいずれかの値が含まれます。<br /><br /> **0** = 準備完了。**1** = 受信メッセージ。**2** = 未完了。**3** = 保持されている送信済みメッセージ。|  
 |**priority**|**tinyint**|メッセージに適用されているメッセージ交換の優先度レベル。|  
 |**queuing_order**|**bigint**|キュー内のメッセージの順序番号。|  
 |**conversation_group_id**|**uniqueidentifier**|メッセージが属するメッセージ交換グループの識別子。|  
@@ -175,7 +175,7 @@ ms.locfileid: "68141277"
 ## <a name="permissions"></a>アクセス許可  
  メッセージを受信するには、キューに対する RECEIVE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. メッセージ交換グループにあるすべてのメッセージの、すべての列を受信する  
  次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 このステートメントでは、メッセージが結果セットとして返されます。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eaa81c35dc13c60a06196d1c61ab4dce9106f9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b376167d65515acbbaf52d5ecdcc18db2b2aaa8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62711122"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066297"
 ---
 # <a name="copy-items-in-a-solution"></a>ソリューションの項目のコピー
   項目をコピーするには、ソリューション エクスプローラーまたは Windows エクスプローラーを使用します。  
@@ -38,7 +37,7 @@ ms.locfileid: "62711122"
 >  接続を別のプロジェクトにコピーすることはできません。 接続が関連付けられたクエリを別のプロジェクトにコピーする場合、関連する接続はコピー先のプロジェクトにコピーされません。 宛先のプロジェクトで接続を手動で作成する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
+ [ソリューション エクスプローラー](solution-explorer.md)   
  [ソリューションのアイテムの移動](move-items-in-a-solution.md)  
   
   

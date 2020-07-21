@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000225"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894493"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>ドメインに依存しない可用性グループを作成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Always On 可用性グループ (AG) には、基になる Windows Server フェールオーバー クラスター (WSFC) が必要です。 Windows Server 2012 R2 を使用して WSFC を展開するには、WSFC (ノードとも呼ばれる) に参加しているサーバーが同じドメインに追加されていることが常に必要です。 Active Directory Domain Services (AD DS) の詳細については、[ここ](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)を参照してください。
 
@@ -127,7 +127,7 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
    ```
 
 10. プライマリになる可能性があるレプリカでは、関連するすべてのセカンダリ レプリカでログインとユーザーを作成します。
-11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 例:
+11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 次に例を示します。
 
    ```sql
    CREATE CERTIFICATE [InstanceB_Cert]
@@ -160,7 +160,7 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 14. 基になる証明書とエンドポイントのセキュリティが構成されたら、指定した方法を使用して、可用性グループを作成します。 セカンダリの初期化に使用するバックアップを手動でバックアップ、コピー、および復元するか、または[自動シード処理](automatically-initialize-always-on-availability-group.md)を使用することをお勧めします。 セカンダリ レプリカを初期化するためのウィザードの使用には、サーバー メッセージ ブロック (SMB) ファイルが関係し、ドメインに参加していないワークグループ クラスターを使用する場合は動作しない可能性があります。
 15. リスナーを作成する場合は、その名前と IP アドレスの両方が DNS に登録されていることを確認します。
 
-### <a name="next-steps"></a>次の手順 
+### <a name="next-steps"></a>次のステップ 
 
 - [可用性グループ ウィザードの使用 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 

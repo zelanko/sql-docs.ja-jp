@@ -11,15 +11,14 @@ helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3c7a9b107a05b0645f2286f534f457d46a1b6f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 39fc58138cd9342d922c4cb37977b9a4da0a8095
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771098"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437749"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>XML ソースを使用してデータを抽出する
   XML ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクがあらかじめ含まれている必要があります。  
@@ -65,6 +64,6 @@ ms.locfileid: "62771098"
  [XML ソース](xml-source.md)   
  [Integration Services の変換](transformations/integration-services-transformations.md)   
  [Integration Services のパス](integration-services-paths.md)   
- [[データ フロー タスク]](../control-flow/data-flow-task.md)  
+ [データ フロー タスク](../control-flow/data-flow-task.md)  
   
   

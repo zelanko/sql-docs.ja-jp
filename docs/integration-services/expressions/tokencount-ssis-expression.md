@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b7883ec1ed76f5b619c395e317a13a3fb57f091c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0fd9c3a09bf5e901591b2837fcd163534db5f52c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967677"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71288149"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 式)
 
@@ -40,7 +40,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  TOKEN 関数には次の解説が適用されます。  
   
 -   区切り記号には 1 つ以上の区切り文字を含めることができます。  

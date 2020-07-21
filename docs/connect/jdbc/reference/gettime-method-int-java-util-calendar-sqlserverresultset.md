@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d21e0c1d-9d6e-468f-8b11-cc7209b2c2e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 82f4c082145fc9d043047390d0b07380f37c798b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 31e6d09782746d72ac7073cca99f8e55736e08ef
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67979141"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927465"
 ---
 # <a name="gettime-method-int-javautilcalendar-sqlserverresultset"></a>getTime (int, java.util.Calendar) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,17 +40,17 @@ public java.sql.Time getTime(int columnIndex,
   
  列インデックスを示す **int** です。  
   
- *カレンダー*  
+ *cal*  
   
  Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 時刻オブジェクト。  
+ Time オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getTime メソッドは、java.sql.ResultSet インターフェイスの getTime メソッドで規定されています。  
   
  このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime または smalldatetime データ型の有効な時刻部分が返されます。日付部分は、指定されたカレンダーのタイムゾーンにおける Java のベースラインの日付である 1970/01/01 に設定されます。  

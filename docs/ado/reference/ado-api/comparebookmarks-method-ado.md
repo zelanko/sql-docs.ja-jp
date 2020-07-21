@@ -15,17 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa4be74086e4d35af70ac52aa9db0066f4279e3e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919598"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760368"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks メソッド (ADO)
-2 つのブックマークを比較し、これらの相対値を示す値を返します。  
+2つのブックマークを比較し、それらの相対値を示す値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,30 +35,30 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 返します、 [CompareEnum](../../../ado/reference/ado-api/compareenum.md)ブックマークによって表される 2 つのレコードの相対行位置を示す値。  
+ 各ブックマークによって表される2つのレコードの相対行の位置を示す[Compareenum](../../../ado/reference/ado-api/compareenum.md)値を返します。  
   
 #### <a name="parameters"></a>パラメーター  
  *Bookmark1*  
- 最初の行のブックマークです。  
+ 最初の行のブックマーク。  
   
  *Bookmark2*  
- 2 番目の行のブックマークです。  
+ 2番目の行のブックマーク。  
   
-## <a name="remarks"></a>コメント  
- 同じブックマークを適用する必要があります[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または**レコード セット**オブジェクトとその[複製](../../../ado/reference/ado-api/clone-method-ado.md)します。 さまざまなブックマークを確実に比較することはできません**Recordset**オブジェクトの場合、同じソースまたはコマンドから作成された場合でもです。 ブックマークを比較することも、 **Recordset**オブジェクトの基になるプロバイダーは、比較をサポートしていません。  
+## <a name="remarks"></a>Remarks  
+ ブックマークは、同じ[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または**レコードセット**オブジェクトとその[複製](../../../ado/reference/ado-api/clone-method-ado.md)に適用する必要があります。 同じソースまたはコマンドから作成されたものであっても、異なる**レコードセット**オブジェクトのブックマークを確実に比較することはできません。 また、基になるプロバイダーで比較がサポートされていない**レコードセット**オブジェクトのブックマークを比較することもできません。  
   
- ブックマーク内の行を一意に識別する、 **Recordset**オブジェクト。 使用して、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)ブックマークを取得する現在の行のプロパティ。  
+ ブックマークは、**レコードセット**オブジェクト内の行を一意に識別します。 ブックマークを取得するには、現在の行の[bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティを使用します。  
   
- ADO としてそれを公開して、ブックマークのデータ型は、各プロバイダーに固有であるため、**バリアント**します。 たとえば、SQL Server のブックマークは型 DBTYPE_R8 (**二重**)。 ADO では、次の種類として、**バリアント**のサブタイプで**二重**します。  
+ ブックマークのデータ型は各プロバイダーに固有であるため、ADO はそれを**バリアント**として公開します。 たとえば、SQL Server のブックマークの種類は DBTYPE_R8 (**Double**) です。 この型は、 **Double**型のサブタイプの**バリアント**として ADO によって公開されます。  
   
- ブックマークを比較するときに、ADO は任意の型の強制型変換を行いません。 単に値は、比較が発生したプロバイダーに渡されます。 ブックマークが渡された場合、 **CompareBookmarks**メソッドが異なる型の変数に格納されている、次の型の不一致エラーを生成できます。"引数型が正しくありません、許容の範囲から外れているや、他と競合しています。"  
+ ブックマークを比較するとき、ADO はどのような型の強制型変換も試行しません。 値は、比較が発生したプロバイダーに渡されるだけです。 **Comparebookmarks**メソッドに渡されるブックマークが異なる型の変数に格納されている場合、次のような型の不一致エラーが発生する可能性があります。 "引数の型が間違っているか、許容範囲外であるか、競合しています。"  
   
- 無効か、形式が正しくないブックマークには、エラーが発生します。  
+ 無効または形式が正しくないブックマークは、エラーを発生させます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CompareBookmarks メソッドの例 (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
- [CompareBookmarks メソッドの例 (vc++)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
+ [CompareBookmarks メソッドの例 (VC + +)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark プロパティ (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)

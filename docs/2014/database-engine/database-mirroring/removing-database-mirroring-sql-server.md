@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 414cdedb8f2bc3dee4edc792c11b6438306818c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8044fcef9d9f9bfc1fb41c1faa17b76c827da5a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754542"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933983"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>データベース ミラーリングの削除 (SQL Server)
   データベース所有者は、いずれのパートナーでもデータベース ミラーリング セッションをいつでも手動で停止できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "62754542"
 > [!NOTE]  
 >  セッション停止後もミラー化を続行するには、新しいデータベース ミラーリング セッションを確立する必要があります。 ミラー化の停止後にログ バックアップを作成する場合は、ミラー化を再開する前にミラー データベースにそのログ バックアップを適用する必要があります。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **データベース ミラーリングを削除するには**  
   
 -   [データベース ミラーリングを削除する &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
@@ -54,7 +53,7 @@ ms.locfileid: "62754542"
 
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリングの一時停止と再開 &#40;SQL Server&#41;](pausing-and-resuming-database-mirroring-sql-server.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  

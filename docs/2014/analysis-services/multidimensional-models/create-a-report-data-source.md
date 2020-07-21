@@ -1,5 +1,5 @@
 ---
-title: レポート データ ソースの作成 |Microsoft Docs
+title: レポートデータソースを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9d009b6cae346fd2b16d0651b0e905a0fb9e7eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076339"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536264"
 ---
 # <a name="create-a-report-data-source"></a>レポート データ ソースの作成
   Power View が多次元モデルに接続するためには、共有レポート データ ソース定義 (.rsds ファイル) を SharePoint ライブラリに作成する必要があります。 .rsds ファイルは、多次元モデルへの接続に使用する Analysis Services サーバー インスタンスの名前、接続の種類、接続文字列、および資格情報の名前を指定します。 ユーザーが .rsds ファイルをクリックすると、新しい空白の Power View レポート (.rdlx ファイル) がブラウザーで開きます。  
@@ -39,10 +38,10 @@ ms.locfileid: "66076339"
   
 1.  ライブラリ リボンで、 **[ドキュメント]** タブをクリックします。  
   
-2.  **［新しいドキュメント］**  >  **［レポート データ ソース］** をクリックします。  
+2.  [**新しいドキュメント**] [  >  **レポートデータソース**] をクリックします。  
   
     > [!NOTE]  
-    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、このライブラリに対してレポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  
+    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、このライブラリに対してレポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、「 [SharePoint 統合モードでのレポートサーバーコンテンツタイプのライブラリへの追加 &#40;Reporting Services」&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)を参照してください。  
   
 3.  **[データ ソースのプロパティ]** ページの **[名前]** に、接続 .rsds ファイルの名前を入力します。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66076339"
   
      (オプション) 特定のディメンションまたはメジャー グループのみがクライアントに表示されている場合、ユーザーに選択ビューを提供するパースペクティブをキューブに含めることができます。 パースペクティブを指定するには、次のように、キューブのプロパティにパースペクティブ名を値として入力します。 `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (オプション) キューブには、モデル内でさまざまな言語に指定されたメタデータとデータの翻訳を含めることができます。 翻訳 (データとメタデータ) を表示するには、接続文字列に"Locale Identifier"プロパティを追加する必要があります。 `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
+     (オプション) キューブには、モデル内でさまざまな言語に指定されたメタデータとデータの翻訳を含めることができます。 翻訳 (データとメタデータ) を表示するには、接続文字列に "Locale Identifier" プロパティを追加する必要があります。`Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  **[資格情報]** で、外部データ ソースにアクセスする際にレポート サーバーが資格情報を取得する方法を指定します。  
   

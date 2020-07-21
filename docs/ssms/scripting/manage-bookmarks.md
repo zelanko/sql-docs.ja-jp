@@ -1,6 +1,6 @@
 ---
-title: ブックマークの管理 | Microsoft Docs
-ms.custom: ''
+title: ブックマークの管理
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35816b3e50a49cd729ff31950bd219681dfda0fa
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7879c6c7d07e7e0caeb075652b87b42fdf3ab66c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265422"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261839"
 ---
 # <a name="manage-bookmarks"></a>ブックマークの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,4 +93,4 @@ ms.locfileid: "68265422"
  **[ブックマーク]** ウィンドウ内のすべてのブックマークに対して、チェック ボックスをオフまたはオンにします。 ブックマークは削除されません。また、ブックマークが付けられたコードの行は変更されません。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

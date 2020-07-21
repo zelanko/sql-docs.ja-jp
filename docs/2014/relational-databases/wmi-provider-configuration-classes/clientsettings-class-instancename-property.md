@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b559ddf5c33b10375d89138a0ac5580472c4fadf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fe85d19daf34eb5b15c3969ecf503c3bd20e605
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067919"
 ---
 # <a name="instancename-property-clientsettings-class"></a>InstanceName プロパティ (ClientSettings クラス)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスの名前を取得します。  
+  クライアントのインスタンスの名前を取得し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,12 +35,12 @@ object
 .InstanceName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント インスタンス上の設定を表す `ClientSettings` オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   

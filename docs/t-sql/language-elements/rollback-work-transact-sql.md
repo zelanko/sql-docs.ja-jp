@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72426dddcab7c0250b6ef0d744f9ede0a19f1550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31a95060be1802cbbef306d039f1f2da61a972a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706199"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   ユーザーが指定したトランザクションを、トランザクションの開始位置までロールバックします。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "68072352"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ROLLBACK [ WORK ]  
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このステートメントの機能は、ROLLBACK TRANSACTION の機能と同じです。ただし、ROLLBACK TRANSACTION には、ユーザー定義のトランザクション名を指定できる点が異なります。 省略可能な WORK キーワードを指定してもしなくても、この ROLLBACK 構文は ISO 構文と互換性があります。  
   
  トランザクションを入れ子にしている場合は、ROLLBACK WORK は、最も外側の BEGIN TRANSACTION ステートメントまで常にロールバックし、@@TRANCOUNT システム関数を 0 に減らします。  

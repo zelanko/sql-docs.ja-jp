@@ -1,5 +1,5 @@
 ---
-title: リンク ディメンションの定義 |Microsoft Docs
+title: リンクディメンションの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075577"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547011"
 ---
 # <a name="define-linked-dimensions"></a>リンク ディメンションの定義
   リンク ディメンションは、バージョンと互換性レベルが同じである別の Analysis Services データベース内で作成および保存されたディメンションに基づいています。 リンク ディメンションを使用すると、1 つのデータベースでディメンションを作成、保存、保守することができ、さらにそのディメンションを複数のデータベースで使用可能にすることができます。 ユーザーに対しては、リンク ディメンションは他のディメンションと同様に表示されます。  
@@ -31,7 +30,7 @@ ms.locfileid: "66075577"
 >  更新機能が利用できないため、ほとんどの Analysis Services 開発者は、ディメンションをリンクする代わりにディメンションをコピーします。 同じソリューション内にある複数のプロジェクトに対してソリューションをコピーできます。 詳細については、「 [SSAS 内でのリンク ディメンションの更新](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)」をご覧ください。  
   
 ## <a name="prerequisites"></a>前提条件  
- ディメンションを提供するソース データベースとそれを使用する現在のデータベースは、同じバージョンと互換性レベルとする必要があります。 詳細については、次を参照してください。[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)します。  
+ ディメンションを提供するソース データベースとそれを使用する現在のデータベースは、同じバージョンと互換性レベルとする必要があります。 詳細については、「[多次元データベースの互換性レベルを設定する &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)」を参照してください。  
   
  ソース データベースを配置してオンラインにする必要があります。 リンク オブジェクトをパブリッシュまたは使用するサーバーは、操作ができるように構成する必要があります (以下の説明を参照)。  
   
@@ -55,14 +54,14 @@ ms.locfileid: "66075577"
   
 4.  **[ウィザードの完了]** ページで、リンク オブジェクトをプレビューできます。 既に存在するディメンションと同じ名前のディメンションにリンクした場合は、序数 (最初の重複名の "1" から始まる数) が名前に追加されます。 ウィザードを完了すると、ディメンションが **[ディメンション]** フォルダーに追加されます。  
   
-##  <a name="bkmk_CreateNew"></a> Analysis Services データベースへの新しいデータ ソース接続の作成  
+##  <a name="create-a-new-data-source-connection-to-an-analysis-services-database"></a><a name="bkmk_CreateNew"></a>Analysis Services データベースへの新しいデータソース接続の作成  
  新しいデータ ソース ウィザードを使用して、ディメンションを提供する Analysis Services データベースに関するプロジェクト接続情報を追加します。 リンク オブジェクト ウィザードの [データ ソースの選択] ページにある **[新しいデータ ソース]** をクリックしてウィザードを起動できます。  
   
 1.  データ ソース ウィザードの [接続の定義方法を選択します] ページで **[新規作成]** をクリックします。  
   
 2.  接続マネージャーで、プロバイダーが **[ネイティブ OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0]** に設定されていることを確認します。  
   
-3.  サーバーの名前を入力します (使用*servername*\\*instancename*名前付きインスタンス)<sup>1</sup>または型**localhost**に同じコンピューターで実行されている Analysis Services サーバーに接続します。  
+3.  サーバーの名前 ( *servername* \\ 名前付きインスタンスの場合は servername*instancename*を使用)<sup>1</sup>を入力するか、 **localhost**と入力して、同じコンピューター上で実行されている Analysis Services サーバーに接続します。  
   
 4.  接続には Windows 認証を使用します。  
   
@@ -73,11 +72,11 @@ ms.locfileid: "66075577"
 7.  [権限借用情報] ページで、 **[サービス アカウントを使用する]** をクリックします。 **[次へ]** をクリックし、ウィザードを終了します。 リンク オブジェクト ウィザードでは、ここで定義した接続が選択されます。  
   
 ## <a name="next-steps"></a>次の手順  
- リンク ディメンションの構造は変更できないので、ディメンション デザイナーの **[ディメンション構造]** タブではリンク ディメンションの構造を表示できません。 リンク ディメンションの処理後に、 **[ブラウザー]** タブで表示できます。また、名前の変更や名前の翻訳の作成を行うことができます。  
+ リンク ディメンションの構造は変更できないので、ディメンション デザイナーの **[ディメンション構造]** タブではリンク ディメンションの構造を表示できません。 リンクディメンションを処理すると、[**ブラウザー** ] タブで表示できます。名前を変更したり、名前の翻訳を作成したりすることもできます。  
   
 ## <a name="see-also"></a>参照  
- [互換性レベルの多次元データベースの設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
- [リンク メジャー グループ](linked-measure-groups.md)   
+ [多次元データベースの互換性レベルを設定する &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+ [リンクメジャーグループ](linked-measure-groups.md)   
  [ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

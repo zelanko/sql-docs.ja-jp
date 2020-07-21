@@ -16,10 +16,10 @@ ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9e86c1964a4ece26115116b8e21c763caaab797b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572226"
 ---
 # <a name="configurationsetting-method---deleteencryptedinformation"></a>ConfigurationSetting メソッド - DeleteEncryptedInformation
@@ -45,7 +45,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドを呼び出すと、次のデータが削除されます。  
   
 -   ユーザー名とパスワードを含む、暗号化されたデータ ソース情報  

@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 02399d6e-ab5e-4f30-8a3e-2bb1e8c135b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 661d7ab65afca258424af300debde328b8f01fee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b740f7be7512f73bfe5c6d570ce3a97464a163fe
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761706"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553017"
 ---
-# <a name="mssqlserver9692"></a>MSSQLSERVER_9692
+# <a name="mssqlserver_9692"></a>MSSQLSERVER_9692
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|9692|  
@@ -36,6 +35,6 @@ ms.locfileid: "62761706"
  指定された TCP ポートが、コンピューター上の別のプログラムで使用されています。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 実行`netstat -aon`プログラムは、ポートを使用して特定します。 そのアプリケーションを無効にするか、Service Broker に対して別のポートを指定します。  
+ を実行し `netstat -aon` て、ポートを使用しているプログラムを特定します。 そのアプリケーションを無効にするか、Service Broker に対して別のポートを指定します。  
   
   

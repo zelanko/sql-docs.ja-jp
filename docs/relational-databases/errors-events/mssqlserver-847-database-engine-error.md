@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3bcd29d124982d5735be8838a0ff054a6a2150bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9cf94538afc1614754d72e6b7c8acafdd0f2dbd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727453"
 ---
-# <a name="mssqlserver847"></a>MSSQLSERVER_847
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_847"></a>MSSQLSERVER_847
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|847|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
-|シンボル名|なし|  
+|シンボル名|該当なし|  
 |メッセージ テキスト|ラッチを待機中にタイムアウトが発生しました。クラス '%ls'、ID %p、型 %d、タスク 0x%p : %d、待機時間 %d、フラグ 0x%I64x、所有しているタスク 0x%p。 待機を続行します。|  
   
 ## <a name="explanation"></a>説明  
-コンピューターが応答を停止 (ハング) するか、タイムアウトなどにより通常の操作が中断されますが、これと同時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってバッファー ラッチ エラーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれています。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってバッファー ラッチ エラーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれるのと同時に、コンピューターが応答を停止するか、タイムアウトなどにより通常の操作が中断される場合があります。  
   
 メッセージの状態フィールドの値 0x04 がオンの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は I/O 操作を待機しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログにメッセージ [MSSQLSERVER_833](~/relational-databases/errors-events/mssqlserver-833-database-engine-error.md) を受信する場合もあります。  
   

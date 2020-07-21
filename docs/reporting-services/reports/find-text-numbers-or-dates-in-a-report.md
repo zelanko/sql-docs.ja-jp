@@ -1,5 +1,6 @@
 ---
 title: レポート内のテキスト、数値、または日付を検索する | Microsoft Docs
+description: Reporting Services を使用して、レポート内のコンテンツ (テキスト、数値、日付など) を検索する方法について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f76bc00eca721a2ca118062d21cafe042e572dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 39dad6e1717e151a7fc90cfac60a6adc1c7dddf2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576393"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510153"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>レポート内のテキスト、数値、または日付を検索する
   レポートのコンテンツは、単語や語句を入力して検索できます (検索用語の最大文字数は 256 文字です)。 検索は、レポート内にある一致する値を検出し、その値の位置にカーソルを移動するナビゲーション技法です。  
@@ -41,6 +42,6 @@ ms.locfileid: "65576393"
 4.  同じ値で引き続き検索を続ける場合は、 **[次へ]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [レポート ビューアー Web パーツを Web ページに追加する &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

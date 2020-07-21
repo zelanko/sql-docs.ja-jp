@@ -5,19 +5,19 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/06/2018
-ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.date: 05/01/2020
+ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262899"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719280"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services のインストールの移行 (ネイティブ モード)
 
 ここでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のネイティブ モード配置でサポートされている次のいずれかのバージョンを新しい SQL Server Reporting Services インスタンスに移行する手順について説明します。  
   
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 * [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
 
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -50,7 +50,7 @@ ms.locfileid: "68262899"
   
 * アップグレードを妨げる問題が発生している。
 
-## <a name="bkmk_nativemode_migration_overview"></a> ネイティブ モードの移行の概要
+## <a name="native-mode-migration-overview"></a><a name="bkmk_nativemode_migration_overview"></a> ネイティブ モードの移行の概要
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の移行プロセスには、手動による手順と自動化された手順があります。 レポート サーバーの移行の一環として、次の作業を実行します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68262899"
   
 * [レポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
   
-## <a name="bkmk_fixed_database_name"></a> 固定されたデータベース名
+## <a name="fixed-database-name"></a><a name="bkmk_fixed_database_name"></a> 固定されたデータベース名
 
  レポート サーバー データベースの名前は変更できません。 データベースの ID は、データベース作成時にレポート サーバーのストアド プロシージャで記録されます。 レポート サーバーのプライマリ データベースまたは一時データベースの名前を変更すると、プロシージャ実行時にエラーが発生し、レポート サーバー インストールが無効になります。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68262899"
   
 * アイテム数が少ない場合は、レポート デザイナー、モデル デザイナー、およびレポート ビルダーから新しいレポート サーバーに、レポートおよび共有データ ソースを再パブリッシュできます。 ロールの割り当て、サブスクリプション、共有スケジュール、レポート スナップショット スケジュール、レポートやその他のアイテムに設定したカスタム プロパティ、モデル アイテム セキュリティ、およびレポート サーバーで設定したプロパティを再作成します。 これらのアクションを行う場合は、レポート履歴やレポートの実行ログ データの損失に備えてください。
   
-## <a name="bkmk_before_you_start"></a> 開始前の準備
+## <a name="before-you-start"></a><a name="bkmk_before_you_start"></a> 開始前の準備
 
  アップグレードではなく移行を行う場合でも、既存のインストールでアップグレード アドバイザーの実行を検討してください。移行に影響する問題を識別できる場合があります。 この手順は、インストールまたは構成していないレポート サーバーを移行する場合に特に役立ちます。 アップグレード アドバイザーを実行すると、新しくインストールする SQL Server でサポートされない可能性があるカスタム設定を確認できます。  
   
@@ -105,19 +105,19 @@ ms.locfileid: "68262899"
   
 * [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] および SQL Server Management Studio の設計が変更され、重複する機能が削除されました。 各ツールは、それぞれ別のタスクをサポートします。
   
-* ISAPI フィルターは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 ISAPI フィルターを使用する場合、移行を実行する前にレポート ソリューションを設計し直す必要があります。  
+* ISAPI フィルターは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 ISAPI フィルターを使用する場合、移行を実行する前にレポート ソリューションを設計し直す必要があります。  
   
-* IP アドレス制限は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 IP アドレス制限を使用する場合、移行を実行する前にレポート ソリューションを設計し直すか、ファイアウォール、ルーター、ネットワーク アドレス変換 (NAT) などのテクノロジを使用して、レポート サーバーへのアクセスが制限されるアドレスを構成する必要があります。  
+* IP アドレス制限は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 IP アドレス制限を使用する場合、移行を実行する前にレポート ソリューションを設計し直すか、ファイアウォール、ルーター、ネットワーク アドレス変換 (NAT) などのテクノロジを使用して、レポート サーバーへのアクセスが制限されるアドレスを構成する必要があります。  
   
-* クライアント SSL (Secure Sockets Layer) 証明書は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 クライアント SSL 証明書を使用する場合、移行を実行する前にレポート ソリューションを設計し直す必要があります。  
+* クライアントのトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) 証明書は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。 クライアント TLS 証明書を使用する場合、移行を実行する前にレポート ソリューションを設計し直す必要があります。  
   
-* Windows 統合認証以外の認証の種類を使用する場合、サポートされている認証の種類で **RSReportServer.config** ファイルの`<AuthenticationTypes>` 要素を更新する必要があります。 サポートされている認証の種類は、NTLM、Kerberos、Negotiate、および Basic です。 匿名認証、.NET パスポート認証、およびダイジェスト認証は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。  
+* Windows 統合認証以外の認証の種類を使用する場合、サポートされている認証の種類で **RSReportServer.config** ファイルの`<AuthenticationTypes>` 要素を更新する必要があります。 サポートされている認証の種類は、NTLM、Kerberos、Negotiate、および Basic です。 匿名認証、.NET パスポート認証、およびダイジェスト認証は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。  
   
 * カスタムのカスケード スタイル シートをレポート環境で使用している場合、そのスタイル シートは移行できません。 移行後に手動で移動します。
   
 SQL Server Reporting Services の変更点の詳細については、アップグレード アドバイザーのマニュアルおよび「[Reporting Services の新機能](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)」をご覧ください。  
 
-## <a name="bkmk_backup"></a> ファイルおよびデータのバックアップ
+## <a name="backup-files-and-data"></a><a name="bkmk_backup"></a> ファイルおよびデータのバックアップ
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新しいインスタンスをインストールする前に、現在インストールされているすべてのファイルを必ずバックアップしてください。  
   
@@ -141,17 +141,19 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
     7. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 用の Machine.config (レポート サーバー操作用に変更している場合)  
 
-## <a name="bkmk_install_ssrs"></a> SQL Server Reporting Services のインストール
+## <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> SQL Server Reporting Services のインストール
 
  新しいレポート サーバー インスタンスを、既定値以外の値で構成できるように、ファイルのみのモードでインストールします。 コマンド ラインからインストールする場合は、**FilesOnly** 引数を使用します。 インストール ウィザードでは、 **[サーバーを構成せずにインストールする]** を選択します。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新しいインスタンスのインストール手順については、次のいずれかのリンクをクリックして参照してください。  
   
-* [SQL Server をインストール ウィザードからインストールする &#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+* [インストール ウィザードから SQL Server Reporting Services 2016 以前のバージョンをインストールする &#40;セットアップ&#41; ](install-reporting-services-native-mode-report-server.md) 
   
-* [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+* [コマンド プロンプトから SQL Server Reporting Services 2016 以前のバージョンをインストールする](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
-## <a name="bkmk_move_database"></a> レポート サーバー データベースの移動
+* [SQL Server Reporting Services 2017 以降をインストールする](install-reporting-services.md)
+
+## <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> レポート サーバー データベースの移動
 
  レポート サーバー データベースには、パブリッシュされたレポート、モデル、共有データ ソース、スケジュール、リソース、サブスクリプション、およびフォルダーが格納されます。 また、システム プロパティとアイテム プロパティ、およびレポート サーバー コンテンツにアクセスするための権限も格納されています。  
   
@@ -191,7 +193,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
  レポート サーバー データベースと一時データベースは相互に依存するため、一緒に移動する必要があることに注意してください。 データベースをコピーしても新しいインストールにセキュリティ設定がすべて移行されるわけではないため、コピーは使用しないでください。 スケジュールされたレポート サーバー操作の SQL Server エージェント ジョブは移動しないでください。 これらのジョブは、レポート サーバーで自動的に再作成されます。  
 
-## <a name="bkmk_move_custom"></a> カスタム アセンブリや拡張機能の移動
+## <a name="move-custom-assemblies-or-extensions"></a><a name="bkmk_move_custom"></a> カスタム アセンブリや拡張機能の移動
 
  インストールにカスタム レポート アイテム、アセンブリ、または拡張機能が含まれている場合、それらのカスタム コンポーネントを再配置する必要があります。 カスタム コンポーネントを使用していない場合は、「 [レポート サーバーの構成](#bkmk_configure_reportserver)」に進んでください。  
   
@@ -203,7 +205,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
     * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のカスタム表示拡張機能は、表示オブジェクト モデル (ROM) を使用して記述し直す必要があります。  
   
-    * HTML 3.2 レンダラーおよび HTML OWC レンダラーは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。  
+    * HTML 3.2 レンダラーおよび HTML OWC レンダラーは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。  
   
     * それ以外のカスタム アセンブリを再コンパイルする必要はありません。  
   
@@ -215,7 +217,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
     1. [カスタム アセンブリの配置](../../reporting-services/custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2. [カスタム レポート アイテムを配置する方法](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2. [方法: カスタム レポート アイテムを配置する](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3. [データ処理拡張機能の配置](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -225,7 +227,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
     6. [セキュリティ拡張機能の実装](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
 
-## <a name="bkmk_configure_reportserver"></a> レポート サーバーの構成
+## <a name="configure-the-report-server"></a><a name="bkmk_configure_reportserver"></a> レポート サーバーの構成
 
  レポート サーバー Web サービスと Web ポータルの URL を構成し、レポート サーバー データベースへの接続を構成します。  
   
@@ -252,26 +254,26 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
 6. ネイティブ モードのレポート サーバーをローカルで管理する場合は、Web ポータルによるローカル管理を許可するようにオペレーティング システムを構成する必要があります。 詳細については、「[ローカル管理用のネイティブ モードのレポート サーバーの構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。  
 
-## <a name="bkmk_copy_custom_config"></a> RSReportServer.config ファイルへのカスタム構成設定のコピー
+## <a name="copy-custom-configuration-settings-to-rsreportserverconfig-file"></a><a name="bkmk_copy_custom_config"></a> RSReportServer.config ファイルへのカスタム構成設定のコピー
 
 以前のインストールで RSReportServer.config ファイルまたは RSWebApplication.config ファイルを変更していた場合、新しい RSReportServer.config ファイルで同じ変更を行います。 以前の構成ファイルで変更された可能性があるいくつかの項目と、SQL Server 2016 で同じ設定を構成するための方法に関する追加情報へのリンクを次に示します。  
   
-|カスタマイズ|[情報]|  
+|カスタマイズ|Information|  
 |-------------------|-----------------|  
 |カスタム設定を使用したレポート サーバーの電子メール配信|[電子メールの設定 * Reporting Services のネイティブ モード](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)|  
 |デバイス情報設定|[RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
-## <a name="bkmk_windowsservice_group"></a> Windows サービス グループとセキュリティ ACL
+## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Windows サービス グループとセキュリティ ACL
 
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] には、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows サービス グループという 1 つのサービス グループがあります。このサービス グループは、SQL Server Reporting Services と共にインストールされたすべてのレジストリ キー、ファイル、およびフォルダーのセキュリティ ACL を作成するために使用されます。 この Windows グループ名は SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> という形式で表示されます。  
 
-## <a name="bkmk_verify"></a> 配置の確認
+## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> 配置の確認
 
 1. ブラウザーを開き、URL アドレスを入力して、レポート サーバーおよび [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の仮想ディレクトリをテストします。 詳細については、「 [Reporting Services のインストール状態の検証](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)」をご覧ください。  
   
 2. レポートをテストし、レポートに意図したデータが含まれることを確認します。 データ ソース情報で、データ ソース接続情報が指定されたままになっているかどうかを確認します。 レポート サーバーでは、レポートを処理および表示する際にレポート オブジェクト モデルが使用されますが、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の構造は新しいレポート定義言語要素には置き換えられません。 新しいバージョンのレポート サーバーで既存のレポートが実行される方法の詳細については、「[レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)」をご覧ください。  
 
-## <a name="bkmk_remove_unused"></a> 使用しないプログラムおよびファイルの削除
+## <a name="remove-unused-programs-and-files"></a><a name="bkmk_remove_unused"></a> 使用しないプログラムおよびファイルの削除
 
 レポート サーバーを新しいインスタンスに正常に移行したら、次の手順に従って、不要になったプログラムとファイルを削除できます。  
   
@@ -291,7 +293,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
   
 2. このコンピューター上で IIS が不要になった場合は削除します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [Reporting Services のインストールを移行する](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
 * [レポート サーバー データベース](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   

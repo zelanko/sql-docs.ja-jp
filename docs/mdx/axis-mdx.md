@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fa65c1531be29273c0a838b978109bbd1c8a2b18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016978"
 ---
 # <a name="axis-mdx"></a>Axis (MDX)
 
 
-  指定した軸の組のセットを返します。  
+  指定された軸上の組のセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,14 +31,14 @@ Axis(Axis_Number)
  *Axis_Number*  
  軸番号を指定する有効な数値式です。  
   
-## <a name="remarks"></a>コメント  
- **軸**関数では、軸の 0 から始まる位置を使用して、軸の組のセットを返します。 たとえば、`Axis(0)`は COLUMNS 軸を返します`Axis(1)`と ROWS 軸を返します。 **軸**フィルター軸に対して関数を使用することはできません。 この関数は、計算されるメンバーが実行されているクエリのコンテキストを認識させるのには使用できます。 たとえば、ROWS 軸上で選択されたメンバーのみの合計を提供する、計算されるメンバーが必要になる場合があります。 また、この関数を使用すると、一方の軸の定義をもう一方の軸の定義に依存させることもできます。 たとえば、COLUMNS 軸の最初の項目の値に応じて ROWS 軸の内容を並べ替えます。  
+## <a name="remarks"></a>Remarks  
+ Axis**関数は、軸**の0から始まる位置を使用して、軸上の組のセットを返します。 たとえば、は`Axis(0)` COLUMNS 軸を返し、 `Axis(1)`は ROWS 軸を返します。 **軸**関数は、フィルター軸では使用できません。 この関数を使用すると、実行されているクエリのコンテキストを計算されるメンバーに認識させることができます。 たとえば、ROWS 軸上で選択されたメンバーのみの合計を提供する、計算されるメンバーが必要になる場合があります。 また、この関数を使用すると、一方の軸の定義をもう一方の軸の定義に依存させることもできます。 たとえば、COLUMNS 軸の最初の項目の値に応じて ROWS 軸の内容を並べ替えます。  
   
 > [!NOTE]  
->  軸には、先行する軸だけを参照できます。 たとえば、 `Axis(0)` COLUMNS 軸が評価された後などを行う必要があります行またはページの軸。  
+>  軸は、前の軸だけを参照できます。 たとえば、行`Axis(0)`またはページの軸のように、列の軸を評価した後にを実行する必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次のクエリの例では、Axis 関数を使用する方法を示します。  
+ 次のクエリの例では、軸関数を使用する方法を示します。  
   
  `WITH MEMBER MEASURES.AXISDEMO AS`  
   
@@ -62,7 +62,7 @@ Axis(Axis_Number)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a47169bc3c628e4bf33fb9ed6a19e612320b585c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105264"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 関数 (レポート ビルダーおよび SSRS)
@@ -40,7 +40,7 @@ First(expression, scope)
 ## <a name="return-type"></a>戻り値の型  
  式の種類によって決まります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  `First` 関数は、指定されたスコープですべての並べ替えおよびフィルター処理が適用された後、データセットの最初の値を返します。  
   
  `First` 関数は、現在 (既定) のスコープ以外のスコープを使用してグループ化フィルター式で使用することはできません。  
@@ -55,7 +55,7 @@ First(expression, scope)
   
 -   入れ子集計の*Scope* には、データセット名は使用できません。  
   
--   *式*する必要がありますが含まれていない`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
+-   *式*には、 `First`、 `Last`、 `Previous`、また`RunningValue`は関数を含めることはできません。  
   
 -   *Expression* には、 *recursive*を指定する入れ子集計を含めることができません。  
   

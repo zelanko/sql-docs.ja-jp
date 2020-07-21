@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df4585dfa4b1e45b2de9d396a59dcbf132b1a505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100249"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Reporting Services スクリプト ファイルを書式設定する
@@ -48,7 +48,7 @@ End Sub
 > [!IMPORTANT]  
 >  ユーザーの資格情報はスクリプト環境によって管理され、RS.exe の使用によりコマンド プロンプト引数をとおして渡されます。 *rs* 変数を使用して Web サービスの認証を設定できますが、スクリプト環境を使用することをお勧めします。 スクリプト ファイル内自体では Web サービスを認証する必要がありません。 スクリプト環境の認証の詳細については、「 [RS.exe ユーティリティ &#40;SSRS&#41;](rs-exe-utility-ssrs.md)」を参照してください。  
   
- スクリプト ファイル内では名前空間を宣言しません。 スクリプト環境では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]名前空間を使用します。**System.Web.Services**、 **System.Web.Services.Protocols**、 **System.Xml**、および**System.IO**します。  
+ スクリプト ファイル内では名前空間を宣言しません。 スクリプト環境では、便利な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 名前空間、**System.Web.Services**、**System.Web.Services.Protocols**、**System.Xml**、**System.IO** が利用できます。  
   
  スクリプトのサンプルについては、「 [SQL Server Reporting Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=177889)」参照してください。  
   

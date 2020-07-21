@@ -1,6 +1,7 @@
 ---
-title: 可用性グループのプロパティの表示 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループのプロパティを表示する
+description: 'SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、または SQL PowerShell のいずれかを使用して Always On 可用性グループのプロパティを表示します。 '
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9fb3f29746df1e88b1d0ae8bdae4e163b654e3df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4590a18f2007fd999629a88dda0f71574775e47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013363"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897450"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>可用性グループのプロパティの表示 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用して、Always On 可用性グループの可用性グループのプロパティを表示する方法について説明します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性グループのプロパティを表示および変更するには**  
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
@@ -31,11 +32,11 @@ ms.locfileid: "68013363"
   
 3.  表示するプロパティを持つ可用性グループを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[可用性グループのプロパティ]** ダイアログ ボックスで、 **[全般]** および **[バックアップの設定]** ページを使用して、選択された可用性グループのプロパティを表示し、必要に応じて変更します。 詳細については、「[可用性グループのプロパティ: 新しい可用性グループ &#40;[全般] ページ&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md)」と「[可用性グループのプロパティ: 新しい可用性グループ &#40;[バックアップの設定] ページ&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)」を参照してください。  
+4.  **[可用性グループのプロパティ]** ダイアログ ボックスで、 **[全般]** および **[バックアップの設定]** ページを使用して、選択された可用性グループのプロパティを表示し、必要に応じて変更します。 詳細については、「[[可用性グループのプロパティ]: [新しい可用性グループ] &#40;[全般] ページ&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md)」、「[[可用性グループのプロパティ]: [新しい可用性グループ] &#40;[バックアップの設定] ページ&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)」を参照してください。  
   
      **[権限]** ページを使用して、可用性グループに関連付けられている現在のログイン、ロール、および明示的な権限を表示できます。 詳細については、「 [[権限] ページまたは [セキュリティ保護可能なリソース] ページ](../../../relational-databases/security/permissions-or-securables-page.md)」を参照してください。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **可用性グループのプロパティおよび状態を表示するには**  
   
  サーバー インスタンスが可用性レプリカをホストしている可用性グループのプロパティおよび状態を確認するには、次のビューを使用します。  
@@ -55,7 +56,7 @@ ms.locfileid: "68013363"
   
  **列名:** group_id、primary_replica、primary_recovery_health、primary_recovery_health_desc、secondary_recovery_health、secondary_recovery_health_desc、synchronization_health、synchronization_health_desc  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **可用性グループに関する情報を表示するには**  
   
 -   [可用性レプリカのプロパティの表示 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
@@ -95,6 +96,6 @@ ms.locfileid: "68013363"
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
+ [AlwaysOn 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  
   
   

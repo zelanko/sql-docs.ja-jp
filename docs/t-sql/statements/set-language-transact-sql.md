@@ -22,12 +22,12 @@ ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac79430a87cccb7b67ce81a3cb6ca9b05d0a04db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 549d1e478c15999dec12c5cd170d94e5d0ec0804
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928930"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634327"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67928930"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET LANGUAGE { [ N ] 'language' | @language_var }   
 ```  
@@ -48,7 +48,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
  **[N]** **'** _language_ **'**  |  **@** _language\_var_  
  [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) に格納されている言語の名前を指定します。 Unicode、または Unicode に変換される DBCS のいずれかを指定できます。 言語を Unicode で指定するには、**N'** _language_ **'** を使用します。 変数として指定する場合、変数のデータ型は **sysname** であることが必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET LANGUAGE は、解析時ではなく実行時に設定されます。  
   
  SET LANGUAGE では、[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) が暗黙的に設定されます。  
@@ -56,10 +56,10 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、既定の言語を `Italian` に設定して月名を表示した後、`us_english` に切り替えて再度月名を表示します。  
   
-```  
+```sql
 DECLARE @Today DATETIME;  
 SET @Today = '12/5/2007';  
   

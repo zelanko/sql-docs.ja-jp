@@ -1,5 +1,5 @@
 ---
-title: Ssma for Access コンソール (AccessToSQL) 作業の開始 |Microsoft Docs
+title: SSMA for Access コンソールでのはじめに (アクセス可能な Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,57 +10,57 @@ ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68222220"
 ---
-# <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Ssma for Access コンソール (AccessToSQL) 作業の開始
-このセクションを起動し、Access のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  
+# <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>SSMA for Access コンソールでのはじめに (アクセス可能な Sql)
+このセクションでは、Access コンソールアプリケーションを起動して開始する手順について説明します。 また、ここでは、一般的な SSMA コンソールの出力ウィンドウで使用される規則についても説明します。  
   
 ## <a name="launching-ssma-console"></a>SSMA コンソールの起動  
-SSMA コンソール アプリケーションを起動するのにには、次の手順を使用します。  
+SSMA コンソールアプリケーションを起動するには、次の手順に従います。  
   
-1.  移動して**開始** をポイント**すべてのプログラム**します。  
+1.  [**スタート**] にアクセスし、[**すべてのプログラム**] をポイントします。  
   
-2.  をクリックして、 **SQL Server Migration Assistant へのアクセス コマンド プロンプトの**ショートカット。  
+2.  [**アクセスの SQL Server Migration Assistant] コマンドプロンプト**ショートカットをクリックします。  
   
-    SSMA コンソールの使用状況 メニューを表示および`(/? Help)`、コンソール アプリケーションを使用するためです。  
+    ここには、コンソールアプリケーションの使用を`(/? Help)`開始するための Ssma コンソールの [使用状況] メニューとが表示されます。  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
-コンソールは、Windows システムに正常に起動した後は、作業を次の手順を使用できます。  
+Windows システムでコンソールが正常に起動したら、次の手順を使用して操作できます。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの詳細については、次を参照してください。[スクリプト ファイルの作成&#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)します。  
+1.  スクリプトファイルを使用して SSMA コンソールを構成します。 このセクションの詳細については、「 [&#41;&#40;スクリプトファイルの作成](../../ssma/access/creating-script-files-accesstosql.md)」を参照してください。  
   
-2.  [変数値ファイルを作成する&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+2.  [&#41;&#40;変数値ファイルの作成](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
-3.  [サーバー接続ファイルを作成する&#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+3.  [サーバー接続ファイルを作成する &#40;、Sql&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-4.  [SSMA コンソールの実行&#40;AccessToSQL&#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md)プロジェクトのニーズに基づく  
+4.  [SSMA コンソールを実行すると](../../ssma/access/executing-the-ssma-console-accesstosql.md)、プロジェクトのニーズに基づいて sql&#41;&#40;  
   
 追加機能:  
   
-1.  [パスワードを指定して](managing-passwords-accesstosql.md)とエクスポート]、[ウィンドウの他のマシンにインポート  
+1.  [パスワードを指定](managing-passwords-accesstosql.md)し、他のウィンドウコンピューターにエクスポート/インポートする  
   
-2.  [レポートの生成](generating-reports-accesstosql.md)詳細な xml を表示するには、評価/conversion とデータの移行のためのレポートを出力します。 更新および同期コマンドの詳細なエラー レポートを生成こともできます。  
+2.  [レポートを生成](generating-reports-accesstosql.md)して、評価/変換とデータ移行のための詳細な xml 出力レポートを表示します。 更新および同期コマンドについては、詳細なエラーレポートを生成することもできます。  
   
-## <a name="ssma-console-output-conventions"></a>SSMA コンソールの出力の規則  
-SSMA スクリプト コマンドとオプションを実行すると、コンソール プログラムは、コンソールのユーザーに、結果とメッセージ (情報、エラーなど) を表示します。 または、必要な場合は、xml 出力ファイルにリダイレクトします。 一意の色では、各種のメッセージが出力に表されます。 たとえば、白のカラーにテキスト メッセージがスクリプト ファイルのコマンドを表します緑のカラーで 1 つとユーザーの入力を求めるプロンプトを表します。  
+## <a name="ssma-console-output-conventions"></a>SSMA コンソールの出力規則  
+SSMA スクリプトコマンドとオプションを実行すると、コンソールプログラムによって結果とメッセージ (情報、エラーなど) がコンソールに表示されるか、必要に応じて xml 出力ファイルにリダイレクトされます。 出力の各種類のメッセージは、一意の色で表されます。 たとえば、ホワイトカラーのテキストメッセージは、スクリプトファイルのコマンドを表します。緑色の色は、ユーザー入力のプロンプトを表します。  
   
 ![SSMA コンソールの出力](../../ssma/access/media/ssmaconsoleoutput.jpg "SSMA コンソールの出力")  
   
-次の表に、コンソール出力の色解釈:  
+次の表に示すコンソール出力の色の解釈:  
   
-|色|説明|  
+|Color|説明|  
 |---------|---------------|  
-|[赤]|実行中に致命的なエラー|  
-|灰色|日付と時刻スタンプをユーザーに対するメッセージ|  
-|White|スクリプト ファイルのコマンド、メッセージの種類|  
+|[赤]|実行中に致命的なエラーが発生した|  
+|グレー|日付と時刻のタイムスタンプ、ユーザーへのメッセージ|  
+|White|スクリプトファイルのコマンド、メッセージの種類|  
 |黄|警告|  
-|[緑]|ユーザー入力を求めるプロンプト|  
-|シアン|開始、終了日と操作の結果|  
+|[緑]|ユーザー入力を要求する|  
+|シアン|操作の開始、終了、および結果|  
   
 ## <a name="see-also"></a>参照  
-[SQL Server Migration Assistant for Access をインストールします。](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
+[アクセスのための SQL Server Migration Assistant のインストール](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: getAutoCommit コミットメソッド (SQLServerConnection) |Microsoft Docs
+title: getAutoCommit メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: af1f67f4-f568-4e58-abcc-5c809a89b547
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cbd009f2052c911c469b842e2cd5353276d5d2c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7d9e5545e0b7ed2953ba89b2351c09ae0fd3700a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954042"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920926"
 ---
 # <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public boolean getAutoCommit()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 自動コミットモードが有効な場合は**true** 、それ以外の場合は**false** 。  
+ 自動コミット モードが有効な場合は **true**、有効でない場合は **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getAutoCommit コミットメソッドは、java. .sql. 接続インターフェイスの getAutoCommit コミットメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getAutoCommit メソッドは、java.sql.Connection インターフェイスの getAutoCommit メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

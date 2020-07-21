@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3785a777571ef7659b1ae21a693e6754659a80e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3efab23eae71b68d1234cfc8db49110fd7a10f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048628"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>行を含めるまたは除外する (Visual Database Tools)
   選択クエリによって返される行の数を制限するには、検索条件またはフィルター条件を作成します。 SQL では、ステートメントの WHERE 句、または集計クエリの作成中に HAVING 句で検索条件が表示されます。  
@@ -70,7 +69,7 @@ region = 'UK' OR region = 'US'
   
 -   [OR が優先する場合の条件を結合する (Visual Database Tools)](combine-conditions-when-or-has-precedence-visual-database-tools.md)  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に、さまざまな演算子と行抽出条件を使用したクエリの例を示します。  
   
 -   **リテラル** 単独のテキスト、数値、日付、または論理値です。 次の例では、リテラルを使って、イギリス内の従業員に関する行をすべて検索します。  
@@ -104,8 +103,8 @@ region = 'UK' OR region = 'US'
     ```  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [検索条件を指定&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools &#40;検索条件を指定し&#41;](specify-search-criteria-visual-database-tools.md)   
  [パラメーターを使用したクエリ (Visual Database Tools)](query-with-parameters-visual-database-tools.md)  
   
   

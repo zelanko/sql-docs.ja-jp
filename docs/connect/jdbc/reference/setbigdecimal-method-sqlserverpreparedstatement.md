@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 860f86db-d840-401a-a5c2-cd22e8cc1e4e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8af0ef075e40444daec1b6e141294d85a74fe3ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a045963964a5725858ff65e17d76f7b6a96d56a3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975242"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924466"
 ---
 # <a name="setbigdecimal-method-sqlserverpreparedstatement"></a>setBigDecimal メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,13 +42,13 @@ public final void setBigDecimal(int n,
   
  *x*  
   
- BigDecimal オブジェクト。  
+ BigDecimal オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setBigDecimal メソッドは、PreparedStatement インターフェイスの setBigDecimal メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setBigDecimal メソッドは、java.sql.PreparedStatement インターフェイスの setBigDecimal メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

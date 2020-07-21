@@ -13,44 +13,44 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6e78ab5988d88447539da7c492f0b02943693844
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933458"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762613"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-データを変更する使用可能なアクセス許可を指定します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)を開いて、[レコード](../../../ado/reference/ado-api/record-object-ado.md)の値を指定するか、[モード](../../../ado/reference/ado-api/mode-property-ado.md)のプロパティ、 **レコード**と[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
+[接続](../../../ado/reference/ado-api/connection-object-ado.md)のデータを変更したり、[レコード](../../../ado/reference/ado-api/record-object-ado.md)を開いたり、**レコード**および[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトの[Mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティの値を指定したりするために使用できるアクセス許可を指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adModeRead**|1|読み取り専用アクセス許可を示します。|  
+|**adModeRead**|1|読み取り専用のアクセス許可を示します。|  
 |**adModeReadWrite**|3|読み取り/書き込みアクセス許可を示します。|  
-|**adModeRecursive**|0x400000|他と組み合わせて使用 *\*ShareDeny\** 値 (**adModeShareDenyNone**、 **adModeShareDenyWrite**、または**adModeShareDenyRead**)、現在のすべてのサブ レコードに共有の制限が反映されるまでに**レコード**します。 これは、影響を与えません場合、**レコード**子はありません。 使用した場合、実行時エラーが生成される**adModeShareDenyNone**のみです。 ただしで使用する**adModeShareDenyNone**他の値と組み合わせたときにします。 たとえば、使用することができます"**adModeRead**または**adModeShareDenyNone**または**adModeRecursive**"。|  
-|**adModeShareDenyNone**|16|すべてのアクセス許可を持つ接続を開く他のユーザーを使用できます。 他のユーザーに対して、読み取りアクセスも書き込みアクセスも拒否できません。|  
-|**adModeShareDenyRead**|4|読み取りアクセス許可で接続を開くには、他のユーザーを禁止します。|  
-|**adModeShareDenyWrite**|8|書き込みアクセス許可を持つ接続を開くには、他のユーザーを禁止します。|  
-|**adModeShareExclusive**|12|接続を開くには、他のユーザーを禁止します。|  
-|**adModeUnknown**|0|既定値です。 アクセス許可がまだ設定されていないか、特定できないことを示します。|  
+|**adModeRecursive**|0x400000|他の共有* \* 拒否 \* *値 (**adModeShareDenyNone**、 **adModeShareDenyWrite**、または**adModeShareDenyRead**) と共に使用して、現在の**レコード**のすべてのサブレコードに共有の制限を伝達します。 **レコード**に子がない場合、影響はありません。 実行時エラーは、 **adModeShareDenyNone**でのみ使用される場合に生成されます。 ただし、他の値と組み合わせた場合は、 **adModeShareDenyNone**と共に使用できます。 たとえば、"**adModeRead** or **adModeShareDenyNone** or **adModeRecursive**" を使用できます。|  
+|**adModeShareDenyNone**|16|他のユーザーが任意のアクセス許可で接続を開くことを許可します。 他のユーザーに対して、読み取りアクセスも書き込みアクセスも拒否できません。|  
+|**adModeShareDenyRead**|4|他のユーザーが読み取りアクセス許可で接続を開けないようにします。|  
+|**adModeShareDenyWrite**|8|書き込みアクセス許可を持つ接続を他のユーザーが開けないようにします。|  
+|**adModeShareExclusive**|12|他のユーザーが接続を開けないようにします。|  
+|**adModeUnknown**|0|既定値。 アクセス許可がまだ設定されていないか、または確認できないことを示します。|  
 |**adModeWrite**|2|書き込み専用のアクセス許可を示します。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
 |定数|  
 |--------------|  
-|AdoEnums.ConnectMode.READ|  
-|AdoEnums.ConnectMode.READWRITE|  
-|(AdoEnums.ConnectMode.RECURSIVE の相当するものはありません)|  
-|AdoEnums.ConnectMode.SHAREDENYNONE|  
-|AdoEnums.ConnectMode.SHAREDENYREAD|  
-|AdoEnums.ConnectMode.SHAREDENYWRITE|  
-|AdoEnums.ConnectMode.SHAREEXCLUSIVE|  
-|AdoEnums.ConnectMode.UNKNOWN|  
-|AdoEnums.ConnectMode.WRITE|  
+|AdoEnums を参照してください。|  
+|AdoEnums (ConnectMode)|  
+|(AdoEnums に相当するものはありません)|  
+|AdoEnums を行います。|  
+|AdoEnums を読み取ります。|  
+|AdoEnums を作成します。|  
+|AdoEnums./EXCLUSIVE|  
+|AdoEnums。不明|  
+|AdoEnums を作成します。|  
   
 ## <a name="applies-to"></a>適用対象  
   

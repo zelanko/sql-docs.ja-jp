@@ -1,5 +1,5 @@
 ---
-title: サポートされている一連のコマンド (Visual FoxPro ODBC ドライバー) |Microsoft Docs
+title: サポートされている SET コマンド (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,34 +16,34 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver [ODBC], SET commands
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54cc247827a176bc9921884ae318120b07108293
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e4139751de61738903e4e152535fb75bf30a97a3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939862"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303133"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>サポートされる SET コマンド (Visual FoxPro ODBC ドライバー)
-アプリケーションは、次の Visual FoxPro を送信できます**設定**データ ソースに対してコマンド。  
+アプリケーションでは、次の Visual FoxPro **SET**コマンドをデータソースに送信できます。  
   
- [セットの ANSI](../../odbc/microsoft/set-ansi-command.md)  
+ [ANSI の設定](../../odbc/microsoft/set-ansi-command.md)  
   
- [一連のブロック サイズ](../../odbc/microsoft/set-blocksize-command.md)  
+ [BLOCKSIZE の設定](../../odbc/microsoft/set-blocksize-command.md)  
   
- [セットの部単位印刷します。](../../odbc/microsoft/set-collate-command.md)  
+ [COLLATE の設定](../../odbc/microsoft/set-collate-command.md)  
   
- [セットの削除](../../odbc/microsoft/set-deleted-command.md)  
+ [削除の設定](../../odbc/microsoft/set-deleted-command.md)  
   
- [正確な設定します。](../../odbc/microsoft/set-exact-command.md)  
+ [正確に設定](../../odbc/microsoft/set-exact-command.md)  
   
- [排他的なセット](../../odbc/microsoft/set-exclusive-command.md)  
+ [排他的に設定](../../odbc/microsoft/set-exclusive-command.md)  
   
- [NULL に設定します。](../../odbc/microsoft/set-null-command.md)  
+ [SET NULL](../../odbc/microsoft/set-null-command.md)  
   
  [パスの設定](../../odbc/microsoft/set-path-command.md)  
   
- [セットの再処理](../../odbc/microsoft/set-reprocess-command.md)  
+ [再処理の設定](../../odbc/microsoft/set-reprocess-command.md)  
   
- [固有設定します。](../../odbc/microsoft/set-unique-command.md)
+ [一意に設定](../../odbc/microsoft/set-unique-command.md)

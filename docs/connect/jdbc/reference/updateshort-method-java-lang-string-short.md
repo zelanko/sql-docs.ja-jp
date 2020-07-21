@@ -1,5 +1,5 @@
 ---
-title: updateShort メソッド (java. System.string, short) |Microsoft Docs
+title: updateShort メソッド (java.lang.String, short) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1e596e99-11ce-4a57-b247-e40078922036
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d084c129552b0979f773adc582d0b25ea6e3f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e516f930d5482b84ffff4827b0ae93225fc8c5a3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213646"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919645"
 ---
 # <a name="updateshort-method-javalangstring-short"></a>updateShort (java.lang.String, short) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public void updateShort(java.lang.String columnName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateShort メソッドは、java.sql.ResultSet インターフェイスの updateShort メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

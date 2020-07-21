@@ -11,17 +11,17 @@ helpviewer_keywords:
 - API reference [ODBC]
 - ODBC [ODBC], API reference
 ms.assetid: 1ba0f6cc-dfa7-4fe8-8bc2-f862b386156d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1fab61517e226a0f78089d909188a275a61d0928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb7296920987683c97cdd37bb9cb6742ffec9361
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036354"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81290532"
 ---
 # <a name="odbc-reference"></a>ODBC リファレンス
-次のトピックには、構文とすべての ODBC 関数のセマンティック情報が含まれます。  
+次のトピックには、すべての ODBC 関数の構文とセマンティック情報が含まれています。  
   
 -   [関数の概要](../../../odbc/reference/syntax/function-summary.md)  
   
@@ -29,8 +29,8 @@ ms.locfileid: "68036354"
   
 -   [セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)  
   
--   [Installer DLL API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
+-   [インストーラー DLL API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)  
   
--   [翻訳の DLL 関数の参照](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
+-   [Translation DLL 関数リファレンス](../../../odbc/reference/syntax/translation-dll-api-reference.md)  
   
 -   [ODBC サービス プロバイダー インターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

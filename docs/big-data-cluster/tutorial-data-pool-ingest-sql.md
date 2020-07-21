@@ -1,38 +1,38 @@
 ---
 title: SQL Server のデータ プールにデータを取り込む
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) のデータ プールにデータを取り込む方法について説明します。
+description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスターのデータ プールにデータを取り込む方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
-ms.translationtype: MT
+ms.openlocfilehash: e7daf0dab9725320cf674db04cc2e306726810f9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670523"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606464"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル: Transact-SQL を使用して SQL Server のデータ プールにデータを取り込む
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、Transact-SQL を使用して SQL Server 2019 ビッグ データ クラスター (プレビュー) の[データ プール](concept-data-pool.md)にデータを取り込む方法について説明します。 SQL Server ビッグ データ クラスターを使用すると、さまざまなソースからのデータを取り込んで、データ プールのインスタンス間で分散させることができます。
+このチュートリアルでは、Transact-SQL を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の[データ プール](concept-data-pool.md)にデータを取り込む方法について説明します。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を使用すると、さまざまなソースからデータを取り込み、それをデータ プールのインスタンス間で分散することができます。
 
-このチュートリアルでは、次の方法を学習します。
+このチュートリアルでは、以下の内容を学習します。
 
 > [!div class="checklist"]
-> * データ プールに外部テーブルを作成する。
+> * データ プールに外部テーブルを作成する
 > * サンプルの Web クリックストリーム データをデータ プール テーブルに挿入する。
 > * データ プール テーブルのデータをローカル テーブルと結合する。
 
 > [!TIP]
 > 必要に応じて、このチュートリアルのコマンド用のスクリプトをダウンロードして実行できます。 手順については、GitHub の[データ プールのサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)を参照してください。
 
-## <a id="prereqs"></a> 前提条件
+## <a name="prerequisites"></a><a id="prereqs"></a> 前提条件
 
 - [ビッグ データ ツール](deploy-big-data-tools.md)
    - **kubectl**
@@ -44,7 +44,7 @@ ms.locfileid: "68670523"
 
 次の手順では、**web_clickstream_clicks_data_pool** という名前のデータ プールに外部テーブルを作成します。 このテーブルは、ビッグ データ クラスターにデータを取り込むための場所として使用できます。
 
-1. Azure Data Studio で、ビッグ データ クラスターの SQL Server マスター インスタンスに接続します。 詳細については、[SQL Server マスター インスタンスへの接続](connect-to-big-data-cluster.md#master)に関する記事を参照してください。
+1. Azure Data Studio で、ビッグ データ クラスターの SQL Server マスター インスタンスに接続します。 詳細については、「[SQL Server マスター インスタンスに接続する](connect-to-big-data-cluster.md#master)」を参照してください。
 
 1. **[サーバー]** ウィンドウで接続をダブルクリックして、SQL Server マスター インスタンスのサーバー ダッシュボードを表示します。 **[新しいクエリ]** を選択します。
 
@@ -77,8 +77,8 @@ ms.locfileid: "68670523"
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. CTP 3.1 では、データ プールの作成は非同期ですが、完了しているかどうかを判断する方法がありません。 データ プールが作成されたことを確認できるまで 2 分待ってから続行してください。
+
+データ プールの外部テーブルの作成は、ブロッキング操作です。 指定したテーブルがすべてのバックエンド データ プール ノードで作成されると、制御が戻ります。 作成操作中にエラーが発生した場合、エラー メッセージが呼び出し元に返されます。
 
 ## <a name="load-data"></a>データの読み込み
 
@@ -103,7 +103,7 @@ ms.locfileid: "68670523"
    SELECT TOP 10 * FROM [dbo].[web_clickstream_clicks_data_pool]  
    ```
 
-## <a name="query-the-data"></a>データのクエリ
+## <a name="query-the-data"></a>データにクエリを実行する
 
 データ プールのクエリから格納された結果を、**Sales** テーブルのローカル データと結合します。
 

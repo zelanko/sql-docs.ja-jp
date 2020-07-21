@@ -8,21 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 45096a10f377b88e36f0d84e77963a7321cbef8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 974cafa87b1b8fc7472e214dd84fb24f158f45bf
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110366"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053404"
 ---
-# <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level 
+# <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   新しいカスタマイズされたログ記録レベルを作成します。 カスタマイズされたログ記録レベルの詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
   
@@ -76,7 +75,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  *level_id* は **bigint** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  Transact-SQL で *profile_value* または *events_value* 引数の複数の値を結合するには、この例に従います。 OnError (8) と DiagnosticEx (15) イベントをキャプチャする場合、*event_value* を計算する式は `2^8 + 2^15 = 33024` です。  
   
 ## <a name="return-codes"></a>リターン コード  

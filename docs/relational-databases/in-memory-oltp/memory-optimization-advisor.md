@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化アドバイザー | Microsoft Docs
+description: SQL Server Management Studio のメモリ最適化アドバイザーを使用すると、ディスク ベーステーブルをメモリ最適化テーブルに移行するのに役立ちます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730861"
 ---
 # <a name="memory-optimization-advisor"></a>メモリ最適化アドバイザー
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   トランザクション パフォーマンス分析レポート (「 [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)」を参照) では、インメモリ OLTP を使用するように移植した場合に効果が得られる、データベース内のテーブルが通知されます。 インメモリ OLTP を使用するように移植するテーブルを特定すると、SQL Server Management Studio でメモリ最適化アドバイザーを使用して、ディスク ベースのテーブルをメモリ最適化テーブルに移行できます。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68050193"
   
  対処可能な警告には、左側の列に黄色い三角形が表示されます。 対処可能な警告がある場合、移行を終了し、警告を解決してから、処理を再開してください。 警告を解決しないと、移行されるテーブルが原因でエラーが発生する可能性があります。  
   
- このような警告の HTML レポートを生成するには、 **[レポートの生成]** をクリックしてください。 **[次へ]** をクリックします。  
+ このような警告の HTML レポートを生成するには、 **[レポートの生成]** をクリックしてください。 **[次へ]** をクリックして続行します。  
   
 ### <a name="review-optimization-options"></a>[最適化オプションの確認]  
  次の画面では、インメモリ OLTP への移行に関するオプションを変更できます。  

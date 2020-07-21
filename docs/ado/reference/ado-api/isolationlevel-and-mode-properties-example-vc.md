@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel および Mode プロパティの例 (vc++) |Microsoft Docs
+title: IsolationLevel と Mode プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1f9cb93ff669b5636497c10972baf64373e7f06e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932318"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758668"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel および Mode プロパティの例 (vc++)
-この例では、[モード](../../../ado/reference/ado-api/mode-property-ado.md)、排他的な接続を開き、プロパティ、および[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)を他のトランザクションの分離を実行したトランザクションを開きます。  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel と Mode プロパティの例 (VC + +)
+この例では、 [Mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティを使用して排他接続を開き、 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)プロパティを使用して、他のトランザクションと分離して実行されるトランザクションを開きます。  
   
 ## <a name="example"></a>例  
   
@@ -223,26 +223,26 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **接続モードは排他的**  
-**トランザクション分離**  
-**データベースのビジー状態 Executive のガイド - ビジネス**  
-**コンピューターと料理。その貸借対照表のビジネス**  
-**コンピューターの負荷に対処することができます!-ビジネス**  
-**コンピューター - ビジネスについての直接の説明**  
-**シリコン バレー Gastronomic 扱います - mod_cook**  
-**Gourmet 電子レンジ - mod_cook**  
-**コンピューターの料理 - 決心についていないユーザーの心理状態**  
-**ですがユーザー フレンドリですか。-popular_comp**  
-**シリコン バレー - popular_comp のシークレット**  
-**Net エチケット - popular_comp**  
-**コンピューターの Phobic と非他者と個人:動作のバリエーションの self_help**  
-**怒りの敵ですか。-self_help**  
-**-Self_help を与えることがなく有効期間**  
-**長期にわたるデータ Deprivation:次の 4 つのケース スタディ - self_help**  
-**感情的なセキュリティ:新しいアルゴリズムの self_help**  
-**タマネギ、Leeks とガーリック トースト:地中海 - trad_cook の料理のシークレット**  
-**バッキンガム Palace 台所 - trad_cook で 50 年**  
-**寿司、すべてのユーザーですか?-trad_cook**   
-## <a name="see-also"></a>関連項目  
+ **接続モードは排他的です**  
+**トランザクションが分離されている**  
+**忙しい役員のデータベースガイド-ビジネス**  
+**料理のコンピューター: Surreptitious 貸借シート-ビジネス**  
+**コンピューターのストレスを防ぐことができます。-business**  
+**コンピューターについての簡単な説明-ビジネス**  
+**シリコンバレー Gastronomic は-mod_cook を扱います**  
+**グルメの電子 mod_cook**  
+**コンピューターの心理 UNDECIDED**  
+**しかし、ユーザーにとってわかりやすいでしょうか。-popular_comp**  
+**シリコンバレーのシークレット-popular_comp**  
+**ネットエチケット-popular_comp**  
+**コンピューター Phobic と Phobic 以外のユーザー: 動作のバリエーション-self_help**  
+**怒りは敵ですか。-self_help**  
+**心配のない生活 self_help**  
+**データの長時間分割: 4 つのケーススタディ-self_help**  
+**感情的なセキュリティ: 新しいアルゴリズム-self_help**  
+**タマネギ、Leeks、ニンニク: trad_cook 地中海の料理シークレット**  
+**Buckingham Palace Kitchens-trad_cook の50年**  
+**すし、だれでも-trad_cook**   
+## <a name="see-also"></a>参照  
  [IsolationLevel プロパティ](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

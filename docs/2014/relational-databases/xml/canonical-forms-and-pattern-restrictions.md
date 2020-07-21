@@ -10,15 +10,14 @@ helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eec8bda347b52835e84f4c9a505d9ad82cdf1a40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 569e8c4a01ed1eb9ae26ea9e2f6d471b9aad9fe0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059578"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>正規の形式とパターン制限
   XSD パターン ファセットを使用すると、単純型の字句空間を制限できます。 複数の字句表現が可能であるような型にパターン制限を適用すると、一部の値が原因で検証時に予想外の動作が発生することがあります。  
@@ -31,7 +30,7 @@ ms.locfileid: "68211557"
   
  浮動小数点値の不正確なシリアル化にも同様の問題があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用されている浮動小数点のシリアル化アルゴリズムにより、近い値が同じ正規表現になることがあり得ます。 ただし、浮動小数点値がシリアル化され、再挿入される際に、その値がわずかに変化することがあります。 その結果、再挿入時にその型の **enumeration**、 **minInclusive**、 **minExclusive**、 **maxInclusive**、または **maxExclusive**の各ファセットに違反する値になることがまれにあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれを回避するために、シリアル化や再挿入を行えない `xs:float` または `xs:double` から派生した値を拒否します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー上の XML スキーマ コレクションの要件と制限](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

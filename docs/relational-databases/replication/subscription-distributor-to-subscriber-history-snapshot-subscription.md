@@ -1,6 +1,7 @@
 ---
-title: サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (スナップショット サブスクリプション) | Microsoft Docs
-ms.custom: ''
+title: ディストリビューターからサブスクライバーまでの履歴 (スナップショット)
+description: SQL Server Management Studio (SSMS) 内にあるスナップショット パブリケーションのレプリケーション モニターの [ディストリビューターからサブスクライバーまでの履歴] タブについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,28 +13,28 @@ f1_keywords:
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3fdf09887875407cc98127c3afdaa96d97402fcb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5faa60549b73044a9e36315198af945167da589d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716668"
 ---
-# <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴]\(スナップショット サブスクリプション)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>サブスクリプション、[ディストリビューターからサブスクライバーまでの履歴] (スナップショット サブスクリプション)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[ディストリビューターからサブスクライバーまでの履歴]** タブでは、ステータス、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、ディストリビューション エージェントの詳細情報が表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  表示するディストリビューション エージェントのセッションを **[表示]** メニューで選択した後、 **[ディストリビューション エージェントのセッション]** というラベルのグリッドで特定のセッションを選択します。 このセッションの詳細情報は、 **[選択されたセッションのアクション]** というラベルのグリッドに表示されます。 選択したセッションがエラーで終了した場合は、 **[選択されたセッションのエラーの詳細またはメッセージ]** というラベルのテキスト領域も表示されます。  
   
- **[表示]**  
+ **表示**  
  表示するディストリビューション エージェントのセッションを選択します。  
   
- **ステータス**  
+ **状態**  
  ディストリビューション エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   エラー  
   
 -   [完了]  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b490b3aae8fce4ef7b4ae912275e8a338f44833
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90b8f5c2886da151ae15e9dc1dbcaace9d5093a6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898061"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896375"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   既存のエンドポイントを削除します。  
   
@@ -46,13 +46,13 @@ DROP ENDPOINT endPointName
  *endPointName*  
  削除するエンドポイント名です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ENDPOINT DDL ステートメントは、ユーザー トランザクション内部では実行できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  固定サーバー ロール **sysadmin** のメンバーであるか、そのエンドポイントの所有者であるか、またはエンドポイントに対する CONTROL 権限が許可されている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、以前に作成したエンドポイント `sql_endpoint` を削除します。  
   
 ```  

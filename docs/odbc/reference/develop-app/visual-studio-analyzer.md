@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], about Visual Studio Analyzer
 - Visual Studio Analyzer [ODBC]
 ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 94f7e944c53c2b4930a3c77b2866cea7b892a6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15ce9a18f37b8a1e47dcb7c7557a4d8af2318e93
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078987"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306700"
 ---
 # <a name="visual-studio-analyzer"></a>Visual Studio Analyzer
 > [!IMPORTANT]  
->  Visual Studio Analyzer のサポートは、以降 (Visual Studio Analyzer のみ含まれていた以前のバージョンの Visual Studio でします。) Windows 8 では削除されました。 トラブルシューティング メカニズムの代わりに、BID のトレースを使用します。  
+>  Visual Studio Analyzer のサポートは、Windows 8 以降で削除されました (Visual Studio Analyzer 以前のバージョンの Visual Studio にのみ含まれていました)。 別のトラブルシューティングメカニズムについては、BID トレースを使用します。  
   
- Microsoft® Visual Studio™ アナライザーでは、ODBC アプリケーションの概要が表示されます。 開発者は評価、分析、および構造体、パフォーマンス、およびコンポーネントやコードの観点からではなく、アプリケーションの観点からの相互作用をデバッグします。 Visual Studio Analyzer によって収集された情報は、ある種のアプリケーションの 2 つのコンポーネント間の相互作用を表すイベントの形式です。 イベントは、関数呼び出しを接続、データベース クエリ、トランザクションなどの関数から返すで構成できます。  
+ Microsoft® Visual Studio™ Analyzer では、ODBC アプリケーションの概要が表示されます。 開発者は、コンポーネントやコードの観点からではなく、アプリケーションの観点から、構造、パフォーマンス、および相互作用の評価、分析、およびデバッグを行うことができます。 Visual Studio Analyzer によって収集される情報は、アプリケーションの2つのコンポーネント間の何らかの種類の相互作用を表すイベントの形式になっています。 イベントは、関数呼び出しと、接続、データベースクエリ、トランザクションなどの関数からの戻り値で構成できます。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [Visual Studio Analyzer の有効化](../../../odbc/reference/develop-app/enabling-visual-studio-analyzer.md)

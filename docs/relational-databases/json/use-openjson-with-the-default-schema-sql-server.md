@@ -1,9 +1,7 @@
 ---
-title: 既定のスキーマを使用する OPENJSON の使用 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/02/2016
+title: 既定のスキーマを使用する OPENJSON の使用
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbf15d6ce6e0993d570f882bde8fb303a66ccaec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 595323d28f50100936447a9077af361017cca922
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074222"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008700"
 ---
-# <a name="use-openjson-with-the-default-schema-sql-server"></a>既定のスキーマを使用する OPENJSON の使用 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="use-openjson-with-the-default-schema"></a>既定のスキーマを使用する OPENJSON の使用 
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   オブジェクトのプロパティごと、または配列内の要素ごとに 1 つの行が含まれたテーブルを返すには、既定のスキーマを使用して **OPENJSON** を使用します。  
   
@@ -36,10 +36,10 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **結果**  
   
-|Key|[値]|  
+|Key|値|  
 |---------|-----------|  
-|NAME|John|  
-|姓|Doe|  
+|name|John|  
+|surname|Doe|  
 |age|45|  
   
 ## <a name="example---return-each-element-of-an-array"></a>例 - 配列の各要素を返す  
@@ -52,13 +52,13 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **結果**  
   
-|Key|[値]|  
+|Key|値|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
 |2|de-AT|  
 |3|es-AR|  
-|4|sr という|  
+|4|sr-Cyrl|  
   
 ## <a name="example---convert-json-to-a-temporary-table"></a>例 - JSON を一時テーブルに変換する  
  次のクエリのすべてのプロパティを返します、 **情報** オブジェクトです。  
@@ -83,13 +83,13 @@ SELECT *
 FROM OPENJSON(@json,N'lax $.info')
 ```  
   
- **[結果]**  
+ **結果**  
   
-|Key|[値]|型|  
+|Key|値|Type|  
 |---------|-----------|----------|  
-|型|1|0|  
+|type|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
-|タグ|[「スポーツ」、「Water ポーロ」]|4|  
+|tags|[「スポーツ」、「Water ポーロ」]|4|  
   
 ## <a name="example---combine-relational-data-and-json-data"></a>例 - リレーショナル データと JSON データを結合する  
  次の例では、JSON 形式で SalesOrderReasons の配列を含む SalesReason テキスト列が、SalesOrderHeader テーブルにあります。 SalesOrderReasons オブジェクトには、"製造元" と "品質" のようなプロパティが含まれます。 この例では、販売理由が別個の子テーブルに含まれているかのように販売理由の JSON 配列を展開して、すべての販売注文行を関連する販売理由に結合するレポートを作成します。  

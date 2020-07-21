@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264782"
 ---
 # <a name="custom-report-items"></a>カスタム レポート アイテム
@@ -44,13 +44,13 @@ ms.locfileid: "63264782"
  [カスタム レポート アイテムのデザイン時コンポーネントの作成](creating-a-custom-report-item-design-time-component.md)  
  カスタム レポート アイテムのデザイン時コンポーネントの作成方法について説明します。  
   
- [方法:カスタム レポート アイテムを配置する](how-to-deploy-a-custom-report-item.md)  
+ [方法: カスタム レポート アイテムを配置する](how-to-deploy-a-custom-report-item.md)  
  カスタム レポート アイテムの配置方法について説明します。  
   
  [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)  
  `Microsoft.ReportDesigner` 名前空間のカスタム レポート アイテム インフラストラクチャのクラスと、マネージド ラッパー クラスについて説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テクニカル リファレンス (SSRS)](../technical-reference-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 準加法の動作の定義 |Microsoft Docs
+title: 準加法の動作を定義する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd433f05f17a046ed49f49ea9fbdd9f36b90a3e2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075538"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546934"
 ---
 # <a name="define-semiadditive-behavior"></a>準加法の動作の定義
   すべてのディメンションで一様に集計しない準加法メジャーは、多くのビジネス シナリオでよく見られます。 この問題は、一定期間の残高のスナップショットに基づくすべてのキューブで明らかです。 これらのスナップショットは、証券、口座残高、予算、人事、保険契約と保険金請求、およびその他多くのビジネス ドメインを扱うアプリケーションで見られます。  
@@ -50,9 +49,9 @@ ms.locfileid: "66075538"
   
 -   なし  
   
- このオプションでは、メジャーの標準の集計関数によって変更されません。 `Sum`、 `Min`、 `Max`、 `Count`、または`Distinct``Count`します。  
+ このオプションでは、標準の集計関数である、 `Sum` 、 `Min` `Max` 、 `Count` 、または `Distinct``Count` のメジャーは変更されません。  
   
- **ウィザードを検出しましたが、' アカウント"勘定科目ディメンションが準加法メンバーを含みます。サーバーは、各アカウントの種類に指定された準加法動作に従って、このディメンションのメンバーで集計されます。**  
+ **準加法メンバーを含む ' Account ' 勘定科目ディメンションが検出されました。サーバーは、勘定科目の種類ごとに指定された準加法の動作に従って、このディメンションのメンバーを集計します。**  
  Account 型のディメンションにより次元設定されたメジャー グループのすべてのメジャーが By Account 集計関数に設定され、このディメンションのメンバーは、勘定科目の種類ごとに指定されている準加法動作に従って集計されます。  
   
 > [!NOTE]  

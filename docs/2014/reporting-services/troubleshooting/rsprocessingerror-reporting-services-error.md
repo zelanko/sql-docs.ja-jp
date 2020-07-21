@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099142"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services エラー
@@ -53,9 +53,9 @@ ms.locfileid: "66099142"
   
 -   正しく展開されていないカスタム アセンブリまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アセンブリを読み込めなかった。  
   
--   Null 許容のプロパティを設定するパラメーター`False`パラメーターに null 値が検出されました。  
+-   Null 許容プロパティがに`False`設定されているパラメーターは、パラメーターに null 値を検出しました。  
   
--   データ領域の Hidden プロパティの式には、エラーが含まれています。オブジェクト参照がオブジェクト インスタンスに設定されていません。"  
+-   データ領域の Hidden プロパティの式に次のエラーが含まれています。オブジェクト参照がオブジェクト インスタンスに設定されていません。  
   
 -   無効な関数呼び出しまたは構文エラーが式に含まれていた。  
   
@@ -81,10 +81,10 @@ ms.locfileid: "66099142"
  式内のスペルを確認します。 組み込みのグローバル、パラメーター、およびフィールド名では、大文字と小文字が区別されます。 エラーが発生した式で、レポートに名前が実際に存在し、そのスペルが正しいことを確認します。 詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
 ### <a name="parameter-properties-and-null"></a>パラメーターのプロパティと NULL  
- 複数値パラメーターには NULL を設定できません。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ 複数値パラメーターには NULL を設定できません。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)にあります。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>サブレポートを含むメイン レポートを処理できなかった  
- サブレポートを含むレポートは、同一バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサで処理する必要があります。 レポートを最新バージョンのレポート定義スキーマにアップグレードする場合、メイン レポートとサブレポートは同時に更新されることもされないこともあります。 バージョンに、レポートとそのサブレポートの間に互換性がない場合は、次のメッセージが表示されます。「サブレポートを処理できませんでした。」  
+ サブレポートを含むレポートは、同一バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサで処理する必要があります。 レポートを最新バージョンのレポート定義スキーマにアップグレードする場合、メイン レポートとサブレポートは同時に更新されることもされないこともあります。 レポートとそのサブレポートの間でバージョンが一致しないと、"サブレポートを処理できませんでした" というメッセージが表示されます。  
   
  すべてのレポートを同一バージョンのレポート プロセッサで処理できるように、メイン レポートまたはサブレポートのいずれかを変更する必要があります。 レポートをアップグレードできない場合の原因については、「 [レポートのアップグレード](../install-windows/upgrade-reports.md)」を参照してください。  
   
@@ -117,20 +117,20 @@ ms.locfileid: "66099142"
   
  累計を計算する集計関数 (`Previous`、`RunningValue`、または `RowNumber`) の場合、行グループ名または列グループ名をスコープのパラメーターに指定できますが、両方を指定することはできません。 これは、次のエラー メッセージに当てはまります。  
   
--   `Previous`、`RunningValue`または`RowNumber`集計関数のデータ セルで使用される、 *\<レポート アイテムの種類 >* ' *\<レポート項目名 >* ' グループ化スコープを参照してください列と行の両方で、 *\<レポート アイテムの種類 >* します。 すべてのスコープ パラメーター `Previous`、`RunningValue`と`RowNumber`集計関数内で、 *\<レポート アイテムの種類 >* 行グループまたはデータ列のグループが、両方を参照できます。  
+-   `Previous`、 `RunningValue`また`RowNumber`はレポートアイテムの* \<種類*のデータセルで使用される集計関数>'*\<レポートアイテム名>*' では、 * \<レポートアイテムの種類>* の列と行の両方でグループ化スコープが参照されます。 レポートアイテムの`Previous` `RunningValue` `RowNumber`種類>内のすべての集計関数のスコープパラメーターでは、行グループまたはデータ列グループを参照できますが、両方を参照することはできません。 * \<*  
   
  詳細については、「[合計、集計、および組み込みコレクションの式のスコープについて (レポート ビルダー 3.0 および SSRS)](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」および「[式での組み込みコレクションの使用 (レポート ビルダー 3.0 および SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>最上位レベル テキスト ボックスの既定のデータセット スコープ  
- レポートに複数のデータセットがある場合、レポート デザイン画面に追加したテキスト ボックスの既定のスコープは使用できません。 スコープとしてデータセットの名前を含む式と、集計関数を使用してください。 たとえば、 `=First(Fields!FieldName.Value, "DataSet2")`のようにします。  
+ レポートに複数のデータセットがある場合、レポート デザイン画面に追加したテキスト ボックスの既定のスコープは使用できません。 スコープとしてデータセットの名前を含む式と、集計関数を使用してください。 たとえば、「 `=First(Fields!FieldName.Value, "DataSet2")` 」のように入力します。  
   
-## <a name="see-also"></a>関連項目  
- [式 (レポート ビルダーおよび SSRS)](../report-design/expressions-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](../report-data/report-datasets-ssrs.md)   
  [一般的に使用されるフィルター &#40;レポート ビルダーおよび SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   

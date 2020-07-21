@@ -1,5 +1,5 @@
 ---
-title: ビジネス ロジック ハンドラーのデバッグ |Microsoft Docs
+title: ビジネスロジックハンドラーをデバッグする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99f07b66fd937fda395af4d72025c0d82c8bec46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721502"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010866"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>ビジネス ロジック ハンドラーのデバッグ (レプリケーション プログラミング)
   マージ サブスクリプションの同期時にカスタム ビジネス ロジックを呼び出すには、ビジネス ロジック ハンドラーを使用します。 詳細については、「[Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md)」(マージ同期中のビジネス ロジックの実行) をご覧ください。  
@@ -33,9 +32,9 @@ ms.locfileid: "62721502"
   
 1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、「[パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)」と「[パブリケーションの作成](publish/create-a-publication.md)」をご参照ください。  
   
-2.  ビジネス ロジック ハンドラーを作成して登録します。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
+2.  ビジネス ロジック ハンドラーを作成して登録します。 詳細については、「[マージアーティクルのビジネスロジックハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
   
-3.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio で、マージ エージェントをプログラムで同期的に起動するレプリケーション管理オブジェクト (RMO) プロジェクトを作成します。 詳細については、「 [プル サブスクリプションの同期](synchronize-a-pull-subscription.md)」をご覧ください。  
+3.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio で、マージ エージェントをプログラムで同期的に起動するレプリケーション管理オブジェクト (RMO) プロジェクトを作成します。 詳細については、「 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)」をご覧ください。  
   
 4.  ビジネス ロジック ハンドラー コードのデバッグ対象のメソッドまたはクラス コンストラクター内にブレークポイントを設定します。 ビジネス ロジック ハンドラーで実装可能なメソッドに詳細については、 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> メソッドのトピックを参照してください。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62721502"
   
 1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのプル サブスクリプションを作成します。 パブリケーションでは、Web 同期または [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーをサポートする必要があります。  
   
-2.  ビジネス ロジック ハンドラーを作成して登録します。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
+2.  ビジネス ロジック ハンドラーを作成して登録します。 詳細については、「[マージアーティクルのビジネスロジックハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
   
 3.  ビジネス ロジック ハンドラー コードのデバッグ対象のメソッドまたはクラス コンストラクター内にブレークポイントを設定します。 ビジネス ロジック ハンドラーで実装可能なメソッドに詳細については、 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> メソッドのトピックを参照してください。  
   

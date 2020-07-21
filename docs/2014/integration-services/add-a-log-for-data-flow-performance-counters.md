@@ -1,5 +1,5 @@
 ---
-title: ログ データ フロー パフォーマンス カウンターを追加する |Microsoft Docs
+title: データフローパフォーマンスカウンターのログの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - counters [Integration Services]
 - logs [Integration Services], data flow counters
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0076d61c4ad8abe3ef8ada818ac00a95b7bbe7c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062055"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439749"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>データ フロー パフォーマンス カウンターのログを追加する
   この手順では、データ フロー エンジンによって提供されるパフォーマンス カウンターのログを追加する方法について説明します。  
@@ -35,7 +34,7 @@ ms.locfileid: "66062055"
   
 3.  **[パフォーマンス]** ダイアログ ボックスで、 **[パフォーマンス ログと警告]** を展開して、 **[カウンター ログ]** を右クリックし、 **[新しいログの設定]** をクリックします。 ログの名前を入力します。 たとえば、「 **MyLog**」のように入力します。  
   
-4.  [**OK**] をクリックします。  
+4.  **[OK]** をクリックします。  
   
 5.  **[MyLog]** ダイアログ ボックスで、 **[カウンターの追加]** をクリックします。  
   
@@ -57,13 +56,13 @@ ms.locfileid: "66062055"
   
 12. カウンターを追加するには、手順 5. ～ 10. を繰り返します。  
   
-13. [**OK**] をクリックします。  
+13. **[OK]** をクリックします。  
   
     > [!NOTE]  
     >  [パフォーマンス ログと警告] サービスは、Administrators グループのメンバーであるローカル アカウントまたはドメイン アカウントを使用して起動する必要があります。  
   
-## <a name="see-also"></a>参照  
- [パフォーマンス カウンター](performance/performance-counters.md)   
+## <a name="see-also"></a>関連項目  
+ [パフォーマンスカウンター](performance/performance-counters.md)   
  [[ログ イベント] ウィンドウでログ エントリを表示する](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   
   

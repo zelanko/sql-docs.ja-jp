@@ -1,23 +1,24 @@
 ---
-title: 方法:SQL Server の単体テストの実行を構成する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server の単体テストの実行を構成する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da9a53fa2811589b58ec3001ae5b92d46b4c1aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911845"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241567"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>方法:SQL Server の単体テストの実行を構成する
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>SQL Server の単体テストの実行を構成する方法
+
 テスト プロジェクトを構成することによって、SQL Server 単体テストの実行方法を制御するいくつかの設定を指定できます。 これらの構成設定は、テスト プロジェクトの app.config ファイルに格納されます。 このファイルを直接編集する場合は、新しい値が [テストの構成] ダイアログ ボックスに表示されます。  
   
 ソリューションには複数のテスト プロジェクトを含めることができます。 各テスト プロジェクトには 1 つの app.config ファイル (つまり、1 セットの構成設定) が含まれます。 その結果、ソリューションには、実行の構成が異なる複数セットの単体テスト (テスト プロジェクトごとに 1 セット) を含めることができます。  
@@ -31,7 +32,7 @@ ms.locfileid: "67911845"
     > [!NOTE]  
     > テストは、ソリューション フォルダーではなく、ローカル ハード ディスク上の別のフォルダーで実行されます。 テスト配置の特性を構成できますが、通常、単体テスト用に構成する必要はありません。 テスト配置について詳しくは、「[テストの実行](https://msdn.microsoft.com/library/dd286680(VS.100).aspx)」をご覧ください。  
   
-## <a name="SpecifyConnectionStrings"></a>接続文字列の指定  
+## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>接続文字列の指定  
   
 #### <a name="to-specify-database-connection-strings"></a>データベース接続文字列を指定するには  
   
@@ -53,7 +54,7 @@ ms.locfileid: "67911845"
   
 4.  テスト プロジェクトをリビルドして、構成の変更を適用します。  
   
-## <a name="DeployingDBSchema"></a>データベース スキーマの配置  
+## <a name="deploy-a-database-schema"></a><a name="DeployingDBSchema"></a>データベース スキーマの配置  
   
 #### <a name="to-deploy-to-a-database-the-schema-of-a-database-project"></a>データベース プロジェクトのスキーマをデータベースに配置するには  
   

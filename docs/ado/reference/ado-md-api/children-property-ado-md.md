@@ -14,26 +14,26 @@ f1_keywords:
 helpviewer_keywords:
 - Children property [ADO MD]
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cbec9733044127d23e75364697a41ccd7e8910e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7e52923ae428ab7b0e633049594781bd4456f9df
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911520"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764393"
 ---
 # <a name="children-property-ado-md"></a>Children プロパティ (ADO MD)
-返します、[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)対象のコレクション、現在[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)階層の親であります。  
+現在の[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)が階層内の親である[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)コレクションを返します。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**メンバー**コレクションは読み取り専用であるとします。  
+ **メンバー**コレクションを返し、読み取り専用です。  
   
-## <a name="remarks"></a>コメント  
- **子**プロパティが含まれています、**メンバー**対象のコレクション、現在**メンバー**階層の親であります。 リーフ レベル**メンバー**オブジェクト メンバーが存在しない子、**メンバー**コレクション。 このプロパティでのみサポート**メンバー**に属するオブジェクトを[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクト。 このプロパティはから参照したときにエラーが発生した**メンバー**に属するオブジェクトを[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクト。  
+## <a name="remarks"></a>Remarks  
+ **Children**プロパティには、現在の**メンバー**が階層構造の親である**Members**コレクションが含まれています。 リーフレベルの**メンバー**オブジェクトには、 **members**コレクションに子メンバーがありません。 このプロパティは、 [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクトに属している**メンバー**オブジェクトでのみサポートされます。 このプロパティが、 [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクトに属する**メンバー**オブジェクトから参照されている場合に、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ChildCount プロパティ (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)

@@ -1,5 +1,5 @@
 ---
-title: Recordset (ADO - WFC 構文) |Microsoft Docs
+title: レコードセット (ADO-WFC 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,17 +11,17 @@ apitype: COM
 helpviewer_keywords:
 - Recordset collection [ADO], ADO/WFX syntax
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58e0cde8798f73257a54be5cc95f64474334a153
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab3bdd34945eb83b375b4c77968dc9408ed0f448
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931386"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761880"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - WFC 構文)
-## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
   
 ### <a name="constructors"></a>コンストラクター  
   
@@ -81,7 +81,7 @@ public void updateBatch()
 public void updateBatch(int affectRecords)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getAbsolutePage()  
@@ -135,7 +135,7 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="events"></a>イベント  
- ADO と WFC イベントの詳細については、次を参照してください。[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)します。  
+ ADO/WFC イベントの詳細については、「[言語別の Ado イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  

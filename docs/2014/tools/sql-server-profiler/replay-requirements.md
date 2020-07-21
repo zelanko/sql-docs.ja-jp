@@ -1,5 +1,5 @@
 ---
-title: 再生の要件 |Microsoft Docs
+title: 再生要件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b9da4b68bba6358ff473846fb710f8fa6454e5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65546f6820765286b558d2043e0155a79a07eb58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62688596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057748"
 ---
 # <a name="replay-requirements"></a>再生を実行するための必要条件
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または Distributed Replay Utility を使用してトレース データを再生するには、特定のイベント クラスと列のセットがトレースにキャプチャされている必要があります。 **TSQL_Replay** トレース テンプレートを使用して、後で再生に使用するトレースを構成した場合、これらの設定は既定で有効になります。 このトピックでは、これらの設定と、再生を実行するためのその他の必要条件について説明します。  
@@ -70,13 +69,13 @@ ms.locfileid: "62688596"
   
 -   **TextData**  
   
--   **Application Name**  
+-   **アプリケーション名**  
   
 -   **LoginName**  
   
 -   **DatabaseName**  
   
--   **データベース ID**  
+-   **[データベース ID]**  
   
 -   **ClientProcessID**  
   

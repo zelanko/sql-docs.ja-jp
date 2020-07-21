@@ -1,5 +1,5 @@
 ---
-title: オブジェクト (ADOX) の表示 |Microsoft Docs
+title: View オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,36 +13,36 @@ f1_keywords:
 helpviewer_keywords:
 - View object [ADOX]
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b468ccc3edc4cc5453b4f08371cd2b4b962f0c72
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964846"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753191"
 ---
 # <a name="view-object-adox"></a>View オブジェクト (ADOX)
-フィルター選択された一連のレコードまたは仮想テーブルを表します。 ADO と組み合わせて使用すると[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト、**ビュー**オブジェクトは、追加、削除、またはビューの変更のために使用できます。  
+フィルター処理されたレコードセットまたは仮想テーブルを表します。 ADO[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと組み合わせて使用すると、ビュー**オブジェクトを使用して**、ビューの追加、削除、または変更を行うことができます。  
   
-## <a name="remarks"></a>コメント  
- ビューは、他のデータベース テーブルまたはビューから作成された、仮想テーブルです。 **ビュー**オブジェクトでは、知っているか、プロバイダーの"CREATE VIEW"の構文を使用することがなく、ビューを作成できます。  
+## <a name="remarks"></a>解説  
+ ビューは、他のデータベーステーブルまたはビューから作成された仮想テーブルです。 **ビュー**オブジェクトを使用すると、プロバイダーの "create View" 構文を知らない場合や使用しなくても、ビューを作成できます。  
   
- プロパティを持つ、**ビュー**オブジェクトのことができます。  
+ **View**オブジェクトのプロパティを使用すると、次のことができます。  
   
--   ビューを識別、[名前](../../../ado/reference/adox-api/name-property-adox.md)プロパティ。  
+-   [Name](../../../ado/reference/adox-api/name-property-adox.md)プロパティを使用してビューを識別します。  
   
--   ADO の指定**コマンド**追加、削除、またはビューを変更するために使用できるオブジェクト、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロパティ。  
+-   [コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロパティを使用してビューを追加、削除、または変更するために使用できる ADO**コマンド**オブジェクトを指定します。  
   
--   日付情報を返す、 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)と[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティ。  
+-   [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)プロパティと[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティを使用して日付情報を返します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [View オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
- [ビューとフィールド コレクションの例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
+## <a name="see-also"></a>参照  
+ [Views および Fields コレクションの例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [Views Append メソッドの例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Views コレクションおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Views Collection、CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Views Delete メソッドの例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

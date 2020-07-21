@@ -1,5 +1,5 @@
 ---
-title: executeUpdate メソッド () |Microsoft Docs
+title: executeUpdate メソッド () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ca534c6b-ef4d-4ae8-8cc3-514728623cff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eae73888b97b8511a23ba3387e2674bff40643c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1e51079b3f8b242614737409e3f46c29523c4715
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954582"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913509"
 ---
 # <a name="executeupdate-method-"></a>executeUpdate () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public int executeUpdate()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この executeUpdate メソッドは、java.sql.PreparedStatement インターフェイスの executeUpdate メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

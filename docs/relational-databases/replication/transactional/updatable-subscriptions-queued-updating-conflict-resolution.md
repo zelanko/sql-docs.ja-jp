@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b2bc4cf6348180e52dea28698e90cafda4f32f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9364de40aed4218d1abf73dac1502413c3509edf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895490"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883212"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>更新可能なサブスクリプション - キュー更新の競合解決
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   キュー更新サブスクリプションによって複数の場所にある同じデータを変更できるため、パブリッシャーでデータを同期するときに競合が起こる可能性があります。 レプリケーションによって、パブリッシャーとデータの変更を同期するときに競合を検出し、パブリケーションを作成したときに選択した解決方法でこれらの競合を解決します。 発生する可能性がある競合は、次のとおりです。  
   
 -   更新および挿入競合。 この競合は、同一のデータが 2 つの異なる場所で変更された場合に発生します。 一方の変更が競合の優先データとなり、他方は非優先データとなります。  
@@ -55,13 +55,13 @@ ms.locfileid: "67895490"
   
  **キュー更新の競合解決方法を設定するには**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[キュー更新の競合解決オプションの設定 (SQL Server Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [キュー更新の競合解決オプションの設定 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   レプリケーション Transact-SQL プログラミング: [トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   レプリケーション Transact-SQL プログラミング : [トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **データの競合を表示するには**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>パブリッシャー優先  
  競合解決方法がパブリッシャー優先の場合は、トランザクションの一貫性はパブリッシャーのデータに基づいて維持されます。 競合を起こしたトランザクションは、それを開始したサブスクライバーにロールバックされます。  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2017 の新機能 | Microsoft Docs
+description: Linux と Linux ベースの Docker コンテナー、および Windows に SQL Server の機能を提供する、SQL Server 2017 の新機能について説明します。
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76e5accd2894e05fd9a9b346ad9b4825ccd81bc7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 55ed24599e3bed15a0478ce12ac316edb623f0cf
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893025"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662885"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ SQL Server 2017 は、SQL Server をプラットフォームとする方向に�
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 データベース エンジン
 
 SQL Server 2017 には多くの新しいデータベース エンジン機能、機能強化、パフォーマンス向上が含まれています。 
-- CTP 2.0 で説明されている `clr strict security` 機能の回避策として、**CLR アセンブリ**をホワイトリストに追加できるようになりました。 信頼できるアセンブリ (RC1) のホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
+- CTP 2.0 で説明されている `clr strict security` 機能の回避策として、**CLR アセンブリ**を信頼できるアセンブリの一覧に追加できるようになりました。 信頼できるアセンブリ (RC1) の一覧をサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
 - **再開可能なオンライン インデックス リビルド**は、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、一時停止した場所からオンライン インデックス リビルド操作を再開します。または、一時停止し、オンライン インデックス リビルド操作を後から再開します。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。 (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION の **IDENTITY_CACHE** オプションを使用すると、サーバーが予期せず再起動したときやセカンダリ サーバーにフェールオーバーしたときに、ID 列の値のギャップを回避できます。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。 (CTP 2.0)
 - 新世代のクエリ処理では、最適化戦略がアプリケーション ワークロードの実行時条件に適用される点が改善されています。 **アダプティブ クエリ処理**機能ファミリのこの最初のバージョンでは、3 つの新しい改善点があります。**バッチ モード適応型結合**、**バッチ モード メモリ許可フィードバック**、そして複数ステートメントのテーブル値関数の**インターリーブ実行**です。  「[SQL データベースでのインテリジェントなクエリ処理](../relational-databases/performance/intelligent-query-processing.md)」を参照してください。
@@ -55,8 +56,6 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 - **DATABASE SCOPED CREDENTIAL** は新しいセキュリティ保護可能クラスで、CONTROL、ALTER、REFERENCES、TAKE OWNERSHIP、VIEW DEFINITION の各アクセス許可をサポートします。 ADMINISTER DATABASE BULK OPERATIONS が sys.fn_builtin_permissions から参照できるようになりました。 (CTP 1.0)
 - データベースの **COMPATIBILITY_LEVEL 140** が追加されました。 (CTP 1.0)  
 
-詳細については、「[What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)」 (SQL Server 2017 データベース エンジンの新機能) を参照してください。
-
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - SSIS の新しい **Scale Out** 機能として、次のような新しい機能と変更された機能があります。 詳細については、「[SQL Server 2017 の Integration Services の新機能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)」を参照してください。 (RC1)
     -   スケール アウト マスターで高可用性を実現できるようになりました。
@@ -65,7 +64,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
     -   SSIS カタログに、SSIS パッケージを実行する既定のモードを指定するための新しいグローバル プロパティが追加されました。
 - 新しい **SSIS の Scale Out** 機能で、実行をトリガーするときに **Use32BitRuntime** パラメーターを使用できるようになりました。 (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) で **Linux 上の SQL Server** がサポートされ、新しいパッケージでは、コマンド ラインから Linux で SSIS パッケージを実行できます。 詳細については、[SSIS の Linux サポートをお知らせするブログの投稿](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)を参照してください。 (CTP 2.1)
-- 新しい **SSIS の Scale Out**  機能を使用すると、複数のコンピューターでの SSIS の実行が大幅に簡単になります。 「[Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md)」を参照してください。(CTP 1.0)
+- 新しい **SSIS の Scale Out** 機能を使用すると、複数のコンピューターでの SSIS の実行が大幅に簡単になります。 「[Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md)」を参照してください。(CTP 1.0)
 - OData ソースと OData 接続マネージャーで、Microsoft Dynamics AX Online と Microsoft Dynamics CRM Online の OData フィードに接続できるようになりました。 (CTP 1.0)
 
 詳細については、「[SQL Server 2017 の Integration Services の新機能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)」を参照してください。
@@ -77,7 +76,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 - モデル アクセス許可を割り当てる**グループの管理**ページの、**エンティティ**フォルダーを展開するときのパフォーマンスが改善されました。 **グループの管理**ページは、Web アプリケーションの**セキュリティ**セクション内にあります。 パフォーマンスの改善の詳細については、こちら ([https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)) を参照してください。 権限の割り当ての詳細については、「[Assign Model Object Permissions (Master Data Services) (モデル オブジェクト権限を割り当てる (マスター データ サービス))](../master-data-services/assign-model-object-permissions-master-data-services.md)」を参照してください。
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
-SQL Server Analysis Services 2017 には、表形式モデルの多くの機能強化が導入されています。 たとえば、次のオブジェクトにアクセスできます。
+SQL Server Analysis Services 2017 には、表形式モデルの多くの機能強化が導入されています。 これには以下が含まれます。
 - Analysis Services の既定のインストール オプションとしての表形式モード。 (CTP 2.0)
 - 表形式モデルのメタデータをセキュリティで保護する、オブジェクト レベルのセキュリティ。 (CTP 2.0)
 - 日付フィールドに基づくリレーションシップを簡単に作成する、日付リレーションシップ。 (CTP 2.0)
@@ -90,7 +89,7 @@ SQL Server Analysis Services 2017 には、表形式モデルの多くの機能�
 - 集計情報の**詳細を表示**する、新しい**詳細行**エンドユーザー アクション。 詳細行の式を作成するための [SELECTCOLUMNS](/dax/selectcolumns-function-dax) および **DETAILROWS** 関数。 (CTP 1.1)
 - 複数の値を指定するための DAX **IN** 演算子。 (CTP 1.1)
 
-詳細については、「[What's new in SQL Server Analysis Services 2017](https://docs.microsoft.com/analysis-services/what-s-new-in-sql-server-analysis-services-2017)」 (SQL Server Analysis Services 2017 の新機能) を参照してください。
+詳細については、「[What's new in SQL Server Analysis Services (SQL Server Analysis Services の新機能)](/analysis-services/what-s-new-in-analysis-services)」をご覧ください。
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 SQL Server Reporting Services は、SQL Server セットアップでインストールできなくなりました。 Microsoft ダウンロード センターに移動し、[Microsoft SQL Server 2017 Reporting Services をダウンロード](https://www.microsoft.com/download/details.aspx?id=55252)してください。 
@@ -115,9 +114,9 @@ SQL Server での開発者は、オープン ソース エコシステムで入�
 - **パフォーマンスの向上** - 列ストア データのバッチ モード実行をサポートするために、ストアド プロシージャ`sp_execute_external_script`が最適化されました。
 
 
-詳細については、「[What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)」 (SQL Server Machine Learning Services の新機能) を参照してください。
+詳細については、「[What's new in SQL Server Machine Learning Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)」 (SQL Server Machine Learning Services の新機能) を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [SQL Server 2017 リリース ノート](sql-server-2017-release-notes.md)を参照してください。
 - 「[Linux 上の SQL Server 2017 の新機能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)」を参照してください。
 - [SQL Server 2016 の新機能](what-s-new-in-sql-server-2016.md)を確認してください。

@@ -13,20 +13,20 @@ ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 35cd84e1ffbdc3251565d99d05b2a9aef7ab66f5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: eeddff43fee1401feacd9110c39f68b35282cd5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721206"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>サブスクリプションの新規作成ウィザード (UI リファレンス)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 ここでは、サブスクリプションの新規作成ウィザードの次のページについて紹介します。  
   
 -   [<AgentName> エージェントの場所](../../relational-databases/replication/agentname-agent-location.md)  
   
--   [サブスクライバー](../../relational-databases/replication/subscribers.md)  
+-   [[パブリッシャーのプロパティ]](../../relational-databases/replication/subscribers.md)  
   
 -   [SQL Server 以外のサブスクライバーの追加](../../relational-databases/replication/add-non-sql-server-subscriber.md)  
   

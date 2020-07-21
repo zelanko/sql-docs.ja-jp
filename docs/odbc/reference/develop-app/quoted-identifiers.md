@@ -1,5 +1,5 @@
 ---
-title: 識別子を引用符で囲まれた |Microsoft Docs
+title: 引用符で囲まれた識別子 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], quoted identifiers
 - quoted identifiers [ODBC]
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bc4d8378c243edf9f01cca58ff8be11d675711a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0c03fa8bbc059566288997b29c899056f26de252
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079000"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282005"
 ---
 # <a name="quoted-identifiers"></a>引用符で囲まれた識別子
-SQL ステートメント内で特殊文字または一致するキーワードを含む識別子を囲む必要が*識別子引用符文字*; このような文字で囲まれた識別子と呼ばれる*の識別子を引用符で囲まれた*(とも呼ばれます*区切られた識別子*sql-92 で)。 次に、Accounts Payable 識別子が引用符で囲まれたなど**選択**ステートメント。  
+SQL ステートメントでは、特殊文字または一致するキーワードを含む識別子は、*識別子引用符*で囲む必要があります。このような文字で囲まれた識別子は、*引用符で囲ま*れた識別子 (SQL-92 では区切られた*識別子*とも呼ばれます) と呼ばれます。 たとえば、次の**SELECT**ステートメントでは、アカウントの買掛金識別子は引用符で囲まれています。  
   
 ```  
 SELECT * FROM "Accounts Payable"  
 ```  
   
- 識別子を囲むため理由は、ステートメントを解析します。 たとえば、Accounts Payable がない引用符で囲まれた、前のステートメントで場合、パーサーはアカウントと Payable、2 つのテーブルがあったとし、コンマで区切られたことが構文エラーを返します。 引用符文字の識別子はドライバー固有であり SQL_IDENTIFIER_QUOTE_CHAR オプションで取得**SQLGetInfo**します。 SQL_SPECIAL_CHARACTERS と SQL_KEYWORDS オプションでキーワードと特殊文字の一覧が取得されます**SQLGetInfo**します。  
+ 識別子を引用符で囲む理由は、ステートメントを解析することです。 たとえば、前のステートメントで勘定科目が引用符で囲まれていない場合、パーサーは2つのテーブル (Accounts および買掛金) があると想定し、コンマで区切られていないという構文エラーを返します。 識別子の引用符文字はドライバー固有であり、 **SQLGetInfo**の SQL_IDENTIFIER_QUOTE_CHAR オプションを使用して取得されます。 の特殊文字とキーワードの一覧は、 **SQLGetInfo**の SQL_SPECIAL_CHARACTERS オプションと SQL_KEYWORDS オプションを使用して取得されます。  
   
- 安全に相互運用可能なアプリケーションは多くの場合、Oracle では、ROWID 列などの擬似列を除くすべての識別子を引用します。 **SQLSpecialColumns**擬似列の一覧を返します。 また、オブジェクト名に特殊文字を表示する場所にアプリケーション固有の制限がある場合はこれらの位置で特殊文字を使用しないように相互運用可能なアプリケーションのことをお勧めします。
+ 相互運用可能なアプリケーションでは、多くの場合、Oracle の ROWID 列など、擬似列以外のすべての識別子を引用符で囲む必要があります。 **Sqlの列**には、擬似列の一覧が返されます。 また、オブジェクト名に特殊文字を含めることができるアプリケーション固有の制限がある場合は、それらの位置で特殊文字を使用しない、相互運用可能なアプリケーションに適しています。

@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4bad95475a55257a9f65bfc84b673b58c7e8ed47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765702"
 ---
-# <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行せず、 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はステートメントの実行方法に関する詳細情報を返します。  
   
@@ -42,12 +42,12 @@ ms.locfileid: "67941662"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET SHOWPLAN_TEXT の設定は、解析時ではなく実行時に設定されます。  
   
  SET SHOWPLAN_TEXT が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されずに、各ステートメントの実行に関する情報が返されます。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに発行されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントに関する実行プラン情報です。 たとえば、SET SHOWPLAN_TEXT が ON のときに CREATE TABLE ステートメントが実行され、その後この同じテーブルを参照する SELECT ステートメントが発行されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定したテーブルが存在しないというエラー メッセージが返されます。 その後、このテーブルに対して行われる参照は失敗します。 SET SHOWPLAN_TEXT が OFF の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は実行プラン情報に関するレポートを生成しないでステートメントを実行します。  
@@ -58,10 +58,11 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT では情報が行セットとして返されます。これは階層構造になっており、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プロセッサで各ステートメントが実行されるときのステップを表しています。 出力結果には、ステートメントごとに、ステートメントのテキストを示す 1 行と、実行ステップの詳細を示す複数行が含まれます。 次の表に、出力に含まれる列を示します。  
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
-|**StmtText**|PLAN_ROW 型でない行の場合、この列には [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキストが含まれます。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理操作の詳細については、「[SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)」の「**Argument**」列を参照してください。|  
-  
+|**StmtText**|PLAN_ROW 型でない行の場合、この列には [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキストが含まれます。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 場合によっては、この列の後に説明が含まれます。説明が後に続くかどうかは、物理操作によって決まります。 物理操作の詳細については、「**SET SHOWPLAN_ALL &#40;Transact-SQL&#41;** 」の「[Argument](../../t-sql/statements/set-showplan-all-transact-sql.md)」列を参照してください。|  
+|||
+
  プラン表示の出力に含まれる物理操作と論理操作の詳細については、「[プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -75,12 +76,12 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  DDL、USE "*データベース名*"、SET、DECLARE、動的 SQL など、その他すべてのステートメントでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限だけが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でステートメントを処理するときのインデックスの使用方法を示します。  
   
  インデックスを使用するクエリは次のとおりです。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  
@@ -109,7 +110,7 @@ StmtText
   
  インデックスを使用しないクエリは次のとおりです。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  

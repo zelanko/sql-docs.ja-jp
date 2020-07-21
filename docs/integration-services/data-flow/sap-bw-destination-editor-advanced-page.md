@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.advanced.f1
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f3cbcc62403230787c6f57c2e8fa8a22ecbaa654
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d4b315a5cde27bb8dd3bce3d3642f17bbd13867
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034265"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292094"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>[SAP BW 変換先エディター] ([詳細設定] ページ)
 

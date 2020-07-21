@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: setFetchMode |Microsoft Docs'
+title: PDOStatement::setFetchMode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f5a9065123bbacc828c7949aabcb44de6136f62c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 75082b50eeb6298173d41e70ed3020247896c164
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935980"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921146"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ $*mode*: [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) に渡�
 ## <a name="return-value"></a>戻り値  
 成功した場合は true、それ以外の場合は false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  

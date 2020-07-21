@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_MIN_VALID_VERSION (TRANSACT-SQL) |Microsoft Docs
+title: CHANGE_TRACKING_MIN_VALID_VERSION (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -19,17 +19,17 @@ ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23e91a60672e400d658403533433a97694407a39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734410"
 ---
-# <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-sql)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  変更の追跡を使用する場合の指定したテーブルから情報を取得するに使用するために有効なクライアントの最小バージョンを返します、 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)関数。  
+  [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)関数を使用するときに、指定したテーブルから変更追跡情報を取得するために有効な、クライアントの最小バージョンを返します。  
     
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,21 +42,21 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 ## <a name="arguments"></a>引数  
  *table_object_id*  
- テーブルのオブジェクト ID です。 *table_object_id*は、 **int**します。  
+ テーブルのオブジェクト ID を示します。 *table_object_id*は**int**です。  
   
 ## <a name="return-type"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>コメント  
- この関数の値の検証を使用して、 *last_sync_version* CHANGETABLE のパラメーター。 場合*last_sync_version*が CHANGETABLE を後の呼び出しから返される結果を有効にすることはできない、この関数によって報告される値より小さい。  
+## <a name="remarks"></a>Remarks  
+ この関数を使用して、CHANGETABLE の*last_sync_version*パラメーターの値を検証します。 *Last_sync_version*がこの関数によって報告された値より小さい場合は、CHANGETABLE への後の呼び出しで返される結果が有効でない可能性があります。  
   
- CHANGE_TRACKING_MIN_VALID_VERSION は、戻り値を決定するのに、次の情報を使用します。  
+ CHANGE_TRACKING_MIN_VALID_VERSION では、次の情報を使用して戻り値を決定します。  
   
--   テーブルが変更の追跡の有効な場合。  
+-   テーブルで変更の追跡が有効にされたとき。  
   
 -   バックグラウンド クリーンアップ タスクを実行して、データベースに対して指定した保持期間より古い変更追跡情報を削除した日時。  
   
--   場合は、テーブルが切り捨てられました。 これにより、テーブルに関連付けられている変更追跡情報がすべて削除されます。  
+-   テーブルが切り捨てられた場合はです。 これにより、テーブルに関連付けられている変更追跡情報がすべて削除されます。  
   
  次のいずれかの条件に該当する場合、この関数は NULL を返します。  
   
@@ -67,10 +67,10 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
 -   オブジェクト ID で指定されたテーブルに対する十分な権限がない。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、指定されたバージョンが有効なバージョンであるかどうかを判断します。 例では、有効な最小のバージョンの取得、`dbo.Employees`テーブル、および次の値を比較し、`@last_sync_version`変数。 `@last_sync_version` の値が `@min_valid_version` の値より小さい場合、変更された行の一覧は有効ではありません。  
+ 次の例では、指定されたバージョンが有効なバージョンであるかどうかを判断します。 この例では、テーブルの有効な最小バージョンを取得 `dbo.Employees` し、これを変数の値と比較し `@last_sync_version` ます。 `@last_sync_version` の値が `@min_valid_version` の値より小さい場合、変更された行の一覧は有効ではありません。  
   
 > [!NOTE]  
->  通常、テーブルまたはデータの同期に使用された最後のバージョン番号を格納するその他の場所から値を入手します。  
+>  通常は、データの同期に使用された最新のバージョン番号が格納されているテーブルまたはその他の場所から値を取得します。  
   
 ```  
 -- The tracked change is tagged with the specified context   
@@ -87,7 +87,7 @@ ELSE
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [変更追跡関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [Change Tracking 関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
   

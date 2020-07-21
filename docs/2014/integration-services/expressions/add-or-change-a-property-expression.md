@@ -10,15 +10,14 @@ helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0a688a1c244e54bb66668aaad97ec64ca81036b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62899020"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437329"
 ---
 # <a name="add-or-change-a-property-expression"></a>プロパティ式を追加または変更する
   パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、シーケンス コンテナー、イベント ハンドラー、パッケージおよびプロジェクト レベルの接続マネージャー、およびログ プロバイダーに対してプロパティ式を作成できます。  
@@ -43,7 +42,7 @@ ms.locfileid: "62899020"
   
     -   **[式]** 列で直接プロパティ式を入力するか変更し、 **[OK]** をクリックします。  
   
-         \- または -  
+         または  
   
     -   プロパティの式の行の省略記号 [...] をクリックし、 **[式ビルダー]** ダイアログ ボックスを開きます。  
   

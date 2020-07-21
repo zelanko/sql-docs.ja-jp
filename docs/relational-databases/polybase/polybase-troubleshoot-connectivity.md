@@ -1,39 +1,42 @@
 ---
 title: PolyBase Kerberos の接続性のトラブルシューティング | Microsoft Docs
+description: Kerberos でセキュリティ保護された Hadoop クラスターを使用した PolyBase の認証問題のトラブルシューティングを行うには、PolyBase に組み込まれている対話型診断を使用できます。
 author: alazad-msft
 ms.author: alazad
 ms.reviewer: mikeray
 ms.technology: polybase
 ms.devlang: ''
 ms.topic: conceptual
-ms.date: 04/23/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3ac5c5fa9a19b88ef25702ae4f6c3359fd302892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062008"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196184"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Kerberos によるセキュリティで保護された Hadoop クラスターに対して PolyBase を使用する場合、PolyBase に組み込まれている対話型診断ツールを使用すると、認証の問題のトラブルシューティングに役立ちます。 
+Kerberos でセキュリティが強化された Hadoop クラスターに対して PolyBase を使用する場合、PolyBase に組み込まれている対話型診断を使用すると、認証の問題のトラブルシューティングに役立ちます。 
 
-この記事は、このツールを使用したこのような問題のデバッグ方法を示すガイドとして利用できます。
+この記事は、これらの組み込みの診断を活用してそのような問題をデバッグする方法を示すガイドとして利用できます。
 
-## <a name="prerequisites"></a>Prerequisites
+> [!TIP]
+> Kerberos でセキュリティが強化された HDFS クラスター内に外部テーブルを作成しているときに HDFS Kerberos エラーが発生した場合は、このガイドの手順に従うのでなく、[ HDFS Kerberos Tester ](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/hdfs-kerberos-tester) を実行して PolyBase に対する HDFS Kerberos 接続のトラブルシューティングを行うこともできます。
+> このツールを使用することで、SQL Server 以外の問題の解決が容易になるため、HDFS Kerberos 設定に関する問題の解決 (つまり、ユーザー名/パスワードの不適切な構成やクラスター Kerberos 設定の不適切な構成の特定) に集中することができます。      
+> このツールは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から完全に独立しています。 Jupyter Notebook として使用でき、Azure Data Studio が必要になります。
 
-1. PolyBase がインストールされた SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 またはそれ以降
+## <a name="prerequisites"></a>前提条件
+
+1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6/[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以上 (PolyBase がインストールされていること)
 1. Kerberos (Active Directory または MIT) によるセキュリティで保護された Hadoop クラスター (Cloudera または Hortonworks)
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-## <a name="introduction"></a>概要
-
+## <a name="introduction"></a>はじめに
 まず Kerberos プロトコルの概要を理解することが役に立ちます。 次の 3 つのアクターが関係します。
 
 1. Kerberos クライアント (SQL Server)
@@ -44,12 +47,12 @@ Hadoop によるセキュリティで保護された各リソースは、Hadoop 
 
 PolyBase では、Kerberos によるセキュリティで保護されたリソースに対する認証が要求されたときに、次の 4 ラウンドトリップ ハンドシェイクが行われます。
 
-1. SQL Server が KDC に接続し、ユーザー用に TGT を取得します。 KDC の秘密キーを使用して TGT が暗号化されます。
-1. SQL Server は、Hadoop によるセキュリティで保護されたリソース (HDFS) を呼び出し、どの SPN の ST が必要なのかを判別します。
-1. SQL Server は、KDC に戻って TGT を渡し、セキュリティで保護されたその特定のリソースにアクセスするための ST を要求します。 ST は、セキュリティで保護されたサービスの秘密キーを使用して暗号化されます。
-1. SQL Server は ST を Hadoop に転送し、そのサービスに対してセッションが作成されるように認証を取得します。
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が KDC に接続され、ユーザー用に TGT が取得されます。 KDC の秘密キーを使用して TGT が暗号化されます。
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Hadoop でセキュリティが強化されたリソース (HDFS) を呼び出し、どの SPN に対して ST が必要なのかを判別します。
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、KDC に戻って TGT を渡し、セキュリティで保護されたその特定のリソースにアクセスするための ST を要求します。 ST は、セキュリティで保護されたサービスの秘密キーを使用して暗号化されます。
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ST を Hadoop に転送し、そのサービスに対してセッションが作成されるように認証を取得します。
 
-![](./media/polybase-sqlserver.png)
+![Polybase SQL Server](./media/polybase-sqlserver.png)
 
 認証の問題は、上記の 4 つのステップのうちの 1 つ以上に分類されます。 迅速なデバッグを支援するため、PolyBase には、障害発生時点の特定に役立つ統合された診断ツールが導入されています。
 
@@ -68,7 +71,7 @@ PolyBase には、Hadoop クラスターのプロパティを含む次の構成 
 
 `\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-たとえば、SQL Server 2016 の既定では `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf` です。
+たとえば、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の既定値は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf` です。
 
 **core-site.xml** を更新し、次の 3 つのプロパティを追加します。 環境に応じて値を設定します。
 
@@ -86,19 +89,21 @@ PolyBase には、Hadoop クラスターのプロパティを含む次の構成 
     <value>KERBEROS</value>
 </property>
 ```
+> [!NOTE]
+> `polybase.kerberos.realm` プロパティの値は、すべて大文字にする必要があります。
 
 プッシュダウン操作を希望する場合は、その他の XML も後で更新する必要があります。しかし、このファイルを構成しただけでも、少なくとも HDFS ファイル システムにアクセスできるようになります。
 
-ツールは SQL Server とは独立して実行できます。そのため、XML を更新する場合に実行中である必要はなく、再起動する必要もありません。 ツールを実行するには、SQL Server がインストールされているホストで次のコマンドを実行します。
+ツールは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とは独立して実行されるため、構成 XML を更新する場合に、実行する必要はなく、再起動する必要もありません。 ツールを実行するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているホストで次のコマンドを実行します。
 
 ```cmd
-> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
+> cd C:\Program Files\Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
 ## <a name="arguments"></a>引数
 
-| 引数 | [説明]|
+| 引数 | 説明|
 | --- | --- |
 | *名前ノードのアドレス* | 名前ノードの IP または FQDN です。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。|
 | *名前ノードのポート* | 名前ノードのポートです。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。 例: 8020。 |
@@ -117,8 +122,7 @@ java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polyb
 MIT KDC からの抜粋を以下に示します。 MIT と AD の完全なサンプル出力は、この記事の終わりの「参照」から確認できます。
 
 ## <a name="checkpoint-1"></a>チェックポイント 1
-
-`Server Principal = krbtgt/MYREALM.COM@MYREALM.COM` のチケットの 16 進数ダンプが存在する必要があります。 これは、SQL Server が KDC に対して認証され、TGT を受け取ったことを示します。 それ以外の場合は、問題は Hadoop ではなく厳密に SQL Server と KDC の間に存在します。
+`Server Principal = krbtgt/MYREALM.COM@MYREALM.COM` のチケットの 16 進数ダンプが存在する必要があります。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が KDC に対して認証され、TGT を受け取ったことを示します。 それ以外の場合、問題が存在するのは厳密には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と KDC の間であり、Hadoop との間ではありません。
 
 PolyBase は AD と MIT 間の信頼関係を**サポートしていない**ため、Hadoop クラスターに構成されているのと同じ KDC に対して構成されている必要があります。 このような環境では、手動でその KDC にサービス アカウントを作成し、そのアカウントを使って認証を実行できます。
 
@@ -147,7 +151,6 @@ PolyBase は AD と MIT 間の信頼関係を**サポートしていない**た�
 ```
 
 ## <a name="checkpoint-2"></a>チェックポイント 2
-
 PolyBase は HDFS へのアクセスを試行しますが、必要なサービス チケットが要求に含まれていないため、アクセスは失敗します。
 
 ```cmd
@@ -159,8 +162,7 @@ PolyBase は HDFS へのアクセスを試行しますが、必要なサービ�
 ```
 
 ## <a name="checkpoint-3"></a>チェックポイント 3
-
-2 番目の 16 進数ダンプは、SQL Server が TGT を使用して、名前ノードの SPN に対応したサービス チケットを KDC から取得できたことを示しています。
+2 番目の 16 進ダンプは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が TGT を使用して、名前ノードの SPN 用に適切なサービス チケットを KDC から正常に取得したことを示しています。
 
 ```cmd
  >>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, #bytes=664 
@@ -186,8 +188,7 @@ PolyBase は HDFS へのアクセスを試行しますが、必要なサービ�
 ```
 
 ## <a name="checkpoint-4"></a>チェックポイント 4
-
-最後に、ターゲット パスのファイル プロパティを確認メッセージと共に出力する必要があります。 ファイルのプロパティにより、SQL Server が ST を使用して Hadoop によって認証され、セキュリティで保護されたリソースへのアクセスがセッションに許可されたことが確認されます。
+最後に、ターゲット パスのファイル プロパティを確認メッセージと共に出力する必要があります。 ファイルのプロパティにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が ST を使用して Hadoop によって認証され、セキュリティで保護されたリソースへのアクセスがセッションに許可されたことが確認されます。
 
 このポイントに到達した場合、次のことが確認されます。(i) 3 つのアクターが正常に通信できる。(ii) core-site.xml と jaas.conf が正しい。(iii) KDC で資格情報が認識された。
 
@@ -197,7 +198,6 @@ PolyBase は HDFS へのアクセスを試行しますが、必要なサービ�
 ```
 
 ## <a name="common-errors"></a>一般的なエラー
-
 ツールが実行され、ターゲット パスのファイル プロパティが*出力されていない*場合 (チェックポイント 4)、途中で例外がスローされています。 例外を確認し、4 ステップのフローで例外が発生したコンテキストを検討します。 次の一般的な問題が発生していないかをこの順に確認します。
 
 | 例外とメッセージ | 原因 | 
@@ -213,11 +213,10 @@ PolyBase は HDFS へのアクセスを試行しますが、必要なサービ�
 ## <a name="debugging-tips"></a>デバッグのヒント
 
 ### <a name="mit-kdc"></a>MIT KDC  
-
 KDC に登録されたすべての SPN は、管理者を含めて、KDC ホストまたは構成されている任意の KDC クライアントで **kadmin.local** > (管理者ログイン) > **listprincs** を実行して表示できます。 Hadoop クラスターで Kerberos が適切に構成されている場合は、クラスター内で使用可能なサービス (例: `nn`、`dn`、`rm`、`yarn`、`spnego` など) のそれぞれに、1 つの SPN が存在します。それらに対応する keytab ファイル (パスワード代用) は、既定で **/etc/security/keytabs** にあります。 それらのファイルは KDC の秘密キーを使用して暗号化されます。  
 
 [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) を使用して、KDC 上でローカルに管理者の資格情報を検証することも検討します。 たとえば、`kinit identity@MYREALM.COM` のように使用します。 パスワードのプロンプトは、ID が存在することを示します。  
-KDC ログは既定で **/var/log/krb5kdc.log** にあり、要求を行ったクライアント IP を含め、チケットに対するすべての要求が記録されています。 ツールが実行された SQL Server コンピューターの IP から 2 つの要求が行われています。1 つ目は認証サーバーに対する TGT の要求 (**AS\_REQ**) であり、その後にチケット保証サーバーに ST を要求する **TGS\_REQ** が続きます。
+KDC ログは既定で **/var/log/krb5kdc.log** にあり、要求を行ったクライアント IP を含め、チケットに対するすべての要求が記録されています。 ツールが実行された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターの IP から 2 つの要求が行われています。1 つ目は認証サーバーに対する TGT の要求 (**AS\_REQ**) であり、その後にチケット保証サーバーに ST を要求する **TGS\_REQ** が続きます。
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -226,19 +225,17 @@ KDC ログは既定で **/var/log/krb5kdc.log** にあり、要求を行った�
 ```
 
 ### <a name="active-directory"></a>Active Directory 
-
 Active Directory では、[コントロール パネル] > [Active Directory ユーザーとコンピューター] > [*MyRealm*] > [*MyOrganizationalUnit*] を参照して SPN を表示できます。 Hadoop クラスターで Kerberos が適切に構成されている場合は、使用可能なサービス (例: `nn`、`dn`、`rm`、`yarn`、`spnego` など) のそれぞれに、1 つの SPN が存在します。
 
 ### <a name="general-debugging-tips"></a>一般的なデバッグのヒント
-
 ログを調べて、SQL Server の PolyBase 機能から独立した Kerberos に関する問題をデバッグするには、Java の経験が多少あると役に立ちます。
 
 Kerberos へのアクセス時に引き続き問題が発生する場合は、次の手順に従ってデバッグを行います。
 
-1. SQL Server の外部から Kerberos HDFS データにアクセスできることを確認します。 次のいずれかを実行できます。 
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部から Kerberos HDFS データにアクセスできることを確認します。 次のいずれかを実行できます。 
 
     - 独自の Java プログラムを記述します。
-    - PolyBase インストール フォルダーの `HdfsBridge` クラスを使用します。 例:
+    - PolyBase インストール フォルダーの `HdfsBridge` クラスを使用します。 次に例を示します。
 
       ```java
       -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt
@@ -253,10 +250,9 @@ Kerberos へのアクセス時に引き続き問題が発生する場合は、�
 3. Active Directory Kerberos の場合は、Windows で `klist` コマンドを使用して、キャッシュされたチケットを表示できることを確認します。
     - PolyBase コンピューターにログインし、コマンド プロンプトで `klist` と `klist tgt` を実行して、KDC、ユーザー名、および暗号化の種類が正しいかどうかを確認します。
 
-4.  KDC で AES256 のみをサポートできる場合は、[JCE ポリシー ファイル](http://www.oracle.com/technetwork/java/javase/downloads/index.html)がインストールされていることを確認します。
+4. KDC で AES256 のみをサポートできる場合は、[JCE ポリシー ファイル](http://www.oracle.com/technetwork/java/javase/downloads/index.html)がインストールされていることを確認します。
 
-## <a name="see-also"></a>参照
-
+## <a name="see-also"></a>関連項目
 [Active Directory 認証を使用した PolyBase と Cloudera の統合](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [CDH 用に Kerberos を設定するための Cloudera のガイド](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [HDP 用に Kerberos を設定するための Hortonworks のガイド](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  

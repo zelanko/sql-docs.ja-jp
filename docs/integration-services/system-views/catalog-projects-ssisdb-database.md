@@ -8,29 +8,29 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0757a9c140a78642f9b6c1d58a4333e24d3d8733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 408cbc5749487efaa25ef5d8acd42d346fc9df6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671437"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **SSISDB** カタログに表示されるすべてのプロジェクトの詳細を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|プロジェクトの一意識別子 (ID)。|  
 |folder_id|**bigint**|プロジェクトがあるフォルダーの一意の ID。|  
-|NAME|**sysname**|プロジェクトの名前。|  
+|name|**sysname**|プロジェクトの名前です。|  
 |description|**nvarchar(1024)**|プロジェクトの説明 (省略可)。|  
 |project_format_version|**int**|プロジェクトの開発に使用された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン。|  
 |deployed_by_sid|**varbinary(85)**|プロジェクトをインストールしたユーザーのセキュリティ識別子 (SID)。|  
@@ -41,7 +41,7 @@ ms.locfileid: "67997841"
 |validation_status|**char(1)**|検証状態。|  
 |last_validation_time|**datetimeoffset(7)**|前回の検証操作の時刻。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、カタログの各プロジェクトの行を表示します。  
   
 ## <a name="permissions"></a>アクセス許可  

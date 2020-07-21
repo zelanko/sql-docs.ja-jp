@@ -1,5 +1,5 @@
 ---
-title: SSIS カタログの作成 |Microsoft Docs
+title: SSIS カタログを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c9592898521aee296677c195d860dcb6b5e205a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2572cc131f34a21171054a159e3b7968c453a780
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060097"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437899"
 ---
 # <a name="create-the-ssis-catalog"></a>SSIS カタログの作成
   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置できます。 プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置するには、まずサーバーに `SSISDB` カタログを含める必要があります。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] のインストール プログラムでは、カタログは自動的に作成されません。次の手順を使用して、カタログを手動で作成する必要があります。  
@@ -24,7 +23,7 @@ ms.locfileid: "66060097"
   
 ### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>SQL Server Management Studio で SSISDB カタログを作成するには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。  
   
 2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンに接続します。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66060097"
   
      このストアド プロシージャは、SSISDB カタログに対する操作の状態のメンテナンスを実行します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] サーバー インスタンスがダウンした場合に、実行されていたパッケージの状態を修正します。  
   
-6.  パスワードを入力し、 **[OK]** をクリックします。  
+6.  パスワードを入力し、[ **Ok]** をクリックします。  
   
      カタログ データを暗号化するために使用されるデータベース マスター キーがパスワードで保護されます。 パスワードは安全な場所に保管してください。 データベース マスター キーをバックアップすることもお勧めします。 詳細については、「 [データベース マスター キーのバックアップ](../relational-databases/security/encryption/back-up-a-database-master-key.md)」を参照してください。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66060097"
   
 1.  次の PowerShell スクリプトを実行します。  
   
-    ```  
+    ```powershell
     # Load the IntegrationServices Assembly  
     [Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices")  
   
@@ -64,14 +63,11 @@ ms.locfileid: "66060097"
   
     # Provision a new SSIS Catalog  
     $catalog = New-Object $ISNamespace".Catalog" ($integrationServices, "SSISDB", "P@assword1")  
-    $catalog.Create()  
-  
+    $catalog.Create()
     ```  
   
-     Windows PowerShell と <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の使用方法を紹介したその他の例については、blogs.msdn.com のブログ エントリ「[SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」を参照してください。 名前空間とコード例の概要については、blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://go.microsoft.com/fwlink/?LinkId=254267)」を参照してください。  
+     Windows PowerShell と <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の使用方法を紹介したその他の例については、blogs.msdn.com のブログ エントリ「[SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」を参照してください。 名前空間とコード例の概要については、blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SSIS カタログ](catalog/ssis-catalog.md)   
  [SSIS カタログのバックアップ、復元、および移動](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  
-  
-  

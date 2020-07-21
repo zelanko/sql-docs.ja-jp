@@ -1,5 +1,5 @@
 ---
-title: sp_add_targetsvrgrp_member (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_targetsvrgrp_member (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_targetsvrgrp_member
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cf0feb3b7747f7488c8688c902760e90cbe66838
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f18af2207069ab3a4d8b8a05c9c0a5b7a3fe6deb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033019"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878243"
 ---
-# <a name="spaddtargetsvrgrpmember-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したターゲット サーバーを、指定したターゲット サーバー グループに追加します。  
    
@@ -39,9 +39,9 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @group_name = ] 'group_name'` グループの名前。 *group_name*は**sysname**、既定値はありません。  
+`[ @group_name = ] 'group_name'`グループの名前。 *group_name*は**sysname**であり、既定値はありません。  
   
-`[ @server_name = ] 'server_name'` 指定されたグループに追加するサーバーの名前。 *server_name*は**nvarchar (30)** 、既定値はありません。  
+`[ @server_name = ] 'server_name'`指定されたグループに追加するサーバーの名前。 *server_name*は**nvarchar (30)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -49,14 +49,14 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- ターゲット サーバーは、複数のターゲット サーバー グループのメンバーになることができます。  
+## <a name="remarks"></a>解説  
+ 対象サーバーは、複数の対象サーバーグループのメンバーになることができます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールは、このプロシージャを実行できます。  
+ このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、グループを追加`Servers Maintaining Customer Information`を追加し、`LONDON1`サーバーをそのグループにします。  
+ 次の例では、グループを追加 `Servers Maintaining Customer Information` し、 `LONDON1` そのグループにサーバーを追加します。  
   
 ```  
 USE msdb ;  
@@ -68,8 +68,8 @@ EXEC dbo.sp_add_targetsvrgrp_member
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [sp_delete_targetsvrgrp_member &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_delete_targetsvrgrp_member &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

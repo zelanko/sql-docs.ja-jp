@@ -1,5 +1,5 @@
 ---
-title: sys.sp_flush_log (TRANSACT-SQL) |Microsoft Docs
+title: sp_flush_log (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 61c4cceab6c816d63226216a54d4f647e92e592d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: cbcb731a4396829b38596619e4b52babcb6f9425
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066685"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052724"
 ---
-# <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_flush_log-transact-sql"></a>sp_flush_log (Transact-sql)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   現在のデータベースのトランザクション ログをディスクに書き出します。これによって、以前にコミットされた遅延持続性トランザクションがすべてメモリからディスクに書き込まれます。  
   
- 性能上の理由から遅延トランザクション持続性の使用を選択したが、サーバーのクラッシュ時やフェールオーバー時に失われるデータの量に上限を設ける場合は、定期的に `sys.sp_flush_log` を実行します。 たとえば、ことを確認する場合が失われない x を超える実行すると、秒分のデータ、 `sp_flush_log` x 秒ごとです。  
+ 性能上の理由から遅延トランザクション持続性の使用を選択したが、サーバーのクラッシュ時やフェールオーバー時に失われるデータの量に上限を設ける場合は、定期的に `sys.sp_flush_log` を実行します。 たとえば、x 秒を超えるデータが失われないようにする場合は、x 秒ごとに実行し `sp_flush_log` ます。  
   
- `sys.sp_flush_log` を実行すると、以前にコミットされた遅延持続性トランザクションがすべて持続可能な状態になることが保証されます。 概念説明のトピックを参照してください。[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)詳細についてはします。  
+ `sys.sp_flush_log` を実行すると、以前にコミットされた遅延持続性トランザクションがすべて持続可能な状態になることが保証されます。 詳細については、概念トピック「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +48,7 @@ sys.sp_flush_log
  [なし] :  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 1 のリターン コードでは、成功を示します。  その他の値では、エラーを示します。  
+ リターンコード1は成功を示します。  それ以外の値は失敗を示します。  
   
 ## <a name="result-sets"></a>結果セット  
  [なし] :  

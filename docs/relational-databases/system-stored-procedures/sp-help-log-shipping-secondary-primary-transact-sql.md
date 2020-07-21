@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_secondary_primary (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_log_shipping_secondary_primary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16753620fa4185d3f488db340aeb4858c28f6d69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7aaa40e2542c3010e697e370cd4124982b35d41e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066759"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893619"
 ---
-# <a name="sphelplogshippingsecondaryprimary-transact-sql"></a>sp_help_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_log_shipping_secondary_primary-transact-sql"></a>sp_help_log_shipping_secondary_primary (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   セカンダリ サーバーにある指定されたプライマリ データベースの設定を取得します。  
   
@@ -41,23 +41,23 @@ sp_help_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @primary_server = ] 'primary_server'` プライマリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。 *primary_server*は**sysname** NULL にすることはできません。  
+`[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのプライマリインスタンスの名前。 *primary_server*は**sysname**であり、NULL にすることはできません。  
   
-`[ @primary_database = ] 'primary_database'` プライマリ サーバー上のデータベースの名前です。 *primary_database*は**sysname**、既定値はありません。  
+`[ @primary_database = ] 'primary_database'`プライマリサーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 結果セットには、列が含まれています**secondary_id**、 **primary_server**、 **primary_database**、 **backup_source_directory**、 。**backup_destination_directory**、 **file_retention_period**、 **copy_job_id**、 **restore_job_id**、 **monitor_server**、 **monitor_server_security_mode**から**log_shipping_secondary**します。  
+ 結果セットには、 **backup_destination_directory**の列**secondary_id**、 **primary_server**、 **primary_database**、 **backup_source_directory**、 **file_retention_period**、 **copy_job_id**、 **restore_job_id**、 **monitor_server** **、monitor_server_security_mode**、 **log_shipping_secondary**が含まれています。  
   
-## <a name="remarks"></a>コメント  
- **sp_help_log_shipping_secondary_primary**から実行する必要があります、**マスター**セカンダリ サーバー上のデータベース。  
+## <a name="remarks"></a>注釈  
+ **sp_help_log_shipping_secondary_primary**は、セカンダリサーバーの**master**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
+ このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

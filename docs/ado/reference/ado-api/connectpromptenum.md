@@ -13,34 +13,34 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 61a66866f8206f2df4cbdeb3f2144e0ac12ac695
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919445"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762593"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
-データ ソースへの接続を開くときに、不足しているパラメーターを要求する ダイアログ ボックスを表示するかどうかを指定します。  
+データソースへの接続を開くときにダイアログボックスを表示して、不足しているパラメーターを確認するかどうかを指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adPromptAlways**|1|常にメッセージが表示されます。|  
-|**adPromptComplete**|2|詳細については、必要な場合は、メッセージが表示されます。|  
-|**adPromptCompleteRequired**|3|詳細についての情報が必要ですが、省略可能なパラメーターは使用できない場合のプロンプトを表示します。|  
-|**adPromptNever**|4|要求しません。|  
+|**adPromptAlways**|1|常にプロンプトを表示します。|  
+|**adPromptComplete**|2|詳細情報が必要かどうかを確認するメッセージが表示されます。|  
+|**adPromptCompleteRequired**|3|詳細情報が必要かどうかを確認するメッセージが表示されますが、省略可能なパラメーターは使用できません。|  
+|**adPromptNever**|4|プロンプトが表示されません。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
 |定数|  
 |--------------|  
-|AdoEnums.ConnectPrompt.ALWAYS|  
-|AdoEnums.ConnectPrompt.COMPLETE|  
-|AdoEnums.ConnectPrompt.COMPLETEREQUIRED|  
-|AdoEnums.ConnectPrompt.NEVER|  
+|AdoEnums を常に確認します。|  
+|AdoEnums を実行します。|  
+|AdoEnums COMPLETEREQUIRED|  
+|AdoEnums。 NEVER|  
   
 ## <a name="applies-to"></a>適用対象  
  [Prompt プロパティ - 動的 (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)

@@ -1,6 +1,6 @@
 ---
-title: ワイルドカードを使用したテキスト検索 | Microsoft Docs
-ms.custom: ''
+title: ワイルドカードを使用したテキスト検索
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,18 +13,17 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], wildcard searches
 - wildcard options [SQL Server Management Studio]
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5c3efcef4eade7c6ad2b5a5d52a1fa26a4c4ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc4e24c3dce73e46350b0c106429c42ab5f0edb2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090240"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049030"
 ---
 # <a name="search-text-with-wildcards"></a>ワイルドカードを使用したテキスト検索
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[検索と置換]** ダイアログ ボックスの **[検索する文字列]** フィールドでは、文字や数字の代わりに以下の式を使用できます。  
+  **の**[検索と置換][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスの **[検索する文字列]** フィールドでは、文字や数字の代わりに以下の式を使用できます。  
   
 #### <a name="to-search-using-wildcards"></a>ワイルドカードを使用して検索を行うには  
   
@@ -42,6 +41,6 @@ ms.locfileid: "66090240"
 |1 つ以上の文字|*|任意の 1 つ以上の文字に相当します。 一例として、new* は「new」を含む任意のテキスト (newfile.txt など) に相当します。|  
 |文字のセット|[ ]|セット内に指定されている任意の 1 文字に相当します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [検索と置換](search-and-replace.md)   
  [正規表現によるテキストの検索](search-text-with-regular-expressions.md)  

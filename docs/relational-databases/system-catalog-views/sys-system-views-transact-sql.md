@@ -1,5 +1,5 @@
 ---
-title: sys.system_views (TRANSACT-SQL) |Microsoft Docs
+title: sys.system_views (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,38 +17,38 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_views catalog view
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fce2816d8cb169c5761f47dd0f9dd0a6ed1959f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6b1aa34bd2ab2f4e299ae52974f032a94bf1fdf1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078613"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895937"
 ---
-# <a name="syssystemviews-transact-sql"></a>sys.system_views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssystem_views-transact-sql"></a>sys.system_views (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  1 行に含まれる各システム ビューのデータを含む[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 という名前のスキーマのすべてのシステム ビューが含まれている**sys**または**INFORMATION_SCHEMA**します。  
+  に付属しているシステムビューごとに1行の値を格納 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] します。 すべてのシステムビューは、 **sys**または**INFORMATION_SCHEMA**という名前のスキーマに含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|\<列を継承 >||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
+|\<inherited columns>||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |**is_replicated**|**bit**|1 = ビューはレプリケートされます。|  
 |**has_replication_filter**|**bit**|1 = ビューにレプリケーション フィルターがあります。|  
-|**has_opaque_metadata**|**bit**|1 = ビューに VIEW_METADATA オプションが指定されています。 詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。|  
-|**has_unchecked_assembly_data**|**bit**|1 = テーブルに、前回の ALTER ASSEMBLY で定義が変更されたアセンブリに依存する、持続データが含まれています。 次の成功した DBCC CHECKDB または DBCC CHECKTABLE の後に 0 にリセットされます。|  
-|**with_check_option**|**bit**|1 = WITH CHECK OPTION がビュー定義に指定されています。|  
-|**is_date_correlation_view**|**bit**|1 = ビューは、間の相関関係情報を格納するシステムによって自動的に作成された**datetime**列。 DATE_CORRELATION_OPTIMIZATION が ON に設定され、このビューの作成が有効になっています。|  
+|**has_opaque_metadata**|**bit**|1 = ビューに対して指定された VIEW_METADATA オプションです。 詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。|  
+|**has_unchecked_assembly_data**|**bit**|1 = テーブルには、最後の ALTER ASSEMBLY 中に定義が変更されたアセンブリに依存する永続化されたデータが含まれています。 次の DBCC CHECKDB または DBCC CHECKTABLE が正常に完了した後、は0にリセットされます。|  
+|**with_check_option**|**bit**|1 = WITH CHECK OPTION がビュー定義で指定されています。|  
+|**is_date_correlation_view**|**bit**|1 = ビューは、 **datetime**列間の相関関係情報を格納するためにシステムによって自動的に作成されました。 DATE_CORRELATION_OPTIMIZATION を ON に設定することにより、このビューの作成が有効になりました。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
- [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [DBCC CHECKDB &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
+ [DBCC CHECKTABLE &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
   

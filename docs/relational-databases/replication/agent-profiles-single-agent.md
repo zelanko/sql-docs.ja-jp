@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a8362ab1cdf55af1c3735ee9ab27fb9991b07e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 930c77bd4897c9a7f0b1118ac1014fe6f85d97f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85740093"
 ---
-# <a name="agent-profiles-single-agent"></a>[エージェント プロファイル]\(単独のエージェント)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="agent-profiles-single-agent"></a>[エージェント プロファイル] (単独のエージェント)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[エージェント プロファイル]** ダイアログ ボックスを使用すると、エージェントのプロファイルを管理できます。 エージェント プロファイルを利用すると、各エージェントの実行時パラメーターを容易に管理できます。 それぞれのエージェントは既定のプロファイルを持ちます。一部のエージェントには、追加の定義済みプロファイルが用意されています。 たとえば、マージ エージェントには、低帯域幅接続の "低速リンク" プロファイルが用意されています。 ほとんどのアプリケーションでは定義済みのプロファイルで十分ですが、ユーザー定義プロファイルを作成して、エージェントの動作をカスタマイズすることもできます。  
   
 ## <a name="options"></a>オプション  
  **[新規の既定]**  
  特定の種類のエージェントに対してジョブを作成するときに使用するプロファイルを選択します。 たとえば、マージ パブリケーションに対していくつかのサブスクリプションを作成する場合、選択されたプロファイルが各サブスクリプションのマージ エージェント ジョブで使用されます。 既存のジョブのプロファイルを変更するには、プロファイルを選択し、 **[既存のエージェントの変更]** をクリックします。  
   
- **[名前]**  
+ **Name**  
  プロファイルの名前。  
   
- **型**  
- プロファイルの種類です。 **[ユーザー]** (ユーザー定義) または **[システム]** (定義済み)。  
+ **Type**  
+ プロファイルの種類です。 **[ユーザー]** \(ユーザー定義) または **[システム]** (定義済み) を選択します。  
   
  **[プロパティ] (...)**  
  クリックすると、エージェント プロファイルの各パラメーターに使用されている値が表示されます。  

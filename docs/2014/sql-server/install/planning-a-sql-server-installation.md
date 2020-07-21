@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f35b83fc8debfedec7be48d264a9267054735587
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042110"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするには、次の手順を実行します。  
@@ -26,7 +25,7 @@ ms.locfileid: "68211495"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行し、新しいバージョンをインストールするか、新しいバージョンへのアップグレードを行います。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を構成します。  
   
  どのインストール方法を使用するかにかかわらず、個人として、または組織を代表して、ソフトウェア ライセンス条項に同意するかどうかを確認する必要があります。ただし、ソフトウェアの使用に別の契約 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ボリューム ライセンス契約、ISV や OEM とのサード パーティ契約など) が適用される場合を除きます。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "68211495"
  [ネットワーク プロトコルとネットワーク ライブラリ](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  
  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースにおけるネットワーク プロトコルの既定の構成と、利用可能な構成オプションについて説明します。  
   
- [SQL Server の複数のバージョンおよびインスタンスの使用](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ [SQL Server の複数のバージョンおよびインスタンスの操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の複数のバージョンおよびインスタンスのインストールに関する考慮事項について説明します。  
   
  [SQL Server のローカル言語版](../../../2014/sql-server/install/local-language-versions-in-sql-server.md)  
@@ -61,7 +60,7 @@ ms.locfileid: "68211495"
  [SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server.md)  
  このセクションでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の各種インストール オプションについて概説します。  
   
- [SQL Server 2014 の BI 機能をインストールします。](install-sql-server-business-intelligence-features.md)  
+ [SQL Server 2014 の BI 機能のインストール](install-sql-server-business-intelligence-features.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのドキュメントのこのセクションでは、Microsoft BI プラットフォームの一部である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のインストール方法について説明します。  
   
  [SQL Server 2014 へのアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
@@ -73,11 +72,11 @@ ms.locfileid: "68211495"
  [SQL Server フェールオーバー クラスターのインストール](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ドキュメントのこのセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールして構成する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server 2014 のインストールのクイック スタート](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
- [コマンド プロンプトから SQL Server 2014 をインストールします。](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+## <a name="see-also"></a>参照  
+ [SQL Server 2014 のクイックスタートインストール](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
+ [コマンドプロンプトから SQL Server 2014 をインストールする](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [高可用性ソリューション &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
- [フェールオーバー クラスタリングをインストールする前に](../failover-clusters/install/before-installing-failover-clustering.md)   
- [アップグレードする SQL Server 2014 のインストール ウィザードを使用して&#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [フェールオーバークラスタリングをインストールする前に](../failover-clusters/install/before-installing-failover-clustering.md)   
+ [インストールウィザード &#40;セットアップを使用して SQL Server 2014 にアップグレード&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

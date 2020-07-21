@@ -1,5 +1,5 @@
 ---
-title: LookupSet 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: LookupSet 関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30c2747a384a49282be0208e28d6153570299c7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577409"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081218"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>レポート ビルダー関数 - LookupSet 関数
   名前と値のペアを含むデータセットから、指定された名前に対応する一連の値を返します  
@@ -30,13 +30,13 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>パラメーター  
  *source_expression*  
- (**Variant**) 現在のスコープ内で評価される式。参照する名前またはキーを指定します。 たとえば、`=Fields!ID.Value` のようになります。  
+ (**Variant**) 現在のスコープ内で評価される式。参照する名前またはキーを指定します。 たとえば、「 `=Fields!ID.Value` 」のように入力します。  
   
  *destination_expression*  
- (**Variant**) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、 `=Fields!CustomerID.Value`のようにします。  
+ (**Variant**) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、「 `=Fields!CustomerID.Value` 」のように入力します。  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*であるデータセットの行で評価され、取得する値を指定する式。 たとえば、`=Fields!PhoneNumber.Value` のようになります。  
+ (**Variant**) *source_expression* = *destination_expression*であるデータセットの行で評価され、取得する値を指定する式。 たとえば、「 `=Fields!PhoneNumber.Value` 」のように入力します。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"ContactInformation" のように指定します。  
@@ -44,7 +44,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>戻り値  
  **VariantArray**を返します。一致する結果がなかった場合は、 **Nothing** を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  指定したデータセットで、名前と値のペアについて 1 対多のリレーションシップが存在する場合、 **LookupSet** を使用して一連の値を取得します。 たとえば、テーブル内の顧客識別子に対して **LookupSet** を使用して、データ領域にバインドされていないデータセットから、顧客に関連付けられている電話番号をすべて取得することができます。  
   
  **LookupSet** を実行すると、次の処理が行われます。  
@@ -59,7 +59,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  指定した名前に対応する、名前と値のペアを含むデータセットに 1 対 1 のリレーションシップが存在する場合、このデータセットから 1 つの値を取得するには、[Lookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md) を使用します。 一連の値に対して **Lookup** を呼び出すには、[Multilookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md) を使用します。  
   
- 次の制限があります。  
+ 次の制限事項が適用されます。  
   
 -   **LookupSet** は、すべてのフィルター式が適用された後で評価されます。  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7ddc3324099be031fff61c2268094b85e9fab143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39465a009ac7b7d8cc19470e3e735779337c276f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704066"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   別の **geography** インスタンスの外部にある任意の **geography** インスタンスの地点のセットを表すオブジェクトを返します。  
   
@@ -43,17 +43,17 @@ ms.locfileid: "68042342"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
  このメソッドは、このインスタンスに対蹠点が含まれている場合、**ArgumentException** をスローします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバー上で返される結果セットが **FullGlobe** インスタンスに拡張されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、半球より大きい空間インスタンスをサポートしています。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。 このメソッドは正確ではありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-computing-the-difference-between-two-geography-instances"></a>A. 2 つの geography インスタンス間の差異を計算する  
  `STDifference()` を使用して 2 つの **geography** インスタンスの差分を計算する例を次に示します。  

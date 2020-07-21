@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f2589588a2caa0c8a4132954b7897a7c128110d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d5677de166b1bfff58c64665901ce814a7448fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750999"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   フィルターを使用すると、トレースに出力するイベントを制限することができます。 フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。 たとえば、トレースに出力する Windows ユーザーとして特定のユーザー名を指定すると、それらのユーザーのデータのみが出力されます。  
   
  トレースのフィルター設定は必須ではありません。 ただし、フィルターを設定すると、トレース中に発生するオーバーヘッドを低減できます。 フィルターによって、データを絞り込むことができ、パフォーマンス分析および監査が簡略化されます。  
@@ -45,8 +45,6 @@ ms.locfileid: "68072896"
   
 3.  必要なデータのサブセットを決め、そのデータのサブセットに基づいてフィルターを設定します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  たとえば、ある一定の時間よりも長くかかるイベントをトレースで出力するとします。 その場合、 **Duration** データ列が 300 ミリ秒よりも長いイベントを出力するトレースを作成できます。 300 ミリ秒以内に完了したイベントはトレースから除外されます。  
   
  フィルターは、SQL Server Profiler または Transact-SQL ストアド プロシージャを使用して作成できます。  
@@ -63,11 +61,11 @@ ms.locfileid: "68072896"
   
  フィルターを適用できるかどうかは、データ列によって異なります。 一部のデータ列にはフィルターを適用できません。 フィルターの適用が可能なデータ列では、次の表に示す関係演算子を使用してフィルターを指定できます。  
   
-|関係演算子|演算子記号|[説明]|  
+|関係演算子|演算子記号|説明|  
 |-------------------------|---------------------|-----------------|  
-|Like|Like|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
+|Like|LIKE|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
 |パターンに一致しない|パターンに一致しない|イベントのトレース データが入力したテキストと同じであってはならないことを指定します。 複数の値を指定できます。|  
-|[等しい]|=|イベントのトレース データが入力した値と等しくなければならないことを指定します。 複数の値を指定できます。|  
+|等しい|=|イベントのトレース データが入力した値と等しくなければならないことを指定します。 複数の値を指定できます。|  
 |等しくない|<>|イベントのトレース データが入力した値と等しくあってはならないことを指定します。 複数の値を指定できます。|  
 |より大きい|>|イベントのトレース データが入力した値よりも大きくなければならないことを指定します。|  
 |以上|>=|イベントのトレース データが入力した値以上でなければならないことを指定します。|  
@@ -117,7 +115,7 @@ ms.locfileid: "68072896"
 |**OwnerID**|=、<>、>=、<=|  
 |**OwnerName**|LIKE、NOT LIKE|  
 |**ParentName**|LIKE、NOT LIKE|  
-|**権限**|=、<>、>=、<=|  
+|**アクセス許可**|=、<>、>=、<=|  
 |**ProviderName**|LIKE、NOT LIKE|  
 |**Reads**|=、<>、>=、<=|  
 |**RequestID**|=、<>、>=、<=|  
@@ -129,14 +127,14 @@ ms.locfileid: "68072896"
 |**SPID**|=、<>、>=、\<=|  
 |**SqlHandle**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**StartTime**|>=、<=|  
-|**状態**|=、<>、>=、<=|  
-|**成功**|=、<>、>=、<=|  
+|**State**|=、<>、>=、<=|  
+|**Success**|=、<>、>=、<=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
 |**TargetLoginSid**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** *|LIKE、NOT LIKE|  
 |**TransactionID**|=、<>、>=、<=|  
-|**型**|=、<>、>=、<=|  
+|**Type**|=、<>、>=、<=|  
 |**Writes**|=、<>、>=、<=|  
 |**XactSequence**|=、<>、>=、<=|  
   

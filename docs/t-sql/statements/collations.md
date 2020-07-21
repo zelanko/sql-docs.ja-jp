@@ -1,7 +1,7 @@
 ---
 title: COLLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 08/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,16 +19,16 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b3b6a7987e4d02640bc1daadfd4cffe77b3354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab4b79abe293e01ac0087ea68363f7378d180a07
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141143"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380875"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 データベースまたはテーブル列の照合順序、または文字列式に適用されたときの照合順序のキャスト操作を定義します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 データベースの作成時に指定しない場合は、データベースに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの既定の照合順序が割り当てられます。 テーブル列の作成時に指定しない場合、データベースの既定の照合順序に列が割り当てられます。
 
@@ -36,11 +36,13 @@ ms.locfileid: "68141143"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 COLLATE { <collation_name> | database_default }
 <collation_name> :: =
     { Windows_collation_name } | { SQL_collation_name }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
 
@@ -52,9 +54,9 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** COLLATE 句によって、現在のデータベースの照合順序が継承されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-COLLATE 句は、さまざまなレベルで指定できます。 その一部を次に示します。
+COLLATE 句は、さまざまなレベルで指定できます。 コーディネートは次のとおりです。
 
 1. データベースの作成または変更
 
@@ -97,13 +99,11 @@ FROM fn_helpcollations();
 - データベースの復元または接続を行う場合、データベースの既定の照合順序、およびデータベース内の **char** 型、**varchar** 型、および **text** 型の任意の列またはパラメーターの照合順序は、オペレーティング システムでサポートされている必要があります。
 
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス サーバーの照合順序は、**SQL_Latin1_General_CP1_CI_AS** であり、変更できません。
->
 > コード ページ変換は **char** および **varchar** データ型に対してはサポートされていますが、**text** データ型に対してはサポートされていません。 コード ページ変換時のデータ損失はレポートされません。
 >
 > 指定した照合順序、または参照先のオブジェクトで使用される照合順序で、Windows でサポートされていないコード ページが使用されていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でエラーが表示されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-specifying-collation-during-a-select"></a>A. SELECT 時に照合順序を指定する
 
@@ -130,7 +130,7 @@ GO
 
 最初のクエリからの結果を次に示します。
 
-```
+```output
 Place
 -------------
 California
@@ -141,7 +141,7 @@ Colima
 
 2 番目のクエリからの結果を次に示します。
 
-```
+```output
 Place
 -------------
 California
@@ -150,7 +150,7 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>B. その他の例
+### <a name="b-additional-examples"></a>B. 追加の例
 
 **COLLATE** を使用するその他の例については、「[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples)」の例「**G. データベースを作成し、照合順序名とオプションを指定する**」と「[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column)」の例「**V. 列の照合順序を変更する**」を参照してください。
 

@@ -1,5 +1,5 @@
 ---
-title: ODBC エスケープ シーケンス |Microsoft Docs
+title: ODBC エスケープシーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 06f98cd40ee003a7e8805e6b83fdac0940526e49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b32d12cc6be2814198160ce95cb8153227c19aa9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990634"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287572"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC エスケープ シーケンス
-次のエスケープ シーケンスは、ODBC で使用されます。 このセクションでは、文法で定義されているいくつかの要素を使用して[要素は、SQL ステートメントで使用される](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)します。  
+ODBC では、次のエスケープシーケンスが使用されます。 このセクションの文法では、 [SQL ステートメントで使用される要素](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)で定義されているいくつかの要素を使用します。  
   
  このセクションでは、次のトピックを扱います。  
   

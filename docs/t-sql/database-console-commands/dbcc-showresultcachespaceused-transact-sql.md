@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f6821ae2ee11a6cd8e5713996cc04b3330a63300
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476306"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632332"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -29,20 +29,13 @@ Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースの記憶�
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `DBCC SHOWRESULTCACHESPACEUSED` コマンドは、パラメーターがなく、このコマンドを実行したデータベースで使用されるスペースが返されます。
-
-結果セットのキャッシュの最大サイズは、データベースあたり 1 TB です。  Azure SQL Data Warehouse では、結果セットのキャッシュ内のエントリが以下の条件で自動的に削除されます。
-
-- 結果セットが使用されていない場合は、48 時間ごと。
-- 結果セットのキャッシュが最大サイズに接近した場合。
-
-データベースの結果セットのキャッシュを手動で空にするには、結果セットのキャッシュ機能をオフにするか、または `DBCC DROPRESULTSETCACHE` コマンドを使用します。   データベースを一時停止しても、結果セットのキャッシュは空になりません。  
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -50,16 +43,17 @@ VIEW SERVER STATE 権限が必要です。
   
 ## <a name="result-sets"></a>結果セット  
   
-|[列]|データ型|[説明]|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|データベースに使用されている合計領域 (KB 単位)。 この数値は、キャッシュされた結果セットの増加に応じて変化します。|  
-|data_space|BIGINT|データに使用されている領域 (KB 単位)。|  
-|index_space|BIGINT|インデックスに使用されている領域 (KB 単位)。|  
-|unused_space|BIGINT|予約済み領域の一部で使用されていない領域 (KB 単位)。|  
+|reserved_space|bigint|データベースに使用されている合計領域 (KB 単位)。 この数値は、キャッシュされた結果セットの増加に応じて変化します。|  
+|data_space|bigint|データに使用されている領域 (KB 単位)。|  
+|index_space|bigint|インデックスに使用されている領域 (KB 単位)。|  
+|unused_space|bigint|予約済み領域の一部で使用されていない領域 (KB 単位)。|  
 
 
 ## <a name="see-also"></a>参照
 
+[結果セットのキャッシュを使用したパフォーマンスのチューニング](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

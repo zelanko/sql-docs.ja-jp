@@ -1,6 +1,7 @@
 ---
-title: SQL レプリケーションのスナップショットの初期化オプションを変更する | Microsoft Docs
-ms.custom: ''
+title: スナップショットの初期化オプションを変更する
+description: スナップショットの形式や SQL Server Management Studio のスナップショット フォルダーの場所など、レプリケーション スナップショットのさまざまな初期化オプションを変更します。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9bef4e304b592a6be1c9d59c44d691e07829d70f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3117e274c146413dcf8b973f054c7d0b1865e7de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767608"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL レプリケーションのスナップショットの初期化オプションを変更する 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [ スナップショットを使用してサブスクリプションを初期化する](initialize-a-subscription-with-a-snapshot.md)際には、いくつかのオプションを指定できます。
 
@@ -37,8 +38,6 @@ ms.locfileid: "68768370"
     >  このパブリケーションで SQL Server Compact データベースまたは SQL Server 以外のデータベースへのサブスクリプションをサポートする必要がある場合を除き、ネイティブ形式を選択することをお勧めします。  
   
 2.  **[OK]** を選択します。   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="snapshot-folder-locations"></a>スナップショット フォルダーの場所
 

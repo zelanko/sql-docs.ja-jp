@@ -1,5 +1,5 @@
 ---
-title: AbsolutePage、PageCount、PageSize プロパティの例 (JScript) |Microsoft Docs
+title: AbsolutePage、PageCount、および PageSize プロパティの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], JScript example
 - PageSize property [ADO], JScript example
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09b6c0303f11be8534ec46fcf2f719175f463e4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f07855b0c99e92c18a2d54ff632fad24e1fb03ae
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921864"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747619"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、PageCount、PageSize プロパティの例 (JScript)
-この例では、AbsolutePage、PageCount、PageSize プロパティを示します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**AbsolutePageJS.asp**します。  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、PageCount、および PageSize プロパティの例 (JScript)
+この例では、AbsolutePage、PageCount、および PageSize プロパティを示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **AbsolutePageJS**として保存します。  
   
 ```  
 <!-- BeginAbsolutePageJS -->  
@@ -157,7 +157,7 @@ BODY {
 <!-- EndAbsolutePageJS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize プロパティ (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

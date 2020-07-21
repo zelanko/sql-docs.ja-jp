@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24a180fde90ff406d40a0f0c89bf82dfe5138b88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097872"
 ---
-# <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>ConnectionPoolSize プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとの通信にレポート サーバーが使用する、接続プールサイズです。 読み取り専用。  
+# <a name="connectionpoolsize-property-wmi-msreportserver_configurationsetting"></a>ConnectionPoolSize プロパティ (WMI MSReportServer_ConfigurationSetting)
+  レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとの通信にレポート サーバーが使用する、接続プールサイズです。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ public UInt32 ConnectionPoolSize;
 ```  
   
 ## <a name="property-values"></a>プロパティ値  
- 読み取り専用**整数**オブジェクトの値を返す`768`します。  
+ の値を返す**integer**読み取り専用の`768`整数オブジェクト。  
   
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  

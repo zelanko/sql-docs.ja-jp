@@ -1,6 +1,6 @@
 ---
-title: 拡張イベント関連のシステム オブジェクト | Microsoft Docs
-ms.custom: ''
+title: 拡張イベント関連のシステム オブジェクト
+description: これらのリソースは拡張イベントに関連します。たとえば、システム オブジェクトによるサポート方法、SQL Server による使用方法、特に Azure SQL Database に対する側面などです。
 ms.date: 03/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,16 +10,16 @@ ms.topic: reference
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8be742db65127eaeac24c54fbcf9386d49453c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e61edcb1f8c1dd9844d887818d208cde1615d5ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756791"
 ---
 # <a name="system-objects-that-support-extended-events"></a>拡張イベントをサポートするシステム オブジェクト
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この記事では、拡張イベントに関連する他の記事へのリンクを提供します。 それらの記事では、次のことが説明されています。
 

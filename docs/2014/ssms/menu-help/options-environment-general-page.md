@@ -1,5 +1,5 @@
 ---
-title: オプション (環境-[全般] ページ) |Microsoft Docs
+title: '[オプション] ([環境]/[全般] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f82a6ff79bfc9fbd1fb2d97036fa83c0b3f5d22b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067433"
 ---
 # <a name="options-environment-general-page"></a>[オプション] ([環境]-[全般] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して **[全般]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[スタートアップ時]**  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の起動時に実行されるアクションを選択します。 使用可能なオプションは次のとおりです。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の起動時に実行されるアクションを選択します。 オプションは次のとおりです。  
   
 -   **[オブジェクト エクスプローラーを開く]** 。接続を要求してからオブジェクト エクスプローラーを開きます。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68188503"
   
 -   **[空の環境を開く]** 。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開きますが、[SQL クエリ エディター] ウィンドウを表示せず、オブジェクト エクスプローラーをサーバーに接続しません。  
   
- **[オブジェクト エクスプローラーのシステム オブジェクトを非表示にする]**  
+ **オブジェクトエクスプローラーのシステムオブジェクトを非表示にする**  
  このチェック ボックスをオンにすると、システム データベース、システム テーブル、システム ビュー、およびシステム ストアド プロシージャがオブジェクト エクスプローラーのツリー ビューから削除されます。 システム関数およびシステム型は非表示になりません。 このオプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにのみ適用され、既にオブジェクト エクスプローラーに接続されているサーバーに影響を与えません。  
   
 ## <a name="environment-layout"></a>[環境レイアウト]  
@@ -48,7 +47,7 @@ ms.locfileid: "68188503"
   
 ## <a name="docked-tool-window-behavior"></a>[ドッキング ツール ウィンドウの動作]  
  **[[閉じる] ボタンを、アクティブになっているタブに対してのみ実行する]**  
- このチェック ボックスがオンになっている場合は、ドッキングしたセット内のすべてのツール ウィンドウではなく、現在フォーカスのあるツール ウィンドウのみを閉じることを指定します。 既定では、このチェック ボックスはオンです。  
+ このチェック ボックスがオンになっている場合は、ドッキングしたセット内のすべてのツール ウィンドウではなく、現在フォーカスのあるツール ウィンドウのみを閉じることを指定します。 既定では、このチェック ボックスはオンになっています。  
   
  **[[自動的に隠す] ボタンを、アクティブになっているタブに対してのみ実行する]**  
  このチェック ボックスがオンになっている場合は、ドッキングしたセット内のすべてのツール ウィンドウではなく、現在フォーカスのあるツール ウィンドウのみが自動的に非表示になることを指定します。 既定では、このチェック ボックスはオフです。  

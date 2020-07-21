@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 255cc9373e18fc33ce1f43dd3be760e283d1e891
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771368"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438749"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 変更データベースの作成
   新しいインスタンス ウィザードを起動すると、[CDC データベースの作成] ページが表示されます。 [CDC データベースの作成] ページを使用して、新しい CDC インスタンスに関する情報を提供し、新しい変更データベースを作成します。  
@@ -31,13 +30,13 @@ ms.locfileid: "62771368"
   
  [SQL Server への接続] ダイアログ ボックスへのデータの入力については、「 [SQL Server Connection for Instance Creation](sql-server-connection-for-instance-creation.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[Oracle CDC インスタンス]**  
  作成する CDC インスタンスに関する次の情報を入力します。  
   
--   **[名前]** :新しいサービスの名前を入力します。 この名前は、新しい変更データベースの名前にもなります。  
+-   **[名前]** : 新しいサービスの名前を入力します。 この名前は、新しい変更データベースの名前にもなります。  
   
--   **説明**:新しいインスタンスを識別するのに役立つ説明を入力します。 これは省略可能です。  
+-   **[説明]** : 新しいインスタンスを識別するのに役立つ説明を入力します。 これは省略可能です。  
   
  **[SQL Server 変更データベース]**  
  このセクションは、データベースの作成に使用されます。  

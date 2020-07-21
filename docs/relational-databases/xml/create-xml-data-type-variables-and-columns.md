@@ -1,5 +1,6 @@
 ---
 title: XML データ型の変数と列の作成 | Microsoft Docs
+description: SQL Server で XML データ型の列と変数を作成する方法について学習します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 16cb419ef7cc893575e91c695158e9d7b66ce2c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0471d842c56abf7ca888542d36ea9b688797dd64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984868"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691474"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **xml** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での組み込みデータ型の 1 つであり、 **int** 、 **varchar**などの他の組み込みデータ型といくつかの点で似ている部分があります。 他の組み込みの型と同じく、 **xml** データ型はテーブルを作成するときに列の型として変数の型、パラメーターの型、および関数の戻り値の型と同様に使用したり、 [CAST および CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)で使用できます。  
   
 ## <a name="creating-columns-and-variables"></a>列と変数の作成  
@@ -67,7 +68,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 次に例を示します。  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -80,7 +81,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   制約が、テーブル内の他の XML 列または XML 以外の列に関係している場合。 たとえば、XML インスタンスに現れる Customer の ID (`/Customer/@CustId`) が、CustomerID リレーショナル列の値と一致する必要がある場合などです。  
   
- 制約は、型指定された **xml** データ型の列にも、型指定されていない xml データ型の列にも指定できます。 ただし、制約を指定するとき、[XML データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md) は使用できません。 また、 **xml** データ型では次の列およびテーブルの制約はサポートされません。  
+ 制約は、型指定された **xml** データ型の列にも、型指定されていない xml データ型の列にも指定できます。 ただし、制約を指定するとき、 [XML データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md) は使用できません。 また、 **xml** データ型では次の列およびテーブルの制約はサポートされません。  
   
 -   PRIMARY KEY/ FOREIGN KEY  
   

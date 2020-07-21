@@ -1,5 +1,6 @@
 ---
 title: メンテナンス プランの作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して SQL Server で単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1a9b34362f95f6450afaec77370f8876f76d4f07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8e76cdbc5adfb617511d81a1c5af938a95dba10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667477"
 ---
 # <a name="create-a-maintenance-plan"></a>メンテナンス プランの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でメンテナンス プランを作成する方法には、メンテナンス プラン ウィザードを使用する方法とデザイン画面を使用する方法の 2 とおりがあります。 基本的なメンテナンス プランを作成する場合は、ウィザードが最適です。それに対して、デザイン画面を使用してプランを作成すると、高度なワークフローを利用できます。  
   
  **このトピックの内容**  
@@ -31,7 +32,7 @@ ms.locfileid: "68083854"
      
      [前提条件](#Prerequisite)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **メンテナンス プランを作成するために使用するもの:**  
   
@@ -39,20 +40,20 @@ ms.locfileid: "68083854"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  マルチサーバー メンテナンス プランを作成するには、1 台のマスター サーバーと 1 台以上のターゲット サーバーを含むマルチサーバー環境を構成する必要があります。 マルチサーバー メンテナンス プランは、マスター サーバー上で作成および管理する必要があります。 このプランはターゲット サーバー上でも表示できますが、ターゲット サーバーでは管理できません。 
  
-###  <a name="Prerequisite"></a> 前提条件  
+###  <a name="prerequisite"></a><a name="Prerequisite"></a> 前提条件  
 [Agent XP サーバー構成オプション](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) を有効にする必要があります。
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  メンテナンス プランを作成または管理するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードを使用してメンテナンス プランを作成するには  
   
@@ -74,7 +75,7 @@ ms.locfileid: "68083854"
   
 4.  「[メンテナンス プランの作成 &#40;メンテナンス プラン デザイン画面&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)」の手順に従って、メンテナンス プランを作成します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-maintenance-plan"></a>メンテナンス プランを作成するには  
   
@@ -135,13 +136,13 @@ ms.locfileid: "68083854"
     GO  
     -- Attaches the RunOnce schedule to the job HistoryCleanupTask_1.   
     EXEC sp_attach_schedule  
-       @job_name = N'HistoryCleanupTask_1'  
+       @job_name = N'HistoryCleanupTask_1',  
        @schedule_name = N'RunOnce' ;   
     GO  
   
     ```  
   
- 詳細については、以下をご覧ください。  
+ 詳細については、次を参照してください。  
   
 -   [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
   

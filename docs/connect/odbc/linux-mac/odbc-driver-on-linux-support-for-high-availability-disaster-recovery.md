@@ -1,34 +1,35 @@
 ---
-title: Linux と macOS の ODBC ドライバー - 高可用性とディザスター リカバリー | Microsoft Docs
+title: Linux と macOS の ODBC ドライバー - 高可用性とディザスター リカバリー
+description: Microsoft ODBC Driver for Linux および macOS での AlwaysOn 可用性グループのサポート方法について説明します。
 ms.custom: ''
-ms.date: 04/05/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08fb8cc6e54fff4b315a0a98ace046a49b2673a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 50a72faf7dc517257ee2ce66f0f800c289f4329e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008767"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922181"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux と macOS の ODBC ドライバーでの高可用性とディザスター リカバリーのサポート
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Linux および macOS 用の ODBC ドライバーは [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] をサポートしています。 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]の詳細については、以下を参照してください。  
   
--   [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
--   [可用性グループの作成と構成 (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
+-   [可用性グループの作成と構成 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 接続文字列で、特定の可用性グループの可用性グループ リスナーを指定できます。 Linux または macOS 上の ODBC アプリケーションが、フェールオーバーする可用性グループ内のデータベースに接続されている場合、元の接続が切断されるため、フェールオーバー後にアプリケーションが動作を継続するには新しい接続を開く必要があります。
 
@@ -59,7 +60,7 @@ DNS サーバーから最初に返された IP アドレスに接続できない
 
 -   **loginTimeout** の値を増やすことで、フェールオーバー時間に対応し、アプリケーションの接続試行回数を減らすことができます。
 
--   分散トランザクションはサポートされていません。  
+-   分散トランザクションはサポートされません。  
   
 読み取り専用のルーティングが無効である場合、次の状況では可用性グループのセカンダリ レプリカの場所には接続できません。  
   
@@ -93,7 +94,7 @@ ODBC 接続プロパティの詳細については、「[SQLSetConnectAttr](../.
   
 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]を使用する ODBC アプリケーションでは、2 つの関数のいずれかを使用して接続できます。  
   
-|機能|[説明]|  
+|機能|説明|  
 |------------|---------------|  
 |[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** では、データ ソース名 (DSN) または接続属性を介して、**ApplicationIntent** と **MultiSubnetFailover** の両方がサポートされています。|  
 |[SQLDriverConnect 関数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** では、DSN、接続文字列キーワード、または接続属性を介して、**ApplicationIntent** と **MultiSubnetFailover** がサポートされています。|

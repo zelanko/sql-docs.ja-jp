@@ -13,33 +13,33 @@ f1_keywords:
 helpviewer_keywords:
 - CommandType property [ADO]
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cd6d06a50047f431700af9418a504faa4bd6957
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bbc90dc2d818ca880a9f712d551fd6a98fb9ecf3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919690"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760428"
 ---
 # <a name="commandtype-property-ado"></a>CommandType プロパティ (ADO)
-型を示す、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  
+[Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの種類を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 1 つまたは複数を取得または設定[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)値。  
+ 1つ以上の[Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値を設定または返します。  
   
 > [!NOTE]
->  使用しないでください、 **CommandTypeEnum**値**adCmdFile**または**adCmdTableDirect**で**CommandType**します。 これらの値は、オプションとしてのみ使用できます、[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)と[Requery](../../../ado/reference/ado-api/requery-method.md)のメソッド、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
+>  **Adcmdfile**の**commandtypeenum**値、または**CommandType**と共に**adcmdtabledirect**を使用しないでください。 これらの値は、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドおよび[Requery](../../../ado/reference/ado-api/requery-method.md)メソッドでオプションとしてのみ使用できます。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **CommandType**プロパティの評価を最適化するために、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティ。  
+## <a name="remarks"></a>Remarks  
+ **CommandType**プロパティを使用して、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティの評価を最適化します。  
   
- 場合、 **CommandType**プロパティの値は、既定値に設定されて**adCmdUnknown**、ADO プロバイダーの呼び出しかを判断する必要があるために、パフォーマンスの低下が発生する可能性があります、 **CommandText**プロパティが、SQL ステートメント、ストアド プロシージャ、またはテーブル名。 コマンドの種類を使用している場合は、設定、 **CommandType**プロパティに関連するコードに直接移動する ADO がよう指示します。 場合、 **CommandType**プロパティは、コマンドの種類と一致しません、 **CommandText**プロパティを呼び出すときにエラーが発生した、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッド。  
+ **CommandType**プロパティ値が既定値の**adcmdunknown**に設定されている場合、 **ado.net プロパティが**SQL ステートメント、ストアドプロシージャ、またはテーブル名であるかどうかを確認するために ADO がプロバイダーの呼び出しを行う必要があるため、パフォーマンスが低下する可能性があります。 使用しているコマンドの種類がわかっている場合は、 **CommandType**プロパティを設定することによって、関連するコードに直接アクセスするように ADO に指示します。 **CommandType**プロパティが**CommandText**プロパティ内のコマンドの型と一致しない場合、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドを呼び出すとエラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (vc++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)

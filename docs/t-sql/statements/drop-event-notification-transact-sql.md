@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: befa0085a7fc1a52ae02ba9443617b0593bb14ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18cc9317b8e610b442299cfee3777a183c9146df
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910057"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895450"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースからイベント通知トリガーを削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67910057"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP EVENT NOTIFICATION notification_name [ ,...n ]  
 ON { SERVER | DATABASE | QUEUE queue_name }  
@@ -57,7 +57,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  QUEUE *queue_name*  
  イベント通知のスコープが、*queue_name* で指定されたキューに適用されることを示します。 イベント通知の作成時に QUEUE を指定した場合は、QUEUE を指定する必要があります。 同様に、キューの名前である *queue_name* も指定する必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  トランザクション内でイベント通知が開始され、同じトランザクション内で削除される場合は、イベント通知インスタンスが送信されてから、このイベント通知が削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -67,7 +67,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
  特定のキューのイベント通知を削除するには、ユーザーは少なくともベント通知の所有者であるか、親キューに対する ALTER 権限を持っている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベース スコープのイベント通知を作成してから削除します。  
   
 ```sql  

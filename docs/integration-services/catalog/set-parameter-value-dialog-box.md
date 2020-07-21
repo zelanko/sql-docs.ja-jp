@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 83022e612afa862ae657f7f93dbe3a80ed8d0bb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a3e056e60eeab6dfdb79a448b4fc95bf1c01f50
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070542"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298935"
 ---
 # <a name="set-parameter-value-dialog-box"></a>[パラメーター値の設定] ダイアログ ボックス
 
@@ -30,7 +30,7 @@ ms.locfileid: "68070542"
   
 -   [オプションの構成](#option)  
   
-##  <a name="open_dialog"></a> [パラメーター値の設定] ダイアログ ボックスを開く  
+##  <a name="open-the-set-parameter-value-dialog-box"></a><a name="open_dialog"></a> [パラメーター値の設定] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -42,14 +42,14 @@ ms.locfileid: "68070542"
   
 4.  パッケージまたはプロジェクトを右クリックして **[構成]** をクリックし、 **[パラメーター]** タブまたは **[接続マネージャー]** タブの参照ボタンをクリックします。  
   
-##  <a name="option"></a> オプションの構成  
+##  <a name="configure-the-options"></a><a name="option"></a> オプションの構成  
  **パラメーター**  
  パラメーター名を一覧表示します。  
   
- **型**  
+ **Type**  
  パラメーター値のデータ型を一覧表示します。  
   
- **[説明]**  
+ **説明**  
  パラメーターのオプションの説明を表示します。  
   
  **値の編集**  

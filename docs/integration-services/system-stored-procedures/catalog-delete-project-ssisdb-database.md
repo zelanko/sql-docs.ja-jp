@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: daa98eea8582d65ae0653d9de407d9908cc11ac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 36485d7731d1d575eb3cff75ca19c60b13969452
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749590"
 ---
-# <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (SSISDB データベース)
+# <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのフォルダーから既存のプロジェクトを削除します。  
   
@@ -63,7 +63,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  対応するプロジェクトのすべてのオブジェクトおよび環境参照が、プロジェクトと共に削除されます。 ただし、プロジェクトのバージョンと関連する操作レコードは、操作のクリーンアップ ジョブが次回実行されるまで保持されます。  
   
   

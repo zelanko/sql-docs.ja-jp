@@ -29,15 +29,18 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 704bcba5e6b21ade748c7a549f5b88c131fa578c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121883"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630908"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!NOTE]
+> **RAISERROR** ステートメントでは、**SET XACT_ABORT** は考慮されません。 新しいアプリケーションでは、**RAISERROR** の代わりに **THROW** を使ってください。
 
   エラー メッセージを生成し、セッションのエラー処理を開始します。 RAISERROR では、sys.messages カタログ ビューに格納されているユーザー定義のメッセージを参照することも、メッセージを動的に作成することもできます。 メッセージは、サーバー エラー メッセージとして、呼び出し元のアプリケーションまたは関連する TRY...CATCH 構造の CATCH ブロックに返されます。 新しいアプリケーションでは、代わりに [THROW](../../t-sql/language-elements/throw-transact-sql.md) を使用してください。  
   
@@ -45,7 +48,7 @@ ms.locfileid: "68121883"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -54,7 +57,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
@@ -82,7 +85,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  置換された値の間隔と配置を決めるコードです。  
   
-|コード|プレフィックスまたは配置|[説明]|  
+|コード|プレフィックスまたは配置|説明|  
 |----------|-----------------------------|-----------------|  
 |- (マイナス)|左寄せ|指定されたフィールド幅内で引数の値を左寄せします。|  
 |+ (プラス)|符号プレフィックス|引数の値が符号付きの場合に、プラス記号 (+) またはマイナス記号 (-) を先頭に付けます。|  
@@ -122,8 +125,8 @@ RAISERROR ( { msg_str | @local_variable }
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** データ型に値を変換するには、 **%I64d** を指定します。  
   
- *@local_variable*  
- *msg_str* と同じ形式の文字列を含む有効な文字データ型の変数です。 *@local_variable* のデータ型は **char** または **varchar** であるか、これらのデータ型に暗黙的に変換できるデータ型である必要があります。  
+ *\@local_variable*  
+ *msg_str* と同じ形式の文字列を含む有効な文字データ型の変数です。 *\@local_variable* は、**char** または **varchar** であるか、これらのデータ型に暗黙的に変換できるデータ型である必要があります。  
   
  *severity*  
  このメッセージに関連付けられたユーザー定義重大度レベルです。 sp_addmessage を使用して作成されたユーザー定義メッセージを、*msg_id* を使用して出力するときは、RAISERROR で指定された重大度が sp_addmessage で指定された重大度をオーバーライドします。  
@@ -146,7 +149,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *state*  
+ *状態*  
  0 から 255 までの整数です。 負の値は既定で 1 に設定されます。 255 より大きい値は使用できません。 
   
  同じユーザー定義エラーが複数の場所で発生する場合、それぞれの場所に対して一意の状態番号を使用すると、コードのどのセクションでエラーが発生しているのかを楽に探すことができます。  
@@ -157,13 +160,13 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *オプション*  
  エラーのカスタム オプションです。次の表のいずれかの値をとります。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|LOG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスについて、エラー ログとアプリケーション ログにエラーを記録します。 エラー ログに記録されるエラーは、現在、最高 440 バイトに制限されています。 sysadmin 固定サーバー ロールまたは ALTER TRACE 権限を持つユーザーのメンバーのみが WITH LOG を指定できます。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|LOG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスについて、エラー ログとアプリケーション ログにエラーを記録します。 エラー ログに記録されるエラーは、現在、最高 440 バイトに制限されています。 sysadmin 固定サーバー ロールまたは ALTER TRACE 権限を持つユーザーのメンバーのみが WITH LOG を指定できます。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|クライアントにすぐにメッセージを送信します。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|重大度レベルとは無関係に、@@ERROR 値と ERROR_NUMBER 値に *msg_id* または 50000 を設定します。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  RAISERROR によって生成されたエラーは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のコードによって生成されたエラーと同様に機能します。 RAISERROR によって指定された値は、ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE、@@ERROR システム関数によりレポートされます。 TRY ブロックで 11 以上の重大度で RAISERROR を実行すると、RAISERROR から、関連する CATCH ブロックに制御が渡されます。 RAISERROR が次の条件で実行されると、呼び出し元にエラーが返されます。  
   
 -   TRY ブロックのスコープの外で実行された場合  
@@ -211,7 +214,7 @@ RAISERROR (N'<\<%7.3s>>', -- Message text.
 GO  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-error-information-from-a-catch-block"></a>A. CATCH ブロックからエラー情報を返す  
  次のコード例では、`TRY` ブロック内で `RAISERROR` を使用して、関連付けられている `CATCH` ブロックに実行を移動させる方法を示します。 また、`RAISERROR` を使用して、`CATCH` ブロックを呼び出したエラーについての情報を返す方法も示しています。  

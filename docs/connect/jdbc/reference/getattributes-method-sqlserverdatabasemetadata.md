@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36543107ba8acd635f0e71fde903cab2576a7b17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 29376e0c88d7563fe66b3cf2afd54db2916624f6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954075"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920084"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>getAttributes メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -63,8 +63,8 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getAttributes メソッドは、java メタデータインターフェイスの getAttributes メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getAttributes メソッドは、java.sql.DatabaseMetaData インターフェイスの getAttributes メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

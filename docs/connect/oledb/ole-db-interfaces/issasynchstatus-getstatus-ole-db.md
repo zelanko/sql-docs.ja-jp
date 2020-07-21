@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: GetStatus (OLE DB) |Microsoft Docs'
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994377"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -44,7 +44,7 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>引数  
  *hChapter*[in]  
- チャプター ハンドル。 ポーリングオブジェクトが行セットオブジェクトではない場合、または操作がチャプターに適用されない場合は、DB_NULL_HCHAPTER に設定する必要があります。これは、プロバイダーによって無視されます。  
+ チャプター ハンドル。 ポーリングされるオブジェクトが行セット オブジェクトではないか、操作がチャプターに適用されない場合は、DB_NULL_HCHAPTER に設定する必要があります。プロバイダーでは、この設定が無視されます。  
   
  *eOperation*[in]  
  非同期状態が要求されている操作。 次の値を使用する必要があります。  
@@ -62,7 +62,7 @@ HRESULT GetStatus(
  *pulProgressMax* に NULL ポインターを指定すると、予想最大値は返されません。  
   
  *peAsynchPhase*[out]  
- 非同期操作の進行状況に関する詳細情報を返すメモリへのポインター。 有効な値は次のとおりです。  
+ 非同期操作の進行状況に関する詳細情報を返すメモリへのポインター。 有効な値は、次のとおりです。  
   
  DBASYNCHPHASE_INITIALIZATION - オブジェクトは初期化フェーズにあります。 引数 *pulProgress* と *pulProgressMax* は、完了の推定比率を示します。 オブジェクトはまだ完全に具体化されていません。 そのため、他のインターフェイスの呼び出しを試みると失敗したり、このオブジェクトのすべてのインターフェイスを使用できない場合があります。 行を更新、削除、または挿入するコマンドに対して **ICommand::Execute** を呼び出すことにより非同期操作が実行された場合、および *cParamSets* が 1 より大きい場合、*pulProgress* と *pulProgressMax* は、パラメーターの 1 つのセットの進行状況か、パラメーター セットの配列全体の進行状況を示します。  
   
@@ -97,7 +97,7 @@ HRESULT GetStatus(
  また、データ ソース オブジェクトの初期化中に非同期処理が取り消されたことを示している場合もあります。 この場合、データ ソース オブジェクトは初期化されていない状態です。  
   
  E_INVALIDARG  
- *Hchapter*パラメーターが正しくありません。  
+ *hChapter* パラメーターが正しくありません。  
   
  E_UNEXPECTED  
  **IDBInitialize::Initialize** が呼び出されていないデータ ソース オブジェクトに対して **ISSAsynchStatus::GetStatus** メソッドが呼び出されたことを示します。  
@@ -109,7 +109,7 @@ HRESULT GetStatus(
  E_FAIL  
  プロバイダー固有のエラーが発生しました。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **ISSAsynchStatus::GetStatus** メソッドの動作は、**IDBAsynchStatus::GetStatus** メソッドとまったく同じです。ただし、データ ソース オブジェクトの初期化が中止された場合は、DB_E_CANCELED ではなく E_UNEXPECTED が返されます ([ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) の場合は DB_E_CANCELED が返されます)。 これは、初期化の中止後、追加の初期化操作が試行される場合に備えて、データ ソース オブジェクトの状態が通常のゾンビ状態のままにならないためです。  
   
  行セットを初期化またはデータ設定する非同期操作では、このメソッドをサポートする必要があります。  

@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQRT function
 - square root values
 ms.assetid: 26e244e8-e82d-4664-a445-1226230ee1c5
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a033ca963f2849cb4e92b93a2c766de7b6fe322f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28d0b6bdd5ec701a11eca41eed577e2cafaaec3b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906960"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85996217"
 ---
 # <a name="sqrt-transact-sql"></a>SQRT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定した浮動小数点値の平方根を返します。  
   
@@ -41,12 +41,12 @@ SQRT ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- **float** 型、または暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に float 型に変換できる**式**を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`1.00` から `10.00` までの値の平方根を返します。  
   
 ```  
@@ -83,7 +83,7 @@ GO
 3.0  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例は、`1.00` ～ `10.00` までの数値の平方根を返します。  
   
 ```  

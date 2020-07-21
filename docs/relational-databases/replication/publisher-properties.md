@@ -1,6 +1,7 @@
 ---
-title: SQL Server レプリケーションの [パブリッシャーのプロパティ] ダイアログ ボックス | Microsoft Docs
-ms.custom: ''
+title: '[パブリッシャーのプロパティ] ダイアログ ボックス (SSMS)'
+description: SQL Server Management Studio (SSMS) 内の特定のパブリケーションの [パブリッシャーのプロパティ] ダイアログ ボックスについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,16 +16,16 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1bc6b8506244b16a1c9592ed59e91684494bfa1e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2af128ab6de902aa7e757cf9d7464c9b743c290b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717631"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server レプリケーションの [パブリッシャーのプロパティ] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 このトピックでは、[パブリッシャーのプロパティ] ダイアログ ボックス内にあるさまざまなオプションについて説明します。 
 
@@ -33,8 +34,6 @@ ms.locfileid: "68768552"
   
 1.  パブリッシャーでのパブリッシングを無効にします。 詳細については、「[パブリッシングの無効化と配布](../../relational-databases/replication/disable-publishing-and-distribution.md)」を参照してください。    
 2.  パブリッシングおよびディストリビューションを再構成します。 詳細については、「 [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)」をご参照ください。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="distributor"></a>ディストリビューター 
 **[パブリッシャーのプロパティ]** ダイアログ ボックスを使用すると、パブリッシャーとそのディストリビューター間のリレーションシップに関連するプロパティの表示と修正を行うことができます。  
@@ -63,23 +62,23 @@ ms.locfileid: "68768552"
  **トランザクション**  
  このチェック ボックスをオンにすると、 **db_owner** 固定データベース ロール内のユーザーは、スナップショット パブリケーションまたはトランザクション パブリケーションをそのデータベースに作成できるようになります。 
   
- **Merge**  
+ **[マージ]**  
  このチェック ボックスをオンにすると、 **db_owner** 固定データベース ロール内のユーザーは、マージ パブリケーションをそのデータベースに作成できるようになります。  
   
 
 ## <a name="subcribers"></a>サブスクライバー
-  **[パブリッシャーのプロパティ]** ダイアログ ボックスの **[サブスクライバー]** ページは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されているパブリッシャーで使用します。 このページを使用すると、サブスクライバーがこのパブリッシャー上のパブリケーションからデータを受け取ることができます。 サブスクライバーがこのパブリッシャーからデータを受け取るだけでは、このパブリッシャー上のパブリケーションへのサブスクリプションは作成できません。 サブスクリプションを作成するには、サブスクリプションの新規作成ウィザードを使用します。  
+  **[パブリッシャーのプロパティ]** ダイアログ ボックスの **[サブスクライバー]** ページは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] が実行されているパブリッシャーで使用します。 このページを使用すると、サブスクライバーがこのパブリッシャー上のパブリケーションからデータを受け取ることができます。 サブスクライバーがこのパブリッシャーからデータを受け取るだけでは、このパブリッシャー上のパブリケーションへのサブスクリプションは作成できません。 サブスクリプションを作成するには、サブスクリプションの新規作成ウィザードを使用します。  
   
 ### <a name="options"></a>オプション  
  **[パブリッシャーのプロパティ]**  
  **[サブスクライバー]** プロパティ グリッドには、このパブリッシャー上のパブリケーションからデータを受け取るように設定されているサブスクライバーが表示されます。 その他のプロパティを表示し、設定するには、サブスクライバーの横にあるプロパティ ボタン ( **[...]** ) をクリックします。  
   
- **[追加]**  
+ **追加**  
  サブスクライバーを追加するには、 **[追加]** をクリックしてから、 **[SQL Server サブスクライバーの追加]** または **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Publisher で文書を作成するには](../../relational-databases/replication/publish/create-a-publication.md)   
+ [パブリケーションを作成する](../../relational-databases/replication/publish/create-a-publication.md)   
 
 
   

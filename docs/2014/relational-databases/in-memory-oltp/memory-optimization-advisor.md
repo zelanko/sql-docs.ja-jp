@@ -10,22 +10,21 @@ f1_keywords:
 - sql12.swb.memoryoptimizationwizard.f1
 - swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 581ce3a1b13d94814904876f61637dcad3dd76de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050076"
 ---
 # <a name="memory-optimization-advisor"></a>メモリ最適化アドバイザー
-  トランザクション パフォーマンス レポート ツール ( [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)を参照) では、インメモリ OLTP を使用するように移植した場合に効果が得られる、データベース内のテーブルが通知されます。 インメモリ OLTP を使用するように移植するテーブルを特定した後に、メモリ最適化アドバイザーを使用すると、ディスク ベースのデータベース テーブルをインメモリ OLTP に移行できます。  
+  トランザクション パフォーマンス レポート ツール ( [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)を参照) では、インメモリ OLTP を使用するように移植した場合に効果が得られる、データベース内のテーブルが通知されます。 インメモリ OLTP を使用するように移植するテーブルを特定した後に、メモリ最適化アドバイザーを使用すると、ディスク ベースのデータベース テーブルをインメモリ OLTP に移行できます。  
   
  まず、ディスク ベースのデータベース テーブルが格納されているインスタンスに接続します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインスタンスに接続できます。 ただし、アドバイザーを使用して移行操作を実行する場合は、インメモリ OLTP 機能が有効になっている [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] インスタンスに接続する必要があります。 インメモリ OLTP の要件の詳細については、「 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)」を参照してください。  
   
- 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
+ 移行方法の詳細については、「[インメモリ OLTP-一般的なワークロードパターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>メモリ最適化アドバイザーの使用に関するチュートリアル  
  **オブジェクト エクスプローラー**で、変換するテーブルを右クリックし、 **[メモリ最適化アドバイザー]** を選択します。 これにより、 **テーブルのメモリ最適化アドバイザー**のようこそページが表示されます。  
@@ -84,7 +83,7 @@ ms.locfileid: "63157999"
 > [!WARNING]  
 >  このオプションを選択するのは、持続性のないテーブルと関連したデータ損失のリスクを理解している場合だけにしてください。  
   
- **[次へ]** をクリックして次に進みます。  
+ **[次へ]** をクリックして、続行します。  
   
 ### <a name="review-primary-key-conversion"></a>[主キーの変換の確認]  
  次の画面は **[主キーの変換の確認]** です。 メモリ最適化アドバイザーでは、テーブルに 1 つ以上の主キーが存在するかどうかが検出され、主キーのメタデータに基づいて列の一覧が作成されます。 列の一覧が作成されなければ、持続性のあるメモリ最適化テーブルに移行する場合に、主キーを作成する必要があります。  

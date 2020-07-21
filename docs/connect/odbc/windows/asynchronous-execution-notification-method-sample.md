@@ -1,5 +1,6 @@
 ---
-title: 非同期実行 (通知方法) の例 | Microsoft Docs
+title: 非同期実行 (通知方法) の例
+description: Microsoft ODBC Driver for SQL Server で (通知方法を使用して) 非同期実行を使用する方法を示すコード例。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d256f65c191ff0f9ed8623a9ecf345eb707d6032
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f0a5a7ea9f252364c200c587e60193366a005f60
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008502"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922281"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>非同期実行 (通知方法) の例
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  このトピックのコード サンプルは、[非同期実行 (通知方法)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx) の使用方法を示しています。  
+  このトピックのコード サンプルは、[非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) の使用方法を示しています。  
   
  この関数は非同期通知を利用し、5 つの接続を開き、各接続のステートメントで 1 つのクエリを実行します。  
   

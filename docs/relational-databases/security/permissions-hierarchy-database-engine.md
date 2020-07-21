@@ -1,5 +1,6 @@
 ---
 title: 権限の階層 (データベース エンジン) | Microsoft Docs
+description: SQL Server データベース エンジンでアクセス許可を使用してセキュリティで保護できる、セキュリティ保護可能なリソースと呼ばれるエンティティの階層について説明します。
 ms.custom: ''
 ms.date: 03/23/2016
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22bb9713faab2b1d3195092130a95997ca69641f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a32748e7714bebef62a67f7a3e7d5fb9f8babd36
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010810"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009384"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>権限の階層 (データベース エンジン)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、権限を使用してセキュリティで保護できるエンティティの階層コレクションが管理されています。 これらのエンティティを、 *セキュリティ保護可能なリソース*と呼びます。 最も顕著なセキュリティ保護可能なリソースはサーバーとデータベースですが、さらに細かいレベルで個別の権限を設定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 適切な権限が許可されていることを確認することにより、セキュリティ保護可能なリソースに対するプリンシパルによる操作を制御しています。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68010810"
   
  権限システムは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]、 [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]のすべてのバージョンで同様に機能しますが、一部のバージョンでは使用できない機能もあります。 たとえば、サーバー レベルの権限は、Azure 製品では構成できません。  
   
- ![データベース エンジンの権限階層の図](../../relational-databases/security/media/wj-security-layers.gif "データベース エンジンの権限階層の図")  
+ ![データベース エンジンの権限の階層の図](../../relational-databases/security/media/wj-security-layers.gif "データベース エンジンの権限の階層の図")  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 権限の一覧表  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのアクセス許可を示した pdf 形式のポスター サイズの一覧表については、[https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster) を参照してください。  

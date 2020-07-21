@@ -1,6 +1,6 @@
 ---
-title: オブジェクト エクスプローラーを使用したオブジェクトの管理 | Microsoft Docs
-ms.custom: ''
+title: オブジェクト エクスプローラーを使用したオブジェクトの管理
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb52261160cc693193e4cc983a4c2e28baa28686
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d499666f51605e7df90332174c82681f8a386017
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264102"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257217"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用したオブジェクトの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,8 +51,8 @@ ms.locfileid: "68264102"
 ### <a name="open-a-connected-query-editor"></a>接続先のクエリ エディターを開く  
 オブジェクト エクスプローラーからサーバーに接続すると、オブジェクト エクスプローラーの接続設定を使用してコード エディターの新しいウィンドウを開くことができます。 コード エディターの新しいウィンドウを開くには、オブジェクト エクスプローラーでサーバー名を右クリックして **[新しいクエリ]** をクリックします。 特定のデータベースを使用してコード エディターのウィンドウを開くには、データベース名を右クリックして **[新しいクエリ]** をクリックします。 Analysis Services サーバーに対する新しいクエリを開くときには、DMX、MDX、XMLA のいずれかのクエリを選択できます。  
   
-### <a name="start-powershell"></a>PowerShell を開始する  
-PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[PowerShell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell サポートが有効になった PowerShell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の PowerShell 環境で PowerShell コマンドを入力できます。 詳細については、「 [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)」を参照してください。  
+### <a name="start-powershell"></a>PowerShell を起動する  
+PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[PowerShell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell サポートが有効になった PowerShell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の PowerShell 環境で PowerShell コマンドを入力できます。 詳細については、「[SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [[オブジェクト エクスプローラー]](../../ssms/object/object-explorer.md)  

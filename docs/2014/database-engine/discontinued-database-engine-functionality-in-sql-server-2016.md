@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 におけるデータベース エンジンの機能の廃止 |Microsoft Docs
+title: SQL Server 2014 | のデータベースエンジン廃止された機能Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -32,53 +32,52 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 14924dedee04345c593683752baff4161c8d270d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933153"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 で廃止されたデータベース エンジンの機能
   このトピックでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] で使用できなくなった [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。  
   
-## <a name="SQL14"></a> 廃止された機能 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a><a name="SQL14"></a>で廃止された機能[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で削除された機能を次の表に示します。  
   
-|カテゴリ|提供が中止された機能|代替|  
+|カテゴリ|廃止された機能|代替|  
 |--------------|--------------------------|-----------------|  
-|互換性レベル|互換性レベル 90|データベースを互換性レベル 100 以上に設定する必要があります。 互換性レベル 100 未満のデータベースを [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] にアップグレードすると、データベースの互換性レベルはアップグレード操作中に 100 に設定されます。|  
+|互換性レベル|90互換性レベル|データベースを互換性レベル 100 以上に設定する必要があります。 互換性レベル 100 未満のデータベースを [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] にアップグレードすると、データベースの互換性レベルはアップグレード操作中に 100 に設定されます。|  
   
-## <a name="Denali"></a> 廃止された機能 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-sssql11"></a><a name="Denali"></a>で廃止された機能[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で削除された機能を次の表に示します。  
   
-|カテゴリ|提供が中止された機能|代替|  
+|カテゴリ|廃止された機能|代替|  
 |--------------|--------------------------|-----------------|  
-|バックアップと復元|**BACKUP {DATABASE&#124;ログ} WITH PASSWORD**と**バックアップ {データベース&#124;ログ} WITH MEDIAPASSWORD**は廃止されました。 **復元 {データベース&#124;ログ} [MEDIA] のパスワードを使用して**非推奨とされ続けます。|なし|  
-|バックアップと復元|**RESTORE { DATABASE &#124; LOG } ...WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ...RESTRICTED_USER を**|  
-|互換性レベル|互換性レベル 80|データベースを以上に設定する必要があります互換性レベル 90 です。|  
-|構成オプション|`sp_configure 'user instance timeout'` および `'user instances enabled'`|ローカル データベースの機能を使用します。 詳細については、次を参照してください[SqlLocalDB ユーティリティ。](../tools/sqllocaldb-utility.md)|  
+|バックアップと復元|**Backup {database &#124; log} WITH PASSWORD**および**backup {database &#124; LOG} with MEDIAPASSWORD**は廃止されました。 **[MEDIA] を使用した復元 {DATABASE &#124; LOG}** は、引き続き非推奨とされます。|None|  
+|バックアップと復元|**復元 {データベース &#124; ログ}...DBO_ONLY**|**{DATABASE &#124; LOG} を復元します......RESTRICTED_USER**|  
+|互換性レベル|80互換性レベル|データベースは、互換性レベル90以上に設定する必要があります。|  
+|構成オプション|`sp_configure 'user instance timeout'` および `'user instances enabled'`|ローカル データベースの機能を使用します。 詳細については、「 [SqlLocalDB Utility](../tools/sqllocaldb-utility.md) 」を参照してください。|  
 |接続プロトコル|VIA プロトコルのサポートは中止されました。|代わりに TCP を使用してください。|  
 |データベース オブジェクト|トリガーでの `WITH APPEND` 句の使用|トリガー全体を再作成してください。|  
 |データベース オプション|`sp_dboption`|`ALTER DATABASE`|  
-|Mail|SQL Mail|データベース メールを使用してください。 詳細については、次を参照してください。[データベース メール](../relational-databases/database-mail/database-mail.md)と[Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md)します。|  
+|Mail|SQL Mail|データベース メールを使用してください。 詳細については、「 [SQL Mail の代わりにデータベースメール](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md)を[データベースメール](../relational-databases/database-mail/database-mail.md)して使用する」を参照してください。|  
 |メモリ管理|32 ビットの AWE (Address Windowing Extensions) と 32 ビットのホット アド メモリ サポート。|64 ビットのオペレーティング システムを使用します。|  
-|メタデータ|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
+|Metadata|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |プログラミング|SQL Server 分散管理オブジェクト (SQL-DMO)。|SQL Server 管理オブジェクト (SMO)|  
-|クエリ ヒント|`FASTFIRSTROW` ヒント|`OPTION (FAST` *n* `)`します。|  
+|クエリヒント|`FASTFIRSTROW` ヒント|`OPTION (FAST`*n* `)` 。|  
 |リモート サーバー|`sp_addserver` を使用して新しいリモート サーバーを作成する機能は廃止されました。 'local' オプションを設定した `sp_addserver` は引き続き使用できます。 アップグレード中に保持されたリモート サーバーまたはレプリケーションによって作成されたリモート サーバーは使用可能です。|リンク サーバーを使用してリモート サーバーを置き換えてください。|  
 |セキュリティ|`sp_dropalias`|別名をユーザー アカウントとデータベース ロールの組み合わせで置き換えてください。 アップグレードされたデータベースで別名を削除するには、`sp_dropalias` を使用します。|  
-|セキュリティ|Version パラメーター **PWDCOMPARE**ログインの値を表すよりも前[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2000 は廃止されました。|なし|  
-|SMO での Service Broker のプログラミング|**Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority**クラスが実装されなく、 **Microsoft.SqlServer.Management.Smo.IObjectPermission**インターフェイス。||  
+|セキュリティ|2000より前のログインの値を表す**Pwdcompare**のバージョンパラメーター [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は廃止されました。|None|  
+|SMO での Service Broker のプログラミング|**IObjectPermission**インターフェイスは、**このクラスに**よって実装されなくなりました。このクラスを実装すると、||  
 |SET オプション|`SET DISABLE_DEF_CNST_CHK`|[なし] :|  
 |システム テーブル|sys.database_principal_aliases|別名の代わりにロールを使用してください。|  
-|Transact-SQL|`RAISERROR` という形式の `RAISERROR integer 'string'` は廃止されました。|現在使用してステートメントを書き直してください**raiserror (...)** 構文。|  
-|Transact-SQL 構文|`COMPUTE / COMPUTE BY`|`ROLLUP` を使用してください。|  
-|Transact-SQL 構文|使用 **\* =** と **=&#42;**|ANSI 結合構文を使用してください。 詳細については、次を参照してください。 [(TRANSACT-SQL) から。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
-|XEvent|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change、database_file_size_change で置換<br /><br /> database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
+|Transact-SQL|`RAISERROR` という形式の `RAISERROR integer 'string'` は廃止されました。|現在の**RAISERROR (...)** 構文を使用してステートメントを書き直してください。|  
+|Transact-SQL 構文|`COMPUTE / COMPUTE BY`|`ROLLUP` を使用します|  
+|Transact-SQL 構文|**\*=** および **=&#42;** の使用|ANSI 結合構文を使用してください。 詳細については、「 [FROM (transact-sql)](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx) 」を参照してください。|  
+|XEvent|databases_data_file_size_changed、databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|次の各イベントに置き換えられました: database_file_size_change、database_file_size_change<br /><br /> database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
- **XEvent の追加変更します。**  
+ **XEvent の追加変更**  
   
  **resource_monitor_ring_buffer_record**:  
   

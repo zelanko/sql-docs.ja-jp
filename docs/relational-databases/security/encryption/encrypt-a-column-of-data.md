@@ -1,5 +1,6 @@
 ---
 title: データの列の暗号化 | Microsoft Docs
+description: Transact-SQL (列レベルまたはセルレベルの暗号化とも呼ばれる) を使用して、SQL Server で対称暗号化を使ってデータ列を暗号化する方法について説明します。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -13,22 +14,22 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a32cacd0c4539625b1f0b65335793d32d81c9fcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: 90987ec581d734116f386e1a0f3bfd72e4bf15b6
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049913"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091749"
 ---
 # <a name="encrypt-a-column-of-data"></a>データの列の暗号化
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で対称暗号化を使用してデータ列を暗号化する方法について説明します。 これは、列レベルの暗号化、またはセル レベルの暗号化とも呼ばれます。  
+  この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で対称暗号化を使用してデータ列を暗号化する方法について説明します。 これは、列レベルの暗号化、またはセル レベルの暗号化とも呼ばれます。 この機能は、Azure Synapse Analytics (SQL DW) でプレビュー段階です。
 
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  次の手順を実行するには、次の権限が必要です。  
@@ -60,8 +61,6 @@ PASSWORD = '<some strong password>';
   
 3. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```sql
     USE AdventureWorks2012;  
     GO  
@@ -77,7 +76,7 @@ PASSWORD = '<some strong password>';
   
     -- Create a column in which to store the encrypted data.  
     ALTER TABLE Sales.CreditCard   
-        ADD CardNumber_Encrypted varbinary(128);   
+        ADD CardNumber_Encrypted varbinary(160);   
     GO  
   
     -- Open the symmetric key with which to encrypt the data.  
@@ -168,7 +167,7 @@ PASSWORD = '<some strong password>';
     GO  
     ```  
   
- 詳細については、以下を参照してください。  
+ 詳細については、「  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  
   

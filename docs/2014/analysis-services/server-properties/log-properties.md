@@ -52,13 +52,12 @@ helpviewer_keywords:
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af365a21443f3feeb54ce2f76c729ba40909b9df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068916"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940654"
 ---
 # <a name="log-properties"></a>ログのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すログ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
@@ -76,7 +75,7 @@ ms.locfileid: "66068916"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="error-log"></a>エラー ログ  
- 次のプロパティをサーバー インスタンス レベルで設定し、他のツールとデザイナーに表示されるエラーの構成の既定値を変更できます。 参照してください[キューブ、パーティション、およびディメンションの処理のエラー構成&#40;SSAS - 多次元&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)と<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>詳細についてはします。  
+ 次のプロパティをサーバー インスタンス レベルで設定し、他のツールとデザイナーに表示されるエラーの構成の既定値を変更できます。 詳細については、「 [SSAS-多次元&#41;の &#40;キューブ、パーティション、およびディメンションの処理のエラー構成](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)」を参照してください <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 。  
   
  **ErrorLog\ErrorLogFileName**  
  サーバーによる処理操作の実行時に既定値として使用されるプロパティです。  
@@ -147,7 +146,7 @@ ms.locfileid: "66068916"
  **Exception\MinidumpErrorList**  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="flight-recorder"></a>フライト レコーダー  
+## <a name="flight-recorder"></a>Flight Recorder  
  **FlightRecorder\Enabled**  
  フライト レコーダー機能が有効かどうかを示すブール型プロパティです。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "66068916"
  このプロパティの既定値は空白です。その場合、既定で使用されるファイル名は FlightRecorderTraceDef.xml になります。  
   
 ## <a name="query-log"></a>クエリ ログ  
- **適用対象:** 多次元サーバー モードのみ  
+ **適用対象:** 多次元サーバーモードのみ  
   
  **QueryLog\QueryLogFileName**  
  クエリ ログ ファイルの名前を指定する文字列プロパティです。 このプロパティは、データベース テーブル (既定の動作) ではなく、ディスク ファイルがログ記録に使用される場合にのみ適用されます。  
@@ -198,7 +197,7 @@ ms.locfileid: "66068916"
  このプロパティの既定値は False であり、サーバーによってログ テーブルが自動的に作成されず、クエリ イベントがログ記録されないことを示します。  
   
 > [!NOTE]  
->  クエリ ログの構成の詳細については、次を参照してください。 [Analysis Services での操作を記録](../instances/log-operations-in-analysis-services.md)します。  
+>  クエリログの構成の詳細については、「 [Analysis Services のログ操作](../instances/log-operations-in-analysis-services.md)」を参照してください。  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
@@ -232,7 +231,7 @@ ms.locfileid: "66068916"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis services サーバーのプロパティを構成します。](server-properties-in-analysis-services.md)   
+ [Analysis Services でのサーバープロパティの構成](server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -19,33 +19,33 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 566a160121f9fd370621706539358931aa2ec14f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6248223fd2901a02e7aed494ea6a8a305e1f56ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757673"
 ---
 # <a name="create-dml-triggers"></a>DML トリガーの作成
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の CREATE TRIGGER ステートメントを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガーを作成する方法について説明します。  
   
-##  <a name="Top"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="Top"></a> はじめに  
   
 ### <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  DML トリガーの作成に関する制限事項と制約事項の一覧については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  トリガーを作成するテーブルまたはビューに対する ALTER 権限が必要です。  
   
-##  <a name="Procedures"></a> DML トリガーの作成方法  
+##  <a name="how-to-create-a-dml-trigger"></a><a name="Procedures"></a> DML トリガーの作成方法  
  次のいずれかを使用します。  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
@@ -57,12 +57,12 @@ ms.locfileid: "68056221"
   
 5.  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスで、各パラメーターに次の値を入力します。  
   
-    |パラメーター|[値]|  
+    |パラメーター|値|  
     |---------------|-----------|  
     |Author|*名前*|  
     |Create Date|*今日の日付*|  
-    |[説明]|ベンダーへの新しい購買発注の挿入を許可する前に、ベンダーの信用格付けを確認します。|  
-    |Schema_Name|Purchasing|  
+    |説明|ベンダーへの新しい購買発注の挿入を許可する前に、ベンダーの信用格付けを確認します。|  
+    |Schema_Name|購入|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|一覧から UPDATE と DELETE を削除します。|  
@@ -99,11 +99,9 @@ ms.locfileid: "68056221"
   
 10. オブジェクト エクスプローラーにリストされた DML トリガーを確認するには、 **[トリガー]** を右クリックして **[更新]** を選択します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  [はじめに](#Top)  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e1f13c3fedc3cfaa0645eec5a769ed482b339563
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a2a8ed081f89e5acd9d09f96fada5f5bc718057
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976002"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913808"
 ---
 # <a name="previous-method-sqlserverresultset"></a>previous メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public boolean previous()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 新しい現在の行が有効な場合は**true**を指定します。 処理する行がなくなった場合は**false** 。  
+ 新しい現在の行が有効な場合は **true**。 処理する行がなくなった場合は **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この前のメソッドは、前の手順で指定した、java. ResultSet インターフェイスのメソッドです。  
+## <a name="remarks"></a>解説  
+ この previous メソッドは、java.sql.ResultSet インターフェイスの previous メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

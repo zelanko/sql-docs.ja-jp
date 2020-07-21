@@ -1,5 +1,5 @@
 ---
-title: データ フィード (SSAS テーブル) からのインポート |Microsoft Docs
+title: データフィードからのインポート (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f1343f8234e23156981e416613cd2b899cf57f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080566"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544224"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>データ フィードからのインポート (SSAS テーブル)
   データ フィードは、オンライン データ ソースから生成され、宛先のドキュメントやアプリケーションに送信される 1 つ以上の XML データ ストリームです。 テーブルのインポート ウィザードを使用して、データ フィードからモデルにデータをインポートできます。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
 -   [データ フィードからのインポートについて](#prereq)  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66080566"
   
 -   [Reporting Services レポートからのデータ フィードのインポート](#importreport)  
   
-##  <a name="prereq"></a> データ フィードからのインポートについて  
+##  <a name="understanding-import-from-a-data-feed"></a><a name="prereq"></a>データフィードからのインポートについて  
  次の種類のデータ フィードからテーブル モデルにデータをインポートできます。  
   
  **Reporting Services レポート**  
@@ -46,7 +45,7 @@ ms.locfileid: "66080566"
   
  インポート時に、データ フィードからのデータがモデルに 1 回追加されます。 フィードから更新済みデータを取得するには、モデル デザイナーからデータを更新するか、Analysis Services の実稼動インスタンスに配置後にモデルのデータ更新スケジュールを構成するかします。 詳細については、「 [データの処理 (SSAS テーブル)](process-data-ssas-tabular.md)」を参照してください。  
   
-##  <a name="azure"></a> Azure DataMarket データセットからのデータのインポート  
+##  <a name="import-data-from-an-azure-datamarket-dataset"></a><a name="azure"></a>Azure DataMarket データセットからのデータのインポート  
  モデル内のテーブルとして Azure DataMarket からデータをインポートできます。  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>Azure DataMarket データセットからデータをインポートするには  
@@ -73,7 +72,7 @@ ms.locfileid: "66080566"
   
 11. **[テーブルとビューの選択]** ページで、 **[完了]** をクリックします。  
   
-##  <a name="importdata"></a> パブリックまたは企業データのソースからのデータ フィードのインポート  
+##  <a name="import-data-feeds-from-public-or-corporate-data-sources"></a><a name="importdata"></a>パブリックまたは企業のデータソースからデータフィードをインポートする  
  パブリック フィードにアクセスするか、または専用または従来のデータベース システムから Atom フィードを生成するカスタム データ サービスを作成できます。  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>パブリックまたは企業データ フィードからデータをインポートするには  
@@ -111,7 +110,7 @@ ms.locfileid: "66080566"
   
 10. **[テーブルとビューの選択]** ページで、 **[完了]** をクリックします。  
   
-##  <a name="importlist"></a> SharePoint リストからのデータ フィードのインポート  
+##  <a name="import-data-feeds-from-sharepoint-lists"></a><a name="importlist"></a>SharePoint リストからデータフィードをインポートする  
  (SharePoint) リボンに **[データ フィードとしてエクスポート]** ボタンを持つ SharePoint リストをインポートできます。 このボタンをクリックすると、リストをフィードとしてエクスポートできます。  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>SharePoint リストからデータ フィードをインポートするには  
@@ -122,7 +121,7 @@ ms.locfileid: "66080566"
   
 3.  **[データ フィードへの接続]** ページに、アクセスするフィードに付けるわかりやすい名前を入力します。 複数のフィードまたはデータ ソースをインポートする場合、接続を表す名前を使用すると、接続の使用方法の識別に役立ちます。  
   
-4.  データ フィードの URL で、リスト データ サービス アドレスを入力交換\<サーバー名 > を SharePoint サーバーの実際の名前。  
+4.  [データフィード URL] に、リストデータサービスへのアドレスを入力し \<server-name> ます。の部分は、実際の SharePoint サーバーの名前に置き換えてください。  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -143,7 +142,7 @@ ms.locfileid: "66080566"
   
 10. **[テーブルとビューの選択]** ページで、 **[完了]** をクリックします。  
   
-##  <a name="importreport"></a> Reporting Services レポートからのデータ フィードのインポート  
+##  <a name="import-data-feeds-from-reporting-services-reports"></a><a name="importreport"></a>Reporting Services レポートからのデータフィードのインポート  
  [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services を配置している場合は、Atom 表示拡張機能を使用して既存のレポートからデータ フィードを生成できます。  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>パブリッシュされた Reporting Services レポートからレポート データをインポートするには  
@@ -156,9 +155,9 @@ ms.locfileid: "66080566"
   
 4.  **[参照]** をクリックし、レポート サーバーを選択します。  
   
-     特定のレポート サーバーに関するレポートを定期的に使用している場合は、 **[最近使ったサイトとサーバー]** にそのサーバーが表示される可能性があります。 それ以外の場合は、レポート サーバーのアドレスを [名前] に入力し、 **[開く]** をクリックして、レポート サーバー サイトのフォルダーを参照します。 たとえば、レポート サーバーのアドレスが http:// あります\<computername >/reportserver です。  
+     特定のレポート サーバーに関するレポートを定期的に使用している場合は、 **[最近使ったサイトとサーバー]** にそのサーバーが表示される可能性があります。 それ以外の場合は、レポート サーバーのアドレスを [名前] に入力し、 **[開く]** をクリックして、レポート サーバー サイトのフォルダーを参照します。 レポートサーバーのアドレスの例としては、http://があり \<computername> ます。  
   
-5.  レポートを選択し、 **[開く]** をクリックします。 代わりに、 **[名前]** ボックスに完全パスとレポート名を含むレポートへのリンクを貼り付けることもできます。 テーブルのインポート ウィザードによってレポートに接続され、プレビュー領域にそれが表示されます。  
+5.  レポートを選択し、**[開く]** をクリックします。 代わりに、 **[名前]** ボックスに完全パスとレポート名を含むレポートへのリンクを貼り付けることもできます。 テーブルのインポート ウィザードによってレポートに接続され、プレビュー領域にそれが表示されます。  
   
      レポートでパラメーターが使用されている場合は、パラメーターを指定しないとレポート接続を作成できません。 パラメーターを指定すると、そのパラメーター値に関連する行だけがデータ フィードでインポートされます。  
   
@@ -190,10 +189,10 @@ ms.locfileid: "66080566"
 12. **[テーブルとビューの選択]** ページで、 **[完了]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [サポートされているデータ ソース (SSAS テーブル)](tabular-models/data-sources-supported-ssas-tabular.md)   
- [サポートされているデータ型 (SSAS テーブル)](tabular-models/data-types-supported-ssas-tabular.md)   
- [権限借用 (SSAS テーブル)](tabular-models/impersonation-ssas-tabular.md)   
- [データの処理 (SSAS テーブル)](process-data-ssas-tabular.md)   
- [データのインポート (SSAS テーブル)](import-data-ssas-tabular.md)  
+ [SSAS 表形式&#41;&#40;サポートされるデータソース](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [SSAS 表形式&#41;&#40;サポートされているデータ型](tabular-models/data-types-supported-ssas-tabular.md)   
+ [SSAS の &#40;の権限借用表形式&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [SSAS 表形式&#41;&#40;データを処理する](process-data-ssas-tabular.md)   
+ [データのインポート &#40;SSAS テーブル&#41;](import-data-ssas-tabular.md)  
   
   

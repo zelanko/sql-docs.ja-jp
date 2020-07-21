@@ -8,14 +8,14 @@ ms.technology: integration-services
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/09/2018
-ms.author: janinez
-author: janinezhang
-ms.openlocfilehash: 29668550dc64d4c782101f2690058bb465764c90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.author: chugu
+author: chugugrace
+ms.openlocfilehash: 3609de02157637ec30f7e21ad4426c5001f31a6e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908633"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71282658"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Azure SQL Data Warehouse にデータを読み込む
 
@@ -48,7 +48,7 @@ SQL Server Integration Services (SSIS) とは、SQL Data Warehouse に接続す�
 
 2. また、ソースと変換先を含むデータ フロー タスクを使用するパッケージを作成することもできます。 このアプローチは、SQL Server と Azure SQL Data Warehouse を含む幅広いデータ ソースをサポートしています。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このチュートリアルの手順を実行するには、以下の要素が必要です。
 
 1. **SQL Server Integration Services (SSIS)** . SSIS は SQL Server のコンポーネントであり、使用するには SQL Server のライセンス版、開発者版、または評価版が必要です。 SQL Server の評価版を取得するには、[SQL Server の評価](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)に関するページを参照してください。
@@ -98,7 +98,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 
 1. Azure Blob Upload Task を使用して、Azure Blob Storage でデータのステージングを行う。 Azure BLOB アップロード タスクを取得するには、[Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure] をダウンロードしてください。
 
-2. 次に、SSIS の SQL 実行タスクを使用して、SQL Data Warehouse にデータを読み込む PolyBase スクリプトを起動します。 (SSIS を使用せずに) Azure Blob Storage から SQL Data Warehouse にデータを読み込む例については、「[チュートリアル:Azure SQL Data Warehouse へのデータの読み込み](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)」を参照してください。
+2. 次に、SSIS の SQL 実行タスクを使用して、SQL Data Warehouse にデータを読み込む PolyBase スクリプトを起動します。 (SSIS を使用せずに) Azure Blob Storage から SQL Data Warehouse にデータを読み込む例については、「[チュートリアル: Azure SQL Data Warehouse へのデータの読み込み](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)」を参照してください。
 
 ## <a name="option-2---use-a-source-and-destination"></a>オプション 2 - ソースと変換先を使用する
 
@@ -211,13 +211,13 @@ SQL Server と SQL Data Warehouse に接続するには、ADO.NET 接続マネ�
 
 ![][15]
 
-これで、 SQL Server Integration Services を使用して Azure SQL Data Warehouse にデータを読み込むことに成功しました。
+お疲れさまでした。 SQL Server Integration Services を使用して Azure SQL Data Warehouse にデータを読み込むことに成功しました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-- デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 こちらから開始:[パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]。
+- デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 まずは、「 [パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]」を参照してください。
 
-- Integration Services サーバーまたは別の保存場所に SSIS プロジェクトおよびパッケージを配置する方法について説明します。 こちらから開始:[プロジェクトとパッケージの展開][Deployment of Projects and Packages]。
+- Integration Services サーバーまたは別の保存場所に SSIS プロジェクトおよびパッケージを配置する方法について説明します。 まずは、「 [プロジェクトとパッケージの展開][Deployment of Projects and Packages]」を参照してください。
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png

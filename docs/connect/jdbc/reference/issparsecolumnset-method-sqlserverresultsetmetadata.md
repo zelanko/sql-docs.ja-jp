@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ac363670-78ae-49f1-aeda-4fba3329a258
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b902ddf8e9e05900e55492116ee9e22a3dbbccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 788efd1f35643e3bcefd929f455b2c21677f7723
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67977223"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927288"
 ---
 # <a name="issparsecolumnset-method-sqlserverresultsetmetadata"></a>isSparseColumnSet メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean isSparseColumnSet(int column)
 ## <a name="return-value"></a>戻り値  
  結果セットの列がスパース列セットである場合は **true**、それ以外の場合は **false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドは、データベースから情報を取得しません。  
   
 ## <a name="see-also"></a>参照  

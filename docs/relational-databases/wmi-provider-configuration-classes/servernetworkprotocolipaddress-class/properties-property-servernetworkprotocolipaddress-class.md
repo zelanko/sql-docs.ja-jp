@@ -1,6 +1,6 @@
 ---
-title: Properties プロパティ (ServerNetworkProtocolIPAddress クラス) |Microsoft Docs
-ms.custom: ''
+title: Properties プロパティ (ServerNetworkProtocolIPAddress)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cd63aec01b221077932d083f8800b57b39a21be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b2487e65ac8f1497a345b6ea73931e06b0ac80f2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911902"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880875"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties プロパティ (ServerNetworkProtocolIPAddress クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   IP アドレスに関連付けられたプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +35,16 @@ ms.locfileid: "67911902"
 object.Properties [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ServerNetworkProtocolIPAdress クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)のインスタンス上のネットワーク プロトコルの IP アドレスを表すオブジェクトを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ のインスタンス上のネットワークプロトコルの IP アドレスを表す[ServerNetworkProtocolIPAdress クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  IP アドレスによってサポートされるプロパティを表すオブジェクトの配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

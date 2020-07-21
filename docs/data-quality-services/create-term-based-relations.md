@@ -1,6 +1,5 @@
 ---
-title: 用語ベースのリレーションの作成 | Microsoft Docs
-ms.custom: ''
+title: 用語ベースのリレーションの作成
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,18 +9,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: e0bec04d00222ca0dd11854b41c5ec6b4bf705a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: b6b0a4fe9786e47ec8352ce829be628c11bea928
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992250"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882580"
 ---
 # <a name="create-term-based-relations"></a>用語ベースのリレーションの作成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインの用語ベースのリレーションを作成する方法について説明します。 用語ベースのリレーション (TBR) を使用して、ドメインの値の一部になっている用語を修正できます。 用語ベースのリレーションでは、共通する部分のスペルを除いても同一である複数の値は同一のシノニムと見なすことができます。 たとえば、"Inc." という用語を “Incorporated” に変更する用語ベースのリレーションを設定できます。 "Inc." という用語は、ドメインで発生するたびに変更されます。 "Contoso, Inc." のインスタンスは "Contoso, Incorporated" に変更され、2 つの値はまったく同じシノニムと見なされます。  
   
@@ -53,19 +52,19 @@ ms.locfileid: "67992250"
   
  クレンジング プロセス中に収集されるデータ品質ナレッジをドメインにインポートする場合、TBR によって変更された値が正しい値としてインポートされます。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  用語ベースのリレーションを作成するには、ドメイン管理アクティビティでドメインを開いておく必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  用語ベースのリレーションを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Create"></a> 用語ベースのリレーションの作成  
+##  <a name="create-term-based-relations"></a><a name="Create"></a>用語ベースのリレーションを作成する  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
@@ -102,7 +101,7 @@ ms.locfileid: "67992250"
   
 7.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="FollowUp"></a>補足情報: 用語ベースのリレーションを作成した後  
+##  <a name="follow-up-after-creating-term-based-relations"></a><a name="FollowUp"></a> 補足情報: 用語ベースのリレーションを作成した後  
  用語ベースのリレーションを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加したりすることができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

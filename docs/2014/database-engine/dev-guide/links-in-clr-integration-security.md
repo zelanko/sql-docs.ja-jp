@@ -1,5 +1,5 @@
 ---
-title: CLR 統合のセキュリティへのリンク |Microsoft Docs
+title: CLR 統合セキュリティのリンク |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50f7a685a57bf07b812aefc2bd5406210b86054c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781071"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933513"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 統合のセキュリティのリンク
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはいずれかのマネージド言語で、[!INCLUDE[tsql](../../includes/tsql-md.md)] 内のユーザー コードが相互に呼び出すしくみを説明します。 このようなオブジェクト間のリレーションシップをリンクと呼びます。  
@@ -31,8 +30,8 @@ ms.locfileid: "62781071"
 ## <a name="table-access-links"></a>テーブル アクセス リンク  
  テーブル アクセス リンクは、テーブル、ビュー、またはテーブル値関数の値の取得や変更に対応します。 テーブル アクセス リンクは、SELECT 権限、INSERT 権限、UPDATE 権限、および DELETE 権限に関してアクセス制御の粒度が細かいという点を除いて、呼び出しリンクと同じです。  
   
-## <a name="gated-links"></a>ゲート リンク  
- ゲート リンクは、一度確立されると、実行されている間、オブジェクトのリレーションシップ間で権限がチェックされることはありません。 2 つのオブジェクトの間にゲート リンクがある場合 (たとえば、オブジェクト**x**とオブジェクト**y**)、オブジェクトに対するアクセス許可**y** オブジェクトからアクセスされるその他のオブジェクトと**y**オブジェクトの作成時にのみチェック**x**します。 オブジェクトの作成時に**x**、`REFERENCE`権限がチェックされます**y**の所有者に対して**x**します。 実行時に、(たとえば、オブジェクトを呼び出すユーザー **x**)、に対する権限チェックがない**y**または静的に参照するその他のオブジェクト。 オブジェクトに対して、実行時に適切な権限がチェックされます**x**自体。  
+## <a name="gated-links"></a>ゲートリンク  
+ ゲート リンクは、一度確立されると、実行されている間、オブジェクトのリレーションシップ間で権限がチェックされることはありません。 2つのオブジェクト (オブジェクト**x** 、オブジェクト**y**など) の間にゲートリンクがある場合、オブジェクト**y**およびオブジェクト**y**からアクセスされる他のオブジェクトに対する権限は、オブジェクト**x**の作成時にのみチェックされます。 オブジェクト**x**の作成時に、 `REFERENCE` **x**の所有者に対して**y**でアクセス許可がチェックされます。 実行時 (たとえば、だれかがオブジェクト**x**を呼び出したとき) には、 **y**またはその他のオブジェクトに対して静的に参照されるアクセス許可はチェックされません。 実行時に、オブジェクト**x**自体に対して適切なアクセス許可がチェックされます。  
   
  ゲート リンクは、2 つのオブジェクト間のメタデータの依存関係と常に組み合わせて使用されます。 このメタデータの依存関係とは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カタログで確立されるリレーションシップです。このリレーションシップにより、別のオブジェクトが依存しているオブジェクトの削除が回避されます。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62781071"
   
 4.  現在の実行コンテキストに対して権限がチェックされます。 呼び出し元とは異なる実行コンテキストでプロシージャや関数を作成できます。 アセンブリは、常に、プロシージャ、関数、またはトリガーに対して定義されている実行コンテキストで作成されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

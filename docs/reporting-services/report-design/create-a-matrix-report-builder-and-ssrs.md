@@ -1,5 +1,5 @@
 ---
-title: マトリックスの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: マトリックスの作成 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aec3e79fbfbaf96475cf10457c9f21c8c3d78b6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581542"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77078676"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>マトリックスの作成 (レポート ビルダーおよび SSRS)
   グループ化されたデータと概要情報を表示するには、マトリックスを使用します。 データは、複数のフィールドまたは式によって、行グループと列グループにグループ化できます。 マトリックスには、クロスタブやピボット テーブルと同様の機能があります。 実行時にレポート データとデータ領域が組み合わされると、マトリックスはページ上で縦横に拡大します。 マトリックス セルには、そのセルが所属する行グループと列グループの交差部分にスコープを設定した集計値が表示されます。 行と列の書式を設定すると、強調するデータをハイライトできます。 ドリルダウン トグルを含めて、最初は詳細データを非表示にすることもできます。ユーザーは、トグルをクリックすることにより、表示するデータの量を調整できます。  
@@ -23,9 +23,9 @@ ms.locfileid: "65581542"
  マトリックスの利用をすぐに開始するには、「[チュートリアル: マトリックス レポートの作成 (レポート ビルダー)](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
->  一覧は、レポート パーツとしてレポートとは別にパブリッシュできます。 レポート パーツ (レポート ビルダーおよび SSRS) の詳細は [ここ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)にあります。  
+>  一覧は、レポート パーツとしてレポートとは別にパブリッシュできます。 詳細については、「 [レポート パーツ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="AddingMatrix"></a> レポートへのマトリックスの追加  
+##  <a name="adding-a-matrix-to-your-report"></a><a name="AddingMatrix"></a> レポートへのマトリックスの追加  
  リボンの [挿入] タブからデザイン画面にマトリックスを追加します。 マトリックスを追加するには、テーブル ウィザードまたはマトリックス ウィザードを使用して、データ ソース接続とデータセットを作成し、そのマトリックスを構成するか、マトリックス テンプレートに基づいてマトリックスを追加します。  
   
 > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "65581542"
   
  デザイン画面でマトリックスを選択すると、次の図に示すように、行ハンドルと列ハンドルが表示されます。  
   
- ![ツールボックスから追加された新しいマトリックス、選択](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択")  
+ ![ツールボックスから追加された新しいマトリックス、選択済み](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択済み")  
   
  グループ化ペインの [行グループ] 領域と [列グループ] 領域にデータセット フィールドをドラッグして、グループを追加します。 最初にあった空の既定グループは、[行グループ] 領域または [列グループ] 領域に最初にドラッグしたフィールドで置き換えられます。 その後で、セルのデータの種類に応じて、各セルに書式を適用できます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65581542"
  作業を開始したマトリックスは、Tablix データ領域に基づいたテンプレートです。 入れ子になった行グループや列グループ、隣接した行グループや列グループを追加したり、詳細行を追加したりすることによって、マトリックスの開発を継続することもできます。 詳細については、「[Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
   
-##  <a name="AddingParentGroupChild"></a> 親グループまたは子グループのマトリックスへの追加  
+##  <a name="adding-a-parent-group-or-child-group-to-a-matrix"></a><a name="AddingParentGroupChild"></a> 親グループまたは子グループのマトリックスへの追加  
  単一のデータセット フィールドに基づくグループを追加するには、そのフィールドをレポート データ ペインからグループ化ペインの適切な [行グループ] 領域または [列グループ] 領域にドラッグします。 フィールドをグループ階層にドロップして、既存のグループに対するリレーションシップを設定します。 親グループを作成する場合は、既存のグループの上にドロップし、子グループを作成する場合は、既存のグループの下にドロップします。  
   
  フィールドを **グループ化** ペインにドロップすると、次の結果が得られます。  
@@ -78,7 +78,7 @@ ms.locfileid: "65581542"
  詳細については、「 [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)を表しています。  
   
   
-##  <a name="AddingAdjacentGroup"></a> 隣接するグループのマトリックスへの追加  
+##  <a name="adding-an-adjacent-group-to-a-matrix"></a><a name="AddingAdjacentGroup"></a> 隣接するグループのマトリックスへの追加  
  単一のデータセット フィールドに基づく隣接したグループを追加するには、グループ化ペインのショートカット メニューを使用します。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。 次の図に、地理データに基づくグループと、それに隣接し、年データに基づくグループを示します。  
   
  ![Geography と Year の隣接列グループ](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Geography と Year の隣接列グループ")  

@@ -1,5 +1,5 @@
 ---
-title: ユーザーの電子メール アドレスを変更する (マスター データ サービス) | Microsoft Docs
+title: ユーザー&#39;s 電子メールアドレスを変更する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0cf7c9eb150ce54a9ec04c996c4c7e4d1f58b858
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b9b7d6368d8ecf920784dbb1dbcdd9b043c00c2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813639"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>ユーザーの電子メール アドレスを変更する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、通知の送信先の電子メール アドレスおよび通知電子メールの既定の形式を変更できます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[ユーザーおよびグループ]** 機能領域にアクセスするための権限が必要です。  

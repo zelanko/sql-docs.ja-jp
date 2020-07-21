@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1c9ea0381b9741831b24c0148013925f781b5e02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2a0919c6d1178441ccaa6b81d64bcbe483844ef
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478554"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970892"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>[バージョン管理] 機能領域 (マスター データ マネージャー)
   [バージョン管理] 機能領域では、管理者はデータの検証、トランザクションの確認と破棄、データのバージョン管理対象コピーの作成、およびシステムをサブスクライブする場合のデータのバージョンへのフラグ設定を実行できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  

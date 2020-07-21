@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717392"
 ---
-# <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  トランザクションパブリケーションまたはスナップショットパブリケーションのアーティクルのプロパティを変更します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  トランザクションパブリケーションまたはスナップショットパブリケーションのアーティクルのプロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,16 +61,16 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||これは旧バージョンとの互換性のために用意されています。 **Dest_table**を使用します。|  
 |**dest_table**||新しい変換先テーブル。|  
 |**destination_owner**||対象オブジェクトの所有者の名前。|  
-|**フィルター (filter)**||テーブルをフィルターによって選択 (行方向のフィルター選択) するために使用される新しいストアド プロシージャです。 既定値は NULL です。 ピアツーピアレプリケーションのパブリケーションの場合、を変更することはできません。|  
-|**fire_triggers_on_snapshot**|**true**|レプリケートされたユーザートリガーは、初期スナップショットが適用されるときに実行されます。<br /><br /> 注:トリガーをレプリケートするには、ビットマスク値*schema_option*に値**0x100**を含める必要があります。|  
+|**filter**||テーブルをフィルターによって選択 (行方向のフィルター選択) するために使用される新しいストアド プロシージャです。 既定値は NULL です。 ピアツーピアレプリケーションのパブリケーションの場合、を変更することはできません。|  
+|**fire_triggers_on_snapshot**|**true**|レプリケートされたユーザートリガーは、初期スナップショットが適用されるときに実行されます。<br /><br /> 注意: トリガーをレプリケートするには、 *schema_option*のビットマスク値に**0x100**という値を含める必要があります。|  
 ||**false**|初期スナップショットが適用されたときに、レプリケートされたユーザー トリガーが実行されません。|  
 |**identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**ins_cmd**||実行する INSERT ステートメントです。それ以外の場合は、ログから作成されます。|  
 |**pre_creation_cmd**||同期が適用される前に、レプリケーション先のテーブルを削除したり、切り捨てたりできる作成準備コマンドです。|  
-||**none**|コマンドを使用しません。|  
-||**drop**|変換先テーブルを削除します。|  
+||"**なし**"|コマンドを使用しません。|  
+||**」**|変換先テーブルを削除します。|  
 ||**delete**|変換先テーブルを削除します。|  
-||**truncate**|変換先テーブルを切り捨てます。|  
+||**切捨て**|変換先テーブルを切り捨てます。|  
 |**pub_identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**schema_option**||指定されたアーティクルのスキーマ生成オプションのビットマップを指定します。 *schema_option*は**binary (8)** です。 詳細については、このトピックで後述する「解説」を参照してください。|  
 ||**0x00**|スナップショット エージェントによるスクリプト作成を無効にします。|  
@@ -89,7 +89,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|列レベルの照合順序をレプリケートします。|  
 ||**0x2000**|パブリッシュされたアーティクルのソースオブジェクトに関連付けられた拡張プロパティをレプリケートします。|  
 ||**0x4000**|テーブルアーティクルで定義されている場合は、一意キーをレプリケートします。|  
-||**0x8000**|ALTER TABLE ステートメントを使用して、テーブルアーティクルの主キーと一意キーを制約としてレプリケートします。<br /><br /> 注:このオプションは非推奨とされます。 代わりに、 **0x80**と**0x4000**を使用してください。|  
+||**0x8000**|ALTER TABLE ステートメントを使用して、テーブルアーティクルの主キーと一意キーを制約としてレプリケートします。<br /><br /> 注: このオプションは非推奨とされます。 代わりに、 **0x80**と**0x4000**を使用してください。|  
 ||**0x10000**|CHECK 制約を NOT FOR REPLICATION としてレプリケートし、同期中に制約が適用されないようにします。|  
 ||**0x20000**|では、制約が同期中に適用されないように、外部キー制約は NOT FOR REPLICATION としてレプリケートされます。|  
 ||**0x40000**|パーティション テーブルまたはインデックスに関連付けられているファイル グループをレプリケートします。|  
@@ -103,27 +103,27 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|**Xml**列のインデックスをレプリケートします。|  
 ||**0x8000000**|サブスクライバーにまだ存在しないスキーマを作成します。|  
 ||**0x10000000**|サブスクライバーで**xml**列を**ntext**に変換します。|  
-||**0x20000000**|で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]導入されたラージオブジェクトデータ型 (**nvarchar (max)** 、 **varchar (max**)、 **varbinary (max)** ) を、で[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サポートされているデータ型に変換します。|  
+||**0x20000000**|で導入されたラージオブジェクトデータ型 (**nvarchar (max)**、 **varchar (max**)、 **varbinary (max)**) [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] を、でサポートされているデータ型に変換 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] します。|  
 ||**0x40000000**|権限をレプリケートします。|  
-||**0x80000000 です**|パブリケーションに含まれていないオブジェクトへの依存関係を削除しようとしています。|  
-||**0x100000000**|このオプションを使用すると、 **varbinary (max)** 列に FILESTREAM 属性が指定されている場合に、その属性をレプリケートできます。 テーブルをサブスクライバーに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]レプリケートする場合は、このオプションを指定しないでください。 このスキーマオプションを設定する方法[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]に関係なく、FILESTREAM 列を持つテーブルをサブスクライバーにレプリケートすることはサポートされていません。<br /><br /> 関連オプション**0x800000000**を参照してください。|  
-||**0x200000000**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で導入[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]された日付と時刻のデータ型 (date、 **time**、datetimeoffset、および datetime2) を、以前のバージョンのでサポートされているデータ型に変換します。|  
+||**0x80000000**|パブリケーションに含まれていないオブジェクトへの依存関係を削除しようとしています。|  
+||**0x100000000**|このオプションを使用すると、 **varbinary (max)** 列に FILESTREAM 属性が指定されている場合に、その属性をレプリケートできます。 テーブルをサブスクライバーにレプリケートする場合は、このオプションを指定しないでください [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 このスキーマオプションを設定する方法に関係なく、FILESTREAM 列を持つテーブルをサブスクライバーにレプリケートすること [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] はサポートされていません。<br /><br /> 関連オプション**0x800000000**を参照してください。|  
+||**0x200000000**|で導入された日付と時刻のデータ型 (**date**、 **time**、 **datetimeoffset**、および**datetime2**) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] を、以前のバージョンのでサポートされているデータ型に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 ||**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
 ||**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイルグループに格納されます。 レプリケーションでは、ファイルグループは作成されません。したがって、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイルグループを作成する必要があります。 スナップショットを適用する前にオブジェクトを作成する方法の詳細については、「[スナップショットが適用される前および後のスクリプトの実行](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)」を参照してください。<br /><br /> 関連オプション**0x100000000**を参照してください。|  
-||**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) が8000バイトを超える値を**varbinary (max)** に変換します。これにより、udt 型の列を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、を実行しているサブスクライバーにレプリケートできるようになります。|  
-||**0x2000000000**|**Hierarchyid**データ型を**varbinary (max)** に変換します。これにより、 **hierarchyid**型の列を、を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実行しているサブスクライバーにレプリケートできるようになります。 レプリケートされたテーブルでの**hierarchyid**列の使用方法の詳細については、「 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)」を参照してください。|  
+||**0x1000000000**|共通言語ランタイム (CLR) ユーザー定義型 (Udt) が8000バイトを超える値を**varbinary (max)** に変換します。これにより、udt 型の列を、を実行しているサブスクライバーにレプリケートできるようになり [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。|  
+||**0x2000000000**|**Hierarchyid**データ型を**varbinary (max)** に変換します。これにより、 **hierarchyid**型の列を、を実行しているサブスクライバーにレプリケートできるようになり [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。 レプリケートされたテーブルで**hierarchyid**列を使用する方法の詳細については、「 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)」を参照してください。|  
 ||**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、「[フィルター選択](../../relational-databases/indexes/create-filtered-indexes.md)されたインデックスの作成」をご覧ください。|  
-||**0x8000000000**|**Geography**および**geometry**データ型を**varbinary (max)** に変換して、これらの型の列を、を実行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]しているサブスクライバーにレプリケートできるようにします。|  
+||**0x8000000000**|**Geography**および**geometry**データ型を**varbinary (max)** に変換して、これらの型の列を、を実行しているサブスクライバーにレプリケートできるようにし [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。|  
 ||**0x10000000000**|**Geography**型および**geometry**型の列のインデックスをレプリケートします。|  
 ||**0x20000000000**|列のスパース属性をレプリケートします。 この属性の詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
 ||**0x40000000000**|サブスクライバーにメモリ最適化テーブルを作成するには、スナップショットエージェントによるスクリプト作成を有効にします。|  
 ||**0x80000000000**|メモリ最適化アーティクルのクラスター化インデックスを非クラスター化インデックスに変換します。|  
 |**status**||プロパティの新しいステータスを指定します。|  
 ||**dts 行分割**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-||**列名を含める**|列名が、レプリケートされる INSERT ステートメントに含まれます。|  
+||**include column names**|列名が、レプリケートされる INSERT ステートメントに含まれます。|  
 ||**列名がありません**|列名は、レプリケートされる INSERT ステートメントに含まれません。|  
 ||**dts 行分割がありません**|アーティクルの行方向のパーティション分割は、変換可能なサブスクリプションによって定義されません。|  
-||**none**|[Sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルのすべての状態オプションをクリアし、アーティクルを非アクティブとしてマークします。|  
+||"**なし**"|[Sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルのすべての状態オプションをクリアし、アーティクルを非アクティブとしてマークします。|  
 ||**parameters**|パラメーター化コマンドを使用して、変更がサブスクライバーに反映されます。 これは新しいアーティクルに対する既定値です。|  
 ||**文字列リテラル**|変更は、文字列リテラル値を使用してサブスクライバーに反映されます。|  
 |**sync_object**||同期出力ファイルを生成するために使用されるテーブルまたはビューの名前。 既定値は NULL です。 Oracle パブリッシャーではサポートされていません。|  
@@ -131,15 +131,15 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**threshold**||ディストリビューション エージェントがどの時点で新しい ID 範囲を割り当てるかを制御するパーセンテージの値です。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**type**||Oracle パブリッシャーではサポートされていません。|  
 ||**logbased**|ログベースのアーティクル。|  
-||**logbased manualboth**|手動フィルターと手動ビューを使用したログベースのアーティクル。 このオプションでは、 *sync_object*プロパティと*filter*プロパティも設定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
-||**logbased manualfilter**|手動フィルターを使用したログベースのアーティクル。 このオプションでは、 *sync_object*プロパティと*filter*プロパティも設定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
+||**logbased manualboth**|手動フィルターと手動ビューを使用したログベースのアーティクル。 このオプションでは、 *sync_object*プロパティと*フィルター*プロパティも設定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
+||**logbased manualfilter**|手動フィルターを使用したログベースのアーティクル。 このオプションでは、 *sync_object*プロパティと*フィルター*プロパティも設定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
 ||**logbased manualview**|手動ビューを使用する、ログベースのアーティクルです。 このオプションでは、 *sync_object*プロパティも設定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
 ||**インデックス付き viewlogbased**|ログベースのインデックス付きビューアーティクル。 Oracle パブリッシャーではサポートされていません。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。|  
-||**インデックス付き viewlogbased manualboth**|手動フィルターと手動ビューを使用する、ログベースのインデックス付きビュー アーティクルです。 このオプションでは、 *sync_object*プロパティと*filter*プロパティも設定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
-||**インデックス付き viewlogbased manualfilter**|手動フィルターを使用したログベースのインデックス付きビューアーティクル。 このオプションでは、 *sync_object*プロパティと*filter*プロパティも設定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
+||**インデックス付き viewlogbased manualboth**|手動フィルターと手動ビューを使用する、ログベースのインデックス付きビュー アーティクルです。 このオプションでは、 *sync_object*プロパティと*フィルター*プロパティも設定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
+||**インデックス付き viewlogbased manualfilter**|手動フィルターを使用したログベースのインデックス付きビューアーティクル。 このオプションでは、 *sync_object*と*フィルター*のプロパティも設定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
 ||**インデックス付き viewlogbased manualview**|手動ビューを使用する、ログベースのインデックス付きビュー アーティクルです。 このオプションでは、 *sync_object*プロパティも設定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
 |**upd_cmd**||実行する UPDATE ステートメント。それ以外の場合は、ログから作成されます。|  
-|NULL|NULL|変更することができるアーティクルのプロパティの一覧を返します。|  
+|NULL|NULL|変更可能なアーティクルのプロパティの一覧を返します。|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot*は**ビット**,、既定値は**0**です。  
   
@@ -157,18 +157,18 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  変更によって既存のサブスクリプションの再初期化が必要になるプロパティについては、「解説」を参照してください。  
   
-`[ @publisher = ] 'publisher'`以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
+>  パブリッシャーでアーティクルのプロパティを変更する場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_changearticle**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
- アーティクルがピアツーピアトランザクションレプリケーションをサポートするパブリケーションに属している場合、 **description**、 **ins_cmd**、 **upd_cmd**、および**del_cmd**の各プロパティだけを変更できます。  
+ ピアツーピアトランザクションレプリケーションをサポートするパブリケーションにアーティクルが属している場合、**説明**、 **ins_cmd**、 **upd_cmd**、および**del_cmd**プロパティのみを変更できます。  
   
  次のいずれかのプロパティを変更するには、新しいスナップショットを生成する必要があります。また、 *force_invalidate_snapshot*パラメーターに値**1**を指定する必要があります。  
   
@@ -194,7 +194,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **フィルター (filter)**  
+-   **filter**  
   
 -   **ins_cmd**  
   
@@ -205,10 +205,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
  既存のパブリケーション内では、パブリケーション全体を削除して再作成しなくても、 **sp_changearticle**を使用してアーティクルを変更できます。  
   
 > [!NOTE]  
->  *Schema_option*の値を変更しても、ビットごとの更新は実行されません。 これは、 **sp_changearticle**を使用して*schema_option*を設定すると、既存のビット設定が無効になる場合があることを意味します。 既存の設定を保持するには、| を実行する必要があります。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)設定する値と*schema_option*の現在の値の間で、 [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)を実行することによって決定できます。  
+>  *Schema_option*の値を変更しても、ビットごとの更新は実行されません。 つまり、 **sp_changearticle**を使用して*schema_option*を設定すると、既存のビット設定が無効になる場合があります。 既存の設定を保持するには、| を実行する必要があります。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)設定する値と*schema_option*の現在の値の間で、 [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)を実行して決定できます。  
   
 ## <a name="valid-schema-options"></a>有効なスキーマ オプション  
- 次の表では、レプリケーションの種類 (上部に表示) とアーティクルの種類 (最初の列に表示されます) に基づく*schema_option*の許容値について説明します。  
+ 次の表では、レプリケーションの種類 (上部に表示) とアーティクルの種類 (最初の列に表示されます) に基づいて*schema_option*の許容値について説明します。  
   
 |アーティクルの種類|レプリケーションの種類||  
 |------------------|----------------------|------|  
@@ -216,19 +216,19 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**logbased**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**logbased manualfilter**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**logbased manualview**|すべてのオプション|すべてのオプション ( **0x02** )|  
-|**インデックス付きビュー logbased**|すべてのオプション|すべてのオプション ( **0x02** )|  
-|**インデックス付きビュー logbased manualfilter**|すべてのオプション|すべてのオプション ( **0x02** )|  
-|**インデックス付きビュー logbased manualview**|すべてのオプション|すべてのオプション ( **0x02** )|  
+|**indexed view logbased**|すべてのオプション|すべてのオプション ( **0x02** )|  
+|**indexed view logbased manualfilter **|すべてのオプション|すべてのオプション ( **0x02** )|  
+|**indexed view logbased manualview**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**インデックス付きビュー底 manualboth**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**proc exec**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|  
 |**serializable proc exec**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|  
 |**proc スキーマのみ**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|  
-|**スキーマのみを表示**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、**0x40000000**、 **0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、**0x40000000**、 **0x80000000**|  
+|**view schema only**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|  
 |**func スキーマのみ**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|  
-|**インデックス付きビュースキーマのみ**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、**0x40000000**、 **0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、**0x40000000**、 **0x80000000**|  
+|**インデックス付きビュースキーマのみ**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|  
   
 > [!NOTE]
->  キュー更新パブリケーションの場合、 *schema_option*の値**0x80**を有効にする必要があります。 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリケーションでは、次のような*schema_option*値がサポートされます。**0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000** 、 **0x4000**。  
+>  キュー更新パブリケーションの場合は、 *schema_option*値**0x80**を有効にする必要があります。 サポートされていないパブリケーションの*schema_option*値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000** 、 **0x4000**です。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
@@ -236,13 +236,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changearticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アーティクルのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addarticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

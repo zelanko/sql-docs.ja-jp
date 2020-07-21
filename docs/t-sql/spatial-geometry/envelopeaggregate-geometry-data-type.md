@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: aec6618297f0ed38bfea5e730a452d4ccc9fae9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c82d456f6c51b60f095178608e976303f0f6c48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700276"
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 特定の **geometry** オブジェクト セットの境界ボックスを返します。
   
@@ -43,7 +43,7 @@ EnvelopeAggregate ( geometry_operand )
 ## <a name="exceptions"></a>例外  
  入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  
@@ -51,7 +51,7 @@ EnvelopeAggregate ( geometry_operand )
 > [!NOTE]  
 >  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、テーブル変数列のオブジェクトのセットの境界ボックスを返します。  
   
  ```

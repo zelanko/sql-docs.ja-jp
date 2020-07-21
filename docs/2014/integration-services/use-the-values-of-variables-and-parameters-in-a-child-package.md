@@ -1,5 +1,5 @@
 ---
-title: 子パッケージで変数とパラメーターの値の使用 |Microsoft Docs
+title: 子パッケージの変数とパラメーターの値を使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a1ace15be59c7102547b4faedf70adc811bd140e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054730"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420199"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>子パッケージでの変数およびパラメーターの値の使用
   この手順では、構成の種類として親変数を使用するパッケージ構成を作成する方法について説明します。 この構成の種類を使用すると、親パッケージから実行される子パッケージが親内の変数にアクセスできるようになります。  
@@ -89,11 +88,11 @@ ms.locfileid: "66054730"
   
     -   **[構成の場所を環境変数に格納する]** を選択し、 **[環境変数]** ボックスの一覧で、変数の名前を含む環境変数を選択します。  
   
-7.  [**次へ**] をクリックします。  
+7.  **[次へ]** をクリックします。  
   
 8.  [対象になるプロパティの選択] ページで、 **[変数]** ノードを展開し、構成する変数の **[プロパティ]** ノードを展開した後、構成によって設定されるプロパティをクリックします。  
   
-9. [**次へ**] をクリックします。  
+9. **[次へ]** をクリックします。  
   
 10. [ウィザードの完了] ページで、必要に応じて、構成の既定の名前を変更し、構成情報を確認します。  
   
@@ -103,10 +102,10 @@ ms.locfileid: "66054730"
   
 13. **[閉じる]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
- [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)   
- [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)   
+## <a name="see-also"></a>関連項目  
+ [パッケージの構成](../../2014/integration-services/package-configurations.md)   
+ [パッケージ構成の作成](../../2014/integration-services/create-package-configurations.md)   
+ [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)   
  [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)  
   
   

@@ -21,33 +21,36 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 593c2d8bf9cff3e10aaafc339aa82ef16c4bc09f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3baca278dfaa94c51dfddff84a8a5c760c1275ae
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071237"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381256"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   パーティション構成にファイル グループを追加したり、パーティション構成の NEXT USED ファイル グループの指定を変更します。 
 
 >[!NOTE]
 >Azure SQL Database では、プライマリ ファイル グループのみがサポートされます。  
   
- ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER PARTITION SCHEME partition_scheme_name   
 NEXT USED [ filegroup_name ] [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *partition_scheme_name*  
  変更するパーティション構成の名前です。  
   
@@ -60,7 +63,7 @@ NEXT USED [ filegroup_name ] [ ; ]
   
  *filegroup_name* を指定しなかった場合に、NEXT USED とマークされているファイル グループがなければ、ALTER PARTITION SCHEME から警告が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER PARTITION SCHEME の対象となるファイル グループは、オンラインになっている必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -72,7 +75,7 @@ NEXT USED [ filegroup_name ] [ ; ]
   
 -   パーティション構成が作成されたデータベースのサーバーに対する CONTROL SERVER または ALTER ANY DATABASE 権限。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、パーティション構成 `MyRangePS1` およびファイル グループ `test5fg` が現在のデータベースに存在することを前提としています。  
   
 ```  

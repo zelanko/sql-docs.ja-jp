@@ -1,5 +1,5 @@
 ---
-title: 有効にして、RDL サンド ボックス化を無効にする |Microsoft Docs
+title: RDL サンドボックスを有効または無効にする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109228"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>RDL サンドボックスの有効化と無効化
@@ -28,16 +28,16 @@ ms.locfileid: "66109228"
   
  RDL サンドボックスが有効になると、次の機能は無効になります。  
   
--   レポート定義の **\<Code>** 要素内のカスタム コード。  
+-   レポート定義の** \<コード>** 要素内のカスタムコード。  
   
 -   [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] カスタム レポート アイテムに対する RDL の下位互換性モード。  
   
 -   式での名前付きパラメーター。  
   
- このトピックで説明内の各要素の <`RDLSandboxing`> RSReportServer.Config ファイル内の要素。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。  
+ このトピックでは、RSReportServer. `RDLSandboxing` .config ファイルの <> 要素内の各要素について説明します。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [レポート サーバー サービスのトレース ログ](report-server/report-server-service-trace-log.md)」を参照してください。  
   
-## <a name="example-configuration"></a>構成例  
- 設定および値の次の例を示しています、<`RDLSandboxing`> RSReportServer.Config ファイル内の要素。  
+## <a name="example-configuration"></a>構成の例  
+ 次の例は、RSReportServer. .Config ファイルの <`RDLSandboxing`> 要素の設定と例の値を示しています。  
   
 ```  
 <RDLSandboxing>  
@@ -61,17 +61,17 @@ ms.locfileid: "66109228"
   
 |設定|説明|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|RDL 式で許可される文字数の最大値です。<br /><br /> 既定値:1000|  
-|**MaxResourceSize**|外部リソースに許可されるサイズの最大値 (単位: KB) です。<br /><br /> 既定値:100|  
-|**MaxStringResultLength**|RDL 式の戻り値で許可される文字数の最大値です。<br /><br /> 既定値:1000|  
-|**MaxArrayResultLength**|RDL 式の配列戻り値で許可されるアイテム数の最大値です。<br /><br /> 既定値:100|  
+|**MaxExpressionLength**|RDL 式で許可される文字数の最大値です。<br /><br /> 既定: 1000|  
+|**MaxResourceSize**|外部リソースに許可されるサイズの最大値 (単位: KB) です。<br /><br /> 既定値: 100|  
+|**MaxStringResultLength**|RDL 式の戻り値で許可される文字数の最大値です。<br /><br /> 既定: 1000|  
+|**MaxArrayResultLength**|RDL 式の配列戻り値で許可されるアイテム数の最大値です。<br /><br /> 既定値: 100|  
 |**型**|RDL 式内で許可されるメンバーの一覧です。|  
-|**Allow**|RDL 式で許可される型または型のセットです。|  
+|**許可**|RDL 式で許可される型または型のセットです。|  
 |**Namespace**|**Allow** の属性の 1 つであり、Value に適用される 1 つ以上の型を含む名前空間です。 このプロパティでは、大文字と小文字が区別されません。|  
-|`AllowNew`|**Allow** のブール属性であり、RDL 式内または RDL の **\<Class>** 要素内でその型の新しいインスタンスを作成できるかどうかを制御します。<br /><br /> 注:ときに`RDLSandboxing`が有効の設定に関係なく、RDL 式に新しい配列を作成することはできません`AllowNew`します。|  
-|**[値]**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値が **\*** の場合は、名前空間内のすべての型が許可されることを意味します。 このプロパティでは、大文字と小文字が区別されません。|  
-|**メンバー**|**\<Types>** 要素に含まれる型の一覧に対する、RDL 式で許可されないメンバー名の一覧です。|  
-|**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> 注:メンバーに対して **Deny** が指定されている場合、この名前を持つすべての型のメンバーがすべて許可されません。|  
+|`AllowNew`|**Allow** のブール属性であり、RDL 式内または RDL の **\<Class>** 要素内でその型の新しいインスタンスを作成できるかどうかを制御します。<br /><br /> 注: が`RDLSandboxing`有効になっている場合、の`AllowNew`設定に関係なく、RDL 式に新しい配列を作成することはできません。|  
+|**Value**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値**\*** は、名前空間のすべての型が許可されることを示します。 このプロパティでは、大文字と小文字が区別されません。|  
+|**メンバー**|型>要素に含まれる型の一覧については、RDL 式で許可されないメンバー名の一覧です。 ** \<**|  
+|**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> 注: メンバーに対して **Deny** が指定されている場合、この名前を持つすべての型のメンバーがすべて許可されません。|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>RDL サンドボックスが有効なときの式の操作  
  式で使用されるリソースの管理を容易にするために、RDL サンドボックス機能を次のような方法で変更できます。  
@@ -96,9 +96,9 @@ ms.locfileid: "66109228"
   
 -   型の静的メンバー  
   
--   [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `New` メソッド  
+-   [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `New`メソッド。  
   
--   レポート定義の **\<Classes>** 要素。  
+-   レポート定義の** \<クラス>** 要素。  
   
 -   許可一覧に含まれる型に対してブロック一覧に追加したメンバー  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66109228"
   
  1 つの型のメンバーを有効にして、別の型では同じ名前のメンバーを拒否するには、次の手順を実行する必要があります。  
   
--   そのメンバー名に対して **\<Deny>** 要素を追加します。  
+-   メンバー名に** \<Deny>** 要素を追加します。  
   
 -   有効にするメンバーに対して、カスタム アセンブリのクラスに異なる名前のプロキシ メンバーを作成します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66109228"
   
  許可一覧に [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の関数を追加するには、Microsoft.VisualBasic 名前空間の対応する型を許可一覧に追加します。  
   
- 許可一覧に [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の型キーワードを追加するには、対応する CLR 型を許可一覧に追加します。 たとえば、使用するため、 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework のキーワード`Integer`には、次の XML フラグメントを追加、  **\<RDLSandboxing >** 要素。  
+ 許可一覧に [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の型キーワードを追加するには、対応する CLR 型を許可一覧に追加します。 たとえば、 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework キーワード`Integer`を使用するには、次の XML フラグメントを** \<RDLSandboxing>** 要素に追加します。  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -134,7 +134,7 @@ ms.locfileid: "66109228"
   
  カスタム アセンブリから許可一覧に型を追加しても、アセンブリに対して暗黙に実行権限が付与されることはありません。 コード アクセス セキュリティ ファイルを具体的に変更して、アセンブリに実行権限を提供する必要があります。 詳細については、「 [Reporting Services のコード アクセス セキュリティ](extensions/secure-development/code-access-security-in-reporting-services.md)」を参照してください。  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>保守、\<拒否 > メンバーの一覧  
+#### <a name="maintaining-the-deny-list-of-members"></a>メンバーの\<拒否> リストの管理  
  許可一覧に新しい型を追加するときには、次に示す場合に、メンバーのブロック一覧の更新が必要となります。  
   
 -   新しい型を導入するバージョンでカスタム アセンブリを更新する場合。  
@@ -148,7 +148,7 @@ ms.locfileid: "66109228"
 -   RDL 型に新しいメンバーが追加された可能性があるため、新しい RDL スキーマを処理できるようにレポート サーバーを更新する場合  
   
 ### <a name="working-with-operators-and-new"></a>演算子と New の操作  
- 既定では、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の言語演算子は、`New` を除いて常に許可されます。 `New`演算子がによって制御される、`AllowNew`属性を **\<許可>** 要素。 既定のコレクション アクセサー演算子などの他の言語演算子`!`と[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework のキャスト マクロ`CInt`は常に許可します。  
+ 既定では、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の言語演算子は、`New` を除いて常に許可されます。 `New`演算子は、 ** \<Allow>** 要素`AllowNew`の属性によって制御されます。 既定のコレクションアクセサー演算子`!`や[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]などの .NET Framework キャストマクロ`CInt`など、その他の言語演算子は常に許可されます。  
   
  カスタム演算子を含め、ブロック一覧への演算子の追加はサポートされていません。 特定の型に対して演算子を除外するには、次の手順を実行する必要があります。  
   
@@ -166,6 +166,6 @@ ms.locfileid: "66109228"
   
 ## <a name="see-also"></a>参照  
  [RSReportServer 構成ファイル](report-server/rsreportserver-config-configuration-file.md)   
- [レポート サーバー サービスのトレース ログ](report-server/report-server-service-trace-log.md)  
+ [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)  
   
   

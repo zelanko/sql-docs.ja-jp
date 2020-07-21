@@ -1,11 +1,7 @@
 ---
-title: Transact-SQL エディターのオプション | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Transact-SQL エディターのオプション
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
@@ -27,23 +23,28 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110632"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75256320"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL エディターのオプション
+
 このトピックでは、Transact-SQL エディターのいくつかのオプションについて説明します。 これらのオプションを設定するには、 **[ツール] > [オプション]** を選択して、 **[オプション]** ダイアログ ボックスに移動します。  
   
 [クエリの実行](#QueryExecution)  
   
 [クエリの結果](#QueryResults)  
   
-## <a name="QueryExecution"></a>クエリの実行  
+## <a name="query-execution"></a><a name="QueryExecution"></a>クエリの実行  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |------------|---------------|  
 |**SET ROWCOUNT**|既定値の 0 は、SQL Server がすべての結果を受け取るまで待機することを意味します。 SQL Server が指定された行数を取得した後にクエリを停止するように設定するには、0 より大きい値を指定します。 このオプションをオフにして、すべての行が返されるようにするには、SET ROWCOUNT 0 を指定してください。|  
 |**SET TEXTSIZE**|既定値の 2,147,483,647 バイトは、SQL Server が text、ntext、nvarchar(max)、および varchar(max) の各データ フィールドの上限まで、完全なデータ フィールドを提供することを示します。 XML データ型は影響を受けません。 大きな値の場合に結果を制限するには、これより小さなサイズを指定します。 指定されたサイズよりも大きい列は切り捨てられます。|  
@@ -69,9 +70,9 @@ ms.locfileid: "68110632"
 |**SET ANSI_WARNINGS**|いくつかのエラー条件に対して SQL-92 標準の動作を実行することを指定します。詳しくは、「[SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)」をご覧ください。|  
 |**SET ANSI_NULLS**|等号 ( **=** ) 比較演算子と不等号 ( **<>** ) 比較演算子を NULL 値に対して使用した場合の、SQL-92 準拠動作を指定します。詳しくは、「[SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)」をご覧ください。|  
   
-## <a name="QueryResults"></a>クエリの結果  
+## <a name="query-results"></a><a name="QueryResults"></a>クエリの結果  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |------------|---------------|  
 |**結果セットにクエリを含める**|クエリのテキストを結果セットの一部として返します。|  
 |**結果のコピーまたは保存時に列のヘッダーを含める**|結果をクリップボードにコピーしたりファイルに保存したりするときに、列のヘッダー (タイトル) を含めます。 保存またはコピーされる結果データに列の見出しを含めずに、データだけ保存またはコピーするには、このチェック ボックスをオフにします。|  

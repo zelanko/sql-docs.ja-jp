@@ -1,7 +1,7 @@
 ---
 title: PIVOT および UNPIVOT の使用 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+description: PIVOT および UNPIVOT 関係演算子の Transact-SQL リファレンス。 SELECT ステートメントでこれらの演算子を使用すると、テーブル値式を別のテーブルに変更できます。
+ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,16 +24,16 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 0ffc3d6b3ec03d8903124e1fd75515a93fd43cd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559416"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999191"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT および UNPIVOT の使用
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 関係演算子 `PIVOT` および `UNPIVOT` を使用すると、テーブル値式を別のテーブルに変更できます。 `PIVOT` では、式内の 1 つの列にある複数の一意の値を出力内の複数の列に変えることにより、テーブル値式が行列変換されます。 また、`PIVOT` で集計が実行されるのは、最終出力で必要な残りの任意の列値に対して集計が必要な場合です。 `UNPIVOT` 関係演算子の機能は PIVOT 関係演算子の逆で、テーブル値式の複数の列を列値に行列変換します。  
   
@@ -62,7 +62,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `UNPIVOT` 句内の列識別子は、カタログ照合順序に従います。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の場合、照合順序は常に `SQL_Latin1_General_CP1_CI_AS` です。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の部分的包含データベースの場合、照合順序は常に `Latin1_General_100_CI_AS_KS_WS_SC` です。 列が他の列と結合されている場合、競合を回避するために COLLATE 句 (`COLLATE DATABASE_DEFAULT`) が必要です。  
 
   
@@ -153,10 +153,12 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-`EmployeeID` 列から返される一意の値が、最終的な結果セットのフィールドになります。 そのため、PIVOT 句で指定した `EmployeeID` 番号 (この例では、`164`、`198`、`223`、`231`、および `233`) ごとに列ができます。 `PurchaseOrderID` 列は、最終的な出力に返される列をグループ化する (この列をグループ化列といいます) のための値列です。 この例では、グループ化列を `COUNT` 関数で集計しています。 従業員ごとに `PurchaseOrderID` 関数を計算する際に `COUNT` 列に表示されている NULL 値を無視したことを示す警告メッセージが表示されます。  
+`EmployeeID` 列から返される一意の値が、最終的な結果セットのフィールドになります。 そのため、PIVOT 句で指定した `EmployeeID` 番号 (この例では、`250`、`251`、`256`、`257`、および `260`) ごとに列ができます。 `PurchaseOrderID` 列は、最終的な出力に返される列をグループ化する (この列をグループ化列といいます) のための値列です。 この例では、グループ化列を `COUNT` 関数で集計しています。 従業員ごとに `PurchaseOrderID` 関数を計算する際に `COUNT` 列に表示されている NULL 値を無視したことを示す警告メッセージが表示されます。  
   
 > [!IMPORTANT]  
 >  `PIVOT` 関係演算子と集計関数を併用する場合、値列に存在する NULL 値は集計を実行する際に無視されます。  
+
+## <a name="unpivot-example"></a>UNPIVOT の例
   
 `UNPIVOT` 関係演算子で行われる操作は、基本的に `PIVOT` 演算子の逆で、列を行に変換します。 上記の例で作成されたテーブルが `pvt` という名前でデータベースに保存されていて、列 ID `Emp1`、`Emp2`、`Emp3`、`Emp4`、および `Emp5` を、特定の仕入先に対応する行の値に行列変換するとします。 そのため、さらに 2 つの列を指定する必要があります。 行列変換する列値 (`Emp1`、`Emp2`、...) を格納する列を `Employee` と呼び、行列変換する列に現在存在している値を保持する列を `Orders` と呼びます。 これらの列は、それぞれ [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義の *pivot_column* と *value_column* に対応します。 このクエリは次のようになります。  
   

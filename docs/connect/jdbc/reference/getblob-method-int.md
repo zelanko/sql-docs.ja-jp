@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d4ed9b8f6e4b29d5609ced88592b96de9c196d89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c93bec37060ebdb7850ff2b678d7a68fce35e3a0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953813"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921626"
 ---
 # <a name="getblob-method-int"></a>getBlob (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public java.sql.Blob getBlob(int index)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターのインデックスを示す **int** です。  
   
@@ -45,7 +45,7 @@ public java.sql.Blob getBlob(int index)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getBlob メソッドは、java.sql.CallableStatement インターフェイスの getBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

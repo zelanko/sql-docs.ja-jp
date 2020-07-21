@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76f6ecec446536191e8be4b05547ba5fd44c9d8d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040540"
 ---
 # <a name="creating-views-and-stored-procedures"></a>ビューとストアド プロシージャの作成
   Mary が **TestData** データベースにアクセスできるようになったので、ビューやストアド プロシージャのようなデータベース オブジェクトを作成し、Mary にこれらのオブジェクトへのアクセス権を付与できます。 ビューは、格納された SELECT ステートメントで、ストアド プロシージャは、バッチとして実行される 1 つ以上の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントです。  
@@ -79,7 +78,7 @@ ms.locfileid: "68211189"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [データベース オブジェクトへのアクセス権の付与](lesson-2-4-granting-access-to-a-database-object.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
   

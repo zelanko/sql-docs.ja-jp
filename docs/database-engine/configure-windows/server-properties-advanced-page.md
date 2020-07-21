@@ -1,5 +1,6 @@
 ---
 title: サーバーのプロパティ ([詳細設定] ページ) | Microsoft Docs
+description: SQL Server のサーバーの詳細設定について説明します。 FILESTREAM オプション、さまざまなしきい値、フルテキスト アップグレードの代替方法、その他の設定について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1672b245f061f521c9114bca71f723fe75553c96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 796c722db124b9eda448652dc29f5571ea41b747
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771811"
 ---
 # <a name="server-properties---advanced-page"></a>サーバーのプロパティ - [詳細設定] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、サーバーの詳細設定を表示または変更できます。  
   
  **[サーバーのプロパティ] ページを表示するには**  
@@ -77,7 +78,7 @@ ms.locfileid: "68025592"
   
  フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 このオプションは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースでのみ使用できます。  
   
- **Rebuild**  
+ **リビルド**  
  フルテキスト カタログは、導入された新しい拡張機能であるワード ブレーカーを使用して再構築されます。 インデックスの再構築には時間がかかり、アップグレード後にかなりの量の CPU とメモリが必要になる可能性があります。  
   
  **リセット**  
@@ -113,7 +114,7 @@ ms.locfileid: "68025592"
   
  設定を変更すると即座に反映されます。  
   
-## <a name="parallelism"></a>[並列処理]  
+## <a name="parallelism"></a>並行処理:  
  **[並列処理のコストしきい値]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリの並列プランを作成して実行する場合のしきい値を指定します。 コストとは、特定のハードウェア構成で、直列プランを実行するための予想所要時間を秒単位で表したものです。 symmetric multiprocessors の場合のみ設定してください。 詳細については、「 [cost threshold for parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md)」を参照してください。  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83655bc03b2f55d9d7d426d1fa58ce4e86570d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a55cedb9ebae8f16fc7ba35cfb6e72013ab3ff9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766815"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY (非対称キーの権限の拒否) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   非対称キーに対する権限を拒否します。  
    
@@ -36,7 +36,7 @@ ms.locfileid: "68114987"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DENY { permission  [ ,...n ] }   
     ON ASYMMETRIC KEY :: asymmetric_key_name   
@@ -53,7 +53,7 @@ DENY { permission  [ ,...n ] }
  権限を拒否する非対称キーを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を拒否するプリンシパルを指定します。 次のいずれかです。  
+ 権限を拒否するプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
   
@@ -75,7 +75,7 @@ DENY { permission  [ ,...n ] }
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
  *denying_principal*  
- このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
   
@@ -93,7 +93,7 @@ DENY { permission  [ ,...n ] }
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  非対称キーは、データベース レベルの保護可能なアイテムで、権限の階層で親となっているデータベースに含まれています。 次に、非対称キーで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |非対称キーの権限|権限が含まれる非対称キー権限|権限が含まれるデータベース権限|  

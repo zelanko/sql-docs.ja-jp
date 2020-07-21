@@ -1,5 +1,5 @@
 ---
-title: DrilldownMemberBottom (MDX) |Microsoft Docs
+title: ドリルダウン Memberbottom (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 79bea49705c4f2fb66b8c9866be335433cbb783f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049259"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 
 
-  2 番目の指定されたセットに存在する、指定されたセット メンバーをドリルダウンするは、結果を制限することを指定したメンバーの設定。 または、この関数をドリル ダウン組のセットを最初の組階層または必要に応じて指定した階層を使用しています。  
+  2番目に指定したセット内に存在する、指定したセットのメンバーをドリルダウンします。結果セットは、指定した数のメンバーに制限されます。 または、この関数では、最初の組階層または必要に応じて指定した階層を使用して、組のセットをドリルダウンすることもできます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,40 +29,40 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
 ## <a name="arguments"></a>引数  
  *Set_Expression1*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Set_Expression2*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Count*  
  返す組の数を指定する有効な数値式です。  
   
  *Numeric_Expression*  
- 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
  *Hierarchy*  
- 階層を返す有効な多次元式 (MDX) 式。  
+ 階層を返す有効な多次元式 (MDX) 式です。  
   
- *再帰*  
+ *繰り返し*  
  セットの再帰的な比較を示すキーワードです。  
   
  *Include_Calc_Members*  
  計算されるメンバーがドリルダウン結果に含まれるようにするキーワード。  
   
-## <a name="remarks"></a>コメント  
- 数値式が指定されている場合、 **DrilldownMemberBottom**関数、子のセットに対して評価された数値式の値に基づいて、最初のセット内の各メンバーの子の順序の昇順で並べ替えますメンバー。 クエリ コンテキストから判別に、セルの値に基づいて最初のセット内の各メンバーの子の順序の昇順で並べ替えますが、子メンバーのセットによって表される数値式が指定されていない場合。 この動作は、並べ替えを行わず、自然な順序でメンバーのセットを返す、BottomCount および Tail (MDX) 関数に似ています。  
+## <a name="remarks"></a>Remarks  
+ 数値式を指定する**と、子**メンバーのセットに対して評価された数値式の値に従って、1番目のセット内の各メンバーの子を昇順で並べ替えます。 数値式が指定されていない場合、関数は、クエリコンテキストによって決定される子メンバーのセットによって表されるセルの値に基づいて、最初のセット内の各メンバーの子を昇順で並べ替えます。 この動作は、並べ替えを行わずに、一連のメンバーを自然な順序で返す、下端のカウントおよび末尾 (MDX) 関数に似ています。  
   
- 並べ替えの後、 **DrilldownMemberBottom**関数が、親メンバーと指定された子メンバーの数を含むセットを返します*数、* 両方に含まれる最小値とは設定します。  
+ 並べ替えの後、**ドリルダウン Memberbottom**関数は、親メンバーと子メンバーの*数を含む*セットを返します。これには、最小値が設定され、両方のセットに含まれています。  
   
- 場合**再帰**が指定されて、関数は、前述のように最初のセットを並べ替え、再帰的に 2 番目のセットに対して、階層に編成されている最初のセットのメンバーを比較します。 この関数は、最初のセットのメンバーのうち、2 番目のセット内にも存在する各メンバーの子を、最小のものから指定されている数だけ取得します。  
+ **RECURSIVE**が指定されている場合、関数は、前に説明したように最初のセットを並べ替えてから、階層に編成されている最初のセットのメンバーを2番目のセットに対して再帰的に比較します。 この関数は、最初のセットのメンバーのうち、2 番目のセット内にも存在する各メンバーの子を、最小のものから指定されている数だけ取得します。  
   
- 最初のセットは、メンバーではなく組を含めることができます。 組のドリル ダウンでは、OLE DB の拡張機能し、メンバーではなく組のセットを返します。  
+ 1番目のセットには、メンバーではなく組を含めることができます。 組のドリルダウンは OLE DB の拡張機能であり、メンバーではなく組のセットを返します。  
   
- **DrilldownMemberBottom**機能に似ています、 [DrilldownMember](../mdx/drilldownmember-mdx.md)も最初のセット内の各メンバーのすべての子ではなく、 、2番目のセット内に存在しますが、機能**DrilldownMemberBottom**関数は、最下位の子メンバーの各メンバーの数を返します。  
+ **ドリルダウン Memberbottom**関数は、[ドリルダウンメンバー](../mdx/drilldownmember-mdx.md)関数と似ていますが、2番目のセットにも含まれている最初のセット内の各メンバーのすべての子を含めるのではなく、**ドリルダウン memberbottom**関数は各メンバーの最下位の子メンバーの数を返します。  
   
- XMLA プロパティの MdpropMdxDrillFunctions にクエリを実行、サーバーがドリル関数; が提供するサポートのレベルを確認することができます。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)詳細についてはします。  
+ XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「[サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098522"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX データ操作 - ALTER CUBE
 
 
-  指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用に関する詳細については、このブログの投稿を参照してください。[Analysis Services (ブログ) での書き戻しアプリケーションの構築](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用の詳細については、このブログの投稿「 [Analysis Services を使用した書き戻しアプリケーションの構築 (ブログ)](https://go.microsoft.com/fwlink/?LinkId=394977) 」を参照してください。  
   
- ディメンションの書き戻しを同時に実行すると、デッドロックが発生する可能性があります。この場合、最初の書き戻しがブロックされコミットできなくなります。これは、共有ロックが 2 番目の書き戻しによって保持されているためです。 このような状況では、エラーは生成されません。また、どのような操作も実行されません。 最終的には、タイムアウトと変更がロールバックされます。  
+ 同時実行ディメンションの書き戻しによってデッドロックが発生する可能性があることに注意してください。2番目の書き戻しによって保持されている共有ロックが原因で、最初の書き戻しがコミットからブロックされます。 このような状況では、エラーは生成されません。また、どのような操作も実行されません。 最終的には、タイムアウトと変更の両方がロールバックされます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -84,18 +84,18 @@ CELL CALCULATION Calculation_Name
     | [ Calculation_Name= Scalar_Expression ], ...n]  
 ```  
   
-## <a name="creating-a-dimension-member"></a>ディメンション メンバーの作成  
- 基になるディメンション テーブルに新しい行が追加されます。  
+## <a name="creating-a-dimension-member"></a>ディメンションメンバーの作成  
+ 基になるディメンションテーブルに新しい行が追加されます。  
   
 ### <a name="arguments"></a>引数  
  *ParentName*  
- 新しいディメンション メンバーの親の名前を指定する有効な文字列式です。ディメンション メンバーをルート以外の場所に作成する場合に指定します。  
+ ディメンションメンバーがルートで作成されている場合を除き、新しいディメンションメンバーの親の名前を提供する有効な文字列式です。  
   
- *メンバー名*  
- メンバー名を指定する有効な文字列式です。  
+ *MemberName*  
+ メンバー名を提供する有効な文字列式です。  
   
  *Key_Value*  
- 新しいディメンション メンバーのキー値を定義する有効なスカラー式です。  
+ 新しいディメンションメンバーのキー値を定義する有効なスカラー式です。  
   
  *Property_Name*  
  メンバー プロパティを表す有効な多次元式 (MDX) 識別子です。  
@@ -103,67 +103,67 @@ CELL CALCULATION Calculation_Name
  *Property_Value*  
  計算されるメンバー プロパティの値を定義する有効な多次元式 (MDX) スカラー式です。  
   
-## <a name="dropping-a-dimension-member"></a>ディメンション メンバーを削除します。  
- 書き込み可能なディメンションからディメンション メンバーを削除すると、基になるディメンション テーブルからそのメンバーおよび対応する行が削除されます。  
+## <a name="dropping-a-dimension-member"></a>ディメンションメンバーの削除  
+ 書き込み許可ディメンションからディメンションメンバーを削除すると、基になるディメンションテーブルからメンバーとそれに対応する行が削除されます。  
   
 ### <a name="arguments"></a>引数  
  *Cube_Name*  
- キューブの名前を指定する有効な文字列式です。  
+ キューブ名を指定する有効な文字列式です。  
   
  *Member_Name*  
- メンバー名またはメンバー キーを提供する有効な文字列式です。  
+ メンバー名またはメンバーキーを指定する有効な文字列式です。  
   
-### <a name="remarks"></a>コメント  
- WITH DESCENDANTS 句を使用しなかった場合、削除したメンバーの子は、削除したメンバーの親の子になります。 WITH DESCENDANTS 句を使用した場合、ディメンション テーブル内にあるすべての子孫および対応する行が削除されます。  
+### <a name="remarks"></a>Remarks  
+ WITH DESCENDANTS 句を使用しなかった場合、削除したメンバーの子は、削除したメンバーの親の子になります。 WITH 子孫句が使用されている場合は、ディメンションテーブル内のすべての子孫とその行も削除されます。  
   
 > [!NOTE]  
->  計算されるメンバー、名前付きセット、アクション、およびセルの計算の削除については、次を参照してください[DROP MEMBER ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)、 [DROP SET ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)、。[DROP ACTION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)、および[DROP CELL CALCULATION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)します。  
+>  計算されるメンバー、名前付きセット、アクション、およびセルの計算の削除については、「 [DROP MEMBER ステートメント &#40;mdx&#41;](../mdx/mdx-data-definition-drop-member.md)」、「Drop [SET ステートメント &#40;mdx&#41;](../mdx/mdx-data-definition-drop-set.md)」、「 [drop ACTION ステートメント &#40;mdx&#41;](../mdx/mdx-data-definition-drop-action.md)」、および「drop [cell CALCULATION ステートメント &#40;mdx&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)」を参照してください。  
   
 ## <a name="updating-the-default-dimension-member"></a>既定のディメンション メンバーの更新  
- この句では、キューブの既定のメンバーを更新します。この句は、MDX 計算スクリプトで既定のメンバーを定義するために使用されます。 データベース ディメンション、キューブ ディメンション、またはユーザー ログインの既定のメンバーを指定できます。 既定のメンバーは、セッション中に変更することもできます。  
+ この句は、キューブの既定のメンバーを更新し、MDX 計算スクリプトで既定のメンバーを定義するために使用されます。 データベース ディメンション、キューブ ディメンション、またはユーザー ログインの既定のメンバーを指定できます。 既定のメンバーは、セッション中に変更することもできます。  
   
 ### <a name="arguments"></a>引数  
  *Dimension_Name*  
- ディメンションの名前を指定する有効な文字列です。  
+ ディメンションの名前を提供する有効な文字列です。  
   
  *MDX_Expression*  
- メンバーを 1 つ返す有効な MDX 式です。  
+ 1つのメンバーを返す有効な MDX 式です。  
   
-### <a name="remarks"></a>コメント  
- 指定する MDX 式は、静的であっても動的であってもかまいません。  
+### <a name="remarks"></a>Remarks  
+ 指定された MDX 式は、静的または動的にすることができます。  
   
 ## <a name="moving-a-dimension-member"></a>ディメンション メンバーの移動  
  基になるディメンション テーブルの行が変更されます。  
   
 ### <a name="arguments"></a>引数  
  *ParentName*  
- 移動するディメンション メンバーの新しい親の名前を指定する有効な文字列式です。  
+ 移動するディメンションメンバーの新しい親の名前を指定する有効な文字列式です。  
   
- *メンバー名*  
- メンバー名を指定する有効な文字列式です。  
+ *MemberName*  
+ メンバー名を提供する有効な文字列式です。  
   
- Unsigned _*整数*  
+ Unsigned_*整数*  
  スキップするレベル数を指定する有効な数値です。  
   
- WITH DESCENDANTS を指定した場合は、ツリー全体が移動されます。 WITH DESCENDANTS を指定しなかった場合、移動した親の子は、移動したメンバーの親の子になります。 移動を行うことによる影響は、簡単にいえば、基になるディメンション テーブルの親キー列の値を更新することです。  
+ WITH 子孫句が指定されている場合、ツリー全体が移動されます。 WITH DESCENDANTS を指定しなかった場合、移動した親の子は、移動したメンバーの親の子になります。 移動の効果は、単に基になるディメンションテーブルの親キー列の値を更新することです。  
   
-## <a name="updating-a-dimension-member"></a>ディメンション メンバーの更新  
- UPDATE DIMENSION MEMBER 句を使用すると、メンバーのプロパティだけでなく、メンバーに関連付けられているカスタム メンバー式も変更できます。  
+## <a name="updating-a-dimension-member"></a>ディメンションメンバーの更新  
+ UPDATE DIMENSION MEMBER 句を使用すると、メンバーのプロパティだけでなく、メンバーに関連付けられているカスタムメンバー式を変更することもできます。  
   
 ### <a name="arguments"></a>引数  
- *メンバー名*  
- メンバー名を指定する有効な文字列式です。  
+ *MemberName*  
+ メンバー名を提供する有効な文字列式です。  
   
  *MDX_Expression*  
- メンバーを 1 つ返す有効な MDX 式です。  
+ 1つのメンバーを返す有効な MDX 式です。  
   
  *Property_Value*  
- 計算されるメンバー プロパティの値を定義する有効な MDX スカラー式です。  
+ 計算されるメンバープロパティの値を定義する有効な MDX スカラー式です。  
   
 ## <a name="creating-a-cell-calculation"></a>セル計算の作成  
- ALTER CUBE ステートメントを使用してセル計算の作成の詳細については、次を参照してください。 [DROP CELL CALCULATION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)します。  
+ ALTER CUBE ステートメントを使用してセル計算を作成する方法の詳細については、「 [DROP CELL Calculation ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Mdx&#41;&#40;mdx データ定義ステートメント](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

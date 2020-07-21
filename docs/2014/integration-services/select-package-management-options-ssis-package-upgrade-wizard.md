@@ -1,5 +1,5 @@
 ---
-title: パッケージ管理オプション (SSIS パッケージ アップグレード ウィザード) を選択します |。Microsoft Docs
+title: '[Package Management オプションの選択] (SSIS パッケージアップグレードウィザード) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackagemgtoptions.f1
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38bb9102551c56d82bc3cf32ca31e02f7eed4625
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056027"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421999"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>[パッケージ管理オプションの選択] (SSIS パッケージ アップグレード ウィザード)
   **[パッケージ管理オプションの選択]** ページを使用すると、パッケージのアップグレードに関するオプションを指定できます。  
@@ -26,7 +25,7 @@ ms.locfileid: "66056027"
   
 -   [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[接続文字列を更新して新しいプロバイダー名を使用する]**  
  現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の次のプロバイダーの名前を使用するように、接続文字列を更新します。  
   
@@ -72,9 +71,9 @@ ms.locfileid: "66056027"
 > [!NOTE]  
 >  このオプションを使用できるのは、元のパッケージとアップグレード済みパッケージをファイル システム内の同一フォルダーに格納するように指定した場合だけです。  
   
- 詳細については、「[SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)」を参照してください。  
+ 詳細については、「 [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages.md)  
   
   

@@ -1,7 +1,8 @@
 ---
-title: ネイティブ コンパイル T-SQL モジュールでサポートされる機能 | Microsoft Docs
-ms.custom: ''
-ms.date: 10/23/2017
+title: ネイティブ コンパイル T-SQL モジュール用の機能
+description: T-SQL 領域とネイティブ コンパイル T-SQL モジュールの本体でサポートされる機能 (ストアド プロシージャやスカラー ユーザー定義関数など) について説明します。
+ms.custom: seo-dt-2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,45 +12,29 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025086"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834723"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる機能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   このトピックには、T-SQL 領域とネイティブ コンパイル T-SQL モジュールの本体でサポートされる機能が含まれています。ストアド プロシージャ ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md))、スカラー ユーザー定義機能、インライン テーブル値関数、トリガーなどです。  
 
  ネイティブ モジュールの定義でサポートされる機能については、「 [ネイティブ コンパイル T-SQL モジュールでサポートされる DDL](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md)」をご覧ください。  
 
--   [ネイティブ モジュールのクエリ領域](#qsancsp)  
-
--   [データの変更](#dml)  
-
--   [フロー制御言語](#cof)  
-
--   [サポートされている演算子](#so)  
-
--   [ネイティブ コンパイル モジュールの組み込み関数](#bfncsp)  
-
--   [監査](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [テーブル ヒントとクエリ ヒント](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [並べ替えに関する制限事項](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
-
  サポートされない構造に関する詳細と、ネイティブ コンパイル モジュールのサポートされない一部の機能に対処する方法については、「 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)」を参照してください。 サポートされていない機能の詳細については、「 [インメモリ OLTP でサポートされていない Transact-SQL の構造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)」をご覧ください。  
 
-##  <a name="qsancsp"></a> ネイティブ モジュールのクエリ領域  
+##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> ネイティブ モジュールのクエリ領域  
 
 次のクエリ構造がサポートされます。  
 
 CASE 式: CASE は、有効な式を使用できる任意のステートメントや句で使用できます。
-   - **適用対象:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]」を参照してください。  
+   - **適用対象:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
     [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CASE ステートメントはネイティブ コンパイル T-SQL モジュールに対してサポートされています。
 
 SELECT 句:  
@@ -57,35 +42,35 @@ SELECT 句:
 -   列と名前のエイリアス (AS または = 構文を使用)。  
 
 -   スカラー サブクエリ
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」を参照してください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、スカラー サブクエリはネイティブ コンパイル モジュールでサポートされています。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」を参照してください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、DISTINCT 演算子はネイティブ コンパイル モジュールでサポートされています。
 
-              DISTINCT aggregates are not supported.  
+        - DISTINCT 集計はサポートされていません。  
 
 -   UNION および UNION ALL
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」を参照してください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、UNION および UNION ALL 演算子はネイティブ コンパイル モジュールでサポートされています。
 
 -   変数割り当て  
 
 FROM 句:  
 
--   FROM \<メモリ最適化テーブルまたはテーブル変数>  
+-   FROM \<memory optimized table or table variable>  
 
--   FROM \<ネイティブ コンパイル インライン TVF>  
+-   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN、INNER JOIN。
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」を参照してください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、JOINS はネイティブ コンパイル モジュールでサポートされています。
 
 -   サブクエリ `[AS] table_alias`。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。 
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」を参照してください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、サブクエリはネイティブ コンパイル モジュールでサポートされています。
 
 WHERE 句:  
@@ -94,7 +79,7 @@ WHERE 句:
 
 -   AND、BETWEEN  
 -   OR、NOT、IN、EXISTS
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]」を参照してください。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
       [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、OR/NOT/IN/EXISTS 演算子はネイティブ コンパイル モジュールでサポートされています。
 
 
@@ -142,7 +127,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ネイティブにコンパイルされる [!INCLUDE[tsql](../../includes/tsql-md.md)] でのこれらの制限は、インタープリターによって処理される [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスには適用されません。  
 
 
-##  <a name="dml"></a> データの変更  
+##  <a name="data-modification"></a><a name="dml"></a> データの変更  
 
 以下の DML ステートメントがサポートされています。  
 
@@ -154,7 +139,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   WHERE は UPDATE ステートメントと DELETE ステートメントでサポートされています。  
 
-##  <a name="cof"></a> フロー制御言語  
+##  <a name="control-of-flow-language"></a><a name="cof"></a> フロー制御言語  
  次のフロー制御言語構成がサポートされています。  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -169,32 +154,32 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - パフォーマンスを最適化するには、ネイティブ コンパイル T-SQL モジュール全体に対して 1 つの TRY/CATCH ブロックを使用します。  
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
 -   BEGIN ATOMIC (ストアド プロシージャの外部レベル)。 詳細については、「 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)」を参照してください。  
 
-##  <a name="so"></a> サポートされている演算子  
+##  <a name="supported-operators"></a><a name="so"></a> サポートされている演算子  
  サポートされている演算子は次のとおりです。  
 
--   [比較演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (例: >、\<、>=、<=)  
+-   [比較演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (例: >、\<, >=、<=)  
 
 -   単項演算子 (+、-)。  
 
 -   二項演算子 (*、/、+、-、% (剰余))。  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - プラス演算子 (+) は、数値と文字列の両方でサポートされています。  
 
 -   論理演算子 (AND、OR、NOT)。  
 
 -   ビット演算子 ~、&、|、および ^  
 
 -   APPLY 演算子
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。  
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。
 
-##  <a name="bfncsp"></a> ネイティブ コンパイル モジュールの組み込み関数  
+##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> ネイティブ コンパイル モジュールの組み込み関数  
  メモリ最適化テーブルの構造とネイティブ コンパイル T-SQL モジュールでは、次の関数がサポートされます。  
 
 -   すべての[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -202,7 +187,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   日付関数: CURRENT_TIMESTAMP、DATEADD、DATEDIFF、DATEFROMPARTS、DATEPART、DATETIME2FROMPARTS、DATETIMEFROMPARTS、DAY、EOMONTH、GETDATE、GETUTCDATE、MONTH、SMALLDATETIMEFROMPARTS、SYSDATETIME、SYSUTCDATETIME、YEAR。  
 
 -   文字列関数: LEN、LTRIM、RTRIM、SUBSTRING。  
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。  
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、次の組み込み関数もサポートされます: TRIM、TRANSLATE、CONCAT_WS。  
 
 -   ID 関数: SCOPE_IDENTITY  
@@ -212,7 +197,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   一意識別子関数: NEWID および NEWSEQUENTIALID  
 
 -   JSON 関数  
-    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。  
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、ネイティブ コンパイル モジュールで JSON 関数がサポートされます。
 
 -   エラー関数: ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE  
@@ -223,12 +208,12 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   ネイティブ モジュールの実行は入れ子にすることができます。
 
-##  <a name="auditing"></a> 監査  
+##  <a name="auditing"></a><a name="auditing"></a> 監査  
  プロシージャ レベルの監査はネイティブ コンパイル ストアド プロシージャでサポートされています。  
 
- 監査の詳細については、「 [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
+ 監査の詳細については、「 [サーバー監査の仕様およびデータベース監査の仕様を作成する方法](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
 
-##  <a name="tqh"></a> テーブル ヒントとクエリ ヒント  
+##  <a name="table-and-query-hints"></a><a name="tqh"></a> テーブル ヒントとクエリ ヒント  
  サポート対象は次のとおりです。  
 
 -   テーブル ヒント構文またはクエリの [OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) での INDEX、FORCESCAN、および FORCESEEK ヒント。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
@@ -241,10 +226,10 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
  詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
 
-##  <a name="los"></a> 並べ替えに関する制限事項  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> 並べ替えに関する制限事項  
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用するクエリでは、8,000 を超える行の並べ替えを行うことができます。 ただし、[ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用しない場合、[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) で並べ替えができる行数は最大で 8,000 です (結合がある場合は、より少ない行数になります)。  
 
- クエリが [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、エラー メッセージが表示されます: "**メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName>* 、行 *\<lineNumber>* TOP 演算子は、最大 8192 行を返すことができます。 *\<number>* が要求されました**"。  
+ クエリが [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、エラー メッセージが表示されます: **メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName>* 、行 *\<lineNumber>* TOP 演算子は、最大 8192 行を返すことができます。 *\<number>* が要求されました。**  
 
  TOP 句がない場合は、ORDER BY で任意の数の行を並べ替えることができます。  
 

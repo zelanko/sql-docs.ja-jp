@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptpublicationcustomprocs
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8436616ced84892dc7e484a5d83f3f0c3779f244
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 19a7b793a1bd7a72941a8f07baba44c584e5d8f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645374"
 ---
-# <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   自動生成カスタムプロシージャスキーマオプションが有効になっているパブリケーション内のすべてのテーブルアーティクルに対して、カスタムの INSERT、UPDATE、および DELETE プロシージャをスクリプト化します。 **sp_scriptpublicationcustomprocs**は、スナップショットが手動で適用されるサブスクリプションを設定する場合に特に便利です。  
   
@@ -37,7 +37,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication_name'`パブリケーションの名前を指定します。 *publication_name*は**sysname**既定値はありません。  
+`[ @publication = ] 'publication_name'`パブリケーションの名前を指定します。 *publication_name*は**sysname**で、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -45,10 +45,10 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## <a name="result-sets"></a>結果セット  
  1つの**nvarchar (4000)** 列で構成される結果セットを返します。 この結果セットは、カスタム ストアド プロシージャの作成に必要な、完全な CREATE PROCEDURE ステートメントを構成します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  カスタムプロシージャは、自動生成カスタムプロシージャ (0x2) スキーマオプションを指定しないと、アーティクルに対してスクリプト化されません。  
   
- 次の手順は、 **sp_scriptpublicationcustomprocs**がサブスクライバーのプロシージャを作成するために使用されます。このプロシージャを直接実行することはできません。  
+ 次の手順は、 **sp_scriptpublicationcustomprocs**がサブスクライバーのプロシージャを作成するために使用します。このプロシージャを直接実行することはできません。  
   
  **sp_script_reconciliation_delproc**  
   
@@ -75,7 +75,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行権限が**public**に付与されます。このストアドプロシージャ内では、現在のデータベースの**sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーへのアクセスを制限するために、手続き型のセキュリティチェックが実行されます。  
+ 実行権限が**public**に付与されます。このストアドプロシージャ内で手続き型のセキュリティチェックが実行され、 **sysadmin**固定サーバーロールのメンバーと、現在のデータベースの固定データベースロール**db_owner**のメンバーへのアクセスが制限されます。  
   
 ## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

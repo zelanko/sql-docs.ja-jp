@@ -1,5 +1,5 @@
 ---
-title: Microsoft 線形回帰アルゴリズム テクニカル リファレンス |Microsoft Docs
+title: Microsoft 線形回帰アルゴリズムテクニカルリファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20acb57a4c2ddb60d2daefc6733ac7ef52310f3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084056"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522008"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線形回帰アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された、特殊な Microsoft デシジョン ツリー アルゴリズムです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
@@ -36,7 +35,7 @@ ms.locfileid: "66084056"
   
 |アルゴリズム|分析の方法|コメント|  
 |---------------|------------------------|--------------|  
-|線形回帰|興味深さのスコア|既定値です。<br /><br /> デシジョン ツリー アルゴリズムで使用できるその他の機能選択の方法は、離散変数のみに適用されるため、線形回帰モデルには適用できません。|  
+|線形回帰|興味深さのスコア|既定値。<br /><br /> デシジョン ツリー アルゴリズムで使用できるその他の機能選択の方法は、離散変数のみに適用されるため、線形回帰モデルには適用できません。|  
 |デシジョン ツリー|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|非バイナリの連続する値を含む列がある場合は、一貫性を保つため、すべての列に対して興味深さのスコアが使用されます。 それ以外の場合は、既定の方法か、指定した方法が使用されます。|  
   
  デシジョン ツリー モデルに対する機能の選択を制御するアルゴリズム パラメーターは、MAXIMUM_INPUT_ATTRIBUTES と MAXIMUM_OUTPUT です。  
@@ -59,24 +58,24 @@ ms.locfileid: "66084056"
 |モデリング フラグ|説明|  
 |-------------------|-----------------|  
 |NOT NULL|列に NULL を含めることはできないことを示します。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
-|REGRESSOR|列には、分析中に潜在的な独立変数として扱われる連続する数値が含まれることを示します。<br /><br /> 注:列がリグレッサーとしてフラグを設定しても、列が、最終的なモデルでリグレッサーとして使用されることとは限りません。<br /><br /> マイニング モデル列に適用されます。|  
+|REGRESSOR|列には、分析中に潜在的な独立変数として扱われる連続する数値が含まれることを示します。<br /><br /> 注: 列にリグレッサーとしてフラグを設定しても、最終的なモデルでその列がリグレッサーとして使用されるかどうかは保証されません。<br /><br /> マイニング モデル列に適用されます。|  
   
 ### <a name="regressors-in-linear-regression-models"></a>線形回帰モデルのリグレッサー  
  線形回帰モデルは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいています。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用していない場合でも、連続属性の回帰を表すツリーやノードがデシジョン ツリー モデルに含まれることはあります。  
   
- 連続列がリグレッサーを表すことを指定する必要はありません。 列に REGRESSOR フラグを設定しなくても、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムにより、データセットが意味のあるパターンを持つ領域に分割されます。 その違いは、このモデリング フラグを設定すると、アルゴリズムを検索しようという形式の回帰式を * C1 + b\*C2 +… で、ツリーのノードのパターンに合わせてします。 残差の合計が計算され、偏差が大きすぎる場合には、ツリーが強制的に分割されます。  
+ 連続列がリグレッサーを表すことを指定する必要はありません。 列に REGRESSOR フラグを設定しなくても、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムにより、データセットが意味のあるパターンを持つ領域に分割されます。 違いは、モデリングフラグを設定すると、アルゴリズムによって、* C1 + b \* C2 +... という形式の回帰式が検索されます。は、ツリーのノードのパターンに適合します。 残差の合計が計算され、偏差が大きすぎる場合には、ツリーが強制的に分割されます。  
   
  たとえば、 **Income** を属性として使用して顧客の購入行動を予測する場合に、その列に REGRESSOR モデリング フラグを設定すると、アルゴリズムはまず、標準の回帰式を使用して **Income** の値を試します。 偏差が大きすぎる場合はその回帰式が放棄され、ツリーが他の属性で分割されます。 その後、デシジョン ツリー アルゴリズムは、分割後の各分岐で Income をリグレッサーとして使用できるかどうかを試します。  
   
  FORCED_REGRESSOR パラメーターを使用すると、アルゴリズムで特定のリグレッサーが使用されるようにすることができます。 このパラメーターは、Microsoft デシジョン ツリー アルゴリズムと Microsoft 線形回帰アルゴリズムで使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  線形回帰モデルには、キー列、入力列、および少なくとも 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。  
   
-|[列]|コンテンツの種類|  
+|Column|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Ordered|  
@@ -84,9 +83,9 @@ ms.locfileid: "66084056"
 > [!NOTE]  
 >  コンテンツの種類 `Cyclical` および `Ordered` はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Microsoft 線形回帰アルゴリズム](microsoft-linear-regression-algorithm.md)   
  [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)   
- [線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 追加、削除、または共有パッケージ内の接続マネージャー |Microsoft Docs
+title: パッケージ内の接続マネージャーを追加、削除、または共有する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b7d92800a2f5d55cf85ace3e7746d934b7474b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a44a97ce85fc78a115d89a488aea8d170ef3b36
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062008"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439719"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>パッケージの接続マネージャーを追加、削除、または共有する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、リレーショナル データベース、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース、CSV 形式のファイル、XML 形式のファイルなど、さまざまなデータ ソースに接続するための各種接続マネージャーがあります。 接続マネージャーは、パッケージ レベルまたはプロジェクト レベルで作成できます。 プロジェクト レベルで作成した接続マネージャーは、プロジェクト内のすべてのパッケージで使用できます。 一方、パッケージ レベルで作成した接続マネージャーは、特定のパッケージでのみ使用できます。  
@@ -32,25 +31,25 @@ ms.locfileid: "66062008"
   
  次の手順はすべての種類の接続マネージャーに適用されます。次のタスクの実行方法について説明します。  
   
--   [パッケージの作成時に、接続マネージャーを追加するには](#wizard)  
+-   [パッケージ作成時に接続マネージャーを追加するには](#wizard)  
   
 -   [接続マネージャーを既存のパッケージに追加するには](#package)  
   
--   [プロジェクト レベルの接続マネージャーを追加するには](#project)  
+-   [プロジェクト レベルで接続マネージャーを追加するには](#project)  
   
 -   [接続マネージャーのプロパティのパラメーターを作成するには](#parameter)  
   
--   [接続マネージャーをパッケージから削除するには](#DeletePackageLevel)  
+-   [パッケージから接続マネージャーを削除するには](#DeletePackageLevel)  
   
 -   [共有接続マネージャー (プロジェクト レベルの接続マネージャー) を削除するには](#DeleteProjectLevel)  
   
-##  <a name="wizard"></a> パッケージの作成時に、接続マネージャーを追加するには  
+##  <a name="to-add-a-connection-manager-when-creating-a-package"></a><a name="wizard"></a>パッケージの作成時に接続マネージャーを追加するには  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用します。  
   
      接続マネージャーの作成と構成に加えて、このウィザードでは、接続マネージャーを使用する変換元および変換先の作成と構成を行うこともできます。 詳細については、「 [SQL Server データ ツールでのパッケージの作成](create-packages-in-sql-server-data-tools.md)」を参照してください。  
   
-##  <a name="package"></a> 接続マネージャーを既存のパッケージに追加するには  
+##  <a name="to-add-a-connection-manager-to-an-existing-package"></a><a name="package"></a>接続マネージャーを既存のパッケージに追加するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -68,13 +67,13 @@ ms.locfileid: "66062008"
   
      選択した接続マネージャーの種類に応じたカスタム ダイアログ ボックスが開きます。 接続マネージャーの種類と設定可能なオプションの詳細については、次のオプションの表を参照してください。  
   
-    |[ODBC 入力元エディター]|および|  
+    |[ODBC 入力元エディター]|オプション|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](configure-ado-net-connection-manager.md)|  
     |[Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)|[[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Excel 接続マネージャー](connection-manager/excel-connection-manager.md)|[Excel 接続マネージャー エディター](../../2014/integration-services/excel-connection-manager-editor.md)|  
-    |[ファイル接続マネージャー](connection-manager/file-connection-manager.md)|[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)|  
+    |[Excel 接続マネージャー](connection-manager/excel-connection-manager.md)|[Excel 接続マネージャー](../../2014/integration-services/excel-connection-manager-editor.md)|  
+    |[ファイル接続マネージャー](connection-manager/file-connection-manager.md)|[[ファイル接続マネージャー エディター] ダイアログ ボックス](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[複数ファイル接続マネージャー](connection-manager/multiple-files-connection-manager.md)|[[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[フラット ファイル接続マネージャー](connection-manager/flat-file-connection-manager.md)|[[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
     |[複数フラット ファイル接続マネージャー](connection-manager/multiple-flat-files-connection-manager.md)|[[複数フラット ファイル接続マネージャー エディター] ([全般] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] ([列] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
@@ -94,7 +93,7 @@ ms.locfileid: "66062008"
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-##  <a name="project"></a> プロジェクト レベルの接続マネージャーを追加するには  
+##  <a name="to-add-a-connection-manager-at-the-project-level"></a><a name="project"></a>プロジェクトレベルで接続マネージャーを追加するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -104,13 +103,13 @@ ms.locfileid: "66062008"
   
      選択した接続マネージャーの種類に応じたカスタム ダイアログ ボックスが開きます。 接続マネージャーの種類と設定可能なオプションの詳細については、次のオプションの表を参照してください。  
   
-    |[ODBC 入力元エディター]|および|  
+    |[ODBC 入力元エディター]|オプション|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](configure-ado-net-connection-manager.md)|  
     |[Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)|[[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Excel 接続マネージャー](connection-manager/excel-connection-manager.md)|[Excel 接続マネージャー エディター](../../2014/integration-services/excel-connection-manager-editor.md)|  
-    |[ファイル接続マネージャー](connection-manager/file-connection-manager.md)|[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)|  
+    |[Excel 接続マネージャー](connection-manager/excel-connection-manager.md)|[Excel 接続マネージャー](../../2014/integration-services/excel-connection-manager-editor.md)|  
+    |[ファイル接続マネージャー](connection-manager/file-connection-manager.md)|[[ファイル接続マネージャー エディター] ダイアログ ボックス](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[複数ファイル接続マネージャー](connection-manager/multiple-files-connection-manager.md)|[[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[フラット ファイル接続マネージャー](connection-manager/flat-file-connection-manager.md)|[[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
     |[複数フラット ファイル接続マネージャー](connection-manager/multiple-flat-files-connection-manager.md)|[[複数フラット ファイル接続マネージャー エディター] ([全般] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] ([列] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
@@ -129,15 +128,15 @@ ms.locfileid: "66062008"
 4.  必要に応じて、 **[ソリューション マネージャー]** ウィンドウの **[接続マネージャー]** ノードまたは **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブで接続マネージャーを右クリックし、 **[名前の変更]** をクリックして、接続マネージャーの既定の名前を変更します。  
   
     > [!NOTE]  
-    >  **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブでは、接続マネージャーの名前の前に表示されている **(プロジェクト)** を上書きすることはできません。 これは仕様です。  
+    >  [ **SSIS デザイナー** ] ウィンドウの [**接続マネージャー** ] タブでは、接続マネージャーの名前から **(プロジェクト)** プレフィックスを上書きすることはできません。 これは仕様に基づく制限事項です。  
   
-##  <a name="parameter"></a> 接続マネージャーのプロパティのパラメーターを作成するには  
+##  <a name="to-create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a>接続マネージャープロパティのパラメーターを作成するには  
   
 1.  **[接続マネージャー]** 領域で、パラメーターを作成する接続マネージャーを右クリックし、 **[パラメーター化]** をクリックします。  
   
 2.  **[パラメーター化]** ダイアログ ボックスでパラメーター設定を構成します。 詳細については、「 [[パラメーター化] ダイアログ ボックス](../../2014/integration-services/parameterize-dialog-box.md)」を参照してください。  
   
-##  <a name="DeletePackageLevel"></a> 接続マネージャーをパッケージから削除するには  
+##  <a name="to-delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a>パッケージから接続マネージャーを削除するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -157,7 +156,7 @@ ms.locfileid: "66062008"
   
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-##  <a name="DeleteProjectLevel"></a> 共有接続マネージャー (プロジェクト レベルの接続マネージャー) を削除するには  
+##  <a name="to-delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a>共有接続マネージャー (プロジェクトレベルの接続マネージャー) を削除するには  
   
 1.  プロジェクト レベルの接続マネージャーを削除するには、 **[ソリューション エクスプローラー]** ウィンドウの **[接続マネージャー]** ノードで接続マネージャーを右クリックし、 **[削除]** をクリックします。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で次のような警告メッセージが表示されます。  
   
@@ -169,8 +168,8 @@ ms.locfileid: "66062008"
     > [!NOTE]  
     >  プロジェクトのパッケージに対して開いた **[SSIS デザイナー]** ウィンドウの **[接続マネージャー]** タブから、プロジェクト レベルの接続マネージャーを削除することもできます。 そのためには、タブで接続マネージャーを右クリックし、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; の接続](connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>関連項目  
+ [SSIS&#41; 接続の Integration Services &#40;](connection-manager/integration-services-ssis-connections.md)   
  [接続マネージャーのプロパティを設定する](../../2014/integration-services/set-the-properties-of-a-connection-manager.md)  
   
   

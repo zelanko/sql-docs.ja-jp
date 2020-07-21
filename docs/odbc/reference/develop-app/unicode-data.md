@@ -13,38 +13,38 @@ helpviewer_keywords:
 - C data types [ODBC], Unicode
 - SQL data types [ODBC], Unicode
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 899924b5c0847d5f42e383a9e04c33298bb368b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73ea9035b05f04fec1527ca2aa98531a807db8cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087756"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307399"
 ---
 # <a name="unicode-data"></a>Unicode データ
-SQL の Unicode データ型は、Unicode、DBMS にネイティブで存在するデータを記述する提供されます。 C の Unicode データ型は、Unicode バッファーにデータをバインドする、アプリケーションに提供されます。 ドライバー マネージャーは、Unicode C 型にするには、(SQL_C_WCHAR) からデータを変換できる関数は ANSI ドライバーを使用します。  
+SQL Unicode データ型は、DBMS にネイティブで格納されているデータを記述するために用意されています。 アプリケーションで Unicode バッファーにデータをバインドできるようにするために、C Unicode データ型が用意されています。 ドライバーマネージャーは、Unicode C 型 (SQL_C_WCHAR) のデータを変換して、ANSI ドライバーで機能させることができます。  
   
- ODBC 3.0 または 2 です。*x*アプリケーションは常に ANSI データ型にバインドします。 最適なパフォーマンスを得るには、ODBC 3.5 (またはそれ以降) アプリケーションは ANSI C のデータ型にバインドする必要がある場合 SQL 列の型は ANSI、および SQL 列の型が Unicode の場合、Unicode の C データ型にバインドする必要があります。  
+ ODBC 3.0 または2。*x*アプリケーションは、常に ANSI データ型にバインドされます。 最適なパフォーマンスを実現するには、ODBC 3.5 (またはそれ以降) のアプリケーションを ANSI データ C 型にバインドし、SQL 列の型が ANSI である場合は、Unicode の C データ型にバインドする必要があります。  
   
- SQL Unicode 型を表すインジケーターは、SQL_WCHAR、SQL_WVARCHAR、SQL_WLONGVARCHAR です。 SQL_WCHAR データの固定文字列の長さ、SQL_WVARCHAR が宣言されている最大の可変長と SQL_WLONGVARCHAR がデータ ソースに依存している最大の可変長です。  
+ SQL Unicode の型インジケーターは、SQL_WCHAR、SQL_WVARCHAR、および SQL_WLONGVARCHAR です。 SQL_WCHAR データは固定長の文字列であり、SQL_WVARCHAR の可変長は、宣言された最大値で、SQL_WLONGVARCHAR の可変長はデータソースによって異なります。  
   
- C Unicode 型インジケーターは、SQL_C_WCHAR です。 これは、それぞれの SQL Unicode 型のインジケーターの既定値です。 すべての SQL 型は、SQL_C_WCHAR に変換できる SQL_C_WCHAR は、すべての SQL 型に変換することができます。 アプリケーションでは、3 つの方法のいずれかにデータを取得できます。  
+ C Unicode 型のインジケーターは SQL_C_WCHAR。 これは、各 SQL Unicode 型インジケーターの既定値です。 すべての SQL 型を SQL_C_WCHAR に変換し、SQL_C_WCHAR をすべての SQL 型に変換できます。 アプリケーションは、次の3つの方法のいずれかでデータを取得できます。  
   
--   SQL_C_CHAR としてデータを取得します。  
+-   データを SQL_C_CHAR として取得します。  
   
--   SQL_C_WCHAR としてデータを取得します。  
+-   データを SQL_C_WCHAR として取得します。  
   
--   SQL_C_TCHAR としてデータを宣言します。 これは、アプリケーションが Unicode アプリケーションとしてコンパイルされるまたは ANSI アプリケーションとしてコンパイルされている場合は、SQL_C_CHAR を挿入する場合は、SQL_C_WCHAR を挿入するマクロです。  
+-   データを SQL_C_TCHAR として宣言します。 これは、アプリケーションが Unicode アプリケーションとしてコンパイルされている場合は SQL_C_WCHAR を挿入するマクロで、ANSI アプリケーションとしてコンパイルされる場合は SQL_C_CHAR を挿入します。  
   
- SQL_C_TCHAR に関数で、次のように宣言されます。  
+ SQL_C_TCHAR は、次のように関数で宣言されます。  
   
 ```  
 SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, NameLen, 0, Name, 0, &Name)  
 ```  
   
- Unicode アプリケーションとして、アプリケーションがコンパイルされるときに、 *ValueType* SQL_C_WCHAR に SQL_C_TCHAR から引数に変更します。 ANSI アプリケーションとして、アプリケーションがコンパイルされるときに、 *ValueType* SQL_C_CHAR に引数が変更されます。  
+ アプリケーションが Unicode アプリケーションとしてコンパイルされると、 *ValueType*引数が SQL_C_TCHAR から SQL_C_WCHAR に変更されます。 アプリケーションが ANSI アプリケーションとしてコンパイルされると、 *ValueType*引数が SQL_C_CHAR に変更されます。  
   
- Unicode ドライバーでは、SQL_CHAR をなど、ANSI データ型はサポートもする必要があります。 Unicode ドライバーで動作するアプリケーションは、SQL_CHAR にバインドした場合、ドライバー マネージャーは SQL_WCHAR を SQL_CHAR データをマップしません。 Unicode ドライバーには、SQL_CHAR データがそのまま使用する必要があります。  
+ Unicode ドライバーでは、SQL_CHAR を含む ANSI データ型を引き続きサポートする必要があります。 Unicode ドライバーを使用しているアプリケーションが SQL_CHAR にバインドされている場合、ドライバーマネージャーは、SQL_CHAR データを SQL_WCHAR にマップしません。 Unicode ドライバーは、SQL_CHAR データを受け入れる必要があります。  
   
- ドライバー マネージャーは、ドライバーと DSN 名を Unicode で格納し、必要に応じて ANSI にマッピングします。 文字を変換できませんでしたが、既定の文字の sup で表される場合は、Unicode 文字は、(ドライバーと DSN 名、コンピューターのネイティブ コード ページではないコード ページから文字を使用する場合に発生することができます)、ANSI 文字にマップすることはできません、システムによって plied します。
+ ドライバーマネージャーでは、ドライバー名と DSN 名が Unicode で格納され、必要に応じて ANSI にマップされます。 Unicode 文字を ANSI 文字にマップできない場合 (コンピューターのネイティブコードページの文字がドライバーと DSN の名前で使用されていない場合に発生する可能性があります)、変換できなかった文字は、システムによって提供される既定の文字によって表されます。

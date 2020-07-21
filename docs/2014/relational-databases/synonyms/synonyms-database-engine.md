@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62736242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047220"
 ---
 # <a name="synonyms-database-engine"></a>シノニム (データベース エンジン)
   シノニムは、次の目的で機能するデータベース オブジェクトです。  
@@ -43,7 +42,7 @@ ms.locfileid: "62736242"
 |SQL インライン テーブル値関数|SQL ストアド プロシージャ|  
 |表示|テーブル<sup>1</sup> (ユーザー定義)|  
   
- <sup>1</sup>ローカルおよびグローバル一時テーブルが含まれています  
+ <sup>1</sup>ローカル一時テーブルとグローバル一時テーブルが含まれます。  
   
 > [!NOTE]  
 >  4 部構成の関数ベース オブジェクト名はサポートされません。  
@@ -64,7 +63,7 @@ ms.locfileid: "62736242"
   
 |||  
 |-|-|  
-|CONTROL|Del|  
+|CONTROL|DELETE|  
 |EXECUTE|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -75,7 +74,7 @@ ms.locfileid: "62736242"
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|Del|  
+|UPDATE|DELETE|  
 |EXECUTE|副選択式|  
   
  前に示したコンテキストでシノニムを扱っているときは、ベース オブジェクトが影響を受けます。 たとえば、シノニムが参照するベース オブジェクトがテーブルの場合に、シノニムに行を挿入すると、実際に参照先のテーブルに行が挿入されます。  
@@ -112,13 +111,13 @@ EXEC ('ALTER TABLE dbo.MyProduct
  スキーマ バインド関数の詳細については、「[ユーザー定義関数の作成 &#40;データベース エンジン&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)」を参照してください。  
   
 ## <a name="getting-information-about-synonyms"></a>シノニムに関する情報の取得  
- sys.synonyms カタログ ビューには、特定のデータベースの各シノニムを表すエントリが含まれています。 シノニム名やベース オブジェクト名など、シノニムのメタデータがこのカタログ ビューに表示されます。 詳細については、`sys.synonyms`カタログ ビューは、「 [sys.synonyms &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)します。  
+ sys.synonyms カタログ ビューには、特定のデータベースの各シノニムを表すエントリが含まれています。 シノニム名やベース オブジェクト名など、シノニムのメタデータがこのカタログ ビューに表示されます。 カタログビューの詳細につい `sys.synonyms` ては、「 [Sys &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)」を参照してください。  
   
  拡張プロパティを使用すれば、説明用テキスト、指示テキスト、定型入力、および表記規則をシノニムのプロパティとして追加できます。 プロパティはデータベースに格納されるので、プロパティを読み取るアプリケーションはすべて、同じ方法でオブジェクトを評価できます。 詳細については、「[sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql)」を参照してください。  
   
  シノニムのベース オブジェクトの基本データ型を調べるには、OBJECTPROPERTYEX 関数を使用します。 詳細については、「[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)」を参照してください。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  次の例は、ローカル オブジェクトであるシノニムのベース オブジェクトの基本データ型を返します。  
   
 ```  

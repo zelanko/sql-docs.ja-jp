@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107896"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
@@ -23,16 +23,16 @@ ms.locfileid: "66107896"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> レポート アイテム  
+##  <a name="report-items"></a><a name="ReportItems"></a> レポート アイテム  
  次の表で、レポート アイテムがどのように表示されるかについて説明します。  
   
-|アイテム|表示動作|  
+|Item|表示動作|  
 |----------|------------------------|  
 |レポート|XML ドキュメントのトップレベルの要素として表示されます。|  
 |データ領域|コンテナーの要素内部の要素として表示されます。 データ領域には、データをテキストおよびグラフとして表示するテーブル、マトリックス、一覧、およびデータを視覚化するデータ バー、スパークライン、ゲージ、インジケーターが含まれます。|  
 |グループ セクションおよび詳細セクション|各インスタンスにより、コンテナーの要素内部の要素として表示されます。|  
 |テキスト ボックス|コンテナー内部の属性または要素として表示されます。|  
-|四角形|コンテナー内部の要素として表示されます。|  
+|Rectangle|コンテナー内部の要素として表示されます。|  
 |マトリックスの列グループ|行グループ内部の要素として表示されます。|  
 |マップ|コンテナーの要素内部の要素として表示されます。 マップ レイヤーはマップの子要素で、各マップ レイヤーにはそのマップ メンバーの要素とマップ メンバーの属性が含まれています。|  
 |グラフ|コンテナーの要素内部の要素として表示されます。 系列はグラフの子要素であり、カテゴリは系列の子要素です。 それぞれのグラフ値にすべてのグラフ ラベルをレンダリングします。 ラベルと値は属性として含まれています。|  
@@ -53,7 +53,7 @@ ms.locfileid: "66107896"
   
 -   `Images, lines, and custom report items`画像、線、およびカスタム レポート アイテムは無視されます。  
   
-##  <a name="DataTypes"></a> データ型  
+##  <a name="data-types"></a><a name="DataTypes"></a>データ型  
  テキスト ボックスの要素または属性には、テキスト ボックスに表示される値に基づいた XSD データ型が割り当てられます。  
   
 |テキスト ボックスの値|割り当てられるデータ型|  
@@ -68,7 +68,7 @@ ms.locfileid: "66107896"
 |`String`, `Char`|**xsd:string**|  
 |その他|**xsd:string**|  
   
-##  <a name="XMLSpecificRenderingRules"></a> XML 固有の表示規則  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a>XML 固有の表示規則  
  次のセクションでは、レポート内のアイテムが XML 表示拡張機能によってどのように解釈されるかについて説明します。  
   
 ### <a name="report-body"></a>レポート本文  
@@ -80,7 +80,7 @@ ms.locfileid: "66107896"
   
  それぞれの変数の値は次のとおりです。  
   
-|名前|値|  
+|名前|[値]|  
 |----------|-----------|  
 |レポート|Report.DataElementName|  
 |ReportURL|サーバー上のレポートに対する絶対 URL です。URL エンコードされます。|  
@@ -105,10 +105,10 @@ ms.locfileid: "66107896"
 ### <a name="custom-report-items"></a>カスタム レポート アイテム  
  表示拡張機能は、CustomReportItems (CRI) を認識しません。 レポートにカスタム レポート アイテムが存在した場合は、標準的なレポート アイテムとしてレンダリングされます。  
   
-### <a name="images"></a>画像  
+### <a name="images"></a>イメージ  
  画像はレンダリングされません。  
   
-### <a name="lines"></a>線  
+### <a name="lines"></a>路線  
  線はレンダリングされません。  
   
 ### <a name="tables-matrices-and-lists"></a>テーブル、マトリックス、および一覧  
@@ -148,20 +148,20 @@ ms.locfileid: "66107896"
   
  DataElementOutput プロパティの値が Output と等しい場合、繰り返しアイテムのヘッダーが、detail 要素の子としてレンダリングされます。  
   
-##  <a name="CustomFormatsXSLTransformations"></a> カスタム形式および XSL 変換  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a>カスタム書式と XSL 変換  
  XML 表示拡張機能で生成した XML ファイルは、XSL 変換 (XSLT) を使用してほとんどすべての形式に変換できます。 この機能を使用すると、既存の表示拡張機能ではサポートされていない形式でデータを生成できます。 独自の表示拡張機能の作成を試みる前に、XML 表示拡張機能および XSLT を使用することを検討してください。  
   
-##  <a name="DuplicateName"></a> 重複する名前  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a>重複する名前  
  同じスコープ内に重複するデータ要素名が存在する場合、レンダラーからエラー メッセージが表示されます。  
   
-##  <a name="XSLTTransformations"></a> XSLT 変換  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a>XSLT 変換  
  XML レンダラーでは、元の XML データに対し、サーバー側で XSLT 変換を適用できます。 XSLT が適用された場合、元の XML データの代わりに、変換済みのコンテンツが出力されます。 変換はクライアント側ではなく、サーバー側で実行されます。  
   
  出力結果に適用する XSLT は、レポート定義ファイル内で、レポートの DataTransform プロパティまたは XSLT の *DeviceInfo* パラメーターで定義します。 いずれかの値が設定されている場合、XML レンダラーを使用するたびに変換が実行されます。 サブスクリプションを使用する場合は、RDL DataTransform プロパティで XSLT を定義する必要があります。  
   
  DataTransform 定義プロパティおよびデバイス情報設定の両方で XSLT ファイルを指定した場合は、最初に DataTransform で指定された XSLT が適用され、続けて、デバイス情報設定による XSLT が適用されます。  
   
-###  <a name="DeviceInfo"></a> デバイス情報設定  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a>デバイス情報の設定  
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。変更できる設定には、次のようなものがあります。  
   
 -   XML に適用する変換 (XSLT)  
@@ -180,9 +180,9 @@ ms.locfileid: "66107896"
   
  詳細については、「 [XML デバイス情報設定](../xml-device-information-settings.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [Reporting Services &#40;レポートビルダーおよび SSRS&#41;での改ページ](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;レンダリング動作](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポートビルダーと SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;レポートアイテムのレンダリング](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

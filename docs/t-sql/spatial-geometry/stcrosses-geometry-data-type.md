@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0320cbd20242f19bab7c7990f4bad13458e403e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b78da062fb43d04afb53b8e4743ad222d873fe32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748712"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスが別の **geometry** インスタンスと重なり合う場合、1 を返します。 そうでない場合は 0 を返します。
   
@@ -43,9 +43,9 @@ ms.locfileid: "67930146"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の条件が両方とも該当する場合、2 つの **geometry** インスタンスは交差します。  
   
 -   2 つの **geometry** インスタンスが交差すると、ジオメトリの次元は、基になる **geometry** インスタンスの最大次元数よりも小さくなります。  
@@ -54,7 +54,7 @@ ms.locfileid: "67930146"
   
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STCrosses()` を使用して 2 つの `geometry` インスタンスが交差かどうかをテストする例を次に示します。  
   
 ```  

@@ -1,9 +1,7 @@
 ---
-title: OPENJSON を使用して JSON データを解析して変換する (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2017
+title: OPENJSON で JSON データを解析し、変換する
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e09a24d4f75c0b559a247176a7d57516cf75e43e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 496e49a866bb477139078b0797c6390b42df3192
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909438"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009594"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>OPENJSON を使用して JSON データを解析して変換する (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 **OPENJSON** 行セット関数は、JSON テキストを行と列のセットに変換します。 **OPENJSON** を使用して JSON コレクションを行セットに変換したら、返されたデータで SQL クエリを実行したり、行セットをテーブルに挿入したりできます。 
   
@@ -55,11 +55,11 @@ FROM OPENJSON(@json);
   
 **結果**
   
-|キー (key)|value|型|  
+|key|value|type|  
 |---------|-----------|----------|  
-|NAME|John|1|  
+|name|John|1|  
 |姓|Doe|1|  
-|有効期間|45|2|  
+|age|45|2|  
 |スキル|["SQL","C#","MVC"]|4|
 
 ### <a name="more-info-about-openjson-with-the-default-schema"></a>既定のスキーマを使用する OPENJSON に関する詳細情報
@@ -116,7 +116,7 @@ WITH (
   
 **結果**
   
-|数値|date|Customer|Quantity|  
+|Number|Date|Customer|Quantity|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-により、|AW29825|1|  
 |として SO43661|2011-06-01T00:00:00|AW73565|3|  

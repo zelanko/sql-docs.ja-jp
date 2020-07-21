@@ -8,28 +8,28 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d966b147c8475b357a3239ca36654e087f9ccbeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 486820bf4e3bbae793a23625fe687bd875210cc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749792"
 ---
-# <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid 
+# <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   パッケージ データ フロー内の特定のデータ フロー パスに、実行のインスタンスのデータ タップを追加します。  
   
 ## <a name="syntax"></a>構文  
   
 ```sql  
-catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+catalog.add_data_tap_by_guid [ @execution_id = ] execution_id  
 , [ @dataflow_task_guid = ] dataflow_task_guid   
 , [ @dataflow_path_id_string = ] dataflow_path_id_string  
 , [ @data_filename = ] data_filename  
@@ -52,7 +52,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  *dataflow_path_id_string* は **nvarchar (4000)** です。  
   
  [ @data_filename = ] *data_filename*  
- タップされたデータを格納するファイルの名前。 データ フロー タスクが Foreach Loop コンテナーまたは For Loop コンテナーの中で実行される場合、ループの反復ごとにタップされたデータが個別のファイルに格納されます。 各ファイルの先頭には、反復に対応する番号が付けられます。 データ タップ ファイルは、" *\<SQL Server のインストール フォルダー>* \130\DTS\\" フォルダーに書き込まれます。 *data_filename* は **nvarchar (4000)** です。  
+ タップされたデータを格納するファイルの名前。 データ フロー タスクが Foreach Loop コンテナーまたは For Loop コンテナーの中で実行される場合、ループの反復ごとにタップされたデータが個別のファイルに格納されます。 各ファイルの先頭には、反復に対応する番号が付けられます。 データ タップ ファイルは、フォルダー " *\<SQL Server installation folder>* \130\DTS\\" に書き込まれます。 *data_filename* は **nvarchar (4000)** です。  
   
  [ @max_rows = ] max_rows  
  データ タップ中にキャプチャされる行の数。 この値が指定されていない場合は、すべての行がキャプチャされます。 max_rows は **int** です。  
@@ -70,7 +70,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 'D:\demos\datafiles\DCVendorOutput.csv'  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データ タップを追加するには、実行のインスタンスが作成された状態である必要があります ([catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **[状態]** 列の値が 1)。 実行を処理すると状態の値が変わります。 [catalog.create_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)を呼び出すことによって、実行を作成できます。  
   
  add_data_tap_by_guid ストアド プロシージャに関する考慮事項を以下に示します。  

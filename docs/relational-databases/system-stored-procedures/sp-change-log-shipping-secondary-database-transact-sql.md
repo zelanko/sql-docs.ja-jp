@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft Docs
+title: sp_change_log_shipping_secondary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7cc47e0543139fde3bc43e0f3cc66641ba8f455d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 086e914f9d05ada8985cdd8f017ef4a47003d1ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045812"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872686"
 ---
-# <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  セカンダリ データベースの設定を変更します。  
+  セカンダリデータベースの設定を変更します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,33 +51,33 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @restore_delay = ] 'restore_delay'` セカンダリ サーバーが指定されたバックアップ ファイルを復元する前に待機する分単位の時間数。 *restore_delay*は**int** NULL にすることはできません。 既定値は 0 です。  
+`[ @restore_delay = ] 'restore_delay'`指定されたバックアップファイルを復元する前に、セカンダリサーバーが待機する時間 (分単位)。 *restore_delay*は**int**であり、NULL にすることはできません。 既定値は 0 です。  
   
-`[ @restore_all = ] 'restore_all'` 場合 1、セカンダリ サーバーに設定するは、復元ジョブを実行すると、すべてのトランザクション ログ バックアップを復元します。 それ以外の場合、1 つのファイルを復元した後を停止します。 *restore_all*は**ビット**NULL にすることはできません。  
+`[ @restore_all = ] 'restore_all'`1に設定すると、復元ジョブの実行時に、使用可能なすべてのトランザクションログバックアップがセカンダリサーバーによって復元されます。 それ以外の場合は、1つのファイルが復元された後に停止します。 *restore_all*は**ビット**であり、NULL にすることはできません。  
   
-`[ @restore_mode = ] 'restore_mode'` セカンダリ データベースの復元モード。  
+`[ @restore_mode = ] 'restore_mode'`セカンダリデータベースの復元モード。  
   
  0 = NORECOVERY でログを復元。  
   
- 1 = STANDBY でログを復元します。  
+ 1 = スタンバイ状態のログを復元します。  
   
- *復元*は**ビット**NULL にすることはできません。  
+ *restore*は**ビット**であり、NULL にすることはできません。  
   
-`[ @disconnect_users = ] 'disconnect_users'` 場合 1 をユーザーに設定するは、復元操作が実行されると、セカンダリ データベースから切断されます。 既定 = 0。 *disconnect_users*は**ビット**NULL にすることはできません。  
+`[ @disconnect_users = ] 'disconnect_users'`1に設定すると、復元操作の実行時にユーザーがセカンダリデータベースから切断されます。 既定値は 0 です。 *disconnect_users*は**ビット**であり、NULL にすることはできません。  
   
-`[ @block_size = ] 'block_size'` サイズ (バイト単位) をバックアップ デバイスのブロック サイズとして使用されます。 *block_size*は**int**を既定値は-1。  
+`[ @block_size = ] 'block_size'`バックアップデバイスのブロックサイズとして使用されるサイズ (バイト単位)。 *block_size*は**int**で、既定値は-1 です。  
   
-`[ @buffer_count = ] 'buffer_count'` バックアップまたは復元操作で使用されるバッファーの合計数。 *buffer_count*は**int**を既定値は-1。  
+`[ @buffer_count = ] 'buffer_count'`バックアップまたは復元操作によって使用されるバッファーの合計数。 *buffer_count*は**int**で、既定値は-1 です。  
   
-`[ @max_transfer_size = ] 'max_transfer_size'` サイズをバイト単位の最大入力または出力要求によって発行された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップ デバイスにします。 *max_transfersize*は**int** NULL にすることができます。  
+`[ @max_transfer_size = ] 'max_transfer_size'`によってバックアップデバイスに発行される入力要求または出力要求の最大サイズ (バイト単位) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *max_transfersize*は**int**であり、NULL を指定できます。  
   
-`[ @restore_threshold = ] 'restore_threshold'` 許容経過時間を分単位の数は、アラートを生成する前に、操作を復元します。 *restore_threshold*は**int** NULL にすることはできません。  
+`[ @restore_threshold = ] 'restore_threshold'`復元操作の間に、アラートが生成されるまでの経過時間 (分単位)。 *restore_threshold*は**int**であり、NULL にすることはできません。  
   
-`[ @threshold_alert = ] 'threshold_alert'` 復元のしきい値を超えたときに発生するアラートです。 *threshold_alert*は**int**、既定値 14420 はします。  
+`[ @threshold_alert = ] 'threshold_alert'`復元のしきい値を超えたときに発生する警告を指定します。 *threshold_alert*は**int**,、既定値は14420です。  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` アラートがあるかどうかを指定する場合に発生します*restore_threshold*を超過します。 1 = 有効になっています。0 = 無効になっています。 *threshold_alert_enabled*は**ビット**NULL にすることはできません。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`*Restore_threshold*を超えたときにアラートを生成するかどうかを指定します。 1 = 有効。0 = 無効です。 *threshold_alert_enabled*は**ビット**であり、NULL にすることはできません。  
   
-`[ @history_retention_period = ] 'history_retention_period'` 分の履歴を保持する時間の長さです。 *history_retention_period*は**int**します。1440 の値が指定されていない場合適用されます。  
+`[ @history_retention_period = ] 'history_retention_period'`履歴を保持する時間の長さを分単位で指定します。 *history_retention_period*は**int**です。値が指定されていない場合は、1440の値が使用されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -85,20 +85,18 @@ sp_change_log_shipping_secondary_database
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- **sp_change_log_shipping_secondary_database**から実行する必要があります、**マスター**セカンダリ サーバー上のデータベース。 このストアド プロシージャでは次の処理が行われます。  
+## <a name="remarks"></a>解説  
+ **sp_change_log_shipping_secondary_database**は、セカンダリサーバーの**master**データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
-1.  設定を変更、 **log_shipping_secondary_database**に応じてを記録します。  
+1.  必要に応じて**log_shipping_secondary_database**レコードの設定を変更します。  
   
-2.  ローカル監視レコードを変更**log_shipping_monitor_secondary**セカンダリ サーバーを使用して、指定された引数に必要な場合。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+2.  必要に応じて、指定された引数を使用して、セカンダリサーバー上の**log_shipping_monitor_secondary**のローカル監視レコードを変更します。  
 
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
+ このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- この例を使用して**sp_change_log_shipping_secondary_database**データベースのセカンダリ データベースのパラメーターを更新する**LogShipAdventureWorks**します。  
+ この例では、 **sp_change_log_shipping_secondary_database**を使用してデータベース**LogShipAdventureWorks**のセカンダリデータベースパラメーターを更新する方法を示します。  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_secondary_database   
@@ -112,7 +110,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ,  @history_retention_period = 14420;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

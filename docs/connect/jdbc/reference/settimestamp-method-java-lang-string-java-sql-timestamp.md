@@ -1,5 +1,5 @@
 ---
-title: setTimestamp メソッドから timestamp 値 |Microsoft Docs
+title: タイムスタンプ値への setTimestamp メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: dc45b126-3196-47ff-956b-cbc897980ff8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc7ee76a87022f5ed2194027971e02f3895e8b36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c740ac6cdbe0cd63813d800bd4b67071bdee80a3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972372"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926492"
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp"></a>setTimestamp (java.lang.String, java.sql.Timestamp) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,12 +42,12 @@ public void setTimestamp(java.lang.String sCol,
   
  *t*  
   
- タイムスタンプオブジェクト。  
+ Timestamp オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setTimestamp メソッドは、java.sql.CallableStatement インターフェイスの setTimestamp メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

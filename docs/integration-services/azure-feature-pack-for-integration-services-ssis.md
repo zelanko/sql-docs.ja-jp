@@ -1,7 +1,7 @@
 ---
 title: Integration Services (SSIS) 用の Azure Feature Pack | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,14 +11,14 @@ f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0d789ded4aefe7d39d1298777ebd851a6c87e6d9
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5099b46b611043dcbfa0f5b4c3ca4e72c70a5800
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388396"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607863"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
 
@@ -27,8 +27,9 @@ ms.locfileid: "68388396"
 
 SQL Server Integration Services (SSIS) Feature Pack for Azure は、このページにリストされている SSIS のコンポーネントを提供して、Azure サービスへの接続、Azure とオンプレミスのデータ ソース間でのデータ転送、および Azure に格納されたデータの処理を行うための拡張機能です。
 
-[![SSIS Feature Pack for Azure のダウンロード](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **ダウンロード**
+[![SSIS Feature Pack for Azure のダウンロード](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **ダウンロード**
 
+- SQL Server 2019 の場合 - [Microsoft SQL Server 2019 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - SQL Server 2017 の場合 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - SQL Server 2016 の場合 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
 - SQL Server 2014 の場合 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)
@@ -51,7 +52,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
 
     -   [Azure サブスクリプション接続マネージャー](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
--   処理手順
+-   タスク
 
     -   [Azure BLOB のダウンロード タスク](../integration-services/control-flow/azure-blob-download-task.md)
 
@@ -97,6 +98,74 @@ TLS 1.2 を使用するには、次の 2 つのレジストリキーの下に `S
 1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
 2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
 
+## <a name="dependency-on-java"></a>Java への依存関係
+
+Azure Data Lake Store/柔軟なファイル コネクタで ORC/Parquet ファイル形式を使用するには、Java が必要です。  
+Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイムのそれと一致しなければ使用できません。
+次の Java ビルドがテストされています。
+
+- [Zulu の OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
+- [Oracle の Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+
+### <a name="set-up-zulus-openjdk"></a>Zulu の OpenJDK を設定する
+
+1. インストール zip パッケージをダウンロードし、抽出します。
+2. コマンド プロンプトから `sysdm.cpl` を実行します。
+3. **[詳細設定]** タブの **[環境変数]** を選択します。
+4. **[システム変数]** セクションで **[新規]** を選択します。
+5. **[変数名]** に「`JAVA_HOME`」と入力します。
+6. **[ディレクトリの参照]** を選択し、解凍したフォルダーに移動し、`jre` サブフォルダーを選択します。
+   **[OK]** を選択すると、**変数の値**が自動的に入力されます。
+7. **[OK]** を選択し、 **[新しいシステム変数]** ダイアログ ボックスを閉じます。
+8. **[OK]** を選択し、 **[環境変数]** ダイアログ ボックスを閉じます。
+9. **[OK]** を選択して **[システム プロパティ]** ダイアログ ボックスを閉じます。
+
+> [!TIP]
+> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space**" というエラーが発生した場合、環境変数 *`_JAVA_OPTIONS`* を追加し、JVM の最小/最大ヒープ サイズを調整できます。
+>
+>![jvm ヒープ](media/azure-feature-pack-jvm-heap-size.png)
+>
+> 例: 変数 *`_JAVA_OPTIONS`* を設定し、値 *`-Xms256m -Xmx16g`* を指定します。 フラグ Xms では、Java 仮想マシン (JVM) の初期メモリ割り当てプールを指定します。Xmx では、最大メモリ割り当てプールを指定します。 これは、JVM 起動時のメモリ量が *`Xms`* 、使用可能なメモリ量が最大で *`Xmx`* であることを意味します。 既定値は最小 64MB および最大 1G です。
+
+### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime で Zulu の OpenJDK を設定する
+
+これは、Azure-SSIS Integration Runtime の[カスタム セットアップ インターフェイス](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)経由で行う必要があります。
+`zulu8.33.0.1-jdk8.0.192-win_x64.zip` が使用されているとします。
+BLOB コンテナーは次のように構成できます。
+
+~~~
+main.cmd
+install_openjdk.ps1
+zulu8.33.0.1-jdk8.0.192-win_x64.zip
+~~~
+
+エントリ ポイントとして、`main.cmd` により PowerShell スクリプト `install_openjdk.ps1` の実行がトリガーされます。それによって次に `zulu8.33.0.1-jdk8.0.192-win_x64.zip` が抽出され、それに応じて `JAVA_HOME` が設定されます。
+
+**main.cmd**
+
+~~~
+powershell.exe -file install_openjdk.ps1
+~~~
+
+> [!TIP]
+> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space**" というエラーが発生した場合、 *`main.cmd`* でコマンドを追加し、JVM の最小/最大ヒープ サイズを調整できます。 例:
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> フラグ Xms では、Java 仮想マシン (JVM) の初期メモリ割り当てプールを指定します。Xmx では、最大メモリ割り当てプールを指定します。 これは、JVM 起動時のメモリ量が *`Xms`* 、使用可能なメモリ量が最大で *`Xmx`* であることを意味します。 既定値は最小 64MB および最大 1G です。
+
+**install_openjdk.ps1**
+
+~~~
+Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
+[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\zulu8.33.0.1-jdk8.0.192-win_x64\jre", "Machine")
+~~~
+
+### <a name="set-up-oracles-java-se-runtime-environment"></a>Oracle の Java SE Runtime Environment を設定する
+
+1. exe インストーラーをダウンロードし、実行します。
+2. インストーラーの指示に従い、設定を完了します。
+
 ## <a name="scenario-processing-big-data"></a>シナリオ:ビッグ データの処理
  Azure コネクタを使用して、次のビッグ データの処理を完了します。
 
@@ -122,4 +191,38 @@ TLS 1.2 を使用するには、次の 2 つのレジストリキーの下に `S
  Azure Blob 列挙子とともに Foreach ループ コンテナーを使用して、複数の BLOB ファイルのデータを処理します。
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
-  
+
+## <a name="release-notes"></a>リリース ノート
+
+### <a name="version-1180"></a>バージョン 1.18.0
+
+#### <a name="improvements"></a>機能強化
+
+1. Flexible File タスクの場合、次の 3 点で改善されます:(1) コピー操作と削除操作でワイルドカードが使用できるようになる、(2) ユーザーは削除操作で再帰的検索の有効と無効を切り替えることができる、(3) コピー操作のコピー先となるファイル名を空にし、コピー元のファイル名を維持できる。
+
+### <a name="version-1170"></a>バージョン 1.17.0
+
+これは、SQL Server 2019 に対してのみリリースされる修正プログラムのバージョンです。
+
+#### <a name="bugfixes"></a>バグ修正
+
+1. Visual Studio 2019 で実行し、SQL Server 2019 をターゲットにすると、柔軟なファイル タスクのソースまたは送信先が `Attempted to access an element as a type incompatible with the array.` というエラー メッセージで失敗する場合があります。
+1. Visual Studio 2019 で実行し、SQL Server 2019 をターゲットにすると、ORC または Parquet 形式を使用した柔軟なファイルのソースまたは送信先が、`Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: An unknown error occurred. JNI.JavaExceptionCheckException.` というエラー メッセージで失敗する場合があります。
+
+### <a name="version-1160"></a>バージョン 1.16.0
+
+#### <a name="bugfixes"></a>バグ修正
+
+1. 場合によっては、パッケージの実行から "エラー:ファイルまたはアセンブリ 'Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed'、またはその依存関係の 1 つが読み込むことができませんでした。" が報告されます。
+
+### <a name="version-1150"></a>バージョン 1.15.0
+
+#### <a name="improvements"></a>機能強化
+
+1. 柔軟なファイル タスクに、フォルダー/ファイルの削除操作が追加されます
+1. 柔軟なファイル ソースに、外部/出力データ型の変換機能が追加されます
+
+#### <a name="bugfixes"></a>バグ修正
+
+1. 特定のケースで、"配列と互換性のない型の要素にアクセスしようとしました" というエラー メッセージと共に発生する Data Lake Storage Gen2 の接続障害がテストされます
+1. Azure ストレージ エミュレーターのサポートが再開されます

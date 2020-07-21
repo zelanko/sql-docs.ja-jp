@@ -15,18 +15,18 @@ apitype: DLLExport
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b96875c1e8f105cbda0298c5b058e21913a8c8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70e6244254c221ff12c37c04d83bf294b41acfec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789491"
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance 関数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   指定した SQL Server Express LocalDB インスタンスを削除します。  
   
- **ヘッダー ファイル:** sqlncli.h  
+ **ヘッダーファイル:** sqlncli  
   
 ## <a name="syntax"></a>構文  
   
@@ -90,10 +90,10 @@ HRESULT LocalDBDeleteInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
+## <a name="remarks"></a>Remarks  
+ LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

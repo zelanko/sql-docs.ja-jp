@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c36c06ad91cb9082f06d57f622db4209ac94212
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b9233bdc46da46568af2e50f5c711629d234a2ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723756"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|2814|  
 |イベント ソース|MSSQLSERVER|  
@@ -37,7 +37,7 @@ ms.locfileid: "68001975"
   
 次の表に、再コンパイルの理由を示します。  
   
-|理由コード|[説明]|  
+|理由コード|説明|  
 |---------------|---------------|  
 |1|スキーマの変更|  
 |2|統計の変更|  

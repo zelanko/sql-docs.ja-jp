@@ -1,5 +1,5 @@
 ---
-title: 使用して、AlwaysOn ダッシュ ボード (SQL Server Management Studio) |Microsoft Docs
+title: AlwaysOn ダッシュボードを使用する (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4ce0072bcd6642dcb4f3ac63e04c98786bd550e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936281"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>AlwaysOn ダッシュボードの使用 (SQL Server Management Studio)
-  データベース管理者は AlwaysOn ダッシュボードを使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースの正常性をひとめで確認できるビューを取得します。 AlwaysOn ダッシュボードの一般的な用途を次に示します。  
+  データベース管理者は AlwaysOn ダッシュボードを使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースの正常性をひとめで確認できるビューを取得します。 AlwaysOn ダッシュボードの一般的な用途を次に示します。  
   
 -   手動フェールオーバー用のレプリカの選択。  
   
@@ -51,38 +50,38 @@ ms.locfileid: "62788729"
   
  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  可能性グループのプライマリ レプリカまたはセカンダリ レプリカのどちらかをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス (サーバー インスタンス) に接続されている必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  CONNECT、VIEW SERVER STATE、および VIEW ANY DEFINITION 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> AlwaysOn ダッシュ ボードを開始するには  
+##  <a name="to-start-the-alwayson-dashboard"></a><a name="SSMSProcedure"></a>AlwaysOn ダッシュボードを開始するには  
   
 1.  オブジェクト エクスプローラーで、AlwaysOn ダッシュボードを実行する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
-2.  **[AlwaysOn 高可用性]** ノードを展開し、 **[可用性グループ]** ノードを右クリックして、 **[ダッシュボードの表示]** をクリックします。  
+2.  **[AlwaysOn 高可用性]** ノードを展開し、**[可用性グループ]** ノードを右クリックして、**[ダッシュボードの表示]** をクリックします。  
   
-###  <a name="DashboardOptions"></a> AlwaysOn ダッシュ ボードのオプションを変更するには  
+###  <a name="to-change-alwayson-dashboard-options"></a><a name="DashboardOptions"></a>AlwaysOn ダッシュボードのオプションを変更するには  
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[オプション]** ダイアログ ボックスを使って、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn ダッシュボードの自動更新と自動定義 AlwaysOn ポリシーの有効化の動作を構成できます。  
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
 2.  ダッシュボードを自動的に更新するには、 **[オプション]** ダイアログ ボックスで **[自動更新を有効にする]** を選択し、更新間隔を秒単位で入力して、接続の再試行の回数を入力します。  
   
-3.  ユーザー定義ポリシーを有効にするには、 **[ユーザー定義の AlwaysOn ポリシーを有効にする]** を選択します。  
+3.  ユーザー定義ポリシーを有効にするには、**[ユーザー定義の AlwaysOn ポリシーを有効にする]** を選択します。  
   
-##  <a name="AvGroupsView"></a> 可用性グループの概要  
+##  <a name="availability-group-summary"></a><a name="AvGroupsView"></a> 可用性グループの概要  
  可用性グループの画面には、接続されているサーバー インスタンスがホストしているレプリカの可用性グループごとに概要を示す行が表示されます。 このペインには、次の列が表示されます。  
   
  **可用性グループ名**  
  接続されているサーバー インスタンスがホストしているレプリカの可用性グループの名前。  
   
- **[プライマリ インスタンス]**  
+ **プライマリインスタンス**  
  可用性グループのプライマリ レプリカをホストしているサーバー インスタンスの名前。  
   
  **フェールオーバー モード**  
@@ -90,15 +89,15 @@ ms.locfileid: "62788729"
   
 -   **[自動]** 。 1 つまたは複数のレプリカが自動フェールオーバー モードであることを示します。  
   
--   **[手動]** 。 自動フェールオーバー モードのレプリカがないことを示します。  
+-   **手動**。 自動フェールオーバー モードのレプリカがないことを示します。  
   
  **問題**  
- **[問題]** リンクをクリックすると、問題のトラブルシューティングのドキュメントが表示されます。 AlwaysOn ポリシーのすべての問題の一覧は、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
+ **[問題]** リンクをクリックすると、問題のトラブルシューティングのドキュメントが表示されます。 AlwaysOn ポリシーのすべての問題の一覧については、「 [AlwaysOn 可用性グループでの運用上の問題の Alwayson ポリシー」 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md)を参照してください。  
   
 > [!TIP]  
 >  列見出しをクリックすると、可用性グループの名前、プライマリ インスタンス、フェールオーバー モード、または問題で、可用性グループの情報を並べ替えることができます。  
   
-##  <a name="AvGroupDetails"></a> 可用性グループの詳細  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> 可用性グループの詳細  
  概要の画面で選択した可用性グループについての以下の詳細情報が表示されます。  
   
  **[可用性グループの状態]**  
@@ -107,40 +106,40 @@ ms.locfileid: "62788729"
  **Primary instance**  
  可用性グループのプライマリ レプリカをホストしているサーバー インスタンスの名前。  
   
- **Failover mode**  
+ **フェールオーバーモード**  
  レプリカの構成で指定されているフェールオーバー モードを表示します。 フェールオーバー モードとして有効な値は、次のとおりです。  
   
 -   **[自動]** 。 1 つまたは複数のレプリカが自動フェールオーバー モードであることを示します。  
   
--   **[手動]** 。 自動フェールオーバー モードのレプリカがないことを示します。  
+-   **手動**。 自動フェールオーバー モードのレプリカがないことを示します。  
   
  **[クラスターの状態]**  
  接続されているサーバーのインスタンスと可用性グループがメンバー ノードになっているクラスターの名前と状態。  
   
-##  <a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
  **[可用性レプリカ]** ペインには、次の列が表示されます。  
   
  **名前**  
  可用性レプリカをホストするサーバー インスタンスの名前。 この列は既定で表示されます。  
   
  **ロール**  
- 可用性レプリカの現在のロール ( **[プライマリ]** または **[セカンダリ]** ) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。 この列は既定で表示されます。  
+ 可用性レプリカの現在のロール ( **[プライマリ]** または **[セカンダリ]**) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。 この列は既定で表示されます。  
   
  **フェールオーバー モード**  
  レプリカの構成で指定されているフェールオーバー モードを表示します。 フェールオーバー モードとして有効な値は、次のとおりです。  
   
 -   **[自動]** 。 1 つまたは複数のレプリカが自動フェールオーバー モードであることを示します。  
   
--   **[手動]** 。 自動フェールオーバー モードのレプリカがないことを示します。  
+-   **手動**。 自動フェールオーバー モードのレプリカがないことを示します。  
   
  **[同期状態]**  
- セカンダリ レプリカが現在プライマリ レプリカと同期されているかどうかを示します。 この列は既定で表示されます。 可能な値は次のとおりです。  
+ セカンダリ レプリカが現在プライマリ レプリカと同期されているかどうかを示します。 この列は既定で表示されます。 次の値を指定できます。  
   
--   **[同期未実行]** 。 レプリカ内の 1 つ以上のデータベースが同期されておらず、可用性グループにまだ参加していません。  
+-   **[同期未実行]**。 レプリカ内の 1 つ以上のデータベースが同期されておらず、可用性グループにまだ参加していません。  
   
--   **[同期中]** 。 レプリカ内の 1 つ以上のデータベースは同期されています。  
+-   **[同期中]**。 レプリカ内の 1 つ以上のデータベースは同期されています。  
   
--   **[同期済み]** 。 セカンダリ レプリカ内のすべてのデータベースは、現在のプライマリ レプリカ (ある場合) または最後のプライマリ レプリカ上の対応するプライマリ データベースと同期されています。  
+-   **[同期済み]**。 セカンダリ レプリカ内のすべてのデータベースは、現在のプライマリ レプリカ (ある場合) または最後のプライマリ レプリカ上の対応するプライマリ データベースと同期されています。  
   
     > [!NOTE]  
     >  パフォーマンス モードでは、データベースは同期済みの状態にはなりません。  
@@ -148,14 +147,14 @@ ms.locfileid: "62788729"
 -   **NULL**。 不明な状態です。 この値は、ローカル サーバー インスタンスが WSFC フェールオーバー クラスターと通信できない (ローカル ノードが WSFC クォーラムの一部ではない) 場合に生じます。  
   
  **問題**  
- 問題の名前が一覧表示されます。 この値は既定で表示されます。 AlwaysOn ポリシーのすべての問題の一覧は、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
+ 問題の名前が一覧表示されます。 この値は既定で表示されます。 AlwaysOn ポリシーのすべての問題の一覧については、「 [AlwaysOn 可用性グループでの運用上の問題の Alwayson ポリシー」 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md)を参照してください。  
   
  **可用性モード**  
- 各可用性レプリカのために個別に設定したレプリカ プロパティを示します。 この値は既定で非表示になります。 可能な値は次のとおりです。  
+ 各可用性レプリカのために個別に設定したレプリカ プロパティを示します。 この値は既定で非表示になります。 次の値を指定できます。  
   
--   **[非同期]** 。 セカンダリ レプリカがプライマリ レプリカと同期されることはありません。  
+-   **非同期**。 セカンダリ レプリカがプライマリ レプリカと同期されることはありません。  
   
--   **Synchronous**。 セカンダリ データベースは、プライマリ データベースからの遅れを取り戻すと、この状態になります。データベースでデータの同期が継続されている間は、この状態が続きます。  
+-   **同期**。 セカンダリ データベースは、プライマリ データベースからの遅れを取り戻すと、この状態になります。データベースでデータの同期が継続されている間は、この状態が続きます。  
   
  **プライマリ接続モード**  
  プライマリ レプリカへの接続に使用されるモードを示します。  この値は既定で非表示になります。  
@@ -164,18 +163,18 @@ ms.locfileid: "62788729"
  セカンダリ レプリカへの接続に使用されるモードを示します。  この値は既定で非表示になります。  
   
  **接続状態**  
- セカンダリ レプリカが現在プライマリ レプリカに接続されているかどうかを示します。 この列は既定で非表示になります。 可能な値は次のとおりです。  
+ セカンダリ レプリカが現在プライマリ レプリカに接続されているかどうかを示します。 この列は既定で非表示になります。 次の値を指定できます。  
   
--   **[接続解除]** 。 リモート可用性レプリカの場合、ローカル可用性レプリカから切断されていることを示します。 接続解除状態のローカル レプリカの応答は、そのロールによって次のように異なります。  
+-   **切断**されました。 リモート可用性レプリカの場合、ローカル可用性レプリカから切断されていることを示します。 接続解除状態のローカル レプリカの応答は、そのロールによって次のように異なります。  
   
     -   プライマリ レプリカでは、セカンダリ レプリカが切断されている場合、プライマリ レプリカ上のセカンダリ データベースは **[同期未実行]** とマークされ、プライマリ レプリカはセカンダリが再接続するのを待機します。  
   
     -   セカンダリ レプリカでは、切断されていることを検出すると、セカンダリ レプリカはプライマリ レプリカへの再接続を試みます。  
   
--   **Connected**. 現在ローカル レプリカに接続されているリモート可用性レプリカです。  
+-   **接続さ**れました。 現在ローカル レプリカに接続されているリモート可用性レプリカです。  
   
  **動作状態**  
- セカンダリ レプリカの現在の操作状態を示します。 この値は既定で非表示になります。 可能な値は次のとおりです。  
+ セカンダリ レプリカの現在の操作状態を示します。 この値は既定で非表示になります。 次の値を指定できます。  
   
  **0**.フェールオーバー保留  
   
@@ -203,14 +202,14 @@ ms.locfileid: "62788729"
 > [!NOTE]  
 >  可用性レプリカのパフォーマンス カウンターの詳細については、「 [SQL Server、Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)」を参照してください。  
   
-##  <a name="AvDbDetails"></a> 可用性グループの情報をグループ化するには  
+##  <a name="to-group-availability-group-information"></a><a name="AvDbDetails"></a> 可用性グループの情報をグループ化するには  
  情報をグループ化するには、 **[グループ化]** をクリックし、次のいずれかを選択します。  
   
 -   **可用性レプリカ**  
   
 -   **可用性データベース**  
   
--   **Synchronization state**  
+-   **同期状態**  
   
 -   **フェールオーバーの準備**  
   
@@ -227,13 +226,13 @@ ms.locfileid: "62788729"
  **[同期状態]**  
  可用性データベースが現在プライマリ レプリカと同期されているかどうかを示します。 この値は既定で表示されます。 有効な同期状態は次のとおりです。  
   
--   **[同期されていません]** 。  
+-   **[同期されていません]**。  
   
     -   プライマリ ロールの場合、データベースがそのトランザクション ログを対応するセカンダリ データベースと同期する準備ができていないことを示します。  
   
     -   セカンダリ データベースの場合、データベースが接続の問題によりログの同期を開始していないか、データベースが中断されているか、起動中またはロールの切り替え中にデータベースが遷移状態になっていることを示します。  
   
--   **[同期中]** 。  
+-   **[同期中]**。  
   
      プライマリ レプリカの場合:  
   
@@ -243,7 +242,7 @@ ms.locfileid: "62788729"
   
      セカンダリ レプリカの場合、そのレプリカのアクティブなデータ移動が行われていることを示します。  
   
--   **[同期済み]** 。  
+-   **[同期済み]**。  
   
      プライマリ データベースの場合、少なくとも 1 つのセカンダリ データベースが同期されていることを示します。  
   
@@ -263,23 +262,23 @@ ms.locfileid: "62788729"
     > [!CAUTION]  
     >  データベースが INITIALIZING 状態の場合、セカンダリ レプリカに強制的にフェールオーバーすると、常にそのデータベースは起動できない状態のままになります。  
   
- **Failover Readiness**  
- どの可用性レプリカがフェールオーバーできるかを、データ損失の可能性の有無と共に示します。 この列は既定で表示されます。 可能な値は次のとおりです。  
+ **[フェールオーバーの準備]**  
+ どの可用性レプリカがフェールオーバーできるかを、データ損失の可能性の有無と共に示します。 この列は既定で表示されます。 指定できる値は、  
   
 -   **[データ損失]**  
   
 -   **[データ損失なし]**  
   
  **問題**  
- 問題の名前が一覧表示されます。 この列は既定で表示されます。 可能な値は次のとおりです。  
+ 問題の名前が一覧表示されます。 この列は既定で表示されます。 指定できる値は、  
   
 -   **[警告]** 。 クリックすると、しきい値と警告の問題が表示されます。  
   
 -   **[重大]** 。 クリックすると、重大な問題が表示されます。  
   
- AlwaysOn ポリシーのすべての問題の一覧は、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
+ AlwaysOn ポリシーのすべての問題の一覧については、「 [AlwaysOn 可用性グループでの運用上の問題の Alwayson ポリシー」 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md)を参照してください。  
   
- **中断**  
+ **中断済み**  
  データベースが **[中断状態]** であるか **[再開]** されたかを示します。 この値は既定で非表示になります。  
   
  **中断の理由**  
@@ -348,12 +347,12 @@ ms.locfileid: "62788729"
  **[最終再実行時間]**  
  セカンダリ データベースでログ レコードが最後に再実行された時刻を示します。 この値は既定で非表示になります。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
--   [AlwaysOn ポリシーを使用して、可用性グループのヘルスを表示する&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [AlwaysOn ポリシーを使用して、可用性グループ &#40;SQL Server の正常性を表示&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
+ [dm_os_performance_counters &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [可用性グループの監視 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

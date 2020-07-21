@@ -1,7 +1,8 @@
 ---
-title: SQL 暗号化機能への SQL Server コネクタの使用 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2019
+title: Azure Key Vault で SQL Server コネクタ暗号化を使用する
+description: Azure Key Vault を使用した TDE、バックアップの暗号化、列レベルの暗号化など、一般的な暗号化機能で SQL Server コネクタを使用する方法について説明します。
+ms.custom: seo-lt-2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,17 +11,17 @@ helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725946"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 暗号化機能への SQL Server コネクタの使用
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化に関して、Azure Key Vault の保護下にある非対称キーを使用した一般的な作業は、次の 3 つの領域に分けられます。  
   
 -   Azure Key Vault からの非対称キーを使用した透過的データ暗号化  
@@ -34,8 +35,10 @@ ms.locfileid: "68329266"
 > [!NOTE]  
 >  1\.0.0.440 以前のバージョンは置き換えられ、実稼働環境ではサポートされなくなりました。 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=45344)にアクセスし、[[SQL Server コネクタのメンテナンスとトラブルシューティング]](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) ページの "SQL Server コネクタのアップグレード" に示されている手順を使用して、バージョン 1.0.1.0 以降にアップグレードしてください。  
   
-## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Azure Key Vault からの非対称キーを使用した透過的データ暗号化  
- 「Azure Key Vault を使用した拡張キー管理のセットアップ手順」のトピックのパート I からパート IV を終えたら、Azure Key Vault キーを使用し、データベースの暗号化キーを TDE で暗号化します。  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Azure Key Vault からの非対称キーを使用した透過的データ暗号化
+
+「Azure Key Vault を使用した拡張キー管理のセットアップ手順」のトピックのパート I からパート IV を終えたら、Azure Key Vault キーを使用し、データベースの暗号化キーを TDE で暗号化します。 PowerShell を使用したキーのローテーションの詳細については、「[PowerShell を使用して Transparent Data Encryption (TDE) 保護機能をローテーションする](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation)」を参照してください。
+ 
 資格情報とログインが必要となります。また、データベースに格納されるデータとログを暗号化するためのデータベース暗号化キーを作成する必要があります。 データベースを暗号化するには、データベースに対する **CONTROL** 権限が必要です。 次の図は、Azure Key Vault 使用下における暗号化キーの階層を示したものです。  
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
@@ -50,12 +53,14 @@ ms.locfileid: "68329266"
         - **グローバル Azure** を使用している場合は、`IDENTITY` 引数をパート II で使用した実際の Azure Key Vault の名前に置き換えます。
         - **プライベート Azure クラウド** ( Azure Government、Azure China 21Vianet、Azure Germany など) を使用している場合は、`IDENTITY` 引数をパート II の手順 3 で返された Vault URI に置き換えます。 Vault URI に "https://" は含めないでください。   
   
-    -   `SECRET` 引数の最初の部分を、パート I で使用した Azure Active Directory の **クライアント ID** に置き換えます。この例の **クライアント ID** は `EF5C8E094D2A4A769998D93440D8115D`です。  
+    -   `SECRET` 引数の最初の部分を、パート I で使用した Azure Active Directory の **クライアント ID** に置き換えます。この例の **クライアント ID** は `EF5C8E094D2A4A769998D93440D8115D`です。
   
         > [!IMPORTANT]  
         >  **クライアント ID**のハイフンは削除してください。  
   
-    -   `SECRET` 引数の 2 番目の部分を、パート I で使用した **クライアント シークレット** に置き換えます。この例のパート 1 で使用した **クライアント シークレット** は `Replace-With-AAD-Client-Secret`です。 完成した `SECRET` 引数は、 *ハイフンを含まない*アルファベットと数字とから成る長い文字列になります。  
+    -   `SECRET` 引数の 2 番目の部分を、パート I の**クライアント シークレット**を使って完了します。この例で、パート 1 の**クライアント シークレット**は `ReplaceWithAADClientSecret` です。 
+  
+    -   完成した SECRET 引数の文字列は、ハイフンを含まない文字と数字の長いシーケンスになります。
   
     ```sql  
     USE master;  
@@ -64,7 +69,7 @@ ms.locfileid: "68329266"
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
+        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   
@@ -193,7 +198,7 @@ ms.locfileid: "68329266"
   
 3.  **データベースのバックアップ**  
   
-     Key Vault に格納されている対称キーでの暗号化を指定してデータベースをバックアップします。
+     Key Vault に保存されている非対称鍵で暗号化を指定し、データベースをバックアップします。
      
      下の例では、データベースが既に TDE で暗号化されていて、非対称キー `CONTOSO_KEY_BACKUP` が TDE の非対称キーとは異なる場合、バックアップは TDE 非対称キーと `CONTOSO_KEY_BACKUP` の両方で暗号化されることに注意してください。 バックアップの暗号化を解除するには、両方のキーがターゲットの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスで必要になります。
   
@@ -278,7 +283,7 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
   
 ## <a name="see-also"></a>参照  
  [Azure Key Vault を使用した拡張キー管理のセットアップ手順](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
- [Azure Key Vault を使用する拡張キー管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Azure Key Vault を使用した拡張キー管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [EKM provider enabled サーバー構成オプション](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [SQL Server コネクタのメンテナンスとトラブルシューティング](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   

@@ -19,16 +19,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265381"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>カスタム アセンブリでの権限のアサート
   既定では、カスタム アセンブリ コードは、限定された **Execution** アクセス許可セットに基づいて実行されます。 ただし、場合によっては、(ファイルやレジストリなど) セキュリティ システムで保護されたリソースを安全に呼び出すカスタム アセンブリを実装する必要が生じる場合もあります。 そのためには、次の操作を実行する必要があります。  
   
-1.  セキュリティで保護された呼び出しを行うために、コードに必要な正しい権限を識別します。 このメソッドが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ライブラリの一部である場合、この情報をメソッド ドキュメントに含める必要があります。  
+1.  セキュリティで保護された呼び出しを行うために、コードに必要な正しい権限を識別します。 このメソッドが[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]ライブラリの一部である場合は、この情報をメソッドドキュメントに含める必要があります。  
   
 2.  カスタム アセンブリに必要な権限を与えるために、レポート サーバー ポリシーの構成ファイルを変更します。 セキュリティ ポリシー構成ファイルの詳細については、「[Reporting Services セキュリティ ポリシー ファイルの使用](../extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。  
   

@@ -1,5 +1,5 @@
 ---
-title: 指定の可用性グループ名 ページ (新しい可用性グループ ウィザード/データベース追加ウィザード) |Microsoft Docs
+title: '[可用性グループ名の指定] ページ (新しい可用性グループウィザード/データベース追加ウィザード) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,28 +12,27 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f2abf6a18b0d3c99a67e818be00ff7603de63c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57ddf665adbd1e9c1ea617e35f9dc6d7a264ba6c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62790004"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936433"
 ---
 # <a name="specify-availability-group-name-page-new-availability-group-wizardadd-database-wizard"></a>[可用性グループ名の指定] ページ (新しい可用性グループ ウィザード/データベース追加ウィザード)
   このトピックでは、 **[可用性グループ名の指定]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] と [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の両方です。  
   
-##  <a name="PageOptions"></a> [可用性グループ名の指定] オプション  
+##  <a name="specify-availability-group-name-options"></a><a name="PageOptions"></a>可用性グループ名のオプションの指定  
  **[可用性グループ名を指定してください]**  
  可用性グループの名前を指定します。 新しい可用性グループには、WSFC クラスターのすべての可用性グループ内で一意の、有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別子を指定してください。 可用性グループ名の最大文字数は 128 文字です。  
   
-##  <a name="LaunchWiz"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> 関連タスク  
   
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 -   [可用性グループへのデータベース追加ウィザードの使用 &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

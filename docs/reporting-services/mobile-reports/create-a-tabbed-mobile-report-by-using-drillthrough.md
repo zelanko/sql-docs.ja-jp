@@ -1,5 +1,6 @@
 ---
 title: ドリルスルーを使用してタブ付きモバイル レポートを作成する | Reporting Services のモバイル レポート | Microsoft Docs
+description: ドリルスルーとパラメーターを使用して、タブ付きレポートのような外観と動作の Reporting Services モバイル レポートを作成する方法について学習します。
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 99e176988287a457738a05a4a7ab71653b281070
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061820"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448035"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>ドリルスルーを使用してタブ付きモバイル レポートを作成する
 ドリルスルーとパラメーターを使用して、タブ付きレポートのような外観と動作の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートを作成する方法について説明します。
@@ -97,7 +98,7 @@ ms.locfileid: "63061820"
 
    ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
     
 * [モバイル レポートにパラメーターを追加する](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [モバイル レポートから他のモバイル レポートまたは URL にドリルスルーを追加する](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)

@@ -1,5 +1,6 @@
 ---
 title: CLR 統合のセキュリティ |Microsoft Docs
+description: SQL Server .NET Framework CLR セキュリティとの統合により、オブジェクト間のアクセスが管理されます。 オブジェクトに対して実行されるセキュリティチェックは、関連する呼び出しによって異なります。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cfcc3f4d65901da34152a6fce21b436750c15fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86785198441bab1210f6b089293d4f174e8dd1b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118513"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885787"
 ---
-# <a name="clr-integration-security"></a>CLR 統合のセキュリティ
+# <a name="clr-integration-security"></a>CLR 統合セキュリティ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) と [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を統合したセキュリティ モデルは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内で使用されるさまざまな種類の CLR オブジェクトと CLR 以外のオブジェクトとの間のアクセスを管理し、セキュリティで保護します。 これらのオブジェクトは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントやサーバー内で使用される別の CLR オブジェクトから呼び出すことができます。 オブジェクト間の呼び出しをリンクと呼びます。 このようなオブジェクトに対して実行されるセキュリティ チェックの種類は、関連するリンクの種類によって異なります。  
   
  CLR 統合のセキュリティ モデルは、次のことを目標にしています。  
@@ -38,7 +39,7 @@ ms.locfileid: "68118513"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザーベースのセキュリティ モデルと CLR のコード アクセスベースのセキュリティ モデルが統合されました。 このセクションでは、このようにセキュリティ モデルを組み合わせたアプローチによるメリットの一部を紹介します。  
   
- 次の表は、このセクションのトピックを一覧表示します。  
+ 次の表に、このセクションの各トピックの一覧を示します。  
   
  [CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
  マネージド コードのコード アクセス セキュリティ (CAS) モデルについて説明します。  

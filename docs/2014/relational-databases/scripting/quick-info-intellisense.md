@@ -1,6 +1,6 @@
 ---
-title: クイック ヒント (IntelliSense) | Microsoft Docs
-ms.custom: ''
+title: クイック ヒント (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], Quick Info
 - identifier declarations [IntelliSense]
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 614f0f347327171c8ac4fbcb20f9a3d670255488
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4f173c57438301702a8e51acf4531c655fde0cc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009641"
 ---
 # <a name="quick-info-intellisense"></a>クイック ヒント (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense による **クイック ヒント** には、コード内の識別子に関する完全な宣言が表示されます。 識別子の上にマウスのポインターを置くと、黄色のポップアップ ウィンドウにその宣言が表示されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、データベース エンジン クエリ エディターおよび XML クエリ エディターで **クイック ヒント** を利用できます。  

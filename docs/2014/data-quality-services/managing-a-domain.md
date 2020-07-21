@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 93b5666bd2d57fb0a8ffae435818a02ba152217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adf45ee211d61c38bad4c3d86d746866d0a15177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484126"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937473"
 ---
 # <a name="managing-a-domain"></a>ドメインの管理
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのドメインの使用について説明します。 ドメインは、分析対象のデータ ソースの特定のフィールドに含まれているデータのセマンティック表現です。 ドメインは、データ ソースに対して作成するナレッジ ベースの一部で、サンプル データ ソースを分析するか、データをインポートして構築するナレッジは、ナレッジ ベースで定義されたドメインに追加されます。 これらのドメインのナレッジは、データ品質プロジェクトでクレンジングおよび照合を実行するために後で使用されます。 ドメインは、Data Quality Services のすべてのアクティビティの中核になります。  
@@ -44,12 +43,12 @@ ms.locfileid: "65484126"
   
 |||  
 |-|-|  
-|特定のデータ型を持つデータ フィールドのセマンティック表現を作成し、ドメインの作成方法を指定して、ドメインの出力形式を設定する|[ドメインを作成する](../../2014/data-quality-services/create-a-domain.md)|  
-|ドメインを別のドメインにリンクして、ドメインが同じ設定と値を共有できるようにする|[リンク ドメインを作成する](../../2014/data-quality-services/create-a-linked-domain.md)|  
+|特定のデータ型を持つデータ フィールドのセマンティック表現を作成し、ドメインの作成方法を指定して、ドメインの出力形式を設定する|[ドメインの作成](../../2014/data-quality-services/create-a-domain.md)|  
+|ドメインを別のドメインにリンクして、ドメインが同じ設定と値を共有できるようにする|[リンク ドメインの作成](../../2014/data-quality-services/create-a-linked-domain.md)|  
 |参照データ サービスを単一または複合ドメインにアタッチする|[参照データにドメインまたは複合ドメインをアタッチする](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
-|ナレッジ ベース内の値を変更または拡張する|[ドメイン値を変更する](../../2014/data-quality-services/change-domain-values.md)|  
-|検証と標準化の規則を使用する|[ドメイン ルールを作成する](../../2014/data-quality-services/create-a-domain-rule.md)|  
-|リレーションを使用してドメインの値の一部である用語を修正する|[用語ベースのリレーションを作成する](../../2014/data-quality-services/create-term-based-relations.md)|  
+|ナレッジ ベース内の値を変更または拡張する|[ドメイン値の変更](../../2014/data-quality-services/change-domain-values.md)|  
+|検証と標準化の規則を使用する|[ドメイン ルールの作成](../../2014/data-quality-services/create-a-domain-rule.md)|  
+|リレーションを使用してドメインの値の一部である用語を修正する|[用語ベースのリレーションの作成](../../2014/data-quality-services/create-term-based-relations.md)|  
 |ドメイン管理アクティビティを完了、終了、またはキャンセルする|[ドメイン管理アクティビティの終了](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

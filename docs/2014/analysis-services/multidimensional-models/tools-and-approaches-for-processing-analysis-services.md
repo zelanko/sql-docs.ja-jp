@@ -1,5 +1,5 @@
 ---
-title: ツールとアプローチの処理 (Analysis Services) |Microsoft Docs
+title: 処理のためのツールと方法 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 66696d32b62f29df7a4a1866978d72f5d4a173ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2b28ecf29adc8240f76ec9888f9d4cb06dda887
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072817"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547324"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>処理するためのツールと方法 (Analysis Services)
   "処理" とは、Analysis Services がリレーショナル データ ソースにクエリを実行し、そのデータを使用して Analysis Services オブジェクトを設定する操作です。  
@@ -46,7 +45,7 @@ ms.locfileid: "66072817"
  処理は、柔軟に構成できる操作で、オブジェクト レベルで発生する完全処理や増分処理の一連の処理オプションを使用して制御します。 オプションとオブジェクトの処理に関する詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」および「[Analysis Services オブジェクトの処理](processing-analysis-services-objects.md)」を参照してください。  
   
 > [!NOTE]  
->  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理に関する詳細については、次を参照してください。[データベースの処理、テーブル、またはパーティション](../tabular-models/process-database-table-or-partition-analysis-services.md)と[データを処理する&#40;SSAS 表形式&#41;](../process-data-ssas-tabular.md)します。  
+>  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 テーブルモデルの処理の詳細については、「 [SSAS 表形式&#41;&#40;](../process-data-ssas-tabular.md)[データベース、テーブル、またはパーティション](../tabular-models/process-database-table-or-partition-analysis-services.md)の処理とデータの処理」を参照してください。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でのオブジェクトの処理  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66072817"
   
     -   メジャー グループ (またはメジャー グループ内の個々のパーティション)  
   
-    -   ディメンション  
+    -   Dimensions  
   
     -   [マイニング モデル]  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66072817"
   
 2.  ソリューション エクスプローラーで、配置されたプロジェクトの **[ディメンション]** フォルダーを展開します。  
   
-3.  ディメンションを右クリックし、 **[プロセス]** をクリックします。 複数のディメンションを右クリックして、一度に複数のオブジェクトを処理することができます。 詳細については、「[バッチ処理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)」を参照してください。  
+3.  ディメンションを右クリックし、 **[プロセス]** をクリックします。 複数のディメンションを右クリックして、一度に複数のオブジェクトを処理することができます。 詳細については、「 [バッチ処理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)」を参照してください。  
   
 4.  **[ディメンションの処理]** ダイアログ ボックスにある **[オブジェクト一覧]** の **[処理オプション]** 列で、この列のオプションが **[完全処理]** であることを確認します。 別のオプションが設定されている場合、 **[処理オプション]** 列のオプションをクリックし、表示される一覧から **[完全処理]** を選択します。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "66072817"
   
 6.  処理が完了したら、 **[閉じる]** をクリックします。  
   
-##  <a name="bkmk_impactanalysis"></a> オブジェクトの依存関係や操作のスコープを識別する影響分析の実行  
+##  <a name="run-impact-analysis-to-identify-object-dependencies-and-scope-of-operations"></a><a name="bkmk_impactanalysis"></a>オブジェクトの依存関係と操作のスコープを識別する影響分析の実行  
   
 1.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] のいずれかの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]オブジェクトを処理する前に、 **[処理オブジェクト]** ダイアログ ボックスの **[影響分析]** をクリックして、関連オブジェクトへの影響を分析できます。  
   
@@ -122,13 +121,13 @@ ms.locfileid: "66072817"
   
 1.  このリリースの SQL Server からは、オブジェクトの処理に、Analysis Services PowerShell コマンドレットを使用できるようになりました。 対話形式またはスクリプトで、次のコマンドレットを実行できます。  
   
-    -   [Invoke-ProcessCube コマンドレット](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Invoke-ProcessCube コマンドレット](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-ProcessDimension コマンドレット](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Invoke-ProcessDimension コマンドレット](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Invoke-ProcessPartition コマンドレット](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Invoke-ProcessPartition コマンドレット](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Invoke-ASCmd コマンドレット](/sql/analysis-services/powershell/invoke-ascmd-cmdlet): 処理コマンドを含んだ XMLA、MDX、または DMX スクリプトを実行するときに使用します。  
+    -   [Invoke-ASCmd コマンドレット](/powershell/module/sqlserver/invoke-ascmd): 処理コマンドを含んだ XMLA、MDX、または DMX スクリプトを実行するときに使用します。  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>SQL Server Profiler を使用したオブジェクトの処理の監視  
   
@@ -138,13 +137,13 @@ ms.locfileid: "66072817"
   
 3.  次のイベントを選択します。  
   
-    -   処理の開始時刻と停止時刻を表示するには、 **[コマンド開始]** と **Commと End** to show when processing starts と stops  
+    -   処理の開始時刻と停止時刻を表示するには、**[コマンド開始]** と **Commと End** to show when processing starts と stops  
   
-    -   すべてのエラーをキャプチャするには、 **[エラー]**  
+    -   すべてのエラーをキャプチャするには、**[エラー]**  
   
-    -   処理の状態をレポートし、データを取得するために使用した SQL クエリを表示するには、 **[進行状況レポートの開始]** , **[進行状況レポートの現在の状態]** 、および **[進行状況レポートの終了]**  
+    -   処理の状態をレポートし、データを取得するために使用した SQL クエリを表示するには、**[進行状況レポートの開始]**, **[進行状況レポートの現在の状態]**、および **[進行状況レポートの終了]**  
   
-    -   キューブの計算を表示するには、 **[MDX スクリプトの実行の開始]** および **[MDX スクリプトの実行の終了]**  
+    -   キューブの計算を表示するには、**[MDX スクリプトの実行の開始]** および **[MDX スクリプトの実行の終了]**  
   
     -   処理に関連するパフォーマンスの問題を診断する場合は、必要に応じて、ロック イベントを追加する  
   
@@ -157,6 +156,6 @@ ms.locfileid: "66072817"
 3.  オブジェクトを処理するデータベースへの接続を指定するタスク、および処理のオプションを編集します。 このタスクの実装方法については、「 [Analysis Services 処理タスク](../../integration-services/control-flow/analysis-services-processing-task.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)  
+ [多次元モデルのオブジェクト処理](processing-a-multidimensional-model-analysis-services.md)  
   
   

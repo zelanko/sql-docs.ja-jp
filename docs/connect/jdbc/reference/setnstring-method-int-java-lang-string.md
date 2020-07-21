@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 835cbbfe7e4d117957eaa811c40c98d9481066ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3bb2150899e930272e16d7488f792dc384cc7232
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973647"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913698"
 ---
 # <a name="setnstring-method-int-javalangstring"></a>setNString (int, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,8 +42,8 @@ public final void setNString(int parameterIndex,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- このメソッドは、 **NCHAR**、 **NVARCHAR**、 **NTEXT**、および**XML**データ型に対して使用する必要があります。  
+## <a name="remarks"></a>解説  
+ このメソッドは、**NCHAR**、**NVARCHAR**、**NTEXT**、**XML** の各データ型に対して使用する必要があります。  
   
  この setNString メソッドは、java.sql.PreparedStatement インターフェイスの setNString メソッドで規定されています。  
   

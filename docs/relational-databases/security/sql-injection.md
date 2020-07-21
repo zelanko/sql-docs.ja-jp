@@ -1,5 +1,6 @@
 ---
 title: SQL インジェクション | Microsoft Docs
+description: SQL インジェクション攻撃のしくみについて説明します。 SQL Server への入力を検証し、コードを調べて SQL インジェクションがないかを確認することで、このような攻撃を軽減します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e1cffa7f2d8c388b391a3bcb8cbe51ebd6ff1c2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126857"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001037"
 ---
 # <a name="sql-injection"></a>SQL インジェクション
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  SQL インジェクションとは、後で SQL Server のインスタンスに渡され解析および実行が行われる文字列に、有害なコードを挿入するという攻撃です。 SQL Server では、構文的に有効であれば受信したクエリがすべて実行されるため、SQL ステートメントを構成するすべてのプロシージャにおいて、インジェクションに対する脆弱性を検証する必要があります。 高いスキルを持つ決然たる攻撃者は、パラメーター化されたデータであっても操作できるのです。  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+  SQL インジェクションとは、後で SQL Server のインスタンスに渡して解析と実行の対象とする文字列に、悪意のあるコードが挿入される攻撃です。 SQL Server では、構文的に有効であれば受信したクエリがすべて実行されるため、SQL ステートメントを構成するすべてのプロシージャにおいて、インジェクションに対する脆弱性を検証する必要があります。 高いスキルを持つ決然たる攻撃者は、パラメーター化されたデータであっても操作できるのです。  
   
 ## <a name="how-sql-injection-works"></a>SQL インジェクションのしくみ  
  SQL インジェクションは主に、SQL コマンドと連結されて実行されるユーザー入力変数にコードを直接挿入することにより行われます。 それほど直接的ではない攻撃では、悪意のあるコードが、テーブル内の記憶領域に格納される文字列に挿入されたり、メタデータとして挿入されたりします。 格納された文字列が動的な SQL コマンドに後で連結された場合、悪意のあるコードが実行されます。  
@@ -92,8 +93,8 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |入力文字|Transact-SQL での意味|  
 |---------------------|------------------------------|  
 |**;**|クエリの区切り記号。|  
-|**'**|文字データ文字列の区切り記号。|  
-|**--**|文字データ文字列の区切り記号。<br />であるレコードをすべて選択します。|  
+|**'** の基本構成の更新を依頼してください。|文字データ文字列の区切り記号。|  
+|**--**|文字データ文字列の区切り記号。<br />。|  
 |**/\*** ... **\*/**|コメントの区切り記号。 **/\*** と **\*/** の間にあるテキストについては、サーバーによる評価は行われません。|  
 |**xp_**|`xp_cmdshell`など、カタログ拡張ストアド プロシージャ名の先頭に使用します。|  
   

@@ -1,6 +1,8 @@
 ---
-title: サブクエリ (Azure SQL Data Warehouse、Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: サブクエリ
+description: SQL Data Warehouse と Parallel Data Warehouse でのサブクエリ
+ms.custom: seo-lt-2019
+titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,27 +12,27 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 675dcd165ec164c9149486d2abae8d4b910df17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4ef78ed05046064dd00f534bf76b2adae069f1e
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948263"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196455"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>サブクエリ (Azure SQL Data Warehouse、Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   このトピックでは、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] でサブクエリを使用する例を示します。  
   
  SELECT ステートメントの詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
-## <a name="contents"></a>目次  
+## <a name="contents"></a>内容  
   
 -   [基本操作](#Basics)  
   
--   [例:SQL Data Warehouse と Parallel Data Warehouse](#Examples)  
+-   [例: SQL Data Warehouse と Parallel Data Warehouse](#Examples)  
   
-##  <a name="Basics"></a> 基本操作  
+##  <a name="basics"></a><a name="Basics"></a> 基本操作  
  サブクエリ  
  サブクエリとは、SELECT、INSERT、UPDATE、または DELETE の各ステートメントの内部、または別のサブクエリの内部で入れ子になっているクエリです。 これは、内側のクエリまたは内側の選択とも呼ばれます。  
   
@@ -40,7 +42,7 @@ ms.locfileid: "67948263"
  相関サブクエリ  
  外側のクエリのテーブルを参照するサブクエリ。  
   
-##  <a name="Examples"></a> 例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> 例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  ここでは、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] でサポートされるサブクエリの例を挙げます。  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. サブクエリの TOP および ORDER BY  

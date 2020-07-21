@@ -1,6 +1,5 @@
 ---
-title: Data Quality Services の概念 | Microsoft Docs
-ms.custom: ''
+title: Data Quality Services の概念
 ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,46 +7,46 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: e085506e1c427a856202514f29a8f51d5859c881
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: fe7f6c957bb1781528c0bad06de41063c41ca3cc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935392"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887952"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services の概念
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ マネージメント、データ品質プロジェクト、およびデータ品質管理の概念を簡単に説明します。  
   
-##  <a name="Knowledge"></a> ナレッジ マネージメントの概念  
+##  <a name="knowledge-management-concepts"></a><a name="Knowledge"></a> ナレッジ マネージメントの概念  
  DQS のナレッジ ベースは、データ クレンジングやデータ照合を通じてデータの品質を向上させるために使用される、データ スチュワードまたは IT プロフェッショナルが作成するメタデータのリポジトリです。 DQS のナレッジ マネージメントには、ナレッジ ベースを作成および管理するためのコンピューター支援型のプロセスと対話形式のプロセスが含まれます。  
   
  **ナレッジの検出**  
   
  ナレッジ検出は、組織のデータのサンプルを分析してデータに関するナレッジを構築するコンピューター支援型のプロセスです。 この分析の結果に基づいて、ナレッジを検証および強化し、それを適用してデータのクレンジング、照合、プロファイルを行うことができます。 詳細については、「 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)」をご覧ください。  
   
- **ドメインの管理**  
+ **ドメイン管理**  
   
  ドメイン管理プロセスでは、ナレッジ検出プロセスで生成されたナレッジを変更したり拡張したりできます。 ナレッジ ベースのナレッジは対話形式で編集、更新、確認できます。 ナレッジ ベースは、ドメインの値とその状態、ドメイン ルール、用語ベースのリレーション、および参照データを含むデータ ドメインで構成されます。 ドメイン管理では、ドメインのプロパティの変更、ドメインへの参照データのアタッチ、ドメイン ルールの管理、ドメイン値の管理、データのリレーションの入力、ドメインの作成、削除、インポート、エクスポートを行うことができます。 また、複数の単一ドメインをまとめた複合ドメインを使用することもできます。 詳細については、「 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)」をご覧ください。  
   
  **[照合ポリシー]**  
   
- 照合ポリシーには、データ重複除去の実行に使用される照合ルールが含まれます。 照合ポリシー プロセスでは、照合ルールを作成し、照合結果やプロファイル データに基づいてそれらを調整したり、ナレッジ ベースにポリシーを追加したりできます。 詳細については、「 [データ照合](../data-quality-services/data-matching.md)」をご覧ください。  
+ 照合ポリシーには、データ重複除去の実行に使用される照合ルールが含まれます。 照合ポリシー プロセスでは、照合ルールを作成し、照合結果やプロファイル データに基づいてそれらを調整したり、ナレッジ ベースにポリシーを追加したりできます。 詳しくは、「 [Data Matching](../data-quality-services/data-matching.md)」をご覧ください。  
   
  **参照データ サービス**  
   
- 参照データを使用すると、参照データの品質を保証する企業のサービスを利用して、データを検証、修正、および強化することができます。 参照データ プロバイダーには、Windows Azure MarketPlace のサービスを使用して接続できます。また、プロバイダーに直接接続することもできます。 詳細については、「 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)」をご覧ください。  
+ 参照データを使用すると、参照データの品質を保証する企業のサービスを利用して、データを検証、修正、および強化することができます。 Azure Marketplace のサービスを使用して参照データプロバイダーに接続することも、プロバイダーへの直接接続を使用することもできます。 詳細については、「 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)」をご覧ください。  
   
  DQS のナレッジ マネージメントの詳細については、「 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)」をご覧ください。  
   
-##  <a name="Projects"></a> データ品質プロジェクトの概念  
+##  <a name="data-quality-project-concepts"></a><a name="Projects"></a> データ品質プロジェクトの概念  
  データ スチュワードは、データ品質に関する操作 (クレンジングおよび照合) を [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションでデータ品質プロジェクトを使用して実行します。  
   
- **データ クレンジング**  
+ **データクレンジング**  
   
  DQS でのデータ クレンジングは、DQS ナレッジ ベースのナレッジに基づいて行われます。 DQS のデータ クレンジングは、2 段階のプロセスから成ります。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "67935392"
   
 -   **インタラクティブなクレンジング**: データ スチュワードは、インタラクティブなクレンジング プロセスを実行して、コンピューター支援型のデータ クレンジング プロセスで提示されたデータ修正を変更したり拡張したりできます。 このプロセスでは、データ クレンジング プロセスで識別された信頼レベルや統計情報を使用することも、プロジェクトにおける独自の変更を手動で入力することもできます。  
   
- データ クレンジングの後で、データ スチュワードは、処理されたデータを SQL Server データベース、.csv ファイル、または Excel ファイルにエクスポートできます。 詳細については、「 [Data Cleansing](../data-quality-services/data-cleansing.md)」をご覧ください。  
+ データ クレンジングの後で、データ スチュワードは、処理されたデータを SQL Server データベース、.csv ファイル、または Excel ファイルにエクスポートできます。 詳しくは、「 [Data Cleansing](../data-quality-services/data-cleansing.md)」をご覧ください。  
   
  **データ照合**  
   
@@ -67,10 +66,10 @@ ms.locfileid: "67935392"
   
  DQS のデータ品質プロジェクトについて詳しくは、「[データ品質プロジェクト &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)」をご覧ください。  
   
-##  <a name="Admin"></a> データ品質管理の概念  
+##  <a name="data-quality-administration-concepts"></a><a name="Admin"></a> データ品質管理の概念  
  DQS 管理者は、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用して、さまざまな管理タスクを実行できます。  
   
- **[アクティビティ監視]**  
+ **アクティビティの監視**  
   
  アクティビティ監視では、データ範囲内で実行された各アクティビティの状態が表示され、DQS 管理者は各アクティビティのデータを確認しながらアクティビティを制御することができます。 詳細については、「 [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)」をご覧ください。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "67935392"
   
  **DQS セキュリティ**  
   
- DQS のセキュリティの設定には、SQL Server のセキュリティ メカニズムのロールを使用します。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにおけるユーザーのアクセス レベルを決定する、3 つの DQS ロール (dqs_administrator、dqs_kb_editor、および dqs_kb_operator) があります。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用して、ユーザーにロールを付与することはできません。SQL Server Management Studio を使用して行います。 詳細については、「 [DQS Security](../data-quality-services/dqs-security.md)」をご覧ください。  
+ DQS のセキュリティの設定には、SQL Server のセキュリティ メカニズムのロールを使用します。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにおけるユーザーのアクセス レベルを決定する、3 つの DQS ロール (dqs_administrator、dqs_kb_editor、および dqs_kb_operator) があります。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用して、ユーザーにロールを付与することはできません。SQL Server Management Studio を使用して行います。 詳細については、「 [DQS Security](../data-quality-services/dqs-security.md)」を参照してください。  
   
  DQS 管理の詳細については、「 [DQS Administration](../data-quality-services/dqs-administration.md)」を参照してください。  
   

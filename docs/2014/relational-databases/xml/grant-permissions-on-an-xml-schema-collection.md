@@ -10,15 +10,14 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a0163077a2751759d0f48ee20afc75abdcf6b58d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054886"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の許可
   XML スキーマ コレクションを作成する権限、および XML スキーマ コレクション オブジェクトに対する権限を許可できます。  
@@ -63,7 +62,7 @@ ms.locfileid: "63288756"
   
 -   EXECUTE 権限。`xml` 型の列、変数、およびパラメーターの型指定または制約を定義している XML スキーマ コレクションに対して、プリンシパルが挿入または更新した値を検証するために必要です。 また、これらの列や変数に格納されている XML に対してクエリを実行する場合にも必要な権限です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例に示すシナリオでは、XML スキーマ権限のしくみを説明します。 各例では、必要なテスト データベース、リレーショナル スキーマ、およびログインを作成します。 それらのログインには、必要な XML スキーマ コレクション権限が許可されています。 各例の最後には、必要なクリーン アップを行います。  
   
 ### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. XML スキーマ コレクションを作成する権限の許可  

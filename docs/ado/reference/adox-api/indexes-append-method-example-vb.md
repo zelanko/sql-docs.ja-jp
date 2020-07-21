@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5d164c650c67498a89b784cc49779384a198c669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0702fa4580cadce688591b976102b25118f7a189
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966057"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746843"
 ---
 # <a name="indexes-append-method-example-vb"></a>Indexes Append メソッドの例 (VB)
-次のコードでは、新しいインデックスを作成する方法を示します。 テーブル内の 2 つの列にインデックスがあります。  
+次のコードは、新しいインデックスを作成する方法を示しています。 インデックスは、テーブル内の2つの列にあります。  
   
 ```  
 Attribute VB_Name = "IndexesAppend"  
@@ -80,7 +80,7 @@ End Sub
 ' EndCreateIndexVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Append メソッド (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Indexes コレクション (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

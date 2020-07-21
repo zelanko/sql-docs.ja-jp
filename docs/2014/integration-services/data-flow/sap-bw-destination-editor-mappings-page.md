@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fffda17762aadb6ba994ab6202385acf47aab6ca
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770878"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431329"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>[SAP BW 変換先エディター] ([マッピング] ページ)
   **[SAP BW 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62770878"
   
 3.  **[SAP BW 変換先エディター]** で、 **[マッピング]** をクリックして **[マッピング]** ページを開きます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 > [!NOTE]  
 >  変換先を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
@@ -52,7 +51,7 @@ ms.locfileid: "62770878"
   
  変換先列に入力列をマップするには、 **[使用できる変換先列]** の一覧の列に、 **[使用できる入力列]** の一覧から列をドラッグします。  
   
- **[使用できる入力列]**  
+ **使用できる変換先列**  
  使用できる変換先列の一覧を表示します。  
   
  変換先列に入力列をマップするには、 **[使用できる変換先列]** の一覧の列に、 **[使用できる入力列]** の一覧から列をドラッグします。  
@@ -71,12 +70,12 @@ ms.locfileid: "62770878"
  **入力列**  
  選択した入力列を表示します。  
   
- 同じマップ先の列に別の入力列をマップするには、リストで別の入力列を選択します。 マッピングを削除するには、 **[\<無視>]** を選択して、出力から入力列を除外します。  
+ 同じマップ先の列に別の入力列をマップするには、リストで別の入力列を選択します。 マッピングを削除するには、を選択して **\<ignore>** 出力から入力列を除外します。  
   
  **変換先列**  
  マップされているかどうかにかかわらず、使用できる変換先列を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [SAP BW 変換先エディター &#40;[エラー出力] ページ&#41;](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 変換先エディター &#40;[詳細設定] ページ&#41;](sap-bw-destination-editor-advanced-page.md)   

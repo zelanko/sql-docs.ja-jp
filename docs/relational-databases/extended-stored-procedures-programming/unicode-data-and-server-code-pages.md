@@ -1,5 +1,5 @@
 ---
-title: Unicode データおよびサーバー コード ページ |Microsoft Docs
+title: Unicode データおよびサーバーコードページ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,35 +14,35 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d440b710d5f8c5693308500c01b7339c33943b0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767754"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode データおよびサーバー コード ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。  
   
  拡張ストアド プロシージャ API は、Unicode データを扱うことはできますが、Unicode メタデータを扱うことはできません。 #define Unicode ディレクティブは、拡張ストアド プロシージャ API にまったく影響しません。  
   
- 拡張ストアド プロシージャ API が返したメタデータ、または拡張ストアド プロシージャ アプリケーションによって拡張ストアド プロシージャ API に渡されたメタデータは、すべてサーバーのマルチバイト コード ページにあることが想定されています。 拡張ストアド プロシージャ API サーバー アプリケーションの既定のコード ページは呼び出すことによって取得できるアプリケーションが実行されているコンピューターの ANSI コード ページ**srv_pfield** srv _ に設定するフィールド パラメーターを使用SPROC_CODEPAGE します。  
+ 拡張ストアド プロシージャ API が返したメタデータ、または拡張ストアド プロシージャ アプリケーションによって拡張ストアド プロシージャ API に渡されたメタデータは、すべてサーバーのマルチバイト コード ページにあることが想定されています。 拡張ストアドプロシージャ API サーバーアプリケーションの既定のコードページは、アプリケーションが実行されているコンピューターの ANSI コードページです。これは、SRV_SPROC_CODEPAGE に設定されたフィールドパラメーターを使用して**srv_pfield**を呼び出すことによって取得できます。  
   
  Unicode 対応の拡張ストアド プロシージャ API アプリケーションの場合は、Unicode メタデータの列名やエラー メッセージなどを拡張ストアド プロシージャ API に渡す前に、マルチバイト データに変換する必要があります。  
   
 ## <a name="example"></a>例  
  次の拡張ストアド プロシージャは、上記で説明した Unicode 変換の例です。 次の点に注意してください。  
   
--   列のデータが Unicode データとして渡される**srv_describe**列が srvnvarchar 説明されているためです。  
+-   列が SRVNVARCHAR として記述されているので、列データは Unicode データとして**srv_describe**に渡されます。  
   
--   列名のメタデータが渡される**srv_describe**マルチバイト データとして。  
+-   列名のメタデータは、マルチバイトデータとして**srv_describe**に渡されます。  
   
-     拡張ストアド プロシージャ呼び出し**srv_pfield**フィールド パラメーターを SRV_SPROC_CODEPAGE に設定すると取得のマルチバイト コード ページと[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+     拡張ストアドプロシージャは、フィールドパラメーターを SRV_SPROC_CODEPAGE に設定して**srv_pfield**を呼び出し、のマルチバイトコードページを取得し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
--   エラー メッセージが渡される**srv_sendmsg**マルチバイト データとして。  
+-   エラーメッセージは、マルチバイトデータとして**srv_sendmsg**に渡されます。  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  
@@ -151,6 +151,6 @@ ms.locfileid: "68064267"
     ```  
   
 ## <a name="see-also"></a>関連項目  
- [srv_wsendmsg&#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
+ [srv_wsendmsg &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

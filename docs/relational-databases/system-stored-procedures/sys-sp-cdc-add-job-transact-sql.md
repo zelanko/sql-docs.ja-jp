@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_add_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_cdc_add_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_add_job
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68737e96c3c2c90592b1cccf807675ae5518ee4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106545"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891189"
 ---
-# <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  現在のデータベースで変更データ キャプチャ クリーンアップまたはキャプチャ ジョブを作成します。  
+  現在のデータベースに、変更データキャプチャのクリーンアップジョブまたはキャプチャジョブを作成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,35 +48,35 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_type = ] 'job\_type'` 追加するジョブの種類。 *job_type*は**nvarchar (20)** NULL にすることはできません。 有効な入力は **'capture'** と **'cleanup'** します。  
+`[ @job_type = ] 'job\_type'`追加するジョブの種類。 *job_type*は**nvarchar (20)** であり、NULL にすることはできません。 有効な入力は **' capture '** と **' cleanup '** です。  
   
-`[ @start_job = ] start_job` 追加された後すぐにジョブを開始するかどうかを示すフラグします。 *start_job*は**ビット**既定値は 1 です。  
+`[ @start_job = ] start_job`ジョブが追加された直後にジョブを開始するかどうかを示すフラグです。 *start_job*の部分は**bit**で、既定値は1です。  
   
-`[ @maxtrans ] = max_trans` 各スキャン サイクルで処理するトランザクションの最大数。 *max_trans*は**int**既定値は 500 です。 指定した場合、値は正の整数である必要があります。  
+`[ @maxtrans ] = max_trans`各スキャンサイクルで処理するトランザクションの最大数。 *max_trans*は**int**で、既定値は500です。 指定する場合、値は正の整数である必要があります。  
   
- *max_trans*はキャプチャ ジョブでのみ有効です。  
+ *max_trans*は、キャプチャジョブに対してのみ有効です。  
   
-`[ @maxscans ] = max\_scans_` ログからすべての行を抽出するために実行するスキャン サイクルの最大数。 *max_scans*は**int**既定値は 10 です。  
+`[ @maxscans ] = max\_scans_`ログからすべての行を抽出するために実行するスキャンサイクルの最大数。 *max_scans*は**int**で、既定値は10です。  
   
- *max_scan*はキャプチャ ジョブでのみ有効です。  
+ *max_scan*は、キャプチャジョブに対してのみ有効です。  
   
-`[ @continuous ] = continuous_` キャプチャ ジョブが継続的に実行するかどうかを示します (1) または 1 回だけ実行 (0)。 *継続的な*は**ビット**既定値は 1 です。  
+`[ @continuous ] = continuous_`キャプチャジョブを連続的に実行するか (1)、1回だけ実行するか (0) を示します。 *continuous*は**bit**で、既定値は1です。  
   
- ときに*連続*= 1、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)ジョブは、ログをスキャンし、最大処理 (*max_trans* \* *max_scans*)トランザクション。 指定された秒数待機し、 *polling_interval*次のログ スキャンを開始する前にします。  
+ *Continuous* = 1 の場合、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)ジョブによってログがスキャンされ、最大 (*max_trans* \* *max_scans*) トランザクションが処理されます。 次に、 *polling_interval*で指定された秒数だけ待機してから、次のログスキャンを開始します。  
   
- ときに*連続*= 0 の場合、 **sp_cdc_scan**ジョブが実行されるまで*max_scans*までの処理、ログのスキャン*max_trans*トランザクション中に各スキャン、およびし終了します。  
+ *Continuous* = 0 の場合、 **sp_cdc_scan**ジョブはログの*max_scans*スキャンまで実行され、各スキャン中に*max_trans*トランザクションまで処理された後、終了します。  
   
- *継続的な*はキャプチャ ジョブでのみ有効です。  
+ *continuous*は、キャプチャジョブに対してのみ有効です。  
   
-`[ @pollinginterval ] = polling\_interval_` ログ スキャン サイクルの間隔の秒数です。 *polling_interval*は**bigint**既定値は 5 です。  
+`[ @pollinginterval ] = polling\_interval_`ログスキャンサイクルの間隔を秒数で指定します。 *polling_interval*は**bigint**で、既定値は5です。  
   
- *polling_interval*キャプチャに対してのみ有効ですがジョブの場合に*連続*が 1 に設定します。 指定した場合、値が負の値にすることはできず、24 時間を超えることはできません。 値 0 を指定した場合、ログ スキャンの間に待機時間はありません。  
+ *polling_interval*は、 *continuous*が1に設定されている場合にのみ、キャプチャジョブに対して有効です。 指定した場合、値を負の値にすることはできず、24時間を超えることはできません。 値 0 を指定した場合、ログ スキャンの間に待機時間はありません。  
   
-`[ @retention ] = retention_` 変更データ行が保持する分数は、テーブルを変更します。 *保有期間*は**bigint**既定値は 4320 (72 時間)。 最大値は 52494800 (100 年) です。 指定した場合、値は正の整数である必要があります。  
+`[ @retention ] = retention_`変更データ行が変更テーブルに保持される時間 (分単位)。 *リテンション期間*は**bigint**で、既定値は 4320 (72 時間) です。 最大値は 52494800 (100 年) です。 指定する場合、値は正の整数である必要があります。  
   
- *保有期間*はクリーンアップ ジョブでのみ有効です。  
+ *リテンション期間*はクリーンアップジョブに対してのみ有効です。  
   
-`[ @threshold = ] 'delete\_threshold'` クリーンアップ時に 1 つのステートメントを使用して削除できるエントリの削除の最大数。 *delete_threshold*は**bigint**既定値は 5000 です。  
+`[ @threshold = ] 'delete\_threshold'`クリーンアップ時に1つのステートメントを使用して削除できる削除エントリの最大数。 *delete_threshold*は**bigint**で、既定値は5000です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -84,19 +84,19 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- データベース内の最初のテーブルが変更データ キャプチャを有効にすると、既定値を使用して、クリーンアップ ジョブが作成されます。 キャプチャ ジョブは、データベースの最初のテーブルの変更データ キャプチャを有効にしたとき、そのデータベースにトランザクション パブリケーションが存在しなかった場合に、既定値を使って作成されます。 トランザクション パブリケーションが存在する場合、トランザクション ログ リーダーを使ってキャプチャ メカニズムが実現されます。別個のキャプチャ ジョブは必要ありません (使用することもできません)。  
+## <a name="remarks"></a>解説  
+ クリーンアップジョブは、データベースの最初のテーブルで変更データキャプチャが有効になっている場合に、既定値を使用して作成されます。 キャプチャ ジョブは、データベースの最初のテーブルの変更データ キャプチャを有効にしたとき、そのデータベースにトランザクション パブリケーションが存在しなかった場合に、既定値を使って作成されます。 トランザクション パブリケーションが存在する場合、トランザクション ログ リーダーを使ってキャプチャ メカニズムが実現されます。別個のキャプチャ ジョブは必要ありません (使用することもできません)。  
   
  クリーンアップ ジョブとキャプチャ ジョブは既定で作成されるため、このストアド プロシージャが必要となるのは、ジョブを明示的に削除した後で、再び作成する必要が生じた場合だけです。  
   
- ジョブの名前は**cdc** 。 _\<データベース\_名前\>_ **\_クリーンアップ**または**cdc** 。 _\<データベース\_名前\>_ **\_キャプチャ**ここで、 *< database_name >* 名前を指定します現在のデータベース。 名前にピリオドが付加されますと同じ名前のジョブが既に存在する場合 ( **.** ) などの一意の識別子が続く: **cdc です。AdventureWorks_capture します。A1ACBDED-13FC-428C-8302-10100EF74F52**します。  
+ ジョブの名前は**cdc です。** _\<database\_name\>_** \_ クリーンアップ**または**cdc。** _\<database\_name\>_** \_ capture**。ここで *<database_name>* は現在のデータベースの名前です。 同じ名前のジョブが既に存在する場合、名前にはピリオド (**.**) と一意の識別子 (例: cdc) が付加されます。 **AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
   
- クリーンアップまたはキャプチャ ジョブの現在の構成を表示する使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)します。 ジョブの構成を変更する[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)します。  
+ クリーンアップジョブまたはキャプチャジョブの現在の構成を表示するには、 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)を使用します。 ジョブの構成を変更するには、 [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **db_owner**固定データベース ロール。  
+ **Db_owner**固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-capture-job"></a>A. キャプチャ ジョブを作成する  
  次の例では、キャプチャ ジョブを作成します。 明示的に削除された既存のクリーンアップ ジョブを改めて作成するという状況を想定しています。 ジョブは既定値を使って作成されます。  
@@ -108,7 +108,7 @@ EXEC sys.sp_cdc_add_job @job_type = N'capture';
 GO  
 ```  
   
-### <a name="b-creating-a-cleanup-job"></a>B. クリーンアップ ジョブを作成します。  
+### <a name="b-creating-a-cleanup-job"></a>B: クリーンアップジョブの作成  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにクリーンアップ ジョブを作成します。 パラメーター `@start_job` は 0 に、`@retention` は 5760 分 (96 時間) に設定します。 明示的に削除された既存のクリーンアップ ジョブを改めて作成するという状況を想定しています。  
   
 ```  
@@ -121,8 +121,8 @@ EXEC sys.sp_cdc_add_job
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

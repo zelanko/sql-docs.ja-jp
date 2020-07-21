@@ -1,7 +1,7 @@
 ---
 title: decimal 型と numeric 型 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/23/2017
+description: 10 進数データ型と数値データ型の Transact-SQL リファレンス。 10 進数と数値は、精度やスケールが固定されている数値データ型にとって類義語となります。
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,15 +23,15 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48080db61a91a13cd04d436784ce74a7e45e3135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f812c03b26df551aa90ecb5dbcca5f0c43ba7a3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086739"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008033"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 型と numeric 型 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 固定長の有効桁数と小数点以下保持桁数を持つ数値データ型です。 decimal と numeric は同義であり、どちらを使ってもかまいません。
   
@@ -46,9 +46,9 @@ p (precision)
 >  Informatica では、有効桁数と小数点以下桁数の指定に関係なく、16 の有効桁数のみサポートされます。  
   
 *s* (scale)  
-小数点の右側の保存される桁数です。 この数値が *p* から差し引かれ、小数点の左側の最大桁数が判別されます。 小数点以下桁数は、0 から *p* の範囲の値である必要があり、有効桁数が指定されている場合にのみ指定できます。 既定の小数点以下桁数は 0 です。したがって、0 <= *s* \<= *p* になります。 ストレージの最大サイズは有効桁数によって異なります。
+小数点の右側の保存される桁数です。 この数値が *p* から差し引かれ、小数点の左側の最大桁数が判別されます。 小数点以下桁数は、0 から *p* の範囲の値である必要があり、有効桁数が指定されている場合にのみ指定できます。 既定の小数点以下桁数は 0 です。したがって、0 <= *s* \<= *p* です。 ストレージの最大サイズは有効桁数によって異なります。
   
-|有効桁数|ストレージのバイト数|  
+|Precision|ストレージのバイト数|  
 |---|---|
 |1 - 9|5|  
 |10 から 19|9|  
@@ -67,9 +67,9 @@ p (precision)
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定で、数値を **decimal** 型または **numeric** 型の値に変換する場合、有効桁数と小数点以下桁数が少なくなって丸められます。 反対に、SET ARITHABORT オプションが ON に設定されている場合は、オーバーフローが起こると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが生成されます。 有効桁数と小数点以下桁数が失われただけではエラーは生成されません。
   
-浮動小数値または実数値を小数値または数値に変換する場合、小数値が 17 桁を超えることはありません。 すべての浮動小数値 < 5E-18 は常に 0 として変換されます。
+[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] より前では、**float** 値から **decimal** または **numeric** への変換は、有効桁数 17 桁までの値に制限されます。 5E-18 未満の **float** 値はすべて (5E-18 の科学的記数法または 0.0000000000000000050000000000000005 の小数点表記のいずれかを使用して設定されている場合) 0 に丸められます。 これは [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] の時点で制限がなくなりました。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、**decimal** および **numeric** データ型を使用してテーブルを作成します。  各列に値が挿入されます。 結果は、SELECT ステートメントを使用して返されます。
   
 ```sql
@@ -99,7 +99,7 @@ MyDecimalColumn                         MyNumericColumn
   
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

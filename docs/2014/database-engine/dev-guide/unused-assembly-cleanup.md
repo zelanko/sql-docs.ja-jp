@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3edb481894bdf9c4b9ff6228abb27c51b1affc75
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780179"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933227"
 ---
 # <a name="unused-assembly-cleanup"></a>未使用のアセンブリのクリーンアップ
   `AssemblyCleanup` サンプルには、メタデータ カタログに対してクエリを実行して現在のデータベース内で使用されていないアセンブリをクリーンアップする .NET ストアド プロシージャが含まれています。 唯一のパラメーターである `visible_assemblies` を使用して、表示される未使用のアセンブリを削除するかどうかを指定します。 既定値は false で、表示されない未使用のアセンブリのみが削除されます。それ以外の値の場合、未使用のアセンブリがすべて削除されます。 未使用のアセンブリとは、エントリ ポイントが定義されておらず (ルーチンまたは型と集計)、そのアセンブリを直接的または間接的に参照するアセンブリが使用されていないアセンブリです。  
@@ -23,7 +22,7 @@ ms.locfileid: "62780179"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62780179"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62780179"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
+8.  [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 9. 次のコマンドを使用してテスト スクリプトを実行します。  
   

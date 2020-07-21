@@ -1,5 +1,5 @@
 ---
-title: MSdatatype_mappings (TRANSACT-SQL) |Microsoft Docs
+title: MSdatatype_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,31 +17,31 @@ helpviewer_keywords:
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee1a0cc83b55fc265ae2bb490fd9d5e11fd73f22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16da7db2dcf42ebfa00d634814f27839a3988a71
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129620"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889189"
 ---
-# <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="msdatatype_mappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdatatype_mappings**ビューでは、SQL Server データ型を SQL Server 以外のデータベース管理システム (DBMS) によって使用されるデータ型にマップします。 このテーブルに格納されます、 **msdb**データベース。  
+  **MSdatatype_mappings**ビューでは、SQL Server データ型が、非 SQL Server データベース管理システム (DBMS) によって使用されるデータ型にマップされます。 このテーブルは、 **msdb**データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**dbms_name**|**nvarchar(128)**|DBMS の名前です。 使用可能な値とその説明を次に示します。<br /><br /> **MSSQLSERVER**:変換先は、SQL Server データベースです。<br />**ORACLE**:変換先は、Oracle データベースです。<br />**DB2**:マップ先は IBM DB2 データベース。<br />**SYBASE**:変換先は、Sybase データベース。|  
-|**sql_type**|**nvarchar(128)**|SQL Server のデータ型です。|  
-|**dest_type**|**nvarchar(128)**|SQL Server 以外のデータ型の名前です。|  
-|**dest_prec**|**bigint**|SQL Server 以外のデータ型の有効桁数です。|  
+|**dbms_name**|**nvarchar(128)**|DBMS の名前を指定します。 使用可能な値とその説明を次に示します。<br /><br /> **MSSQLSERVER**: 転送先は SQL Server データベースです。<br />**Oracle**: 変換先は oracle データベースです。<br />**Db2**: 変換先は IBM DB2 データベースです。<br />**Sybase**: コピー先は sybase データベースです。|  
+|**sql_type**|**nvarchar(128)**|SQL Server データ型です。|  
+|**dest_type**|**nvarchar(128)**|非 SQL Server データ型の名前。|  
+|**dest_prec**|**bigint**|非 SQL Server データ型の有効桁数です。|  
 |**dest_create_params**|**int**|内部使用のみです。|  
-|**dest_nullable**|**bit**|SQL Server 以外のデータ型が NULL 値をサポートするかどうかです。|  
+|**dest_nullable**|**bit**|非 SQL Server データ型が NULL 値をサポートしているかどうかを示します。|  
   
 ## <a name="see-also"></a>関連項目  
- [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Oracle パブリッシャーのデータ型マッピングを指定します。](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Oracle パブリッシャーのデータ型マッピングの指定](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aba118f93a9a4f38179e8e7c5156eecc24012ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066916"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server: SQL Statistics オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:SQL Statistics** オブジェクトには、コンパイルの動作や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに送信された要求の種類を監視するためのカウンターが用意されています。 クエリのコンパイルと再コンパイルの回数、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受信するバッチの数を監視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がユーザー クエリを処理する速度や、クエリ オプティマイザーによるクエリ処理の効果がわかります。  
@@ -47,7 +46,7 @@ ms.locfileid: "63183080"
 |**SQL Re-Compilations/sec**|1 秒あたりのステートメントの再コンパイル回数。 ステートメントの再コンパイルがトリガーされた回数をカウントします。 一般に、再コンパイルは少なくする必要があります。|  
 |**Unsafe Auto-Params/sec**|1 秒あたりの安全でない自動パラメーター化の回数。 たとえば、クエリには、キャッシュされたプランを共有できないいくつかの特性があります。 これらは、安全ではないと見なされています。 これは、強制パラメーター化の数としてはカウントされません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server の Plan Cache オブジェクト](sql-server-plan-cache-object.md)   
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   

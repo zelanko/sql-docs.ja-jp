@@ -11,14 +11,14 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSDEST.F1
 - sql14.dts.designer.afpadlsdest.f1
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 38d79f3a76d71b677c722ca6226182b692dee506
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 952dcc604dd99c2563ee0c9ef6dac3b9980ce429
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892252"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293396"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store Destination
 

@@ -18,15 +18,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58e73100fce87fb6eda3827a41ae6c747eec4104
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629448"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK を使用して検索結果を制限する方法
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 関数と [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 関数は、0 ～ 1000 の序数値 (順位値) を含む "RANK" 列を返します。 これらの値を使用すれば、選択基準への適合度合いに応じて、返された行に順位を付けることができます。 この順位値が示しているのは、結果セット内の各行の単なる相対順位であり、値が小さいほど関連性は低くなります。 実際の値は重要ではなく、通常はクエリが実行されるたびに変わります。  
   
 > [!NOTE]  
@@ -36,9 +36,9 @@ ms.locfileid: "68132283"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一致結果を順位で並べ替え、指定された数の行のみを返します。 このオプションを使用すると、パフォーマンスが大幅に向上します。 たとえば、通常ならば 100 万行のテーブルから 10 万行を返すクエリに対して、上位 100 行だけを返すように要求すれば、そのクエリの処理が速くなります。  
   
-##  <a name="examples"></a> RANK を使用して検索結果を制限する例  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> RANK を使用して検索結果を制限する例  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>例 A:上位 3 件の一致結果のみを検索する  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>例 A: 上位 3 件の一致結果のみを検索する  
  次の例では、CONTAINSTABLE を使用して上位 3 件の一致結果のみを返します。  
   
 ```  
@@ -69,7 +69,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>例 B:上位 10 件の一致結果を検索する  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>例 B: 上位 10 件の一致結果を検索する  
  次の例では、CONTAINSTABLE を使用して、 `Description` 列内で "light" または "lightweight" という単語の近くに "aluminum" という語句を含んでいる、上位 5 種の製品の説明を返します。  
   
 ```  
@@ -91,7 +91,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> 検索クエリの結果が順位付けされる方法  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> 検索クエリの結果が順位付けされる方法  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索では、フルテキスト クエリが返すデータの関連性を示す省略可能なスコア (順位値) を生成できます。 この順位値は 1 行ごとに計算され、クエリの結果セットを関連性に従って並べ替える順序付け基準として使用できます。 順位値は、単に、結果セット内の各行の相対的な関連順位を示します。 実際の値は重要ではなく、通常はクエリが実行されるたびに変わります。 順位値は、他のクエリでは意味を持ちません。  
   
 ### <a name="statistics-for-ranking"></a>順位付けの統計  

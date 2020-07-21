@@ -1,25 +1,25 @@
 ---
-title: Linux で高可用性を実現するために SQL Server の Always On 可用性グループを構成する
-titleSuffix: SQL Server
+title: SQL Server on Linux の可用性グループを構成する
 description: Linux で高可用性を実現するために SQL Server の Always On 可用性グループ (AG) を作成する方法について説明します。
 author: MikeRayMSFT
+ms.custom: seo-lt-2019
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 02/14/2018
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d15d295b36ae14e81a3e39272e1c3af71cb51d2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027250"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892308"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux で高可用性を実現するために SQL Server の Always On 可用性グループを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux 上で、高可用性を実現するために SQL Server の Always On 可用性グループ (AG) を作成する方法について説明します。 AG には 2 種類の構成が存在します。 "*高可用性*" の構成では、クラスター マネージャーを使ってビジネス継続性を提供します。 この構成には、読み取りスケールのレプリカを含めることもできます。 このドキュメントでは、高可用性のための AG を作成する方法について説明します。
 
@@ -51,7 +51,7 @@ ms.locfileid: "68027250"
    >[!IMPORTANT]
    >運用環境では、高可用性のために STONITH のようなフェンス エージェントが必要です。 このドキュメントに含まれているデモでは、フェンス エージェントは使用しません。 このデモはテストと検証専用です。 
    
-   >Linux クラスターは、フェンスを使用してクラスターを既知の状態に戻します。 フェンスを構成する方法は、ディストリビューションと環境によって異なります。 現時点では、一部のクラウド環境ではフェンスを利用できません。 詳細については、[RHEL 高可用性クラスターのサポート ポリシー (仮想化プラットフォーム)](https://access.redhat.com/articles/29440) に関するページをご覧ください。
+   >Linux クラスターでは、フェンスを使用して、クラスターが既知の状態に戻されます。 フェンスを構成する方法は、ディストリビューションと環境によって異なります。 現時点では、一部のクラウド環境ではフェンスを利用できません。 詳細については、[RHEL 高可用性クラスターのサポート ポリシー (仮想化プラットフォーム)](https://access.redhat.com/articles/29440) に関するページをご覧ください。
    
    >SLES については、[SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing) に関するページをご覧ください。
 
@@ -135,7 +135,7 @@ Linux で高可用性のための AG を作成します。 `CLUSTER_TYPE = EXTER
 - 2 つの同期レプリカと 1 つの構成レプリカを使って AG を作成する:
 
    >[!IMPORTANT]
-   >このアーキテクチャでは、任意のエディションの SQL Server を使って 3 番目のレプリカをホストすることができます。 たとえば、SQL Server Enterprise Edition 上で 3 番目のレプリカをホストできます。 Enterprise Edition の場合、有効なエンドポイントの種類は `WITNESS` のみです。 
+   >このアーキテクチャでは、任意のエディションの SQL Server を使って 3 番目のレプリカをホストすることができます。 たとえば、SQL Server Express Edition 上で 3 番目のレプリカをホストできます。 Express Edition の場合、有効なエンドポイントの種類は `WITNESS` のみです。 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -193,16 +193,16 @@ SQL Server Management Studio または PowerShell を使って、`CLUSTER_TYPE=E
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>セカンダリ レプリカを AG に参加させる
 
-ペースメーカーのユーザーは、すべてのレプリカ上の可用性グループに対して `ALTER`、`CONTROL`、`VIEW DEFINITION` のアクセス許可を持っている必要があります。 アクセス許可を付与するには、プライマ リレプリカと各セカンダリ レプリカ上に可用性グループが作成された後、それらが可用性グループに追加された直後に、次の Transact-SQL スクリプトを実行します。 このスクリプトを実行する前に、`<pacemakerLogin>` をペースメーカーのユーザー アカウントに置き換えます。
+ペースメーカーのユーザーは、すべてのレプリカ上の可用性グループに対して `ALTER`、`CONTROL`、`VIEW DEFINITION` のアクセス許可を持っている必要があります。 アクセス許可を付与するには、プライマ リレプリカと各セカンダリ レプリカ上に可用性グループが作成された後、それらが可用性グループに追加された直後に、次の Transact-SQL スクリプトを実行します。 このスクリプトを実行する前に、`<pacemakerLogin>` をペースメーカーのユーザー アカウントに置き換えます。 ペースメーカーのログインがない場合、[ペースメーカーの SQL サーバー ログインを作成してください](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker)。
 
-```Transact-SQL
+```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
 次の Transact-SQL スクリプトを実行すると、`ag1` という名前の AG に SQL Server インスタンスを参加させることができます。 ご利用の環境に合わせてスクリプトを変更してください。 セカンダリ レプリカをホストしている各 SQL Server インスタンス上で、次の Transact-SQL を実行して AG に参加させます。
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
          
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
@@ -215,16 +215,16 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 このドキュメントに記載されている手順に従った場合は、まだクラスター化されていない AG ができます。 次の手順は、クラスターを追加することです。 この構成は、読み取りスケール/負荷分散のシナリオに対しては有効ですが、高可用性の場合は完全ではありません。 高可用性を実現するには、AG をクラスター リソースとして追加する必要があります。 手順については、「[次の手順](#next-steps)」をご覧ください。 
 
-## <a name="notes"></a>注
+## <a name="notes"></a>Notes
 
 >[!IMPORTANT]
->クラスターを構成し、AG をクラスター リソースとして追加した後は、Transact-SQL を使って AG リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは、Windows Server フェールオーバー クラスター (WSFC) の場合と同じようにオペレーティング システムと緊密に結合されているわけではありません。 SQL Server サービスはクラスターの存在を認識しません。 すべてのオーケストレーションは、クラスター管理ツールを使用して実行されます。 RHEL または Ubuntu では、`pcs` を使います。 SLES では `crm` を使います。 
+>クラスターを構成し、AG をクラスター リソースとして追加した後は、Transact-SQL を使って AG リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは、Windows Server フェールオーバー クラスター (WSFC) ほど、オペレーティング システムと緊密に結合されていません。 SQL Server サービスでは、クラスターの存在は認識されません。 すべてのオーケストレーションは、クラスター管理ツールを使用して実行されます。 RHEL または Ubuntu では、`pcs` を使います。 SLES では `crm` を使います。 
 
 >[!IMPORTANT]
 >AG がクラスター リソースの場合、現在のリリースには、非同期レプリカへのデータ損失を伴う強制フェールオーバーが機能しないという既知の問題があります。 これは今後のリリースで修正される予定です。 同期レプリカへの手動または自動フェールオーバーは成功します。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 可用性グループ クラスター リソースに対して Red Hat Enterprise Linux クラスターを構成する](sql-server-linux-availability-group-cluster-rhel.md)
 

@@ -13,10 +13,10 @@ ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8eaed89901b98cecb90e0c3a4ecae24714c7c180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574327"
 ---
 # <a name="delete-an-item-management-studio"></a>アイテムの削除 (Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "65574327"
   
 ## <a name="see-also"></a>参照  
  [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [カタログ アイテムの削除 (Management Studio)](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
- [SQL Server Management Studio の Reporting Services (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [カタログ アイテムの削除 &#40;Management Studio&#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
+ [SQL Server Management Studio の Reporting Services &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

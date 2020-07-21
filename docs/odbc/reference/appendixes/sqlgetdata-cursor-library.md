@@ -1,5 +1,5 @@
 ---
-title: SQLGetData (カーソル ライブラリ) |Microsoft Docs
+title: SQLGetData (カーソルライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,32 +10,32 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], Cursor Library
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5962882de08712dcff75790de7c58d69f965a3bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 07200d48f439c97003da7062fc218cd2f3081d1b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086383"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307843"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLGetData**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLGetData**を参照してください[SQLGetData 関数](../../../odbc/reference/syntax/sqlgetdata-function.md)します。  
+ このトピックでは、カーソルライブラリでの**SQLGetData**関数の使用について説明します。 **SQLGetData**の一般的な情報については、「 [SQLGetData 関数](../../../odbc/reference/syntax/sqlgetdata-function.md)」を参照してください。  
   
- カーソル ライブラリを実装する**SQLGetData**最初に構築することによって、**選択**ステートメントを**場所**句の各バインドには、そのキャッシュに格納された値を列挙します。現在の行に列です。 実行して、**選択**し直すには、行と呼び出しステートメント**SQLGetData** (キャッシュ) ではなく、データ ソースからデータを取得するドライバー。  
+ カーソルライブラリでは、最初に、現在の行のバインドされている各列のキャッシュに格納されている値を列挙する**WHERE**句を使用**して SELECT**ステートメントを構築することで、 **SQLGetData**を実装します。 次に、 **SELECT**ステートメントを実行して行を再選択し、ドライバーで**SQLGetData**を呼び出してデータソースからデータを取得します (キャッシュではなく)。  
   
 > [!CAUTION]  
->  **場所**任意の行を識別する、別の行を特定または複数の行を識別する、現在の行を識別するために、カーソル ライブラリによって構築された句が失敗することができます。 詳細については、次を参照してください。[検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)します。  
+>  現在の行を識別するためにカーソルライブラリによって構築された**where**句は、行の識別、別の行の識別、または複数の行の識別に失敗することがあります。 詳細については、「[検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)」を参照してください。  
   
- SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS ステートメントの属性が設定されている場合**SQLGetData**列 0 ブックマーク データを返すために呼び出すことができます。  
+ SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_VARIABLE に設定されている場合、列0で**SQLGetData**を呼び出してブックマークデータを返すことができます。  
   
- 呼び出す**SQLGetData**は次の制限を受けます。  
+ **SQLGetData**の呼び出しには、次の制限が適用されます。  
   
--   **SQLGetData**順方向専用カーソルを呼び出すことはできません。  
+-   **SQLGetData**は、順方向専用カーソルに対して呼び出すことはできません。  
   
--   **SQLGetData**次の条件が満たされた場合にのみ呼び出すことができます。**選択**ステートメントは結果セットを生成、**選択**ステートメントに、結合が含まれていない、 **共用体**句、または**GROUP BY**は句と select リストで、別名または式を使用するすべての列にバインドされていない**SQLBindCol**します。  
+-   **SQLGetData**は、次の条件が満たされた場合にのみ呼び出すことができます。 **SELECT**ステートメントは、結果セットを生成します。**SELECT**ステートメントに Join、 **UNION**句、または**GROUP BY**句が含まれていませんでした。また、選択リスト内の別名または式を使用した列は、 **SQLBindCol**にバインドされていませんでした。  
   
--   カーソル ライブラリがの結果セットを実行する前に残りの部分をフェッチして、ドライバーは、1 つだけアクティブ ステートメントをサポートする場合、**選択**ステートメントおよび呼び出し**SQLGetData**します。
+-   ドライバーが1つのアクティブステートメントのみをサポートしている場合、カーソルライブラリは、 **SELECT**ステートメントを実行して**SQLGetData**を呼び出す前に、残りの結果セットをフェッチします。

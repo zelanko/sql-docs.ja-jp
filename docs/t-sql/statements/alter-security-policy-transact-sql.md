@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca38818b0c64c46631d3ec17348f0189f2844bf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6aefcef269a1eb361473f46471812fb85209cb4a
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140992"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381096"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 セキュリティ ポリシーを変更します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68140992"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
+```syntaxsql
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
@@ -46,7 +46,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
            [ <block_dml_operation> ] }  
         | { DROP { FILTER | BLOCK } PREDICATE ON table_schema_name.table_name }   
         | [ <additional_add_alter_drop_predicate_statements> [ , ...n ] ]  
-    )    [ WITH ( STATE = { ON | OFF } ]  
+    )    [ WITH ( STATE = { ON | OFF } ) ]  
     [ NOT FOR REPLICATION ]  
 [;]  
   
@@ -55,7 +55,10 @@ ALTER SECURITY POLICY schema_name.security_policy_name
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 security_policy_name  
 セキュリティ ポリシーの名前。 セキュリティ ポリシー名は識別子のルールに準拠し、データベースおよびそのスキーマで一意である必要があります。  
   
@@ -88,7 +91,7 @@ NOT FOR REPLICATION
 table_schema_name.table_name  
 適用されたセキュリティ述語のターゲット テーブル。 無効な複数のセキュリティ ポリシーは単一テーブルをターゲットにできますが、有効にできるのはどの時点でも 1 つだけです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 ALTER SECURITY POLICY ステートメントはトランザクションのスコープ内にあります。 トランザクションがロールバックされると、ステートメントもロールバックされます。  
   
 メモリ最適化テーブルで述語関数を使用する場合、セキュリティ ポリシーには **SCHEMABINDING** が含まれる必要があり、**WITH NATIVE_COMPILATION** コンパイル ヒントを使用する必要があります。 SCHEMABINDING の引数は、すべての述語に適用されるため、ALTER ステートメントを使用して変更できません。 スキーマ バインドを変更するには、セキュリティ ポリシーを削除して再作成する必要があります。  
@@ -104,7 +107,7 @@ ALTER ANY SECURITY POLICY 権限が必要です。
 -   ポリシーにバインドしているターゲット テーブルに対する REFERENCES 権限。  
 -   引数として使用しているターゲット テーブルのすべての列に対する REFERENCES 権限。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 以下の例は、**ALTER SECURITY POLICY** 構文の使用法を示しています。 詳細なセキュリティ ポリシーのシナリオ例については、「[行レベルのセキュリティ](../../relational-databases/security/row-level-security.md)」をご覧ください。  
   
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. ポリシーに述語を追加する  

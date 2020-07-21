@@ -1,5 +1,5 @@
 ---
-title: 手順 4:パッケージ構成の追加 | Microsoft Docs
+title: '手順 4: パッケージ構成の追加 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 38b16211ccb15e0a0a2f77d1b4f470ef9ad3c51b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ca9674a5bb3128e86d9cceaca4a971066da0fef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902596"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283678"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>レッスン 1-4 - パッケージ構成の追加
 
@@ -135,7 +135,7 @@ DataTransferConfig.dtsConfig と LoadXMLData.dtsConfig の 2 つの構成ファ�
 12. **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、LoadXMLData EV Configuration が最初に、LoadXMLData Configuration が 2 番目に表示されていることを確認し、 **[閉じる]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 5:更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+[手順 5: 更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="see-also"></a>参照  
 [[パッケージ構成]](../integration-services/packages/package-configurations.md)  

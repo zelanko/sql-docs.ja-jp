@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL による FILESTREAM データへのアクセス | Microsoft Docs
+description: Transact-SQL の INSERT、UPDATE、DELETE ステートメントを使用して FILESTREAM データへのアクセスと管理を行う方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8e2a9ede7817eb504a5926ee1a7bb6be2019f0b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f1f6d33e9828478392f3ccb19ea4f7306a6196e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744822"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL による FILESTREAM データへのアクセス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT、UPDATE、および DELETE ステートメントを使用して FILESTREAM データを管理する方法について説明します。  
   
 > [!NOTE]  
 >  このトピックの例を実行するには、「 [FILESTREAM が有効なデータベースを作成する方法](../../relational-databases/blob/create-a-filestream-enabled-database.md) 」および「 [FILESTREAM データを格納するテーブルを作成する方法](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)」に基づいて、FILESTREAM が有効なデータベースとテーブルを作成する必要があります。  
   
-##  <a name="ins"></a> FILESTREAM データを含む行の挿入  
+##  <a name="inserting-a-row-that-contains-filestream-data"></a><a name="ins"></a> FILESTREAM データを含む行の挿入  
  FILESTREAM データをサポートするテーブルに行を追加するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT ステートメントを使用します。 データを FILESTREAM 列に挿入するときは、NULL または **varbinary(max)** 値を挿入できます。  
   
 ### <a name="inserting-null"></a>NULL の挿入  
@@ -53,7 +54,7 @@ ms.locfileid: "68041235"
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
   
-##  <a name="upd"></a> FILESTREAM データを更新する  
+##  <a name="updating-filestream-data"></a><a name="upd"></a> FILESTREAM データを更新する  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用すると、ファイル システムのファイルのデータを更新できます。ただし、大量のデータをファイルにストリーミングする必要があるときには、この操作は適していません。  
   
  ファイル レコード内の任意のテキストを、 `Xray 1`というテキストに置換する例を次に示します。  
@@ -61,7 +62,7 @@ ms.locfileid: "68041235"
  [!code-sql[FILESTREAM#FS_UpdateData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_4.sql)]  
   
   
-##  <a name="del"></a> FILESTREAM データの削除  
+##  <a name="deleting-filestream-data"></a><a name="del"></a> FILESTREAM データの削除  
  FILESTREAM フィールドを含む行を削除すると、その基となるファイル システム ファイルも削除されます。 行、したがってファイルを削除する唯一の方法は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] DELETE ステートメントを使用する方法です。  
   
  行およびそれに関連付けられているファイル システム ファイルを削除する方法を次の例に示します。  

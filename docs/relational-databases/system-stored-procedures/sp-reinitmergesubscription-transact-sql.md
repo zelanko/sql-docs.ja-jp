@@ -1,5 +1,5 @@
 ---
-title: sp_reinitmergesubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_reinitmergesubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitmergesubscription
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 27c10f9d5fa04ae449bdcca84891f0f28376eeb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fbdcd6435b9fab8e65c39b97a6aaa1ac69a1e9dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075699"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901407"
 ---
-# <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  マージ エージェントの次回実行時に再初期化するように、マージ サブスクリプションにマークを付けます。 このストアド プロシージャは、パブリッシャー側のパブリケーション データベースで実行されます。  
+  マージ エージェントの次回実行時に再初期化するように、マージ サブスクリプションにマークを付けます。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,21 +40,21 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**すべて**します。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値は**all**です。  
   
-`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は**すべて**します。  
+`[ @subscriber = ] 'subscriber'`サブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**,、既定値は**all**です。  
   
-`[ @subscriber_db = ] 'subscriber_db'` サブスクライバー データベースの名前です。 *@subscriber_db*は**sysname**、既定値は**すべて**します。  
+`[ @subscriber_db = ] 'subscriber_db'`サブスクライバーデータベースの名前を指定します。 *subscriber_db*は**sysname**で、既定値は**all**です。  
   
-`[ @upload_first = ] 'upload_first'` サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうか。 *@upload_first*は**nvarchar (5)** 、既定値は FALSE。 場合**true**変更をアップロードして、サブスクリプションを再初期化します。 場合**false**変更はアップロードされません。  
+`[ @upload_first = ] 'upload_first'`サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうかを指定します。 *upload_first*は**nvarchar (5)**,、既定値は FALSE です。 **True**の場合、サブスクリプションが再初期化される前に変更がアップロードされます。 **False**の場合、変更はアップロードされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_reinitmergesubscription**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_reinitmergesubscription**は、マージレプリケーションで使用します。  
   
- **sp_reinitmergesubscription**マージ サブスクリプションを再初期化し、パブリッシャーから呼び出すことができます。 スナップショット エージェントを再実行することをお勧めします。  
+ **sp_reinitmergesubscription**は、マージサブスクリプションを再初期化するためにパブリッシャーから呼び出すことができます。 スナップショットエージェントも再実行することをお勧めします。  
   
  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
   
@@ -65,7 +65,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_reinitmergesubscription**します。  
+ **Sp_reinitmergesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   

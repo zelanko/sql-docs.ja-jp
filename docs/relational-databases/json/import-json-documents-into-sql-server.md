@@ -1,27 +1,27 @@
 ---
-title: JSON ドキュメントの SQL Server へのインポート | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2019
+title: JSON ドキュメントのインポート
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b04e7ffb9a1f1a00035b04994869c55d8173ad2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed2924ae8b839bd414f036b389bf1298d51ed452
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909295"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755777"
 ---
 # <a name="import-json-documents-into-sql-server"></a>JSON ドキュメントの SQL Server へのインポート
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-このトピックでは、SQL Server に JSON ファイルをインポートする方法について説明します。 現在、多数の JSON ドキュメントがファイルに保存されています。 たとえば、アプリケーションは JSON ファイルに情報を記録し、センサーは JSON ファイルに保存される情報を生成します。 ファイルに保存されている JSON データ読み取り、そのデータを SQL Server に読み込んで分析できることが重要です。
+この記事では、SQL Server に JSON ファイルをインポートする方法について説明します。 現在、多数の JSON ドキュメントがファイルに保存されています。 たとえば、アプリケーションは JSON ファイルに情報を記録し、センサーは JSON ファイルに保存される情報を生成します。 ファイルに保存されている JSON データ読み取り、そのデータを SQL Server に読み込んで分析できることが重要です。
 
 ## <a name="import-a-json-document-into-a-single-column"></a>JSON ドキュメントを 1 つの列にインポートする
 
@@ -51,23 +51,6 @@ SELECT BulkColumn
 
 JSON ファイルの内容を読み込んだ後、JSON テキストをテーブルに保存できます。
 
-## <a name="import-multiple-json-documents"></a>複数の JSON ドキュメントをインポートする
-
-同じ方法を使用して、ファイル システムから複数の JSON ファイルを一度に 1 つずつローカル変数に読み込むことができます。 ファイルは `book<index>.json` という名前です。
-  
-```sql
-DECLARE @i INT = 1
-DECLARE @json AS NVARCHAR(MAX)
-
-WHILE(@i < 10)
-BEGIN
-    SET @file = 'C:\JSON\Books\book' + cast(@i AS VARCHAR(5)) + '.json';
-    SELECT @json = BulkColumn FROM OPENROWSET (BULK (@file), SINGLE_CLOB) AS j
-    SELECT * FROM OPENJSON(@json) AS json
-    -- Optionally, save the JSON text in a table.
-    SET @i = @i + 1 ;
-END
-```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Azure File Storage から JSON ドキュメントをインポートする
 
@@ -127,7 +110,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>JSON ドキュメントを行と列に解析する
 
-JSON ファイルを 1 つの値として読み取るのではなく、分析して、ファイル内の書籍とそのプロパティを行と列で返すこともできます。 次の例では、書籍の一覧を格納している[こちらのサイト](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)の JSON ファイルを使います。
+JSON ファイルを 1 つの値として読み取るのではなく、解析して、ファイル内の書籍とそのプロパティを行と列で返すこともできます。 次の例では、書籍の一覧を格納している[こちらのサイト](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)の JSON ファイルを使います。
 
 ### <a name="example-1"></a>例 1
 
@@ -139,9 +122,7 @@ SELECT value
  CROSS APPLY OPENJSON(BulkColumn)
 ```
 
-### <a name="example-2"></a>例 2
-
-OPENROWSET は 1 つのテキスト値をファイルから読み取り、BulkColumn として返し、OPENJSON 関数に渡します。 OPENJSON は BulkColumn 配列内の JSON オブジェクトの配列を反復処理し、各行で JSON 形式の 1 冊の書籍を返します。
+上記の OPENROWSET では、ファイルから 1 つのテキスト値が読み取られます。 OPENROWSET では値が BulkColumn として返され、OPENJSON 関数に BulkColumn が渡されます。 OPENJSON では、BulkColumn 配列内の JSON オブジェクトの配列が反復処理されて、各行で 1 冊の書籍が返されます。 次に示すように、各行は JSON として書式設定されます。
 
 ```json
 {"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", ... }
@@ -150,7 +131,7 @@ OPENROWSET は 1 つのテキスト値をファイルから読み取り、BulkCo
 {"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", ... }
 ```
 
-### <a name="example-3"></a>例 3
+### <a name="example-2"></a>例 2
 
 OPENJSON 関数は JSON の内容を解析し、テーブルまたは結果セットに変換することができます。 次の例は内容を読み込み、読み込まれた JSON を解析し、5 つのフィールドを列として返します。
 
@@ -164,11 +145,11 @@ SELECT book.*
 
 この例では、OPENROWSET(BULK) はファイルの内容を読み取り、出力用に定義されたスキーマでその内容を OPENJSON 関数に渡します。 OPENJSON は、列名を使用して、JSON オブジェクト内のプロパティを対応付けます。 たとえば、`price` プロパティは `price` 列として返され、float データ型に変換されます。 結果は次のようになります。
 
-|Id|[オブジェクト名]|price|pages_i|Author|
+|Id|Name|price|pages_i|Author|
 |---|---|---|---|---|
 |978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 |978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
-|978-1857995879|Sophie's World :The Greek Philosophers|3.07|64|Jostein Gaarder| 
+|978-1857995879|Sophie's World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
 |978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
 ||||||
 

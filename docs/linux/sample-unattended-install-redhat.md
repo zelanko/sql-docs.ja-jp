@@ -1,30 +1,31 @@
 ---
-title: Red Hat Enterprise Linux への SQL Server の無人インストール
+title: RHEL に SQL Server を無人インストールする
 titleSuffix: SQL Server
-description: SQL Server スクリプト サンプル - Red Hat Enterprise Linux への無人インストール
+description: SQL Server スクリプト サンプル - Red Hat Enterprise Linux への無人インストール (RHEL)
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 696ba88a9f2d5f29de8dc3afb45af8c392f2de68
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: a5681a7700e77d0cc5fd4afb7267a21f298c1f87
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67910445"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894130"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>サンプル:Red Hat Enterprise Linux 用の無人 SQL Server インストール スクリプト
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このサンプル Bash スクリプトでは、対話式の入力なしで Red Hat Enterprise Linux (RHEL) に SQL Server 2017 をインストールします。 データベース エンジン、SQL Server コマンドライン ツール、SQL Server エージェントのインストール例を示し、インストール後の手順を行います。 必要に応じてフルテキスト検索をインストールして管理ユーザーを作成することができます。
 
 > [!TIP]
 > 無人インストール スクリプトが不要な場合は、SQL Server をインストールする最も簡単な方法は [Red Hat のクイックスタート](quickstart-install-connect-red-hat.md)に従うことです。 その他の設定情報については、[SQL Server on Linux のインストール ガイダンス](sql-server-linux-setup.md)を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - SQL Server on Linux を実行するには、少なくとも 2 GB のメモリが必要です。
 - ファイル システムは **XFS** または **EXT4** である必要があります。 **BTRFS** などの他のファイル システムはサポートされていません。
@@ -201,7 +202,7 @@ Bash スクリプトで最初に実行されることは、いくつかの変数
 
 1. ```SQL_INSTALL_USER``` と ```SQL_INSTALL_USER_PASSWORD``` の両方が設定されている場合は、新しいサーバー管理者ユーザーを作成します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 複数の無人インストールを簡略化し、適切な環境変数を設定するスタンドアロンの Bash スクリプトを作成します。  サンプル スクリプトが使用している変数を削除して、それらを独自の Bash スクリプトに含めることができます。
 

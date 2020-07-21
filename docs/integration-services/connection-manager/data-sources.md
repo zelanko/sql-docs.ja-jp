@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 89b6660f5a989cec23b5a92c09dabb36f891e1c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 29c4fe9779b30066a188b9270e920ffd6339421b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968117"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298613"
 ---
 # <a name="data-sources"></a>ソリューション エクスプローラー
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで使用できるデザイン時のオブジェクト (データ ソース) が含まれています。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで使用できるデザイン時のオブジェクト (データ ソース) が用意されています。  
   
  データ ソース オブジェクトは接続への参照であり、少なくとも接続文字列とデータ ソース識別子が含まれています。 また、説明、名前、ユーザー名、パスワードなどの追加メタデータを含むこともできます。  
   

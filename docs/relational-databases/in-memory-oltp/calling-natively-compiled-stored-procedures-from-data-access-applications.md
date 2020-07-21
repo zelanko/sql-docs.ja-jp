@@ -1,6 +1,7 @@
 ---
-title: データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し | Microsoft Docs
-ms.custom: ''
+title: ネイティブ コンパイル ストアド プロシージャ - データ アクセス アプリケーション
+description: SQL Server Native Client の ODBC ドライバーを使用する例を使用して、データ アクセス アプリケーションからネイティブ コンパイル ストアド プロシージャを呼び出す方法について説明します。
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,16 +12,16 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c05ef1b9807e6786e73c2e772703463adf6818c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05dcd994a1cf2387bfe7e1a1be46e7a95d24249d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723372"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 このトピックでは、データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出しに関するガイダンスを示します。
 
@@ -39,7 +40,7 @@ ms.locfileid: "67951084"
 - SqlClient では、ネイティブ コンパイル ストアド プロシージャ (CommandType.SchemaOnly) から返された結果セットに関するスキーマのみの情報 (メタデータ検出) の取得はサポートされません。
   - 代わりに、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) を使用します。
 
-### <a name="includessnoversionincludesssnoversion-mdmd-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
+### <a name="ssnoversion-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、ネイティブ コンパイル ストアド プロシージャから返された結果セットに関するスキーマのみの情報 (メタデータ検出) の取得はサポートされません。
   - 代わりに、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) を使用します。

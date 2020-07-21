@@ -11,10 +11,10 @@ ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e8259591c54068cde134c98ae405dd77fac6fab4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571366"
 ---
 # <a name="server-properties-execution-page"></a>[サーバーのプロパティ] [実行] ページ)
@@ -33,7 +33,7 @@ ms.locfileid: "65571366"
  [レポート サーバーのプロパティを設定する (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
- [レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)   
+ [レポートおよび共有データセット処理のタイムアウト値の設定 &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)   
  [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   

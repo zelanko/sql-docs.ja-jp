@@ -24,18 +24,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3115fa833f657236939200b262c862182d9117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90224fd31bcb4592055ca22890dd63996eadba34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629272"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   フルテキスト インデックスの作成と保持では、 *作成* (または *クロール*) と呼ばれるプロセスを使用してインデックスが作成されます。  
   
-##  <a name="types"></a> Types of population  
+##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 フルテキスト インデックスは次の種類の作成に対応しています。
 -   **すべて**のカタログの作成
 -   **変更の追跡**に基づく自動または手動作成
@@ -171,7 +171,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  増分作成を実行するには、`START INCREMENTAL POPULATION` 句を利用して `ALTER FULLTEXT INDEX` ステートメントを実行します。  
   
-###  <a name="create"></a> 増分作成のスケジュールを作成または変更する   
+###  <a name="create-or-change-a-schedule-for-incremental-population"></a><a name="create"></a> 増分作成のスケジュールを作成または変更する   
   
 1.  Management Studio で、オブジェクト エクスプローラーでサーバーを展開します。  
   
@@ -188,7 +188,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
      このページでは、フルテキスト インデックスのベース テーブルまたはインデックス付きビューの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。  
 
-     次のオプションがあります。  
+     次のようなオプションがあります。  
   
     -   新しいスケジュールを**作成**するには、 **[新規作成]** をクリックします。  
   
@@ -208,9 +208,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="crawl"></a> フルテキスト作成 (クロール) で発生したエラーのトラブルシューティング  
+##  <a name="troubleshoot-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a> フルテキスト作成 (クロール) で発生したエラーのトラブルシューティング  
 クロール時にエラーが発生すると、フルテキスト検索クロール ログ記録機能によってクロール ログが作成および保持されます。このログはプレーンテキスト ファイルです。 各クロール ログは特定のフルテキスト カタログに対応します。 既定では、所与のインスタンス (この例では、既定のインスタンス) のクロール ログは `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` フォルダーにあります。
  
 クロール ログは次のような規則に従って命名されます。  

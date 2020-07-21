@@ -10,15 +10,14 @@ helpviewer_keywords:
 - SUBSTRING function
 - part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2b749a88a0783e6981cf9fd643412f0ca614e6a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f69a2fcfaca55b77d828ece6cd5309c2ebc08f2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768735"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428079"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (SSIS 式)
   指定された位置で始まり、かつ指定された長さを持つ文字式の一部を返します。 *position* パラメーターと *length* パラメーターは整数に評価される必要があります。  
@@ -43,7 +42,7 @@ SUBSTRING(character_expression, position, length)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  SUBSTRING は 1 から始まるインデックスを使用します。 *position* が 1 の場合、部分文字列は *character_expression*の最初の文字から始まります。  
   
  SUBSTRING は DT_WSTR データ型でのみ機能します。 *character_expression* 引数が DT_STR データ型の文字列リテラルまたはデータ列である場合は、SUBSTRING による演算の実行前に、暗黙的に DT_WSTR データ型にキャストされます。 その他のデータ型は、明示的に DT_WSTR データ型にキャストされる必要があります。 詳しくは、「[Integration Services のデータ型](../data-flow/integration-services-data-types.md)」および「[Cast &#40;SSIS 式&#41;](cast-ssis-expression.md)」をご覧ください。  

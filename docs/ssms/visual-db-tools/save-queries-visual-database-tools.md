@@ -1,10 +1,9 @@
 ---
-title: クエリの保存 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: クエリの保存
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a5f3370f0dfa6fcd6a258a74f061cde800a2507
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d25aeb06239ac1f9a0087516771d13e797330adb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266885"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255097"
 ---
 # <a name="save-queries-visual-database-tools"></a>クエリの保存 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,10 +37,10 @@ ms.locfileid: "68266885"
 3.  クエリは、ソリューション エクスプローラーのプロジェクトの Queries フォルダーに保存されます。  
   
 ## <a name="see-also"></a>参照  
-[クエリの作成 (Visual Database Tools)](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[クエリの実行 (Visual Database Tools)](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[クエリに対する変更の破棄 (Visual Database Tools)](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
-[クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[クエリの種類 (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
-[クエリに関する基本操作の実行 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[クエリの作成](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[クエリの実行](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[クエリに対する変更の破棄](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
+[クエリおよびビューのデザインの操作方法に関するトピック](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[クエリの種類](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[クエリに関する基本操作の実行](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'コマンド ライン管理ツール: SqlLocalDB.exe |Microsoft Docs'
+title: 'コマンドライン管理ツール: SqlLocalDB.exe |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ api_location:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 58ea983555fdcb4bb177813db88d40f4bcc59c0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 147afb38ae7d4ca81d07784aff4efeb28a0859a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128782"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051000"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>コマンド ライン管理ツール: SqlLocalDB.exe
   SqlLocalDB.exe は、コマンド ラインから LocalDB インスタンスを簡単に管理できるシンプルなツールです。 LocalDB インスタンスの API の単純なラッパーとして実装されています。 SQLCMD などの多くの SQL Server ツールの場合と同様、パラメーターはコマンド ライン引数として SqlLocalDB に渡され、出力はコンソールに送られます。  
@@ -42,7 +41,7 @@ ms.locfileid: "63128782"
 |||  
 |`trace&#124;t on&#124;off`|トレースのオンとオフを切り替えます。|  
   
- SqlLocalDB では、スペースを区切り文字として扱います。スペースと特殊文字が含まれるインスタンス名は、引用符で囲む必要があります。 以下に例を示します。  
+ SqlLocalDB では、スペースを区切り文字として扱います。スペースと特殊文字が含まれるインスタンス名は、引用符で囲む必要があります。 次に例を示します。  
   
  `SqlLocalDB create "My instance name with spaces"`  
   

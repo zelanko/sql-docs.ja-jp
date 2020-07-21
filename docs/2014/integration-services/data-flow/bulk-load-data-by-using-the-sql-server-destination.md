@@ -13,15 +13,14 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 202582f45fbf3230a07328b6b108ec31c76ef7c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828134"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432409"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>SQL Server 変換先を使用してデータの一括読み込みを行う
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つのデータ ソースがあらかじめ含まれている必要があります。  
@@ -54,7 +53,7 @@ ms.locfileid: "62828134"
     > [!NOTE]  
     >  この変換先では、同じ名前の列は自動的にマップされます。  
   
-9. **[詳細設定]** をクリックし、一括読み込みオプションの **[ID を保持する]** 、 **[NULL を保持する]** 、 **[テーブル ロック]** 、 **[CHECK 制約]** 、 **[トリガーを起動する]** を設定します。  
+9. **[詳細設定]** をクリックし、一括読み込みオプションの **[ID を保持する]** 、 **[NULL を保持する]** 、 **[テーブル ロック]** 、 **[CHECK 制約]** 、および **[トリガーを起動する]** を設定します。  
   
      必要に応じて、挿入する最初の入力行と最後の入力行、挿入操作が停止するまでに発生できるエラーの最大数、および挿入を並べ替える列を指定します。  
   
@@ -69,6 +68,6 @@ ms.locfileid: "62828134"
  [SQL Server Destination](sql-server-destination.md)   
  [Integration Services の変換](transformations/integration-services-transformations.md)   
  [Integration Services のパス](integration-services-paths.md)   
- [[データ フロー タスク]](../control-flow/data-flow-task.md)  
+ [データ フロー タスク](../control-flow/data-flow-task.md)  
   
   

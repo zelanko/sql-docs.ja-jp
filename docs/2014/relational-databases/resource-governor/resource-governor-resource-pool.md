@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209876"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063566"
 ---
 # <a name="resource-governor-resource-pool"></a>リソース ガバナー リソース プール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーのリソース プールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスの物理リソースのサブセットを表します。 リソース ガバナーを使用すると、受信するアプリケーション要求がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 各リソース プールは、1 つまたは複数のワークロード グループを含めることができます。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたリソースを使用する必要があります。  
@@ -63,10 +62,10 @@ ms.locfileid: "63209876"
   
 -   共有 % = 有効な最大 % - 最小 %。  
   
-|プール名|最小 % の設定|最大 % の設定|有効な最大 % の計算値|共有 % の計算値|解説|  
+|プール名|最小 % の設定|最大 % の設定|有効な最大 % の計算値|共有 % の計算値|コメント|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|内部|0|100|100|0|内部プールには有効な最大 % と共有 % が適用されません。|  
-|既定値 (default)|0|100|30|30|有効な最大値の計算式は、min(100,100-(20+50)) = 30 です。 共有 % の計算式は、有効な最大値 - 最小値 = 30 です。|  
+|internal|0|100|100|0|内部プールには有効な最大 % と共有 % が適用されません。|  
+|default|0|100|30|30|有効な最大値の計算式は、min(100,100-(20+50)) = 30 です。 共有 % の計算式は、有効な最大値 - 最小値 = 30 です。|  
 |プール 1|20|100|50|30|有効な最大値の計算式は、min(100,100-50) = 50 です。 共有 % の計算式は、有効な最大値 - 最小値 = 30 です。|  
 |プール 2|50|70|70|20|有効な最大値の計算式は、min(70,100-20) = 70 です。 共有 % の計算式は、有効な最大値 - 最小値 = 20 です。|  
   
@@ -116,10 +115,10 @@ ms.locfileid: "63209876"
 |リソース プールの設定を変更する方法について説明します。|[リソース プールの設定の変更](change-resource-pool-settings.md)|  
 |リソース プールを削除する方法について説明します。|[リソース プールの削除](delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リソース ガバナー](resource-governor.md)   
  [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   
- [リソース ガバナーの分類子関数](resource-governor-classifier-function.md)   
+ [Resource Governor 分類子関数](resource-governor-classifier-function.md)   
  [テンプレートを使用してリソース ガバナーを構成する](configure-resource-governor-using-a-template.md)   
  [リソース ガバナー プロパティの表示](view-resource-governor-properties.md)  
   

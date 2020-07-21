@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96b2611bdbc7c13072f43b36d5e132b9713b3878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141186"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380845"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   あるサービスから別のサービスに対してダイアログを開始します。 ダイアログとは、2 つのサービスの間で順序どおりにメッセージを 1 回だけ交換する (exactly-once-in-order) メッセージ交換のことです。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68141186"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
@@ -61,7 +61,9 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  **@** _dialog_handle_  
  システムで生成される、新しいダイアログ用のダイアログ ハンドルを格納する変数です。この値は、BEGIN DIALOG CONVERSATION ステートメントによって返されます。 この変数は、**uniqueidentifier** 型である必要があります。  
   
@@ -106,7 +108,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにあるサービス間で交換されるメッセージは暗号化されません。 ただし、メッセージ交換を行うサービスが異なるデータベースにある場合は、暗号化したメッセージ交換を行うために、データベースのマスター キーと暗号化の証明書が必要になります。 これらを用意しておくと、メッセージ交換中にデータベースの 1 つが別のインスタンスに移動した場合でも、メッセージ交換を続行できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  すべてのメッセージはメッセージ交換の一部になります。 したがって、発信先サービスにメッセージを送信するには、発信側サービスで、発信先サービスとのメッセージ交換を開始する必要があります。 BEGIN DIALOG CONVERSATION ステートメントで指定する情報は、手紙の住所に似ています。[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではこの情報を使用して、正しいサービスにメッセージを配信します。 TO SERVICE 句で指定するサービスは、メッセージの送信先アドレスです。 FROM SERVICE 句で指定するサービスは、メッセージの返信先アドレスです。  
   
  メッセージ交換の発信先で BEGIN DIALOG CONVERSATION を呼び出す必要はありません。 発信側からメッセージ交換の最初のメッセージが届くと、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって発信先データベースにメッセージ交換が作成されます。  
@@ -124,7 +126,7 @@ WHERE database_id = DB_ID() ;
 ## <a name="permissions"></a>アクセス許可  
  ダイアログを開始するには、現在のユーザーに、コマンドの FROM 句で指定したサービス用のキューに対する RECEIVE 権限と、指定したコントラクトの REFERENCES 権限が与えられている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-beginning-a-dialog"></a>A. ダイアログを開始する  
  次の例では、ダイアログ メッセージ交換を開始し、`@dialog_handle.` にダイアログの識別子を格納します。`//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。  

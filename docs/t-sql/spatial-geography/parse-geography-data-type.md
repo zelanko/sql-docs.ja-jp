@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 209186cf3756c0bfb9b572a33ba470a83e0cd493
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75e5083f3009a09e7b0ba347ab2a9982c852593f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705855"
 ---
 # <a name="parse-geography-data-type"></a>Parse (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geography** インスタンスを返します。 Parse() は、SRID (spatial reference ID) 4326 をパラメーターとして想定する点を除いて、[STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md) と同じです。 入力には、オプションとして Z (標高) 値と M (メジャー) 値が含まれる場合があります。
   
@@ -43,16 +43,16 @@ Parse ( 'geography_tagged_text' )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `Parse()` によって返された **geography** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  
   
  "NULL" 文字列は、**geography** の NULL インスタンスと解釈されます。  
   
  このメソッドは、入力に対蹠点が含まれている場合、**ArgumentException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Parse()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

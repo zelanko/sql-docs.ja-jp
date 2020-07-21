@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762090"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960292"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell パスの移動
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell プロバイダーは、ファイル パスと同様の構造で、SQL Server のインスタンス内のオブジェクトのセットを公開します。 Windows PowerShell コマンドレットを使用することで、プロバイダー パスを移動し、カスタム ドライブを作成して、入力するパスを短くすることができます。  
@@ -29,7 +28,7 @@ ms.locfileid: "62762090"
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|現在のノードを取得します。|  
 |`Set-Location`|**sl**|**cd、chdir**|**cd、chdir**|現在のノードを変更します。|  
-|**Get-ChildItem**|**gci**|**dir**|**ls**|現在のノードに格納されているオブジェクトの一覧を表示します。|  
+|**Get-ChildItem**|**gci**|**dir**|**avl**|現在のノードに格納されているオブジェクトの一覧を表示します。|  
 |**Get-Item**|**gi**|||現在のアイテムのプロパティを返します。|  
 |**Rename-Item**|**rni**|**rn**|**ren**|オブジェクトの名前を変更します。|  
 |**Remove-Item**|**ri**|**del、rd**|**rm、rmdir**|オブジェクトを削除します。|  
@@ -43,8 +42,8 @@ ms.locfileid: "62762090"
 |パスの場所|Get-ChildItem の結果|  
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|ローカル コンピューターの名前を返します。 SMO または WMI を使用して他のコンピューター上の [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスに接続している場合は、それらのコンピューターも一覧表示されます。|  
-|SQLSERVER:\SQL\\*ComputerName*|コンピューター上の [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスの一覧。|  
-|SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*|インスタンス内の最上位レベルのオブジェクトの種類の一覧 (Endpoints、Certificates、Databases など)。|  
+|SQLSERVER: \ SQL \\ *ComputerName*|コンピューター上の [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスの一覧。|  
+|SQLSERVER: \ SQL \\ *ComputerName* \\ *InstanceName*|インスタンス内の最上位レベルのオブジェクトの種類の一覧 (Endpoints、Certificates、Databases など)。|  
 |オブジェクト クラスのノード (Databases など)|その種類のオブジェクトの一覧 (データベースの場合は master、model、AdventureWorks2008R2 など)。|  
 |オブジェクト名のノード (AdventureWorks2012 など)|オブジェクト内に格納されているオブジェクトの種類の一覧。 たとえば、データベースの場合はテーブルやビューなどのオブジェクトの種類が一覧表示されます。|  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62762090"
 ### <a name="alias-example-powershell"></a>別名の例 (PowerShell)  
  たとえば、次に示す一連のコマンドレットまたは別名のいずれかを使用して、SQLSERVER:\SQL フォルダーに移動しフォルダーの子アイテムの一覧を要求することによって、使用できる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの一覧を取得することができます。  
   
-```  
+```powershell
 ## Shows using the full cmdet name.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
@@ -80,7 +79,8 @@ ls
 ```  
   
 ## <a name="use-get-childitem"></a>Get-ChildItem の使用  
- **Get-childitem を使用した情報の取得**  
+
+### <a name="return-information-by-using-get-childitem"></a>Get-childitem を使用した情報の取得
   
 1.  子の一覧を取得する対象のノードに移動します。  
   
@@ -89,14 +89,13 @@ ls
 ### <a name="get-childitem-example-powershell"></a>Get-ChildItem の例 (PowerShell)  
  これらの例は、SQL Server プロバイダー パス内の異なるノードについて、Get-Childitem で返される情報を示しています。  
   
-```  
+```powershell
 ## Return the current computer and any computer  
 ## to which you have made a SQL or WMI connection.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
   
 ## List the instances of the Database Engine on the local computer.  
-  
 Set-Location SQLSERVER:\SQL\localhost  
 Get-ChildItem  
   
@@ -112,7 +111,8 @@ Get-ChildItem -force
 ```  
   
 ## <a name="create-a-custom-drive"></a>カスタム ドライブの作成  
- **カスタム ドライブの作成と使用**  
+
+### <a name="create-and-use-a-custom-drive"></a>カスタム ドライブの作成と使用
   
 1.  `New-PSDrive` を使用して、カスタム ドライブを定義します。 `Root` パラメーターを使用して、カスタム ドライブ名で表されるパスを指定します。  
   
@@ -121,7 +121,7 @@ Get-ChildItem -force
 ### <a name="custom-drive-example-powershell"></a>カスタム ドライブの例 (PowerShell)  
  この例では、配置された AdventureWorks2012 サンプル データベースのコピーのノードにマップする AWDB という名前の仮想ドライブを作成します。 仮想ドライブを使用して、データベース内のテーブルに移動します。  
   
-```  
+```powershell
 ## Create a new virtual drive.  
 New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
   
@@ -131,8 +131,6 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
   
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
- [SQL Server PowerShell パスの操作](work-with-sql-server-powershell-paths.md)   
- [URN から SQL Server プロバイダー パスへの変換](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [SQL Server PowerShell パスを操作する](work-with-sql-server-powershell-paths.md)   
+ [Urn を SQL Server プロバイダーのパスに変換する](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

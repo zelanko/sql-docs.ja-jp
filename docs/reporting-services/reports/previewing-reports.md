@@ -1,5 +1,6 @@
 ---
 title: レポートのプレビュー
+description: 運用環境にパブリッシュする前に SQL Server Reporting Services でレポートをプレビューする方法について説明します。
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 82559832d11d9461665e89963026a267d9f0554c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: fe2d8ff228978270867780e14053c950690f1f22
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267490"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510133"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) でレポートをプレビューする
 
@@ -48,7 +49,7 @@ ms.locfileid: "68267490"
 
  レポートのテストは、テスト サーバーにレポートをパブリッシュしてレポートを参照し、プレビューすることで行うこともできます。 テスト サーバーにレポートをパブリッシュする操作は、実稼働サーバーにレポートをパブリッシュする場合と同じです。 レポートのパブリッシュ方法の詳細については、「 [レポート サーバーへのレポートのパブリッシュ](../../reporting-services/reports/publishing-reports-to-a-report-server.md)」を参照してください。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
  - [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
  - [レポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)

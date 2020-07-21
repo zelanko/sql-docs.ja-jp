@@ -1,6 +1,6 @@
 ---
-title: SSMS XEvent Profiler の使用 | Microsoft Docs
-ms.custom: ''
+title: SSMS XEvent Profiler の使用
+description: XEvent Profiler によって、拡張イベントのライブ ビューアーを表示します。 このプロファイラーを使用する理由、主な機能、拡張イベントの表示を開始する方法について学習します。
 ms.date: 10/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,26 +15,26 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 512a32fbbc57b960369b052615973b999f378a90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9cd63ae6c84ce09b70246aae91c16446017f6cfc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756828"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>SSMS XEvent Profiler の使用
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 XEvent Profiler は、拡張イベントのライブ ビューアー ウィンドウを表示する SQL Server Management Studio (SSMS) 機能です。 この概要では、このプロファイラーを使用する理由、主な機能、拡張イベントを初めて表示する場合の手順について説明します。
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>XEvent Profiler を使用する理由
 SQL Profiler とは異なり、XEvent Profiler は SSMS に直接統合され、SQL エンジンのスケーラブルな拡張イベント テクノロジ上に構築されています。 この機能を使用すると、SQL Server の診断イベントのライブ ストリーミング ビューにすばやくアクセスできます。 このビューはカスタマイズできます。また、.viewsettings ファイルとして他の SSMS ユーザーと共有することができます。 XE プロファイラーで作成されたセッションは、SQL Profiler を使用した場合の同様の SQL トレースよりも、実行中の SQL Server に対する影響が少なくなります。 このセッションはユーザーがカスタマイズできますが、既存の XE セッションのプロパティの UI または TSQL を使用してカスタマイズすることもできます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 この機能は、SQL Server Management Studio (SSMS) v17.3 以降でのみ使用できます。 最新バージョンを使用していることを確認してください。 最新バージョンは[こちら](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)で入手できます。
 
-## <a id="getting-started"></a>はじめに
+## <a name="getting-started"></a><a id="getting-started"></a>はじめに
 XEvent Profiler にアクセスするには、次の手順を実行します。
 
 1. **SQL Server Management Studio** を開きます。
@@ -50,8 +50,6 @@ XEvent Profiler にアクセスするには、次の手順を実行します。
    ![XEProfiler セッション](media/xevents-xe-profiler-start-session.png)
 
 5. これで拡張イベントが表示されるようになります。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ![XEProfiler ビューアー](media/xevents-xe-profiler-start-viewer.png)
 

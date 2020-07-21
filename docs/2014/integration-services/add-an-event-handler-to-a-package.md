@@ -1,5 +1,5 @@
 ---
-title: イベント ハンドラーをパッケージに追加します |。Microsoft Docs
+title: パッケージにイベントハンドラーを追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 378b8c95f5b7f4ed1e247a89f3e3ad6111654303
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062026"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439709"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>パッケージにイベント ハンドラーを追加する
   コンテナーとタスクは実行時にイベントを発生させます。 こうしたイベントが発生したときにワークフローを実行して、イベントに応答するカスタム イベント ハンドラーを作成できます。 たとえば、タスクが失敗したときに電子メール メッセージを送信するイベント ハンドラーを作成できます。  
@@ -26,7 +25,7 @@ ms.locfileid: "66062026"
   
  イベント ハンドラーを作成するには、 **デザイナーにある** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブのデザイン画面を使用します。  
   
- **[イベント ハンドラー]** タブがアクティブな場合、 **デザイナーにあるツールボックスの** [制御フロー項目] **および** [メンテナンス プランのタスク] [!INCLUDE[ssIS](../includes/ssis-md.md)] ノードには、イベント ハンドラーで制御フローを作成するためのタスクとコンテナーが含まれます。 **[データ フローの変換元]** 、 **[変換]** 、および **[データ フローの変換先]** ノードには、イベント ハンドラーでデータ フローを作成するためのデータ ソース、変換、および変換先が含まれます。 詳細については、「 [制御フロー](control-flow/control-flow.md) 」と「 [データ フロー](data-flow/data-flow.md)」を参照してください。  
+ **[イベント ハンドラー]** タブがアクティブな場合、 **デザイナーにあるツールボックスの** [制御フロー項目] **および** [メンテナンス プランのタスク] [!INCLUDE[ssIS](../includes/ssis-md.md)] ノードには、イベント ハンドラーで制御フローを作成するためのタスクとコンテナーが含まれます。 **[データ フローの変換元]**、 **[変換]**、および **[データ フローの変換先]** ノードには、イベント ハンドラーでデータ フローを作成するためのデータ ソース、変換、および変換先が含まれます。 詳細については、「 [制御フロー](control-flow/control-flow.md) 」と「 [データ フロー](data-flow/data-flow.md)」を参照してください。  
   
  **[イベント ハンドラー]** タブには、 **[接続マネージャー]** 領域も含まれ、イベント ハンドラーがサーバーおよびデータ ソースに接続するために使用する、接続マネージャーの作成および変更を行うことができます。 詳細については、「 [接続マネージャーを作成する](../../2014/integration-services/create-connection-managers.md)」を参照してください。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66062026"
   
 3.  **[イベント ハンドラー]** タブをクリックします。  
   
-     ![イベント ハンドラーが表示されたデザイン画面のスクリーンショット](media/eventhandlers.gif "イベント ハンドラーが表示されたデザイン画面のスクリーンショット")  
+     ![イベント ハンドラーのデザイン画面のスクリーン ショット](media/eventhandlers.gif "イベント ハンドラーのデザイン画面のスクリーン ショット")  
   
      イベント ハンドラー内で制御フローとデータ フローを作成する手順は、パッケージ内で制御フローとデータ フローを作成する手順と同様です。 詳細については、「 [制御フロー](control-flow/control-flow.md) 」と「 [データ フロー](data-flow/data-flow.md)」を参照してください。  
   

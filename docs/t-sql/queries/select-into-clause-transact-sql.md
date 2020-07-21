@@ -29,15 +29,15 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac9ba9a291b88b8fc1091ff72e3a7af782b1e618
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c4e7add7cdc8d4dd804c91730db3bb7c121b9df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948410"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007591"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SELECT...INTO は、既定のファイル グループに新しいテーブルを作成し、クエリの結果得られた行をそのテーブルに挿入します。 SELECT の完全な構文を確認するには、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
@@ -63,7 +63,7 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
  *filegroup*    
  新しいテーブルを作成するファイル グループの名前を指定します。 指定されたファイル グループがデータベースに存在する必要があります。存在しない場合は、SQL Server エンジンからエラーがスローされます。   
  
- **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+ **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。
   
 ## <a name="data-types"></a>データ型  
  FILESTREAM 属性は新しいテーブルに転送されません。 FILESTREAM BLOB がコピーされ、**varbinary(max)** BLOB として新しいテーブルに格納されます。 FILESTREAM 属性がない場合、**varbinary(max)** データ型は 2 GB までに制限されます。 FILESTREAM BLOB がこの値を超えると、エラー 7119 が発生して、ステートメントが中止されます。  
@@ -82,7 +82,7 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
   
 これらの条件が 1 つでも満たされている場合は、列に IDENTITY プロパティは継承されず、代わりに NOT NULL として作成されます。 新しいテーブルに ID 列が必要であるものの使用できる列がない場合や、ソースの ID 列とは異なるシード値や増分値が必要な場合は、選択リストで IDENTITY 関数を使用してその列を定義します。 以下の「例」の「IDENTITY 関数を使用して ID 列を作成する」を参照してください。  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `SELECT...INTO` ステートメントによる操作は 2 つの部分からなります。新しいテーブルが作成され、それから行が挿入されます。  つまり、挿入できない場合、すべてロールバックされますが、新しい (空の) テーブルは残ります。  操作が全体として成功または失敗した場合、[明示的なトランザクション](../language-elements/begin-transaction-transact-sql.md)を使用します。
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
@@ -99,12 +99,14 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
  リストに計算列が指定されている場合、新しいテーブル内の対応する列は計算列にはなりません。 新しい列の値は、`SELECT...INTO` が実行された時点の計算値になります。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
- `SELECT...INTO` のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 最小ログ記録を使用する場合は、テーブルを作成してから INSERT ステートメントでそのテーブルにデータを設定するより、`SELECT...INTO` ステートメントを使用する方が効率的である可能性があります。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
+ `SELECT...INTO` のログ記録量は、データベースに対して有効な復旧モデルによって異なります。 単純復旧モデルまたは一括ログ復旧モデルでは、一括操作は最小限しかログに記録されません。 最小ログ記録を使用する場合は、テーブルを作成してから INSERT ステートメントでそのテーブルにデータを設定するより、`SELECT...INTO` ステートメントを使用する方が効率的である可能性があります。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。
+ 
+`SELECT...INTO` ユーザー定義関数 (UDF) を含むステートメントは、完全なログが記録される操作です。 `SELECT...INTO` ステートメントで使用されているユーザー定義関数でデータ アクセス操作が実行されない場合は、そのユーザー定義関数に SCHEMABINDING 句を指定できます。これにより、ユーザー定義関数の派生 UserDataAccess プロパティが 0 に設定されます。 この変更後は、`SELECT...INTO` ステートメントで最小限のログが記録されます。 `SELECT...INTO` ステートメントで引き続き、このプロパティが 1 に設定されているユーザー定義関数が少なくとも 1 つ参照されている場合は、操作の完全なログが記録されます。
   
 ## <a name="permissions"></a>アクセス許可  
  対象となるデータベースの CREATE TABLE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. 複数のソースの列を指定してテーブルを作成する  
  次の例では、各種の従業員関連テーブルと住所関連テーブルから 7 つの列を選択して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにテーブル `dbo.EmployeeAddresses` を作成します。  
@@ -171,7 +173,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. リモート データ ソースの列を指定してテーブルを作成する  
  次の例は、ローカル サーバーで新しいテーブルをリモート データ ソースから作成するための 3 つの方法を示しています。 最初にリモート データ ソースへのリンクを作成した後、 リンク サーバー名の `MyLinkServer,` を、1 つ目の SELECT...INTO ステートメントの FROM 句と、2 つ目の SELECT...INTO ステートメントの OPENQUERY 関数に指定しています。 3 つ目の SELECT...INTO ステートメントでは、OPENDATASOURCE 関数を使用して、リンク サーバー名を使用する代わりに直接リモート データ ソースを指定しています。  
   
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 USE master;  
@@ -214,7 +216,7 @@ GO
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. PolyBase で作成された外部テーブルをインポートする  
  Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 `SELECT INTO` を使用して、SQL Server の永続記憶装置に、外部テーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
   
- **適用対象:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]」を参照してください。  
+ **適用対象**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
@@ -231,7 +233,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 新しいテーブルを別のテーブルのコピーとして作成し、指定したファイル グループに読み込む
 次の例は、新しいテーブルを別のテーブルのコピーとして作成し、ユーザーの既定のファイル グループとは異なる、指定したファイル グループに読み込む方法を示しています。
 
- **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+ **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01cf9fcf7795e8f353565b767bbf79b1da43f4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f3d338531b2d7e7d76571ad2d04793c6200c63d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121702"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893392"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL Server を直ちに停止します。  
   
@@ -44,9 +44,9 @@ SHUTDOWN [ WITH NOWAIT ]
   
 ## <a name="arguments"></a>引数  
  WITH NOWAIT  
- 省略可。 各データベースでチェックポイントを実行せずに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシャットダウンします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はすべてのユーザー プロセスの停止を試行した後に終了します。 サーバーが再起動すると、完了しなかったトランザクションのロールバック操作が行われます。  
+ 省略可能。 各データベースでチェックポイントを実行せずに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシャットダウンします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はすべてのユーザー プロセスの停止を試行した後に終了します。 サーバーが再起動すると、完了しなかったトランザクションのロールバック操作が行われます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  WITHNOWAIT オプションを使用しない場合、SHUTDOWN では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が次のようにシャットダウンされます。  
   
 1.  ログインを無効にする (固定サーバー ロール **sysadmin** および **serveradmin** のメンバーを除く)。  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106166"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106166"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> ドキュメント マップと表示拡張機能  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> ドキュメント マップと表示拡張機能  
  ドキュメント マップは、HTML 表示拡張機能 (プレビュー、レポート ビューアーなど) で使用します。 他の表示拡張機能では、異なる手段でドキュメント マップが表示されます。  
   
 -   PDF では、ドキュメント マップは [しおり] ペインとして表示されます。  
@@ -48,7 +48,7 @@ ms.locfileid: "66106166"
     > [!NOTE]  
     >  Tablix データ領域を選択するには、任意のセルをクリックして行ハンドルおよび列ハンドルを表示し、コーナー ハンドルをクリックします。  
   
-2.  プロパティ ペインで、ドキュメント マップに表示するテキストを入力、`DocumentMapLabel`プロパティ、または、ラベルに評価される式を入力します。 たとえば、「 **Sales Chart**」のように入力します。  
+2.  プロパティペインで、ドキュメントマップに表示するテキストを`DocumentMapLabel`プロパティに入力するか、結果がラベルになる式を入力します。 たとえば、「 **Sales Chart**」のように入力します。  
   
     > [!NOTE]  
     >  [プロパティ] ペインが表示されない場合は、 **[表示]** タブの **[表示/非表示]** グループで、 **[プロパティ]** を選択します。  
@@ -118,7 +118,7 @@ ms.locfileid: "66106166"
   
  
   
-## <a name="see-also"></a>関連項目  
- [レポート マネージャーでレポートの表示を見つけて&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>参照  
+ [レポート マネージャーを使用したレポートの検索と表示 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

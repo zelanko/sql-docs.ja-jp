@@ -20,17 +20,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e369ae57024b88ee65c4a81217661314e5533d47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071505"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895778"
 ---
-# <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この関数は、指定された現在のデータベースのデータ、ログ、フルテキスト ファイルの論理名に対する、ファイル識別 (ID) 番号を返します。 
   
@@ -51,12 +51,12 @@ FILE_IDEX ( file_name )
   
 エラー時は **NULL**  
   
-## <a name="remarks"></a>Remarks  
-*file_name* は、[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューまたは [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) カタログ ビューの **name** 列に表示される論理ファイル名に対応します。  
+## <a name="remarks"></a>解説  
+*file_name* は、**sys.master_files** カタログ ビューまたは [sys.database_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューの [name](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 列に表示される論理ファイル名に対応します。  
   
 `FILE_IDEX` は、SELECT リスト、WHERE 句、または式の使用がサポートされるあらゆる場所で使用します。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. 指定されたファイルのファイル ID を取得する  
 この例では、`AdventureWorks_Data` ファイルのファイル ID が返されます。  

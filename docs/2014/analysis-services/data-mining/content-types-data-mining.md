@@ -1,5 +1,5 @@
 ---
-title: コンテンツの種類 (データ マイニング) |Microsoft Docs
+title: コンテンツの種類 (データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e3400d904bc857bc282bb1ad9220c1e01fe5a4d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085658"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524038"
 ---
 # <a name="content-types-data-mining"></a>コンテンツの種類 (データ マイニング)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、マイニング構造の列に対して物理データ型を定義することも、モデルに使用されている列に対して論理的なコンテンツの種類を定義することもできます。  
+  では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] マイニング構造の列に対して物理データ型を定義できます。また、モデルで使用する場合は、列の論理コンテンツ型を定義することもできます。  
   
  *データ型* により、マイニング モデルを作成するときにその列に含まれるデータをアルゴリズムでどのように処理するかが決定されます。 列のデータ型を定義することで、列に含まれるデータの型に関する情報と、データの処理方法がアルゴリズムに通知されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各データ型では、データ マイニング向けに 1 つまたは複数のコンテンツの種類がサポートされます。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66085658"
   
  コンテンツの種類 `Discrete` は、すべてのデータ マイニング データ型によってサポートされています。  
   
-## <a name="continuous"></a>Continuous  
+## <a name="continuous"></a>継続的  
  *Continuous* は、この列に中間値が許可されるスケールの数値データを表す値が格納されることを表します。 有限の数えられるデータを表す不連続列とは異なり、連続列は無限の小数部が含まれる可能性のある計測可能な測定値を表します。 連続した属性列の例としては気温の列があります。  
   
  連続する数値データが列に含まれ、そのデータがどのように分布するかがわかっている場合は、期待される値の分布を指定することで、分析の精度を高めることができます。 列の分布は、マイニング構造レベルで指定します。 このため、設定はその構造に基づくすべてのモデルに適用されます。詳細については、「[列の分布 (データ マイニング)](column-distributions-data-mining.md)」を参照してください。  
@@ -101,7 +100,7 @@ ms.locfileid: "66085658"
   
  このコンテンツの種類は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のすべてのデータ マイニング データ型によってサポートされています。 ただし、多くのアルゴリズムは cyclical の値を不連続の値として扱い、特別な処理は行いません。  
   
-## <a name="ordered"></a>Ordered  
+## <a name="ordered"></a>注文済み  
  コンテンツの種類 *Ordered* は、並びまたは順序を定義する値が列に含まれることを示します。 ただし、このコンテンツの種類で順序付けに使用される値は、他の値との距離や大きさの関係を表すわけではありません。 たとえば、順序付き属性列に 1 ～ 5 というランクのスキル レベルに関する情報が含まれている場合、各スキル レベル間の距離に関する情報は示されません。つまり、5 というスキル レベルが 1 というスキル レベルより必ずしも 5 倍優れているわけではありません。  
   
  順序付き属性列は、コンテンツの種類としては不連続と見なされます。  
@@ -111,10 +110,10 @@ ms.locfileid: "66085658"
 ## <a name="classified"></a>分類済み  
  すべてのモデルで共通して使用される上記のコンテンツの種類の他にも、分類済みの列を使用して、一部のデータ型に対してコンテンツの種類を定義できます。 分類済みの列の詳細については、「[分類済みの列 (データ マイニング)](classified-columns-data-mining.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [コンテンツの種類 (DMX)](/sql/dmx/content-types-dmx)   
- [データ型 (データ マイニング)](data-types-data-mining.md)   
- [データ型 &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
+## <a name="see-also"></a>参照  
+ [DMX&#41;&#40;コンテンツの種類](/sql/dmx/content-types-dmx)   
+ [データマイニング&#41;&#40;データ型](data-types-data-mining.md)   
+ [DMX&#41;&#40;データ型](/sql/dmx/data-types-dmx)   
  [マイニング構造のプロパティの変更](change-the-properties-of-a-mining-structure.md)   
  [マイニング構造列](mining-structure-columns.md)  
   

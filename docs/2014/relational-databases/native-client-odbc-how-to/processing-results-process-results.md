@@ -1,5 +1,5 @@
 ---
-title: 計算 (ODBC) の処理 |Microsoft Docs
+title: 結果の処理 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21474aed83aac1fe86e2242b1238affa11ae64a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3fddbc96086f13fbc8321f2b3424f1c6c2507df1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039665"
 ---
 # <a name="process-results-odbc"></a>結果の処理 (ODBC)
     
@@ -33,7 +32,7 @@ ms.locfileid: "63200318"
   
     -   バインドされた列が使用されている場合は、バインドされた列のバッファー内で現在使用可能なデータを使用します。  
   
-    -   バインドされていない列が使用されている場合は、[SQLGetData](../native-client-odbc-api/sqlgetdata.md) を 1 回以上呼び出して、バインドされている最後の列の後に、バインドされていない列のデータを取得します。 呼び出す`SQLGetData`列番号の昇順である必要があります。  
+    -   バインドされていない列が使用されている場合は、[SQLGetData](../native-client-odbc-api/sqlgetdata.md) を 1 回以上呼び出して、バインドされている最後の列の後に、バインドされていない列のデータを取得します。 の呼び出し `SQLGetData` は、列番号の昇順にする必要があります。  
   
     -   `SQLGetData` を複数回呼び出して、text または image 列からデータを取得します。  
   
@@ -58,6 +57,6 @@ ms.locfileid: "63200318"
 >  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) によって SQL_NO_DATA が返される前に結果セットの処理を取り消すには、[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md) を呼び出します。  
   
 ## <a name="see-also"></a>参照  
- [結果の操作方法に関するトピックを処理&#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+ [結果の処理方法に関するトピック &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
   

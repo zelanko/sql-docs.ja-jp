@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24e204c7282cb9228fb81d1c63cc4bf51f6286ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753045"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040967"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>プロジェクトまたはソリューションとしてスクリプトを保存する
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio を使い慣れている開発者であれば、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のソリューション エクスプローラーにもすぐに慣れることができます。 業務を支援するスクリプトはスクリプト プロジェクトにグループ化することができ、スクリプト プロジェクトはソリューションとしてまとめて管理できます。 スクリプト プロジェクトまたはソリューションに格納したスクリプトは、グループとして一括して開けるほか、Visual SourceSafe などのソース管理製品にまとめて保存することができます。 スクリプト プロジェクトは、スクリプトを適切に実行するための接続情報を保持し、テキスト ファイルなどの非スクリプト ファイルを保持することもできます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio を使い慣れている開発者であれば、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のソリューション エクスプローラーにもすぐに慣れることができます。 業務を支援するスクリプトはスクリプト プロジェクトにグループ化することができ、スクリプト プロジェクトはソリューションとしてまとめて管理できます。 スクリプト プロジェクトまたはソリューションに格納したスクリプトは、グループとして一括して開けるほか、Visual SourceSafe などのソース管理製品にまとめて保存することができます。 スクリプト プロジェクトは、スクリプトを適切に実行するための接続情報を保持し、テキスト ファイルなどの非スクリプト ファイルを保持することもできます。  
   
  次の実習では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースにクエリを実行する短いスクリプトを作成し、スクリプト プロジェクトとソリューションに格納します。  
   
@@ -28,7 +27,7 @@ ms.locfileid: "62753045"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を開き、オブジェクト エクスプローラーを使用してサーバーに接続します。  
   
-2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 **[新しいプロジェクト]** ダイアログ ボックスが開きます。  
+2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
 3.  **[名前]** ボックスに「 **StatusCheck**」と入力し、 **[テンプレート]** で **[SQL Server スクリプト]** をクリックして、 **[OK]** をクリックします。新しいソリューションとスクリプト プロジェクトが開きます。  
   
@@ -58,11 +57,11 @@ ms.locfileid: "62753045"
     > [!NOTE]  
     >  クエリを入力するスペースが足りない場合は、Shift + Alt + Enter キーを押して全画面モードに切り替えてください。  
   
-11. ソリューション エクスプローラーで **SQLQuery1**を右クリックし、 **[名前の変更]** をクリックします。 型**Check Workorders.sql**クエリと ENTER キーを押して新しい名前として。  
+11. ソリューション エクスプローラーで **SQLQuery1**を右クリックし、 **[名前の変更]** をクリックします。 クエリの新しい名前として「 **Check workorders.sql」** 」と入力し、enter キーを押します。  
   
 12. ソリューションとスクリプト プロジェクトを保存するには、 **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [概要:ソリューションとスクリプト プロジェクト](lesson-3-4-summary-solutions-and-script-projects.md)  
+ [概要: ソリューションおよびスクリプト プロジェクト](lesson-3-4-summary-solutions-and-script-projects.md)  
   
   

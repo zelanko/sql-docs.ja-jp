@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054120"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965969"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>非クラスター化インデックスのサイズの算出
   非クラスター化インデックスを格納するために必要な領域を算出するには、次の手順に従います。  
@@ -94,7 +93,7 @@ ms.locfileid: "66054120"
   
      ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
   
-     ***Max_Var_Key_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が少ないことが予想される場合、その使用率に基づいて ***Max_Var_Key_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
+     ***Max_Var_Key_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が 100% 以下になることが予想される場合、その使用率に基づいて ***Max_Var_Key_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
      可変長列が存在しない場合は、 ***Variable_Key_Size*** に 0 を設定します。  
   
@@ -181,7 +180,7 @@ ms.locfileid: "66054120"
   
 5.  次の式でインデックス行のサイズを計算します。  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (インデックス行の行ヘッダー オーバーヘッド) + 6 (子ページ ID のポインター)  
+     ***Leaf_Row_Size***   = ***Fixed_Leaf_Size***  + ***Variable_Leaf_Size***  + ***Leaf_Null_Bitmap*** + 1 (インデックス行の行ヘッダーオーバーヘッド) + 6 (子ページ ID のポインター)  
   
 6.  次の式で、1 ページあたりのインデックス行数を計算します (1 ページあたりの空きバイト数は 8,096 です)。  
   
@@ -210,19 +209,19 @@ ms.locfileid: "66054120"
   
 1.  次の式で、インデックス内の非レベル数を計算します。  
   
-     ***非リーフ レベル***= 1 + ログ Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***非リーフレベル***= 1 + ログ Index_Rows_Per_Page (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      この値を最も近い整数に切り上げます。 この値には、非クラスター化インデックスのリーフ レベルは含まれません。  
   
 2.  次の式で、インデックス内の非リーフ ページ数を計算します。  
   
-     ***Num_Index_Pages*** = ∑Level (***num_leaf_pages/index_rows_per_page***<sup>レベル</sup>) 場合、1 < = レベル < =***レベル***  
+     ***Num_Index_Pages*** = ∑ level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>レベル</sup>)、1 <***= レベル <= レベル***  
   
      それぞれの値を最も近い整数に切り上げます。 簡単な例として、 ***Num_Leaf_Pages*** = 1000、 ***Index_Rows_Per_Page*** = 25 のインデックスを例に取ります。 リーフ レベルより上位の最初のインデックス レベルでは、1000 行のインデックス行が格納されます。リーフ ページあたり 1 行のインデックス行で、1 ページあたり 25 行のインデックス行を納めることができます。 つまり、1,000 行のインデックス行を格納するために 40 ページが必要になります。 次のレベルのインデックスでは、40 行のインデックス行を格納する必要があります。 つまり、2 ページが必要になります。 最上位レベルのインデックスでは、2 行のインデックス行を格納する必要があります。 つまり、1 ページが必要になります。 その結果、非リーフ インデックス ページは 43 ページとなります。 このような数値を前の式で使用すると、次のような結果になります。  
   
-     ***Non-leaf_levels*** = 1 + log25 (1000/25) = 3  
+     ***非 leaf_Levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43、これは、例で説明したページ数。  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43 (例で説明したページ数)。  
   
 3.  次の式で、インデックスのサイズを計算します (1 ページあたりの総バイト数は 8,192 です)。  
   
@@ -255,7 +254,7 @@ ms.locfileid: "66054120"
   
      スパース列の領域要件については、「 [スパース列の使用](../tables/use-sparse-columns.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クラスター化インデックスと非クラスター化インデックスの概念](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [非クラスター化インデックスの作成](../indexes/create-nonclustered-indexes.md)   
  [クラスター化インデックスの作成](../indexes/create-clustered-indexes.md)   

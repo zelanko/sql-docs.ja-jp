@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2db5b171f0f853383c2bae99202c511151c38d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f441310df57cb1b58c0fe5845fec5271f7e31299
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007223"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771753"
 ---
-# <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (SSISDB データベース)
+# <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの環境の名前を変更します。  
   
@@ -66,7 +66,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   新しい名前が既存の環境で既に使用されている  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  環境の名前を変更しても、プロジェクトの環境参照は自動的に更新されません。 したがって、環境参照を更新する必要があります。 このストアド プロシージャ は、環境名を変更することで環境参照が壊れた場合でも成功します。 環境参照は、このストアド プロシージャが完了した後で更新する必要があります。  
   
 > [!NOTE]  

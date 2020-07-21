@@ -1,24 +1,24 @@
 ---
-title: および (DMX) |Microsoft Docs
+title: AND (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0c727e6a6f981dd2862575bfb4943b104196080
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 564f09564349fa5709cefa87eca8fe847638b9b6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913746"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669859"
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  2 つの数値式の論理積演算を実行します。  
+  2つの数値式の論理積を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,27 +29,27 @@ Expression1 AND Expression2
   
 #### <a name="parameters"></a>パラメーター  
  *Expression1*  
- 数値の値を返す有効なデータ マイニング拡張機能 (DMX) 式。  
+ 数値を返す有効なデータマイニング拡張機能 (DMX) 式です。  
   
  *Expression2*  
- 数値の値を返す有効な DMX 式。  
+ 数値を返す有効な DMX 式です。  
   
 ## <a name="return-value"></a>戻り値  
- True の場合、両方のパラメーターが評価されるを TRUE にするブール値それ以外の場合は FALSE です。  
+ 両方のパラメーターが TRUE と評価される場合に TRUE を返すブール値です。それ以外の場合は FALSE。  
   
-## <a name="remarks"></a>コメント  
- 両方のパラメーターはブール値として扱われます (0 FALSE の場合それ以外の場合 TRUE) 論理積を実行します。 次の表では、パラメーター値のさまざまな組み合わせに基づいて返される値を示します。  
+## <a name="remarks"></a>Remarks  
+ どちらのパラメーターもブール値として処理されます (FALSE の場合は0、それ以外の場合は TRUE)。 次の表に、パラメーター値のさまざまな組み合わせに基づいて返される値を示します。  
   
-|Expression1|Expression2|戻り値は|  
+|Expression1|Expression2|戻り値はです。|  
 |-----------------------|-----------------------|---------------------|  
-|TRUE|TRUE|TRUE|  
-|TRUE|FALSE|FALSE|  
-|false|TRUE|FALSE|  
-|FALSE|FALSE|FALSE|  
+|true|true|true|  
+|true|false|false|  
+|FALSE|TRUE|false|  
+|false|false|false|  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [論理演算子&#40;DMX&#41;](../dmx/operators-logical.md)   
- [演算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>参照  
+ [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [DMX&#41;&#40;論理演算子](../dmx/operators-logical.md)   
+ [DMX&#41;&#40;オペレーター](../dmx/operators-dmx.md)  
   
   

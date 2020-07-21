@@ -1,5 +1,5 @@
 ---
-title: 派生階層を作成する (マスター データ サービス) | Microsoft Docs
+title: 派生階層を作成する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1e793b9b5dfa78909bc74112580476c7d3074536
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2ff6e7eed27cd3482aa6acc7a6609562e8d3ea6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812787"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>派生階層を作成する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   正しいレベルにメンバーが確実に存在するレベル ベースの階層が必要な場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、派生階層を作成します。 派生階層は、モデル内に存在するドメイン ベースの属性のリレーションシップに基づきます。  
   
 > [!NOTE]  
 >  ドメイン ベースの属性値がメンバーに対して存在しない場合、メンバーは派生階層に含まれません。 すべてのメンバーのドメイン ベースの属性値を要求するには、「[属性値を要求する (マスター データ サービス)](../master-data-services/require-attribute-values-master-data-services.md)」を参照してください。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-create-a-derived-hierarchy"></a>派生階層を作成するには  
   
@@ -60,8 +60,8 @@ ms.locfileid: "68079674"
 9. **[戻る]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
- [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)   
- [明示的なキャップを持つ派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
+ [派生階層 &#40;マスターデータサービス&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
+ [明示的なキャップを持つ派生階層 &#40;マスターデータサービス&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)  
   
   

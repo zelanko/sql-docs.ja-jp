@@ -15,19 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_getcolfmt function
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aec6cf3345a0693384835f433bd445fd5079c82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 7e279af67313107d495e5ef864414e53997c3cff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895674"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010110"
 ---
-# <a name="bcpgetcolfmt"></a>bcp_getcolfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+# <a name="bcp_getcolfmt"></a>bcp_getcolfmt
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   列形式のプロパティ値を確認するために使用します。  
   
@@ -48,10 +46,10 @@ RETCODE bcp_getcolfmt (
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
- *field*  
+ *分野*  
  プロパティを取得する列番号です。  
   
- *property*  
+ *プロパティ*  
  プロパティ定数のいずれかを指定します。  
   
  *pValue*  
@@ -67,14 +65,14 @@ RETCODE bcp_getcolfmt (
  SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>コメント  
- 列形式のプロパティの値が記載されて、 [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)トピック。 呼び出して列形式のプロパティ値を設定、 **bcp_setcolfmt**関数、および**bcp_getcolfmt**列形式のプロパティ値を検索する関数を使用します。  
+ 列形式のプロパティ値については、 [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)のトピックを参照してください。 列形式のプロパティ値は**bcp_setcolfmt**関数を呼び出すことによって設定され、 **bcp_getcolfmt**関数は列形式のプロパティ値を検索するために使用されます。  
   
- 接続するときの動作の変更が発生する可能性があります、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (またはそれ以降) サーバーのコンピューター、以前と比較して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン。 詳細については、次を参照してください。[メタデータ検出](../../relational-databases/native-client/features/metadata-discovery.md)します。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以前のバージョンと比較して、(またはそれ以降の) サーバーコンピューターに接続するときに、動作の変更が検出される場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「[メタデータの検出](../../relational-databases/native-client/features/metadata-discovery.md)」を参照してください。  
   
-## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt による機能強化された日付と時刻のサポート  
- 使用される型、 **BCP_FMT_TYPE**日付/時刻型のプロパティがで指定されている[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。  
+## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt による機能強化された日付と時刻のサポート  
+ 日付型または時刻型の**BCP_FMT_TYPE**プロパティと共に使用される型は、 [&#40;OLE DB および ODBC&#41;の拡張された日付と時刻の型に対する一括コピーの変更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)で指定されています。  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+ 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

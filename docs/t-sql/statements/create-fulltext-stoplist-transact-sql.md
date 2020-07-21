@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5316bb4daa281c0abedd133803965a0b0af63bdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec2dac854349ad7e05fcbf9738b4cafb78228cc6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912758"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392920"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベースに新しいフルテキスト ストップリストを作成します。  
   
@@ -46,15 +46,17 @@ ms.locfileid: "67912758"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE FULLTEXT STOPLIST stoplist_name  
 [ FROM { [ database_name.]source_stoplist_name } | SYSTEM STOPLIST ]  
 [ AUTHORIZATION owner_name ]  
 ;  
 ```  
-  
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *stoplist_name*  
  ストップリストの名前です。 *stoplist_name* には、最大 128 文字まで指定できます。 *stoplist_name* は、現在のデータベース内のすべてのストップリスト間で一意であり、識別子のルールに準拠している必要があります。  
   
@@ -72,7 +74,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  ストップリストの所有者となるデータベース プリンシパルの名前を指定します。 *owner_name* に現在のユーザーがメンバーとなっているプリンシパルの名前を指定するか、または *owner_name* に対する IMPERSONATE 権限を現在のユーザーが持っている必要があります。 このオプションを指定しない場合は、所有権は現在のユーザーに与えられます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ストップリストの作成者はその所有者になります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -81,12 +83,12 @@ CREATE FULLTEXT STOPLIST stoplist_name
 > [!NOTE]  
 >  フルテキスト インデックスが関連付けられたストップリストを使用するには、REFERENCE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-new-full-text-stoplist"></a>A. 新しいフルテキスト ストップリストを作成する  
  次の例では、`myStoplist` という名前の新しいフルテキスト ストップリストを作成しています。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist;  
 GO  
 ```  
@@ -94,7 +96,7 @@ GO
 ### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>B. 既存のフルテキスト ストップリストからフルテキスト ストップリストをコピーする  
  次の例では、`myStoplist2` という名前の既存の AdventureWorks ストップリストをコピーして、`Customers.otherStoplist` という名前の新しいフルテキスト ストップリストを作成しています。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;  
 GO  
 ```  
@@ -102,7 +104,7 @@ GO
 ### <a name="c-copying-a-full-text-stoplist-from-the-system-full-text-stoplist"></a>C. システムのフルテキスト ストップリストからフルテキスト ストップリストをコピーする  
  次の例では、システム ストップリストをコピーして、`myStoplist3` という名前の新しいフルテキスト ストップリストを作成しています。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;  
 GO  
 ```  

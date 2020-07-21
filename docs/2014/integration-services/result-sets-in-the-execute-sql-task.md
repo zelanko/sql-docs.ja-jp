@@ -1,5 +1,5 @@
 ---
-title: 結果セットで、SQL 実行タスク |Microsoft Docs
+title: SQL 実行タスクの結果セット |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aaca4db8a4ae135424a49fb42a1a0918bdc931b7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056427"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422969"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>SQL 実行タスクにおける結果セット
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージでは、タスクが使用する SQL コマンドの種類によって、SQL 実行タスクに結果セットが返されるかどうかが決まります。 たとえば、通常、SELECT ステートメントは結果セットを返しますが、INSERT ステートメントは返しません。  
@@ -31,9 +30,9 @@ ms.locfileid: "66056427"
   
 -   [結果セットによる変数の設定](#Populate_variable_with_result_set)  
   
--   [セットで、SQL 実行タスク エディターの結果の構成](#Configure_result_sets)  
+-   [SQL 実行タスクにおける結果セットの構成](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a> 結果セットの指定の種類  
+##  <a name="specifying-a-result-set-type"></a><a name="Result_set_type"></a>結果セットの種類の指定  
  SQL 実行タスクでサポートされている結果セットの種類は、次のとおりです。  
   
 -   " **なし** " は、クエリが結果を返さない場合に使用される結果セットです。 たとえば、テーブルのレコードを追加、変更、および削除するクエリで使用されます。  
@@ -46,20 +45,20 @@ ms.locfileid: "66056427"
   
  SQL 実行タスクが " **完全な結果セット** " の結果セットを使用し、クエリが複数の行セットを返す場合、タスクは最初の行セットのみを返します。 この行セットでエラーが発生すると、タスクはそのエラーをレポートします。 他の行セットでエラーが発生しても、タスクはエラーをレポートしません。  
   
-##  <a name="Populate_variable_with_result_set"></a> 結果セットによる変数の設定  
+##  <a name="populating-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a>結果セットを使用した変数の設定  
  結果セットの種類が、単一行、行セット、または XML の場合、クエリが返す結果セットをユーザー定義の変数にバインドできます。  
   
  結果セットの種類が " **単一行**" の場合、列名を結果セットの名前として使用し、返される結果の列を変数にバインドしたり、列一覧の列の序数を結果セットの名前として使用できます。 たとえば、クエリ `SELECT Color FROM Production.Product WHERE ProductID = ?` の結果セットの名前は **Color** または **0**となります。 クエリが複数の列を返す場合に、すべての列の値にアクセスするには、各列を異なる変数にバインドする必要があります。 数字を結果セットの名前として使用し、列を変数にマップする場合、その数字はクエリの列一覧に列が表示される順序を示します。 たとえば、クエリ `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`では、 **Color** 列に 0 を、 **ListPrice** 列に 1 を使用します。 列名を結果セットの名前として使用できるかどうかは、タスクの構成で指定されているプロバイダーによって異なります。 すべてのプロバイダーで列名が使用できるわけではありません。  
   
- 単一の値を返す一部のクエリには、列名が含まれないことがあります。 たとえば、ステートメント `SELECT COUNT (*) FROM Production.Product` からは列名が返されません。 返される結果にアクセスするには、結果名として序数位置 0 を使用します。 列名で返される結果にアクセスするには、列名を指定する AS \<エイリアス名> 句をクエリに含める必要があります。 ステートメント `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`では、 **CountOfProduct** 列を指定します。 その後、 **CountOfProduct** 列名または序数位置 0 を使用して、返された結果列にアクセスできます。  
+ 単一の値を返す一部のクエリには、列名が含まれないことがあります。 たとえば、ステートメント `SELECT COUNT (*) FROM Production.Product` からは列名が返されません。 返される結果にアクセスするには、結果名として序数位置 0 を使用します。 列名で返される結果にアクセスするには、列名を指定する AS 句をクエリに含める必要があり \<alias name> ます。 ステートメント `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`では、 **CountOfProduct** 列を指定します。 その後、 **CountOfProduct** 列名または序数位置 0 を使用して、返された結果列にアクセスできます。  
   
  結果セットの種類が " **完全な結果セット** " または " **XML**" の場合、結果セット名には 0 を使用する必要があります。  
   
- 結果セットの種類が " **単一行** " の結果セットに変数をマップする場合、変数のデータ型と結果セットに含まれる列のデータ型は互換性がある必要があります。 たとえば、`String` データ型の列を含む結果セットを、数値データ型の変数にマップすることはできません。 設定すると、 **TypeConversionMode**プロパティを`Allowed`、SQL 実行タスクが出力パラメーターの変換を試みるしに割り当てられているクエリの結果、変数の結果データを入力します。  
+ 結果セットの種類が " **単一行** " の結果セットに変数をマップする場合、変数のデータ型と結果セットに含まれる列のデータ型は互換性がある必要があります。 たとえば、`String` データ型の列を含む結果セットを、数値データ型の変数にマップすることはできません。 **TypeConversionMode**プロパティをに設定すると、 `Allowed` SQL 実行タスクは、出力パラメーターとクエリ結果を、結果が割り当てられている変数のデータ型に変換しようとします。  
   
  XML 結果セットをマップできるのは、`String` または `Object` データ型の変数のみです。 変数が `String` データ型の場合、SQL 実行タスクは文字列を返し、XML ソースは XML データを使用できます。 変数が `Object` データ型の場合、SQL 実行タスクはドキュメント オブジェクト モデル (DOM) オブジェクトを返します。  
   
- A**完全な結果セット**の変数にマップする必要があります、`Object`データ型。 結果は、行セット オブジェクトとして返されます。 Foreach ループ コンテナーを使用して、Object 変数に格納されたテーブル行の値をパッケージ変数に抽出し、その後、スクリプト タスクを使用して、パッケージ変数に格納されたデータをファイルに書き出すことができます。 Foreach ループ コンテナーとスクリプト タスクを使用したこの処理方法のデモについては、msftisprodsamples.codeplex.com の CodePlex サンプル「 [Execute SQL Parameters and Result Sets (SQL 実行パラメーターと結果セット)](https://go.microsoft.com/fwlink/?LinkId=157863)」を参照してください。  
+ **完全な結果セット**は、データ型の変数にマップする必要があり `Object` ます。 結果は、行セット オブジェクトとして返されます。 Foreach ループ コンテナーを使用して、Object 変数に格納されたテーブル行の値をパッケージ変数に抽出し、その後、スクリプト タスクを使用して、パッケージ変数に格納されたデータをファイルに書き出すことができます。 Foreach ループ コンテナーとスクリプト タスクを使用したこの処理方法のデモについては、msftisprodsamples.codeplex.com の CodePlex サンプル「 [Execute SQL Parameters and Result Sets (SQL 実行パラメーターと結果セット)](https://go.microsoft.com/fwlink/?LinkId=157863)」を参照してください。  
   
  次の表は、結果セットにマップできる変数のデータ型をまとめたものです。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66056427"
 |単一行|結果セット内の型列と互換性のあるすべての型|適用なし|  
 |完全な結果セット|`Object`|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは ADO `Recordset` です。<br /><br /> タスクで [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャーなどのマネージド接続マネージャーを使用する場合、返されるオブジェクトは `System.Data.DataSet` です。<br /><br /> 次の例に示すように、スクリプト タスクを使用して、`System.Data.DataSet` オブジェクトにアクセスできます。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは `MSXML6.IXMLDOMDocument` です。<br /><br /> タスクがなど、マネージ接続マネージャーを使用するかどうか、[!INCLUDE[vstecado](../includes/vstecado-md.md)]接続マネージャーでは、返されたオブジェクトは、`System.Xml.XmlDocument`します。|  
+|XML|`Object`|タスクで ADO、OLE DB、Excel、および ODBC 接続マネージャーを含むネイティブ接続マネージャー使用する場合、返されるオブジェクトは `MSXML6.IXMLDOMDocument` です。<br /><br /> タスクで接続マネージャーなどのマネージ接続マネージャーを使用する場合、 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 返されるオブジェクトは `System.Xml.XmlDocument` です。|  
   
  変数は、SQL 実行タスクまたはパッケージのスコープ内で定義できます。 変数にパッケージ スコープがある場合、結果セットはパッケージ内の他のタスクやコンテナーで利用できます。また、パッケージ実行タスクや DTS 2000 パッケージ実行タスクが実行する任意のパッケージでも利用できます。  
   
@@ -80,10 +79,10 @@ ms.locfileid: "66056427"
   
  変数への結果セットの読み込みについては、「 [結果セットを SQL 実行タスクの変数にマップする](control-flow/execute-sql-task.md)」を参照してください。  
   
-##  <a name="Configure_result_sets"></a> 結果の構成設定、SQL 実行タスク  
+##  <a name="configuring-result-sets-in-the-execute-sql-task"></a><a name="Configure_result_sets"></a>SQL 実行タスクでの結果セットの構成  
  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで設定できる、結果セットのプロパティの詳細については、次のトピックを参照してください。  
   
--   [SQL 実行タスク エディター&#40;結果セット ページ&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
+-   [[SQL 実行タスクエディター &#40;結果セット] ページ&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   

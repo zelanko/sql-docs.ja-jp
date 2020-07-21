@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72d392837da4abd28aaf48ed460113c561bd688d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704875"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063593"
 ---
 # <a name="resource-governor"></a>[リソース ガバナー]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソース ガバナーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のワークロードとシステム リソースの消費を管理するために使用できる機能です。 リソース ガバナーを使用すると、受信するアプリケーション要求で使用可能な CPU、物理 IO、およびメモリの量に制限を指定できます。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソース ガバナーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のワークロードとシステム リソースの消費を管理するために使用できる機能です。 Resource Governor を使用すると、着信アプリケーション要求で使用できる CPU、物理 IO、およびメモリの量に対して制限を指定できます。  
   
 ## <a name="benefits-of-resource-governor"></a>リソース ガバナーの利点  
  リソース ガバナーでは、受け取った要求に応じてリソース消費を制限することにより、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のワークロードとリソースを管理することができます。 リソース ガバナーでは、同程度のサイズの複数のクエリや要求を 1 つのエンティティとして扱う場合、それらをワークロードと呼んでいます。 これは必須ではありませんが、ワークロードのリソースの使用パターンが統一化されていると、リソース ガバナーから得られる利点も増えます。 リソース制限は、実行中のワークロードへの影響を最小限に抑えながらリアルタイムで再構成できます。  
@@ -82,7 +81,7 @@ ms.locfileid: "62704875"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |リソース ガバナーを有効にする方法について説明します。|[リソース ガバナーの有効化](resource-governor.md)|  
-|リソース ガバナーを無効にする方法について説明します。|[リソース ガバナーを無効にしたとき](disable-resource-governor.md)|  
+|リソース ガバナーを無効にする方法について説明します。|[リソース ガバナーの無効化](disable-resource-governor.md)|  
 |リソース プールを作成、変更、および削除する方法について説明します。|[リソース ガバナー リソース プール](resource-governor-resource-pool.md)|  
 |ワークロード グループを作成、変更、移動、および削除する方法について説明します。|[リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)|  
 |ユーザー定義の分類子関数を作成およびテストする方法について説明します。|[リソース ガバナーの分類子関数](resource-governor-classifier-function.md)|  

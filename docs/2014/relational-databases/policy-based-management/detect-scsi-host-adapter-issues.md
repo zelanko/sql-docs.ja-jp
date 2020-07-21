@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4762b2aec13821402c8b38bd5da207855fd1ea76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eda91751ecde2dd1282453759ba66f8483b755f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068854"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>SCSI ホスト アダプターの問題の検出
   このルールでは、システム イベント ログの EventId 1066 を確認します。 このエラーは、SCSI ホスト アダプターの構成の問題またはデバイスの故障が原因で発生します。  

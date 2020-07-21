@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c411ff747536f0f27679c74a0d56b2f059df52e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211565"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059613"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML データへのビジネス ロジックの追加
   XML データにはいくつかの方法でビジネス ロジックを追加できます。  
@@ -30,8 +29,8 @@ ms.locfileid: "68211565"
   
 -   ビジネス ニーズに合わせて XML 列の処理を開始する Transact-SQL ストアド プロシージャや関数を記述できます。  
   
-## <a name="example-applying-xsl-transformation"></a>例: XSL 変換の適用  
- CLR 関数を考えてみます**TransformXml()** を受け入れる、`xml`データ型のインスタンスおよびファイルに格納されている XSL 変換、変換が、XML データに適用および結果の変換後の XML を返します。 次に示すのは、C# で記述した関数の骨組みです。  
+## <a name="example-applying-xsl-transformation"></a>例 : XSL 変換の適用  
+ データ型のインスタンスとファイルに格納されている XSL 変換を受け取り、変換を XML データに適用して、変換後の XML を結果に返す CLR 関数**Transformxml ()** について考えてみ `xml` ます。 次に示すのは、C# で記述した関数の骨組みです。  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  

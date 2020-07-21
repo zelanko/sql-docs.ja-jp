@@ -13,18 +13,18 @@ f1_keywords:
 ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b60809c6e6f5484c2c59acb9a06a880e218c7338
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af9562d8e59d3690dd8a0d949945cdfec524d29f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776140"
 ---
 # <a name="maintenance-plans-node-object-explorer"></a>[メンテナンス プラン] ノード (オブジェクト エクスプローラー)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ここでは、 **のオブジェクト エクスプローラーの** [メンテナンス プラン] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ノードの F1 ヘルプについて紹介します。  
   
 ## <a name="see-also"></a>参照  
- [のオブジェクト エクスプローラーの](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+ [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

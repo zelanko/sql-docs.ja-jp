@@ -1,7 +1,6 @@
 ---
-title: SQL Server Profiler の使用による SQL トレース コレクション セットの作成 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/07/2017
+title: プロファイラーで SQL トレース コレクション セットを作成する
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,22 +10,21 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6cf247d20cdc25fe18e5d263b62fd87b561b5b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fdd751f282f1ba62150d5257dde04798962ecb84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715527"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>SQL Server Profiler の使用による SQL トレース コレクション セットの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のサーバー側のトレース機能を利用して、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。 このプロセスは 2 つの部分で構成されます。  
   
 1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレースの作成とエクスポート  
   
 2.  エクスポートされたトレースに基づく新しいコレクション セットのスクリプト化  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  次の手順のシナリオでは、完了に 80 ミリ秒以上かかるストアド プロシージャに関するデータを収集します。 この手順を完了するには、次の操作を実行できる必要があります。  
   
@@ -40,7 +38,7 @@ ms.locfileid: "68055530"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[キャンセル]** をクリックします。  
   
-3.  このシナリオでは、実行時間の値が既定でミリ秒で表示されるように設定されていることを確認します。 これを行うには、次の手順を実行します。  
+3.  このシナリオでは、実行時間の値が既定でミリ秒で表示されるように設定されていることを確認します。 そのためには、次の手順に従います。  
   
     1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
@@ -102,7 +100,7 @@ ms.locfileid: "68055530"
   
 4.  **[実行]** をクリックして、クエリを実行してコレクション セットを作成します。  
   
-5.  [オブジェクト エクスプローラー] で、コレクション セットが作成されたことを確認します。 これを行うには、次の手順を実行します。  
+5.  [オブジェクト エクスプローラー] で、コレクション セットが作成されたことを確認します。 そのためには、次の手順に従います。  
   
     1.  **[管理]** を右クリックし、 **[更新]** をクリックします。  
   
@@ -115,13 +113,13 @@ ms.locfileid: "68055530"
 ## <a name="example"></a>例  
  次のコード例は、前述の手順を実行することによって得られる最終的なスクリプトです。  
   
-```  
+```sql
 /*************************************************************/  
 -- SQL Trace collection set generated from SQL Server Profiler  
 -- Date: 11/19/2007  12:55:31 AM  
 /*************************************************************/  
   
-USE msdb  
+USE msdb;
 GO  
   
 BEGIN TRANSACTION  
@@ -167,7 +165,9 @@ N'<ns:SqlTraceCollector xmlns:ns"DataCollectorType" use_default="0">
   
 -- Retrieve the collector type GUID for the trace collector type.  
 DECLARE @collector_type_GUID uniqueidentifier;  
-SELECT @collector_type_GUID = collector_type_uid FROM [dbo].[syscollector_collector_types] WHERE name = N'Generic SQL Trace Collector Type';  
+SELECT @collector_type_GUID = collector_type_uid
+  FROM [dbo].[syscollector_collector_types]
+  WHERE name = N'Generic SQL Trace Collector Type';  
   
 -- Create the trace collection item.  
 -- ***  
@@ -201,7 +201,8 @@ SELECT @ErrorLine = ERROR_LINE(),
        @ErrorNumber = ERROR_NUMBER(),  
        @ErrorMessage = ERROR_MESSAGE(),  
        @ErrorProcedure = ISNULL(ERROR_PROCEDURE(), '-');  
-RAISERROR (14684, @ErrorSeverity, 1 , @ErrorNumber, @ErrorSeverity, @ErrorState, @ErrorProcedure, @ErrorLine, @ErrorMessage);  
+RAISERROR (14684, @ErrorSeverity, 1 , @ErrorNumber,
+  @ErrorSeverity, @ErrorState, @ErrorProcedure, @ErrorLine, @ErrorMessage);  
 END CATCH;  
 GO  
 ```  

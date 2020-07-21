@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4738dab411fe55808034a6d9d81a16994089ea74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138288"
 ---
 # <a name="mdx-scripting---freeze"></a>MDX スクリプティング - FREEZE
 
 
-  現在の値を指定されたサブキューブのセルの値をロックします。 セルの値がロックされると、他のセルへの変更なしに影響を与えるロックされたセル。  
+  指定したサブキューブのセル値を現在の値にロックします。 セル値がロックされている場合、他のセルに対する変更は、ロックされているセルには影響しません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,12 +29,12 @@ FREEZE Subcube_Expression
   
 ## <a name="arguments"></a>引数  
  *Subcube_Expression*  
- サブキューブを返す有効な多次元式 (MDX) 式。  
+ サブキューブを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- **固定**ステートメントが指定されているサブキューブのセルの値をロック、MDX での後続のステートメントをによる後続の計算で値が変更からスクリプトのパスします。  
+## <a name="remarks"></a>Remarks  
+ **FREEZE**ステートメントは、指定されたサブキューブ内のセルの値をロックします。これにより、MDX スクリプト内の後続のステートメントは、後続の計算パスで値を変更できなくなります。  
   
- 次の例では、A と B は MDX 計算スクリプトでのサブキューブを表します。  
+ 次の例では、A と B は MDX 計算スクリプト内のサブキューブを表します。  
   
 ```  
 B = 2;  
@@ -42,9 +42,9 @@ A = B;
 B = 3  
 ```  
   
- この時点では、どちらも A および B は 3 と等しい。  
+ この時点で、A と B はどちらも3と等しくなります。  
   
- 挿入ようになりました、**固定**して A サブキューブ内のセルをロックする関数。  
+ ここで、サブキューブ内のセルをロックする**Freeze**関数を挿入します。  
   
 ```  
 B = 2;  
@@ -55,7 +55,7 @@ B = 3
   
  A は 2 に、B は 3 に等しくなりました。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX スクリプト ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

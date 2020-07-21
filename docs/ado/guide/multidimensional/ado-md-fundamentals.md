@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, fundamentals
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 690c7b58c336596485b9ade77f0c02928853cd2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e19b1e816a75e3e4ccbaef62c4a583e036cda9f9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923203"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748131"
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD の基礎
-Microsoft® ActiveX® Data Objects (多次元) (ADO MD) により簡単にアクセスする多次元データ Microsoft Visual Basic® などの言語から Microsoft Visual C++® します。 ADO MD の拡張などの多次元データに固有のオブジェクトを含める Microsoft ActiveX® Data オブジェクト (ADO)、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)と[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクト。 ADO MD とには、多次元スキーマを参照し、キューブを照会および結果を取得することができます。  
+Microsoft® ActiveX®データオブジェクト (多次元) (ADO MD) を使用すると、Microsoft Visual Basic®、Microsoft Visual C++®などの言語から多次元データに簡単にアクセスできます。 ADO MD により、Microsoft ActiveX® Data Objects (ADO) が拡張され、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)オブジェクトや[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトなどの多次元データに固有のオブジェクトが含まれるようになります。 ADO MD を使用すると、多次元スキーマの参照、キューブのクエリ、および結果の取得を行うことができます。  
   
- ADO と同様には、ADO MD は、データにアクセスするのに、基になる OLE DB プロバイダーを使用します。 ADO MD を使用するには、プロバイダーは OLE DB for OLAP 仕様で定義されている多次元データ プロバイダー (MDP) をある必要があります。 MDP は、表形式のデータ プロバイダー (TDP) がデータを表示する方法は、表形式のビューではなく多次元ビュー内のデータを表示します。 特定の構文と、プロバイダーでサポートされている動作の詳細については、OLAP OLE DB プロバイダーは、ドキュメントを参照してください。  
+ ADO と同様に、ADO MD は、基になる OLE DB プロバイダーを使用してデータにアクセスします。 ADO MD を使用するには、プロバイダーが OLAP 仕様の OLE DB で定義されている多次元データプロバイダー (.MDP) である必要があります。 .MDP は、表形式のビューではなく、多次元ビューにデータを表示します。これは、表形式のデータプロバイダー (TDP) がデータを提示する方法です。 プロバイダーでサポートされている特定の構文と動作の詳細については、OLAP OLE DB プロバイダーのドキュメントを参照してください。  
   
- このドキュメントでは、Visual Basic プログラミング言語の知識と ADO と OLAP の一般的な知識を前提としています。 詳細については、次を参照してください。、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)と[OLE DB のオンライン分析処理 (OLAP)](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx)します。  
+ このドキュメントでは、Visual Basic プログラミング言語に関する実用的な知識と、ADO および OLAP に関する一般的な知識を前提としています。 詳細については、 [ADO プログラマーズガイド](../../../ado/guide/ado-programmer-s-guide.md)および[オンライン分析処理 (OLAP) の OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx)を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -37,10 +37,10 @@ Microsoft® ActiveX® Data Objects (多次元) (ADO MD) により簡単にアク
 -   [ADO MD を使用したプログラミング](../../../ado/guide/multidimensional/programming-with-ado-md.md)  
   
 ## <a name="see-also"></a>参照  
- [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)   
- [ADO 拡張機能のデータ定義言語およびセキュリティ (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   
+ [ADO MD オブジェクトモデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+ [ADO プログラマーズガイド](../../../ado/guide/ado-programmer-s-guide.md)   
+ [データ定義言語およびセキュリティ用の ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   
  [多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [ADO MD を使用したプログラミング](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [ADO MD と ADO の併用](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
+ [ADO MD での ADO の使用](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [多次元データの操作](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

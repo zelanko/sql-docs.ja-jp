@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd8d60c975efa1e0a230a08cc6b1ab1a9ce149b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985738"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services のコード アクセス セキュリティ
-  コード アクセス セキュリティの中核を成す概念として、証拠、コード グループ、名前付き権限セットがあります。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、レポート マネージャー、レポート デザイナー、およびレポート サーバー コンポーネントには、それぞれ、データ、配信、表示、セキュリティ拡張機能はもとより、カスタム アセンブリのコード アクセス セキュリティを設定するポリシー ファイルが存在します。 以下のセクションでは、コード アクセス セキュリティの概要について説明します。 このセクションで取り上げられているトピックの詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK ドキュメントの「セキュリティ ポリシー モデル」を参照してください。  
+  コード アクセス セキュリティの中核を成す概念として、証拠、コード グループ、名前付き権限セットがあります。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、レポート マネージャー、レポート デザイナー、およびレポート サーバー コンポーネントには、それぞれ、データ、配信、表示、セキュリティ拡張機能はもとより、カスタム アセンブリのコード アクセス セキュリティを設定するポリシー ファイルが存在します。 以下のセクションでは、コード アクセス セキュリティの概要について説明します。 このセクションで取り上げられているトピックの詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK ドキュメントのセキュリティ ポリシー モデルに関するページを参照してください。  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] はコード アクセス セキュリティを使用します。その理由は、レポート サーバーは [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] テクノロジに基づき構築されているものの、一般の [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] アプリケーションとレポート サーバーの間には根本的な相違があるからです。 一般的な [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] アプリケーションはユーザー コードを実行しません。 一方、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ではオープンで拡張性のあるアーキテクチャが採用されています。これにより、ユーザーが、レポート定義言語の **Code** 要素を使用して、レポート定義ファイルを処理できるプログラムを作成すること、および特殊な機能を開発してレポートで使用するカスタム アセンブリに組み込むことが可能になります。 さらに、開発者は、レポート サーバーの能力を増強する強力な拡張機能を設計、展開できます。 この能力と柔軟性のために、最大限の防御とセキュリティが必要です。  
   

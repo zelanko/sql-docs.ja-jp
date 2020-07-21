@@ -1,21 +1,21 @@
 ---
-title: JDBC ドライバーのデータ型についてMicrosoft Docs
+title: JDBC ドライバーのデータ型について | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a78f6049f49c73c728e3de9329cc6b3e533cdc8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15ecca3277dcba3cd2235da9bff9a8d9fc2e4f6f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916601"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920272"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>JDBC ドライバーのデータ型について
 
@@ -29,7 +29,7 @@ JDBC の型システムは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-| トピック                                                                                                                                            | [説明]                                                                                                                                                                                                                                                          |
+| トピック                                                                                                                                            | 説明                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [基本データ型の使用](../../connect/jdbc/using-basic-data-types.md)                                                                           | JDBC の基本データ型について説明します。 これには、結果セット、パラメーター化クエリ、およびストアド プロシージャを使用してデータ型を操作する方法の例が含まれます。                                                                                                        |
 | [java.sql.Time の値をサーバーに送信する方法の構成](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | JDBC Driver での日付の生成方法について説明します。                                                                                                                                                                                                                       |

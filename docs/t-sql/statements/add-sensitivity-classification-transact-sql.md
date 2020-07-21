@@ -1,19 +1,14 @@
 ---
-title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
-ms.date: 03/25/2019
-ms.reviewer: ''
+title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
-ms.custom: ''
-ms.manager: craigg
-ms.author: giladm
-author: giladmit
+author: DavidTrigano
+ms.author: datrigan
+ms.reviewer: vanto
 f1_keywords:
 - ADD SENSITIVITY CLASSIFICATION
 - ADD_SENSITIVITY_CLASSIFICATION
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SENSITIVITY CLASSIFICATION statement
 - add labels
@@ -23,41 +18,50 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 - data classification
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+- rank
+ms.custom: ''
+ms.date: 06/10/2020
+monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
+ms.openlocfilehash: b8bfbab9ab06d57bdbb2b3efe3d23690f4d2f0e3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62712366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811877"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-1 つ以上のデータベース列に秘密度の分類に関するメタデータを追加します。 分類には、機密ラベルと情報の種類を含めることができます。  
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+
+1 つ以上のデータベース列に秘密度の分類に関するメタデータを追加します。 分類には、機密ラベルと情報の種類を含めることができます。
+
+SQL Server では、これは SQL Server 2019 で導入されました。
 
 データベース環境で機密データを分類すると、可視性の拡張と保護の強化が実現します。 詳しくは、[SQL Information Protection の概要](https://aka.ms/sqlip)に関する記事をご覧ください。
 
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>構文
 
-```sql
-ADD SENSITIVITY CLASSIFICATION TO
+```syntaxsql
+    ADD SENSITIVITY CLASSIFICATION TO
     <object_name> [, ...n ]
-    WITH ( <sensitivity_label_option> [, ...n ] )     
+    WITH ( <sensitivity_option> [, ...n ] )
 
 <object_name> ::=
 {
     [schema_name.]table_name.column_name
 }
 
-<sensitivity_label_option> ::=  
-{   
+<sensitivity_option> ::=  
+{
     LABEL = string |
     LABEL_ID = guidOrString |
     INFORMATION_TYPE = string |
-    INFORMATION_TYPE_ID = guidOrString  
+    INFORMATION_TYPE_ID = guidOrString |
+    RANK = NONE | LOW | MEDIUM | HIGH | CRITICAL
 }
-```  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数  
 
@@ -84,32 +88,34 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 情報の種類に関連付けられている識別子です。 多くの場合、システムにおいて情報の種類を一意に識別するために、一元的な情報保護プラットフォームで使用されます。
 
+*RANK*
 
-## <a name="remarks"></a>Remarks  
+感度の順位を定義する事前定義された値セットに基づく識別子です。 Advanced Threat Protection などの他のサービスによって使用され、順位に基づいて異常を検出します。
+
+## <a name="remarks"></a>解説  
 
 - 1 つのオブジェクトには分類を 1 つだけ追加できます。 分類済みのオブジェクトに分類を追加すると、既存の分類が上書きされます。
 - 1 つの `ADD SENSITIVITY CLASSIFICATION` ステートメントを使用して複数のオブジェクトを分類できます。
 - システム ビュー [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) を使用すると、データベースの秘密度の分類に関する情報を取得できます。
 
-
 ## <a name="permissions"></a>アクセス許可
 
 ALTER ANY SENSITIVITY CLASSIFICATION 権限が必要です。 ALTER ANY SENSITIVITY CLASSIFICATION は、データベース権限 ALTER またはサーバー権限 CONTROL SERVER によって示されます。
 
-
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="a-classifying-two-columns"></a>A. 2 つの列の分類
 
-次の例では、機密ラベル **Highly Confidential** および情報の種類 **Financial** を使用して、**dbo.sales.price** 列と **dbo.sales.discount** 列を分類します。
+次の例では、機密ラベル **Highly Confidential**、順位 **Critical**、情報の種類 **Financial** を使用して、**dbo.sales.price** 列と **dbo.sales.discount** 列を分類します。
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
     dbo.sales.price, dbo.sales.discount
-    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
+    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK='CRITICAL' )
 ```  
 
 ### <a name="b-classifying-only-a-label"></a>B. ラベルのみの分類
+
 次の例では、ラベル **Confidential** およびラベル ID **643f7acd-776a-438d-890c-79c3f2a520d6** を使用して、**dbo.customer.comments** 列を分類します。 この列では情報の種類は分類されません。
 
 ```sql
@@ -118,12 +124,9 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Confidential', LABEL_ID='643f7acd-776a-438d-890c-79c3f2a520d6' )
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
 
-[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
-
-[sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
-
-[権限 (データベース エンジン)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
-
-[SQL Information Protection の概要](https://aka.ms/sqlip)
+- [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+- [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
+- [権限 (データベース エンジン)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
+- [SQL Information Protection の概要](https://aka.ms/sqlip)

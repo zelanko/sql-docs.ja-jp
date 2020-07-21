@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6431ba7d874d93bfac7510eb21815dc79f093694
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014842"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926845"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>データの更新 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68014842"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |---------|---------------|  
 |[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)|パラメーター化クエリを実行する方法を説明します。|  
 |[方法: ストリームとしてデータを送信する](../../connect/php/how-to-send-data-as-a-stream.md)|サーバーにデータをストリーミングする方法について説明します。|  

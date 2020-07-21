@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036676"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
@@ -32,16 +32,16 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  有効な多次元式 (MDX) セット式です。  
   
  *Numeric_Expression*  
- 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- 数値式が指定されている場合、指定された数値式がセットに対して評価し、合計されます。 数値式を指定しなかった場合、指定したセットがセットのメンバーの現在のコンテキストで評価されてから、合計が算出されます。 SUM 関数を数値式ではない式に適用した場合、結果は不確定になります。  
+## <a name="remarks"></a>Remarks  
+ 数値式を指定すると、指定した数値式がセット全体で評価され、合計されます。 数値式を指定しなかった場合、指定したセットがセットのメンバーの現在のコンテキストで評価されてから、合計が算出されます。 SUM 関数を数値式ではない式に適用した場合、結果は不確定になります。  
   
 > [!NOTE]  
 >  Analysis Services では、数値セットの合計が計算される際、NULL 値は無視されます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、2001 年と 2002 年、Product.Category 属性階層のすべてのメンバーの再販業者の売上金額の合計を返します。  
+ 次の例では、2002 2001 暦年の属性階層のすべてのメンバーについて、再販業者の売上金額の合計を返します。  
   
 ```  
 WITH MEMBER Measures.x AS SUM  
@@ -66,7 +66,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- 次の例は、WITH MEMBER キーワードおよび**合計**の Canada と United States メンバーに対する Reseller Sales Amount メジャーの合計を格納する、メジャー ディメンションの計算されるメンバーを定義する関数、Geography ディメンション内の country 属性階層。  
+ 次の例では、WITH MEMBER キーワードと**SUM**関数を使用して、Measures ディメンション内の計算されるメンバーを定義します。これには、カナダの再販業者 Sales Amount メジャーの合計と、Geography ディメンションの Country 属性階層の米国メンバーが含まれます。  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -80,7 +80,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- 多くの場合、**合計**関数を併用、 **CURRENTMEMBER**関数または関数と同様**YTD**階層の currentmember に応じて異なるセットを返します。 たとえば、次のクエリは、年度の初めから ROWS 軸に表示されている日付までのすべての日付の Internet Sales Amount メジャーの合計を返します。  
+ 多くの場合、 **SUM**関数は、階層の CURRENTMEMBER に応じて異なるセットを返す**YTD**のような**CURRENTMEMBER**関数または関数と共に使用されます。 たとえば、次のクエリは、年度の初めから ROWS 軸に表示されている日付までのすべての日付の Internet Sales Amount メジャーの合計を返します。  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   
@@ -92,7 +92,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

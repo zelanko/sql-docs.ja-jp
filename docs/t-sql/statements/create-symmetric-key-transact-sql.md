@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 485ef972b86795a2127dba5fc3e86bdf98354c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f6e294c0bca1a871cc7b0ccb6c45a92072d7b0fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767001"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、対称キーを生成し、プロパティを指定します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68117066"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE SYMMETRIC KEY key_name   
     [ AUTHORIZATION owner_name ]  
     [ FROM PROVIDER provider_name ]  
@@ -114,9 +114,9 @@ CREATE SYMMETRIC KEY key_name
  \<algorithm>  
 暗号化アルゴリズムを指定します。   
 > [!WARNING]  
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが使用されなくなりました。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが非推奨とされます。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  対称キーを作成するときには、証明書、パスワード、対称キー、非対称キー、PROVIDER のうち少なくとも 1 つを使用して対称キーを暗号化する必要があります。 キーには種類ごとの暗号化を複数指定できます。 つまり、1 つの対称キーを、複数の証明書、パスワード、対称キー、および非対称キーを使用して同時に暗号化できます。  
   
 > [!CAUTION]  
@@ -153,7 +153,7 @@ CREATE SYMMETRIC KEY key_name
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY SYMMETRIC KEY 権限が必要です。 AUTHORIZATION を指定する場合は、データベース ユーザーに対する IMPERSONATE 権限、またはアプリケーション ロールに対する ALTER 権限が必要です。 証明書または非対称キーを使用して暗号化する場合は、証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。 対称キーを所有できるのは、Windows ログイン、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、およびアプリケーション ロールだけです。 グループとロールは対称キーを所有できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-symmetric-key"></a>A. 対称キーを作成する  
  次の例では、`AES 256` アルゴリズムを使用して対称キー `JanainaKey09` を作成し、新しいキーを証明書 `Shipping04` を使用して暗号化します。  

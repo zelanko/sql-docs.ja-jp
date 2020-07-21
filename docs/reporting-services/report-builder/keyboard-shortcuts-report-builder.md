@@ -1,5 +1,6 @@
 ---
 title: キーボード ショートカット (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで Reporting Services の改ページ調整されたレポートを作成および編集する際には、Windows 環境でナビゲーション用ショートカット キーをすべて利用できます。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.openlocfilehash: 624f48c3c3a118aecd20a389973cb7f79a6f448d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037861"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342762"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>キーボード ショートカット (レポート ビルダー)
   レポート ビルダーで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートを作成および編集する際には、Windows 環境が提供しているナビゲーション用ショートカット キーのすべてにアクセスできます。 複数ある標準キーボード マッピング スキームから選択できます。  
@@ -30,7 +31,7 @@ ms.locfileid: "67037861"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>レポート ビルダーでのキーボード ショートカット  
   
-|[説明]|キーの組み合わせ|  
+|説明|キーの組み合わせ|  
 |-----------------|---------------------|  
 |レポート ビルダーのメニューを開く。|Alt + F|  
 |レポートを作成する。|Ctrl + N|  
@@ -38,7 +39,7 @@ ms.locfileid: "67037861"
 |レポートを保存する。|Ctrl + S、Alt + S|  
 |レポート ビルダーの領域 (リボン、デザイン画面、グループ化ペイン、プロパティ ペイン、データ ペイン) 間を移動する。|F6&lt;/localizedText&gt;、&lt;localizedText&gt;Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F6|  
 |リボンに移動する。|Alt|  
-|リボンの [ホーム] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;H|  
+|リボンの [ホーム] タブに移動する。|Alt + H|  
 |リボンの [挿入] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;I|  
 |リボンの [表示] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;V|  
 |領域間の境界線 (グループ化ペインとデザイン画面の境界線など) をアクティブ化する。|Tab|  
@@ -54,10 +55,10 @@ ms.locfileid: "67037861"
 |選択した複数の項目の端を合わせる。|Alt + H + A|  
 |レポートを実行します。|F5、Alt + H + R|  
 |デザイン モードに切り替える。|F8|  
-|[コピー]|Ctrl + C、Alt + H + C|  
+|コピー|Ctrl + C、Alt + H + C|  
 |切り取り|Ctrl + X、Alt + H + X|  
-|[貼り付け]|Ctrl + V、Alt + H + V|  
-|すべて選択|Ctrl + A|  
+|貼り付け|Ctrl + V、Alt + H + V|  
+|すべて選択|CTRL + A|  
 |元に戻す|Ctrl + Z、Alt + Z|  
 |やり直し|Ctrl + Y、Alt + Y|  
 |[拡大]|Ctrl + 正符号 (+) キー|  

@@ -1,6 +1,6 @@
 ---
-title: Management Studio におけるカスタム レポート | Microsoft Docs
-ms.custom: ''
+title: Management Studio におけるカスタム レポート
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f2fd6eb4e5c3c6b50f7fd96a0dd5ff51034d305
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0e5dafb96c0bb94fcb2dd0134fefb3f96b7c5708
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259516"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257235"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、[!INCLUDE[msCoName](../../includes/msconame_md.md)] で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から実行できるようになりました。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、 [!INCLUDE[msCoName](../../includes/msconame_md.md)]で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から実行できるようになりました。  
   
 ## <a name="implementation"></a>実装  
 カスタム レポートはレポート定義言語 (RDL) を使用して作成し、レポート定義 (.rdl) ファイルとして保存します。 RDL には、レポートのデータ取得情報とレイアウト情報が XML 形式で含まれています。 RDL はオープン スキーマです。 開発者は、属性や要素を追加して RDL を拡張することができます。 レポートは、任意の有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをレポート内で実行できます。  

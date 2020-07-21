@@ -8,21 +8,20 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b90fdbd9a0bc80dfc6a82416d0193b2951fe13ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996397"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-  A`CurvePolygon`は外部境界リングと 0 によって定義された、位相的に閉じた表面または以上の内部リング  
+  は、 `CurvePolygon` 外部境界リングおよび0個以上の内部リングによって定義された位相的閉じサーフェイスです。  
   
 > [!IMPORTANT]  
->  詳細な説明とで導入された空間機能の例の[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]など、`CurvePolygon`サブタイプは、ダウンロード、ホワイト ペーパー「 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)します。  
+>  サブタイプを含め、で導入された空間機能の詳細な説明と例については、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `CurvePolygon` ホワイトペーパー「 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)」をダウンロードしてください。  
   
- 次の条件の属性を定義する、`CurvePolygon`インスタンス。  
+ 次の条件では、インスタンスの属性を定義し `CurvePolygon` ます。  
   
 -   `CurvePolygon` インスタンスの境界は、外部リングとすべての内部リングによって定義されます。  
   
@@ -120,7 +119,7 @@ DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -12
 SELECT @g.STIsValid();  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. 空の CurvePolygon を使用して geometry インスタンスをインスタンス化する  
  次の例は、空の `CurvePolygon` インスタンスを作成する方法を示しています。  
@@ -181,7 +180,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  @g1 と @g2 はどちらも同じ外部境界リング (半径 5 の円) を使用し、内部リングに正方形を使用しています。  しかし、インスタンス @g1 は有効ですが、インスタンス @g2 は無効です。  @g2 が無効な理由は、外部リングによって範囲指定された内部空間が内部リングによって 4 つの別個の領域に分割されているためです。  この状況を次の図に示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Polygon](polygon.md)   
  [CircularString](circularstring.md)   
  [CompoundCurve](compoundcurve.md)   

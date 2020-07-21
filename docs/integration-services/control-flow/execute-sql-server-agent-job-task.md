@@ -1,9 +1,7 @@
 ---
-title: SQL Server エージェント ジョブの実行タスク | Microsoft Docs
-ms.custom: ''
+title: SQL Server エージェント ジョブの実行タスク
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
@@ -14,14 +12,15 @@ helpviewer_keywords:
 - jobs [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec6fc06bdcb7a7e622590b66698257b671b4dd98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b937c549cc58bf7db1e1a7c15bec9050f7dc3065
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988348"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750935"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>SQL Server エージェント ジョブの実行タスク
 
@@ -33,9 +32,9 @@ ms.locfileid: "67988348"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの実行タスクを使用すると、パッケージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントに関連する管理タスクを実行できます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブでは、フォルダー内のパッケージの一覧を取得する **sp_enum_dtspackages** などのシステム ストアド プロシージャを実行できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ローカルまたはマルチサーバーの管理ジョブを自動的に実行できるようにするには、エージェントを実行している必要があります。  
+>  ローカルまたはマルチサーバーの管理ジョブを自動的に実行できるようにするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行している必要があります。  
   
- このタスクは、 **sp_start_job** システム プロシージャをカプセル化し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの名前を引数としてこのプロシージャに渡します。 詳細については、[「sp_start_job (Transact-SQL)」](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) を参照してください。  
+ このタスクは、 **sp_start_job** システム プロシージャをカプセル化し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの名前を引数としてこのプロシージャに渡します。 詳細については、「[sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)」をご覧ください。  
   
 ## <a name="configuring-the-execute-sql-server-agent-job-task"></a>SQL Server エージェント ジョブの実行タスクの構成  
  プロパティは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定できます。 このタスクは、 **デザイナーの** [ツールボックス] **の** [メンテナンス プランのタスク] [!INCLUDE[ssIS](../../includes/ssis-md.md)] に表示されます。  

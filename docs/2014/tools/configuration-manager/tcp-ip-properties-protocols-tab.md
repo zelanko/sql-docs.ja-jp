@@ -1,5 +1,5 @@
 ---
-title: TCP - IP プロパティ ([プロトコル] タブ) |Microsoft Docs
+title: '[TCP-IP のプロパティ] ([プロトコル] タブ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 388b13ad4c381c89eeaeae2f61778161830ea895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150458"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040457"
 ---
-# <a name="tcp---ip-properties-protocols-tab"></a>TCP - IP プロパティ ([プロトコル] タブ)
+# <a name="tcp---ip-properties-protocols-tab"></a>[TCP-IP のプロパティ] ([プロトコル] タブ)
   **[TCP/IP のプロパティ]** ダイアログ ボックスは、TCP/IP プロトコルのオプションを構成するために使用します。 左ペインで **[TCP/IP]** をクリックすると、詳細ペインに個々の IP アドレス構成が表示されます。  
   
  変更を有効にするには、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。  
   

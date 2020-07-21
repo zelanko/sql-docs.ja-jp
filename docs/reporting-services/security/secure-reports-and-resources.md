@@ -15,10 +15,10 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570627"
 ---
 # <a name="secure-reports-and-resources"></a>レポートとリソースの保護

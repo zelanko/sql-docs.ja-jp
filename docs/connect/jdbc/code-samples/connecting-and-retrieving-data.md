@@ -1,21 +1,21 @@
 ---
-title: データの接続と取得 |Microsoft Docs
+title: 接続およびデータの取得 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 310c66f6951a467b368fc44e1933bc6c8b6b36b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f96b7f96b64452e37804ceeabb05699a33f63588
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957274"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922566"
 ---
 # <a name="connecting-and-retrieving-data"></a>接続およびデータの取得
 
@@ -32,12 +32,12 @@ ms.locfileid: "67957274"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[接続 URL のサンプル](../../../connect/jdbc/code-samples/connection-url-sample.md)|接続 URL を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続してから、SQL ステートメントを使用してデータを取得する方法について説明します。|  
 |[データ ソースのサンプル](../../../connect/jdbc/code-samples/data-source-sample.md)|データ ソースを使用して SQL Server に接続し、ストアド プロシージャを使用してデータを取得する方法について説明します。|  
   
 ## <a name="see-also"></a>参照
 
-[サンプル JDBC Driver アプリケーション](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
+[サンプル JDBC ドライバー アプリケーション](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
   

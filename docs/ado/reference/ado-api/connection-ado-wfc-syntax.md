@@ -1,5 +1,5 @@
 ---
-title: 接続 (ADO - WFC 構文) |Microsoft Docs
+title: Connection (ADO-WFC 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,17 +11,17 @@ apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64647d577170a79b1f600b7162a0338ea19c572e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b8602b170d4c067744fd002a98c949b8d0836d2e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919535"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760308"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO - WFC 構文)
-## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
   
 ### <a name="constructor"></a>コンストラクター  
   
@@ -44,7 +44,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **ExecuteUpdate**メソッドは、特殊なケース メソッドを呼び出す、基になる ADO**実行**特定のパラメーターを持つメソッド。 **ExecuteUpdate**メソッドの戻り値をサポートしていません、**レコード セット**オブジェクト、そのため、**実行**メソッドの*オプション*パラメーターは、使用して変更**AdoEnums.ExecuteOptions.NORECORDS**します。 後に、**実行**メソッドが完了したら、その更新された*RecordsAffected*にパラメーターが渡される、 **executeUpdate**メソッドで、最後に、として返されます**int**します。  
+ **Executeupdate**メソッドは、特定のパラメーターを使用して基になる ADO **execute**メソッドを呼び出す特殊なケースメソッドです。 **Executeupdate**メソッドでは、**レコードセット**オブジェクトの戻りがサポートされていないため、 **execute**メソッドの*options*パラメーターは AdoEnums を使用して変更されます。 **NORECORDS**。 **Execute**メソッドが完了すると、更新された*RecordsAffected*パラメーターが**executeupdate**メソッドに戻されます。このメソッドは、最後に**int**として返されます。  
   
 ```  
 public void open()   
@@ -58,7 +58,7 @@ public Recordset openSchema(int schema)
 public Recordset openSchema(int schema, Object[] restrictions)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getAttributes()  
@@ -86,7 +86,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>イベント  
- ADO と WFC イベントの詳細については、次を参照してください。[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)します。  
+ ADO/WFC イベントの詳細については、「[言語別の Ado イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  

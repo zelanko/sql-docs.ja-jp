@@ -27,15 +27,15 @@ ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c75bd121f799a9612a0f2857478d6c71055b080
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab3e4b428cd3f8d5c899558ac2c4e1c5089d2cb1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086717"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85981611"
 ---
-# <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のユーザーが、指定された [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows グループまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールのメンバーであるかどうかを示します。 IS_MEMBER 関数は、Azure Active Directory グループに対してはサポートされません。  
   
@@ -43,14 +43,14 @@ ms.locfileid: "68086717"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 IS_MEMBER ( { 'group' | 'role' } )  
 ```  
   
 ## <a name="arguments"></a>引数  
  **'** *group* **'**  
-**に適用されます**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] を通じて [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]です。
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  確認する Windows グループの名前です。*Domain*\\*Group* という形式にする必要があります。 *グループ* は **sysname**です。  
   
@@ -60,10 +60,10 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  IS_MEMBER は、次の値を返します。  
   
-|戻り値|[説明]|  
+|戻り値|説明|  
 |------------------|-----------------|  
 |0|現在のユーザーがのメンバーではない *グループ* または *ロール*.|  
 |1|現在のユーザーのメンバーである *グループ* または *ロール*.|  
@@ -80,7 +80,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## <a name="related-functions"></a>関連する関数  
  別のかを判断する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがデータベース ロールのメンバーを [ IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md). 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、現在のユーザーがデータベース ロールまたは Windows ドメイン グループのメンバーであるかどうかを確認します。  
   
 ```  

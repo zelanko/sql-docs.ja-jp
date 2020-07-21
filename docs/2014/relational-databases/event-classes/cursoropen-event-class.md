@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9cdb7fbddd53eb9e2dfbc36d7a86b6bac2619bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dc2522aef82913bcc2e93f2f8fcde4f2311e958
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030201"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen イベント クラス
   **CursorOpen** イベント クラスでは、アプリケーション プログラミング インターフェイス (API) のカーソルで発生する、カーソルを開くイベントが示されます。 カーソルを開くイベントは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が、カーソルやカーソル オプションに関連する SQL ステートメントを定義し、カーソルを作成した時点で発生します。  
@@ -42,8 +41,8 @@ ms.locfileid: "62663455"
 |**IntegerData**|**int**|カーソルの種類。 値は次のとおりです。<br /><br /> 1 = キー セット<br /><br /> 2 = 動的<br /><br /> 4 = 順方向専用<br /><br /> 8 = 静的<br /><br /> 16 = 高速順方向|25|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
-|**LoginSid**|**image**|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
-|**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|[はい]|  
+|**LoginSid**|**画像**|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**RequestID**|**int**|カーソルを開いた要求 ID。|49|はい|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
@@ -51,7 +50,7 @@ ms.locfileid: "62663455"
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
-|**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|[はい]|  
+|**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   
 ## <a name="see-also"></a>参照  
  [拡張イベント](../extended-events/extended-events.md)   

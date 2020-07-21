@@ -16,10 +16,10 @@ ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a17f4482c46b9e9650b9debbb8a1517f022f1bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979368"
 ---
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>getStringFunctions メソッド (SQLServerDatabaseMetaData)
@@ -40,7 +40,7 @@ public java.lang.String getStringFunctions()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getStringFunctions メソッドは、java.sql.DatabaseMetaData インターフェイスの getStringFunctions メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

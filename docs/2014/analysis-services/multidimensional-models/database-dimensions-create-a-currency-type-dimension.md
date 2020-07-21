@@ -1,5 +1,5 @@
 ---
-title: 通貨型ディメンションの作成 |Microsoft Docs
+title: 通貨の種類のディメンションを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d967d1275c7b682c79313b95af06f3088e7acf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e0cfd7aa0b6d7f401510add51f3938c4c297a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075982"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547164"
 ---
 # <a name="create-a-currency-type-dimension"></a>通貨ディメンションの作成
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、通貨ディメンションとは、通貨を財務報告用に一覧にした属性を持つディメンションを指します。  
+  では [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、通貨ディメンションとは、財務報告のために通貨の一覧を表す属性を持つディメンションです。  
   
  通貨ディメンションによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のキューブに通貨換算機能を追加できます。 キューブに通貨換算を追加するには、ビジネス インテリジェンス ウィザードを使用して、クライアント アプリケーションのロケールに対応する値に通貨メジャーを変換する多次元式 (MDX) スクリプト コマンドを定義します。 この MDX スクリプトを作成するには、ビジネス インテリジェンス ウィザードで次の情報を指定する必要があります。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66075982"
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [ビジネス インテリジェンス ウィザードの F1 ヘルプ](../business-intelligence-wizard-f1-help.md)   
+ [ビジネスインテリジェンスウィザードの F1 ヘルプ](../business-intelligence-wizard-f1-help.md)   
  [ディメンションの種類](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

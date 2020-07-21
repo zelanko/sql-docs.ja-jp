@@ -1,5 +1,5 @@
 ---
-title: Stream (Visual C 構文用の ADO) |Microsoft Docs
+title: Stream (Visual C++ 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Stream collection [ADO]
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec7e5ac51718bd703586b0c60f77dad0c77cb938
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b570b21caed38042cfe975332791251426236c98
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930693"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759648"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Stream (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -41,7 +41,7 @@ Write(VARIANT Buffer)
 WriteText(BSTR Data, StreamWriteEnum Options = adWriteChar)  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 get_Charset(BSTR *pbstrCharset)  
@@ -59,5 +59,5 @@ get_Type(StreamTypeEnum *pType)
 put_Type(StreamTypeEnum Type)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2996a8ca8471ef59d4781e21239a72262daa759
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068700"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>マージ アーティクルのビジネス ロジック ハンドラーの実装
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でレプリケーション プログラミングまたはレプリケーション管理オブジェクト (RMO) を使用して、マージ アーティクルにビジネス ロジック ハンドラーを実装する方法について説明します。  
@@ -46,11 +45,11 @@ ms.locfileid: "62721204"
   
 -   **マージ アーティクルにビジネス ロジック ハンドラーを実装するために使用するもの:**  
   
-     [レプリケーション プログラミング](#ReplProg)  
+     [レプリケーションプログラミング](#ReplProg)  
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> レプリケーション プログラミングの使用  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> レプリケーション プログラミングの使用  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>ビジネス ロジック ハンドラーを作成および配置するには  
   
@@ -99,20 +98,20 @@ ms.locfileid: "62721204"
   
 1.  パブリッシャーで、[sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) を実行して、アセンブリがまだビジネス ロジック ハンドラーとして登録されていないことを確認します。  
   
-2.  ディストリビューターで実行[sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)、ビジネス ロジック ハンドラーのフレンドリ名を指定する **@article_resolver** 、 @property`true`の **@is_dotnet_assembly** 、名前のアセンブリの **@dotnet_assembly_name** 、オーバーライドするクラスの完全修飾名と<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>の **@dotnet_class_name** .  
+2.  ディストリビューターで、のビジネス[sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)ロジックハンドラーのフレンドリ名を指定し、に値を、にアセンブリの名前を、にを **@article_resolver** `true` **@is_dotnet_assembly** **@dotnet_assembly_name** オーバーライドするクラスの完全修飾名を <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 指定して、sp_registercustomresolver &#40;transact-sql&#41;を実行し **@dotnet_class_name** ます。  
   
     > [!NOTE]  
-    >  マージ エージェント実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にビジネス ロジック ハンドラー アセンブリが配置されている場合は、 **@dotnet_assembly_name** 」を参照してください。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
+    >  アセンブリがマージエージェント実行可能ファイルと同じディレクトリに配置されていない場合、マージエージェントを同期的に起動するアプリケーションと同じディレクトリ、またはグローバルアセンブリキャッシュ (GAC) 内に存在する場合は、のアセンブリ名を使用して完全パスを指定する必要があり **@dotnet_assembly_name** ます。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>新しいテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行してアーティクルを定義し、 **@article_resolver** にビジネス ロジック ハンドラーの表示名を指定します。 詳しくは、「 [アーティクルを定義](publish/define-an-article.md)」をご覧ください。  
+1.  [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行してアーティクルを定義し、**@article_resolver** にビジネス ロジック ハンドラーの表示名を指定します。 詳しくは、「 [アーティクルを定義](publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>既存のテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行し、 **@publication** 、 **@article** を指定し、 **@property** に **article_resolver** 値、 **@value** にビジネス ロジック ハンドラーの表示名を指定します。  
+1.  を指定して[&#41;&#40;sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。これには、、、 **@publication** **@article** の**article_resolver**の値、 **@property** およびのビジネスロジックハンドラーの表示名を指定し **@value** ます。  
   
-###  <a name="TsqlExample"></a> 例 (レプリケーション プログラミング)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a>例 (レプリケーションプログラミング)  
  次の例に、監査ログを作成するビジネス ロジック ハンドラーを示します。  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -123,7 +122,7 @@ ms.locfileid: "62721204"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../snippets/tsql/SQL15/replication/howto/tsql/registerblh_10.sql#sp_registerblh_10)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   
 #### <a name="to-create-a-business-logic-handler"></a>ビジネス ロジック ハンドラーを作成するには  
   
@@ -218,7 +217,7 @@ ms.locfileid: "62721204"
   
 6.  <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>にビジネス ロジック ハンドラーの表示名を設定します。 これは、ビジネス ロジック ハンドラーの登録時に指定した <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> プロパティの値になります。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a>例 (RMO)  
  次のビジネス ロジック ハンドラーの例では、サブスクライバーでの挿入、更新、および削除に関する情報をログに記録します。  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -238,9 +237,9 @@ ms.locfileid: "62721204"
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
 ## <a name="see-also"></a>参照  
- [マージ アーティクルのカスタム競合回避モジュールの実装](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [ビジネス ロジック ハンドラーのデバッグ&#40;レプリケーション プログラミング&#41;](debug-a-business-logic-handler-replication-programming.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [マージアーティクルのカスタム競合回避モジュールの実装](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
+ [ビジネスロジックハンドラーのデバッグ &#40;レプリケーションプログラミング&#41;](debug-a-business-logic-handler-replication-programming.md)   
+ [レプリケーションのセキュリティに関するベストプラクティス](security/replication-security-best-practices.md)   
  [レプリケーション管理オブジェクトの概念](concepts/replication-management-objects-concepts.md)  
   
   

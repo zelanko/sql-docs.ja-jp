@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_configure |Microsoft Docs
+title: sqlsrv_configure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - sqlsrv_configure
 - API Reference, sqlsrv_configure
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17c0024e75dacc56b2f5a10d26a899256dbad7fc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935805"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902788"
 ---
-# <a name="sqlsrvconfigure"></a>sqlsrv_configure
+# <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 エラー処理とログ記録のオプションの設定を変更します。  
@@ -50,7 +50,7 @@ sqlsrv_configure( string $setting, mixed $value )
 ## <a name="return-value"></a>戻り値  
 サポートされていない設定または値を使用して **sqlsrv_configure** 関数を呼び出すと、この関数は **false**を返します。 それ以外の場合は、 **true**を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 (1) クライアント側クエリの詳細については、「[カーソルの種類 &#40;SQLSRV ドライバー&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)」を参照してください。  
   
 (2) ログ記録アクティビティの詳細については、「[アクティビティのログ記録](../../connect/php/logging-activity.md)」を参照してください。  

@@ -13,33 +13,32 @@ helpviewer_keywords:
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6781840e6a6c84773f40a6cd0557ccb79b676eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060149"
 ---
 # <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の CREATE PROCEDURE ステートメントを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する方法について説明します。  
   
 ##  <a name="Top"></a>   
--   **作業を開始する準備:**[アクセス許可](#Permissions)  
+-   **作業を開始する準備:** [アクセス許可](#Permissions)  
   
 -   **プロシージャを作成するには次を使用します:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースの CREATE PROCEDURE 権限と、プロシージャを作成するスキーマに対する ALTER 権限が必要です。  
   
-##  <a name="Procedures"></a> ストアド プロシージャを作成する方法  
+##  <a name="how-to-create-a-stored-procedure"></a><a name="Procedures"></a> ストアド プロシージャを作成する方法  
  次のいずれかを使用します。  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **オブジェクト エクスプローラーでプロシージャを作成するには**  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
@@ -65,7 +64,7 @@ ms.locfileid: "63016043"
     |@Datatype_For_Param2|`nvarchar`(50)|  
     |[Default_Value_For_Param2]|NULL|  
   
-6.  [**OK**] をクリックします。  
+6.  **[OK]** をクリックします。  
   
 7.  **クエリ エディター**で、SELECT ステートメントを次のステートメントに置き換えます。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "63016043"
 > [!WARNING]  
 >  すべてのユーザー入力を検証します。 ユーザー入力は検証するまで連結しないでください。 検証していないユーザー入力から作成されたコマンドは、絶対に実行しないでください。  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **クエリ エディターでプロシージャを作成するには**  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
@@ -98,38 +97,34 @@ ms.locfileid: "63016043"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、上と同じストアド プロシージャを別のプロシージャ名で作成します。  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
     CREATE PROCEDURE HumanResources.uspGetEmployeesTest2   
         @LastName nvarchar(50),   
         @FirstName nvarchar(50)   
-    AS   
+    AS
   
         SET NOCOUNT ON;  
         SELECT FirstName, LastName, Department  
         FROM HumanResources.vEmployeeDepartmentHistory  
         WHERE FirstName = @FirstName AND LastName = @LastName  
         AND EndDate IS NULL;  
-    GO  
-  
+    GO
     ```  
   
 4.  プロシージャを実行するには、次の例をコピーして新しいクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 パラメーター値を指定するときに別の方法が表示されることに注意してください。  
   
-    ```  
+    ```sql
     EXECUTE HumanResources.uspGetEmployeesTest2 N'Ackerman', N'Pilar';  
     -- Or  
     EXEC HumanResources.uspGetEmployeesTest2 @LastName = N'Ackerman', @FirstName = N'Pilar';  
     GO  
     -- Or  
     EXECUTE HumanResources.uspGetEmployeesTest2 @FirstName = N'Pilar', @LastName = N'Ackerman';  
-    GO  
-  
+    GO
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
-  
   

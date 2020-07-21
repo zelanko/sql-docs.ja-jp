@@ -1,5 +1,5 @@
 ---
-title: バージョンを削除する (マスター データ サービス) | Microsoft Docs
+title: バージョンを削除する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e0886701a5e3554702c077c2a165029af71a545e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6faf2fc9b6b4ac3b8004771df79af34a3d255fa8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813348"
 ---
 # <a name="delete-a-version-master-data-services"></a>バージョンを削除する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、バージョンに関連付けられたマスター データが確実に不要になった場合には、そのバージョンを削除します。 バージョンを削除した後、関連するマスター データを取得することはできません。  
   
 > [!WARNING]  
 >  モデルにバージョンが 1 つしかない場合にそのバージョンを削除すると、モデルは使用できなくなります。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで mdm.viw_SYSTEM_SCHEMA_VERSION ビューを表示して mds.udpVersionDelete ストアド プロシージャを実行するための権限が必要です。 詳細については、「[データベース オブジェクト セキュリティ (マスター データ サービス)](../master-data-services/database-object-security-master-data-services.md)」を参照してください。  
@@ -56,7 +56,7 @@ ms.locfileid: "67906420"
     >  Web アプリケーションに変更が反映されるまで数分かかる場合があります。  
   
 ## <a name="see-also"></a>関連項目  
- [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)   
+ [バージョン &#40;マスターデータサービス&#41;](../master-data-services/versions-master-data-services.md)   
  [バージョンをコピーする (マスター データ サービス)](../master-data-services/copy-a-version-master-data-services.md)  
   
   

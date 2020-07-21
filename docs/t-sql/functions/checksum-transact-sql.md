@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CHECKSUM function
 - checksum values
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a6fd6dd25d19e153b4a2623ceaaeaec558a1aad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f5fca41d59ed5b35451a1e63993b7ec6235244a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732649"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68064752"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
@@ -45,7 +45,7 @@ CHECKSUM ( * | expression [ ,...n ] )
 この引数は、チェックサムの計算がすべてのテーブル列をカバーしていることを指定します。 列のいずれかが比較できないデータ型である場合、`CHECKSUM` ではエラーが返されます。 比較できないデータ型は次のとおりです。
 
 - **cursor**
-- **image**
+- **画像**
 - **ntext**
 - **text**
 - **XML**
@@ -58,7 +58,7 @@ CHECKSUM ( * | expression [ ,...n ] )
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `CHECKSUM` では、引数リストに対してハッシュ値 (チェックサム) が計算されます。 このハッシュ値を使用して、ハッシュ インデックスを作成します。 `CHECKSUM` 関数に列の引数があり、計算された `CHECKSUM` 値を基にインデックスを作成する場合、結果はハッシュ インデックスになります。 このハッシュ インデックスは、列で等値検索を行うときに使用できます。
   
 `CHECKSUM` はハッシュ関数のプロパティとなります。`CHECKSUM` を任意の 2 つの式のリストに適用した場合、その 2 つのリストに対応する要素のデータ型が同じで、等号 (=) 演算子により比較した場合にそれらの対応する要素が等しければ、同じ値が返されます。 `CHECKSUM` 関数の目的のために、指定した型の NULL 値は等しいものとして比較されるように定義されます。 式リストのいずれかの値を変更した場合は、そのリストのチェックサムも変わります。 ただし、これは保証されません。 そのため、値が変更されたかどうかを検出する際には、アプリケーションが変更を検出できないことを許容できる場合のみ、`CHECKSUM` の使用をお勧めします。 それ以外の場合は、代わりに `HASHBYTES` の使用を検討してください。 MD5 ハッシュ アルゴリズムを指定した場合は、`HASHBYTES` から 2 つの異なる入力に対して同じ結果が返される可能性が `CHECKSUM` よりもはるかに低くなります。
@@ -69,7 +69,7 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 `CHECKSUM ()` では、結果が一意になるとは限りません。
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 これらの例は、`CHECKSUM` を使用してハッシュ インデックスを作成する方法を示しています。
   
 ハッシュ インデックスを作成するために、最初の例では、インデックスを作成するテーブルに計算されたチェックサム列を追加します。 次に、チェックサム列にインデックスを構築します。 

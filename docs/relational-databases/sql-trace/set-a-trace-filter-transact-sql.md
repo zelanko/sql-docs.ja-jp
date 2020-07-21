@@ -13,24 +13,22 @@ helpviewer_keywords:
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aaf2c556af354cf9b928cf9f2cb945e1ab6737a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98d18b704ff407064cd18083b79f80f901d21903
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126620"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750934"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>トレース フィルターの設定 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、ストアド プロシージャを使用して、トレース中のイベントに関して必要な情報のみを取得するフィルターを作成する方法について説明します。  
   
 ### <a name="to-set-a-trace-filter"></a>トレース フィルターを設定するには  
   
-1.  トレースが既に実行中の場合は、 **@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
+1.  トレースが既に実行中の場合は、`@status = 0` を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
   
 2.  **sp_trace_setfilter** を実行して、トレース中のイベントに関して取得する情報の種類を構成します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!IMPORTANT]  
 >  通常のストアド プロシージャとは異なり、すべての [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ストアド プロシージャ (**sp_trace\__xx_** ) で、パラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートしていません。 これらのパラメーターを、引数の説明で指定されている正しいデータ型で指定しないと、このストアド プロシージャではエラーが返されます。  

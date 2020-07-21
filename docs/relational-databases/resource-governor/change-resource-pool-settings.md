@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 328d61171c28f89083712c7f46c7b97394a7de84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 354b81a774be131c7112b61d8b3709d45e9c0c2e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720520"
 ---
 # <a name="change-resource-pool-settings"></a>リソース プールの設定の変更
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   リソース プールの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
@@ -28,17 +28,17 @@ ms.locfileid: "68137002"
   
 -   **リソース プールの設定変更に使用するもの:** [SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  CPU の割合の最大値は、CPU の割合の最小値以上にする必要があります。 メモリの割合の最大値は、メモリの割合の最小値以上にする必要があります。  
   
  すべてのリソース プールの CPU の割合の最小値の合計およびメモリの割合の最小値の合計が、それぞれ 100 を超えないようにしてください。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  リソース プールの設定を変更するには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="ChgRPProp"></a> SQL Server Management Studio を使用してリソース プールの設定を変更する  
+##  <a name="change-resource-pool-settings-using-sql-server-management-studio"></a><a name="ChgRPProp"></a> SQL Server Management Studio を使用してリソース プールの設定を変更する  
  **リソース プールの設定を変更するには - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース プール]** ノードまで再帰的に展開します。  
@@ -51,9 +51,7 @@ ms.locfileid: "68137002"
   
 5.  変更を保存するには、 **[OK]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="ChgRPTSQL"></a> Transact-SQL を使用してリソース プールの設定を変更する  
+##  <a name="change-resource-pool-settings-using-transact-sql"></a><a name="ChgRPTSQL"></a> Transact-SQL を使用してリソース プールの設定を変更する  
  **リソース プールの設定を変更するには - [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  変更するプロパティ値を指定する **ALTER RESOURCE POOL** または **ALTER EXTERNAL RESOURCE POOL** ステートメントを実行します。  

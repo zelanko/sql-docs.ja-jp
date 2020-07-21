@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus: (OLE DB) |マイクロソフトのドキュメント'
+title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,19 +13,17 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55b018941fbd8bb4cecef7c5f10ea41bea566534
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: eb263a1b61f7da765eff38d9b10eba683e8d86d2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051034"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005379"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   非同期に実行されている操作を取り消します。  
   
@@ -40,7 +38,7 @@ HRESULT Abort(
   
 ## <a name="arguments"></a>引数  
  *hChapter*[in]  
- 操作を中止するチャプターのハンドル。 呼び出されるオブジェクトは、行セット オブジェクトではない場合、または、操作がチャプターに適用されません、呼び出し元を設定する必要があります*hChapter* DB_NULL_HCHAPTER にします。  
+ 操作を中止するチャプターのハンドル。 呼び出されるオブジェクトが行セットオブジェクトではない場合、または操作がチャプターに適用されない場合、呼び出し元は*Hchapter*を DB_NULL_HCHAPTER に設定する必要があります。  
   
  *eOperation*[in]  
  中止する操作。 この引数には、  
@@ -61,14 +59,14 @@ HRESULT Abort(
  プロバイダー固有のエラーが発生しました。  
   
  E_INVALIDARG  
- *HChapter*パラメーターがない DB_NULL_HCHAPTER または*eOperation* DBASYNCH_OPEN ではありません。  
+ *Hchapter*パラメーターが DB_NULL_HCHAPTER ないか、または*eoperation*が DBASYNCH_OPEN ではありません。  
   
  E_UNEXPECTED  
- **Issasynchstatus:** をデータ ソース オブジェクトで呼び出された**idbinitialize::initialize**が呼び出されていない、またはが完了していません。  
+ **IDBInitialize:: Initialize**が呼び出されていないか、または完了していないデータソースオブジェクトに対して**ISSAsynchStatus:: Abort**が呼び出されました。  
   
- または、**IDBInitialize::Initialize** が呼び出されたものの、その後初期化前に取り消されたか、タイムアウトになったデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。データ ソース オブジェクトはまだ初期化されていません。  
+ **IDBInitialize:: Initialize**が呼び出されたが、その後初期化前にキャンセルされたか、またはタイムアウトしたデータソースオブジェクトに対して**ISSAsynchStatus:: Abort**が呼び出されました。データソースオブジェクトはまだ初期化されていません。  
   
- **Issasynchstatus:** を行セットに対して呼び出された**itransaction::commit**または**itransaction::abort** 、以前に呼び出された行セットのコミット後も存続または中止していないと、ゾンビ状態。  
+ **Itransaction:: commit**または**Itransaction:: Abort**が以前に呼び出された行セットで**ISSAsynchStatus:: abort**が呼び出されましたが、行セットがコミットまたは中止になっておらず、ゾンビ状態になっています。  
   
  初期化フェーズで非同期に取り消された行セットに対して **ISSAsynchStatus::Abort** が呼び出された場合も、この値が返されます。 行セットはゾンビ状態になります。  
   
@@ -77,7 +75,7 @@ HRESULT Abort(
   
  *eOperation* に DBASYNCHOP_OPEN 以外の値を渡して **ISSAsynchStatus::Abort** を呼び出すと、S_OK が返されます。 これは、操作が完了したか取り消されたことを示すわけではありません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [非同期操作の実行](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10796dde3513e5c4b7970d1e4f6c4eedcad3c6c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4008df15ded37398ef8565bac759364699561fad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245585"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058685"
 ---
-# <a name="sql-server-agent-properties-history-page"></a>[SQL Server エージェントのプロパティ] ([履歴] ページ)
-  このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス履歴ログの管理設定の表示と設定を行うことができます。  
+# <a name="sql-server-agent-properties-history-page"></a>SQL Server エージェントのプロパティ ([履歴] ページ)
+  このページを使用すると、エージェントサービスの履歴ログを管理するための設定を表示および変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ジョブ履歴ログのサイズを制限する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがログで保持するジョブ履歴情報のサイズの上限を設定します。  
   

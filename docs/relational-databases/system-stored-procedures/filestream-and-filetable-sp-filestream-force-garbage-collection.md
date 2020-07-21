@@ -1,5 +1,5 @@
 ---
-title: sp_filestream_force_garbage_collection (TRANSACT-SQL) |Microsoft Docs
+title: sp_filestream_force_garbage_collection (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bc56f1434c0b1670495d30accdb70e0456295b01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717431"
 ---
-# <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  不要な FILESTREAM ファイルの削除を実行するには、FILESTREAM ガベージ コレクターに強制します。  
+  FILESTREAM ガベージコレクターを強制的に実行し、不要な FILESTREAM ファイルを削除します。  
   
- ガベージ コレクターによってクリーンアップされました内に削除されたすべてのファイルまで、FILESTREAM コンテナーを削除できません。 FILESTREAM ガベージ コレクターは自動的に実行されます。 ただし、ガベージ コレクターの前にコンテナーを削除するが実行する必要がある場合は、sp_filestream_force_garbage_collection を使用するには、ガベージ コレクターを手動で実行します。  
+ FILESTREAM コンテナーは、その中のすべての削除済みファイルがガベージコレクターによってクリーンアップされるまで削除できません。 FILESTREAM ガベージ コレクターは自動的に実行されます。 ただし、ガベージコレクターを実行する前にコンテナーを削除する必要がある場合は、sp_filestream_force_garbage_collection を使用して手動でガベージコレクターを実行できます。  
   
   
 ## <a name="syntax"></a>構文  
@@ -43,13 +43,13 @@ sp_filestream_force_garbage_collection
   
 ## <a name="arguments"></a>引数  
  `[ @dbname = ]  'database_name'`  
- ガベージ コレクターを実行するデータベースの名前を示します。  
+ ガベージコレクターを実行するデータベースの名前を示します。  
   
 > [!NOTE]  
-> `@dbname` **sysname**します。 指定しない場合、指定すると、現在のデータベースが想定されます。  
+> `@dbname` のデータ型は **sysname** です。 指定しない場合、現在のデータベースが想定されます。  
   
  `[ @filename = ] 'logical_file_name'`  
- ガベージ コレクターを実行する FILESTREAM コンテナーの論理名を指定します。 `@filename` 省略可能です。 論理ファイル名が指定されていない場合、ガベージ コレクターは、指定されたデータベース内のすべての FILESTREAM コンテナーをクリーンアップします。  
+ ガベージ コレクターを実行する FILESTREAM コンテナーの論理名を指定します。 `@filename` はオプションです。 論理ファイル名が指定されていない場合、ガベージコレクターは、指定されたデータベース内のすべての FILESTREAM コンテナーを消去します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
   
@@ -57,7 +57,7 @@ sp_filestream_force_garbage_collection
 |-|-|  
 |値|説明|  
 |0|操作に成功しました。|  
-|1|操作に失敗しました|  
+|1|操作エラー|  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -65,30 +65,30 @@ sp_filestream_force_garbage_collection
 |-----------|-----------------|  
 |*file_name*|FILESTREAM コンテナー名を示します。|  
 |*num_collected_items*|このコンテナー内の、ガベージ コレクションが実行 (削除) された FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。|  
-|*num_marked_for_collection_items*|このコンテナー内の、ガベージ コレクションの対象としてマークされた FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 これらの項目は、まだ削除されていないが、削除、ガベージ コレクション フェーズを次の対象となる場合があります。|  
-|*num_unprocessed_items*|この FILESTREAM コンテナー内の、ガベージ コレクションで処理されなかった対象となる FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 アイテムは次のようなさまざまな理由で処理されないことがあります。<br /><br /> ログのバックアップまたはチェックポイントが作成されていないため、ピン留めする必要があるファイル。<br /><br /> 完全または一括ログ復旧モデル内のファイル。<br /><br /> 実行時間の長いアクティブなトランザクションが存在している。<br /><br /> レプリケーション ログ リーダー ジョブが実行されません。 ホワイト ペーパーを参照してください。 [SQL Server 2008 の FILESTREAM ストレージ](https://go.microsoft.com/fwlink/?LinkId=209156)詳細についてはします。|  
+|*num_marked_for_collection_items*|このコンテナー内の、ガベージ コレクションの対象としてマークされた FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 これらの項目はまだ削除されていませんが、ガベージコレクションフェーズに従って削除することができます。|  
+|*num_unprocessed_items*|この FILESTREAM コンテナー内の、ガベージ コレクションで処理されなかった対象となる FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 アイテムは次のようなさまざまな理由で処理されないことがあります。<br /><br /> ログのバックアップまたはチェックポイントが作成されていないために、固定する必要があるファイル。<br /><br /> 完全復旧モデルまたは BULK_LOGGED 復旧モデル内のファイル。<br /><br /> 実行時間の長いアクティブなトランザクションが存在している。<br /><br /> レプリケーションログリーダージョブが実行されていません。 詳細については、ホワイトペーパー「 [SQL Server 2008 の FILESTREAM ストレージ](https://go.microsoft.com/fwlink/?LinkId=209156)」を参照してください。|  
 |*last_collected_xact_seqno*|指定した FILESTREAM コンテナー内の、ガベージ コレクションが実行されたファイルに対応する最後のログ シーケンス番号 (LSN) を返します。|  
   
-## <a name="remarks"></a>コメント  
- 明示的に FILESTREAM ガベージ コレクターのタスクを完了するまで要求されたデータベース (および FILESTREAM コンテナー) で実行されます。 不要になったファイルは、ガベージ コレクション プロセスによって削除されます。 この操作を完了するために必要な時間は、そのデータベースまたはコンテナーだけでなく、FILESTREAM データに対して最近実行された DML アクティビティの量での FILESTREAM データのサイズによって異なります。 この操作はデータベースがオンラインのときに実行できますが、ガベージ コレクション プロセスによってさまざまな I/O 操作が行われるため、実行中にデータベースのパフォーマンスに影響を与える可能性があります。  
+## <a name="remarks"></a>Remarks  
+ 要求されたデータベース (および FILESTREAM コンテナー) で、FILESTREAM ガベージコレクタータスクが明示的に完了するように実行します。 不要になったファイルは、ガベージ コレクション プロセスによって削除されます。 この操作の完了に必要な時間は、そのデータベースまたはコンテナー内の FILESTREAM データのサイズに加え、FILESTREAM データで最近発生した DML アクティビティの量によって異なります。 この操作はデータベースがオンラインのときに実行できますが、ガベージ コレクション プロセスによってさまざまな I/O 操作が行われるため、実行中にデータベースのパフォーマンスに影響を与える可能性があります。  
   
 > [!NOTE]  
->  必要な場合にのみ、通常の業務時間外にこの操作を実行することをお勧めします。  
+>  この操作は、必要なときと通常の操作時間外にのみ実行することをお勧めします。  
   
-このストアド プロシージャの複数の呼び出しは、個別のコンテナーまたは別のデータベースでのみ同時に実行できます。  
+このストアドプロシージャの複数の呼び出しは、個別のコンテナーまたは個別のデータベースでのみ同時に実行できます。  
 
-2 段階の操作のためには、基になる Filestream ファイルを実際に削除するには、2 回ストアド プロシージャを実行する必要があります。  
+2フェーズの操作が発生したため、基になる Filestream ファイルを実際に削除するには、ストアドプロシージャを2回実行する必要があります。  
 
-ガベージ コレクション (GC) は、ログの切り捨てに依存します。 そのため、ファイルは完全復旧モデルを使用してデータベースで最近削除された場合は GC ed、トランザクション ログの一部のログ バックアップが取得され、ログ部分が非アクティブとマークした後のみです。 単純復旧モデルを使用して、データベースに対するログの切り捨ての発生後に、`CHECKPOINT`がデータベースに対して発行されています。  
+ガベージコレクション (GC) は、ログの切り捨てに依存します。 したがって、完全復旧モデルを使用してデータベースで最近削除されたファイルの場合は、それらのトランザクションログ部分のログバックアップが実行され、ログ部分が非アクティブとマークされた後にのみ、GC が実行されます。 単純復旧モデルを使用するデータベースでは、がデータベースに対して発行された後に、ログの切り捨てが行わ `CHECKPOINT` れます。  
 
 
 ## <a name="permissions"></a>アクセス許可  
- Db_owner データベース ロールのメンバーシップが必要です。  
+ Db_owner データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例で FILESTREAM コンテナーに対してガベージ コレクターの実行、`FSDB`データベース。  
+ 次の例では、データベースの FILESTREAM コンテナーに対してガベージコレクターを実行し `FSDB` ます。  
   
-### <a name="a-specifying-no-container"></a>A. コンテナーを指定しません。  
+### <a name="a-specifying-no-container"></a>A: コンテナーを指定しない  
   
 ```sql  
 USE FSDB;  
@@ -96,7 +96,7 @@ GO
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
 ```  
   
-### <a name="b-specifying-a-container"></a>B. コンテナーを指定する  
+### <a name="b-specifying-a-container"></a>B: コンテナーを指定する  
   
 ```sql  
 USE FSDB;  
@@ -106,10 +106,10 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>関連項目  
-[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+[FileStream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream および FileTable の動的管理ビュー (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream および FileTable のカタログ ビュー (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
-<br>[sp_kill_filestream_non_transacted_handles (TRANSACT-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
+<br>[sp_kill_filestream_non_transacted_handles (Transact-sql)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

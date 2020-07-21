@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760033"
 ---
-# <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パブリッシャー側の 1 つ以上のパブリケーションに属するサブスクリプションの現在の状態情報を返します。サブスクリプションごとに 1 行のデータが返されます。 レプリケーションを監視するために使用されるこのストアドプロシージャは、ディストリビューター側のディストリビューションデータベースで実行されます。  
   
@@ -46,13 +46,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="arguments"></a>引数  
 `[ @publisher = ] 'publisher'`状態を監視するパブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。 **Null**の場合、ディストリビューターを使用するすべてのパブリッシャーに関する情報が返されます。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシュされたデータベースの名前を指定します。 *publisher_db*は**sysname**,、既定値は NULL です。 NULL の場合、パブリッシャーでパブリッシュされたすべてのデータベースに関する情報が返されます。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシュされたデータベースの名前を指定します。 *publisher_db*は**sysname**で、既定値は NULL です。 NULL の場合、パブリッシャーでパブリッシュされたすべてのデータベースに関する情報が返されます。  
   
 `[ @publication = ] 'publication'`監視されているパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値は NULL です。  
   
-`[ @publication_type = ] publication_type`パブリケーションの種類。 *publication_type*は**int**,、これらの値のいずれかを指定することができます。  
+`[ @publication_type = ] publication_type`パブリケーションの種類。 *publication_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**0**|トランザクションパブリケーション。|  
 |**1**|スナップショットパブリケーション。|  
@@ -84,13 +84,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |-----------------|---------------|-----------------|  
 |**status**|**int**|パブリケーションに関連付けられているすべてのレプリケーションエージェントの状態を調べ、次の順序で見つかった最も高い状態を返します。<br /><br /> **6** = 失敗<br /><br /> **5** = 再試行中<br /><br /> **2** = 停止<br /><br /> **4** = アイドル<br /><br /> **3** = 実行中<br /><br /> **1** = 開始|  
 |**warning**|**int**|パブリケーションに属しているサブスクリプションによって生成されるしきい値警告の最大値です。次の 1 つ以上の値の論理和になります。<br /><br /> **1** = 有効期限-トランザクションパブリケーションに対するサブスクリプションが、保有期間のしきい値内に同期されていません。<br /><br /> **2** = 待機時間-トランザクションパブリッシャーからサブスクライバーへのデータのレプリケートにかかった時間が、秒単位のしきい値を超えています。<br /><br /> **4** = mergeexpiration-マージパブリケーションに対するサブスクリプションが、保有期間のしきい値内に同期されていません。<br /><br /> **8** = mergefastrunduration-高速ネットワーク接続経由で、マージサブスクリプションの同期の完了にかかった時間が、秒単位のしきい値を超えています。<br /><br /> **16** = mergeslowrunduration-低速またはダイヤルアップネットワーク接続を介して、マージサブスクリプションの同期の完了にかかった時間が、秒単位のしきい値を超えています。<br /><br /> **32** = mergefastrunspeed-高速ネットワーク接続上で、マージサブスクリプションの同期中の行の配信率が、1秒あたりの行数でのしきい値の比率を維持できませんでした。<br /><br /> **64** = mergeslowrunspeed-低速またはダイヤルアップネットワーク接続を介して、マージサブスクリプションの同期中の行の配信率が、1秒あたりの行数でしきい値を維持できませんでした。|  
-|**サブスクライバー**|**sysname**|サブスクライバーの名前です。|  
+|**サブスクライバ**|**sysname**|サブスクライバーの名前です。|  
 |**subscriber_db**|**sysname**|サブスクリプションで使用されるデータベースの名前です。|  
 |**publisher_db**|**sysname**|パブリケーション データベースの名前です。|  
 |**レプリケーション**|**sysname**|パブリケーションの名前を指定します。|  
 |**publication_type**|**int**|パブリケーションの種類を指定します。次のいずれかの値を指定できます。<br /><br /> **0** = トランザクションパブリケーション<br /><br /> **1** = スナップショットパブリケーション<br /><br /> **2** = マージパブリケーション|  
-|**内部**|**int**|サブスクリプションの種類です。次のいずれかの値をとります。<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
-|**latency**|**int**|トランザクションパブリケーションのログリーダーまたはディストリビューションエージェントによって反映されたデータ変更の待機時間の最大値 (秒単位)。|  
+|**subtype**|**int**|サブスクリプションの種類です。次のいずれかの値をとります。<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
+|**短い**|**int**|トランザクションパブリケーションのログリーダーまたはディストリビューションエージェントによって反映されたデータ変更の待機時間の最大値 (秒単位)。|  
 |**latencythreshold**|**int**|トランザクションパブリケーションの最大待機時間です。この値を超えると警告が生成されます。|  
 |**agentnotrunning**|**int**|エージェントが実行されていない時間の長さを時間単位で指定します。|  
 |**agentnotrunningthreshold**|**int**|エージェントが実行されていない、警告が発生するまでの時間を時間単位で示します。|  
@@ -105,10 +105,10 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergePerformance**|**int**|サブスクリプションに対するすべての同期と比較した前回の同期のパフォーマンスです。前回の同期の配信速度を前回までのすべての配信速度の平均で割った値に基づいて算出されます。|  
 |**mergerunspeed**|**float**|サブスクリプションの前回の同期の配信率です。|  
 |**mergerunduration**|**int**|サブスクリプションの最後の同期を完了する時間の長さです。|  
-|**monitorranking 付け**|**int**|結果セットのサブスクリプションを並べ替えるために使用される順位付け値です。次のいずれかの値を指定できます。<br /><br /> トランザクション パブリケーションの場合 :<br /><br /> **60** = エラー<br /><br /> **56** = 警告: パフォーマンスクリティカル<br /><br /> **52** = 警告: 間もなく期限切れまたは期限切れです<br /><br /> **50** = 警告: 初期化されていないサブスクリプション<br /><br /> **40** = 失敗したコマンドを再試行しています<br /><br /> **30** = 実行されていない (成功)<br /><br /> **20** = 実行中 (開始、実行中、またはアイドル状態)<br /><br /> マージパブリケーションの場合:<br /><br /> **60** = エラー<br /><br /> **56** = 警告: パフォーマンスクリティカル<br /><br /> **54** = 警告: 実行時間の長いマージ<br /><br /> **52** = 警告: 間もなく期限切れになります<br /><br /> **50** = 警告: 初期化されていないサブスクリプション<br /><br /> **40** = 失敗したコマンドを再試行しています<br /><br /> **30** = 実行中 (開始、実行中、またはアイドル状態)<br /><br /> **20** = 実行されていない (成功)|  
+|**monitorranking**|**int**|結果セットのサブスクリプションを並べ替えるために使用される順位付け値です。次のいずれかの値を指定できます。<br /><br /> トランザクション パブリケーションの場合 :<br /><br /> **60** = エラー<br /><br /> **56** = 警告: パフォーマンスクリティカル<br /><br /> **52** = 警告: 間もなく期限切れまたは期限切れです<br /><br /> **50** = 警告: 初期化されていないサブスクリプション<br /><br /> **40** = 失敗したコマンドを再試行しています<br /><br /> **30** = 実行されていない (成功)<br /><br /> **20** = 実行中 (開始、実行中、またはアイドル状態)<br /><br /> マージパブリケーションの場合:<br /><br /> **60** = エラー<br /><br /> **56** = 警告: パフォーマンスクリティカル<br /><br /> **54** = 警告: 実行時間の長いマージ<br /><br /> **52** = 警告: 間もなく期限切れになります<br /><br /> **50** = 警告: 初期化されていないサブスクリプション<br /><br /> **40** = 失敗したコマンドを再試行しています<br /><br /> **30** = 実行中 (開始、実行中、またはアイドル状態)<br /><br /> **20** = 実行されていない (成功)|  
 |**distributionagentjobid**|**binary(16)**|トランザクションパブリケーションに対するサブスクリプションのディストリビューションエージェントジョブの ID。|  
 |**mergeagentjobid**|**binary(16)**|マージパブリケーションに対するサブスクリプションのマージエージェントジョブの ID。|  
-|**の場合は、**|**int**|サブスクリプションのディストリビューションエージェントジョブの ID。|  
+|**distributionagentid**|**int**|サブスクリプションのディストリビューションエージェントジョブの ID。|  
 |**distributionagentprofileid**|**int**|ディストリビューションエージェントによって使用されるエージェントプロファイルの ID。|  
 |**mergeagentid**|**int**|サブスクリプションのマージエージェントジョブの ID。|  
 |**mergeagentprofileid**|**int**|マージエージェントによって使用されるエージェントプロファイルの ID。|  
@@ -116,7 +116,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_replmonitorhelpsubscription**は、すべての種類のレプリケーションで使用されます。  
   
  **sp_replmonitorhelpsubscription**は、サブスクリプションの状態の重大度に基づいて結果セットを並べ替えます。これは、 *monitorranking*の値によって決定されます。 たとえば、エラー状態のすべてのサブスクリプションの列は、警告状態のサブスクリプションの列よりも上に並べられます。  
@@ -125,6 +125,6 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  **Sp_replmonitorhelpsubscription**を実行できるのは、ディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Mask の重複の正しい Affinity Mask と Affinity 入出力 |Microsoft Docs
+title: Affinity Mask と Affinity の入力出力マスクが重複しています |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3139c864805c7df9220afc9b81d2a242775f4fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbb2a70065857637f0b205642b9ed1d19d92e5a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068928"
 ---
-# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>正しい Affinity Mask オプションと関係マスクの重複の入出力
+# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>Affinity Mask と Affinity の入力出力マスクが重複しています
   このルールでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、affinity mask オプションと affinity I/O mask オプションの両方が割り当てられたプロセッサが 1 つ以上あるかどうかを確認します。 複数のプロセッサが搭載されたコンピューターでは、affinity mask オプションと affinity I/O mask オプションを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用される CPU を指定します。 affinity mask と affinity I/O mask の両方で CPU を有効にすると、プロセッサが過剰に使用されるため、パフォーマンスが低下する可能性があります。  
   
 ## <a name="best-practices-recommendations"></a>ベスト プラクティスと推奨事項  

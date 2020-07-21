@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5318d25ed1e6113e65f6e41d40add3ff0203856c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 36b5efb8a1be107504cfcd7641b44c83924faa92
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580996"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629603"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>ConfigurationSetting メソッド - SetSecureConnectionLevel
   レポート サーバーのセキュリティで保護された接続レベルを設定します。  
@@ -38,7 +38,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *レベル*  
+ *Level*  
  セキュリティで保護された接続レベルを表す整数値。  
   
  *HRESULT*  
@@ -47,12 +47,12 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>Remarks  
- このメソッドを呼び出すと、レポート サーバーの SecureConnectionLevel プロパティ値が指定した値に設定されます。 値 0 は、SSL がオフであることを示します。 1 以上の値は、SSL がオンであることを示します。  
+## <a name="remarks"></a>解説  
+ このメソッドを呼び出すと、レポート サーバーの SecureConnectionLevel プロパティ値が指定した値に設定されます。 値 0 は、TLS がオフであることを示します。 1 以上の値は、TLS がオンであることを示します。  
   
 -   値を設定すると、レポート サーバー構成ファイルの SecureConnectionLevel 要素が変更されます。指定した **Level** が 1 以上の場合は、構成ファイルの *URLRoot* 要素が "https://" を使用するように設定されます。指定した *Level* が 0 の場合は、"http://" を使用するように設定されます。  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で、SecureConnectionLevel がオン/オフのスイッチとして使用されます。既定値は 0 です。 SetSecureConnectionLevel メソッド API に渡された値が 1 以上である場合、SSL はオンであると見なされ、それに従って rsreportserver.config ファイルで構成プロパティ SecureConnectionLevel が設定されます。 値 2 と 3 は、旧バージョンとの互換性のために許可されています。  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で、SecureConnectionLevel がオン/オフのスイッチとして使用されます。既定値は 0 です。 SetSecureConnectionLevel メソッド API に渡された値が 1 以上である場合、TLS はオンであると見なされ、それに従って rsreportserver.config ファイルで構成プロパティ SecureConnectionLevel が設定されます。 値 2 と 3 は、旧バージョンとの互換性のために許可されています。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

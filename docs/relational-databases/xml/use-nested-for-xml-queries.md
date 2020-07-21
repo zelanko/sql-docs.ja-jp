@@ -1,5 +1,6 @@
 ---
 title: 入れ子になった FOR XML クエリの使用 | Microsoft Docs
+description: 入れ子になった FOR XML クエリの使用方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 91ba54ce9141cd0e891e442c5cb89aab02dec1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f012f629d531955a4f662dfe3ee03f691c220003
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752547"
 ---
 # <a name="use-nested-for-xml-queries"></a>入れ子になった FOR XML クエリの使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **xml** データ型と [FOR XML クエリの TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md) を使用すると、FOR XML クエリによって返された XML を、サーバー側およびクライアント側で処理することができます。  
   
 ## <a name="processing-with-xml-type-variables"></a>xml 型の変数を使用した処理  
@@ -84,7 +85,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>内側の FOR XML クエリの結果を外側のクエリに xml 型インスタンスとして返す  
- 入れ子構造の `FOR XML` クエリを記述して、内側のクエリの結果を **xml** 型で外側のクエリに返すことができます。 例:  
+ 入れ子構造の `FOR XML` クエリを記述して、内側のクエリの結果を **xml** 型で外側のクエリに返すことができます。 次に例を示します。  
   
 ```  
 SELECT Col1,   
@@ -114,7 +115,7 @@ FOR XML AUTO, TYPE;
   
  使用するモードに関係なく、入れ子構造の FOR XML クエリを使用すると、結果の XML の構造の定義を制御しやすくなります。 入れ子構造の FOR XML クエリは、EXPLICIT モードのクエリの代わりに使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  ここでは、入れ子になった FOR XML クエリの例を紹介します。  
   
  [FOR XML クエリと入れ子になった FOR XML クエリの比較](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  

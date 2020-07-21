@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - DataControl object [ADO], VBScript example
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7eff8a3a016ad7e0cc6b9f928bef4f16891e8375
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bb581ab66f4422b392c0031c1e69faa00e21069f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964414"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748776"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl オブジェクトの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次のコードを設定する方法を示しています、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)デザイン時のパラメーターは、時間し、データ対応のコントロールにバインドします。 間には、このコードを貼り付けて、\<本文 > と\</Body > の通常の HTML タグを文書化し、名前を**DataControlDesignVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
+ 次のコードは、RDS を設定する方法を示して[います。](../../../ado/reference/rds-api/datacontrol-object-rds.md)デザイン時にパラメーターを DataControl し、データを認識するコントロールにバインドします。 このコードを切り取って、 \< 通常の HTML ドキュメントの body> と body> のタグの間に貼り付け、 \< **DataControlDesignVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -92,7 +92,7 @@ BODY {
 <!-- EndDataControlDesignVBS -->  
 ```  
   
- 次の例は、の必要なパラメーターを設定する方法を示します**rds.DataControl**実行時にします。 この例をテストする切り取りし、の間には、このコードを貼り付け、\<本文 > と\</Body > の通常の HTML タグを文書化し、名前を**DataControlRuntimeVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
+ 次の例は、RDS の必要なパラメーターを設定する方法を示して**います。** 実行時に DataControl。 この例をテストするには、 \< 通常の HTML ドキュメントで body> と body> タグの間でこのコードを切り取って貼り付け、 \< **DataControlRuntimeVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataControlRuntimeVBS -->  
@@ -182,7 +182,7 @@ End Sub
 <!-- EndDataControlRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

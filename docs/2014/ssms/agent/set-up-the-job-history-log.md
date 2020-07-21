@@ -14,36 +14,35 @@ helpviewer_keywords:
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48b0c0b72b7b27ca944e78603d2c574a8f4d27dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001772"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
-  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴ログをセットアップする方法について説明します。  
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] エージェントのジョブ履歴ログをセットアップする方法について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
--   **作業を開始する準備:** [Security](#Security)  
+-   **作業を開始する準備:**  [セキュリティ](#Security)  
   
--   **ジョブ履歴ログをセットアップするには、次を使用します。** [SQL Server Management Studio](#SSMS)  
+-   **ジョブ履歴ログをセットアップする方法:**  [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
  **ジョブ履歴ログをセットアップするには**  
   
-1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[SQL Server エージェントのプロパティ]** ダイアログ ボックスで **[履歴]** ページをクリックします。  
   
-4.  次のいずれかのオプションを選択します。  
+4.  次のオプションを選択します。  
   
     1.  **[ジョブ履歴ログのサイズを制限する]** チェック ボックスをオンにして、ジョブ履歴ログの最大行数と、ジョブあたりの最大行数を入力します。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "63033581"
   
 ## <a name="see-also"></a>参照  
  [ジョブの実装](implement-jobs.md)   
- [モニターのジョブの利用状況](monitor-job-activity.md)   
+ [ジョブの利用状況の監視](monitor-job-activity.md)   
  [ジョブの作成](create-jobs.md)  
   
   

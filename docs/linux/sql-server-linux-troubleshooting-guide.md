@@ -8,23 +8,23 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 6ff5c1c5944e1313d6c95cd35be288ad4d2154c8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7c2c191fa05f1c584c9e45e88cd5bd5b0e3b7851
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897220"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux のトラブルシューティング
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このドキュメントでは、Linux 上または Docker コンテナー内で実行される Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 SQL Server on Linux のトラブルシューティングを行う場合は、 [SQL Server on Linux のリリース ノート](sql-server-linux-release-notes.md)で、サポートされている機能と既知の制限事項を必ず確認してください。
 
 > [!TIP]
 > よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)」を参照してください。
 
-## <a id="connection"></a> 接続エラーのトラブルシューティング
+## <a name="troubleshoot-connection-failures"></a><a id="connection"></a> 接続エラーのトラブルシューティング
 Linux SQL Server に接続するのが困難な場合は、いくつかの点を確認する必要があります。
 
 - **localhost** を使ってローカルに接続できない場合は、代わりに IP アドレス 127.0.0.1 を使ってみてください。 **localhost** がこのアドレスに適切にマップされていない可能性があります。
@@ -56,7 +56,7 @@ Linux SQL Server に接続するのが困難な場合は、いくつかの点を
 
 ## <a name="manage-the-sql-server-service"></a>SQL Server サービスを管理する
 
-次のセクションでは、SQL Server サービスの開始、停止、再起動、および状態の確認を行う方法について説明します。 
+次のセクションでは、SQL Server サービスの開始、停止、再起動、および状態の確認を行う方法について説明します。
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Red Hat Enterprise Linux (RHEL) と Ubuntu で mssql-server サービスを管理する 
 

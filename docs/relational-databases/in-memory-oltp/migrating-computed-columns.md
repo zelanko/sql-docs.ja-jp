@@ -1,5 +1,6 @@
 ---
 title: 計算列の移行 | Microsoft Docs
+description: メモリ最適化テーブルで計算列をシミュレートする方法について説明します。 移行後に計算列の機能が必要かどうかを評価します。
 ms.custom: ''
 ms.date: 12/17/2016
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 36a0a6f82499a617a37b7cc9b848a33ec29c2ce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b378b5921397ec90d44a4d63de3aeaf944d8ab2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730887"
 ---
 # <a name="migrating-computed-columns"></a>計算列の移行
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 計算列は、メモリ最適化テーブルではサポートされていません。 ただし、計算列をシミュレートすることはできます。
 

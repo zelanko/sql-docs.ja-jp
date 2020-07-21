@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2d823b1155a07f7bb3dc44f84f852d747692ae58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9973a785efd0e3327ac7fe1e12360bd202601f1e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002374"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291824"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>[SAP BW 変換元エディター] ([エラー出力] ページ)
 
@@ -59,7 +59,7 @@ ms.locfileid: "68002374"
  **切り捨て**  
  SAP BW 変換元コンポーネントが、切り捨てが発生した場合に障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **[説明]**  
+ **説明**  
  エラーの説明を表示します。  
   
  **[選択したセルに設定する値]**  
@@ -69,9 +69,9 @@ ms.locfileid: "68002374"
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  
- [SAP BW 変換元エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 変換元エディター &#40;[列] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW 変換元エディター &#40;[詳細設定] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [SAP BW ソース エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW ソース エディター ([列] ページ)](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [SAP BW ソース エディター &#40;[詳細設定] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

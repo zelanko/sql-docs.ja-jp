@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler |Microsoft Docs
+title: SQL Server プロファイラー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,19 +24,18 @@ helpviewer_keywords:
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abc9560ae39f94380a6adde48ceb4ae10788db5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040239"
 ---
-# <a name="sql-server-profiler"></a>SQL Server Profiler
+# <a name="sql-server-profiler"></a>SQL Server プロファイラー
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレースを作成および管理し、トレースの結果を分析および再生するために使用する機能の豊富なインターフェイスです。 キャプチャされたイベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]のトレース キャプチャおよびトレース再生用の [!INCLUDE[ssDE](../../includes/ssde-md.md)] は廃止されます。 これらの機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。 Microsoft SQL Server の Trace オブジェクトや Replay オブジェクトを含む *Microsoft.SqlServer.Management.Trace* 名前空間も非推奨とされます。 Analysis Services のワークロード用の [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は非推奨とされておらず、引き続きサポートされます。  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース キャプチャおよびトレース再生用の [!INCLUDE[ssDE](../../includes/ssde-md.md)] は廃止されます。 これらの機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次のバージョンではサポートされますが、その後のバージョンでは削除されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどのバージョンであるかは決定していません。 Microsoft SQL Server の Trace オブジェクトや Replay オブジェクトを含む *Microsoft.SqlServer.Management.Trace* 名前空間も非推奨とされます。 Analysis Services のワークロード用の [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は非推奨とされておらず、引き続きサポートされます。  
 >   
 >  以下の表に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でトレース データのキャプチャおよび再生を行うために使用が推奨される機能を示します。  
   
@@ -114,12 +113,12 @@ ms.locfileid: "68211047"
  **テンプレート**  
  テンプレートは、トレースの既定の構成を定義します。 特に、テンプレートには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して監視するイベント クラスを指定します。 たとえば、使用するイベント、データ列、およびフィルターを指定するテンプレートを作成できます。 テンプレートは、実行するのではなく、.tdf という拡張子を付けてファイルとして保存しておきます。 保存したテンプレートは、そのテンプレートに基づいて作成したトレースの実行時にどのようなトレース データをキャプチャするかを制御します。  
   
- **トレース**  
+ **Trace**  
  トレースでは、選択したイベント、データ列、およびフィルターに基づいたデータをキャプチャします。 たとえば、例外エラーを監視するトレースを作成できます。 これには、 **Exception** イベント クラスを選択し、そのデータ列である **Error**、 **State**、および **Severity** を選択します。 トレース結果で意味のあるデータを示すには、これら 3 列のデータを収集する必要があります。 このようにして構成されたトレースを実行し、サーバーで発生するすべての **Exception** イベントに関するデータを収集することができます。 トレース データは、保存することも、すぐに分析に使用することもできます。 トレースは、後日再生できます。ただし、 **Exception** イベントなど、再生不可能なイベントもあります。 また、トレースをテンプレートとして保存しておき、これに似たトレースを後日作成することもできます。  
   
  SQL Server では、SQL Server のインスタンスをトレースするために 2 とおりの方法が用意されています。つまり、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースする方法と、システム ストアド プロシージャを使用してトレースする方法です。  
   
- **[フィルター]**  
+ **Assert**  
  トレースまたはテンプレートを作成する際には、指定したイベントで収集されたデータをフィルターで選択する基準を定義できます。 トレースが大きくなりすぎないようにするためには、イベント データのサブセットだけが収集されるようにフィルターを適用します。 たとえば、トレースでキャプチャする Microsoft Windows のユーザー名を特定のユーザーに限定して出力データを絞り込むことができます。  
   
  フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。  
@@ -143,7 +142,7 @@ ms.locfileid: "68211047"
 |サーバーへの接続後、トレースを自動的に開始する方法について説明します。|[サーバーへの接続後の自動的なトレースの開始 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)|  
 |イベントの開始時刻に基づいてイベントをフィルター選択する方法について説明します。|[イベントの開始時刻に基づいたイベントのフィルター選択 &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-start-time-sql-server-profiler.md)|  
 |イベントの終了時刻に基づいてイベントをフィルター選択する方法について説明します。|[イベントの終了時刻に基づいたフィルターでのイベントの選択 &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-end-time-sql-server-profiler.md)|  
-|トレース内のサーバー プロセス ID (SPID) をフィルター選択する方法について説明します。|[トレースでのサーバー プロセス ID &#40;SPIDs &#41;のフィルター選択 &#40;SQL Server Profiler &#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
+|トレース内のサーバー プロセス ID (SPID) をフィルター選択する方法について説明します。|[トレースでのサーバー プロセス ID &#40;SPIDs&#41; のフィルター選択 &#40;SQL Server Profiler&#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
 |トレースを一時停止する方法について説明します。|[トレースの一時停止 &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)|  
 |トレースを停止する方法について説明します。|[トレースの停止 &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)|  
 |一時停止後または停止後にトレースを実行する方法について説明します。|[一時停止または停止したトレースの再開 &#40;SQL Server Profiler&#41;](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)|  
@@ -183,11 +182,11 @@ ms.locfileid: "68211047"
 |SQL Server Profiler の状況依存ヘルプ トピックについて紹介します。|[SQL Server Profiler の F1 ヘルプ](sql-server-profiler-f1-help.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でパフォーマンスと利用状況を監視する際に使用される一連のシステム ストアド プロシージャを紹介します。|[SQL Server Profiler のストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)|  
   
-## <a name="see-also"></a>関連項目  
- [Locks イベント カテゴリ](../../relational-databases/event-classes/locks-event-category.md)   
- [Sessions イベント カテゴリ](../../relational-databases/event-classes/sessions-event-category.md)   
- [Stored Procedures イベント カテゴリ](../../relational-databases/event-classes/stored-procedures-event-category.md)   
- [TSQL イベント カテゴリ](../../relational-databases/event-classes/tsql-event-category.md)   
+## <a name="see-also"></a>参照  
+ [Locks イベントカテゴリ](../../relational-databases/event-classes/locks-event-category.md)   
+ [Sessions イベントカテゴリ](../../relational-databases/event-classes/sessions-event-category.md)   
+ [ストアドプロシージャのイベントカテゴリ](../../relational-databases/event-classes/stored-procedures-event-category.md)   
+ [TSQL イベントカテゴリ](../../relational-databases/event-classes/tsql-event-category.md)   
  [サーバーのパフォーマンスと利用状況の監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

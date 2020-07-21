@@ -1,5 +1,5 @@
 ---
-title: Microsoft アソシエーション アルゴリズム テクニカル リファレンス |Microsoft Docs
+title: Microsoft アソシエーションアルゴリズムテクニカルリファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ca9eab174a146ebd4dcd38d682fd52ee9e820ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084129"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522121"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、よく知られている Apriori アルゴリズムの直接的な実装です。  
@@ -60,7 +59,7 @@ ms.locfileid: "66084129"
   
  ルールの重要度は、与えられたルールの左辺に対するルールの右辺の対数尤度で計算されます。 たとえばルール `If {A} Then {B}`の場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、A と B を含むケースを B を含み A を含まないケースで割って比率を計算し、その比率を対数スケールを使用して正規化します。  
   
-### <a name="feature-selection"></a>機能の選択  
+### <a name="feature-selection"></a>特徴選択  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、自動的な機能の選択は一切行われません。 代わりに、アルゴリズムで使用されるデータを制御するパラメーターが用意されています。 たとえば、各アイテムセットのサイズを制限することも、アイテムセットがモデルに追加されるために必要な最大サポートおよび最小サポートを設定することもできます。  
   
 -   一般的すぎて興味深いものではないアイテムやイベントを除外するには、MAXIMUM_SUPPORT の値を小さくして頻度の高いアイテムセットをモデルから削除します。  
@@ -73,10 +72,10 @@ ms.locfileid: "66084129"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、結果として得られるマイニング モデルの動作、パフォーマンス、および精度に影響を与えるいくつかのパラメーターがサポートされています。  
   
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
- マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 プログラムでを使用してもパラメーターを変更することができます、 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> AMO、またはを使用して、コレクション、 [MiningModels 要素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA でします。 次の表では、各パラメーターについて説明します。  
+ マイニング モデルのパラメーターは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーを使用していつでも変更できます。 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>AMO のコレクションを使用するか、XMLA の[MiningModels 要素 &#40;assl&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl)を使用することによって、プログラムでパラメーターを変更することもできます。 次の表では、各パラメーターについて説明します。  
   
 > [!NOTE]  
->  DMX ステートメントでは; を使用して、既存のモデル内のパラメーターを変更することはできません。DMX CREATE MODEL または ALTER STRUCTURE では、パラメーターを指定する必要があります.ADD MODEL で指定する必要があります。  
+>  DMX ステートメントを使用して、既存のモデルのパラメーターを変更することはできません。DMX CREATE MODEL または ALTER STRUCTURE でパラメーターを指定する必要があります...モデルを作成するときにモデルを追加します。  
   
  *MAXIMUM_ITEMSET_COUNT*  
  生成されるアイテムセットの最大数を指定します。 数が指定されていない場合は、既定値が使用されます。  
@@ -147,13 +146,13 @@ ms.locfileid: "66084129"
   
  マイニング モデル列に適用されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  アソシエーション モデルには、キー列、入力列、および 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 (データ マイニング)](content-types-data-mining.md)」を参照してください。  
   
-|[列]|コンテンツの種類|  
+|Column|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Cyclical、Discrete、Discretized、Table、Ordered|  
@@ -161,9 +160,9 @@ ms.locfileid: "66084129"
 > [!NOTE]  
 >  コンテンツの種類 Cyclical および Ordered はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
-## <a name="see-also"></a>関連項目  
- [Microsoft アソシエーション アルゴリズム](microsoft-association-algorithm.md)   
- [結合モデルのクエリ例](association-model-query-examples.md)   
+## <a name="see-also"></a>参照  
+ [Microsoft アソシエーションアルゴリズム](microsoft-association-algorithm.md)   
+ [アソシエーションモデルのクエリ例](association-model-query-examples.md)   
  [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

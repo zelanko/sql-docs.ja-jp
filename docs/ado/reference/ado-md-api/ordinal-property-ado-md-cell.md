@@ -1,5 +1,5 @@
 ---
-title: Ordinal プロパティ (ADO MD セル) |Microsoft Docs
+title: Ordinal プロパティ (ADO MD Cell) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,31 +14,31 @@ f1_keywords:
 helpviewer_keywords:
 - Ordinal property [ADO MD]
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 194b72ce66eb2efdc3a246f24948b01c790f7b8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b0563912d49ba6baff085fd83be88693e8f8ba1f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949376"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765073"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal プロパティ (ADO MD セル)
-一意に識別する、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)でセル セット内の位置。  
+セルセット内の位置によって[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)を一意に識別します。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**長い**整数は読み取り専用とします。  
+ **長**整数を返し、読み取り専用です。  
   
-## <a name="remarks"></a>コメント  
- セルの序数値は、セル セット内のセルを一意に識別します。 概念的には、セルの番号付けはセル セットではセル セットが、 *p*の次元の配列、 *p*の数は、[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)。 セルは、行優先順での 0 から始まる番号が付けられます。 セルの序数を計算する数式を次に示します。  
+## <a name="remarks"></a>Remarks  
+ セルの序数値は、セルセット内のセルを一意に識別します。 概念的には、セルセット内のセルには、セルセットが*p*次元配列であるかのように番号が付けられます。ここで、 *p*は[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)の数です。 セルは、行優先順で0から始まる番号が付けられます。 セルの序数を計算するための式を次に示します。  
   
- セルの序数値で使用できる、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)のプロパティ、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)を迅速に取得するオブジェクト、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)します。  
+ セルの序数値を[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトの[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティと共に使用して、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)をすばやく取得できます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>関連項目  
- [軸の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+## <a name="see-also"></a>参照  
+ [Axis の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Cellset オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Item プロパティ (ADO MD セルセット)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Ordinal プロパティ (ADO MD 位置)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)

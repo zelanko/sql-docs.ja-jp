@@ -1,20 +1,20 @@
 ---
 title: SQL Server データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a9d83d068e85a310dca4736f6514f235f23b6ce9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f063ae9f49c294fa10413eb3b5d5b494838f2fc6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773599"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -34,7 +34,8 @@ ms.locfileid: "68114647"
 
 |必要な情報|.NET Framework Data Provider for SQL Server プロパティ|
 |---|---|
-|サーバー名|**[データ ソース]**|
+|認証|"統合セキュリティ" として **NotSpecified** が既定で設定されます。または他の認証モードを選択します。 "Active Directory 対話型認証" はサポートされていません。 |
+|サーバー名|**データ ソース**|
 |認証 (ログイン) 情報|**統合セキュリティ**、または **ユーザー ID** と **パスワード**<br/>サーバー上のデータベースのドロップ ダウン リストを表示する場合は、まず、有効なログイン情報を提供する必要があります。|
 |データベース名|**初期カタログ**|
 
@@ -45,7 +46,7 @@ ms.locfileid: "68114647"
 > [!NOTE]
 > このデータ プロバイダーの接続オプションは、SQL Server が変換元または変換先の場合でも同じです。 つまり、表示されるオプションは、ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページともに同じです。
 
-**[データ ソース]**  
+**データ ソース**  
  ソース サーバーまたはターゲット サーバーの名前または IP アドレスを入力するか、ドロップダウン リストからサーバーを選択します。  
  
  非標準の TCP ポートを指定するには、サーバー名または IP アドレスの後にコンマを入力し、ポート番号を入力します。
@@ -82,7 +83,7 @@ ODBC ドライバーは、データ ソースのドロップダウン リスト�
 > [!TIP]
 > 適切な接続文字列をアセンブルするヘルプを参照してください。 または、接続文字列を提供する代わりに、既存の DSN (データ ソース名) を提供するか、新しく作成します。 これらのオプションの詳細については、「[Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」 (ODBC データ ソースに接続する) を参照してください。
 
-**ドライバー**  
+**[ドライバー]**  
 ODBC ドライバーの名前。 名前は、ドライバーのバージョンによって異なります。
 
 **[サーバー]**  
@@ -97,18 +98,18 @@ Windows 統合認証を使用して接続するには **Trusted_Connection=Yes**
 ### <a name="connection-string-format"></a>接続文字列の形式
 Windows 統合認証を使用する接続文字列の形式を次に示します。
 
-    `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
+`Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
 
 Windows 統合認証ではなく SQL Server 認証を使用する接続文字列の形式を次に示します。
 
-     `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
+`Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
 次の例では、この接続文字列を使用しています。
 
-    `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
+`Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
 接続文字列を入力した後に表示される画面を次に示します。
 

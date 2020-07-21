@@ -1,5 +1,5 @@
 ---
-title: ネイティブ モードと SharePoint の Reporting Services レポート サーバーの比較 |Microsoft Docs
+title: Reporting Services レポート サーバーのネイティブ モードと SharePoint モードを比較する | Microsoft Docs
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67038015"
 ---
-# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>ネイティブ モードと SharePoint の Reporting Services レポート サーバーを比較します。
+# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Reporting Services レポート サーバーのネイティブ モードと SharePoint モードを比較する
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -52,8 +52,8 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
 |**URL アドレス指定**|はい|SharePoint 統合モードでは URL アドレスの利用が異なります。 レポート、レポート モデル、共有データ ソース、およびリソースの参照には SharePoint URL が使用されます。 レポート サーバーのフォルダー階層は使用されません。 ネイティブ モードのレポート サーバー上でサポートされる URL アクセスに依存するカスタム アプリケーションでは、レポート サーバーが SharePoint 統合用に構成されると、この機能が動作しなくなります。<br /><br /> URL アクセスの詳細については、「 [URL アクセス パラメーター リファレンス](../../reporting-services/url-access-parameter-reference.md)」を参照してください。|  
 |**カスタム セキュリティ拡張機能**|はい|Reporting Services のカスタム セキュリティ拡張機能は、レポート サーバーに配置したり使用することはできません。 レポート サーバーには特別な用途のセキュリティ拡張機能が用意されており、SharePoint 統合モードで動作するようにレポート サーバーを構成するときは常に使用されます。 このセキュリティ拡張機能は内部コンポーネントで、統合操作に必要です。|  
 |**構成マネージャー**|はい|**\*\* 重要 \*\*** 構成マネージャーは、SharePoint モードのレポート サーバーの管理には使用できません。 代わりに、SharePoint サーバーの全体管理を使用してください。|  
-|**Web ポータル**|はい|Web ポータルでの SharePoint モードを管理することはできません。 SharePoint アプリケーション ページを使用してください。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください。|  
-|**リンク レポート**|はい|不可。|  
+|**Web ポータル**|はい|Web ポータルで SharePoint モードを管理することはできません。 SharePoint アプリケーション ページを使用してください。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください|  
+|**リンク レポート**|はい|いいえ。|  
 |**個人用レポート**|はい|いいえ|  
 |**個人用サブスクリプション** とバッチ処理方式|はい|いいえ|  
 |**データ警告**|いいえ|はい|  
@@ -97,7 +97,7 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
   
  ![SSRS SharePoint の機能のアーキテクチャ](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "SSRS SharePoint の機能のアーキテクチャ")  
   
-||[説明]|  
+||説明|  
 |-|-----------------|  
 |**(1)**|Web サーバーまたは Web フロントエンド (WFE)。 Reporting Services アドインは、レポートや Reporting Services 管理ページの表示などの Web アプリケーション機能を使用してデータ ソースやサブスクリプションの管理などのタスクを実行する場合に、それらの機能を使用する各 Web サーバーにインストールする必要があります。|  
 |**(2)**|アドインによってインストールされる URL と SOAP エンドポイントによって、クライアントが Reporting Services サービス プロキシ経由でアプリケーション サーバーと通信できるようになります。|  
@@ -112,7 +112,7 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
   
 ## <a name="report-server-database"></a>レポート サーバー データベース
 
- レポート サーバーは、すべてのプロパティ、オブジェクト、およびメタデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納する、ステートレス サーバーです。 格納されるデータには、パブリッシュされたレポート、コンパイル済みレポート、レポート モデル、およびレポート サーバーが管理するすべてのアイテムへのアクセスを提供するフォルダー階層が含まれます。 レポート サーバー データベースは、Reporting Services の単一のインストール用、またはスケールアウト配置に含まれる複数のレポート サーバー用の内部記憶域を提供します。 SharePoint 製品またはテクノロジの大規模な配置内で実行されるようにレポート サーバーを構成すると、レポート サーバーでは、レポート サーバー データベースに加えて SharePoint データベースも使用されます。 Reporting Services インストールで使用されるデータ ストアの詳細については、「[レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)」を参照してください。  
+ レポート サーバーは、すべてのプロパティ、オブジェクト、およびメタデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納する、ステートレス サーバーです。 格納されるデータには、パブリッシュされたレポート、コンパイル済みレポート、レポート モデル、およびレポート サーバーが管理するすべてのアイテムへのアクセスを提供するフォルダー階層が含まれます。 レポート サーバー データベースは、Reporting Services の単一のインストール用、またはスケールアウト配置に含まれる複数のレポート サーバー用の内部記憶域を提供します。 SharePoint 製品またはテクノロジの大規模な配置内で実行されるようにレポート サーバーを構成すると、レポート サーバーでは、レポート サーバー データベースに加えて SharePoint データベースも使用されます。 Reporting Services インストールで使用されるデータ ストアの詳細については、「 [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)。  
   
 ## <a name="authentication-rendering-data-and-delivery-extensions"></a>認証、表示、データ、配信の各拡張機能
 
@@ -120,12 +120,12 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
   
  Reporting Services が提供する既定の拡張機能を使用すると、カスタム コンポーネントを開発することなく、すべてのサーバー機能を使用できます。 次の表に示す既定の拡張機能は、完全なレポート サーバー インスタンスの一部であり、すぐに使用できる機能を提供します。  
   
-|型|既定|  
+|種類|Default|  
 |----------|-------------|  
-|[認証]|既定のレポート サーバー インスタンスでは、Windows 認証がサポートされます。ドメインで有効になっていれば、権限の借用機能や委任機能もサポートされます。|  
+|認証|既定のレポート サーバー インスタンスでは、Windows 認証がサポートされます。ドメインで有効になっていれば、権限の借用機能や委任機能もサポートされます。|  
 |データ処理|既定のレポート サーバー インスタンスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion Essbase、SAPBW、OLE DB、並列データ ウェアハウス、ODBC の各データ ソース用のデータ処理拡張機能があります。|  
 |表示|既定のレポート サーバー インスタンスには、HTML、Excel、CSV、XML、Image、Word、SharePoint リスト、および PDF 用の表示拡張機能があります。|  
-|Delivery|既定のレポート サーバー インスタンスには、電子メールの配信拡張機能とファイル共有の配信拡張機能があります。 レポート サーバーが SharePoint 統合用に構成されている場合は、レポートを SharePoint ライブラリに保存する配信拡張機能を使用できます。|  
+|配送|既定のレポート サーバー インスタンスには、電子メールの配信拡張機能とファイル共有の配信拡張機能があります。 レポート サーバーが SharePoint 統合用に構成されている場合は、レポートを SharePoint ライブラリに保存する配信拡張機能を使用できます。|  
   
 > [!NOTE]  
 >  Reporting Services に含まれているツールとアプリケーションの完全なセットを使用すると、サーバーを管理したり、コンテンツを作成したり、組織内のユーザーがそのコンテンツを使用できるようにしたりすることができます。  
@@ -134,7 +134,7 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
 
  以下の記事には、レポート サーバーのインストール、使用、およびメンテナンスに関する追加情報が記載されています。  
   
-|タスク|リンク|  
+|タスク|Link|  
 |----------|----------|  
 |ハードウェアおよびソフトウェアの要件を確認します。|「[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)」を参照してください。|  
 |SharePoint モードで Reporting Services をインストールします。|[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
@@ -143,7 +143,7 @@ Reporting Services レポート サーバーは、ネイティブ モードと S
 |ネイティブのレポート サーバー インスタンスで **個人用レポート** を使用できるかどうかを構成する方法について説明します。|[個人用レポートの有効化と無効化](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  
 |サポートされているブラウザーから、印刷機能を実現する RSClientPrint コントロールを設定する方法について説明します。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|[Reporting Services のクライアント側印刷機能の有効化と無効化](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Reporting Services の拡張機能](../../reporting-services/extensions/reporting-services-extensions.md)   
 [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   

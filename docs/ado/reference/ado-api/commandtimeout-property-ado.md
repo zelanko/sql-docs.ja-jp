@@ -13,27 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTimeout property [ADO]
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b771c5b8dc54bb312893885aea9c9c151feef3e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919709"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760391"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout プロパティ (ADO)
-試行を終了し、エラーが発生する前に、コマンドの実行中に待機する時間を示します。  
+コマンドの実行中に、試行を終了してエラーを生成するまでの待機時間を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定または取得を**長い**を示す値を秒単位で期間コマンドの実行を待機します。 既定値は 30 です。  
+ コマンドの実行を待機する時間を秒単位で示す**Long 型**の値を設定または返します。 既定値は 30 です。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **CommandTimeout**プロパティを[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトまたは[コマンド](../../../ado/reference/ado-api/command-object-ado.md)の取り消しを許可するオブジェクト、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドネットワーク トラフィックや負荷の高いサーバーの使用から遅延によって、呼び出しをします。 この間隔で設定する場合、 **CommandTimeout**プロパティでは、コマンドが実行を完了、エラーが発生し、ADO コマンドをキャンセルする前に経過するとします。 プロパティを 0 に設定すると、ADO は、実行が完了するまで無期限に待機します。 コードのサポートを記述する、プロバイダーとデータ ソースの確認、 **CommandTimeout**機能します。  
+## <a name="remarks"></a>解説  
+ [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトまたは[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの**CommandTimeout**プロパティを使用して、ネットワークトラフィックまたはサーバーの使用量の遅延が原因で[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッド呼び出しをキャンセルできるようにします。 コマンドの実行が完了する前に、 **CommandTimeout**プロパティに設定された間隔が経過すると、エラーが発生し、ADO によってコマンドがキャンセルされます。 このプロパティを0に設定すると、ADO は実行が完了するまで無制限に待機します。 コードを記述しているプロバイダーとデータソースで、 **CommandTimeout**機能がサポートされていることを確認します。  
   
- **CommandTimeout**の設定、**接続**オブジェクトも何も起こりません、 **CommandTimeout**の設定、**コマンド**上のオブジェクト、同じ**接続**つまり、**コマンド**オブジェクトの**CommandTimeout**プロパティの値を継承しません、 **の接続。** オブジェクトの**CommandTimeout**値。  
+ **接続**オブジェクトの**CommandTimeout**設定は、同じ**接続**上の**Command**オブジェクトの**CommandTimeout**設定には影響しません。つまり、 **Command**オブジェクトの**CommandTimeout**プロパティは、 **Connection**オブジェクトの**CommandTimeout**値の値を継承しません。  
   
- **接続**オブジェクト、 **CommandTimeout**プロパティは読み取り/書き込み後に、**接続**が開かれます。  
+ **接続オブジェクトで**は、**接続**が開かれると、 **CommandTimeout**プロパティは読み取り/書き込みのままになります。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -41,8 +41,8 @@ ms.locfileid: "67919709"
 |-|-|  
 |[Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
   
-## <a name="see-also"></a>関連項目  
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (vc++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+## <a name="see-also"></a>参照  
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [ConnectionTimeout プロパティ (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)

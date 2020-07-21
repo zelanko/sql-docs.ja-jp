@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0b91fdde3c6940ffa0a7f2e77591e05578e005c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d0118528aa926b5750f8e2f1f587cc6e9c14844
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762386"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスが Open Geospatial Consortium (OGC) で定義されているとおりの単純なものであれば 1 を返します。 **geometry** インスタンスが単純なものでない場合、0 を返します。
   
@@ -39,16 +39,16 @@ ms.locfileid: "67894915"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  単純であると見なされるには、**geometry** インスタンスが次の要件をすべて満たしている必要があります。  
   
 -   インスタンスの各図形が終点以外で自己交差していてはいけない。  
   
 -   インスタンスの 2 つの図形が、両方の図形の境界外部の点で互いに交差していてはいけない。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次は、それ自体と交差する単純ではない `LineString` インスタンスを作成し、`STIsSimple()` を使用して `LineString` が単純かどうかをテストする例です。  
   
 ```  

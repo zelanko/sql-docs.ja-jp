@@ -1,5 +1,5 @@
 ---
-title: 例:読み取り/書き込みファイル (完全復旧モデル) のオンライン復元 |Microsoft Docs
+title: '例 : 読み取り/書き込みファイルのオンライン復元 (完全復旧モデル) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 45056586be543894c714f4005ba84826aa856674
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b99a3d97644c2a5f104173457f30fc5b3fd7188
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876069"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958282"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>例:読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)
   このトピックは、複数のファイルやファイル グループを含む、完全復旧モデルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連しています。  
@@ -78,7 +77,7 @@ ms.locfileid: "62876069"
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;完全復旧モデル&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

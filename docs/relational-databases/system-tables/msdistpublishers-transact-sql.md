@@ -1,5 +1,5 @@
 ---
-title: MSdistpublishers (TRANSACT-SQL) |Microsoft Docs
+title: MSdistpublishers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,36 +15,36 @@ dev_langs:
 helpviewer_keywords:
 - MSdistpublishers system table
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c19f2d8e75a3c9744318d65683b29d1d84857ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 06335bd3ddc5e656d32cf481cfa181143a79cb31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907424"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889978"
 ---
-# <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  **MSdistpublishers**テーブルには、ローカル ディストリビューターによってサポートされている各リモート パブリッシャーに 1 つの行が含まれています。 このテーブルに格納されます、 **msdb**データベース。  
+# <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  **Msdistpublishers**テーブルには、ローカルディストリビューターによってサポートされるリモートパブリッシャーごとに1つの行が含まれます。 このテーブルは、 **msdb**データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|パブリッシャーのディストリビューターの名前。|  
-|**distribution_db**|**sysname**|ディストリビューション データベースの名前。|  
-|**working_directory**|**nvarchar (255)**|パブリケーションのデータとスキーマ ファイルを格納するために使用する作業ディレクトリの名前。|  
-|**security_mode**|**int**|ディストリビューターで実装されているセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1** = Windows 認証。|  
-|**login**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID です。|  
-|**password**|**nvarchar(524)**|(暗号化) パスワード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**アクティブ**|**bit**|ローカルのディストリビューターがリモート パブリッシャーによって使用するかどうかを示します。|  
-|**信頼されています。**|**bit**|リモート パブリッシャーがローカル ディストリビューターと同じパスワードを使用するかどうかを示します。<br /><br /> **0** = A、ディストリビューターに接続するリモートのパブリッシャーでパスワードが必要です。<br /><br /> **1** = No パスワードが必要です。|  
-|**third_party**|**bit**|パブリッシャーがのインストールであるかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール **。1** = 異種データ ソース。|  
-|**publisher_type**|**sysname**|パブリッシャーの種類:<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。<br /><br /> **ORACLE**標準の Oracle パブリッシャーを = です。<br /><br /> **ORACLE GATEWAY** = Oracle ゲートウェイ パブリッシャーです。|  
-|**storage_connection_string**|**nvarchar(779)**|Azure SQL Database ストレージ接続文字列の値。|  
+|**name**|**sysname**|パブリッシャーディストリビューターの名前。|  
+|**distribution_db**|**sysname**|ディストリビューションデータベースの名前。|  
+|**working_directory**|**nvarchar(255)**|パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前。|  
+|**security_mode**|**int**|ディストリビューターで実装されているセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。<br /><br /> **1** = Windows 認証。|  
+|**ログイン**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID です。|  
+|**password**|**nvarchar (524)**|認証用のパスワード (暗号化されたもの) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**active**|**bit**|ローカルディストリビューターがリモートパブリッシャーによって使用されているかどうかを示します。|  
+|**テッド**|**bit**|リモートパブリッシャーがローカルディストリビューターと同じパスワードを使用するかどうかを示します。<br /><br /> **0** = ディストリビューターに接続するために、リモートパブリッシャーでパスワードが必要です。<br /><br /> **1** = パスワードは必要ありません。|  
+|**third_party**|**bit**|パブリッシャーがインストールされているかどうかを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 示します。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール。**1** = 異種データソース。|  
+|**publisher_type**|**sysname**|パブリッシャーの種類:<br /><br /> **MSSQLSERVER**  =  MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文書.<br /><br /> **Oracle** = Standard oracle パブリッシャー。<br /><br /> **ORACLE gateway** = Oracle ゲートウェイパブリッシャー。|  
+|**storage_connection_string**|**nvarchar (779)**|Azure SQL Database ストレージ接続文字列の値。|  
 
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

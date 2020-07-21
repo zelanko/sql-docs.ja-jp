@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8ce7ac47e5de47db98a6986ed471ba0f7fdb01dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 668b7343ae893d302a27c0a68aec58e536cffcc9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045380"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293279"
 ---
 # <a name="cdc-source"></a>CDC ソース
 
@@ -80,7 +80,7 @@ use <cdc-enabled-database-name>
 @end_lsn, '<mode>')  
 ```  
   
- それぞれの文字の説明は次のとおりです。  
+ 各値の説明:  
   
 -   \<cdc-enabled-database-name> は、変更テーブルが含まれている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの名前です。  
   
@@ -226,7 +226,7 @@ use <cdc-enabled-database-name>
  **切り捨て**  
  CDC ソースでフローの切り捨てを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
- **[説明]**  
+ **説明**  
  使用されていません。  
   
  **[選択したセルに設定する値]**  
@@ -249,6 +249,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   mattmasson.com のブログ「[CDC ソースの処理モード](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)」  
+-   mattmasson.com のブログ「 [CDC ソースの処理モード](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)」  
   
   

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892403"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モード用の PowerShell コマンドレット
@@ -61,7 +61,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
   
 3.  **[SharePoint 管理シェル]** をクリックします。  
   
- コマンドレットのコマンド ライン ヘルプを表示するには、PowerShell のコマンド プロンプトで 'Get-Help' コマンドを使用します。 例:  
+ コマンドレットのコマンド ライン ヘルプを表示するには、PowerShell のコマンド プロンプトで 'Get-Help' コマンドを使用します。 次に例を示します。  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
@@ -69,7 +69,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 
  次の表に、Reporting Services SharePoint 共有サービス用の PowerShell コマンドレットを示します。  
   
-|コマンドレット|[説明]|  
+|コマンドレット|説明|  
 |------------|-----------------|  
 |Install-SPRSService|Reporting Services 共有サービスをインストールして登録するか、アンインストールします。 この操作は、SharePoint モードの SQL Server Reporting Services がインストールされているコンピューター上でのみ行うことができます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> \- Reporting Services サービスがファームにインストールされます。<br /><br /> \- Reporting Services サービス インスタンスが現在のコンピューターにインストールされます。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br /><br /> \- Reporting Services サービスが現在のコンピューターからアンインストールされます。<br /><br /> \- Reporting Services サービスがファームからアンインストールされます。<br /><br /> <br /><br /> Reporting Services サービスがインストールされているファーム内に他のコンピューターが存在する場合や Reporting Services サービス アプリケーションがファーム内で引き続き実行されている場合は、警告メッセージが表示されます。|  
 |Install-SPRSServiceProxy|SharePoint ファーム内で Reporting Services サービス プロキシをインストールして登録するか、アンインストールします。|  
@@ -80,10 +80,10 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 
  次の表には、Reporting Services サービス アプリケーションとそれらに関連付けられたプロキシ用の PowerShell コマンドレットが含まれています。  
   
-|コマンドレット|[説明]|  
+|コマンドレット|説明|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|1 つ以上の Reporting Services サービス アプリケーション オブジェクトを取得します。|  
-|New-SPRSServiceApplication|新しい Reporting Services サービス アプリケーションと、それに関連付けられたデータベースを作成します。<br /><br /> LogonType パラメーター: レポート サーバーが、レポート サーバー データベースへのアクセスに SSRS Application Pool アカウントと SQL Server ログインのどちらを使用するかを指定します。 有効な値は、<br /><br /> 0 Windows 認証<br /><br /> 1 SQL Server<br /><br /> 2 アプリケーション プール アカウント (既定)|  
+|New-SPRSServiceApplication|新しい Reporting Services サービス アプリケーションと、それに関連付けられたデータベースを作成します。<br /><br /> LogonType パラメーター: レポート サーバーが、レポート サーバー データベースへのアクセスに SSRS Application Pool アカウントと SQL Server ログインのどちらを使用するかを指定します。 有効な値は次のとおりです。<br /><br /> 0 Windows 認証<br /><br /> 1 SQL Server<br /><br /> 2 アプリケーション プール アカウント (既定)|  
 |Remove-SPRSServiceApplication|指定した Reporting Services サービス アプリケーションを削除します。 これを実行すると、関連付けられたデータベースも削除されます。|  
 |Set-SPRSServiceApplication|既存の Reporting Services サービス アプリケーションのプロパティを編集します。|  
 |New-SPRSServiceApplicationProxy|新しい Reporting Services サービス アプリケーション プロキシを作成します。|  
@@ -100,7 +100,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
   
 ## <a name="reporting-services-custom-functionality-cmdlets"></a>Reporting Services カスタム機能コマンドレット
   
-|コマンドレット|[説明]|  
+|コマンドレット|説明|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|指定した Reporting Services サービス アプリケーションの暗号化キーを更新し、そのデータを再暗号化します。|  
 |Restore-SPRSEncryptionKey|以前にバックアップした、Reporting Services サービス アプリケーションの暗号化キーを復元します。|  
@@ -109,7 +109,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 |New-SPRSExtension|新しい拡張機能を Reporting Services サービス アプリケーションに登録します。|  
 |Set-SPRSExtension|既存の Reporting Services 拡張機能のプロパティを設定します。|  
 |Remove-SPRSExtension|Reporting Services サービス アプリケーションから拡張機能を削除します。|  
-|Get-SPRSExtension|Reporting Services サービス アプリケーションの 1 つ以上の Reporting Services 拡張機能を取得します。<br /><br /> 有効な値は、<br /><br /> <br /><br /> Delivery<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> Security<br /><br /> [認証]<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> デザイナー<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Reporting Services サービス アプリケーションの 1 つ以上の Reporting Services 拡張機能を取得します。<br /><br /> 有効な値は次のとおりです。<br /><br /> <br /><br /> 配送<br /><br /> DeliveryUI<br /><br /> レンダー<br /><br /> Data<br /><br /> Security<br /><br /> 認証<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> デザイナー<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|"ReportingService" 機能が有効になっているかどうかに基づいて SharePoint サイトを取得します。 既定では、"ReportingService" 機能が有効になっているサイトが返されます。|  
   
 ## <a name="basic-samples"></a>基本的なサンプル
@@ -193,7 +193,7 @@ $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'
 Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
- 上の例で、サービス アプリケーションの正確な名前がわからない場合は、最初のステートメントを書き換えて、サービス アプリケーションを部分名検索に基づいて取得することもできます。 例:  
+ 上の例で、サービス アプリケーションの正確な名前がわからない場合は、最初のステートメントを書き換えて、サービス アプリケーションを部分名検索に基づいて取得することもできます。 次に例を示します。  
   
 ```  
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
@@ -287,7 +287,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 
  「[PowerShell を使用した Reporting Services サブスクリプション所有者の変更および一覧表示とサブスクリプションの実行](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)」を参照してください。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [PowerShell を使用した Reporting Services サブスクリプション所有者の変更および一覧表示とサブスクリプションの実行](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
 [チェック リスト: PowerShell を使用して Power Pivot for SharePoint を確認する](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   

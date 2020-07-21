@@ -1,6 +1,6 @@
 ---
-title: 分析サーバーのプロパティ ([ログオン] タブ) | Microsoft Docs
-ms.custom: ''
+title: '[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 255dc2050f84f94ea734809adbb32783aafeaa98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 1b324124e50e02a1acaac17ed188000687b93665
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010383"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306560"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68010383"
  **[開始]**  
  サービスを開始します。  
   
- **[停止]**  
+ **Stop**  
  サービスを停止します。  
   
  **[一時停止]**  

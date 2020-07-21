@@ -1,5 +1,5 @@
 ---
-title: Shape の正式文法 |Microsoft Docs
+title: 仮形の文法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,67 +11,67 @@ helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ce65f6961502a5bfe43278e4a29a11c4210d4af8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925346"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758258"
 ---
 # <a name="formal-shape-grammar"></a>Shape の正式文法
-これは、任意図形のコマンドを作成するための正式な文法です。  
+これは、任意のシェイプコマンドを作成するための正式な文法です。  
   
--   必要な文法的な用語では、山かっこ ("<>") で区切られたテキスト文字列を示します。  
+-   必須の文法用語は、山かっこ ("<>") で区切られたテキスト文字列です。  
   
--   省略可能な条件は、角かっこ ("") で区切られます。  
+-   省略可能な語句は、角かっこ ("[]") で区切られます。  
   
--   代替手段は、縦棒で示されます ("&#124;") です。  
+-   代替手段は、"&#124;" によって示されます。  
   
--   繰り返しの代替手段は、省略記号 (「...」) によって示されます。  
+-   代替の繰り返しは、省略記号 ("...") で示されます。  
   
--   *アルファ*英文字の文字列を示します。  
+-   *Alpha*は、アルファベットの文字列を示します。  
   
--   *数字*の数値の文字列を示します。  
+-   *数字*は、数字の文字列を示します。  
   
--   *Unicode の数字*unicode の数字の文字列を示します。  
+-   *Unicode*数字は、unicode の数字の文字列を示します。  
   
- その他のすべての用語は、リテラルです。  
+ それ以外のすべての用語はリテラルです。  
   
-|項目|定義|  
+|用語|定義|  
 |----------|----------------|  
-|\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
-|\<table-exp>|{\<プロバイダー コマンド テキスト >} &#124; です。<br /><br /> (\<shape コマンド >) &#124;<br /><br /> テーブル\<引用符で囲まれた名 > &#124; です。<br /><br /> \<quoted-name>|  
-|\<shape-action>|APPEND\<エイリアス フィールド リスト > &#124; です。<br /><br /> コンピューティング\<エイリアス > [BY\<フィールド リスト >]|  
-|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
-|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
-|\<field-exp>|(\<関係 exp >) &#124;<br /><br /> \<計算 exp > &#124; です。<br /><br /> \<集計 exp > &#124; です。<br /><br /> \<new-exp>|  
-|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELATE \<relation-cond-list>|  
-|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
-|\<relation-cond>|\<フィールド名 > に\<子 ref >|  
-|\<child-ref>|\<フィールド名 > &#124; です。<br /><br /> PARAMETER \<param-ref>|  
-|\<param-ref>|\<number>|  
-|\<field-list>|\<field-name> [, \<field-name>]|  
-|\<aggregate-exp>|SUM (\<修飾されたフィールド名 >) &#124;<br /><br /> AVG (\<修飾されたフィールド名 >) &#124;<br /><br /> MIN (\<修飾されたフィールド名 >) &#124;<br /><br /> MAX (\<修飾されたフィールド名 >) &#124;<br /><br /> カウント (\<修飾されたエイリアス > &#124; です。\<修飾名 >) &#124;<br /><br /> STDEV (\<修飾されたフィールド名 >) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
-|\<calculated-exp>|CALC(\<expression>)|  
-|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
-|\<エイリアス >|\<quoted-name>|  
-|\<field-name>|\<quoted-name> [[AS] \<alias>]|  
-|\<quoted-name>|"\<文字列 >"&#124; です。<br /><br /> '\<文字列 >' &#124;<br /><br /> [\<文字列 >] &#124; です。<br /><br /> \<name>|  
-|\<qualified-name>|エイリアス [.alias...]|  
-|\<name>|アルファ [alpha &#124; 数字 &#124; 以外の場合は _ &#124; # &#124; : &#124;...]|  
-|\<number>|[数字] の数字|  
-|\<new-exp>|NEW \<field-type> [(\<number> [, \<number>])]|  
-|\<field-type>|OLE DB または ADO データ型。|  
-|\<string>|unicode char [unicode 文字...]|  
-|\<expression>|アプリケーションの式オペランドが同じ行の場合は、他の非計算列用の Visual Basic の場合。|  
+|\<shape-command>|SHAPE [ \< テーブル-exp> [[AS] \< エイリアス>]] [ \< 図形-アクション>]|  
+|\<テーブル-exp>|{ \< provider-command text>} &#124;<br /><br /> ( \< shape-command>) &#124;<br /><br /> \<引用符で囲まれたテーブル名の> &#124;<br /><br /> \<引用符で囲まれた名前>|  
+|\<図形-アクション>|\<別名フィールドリスト> &#124; の追加<br /><br /> \<[フィールドリスト> でエイリアス化されるフィールドリスト> を計算する \< ]|  
+|\<別名フィールドリスト>|\<別名フィールド> [、 \< 別名フィールド... >]|  
+|\<別名フィールド>|\<フィールド-exp> [[AS] \< エイリアス>]|  
+|\<フィールド-exp>|( \< リレーションシップ-exp>) &#124;<br /><br /> \<計算済み-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<新規-exp>|  
+|<relation_exp>|\<テーブル-exp> [[AS] \< エイリアス>]<br /><br /> \<リレーションシップの関連付け-リスト>|  
+|\<リレーション-リスト>|\<リレーションシップ-> [、 \< 関係-同一>...]|  
+|\<リレーション-同一>|\<フィールド名> \< 子の参照>|  
+|\<子参照>|\<フィールド名> &#124;<br /><br /> パラメーター \< param-ref>|  
+|\<param-ref>|\<数値>|  
+|\<フィールド一覧>|\<フィールド名> [, \< フィールド名>]|  
+|\<aggregate-exp>|SUM ( \< 修飾フィールド名>) &#124;<br /><br /> AVG ( \< 限定フィールド名>) &#124;<br /><br /> 最小値 ( \< 修飾フィールド名>) &#124;<br /><br /> MAX ( \< 修飾フィールド名>) &#124;<br /><br /> COUNT ( \< 修飾エイリアス> &#124; \< 修飾名>) &#124;<br /><br /> STDEV ( \< 修飾フィールド名>) &#124;<br /><br /> ANY ( \< 修飾フィールド名>)|  
+|\<計算済み-exp>|CALC ( \< 式>)|  
+|\<修飾フィールド名>|\<エイリアス>。[ \< 別名>...] \<フィールド名>|  
+|\<エイリアス>|\<引用符で囲まれた名前>|  
+|\<フィールド名>|\<引用符で囲まれた名前> [[AS] \< エイリアス>]|  
+|\<引用符で囲まれた名前>|" \< 文字列>" &#124;<br /><br /> ' \< string> ' &#124;<br /><br /> [ \< 文字列>] &#124;<br /><br /> \<名前>|  
+|\<修飾名>|エイリアス [. alias...]|  
+|\<名前>|alpha [α &#124; digit &#124; _ &#124; # &#124;: &#124;...]|  
+|\<数値>|数字 [digit...]|  
+|\<新規-exp>|新しい \< フィールドの種類> [( \< number> [, \< number>])]|  
+|\<フィールド型の>|OLE DB または ADO データ型。|  
+|\<文字列>|unicode-char [unicode-char...]|  
+|\<式の>|同じ行の他の非計算列であるオペランドを持つ Visual Basic for Applications 式。|  
   
-## <a name="see-also"></a>関連項目  
- [階層レコード セット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [データ シェイプの概要](../../../ado/guide/data/data-shaping-overview.md)   
- [データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape の APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
- [一般的な shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)   
+## <a name="see-also"></a>参照  
+ [階層レコードセット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [データシェイプの概要](../../../ado/guide/data/data-shaping-overview.md)   
+ [データシェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
+ [一般的なシェイプコマンド](../../../ado/guide/data/shape-commands-in-general.md)   
  [Shape COMPUTE 句](../../../ado/guide/data/shape-compute-clause.md)   
  [Visual Basic for Applications の関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

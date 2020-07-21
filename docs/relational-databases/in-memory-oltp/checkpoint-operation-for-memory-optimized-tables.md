@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルのチェックポイント操作 | Microsoft Docs
+description: SQL Server でのメモリ最適化テーブルのチェックポイントについて説明します。 メモリ最適化テーブルのチェックポイント操作は、ディスクベースのテーブルとは異なります。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 47975bd5-373f-43cd-946a-da8e8088b610
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f3e07e6762a288fe646477ad0218e5f54eb3b2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26d4874a583ed1d20bff352456493c87cbc52fc0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723362"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>メモリ最適化テーブルのチェックポイント操作
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   データ ファイルとデルタ ファイルのメモリ最適化データに対してチェックポイントを定期的に作成して、トランザクション ログのアクティブな部分を進める必要があります。 チェックポイントにより、メモリ最適化テーブルでは最後に正常終了したチェックポイントまで復元および復旧することができ、トランザクション ログのアクティブな部分が適用されてメモリ最適化テーブルが更新され、復旧が完了します。 ディスク ベース テーブルとメモリ最適化テーブルのチェックポイント操作は個別の操作です。 ディスク ベース テーブルとメモリ最適化テーブルに関する各シナリオとチェックポイント動作について、次に説明します。  
   
 ## <a name="manual-checkpoint"></a>手動チェックポイント  

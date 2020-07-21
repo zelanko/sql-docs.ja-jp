@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5c79a6aea1042649d688b52d124f9b661d4a5b7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2948e131d27437ca09fc11aee7d2d3805db7e372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762574"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 多角形の **geometry** インスタンスの外部リングを返します。
   
@@ -39,14 +39,14 @@ ms.locfileid: "68107721"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型:**LineString**  
+ Open Geospatial Consortium (OGC) の型: **LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスが多角形ではない場合、このメソッドは **NULL** を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Polygon` インスタンスを作成し、`STExteriorRing()` を使用して、多角形の外部リングを **LineString** として返す例を次に示します。  
   
 ```  

@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f36cd694756544a44df657d97fd84e1967167b55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a35d9dcb9564c4081d008768c28e28dd1f7c1e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066898"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server:SQL Errors オブジェクト
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:SQL Errors** オブジェクトには、 **SQL Errors**を監視するカウンターが用意されています。  
   
- 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Errors** のカウンターについて説明します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Errors** カウンターについて説明します。  
   
 |SQL Server SQL Errors のカウンター|説明|  
 |------------------------------------|-----------------|  
@@ -39,7 +38,7 @@ ms.locfileid: "63183009"
 |**Kill Connection Errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在の接続を強制的に切断する原因となる重大なエラーを追跡します。|  
 |**User Errors**|ユーザー エラーに関する情報。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   
   

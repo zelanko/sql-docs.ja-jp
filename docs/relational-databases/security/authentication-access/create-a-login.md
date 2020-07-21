@@ -1,5 +1,6 @@
 ---
 title: ログインの作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して SQL Server または Azure SQL Database でログインを作成する方法について説明します。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -23,19 +24,19 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0ed09a881d0bbf7a1f284b3b2971077725e6d91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 860f4d84084916982fb8328e2fa1cc373d8b3204
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094964"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005687"
 ---
 # <a name="create-a-login"></a>ログインの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]にログインを作成する方法について説明します ログインとは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに接続しようとしている人またはプロセスの ID を指します。  
   
-##  <a name="Background"></a> 背景情報  
+##  <a name="background"></a><a name="Background"></a> 背景情報  
  ログインは、セキュリティ プリンシパル、またはセキュリティで保護されたシステムで認証できるエンティティです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に接続するためには、ユーザーにログインが必要です。 Windows プリンシパル (ドメイン ユーザーや Windows ドメイン グループなど) に基づいてログインを作成することも、Windows プリンシパルに基づかないログイン ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインなど) を作成することもできます。  
   
 > **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用するためには、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]に混合モード認証が使用されている必要があります。 詳細については、「 [認証モードの選択](../../../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
@@ -44,13 +45,13 @@ ms.locfileid: "68094964"
   
 > **注:** ログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するとき、その ID がマスター データベースで検証されます。 包含データベース ユーザーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のデータベース レベルでの接続が認証されます。 包含データベース ユーザーを使用する場合、ログインは必要ありません。 包含データベースは、他のデータベース、およびデータベースをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (および master データベース) のインスタンスから分離されたデータベースです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Windows 認証と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証の両方で包含データベース  ユーザーがサポートされます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]を使用して、包含データベース ユーザーとデータベース レベルのファイアウォール規則を結合します。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> セキュリティ  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サーバーに対する **ALTER ANY LOGIN** 権限または **ALTER LOGIN** 権限が必要です。  
   
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**loginmanager** ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SSMS を使用してログインを作成する  
+##  <a name="create-a-login-using-ssms"></a><a name="SSMSProcedure"></a> SSMS を使用してログインを作成する  
   
   
 1.  オブジェクト エクスプローラーで、新しいログインを作成するサーバー インスタンスのフォルダーを展開します。  
@@ -97,13 +98,11 @@ ms.locfileid: "68094964"
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### <a name="additional-options"></a>追加オプション  
  **[ログイン - 新規作成]** ダイアログ ボックスでは、 **[サーバー ロール]** 、 **[ユーザー マッピング]** 、 **[セキュリティ保護可能なリソース]** 、 **[状態]** の 4 つの追加ページにもオプションがあります。  
   
 ### <a name="server-roles"></a>[サーバー ロール]  
- **[サーバー ロール]** ページには、新しいログインに割り当てることができるすべての可能なロールが一覧表示されます。 使用できるオプションは以下のとおりです。  
+ **[サーバー ロール]** ページには、新しいログインに割り当てることができるすべての可能なロールが一覧表示されます。 次のオプションを使用できます。  
   
  **[bulkadmin]** チェック ボックス  
  **bulkadmin** 固定サーバー ロールのメンバーは、BULK INSERT ステートメントを実行できます。  
@@ -136,15 +135,15 @@ ms.locfileid: "68094964"
  **[ユーザー マッピング]** ページには、すべての可能なデータベースと、ログインに適用できるデータベースに対するデータベース ロール メンバーシップが一覧表示されます。 選択したデータベースによって、ログインに使用できるロールのメンバーシップが決まります。 このページで使用できるオプションを次に示します。  
   
  **[このログインにマップされたユーザー]**  
- このログインでアクセスできるデータベースを選択します。 データベースを選択すると、**[_database_name_ のデータベース ロール メンバーシップ]** ペインに有効なデータベース ロールが表示されます。  
+ このログインでアクセスできるデータベースを選択します。 データベースを選択すると、 **[_database_name_ のデータベース ロール メンバーシップ]** ペインに有効なデータベース ロールが表示されます。  
   
- **マップ**  
+ **Map**  
  下の一覧にあるデータベースへのアクセスを、ログインに許可します。  
   
  **[データベース]**  
  サーバーで利用できるデータベースを一覧表示します。  
   
- **ユーザー**  
+ **User**  
  ログインにマップするデータベース ユーザーを指定します。 既定では、データベース ユーザーの名前はログインと同じになります。  
   
  **[既定のスキーマ]**  
@@ -184,16 +183,16 @@ ms.locfileid: "68094964"
   
 4.  **[オブジェクトの種類を選択]** ダイアログ ボックスで **[この種類のすべてのオブジェクト]** を選択した場合は、 **[エンドポイント]** 、 **[ログイン]** 、 **[サーバー]** 、 **[可用性グループ]** 、 **[サーバー ロール]** のいずれかまたはすべてをオブジェクトの種類として選択します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **[名前]**  
+ **名前**  
  グリッドに追加される各プリンシパルまたはセキュリティ保護可能なリソースの名前です。  
   
- **型**  
+ **Type**  
  各アイテムの種類について説明します。  
   
  **[明示的] タブ**  
  上のグリッドで選択されているセキュリティ保護可能なリソースに適用できる権限が表示されます。 すべての明示的な権限に対してすべてのオプションを使用できるわけではありません。  
   
- **権限**  
+ **アクセス許可**  
  権限の名前です。  
   
  **Grantor**  
@@ -208,7 +207,7 @@ ms.locfileid: "68094964"
  **Deny**  
  この権限をログインに対して拒否する場合はオンにします。 この権限を取り消す場合はオフにします。  
   
-### <a name="status"></a>状態  
+### <a name="status"></a>Status  
  **[状態]** ページには、選択した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに対して構成できる認証オプションと承認オプションの一部が表示されます。  
   
  このページで使用できるオプションを次に示します。  
@@ -225,10 +224,10 @@ ms.locfileid: "68094964"
   
  このオプションを選択して、このログインを有効または無効にします。 このオプションは、ENABLE オプションまたは DISABLE オプションを指定した ALTER LOGIN ステートメントを実行します。  
   
- **SQL Server Authentication**  
+ **SQL Server 認証**  
  **[ログインをロックアウトする]** チェック ボックスは、選択したログインから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用して接続する場合のみ使用できます。このチェック ボックスは、そのログインがロックアウトされていることを示します。この設定は読み取り専用です。 ロックアウトされたログインのロックを解除するには、UNLOCK オプションを指定して ALTER LOGIN を実行します。  
   
-##  <a name="TsqlProcedure"></a> Windows 認証と T-SQL を使用してログインを作成する  
+##  <a name="create-a-login-using-windows-authentication-using-t-sql"></a><a name="TsqlProcedure"></a> Windows 認証と T-SQL を使用してログインを作成する  
   
  
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
@@ -245,7 +244,7 @@ ms.locfileid: "68094964"
   
     ```  
   
-## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>SQL Server 認証と SSMS を使用してログインを作成する  
+## <a name="create-a-login-using-sql-server-authentication-using-t-sql"></a>SQL Server 認証と T-SQL を使用してログインを作成する
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -265,7 +264,7 @@ ms.locfileid: "68094964"
   
  詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報:ログインの作成後に実行する手順  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a>補足情報: ログインの作成後に実行する手順  
  ログインの作成が済むと、そのログインで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に接続できるようになりますが、実際の作業を行うための十分な権限があるとは限りません。 ログインに関して一般的に行われる操作について説明するトピックへのリンクを次に示します。  
   
 -   ログインをロールに参加させるには、「 [ロールの追加](../../../relational-databases/security/authentication-access/join-a-role.md)」を参照してください。  

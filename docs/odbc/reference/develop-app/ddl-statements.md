@@ -12,16 +12,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], DDL statements
 - DDL statements [ODBC]
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97541c9d594b282b871cb7869d0e8c2d2224205d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cae06efe6dd11e651e8553fa5c1004c2fa145478
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076865"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302993"
 ---
 # <a name="ddl-statements"></a>DDL ステートメント
-データ定義言語 (DDL) ステートメントは、Dbms によって大幅に異なります。 ODBC SQL ステートメントの最も一般的なデータ定義操作を定義します作成すると、テーブル、インデックス、およびビューを削除する。テーブルの変更許可と権限の取り消し。 その他のすべての DDL ステートメントは、データ ソースに固有です。 そのため、相互運用可能なアプリケーションでは、一部のデータ定義操作を実行できません。 一般に、これは問題ではありません、このような操作が高 DBMS 固有にする傾向があり、最適なため、ほとんどの Dbms に専用のデータベース管理ソフトウェアに左が付属またはセットアップ プログラムは、ドライバーに付属します。  
+データ定義言語 (DDL) ステートメントは、Dbms によって大きく異なります。 ODBC SQL では、最も一般的なデータ定義操作 (テーブル、インデックス、およびビューの作成と削除) のステートメントを定義します。テーブルの変更権限の付与と取り消しを行います。 その他のすべての DDL ステートメントは、データソース固有です。 そのため、相互運用可能なアプリケーションで一部のデータ定義操作を実行することはできません。 通常、これは問題ではありません。そのような操作は DBMS 固有のものであり、ほとんどの Dbms またはドライバーに付属するセットアッププログラムに付属している専用のデータベース管理ソフトウェアに残されている傾向があるためです。  
   
- データの定義で別の問題は、そのデータ型の名前は Dbms の間で大幅に異なります。 標準的なデータ型の名前を定義して、DBMS 固有の名前に変換するドライバーを強制ではなく**SQLGetTypeInfo**アプリケーション DBMS 固有のデータ型名を検出するための手段を提供します。 相互運用可能なアプリケーションは作成し、変更テーブルに SQL ステートメントでこれらの名前を使用する必要があります。示した名前[付録 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)、および[付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)、例のみを示します。
+ データ定義のもう1つの問題は、データ型名が Dbms 間で大きく異なることです。 標準のデータ型名を定義し、それらを DBMS 固有の名前に変換するようにドライバーを強制するのではなく、 **SQLGetTypeInfo**を使用すると、アプリケーションで dbms 固有のデータ型名を検出できます。 相互運用可能なアプリケーションでは、これらの名前を SQL ステートメントで使用してテーブルを作成および変更する必要があります。[「付録 C: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)」と[「付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」に記載されている名前は、例にすぎません。

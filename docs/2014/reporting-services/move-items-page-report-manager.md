@@ -1,5 +1,5 @@
 ---
-title: '[アイテムの移動] ページ (レポート マネージャー) |Microsoft Docs'
+title: '[アイテムの移動] ページ (レポートマネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108222"
 ---
 # <a name="move-items-page-report-manager"></a>[<ItemName> を移動] ページ (レポート マネージャー)
@@ -27,7 +27,7 @@ ms.locfileid: "66108222"
 > [!NOTE]  
 >  すべてのアイテムを移動できるとは限りません。 [ホーム]、[個人用レポート]、[Users フォルダー] などの予約済みフォルダーは移動できません。 レポート履歴またはスナップショットは他の場所に移動できません。 履歴およびスナップショットは、基になるレポートと同じ場所に常に配置し、そのレポートからアクセスします。  
   
-## <a name="navigation"></a>ナビゲーション  
+## <a name="navigation"></a>「ナビゲーション」  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
   
 ###### <a name="to-open-the-move-items-page-from-the-contents-page-in-details-view"></a>詳細ビューの [コンテンツ] ページから [<ItemName> を移動] ページを開くには  
@@ -64,12 +64,12 @@ ms.locfileid: "66108222"
   
 4.  アイテムのツール バーの **[移動]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [[全般] プロパティ ページ、フォルダー&#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
- [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [[全般] プロパティ ページ、リソース&#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
- [[全般] プロパティ ページ、共有データ ソース&#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
+ [[全般] プロパティページ、フォルダー &#40;レポートマネージャー&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+ [[全般] プロパティページ、レポート &#40;レポートマネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [[全般] プロパティページ、リソース &#40;レポートマネージャー&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
+ [[全般] プロパティページ、共有データソース &#40;レポートマネージャー&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

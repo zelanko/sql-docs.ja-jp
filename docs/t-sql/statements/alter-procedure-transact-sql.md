@@ -23,15 +23,15 @@ ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f6edc9ffcc723f2900b06ca658cb1633bfa9fbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 676696f50495ab042bbaf38bf9b6fd1ce374d3a7
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927246"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381266"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、CREATE PROCEDURE ステートメントを使用して作成した既存のプロシージャを変更します。  
   
@@ -78,7 +78,10 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 [;]  
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *schema_name*  
  プロシージャが属するスキーマの名前を指定します。  
   
@@ -102,7 +105,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  VARYING  
  出力パラメーターとしてサポートされている結果セットを指定します。 このパラメーターはストアド プロシージャによって動的に作成され、その内容は変化します。 カーソル パラメーターにのみ適用されます。 このオプションは、CLR プロシージャでは無効です。  
   
- *default*  
+ *既定値*  
  パラメーターの既定値です。  
   
  OUT | OUTPUT  
@@ -115,7 +118,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、このプロシージャ用のプランをキャッシュせず、実行時にプロシージャを再コンパイルします。  
   
  ENCRYPTION  
- **適用対象**:SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**:SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)、[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、ALTER PROCEDURE ステートメントの元のテキストを、暗号化した形式に変換することを示します。 暗号化した形式の出力は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のどのカタログ ビューでも直接見ることはできません。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時、元のプロシージャをメモリから取得できます。 システム メタデータのアクセス方法について詳しくは、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
@@ -143,7 +146,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  プロシージャの本体を構成する 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。 省略可能な BEGIN キーワードと END キーワードを使用して、ステートメントを囲むことができます。 詳しくは、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」の「ベスト プラクティス」、「全般的な解説」、「制限事項と制約事項」をご覧ください。  
   
  EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  CLR ストアド プロシージャで参照する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリのメソッドを指定します。 *class_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、およびアセンブリにクラスとして存在していることが必要です。 クラス名に名前空間とその区切り文字のピリオド ( **.** ) が含まれる場合は、クラス名をかっこ ( **[ ]** ) または引用符 ( **""** ) で区切る必要があります。 指定するメソッドは、クラスの静的メソッドであることが必要です。  
   
@@ -166,7 +169,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 ### <a name="permissions"></a>アクセス許可  
  プロシージャの **ALTER** 権限、または **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`uspVendorAllInfo` ストアド プロシージャを作成します。 このプロシージャは、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] を提供するすべてのベンダーの名前と、そのベンダーの提供製品、信用格付け、およびベンダーが現時点で製品を提供できるかどうかを返します。 このプロシージャを作成した後、別の結果セットを返すように変更されます。  
   
 ```  

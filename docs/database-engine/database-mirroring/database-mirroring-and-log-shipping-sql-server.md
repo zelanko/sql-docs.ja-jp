@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリングとログ配布 (SQL Server) | Microsoft Docs
+description: 必要な宛先サーバーの数など、SQL Server でログ配布とデータベース ミラーリングを組み合わせる場合の考慮事項について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd18ca39f11525f3fd91f759ff34f4ce6ebd0dbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789698"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>データベース ミラーリングとログ配布 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   特定のデータベースをミラーリングまたはログ配布することができます。また、ミラーリングとログ配布を同時に行うこともできます。 使用する方法を選択するには、次の点を検討します。  
   
 -   必要な配布先サーバーは何台か。  
@@ -76,7 +77,7 @@ ms.locfileid: "68006464"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>ミラーリングとログ配布を合わせた設定  
  データベース ミラーリングとログ配布を合わせて設定するには、次の手順を実行する必要があります。  
   
-1.  NORECOVERY が設定されたプリンシパル/プライマリ データベースのバックアップを別のサーバー インスタンスに復元します。このバックアップは、後でデータベース ミラーリングのプリンシパル/プライマリ データベースに対するミラー データベースとして使用します。 詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
+1.  NORECOVERY が設定されたプリンシパル/プライマリ データベースのバックアップを別のサーバー インスタンスに復元します。このバックアップは、後でデータベース ミラーリングのプリンシパル/プライマリ データベースに対するミラー データベースとして使用します。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
   
 2.  データベース ミラーリングをセットアップする。 詳細については、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)」または「[データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)」を参照してください。  
   

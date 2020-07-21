@@ -1,26 +1,26 @@
 ---
 title: マスター インスタンスとは
 titleSuffix: SQL Server big data clusters
-description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) の SQL Server マスター インスタンスについて説明します。
+description: この記事では、SQL Server 2019 ビッグ データ クラスターの SQL Server マスター インスタンスについて説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
-ms.translationtype: MT
+ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822695"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606643"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのマスター インスタンスとは
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 のビッグデータクラスターにおける*SQL Server マスターインスタンス*の役割について説明します。 Master インスタンスは、接続、スケールアウトクエリ、メタデータとユーザーデータベース、machine learning サービスを管理するために、ビッグデータクラスターで実行されている SQL Server インスタンスです。
+この記事では、SQL Server 2019 ビッグ データ クラスターでの *SQL Server マスター インスタンス*の役割について説明します。 マスター インスタンスとは、ビッグ データ クラスターで実行される、接続、スケールアウト クエリ、メタデータとユーザー データベース、機械学習サービスを管理する SQL Server のインスタンスです。
 
 SQL Server マスター インスタンスには、次の機能があります。
 
@@ -53,7 +53,7 @@ Machine Learning Services は、SQL Server ビッグ データ クラスター�
 
 SQL Server 2019 を使用すると、通常はエンタープライズ データベースに格納されているディメンション データにビッグ データを簡単に結合できます。 ビッグ データの価値は、組織の一部で管理されているだけでなく、レポート、ダッシュボード、アプリケーションに取り込むことも行われた場合に、大幅に増加します。 同時に、データ科学者は引き続き Spark/HDFS エコシステム ツールを使用して、SQL Server マスター インスタンス内のデータと、SQL Server マスター インスタンスを "_経由して_" アクセス可能な外部データ ソースに、リアルタイムで簡単にアクセスできます。
 
-SQL Server 2019 ビッグ データ クラスターを使用すると、エンタープライズ データ レイクでさらに多くのことができます。 SQL Server 開発者とアナリストは次のことができます。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]を使用すると、エンタープライズ データ レイクでさらに多くのことを行うことができます。 SQL Server 開発者とアナリストは次のことができます。
 
 * エンタープライズ データ レイクにあるデータを消費するアプリケーションを構築する。
 * Transact-SQL クエリを使用して、すべてのデータについて推論する。
@@ -65,9 +65,9 @@ SQL Server 2019 ビッグ データ クラスターを使用すると、エン�
 * リアルタイム分析のために、エンタープライズ データ マートにデータを直接ストリーミングする。
 * 対話型分析と BI ツールを使用して、データを視覚的に探索する。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-SQL Server ビッグ データ クラスターの詳細については、次のリソースを参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] の詳細については、次のリソースを参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
-- [ワークショップ: Microsoft SQL Server ビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)
+- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] アーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

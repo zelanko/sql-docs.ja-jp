@@ -1,5 +1,5 @@
 ---
-title: sys.internal_partitions (TRANSACT-SQL) |Microsoft Docs
+title: internal_partitions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
@@ -13,45 +13,44 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca65e1a4e7af69bc1259b856a76c729b5210cc4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 9da410954f4fedce101ca95a9a3571898b4cd349
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122642"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002719"
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="sysinternal_partitions-transact-sql"></a>internal_partitions (Transact-sql)
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  ディスク ベース テーブルで列ストア インデックスの内部データを追跡する各の行セットの 1 つの行を返します。 これらの行セットは列ストア インデックスに内部し、トラックが削除された行、行グループのマッピング、およびデルタ行グループを格納します。 各テーブル パーティションのそれぞれのデータを追跡します。すべてのテーブルでは、少なくとも 1 つのパーティションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 再、行セットを列ストア インデックスを再構築するたびに作成されます。   
+  ディスクベーステーブルの列ストアインデックスの内部データを追跡する行セットごとに1行のデータを返します。 これらの行セットは、列ストアインデックスの内部にあり、削除された行、行グループのマッピング、およびデルタストアの行グループを追跡します。 各テーブルパーティションのデータを追跡します。各テーブルには、少なくとも1つのパーティションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列ストアインデックスを再構築するたびに、行セットを再作成します。   
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|partition_id|**bigint**|このパーティションのパーティションの ID。 データベース内で一意です。|  
+|partition_id|**bigint**|このパーティションのパーティション ID。 データベース内で一意です。|  
 |object_id|**int**|パーティションを含むテーブルのオブジェクト ID。|  
-|index_id|**int**|テーブルで定義された列ストア インデックスのインデックス ID。<br /><br /> 1 = クラスター化列ストア インデックス<br /><br /> 2 = 非クラスター化列ストア インデックス|  
-|partition_number|**int**|パーティションの数です。<br /><br /> 1 = パーティション分割されたテーブルの最初のパーティションまたは非パーティション テーブルの 1 つのパーティション。<br /><br /> 2 番目のパーティションし、などです。|  
-|internal_object_type|**tinyint**|列ストア インデックスの内部データを追跡するための行セット オブジェクト。<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP - このビットマップのインデックスは、列ストアから削除済みとしてマークされている行を追跡します。 パーティションは、複数の行グループ内の行を持つことができますので、ビットマップはすべての行グループは。 行は、列ストアにも物理的に存在する領域を占有してをあります。<br /><br /> COLUMN_STORE_DELTA_STORE - 行のグループをストアには、カラム型ストレージに圧縮されていないを行グループと呼ばれます。 各テーブル パーティションには、0 個以上のデルタストア行グループを持つことができます。<br /><br /> COLUMN_STORE_DELETE_BUFFER - 更新可能な非クラスター化列ストア インデックスの削除を維持するためです。 クエリでは、基になる行ストア テーブルから行を削除、削除バッファーは、列ストアから削除を追跡します。 削除された行の数が 1048576 を超えた場合にバック グラウンド スレッドの組ムーバーによって、または明示的な再編成コマンドによって、削除のビットマップにマージされます。  特定の時点で、削除のビットマップと削除バッファーの和集合がすべて削除された行を表します。<br /><br /> COLUMN_STORE_MAPPING_INDEX - クラスター化列ストア インデックスがセカンダリ非クラスター化インデックスを持つ場合にのみ使用します。 これにより、非クラスター化インデックス キーが、適切な行グループと列ストア行 ID にマップされます。 別の行グループに移動する行のキーを格納するだけこれは、デルタ行グループは、列ストアに圧縮するときに、マージ操作で、2 つの異なる行をグループから行をマージするときに発生します。|  
-|Row_group_id|**int**|デルタストア行グループの ID。 各テーブル パーティションには、0 個以上のデルタストア行グループを持つことができます。|  
-|hobt_id で|**bigint**|内部行セット オブジェクトの ID。 これは、内部の行セットの物理的な特性についての詳細を取得するには、その他の Dmv を使用したに参加するための適切なキーです。|  
+|index_id|**int**|テーブルで定義されている列ストアインデックスのインデックス ID。<br /><br /> 1 = クラスター化列ストアインデックス<br /><br /> 2 = 非クラスター化列ストアインデックス|  
+|partition_number|**int**|パーティション番号。<br /><br /> 1 = パーティションテーブルの最初のパーティション、または非パーティションテーブルの1つのパーティション。<br /><br /> 2 = 2 番目のパーティション。|  
+|internal_object_type|**tinyint**|列ストアインデックスの内部データを追跡する行セットオブジェクト。<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP-このビットマップインデックスは、列ストアから削除済みとしてマークされている行を追跡します。 ビットマップは、複数の行グループにパーティションを含めることができるため、すべての行グループに対して使用されます。 行は依然として物理的に存在し、列ストアの領域を占有しています。<br /><br /> COLUMN_STORE_DELTA_STORE-単票形式のストレージに圧縮されていない行グループと呼ばれる行のグループを格納します。 各テーブルパーティションには、0個以上のデルタストア行グループを含めることができます。<br /><br /> COLUMN_STORE_DELETE_BUFFER-更新可能な非クラスター化列ストアインデックスの削除を維持するために使用します。 クエリによって基になる行ストアテーブルから行が削除されると、削除バッファーは列ストアから削除を追跡します。 削除された行の数が1048576を超えると、バックグラウンドのタプルムーバースレッドまたは明示的な再編成コマンドによって、delete ビットマップに再びマージされます。  特定の時点で、削除ビットマップと削除バッファーの和集合は、削除されたすべての行を表します。<br /><br /> COLUMN_STORE_MAPPING_INDEX-クラスター化列ストアインデックスにセカンダリ非クラスター化インデックスがある場合にのみ使用されます。 これにより、非クラスター化インデックスキーが列ストアの正しい行グループと行 ID にマップされます。 別の行グループに移動する行のキーのみを格納します。このエラーは、デルタ行グループが列ストアに圧縮され、マージ操作によって2つの異なる行グループの行がマージされた場合に発生します。|  
+|Row_group_id|**int**|デルタストアの行グループの ID。 各テーブルパーティションには、0個以上のデルタストア行グループを含めることができます。|  
+|hobt_id|**bigint**|内部行セットオブジェクト (HoBT) の ID。 これは、内部行セットの物理的特性に関する詳細情報を取得するために、他の Dmv と結合するのに適したキーです。|  
 |rows|**bigint**|このパーティション内の行の概数です。|  
-|data_compression|**tinyint**|行セットの圧縮の状態。<br /><br /> 0 = NONE<br /><br /> 1 行を =<br /><br /> 2 ページを =|  
-|data_compression_desc|**nvarchar(60)**|各パーティションの圧縮の状態。 行ストア テーブルに指定できる値は、NONE、ROW、および PAGE です。 列ストア テーブルに指定できる値は COLUMNSTORE および COLUMNSTORE_ARCHIVE です。|  
-|optimize_for_sequential_key|**bit**|1 = パーティションが最後のページの挿入の最適化を有効にします。<br><br>0 = 既定値。 パーティションは、最後のページの挿入の最適化を無効になっているのです。|
+|data_compression|**tinyint**|行セットの圧縮の状態。<br /><br /> 0 = NONE<br /><br /> 1 = 行<br /><br /> 2 = ページ|  
+|data_compression_desc|**nvarchar(60)**|各パーティションの圧縮の状態。 行ストア テーブルに指定できる値は、NONE、ROW、および PAGE です。 列ストアテーブルに指定できる値は、列ストアと COLUMNSTORE_ARCHIVE です。|  
+|optimize_for_sequential_key|**bit**|1 = パーティションには、最後のページ挿入最適化が有効になっています。<br><br>0 = 既定値。 パーティションで最後のページ挿入の最適化が無効になっています。|
   
 ## <a name="permissions"></a>アクセス許可  
- ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ `public` ロールのメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 再作成または列ストア インデックスを再構築は、毎回の新しい列ストア内部のインデックスを作成します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列ストアインデックスを作成または再構築するたびに、新しい列ストア内部インデックスを再作成します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. すべてのテーブルの内部の行セットの表示します。  
- この例では、すべてのテーブルの内部列ストア行セットを返します。 詳細については、特定の行セットに hobt_id でを使用することもできます。  
+### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. テーブルのすべての内部行セットを表示する  
+ この例では、テーブルのすべての内部列ストア行セットが返されます。 また、hobt_id を使用して、特定の行セットに関する詳細情報を確認することもできます。  
   
-```  
+```sql  
 SELECT i.object_id, i.index_id, i.name, p.hobt_id, p.internal_object_type_id, p.internal_object_type_desc  
 FROM sys.internal_partitions AS p  
 JOIN sys.indexes AS i  
@@ -59,9 +58,9 @@ on i.object_id = p.object_id
 WHERE p.object_id = OBJECT_ID ( '<table name' ) ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server システム カタログに対するクエリに関してよくあるご質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+## <a name="see-also"></a>参照  
+ [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

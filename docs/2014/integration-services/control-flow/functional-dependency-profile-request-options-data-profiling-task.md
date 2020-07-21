@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cab0f3edc080e6f2f174e3393548620c65f9176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2683b86699da075be54f6d5ad6720beccbee1add
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831548"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432959"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>[機能依存プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[機能依存プロファイル要求]** のオプションを設定できます。 機能依存プロファイルは、ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 このプロファイルでは、郵便番号によって州が一意に決定されますが、依存関係の違反を検出できます。  
@@ -25,12 +24,12 @@ ms.locfileid: "62831548"
 > [!NOTE]  
 >  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
 ## <a name="understanding-the-selection-of-determinant-and-dependent-columns"></a>決定列と依存列の選択について  
  **機能依存プロファイル要求** は、決定側の列または列のセット ( **DeterminantColumns** プロパティで指定) により、依存側の列 ( **DependentColumn** プロパティで指定) の値がどの程度決定されるかを計算します。 たとえば、米国の州の列は米国郵便番号の列に機能的に依存します。 つまり、郵便番号 (決定列) が "98052" である場合、州 (依存列) は必ず "Washington" になります。  
   
- 決定側については、 **DeterminantColumns** プロパティで列または列のセットを指定できます。 たとえば、A 列、B 列、および C 列を含むサンプル テーブルについて考えてみます。**DeterminantColumns** プロパティについて次の選択を行います。  
+ 決定側については、 **DeterminantColumns** プロパティで列または列のセットを指定できます。 たとえば、A 列、B 列、および C 列を含むサンプル テーブルについて考えてみます。 **DeterminantColumns** プロパティについて次の選択を行います。  
   
 -   **[(\*)]** ワイルドカードを選択した場合、データ プロファイル タスクは、各列を依存関係の決定側としてテストします。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62831548"
   
 -   **全般**  
   
--   **Options**  
+-   **[オプション]**  
   
 ### <a name="data-options"></a>[データ] のオプション  
  **[ConnectionManager]**  
@@ -82,7 +81,7 @@ ms.locfileid: "62831548"
  文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
->  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、 **[CompareOptions]** は読み取り専用で、 **[Default]** に設定されます。  
+>  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -103,13 +102,13 @@ ms.locfileid: "62831548"
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **[ThresholdSetting]**  
  しきい値設定を指定します。 このプロパティの既定値は **[Specified]** です。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**[InclusionThresholdSetting]**|しきい値を指定しません。 機能依存の強さは、その値に関係なく報告されます。|  
+|**なし**|しきい値を指定しません。 機能依存の強さは、その値に関係なく報告されます。|  
 |**[Specified]**|**[FDStrengthThreshold]** で指定したしきい値を使用します。 機能依存の強さは、このしきい値より大きい場合にのみ報告されます。|  
 |**[Exact]**|しきい値を指定しません。 機能依存の強さは、選択した列間の機能依存が完全に一致する場合にのみ報告されます。|  
   
@@ -119,8 +118,8 @@ ms.locfileid: "62831548"
  **[MaxNumberOfViolations]**  
  出力で報告する機能依存違反の最大数を指定します。 このプロパティの既定値は 100 です。 **[ThresholdSetting]** で **[Exact]** が選択されている場合、このオプションは無効です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
- [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 916fd6d996a1a5270173d290c61f262ddf3f797b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65deee685c2205a7c6e41ed86f71c69639555d7c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62871129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965722"
 ---
 # <a name="system-databases"></a>システム データベース
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次のシステム データベースが用意されています。  
@@ -34,7 +33,7 @@ ms.locfileid: "62871129"
 |[tempdb データベース](tempdb-database.md)|一時オブジェクトや生成途中の結果セットを保存するためのワークスペースです。|  
   
 ## <a name="modifying-system-data"></a>システム データの変更  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーは、システム テーブル、システム ストアド プロシージャ、カタログ ビューなどのシステム オブジェクトに含まれている情報を直接更新できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、代わりに完全な管理ツール セットが用意されています。ユーザーは、これらのツールを使用して、システムを完全に管理し、データベース内のすべてのユーザーとオブジェクトを管理できます。 その一部を次に示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーは、システム テーブル、システム ストアド プロシージャ、カタログ ビューなどのシステム オブジェクトに含まれている情報を直接更新できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、代わりに完全な管理ツール セットが用意されています。ユーザーは、これらのツールを使用して、システムを完全に管理し、データベース内のすべてのユーザーとオブジェクトを管理できます。 次に例を示します。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]などの管理ユーティリティ。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62871129"
 ## <a name="viewing-system-database-data"></a>システム データベース データの表示  
  システム テーブルに対する直接的なクエリを実行するような [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、アプリケーションが必要とする情報を取得する方法が他にない場合を除いて、作成しないでください。 代わりに、アプリケーションで、次のツールを使用してカタログ情報やシステム情報を取得することをお勧めします。  
   
--   システム カタログ ビュー。  
+-   システム カタログ ビュー  
   
 -   SQL-SMO。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "62871129"
 ## <a name="related-tasks"></a>Related Tasks  
  [システム データベースのバックアップと復元 &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [オブジェクト エクスプローラーのシステム オブジェクトの非表示](../../ssms/object/object-explorer.md)  
+ [[オブジェクト エクスプローラーのシステム オブジェクトを非表示にする]](../../ssms/object/object-explorer.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [カタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)  

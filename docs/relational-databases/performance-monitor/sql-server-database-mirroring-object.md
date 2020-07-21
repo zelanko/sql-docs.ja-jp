@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 639d661dd9a7196119bbb34f11f0ed5a9161a978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760554"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server:Database Mirroring オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SQLServer:Database Mirroring** パフォーマンス オブジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングに関する情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |**Bytes Received/sec**|1 秒間に受信されたバイト数。|  
 |**Bytes Sent/sec**|1 秒間に送信されたバイト数。|  
@@ -53,7 +53,7 @@ ms.locfileid: "67986677"
 > [!NOTE]  
 >  各パートナーでは、一部のカウンターの値が 0 を示します。値が 0 になるカウンターは、パートナーが現在担っている役割によって異なります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パフォーマンス カウンターを使用して、データベース ミラーリングのパフォーマンスを監視できます。 たとえば、データベース ミラーリングがプリンシパル サーバーのパフォーマンスに影響を及ぼしているかどうかを確認するには、 **Transaction Delay** カウンターを調べることができます。また、ミラー データベースとプリンシパル データベース間の遅延時間がいかに少ないかを確認するには、 **Redo Queue** カウンターと **Log Send Queue** カウンターを調べることができます。 1 秒間に送信されたログの量を監視する場合は、 **Log Bytes Sent/sec** カウンターを調べることができます。  
   
 ## <a name="see-also"></a>参照  

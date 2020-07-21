@@ -1,5 +1,5 @@
 ---
-title: データを調べる |Microsoft Docs
+title: データの調査 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 80f41778d1afa806b739e43edda6fb5b79e8f432
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925357"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760468"
 ---
 # <a name="examining-data"></a>データの調査
-[データの取得](../../../ado/guide/data/getting-data.md)セクションでは、1 つまたは複数としてデータ ソースからデータを取得する方法を説明しました。 **Recordset**オブジェクト。 このセクションで取り上げる**レコード セット**内を移動する方法を含む詳細についてで、**レコード セット**し、そのデータを表示します。  
+「[データの取得](../../../ado/guide/data/getting-data.md)」セクションでは、1つまたは複数の**レコードセット**オブジェクトとしてデータソースからデータを取得する方法について説明しました。 このセクションでは、**レコードセット内を移動して**そのデータを表示する方法など、**レコードセット**について詳しく説明します。  
   
- **レコード セット**さまざまなサポート[プロパティとメソッド](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)用に移動しに含まれるデータを確認できます。 これらの機能は、プロバイダーに依存します。 一部のプロバイダーには、いくつかのプロパティまたはメソッドできない場合があります。  
+ **レコードセット**では、内に含まれるデータの移動や確認を行うためのさまざまな[プロパティとメソッド](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)がサポートされています。 これらの機能は、プロバイダーに依存します。 一部のプロバイダーでは、一部のプロパティまたはメソッドがサポートされない場合があります。  
   
  このセクションでは、次のトピックを扱います。  
   

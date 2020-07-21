@@ -13,28 +13,28 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 38570e910994e77084777bcc4245ccbb6033d39b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b82300ff328470f0b195796385f29e651a1998b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729328"
 ---
 # <a name="subscription-synchronization-history"></a>サブスクリプション、[同期の履歴]
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[同期の履歴]** タブには、マージ エージェントの状態、アーティクル統計、履歴、情報メッセージ、エラー メッセージなど詳細情報が表示されます。  
   
 ## <a name="options"></a>オプション  
  表示するマージ エージェント セッションを **[表示]** メニューで選択した後、 **[マージ エージェントのセッション]** という名前のグリッドで特定のセッションを選択します。 **[選択されたセッションで処理されるアーティクル]** というラベルの付いたグリッド内に、このセッションの詳細情報が表示されます。  
   
- **[表示]**  
+ **表示**  
  表示するマージ エージェント セッションを選択します。  
   
- **ステータス**  
+ **状態**  
  セッションの最後のマージ エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   エラー  
   
 -   [完了]  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68769427"
  **エラー メッセージ**  
  セッションがエラーで終了した場合、このフィールドにはマージ エージェントによってログに記録された最後のエラー メッセージが表示されます。 セッションがエラーで終了しなかった場合は、このフィールドは空白です。  
   
- **[アーティクル]**  
+ **記事**  
  パブリケーション内の各アーティクルの名前です。パブリケーション全体に対して以下の処理フェーズがあります。  
   
 -   **[初期化]** 。 マージ エージェントを開始することを示しています。スナップショットの適用が行われるサブスクリプションの初期化とは同期しません。  
@@ -82,7 +82,7 @@ ms.locfileid: "68769427"
  **Inserts**  
  選択されたセッションの該当フェーズで挿入された行数です。  
   
- **Updates**  
+ **更新プログラム**  
  選択されたセッションの該当フェーズで更新された行数です。  
   
  **Deletes**  

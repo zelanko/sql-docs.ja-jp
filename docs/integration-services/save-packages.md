@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b2184475ac3da6629a70b5013277686636a6fc8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897075"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295736"
 ---
 # <a name="save-packages"></a>パッケージを保存する
 
@@ -62,9 +62,9 @@ ms.locfileid: "67897075"
   
 2.  **[ファイル]** メニューの **[\<パッケージ ファイル> のコピーに名前を付けて保存]** をクリックします。  
   
-3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、 **[パッケージの場所]** 一覧からパッケージの保存場所を選択します。 使用できるオプションは以下のとおりです。  
+3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、 **[パッケージの場所]** 一覧からパッケージの保存場所を選択します。 次のオプションを使用できます。  
     -   SQL Server
-    -   [ファイル システム] 
+    -   ファイル システム 
     -   [SSIS パッケージ ストア] 
   
 4.  保存場所が **[SQL Server]** または **[SSIS パッケージ ストア]** の場合、サーバー名を指定します。  
@@ -94,7 +94,7 @@ ms.locfileid: "67897075"
   
  テンプレートとして、複数のパッケージを指定できます。 カスタム パッケージをテンプレートとして実装するには、そのパッケージをあらかじめ作成しておく必要があります。  
   
- カスタム パッケージをテンプレートとして使用してパッケージを作成すると、新しいパッケージの名前と GUID は、テンプレートと同じになります。 パッケージを区別するには、 **Name** プロパティの値を更新して、 **ID** プロパティの新しい GUID を生成する必要があります。 詳細については、「[SQL Server データ ツールでのパッケージの作成](../integration-services/create-packages-in-sql-server-data-tools.md)」および「[パッケージのプロパティを設定する](../integration-services/set-package-properties.md)」を参照してください。  
+ カスタム パッケージをテンプレートとして使用してパッケージを作成すると、新しいパッケージの名前と GUID は、テンプレートと同じになります。 パッケージを区別するには、 **Name** プロパティの値を更新して、 **ID** プロパティの新しい GUID を生成する必要があります。 詳細については、「 [SQL Server データ ツールでのパッケージの作成](../integration-services/create-packages-in-sql-server-data-tools.md) 」および「 [パッケージのプロパティを設定する](../integration-services/set-package-properties.md)」を参照してください。  
   
 ### <a name="to-designate-a-custom-package-as-a-package-template"></a>カスタム パッケージをパッケージ テンプレートとして指定するには  
   

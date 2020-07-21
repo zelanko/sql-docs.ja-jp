@@ -14,23 +14,23 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO MD]
 ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74cebabb5fad4dc7e7f6719224324b243b40d206
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d299c927e5e9e73c48874fc6afd76fc9d5777f80
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913882"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764953"
 ---
 # <a name="value-property-ado-md"></a>Value プロパティ (ADO MD)
-現在の値を示す[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)します。  
+現在の[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)の値を示します。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**バリアント**は読み取り専用であるとします。  
+ は**バリアント**を返し、読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FormattedValue プロパティ (ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)

@@ -1,5 +1,5 @@
 ---
-title: パッケージに注釈を追加 |Microsoft Docs
+title: パッケージに注釈を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 8db31e78-e03b-44e6-a307-a1349f52b0c6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5c407efc18790b4d8ed8912e47248f4d04de9fca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 228034102b460b7149d51d3dfe798949a9527689
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062100"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439739"
 ---
 # <a name="add-an-annotation-to-a-package"></a>パッケージに注釈を追加する
   この手順では、パッケージに注釈を追加する方法について説明します。  
@@ -47,7 +46,7 @@ ms.locfileid: "66062100"
   
 8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージで注釈を使用する](use-annotations-in-packages.md)  
   
   

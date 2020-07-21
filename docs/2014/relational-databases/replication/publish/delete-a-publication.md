@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d2b39a326d59333868b4f8015eb9a2e59d59e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060623"
 ---
 # <a name="delete-a-publication"></a>パブリケーションの削除
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリケーションを削除する方法について説明します。  
@@ -35,7 +34,7 @@ ms.locfileid: "62865031"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **内の** [ローカル パブリケーション] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]フォルダーからパブリケーションを削除します。  
   
 #### <a name="to-delete-a-publication"></a>パブリケーションを削除するには  
@@ -46,7 +45,7 @@ ms.locfileid: "62865031"
   
 3.  削除するパブリケーションを右クリックし、 **[削除]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  パブリケーションは、レプリケーションのストアド プロシージャを使用してプログラムから削除できます。 どのストアド プロシージャを使用するかは、削除するパブリケーションの種類によって異なります。  
   
 > [!NOTE]  
@@ -58,10 +57,10 @@ ms.locfileid: "62865031"
   
     -   単一のパブリケーションを削除するには、パブリッシャーのパブリケーション データベースで [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) を実行します。  
   
-    -   すべてのパブリケーションを削除し、パブリッシュされたデータベースからすべてのレプリケーション オブジェクトを削除するには、パブリッシャーで [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行します。 値を指定`tran`の **@type** します。 (省略可) ディストリビューターにアクセスできない場合や、ディストリビューターのデータベース ステータスがオフラインになっている可能性がある場合は、 **@force** @type **@force** フォルダーからパブリケーションを削除します。 (省略可) パブリケーション データベースに対して **@dbname** を実行しない場合は、 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) にデータベースの名前を指定します。  
+    -   すべてのパブリケーションを削除し、パブリッシュされたデータベースからすべてのレプリケーション オブジェクトを削除するには、パブリッシャーで [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行します。 型の値を指定し `tran` ます。 ** \@ ** (省略可能) ディストリビューターにアクセスできない場合や、ディストリビューターのデータベース ステータスがオフラインになっている可能性がある場合は、**\@force** に **1** を指定します。 (省略可能) パブリケーション データベースに対して [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行しない場合は、**\@dbname** にデータベースの名前を指定します。  
   
         > [!NOTE]  
-        >  **@force** に **1** を指定すると、レプリケーション関連のパブリッシング オブジェクトがデータベース上に残される場合があります。  
+        >  **\@force** に **1** を指定すると、レプリケーション関連のパブリッシング オブジェクトがデータベース上に残されます。  
   
 2.  (省略可) このデータベースに他のパブリケーションが存在しない場合は、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行し、スナップショット レプリケーションまたはトランザクション レプリケーションを使用した、現在のデータベースのパブリケーションを無効にします。  
   
@@ -73,16 +72,16 @@ ms.locfileid: "62865031"
   
     -   単一のパブリケーションを削除するには、パブリッシャーのパブリケーション データベースで [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) を実行します。  
   
-    -   すべてのパブリケーションを削除し、パブリッシュされたデータベースからすべてのレプリケーション オブジェクトを削除するには、パブリッシャーで [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行します。 値を指定`merge`の **@type** します。 (省略可) ディストリビューターにアクセスできない場合や、ディストリビューターのデータベース ステータスがオフラインになっている可能性がある場合は、 **@force** @type **@force** フォルダーからパブリケーションを削除します。 (省略可) パブリケーション データベースに対して **@dbname** を実行しない場合は、 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) にデータベースの名前を指定します。  
+    -   すべてのパブリケーションを削除し、パブリッシュされたデータベースからすべてのレプリケーション オブジェクトを削除するには、パブリッシャーで [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行します。 型の値を指定し `merge` ます。 ** \@ ** (省略可能) ディストリビューターにアクセスできない場合や、ディストリビューターのデータベース ステータスがオフラインになっている可能性がある場合は、**\@force** に **1** を指定します。 (省略可能) パブリケーション データベースに対して [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行しない場合は、**\@dbname** にデータベースの名前を指定します。  
   
         > [!NOTE]  
-        >  **@force** に **1** を指定すると、レプリケーション関連のパブリッシング オブジェクトがデータベース上に残される場合があります。  
+        >  **\@force** に **1** を指定すると、レプリケーション関連のパブリッシング オブジェクトがデータベース上に残されます。  
   
 2.  (省略可) このデータベースに他のパブリケーションが存在しない場合は、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行し、マージ レプリケーションを使用した、現在のデータベースのパブリケーションを無効にします。  
   
 3.  (省略可) サブスクライバー側のサブスクリプション データベースに対して [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql) を実行し、サブスクリプション データベースに残っているレプリケーション メタデータをすべて削除します。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例は、トランザクション パブリケーションを削除し、データベースのトランザクション パブリッシングを無効にする方法を示しています。 すべてのサブスクリプションがあらかじめ削除されていることを想定しています。 詳細については、「 [Delete a Pull Subscription](../delete-a-pull-subscription.md) 」または「 [Delete a Push Subscription](../delete-a-push-subscription.md)」を参照してください。  
   
  [!code-sql[HowTo#sp_droppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droppublication)]  
@@ -91,7 +90,7 @@ ms.locfileid: "62865031"
   
  [!code-sql[HowTo#sp_dropmergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergepublication)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーション管理オブジェクト (RMO) を使用することで、プログラムによってパブリケーションを削除できます。 パブリケーションの削除に使用する RMO クラスは、削除するパブリケーションの種類によって異なります。  
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションを削除するには  
@@ -142,7 +141,7 @@ ms.locfileid: "62865031"
   
 7.  接続を閉じます。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、トランザクション パブリケーションを削除します。 このデータベースに対して他のトランザクション パブリケーションが存在しない場合は、トランザクション パブリッシングも無効になります。  
   
  [!code-csharp[HowTo#rmo_DropTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_droptranpub)]  

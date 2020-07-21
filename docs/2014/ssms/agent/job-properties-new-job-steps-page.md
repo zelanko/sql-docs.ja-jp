@@ -1,5 +1,5 @@
 ---
-title: 'ジョブのプロパティ: 新しいジョブ ([ステップ] ページ) |Microsoft Docs'
+title: 'ジョブのプロパティ: [新しいジョブ] ([ステップ] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65003667a08d198934719ef3a307f1b89b96c6c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62695657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062240"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>ジョブのプロパティ: [新しいジョブ] ([ステップ] ページ)
-  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのジョブ ステップを表示したり整理したりできます。  
+  このページを使用すると、エージェントジョブのジョブステップを表示および整理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ジョブ ステップの一覧]**  
  このジョブのジョブ ステップを一覧表示します。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62695657"
  **[新規作成]**  
  選択したジョブ ステップの下に新しいジョブ ステップを作成します。  
   
- **Insert**  
+ **挿入**  
  選択したジョブ ステップの上に新しいジョブ ステップを作成します。  
   
  **[編集]**  

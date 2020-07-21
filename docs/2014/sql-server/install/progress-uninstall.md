@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee19dbb2-6fd7-4b9b-9ea6-36c6faeedf10
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 49d9fd67033b16085553b77cfc51ddbe60bf3d4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4dc7b70d24eae9e098c3b05cbb284c7961b4751
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011961"
 ---
 # <a name="progress-uninstall"></a>進行状況 (アンインストール)
   [進行状況] (アンインストール) ページを使用して、セットアップの進行状況を監視します。  

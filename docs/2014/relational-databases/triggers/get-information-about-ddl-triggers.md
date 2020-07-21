@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d5e59264036380f6c8b5c9e73df5a6700c4b1ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cd71d188c2f53bd9872359199c07d700688552d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62698213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014459"
 ---
 # <a name="get-information-about-ddl-triggers"></a>DDL トリガーに関する情報の取得
   ここに記載されているカタログ ビューを使用すると、DDL トリガーに関する情報を取得できます。  
@@ -70,7 +69,7 @@ ms.locfileid: "62698213"
   
 -   [sys.server_assembly_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DDL トリガー](../triggers/ddl-triggers.md)  
   
   

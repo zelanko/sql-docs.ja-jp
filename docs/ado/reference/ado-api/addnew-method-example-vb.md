@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - AddNew method [ADO], Visual Basic example
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 043855dc4f2af915b7e1f61bffe99ae89956c3be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 573679e173f97840ccffee9ad93d73cf0075b4b0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921305"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760628"
 ---
 # <a name="addnew-method-example-vb"></a>AddNew メソッドの例 (VB)
-この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを指定した名前の新しいレコードを作成します。  
+この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを使用して、指定した名前の新しいレコードを作成します。  
   
 ```  
 'BeginAddNewVB  
@@ -107,6 +107,6 @@ End Sub
 'EndAddNewVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

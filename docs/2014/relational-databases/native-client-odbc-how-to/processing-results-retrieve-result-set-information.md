@@ -1,5 +1,5 @@
 ---
-title: 結果セット (ODBC) の情報の取得 |Microsoft Docs
+title: 結果セットの情報の取得 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,32 +10,31 @@ helpviewer_keywords:
 - result sets [ODBC]
 - result sets [ODBC], fetching
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a39a6715a9ba8ab08d846aabb96e5b0665a2aa43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f7ed275eb9b6558a77160c3c7fb2fc233c199cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048206"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>結果セットの情報の取得 (ODBC)
     
 ### <a name="to-get-information-about-a-result-set"></a>結果セットに関する情報を取得するには  
   
-1.  呼び出す[SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md)を結果セットの列の数を取得します。  
+1.  [Sqlnumresultcols](../native-client-odbc-api/sqlnumresultcols.md)を呼び出して、結果セット内の列の数を取得します。  
   
 2.  結果セット内の各列に対して次の操作を行います。  
   
-    -   呼び出す[SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md)結果列に関する情報を取得します。  
+    -   [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md)を呼び出して、結果列に関する情報を取得します。  
   
      または  
   
-    -   呼び出す[SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md)結果列に関する具体的な記述子情報を取得します。  
+    -   [Sqlcolattribute](../native-client-odbc-api/sqlcolattribute.md)を呼び出して、結果列に関する特定の記述子情報を取得します。  
   
 ## <a name="see-also"></a>参照  
- [結果の操作方法に関するトピックを処理&#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   
- [結果セットの特性の決定&#40;ODBC&#41;](../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+ [結果の処理方法に関するトピック &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   
+ [ODBC&#41;&#40;結果セットの特性の決定](../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

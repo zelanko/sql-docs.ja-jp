@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 6: SSIS でプロジェクト配置モデルを持つパラメーターを使用する | Microsoft Docs'
+title: 'レッスン 6: プロジェクト配置モデルを持つパラメーターを使用する | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 164b66b3e4c6770d3722f32deeca6c2fbaf8478c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: afc1e7ceb6dca21bd562745fe7250500cc9c2033
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037181"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903875"
 ---
 # <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>レッスン 6: SSIS でプロジェクト配置モデルを持つパラメーターを使用する
 

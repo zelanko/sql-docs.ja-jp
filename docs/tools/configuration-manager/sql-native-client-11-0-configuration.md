@@ -1,6 +1,6 @@
 ---
-title: SQL Native Client 11.0 Configuration |Microsoft Docs
-ms.custom: ''
+title: SQL Native Client 11.0 の構成
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e0b9e07f241892755e4009a942695c0d5d29322
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e205d03c430670a9b51a0ed852629d608d8e78af
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024238"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306727"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

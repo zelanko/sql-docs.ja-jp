@@ -1,5 +1,5 @@
 ---
-title: sp_prepare (TRANSACT-SQL) |Microsoft Docs
+title: sp_prepare (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepare
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e5875d4160ca3bb3e06670d02426e7b3cfe097c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085804"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832588"
 ---
-# <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
+# <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-パラメーター化された準備[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントとステートメントを返します*処理*実行します。  `sp_prepare` ID を指定して呼び出される、表形式データ ストリーム (TDS) パケットで 11 を = です。  
+パラメーター化さ [!INCLUDE[tsql](../../includes/tsql-md.md)] れたステートメントを準備し、実行用のステートメント*ハンドル*を返します。  `sp_prepare` は、ID = 11 を指定した場合に表形式のデータ ストリーム (TDS) パケットで呼び出されます。  
   
  ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,24 +39,24 @@ sp_prepare handle OUTPUT, params, stmt, options
 ```  
   
 ## <a name="arguments"></a>引数  
- *handle*  
- SQL Server によって生成される*準備済みハンドル*識別子。 *処理*必須のパラメーターには、 **int**値を返します。  
+ *扱え*  
+ は、SQL Server によって生成される*準備済みハンドル*識別子です。 *handle*は、 **int**戻り値を持つ必須パラメーターです。  
   
  *params*  
- パラメーター化されたステートメントを指定します。 *Params*変数の定義は、ステートメント内のパラメーター マーカーの代わりに使用します。 *params*が必要なパラメーターです、 **ntext**、 **nchar**、または**nvarchar**値を入力します。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
+ パラメーター化されたステートメントを指定します。 変数の*params*定義は、ステートメントのパラメーターマーカーに置き換えられます。 *params*は、 **ntext**、 **nchar**、または**nvarchar**の入力値を呼び出す必須のパラメーターです。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
   
  *stmt*  
- カーソル結果セットを定義します。 *Stmt*パラメーターは必須でありの呼び出し、 **ntext**、 **nchar**、または**nvarchar**値を入力します。  
+ カーソル結果セットを定義します。 *Stmt*パラメーターは必須であり、 **ntext**、 **nchar**、または**nvarchar**の入力値に対してを呼び出します。  
   
  *options*  
- カーソルの結果の説明を返すオプションのパラメーターは、列を設定します。 *オプション*int の次の入力値が必要です。  
+ カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*には、次の int 入力値が必要です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
-## <a name="examples"></a>使用例  
-A. 次の例では、準備して、単純なステートメントを実行します。  
+## <a name="examples"></a>例  
+A. 次の例では、単純なステートメントを準備して実行します。  
   
 ```sql  
 DECLARE @P1 int;  
@@ -67,7 +67,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```
 
-B. 次の例では、AdventureWorks2016 データベース内のステートメントを準備し、後で、ハンドルを使用してそれを実行します。
+B. 次の例では、AdventureWorks2016 データベースでステートメントを準備し、後でハンドルを使用してステートメントを実行します。
 
 ```sql
 -- Prepare query
@@ -93,7 +93,7 @@ GO
 (1 row affected)
 ```
 
-アプリケーションは、準備されたプランを破棄する前に、ハンドル値 1、2 回を使用するクエリを実行します。
+次に、ハンドル値1を使用してクエリを2回実行してから、準備されたプランを破棄します。
 
 ```sql
 EXEC sp_execute 1, 49879;  
@@ -106,7 +106,7 @@ EXEC sp_unprepare 1;
 GO
 ```
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
 

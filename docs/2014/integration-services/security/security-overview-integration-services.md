@@ -17,15 +17,14 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 597f6341c6542f9c53cb6f0243b94e77326a33d9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62927091"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422049"
 ---
 # <a name="security-overview-integration-services"></a>セキュリティの概要 (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、豊富かつ柔軟なセキュリティ環境を提供できるように、複数の階層でセキュリティが構成されています。 このようなセキュリティの階層では、デジタル署名、パッケージのプロパティ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロール、およびオペレーティング システム権限が使用されます。 こうしたセキュリティ機能のほとんどは、ID およびアクセス制御のカテゴリに分類されます。  
@@ -67,7 +66,7 @@ ms.locfileid: "62927091"
 #### <a name="saving-packages-to-the-msdb-database"></a>msdb データベースへのパッケージの保存  
  パッケージを msdb データベースに保存すると、サーバー レベル、データベース レベル、およびテーブル レベルのセキュリティを実現できます。 msdb データベースでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは sysssispackages テーブルに格納されます。 パッケージは、msdb データベースの sysssispackages テーブルと sysdtspackages テーブルに保存されるため、msdb データベースのバックアップ時に自動的にバックアップされます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースに格納されるパッケージは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータベース レベルのロールを適用して保護することもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージへのアクセスを制御するための、db_ssisadmin、db_ssisltduser、および db_ssisoperator というデータベース レベルの 3 つの固定ロールがあります。 各パッケージにはリーダー ロールおよびライター ロールを関連付けることができます。 また、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで使用する、データベース レベルのカスタム ロールを定義することもできます。 ロールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の msdb データベースに保存されるパッケージにのみ実装できます。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](integration-services-roles-ssis-service.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースに格納されるパッケージは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータベース レベルのロールを適用して保護することもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージへのアクセスを制御するための、db_ssisadmin、db_ssisltduser、および db_ssisoperator というデータベース レベルの 3 つの固定ロールがあります。 各パッケージにはリーダー ロールおよびライター ロールを関連付けることができます。 また、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで使用する、データベース レベルのカスタム ロールを定義することもできます。 ロールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内の msdb データベースに保存されるパッケージにのみ実装できます。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](integration-services-roles-ssis-service.md)」を参照してください。  
   
 #### <a name="saving-packages-to-the-file-system"></a>ファイル システムへのパッケージの保存  
  パッケージを msdb データベースではなくファイル システムに格納する場合は、パッケージ ファイル、およびパッケージ ファイルが格納されるフォルダーをセキュリティで保護してください。  
@@ -104,7 +103,7 @@ ms.locfileid: "62927091"
   
 -   [パッケージの保護レベルを設定または変更する](../set-or-change-the-protection-level-of-packages.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

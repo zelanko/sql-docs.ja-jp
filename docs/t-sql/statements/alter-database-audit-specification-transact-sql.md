@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c9229f5bec676f28d92b4ea1aba1ad3aeeb4d6c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4262b850a2afc9799c15d3a4155c9ab85432366
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065894"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301942"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能を使用して、データベース監査仕様オブジェクトを変更します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68065894"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
@@ -55,7 +55,10 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *audit_specification_name*  
  監査仕様の名前。  
   
@@ -83,7 +86,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  監査による、この監査仕様についてのレコードの収集を有効または無効にします。 監査仕様の状態の変更はユーザー トランザクション外部で実行する必要があります。また、状態が ON から OFF に遷移中の場合、同じステートメントで他の変更を行うことはできません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベース監査仕様は、セキュリティ保護できないオブジェクトであり、特定のデータベースに保存されます。 データベース監査仕様を変更する場合は、監査仕様の状態のオプションを OFF に設定する必要があります。 STATE=OFF 以外のオプションを使用して監査仕様を有効にしているときに ALTER DATABASE AUDIT SPECIFICATION を実行すると、エラー メッセージが表示されます。 詳細については、「 [tempdb Database](../../relational-databases/databases/tempdb-database.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -91,7 +94,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
   
  データベース監査仕様の作成後は、CONTROL SERVER または ALTER ANY DATABASE AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルで表示できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`HIPAA_Audit_DB_Specification` ユーザーによる `SELECT` ステートメントを監査する、`dbo` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査の `HIPAA_Audit` というデータベース監査仕様を変更します。  
   
 ```  

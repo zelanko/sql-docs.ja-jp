@@ -1,21 +1,20 @@
 ---
-title: Transact-SQL コード スニペット | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL コード スニペット
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77162f98496ce2a8632ff025652a19b5af593de7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e161f219340120198a76957a63d3176280754ab5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063618"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068435"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL コード スニペット
   [!INCLUDE[tsql](../../includes/tsql-md.md)]コード スニペットは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のステートメントまたはブロックの基本構造を含んだテンプレートです。 スニペットは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでステートメントを追加する際のひな形として使用できます。 SQL Server に付属の定義済みのスニペットを挿入できるほか、独自のスニペットを作成することもできます。  

@@ -19,17 +19,17 @@ helpviewer_keywords:
 - status information [SQL Server], idle time
 - idle time [SQL Server]
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 272af8e89dfdf313e24017edd615401bc2a35362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c17b356a3409128e0fedd9378d82cf0acb7d8781
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097464"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894309"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してからアイドル状態になっていた時間を返します。 結果は CPU 時間の増分 ("ティック") で返され、これはすべての CPU 時間を累積したものです。したがって、実際の経過時間を超える場合があります。 マイクロ秒に変換するには、@@TIMETICKS を乗算します。  
   
@@ -45,12 +45,12 @@ ms.locfileid: "68097464"
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行の統計情報 **sp_monitor**です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時から現在までのアイドル時間をミリ秒単位で返します。 値をマイクロ秒に変換するときに演算オーバーフローが発生しないようにするため、この例では値の 1 つを `float` 型に変換しています。  
   
 ```  

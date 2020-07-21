@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c2aa732a98079fd88ebfcafa476f20566e6dc5a
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: 8b208b63dd096f35faa151f6f739d5e20cc3917b
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68698295"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454505"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "68698295"
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_ ** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -64,7 +64,7 @@ PolyBase クエリ用の外部データ ソースが含まれる外部テーブ�
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- Create a new external table
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )
@@ -93,7 +93,7 @@ column_name <data_type>
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、SQL では、Hadoop または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータは移動されず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されません。
 
-\<column_definition> [ ,...*n* ]。CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
 データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータに対してクエリを実行するときに、ファイルの行が拒否されます。
 
@@ -103,13 +103,13 @@ SQL Server では、CREATE EXTERNAL TABLE ステートメントによって、�
 
 LOCATION をフォルダーとして指定した場合、外部テーブルから選択する PolyBase クエリでは、フォルダーとそのすべてのサブフォルダーからファイルが取得されます。 Hadoop と同じように PolyBase で非表示のフォルダーは返されません。 ファイル名が下線 (_) またはピリオド (.) で始まるファイルも返されません。
 
-この例では、LOCATION='/webdata/' である場合、PolyBase クエリでは mydata.txt と mydata2.txt から行が返されます。 mydata3.txt は非表示のフォルダーのサブフォルダーであるため、返されません。 また、_hidden.txt は非表示のファイルであるため返されません。
+この例では、LOCATION='/webdata/' である場合、PolyBase クエリでは mydata.txt と mydata2.txt から行が返されます。 mydata3.txt は非表示のフォルダー内のファイルであるため、返されません。 また、_hidden.txt は非表示のファイルであるため返されません。
 
 ![外部テーブルの再帰型データ](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部テーブルの再帰型データ")
 
-既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性 \<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` のようになります。
+既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性\<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、「 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 」のように入力します。
 
-DATA_SOURCE = *external_data_source_name*。外部データの場所を含む外部データ ソースの名前を指定します。 この場所は、Hadoop または Azure BLOB ストレージです。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
+DATA_SOURCE = *external_data_source_name*。外部データの場所を含む外部データ ソースの名前を指定します。 この場所は Hadoop File System (HDFS) か、Azure ストレージ BLOB コンテナーか、Azure Data Lake Store になります。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
 
 FILE_FORMAT = *external_file_format_name*。外部データのファイルの種類と圧縮方法を格納する外部ファイル形式のオブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md) を使用します。
 
@@ -150,8 +150,6 @@ REJECT_SAMPLE_VALUE = *reject_sample_value*。REJECT_TYPE = percentage を指定
 - 失敗した行の割合が 50% として再計算されます。 失敗した行の割合が、30% という reject 値を超えました。
 - PolyBase クエリは、最初の 200 行を取得しようとした後、拒否された行 50% で失敗します。 拒否のしきい値を超えたことが PolyBase クエリによって検出される前に、一致した行が返されていることに注意してください。
 
-DATA_SOURCE。Hadoop ファイル システム、Azure Blob Storage、または [Shard Map Manager](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/) に格納されているデータなどの外部データ ソースです。
-
 SCHEMA_NAME。SCHEMA_NAME 句では、外部テーブルの定義をリモート データベース上のスキーマの異なるテーブルにマップする機能が提供されます。 ローカルおよびリモートの両方のデータベースに存在するスキーマ間であいまいさを排除するには、この句を使用します。
 
 OBJECT_NAME。OBJECT_NAME 句では、外部テーブルの定義をリモート データベース上の別の名前を持つテーブルにマップする機能が提供されます。 ローカルおよびリモートの両方のデータベースに存在するオブジェクト名の間であいまいさを排除するには、この句を使用します。
@@ -189,7 +187,7 @@ PolyBase では、クエリのパフォーマンスを向上させるために�
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
-外部テーブルのデータは SQL Server 内にないため、PolyBase の管理下にはなく、外部プロセスによっていつでも変更または削除できます。 その結果、外部のテーブルに対するクエリの結果は確定的であることが保証されません。 同じクエリを外部のテーブルに対して実行するたびに、異なる結果が返される可能性があります。 同様に、外部データが移動または削除された場合、クエリが失敗する可能性があります。
+外部テーブル用のデータは SQL Server の直接の管理下にないため、外部プロセスによっていつでも変更または削除することができます。 その結果、外部のテーブルに対するクエリの結果は確定的であることが保証されません。 同じクエリを外部のテーブルに対して実行するたびに、異なる結果が返される可能性があります。 同様に、外部データが移動または削除された場合、クエリが失敗する可能性があります。
 
 それぞれが異なる外部データ ソースを参照する複数の外部テーブルを作成できます。 異なる複数の Hadoop データ ソースに対して同時にクエリを実行する場合は、各 Hadoop ソースに同じ 'Hadoop 接続' サーバー構成の設定が使用されている必要があります。 たとえば、ことはできません同時にクエリを実行する Cloudera Hadoop クラスターと Hortonworks の Hadoop クラスターに対してこれらさまざまな構成設定を使用するためです。 構成設定とサポートされる組み合わせについては、「[PolyBase 接続構成](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。
 
@@ -216,11 +214,11 @@ SQL Server 2016 の PolyBase には、テーブル定義による有効な 1 つ
 
 SCHEMARESOLUTION オブジェクトに対する共有ロック。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 外部テーブルのデータ ファイルは Hadoop または Azure Blob Storage に格納されます。 これらのデータ ファイルはご自身のプロセスによって作成され、管理されます。 外部データのセキュリティを管理することは、ユーザー自身の責任になります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>A. テキスト区切り形式のデータを含む外部テーブルを作成します
 
@@ -344,7 +342,7 @@ SELECT DISTINCT user.FirstName, user.LastName
 INTO ms_user
 FROM user INNER JOIN (
     SELECT * FROM ClickStream WHERE cs.url = 'www.microsoft.com'
-    ) AS ms_user
+    ) AS ms
 ON user.user_ip = ms.user_ip
 ;
 ```
@@ -367,8 +365,8 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
 );
 ```
 
@@ -391,7 +389,7 @@ WITH
     * CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( 
+    WITH (
     LOCATION = 'sqlserver://SqlServer',
     -- PUSHDOWN = ON | OFF,
       CREDENTIAL = SQLServerCredentials
@@ -418,7 +416,7 @@ WITH
       LOCATION='tpch_10.dbo.customer',
       DATA_SOURCE=SqlServerInstance
      );
- ```
+```
 
 ### <a name="i-create-an-external-table-for-oracle"></a>I. Oracle の外部テーブルの作成
 
@@ -433,20 +431,20 @@ WITH
    CREATE DATABASE SCOPED CREDENTIAL credential_name
    WITH IDENTITY = 'username', Secret = 'password';
 
-   /* 
+   /*
    * LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
    * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
    * CONNECTION_OPTIONS: Specify driver location
    * CREDENTIAL: the database scoped credential, created above.
    */
    CREATE EXTERNAL DATA SOURCE external_data_source_name
-   WITH ( 
+   WITH (
      LOCATION = 'oracle://<server address>[:<port>]',
      -- PUSHDOWN = ON | OFF,
      CREDENTIAL = credential_name)
 
    /*
-   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+   * LOCATION: Oracle table/view in '.<schema_name>.<object_name>' format
    * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
@@ -461,10 +459,10 @@ WITH
    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
    )
    WITH (
-    LOCATION='customer',
+    LOCATION='.mySchema.customer',
     DATA_SOURCE= external_data_source_name
    );
-   ```
+```
 
 ### <a name="j-create-an-external-table-for-teradata"></a>J. Teradata の外部テーブルの作成
 
@@ -486,7 +484,7 @@ WITH
     * CREDENTIAL: the database scoped credential, created above.
     */
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( 
+    WITH (
     LOCATION = teradata://<server address>[:<port>],
    -- PUSHDOWN = ON | OFF,
     CREDENTIAL =credential_name
@@ -573,22 +571,21 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|** _** &nbsp;|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
 ## <a name="overview-azure-sql-database"></a>概要:Azure SQL データベース
 
-Azure SQL Database で、Azure SQL Database と共に使用するための[エラスティック クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)用外部テーブルを作成します。
+Azure SQL Database で、[エラスティック クエリ (プレビュー)](/azure/sql-database/sql-database-elastic-query-overview/) 用外部テーブルを作成します。
 
-外部テーブルを使用し、エラスティック クエリで使用するための外部テーブルを作成します。
 
 「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- Create a table for use with elastic query  
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
@@ -607,13 +604,13 @@ column_name <data_type>
         [DISTRIBUTION  = SHARDED(sharding_column_name) | REPLICATED | ROUND_ROBIN]]  
     )  
 [;]  
-```  
+```
 
 ## <a name="arguments"></a>引数
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、SQL では、Azure SQL Database 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータは移動されず、Azure SQL Database に格納されません。
 
-\<column_definition> [ ,...*n* ]。CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
 > [!NOTE]
 > `Text`、`nText`、および `XML` は、Azure SQL Database の外部テーブルの列に対してサポートされているデータ型ではありません。
@@ -622,30 +619,21 @@ column_name <data_type>
 
 シャード化された外部テーブルのオプション
 
-[Elastic Database クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)の外部データ ソース (SQL Server 以外のデータ ソース) と配布方法を指定します。
+[エラスティック クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)の外部データ ソース (SQL Server 以外のデータ ソース) と配布方法を指定します。
 
-DATA_SOURCE。Hadoop ファイル システム、Azure Blob Storage、または [Shard Map Manager](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/) に格納されているデータなどの外部データ ソースです。
+DATA_SOURCE DATA_SOURCE 句は、外部テーブルに使用される外部データ ソース (シャード マップ) を定義します。 例については、「[外部テーブルを作成する](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)」を参照してください。
 
-SCHEMA_NAME。SCHEMA_NAME 句では、外部テーブルの定義をリモート データベース上のスキーマの異なるテーブルにマップする機能が提供されます。 ローカルおよびリモートの両方のデータベースに存在するスキーマ間であいまいさを排除するには、この句を使用します。
+SCHEMA_NAME と OBJECT_NAME SCHEMA_NAME 句と OBJECT_NAME 句は、外部テーブルの定義を別のスキーマ内のテーブルにマップします。 これらを省略した場合、リモート オブジェクトのスキーマは "dbo" と見なされ、その名前は定義されている外部テーブルの名前と同一であると見なされます。 これは、リモート テーブルの名前が、外部テーブルを作成するデータベースで既に取得されている場合に便利です。 たとえば、スケールアウトされたデータ層のカタログ ビューまたは DMV の集計ビューを取得する外部テーブルを定義する場合が挙げられます。 カタログ ビューと DMV は既にローカルに存在するため、外部テーブルの定義にその名前を使うことはできません。 代わりに、別の名前を使用して、カタログ ビューまたは DMV の名前を SCHEMA_NAME 句または OBJECT_NAME 句で使用します。 例については、「[外部テーブルを作成する](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables)」を参照してください。
 
-OBJECT_NAME。OBJECT_NAME 句では、外部テーブルの定義をリモート データベース上の別の名前を持つテーブルにマップする機能が提供されます。 ローカルおよびリモートの両方のデータベースに存在するオブジェクト名の間であいまいさを排除するには、この句を使用します。
+DISTRIBUTION DISTRIBUTION 句は、このテーブルに使用するデータ分散を指定します。 クエリ プロセッサは、DISTRIBUTION 句で提供される情報を使用して、最も効率的なクエリ プランを作成します。
 
-DISTRIBUTION。任意。 これは SHARD_MAP_MANAGER 型のデータベースの場合にのみ必須です。 この引数では、テーブルをシャード化されたテーブルとして扱うか、レプリケートされたテーブルとして扱うかを制御します。 **SHARDED** (*列名*) テーブルでは、異なるテーブルからのデータは重複しません。 **REPLICATED** は、テーブルですべてのシャードに同じデータを持つことを指定します。 **ROUND_ROBIN** は、データを分散するためにアプリケーション固有のメソッドが使用されていることを示します。
+- SHARDED は、データがデータベース間で行方向にパーティション分割されることを意味します。 データ分散のパーティション分割キーは、<sharding_column_name> パラメーターです。
+- REPLICATED は、テーブルの同一のコピーが各データベースに存在することを意味します。 データベース間でレプリカが同じであることを自分で確認する必要があります。
+- ROUND_ROBIN は、テーブルがアプリケーションに依存する分散方法を使用して、行方向にパーティション分割されることを意味します。
 
 ## <a name="permissions"></a>アクセス許可
 
-これらのユーザー アクセス許可が必要です。
-
-- **CREATE TABLE**
-- **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
-
-外部データ ソースを作成するログインには、Hadoop または Azure Blob Storage 内にある外部データ ソースに対する読み取りおよび書き込みの権限が必要であることに注意してください。
-
-> [!IMPORTANT]
-> ALTER ANY EXTERNAL DATA SOURCE 権限は、あらゆる外部データ ソース オブジェクトを作成し、変更する能力をプリンシパルに与えます。そのため、データベース上のすべてのデータベース スコープ資格情報にアクセスする能力も与えます。 この権限は特権として考える必要があります。したがって、システム内の信頼できるプリンシパルにのみ与える必要があります。
+外部テーブルへのアクセス権を持つユーザーは、外部データ ソース定義に指定された資格情報の下で、基になるリモート テーブルへのアクセス権を自動的に取得します。 外部データ ソースの資格情報による不要な特権の昇格を防ぎます。 外部テーブルに対して、通常のテーブルであるかのように GRANT または REVOKE を使用します。 外部データ ソースと外部テーブルを定義すると、外部テーブルに対して完全に T-SQL を使用できるようになります。
 
 ## <a name="error-handling"></a>エラー処理
 
@@ -661,7 +649,7 @@ SELECT FROM EXTERNAL TABLE などのアドホック クエリのシナリオの�
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
-外部テーブルのデータは別の SQL Database にあるため、いつでも変更したり、削除したりできます。 その結果、外部のテーブルに対するクエリの結果は確定的であることが保証されません。 同じクエリを外部のテーブルに対して実行するたびに、異なる結果が返される可能性があります。 同様に、外部データが移動または削除された場合、クエリが失敗する可能性があります。
+外部テーブルを使用したデータへのアクセスは、SQL Server 内の分離セマンティクスに準拠しません。 つまり、外部のクエリによってロックやスナップショットの分離が行われないため、外部データ ソースのデータが変更されると、返されるデータが変更される可能性があります。  同じクエリを外部のテーブルに対して実行するたびに、異なる結果が返される可能性があります。 同様に、外部データが移動または削除された場合、クエリが失敗する可能性があります。
 
 それぞれが異なる外部データ ソースを参照する複数の外部テーブルを作成できます。
 
@@ -675,11 +663,29 @@ SELECT FROM EXTERNAL TABLE などのアドホック クエリのシナリオの�
 - 外部テーブルの列に対する DEFAULT 制約
 - データ操作言語 (DML) の削除、挿入、更新の操作
 
+外部データ ソースにプッシュ ダウンできるのは、クエリで定義されたリテラル述語のみです。 これはリンク サーバーとは異なり、クエリ実行中に決定された述語を使用できる場合、つまりクエリ プランで入れ子になったループと組み合わせて使用されるときにアクセスします。 この動作により、多くの場合、外部テーブル全体がローカルにコピーされてから結合されます。
+
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table.
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId
+                          FROM Customer
+                          WHERE CustomerName = 'MyCompany')
+```
+
+外部テーブルを使用すると、クエリ プランで並列処理を使用できなくなります。
+
+外部テーブルはリモート クエリとして実装されます。そのため、返される推定行数は通常 1000 です。外部テーブルのフィルター処理に使用される述語の種類に基づいて他のルールがあります。 これらは、外部テーブルの実際のデータに基づく推定ではなく、ルールベースの推定です。 Optimiser は、リモート データ ソースにアクセスせず、より正確な推定を取得します。
+
 ## <a name="locking"></a>ロック
 
 SCHEMARESOLUTION オブジェクトに対する共有ロック。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-create-external-table-for-azure-sql-database"></a>A. Azure SQL Database の外部テーブルを作成します
 
@@ -694,31 +700,33 @@ WITH
 
 ## <a name="see-also"></a>参照
 
-[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [Azure SQL Database のエラスティック クエリの概要](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
+- [スケールアウトされたクラウド データベース全体をレポートする](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [クロスデータベース クエリの概要 (列方向のパーティション分割)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|** _** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>概要:Azure SQL Data Warehouse
+## <a name="overview-azure-synapse-analytics"></a>概要:Azure Synapse Analytics
 
-Azure SQL Data Warehouse で、次の目的で外部テーブルを使用します。
+次のために外部テーブルを使用します。
 
 - [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、Hadoop または Azure Blob Storage データをクエリします。
-- Hadoop または Azure Blob Storage からデータをインポートして、Azure SQL Data Warehouse に格納します。
-- Azure Data Lake Store からデータをインポートして、Azure SQL Data Warehouse に格納します。
+- Hadoop または Azure Blob Storage からデータをインポートして格納します。
+- Azure Data Lake Store からデータをインポートして格納する
 
 「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」と「[DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md)」も参照してください。  
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH (
@@ -739,16 +747,16 @@ column_name <data_type>
     | REJECT_TYPE = value | percentage,  
     | REJECT_VALUE = reject_value,  
     | REJECT_SAMPLE_VALUE = reject_sample_value,
-    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
+    | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>引数
 
-*{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、SQL Data Warehouse では、Azure Data Lake、Hadoop、または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータは移動されず、SQL Data Warehouse に格納されません。
+*{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、Azure Data Lake、Hadoop、または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみ。 外部テーブルの作成時に、実際のデータは移動または格納されません。
 
-\<column_definition> [ ,...*n* ]。CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
 > [!NOTE]
 > `Text`、`nText`、および `XML` は、Azure SQL Warehouse の外部テーブルの列に対してサポートされているデータ型ではありません。
@@ -763,7 +771,7 @@ LOCATION をフォルダーとして指定した場合、外部テーブルか�
 
 ![外部テーブルの再帰型データ](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部テーブルの再帰型データ")
 
-既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性 \<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` のようになります。
+既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性\<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、「 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 」のように入力します。
 
 DATA_SOURCE = *external_data_source_name*。外部データの場所を含む外部データ ソースの名前を指定します。 この場所は Azure Data Lake 内にあります。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
 
@@ -809,7 +817,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value*。REJECT_TYPE = percentage を指定
 REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
 
 外部データ ソース内のディレクトリを指定します。拒否された行と該当エラー ファイルをそこに書き込みます。
-指定したパスが存在しない場合、PolyBase では、そのパスが自動的に作成されます。 " _ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 このディレクトリ内には、YearMonthDay -HourMinuteSecond (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーで、2 種類のファイル、理由ファイルとデータ ファイルが書き込まれます。
+指定したパスが存在しない場合、PolyBase では、そのパスが自動的に作成されます。 "\_rejectedrows" という名前で子ディレクトリが作成されます。 "\_" 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 このディレクトリ内には、YearMonthDay -HourMinuteSecond (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーで、2 種類のファイル、理由ファイルとデータ ファイルが書き込まれます。
 
 理由ファイルとデータ ファイルのいずれにも、CTAS ステートメントと関連付けられている queryID が含まれます。 データと理由が別々のファイル内にあるため、対応するファイルはサフィックスが一致しています。
 
@@ -821,7 +829,9 @@ REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
 - **ALTER ANY SCHEMA**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
+
+> [!NOTE]
+> MASTER KEY、DATABASE SCOPED CREDENTIAL、および EXTERNAL DATA SOURCE のみを作成するには、CONTROL DATABASE のアクセス許可が必要です
 
 外部データ ソースを作成するログインには、Hadoop または Azure Blob Storage 内にある外部データ ソースに対する読み取りおよび書き込みの権限が必要であることに注意してください。
 
@@ -844,7 +854,7 @@ PolyBase では、クエリのパフォーマンスを向上させるために�
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
-外部テーブルのデータは SQL Data Warehouse の管理下にあるため、外部プロセスによっていつでも変更または削除できます。 その結果、外部のテーブルに対するクエリの結果は確定的であることが保証されません。 同じクエリを外部のテーブルに対して実行するたびに、異なる結果が返される可能性があります。 同様に、外部データが移動または削除された場合、クエリが失敗する可能性があります。
+外部テーブル用のデータは Azure Synapse の直接の管理下にないため、外部プロセスによっていつでも変更または削除することができます。 その結果、外部のテーブルに対するクエリの結果は確定的であることが保証されません。 同じクエリを外部のテーブルに対して実行するたびに、異なる結果が返される可能性があります。 同様に、外部データが移動または削除された場合、クエリが失敗する可能性があります。
 
 それぞれが異なる外部データ ソースを参照する複数の外部テーブルを作成できます。
 
@@ -871,9 +881,9 @@ Azure Data Warehouse の PolyBase には、テーブル定義による有効な 
 
 SCHEMARESOLUTION オブジェクトに対する共有ロック。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>A. ADLS から Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)] にデータをインポートする
+### <a name="a-importing-data-from-adls-into-azure-ssdw"></a>A. ADLS から Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)] にデータをインポートする
 
 ```sql
 
@@ -890,7 +900,7 @@ WITH (TYPE = HADOOP,
 CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
-    FORMAT_TYPE = DELIMITEDTEXT 
+    FORMAT_TYPE = DELIMITEDTEXT
     , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
        , STRING_DELIMITER = ''
       , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
@@ -922,14 +932,14 @@ AS SELECT * FROM
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|** _** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -937,7 +947,7 @@ AS SELECT * FROM
 ## <a name="overview-analytics-platform-system"></a>概要:分析プラットフォーム システム
 
 次のために外部テーブルを使用します。
-  
+
 - [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、Hadoop または Azure Blob Storage データをクエリします。
 - Hadoop または Azure Blob Storage からデータをインポートして、Analytics Platform System に格納します。
 
@@ -945,7 +955,7 @@ AS SELECT * FROM
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH (
@@ -968,13 +978,13 @@ column_name <data_type>
     | REJECT_SAMPLE_VALUE = reject_sample_value,
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>引数
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、Analytics Platform System では、Hadoop または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータが Analytics Platform System に移されたり、格納されたりすることはありません。
 
-\<column_definition> [ ,...*n* ]。CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
 
 データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータに対してクエリを実行するときに、ファイルの行が拒否されます。
 
@@ -988,7 +998,7 @@ LOCATION をフォルダーとして指定した場合、外部テーブルか�
 
 ![外部テーブルの再帰型データ](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部テーブルの再帰型データ")
 
-既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性 \<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、`C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` のようになります。
+既定値を変更して、読み取りをルート フォルダーからのみに限定するには、core-site.xml 構成ファイル内で属性\<polybase.recursive.traversal> を 'false' に設定します。 このファイルは `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server` の配下に配置されます。 たとえば、「 `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn` 」のように入力します。
 
 DATA_SOURCE = *external_data_source_name*。外部データの場所を含む外部データ ソースの名前を指定します。 この場所は、Hadoop または Azure BLOB ストレージです。 外部データ ソースを作成するには、[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用します。
 
@@ -1062,7 +1072,7 @@ PolyBase では、クエリのパフォーマンスを向上させるために�
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
-外部テーブルのデータはアプライアンスの外部にあるため、PolyBase の管理下にはなく、外部プロセスによっていつでも変更または削除できます。 その結果、外部のテーブルに対するクエリの結果は確定的であることが保証されません。 同じクエリを外部のテーブルに対して実行するたびに、異なる結果が返される可能性があります。 同様に、外部データが移動または削除された場合、クエリが失敗する可能性があります。
+外部テーブル用のデータはアプライアンスの直接の管理下にないため、外部プロセスによっていつでも変更または削除することができます。 その結果、外部のテーブルに対するクエリの結果は確定的であることが保証されません。 同じクエリを外部のテーブルに対して実行するたびに、異なる結果が返される可能性があります。 同様に、外部データが移動または削除された場合、クエリが失敗する可能性があります。
 
 それぞれが異なる外部データ ソースを参照する複数の外部テーブルを作成できます。 異なる複数の Hadoop データ ソースに対して同時にクエリを実行する場合は、各 Hadoop ソースに同じ 'Hadoop 接続' サーバー構成の設定が使用されている必要があります。 たとえば、ことはできません同時にクエリを実行する Cloudera Hadoop クラスターと Hortonworks の Hadoop クラスターに対してこれらさまざまな構成設定を使用するためです。 構成設定とサポートされる組み合わせについては、「[PolyBase 接続構成](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)」を参照してください。
 
@@ -1085,17 +1095,17 @@ PolyBase では、32 個の同時 PolyBase クエリを実行しているとき�
 
 SQL Server 2016 の PolyBase には、テーブル定義による有効な 1 つの行の最大幅に基づいた、行の幅 32 KB という制限があります。 列スキーマの合計が 32 KB を超えている場合、PolyBase によるデータのクエリは実行できません。
 
-SQL Data Warehouse では、この制限が 1 MB に引き上げられています。
+Azure Synapse Analytics では、この制限は 1 MB に引き上げられました。
 
 ## <a name="locking"></a>ロック
 
 SCHEMARESOLUTION オブジェクトに対する共有ロック。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 外部テーブルのデータ ファイルは Hadoop または Azure Blob Storage に格納されます。 これらのデータ ファイルはご自身のプロセスによって作成され、管理されます。 外部データのセキュリティを管理することは、ユーザー自身の責任になります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-join-hdfs-data-with-analytics-platform-system-data"></a>A. HDFS データと Analytics Platform System データを結合します
 
@@ -1130,6 +1140,6 @@ FROM ClickStream
 - [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
 - [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)
 - [CREATE EXTERNAL TABLE AS SELECT](../../t-sql/statements/create-external-table-as-select-transact-sql.md)
-- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+- [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 
 ::: moniker-end

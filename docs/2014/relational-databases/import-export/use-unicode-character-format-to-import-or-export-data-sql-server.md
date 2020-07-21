@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 520ce1b4eed8dc11d6d3fe038969257aea1e90fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026358"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
   拡張文字や DBCS 文字を含むデータ ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合は、Unicode 文字形式を使用することをお勧めします。 Unicode 文字データ形式を使用すると、操作を実行するクライアントで使用しているコード ページとは異なるコード ページを使用して、サーバーからデータをエクスポートできます。 このような場合、Unicode 文字形式を使用すると、次の利点があります。  
@@ -37,21 +36,21 @@ ms.locfileid: "66011650"
  Unicode 文字形式に用意されている既定以外のフィールド ターミネータまたは行ターミネータを使用するには、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)」を参照してください。  
   
 ## <a name="command-options-for-unicode-character-format"></a>Unicode 文字形式のコマンド オプション  
- Unicode 文字形式のデータは**bcp**、BULK INSERT、または INSERT ...SELECT \* FROM OPENROWSET(BULK...)。**bcp** コマンドまたは BULK INSERT ステートメントの場合は、コマンド ラインでデータ形式を指定できます。 INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
+ Unicode 文字形式のデータは、 **bcp**、BULK INSERT または INSERT...SELECT \* FROM OPENROWSET (BULK...) を選択します。**Bcp**コマンドまたは BULK INSERT ステートメントの場合は、コマンドラインでデータ形式を指定できます。 INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
   
  Unicode 文字形式は、次のコマンド ライン オプションでサポートされています。  
   
-|コマンド|オプション|説明|  
+|command|オプション|[説明]|  
 |-------------|------------|-----------------|  
 |**bcp**|**-w**|Unicode 文字形式を使用します。|  
-|BULK INSERT|DATAFILETYPE **='** widechar **'**|データの一括インポート時に Unicode 文字形式を使用します。|  
+|BULK INSERT|DATAFILETYPE **= '** widechar **'**|データの一括インポート時に Unicode 文字形式を使用します。|  
   
- 詳細については、[bcp ユーティリティ](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
+ 詳細については、「[bcp ユーティリティ](../../tools/bcp-utility.md)」、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
 > [!NOTE]  
->  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「[データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
+>  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、 **bcp** を使用して Unicode 文字データを一括エクスポートする方法と、BULK INSERT を使用して Unicode 文字データを一括インポートする方法を示しています。  
   
 ### <a name="sample-table"></a>サンプル テーブル  
@@ -84,7 +83,7 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |修飾子|説明|  
 |----------------|-----------------|  
 |**-w**|Unicode 文字形式を指定します。|  
-|**-t** `,`|コンマ (`,`) をフィールド ターミネータとして指定します。<br /><br /> 注:既定のフィールド ターミネータは、タブの Unicode 文字 (\t) です。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)」を参照してください。|  
+|**-t** `,`|コンマ (`,`) をフィールド ターミネータとして指定します。<br /><br /> 注: 既定のフィールドターミネータは、タブ Unicode 文字 (\t) です。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)」を参照してください。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** と **-P** を指定する必要があります。|  
   
  次の例では、Unicode 文字形式のデータを `myTestUniCharData` テーブルから `myTestUniCharData-w.Dat` という名前の新しいデータ ファイルに一括エクスポートします。このデータ ファイルでは、フィールド ターミネータとしてコンマ (`,`) が使用されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コマンド プロンプトで、次のように入力します。  
@@ -112,7 +111,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **一括インポートまたは一括エクスポートのデータ形式を使用するには**  
   
 -   [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
@@ -123,11 +122,11 @@ GO
   
 -   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>関連項目  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>参照  
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Collation and Unicode Support](../collations/collation-and-unicode-support.md)  
+ [照合順序と Unicode のサポート](../collations/collation-and-unicode-support.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: rollback メソッド (SQLServerConnection) |Microsoft Docs
+title: rollback メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cda48c7e-9ce1-42c4-8fba-f6641cecb093
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f072040dc4be3fd92af01e32232ee90bb0b52ad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a36e5b5a352531ed2c7c1b818423f602a81d1b4f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975742"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903852"
 ---
 # <a name="rollback-method-sqlserverconnection"></a>rollback メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67975742"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[rollback ()](../../../connect/jdbc/reference/rollback-method.md)|現在のトランザクションで行われた変更をすべて元に戻し、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトによって現在保持されているデータベース ロックをすべて解除します。|  
 |[rollback (java.sql.Savepoint)](../../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md)|渡された [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) オブジェクトが設定された後で行われた変更を、すべて元に戻します。|  

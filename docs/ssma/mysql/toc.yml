@@ -1,0 +1,123 @@
+- name: MySQL
+  href: sql-server-migration-assistant-for-mysql-mysqltosql.md
+- name: SSMA のインストール
+  href: installing-ssma-for-mysql-mysqltosql.md
+- name: SSMA for MySQL 入門
+  href: getting-started-with-ssma-for-mysql-mysqltosql.md
+- name: 著作権情報
+  href: legal-notice-mysqltosql.md
+- name: 変換の設定
+  href: conversion-settings-mysqltosql.md
+- name: SSMA for MySQL クライアントのインストール
+  href: installing-ssma-for-mysql-client-mysqltosql.md
+- name: SSMA コンソールの実行
+  href: executing-the-ssma-console-mysqltosql.md
+- name: サーバー接続ファイルの作成
+  href: creating-the-server-connection-files-mysqltosql.md
+- name: SQL モード
+  href: sql-modes-mysqltosql.md
+- name: SQL Server への接続
+  href: connect-to-sql-server-mysqltosql.md
+- name: Azure SQL DB への接続
+  href: connecting-to-azure-sql-db-mysqltosql.md
+- name: スクリプト ファイルの作成
+  href: creating-script-files-mysqltosql.md
+- name: SQL Server への変換されたデータベース オブジェクトの読み込み
+  href: loading-converted-database-objects-into-sql-server-mysqltosql.md
+- name: MySQL データベースの変換
+  href: converting-mysql-databases-mysqltosql.md
+- name: SQL Server への移行 - Azure SQL DB
+  href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
+- name: SSMA コンソールのコマンド ライン オプション
+  href: command-line-options-in-ssma-console-mysqltosql.md
+- name: SSMA プロジェクトでの作業
+  href: working-with-ssma-projects-mysqltosql.md
+- name: データの移行設定
+  href: data-migration-settings-mysqltosql.md
+- name: メタデータの保存
+  href: save-metadata-mysqltosql.md
+- name: メニュー コマンドやその他のショートカット キー
+  href: menu-commands-and-other-shortcut-keys-mysqltosql.md
+- name: トラブルシューティング
+  href: troubleshooting-mysqltosql.md
+- name: MySQL への接続
+  href: connect-to-mysql-mysqltosql.md
+- name: SSMA for MySQL コンポーネントの削除
+  href: removing-the-ssma-for-mysql-components-mysqltosql.md
+- name: Azure SQL DB への接続
+  href: connect-to-azure-sql-db-mysqltosql.md
+- name: MySQL データベースの Azure SQL DB への移行
+  href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
+- name: サンプルのコンソール スクリプト ファイルの操作
+  href: working-with-the-sample-console-script-files-mysqltosql.md
+- name: '[新しいプロジェクト]'
+  href: new-project-ssma-mysqltosql.md
+- name: SQL Server での SSMA コンポーネントのインストール
+  href: installing-ssma-components-on-sql-server-mysqltosql.md
+- name: MySQL データベースの SQL Server スキーマへのマッピング
+  href: mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md
+- name: データベースからの更新
+  href: refresh-from-database-mysqltosql.md
+- name: ショートカット キー
+  href: shortcut-keys-mysqltosql.md
+- name: 評価レポート
+  href: assessment-report-mysqltosql.md
+- name: データ移行レポート
+  href: data-migration-report-mysqltosql.md
+- name: パスワードの管理
+  href: managing-passwords-mysqltosql.md
+- name: 高度なオブジェクトの選択
+  href: advanced-object-selection-mysqltosql.md
+- name: ユーザー インターフェイス リファレンス
+  href: user-interface-reference-mysqltosql.md
+- name: 付録 - 1
+  href: appendix-1-mysqltosql.md
+- name: 変換のための MySQL データベースの評価
+  href: assessing-mysql-databases-for-conversion-mysqltosql.md
+- name: SSMA for MySQL コンソールの操作
+  href: working-with-ssma-for-mysql-console-mysqltosql.md
+- name: SSMA for MySQL コンソール入門
+  href: getting-started-with-ssma-for-mysql-console-mysqltosql.md
+- name: MySQL と SQL Server の文字セットのマッピング
+  href: mapping-mysql-and-sql-server-character-set-mysqltosql.md
+- name: 変数値ファイルの作成
+  href: creating-variable-value-files-mysqltosql.md
+- name: レポートの生成
+  href: generating-reports-mysqltosql.md
+- name: 型のマッピングの編集
+  href: edit-type-mapping-mysqltosql.md
+- name: MySQL と SQL Server のデータ型のマッピング
+  href: mapping-mysql-and-sql-server-data-types-mysqltosql.md
+- name: SSMA for MySQL の新機能
+  href: what-s-new-in-ssma-for-mysql-mysqltosql.md
+- name: SSMA for MySQL の新しい GUI 機能
+  href: new-gui-features-in-ssma-for-mysql-mysqltosql.md
+- name: プロジェクト オプションの設定
+  href: setting-project-options-mysqltosql.md
+- name: MySQL への接続
+  href: connecting-to-mysql-mysqltosql.md
+- name: SQL Server への接続
+  href: connecting-to-sql-server-mysqltosql.md
+- name: プロジェクトの設定
+  items:
+    - name: GUI
+      href: project-settings-gui-mysqltosql.md
+    - name: Azure SQL DB
+      href: project-settings-azure-sql-db-mysqltosql.md
+    - name: 型のマッピング
+      href: project-settings-type-mapping-mysqltosql.md
+    - name: 移行
+      href: project-settings-migration-mysqltosql.md
+    - name: Synchronization
+      href: project-settings-synchronization-mysqltosql.md
+    - name: 変換
+      href: project-settings-conversion-mysqltosql.md
+- name: グローバル設定
+  href: global-settings-output-window-mysqltosql.md
+  items:
+    - name: ダイアログ
+      href: global-settings-dialogs-mysqltosql.md
+    - name: ログ記録
+      href: global-settings-logging-mysqltosql.md
+    - name: エディター
+      href: global-settings-editor-mysqltosql.md

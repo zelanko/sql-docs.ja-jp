@@ -1,5 +1,5 @@
 ---
-title: SQLServerStatement クラス |Microsoft Docs
+title: SQLServerStatement クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 89547655fd734ca9e6e340d94832dea5816f2733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c749554d3f95ca873c9bee61b8f6c748ccbf7906
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970378"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926992"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "67970378"
 public class SQLServerStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SQLServerStatement クラスには、JDBC の準備されたステートメントや呼び出し可能ステートメントの基本クラスの実装メソッドも各種用意されています。 SQLServerStatement クラスの基本的な役割は、SQL ステートメントを実行し、更新数と結果セットをユーザー アプリケーションに返すことです。  
   
- このクラスは、SQLServerStatement クラス、ISQLServerStatement インターフェイス、およびインターフェイスへのラップをサポートしています。 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
+ このクラスでは、SQLServerStatement クラス、ISQLServerStatement インターフェイス、および java.sql.Statement インターフェイスへのラップ解除がサポートされます。 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

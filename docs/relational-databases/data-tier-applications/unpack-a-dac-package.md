@@ -13,27 +13,25 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 159369a30ffe4f0b67f59f3970c241d9275f7a54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3cecfc696bda97e046acd80eb3e285e8da2a04de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781641"
 ---
 # <a name="unpack-a-dac-package"></a>DAC パッケージのアンパック
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [データ層アプリケーションのアンパック] ダイアログ ボックスでは、データ層アプリケーション (DAC) パッケージからスクリプトおよびファイルを解凍できます。 解凍されたスクリプトおよびファイルが配置されるフォルダーは、パッケージを使用して DAC を実稼働システムに配置する前に確認できます。 また、DAC の内容は、別のフォルダーにアンパックされた別のパッケージの内容と比較することもできます。  
   
 1.  **作業を開始する準備:** [セキュリティ](#Security)  
   
 2.  **DAC のアンパック:** [[データ層アプリケーションのアンパック] ダイアログの使用](#UnpackDACDial)、[DAC パッケージの内容の確認](#ExamDACPack)  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="Security"></a> セキュリティ  
+##  <a name="security"></a><a name="Security"></a> セキュリティ  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうした DAC には、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 DAC のソースが不明または信頼されていない場合は、使用する前に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の隔離されたテスト インスタンスに DAC を配置し、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードを確認してください。  
   
-##  <a name="UnpackDACDial"></a> [データ層アプリケーションのアンパック] ダイアログの使用  
+##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> [データ層アプリケーションのアンパック] ダイアログの使用  
  **DAC パッケージ ファイルをアンパックするには**  
   
 -   **Windows エクスプローラー**で、DAC パッケージ (.dacpac) ファイルの場所に移動します。  
@@ -50,7 +48,7 @@ ms.locfileid: "68134671"
   
     -   [[フォルダーの参照]](#Browse)  
   
-###  <a name="Unpack"></a> [Microsoft SQL Server DAC パッケージ ファイルのアンパック]  
+###  <a name="unpack-microsoft-sql-server-dac-package-file"></a><a name="Unpack"></a> [Microsoft SQL Server DAC パッケージ ファイルのアンパック]  
  このページでは、アンパックされたファイルの配置先となるフォルダーを指定し、アンパック操作を実行します。  
   
  **[ファイルがアンパックされるフォルダー]:** アンパックされたファイルのフォルダーへの完全パスを指定します。 フォルダーが存在し、完全パスがわかっている場合は、このボックスにパスを入力します。 それ以外の場合は、 **[参照]** をクリックしてフォルダーに移動するか、新しいフォルダーを作成します。  
@@ -61,7 +59,7 @@ ms.locfileid: "68134671"
   
  **[キャンセル]** : DAC パッケージをアンパックすることなく、ダイアログ ボックスを終了します。  
   
-###  <a name="Browse"></a> [フォルダーの参照]  
+###  <a name="browse-for-folder"></a><a name="Browse"></a> [フォルダーの参照]  
  このページでは、アンパック操作の対象となるフォルダーを選択します。 また、必要に応じて、新しいフォルダーを作成することもできます。  
   
  **[フォルダー一覧]** : コンピューターのファイル階層を表示します。 ノードを展開し、DAC パッケージをアンパックするフォルダーに移動します。 フォルダーをクリックし、 **[OK]** をクリックします。  
@@ -72,7 +70,7 @@ ms.locfileid: "68134671"
   
  **[キャンセル]** : フォルダーを選択することなく、ダイアログ ボックスを終了します。  
   
-##  <a name="ExamDACPack"></a> DAC パッケージの内容の確認  
+##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> DAC パッケージの内容の確認  
  パッケージをアンパックすると、 **[データ層アプリケーションのアンパック]** ダイアログ ボックスで作成されたファイルを確認することができます。 このダイアログ ボックスによって、選択した対象フォルダーに次のファイルが作成されます。  
   
 1.  DAC で定義されたオブジェクトを作成するためのステートメントを含む Transact-SQL スクリプト。 ファイル名は *DACName*.sql です。この場合、 *DACName* は DAC の名前になります。  

@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f003e2a127fb5e665be7ece4cf3f7590dc984c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4dff74cd1e21ba743fa425bb632c736ee1cce158
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945294"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295005"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>プログラムによる接続マネージャーの操作
 
@@ -65,8 +65,8 @@ ms.locfileid: "67945294"
 |MULTIFILE|複数ファイル接続マネージャー|**System.String**|いずれかのファイルへのパス。|  
 |MULTIFLATFILE|複数フラット ファイル接続マネージャー|**System.String**|いずれかのファイルへのパス。|  
 |SMOServer|SMO 接続マネージャー|**Microsoft.SqlServer.Management.Smo.Server**||  
-|SMTP (SMTP)|SMTP 接続マネージャー|**System.String**|例: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
-|WMI (WMI)|WMI 接続マネージャー|**System.Management.ManagementScope**||  
+|SMTP|SMTP 接続マネージャー|**System.String**|例: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|WMI|WMI 接続マネージャー|**System.Management.ManagementScope**||  
 |SQLMOBILE|SQL Server Compact 接続マネージャー|**System.Data.SqlServerCe.SqlCeConnection**||  
   
 ## <a name="see-also"></a>参照  

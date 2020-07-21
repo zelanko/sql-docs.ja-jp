@@ -1,5 +1,6 @@
 ---
 title: プリンシパルに対する権限の許可 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して SQL Server のプリンシパルに権限を許可する方法、およびベスト プラクティスについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e7dc2bff70e98420161d823207222c6c9205940
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d9522bf78d3c3d0a36047283d8b0ab9e3073b6d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043264"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005633"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>プリンシパルに対する権限の許可
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でプリンシパルに権限を与える方法について説明します。  
   
  **このトピックの内容**  
@@ -30,7 +31,7 @@ ms.locfileid: "68043264"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **プリンシパルに権限を与える方法:**  
   
@@ -38,21 +39,21 @@ ms.locfileid: "68043264"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  権限の管理を容易にする次のベスト プラクティスを考慮してください。  
   
 -   個々のログインまたはユーザーではなく、ロールに権限を与えます。 ユーザーが入れ替わった場合、そのユーザーをロールから削除し、新しいユーザーをロールに追加します。 ロールに関連付けられている多くの権限が自動的に新しいユーザーに与えられます。 組織内の複数のユーザーが同じ権限を必要とする場合は、それぞれの権限をロールに追加します。そうすることで、それぞれのユーザーに同じ権限が与えられます。  
   
 -   類似するセキュリティ保護可能なリソース (テーブル、ビュー、およびプロシージャ) をスキーマによって所有されるように構成した後、スキーマに対して権限を与えます。 たとえば、給与スキーマは、さまざまなテーブル、ビュー、およびストアド プロシージャを所有できます。 そのスキーマへのアクセスを許可することにより、給与の機能を実行するために必要なすべての権限を同時に与えることができます。 権限を付与できるセキュリティ保護可能なリソースの詳細については、「 [Securables](../../../relational-databases/security/securables.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。 **sysadmin** 固定サーバー ロールのメンバーは、すべての権限を許可できます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-grant-permission-to-a-principal"></a>プリンシパルに権限を与えるには  
   
@@ -71,7 +72,7 @@ ms.locfileid: "68043264"
   
 6.  完了したら、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-grant-permission-to-a-principal"></a>プリンシパルに権限を与えるには  
   

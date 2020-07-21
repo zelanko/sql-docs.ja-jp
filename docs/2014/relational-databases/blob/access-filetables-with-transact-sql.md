@@ -11,27 +11,26 @@ helpviewer_keywords:
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c47751ef34747e1b3742accf5040846ecde074f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955872"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact SQL を使用した FileTable へのアクセス
   [!INCLUDE[tsql](../../includes/tsql-md.md)] データ操作言語 (DML) コマンドによる FileTable の操作について説明します。  
   
-##  <a name="BasicsInsert"></a> FileTable での INSERT 操作  
+##  <a name="insert-operations-on-filetables"></a><a name="BasicsInsert"></a> FileTable での INSERT 操作  
  FileTable で **INSERT** 操作を行う場合は、次の点に注意してください。  
   
 -   ファイル属性のすべての列には NOT NULL 制約があります。 明示的に値が設定されなかった場合は、適切な既定値が使用されます。  
   
--   INSERT ステートメントで **name**、**path_locator**、**parent_path_locator**、またはファイル属性を設定する場合、システム定義の制約が適用されます。  
+-   INSERT ステートメントで **name**、 **path_locator**、 **parent_path_locator**、またはファイル属性を設定する場合、システム定義の制約が適用されます。  
   
 -   アプリケーションは、[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 関数にファイル システム パスを渡すことで、ファイルまたはディレクトリの **path_locator** を取得できます。  
   
-##  <a name="BasicsUpdate"></a> FileTable での UPDATE 操作  
+##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable での UPDATE 操作  
  FileTable で **UPDATE** 操作を行う場合は、次の点に注意してください。  
   
 -   すべてのユーザー定義データの更新が許可されます。  
@@ -40,14 +39,14 @@ ms.locfileid: "66010428"
   
 -   **file_stream** 列の FILESTREAM データは、他の列 (timestamps を含む) に一切影響を及ぼさずに更新することができます。  
   
-##  <a name="BasicsDelete"></a> FileTable での DELETE 操作  
+##  <a name="delete-operations-on-filetables"></a><a name="BasicsDelete"></a> FileTable での DELETE 操作  
  FileTable で **DELETE** 操作を行う場合は、次の点に注意してください。  
   
 -   行を削除すると、対応するファイルまたはディレクトリがファイル システムから削除されます。  
   
 -   対応するディレクトリに他のファイルまたはディレクトリが存在する場合、行の削除は失敗します。  
   
-##  <a name="BasicsConstraints"></a> DML での FileTable の操作の制約  
+##  <a name="constraints-that-are-enforced-for-dml-operations-on-filetables"></a><a name="BasicsConstraints"></a> DML での FileTable の操作の制約  
  システム定義の制約は、ファイル名前空間階層構造の整合性が DML アクションによって損なわれることのないように制御します。 適用される制約は、次のとおりです。  
   
 -   ファイルまたはディレクトリの **name** を設定または変更する場合:  
@@ -68,9 +67,9 @@ ms.locfileid: "66010428"
   
 -   **last_access_time** の値が **last_write_time** や **creation_time**よりも前に来ることはできません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FileTable へのファイルの読み込み](load-files-into-filetables.md)   
- [FileTable 内のディレクトリとパスの操作](work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [ファイル I/O API を使用した FileTable へのアクセス](access-filetables-with-file-input-output-apis.md)   
  [FileTable DDL、関数、ストアド プロシージャ、およびビュー](../views/views.md)  
   

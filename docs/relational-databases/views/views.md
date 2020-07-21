@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48614fa846903b2104ee27f00dc57cc154adef92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68131992"
 ---
 # <a name="views"></a>ビュー
@@ -45,13 +45,13 @@ ms.locfileid: "68131992"
   
 |ビューのタスク|トピック|  
 |----------------|-----------|  
-|ビューを作成する方法について説明します。|[Create Views (ビューの作成)](../../relational-databases/views/create-views.md)|  
-|インデックス付きビューを作成する方法について説明します。|[Create Indexed Views (インデックス付きビューの作成)](../../relational-databases/views/create-indexed-views.md)|  
-|ビュー定義を変更する方法について説明します。|[Modify Views (ビューの変更)](../../relational-databases/views/modify-views.md)|  
-|ビューでデータを変更する方法について説明します。|[Modify Data Through a View (ビューを使用したデータ変更)](../../relational-databases/views/modify-data-through-a-view.md)|  
-|ビューを削除する方法について説明します。|[Delete Views (ビューの削除)](../../relational-databases/views/delete-views.md)|  
-|ビュー定義など、ビューに関する情報を返す方法について説明します。|[Get Information About a View (ビューに関する情報の取得)](../../relational-databases/views/get-information-about-a-view.md)|  
-|ビューの名前を変更する方法について説明します。|[Rename Views (ビューの名前の変更)](../../relational-databases/views/rename-views.md)|  
+|ビューを作成する方法について説明します。|[ビューの作成](../../relational-databases/views/create-views.md)|  
+|インデックス付きビューを作成する方法について説明します。|[インデックス付きビューの作成](../../relational-databases/views/create-indexed-views.md)|  
+|ビュー定義を変更する方法について説明します。|[ビューの変更](../../relational-databases/views/modify-views.md)|  
+|ビューでデータを変更する方法について説明します。|[ビューを使用したデータ変更](../../relational-databases/views/modify-data-through-a-view.md)|  
+|ビューを削除する方法について説明します。|[ビューの削除](../../relational-databases/views/delete-views.md)|  
+|ビュー定義など、ビューに関する情報を返す方法について説明します。|[ビューに関する情報の取得](../../relational-databases/views/get-information-about-a-view.md)|  
+|ビューの名前を変更する方法について説明します。|[ビューの名前の変更](../../relational-databases/views/rename-views.md)|  
   
 ## <a name="see-also"></a>参照  
  [XML 列でのビューの作成](../../relational-databases/xml/create-views-over-xml-columns.md)   

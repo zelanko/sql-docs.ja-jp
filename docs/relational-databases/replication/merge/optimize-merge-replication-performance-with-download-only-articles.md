@@ -1,6 +1,7 @@
 ---
-title: ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化 | Microsoft Docs
-ms.custom: ''
+title: ダウンロード専用アーティクルのパフォーマンスの最適化 (マージ)
+description: マージ レプリケーションで使用されるダウンロード専用アーティクルのパフォーマンスを最適化する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7875347d1bc002f32721c00ac1ad470b5ec75281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d773da4bf6159727e928fa6a735366b706c1a5b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018723"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882265"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   マージ レプリケーションには、異なるアプリケーション ニーズに対応する 2 種類のアーティクルが用意されています。 アプリケーションでの必要に応じて、パブリケーションにはこれら 2 種類のアーティクルを 1 つ以上格納できます。  
   
 -   標準アーティクル  

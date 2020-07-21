@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_rows |Microsoft Docs
+title: sqlsrv_num_rows | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_num_rows
 - sqlsrv_num_rows
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e26c0e06ea9a71bdb6b9e39126e646d22ad40ea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3478580ae0670036e64ae6774f420485aec30ef3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014978"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926415"
 ---
-# <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
+# <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 結果セットの行数をレポートします。  
@@ -33,12 +33,12 @@ sqlsrv_num_rows( resource $stmt )
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$stmt*: 行数を取得する結果セット。  
+*$stmt*: 行をカウントする結果セット。  
   
 ## <a name="return-value"></a>戻り値  
 行数の計算中にエラーが発生した場合は**false** 。 それ以外の場合は、結果セットの行数をレポートします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 sqlsrv_num_rows を使用するにはクライアント側カーソル、静的カーソル、またはキーセット カーソルが必要であり、順方向カーソルまたは動的カーソルを使用すると **false** が返されます。 (順方向カーソルが既定値です。)カーソルの詳細については、「[sqlsrv_query](../../connect/php/sqlsrv-query.md)」および「[カーソルの種類 &#40;SQLSRV ドライバー&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  

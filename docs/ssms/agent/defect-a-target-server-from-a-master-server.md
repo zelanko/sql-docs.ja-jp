@@ -1,10 +1,9 @@
 ---
-title: マスター サーバーからのターゲット サーバーの参加の解除 | Microsoft Docs
-ms.custom: ''
+title: マスター サーバーからのターゲット サーバーの参加の解除
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1f9032e8ae3601e897a05003abc90608580181f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e61c18fc2312fc3b04569f6a6d536ce077c4c35e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267243"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75252126"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>マスター サーバーからのターゲット サーバーの参加の解除
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,28 +33,14 @@ ms.locfileid: "68267243"
 
 このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、マスター サーバーからターゲット サーバーの参加を解除する方法について説明します。 この手順はターゲット サーバーから実行します。  
   
-**このトピックの内容**  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
--   **作業を開始する準備:**  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
   
-    [セキュリティ](#Security)  
-  
--   **マスター サーバーからターゲット サーバーの参加を解除するために使用するもの:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
-  
-    [SMO](#PowerShellProcedure)  
-  
-## <a name="BeforeYouBegin"></a>はじめに  
-  
-### <a name="Security"></a>セキュリティ  
-  
-#### <a name="Permissions"></a>アクセス許可  
+#### <a name="permissions"></a><a name="Permissions"></a>アクセス許可  
 このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
-## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>マスター サーバーからターゲット サーバーの参加を解除するには  
   
@@ -63,7 +50,7 @@ ms.locfileid: "68267243"
   
 3.  **[はい]** をクリックして、マスター サーバーからこのターゲット サーバーの参加を解除することを確認します。  
   
-## <a name="TsqlProcedure"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL の使用  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>マスター サーバーからターゲット サーバーの参加を解除するには  
   
@@ -79,7 +66,7 @@ sp_msx_defect ;
   
 詳細については、「 [sp_msx_defect (Transact-SQL)](https://msdn.microsoft.com/0dfd963a-3bc5-4b58-94f7-aec976da2883)」を参照してください。  
   
-## <a name="PowerShellProcedure"></a>SQL Server 管理オブジェクト (SMO) の使用  
+## <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>SQL Server 管理オブジェクト (SMO) の使用  
 **MsxDefect メソッド**を使用します。  
   
 ## <a name="see-also"></a>参照  

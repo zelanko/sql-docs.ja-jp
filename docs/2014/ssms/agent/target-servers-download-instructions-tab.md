@@ -11,31 +11,30 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39acaf350a4d63fc8896b3a55ca88fe4ed91461f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245341"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067484"
 ---
 # <a name="target-servers-download-instructions-tab"></a>[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)
   このページを使用すると、1 つ以上のターゲット サーバーに対するダウンロード命令の表示および更新ができます。  
   
-## <a name="options"></a>および  
- **[対象サーバー]**  
+## <a name="options"></a>オプション  
+ **対象サーバー**  
  命令の表示または変更を行うサーバーを選択します。  
   
- **[ジョブ]**  
+ **ジョブ**  
  命令の表示または変更を行うジョブを選択します。  
   
- **[対象サーバー]**  
+ **対象サーバー**  
  ダウンロード命令を適用するサーバーの名前が表示されます。  
   
  **操作**  
  ダウンロード命令によって実行される操作が表示されます。  
   
- **Object Name**  
+ **[オブジェクト名]**  
  ダウンロード命令によって影響を受けるオブジェクトの名前を表示します。  
   
  **[通知日付]**  

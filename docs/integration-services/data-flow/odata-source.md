@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eac6756498c57fa70b1eed3d938435267837d25f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031300"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75546528"
 ---
 # <a name="odata-source"></a>OData ソース
 
@@ -41,13 +41,15 @@ Open Data Protocol (OData) サービスからのデータを使用するには�
 
 OData ソースには、次のデータ ソースのサポートが含まれます。
 -   Microsoft Dynamics AX Online および Microsoft Dynamics CRM Online
--   SharePoint リスト。 SharePoint サーバーのすべてのリストを表示するには、 https://\<server>/_vti_bin/ListData.svc という URL を使用します。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](https://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。
+-   SharePoint リスト。 SharePoint サーバーのすべてのリストを表示するには、`https://<server>/_vti_bin/ListData.svc` という URL を使用します。 SharePoint の URL の規則に関する詳細については、「 [SharePoint Foundation REST インターフェイス](https://msdn.microsoft.com/library/ff521587.aspx)」を参照してください。
 
 ## <a name="supported-data-types"></a>サポートされるデータ型
 
 OData ソースは、次の単純なデータ型をサポートしています: int、byte[]、bool、byte、DateTime、DateTimeOffset、decimal、double、Guid、Int16、Int32、Int64、sbyte、float、string、TimeSpan。
 
 データ ソース内の列のデータ型を確認するには、`https://<OData feed endpoint>/$metadata` ページをチェックしてください。
+
+**decimal** データ型の場合、精度とスケールはソース メタデータによって決定されます。 **Precision** プロパティと **Scale** プロパティがソース メタデータで指定されていない場合、データは切り捨てられることがあります。
 
 > [!IMPORTANT]
 > SharePoint リストでは、複数選択項目など、複雑な種類を OData ソース コンポーネントで利用できません。
@@ -62,7 +64,7 @@ OData ソースは、次の単純なデータ型をサポートしています: 
   
 ## <a name="related-topics-in-this-section"></a>このセクションの関連トピック  
   
--   [チュートリアル: OData ソースの使用](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
+-   [チュートリアル:OData ソースの使用](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
 -   [実行時の OData ソース クエリの変更](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
@@ -83,9 +85,9 @@ OData ソースは、次の単純なデータ型をサポートしています: 
  **コレクションまたはリソースのパスを使用します。**  
  ソースからデータを選択する方法を指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
-|Collection|コレクション名を使用して、Odata ソースからデータを取得します。|  
+|コレクション|コレクション名を使用して、Odata ソースからデータを取得します。|  
 |リソースのパス|リソースのパスを使用して、Odata ソースからデータを取得します。|  
   
  **クエリ オプション**  
@@ -100,17 +102,17 @@ OData ソースは、次の単純なデータ型をサポートしています: 
 ### <a name="dynamic-options"></a>動的オプション  
   
 #### <a name="use-collection-or-resource-path--collection"></a>コレクション、またはリソースのパス = Collection を使用します。  
- **Collection**  
+ **コレクション**  
  ドロップダウン リストからコレクションを選択します。  
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
  **Resource path**  
- リソースのパスを入力します。 例:Employees  
+ リソースのパスを入力します。 次に例を示します。Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>[OData ソース エディター] ([列] ページ)
   出力に含める外部 (変換元) 列を選択し、それらを出力列にマップするには、 **[OData ソース エディター]** ダイアログ ボックスの **[列]** ページを使用します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **使用できる外部列**  
  データ ソース内にある使用可能なソース列の一覧を表示します。 ページの下部にあるテーブルに対して列を追加または削除するには、一覧にあるチェック ボックスを使用します。 選択した列が出力に追加されます。  
   
@@ -123,7 +125,7 @@ OData ソースは、次の単純なデータ型をサポートしています: 
 ## <a name="odata-source-editor-error-output-page"></a>[OData ソース エディター] ([エラー出力] ページ)
   **[OData ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   
@@ -133,12 +135,12 @@ OData ソースは、次の単純なデータ型をサポートしています: 
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連トピック:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
   
- **[説明]**  
+ **説明**  
  エラーの説明を表示します。  
   
  **[選択したセルに設定する値]**  

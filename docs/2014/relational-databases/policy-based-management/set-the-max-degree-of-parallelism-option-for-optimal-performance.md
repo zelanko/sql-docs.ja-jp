@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 794dfea63b193ff79fb5831cb3a4e519d7d5f63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3043a656cbe1ac1ec40f0d0a67b6eac057005af4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066667"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>最適なパフォーマンスを実現するための max degree of parallelism オプションの設定
   このルールでは、値の max degree of parallelism (MAXDOP) オプションが 8 より大きいかどうかを確認します。 このオプションを大きな値に設定すると、多くの場合、不要なリソース消費やパフォーマンスの低下が発生します。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ddb352b00dc759362c8f6ef1e861e55b6f184f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62524138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014313"
 ---
 # <a name="specify-first-and-last-triggers"></a>最初と最後のトリガーの指定
   テーブルに関連付けられている AFTER トリガーの 1 つを、INSERT、DELETE、および UPDATE の各トリガー動作に対して起動される、最初の AFTER トリガーまたは最後の AFTER トリガーのいずれかに指定できます。 最初と最後のトリガーの間で起動される AFTER トリガーは、任意の順序で実行されます。  
@@ -32,7 +31,7 @@ ms.locfileid: "62524138"
 |------------|-----------------|  
 |**First**|DML トリガーが、トリガー動作に対して起動される最初の AFTER トリガーであることを指定します。|  
 |**Last**|DML トリガーが、トリガー動作に対して起動される最後の AFTER トリガーであることを指定します。|  
-|**None**|DML トリガーを起動する特定の順番がないことを指定します。 主に最初または最後のトリガーのいずれかの順序をリセットするときに使用します。|  
+|**なし**|DML トリガーを起動する特定の順番がないことを指定します。 主に最初または最後のトリガーのいずれかの順序をリセットするときに使用します。|  
   
  次の例は、 **sp_settriggerorder**を使用する例を示しています。  
   

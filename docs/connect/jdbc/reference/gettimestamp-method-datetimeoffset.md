@@ -1,5 +1,5 @@
 ---
-title: getTimestamp メソッド (DateTimeOffset) |Microsoft Docs
+title: getTimestamp メソッド (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e51dffdb-438b-4e74-a042-c064ae473f4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f4610ac2be4976fdab75c91b4827e4f9adaf6d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3ad1b96d7c0f54cd95de6dd378eb2dd4869373c6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978885"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927339"
 ---
 # <a name="gettimestamp-method-datetimeoffset"></a>getTimestamp (DateTimeOffset) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この**DateTimeOffset**オブジェクトで表現される、Java. Timestamp として表される特定の時点を返します。  
+  この **DateTimeOffset** オブジェクトで表される特定の時点を java.sql.Timestamp として返します。  
   
 ## <a name="syntax"></a>構文  
   

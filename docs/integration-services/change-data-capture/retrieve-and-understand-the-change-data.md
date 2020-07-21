@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 112c94119959410509bb2381b472c1fc0a6a66ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 83df88c61e99d4d13c4b5bc866aa8f1dff5d5b1a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084338"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294598"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>変更データを取得および理解する
 
@@ -27,7 +27,7 @@ ms.locfileid: "68084338"
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、最初のタスクは、変更データを取得するクエリを実行することです。 このクエリは、データ フロー タスクの変換元コンポーネント内で実行します。 その後、下流にある変換や変換先を使用して、変更データを変換先に適用できます。  
   
 > [!NOTE]  
->  テーブル値関数を含むクエリの作成は、変更データの増分読み込みを実行するパッケージを作成するプロセスにおける 3 番目の手順です。 このクエリの詳細については、「[変更データを取得する関数を作成する](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)」を参照してください。 変更データの増分読み込みを実行するパッケージを作成するプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
+>  テーブル値関数を含むクエリの作成は、変更データの増分読み込みを実行するパッケージを作成するプロセスにおける 3 番目の手順です。 このクエリの詳細については、「 [変更データを取得する関数を作成する](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)」を参照してください。 変更データの増分読み込みを実行するパッケージを作成するプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
   
 ## <a name="adding-the-data-flow-task"></a>データ フロー タスクの追加  
  パッケージのデータ フローでは、変更データを取得し、行われた変更の種類に基づいて行を分割し、変更を変換先に適用します。  

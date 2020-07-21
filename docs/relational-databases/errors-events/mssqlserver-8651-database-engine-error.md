@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e8341b3212229a29dec9291fd6d5206725b1788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a28655b2f86c02b1985196c05c16b866e3e0897
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637129"
 ---
-# <a name="mssqlserver8651"></a>MSSQLSERVER_8651
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_8651"></a>MSSQLSERVER_8651
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|8651|  
 |イベント ソース|MSSQLSERVER|  
@@ -56,8 +56,6 @@ ms.locfileid: "68132270"
   
 4.  ワークロード (同時セッション数や現在実行中のクエリ数など) をチェックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 次のアクションを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるメモリを増やせる可能性があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のアプリケーションがリソースを消費している場合は、そのアプリケーションの実行を停止するか、別のサーバーで実行することを検討します。 これにより、外部的なメモリ負荷を軽減できます。  
@@ -79,6 +77,6 @@ ms.locfileid: "68132270"
 [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  
 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  
 [サーバー構成オプション &#40;SQL Server&#41;](~/database-engine/configure-windows/server-configuration-options-sql-server.md)  
-[SQL Server: Buffer Manager オブジェクト](~/relational-databases/performance-monitor/sql-server-buffer-manager-object.md)  
-[SQL Server: Memory Manager オブジェクト](~/relational-databases/performance-monitor/sql-server-memory-manager-object.md)  
+[SQL Server の Buffer Manager オブジェクト](~/relational-databases/performance-monitor/sql-server-buffer-manager-object.md)  
+[SQL Server の Memory Manager オブジェクト](~/relational-databases/performance-monitor/sql-server-memory-manager-object.md)  
   

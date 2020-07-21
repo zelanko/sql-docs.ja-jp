@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 3d458e7696719c383b03a5cc3f259de08e4b8c37
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262780"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services パッケージのアップグレード
@@ -38,7 +38,7 @@ ms.locfileid: "68262780"
   
 |アップグレード方法|アップグレードの種類|  
 |--------------------|---------------------|  
-|現在のリリースの **と共にインストールされる** dtexec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ (dtexec.exe) を使用して、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] パッケージを実行します。<br /><br /> 詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。|パッケージのアップグレードは一時的です。<br /><br /> 変更を保存することはできません。|  
+|現在のリリースの **と共にインストールされる** dtexec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ (dtexec.exe) を使用して、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] パッケージを実行します。<br /><br /> 詳細については、「[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。|パッケージのアップグレードは一時的です。<br /><br /> 変更を保存することはできません。|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]で [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 、または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージ ファイルを開きます。|パッケージのアップグレードは、パッケージを保存した場合は永続的になり、パッケージを保存しなかった場合は一時的になります。|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] パッケージを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の既存のプロジェクトに追加します。|パッケージのアップグレードは永続的です。|  
 |[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] で [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]以降のプロジェクト ファイルを開き、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用してプロジェクト内の複数のパッケージをアップグレードします。<br /><br /> 詳細については、「 [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md) 」および [SSIS パッケージ アップグレード ウィザードの F1 ヘルプ](../../integration-services/ssis-package-upgrade-wizard-f1-help.md)」を参照してください。|パッケージのアップグレードは永続的です。|  
@@ -64,7 +64,7 @@ ms.locfileid: "68262780"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のランタイムで構築された顧客アプリケーションでこれらのパッケージを使用するには、実行可能ファイルに対応する *.exe.config ファイルの configuration セクションにリダイレクト ルールを含めます。 これらのルールにより、ランタイム アセンブリが Version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトされます。 アセンブリ バージョン リダイレクトについて詳しくは、「[\<runtime> の \<assemblyBinding> 要素](https://msdn.microsoft.com/library/twy1dw1e.aspx)」をご覧ください。  
   
 ### <a name="locating-the-assemblies"></a>アセンブリの場所  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 \<*ドライブ*>:\Windows\Microsoft.NET\assembly に、.NET 4 用の別のグローバル アセンブリ キャッシュが用意されています。 すべての [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 *\<ドライブ*>:\Windows\Microsoft.NET\assembly に、.NET 4 用の別のグローバル アセンブリ キャッシュが用意されています。 すべての [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  
   
  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同様に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のコア機能拡張 .dll ファイルは \<*ドライブ*>:\Program Files\Microsoft SQL Server\130\SDK\Assemblies にあります。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68262780"
   
 |コンポーネントまたは機能|アップグレード結果|  
 |--------------------------|---------------------|  
-|接続文字列|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] パッケージでは、特定のプロバイダーの名前が変更されているため、接続文字列の値を変更する必要があります。 接続文字列を更新するには、次のいずれかの手順を実行します。<br /><br /> [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用してパッケージをアップグレードし、 **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[オプション] ダイアログ ボックスの [全般] ページにある **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。 このオプションについて詳しくは、「[全般] ページ」をご覧ください。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開き、ConnectionString プロパティのテキストを手動で変更します。<br /><br /> 注:接続文字列が構成ファイルまたはデータ ソース ファイルに格納されている場合、または式で **ConnectionString** プロパティを設定する場合は、上記の手順を使用して接続文字列を更新することはできません。 このような場合に接続文字列を更新するには、ファイルまたは式を手動で更新する必要があります。<br /><br /> 使用できるデータ ソースの詳細については、「 [データ ソース](../../integration-services/connection-manager/data-sources.md)」を参照してください。|  
+|Connection strings|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] パッケージでは、特定のプロバイダーの名前が変更されているため、接続文字列の値を変更する必要があります。 接続文字列を更新するには、次のいずれかの手順を実行します。<br /><br /> [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用してパッケージをアップグレードし、 **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[オプション] ダイアログ ボックスの [全般] ページにある **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。 このオプションについて詳しくは、「[全般] ページ」をご覧ください。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開き、ConnectionString プロパティのテキストを手動で変更します。<br /><br /> 注: 接続文字列が構成ファイルまたはデータ ソース ファイルに格納されている場合、または式で **ConnectionString** プロパティを設定する場合は、上記の手順を使用して接続文字列を更新することはできません。 このような場合に接続文字列を更新するには、ファイルまたは式を手動で更新する必要があります。<br /><br /> 使用できるデータ ソースの詳細については、「 [データ ソース](../../integration-services/connection-manager/data-sources.md)」を参照してください。|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>ADODB.dll に依存するスクリプト  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] がインストールされていないコンピューターでは、ADODB.dll を明示的に参照するスクリプト タスクおよびスクリプト コンポーネントのスクリプトをアップグレードしたり、実行したりすることはできません。 このようなスクリプト タスクまたはスクリプト コンポーネントのスクリプトをアップグレードするには、ADODB.dll に対する依存関係を削除することをお勧めします。  また、VB や C# のスクリプトなどのマネージド コードの代わりに ADO.NET を使用することをお勧めします。  

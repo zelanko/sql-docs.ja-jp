@@ -25,18 +25,17 @@ helpviewer_keywords:
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d9ca444c4e889c68f90abf4cf76c07d1c2d574a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0b55e940f75319a965fb1441520a7e16ce7ab2f6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545310"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>キューブ セル (Analysis Services - 多次元データ)
   キューブはメジャー グループとディメンションで編成されたセルで構成されています。 セルは、キューブ内の各ディメンションの 1 メンバーのキューブ内の論理的な一意の交差部分を表します。 たとえば、次のダイアグラムで示すキューブには、Source、Route、Time という 3 つのディメンションで編成された 2 つのメジャーを持つメジャー グループが 1 つ含まれています。  
   
- ![1 つのセルを識別するキューブ図](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro5.gif "1 つのセルを識別するキューブ図")  
+ ![1 つのセルを示すキューブ図](../../analysis-services/dev-guide/media/as-cubeintro5.gif "1 つのセルを示すキューブ図")  
   
  このダイアグラムの 1 つの影付きセルは、次のメンバーの交差部分です。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "68887915"
   
  Time ディメンションの 2nd half メンバーは非リーフ メンバーです。 そのため、次のダイアグラムに示すように、2nd half メンバーに関連付けられているすべての値を集計する必要があります。  
   
- ![第2半期のメンバーの第3および第4四半期のセル](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro6.gif "第2半期のメンバーの第3および第4四半期のセル")  
+ ![下半期メンバーの第 3 四半期セルおよび第 4 四半期セル](../../analysis-services/dev-guide/media/as-cubeintro6.gif "下半期メンバーの第 3 四半期セルおよび第 4 四半期セル")  
   
  3rd quarter と 4th quarter の各メンバーの集計が合計であると仮定すると、指定したセルの値は、前のダイアグラムの影付きリーフ セルすべてを合計した 400 です。 セルの値は、他のセルの集計から取得されるので、指定されたセルは*非リーフセル*と見なされます。  
   
@@ -74,15 +73,15 @@ ms.locfileid: "68887915"
   
  たとえば、次のダイアグラムに示すキューブは、このトピックの他の例に似ていますが、 この例では、第 3 四半期の Africa または第 4 四半期の Australia への air による出荷が含まれていません。 これらのディメンションとメジャーの交差部分に対応するデータはファクト テーブルにありません。そのため、この交差部分にあるセルは空になります。  
   
- ![空のセルを識別するキューブ図](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro7.gif "空のセルを識別するキューブ図")  
+ ![空のセルを示すキューブ図](../../analysis-services/dev-guide/media/as-cubeintro7.gif "空のセルを示すキューブ図")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、空のセルは特殊な品質を持つセルです。 空のセルは、相互結合、カウントなどの結果を非対称にできるため、多くの MDX 関数は、計算のために空のセルを無視する機能を提供しています。 詳細については、「[多次元&#40;式 mdx&#41;リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)」および「 [mdx &#40;Analysis Services&#41;の主要概念](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)」を参照してください。  
+ では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、空のセルは特殊な品質を持つセルです。 空のセルは、相互結合、カウントなどの結果を非対称にできるため、多くの MDX 関数は、計算のために空のセルを無視する機能を提供しています。 詳細については、「 [mdx&#41; 参照 &#40;の多次元式](/sql/mdx/multidimensional-expressions-mdx-reference)」および「 [mdx &#40;Analysis Services&#41;の主要概念](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)」を参照してください。  
   
 ## <a name="security"></a>セキュリティ  
- セル データへのアクセスは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロール レベルで管理され、MDX 式を使用して細かく制御できます。 詳細については、「[ディメンションデータ&#40;へのカスタム&#41;アクセス権の付与](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)」と「[セル&#40;データ&#41;へのカスタムアクセス権の付与](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)」を参照してください Analysis Services Analysis Services。  
+ セル データへのアクセスは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロール レベルで管理され、MDX 式を使用して細かく制御できます。 詳細については、「[ディメンションデータへのカスタムアクセス権の付与 &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)」および「[セルデータへのカスタムアクセス権の付与 &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Cube ストレージ&#40;Analysis Services-多次元データ&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
+ [Cube Storage &#40;Analysis Services-多次元データ&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
  [集計と集計デザイン](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

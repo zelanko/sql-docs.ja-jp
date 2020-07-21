@@ -1,5 +1,5 @@
 ---
-title: sp_manage_jobs_by_login (TRANSACT-SQL) |Microsoft Docs
+title: sp_manage_jobs_by_login (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_manage_jobs_by_login
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ebc71c304939a977ac34cc2fad819edd463614fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e810bf996f7dbaa8624c6a0e834011d759aa9348
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899383"
 ---
-# <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  指定されたログインに属するジョブを再割り当てまたは削除します。  
+  指定されたログインに属するジョブを削除または再割り当てします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @action = ] 'action'` 指定されたログインに対して実行するアクション。 *アクション*は**varchar (10)** 、既定値はありません。 ときに*アクション*は**削除**、 **sp_manage_jobs_by_login**によって所有されているすべてのジョブを削除*current_owner_login_name*します。 ときに*アクション*は**再割り当て**に割り当てられているすべてのジョブ*new_owner_login_name*します。  
+`[ @action = ] 'action'`指定されたログインに対して実行するアクションです。 *アクション*は**varchar (10)**,、既定値はありません。 *アクション*が**DELETE**の場合、 **sp_manage_jobs_by_login** *current_owner_login_name*によって所有されているすべてのジョブを削除します。 *アクション*が**再割り当て**されると、すべてのジョブが*new_owner_login_name*に割り当てられます。  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'` 現在のジョブ所有者のログイン名。 *current_owner_login_name* is **sysname**, with no default.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'`現在のジョブ所有者のログイン名です。 *current_owner_login_name*は**sysname**であり、既定値はありません。  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'` 新しいジョブ所有者のログイン名。 場合にのみ、このパラメーターを使用して、*アクション*は**再割り当て**します。 *new_owner_login_name*は**sysname**、既定値は NULL です。  
+`[ @new_owner_login_name = ] 'new_owner_login_name'`新しいジョブ所有者のログイン名です。 このパラメーターは、*アクション*が**再割り当て**された場合にのみ使用します。 *new_owner_login_name*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -55,9 +55,9 @@ sp_manage_jobs_by_login
  なし  
   
 ## <a name="permissions"></a>アクセス許可  
- このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
+ このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 `danw` からのすべてのジョブを `françoisa`に再割り当てします。  
   
 ```  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

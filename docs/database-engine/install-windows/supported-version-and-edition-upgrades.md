@@ -1,5 +1,6 @@
 ---
-title: サポートされるバージョンとエディションのアップグレード | Microsoft Docs
+title: サポートされているバージョンとエディションのアップグレード (SQL Server 2016)
+description: SQL Server 2016 のサポートされているバージョンとエディションのアップグレード。
 ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
@@ -15,16 +16,16 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f3f80b726b155f94851326660d47da5cbac1018
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934861"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900284"
 ---
-# <a name="supported-version-and-edition-upgrades"></a>サポートされるバージョンとエディションのアップグレード
+# <a name="supported-version--edition-upgrades-sql-server-2016"></a>サポートされているバージョンとエディションのアップグレード (SQL Server 2016)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] からアップグレードできます。 この記事では、これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンからのサポートされているアップグレード パスと、サポートされている [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] へのエディションのアップグレードを示します。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "67934861"
   
 -   Windows インストーラー サービスが実行されていない場合は、アップグレードがブロックされます。  
   
-## <a name="unsupported-scenarios"></a>サポートされていないシナリオ  
+## <a name="unsupported-scenarios"></a>サポートされないシナリオ  
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の複数バージョンにまたがるインスタンスの使用はサポートされていません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのバージョン番号は [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]のインスタンス内で同一であることが必要です。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "67934861"
 
 -   SQL Server 2016 RC1 以前のバージョンから RC3 以降のバージョンにアップグレードする場合、アップグレード前に PolyBase をアンインストールし、アップグレード後に再インストールする必要があります。
   
-## <a name="upgrades-from-earlier-versions-to-includesssql15-mdincludessssql15-mdmd"></a>以前のバージョンから [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  
+## <a name="upgrades-from-earlier-versions-to-sssql15-md"></a>以前のバージョンから [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  
  
 SQL Server 2016 では、次のバージョンの SQL Server からのアップグレードがサポートされます。
  
@@ -104,7 +105,7 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
 
  \* Microsoft では、特に Technology Adoption Program (TAP) に参加したお客様向けに、リリース候補版ソフトウェアからのアップグレードをサポートしています。 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] サポート対象 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="sssql15-md-support-for-ssversion2005"></a><a name="SupportFor2005"></a> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] に対する [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] のサポート  
 ここでは、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] に対する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のサポートについて説明します。 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]では、次の作業を実行できます。  
   
 -   データベース エンジンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスに、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] データベース (mdf/ldf ファイル) をアタッチします。  
@@ -138,7 +139,7 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のサード パーティのカスタム Integration Services コンポーネントに対するサポート (実行とアップグレードなど)。  
   
-## <a name="includesssql15-mdincludessssql15-mdmd-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] エディションのアップグレード  
+## <a name="sssql15-md-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] エディションのアップグレード  
 次の表に示すのは、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]でサポートされるエディションのアップグレード シナリオです。  
   
 エディションのアップグレードを実行する手順については、「[SQL Server 2016 の別のエディションへのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)」を参照してください。  
@@ -146,7 +147,7 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
 |アップグレード元|アップグレード先|  
 |------------------|----------------|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL および Core)**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
-|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL または Core ライセンス) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> Evaluation (無償エディション) からいずれかの有償エディションへのアップグレードは、スタンドアロン インストールではサポートされていますが、クラスター化インストールではサポートされていません。|  
+|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation Enterprise**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL または Core ライセンス) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> Evaluation (無償エディション) からいずれかの有償エディションへのアップグレードは、スタンドアロン インストールではサポートされていますが、クラスター化インストールではサポートされていません。 この制限は、可用性グループに参加している Windows フェールオーバー クラスターにインストールされているスタンドアロン インスタンスには適用されません。|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL または Core ライセンス)|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer**|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL または Core ライセンス) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL または Core ライセンス) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  

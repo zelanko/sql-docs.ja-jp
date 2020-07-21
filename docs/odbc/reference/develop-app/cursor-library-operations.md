@@ -1,5 +1,5 @@
 ---
-title: カーソル ライブラリの操作 |Microsoft Docs
+title: カーソルライブラリの操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursor library
 - cursor library [ODBC], backward compatibility
 ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad141939a548aa008ef7109d0adaec5b3a8c6c3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a2297e72aacad7ea91b7af934a47bebbc61f0686
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001996"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301619"
 ---
 # <a name="cursor-library-operations"></a>カーソル ライブラリの操作
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- 場合、ODBC を使用するアプリケーション*2.x*ドライバーは、odbc 呼び出しを行う*3.x*カーソル ライブラリでは、アプリケーションが ODBC を使用することがあります*3.x*れていない機能ODBC でサポートされている*2.x*ドライバー。 アプリケーションの作成者は、これらの機能の使い方、ただし、注意でしなければなりません。 ODBC の使用*3.x*カーソル ライブラリは、ODBC には行いません*2.x*に ODBC ドライバー *3.x*ドライバー。
+ *Odbc 2.x ドライバーを*使用しているアプリケーションが odbc *3. x*カーソルライブラリを呼び出すと *、odbc 2.x ドライバーで*サポートされていない odbc *3.x 機能を*アプリケーションで使用できる可能性があります。 ただし、アプリケーションの作成者は、これらの機能の使用方法を慎重に検討する必要があります。 Odbc *3. x*カーソルライブラリを使用しても、odbc 2.x*ドライバーは*odbc *3.x ドライバーに*はなりません。

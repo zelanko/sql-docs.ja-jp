@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: fe13326b-799d-4bf3-b4f1-32ab1841d0ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5136e4502b3101bfe53998cbf268962e2761d574
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6cf5e286cc0a4f784b6e96ee583590f4b5efd650
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974825"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927174"
 ---
 # <a name="setcharacterstream-method-sqlserverpreparedstatement"></a>setCharacterStream メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "67974825"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[setCharacterStream メソッド &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
 |[setCharacterStream メソッド &#40;int, java.io.Reader, int&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-int.md)|指定されたパラメーターを、指定された文字数である指定された java.io.Reader オブジェクトに設定します。|  

@@ -7,22 +7,22 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574788"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77256732"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 レポート ビューアー Web パーツを SharePoint ページに追加する方法で、SQL Server Reporting Services または Power BI Report Server からレポートを表示します。
 
 ![SharePoint ページのレポート ビューアー Web パーツ](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 * レポートを正常に読み込むには、Kerberos 制約付き委任に対して Claims to Windows Token Service (C2WTS) を構成する必要があります。 C2WTS の構成方法については、「[Claims to Windows Token Service (C2WTS) と Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)」を参照してください。
 
@@ -42,7 +42,7 @@ ms.locfileid: "65574788"
 
     ![Office リボンから Web パーツを挿入します。](media/sharepoint-insert-web-part.png)
 
-4. **[カテゴリ] で** [SQL Server Reporting Services (ネイティブ モード)] を選びます。 **[パーツ]** で **[レポート ビューアー]** を選びます。 **[追加]** を選びます。
+4. **[カテゴリ] で** [SQL Server Reporting Services (ネイティブ モード)] を選びます。 **[パーツ]** で **[レポート ビューアー]** を選びます。 その後、 **[追加]** を選択します。
 
     ![レポート ビューアー Web パーツを追加します。](media/sharepoint-report-viewer-web-part.png)
 
@@ -68,7 +68,7 @@ ms.locfileid: "65574788"
 
 ![SharePoint ページのレポート ビューアー Web パーツ](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="considerations-and-limitations"></a>注意点と制限事項
+## <a name="considerations-and-limitations"></a>考慮事項と制限事項
 
 * レポート ビューアー Web パーツは、SharePoint 内の最新式ページでは使用できません。
 * Power BI レポートと Report Viewer Web パーツは併用できません。

@@ -1,5 +1,5 @@
 ---
-title: ODBC API のサポート強化された日付と時刻の機能 |マイクロソフトのドキュメント
+title: ODBC API による機能強化された日付と時刻のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], API support
 ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d898406bb78662ea6b56a923307f432dc68a080f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fc11dfbc9c6a54ae2c85bb9d7efbe08bc09fe369
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63210144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020085"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>ODBC API による機能強化された日付と時刻のサポート
   次の ODBC API は、機能強化された日付と時刻をサポートします。  
@@ -69,6 +68,6 @@ ms.locfileid: "63210144"
 -   [bcp_setcolfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;の日付と時刻の改善](date-and-time-improvements-odbc.md)  
   
   

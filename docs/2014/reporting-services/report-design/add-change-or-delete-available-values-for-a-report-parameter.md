@@ -1,5 +1,5 @@
 ---
-title: 追加、変更、またはレポート パラメーター (レポート ビルダーおよび SSRS) の使用可能な値の削除 |Microsoft Docs
+title: レポートパラメーターに使用できる値を追加、変更、または削除する (レポートビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e9944e437be03dd7cfac3cbe6bad7c5224f3b462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106675"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106675"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- レポートをパブリッシュした後、パラメーター プロパティの値をレポート サーバーに設定して、レポート作成ツールのレポートで定義される使用可能な値をオーバーライドできます。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ レポートをパブリッシュした後、パラメーター プロパティの値をレポート サーバーに設定して、レポート作成ツールのレポートで定義される使用可能な値をオーバーライドできます。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-parameters-report-builder-and-report-designer.md)にあります。  
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>レポート パラメーターに使用可能な値を追加または変更するには  
   
@@ -76,10 +76,10 @@ ms.locfileid: "66106675"
      レポートをプレビューすると、パラメーターに使用可能な値のドロップダウン リストが表示されなくなります。  
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [レポート パラメーターの順序の変更 &#40;レポート ビルダーおよび SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [レポート パラメーターの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [レポート パラメーターの既定値の追加、変更、または削除 (レポート ビルダーおよび SSRS)](add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [レポート パラメーターの既定値の追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Parameters コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
  [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)  

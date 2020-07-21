@@ -23,18 +23,18 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - names [SQL Server], logins
 ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74ecfa682fb8b3942b1931c07273cdfa93831c6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29a0fc66901fe358113f244a770e70a9dbe2e12b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117607"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85994001"
 ---
-# <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   セキュリティ ID 番号 (SID) に関連付けられているログイン名を返します。  
   
@@ -48,26 +48,26 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="arguments"></a>引数  
  *server_user_sid*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  オプションのログイン セキュリティ ID 番号を指定します。 *server_user_sid* は **varbinary(85)** です。 *server_user_sid* には、任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーやグループのセキュリティ ID 番号を指定できます。 *server_user_sid* の指定を省略すると、現在のユーザーについての情報が返されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SUSER_SNAME は、ALTER TABLE または CREATE TABLE の中で、DEFAULT 制約として使用できます。 SUSER_SNAME は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 SUSER_SNAME の後には、パラメーターを指定しない場合も含め、常にかっこが必要です。  
   
  SUSER_SNAME を引数なしで呼び出すと、現在のセキュリティ コンテキストの名前が返されます。 EXECUTE AS を使用してコンテキストを切り替えたバッチ内で SUSER_SNAME を引数なしで呼び出すと、権限を借用したコンテキストの名前が返されます。 権限を借用したコンテキストから ORIGINAL_LOGIN を呼び出すと、元のコンテキストの名前が返されます。  
   
-## <a name="includesssdsfullincludessssdsfull-mdmd-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 解説  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 解説  
  SUSER_NAME では、常に現在のセキュリティ コンテキストのログイン名が返されます。  
   
  SUSER_SNAME ステートメントでは、EXECUTE AS で借用したセキュリティ コンテキストを使用した実行がサポートされません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-susersname"></a>A. SUSER_SNAME を使用する  
+### <a name="a-using-suser_sname"></a>A. SUSER_SNAME を使用する  
  次の例では、現在のセキュリティ コンテキストのログイン名が返されます。  
   
 ```  
@@ -75,17 +75,17 @@ SELECT SUSER_SNAME();
 GO  
 ```  
   
-### <a name="b-using-susersname-with-a-windows-user-security-id"></a>B. SUSER_SNAME を Windows ユーザーのセキュリティ ID と共に使用する  
+### <a name="b-using-suser_sname-with-a-windows-user-security-id"></a>B. SUSER_SNAME を Windows ユーザーのセキュリティ ID と共に使用する  
  次の例では、Windows セキュリティ ID 番号に関連付けられているログイン名が返されます。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
 GO  
 ```  
   
-### <a name="c-using-susersname-as-a-default-constraint"></a>C. SUSER_SNAME を DEFAULT 制約として使用する  
+### <a name="c-using-suser_sname-as-a-default-constraint"></a>C. SUSER_SNAME を DEFAULT 制約として使用する  
  次の例では、`SUSER_SNAME` ステートメントで `DEFAULT` を `CREATE TABLE` 制約として使用しています。  
   
 ```  
@@ -102,10 +102,10 @@ INSERT sname_example DEFAULT VALUES;
 GO  
 ```  
   
-### <a name="d-calling-susersname-in-combination-with-execute-as"></a>D. SUSER_SNAME を EXECUTE AS と組み合わせて呼び出す  
+### <a name="d-calling-suser_sname-in-combination-with-execute-as"></a>D. SUSER_SNAME を EXECUTE AS と組み合わせて呼び出す  
  この例は、権限を借用したコンテキストから呼び出した場合の SUSER_SNAME の動作を示しています。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
 ```  
 SELECT SUSER_SNAME();  
@@ -127,9 +127,9 @@ WanidaBenShoof
 sa
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-susersname"></a>E. SUSER_SNAME を使用する  
+### <a name="e-using-suser_sname"></a>E. SUSER_SNAME を使用する  
  次の例では、セキュリティ ID 番号が `0x01` のログイン名を返します。  
   
 ```  

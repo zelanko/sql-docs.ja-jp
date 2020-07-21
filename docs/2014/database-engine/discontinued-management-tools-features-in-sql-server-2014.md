@@ -1,5 +1,5 @@
 ---
-title: 管理ツール機能が SQL Server 2014 で廃止された |Microsoft Docs
+title: SQL Server 2014 | で廃止された管理ツールの機能Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 6e58acd0-73c5-4161-9fbc-8ea531bc681c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724f6e91b911f9edc89188a265364956176d6974
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780351"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933134"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>SQL Server 2014 で廃止された管理ツール機能
   このトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で使用できなくなった [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]管理ツール機能について説明します。  
   
-## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] で削除された機能  
- なし  
+## <a name="features-removed-in-sscurrent"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] で削除された機能  
+ None  
   
-## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で削除された機能  
+## <a name="features-removed-in-sssql11"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で削除された機能  
   
 ### <a name="sql-server-compact-edition"></a>SQL Server Compact Edition  
  SQL Server Compact Edition コード エディターは [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]から削除されました。 また、SQL Server Compact Edition のサポートは、オブジェクト エクスプローラー、ソリューション エクスプローラー、およびテンプレート エクスプローラーから削除されました。 Microsoft Visual Studio 2010 Service Pack 1 または Webmatrix の Transact-SQL エディターを使用してください。  
@@ -31,7 +30,7 @@ ms.locfileid: "62780351"
 ### <a name="activex-subsystem-for-sql-server-agent"></a>SQL Server エージェント用の ActiveX サブシステム  
  このリリースでは、SQL Server エージェント用の ActiveX サブシステムが削除されています。 これに代わる機能はありません。  
   
-### <a name="spaddtask-spdeletetask-spupdatetask"></a>sp_addtask、sp_deletetask、sp_updatetask  
+### <a name="sp_addtask-sp_deletetask-sp_updatetask"></a>sp_addtask、sp_deletetask、sp_updatetask  
  このリリースでは、sp_addtask、sp_deletetask、および sp_updatetask が削除されています。 新規または更新済みのアプリケーションでは、この機能を使用しないでください。  
   
 ### <a name="net-send-and-pager-notification"></a>Net Send およびポケットベルによる通知  

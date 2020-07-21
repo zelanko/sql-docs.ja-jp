@@ -1,5 +1,5 @@
 ---
-title: レッスン 4:レポート定義をプログラムで更新 |Microsoft Docs
+title: 'レッスン 4: プログラムによるレポート定義の更新 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137462"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>レッスン 4:プログラムによるレポート定義の更新
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>レッスン 4 : プログラムによるレポート定義の更新
   前のレッスンでは、レポート サーバーからレポート定義を読み込み、レポート フィールドにその参照を指定しました。次は、レポート定義を更新する必要があります。 この例では、レポートの `Description` プロパティを更新します。  
   
 ### <a name="to-update-the-report-definition"></a>レポート定義を更新するには  
   
-1.  Program.cs ファイルで UpdateReportDefinition() メソッドのコードに置き換えます (Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) を次のコード。  
+1.  Program.cs ファイル (の場合[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]は module1.vb) で UpdateReportDefinition () メソッドのコードを次のコードに置き換えます。  
   
     ```csharp  
     private void UpdateReportDefinition()  
@@ -88,9 +88,9 @@ ms.locfileid: "63137462"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、更新したレポート定義をもう一度レポート サーバーに保存します。 「[レッスン 5:レポート サーバーにレポート定義のパブリッシュ](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)します。  
+ 次のレッスンでは、更新したレポート定義をもう一度レポート サーバーに保存します。 「[レッスン 5: レポート定義をレポートサーバーにパブリッシュする」を](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)参照してください。  
   
 ## <a name="see-also"></a>参照  
- [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+ [RDL スキーマから生成されたクラスを使用したレポートの更新 SSRS チュートリアル &#40;&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

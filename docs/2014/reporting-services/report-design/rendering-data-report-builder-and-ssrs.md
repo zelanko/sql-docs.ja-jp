@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e50d9ae91ef6e21f01c585cedc6fe32a1e22ad8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105360"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>データの表示 (レポート ビルダーおよび SSRS)
@@ -45,12 +45,12 @@ ms.locfileid: "66105360"
   
  [レポート データが含まれている XML ファイル] エクスポート オプションを指定すると、レポートが XML ファイルとして保存されます。 レポートの XML スキーマは、各レポート固有のものです。 XML エクスポート オプションでは、レポート レイアウト情報は保存されません。 このオプションで生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。 XML ファイル形式でレポートを表示する方法の詳細については、「[XML へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/exporting-to-xml-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
  [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
- [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [&#40;レポートビルダーと SSRS の一覧を表示&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Reporting Services デバイス情報設定](https://go.microsoft.com/fwlink/?LinkId=102515)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: ログ配布レポートの表示 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: ログ配布レポートの表示 (SSMS)
+description: SQL Server Management Studio のトランザクション ログの配布の状態レポートを表示します。 監視サーバー、プライマリ サーバー、またはセカンダリ サーバーで状態レポートを実行します。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97a0255f25c1aba95247a0df797d2460e98eb9e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba4a8e1d48587046ecceb9007ca57f580b0338c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748546"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>ログ配布レポートの表示 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でトランザクション ログの配布の状態レポートを表示する方法について説明します。 状態レポートは、監視サーバー、プライマリ サーバー、またはセカンダリ サーバーで実行できます。 ログ配布構成に関する完全な情報を表示するには、監視サーバーのインスタンスでレポートを表示します。  
   
  このレポートには、接続先のサーバー インスタンスから使用できるログ配布の利用状況の状態が表示されます。 接続先のサーバー インスタンスが複数の構成に関与しており、それぞれ異なる役割が与えられている場合 (あるデータベースでは監視サーバーとして機能し、別のデータベースではセカンダリ サーバーとして機能する場合など) は、それぞれの役割から見た各構成の情報が表示されます。 ストアド プロシージャから特定のログ配布構成の監視サーバー インスタンスに接続できる場合、レポートにはその構成の状態がさらに多く表示されます。  
   
  現在のサーバー インスタンスによって実行される役割ごとに、次の情報を表示できます。  
   
-|ロール|表示される情報|  
+|Role|表示される情報|  
 |----------|---------------------------|  
 |モニター|このサーバー インスタンスを監視サーバーとして使用するすべてのプライマリ サーバーとセカンダリ サーバーの名前と状態。|  
 |プライマリ|プライマリ データベースごとの、現在のサーバー インスタンスの (プライマリ サーバーとしての) 状態と名前、およびプライマリ データベース名。 このレポートには、(プライマリ サーバーのローカルに格納された) バックアップ ジョブの状態が表示されます。<br /><br /> また、このレポートには、対応するセカンダリ サーバーごとに 1 行のデータが含まれます。 構成に監視サーバーを使用していて、ストアド プロシージャからそのモニターに接続できる場合は、これらの行に最新のログ バックアップのコピー状態と復元状態が表示されます。|  

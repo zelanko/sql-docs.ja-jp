@@ -1,26 +1,26 @@
 ---
-title: トレースの再生に関する注意点 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
+title: トレースの再生に関する注意点
+titleSuffix: SQL Server Profiler
+description: SQL Server Profiler でトレースを再生できない原因となっている操作、ストアド プロシージャ、テンプレート、およびログ アクティビティについて説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1cfac7ed273cf43c2efc4a9751cdbf1ba8b8a2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/06/2017
+ms.openlocfilehash: a12b6101cde482d38ef9573cb236cc7eba002aab
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930104"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151917"
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>トレースの再生に関する注意点 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、次の種類のトレースを再生できません。  
   

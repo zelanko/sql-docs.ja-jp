@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7720324915ea147cf5cac938c196957a6cb04c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d021905cfd1a75a35487499ef383d6e0a78c8323
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85685473"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 表形式でプロシージャ キャッシュに関する情報を表示します。
   
@@ -48,7 +48,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  重大度レベルが 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 プロシージャ キャッシュを使用してコンパイル済みの実行プランをキャッシュし、バッチの実行速度を上げます。 プロシージャ キャッシュ内のエントリはバッチ レベルです。 プロシージャ キャッシュには、次のエントリが含まれます。
 -   コンパイル済みプラン  
 -   実行プラン  
@@ -58,7 +58,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ## <a name="result-sets"></a>結果セット  
 次の表では、結果セットの列について説明します。
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |**num proc buffs**|プロシージャ キャッシュ内のすべてのエントリで使用されるページの総数です。|  
 |**num proc buffs used**|現在使用されているすべてのエントリで使用されるページの総数です。|  

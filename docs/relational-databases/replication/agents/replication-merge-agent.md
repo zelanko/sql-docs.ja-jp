@@ -1,5 +1,6 @@
 ---
 title: レプリケーション マージ エージェント | Microsoft Docs
+description: レプリケーション マージ エージェントは、データベース テーブルに保持されている初期スナップショットをサブスクライバーに適用し、データの増分変更をマージして、競合を調整します。
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27de402dfe659be7c6adc28504f4d17ddc1e4620
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085951"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897889"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   レプリケーション マージ エージェントは、データベース テーブルに保持された初期スナップショットをサブスクライバーに適用するユーティリティ実行可能ファイルです。 さらに、初期スナップショットの作成後にパブリッシャーで発生したデータの増分変更をマージし、ユーザーが構成したルールに従って、またはユーザーが作成したカスタム競合回避モジュールを使用して、競合を調整します。  
   
 > [!NOTE]  
@@ -99,7 +100,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -113,7 +115,7 @@ replmerg [-?]
  使用できるすべてのパラメーターを表示します。  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ パブリッシャーの名前です。 サーバー上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、*server_name* を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
  **-PublisherDB** _publisher_database_  
  パブリッシャー データベースの名前です。  
@@ -140,7 +142,7 @@ replmerg [-?]
  エージェント定義ファイルのパスです。 エージェント定義ファイルには、エージェントのコマンド プロンプト引数が含まれます。 ファイルの内容は実行可能ファイルとして解析されます。 二重引用符 (") を使用して、任意の文字を含む引数値を指定します。  
   
  **-Distributor** _server_name_[ **\\** _instance_name_]  
- ディストリビューターの名前です。 サーバー上の *の既定のインスタンスの場合は、* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。 ディストリビューター (プッシュ) ディストリビューションの場合、既定の名前は、ローカル コンピューターの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンス名です。  
+ ディストリビューターの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。 ディストリビューター (プッシュ) ディストリビューションの場合、既定の名前は、ローカル コンピューターの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンス名です。  
   
  **-DistributorLogin** _distributor_login_  
  ディストリビューターのログイン名です。  
@@ -164,26 +166,26 @@ replmerg [-?]
  パブリケーションでパラメーター化された行フィルターを使用する場合のフィルター選択されたデータ スナップショット ファイルの位置です。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- 接続時にマージ エージェントで使用される SSL (Secure Sockets Layer) 暗号化のレベルです。  
+ 接続確立時にマージ エージェントが使用するトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) の暗号化レベルです。  
   
-|EncryptionLevel の値|[説明]|  
+|EncryptionLevel の値|説明|  
 |---------------------------|-----------------|  
-|**0**|SSL は使用されません。|  
-|**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
-|**2**|SSL が使用され、証明書の確認が行われます。|  
+|**0**|TLS を使用しないことを指定します。|  
+|**1**|TLS を使用しますが、信頼できる発行者によって TLS/SSL サーバー証明書が署名されているかどうかをエージェントでは検証しないことを指定します。|  
+|**2**|TLS を使用し、証明書を検証することを指定します。|  
 
  > [!NOTE]  
- >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
+ >  有効な TLS/SSL 証明書は、SQL Server の完全修飾ドメイン名を使用して定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
 
  詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] アップロードを制限するには、 **@subscriber_upload_options** の **sp_addmergearticle** を代わりに使用します。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] アップロードを制限するには、**sp_addmergearticle** の **\@subscriber_upload_options** を代わりに使用します。  
   
  同期中のデータ交換の種類を指定します。次のいずれかを指定できます。  
   
-|ExchangeType の値|[説明]|  
+|ExchangeType の値|説明|  
 |------------------------|-----------------|  
 |**1**|エージェントは、サブスクライバーからパブリッシャーにデータ変更をアップロードします。|  
 |**2**|エージェントは、パブリッシャーからサブスクライバーにデータ変更をダウンロードします。|  
@@ -202,9 +204,9 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  マージ エージェントが使用する収束のレベルを指定します。次のいずれかを指定できます。  
   
-|ForceConvergenceLevel の値|[説明]|  
+|ForceConvergenceLevel の値|説明|  
 |---------------------------------|-----------------|  
-|**0** (既定値)|既定値です。 追加の収束なしで標準のマージを実行します。|  
+|**0** (既定値)|既定値。 追加の収束なしで標準のマージを実行します。|  
 |**1**|すべての生成結果の収束を強制します。|  
 |**2**|すべての生成結果の収束を強制し、破損した系列を修正します。 この値を指定する場合は、系列を修正する場所 (パブリッシャー、サブスクライバー、またはパブリッシャーとサブスクライバーの両方) を指定します。|  
   
@@ -223,11 +225,11 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  マージ操作中にログに記録する履歴の量を指定します。 **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
   
-|HistoryVerboseLevel の値|[説明]|  
+|HistoryVerboseLevel の値|説明|  
 |-------------------------------|-----------------|  
 |**0**|エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーをログに記録します。|  
 |**1**|各セッションの状態における増分セッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。|  
-|**2**|既定値です。 各セッションの状態における増分セッションの詳細、およびアーティクル レベルのセッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。 エージェントの状態のメッセージもログに記録されます。|  
+|**2**|既定値。 各セッションの状態における増分セッションの詳細、およびアーティクル レベルのセッションの詳細をログに記録します。エージェントの状態の最終メッセージ、最終のセッションの詳細、およびすべてのエラーに加えて、進行状況が含まれます。 エージェントの状態のメッセージもログに記録されます。|  
 |**3**|**-HistoryVerboseLevel** = **2**と同じですが、より多くのエージェント進行状況メッセージがログに記録されます。|  
   
  **-Hostname** _host_name_  
@@ -320,7 +322,7 @@ replmerg [-?]
  マージ エージェントが変更元から変更を列挙するために使用するソース スレッドの数を指定します。 変更元は、アップロード実行時はサブスクライバーであり、ダウンロード実行時はパブリッシャーです。 既定値は **3**です。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 実行中の同時マージ処理数が **@max_concurrent_merge** の **@max_concurrent_merge**」を参照してください。 最長秒数に達したときにマージ エージェントが待機中である場合、マージ エージェントは終了します。 値 0 は、エージェントが無制限に待機することを示します。ただし、キャンセルできます。  
+ 実行中の同時マージ処理数が **sp_addmergepublication** の **\@max_concurrent_merge** プロパティによって設定された制限に達した場合に、マージ エージェントが待機する最長秒数です。 最長秒数に達したときにマージ エージェントが待機中である場合、マージ エージェントは終了します。 値 0 は、エージェントが無制限に待機することを示します。ただし、キャンセルできます。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  **SubscriberType** が **2** の場合、Jet データベース (.mdb) ファイルへのパスを指定します。この指定では、ODBC データ ソース名 (DSN) なしで Jet データベースに接続することができます。  
@@ -328,7 +330,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  既存のサブスクライバー データベースがあるかどうかを指定します。  
   
-|SubscriberDBAddOption の値|[説明]|  
+|SubscriberDBAddOption の値|説明|  
 |---------------------------------|-----------------|  
 |**0**|既存のデータベースを使用します (既定値)。|  
 |**1**|新しい空のサブスクライバー データベースを作成します。|  
@@ -358,7 +360,10 @@ replmerg [-?]
   
  **-SyncToAlternate** **[0|1]**  
  マージ エージェントがサブスクリプションと代替パブリッシャー間での同期を実行しているかどうかを指定します。 値 **1** は、これが代替パブリッシャーであることを示します。 既定値は **0**です。  
-  
+ 
+ **-T** **[101|102]**  
+ マージ エージェントの追加機能を有効にするトレース フラグ。 値 **101** を指定すると、マージ レプリケーション同期プロセスの各ステップにかかる時間を特定するのに役立つ追加の詳細ログ情報が有効になります。 値 **102** を指定すると、トレース フラグ **101** と同じ統計情報が書き込まれますが、書き込み先は <Distribution server>..msmerge_history テーブルとなります。 トレース フラグ 101 を使用する場合は、`-output` パラメーターと `-outputverboselevel` パラメーターを使用してマージ エージェントのログ記録を有効にします。  たとえば、次のパラメーターをマージ エージェントに追加してから、エージェントを再起動します: `-T 101, -output, -outputverboselevel` 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  サブスクライバーからパブリッシャーに変更をアップロードする間に、1 つのバッチで処理される生成結果の数です。 生成結果は、アーティクルごとに変更の論理グループとして定義されます。 信頼性の高い通信リンクの既定値は **100**です。 信頼性の低い通信リンクの既定値は **1**です。  
   
@@ -374,7 +379,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  マージ セッションの最後に検証を行うかどうかを指定し、行う場合は検証の種類も指定します。 推奨値は **3** です。  
   
-|Validate の値|[説明]|  
+|Validate の値|説明|  
 |--------------------|-----------------|  
 |**0** (既定値)|検証なし。|  
 |**1**|行数のみの検証。|  
@@ -387,14 +392,19 @@ replmerg [-?]
  **-ValidateInterval** _validate_interval_  
  サブスクリプションが継続モードで検証される間隔 (分) です。 既定値は **60** 分です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  ドメイン ユーザー アカウント (既定値) ではなくローカル システム アカウントで実行するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントがインストールされている場合、サービスがアクセスできるのはローカル コンピューターのみです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントの下で実行するマージ エージェントで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]へのログイン時に Windows 認証モードが使用されるように構成すると、マージ エージェントは失敗します。 既定の設定は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証です。  
   
  マージ エージェントを起動するには、コマンド プロンプトから **replmerg.exe** を実行します。 詳細については、「 [レプリケーション エージェント実行可能ファイルのプログラミング](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
+ ### <a name="troubleshooting-merge-agent-performance"></a>マージ エージェントのパフォーマンスのトラブルシューティング 
  現在のセッションのマージ エージェントの履歴は、連続モードでの実行中には削除されません。 エージェントが長時間実行されると、マージ履歴テーブルに多数のエントリが発生し、パフォーマンスに影響する可能性があります。 この問題を解決するには、スケジュールされたモードに切り替えるか、引き続き連続モードを使用する場合は、定期的にマージ エージェントを再起動するための専用のジョブを作成するか、履歴の詳細レベルを下げて行数を減らして、パフォーマンスへの影響を軽減してください。  
+ 
+  場合によって、レプリケーション マージ エージェントでは、変更をレプリケートするのに長い時間を要する場合があります。 マージ レプリケーション同期プロセスで最も時間がかかる手順を特定するには、トレース フラグ 101 をマージ エージェント ログと共に使用します。 これを行うには、マージ エージェント パラメーターとして次のパラメーターを使用して、エージェントを再起動します:   <br/>-T 101   <br/>-output   <br/>-outputverboselevel
+
+また、<Distribution server>..msmerge_history テーブルに統計を書き込む必要がある場合は、トレース フラグ -T 102 を使用します。
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  

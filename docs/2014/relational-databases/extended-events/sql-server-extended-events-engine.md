@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 43ccc0f4b72b8ddd6f1fed66ead95d19247dc5c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027268"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 拡張イベント エンジン
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント エンジンは、次の役割を持った各種のサービスおよびオブジェクトで構成されます。  
@@ -34,7 +33,7 @@ ms.locfileid: "62638239"
   
  拡張イベント セッションの概略図を次に示します。 詳細については、「 [SQL Server 拡張イベント セッション](sql-server-extended-events-sessions.md)」を参照してください。  
   
- ![拡張イベント アーキテクチャの詳細](../../database-engine/media/xearchitecturedetailed.gif "拡張イベント アーキテクチャの詳細")  
+ ![拡張イベントのアーキテクチャの詳細](../../database-engine/media/xearchitecturedetailed.gif "拡張イベントのアーキテクチャの詳細")  
   
  次のことを考慮してください。  
   

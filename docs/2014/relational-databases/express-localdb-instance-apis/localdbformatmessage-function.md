@@ -15,18 +15,17 @@ topic_type:
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d287a7ceff1c38c829da91a8ae2e530f664fb4ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f106cb74174a501af9e1a1b9bc30d6870f3a1904
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128746"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027779"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 関数
   指定した SQL Server Express LocalDB エラーについてのローカライズされた説明テキストを返します。  
   
- **ヘッダー ファイル:** sqlncli.h  
+ **ヘッダーファイル:** sqlncli  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,7 +58,7 @@ HRESULT LocalDBFormatMessage(
  [出力] LocalDB エラー メッセージを格納するバッファー。  
   
  *lpcchMessage*  
- [入力/出力]入力のサイズが含まれています、 *wszMessage*文字バッファー。 出力側では、所定のバッファー サイズが小さすぎる場合、末尾の NULL も含め、必要なバッファー サイズ (単位は文字数) を格納します。 関数を正常に実行できた場合、このメッセージ内の文字数を格納します。ただし、末尾の NULL は除外します。  
+ [入力/出力]入力時には、 *wszMessage*バッファーのサイズが文字数で格納されます。 出力側では、所定のバッファー サイズが小さすぎる場合、末尾の NULL も含め、必要なバッファー サイズ (単位は文字数) を格納します。 関数を正常に実行できた場合、このメッセージ内の文字数を格納します。ただし、末尾の NULL は除外します。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -78,13 +77,13 @@ HRESULT LocalDBFormatMessage(
  メッセージは、要求された言語では用意されていません。  
   
  [LOCALDB_ERROR_INSUFFICIENT_BUFFER](../express-localdb-error-messages/localdb-error-insufficient-buffer.md)  
- 入力バッファー *wszMessage*小さすぎる場合は、切り捨ては要求されません。  
+ 入力バッファー *wszMessage*が短すぎて、切り捨てが要求されていません。  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
+## <a name="remarks"></a>Remarks  
+ LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../sql-server-express-localdb-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

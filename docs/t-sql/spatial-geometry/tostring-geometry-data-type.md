@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a6e5a0072db244835238c1b8623c667f03e653ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8e140a968a86be980f38d1333fc82e28bbc812e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762087"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 インスタンスに格納されている Z (標高) 値および M (メジャー) 値で補完された geometry インスタンスについて、Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します。
   
@@ -38,14 +38,14 @@ ms.locfileid: "68127342"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
- CLR の戻り値の型:**SqlString**  
+ CLR の戻り値の型: **SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドは、NULL インスタンスに対して呼び出されたときに、文字列 "Null" を返します。  
   
  NULL 以外のインスタンスでは、このメソッドは `AsTextZM().` を使用することと同じです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `LineString` インスタンスを作成し、`ToString()` を使用してこのインスタンスの記述をフェッチする例を次に示します。  
   
 ```  

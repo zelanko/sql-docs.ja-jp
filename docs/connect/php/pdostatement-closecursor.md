@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: Cloセキュリティー + |Microsoft Docs'
+title: PDOStatement::closeCursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: caf214fa7055bb0e8000f52f5db43c4f76e48e1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de4a6cb90c5c23186d734c819ae309530b911e26
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993102"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921004"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ bool PDOStatement::closeCursor();
 ## <a name="return-value"></a>戻り値  
 成功した場合は true、それ以外の場合は false です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 MultipleActiveResultSets 接続オプションが false に設定されている場合に、closeCursor は有効になります。  MultipleActiveResultSets 接続オプションの詳細については、「[方法: 複数のアクティブな結果セット (MARS) を無効にする](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)」を参照してください。  
   
 closeCursor を呼び出す代わりに、ステートメント ハンドルを null に設定するだけでも同じことができます。  

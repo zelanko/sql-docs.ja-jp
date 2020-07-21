@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0ead368dece8a0c1effd8f8ddc7ff5e5793e8350
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51004cf91b039ccdd83eda91425b3aea0764d237
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791856"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937073"
 ---
 # <a name="availability-replica-is-disconnected"></a>可用性レプリカが切断されている
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  
-|**ポリシー名**|可用性レプリカの接続状態|  
-|**問題**|可用性レプリカの接続が解除されます。|  
+|**[ポリシー名]**|可用性レプリカの接続状態|  
+|**問題点**|可用性レプリカの接続が解除されます。|  
 |**カテゴリ**|**重大**|  
-|**ファセット**|可用性レプリカ|  
+|**面し**|可用性レプリカ|  
   
 ## <a name="description"></a>説明  
  このポリシーは、可用性レプリカ間の接続状態を確認します。 可用性レプリカ間の接続状態が DISCONNECTED の場合、ポリシーは通常とは異なる状態です。 それ以外の場合、ポリシーは正常な状態です。  
@@ -57,7 +56,7 @@ ms.locfileid: "62791856"
 -   ポートが競合しているかどうかを確認し、競合している場合はポート番号を変更します。  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

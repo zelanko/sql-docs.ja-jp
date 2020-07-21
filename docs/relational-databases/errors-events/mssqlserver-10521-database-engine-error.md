@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f86922211e670cb59b4541071e9e7d7f67302bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3daa4f6dcfc9be9f34da2be3c1344dd694b811ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781474"
 ---
-# <a name="mssqlserver10521"></a>MSSQLSERVER_10521
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|10521|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_PARAM_NEEDED|  
-|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。'%ls' として指定した **@type** のパラメーターが NULL です。 この型のパラメーターには、NULL 以外の値を指定する必要があります。 NULL 以外の値をパラメーターに指定するか、パラメーターに NULL 値を指定可能な型に変更します。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。 **\@type** が '%ls' として指定され、パラメーター '%ls' が NULL です。 この型のパラメーターには、NULL 以外の値を指定する必要があります。 NULL 以外の値をパラメーターに指定するか、パラメーターに NULL 値を指定可能な型に変更します。|  
   
 ## <a name="explanation"></a>説明  
-**@type** で指定した型のパラメーターには、NULL 以外の値を指定する必要がありますが、NULL 値を指定しました。  
+**\@type** で指定した型のパラメーターには、NULL 値以外を指定する必要がありますが、NULL 値を指定しました。  
   
 ## <a name="user-action"></a>ユーザーの操作  
 NULL 以外の値をパラメーターに指定するか、パラメーターに NULL 値を指定可能な型に変更します。  

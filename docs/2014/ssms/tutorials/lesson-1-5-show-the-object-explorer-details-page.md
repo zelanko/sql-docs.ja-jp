@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff847756d8717184654d8d08c84222dc9e99b9ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63282026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058296"
 ---
 # <a name="show-the-object-explorer-details-page"></a>[オブジェクト エクスプローラーの詳細] ページの表示
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーで選択した各オブジェクトのレポートを表示できます。 [オブジェクト エクスプローラーの詳細] ページと呼ばれるこのレポートは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]により作成され、ドキュメント ウィンドウに表示されます。  

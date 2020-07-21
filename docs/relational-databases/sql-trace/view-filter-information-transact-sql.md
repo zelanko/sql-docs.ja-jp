@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4fa854d5ece9dc659e5a5d30ea051cf717f20d96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c247ba89eed67072c6db949c9e94500664e104a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750863"
 ---
 # <a name="view-filter-information-transact-sql"></a>フィルター情報の表示 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、組み込み関数を使用してトレース フィルター情報を表示する方法について説明します。  
   
 ### <a name="to-view-filter-information"></a>フィルター情報を表示するには  

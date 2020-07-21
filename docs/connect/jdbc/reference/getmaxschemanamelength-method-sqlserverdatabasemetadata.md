@@ -1,5 +1,5 @@
 ---
-title: getMaxSchemaNameLength メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getMaxSchemaNameLength メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fece19e9-3bf8-4299-9188-ac3df5ce9c19
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: edfc9491f7652674293ef0a54a058e601608aff5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 93a6447a2784d4b6a70392f7886cb1c5ed68c8f8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982032"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906578"
 ---
 # <a name="getmaxschemanamelength-method-sqlserverdatabasemetadata"></a>getMaxSchemaNameLength メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public int getMaxSchemaNameLength()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMaxSchemaNameLength メソッドは、getMaxSchemaNameLength メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getMaxSchemaNameLength メソッドは、java.sql.DatabaseMetaData インターフェイスの getMaxSchemaNameLength メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

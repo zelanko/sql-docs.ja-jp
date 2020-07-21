@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef64fbbeb2b8953ff3816db63572b499d42f012e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63184539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037829"
 ---
 # <a name="surface-area-configuration"></a>セキュリティ構成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストール時の既定の構成では、多くの機能が有効化されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 悪意あるユーザーの攻撃を受ける可能性がある機能を最小限にするために、主要なサービスおよび機能のみが選択的にインストールされ、起動されます。 システム管理者はインストール時のこれらの既定を変更することができ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス実行機能の有効化と無効化を選択的に行うこともできます。 また、別のコンピューターから接続する場合、一部のコンポーネントはプロトコルが構成されるまで使用できないことがあります。  
@@ -41,7 +40,7 @@ ms.locfileid: "63184539"
   
     -   接続プロトコル、固定 TCP/IP ポートなどの接続オプションを有効にしたり、暗号化を適用するには、 **[SQL Server ネットワークの構成]** 領域を使用します。  
   
- 詳細については、「 [SQL Server Configuration Manager](../sql-server-configuration-manager.md)」を参照してください。 リモート接続は、ファイアウォールの構成が正しいかどうかによっても異なります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご参照ください。  
+ 詳細については、「 [SQL Server Configuration Manager](../sql-server-configuration-manager.md)」を参照してください。 リモート接続は、ファイアウォールの構成が正しいかどうかによっても異なります。 詳細については、[SQL Server アクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)に関する記事を参照してください。  
   
 ## <a name="enabling-and-disabling-features"></a>機能の有効化と無効化  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の有効化と無効化は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]内のファセットを使用して構成できます。  
@@ -62,7 +61,7 @@ ms.locfileid: "63184539"
   
  `sp_configure` ストアド プロシージャを使って[!INCLUDE[ssDE](../../includes/ssde-md.md)] オプションを設定することもできます。 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
- [!INCLUDE[ssRS](../../includes/ssrs.md)] の **EnableIntegrated Security** プロパティを変更するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のプロパティ設定を使用します。 **[定期的なイベントおよびレポート配信]** プロパティと **[Web サービスおよび HTTP アクセス]** プロパティを変更するには、 **RSReportServer.config** 構成ファイルを編集します。  
+ **の** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs.md)]プロパティを変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のプロパティ設定を使用します。 **[定期的なイベントおよびレポート配信]** プロパティと **[Web サービスおよび HTTP アクセス]** プロパティを変更するには、 **RSReportServer.config** 構成ファイルを編集します。  
   
 ## <a name="command-prompt-options"></a>コマンド プロンプト オプション  
  **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell コマンドレットを使用して、セキュリティ構成ポリシーを呼び出します。 詳細については、「 [データベース エンジン コマンドレットの使用](../../database-engine/use-the-database-engine-cmdlets.md)」を参照してください。  

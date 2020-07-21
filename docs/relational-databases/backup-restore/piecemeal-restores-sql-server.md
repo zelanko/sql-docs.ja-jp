@@ -1,7 +1,8 @@
 ---
 title: 段階的な部分復元 (SQL Server) | Microsoft Docs
+description: SQL Server では、段階的な部分復元機能により、複数のファイル グループを含むデータベースを段階的に復元および復旧できます。 段階的な部分復元は、すべての復旧モデルで機能します。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61054ac32e13c16a77c1ad27400be6b978cebe7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670237"
 ---
 # <a name="piecemeal-restores-sql-server"></a>段階的な部分復元 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックの内容は、複数のファイルまたはファイル グループ (単純復旧モデルでは、読み取り専用ファイル グループのみ) を含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise エディション (オンライン復元) または Standard エディション (オフライン復元) のデータベースだけに関するものです。  
   
  段階的な部分復元とメモリ最適化テーブルの詳細については、「 [メモリ最適化テーブルを持つデータベースの段階的な部分復元](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)」を参照してください。  
@@ -118,7 +119,7 @@ ms.locfileid: "68033658"
   
     -   損傷しているファイルや、データベースと一貫性のないファイルは、復旧する前に復元する必要があります。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
   
 -   [例: データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -144,9 +145,9 @@ ms.locfileid: "68033658"
      Enterprise エディションでは、データベースをオンラインにしたまま、オフラインのセカンダリ ファイル グループを復元および復旧できます。 特定の読み取り専用ファイルに損傷がなく、データベースと一貫性があれば、そのファイルを復元する必要はありません。 詳細については、「[データを復元しないデータベースの復旧 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)」を参照してください。  
   
 ### <a name="applying-log-backups"></a>ログ バックアップの適用  
- 読み取り専用ファイル グループがバックアップの作成前から読み取り専用だった場合は、ログ バックアップをファイル グループに適用する必要はないので、ファイルの復元の際にスキップされます。 読み取り/書き込みファイル グループの場合は、最新の完全復元または差分復元にチェーンが途切れていないログ バックアップを適用し、ファイル グループに現在のログ ファイルの状態を反映する必要があります。  
+ 読み取り専用ファイル グループがバックアップの作成前から読み取り専用だった場合は、ログ バックアップをファイル グループに適用する必要はないので、ファイルの復元の際にスキップされます。 読み取り/書き込みファイル グループの場合は、最新の完全復元または差分復元にチェーンが途切れていないログ バックアップを適用し、ファイル グループに現在のログ ファイルの状態を反映する必要があります。 復旧プロセスの詳細については、「[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)」を参照してください。
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
   
 -   [例: データベースの段階的な部分復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
@@ -173,13 +174,11 @@ ms.locfileid: "68033658"
   
 4.  差分バックアップの後、元の段階的な部分復元でその他の復元を実行して、元の復旧ポイントまでデータを復元する。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="see-also"></a>参照  
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [復元シーケンスの計画と実行 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [復元シーケンスの計画と実行 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

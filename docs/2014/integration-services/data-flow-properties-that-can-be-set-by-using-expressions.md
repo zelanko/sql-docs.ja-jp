@@ -1,5 +1,5 @@
 ---
-title: データ フロー式を使用して設定できるプロパティ |Microsoft Docs
+title: 式を使用して設定できるデータフロープロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,14 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf52a4488cb90d65c373111babd359da612668d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059941"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432469"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>式を使って設定できるデータ フロー プロパティ
   データ フロー タスク コンテナーで使用できるプロパティ式を使用して、データ フロー オブジェクトの特定のプロパティの値を指定できます。  
@@ -35,14 +34,14 @@ ms.locfileid: "66059941"
   
  このトピックに示すデータ フロー オブジェクトのプロパティの 1 つに対するプロパティ式を指定するには、デザイナーの **[制御フロー]** 画面でデータ フロー タスクを選択するか、コンポーネントやパスを個別に選択せずにデザイナーの **[データ フロー]** タブを選択して、データ フロー タスクの **[プロパティ]** ウィンドウを表示します。 **[式]** プロパティを選択し、省略記号 (...) をクリックして、 **[プロパティ式エディター]** ダイアログ ボックスを表示します。 **[プロパティ]** の一覧からプロパティを選択し、 **[式]** テキスト ボックスに式を入力するか、省略記号 (...) をクリックして **[式ビルダー]** ダイアログ ボックスを表示します。  
   
- **[プロパティ]** の一覧には、現在、デザイナーの **[データ フロー]** 画面に配置されているデータ フロー オブジェクトで使用できるプロパティのみが表示されます。 したがって、 **[プロパティ]** の一覧では、プロパティ式をサポートするデータ フロー オブジェクトのすべてのプロパティを表示することはできません。 たとえば、デザイナー画面で、ADO NET ソースを配置した場合、**プロパティ**一覧にはエントリが含まれています、`[ADO NET Source].[SqlCommand]`プロパティ。 この一覧には、データ フロー タスク自体の多数のプロパティも表示されます。  
+ **[プロパティ]** の一覧には、現在、デザイナーの **[データ フロー]** 画面に配置されているデータ フロー オブジェクトで使用できるプロパティのみが表示されます。 したがって、 **[プロパティ]** の一覧では、プロパティ式をサポートするデータ フロー オブジェクトのすべてのプロパティを表示することはできません。 たとえば、デザイナー画面に ADO NET ソースを配置した場合 **、プロパティの一覧に**はプロパティのエントリが格納され `[ADO NET Source].[SqlCommand]` ます。 この一覧には、データ フロー タスク自体の多数のプロパティも表示されます。  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>プロパティ式をサポートするデータ フロー オブジェクトのプロパティ  
  次の一覧にあるプロパティの値は、プロパティ式を使用して指定できます。  
   
 ### <a name="data-flow-sources"></a>データ フローの変換元  
   
-|データ フロー オブジェクト|[プロパティ]|  
+|データ フロー オブジェクト|プロパティ|  
 |----------------------|--------------|  
 |ADO NET ソース|TableOrViewName プロパティ<br /><br /> SqlCommand プロパティ|  
 |XML ソース|XMLData プロパティ<br /><br /> XMLSchemaDefinition プロパティ|  
@@ -83,7 +82,7 @@ ms.locfileid: "66059941"
 ## <a name="see-also"></a>関連項目  
  [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)   
  [共通プロパティ](../../2014/integration-services/common-properties.md)   
- [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)   
+ [変換のカスタムプロパティ](data-flow/transformations/transformation-custom-properties.md)   
  [パスのプロパティ](../../2014/integration-services/path-properties.md)  
   
   

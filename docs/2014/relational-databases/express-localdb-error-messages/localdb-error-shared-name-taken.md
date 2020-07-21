@@ -9,15 +9,14 @@ ms.topic: reference
 ms.assetid: f679fe4e-0ed1-4e2c-8fe1-e6b3d55c8d42
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a39c95d20d670a2408e440e6ff7775d46c7affd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 973bcf8725b8f2a80a0da31f08b6242f2ad6ba58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63066450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051109"
 ---
-# <a name="localdberrorsharednametaken"></a>LOCALDB_ERROR_SHARED_NAME_TAKEN
+# <a name="localdb_error_shared_name_taken"></a>LOCALDB_ERROR_SHARED_NAME_TAKEN
     
 ## <a name="details"></a>詳細  
   

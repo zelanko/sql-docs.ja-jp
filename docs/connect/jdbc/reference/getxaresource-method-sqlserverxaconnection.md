@@ -1,5 +1,5 @@
 ---
-title: getXAResource メソッド (SQLServerXAConnection) |Microsoft Docs
+title: getXAResource メソッド (SQLServerXAConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3d4b2132c3bbcf5612faa5f319a5358f158e2b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67977978"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>getXAResource メソッド (SQLServerXAConnection)
@@ -40,8 +40,8 @@ public javax.transaction.xa.XAResource getXAResource()
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- この getXAResource メソッドは、Javax.sql.xaconnection インターフェイスの getXAResource メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getXAResource メソッドは、javax.sql.XAConnection インターフェイスの getXAResource メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAConnection のメソッド](../../../connect/jdbc/reference/sqlserverxaconnection-methods.md)   

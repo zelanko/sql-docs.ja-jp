@@ -1,5 +1,5 @@
 ---
-title: Visio (データ マイニング アドイン) でのデータ マイニング モデルの表示 |Microsoft Docs
+title: Visio でのデータマイニングモデルの表示 (データマイニングアドイン) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe6baff391f108e14a401a0d3b9dcacefa6da406
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065519"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938143"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visio でのデータ マイニング モデルの参照 (データ マイニング アドイン)
   データ マイニング用 Visio 図形は、サーバーに接続して、既存のデータ マイニング モデルを表すダイアグラムを作成します。 ダイアグラムは、Visio のコントロールを使用してカスタマイズできますが、データのドリル ダウン、基になる統計の公開、基になるモデルの操作もすることができます。  
   
 ## <a name="building-a-model-diagram"></a>モデル ダイアグラムの作成  
- データ マイニング用 Visio 図形を含むファイルを開くと、**図形**ウィンドウには、次の図形が表示されます。  
+ データマイニングの Visio 図形を含むファイルを開くと、[**図形**] ペインに次の図形が表示されます。  
   
  Visio を開いたときにデータ マイニング図形が表示されない場合は、インストール フォルダーにあるテンプレート ファイルを開きます。  
   
@@ -38,8 +37,8 @@ ms.locfileid: "66065519"
   
 |Visio 図形|サポートされているモデル|  
 |-----------------|----------------------|  
-|[デシジョン ツリー]|この図形はデシジョン ツリー アルゴリズムまたは線形回帰アルゴリズムに基づくモデルに使用します。|  
-|依存関係ネットワーク|次のアルゴリズムに基づくモデルには、この図形を使用します。Naive Bayes、デシジョン ツリー、またはアソシエーション ルール。|  
+|意思決定ツリー|この図形はデシジョン ツリー アルゴリズムまたは線形回帰アルゴリズムに基づくモデルに使用します。|  
+|依存関係ネットワーク|この図形は Naive Bayes、デシジョン ツリー、アソシエーション ルールのいずれかのアルゴリズムに基づくモデルに使用します。|  
 |クラスター|この図形はクラスタリング アルゴリズムに基づくモデルに使用します。|  
   
  マイニング モデルのデータの種類に応じて、ウィザードに表示されるオプションも異なります。 たとえば、連続する数値を含む列はカテゴリ変数とは異なる方法で視覚化されます。  
@@ -57,7 +56,7 @@ ms.locfileid: "66065519"
 ### <a name="data-mining-menus"></a>データ マイニングのメニュー  
  これらのツール バーとメニュー項目は、各図形またはモデルの種類に固有のアドインによって提供されます。  
   
--   それぞれのダイアグラムの種類には図形のショートカット メニューがあり、これを使用すると特殊なオプションにアクセスできます。 このメニューで、多くのオプションは、すべての Visio 図形に共通する、いくつかのオプションは、データ マイニング テンプレートに固有  
+-   それぞれのダイアグラムの種類には図形のショートカット メニューがあり、これを使用すると特殊なオプションにアクセスできます。 このメニューには、すべての Visio 図形に共通するオプションが多数ありますが、一部のオプションはデータマイニングテンプレートに固有です。  
   
      たとえば、デシジョン ツリー ダイアグラムにおいて、個々のノードをクリックし、その子ノードを折りたたむと、ダイアグラムを単純化できます。また、子ノードを別のページに移動することもできます。  
   
@@ -77,6 +76,6 @@ ms.locfileid: "66065519"
  [デシジョン ツリー ダイアグラムのチュートリアル](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
 ## <a name="see-also"></a>参照  
- [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Excel &#40;SQL Server データマイニングアドインのモデルの参照&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

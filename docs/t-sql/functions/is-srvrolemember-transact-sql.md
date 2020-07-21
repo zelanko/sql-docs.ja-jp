@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 68a3a2b030ef5b731fa437b8c9f4b57f3eedaa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132811"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784511"
 ---
-# <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが、指定したサーバー ロールのメンバーであるかどうかを示します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68132811"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
@@ -48,10 +48,10 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
 |||  
 |-|-|  
-|sysadmin|serveradmin|  
+|[sysadmin]|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
-|diskadmin|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> public|  
+|diskadmin|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> public|  
 |processadmin||  
   
  **'** *login* **'**  
@@ -60,16 +60,16 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-|戻り値|[説明]|  
+|戻り値|説明|  
 |------------------|-----------------|  
 |0|*login* は *role* のメンバーではありません。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、このステートメントは常に 0 を返します。|  
 |1|*login* は *role* のメンバーです。|  
 |NULL|*role* または *login* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  現在のユーザーがサーバー ロールの権限を必要とするアクションを実行できるかどうかを判断するには IS_SRVROLEMEMBER を使用します。  
   
- Contoso\Mary5 などの Windows ログインを *login* に指定した場合、**IS_SRVROLEMEMBER** は、そのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスが許可または拒否されている場合を除き、**NULL** を返します。  
+ Contoso\Mary5 などの Windows ログインを *login* に指定した場合、**IS_SRVROLEMEMBER** は、そのログインに  **への直接アクセスが許可または拒否されている場合を除き、** NULL[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を返します。  
   
  省略可能な *login* パラメーターを指定しない場合、*login* が Windows ドメインのログインであると、そのログインは、Windows グループのメンバーシップを通じて、固定サーバー ロールのメンバーになっている可能性があります。 そのような間接的なメンバーシップを解決するために、IS_SRVROLEMEMBER は、Windows グループのメンバーシップ情報をドメイン コントローラーに要求します。 ドメイン コントローラーにアクセスできないか、またはドメイン コントローラーが応答しない場合、**IS_SRVROLEMEMBER** はユーザーとそのローカル グループのみを考慮したロール メンバーシップ情報を返します。 指定されたユーザーが現在のユーザーでない場合、IS_SRVROLEMEMBER が返す値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する認証システム (Active Directory など) の最後のデータ更新と異なることがあります。  
   
@@ -91,7 +91,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="permissions"></a>アクセス許可  
  サーバー ロールに対する VIEW DEFINITION 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のユーザーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが固定サーバー ロール `sysadmin` のメンバーであるかどうかを示しています。  
   
 ```  

@@ -17,15 +17,15 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419589"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009688"
 ---
 # <a name="joins-sql-server"></a>結合 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インメモリの並べ替えとハッシュ結合テクノロジを使用して、並べ替え、積集合、和集合、および差集合の各演算が実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この種のクエリ プランを使用することで、テーブルの列分割がサポートされます。列分割は、列記憶と呼ばれることもあります。   
 
@@ -35,7 +35,7 @@ ms.locfileid: "68419589"
 -   ハッシュ結合   
 -   アダプティブ結合 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降)
 
-## <a name="fundamentals"></a> 結合の基礎
+## <a name="join-fundamentals"></a><a name="fundamentals"></a> 結合の基礎
 結合を使用すると、テーブル間の論理リレーションシップに基づいて、複数のテーブルからデータを取得できます。 結合では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が 1 つのテーブルからのデータを使用して別のテーブル内の行を選択する方法を指定します。    
 
 結合条件は、クエリ内の 2 つのテーブルの関係を定義します。    
@@ -108,7 +108,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 > たとえば、`SELECT * FROM t1 JOIN t2 ON SUBSTRING(t1.textcolumn, 1, 20) = SUBSTRING(t2.textcolumn, 1, 20)` は t1 テーブルと t2 テーブルの各テキスト列の先頭の 20 文字について 2 つのテーブル内部結合を実行します。   
 > `WHERE` 句を使用して列の長さを比較して、2 つのテーブルの ntext 列または text 列を比較することもできます。例: `WHERE DATALENGTH(p1.pr_info) = DATALENGTH(p2.pr_info)`。
 
-## <a name="nested_loops"></a> 入れ子になっているループ結合について
+## <a name="understanding-nested-loops-joins"></a><a name="nested_loops"></a> 入れ子になっているループ結合について
 一方の結合入力が少なく (たとえば 10 行未満)、他方の結合入力が多く、その結合列にインデックスが設定されている場合、インデックスの入れ子になったループが最も高速な結合演算です。入れ子になったループは I/O が最も少なく、比較が最も少なくなるためです。 
 
 入れ子になっているループ結合は "*入れ子化反復処理*" とも呼ばれ、一方の結合入力を外部入力テーブル (グラフィカルな実行プランでは上部入力として表示) として使用し、もう一方を内部 (下部) 入力テーブルとして使用します。 外部ループでは、外部入力テーブルを 1 行ずつ使用します。 内部ループは、外部行の 1 行ごとに実行され、内部入力テーブルで一致行を検索します。   
@@ -119,7 +119,7 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 ネステッド ループ結合演算子の OPTIMIZED 属性が **True** に設定されている場合は、内部テーブルが大きいときに、それが並列化されているかどうかに関係なく、最適化されたネステッド ループ (またはバッチ並べ替え) を使用して I/O を最小化することを意味します。 指定された計画にこの最適化が含まれていることは、並べ替え自体が非表示操作であることを考えると、実行プランを分析する際にはわかりにくいかもしれません。 しかし、OPTIMIZED 属性の XML プランを見ると、ネステッド ループ結合では I/O パフォーマンスを向上させるために入力行の並べ替えが試行される場合があることがわかります。
 
-## <a name="merge"></a> マージ結合について
+## <a name="understanding-merge-joins"></a><a name="merge"></a> マージ結合について
 2 つの結合入力が少なくない場合でも、結合列に基づいて並べ替えられている場合 (並べ替えられたインデックスのスキャンにより取得された場合など)、マージ結合が最も高速な結合演算です。 両方の結合入力が多く、2 つの入力が同じようなサイズの場合、あらかじめ並べ替えられたマージ結合とハッシュ結合は同じようなパフォーマンスになります。 ただし、2 つの入力サイズが大きく異なる場合、ハッシュ結合演算の方がはるかに高速になることが多くなります。       
 
 マージ結合では、両方の入力がマージ列を基準に並べ替えられていることが必要です。マージ列は、結合述語の等値 (ON) 句によって定義されます。 通常、インデックスが対応する 1 組の列に対して存在する場合、クエリ オプティマイザーはインデックスをスキャンします。または、マージ結合の下に並べ替え操作が配置されます。 まれに、複数の等値句が存在することもありますが、マージ列は利用できる等値句の一部からしか取られません。    
@@ -132,7 +132,7 @@ Merge Join 操作は、標準の操作または多対多操作のいずれかに
 
 マージ結合自体は非常に高速ですが、並べ替え操作が必要な場合、時間がかかることがあります。 ただし、データ量が多く、必要なデータを既存の B ツリー インデックスからあらかじめ並べ替えられた形で取得できる場合、多くの場合、利用可能な結合アルゴリズムの中でマージ結合が最も高速になります。    
 
-## <a name="hash"></a> ハッシュ結合について
+## <a name="understanding-hash-joins"></a><a name="hash"></a> ハッシュ結合について
 ハッシュ結合は、並べ替えられておらず、インデックスが設定されていない大量の入力を効率的に処理できます。 次のような理由から、ハッシュ結合は、複雑なクエリでの中間結果を得るのに役立ちます。
 -   中間結果にはインデックスが設定されず (ディスクに明示的に保存した後インデックスを設定しない限り)、多くの場合、クエリ プランでの次の演算に合わせて並べ替えられることがありません。
 -   クエリ オプティマイザーは、中間結果のサイズだけを予想します。 複雑なクエリではこの予想が非常に不正確になる場合があります。そのため、中間結果を処理するアルゴリズムは効率的なだけでなく、中間結果が予想をはるかに上回る場合でも、パフォーマンスをあまり低下させないようにする必要があります。   
@@ -145,13 +145,13 @@ Merge Join 操作は、標準の操作または多対多操作のいずれかに
 
 ここでは、インメモリ ハッシュ結合、猶予ハッシュ結合、再帰的ハッシュ結合など、さまざまなハッシュ結合について説明します。    
 
-### <a name="inmem_hash"></a> インメモリ ハッシュ結合
+### <a name="in-memory-hash-join"></a><a name="inmem_hash"></a> インメモリ ハッシュ結合
 このハッシュ結合では、まずビルド入力全体がスキャンまたは計算され、メモリ内にハッシュ テーブルが作成されます。 各行はハッシュ キー用に計算されたハッシュ値に従ってハッシュ バケットに挿入されます。 ビルド入力全体が使用可能なメモリを超えない場合、すべての行をハッシュ テーブルに挿入できます。 このビルド フェーズの後、プローブ フェーズになります。 プローブ入力全体が 1 回に 1 行ずつスキャンまたは計算されます。プローブ行ごとにハッシュ キーの値が計算され、対応するハッシュ バケットがスキャンされて、照合が行われます。    
 
-### <a name="grace_hash"></a> 猶予ハッシュ結合
+### <a name="grace-hash-join"></a><a name="grace_hash"></a> 猶予ハッシュ結合
 ビルド入力がメモリに入りきらない場合、ハッシュ結合が複数のステップで進められます。 これを、猶予ハッシュ結合と呼びます。 各ステップにはビルド フェーズとプローブ フェーズがあります。 まず、ビルド入力とプローブ入力全体が使用され、複数のファイルにパーティション分割されます (ハッシュ キーにハッシュ関数を使用)。 ハッシュ キーにハッシュ関数を使用すると、2 つの結合レコードが同じファイルの組に含まれることが保証されます。 したがって、2 つの大規模な入力を結合する作業は、小規模な同一作業の複数のインスタンスになります。 その後、ハッシュ結合がパーティション分割されたファイルの組それぞれに適用されます。    
 
-### <a name="recursive_hash"></a> 再帰的ハッシュ結合
+### <a name="recursive-hash-join"></a><a name="recursive_hash"></a> 再帰的ハッシュ結合
 ビルド入力が大規模なので、標準の外部マージの入力に複数のマージ レベルが必要な場合、複数のパーティション分割ステップと複数のパーティション分割レベルが必要です。 パーティションの一部だけが大規模な場合、その特定のパーティションだけに使用するパーティション分割ステップが追加されます。 すべてのパーティション分割ステップをできるだけ高速にするには、大規模な非同期 I/O 操作を使用し、1 つのスレッドで複数のディスク ドライブを集中的に使用できるようにします。    
 
 > [!NOTE]
@@ -164,7 +164,7 @@ Merge Join 操作は、標準の操作または多対多操作のいずれかに
 > [!NOTE]
 > ロール逆転は、クエリ ヒントやクエリの構造とは無関係に行われます。 ロール逆転はクエリ プランには示されません。ロール逆転が行われてもユーザーには認識されません。
 
-### <a name="hash_bailout"></a> ハッシュの保留
+### <a name="hash-bailout"></a><a name="hash_bailout"></a> ハッシュの保留
 猶予ハッシュ結合または再帰的ハッシュ結合を説明するために、ハッシュの保留という用語が使用されることがあります。    
 
 > [!NOTE]
@@ -172,7 +172,7 @@ Merge Join 操作は、標準の操作または多対多操作のいずれかに
 
 ハッシュの保留について詳しくは、「[Hash Warning イベント クラス](../../relational-databases/event-classes/hash-warning-event-class.md)」をご覧ください。    
 
-## <a name="adaptive"></a> アダプティブ結合について
+## <a name="understanding-adaptive-joins"></a><a name="adaptive"></a> アダプティブ結合について
 [バッチ モード](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) アダプティブ結合機能を使用すると、最初の入力のスキャンが**終わる**まで、[ハッシュ結合](#hash)方法または[ネステッド ループ](#nested_loops)結合方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、クエリ プランでは、再コンパイルを行わなくても、実行中により適切な結合方法に動的に切り替えることができます。 
 
 > [!TIP]
@@ -229,7 +229,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>アダプティブ結合アクティビティの追跡
 アダプティブ結合演算子には次のプラン演算子属性があります。
 
-|プラン属性|[説明]|
+|プラン属性|説明|
 |---|---|
 |AdaptiveThresholdRows|ハッシュ結合から入れ子になったループ結合への切り替えに使われるしきい値を示します。|
 |EstimatedJoinType|予想される結合の種類を示します。|
@@ -276,7 +276,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-`DISABLE_BATCH_MODE_ADAPTIVE_JOINS`USE HINT クエリ ヒント[として ](../../t-sql/queries/hints-transact-sql-query.md#use_hint) を指定することで、特定のクエリでアダプティブ結合を無効にすることもできます。 例:
+`DISABLE_BATCH_MODE_ADAPTIVE_JOINS`USE HINT クエリ ヒント[として ](../../t-sql/queries/hints-transact-sql-query.md#use_hint) を指定することで、特定のクエリでアダプティブ結合を無効にすることもできます。 次に例を示します。
 
 ```sql
 SELECT s.CustomerID,
@@ -291,7 +291,7 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 > [!NOTE]
 > USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。 
 
-## <a name="nulls_joins"></a> NULL 値と結合
+## <a name="null-values-and-joins"></a><a name="nulls_joins"></a> NULL 値と結合
 結合されるテーブルの列に NULL 値がある場合、双方の NULL 値が互いに一致することはありません。 結合されるいずれかのテーブルの列に複数の NULL 値がある場合にそれを返すのは、外部結合を使用した場合だけです。ただし `WHERE` 句によって NULL 値が除外される場合を除きます。     
 
 次に 2 つのテーブルを示しています。どちらのテーブルでも、結合に使われる列に NULL 値が含まれています。     

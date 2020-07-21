@@ -20,22 +20,22 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - dateparts [SQL Server], day
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f1d58e89e6fd7cdc4d8af85d3d8745e1bc15fa7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a58ac7e29f6a7c41fd0b8e617a04b9a52368fd15
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119057"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011375"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、指定された *date* の日 (月の日にち) を表す整数を返します。
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
+[ の日付と時刻のあらゆるデータ型と関数に関する概要については、「](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -62,11 +62,11 @@ DAY ( date )
 **int**
   
 ## <a name="return-value"></a>戻り値  
-\* * 1 日には、同じの値が返されます [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**日**、*日付*など)。 * *。
+DAY は [DATEPART](../../t-sql/functions/datepart-transact-sql.md)(**day**, *date*) と同じ値を返します。
   
 *date* に時刻部分のみが含まれる場合、`DAY` は基本の日である 1 を返します。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 このステートメントは、日にち自体の数である `30` を返します。
   
 ```sql

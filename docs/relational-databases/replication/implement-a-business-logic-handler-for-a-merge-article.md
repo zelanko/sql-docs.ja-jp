@@ -1,6 +1,7 @@
 ---
-title: マージ アーティクルのビジネス ロジック ハンドラーの実装 | Microsoft Docs
-ms.custom: ''
+title: マージ アーティクルのビジネス ロジック ハンドラーの設定
+description: レプリケーション プログラミングまたはレプリケーション管理オブジェクトを使用し、マージ レプリケーション同期のビジネス ロジック ハンドラーを構成します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8285b4de85be5ce6f6fe79b60afe68650634a2b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea4a56fdd17978bffa633bf1c466f493969074a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716808"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>マージ アーティクルのビジネス ロジック ハンドラーの実装
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でレプリケーション プログラミングまたはレプリケーション管理オブジェクト (RMO) を使用して、マージ アーティクルにビジネス ロジック ハンドラーを実装する方法について説明します。  
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 名前空間は、マージ レプリケーションの同期処理中に発生するイベントを処理する、複雑なビジネス ロジックを記述するためのインターフェイスを実装します。 ビジネス ロジック ハンドラーのメソッドは、同期中にレプリケートされる変更行ごとに、レプリケーション処理から呼び出すことができます。  
@@ -51,7 +52,7 @@ ms.locfileid: "68128084"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> レプリケーション プログラミングの使用  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> レプリケーション プログラミングの使用  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>ビジネス ロジック ハンドラーを作成および配置するには  
   
@@ -100,20 +101,20 @@ ms.locfileid: "68128084"
   
 1.  パブリッシャーで、[sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行して、アセンブリがまだビジネス ロジック ハンドラーとして登録されていないことを確認します。  
   
-2.  ディストリビューターで [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行し、 **@article_resolver** にビジネス ロジック ハンドラーの表示名、 **@is_dotnet_assembly** に値 **true**、 **@dotnet_assembly_name** にアセンブリの名前、 **@dotnet_class_name** に <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> をオーバーライドするクラスの完全修飾名を指定します。  
+2.  ディストリビューターで、[sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行します。**\@article_resolver** にビジネス ロジック ハンドラーの表示名を、**\@is_dotnet_assembly** に **true** を、**\@dotnet_assembly_name** にアセンブリの名前を、**\@dotnet_class_name** に <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> をオーバーライドするクラスの完全修飾名を指定します。  
   
     > [!NOTE]  
-    >  マージ エージェント実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にビジネス ロジック ハンドラー アセンブリが配置されている場合は、 **@dotnet_assembly_name** 」を参照してください。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
+    >  マージ エージェント実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にアセンブリが配置されている場合は、 **\@dotnet_assembly_name** にアセンブリ名を含む完全なパスを指定する必要があります。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>新しいテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義し、 **@article_resolver** にビジネス ロジック ハンドラーの表示名を指定します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義し、 **\@article_resolver** にビジネス ロジック ハンドラーの表示名を指定します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>既存のテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、 **@publication** 、 **@article** を指定し、 **@property** に **article_resolver** 値、 **@value** にビジネス ロジック ハンドラーの表示名を指定します。  
+1.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、**\@publication**、**\@article** を指定し、**\@property** に **article_resolver** 値、**\@value** にビジネス ロジック ハンドラーの表示名を指定します。  
   
-###  <a name="TsqlExample"></a> 例 (レプリケーション プログラミング)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 例 (レプリケーション プログラミング)  
  次の例に、監査ログを作成するビジネス ロジック ハンドラーを示します。  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -124,7 +125,7 @@ ms.locfileid: "68128084"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   
 #### <a name="to-create-a-business-logic-handler"></a>ビジネス ロジック ハンドラーを作成するには  
   
@@ -183,7 +184,7 @@ ms.locfileid: "68128084"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - ビジネス ロジック ハンドラーへのアクセス時に使用する表示名です。  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - **@is_dotnet_assembly**」を参照してください。  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - **\@is_dotnet_assembly**」を参照してください。  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>ビジネス ロジック ハンドラーを配置するには  
   
@@ -219,7 +220,7 @@ ms.locfileid: "68128084"
   
 6.  <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>にビジネス ロジック ハンドラーの表示名を設定します。 これは、ビジネス ロジック ハンドラーの登録時に指定した <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> プロパティの値になります。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次のビジネス ロジック ハンドラーの例では、サブスクライバーでの挿入、更新、および削除に関する情報をログに記録します。  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  

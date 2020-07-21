@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 134c115e48bd578f794ecce28d770ce955622f0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ae51a72f0dc2be73e4175c9e50d03246d5d3b49d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65569162"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632540"
 ---
-# <a name="msreportserverconfigurationsetting-members"></a>MSReportServer_ConfigurationSetting メンバー
+# <a name="msreportserver_configurationsetting-members"></a>MSReportServer_ConfigurationSetting メンバー
   MSReportServer_ConfigurationSetting クラスには、次のプロパティとメソッドが含まれています。  
   
 ## <a name="public-properties"></a>パブリック プロパティ  
@@ -50,7 +50,7 @@ ms.locfileid: "65569162"
 |[SendUsingSMTPServer](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-sendusingsmtpserver.md)|電子メール構成の SendUsing プロパティを TRUE に設定するかどうかを示します。|  
 |[SMTPServer](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-smtpserver.md)|RSReportServer.config ファイルから SMTP サーバー プロパティを取得します。 読み取り専用です。|  
 |[UnattendedExecutionAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-unattendedexecutionaccount.md)|レポートを自動実行するときにレポート サーバーで権限を借用するログイン ユーザー アカウントを指定します。 読み取り専用です。|  
-|[バージョン](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-version.md)|レポート サーバーのバージョンを返します。|  
+|[Version](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-version.md)|レポート サーバーのバージョンを返します。|  
 |[VirtualDirectoryReportManager プロパティ &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-virtualdirectoryreportmanager.md)|レポート マネージャー アプリケーションの仮想ディレクトリを返します。|  
 |[VirtualDirectoryReportServer プロパティ &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-virtualdirectoryreportserver.md)|レポート サーバー Web サービス アプリケーションの仮想ディレクトリを返します。|  
 |[WindowsServiceIdentityActual](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-windowsserviceidentityactual.md)|レポート サーバー Windows サービスが実際に実行されている ID を返します。 読み取り専用です。|  
@@ -61,7 +61,7 @@ ms.locfileid: "65569162"
 |||  
 |-|-|  
 |[BackupEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)|インスタンスの暗号化キーをバックアップします。 暗号化キーは、パスワードを使用して暗号化されて格納されます。|  
-|[CreateSSLCertificateBinding メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|SSL 証明書のバインドを作成します。|  
+|[CreateSSLCertificateBinding メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|TLS/SSL 証明書のバインドを作成します。|  
 |[DeleteEncryptedInformation](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptedinformation.md)|レポート サーバー データベースから暗号化された情報を削除します。|  
 |[DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md)|レポート サーバー データベースから暗号化キーを削除します。|  
 |[GenerateDatabaseCreationScript](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)|レポート サーバー データベースの作成に使用できる SQL スクリプトを生成します。|  
@@ -70,14 +70,14 @@ ms.locfileid: "65569162"
 |[GetAdminSiteUrl メソッド &#40;WMI&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-getadminsiteurl.md)|サーバーの管理 Web サイトの絶対 URL を取得します。|  
 |[GetDatabaseVersionDisplayName](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-getdatabaseversiondisplayname.md)|指定したレポート サーバー データベースのバージョン文字列の表示名を取得します。|  
 |[InitializeReportServer](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-initializereportserver.md)|指定されたレポート サーバー インスタンスを初期化します。|  
-|[ListInstalledSharePointVersions メソッド (WMI)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-listinstalledsharepointversions.md)|レポート サーバーと同じコンピューターにインストールされた [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] のバージョンを表すトークンのセットを返します。|  
-|[ListIPAddresses メソッド (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-listipaddresses.md)|コンピューターの IP アドレスを一覧表示します。|  
+|[ListInstalledSharePointVersions メソッド &#40;WMI&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-listinstalledsharepointversions.md)|レポート サーバーと同じコンピューターにインストールされている [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] のバージョンを表すトークンのセットを返します。|  
+|[ListIPAddresses メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-listipaddresses.md)|コンピューターの IP アドレスを一覧表示します。|  
 |[ListReportServersInDatabase](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-listreportserversindatabase.md)|セキュリティで保護された情報にアクセスできるかどうかに関係なく、レポート サーバー データベースにあるレポート サーバーの一覧を返します。|  
 |[ListReservedURLs メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-listreservedurls.md)|レポート サーバー上のすべてのアプリケーション用に予約されている URL を一覧表示します。|  
-|[ListSSLCertificateBindings メソッド (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificatebindings.md)|HTTP.SYS に存在する SSL 証明書のバインドと rsreportserver.config から予測される SSL 証明書のバインドを一覧表示します。|  
-|[ListSSLCertificate メソッド (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificates.md)|コンピューターにインストールされている SSL 証明書を一覧表示します。|  
+|[ListSSLCertificateBindings メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificatebindings.md)|HTTP.SYS に存在する TLS/SSL 証明書のバインドと rsreportserver.config から予測される TLS/SSL 証明書のバインドを一覧表示します。|  
+|[ListSSLCertificate メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificates.md)|コンピューターにインストールされている TLS/SSL 証明書を一覧表示します。|  
 |[ReencryptSecureInformation](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reencryptsecureinformation.md)|新しい暗号化キーを生成し、その新しいキーを使用してレポート サーバー データベース内のセキュリティで保護されたすべての情報を再度暗号化します。|  
-|[RemoveSSLCertificateBindings メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-removesslcertificatebinding.md)|SSL 証明書のバインドを削除します。|  
+|[RemoveSSLCertificateBindings メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-removesslcertificatebinding.md)|TLS/SSL 証明書のバインドを削除します。|  
 |[RemoveUnattendedExecutionAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-removeunattendedexecutionaccount.md)|レポート サーバー構成から自動実行用アカウント エントリを削除します。|  
 |[RemoveURL メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-removeurl.md)|レポート サーバー用に予約されている URL を削除します。|  
 |[ReserveURL メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md)|指定したアプリケーションの URL 予約を追加します。|  
@@ -93,6 +93,6 @@ ms.locfileid: "65569162"
 |[SetWindowsServiceIdentity](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md)|指定した Windows ユーザーとしてレポート サーバーの Windows サービスを実行し、レポート サーバーを運用できるファイル システム権限をこのアカウントに与えます。|  
   
 ## <a name="see-also"></a>参照  
- [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting クラス](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Status プロパティの例 (Recordset) (VB) |Microsoft Docs
+title: Status プロパティの例 (レコードセット) (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO Recordset], Visual Basic example
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f1f418ed4c8ac74a023203606ebf3934129525a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d2789a69b9ac96e3dbe42ab3828d5afe49fc387a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916791"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759698"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status プロパティの例 (Recordset) (VB)
-この例では、[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)バッチ更新が発生する前に、バッチ操作で変更されたレコードを表示するプロパティ。  
+この例では、 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)プロパティを使用して、バッチ更新が行われる前にバッチ操作で変更されたレコードを表示します。  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -97,5 +97,5 @@ End Sub
 'EndStatusRecordsetVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Status プロパティ (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

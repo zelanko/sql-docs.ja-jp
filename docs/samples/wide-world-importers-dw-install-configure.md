@@ -1,74 +1,75 @@
 ---
-title: OLAP の WideWorldImporters サンプル データベースのインストールし、構成 - SQL |Microsoft Docs
+title: DW WideWorldImporters サンプルデータベースのインストール & 構成
+description: 次の手順に従って、SQL Server Management Studio で WideWorldImportersDW サンプルデータベースをダウンロードし、インストールして、構成します。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.custom: ''
 ms.date: 08/04/2018
 ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: ed3c5f1a4f2168196a651aea64c9c88311a197b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 2f640415ecdc2ae4a48220aeec2a2c78ed79807c
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104252"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81488553"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW のインストールと構成
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-WideWorldImportersDW データベースのインストールと構成の手順です。
+WideWorldImportersDW データベースのインストールと構成の手順。
 
-- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)します。 完全なバージョンのサンプルを使用するには、SQL Server の評価、Developer、または Enterprise Edition を使用します。
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 最善の結果を得るには、2016 年 6 月リリース以降を使用してください。
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (またはそれ以降) または[Azure SQL Database](https://azure.microsoft.com/services/sql-database/)。 このサンプルの完全バージョンを使用するには、SQL Server Evaluation/Developer/Enterprise Edition を使用します。
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 最良の結果を得るには、2016年6月リリース以降を使用します。
 
 ## <a name="download"></a>ダウンロード
 
-サンプルの最新リリース:
+サンプルの最新リリースは次のとおりです。
 
-[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
+[ワイド-インポーター-リリース](https://go.microsoft.com/fwlink/?LinkID=800630)
 
-SQL Server または Azure SQL データベースのエディションに対応するサンプル WideWorldImportersDW データベースのバックアップ/bacpac をダウンロードしてください。
+SQL Server または Azure SQL Database のエディションに対応するサンプル WideWorldImportersDW database backup/bacpac をダウンロードします。
 
-サンプル データベースを再作成するソース コードは、以下の場所から使用可能です。 データ カタログの作成は、OLTP データベース (WideWorldImporters) から ETL に基づいていることに注意してください。
+サンプルデータベースを再作成するソースコードは、次の場所から入手できます。 データの作成は OLTP データベースの ETL (WideWorldImporters) に基づいていることに注意してください。
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[ワイド-インポーター-ソース](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## <a name="install"></a>インストール
 
 
 ### <a name="sql-server"></a>SQL Server
 
-SQL Server インスタンスにバックアップを復元するには、Management Studio を使用できます。
+バックアップを SQL Server インスタンスに復元するには、Management Studio を使用できます。
 
-1. SQL Server Management Studio を開き、対象の SQL Server インスタンスに接続します。
-2. **データベース**ノードを右クリックし、**Restore Database** を選択します。
-3. 選択**デバイス** ボタンをクリックします **。**
-4. ダイアログ ボックスで**バックアップ デバイスの選択**、 をクリックして**追加**サーバーのファイル システム内のデータベースのバックアップに移動して、バックアップを選択します。 **[OK]** をクリックします。
-5. 必要に応じて、データのターゲットの場所を変更し、ログ ファイルで、**ファイル**ウィンドウ。 ベスト プラクティスとしてデータを配置し、ログ ファイルを別のドライブにあるに注意してください。
-6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了した後、データベース、SQL Server インスタンスにインストールされている WideWorldImporters 必要があります。
+1. SQL Server Management Studio を開き、ターゲットの SQL Server インスタンスに接続します。
+2. [**データベース**] ノードを右クリックし、[**データベースの復元**] を選択します。
+3. [**デバイス**] を選択し、[.. **.** ] ボタンをクリックします。
+4. ダイアログで [**バックアップデバイスの選択**] をクリックし、[**追加**] をクリックして、サーバーのファイルシステム内のデータベースバックアップに移動し、バックアップを選択します。 **[OK]** をクリックします。
+5. 必要に応じて、[**ファイル**] ウィンドウでデータファイルとログファイルのターゲットの場所を変更します。 データファイルとログファイルは別のドライブに配置することをお勧めします。
+6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了すると、SQL Server インスタンスにデータベース WideWorldImporters がインストールされます。
 
 ### <a name="azure-sql-database"></a>Azure SQL データベース
 
-新しい SQL Database には、bacpac をインポートするには、Management Studio を使用できます。
+Bacpac を新しい SQL Database にインポートするには、Management Studio を使用できます。
 
-1. (省略可能)Azure で SQL Server をまだ必要はない場合に移動、 [Azure portal](https://portal.azure.com/)し、新しい SQL データベースを作成します。 途中でデータベースを作成、サーバーを作成します。 サーバーのメモしてをおきます。
-   - 参照してください[このチュートリアル](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)分でデータベースを作成するには
-2. SQL Server Management Studio を開き、Azure でサーバーに接続します。
-3. 右クリックし、**データベース**ノード、および選択**データ層アプリケーションのインポート**します。
-4. **設定のインポート**選択**ローカル ディスクからインポート**し、ファイル システムから、サンプル データベースの bacpac を選択します。
-5. **データベース設定**データベース名を変更して*WideWorldImportersDW*を使用するターゲット エディションとサービス目標を選択します。
-6. をクリックして**次**と**完了**展開を開始します。 完了するまでに数分をかかります。 S2 より低いサービス目標を指定する場合は、長い時間がかかる場合があります。
+1. optionalまだ Azure に SQL Server がない場合は、 [Azure portal](https://portal.azure.com/)に移動し、新しい SQL Database を作成します。 データベースを作成するプロセスでは、サーバーを作成します。 サーバーをメモしておきます。
+   - [このチュートリアル](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)を参照して、データベースを数分で作成してください
+2. SQL Server Management Studio を開き、Azure のサーバーに接続します。
+3. [**データベース**] ノードを右クリックし、[**データ層アプリケーションのインポート**] をクリックします。
+4. [**インポートの設定**] で、[**ローカルディスクからインポート**する] を選択し、ファイルシステムからサンプルデータベースの bacpac を選択します。
+5. [**データベースの設定**] で、データベース名を*WideWorldImportersDW*に変更し、使用するターゲットエディションとサービス目標を選択します。
+6. [**次へ** **] をクリックして、** 展開を開始します。 この処理は完了までに数分かかります。 S2 より低いサービス目標を指定すると、時間がかかることがあります。
 
 ## <a name="configuration"></a>構成
 
-[SQL Server 2016 (以降) の開発者、構造体、Enterprise Evaluation Edition に適用されます]
+[SQL Server 2016 (およびそれ以降) の Developer/評価版に適用されます/Enterprise Edition]
 
-サンプル データベースは、Hadoop または Azure blob ストレージ内のクエリ ファイルを使用して、PolyBase のこと。 ただし、SQL Server では既定でその機能がインストールされていない - SQL Server のセットアップ中に選択する必要があります。 そのため、インストール後の手順が必要です。
+サンプルデータベースでは、PolyBase を使用して、Hadoop または Azure blob storage 内のファイルに対してクエリを実行できます。 ただし、この機能は既定では SQL Server と共にインストールされません。 SQL Server セットアップ中に選択する必要があります。 そのため、インストール後の手順が必要です。
 
-1. SQL Server Management studio では、WideWorldImportersDW データベースに接続し、新しいクエリ ウィンドウを開きます。
-2. PolyBase を使用して、データベースで有効にするのには、次の T-SQL コマンドを実行します。
+1. SQL Server Management Studio で、WideWorldImportersDW データベースに接続し、新しいクエリウィンドウを開きます。
+2. 次の T-sql コマンドを実行して、データベースで PolyBase を使用できるようにします。
 
    [アプリケーション] を実行します。[Configuration_ApplyPolyBase]

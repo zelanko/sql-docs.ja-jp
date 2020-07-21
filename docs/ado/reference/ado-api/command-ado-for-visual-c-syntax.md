@@ -1,5 +1,5 @@
 ---
-title: コマンド (Visual C 構文用の ADO) |Microsoft Docs
+title: Command (Visual C++ 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Command collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 49a82682e619bb2a33e5c04e049b40ac4733f427
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2e804520e73df93993bc24c2db89191e9391bfdb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919870"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760488"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>Command (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -31,7 +31,7 @@ CreateParameter(BSTR Name, DataTypeEnum Type, ParameterDirectionEnum Direction, 
 Execute(VARIANT *RecordsAffected, VARIANT *Parameters, long Options, _ADORecordset **ppirs)  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 get_ActiveConnection(_ADOConnection **ppvObject)  
@@ -51,5 +51,5 @@ get_State(LONG *plObjState)
 get_Parameters(ADOParameters **ppvObject)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

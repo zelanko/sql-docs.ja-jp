@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Events property
 - Script task [Integration Services], events
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8cf5e17a750c9626ea555d35598058b58afec51e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f213a9eb8375f05967700a6aeec81bae5e41ec1d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102829"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71286057"
 ---
 # <a name="raising-events-in-the-script-task"></a>スクリプト タスクでのイベントの発生
 
@@ -38,7 +38,7 @@ ms.locfileid: "68102829"
   
  イベントを発生させるには、スクリプト タスクは <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> プロパティによって公開されるメソッドのいずれかを呼び出します。 次の表に、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> プロパティにより公開されているメソッドの一覧を示します。  
   
-|イベント|[説明]|  
+|Event|説明|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>|パッケージ内でユーザー定義のカスタム イベントを発生させます。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>|パッケージにエラー条件を通知します。|  

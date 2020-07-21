@@ -1,6 +1,6 @@
 ---
-title: フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: フォーマット ファイルを使用したデータ フィールドのスキップ
+description: テーブル列よりも多くのフィールドを持つデータ ファイルでフォーマット ファイルを使用できます。 これにより、テーブル列が対応するデータ フィールドにマップされ、余分なフィールドは無視されます。
 ms.date: 09/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,15 +14,16 @@ ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ff08fc0f946633b13fa9b029d844390702681be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a03b892a22a837ad578fccf48460cd4952f80d6b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025030"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004859"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 データ ファイルには、テーブルの列数よりも多くのフィールドを格納できます。 このトピックでは、XML 以外のフォーマット ファイルと XML フォーマット ファイルの両方を変更し、データ ファイルに多くのフィールドを格納する方法について説明します。この操作は、テーブル列を対応するデータ フィールドにマップし、余分なフィールドを無視することによって行います。  詳細については、「 [フォーマット ファイルの作成 (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) 」を参照してください。
 
 |[外枠]|
@@ -32,10 +33,10 @@ ms.locfileid: "68025030"
 > [!NOTE]
 >  XML 以外のフォーマット ファイルまたは XML フォーマット ファイルを使用して、データ ファイルをテーブルに一括インポートできます。その場合、[bcp ユーティリティ](../../tools/bcp-utility.md) コマンド、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメント、または INSERT ...SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメント。 詳細については、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。
 
-## テスト条件の例<a name="etc"></a>  
+## <a name="example-test-conditions"></a>テスト条件の例<a name="etc"></a>  
 このトピックの変更するフォーマット ファイルの例は、以下に定義されたテーブルとデータ ファイルに基づいています。
   
-### サンプル テーブル<a name="sample_table"></a>
+### <a name="sample-table"></a>サンプル テーブル<a name="sample_table"></a>
 以下のスクリプトでは、テスト データベースと `myTestSkipField`という名前のテーブルが作成されます。  Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
  
 ```sql
@@ -51,7 +52,7 @@ CREATE TABLE myTestSkipField
    );
 ```
   
-### サンプル データ ファイル<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>サンプル データ ファイル<a name="sample_data_file"></a>
 空のファイル `D:\BCP\myTestSkipField.bcp` を作成し、次のデータを挿入します。 
 ```
 1,SkipMe,Anthony,Grosse
@@ -59,7 +60,7 @@ CREATE TABLE myTestSkipField
 3,SkipMe,Stella,Rosenhain
 ```
   
-## フォーマット ファイルの作成<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>フォーマット ファイルの作成<a name="create_format_file"></a>
 `myTestSkipField.bcp` から `myTestSkipField` テーブルにデータを一括インポートするには、フォーマット ファイルで次の操作を行う必要があります。
 * 最初のデータ フィールドを最初の列 `PersonID`にマップします。
 * 2 番目のデータ フィールドをスキップします。
@@ -68,14 +69,14 @@ CREATE TABLE myTestSkipField
 
 フォーマット ファイルを作成する最も簡単な方法は、 [bcp ユーティリティ](../../tools/bcp-utility.md)を使用することです。  最初に、既存のテーブルからベース フォーマット ファイルを作成します。  次に、実際のデータ ファイルを反映するようにベース フォーマット ファイルを変更します。
   
-### <a name="nonxml_format_file"></a>XML 以外のフォーマット ファイルの作成 
+### <a name="creating-a-non-xml-format-file"></a><a name="nonxml_format_file"></a>XML 以外のフォーマット ファイルの作成 
 詳細については、「 [XML 以外のフォーマット ファイル (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 」を参照してください。 次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myTestSkipField.fmt`のスキーマに基づいて XML 以外のフォーマット ファイル `myTestSkipField`を生成します。  さらに、修飾子 `c` を使用して文字データを指定し、 `t,` を使用してフィールド ターミネータとしてコンマを指定し、 `T` を使用して統合セキュリティによる信頼された接続を指定します。  コマンド プロンプトで、次のコマンドを入力します。
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt -t, -T
 ```
 
-### XML 以外のフォーマット ファイルの変更 <a name="modify_nonxml_format_file"></a>
+### <a name="modifying-the-non-xml-format-file"></a>XML 以外のフォーマット ファイルの変更 <a name="modify_nonxml_format_file"></a>
 用語については、「 [XML 以外のフォーマット ファイルの構造](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) 」を参照してください。 メモ帳で `D:\BCP\myTestSkipField.fmt` を開き、次のように変更します。
 1) `FirstName` のフォーマット ファイル行全体をコピーし、次の行の `FirstName` のすぐ後ろに貼り付けます。
 2) 新しい行とすべての後続行のホスト ファイル フィールドの順序の値を 1 増やします。
@@ -83,7 +84,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 3) 2 番目のフォーマット ファイル行のサーバー列の順序を `2` から `0` に変更します。 
 
 加えた変更を比較します。  
-**[指定日付より前]**
+**変更前**
 ```
 13.0
 3
@@ -91,7 +92,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 2       SQLCHAR 0       25      ","      2     FirstName    SQL_Latin1_General_CP1_CI_AS
 3       SQLCHAR 0       30      "\r\n"   3     LastName     SQL_Latin1_General_CP1_CI_AS
 ```
-**After**
+**変更後**
 ```
 13.0
 4
@@ -109,21 +110,21 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 * `myTestSkipField.bcp` の 3 番目のデータ フィールドは 2 番目の列にマップされます: `myTestSkipField.. FirstName`
 * `myTestSkipField.bcp` の 4 番目のデータ フィールドは 3 番目の列にマップされます: `myTestSkipField.. LastName`
 
-### XML フォーマット ファイルの作成 <a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>XML フォーマット ファイルの作成 <a name="xml_format_file"></a>  
 詳細については、「 [XML フォーマット ファイル (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 」を参照してください。  次のコマンドでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用し、 `myTestSkipField.xml`のスキーマに基づいて XML のフォーマット ファイル `myTestSkipField`を生成します。  さらに、修飾子 `c` を使用して文字データを指定し、 `t,` を使用してフィールド ターミネータとしてコンマを指定し、 `T` を使用して統合セキュリティによる信頼された接続を指定します。  XML ベースのフォーマット ファイルを生成する場合は、 `x` 修飾子を使用する必要があります。  コマンド プロンプトで、次のコマンドを入力します。
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.xml -t, -T
 ```
 
-### XML フォーマット ファイルの変更 <a name="modify_xml_format_file"></a>
+### <a name="modifying-the-xml-format-file"></a>XML フォーマット ファイルの変更 <a name="modify_xml_format_file"></a>
 用語については、「 [XML フォーマット ファイルのスキーマ構文](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 」を参照してください。  メモ帳で `D:\BCP\myTestSkipField.xml` を開き、次のように変更します。
 1) 2 番目のフィールド全体をコピーし、次の行の 2 番目のフィールドのすぐ後ろに貼り付けます。
 2) 新しい FIELD と後続の各 FIELD の "FIELD ID" 値を 1 増やします。
 3) `FirstName`と `LastName` の "COLUMN SOURCE" 値を 1 増やし、変更されたマッピングを反映するようにします。
 
 加えた変更を比較します。  
-**[指定日付より前]**
+**変更前**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -140,7 +141,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.
 </BCPFORMAT>
 ```
 
-**After**
+**変更後**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -165,22 +166,22 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -x -f D:\BCP\myTestSkipField.
 * COLUMN 3 に対応する FIELD 3 は、2 番目のテーブル列にマップされます: `myTestSkipField.. FirstName`
 * COLUMN 4 に対応する FIELD 4 は、3 番目のテーブル列にマップされます: `myTestSkipField.. LastName`
 
-## データ フィールドをスキップするためのフォーマット ファイルを使用したデータのインポート<a name="import_data"></a>
+## <a name="importing-data-with-a-format-file-to-skip-a-data-field"></a>データ フィールドをスキップするためのフォーマット ファイルを使用したデータのインポート<a name="import_data"></a>
 次の例では、データベース、データ ファイル、および上記で作成したフォーマット ファイルを使用します。
 
-### [bcp](../../tools/bcp-utility.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用<a name="bcp_nonxml"></a>
+### <a name="using-bcp-and-non-xml-format-file"></a>[bcp](../../tools/bcp-utility.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用<a name="bcp_nonxml"></a>
 コマンド プロンプトで、次のコマンドを入力します。
 ```
 bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myTestSkipField.fmt -T
 ```
 
-### [bcp](../../tools/bcp-utility.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用<a name="bcp_xml"></a>
+### <a name="using-bcp-and-xml-format-file"></a>[bcp](../../tools/bcp-utility.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用<a name="bcp_xml"></a>
 コマンド プロンプトで、次のコマンドを入力します。
 ```
 bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myTestSkipField.xml -T
 ```
 
-### [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用<a name="bulk_nonxml"></a>
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用<a name="bulk_nonxml"></a>
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
 ```sql
 USE TestDatabase;  
@@ -196,7 +197,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用<a name="bulk_xml"></a>
+### <a name="using-bulk-insert-and-xml-format-file"></a>[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用<a name="bulk_xml"></a>
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
 ```sql
 USE TestDatabase;  
@@ -212,7 +213,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と[ XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用<a name="openrowset_nonxml"></a>    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と[ XML 以外のフォーマット ファイル](../../relational-databases/import-export/non-xml-format-files-sql-server.md)の使用<a name="openrowset_nonxml"></a>    
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
 ```sql
 USE TestDatabase;
@@ -231,7 +232,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
-### [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用<a name="openrowset_xml"></a>
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) と [XML フォーマット ファイル](../../relational-databases/import-export/xml-format-files-sql-server.md)の使用<a name="openrowset_xml"></a>
 Microsoft SQL Server Management Studio (SSMS) で、次の Transact SQL を実行します。
 ```sql
 USE TestDatabase;  
@@ -252,7 +253,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
   
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   

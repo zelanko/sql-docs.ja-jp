@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_languages (TRANSACT-SQL) |Microsoft Docs
+title: fulltext_languages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,27 +21,27 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa04b9a4b90b470ca3cc6df4a8f5cf62134027c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764711"
 ---
-# <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  このカタログ ビューには、ワード ブレーカーに登録されている言語ごとに 1 行が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 各行には、LCID と言語の名前が表示されます。 言語、その他の言語リソースのステミング機能、ノイズ ワード (ストップ ワード)、および類義語辞典のファイルになるのワード ブレーカーの登録時に、フルテキスト インデックス/クエリ操作に使用できます。 値**名前**または**lcid** 、フルテキスト クエリとフルテキスト インデックスで指定できます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
+  このカタログビューには、ワードブレーカーがに登録されている言語ごとに1つの行が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 各行には、言語の LCID と名前が表示されます。 言語のワードブレーカーが登録されている場合、その他の言語リソース (ステミング機能、ノイズワード (ストップワード)、および類義語辞典ファイル) は、フルテキストインデックス作成またはクエリ操作で使用できるようになります。 **名前**または**lcid**の値は、フルテキストクエリとフルテキストインデックスステートメントで指定でき [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
    
-|[列]|データ型|説明|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|言語の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ロケール識別子 (LCID) です。|  
-|**name**|**sysname**|内の別名のいずれかの値は、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)の値に対応する**lcid**または LCID の数値の文字列表現。|  
+|**name**|**sysname**|**Lcid**の値に対応するsys.sysの[言語](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)のエイリアスの値か、または数値の lcid の文字列表現です。|  
   
 ## <a name="values-returned-for-default-languages"></a>既定の言語の戻り値  
  次の表に、ワード ブレーカーが既定で登録されている言語の値を示します。  
   
-|[言語]|LCID (LCID)|  
+|Language|LCID|  
 |--------------|----------|  
 |アラビア語|1025|  
 |ベンガル語 (インド)|1093|  
@@ -58,7 +58,7 @@ ms.locfileid: "68220507"
 |英語|1033|  
 |フランス語|1036|  
 |ドイツ語|1031|  
-|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ギリシャ語|1032|  
+|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> ギリシャ語|1032|  
 |グジャラート語|1095|  
 |ヘブライ語|1037|  
 |ヒンディー語|1081|  
@@ -73,9 +73,9 @@ ms.locfileid: "68220507"
 |マレー語 - マレーシア|1086|  
 |マラヤーラム語|1100|  
 |マラーティー語|1102|  
-|ニュートラル|0|  
+|中立|0|  
 |ノルウェー語 (ブークモール)|1044|  
-|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ポーランド語|1045|  
+|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> ポーランド語|1045|  
 |ポルトガル語 (ブラジル)|1046|  
 |ポルトガル語 (ポルトガル)|2070|  
 |パンジャーブ語|1094|  
@@ -83,32 +83,32 @@ ms.locfileid: "68220507"
 |ロシア語|1049|  
 |セルビア語 (キリル)|3098|  
 |セルビア語 (ラテン)|2074|  
-|簡体字中国語|2052|  
+|簡体中国語|2052|  
 |スロバキア語|1051|  
 |スロベニア語|1060|  
 |スペイン語|3082|  
 |スウェーデン語|1053|  
-|タミール語|1097|  
+|タミル語|1097|  
 |テルグ語|1098|  
 |タイ語|1054|  
-|繁体字中国語|1028|  
-|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> トルコ語|1055|  
+|Traditional Chinese|1028|  
+|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> トルコ語|1055|  
 |ウクライナ語|1058|  
 |ウルドゥ語|1056|  
 |ベトナム語|1066|  
   
-## <a name="remarks"></a>コメント  
- フルテキスト検索に登録された言語の一覧を更新する[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'。  
+## <a name="remarks"></a>Remarks  
+ フルテキスト検索に登録されている言語の一覧を更新するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>関連項目  
- [sp_fulltext_load_thesaurus_file &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
- [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
- [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [構成して、フルテキスト検索の類義語辞典ファイルを管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sp_fulltext_load_thesaurus_file &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_service &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [検索用のワードブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [フルテキスト検索用の類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [フルテキスト検索のためのストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: フルテキスト検索に使用する類義語辞典ファイルの構成と管理 | Microsoft Docs
-ms.date: 12/04/2017
+title: フルテキスト検索に使用する類義語辞典ファイルの構成と管理
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -13,22 +13,23 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 792b605f4c85484a8cb6ab7987aeee2bd427c67a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098274"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897991"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索クエリでは、フルテキスト検索の*類義語辞典*を使用して、ユーザーが指定した用語のシノニムを検索できます。 各々の類義語辞典では、特定の言語の一連のシノニムを定義します。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。
 
 類義語辞典の照合は、すべての [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) クエリと [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) クエリの場合と `FORMSOF THESAURUS` 句を指定する [CONTAINS](../../t-sql/queries/contains-transact-sql.md) クエリと [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) クエリの場合に行われます。
   
 フルテキスト検索の類義語辞典は、XML テキスト ファイルです。
   
-##  <a name="tasks"></a>類義語辞典の機能  
+##  <a name="whats-in-a-thesaurus"></a><a name="tasks"></a>類義語辞典の機能  
  フルテキスト検索クエリで特定の言語のシノニムを検索するには、その言語の類義語辞典のマッピング (シノニム) を定義しておく必要があります。 各類義語辞典は、次の内容を定義するために手動で構成する必要があります。  
   
 -   拡張セット  
@@ -45,47 +46,45 @@ ms.locfileid: "68098274"
   
      類義語辞典では、チルダ ( **~** )、アキュート アクセント記号 ( **&acute;** )、ウムラウト ( **&uml;** ) などの分音記号をすべての検索パターンで区別するかしないか (つまり、"*アクセントを区別する*" か "*アクセントを区別しない*" か) が設定されます。 たとえば、フルテキスト クエリで "caf&eacute;" というパターンが他のパターンに置き換えられるように指定するとします。 類義語辞典でアクセントが区別されない場合、フルテキスト検索では、パターン "caf&eacute;" と "cafe" が置き換えられます。 類義語辞典でアクセントが区別される場合、フルテキスト検索では "caf&eacute;" というパターンのみが置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
   
-##  <a name="initial_thesaurus_files"></a> 既定の類義語辞典ファイル
+##  <a name="default-thesaurus-files"></a><a name="initial_thesaurus_files"></a> 既定の類義語辞典ファイル
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には XML 類義語辞典ファイルのセットが用意されており、サポートされている各言語に対して 1 つのファイルが存在します。 これらのファイルは基本的に空です。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類義語辞典およびコメント アウトされたサンプル類義語辞典に共通する最上位の XML 構造のみが格納されています。  
   
-##  <a name="location"></a> 類義語辞典ファイルの場所  
+##  <a name="location-of-thesaurus-files"></a><a name="location"></a> 類義語辞典ファイルの場所  
  類義語辞典ファイルの既定の場所は次のとおりです。  
   
-     <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
+`<SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\`
   
- この既定の場所には、次のファイルが格納されています。  
+この既定の場所には、次のファイルが格納されています。  
   
 -   **言語固有の**類義語辞典ファイル  
 
     セットアップでは、空の類義語辞典ファイルが前述の場所にインストールされます。 サポートされている言語ごとに個別のファイルが用意されています。 システム管理者は、これらのファイルをカスタマイズできます。  
   
-     類義語辞典ファイルの既定のファイル名には、次の形式が使用されます。  
+    類義語辞典ファイルの既定のファイル名には、次の形式が使用されます。  
   
-         'ts' + <three-letter language-abbreviation> + '.xml'  
+    `'ts' + <three-letter language-abbreviation> + '.xml'`
   
-     指定した言語の類義語辞典ファイルの名前は、レジストリで次のように指定されます。
+    指定した言語の類義語辞典ファイルの名前は、レジストリで次のように指定されます。
      
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
 -   **グローバル**類義語辞典ファイル  
   
-     tsGlobal.xml は空のグローバル類義語辞典ファイルです。  
+    tsGlobal.xml は空のグローバル類義語辞典ファイルです。  
 
 ### <a name="change-the-location-of-a-thesaurus-file"></a>類義語辞典ファイルの場所を変更する 
 類義語辞典ファイルの場所および名前を変更するには、そのレジストリ キーを変更します。 各言語の類義語辞典ファイルの場所は、レジストリで次のように指定されています。  
   
-    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
+`HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile`
   
  グローバル類義語辞典ファイルは、LCID 0 のニュートラル言語に対応します。 この値は、管理者のみが変更できます。  
 
-##  <a name="how_queries_use_tf"></a>フルテキスト クエリで類義語辞典を使用する方法  
+##  <a name="how-full-text-queries-use-the-thesaurus"></a><a name="how_queries_use_tf"></a>フルテキスト クエリで類義語辞典を使用する方法  
 類義語辞典クエリでは、言語固有の類義語辞典とグローバル類義語辞典の両方が使用されます。
 1.  まず、言語固有のファイルが参照されて処理のために読み込まれ (まだ読み込まれていない場合)、 類義語辞典ファイル内の拡張セットおよび置換セットのルールで指定された言語固有のシノニムを含むようにクエリが拡張されます。 
 2.  この手順がグローバル類義語辞典に対して繰り返されます。 ただし、言語固有の類義語辞典ファイルで既に一致するものが見つかった用語は、グローバル類義語辞典では照合されません。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="structure"></a> 類義語辞典ファイルの構造  
+##  <a name="structure-of-a-thesaurus-file"></a><a name="structure"></a> 類義語辞典ファイルの構造  
  各類義語辞典ファイルでは、ID が `Microsoft Search Thesaurus` の XML コンテナー、およびサンプル類義語辞典を含むコメント `<!--`...`-->` が定義されます。 類義語辞典は `<thesaurus>` 要素で定義されます。この要素には、分音記号の設定、拡張セット、置換セットを定義する子要素のサンプルが含まれます。
 
 一般的な空の類義語辞典ファイルには、次の XML テキストが含まれています。  
@@ -116,7 +115,7 @@ ms.locfileid: "68098274"
 </XML>  
 ```
 
-### <a name="expansion"></a> 拡張セットの XML 構造  
+### <a name="xml-structure-of-an-expansion-set"></a><a name="expansion"></a> XML structure of an expansion set  
   
  各拡張セットは `<expansion>` 要素で囲みます。 この要素内に、`<sub>` 要素で囲んだ 1 つまたは複数の代替文字列を指定します。 拡張セットでは、互いにシノニムとなる代替文字列のグループを指定できます。  
   
@@ -132,7 +131,7 @@ ms.locfileid: "68098274"
 </expansion>  
 ```  
   
-### <a name="replacement"></a> 置換セットの XML 構造  
+### <a name="xml-structure-of-a-replacement-set"></a><a name="replacement"></a> XML structure of a replacement set  
   
 各置換セットは `<replacement>` 要素で囲みます。 この要素内に、`<pat>` 要素で囲んだ 1 つ以上のパターンと `<sub>` 要素で囲んだ 0 個以上の代替文字列 (シノニムごとに 1 つ) を指定できます。 ここで指定するパターンが代替セットで置き換えられます。 パターンと代替文字列には、語または語の並びを含めることができます。 パターンに対して代替文字列が指定されていない場合は、ユーザー クエリからパターンが削除されます。  
   
@@ -157,7 +156,7 @@ ms.locfileid: "68098274"
 </replacement>  
 ```  
   
-クエリと  
+and  
   
 ```xml  
 <replacement>  
@@ -171,7 +170,7 @@ ms.locfileid: "68098274"
   
 類義語辞典の分音文字の設定は、単一の `<diacritics_sensitive>` 要素で指定されます。 この要素には、次のようにアクセントの区別を制御する整数値が含まれます。  
   
-|分音文字の設定|[値]|XML|  
+|分音文字の設定|値|XML|  
 |------------------------|-----------|---------|  
 |アクセントを区別しない|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |アクセントを区別する|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
@@ -179,7 +178,7 @@ ms.locfileid: "68098274"
 > [!NOTE]  
 >  この設定はファイルで 1 回のみ適用でき、ファイル内のすべての検索パターンに適用されます。 この設定は個別のパターンには指定できません。  
 
-##  <a name="editing"></a> 類義語辞典ファイルの編集  
+##  <a name="edit-a-thesaurus-file"></a><a name="editing"></a> 類義語辞典ファイルの編集  
 特定の言語の類義語辞典は、類義語辞典ファイル (XML ファイル) を編集することによって構成できます。 セットアップ中に、`<xml>` コンテナーとコメント アウトされたサンプルの `<thesaurus`> 要素のみが格納されている空の類義語辞典ファイルがインストールされます。 シノニムを検索するフルテキスト検索クエリを正しく機能させるには、一連のシノニムを定義する実際の `<thesaurus`> 要素を作成する必要があります。 シノニムの定義には、拡張セットと置換セットという 2 つの形式があります。  
 
 ### <a name="edit-a-thesaurus-file"></a>類義語辞典ファイルを編集する  

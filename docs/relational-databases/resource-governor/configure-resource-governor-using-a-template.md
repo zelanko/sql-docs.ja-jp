@@ -11,28 +11,28 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2d9317dba8c319e9af4d3068e183b6639c28fe34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb17a0d2b42528d886430e92b82908a3e08b5694
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720527"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>テンプレートを使用してリソース ガバナーを構成する
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に用意されているテンプレートを使用してリソース ガバナーを構成できます。  
   
--   **作業を開始する準備:** [Permissions](#Permissions)  
+-   **作業を開始する準備:** [アクセス許可](#Permissions)  
   
--   **ワークロード グループの作成に使用するもの:**  [テンプレート](#ConfRGTemplate)  
+-   **ワークロード グループの作成に使用するもの:** [テンプレート](#ConfRGTemplate)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  次の手順に従って、リソース プールおよびそのプールのワークロード グループを作成するテンプレートを開いて変更します。 また、このテンプレートを使用すると、既定のグループまたは作成したワークロード グループへの新しい接続をルーティングするための、ユーザー定義の分類子関数を作成できます。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テンプレートでリソース ガバナーの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="ConfRGTemplate"></a> テンプレートを使用してリソース ガバナーを構成する  
+##  <a name="configure-resource-governor-using-a-template"></a><a name="ConfRGTemplate"></a> テンプレートを使用してリソース ガバナーを構成する  
  **のテンプレートを使用してリソース ガバナーを構成するには [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
@@ -46,8 +46,6 @@ ms.locfileid: "68136941"
 5.  テンプレートに加えた変更を保存するには、 **[OK]** をクリックします。  
   
 6.  クエリを実行するには、 **[実行]** をクリックします。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>参照  
  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   

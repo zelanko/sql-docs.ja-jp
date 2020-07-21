@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6a0f2fc8c2af69832150ab5ab229ffc50c84e831
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fffb842f8d9f1140f018c50951462b1b8ab647e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732725"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 指定した証明書のプロパティの値を返します。
   
@@ -35,7 +35,7 @@ ms.locfileid: "68010483"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CertProperty ( Cert_ID , '<PropertyName>' )  
   
 <PropertyName> ::=  
@@ -59,7 +59,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 *Cert_Serial_Number*  
 証明書のシリアル番号。
   
-*[Subject]*  
+*[件名]*  
 証明書のサブジェクト。
   
  *SID*  
@@ -76,13 +76,13 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 -   *Cert_Serial_Number*、*Issuer_Name*、*String_SID*、*Subject* はすべて **nvarchar** を返します。  
 -   *SID* 返します **varbinary**です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) カタログ ビューの証明書情報を参照してください。
   
 ## <a name="permissions"></a>アクセス許可  
 証明書に関する適切なアクセス許可が必要です。また、証明書に対する呼び出し元の VIEW アクセス許可が拒否されていない必要があります。 証明書のアクセス許可の詳細については、[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md) および [GRANT CERTIFICATE PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md) を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、証明書のサブジェクトを返します。
   
 ```sql

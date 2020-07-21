@@ -1,29 +1,30 @@
 ---
-title: 'ステップ 3: Java を使用した SQL への接続を概念実証する | Microsoft Docs'
+title: 手順 3:Java を使用して SQL に接続する
+description: 手順 3 は概念実証であり、Java と JDBC を使用して SQL Server に接続する方法がわかります。 基本的な例で、データの選択と挿入が示されます。
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 966c931f5012e5701a0f6db0bd64503be1189d50
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004289"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528896"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>ステップ 3: Java を使用した SQL への接続を概念実証する
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>手順 3: Java を使用した SQL への接続を概念実証する
   
 この例は概念実証としてのみ検討してください。 わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
   
-## <a name="step-1--connect"></a>手順 1: 接続する  
+## <a name="step-1-connect"></a>手順 1:接続する  
   
-接続クラスを使用して SQL Database に接続します。   
+接続クラスを使用して、SQL Database に接続します。   
   
 ```java  
 import java.sql.Connection;
@@ -54,8 +55,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-2-execute-a-query"></a>手順 2: クエリの実行  
-このサンプルでは、Azure SQL Database に接続し、SELECT ステートメントを実行して、選択した行を返します。   
+## <a name="step-2-execute-a-query"></a>手順 2:クエリを実行する  
+この例では、Azure SQL Database に接続し、SELECT ステートメントを実行して、選択した行を返します。   
   
 ```java  
 import java.sql.Connection;
@@ -99,8 +100,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入する  
-この例では、INSERT ステートメントを実行し、パラメーターを渡して、自動生成された主キー値を取得します。   
+## <a name="step-3-insert-a-row"></a>手順 3:行を挿入する  
+この例では、INSERT ステートメントを実行し、パラメーターを渡して、自動生成されたプライマリ キーの値を取得します。   
   
 ```java  
 import java.sql.Connection;
@@ -149,4 +150,4 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="additional-samples"></a>その他のサンプル  
-[サンプル JDBC Driver アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)
+[サンプル JDBC ドライバー アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 077a09cdca0c0aff777184f04467ca39592690aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62812791"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936075"
 ---
 # <a name="change-source-control-connections"></a>ソース管理接続の変更
   ソース管理のソリューションを初めて追加したり開いたりしたときには、ソース管理プロバイダーによって、ローカル ソリューション ディレクトリのルート フォルダーとそれに対応するサーバー フォルダーの関連付けが作成されます。  
@@ -31,11 +30,11 @@ ms.locfileid: "62812791"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Studio 環境からソース管理ユーザー インターフェイスを開くには  
   
-1.  **ファイル**メニューで、**ソース管理**、 をクリックし、**起動 Microsoft Visual SourceSafe**します。  
+1.  [**ファイル**] メニューの [**ソース管理**] をポイントし、[ **Microsoft Visual SourceSafe の起動**] をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理の基礎](../../2014/database-engine/source-control-basics.md)   
- [ソース管理オプションを設定します。](../../2014/database-engine/set-source-control-options.md)   
+ [ソース管理オプションの設定](../../2014/database-engine/set-source-control-options.md)   
  [ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

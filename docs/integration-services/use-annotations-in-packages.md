@@ -12,14 +12,14 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4fe4e538c03ab711da811ae6dcac33e602c333a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 767340b1c888c9cc25bad494ae13ae8559be31ac
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945444"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295049"
 ---
 # <a name="use-annotations-in-packages"></a>パッケージで注釈を使用する
 

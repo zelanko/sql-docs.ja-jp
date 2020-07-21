@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15fd7cae3cfc50d9c659ea189c9fd162529d3ff6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934882"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900867"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>可用性グループ ウィザードを使用して Always On 可用性グループにデータベースを追加する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   可用性グループへのデータベースの追加ウィザードを使用して、既存の AlwaysOn 可用性グループに 1 つ以上のデータベースを追加できます。  
   
 > [!NOTE]  
@@ -31,10 +31,10 @@ ms.locfileid: "67934882"
   
 
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  これまでに可用性グループにデータベースを追加したことがない場合は、「 [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
-##  <a name="Prerequisites"></a> 前提条件、制限事項、および推奨事項  
+##  <a name="prerequisites-restrictions-and-recommendations"></a><a name="Prerequisites"></a> 前提条件、制限事項、および推奨事項  
   
 -   現在のプライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67934882"
      ウィザードを使用して初期データの完全同期を実行できない場合は、セカンダリ データベースを手動で準備する必要があります。 これは、ウィザードの実行前でも実行後でもかまいません。 詳細については、「 [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)、または PowerShell を使用して、AlwaysOn 可用性グループにセカンダリ データベースを参加させる方法について説明します。  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="use-the-new-availability-group-wizard"></a>新しい可用性グループ ウィザードの使用
@@ -70,7 +70,7 @@ ms.locfileid: "67934882"
       
       自動シード処理を使用するには、このオプションを選択します。 自動シード処理ではログ ストリーム トランスポートを使用して、VDI を使用するバックアップを、構成済みのエンドポイントを使用する可用性グループの各データベースのセカンダリ レプリカにストリーミングします。 これにより、データベースのバックアップがセカンダリ レプリカ上に復元されます。手動でこれを行う必要はありません。 自動シード処理の詳細については、[自動シード処理](automatic-seeding-secondary-replicas.md)に関するページをご覧ください
   
-    -   **Full**  
+    -   **完全**  
   
          使用している環境が、初期データの同期を自動的に開始するための要件を満たす場合は、このオプションを選択します (詳細については、このトピックの「 [前提条件、制限事項、および推奨事項](#Prerequisites)」をご覧ください)。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "67934882"
   
 6.  **[既存のセカンダリ レプリカへの接続]** ページで、この可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスがすべて同じユーザー アカウントのサービスとして実行されている場合、 **[すべて接続]** をクリックします。 サーバー インスタンスがサービスとして複数のアカウントで実行されている場合、各サーバー インスタンス名の右側の **[接続]** ボタンをクリックします。  
   
-     詳細については、「[既存のセカンダリ レプリカ ページへの接続 &#40;レプリカの追加ウィザード:データベース追加ウィザード&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)」を参照してください。  
+     詳細については、「[既存のセカンダリ レプリカ ページへの接続 &#40;レプリカの追加ウィザード/データベース追加ウィザード&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)」を参照してください。  
   
 7.  **[検証]** ページでは、このウィザードで指定した値が、新しい可用性グループ ウィザードの要件を満たしているかどうかが確認されます。 変更が必要な場合は、 **[戻る]** をクリックして前のウィザード ページに戻り、値を変更できます。 その後、 **[次へ]** をクリックして **[検証]** ページに戻り、 **[検証の再実行]** をクリックします。  
   
@@ -113,11 +113,11 @@ ms.locfileid: "67934882"
   
      ウィザードでの作業が完了したら、 **[閉じる]** をクリックして終了します。  
   
-     詳細については、「[[結果] ページ &#40;AlwaysOn 可用性グループ ウィザード&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)」を参照してください。  
+     詳細については、「 [[結果] ページ &#40;AlwaysOn 可用性グループ ウィザード&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   
 11. すべてのセカンダリ データベースで初期データ同期が自動的に開始されない場合は、まだ参加していないセカンダリ データベースを構成する必要があります。 詳細については、「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

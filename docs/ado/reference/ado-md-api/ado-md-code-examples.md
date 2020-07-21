@@ -1,5 +1,5 @@
 ---
-title: ADO MD のコード例 |Microsoft Docs
+title: ADO MD コード例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,29 +10,29 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD code examples
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9655281302eddb65e693da9a9516c1eecbbce1dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d6c4a4c21bd3dcb9a0d84d8bf081c57c12b2352
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940064"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765283"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD のコード例
-次のコード例を使用して、ADO MD オブジェクト、メソッド、およびプロパティを使用する方法について説明します。 これらの例では、SQL Server 7.0 の Microsoft SQL Server OLAP Services と共にインストールされているサンプル アプリケーションのサブセットです。  
+ADO MD のオブジェクト、メソッド、およびプロパティの使用方法については、次のコード例を参照してください。 これらの例は、SQL Server 7.0 の Microsoft SQL Server OLAP Services と共にインストールされるサンプルアプリケーションのサブセットです。  
   
- これらの例では、MSOLAP OLE DB プロバイダーを使用し、Microsoft SQL Server OLAP Services のローカル ホストに対して実行します。 ただし、これらの例は、基本的な ADO MD プログラミング技法を表示するためのものでは、他のデータ ソースまたはプロバイダーに簡単に応用する必要があります。  
+ これらの例では、MSOLAP OLE DB プロバイダーを使用し、Microsoft SQL Server OLAP Services ローカルホストに対して実行します。 ただし、これらの例は基本的な ADO MD プログラミング手法を示すことを目的としており、他のデータソースまたはプロバイダーに簡単に応用できます。  
   
 -   [Visual Basic での ADO MD のコード例](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic.md)  
   
 -   [Visual Basic Scripting Edition での ADO MD コード例](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
-## <a name="see-also"></a>関連項目  
- [ADO MD の API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [ADO MD のコレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [ADO MD の列挙定数](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [ADO MD のメソッド](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+## <a name="see-also"></a>参照  
+ [ADO MD API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
+ [ADO MD コレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)   
+ [ADO MD 列挙定数](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
+ [ADO MD メソッド](../../../ado/reference/ado-md-api/ado-md-methods.md)   
+ [ADO MD オブジェクトモデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD オブジェクト](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD のプロパティ](../../../ado/reference/ado-md-api/ado-md-properties.md)

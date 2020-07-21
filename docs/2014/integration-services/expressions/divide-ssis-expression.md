@@ -10,15 +10,14 @@ helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af4f0f53a1822d2fd45fdbaacfd9ab05d783c237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a834ce32959e81293a29d45613f941903e37f7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62769329"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428809"
 ---
 # <a name="divide-ssis-expression"></a>除算 (SSIS 式)
   最初の数値式を 2 番目の数値式で除算します。  
@@ -41,7 +40,7 @@ dividend / divisor
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  オペランドのいずれかが NULL の場合、結果は NULL になります。  
   
  0 による除算は無効です。 *divisor* サブ式の評価方法に応じて、次のいずれかのエラーが発生します。  
@@ -65,7 +64,7 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   

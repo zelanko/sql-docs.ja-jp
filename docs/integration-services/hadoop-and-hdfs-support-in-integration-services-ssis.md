@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL13.SSIS.HADOOP.F1
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a511d9142bb59014b5ab0093235df7adf793be7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc008fc1f59d8ea6b5f015f2028779aa270d3b2a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102701"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71285868"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services (SSIS) での Hadoop と HDFS のサポート
 
@@ -38,11 +38,11 @@ ms.locfileid: "68102701"
   
     -   [Hadoop Hive タスク](../integration-services/control-flow/hadoop-hive-task.md)  
   
-    -   [Hadoop Pig Task](../integration-services/control-flow/hadoop-pig-task.md)  
+    -   [Hadoop Pig タスク](../integration-services/control-flow/hadoop-pig-task.md)  
   
 -   データ フロー: データの抽出元と抽出先  
   
-    -   [HDFS ファイル ソース](../integration-services/data-flow/hdfs-file-source.md)  
+    -   [HDFS ファイル変換元](../integration-services/data-flow/hdfs-file-source.md)  
   
     -   [HDFS ファイル変換先](../integration-services/data-flow/hdfs-file-destination.md)  
   

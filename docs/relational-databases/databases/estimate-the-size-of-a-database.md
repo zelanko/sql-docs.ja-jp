@@ -1,5 +1,6 @@
 ---
 title: データベース サイズの見積もり | Microsoft Docs
+description: SQL Server でデータベースを設計する場合、そのサイズを見積もると、パフォーマンスとディスク領域に必要なハードウェア構成を決定するのに役立ちます。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a11d6d83b4c2c56d6448431028beec89265a0d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 444513824770954f44919051d96a0a573f63b84f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934481"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008203"
 ---
 # <a name="estimate-the-size-of-a-database"></a>データベース サイズの見積もり
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   データベースをデザインするときは、データを格納したときにデータベースのサイズがどのくらい大きくなるかを見積もる必要性が生じる場合があります。 データベースのサイズを見積もると、次の目的に必要なハードウェア構成の決定に役立ちます。  
   
 -   アプリケーションが必要とするパフォーマンスの実現。  
@@ -41,7 +42,7 @@ ms.locfileid: "67934481"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[テーブル サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-table.md)|テーブルおよび関連付けられたインデックスにデータを格納するために必要な領域を見積もる手順や計算方法について説明します。|  
 |[ヒープ サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-heap.md)|ヒープにデータを格納するために必要な領域を見積もる手順や計算方法について説明します。 ヒープとは、クラスター化インデックスを含まないテーブルのことです。|  

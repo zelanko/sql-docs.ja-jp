@@ -1,5 +1,5 @@
 ---
-title: クエリ ストアのカタログ ビュー (TRANSACT-SQL) |Microsoft Docs
+title: クエリストアカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2019
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - query store [SQL Server], catalog views
 - catalog views [SQL Server], query store
 ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 014c9d6f965e62c4651634a92a473a9573642f71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1dac71c20d295374033f1789fb8638fe35db6471
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018417"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832786"
 ---
-# <a name="query-store-catalog-views-transact-sql"></a>クエリ ストアのカタログ ビュー (TRANSACT-SQL)
+# <a name="query-store-catalog-views-transact-sql"></a>クエリストアカタログビュー (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  このセクションには、次のカタログ ビューが含まれています。  
+  ここでは、次のカタログビューについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -46,8 +46,8 @@ ms.locfileid: "68018417"
 
 -   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
   
-## <a name="see-also"></a>関連項目  
- [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャのクエリストア](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

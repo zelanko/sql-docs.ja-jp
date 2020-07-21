@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 899844cc59345b94eb0a2383ef09975024f8f4b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062731"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol クラス
-  [ClientNetworkProtocol クラス](clientnetworkprotocol-class.md)ネットワークのインスタンスと通信できるクライアント インスタンスにインストールされているプロトコルを表します[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]をネットワーク経由でします。  
+  [Clientnetworkprotocol クラス](clientnetworkprotocol-class.md)は、ネットワーク経由でのインスタンスとの通信を可能にするクライアントインスタンスにインストールされているネットワークプロトコルを表し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
- [ClientNetworkProtocol クラス](clientnetworkprotocol-class.md)、次のタスクを実行することができます。  
+ [Clientnetworkprotocol クラス](clientnetworkprotocol-class.md)を使用すると、次のタスクを実行できます。  
   
 -   プロトコルのリストからクライアント ネットワーク プロトコルを選択するためのインデックス値の設定  
   

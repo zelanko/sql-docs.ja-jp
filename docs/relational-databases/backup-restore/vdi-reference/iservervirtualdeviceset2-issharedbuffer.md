@@ -1,0 +1,46 @@
+---
+title: IServerVirtualDeviceSet2::IsSharedBuffer
+titlesuffix: SQL Server VDI reference
+description: この記事では、IServerVirtualDeviceSet2::IsSharedBuffer コマンドのリファレンスを提供します。
+ms.date: 08/30/2019
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.technology: backup-restore
+ms.topic: reference
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: 3c0161639e2fb11bc3f1525ea3ffad32843a183d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898952"
+---
+# <a name="iservervirtualdeviceset2issharedbuffer-vdi"></a>IServerVirtualDeviceSet2::IsSharedBuffer (VDI)
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+
+**IsSharedBuffer** 関数は、指定されたバッファー アドレスが、AllocateBuffer メソッドで使用可能な共有バッファーのいずれかを参照しているかどうかを判断します。
+
+## <a name="syntax"></a>構文
+
+```c
+HRESULT IServerVirtualDeviceSet2::IsSharedBuffer (
+   LPVOID   lpBuffer
+);
+```
+
+## <a name="parameters"></a>パラメーター
+
+*lpBuffer*: これはバッファーのアドレスです。
+
+## <a name="return-value"></a>戻り値
+
+|戻り値 | 説明 |
+|---|---|
+| TRUE | バッファーは共有バッファーです。 |
+| FALSE | バッファーは仮想デバイス セットの一部ではありません。 |
+
+## <a name="next-steps"></a>次のステップ
+
+詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

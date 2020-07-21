@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ae840ae1dd1f1e80e3e6f5f252d78faf5586afe8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 92f6384d099a6f29ec43387283a1e52a3e600076
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098595"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298931"
 ---
 # <a name="access-the-cdc-designer-console"></a>CDC デザイナー コンソールへのアクセス
 
@@ -32,11 +32,11 @@ ms.locfileid: "68098595"
   
  [SQL Server への接続] ダイアログ ボックスに次の情報を入力します。  
   
-### <a name="server-name"></a>[サーバー名]  
+### <a name="server-name"></a>サーバー名  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在するサーバーの名前を入力します。  
   
-### <a name="authentication"></a>[認証]  
- 次のいずれかを選択します。  
+### <a name="authentication"></a>認証  
+ 次のいずれかを選択してください。  
   
 -   **[Windows 認証]**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68098595"
   
  ログインには、MSXCDCDB データベースへのアクセスを許可するデータベース ロールが必要です。 また、使用する追加のデータベースへのアクセスがログインに含まれていることも推奨されます。このアクセスが含まれていない場合、ユーザーはそれらのデータベース内のデータを表示できません。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  矢印をクリックして、構成するオプションを表示します。 これらのオプションを既定値のままにすることもできます。 使用可能なオプションは次のとおりです。  
   
  **[接続タイムアウト]**  
@@ -56,12 +56,12 @@ ms.locfileid: "68098595"
  **[暗号化接続]**  
  Oracle CDC Service とターゲットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの間の暗号化された接続を使用した通信に対しては、 **[暗号化接続]** を選択します。 **[詳細設定]** : 必要に応じて、 **[詳細設定]** をクリックし、[高度な接続プロパティ] ダイアログ ボックスに追加の接続プロパティを入力します。  
   
- **詳細設定**  
+ **詳細**  
  必要に応じて、 **[詳細設定]** をクリックし、[高度な接続プロパティ] ダイアログ ボックスに追加の接続プロパティを入力します。  
   
  [高度な接続プロパティ] ダイアログ ボックスの詳細については、「 [高度な接続プロパティ](../../integration-services/change-data-capture/advanced-connection-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [CDC デザイナーで使用する SQL Server 接続に必要な権限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [CDC デザイナーで使用する SQL Server 接続に必要なアクセス許可](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

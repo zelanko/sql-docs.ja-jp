@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18e50d7344fb5d3d16c4fc0978137e169ba487ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0605fc5a0fc27abfbcd15c22d5553587eecb0349
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936492"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916266"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してエラーと警告を処理する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -130,7 +130,7 @@ $params = array(
                  array(&$vacationHrs, SQLSRV_PARAM_INOUT)  
                 );  
   
-/* Define and prepare the query to substract used vacation hours. */  
+/* Define and prepare the query to subtract used vacation hours. */  
 $tsql3 = "{call SubtractVacationHours(?, ?)}";  
 $stmt3 = sqlsrv_prepare($conn, $tsql3, $params);  
   

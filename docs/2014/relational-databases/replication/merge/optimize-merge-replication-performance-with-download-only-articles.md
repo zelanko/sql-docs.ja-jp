@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c2b97db9db160f70463b885bcdb24c01ff9103f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250366"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010400"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化
   マージ レプリケーションには、異なるアプリケーション ニーズに対応する 2 種類のアーティクルが用意されています。 アプリケーションでの必要に応じて、パブリケーションにはこれら 2 種類のアーティクルを 1 つ以上格納できます。  
@@ -47,7 +46,7 @@ ms.locfileid: "63250366"
  アプリケーションの要件を理解することにより、柔軟性の最大化とパフォーマンスの最適化の間でアプリケーションを調整できます。 たとえば、パブリッシャーとサブスクライバーの両方で多数の競合と変更が発生するアプリケーションでは、標準アーティクルから構成されるパブリケーションを使用します。 セールス フォース オートメーションなど一部のアプリケーションでは、競合の可能性のあるアーティクルと、それ以外にダウンロード専用に指定できる参照テーブル用のアーティクルが使用されることがあります。 POS システムやフィールド フォース オートメーションなどのデータ入力アプリケーションでは、競合を排除するように厳密にデータがパーティション分割されている場合が多く、あるサブスクライバーから他のサブスクライバーにデータが送信されることは決してありません。 このような状況では、重複しないパーティション、ダウンロード専用アーティクル、および事前計算済みパーティションを組み合わせて使用することで、パフォーマンスとスケーラビリティを最大化することができます。 重複しないパーティションおよび事前計算済みパーティションの詳細については、「 [パラメータ化された行フィルタ](parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーションのアーティクル オプション](article-options-for-merge-replication.md)   
+ [マージレプリケーションのアーティクルオプション](article-options-for-merge-replication.md)   
  [条件付き削除の追跡によるマージ レプリケーション パフォーマンスの最適化](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

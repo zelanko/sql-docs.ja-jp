@@ -1,5 +1,5 @@
 ---
-title: ディメンションの属性の追加 |Microsoft Docs
+title: ディメンションへの属性の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c0411e2e19fbec88ab9c1bae8536d96725554f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079031"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543494"
 ---
 # <a name="adding-attributes-to-dimensions"></a>ディメンションへの属性の追加
   ディメンションを定義したので、ディメンションの各データ要素を表す属性をディメンションに読み込めるようになりました。 属性は、通常、データ ソース ビューのフィールドに基づいています。 ディメンションに属性を追加するときに、データ ソース ビュー内の任意のテーブルのフィールドを含めることができます。  
@@ -34,11 +33,11 @@ ms.locfileid: "66079031"
   
 4.  次の列を、 **[データ ソース ビュー]** ペインの **Customer** テーブルから **[属性]** ペインにドラッグします。  
   
-    -   **BirthDate**  
+    -   **誕生日**  
   
     -   **MaritalStatus**  
   
-    -   **Gender**  
+    -   **性別**  
   
     -   **EmailAddress**  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66079031"
   
 5.  次の列を、 **[データ ソース ビュー]** ペインの **Geography** テーブルから **[属性]** ペインにドラッグします。  
   
-    -   **City**  
+    -   **City (市)**  
   
     -   **StateProvinceName**  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66079031"
   
     -   **ListPrice**  
   
-    -   **Size**  
+    -   **[サイズ]**  
   
     -   **SizeRange**  
   
@@ -108,9 +107,9 @@ ms.locfileid: "66079031"
   
     -   **DealerPrice**  
   
-    -   **Class**  
+    -   **クラス**  
   
-    -   **スタイル**  
+    -   **Style**  
   
     -   **ModelName**  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66079031"
   
     -   **EndDate**  
   
-    -   **ステータス**  
+    -   **状態**  
   
 5.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
   

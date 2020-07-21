@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9dfa7781-d72f-407a-a8d4-1c78c9446d09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fc093dbd271a03f2efe4641986ced16ae1471f31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e095e139cb4f37fe44c3107d4f3a8f30f038bf06
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975516"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920174"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-long"></a>setAsciiStream (int, java.io.InputStream, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public final void setAsciiStream(int parameterIndex,
   
  *x*  
   
- InputStream オブジェクトです。  
+ java.io.InputStream オブジェクト。  
   
  *length*  
   
@@ -47,8 +47,8 @@ public final void setAsciiStream(int parameterIndex,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setAsciiStream メソッドは、PreparedStatement インターフェイスの setAsciiStream メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setAsciiStream メソッドは、java.sql.PreparedStatement インターフェイスの setAsciiStream メソッドによって指定されます。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

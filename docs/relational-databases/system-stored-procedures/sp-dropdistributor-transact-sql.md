@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 032ecf59a3ffba4a7a7a6f4739c92b688858d501
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fdd3c733d93fa803906523d7150b4377e6f28666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768875"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786933"
 ---
-# <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ディストリビューターをアンインストールします。 このストアドプロシージャは、ディストリビューター側のディストリビューションデータベース以外の任意のデータベースで実行されます。  
   
@@ -40,9 +40,9 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="arguments"></a>引数  
 `[ @no_checks = ] no_checks`ディストリビューターを削除する前に依存オブジェクトを確認するかどうかを示します。 *no_checks*は**ビット**,、既定値は0です。  
   
- **0**の場合、 **Sp_dropdistributor**は、ディストリビューターに加えて、すべてのパブリッシングおよびディストリビューションオブジェクトが削除されていることを確認します。  
+ **0**の場合、 **sp_dropdistributor**によって、ディストリビューターに加えて、すべてのパブリッシングおよびディストリビューションオブジェクトが削除されていることを確認します。  
   
- **1**の場合、 **sp_dropdistributor**は、ディストリビューターをアンインストールする前に、すべてのパブリッシングオブジェクトおよびディストリビューションオブジェクトを削除します。  
+ **1**の場合、 **sp_dropdistributor**ディストリビューターをアンインストールする前に、すべてのパブリッシングオブジェクトおよびディストリビューションオブジェクトを削除します。  
   
 `[ @ignore_distributor = ] ignore_distributor`ディストリビューターに接続せずにこのストアドプロシージャを実行するかどうかを示します。 *ignore_distributor*は**ビット**,、既定値は**0**です。  
   
@@ -53,10 +53,10 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistributor**は、すべての種類のレプリケーションで使用されます。  
   
- 他のパブリッシャーまたはディストリビューションオブジェクトがサーバー上に存在する場合 **@no_checks** 、が**1**に設定されていない限り、 **sp_dropdistributor**は失敗します。  
+ 他のパブリッシャーまたは配布オブジェクトがサーバーに存在する場合、 ** \@ no_checks**が**1**に設定されていないと**sp_dropdistributor**は失敗します。  
   
  このストアドプロシージャは、 **sp_dropdistributiondb**を実行してディストリビューションデータベースを削除した後に実行する必要があります。  
   
@@ -67,10 +67,10 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
  **Sp_dropdistributor**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [sp_adddistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

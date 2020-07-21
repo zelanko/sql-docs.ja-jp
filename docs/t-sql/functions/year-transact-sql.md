@@ -20,18 +20,18 @@ helpviewer_keywords:
 - YEAR function [SQL Server]
 - dateparts [SQL Server], year
 ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49de5981e2245e5efd831da05abe0b20ded99b45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b48d0a768bae5a058c2868ae3b30f3f48f06ef40
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927412"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85991439"
 ---
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定された*日付*の年を表す整数を返します。  
   
@@ -53,11 +53,11 @@ YEAR ( date )
  **int**  
   
 ## <a name="return-value"></a>戻り値  
- \* * 年と同じ値を返す [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**年**、*日*). * *  
+ YEAR は [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**year**、*date*) と同じ値を返します。  
   
  *日付*には、時刻部分のみが含まれる、戻り値は基準年を 1900 年にです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のステートメントでは、`2010` が返されます。 これは年の数値です。  
   
 ```  
@@ -70,7 +70,7 @@ SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次のステートメントでは、`1900, 1, 1` が返されます。 引数 *日付* 番号 0です`0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、`0` を 1900 年 1 月 1 日と解釈します。  
   
 ```  

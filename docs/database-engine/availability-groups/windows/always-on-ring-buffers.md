@@ -1,7 +1,7 @@
 ---
-title: リング バッファーを使用し、可用性グループに関する正常性情報を取得する
+title: 可用性グループの正常性情報のリング バッファー
 description: SQL Server リング バッファーを使用し、Always On 可用性グループに関する特定の診断情報を取得します。
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef5213139271def9f2901f87fa150950bdeb513d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed2db8f5d02174b41d6084d3d7593c7c8775ad16
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014709"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897495"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>リング バッファーを使用し、Always On 可用性グループに関する正常性情報を取得する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   いくつかの Always On 可用性グループの診断情報を SQL Server のリング バッファー、または sys.dm_os_ring_buffers 動的管理ビュー (DMV) から入手できます。 リング バッファーは、SQL Server の起動中に作成され、内部診断用に SQL Server システム内のアラートを記録します。 それらはサポートされていませんが、問題のトラブルシューティングを行うときにそれらから貴重な情報を抽出することができます。 これらのリング バッファーは、SQL Server がハングまたはクラッシュしたときに別の診断のソースを提供します。  
   
- 次の TRANSACT-SQL (T-SQL) クエリでは、可用性グループのリング バッファーからすべてのイベント レコードを取得します。  
+ 次の Transact-SQL (T-SQL) クエリでは、可用性グループのリング バッファーからすべてのイベント レコードを取得します。  
   
 ```sql  
 SELECT * FROM sys.dm_os_ring_buffers WHERE ring_buffer_type LIKE '%HADR%'  
@@ -62,7 +62,7 @@ ORDER BY record.value('(./Record/@time)[1]','bigint') DESC
 GO  
 ```  
   
-##  <a name="BKMK_RingBufferTypes"></a> 可用性グループのリング バッファーの種類  
+##  <a name="availability-groups-ring-buffer-types"></a><a name="BKMK_RingBufferTypes"></a> 可用性グループのリング バッファーの種類  
  sys.dm_os_ring_buffers に 4 つの可用性グループ リング バッファーがあります。 次の表は、リング バッファーの種類と、それぞれのリング バッファーの種類の Record 列のコンテンツのサンプルについて説明しています。  
   
  **RING_BUFFER_HADRDBMGR_API**  

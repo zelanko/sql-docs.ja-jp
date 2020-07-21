@@ -1,5 +1,6 @@
 ---
 title: CLR ユーザー定義集計関数の呼び出し |Microsoft Docs
+description: SQL Server CLR 統合では、Transact-sql SELECT を使用して CLR ユーザー定義集計を呼び出します。これは、システム集計関数に適用されるルールに従います。
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -17,26 +18,26 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e28d6e5a83595cc052d25f0c2e425c041a89932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727895"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR ユーザー定義集計 - 関数の呼び出し
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] の SELECT ステートメントでは、CLR (共通言語ランタイム) ユーザー定義集計を呼び出すことができます。CLR ユーザー定義集計には、システム集計関数に適用されるすべての規則が適用されます。  
   
  さらに、次の規則も適用されます。  
   
--   現在のユーザーがいる必要があります**EXECUTE**ユーザー定義集計に対する権限。  
+-   現在のユーザーは、ユーザー定義集計に対する**EXECUTE**権限を持っている必要があります。  
   
--   ユーザー定義集計は、の形式で 2 つの部分名を使用して呼び出す必要がある*schema_name.udagg_name*します。  
+-   ユーザー定義集計は、2つの部分で構成される名前を使用して、 *schema_name udagg_name*の形式で呼び出す必要があります。  
   
--   ユーザー定義集計の引数の型が一致かに暗黙的に変換する必要があります、 *input_type*で定義されているように、集計の**CREATE AGGREGATE**ステートメント。  
+-   ユーザー定義集計の引数の型は、 **CREATE aggregate**ステートメントで定義されているように、一致しているか、集計の*input_type*に暗黙的に変換可能である必要があります。  
   
--   ユーザー定義集計の戻り値の型が一致する必要があります、 *return_type*で、 **CREATE AGGREGATE**ステートメント。  
+-   ユーザー定義集計の戻り値の型は、 **CREATE aggregate**ステートメントの*return_type*と一致している必要があります。  
   
 ## <a name="example-1"></a>例 1  
  次の例は、テーブルの列から取得した一連の文字列値を連結するユーザー定義集計関数を示します。  
@@ -196,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- コードをコンパイルすると**MyAgg.dll**で集計を登録する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次のようにします。  
+ コードをコンパイルして**MyAgg.dll**にすると、次のようにの集計をに登録でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -208,7 +209,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  スカラー値関数など、/clr:pure コンパイラ オプションを指定してコンパイルした Visual C++ のデータベース オブジェクトは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では実行できません。  
   
- ロジックの大部分がほとんどの集計で、 **Accumulate**メソッド。 ここでは、パラメーターとして渡される文字列、 **Accumulate**にメソッドが追加されます、 **StringBuilder**で初期化されたオブジェクト、 **Init**メソッド。 これは初めてではないと仮定、 **Accumulate**メソッドが呼び出されたにもコンマを追加、 **StringBuilder**渡された文字列を追加する前にします。 計算のタスクの終了時に、 **Terminate**メソッドが呼び出されると、返された、 **StringBuilder**を文字列として。  
+ ほとんどの集計と同様に、ロジックの大部分は**累積**メソッドに含まれています。 ここで、**蓄積**されたメソッドにパラメーターとして渡される文字列は、 **Init**メソッドで初期化された**StringBuilder**オブジェクトに追加されます。 **累積**メソッドが初めて呼び出されたときではないと仮定すると、渡された文字列を追加する前に、 **StringBuilder**にコンマも追加されます。 計算タスクの最後に、Terminate**を文字列とし**て返す**Terminate**メソッドが呼び出されます。  
   
  たとえば、次のスキーマを持つテーブルについて考えてみます。  
   
@@ -241,7 +242,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>例 2  
- 次の例では、上の 2 つのパラメーターを持つ集計を**Accumulate**メソッド。  
+ 次の例は、**累積**メソッドに2つのパラメーターを持つ集計を示しています。  
   
  [C#]  
   

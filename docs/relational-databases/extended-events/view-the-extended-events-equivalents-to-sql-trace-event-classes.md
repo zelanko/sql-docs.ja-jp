@@ -1,6 +1,6 @@
 ---
-title: SQL トレースのイベント クラスと等価な拡張イベントを確認する | Microsoft Docs
-ms.custom: ''
+title: SQL トレースのイベント クラスと等価な拡張イベント
+description: この記事では、SQL トレースのイベントとそれに関連した列について、拡張イベントにおける等価なアクションとイベントを表示する方法について示します。
 ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 968dadccedcd2b58a7ff69bd0d098cf5779a4338
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1275488eeed0aaccf284490fafd0a3a83bab7aff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756786"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL トレースのイベント クラスと等価な拡張イベントを確認する
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb.md)]
 
   拡張イベントを使用して、SQL トレース イベントのクラスや列に相当するイベント データを収集する場合、SQL トレース イベントが、拡張イベントのイベントおよびアクションとどのように対応しているかを理解しておくことが大切です。  
   

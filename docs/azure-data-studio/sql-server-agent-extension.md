@@ -1,21 +1,20 @@
 ---
 title: SQL Server エージェントの拡張機能
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 用の SQL Server エージェントの拡張機能 (プレビュー) をインストールして使用する
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 05356cc815fdba22d55ee339d60994f2c9423373
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3cdbfc4adc32156f838ee3aeca726c2ebd92bd0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758363"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server エージェントの拡張機能 (プレビュー)
 
@@ -46,7 +45,7 @@ SQL Server エージェントの拡張機能に接続すると、最初に表示
 
    ![ジョブの表示](media/extensions/sql-server-agent-extension/job-view.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server エージェントの詳細については、[こちら](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent?view=sql-server-2017)のドキュメントを参照してください。
 

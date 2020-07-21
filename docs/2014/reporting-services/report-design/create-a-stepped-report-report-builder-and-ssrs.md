@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106128"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>階段状レポートの作成 (レポート ビルダーおよび SSRS)
@@ -64,7 +64,7 @@ ms.locfileid: "66106128"
   
     2.  プロパティ ペインの **[配置]** で、 **[余白]** のプロパティを展開します。  
   
-    3.  **左**、新しい余白の値を入力します。`.5in`します。 指定された値の余白分、セル内のテキストがインデント設定されます。 余白の既定値は 2 ポイントです。 余白のプロパティの有効な値として、0 (ゼロ) 以上の正の数の後に、サイズ指定子を入力します。  
+    3.  **左側**には、のような新しい埋め込み値`.5in`を入力します。 指定された値の余白分、セル内のテキストがインデント設定されます。 余白の既定値は 2 ポイントです。 余白のプロパティの有効な値として、0 (ゼロ) 以上の正の数の後に、サイズ指定子を入力します。  
   
          サイズ指定子は次のとおりです。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66106128"
         |-|-|  
         |`in`|インチ (1 インチ = 2.54 cm)|  
         |`cm`|センチメートル|  
-        |`mm`|ミリメートル|  
+        |`mm`|mm|  
         |`pt`|ポイント (1 ポイント = 1/72 インチ)|  
         |`pc`|パイカ (1 パイカ = 12 ポイント)|  
   
@@ -93,23 +93,23 @@ ms.locfileid: "66106128"
     1.  行グループ ペインで、グループを右クリックし、 **[グループの追加]** をクリックして、追加するグループの種類を選択します。  
   
         > [!NOTE]  
-        >  データ領域にグループを追加するには、いくつかの方法があります。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
+        >  データ領域にグループを追加するには、いくつかの方法があります。 詳細については、「 [&#40;レポートビルダーと SSRS&#41;」の「データ領域でのグループの追加または削除](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
     2.  **[Tablix のグループ]** ダイアログ ボックスで、名前を入力します。  
   
-    3.  **[グループ式]** で、式を入力するか、グループ化の対象となるデータセット フィールドを選択します。 式を作成するには、式 ( **[fx]** ) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
+    3.  **[グループ式]** で、式を入力するか、グループ化の対象となるデータセット フィールドを選択します。 式を作成するには、式 (**[fx]**) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
   
     4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 3.  グループ データを表示するセルの埋め込みを変更します。  
   
-## <a name="see-also"></a>関連項目  
- [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
- [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
- [テーブル &#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)   
- [マトリックス &#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [一覧 &#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [ページヘッダーとページフッター &#40;レポートビルダーと SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [レポートアイテムの書式設定 &#40;レポートビルダーと SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
+ [Tablix データ領域 &#40;レポートビルダーと SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
+ [テーブル &#40;レポートビルダーと SSRS&#41;](tables-report-builder-and-ssrs.md)   
+ [マトリックス &#40;レポートビルダーと SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
+ [&#40;レポートビルダーと SSRS の一覧を表示&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

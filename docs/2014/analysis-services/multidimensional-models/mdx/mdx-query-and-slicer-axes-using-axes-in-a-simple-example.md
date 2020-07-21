@@ -1,5 +1,5 @@
 ---
-title: クエリ軸とスライサー軸を使用する簡単な例 (MDX) |Microsoft Docs
+title: 単純な例でのクエリ軸とスライサー軸の使用 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 324f082fd6659592e56af65680bd4aa623c625d9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074025"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546234"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>クエリ軸とスライサー軸を使用する簡単な例 (MDX)
   このトピックでは、簡単な例を使って、クエリ軸とスライサー軸の基本的な指定方法および使用方法を示します。  
@@ -48,7 +47,7 @@ WHERE ( [Measures].[Packages] )
 |2nd quarter|45|45|  
   
 ## <a name="see-also"></a>参照  
- [クエリ軸の内容の指定 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [MDX&#41;&#40;クエリ軸の内容の指定](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
  [スライサー軸の内容の指定 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

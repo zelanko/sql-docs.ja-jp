@@ -1,5 +1,5 @@
 ---
-title: 分離レベル (OLE DB) |Microsoft Docs
+title: 分離レベル (OLE DB) | Microsoft Docs
 description: 分離レベル (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993974"
 ---
 # <a name="isolation-levels-ole-db"></a>分離レベル (OLE DB)
@@ -27,11 +27,11 @@ ms.locfileid: "67993974"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアントは、接続のトランザクション分離レベルを制御できます。 トランザクション分離レベルを制御するには、SQL Server コンシューマーの OLE DB ドライバーで次を使用します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアントは、接続のトランザクション分離レベルを制御できます。 OLE DB Driver for SQL Server のコンシューマーは、次の方法を使用してトランザクション分離レベルを制御します。  
   
 -   OLE DB Driver for SQL Server の既定の自動コミット モードには、DBPROPSET_SESSION プロパティの DBPROP_SESS_AUTOCOMMITISOLEVELS。  
   
-     レベルの既定 SQL Server の OLE DB ドライバーは DBPROPVAL_TI_READCOMMITTED です。  
+     OLE DB Driver for SQL Server の既定のレベルは、DBPROPVAL_TI_READCOMMITTED です。  
   
 -   ローカルの手動コミット トランザクションには、**ITransactionLocal::StartTransaction** メソッドの *isoLevel* パラメーター。  
   

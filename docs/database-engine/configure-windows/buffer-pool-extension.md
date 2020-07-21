@@ -1,5 +1,6 @@
 ---
 title: バッファー プール拡張 | Microsoft Docs
+description: バッファー プール拡張機能や、それに伴う I/O スループットの向上などの利点を説明します。 この機能を有効にするときに従うべきベストプラクティスについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9ee002f5c835f8a6a69aa6afe69e1838c56c24e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13c6c2a0f4b2b96911a05b0ec9d8fdd2325ffa9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759188"
 ---
 # <a name="buffer-pool-extension"></a>バッファー プール拡張
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]で導入されたバッファー プール拡張は、不揮発性ランダム アクセス メモリ (ソリッドステート ドライブ) 拡張としての [!INCLUDE[ssDE](../../includes/ssde-md.md)] バッファー プールへのシームレスな統合を実現することで、I/O スループットを大幅に向上させます。 バッファー プール拡張は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一部のエディションでは使用できません。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>バッファー プール拡張の利点  
@@ -54,7 +55,7 @@ ms.locfileid: "68013058"
  バッファー プール  
  バッファー キャッシュとも呼ばれます。 バッファー プールは、キャッシュされたデータ ページを利用するためにすべてのデータベースで共有されるグローバル リソースです。 バッファー プール キャッシュの最大サイズと最小サイズは、起動時か、または SQL Server のインスタンスが sp_configure を使用して動的に再構成されるときに決定されます。 このサイズにより、実行中のインスタンスで任意のときにバッファー プールにキャッシュできる最大ページ数が決まります。  
   
- バッファー プール拡張機能によってコミットできる最大メモリは、コンピューター上で実行中の他のアプリケーションが深刻なメモリ不足を引き起こした場合に、そのアプリケーションによって制限されることがあります。  
+ バッファー プール拡張機能によってコミットできる最大メモリは、コンピューター上で実行中の他のアプリケーションに深刻なメモリ不足が発生した場合に、そのアプリケーションによって制限されることがあります。  
   
  Checkpoint  
  チェックポイントによって、予期しないシャットダウンやクラッシュの後の復旧中に、トランザクション ログに格納されている変更を [!INCLUDE[ssDE](../../includes/ssde-md.md)] が適用するための最適なポイントが作成されます。 チェックポイントは、変更されたページとトランザクション ログ情報をメモリからディスクに書き込み、さらにトランザクション ログに関する情報を記録します。 詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)」を参照してください。  
@@ -88,7 +89,7 @@ ms.locfileid: "68013058"
   
  次の XEvent を使用できます。  
   
-|XEvent|[説明]|パラメーター|  
+|XEvent|説明|パラメーター|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|ページまたはページのグループがバッファー プールから削除され、バッファー プール拡張ファイルに書き込まれると発生します。|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|ページがバッファー プール拡張ファイルからバッファー プールに読み取られると発生します。|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  

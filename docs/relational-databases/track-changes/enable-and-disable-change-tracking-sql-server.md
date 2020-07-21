@@ -1,5 +1,6 @@
 ---
-title: 変更の追跡の有効化と無効化 (SQL Server) | Microsoft Docs
+title: 変更の追跡の有効化と無効化
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,15 +18,15 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1da6aaf1f3befc09ccf26d4405a6d5853de5441d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 775feb5c2393c8b482deb2deb919fc93576e3ce6
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058041"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279082"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>変更の追跡の有効化と無効化 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このトピックでは、データベースとテーブルに対する変更の追跡を有効または無効にする方法について説明します。  
   
@@ -38,7 +39,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- 変更の追跡は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) ダイアログ ボックスを使用して有効にすることもできます。  
+ 変更の追跡は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) ダイアログ ボックスを使用して有効にすることもできます。 データベースにメモリ最適化テーブルが含まれる場合は、SQL Server Management Studio で変更の追跡を有効にすることができません。 有効にするには、T-SQL を使用します。
   
  変更の追跡を有効にするときに、CHANGE_RETENTION および AUTO_CLEANUP オプションを指定できます。これらの値は、変更の追跡を有効にした後いつでも変更できます。  
   
@@ -86,7 +87,7 @@ DISABLE CHANGE_TRACKING;
   
 ## <a name="see-also"></a>参照  
  [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

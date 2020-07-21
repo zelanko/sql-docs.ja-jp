@@ -1,7 +1,8 @@
 ---
-title: トラブルシューティング ツール:SQL Server トランザクション レプリケーション エラーを検出する | Microsoft Docs
-ms.custom: ''
-ms.date: 04/27/2018
+title: トランザクション レプリケーションでエラーを見つける
+description: トランザクション レプリケーションでエラーを検索して特定する方法と、レプリケーションに関する問題に対応するためのトラブルシューティング方法について説明します。
+ms.custom: seo-lt-2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769348"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882279"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>トラブルシューティング ツール:トラブルシューティング ツール: SQL Server トランザクション レプリケーション エラーを検出する 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 トランザクション レプリケーションがどのように動作するのかを基本的に理解していないと、レプリケーション エラーのトラブルシューティングはフラストレーションを感じることがあります。 パブリケーション作成の最初のステップは、スナップショット エージェントでスナップショットを作成し、スナップショット フォルダーにそれを保存することです。 次に、ディストリビューション エージェントがサブスクライバーにスナップショットを適用します。 
 
@@ -27,8 +28,6 @@ ms.locfileid: "68769348"
 1. レプリケートされるオブジェクトでトランザクションが発生し、トランザクション ログで "レプリケーション用" とマークされます。 
 2. ログ リーダー エージェントがトランザクション ログをスキャンし、"レプリケーション用" とマークされたトランザクションを探します。 これらのトランザクションはディストリビューション データベースに保存されます。 
 3. ディストリビューション エージェントは、リーダー スレッドを使用してディストリビューション データベースをスキャンします。 次に、ライター スレッドを使用することにより、このエージェントはサブスクライバーに接続して、変更をサブスクライバーに適用します。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 このプロセスのどのステップにおいてもエラーが発生する可能性があります。 これらのエラーを見つけることは、同期に関する問題のトラブルシューティングの最も困難な側面です。 レプリケーション モニターを使うとこのプロセスが簡単になります。 
 
@@ -45,7 +44,7 @@ ms.locfileid: "68769348"
 2. どのエージェントでエラーが発生するか。
 1. レプリケーションが最後に正常に動作したのはいつか。 その後で何か変更したか。  
 
-### <a name="steps-to-take"></a>実行手順
+### <a name="steps-to-take"></a>実施手順
 1. レプリケーション モニターを使用して、レプリケーションでエラーが発生した箇所 (どのエージェント) をあきらかにします。
    - **パブリッシャーからディストリビューターまで**セクションでエラーが発生している場合は、ログ リーダー エージェントに関する問題です。 
    - **ディストリビューターからサブスクライバーまで**セクションでエラーが発生している場合は、ディストリビューション エージェントに関する問題です。  
@@ -58,17 +57,17 @@ ms.locfileid: "68769348"
 
 1. スナップショット エージェントの状態を表示します。
 
-    A. オブジェクト エクスプローラーで、 **[レプリケーション]** の下の **[ローカル パブリケーション]** ノードを展開します。
+    a. オブジェクト エクスプローラーで、 **[レプリケーション]** の下の **[ローカル パブリケーション]** ノードを展開します。
 
-    B. **AdvWorksProductTrans** パブリケーションを右クリックして、 **[スナップショット エージェントの状態の表示]** をクリックします。 
+    b. **AdvWorksProductTrans** パブリケーションを右クリックして、 **[スナップショット エージェントの状態の表示]** をクリックします。 
 
     ![ショートカット メニューの [スナップショット エージェントの状態の表示] コマンド](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
 1. スナップショット エージェントの状態でエラーが報告された場合は、スナップショット エージェントのジョブ履歴で詳細を確認することができます。
 
-    A. オブジェクト エクスプローラーで **[SQL Server エージェント]** を展開し、[ジョブの利用状況モニター] を開きます。 
+    a. オブジェクト エクスプローラーで **[SQL Server エージェント]** を展開し、[ジョブの利用状況モニター] を開きます。 
 
-    B. **[カテゴリ]** で並べ替えて、カテゴリ **REPL-Snapshot** でスナップショット エージェントを識別します。
+    b. **[カテゴリ]** で並べ替えて、カテゴリ **REPL-Snapshot** でスナップショット エージェントを識別します。
 
     c. そのスナップショット エージェントを右クリックして、 **[履歴の表示]** を選択します。 
 
@@ -78,8 +77,10 @@ ms.locfileid: "68769348"
 
     ![アクセス拒否のスナップショット エージェント エラー](media/troubleshooting-tran-repl-errors/snapshot-access-denied.png)
 
-        The replication agent had encountered an exception.
-        Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```console
+    The replication agent had encountered an exception.
+    Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```
 
 スナップショット フォルダーに Windows のアクセス許可が正しく構成されていない場合は、スナップショット エージェントに "アクセスが拒否されました" エラーが表示されます。 スナップショットが格納されているフォルダーへのアクセス許可を確認し、スナップショット エージェントの実行に使用しているアカウントに共有にアクセスするためのアクセス許可があることを確認する必要があります。  
 
@@ -109,16 +110,18 @@ ms.locfileid: "68769348"
     
     ![ログ リーダー エージェントのエラーの詳細](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```console
+    Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
+    The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
+    Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
+    Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```
 
 6. エラーは、通常、パブリッシャー データベースの所有者が正しく設定されていないときに発生します。 これは、データベースが復元されるときに発生することがあります。 これを確認するには、次のようにします。
 
-    A. オブジェクト エクスプローラーで **[データベース]** を展開します。
+    a. オブジェクト エクスプローラーで **[データベース]** を展開します。
 
-    B. **AdventureWorks2012** を右クリックして、 **[プロパティ]** をクリックします。 
+    b. **AdventureWorks2012** を右クリックして、 **[プロパティ]** をクリックします。 
 
     c. **[ファイル]** ページの下に所有者が存在することを確認します。 このボックスが空白の場合は、これが問題の原因と考えられます。 
 
@@ -128,16 +131,16 @@ ms.locfileid: "68769348"
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-    EXEC sp_changedbowner '<useraccount>'
+    EXECUTE sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
 
 8. ログ リーダー エージェントの再起動が必要な場合があります。
 
-    A. オブジェクト エクスプローラーで **[SQL Server エージェント]** ノードを展開し、ジョブの利用状況モニターを開きます。
+    a. オブジェクト エクスプローラーで **[SQL Server エージェント]** ノードを展開し、ジョブの利用状況モニターを開きます。
 
-    B. **[カテゴリ]** で並べ替え、**REPL-LogReader** カテゴリによってログ リーダー エージェントを識別します。 
+    b. **[カテゴリ]** で並べ替え、**REPL-LogReader** カテゴリによってログ リーダー エージェントを識別します。 
 
     c. **ログ リーダー エージェント** ジョブを右クリックし、 **[Start Job at Step]\(ステップでジョブを開始\)** を選択します。 
 
@@ -159,15 +162,17 @@ ms.locfileid: "68769348"
 2. **[ディストリビューターからサブスクライバーまで]** 履歴ダイアログ ボックスが開き、エージェントで発生しているエラーの内容を明確にします。 
 
      ![ディストリビューション エージェントのエラーの詳細](media/troubleshooting-tran-repl-errors/dist-history-error.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+
+    ```console
+    Error messages:
+    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    ```
 
 3. このエラーは、ディストリビューション エージェントが再試行していることを示します。 詳細情報を探すには、ディストリビューション エージェントのジョブ履歴を確認します。 
 
-    A. オブジェクト エクスプローラーで **[SQL Server エージェント]** を展開し、 **[ジョブの利用状況モニター]** を開きます。 
+    a. オブジェクト エクスプローラーで **[SQL Server エージェント]** を展開し、 **[ジョブの利用状況モニター]** を開きます。 
     
-    B. **[カテゴリ]** でジョブを並べ替えます。 
+    b. **[カテゴリ]** でジョブを並べ替えます。 
 
     c. カテゴリ **REPL-Distribution** でディストリビューション エージェントを識別します。 エージェントを右クリックして、 **[履歴の表示]** を選択します。
 
@@ -176,15 +181,17 @@ ms.locfileid: "68769348"
 5. いずれかのエラー エントリを選択し、ウィンドウの下部にエラー テキストを表示します。  
 
     ![ディストリビューション エージェントのパスワードが間違っていることを示すエラー テキスト](media/troubleshooting-tran-repl-errors/dist-pw-wrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+
+    ```console
+    Message:
+    Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+    ```
 
 6. このエラーは、ディストリビューション エージェントで使用されたパスワードが正しくないことを示しています。 これを解決するには次のようにします。
 
-    A. オブジェクト エクスプローラーで **[レプリケーション]** のノードを展開します。
+    a. オブジェクト エクスプローラーで **[レプリケーション]** のノードを展開します。
     
-    B. サブスクリプションを右クリックして、 **[プロパティ]** をクリックします。
+    b. サブスクリプションを右クリックして、 **[プロパティ]** をクリックします。
     
     c. **[エージェント プロセス アカウント]** の横にある省略記号 [...] を選択して、パスワードを変更します。
 
@@ -195,11 +202,13 @@ ms.locfileid: "68769348"
     **[レプリケーション モニター]** でサブスクリプションを右クリックして **[詳細表示]** を選択し、 **[ディストリビューターからサブスクライバーまで]** の履歴を開きます。 ここでは、異なるエラーが表示されるようになります。 
 
     ![ディストリビューション エージェントが接続できないことを示すエラー](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
+
+    ```console
+    Connecting to Subscriber 'NODE2\SQL2016'        
+    Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
+    Number:  18456
+    Message: Login failed for user 'NODE2\repl_distribution'.
+    ```
 
 8. このエラーは、ユーザー **NODE2\repl_distribution** のログインが失敗したため、ディストリビューション エージェントがサブスクライバーに接続できなかったことを示しています。 さらに詳しく調べるには、サブスクライバーに接続して、オブジェクト エクスプローラーで **[管理]** ノードの下の*現在の* SQL Server エラー ログを開きます。 
 
@@ -235,8 +244,10 @@ ms.locfileid: "68769348"
 
 1. **[コマンド]** ボックスで新しい行を開始し、次のテキストを入力して、 **[OK]** を選択します。 
 
-       -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
-    
+    ```console
+    -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+    ```
+
     必要に応じて、場所と詳細レベルを変更できます。
 
     ![ジョブ ステップのプロパティの詳細出力](media/troubleshooting-tran-repl-errors/verbose.png)
@@ -259,7 +270,7 @@ ms.locfileid: "68769348"
 詳細については、[レプリケーション エージェントの詳細ログを有効にする方法](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se)に関するページをご覧ください。 
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 <br>[トランザクション レプリケーションの概要](../../relational-databases/replication/transactional/transactional-replication.md)
 <br>[レプリケーションのチュートリアル](../../relational-databases/replication/replication-tutorials.md)
 <br>[ReplTalk ブログ](https://blogs.msdn.microsoft.com/repltalk)

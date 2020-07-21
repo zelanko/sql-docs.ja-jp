@@ -8,29 +8,32 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e9921f6b2639d533674a487de26c1d26aa365a0f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910484"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900161"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>サンプル:Ubuntu 向け SQL Server 無人インストール スクリプト
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このサンプル Bash スクリプトでは、対話式の入力なしで Ubuntu 16.04 に SQL Server 2017 をインストールします。 データベース エンジン、SQL Server コマンドライン ツール、SQL Server エージェントのインストール例を示し、インストール後の手順を行います。 必要に応じてフルテキスト検索をインストールして管理ユーザーを作成することができます。
 
 > [!TIP]
 > 無人インストール スクリプトが不要な場合は、SQL Server をインストールする最も簡単な方法は [Ubuntu のクイックスタート](quickstart-install-connect-ubuntu.md)に従うことです。 その他の設定情報については、[SQL Server on Linux のインストール ガイダンス](sql-server-linux-setup.md)を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - SQL Server on Linux を実行するには、少なくとも 2 GB のメモリが必要です。
 - ファイル システムは **XFS** または **EXT4** である必要があります。 **BTRFS** などの他のファイル システムはサポートされていません。
 - 他のシステム要件については、[SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)に関する記事を参照してください。
 
 ## <a name="sample-script"></a>サンプル スクリプト
+
+> [!NOTE]
+> SQL Server の起動に時間がかかると、スクリプトが失敗する可能性があります。 これは、スクリプトが 0 以外の状態で終了するためです。 最初の行の `-e` スイッチを削除すると、この問題が解決する可能性があります。
 
 ```bash
 #!/bin/bash -e
@@ -204,7 +207,7 @@ Bash スクリプトで最初に実行されることは、いくつかの変数
 
 1. ```SQL_INSTALL_USER``` と ```SQL_INSTALL_USER_PASSWORD``` の両方が設定されている場合は、新しいサーバー管理者ユーザーを作成します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 複数の無人インストールを簡略化し、適切な環境変数を設定するスタンドアロンの Bash スクリプトを作成します。 サンプル スクリプトが使用している変数を削除して、それらを独自の Bash スクリプトに含めることができます。
 

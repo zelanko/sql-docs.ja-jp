@@ -1,20 +1,21 @@
 ---
 title: ODBC データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
+description: SQL Server インポートおよびエクスポート ウィザードで使用する目的で ODBC DSN を構成するか、ODBC 接続文字列を作成する方法
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bfd2e82d861ad36499de86688f346135d2d516b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773583"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -28,7 +29,7 @@ Microsoft またはサード パーティから必要な ODBC ドライバーを
 また、指定する必要がある必要な接続情報を調べることも必要な場合があります。 このサード パーティのサイト「[The Connection Strings Reference](https://www.connectionstrings.com/)」(接続文字列リファレンス) には、接続文字列のサンプルと、データ プロバイダーおよび必要な接続情報に関する詳細な情報が記載されています。
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>必要なドライバーがインストールされていることを確認する
-1.  コントロール パネルの **[ODBC データ ソース (64 ビット)]** アプレットを検索または参照します。 32 ビット ドライバーしかない場合、または 32 ビット ドライバーを使う必要があることがわかっている場合は、代わりに **[ODBC データ ソース (32 ビット)]** を検索または参照します。
+1.  スタート メニューまたはコントロール パネルの **[ODBC データ ソース (64 ビット)]** アプレットを検索または参照します。 32 ビット ドライバーしかない場合、または 32 ビット ドライバーを使う必要があることがわかっている場合は、代わりに **[ODBC データ ソース (32 ビット)]** を検索または参照します。
 2.  アプレットを起動します。 **[ODBC データ ソース アドミニストレーター]** ウィンドウが開きます。
 3.  **[ドライバー]** タブで、お使いのコンピューターにインストールされているすべての ODBC ドライバーの一覧を見ることができます (一部のドライバーの名前は、複数の言語で表示される場合があります)。
 
@@ -39,7 +40,7 @@ Microsoft またはサード パーティから必要な ODBC ドライバーを
 > [!TIP]
 > ドライバーがインストールされていることがわかっていて、64 ビット アプレットに表示されない場合は、代わりに 32 ビット アプレットを調べてください。 これを見ると、64 ビットまたは 32 ビットどちらの SQL Server インポートおよびエクスポート ウィザードを実行する必要があるかもわかります。
 >
-> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使うには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
+> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
     
 ## <a name="step-1---select-the-data-source"></a>ステップ 1 - データ ソースを選択する
 お使いのコンピューターにインストールされている ODBC ドライバーは、データ ソースのドロップダウン リストに表示されません。 ODBC ドライバーを使って接続するには、最初にウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、データ ソースとして **[.NET Framework Data Provider for ODBC]** を選びます。 このプロバイダーは、ODBC ドライバーのラッパーとして機能します。
@@ -50,7 +51,7 @@ Microsoft またはサード パーティから必要な ODBC ドライバーを
 
 ## <a name="step-2---provide-the-connection-info"></a>ステップ 2 - 接続情報を指定する
 次に、ODBC ドライバーとデータ ソースの接続情報を指定します。 この場合、2 つの選択肢があります。
-1.  既に存在している **DSN** (データ ソース名) またはコントロール パネルの **[ODBC データ ソース アドミニストレーター]** アプレットで作成した DSN を指定します。 DSN は、ODBC データ ソースへの接続に必要な設定の保存されたコレクションです。
+1.  既に存在している **DSN** (データ ソース名) または **[ODBC データ ソース アドミニストレーター]** アプレットで作成した DSN を指定します。 DSN は、ODBC データ ソースへの接続に必要な設定の保存されたコレクションです。
 
     既に DSN 名がわかっている場合、または新しい DSN の作成方法がわかっている場合は、このページの残りの部分を省略できます。 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページの **[DSN]** フィールドに DSN 名を入力し、ウィザードの次のステップを続けます。
 
@@ -64,9 +65,9 @@ Microsoft またはサード パーティから必要な ODBC ドライバーを
 
 接続文字列を指定すると、 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページに、ウィザードがデータ ソースへの接続に使うすべての接続情報 (サーバー名、データベース名、認証方法など) が表示されます。 DSN を指定した場合は、この情報は表示されません。
 
-## <a name="odbc_dsn"></a> オプション 1 - DSN を指定する
+## <a name="option-1---provide-a-dsn"></a><a name="odbc_dsn"></a> オプション 1 - DSN を指定する
 DSN (データ ソース名) で接続情報を指定する場合は、 **[ODBC データ ソース アドミニストレーター]** アプレットを使って既存の DSN の名前を調べるか、新しい DSN を作成します。
-1.  コントロール パネルの **[ODBC データ ソース (64 ビット)]** アプレットを検索または参照します。 32 ビット ドライバーしかない場合、または 32 ビット ドライバーを使う必要がある場合は、代わりに **[ODBC データ ソース (32 ビット)]** を検索または参照します。
+1.  スタート メニューまたはコントロール パネルの **[ODBC データ ソース (64 ビット)]** アプレットを検索または参照します。 32 ビット ドライバーしかない場合、または 32 ビット ドライバーを使う必要がある場合は、代わりに **[ODBC データ ソース (32 ビット)]** を検索または参照します。
 2.  アプレットを起動します。 **[ODBC データ ソース アドミニストレーター]** ウィンドウが開きます。 アプレットの表示は次のようになります。
 
     ![ODBC アドミニストレーター コントロール パネル アプレット](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -87,14 +88,14 @@ DSN (データ ソース名) で接続情報を指定する場合は、 **[ODBC 
     
 8.  ウィザードに戻り、 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページの **[DSN]** フィールドに DSN 名を入力します。 ウィザードの次のステップに進みます。
 
-## <a name="odbc_connstring"></a> オプション 2 - 接続文字列を指定する
+## <a name="option-2---provide-a-connection-string"></a><a name="odbc_connstring"></a> オプション 2 - 接続文字列を指定する
 接続文字列で接続情報を指定する場合は、このトピックの残りの部分を参考にして、必要な接続文字列を取得します。
 
-この例では、Microsoft SQL Server に接続する次の接続文字列を使います。
+この例では、Microsoft SQL Server に接続する次の接続文字列を使います。 使用されるデータベース例は **WideWorldImporters** であり、ローカル コンピューターで SQL Server に接続します。
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
@@ -111,7 +112,7 @@ ODBC ドライバーの接続文字列をオンラインで調べるには、「
 ## <a name="get-the-connection-string-with-an-app"></a>アプリで接続文字列を取得する
 お使いのコンピューターで ODBC ドライバーの接続文字列を作成してテストするには、コントロール パネルの **[ODBC データ ソース アドミニストレーター]** アプレットを使うことができます。 接続のファイル DSN を作成した後、ファイル DSN の設定をコピーして接続文字列を組み立てます。 これには複数の手順が必要ですが、接続文字列が有効であることを確認するのに役立ちます。
 
-1.  コントロール パネルの **[ODBC データ ソース (64 ビット)]** アプレットを検索または参照します。 32 ビット ドライバーしかない場合、または 32 ビット ドライバーを使う必要がある場合は、代わりに **[ODBC データ ソース (32 ビット)]** を検索または参照します。
+1.  スタート メニューまたはコントロール パネルの **[ODBC データ ソース (64 ビット)]** アプレットを検索または参照します。 32 ビット ドライバーしかない場合、または 32 ビット ドライバーを使う必要がある場合は、代わりに **[ODBC データ ソース (32 ビット)]** を検索または参照します。
 2.  アプレットを起動します。 **[ODBC データ ソース アドミニストレーター]** ウィンドウが開きます。
 3.  アプレットの **[ファイル DSN]** タブに移動します。 **[追加]** をクリックします。
 
@@ -139,7 +140,7 @@ ODBC ドライバーの接続文字列をオンラインで調べるには、「
 
 10. メモ帳または他のテキスト エディターで、保存したファイルを開きます。 この SQL Server の例の内容を次に示します。
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -154,20 +155,20 @@ ODBC ドライバーの接続文字列をオンラインで調べるには、「
 
     サンプルのファイル DSN から必要な値を組み立てた後、接続文字列は次のようになります。
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     通常、動作する接続文字列を作成するために、ODBC データ ソース アドミニストレーターによって作成された DSN のすべての設定は必要はありません。  
     -   ODBC ドライバーは、常に指定する必要があります。
-    -   SQL Server のようなサーバー ベースのデータ ソースの場合は、通常、サーバー、データベース、およびログイン情報が必要です。 したがって、サンプルの DSN では、TrustServerCertificate、WSID、APP などは不要です。
+    -   SQL Server のようなサーバー ベースのデータ ソースの場合は、通常、サーバー、データベース、およびログイン情報が必要です。 サンプルの DSN では、TrustServerCertificate、WSID、APP は不要です。
     -   ファイル ベースのデータ ソースの場合は、少なくともファイルの名前と場所が必要です。
     
 12. ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドにこの接続文字列を貼り付けます。 ウィザードが文字列を解析し、続行する準備ができます。
 
     ![ODBC を使って SQL に接続する (後)](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

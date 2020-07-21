@@ -1,26 +1,26 @@
 ---
-title: MSSQL JDBC Driver の空間データ型のサンプル |Microsoft Docs
+title: MSSQL JDBC Driver の空間データ型のサンプル | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a92320dc854a31384df87806bf4eca4615c819fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 07f05ee878f1f818e7bf500d053ef5a306477d27
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004398"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909398"
 ---
 # <a name="spatial-data-types-sample"></a>空間データ型のサンプル
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-この[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]サンプルアプリケーションでは、空間データ型 (Geometry および Geography) を作成、挿入、および取得する方法を示します。
+この [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] サンプル アプリケーションでは、空間データ型 (Geometry と Geography) を作成、挿入および取得する方法を示します。
   
 このサンプルのコード ファイルは SpatialDataTypes.java という名前で、次の場所にあります。  
 
@@ -30,18 +30,18 @@ ms.locfileid: "68004398"
 
 ## <a name="requirements"></a>必要条件  
 
-このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスの設定方法の詳細については、「 [JDBC ドライバーの使用](../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。  
+このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスを設定する方法の詳細については、「[JDBC ドライバーの使用](../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。  
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、「[JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例
 
-次の例では、サンプルコードによって、' Geometry ' 列と ' Geography ' 列を含む、SpatialDataTypesTable_JDBC_Sample という名前のテーブルが作成されます。
+次の例では、サンプル コードによって、'Geometry' 列と 'Geography' 列を含む SpatialDataTypesTable_JDBC_Sample というテーブルが作成されます。
 
-このサンプルでは、最初に、POINT を表す Well-known Text (WKT) から ' Geometry ' オブジェクトと ' Geography ' オブジェクトを作成します。 SQLServerPreparedStatement とパラメーター化されたクエリを使用して、データをそれぞれの列に適切にマップします。
+サンプルでは、最初に、POINT を表す Well-Known-Text (WKT) から 'Geometry' オブジェクトと 'Geography' オブジェクトが作成されます。 パラメーター化されたクエリで SQLServerPreparedStatement を使用して、データを適宜、それぞれの列に適切にマップします。
 
-最後に、このサンプルでは、データをテーブルに挿入して取得します。 データは WKT の形式で表示されます。
+最後に、サンプルではデータをテーブルに挿入して取得します。 データは WKT の形式で表示されます。
 
 ```java
 import java.sql.Connection;
@@ -95,7 +95,7 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
-[JDBC データ型の操作](../../connect/jdbc/working-with-data-types-jdbc.md)  
+[JDBC データ型の処理](../../connect/jdbc/working-with-data-types-jdbc.md)  
   

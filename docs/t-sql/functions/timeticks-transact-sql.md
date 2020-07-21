@@ -19,17 +19,17 @@ helpviewer_keywords:
 - time [SQL Server], ticks
 - number of microseconds per tick
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a797e6ccd507a1d7dda259bccb5adb5171ad4596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: bdd3770bb282184193f8bb2cfb64e01f4abbcda5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098990"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858503"
 ---
 # <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   タイマーのティックをミリ秒数で返します。  
   
@@ -43,12 +43,12 @@ ms.locfileid: "68098990"
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ティックあたりの時間はコンピューターによって異なります。 オペレーティング システム上の各ティックは、31.25 ミリ秒、または 30 分の 1 (1/30) 秒です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```  
 SELECT @@TIMETICKS AS 'Time Ticks';  

@@ -1,11 +1,7 @@
 ---
-title: 方法:Visual Studio 2010 のデータベース プロジェクトを SQL Server のデータベース プロジェクトに変換してターゲットを別のプラットフォームに変更する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Visual Studio 2010 のデータベース プロジェクトを SQL Server のデータベース プロジェクトに変換する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.projectconversion.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84815176ca9b32614e851800a59ea2951010ce4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d81099054c52b90154bfe6fd42c9d450e17afa01
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897321"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241550"
 ---
-# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>方法:Visual Studio 2010 のデータベース プロジェクトを SQL Server のデータベース プロジェクトに変換してターゲットを別のプラットフォームに変更する
+# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Visual Studio 2010 のデータベース プロジェクトを SQL Server のデータベース プロジェクトに変換してターゲットを別のプラットフォームに変更する方法
+
 SQL Server Data Tools (SSDT) では、Visual Studio 2010 で作成された SQL Server データベース、CLR、およびデータ層アプリケーションの各既存プロジェクトを新しい SQL Server データベース プロジェクトに変換できます。 そうすることにより、新しくなった Transact\-SQL 編集機能や、プロジェクトのターゲットを Microsoft SQL Server 2012 や SQL Azure にコード検証付きで変更できる機能など、SSDT で提供される新しいデータベース開発機能を利用できるようになります。 変換プロセスでは、対応する型が SSDT にあるオブジェクト (テーブル、ビュー、ストアド プロシージャ、プロパティ ファイル、またはスクリプト) が、アクセス許可および DAC ポリシー ファイルを含めて変換されます。 変換できない成果物は、変換ログ レポート内で強調表示されます。  
   
 次の表は、すべてのプロジェクト成果物のうち、SSDT で変換できるものと変換できないものを示しています。  
@@ -28,7 +29,7 @@ SQL Server Data Tools (SSDT) では、Visual Studio 2010 で作成された SQL 
 |変換できるプロジェクト成果物|変換できないプロジェクト成果物|  
 |-------------------------------------------|----------------------------------------------|  
 |プロジェクト ファイル<br /><br />.dbproj (Visual Studio 2010 データベースおよびサーバー プロジェクト、データ層アプリケーション プロジェクト) プロジェクト ファイル。<br /><br />CLR の .csproj および .vbproj プロジェクト ファイルは変換できますが、データ損失が生じる可能性があります。|データベース単体テスト プロジェクト。<br /><br />部分プロジェクト (.files アイテムなど)。|  
-|プロパティ ファイル<br /><br />*.sqldeployment、.sqlsettings、および .sqlpolicy ファイルは、対応するプロジェクト プロパティ ページに変換されます。<br /><br />.sqlpermissions ファイルは Transact\-SQL スクリプトに変換されます|プロジェクト プロパティ<br /><br />Server.sqlsettings。<br /><br />.sqlcmd ファイルで定義されている SQLCMD 変数。|  
+|プロパティ ファイル<br /><br />*.sqldeployment、.sqlsettings、および .sqlpolicy ファイルは、対応するプロジェクト プロパティ ページに変換されます。<br /><br />.sqlpermissions ファイルは Transact\-SQL スクリプトに変換されます|プロジェクトのプロパティ<br /><br />Server.sqlsettings。<br /><br />.sqlcmd ファイルで定義されている SQLCMD 変数。|  
 |.sql ファイルは、既存のフォルダー構造を使用してインポートされます。|機能拡張ファイル。|  
 |配置前スクリプトおよび配置後スクリプト。|データベース参照は、プロジェクトの変換後に、手動で再確立する必要があります。|  
 |スキーマ比較ファイル。|データ生成ファイル。|  
@@ -50,5 +51,5 @@ SQL Server Data Tools (SSDT) では、Visual Studio 2010 で作成された SQL 
 2.  **[ターゲット プラットフォーム]** ボックスの一覧で、SSDT でサポートされている任意のプラットフォームをクリックします。  
   
 ## <a name="see-also"></a>参照  
-[方法:ターゲット プラットフォームを変更し、データベース プロジェクトを公開する](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+[ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

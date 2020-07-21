@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7db0723ed403340b0e24136ac6bac7217943d401
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3e9112883b7a85ed1ced0c3f5a7e061a396cbf31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672692"
 ---
-# <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps 
+# <a name="catalogexecution_data_taps"></a>catalog.execution_data_taps 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   実行で定義されたデータ タップごとに情報が表示されます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |data_tap_id|**bigint**|データ タップの一意識別子 (ID)。|  
 |execution_id|**bigint**|実行のインスタンスの一意識別子 (ID)。|  

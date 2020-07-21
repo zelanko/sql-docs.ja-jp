@@ -1,5 +1,5 @@
 ---
-title: 予測 (中級者向けデータ マイニング チュートリアル) をモデルの予測との比較 |Microsoft Docs
+title: 予測モデルの予測の比較 (中級者向けデータマイニングチュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066338"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>予測モデルの予測の比較 (中級者向けデータ マイニング チュートリアル)
@@ -34,8 +34,8 @@ ms.locfileid: "63066338"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a> データを追加した後、元の結果の結果を比較します。  
- データに新しいデータでモデルを更新すると、結果にどのように影響する方法を参照してください、太平洋地域の M200 製品の行だけを見てみましょう。 元のデータ系列は 2004 年 6 月に終了し、7 月、8 月、9 月の新しいデータを取得したことに注意してください。  
+##  <a name="comparing-the-original-results-with-results-after-adding-data"></a><a name="bkmk_EXTEND"></a>データを追加した後の結果と元の結果の比較  
+ 太平洋地域の M200 製品ラインのデータだけを見て、新しいデータでモデルを更新することによって結果にどのような影響があるかを確認してみましょう。 元のデータ系列は 2004 年 6 月に終了し、7 月、8 月、9 月の新しいデータを取得したことに注意してください。  
   
 -   最初の列は、追加された新しいデータを示します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63066338"
   
 -   3 番目の列は、拡張したデータに基づく予測を示しています。  
   
-|**M200 Pacific**|更新された実売上データ|データを追加する前の予測|拡張された予測|  
+|**M200 太平洋**|更新された実売上データ|データを追加する前の予測|拡張された予測|  
 |----------------------|-----------------------------|------------------------------------|-------------------------|  
 |7-25-2008|**65**|32|**65**|  
 |8-25-2008|**54**|37|**54**|  
@@ -56,8 +56,8 @@ ms.locfileid: "63066338"
   
  一般に、アルゴリズムでは、モデル データの開始からのデータより、新しいデータでの変更に、より大きい重みを設定します。 しかし、このケースでは、新しい売上の値は前の期間に対して 20 ～ 30% だけの増加を示しているので、予測される売上にはわずかな上昇しかなく、その後の売上予測は再度下降して、新しいデータの前の数か月の傾向と同じようになっています。  
   
-##  <a name="bkmk_REPLACE"></a> 元とクロス予測の結果の比較  
- 元のマイニング モデルでは、地域と製品ラインの間に大きな差が見られました。 たとえば、M200 モデルの売上は非常に強い一方で、T1000 モデルの売上はすべての地域でかなり低くなっています。 さらに、一部のシリーズでは、データの量がありませんでした。 系列が不規則、つまり同じ開始点だけでした。  
+##  <a name="comparing-the-original-and-cross-prediction-results"></a><a name="bkmk_REPLACE"></a>元の結果とクロス予測の結果を比較する  
+ 元のマイニング モデルでは、地域と製品ラインの間に大きな差が見られました。 たとえば、M200 モデルの売上は非常に強い一方で、T1000 モデルの売上はすべての地域でかなり低くなっています。 さらに、一部の系列には多くのデータがありませんでした。 系列は不規則で、開始点が同じではありませんでした。  
   
  ![M200 および T1000 の数量を予測するシリーズ](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 および T1000 の数量を予測するシリーズ")  
   
@@ -76,8 +76,8 @@ ms.locfileid: "63066338"
   
  REPLACE_MODEL_CASES パラメーターを使用し、異なるデータ系列にモデルを適用することによって、クロス予測に使用できるモデルを作成する方法について学習しました。  
   
-## <a name="see-also"></a>関連項目  
- [中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+## <a name="see-also"></a>参照  
+ [中級者向けデータマイニングチュートリアル &#40;Analysis Services データマイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [タイム シリーズ モデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

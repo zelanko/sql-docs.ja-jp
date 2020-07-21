@@ -1,6 +1,6 @@
 ---
-title: ADO (SQLXML 4.0) を使用してアップデート グラムの実行 |Microsoft Docs
-ms.custom: ''
+title: ADO を使用したアップデートグラムの実行 (SQLXML)
+description: Microsoft SQL Server のインスタンスへの接続を確立し、ADO を使用して updategram.by を実行する方法 (SQLXML 4.0) について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,29 +14,30 @@ helpviewer_keywords:
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 856d6af1f06db7821d3b5b8e82e9fa4afcd3c4ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2da024366da5789631aee147ab25d89a5103b40e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785051"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO を使用した、アップデートグラムの実行 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションでは、ADO を使用して Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立した後、アップデートグラムを実行します。 このアップデートグラムでは、特定の従業員の名前が更新されます。 この例では、AdventureWorks サンプル データベースを使用します。  
   
  サンプル アプリケーションの処理は次のとおりです。  
   
--   **Conn**オブジェクト (**ADODB します。接続**) の実行中のインスタンスへの接続を確立[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定のサーバー コンピューターにします。  
+-   **Conn**オブジェクト (**ADODB接続**) 特定のサーバーコンピューター上にある実行中のインスタンスへの接続を確立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] します。  
   
--   **Cmd**オブジェクト (**ADODB.Command**) で確立された接続を実行します。  
+-   **Cmd**オブジェクト (**ADODB**) は、確立された接続で実行されます。  
   
 -   コマンド言語が DBGUID_MSSQLXML に設定されます。  
   
--   アップデート グラムがコマンド ストリームにコピーされます (**strmIn**)。  
+-   アップデートグラムはコマンドストリーム (**Strmin**) にコピーされます。  
   
--   設定されているコマンドの出力ストリーム、 **StrmOut**オブジェクト (**ADODB します。Stream**) が表示されるデータが返されます。  
+-   コマンドの出力ストリームは、 **Strmout**オブジェクト (ADODB) に設定され**ます。ストリーム**) が返されます。  
   
 -   最後にコマンド (アップデートグラム) が実行されます。  
   
@@ -184,7 +185,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>パラメーターの引き渡し  
- 上の Visual Basic アプリケーションでは、パラメーターを渡しません。 このアプリケーションで、 **ContactID**と**MiddleName**値は、アップデート グラムにパラメーター化された入力として渡されます。  
+ 上の Visual Basic アプリケーションでは、パラメーターを渡しません。 このアプリケーションでは、 **ContactID**と**MiddleName**の値がパラメーター化された入力としてアップデートグラムに渡されます。  
   
 ```vb  
 Private Sub Form_Load()  

@@ -1,6 +1,6 @@
 ---
 title: 可用性グループへのセカンダリ レプリカの追加
-description: TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio (SSMS) の可用性グループ ウィザードのいずれかを使用して、Always On 可用性グループにセカンダリ レプリカを追加する手順を説明します。
+description: Transact-SQL (T-SQL)、PowerShell、または SQL Server Management Studio (SSMS) の可用性グループ ウィザードのいずれかを使用して、Always On 可用性グループにセカンダリ レプリカを追加する手順を説明します。
 ms.custom: seodec18
 ms.date: 05/18/2016
 ms.prod: sql
@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 615659a84dcf318adb598451626f5282fa8e3d36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68e712a8fbccae7b59fa8eb158777c58b8ea6c30
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014812"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900438"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Always On 可用性グループへのセカンダリ レプリカの追加
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
 
   
-##  <a name="PrerequisitesRestrictions"></a> 前提条件と制限  
+##  <a name="prerequisites-and-restrictions"></a><a name="PrerequisitesRestrictions"></a> 前提条件と制限  
   
 -   プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
  詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
 
-##  <a name="Security"></a> セキュリティ  
+##  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
 
 [!INCLUDE[Freshness](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **レプリカを追加するには**  
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
@@ -57,7 +57,7 @@ ms.locfileid: "68014812"
   
          さらにレプリカを追加するには、上記の手順を繰り返します。 レプリカの指定を完了したら、 **[OK]** をクリックして操作を完了します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **レプリカを追加するには**  
   
 1.  プライマリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
@@ -75,7 +75,7 @@ ms.locfileid: "68014812"
              );  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **レプリカを追加するには**  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (**cd**) します 。  
@@ -106,7 +106,7 @@ ms.locfileid: "68014812"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報:セカンダリ レプリカを追加した後  
+##  <a name="follow-up-after-adding-a-secondary-replica"></a><a name="FollowUp"></a> 補足情報: セカンダリ レプリカを追加した後  
  既存の可用性グループのレプリカを追加するには、次の手順を実行する必要があります。  
   
 1.  新しいセカンダリ レプリカをホストする予定のサーバー インスタンスに接続します。  
@@ -117,7 +117,7 @@ ms.locfileid: "68014812"
   
 4.  新しいセカンダリ データベースのそれぞれを可用性グループに参加させます。 詳細については、「 [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **可用性レプリカを管理するには**  
   
 -   [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -138,7 +138,7 @@ ms.locfileid: "68014812"
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
- [Always On ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

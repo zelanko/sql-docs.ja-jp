@@ -1,5 +1,5 @@
 ---
-title: メソッドの呼び出し |マイクロソフトのドキュメント
+title: メソッドの呼び出し |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1fb29b1514ca415003aaac483c089b292adf78a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192162"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055273"
 ---
 # <a name="calling-methods"></a>メソッドの呼び出し
-  メソッドは、発行など、オブジェクトに関連する特定のタスクを実行する`Checkpoint`データベースまたはインスタンスのログオンの列挙リストの要求で[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+  メソッドは、オブジェクトに関連する特定のタスクを実行し `Checkpoint` ます。たとえば、データベースでのの発行や、のインスタンスに対するログオンの列挙リストの要求など [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] です。  
   
  メソッドはオブジェクトに対する操作を実行します。 メソッドはパラメーターを受け取ることができ、多くの場合は戻り値があります。 戻り値には、単純なデータ型、複雑なオブジェクト、複数のメンバーを含んでいる構造のいずれを使用することもできます。  
   
  メソッドが正常に実行されたかどうかを検出するには、例外処理を使用します。 詳しくは、「 [Handling SMO Exceptions](handling-smo-exceptions.md)」をご覧ください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>Visual Basic での簡単な SMO メソッドの使用  

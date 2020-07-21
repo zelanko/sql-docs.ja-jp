@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efc615e9aa873a322ef9a31b2c293e6c5c4793da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 410ce293d126190971f3c463d5611761033f6c3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663528"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030181"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion イベント クラス
   **CursorImplicitConversion** イベント クラスは、アプリケーション プログラミング インターフェイス (API) または [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルで発生する暗黙的なカーソル変換イベントを表します。 暗黙的なカーソル変換イベントは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が、要求された種類のサーバー カーソルでサポートされていない Transact-SQL ステートメントを実行するときに発生します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はカーソルの種類が変更されたことを示すエラーを返します。  
@@ -32,8 +31,8 @@ ms.locfileid: "62663528"
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|[はい]|  
-|**BinaryData**|**image**|結果のカーソルの種類です。 値は次のとおりです。<br /><br /> 1 = キー セット<br /><br /> 2 = 動的<br /><br /> 4 = 順方向専用<br /><br /> 8 = 静的<br /><br /> 16 = 高速順方向|2|はい|  
+|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
+|**BinaryData**|**画像**|結果のカーソルの種類です。 値は次のとおりです。<br /><br /> 1 = キー セット<br /><br /> 2 = 動的<br /><br /> 4 = 順方向専用<br /><br /> 8 = 静的<br /><br /> 16 = 高速順方向|2|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
 |**DatabaseID**|**int**|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |**DatabaseName**|**nvarchar**|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
@@ -45,7 +44,7 @@ ms.locfileid: "62663528"
 |**IntegerData**|**int**|要求されたカーソルの種類です。 値は次のとおりです。<br /><br /> 1 = キー セット<br /><br /> 2 = 動的<br /><br /> 4 = 順方向専用<br /><br /> 8 = 静的<br /><br /> 16 = 高速順方向|25|いいえ|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
-|**LoginSid**|**image**|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|[はい]|  
+|**LoginSid**|**画像**|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**RequestID**|**int**|暗黙的な変換の要求識別子です。|49|はい|  

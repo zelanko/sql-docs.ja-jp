@@ -13,14 +13,14 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 00c1fed0bf79774a9e3f52d00f69be5c6222deae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057677"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71290617"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>エラーとイベントのリファレンス (Integration Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68057677"
   
 ## <a name="error-messages"></a>エラー メッセージ  
   
-|エラーのシンボル名|[説明]|  
+|エラーのシンボル名|説明|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|キャッシュ変換によるインメモリ キャッシュへのデータの書き込みが試行されているため、パッケージを実行できないが、 キャッシュ接続マネージャーは、既にキャッシュ ファイルをインメモリ キャッシュに読み込んでいることを示しています。|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|指定された接続に失敗したため、パッケージを実行できないことを示しています。|  
@@ -55,7 +55,7 @@ ms.locfileid: "68057677"
 ## <a name="events-sqlispackage"></a>イベント (SQLISPackage)  
  詳細については、「 [Integration Services パッケージによってログに記録されるイベント](../integration-services/performance/events-logged-by-an-integration-services-package.md)」を参照してください。  
   
-|イベント|[説明]|  
+|Event|説明|  
 |-----------|-----------------|  
 |SQLISPackage_12288|パッケージが開始されたことを示しています。|  
 |SQLISPackage_12289|パッケージの実行が正常に完了したことを示しています。|  
@@ -69,7 +69,7 @@ ms.locfileid: "68057677"
 ## <a name="events-sqlisservice"></a>イベント (SQLISService)  
  詳細については、「 [Integration Services サービスによってログに記録されるイベント](../integration-services/service/events-logged-by-the-integration-services-service.md)」を参照してください。  
   
-|イベント|[説明]|  
+|Event|説明|  
 |-----------|-----------------|  
 |SQLISService_256|サービスを開始しようとしていることを示しています。|  
 |SQLISService_257|サービスが開始したことを示しています。|  
@@ -81,6 +81,6 @@ ms.locfileid: "68057677"
 |SQLISService_274|構成ファイルの場所を含むレジストリ エントリが存在しないか、空であることを示しています。|  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーおよびメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーとメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
+title: アソシエーションモデルのマイニングモデルコンテンツ (Analysis Services データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1836cb414e8ea7f6e0bedbf0b4fb75cf0bfa264e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083686"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521589"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
-  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="understanding-the-structure-of-an-association-model"></a>アソシエーション モデルの構造について  
  アソシエーション モデルの構造は単純です。 モデルとそのメタデータを表す 1 つの親ノードが各モデルにあり、各親ノードにはアイテムセットとルールのフラット リストがあります。 アイテムセットとルールはツリーを構成していません。次の図のように、最初がアイテムセット、次がルールという順に並んでいます。  
   
- ![アソシエーション モデルのモデル コンテンツの構造体](../media/modelcontentstructure-assoc.gif "アソシエーション モデルのモデル コンテンツの構造")  
+ ![アソシエーション モデルのモデル コンテンツの構造](../media/modelcontentstructure-assoc.gif "アソシエーション モデルのモデル コンテンツの構造")  
   
  各アイテムセットはそれぞれ固有のノードに含まれています (NODE_TYPE = 7)。 " *ノード* " には、アイテムセットの定義、そのアイテムセットを含むケースの数、およびその他の情報が含まれています。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66083686"
 ## <a name="model-content-for-an-association-model"></a>アソシエーション モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、アソシエーション モデルに関連する列についてのみ詳細と例を紹介します。  
   
- スキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ スキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -52,7 +51,7 @@ ms.locfileid: "66083686"
  このノードに対応する属性の名前です。  
   
  NODE_NAME  
- ノードの名前。 アソシエーション モデルの場合、この列には NODE_UNIQUE_NAME と同じ値が含まれます。  
+ ノード名。 アソシエーション モデルの場合、この列には NODE_UNIQUE_NAME と同じ値が含まれます。  
   
  NODE_UNIQUE_NAME  
  ノードの一意の名前。  
@@ -60,11 +59,11 @@ ms.locfileid: "66083686"
  NODE_TYPE  
  アソシエーション モデルでは次のノード型のみが出力されます。  
   
-|ノードの種類の ID|型|  
+|ノードの種類の ID|種類|  
 |------------------|----------|  
 |1 (モデル)|ルート ノード (親ノード)。|  
-|7 (アイテムセット)|アイテムセット (属性と値のペアのコレクション)。 例 :<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> または<br /><br /> `Gender = Male`」を参照してください。|  
-|8 (ルール)|アイテムが互いにどのように関連付けられるかを定義するルール。<br /><br /> 例:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`」を参照してください。|  
+|7 (アイテムセット)|アイテムセット (属性と値のペアのコレクション)。 例 :<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> or<br /><br /> `Gender = Male`.|  
+|8 (ルール)|アイテムが互いにどのように関連付けられるかを定義するルール。<br /><br /> 例:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
  ノードに関連付けられたラベルまたはキャプション。  
@@ -86,7 +85,7 @@ ms.locfileid: "66083686"
  PARENT_UNIQUE_NAME  
  ノードの親の一意な名前です。  
   
- **親ノード** 常に NULL です。  
+ **親ノード**常に NULL です。  
   
  **アイテムセット ノードまたはルール ノード** 常に 0 です。  
   
@@ -95,18 +94,18 @@ ms.locfileid: "66083686"
   
  **親ノード** モデルに関する次の情報のコンマ区切りのリストが含まれます。  
   
-|アイテム|説明|  
+|Item|説明|  
 |----------|-----------------|  
 |ITEMSET_COUNT|モデル内のすべてのアイテムセットの数。|  
 |RULE_COUNT|モデル内のすべてのルールの数。|  
 |MIN_SUPPORT|任意の 1 つのアイテムセットに対して検出された最小のサポート。<br /><br /> **注** この値は、 *MINIMUM _SUPPORT* パラメーターに設定した値とは異なる場合があります。|  
 |MAX_SUPPORT|任意の 1 つのアイテムセットに対して検出された最大のサポート。<br /><br /> **注** この値は、 *MAXIMUM_SUPPORT* パラメーターに設定した値とは異なる場合があります。|  
-|MIN_ITEMSET_SIZE|アイテムの数として表される最小のアイテムセットのサイズ。<br /><br /> 値 0 は、`Missing` 状態が独立したアイテムとして扱われたことを示します。<br /><br /> **注** *MINIMUM_ITEMSET_SIZE* パラメーターの既定値は 1 です。|  
+|MIN_ITEMSET_SIZE|アイテムの数として表される最小のアイテムセットのサイズ。<br /><br /> 値 0 は、`Missing` 状態が独立したアイテムとして扱われたことを示します。<br /><br /> **注***MINIMUM_ITEMSET_SIZE* パラメーターの既定値は 1 です。|  
 |MAX_ITEMSET_SIZE|検出された最大のアイテムセットのサイズを示します。<br /><br /> **注** この値は、モデルの作成時に *MAX_ITEMSET_SIZE* パラメーターに設定した値によって制限されます。 その値を超えることはありませんが、その値より小さくなることはあります。 既定値は、3 です。|  
-|MIN_PROBABILITY|モデル内の任意の 1 つのアイテムセットまたはルールに対して検出された最小の確率。<br /><br /> 例:0.400390625<br /><br /> **注** アイテムセットの場合、この値は常に、モデルの作成時に *MINIMUM_PROBABILITY* パラメーターに設定した値より大きくなります。|  
-|MAX_PROBABILITY|モデル内の任意の 1 つのアイテムセットまたはルールに対して検出された最大の確率。<br /><br /> 例:1<br /><br /> **注** アイテムセットの最大確率を制限するパラメーターはありません。 頻度が高すぎるアイテムを除外するには、代わりに *MAXIMUM_SUPPORT* パラメーターを使用します。|  
-|MIN_LIFT|モデルによって任意のアイテムセットに対して提供されているリフトの最小量。<br /><br /> 例:0.14309369632511<br /><br /> 注:最小リフトと、任意の 1 つのアイテム セットのリフトが大きいかどうかを判断できます。|  
-|MAX_LIFT|モデルによって任意のアイテムセットに対して提供されているリフトの最大量。<br /><br /> 例:1.95758227647523**注**最大リフトと任意の 1 つのアイテム セットのリフトが大きいかどうかを判断するが役立つことができます。|  
+|MIN_PROBABILITY|モデル内の任意の 1 つのアイテムセットまたはルールに対して検出された最小の確率。<br /><br /> 例: 0.400390625<br /><br /> **注** アイテムセットの場合、この値は常に、モデルの作成時に *MINIMUM_PROBABILITY* パラメーターに設定した値より大きくなります。|  
+|MAX_PROBABILITY|モデル内の任意の 1 つのアイテムセットまたはルールに対して検出された最大の確率。<br /><br /> 例: 1<br /><br /> **注** アイテムセットの最大確率を制限するパラメーターはありません。 頻度が高すぎるアイテムを除外するには、代わりに *MAXIMUM_SUPPORT* パラメーターを使用します。|  
+|MIN_LIFT|モデルによって任意のアイテムセットに対して提供されているリフトの最小量。<br /><br /> 例 : 0.14309369632511<br /><br /> 注: 最小リフトがわかると、特定のアイテムセットのリフトが大きいかどうかを判断できます。|  
+|MAX_LIFT|モデルによって任意のアイテムセットに対して提供されているリフトの最大量。<br /><br /> 例 : 1.95758227647523 **注** 最大リフトがわかると、特定のアイテムセットのリフトが大きいかどうかを判断できます。|  
   
  **アイテムセット ノード** アイテムセット ノードには、コンマ区切りのテキスト文字列として表示されるアイテムのリストが含まれています。  
   
@@ -193,8 +192,8 @@ ms.locfileid: "66083686"
  空白。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft アソシエーション アルゴリズム](microsoft-association-algorithm.md)   
+ [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft アソシエーションアルゴリズム](microsoft-association-algorithm.md)   
  [結合モデルのクエリ例](association-model-query-examples.md)  
   
   

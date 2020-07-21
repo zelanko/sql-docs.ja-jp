@@ -1,7 +1,7 @@
 ---
-title: 行のロックについて |Microsoft Docs
+title: 行ロックについて | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a2d4faf6f66942cb8f1053bd7323a77795229d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: bcd18baf401378605abf0d53e203d0a3745ee887
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916623"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69027334"
 ---
 # <a name="understanding-row-locking"></a>行ロックについて
 

@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4da908b06e467e1c80ce528ec95f1a5af0db7638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 00441600bb5d2059686f6fe2bc388146e880d4ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737151"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)」を参照してください。  
   
-##  <a name="Initialize"></a> データベース エンジン チューニング アドバイザーを初期化する  
+##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> データベース エンジン チューニング アドバイザーを初期化する  
  初回起動時に、 **sysadmin** 固定サーバー ロールのメンバーであるユーザーがデータベース エンジン チューニング アドバイザーを初期化する必要があります。 これは、チューニング操作をサポートするには、いくつかのシステム テーブルを **msdb** データベースに作成する必要があるためです。 また、初期化によって、 **db_owner** 固定データベース ロールのメンバーであるユーザーも自分の所有するデータベースにあるテーブルのワークロードをチューニングできます。  
   
  システム管理者権限を持つユーザーは、次の操作のいずれかを実行する必要があります。  
@@ -38,7 +38,7 @@ ms.locfileid: "68113314"
   
 -   **dta** ユーティリティを使用して最初のワークロードをチューニングします。 詳細については、このトピックの「 [dta ユーティリティを使用する](#dta) 」を参照してください。  
   
-##  <a name="Start"></a> データベース エンジン チューニング アドバイザーを起動する  
+##  <a name="start-the-database-engine-tuning-advisor"></a><a name="Start"></a> データベース エンジン チューニング アドバイザーを起動する  
  データベース エンジン チューニング アドバイザーのグラフィカル インターフェイス (GUI) は、さまざまなシナリオでのデータベース チューニングに対応するために、いくつかの異なる方法で起動することができます。 データベース エンジン チューニング アドバイザーを起動する方法としては、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[スタート]** メニューからの操作、 **[ツール]** メニューからの操作、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターからの操作、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の **[ツール]** メニューからの操作があります。 データベース エンジン チューニング アドバイザーを初めて起動すると、 **[サーバーへの接続]** ダイアログ ボックスが表示されます。このダイアログ ボックスで接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定できます。  
   
 > [!WARNING]  
@@ -50,11 +50,11 @@ ms.locfileid: "68113314"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>SQL Server Management Studio からデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ツール]** メニュー、 **[データベース エンジン チューニング アドバイザー]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ツール]** メニューで、 **[データベース エンジン チューニング アドバイザー]** をクリックします。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio のクエリ エディターからデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スクリプト ファイルを開きます。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」を参照してください。  
+1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]スクリプト ファイルを開きます。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」を参照してください。  
   
 2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト内のクエリを選択するか、スクリプト全体を選択します。選択範囲を右クリックし、 **[データベース エンジン チューニング アドバイザーでのクエリの分析]** をクリックします。 データベース エンジン チューニング アドバイザー GUI が表示され、そのスクリプトが XML ファイル ワークロードとしてインポートされます。 セッション名とチューニング オプションを指定して、選択した [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを自分のワークロードとしてチューニングできます。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68113314"
   
 1.  SQL Server Profiler の **[ツール]** メニューの **[データベース エンジン チューニング アドバイザー]** をクリックします。  
   
-##  <a name="Create"></a> ワークロードを作成する  
+##  <a name="create-a-workload"></a><a name="Create"></a> ワークロードを作成する  
  ワークロードとは、チューニングするデータベースに対して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットです。 データベース エンジン チューニング アドバイザーでは、サーバーのクエリ パフォーマンスを向上させるインデックスやパーティション分割ストラテジを推奨するために、これらのワークロードが分析されます。  
   
  ワークロードを作成するには、次のいずれかの方法を使用します。  
@@ -71,7 +71,7 @@ ms.locfileid: "68113314"
 
       ||  
       |-|  
-      |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+      |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
 
   
 -   プラン キャッシュをワークロードとして指定する。 このようにすることでワークロードを手動で作成する手間が省けます。 詳細については、このトピックの「 [データベースをチューニングする](#Tune) 」を参照してください。  
@@ -85,7 +85,7 @@ ms.locfileid: "68113314"
   
 -   ワークロードは XML 入力ファイルにも埋め込むことができます。XML 入力ファイルでは、各イベントの重みも指定できます。 埋め込まれたワークロードを指定する方法については、このトピックの「 [XML 入力ファイルを作成する](#XMLInput) 」を参照してください。  
   
-###  <a name="SSMS"></a> Transact-SQL スクリプトのワークロードを作成するには  
+###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Transact-SQL スクリプトのワークロードを作成するには  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でクエリ エディターを起動します。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」を参照してください。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68113314"
   
 3.  **.sql** 拡張子を付けて、ファイルを保存します。 データベース エンジン チューニング アドバイザーの GUI および **dta** コマンド ライン ユーティリティで、この [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをワークロードとして使用できます。  
   
-###  <a name="Profiler"></a> トレース ファイル ワークロードおよびトレース テーブル ワークロードを作成するには  
+###  <a name="to-create-trace-file-and-trace-table-workloads"></a><a name="Profiler"></a> トレース ファイル ワークロードおよびトレース テーブル ワークロードを作成するには  
   
 1.  次の方法のいずれかを使用して、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を起動します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68113314"
   
     -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[ツール]** メニューをクリックし、次に **[SQL Server Profiler]** をクリックします。  
   
-2.  次の手順では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tuning** テンプレートを使用して、トレース ファイルまたはトレース テーブルを作成します。  
+2.  次の手順では、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tuning** テンプレートを使用して、トレース ファイルまたはトレース テーブルを作成します。  
   
     -   [トレースの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68113314"
   
  トレースでログイン情報が指定されていないので、データベース エンジン チューニング アドバイザーはこの新しいワークロードをチューニングします。 ステートメントに **LoginName** が含まれていない場合、データベース エンジン チューニング アドバイザーは、チューニング セッションを開始したユーザー ( **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのいずれかのメンバー) の権限を借用してステートメントをチューニングします。  
   
-##  <a name="Tune"></a> データベースをチューニングする  
+##  <a name="tune-a-database"></a><a name="Tune"></a> データベースをチューニングする  
  データベースをチューニングするには、データベース エンジン チューニング アドバイザーの GUI または **dta** ユーティリティを使用できます。  
   
 > [!NOTE]  
@@ -149,10 +149,10 @@ ms.locfileid: "68113314"
 ### <a name="use-the-database-engine-tuning-advisor-graphical-user-interface"></a>データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイスを使用する  
  データベース エンジン チューニング アドバイザーの GUI で、プラン キャッシュ、ワークロード ファイル、またはワークロード テーブルを使用してデータベースをチューニングできます。 データベース エンジン チューニング アドバイザーの GUI を使用して、現在のチューニング セッションの結果および以前のチューニング セッションの結果を簡単に表示できます。 ユーザー インターフェイス オプションの詳細については、後の「 [ユーザー インターフェイスの説明](#UI) 」を参照してください。 データベースのチューニング後の出力を操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)」を参照してください。  
 
-####  <a name="PlanCache"></a> クエリ ストアを使用してデータベースをチューニングするには
+####  <a name="to-tune-a-database-by-using-the-query-store"></a><a name="PlanCache"></a> クエリ ストアを使用してデータベースをチューニングするには
 詳しくは、「[Tuning Database Using Workload from Query Store](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」(クエリ ストアのワークロードを使用してデータベースをチューニングする) をご覧ください。
   
-####  <a name="PlanCache"></a> プラン キャッシュを使用してデータベースをチューニングするには  
+####  <a name="to-tune-a-database-by-using-the-plan-cache"></a><a name="PlanCache"></a> プラン キャッシュを使用してデータベースをチューニングするには  
   
 1.  データベース エンジン チューニング アドバイザーを起動し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにログインします。 詳細については、このトピックの「 [データベース エンジン チューニング アドバイザーを起動する](#Start) 」を参照してください。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "68113314"
   
 2.  ワークロードを作成します。 詳細については、このトピックの「 [ワークロードを作成する](#Create) 」を参照してください。  
   
-3.  データベース エンジン チューニング アドバイザーを起動し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにログインします。 詳細については、このトピックの「 [データベース エンジン チューニング アドバイザーを起動する](#Start) 」を参照してください。  
+3.  データベース エンジン チューニング アドバイザーを起動し、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインします。 詳細については、このトピックの「 [データベース エンジン チューニング アドバイザーを起動する](#Start) 」を参照してください。  
   
 4.  **[全般]** タブで **[セッション名]** ボックスに名前を入力して、新しいチューニング セッションを作成します。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "68113314"
 > [!NOTE]  
 >  データベース エンジン チューニング アドバイザーの一時停止はサポートされていません。 ツールバーの **[分析の停止]** または **[分析の停止 (推奨設定を使用)]** のいずれかをクリックしてからツールバーの **[分析の開始]** をクリックすると、データベース エンジン チューニング アドバイザーは新しいチューニング セッションを開始します。  
   
-###  <a name="dta"></a> dta ユーティリティを使用する  
+###  <a name="use-the-dta-utility"></a><a name="dta"></a> dta ユーティリティを使用する  
  [dta ユーティリティ](../../tools/dta/dta-utility.md) には、データベースのチューニングに使用できるコマンド プロンプト実行可能ファイルが用意されています。 このファイルにより、バッチ ファイルやスクリプトでデータベース エンジン チューニング アドバイザー機能を使用できるようになります。 **dta** ユーティリティでは、ワークロードとして、プラン キャッシュ エントリ、トレース ファイル、トレース テーブル、および [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトが使用されます。 また、データベース エンジン チューニング アドバイザー XML スキーマに準拠する XML 入力も使用されます。このスキーマは、この [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=43100)から入手できます。  
   
  **dta** ユーティリティを使用してワークロードのチューニングを開始する前に、次のことを考慮してください。  
@@ -305,10 +305,10 @@ ms.locfileid: "68113314"
   
 5.  ユーティリティによるワークロードのチューニングが完了した後、データベース エンジン チューニング アドバイザーの GUI を使用して、チューニング セッションの結果を参照できます。 また、代替手段として、 **-ox** オプションを使用してチューニングの推奨設定を XML ファイルに書き込むように指定することもできます。 詳細については、「 [dta Utility](../../tools/dta/dta-utility.md)」をご参照ください。  
   
-##  <a name="XMLInput"></a> XML 入力ファイルを作成する  
+##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a> XML 入力ファイルを作成する  
  経験豊かな XML 開発者の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで使用できる XML 形式のファイルを作成して、ワークロードをチューニングできます。 このような XML ファイルを作成するには、使い慣れた XML ツールを使用してサンプル ファイルを編集するか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマからインスタンスを生成します。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールの次の場所から入手できます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールの次の場所から入手できます。  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -331,7 +331,7 @@ ms.locfileid: "68113314"
 > [!NOTE]  
 >  XML 入力ファイル内で直接指定されるワークロードであるインライン ワークロードを使用する場合、サンプル「[インライン ワークロードを使用した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md)」を使用します。  
   
-##  <a name="UI"></a> ユーザー インターフェイスの説明  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> ユーザー インターフェイスの説明  
   
 ### <a name="tools-menuoptions-page"></a>[ツール] メニュー/[オプション] ページ  
  このダイアログ ボックスを使用すると、データベース エンジン チューニング アドバイザーの全般的な構成パラメーターを指定できます。  
@@ -363,7 +363,7 @@ ms.locfileid: "68113314"
  **[最近使ったファイル]**  
  ワークロードとなる .sql スクリプトまたはトレース ファイルを指定します。 対応するテキスト ボックスにパスとファイル名を指定します。 データベース エンジン チューニング アドバイザーでは、ワークロード トレース ファイルはロールオーバー ファイルと見なされます。 ロールオーバー ファイルの詳細については、「 [Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)」を参照してください。  
   
- **[ファイル]**  
+ **Table**  
  ワークロードのトレース テーブルを指定します。 次のように、対応するテキスト ボックスにトレース テーブルの完全修飾名を指定します。  
   
 ```  
@@ -455,7 +455,7 @@ database_name.owner_name.table_name
  **フィルター選択されたインデックスを含める**  
  フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、 **[インデックスおよびインデックス付きビュー]** 、 **[インデックス]** 、または **[非クラスター化インデックス]** のいずれかの物理デザイン構造を選択した場合に使用できます。  
   
- **[インデックス]**  
+ **インデックス**  
  クラスター化インデックスおよび非クラスター化インデックスを追加するための推奨設定のみが含まれます。 インデックス付きビューは推奨されません。  
   
  **[非クラスター化インデックス]**  
@@ -506,7 +506,7 @@ database_name.owner_name.table_name
  **操作**  
  実行中のステップが表示されます。  
   
- **ステータス**  
+ **状態**  
  アクション ステップの状態が表示されます。  
   
  **メッセージ**  
@@ -517,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>参照  
  [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
+ [dta ユーティリティ](../../tools/dta/dta-utility.md)  
   
   

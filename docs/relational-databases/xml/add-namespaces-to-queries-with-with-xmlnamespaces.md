@@ -1,5 +1,6 @@
 ---
 title: WITH XMLNAMESPACES を使用したクエリへの名前空間の追加 | Microsoft Docs
+description: WITH XMLNAMESPACES 句を使用して、クエリに名前空間を追加する方法について学習します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cede10b01e1300a1b354cdc5a0d1dd5f80d5a006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df623b61194f04f673d72b0b13ae4ffa8eaca5aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752588"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES を使用したクエリへの名前空間の追加
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) は、次の方法で名前空間 URI のサポートを提供します。  
   
 -   [FOR XML クエリを使用した XML の構築](../../relational-databases/xml/for-xml-sql-server.md) の際に、URI マッピングの名前空間プレフィックスを使用できるようにします。  
@@ -219,7 +220,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- 上記のクエリでは、**query()** メソッドと **exist()** メソッドのいずれのプロローグでも、同じ名前空間が宣言されています。 例:  
+ 上記のクエリでは、 **query()** メソッドと **exist()** メソッドのいずれのプロローグでも、同じ名前空間が宣言されています。 次に例を示します。  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

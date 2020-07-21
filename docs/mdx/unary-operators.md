@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893554"
 ---
 # <a name="unary-operators"></a>単項演算子
@@ -42,7 +42,7 @@ WHERE [Product].[Category].[Bikes]
   
  さらに、MDX では、特別な単項演算子を使用して、 [Rollupchildren](../mdx/rollupchildren-mdx.md)関数によって実行される集計操作を決定します。 これらの特別な単項演算子の詳細については、「[ディメンションへのカスタム集計の追加](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Operators &#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>参照  
+ [MDX 構文 &#40;の演算子&#41;](../mdx/operators-mdx-syntax.md)  
   
   

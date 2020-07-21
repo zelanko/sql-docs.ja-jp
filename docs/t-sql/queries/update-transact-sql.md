@@ -1,7 +1,7 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 05/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -38,15 +38,15 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b856ee0218f7b4909ad9c62a42b95dfd96c93abc
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 530e207035ea2442b9413d92ec4215f3d72d5086
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68317106"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011364"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のテーブルまたはビュー内の既存のデータを変更します。 例については、「[例](#UpdateExamples)」を参照してください。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68317106"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -103,8 +103,29 @@ UPDATE
     table_or_view_name}  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql 
+-- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
+
+[ WITH <common_table_expression> [ ,...n ] ]
+UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
+SET { column_name = { expression | NULL } } [ ,...n ]  
+FROM [ database_name . [ schema_name ] . | schema_name . ] table_name   
+JOIN {<join_table_source>}[ ,...n ] 
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( LABEL = label_name ) ]  
+[;]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse
 
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 SET { column_name = { expression | NULL } } [ ,...n ]  
@@ -191,11 +212,11 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  *expression* は *column_name* にコピーされる値です。 *expression* は、*column_name* 型に評価されるか、この型に暗黙的にキャストできる必要があります。 *expression* に NULL が設定されている場合、@*Length* は無視され、*column_name* 内の値は指定された @*Offset* で切り捨てられます。  
   
- @*Offset* は、*expression* が書き込まれる、*column_name* の値の開始位置です。 @*Offset* は、0 から始まる序数の位置です。**bigint** で、負の数は指定できません。 @*Offset* が NULL の場合、更新操作により *expression* は既存の *column_name* 値の最後に追加され、@*Length* は無視されます。 @Offset が *column_name* 値の長さよりも大きい場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によってエラーが返されます。 *Offset* と @*Length* の和が列の基になる値の終点を超える場合、値の最後の文字までが削除されます。 @*Offset* と LEN(*expression*) の和が宣言された基になるサイズを超える場合、エラーが発生します。  
+ @*Offset* は、*expression* が書き込まれる、*column_name* に格納されている値の開始位置です。 @*Offset* は、0 から始まる序数バイトの位置です。**bigint** で、負の数は指定できません。 @*Offset* が NULL の場合、更新操作により *expression* は既存の *column_name* 値の最後に追加され、@*Length* は無視されます。 @*Offset* が *column_name* 値のバイト長よりも大きい場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によってエラーが返されます。 *Offset* と @*Length* の和が列の基になる値の終点を超える場合、値の最後の文字までが削除されます。  
   
  @*Length* は列内のセクションの長さです。このセクションは @*Offset* から始まり、*expression* で置き換えられます。 @*Length* は **bigint** で、負の数は指定できません。 @*Length* が NULL の場合、更新操作により *column_name* の値の @*Offset* から最後までのすべてのデータが削除されます。  
   
- 詳細については、「解説」を参照してください。  
+ 詳細については、「[大きな値のデータ型を更新する](#updating-lobs)」を参照してください。  
   
  **@** *variable*  
  *expression* で返される値を設定する、宣言された変数です。  
@@ -203,7 +224,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@** _variable_ = *column* = *expression* は、列と同じ値に変数を設定します。 一方、SET **@** _variable_ = _column_, _column_ = _expression_ は、列の更新前の値に変数を設定します。  
   
  \<OUTPUT_Clause>  
- 更新されたデータまたはそれに基づく式を、UPDATE 操作の一部として返します。 OUTPUT 句は、リモート テーブルまたはリモート ビューを対象とした DML ステートメントではサポートされません。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。  
+ 更新されたデータまたはそれに基づく式を、UPDATE 操作の一部として返します。 OUTPUT 句は、リモート テーブルまたはリモート ビューを対象とした DML ステートメントではサポートされません。 この句の引数と動作について詳しくは、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。  
   
  FROM \<table_source>  
  別のテーブル、ビュー、または派生テーブルのソースを使用して更新操作の基になる値を提供することを指定します。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
@@ -243,7 +264,7 @@ OPTION **(** \<query_hint> [ **,** ... *n* ] **)**
  オプティマイザー ヒントを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]がステートメントを処理する方法をカスタマイズすることを指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- @@ROWCOUNT 関数を使用して、クライアント アプリケーションに挿入される行数を返します。 詳細については、「[@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)」を参照してください。  
+ `@@ROWCOUNT` 関数を使用して、クライアント アプリケーションに挿入される行数を返します。 詳細については、「[@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)」を参照してください。  
   
  影響を受ける古い値と新しい値を示すために、UPDATE ステートメントの中で変数名を使用することは可能です。ただし、これは UPDATE ステートメントによって影響を受けるのが単一のレコードである場合のみに限定されています。 UPDATE ステートメントで複数のレコードが影響を受ける場合に、各レコードの古い値と新しい値を返すためには、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)を使用してください。  
   
@@ -277,7 +298,7 @@ SELECT ColA, ColB
 FROM dbo.Table2;  
 ```  
   
- FROM 句と WHERE CURRENT OF 句を組み合わせた場合にも同じ問題が発生します。 次の例では、`Table2` のどちらの行も `FROM` ステートメントの `UPDATE` 句の条件を満たします。 `Table2` のどちらの列を使用してテーブル `Table1` の行を更新するかは未定義です。  
+ `FROM` 句と `WHERE CURRENT OF` 句を組み合わせた場合にも同じ問題が発生します。 次の例では、`Table2` のどちらの行も `FROM` ステートメントの `UPDATE` 句の条件を満たします。 `Table2` のどちらの列を使用してテーブル `Table1` の行を更新するかは未定義です。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -319,7 +340,7 @@ GO
   
  ANSI_PADDING を OFF に設定した場合、スペースだけの文字列を除いて、**varchar** 列と **nvarchar** 列に挿入したデータからは後続のスペースがすべて削除されます。 スペースだけで構成される文字列は空の文字列に切り捨てられます。 ANSI_PADDING を ON に設定すると、後続にスペースが挿入されます。 Microsoft SQL Server ODBC ドライバーおよび OLE DB Provider for SQL Server は、接続するたびに自動的に SET ANSI_PADDING を ON にします。 これは、ODBC データ ソースで構成するか、または接続属性やプロパティで設定することができます。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)」を参照してください。  
   
-### <a name="updating-text-ntext-and-image-columns"></a>text 型、ntext 型、image 型の列を更新する  
+### <a name="updating-text-ntext-and-image-columns"></a>text、ntext、image の列を更新する  
  UPDATE で **text**、**ntext**、**image** 型の列を変更する場合、NULL で列を更新しない限り、列が初期化され、有効なテキスト ポインターが割り当てられます。また、少なくとも 1 つのデータ ページが割り当てられます。  
   
  **text**、**ntext**、**image** 型のデータの大きな部分を置換または変更するには、UPDATE ステートメントではなく [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) または [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) ステートメントを使用してください。  
@@ -329,8 +350,10 @@ GO
 > [!IMPORTANT]
 >  **ntext**、**text**、**image** データ型は、将来の [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) を使用してください。  
   
-### <a name="updating-large-value-data-types"></a>大きな値のデータ型を更新する  
- **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** 句を使用し、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** データ型の部分または完全更新を実行します。 たとえば、**varchar(max)** 列の部分的な更新では、列の最初の 200 文字だけを削除または変更しますが、完全な更新では、列のすべてのデータを削除または変更します。 データベースの復旧モデルに一括ログ復旧モデルまたは単純復旧モデルが設定されている場合、 **.WRITE** で新しいデータを挿入または追加する際には、最小限しかログに記録されません。 既存の値を更新するときには、最小限のログ記録は使用されません。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
+### <a name="updating-large-value-data-types"></a><a name="updating-lobs"></a> 大きな値のデータ型を更新する  
+ **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** 句を使用し、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** データ型の部分または完全更新を実行します。 
+ 
+ たとえば、**varchar(max)** 列の部分的な更新では、列の最初の 200 バイト (ASCII 文字を使用する場合は 200 文字) だけが削除または変更される可能性がありますが、完全な更新では、列のすべてのデータが削除または変更されます。 データベースの復旧モデルに一括ログ復旧モデルまたは単純復旧モデルが設定されている場合、 **.WRITE** で新しいデータを挿入または追加する際には、最小限しかログに記録されません。 既存の値を更新するときには、最小限のログ記録は使用されません。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、UPDATE ステートメントで次のいずれかのアクションが発生するとき、部分更新が完全更新に変更されます。  
 -   パーティション ビューまたはパーティション テーブルのキー列が変更される場合。  
@@ -338,7 +361,7 @@ GO
   
 **.WRITE** 句を使用して NULL 列を更新したり、*column_name* の値を NULL に設定したりすることはできません。  
   
-@*Offset* と @*Length* は、**varbinary** と **varchar** データ型の場合はバイト数で、**nvarchar** データ型の場合は文字数で指定します。 2 バイト文字セット (DBCS) の照合順序では、適切なオフセットが計算されます。  
+@*Offset* と @*Length* は、**varbinary** と **varchar** データ型の場合はバイト数で、**nvarchar** データ型の場合はバイト ペアで指定します。 文字列データ型の長さの詳細については、「[char および varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md)」および「[nchar および nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)」を参照してください。
   
 最高のパフォーマンスが得られるよう、8,040 バイトの倍数の単位でデータを挿入または更新することをお勧めします。  
   
@@ -366,7 +389,7 @@ GO
     ```  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ミューテーター メソッドを [!INCLUDE[tsql](../../includes/tsql-md.md)] NULL 値で呼び出した場合や、ミューテーター メソッドにより生成された新しい値が NULL である場合、エラーが返されます。  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ミューテーター メソッドを [!INCLUDE[tsql](../../includes/tsql-md.md)] NULL 値で呼び出した場合や、ミューテーター メソッドにより生成された新しい値が NULL である場合、エラーが返されます。  
   
 -   ユーザー定義型の登録済みプロパティまたはパブリック データ メンバーの値を変更します。 値を指定する式は、プロパティの型に暗黙的に変換できる必要があります。 次の例では、ユーザー定義型 `X` のプロパティ `Point` の値を変更します。  
   
@@ -391,10 +414,10 @@ GO
 ## <a name="interoperability"></a>相互運用性  
  UPDATE ステートメントをユーザー定義関数の本文で使用できるのは、変更対象のテーブルがテーブル変数の場合だけです。  
   
- INSTEAD OF トリガーが、テーブルに対する UPDATE 操作で定義されている場合は、UPDATE ステートメントの代わりにそのトリガーが実行されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、UPDATE およびその他のデータ変更ステートメントでサポートされているのは AFTER トリガーのみです。 FROM 句は、INSTEAD OF トリガーが定義されているビューを直接または間接的に参照する UPDATE ステートメントでは指定できません。 INSTEAD OF トリガーの詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
+ `INSTEAD OF` トリガーが、テーブルに対する UPDATE 操作で定義されている場合は、UPDATE ステートメントの代わりにそのトリガーが実行されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、UPDATE およびその他のデータ変更ステートメントでサポートされているのは AFTER トリガーのみです。 FROM 句は、`INSTEAD OF` トリガーが定義されているビューを直接または間接的に参照する UPDATE ステートメントでは指定できません。 INSTEAD OF トリガーの詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
- FROM 句は、INSTEAD OF トリガーが定義されているビューを直接または間接的に参照する UPDATE ステートメントでは指定できません。 INSTEAD OF トリガーの詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
+ FROM 句は、`INSTEAD OF` トリガーが定義されているビューを直接または間接的に参照する UPDATE ステートメントでは指定できません。 `INSTEAD OF` トリガーの詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
   
  共通テーブル式 (CTE) が UPDATE ステートメントの対象である場合、ステートメント内の CTE に対するすべての参照を一致させる必要があります。 たとえば、FROM 句で CTE に別名を割り当てた場合、CTE に対するすべての参照で別名を使用する必要があります。 CTE はオブジェクト ID を持たないため、CTE の参照は明確にする必要があります。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オブジェクト ID を使用して、オブジェクトと別名の暗黙的なリレーションシップを識別します。 このリレーションシップがない場合、クエリ プランで予期しない結合動作やクエリ結果が生成される可能性があります。 次の例では、更新操作の対象オブジェクトとして CTE を指定するときの、適切な方法と不適切な方法を示します。  
   
@@ -427,6 +450,7 @@ GO
 ```  
 
 CTE 参照が正しく一致していない UPDATE ステートメント。  
+
 ```sql  
 USE tempdb;  
 GO  
@@ -455,19 +479,19 @@ ID     Value
 ```  
 
 ## <a name="locking-behavior"></a>ロック動作  
- UPDATE ステートメントでは、常に、そのステートメントで変更するテーブルについて排他 (X) ロックを獲得し、トランザクションが完了するまでそのロックを保持します。 排他ロックをかけたトランザクション以外はデータを変更できません。 別のロック手法を指定することにより、UPDATE ステートメントの存続期間におけるこの既定の動作をオーバーライドするためのテーブル ヒントを指定できます。ただし、このヒントは、経験豊富な開発者およびデータベース管理者が最後の手段としてのみ使用することを推奨します。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+ UPDATE ステートメントでは、変更するすべての行について排他 (X) ロックが獲得され、トランザクションが完了するまでそのロックが保持されます。 UPDATE ステートメントのクエリ プラン、変更される行の数、およびトランザクション分離レベルによっては、ロックが行レベルではなく、ページ レベルまたはテーブル レベルで取得される場合があります。 これらの上位レベルのロックを回避するには、何千もの行に影響を与える UPDATE ステートメントをバッチに分割し、結合およびフィルター条件がインデックスによってサポートされるようにすることを検討してください。 SQL Server でのロックのメカニズムの詳細については、「[データベース エンジンのロック](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)」の記事を参照してください。  
   
 ## <a name="logging-behavior"></a>ログ記録の動作  
- UPDATE ステートメントはログに記録されますが、 **.** WRITE 句を使用して値の大きなデータ型の一部を更新する場合には、最低限の内容だけがログに記録されます。 詳細については、前のセクション「データ型」の「大きな値のデータ型を更新する」を参照してください。  
+ UPDATE ステートメントはログに記録されますが、 **\.WRITE** 句を使用して値の大きなデータ型の一部を更新する場合には、最低限の内容だけがログに記録されます。 詳細については、前のセクション「データ型」の「大きな値のデータ型を更新する」を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
- 対象のテーブルに対する UPDATE 権限が必要です。 UPDATE ステートメントで WHERE 句を指定する場合や、SET 句の *expression* でテーブル内の列を使用する場合は、SELECT 権限も必要です。  
+ 対象のテーブルに対する `UPDATE` 権限が必要です。 UPDATE ステートメントに WHERE 句が含まれる場合や、SET 句の *expression* でテーブル内の列を使用する場合は、`SELECT` 権限も必要です。  
   
- UPDATE 権限は、特に指定のない限り、固定サーバー ロール **sysadmin**、固定データベース ロール **db_owner**、固定データベース ロール **db_datawriter** のメンバーと、テーブル所有者に与えられます。 **sysadmin**、**db_owner**、**db_securityadmin** ロールのメンバーと、テーブル所有者は、他のユーザーに権限を譲渡できます。  
+ UPDATE 権限は、既定では `sysadmin` 固定サーバー ロール、`db_owner` および `db_datawriter` 固定データベース ロールのメンバー、テーブル所有者に与えられています。 `sysadmin`、`db_owner`、`db_securityadmin` ロールのメンバーと、テーブル所有者は、他のユーザーに権限を譲渡できます。  
   
-##  <a name="UpdateExamples"></a> 使用例  
+##  <a name="examples"></a><a name="UpdateExamples"></a> 使用例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
@@ -483,7 +507,7 @@ ID     Value
 |[UPDATE ステートメントの結果をキャプチャする](#CaptureResults)|OUTPUT 句|  
 |[その他のステートメントで UPDATE を使用する](#Other)|ストアド プロシージャ • TRY...CATCH|  
   
-###  <a name="BasicSyntax"></a> 基本構文  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本構文  
  このセクションの例では、最低限必要な構文を使用して UPDATE ステートメントの基本機能を示します。  
   
 #### <a name="a-using-a-simple-update-statement"></a>A. 単純な UPDATE ステートメントを使用する  
@@ -507,7 +531,7 @@ SET Bonus = 6000, CommissionPct = .10, SalesQuota = NULL;
 GO  
 ```  
   
-###  <a name="LimitingValues"></a> 更新される行を制限する  
+###  <a name="limiting-the-rows-that-are-updated"></a><a name="LimitingValues"></a> 更新される行を制限する  
  このセクションの例では、UPDATE ステートメントによって影響を受ける行の数を制限する方法を示します。  
   
 #### <a name="c-using-the-where-clause"></a>C. WHERE 句を使用する  
@@ -544,7 +568,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-#### <a name="e-using-the-with-commontableexpression-clause"></a>E. WITH common_table_expression 句を使用する  
+#### <a name="e-using-the-with-common_table_expression-clause"></a>E. WITH common_table_expression 句を使用する  
  次の例では、`PerAssemblyQty` の製造に直接または間接的に使用されるすべての部品およびコンポーネントの `ProductAssemblyID 800` の値を更新します。 共通テーブル式は、`ProductAssemblyID 800` の製造に直接使用される部品やそのコンポーネントの製造に使用される部品などを含む、部品の階層リストを返します。 共通テーブル式が返した行のみが変更されます。  
   
 ```sql  
@@ -595,7 +619,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-###  <a name="ColumnValues"></a> 列の値を設定する  
+###  <a name="setting-column-values"></a><a name="ColumnValues"></a> 列の値を設定する  
  このセクションの例では、計算値、サブクエリ、および DEFAULT 値を使用した列の更新を示します。  
   
 #### <a name="g-specifying-a-computed-value"></a>G. 計算値を指定する  
@@ -661,7 +685,7 @@ SET CostRate = DEFAULT
 WHERE CostRate > 20.00;  
 ```  
   
-###  <a name="TargetObjects"></a> 標準的なテーブル以外の対象オブジェクトを指定する  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> 標準的なテーブル以外の対象オブジェクトを指定する  
  このセクションの例では、ビュー、テーブルの別名、またはテーブル変数を指定して行を更新する方法を示します。  
   
 #### <a name="k-specifying-a-view-as-the-target-object"></a>K. ビューを対象オブジェクトとして指定する  
@@ -718,10 +742,10 @@ ORDER BY EmpID;
 GO  
 ```  
   
-###  <a name="OtherTables"></a> 他のテーブルのデータに基づいてデータを更新する  
+###  <a name="updating-data-based-on-data-from-other-tables"></a><a name="OtherTables"></a> 他のテーブルのデータに基づいてデータを更新する  
  このセクションの例では、テーブルの行を別のテーブルの情報に基づいて更新する方法を示します。  
   
-#### <a name="n-using-the-update-statement-with-information-from-another-table"></a>N. 別のテーブルの情報を使用して UPDATE ステートメントを実行する  
+#### <a name="n-using-the-update-statement-with-information-from-another-table"></a>北 別のテーブルの情報を使用して UPDATE ステートメントを実行する  
  次の例では、`SalesOrderHeader` テーブルの最新の売上高を反映するように `SalesPerson` テーブルの `SalesYTD` 列を変更します。  
   
 ```sql  
@@ -757,7 +781,7 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> リモート テーブルの行を更新する  
+###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> リモート テーブルの行を更新する  
  このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルの行を更新する方法を示します。  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. リンク サーバーを使用してリモート テーブルのデータを更新する  
@@ -801,7 +825,7 @@ UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=
 SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
 ```
 
-###  <a name="LOBValues"></a> ラージ オブジェクト データ型を更新する  
+###  <a name="updating-large-object-data-types"></a><a name="LOBValues"></a> ラージ オブジェクト データ型を更新する  
  このセクションの例では、ラージ オブジェクト (LOB) データ型で定義された列の値を更新する方法を示します。  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. UPDATE を .WRITE と共に使用し、nvarchar(max) 列のデータを変更する  
@@ -904,7 +928,7 @@ SET [Chart] = CAST('Xray 1' as varbinary(max))
 WHERE [SerialNumber] = 2;  
 ```  
   
-###  <a name="UDTs"></a> ユーザー定義型を更新する  
+###  <a name="updating-user-defined-types"></a><a name="UDTs"></a> ユーザー定義型を更新する  
  次の例では、CLR ユーザー定義型 (UDT) の列の値を変更します。 3 つの方法が示されています。 ユーザー定義の列に関する詳細については、「[CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。  
   
 #### <a name="v-using-a-system-data-type"></a>V. システム データ型を使用する  
@@ -916,7 +940,7 @@ SET Location = CONVERT(Point, '12.3:46.2')
 WHERE Name = 'Anchorage';  
 ```  
   
-#### <a name="w-invoking-a-method"></a>W. メソッドを呼び出す  
+#### <a name="w-invoking-a-method"></a>西 メソッドを呼び出す  
  ミューテーターとしてマークされたユーザー定義型のメソッドを呼び出し、更新を実行することによって、UDT を更新できます。 次の例では、`Point` 型の `SetXY` というミューテーター メソッドを呼び出します。 これにより、その型のインスタンスの状態が更新されます。  
   
 ```sql  
@@ -934,7 +958,7 @@ SET Location.X = 23.5
 WHERE Name = 'Anchorage';  
 ```  
   
-###  <a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
  このセクションの例では、テーブル ヒントとクエリ ヒントを使用して、UPDATE ステートメントを処理する際のクエリ オプティマイザーの既定の動作を一時的にオーバーライドする方法を示します。  
   
 > [!CAUTION]  
@@ -953,7 +977,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-#### <a name="z-specifying-a-query-hint"></a>Z. クエリ ヒントを指定する  
+#### <a name="z-specifying-a-query-hint"></a>送信してください。 クエリ ヒントを指定する  
  次の例では、UPDATE ステートメントで[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)`OPTIMIZE FOR (@variable)` を指定します。 このヒントは、クエリをコンパイルおよび最適化するときにローカル変数に対して特定の値を使用するように、クエリ オプティマイザーに指示します。 この値はクエリを最適化する過程でのみ使用され、クエリの実行時には使用されません。  
   
 ```sql  
@@ -972,7 +996,7 @@ GO
 EXEC Production.uspProductUpdate 'BK-%';  
 ```  
   
-###  <a name="CaptureResults"></a> UPDATE ステートメントの結果をキャプチャする  
+###  <a name="capturing-the-results-of-the-update-statement"></a><a name="CaptureResults"></a> UPDATE ステートメントの結果をキャプチャする  
  このセクションの例では、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)を使用して、UPDATE ステートメントの影響を受ける各行の情報や、それらに基づく式を返す方法を示します。 これらの結果は処理アプリケーションに返され、確認メッセージの表示、アーカイブ化、その他のアプリケーション要件で使用することができます。  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. UPDATE ステートメントを OUTPUT 句と共に使用する  
@@ -1006,11 +1030,11 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-###  <a name="Other"></a> その他のステートメントで UPDATE を使用する  
+###  <a name="using-update-in-other-statements"></a><a name="Other"></a> その他のステートメントで UPDATE を使用する  
  このセクションの例では、他のステートメントでの UPDATE の使用方法を示します。  
   
 #### <a name="ab-using-update-in-a-stored-procedure"></a>AB. UPDATE をストアド プロシージャで使用する  
- 次の例では、UPDATE ステートメントをストアド プロシージャで使用しています。 このプロシージャには、1 つの入力パラメーター `@NewHours` と 1 つの出力パラメーター `@RowCount` があります。 その `@NewHours` パラメーター値を UPDATE ステートメントで使用して、`HumanResources.Employee` テーブルの `VacationHours` 列を更新します。 影響を受けた行数は、`@RowCount` 出力パラメーターを使用してローカル変数に返されます。 `VacationHours` に設定する値は、SET 句で CASE 式を使用して条件に応じて決定しています。 従業員の給与が時給ベース (`SalariedFlag` = 0) である場合、`VacationHours` は `@NewHours` で指定された値に現在の時間数を加算した値に設定されます。それ以外の場合は、`VacationHours` は `@NewHours` で指定された値に設定されます。  
+ 次の例では、UPDATE ステートメントをストアド プロシージャで使用しています。 このプロシージャには、1 つの入力パラメーター `@NewHours` と 1 つの出力パラメーター `@RowCount` があります。 その `@NewHours` パラメーター値を UPDATE ステートメントで使用して、`HumanResources.Employee` テーブルの `VacationHours` 列を更新します。 影響を受けた行数は、`@RowCount` 出力パラメーターを使用して、ローカル変数に返されます。 `VacationHours` に設定する値は、SET 句で CASE 式を使用して条件に応じて決定しています。 従業員の給与が時給ベース (`SalariedFlag` = 0) である場合、`VacationHours` は `@NewHours` で指定された値に現在の時間数を加算した値に設定されます。それ以外の場合は、`VacationHours` は `@NewHours` で指定された値に設定されます。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1064,7 +1088,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="ad-using-a-simple-update-statement"></a>AD. 単純な UPDATE ステートメントを使用する  
  次の例は、更新する行の指定に WHERE 句が使用されなかった場合に、すべての行がどのように影響を受けるかを示します。  
@@ -1133,85 +1157,30 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### <a name="ah-ansi-join-replacement-for-update-statements"></a>AH. 更新ステートメントの ANSI 結合置換
-UPDATE または DELETE を実行するために ANSI 結合構文を使用して、3 つ以上のテーブルをまとめて結合する更新は複雑になることがあります。  
-
-たとえば、次のテーブルを更新する必要があるとします。  
+### <a name="ah-ansi-join-for-update-statements"></a>AH. 更新ステートメントの ANSI 結合
+この例は、別のテーブルとの結合結果に基づいてデータを更新する方法を示しています。
 
 ```sql
-CREATE TABLE [dbo].[AnnualCategorySales]
-(   [EnglishProductCategoryName]    NVARCHAR(50)    NOT NULL
-,   [CalendarYear]                  SMALLINT        NOT NULL
-,   [TotalSalesAmount]              MONEY           NOT NULL
-)
-WITH
-(
-    DISTRIBUTION = ROUND_ROBIN
-)
-;  
+CREATE TABLE dbo.Table1   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+CREATE TABLE dbo.Table2   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+UPDATE dbo.Table2   
+SET dbo.Table2.ColB = dbo.Table2.ColB + dbo.Table1.ColB  
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA);  
+GO  
+SELECT ColA, ColB   
+FROM dbo.Table2;
+GO
 ```
 
-元のクエリは次のようになっている可能性があります。  
-
-```
-UPDATE  acs
-SET     [TotalSalesAmount] = [fis].[TotalSalesAmount]
-FROM    [dbo].[AnnualCategorySales]     AS acs
-JOIN    (
-        SELECT  [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ,       SUM([SalesAmount])              AS [TotalSalesAmount]
-        FROM    [dbo].[FactInternetSales]       AS s
-        JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-        JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-        JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-        JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-        WHERE   [CalendarYear] = 2004
-        GROUP BY
-                [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ) AS fis
-ON  [acs].[EnglishProductCategoryName]  = [fis].[EnglishProductCategoryName]
-AND [acs].[CalendarYear]                = [fis].[CalendarYear]
-;  
-```
-
-[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] では UPDATE ステートメントの FROM 句での ANSI 結合がサポートされていないため、この SQL Server コードを少し変更しないと使用できません。  
-
-CTAS と暗黙の結合を組み合わせて使用して、このコードを置き換えることができます。  
-
-```sql
--- Create an interim table
-CREATE TABLE CTAS_acs
-WITH (DISTRIBUTION = ROUND_ROBIN)
-AS
-SELECT  ISNULL(CAST([EnglishProductCategoryName] AS NVARCHAR(50)),0)    AS [EnglishProductCategoryName]
-,       ISNULL(CAST([CalendarYear] AS SMALLINT),0)                      AS [CalendarYear]
-,       ISNULL(CAST(SUM([SalesAmount]) AS MONEY),0)                     AS [TotalSalesAmount]
-FROM    [dbo].[FactInternetSales]       AS s
-JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-WHERE   [CalendarYear] = 2004
-GROUP BY
-        [EnglishProductCategoryName]
-,       [CalendarYear]
-;
-
--- Use an implicit join to perform the update
-UPDATE  AnnualCategorySales
-SET     AnnualCategorySales.TotalSalesAmount = CTAS_ACS.TotalSalesAmount
-FROM    CTAS_acs
-WHERE   CTAS_acs.[EnglishProductCategoryName] = AnnualCategorySales.[EnglishProductCategoryName]
-AND     CTAS_acs.[CalendarYear]               = AnnualCategorySales.[CalendarYear]
-;
-
---Drop the interim table
-DROP TABLE CTAS_acs
-;
-```
-  
 ## <a name="see-also"></a>参照  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
@@ -1221,5 +1190,6 @@ DROP TABLE CTAS_acs
  [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
-  
-  
+ [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [1 バイト文字セットとマルチバイト文字セット](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
+ 

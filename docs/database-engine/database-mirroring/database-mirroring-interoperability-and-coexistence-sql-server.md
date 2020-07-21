@@ -1,6 +1,7 @@
 ---
-title: 'データベース ミラーリング: 相互運用性と共存 (SQL Server) | Microsoft Docs'
-ms.custom: ''
+title: 'データベース ミラーリング: 相互運用性と共存'
+description: SQL Server データベース ミラーリングと他の SQL Server 機能 (フルテキスト カタログやデータベース スナップショットなど) との相互運用性および共存について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d116624ddea37922e401244c3c669db0a81aa03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b70007c2beaa26d93107f167013a240fe0fa5864
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751911"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>データベース ミラーリング: 相互運用性と共存 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリングは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次の機能またはコンポーネントと共に使用できます。  
   
 -   [Always On フェールオーバー クラスター インスタンス (SQL Server フェールオーバー クラスタリング)](../../database-engine/database-mirroring/database-mirroring-and-sql-server-failover-cluster-instances.md)  

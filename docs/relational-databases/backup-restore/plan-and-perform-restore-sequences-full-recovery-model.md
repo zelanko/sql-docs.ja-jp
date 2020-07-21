@@ -1,7 +1,8 @@
 ---
-title: 復元シーケンスの計画と実行 (完全復旧モデル) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 復元シーケンス (完全復旧モデル) | Microsoft Docs
+description: SQL Server データベース (通常は完全復旧モデルを使用) に対して、RESTORE ステートメントで構成される復元シーケンスを計画および実行する方法について説明します。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d402848978592ab98ae54445f60d46304addaa0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74a785caa2f8511bf11caf757793244d3c06c052
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670136"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>復元シーケンスの計画と実行 (完全復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、主に完全復旧モデルが使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの復元シーケンスを計画し、実行する方法について説明します。 *復元シーケンス* は、1 つ以上の連続した [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントです。 通常、復元シーケンスでは、復元対象のデータベース、ファイル、ページのコンテンツの初期化 (データ コピー フェーズ)、ログに記録されたトランザクションのロールフォワード (再実行フェーズ)、コミットされていないトランザクションのロールバック (元に戻すフェーズ) が実行されます。  
   
@@ -67,8 +68,8 @@ ms.locfileid: "68033684"
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [データベースの全体復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
- [オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
- [ファイル復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
+ [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
+ [ファイルの復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [ページ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   

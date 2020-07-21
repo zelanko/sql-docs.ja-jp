@@ -14,15 +14,14 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6670d832c9a62fd2c9496a531dc2d80a72b1fb2f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62902464"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437729"
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
   フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号を使用した固定幅形式、または幅合わせしない形式を使用できます。  
@@ -57,8 +56,8 @@ ms.locfileid: "62902464"
 ## <a name="related-tasks"></a>Related Tasks  
  データ フロー コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](set-the-properties-of-a-data-flow-component.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
- [フラット ファイル ソース](flat-file-source.md)   
+## <a name="see-also"></a>関連項目  
+ [フラットファイルソース](flat-file-source.md)   
  [データ フロー](data-flow.md)  
   
   

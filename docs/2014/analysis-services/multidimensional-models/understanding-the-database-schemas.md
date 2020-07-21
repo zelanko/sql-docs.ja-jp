@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9cf2e37d9a6ae6d0fa93012f72673642d11a2a4c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811048"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547454"
 ---
 # <a name="understanding-the-database-schemas"></a>データベース スキーマの理解
   スキーマ生成ウィザードでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
   
-## <a name="validation"></a>［確認］  
+## <a name="validation"></a>検証  
  基になるリレーショナル スキーマの生成を開始する前に、スキーマ生成ウィザードによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションが検証されます。 ウィザードによってエラーが検出された場合には、ウィザードは停止し、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [タスク一覧] ウィンドウにエラー レポートが表示されます。 スキーマの生成を妨げるエラーには次のようなものがあります。  
   
 -   ディメンションに複数のキー属性がある。  
@@ -82,7 +81,7 @@ ms.locfileid: "68811048"
  このウィザードでは、翻訳列を必要とするメジャー グループのすべてのプロパティの翻訳済みの値を格納する個別のテーブルが生成されます。 また、必要な言語ごとに個別の列が作成されます。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>データ型変換と既定の長さ  
- スキーマ生成ウィザードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` データ型を使用する列以外のすべての場合に、データ型が無視されます。 `wchar` データ サイズは、`nvarchar` データ型に直接変換されます。 ただし、`wchar` サイズを使用している列の指定された長さが 4,000 バイトより長い場合には、スキーマ生成ウィザードではエラーが発生します。  
+ スキーマ生成ウィザードでは、データ型を使用する列を除き、すべての場合にデータ型が無視さ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` れます。 `wchar` データ サイズは、`nvarchar` データ型に直接変換されます。 ただし、`wchar` サイズを使用している列の指定された長さが 4,000 バイトより長い場合には、スキーマ生成ウィザードではエラーが発生します。  
   
  属性のバインドなどのデータ アイテムに長さが指定されていない場合、次の表に示す既定の長さが列に使用されます。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "68811048"
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [増分生成の理解](understanding-incremental-generation.md)   
  [データ ソース ビューおよびデータ ソースへの変更の管理](manage-changes-to-data-source-views-and-data-sources.md)  
   

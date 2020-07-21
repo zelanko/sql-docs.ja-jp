@@ -1,5 +1,5 @@
 ---
-title: 検索 (Basic) |Microsoft Docs
+title: 結果の取得 (基本) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,32 +12,32 @@ helpviewer_keywords:
 - data sources [ODBC], result sets
 - empty result sets [ODBC]
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7abe4dd2f0bfb0b5302022d8e50cddc7df84f192
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3f7d01bf92fcee07940e449a2fb4bbac4f0fe6ac
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020471"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304333"
 ---
 # <a name="retrieving-results-basic"></a>結果の取得 (基本)
-A*結果セット*は特定の条件に一致するデータ ソースで行のセットです。 これは、クエリの実行結果し、するが表形式で、アプリケーションで使用できる概念テーブルです。 **選択**ステートメント、カタログ関数、およびいくつかの手順は、結果セットを作成します。 次の例では、最初の SQL ステートメントのすべての行と、Orders テーブルのすべての列を含む結果セットを作成して 2 番目の SQL ステートメントは、Orders テーブル内の行の OrderID、営業担当者、および状態の列を含む結果セットを作成します。状態の開く。  
+*結果セット*は、特定の条件に一致するデータソースの行セットです。 これは、クエリによって生成され、表形式でアプリケーションで使用できる概念テーブルです。 **SELECT**ステートメント、カタログ関数、およびいくつかのプロシージャによって結果セットが作成されます。 次の例では、最初の SQL ステートメントによって、Orders テーブル内のすべての行とすべての列を含む結果セットが作成され、2番目の SQL ステートメントによって、その状態が開いている Orders テーブルの行に対して OrderID、販売員、および状態の各列を含む結果セットが作成されます。  
   
 ```  
 SELECT * FROM Orders  
 SELECT OrderID, SalesPerson, Status FROM Orders WHERE Status = 'OPEN'  
 ```  
   
- 結果セットを空にすることとは異なる結果がすべての設定はありません。 たとえば、次の SQL ステートメントは、空の結果セットを作成します。  
+ 結果セットを空にすることはできません。これは、結果セットとはまったく異なります。 たとえば、次の SQL ステートメントでは、空の結果セットが作成されます。  
   
 ```  
 SELECT * FROM Orders WHERE 1 = 2  
 ```  
   
- 空の結果セットは、設定する点を除いて、行を持たないその他の結果と変わりません。 たとえば、アプリケーション、結果セットのメタデータを取得できます、行をフェッチしようとしてでき、結果セットに対して、カーソルを閉じる必要があります。  
+ 空の結果セットは、行がないことを除いて、他の結果セットとは異なります。 たとえば、アプリケーションでは、結果セットのメタデータを取得し、行をフェッチして、結果セットの上にカーソルを閉じる必要があります。  
   
- データ ソースから行を取得して、アプリケーションに戻すプロセスと呼ばれます*フェッチ*します。 このセクションでは、そのプロセスの基本的なパーツについて説明します。 スクロール可能なカーソルは、ブロックなどのより高度なトピックについては、次を参照してください。[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)と[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)します。 更新方法の詳細については、削除、および行の挿入を参照してください[更新データの概要](../../../odbc/reference/develop-app/updating-data-overview.md)します。  
+ データソースから行を取得してアプリケーションに返すプロセスは、*フェッチ*と呼ばれます。 このセクションでは、そのプロセスの基本部分について説明します。 ブロックカーソルやスクロール可能なカーソルなど、より高度なトピックについては、「[ブロックカーソル](../../../odbc/reference/develop-app/block-cursors.md)とスクロール可能な[カーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)」を参照してください。 行の更新、削除、および挿入の詳細については、「[データの更新の概要](../../../odbc/reference/develop-app/updating-data-overview.md)」を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -12,15 +12,14 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7d7486c635051c2ec3454bea977fd62fb19b9a4c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62899450"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437479"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>エラーとイベントのリファレンス (Integration Services)
   ここでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に関連するいくつかのエラーとイベントについて説明します。 エラー メッセージについては、原因と解決方法も示します。  
@@ -51,7 +50,7 @@ ms.locfileid: "62899450"
 ## <a name="events-sqlispackage"></a>イベント (SQLISPackage)  
  詳細については、「 [Integration Services パッケージによってログに記録されるイベント](performance/events-logged-by-an-integration-services-package.md)」を参照してください。  
   
-|イベント|説明|  
+|Event|説明|  
 |-----------|-----------------|  
 |SQLISPackage_12288|パッケージが開始されたことを示しています。|  
 |SQLISPackage_12289|パッケージの実行が正常に完了したことを示しています。|  
@@ -65,7 +64,7 @@ ms.locfileid: "62899450"
 ## <a name="events-sqlisservice"></a>イベント (SQLISService)  
  詳細については、「 [Integration Services サービスによってログに記録されるイベント](service/events-logged-by-the-integration-services-service.md)」を参照してください。  
   
-|イベント|説明|  
+|Event|説明|  
 |-----------|-----------------|  
 |SQLISService_256|サービスを開始しようとしていることを示しています。|  
 |SQLISService_257|サービスが開始したことを示しています。|  
@@ -76,7 +75,7 @@ ms.locfileid: "62899450"
 |SQLISService_273|構成ファイルを読み取ることができなかったか、無効であることを示しています。|  
 |SQLISService_274|構成ファイルの場所を含むレジストリ エントリが存在しないか、空であることを示しています。|  
   
-## <a name="see-also"></a>関連項目  
- [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>参照  
+ [Integration Services のエラーとメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

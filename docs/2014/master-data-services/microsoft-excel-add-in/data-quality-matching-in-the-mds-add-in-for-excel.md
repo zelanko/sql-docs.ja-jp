@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 660c3975310d690867f72fd723d89d706b7b61bf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961272"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel 用 MDS アドインでのデータ品質照合
   後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、新しいデータと既に MDS で管理されているデータを比較することは、重複するデータや不正確なデータの追加を避けるために役立ちます。  
@@ -25,9 +24,9 @@ ms.locfileid: "65478901"
 ## <a name="workflow-for-data-quality-matching"></a>データ品質照合のワークフロー  
  MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で DQS を使用する場合、次のワークフローを使用します。  
   
-1.  MDS によって管理されるデータの一覧を取得して、MDS によって管理されていないデータの一覧と結合します。 詳細については、「[データの結合 (Excel 用 MDS アドイン)](combine-data-mds-add-in-for-excel.md)」を参照してください。  
+1.  MDS によって管理されるデータの一覧を取得して、MDS によって管理されていないデータの一覧と結合します。 詳細については、「 [データの結合 (Excel 用 MDS アドイン)](combine-data-mds-add-in-for-excel.md)」を参照してください。  
   
-2.  DQS ナレッジを使用して、結合した一覧のデータを比較します。 詳細については、「[類似データの照合 (Excel 用 MDS アドイン)](match-similar-data-mds-add-in-for-excel.md)」を参照してください。  
+2.  DQS ナレッジを使用して、結合した一覧のデータを比較します。 詳細については、「 [類似データの照合 (Excel 用 MDS アドイン)](match-similar-data-mds-add-in-for-excel.md)」を参照してください。  
   
 3.  DQS で見つかった類似性について詳細を確認するには、詳細列を表示します。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "65478901"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [データのパブリッシュ&#40;MDS アドインの Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [データ &#40;Excel 用 MDS アドインの公開&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [データ照合](../../data-quality-services/data-matching.md)  
   

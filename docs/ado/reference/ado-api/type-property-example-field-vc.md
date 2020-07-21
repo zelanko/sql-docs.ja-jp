@@ -1,5 +1,5 @@
 ---
-title: 入力プロパティの例 (Field) (vc++) |Microsoft Docs
+title: Type プロパティの例 (Field) (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b3f957e4ed81eeb1853689162f61b1945d26730b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936658"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765333"
 ---
 # <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
-この例では、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、**型**すべてのプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)内のオブジェクト、***従業員***テーブル。 FieldType 関数は、この手順を実行する必要があります。  
+この例では、 ***Employees***テーブル内のすべての[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの**type**プロパティの値に対応する定数の名前を表示することによって、 [type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -155,21 +155,21 @@ void PrintComError(_com_error &e) {
   
  **Employee テーブルのフィールド:**  
  **Name: emp_id**  
- **型: ファミリ**  
+ **種類: adChar**  
  **名前: fname**  
- **型: advarchar:**  
+ **型: adVarChar**  
  **名前: minit**  
- **型: ファミリ**  
+ **種類: adChar**  
  **名前: lname**  
- **型: advarchar:**  
+ **型: adVarChar**  
  **名前: job_id**  
  **Type: adSmallInt**  
  **名前: job_lvl**  
  **Type: adUnsignedTinyInt**  
  **名前: pub_id**  
- **型: ファミリ**  
+ **種類: adChar**  
  **名前: hire_date**  
- **型: adDBTimeStamp**   
-## <a name="see-also"></a>関連項目  
+ **種類: adDBTimeStamp**   
+## <a name="see-also"></a>参照  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

@@ -13,18 +13,17 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9ab514b8d9e9a312b6d91d453235d99b837f6781
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766195"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439899"
 ---
 # <a name="debugging-data-flow"></a>データ フローのデバッグ
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのトラブルシューティングを行うために使用できる機能とツールが含まれています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのトラブルシューティングを行うために使用できる機能とツールが含まれています。  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、データ ビューアーが用意されています。  
   
@@ -61,14 +60,14 @@ ms.locfileid: "62766195"
   
  次の表では、色分けについて説明します。  
   
-|色|説明|  
+|Color|説明|  
 |-----------|-----------------|  
 |無色|データ フロー エンジンによる呼び出しの待機中です。|  
 |黄|変換の実行、データの抽出、またはデータの読み込みを行っています。|  
 |[緑]|正常に実行されました。|  
 |赤|実行されましたがエラーが発生しました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージ開発のトラブルシューティング ツール](troubleshooting-tools-for-package-development.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e16dbe378ddab0b04237509a9fc9865d08468bba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65576693"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting メソッド - ReserveURL
@@ -34,7 +34,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *アプリケーション*  
+ *Application*  
  URL の予約対象となるアプリケーションの名前。  
   
  *URLString*  
@@ -52,7 +52,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *UrlString* には仮想ディレクトリ名は含まれません。 仮想ディレクトリ名の設定用に、 [SetVirtualDirectory](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) メソッドが用意されています。  
   
  現在の Windows サービス アカウントに対して URL 予約が作成されます。 Windows サービス アカウントを変更するには、すべての URL 予約を手動で更新する必要があります。  

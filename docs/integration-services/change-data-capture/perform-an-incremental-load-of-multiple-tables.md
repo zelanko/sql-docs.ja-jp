@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2d1e9adb43a260cc1cd0fa450bc300eb39169065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f933683e11229500ceea29c3a10180a13c154baf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084402"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294634"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>複数のテーブルの増分読み込みを実行する
 

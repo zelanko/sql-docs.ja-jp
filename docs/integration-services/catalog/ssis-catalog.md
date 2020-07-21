@@ -12,14 +12,14 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 09348b39919c13caa35879609abbd6470660f803
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 14a0cfa2227179d74d67d6e3ed16198da3323855
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070529"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279409"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
 
@@ -53,7 +53,7 @@ ms.locfileid: "68070529"
 >   
 >  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
-## <a name="features-and-capabilities"></a>機能および能力  
+## <a name="features-and-capabilities"></a>特徴と機能  
   
 -   [カタログ オブジェクト識別子](../../integration-services/catalog/ssis-catalog.md#CatalogObjectIdentifiers)  
   
@@ -71,12 +71,12 @@ ms.locfileid: "68070529"
   
 -   [実行と検証](../../integration-services/catalog/ssis-catalog.md#Executions)  
 
-##  <a name="CatalogObjectIdentifiers"></a> カタログ オブジェクト識別子  
+##  <a name="catalog-object-identifiers"></a><a name="CatalogObjectIdentifiers"></a> カタログ オブジェクト識別子  
  カタログに新しいオブジェクトを作成するときは、オブジェクトに名前を割り当てる必要があります。 オブジェクト名が識別子となります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、識別子に使用できる文字のルールが定義されています。 次のオブジェクトの名前は、識別子のルールに従っている必要があります。  
   
--   フォルダー  
+-   Folder  
   
--   プロジェクト  
+-   Project  
   
 -   環境  
   
@@ -84,10 +84,10 @@ ms.locfileid: "68070529"
   
 -   環境変数  
   
-###  <a name="Folder"></a> フォルダー、プロジェクト、環境  
+###  <a name="folder-project-environment"></a><a name="Folder"></a> フォルダー、プロジェクト、環境  
  フォルダー、プロジェクト、または環境の名前を変更するときは、次のルールを考慮します。  
   
--   無効な文字には、ASCII/Unicode 文字 1 - 31、引用符 (")、小なり (\<)、大なり (>)、パイプ (|)、バックスペース (\b)、null (\0)、タブ (\t) などがあります。  
+-   無効な文字には、ASCII/Unicode 文字 1 から 31、引用符 (")、小なり (\<), greater than (>)、パイプ (|)、バックスペース (\b)、null (\0)、タブ (\t) などがあります。  
   
 -   名前の先頭または末尾にスペースを含めることはできません。  
   
@@ -95,17 +95,17 @@ ms.locfileid: "68070529"
   
 -   名前の長さは 1 ～ 128 文字にする必要があります。  
   
-###  <a name="Parameter"></a> パラメーター  
+###  <a name="parameter"></a><a name="Parameter"></a> パラメーター  
  パラメーターに名前を付けるときは、次のルールを考慮します。  
   
 -   名前の最初の文字は、Unicode Standard 2.0 に定義されている文字か、アンダースコア (_) である必要があります。  
   
 -   2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (_) を使用できます。  
   
-###  <a name="EnvironmentVariable"></a> 環境変数  
+###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> 環境変数  
  環境変数に名前を付けるときは、次のルールを考慮します。  
   
--   無効な文字には、ASCII/Unicode 文字 1 - 31、引用符 (")、小なり (\<)、大なり (>)、パイプ (|)、バックスペース (\b)、null (\0)、タブ (\t) などがあります。  
+-   無効な文字には、ASCII/Unicode 文字 1 から 31、引用符 (")、小なり (\<), greater than (>)、パイプ (|)、バックスペース (\b)、null (\0)、タブ (\t) などがあります。  
   
 -   名前の先頭または末尾にスペースを含めることはできません。  
   
@@ -117,10 +117,10 @@ ms.locfileid: "68070529"
   
 -   2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (_) を使用できます。  
   
-##  <a name="Configuration"></a> カタログの構成  
+##  <a name="catalog-configuration"></a><a name="Configuration"></a> カタログの構成  
  カタログ プロパティを調整することによって、カタログの動作を微調整します。 カタログ プロパティは、機微なデータを暗号化する方法と、操作およびプロジェクトのバージョン管理データを保持する方法を定義します。 カタログ プロパティを設定するには、 **[カタログのプロパティ]** ダイアログ ボックスを使用するか、[catalog.configure_catalog (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) ストアド プロシージャを呼び出します。 プロパティを表示するには、ダイアログ ボックスまたはクエリ [catalog.catalog_properties (SSISDB Database)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) を使用します。 ダイアログ ボックスには、オブジェクト エクスプローラーで **SSISDB** を右クリックしてアクセスできます。  
   
-###  <a name="Cleanup"></a> 操作とプロジェクト バージョンのクリーンアップ  
+###  <a name="operations-and-project-version-cleanup"></a><a name="Cleanup"></a> 操作とプロジェクト バージョンのクリーンアップ  
  カタログの多くの操作の状態データは、内部データベース テーブルに格納されます。 たとえば、カタログではパッケージの実行とプロジェクトの配置の状態が追跡されます。 操作データのサイズを維持するには、 **の** SSIS サーバー メンテナンス ジョブ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して古いデータを削除します。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール時に作成されます。  
   
  同じ名前の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトをカタログの同じフォルダーに配置することで、このプロジェクトを更新または再配置できます。 既定では、プロジェクトを再配置するたびに、 **SSISDB** カタログには以前のバージョンのプロジェクトが保持されます。 操作データのサイズを維持するには、 **SSIS サーバー メンテナンス ジョブ** を使用して古いバージョンのプロジェクトを削除します。  
@@ -135,7 +135,7 @@ ms.locfileid: "68070529"
  **保有期間 (日)**  
  操作データの最大保有期間を日数で定義します。 この期間を経過したデータは削除されます。  
   
- 最小値は 1 日です。 最大値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **int** データ型の最大値によってのみ制限されます。 このデータ型に関する詳細については、「[int、bigint、smallint、および tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)」を参照してください。  
+ 最小値は 1 日です。 最大値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int** データの最大値によってのみ制限されます。 このデータ型に関する詳細については、「[int、bigint、smallint、および tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)」を参照してください。  
   
  **古いバージョンを定期的に削除する**  
  このプロパティが **True**に設定されている場合は、プロジェクト バージョンのクリーンアップのジョブ ステップが実行されます。  
@@ -143,7 +143,7 @@ ms.locfileid: "68070529"
  **プロジェクトごとのバージョンの最大数**  
  カタログに格納されるプロジェクトのバージョンの数を定義します。 この数を超える古いバージョンのプロジェクトは削除されます。  
   
-###  <a name="Encryption"></a> 暗号化アルゴリズム  
+###  <a name="encryption-algorithm"></a><a name="Encryption"></a> 暗号化アルゴリズム  
  **[暗号化アルゴリズム]** プロパティでは、秘密性の高いパラメーター値を暗号化するために使用される暗号化の種類を指定します。 次の暗号化の種類から選択できます。  
   
 -   AES_256 (既定値)  
@@ -166,7 +166,7 @@ ms.locfileid: "68070529"
   
  **[暗号化アルゴリズム]** プロパティの設定を変更するには、 **SSISDB** データベースをシングル ユーザー モードに設定し、catalog.configure_catalog ストアド プロシージャを呼び出します。 *property_name* 引数の ENCRYPTION_ALGORITHM を使用します。 プロパティの値の詳細については、「[catalog.catalog_properties (SSISDB データベース)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)」を参照してください。 ストアド プロシージャの詳細については、「[catalog.configure_catalog (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)」を参照してください。  
   
- シングル ユーザー モードの詳細については、「[データベースをシングル ユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の暗号化と暗号化アルゴリズムの詳細については、「 [SQL Server の暗号化](../../relational-databases/security/encryption/sql-server-encryption.md)」のトピックを参照してください。  
+ シングル ユーザー モードの詳細については、「 [データベースをシングル ユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の暗号化と暗号化アルゴリズムの詳細については、「 [SQL Server の暗号化](../../relational-databases/security/encryption/sql-server-encryption.md)」のトピックを参照してください。  
   
  暗号化にはデータベース マスター キーが使用されます。 このキーは、カタログの作成時に作成されます。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "68070529"
 |プロジェクトごとのバージョンの最大数|MAX_PROJECT_VERSIONS|  
 |サーバー全体の既定のログ記録レベル|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  プロジェクト、環境、およびパッケージは、セキュリティ保護可能なオブジェクトであるフォルダーに格納されます。 MANAGE_OBJECT_PERMISSIONS 権限などのフォルダーに対する権限を許可することができます。 MANAGE_OBJECT_PERMISSIONS を許可すると、ユーザーに ssis_admin ロールのメンバーシップを許可しなくても、フォルダー内容の管理をユーザーに委任できます。 プロジェクト、環境、および操作に権限を付与することもできます。 操作には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の初期化、プロジェクトの配置、実行の作成および開始、プロジェクトおよびパッケージの検証、 **SSISDB** カタログの構成などがあります。  
   
  データベース ロールの詳細については、「 [データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)」を参照してください。  
@@ -203,7 +203,7 @@ ms.locfileid: "68070529"
 
  Transact-SQL を利用してアクセス許可を管理するには、[catalog.grant_permission (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)、[catalog.deny_permission (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)、[catalog.revoke_permission (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md) を呼び出します。 すべてのオブジェクトの現在のプリンシパルで有効な権限を表示するには、[catalog.effective_object_permissions (SSISDB データベース)](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md) にクエリを実行します。 このトピックでは、さまざまな種類の権限について説明します。 ユーザーに明示的に割り当てられている権限を表示するには、[catalog.explicit_object_permissions (SSISDB データベース)](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md) にクエリを実行します。  
   
-##  <a name="Folders"></a> フォルダー  
+##  <a name="folders"></a><a name="Folders"></a> フォルダー  
  フォルダーには、 **SSISDB** カタログ内の 1 つ以上のプロジェクトおよび環境が含まれます。 [catalog.folders (SSISDB データベース)](../../integration-services/system-views/catalog-folders-ssisdb-database.md) ビューを使用して、カタログのフォルダーに関する情報にアクセスできます。 次のストアド プロシージャを使用して、フォルダーを管理することができます。  
   
 -   [catalog.create_folder &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md)  
@@ -214,7 +214,7 @@ ms.locfileid: "68070529"
   
 -   [catalog.set_folder_description &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
   
-##  <a name="ProjectsAndPackages"></a> プロジェクトとパッケージ  
+##  <a name="projects-and-packages"></a><a name="ProjectsAndPackages"></a> プロジェクトとパッケージ  
  各プロジェクトには、複数のパッケージを含めることができます。 プロジェクトとパッケージの両方に、パラメーターおよび環境への参照を含めることができます。 [Configure Dialog Box](../../integration-services/catalog/configure-dialog-box.md)を使用して、パラメーターおよび環境への参照にアクセスできます。  
   
  次のストアド プロシージャを呼び出して、他のプロジェクト タスクを実行することができます。 
@@ -237,7 +237,7 @@ ms.locfileid: "68070529"
   
 -   [catalog.object_versions &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md)  
   
-##  <a name="Parameters"></a> パラメーター  
+##  <a name="parameters"></a><a name="Parameters"></a> パラメーター  
  パラメーターを使用して、パッケージの実行時にパッケージ プロパティに値を割り当てます。 パッケージまたはプロジェクト パラメーターの値を設定したり、値を消去したりするには、[catalog.set_object_parameter_value (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) と [catalog.clear_object_parameter_value (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) を呼び出します。 実行のインスタンスのパラメーターの値を設定するには、[catalog.set_execution_parameter_value (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) を呼び出します。 [catalog.get_parameter_values (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) を呼び出すことで既定のパラメーター値を取得できます。  
   
  次のビューには、すべてのパッケージとプロジェクトのパラメーター、および実行のインスタンスに使用されるパラメーター値が表示されます。  
@@ -246,7 +246,7 @@ ms.locfileid: "68070529"
   
 -   [catalog.execution_parameter_values &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)  
   
-##  <a name="ServerEnvironments"></a> サーバー環境、サーバー変数、およびサーバー環境参照  
+##  <a name="server-environments-server-variables-and-server-environment-references"></a><a name="ServerEnvironments"></a> サーバー環境、サーバー変数、およびサーバー環境参照  
  サーバー環境にはサーバー変数が含まれます。 変数値は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでパッケージを実行または検証するときに使用できます。  
   
  次のストアド プロシージャを使用すると、環境と変数の他の多くの管理タスクを実行することができます。  
@@ -287,7 +287,7 @@ ms.locfileid: "68070529"
   
 -   [catalog.environment_references &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-environment-references-ssisdb-database.md)  
   
-##  <a name="Executions"></a> 実行と検証  
+##  <a name="executions-and-validations"></a><a name="Executions"></a> 実行と検証  
  実行はパッケージ実行のインスタンスです。 実行を作成し、開始するには、[catalog.create_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md) と [catalog.start_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) を呼び出します。 実行またはパッケージ/プロジェクト検証を停止するには、[catalog.stop_operation (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md) を呼び出します。  
   
  実行中のパッケージを一時停止してダンプ ファイルを作成するには、catalog.create_execution_dump ストアド プロシージャを呼び出します。 ダンプ ファイルは、実行に関する問題のトラブルシューティングに役立つ、パッケージの実行に関する情報を提供します。 ダンプ ファイルの生成および構成の詳細については、「 [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」をご覧ください。  
@@ -359,7 +359,7 @@ ms.locfileid: "68070529"
   
     ```  
   
-     Windows PowerShell と <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の使用方法を紹介したその他の例については、blogs.msdn.com のブログ エントリ「[SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」を参照してください。 名前空間とコード例の概要については、blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://go.microsoft.com/fwlink/?LinkId=254267)」を参照してください。  
+     Windows PowerShell と <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の使用方法を紹介したその他の例については、blogs.msdn.com のブログ エントリ「[SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」を参照してください。 名前空間とコード例の概要については、blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)」を参照してください。  
 
 ## <a name="catalog-properties-dialog-box"></a>[カタログのプロパティ] ダイアログ ボックス
   [カタログのプロパティ] ダイアログ ボックスを使用すると、SSISDB カタログを構成できます。 カタログ プロパティは、機微なデータを暗号化する方法、操作およびプロジェクトのバージョン管理データを保持する方法、および検証操作がタイムアウトするタイミングを定義します。SSISDB カタログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、パラメーター、および環境のための中央のストレージと管理ポイントです。  
@@ -372,7 +372,7 @@ ms.locfileid: "68070529"
   
 -   [オプションの構成](#options)  
   
-###  <a name="open_dialog"></a> [カタログのプロパティ] ダイアログ ボックスを開く  
+###  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a> [カタログのプロパティ] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を開きます。  
   
@@ -380,12 +380,12 @@ ms.locfileid: "68070529"
   
 3.  オブジェクト エクスプローラーで、 **[Integration Services]** ノードを展開します。 **[SSISDB]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-###  <a name="options"></a> オプションの構成  
+###  <a name="configure-the-options"></a><a name="options"></a> オプションの構成  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  次の表では、ダイアログ ボックスに示される特定のプロパティと、`catalog.catalog_properties` ビュー内の対応するプロパティについて説明します。  
   
-|プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_properties ビュー)|[説明]|  
+|プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_properties ビュー)|説明|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |暗号化アルゴリズムの名前|ENCRYPTION_ALGORITHM|カタログ内の機密性の高いパラメーター値を暗号化するために使用される暗号化の種類を指定します。 使用できる値を次に示します。<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (既定値)|  
 |プロジェクトごとのバージョンの最大数|MAX_PROJECT_VERSIONS|カタログに格納されるプロジェクトのバージョンの数を指定します。 最大数を超えるプロジェクトの古いバージョンは、プロジェクト バージョンのクリーンアップ ジョブを実行したときに削除されます。|  
@@ -399,7 +399,7 @@ ms.locfileid: "68070529"
   
  **SSISDB** カタログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したパッケージを格納します。 カタログの詳細については、「 [SSIS カタログ](../../integration-services/catalog/ssis-catalog.md)」を参照してください。  
   
-###  <a name="backup"></a> SSIS データベースをバックアップするには  
+###  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a> SSIS データベースをバックアップするには  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続します。  
   
@@ -415,11 +415,11 @@ ms.locfileid: "68070529"
   
     ```  
   
-3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、[データベースをバックアップする方法 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812) に関する記事をご覧ください。  
+3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、「[データベースをバックアップする方法 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812) に関する記事をご覧ください。  
   
 4.  次の手順を実行して、##MS_SSISServerCleanupJobLogin## の CREATE LOGIN スクリプトを生成します。 詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)」を参照してください。  
   
-    1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで、 **[セキュリティ]** ノードを展開し、 **[ログイン]** ノードを展開します。  
+    1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 **[セキュリティ]** ノードを展開し、 **[ログイン]** ノードを展開します。  
   
     2.  **[##MS_SSISServerCleanupJobLogin##]** を右クリックし、 **[ログインをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
@@ -466,7 +466,7 @@ ms.locfileid: "68070529"
   
     ```  
   
-3.  **の** [データベースの復元] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、バックアップから SSISDB データベースを復元します。 詳細については、次の各トピックを参照してください。  
+3.  **の** [データベースの復元] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、バックアップから SSISDB データベースを復元します。 詳細については、次のトピックを参照してください。  
   
     -   [[データベースの復元] &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -482,7 +482,7 @@ ms.locfileid: "68070529"
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ログインのプロパティ]** ダイアログ ボックスを使用して、SSISDB ユーザーの ##MS_SSISServerCleanupJobUser## (SSISDB database) を ##MS_SSISServerCleanupJobLogin## にマップします。  
+6.  **の** [ログインのプロパティ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、SSISDB ユーザーの ##MS_SSISServerCleanupJobUser## (SSISDB database) を ##MS_SSISServerCleanupJobLogin## にマップします。  
   
 7.  次のいずれかの方法を使用して、マスター キーを復元します。 暗号化の詳細については、「 [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)」を参照してください。  
   
@@ -579,20 +579,20 @@ ms.locfileid: "68070529"
   
 3.  [可用性グループの SSISDB をアップグレードする](#Upgrade)  
   
-###  <a name="prereq"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="prereq"></a> 前提条件  
 次の前提条件手順を実行してから、SSISDB データベースの Always On サポートを有効にする必要があります。  
   
-1.  Windows フェールオーバー クラスターを設定します。 手順については、「 [Installing the Failover Cluster Feature and Tools for Windows Server 2012 (Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール)](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 」のブログ投稿を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。  
+1.  Windows フェールオーバー クラスターを設定します。 手順については、「 [Installing the Failover Cluster Feature and Tools for Windows Server 2012 (Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール)](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) 」のブログ投稿を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。  
   
 2.  クラスターの各ノードに SQL Server 2016 with Integration Services (SSIS) 機能をインストールします。  
   
 3.  SQL Server インスタンスごとに Always On 可用性グループを有効にします。 詳細については、「 [Always On 可用性グループの有効化と無効化 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) 」を参照してください。  
   
-###  <a name="Firsttime"></a> Always On の SSIS サポートを構成する  
+###  <a name="configure-ssis-support-for-always-on"></a><a name="Firsttime"></a> Always On の SSIS サポートを構成する  
   
 -   [ステップ 1:Integration Services カタログを作成する](#Step1)  
   
--   [ステップ 2:SSISDB を Always On 可用性グループに追加する](#Step2)  
+-   [手順 2:SSISDB を Always On 可用性グループに追加する](#Step2)  
   
 -   [ステップ 3:Always On の SSIS サポートを有効にする](#Step3)  
   
@@ -603,7 +603,7 @@ ms.locfileid: "68070529"
 > [!NOTE]
 > この手順の詳細については、データ プラットフォームの MVP である Marcos Freccia 氏による、スクリーン ショットが追加された次のチュートリアルをご覧ください:「[Adding SSISDB to AG for SQL Server 2016 (AG for SQL Server 2016 に SSISDB を追加する)](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/)」。
 
-####  <a name="Step1"></a> ステップ 1:Integration Services カタログを作成する  
+####  <a name="step-1-create-integration-services-catalog"></a><a name="Step1"></a> ステップ 1:Integration Services カタログを作成する  
   
 1.  **SQL Server Management Studio** を起動し、SSISDB の Always On 高可用性グループの **プライマリ ノード** として設定するクラスターの SQL Server インスタンスに接続します。  
   
@@ -615,14 +615,14 @@ ms.locfileid: "68070529"
   
 5.  **パスワード**を入力し、 **[OK]** をクリックします。 カタログ データを暗号化するために使用されるデータベース マスター キーがパスワードで保護されます。 パスワードは安全な場所に保管してください。 データベース マスター キーをバックアップすることもお勧めします。 詳細については、「 [データベース マスター キーのバックアップ](../../relational-databases/security/encryption/back-up-a-database-master-key.md)」を参照してください。  
   
-####  <a name="Step2"></a> ステップ 2:SSISDB を Always On 可用性グループに追加する  
+####  <a name="step-2-add-ssisdb-to-an-always-on-availability-group"></a><a name="Step2"></a> ステップ 2:SSISDB を Always On 可用性グループに追加する  
 SSISDB データベースを Always On 可用性グループに追加する手順は、他のユーザー データベースを可用性グループに追加する場合とほぼ同じです。 「 [可用性グループ ウィザードの使用](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)」を参照してください。  
   
 **新しい可用性グループ** ウィザードの **[データベースの選択]** ページで SSIS カタログを作成するときに指定したパスワードを入力します。
 
-![[データベースの選択]](../../integration-services/service/media/ssis-newavailabilitygroup.png "[データベースの選択]")  
+![新しい可用性グループ](../../integration-services/service/media/ssis-newavailabilitygroup.png "[データベースの選択]")  
   
-####  <a name="Step3"></a> ステップ 3:Always On の SSIS サポートを有効にする  
+####  <a name="step-3-enable-ssis-support-for-always-on"></a><a name="Step3"></a> ステップ 3:Always On の SSIS サポートを有効にする  
  Integration Service カタログを作成した後に、 **[Integration Service カタログ]** ノードを右クリックし、 **[Always On サポートを有効にする]** をクリックします。 次の **[AlwaysOn のサポートを有効にする]** ダイアログ ボックスが表示されます。 このメニュー項目が無効な場合、すべての前提条件がインストールされていることを確認してから、 **[更新]** をクリックします。  
   
  ![Always On のサポートを有効にする](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -637,7 +637,7 @@ SSISDB データベースを Always On 可用性グループに追加する手�
 2.  プライマリ ノードに接続されていることを確認します。 プライマリ ノードでは Always On サポートを有効にする必要があります。
 3.  SQL Server のバージョンが 13.0 以上であることを確認します。 SSIS は、SQL Server 2016 以降のバージョンでのみ Always On をサポートします。
 
-###  <a name="Upgrade"></a> 可用性グループの SSISDB をアップグレードする  
+###  <a name="upgrading-ssisdb-in-an-availability-group"></a><a name="Upgrade"></a> 可用性グループの SSISDB をアップグレードする  
  以前のバージョンから SQL Server をアップグレードするとき、SSISDB が Always On 可用性グループに含まれる場合、"Always On 可用性グループの SSISDB の確認" ルールでアップグレードがブロックされることがあります。 このブロックが発生するのは、可用性データベースがマルチユーザー データベースである必要があるにもかかわらず、アップグレードがシングル ユーザー モードで実行されたためです。 そのため、アップグレードまたは修正プログラムの適用中には、SSISDB を含むすべての可用性データベースがオフラインになり、アップグレードまたは修正プログラムの適用が行われません。 アップグレードを続行するには、まず可用性グループから SSISDB を削除し、次に各ノードのアップグレードまたは修正プログラムの適用を行い、さらに SSISDB を可用性グループに追加します。  
   
  "Always On 可用性グループ内の SSISDB の確認" ルールでブロックされる場合、次の手順に従って SQL Server をアップグレードします。  
@@ -661,11 +661,23 @@ SSISDB データベースを Always On 可用性グループに追加する手�
 4.  「[ステップ 2:SSISDB を Always On 可用性グループに追加する](#Step2)」の手順に従って、SSISDB を可用性グループに追加します。  
   
 5.  「[ステップ 3:Always On の SSIS サポートを有効にする](#Step3)」の手順に従います。  
+
+
+## <a name="ssisdb-catalog-and-delegation-in-double-hop-scenarios"></a>ダブルホップ シナリオでの SSISDB カタログと委任
+
+既定では、SSISDB カタログに格納されている SSIS パッケージのリモート呼び出しは、資格情報の委任 (ダブルホップと呼ばれることもあります) をサポートしません。 
+
+ユーザーがクライアント コンピューター A にログインし、SQL Server Management Studio (SSMS) を起動するシナリオについて考えてみましょう。 SSMS 内から、ユーザーは SSISDB カタログを持つコンピューター B でホストされている SQL server に接続します。 SSIS パッケージはこの SSISDB カタログに格納され、このパッケージはコンピューター C で実行されている SQL Server サービスに接続します (パッケージは他のサービスにもアクセスしている可能性があります)。 ユーザーがコンピューター A から SSIS パッケージの実行を呼び出すと、まず SSMS で、コンピューター A からコンピューター B (SSIS ランタイム プロセスによってパッケージが実行されている場所) にユーザーの資格情報が正常に渡されます。 ここで、正常に実行が完了するように、SSIS 実行ランタイム プロセス (ISServerExec.exe) によるコンピューター B からコンピューター C へのユーザー資格情報の委任が必要となります。 ただし、資格情報の委任は、既定では有効になっていません。
+
+ユーザーは、 *[任意のサービスへの委任でこのユーザーを信頼する (Kerberos のみ)]* の権限を (コンピューター B で) SQL Server のサービス アカウントに対して許可することで、資格情報の委任を有効にすることができます。これにより、ISServerExec.exe が子プロセスとして起動します。 このプロセスは、SQL Server サービス アカウントに対する無制限の委任または自由な委任の設定と呼ばれます。 この権限を付与する前に、組織のセキュリティ要件を満たしているかどうかを検討してください。
+
+SSISDB は、制約付き委任をサポートしません。 ダブルホップ環境では、SSISDB カタログをホストする SQL server のサービス アカウント (この例ではコンピューター B) が制約付き委任に対して設定されている場合、ISServerExec.exe でこの資格情報を 3 番目のコンピューター (コンピューター C) に委任することはできません。 これは、Windows Credential Guard が有効になっているシナリオに適用されます。このシナリオでは、制約付き委任の設定が必要となります。
+
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   blogs.msdn.com のブログ「 [SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」  
   
 -   blogs.msdn.com のブログ エントリ「 [SSIS カタログのアクセス制御のヒント](https://go.microsoft.com/fwlink/?LinkId=246669)」  
   
--   blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://go.microsoft.com/fwlink/?LinkId=254267)」  
+-   blogs.msdn.com のブログ エントリ「 [SSIS カタログ マネージド オブジェクト モデルの概要](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)」  

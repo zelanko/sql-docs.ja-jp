@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d76dd0507336a110337f01509440d4ad64afc085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19acce9df264a4a0571be796548f4c1ae2ae0339
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129437"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897103"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   メッセージ交換を、別のメッセージ交換グループに移動します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68129437"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 MOVE CONVERSATION conversation_handle  
    TO conversation_group_id  
@@ -53,11 +53,11 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  メッセージ交換の移動先となるメッセージ交換グループの識別子を含む、変数または定数。 *conversation_group_id* は型 **uniqueidentifier** にする必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  MOVE CONVERSATION ステートメントは、*conversation_handle* で指定されたメッセージ交換を、*conversation_group_id* で識別されるメッセージ交換グループに移動します。 同じキューに関連付けられているメッセージ交換グループ間でのみ、ダイアログをリダイレクトできます。  
   
 > [!IMPORTANT]  
->  MOVE CONVERSATION ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン ( **;** ) を指定する必要があります。  
+>  MOVE CONVERSATION ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後に、 **ステートメントのターミネータであるセミコロン (** ;[!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定する必要があります。  
   
  MOVE CONVERSATION ステートメントは、ステートメントを含むトランザクションがコミットまたはロールバックされるまで、*conversation_handle* に関連付けられているメッセージ交換グループ、および *conversation_group_id* で指定されたメッセージ交換グループをロックします。  
   
@@ -66,7 +66,7 @@ MOVE CONVERSATION conversation_handle
 ## <a name="permissions"></a>アクセス許可  
  メッセージ交換を移動するには、そのメッセージ交換およびメッセージ交換グループの所有者であるか、固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーである必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、メッセージ交換を別のメッセージ交換グループに移動します。  
   
 ```  

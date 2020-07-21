@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4417367dc00c0493f29cafa0369b57be0dbd9754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d2db1405817c3fa6033082c7a1e285b2edca6ce0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031324"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298200"
 ---
 # <a name="odata-source-properties"></a>OData ソースのプロパティ
 
@@ -26,7 +26,7 @@ ms.locfileid: "68031324"
 
 ## <a name="properties"></a>Properties 
 
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |-|-|  
 |CollectionName|OData サービスから取得するコレクションの名前。 **[CollectionName]** プロパティは、 **UseResourcePath** が FALSE の場合に使用されます。<br /><br /> このプロパティは式にすることができ、実行時に値を設定することができます。 ただし、コレクションのメタデータが、デザイン時に存在したメタデータと一致しない場合は、検証エラーが発生し、データ フローの実行が失敗します。|  
 |DefaultStringLength|この値は、最大の長さが設定されていない文字列の列に対して、既定の長さを指定します。<br /><br /> **既定値:** 4000|  

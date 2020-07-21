@@ -1,23 +1,24 @@
 ---
-title: 方法:スニペットをアウトライン表示し、Transact-SQL スクリプトに追加する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: スニペットをアウトライン表示し、Transact-SQL スクリプトに追加する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035120"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241356"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>方法:スニペットをアウトライン表示し、Transact-SQL スクリプトに追加する
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>スニペットをアウトライン表示し、Transact-SQL スクリプトに追加する方法
+
 SQL Server Data Tools には、コード スニペットから成るコード ライブラリが含まれており、作成するアプリケーションに挿入できるようになっています。 各スニペットは、関数、テーブル、トリガー、インデックス、ビュー、ユーザー定義データ型などを作成する完全なスクリプト タスクを実行します。スニペットは、数回のマウス クリックでソース コードに挿入できます。 スニペットを使用すると、入力の時間を短縮できるため、生産性が向上します。  
   
 目的に合ったスニペットを参照する必要がある場合には、スニペット ピッカーを使用できます。スニペット ピッカーでは、スニペットがカテゴリごとに一覧表示されており、その中から選択できます。 コードに追加したスニペットは、変数名をより適切な名前に変更したり、ストアド プロシージャの実際のロジックを取り入れたりするなど、部分的にカスタマイズが必要になる場合があります。 このため、挿入されたスニペット コードでは、1 つまたは複数の置換ポイントが強調表示されています。 マウス ポインターを置換ポイントの上で止めると、コードに対して可能な変更を説明するツールヒントが表示されます。  

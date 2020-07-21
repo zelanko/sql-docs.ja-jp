@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105435"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 
 
-  階層内の一連のメンバーを並べ替えます。  
+  階層内のセットのメンバーを並べ替えます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,17 +29,17 @@ Hierarchize(Set_Expression [ , POST ] )
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- **Hierarchize**関数は階層の順序に指定されたセットのメンバーを編成します。 この関数は、常に重複部分を保持します。  
+## <a name="remarks"></a>Remarks  
+ **Hierarchize**関数は、指定されたセットのメンバーを階層順に編成します。 この関数は、常に重複部分を保持します。  
   
--   場合**POST**が指定されていない、関数は、自然な順序でレベル内のメンバーを並べ替えます。 自然な順序は、既定の並べ替え条件が指定されていない場合、階層に沿ったメンバーの順序付けします。 子メンバーは親メンバーの直後になります。  
+-   **POST**が指定されていない場合、関数は、レベル内のメンバーを自然な順序で並べ替えます。 その自然な順序は、他の並べ替え条件が指定されていない場合の、階層におけるメンバーの既定の順序です。 子メンバーは親メンバーの直後になります。  
   
--   場合**POST**が指定されている、 **Hierarchize**関数は、後の自然な順序を使用して、レベル内のメンバーを並べ替えます。 つまり、子メンバーには、その親が前になります。  
+-   **Post**を指定した場合、 **Hierarchize**関数は、自然な順序を使用して、レベル内のメンバーを並べ替えます。 言い換えると、子メンバーは親の前に配置されます。  
   
 ## <a name="example"></a>例  
- Canada メンバーを次の例ドリルします。 **Hierarchize**関数を使用して、必要な階層の順序で指定されたセット メンバーを整理、 **DrillUpMember**関数。  
+ 次の例では、カナダのメンバーをドリルアップします。 **Hierarchize**関数は、指定されたセットメンバーを階層の順序で整理するために使用されます。これは、**ドリルダウンメンバー**関数によって要求されます。  
   
 ```  
 SELECT DrillUpMember   
@@ -58,7 +58,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 次の例の合計を返して、`Measures.[Order Quantity]`メンバーに含まれている 2003年の最初の 9 か月にわたり、`Date`ディメンションから、 **Adventure Works**キューブ。 **PeriodsToDate**関数、集計関数が動作するセット内の組を定義します。 **Hierarchize**関数は、階層の順序で、Product ディメンションのメンバーの指定されたセットのメンバーを編成します。  
+ 次の例では、 `Measures.[Order Quantity]` **Adventure works**キューブから、 `Date`ディメンションに含まれている2003の最初の9か月に対して集計されたメンバーの合計を返します。 **PeriodsToDate**関数は、集計関数の演算対象となるセット内の組を定義します。 **Hierarchize**関数は、指定されたメンバーのセットのメンバーを Product ディメンションから階層順に編成します。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -85,7 +85,7 @@ WHERE ([Geography].[State-Province].x,
    [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

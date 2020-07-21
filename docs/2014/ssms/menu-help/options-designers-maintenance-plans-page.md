@@ -1,5 +1,5 @@
 ---
-title: オプション (デザイナー-メンテナンス プラン ページ) |Microsoft Docs
+title: '[オプション] ([デザイナー]-[メンテナンスプラン] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d2f62ecdb772ccb6b9ad4b32386786e68659ab5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283177"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048698"
 ---
-# <a name="options-designers-maintenance-plans-page"></a>オプション (デザイナー-メンテナンス プラン ページ)
+# <a name="options-designers-maintenance-plans-page"></a>[オプション] ([デザイナー]-[メンテナンスプラン] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、デザイン画面に新しい図形を追加したときのデザイナーの既定の動作を指定できます。 **[ツール]** メニューの **[オプション]** をクリックします。次に **[デザイナー]** を展開し、 **[メンテナンス プラン]** を選択します。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[選択した図形に新しい図形を既定で接続する]**  
  このチェック ボックスがオンの場合、デザイン画面に新しい図形を追加したときに自動的に他の図形に接続されます。 このチェック ボックスがオフの場合、新しい図形は追加しても接続されません。 このチェック ボックスをオンにすると、次のボックスが有効になります。  
   

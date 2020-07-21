@@ -1,6 +1,5 @@
 ---
-title: データ クレンジング | Microsoft Docs
-ms.custom: ''
+title: Data Cleansing
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,22 +7,22 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 18bda14c90441375d59f6057f1cdfedac85bdaa0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 5a45acafea032b6a0815d975f91b64f5612b2e43
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935442"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899130"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   データ クレンジングは、データ ソース内のデータの品質を分析し、システムによる推奨事項を手動で承認または拒否し、それによってデータを変更するプロセスです。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのデータ クレンジングには、ナレッジ ベースのナレッジにデータがどの程度準拠しているのかを分析するコンピューター支援型のプロセスと、データ スチュワードがコンピューター支援型プロセスの結果を検討および変更してデータ クレンジングが意図したとおりに行われるようにするための対話型プロセスが含まれます。  
   
- データ スチュワードは、Integration Services パッケージ化プロセスでデータ クレンジングを実行することもできます。 この場合、データ スチュワードは [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]を使用します。このコンポーネントでは、既存のナレッジ ベースを使用してデータ クレンジングが自動的に行われます。 詳細については、「[DQS クレンジング変換](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)」を参照してください。  
+ データ スチュワードは、Integration Services パッケージ化プロセスでデータ クレンジングを実行することもできます。 この場合、データ スチュワードは [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] を使用します。このコンポーネントでは、既存のナレッジ ベースを使用してデータ クレンジングが自動的に行われます。 詳細については、「[DQS クレンジング変換](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)」を参照してください。  
   
  DQS のデータ クレンジング機能には、次の利点があります。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "67935442"
   
  ![DQS でのデータ クレンジング プロセス](../data-quality-services/media/dqs-cleansingprocess.gif "DQS でのデータ クレンジング プロセス")  
   
-##  <a name="ComputerAssisted"></a> コンピューター支援型のクレンジング  
+##  <a name="computer-assisted-cleansing"></a><a name="ComputerAssisted"></a> コンピューター支援型のクレンジング  
  DQS のデータ クレンジング プロセスでは、クレンジング対象のデータにナレッジ ベースが適用され、データに対する変更内容が提示されます。 データ スチュワードは提示された変更内容にアクセスして、それを評価および修正します。 データ クレンジングを行うには、データ スチュワードは次の手順を実行します。  
   
 1.  データ品質プロジェクトを作成し、ソース データの分析とクレンジングに使用するナレッジ ベースを選択し、 **クレンジング** アクティビティを選択します。 複数のデータ品質プロジェクトで、同一のナレッジ ベースを使用できます。  
@@ -63,21 +62,21 @@ ms.locfileid: "67935442"
   
  自動提案のしきい値より信頼レベルが低いすべての値は、データ スチュワードが変更を指定しない限り、そのまま維持されます。  
   
-##  <a name="Interactive"></a> インタラクティブなクレンジング  
+##  <a name="interactive-cleansing"></a><a name="Interactive"></a> インタラクティブなクレンジング  
  コンピューター支援型のクレンジング プロセスに基づいて、データを変更するかどうかの判断に必要な情報がデータ スチュワードに示されます。 データは次の 5 つのタブに分類されます。  
   
--   **[提案]** : 信頼レベルが *自動提案しきい値* より高く *自動修正しきい値* より低い提案が検出された値。 これらの値は、確認して、必要に応じ承認または拒否する必要があります。  
+-   **[提案]**: 信頼レベルが *自動提案しきい値* より高く *自動修正しきい値* より低い提案が検出された値。 これらの値は、確認して、必要に応じ承認または拒否する必要があります。  
   
--   **[新規]** : 十分な情報 (提案) がないために他のタブにマップできない有効な値。そのほか、信頼レベルが *自動提案しきい値* より低いが、有効と見なされる程度には高い値もこのタブに含まれます。  
+-   **新規**: DQS に十分な情報 (提案) がないため、他のタブにマップできない有効な値。さらに、このタブには、信頼レベルが*自動提案しきい*値よりも低いが、有効としてマークするのに十分な値が含まれています。  
   
--   **[無効]** : ナレッジ ベースのドメインでは無効と見なされた値や、ドメイン ルールまたは参照データが失敗した値。 このタブには、対話型クレンジング プロセスの間にユーザーが他の 4 つのタブで拒否した値も表示されます。  
+-   **[無効]**: ナレッジ ベースのドメインでは無効と見なされた値や、ドメイン ルールまたは参照データが失敗した値。 このタブには、対話型クレンジング プロセスの間にユーザーが他の 4 つのタブで拒否した値も表示されます。  
   
--   **[修正済み]** : 信頼レベルが *自動修正しきい値* を超える修正が検出されたために自動化クレンジング プロセス中に DQS によって修正された値。 このタブには、ユーザーが対話型クレンジングの間に **[次に修正]** 列で正しい値を指定した後、他の 4 つのタブのいずれかで **[承認]** 列のオプション ボタンをクリックして承認した値も表示されます。  
+-   **[修正済み]**: 信頼レベルが *自動修正しきい値* を超える修正が検出されたために自動化クレンジング プロセス中に DQS によって修正された値。 このタブには、ユーザーが対話型クレンジングの間に **[次に修正]** 列で正しい値を指定した後、他の 4 つのタブのいずれかで **[承認]** 列のオプション ボタンをクリックして承認した値も表示されます。  
   
--   **[適切]** : 正しいことがわかった値。 たとえば、ドメイン値に一致した値が表示されます。 必要な場合には、このタブで値を拒否することにより、または **[次に修正]** 列で代わりの用語を指定してから **[承認]** 列でラジオ ボタンをクリックすることにより、DQS のクレンジングをオーバーライドできます。 また、ユーザーが対話型クレンジングの間に **[新規]** タブまたは **[無効]** タブで **[承認]** 列のオプション ボタンをクリックして承認した値もこのタブに含まれます。  
+-   **[適切]**: 正しいことがわかった値。 たとえば、ドメイン値に一致した値が表示されます。 必要な場合には、このタブで値を拒否することにより、または **[次に修正]** 列で代わりの用語を指定してから **[承認]** 列でラジオ ボタンをクリックすることにより、DQS のクレンジングをオーバーライドできます。 また、ユーザーが対話型クレンジングの間に **[新規]** タブまたは **[無効]** タブで **[承認]** 列のオプション ボタンをクリックして承認した値もこのタブに含まれます。  
   
 > [!NOTE]  
->  **[提案]** 、 **[修正済み]** 、 **[適切]** の各タブでは、該当する場合は、ドメインの先頭の値がそれぞれのドメイン値に対する **[次に修正]** 列に表示されます。  
+>  **[提案]**、 **[修正済み]**、 **[適切]** の各タブでは、該当する場合は、ドメインの先頭の値がそれぞれのドメイン値に対する **[次に修正]** 列に表示されます。  
   
  データ スチュワードは [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を使用して、DQS が提示した変更内容を確認し、その変更を適用するかどうかを判断します。 データ スチュワードは、正しい値として DQS が提示した用語が実際に正しいかどうかを検証できます。 また、信頼レベルが高く、既に DQS によって適用済みの変更内容についても、変更が適切かどうかを検証できます。 自動提案される変更内容については、承認するかどうかを判断できます。 さらに、変更されていない値を確認して、コンピューター支援型のプロセスでは検出されなかった変更内容がないかどうかを確認できます。  
   
@@ -89,25 +88,25 @@ ms.locfileid: "67935442"
   
  ![Data Quality クライアントでのデータ クレンジング](../data-quality-services/media/dqs-cleansingindqsclient.gif "Data Quality クライアントでのデータ クレンジング")  
   
-##  <a name="Leading"></a> 先頭の値の修正  
+##  <a name="leading-value-correction"></a><a name="Leading"></a> 先頭の値の修正  
  先頭の値の修正は、シノニムのあるドメイン値に対して適用されます。値の表現が一貫するように、シノニム値の 1 つを他の値の代わりに先頭の値として使用できます。 たとえば、"New York"、"NYC"、および "big apple" はシノニムであり、"NYC" および "Big Apple" の代わりに "New York" を先頭の値として使用できます。 DQS では、データを標準化できるように、クレンジング プロセスにおいて先頭の値の修正がサポートされています。 先頭の値の修正は、ドメインの作成時にドメインでこの機能が有効になっている場合にのみ行われます。 ドメインの作成時に **[先頭の値を使用]** チェック ボックスをオフにしない限り、先頭の値の修正はすべてのドメインにおいて既定で有効になります。 このチェック ボックスの詳細については、「 [Set Domain Properties](../data-quality-services/set-domain-properties.md)」を参照してください。  
   
-##  <a name="Standardize"></a> クレンジング済みデータの標準化  
+##  <a name="standardize-cleansed-data"></a><a name="Standardize"></a> クレンジング済みデータの標準化  
  ドメインで定義されている出力形式に基づいてクレンジング済みのデータを標準化された形式でエクスポートするかどうかを選択できます。 ドメインの作成時に、ドメイン内のデータ値が出力されるときに適用される書式設定を選択できます。 ドメインの出力形式の指定の詳細については、「 **Set Domain Properties** 」の「 [形式の出力先](../data-quality-services/set-domain-properties.md)」を参照してください。  
   
  クレンジング データ品質プロジェクト ウィザードの **[エクスポート]** ページでクレンジング済みデータをエクスポートするときに、 **[出力の標準化]** チェック ボックスで、クレンジング済みデータを標準形式でエクスポートするかどうかを指定します。 既定では、このチェック ボックスはオンになっており、クレンジング済みデータは標準化された形式でエクスポートされます。 クレンジング済みデータをエクスポートする方法の詳細については、「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」を参照してください。  
   
-##  <a name="Related"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="Related"></a> 関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|クレンジング アクティビティのしきい値を構成する方法について説明します。|[Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|クレンジング アクティビティのしきい値を構成する方法について説明します。|[クレンジングと照合のしきい値の構成](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |DQS に組み込まれたナレッジを使用してデータをクレンジングする方法について説明します。|[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |参照データ サービスのナレッジを使用してデータをクレンジングする方法について説明します。|[参照データ &#40;外部&#41; のナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
-|複合ドメインをクレンジングする方法について説明します。|[複合ドメインでデータをクレンジングする](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
+|複合ドメインをクレンジングする方法について説明します。|[複合ドメインでのデータのクレンジング](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
 ## <a name="see-also"></a>関連項目  
- [データ品質プロジェクト &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
+ [DQS&#41;&#40;データ品質プロジェクト](../data-quality-services/data-quality-projects-dqs.md)   
  [データ照合](../data-quality-services/data-matching.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ecbca9e7838c4c9395a8bcb6e11351c40f7037f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63162454"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049890"
 ---
 # <a name="indexes-on-computed-columns"></a>計算列のインデックス
   次の要件を満たしている限り、計算列にインデックスを定義できます。  
@@ -88,7 +87,7 @@ ms.locfileid: "63162454"
   
  **Data Type Requirements**  
   
--   *Computed_column_expression*として評価できません、計算列の定義、 `text`、 `ntext`、または`image`データ型。  
+-   計算列に定義された*computed_column_expression*は、、 `text` `ntext` 、または `image` データ型に評価できません。  
   
 -   `image`、`ntext`、`text`、`varchar(max)`、`nvarchar(max)`、`varbinary(max)`、および `xml` データ型から派生した計算列には、計算列のデータ型をインデックス キー列として使用できる限り、インデックスを作成できます。  
   
@@ -116,8 +115,8 @@ ms.locfileid: "63162454"
   
      ANSI_WARNINGS を ON に設定すると、データベース互換性レベルが 90 以上に設定されている場合、暗黙的に ARITHABORT が ON に設定されます。  
   
-##  <a name="BKMK_persisted"></a> 保存される計算列でのインデックスの作成  
- 決定的でも不正確である式を使用して定義されている計算列が CREATE TABLE ステートメントまたは ALTER TABLE ステートメントで PERSISTED に設定されている場合、計算列にインデックスを作成できます。 つまり、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]列のインデックスを作成し、インデックスがクエリで参照されている場合は、これらの永続化された値を使用します。 このオプションでは、計算列にインデックスを作成することができる場合[!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]、決定的かつ正確には。  
+##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> 保存される計算列でのインデックスの作成  
+ 決定的でも不正確である式を使用して定義されている計算列が CREATE TABLE ステートメントまたは ALTER TABLE ステートメントで PERSISTED に設定されている場合、計算列にインデックスを作成できます。 つまり、は、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 列にインデックスを作成するとき、およびインデックスがクエリで参照されるときに、これらの永続化された値を使用します。 このオプションを使用すると [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)] 、が決定的かつ正確である場合に、計算列にインデックスを作成できます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

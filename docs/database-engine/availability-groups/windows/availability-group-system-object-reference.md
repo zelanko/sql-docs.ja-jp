@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性グループ システム オブジェクト リファレンス |Microsoft Docs
-ms.custom: ''
+title: 可用性グループ システム オブジェクト リファレンス
+description: Always On 可用性グループを使用する場合に使用できる各種システム オブジェクトのリファレンス。
+ms.custom: seo-lt-2019
 ms.date: 04/03/2010
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: b9bdf352a566917678294c6c63ac52bd0d27de8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 140953484006d33e7814c19b9eb5bd6abcd29009
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991392"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74822468"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>AlwaysOn 可用性グループ システム オブジェクト リファレンス
 
@@ -24,7 +25,7 @@ ms.locfileid: "67991392"
 
 ## <a name="system-catalog-views"></a>システム カタログ ビュー
 
-| システム カタログ ビュー | [説明]|
+| システム カタログ ビュー | 説明|
 | :------ | :----------------------------- |
 | [可用性データベースの監視](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)   | Windows Server フェールオーバー クラスタリング (WSFC) クラスター内にある任意の AlwaysOn 可用性グループの可用性レプリカをホストしている SQL Server インスタンス上の可用性データベースごとに 1 行のデータを格納します。ローカル コピー データベースが可用性グループに参加しているかどうかは問いません。 |
 | [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  | Windows Server フェールオーバー クラスタリング (WSFC) クラスター内の任意の AlwaysOn 可用性グループ リスナーに関連付けられている IP アドレスごとに 1 行のデータを返します。 |
@@ -38,7 +39,7 @@ ms.locfileid: "67991392"
 ## <a name="system-dynamic-management-views"></a>システム動的管理ビュー
 
 
-| システム動的管理ビュー | [説明]|
+| システム動的管理ビュー | 説明|
 | :------ | :----------------------------- |
 | [sys.dm_hadr_auto_page_repair](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)   | サーバー インスタンスで任意の可用性グループに対してホストされている可用性レプリカの可用性データベースに対するページの自動修復の試行ごとに 1 行のデータを返します。  |
 | [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)    | SQL Server のローカル インスタンスで可用性レプリカを保持する AlwaysOn 可用性グループごとに 1 行のデータを返します。 各行には、特定の可用性グループの正常性を定義する状態が表示されます。 |
@@ -58,7 +59,7 @@ ms.locfileid: "67991392"
 ## <a name="system-functions"></a>システム関数
 
 
-| システム関数 | [説明]|
+| システム関数 | 説明|
 | :------ | :----------------------------- |
 | [sys.fn_hadr_is_primary_replica](../../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  | 現在のレプリカがプライマリ レプリカであるかどうかを決定するために使用されます。 |
 | [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)    | 現在のレプリカが推奨されるバックアップ レプリカであるかどうかを決定するために使用されます。 |
@@ -68,6 +69,6 @@ ms.locfileid: "67991392"
 
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
 
   

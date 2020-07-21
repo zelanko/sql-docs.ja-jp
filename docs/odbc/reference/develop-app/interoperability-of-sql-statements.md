@@ -12,17 +12,17 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC]
 - interoperability of SQL statements [ODBC], about interoperability
 ms.assetid: 3b24c499-829c-4e65-90cf-a3a0f6d0a186
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ed366acde11778342387d3bcb152a6619a6a3778
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d3d7a76c67096d2e76fe1cd3d4b15f73122699e7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138868"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302803"
 ---
 # <a name="interoperability-of-sql-statements"></a>SQL ステートメントの相互運用性
-アプリケーションの残りの部分のようには、SQL ステートメントは相互運用可能なまたは特定の DBMS を指定できます。 どのように相互運用可能な SQL ステートメントの選択は、アプリケーションの残りの部分のようにする必要があるとアプリケーションの種類によって異なります。 カスタム アプリケーションは、1 つまたは場合によって 2 つの Dbms の機能を利用する、通常は設計されているために、相互運用可能な SQL ステートメントを使用する可能性が低下します。 汎用アプリケーションは、さまざまな Dbms を使用するよう設計されていますので、相互運用可能な SQL ステートメントを使用します。 垂直方向のアプリケーションは、通常どこかに間には、特定のレベルの機能の要求が、それ以外の場合 相互運用可能な SQL ステートメントを使用しています。  
+アプリケーションの他の部分と同様に、SQL ステートメントを相互運用可能または DBMS 固有にすることができます。 アプリケーションの他の部分と同様に、相互運用可能な SQL ステートメントの方法はアプリケーションの種類によって異なります。 カスタムアプリケーションは、通常、1つまたは2つの Dbms の機能を利用するように設計されているため、相互運用可能な SQL ステートメントを使用することはあまりありません。 汎用アプリケーションは、さまざまな Dbms で動作するように設計されているため、相互運用可能な SQL ステートメントを使用します。 また、垂直方向のアプリケーションは、通常、特定のレベルの機能を要求し、それ以外の場合は相互運用可能な SQL ステートメントを使用して、一定の場所にあります。  
   
  このセクションでは、次のトピックを扱います。  
   

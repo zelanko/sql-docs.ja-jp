@@ -1,5 +1,6 @@
 ---
 title: 移行を評価するための PowerShell コマンドレット | Microsoft Docs
+description: SQL Server データベース内にあるオブジェクトのインメモリ OLTP 用の移行適合性を評価する Save-SqlMigrationReport について説明します。
 ms.custom: ''
 ms.date: 07/30/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: f0c3489dab411718eb32e8ff4dd6c182ec59f2b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68698305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722382"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>移行を評価するための PowerShell コマンドレット
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `Save-SqlMigrationReport` コマンドレットは、SQL Server データベース内にある複数のオブジェクトの移行適合性を評価するツールです。
 
@@ -55,22 +56,22 @@ Save-SqlMigrationReport
 - `-Schema`
 - `-Object`
 
-逆に、`-InputObject` を指定 _場合は、`-Server` および `-Database` を指定します。 `-Server` を指定する場合、`-Schema` または `-Object`、またはその両方を指定して範囲を狭めるオプションがあります。
+逆に、`-InputObject` を指定_しない_場合は、`-Server` および `-Database` を指定します。 `-Server` を指定する場合、`-Schema` または `-Object`、またはその両方を指定して範囲を狭めるオプションがあります。
 
-| [パラメーター名] | [説明] |
+| パラメーター名 | 説明 |
 | :------------- | :---------- |
 | データベース | 対象の SQL Server データベースの名前。 `-Server` が必須の場合は必須です。<br/><br/> SQLPS では省略可能です。 |
 | FolderPath | コマンドレットで、生成されたレポートを格納するフォルダー。<br/><br/> 必須。 |
 | InputObject | コマンドレットが対象とする SMO オブジェクト。<br/><br/> `-Server` が指定されていない場合、Windows Powershell 環境では必須です。<br/><br/> SQLPS では省略可能です。 |
-| MigrationType | コマンドレットが対象としている移行シナリオの種類。 現在、既定値の **'OLTP'** のみが既定値になります。<br/><br/> 省略可。 |
+| MigrationType | コマンドレットが対象としている移行シナリオの種類。 現在、既定値の **'OLTP'** のみが既定値になります。<br/><br/> 省略可能。 |
 | Object | 報告するオブジェクトの名前。 テーブルまたはストアド プロシージャを指定できます。 |
-| パスワード | `-Username` が必要な場合は必須。 |
-| スキーマ | 報告されるオブジェクトを所有するスキーマの名前。<br/><br/> 省略可。 |
-| [サーバー] | 対象の SQL Server インスタンスの名前。 `-InputObject` パラメーターが指定されていない場合、Windows Powershell 環境では必須です。<br/><br/> SQLPS では省略可能です。 |
-| Username | Windows 認証ではなく SQL Server 認証を使用して接続する場合に必要です。 それ以外の場合は省略します。 |
+| Password | `-Username` が必要な場合は必須。 |
+| スキーマ | 報告されるオブジェクトを所有するスキーマの名前。<br/><br/> 省略可能。 |
+| サーバー | 対象の SQL Server インスタンスの名前。 `-InputObject` パラメーターが指定されていない場合、Windows Powershell 環境では必須です。<br/><br/> SQLPS では省略可能です。 |
+| ユーザー名 | Windows 認証ではなく SQL Server 認証を使用して接続する場合に必要です。 それ以外の場合は省略します。 |
 | &nbsp; | &nbsp; |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このコマンドレットを実行する前に、まず **SqlServer** という名前のモジュールをインストールする必要があります。
 
@@ -111,7 +112,7 @@ Save-SqlMigrationReport `
 
 HTML は、主に次のヘッダーを持つ 2 列のテーブルです。
 
-- [説明]
+- 説明
 - 検証結果
 
 1 つのテーブルの HTML レポートの実際の例を次に示します。
@@ -176,7 +177,7 @@ HTML は、主に次のヘッダーを持つ 2 列のテーブルです。
 
 また、テーブルがどのような外観かを次に示します。
 
-| [説明] | 検証結果 |
+| 説明 | 検証結果 |
 | :---------- | :---------------- |
 | このテーブルにはサポートされていないデータ型が定義されていません。 | 成功 |
 | このテーブルにはスパース列が定義されていません。 | 成功 |

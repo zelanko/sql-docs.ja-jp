@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 4a1d72b1-ab1b-4119-a11b-a8a05c6fdb45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c2818c322749672c514cd9d392b61b580d40e88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6750fa74b6a3ad0643ad061203ab9593b7e961ca
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869904"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552267"
 ---
-# <a name="mssqlserver14420"></a>MSSQLSERVER_14420
+# <a name="mssqlserver_14420"></a>MSSQLSERVER_14420
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|14420|  
@@ -58,10 +57,10 @@ ms.locfileid: "62869904"
     >  2 つのサーバー インスタンスでタイム ゾーンが異なることによって、問題が発生することはありません。  
   
 ## <a name="see-also"></a>参照  
- [log_shipping_monitor_primary &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-monitor-primary-transact-sql)   
+ [log_shipping_monitor_primary &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/log-shipping-monitor-primary-transact-sql)   
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_help_log_shipping_monitor_primary &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)   
- [sp_refresh_log_shipping_monitor &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
+ [sp_help_log_shipping_monitor_primary &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

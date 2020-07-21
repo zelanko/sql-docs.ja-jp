@@ -12,14 +12,14 @@ helpviewer_keywords:
 - GETDATE function
 - dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 492e3f702fc5ae851a6d78aae2df5fa26e5ca379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b17deb29406ff70d777e45ceed8db8ca23275f1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080933"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71289753"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (SSIS 式)
 

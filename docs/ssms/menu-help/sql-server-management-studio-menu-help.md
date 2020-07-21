@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio メニュー ヘルプ | Microsoft Docs
-ms.custom: ''
+title: SQL Server Management Studio メニュー ヘルプ
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d541d10f86e1ca0f12b421bee71b4923088214b7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5d44d4d2c4c825e671eb8f4210994324b3a0c094
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260138"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75240532"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio メニュー ヘルプ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-ここでは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のメニュー バーを使用して表示できるダイアログ ボックスとページの F1 ヘルプについて紹介します。  
+ここでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のメニュー バーを使用して表示できるダイアログ ボックスとページの F1 ヘルプについて紹介します。  
   
 [[Microsoft SQL Server Management Studio のバージョン情報]](../../ssms/menu-help/about-sql-server-management-studio.md)  
   

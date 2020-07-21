@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 27919edee71f55d6d035f81e92cc12aa298b74e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 466cff492c5547357409cee1b11c7a6542971ae5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811425"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878695"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   警告およびジョブで使用するオペレーター (通知受信者) を作成します。  
   
@@ -52,24 +52,24 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'`オペレーター (通知受信者) の名前。 この名前は一意である必要があり、パーセント **%** () 文字を含めることはできません。 *名前*は**sysname**,、既定値はありません。  
+`[ @name = ] 'name'`オペレーター (通知受信者) の名前。 この名前は一意である必要があり、パーセント () 文字を含めることはできません **%** 。 *名前*は**sysname**,、既定値はありません。  
   
 `[ @enabled = ] enabled`オペレーターの現在の状態を示します。 *有効*になっているは**tinyint**,、既定値は**1** (有効) です。 **0**の場合、オペレーターは無効になり、通知を受信しません。  
   
-`[ @email_address = ] 'email_address'`オペレーターの電子メールアドレス。 この文字列はメール システムに直接渡されます。 *email_address*は**nvarchar (100)** ,、既定値は NULL です。  
+`[ @email_address = ] 'email_address'`オペレーターの電子メールアドレス。 この文字列はメール システムに直接渡されます。 *email_address*は**nvarchar (100)**,、既定値は NULL です。  
   
- *Email_address*の物理電子メールアドレスまたはエイリアスを指定できます。 以下に例を示します。  
+ *Email_address*には、物理電子メールアドレスまたはエイリアスを指定できます。 次に例を示します。  
   
- '**jdoe**' または **jdoe@xyz.com** ' '  
+ '**jdoe**' または '**jdoe \@ xyz.com**'  
   
 > [!NOTE]  
 >  データベース メールには電子メール アドレスを使用する必要があります。  
   
-`[ @pager_address = ] 'pager_address'`オペレーターのポケットベルアドレス。 この文字列はメール システムに直接渡されます。 *pager_address*は**nvarchar (100)** ,、既定値は NULL です。  
+`[ @pager_address = ] 'pager_address'`オペレーターのポケットベルアドレス。 この文字列はメール システムに直接渡されます。 *pager_address*は**nvarchar (100)**,、既定値は NULL です。  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time`月曜日から金曜日まで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の平日に、指定したオペレーターにエージェントがポケットベルによる通知を送信するまでの時間。 *weekday_pager_start_time*は**int**,、既定値は**090000**,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]月曜日から金曜日までの平日に、指定したオペレーターにエージェントがポケットベルによる通知を送信するまでの時間。 *weekday_pager_start_time*は**int**,、既定値は**090000**,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
-`[ @weekday_pager_end_time = ] weekday_pager_end_time`月曜日から金曜日までの平日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *エージェント*は**int**,、既定値は 18万,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time`月曜日から金曜日までの平日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *weekday_pager_end_time*は**int**,、既定値は 18万,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
 `[ @saturday_pager_start_time = ] saturday_pager_start_time`土曜日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信するまでの時間。 *saturday_pager_start_time*は**int**,、既定値は 090000,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
@@ -79,19 +79,19 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @sunday_pager_end_time = ] sunday_pager_end_time`日曜日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *sunday_pager_end_time*は**int**,、既定値は**18万**,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
-`[ @pager_days = ] pager_days`ページで演算子が使用できる曜日を示す数値です (指定された開始/終了時刻に従います)。 *pager_days*は**tinyint**,、既定値は**0**の場合は、オペレーターがページを受信できないことを示します。 有効な値は**0** ~ **127**です。 *pager_days*は、必要な日の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2**+**4**+**8**+**16**+**32** = **62**になります。 次の表は、各曜日の値を示しています。  
+`[ @pager_days = ] pager_days`ページで演算子が使用できる曜日を示す数値です (指定された開始/終了時刻に従います)。 *pager_days*は**tinyint**,、既定値は**0**の場合、操作がページを受信できないことを示します。 有効な値は**0** ~ **127**です。 *pager_days*は、必要な日数の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2** + **4** + **8** + **16** + **32**  =  **62**になります。 次の表は、各曜日の値を示しています。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|**1**|日曜日|  
+|**1**|土曜日|  
 |**2**|月曜日|  
-|**4**|火曜日|  
+|**4**|Tuesday|  
 |**8**|水曜日|  
-|**16**|木曜日|  
+|**16**|Thursday|  
 |**32**|金曜日|  
 |**64**|土曜日|  
   
-`[ @netsend_address = ] 'netsend_address'`ネットワークメッセージの送信先オペレーターのネットワークアドレス。 *netsend_address*は**nvarchar (100)** ,、既定値は NULL です。  
+`[ @netsend_address = ] 'netsend_address'`ネットワークメッセージの送信先オペレーターのネットワークアドレス。 *netsend_address*は**nvarchar (100)**,、既定値は NULL です。  
   
 `[ @category_name = ] 'category'`この演算子のカテゴリの名前。 *category*は**sysname**,、既定値は NULL です。  
   
@@ -101,7 +101,7 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sp_add_operator**は、 **msdb**データベースから実行する必要があります。  
   
  ページングは電子メールシステムでサポートされています。ページングを使用する場合は、電子メールとポケットベルの機能が必要です。  
@@ -130,9 +130,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_delete_operator &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

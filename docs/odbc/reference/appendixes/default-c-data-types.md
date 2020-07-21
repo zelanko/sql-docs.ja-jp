@@ -12,25 +12,25 @@ helpviewer_keywords:
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
 - pseudo-type identifiers [ODBC]
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b9e0a9b8e85967ce46344e824c03e74fe3552e7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fdb787580e1c79df805f468416ab8993a1d32a26
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130013"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307053"
 ---
 # <a name="default-c-data-types"></a>既定の C データ型
-アプリケーションで SQL_C_DEFAULT を指定する場合**SQLBindCol**、 **SQLGetData**、または**SQLBindParameter**ドライバーは、その入力バッファーまたは出力の C データ型が前提としています。列またはパラメーターのバッファーをバインドする対象の SQL データ型に対応します。  
+アプリケーションで**SQLBindCol**、 **SQLGetData**、または**SQLBindParameter**の SQL_C_DEFAULT が指定されている場合、ドライバーでは、出力バッファーまたは入力バッファーの C データ型が、バッファーのバインド先の列またはパラメーターの SQL データ型に対応していると見なされます。  
   
 > [!IMPORTANT]  
->  相互運用可能なアプリケーションでは、SQL_C_DEFAULT を使用する必要があります。 これらは、常を使用しているバッファーの C 型を指定する必要があります。 これは、ドライバーが次の理由で既定の C 型を常に正しく判断できないためです。  
+>  相互運用可能なアプリケーションでは、SQL_C_DEFAULT を使用しないでください。 代わりに、使用しているバッファーの C 型を常に指定する必要があります。 これは、次の理由により、ドライバーが既定の C 型を常に正しく特定できないためです。  
   
--   DBMS が、SQL データ型の列またはパラメーターを昇格する場合、ドライバーは元の SQL データ型の列またはパラメーターを特定できません。 そのため、対応する既定の C データ型を判断できません。  
+-   DBMS が列またはパラメーターの SQL データ型を昇格させる場合、ドライバーは、列またはパラメーターの元の SQL データ型を特定できません。 したがって、対応する既定の C データ型を決定することはできません。  
   
--   ドライバーを決定できない場合かどうかは、特定の列またはパラメーターが署名済み、これが、大文字と小文字は多くの場合、ドライバーが判断できない、DBMS によって処理される対応する既定の C データを入力するかどうかする必要がある付きまたは署名なし。  
+-   ドライバーが、特定の列またはパラメーターが署名されているかどうかを判断できない場合、これが DBMS によって処理される場合と同様に、ドライバーは、対応する既定の C データ型が署名されているか署名なしであるかを判断できません。  
   
-     SQL_C_DEFAULT がプログラミングの利便性としてのみ提供される、ため、アプリケーションが実際の C データ型を指定する場合の機能を失うしていません。  
+     SQL_C_DEFAULT はプログラミングの便宜的な機能としてのみ提供されるため、実際の C データ型を指定しても、アプリケーションは機能を失いません。  
   
- 各 SQL データ型の既定の C データ型を示す表が含まれている[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)、この付録で後述します。
+ 各 SQL データ型の既定の C データ型を示す表は、この付録の「 [sql から c データ型へのデータの変換](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)」に含まれています。

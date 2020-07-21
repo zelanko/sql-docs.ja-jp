@@ -1,6 +1,6 @@
 ---
-title: IRowsetFastLoad を使用した一括データコピー (OLE DB) |Microsoft Docs
-description: SQL Server の OLE DB Driver の IRowsetFastLoad インターフェイスを使用して、SQL Server テーブルにデータを一括コピーする
+title: IRowsetFastLoad を使用したデータの一括コピー (OLE DB) | Microsoft Docs
+description: OLE DB Driver for SQL Server の IRowsetFastLoad インターフェイスを使用し、SQL Server テーブルにデータを一括コピーする
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 926cc4f4d3dd1f3022c2b653a32f12ee58492b24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015644"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad を使用したデータの一括コピー (OLE DB)
@@ -29,7 +29,7 @@ ms.locfileid: "68015644"
 
   このサンプルでは、IRowsetFastLoad を使用して、レコードをテーブルに一括コピーする方法を示します。  
   
- コンシューマーは、ドライバーに固有のプロパティ SSPROP_ENABLEFASTLOAD SQL Server の OLE DB ドライバーを VARIANT_TRUE に設定することによって OLE DB ドライバーに一括コピーの必要 SQL Server を通知します。 データソースに設定されたプロパティを使用して、コンシューマーは SQL Server セッション用の OLE DB ドライバーを作成します。 新しいセッションでは、コンシューマーが**IRowsetFastLoad**にアクセスできるようになります。  
+ コンシューマーは、OLE DB Driver for SQL Server ドライバー固有のプロパティである SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定することにより、一括コピーを実行する必要があることを OLE DB Driver for SQL Server に通知します。 コンシューマーはデータ ソースのプロパティ セットを使用して、OLE DB Driver for SQL Server セッションを作成します。 この新しいセッションによって、コンシューマーから **IRowsetFastLoad** にアクセスできるようになります。  
   
  **IRowsetFastLoad** を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 テーブル **IRFLTable** をデータベース内に作成する必要があります。  
   
@@ -42,17 +42,17 @@ ms.locfileid: "68015644"
   
 1.  データ ソースへの接続を確立します。  
   
-2.  SQL Server ドライバー固有のデータソースプロパティ SSPROP_ENABLEFASTLOAD の OLE DB ドライバーを VARIANT_TRUE に設定します。 このプロパティを VARIANT_TRUE に設定すると、新しく作成されたセッションを使用して、コンシューマーから **IRowsetFastLoad** にアクセスできるようになります。  
+2.  OLE DB Driver for SQL Server ドライバー固有のデータ ソース プロパティ SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定します。 このプロパティを VARIANT_TRUE に設定すると、新しく作成されたセッションを使用して、コンシューマーから **IRowsetFastLoad** にアクセスできるようになります。  
   
-3.  **IOpenRowset**インターフェイスを要求するセッションを作成します。  
+3.  **IOpenRowset** インターフェイスを要求するセッションを作成します。  
   
 4.  **IOpenRowset::OpenRowset** を呼び出して、(一括コピー操作によるデータのコピー先の) テーブルのすべての行が含まれる行セットを開きます。  
   
-5.  必要なバインドを実行し、 **IAccessor:: CreateAccessor**を使用してアクセサーを作成します。  
+5.  必要なバインドを実行し、**IAccessor::CreateAccessor** を使用してアクセサーを作成します。  
   
 6.  テーブルへのデータのコピー元となる、メモリ バッファーを設定します。  
   
-7.  **IRowsetFastLoad:: InsertRow**を呼び出して、データをテーブルに一括コピーします。  
+7.  **IRowsetFastLoad::InsertRow** を呼び出し、テーブルにデータを一括コピーします。  
   
 ## <a name="example"></a>例  
  この例では、テーブル IRFLTable に 10 個のレコードを追加します。 テーブル IRFLTable をデータベース内に作成する必要があります。 このサンプルは IA64 ではサポートされていません。  

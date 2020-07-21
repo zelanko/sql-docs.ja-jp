@@ -1,6 +1,7 @@
 ---
-title: チュートリアル:レプリケーション用の SQL Server の準備 (パブリッシャー、ディストリビューター、サブスクライバー) | Microsoft Docs
-ms.custom: ''
+title: チュートリアル:レプリケーションの準備
+description: このチュートリアルでは、Windows アカウントを作成し、スナップショット フォルダーを準備して、ディストリビューションを構成することで、レプリケーション用のパブリッシャー、ディストリビューター、サブスクライバーを準備する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 4ae1dddb8ac5b84bea8a602264c43797b2b041e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726026"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>チュートリアル:レプリケーション用の SQL Server の準備 (パブリッシャー、ディストリビューター、サブスクライバー)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 レプリケーション トポロジを構成するには、事前にセキュリティ計画を立てることが重要です。 このチュートリアルでは、レプリケーション トポロジのセキュリティを向上する方法について説明します。 また、データのレプリケーションの最初の手順である配布の構成方法についても説明します。 他のチュートリアルを行う前に、まずこのチュートリアルを実行してください。  
   
 > [!NOTE]  
@@ -35,7 +36,7 @@ ms.locfileid: "68742943"
 > * スナップショット フォルダーを準備する。
 > * ディストリビューションを構成する。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このチュートリアルは、データベースの基本的な操作は理解しているが、レプリケーション機能についてはあまり詳しくないユーザーを対象としています。 
 
 このチュートリアルを実行するには、SQL Server、SQL Server Management Studio (SSMS)、および AdventureWorks データベースが必要です。  
@@ -47,12 +48,12 @@ ms.locfileid: "68742943"
   
 - サブスクライバー サーバー (レプリケーション先) に、[!INCLUDE[ssEW](../../includes/ssew-md.md)] を除く [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のエディションをインストールします。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] は、トランザクション レプリケーションのサブスクライバーとして使用できません。  
   
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
 - [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードします。 SSMS でデータベースを復元する方法の詳細については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
     
 >[!NOTE]
-> - 3 つ以上離れたバージョンの SQL Server インスタンスでは、レプリケーションはサポートされていません。 詳細については、「[Supported SQL Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)」(レプリケーション トポロジでサポートされている SQL Server のバージョン) を参照してください。
+> - 3 つ以上離れたバージョンの SQL Server インスタンスでは、レプリケーションはサポートされていません。 詳細については、「[Supported SQL Versions in Replication Topology](replication-backward-compatibility.md)」(レプリケーション トポロジでサポートされている SQL Server のバージョン) を参照してください。
 > - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、固定サーバー ロール **sysadmin** のメンバーとしてログインし、パブリッシャーとサブスクライバーに接続する必要があります。 このロールの詳細については、「[サーバー レベルのロール](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)」を参照してください。  
 
 
@@ -63,13 +64,13 @@ ms.locfileid: "68742943"
   
 |エージェント|場所|アカウント名|  
 |---------|------------|----------------|  
-|スナップショット エージェント|パブリッシャー|<*machine_name*>\repl_snapshot|  
-|ログ リーダー エージェント (Log Reader Agent)|パブリッシャー|<*machine_name*>\repl_logreader|  
+|スナップショット エージェント|Publisher|<*machine_name*>\repl_snapshot|  
+|ログ リーダー エージェント (Log Reader Agent)|Publisher|<*machine_name*>\repl_logreader|  
 |ディストリビューション エージェント|パブリッシャーおよびサブスクライバー|<*machine_name*>\repl_distribution|  
 |[マージ エージェント]|パブリッシャーおよびサブスクライバー|<*machine_name*>\repl_merge|  
   
 > [!NOTE]  
-> このレプリケーション チュートリアルでは、パブリッシャーとディストリビューターで同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (NODE1\SQL2016) を共有します。 サブスクライバー インスタンス (NODE2 \ SQL2016) はリモートです。 パブリッシャーとサブスクライバーが同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを共有することもできますが、これは必須条件ではありません。 パブリッシャーとサブスクライバーが同じインスタンスを共有している場合、サブスクライバー側でアカウントの作成に使用される手順は必要ありません。  
+> このレプリケーション チュートリアルでは、パブリッシャーとディストリビューターで同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (NODE1\SQL2016) を共有します。 サブスクライバー インスタンス (NODE2 \ SQL2016) はリモートです。 パブリッシャーとサブスクライバーが同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを共有することもできますが、これは必須条件ではありません。 パブリッシャーとサブスクライバーが同じインスタンスを共有している場合、サブスクライバー側でアカウントの作成に使用される手順は必要ありません。  
 
 ### <a name="create-local-windows-accounts-for-replication-agents-at-the-publisher"></a>パブリッシャー側でレプリケーション エージェントを実行するためのローカル Windows アカウントを作成する
   
@@ -116,9 +117,9 @@ ms.locfileid: "68742943"
   
 3. フォルダーを右クリックし、 **[プロパティ]** を選択します。  
   
-   A. **[repldata のプロパティ]** ダイアログ ボックスの **[共有]** タブで、 **[詳細な共有]** を選択します。  
+   a. **[repldata のプロパティ]** ダイアログ ボックスの **[共有]** タブで、 **[詳細な共有]** を選択します。  
   
-   B. **[詳細な共有]** ダイアログ ボックスで、 **[このフォルダーを共有する]** を選択し、 **[アクセス許可]** を選択します。  
+   b. **[詳細な共有]** ダイアログ ボックスで、 **[このフォルダーを共有する]** を選択し、 **[アクセス許可]** を選択します。  
 
    ![repldata フォルダーを共有する選択](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
@@ -180,15 +181,16 @@ ms.locfileid: "68742943"
    ![ショートカット メニューの [ディストリビューションの構成] コマンド](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > 実際のサーバー名ではなく **localhost** を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が **localhost** に接続できないことを示す警告が表示されます。 警告ダイアログで **[OK]** を選択します。 **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** を **localhost** から使用しているサーバーの名前に変更します。 **[接続]** を選択します。  
-  
+   > - 実際のサーバー名ではなく **localhost** を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が **localhost または IP アドレス**に接続できないことを示す警告が表示されます。 警告ダイアログで **[OK]** を選択します。 **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** を **localhost または IP アドレス**から使用しているサーバーの名前に変更します。 次に、 **[接続]\(Connect\)** を選択します。  
+   > - 現時点で SQL Server Management Studio (SSMS) 18.0 (およびそれ以降) には既知の問題があります。IP アドレスを使用してディストリビューターに接続するときに警告メッセージは表示 "_されません_" が、これはまだ無効です。 ディストリビューターに接続するときは、実際のサーバー名を使用する必要があります。 
+   
    ディストリビューション構成ウィザードが起動します。  
   
 3. **[ディストリビューター]** ページで、[< *'サーバー名'* >  **を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]** を選択します。 **[次へ]** を選択します。  
 
    ![サーバーを独自のディストリビューターとするオプション](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
-4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていない場合は、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動]** ページで **[はい、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを自動的に開始するように構成します]** を選択します。 **[次へ]** を選択します。  
+4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていない場合は、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動]** ページで、 **[はい、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを自動的に開始するように構成します]** を選択します。 **[次へ]** を選択します。  
 
      
 5. **[スナップショット フォルダー]** ボックスにパス \\\\<*パブリッシャー コンピューター名*> **\repldata** を入力し、 **[次へ]** を選択します。 このパスは、共有のプロパティを構成した後に repldata のプロパティ フォルダーの **[ネットワーク パス]** に以前表示されていたパスと一致する必要があります。 
@@ -234,18 +236,16 @@ SQL Server Management Studio インスタンスが管理者権限で実行され
 
    ![オブジェクト エクスプローラーの 4 つのアカウントすべてが表示された画面](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
- 6. ディストリビューション エージェントとマージ エージェントのサブスクライバーに対して手順 1 から 4 を繰り返し、マシン名をサブスクライバーの名前に変更します。 
   
-  
-詳細については、以下をご覧ください。
+詳細については、次を参照してください。
 - [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md) 
 - [レプリケーション エージェントのセキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 サーバーをレプリケーション用に正常に準備しました。 次の記事では、トランザクション レプリケーションを構成する方法を説明します。 
 
 > [!div class="nextstepaction"]
-> [チュートリアル: 2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する](tutorial-replicating-data-between-continuously-connected-servers.md)
+> [チュートリアル:2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する](tutorial-replicating-data-between-continuously-connected-servers.md)
 
   
   

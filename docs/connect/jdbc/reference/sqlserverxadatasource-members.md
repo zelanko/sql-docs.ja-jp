@@ -1,5 +1,5 @@
 ---
-title: SQLServerXADataSource Members |Microsoft Docs
+title: SQLServerXADataSource のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2baf4e745e18052646e842eb64445690229ed0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970176"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource のメンバー
@@ -24,7 +24,7 @@ ms.locfileid: "67970176"
   
 ## <a name="constructors"></a>コンストラクター  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[SQLServerXADataSource ()](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスの新しいインスタンスを初期化します。|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67970176"
   
 ## <a name="methods"></a>メソッド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) **applicationIntent** 接続プロパティの値が返されます。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) アプリケーション名が返されます。|  

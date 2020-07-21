@@ -16,26 +16,26 @@ helpviewer_keywords:
 - BINARY_CHECKSUM function
 - binary [SQL Server], checksum values
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11b29a516fb7c8eeaa50bec33b8fce8bfc6dc901
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790017"
 ---
-# <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
+# <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 テーブルの 1 つの行、または一連の式に対して計算された、バイナリのチェックサム値を返します。
   
-![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
@@ -43,7 +43,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 *\**  
 計算がすべてのテーブルの列に対して行われることを指定します。 BINARY_CHECKSUM の計算では、比較できないデータ型の列は無視されます。 比較できないデータ型は次のとおりです。  
 * **cursor**  
-* **image**  
+* **画像**  
 * **ntext**  
 * **text**  
 * **xml**  
@@ -56,7 +56,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 テーブルの任意の行で計算される `BINARY_CHECKSUM(*)` では、行が後で変更されていない限り、同じ値が返されます。 `BINARY_CHECKSUM` はハッシュ関数のプロパティに対応します。2 つの式のリストに適用した場合、2 つのリストの対応する要素のデータ型が同じであり、等号 (=) 演算子による比較で等価であれば、同じ値が返されます。 この定義では、指定した型が NULL 値であるとすると、等しい値として比較されます。 式リストのいずれかの値を変更した場合は、その式のチェックサムも変わります。 ただし、この変更は保証されていないため、値が変更されたかどうかを検出するには、アプリケーションが変更を検出できないことを許容できる場合のみ、`BINARY_CHECKSUM` の使用をお勧めします。 それ以外の場合は、代わりに `HASHBYTES` の使用を検討してください。 MD5 ハッシュ アルゴリズムを指定した場合は、`HASHBYTES` から 2 つの異なる入力に対して同じ結果が返される可能性が `BINARY_CHECKSUM` よりもはるかに低くなります。
   
 `BINARY_CHECKSUM` は式のリスト全体を処理でき、指定されたリストに対して同じ値を返します。 `BINARY_CHECKSUM` を 2 つの式のリストに適用した場合、2 つのリストの対応する要素が同じ型と同じバイト表現であれば、同じ値が返されます。 この定義では、指定した型の値が NULL であった場合、これらの値は同じバイト表現として扱われます。
@@ -70,7 +70,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 * **nvarchar**  
 * **varchar**  
 
-内の複数の  
+or  
 
 * **sql_variant** (**sql_variant** の基本データ型が文字列データ型の場合)。  
   
@@ -78,7 +78,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
  
 `BINARY_CHECKSUM` では、任意の長さの **varbinary(max)** 型の文字と、最大 255 文字の **nvarchar(max)** 型がサポートされます。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、`BINARY_CHECKSUM` を使用して、テーブル行の変更を検出します。
   
 ```sql

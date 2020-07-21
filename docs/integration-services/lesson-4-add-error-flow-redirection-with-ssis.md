@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3ad643a65eb83b1593b21782ad9784d5062c3899
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c0117f867363a9536887ff1b67e1960170317d8d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055759"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295937"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>レッスン 4:SSIS でエラー フロー リダイレクションを追加する
 
@@ -33,7 +33,7 @@ ms.locfileid: "68055759"
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] でエラー データをファイルに書き込む前に、エラーの説明を取得するスクリプト コンポーネントを追加します。 その後 Lookup Currency Key 変換を再構成して、処理できなかったデータをスクリプト変換にリダイレクトするようにします。  
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 > [!NOTE]
 > まだ行っていない場合は、[レッスン 1 の前提条件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites)を参照してください。
@@ -45,7 +45,7 @@ ms.locfileid: "68055759"
   
 -   [手順 2:破損したファイルを作成する](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [手順 3:エラー フロー リダイレクションを追加する](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+-   [ステップ 3:エラー フロー リダイレクションを追加する](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
 -   [手順 4:フラット ファイル変換先を追加する](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   

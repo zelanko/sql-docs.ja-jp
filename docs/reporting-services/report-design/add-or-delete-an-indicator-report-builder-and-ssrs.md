@@ -1,5 +1,5 @@
 ---
-title: インジケーターの追加または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: インジケーターの追加または削除 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9bb437acf4b30a4a497286e3b8c6adabd6b5291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 08dd396fc68bae04d973d6b96f67466006642120
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581907"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081572"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>インジケーターの追加または削除 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートのインジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 詳細については、「 [インジケーター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
@@ -22,7 +22,7 @@ ms.locfileid: "65581907"
   
  インジケーターを最初に追加すると、既定では測定単位としてパーセンテージを使用するように構成されます。 パーセンテージの範囲は、インジケーター セットのメンバー間に均等に配分されます。テーブルやマトリックスなど、インジケーターの親が、インジケーターによって表示される値のスコープです。  
   
- インジケーターの値および状態は、更新することができます。 詳細については、次の各トピックを参照してください。  
+ インジケーターの値および状態は、更新することができます。 詳細については、次のトピックを参照してください。  
   
 -   [インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   

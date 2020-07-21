@@ -1,6 +1,6 @@
 ---
-title: IPAddressName プロパティ (ServerNetworkProtocolProperty クラス) |Microsoft Docs
-ms.custom: ''
+title: IPAddressName プロパティ (ServerNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b70780de9977a682b62fa01a4087fc7fc6726b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6217cb2441f0a24c8b8ebd5dd25737dd5973e3d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044331"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880788"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>IPAddressName プロパティ (ServerNetworkProtocolProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   IP アドレスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +35,16 @@ ms.locfileid: "68044331"
 object.IPAddressName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ServerNetworkProtocolProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクトのインスタンス上のネットワーク プロトコルの属性を表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ のインスタンス上のネットワークプロトコルの属性を表す[Servernetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  IP アドレスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

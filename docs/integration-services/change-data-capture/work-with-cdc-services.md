@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 160d7125cb729ee19bbfb31fe5990e4aa1196688
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f29f257e6e50a5c835ddcccb323c557bd693bbe5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898947"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298579"
 ---
 # <a name="work-with-cdc-services"></a>CDC Service の操作
 

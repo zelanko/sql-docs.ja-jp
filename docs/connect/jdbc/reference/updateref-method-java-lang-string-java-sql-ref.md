@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7740d17d-282f-4f1d-91f9-c68a873b069a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba6c81bb3ce7760427388032cf9a8b216ce06d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 322249da1311410f3220d0d782893c6ee09a2efa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998597"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919691"
 ---
 # <a name="updateref-method-javalangstring-javasqlref"></a>updateRef (java.lang.String, java.sql.Ref) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,11 +47,11 @@ public void updateRef(java.lang.String columnName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateRef メソッドは、java.sql.ResultSet インターフェイスの updateRef メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [updateRef メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
+ [updateRef メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

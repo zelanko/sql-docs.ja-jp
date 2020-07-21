@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f536ae91cde1301b9499b2d36957d25c877be9c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19a38b4f30b40985236a3e8ad37c7db0ee409751
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073056"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545684"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>ロールと権限 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、操作、オブジェクト、およびデータへのアクセスを許可する、ロールベースの承認モデルが用意されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスまたはデータベースにアクセスするすべてのユーザーは、ロールのコンテキスト内でアクセスする必要があります。  

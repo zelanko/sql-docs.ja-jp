@@ -25,15 +25,15 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 664e3cd0fc687509c630258a681c155d94863d39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 579c73661c3893fdd1346ccc60b64103a4326c2d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943067"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003994"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (ビットごとの排他的 OR) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   2 つの整数の間でビットごとの排他的 OR 演算を実行します。  
   
@@ -59,20 +59,18 @@ expression ^ expression
   
  入力値が **tinyint** の場合は **tinyint** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ビットごとの **^** 演算子では、2 つの式の対応するビットを対象に、ビットごとの排他的論理 OR 演算が実行されます。 入力式で現在処理対象となっているビットについて、両方ではなくいずれか一方のビットだけが 1 の場合、結果セットのビットは 1 に設定されます。 両方のビットが 0 または 1 の場合、結果セットのビットはクリアされて 0 になります。  
   
- 左側の式と右側の式が異なる整数型の場合 (たとえば、左側の*式*が **smallint** 型で、右側の*式*が **int** 型の場合)、小さいデータ型の引数が大きいデータ型の引数に変換されます。 この場合、**smallint**_expression_ は **int** に変換されます。  
+ 左側の式と右側の式が異なる整数型の場合 (たとえば、左側の*式*が **smallint** 型で、右側の*式*が **int** 型の場合)、小さいデータ型の引数が大きいデータ型の引数に変換されます。 この場合、**smallint** "_式_" は **int** に変換されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、**int** データ型を使用して元の値を格納するテーブルを作成し、1 行に 2 つの値を挿入します。  
   
 ```  
-CREATE TABLE bitwise  
-(   
-a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (   
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL);
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

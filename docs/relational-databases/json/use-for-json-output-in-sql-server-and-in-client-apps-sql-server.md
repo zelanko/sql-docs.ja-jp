@@ -1,9 +1,7 @@
 ---
-title: SQL Server およびクライアント アプリでの FOR JSON 出力の使用 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/02/2016
+title: SQL Server およびクライアント アプリでの FOR JSON 出力の使用
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +10,18 @@ helpviewer_keywords:
 ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ddab9f3375a490e1c0d11912da89612320fa877
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 882a5e5aaee3bacf6d27866d388f161a59c0086b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928045"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755743"
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>SQL Server およびクライアント アプリでの FOR JSON 出力の使用 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはクライアント アプリで **FOR JSON** 句およびその JSON 出力を使用する方法を例として示します。  
   
@@ -29,7 +29,10 @@ ms.locfileid: "67928045"
 FOR JSON 句の出力は NVARCHAR(MAX) 型のため、次の例に示すように、任意の変数に割り当てることができます。  
   
 ```sql  
-DECLARE @x NVARCHAR(MAX) = (SELECT TOP 10 * FROM Sales.SalesOrderHeader FOR JSON AUTO)  
+DECLARE @x NVARCHAR(MAX) =
+  (SELECT TOP 10 *
+     FROM Sales.SalesOrderHeader
+     FOR JSON AUTO)  
 ```  
   
 ## <a name="use-for-json-output-in-sql-server-user-defined-functions"></a>FOR JSON 出力を SQL Server のユーザー定義関数で使用する  

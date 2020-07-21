@@ -1,6 +1,6 @@
 ---
-title: IntelliSense でサポートされている Transact-SQL 構文 | Microsoft Docs
-ms.custom: ''
+title: IntelliSense でサポートされている Transact-SQL 構文
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,21 +12,20 @@ helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6db4de99458ced7471414540bc46704cfab928fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b3d34fc79dd7817e64b34b61083415477860ce97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063327"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997931"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense でサポートされている Transact-SQL 構文
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の IntelliSense でサポートされる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ステートメントと構文要素について説明します。  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense でサポートされるステートメント  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の IntelliSense では、特に一般的な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのみがサポートされます。 いくつかの一般的な[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの状態が原因で IntelliSense が動作しなくなる場合があります。 詳細については、「[IntelliSense のトラブルシューティング &#40;SQL Server Management Studio&#41;](troubleshooting-intellisense.md)」を参照してください。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の IntelliSense では、特に一般的な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのみがサポートされます。 いくつかの一般的な [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの状態が原因で IntelliSense が動作しなくなる場合があります。 詳細については、「[IntelliSense のトラブルシューティング &#40;SQL Server Management Studio&#41;](troubleshooting-intellisense.md)」を参照してください。  
   
 > [!NOTE]  
 >  IntelliSense は、暗号化されたデータベース オブジェクト (たとえば暗号化されたストアド プロシージャまたはユーザー定義関数) に対しては利用できません。 拡張されたストアド プロシージャおよび CLR 統合のユーザー定義型のパラメーターに対しては、パラメーターのヘルプおよびクイック ヒントを利用できません。  
@@ -51,7 +50,7 @@ ms.locfileid: "66063327"
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|すべての構文。|  
 |[DELETE](/sql/t-sql/statements/delete-transact-sql)|すべての構文。|  
 |[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|すべての構文。|  
-|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|すべての構文。|  
+|[一連@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|すべての構文。|  
 |[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|ユーザー定義ストアド プロシージャ、システム ストアド プロシージャ、ユーザー定義関数、およびシステム関数の実行。|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|すべての構文。|  
 |[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|すべての構文。|  
@@ -93,7 +92,7 @@ ms.locfileid: "66063327"
   
  前に示した要素が他の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内で使用されている場合、IntelliSense は提供されません。 たとえば、SELECT ステートメント内で使用されている列名に対しては IntelliSense のサポートがありますが、CREATE FUNCTION ステートメント内で使用されている列に対してはサポートがありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] のスクリプトまたはバッチ内では、このトピックに記載されているステートメントと構文のみが [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense によってサポートされています。 IntelliSense でサポートされるステートメントと構文要素を次の [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード例に示します。 たとえば、次のバッチにおいて、 `SELECT` ステートメントが単独で記述されているときは IntelliSense を利用できますが、 `SELECT` が `CREATE FUNCTION` ステートメントに含まれているときは IntelliSense を利用できません。  
   
 ```  

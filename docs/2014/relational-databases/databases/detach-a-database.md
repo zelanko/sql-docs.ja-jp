@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8acc809b881012d18f78995bb8e521337fb02ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62871957"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970032"
 ---
 # <a name="detach-a-database"></a>データベースのデタッチ
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースをデタッチする方法について説明します。 デタッチされたファイルはそのまま残り、FOR ATTACH または FOR ATTACH_REBUILD_LOG オプションを指定した CREATE DATABASE によって再アタッチできます。 ファイルを別のサーバーに移動し、そこにアタッチすることもできます。  
@@ -31,7 +30,7 @@ ms.locfileid: "62871957"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **データベースをデタッチする方法:**  
   
@@ -39,17 +38,17 @@ ms.locfileid: "62871957"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  制限事項と制約事項の一覧については、「 [データベースのデタッチとアタッチ &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)のデータベースをデタッチする方法について説明します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-detach-a-database"></a>データベースをデタッチするには  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62871957"
      **[デタッチするデータベース]**  
      デタッチするデータベースを一覧表示します。  
   
-     **Database Name**  
+     **データベース名**  
      デタッチするデータベースの名前を表示します。  
   
      **[接続の削除]**  
@@ -77,24 +76,24 @@ ms.locfileid: "62871957"
      **[フルテキスト カタログの保持]**  
      既定では、デタッチ操作を行っても、データベースに関連付けられたフルテキスト カタログが保持されます。 これらのカタログを削除するには、 **[フルテキスト カタログの保持]** チェック ボックスをオフにします。 このオプションは、データベースを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からアップグレードする場合にのみ表示されます。  
   
-     **ステータス**  
-     次のどちらかの状態が表示されます: **[準備完了]** または **[準備ができていません]** 。  
+     **状態**  
+     **[準備完了]** または **[準備ができていません]** のどちらかの状態を表示します。  
   
      **メッセージ**  
      **[メッセージ]** 列に、次のようにデータベースに関する情報が表示される場合があります。  
   
     -   データベースがレプリケーションに含まれている場合、 **[状態]** は **[準備ができていません]** になり、 **[メッセージ]** 列に **[データベースがレプリケートされました]** と表示されます。  
   
-    -   データベースに 1 つまたは複数のアクティブな接続、**状態**は**準備ができていません**と**メッセージ**列が表示されます _< number_of_active_connections>_ **アクティブな接続**- 例。 **[1 のアクティブな接続]** 。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
+    -   データベースにアクティブな接続が 1 つ以上ある場合、 **[状態]** は **[準備ができていません]** になり、 **[メッセージ]** 列に _[<アクティブな接続数>_ **のアクティブな接続]** (例: **[1 のアクティブな接続]** ) と表示されます。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
   
      メッセージについてより詳しい情報を得るには、ハイパーリンクのテキストをクリックして利用状況モニターを開きます。  
   
 4.  データベースをデタッチする準備ができたら、 **[OK]** をクリックします。  
   
 > [!NOTE]  
->  新たにデタッチしたデータベースは、表示を最新の情報に更新するまで、オブジェクト エクスプローラーの **[データベース]** ノード内に表示されたままです。 いつでも表示を更新することができます。[オブジェクト エクスプローラ] ウィンドウでをクリックし、メニュー バーから選択**ビュー**し**更新**します。  
+>  新たにデタッチしたデータベースは、表示を最新の情報に更新するまで、オブジェクト エクスプローラーの **[データベース]** ノード内に表示されたままです。 表示の更新はいつでも実行できます。表示を更新するには、[オブジェクト エクスプローラー] ペインをクリックし、 **[表示]** メニューの **[最新の情報に更新]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-detach-a-database"></a>データベースをデタッチするには  
   

@@ -1,10 +1,9 @@
 ---
-title: '[テーブルのプロパティ] (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: テーブルのプロパティ
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b53bed28d05d490b9b6d603260917f7ffbb4d047
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261573"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242181"
 ---
 # <a name="table-properties-visual-database-tools"></a>[テーブルのプロパティ] \(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68261573"
 **[IDENTITY] カテゴリ**  
 展開して **[名前]** 、 **[説明]** 、および **[スキーマ]** の各プロパティを表示します。  
   
-**名前**  
+**Name**  
 テーブルの名前を表示します。 名前を編集するには、テキスト ボックスに入力します。  
   
 > [!CAUTION]  
@@ -44,7 +45,7 @@ ms.locfileid: "68261573"
 **データベース名**  
 選択したテーブルのデータ ソースの名前を表示します。  
   
-**[説明]**  
+**説明**  
 選択したテーブルの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。  
   
 **[スキーマ]**  
@@ -84,5 +85,5 @@ Microsoft SQL Server がテーブルの ROWGUID 列として使用する列を�
 text データ型、または image データ型の列について、ファイル グループを選択できるドロップダウン リストを表示します。 パーティション スキームを使用してテーブルを保存する場合は、このフィールドを空白のままにします。  
   
 ## <a name="see-also"></a>参照  
-[テーブルのデザイン (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[テーブルを設計する](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

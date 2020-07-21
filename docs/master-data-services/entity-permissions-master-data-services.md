@@ -1,5 +1,5 @@
 ---
-title: エンティティ アクセス許可 (Master Data Services) | Microsoft Docs
+title: エンティティ権限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e50c4ff0b3c69d1f943c0cff266520a2fabc9bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a0ca2773d513137adeb9e803b66930536e3a28a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811953"
 ---
 # <a name="entity-permissions-master-data-services"></a>エンティティ権限 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   エンティティ権限は、次のものに適用されます。  
   
@@ -48,8 +48,8 @@ ms.locfileid: "68051985"
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除の各権限を割り当てた場合は、読み取り権限が自動的に割り当てられます。  
   
 ## <a name="see-also"></a>関連項目  
- [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)   
+ [モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  
   
   

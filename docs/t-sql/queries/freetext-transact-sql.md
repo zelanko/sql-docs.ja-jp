@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a60d8a2605d9b2533869b6f1c95922107c7d0aa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736306"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 句](../../t-sql/queries/where-transact-sql.md)で使用される述語です。文字ベースのデータ型を含むフルテキスト インデックス列で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。 この述語は、検索条件の文字列の並びと正確に一致しなくても意味が合っている値を検索できます。 FREETEXT を使用すると、フルテキスト クエリ エンジンによって、*freetext_string* を基に次の内部操作が実行され、各語に重みが割り当てられた後、一致するものが検索されます。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "67902104"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているフルテキスト検索の形式については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 FREETEXT ( { column_name | (column_list) | * }   
           , 'freetext_string' [ , LANGUAGE language_term ] )  
@@ -115,7 +115,7 @@ WHERE FREETEXT(Description, @SearchWord);
 ## <a name="general-remarks"></a>全般的な解説  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
-FREETEXT を使用するフルテキスト クエリは、CONTAINS を使用するフルテキスト クエリほど正確ではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索エンジンでは、重要な単語と語句が識別されます。 予約済みキーワードやワイルドカード文字は、CONTAINS 述語の \<contains_search_condition> パラメーターに指定した場合は特別な意味が与えられますが、FREETEXT の場合は特別な意味はありません。
+FREETEXT を使用するフルテキスト クエリは、CONTAINS を使用するフルテキスト クエリほど正確ではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索エンジンでは、重要な単語と語句が識別されます。 予約済みキーワードやワイルドカード文字に特別な意味はありません。通常、CONTAINS 述語の \<contains_search_condition> パラメーターに指定した場合に意味が与えられます。
   
  データベースの互換性レベルが 100 に設定されている場合、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md) でフルテキスト述語を使用することはできません。  
   
@@ -126,9 +126,9 @@ FREETEXT を使用するフルテキスト クエリは、CONTAINS を使用す�
  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) または FREETEXT 述語に 4 つの要素で構成される名前を使用して、リンク サーバー上にある対象テーブルのフルテキスト インデックス列にクエリを実行できます。 フルテキスト クエリを受け取るようリモート サーバーを準備するには、リモート サーバー上の検索対象のテーブルおよび列にフルテキスト インデックスを作成し、リモート サーバーをリンク サーバーとして追加します。  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>LIKE とフルテキスト検索の比較  
- フルテキスト検索とは異なり、[LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 述語は、文字パターンにのみで動作します。 また、フォーマットされたバイナリ データのクエリには LIKE 述語を使用できません。 さらに、構造化されていない大量のテキスト データに対して LIKE クエリを実行すると、同じデータに対して同等のフルテキスト検索を実行する場合に比べてはるかに時間がかかります。 数百万行のテキスト データに対して LIKE クエリを実行すると、結果が得られるまでに数分かかる場合があります。一方、同じデータに対してフルテキスト クエリを実行すると、返される行数にもよりますが、数秒以内で結果を取得できます。  
+ フルテキスト検索とは異なり、 [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 述語は、文字パターンにのみで動作します。 また、フォーマットされたバイナリ データのクエリには LIKE 述語を使用できません。 さらに、構造化されていない大量のテキスト データに対して LIKE クエリを実行すると、同じデータに対して同等のフルテキスト検索を実行する場合に比べてはるかに時間がかかります。 数百万行のテキスト データに対して LIKE クエリを実行すると、結果が得られるまでに数分かかる場合があります。一方、同じデータに対してフルテキスト クエリを実行すると、返される行数にもよりますが、数秒以内で結果を取得できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>A. FREETEXT を使用して、指定した文字値を含む単語を検索する  
  次の例では、vital、safety、components に関連する単語を含むすべてのドキュメントを検索します。  

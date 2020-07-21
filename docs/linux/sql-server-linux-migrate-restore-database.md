@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: f5eebdbedb548c28db6a83038a6f6b84c5bad336
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8f8436e463a969921ef3e37ebf89f48bc94b49dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68025931"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895182"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>バックアップと復元を使用して SQL Server データベースを Windows から Linux に移行する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server のバックアップと復元の機能は、Windows の SQL Server から SQL Server on Linux にデータベースを移行する場合に推奨される方法です。 このチュートリアルでは、バックアップと復元の手法を使用してデータベースを Linux に移動するために必要な手順について説明します。
 
@@ -31,7 +31,7 @@ SQL Server のバックアップと復元の機能は、Windows の SQL Server �
 
 また、SQL Server Always On 可用性グループを作成して、SQL Server データベースを Windows から Linux に 移行することもできます。 「[Windows と Linux に SQL Server Always On 可用性グループを構成する (クロス プラットフォーム)](sql-server-linux-availability-group-cross-platform.md)」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには、次の前提条件を満たす必要があります。
 
@@ -83,9 +83,9 @@ Windows でデータベースのバックアップ ファイルを作成する�
 
 1. Windows で Bash セッションを開きます。
 
-## <a id="scp"></a> バックアップ ファイルを Linux にコピーする
+## <a name="copy-the-backup-file-to-linux"></a><a id="scp"></a> バックアップ ファイルを Linux にコピーする
 
-1. Bash セッションで、バックアップ ファイルが格納されているディレクトリに移動します。 例:
+1. Bash セッションで、バックアップ ファイルが格納されているディレクトリに移動します。 次に例を示します。
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
@@ -219,7 +219,7 @@ Windows でデータベースのバックアップ ファイルを作成する�
 
 1. リモート **ssh** セッションでの作業が終わったら、「`exit`」と入力します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアルでは、Windows 上でデータベースをバックアップし、SQL Server が実行されている Linux サーバーにそれを移動する方法について学習しました。 以下の方法を学習しました。
 > [!div class="checklist"]

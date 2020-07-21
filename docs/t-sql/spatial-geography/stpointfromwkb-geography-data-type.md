@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 97c519350024947ed6854554526b65754c6621a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ae061db7e5eb45e3c949b96e89e8e083162d98c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702278"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現から **geographyPoint** インスタンスを返します。
   
@@ -38,7 +38,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
 ## <a name="arguments"></a>引数  
  *WKB_point*  
- 返される **geographyPoint** インスタンスの WKB 表現です。 *WKB_point* は、**varbinary (max)** 式です。  
+ 返される **geographyPoint** インスタンスの WKB 表現です。 *WKB_point* は、**varbinary(max)** 式です。  
   
  *SRID*  
  返される **geographyPoint** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
@@ -46,14 +46,14 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
- OGC の型:**Point**  
+ OGC の型: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STPointFromWKB()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

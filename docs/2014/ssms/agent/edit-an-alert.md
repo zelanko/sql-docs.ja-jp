@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eae606b3c2ca4c18d088e650e774986d4e31387
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064488"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告を編集する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、またはを使用して、でエージェントの警告を編集する方法について説明し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  **このトピックの内容**  
   
@@ -36,14 +35,14 @@ ms.locfileid: "68211402"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  既定では、警告の情報を編集できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。 それ以外のユーザーには、 **msdb** データベースの **SQLAgentOperatorRole** 固定サーバー ロールを与える必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-edit-an-alert"></a>警告を編集するには  
   
@@ -55,11 +54,11 @@ ms.locfileid: "68211402"
   
 4.  編集する警告を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[全般]** 、 **[応答]** 、および **[オプション]** の各ページで、警告のプロパティを更新します。  
+5.  **[全般]**、 **[応答]**、および **[オプション]** の各ページで、警告のプロパティを更新します。  
   
-6.  完了したら、 **[OK]** をクリックします。  
+6.  完了したら、[**OK**] をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-edit-an-alert"></a>警告を編集するには  
   
@@ -80,6 +79,6 @@ ms.locfileid: "68211402"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)します。  
+ 詳細については、「 [sp_update_alert &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)」を参照してください。  
   
   

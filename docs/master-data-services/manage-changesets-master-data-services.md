@@ -1,5 +1,5 @@
 ---
-title: 変更セットの管理 (マスター データ サービス) | Microsoft Docs
+title: 変更セットの管理
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7f428189723987adbbf867facb819a987c502ab7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e411c1f7dd09db1e0387535ffef665924193ee9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811727"
 ---
 # <a name="manage-changesets-master-data-services"></a>変更セットの管理 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、すべての変更をモデルとバージョンごとに管理できます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
   
--   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
 -   少なくとも、エンティティまたはその属性のいずれかに対する読み取りアクセス権が必要です。  
   

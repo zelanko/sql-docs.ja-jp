@@ -18,38 +18,38 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b1870d8cd8253e1b6de74ce093d51ca6e33c5c6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 32b329d8365370560f51503129ac2c8d85517527
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930934"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759818"
 ---
 # <a name="source-property-ado-record"></a>Source プロパティ (ADO Record)
-データ ソースまたはによって表されるオブジェクトを示す、[レコード](../../../ado/reference/ado-api/record-object-ado.md)します。  
+[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるデータソースまたはオブジェクトを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定または取得を**バリアント**によって表されるエンティティを示す値、**レコード**します。  
+ **レコード**によって表されるエンティティを示す**バリアント**値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
- **ソース**プロパティが返す、*ソース*の引数、**レコード**オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド。 絶対または相対 URL 文字列であるを含めることができます。 絶対 URL を設定せずに使用できます、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティを直接開くことを**レコード**オブジェクト。 暗黙的な**接続**オブジェクトがここで作成されます。  
+## <a name="remarks"></a>Remarks  
+ **Source**プロパティは、 **Record**オブジェクト[Open](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドの*source*引数を返します。 絶対 URL または相対 URL 文字列を含めることができます。 絶対 URL を使用する場合は、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティを設定しなくても**レコード**オブジェクトを直接開くことができます。 この場合、暗黙的な**接続**オブジェクトが作成されます。  
   
- **ソース**プロパティは、既に開いているへの参照を含めることもできます**レコード セット**を開いて、**レコード**の現在の行を表すオブジェクト、 **レコード セット**します。  
+ **ソース**プロパティには、既に開いている**レコードセット**への参照を含めることもできます。これにより、レコード**セット**の現在の行を表す**Record**オブジェクトが開きます。  
   
- **ソース**プロパティでしたへの参照を含めることも、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト プロバイダーから 1 行のデータが返されます。  
+ **Source**プロパティには、プロバイダーから1行のデータを返す[Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトへの参照を含めることもできます。  
   
- 場合、 **ActiveConnection**プロパティが設定されても、**ソース**プロパティは、その接続のスコープ内に存在するいくつかのオブジェクトを指す必要があります。 ツリー構造の名前空間では、たとえばの場合、**ソース**プロパティが絶対 URL を含む、接続文字列内の URL で識別されるノードのスコープ内に存在するノードを指す必要があります。 場合、**ソース**プロパティには、相対 URL が含まれていますで設定されたコンテキスト内では、検証、 **ActiveConnection**プロパティ。  
+ **ActiveConnection**プロパティも設定されている場合、 **Source**プロパティはその接続のスコープ内に存在するいくつかのオブジェクトを指す必要があります。 たとえば、ツリー構造の名前空間では、**ソース**プロパティに絶対 url が含まれている場合、接続文字列の url で識別されるノードのスコープ内に存在するノードを指す必要があります。 **ソース**プロパティに相対 URL が含まれている場合は、 **ActiveConnection**プロパティによって設定されたコンテキスト内で検証されます。  
   
- **ソース**プロパティが読み取り/書き込み中に、**レコード**オブジェクトが閉じられるし、は読み取り専用中に、**レコード**オブジェクトが開いています。  
+ **Record オブジェクト**が閉じている間、 **Source**プロパティは読み取り/書き込み可能であり、**レコード**オブジェクトが開いている間は読み取り専用になります。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [ソースのプロパティ (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [Source プロパティ (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source プロパティ (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

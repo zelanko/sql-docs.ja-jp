@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - SMALLDATETIMEFROMPARTS function
 ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f18ee84c1bbb2234672d198923e93af4d99374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88934f50bd6cf3e4d3b37915d41bf5d0cd558501
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907105"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822377"
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -57,12 +57,12 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
 ## <a name="return-types"></a>戻り値の型  
  **smalldatetime**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、完全に初期化された **smalldatetime** 値のコンストラクターと同様に動作します。 引数が有効でない場合は、エラーがスローされます。 必須の引数が null の場合は、null が返されます。  
   
  この関数は、リモート処理は実行することのできる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー上とします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 下のバージョンのサーバーには、リモート処理されません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```  
 SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result  

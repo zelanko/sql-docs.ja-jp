@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f8757044ba15f7b8c2567dd88e1ef3637d2e3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 513873fdf808ff62058ad765983cb1ebd512cd2d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073067"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545708"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>スキーマ生成ウィザード (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベース内で OLAP プロジェクトを定義する際の、2 種類のリレーショナル スキーマ操作方法をサポートしています。 一般的に、OLAP オブジェクトは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたはデータベース内のデータ ソース ビューで作成される論理データ モデルに基づいて定義します。 このデータ ソース ビューは、データ ソース ビューでカスタマイズされる、1 つ以上のリレーショナル データ ソースのスキーマ要素に基づいて定義されます。  
@@ -44,8 +43,8 @@ ms.locfileid: "66073067"
 |[増分生成の理解](understanding-incremental-generation.md)|スキーマ生成ウィザードの増分生成機能について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
- [多次元モデルのデータ ソース](data-sources-in-multidimensional-models.md)   
- [サポートされるデータ ソース&#40;SSAS 多次元&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [多次元モデルのデータソースビュー](data-source-views-in-multidimensional-models.md)   
+ [多次元モデルのデータソース](data-sources-in-multidimensional-models.md)   
+ [SSAS 多次元&#41;&#40;サポートされるデータソース](supported-data-sources-ssas-multidimensional.md)  
   
   

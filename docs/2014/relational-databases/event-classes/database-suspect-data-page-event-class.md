@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78e6a175ce7757a9e9808a5a993bec6a44a3db2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da01e5e701948bcc5bd8d8e16ee151ef788a8a7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62662994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053065"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page イベント クラス
   **Database Suspect Data Page** イベント クラスは、 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) の [suspect_pages](../databases/msdb-database.md)テーブルにページがいつ追加されたかを示します。 このイベント クラスは、問題があると思われるページの発生を監視するトレースに含めます。  
@@ -42,7 +41,7 @@ ms.locfileid: "62662994"
 |**SPID**|**int**|問題があると思われるページが発生した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タスクの ID。|12|はい|  
 |**StartTime**|**datetime**|イベントが発生した時刻。|14|はい|  
 |**Exchange Spill**|**int**|問題があると思われるページを格納しているデータベース ファイルの ID。 これは **suspect_pages** テーブルの **file_id** 列と同じです。|22|はい|  
-|**ObjectID2**|**int**|ファイル内の問題があると思われるページの ID。 これは **suspect_pages** テーブルの **page_id** 列と同じです。|56|[はい]|  
+|**ObjectID2**|**int**|ファイル内の問題があると思われるページの ID。 これは **suspect_pages** テーブルの **page_id** 列と同じです。|56|はい|  
 |**Error**|**int**|発生したエラーの種類。 この値は、 **suspect_pages** テーブルのページの **event_type** 値と同じです。|31|はい|  
   
 ## <a name="see-also"></a>参照  

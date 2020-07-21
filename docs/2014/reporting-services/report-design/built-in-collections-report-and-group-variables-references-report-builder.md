@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106394"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66106394"
   
 -   **読み書き可能な使用** 値を 1 回設定して、レポート セッション内でその値をシリアル化します。 変数の読み書き可能オプションは、レポート定義のコード ブロックで静的変数を使用するよりも適切な方法です。  
   
-     オフにすると、**読み取り専用**変数、書き込み可能なプロパティのオプションに設定されている変数を`true`します。 式から値を更新するには、SetValue メソッド (たとえば、 `=Variables!MyVariable.SetValue("123")`) を使用します。  
+     変数の**読み取り**専用オプションをオフにすると、変数の書き込み可能なプロパティはに`true`設定されます。 式から値を更新するには、SetValue メソッド (たとえば、 `=Variables!MyVariable.SetValue("123")`) を使用します。  
   
     > [!NOTE]  
     >  レポート プロセッサによって変数が初期化される時期や、変数を更新する式が評価される時期を制御することはできません。 変数の初期化の実行順序は定義されません。  
@@ -57,7 +57,7 @@ ms.locfileid: "66106394"
 ## <a name="group-variables"></a>グループ変数  
  グループ変数は、グループのスコープ内で複合式を 1 回計算するために使用します。 グループ変数は、グループとその子グループのスコープ内でのみ有効です。  
   
- たとえば、別々の税区分にある各アイテムの在庫データをデータ領域に表示し、各カテゴリに異なる税率を適用するとします。 Category でデータをグループ化し、親グループで *Tax* 変数を定義します。 次に、税区分ごとに *ItemTax* のグループ変数を定義し、異なる Category サブグループをそれぞれ適切なグループ変数に割り当てます。 例 :  
+ たとえば、別々の税区分にある各アイテムの在庫データをデータ領域に表示し、各カテゴリに異なる税率を適用するとします。 Category でデータをグループ化し、親グループで *Tax* 変数を定義します。 次に、税区分ごとに *ItemTax* のグループ変数を定義し、異なる Category サブグループをそれぞれ適切なグループ変数に割り当てます。 次に例を示します。  
   
 -   `[Category]`に基づく親グループでは、値 *Tax* を指定して、変数 `[Tax]`を定義します。 カテゴリ値が Food と Clothing であるとします。  
   
@@ -71,8 +71,8 @@ ms.locfileid: "66106394"
   
  式で変数を参照するには、 `=Variables!GroupDescription.Value`などのグローバル コレクション構文を使用します。 デザイン画面では、この値が `<<Expr>>`としてテキスト ボックスに表示されます。  
   
-## <a name="see-also"></a>関連項目  
- [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)](built-in-collections-in-expressions-report-builder.md)   
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   

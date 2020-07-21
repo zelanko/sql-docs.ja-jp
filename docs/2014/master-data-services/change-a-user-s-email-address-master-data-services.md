@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6438291ca0d84bfd88c80f490022ebd4dd96ede9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972082"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>ユーザーの電子メール アドレスを変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、通知の送信先の電子メール アドレスおよび通知電子メールの既定の形式を変更できます。  
@@ -45,7 +44,7 @@ ms.locfileid: "65483582"
   
 -   [機能領域の権限を割り当てる (マスター データ サービス)](assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ (マスター データ サービス)](../../2014/master-data-services/security-master-data-services.md)  
   
   

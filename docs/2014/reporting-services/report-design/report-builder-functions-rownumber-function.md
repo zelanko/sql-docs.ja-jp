@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4a06a24525b3d9d0c4e4a5f3f0b749a7db70261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105166"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber 関数 (レポート ビルダーおよび SSRS)
@@ -34,8 +34,8 @@ RowNumber(scope)
  *スコープ (scope)*  
  (`String`) 行数を評価するコンテキストを示すデータセット、データ領域、またはグループの名前か、NULL ([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] では `Nothing`) です。 `Nothing` は、最も外側のコンテキスト (通常はレポート データセット) を示します。  
   
-## <a name="remarks"></a>コメント  
- `RowNumber` 同様に、指定したスコープ内の行のカウントの実行中の値を返します[RunningValue](report-builder-functions-runningvalue-function.md)集計関数の実行中の値を返します。 スコープを指定すると、行数を 1 にリセットするタイミングが指定されます。  
+## <a name="remarks"></a>解説  
+ `RowNumber`[RunningValue](report-builder-functions-runningvalue-function.md)が集計関数の実行中の値を返す場合と同様に、指定されたスコープ内の行数の実行中の値を返します。 スコープを指定すると、行数を 1 にリセットするタイミングが指定されます。  
   
  *scope* には、式を指定することはできません。 *scope* には、コンテナー スコープを指定する必要があります。 一般的なスコープは、外側から内側の順に、レポート データセット、データ領域、行グループまたは列グループです。  
   

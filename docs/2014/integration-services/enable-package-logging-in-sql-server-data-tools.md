@@ -1,5 +1,5 @@
 ---
-title: パッケージの SQL Server データ ツールにログ記録を有効にする |Microsoft Docs
+title: SQL Server Data Tools | でパッケージログ記録を有効にします。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0cae08e9d9eee75382321cac746e24d57982cc4b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059282"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437469"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>SQL Server Data Tools でパッケージのログ記録を有効にする
   この手順では、パッケージにログを追加し、パッケージ レベルのログ記録を構成し、ログ構成を XML ファイルに保存する方法について説明します。 ログはパッケージ レベルでのみ追加できますが、パッケージに含まれるコンテナーでのログを有効にするためにパッケージでログ記録を実行する必要はありません。  
@@ -35,13 +34,13 @@ ms.locfileid: "66059282"
   
 3.  **[プロバイダーの種類]** 一覧からログ プロバイダーを選択し、 **[追加]** をクリックします。  
   
-4.  **[構成]** 列で、接続マネージャーを選択するか、または **[\<新しい接続>]** をクリックしてこのログ プロバイダーに適した種類の接続マネージャーを新しく作成します。 選択したプロバイダーに応じて、次のいずれかの接続マネージャーを使用します。  
+4.  [**構成**] 列で、接続マネージャーを選択するか、をクリックして、 **\<New connection>** ログプロバイダーに適した種類の新しい接続マネージャーを作成します。 選択したプロバイダーに応じて、次のいずれかの接続マネージャーを使用します。  
   
-    -   テキスト ファイル用には、ファイル接続マネージャーを使用します。 詳細については、「 [File Connection Manager](connection-manager/file-connection-manager.md)」(ファイル接続マネージャー) をご覧ください。  
+    -   テキスト ファイル用には、ファイル接続マネージャーを使用します。 詳細については、「[ファイル接続マネージャー](connection-manager/file-connection-manager.md) 」を参照してください。  
   
     -   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]用には、ファイル接続マネージャーを使用します。  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用には、OLE DB 接続マネージャーを使用します。 詳細については、「 [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」をご覧ください。  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用には、OLE DB 接続マネージャーを使用します。 詳細については、「 [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
     -   Windows イベント ログ用には何も指定しません。 [!INCLUDE[ssIS](../includes/ssis-md.md)] によってログが自動的に作成されます。  
   
@@ -63,12 +62,12 @@ ms.locfileid: "66059282"
   
 9. **[詳細]** タブで、 **[保存]** をクリックします。 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ログ構成を保存するフォルダーに移動し、新しいログ構成のファイル名を入力し、 **[保存]** をクリックします。  
   
-10. [**OK**] をクリックします。  
+10. **[OK]** をクリックします。  
   
 11. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; のログ記録](performance/integration-services-ssis-logging.md)   
+## <a name="see-also"></a>関連項目  
+ [SSIS&#41; ログ &#40;Integration Services](performance/integration-services-ssis-logging.md)   
  [Integration Services &#40;SSIS&#41; のログ記録](performance/integration-services-ssis-logging.md)  
   
   

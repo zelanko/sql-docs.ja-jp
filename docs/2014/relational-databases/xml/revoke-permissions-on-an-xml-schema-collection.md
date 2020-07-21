@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 864a310044d2bf6b903b69b1b53bd6cd5bd3b38d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 247364d01575e9ffae5988df03c82ea198289507
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240725"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065436"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の取り消し
   XML スキーマ コレクションを作成する権限は、次のいずれかの方法で取り消すことができます。  
@@ -41,7 +40,7 @@ ms.locfileid: "63240725"
   
 -   EXECUTE 権限を取り消すと、XML コレクションによって型指定または制約された列、変数、およびパラメーターの値を挿入または更新するプリンシパルの権限が取り消されます。 これにより、そのような **xml** 型の列、変数、またはパラメーターにクエリする権限も取り消されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例に示すシナリオでは、XML スキーマ権限のしくみを説明します。 各例では、必要なテスト データベース、リレーショナル スキーマ、およびログインを作成します。 それらのログインには、必要な XML スキーマ コレクション権限が許可されています。 最後に必要なクリーンアップを行います。  
   
 ### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. XML スキーマ コレクションを作成するための権限の取り消し  

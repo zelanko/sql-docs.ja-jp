@@ -1,5 +1,5 @@
 ---
-title: 暗号化キー (SSRS ネイティブ モード) |Microsoft Docs
+title: 暗号化キー (SSRS ネイティブモード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16ac264f89c541f0a864f8b47ed008fa254f181c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 05b11804630de6bd57681a569225971864c15814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095415"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036901"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>暗号化キー (SSRS ネイティブ モード)
   [暗号化キー] ページを使用すると、レポート サーバーでデータの暗号化と暗号化解除に使用される対称キーを管理できます。 暗号化キーの管理は、レポート サーバーの構成で重要な位置を占めています。 対称キーはレポート サーバー データベースを作成する際に自動的に作成されて適用されますが、 定期的なメンテナンス操作を実行できるように、対称キーのバックアップ コピーを作成しておく必要があります。 次に示すメンテナンス タスクを実行するには、対称キーの有効なコピーが必要です。  
@@ -28,7 +27,7 @@ ms.locfileid: "66095415"
   
 -   既存のレポート サーバー データベースを共有または使用するように、新しいレポート サーバー インスタンスを構成する。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード。  
   
 > [!IMPORTANT]  
 >  セキュリティを高めるために、Reporting Services の暗号化キーは定期的に変更することをお勧めします。 キーを変更する推奨されるタイミングは、Reporting Services のメジャー バージョンのアップグレードの直後です。 アップグレード後であれば、アップグレード サイクル以外での Reporting Services の暗号化キーの変更に伴う他のサービスの中断を最小限に抑えることができます。  
@@ -44,14 +43,14 @@ ms.locfileid: "66095415"
   
  このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、ナビゲーション ウィンドウでリンクを選択します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **バックアップ**  
+## <a name="options"></a>オプション  
+ **Backup**  
  指定したファイルに対称キーをコピーします。 対称キーはプレーン テキストのまま保存しないでください。 パスワードを入力してファイルを保護する必要があります。  
   
  **復元**  
  以前に保存された対称キーのコピーを、レポート サーバー データベースに適用します。 ファイルのロックを解除するパスワードを入力する必要があります。  
   
- 現在接続しているレポート サーバー インスタンスの以前の対称キーは、復元された対称キーによって上書きされます。 対称キーを復元した後、そのレポート サーバー データベースを利用するレポート サーバーをすべて初期化する必要があります。 レポート サーバーの初期化の詳細については、次を参照してください。[レポート サーバーの初期化&#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)します。  
+ 現在接続しているレポート サーバー インスタンスの以前の対称キーは、復元された対称キーによって上書きされます。 対称キーを復元した後、そのレポート サーバー データベースを利用するレポート サーバーをすべて初期化する必要があります。 レポートサーバーの初期化の詳細については、「[レポートサーバーの初期化 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
   
  **変更**  
  対称キーを再作成し、レポート サーバー データベース内の暗号化された値を再暗号化します。 対称キーを再作成する前に、レポート サーバー サービスを必ず停止してください。  
@@ -68,9 +67,9 @@ ms.locfileid: "66095415"
  この情報を自動的に更新する方法はありません。 保存されている資格情報や接続文字列を使用する各レポート、サブスクリプション、共有データ ソースを、一度に 1 つずつ更新する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャーの F1 ヘルプ トピック&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [暗号化キーの削除と再作成  &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Reporting Services Configuration Manager F1 ヘルプトピック &#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [暗号化キーのバックアップと復元 Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [SSRS Configuration Manager&#41;&#40;暗号化キーを削除して再作成します](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   

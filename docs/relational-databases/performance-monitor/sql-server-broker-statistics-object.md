@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 77a6174931924c30b8d482c0bd5d3f4a358f4a10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6dd7b9d542bb72b570a59244639685d3e56d6377
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85657038"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server: Broker Statistics オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQLServer:Broker Statistics パフォーマンス オブジェクトには、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスに関する [!INCLUDE[ssDE](../../includes/ssde-md.md)]の一般的な情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターの一覧です。  
   
-|SQL Server Broker Statistics カウンター|[説明]|  
+|SQL Server Broker Statistics カウンター|説明|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] アクティブ化ストアド プロシージャがエラーで終了した回数。|  
 |**Broker Transaction Rollbacks**|SEND や RECEIVE など [!INCLUDE[ssSB](../../includes/sssb-md.md)]に関連する DML ステートメントを含んでいるトランザクションのうち、ロールバックされたトランザクションの数。|  

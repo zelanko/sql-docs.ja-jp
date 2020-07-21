@@ -9,39 +9,39 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b499fe50854e979b9407487903324b80e16ede77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038126"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>MDX データ定義ステートメント (MDX)
 
 
-  多次元式 (MDX) では、データ定義ステートメントを使用して、多次元オブジェクトの作成、削除、操作を行います。 次の表では、使用可能なデータ定義ステートメントが一覧表示します。  
+  多次元式 (MDX) では、データ定義ステートメントを使用して、多次元オブジェクトの作成、削除、操作を行います。 次の表に、使用できるデータ定義ステートメントを示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[ALTER CUBE ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-alter-cube.md)|指定されたキューブの構造を変更します。|  
-|[CREATE ACTION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)|キューブ、ディメンション、階層、または下位のオブジェクトと関連付けることができるアクションを作成します。|  
-|[CREATE CELL CALCULATION ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)|キューブ内で指定されている組のセットに対して MDX 式を評価する計算を作成します。|  
-|[CREATE GLOBAL CUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)|作成し、サーバー上のキューブのサブキューブに基づく、ローカルに保存されるキューブを設定します。 サーバーへの接続は、ローカルに保存されるキューブに接続する必要はありません。|  
+|[ALTER CUBE ステートメント (MDX)](../mdx/mdx-data-definition-alter-cube.md)|指定されたキューブの構造を変更します。|  
+|[MDX&#41;&#40;のアクションステートメントの作成](../mdx/mdx-data-definition-create-action.md)|キューブ、ディメンション、階層、または下位のオブジェクトに関連付けることができるアクションを作成します。|  
+|[CREATE CELL CALCULATION ステートメント (MDX)](../mdx/mdx-data-definition-create-cell-calculation.md)|キューブ内で指定されている組のセットに対して MDX 式を評価する計算を作成します。|  
+|[MDX&#41;&#40;のグローバルキューブステートメントの作成](../mdx/mdx-data-definition-create-global-cube.md)|サーバー上のキューブのサブキューブに基づいて、ローカルに保存されたキューブを作成して設定します。 ローカルに保存されたキューブに接続するために、サーバーへの接続は必要ありません。|  
 |[CREATE MEMBER ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)|計算されるメンバーを作成します。|  
-|[CREATE SESSION CUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)|サーバーのキューブを基にして、同じセッション内のすべてのクエリで使用できるキューブを作成し、データを設定します。|  
-|[CREATE SET ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-create-set.md)|指定されたキューブの名前付きセットを作成します。|  
-|[CREATE SUBCUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)|指定したキューブまたはサブキューブを指定されたサブキューブのキューブ空間を再定義します。|  
-|[DROP ACTION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)|指定されたキューブから、指定したアクションを削除します。|  
-|[DROP CELL CALCULATION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|指定されたセル計算を削除します。|  
-|[DROP MEMBER ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)|計算されるメンバーを削除します。|  
-|[DROP SET ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|名前付きセットを削除します。|  
-|[DROP SUBCUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)|指定した名前で以前に定義されたキューブまたはサブキューブの定義を元に戻す、指定したサブキューブを削除します。|  
-|[更新の CUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-refresh-cube.md)|キューブのクライアント キャッシュを更新します。|  
+|[CREATE SESSION CUBE ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)|サーバーのキューブを基にして、同じセッション内のすべてのクエリで使用できるキューブを作成し、データを設定します。|  
+|[CREATE SET ステートメント (MDX)](../mdx/mdx-data-definition-create-set.md)|指定されたキューブの名前付きセットを作成します。|  
+|[MDX&#41;&#40;サブキューブステートメントの作成](../mdx/mdx-data-definition-create-subcube.md)|指定したキューブまたはサブキューブのキューブ空間を、指定したサブキューブに再定義します。|  
+|[DROP ACTION ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)|指定したキューブから指定されたアクションを削除します。|  
+|[DROP CELL CALCULATION ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|指定されたセルの計算を削除します。|  
+|[DROP MEMBER ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)|計算されるメンバーを削除します。|  
+|[DROP SET ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|名前付きセットを削除します。|  
+|[MDX&#41;&#40;のサブキューブの削除](../mdx/mdx-data-definition-drop-subcube.md)|指定したサブキューブを削除し、指定した名前を持つ以前に定義したキューブまたはサブキューブ定義に戻します。|  
+|[MDX&#41;&#40;CUBE ステートメントの更新](../mdx/mdx-data-definition-refresh-cube.md)|キューブのクライアントキャッシュを更新します。|  
   
-## <a name="see-also"></a>関連項目  
- [MDX ステートメント リファレンス&#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [MDX データ操作ステートメント &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+## <a name="see-also"></a>参照  
+ [Mdx ステートメントリファレンス &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [Mdx&#41;&#40;MDX データ操作ステートメント](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [MDX スクリプト ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

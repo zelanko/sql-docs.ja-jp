@@ -1,6 +1,6 @@
 ---
-title: 新しいソリューションの作成 | Microsoft Docs
-ms.custom: ''
+title: 新しいソリューションの作成
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b8f05d883896e4d027a34afb1d7849c8c9368b01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1988a31f085619604198b889138bb8e62eb8f28b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258284"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251924"
 ---
 # <a name="create-a-new-solution"></a>新しいソリューションの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,6 +40,6 @@ ms.locfileid: "68258284"
 6.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
-[[表示]](../../ssms/solution/solution-explorer.md)  
+[ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)  
 [ソース管理からソリューションを開く](https://msdn.microsoft.com/library/ms174216.aspx)  
   

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 82c9e9d43195c4980dfcdcb4daf1c0da4ba6b7a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ebbc82f5570fb97d7b1169563bfde7c67f5be0d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088541"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296020"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>レッスン 3:SSIS でのログ記録の追加
 
@@ -47,7 +47,7 @@ ms.locfileid: "68088541"
   
 -   [ステップ 1:レッスン 2 のパッケージのコピー](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [ステップ 2:ログ記録の追加および構成](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
+-   [手順 2:ログ記録の追加および構成](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
 -   [ステップ 3:レッスン 3 のパッケージのテスト](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   

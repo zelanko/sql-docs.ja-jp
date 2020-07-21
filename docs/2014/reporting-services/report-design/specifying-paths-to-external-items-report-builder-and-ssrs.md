@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7364ad7c7de4678926187cb171e62318c884bd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104836"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)
@@ -39,13 +39,13 @@ ms.locfileid: "66104836"
   
 -   **アイテムへの完全パス。**  
   
-    -   **レポート サーバーの場合:** パスは Home フォルダーの **/** から始まります。 たとえば、/Reports/AllSubreports/Subreport1 のように指定します。  
+    -   **レポート サーバーの場合** 、完全パスはホーム フォルダーである **/** から開始します。 たとえば、/Reports/AllSubreports/Subreport1 のように指定します。  
   
-    -   **SharePoint サイトの場合:** アイテムの完全な URL とファイル拡張子 .rdl を含めたレポート名を式で指定する必要があります。 たとえば、`="http://server/site/library/folder/Report1.rdl"` のようにします。  
+    -   **SharePoint サイトの場合** 、アイテムの完全な URL とファイル拡張子 .rdl を含めたレポート名を式で指定する必要があります。 たとえば、「 `="http://server/site/library/folder/Report1.rdl"` 」のように入力します。  
   
 ## <a name="see-also"></a>参照  
- [外部の画像の追加 (レポート ビルダーおよび SSRS)](add-an-external-image-report-builder-and-ssrs.md)   
- [サブレポートおよびパラメーターの追加 (レポート ビルダーおよび SSRS)](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [外部の画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [サブレポートおよびパラメーターの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [レポートへのドリルスルー アクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

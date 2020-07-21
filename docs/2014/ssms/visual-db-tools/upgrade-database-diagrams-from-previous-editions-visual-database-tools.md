@@ -1,5 +1,5 @@
 ---
-title: データベース ダイアグラム旧エディションのアップグレード (Visual Database Tools) |Microsoft Docs
+title: 以前のエディションのデータベースダイアグラムのアップグレード (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36b01d25ada5c0dd5cbbfdeff8bdae1c4cbd3f34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048544"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>旧エディションのデータベース ダイアグラムのアップグレード (Visual Database Tools)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース ダイアグラム化を設定すると、旧エディションの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]データベース上に作成されたデータベース ダイアグラムは自動的にアップグレードされます。 ダイアグラムの表示の設定手順について[データベース ダイアグラム デザイナーの設定&#40;Visual Database Tools&#41;](visual-database-tools.md)します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース ダイアグラム化を設定すると、旧エディションの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]データベース上に作成されたデータベース ダイアグラムは自動的にアップグレードされます。 ダイアグラムを設定するための詳細な手順については、「 [Visual Database Tools&#41;&#40;データベースダイアグラムデザイナーのセットアップ](visual-database-tools.md)」を参照してください。  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>レガシ データベース ダイアグラムをアップグレードするには  
   
@@ -38,8 +37,8 @@ ms.locfileid: "63205707"
   
      これにより、データベースに格納されたダイアグラムがアップグレードされます。  
   
-## <a name="see-also"></a>関連項目  
- [データベース ダイアグラムの所有権について&#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
+## <a name="see-also"></a>参照  
+ [Visual Database Tools &#40;データベースダイアグラムの所有権について&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
  [データベース ダイアグラム デザイナーの設定 (Visual Database Tools)](visual-database-tools.md)  
   
   

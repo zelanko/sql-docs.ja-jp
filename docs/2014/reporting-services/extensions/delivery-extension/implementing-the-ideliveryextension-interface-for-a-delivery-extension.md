@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a0f9ab0767a09016d4f4bc1158988965bfc13b27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63181423"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>配信拡張機能に対する IDeliveryExtension インターフェイスの実装
@@ -35,7 +35,7 @@ IDeliveryExtension インターフェイスを使用すると、ユーザー デ
   
  **IDeliveryExtension** クラスの実装例については、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services 製品サンプル) を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [配信拡張機能の実装](../delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 拡張機能ライブラリ](../reporting-services-extension-library.md)  
   

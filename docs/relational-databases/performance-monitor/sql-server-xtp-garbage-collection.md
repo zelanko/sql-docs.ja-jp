@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ced667fb99f412a4891d3e3e53f788430ee9112d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0edeb2fef45d23faec92846b65626bdc3c00d049
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774218"
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>SQL Server XTP Garbage Collection
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL Server XTP Garbage Collection パフォーマンス オブジェクトには、インメモリ OLTP エンジンのガベージ コレクターに関連するカウンターが含まれています。  
   
  次の表では、 **SQL Server XTP Garbage Collection** カウンターについて説明します。  
   
-|カウンター|[説明]|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |**Dusty corner scan retries/sec (GC-issued)**|ガベージ コレクターによって発行されたダスティ コーナー スウィープ (詳細なクリーンアップ) の実行中に、書き込みの競合が原因で発生したスキャン再試行回数に関する 1 秒あたりの平均です。 これは非常に低レベルのカウンターであり、お客様による使用は想定されていません。|  
 |**Main GC work items/sec**|メイン GC スレッドで処理された作業項目の数です。|  

@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_916 | Microsoft Docs
+description: ログインに、指定された SQL Server データベースに接続するために必要な権限がありません。 エラーの説明と、考えられる解決策をご確認ください。
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 73eb6581-99fe-49a5-9b42-e239d7ffe27f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f93fb181547e10ef2bca3154e44515e3959683b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 510708fd1cd119ee3a665cecb903ff63edbb525e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85636803"
 ---
-# <a name="mssqlserver916"></a>MSSQLSERVER_916
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_916"></a>MSSQLSERVER_916
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|916|  
 |イベント ソース|MSSQLSERVER|  
@@ -47,22 +48,27 @@ msdb データベースに対する CONNECT 権限が拒否または取り消さ
 次のいずれかの方法でデータベースに接続できます。  
   
 -   指定されたデータベースにアクセスするための権限を特定のログインに許可します。 次の例では、`Adventure-Works\Larry` データベースにアクセスするための権限をログイン `msdb` に許可します。  
-  
-    USE msdb ;  
-  
-    GO  
-  
-    GRANT CONNECT TO [Adventure-Works\Larry] ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO [Adventure-Works\Larry] ;
+    ```
   
 -   エラー メッセージで指定されたデータベースに対する CONNECT 権限を guest ユーザーに許可します。 次の例では、`CONNECT` データベースに対する `msdb` 権限を、`guest` ユーザーに許可します。  
-  
-    USE msdb ;  
-  
-    GO  
-  
-    GRANT CONNECT TO guest ;  
+
+    ```sql
+    USE msdb ;
+    
+    GO
+    
+    GRANT CONNECT TO guest ;
+    ```
   
 -   ユーザーを認証したデータベースの TRUSTWORTHY プロパティを有効にします。  
-  
-    `ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;`  
-  
+
+    ```sql
+    ALTER DATABASE AdventureWorks SET TRUSTWORTHY ON;
+    ```

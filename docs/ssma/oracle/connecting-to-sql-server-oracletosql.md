@@ -1,5 +1,6 @@
 ---
-title: SQL Server (OracleToSQL) への接続 |Microsoft Docs
+title: SQL Server に接続しています (OracleToSQL) |Microsoft Docs
+description: SQL Server に接続して Oracle データベースを移行する方法について説明します。 SSMA は SQL Server 内のデータベースのメタデータを取得して表示します。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,112 +13,112 @@ ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: cd8f0e57554f32d3b02a6e0e98d3a3645d683bac
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 091632ca752092ff28d5211c48d76a8b9516536f
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266158"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293629"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>SQL Server への接続 (OracleToSQL)
-Oracle データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 これらのいずれかに接続する必要がありますがのインスタンスを対象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SSMA がのインスタンスのすべてのデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でデータベースのメタデータを表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続しているが、パスワードは保存されません。  
+Oracle データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2、または2012または2014に移行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これらのターゲットインスタンスのいずれかに接続する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 接続すると、SSMA はインスタンス内のすべてのデータベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取得し、メタデータエクスプローラーにデータベースのメタデータを表示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA は、接続されているのインスタンスに関する情報を格納し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ますが、パスワードは保存しません。  
   
-接続を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロジェクトを終了するまでアクティブに保ちます。 プロジェクトを開くときにに再接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する場合は、サーバーにアクティブに接続します。 データベース オブジェクトが読み込まれるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しデータを移行します。  
+への接続 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、サーバーへのアクティブな接続が必要な場合は、に再接続する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 データベースオブジェクトをに読み込んでデータを移行するまで、オフラインで作業することができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-インスタンスに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が自動的に同期されていません。 代わりでメタデータを更新する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーである必要があります手動で更新する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ。 詳細については、次を参照してください。、"Synchronizing[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ"このトピックで後述します。  
+のインスタンスに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、自動的には同期されません。 代わりに、メタデータエクスプローラーでメタデータを更新するには、メタデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 手動で更新する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このトピックで後述する「メタデータの同期」を参照してください。  
   
-## <a name="required-sql-server-permissions"></a>必要な SQL Server のアクセス許可  
-接続に使用されるアカウント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アカウントで実行された操作に応じてさまざまなアクセス許可が必要です。  
+## <a name="required-sql-server-permissions"></a>必要な SQL Server アクセス許可  
+への接続に使用するアカウントには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントが実行するアクションに応じて、異なるアクセス許可が必要です。  
   
--   Oracle オブジェクトに変換する[!INCLUDE[tsql](../../includes/tsql-md.md)]からメタデータを更新する構文、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、か、アカウントをスクリプトに変換された構文を保存するのインスタンスにログオンする権限を持って必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+-   Oracle オブジェクトを構文に変換し [!INCLUDE[tsql](../../includes/tsql-md.md)] たり、からメタデータを更新したり、変換され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] た構文をスクリプトに保存したりするには、アカウントがのインスタンスにログオンする権限を持っている必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
--   データベース オブジェクトに読み込むために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、アカウントのメンバーである必要があります、 **sysadmin**サーバーの役割。 これは、CLR アセンブリのインストールに必要です。  
+-   データベースオブジェクトをに読み込むには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントが**sysadmin**サーバーロールのメンバーである必要があります。 これは、CLR アセンブリをインストールするために必要です。  
   
--   データを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、アカウントのメンバーである必要があります、 **sysadmin**サーバーの役割。 これは実行に必要、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント データの移行のパッケージ。  
+-   にデータを移行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントが**sysadmin**サーバーロールのメンバーである必要があります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのデータ移行パッケージを実行するために必要です。  
   
--   SSMA によって生成されるコードを実行するアカウントが必要**Execute**のすべてのユーザー定義関数のアクセス許可、 **ssma_oracle**ターゲット データベースのスキーマ。 これらの関数は、Oracle システムの機能と同等の機能を提供し、変換されたオブジェクトが使用されます。  
+-   SSMA によって生成されるコードを実行するには、対象データベースの**ssma_oracle**スキーマに含まれるすべてのユーザー定義関数に対する**Execute**権限がアカウントに必要です。 これらの関数は、Oracle システム関数と同等の機能を提供し、変換されたオブジェクトによって使用されます。  
   
-場合に接続するために使用するアカウント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すべての移行を実行するタスク、アカウントのメンバーである必要がありますが、 **sysadmin**サーバーの役割。  
+への接続に使用するアカウント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がすべての移行タスクを実行する場合、アカウントは**sysadmin**サーバーロールのメンバーである必要があります。  
   
-## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
-Oracle データベースのオブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle データベースまたはデータベースを移行します。  
+## <a name="establishing-a-sql-server-connection"></a>SQL Server 接続の確立  
+Oracle データベースオブジェクトを構文に変換する前に、Oracle データベースの移行先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続を確立する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 Oracle スキーマ レベルでは、このマッピングをカスタマイズするに接続した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [SQL Server スキーマへの Oracle スキーマのマッピング&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)します。  
+接続プロパティを定義するときに、オブジェクトとデータを移行するデータベースも指定します。 このマッピングは、に接続した後、Oracle スキーマレベルでカスタマイズでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「 [Oracle スキーマを SQL Server スキーマ &#40;OracleToSQL&#41;にマップする](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)」を参照してください。  
   
 > [!IMPORTANT]  
-> 接続する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ことを確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると、接続を受け入れることができます。  
+> に接続する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されていて、接続を受け入れることができることを確認してください。  
   
 **SQL Server に接続するには**  
   
-1.  **ファイル**メニューの  **SQL サーバーへの接続**します。  
+1.  [**ファイル**] メニューの [ **SQL Server に接続**] を選択します。  
   
-    以前に接続されている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、コマンドの名前になります**SQL Server に再接続**します。  
+    以前にに接続していた場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、コマンド名は**SQL Server に再接続**されます。  
   
-2.  接続ダイアログ ボックスで入力するかのインスタンスの名前を選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+2.  [接続] ダイアログボックスで、のインスタンスの名前を入力または選択し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-    -   ローカル コンピューターの既定のインスタンスに接続する場合は、入力**localhost**またはドット ( **.** )。  
+    -   ローカルコンピューター上の既定のインスタンスに接続している場合は、 **localhost**またはドット (**.**) を入力できます。  
   
-    -   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
+    -   別のコンピューター上の既定のインスタンスに接続している場合は、コンピューターの名前を入力します。  
   
-    -   別のコンピューター上の名前付きインスタンスに接続する場合は、コンピューター名の後に、円記号とし、\myinstance など、インスタンス名を入力します。  
+    -   別のコンピューター上の名前付きインスタンスに接続している場合は、コンピューター名の後に円記号を入力し、インスタンス名を入力します (例、myの myinstance)。  
   
-3.  場合、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定以外のポートで接続を受け入れる、使用されるポート番号を入力するように構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内の接続、**サーバー ポート**ボックス。 既定のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定のポート番号は 1433 です。 名前付きインスタンスは、SSMA は、ポート番号の取得を試みます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービス。  
+3.  のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既定以外のポートで接続を受け入れるように構成されている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [**サーバーポート**] ボックスに接続に使用するポート番号を入力します。 の既定のインスタンスの場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、既定のポート番号は1433です。 名前付きインスタンスの場合、SSMA は Browser サービスからポート番号の取得を試み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-4.  **データベース**ボックスに、ターゲット データベースの名前を入力します。  
+4.  [**データベース**] ボックスに、ターゲットデータベースの名前を入力します。  
   
-    このオプションに再接続する場合は使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+    このオプションは、に再接続する場合は使用できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-5.  **認証**ボックスで、接続に使用する認証の種類を選択します。 現在の Windows アカウントを使用する**Windows 認証**します。 使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインで、 **SQL Server 認証**、ログイン名とパスワードを指定します。  
+5.  [**認証**] ボックスで、接続に使用する認証の種類を選択します。 現在の Windows アカウントを使用するには、[ **Windows 認証**] を選択します。 ログインを使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[ **SQL Server 認証**] を選択し、ログイン名とパスワードを入力します。  
   
-6.  セキュリティで保護された接続は、2 つのコントロールを追加、**暗号化接続**と**TrustServerCertificate**チェック ボックス。 場合にのみ**暗号化接続**がオンになって、 **TrustServerCertificate**チェック ボックスを表示します。 ときに**暗号化接続**がチェックされます (true) と**TrustServerCertificate**チェック ボックスがオフ (false)、これは SQL Server の SSL 証明書を検証します。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 これを確実にクライアント側およびサーバー側で、証明書をインストールする必要があります。  
+6.  セキュリティで保護された接続では、[**暗号化接続**] チェックボックスと [ **trustservercertificate** ] チェックボックスの2つのコントロールが追加されます。 [**暗号化接続**] をオンにした場合にのみ、[ **trustservercertificate** ] チェックボックスが表示されます。 [**暗号化接続**] がオンになっている場合 (true)、 **trustservercertificate**がオフになっている場合 (false)、SQL Server の SSL 証明書が検証されます。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 これを実現するには、証明書をクライアント側とサーバー側の両方にインストールする必要があります。  
   
-7.  **[接続]** をクリックします。  
+7.  **[Connect]** をクリックします。  
   
-**高いバージョンの互換性について**  
+**より高いバージョンの互換性**  
   
--   接続できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 の場合、移行プロジェクトの作成は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移行プロジェクトが "2005" の場合、2008と2012、2014、および2016に接続でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
--   接続できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 の場合、移行プロジェクトの作成は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 つまり下位バージョンに接続することはできませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移行プロジェクトが2008であるにもかかわらず、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より低いバージョン (たとえば、2005) に接続できない場合は、2012および2014および2016に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続できます。  
   
--   接続できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 が作成されたプロジェクトが SQL Server 2012 の場合。  
+-   作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトが 2012 SQL Server 場合は、2012および2014および2016に接続できます。  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|**プロジェクトの種類とターゲット サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (バージョン。9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (バージョン。10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|[はい]|[はい]|[はい]|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|[はい]|[はい]|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|[はい]|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||はい|はい||
+|**プロジェクトの種類 Vs ターゲットサーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(バージョン:13. x)|Azure SQL DB|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|はい|はい|はい||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|はい|はい||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||はい|はい||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||はい||
 |Azure SQL DB||||||はい|
   
 > [!IMPORTANT]
-> データベース オブジェクトの変換が実施しているのバージョンに従っていませんが、プロジェクトの種類に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続しています。 場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年プロジェクトでは、変換は実行に従って[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 の新しいバージョンに接続している場合でも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016)。  
+> データベースオブジェクトの変換は、プロジェクトの種類に従って実行されますが、接続しているのバージョンによっては実行されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 プロジェクトの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008、2012、また [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は2014または 2016) に接続している場合でも、変換は2005ごとに実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-## <a name="synchronizing-sql-server-metadata"></a>SQL サーバーのメタデータの同期  
-に関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースが自動的に更新されません。 内のメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に最初に接続するときに、メタデータ エクスプ ローラーは、メタデータのスナップショット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、または最後の時刻を手動で更新されたメタデータ。 すべてのデータベースまたは任意の 1 つのデータベースまたはデータベース オブジェクトのメタデータを手動で更新することができます。  
+## <a name="synchronizing-sql-server-metadata"></a>SQL Server メタデータの同期  
+データベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は自動的に更新されません。 メタデータエクスプローラーのメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、最初に接続したとき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または前回手動でメタデータを更新したときのメタデータのスナップショットです。 すべてのデータベース、または任意の1つのデータベースまたはデータベースオブジェクトのメタデータを手動で更新できます。  
   
 **メタデータを同期するには**  
   
-1.  接続されていることを確認[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+1.  に接続されていることを確認し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーで、データベースの横にあるチェック ボックスを選択するかデータベースのスキーマを更新します。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータエクスプローラーで、更新するデータベースまたはデータベーススキーマの横にあるチェックボックスをオンにします。  
   
-    たとえば、すべてのデータベースのメタデータを更新するボックスをオンに、横に**データベース**します。  
+    たとえば、すべてのデータベースのメタデータを更新するには、[**データベース**] の横にあるチェックボックスをオンにします。  
   
-3.  右クリック**データベース**、または個々 のデータベースまたはデータベースのスキーマ、および選択**データベースと同期する**します。  
+3.  [データベース]、または個々のデータベースまたはデータベーススキーマを**右クリックし**、[**データベースとの同期**] を選択します。  
   
 ## <a name="next-step"></a>次の手順  
-移行の次の手順は、プロジェクトのニーズによって異なります。  
+移行の次のステップは、プロジェクトのニーズによって異なります。  
   
--   Oracle スキーマ間のマッピングをカスタマイズして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースとスキーマを参照してください。 [SQL Server スキーマへの Oracle スキーマのマッピング&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)します。  
+-   Oracle スキーマとデータベースおよびスキーマ間のマッピングをカスタマイズするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [oracle スキーマを SQL Server スキーマ &#40;OracleToSQL&#41;にマップ](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)する」を参照してください。  
   
--   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト オプションの設定&#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)します。  
+-   プロジェクトの構成オプションをカスタマイズするには、「[プロジェクトオプションの設定 &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)」を参照してください。  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング Oracle および SQL Server データ型&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)します。  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズする方法については、「 [OracleToSQL&#41;&#40;Oracle SQL Server とデータ型のマッピング](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)」を参照してください。  
   
--   Oracle データベース オブジェクトの定義を変換できる場合は、次のタスクを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [Oracle スキーマの変換&#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)します。  
+-   これらのタスクを実行する必要がない場合は、Oracle データベースオブジェクト定義をオブジェクト定義に変換でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「 [Oracle スキーマ &#40;OracleToSQL&#41;の変換](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Oracle データベースの SQL Server &#40;OracleToSQL&#41;への移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

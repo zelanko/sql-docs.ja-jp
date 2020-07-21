@@ -21,25 +21,25 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f3689bdad636d7df4281975167984425a8049aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ecb198e9c2bcc7e23d1b4b66e8109ecf7c8fb5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786580"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>有効桁数、小数点以下桁数、および長さ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 precision は、数値全体の桁数です。 scale は、数値の中で小数点より右側の桁数です。 たとえば、123.45 という値の場合、precision は 5 で、scale は 2 になります。
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**numeric** および **decimal** データ型の precision の既定の最大値は 38 です。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定の最大値は 28 桁です。
   
-数値データ型の長さは、数値の格納に使用されるバイト数です。 文字列または Unicode データ型の長さは文字数です。 **binary**、**varbinary**、および **image** データ型の長さはバイト数です。 たとえば、**int** データ型は 10 桁を保持することができ、4 バイトに格納され、小数点は許可されません。 **Int** データ型の precision は 10、長さは 4、scale は 0 です。
+数値データ型の長さは、数値の格納に使用されるバイト数です。 varchar および char の場合、文字列の長さはバイト数です。 nvarchar および nchar の場合、文字列の長さはバイトペアの数です。 **binary**、**varbinary**、および **image** データ型の長さはバイト数です。 たとえば、**int** データ型は 10 桁を保持することができ、4 バイトに格納され、小数点は許可されません。 **Int** データ型の precision は 10、長さは 4、scale は 0 です。
   
-**char**、**varchar**、**binary**、または **varbinary** 式を 2 つ連結する場合、結果として得られる式の長さは 2 つのソース式の長さの合計 (上限は 8,000 文字) です。
+**char**、**varchar**、**binary**、または **varbinary** 式を 2 つ連結する場合、結果として得られる式の長さは 2 つのソース式の長さの合計 (上限は 8,000 バイト) です。
   
-**nchar** または **nvarchar** 式を 2 つ連結する場合、結果として得られる式の長さは 2 つのソース式の長さの合計 (上限は 4,000 文字) です。
+**nchar** または **nvarchar** 式を 2 つ連結する場合、結果として得られる式の長さは 2 つのソース式の長さの合計 (上限は 4,000 バイトペア) です。
   
 同じデータ型で長さが異なる 2 つの式が、UNION、EXCEPT、または INTERSECT を使って比較される場合、結果の長さは 2 つの式のうち長い方です。
   
@@ -51,7 +51,7 @@ precision は、数値全体の桁数です。 scale は、数値の中で小数
   
 オペランド式は、precision が p1 で scale が s1 の式 e1 と、precision が p2 で scale が s2 の式 e2 で表されます。 **decimal** でない任意の式の precision と scale は、その式のデータ型に定義された precision と scale です。 関数 max(a,b) は、"a" と "b" のうち、大きいほうの値を取ることを意味します。 同様に、min(a,b) は、"b" と "a"のうち、小さいほうの値を取ることを示しています。
   
-|演算|結果の precision|結果の scale *|  
+|操作|結果の precision|結果の scale *|  
 |---|---|---|
 |e1 + e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  
 |e1 - e2|max(s1, s2) + max(p1-s1, p2-s2) + 1|max(s1, s2)|  
@@ -69,7 +69,7 @@ precision は、数値全体の桁数です。 scale は、数値の中で小数
 1. scale が 6 桁未満であり、整数部が 32 を超える場合、scale が変更されることはありません。 これに該当する場合、decimal(38, scale) に収まらなければ、オーバーフロー エラーが発生することがあります 
 1. scale が 6 桁以上であり、整数部が 32 を超える場合、scale は 6 に設定されます。 これに該当する場合、整数部の桁数と scale の両方が減らされ、結果の型は decimal(38,6) になります。 結果は、小数点以下の桁数が 6 桁に丸められるか、整数部を 32 桁に収めることができない場合はオーバーフロー エラーがスローされます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 次の式は、丸めなしの結果 `0.00000090000000000` を返します。これは、結果が `decimal(38,17)` に収まるためです。
 ```sql
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]

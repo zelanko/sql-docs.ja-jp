@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAConnection Members |Microsoft Docs
+title: SQLServerXAConnection のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d106ad25c1823f873ade24800e44987d78a2f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970255"
 ---
 # <a name="sqlserverxaconnection-members"></a>SQLServerXAConnection のメンバー
@@ -33,7 +33,7 @@ ms.locfileid: "67970255"
   
 ## <a name="methods"></a>メソッド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[addConnectionEventListener](../../../connect/jdbc/reference/addconnectioneventlistener-method-sqlserverpooledconnection.md)|([SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) から継承されます) Connection オブジェクトでイベントが発生した場合に通知を受けるように、渡されたイベント リスナーを登録します。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverpooledconnection.md)|([SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) から継承されます) Connection オブジェクトが表す物理的な接続を終了します。|  

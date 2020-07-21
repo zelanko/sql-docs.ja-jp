@@ -1,21 +1,21 @@
 ---
-title: 結果セットを操作する |Microsoft Docs
+title: 結果セットの処理 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe44efec59b78fe025cd08207c2026e658466554
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f29e7e101a0a295266ee5cfa96fbaa84f515e776
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003828"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923896"
 ---
 # <a name="working-with-result-sets"></a>結果セットの処理
 
@@ -26,13 +26,13 @@ ms.locfileid: "68003828"
 また、SQLServerResultSet オブジェクトは、このオブジェクトのデータ行間を移動したり、オブジェクトに含まれるデータを取得または設定したり、基になるデータベースの変更に対するさまざまなレベルの応答性を確立したりするためのメソッドを提供します。  
   
 > [!NOTE]  
-> 変更に対する感度など、結果セットの管理の詳細については、「 [JDBC ドライバーを使用した結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)」を参照してください。  
+> 変更に対する応答性など、結果セットの管理の詳細については、「[JDBC ドライバーによる結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)」を参照してください。  
   
 このセクションのトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに含まれているデータを操作するために結果セットを使用できるさまざまな方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-| トピック                                                                                        | [説明]                                                                                                                                                                                          |
+| トピック                                                                                        | 説明                                                                                                                                                                                          |
 | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [結果セットのデータ サンプルの取得](../../connect/jdbc/retrieving-result-set-data-sample.md) | 結果セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースからデータを取得し、表示する方法について説明します。                                                         |
 | [結果セットのデータ サンプルの変更](../../connect/jdbc/modifying-result-set-data-sample.md)   | 結果セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを挿入、取得、および変更する方法について説明します。                                                      |
@@ -40,5 +40,5 @@ ms.locfileid: "68003828"
   
 ## <a name="see-also"></a>参照
 
- [サンプル JDBC Driver アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+ [サンプル JDBC ドライバー アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   

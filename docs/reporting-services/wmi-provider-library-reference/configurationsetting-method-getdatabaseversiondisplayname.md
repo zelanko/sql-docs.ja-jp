@@ -11,10 +11,10 @@ ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570957"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting メソッド - GetDatabaseVersionDisplayName
@@ -40,7 +40,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *HRESULT*  
  [out] 呼び出しの成功または失敗を示す値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、データベース バージョンと表示文字列のマッピングを示します。  
   
 |**リリース**|**バージョン**|**表示名**|  

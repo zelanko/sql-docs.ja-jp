@@ -1,21 +1,23 @@
 ---
-title: '[データベース参照の追加] ダイアログ ボックス | Microsoft Docs'
+title: '[データベース参照の追加] ダイアログ ボックス'
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
-ms.custom: SSDT
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984699"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75256142"
 ---
 # <a name="add-database-reference-dialog-box"></a>[データベース参照の追加] ダイアログ ボックス
+
 このトピックでは、 **[データベース参照の追加]** ダイアログ ボックスで実行できる手順について説明します。  
   
 データベース参照を使用すると、次のことが可能になります。  
@@ -28,7 +30,8 @@ ms.locfileid: "67984699"
   
 データベース参照は、現在のソリューション内のデータベース プロジェクトを対象にすることも、DACPAC を対象にすることもできます。 データベース参照をプロジェクトに追加すると、プロジェクトの依存関係とビルド順序が変わります。  
   
-## <a name="selecting-the-database-to-reference"></a>参照するデータベースの選択  
+## <a name="selecting-the-database-to-reference"></a>参照するデータベースの選択
+
 参照の対象として、同じソリューション内の別のデータベース プロジェクト、システム データベース、または DACPAC を選択できます。  
   
 ソリューション内に複数のデータベース プロジェクトがある場合は、 **[現在のソリューションのデータベース プロジェクト]** が有効になります。 ソリューション内の別のデータベースを参照することもできます。  
@@ -37,7 +40,8 @@ ms.locfileid: "67984699"
   
 DACPAC 内のデータベースを参照するには **[データ層アプリケーション (.dacpac)]** を選択し、DACPAC ファイルのあるディレクトリに移動します。  
   
-## <a name="selecting-the-databases-relative-location"></a>データベースの相対的な場所の選択  
+## <a name="selecting-the-databases-relative-location"></a>データベースの相対的な場所の選択
+
 参照するデータベースを選択した後に、参照するプロジェクトに対して相対的な、データベース オブジェクトの場所を指定できます。  
   
 参照は、次の場所のいずれかのオブジェクトに対して解決できます。  
@@ -59,7 +63,8 @@ DACPAC 内のデータベースを参照するには **[データ層アプリケ
 > [!IMPORTANT]  
 > 状況によっては、既存のデータベース参照と同じ名前を持つデータベース参照を作成できます。 ただし、同じ名前を持つデータベース参照が 2 つあると、予期しない動作を招く可能性があります。 このような場合は、両方のデータベース参照を削除します。  
   
-## <a name="common-procedures"></a>一般的な手順  
+## <a name="common-procedures"></a>一般的な手順
+
 一般的な手順は次のとおりです。  
   
 ### <a name="to-create-a-reference-to-a-database-on-the-same-server"></a>同じサーバー上のデータベースへの参照を作成するには  
@@ -112,6 +117,6 @@ DACPAC 内のデータベースを参照するには **[データ層アプリケ
   
 3.  **[公開の詳細設定]** ダイアログ ボックスで、 **[配置の詳細設定オプション]** の **[複合オブジェクトを含めます (データベース ターゲットのみ)]** がオンになっていることを確認します。  
   
-## <a name="see-also"></a>参照  
-[プロジェクト指向のオフライン データベース開発](../ssdt/project-oriented-offline-database-development.md)  
-  
+## <a name="see-also"></a>参照
+
+[プロジェクト指向のオフライン データベース開発](../ssdt/project-oriented-offline-database-development.md)

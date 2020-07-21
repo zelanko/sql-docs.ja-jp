@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b6380749b9e2aa37ea50d93ac4dec6f0e2e34db3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c67de4390b23055aaa5c62b735ae2a52bcb2188f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714735"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   EKM モジュールから作成された対称キーのアルゴリズムを返します。  
   
@@ -51,7 +51,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ## <a name="permissions"></a>アクセス許可  
  対称キーに対する何らかの権限が必要です。呼び出し元で、対称キーに対する VIEW 権限が拒否されていないことも必要になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、Key_ID が 256 の対称キーのアルゴリズムを返します。  
   
 ```  

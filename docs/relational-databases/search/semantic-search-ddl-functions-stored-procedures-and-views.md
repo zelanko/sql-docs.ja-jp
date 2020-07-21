@@ -1,5 +1,5 @@
 ---
-title: セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー | Microsoft Docs
+title: セマンティック検索の DDL、関数、ストアド プロシージャ、ビュー
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -11,27 +11,28 @@ ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: b21ff2b2db663aacc48ce5643b88034d91cf7771
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 65ac994727a418e0886b0cb3132b537554eb54da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629079"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の統計的セマンティック検索をサポートする Transact-SQL ステートメントおよびデータベース オブジェクトの一覧を示します。  
   
  フルテキスト検索をサポートするステートメントおよびデータベース オブジェクトの一覧については、「 [フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md)」を参照してください。  
   
-##  <a name="ddl"></a> データ定義言語 (DDL) ステートメント  
+##  <a name="data-definition-language-ddl-statements"></a><a name="ddl"></a> データ定義言語 (DDL) ステートメント  
   
 |Object|詳細情報|  
 |------------|----------------------|  
 |[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)|[テーブルおよび列に対するセマンティック検索の有効化](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)|[テーブルおよび列に対するセマンティック検索の有効化](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
   
-##  <a name="func"></a> システム関数  
+##  <a name="system-functions"></a><a name="func"></a> システム関数  
   
 |Object|詳細情報|  
 |------------|----------------------|  
@@ -39,25 +40,25 @@ ms.locfileid: "67912972"
 |[semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md)|[セマンティック検索による類似および関連したドキュメントの取得](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
 |[semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md)|[セマンティック検索による類似および関連したドキュメントの取得](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
   
-##  <a name="meta"></a> システム メタデータ関数  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> システム メタデータ関数  
   
 |Object|詳細情報|  
 |------------|----------------------|  
 |[COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)|[テーブルおよび列に対するセマンティック検索の有効化](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)|[テーブルおよび列に対するセマンティック検索の有効化](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
-|[FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)|[セマンティクス検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
+|[FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)|[セマンティック検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
 |[INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)|[セマンティック検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
 |[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)|[テーブルおよび列に対するセマンティック検索の有効化](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)|[セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="sproc"></a> システム ストアド プロシージャ  
+##  <a name="system-stored-procedures"></a><a name="sproc"></a> システム ストアド プロシージャ  
   
 |Object|詳細情報|  
 |------------|----------------------|  
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)|[セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)|[セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> カタログ ビュー  
+##  <a name="catalog-views"></a><a name="cv"></a> カタログ ビュー  
   
 |Object|詳細情報|  
 |------------|----------------------|  
@@ -65,7 +66,7 @@ ms.locfileid: "67912972"
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)|[セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)|[セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> 動的管理ビュー  
+##  <a name="dynamic-management-views"></a><a name="dmv"></a> 動的管理ビュー  
   
 |Object|詳細情報|  
 |------------|----------------------|  

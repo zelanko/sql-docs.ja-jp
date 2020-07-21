@@ -1,5 +1,5 @@
 ---
-title: OthersSQLServerDatabaseMetaData Tsarevisible メソッド () |Microsoft Docs
+title: othersInsertsAreVisible メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: aa32f059-bb59-47f8-bac1-292f314df730
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d274dec50ef238e0f87f63524d47275bb386810d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ce373e9147760f1bad4f4dca495bac75669ddb4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976654"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914609"
 ---
 # <a name="othersinsertsarevisible-method-sqlserverdatabasemetadata"></a>othersInsertsAreVisible メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -63,8 +63,8 @@ public boolean othersInsertsAreVisible(int type)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Othersを参照することができます。このメソッドは、java メタデータインターフェイスの Otherssqlarevisible メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この othersInsertsAreVisible メソッドは、java.sql.DatabaseMetaData インターフェイスの othersInsertsAreVisible メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

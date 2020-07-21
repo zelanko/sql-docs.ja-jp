@@ -1,5 +1,5 @@
 ---
-title: セッション |Microsoft Docs
+title: セッション | Microsoft Docs
 description: OLE DB Driver for SQL Server のセッション
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: bc162e77a7a0dd015f108f6d1fd675a8b78b1ecf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995189"
 ---
 # <a name="sessions"></a>セッション
@@ -25,15 +25,15 @@ ms.locfileid: "67995189"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server セッションの OLE DB ドライバーは、のインスタンスへの1つの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]接続を表します。  
+  OLE DB Driver for SQL Server のセッションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの 1 つの接続を表します。  
   
- SQL Server の OLE DB ドライバーでは、セッションがデータソースのトランザクション領域を区切る必要があります。 特定のセッション オブジェクトから作成されたすべてのコマンド オブジェクトは、そのセッション オブジェクトのローカル トランザクションまたは分散トランザクションに関係します。  
+ OLE DB Driver for SQL Server では、セッションでデータ ソースのトランザクション領域を区切ることが必要です。 特定のセッション オブジェクトから作成されたすべてのコマンド オブジェクトは、そのセッション オブジェクトのローカル トランザクションまたは分散トランザクションに関係します。  
   
  初期化されたデータ ソースで最初に作成されるセッション オブジェクトが、初期化時に確立された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接続を受け取ります。 そのセッション オブジェクトのインターフェイスのすべての参照が解放されると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの接続で、データ ソースで作成される別のセッション オブジェクトを使用できるようになります。  
   
  データ ソースで新たに作成されるセッション オブジェクトは、データ ソースでの指定に従って、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの独自の接続を確立します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの接続は、そのセッションを作成したオブジェクトに対するすべての参照がアプリケーションによって解放された時点で削除されます。  
   
- 次の例では、SQL Server の OLE DB ドライバーを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベースに接続する方法を示します。  
+ 次の例では、OLE DB Driver for SQL Server を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに接続する方法について説明します。  
   
 ```  
 int main()  
@@ -182,7 +182,7 @@ EXIT:
 }  
 ```  
   
- OLE DB Driver for SQL Server のセッション オブジェクトを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続すると、セッション オブジェクトの作成と解放を頻繁に行うアプリケーションでは、大きなオーバーヘッドが発生する場合があります。 SQL Server セッションオブジェクトの OLE DB ドライバーを効率的に管理することで、オーバーヘッドを最小限に抑えることができます。 OLE DB Driver for SQL Server アプリケーションでは、オブジェクトのインターフェイスへの参照を少なくとも 1 つ保持することにより、セッション オブジェクトの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接続をアクティブにしておくことができます。  
+ OLE DB Driver for SQL Server のセッション オブジェクトを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続すると、セッション オブジェクトの作成と解放を頻繁に行うアプリケーションでは、大きなオーバーヘッドが発生する場合があります。 OLE DB Driver for SQL Server のセッション オブジェクトを効率的に管理することで、このオーバーヘッドを最小限に抑えることができます。 OLE DB Driver for SQL Server アプリケーションでは、オブジェクトのインターフェイスへの参照を少なくとも 1 つ保持することにより、セッション オブジェクトの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 接続をアクティブにしておくことができます。  
   
  たとえば、コマンド作成オブジェクト参照のプールを保持することで、プール内にあるセッション オブジェクトのアクティブな接続が維持されます。 セッション オブジェクトが必要になると、プールを保持するコードは、セッションを必要とするアプリケーション メソッドに対して、有効な **IDBCreateCommand** インターフェイス ポインターを渡します。 アプリケーション メソッドでセッションが不要になると、このメソッドは、プールを保持するコードにインターフェイス ポインターを返します。ただし、コマンド作成オブジェクトへのアプリケーションの参照は解放されません。  
   
@@ -190,6 +190,6 @@ EXIT:
 >  上記の例で **IDBCreateCommand** インターフェイスを使用したのは、**ICommand** インターフェイスに **GetDBSession** メソッドが実装されているためです。このメソッドは、オブジェクトが作成されたセッションを特定できる、コマンドまたは行セットのスコープ内にある唯一のメソッドです。 したがって、コマンド オブジェクトを使用すると、追加のセッションを作成できるデータ ソース オブジェクト ポインターをアプリケーションで取得できます。  
   
 ## <a name="see-also"></a>参照  
- [データソースオブジェクト&#40;の OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [データ ソース オブジェクト &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

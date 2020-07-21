@@ -1,10 +1,8 @@
 ---
-title: EventString 要素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: EventString 要素 (DTA)
+description: dta ユーティリティでは、EventString 要素により、Transact-SQL スクリプト ワークロードを XML 入力ファイルに直接指定します。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 157c50f419b7003a9dde862c3a2c74c4033fe794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: f9944a2e9d9dc1ec8aad069aa74b90a6a420fad4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008802"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826521"
 ---
 # <a name="eventstring-element-dta"></a>EventString 要素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ワークロードを XML 入力ファイルで直接指定します。  
+
+[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ワークロードを XML 入力ファイルで直接指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,13 +42,13 @@ ms.locfileid: "68008802"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|属性|[説明]|  
+|属性|説明|  
 |---------------|-----------------|  
-|**Weight**|省略可。 対象のイベントに関するクエリの重み係数 (重要度の係数) を指定します。 重み係数の指定には、 **float** データ型を使用します。 たとえば、 **Weight**="100.01" のようにします。 **Weight** に指定できる最小値は「0」です。|  
+|**Weight**|省略可能。 対象のイベントに関するクエリの重み係数 (重要度の係数) を指定します。 重み係数の指定には、 **float** データ型を使用します。 たとえば、 **Weight**="100.01" のようにします。 **Weight** に指定できる最小値は「0」です。|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**、長さは無制限です。|  
 |**既定値**|[なし] :|  

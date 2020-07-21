@@ -1,5 +1,5 @@
 ---
-title: 共通言語ランタイム (CLR) 統合の使用状況のシナリオと例 |Microsoft Docs
+title: 共通言語ランタイム (CLR) 統合の使用シナリオと例Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,24 +16,23 @@ helpviewer_keywords:
 ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30a54064d398ec6db09a9ccd54eed9411a7f905a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933218"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR (共通言語ランタイム) 統合の使用シナリオと例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、サンプル アプリケーション、パッケージ サンプル、およびさまざまなコーディング サンプルが含まれています。これらのサンプルを使用することで、CLR (共通言語ランタイム) 統合のプログラミング機能について理解することができます。  
   
- 完全な Visual Studio プロジェクトがこれらのサンプルと追加資料を実装する、次を参照してください。 [codeplex のサンプル (&)、Microsoft SQL Server コミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=193935)します。  
+ これらのサンプルと追加資料を実装する完全な Visual Studio プロジェクトについては、 [CodePlex の Microsoft SQL Server コミュニティプロジェクト & のサンプル](https://go.microsoft.com/fwlink/?LinkID=193935)を参照してください。  
   
 |名前|説明|  
 |----------|-----------------|  
 |[CLR UDF からのネイティブ コードへのアクセス](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|アセンブリ内のユーザー定義関数に含まれるネイティブ (アンマネージ) C++ コードの関数をデータベースから呼び出す方法を紹介します。|  
 |[Array パラメーター サンプル](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|クライアントからサーバー上の CLR 統合ストアド プロシージャに情報の配列を渡すことで、データベース内の一連の行を作成、更新、または削除する方法を例示します。 この処理は、UDT を使って行っています。|  
-|[カレンダー対応の日付と時刻 UDT サンプル](../../../2014/database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md)|日付と時刻のカレンダー対応処理を提供する 2 つの UDT を定義します。|  
+|[カレンダー対応の日付と時刻の UDT サンプル](../../../2014/database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md)|日付と時刻のカレンダー対応処理を提供する 2 つの UDT を定義します。|  
 |[CLR Transactions サンプル](../../../2014/database-engine/dev-guide/clr-transactions-sample.md)|System.Transactions 名前空間にあるマネージド API を使用してトランザクションを制御する例を示します。|  
 |[CLR と XML を使用した連絡先の作成](../../../2014/database-engine/dev-guide/contact-creation-using-clr-and-xml.md)|SQL Server の Contact サンプルは、基礎となる AdventureWorks2012 サンプル データベースに新しい機能の層を追加する便利なユーティリティをいくつか提供します。 1 つ目のユーティリティは、AdventureWorks2012 データベースに関係した、さまざまな人々の連絡先のレコードを作成します。 連絡先の情報は XML を使用して指定され、XML を作成してデータベースの適切なテーブルに配置するための C# ベースのストアド プロシージャまたは VB ストアド プロシージャに渡されます。|  
 |[通貨型と変換関数](../../../2014/database-engine/dev-guide/currency-type-and-conversion-function.md)|C# を使用して Currency ユーザー定義データ型を定義します。|  
@@ -48,6 +47,6 @@ ms.locfileid: "62780725"
 |[UDT ユーティリティ](../../../2014/database-engine/dev-guide/udt-utilities.md)|多くの UDT (ユーザー定義データ型) ユーティリティ関数が含まれています。|  
 |[未使用のアセンブリのクリーンアップ](../../../2014/database-engine/dev-guide/unused-assembly-cleanup.md)|メタデータ カタログに対してクエリを実行して、現在のデータベース内で使用されていないアセンブリを削除する .NET ストアド プロシージャが含まれています。|  
 |[ユーザー定義型](../../../2014/database-engine/dev-guide/user-defined-type.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] と、System.Data.SqlClient を使用するクライアント アプリケーションの両方から、簡単な UDT を作成および使用する方法を示します。|  
-|[UTF8 文字列ユーザー定義データ型&#40;UDT&#41;](../../../2014/database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md)|UTF8 エンコードされた値を格納するために、データベースの型システムを拡張する UDT の実装を例示します。|  
+|[&#40;UDT&#41;の UTF8 文字列ユーザー定義データ型](../../../2014/database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md)|UTF8 エンコードされた値を格納するために、データベースの型システムを拡張する UDT の実装を例示します。|  
   
   

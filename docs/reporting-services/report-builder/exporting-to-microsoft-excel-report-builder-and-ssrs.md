@@ -1,5 +1,6 @@
 ---
-title: Microsoft Excel へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Microsoft Excel へのエクスポート (レポート ビルダー) | Microsoft Docs
+description: レポートビルダーの Excel 表示拡張機能では、ページ分割されたレポートを、Microsoft Excel で使用する Office Open XML 形式として表示します。
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580774"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342890"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 表示拡張機能では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートが [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 形式 (.xlsx) で表示されます。 Excel 表示拡張機能を使用すると、レポートの列の幅は、より正確に Excel の列の幅に反映されます。  
@@ -29,7 +30,7 @@ ms.locfileid: "65580774"
 >   
 >  悪意のあるスクリプトを誤って実行するリスクを軽減するためには、信頼されたソースのレポートしか開かないようにする必要があります。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。  
   
-##  <a name="ExcelLimitations"></a> Excel の制限  
+##  <a name="excel-limitations"></a><a name="ExcelLimitations"></a> Excel の制限  
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] では、Excel の機能とそのファイル形式により、エクスポートされたレポートに制限が適用されます。 最も重要な制限は、次のとおりです。  
   
 -   最大列幅は 255 文字または 1726.5 ポイントです。 レンダラーでは、列幅がこの制限を下回っているかどうかは検証されません。  
@@ -51,7 +52,7 @@ ms.locfileid: "65580774"
 ### <a name="sizes-of-excel-2003-xls-files"></a>Excel 2003 (.xls) ファイルのサイズ  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 表示拡張機能の使用は推奨されません。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
+>  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 表示拡張機能は非推奨とされます。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
   
  レポートを最初にエクスポートして Excel 2003 に保存するときは、Excel で *.xls ブック ファイルに自動的に適用されるファイル最適化のメリットを得ることはできません。 ファイル サイズが大きくなると、電子メール サブスクリプションと添付ファイルに関する問題が生じる可能性があります。 エクスポートしたレポートの \*.xls ファイルのサイズを小さくするには、その \*.xls ファイルを開いてからブックを再保存します。 ブックを再保存することで、通常はファイル サイズが 40 ～ 50 パーセント縮小します。  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65580774"
     > [!NOTE]  
     >  この問題を回避するには、レポートのテキスト ボックスの幅を大きくしてください。  
   
-### <a name="images"></a>画像  
+### <a name="images"></a>イメージ  
  画像には、次の制限事項が適用されます。  
   
 -   レポート アイテムの背景画像は無視されます。Excel では、セルごとの背景イメージはサポートされていません。  
@@ -109,15 +110,15 @@ ms.locfileid: "65580774"
 ### <a name="report-row-groups-and-column-groups"></a>レポートの行グループと列グループ  
  レポートに行グループまたは列グループが含まれている場合、レポートを Excel にエクスポートするときに空のセルが挿入されます。 たとえば、あるレポートで通勤距離別に行をグループ化するとします。 通勤距離にはそれぞれ複数の顧客を含めることができます。 次の図に、このレポートを示します。  
   
- ![Reporting Services Web ポータルでのレポート](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Reporting Services Web ポータルでのレポート")  
+ ![Reporting Services Web ポータルのレポート](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Reporting Services Web ポータルのレポート")  
   
  このレポートを Excel にエクスポートした場合、通勤距離の列の 1 つのセルにしか通勤距離が表示されません。 値は、レポート内でのテキストの配置 (上、中央、または下) に応じて、最初、中央、または最後のセルに表示されます。 その他のセルは空になります。 顧客名を含む名前列のセルは空になりません。 次の図に、Excel にエクスポートされた後のレポートを示します。 赤色のセル罫線は、強調のために追加されたもので、 灰色のボックスは空のセルです (赤色の線も灰色のボックスもエクスポートされたレポートには含まれません)。  
   
- ![Excel にエクスポートされたレポート、線あり](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Excel にエクスポートされたレポート、線あり")  
+ ![Excel にエクスポートされたレポート、行あり](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Excel にエクスポートされたレポート、行あり")  
   
  このため、行グループまたは列グループが含まれているレポートを Excel にエクスポートしてピボット テーブルで表示する場合は、レポートの変更が必要です。 ワークシートをすべてのセルに値が設定されたフラット テーブルにするには、データが欠落しているセルにグループ値を追加する必要があります。 次の図に、更新したワークシートを示します。  
   
- ![Excel にエクスポートされたレポート、フラット化あり](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Excel にエクスポートされたレポート、フラット化あり")  
+ ![Excel にエクスポートされたレポート、フラット化](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Excel にエクスポートされたレポート、フラット化")  
   
  したがって、レポート データを詳しく分析するために Excel にエクスポートするという特定の目的でレポートを作成した場合は、レポートの行や列をグループ化しないことを検討してください。  
   
@@ -178,7 +179,7 @@ ms.locfileid: "65580774"
   
  レポートでは行の高さが明示的に設定されるため、既定の行の高さは、Excel へのエクスポート時にサイズが自動的に設定される行だけに作用します。  
   
-##  <a name="ReportItemsExcel"></a> Excel のレポート アイテム  
+##  <a name="report-items-in-excel"></a><a name="ReportItemsExcel"></a> Excel のレポート アイテム  
  四角形、サブレポート、レポート本文、およびデータ領域は、Excel のセル範囲としてレンダリングされます。 テキスト ボックス、画像、グラフ、データ バー、スパークライン、マップ、ゲージ、およびインジケーターは、必ず単一の Excel セル内にレンダリングされます。レポートの他の部分のレイアウトによっては、セルが結合される場合もあります。  
   
  画像、グラフ、スパークライン、データ バー、マップ、ゲージ、インジケーター、および線は、単一の Excel セル内で、セル グリッドの一番上に来るように配置されます。 線はセル罫線としてレンダリングされます。  
@@ -192,7 +193,7 @@ ms.locfileid: "65580774"
   
  一致するものが見つからなかった場合は、プリンターの既定のページ サイズが使用されます。 用紙方向は、ページの幅が高さよりも小さければ [縦] に、それ以外の場合は [横] に設定されます。  
   
-##  <a name="WorksheetTabNames"></a> ワークシートのタブ名  
+##  <a name="worksheet-tab-names"></a><a name="WorksheetTabNames"></a> ワークシートのタブ名  
  レポートを Excel ファイルにエクスポートすると、改ページによって生じたレポートの各ページが別々のワークシートにエクスポートされます。 レポートの最初のページ名を指定した場合、既定では、その Excel ワークブックの各ワークシートにこの名前が使用されます。 名前は、ワークシートのタブに表示されます。ただし、ワークブック内の各ワークシートは一意の名前を使用する必要があるため、追加のワークシートごとに 1 から開始され昇順に 1 ずつ増加する整数値がワークブック名に追加されます。 たとえば、最初のページ名が **"会計年度ごとの売り上げレポート"** である場合、2 番目のワークシート名は **"会計年度ごとの売り上げレポート1"** 、3 番目のワークシート名は **"会計年度ごとの売り上げレポート2"** となります。  
   
  改ページによって生じたすべてのレポート ページに新しいページ名がある場合は、各ワークシートには関連するページ名が付けられます。 ただし、これらのページ名が一意でない場合があります。 ページ名が一意でない場合、ワークシートには最初に説明したページ名と同じ方法で名前が付けられます。 たとえば、2 つのグループのページ名が **"東北部の売り上げ"** である場合、1 つのワークシートに **"東北部の売り上げ"** という名前が付けられ、もう一方のワークシートには **"東北部の売り上げ1"** という名前が付けられます。  
@@ -201,17 +202,17 @@ ms.locfileid: "65580774"
   
  Reporting Services には、ユーザーが指定する方法で Excel にエクスポートできるレポートの作成を支援するために、レポート、データ領域、グループ、および四角形に設定するプロパティが用意されています。 詳細については、「 [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="DocumentProperties"></a> ドキュメント プロパティ  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> ドキュメント プロパティ  
  Excel レンダラーでは、次のメタデータが Excel ファイルに書き込まれます。  
   
-|レポート要素のプロパティ|Description|  
+|レポート要素のプロパティ|説明|  
 |-------------------------------|-----------------|  
-|Created|レポート実行の日付と時刻 (ISO 形式の日付/時刻値)。|  
+|作成済み|レポート実行の日付と時刻 (ISO 形式の日付/時刻値)。|  
 |Author|Report.Author|  
-|Description|Report.Description|  
+|説明|Report.Description|  
 |LastSaved|レポート実行の日付と時刻 (ISO 形式の日付/時刻値)。|  
   
-##  <a name="PageHeadersFooters"></a> ページ ヘッダーとページ フッター  
+##  <a name="page-headers-and-footers"></a><a name="PageHeadersFooters"></a> ページ ヘッダーとページ フッター  
  デバイス情報の SimplePageHeaders 設定に応じて、ページ ヘッダーは、ページ ヘッダーを各ワークシートのセル グリッドの上部に表示するか、または実際の Excel ワークシートのヘッダー セクションに表示するという、2 つの方法で表示可能です。 既定では、ヘッダーが Excel ワークシートのセル グリッドにレンダリングされます。  
   
  ページ フッターは、SimplePageHeaders 設定の値に関係なく、常に Excel ワークシートの実際のフッター セクションにレンダリングされます。  
@@ -227,7 +228,7 @@ ms.locfileid: "65580774"
   
  Excel の制限により、Excel のヘッダー/フッター セクションにレンダリングできるレポート アイテムはテキスト ボックスだけです。  
   
-##  <a name="Interactivity"></a> 対話性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 対話性  
  Excel では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  
   
 ### <a name="show-and-hide"></a>表示/非表示  
@@ -262,7 +263,7 @@ ms.locfileid: "65580774"
 ### <a name="bookmarks"></a>ブックマーク  
  テキスト ボックス内のブックマーク リンクは、テキストが表示されるセルに Excel ハイパーリンクとしてレンダリングされます。 画像やグラフのブックマーク リンクは、Excel ハイパーリンクとして、画像上にレンダリングされます。 クリックすると、ブックマークが付けられたレポート アイテムの Excel セルに移動します。  
   
-##  <a name="ConditionalFormat"></a> 実行時のレポートの変更  
+##  <a name="changing-reports-at-run-time"></a><a name="ConditionalFormat"></a> 実行時のレポートの変更  
  レポートを複数の形式で表示する必要があるにもかかわらず、必要なすべての形式で目的どおりに表示されるレポート レイアウトを作成することができない場合は、組み込みの RenderFormat グローバルの値を使用して、レポートの外観を実行時に条件に応じて変更するようにしてください。 この方法により、使用するレンダラーに応じてレポート アイテムの表示/非表示を切り替えて、それぞれの形式で最適な結果を得ることができます。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  

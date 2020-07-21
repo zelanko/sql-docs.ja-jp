@@ -1,5 +1,6 @@
 ---
 title: '[データベースのバックアップ] ([メディア オプション] ページ) | Microsoft Docs'
+description: SQL Server では、[データベースのバックアップ] ダイアログ ボックスの [メディア オプション] を使用して、メディアの上書き、信頼性、トランザクション ログなどのメディア オプションを表示または変更します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c515da38e0218d1026019b718411a0b56d61c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0c5b5b8df782652565247c7c050b1c1edc6a8b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719944"
 ---
-# <a name="back-up-database-media-options-page"></a>[データベースのバックアップ]\([メディア オプション] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="back-up-database-media-options-page"></a>[データベースのバックアップ] ([メディア オプション] ページ)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[データベースのバックアップ]** ダイアログ ボックスの **[メディア オプション]** ページを使用すると、データベースのメディアのオプションを表示または変更できます。  
   
  **SQL Server Management Studio を使用してバックアップを作成するには**  
@@ -36,10 +37,10 @@ ms.locfileid: "67940910"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してバックアップ タスクを指定する場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)][[スクリプト]](../../t-sql/statements/backup-transact-sql.md) ボタンをクリックしてスクリプトの保存先を選択することにより、対応する **BACKUP** スクリプトを生成できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
   
 ### <a name="overwrite-media"></a>[メディアに上書きします]  
- **[メディアに上書きします]** パネルのオプションでは、バックアップをメディアに書き込む方法を制御します。 [データベースのバックアップ] ダイアログ ボックスの [全般] ページでバックアップ先として [URL]\(Windows Azure ストレージ) を選択した場合、[メディアに上書きします] セクションのオプションは無効になります。 Transact-SQL の **BACKUP TO URL.WITH FORMAT** ステートメントを使用して、バックアップを上書きすることができます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
+ **[メディアに上書きします]** パネルのオプションでは、バックアップをメディアに書き込む方法を制御します。 [データベースのバックアップ] ダイアログ ボックスの [全般] ページでバックアップ先として [URL] (Azure Storage) を選択した場合、[メディアに上書きします] セクションのオプションは無効になります。 Transact-SQL の **BACKUP TO URL.WITH FORMAT** ステートメントを使用して、バックアップを上書きすることができます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
 
  **[全般]** ページでバックアップ先として **[URL]** を選択した場合、 **[メディアを上書きする]** オプションは無効になります。
   

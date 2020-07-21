@@ -19,23 +19,23 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 882a7e1acfa8baf49b90e0ebda8d3cef212d511a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726025"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>フルテキスト インデックス作成時の言語の選択
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   フルテキスト インデックスを作成する際には、列レベルの言語をインデックス列に対して指定する必要があります。 指定した言語の [ワード ブレーカーとステマー](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) が、列のフルテキスト クエリで使用されます。 フルテキスト インデックスの作成時に列の言語を選択する際には、注意点が 2 つあります。 これらの注意点は、テキストをトークン化する方法と、Full-Text Engine によるインデックス作成の方法にかかわるものです。  
   
 > [!NOTE]  
 >  列レベルの言語をフルテキスト インデックス列に対して指定するには、列の指定時に LANGUAGE *language_term* 句を使用します。 詳細については、「[CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)」および「[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)」を参照してください。  
   
-##  <a name="langsupp"></a> フルテキスト検索の言語サポート  
+##  <a name="language-support-in-full-text-search"></a><a name="langsupp"></a> フルテキスト検索の言語サポート  
  ここでは、ワード ブレーカーとステミング機能の概要を示し、列レベルの言語の LCID がフルテキスト検索で使用されるしくみについて説明します。  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>ワード ブレーカーとステミング機能の概要  
@@ -74,7 +74,7 @@ ms.locfileid: "68093377"
 >  LCID は、フルテキスト インデックス作成で有効なすべてのデータ型 ( **char** 型や **nchar**型など) に適用されます。 **char**、 **varchar**、または **text** 型の列の並べ替え順を、LCID で識別された言語とは異なる言語に設定した場合でも、それらの列に対してフルテキスト インデックスを作成したりクエリを実行したりするときには LCID が使用されます。  
   
   
-##  <a name="breaking"></a> 単語分割  
+##  <a name="word-breaking"></a><a name="breaking"></a> 単語分割  
  インデックス作成の対象テキストを単語の境界でトークン化するのは、言語固有のワード ブレーカーです。 したがって、単語を区切る動作は言語によって異なります。 1 つの言語 (x) を使用して複数の言語 (x、y、および z) のインデックスを作成した場合、予期しない動作結果が生じることがあります。 たとえば、ダッシュ (-) やコンマ (,) などの単語区切り要素は、言語によって無視されたりされなかったりします。 また、まれに、ある単語の語幹が言語によって異なる場合に、予期しない語幹検索の動作が生じることがあります。 たとえば、英語では通常、単語の境界は空白またはなんらかの句読点になります。 ドイツ語などの他の言語では、複数の単語や文字を組み合わせることができます。 したがって、列レベルで言語を選択する場合は、その列の行に格納されると予想される言語を選択する必要があります。  
   
 ### <a name="western-languages"></a>西洋言語  
@@ -99,11 +99,11 @@ ms.locfileid: "68093377"
      コンテンツがプレーンテキストの場合は、 **xml** データ型に変換して、各ドキュメントまたはドキュメント セクションに対応する言語を示す言語タグを追加できます。 ただし、そのためには、フルテキスト インデックスの作成前に言語を把握しておく必要があります。  
   
   
-##  <a name="stemming"></a> ステミング  
+##  <a name="stemming"></a><a name="stemming"></a> ステミング  
  列レベルで言語を選択する際には、ステミングについても考慮します。 フルテキスト クエリでの*ステマー* は、特定の言語の単語に対し、語幹から派生した語形 (変化形) をすべて検索するプロセスです。 汎用のワード ブレーカーで複数の言語を処理する場合、列に対して指定された言語に対してのみステミング プロセスが機能します。列内のその他の言語に対しては、ステミング プロセスが機能しません。 たとえば、ドイツ語のステミング機能は、英語やスペイン語などに対して機能しません。 このため、クエリ時に選択した言語によっては、再呼び出しに影響する場合があります。  
   
   
-##  <a name="type"></a> 列の型がフルテキスト検索に及ぼす影響  
+##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> 列の型がフルテキスト検索に及ぼす影響  
  言語を選択する際のもう 1 つの注意点は、データの表記方法に関連するものです。 **varbinary(max)** 列に格納されていないデータについては、特別なフィルター処理は実行されません。 テキストはそのままの形で単語を分解するコンポーネント (ワード ブレーカー) に渡されます。  
   
  また、ワード ブレーカーは主に記述されたテキストを処理することを目的として設計されています。 したがって、HTML などのなんらかのマークアップがテキストに含まれている場合には、言語面での精度が高いインデックス作成と検索は期待できません。 このような場合には、2 つの選択肢があります。推奨される方法は、テキスト データを **varbinary(max)** 列に格納し、ドキュメント タイプを明示してフィルター処理されるようにする方法です。 この方法を選択できない場合は、ニュートラル ワード ブレーカーの使用を検討してください。また、可能であれば、ノイズ ワードの一覧にマークアップ データ (HTML の「br」など) を追加します。  
@@ -112,7 +112,7 @@ ms.locfileid: "68093377"
 >  ニュートラル言語を指定した場合、言語ベースのステミングは使用できません。  
   
   
-##  <a name="nondef"></a> フルテキスト クエリにおける既定以外の列レベル言語の指定  
+##  <a name="specifying-a-non-default-column-level-language-in-a-full-text-query"></a><a name="nondef"></a> フルテキスト クエリにおける既定以外の列レベル言語の指定  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のフルテキスト検索では、フルテキスト句内に含まれている各列に対して指定した言語を使用して、クエリ用語が解析されます。 この動作をオーバーライドするには、クエリ時に既定以外の言語を指定します。 言語がサポートされていて、そのリソースがインストールされていれば、 *CONTAINS* 、 [CONTAINSTABLE](../../t-sql/queries/contains-transact-sql.md)、 [FREETEXT](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXTTABLE](../../t-sql/queries/freetext-transact-sql.md)クエリの LANGUAGE [language_term](../../relational-databases/system-functions/freetexttable-transact-sql.md) 句を使用して、クエリ用語の単語区切り、ステマー、類義語辞典、およびストップワードの処理に使用する言語を指定できます。  
   
   

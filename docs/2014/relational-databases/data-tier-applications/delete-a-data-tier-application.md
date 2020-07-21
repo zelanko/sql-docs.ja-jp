@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fd058eb14b45fe9f5aaaea4e9e37c8741c19d6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872721"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970284"
 ---
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
   データ層アプリケーションの削除ウィザードまたは Windows PowerShell スクリプトを使用して、データ層アプリケーションを削除できます。 関連付けられたデータベースの保持、デタッチ、または削除を指定することができます。  
@@ -43,7 +42,7 @@ ms.locfileid: "62872721"
 |データベースのデタッチ|関連付けられたデータベースはデタッチされます。 データベース エンジンのインスタンスはデータベースを参照できませんが、データ ファイルとログ ファイルはそのまま保持されます。|  
 |データベースの削除|関連付けられたデータベースは削除されます。 データ ファイルとログ ファイルも削除されます。|  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC を削除した後に DAC 定義のメタデータ、またはデータベースを自動的に復元するメカニズムはありません。 DAC インスタンスを手動で再構築する方法は、削除オプションによって異なります。  
   
 |オプション|DAC インスタンスの再構築方法|  
@@ -55,10 +54,10 @@ ms.locfileid: "62872721"
 > [!WARNING]  
 >  復元または再アタッチされたデータベースから DAC を登録して DAC インスタンスを再構築しても、サーバーの選択ポリシーなど、元の DAC の一部は再作成されません。  
   
-###  <a name="Permissions"></a> 権限  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  DAC を削除できるのは、 **sysadmin** または **serveradmin** 固定サーバー ロールのメンバーか、データベース所有者のみです。 あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント ( **sa** ) もこのウィザードを起動できます。  
   
-##  <a name="UsingDeleteDACWizard"></a> データ層アプリケーションの削除ウィザードの使用  
+##  <a name="using-the-delete-data-tier-application-wizard"></a><a name="UsingDeleteDACWizard"></a> データ層アプリケーションの削除ウィザードの使用  
  **ウィザードを使用して DAC を削除するには**  
   
 1.  **オブジェクト エクスプローラー**で、削除する DAC を含んだインスタンスのノードを展開します。  
@@ -71,15 +70,15 @@ ms.locfileid: "62872721"
   
 5.  ウィザードの各ダイアログの手順を実行します。  
   
-    1.  [概要](#Introduction)  
+    1.  [はじめに](#Introduction)  
   
     2.  [方法の選択](#Choose_method)  
   
-    3.  [概要](#Summary)  
+    3.  [まとめ](#Summary)  
   
     4.  [データ層アプリケーションの削除](#Delete_datatier_application)  
   
-##  <a name="Introduction"></a> [説明] ページ  
+##  <a name="introduction-page"></a><a name="Introduction"></a> [説明] ページ  
  このページでは、データ層アプリケーションを削除する手順について説明します。  
   
  **[次回からこのページを表示しない]** : 今後このページを表示しないようにするには、このチェック ボックスをオンにします。  
@@ -88,7 +87,7 @@ ms.locfileid: "62872721"
   
  **[キャンセル]** : データ層アプリケーションもデータベースも削除することなくウィザードを終了します。  
   
-##  <a name="Choose_method"></a> [方法の選択] ページ  
+##  <a name="choose-method-page"></a><a name="Choose_method"></a> [方法の選択] ページ  
  削除する DAC に関連付けられているデータベースの処理オプションを指定するには、このページを使用します。  
   
  **[登録の削除]** : データ層アプリケーションを定義しているメタデータを削除しますが、関連付けられたデータベースはそのまま保持されます。  
@@ -101,24 +100,24 @@ ms.locfileid: "62872721"
   
  データベースのデータ ファイルとログ ファイルは、完全に削除されます。  
   
- **\< [戻る]** : **概要** ページに進みます。  
+ ** \< Previous** -[**概要**] ページに戻ります。  
   
  **[次へ]** : **[概要]** ページに進みます。  
   
  **[キャンセル]** : DAC もデータベースも削除することなくウィザードを終了します。  
   
-##  <a name="Summary"></a> [概要] ページ  
+##  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページでは、DAC インスタンスの削除時にウィザードが行うアクションを確認します。  
   
  **[選択内容の概要の確認]** : ボックスに表示されている DAC、データベース、および削除方法を確認します。 情報が正しい場合は、 **[次へ]** または **[完了]** をクリックして DAC を削除します。 DAC とデータベースの情報が正しくない場合は、 **[キャンセル]** をクリックしてから正しい DAC を選択します。 削除方法が正しくない場合は、 **[戻る]** をクリックして **[方法の選択]** ページに戻り、別の方法を選択します。  
   
- **\< [戻る]** : **方法の選択** ページに戻り、別の削除方法を選択します。  
+ ** \< Previous** -別の削除方法を選択するには、 **[メソッドの選択**] ページに戻ります。  
   
- **[次へ >]** : 前のページで選択した方法で DAC インスタンスを削除して、 **[データ層アプリケーションの削除]** ページに進みます。  
+ **[次へ >]**: 前のページで選択した方法で DAC インスタンスを削除して、**[データ層アプリケーションの削除]** ページに進みます。  
   
  **[キャンセル]** : DAC インスタンスを削除することなくウィザードを終了します。  
   
-##  <a name="Delete_datatier_application"></a> [データ層アプリケーションの削除] ページ  
+##  <a name="delete-data-tier-application-page"></a><a name="Delete_datatier_application"></a>[データ層アプリケーションの削除] ページ  
  このページには、削除操作の成功または失敗が表示されます。  
   
  **[DAC の削除]** : DAC インスタンスを削除するために行った各アクションの成功または失敗が表示されます。 内容を確認して、各アクションの成功または失敗を判断します。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  
@@ -127,7 +126,7 @@ ms.locfileid: "62872721"
   
  **[完了]** : ウィザードを終了します。  
   
-##  <a name="DeleteDACPowerShell"></a> PowerShell による DAC の削除  
+##  <a name="delete-a-dac-using-powershell"></a><a name="DeleteDACPowerShell"></a>PowerShell を使用して DAC を削除する  
  **PowerShell スクリプトを使用して DAC を削除するには**  
   
 1.  SMO サーバー オブジェクトを作成し、削除する DAC を含んだインスタンスに設定します。  
@@ -149,10 +148,10 @@ ms.locfileid: "62872721"
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>DAC のみ削除してデータベースはそのまま残す例 (PowerShell)  
  次の例では、MyApplication という DAC を削除します。`Unmanage()` メソッドを使用して DAC のみ削除し、データベースはそのままにします。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -173,7 +172,7 @@ $dacstore.Unmanage($dacName)
 ### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>DAC を削除してデータベースをデタッチする例 (PowerShell)  
  次の例では、MyApplication という DAC を削除します。`Uninstall()` メソッドを使用して DAC を削除し、データベースをデタッチします。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
 $srv = get-item .  
@@ -197,10 +196,10 @@ $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMo
 ### <a name="example-deleting-the-dac-and-dropping-the-database-powershell"></a>DAC を削除してデータベースを削除する例 (PowerShell)  
  次の例では、MyApplication という DAC を削除します。`Uninstall()` メソッドを使用して DAC を削除し、データベースを削除します。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -218,12 +217,10 @@ $dacName  = "MyApplication"
 ## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [[データ層アプリケーション]](data-tier-applications.md)   
- [[データ層アプリケーション]](data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [データ層アプリケーション](data-tier-applications.md)   
+ [データ層アプリケーション](data-tier-applications.md)   
  [データ層アプリケーションの配置](deploy-a-data-tier-application.md)   
- [データベースを DAC として登録する方法](register-a-database-as-a-dac.md)   
+ [データベースを DAC として登録する](register-a-database-as-a-dac.md)   
  [SQL Server データベースのバックアップと復元](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  
-  
-  

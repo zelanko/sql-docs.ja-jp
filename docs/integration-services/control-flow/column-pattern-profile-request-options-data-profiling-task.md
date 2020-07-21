@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 13e4543020060d875f99e346a7cd73e2b9d5fe49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85f02243a8b331ac96dce55ed39813b39fa697b0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003678"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294248"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>[列パターン プロファイル要求] のオプション (データ プロファイル タスク)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68003678"
 > [!NOTE]  
 >  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
   
 ## <a name="understanding-the-use-of-delimiters-and-symbols"></a>区切り記号と記号の使用方法について  
  データ プロファイル タスクは、 **列パターン プロファイル要求**のパターンを計算する前にデータをトークン化します。 つまり、データ プロファイル タスクは、文字列値をトークンと呼ばれる小さな単位に分割します。 データ プロファイル タスクは、 **Delimiters** プロパティおよび **Symbols** プロパティで指定された区切り記号と記号に基づいて文字列をトークンに分割します。  
@@ -47,7 +47,7 @@ ms.locfileid: "68003678"
   
  たとえば、住所に含まれる可能性がある "East"、"West"、"North"、および "South" という値を、"Direction" という 1 つのタグでグループ化できます。 次の表に、このようなタグ テーブルの例を示します。  
   
-|タグ|項目|  
+|タグ|期間|  
 |---------|----------|  
 |Direction|East|  
 |Direction|West|  
@@ -56,12 +56,12 @@ ms.locfileid: "68003678"
   
  別のタグを使用して、住所の "通り" の概念を表すさまざまな単語をグループ化できます。  
   
-|タグ|項目|  
+|タグ|期間|  
 |---------|----------|  
 |Street|Street|  
 |Street|Avenue|  
-|Street|Place|  
-|Street|Way|  
+|Street|場所|  
+|Street|方法|  
   
  これらのタグの組み合わせに基づいて生成される住所のパターンは次のようになります。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68003678"
   
 -   **全般**  
   
--   **Options**  
+-   **[オプション]**  
   
 ### <a name="data-options"></a>[データ] のオプション  
  **[ConnectionManager]**  
@@ -90,7 +90,7 @@ ms.locfileid: "68003678"
   
  詳細については、このトピックの「[TableorView] のオプション」を参照してください。  
   
- **[Column]**  
+ **列**  
  プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、 **[(\*)]** を選択します。  
   
  詳細については、このトピックの「[列] のオプション」を参照してください。  
@@ -116,7 +116,7 @@ ms.locfileid: "68003678"
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[MaxNumberOfPatterns]**  
  プロファイルで計算するパターンの最大数を指定します。 このオプションの既定値は 10 です。 最大値は 100 です。  
   
@@ -148,6 +148,6 @@ ms.locfileid: "68003678"
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

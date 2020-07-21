@@ -1,5 +1,5 @@
 ---
-title: 操作方法:データ処理拡張機能をレポート サーバーに配置します |。Microsoft Docs
+title: データ処理拡張機能をレポート サーバーに配置する方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164074"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>操作方法:データ処理拡張機能をレポート サーバーに配置する
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>データ処理拡張機能をレポート サーバーに配置する方法
   レポート サーバーは、表示レポートのデータを取得および処理するためにデータ処理拡張機能を使用します。 データ処理拡張機能のアセンブリは、プライベート アセンブリとしてレポート サーバーに配置してください。 また、レポート サーバーの構成ファイル RSReportServer.config にエントリを作成する必要もあります。  
   
 ## <a name="procedures"></a>手順  
@@ -44,13 +44,13 @@ ms.locfileid: "63164074"
     </Extensions>  
     ```  
   
-4.  データ処理拡張機能のエントリを追加します。 エントリを含める必要があります、`Extension`の値を持つ要素`Name`と`Type`し、次のようになります。  
+4.  データ処理拡張機能のエントリを追加します。 エントリには、と`Extension` `Name` `Type`の値を持つ要素が含まれている必要があり、次のようになります。  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, MyExtensionAssembly" />  
     ```  
   
-     `Name` の値は、データ処理拡張機能の一意な名前です。 `Type` の値は、<xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイスおよび <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前が続きます.dll ファイル拡張子は付けません。 既定では、データ処理拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、`Visible` 属性を `Extension` 要素に追加し、それを `false` に設定します。  
+     `Name` の値は、データ処理拡張機能の一意な名前です。 `Type` の値は、<xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイスおよび <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> インターフェイスを実装するクラスの完全修飾名前空間のエントリを含むコンマ区切りの一覧であり、その後にアセンブリの名前が続きます。.dll ファイル拡張子は付けません。 既定では、データ処理拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには、`Visible` 属性を `Extension` 要素に追加し、それを `false` に設定します。  
   
 5.  拡張機能に `FullTrust` 権限を付与するカスタム アセンブリのコード グループを追加します。 これを行うには、コード グループを rssrvpolicy.config ファイルに追加します。既定では、このファイルは %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*インスタンス名*>\Reporting Services\ReportServer にあります。 このコード グループは、次のようになります。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63164074"
   
  URL 構成要素は、データ処理拡張機能に選択できる多くの構成要素条件のうちの 1 つにすぎません。 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のコード アクセス セキュリティの詳細については、「[セキュリティで保護された配置 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)」を参照してください。  
   
-## <a name="verifying-the-deployment"></a>配置の確認  
+## <a name="verifying-the-deployment"></a>デプロイの確認  
  データ処理拡張機能がレポート サーバーに正常に配置されたかどうかを確認するには、Web サービス <xref:ReportService2010.ReportingService2010.ListExtensions%2A> メソッドを使用します。 レポート マネージャーを開いて、拡張機能が使用可能なデータ ソース一覧に含まれていることを確認することもできます。 レポート マネージャーとデータ ソースの詳細については、「[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

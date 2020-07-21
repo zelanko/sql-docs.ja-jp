@@ -1,5 +1,6 @@
 ---
 title: OPENXML での value() メソッドと nodes() メソッドの使用 | Microsoft Docs
+description: value() と nodes() メソッド、または OpenXML() メソッドを使用して、SQL クエリで XML 値の行セットを抽出する方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a511e977975ad0e23c9cf553de000b32bad24e69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a719b990c78af4429958fffb6027daf5d578a682
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738369"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML での value() メソッドと nodes() メソッドの使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **SELECT** 句で **xml** データ型に **value()** メソッドを複数回使用すると、抽出した値の行セットを生成できます。 **nodes()** メソッドは、追加のクエリに使用するために選択した各ノードの内部参照を生成します。 **nodes()** メソッドと **value()** メソッドを併用すると、行セットに複数の列があるとき、および行セット生成のためのパス式が複雑なときに、効率的に行セットを生成できます。  
   
  **nodes()** メソッドによって特別な **xml** データ型のインスタンスが生成され、それぞれのインスタンスのコンテキストは選択された個別のノードに設定されます。 このような XML インスタンスは、**query()** メソッド、**value()** メソッド、**nodes()** メソッド、および **exist()** メソッドをサポートし、**count(\*)** 集計で使用できます。 それ以外の使用方法ではエラーが発生します。  

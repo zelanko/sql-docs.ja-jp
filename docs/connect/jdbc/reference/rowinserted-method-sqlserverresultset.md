@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b52007528ee5c3d3caaabc83b158e50156b664e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5b471631bb5111f6bc6af5889ecf0d4444e4742c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975688"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903878"
 ---
 # <a name="rowinserted-method-sqlserverresultset"></a>rowInserted メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public boolean rowInserted()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この rowUpdated メソッドは、rowUpdated インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この rowUpdated メソッドは、java.sql.ResultSet インターフェイスの rowUpdated メソッドによって指定されます。  
   
  返される値は、この [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトが、表示される挿入を検出できるかどうかによって異なります。  
   

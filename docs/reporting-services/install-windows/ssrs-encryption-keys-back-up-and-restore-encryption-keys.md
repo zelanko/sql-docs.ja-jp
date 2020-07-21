@@ -13,10 +13,10 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65502850"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS の暗号化キー - 暗号化キーのバックアップと復元
@@ -52,12 +52,12 @@ ms.locfileid: "65502850"
   
  **SharePoint モード:** SharePoint サーバーの全体管理ページまたは PowerShell。  
   
-##  <a name="bkmk_backup_sharepoint"></a> SharePoint モードのレポート サーバーのバックアップ  
+##  <a name="backup-sharepoint-mode-report-servers"></a><a name="bkmk_backup_sharepoint"></a> SharePoint モードのレポート サーバーのバックアップ  
  SharePoint モードのレポート サーバーの場合は、PowerShell コマンドを使用するか、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを使用します。 詳細については、「[Reporting Services SharePoint サービス アプリケーションの管理](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)」の「キー管理」のセクションを参照してください。  
 
 ::: moniker-end
   
-##  <a name="bkmk_backup_configuration_manager"></a> 暗号化キーのバックアップ - Reporting Services 構成マネージャー (ネイティブ モード)  
+##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> 暗号化キーのバックアップ - Reporting Services 構成マネージャー (ネイティブ モード)  
   
 1.  レポート サーバーの構成マネージャーを起動して、構成するレポート サーバー インスタンスに接続します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65502850"
   
 5.  **[OK]** を選択します。  
   
-###  <a name="bkmk_backup_rskeymgmt"></a> 暗号化キーのバックアップ - rskeymgmt (ネイティブ モード)  
+###  <a name="back-up-encryption-keys--rskeymgmt-native-mode"></a><a name="bkmk_backup_rskeymgmt"></a> 暗号化キーのバックアップ - rskeymgmt (ネイティブ モード)  
   
 1.  レポート サーバーをホストするコンピューターのローカルで **rskeymgmt.exe** を実行します。 抽出用の **-e** 引数を使用してキーをコピーし、ファイル名を入力して、パスワードを指定する必要があります。 指定する必要がある引数の例を次に示します。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65502850"
   
  暗号化キーを復元するには、暗号化キーのコピーがファイルにある必要があります。 また、格納したコピーのロックを解除するパスワードを知っている必要もあります。 キーおよびパスワードがある場合、Reporting Services 構成ツールまたは **rskeymgmt** ユーティリティを実行して、キーを復元できます。 対称キーは、レポート サーバー データベースに現在格納されている暗号化されたデータをロックおよびロック解除するキーと同じものである必要があります。 有効ではないコピーを復元すると、レポート サーバーは、レポート サーバー データベースに現在格納されている暗号化されたデータにアクセスできません。 暗号化されたデータにアクセスできず、有効なキーを復元できない場合、すべての暗号化された値を削除する必要が生じることがあります。 なんらかの理由で暗号化キーを復元できない場合 (バックアップ コピーがない場合など)、既存のキーおよび暗号化されたコンテンツを削除する必要があります。 詳細については、「[暗号化キーの削除と再作成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)」を参照してください。 対称キーの作成の詳細については、「[レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
   
-###  <a name="bkmk_restore_configuration_manager"></a> 暗号化キーの復元 - Reporting Services 構成マネージャー (ネイティブ モード)  
+###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> 暗号化キーの復元 - Reporting Services 構成マネージャー (ネイティブ モード)  
   
 1.  Reporting Services 構成マネージャーを起動して、構成するレポート サーバー インスタンスに接続します。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "65502850"
   
 5.  **[OK]** を選択します。 
   
-###  <a name="bkmk_restore_rskeymgmt"></a> 暗号化キーの復元 - rskeymgmt (ネイティブ モード)  
+###  <a name="restore-encryption-keys---rskeymgmt-native-mode"></a><a name="bkmk_restore_rskeymgmt"></a> 暗号化キーの復元 - rskeymgmt (ネイティブ モード)  
   
 1.  レポート サーバーをホストするコンピューターのローカルで **rskeymgmt.exe** を実行します。 キーを復元するには、 **-a** 引数を使用します。 完全修飾ファイル名を入力し、パスワードを指定する必要があります。 指定する必要がある引数の例を次に示します。  
   

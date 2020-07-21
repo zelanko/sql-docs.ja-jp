@@ -1,5 +1,5 @@
 ---
-title: 属性値を要求する (マスター データ サービス) | Microsoft Docs
+title: 属性値を要求する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e430e158c301279398574bee64d744a40664b623
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dea2c4f9392cbc70d73d1eb383e7e0e2d306a1d3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811891"
 ---
 # <a name="require-attribute-values-master-data-services"></a>属性値を要求する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、マスター データが完全であることを保証するために属性値を要求します。  
   
 > [!NOTE]  
 >  ドメイン ベースの属性値がないメンバーは、それらのリレーションシップに基づく派生階層に表示されません。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-require-attribute-values"></a>属性値を要求するには  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68085700"
   
 4.  **[エンティティ]** ドロップダウン リストから、エンティティを選択します。  
   
-5.  **[メンバーの種類]** ボックスの一覧から、適用するビジネス ルールのメンバーの種類を選択します。  
+5.  **[メンバーの種類]** ドロップダウン リストから、適用するビジネス ルールのメンバーの種類を選択します。  
   
 6.  **[追加]** をクリックします。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68085700"
     -   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>関連項目  
- [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
+ [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)   
  [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

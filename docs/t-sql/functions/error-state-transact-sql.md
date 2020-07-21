@@ -20,17 +20,17 @@ helpviewer_keywords:
 - CATCH block
 - states [SQL Server], error numbers
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 694017e60682d191bd1d02cdc231b7185c3b8c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f898dcc23175c55329c3c6c7cd0063a76d090e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632092"
 ---
-# <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
+# <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   TRY...CATCH 構造の CATCH ブロックが実行された原因となるエラーの状態番号を返します。  
@@ -51,7 +51,7 @@ ERROR_STATE ( )
   
  CATCH ブロックの範囲外で呼び出された場合は NULL を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  エラー メッセージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のコード内の複数の場所で生成される場合があります。 たとえば、異なる複数の条件で "1105" エラーが生成されることがあります。 エラーを生成するそれぞれの条件によって、一意の状態コードが割り当てられます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報などの既知の問題のデータベースを参照する際には、この状態番号を使用して、データベースに登録されている問題が、実際に発生したエラーと同じものかどうかを確認できます。 たとえば、技術情報の資料で取り上げられている 1105 エラー メッセージの状態番号が 2 で、実際の 1105 エラー メッセージの状態番号が 3 だった場合、そのエラーは、その資料で報告されているものとは別の原因で発生したと考えられます。  
@@ -64,9 +64,9 @@ ERROR_STATE ( )
   
  入れ子になった CATCH ブロックでは、ERROR_STATE は、参照されている CATCH ブロックのスコープに固有のエラー状態を返します。 たとえば、外側の TRY...CATCH 構造の CATCH ブロックには、TRY...CATCH 構造が入れ子にされている場合があります。 この場合、入れ子になった CATCH ブロック内では、ERROR_STATE は、入れ子になった CATCH ブロックを呼び出したエラーの状態を返します。 ERROR_STATE が外部の CATCH ブロックで実行された場合は、その CATCH ブロックを呼び出したエラーの状態が返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-errorstate-in-a-catch-block"></a>A. CATCH ブロックで ERROR_STATE を使用する  
+### <a name="a-using-error_state-in-a-catch-block"></a>A. CATCH ブロックで ERROR_STATE を使用する  
  次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 エラーの状態が返されます。  
   
 ```sql  
@@ -80,7 +80,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで ERROR_STATE を他のエラー処理ツールと一緒に使用する  
+### <a name="b-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで ERROR_STATE を他のエラー処理ツールと一緒に使用する  
  次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 エラーの状態と共にエラーに関する情報が返されます。  
   
 ```sql  
@@ -100,9 +100,9 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで ERROR_STATE を他のエラー処理ツールと一緒に使用する  
+### <a name="c-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで ERROR_STATE を他のエラー処理ツールと一緒に使用する  
  次の例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 エラーの状態と共にエラーに関する情報が返されます。  
   
 ```sql  

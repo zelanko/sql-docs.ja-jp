@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo::GetErrorInfo (OLE DB)。マイクロソフトのドキュメント
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,21 +13,19 @@ apitype: COM
 helpviewer_keywords:
 - GetErrorInfo method
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 434a5abdcd04037ff61f51dc16884854d9438cf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 17af29c5a5d6567c23ee5372b6c173a3d37a9581
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051054"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005415"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  ポインターを返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダー SSERRORINFO 構造を含む、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの詳細です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの詳細を格納している Native Client OLE DB プロバイダー SSERRORINFO 構造体へのポインターを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、 **ISQLServerErrorInfo** エラー インターフェイスを定義します。 このインターフェイスは、重大度や状態など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの詳細情報を返します。  
 
@@ -53,13 +51,13 @@ HRESULT GetErrorInfo(
  メソッドが成功しました。  
   
  E_INVALIDARG  
- いずれか、 *ppSSErrorInfo*または*割り当てません*された引数が NULL です。  
+ *ppSSErrorInfo* または *ppErrorStrings* 引数のいずれかが NULL でした。  
   
  E_OUTOFMEMORY  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーは要求を完了するための十分なメモリを割り当てられませんでした。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、要求を完了するために必要なメモリを割り当てることができませんでした。  
   
 ## <a name="remarks"></a>コメント  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーは、コンシューマーによって渡されたポインターを通じて返される SSERRORINFO と OLECHAR の文字列にメモリを割り当てます。 コンシューマーはエラー データにアクセスする必要がなくなった時点で、**IMalloc::Free** メソッドを使用してこのメモリの割り当てを解除する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、コンシューマーによって渡されたポインターによって返される SSERRORINFO および OLECHAR 文字列にメモリを割り当てます。 コンシューマーはエラー データにアクセスする必要がなくなった時点で、**IMalloc::Free** メソッドを使用してこのメモリの割り当てを解除する必要があります。  
   
  SSERRORINFO 構造体は、次のように定義されています。  
   
@@ -77,7 +75,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Member|説明|  
+|メンバー|説明|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー メッセージ。 このメッセージは、**IErrorInfo::GetDescription** メソッドにより返されます。|  
 |*pwszServer*|エラーが発生した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  

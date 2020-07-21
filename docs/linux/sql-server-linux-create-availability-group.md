@@ -8,16 +8,16 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077439"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196740"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>SQL Server on Linux の可用性グループを作成および構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このチュートリアルでは、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux の可用性グループ (AG) を作成および構成する方法について説明します。 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] on Windows 以前とは異なり、基になる Pacemaker クラスターを最初に作成してもしなくても AG を有効にできます。 必要な場合でも、クラスターとの統合は後まで行われません。
 
@@ -59,7 +59,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] を再起動する
+### <a name="restart-ssnoversion-md"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] を再起動する
 Windows の場合と同様に、可用性グループを有効にした後で、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] を再起動する必要があります。 これは、次のようにして行うことができます。
 
 ```bash
@@ -316,7 +316,7 @@ sudo systemctl restart mssql-server
 
 このセクションでは、[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) または Transact-SQL を使用して [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の可用性グループを作成する方法を説明します。
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] を使用してください。
+### <a name="use-ssmanstudiofull-md"></a>[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] を使用します
 
 このセクションでは、新しい可用性グループ ウィザードを使用して、SSMS を使用する外部タイプのクラスターの AG を作成する方法を説明します。
 
@@ -326,13 +326,13 @@ sudo systemctl restart mssql-server
 
 3.  [可用性グループ オプションの指定] ダイアログに、可用性グループの名前を入力し、ドロップダウンでクラスターのタイプとして [外部] または [なし] を選択します。 Pacemaker をデプロイする予定がある場合は [外部] を使用する必要があります。 [なし] は、読み取りスケールアウトなどの特殊なシナリオを対象としています。[データベース レベルの正常性検出] のオプションの選択は省略可能です。 このオプションについて詳しくは、「[可用性グループのデータベース レベルの正常性検出フェールオーバー オプション](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)」をご覧ください。 **[次へ]** をクリックします。
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![Create Availability Group 03](./media/sql-server-linux-create-availability-group/image3.png)
 
 4.  [データベースの選択] ダイアログで、AG に参加するデータベースを選択します。 データベースを AG に追加するには、その前にデータベースごとに完全バックアップが必要です。 **[次へ]** をクリックします。
 
 5.  [レプリカの指定] ダイアログで **[レプリカの追加]** をクリックします。
 
-6.  [サーバーに接続] ダイアログで、セカンダリ レプリカにする [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の Linux インスタンスの名前と、接続するための資格情報を入力します。 **[接続]** をクリックします。
+6.  [サーバーに接続] ダイアログで、セカンダリ レプリカにする [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の Linux インスタンスの名前と、接続するための資格情報を入力します。 **[Connect]** をクリックします。
 
 7.  前の 2 つの手順を、構成専用レプリカまたは別のセカンダリ レプリカを格納するインスタンスに対して繰り返します。
 
@@ -340,23 +340,23 @@ sudo systemctl restart mssql-server
 
     次の例に示す AG には、クラスター タイプ が [外部] のものと構成専用レプリカの 2 つのレプリカが含まれます。
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![Create Availability Group 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     次の例に示す AG には、クラスター タイプ が [なし] のものと構成専用レプリカの 2 つのレプリカが含まれます。
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![Create Availability Group 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  バックアップの設定を変更する場合は、[バックアップの設定] タブをクリックします。AG のバックアップ設定について詳しくは、[可用性レプリカでのバックアップ構成](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)に関するページをご覧ください。
 
 10. 読み取り可能なセカンダリを使用している場合、または読み取りスケール用にタイプが [なし] のクラスターの AG を作成している場合は、[リスナー] タブを選択してリスナーを作成できます。リスナーは後で追加することもできます。 リスナーを作成するには、 **[可用性グループ リスナーの作成]** オプションを選択し、名前と TCP/IP ポート、および静的 DHCP IP アドレスと自動割り当て DHCP IP アドレスのどちらを使用するかを入力します。 クラスター タイプが [なし] の AG では、IP は静的にする必要があり、プライマリの IP アドレスを設定する必要があることに注意してください。
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![Create Availability Group 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. 読み取り可能なシナリオ用にリスナーが作成されている場合、SSMS 17.3 以降では、ウィザードで読み取り専用ルーティングを作成できます。 これは後から SSMS または Transact-SQL を使用して追加することもできます。 すぐに読み取り専用ルーティングを追加にするには:
 
-    A.  [読み取り専用ルーティング] タブを選択します。
+    a.  [読み取り専用ルーティング] タブを選択します。
 
-    B.  読み取り専用レプリカの URL を入力します。 これらの URL はエンドポイントに似ていますが、エンドポイントではなくインスタンスのポートを使用する点が異なります。
+    b.  読み取り専用レプリカの URL を入力します。 これらの URL はエンドポイントに似ていますが、エンドポイントではなくインスタンスのポートを使用する点が異なります。
 
     c.  各 URL を選択し、下部で読み取り可能なレプリカを選択します。 複数選択するには、SHIFT キーを押すか、クリックしてドラッグします。
 
@@ -512,7 +512,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-    場所
+    Where
     - *AGName* は、可用性グループの名前です。
     - *DBName* は、可用性グループで使用されるデータベースの名前です。 名前をコンマで区切って指定することもできます。
     - *PortOfEndpoint* は、作成されるエンドポイントで使用されるポート番号です。
@@ -533,7 +533,7 @@ sudo systemctl restart mssql-server
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Pacemaker の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ログインおよびアクセス許可を作成する
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>Pacemaker の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ログインおよびアクセス許可を作成する
 
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux に基づいている Pacemaker 高可用性クラスターは、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] インスタンスにアクセスする必要があり、可用性グループそのものへのアクセス許可も必要です。 これらの手順では、ログインおよび関連するアクセス許可、さらに [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] へのログイン方法を Pacemaker に指示するファイルが作成されます。
 
@@ -569,7 +569,7 @@ sudo systemctl restart mssql-server
     
 4.  Ctrl キーを押したまま、X キー、C キーの順に押し、ファイルを終了して保存します。
 
-5.  Execute 
+5.  実行 
     ```bash
     sudo chmod 400 /var/opt/mssql/secrets/passwd
     ```
@@ -582,7 +582,9 @@ sudo systemctl restart mssql-server
 
 クラスター タイプ [外部] を指定したときは、可用性グループが [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] に作成された後で、対応するリソースを Pacemaker に作成する必要があります。 AG に関連付けられているリソースには、AG 自体と IP アドレスの 2 つがあります。 リスナー機能を使用しない場合、IP アドレス リソースの構成は省略可能ですが推奨されます。
 
-作成される AG リソースは、クローンと呼ばれる特別な種類のリソースです。 AG リソースは基本的に各ノードのコピーを含み、マスターと呼ばれる制御リソースが 1 つあります。 マスターは、プライマリ レプリカをホストするサーバーに関連付けられています。 セカンダリ レプリカ (標準または構成専用) はスレーブと見なされ、フェールオーバー時にマスターに昇格できます。
+作成される AG リソースは、クローンと呼ばれる特別な種類のリソースです。 AG リソースは基本的に各ノードのコピーを含み、マスターと呼ばれる制御リソースが 1 つあります。 マスターは、プライマリ レプリカをホストするサーバーに関連付けられています。 その他のリソースは、セカンダリ レプリカ (標準または構成専用) をホストし、フェールオーバー時にマスターに昇格させることができます。
+
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  次の構文を使用して AG リソースを作成します。
 
@@ -674,7 +676,7 @@ sudo systemctl restart mssql-server
     
     ここで、*NameForIPResource* は IP リソースの名前、*NameForAGResource* は AG リソースの名前です。また、SLES では *NameForConstraint* は制約の名前です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアルでは、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux の可用性グループ (AG) を作成および構成する方法について説明しました。 以下の方法を学習しました。
 > [!div class="checklist"]

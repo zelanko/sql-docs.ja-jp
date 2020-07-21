@@ -1,5 +1,6 @@
 ---
 title: 実行状態の識別 | Microsoft Docs
+description: 複数の方法でレポートを操作できるようにするため、Reporting Services を使用して実行状態を識別する方法について説明します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 0977cc384dac80f28d6b7c5b7a0149ba200f1794
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991581"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215601"
 ---
 # <a name="identifying-execution-state"></a>実行状態の識別
   Hypertext Transfer Protocol (HTTP) はコネクションレスおよびステートレス プロトコルです。つまり、同じクライアントから異なる要求が来ているかどうかは自動的に検出されません。さらに、ページまたはサイトを表示している 1 つのブラウザーが現在アクティブであるかどうかも、自動的には示されません。 セッションが論理接続を作成し、HTTP を介したサーバーとクライアント間の状態を保持します。 特定のセッションに関連するユーザー固有情報は、セッション状態と呼ばれます。  
@@ -37,7 +38,7 @@ ms.locfileid: "62991581"
   
  次のダイアグラムは、レポートに対する処理と表示のパスを示しています。  
   
- ![レポート処理/表示パス](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "レポート処理/表示パス")  
+ ![レポートの処理および表示 パス](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "レポートの処理および表示パス")  
   
  上記のような関数をサポートするために、現在の SOAP Render メソッドを複数のメソッドに分割して、初期化フェーズ、処理フェーズ、および表示フェーズの実行を網羅しました。  
   

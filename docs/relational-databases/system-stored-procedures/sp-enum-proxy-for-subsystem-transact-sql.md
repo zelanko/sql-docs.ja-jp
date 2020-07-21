@@ -1,5 +1,5 @@
 ---
-title: sp_enum_proxy_for_subsystem (TRANSACT-SQL) |Microsoft Docs
+title: sp_enum_proxy_for_subsystem (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21df62ff7ab60933281ca0dce0e7bc2bc2b3b7c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124659"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891924"
 ---
-# <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (TRANSACT-SQL)
+# <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシがサブシステムにアクセスするための権限を一覧表示します。  
   
@@ -43,13 +43,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @proxy_id = ] proxy_id` に関する情報を表示するプロキシの識別番号。 *Proxy_id*は**int**、既定値は NULL です。 いずれか、 *id*または*proxy_name*指定することがあります。  
+`[ @proxy_id = ] proxy_id`情報を一覧表示するプロキシの識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。 *Id*または*proxy_name*を指定できます。  
   
-`[ @proxy_name = ] 'proxy_name'` に関する情報を表示するプロキシの名前。 *Proxy_name*は**sysname**、既定値は NULL です。 いずれか、 *id*または*proxy_name*指定することがあります。  
+`[ @proxy_name = ] 'proxy_name'`情報を一覧表示するプロキシの名前。 *Proxy_name*は**sysname**で、既定値は NULL です。 *Id*または*proxy_name*を指定できます。  
   
-`[ @subsystem_id = ] subsystem_id` に関する情報を表示するサブシステムの識別番号。 *Subsystem_id*は**int**、既定値は NULL です。 いずれか、 *subsystem_id*または*subsystem_name*指定することがあります。  
+`[ @subsystem_id = ] subsystem_id`情報を一覧表示するサブシステムの識別番号を指定します。 *Subsystem_id*は**int**,、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定できます。  
   
-`[ @subsystem_name = ] 'subsystem_name'` に関する情報を表示するサブシステムの名前。 *Subsystem_name*は**sysname**、既定値は NULL です。 いずれか、 *subsystem_id*または*subsystem_name*指定することがあります。  
+`[ @subsystem_name = ] 'subsystem_name'`情報を一覧表示するサブシステムの名前。 *Subsystem_name*は**sysname**で、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -59,24 +59,24 @@ sp_enum_proxy_for_subsystem
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|サブシステムの識別番号。|  
-|**subsystem_name**|**sysname**|サブシステムの名前です。|  
-|**proxy_id**|**int**|プロキシ識別番号。|  
+|**subsystem_name**|**sysname**|サブシステムの名前。|  
+|**proxy_id**|**int**|プロキシの識別番号。|  
 |**proxy_name**|**sysname**|プロキシの名前。|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>コメント  
- パラメーターが指定されていないときに**sp_enum_proxy_for_subsystem**各サブシステムのインスタンス内のすべてのプロキシに関する情報を一覧表示します。  
+## <a name="remarks"></a>Remarks  
+ パラメーターが指定されていない場合、 **sp_enum_proxy_for_subsystem**は、すべてのサブシステムについて、インスタンス内のすべてのプロキシに関する情報を一覧表示します。  
   
- プロキシ id またはプロキシ名を指定する、 **sp_enum_proxy_for_subsystem**へのアクセスをプロキシ リスト サブシステム。 サブシステム id またはサブシステム名を指定する、 **sp_enum_proxy_for_subsystem**そのサブシステムにアクセスできるプロキシが一覧表示されます。  
+ プロキシ id またはプロキシ名を指定すると、 **sp_enum_proxy_for_subsystem**はプロキシがアクセスできるサブシステムの一覧を表示します。 サブシステム id またはサブシステムの名前を指定すると、 **sp_enum_proxy_for_subsystem**そのサブシステムへのアクセス権を持つプロキシが一覧表示されます。  
   
- ときにプロキシ情報とサブシステムの両方の情報が提供されている、指定したプロキシがある指定されたサブシステムにアクセスできる場合、結果セットは行を返します。  
+ プロキシ情報とサブシステム情報の両方を指定すると、指定したプロキシが指定したサブシステムにアクセスできる場合は、結果セットから行が返されます。  
   
- このストアド プロシージャにある**msdb**します。  
+ このストアドプロシージャは**msdb**にあります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
+ このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-listing-all-associations"></a>A. すべての関連付けを一覧表示する  
  次の例では、現在のインスタンスに対し、プロキシとサブシステムの間に確立されているすべての権限を一覧表示します。  
@@ -89,8 +89,8 @@ EXEC dbo.sp_enum_proxy_for_subsystem ;
 GO  
 ```  
   
-### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B. プロキシは、特定のサブシステムにアクセスを決定します。  
- 場合、次の例は、行を返しますプロキシ`Catalog application proxy`にアクセスする、`ActiveScripting`サブシステム。 それ以外の場合、空の結果セットが返されます。  
+### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B: プロキシが特定のサブシステムにアクセスできるかどうかを判断する  
+ 次の例では、プロキシが `Catalog application proxy` サブシステムにアクセスできる場合に行を返し `ActiveScripting` ます。 それ以外の場合、この例では空の結果セットが返されます。  
   
 ```sql
 USE msdb ;  
@@ -103,6 +103,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_grant_proxy_to_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

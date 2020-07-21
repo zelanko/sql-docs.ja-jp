@@ -23,15 +23,15 @@ ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d2cfda829d014f85f933aaa476507252ca056e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99e72754414674f0617956e6be2ac2711ca0f850
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929104"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999398"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   クエリの途中でオーバーフロー エラーや 0 除算エラーが発生したときに、エラー メッセージを返すかどうかを制御します。  
   
@@ -39,19 +39,19 @@ ms.locfileid: "67929104"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 
 SET ARITHIGNORE { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET ARITHIGNORE の設定では、エラー メッセージを返すかどうかだけを制御できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの設定に関係なく、計算でオーバーフローや 0 除算のエラーが生じた場合には NULL が返されます。 SET ARITHABORT の設定は、クエリが終了したかどうかを判断するために使用できます。 この設定は、INSERT、UPDATE、DELETE ステートメント中に発生するエラーに影響を与えません。  
   
  SET ARITHABORT と SET ARITHIGNORE のいずれかが OFF でも、SET ANSI_WARNINGS が ON の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で 0 除算やオーバーフロー エラーが検出されるとエラー メッセージが返されます。  
@@ -70,7 +70,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`SET ARITHIGNORE` が ON の場合と OFF の場合に、2 種類のクエリ エラーが発生するとどうなるかを示します。  
   
 ```  
@@ -99,7 +99,7 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、0 除算のエラーおよびオーバーフロー エラーを示します。 ARITHIGNORE が OFF のため、この例では各エラーのエラー メッセージが返されません。  
   
 ```  

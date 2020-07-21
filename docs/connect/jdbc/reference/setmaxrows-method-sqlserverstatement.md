@@ -1,5 +1,5 @@
 ---
-title: setMaxRows メソッド (SQLServerStatement) |Microsoft Docs
+title: setMaxRows メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67973979"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>setMaxRows メソッド (SQLServerStatement)
@@ -42,8 +42,8 @@ public final void setMaxRows(int max)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setMaxRows メソッドは、setMaxRows インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setMaxRows メソッドは、java.sql.Statement インターフェイスの setMaxRows メソッドによって指定されます。  
   
  この setMaxRows メソッドは、スクロール可能な動的カーソルには影響しません。 大きな結果セットから行が返される可能性がある場合に、返される行数を制限するには、アプリケーションで SELECT TOP N SQL 構文を使用してください。  
   

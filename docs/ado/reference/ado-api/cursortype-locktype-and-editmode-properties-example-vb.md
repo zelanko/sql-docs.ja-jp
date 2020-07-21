@@ -1,5 +1,5 @@
 ---
-title: CursorType、LockType、EditMode プロパティの例 (VB) |Microsoft Docs
+title: CursorType、LockType、および EditMode プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 044dc0351cb5893514373f298c7a3df86abe5f38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919277"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763533"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、LockType、EditMode プロパティの例 (VB)
-この例の設定、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)と[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを開く前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 値も表示されます、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)さまざまな条件下でのプロパティ。 EditModeOutput 関数は、この手順を実行する必要があります。  
+# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、LockType、および EditMode プロパティの例 (VB)
+この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く前に、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)プロパティと[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを設定します。 また、さまざまな条件下での[EditMode](../../../ado/reference/ado-api/editmode-property.md)プロパティの値も表示されます。 このプロシージャを実行するには、EditModeOutput 関数が必要です。  
   
 ```  
 'BeginEditModeVB  
@@ -122,9 +122,9 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
+ [カーソルの Typeenum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [EditMode プロパティ](../../../ado/reference/ado-api/editmode-property.md)   
  [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
  [LockType プロパティ (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   

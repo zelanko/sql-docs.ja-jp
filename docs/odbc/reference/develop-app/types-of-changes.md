@@ -11,20 +11,20 @@ helpviewer_keywords:
 - compatibility [ODBC], types of changes
 - backward compatibility [ODBC], types of changes
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f43dbf75754a16b3163bbb8e268400f34d372b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f44adb59aa9b0f25475a76a97fe3670de0228c08
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087813"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301607"
 ---
 # <a name="types-of-changes"></a>変更の種類
-ODBC で 3 種類の変更が行われた*3.x* (および ODBC の任意のバージョン)。 これらの異なる方法で旧バージョンとの互換性に影響し、さまざまな方法で処理されます。 これらの変更は、次の表で説明します。  
+ODBC *3.x (および*odbc のすべてのバージョン) では、3種類の変更が行われます。 これらはそれぞれ下位互換性に影響し、異なる方法で処理されます。 これらの変更については、次の表で説明します。  
   
 |変更の種類|説明|  
 |--------------------|-----------------|  
-|新しい機能|これらは、ODBC に新しく追加された機能*3.x*、アウトオブ ライン バインドまたは記述子など。 バージョンのアプリケーションおよびドライバーだけでなく、ドライバー マネージャーがいる場合にのみ、これらは実装*3.x*ので、しようとしてこれらの旧バージョンと互換性があることはありません。|  
-|重複する機能|ODBC に存在する機能は*2.x*および ODBC *3.x*がそれぞれ異なる方法で実装されます。 関数は、 **SQLAllocHandle**と**SQLAllocStmt**例があります。 これらの旧バージョンとの互換性の問題し、重複しているその他の機能は、ドライバー マネージャーのマッピングによって処理されるほとんどの場合。|  
-|動作の変更|これらは、ODBC では異なる方法で処理される機能*2.x*および ODBC *3.x*します。 Datetime **#define**例を示します。 これらの機能は、ODBC によって処理される*3.x*環境属性の設定に基づいて、ドライバー。 (を参照してください[動作が変更される](../../../odbc/reference/develop-app/behavioral-changes.md)詳細についてはします)。|
+|新機能|これらは、アウトオブラインバインドや記述子*など、ODBC*3.x の新機能です。 これらは、アプリケーションとドライバー、およびドライバーマネージャーのバージョンが2.x である場合にのみ実装されます。したがっ*て、これら*の下位互換性を確保することはできません。|  
+|重複する機能|これらは、ODBC 2.x および ODBC 3.x に存在する機能*です**が、それぞれ*に異なる方法で実装されています。 関数**SQLAllocHandle**と**sqlallocstmt**は一例です。 これらの機能およびその他の重複する機能の旧バージョンとの互換性の問題は、ほとんどの場合、ドライバーマネージャーでのマッピングによって処理されます。|  
+|動作の変更|これらの機能*は、odbc 2.x および odbc* 3.x では異なる方法で処理され*ます。* Datetime **#define**は一例です。 これらの機能は、環境属性の設定に基づいて ODBC 3.x ドライバーによって処理さ*れます。* (詳細については、「[動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)」を参照してください。)|

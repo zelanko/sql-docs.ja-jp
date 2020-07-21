@@ -1,5 +1,5 @@
 ---
-title: エラーのコレクション (ADO) |Microsoft Docs
+title: Errors コレクション (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,36 +15,36 @@ f1_keywords:
 helpviewer_keywords:
 - Errors collection [ADO]
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3c8f981d4dc40a4a6f618f3cca387379d51def9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c8f60951646e635d6124c9fe0fd4290c261c959
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932978"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765493"
 ---
 # <a name="errors-collection-ado"></a>Errors コレクション (ADO)
-すべてが含まれています、[エラー](../../../ado/reference/ado-api/error-object.md)単一のプロバイダーに関連の障害への応答で作成されたオブジェクト。  
+プロバイダーに関連する単一のエラーへの応答として作成されたすべての[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトが含まれます。  
   
-## <a name="remarks"></a>コメント  
- ADO オブジェクトに関連するすべての操作には、1 つまたは複数のプロバイダー エラーを生成できます。 各エラーが発生すると、1 つまたは複数**エラー**でオブジェクトを配置できる、**エラー**のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 ADO の別の操作は、エラーを生成するときに、**エラー**コレクションをクリアし、一連の新しい**エラー**でオブジェクトを配置できる、**エラー**コレクション。  
+## <a name="remarks"></a>Remarks  
+ ADO オブジェクトに関連する操作では、1つ以上のプロバイダーエラーが発生することがあります。 各エラーが発生すると、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの**エラー**コレクションに1つまたは複数の**エラー**オブジェクトを配置できます。 別の ADO 操作によっ**てエラーが**生成されると、 **errors**コレクションがクリアされ、エラーオブジェクトの新しいセットを**errors**コレクションに配置できます。  
   
- 各**エラー**オブジェクトは ADO エラーではなく、特定のプロバイダー エラーを表します。 ADO エラーは、実行時の例外処理機構に公開されます。 Microsoft Visual Basic では、ADO 固有エラーの発生がトリガーなど、 [onError](../../../ado/reference/rds-api/onerror-event-rds.md)イベントに表示し、 **Err**オブジェクト。  
+ 各**Error**オブジェクトは、ADO エラーではなく、特定のプロバイダーエラーを表します。 ADO エラーは、ランタイム例外処理機構に公開されます。 たとえば、Microsoft Visual Basic で ADO 固有のエラーが発生すると、 [onError](../../../ado/reference/rds-api/onerror-event-rds.md)イベントがトリガーされ、 **Err**オブジェクトに表示されます。  
   
- エラーを生成しない ADO 操作があるない影響、**エラー**コレクション。 使用して、[オフ](../../../ado/reference/ado-api/clear-method-ado.md)手動でクリアする方法、**エラー**コレクション。  
+ エラーを生成しない ADO 操作は、 **Errors**コレクションには影響しません。 **エラー**コレクションを手動で消去するには、 [clear](../../../ado/reference/ado-api/clear-method-ado.md)メソッドを使用します。  
   
- 一連の**エラー**内のオブジェクト、**エラー**コレクションが 1 つのステートメントへの応答で発生したすべてのエラーについて説明します。 特定のエラーを列挙する、**エラー**コレクションにより、エラー処理ルーチンより正確に、原因と、エラーの発生源を判断し、回復する適切な手順を実行します。  
+ **Errors**コレクション内の**エラー**オブジェクトのセットには、1つのステートメントに応答して発生したすべてのエラーが記述されています。 **Errors**コレクションの特定のエラーを列挙すると、エラー処理ルーチンは、エラーの原因と原因をより正確に特定し、回復するための適切な手順を実行できます。  
   
- プロパティとメソッドの一部として表示される警告を返す**エラー**内のオブジェクト、**エラー**コレクションが、プログラムの実行は停止しないでください。 呼び出す前に、[再同期](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、または[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッド、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、 [を開く](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドを**接続**オブジェクト、または設定、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを**レコード セット**オブジェクトを呼び出し、 **をオフに**メソッドを**エラー**コレクション。 その方法を読み取ることができます、[カウント](../../../ado/reference/ado-api/count-property-ado.md)のプロパティ、**エラー**コレクションをテストするには、警告が返されます。  
+ 一部のプロパティおよびメソッドは、**エラーコレクションに****エラー**オブジェクトとして表示されるが、プログラムの実行を停止しない警告を返します。 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Resync](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、または[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッド、 **Connection**オブジェクトの[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッド、または**recordset**オブジェクトの[Filter](../../../ado/reference/ado-api/filter-property.md)プロパティの設定を呼び出す前に、 **Errors**コレクションに対して**Clear**メソッドを呼び出します。 これにより、 **Errors**コレクションの[Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを読み取って、返された警告をテストできます。  
   
 > [!NOTE]
->  参照してください、**エラー**オブジェクトについての 1 つの ADO 操作で複数のエラーを生成できる方法について詳しく説明します。  
+>  1つの ADO 操作で複数のエラーを生成する方法の詳細については、 **Error**オブジェクトのトピックを参照してください。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
--   [エラーのコレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
+-   [Errors コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)   
  [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

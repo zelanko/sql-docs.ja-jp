@@ -1,5 +1,5 @@
 ---
-title: XML 出力ファイルの形式 (ssbdiagnose) |Microsoft Docs
+title: XML 出力ファイル形式 (ssbdiagnose) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 127e0b807e832272dc98270d811af310cc075bdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56758f15a3bd2a71221c936a80f7455d9e1c1cd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057619"
 ---
 # <a name="xml-output-file-format-ssbdiagnose"></a>XML 出力ファイルの形式 (ssbdiagnose)
   **ssbdiagnose** ユーティリティは、 **-XML** スイッチを指定して実行した場合、その出力を XML ファイルとして配布します。 XML 出力ファイルでは、ヘッダー情報と、分析された [!INCLUDE[ssSB](../../includes/sssb-md.md)] の構成またはメッセージ交換で検出されたエラーが示されます。 ファイルに示されたエラーを分析して報告するためのアプリケーションを作成することができます。 また、XML ファイルを XML Notepad などの一般的な XML エディターで表示することもできます。  

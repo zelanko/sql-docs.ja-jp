@@ -1,5 +1,6 @@
 ---
 title: デバイス コンテンツ (SQL Server) | Microsoft Docs
+description: SQL Server で、デバイス、メディア、メディア セット、バックアップ セットを説明するバックアップ情報を表示するには、[デバイス コンテンツ] ダイアログ ボックスを使用します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c79fa26bb75373811b179ff73462d15f9791b87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748050"
 ---
 # <a name="device-contents-sql-server"></a>デバイス コンテンツ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスは、バックアップ情報の表示に使用します。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。  
   
  **SQL Server Management Studio を使用してバックアップ デバイスの内容を表示するには**  
@@ -29,8 +30,8 @@ ms.locfileid: "68068492"
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>オプション  
- **[メディア]**  
+## <a name="options"></a>Options  
+ **メディア**  
  バックアップ情報が保存されるディスク、またはテープのセットです。  
   
  **[メディア シーケンス]**  
@@ -42,10 +43,10 @@ ms.locfileid: "68068492"
  **[メディア セット]**  
  メディア セットとは、一定の数のバックアップ デバイスを使用し、1 回以上のバックアップ操作で書き込まれたバックアップ メディアを番号順に並べた集合体です。  
   
- **[名前]**  
+ **名前**  
  メディア セットの名前を表示します。  
   
- **[説明]**  
+ **説明**  
  メディア セットの説明を表示します。  
   
  **[メディア ファミリ数]**  
@@ -54,17 +55,17 @@ ms.locfileid: "68068492"
  **[バックアップ セット]**  
  メディアに収められているバックアップ セットに関する情報を表示します。 バックアップ セットとは、正常に完了したバックアップ操作の結果です。バックアップ セットの内容は、一連のバックアップ デバイスのメディアに分散されます。  
   
-|[ヘッダー]|値|  
+|ヘッダー|値|  
 |------------|------------|  
-|**[名前]**|バックアップ セットの名前です。|  
-|**型**|実行するバックアップの種類: [完全]、[差分]、[トランザクション ログ]。|  
-|**コンポーネント**|バックアップされるコンポーネント:[データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用)。|  
-|**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
+|**名前**|バックアップ セットの名前です。|  
+|**Type**|実行するバックアップの種類: [完全]、[差分]、[トランザクション ログ]。|  
+|**コンポーネント**|バックアップされるコンポーネント:[データベース]、[ファイル]、または *\<blank>* (トランザクション ログ用)。|  
+|**サーバー**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
 |**[データベース]**|バックアップされたデータベースの名前。|  
-|**[位置]**|ボリューム内でのバックアップ セットの位置。|  
+|**Position**|ボリューム内でのバックアップ セットの位置。|  
 |**Date**|バックアップ操作が完了したときの日付と時刻。クライアントの地域設定で表示されます。|  
 |**[サイズ]**|バックアップ セットのサイズ (バイト単位) です。|  
-|**[ユーザー名]**|バックアップ操作を実行したユーザーの名前。|  
+|**ユーザー名**|バックアップ操作を実行したユーザーの名前。|  
 |**[有効期限]**|バックアップ セットの期限が切れる日付と時刻。|  
   
 ## <a name="see-also"></a>参照  

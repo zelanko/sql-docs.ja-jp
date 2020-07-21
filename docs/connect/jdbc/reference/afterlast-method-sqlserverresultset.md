@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cecaaa96-b07e-4038-a760-33164b283e42
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 704b292eb50f5a900cb26f8c6958b0d2c6e618c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: df1ae0d9a51962b824fd27fd4a84a71fe4dfe86b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955956"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922970"
 ---
 # <a name="afterlast-method-sqlserverresultset"></a>afterLast メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void afterLast()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この afterLast メソッドは、java.sql.ResultSet インターフェイスの afterLast メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescField |マイクロソフトのドキュメント
+title: SQLGetDescField |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,39 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3e1a4a09d13e6bae34e77aa12e8df994ecf3eaf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62657786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022323"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのみ実装行記述子 (IRD) のドライバー固有の記述子フィールドを公開します。 IRD 内[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記述子フィールドは、ドライバー固有の列の属性によって参照されます。 使用可能なドライバー固有の記述子フィールドの完全な一覧については、次を参照してください。 [SQLColAttribute](sqlcolattribute.md)します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、実装行記述子 (IRD) に対してのみドライバー固有の記述子フィールドが公開されます。 IRD 内で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ドライバー固有の列属性を介して記述子フィールドが参照されます。 使用可能なドライバー固有の記述子フィールドの完全な一覧については、「 [Sqlcolattribute](sqlcolattribute.md)」を参照してください。  
   
  列 ID 文字列を含む記述子フィールドは、多くの場合、長さが 0 の文字列になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有のすべての記述子フィールドの値は読み取り専用です。  
   
- SQLColAttribute では属性のようがレポートの行レベルの属性 (SQL_CA_SS_COMPUTE_ID など) は報告される結果セット内のすべての列の記述子フィールドを取得します。  
+ SQLColAttribute で取得される属性と同様に、行レベルの属性 (SQL_CA_SS_COMPUTE_ID など) を報告する記述子フィールドは、結果セットのすべての列について報告されます。  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField とテーブル値パラメーター  
- SQLGetDescField は、テーブル値パラメーターおよびテーブル値パラメーター列の拡張属性の値を取得できます。 テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ SQLGetDescField を使用して、テーブル値パラメーターおよびテーブル値パラメーターの列の拡張属性の値を取得できます。 テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>SQLGetDescField による機能強化された日付と時刻のサポート  
- 新しい日付/時刻型で使用できる記述子フィールドについては、次を参照してください。[パラメーターと結果のメタデータ](../native-client-odbc-date-time/metadata-parameter-and-result.md)します。  
+ 新しい日付型または時刻型で使用できる記述子フィールドの詳細については、「[パラメーターと結果のメタデータ](../native-client-odbc-date-time/metadata-parameter-and-result.md)」を参照してください。  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+ 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
- 以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQLGetDescField を返すことができます`SQL_C_SS_TIME2`(の`time`型) または`SQL_C_SS_TIMESTAMPOFFSET`(の`datetimeoffset`) の代わりに`SQL_C_BINARY`アプリケーションで ODBC 3.8 が使用する場合は、します。  
+ 以降では [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、アプリケーションで `SQL_C_SS_TIME2` `time` `SQL_C_SS_TIMESTAMPOFFSET` `datetimeoffset` `SQL_C_BINARY` ODBC 3.8 が使用されている場合、SQLGetDescField はの代わりに (型の場合) または (の場合) を返すことができます。  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField による大きな CLR UDT のサポート  
- `SQLGetDescField` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
+ `SQLGetDescField` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>SQLGetDescField によるスパース列のサポート  
- SQLGetDescField は、新しい IRD フィールド SQL_CA_SS_IS_COLUMN_SET を決定する列がクエリに使用できる、`column_set`列。  
+ SQLGetDescField を使用すると、新しい IRD フィールド SQL_CA_SS_IS_COLUMN_SET に対してクエリを実行し、列が列かどうかを判断でき `column_set` ます。  
   
- 詳細については、次を参照してください。[スパース列のサポート&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)します。  
+ 詳細については、「[スパース列のサポート &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   

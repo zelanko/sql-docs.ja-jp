@@ -1,7 +1,6 @@
 ---
-title: カスタム コレクション セットの作成 - ジェネリック T-SQL Query コレクター型 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/07/2017
+title: カスタム コレクション セットの作成 - ジェネリック T-SQL Query コレクター型
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,15 +11,16 @@ helpviewer_keywords:
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a95ef0df9ecb24ca772e99b2b899d90432917c8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8ca7e286d5e6d754bfa13c1e10907b7c040b86a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733860"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>カスタム コレクション セットの作成 - ジェネリック T-SQL Query コレクター型
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データ コレクターで用意されているストアド プロシージャを使用して、ジェネリック T-SQL Query コレクター型を使用するコレクション アイテムを含むカスタム コレクション セットを作成できます。 この作業には、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用した次の手順の実行も含まれます。  
   
 -   アップロードのスケジュールを構成する。  
@@ -38,10 +38,12 @@ ms.locfileid: "68140760"
   
 1.  sp_syscollector_create_collection_set ストアド プロシージャを使用して、新しいコレクション セットを定義します。  
   
-    ```  
+    ```sql
     USE msdb;  
+    GO
     DECLARE @collection_set_id int;  
     DECLARE @collection_set_uid uniqueidentifier;  
+
     EXEC sp_syscollector_create_collection_set   
         @name=N'DMV Test 1',   
         @collection_mode=0,   
@@ -51,6 +53,7 @@ ms.locfileid: "68140760"
         @schedule_name=N'CollectorSchedule_Every_15min',   
         @collection_set_id=@collection_set_id OUTPUT,   
         @collection_set_uid=@collection_set_uid OUTPUT;  
+
     SELECT @collection_set_id, @collection_set_uid;  
     ```  
   
@@ -80,8 +83,11 @@ ms.locfileid: "68140760"
   
     ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
-    SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
-    WHERE name = N'Generic T-SQL Query Collector Type';  
+
+    SELECT @collector_type_uid = collector_type_uid
+      FROM [msdb].[dbo].[syscollector_collector_types]   
+      WHERE name = N'Generic T-SQL Query Collector Type';  
+
     DECLARE @collection_item_id int;  
     ```  
   
@@ -101,6 +107,7 @@ ms.locfileid: "68140760"
         @frequency=5,   
         @collection_set_id=@collection_set_id,   
         @collector_type_uid=@collector_type_uid;  
+
     SELECT @collection_item_id;  
     ```  
   
@@ -110,6 +117,7 @@ ms.locfileid: "68140760"
   
     ```sql  
     USE msdb;  
+    GO
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
     GO  
@@ -135,28 +143,32 @@ EXEC dbo.sp_syscollector_create_collection_set
     @schedule_name=N'CollectorSchedule_Every_15min',  
     @collection_set_id = @collection_set_id OUTPUT,  
     @collection_set_uid = @collection_set_uid OUTPUT;  
+
 SELECT @collection_set_id,@collection_set_uid;  
   
 DECLARE @collector_type_uid uniqueidentifier;  
-SELECT @collector_type_uid = collector_type_uid FROM syscollector_collector_types   
-WHERE name = N'Generic T-SQL Query Collector Type';  
+
+SELECT @collector_type_uid = collector_type_uid
+  FROM syscollector_collector_types   
+  WHERE name = N'Generic T-SQL Query Collector Type';  
   
 DECLARE @collection_item_id int;  
+
 EXEC sp_syscollector_create_collection_item  
-@name= N'Query Stats - Test 1',  
-@parameters=N'  
-<ns:TSQLQueryCollector xmlns:ns="DataCollectorType">  
-<Query>  
-  <Value>select * from sys.dm_exec_query_stats</Value>  
-  <OutputTable>dm_exec_query_stats</OutputTable>  
-</Query>  
- </ns:TSQLQueryCollector>',  
-    @collection_item_id = @collection_item_id OUTPUT,  
-    @frequency = 5, -- This parameter is ignored in cached mode  
-    @collection_set_id = @collection_set_id,  
-    @collector_type_uid = @collector_type_uid;  
+    @name= N'Query Stats - Test 1',  
+    @parameters=N'  
+    <ns:TSQLQueryCollector xmlns:ns="DataCollectorType">  
+    <Query>  
+      <Value>select * from sys.dm_exec_query_stats</Value>  
+      <OutputTable>dm_exec_query_stats</OutputTable>  
+    </Query>  
+     </ns:TSQLQueryCollector>',  
+        @collection_item_id = @collection_item_id OUTPUT,  
+        @frequency = 5, -- This parameter is ignored in cached mode  
+        @collection_set_id = @collection_set_id,  
+        @collector_type_uid = @collector_type_uid;  
+        
 SELECT @collection_item_id;  
-  
 GO  
 ```  
   

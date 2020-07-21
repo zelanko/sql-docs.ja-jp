@@ -1,5 +1,6 @@
 ---
 title: メモリ不足の問題の解決 | Microsoft Docs
+description: SQL Server インメモリ OLTP のメモリ不足状況、影響を復元および解決する方法、ページ割り当ての失敗を解決する方法、およびベスト プラクティスについて説明します。
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2dd428c7f035cf73e679bbd6c47e78f1f745457
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722387"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] では、さまざまな形で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より多くのメモリが使用されます。 インストールして [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 用に割り当てたメモリ量が、ニーズの拡大に合わなくなる場合があります。 その場合は、メモリが不足する可能性があります。 このトピックでは、OOM 状態から回復する方法について説明します。 多数の OOM 状態を回避するのに役立つガイドについては、「 [メモリ使用量の監視とトラブルシューティング](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) 」を参照してください。  
   
@@ -26,12 +27,12 @@ ms.locfileid: "68111821"
   
 |トピック|概要|  
 |-----------|--------------|  
-|[OOM によるデータベース復元の障害を解決する](#bkmk_resolveRecoveryFailures)|"リソース プール ' *\<resourcePoolName>* ' 内のメモリ不足が原因で、データベース ' *\<databaseName>* ' の復元操作に失敗しました" というエラー メッセージが表示された場合の対処方法。|  
+|[OOM によるデータベース復元の障害を解決する](#bkmk_resolveRecoveryFailures)|"リソース プール ' *\<resourcePoolName>* ' 内のメモリ不足が原因で、データベース ' *\<databaseName>* ' の復元操作に失敗しました。" というエラー メッセージが表示された場合の対処方法。|  
 |[低メモリまたは OOM 状態によるワークロードへの影響を解決する](#bkmk_recoverFromOOM)|低メモリの問題によるパフォーマンス低下が見つかった場合の対処方法。|  
-|[十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#bkmk_PageAllocFailure)|"リソース プール ' *\<resourcePoolName>* ' のメモリが不足しているため、データベース ' *\<databaseName>* ' のページ割り当ては禁止されています" というエラー メッセージが表示された場合の対処方法。 ..." というエラー メッセージが発生した場合の対処方法。|
+|[十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#bkmk_PageAllocFailure)|操作に十分なメモリがあるにもかかわらず、"リソース プール ' *\<resourcePoolName>* ' のメモリが不足しているため、データベース ' *\<databaseName>* ' のページ割り当ては禁止されています。 ..." というエラー メッセージが発生した場合の対処方法。|
 |[VM 環境でのインメモリ OLTP の使用のベスト プラクティス](#bkmk_VMs)|仮想化環境でインメモリ OLTP を使用するときの留意事項。|
   
-##  <a name="bkmk_resolveRecoveryFailures"></a> OOM によるデータベース復元の障害を解決する  
+##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> OOM によるデータベース復元の障害を解決する  
  データベースを復元しようとすると次のエラー メッセージが表示されることがあります。"リソース プール ' *\<resourcePoolName>* ' 内のメモリが不足しているため、データベース ' *\<databaseName>* ' の復元操作に失敗しました。"これは、データベースを復元するのに十分なメモリがサーバーにないことを示します。 
    
 データベースの復元先であるサーバーでは、データベース バックアップのメモリ最適化テーブル用に十分なメモリが確保されている必要があります。メモリが十分でない場合、データベースはオンラインにならず、問題ありの印が付きます。  
@@ -70,21 +71,19 @@ ms.locfileid: "68111821"
 -   **max server memory**の値を大きくします。  
     **max server memory** の構成については、トピック「[サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)」をご覧ください。  
   
-##  <a name="bkmk_recoverFromOOM"></a> 低メモリまたは OOM 状態によるワークロードへの影響を解決する  
+##  <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a><a name="bkmk_recoverFromOOM"></a> 低メモリまたは OOM 状態によるワークロードへの影響を解決する  
  言うまでもなく、低メモリまたは OOM (メモリ不足) の状態にならないことがベストです。 適切なプラン作成と監視によって、OOM 状態を回避することができます。 ただし、最適なプランを作成しても、実際に起こることを予測できるとは限らず、結果として低メモリまたは OOM の状態になる場合もあります。 OOM からの復旧には、次の 2 段階があります。  
   
 1.  [DAC (専用管理者接続) を開く](#bkmk_openDAC)  
   
 2.  [修正措置を行う](#bkmk_takeCorrectiveAction)  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-###  <a name="bkmk_openDAC"></a> DAC (専用管理者接続) を開く  
+###  <a name="open-a-dac-dedicated-administrator-connection"></a><a name="bkmk_openDAC"></a> DAC (専用管理者接続) を開く  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には専用管理者接続 (DAC) があります。 DAC を使用すると、サーバーが他のクライアント接続に応答しない場合でも、SQL Server データベース エンジンの実行中のインスタンスにアクセスして、サーバーの問題をトラブルシューティングすることができます。 DAC は、`sqlcmd` ユーティリティと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で使用できます。  
   
  SSMS または `sqlcmd` で DAC を使用する方法については、「[データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。  
   
-###  <a name="bkmk_takeCorrectiveAction"></a> 修正措置を行う  
+###  <a name="take-corrective-action"></a><a name="bkmk_takeCorrectiveAction"></a> 修正措置を行う  
  OOM 状態を解決するには、使用率を削減して既存メモリを解放するか、インメモリ テーブルに使用できるメモリ量を増やす必要があります。  
   
 #### <a name="free-up-existing-memory"></a>既存メモリを解放する  
@@ -101,7 +100,7 @@ ms.locfileid: "68111821"
   
 #### <a name="increase-available-memory"></a>使用可能なメモリを増やす  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>リソース プールの MAX_MEMORY_PERCENT 値を増やす  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>リソース プールの MAX_MEMORY_PERCENT 値を増やす  
  インメモリ テーブル用に名前付きリソース プールを作成していない場合は、作成して [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースをバインドします。 [データベースを作成してリソース プールにバインドする方法については、「](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) メモリ最適化テーブルを持つデータベースのリソース プールへのバインド [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 」を参照してください。  
   
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースがリソース プールにバインドされている場合は、プールがアクセスできるメモリのパーセントを増やせることがあります。 リソース プールの MIN_MEMORY_PERCENT および MAX_MEMORY_PERCENT の値を変更する方法については、サブトピック「 [既存のプール内での MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の変更](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) 」をご覧ください。  
@@ -137,14 +136,14 @@ GO
 >  サーバーが VM 上で実行されており、専用用途ではない場合は、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT を同じ値に設定してください。   
 > 詳細については、「[VM 環境でのインメモリ OLTP の使用のベスト プラクティス](#bkmk_VMs) 」をご覧ください。  
   
-##  <a name="bkmk_PageAllocFailure"></a> 十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する  
+##  <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a><a name="bkmk_PageAllocFailure"></a> 十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する  
  エラー メッセージ `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.` がエラー ログに記録される場合は、原因として、リソース ガバナーが無効になっている可能性があります。 リソース ガバナーが無効になっていると、MEMORYBROKER_FOR_RESERVE によって擬似的なメモリ不足が引き起こされます。  
   
  これを解決するには、リソース ガバナーを有効にする必要があります。  
   
  オブジェクト エクスプローラー、リソース ガバナーのプロパティ、または Transact-SQL を使用してリソース ガバナーを有効にする方法や、制限事項と制約事項については、「 [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md) 」をご覧ください。  
  
-## <a name="bkmk_VMs"></a> VM 環境でのインメモリ OLTP の使用のベスト プラクティス
+## <a name="best-practices-using-in-memory-oltp-in-a-vm-environment"></a><a name="bkmk_VMs"></a> VM 環境でのインメモリ OLTP の使用のベスト プラクティス
 サーバー仮想化に伴い、各企業は IT の資本コストと運用コストを削減し、アプリケーションの準備、メンテナンス、可用性、バックアップと復旧の各プロセスを向上させることにより、IT 効率の大幅な上昇を達成しています。 最近の技術的な進歩により、仮想化を使用して、複雑なデータベース ワークロードを従来より容易に統合することができます。 ここでは、仮想化環境内での SQL Server インメモリ OLTP の使用に関して推奨されるベスト プラクティスについて取り扱います。
 
 ### <a name="memory-pre-allocation"></a>メモリの事前割り当て
@@ -156,7 +155,7 @@ GO
 
 メモリ最適化テーブルがデータベース内に含まれている場合に上記のプラクティスに従うと、データベースの復元と復旧を試みたときに、データベースを復旧するための十分なメモリが存在するにもかかわらず、データベースが "復旧の保留中" という状態にとどまる可能性があります。 その理由は、動的メモリ割り当て機能がメモリをデータベースに割り当てる場合に比べて、インメモリ OLTP は起動時により積極的にデータをメモリ内に読み込むことにあります。
 
-### <a name="resolution"></a>解決策
+### <a name="resolution"></a>解決方法
 この問題を軽減するためには、必要に応じて追加のメモリを提供する動的メモリ機能に依存して最小限のメモリを割り当てる代わりに、データベースを復旧または再起動するために十分なメモリをデータベースに事前に割り当ててください。
   
 ## <a name="see-also"></a>参照  

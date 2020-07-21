@@ -1,5 +1,5 @@
 ---
-title: OLE DB コマンド変換の構成 |Microsoft Docs
+title: OLE DB コマンド変換を構成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - parameters [Integration Services]
 - OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7d9e0c2601968f7174f5250b7af88a92e75693fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060561"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434619"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>OLE DB コマンド変換を構成する
   OLE DB コマンド変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと、フラット ファイル ソースや OLE DB ソースなどの変換元があらかじめ含まれている必要があります。 この変換は、通常、パラメーター化クエリを実行するために使用されます。  
@@ -37,11 +36,11 @@ ms.locfileid: "66060561"
   
 6.  **[接続マネージャー]** タブで、 **[接続マネージャー]** 一覧から OLE DB 接続マネージャーを選択します。 詳細については、「 [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
-7.  **[コンポーネントのプロパティ]** タブをクリックし、 **[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
+7.  **[コンポーネントのプロパティ]** タブをクリックし、**[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
   
 8.  **[文字列値エディター]** で、各パラメーターのパラメーター マーカーとして疑問符 (?) を使用して、パラメーター化 SQL ステートメントを入力します。  
   
-9. **[更新]** をクリックします。 **[更新]** をクリックすると、この変換は各パラメーターに対する列を External Columns コレクションに作成し、DBParamInfoFlags プロパティを設定します。  
+9. **[最新の情報に更新]** をクリックします。 **[更新]** をクリックすると、この変換は各パラメーターに対する列を External Columns コレクションに作成し、DBParamInfoFlags プロパティを設定します。  
   
 10. **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
@@ -71,10 +70,10 @@ ms.locfileid: "66060561"
   
 15. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
+## <a name="see-also"></a>関連項目  
+ [OLE DB コマンド変換](data-flow/transformations/ole-db-command-transformation.md)   
  [Integration Services の変換](data-flow/transformations/integration-services-transformations.md)   
- [Integration Services のパス](data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](control-flow/data-flow-task.md)  
+ [Integration Services パス](data-flow/integration-services-paths.md)   
+ [データ フロー タスク](control-flow/data-flow-task.md)  
   
   

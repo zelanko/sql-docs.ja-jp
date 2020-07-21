@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7de45ced2f4f39fff54c5beff6228c6f8a5c0476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157977"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050290"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成
   このトピックでは、インメモリ OLTP の構文を紹介する例を示します。  
@@ -26,7 +25,7 @@ ms.locfileid: "63157977"
   
 -   メモリ最適化テーブルおよびインデックスを作成する。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)」を参照してください。  
   
--   解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用し、メモリ最適化テーブルにデータをロードして、ネイティブ コンパイル ストアド プロシージャを作成する前に統計を更新します。 詳しくは、「 [Statistics for Memory-Optimized Tables](memory-optimized-tables.md)」をご覧ください。  
+-   解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用し、メモリ最適化テーブルにデータをロードして、ネイティブ コンパイル ストアド プロシージャを作成する前に統計を更新します。 詳細については、「 [メモリ最適化テーブルの統計](memory-optimized-tables.md)」を参照してください。  
   
 -   メモリ最適化テーブルのデータにアクセスするために、ネイティブ コンパイル ストアド プロシージャを作成する。 詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)」を参照してください。  
   
@@ -233,7 +232,7 @@ ORDER BY so.so_id, sod.lineitem_id
 ```  
   
 ## <a name="see-also"></a>参照  
- [インメモリ OLTP のコード サンプル](in-memory-oltp-code-samples.md)   
+ [インメモリ OLTP のコードサンプル](in-memory-oltp-code-samples.md)   
  [計算列の移行](migrating-computed-columns.md)   
  [メモリ最適化テーブルへの IDENTITY の実装](implementing-identity-in-a-memory-optimized-table.md)  
   

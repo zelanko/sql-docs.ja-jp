@@ -1,5 +1,5 @@
 ---
-title: StDevP 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: StDevP 関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab50dd468a0efdc1b5345df4e7a1facc3ccd1218
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c46bdc29f93715246401a824cac889f8052101bc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577164"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081141"
 ---
 # <a name="report-builder-functions---stdevp-function"></a>レポート ビルダー関数 - StDevP 関数
   式で指定された NULL 以外のすべての数値の母集団標準偏差を、指定されたスコープのコンテキストで評価して返します。  
@@ -41,7 +41,7 @@ StDevP(expression, scope, recursive)
 ## <a name="return-type"></a>戻り値の型  
  10 進数型の式には **Decimal** 値が、その他すべての式には **Double** 値が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  式で指定されたデータセットは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、 **CInt**、 **CDbl** 、 **CDec**などの変換関数を使用します。 詳細については、「 [データ型変換関数](https://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
   
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  

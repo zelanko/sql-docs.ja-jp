@@ -22,18 +22,17 @@ helpviewer_keywords:
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f0950e48245bed53581d2f91b120ab9555aa562
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033730"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064580"
 ---
 # <a name="statistics"></a>統計
   クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために統計を使用します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成したりクエリのデザインを変更したりする必要がある場合もあります。 このトピックでは、クエリ最適化に関する統計の概念と、それを効果的に使用するためのガイドラインについて説明します。  
   
-##  <a name="DefinitionQOStatistics"></a> コンポーネントおよび概念  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> コンポーネントおよび概念  
  統計  
  クエリ最適化に関する統計は、テーブルまたはインデックス付きビューの 1 つまたは複数の列の値の分布に関する統計情報を格納するオブジェクトです。 クエリ オプティマイザーでは、これらの統計を使用してクエリ結果の *カーディナリティ*、つまり行数を推定します。 これらの *カーディナリティの推定* に基づいて、クエリ オプティマイザーでは高品質なクエリ プランを作成できます。 たとえば、クエリ オプティマイザーでは、カーディナリティの推定に基づいて、リソースの消費が多い Index Scan 操作ではなく Index Seek 操作が使用される場合があります。この場合、クエリのパフォーマンスが向上します。  
   
@@ -68,7 +67,7 @@ ORDER BY s.name;
  AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) ステートメントを使用して作成された統計に適用されます。 また、フィルター選択された統計情報にも適用されます。  
   
  AUTO_UPDATE_STATISTICS_ASYNC  
- 統計の非同期更新オプション AUTO_UPDATE_STATISTICS_ASYNC によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 既定では、統計の非同期更新オプションはオフであり、クエリ オプティマイザーによる統計の更新は同期更新になります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) ステートメントを使用して作成された統計に適用されます。  
+ 統計の非同期更新オプション AUTO_UPDATE_STATISTICS_ASYNC によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 既定では、統計の非同期更新オプションはオフであり、クエリ オプティマイザーによる統計の更新は同期更新になります。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックス用に作成された統計オブジェクト、クエリ述語内の1つの列、および[CREATE statistics](/sql/t-sql/statements/create-statistics-transact-sql)ステートメントで作成された統計に適用されます。  
   
  統計の更新には、同期更新 (既定) と非同期更新があります。 統計の同期更新では、クエリは常に最新の統計を使用してコンパイルおよび実行されます。統計が古い場合、クエリ オプティマイザーでは、統計が更新されるまでクエリのコンパイルおよび実行を待機します。 統計の非同期更新では、クエリは、既存の統計が古い場合でもその統計を使用してコンパイルされます。クエリのコンパイル時に古い統計が使用された場合、クエリ オプティマイザーで最適なクエリ プランが選択されない可能性があります。 非同期更新の完了後にコンパイルされるクエリには、更新された統計を使用できます。  
   
@@ -105,7 +104,7 @@ ORDER BY s.name;
 |-|  
 |**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
-##  <a name="CreateStatistics"></a> 統計を作成する場合  
+##  <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> 統計を作成する場合  
  クエリ オプティマイザーによって、既に次のようにして統計が作成されています。  
   
 1.  インデックスの作成時に、クエリ オプティマイザーによってテーブルまたはビューのインデックスに対する統計が作成されます。 これらの統計は、インデックスのキー列について作成されます。 インデックスがフィルター選択されたインデックスの場合は、フィルター選択されたインデックスに指定された行のサブセットと同じ行のサブセットについて、フィルター選択された統計が作成されます。 フィルター選択されたインデックスの詳細については、「[フィルター選択されたインデックスの作成](../indexes/create-filtered-indexes.md)」および 「[CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)」を参照してください。  
@@ -114,7 +113,7 @@ ORDER BY s.name;
   
  ほとんどのクエリでは、これらの 2 つの方法で作成された統計を使用すれば、高品質のクエリ プランになります。ただし、 [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) ステートメントを使用して追加の統計を作成することで、クエリ プランが向上する場合もあります。 これらの追加の統計では、クエリ オプティマイザーでインデックスまたは 1 列ずつの統計を作成する場合には考慮されない統計的相関関係を取り込むことができます。 アプリケーションのテーブル データには、計算して統計オブジェクトに含めればクエリ オプティマイザーでクエリ プランを向上させることができる、他の統計的相関関係が含まれている場合があります。 たとえば、データ行のサブセットに関するフィルター選択された統計情報や、クエリ述語列の複数列統計を使用することで、クエリ プランが向上することがあります。  
   
- CREATE STATISTICS ステートメントを使用して統計を作成する場合、AUTO_CREATE_STATISTICS オプションをオンのままにし、クエリ述語列に対する 1 列ずつの統計がクエリ オプティマイザーによって通常どおり作成されるようにしておくことをお勧めします。 クエリ述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql)」を参照してください。  
+ CREATE STATISTICS ステートメントを使用して統計を作成する場合、AUTO_CREATE_STATISTICS オプションをオンのままにし、クエリ述語列に対する 1 列ずつの統計がクエリ オプティマイザーによって通常どおり作成されるようにしておくことをお勧めします。 クエリ述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql)」を参照してください。   
   
  次のいずれかに該当する場合は、CREATE STATISTICS ステートメントを使用して統計を作成することを検討してください。  
   
@@ -152,7 +151,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>データのサブセットから選択するクエリを使用する  
  クエリ オプティマイザーでは、1 列ずつおよびインデックスに対して統計を作成する際、すべての行の値に対する統計を作成します。 行のサブセットから選択するクエリの場合、その行のサブセットのデータ分布が一意であれば、フィルター選択された統計情報を使用することでクエリ プランを向上させることができます。 フィルター選択された統計情報は、CREATE STATISTICS ステートメントを WHERE 句と共に使用してフィルター述語の式を定義することで作成できます。  
   
- たとえばを使用して[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]、Production.ProductCategory テーブルの 4 つのカテゴリのいずれかに属している、Production.Product テーブルに各製品。Bikes、Components、Clothing、Accessories。 各カテゴリでは、重量に関するデータ分布が異なります。自転車の重量は 13.77 ～ 30.0、部品の重量は 2.12 ～ 1050.00 (一部 NULL 値)、衣類の重量はすべて NULL、付属品の重量も NULL です。  
+ たとえば、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]を使用する場合、Production.Product テーブルの各製品は、Production.ProductCategory テーブルの 4 つのカテゴリ (Bikes、Components、Clothing、および Accessories) のいずれかに属しています。 各カテゴリでは、重量に関するデータ分布が異なります。自転車の重量は 13.77 ～ 30.0、部品の重量は 2.12 ～ 1050.00 (一部 NULL 値)、衣類の重量はすべて NULL、付属品の重量も NULL です。  
   
  たとえば Bikes の場合、自転車のすべての重量についてのフィルター選択された統計情報を使用すると、テーブル全体の統計情報を使用する場合や、Weight 列の統計情報が存在しない場合と比べて、より正確な統計情報がクエリ オプティマイザーに提供され、クエリ プランの品質が向上します。 自転車の重量の列は、フィルター選択された統計情報には適していますが、重量の参照が比較的少ない場合、フィルター選択されたインデックスには必ずしも適しているとは限りません。 フィルター選択されたインデックスを使用することで得られる参照のパフォーマンスの向上よりも、フィルター選択されたインデックスをデータベースに追加するためのメンテナンス コストとストレージ コストの増加の方が大きい場合があります。  
   
@@ -195,7 +194,7 @@ GO
   
  一時的な統計は `tempdb` に格納されるので、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを再起動すると、一時的な統計がすべて表示されなくなります。  
   
-##  <a name="UpdateStatistics"></a> 統計を更新する場合  
+##  <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> 統計を更新する場合  
  クエリ オプティマイザーでは、古くなっている可能性がある統計を判断し、それらがクエリ プランに必要な場合は更新します。 場合によっては、AUTO_UPDATE_STATISTICS をオンにした場合より頻繁に統計を更新することで、クエリ プランが向上し、クエリのパフォーマンスが向上することがあります。 統計は、UPDATE STATISTICS ステートメントまたは sp_updatestats ストアド プロシージャを使用して更新できます。  
   
  統計を更新すると、クエリが最新の統計を使用してコンパイルされるようになります。 ただし、統計の更新によりクエリが再コンパイルされます。 パフォーマンスの向上を目的とする場合、クエリ プランの改善とクエリの再コンパイルに要する時間の間にはトレードオフの関係があるため、あまり頻繁に統計を更新しないようにすることをお勧めします。 実際のトレードオフはアプリケーションによって異なります。  
@@ -225,8 +224,8 @@ GO
   
  インデックスの再構築、デフラグ、再構成などの操作では、データの分布は変わりません。 そのため、ALTER INDEX REBUILD、DBCC REINDEX、DBCC INDEXDEFRAG、または ALTER INDEX REORGANIZE の各操作を実行した後に統計を更新する必要はありません。 ALTER INDEX REBUILD または DBCC DBREINDEX を使用してテーブルまたはビューのインデックスを再構築した場合、クエリ オプティマイザーによって統計が更新されますが、この統計の更新はインデックスを再作成する過程で実行されるものです。 DBCC INDEXDEFRAG 操作または ALTER INDEX REORGANIZE 操作の後は、クエリ オプティマイザーで統計は更新されません。  
   
-##  <a name="DesignStatistics"></a> 統計を効果的に使用するクエリ  
- クエリ述語にローカル変数や複雑な式が含まれている場合など、特定のクエリ実装では、最適なクエリ プランにならないことがあります。 クエリのデザイン ガイドラインに従って統計を効果的に使用することで、この問題を回避できる場合があります。 クエリ述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql)」を参照してください。  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> 統計を効果的に使用するクエリ  
+ クエリ述語にローカル変数や複雑な式が含まれている場合など、特定のクエリ実装では、最適なクエリ プランにならないことがあります。 クエリのデザイン ガイドラインに従って統計を効果的に使用することで、この問題を回避できる場合があります。 クエリ述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql)」を参照してください。   
   
  クエリのデザイン ガイドラインを適用して統計を効果的に使用することで、クエリ述語で使用される式、変数、および関数に対する *カーディナリティの推定* を向上させると、クエリ プランを向上させることができます。 クエリ オプティマイザーでは、式、変数、または関数の値が不明な場合、ヒストグラムで参照する値を特定できないため、ヒストグラムから最適なカーディナリティの推定を得ることができません。 その場合、クエリ オプティマイザーでは、ヒストグラム内のサンプリングされたすべての行の値ごとの平均行数に基づいてカーディナリティの推定を行います。 その結果、カーディナリティが適切に推定されず、クエリのパフォーマンスが低下することがあります。  
   
@@ -323,12 +322,12 @@ GO
  アプリケーションによっては、クエリを変更できない場合や、RECOMPILE クエリ ヒントを使用すると再コンパイルが多くなりすぎる場合など、クエリのデザイン ガイドラインを適用できないことがあります。 プラン ガイドを使用すると、アプリケーション ベンダーによるアプリケーションの違いを確認しながら、その他のヒント (USE PLAN など) を指定してクエリの動作を制御することができます。 プラン ガイドの詳細については、「 [Plan Guides](../performance/plan-guides.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
- [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
+ [Transact-sql&#41;&#40;の統計の作成](/sql/t-sql/statements/create-statistics-transact-sql)   
+ [UPDATE STATISTICS &#40;Transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
+ [sp_updatestats &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
+ [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
  [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
- [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
+ [DROP STATISTICS &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [フィルター選択されたインデックスの作成](../indexes/create-filtered-indexes.md)  

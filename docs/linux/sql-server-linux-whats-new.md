@@ -3,28 +3,33 @@ title: SQL Server 2017 on Linux の新機能
 description: この記事では、SQL Server 2017 on Linux の新機能について説明します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/23/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 3f3f51716acf69368ae2554446c47d125b500e03
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1d36925292bee040735dc07df3044293263661e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032157"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893814"
 ---
-# <a name="whats-new-for-sql-server-on-linux"></a>SQL Server on Linux の新機能
+# <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux の新機能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux 上で実行される SQL Server 2017 で使用できる主な機能とサービスについて説明します。
 
-SQL Server 2019 プレビューがリリースされました。 この記事では、SQL Server 2019 のプレビュー リリースについては説明しません。 SQL Server 2019 プレビューについては、[Linux 用 SQL Server 2019 プレビューの新機能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)に関するページを参照してください。
-
 > [!NOTE]
-> この記事での機能に加えて、GA リリースの後も累積的な更新プログラムが定期的にリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、[https://aka.ms/sql2017cu](https://aka.ms/sql2017cu) を参照してください。 パッケージのダウンロードと既知の問題については、[リリース ノート](sql-server-linux-release-notes.md)のページをご覧ください。
+> この記事に含まれているこれらの機能に加えて、累積的な更新プログラムが定期的にリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについて詳しくは、[https://aka.ms/sql2017cu](https://aka.ms/sql2017cu) を参照してください。 パッケージのダウンロードと既知の問題については、[リリース ノート](sql-server-linux-release-notes.md)のページをご覧ください。
+
+## <a name="ubuntu-1804-supported"></a>Ubuntu 18.04 をサポート
+
+SQL Server 2017 CU20 以降では、Ubuntu 18.04 がサポートされるようになりました。 [Ubuntu での SQL Server のインストールとデータベースの作成](quickstart-install-connect-ubuntu.md?view=sql-server-2017)に関するクイック スタートを参照してください。
+
+## <a name="rhel-8-supported"></a>RHEL 8 をサポート
+
+SQL Server 2017 CU20 以降では、RHEL 8 がサポートされるようになりました。 [Red Hat での SQL Server のインストールとデータベースの作成](quickstart-install-connect-red-hat.md?view=sql-server-2017)に関するクイック スタートを参照してください。
 
 ## <a name="sql-server-database-engine"></a>SQL Server データベース エンジン
 
@@ -56,7 +61,7 @@ SQL Server 2019 プレビューがリリースされました。 この記事で
 - クロスプラットフォームのスクリプト ジェネレーター、[mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md)。
 - クロスプラットフォームの動的管理ビュー (DMV) モニター、[DBFS ツール](https://github.com/Microsoft/dbfs)。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server on Linux をインストールするには、次のチュートリアルのいずれかを使用します。
 
@@ -66,9 +71,6 @@ SQL Server on Linux をインストールするには、次のチュートリア
 - [Docker 上での実行](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-SQL Server 2017 で導入されたその他の改善点については、「[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)」を参照してください。
-
-> [!TIP]
-> よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)」を参照してください。
+よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)」を参照してください。 SQL Server 2017 で導入されたその他の改善点については、「[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)」を参照してください。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

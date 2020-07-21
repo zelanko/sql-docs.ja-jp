@@ -12,14 +12,14 @@ helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8308a8449dd41d1eef7ad6784dffc8d8939f64f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f149ca01b71b7611264f28d14532d7827554585f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941533"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292540"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>XML ソースを使用してデータを抽出する
 
@@ -69,6 +69,6 @@ ms.locfileid: "67941533"
  [XML ソース](../../integration-services/data-flow/xml-source.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)  
   
   

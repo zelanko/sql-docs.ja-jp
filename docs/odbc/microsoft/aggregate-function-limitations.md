@@ -11,14 +11,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], aggregate functions
 - ODBC desktop database drivers [ODBC], aggregate functions
 ms.assetid: f6e494ed-c7cb-4b1b-bf3b-c4361850b51a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8cb0d006a6d380ed21cbe73f77abe3c2aa42a71f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19a45f9f1f5d56075ceea3fe178a15285db2e6c4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901385"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81281402"
 ---
 # <a name="aggregate-function-limitations"></a>集計関数の制限事項
-1 つの SQL ステートメントの引数としてには、集計関数と非集計列の参照の両方を使用することはできません。
+集計関数と非集計列参照は、両方とも1つの SQL ステートメントの引数として使用することはできません。

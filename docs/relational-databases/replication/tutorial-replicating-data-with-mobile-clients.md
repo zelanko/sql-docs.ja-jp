@@ -1,6 +1,7 @@
 ---
-title: チュートリアル:サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する | Microsoft Docs
-ms.custom: ''
+title: チュートリアル:マージ レプリケーションの構成
+description: このチュートリアルでは、SQL Server とモバイル クライアントの間のマージ レプリケーションを構成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720693"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>チュートリアル:サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 マージ レプリケーションは、中央のサーバーと、常時接続でないモバイル クライアントの間でデータを移動する際の問題を解決する有効なソリューションです。 レプリケーション ウィザードを使用すると、マージ レプリケーション トポロジを簡単に設定し、管理できます。 
 
 このチュートリアルでは、モバイル クライアント用のレプリケーション トポロジを設定する方法を学習します。 マージ レプリケーションの詳細については、[マージ レプリケーションの概要](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)に関するページを参照してください
@@ -35,7 +36,7 @@ ms.locfileid: "67895366"
 > * マージ パブリケーションのモバイル サブスクライバーを追加する。
 > * マージ パブリケーションにサブスクリプションを同期する。
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このチュートリアルは、データベースの基本的な操作は理解しているが、レプリケーション機能についてはあまり詳しくないユーザーを対象としています。 このチュートリアルを行うには、[チュートリアル: レプリケーション用の SQL Server の準備](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)に関するページを完了しておく必要があります。  
   
 このチュートリアルを実行するには、SQL Server、SQL Server Management Studio (SSMS)、および AdventureWorks データベースが必要です。 
@@ -45,9 +46,9 @@ ms.locfileid: "67895366"
    - SQL Server Express または SQL Server Compact を除く、SQL Server の任意のエディション。 レプリケーションのパブリッシャーとして使用できないため除きます。   
    - [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。  
   
-- サブスクライバー サーバー (レプリケーション先) に、[!INCLUDE[ssEW](../../includes/ssew-md.md)] を除く SQL Server の任意のエディションをインストールします。 このチュートリアルで作成するパブリケーションでは、[!INCLUDE[ssEW](../../includes/ssew-md.md)] はサポートされていません。 
+- サブスクライバー サーバー (レプリケーション先) に、SQL Server Express と SQL Server Compact を除く SQL Server の任意のエディションをインストールします。 このチュートリアルで作成するパブリケーションでは、SQL Server Express と SQL Server Compact のどちらもサポートされていません。 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
 - [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードします。 SSMS でデータベースを復元する方法の詳細については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。  
  
@@ -109,21 +110,21 @@ ms.locfileid: "67895366"
   
 10. **[テーブル行のフィルター選択]** ページで、 **[Employee (Human Resources)]** 、 **[追加]** の順に選択し、 **[選択したフィルターを拡張するために結合を追加する]** を選択します。  
   
-    A. **[結合の追加]** ダイアログ ボックスで、 **[結合テーブル]** の下の **[Sales.SalesOrderHeader]** を選択します。 **[JOIN ステートメントを手動で作成する]** を選択し、次のように JOIN ステートメントを完成させます。  
+    a. **[結合の追加]** ダイアログ ボックスで、 **[結合テーブル]** の下の **[Sales.SalesOrderHeader]** を選択します。 **[JOIN ステートメントを手動で作成する]** を選択し、次のように JOIN ステートメントを完成させます。  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    B. **[結合オプションを指定します]** で、 **[一意キー]** を選択して **[OK]** を選択します。
+    b. **[結合オプションを指定します]** で、 **[一意キー]** を選択して **[OK]** を選択します。
 
     ![フィルターに結合を追加するための選択](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. **[テーブル行のフィルター選択]** ページで、 **[SalesOrderHeader]** 、 **[追加]** の順に選択し、 **[選択したフィルターを拡張するために結合を追加する]** を選択します。  
   
-    A. **[結合の追加]** ダイアログ ボックスで、 **[結合テーブル]** の下の **[Sales.SalesOrderDetail]** をクリックします。    
-    B. **[ビルダーを使用してステートメントを作成する]** を選択します。  
+    a. **[結合の追加]** ダイアログ ボックスで、 **[結合テーブル]** の下の **[Sales.SalesOrderDetail]** をクリックします。    
+    b. **[ビルダーを使用してステートメントを作成する]** を選択します。  
     c. **[プレビュー]** ボックスで、JOIN ステートメントが次のようになっていることを確認します。  
   
     ```sql  
@@ -164,14 +165,14 @@ ms.locfileid: "67895366"
   
 2. **[ローカル パブリケーション]** フォルダーを展開し、 **[AdvWorksSalesOrdersMerge]** パブリケーションを右クリックして、 **[プロパティ]** を選択します。  
   
-   A. **[パブリケーション アクセス リスト]** ページを選択して、 **[追加]** を選択します。 
+   a. **[パブリケーション アクセス リスト]** ページを選択して、 **[追加]** を選択します。 
   
-   B. **[パブリケーション アクセスの追加]** ダイアログ ボックスで、<*パブリッシャー コンピューター名*> **\repl_merge** を選択して **[OK]** を選択します。 もう一度 **[OK]** を選択します。 
+   b. **[パブリケーション アクセスの追加]** ダイアログ ボックスで、<*パブリッシャー コンピューター名*> **\repl_merge** を選択して **[OK]** を選択します。 もう一度 **[OK]** を選択します。 
 
    ![マージ エージェントのログインを追加するための選択](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
   
-詳細については、以下をご覧ください。  
+詳細については、次を参照してください。  
 - [パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md) 
 - [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 - [アーティクルの定義](../../relational-databases/replication/publish/define-an-article.md)  
@@ -240,14 +241,14 @@ ms.locfileid: "67895366"
   
 2. **[ローカル パブリケーション]** フォルダーを展開し、 **[AdvWorksSalesOrdersMerge]** パブリケーションを右クリックして、 **[プロパティ]** を選択します。  
    
-   A. **[データ パーティション]** ページを選択して、 **[追加]** を選択します。   
-   B. **[データ パーティションの追加]** ダイアログ ボックスで、 **[HOST_NAME 値]** ボックスに「**adventure-works\pamela0**」と入力し、 **[OK]** を選択します。  
+   a. **[データ パーティション]** ページを選択して、 **[追加]** を選択します。   
+   b. **[データ パーティションの追加]** ダイアログ ボックスで、 **[HOST_NAME 値]** ボックスに「**adventure-works\pamela0**」と入力し、 **[OK]** を選択します。  
    c. 新しく追加したパーティションを選択して、 **[今すぐ選択したスナップショットを生成する]** を選択し、 **[OK]** を選択します。 
 
    ![パーティションを追加するための選択](media/tutorial-replicating-data-with-mobile-clients/partition.png)
   
   
-詳細については、以下をご覧ください。  
+詳細については、次を参照してください。  
 - [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)  
 - [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)  
 - [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
@@ -269,14 +270,14 @@ ms.locfileid: "67895366"
     
   
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 マージ レプリケーション用にパブリッシャーとサブスクライバーの両方を正しく構成しました。 次のこともできます。
 
 1. パブリッシャーまたはサブスクライバーで **SalesOrderHeader** または **SalesOrderDetail** テーブルのデータを挿入、更新、削除します。
 2. ネットワーク接続が使用可能な場合はこの手順を繰り返してパブリッシャーとサブスクライバー間でデータを同期します。
 3. 他のサーバーにある **SalesOrderHeader** または **SalesOrderDetail** テーブルをクエリし、レプリケートされた変更を表示します。  
   
-詳細については、以下をご覧ください。   
+詳細については、次を参照してください。   
 - [スナップショットを使用したサブスクリプションの初期化](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [データの同期](../../relational-databases/replication/synchronize-data.md)  
 - [プル サブスクリプションの同期](../../relational-databases/replication/synchronize-a-pull-subscription.md)  

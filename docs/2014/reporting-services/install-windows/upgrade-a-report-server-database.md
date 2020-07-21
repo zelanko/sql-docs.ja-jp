@@ -15,18 +15,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108638"
 ---
 # <a name="upgrade-a-report-server-database"></a>レポート サーバー データベースのアップグレード
   レポート サーバー データベースは、1 台以上のレポート サーバー インスタンスの記憶域になります。 レポート サーバー データベースのスキーマは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]が新たにリリースされるたびに変更される可能性があります。そのため、使用中のレポート サーバー インスタンスのバージョンとデータベースのバージョンを一致させる必要があります。 ほとんどの場合、レポート サーバー データベースは自動的にアップグレードされます。ユーザーは何も処理する必要がありません。  
   
- **ネイティブ モード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブ モード レポート サーバー データベースは"ReportServer と ReportServerTempDB"の既定の名前を持つ 2 つのデータベースの実際に構成されます。  
+ **ネイティブモード:** ネイティブ[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]モードでは、レポートサーバーデータベースは、実際には "ReportServer と ReportServerTempDB" という既定の名前を持つ2つのデータベースで構成されています。  
   
- **SharePoint モード:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード レポート サーバー データベースはの各インスタンスに対して作成されたデータベースのコレクション実際には、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービス アプリケーション。  
+ **SharePoint モード:** SharePoint [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]モードでは、実際には、レポートサーバーデータベースは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]サービスアプリケーションの各インスタンスに対して作成されるデータベースのコレクションです。  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>ネイティブ モードのレポート サーバー データベースをアップグレードする方法  
  次に、レポート サーバー データベースのアップグレード条件を示します。  
@@ -64,11 +64,11 @@ ms.locfileid: "66108638"
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>スクリプトを使用してネイティブ モードのデータベースをアップグレードするには  
  WMI スクリプトを使用して、レポート サーバー データベースをアップグレードできます。 詳細については、「[GenerateDatabaseUpgradeScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [データベースの変更ウィザード&#40;SSRS ネイティブ モード&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
- [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)   
+ [SSRS Configuration Manager &#40;レポートサーバーデータベースを作成&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [データベースの変更ウィザード &#40;SSRS ネイティブモード&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [Reporting Services のアップグレードと移行](upgrade-and-migrate-reporting-services.md)   
  [Reporting Services のインストールの移行 &#40;ネイティブ モード&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

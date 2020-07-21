@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4cb1b821604d125bc81148a06fb613c8547a449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0175f2a01ba53baa531901c9e1ba719f25c1b766
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68186715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064181"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
-  **[[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のプロパティ]** ダイアログ ボックスの **[サービス]** タブでは、以下のオプションの表示や指定を行います。  
+  [[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  **のプロパティ]** ダイアログ ボックスの **[サービス]** タブでは、以下のオプションの表示や指定を行います。  
   
-## <a name="options"></a>および  
- **バイナリ パス**  
+## <a name="options"></a>Options  
+ **[バイナリ パス]**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
- **エラー制御**  
+ **[エラー制御]**  
  1 は `SERVICE_ERROR_NORMAL`を示します。 コンピューターの起動時にこのサービスが開始しなかった場合は、スタートアップ プログラムによってログにエラーが記録され、ポップアップ メッセージ ボックスが表示されますが、スタートアップ操作は継続します。 この値は変更できません。  
   
  **終了コード**  
@@ -45,11 +44,11 @@ ms.locfileid: "68186715"
  **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   手動：このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動: このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   自動：このサービスは、このコンピューターの起動時に起動しようとします。  
+-   自動:コンピューターの起動時に、このサービスの開始が試みられます。  
   
--   無効になっています。このサービスを開始できません。  
+-   無効:このサービスを開始できません。  
   
  **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。 " **...** " の場合は、状態の変更が保留になっています。  

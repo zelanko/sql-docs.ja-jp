@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2fe2264aed4eb2f292a6bd1e4e565cebe2a833f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066443"
 ---
 # <a name="delete-unique-constraints"></a>UNIQUE 制約の削除
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して UNIQUE 制約を削除できます。 UNIQUE 制約を削除すると、制約式に含まれる 1 つ以上の列に入力される値に対する一意性の条件が取り除かれ、対応する一意なインデックスが削除されます。  
@@ -30,7 +29,7 @@ ms.locfileid: "62761143"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **UNIQUE 制約を削除する方法:**  
   
@@ -38,14 +37,14 @@ ms.locfileid: "62761143"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>オブジェクト エクスプローラーを使用して UNIQUE 制約を削除するには  
   
@@ -65,9 +64,9 @@ ms.locfileid: "62761143"
   
 4.  **[削除]** をクリックします。  
   
-5.  **[ファイル]** メニューの **[の保存]** _[の保存]_ をクリックします。  
+5.  **[ファイル]** メニューの **[** <テーブル名> _を保存]_ をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-a-unique-constraint"></a>UNIQUE 制約を削除するには  
   

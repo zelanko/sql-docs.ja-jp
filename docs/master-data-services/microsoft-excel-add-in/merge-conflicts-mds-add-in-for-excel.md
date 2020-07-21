@@ -1,5 +1,5 @@
 ---
-title: 競合のマージ (Excel 用 MDS アドイン) | Microsoft Docs
+title: 競合のマージ
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 22c25126106c6b93d779b6c494af0bff7b5b08af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc8b87c25e258784998708821a2f16ae8b04ecc3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074563"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897429"
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>競合のマージ (Excel 用 MDS アドイン)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Excel 用の [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アドインでは、サーバー上でデータが他のユーザーによって変更されている場合、パブリッシュ操作は競合エラーで失敗します。 このエラーを解決するには、競合のマージを実行した後で変更を再パブリッシュします。  
   
@@ -51,6 +51,6 @@ ms.locfileid: "68074563"
 4.  **[適用]** をクリックした後、さらに変更を加えて、再びパブリッシュすることができます。 または、 **[キャンセル]** をクリックして更新を取り消し、サーバーから最新のバージョンを再び読み込むことができます。  
   
 ## <a name="see-also"></a>関連項目  
- [概要:Excel からデータをインポートする&#40;MDS アドインの Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [概要: Excel からのデータのインポート (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

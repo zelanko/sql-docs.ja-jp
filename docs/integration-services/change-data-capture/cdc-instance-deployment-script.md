@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ad6efe1291adffd73769f8f6f4defa28abe8fbef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 595af36a5eb19ff6fd019df8a2b9203537350c5a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968292"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298906"
 ---
 # <a name="cdc-instance-deployment-script"></a>[CDC インスタンス配置スクリプト]
 
@@ -37,7 +37,7 @@ ms.locfileid: "67968292"
  **[名前を付けて保存]**  
  任意の場所に保存できるテキスト ファイルにスクリプトを保存します。 スクリプトを含むファイルを他の任意のサーバーにコピーして、そのサーバーで実行できます。  
   
- **[コピー]**  
+ **Copy** に設定する必要があります  
  スクリプトをクリップボードにコピーします。 その後、スクリプトを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または任意のテキスト エディターに貼り付けて、後でスクリプトを実行できます。  
   
 ## <a name="see-also"></a>参照  

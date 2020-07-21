@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aecdbaedca42b7456dbdbda0407760959e546f97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062792"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE オートメーションのリターン コードとエラー情報
-  OLE オートメーション システム ストアド プロシージャでは、`int` のリターン コードが返されます。これは、基になる OLE オートメーション操作から返される HRESULT です。 HRESULT 0 は成功を示しています。 0 以外の HRESULT は、0x800 という 16 進数形式の OLE エラー コード*nnnnn*、として返された場合は、 `int` HRESULT ストアド プロシージャのリターン コードの値が、形式は 214*nnnnnnn*します。  
+  OLE オートメーション システム ストアド プロシージャでは、`int` のリターン コードが返されます。これは、基になる OLE オートメーション操作から返される HRESULT です。 HRESULT 0 は成功を示しています。 0以外の HRESULT は *、0x800 と*いう16進数形式の OLE エラーコードですが、ストアドプロシージャのリターンコードで値として返された場合 `int` 、hresult の形式は 214*nnnnnnn*なります。  
   
- たとえば、無効なオブジェクト名を渡す (SQLDMO です。Xyzzy) sp_OACreate ににより、プロシージャから返される、 `int` 16 進数では 0x800401f3 ですと HRESULT。  
+ たとえば、無効なオブジェクト名 (SQLDMO) を渡すとします。Sqldmo.xyzzy など) を sp_OACreate にすると、プロシージャは `int` 2147221005 の HRESULT (16 進数では0x800401f3 です) を返します。  
   
- `CONVERT(binary(4), @hresult)` を使用すると、`int` 値の HRESULT を `binary` 値に変換できます。 ただし、 `CONVERT(char(10), CONVERT(binary(4), @hresult))` を使用すると HRESULT の各バイトが 1 文字の ASCII 文字に変換されるので、読みにくい文字列になります。 次のサンプル HexToChar ストアド プロシージャを使用して変換することができます、 `int` HRESULT を`char`を読み取れる 16 進数文字列を含む値です。  
+ `CONVERT(binary(4), @hresult)` を使用すると、`int` 値の HRESULT を `binary` 値に変換できます。 ただし、 `CONVERT(char(10), CONVERT(binary(4), @hresult))` を使用すると HRESULT の各バイトが 1 文字の ASCII 文字に変換されるので、読みにくい文字列になります。 次のサンプル HexToChar ストアドプロシージャを使用すると、 `int` `char` 読み取り可能な16進数文字列を含む値に HRESULT を変換できます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +75,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- 次のサンプル ストアド プロシージャ **sp_displayoaerrorinfo** を使用すると、いずれかの OLE オートメーション プロシージャから 0 以外の HRESULT リターン コードが返された場合に OLE オートメーション エラー情報を表示できます。 このサンプル ストアド プロシージャは`HexToChar`します。  
+ 次のサンプル ストアド プロシージャ **sp_displayoaerrorinfo** を使用すると、いずれかの OLE オートメーション プロシージャから 0 以外の HRESULT リターン コードが返された場合に OLE オートメーション エラー情報を表示できます。 このサンプルストアドプロシージャでは `HexToChar` 、を使用します。  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  

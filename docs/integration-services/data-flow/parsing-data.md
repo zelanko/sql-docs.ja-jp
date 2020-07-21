@@ -11,14 +11,14 @@ helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0df149ce4d390de52e535587d1d9fac7580819b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 71582dbdccc331ec4b43d87071952879f304395c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928267"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292273"
 ---
 # <a name="parsing-data"></a>データの解析
 
@@ -28,7 +28,7 @@ ms.locfileid: "67928267"
   パッケージ内のデータ フローは、異種データ ストア間でデータの抽出や読み込みを行います。データ ストアでは、標準およびカスタムのさまざまなデータ型を使用します。 データ フローでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の変換元は、データの抽出、文字列データの解析、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型へのデータ変換を行います。 次に続く変換で、データを解析して別のデータ型に変換したり、列のコピーを別のデータ型で作成することもあります。 コンポーネントで使用する式で、引数やオペランドを別のデータ型にキャストする場合もあります。 さらに、データがデータ ストアに読み込まれるとき、変換先でデータを解析して、変換先が使用するデータ型に変換する場合もあります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
 ## <a name="two-types-of-parsing"></a>解析の 2 つの種類  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ変換用に次の 2 種類の解析が用意されています: 高速解析、標準解析。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ変換用に、高速解析と標準解析の、2 種類の解析が用意されています。  
   
 -   高速解析は、高速で単純な解析ルーチンのセットで、ロケール固有のデータ型の変換はサポートされません。最も頻繁に使用される日付と時間の形式のみがサポートされます。 
   
@@ -90,9 +90,9 @@ ms.locfileid: "67928267"
   
 -   次の表に示す ISO 8601 形式。  
   
-    |Format|[説明]|  
+    |Format|説明|  
     |------------|-----------------|  
-    |YYYYMMDD<br /><br /> -YYYY-MM-DD|4 桁の年、2 桁の月、および 2 桁の日を表す、基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
+    |YYYYMMDD<br /><br /> YYYY-MM-DD|4 桁の年、2 桁の月、および 2 桁の日を表す、基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
     |YYYY-MM|4 桁の年および 2 桁の月を表す、有効桁数を減らした基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
     |YYYY|4 桁の年を表す、有効桁数を減らした形式です。|  
   
@@ -112,7 +112,7 @@ ms.locfileid: "67928267"
   
  詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-### <a name="time-data-type"></a>時刻データ型
+### <a name="time-data-type"></a>時間データ型
  高速解析では、次の文字列形式の時刻データがサポートされています。  
   
 -   先頭の空白文字を含む時刻の形式。 たとえば、値 " 10:24" は有効です。  
@@ -121,7 +121,7 @@ ms.locfileid: "67928267"
   
 -   次の表に示す ISO 8601 時刻形式。  
   
-    |Format|[説明]|  
+    |Format|説明|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|2 桁の時、2 桁の分、および 2 桁の秒を表す、基本および拡張形式です。 拡張形式では、時刻の部分はコロン (:) で区切られます。|  
     |HHMI<br /><br /> HH:MI|2 桁の時と 2 桁の分を表す、基本および拡張の切り捨て形式です。 拡張形式では、時刻の部分はコロン (:) で区切られます。|  
@@ -130,7 +130,7 @@ ms.locfileid: "67928267"
   
 -   次の表に示す、タイム ゾーンを指定する時刻形式。  
   
-    |Format|[説明]|  
+    |Format|説明|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|ローカル時間を求めるために協定世界時 (UTC) に加算される時間数と分数を示す基本形式と拡張形式。|  
     |-HH:MI<br /><br /> -HHMI|ローカル時間を求めるために協定世界時 (UTC) から減算される時間数と分数を示す基本形式と拡張形式。|  
@@ -148,7 +148,7 @@ ms.locfileid: "67928267"
   
 -   次の表に示す、小数部を含む時刻形式。  
   
-    |Format|[説明]|  
+    |Format|説明|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n は、時間の端数を表す 0 ～ 9999999 の範囲の値です。 角かっこは、この値が省略可能であることを示しています。<br /><br /> たとえば、値 12.750 は 12:45 を示します。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n は、分の端数を表す 0 ～ 9999999 の範囲の値です。 角かっこは、この値が省略可能であることを示しています。<br /><br /> たとえば、値 1220.500 は 12:20:30 を示します。|  
@@ -178,11 +178,11 @@ ms.locfileid: "67928267"
   
  高速解析では、DT_DATE、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET として文字列を出力します。 切り捨て形式の日付/時刻値は、埋め込まれます。 次の表に、欠けている日付および時刻の部分に対して追加される値を示します。  
   
-|日付/時刻部分|余白|  
+|日付/時刻部分|パディング|  
 |---------------------|-------------|  
 |Seconds|00 が追加されます。|  
-|Minutes|00:00 が追加されます。|  
-|Hour|00:00:00 が追加されます。|  
+|分|00:00 が追加されます。|  
+|時|00:00:00 が追加されます。|  
 |日|月の日付として 01 が追加されます。|  
 |Month|年の月として 01 が追加されます。|  
   

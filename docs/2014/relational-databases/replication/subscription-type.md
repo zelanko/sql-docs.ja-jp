@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18ccd93efe123d20415c3ce2cee2f0178b3d8620
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63249381"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063764"
 ---
 # <a name="subscription-type"></a>サブスクリプションの種類
-  マージ レプリケーションでは、サーバーとクライアントという 2 つのサブスクリプションの種類がオファーされます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、これらはグローバルとローカルと呼ばれていました。 サブスクライバーはサーバー サブスクリプションによって次の操作を実行できます。  
+  マージ レプリケーションでは、サーバーとクライアントという 2 つのサブスクリプションの種類がオファーされます。[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、これらはグローバルとローカルと呼ばれていました。 サブスクライバーはサーバー サブスクリプションによって次の操作を実行できます。  
   
 -   他のサブスクライバーにデータを再パブリッシュする。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "63249381"
 > [!NOTE]  
 >  サブスクリプションの種類は、作成後に変更することはできません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[サブスクリプションのプロパティ]**  
  **[サブスクリプションの種類]** 列のドロップダウン リスト ボックスで、各サブスクライバーに対して、 **[クライアント]** または **[サーバー]** を選択します。 サブスクライバーでサーバー サブスクリプションを使用する場合は、 **[競合解決の優先度]** 列に 0 ～ 99.99 の範囲の数値を入力します。数字が大きいほどサブスクライバーに対する優先度が高くなります。  
   

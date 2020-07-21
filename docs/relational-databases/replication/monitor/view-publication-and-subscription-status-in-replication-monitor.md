@@ -1,6 +1,7 @@
 ---
-title: レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示 | Microsoft Docs
-ms.custom: ''
+title: パブリケーションおよびサブスクリプションの状態の表示 (レプリケーション モニター)
+description: SQL Server Management Studio (SSMS) のレプリケーション モニターを使用し、パブリケーションとサブスクリプションの状態を表示する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -21,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 51dafccba54e66ff9f6ed9d7fd6c7e4159c8ef19
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 71dc0b6a274b6545169cfcd20487c935086c7764
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770536"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159590"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。  
   
 -   パブリケーションの状態は、そのサブスクリプションの最も優先度の高い状態によって決定されます。 たとえば、あるパブリケーションに対する 1 つのサブスクリプションにエラーが発生し、別のサブスクリプションにはパフォーマンス上の問題がある場合、そのパブリケーションに対してはエラーの状態が表示されます。  
@@ -41,7 +42,7 @@ ms.locfileid: "68770536"
   
 -   有効期限切れサブスクリプション  
   
-     この状態値は、すべての種類のレプリケーションに適用されます。 詳細については、「 [レプリケーション モニターのしきい値と警告の設定](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
+     この状態値は、すべての種類のレプリケーションに適用されます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
 -   [パフォーマンス クリティカル]  
   
@@ -64,9 +65,9 @@ ms.locfileid: "68770536"
 ## <a name="publication-status-values"></a>パブリケーションの状態の値  
  次の表は、パブリケーションの状態の値と対応するアイコンを優先度順に示しています。  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|Error|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
+|エラー|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
 |[OK]|なし|  
@@ -78,9 +79,9 @@ ms.locfileid: "68770536"
   
 ### <a name="transactional-subscriptions"></a>トランザクション サブスクリプション  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|Error|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
+|エラー|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |まもなく期限切れ/期限切れ|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[初期化されていないサブスクリプション]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
@@ -90,9 +91,9 @@ ms.locfileid: "68770536"
   
 ### <a name="merge-subscriptions"></a>マージ サブスクリプション  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|Error|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
+|エラー|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[長期マージ]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |まもなく期限切れ/期限切れ|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
@@ -103,10 +104,10 @@ ms.locfileid: "68770536"
   
 ### <a name="snapshot-subscriptions"></a>スナップショット サブスクリプション  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|Error|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
-|[まもなく期限切れ/期限切れ]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|エラー|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|  
+|まもなく期限切れ/期限切れ|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[初期化されていないサブスクリプション]|![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
 |[同期中]|![UI アイコン: レプリケーション エージェントの実行](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI アイコン: レプリケーション エージェントの実行")|  

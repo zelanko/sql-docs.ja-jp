@@ -10,15 +10,14 @@ helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6c0180cbe0753d53cd1d42acde35fc549e48856e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62889841"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423359"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services パッケージによってログに記録されるイベント
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、各種のイベント メッセージを Windows アプリケーション イベント ログに記録します。 これらのメッセージは、パッケージの起動時、パッケージの停止時、および特定の問題の発生時にログに記録されます。  
@@ -35,7 +34,7 @@ ms.locfileid: "62889841"
 > [!NOTE]  
 >  パッケージのログ記録が有効になっていない場合でも、次の表に示すメッセージはログに記録されます。  
   
-|イベント ID|シンボル名|テキスト|メモ|  
+|イベント ID|シンボル名|Text|メモ|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|パッケージ "" が起動されました。|パッケージの実行が開始されました。|  
 |12289|DTS_MSG_PACKAGESUCCESS|パッケージ "" が正常に完了しました。|パッケージが正常に実行され、現在は実行されていません。|  
@@ -45,7 +44,7 @@ ms.locfileid: "62889841"
  既定では、新規インストールで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はパッケージの実行に関連する特定のイベントをアプリケーション イベント ログに記録しないように構成されます。 現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のデータ コレクター機能を使用すると、この設定により、大量のイベント ログ エントリは生成されません。 ログに記録されないイベントは、EventID 12288 の "パッケージが起動されました。" や EventID 12289 の "パッケージが正常に完了しました。" です。 これらのイベントをアプリケーション イベント ログに記録するには、レジストリを編集用に開きます。 次に、レジストリ内で HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS ノードを見つけ、LogPackageExecutionToEventLog 設定の DWORD 値を 0 から 1 に変更します。 ただし、アップグレード インストールでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はこれらの 2 つのイベントをログに記録するように構成されます。 ログを無効にするには、LogPackageExecutionToEventLog 設定の値を 1 から 0 に変更します。  
   
 ## <a name="messages-associated-with-package-logging"></a>パッケージのログ記録に関連付けられているメッセージ  
- パッケージのログ記録が有効になっている場合、アプリケーション イベント ログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのオプションのログ記録機能によってサポートされる記録先の 1 つです。 詳細については、「[Integration Services (SSIS) のログ記録](integration-services-ssis-logging.md)」をご覧ください。  
+ パッケージのログ記録が有効になっている場合、アプリケーション イベント ログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのオプションのログ記録機能によってサポートされる記録先の 1 つです。 詳細については、「[Integration Services (SSIS) のログ記録](integration-services-ssis-logging.md)」をご覧ください。  
   
  パッケージのログ記録が有効になっていて、ログの場所がアプリケーション イベント ログである場合は、次の情報に関連するエントリがログに記録されます。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62889841"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>パッケージ実行の段階に関するメッセージ  
   
-|イベント ID|シンボル名|テキスト|メモ|  
+|イベント ID|シンボル名|Text|メモ|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|アプリケーション イベント ログへのログ記録を構成すると、さまざまなメッセージがこの一般的な形式で記録されます。|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|パッケージが開始されました。|  
@@ -66,9 +65,9 @@ ms.locfileid: "62889841"
 |12557|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|パッケージの実行が完了しました。|  
   
 ### <a name="messages-about-events-that-occur"></a>発生したイベントに関するメッセージ  
- 次の表に、イベントの結果として出力されるメッセージの一部を示します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用されるエラー メッセージ、警告メッセージ、および情報メッセージの詳細な一覧については、「[Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)」をご覧ください。  
+ 次の表に、イベントの結果として出力されるメッセージの一部を示します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用されるエラー メッセージ、警告メッセージ、および情報メッセージの詳細な一覧については、「 [Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)」をご覧ください。  
   
-|イベント ID|シンボル名|テキスト|メモ|  
+|イベント ID|シンボル名|Text|メモ|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|タスクは失敗しました。|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|このメッセージは発生したエラーを報告します。|  
@@ -76,7 +75,7 @@ ms.locfileid: "62889841"
 |12258|DTS_MSG_EVENTLOGENTRY_INFORMATION|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|このメッセージは、エラーまたは警告に関連しない情報メッセージです。|  
   
 ## <a name="related-tasks"></a>Related Tasks  
- リアルタイムでログ エントリを表示する方法については、「[[ログ イベント] ウィンドウでログ エントリを表示する](../view-log-entries-in-the-log-events-window.md)」をご覧ください。  
+ リアルタイムでログ エントリを表示する方法については、「 [[ログ イベント] ウィンドウでログ エントリを表示する](../view-log-entries-in-the-log-events-window.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目  
  [Integration Services サービスによってログに記録されるイベント](../service/events-logged-by-the-integration-services-service.md)  

@@ -1,7 +1,7 @@
 ---
 title: 実際の実行プランの分析 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,18 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0f23ceb75856db921e4c6303a8013d351f364e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 089cc2fd9a2131ab18fea01262f9bc0d476355e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68219592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773147"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>実際の実行プランの分析
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のプラン分析機能を使用して実際のグラフィカルな実行プランを分析する方法について説明します。 
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のプラン分析機能を使用して実際のグラフィカルな実行プランを分析する方法について説明します。 この機能は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4 以降で使用できます。 一般に、[SSMS の最新バージョンをインストールする](../../ssms/download-sql-server-management-studio-ssms.md)ことをお勧めします。
 
 > [!NOTE]
 > 実際の実行プランは、[!INCLUDE[tsql](../../includes/tsql-md.md)] のクエリまたはバッチが実行された後に生成されます。 そのため、実際の実行プランには、実際の行数、リソース使用状況のメトリック、ランタイムの警告 (ある場合) などのランタイム情報が含まれます。 詳細については、「[実際の実行プランの表示](../../relational-databases/performance/display-an-actual-execution-plan.md)」を参照してください。
@@ -42,10 +44,10 @@ ms.locfileid: "68219592"
 
 2.  実行プランの何もない領域を右クリックし、 **[実際の実行プランの分析]** をクリックします。 
 
-    ![[実際の実行プランの分析] の右クリック](../../relational-databases/performance/media/plananalysismenuoption.png "[実際の実行プランの分析] の右クリック")   
+    ![[実際の実行プランの分析] を右クリックする](../../relational-databases/performance/media/plananalysismenuoption.png "[実際の実行プランの分析] を右クリックする")   
 
 3.  下部に **[プラン表示の分析]** が表示されます。 **[複数ステートメント]** タブは、ステートメントが複数含まれるプランを分析するときに便利です。適切なステートメントを分析できます。
 
-4.  [シナリオ] タブを選択すると、実際の実行プランで見つかった問題の詳細が表示されます。 左側ウィンドウの一覧にある各演算子に対して、右側ウィンドウに *[このシナリオの詳細については、ここをクリックしてください]* リンクのシナリオに関する詳細と、そのシナリオが一覧に含まれる考えられる理由が表示されます。
+4.  [シナリオ] タブを選択すると、実際の実行プランで見つかった問題の詳細が表示されます。 左側ウィンドウの一覧にある各演算子に対して、右側ウィンドウに *[このシナリオの詳細については、ここをクリックしてください]* リンクのシナリオに関する詳細と、そのシナリオが一覧に含まれる理由として考えられることが表示されます。
 
     ![実行プランの分析結果](../../relational-databases/performance/media/plananalysis-scenarios.png "実行プランの分析結果") 

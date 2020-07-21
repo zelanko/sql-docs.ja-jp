@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo::GetErrorInfo (OLE DB)。マイクロソフトのドキュメント
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ topic_type:
 helpviewer_keywords:
 - GetErrorInfo method
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9131c65236a0efffa19aab2bd10b1fd8e309653b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c3e325cd99276e04a178b89c19b233289edc09fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127784"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056136"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-  ポインターを返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダー SSERRORINFO 構造を含む、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの詳細です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの詳細を格納している Native Client OLE DB プロバイダー SSERRORINFO 構造体へのポインターを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,13 +46,13 @@ OLECHAR**ppErrorStrings);
  メソッドが成功しました。  
   
  E_INVALIDARG  
- いずれか、 *ppSSErrorInfo*または*割り当てません*された引数が NULL です。  
+ *ppSSErrorInfo* または *ppErrorStrings* 引数のいずれかが NULL でした。  
   
  E_OUTOFMEMORY  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーは要求を完了するための十分なメモリを割り当てられませんでした。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、要求を完了するために必要なメモリを割り当てることができませんでした。  
   
-## <a name="remarks"></a>コメント  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーは、コンシューマーによって渡されたポインターを通じて返される SSERRORINFO と OLECHAR の文字列にメモリを割り当てます。 コンシューマーはエラー データにアクセスする必要がなくなった時点で、**IMalloc::Free** メソッドを使用してこのメモリの割り当てを解除する必要があります。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、コンシューマーによって渡されたポインターによって返される SSERRORINFO および OLECHAR 文字列にメモリを割り当てます。 コンシューマーはエラー データにアクセスする必要がなくなった時点で、**IMalloc::Free** メソッドを使用してこのメモリの割り当てを解除する必要があります。  
   
  SSERRORINFO 構造体は、次のように定義されています。  
   
@@ -71,7 +70,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Member|説明|  
+|メンバー|説明|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー メッセージ。 このメッセージは、**IErrorInfo::GetDescription** メソッドにより返されます。|  
 |*pwszServer*|エラーが発生した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  

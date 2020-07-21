@@ -1,5 +1,5 @@
 ---
-title: スケール アウト配置 (ネイティブ モード レポート サーバー) |Microsoft Docs
+title: スケールアウト配置 (ネイティブモードのレポートサーバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,19 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a04a0d0e08804724def9e586c05bb4b6e72cdbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058935"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>スケールアウト配置 (ネイティブ モードのレポート サーバー)
   **構成マネージャーの** [スケールアウト配置] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用して、スケールアウト配置の初期化状態を表示したり、レポート サーバーをスケールアウト配置に追加したりします。 *スケールアウト配置* とは、複数のレポート サーバー インスタンスが 1 つのレポート サーバー データベースを共有する状態を表しています。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード。  
   
  *初期化されたレポート サーバー* は、レポート サーバー データベースに格納された機密データを暗号化および暗号化解除できるサーバーを表します (データベースに格納されている暗号化されたデータには、格納された資格情報や接続文字列などがあります)。 レポート サーバーの初期化は、レポート サーバーの操作に必要です。  
   
@@ -36,23 +35,23 @@ ms.locfileid: "66092430"
   
  このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、ナビゲーション ウィンドウで **[スケールアウト配置]** を選択します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **SQL Server 名**  
- レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンス名を指定します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] レポートサーバーデータベースをホストするインスタンスの名前を指定します。  
   
  **データベース名**  
  レポート サーバー インスタンスが現在接続されているデータベースの名前を指定します。  
   
- **サーバー モード**  
+ **サーバーモード**  
  サーバーとデータベースのモードを表示します。 サーバー モードはネイティブまたは SharePoint 統合のいずれかです。 スケールアウト配置は両方のモードでサポートされています。  
   
  **[サーバー]**  
  レポート サーバー名を表示します。 ほとんどの場合、これはレポート サーバーがインストールされているコンピューターの名前です。  
   
  **インスタンス**  
- レポート サーバー インスタンス名を表示します。 レポート サーバー インスタンスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに基づいています。  
+ レポート サーバー インスタンス名を表示します。 レポート サーバー インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに基づいています。  
   
- **ステータス**  
+ **状態**  
  レポート サーバーが初期化されているかスケールアウト配置への参加を待機しているかを示します。  
   
 -   スケールアウト配置に含まれていないスタンドアロンのレポート サーバーの場合、このページには、レポート サーバー インスタンスがその専用のレポート サーバー データベースに対して初期化されていることが表示されます。 状態は **[結合]** に設定されます。  
@@ -63,7 +62,7 @@ ms.locfileid: "66092430"
   
      レポート サーバーが既にスケールアウト配置の一部である場合、このページを使用してノードの追加または削除を実行できます。  
   
- **初期化します。**  
+ **Initialize**  
  **[初期化]** をクリックすると、レポート サーバーをスケールアウト配置に追加できます。 これにより、共有レポート サーバー データベース内の対称キーが使用されるようにレポート サーバーが構成されます。 **[初期化]** を使用すると、レポート サーバー インスタンスをスケールアウト配置に追加したり、移行やインストールで発生した問題のトラブルシューティングを行ったりすることができます。  
   
  レポート サーバー インスタンスは、共有レポート サーバー データベースへの接続が構成されている場合にのみ使用できます。 また、初期化は、レポート サーバー データベースを使用するように初期化済みのサーバーから実行する必要があります。  
@@ -73,11 +72,11 @@ ms.locfileid: "66092430"
   
  念のために、対称キーを削除する前に必ずバックアップ コピーを作成してください。 一覧の最後のレポート サーバーの暗号化キーを削除すると、その後は、そのデータベースのレポート サーバーを初期化するときに新しい手順が必要になります。 追加される手順とは、レポート サーバーを初期化した後に、対称キーのバックアップ コピーを復元することです。 レポート サーバー データベース内に現存する暗号化されたデータにアクセスするには、対称キーの復元が必要です。  
   
- 暗号化されたデータが不要になった場合、またはキーのバックアップ コピーがない場合は、暗号化されたデータを削除してください。 詳細については、次を参照してください。[暗号化キー &#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)します。  
+ 暗号化されたデータが不要になった場合、またはキーのバックアップ コピーがない場合は、暗号化されたデータを削除してください。 詳細については、「[暗号化キー &#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [SSRS Configuration Manager &#40;暗号化キーの構成と管理&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

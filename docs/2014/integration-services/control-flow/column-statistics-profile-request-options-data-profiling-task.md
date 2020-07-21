@@ -9,23 +9,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e07bd6ead9ce0dfc20249f5db50a8b0b78ba242a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0fe93729e085107f9e74ad55e598aa30987d613
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832769"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433619"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>[列統計プロファイル要求] のオプション (データ プロファイル タスク)
-  **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列統計プロファイル要求]** のオプションを設定できます。 列統計プロファイルは、最小、最大、平均値、および数値の列、および最低限の標準偏差、最大などの統計を報告`datetime`列。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。  
+  **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列統計プロファイル要求]** のオプションを設定できます。 列統計プロファイルは、数値列の最小値、最大値、平均値、標準偏差、列の最小値、最大値などの統計を報告し `datetime` ます。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。  
   
 > [!NOTE]  
 >  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer (Data Profile Viewer)](data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[列統計プロファイル要求]** のオプション グループは次のとおりです。  
@@ -43,7 +42,7 @@ ms.locfileid: "62832769"
   
  詳細については、このトピックの「[TableorView] のオプション」を参照してください。  
   
- **[Column]**  
+ **列**  
  プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、 **[(\*)]** を選択します。  
   
  詳細については、このトピックの「[列] のオプション」を参照してください。  
@@ -71,6 +70,6 @@ ms.locfileid: "62832769"
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
- [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

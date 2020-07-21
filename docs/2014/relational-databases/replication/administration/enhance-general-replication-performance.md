@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a85519a947e7d5d03f324b71984d2ffb40bcefe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043350"
 ---
 # <a name="enhance-general-replication-performance"></a>レプリケーションの全般的パフォーマンスの向上
   このトピックで解説するガイドラインに従うことによって、アプリケーションおよびネットワーク上にある全種類のレプリケーションの全般的なパフォーマンスを向上させることができます。  
   
 ## <a name="server-and-network"></a>サーバーおよびネットワーク  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に割り当てるメモリの最大容量と最小容量を設定する。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] に割り当てるメモリの最大容量と最小容量を設定します。  
   
      既定では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] は使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更します。 レプリケーション作業中に使用できるメモリ容量が少なくなるのを防ぐには、 **min server memory** オプションを使用して最小メモリ容量を設定します。 オペレーティング システムによるディスクへのメモリ書き出しを防ぐために、 **max server memory** オプションを使用して最大メモリ容量を設定することもできます。 詳細については、「[サーバー メモリに関するサーバー構成オプション](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)」を参照してください。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "63187084"
   
     -   トランザクション レプリケーションでは、レプリケートされたコマンドの適用に使用されるカスタム ストアド プロシージャにこのようなロジックを含める方がより効率的です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
-    -   マージ レプリケーションの場合には、ビジネス ロジック ハンドラーを使用する方がより効率的です。 詳細については、「[マージ同期中のビジネス ロジックの実行](../merge/execute-business-logic-during-merge-synchronization.md)」を参照してください。  
+    -   マージ レプリケーションの場合には、ビジネス ロジック ハンドラーを使用する方がより効率的です。 詳細については、「[Execute Business Logic During Merge Synchronization](../merge/execute-business-logic-during-merge-synchronization.md)」(マージ同期中のビジネス ロジックの実行) をご覧ください。  
   
      マージ レプリケーションにパブリッシュされるテーブルの参照整合性を維持する目的でトリガーを使用する場合は、テーブルの処理順序を指定してマージ エージェントが必要とする再試行の回数を削減します。 詳細については、「[Specify Merge Replication properties](../publish/specify-merge-replication-properties.md)」 (マージ レプリケーションのプロパティの指定) を参照してください。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "63187084"
   
      列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 `text`、`ntext`、および `image` の各データ型は非推奨です。 LOB が必要な場合は、`varchar(max)`、`nvarchar(max)`、および `varbinary(max)` の各データ型を使用することをお勧めします。  
   
-     トランザクション レプリケーションの場合は、 **OLEDB ストリームのディストリビューション プロファイル**と呼ばれるディストリビューション エージェント プロファイルの使用を検討してください。 詳細については、「 [Replication Agent Profiles](../agents/replication-agent-profiles.md)」を参照してください。  
+     トランザクション レプリケーションの場合は、 **OLEDB ストリームのディストリビューション プロファイル**と呼ばれるディストリビューション エージェント プロファイルの使用を検討してください。 詳しくは、「 [レプリケーション エージェント プロファイル](../agents/replication-agent-profiles.md)」をご覧ください。  
   
 ## <a name="publication-design"></a>パブリケーションの設計  
   
@@ -96,7 +95,7 @@ ms.locfileid: "63187084"
   
      変更をパーティション分割するには、各サブスクライバーにデータのサブセットをパブリッシュするか、またはアプリケーションを使用して、指定した行の変更を所定のノードに転送します。  
   
-    -   マージ レプリケーションは、単一パブリケーションで、パラメーター化されたフィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+    -   マージ レプリケーションは、単一パブリケーションで、パラメーター化されたフィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳しくは、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
     -   トランザクション レプリケーションは、複数のパブリケーションで、静的フィルターを使用したデータのサブセットのパブリッシュをサポートしています。 詳細については、「[パブリッシュされたデータのフィルター選択](../publish/filter-published-data.md)」を参照してください。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "63187084"
   
      大量の変更をサブスクライバーに送信する必要があるときには、サブスクライバーを新しいスナップショットで再初期化する方が、レプリケーションを使用して個々の変更を移動するよりも高速な場合があります。 詳細については、「 [サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
   
-     トランザクション レプリケーションの場合は、レプリケーション モニターの **[未配布のコマンド]** タブに、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
+     トランザクション レプリケーションの場合は、レプリケーション モニターの **[未配布のコマンド]** タブに、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、「[レプリケーションモニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="snapshot-considerations"></a>スナップショットに関する注意点  
   
@@ -146,7 +145,7 @@ ms.locfileid: "63187084"
   
 -   サブスクリプションを手作業で初期化する。  
   
-     巨大な初期データセットを扱うようなシナリオでは、スナップショット以外の方法を使用して、サブスクリプションを初期化することをお勧めします。 詳細については、「[スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)」を参照してください。  
+     巨大な初期データセットを扱うようなシナリオでは、スナップショット以外の方法を使用して、サブスクリプションを初期化することをお勧めします。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 ## <a name="agent-parameters"></a>エージェント パラメーター  
   
@@ -158,7 +157,7 @@ ms.locfileid: "63187084"
   
 -   ディストリビューション エージェントおよびマージ エージェントの **-UseInprocLoader** パラメーターを使用します (パブリッシュされたテーブルに XML 列が含まれる場合、このパラメーターは使用できません)。 このパラメーターを指定すると、スナップショットの適用時にエージェントが BULK INSERT コマンドを実行します。  
   
- エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
+ エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
   
 -   [レプリケーション エージェント プロファイルの操作](../agents/work-with-replication-agent-profiles.md)  
   

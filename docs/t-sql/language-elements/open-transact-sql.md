@@ -21,23 +21,23 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3fa064e31405ca8096f058195fae2c931d75993
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736352"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルをオープンし、DECLARE CURSOR または SET *cursor_variable* ステートメントで指定される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することによって、カーソルを生成します。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルをオープンし、DECLARE CURSOR または SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable*ステートメントで指定される* ステートメントを実行することによって、カーソルを生成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
@@ -52,7 +52,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  *cursor_variable_name*  
  カーソルを参照するカーソル変数の名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  INSENSITIVE または STATIC オプションと共にカーソルが宣言されている場合、OPEN を実行すると結果セットを格納する一時テーブルが作成されます。 結果セット内の行のサイズが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの最大行サイズを超えると、OPEN は失敗します。 KEYSET オプションと共にカーソルが宣言されている場合、OPEN を実行するとキーセットを格納する一時テーブルが作成されます。 一時テーブルは tempdb に格納されます。  
   
  カーソルをオープンした後、最後にオープンしたカーソル内の該当する行数を受け取るには、@@CURSOR_ROWS 関数を使用します。  
@@ -60,7 +60,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、キーセット ドリブン カーソルまたは静的 [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルの非同期な作成はサポートされません。 [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソル操作はバッチで行われます。したがって、 [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルを非同期に生成する必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各カーソル操作におけるクライアントのラウンド トリップのため、待機時間が少ない OPEN が問題になるような非同期キーセット ドリブン カーソルまたは静的 API (アプリケーション プログラミング インターフェイス) サーバー カーソルは、 で引き続きサポートされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、カーソルをオープンし、すべての行をフェッチします。  
   
 ```  

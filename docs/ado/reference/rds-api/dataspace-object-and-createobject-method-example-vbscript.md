@@ -1,5 +1,5 @@
 ---
-title: DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript) |Microsoft Docs
+title: 領域スペースオブジェクトと CreateObject メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - DataSpace object [RDS], VBScript example
 - CreateObject method [ADO], VBScript example
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c9eb9a15094f6c08bacb9e063c707163548875a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 406c0b8d6782352b88ca0712ad6173045228f241
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964334"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752587"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次の例は、使用する方法を示します、 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)のメソッド、 [rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)既定ビジネス オブジェクトが、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)します。 この例をテストする切り取りし、の間には、このコードを貼り付け、\<本文 > と\</Body > の通常の HTML タグを文書化し、名前を**DataSpaceVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
+ 次の例は、RDS の[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドの使用方法を示して[います。既定のビジネスオブジェクトを使用し](../../../ado/reference/rds-api/dataspace-object-rds.md)た、 [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。 この例をテストするには、通常の HTML ドキュメントで body> と body> タグの間でこのコードを切り取って貼り付け、「 \< \< **Dataspacevbs. asp**」という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -130,12 +130,12 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
 <!-- EndDataSpaceVBS -->  
 ```  
   
- 次の例は、使用する方法を示します、 **CreateObject** VbBusObj.VbBusObjCls、カスタム ビジネス オブジェクトのインスタンスを作成するメソッド。 また、スクリプト、Web サーバー名を識別するために、Active Server Pages を使用します。  
+ 次の例では、 **CreateObject**メソッドを使用して、カスタムビジネスオブジェクトのインスタンス (vbbusobj) を作成する方法を示します。 また、Active Server ページのスクリプトを使用して、Web サーバー名を識別します。  
   
- 完全な例を表示するには、サンプル アプリケーションのセレクターを開きます。 **クライアント層**列で、 **Internet Explorer で VBScript**します。 **中間層**列で、**カスタム Visual Basic のビジネス オブジェクト**します。  
+ 完全な例を表示するには、サンプルアプリケーションセレクターを開きます。 [**クライアント層**] 列で、 **Internet Explorer の [VBScript**] を選択します。 [**中間層**] 列で、[**カスタム Visual Basic ビジネスオブジェクト**] を選択します。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
   
 ```  
 Sub Window_OnLoad()  
@@ -146,7 +146,7 @@ Sub Window_OnLoad()
 End Sub  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CreateObject メソッド (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 

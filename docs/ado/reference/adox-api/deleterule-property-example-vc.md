@@ -1,5 +1,5 @@
 ---
-title: DeleteRule プロパティの例 (vc++) |Microsoft Docs
+title: DeleteRule プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - DeleteRule property [ADOX], VC++ example
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b73773b064fd50d8b1422a9a0aad2fe67aa71e91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb8100365b064ef5403788ec072595f7b3f8e86e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966395"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763913"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule プロパティの例 (VC++)
-この例では、 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)のプロパティを[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクト。 新しいコードを追加します[テーブル](../../../ado/reference/adox-api/table-object-adox.md)し、新しいプライマリ キーが、設定を定義および**DeleteRule**に**adRICascade**します。  
+この例では、[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトの[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)プロパティを示します。 コードによって新しい[テーブル](../../../ado/reference/adox-api/table-object-adox.md)が追加され、新しい主キーが定義され、 **DeleteRule**が**adRICascade**に設定されます。  
   
 ```  
 // BeginDeleteRuleCpp.cpp  
@@ -100,13 +100,13 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...."<< endl;  
+      cout << "Error occurred in include files...."<< endl;  
    }  
   
    ::CoUninitialize();  
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DeleteRule プロパティ (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

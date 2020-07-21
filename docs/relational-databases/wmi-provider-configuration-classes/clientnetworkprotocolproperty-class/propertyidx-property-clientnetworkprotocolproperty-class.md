@@ -1,6 +1,6 @@
 ---
-title: PropertyIdx プロパティ (ClientNetworkProtocolProperty クラス) |Microsoft Docs
-ms.custom: ''
+title: PropertyIdx プロパティ (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b9c9f1adde1e60ffaae8186691daee051c9e56b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8e7f690e8d529d1c587f6f19f55a525ef3b74b77
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040777"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881017"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>PropertyIdx プロパティ (ClientNetworkProtocolProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  によって参照されるプロパティ配列内のプロパティのインデックス値の設定を取得または、 [Properties プロパティ (ClientNetworkProtocol クラス)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/properties-property-clientnetworkprotocol-class.md)の[ClientNetworkProtocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)オブジェクト。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [Clientnetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)オブジェクトの[Properties プロパティ (clientnetworkprotocol クラス)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/properties-property-clientnetworkprotocol-class.md)によって参照されるプロパティ配列内のプロパティのインデックス値を取得または設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,14 +35,14 @@ ms.locfileid: "68040777"
 object.PropertyIdx [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ClientNetworkProtocolProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)によって使用されるネットワーク プロトコルの属性を表すオブジェクトを[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント。  
+ クライアントによって使用されるネットワークプロトコルの属性を表す[Clientnetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- A **uint32**現在のプロパティの配列インデックス値を指定する値。  
+ 現在のプロパティの配列インデックス値を指定する**uint32**値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  

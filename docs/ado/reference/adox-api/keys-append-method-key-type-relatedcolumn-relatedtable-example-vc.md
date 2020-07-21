@@ -1,5 +1,5 @@
 ---
-title: 新しい外部キー例 (vc++) の作成 |Microsoft Docs
+title: 新しい外部キーの作成の例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Keys Append method [ADOX], VC++ example
 - RelatedColumn property [ADOX], VC++ example
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 37fc296ecf520dc6ccc2964315a449bf508a2284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 260c29c18f6d8c95cbca6e06c25ebf05fceeec64
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965836"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763863"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VC++)
-次のコードでは、新しい外部キーを作成する方法を示します。 これは、(顧客と注文) の 2 つのテーブルが存在しないと仮定します。  
+次のコードは、新しい外部キーを作成する方法を示しています。 2つのテーブル (顧客と注文) が存在することを前提としています。  
   
 ```  
 // BeginCreateKeyCpp.cpp  
@@ -92,7 +92,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

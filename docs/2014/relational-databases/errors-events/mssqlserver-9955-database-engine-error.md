@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 77f30570-7790-4747-b372-eac71c036e19
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a092a7228f5ec70247e38cf39073d946de0e56ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9713e90fa15683fe4af619c66c9714c18c405cd5
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761634"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553007"
 ---
-# <a name="mssqlserver9955"></a>MSSQLSERVER_9955
+# <a name="mssqlserver_9955"></a>MSSQLSERVER_9955
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|9955|  
@@ -40,7 +39,7 @@ ms.locfileid: "62761634"
   
 ## <a name="see-also"></a>参照  
  [SQL Server 構成マネージャー](../sql-server-configuration-manager.md)   
- [フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+ [フルテキストフィルターデーモンランチャーのサービスアカウントの設定](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [フルテキスト検索](../search/full-text-search.md)  
   
   

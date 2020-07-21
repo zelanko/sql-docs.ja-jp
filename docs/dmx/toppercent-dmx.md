@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: acd35dc68c4f42231aa6f71d6cc2a150ff027811
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3f2f97ef9c7a1cdfa2bb1ba1b86dbe4cf60c8404
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893062"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669922"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,15 +28,15 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- テーブル列参照 > などのテーブルを返す\<式、またはテーブルを返す関数。  
+ テーブル列参照> などのテーブルを返す式、 \< またはテーブルを返す関数。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式の >  
+ \<テーブル式の>  
   
-## <a name="remarks"></a>コメント  
- **TopPercent**関数は、各行の rank 式 > 引数の\<評価値に基づいて、順位の降順で最上位行を返します。これは、 \<ランク式 > 値の合計が少なくとも\<パーセント > 引数によって指定されたパーセンテージ。 **TopPercent**は、指定された割合の値を維持しながら、可能な限り最小の要素数を返します。  
+## <a name="remarks"></a>Remarks  
+ **TopPercent**関数は、各行の rank 式> 引数の評価値に基づいて、順位の降順で最上位行を返し \< \< ます。これは、順位付け式> 値の合計が、パーセント> 引数で指定されているパーセント以上になるようにし \< ます。 **TopPercent**は、指定された割合の値を維持しながら、可能な限り最小の要素数を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  TopPercent の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
@@ -50,11 +50,11 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
-|[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|モデル|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -65,7 +65,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Cycling Cap|1473|0.098998589|0.094256014|  
 |Fender Set - Mountain|1415|0.095100477|0.090718432|  
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
-|Road Bottle Cage|1195|0.080314537|0.077173962|  
+|道路ボトルケージ|1195|0.080314537|0.077173962|  
   
  TopPercent 関数は、このクエリの結果を受け取り、最大値を持つ行を指定された割合に合計して返します。  
   
@@ -84,27 +84,27 @@ NATURAL PREDICTION JOIN
   
  TopPercent 関数の最初の引数は、テーブル列の名前です。 この例では、Predict 関数を呼び出し、INCLUDE_STATISTICS 引数を使用して、入れ子になったテーブルが返されます。  
   
- TopPercent 関数の2番目の引数は、結果の並べ替えに使用する入れ子になったテーブルの列です。 この例では、INCLUDE_STATISTICS オプションによって $SUPPORT 列、$PROBABILTY 列、および $ADJUSTED PROBABILITY 列が返されます。 この例では、$SUPPORT を使用しています。サポート値は小数ではないため、検証しやすいからです。  
+ TopPercent 関数の2番目の引数は、結果の並べ替えに使用する入れ子になったテーブルの列です。 この例では、INCLUDE_STATISTICS オプションを使用して、列 $SUPPORT、$PROBABILTY、および $ADJUSTED 確率を返します。 この例では $SUPPORT を使用します。サポート値は小数部分ではないため、検証が容易になるためです。  
   
- TopPercent 関数の3番目の引数は、パーセントを double として指定します。 合計が合計サポートの 50% となる上位の製品の行を取得するには「50」と入力します。  
+ TopPercent 関数の3番目の引数は、パーセントを double として指定します。 合計サポートの50% に合計する上位製品の行を取得するには、「50」と入力します。  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
-|[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|モデル|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29...|0.25...|  
 |Water Bottle|2866|0.19...|0.17...|  
 |Patch kit|2113|0.14...|0.13...|  
 |Mountain Tire Tube|1992|0.133...|0.12...|  
   
- **メモ**この例は、TopPercent の使用方法を示すことだけを目的としています。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
+ **メモ**この例は、TopPercent の使用方法を示すことだけを目的としています。 データセットのサイズによっては、このクエリの実行に時間がかかることがあります。  
   
 > [!WARNING]  
->  TOPPERCENT および BOTTOMPERCENT の MDX 関数は、比率の計算に使用される値に負の数が含まれていた場合に、予期しない結果を生成する場合があります。 この動作は、DMX 関数には影響しません。 詳細については、「 [ &#40;MDX&#41;の割合](../mdx/bottompercent-mdx.md)」を参照してください。  
+>  TOPPERCENT との MDX 関数では、割合の計算に使用される値に負の数値が含まれている場合、予期しない結果が発生する可能性があります。 この動作は、DMX 関数には影響しません。 詳細については、「 [&#41;&#40;MDX の割合](../mdx/bottompercent-mdx.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データマイニング拡張&#40;機能&#41; DMX 関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX &#40;関数&#41;](../dmx/functions-dmx.md)   
- [一般的な予測&#40;関数 DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
   
   

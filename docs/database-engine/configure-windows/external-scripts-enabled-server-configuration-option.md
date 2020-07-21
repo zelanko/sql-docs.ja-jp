@@ -1,8 +1,9 @@
 ---
-title: external scripts enabled サーバー構成オプション | Microsoft Docs
-ms.date: 11/13/2017
+title: external scripts enabled サーバー構成オプション
+description: SQL Server の external scripts enabled オプションについて説明します。 有効にすると、R や Python などのサポートされている言語で外部スクリプトを実行できるようになります。
+ms.date: 06/30/2020
 ms.prod: sql
-ms.technology: configuration
+ms.technology: machine-learning-services
 ms.reviewer: ''
 ms.topic: language-reference
 f1_keywords:
@@ -11,22 +12,22 @@ f1_keywords:
 helpviewer_keywords:
 - external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 424268eb32eb3430e2e4eb8450abfb3471f51701
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3915ca28aa6512c52e2cb465528bb4c04ea8dd21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772487"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>external scripts enabled サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**external scripts enabled** オプションを使用して、特定のリモート言語拡張機能を使用したスクリプトの実行を有効します。 このプロパティは既定で無効になっています。 **Advanced Analytics Services** をインストールするとき、必要に応じてセットアップでこのプロパティを true に設定できます。
+**external scripts enabled** オプションを使用して、特定のリモート言語拡張機能を使用したスクリプトの実行を有効します。 このプロパティは既定で無効になっています。 **Machine Learning Services** をインストールするとき、必要に応じてセットアップでこのプロパティを true に設定できます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) プロシージャを使用して外部スクリプトを実行する前に、external script enabled オプションを有効にする必要があります。 R や Python などのサポートされている言語で書かれたスクリプトを実行するには、**sp_execute_external_script** を使います。 
 
@@ -34,13 +35,13 @@ ms.locfileid: "68011758"
 
     [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] には、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] での R 言語のサポートと、一連の R ワークステーション ツールおよび接続性ライブラリが含まれます。
 
-    インストール、 **分析の拡張機能の高度な** 機能の中に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R スクリプトの実行を有効に設定します。 R 言語は既定でインストールされます。
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップの間に **R Services** をインストールして、R スクリプトの実行を有効にします。
 
-+ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] の場合
++ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 以降の場合
 
-    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] は SQL Server 2016 の場合と同じアーキテクチャを使いますが、Python 言語のサポートを提供します。
+    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] では、R と Python の両方の言語がサポートされています。
 
-    外部スクリプトの実行を有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップの間に、**Advanced Analytics Extensions** 機能をインストールします。 初期セットアップのときに、必ず少なくとも 1 つの言語を選んでください (R と Python のどちらか一方または両方)。 
+    外部スクリプトの実行を有効にするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップの間に、**Machine Learning Services** 機能をインストールします。 初期セットアップのときに、必ず少なくとも 1 つの言語を選んでください (R と Python のどちらか一方または両方)。
 
 ## <a name="additional-requirements"></a>その他の要件
 
@@ -51,16 +52,11 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE;  
 ```
 
-この変更を有効にするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。
+詳細については、「[Windows に SQL Server Machine Learning Services (Python と R) をインストールする](../../machine-learning/install/sql-machine-learning-services-windows-install.md)」または [Linux に関するページ](../../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/machine-learning/toc.json)を参照してください。
 
-詳しくは、「[Set up SQL Server Machine Learning](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)」(SQL Server Machine Learning をセットアップする) をご覧ください。
+## <a name="see-also"></a>関連項目
 
-## <a name="see-also"></a>参照
-
-[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-
-[RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
-
-[sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
-
-[SQL Server Machine Learning Services](../../advanced-analytics/r/sql-server-r-services.md)
++ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
++ [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
++ [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
++ [SQL の機械学習のドキュメント](../../machine-learning/index.yml)

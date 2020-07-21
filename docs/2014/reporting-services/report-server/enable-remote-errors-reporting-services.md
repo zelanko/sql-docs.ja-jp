@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2d239dfc3d094f72d40ce6d020610fe1c0eabbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103806"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>リモート エラーの有効化 (Reporting Services)
@@ -33,7 +33,7 @@ ms.locfileid: "66103806"
   
 -   [ConfigurationInfo テーブルの変更 (ネイティブ モード)](#bkmk_ConfigurationInfo)  
   
-##  <a name="bkmk_sharepoint"></a> SharePoint モードのリモート エラーの有効化  
+##  <a name="enable-remote-errors-for-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> SharePoint モードのリモート エラーの有効化  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのリモート エラーを有効化する手順は 2 種類あります。 この手順は、レポート サーバーのアーキテクチャによって異なります。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] リリースで導入されたアーキテクチャに基づく新しい SharePoint サービスでは、各 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーション用に構成できる設定が使用されます。 旧式のアーキテクチャでは、単一のサイト レベル設定が使用されます。  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Reporting Services サービス アプリケーションのリモート エラーの有効化  
@@ -60,9 +60,9 @@ ms.locfileid: "66103806"
   
 4.  **[ローカル モードでのリモート エラーを有効にします]** をクリックします。  
   
-5.  **[OK]** をクリックします。  
+5.  **[OK]**  
   
-##  <a name="bkmk_mgtStudio"></a> SQL Server Management Studio を使用したリモート エラーの有効化 (ネイティブ モード)  
+##  <a name="enable-remote-errors-through-sql-server-management-studio-native-mode"></a><a name="bkmk_mgtStudio"></a> SQL Server Management Studio を使用したリモート エラーの有効化 (ネイティブ モード)  
   
 1.  Management Studio を起動し、レポート サーバー インスタンスに接続します。 詳細については、 [オンライン ブックの「](../tools/connect-to-a-report-server-in-management-studio.md) Management Studio でレポート サーバーに接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
@@ -70,11 +70,11 @@ ms.locfileid: "66103806"
   
 3.  **[詳細設定]** をクリックすると、プロパティ ページが表示されます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[サーバーのプロパティ &#40;[詳細設定] ページ&#41; - Reporting Services」](../tools/server-properties-advanced-page-reporting-services.md)を参照してください。  
   
-4.  `EnableRemoteErrors`、`True`します。  
+4.  で`EnableRemoteErrors`、を`True`選択します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_script"></a> スクリプトを使用したリモート エラーの有効化 (ネイティブ モード)  
+##  <a name="enable-remote-errors-through-script-native-mode"></a><a name="bkmk_script"></a> スクリプトを使用したリモート エラーの有効化 (ネイティブ モード)  
   
 1.  テキスト ファイルを作成し、そのファイルに次のスクリプトをコピーします。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "66103806"
   
 6.  詳細については、「[RS.exe ユーティリティ (SSRS)](../tools/rs-exe-utility-ssrs.md)」を参照してください。  
   
-##  <a name="bkmk_ConfigurationInfo"></a> ConfigurationInfo テーブルの変更 (ネイティブ モード)  
+##  <a name="modifying-the-configurationinfo-table-native-mode"></a><a name="bkmk_ConfigurationInfo"></a> ConfigurationInfo テーブルの変更 (ネイティブ モード)  
   
 1.  > [!NOTE]  
-    >  編集することができます、 **ConfigurationInfo**を設定するレポート サーバー データベース内のテーブル`EnableRemoteErrors`に`True`が、設定を変更する SQL Server Management Studio またはスクリプトのいずれを使用する場合は、レポート サーバーはアクティブに使用すると、します。 データベース内で設定を変更した場合、変更は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの再起動後に反映されます。  
+    >  レポートサーバーデータベースで**Configurationinfo**テーブルを編集してをに`EnableRemoteErrors` `True`設定できますが、レポートサーバーがアクティブに使用されている場合は、SQL Server Management Studio またはスクリプトを使用して設定を変更する必要があります。 データベース内で設定を変更した場合、変更は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの再起動後に反映されます。  
   
   

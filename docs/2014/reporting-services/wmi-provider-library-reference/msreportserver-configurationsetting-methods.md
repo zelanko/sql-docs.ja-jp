@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d3fc7ae8ad4c3018bcc512296a670fdaac3b64e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097356"
 ---
-# <a name="msreportserverconfigurationsetting-methods"></a>MSReportServer_ConfigurationSetting メソッド
+# <a name="msreportserver_configurationsetting-methods"></a>MSReportServer_ConfigurationSetting メソッド
   レポート サーバー WMI プロバイダーの MSReportServer_ConfigurationSetting クラスには、次のパブリック メソッドがあります。  
   
 ## <a name="public-methods"></a>パブリック メソッド  
@@ -43,7 +43,7 @@ ms.locfileid: "66097356"
 |[GetAdminSiteUrl メソッド &#40;WMI&#41;](configurationsetting-method-getadminsiteurl.md)|サーバーの管理 Web サイトの絶対 URL を取得します。|  
 |[GetDatabaseVersionDisplayName](configurationsetting-method-getdatabaseversiondisplayname.md)|指定したレポート サーバー データベースのバージョン文字列の表示名を取得します。|  
 |[InitializeReportServer](configurationsetting-method-initializereportserver.md)|指定されたレポート サーバー インスタンスを初期化します。|  
-|[ListInstalledSharePointVersions メソッド &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|レポート サーバーと同じコンピューターにインストールされた Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 or [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] のバージョンを表すトークンのセットを返します。|  
+|[ListInstalledSharePointVersions メソッド &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|レポート サーバーと同じコンピューターにインストールされている Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] のバージョンを表すトークンのセットを返します。|  
 |[ListIPAddresses メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listipaddresses.md)|コンピューターの IP アドレスを一覧表示します。|  
 |[ListReportServersInDatabase](configurationsetting-method-listreportserversindatabase.md)|セキュリティで保護された情報にアクセスできるかどうかに関係なく、レポート サーバー データベースにあるレポート サーバーの一覧を返します。|  
 |[ListReservedURLs メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listreservedurls.md)|レポート サーバー上のすべてのアプリケーション用に予約されている URL を一覧表示します。|  
@@ -66,6 +66,6 @@ ms.locfileid: "66097356"
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|指定した Windows ユーザーとしてレポート サーバー サービスを実行し、レポート サーバーを運用するためのファイル システム権限をこのアカウントに与えます。|  
   
 ## <a name="see-also"></a>参照  
- [MSReportServer_ConfigurationSetting Class](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
   

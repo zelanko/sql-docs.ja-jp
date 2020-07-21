@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bc8173d8be0c5f5c3194667935e3cc7af4f1cca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b26d8a7fa1c72a3c31f43d6d8e99bfceedde96a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731198"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Geography Markup Language (GML) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブセットによる表現を指定して **geography** インスタンスを構築します。
   
-GML の詳細については、次の Open Geospatial Consortium の仕様を参照してください。[OGC の仕様、Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
+GML の詳細については、Open Geospatial Consortium (OGC) 仕様「[OGC の仕様、Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)」を参照してください。
   
 この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。
   
@@ -51,14 +51,14 @@ GeomFromGml ( GML_input, SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
  このメソッドは、この入力に対蹠点が含まれている場合、**ArgumentException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `GeomFromGml()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

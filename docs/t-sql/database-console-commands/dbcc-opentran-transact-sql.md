@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748924"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DBCC OPENTRAN はアクティブなトランザクションを識別するのに役立ち、ログの切り捨てを防ぐ目的でも使用できます。 DBCC OPENTRAN によって、指定したデータベースのトランザクション ログ内に存在する最も古いアクティブ トランザクション、および (存在する場合は) 最も古い分散型と非分散型のレプリケートされたトランザクションに関する情報が表示されます。 ログ内にアクティブ トランザクションが存在する場合、またはデータベースにレプリケーション情報が存在する場合にのみ、結果が表示されます。 ログ内にアクティブ トランザクションがない場合は、情報メッセージが表示されます。
   
@@ -44,7 +44,7 @@ DBCC OPENTRAN はアクティブなトランザクションを識別するのに
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC OPENTRAN   
 [   
     ( [ database_name | database_id | 0 ] )   
@@ -64,7 +64,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 DBCC OPENTRAN は、開かれたトランザクションがトランザクション ログ内に存在するかどうかを調べるときに使用します。 BACKUP LOG ステートメントを使用した場合は、ログの使用されていない部分しか切り捨てることができないため、開かれたトランザクションが存在すると、ログを完全に切り捨てることができなくなります。 開かれたトランザクションを識別するには、sp_who を使用してシステム プロセス ID を取得します。
   
 ## <a name="result-sets"></a>結果セット  
@@ -78,7 +78,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="a-returning-the-oldest-active-transaction"></a>A. 最も古いアクティブなトランザクションを返す  
 次の例では、現在のデータベースのトランザクション情報を取得します。 結果は異なる場合があります。
   

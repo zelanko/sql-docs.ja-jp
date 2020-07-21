@@ -1,5 +1,6 @@
 ---
 title: 最小構成での SQL Server の起動 | Microsoft Docs
+description: SQL Server の最小構成スタートアップ オプションについて説明します。 これを使用すべき状況と使用方法、およびこれによって生じる機能制限を説明します。
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - minimal configuration [SQL Server]
 - starting SQL Server, minimal configuration
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 71fd26df641c1ac551dcc430c0fef555fc3c5df8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e6e301cd7dc29cc5e2a2cffc34066369ed67d57a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764000"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>最小構成での SQL Server の起動
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   構成の問題があるためにサーバーを起動できない場合は、最小構成起動オプションを使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを起動できます。 これが起動オプション **-f**です。 最小構成で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを起動すると、サーバーが自動的にシングル ユーザー モードに設定されます。  
   
@@ -34,6 +35,8 @@ ms.locfileid: "68037148"
 -   起動ストアド プロシージャは実行されません。  
 
 -   `tempdb` は、最小サイズで構成されます。
+
+-   監査は無効になりますが、監査 DDL を発行することはできます。 実際には、SQL Serve の監査の再構成を必要とするほとんどの場合、 **-m** で十分です。 監査構成でのセキュリティの詳細については、「[SQL Server での監査](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security)」を参照してください。
   
  最小構成でサーバーを起動後、適切なサーバー オプションの値を変更し、サーバーを停止してから再起動してください。  
   

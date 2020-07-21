@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107784"
 ---
 # <a name="previewing-reports-in-report-builder"></a>レポート ビルダーでのレポートのプレビュー
@@ -75,12 +75,12 @@ ms.locfileid: "66107784"
   
  レポートに使用されているサブレポートが、編集セッションの作成後に変更された場合、レポートをプレビューできません。 レポートを正常にプレビューするには、レポートを保存するか、 **[更新]** をクリックして最新のデータを取得する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [レポートの保存 &#40;レポート ビルダー&#41;](saving-reports-report-builder.md)  
+## <a name="see-also"></a>参照  
+ [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](../report-data/report-datasets-ssrs.md)   
+ [レポートアイテムの書式設定 &#40;レポートビルダーと SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポートビルダーと SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [グラフ &#40;レポートビルダーと SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポートビルダーと SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [レポートの保存 (レポート ビルダー)](saving-reports-report-builder.md)  
   
   

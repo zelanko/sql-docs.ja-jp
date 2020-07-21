@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8eece6a1347aa7fba41577f66493e35f92a69d6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b8bb141c8f54c49ca3a5c6fc4bc15d434f91795c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039509"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286962"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0  
   
- **概要**  
- **SQLWriteDSNToIni**システム情報をデータ ソースを追加します。  
+ **まとめ**  
+ **Sqlwritedsntoini**は、システム情報にデータソースを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,38 +44,38 @@ BOOL SQLWriteDSNToIni(
   
 ## <a name="arguments"></a>引数  
  *lpszDSN*  
- [入力]追加するデータ ソースの名前です。  
+ 代入追加するデータソースの名前。  
   
  *lpszDriver*  
- [入力]ドライバーの名前 (通常は、関連付けられている DBMS の名前)、物理ドライバー名ではなくユーザーに表示されます。  
+ 代入物理ドライバー名の代わりにユーザーに提示されるドライバーの説明 (通常は、関連付けられている DBMS の名前)。  
   
 ## <a name="returns"></a>戻り値  
- 関数は、成功した場合、FALSE が失敗した場合に TRUE を返します。  
+ 関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLWriteDSNToIni** 、関連付けられている FALSE が返されます *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**します。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
+ **Sqlwritedsntoini**が FALSE を返す場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーのエラー|エラーが発生する特定のインストーラーのエラーがなかった。|  
-|ODBC_ERROR_INVALID_DSN|無効な DSN|*LpszDSN*引数には、DSN に無効な文字列が含まれています。|  
-|ODBC_ERROR_INVALID_NAME|無効なドライバーまたは翻訳者名|*LpszDriver*引数が無効です。|  
-|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|インストーラーは、レジストリで、DSN を作成できませんでした。|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|インストーラーは、メモリ不足のため、関数を実行できませんでした。|  
+|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
+|ODBC_ERROR_INVALID_DSN|無効な DSN|*Lpszdsn*引数に、dsn に対して無効な文字列が含まれていました。|  
+|ODBC_ERROR_INVALID_NAME|ドライバーまたは翻訳者名が無効です|*Lpszdriver*引数が無効でした。|  
+|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|インストーラーで、レジストリに DSN を作成できませんでした。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
- **SQLWriteDSNToIni**のシステム情報 [ODBC データ ソース] セクションに、データ ソースを追加します。 データ ソースの仕様のセクションを作成し、1 つのキーワードを追加します (**ドライバー**) ドライバーの値として DLL の名前に置き換えます。 データ ソースの仕様のセクションが既に存在する場合**SQLWriteDSNToIni**新しいを作成する前に、古いセクションを削除します。  
+## <a name="comments"></a>説明  
+ **Sqlwritedsntoini**によって、データソースがシステム情報の [ODBC データソース] セクションに追加されます。 次に、データソースの仕様セクションを作成し、その値としてドライバー DLL の名前を持つ単一のキーワード (**driver**) を追加します。 [データソースの指定] セクションが既に存在する場合は、新しいセクションを作成する前に、 **Sqlwritedsntoini**によって古いセクションが削除されます。  
   
- この関数の呼び出し元では、システム情報のデータ ソースの仕様のセクションに、ドライバー固有のキーワードと値を追加する必要があります。  
+ この関数の呼び出し元は、ドライバー固有のキーワードと値を、システム情報のデータソースの仕様セクションに追加する必要があります。  
   
- データ ソースの名前が既定では場合、 **SQLWriteDSNToIni**システム情報の既定のドライバーの仕様のセクションも作成されます。  
+ データソースの名前が既定値の場合、 **Sqlwritedsntoini**は、システム情報の既定のドライバー仕様セクションも作成します。  
   
- この関数は、DLL のセットアップからのみ呼び出す必要があります。  
+ この関数は、セットアップ DLL からのみ呼び出す必要があります。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|追加、変更、またはデータ ソースを削除します。|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)(で DLL のセットアップ)|  
-|追加、変更、またはデータ ソースを削除します。|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|システム情報のデータ ソース名を削除します。|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|
+|データソースの追加、変更、または削除|[Configdsn](../../../odbc/reference/syntax/configdsn-function.md)(セットアップ DLL 内)|  
+|データソースの追加、変更、または削除|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
+|システム情報からのデータソース名の削除|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|

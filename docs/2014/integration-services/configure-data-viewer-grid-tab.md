@@ -1,5 +1,5 @@
 ---
-title: データ ビューアー ([グリッド] タブ) の構成 |Microsoft Docs
+title: '[データビューアーの構成] ([グリッド] タブ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,32 +11,31 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a5180f3bf0064c9f77c4a093cc56e0294337a93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060662"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438529"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>[データ ビューアーの構成] ([グリッド] タブ)
   **[データ ビューアーの構成]** ダイアログ ボックスの **[グリッド]** タブを使用すると、表示する列を指定できます。 グリッド グラフは、データ レコードをグリッド内の行として表示します。 グラフには、1 つのバッファーの内容のみが反映されます。  
   
-## <a name="options"></a>および  
- **未使用の列**  
+## <a name="options"></a>オプション  
+ **[未使用の列]**  
  列を選択してから、単一矢印をクリックして列を **[表示する列]** の一覧に移動するか、二重矢印をクリックしてすべての列を **[表示する列]** の一覧に移動します。  
   
- **表示される列**  
+ **[表示する列]**  
  列名を選択してから、単一矢印をクリックして列を **[未使用の列]** の一覧に移動するか、二重矢印をクリックしてすべての列名を **[未使用の列]** の一覧に移動します。  
   
 ## <a name="see-also"></a>関連項目  
- [データ ビューアーの構成&#40;[全般] タブ&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
- [データ ビューアーの構成&#40;縦棒グラフ タブ&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
- [データ ビューアーの構成&#40;ヒストグラム タブ&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
- [データ ビューアーの構成&#40; タブを散布図&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
- [データ フロー](data-flow/data-flow.md)   
+ [[全般] タブの [データビューアーの構成] &#40;&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+ [[データビューアーの構成] &#40;[縦棒グラフ] タブ&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
+ [[データビューアー &#40;ヒストグラム] タブの構成&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
+ [[データビューアーの構成] &#40;[散布図] タブ&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+ [データフロー](data-flow/data-flow.md)   
  [データ フローのデバッグ](troubleshooting/debugging-data-flow.md)  
   
   

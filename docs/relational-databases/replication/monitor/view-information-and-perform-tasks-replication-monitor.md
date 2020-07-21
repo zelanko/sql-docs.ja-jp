@@ -1,6 +1,7 @@
 ---
-title: レプリケーション モニターを使用して情報を表示し、タスクを実行する | Microsoft Docs
-ms.custom: ''
+title: 情報を表示し、タスクを実行する (レプリケーション モニター)
+description: SQL Server Management Studio (SSMS) のレプリケーション モニターを使用し、情報を表示したり、さまざまなタスクを実行したりする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 836a286c5852a9822835977c47d9cd204a3724ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: be851d2ff0919125699a4e33c4b4d1d6445c0fc6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766900"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159630"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>レプリケーション モニターを使用して情報を表示し、タスクを実行する
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 レプリケーション モニターには、さまざまな情報を表示したり、さまざまなタスクを実行したりするためのタブやオプションが多数あります。 この記事では、レプリケーション モニターを使用して、表示したり実行したりすることができる、さまざまな事項について説明します。 
 
 
@@ -59,7 +60,7 @@ ms.locfileid: "68766900"
 ### <a name="view-information"></a>情報の表示
 レプリケーション モニターには、選択したパブリッシャーに関する情報を表示する次のタブがあります。   
 -   **[パブリケーション]** : 選択したパブリッシャーのすべてのパブリケーションの情報が表示されます。   
--   **[サブスクリプション ウォッチ リスト]** : エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。    
+-   **[サブスクリプション ウォッチ リスト]** : エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。    
 -   **[エージェント]** タブ: すべての種類のレプリケーションで使用されるエージェントおよびジョブの詳細情報が表示されます。 また、各エージェントとジョブを開始および停止することもできます。 それぞれのタブのオプションの詳細を表示するには、右ペインでタブをクリックしてから、メニュー バーの **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 ### <a name="perform-tasks"></a>タスクの実行
@@ -74,7 +75,7 @@ ms.locfileid: "68766900"
 4.  エージェントの情報を表示するには、 **[エージェント]** タブをクリックします。このタブで、さらに詳しい情報を表示したり、タスクを実行することができます。    
     -   エージェントの詳細情報 (情報メッセージやエラー メッセージなど) を表示するには、エージェントを右クリックし、 **[詳細表示]** をクリックします。  
     -   エージェントを実行するジョブの詳細情報 (スケジュールやジョブ ステップの詳細など) を表示するには、エージェントを右クリックし、 **[プロパティ]** をクリックします。    
-    -   エージェントのプロファイルを管理するには、エージェントを右クリックし、 **[エージェント プロファイル]** をクリックします。 詳細については、「[Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)」(レプリケーション エージェント プロファイルの操作) をご覧ください。    
+    -   エージェントのプロファイルを管理するには、エージェントを右クリックし、 **[エージェント プロファイル]** をクリックします。 詳細については、「[Work with Replication Agent Profiles (レプリケーション エージェント プロファイルの操作)](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)」をご覧ください。    
     -   実行されていないエージェントを開始するには、エージェントを右クリックし、 **[エージェントの開始]** をクリックします。  
     -   実行中のエージェントを停止するには、エージェントを右クリックし、 **[エージェントの停止]** をクリックします。  
 
@@ -84,7 +85,7 @@ ms.locfileid: "68766900"
 ### <a name="view-information"></a>情報の表示
   レプリケーション モニターには、サブスクリプションについての情報を含む以下のタブが用意されています。    
 -   **[すべてのサブスクリプション]** : 選択したパブリケーションのすべてのサブスクリプションの情報が表示されます。   
--   **[サブスクリプション ウォッチ リスト]** : エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。 それぞれのタブのオプションの詳細については、右ペインでタブをクリックしてから、メニュー バーで **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
+-   **[サブスクリプション ウォッチ リスト]** : エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。 それぞれのタブのオプションの詳細については、右ペインでタブをクリックしてから、メニュー バーで **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 ### <a name="perform-tasks"></a>タスクの実行
   
@@ -96,7 +97,7 @@ ms.locfileid: "68766900"
   
 1.  左ペインでパブリッシャー グループを展開してから、パブリッシャーをクリックします。    
 2.  サブスクリプションの情報を表示するには、 **[サブスクリプション ウォッチ リスト]** タブをクリックします。    
-3.  **[\<SubscriptionType> サブスクリプションの表示]** ボックスから表示するサブスクリプションの種類を選択します。 同期中など、特定の状態のサブスクリプションのみを表示するには、 **[表示]** ボックスからオプションを選択します。    
+3.  **[\<SubscriptionType> サブスクリプションの表示]** ドロップダウン リストから表示するサブスクリプションの種類を選択します。 同期中など、特定の状態のサブスクリプションのみを表示するには、 **[表示]** ボックスからオプションを選択します。    
 4.  サブスクリプションのプロパティを表示および変更するには、サブスクリプションを右クリックしてから、 **[プロパティ]** をクリックします。 このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。 
   
   
@@ -118,7 +119,7 @@ ms.locfileid: "68766900"
 2.  **[エージェント]** タブをクリックします。エージェントの情報が表示されます。 このタブで、さらに詳しい情報を表示したり、タスクを実行することができます。    
     -   エージェントの詳細情報 (情報メッセージやエラー メッセージなど) を表示するには、エージェントを右クリックし、 **[詳細表示]** をクリックします。  
     -   エージェントを実行するジョブの詳細情報 (スケジュールやジョブ ステップの詳細など) を表示するには、エージェントを右クリックし、 **[プロパティ]** をクリックします。    
-    -   エージェントのプロファイルを管理するには、エージェントを右クリックし、 **[エージェント プロファイル]** をクリックします。 詳細については、「[Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)」(レプリケーション エージェント プロファイルの操作) をご覧ください。   
+    -   エージェントのプロファイルを管理するには、エージェントを右クリックし、 **[エージェント プロファイル]** をクリックします。 詳細については、「[Work with Replication Agent Profiles (レプリケーション エージェント プロファイルの操作)](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)」をご覧ください。   
     -   実行されていないエージェントを開始するには、エージェントを右クリックし、 **[エージェントの開始]** をクリックします。   
     -   実行中のエージェントを停止するには、エージェントを右クリックし、 **[エージェントの停止]** をクリックします。  
   
@@ -127,7 +128,7 @@ ms.locfileid: "68766900"
 ### <a name="view-information"></a>情報の表示
 -   **[すべてのサブスクリプション]** : 選択したパブリケーションのすべてのサブスクリプションの情報が表示されます。  
   
--   **[サブスクリプション ウォッチ リスト]** : エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。 それぞれのタブのオプションの詳細については、右ペインでタブをクリックしてから、メニュー バーで **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
+-   **[サブスクリプション ウォッチ リスト]** : エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。 それぞれのタブのオプションの詳細については、右ペインでタブをクリックしてから、メニュー バーで **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 ### <a name="perform-tasks"></a>タスクの実行
   

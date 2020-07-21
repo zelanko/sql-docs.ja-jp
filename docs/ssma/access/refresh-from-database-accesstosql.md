@@ -1,5 +1,5 @@
 ---
-title: データベース (AccessToSQL) からの更新 |Microsoft Docs
+title: データベースからの更新 (データの更新) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,24 +10,24 @@ ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 209ed616f3993a0a93b802ddeca39a7065485afc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051533"
 ---
-# <a name="refresh-from-database-accesstosql"></a>データベース (AccessToSQL) からの更新します。
-**データベースからの更新** ダイアログ ボックスを使用して Access データベースから更新するには、どのオブジェクトを選択できます。 ダイアログ ボックス内の行は色分け、メタデータの状態に基づいて。  
+# <a name="refresh-from-database-accesstosql"></a>データベースからの更新 (データの更新)
+[**データベースから更新**] ダイアログボックスでは、Access データベースから更新するオブジェクトを選択できます。 ダイアログボックス内の行は、メタデータの状態に基づいて色分けされています。  
   
--   ローカルと Access データベースにオブジェクトのメタデータを変更した場合は、行は青色です。  
+-   オブジェクトメタデータがローカルと Access データベースで変更されている場合、行は青色になります。  
   
--   SSMA ではなく、Access データベースにオブジェクトのメタデータを変更した場合は、行が黄色にします。  
+-   オブジェクトのメタデータが Access データベースで変更され、SSMA では変更されていない場合、行は黄色になります。  
   
--   オブジェクトのメタデータがローカルで変更されたが、Access データベースではなく、行は緑色です。  
+-   オブジェクトメタデータが Access データベースではなくローカルで変更された場合、その行は緑色になります。  
   
--   オブジェクトが、Access データベースの新機能の場合は、その行はピンク色です。  
+-   オブジェクトが Access データベースの新しい場合、行はピンクです。  
   
-オブジェクトの更新設定は既定値を指定することができます、**プロジェクト設定** ダイアログ ボックス。 詳細については、次を参照してください[プロジェクト設定&#40;オブジェクトの読み込み&#41; &#40;AccessToSQL。&#41;](../../ssma/access/project-settings-loading-objects-accesstosql.md)  
+既定のオブジェクト更新設定は、[**プロジェクトの設定**] ダイアログボックスで指定できます。 詳細については、「[オブジェクトの読み込み &#40;プロジェクトの設定](../../ssma/access/project-settings-loading-objects-accesstosql.md)」を参照してください&#41; &#40;、sql&#41;  
   
-アクセスする、**データベースからの更新** ダイアログ ボックスを右クリックして**データベース**アクセス メタデータ エクスプ ローラーでノード**データベースからの更新**します。  
+[**データベースから更新**] ダイアログボックスにアクセスするには、Access メタデータエクスプローラーで任意の**データベース**ノードを右クリックし、[**データベースから更新**] をクリックします。  
   

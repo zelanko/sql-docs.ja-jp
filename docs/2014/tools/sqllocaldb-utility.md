@@ -1,5 +1,5 @@
 ---
-title: SqlLocalDB ユーティリティ |Microsoft Docs
+title: SqlLocalDB Utility |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 168a343c208c7b9d98f3f03a802e40488602a7d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007070"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB ユーティリティ
-  使用して、`SqlLocalDB`のインスタンスを作成するためのユーティリティ[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**します。 `SqlLocalDB`ユーティリティ (SqlLocalDB.exe) はユーザーと開発者を作成および管理のインスタンスを有効にするシンプルなコマンド ライン ツール[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**します。 使用する方法については**LocalDB**を参照してください[SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)します。  
+  `SqlLocalDB`LocalDB のインスタンスを作成するには、ユーティリティを使用し [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**ます。 `SqlLocalDB`ユーティリティ (SqlLocalDB.exe) は、ユーザーおよび開発者が LocalDB のインスタンスを作成および管理できるようにするための単純なコマンドラインツールです [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**。 **Localdb**の使用方法の詳細については、「 [SQL Server 2014 Express localdb](../database-engine/configure-windows/sql-server-2016-express-localdb.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,8 +42,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* **[-s]**  
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** の新しいインスタンスを作成します。 `SqlLocalDB` バージョンを使用して[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]で指定されたバイナリ *\<インスタンス バージョン >* 引数。 バージョン番号は、1 桁以上の 10 進数の数値書式で指定します。 マイナー バージョン番号 (サービス パック) は省略可能です。 たとえば、次の 2 つのバージョン番号のどちらです。11.0 と 11.0.1186 指定したバージョンがコンピューターにインストールされている必要があります。 バージョンにバージョン番号の既定値を指定しない場合、`SqlLocalDB`ユーティリティ。 **-s** を追加した場合、**LocalDB** の新しいインスタンスが起動します。  
+ [**作成**  | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
+ [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** の新しいインスタンスを作成します。 `SqlLocalDB`[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]引数で指定されたバージョンのバイナリを使用し *\<instance-version>* ます。 バージョン番号は、1 桁以上の 10 進数の数値書式で指定します。 マイナー バージョン番号 (サービス パック) は省略可能です。 たとえば、次の 2 つのバージョン番号のどちらも使用できます。11.0 または 11.0.1186。 指定したバージョンがコンピューターにインストールされている必要があります。 指定しない場合、バージョン番号は既定でユーティリティのバージョンに `SqlLocalDB` なります。 **-s** を追加した場合、**LocalDB** の新しいインスタンスが起動します。  
   
  [ **share** | **h** ]  
  指定された共有名を使用して、 **LocalDB** の指定されたプライベート インスタンスを共有します。 ユーザー SID またはアカウント名を省略した場合、既定で現在のユーザーになります。  
@@ -52,37 +51,37 @@ SqlLocalDB.exe
  [ **unshared** | **u** ]  
  **LocalDB**の指定した共有インスタンスの共有を停止します。  
   
- [ **delete** | **d** ] *\<instance-name>*  
- 指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを削除します。  
+ [**削除**  | **d** ]*\<instance-name>*  
+ 指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** のインスタンスを削除します。  
   
- [ **start** | **s** ] " *\<instance-name>* "  
- 指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを起動します。 成功した場合、ステートメントから **LocalDB**の名前付きパイプ アドレスが返されます。  
+ [**開始**  | **s** ] " *\<instance-name>* "  
+ 指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** のインスタンスを起動します。 成功した場合、ステートメントから **LocalDB**の名前付きパイプ アドレスが返されます。  
   
- [ **stop** | **p** ] *\<instance-name>* **[-i]** **[-k]**  
- 指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを停止します。 追加 **-i**でインスタンスのシャット ダウンを要求、`NOWAIT`オプション。 **-k** を追加した場合は、インスタンス プロセスに通知することなく、そのプロセスを停止します。  
+ [**停止**  | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
+ 指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** のインスタンスを停止します。 **-I**を追加すると、オプションを使用してインスタンスのシャットダウンが要求され `NOWAIT` ます。 **-k** を追加した場合は、インスタンス プロセスに通知することなく、そのプロセスを停止します。  
   
- [ **info** | **i** ] [ *\<instance-name>* ]  
- 現在のユーザーが所有する [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のすべてのインスタンスを一覧表示します。  
+ [**情報**  |  ]**i** ] [ *\<instance-name>* ]  
+ 現在のユーザーが所有する [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** のすべてのインスタンスを一覧表示します。  
   
- *\<instance-name>* を指定すると、[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** の指定したインスタンスの名前、バージョン、状態 (Running または Stopped)、および最後の起動時刻に加え、**LocalDB** のローカル パイプ名が返されます。  
+ *\<instance-name>* 指定された localdb インスタンスの名前、バージョン、状態 (実行中または停止)、最後の開始時刻、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** **localdb**のローカルパイプ名を返します。  
   
  [ **trace** | **t** ] **on** | **off**  
- **トレース**のトレースを有効に、`SqlLocalDB`現在のユーザーの API を呼び出します。 **trace off** はトレースを無効にします。  
+ **trace on**は、現在の `SqlLocalDB` ユーザーに対する API 呼び出しのトレースを有効にします。 **trace off** はトレースを無効にします。  
   
  **-?**  
- 返します。 それぞれの説明を簡単な`SqlLocalDB`オプション。  
+ 各オプションの簡単な説明を返し `SqlLocalDB` ます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  引数 *instance name* は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子のルールに従っているか、二重引用符で囲む必要があります。  
   
  引数を指定せずに SqlLocalDB を実行すると、ヘルプ テキストが返されます。  
   
  start 以外の操作は、現在ログインしているユーザーに属するインスタンスでのみ実行できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-an-instance-of-localdb"></a>A. LocalDB のインスタンスを作成する  
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] バイナリを使用して `DEPARTMENT` という名前の [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを作成し、そのインスタンスを起動する例を次に示します。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] バイナリを使用して `DEPARTMENT` という名前の [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** のインスタンスを作成し、そのインスタンスを起動する例を次に示します。  
   
 ```  
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  

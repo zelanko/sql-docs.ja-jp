@@ -13,19 +13,18 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 90e7ee3b8c0ac9c77c4ef863367ff46467a35277
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f503bc368c35e03e458d1e74064314fbf208eb39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705384"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057153"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを新規作成したり、既存のポリシーを変更したりできます。 ポリシーの適用対象を一部のサーバーに制限するには、 **[対象]** 領域と **[サーバーの制限]** 領域をフィルターとして使用します。 対象フィルターとして使用する条件は、物理ファセットで定義する必要があり、関数や LIKE 演算子をその条件に含めることはできません。 ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx) を参照してください。  
   
-## <a name="options"></a>および  
- **名前**  
+## <a name="options"></a>オプション  
+ **Name**  
  新しいポリシーの場合は、新しいポリシー名を入力します。 既存のポリシーの場合は、その名前が表示されます。  
   
  **有効**  

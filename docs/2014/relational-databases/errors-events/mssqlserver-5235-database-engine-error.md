@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6cbfac91613c2374e42da5b33e75ed5cade2bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b19e643a77a2cdd3d74d05f87480fe66e3b0cf60
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62913759"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551257"
 ---
-# <a name="mssqlserver5235"></a>MSSQLSERVER_5235
+# <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|5235|  
@@ -49,7 +48,7 @@ ms.locfileid: "62913759"
 ## <a name="user-action"></a>ユーザーの操作  
  次の表に、指定されたエラー状態に対応するユーザーのアクションを示します。  
   
-|エラー状態|ユーザーのアクション|  
+|エラー状態|ユーザー アクション|  
 |-----------------|-----------------|  
 |状態 0|バックアップからの復元を行います。|  
 |状態 1|[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) に問い合わせます。|  

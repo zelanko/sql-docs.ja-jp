@@ -1,5 +1,6 @@
 ---
 title: データベース エンジンのアップグレード計画の策定およびテスト | Microsoft Docs
+description: この記事では、SQL Server のアップグレードを開始する前に立てる必要のある計画について説明します。これには、計画チェックリスト、アップグレード計画の作成とテストが含まれます。
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0476871b5788e47648e96abe2f9c12d2ee98e2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990869"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900341"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>データベース エンジンのアップグレード計画の策定およびテスト
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のアップグレードを成功させるには、どんな手法であろうと、適切な計画を立てる必要があります。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "67990869"
   
        -   [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-       -   SSL セキュリティ更新プログラム  
+       -   TLS セキュリティ更新プログラム  
 
    >[!NOTE]
    >上記のリストは [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)] にも適用されます。
@@ -93,8 +94,8 @@ ms.locfileid: "67990869"
   
 -   **アップグレード計画をテストする:** 実際のワークロードを使用してパフォーマンスをテストするには、Microsoft SQL Server 分散再生ユーティリティを使用します。 このユーティリティでは、複数のコンピューターを使用してトレース データを再生し、ミッションクリティカルなワークロードをシミュレートできます。 SQL Server のアップグレードの前後でテスト サーバーの再生を実行することで、パフォーマンスの差を測定したり、アップグレード時にアプリケーションに非互換性が発生するかどうかを調べたりすることができます。 詳細については、「[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)」と「[管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)」を参照してください。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 [データベース エンジンのアップグレード](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>その他のリソース 
-[データベースの移行ガイド](https://aka.ms/datamigration)  
+[データベース移行ガイド](https://aka.ms/datamigration)  

@@ -1,10 +1,9 @@
 ---
-title: データベース ダイアグラムを開く方法 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: データベース ダイアグラムを開く
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d183f673a2cd00200c90dd81e7f407ee84170bc2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7b6a12c3172b029c21ec0145d2dd872dc958c8b8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263344"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251446"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>データベース ダイアグラムを開く方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68263344"
   
 2.  開くデータベース ダイアグラムの名前をダブルクリックします。  
   
-    \- または -  
+    または  
   
     開くデータベース ダイアグラムの名前を右クリックし、 **[データベース ダイアグラムのデザイン]** を選択します。  
   

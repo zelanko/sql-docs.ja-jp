@@ -1,7 +1,7 @@
 ---
 title: '列ストア インデックス: 概要 | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b44f45cfcefc1e413fbb13f9c172c1a11b66dc2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912093"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007504"
 ---
 # <a name="columnstore-indexes-overview"></a>列ストア インデックス: 概要
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-列ストア インデックスは、大規模なデータ ウェアハウス ファクト テーブルを格納し、そのテーブルにクエリを実行する際の標準となります。 このインデックスは列ベースのデータ ストレージとクエリ処理を使用して、従来の行指向ストレージと比較して最大 **10 倍のクエリ パフォーマンス**をデータ ウェアハウスで実現します。 また、非圧縮データ サイズと比較して、最大 **10 倍のデータ圧縮**を実現することも可能です。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、列ストア インデックスでは運用分析が可能になりました。トランザクション ワークロードでパフォーマンスの高いリアルタイム分析を実行することができます。  
+列ストア インデックスは、大規模なデータ ウェアハウス ファクト テーブルを格納し、そのテーブルにクエリを実行する際の標準となります。 このインデックスは列ベースのデータ ストレージとクエリ処理を使用して、従来の行指向ストレージと比較して最大 10 倍のクエリ パフォーマンスをデータ ウェアハウスで実現します。 また、非圧縮データのサイズと比較して最大で 10 倍のデータ圧縮を実現できます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降、列ストア インデックスでは運用分析が可能になりました。トランザクション ワークロードでパフォーマンスの高いリアルタイム分析を実行することができます。  
   
 関連するシナリオについての詳細は次のとおりです。  
   
@@ -55,13 +55,23 @@ ms.locfileid: "67912093"
   
 高パフォーマンスと高い圧縮率を実現するために、列ストア インデックスは、テーブルを行グループにスライスし、各行グループを列方向に圧縮します。 行グループ内の行数は、高い圧縮率が実現される程度に多く、インメモリ操作の利点を得られる程度に少なくなければなりません。    
 
+すべてのデータが削除された行グループは、COMPRESSED 状態から TOMBSTONE 状態に移行し、後で組ムーバーというバックグラウンド プロセスによって削除されます。 行グループの状態の詳細については、「[sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)」を参照してください。
+
+> [!TIP]
+> 小さな行グループが多すぎると、列ストア インデックスの品質が低下します。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] までは、削除された行を削除して圧縮された行グループを結合する方法を決定する内部しきい値ポリシーに従って、小さな COMPRESSED 行グループをマージするには、再編成操作が必要です。    
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、多数の行が削除された COMPRESSED 行グループをマージするには、バックグラウンド マージ タスクも利用できます。     
+> 小さい行グループをマージすると、インデックスの品質が改善されます。 
+
+> [!NOTE]
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、組ムーバーは、内部しきい値によってしばらくの間存在していると判断された小さな OPEN デルタ行グループを自動的に圧縮するか、多数の行が削除されている COMPRESSED 行グループをマージするバックグラウンド マージ タスクによってサポートされています。 これにより、時間の経過とともに、列ストア インデックスの品質が向上します。         
+
 #### <a name="column-segment"></a>列セグメント
 列セグメントは、行グループ内のデータ列です。  
   
 -   それぞれの行グループには、テーブルの 1 つの列につき 1 つの列セグメントが含まれます。  
 -   それぞれの列セグメントは一緒に圧縮され、物理メディアに格納されます。  
   
-![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![列セグメント](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "列セグメント")  
   
 #### <a name="clustered-columnstore-index"></a>クラスター化列ストア インデックス
 クラスター化列ストア インデックスは、テーブル全体に対する物理ストレージです。    
@@ -71,9 +81,16 @@ ms.locfileid: "67912093"
 列セグメントの断片化を低減し、パフォーマンスを高めるために、列ストア インデックスでは、一部のデータを、クラスター化インデックス ("*デルタストア*" と呼ばれます) と削除された行の ID の btree リストに格納することがあります。 デルタストア操作は内部で処理されます。 列ストア インデックスは、正しいクエリ結果を返すために、列ストアとデルタストアの両方からのクエリ結果を結合します。  
   
 #### <a name="delta-rowgroup"></a>デルタ行グループ
-デルタ行グループは、列ストア インデックスでのみ使用されるクラスター化インデックスです。 これは、行数がしきい値に達して列ストアに移動できるまで行を格納することで、列ストアの圧縮とパフォーマンスを高めます。  
+デルタ行グループは、列ストア インデックスでのみ使用されるクラスター化 B ツリー インデックスです。 これは、行数がしきい値 (1,048,576 行) に達して列ストアに移動できるまで行を格納することで、列ストアの圧縮とパフォーマンスを高めます。  
 
-デルタ行グループは、最大行数に達すると閉じられます。 閉じている行グループは、組ムーバー プロセスによって確認されます。 プロセスによって閉じている行グループが見つけられると、その行グループは圧縮され、列ストアに格納されます。  
+デルタ行グループが行数の上限に達すると、OPEN 状態から CLOSED 状態に移行します。 組ムーバーというバックグラウンド プロセスによって、閉じられた行グループがチェックされます。 プロセスによって閉じられた行グループが検出されると、デルタ行グループは圧縮され、COMPRESSED 行グループとして列ストアに格納されます。 
+
+デルタ行グループが圧縮されると、既存のデルタ行グループは TOMBSTONE 状態に移行し、参照がない場合は組ムーバーによって後で削除されます。 
+
+行グループの状態の詳細については、「[sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)」を参照してください。 
+
+> [!NOTE]
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、組ムーバーは、内部しきい値によってしばらくの間存在していると判断された小さな OPEN デルタ行グループを自動的に圧縮するか、多数の行が削除されている COMPRESSED 行グループをマージするバックグラウンド マージ タスクによってサポートされています。 これにより、時間の経過とともに、列ストア インデックスの品質が向上します。         
   
 #### <a name="deltastore"></a>デルタストア
 列ストア インデックスは、複数のデルタ行グループを持つことができます。 すべてのデルタ行グループを総称して、デルタストアと呼びます。   
@@ -90,7 +107,7 @@ ms.locfileid: "67912093"
 #### <a name="batch-mode-execution"></a>バッチ モード実行
 バッチ モード実行は、複数の行をまとめて処理するためのクエリ処理方法です。 バッチ モード実行は、列ストア ストレージ形式と緊密に統合され、このストレージ形式に合わせて最適化されています。 バッチ モード実行は、"*ベクター ベースの*" 実行、または "*ベクター化された*" 実行と呼ばれることもあります。 列ストア インデックスのクエリではバッチ モード実行が使用され、これによりクエリ パフォーマンスが、通常、2 から 4 倍向上します。 詳細については、「[クエリ処理アーキテクチャ ガイド](../query-processing-architecture-guide.md#execution-modes)」をご覧ください。 
   
-##  <a name="benefits"></a> 列ストア インデックスを使用する理由  
+##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> 列ストア インデックスを使用する理由  
 列ストア インデックスにより、非常に高いレベルでデータ圧縮が実現し (通常 10 倍)、データ ウェアハウスのストレージ コストが大幅に削減されます。 分析においても、列ストア インデックスは btree インデックスと比べて桁違いに優れたパフォーマンスを発揮します。 列ストア インデックスは、データ ウェアハウスと分析のワークロードに対して推奨されるデータ ストレージ形式です。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、運用ワークロードにおけるリアルタイム分析で列ストア インデックスを使用できます。  
   
 列ストア インデックスが高速に動作する理由:  
@@ -116,11 +133,11 @@ ms.locfileid: "67912093"
 列ストア インデックスは、特に大規模なテーブルで、大量のデータをスキャンする分析クエリを実行するときにパフォーマンスが高くなります。 この列ストア インデックスは、特にファクト テーブルのデータ ウェアハウスと分析のワークロードで使用します。ファクト テーブルでは、テーブル シークではなく完全なテーブル スキャンが必要になることが多いためです。  
   
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>行ストアと列ストアを同じテーブルで結合できますか。  
-可能。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、更新可能な非クラスター化列ストア インデックスを、行ストア テーブルに作成できます。 列ストア インデックスには選択された列のコピーが格納されるため、このデータ用に追加の容量が必要になります。ただし、選択されたデータは平均で 10 倍に圧縮されます。 列ストア インデックスの分析と行ストア インデックスのトランザクションを同時に実行できます。 行ストア テーブルでデータが変更されると列ストアが更新されます。このため、両方のインデックスが同じデータに対して作業を行うことになります。  
+はい。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、更新可能な非クラスター化列ストア インデックスを、行ストア テーブルに作成できます。 列ストア インデックスには選択された列のコピーが格納されるため、このデータ用に追加の容量が必要になります。ただし、選択されたデータは平均で 10 倍に圧縮されます。 列ストア インデックスの分析と行ストア インデックスのトランザクションを同時に実行できます。 行ストア テーブルでデータが変更されると列ストアが更新されます。このため、両方のインデックスが同じデータに対して作業を行うことになります。  
   
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、列ストア インデックス上に 1 つまたは複数の非クラスター化行ストア インデックスを持たせて、基になる列ストア上で効率的にテーブルを検索できるようになりました。 他のオプションも使用できます。 たとえば、行ストア テーブルで UNIQUE 制約を使用することで、主キー制約を適用できます。 一意でない値は行ストア テーブルに挿入できないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で列ストアにその値を挿入することはできません。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
 列ストア インデックス内のすべての列は、付加列としてメタデータに格納されます。 列ストア インデックスはキー列を持ちません。  
 
 |||
@@ -138,7 +155,7 @@ ms.locfileid: "67912093"
   
 `CREATE TABLE` ステートメントでテーブルを作成する際に、`WITH CLUSTERED COLUMNSTORE INDEX` オプションを指定することでそのテーブルを列ストアとして作成できます。 既に、行ストア テーブルがある場合、その行ストアは、`CREATE COLUMNSTORE INDEX` ステートメントを使用して列ストアに変換できます。  
   
-|タスク|参照トピック|注|  
+|タスク|参照トピック|Notes|  
 |----------|----------------------|-----------|  
 |テーブルを列ストアとして作成する。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、テーブルをクラスター化列ストア インデックスとして作成できます。 最初に行ストア テーブルを作成し、次に列ストアに変換する必要はありません。|  
 |列ストア インデックスを持つメモリ テーブルを作成します。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、列ストア インデックスを持つ、メモリ最適化テーブルを作成できます。 列ストア インデックスは、テーブルの作成後に `ALTER TABLE ADD INDEX` 構文を使用して追加することもできます。|  
@@ -152,11 +169,11 @@ ms.locfileid: "67912093"
 |列ストア インデックスから行を削除する。|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) を使用して行を削除します。<br /><br /> **列ストアの行**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は行を論理的に削除されたとしてマークしますが、インデックスが再構築されるまで行の物理ストレージを再確保することはありません。<br /><br /> **デルタストアの行**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は論理的および物理的に行を削除します。|  
 |列ストア インデックスの行を更新する。|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) を使用して行を更新します。<br /><br /> **列ストアの行**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は行を論理的に削除されたとしてマークし、更新された行をデルタストアに挿入します。<br /><br /> **デルタストアの行**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、デルタストアの行を更新します。|  
 |データを列ストア インデックスに読み込む。|[列ストア インデックス データの読み込み](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
-|デルタストアのすべての行を強制的に列ストアに移動します。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [列ストア インデックスの最適化](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)|`ALTER INDEX` に `REBUILD` オプションを指定すると、すべての行が列ストアに強制的に移動されます。|  
+|デルタストアのすべての行を強制的に列ストアに移動します。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|`ALTER INDEX` に `REBUILD` オプションを指定すると、すべての行が列ストアに強制的に移動されます。|  
 |列ストア インデックスを最適化する。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE` は、列ストア インデックスをオンラインで最適化します。|  
 |テーブルと列ストア インデックスをマージする。|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列ストア インデックス データの読み込み](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [列ストア インデックスのバージョン管理機能の概要](~/relational-databases/indexes/columnstore-indexes-what-s-new.md)   
  [列ストア インデックスのクエリ パフォーマンス](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   

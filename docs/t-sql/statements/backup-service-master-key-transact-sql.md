@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1a8526ee9113af846288f68b0ad0bc24dbf9b821
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd00cd524f0d8b1ea0f22e339e29cea1474bccdd
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091731"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380915"
 ---
 # <a name="backup-service-master-key-transact-sql"></a>BACKUP SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サービス マスター キーをエクスポートします。  
   
@@ -46,20 +46,22 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  FILE **='***path_to_file***'**  
  サービス マスター キーのエクスポート先ファイルの完全なパスを、ファイル名を含めて指定します。 ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。  
   
  PASSWORD **='***password***'**  
  バックアップ ファイル内のサービス マスター キーの暗号化に使用されているパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サービス マスター キーは、バックアップして安全な別の場所に保存してください。 このバックアップの作成は、サーバー管理操作の最初の段階で実行します。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、サービス マスター キーをファイルにバックアップします。  
   
 ```  

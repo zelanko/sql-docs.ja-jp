@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4db4d5b5ce08c50646857099d82964bb944bc8af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876195"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957842"
 ---
 # <a name="online-restore-sql-server"></a>オンライン復元 (SQL Server)
   オンライン復元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition でのみサポートされています。 このエディションの既定で、ファイル復元、ページ復元、または段階的な部分復元はオンラインで行われます。 このトピックの内容は、複数のファイルまたはファイル グループを含むデータベース (単純復旧モデルでは、読み取り専用ファイル グループのみ) に関連しています。  
@@ -59,7 +58,7 @@ ms.locfileid: "62876195"
     > [!NOTE]  
     >  または、復元シーケンスの前に手動でファイルをオフラインにすることもできます。 詳細については、このトピックの「データベースまたはファイルのオフライン化」を参照してください。  
   
-##  <a name="taking_db_or_file_offline"></a> データベースまたはファイルのオフライン化  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> データベースまたはファイルのオフライン化  
  オンライン復元を使用しない場合、次のいずれかの方法で、復元シーケンスを開始する前にデータベースをオフラインにできます。  
   
 -   どの復旧モデルでも、次の [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) ステートメントを使用することにより、データベースをオフラインにできます。  
@@ -72,7 +71,7 @@ ms.locfileid: "62876195"
   
  データベースがオフライン状態の間、すべての復元処理はオフライン復元になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 > [!NOTE]  
 >  オンライン復元シーケンスでは、オフライン復元シーケンスと同じ構文を使用します。  
@@ -91,7 +90,7 @@ ms.locfileid: "62876195"
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;完全復旧モデル&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ファイルおよびファイル グループの復元 &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
@@ -104,7 +103,7 @@ ms.locfileid: "62876195"
 -   [機能していないファイル グループの削除 &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [ファイル復元 &#40;完全復旧モデル&#41;](file-restores-full-recovery-model.md)   
+ [ファイルの復元 &#40;完全復旧モデル&#41;](file-restores-full-recovery-model.md)   
  [ファイルの復元 &#40;単純復旧モデル&#41;](file-restores-simple-recovery-model.md)   
  [ページ復元 &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   

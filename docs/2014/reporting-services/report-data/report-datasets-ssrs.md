@@ -1,5 +1,5 @@
 ---
-title: データ レポートを追加 (レポート ビルダーおよび SSRS) |Microsoft Docs
+title: レポートへのデータの追加 (レポートビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 019ca09c83b0b3011e9940d9a4c988ce223e192f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107121"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>レポートへのデータの追加 (レポート ビルダーおよび SSRS)
@@ -38,12 +38,12 @@ ms.locfileid: "66107121"
   
  また、レポート パーツ (レポート パーツが依存するデータセットが含まれています) を追加することによって、データセットをレポートに追加することもできます。 [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- データを表示するレポートを作成する方法については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを参照してください[チュートリアル。基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。 独自のデータを含むレポートを作成するには、次を参照してください。[チュートリアル。オフラインでのクイック グラフ レポートの作成 &#40;レポート ビルダー&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータを表示するレポートの作成方法については、「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。 独自のデータが含まれたレポートの作成方法については、「[チュートリアル: オフラインでのクイック グラフ レポートの作成 &#40;レポート ビルダー&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a> レポート データの追加  
+##  <a name="adding-report-data"></a><a name="Methods"></a> レポート データの追加  
  レポート ビルダーでは、次の方法でレポート データを追加できます。  
   
 -   レポート パーツをレポート サーバーからレポートに追加します。 各レポート パーツは自己完結型で、依存データセットを含んでいます。 データセットは事前に定義されています。  
@@ -77,7 +77,7 @@ ms.locfileid: "66107121"
   
 -   [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
 
-##  <a name="QuickStart"></a> レポート パーツによるデータの追加  
+##  <a name="adding-data-with-report-parts"></a><a name="QuickStart"></a> レポート パーツによるデータの追加  
  レポート パーツには、そのレポート パーツが依存するデータセットが含まれています。 これらのデータセットは、レポート サーバーで使用可能な共有データ ソースに基づいて構築されます。 レポート ビルダーでレポート パーツをレポートに追加すると、手動で追加した場合と同様に、依存データセットもレポートに追加されます。 たとえば、事前に定義されたグラフにデータセットが含まれているとします。 データを表示するには、レポートをプレビューします。  
   
 > [!NOTE]  
@@ -87,17 +87,17 @@ ms.locfileid: "66107121"
   
 -   詳細については、「[レポート パーツ (レポート ビルダーおよび SSRS)](../report-parts-report-builder-and-ssrs.md)」および「[レポート デザイナーでのレポート パーツ (SSRS)](../report-design/report-parts-in-report-designer-ssrs.md)」を参照してください。  
 
-##  <a name="Queries"></a> クエリとクエリ デザイナー  
+##  <a name="queries-and-query-designers"></a><a name="Queries"></a> クエリとクエリ デザイナー  
  データ ソースからどのデータを使用するかを指定するには、クエリ コマンドを作成します。 データ ソースの種類ごとに、クエリの作成に役立つ *クエリ デザイナー* が関連付けられています。 クエリ デザイナーには、グラフィカルなものとテキスト ベースのものがあります。 グラフィカル クエリ デザイナーでは、外部データ ソースのデータを表すメタデータを表示し、フィールドやエンティティをクエリ デザイン領域にドラッグしてクエリを対話的に構築します。 テキスト ベースのクエリ デザイナーでは、外部データ ソースによってサポートされるクエリ構文でクエリを書き込んだりインポートしたりします。  
   
  クエリ デザイナーで、サンプル データを表示し、クエリ コマンド構文を検証するクエリを実行できます。 結果セットの列名は、レポート データ ペインに表示されるフィールド名になります。 結果セットは、データの各行の値の数と同じ数の列と行を持つ、1 つの行セットです。 1 つのクエリからの複数の結果セットはサポートされていません。 一定の数の列を含まず、各行で異なる数のデータ値を生成する可能性がある不規則階層は、サポートされていません。  
   
- クエリを実行するには、デザイン時の資格情報が必要です。 詳細については、次を参照してください。[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)と[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
+ クエリを実行するには、デザイン時の資格情報が必要です。 詳細については、「 [Reporting Services でレポートビルダーおよびデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)[の資格情報を指定する](../specify-credentials-in-report-builder.md)」を参照してください。  
   
  データ拡張機能と外部データ ソースの間の通信は、データ プロバイダーによって処理されます。 サポートされているクエリ コマンド構文、クエリ パラメーター、結果セット内の値のデータ型は、各データ プロバイダーによって決まります。 詳細については、データ拡張機能の特定の型についてのトピックおよび「[クエリ デザイナー &#40;レポート ビルダー&#41;](../query-designers-report-builder.md)」を参照してください。  
 
-##  <a name="HowTo"></a> 操作方法に関するトピック  
- [データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作方法に関するトピック  
+ [データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;に追加して検証する](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66107121"
   
  [多次元データのパラメーター値の非表示データセットの表示 &#40;レポート ビルダーおよび SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
- [データセットへのフィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
  [データ領域にデータがないことを示すメッセージの設定 &#40;レポート ビルダーおよび SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
@@ -115,16 +115,16 @@ ms.locfileid: "66107121"
   
  [Analysis Services の MDX クエリ デザイナーでのパラメーターの定義 &#40;レポート ビルダーおよび SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
 
-##  <a name="Section"></a> トピックの内容  
+##  <a name="in-this-section"></a><a name="Section"></a> トピックの内容  
  [レポート ビルダーのレポート パーツおよびデータセット](report-parts-and-datasets-in-report-builder.md)  
   
  [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
  [レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)  
   
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
- [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
+ [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)  
 
 ## <a name="see-also"></a>参照  
  [レポート デザイン ビュー (レポート ビルダー)](../report-builder/report-design-view-report-builder.md)   

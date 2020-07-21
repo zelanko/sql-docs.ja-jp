@@ -1,6 +1,7 @@
 ---
-title: Linux 上の SQL Server 用の Always On 可用性グループ
-description: ''
+title: SQL Server on Linux の可用性グループ
+description: SQL Server on Linux の Always On 可用性グループの特徴について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,23 +10,23 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8ec35aff528e1ca35d145f400edeb2ca46a7df85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967516"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883945"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux 上の AlwaysOn 可用性グループ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] インストールでの、Always On 可用性グループ (AG) の特性について説明します。 また、Linux ベースの AG と、Windows Server フェールオーバー クラスター (WSFC) ベースの AG の違いについても説明します。 AG の基本については、[Windows ベースのドキュメント](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)を参照してください (WSFC を除き、AG は Windows 上でも Linux 上でも同様に機能します)。
 
 全体的に見ると、Linux 上の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の可用性グループは、WSFC ベースの実装で使用する場合と同様に機能します。 つまり、制限事項や機能は基本的に同じですが、いくつかの例外があります。 主な違いは次のとおりです。
 
--   [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] では、Microsoft 分散トランザクション コーディネーター (DTC) は Linux 下でサポートされていません。 アプリケーションで分散トランザクションを使用する必要があり、AG が必要な場合は、Windows 上で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] をデプロイしてください。
--   Linux ベースのデプロイでは、WSFC ではなく Pacemaker を使用します。
+-   SQL Server 2017 CU16 以降では、Linux で Microsoft 分散トランザクション コーディネーター (DTC) がサポートされています。 ただし、Linux 上の可用性グループでは DTC はまだサポートされていません。 アプリケーションで分散トランザクションを使用する必要があり、AG が必要な場合は、Windows 上で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] をデプロイしてください。
+-   高可用性を必要とする Linux ベースのデプロイでは、クラスタリングに WSFC ではなく Pacemaker が使われます。
 -   Windows 上の AG のほとんどの構成 (ワークグループクラスターのシナリオを除く) とは異なり、Pacemaker では Active Directory Domain Services (AD DS) が必要とされることはありません。
 -   1 つのノードから別のノードに AG をフェールオーバーする方法は、Linux と Windows で異なります。
 -   特定の設定 (`required_synchronized_secondaries_to_commit` など) は、Linux 上の Pacemaker を使用してのみ変更できます。一方、WSFC ベースのインストールでは Transact-SQL を使用します。
@@ -113,7 +114,7 @@ AG でクォーラムを維持し、External のクラスターについて自�
 -   構成専用レプリカで障害が発生した場合、AG は正常に機能しますが、自動フェールオーバーは実行できません。
 -   同期セカンダリ レプリカと構成専用レプリカの両方で障害が発生した場合、プライマリはトランザクションを受け付けることができず、プライマリからのフェイルオーバー先もなくなります。
 
-CU1 では、`mssql-server-ha` によって生成される corosync.log ファイルのログに既知のバグがあります。 使用可能なレプリカの数が原因でセカンダリ レプリカがプライマリになることができない場合、現在のメッセージは "1 つのシーケンス番号を受け取る必要がありましたが、2 つしか受信されませんでした。 ローカル レプリカを安全に昇格させるための十分なレプリカがオンラインになっていません。" です。 これらの数は逆にする必要があります。正しいメッセージは次のとおりです: "2 つのシーケンス番号を受け取る必要がありましたが、1 つしか受信されませんでした。 ローカル レプリカを安全に昇格させるための十分なレプリカがオンラインになっていません。" 
+CU1 では、`mssql-server-ha` によって生成される corosync.log ファイルのログに既知のバグがあります。 使用可能なレプリカの数が原因でセカンダリ レプリカがプライマリになることができない場合、現在のメッセージは "1 つのシーケンス番号を受け取る必要がありましたが、2 つしか受信されませんでした。 ローカル レプリカを安全に昇格させるための十分なレプリカがオンラインになっていません。" これらの数は逆にする必要があります。正しいメッセージは次のとおりです: "2 つのシーケンス番号を受け取る必要がありましたが、1 つしか受信されませんでした。 ローカル レプリカを安全に昇格させるための十分なレプリカがオンラインになっていません。" 
 
 ## <a name="multiple-availability-groups"></a>複数の可用性グループ 
 
@@ -146,7 +147,7 @@ Pacemaker が使用されていて、リスナーに関連付けられた IP ア
 
 ![ハイブリッド None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分散型 AG も、OS 境界をまたぐことができます。 基になる AG は、構成方法に関する規則によって制約を受けます (External で構成されたものは Linux のみだが、それが参加している AG は WSFC を使用して構成できるなど)。 次の例を参照してください。
+分散型 AG も、OS 境界をまたぐことができます。 基になる AG は、構成方法に関する規則によって制約を受けます (External で構成されたものは Linux のみだが、それが参加している AG は WSFC を使用して構成できるなど)。 次の例を確認してください。
 
 ![ハイブリッド分散型 AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
@@ -155,7 +156,7 @@ Pacemaker が使用されていて、リスナーに関連付けられた IP ア
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->
  
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 [SQL Server on Linux の可用性グループを構成する](sql-server-linux-availability-group-configure-ha.md)
 
 [SQL Server on Linux の読み取りスケール可用性グループを構成する](sql-server-linux-availability-group-configure-rs.md)

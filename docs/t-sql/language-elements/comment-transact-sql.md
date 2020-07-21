@@ -22,15 +22,15 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: d8432437ffab7f0b98593015f42aaa9c9bdaa366
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495480"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005031"
 ---
 # <a name="---comment-transact-sql"></a>-- (コメント) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ユーザーが入力したテキストを示します。 コメントは、単独行に指定したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンド ラインの終端で入れ子にしたり、または、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中に指定したりすることができます。 サーバーはコメントを評価しません。  
   
@@ -47,19 +47,19 @@ ms.locfileid: "68495480"
  *text_of_comment*  
  コメントのテキストを構成する文字列です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 1 行のコメントまたは入れ子にしたコメントには、2 つのハイフン ( **--** ) を使用します。 **--** によって挿入された コメントは、復帰文字 (U+000A)、改行文字 (U+000D)、またはその 2 つの組み合わせで指定された改行で終了します。 コメントの長さには制限がありません。 次の表に、テキストのコメント化/コメント解除に使用できるキーボード ショートカットを示します。
   
-|操作|Standard|  
+|アクション|Standard|  
 |------------|--------------|  
 |選択したテキストをコメント化する|Ctrl + K、Ctrl + C|  
 |選択したテキストのコメント化を解除する|Ctrl + K、Ctrl + U|  
   
- キーボード ショートカットの詳細については、「[SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)」を参照してください。  
+ キーボード ショートカットの詳細については、「[SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)」を参照してください。  
   
  複数行のコメントについては、「[スラッシュ スター &#40;ブロック コメント&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、-- コメント文字を使用します。  
   
 ```  

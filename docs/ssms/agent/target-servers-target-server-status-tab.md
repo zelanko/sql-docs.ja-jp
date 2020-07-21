@@ -1,10 +1,9 @@
 ---
-title: '[ターゲット サーバー] ([ターゲット サーバーの状態] タブ) | Microsoft Docs'
-ms.custom: ''
+title: '[ターゲット サーバー] ([ターゲット サーバーの状態] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 72bb2ff92b6b882de0cb2465b8e61417936ceef7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: edf504e5555933341243e45104e7da3ec96069e9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256182"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257841"
 ---
 # <a name="target-servers-target-server-status-tab"></a>[ターゲット サーバー] ([ターゲット サーバーの状態] タブ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68256182"
 
 このページを使用すると、このマスター サーバーのターゲット サーバーの状態を表示できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **[ターゲット サーバー]**  
 ターゲット サーバーの名前を表示します。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "68256182"
 **[未読の命令]**  
 ターゲット サーバーが受け取っていない命令の数を表示します。  
   
-**ステータス**  
+**状態**  
 ターゲット サーバーの状態を表示します。  
   
 **[強制的にポーリング]**  

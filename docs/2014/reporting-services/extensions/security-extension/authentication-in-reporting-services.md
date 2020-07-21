@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282156"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services での認証
@@ -28,7 +28,7 @@ ms.locfileid: "63282156"
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services でのカスタム認証  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、統合セキュリティを使用するか、またはユーザーの資格情報を明示的に受信して検証することによって、Windows オペレーティング システムがユーザー認証を実施します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、カスタム認証を開発して追加の認証方法をサポートできます。 そのためには、セキュリティ拡張機能インターフェイス <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> を使用します。 レポート サーバーであらゆる拡張機能を配置および使用できるように、すべての拡張機能が <xref:Microsoft.ReportingServices.Interfaces.IExtension> ベース インターフェイスから継承されます。 <xref:Microsoft.ReportingServices.Interfaces.IExtension> および <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> は、<xref:Microsoft.ReportingServices.Interfaces> 名前空間のメンバーです。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、レポート サーバーに対して認証を行うための主要な手段として、<xref:ReportService2010.ReportingService2010.LogonUser%2A> メソッドがあります。 Reporting Services Web サービスのこのメンバーを使用して、検証するユーザーの資格情報をレポート サーバーに渡すことができます。 基になる、セキュリティ拡張機能の実装**IAuthenticationExtension.LogonUser**カスタム認証コードが含まれています。 フォーム認証のサンプルでは、**LogonUser** が指定された資格情報とデータベースのカスタム ユーザー ストアを比較する認証チェックを実行します。 **LogonUser** の実装例は、次のようになります。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、レポート サーバーに対して認証を行うための主要な手段として、<xref:ReportService2010.ReportingService2010.LogonUser%2A> メソッドがあります。 Reporting Services Web サービスのこのメンバーを使用して、検証するユーザーの資格情報をレポート サーバーに渡すことができます。 基になるセキュリティ拡張機能によって、カスタム認証コードを含む**Iauthenticationextension**が実装されます。 フォーム認証のサンプルでは、**LogonUser** が指定された資格情報とデータベースのカスタム ユーザー ストアを比較する認証チェックを実行します。 **LogonUser** の実装例は、次のようになります。  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -108,7 +108,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  クライアント アプリケーションは、ユーザーを認証するために Web サービス メソッド <xref:ReportService2010.ReportingService2010.LogonUser%2A> を呼び出します。  
   
-2.  Web サービスを呼び出すは、 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 、セキュリティ拡張機能のメソッドを実装するクラスでは具体的には、 **IAuthenticationExtension**します。  
+2.  Web サービスは、セキュリティ拡張機能の<xref:ReportService2010.ReportingService2010.LogonUser%2A>メソッド (具体的には、 **iauthenticationextension**を実装するクラス) を呼び出します。  
   
 3.  <xref:ReportService2010.ReportingService2010.LogonUser%2A> の実装によって、ユーザー ストアまたはセキュリティ機関のユーザー名とパスワードが検証されます。  
   

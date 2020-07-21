@@ -14,12 +14,12 @@ ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f7d5fa8c7398f57cfc5272109b9efc0f24077cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75046ec1915de92a1319b273bd2cce8e718aac1b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085753"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "72909774"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>テーブル間での列のコピー (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -40,17 +40,17 @@ ms.locfileid: "68085753"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  別名データ型の列をデータベース間でコピーする場合、コピー先のデータベースで同じ別名データ型を使用できない場合があります。 その場合、コピー先データベースで使用できる基本データ型の中で最も近いデータ型がその列に割り当てられます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>テーブル間で列の定義をコピーするには  
   
@@ -63,8 +63,6 @@ ms.locfileid: "68085753"
 4.  列をコピーする先のテーブルのタブをクリックします。  
   
 5.  コピーした列を挿入する列を選択し、 **[編集]** メニューの **[貼り付け]** をクリックします。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-copy-data-from-one-table-to-another"></a>テーブル間でデータをコピーするには  
   
@@ -90,7 +88,7 @@ ms.locfileid: "68085753"
 9.  クエリを実行して、コピー元テーブルからコピー先テーブルにデータを挿入します。
 
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>テーブル間で列の定義をコピーするには  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e29e7e8d02c2857322b3488bc209648630ed44b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042967"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>複数行のデータを処理するための DML トリガーの作成
   DML トリガーのコードを記述するときは、トリガーを起動するステートメントが、1 行だけではなく複数行のデータに影響する場合があることを考慮してください。 この動作は UPDATE トリガーや DELETE トリガーの場合によく見られます。UPDATE ステートメントや DELETE ステートメントが複数行に影響を与えることが多いためです。 INSERT トリガーの場合は、INSERT ステートメントが 1 行単位で追加を行うため、この動作はあまり見られません。 ただし、INSERT トリガーは INSERT INTO (*table_name*) SELECT ステートメントにより起動されることもあります。その場合は、1 回のトリガーの呼び出しで複数行が挿入される可能性があります。  
@@ -32,7 +31,7 @@ ms.locfileid: "62676455"
 > [!NOTE]  
 >  パフォーマンスが低下する可能性があるので、トリガーにカーソルを使用することはお勧めしません。 複数行に影響を与えるトリガーを設計する場合は、カーソルではなく行セットをベースにしたロジックを使用してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例の DML トリガーはどれも、ある列の集計の途中経過を [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースの別のテーブル内に保存するように設計されています。  
   
 ### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>A. 単一の行を挿入する場合の集計途中経過の格納  

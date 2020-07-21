@@ -21,13 +21,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68086713"
 ---
-# <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
+# <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   データベース プリンシパルが指定されたデータベース ロールのメンバーであるかどうかを示します。  
@@ -51,13 +51,13 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-|戻り値|[説明]|  
+|戻り値|説明|  
 |------------------|-----------------|  
 |0|*database_principal* のメンバーではない *ロール*です。|  
 |1|*database_principal* のメンバーである *ロール*です。|  
 |NULL|*database_principal* または *ロール* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  IS_ROLEMEMBER は、現在のユーザーがデータベース ロールの権限を必要とするアクションを実行できるかどうかを判断するために使用します。  
   
  unless the *database_principal* が許可または拒否された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスである場合を除き、*database_principal* が Contoso\Mary5 などの Windows ログインに基づいている場合、IS_ROLEMEMBER は NULL を返します。  
@@ -82,7 +82,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="permissions"></a>アクセス許可  
  データベース ロールに対する VIEW DEFINITION 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のユーザーが `db_datareader` 固定データベース ロールのメンバーであるかどうかを示しています。  
   
 ```  

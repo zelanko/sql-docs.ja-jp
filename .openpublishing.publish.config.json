@@ -6,6 +6,10 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "ja-jp",
+      "xref_query_tags": [
+        "/uwp/api",
+        "/dotnet"
+      ],
       "monikers": [],
       "moniker_ranges": [
         "sql-server-2014",
@@ -50,17 +54,30 @@
       "branch": "master",
       "branch_mapping": {}
     },
+    
     {
-      "path_to_root": "_themes.MSDN.Modern",
-      "url": "https://github.com/Microsoft/templates.msdn.msft",
+      "path_to_root": "samples",
+      "url": "https://github.com/dotnet/samples",
+      "branch": "master",
+      "branch_mapping": {
+        "live": "live"
+      }
+    },
+    {
+      "path_to_root": "sqlclient",
+      "url": "https://github.com/dotnet/sqlclient",
       "branch": "master",
       "branch_mapping": {}
     },
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
-      "branch_mapping": {}
+      "branch": "master"
+    },
+    {
+      "path_to_root": "sql-server-samples",
+      "url": "https://github.com/Microsoft/sql-server-samples",
+      "branch": "master"
     },
     {
       "path_to_root": "_repo.en-us",
@@ -89,6 +106,9 @@
   "targets": {},
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
-  "enable_branch_build_custom_validation": true,	
-  "enable_pull_request_custom_validation": true
+  "enable_branch_build_custom_validation": true,
+  "enable_pull_request_custom_validation": true,
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }

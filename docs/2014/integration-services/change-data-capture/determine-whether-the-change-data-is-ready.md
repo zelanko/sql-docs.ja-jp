@@ -9,21 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a6035aa3af7dbb55ee4f3b948806d9dc63626e13
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771428"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438759"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 選択したエンドポイントまでの変更が非同期キャプチャ プロセスでまだ一部処理されていない可能性があるため、この手順が必要となります。  
   
 > [!NOTE]  
->  制御フローの最初のタスクは、変更間隔のエンドポイントを計算することです。 このタスクに関する詳細については、「[変更データの間隔を指定する](specify-an-interval-of-change-data.md)」を参照してください。 制御フローをデザインするプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](change-data-capture-ssis.md)」を参照してください。  
+>  制御フローの最初のタスクは、変更間隔のエンドポイントを計算することです。 このタスクに関する詳細については、「 [変更データの間隔を指定する](specify-an-interval-of-change-data.md)」を参照してください。 制御フローをデザインするプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](change-data-capture-ssis.md)」を参照してください。  
   
 ## <a name="understanding-the-components-of-the-solution"></a>ソリューションのコンポーネントについて  
  このトピックで説明するソリューションでは、次の 4 つの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントを使用します。  
@@ -86,7 +85,7 @@ ms.locfileid: "62771428"
   
  次の表の 1 列目は、サンプルの Transact-SQL クエリによって SQL 実行タスクから返される値を示しています。 2 列目は、その他のコンポーネントがこれらの値に応答する方法を示しています。  
   
-|戻り値|説明|応答|  
+|戻り値|意味|Response|  
 |------------------|-------------|--------------|  
 |0|変更データが準備できていないことを示します。<br /><br /> 選択した間隔の終了時点より後に変更データ キャプチャ レコードがありません。|遅延を実装するコンポーネントから実行が継続されます。 その後、制御が For ループ コンテナーに戻り、返される値が 0 である限り引き続きコンテナーによって SQL 実行タスクがチェックされます。|  
 |1|間隔全体にわたって変更データがキャプチャされていないか、変更データが削除されていることを示します。 これは、エラー状態として扱われます。<br /><br /> 選択した間隔の開始時点より前に変更データ キャプチャ レコードがありません。|エラーをログに記録するオプションのコンポーネントから実行が継続されます。|  
@@ -171,7 +170,7 @@ ms.locfileid: "62771428"
   
          制約値 **[成功]** は、前のタスクの成功を表します。 この場合は、SQL 実行タスクの成功を表します。  
   
-    3.  **[式]** に「`@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`」と入力します。  
+    3.  **[式]** に「 `@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`」と入力します。  
   
     4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   
@@ -263,7 +262,7 @@ ms.locfileid: "62771428"
   
          制約値 **[成功]** は、前のタスクの成功を表します。 この場合は、SQL 実行タスクの成功を表します。  
   
-    3.  **[式]** に「`@DataReady == 1 || @DataReady == 5`」と入力します。  
+    3.  **[式]** に「 `@DataReady == 1 || @DataReady == 5`」と入力します。  
   
     4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   

@@ -1,5 +1,5 @@
 ---
-title: テーブルのオブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: Table オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Table object [ADOX], members
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c52e65ffe7d258b3707927b1f996be3a3a5f3dd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fc0ccdc8747b69cff4e9b57ae27c030dbdb9be16
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965176"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763293"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Table オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -45,5 +45,5 @@ ms.locfileid: "67965176"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

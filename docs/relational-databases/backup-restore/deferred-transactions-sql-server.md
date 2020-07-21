@@ -1,5 +1,6 @@
 ---
 title: 遅延トランザクション (SQL Server) | Microsoft Docs
+description: ロールバックに必要なデータがオフラインの場合、SQL Server Enterprise の遅延トランザクションが発生します。 遅延状態を解決する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748415"
 ---
 # <a name="deferred-transactions-sql-server"></a>遅延トランザクション (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise では、ロールバック (元に戻す) に必要なデータがデータベースの起動時にオフラインになっている場合、損傷したトランザクションが遅延することがあります。 *遅延トランザクション* は、ロールフォワード フェーズの完了時にコミットされておらず、ロールバックを妨げるエラーが発生しているトランザクションです。 トランザクションはロールバックできないので、遅延します。  
   
 > [!NOTE]  
@@ -37,11 +38,11 @@ ms.locfileid: "68075985"
   
  次の表に、データベースで復旧を引き起こす操作および I/O に問題が発生した場合の結果を示します。  
   
-|操作|解決方法 (I/O の問題が発生する場合または必要なデータがオフラインの場合)|  
+|アクション|解決方法 (I/O の問題が発生する場合または必要なデータがオフラインの場合)|  
 |------------|-----------------------------------------------------------------------|  
 |サーバーの起動|遅延トランザクション|  
-|[復元]|遅延トランザクション|  
-|[アタッチ]|アタッチの失敗|  
+|復元|遅延トランザクション|  
+|Attach|アタッチの失敗|  
 |Autorestart|遅延トランザクション|  
 |データベースまたはデータベース スナップショットの作成|作成の失敗|  
 |データベース ミラーリングの再実行|遅延トランザクション|  

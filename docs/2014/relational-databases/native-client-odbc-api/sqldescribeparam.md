@@ -1,5 +1,5 @@
 ---
-title: SQLDescribeParam |マイクロソフトのドキュメント
+title: SQLDescribeParam |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,25 @@ topic_type:
 helpviewer_keywords:
 - SQLDescribeParam function
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 05e14ccb0fadb4f1cf05f965c79cf8c05c71f93a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63067735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022821"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
-  任意の SQL ステートメントのパラメーターを記述する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが構築され、実行、 [!INCLUDE[tsql](../../includes/tsql-md.md)] SQLDescribeParam が準備された ODBC ステートメント ハンドルで呼び出されたときに、SELECT ステートメント。 この結果セットのメタデータにより、準備されたステートメント内のパラメーターの特性が決まります。 SQLDescribeParam は、SQLExecute、SQLExecDirect またはを返す可能性のあるエラー コードを返すことができます。  
+  SQL ステートメントのパラメーターを記述するために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT odbc ドライバーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 準備された odbc ステートメントハンドルで SQLDescribeParam が呼び出されたときに、SELECT ステートメントを構築して実行します。 この結果セットのメタデータにより、準備されたステートメント内のパラメーターの特性が決まります。 SQLDescribeParam は、SQLExecute または SQLExecDirect が返す可能性のあるエラーコードを返すことができます。  
   
- 以降では、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]期待どおりの結果のより正確な記述を取得する SQLDescribeParam を許可します。 これらのより正確な結果の以前のバージョンの SQLDescribeParam によって返される値が異なる場合があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../native-client/features/metadata-discovery.md)します。  
+ で始まるデータベースエンジンの機能強化により [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、SQLDescribeParam は、予期される結果についてより正確な説明を取得できます。 これらのより正確な結果は、以前のバージョンので SQLDescribeParam によって返された値とは異なる場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
   
- 新しいも[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 *ParameterSizePtr*で定義されている、対応するパラメーター マーカーの式または列の文字で、サイズの定義に合わせて値を返すようになりました、 [ODBC仕様](https://go.microsoft.com/fwlink/?LinkId=207044)します。 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、 *ParameterSizePtr*可能性がありますの対応する値`SQL_DESC_OCTET_LENGTH`型または型の場合、値の場合は、SQLBindParameter に渡された無関係な列サイズの値これを無視するかの (`SQL_INTEGER`など)。  
+ また [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 *parametersizeptr*は、 [ODBC 仕様](https://go.microsoft.com/fwlink/?LinkId=207044)で定義されている、対応するパラメーターマーカーの列または式のサイズ (文字数) の定義に合わせて値を返すようになりました。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、 *Parametersizeptr*は、型のの対応する値、 `SQL_DESC_OCTET_LENGTH` または型の SQLBindParameter に指定された関係のない列サイズの値になる可能性があります。この値は無視する必要があり `SQL_INTEGER` ます (など)。  
   
- ドライバーでは、次の状況で呼び出し元 SQLDescribeParam はサポートされません。  
+ ドライバーは、次の状況での SQLDescribeParam の呼び出しをサポートしていません。  
   
--   いずれかの SQLExecDirect 後[!INCLUDE[tsql](../../includes/tsql-md.md)]UPDATE または DELETE ステートメントの FROM 句を含むです。  
+-   SQLExecDirect の後に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] from 句を含む UPDATE または DELETE ステートメントを実行します。  
   
 -   ODBC ステートメントまたは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが HAVING 句にパラメーターを含んでいる場合、または SUM 関数の結果と比較される場合。  
   
@@ -40,35 +39,35 @@ ms.locfileid: "63067735"
   
 -   クエリのいずれかのパラメーターが関数に対するパラメーターである場合。  
   
--   コメントがある場合 (/* \*/) で、[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンド。  
+-   コマンドにコメント (/* \* /) がある場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
- バッチを処理するときに[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントをドライバーもサポートしていないバッチの最初のステートメントの後のステートメントでパラメーター マーカー SQLDescribeParam を呼び出すことです。  
+ ステートメントのバッチを処理する場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、ドライバーはバッチ内の最初のステートメントの後にあるステートメント内のパラメーターマーカーに対して SQLDescribeParam を呼び出すこともサポートしていません。  
   
- SQLDescribeParam は、システム ストアド プロシージャを使用して準備されたストアド プロシージャのパラメーターを説明する、ときに[sp_sproc_columns](/sql/relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql)パラメーターの特性を取得します。 sp_sproc_columns には、現在のユーザー データベース内のストアド プロシージャのデータを報告できます。 ストアド プロシージャの完全修飾名を準備するには、データベース全体に対して実行する SQLDescribeParam が使用できます。 たとえば、システム ストアド プロシージャ[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)準備し、として任意のデータベースで実行できます。  
+ SQLDescribeParam では、準備されたストアドプロシージャのパラメーターを記述するときに、システムストアドプロシージャ[sp_sproc_columns](/sql/relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql)を使用してパラメーターの特性を取得します。 sp_sproc_columns は、現在のユーザーデータベース内のストアドプロシージャのデータをレポートできます。 完全に修飾されたストアドプロシージャ名を準備すると、データベース間で SQLDescribeParam を実行できるようになります。 たとえば、システムストアドプロシージャ[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)を準備し、任意のデータベースで次のように実行できます。  
   
 ```  
 SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);  
 ```  
   
- SQLDescribeParam を正しく準備には任意のデータベースに接続されているときに設定、空の行が返された後に実行しますが、`master`します。 次のように準備された、同じ呼び出しを現在のユーザー データベースに関係なく正常に SQLDescribeParam が発生します。  
+ 準備が正常に完了した後に SQLDescribeParam を実行すると、データベースに接続しているときに空の行セットが返され `master` ます。 次のように準備された同じ呼び出しは、現在のユーザーデータベースに関係なく SQLDescribeParam を成功させます。  
   
 ```  
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- 大きな値のデータ型で返される値*DataTypePtr* SQL_VARCHAR、SQL_VARBINARY、SQL_NVARCHAR のいずれかです。 大きな値データ型のパラメーターのサイズが「無制限」であることを示す、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー セット*ParameterSizePtr*を 0 にします。 標準の `varchar` 型パラメーターでは実際のサイズ値が返されます。  
+ 大きな値のデータ型の場合、 *DataTypePtr*で返される値は SQL_VARCHAR、SQL_VARBINARY、または SQL_NVARCHAR です。 大きな値のデータ型パラメーターのサイズが "無制限" であることを示すために、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーは*Parametersizeptr*を0に設定します。 標準の `varchar` 型パラメーターでは実際のサイズ値が返されます。  
   
 > [!NOTE]  
 >  パラメーターが SQL_VARCHAR、SQL_VARBINARY、SQL_WVARCHAR のいずれかのパラメーターの最大サイズに既にバインドされている場合は、"無制限" ではなく、バインドされたパラメーターのサイズが返されます。  
   
- サイズが "無制限" の入力パラメーターをバインドするには、実行時データを使用する必要があります。 サイズが「無制限」出力パラメーターをバインドすることはできません (など、出力パラメーターからデータをストリーミングする方法が指定されていません[SQLGetData](sqlgetdata.md)が結果セット)。  
+ サイズが "無制限" の入力パラメーターをバインドするには、実行時データを使用する必要があります。 "無制限" サイズの出力パラメーターをバインドすることはできません ( [SQLGetData](sqlgetdata.md)が結果セットに対して行うように、出力パラメーターからデータをストリーミングする方法はありません)。  
   
  出力パラメーターの場合は、バッファーをバインドする必要があります。値が大きすぎる場合はバッファーがいっぱいになり、SQL_SUCCESS_WITH_INFO メッセージが "文字列データの右側が切り捨てられました。" という警告と共に返されます。 その後、切り捨てられたデータが破棄されます。  
   
 ## <a name="sqldescribeparam-and-table-valued-parameters"></a>SQLDescribeParam とテーブル値パラメーター  
- SQLDescribeParam の準備されたステートメントのテーブル値パラメーターの情報を取得できます。 詳細については、次を参照してください。[準備されたステートメントのテーブル値パラメーターのメタデータ](../native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)します。  
+ アプリケーションでは、SQLDescribeParam を使用して、準備されたステートメントのテーブル値パラメーター情報を取得できます。 詳細については、「準備された[ステートメントのテーブル値パラメーターのメタデータ](../native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)」を参照してください。  
   
- テーブル値パラメーターの詳細については一般に、表示[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ 一般的なテーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="sqldescribeparam-support-for-enhanced-date-and-time-features"></a>SQLDescribeParam による機能強化された日付と時刻のサポート  
  日付型または時刻型に対して返される値を次に示します。  
@@ -77,15 +76,15 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 |-|-------------------|------------------------|------------------------|  
 |DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|日付|SQL_TYPE_DATE|10|0|  
-|time|SQL_SS_TIME2|8, 10..16|0..7|  
-|datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
-|datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
+|date|SQL_TYPE_DATE|10|0|  
+|時間|SQL_SS_TIME2|8、10..16|0..7|  
+|datetime2|SQL_TYPE_TIMESTAMP|19、21..27|0..7|  
+|datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26、28..34|0..7|  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+ 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqldescribeparam-support-for-large-clr-udts"></a>SQLDescribeParam による大きな CLR UDT のサポート  
- `SQLDescribeParam` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
+ `SQLDescribeParam` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLDescribeParam 関数](https://go.microsoft.com/fwlink/?LinkId=59339)   

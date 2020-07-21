@@ -1,5 +1,5 @@
 ---
-title: SQLXML における Diffgram のガイドラインと制限 |マイクロソフトのドキュメント
+title: SQLXML における DiffGram のガイドラインと制限
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f19e8d7b5e67311f21b79c6f36572d9b2240d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 113090c317e88d3e9a7e7db2bfcb7d4d14b4ea1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650068"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>SQLXML における DiffGram のガイドラインと制限
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   SQLXML 4.0 で DiffGram を使用するときには、次の点に注意してください。  
   
--   バイナリ ラージ オブジェクト (BLOB) のような種類**text、ntext**でイメージを使用する必要があります、  **\<diffgr: する前に >** で使用するために含まれてはこのため、Diffgram を使用する場合ブロック同時実行制御。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で、BLOB 型の比較の制限によって問題が発生する可能性があります。 列の比較するには、WHERE 句で LIKE キーワードが使用されるなど、**テキスト**データを入力します。 ただし、比較は失敗、データのサイズが 8 K を超える BLOB 型の場合。  
+-   **Text/ntext**および image のようなバイナリラージオブジェクト (BLOB) 型は、diffgram を使用するときに、のブロックでは使用しない **\<diffgr:before>** でください。これには、同時実行制御で使用するためのものが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で、BLOB 型の比較の制限によって問題が発生する可能性があります。 たとえば、 **text**データ型の列を比較するには、WHERE 句で LIKE キーワードを使用します。ただし、データのサイズが8K を超える BLOB 型の場合、比較は失敗します。  
   
--   特殊文字**ntext**データ BLOB 型の比較の制限により SQLXML 4.0 で問題が発生することができます。 "[Serializable]"の使用など、  **\<diffgr: する前に >** 同時実行制御の列のチェックで使用する場合、DiffGram のブロック**ntext**型は、次の SQLOLEDB で失敗エラーの説明:  
+-   **Ntext**データ内の特殊文字は、BLOB 型の比較の制限により、SQLXML 4.0 で問題が発生する可能性があります。 たとえば、DiffGram のブロックで "[Serializable]" を使用 **\<diffgr:before>** すると、 **ntext**型の列の同時実行制御チェックでは失敗し、次の SQLOLEDB エラー説明が返されます。  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

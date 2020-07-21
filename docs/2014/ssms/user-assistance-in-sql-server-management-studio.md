@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio のユーザー サポート | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b1bd7492ada156584b05ebaf2a8afc6dd294f49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067284"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、[ヘルプ] メニューと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックという形のユーザー サポートがあります。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の [ヘルプ] メニューでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に関する情報にアクセスするための方法がいくつか用意されています。 旧バージョンの [ヘルプ] 環境内からは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティや MSDN オンラインのリソースにアクセスすることはできませんでしたが、このバージョンからは可能になりました。 さらに、[ヘルプ] 環境を [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境内に起動するか、専用の外部ウィンドウに起動するかも設定できるようになりました。  
@@ -44,10 +43,10 @@ ms.locfileid: "63016187"
   
      後からアクセスしやすくするために、ユーザー トピックのブックマークを格納します。  
   
- [ヘルプに関するヘルプ] \([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択してください。 ヘルプ コレクションのトピックのオンライン ブック コレクションに、ヘルプを追加する方法の詳細については、次を参照してください。[の追加と SQL Server の製品ドキュメントを削除](../2014-toc/books-online-for-sql-server-2014.md)します。  
+ [ヘルプに関するヘルプ]\ ([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択してください。 ヘルプトピックのトピックのコレクションをオンラインブックコレクションに追加する方法の詳細については、「 [SQL Server の製品ドキュメントを追加または削除](../2014-toc/index.yml)する」を参照してください。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN オンラインと SQL Server コミュニティ  
- [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 可能な代替手段としては以下の方法があります。  
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 次のようにすることができます。  
   
 -   [操作方法] ページから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティにアクセスする。  
   
@@ -55,9 +54,9 @@ ms.locfileid: "63016187"
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>[操作方法] ページから SQL Server コミュニティにアクセスするには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[ヘルプ]** メニューの **[カテゴリから検索]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の **[ヘルプ]** メニューの **[カテゴリから検索]** をクリックします。  
   
-2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **[操作方法]** ページが表示されます。 コミュニティ リンク サイドバーで、アクセスするコミュニティ サイトの名前をクリックします。  
+2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **[カテゴリから検索]** ページが表示されます。 コミュニティ リンク サイドバーで、アクセスするコミュニティ サイトの名前をクリックします。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行しているコンピューターは、Web に直接接続している必要があります。  
@@ -94,7 +93,7 @@ ms.locfileid: "63016187"
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>Management Studio のウィンドウ内でヘルプと SQL Server オンライン ブックを起動するための構成を行うには  
   
-1.  **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** 、 **[ヘルプ]** の順に展開し、 **[全般]** をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]**、 **[ヘルプ]** の順に展開し、 **[全般]** をクリックします。  
   
 2.  **[次を使用してヘルプを表示する]** ボックスで **[統合ヘルプ ビューアー]** をクリックします。  
   

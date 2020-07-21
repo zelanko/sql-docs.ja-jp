@@ -1,5 +1,5 @@
 ---
-title: (アップグレード) の機能の選択 |Microsoft Docs
+title: 機能の選択 (アップグレード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d6040e86b29c7f3d79606ee47004b0bb9c38cb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092357"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058926"
 ---
 # <a name="select-features-upgrade"></a>機能の選択 (アップグレード)
   **インストール ウィザードの** [機能の選択] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ページを使用すると、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする機能を表示できます。  
@@ -26,7 +25,7 @@ ms.locfileid: "66092357"
   
 ## <a name="see-also"></a>参照  
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [アップグレード アドバイザーを使用したアップグレードの準備](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
- [SQL Server の複数のバージョンおよびインスタンスの使用](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ [アップグレードアドバイザーを使用してアップグレードを準備する](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
+ [SQL Server の複数のバージョンおよびインスタンスの操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

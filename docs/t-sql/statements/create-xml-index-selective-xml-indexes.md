@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3f5e9e831677a2779c908a0ec4b3afa5b27f7fff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766906"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選択的 XML インデックス)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   既存の選択的 XML インデックスによってインデックスが既に作成されている単一のパスに、新しい選択的セカンダリ XML インデックスを作成します。 選択的プライマリ XML インデックスを作成することもできます。 詳細については、「[選択的 XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)」を参照してください。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "68058494"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE XML INDEX index_name  
     ON <table_object> ( xml_column_name )  
@@ -65,7 +65,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 )  
 ```  
   
-##  <a name="Arguments"></a> 引数  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  *index_name*  
  作成する新しいインデックスの名前を指定します。 インデックス名は、テーブル内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
@@ -87,18 +87,18 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
  WITH \<index_options> インデックス オプションについては、[CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md) に関するページを参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ベース テーブルの各 XML 列に複数の選択的セカンダリ XML インデックスを作成できます。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  XML 列に選択的セカンダリ XML インデックスを作成するには、その列に選択的 XML インデックスが存在している必要があります。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、パス `pathabc`に選択的セカンダリ XML インデックスを作成します。 インデックスを作成するパスは、[CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md) で割り当てられた名前です。  
   
 ```  

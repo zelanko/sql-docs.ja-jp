@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dcb850ad7e99768781b225978f531ff991766924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046079"
 ---
 # <a name="preventing-invalid-requests"></a>無効な要求の回避
@@ -69,7 +69,7 @@ private void PublishReport()
   
  要求がレポート サーバーに送信される前に回避できるエラーの種類については、「[SoapException エラー テーブル](../soapexception-class/soapexception-errors-table.md)」を参照してください。 try ブロックまたは catch ブロックを使用して上記の例をさらに強化した内容については、「[Try ブロックと Catch ブロックの使用](using-try-and-catch-blocks.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Reporting Services における例外処理の概要](../introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException クラス](../soapexception-class/reporting-services-soapexception-class.md)  
   

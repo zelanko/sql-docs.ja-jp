@@ -1,5 +1,5 @@
 ---
-title: CursorOptionEnum |Microsoft Docs
+title: カーソルオプションの列挙 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,52 +13,52 @@ f1_keywords:
 helpviewer_keywords:
 - CursorOptionEnum enumeration [ADO]
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d7ac2825c5b700c7c9855f554cdd76cfd28547bd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933265"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763521"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
-どのような機能を指定します、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドをテストする必要があります。  
+[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドがテストする必要がある機能を指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adAddNew**|0x1000400|では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)新しいレコードを追加するメソッド。|  
-|**adApproxPosition**|0x4000|では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)と[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティ。|  
-|**adBookmark**|0x2000|では、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)特定のレコードにアクセスするプロパティ。|  
-|**adDelete**|0x1000800|では、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)レコードを削除するメソッド。|  
-|**adFind**|これに対して、0x80000|サポート、[検索](../../../ado/reference/ado-api/find-method-ado.md)内の行を検索するメソッド、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。|  
-|**adHoldRecords**|0x100|複数のレコードを取得または保留中のすべての変更をコミットしなくても、次の位置を変更します。|  
-|**adIndex**|0x100000|サポート、[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティにインデックスの名前します。|  
-|**adMovePrevious**|0x200|サポート、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)と[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッド、および[移動](../../../ado/reference/ado-api/move-method-ado.md)または[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)に現在のレコードを移動する方法が後方移動ブックマークをせずにします。|  
-|**adNotify**|0x40000|基になるデータ プロバイダーが通知をサポートしていることを示します (を決定するかどうか**Recordset**イベントがサポートされます)。|  
-|**adResync**|0x20000|サポート、[再同期](../../../ado/reference/ado-api/resync-method.md)基になるデータベースに表示されているデータでカーソルを更新するメソッド。|  
-|**adSeek**|0x200000|サポート、[シーク](../../../ado/reference/ado-api/seek-method.md)内の行を検索するメソッド、**レコード セット**します。|  
-|**adUpdate**|0x1008000|サポート、[更新](../../../ado/reference/ado-api/update-method.md)メソッドを既存のデータを変更します。|  
-|**adUpdateBatch**|0x10000|バッチ更新をサポートしています ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)と[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッド)、プロバイダーの変更のグループを送信します。|  
+|**adAddNew**|0x1000400|では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドをサポートして、新しいレコードを追加します。|  
+|**adApproxPosition**|0x4000|では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティと[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティがサポートされています。|  
+|**adBookmark**|0x2000|は、 [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティをサポートして、特定のレコードにアクセスできるようにします。|  
+|**adDelete**|0x1000800|レコードを削除するための[delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)メソッドをサポートします。|  
+|**adFind**|0x80000|では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の行を検索するための[Find](../../../ado/reference/ado-api/find-method-ado.md)メソッドがサポートされています。|  
+|**adHoldRecords**|0x100|すべての保留中の変更をコミットせずに、より多くのレコードを取得するか、次の位置を変更します。|  
+|**adIndex**|0x100000|インデックスの名前を指定する[index](../../../ado/reference/ado-api/index-property.md)プロパティをサポートしています。|  
+|**adMovePrevious**|0x200|は、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)および[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドをサポートします。また、ブックマークを必要とせずに現在のレコードの位置を後方に移動するには、 [move](../../../ado/reference/ado-api/move-method-ado.md)メソッドまたは[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッドを使用します。|  
+|**adNotify**|0x40000|基になるデータプロバイダーが通知をサポートしていることを示します。これは、**レコードセット**イベントがサポートされるかどうかを決定します。|  
+|**adResync**|0x20000|は、基になるデータベースで表示されているデータを使用してカーソルを更新するための再[同期](../../../ado/reference/ado-api/resync-method.md)メソッドをサポートしています。|  
+|**adSeek**|0x200000|では、**レコードセット**内の行を検索する[Seek](../../../ado/reference/ado-api/seek-method.md)メソッドがサポートされています。|  
+|**adUpdate**|0x1008000|では、既存のデータを変更するための[Update](../../../ado/reference/ado-api/update-method.md)メソッドがサポートされています。|  
+|**adUpdateBatch**|0x10000|では、バッチ更新 ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)および[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッド) をサポートして、変更のグループをプロバイダーに送信します。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
 |定数|  
 |--------------|  
-|AdoEnums.CursorOption.ADDNEW|  
-|AdoEnums.CursorOption.APPROXPOSITION|  
-|AdoEnums.CursorOption.BOOKMARK|  
-|AdoEnums.CursorOption.DELETE|  
-|AdoEnums.CursorOption.FIND|  
-|AdoEnums.CursorOption.HOLDRECORDS|  
-|AdoEnums.CursorOption.INDEX|  
-|AdoEnums.CursorOption.MOVEPREVIOUS|  
-|AdoEnums.CursorOption.NOTIFY|  
-|AdoEnums.CursorOption.RESYNC|  
-|AdoEnums.CursorOption.SEEK|  
-|AdoEnums.CursorOption.UPDATE|  
-|AdoEnums.CursorOption.UPDATEBATCH|  
+|AdoEnums を指定します。|  
+|AdoEnums. APPROXPOSITION|  
+|AdoEnums を指定します。|  
+|AdoEnums を削除します。|  
+|AdoEnums を参照してください。|  
+|AdoEnums HOLDRECORDS|  
+|AdoEnums を指定します。|  
+|AdoEnums MOVEPREVIOUS|  
+|AdoEnums を指定します。通知|  
+|AdoEnums の再同期|  
+|AdoEnums を検索します。|  
+|AdoEnums を更新します。|  
+|AdoEnums. UPDATEBATCH|  
   
 ## <a name="applies-to"></a>適用対象  
  [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)

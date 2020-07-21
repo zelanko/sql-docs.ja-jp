@@ -1,5 +1,5 @@
 ---
-title: バージョンにフラグを割り当てる (マスター データ サービス) | Microsoft Docs
+title: バージョンにフラグを割り当てる
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 553df37cf728b3c48c91d0bf7edc50ac924b1106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90ffe973c15df9d17eb1080f0e6b681791485681
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814030"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>バージョンにフラグを割り当てる (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、バージョンにフラグを割り当てて、ユーザーまたはサブスクライブ システムが使用する必要があるバージョンを示します。  
   
 > [!NOTE]  
 >  バージョン フラグは一度に 1 つのバージョンにしか割り当てることができません。 別のバージョンに既に割り当てられているフラグを割り当てた場合、フラグは、選択したバージョンに移動します。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   割り当てるバージョン フラグを作成している必要があります。 詳細については、「 [バージョン フラグを作成する (マスター データ サービス)](../master-data-services/create-a-version-flag-master-data-services.md)」を参照してください。  
   
--   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
 ### <a name="to-assign-a-flag-to-a-version"></a>フラグをバージョンに割り当てるには  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68047744"
 4.  Enter キーを押して変更を保存します。  
   
 ## <a name="see-also"></a>関連項目  
- [バージョン フラグを作成する (マスター データ サービス)](../master-data-services/create-a-version-flag-master-data-services.md)   
+ [バージョンフラグ &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-version-flag-master-data-services.md)   
  [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
   
   

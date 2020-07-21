@@ -1,21 +1,21 @@
 ---
 title: スパース列 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86d230cee4c38b996ee41240a61e6ede53478bac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6767ff420defc32bf91559e11878672012de626b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004415"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909581"
 ---
 # <a name="sparse-columns"></a>スパース列
 
@@ -35,7 +35,7 @@ ms.locfileid: "68004415"
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>[説明]
+### <a name="description"></a>説明
 
 このサンプルでは、列セットの検出方法を示します。 また、列セットの XML 出力を解析して、スパース列からデータを取得する方法も示します。
 

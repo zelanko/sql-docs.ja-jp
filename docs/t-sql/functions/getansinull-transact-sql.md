@@ -18,17 +18,17 @@ helpviewer_keywords:
 - default nullability
 - database nullability [SQL Server]
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c8343a24f892c5b0058f1bd1a7c001221c8ff65f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d67d058e089ce00308382d0b52ecc102b062cba2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631600"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このセッションで使用するデータベースで NULL 値を許容するかどうかの既定の設定を返します。  
   
@@ -48,7 +48,7 @@ GETANSINULL ( [ 'database' ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 データベースの NULL 値の許容で null 値が許可されている場合、GETANSINULL は 1 を返します。 この戻り値には、列またはデータ型の NULL 値の許容が明示的に定義されていないことも必要です。 ANSI NULL の既定値は 1 です。 
   
  ANSI NULL の既定の動作を有効にするには、次のいずれかの条件を設定する必要があります。  
@@ -59,7 +59,7 @@ GETANSINULL ( [ 'database' ] )
   
 -   SET ANSI_NULL_DFLT_OFF OFF  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AdventureWorks2012` データベースの NULL 値を許容するかどうかの既定の設定が返されます。  
   
 ```  
@@ -79,6 +79,6 @@ GO
  ```  
   
 ## <a name="see-also"></a>参照  
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

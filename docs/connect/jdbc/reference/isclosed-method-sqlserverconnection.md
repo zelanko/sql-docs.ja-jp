@@ -1,5 +1,5 @@
 ---
-title: isClosed メソッド (SQLServerConnection) |Microsoft Docs
+title: isClosed メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 45e56a0a5ddb7cf8aece6813d421b7ebb1685408
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 776c719a01378a30198b7a3bcc4134478ebeb742
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67977710"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928680"
 ---
 # <a name="isclosed-method-sqlserverconnection"></a>isClosed メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public boolean isClosed()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 接続が閉じている場合は**true** 、それ以外の場合は**false** 。  
+ 接続が閉じられている場合は **true**、閉じられていない場合は **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この isClosed メソッドは、java. .sql. 接続インターフェイスの isClosed メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この isClosed メソッドは、java.sql.Connection インターフェイスの isClosed メソッドで指定されています。  
   
  呼び出された SQLServerConnection オブジェクトの状態を検証します。 接続に対して [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) メソッドが既に呼び出されている場合、または特定の致命的なエラーが発生した場合、接続は閉じられています。 このメソッドが **true** を返すのは、close メソッドが呼び出された後に呼び出された場合だけです。  
   

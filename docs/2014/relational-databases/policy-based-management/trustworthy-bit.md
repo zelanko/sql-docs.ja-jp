@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3198188a-2b59-4865-9560-10f760934b8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8e03217eef0ee9e23d6efa2bbcb8e715fe64dcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 062a63dd52f4641a0ddfcbc20cb9bad3cce6dc61
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63252728"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047771"
 ---
 # <a name="trustworthy-bit"></a>信頼可能なビット
   このルールでは、sysadmin 固定サーバー ロールにデータベースの dbo ロールが割り当てられているかどうか、およびデータベースの信頼可能なビットがオンに設定されているかどうかを確認します。  
@@ -31,6 +30,6 @@ ms.locfileid: "63252728"
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ## <a name="see-also"></a>参照  
- [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [ポリシーベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

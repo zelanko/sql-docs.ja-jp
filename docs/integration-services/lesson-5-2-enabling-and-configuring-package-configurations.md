@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 66388abaf9e1434abd78d595da25fc08ebeea1b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7706c124160f1f08f39279956d7685085859badd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911510"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283137"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>レッスン 5-2:パッケージ構成の有効化と構成
 

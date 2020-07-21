@@ -1,5 +1,6 @@
 ---
 title: disallow results from triggers サーバー構成オプション | Microsoft Docs
+description: "'disallow results from triggers' オプションについて説明します。 これを使用して、結果セットを処理するように設計されていないアプリケーションで問題を回避できるしくみについて説明します。"
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - result sets [SQL Server], triggers
 - disallow results from triggers option
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 28bf3b201d54798f26c9e887e86a9d0bed78ee15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8cbe799b72a88da9785e778cb0688fe3ff1a3f44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772524"
 ---
 # <a name="disallow-results-from-triggers-server-configuration-option"></a>disallow results from triggers サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **disallow results from triggers** オプションは、トリガーによって結果セットを返すかどうかを制御する場合に使用します。 結果セットを返すトリガーは、それと連動するように設計されていないアプリケーションでは予期しない動作を起こすことがあります。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68011862"
   
  1 に設定すると、 **disallow results from triggers** オプションが ON になります。 このオプションの既定値は 0 (OFF) です。 このオプションを 1 (ON) に設定した場合は、トリガーによって結果セットを返そうとするとエラーになり、次のエラー メッセージが出力されます。  
   
- "メッセージ 524、レベル 16、状態 1、プロシージャ \<プロシージャ名>、行 \<行番号>  
+ "メッセージ 524、レベル 16、状態 1、プロシージャ \<Procedure Name>、行 \<Line#>  
   
  "トリガーから結果セットが返されましたが、サーバー オプション 'disallow_results_from_triggers' は true です。"  
   

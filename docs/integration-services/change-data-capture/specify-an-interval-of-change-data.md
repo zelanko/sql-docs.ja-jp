@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 446143898d6537ac03ab0203f81973ed7fdaba36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3cb5949943cb03095328bc43599fbfef2fa74da2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086621"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294569"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
 
@@ -27,7 +27,7 @@ ms.locfileid: "68086621"
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、最初のタスクは、変更間隔のエンドポイントを計算することです。 このエンドポイントは **datetime** 値で、パッケージで後から使用するためにパッケージ変数に格納されます。  
   
 > [!NOTE]  
->  制御フローをデザインするプロセス全体の説明については、「[変更データ キャプチャ (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
+>  制御フローをデザインするプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
   
 ## <a name="set-up-package-variables-for-the-endpoints"></a>エンドポイントのパッケージ変数の設定  
  エンドポイントを計算するように SQL 実行タスクを構成する前に、エンドポイントを格納するパッケージ変数を定義する必要があります。  
@@ -113,7 +113,7 @@ ms.locfileid: "68086621"
   
 ## <a name="see-also"></a>参照  
  [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integration Services (SSIS) 式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md)   
  [スクリプト タスク](../../integration-services/control-flow/script-task.md)  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d097a135cbca0714b53797fbaa4d5357849b15c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06c015c2f96bf2f7206a3e802d44a65871828d2c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107680"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71290261"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (SSIS 式)
 
@@ -41,7 +41,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_UI2  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *character_expression* は、DT_WSTR データ型である必要があります。  
   
  *character_expression* が NULL または空の文字列の場合、CODEPOINT は NULL を返します。  

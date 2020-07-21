@@ -1,6 +1,8 @@
 ---
-title: REVOKE (サーバー プリンシパルの権限の取り消し) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE (サーバー プリンシパルのアクセス許可の取り消し)
+description: SQL Server ログインに対する権限を取り消します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -19,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2ee75a4b200850e8762814ddd30dab8c1e60bdb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 489b6c35f523c6f19d5b763cc54e5aeb6ace1e4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914237"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894537"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE (サーバー プリンシパルの権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに対して許可または拒否された権限を取り消します。  
   
@@ -35,7 +37,7 @@ ms.locfileid: "67914237"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }   
     ON   
@@ -95,7 +97,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  AS *SQL_Server_login*  
  このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインおよびサーバー ロールはサーバー レベルのセキュリティ保護可能なリソースです。 次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたはサーバー ロールで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |SQL Server ログインまたはサーバー ロールの権限|権限が含まれる SQL Server ログインまたはサーバー ロールの権限|権限が含まれるサーバー権限|  
@@ -110,7 +112,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
   
  サーバー ロールの場合、サーバー ロールに対する CONTROL 権限、またはサーバーに対する ALTER ANY SERVER ROLE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. ログインの IMPERSONATE 権限を取り消す  
  次の例では、Windows ユーザー `AdvWorks\YoonM` を基に作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` のアクセス許可 `IMPERSONATE` を取り消します。  

@@ -10,15 +10,14 @@ helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 06443d18b12d0445021001c3bd30d4614b6daebc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288875"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067745"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>例:ID ディレクティブと IDREFS ディレクティブの指定
   要素の属性は、`ID` 型の属性として指定することができます。さらに、この属性を参照する `IDREFS` 属性を使用できます。 これにより、ドキュメント内のリンク作成が可能になります。これは、リレーショナル データベースにおける主キーと外部キーのリレーションシップに似ています。  

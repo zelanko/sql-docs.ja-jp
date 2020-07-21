@@ -10,15 +10,14 @@ helpviewer_keywords:
 - xe
 - extended events [SQL Server], monitoring system activity
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44bb482d1385ad9b22900bb74015a779ea6750d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4890c043f64c359e5cc4ddd5b11d01dfb3756a52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027321"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>拡張イベントを使用したシステムの使用状況の監視
   この手順は、拡張イベントを Event Tracing for Windows (ETW) と共に使用してシステムの使用状況を監視する方法を示します。 また、CREATE EVENT SESSION、ALTER EVENT SESSION、DROP EVENT SESSION の各ステートメントの使用方法についても説明します。  
@@ -116,9 +115,9 @@ ms.locfileid: "62638727"
     ```  
   
 ## <a name="see-also"></a>参照  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
- [DROP EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-session-transact-sql)   
+ [Transact-sql&#41;&#40;のイベントセッションの作成](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [Transact-sql&#41;&#40;のイベントセッションの変更](/sql/t-sql/statements/alter-event-session-transact-sql)   
+ [Transact-sql&#41;&#40;のイベントセッションの削除](/sql/t-sql/statements/drop-event-session-transact-sql)   
  [拡張イベント カタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql)  
  [拡張イベントの動的管理ビュー](../views/views.md)   
  [SQL Server 拡張イベント ターゲット](../../database-engine/sql-server-extended-events-targets.md)  

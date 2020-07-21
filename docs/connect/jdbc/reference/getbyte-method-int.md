@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cff3ad26-0b6c-4d98-8deb-e89217486d79
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61a2f61961808d63a66d5dd29c8b9387f51a688c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d767b27c3e34cccc503c97c1be6f802e9434214d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953478"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926319"
 ---
 # <a name="getbyte-method-int"></a>getByte (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public byte getByte(int index)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターのインデックスを示す **int** です。  
   
@@ -45,7 +45,7 @@ public byte getByte(int index)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getByte メソッドは、java.sql.CallableStatement インターフェイスの getByte メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  

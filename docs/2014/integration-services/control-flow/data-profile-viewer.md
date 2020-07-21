@@ -10,15 +10,14 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 12ade23b1555e1e116de35beb1d4043840823fca
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832417"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433359"
 ---
 # <a name="data-profile-viewer"></a>Data Profile Viewer (Data Profile Viewer)
   データのプロファイル処理では、次に、データ プロファイルを表示して分析します。 このプロファイルは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内でデータ プロファイル タスクを実行してデータ プロファイルを計算した後に表示できます。 データ プロファイル タスクの設定方法および実行方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」をご覧ください。  
@@ -26,12 +25,12 @@ ms.locfileid: "62832417"
 > [!IMPORTANT]  
 >  出力ファイルには、データベースに関する機密データやデータベースに格納されているデータが含まれる場合があります。 このファイルの安全性を高める方法の推奨事項については、「 [パッケージで使用されるファイルへのアクセス](../access-to-files-used-by-packages.md)」をご覧ください。  
   
-## <a name="data-profiles"></a>データ プロファイル  
+## <a name="data-profiles"></a>データのプロファイル  
  データ プロファイルを表示するには、出力をファイルに送信するようにデータ プロファイル タスクを構成し、スタンドアロンの Data Profile Viewer を使用します。 Data Profile Viewer を開くには、次のいずれかの操作を行います。  
   
 -   **デザイナーの** [データ プロファイル] [!INCLUDE[ssIS](../../includes/ssis-md.md)] でタスクを右クリックし、 **[編集]** をクリックします。 **データ プロファイル タスク エディター** の **[全般]** ページで、 **[プロファイル ビューアーを開く]** をクリックします。  
   
--   *\<ドライブ>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーの DataProfileViewer.exe を実行します。  
+-   フォルダーで、次のようにし *\<drive>* ます。プログラムの Server\110\DTS\Binn を実行し、DataProfileViewer.exe を実行します。  
   
  このビューアーでは、複数のペインを使用して、要求したプロファイルと計算結果が表示されます。また、詳細情報を表示するための機能やドリル ダウン機能をオプションで使用できます。  
   

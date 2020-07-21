@@ -1,5 +1,5 @@
 ---
-title: setTrustStorePassword メソッド (SQLServerDataSource) |Microsoft Docs
+title: setTrustStorePassword メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - setTrustStorePassword Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e43a659b26a8f6d8b391c389271a9edd00d0d93c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2c68774b3613a07b978a869127c65cd47b28ebd0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972181"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927273"
 ---
 # <a name="settruststorepassword-method-sqlserverdatasource"></a>setTrustStorePassword メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public void setTrustStorePassword(java.lang.String trustStorePassword)
   
  trustStore データの整合性を確認するために使用するパスワードを含む **String** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  trustStorePassword プロパティは trustStore プロパティと共に指定でき、その値を trustStore ファイルの整合性を確認するために使用します。  
   
  trustStore プロパティは設定されているが trustStorePassword プロパティは設定されていない場合、trustStore の整合性は確認されません。  

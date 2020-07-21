@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2313733c5a24f28c44571dd230ddc58fc9a1264
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781130"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933557"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>権限借用と CLR 統合のセキュリティ
   マネージド コードが外部リソースにアクセスする際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、そのルーチンを実行している現在の実行コンテキストの権限を自動的には借用しません。 `EXTERNAL_ACCESS` および `UNSAFE` アセンブリのコードは、現在の実行コンテキストの権限を明示的に借用することができます。  
   
 > [!NOTE]  
->  権限借用の動作の変更については、次を参照してください。 [SQL Server 2014 におけるデータベース エンジン機能の重大な変更](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)します。  
+>  偽装の動作変更の詳細については、「 [SQL Server 2014 のデータベースエンジン機能における重大な変更](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)」を参照してください。  
   
  インプロセス データ アクセス プロバイダーには、`SqlContext.WindowsIdentity` というアプリケーション プログラミング インターフェイスが用意されています。これを使用して、現在のセキュリティ コンテキストに関連付けられたトークンを取得できます。 `EXTERNAL_ACCESS` アセンブリと `UNSAFE` アセンブリのマネージド コードでは、このメソッドを使用してコンテキストを取得し、.NET Framework `WindowsIdentity.Impersonate` メソッドを使用してそのコンテキストの権限を借用できます。 ユーザー コードから明示的に権限を借用するときは、次の制限事項が適用されます。  
   

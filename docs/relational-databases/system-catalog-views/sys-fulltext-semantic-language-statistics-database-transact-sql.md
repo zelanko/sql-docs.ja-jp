@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_semantic_language_statistics_database (TRANSACT-SQL) |Microsoft Docs
+title: fulltext_semantic_language_statistics_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,42 +19,42 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0decfac8cf28727a3ba3f4bf5ad54e8f9ff8bee9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133789"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902179"
 ---
-# <a name="sysfulltextsemanticlanguagestatisticsdatabase-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>fulltext_semantic_language_statistics_database (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  現在のインスタンスにインストールされているセマンティック言語統計データベースに関する行を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  の現在のインスタンスにインストールされているセマンティック言語統計データベースに関する行を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- セマンティックな処理に必要なセマンティック言語統計コンポーネントについて確認するには、このビューを照会できます。  
+ このビューに対してクエリを実行すると、セマンティック処理に必要なセマンティック言語統計コンポーネントについて調べることができます。  
    
   
 ||||  
 |-|-|-|  
-|**列名**|**型**|**[説明]**|  
+|**列名**|**Type**|**説明**|  
 |**database_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意のデータベースの ID です。|  
-|**register_date**|**datetime**|セマンティックな処理、データベースが登録された日付。|  
-|**registered_by**|**int**|セマンティックな処理のデータベースを登録したサーバー プリンシパルの ID。|  
-|**version**|**nvarchar(128)**|最新バージョンに固有の情報、セマンティック言語統計データベース。|  
+|**register_date**|**datetime**|データベースがセマンティック処理用に登録された日付。|  
+|**registered_by**|**int**|セマンティック処理のためにデータベースを登録したサーバープリンシパルの ID。|  
+|**version**|**nvarchar(128)**|セマンティック言語統計データベースに固有の最新バージョン情報。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  詳細については、「 [セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)」を参照してください。  
   
-## <a name="metadata"></a>メタデータ  
- セマンティック インデックス作成はサポートされている言語については、カタログ ビューに対してクエリ[sys.fulltext_semantic_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)します。  
+## <a name="metadata"></a>Metadata  
+ セマンティックインデックス作成でサポートされている言語の詳細については、カタログビューの[fulltext_semantic_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)を参照してください。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。  
   
-## <a name="examples"></a>使用例  
- 次の例を照会する方法**sys.fulltext_semantic_language_statistics_database**の現在のインスタンスに登録されているセマンティック言語統計データベースに関する情報を取得する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+## <a name="examples"></a>例  
+ 次の例では、の現在のインスタンスに登録されているセマンティック言語統計データベースに関する情報を取得するために、 **fulltext_semantic_language_statistics_database**のクエリを実行する方法を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  

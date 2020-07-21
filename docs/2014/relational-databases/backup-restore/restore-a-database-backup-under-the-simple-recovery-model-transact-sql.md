@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e264dd380c3dff40dacc4eb576d34af5195dec01
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62875627"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957186"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>単純復旧モデルでのデータベース バックアップの復元 (Transact-SQL)
   このトピックでは、データベースの完全バックアップを復元する方法について説明します。  
@@ -33,7 +32,7 @@ ms.locfileid: "62875627"
   
 -   暗号化されたデータベースを復元するには、データベースの暗号化に使用された証明書または非対称キーにアクセスできることが必要です。 証明書または非対称キーがないと、データベースは復元できません。 このため、バックアップが必要である間は、データベース暗号化キーの暗号化に使用する証明書を保持しておく必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
--   セキュリティを確保するため、不明なソースや信頼されていないソースからのデータベースは、アタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、実稼働用ではないサーバーでそのデータベースに対し [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
+-   セキュリティを確保するため、不明なソースや信頼されていないソースからのデータベースは、アタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
 ## <a name="database-compatibility-level-after-upgrade"></a>アップグレード後のデータベース互換性レベル  
  **tempdb**、 **model**、 **msdb** 、および **Resource** データベースの互換性レベルは、アップグレード後に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の互換性レベルに設定されます。 **master** システム データベースは、互換性レベルが 100 を下回っている場合を除いて、アップグレード前の互換性レベルを保持します。 アップグレード前の **master** の互換性レベルが 100 を下回っている場合は、アップグレード後、100 に設定されます。  

@@ -1,21 +1,21 @@
 ---
-title: トランザクションサイズの管理 |Microsoft Docs
+title: トランザクション サイズの管理 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0e53ab6e5f2fc2cc12db37d81b1c8f687b503158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 14729ba2782bfd9f88e718fbde50de30ae13e645
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956355"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923097"
 ---
 # <a name="managing-transaction-size"></a>トランザクション サイズの管理
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

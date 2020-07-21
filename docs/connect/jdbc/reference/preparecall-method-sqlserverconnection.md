@@ -1,5 +1,5 @@
 ---
-title: prepareCall メソッド (SQLServerConnection) |Microsoft Docs
+title: prepareCall メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 265b024c-898a-4bd0-98b5-f06076717b9e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 642ab91e5865e986dc68c19db55e5adb63d6cdb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fea25c7db1ea37fee00f2cd347f005fcfd8a4790
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976195"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913978"
 ---
 # <a name="preparecall-method-sqlserverconnection"></a>prepareCall メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67976195"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[prepareCall (java.lang.String)](../../../connect/jdbc/reference/preparecall-method-java-lang-string.md)|データベースのストアド プロシージャを呼び出すための SQLServerCallableStatement オブジェクトを作成します。|  
 |[prepareCall (java.lang.String, int, int)](../../../connect/jdbc/reference/preparecall-method-java-lang-string-int-int.md)|渡された結果セットの種類およびコンカレンシーの [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを生成する SQLServerCallableStatement オブジェクトを作成します。|  

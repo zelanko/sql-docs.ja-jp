@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], raising events
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a3b39885a7a7bc5c6259e4fa764f61c69320edb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 27eade7d5b0095d18b2c0dcbfa4dac06408649f1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103961"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296935"
 ---
 # <a name="raising-events-in-the-script-component"></a>スクリプト コンポーネントでのイベントの発生
 
@@ -30,7 +30,7 @@ ms.locfileid: "68103961"
   
  イベントを発生させるには、スクリプト コンポーネントは <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> プロパティによって公開される、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> インターフェイスの次のメソッドのいずれかを呼び出します。  
   
-|イベント|[説明]|  
+|Event|説明|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>|パッケージ内でユーザー定義のカスタム イベントを発生させます。|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A>|パッケージにエラー条件を通知します。|  

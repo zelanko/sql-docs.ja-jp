@@ -1,5 +1,5 @@
 ---
-title: 手順 5:更新したパッケージのテスト | Microsoft Docs
+title: '手順 5: 更新したパッケージのテスト | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d490cf8907859e85eef12aef54d29be01e0fb9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e90af0ecf9972b7365f42fcc307181c4d657e3c5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019544"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296107"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>レッスン 1-5 - 更新したパッケージのテスト
 
@@ -45,7 +45,7 @@ ms.locfileid: "68019544"
 3.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2:SSIS での配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+[レッスン 2: SSIS での配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
   
   
   

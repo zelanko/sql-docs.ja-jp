@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738216"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid データ型メソッド リファレンス
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **hierarchyid** データ型は可変長のシステム データ型です。 **hierarchyid** は、階層内の位置を表すために使用します。 **hierarchyid** 型の列が自動的にツリーを表すことはありません。 行と行の間に必要なリレーションシップが反映されるよう、 **hierarchyid** 値を生成して割り当てるのは、アプリケーションの役割です。
   
@@ -42,7 +42,7 @@ ms.locfileid: "68077911"
   
 **hierarchyid** 型は、CLR クライアントで **SqlHierarchyId** データ型として利用できます。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **hierarchyid** 型は、ツリーのルートからノードまでのパスをエンコードすることで、階層ツリーの 1 つのノードに関する情報を論理的にエンコードします。 このようなパスは、ルートの後にアクセスされたすべての子の一連のノード ラベルとして論理的に表されます。 この表現はスラッシュによって開始されます。ルートのみを表すパスは、単一スラッシュで表されます。 ルートの下のレベルの各ラベルは、ドットで区切られた一連の整数としてエンコードされます。 子と子の比較は、ドットで区切られた一連の整数を辞書順で比較することにより行われます。 各レベルの後ろには、スラッシュが続きます。 したがって、スラッシュは親と子を区切ります。 たとえば、次に示すのは、長さがそれぞれ 1、2、2、3、3 レベルの有効な **hierarchyid** パスです。
   
 -   /  

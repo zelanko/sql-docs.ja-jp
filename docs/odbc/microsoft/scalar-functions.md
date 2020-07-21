@@ -13,26 +13,26 @@ helpviewer_keywords:
 - scalar functions [ODBC], desktop database drivers
 - SQL grammar [ODBC], scalar functions
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85511a9997ccbae0ebe4838218d43bc997344085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e9d319b08069fd0ae32af20bf39dbdb7cdfb819c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997776"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306013"
 ---
 # <a name="scalar-functions"></a>スカラー関数
-Microsoft ODBC のデスクトップ データベース ドライバーでは、次のスカラー関数をサポートします。  
+Microsoft ODBC Desktop データベースドライバーは、次のスカラー関数をサポートしています。  
   
 ||||  
 |-|-|-|  
-|CONCAT|LCASE|[RIGHT]|  
-|CONVERT|[LEFT]|[RTRIM]|  
-|CURDATE|LENGTH|[SUBSTRING]|  
+|CONCAT|LCASE|RIGHT|  
+|CONVERT|LEFT|RTRIM|  
+|CURDATE|LENGTH|SUBSTRING|  
 |CURTIME|LOCATE|UCASE|  
-|DATABASE|[LTRIM]|User|  
-|DAYOFMONTH|MOD|[YEAR]|  
-|[DAYOFWEEK]|[MONTH]||  
+|DATABASE|LTRIM|User|  
+|DAYOFMONTH|MOD|YEAR|  
+|[DAYOFWEEK]|MONTH||  
   
- 引数とスカラー関数の戻り値については、付録 F を参照してください、 *ODBC プログラマ リファレンス。*
+ スカラー関数の引数と戻り値の詳細については、「付録 F ( *ODBC プログラマーリファレンス*)」を参照してください。

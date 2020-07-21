@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8eebb47569a4ccc96437a3e16379c794b83642dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9502a9c0c300e1e239c8837b79c99f4c3e7a7eff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478506"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971022"
 ---
 # <a name="transactions-master-data-services"></a>トランザクション (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、メンバーに対してアクションが行われるたびに、トランザクションが記録されます。 すべてのユーザーがトランザクションを表示でき、管理者はトランザクションを破棄できます。 日付、時刻、アクションを行ったユーザーが、その他の詳細と共にトランザクションによって表示されます。 ユーザーは、トランザクションが行われた理由を示す注釈をトランザクションに追加できます。  

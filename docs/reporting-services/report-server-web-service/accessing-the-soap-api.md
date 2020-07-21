@@ -1,5 +1,6 @@
 ---
 title: SOAP API へのアクセス | Microsoft Docs
+description: レポート サーバー Web サービスは SOAP over HTTP を使用し、クライアントとレポート サーバー間の通信インターフェイスとして機能します。 サービスの呼び出しには WSDL を使用します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78f160e51265e4ce87a191aa3076dc4464c31d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 165302d4bb324dfb79f43e37b8a47e5e11973ce5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026174"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509913"
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API へのアクセス
   レポート サーバー Web サービスは、SOAP (Simple Object Access Protocol) over HTTP を使用し、クライアント プログラムとレポート サーバー間の通信インターフェイスとして機能します。 Web サービスには、レポート実行用とレポート管理用の 2 つのエンドポイントがあり、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の完全な機能にアクセスするために使用できるメソッドと複合型オブジェクトのセットで構成されます。 Web サービスを呼び出すには、Reporting Services Web サービス記述言語 (WSDL) を参照する必要があります。  
@@ -39,7 +40,7 @@ ms.locfileid: "63026174"
   
 -   <xref:ReportExecution2005> エンドポイントでは、開発者がレポート サーバーのレポートをプログラムによって処理および表示できます。 このエンドポイントの WSDL には、`ReportExecution2005.asmx?wsdl` を通してアクセスします。  
   
- WSDL は、SOAP と Web サービスをサポートする、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK などの開発キットによって使用できます。  
+ WSDL は、SOAP と Web サービスをサポートする、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK などの開発キットで使用できます。  
   
  次の例は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理 WSDL ファイルへの URL の書式を示しています。  
   
@@ -49,7 +50,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
   
  次の表では、URL の各要素を説明します。  
   
-|URL の要素|[説明]|  
+|URL の要素|説明|  
 |-----------------|-----------------|  
 |*server*|レポート サーバーが配置されているサーバーの名前。|  
 |*reportserver*|XML Web サービスを含むフォルダーの名前。 これはセットアップ中に構成されます。|  

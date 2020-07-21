@@ -1,5 +1,5 @@
 ---
-title: Reporting Services SharePoint サービスとサービス アプリケーション |Microsoft Docs
+title: SharePoint サービスとサービスアプリケーションの Reporting Services |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 035cc8b8de493761b79ac391f2f543f96c941507
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93a8092dc9ed731349a1948a74e3950eb32f4f47
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66102867"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "72783158"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services の SharePoint サービスとサービス アプリケーション
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードは、SharePoint サービス アーキテクチャ上に構築されており、SharePoint サービスと一対多のサービス アプリケーションを利用します。 サービス アプリケーションを作成すると、サービスが使用可能になり、サービス アプリケーション データベースが生成されます。 複数の Reporting Services サービス アプリケーションを作成することができますが、ほとんどの配置シナリオではサービス アプリケーションは 1 つで十分です。  
@@ -26,16 +26,16 @@ ms.locfileid: "66102867"
   
 -   [プロキシ グループを使用したサービス アプリケーションの関連付けの変更](#bkmk_associations)  
   
--   [サービス アプリケーションのプロパティの編集](#bkmk_editserviceapplication)  
+-   [サービスアプリケーションのプロパティの編集](#bkmk_editserviceapplication)  
   
 -   [PowerShell を使用して Reporting Services サービス アプリケーションを作成するには](#bkmk_powershell_create_ssrs_serviceapp)  
   
 -   [関連タスク](#bkmk_related)  
   
-##  <a name="bkmk_createapp"></a> Reporting Services サービス アプリケーションの作成  
+##  <a name="creating-a-reporting-services-service-application"></a><a name="bkmk_createapp"></a>Reporting Services サービスアプリケーションの作成  
  SharePoint サーバーの全体管理または PowerShell スクリプトを使用して、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成できます。 SharePoint サーバーの全体管理を使用する方法の詳細については、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」の「Reporting Services サービス アプリケーションの作成」セクションを参照してください。 サービス アプリケーションを作成するための PowerShell スクリプトの例は、このトピックの後半の PowerShell のセクションを参照してください。  
   
-##  <a name="bkmk_associations"></a> プロキシ グループを使用したサービス アプリケーションの関連付けの変更  
+##  <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a><a name="bkmk_associations"></a>プロキシグループを使用したサービスアプリケーションの関連付けの変更  
  サービス アプリケーションを作成するための [新規作成] ページには、 **[Web アプリケーションの関連付け]** セクションがあります。 このセクションでは、サービス アプリケーションの作成時に関連付けを行うことができます。 関連付けを変更してカスタム構成をサービス アプリケーションに割り当てるには、次の手順を使用します。 同じ一般的なプロセスは、サービス アプリケーションとカスタム グループとの関連付けを変更せずに、プロキシを既定のグループに追加する場合にも使用できます。  
   
 1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの関連付けの構成]** をクリックします。  
@@ -48,7 +48,7 @@ ms.locfileid: "66102867"
   
 5.  プロキシのチェック ボックスをオンにして、 **[OK]** をクリックします。  
   
-##  <a name="bkmk_editserviceapplication"></a> サービス アプリケーションのプロパティの編集  
+##  <a name="edit-service-application-properties"></a><a name="bkmk_editserviceapplication"></a> サービス アプリケーションのプロパティの編集  
  サービス アプリケーションのプロパティ ページを開き直してプロパティを変更することができます。  
   
 1.  SharePoint サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
@@ -57,32 +57,30 @@ ms.locfileid: "66102867"
   
 3.  [サービス アプリケーション] リボンで、 **[プロパティ]** をクリックします。  
   
-##  <a name="bkmk_powershell_create_ssrs_serviceapp"></a> PowerShell を使用して Reporting Services サービス アプリケーションを作成するには  
+##  <a name="to-create-a-reporting-services-service-application-using-powershell"></a><a name="bkmk_powershell_create_ssrs_serviceapp"></a>PowerShell を使用して Reporting Services サービスアプリケーションを作成するには  
  PowerShell を使用して Service アプリケーションとプロキシを作成することができます。 次のサンプルでは、使用するサービス アプリケーションをどのアプリケーション プールに構成するかがわかっていることを前提としています。  
   
 1.  アプリケーション プール名のアプリケーション プール オブジェクトを、New アクションに渡される変数に追加します。  
   
-    ```  
-    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
+    ```powershell
+    $appPoolName = Get-SPServiceApplicationPool "<application pool name>"  
     ```  
   
 2.  指定した名前とアプリケーション プール名を使用してサービス アプリケーションを作成します。  
   
-    ```  
+    ```powershell
     New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  新しいサービス アプリケーション オブジェクトを取得し、新しいプロキシ コマンドレットにオブジェクトをパイプします。  
   
-    ```  
+    ```powershell
     Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
-##  <a name="bkmk_related"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="bkmk_related"></a> 関連タスク  
   
-|タスク|リンク|  
+|タスク|Link|  
 |----------|----------|  
-|サービス アプリケーションの設定を管理する|[Reporting Services SharePoint サービス アプリケーションの管理](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
-|サービス アプリケーションと関連コンポーネント (暗号化キーやプロキシなど) をバックアップおよび復元する|[Backup and Restore Reporting Services SharePoint Service Applications](../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
-  
-  
+|サービス アプリケーションの設定を管理する|[Reporting Services SharePoint サービスアプリケーションの管理](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
+|サービス アプリケーションと関連コンポーネント (暗号化キーやプロキシなど) をバックアップおよび復元する|[Reporting Services SharePoint サービス アプリケーションのバックアップと復元](../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  

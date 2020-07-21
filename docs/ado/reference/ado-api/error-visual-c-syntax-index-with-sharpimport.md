@@ -1,5 +1,5 @@
 ---
-title: 'エラー (Visual C 構文のインデックスで #import) |Microsoft Docs'
+title: 'エラー (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - 'Error collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23208742a3c103bd25a38477a55106485fea018d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c118bcc524aefb03f1f34f66cd595a83e21f72d9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918910"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758788"
 ---
-# <a name="error-visual-c-syntax-index-with-import"></a>エラー (Visual C 構文のインデックスで #import)
-## <a name="properties"></a>Properties  
+# <a name="error-visual-c-syntax-index-with-import"></a>エラー (構文インデックスが #import で Visual C++)
+## <a name="properties"></a>プロパティ  
   
 ```  
 _bstr_t GetDescription( );  
@@ -48,5 +48,5 @@ _bstr_t GetSQLState( );
 __declspec(property(get=GetSQLState)) _bstr_t SQLState;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)

@@ -1,5 +1,5 @@
 ---
-title: RDS アプリケーションのセキュリティ保護 |Microsoft Docs
+title: RDS アプリケーションをセキュリティで保護する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,37 +10,37 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS security [ADO]
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d91b8f41c344d45bfde646d24819e73c0cd8f283
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f785eed6124970d8c270492b98dc8e5ea815f18a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922224"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758968"
 ---
 # <a name="securing-rds-applications"></a>RDS アプリケーションの保護
-このトピックでは、rds. のセキュリティ情報を提供します。  
+このトピックでは、RDS のセキュリティ情報について説明します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="microsoft-internet-explorer-security-issues"></a>Microsoft Internet Explorer のセキュリティに関する問題  
- 新しいセキュリティが強化された Microsoft Internet Explorer に追加、ADO および RDS オブジェクトは、「安全」モード環境でのみ実行に制限されます。 これは、異なるゾーン、セキュリティ レベル、動作の制限、安全でない操作は、これらの問題を認識し、セキュリティ設定をカスタマイズすることが必要です。  
+ Microsoft Internet Explorer に新しいセキュリティ拡張機能が追加されたため、一部の ADO オブジェクトおよび RDS オブジェクトは、"安全な" モード環境でのみ実行されるように制限されています。 これには、さまざまなゾーン、セキュリティレベル、制限動作、安全でない操作、カスタマイズされたセキュリティ設定など、これらの問題を認識している必要があります。  
   
 ## <a name="security-and-your-web-server"></a>セキュリティと Web サーバー  
- 使用する場合、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Internet の Web サーバー上のオブジェクト、これは、潜在的なセキュリティ リスクことに注意してください。 有効なデータ ソース名 (DSN)、ユーザー ID、およびパスワード情報を取得する外部ユーザーは、そのデータ ソースにクエリを送信するページを作成できます。 登録解除して削除する 1 つのオプションは、データ ソースへのアクセスをさらに制限された場合は、 **RDSServer.DataFactory**オブジェクト (msadcf.dll) とハード コードされたクエリの代わりにカスタム ビジネス オブジェクトを使用します。  
+ インターネット Web サーバーで[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを使用する場合は、これによってセキュリティ上のリスクが生じる可能性があることに注意してください。 有効なデータソース名 (DSN)、ユーザー ID、およびパスワード情報を取得する外部ユーザーは、そのデータソースにクエリを送信するためのページを書き込むことができます。 データソースへのアクセスをさらに制限する場合は、 **DataFactory**オブジェクト (msadcf .dll) の登録を解除して削除し、代わりに、ハードコーディングされたクエリでカスタムビジネスオブジェクトを使用するという方法があります。  
   
- RDSServer.DataFactory オブジェクトを使用するセキュリティへの影響の詳細については、Microsoft Security Web サイトのマイクロソフト セキュリティ情報の MS99 025 を参照してください。  
+ DataFactory オブジェクトを使用した場合のセキュリティへの影響の詳細については、Microsoft セキュリティ Web サイトの「Microsoft セキュリティ情報 MS99-025」を参照してください。  
   
 ## <a name="client-impersonation-and-security"></a>クライアントの偽装とセキュリティ  
- 場合、**パスワード認証**(Windows NT 4.0) の Windows NT チャレンジ/レスポンス認証または統合 Windows 認証 (Windows 2000 の場合)、IIS Web サーバーのプロパティを設定し、ビジネス オブジェクトは、クライアントのセキュリティ コンテキストで呼び出されます。 これは、HTTP 経由のクライアントの偽装を許可する RDS 1.5 の新機能です。 このモードで作業するとき、Web サーバー (IIS) へのログオンには匿名ではありませんが、ユーザー ID とクライアント コンピューターが実行されているパスワードを使用します。 ODBC Dsn は、信頼関係接続を使用する設定は、し、SQL Server などのデータベースへのアクセスは、クライアントのセキュリティ コンテキストでします。 これは、データベースが、IIS と同じコンピューターにある場合にのみ機能が、クライアントの資格情報は、まだ別のコンピューターに持ち越すことはできません。  
+ IIS Web サーバーの**パスワード認証**プロパティが Windows nt チャレンジ/レスポンス認証 (windows nt 4.0 の場合) または統合 Windows 認証 (windows 2000 の場合) に設定されている場合、ビジネスオブジェクトはクライアントのセキュリティコンテキストで呼び出されます。 これは、HTTP 経由のクライアント偽装を可能にする RDS 1.5 の新機能です。 このモードで作業している場合、Web サーバー (IIS) へのログオンは匿名ではなく、クライアントコンピューターが実行されているユーザー ID とパスワードを使用します。 ODBC Dsn が信頼関係接続を使用するように設定されている場合、SQL Server などのデータベースへのアクセスも、クライアントのセキュリティコンテキストで発生します。 ただし、これは、データベースが IIS と同じコンピューター上にある場合にのみ機能します。クライアントの資格情報を他のコンピューターに引き継ぐことはできません。  
   
- たとえば、クライアント、John Doe, userid ="JohnD"とパスワード =「シークレット」は、クライアント コンピューターにログオンします。 アクセスする必要があるブラウザー ベースのアプリケーションを実行した、 **RDSServer.DataFactory**オブジェクトを作成する、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)"MyServer"のコンピューターで SQL クエリを実行して IIS を実行します。 MyServer、Windows NT Server 4.0 を実行するシステムが Windows NT チャレンジ/レスポンス認証を使用するよう設定されて、その ODBC DSN に「を使用して、信頼された接続」選択すると、され、サーバーにも、SQL Server データ ソースが含まれています。 Web サーバーで要求が受信されると、ユーザー ID とパスワードをクライアントを要求します。 そのため、要求が MyServer としてログオン"JohnD"から「シークレット」IUSER_MyServer (これは、匿名のパスワード認証が既定では) ではなく/。 同様に、"JohnD"の SQL Server にログオンするときに/「シークレット」を使用します。  
+ たとえば、userid = "JohnD" および password = "secret" を含むクライアント John Doe がクライアントコンピューターにログオンしているとします。 IIS を実行している "MyServer" コンピューターで SQL クエリを実行することで、 **DataFactory**オブジェクトにアクセスして[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を作成する必要があるブラウザーベースのアプリケーションを実行します。 Windows NT Server 4.0 を実行しているシステムである MyServer は、Windows NT チャレンジ/レスポンス認証を使用するように設定されています。 ODBC DSN では、[信頼できる接続を使用する] が選択されています。また、サーバーにも SQL Server データソースが含まれています。 Web サーバーで要求が受信されると、クライアントにユーザー ID とパスワードの入力が求められます。 このため、要求は、IUSER_MyServer ではなく "JohnD"/"Secret" (匿名パスワード認証がオンになっている場合の既定値) として MyServer に記録されます。 同様に、SQL Server にログオンすると、"JohnD"/"Secret" が使用されます。  
   
- その結果、IIS の Windows NT チャレンジ/レスポンス認証モードにより、HTML ページをユーザーがデータベースにログオンするために必要なユーザーの ID とパスワードの情報について明示的に要求されることがなく作成できます。 IIS 基本認証が使用されている場合、これにも必要です。  
+ このため、IIS の Windows NT チャレンジ/レスポンス認証モードでは、ユーザーがデータベースにログオンするために必要なユーザー ID とパスワードの情報を明示的に要求しなくても、HTML ページを作成できます。 IIS の基本認証が使用されている場合は、これも必要になります。  
   
 ## <a name="password-authentication"></a>パスワード認証  
- RDS は、次の 3 つのパスワード認証モードのいずれかで実行されている IIS Web サーバーと通信できます。Anonymous、Basic、または NT チャレンジ/レスポンス認証 (Windows 2000 では統合 Windows 認証と呼ばれます)。 これらの設定は、Web サーバーがクライアント コンピューターにある NT の Web サーバー上の明示的なアクセス特権を必要とするなど、アクセスを制御する方法を定義します。
+ RDS は、匿名、基本、または NT チャレンジ/レスポンス認証 (Windows 2000 では統合 Windows 認証と呼ばれます) の3つのパスワード認証モードのいずれかで実行されている IIS Web サーバーと通信できます。 これらの設定は、Web サーバーがアクセスを制御する方法を定義します。たとえば、クライアントコンピューターに NT Web サーバー上での明示的なアクセス特権が必要になります。
 
 

@@ -1,5 +1,5 @@
 ---
-title: 選択およびモデルのテスト データのマップ |Microsoft Docs
+title: モデルテストデータを選択してマップする |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88e109a3ee51360edf85547a92254f6015168243
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085758"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524899"
 ---
 # <a name="choose-and-map-model-testing-data"></a>モデルのテスト データの選択およびマップ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で精度チャートを作成するには、モデルのテストに使用されるデータを選択し、データをモデルにマップする必要があります。  
@@ -49,7 +48,7 @@ ms.locfileid: "66085758"
   
  [テスト データの列がモデルにマップされる方法の変更](#bkmk_ChangeMappings)  
   
-##  <a name="bkmk_SelectInputs"></a> マイニング モデルの精度をテストするための入力テーブルを選択するには  
+##  <a name="to-select-input-tables-to-test-the-accuracy-of-a-mining-model"></a><a name="bkmk_SelectInputs"></a> マイニング モデルの精度をテストするための入力テーブルを選択するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のデータ マイニング デザイナーで、チャートを作成するモデルを含むマイニング構造をダブルクリックします。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66085758"
   
 5.  **[リフト チャート]** タブまたは **[分類マトリックス]** タブをクリックすると、指定したテスト データを使用して自動的にチャートが作成されます。  
   
-##  <a name="bkmk_MapColumns"></a> モデル列をテスト データの列にマップするには  
+##  <a name="to-map-model-columns-to-the-columns-in-the-testing-data"></a><a name="bkmk_MapColumns"></a> モデル列をテスト データの列にマップするには  
   
 1.  チャートを作成するモデルを含むマイニング構造をダブルクリックし、データ マイニング デザイナーで構造とモデルを開きます。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66085758"
   
 3.  **[入力の選択]** タブの **[精度チャートに使用するデータセットの選択]** で、 **[別のデータセットを指定する]** を選択します。  
   
-4.  [参照] ボタンをクリックします **([...])。** をダイアログ ボックスを開き、外部データ セットの定義を作成します。  
+4.  参照ボタン ([. **..])** をクリックしてダイアログボックスを開き、外部データセットの定義を作成します。  
   
 5.  **[マイニング構造の選択]** ダイアログ ボックスで、操作するモデルを含んでいるマイニング構造を選択し、 **[OK]** をクリックします。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66085758"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_ChangeMappings"></a> 入力データがモデルにマップされる方法を変更するには  
+##  <a name="to-modify-the-way-input-data-is-mapped-to-the-model"></a><a name="bkmk_ChangeMappings"></a>入力データをモデルにマップする方法を変更するには  
   
 1.  データ マイニング デザイナーで、チャートを作成するモデルを含んだ構造をダブルクリックします。  
   
@@ -97,9 +96,9 @@ ms.locfileid: "66085758"
   
 3.  **[入力の選択]** タブをクリックします。  
   
-4.  **[精度チャートに使用するデータセットの選択]** で、 **[別のデータセットを指定する]** を選択します。  
+4.  **[精度チャートに使用するデータセットの選択**] で、[**別のデータセットを指定**する] オプションを選択します。  
   
-5.  [参照] ボタンをクリックします **([...])。** をダイアログ ボックスを開き、外部データ ソースの定義を作成します。  
+5.  参照ボタン ([. **..])** をクリックしてダイアログボックスを開き、外部データソースの定義を作成します。  
   
 6.  **[列マッピングの指定]** ダイアログ ボックスで、 **[ケース テーブルの選択]** をクリックします。  
   
@@ -120,6 +119,6 @@ ms.locfileid: "66085758"
      **[列マッピングの指定]** ダイアログ ボックスに、新しい列マッピングが表示されます。 2 つの列を結ぶ線を選択して &lt;localizedText&gt;Del&lt;/localizedText&gt; キーを押すと、マッピングを削除できます。 **[マイニング構造]** テーブルで列を選択し、 **[入力テーブルの選択]** テーブルの対応する列にドラッグすると、新しい接続を作成できます。  
   
 ## <a name="see-also"></a>参照  
- [テスト、検証タスク、および操作方法 &#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [テストおよび検証タスク、および操作方法 (データ マイニング)](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

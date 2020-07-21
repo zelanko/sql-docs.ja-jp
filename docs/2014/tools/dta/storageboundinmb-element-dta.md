@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12dad78b6094e940a926fbcde7147d66ca1e2dfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63460103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007596"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 要素 (DTA)
   データベース エンジン チューニング アドバイザーのチューニング推奨設定 (インデックスとパーティション分割のセット) で使用できる最大容量を MB 単位で指定します。  
@@ -36,11 +35,11 @@ ms.locfileid: "63460103"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|`unsignedInt`、長さは無制限です。|  
 |**既定値**|[なし] :|  
-|**個数**|任意。 `TuningOptions` 要素に 1 回だけ使用できます。|  
+|**個数**|省略可能。 `TuningOptions` 要素に 1 回だけ使用できます。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
@@ -49,7 +48,7 @@ ms.locfileid: "63460103"
 |**親要素**|[TuningOptions 要素 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**子要素**|なし|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  複数のデータベースをチューニングする場合は、すべてのデータベースの推奨設定が容量計算の対象になります。 データベース エンジン チューニング アドバイザーは、既定で以下の記憶領域サイズのうちの小さい方を使用します。  
   
 -   現在の生データのサイズの 3 倍 (テーブルのヒープとクラスター化インデックスの合計サイズも含まれる)  

@@ -17,12 +17,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f54ff6306e3a4b2066a05ded891f4b8e6e98f99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016221"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "72905951"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -39,23 +39,21 @@ ms.locfileid: "68016221"
   
 4.  [[ストレージ] ページ](#Storage)  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="GeneralPage"></a> [全般] ページ  
+##  <a name="general-page"></a><a name="GeneralPage"></a> [全般] ページ  
  **[データベース]**  
  このテーブルを含むデータベースの名前です。  
   
  **[サーバー]**  
  現在のサーバー インスタンスの名前です。  
   
- **ユーザー**  
+ **User**  
  この接続のユーザーの名前です。  
   
  **[作成日]**  
  テーブルが作成された日付と時刻です。  
   
- **[名前]**  
- テーブルの名前です。  
+ **Name**  
+ テーブルの名前。  
   
  **[スキーマ]**  
  テーブルを所有するスキーマです。  
@@ -70,14 +68,13 @@ ms.locfileid: "68016221"
  オブジェクトが、引用符で囲まれた識別子オプションが ON に設定されて作成されたかどうかを指定します。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」を参照してください。  
   
  **[ロックのエスカレーション]**  
- テーブルのロック エスカレーションの粒度を示します。 データベース エンジンのロックの詳細については、「 [SQL Server トランザクションのロックおよび行のバージョン管理ガイド](https://msdn.microsoft.com/library/jj856598.aspx)」をご覧ください。 有効な値は次のとおりです。  
+ テーブルのロック エスカレーションの粒度を示します。 データベース エンジンのロックの詳細については、「 [SQL Server トランザクションのロックおよび行のバージョン管理ガイド](https://msdn.microsoft.com/library/jj856598.aspx)」をご覧ください。 次のいずれかの値になります。  
   
  AUTO  
  このオプションを使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、テーブル スキーマに適したロック エスカレーションの粒度を選択します。  
   
--   テーブルがパーティション分割されている場合は、ロック エスカレーションをヒープまたは B ツリー (HoBT) 粒度に設定できます。 ロックは HoBT レベルにエスカレートされると、後で TABLE 粒度にエスカレートされません。  
-  
--   テーブルがパーティション分割されていない場合は、ロック エスカレーションは TABLE 粒度に設定されます。  
+- テーブルがパーティション分割されている場合は、ロック エスカレーションをヒープまたは B ツリー (HoBT) 粒度に設定できます。 つまり、エスカレーションはパーティション レベルで許可されます。 ロックは HoBT レベルにエスカレートされると、後で TABLE 粒度にエスカレートされません。
+- テーブルがパーティション分割されていない場合、TABLE 細分性に対してロックのエスカレーションが実行されます。 
   
  TABLE  
  テーブルがパーティション分割されているかどうかに関係なく、ロック エスカレーションはテーブルレベルの粒度で行われます。 TABLE は既定値です。  
@@ -88,7 +85,7 @@ ms.locfileid: "68016221"
  **[レプリケートされるテーブル]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションによってテーブルがいつ別のデータベースにレプリケートされるかを示します。 指定できる値は、 **[True]** または **[False]** です。  
   
-##  <a name="ChangeTracking"></a> [変更の追跡] ページ  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a> [変更の追跡] ページ  
  **変更の追跡**  
  テーブルに対する変更の追跡が有効かどうかを示します。 既定値は **False**です。  
   
@@ -101,7 +98,7 @@ ms.locfileid: "68016221"
   
  変更の追跡の詳細については、「[変更の追跡について &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)」を参照してください。  
   
-##  <a name="FileTable"></a> [FileTable] ページ  
+##  <a name="filetable-page"></a><a name="FileTable"></a> [FileTable] ページ  
  FileTable に関連するテーブルのプロパティを表示します。 詳細については、「[FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)」をご覧ください。  
   
  **[FileTable の名前列の照合順序]**  
@@ -113,7 +110,7 @@ ms.locfileid: "68016221"
  **FileTable の名前空間の有効化**  
  **True**の場合、この値はテーブルが FileTable であることを示します。 この値を **False**に変更すると、FileTable が通常のユーザー テーブルに変更されます。 後でテーブルを FileTable に戻す場合は、変換時に FileTable 一貫性チェックを行い、テーブルに問題がないことを確認する必要があります。  
   
-##  <a name="Storage"></a> [ストレージ] ページ  
+##  <a name="storage-page"></a><a name="Storage"></a> [ストレージ] ページ  
  選択されているテーブルのストレージに関連するプロパティを表示します。  
   
 ### <a name="compression"></a>圧縮  
@@ -163,7 +160,7 @@ ms.locfileid: "68016221"
  **[パーティション列]**  
  テーブルがパーティション分割される列の名前。  
   
- **パーティション構成**  
+ **[パーティション構成]**  
  テーブルがパーティション分割されている場合のパーティション構成の名前。 テーブルがパーティション分割されていない場合、このフィールドは空白です。  
   
  **[パーティション数]**  

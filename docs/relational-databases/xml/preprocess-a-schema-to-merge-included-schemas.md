@@ -1,5 +1,6 @@
 ---
 title: 含まれているスキーマをマージするためのスキーマの前処理 | Microsoft Docs
+description: xsd:include ディレクティブを含む XML スキーマに前処理を行い、インクルードされるすべてのスキーマの内容をコピーおよびマージして 1 つのスキーマにする方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 58773dbce29589d66403c6584b5360c0dc8026d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48afad6a8cb4c5e3dcc65118a73fa7b3079d02f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757514"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>含まれているスキーマをマージするためのスキーマの前処理
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   W3C XSD の **include** 要素では、スキーマのモジュール性がサポートされます。そのため、1 つの XML スキーマを複数の物理ファイルにパーティション分割できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この要素は現在サポートされていません。 この要素を含む XML スキーマはサーバーによって拒否されます。  
   
- 解決方法として、\<xsd:include> ディレクティブを含む XML スキーマを前処理して、含まれているすべてのスキーマの内容をコピーし、1 つのスキーマにマージすることで、サーバーにアップロードできます。 次の C# コードを使用すると、前処理を行うことができます。 コードの最初の部分にあるコメントにはこのコードの使用方法が記述されています。  
+ 解決方法として、\<xsd:include> ディレクティブを含む XML スキーマに前処理を行い、インクルードされるすべてのスキーマの内容をコピーおよびマージして 1 つのスキーマにすることで、サーバーにアップロードできます。 次の C# コードを使用すると、前処理を行うことができます。 コードの最初の部分にあるコメントにはこのコードの使用方法が記述されています。  
   
 ```  
 // XSD Schema Include Normalizer  
@@ -191,7 +192,7 @@ public class XmlSchemaIncludeNormalizer
 ## <a name="testing-the-preprocessor-tool"></a>プリプロセッサ ツールのテスト  
  次の XSD スキーマを使用すると、プリプロセッサ ツールをテストできます。  
   
-### <a name="bookscommonxsd"></a>books_common.xsd  
+### <a name="books_commonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

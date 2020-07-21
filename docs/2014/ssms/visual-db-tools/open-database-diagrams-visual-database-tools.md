@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a31181e3a0e109857e3cea1bc375b683cd3f7f7e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254471"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066133"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>データベース ダイアグラムを開く方法 (Visual Database Tools)
   ダイアグラムの構造を表示または編集するには、データベース ダイアグラムを開きます。  
@@ -30,7 +29,7 @@ ms.locfileid: "63254471"
   
 2.  開くデータベース ダイアグラムの名前をダブルクリックします。  
   
-     \- または -  
+     または  
   
      開くデータベース ダイアグラムの名前を右クリックし、 **[データベース ダイアグラムのデザイン]** を選択します。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "63254471"
 >  ダイアグラムの所有者、またはデータベースの db_owner ロールのメンバーだけがダイアグラムを開くことができます。  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムを扱う&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [データベースダイアグラムの使用 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [データベース ダイアグラムの所有権について (Visual Database Tools)](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

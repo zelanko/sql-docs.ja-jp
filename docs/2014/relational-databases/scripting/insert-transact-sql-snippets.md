@@ -1,6 +1,6 @@
 ---
-title: Transact-SQL スニペットの挿入 | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL スニペットの挿入
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Transact-SQL snippets, code
 - snippets [Transact-SQL], how to insert
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c47bc6dc82843159f116b62ff6bc68acf981f4f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3984f1f7d9744fee36c5fc52af080d783e87615c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063438"
 ---
 # <a name="insert-transact-sql-snippets"></a>Transact-SQL スニペットの挿入
   [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターで [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントを新規作成するときの開始位置として使用できるテンプレートです。  

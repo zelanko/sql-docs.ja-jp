@@ -1,5 +1,5 @@
 ---
-title: デスクトップ データベース ドライバー パフォーマンスの問題 |Microsoft Docs
+title: デスクトップデータベースドライバーのパフォーマンスに関する問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], performance
 - Jet-based ODBC drivers [ODBC], performance
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 660b7c123d0ddd0a3f1b972fa3b1dc153b15ed50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a819d99a995fd7b287beb66b94f1df526e05f201
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071932"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303503"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>デスクトップ データベース ドライバー パフォーマンスの問題
-ANSI の既存のアプリケーションとの互換性のために、SQL_WCHAR、SQL_WVARCHAR、SQL_WLONGVARCHAR データ型は、Microsoft アクセス 4.0 または高のデータ ソースの SQL_CHAR、SQL_VARCHAR、SQL_LONGVARCHAR として公開されます。 データ ソースはデータ型のワイド文字を返しませんが、データもする必要があります送信 jet ワイド文字形式で。 変換が行われる SQL_C_CHAR パラメーターまたは結果列が、ANSI アプリケーションで SQL_CHAR データ型にバインドされている場合を理解しておく必要があります。  
+既存の ANSI アプリケーションとの互換性を確保するために、SQL_WCHAR、SQL_WVARCHAR、および SQL_WLONGVARCHAR のデータ型は、Microsoft Access 4.0 以降のデータソースの SQL_CHAR、SQL_VARCHAR、および SQL_LONGVARCHAR として公開されています。 データソースはワイド文字データ型を返しませんが、データはワイド Char 形式で Jet に送信される必要があります。 SQL_C_CHAR パラメーターまたは結果列が ANSI アプリケーションの SQL_CHAR データ型にバインドされている場合は、変換が行われることを理解しておくことが重要です。  
   
- この変換型 LONGVARCHAR のパラメーターを SQL_C_CHAR 型がバインドされている場合に特に、メモリの観点から効率的なことができます。 Jet 4.0 データベース エンジンが LONGTEXT パラメーター データのストリームにできないため、UNICODE 変換のバッファーを割り当てる必要がある SQL_C_CHAR ANSI バッファーのサイズの 2 倍であります。 最も効率的なメカニズムでは、アプリケーションが UNICODE 変換を実行し、型 SQL_C_WCHAR としてパラメーターをバインドします。 パラメーターが実行時のデータとしてマークされているし、SQLPutData に複数の呼び出しで指定されているデータ、longtext データ バッファーは拡張します。 SQL_DATA_AT_EXEC_LEN(x) を使用して、省略可能な長さを指定する、この成長の費用を回避する方法の 1 つの「データの配置」バッファーが、 *x*予想されるバイトの長さです。 これに内部 PutData バッファーのサイズが初期化されます*x*バイト。  
+ SQL_C_CHAR 型が LONGVARCHAR 型のパラメーターにバインドされている場合、この変換はメモリの観点から特に非効率的です。 Jet 4.0 エンジンは LONGTEXT パラメーターのデータをストリームできないため、SQL_C_CHAR ANSI バッファーの2倍のサイズの UNICODE 変換バッファーを割り当てる必要があります。 最も効率的なメカニズムは、アプリケーションが UNICODE 変換を実行し、パラメーターを SQL_C_WCHAR 型としてバインドすることです。 パラメーターが実行時データとしてマークされていて、データが SQLPutData の複数の呼び出しで提供されている場合、longtext データバッファーが拡張されます。 この "Put Data" バッファーが大きくなるのを防ぐ方法の1つとして、SQL_DATA_AT_EXEC_LEN (x) を使用してオプションの長さを指定する方法があります。 *x*は想定されているバイト長です。 これにより、内部の PutData バッファーのサイズが*x*バイトに初期化されます。  
   
 > [!NOTE]  
->  使用して挿入または長い形式のデータを更新する効率的な方法を実現できます**SQLBulkOperations()** または**SQLSetPos()** SQL_DATA_AT_EXEC に長いデータを設定するとします。 (この場合 EXEC_LEN を無視) します。呼び出してデータをチャンク単位でストリーミングできます**SQLPutData**複数回、これは効果的にデータ テーブルに追加します。  
+>  長いデータを挿入または更新する効率的な方法は、 **Sqlbulkoperations ()** または**SQLSetPos ()** を使用して、長いデータを SQL_DATA_AT_EXEC に設定することです。 (この場合、EXEC_LEN は無視されます)。データをチャンク単位でストリーム配信するには、 **Sqlputdata**を複数回呼び出します。これにより、データが実質的にテーブルに追加されます。  
   
- バージョン 4.0 を Microsoft ODBC のデスクトップ データベース ドライバーを使用して Jet 3.5 データベースを使用してアプリケーションをアップグレードすると、パフォーマンスが低下し、作業セット サイズの増加が発生する可能性があります。 これはバージョン 3。*x*データベースを新しいバージョン 4.0 のドライバーを使用して開くことは、Jet 4.0 を読み込みます。 Jet 4.0 データベースを開くし、されることを確認するときに、データベースは、3 です。*x*バージョンについては、Jet の 3.5 エンジンもの読み込みに相当するインストール可能な ISAM ドライバーを読み込みます。 パフォーマンスとサイズの低下、Jet 3 を削除します。*x* Jet 4.0 形式のデータベースにデータベースを圧縮する必要があります。 2 つの Jet エンジンの読み込みを排除され、データへのコード パスを最小化されます。  
+ Microsoft ODBC Desktop データベースドライバを介して Jet 3.5 データベースを使用しているアプリケーションをバージョン4.0 にアップグレードすると、パフォーマンスが低下し、ワーキングセットサイズが増加する可能性があります。 これは、バージョン3の場合に行われます。*x*データベースは、新しいバージョン4.0 ドライバーを使用して開かれ、Jet 4.0 を読み込みます。 Jet 4.0 がデータベースを開いたときに、データベースが3であることを確認します。*x*バージョンでは、インストール可能な ISAM ドライバーも読み込まれます。これは、Jet 3.5 エンジンの読み込みに相当します。 パフォーマンスとサイズのペナルティを削除するには、Jet 3 を行います。*x*データベースは、Jet 4.0 形式のデータベースに圧縮する必要があります。 これにより、2つの Jet エンジンが読み込まれなくなり、データへのコードパスが最小化されます。  
   
- また、Jet 4.0 データベース エンジンは、Unicode エンジンです。 すべての文字列が格納され、Unicode で操作します。 ときに、ANSI アプリケーションでは、Jet 3 にアクセスします。*x* Jet 4.0 データベース エンジン、データを使用してデータベースは、Unicode、ANSI に ANSI から変換されます。 バージョン 4.0 の形式に、データベースを更新すると場合、文字列が Unicode 文字列の変換の 1 つのレベルを削除すると 1 つだけの Jet エンジンを通過して、データへのコード パスを最小限に抑えるに変換されます。
+ また、Jet 4.0 エンジンは Unicode エンジンです。 すべての文字列は、Unicode で格納および操作されます。 ANSI アプリケーションが Jet 3 にアクセスする場合。*x*データベース Jet 4.0 エンジンを使用して、データを Ansi から Unicode に変換し、ansi に戻します。 データベースがバージョン4.0 形式に更新された場合、文字列は Unicode に変換され、1レベルの文字列変換が削除されるだけでなく、1つの Jet エンジンのみを通過することによってデータへのコードパスが最小化されます。

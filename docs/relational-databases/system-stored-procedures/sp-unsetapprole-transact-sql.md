@@ -1,5 +1,5 @@
 ---
-title: sp_unsetapprole (TRANSACT-SQL) |Microsoft Docs
+title: sp_unsetapprole (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_unsetapprole
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 65fe8e1496fba4e622d63f1ce560aba4c1acfb83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 18fe415653a912bda012e786b0a65e5f5b30dd3c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022243"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891363"
 ---
-# <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  アプリケーション ロールを非アクティブ化し、以前のセキュリティ コンテキストに戻します。  
+  アプリケーションロールを非アクティブ化して、以前のセキュリティコンテキストに戻します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,27 +39,27 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>引数  
- **@cookie**  
- アプリケーション ロールがアクティブ化されたときに作成されたクッキーを指定します。 Cookie がによって作成された[sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)します。 **varbinary (8000)** します。  
+ **\@cookie**  
+ アプリケーションロールがアクティブ化されたときに作成されたクッキーを指定します。 Cookie は[sp_setapprole &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)によって作成されます。 **varbinary (8000)**。  
   
 > [!NOTE]  
->  **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 アプリケーションが引き続き予約**varbinary (8000)** サイズの増加、将来のリリースでクッキーの戻り値が正しく動作するアプリケーションが引き続き行われるようにします。  
+>  **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 アプリケーションは、今後のリリースでクッキーの戻り値のサイズが増加した場合にアプリケーションが引き続き正常に動作するように、 **varbinary (8000)** を引き続き予約する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- 使用して、アプリケーション後ロールをアクティブ化**sp_setapprole**、ユーザーがサーバーから切断またはを実行するまで、ロールがアクティブなまま**sp_unsetapprole**します。  
+## <a name="remarks"></a>注釈  
+ **Sp_setapprole**を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか**sp_unsetapprole**を実行するまで、ロールはアクティブのままになります。  
   
- アプリケーション ロールの概要については、次を参照してください。[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)します。  
+ アプリケーションロールの概要については、「[アプリケーションロール](../../relational-databases/security/authentication-access/application-roles.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要**パブリック**とアプリケーション ロールがアクティブ化時に保存する cookie の知識。  
+ アプリケーションロールがアクティブ化されたときに保存された cookie の**メンバーシップとナレッジ**のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>クッキーの作成を指定してアプリケーション ロールをアクティブ化し、その後以前のコンテキストに戻す  
- 次の例では、パスワード `Sales11` が設定されているアプリケーション ロール `fdsd896#gfdbfdkjgh700mM` をアクティブ化し、クッキーを作成します。 例では、現在のユーザーの名前を返し、し、実行して、元のコンテキストに戻します**sp_unsetapprole**します。  
+### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>Cookie を使用してアプリケーションロールをアクティブ化してから、前のコンテキストに戻す  
+ 次の例では、パスワード `Sales11` が設定されているアプリケーション ロール `fdsd896#gfdbfdkjgh700mM` をアクティブ化し、クッキーを作成します。 この例では、現在のユーザーの名前を返し、 **sp_unsetapprole**を実行して元のコンテキストに戻します。  
   
 ```  
 DECLARE @cookie varbinary(8000);  
@@ -77,11 +77,11 @@ SELECT USER_NAME();
 GO   
 ```  
   
-## <a name="see-also"></a>参照  
- [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_setapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;アプリケーションロールを作成する](../../t-sql/statements/create-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)  
   
   

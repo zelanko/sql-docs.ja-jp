@@ -1,6 +1,6 @@
 ---
 title: int、bigint、smallint、および tinyint (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Int、bigint、smallint、tinyint データ型の Transact-SQL リファレンス。 これらのデータ型は整数データを表わすために使用されます。
 ms.date: 09/08/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -28,26 +28,26 @@ ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 93043aae421bd36186558d8902403fdf72697e9f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077897"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008023"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint、および tinyint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 整数データを使用する実数データ型です。 データベースの容量を節約するために、すべての可能な値を確実に含めることができる最小のデータ型を使用します。 たとえば、255 歳以上の人は誰もいきていないので、人の年齢には tinyint で十分でしょう。 しかし、255 年を超える建物はあり得るので、建物の経過年数には tinyint では不十分になります。
   
-|データ型|範囲|ストレージ|  
+|データ型|Range|ストレージ|  
 |---|---|---|
 |**bigint**|-2^63 (-9,223,372,036,854,775,808) ～ 2^63-1 (9,223,372,036,854,775,807)|8 バイト|  
 |**int**|-2^31 (-2,147,483,648) ～ 2^31-1 (2,147,483,647)|4 バイト|  
 |**smallint**|-2^15 (-32,768) ～ 2^15-1 (32,767)|2 バイト|  
 |**tinyint**|0 ～ 255|1 バイト|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **Int** データ型は、主要な整数データ型が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。 **Bigint** データ型が使用するための整数値でサポートされている範囲を超える可能性があるときに、 **int** データ型。
   
 **bigint** 間に位置 **smallmoney** と **int** データ型の優先順位表でします。
@@ -77,7 +77,7 @@ Result1      Result2
 1073741823   1073741824.500000  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例を使用してテーブルを作成、 **bigint**, 、**int**, 、**smallint**, 、および **tinyint** データ型。 値は各列に挿入され、SELECT ステートメントで返されます。
   
 ```sql
@@ -107,7 +107,7 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

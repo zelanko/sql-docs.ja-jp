@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a16d34ca8865174d9d05dc08f01402a9d87187b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046767"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052593"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed イベント クラス
   RPC:Completed イベント クラスは、リモート プロシージャ コールが完了したことを示します。  
@@ -32,11 +31,11 @@ ms.locfileid: "63046767"
 |BinaryData|`image`|トレースでキャプチャされたイベント クラスに依存するバイナリ値。|2|はい|  
 |ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
 |CPU|`int`|イベントによって使用された CPU 時間。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]からは、マイクロ秒単位。 それより前のバージョンではミリ秒単位。|18|はい|  
-|DatabaseID|`int`|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
+|DatabaseID|`int`|USE *database*ステートメントで指定されたデータベースの ID、または特定のインスタンスに対して use *database*ステートメントが発行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |Duration|`bigint`|イベントによって使用された時間。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]からは、マイクロ秒単位。 それより前のバージョンではミリ秒単位。|13|はい|  
 |EndTime|`datetime`|リモート プロシージャ コールの終了時刻。|15|はい|  
-|[エラー]|`int`|特定のイベントのエラー番号。<br /><br /> 0 = OK<br /><br /> 1 = エラー<br /><br /> 2 = 中止<br /><br /> 3 = スキップ|31|はい|  
+|エラー|`int`|特定のイベントのエラー番号。<br /><br /> 0 = OK<br /><br /> 1 = エラー<br /><br /> 2 = 中止<br /><br /> 3 = スキップ|31|はい|  
 |EventClass|`int`|イベントの種類 = 10。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
@@ -47,7 +46,7 @@ ms.locfileid: "63046767"
 |NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |ObjectName|`nvarchar`|参照されているオブジェクトの名前。|34|はい|  
-|Reads|`bigint`|リモート プロシージャ コールによって実行されたページ読み取りの回数。|16|[はい]|  
+|読み取り|`bigint`|リモート プロシージャ コールによって実行されたページ読み取りの回数。|16|はい|  
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
 |RowCounts|`bigint`|RPC バッチに含まれる行数。|48|はい|  
 |ServerName|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26||  
@@ -55,8 +54,8 @@ ms.locfileid: "63046767"
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|`ntext`|リモート プロシージャ コールのテキスト。|1|はい|  
-|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|[はい]|  
-|Writes|`bigint`|リモート プロシージャ コールによって実行されたページ書き込みの回数。|17|はい|  
+|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
+|書き込み|`bigint`|リモート プロシージャ コールによって実行されたページ書き込みの回数。|17|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
 ## <a name="see-also"></a>参照  

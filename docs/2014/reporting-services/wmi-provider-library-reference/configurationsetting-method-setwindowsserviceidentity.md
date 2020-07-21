@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d08e9900453fe259d727e202489d728e0dce47e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097878"
 ---
-# <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>SetWindowsServiceIdentity メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="setwindowsserviceidentity-method-wmi-msreportserver_configurationsetting"></a>SetWindowsServiceIdentity メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーの Windows サービスを指定された Windows ユーザーとして実行させ、レポート サーバーを運用できるファイル システム権限をこのアカウントに与えます。  
   
 ## <a name="syntax"></a>構文  
@@ -47,7 +47,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *アカウント*  
  Windows サービスの実行に使用する "DOMAIN\alias" 形式の Windows アカウント。  
   
- *Password*  
+ *パスワード*  
  アカウントのパスワード。  
   
  *HRESULT*  
@@ -56,14 +56,14 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>コメント  
- ときに、 *UseBuiltInAccount*にパラメーターが設定されている`true`on Microsoft にレポート サーバーが実行されている[!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]または Windows XP では、値、*名前*、*ドメイン*、および*パスワード*パラメーターは無視され、ローカル システム アカウントを使用します。  
+## <a name="remarks"></a>解説  
+ *UseBuiltInAccount*パラメーターがに`true`設定され、レポートサーバーが MICROSOFT [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]または Windows XP で実行されている場合、 *Name*、 *Domain*、および*Password*の各パラメーターの値は無視され、ローカルシステムアカウントが使用されます。  
   
- ときに、 *UseBuiltInAccount*にパラメーターが設定されている`true`、レポート サーバーが Windows Server 2003 で実行されていると、*ドメイン*と*パスワード*プロパティは、無視するには、[名前] フィールドは、"Builtin\NetworkService"または"builtin \system"または"Builtin\LocalService"のいずれかを含める必要があります。  
+ *UseBuiltInAccount* `true`パラメーターがに設定され、レポートサーバーが Windows server 2003 で実行されている場合、*ドメイン*と*パスワード*のプロパティは無視され、名前フィールドには "指定" または "builtin\networkservice" または "Builtin\LocalService" のいずれかが含まれている必要があります。  
   
  SetWindowsServiceIdentity メソッドはレポート サーバーのインストール ディレクトリのファイルおよびフォルダーに対するファイル権限を設定します。  
   
- 指定されたアカウント、*アカウント*パラメーターが必要です`LogonAsService`Windows での権限。 このメソッドは、指定されたアカウントにこの権限を与えます。  
+ *Account*パラメーターで指定されたアカウント`LogonAsService`には、Windows の権限が必要です。 このメソッドは、指定されたアカウントにこの権限を与えます。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

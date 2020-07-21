@@ -1,7 +1,7 @@
 ---
-title: SQL ステートメントを使用してデータを変更する |Microsoft Docs
+title: SQL ステートメントを使用したデータの変更 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cbcdf01eed0114e1788f23cec3a24cf4a69329e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: a9de31bad8ef2980e7322b529a6a2b68a12355c2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004015"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69026751"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>SQL ステートメントを使用したデータの変更
 
@@ -34,7 +34,7 @@ ms.locfileid: "68004015"
 >
 > データの挿入先の列にスペースなどの特殊文字が含まれる場合は、それが既定値である場合を含め、挿入する値を指定する必要があります。 ここで指定しないと、挿入操作が失敗します。
 >
-> JDBC ドライバで、発生した可能性があるすべてのトリガが返した更新数を含む、すべての更新数を返す場合、lastUpdateCount 接続文字列プロパティを "false" に設定します。 LastUpdateCount プロパティの詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。
+> JDBC ドライバで、発生した可能性があるすべてのトリガが返した更新数を含む、すべての更新数を返す場合、lastUpdateCount 接続文字列プロパティを "false" に設定します。 lastUpdateCount プロパティの詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
 

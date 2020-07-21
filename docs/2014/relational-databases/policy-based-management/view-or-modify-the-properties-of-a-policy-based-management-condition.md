@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08baec48bd13445ef56ea6a29520d23ebaf683b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62677021"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049550"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>ポリシー ベースの管理条件のプロパティの表示または変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でポリシー ベースの管理条件のプロパティを表示または変更する方法について説明します。  
@@ -29,20 +28,20 @@ ms.locfileid: "62677021"
   
      [Security](#Security)  
   
--   **表示またはを使用して、条件のプロパティを変更します。**  
+-   **以下を使用して条件のプロパティを表示または変更するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-or-modify-a-conditions-properties"></a>条件のプロパティを表示または変更するには  
   
@@ -54,11 +53,11 @@ ms.locfileid: "62677021"
   
 4.  プラス記号をクリックして **[条件]** フォルダーを展開します。  
   
-5.  表示または編集する条件を右クリックし、 **[プロパティ]** をクリックします。 使用できるオプションの詳細については、**条件を開く -** _condition_name_ダイアログ ボックスを参照してください[新しい条件の作成または開く条件 ダイアログ ボックス、[全般] ページ](../../integration-services/general-page-of-integration-services-designers-options.md)、[条件ダイアログ ボックスの 依存ポリシーページを開く](open-condition-dialog-box-dependent-policies-page.md)、[新しい条件または条件を開く ダイアログ ボックス、[説明] ページを作成](create-new-condition-or-open-condition-dialog-box-description-page.md)、および[編集を高度な&#40;条件&#41; ダイアログ ボックス](advanced-edit-condition-dialog-box.md)します。  
+5.  表示または編集する条件を右クリックし、 **[プロパティ]** をクリックします。 [_Condition_name_ **条件を開く**] ダイアログボックスで使用可能なオプションの詳細については、「[新しい条件の作成] または [条件を開く] ダイアログボックス[、[全般] ページ](../../integration-services/general-page-of-integration-services-designers-options.md)、[条件を開く] ダイアログボックス、[[説明] ページ](create-new-condition-or-open-condition-dialog-box-description-page.md)」、および[「高度な編集 &#40;条件&#41; ダイアログボックス](advanced-edit-condition-dialog-box.md)」を参照してください。 [Open Condition Dialog Box, Dependent Policies Page](open-condition-dialog-box-dependent-policies-page.md)  
   
-6.  完了したら、 **[OK]** をクリックします。  
+6.  完了したら、[**OK**] をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-a-conditions-properties"></a>条件のプロパティを表示するには  
   

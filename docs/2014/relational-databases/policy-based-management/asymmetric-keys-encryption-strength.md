@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d83c2aa530fa0c0f6bff515ce4ed669fcef7dae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee48107177cef7a38daf0e7b0080c08db23b2367
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068983"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>非対称キー暗号化の強度
   このルールでは、非対称キーが 1024 ビット以上の強度の暗号化を使用して作成されたかどうかを確認します。  
@@ -29,6 +28,6 @@ ms.locfileid: "63253139"
  [暗号化アルゴリズムの選択](../security/encryption/choose-an-encryption-algorithm.md)  
   
 ## <a name="see-also"></a>参照  
- [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [ポリシーベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

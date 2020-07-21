@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 8: データのフィルターの作成 |Microsoft Docs'
+title: 'レッスン 8: データ フィルターを作成する | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108388"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>レッスン 8: データ フィルターを作成する
@@ -35,17 +35,17 @@ ms.locfileid: "66108388"
   
 1.  子レポートを開きます。  
   
-2.  Tablix の列見出しを選択、列ヘッダーの上に表示される灰色のセルを右クリックしをクリックして**Tablix のプロパティ**します。  
+2.  Tablix の列見出しを選択し、列見出しの上に表示されている灰色のセルを右クリックして、[ **tablix のプロパティ**] をクリックします。  
   
-3.  をクリックして、**フィルター** ] ページの [クリックして**追加**します。  
+3.  [**フィルター** ] ページをクリックし、[**追加**] をクリックします。  
   
-4.  **式**フィールドで、をクリックして`ProductID`ドロップダウン リストから。 これは、フィルターを適用する列です。  
+4.  [**式**] フィールドで、 `ProductID`ドロップダウンリストからをクリックします。 これは、フィルターを適用する列です。  
   
-5.  [等しい] をクリックして ( **=** ) 内の演算子、**演算子**ドロップダウン リスト。  
+5.  [演算子] ボックス**=** の一覧で、 **Operator**等号 () 演算子をクリックします。  
   
-6.  次の式ボタンをクリックして、**値**フィールドに、をクリックして**パラメーター**で、**カテゴリ**領域、およびダブルクリック`productid`で、 **値**領域。 **式の設定。値**フィールドのような式に表示するようになりました**パラメーターを =! productid します。値**します。  
+6.  [**値**] フィールドの横にある式ボタンをクリックし、 **[カテゴリ**] 領域の [**パラメーター** ] `productid`をクリックして、[**値**] 領域内をダブルクリックします。 **[式の設定: 値]** フィールドに、 **=Parameters!productid.Value**のような式が表示されます。  
   
-7.  をクリックして**ok、** と**OK**で再度、 **Tablix のプロパティ** ダイアログ ボックス。  
+7.  [ **Ok] を**クリックし、[ **Tablix のプロパティ**] ダイアログボックスでもう一度 [ **ok]** をクリックします。  
   
 8.  .rdlc ファイルを保存します。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66108388"
   
 1.  ソリューション エクスプローラーで、Default.aspx を展開し、Default.aspx.cs をダブルクリックします。  
   
-2.  パラメーターを受け取る新しい関数を作成`productid`、整数型を返します、`datatable`オブジェクト、および実行すると、次です。  
+2.  Integer 型のパラメーター `productid`を受け取り、 `datatable`オブジェクトを返す新しい関数を作成し、次のようにします。  
   
-    1.  データセットのインスタンスを作成します`DataSet2`、ステップ 2 で作成された[レッスン 4。子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)します。  
+    1.  「 `DataSet2`[レッスン 4: 子レポートのデータ接続とデータテーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)」の手順2で作成したデータセットのインスタンスを作成します。  
   
-    2.  定義されているクエリを実行する SqlServer データベースへの接続を作成する**レッスン 4。定義、データ接続と DataTable を子レポートの**します。  
+    2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** で定義されたクエリを実行します。  
   
     3.  クエリにより、フィルター選択されていないデータが返されます。  
   
@@ -105,11 +105,11 @@ ms.locfileid: "66108388"
   
 1.  Default.aspx を開きます。  
   
-2.  ReportViewer コントロールを右クリックし、をクリックし、**プロパティ。**  
+2.  ReportViewer コントロールを右クリックし、[プロパティ] をクリックし**ます。**  
   
-3.  **プロパティ** ページで、をクリックして、**イベント**アイコン。  
+3.  [**プロパティ**] ページで、[**イベント**] アイコンをクリックします。  
   
-4.  ダブルクリックして、**ドリルスルー**イベント。  
+4.  [**ドリルスルー** ] イベントをダブルクリックします。  
   
      次に示すブロックに似たイベント ハンドラー セクションがコードに追加されます。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66108388"
   
     1.  *DrillthroughEventArgs* パラメーターから子レポート オブジェクト参照をフェッチする。  
   
-    2.  関数を呼び出す `GetPurchaseOrderDetail`  
+    2.  関数を呼び出します。`GetPurchaseOrderDetail`  
   
     3.  `PurchaseOrderDetail` DataTable をレポートの対応するデータ ソースにバインドする。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "66108388"
   
 -   `PurchaseOrderDetail` テーブルからフィルター選択されたデータを選択する関数を作成します。  
   
--   パラメーターの値を取得し、バインドするイベント ハンドラーを追加、 `PurchaseOrdeDetail` DataTable を子レポートします。  
+-   パラメーター値を取得し、その`PurchaseOrdeDetail` DataTable を子レポートにバインドするイベントハンドラーを追加します。  
   
 #### <a name="to-create-a-function-that-selects-filtered-data-from-the-purchaseorderdetail-table"></a>PurchaseOrderDetail テーブルからフィルター選択されたデータを選択する関数を作成するには  
   
@@ -165,9 +165,9 @@ ms.locfileid: "66108388"
   
 2.  新しい関数を作成します。この関数は、Integer 型の `productid` パラメーターを受け取った後、`datatable` オブジェクトを返し、次の操作を行います。  
   
-    1.  データセットのインスタンスを作成します`DataSet2`、ステップ 2 で作成された[レッスン 4。子レポートのデータ接続とデータ テーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)します。  
+    1.  「 `DataSet2`[レッスン 4: 子レポートのデータ接続とデータテーブルを定義する](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)」の手順2で作成したデータセットのインスタンスを作成します。  
   
-    2.  定義クエリを実行する SqlServer データベースへの接続を作成する**レッスン 4。定義、データ接続と DataTable を子レポートの**します。  
+    2.  SqlServer データベースへの接続を作成し、 **「レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する」** で定義したクエリを実行します。  
   
     3.  このクエリには、返されるデータを親レポートで選択された `productid` に基づいてフィルター選択するための `ProductID` パラメーターが含まれます。  
   
@@ -216,11 +216,11 @@ ms.locfileid: "66108388"
   
 1.  Default.aspx を開きます。  
   
-2.  ReportViewer コントロールを右クリックし、**プロパティ**します。  
+2.  ReportViewer コントロールを右クリックし、[**プロパティ**] をクリックします。  
   
-3.  **プロパティ**ウィンドウで、をクリックして、**イベント**アイコン。  
+3.  [**プロパティ**] ウィンドウで、[**イベント**] アイコンをクリックします。  
   
-4.  ダブルクリックして、**ドリルスルー**イベント。  
+4.  [**ドリルスルー** ] イベントをダブルクリックします。  
   
      次のようなイベント ハンドラー セクションがコードに追加されます。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "66108388"
   
     4.  `GetPurchaseOrderDetail` 関数を呼び出し、`ProductID` パラメーターの値を渡す。  
   
-    5.  バインド、 `PurchaseOrderDetail` DataTable をレポートには、データ ソースの対応します。  
+    5.  `PurchaseOrderDetail` DataTable をレポートの対応するデータソースにバインドします。  
   
          完成したイベント ハンドラーのコードは、次のようになります。  
   

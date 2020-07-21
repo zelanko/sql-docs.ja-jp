@@ -11,15 +11,14 @@ helpviewer_keywords:
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6585733a4b864e14815990189fd6924e217de546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ffd2dc9912d30c21d8d258ed09a4e42460a82937
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770683"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430109"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>条件分割変換を使用してデータセットを分割する
   条件分割変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -59,12 +58,12 @@ ms.locfileid: "62770683"
   
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Conditional Split Transformation](conditional-split-transformation.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   
  [Integration Services のデータ型](../integration-services-data-types.md)   
- [[データ フロー タスク]](../../control-flow/data-flow-task.md)   
- [Integration Services (SSIS) 式](../../expressions/integration-services-ssis-expressions.md)  
+ [データ フロー タスク](../../control-flow/data-flow-task.md)   
+ [Integration Services &#40;SSIS&#41; 式](../../expressions/integration-services-ssis-expressions.md)  
   
   

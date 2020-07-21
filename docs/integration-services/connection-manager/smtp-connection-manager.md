@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SMTP connection manager [Integration Services]
 - connection managers [Integration Services], SMTP
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5e946568e41b6ba8df928f370d3b8ba2ebc9e354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5f36ab7571008b73d90cc337e3fe7f5e5fa8523
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904222"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087432"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 接続マネージャー
 
@@ -46,7 +46,7 @@ ms.locfileid: "67904222"
     > [!IMPORTANT]  
     >  SMTP 接続マネージャーでは、匿名認証と Windows 認証のみがサポートされています。 基本認証はサポートされていません。  
   
--   電子メール メッセージを送信するときに、SSL (Secure Sockets Layer) を使用して通信を暗号化するかどうかを指定します。  
+-   電子メール メッセージを送信するときに、トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して通信を暗号化するかどうかを指定します。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "67904222"
   
  SMTP 接続マネージャーの詳細については、「 [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
- **[名前]**  
+### <a name="options"></a>Options  
+ **名前**  
  接続マネージャーの一意な名前を指定します。  
   
- **[説明]**  
+ **説明**  
  接続マネージャーの説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続マネージャーの目的について記述することをお勧めします。  
   
  **[SMTP サーバー]**  
@@ -79,5 +79,5 @@ ms.locfileid: "67904222"
 >  SMTP サーバーとして Microsoft Exchange を使用する場合は、 **[Windows 認証を使用]** を **True**に設定する必要があります。 未認証の SMTP 接続を許可しないように Exchange サーバーを構成することもできます。  
   
  **[SSL (Secure Sockets Layer) を有効にする]**  
- 選択すると、電子メール メッセージの送信時に SSL (Secure Sockets Layer) を使用して通信が暗号化されます。  
+ 選択すると、電子メール メッセージの送信時に TLS/SSL を使用して通信が暗号化されます。  
   

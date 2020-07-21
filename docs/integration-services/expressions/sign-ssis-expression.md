@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 962f92044ea81cb7bb420176103a3df63c4b7ddd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d98782b0c007f584c5d013c49dafe47a01106a38
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967808"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71288632"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (SSIS 式)
 
@@ -42,7 +42,7 @@ SIGN(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、SIGN は NULL を返します。  
   
 ## <a name="expression-examples"></a>式の例  

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 478e6b9bb6f8300a845ae8fe9e3202f750f525eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 692ff343154ae53d53cce4bf385e7e1e6350bb03
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106111"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897173"
 ---
 # <a name="article-options-for-merge-replication"></a>マージ レプリケーションのアーティクルのオプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   アプリケーションのニーズに合わせてレプリケーション動作をカスタマイズするためのマージ テーブル アーティクルには多くのオプションがあります。 マージ レプリケーションを使用すると、以下のようなことが可能です。  
   
--   行フィルター、結合フィルター、および列フィルターを使用します。 テーブル アーティクルをフィルター選択すると、パブリッシュされるデータのパーティションを作成できます。 詳細については、「[パブリッシュされたデータのフィルター処理](../../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
+-   行フィルター、結合フィルター、および列フィルターを使用します。 テーブル アーティクルをフィルター選択すると、パブリッシュされるデータのパーティションを作成できます。 詳細については、「[パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
   
 -   サブスクライバーでの変更をパブリッシャーにアップロードするかどうかを指定します。 サブスクライバーでデータの一部またはすべてが読み取り専用であるアプリケーションでは、アーティクルをダウンロード専用にすることにより、パフォーマンスが向上します。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
@@ -32,11 +32,11 @@ ms.locfileid: "68106111"
   
 -   アーティクルの処理順序を指定し、アプリケーションが要求する順序でアーティクルが処理されるようにします。 詳細については、[マージ レプリケーションのオプションの指定](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)に関するページを参照してください。  
   
--   関連するレコードのセットを 1 つの単位として処理するように指定します (既定では、マージ レプリケーションはテーブルへの変更を行単位で処理します)。 詳細については、「[論理レコードによる関連行への変更のグループ化](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」を参照してください。  
+-   関連するレコードのセットを 1 つの単位として処理するように指定します (既定では、マージ レプリケーションはテーブルへの変更を行単位で処理します)。 詳細については、「[Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
   
--   トポロジの複数のノードで同じデータが変更される可能性がある場合に、競合の検出と解決を使用します。 詳細については、「 [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
+-   トポロジの複数のノードで同じデータが変更される可能性がある場合に、競合の検出と解決を使用します。 詳細については、「 [マージ レプリケーションの競合の検出および解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
--   制約やトリガーをサブスクライバーにコピーするかどうかなど、スキーマ オプションを指定します。 詳細については、「 [スキーマ オプションの指定](../../../relational-databases/replication/publish/specify-schema-options.md)」を参照してください。  
+-   制約やトリガーをサブスクライバーにコピーするかどうかなど、スキーマ オプションを指定します。 詳細については、「[スキーマ オプションの指定](../../../relational-databases/replication/publish/specify-schema-options.md)」を参照してください。  
   
 -   ビジネス ロジック ハンドラーを使用して、同期中に発生するさまざまな状況に対処します。 たとえば、データの変更、競合、エラーに対処します。 詳細については、「[Execute Business Logic During Merge Synchronization](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)」(マージ同期中のビジネス ロジックの実行) をご覧ください。  
   

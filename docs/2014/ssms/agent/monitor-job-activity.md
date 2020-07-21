@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5088e029e90b4556c1559f8c948e8a8734762749
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001881"
 ---
 # <a name="monitor-job-activity"></a>ジョブの利用状況の監視
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブの利用状況モニターを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで定義されているすべてのジョブの現在の利用状況を監視できます。  
@@ -57,13 +56,13 @@ ms.locfileid: "62704773"
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの実行状態を表示する方法を説明します。|[[ジョブの利用状況の表示]](view-job-activity.md)|  
   
 ## <a name="see-also"></a>参照  
  [ジョブの利用状況の表示](view-job-activity.md)   
- [dbo.sysjobactivity &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
- [dbo.syssessions &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
- [sp_help_jobactivity &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
+ [dbo.sysjobactivity &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [dbo.sysセッション &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [sp_help_jobactivity &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

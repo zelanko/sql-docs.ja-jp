@@ -15,14 +15,14 @@ helpviewer_keywords:
 - packages [Integration Services], logs
 - Integration Services packages, log providers
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 70e61b8dbf28e513839a8d08ed067e10bd2f65c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: af676b15dfb7cafe389566655589509bf47087c7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062970"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297146"
 ---
 # <a name="developing-a-custom-log-provider"></a>カスタム ログ プロバイダーの開発
 
@@ -45,7 +45,7 @@ ms.locfileid: "68062970"
  [カスタム ログ プロバイダー用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
  カスタム ログ プロバイダー用のカスタム ユーザー インターフェイスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ではサポートされません。  
   
-## <a name="related-topics"></a>関連項目  
+## <a name="related-topics"></a>関連トピック  
   
 ### <a name="information-common-to-all-custom-objects"></a>すべてのカスタム オブジェクトに共通の情報  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。  

@@ -1,6 +1,5 @@
 ---
-title: ユーザー辞書によるワード ブレーカーの動作のカスタマイズ | Microsoft Docs
-ms.custom: ''
+title: ユーザー辞書によるワード ブレーカーの動作のカスタマイズ
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -11,15 +10,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 548072483f4a6c8ea0669fce13aaab0595ec4c97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d9a3f034312dcb6be52534968034fe526cfa5955
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758059"
 ---
-# <a name="customize-the-behavior-of-word-breakers-with-a-custom-dictionary"></a>ユーザー辞書によるワード ブレーカーの動作のカスタマイズ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="customize-behavior-of-word-breakers-with-a-custom-dictionary-sql-server-search"></a>ユーザー辞書によるワード ブレーカーの動作のカスタマイズ (SQL Server Search)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   言語固有のユーザー辞書ファイルを作成することで、特定の言語のワード ブレーカーの動作をカスタマイズできます。 たとえば、特定の用語やパターンがワード ブレーカーによって区切られないようにすることができます。  
   
  詳細については、次の SharePoint の記事を参照してください。  

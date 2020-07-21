@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9dcdbf69-1d47-422c-842e-0bed5afdcb93
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91cc095971d4cf4b613d1a9447ee10b6c8a65d75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6437f792e9fd8c7d9c9c4f355a27d79b9404431b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981857"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906354"
 ---
 # <a name="getmetadata-method-sqlserverresultset"></a>getMetaData メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public java.sql.ResultSetMetaData getMetaData()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getMetaData メソッドは、java.sql.ResultSet インターフェイスの getMetaData メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e26d3e89fcba41d474ca56637f9e465f17127348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060535"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>パブリケーション データベースでのスキーマの変更
-  レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで実行した場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
+  レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで行った場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
   
 -   ALTER TABLE  
   
@@ -53,7 +52,7 @@ ms.locfileid: "68199453"
 ## <a name="considerations-for-schema-changes"></a>スキーマ変更に関する注意点  
  スキーマ変更をレプリケートする際には、以下の点に注意してください。  
   
-### <a name="general-considerations"></a>全般的な注意点  
+### <a name="general-considerations"></a>一般的な考慮事項  
   
 -   スキーマ変更は、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の制限の対象となります。 たとえば、ALTER TABLE で主キー列を変更することはできません。  
   
@@ -85,11 +84,11 @@ ms.locfileid: "68199453"
   
 #### <a name="adding-columns"></a>列の追加  
   
--   テーブルに新しい列を追加し、その列を既存のパブリケーションに含めるには、ALTER TABLE \<Table> ADD \<Column> を実行します。 この列は、既定ですべてのサブスクライバーにレプリケートされます。 この列では、NULL 値を許容するか既定の制約を含める必要があります。 列の追加の詳細については、このトピックの「マージ レプリケーション」を参照してください。  
+-   新しい列をテーブルに追加し、その列を既存のパブリケーションに含めるには、ALTER TABLE add を実行し \<Table> \<Column> ます。 この列は、既定ですべてのサブスクライバーにレプリケートされます。 この列では、NULL 値を許容するか既定の制約を含める必要があります。 列の追加の詳細については、このトピックの「マージ レプリケーション」を参照してください。  
   
--   テーブルに新しい列を追加し、その列を既存のパブリケーションに含めない場合は、スキーマ変更のレプリケーションを無効にしてから、ALTER TABLE \<Table> ADD \<Column> を実行します。  
+-   新しい列をテーブルに追加し、既存のパブリケーションにその列を含めないようにするには、スキーマ変更のレプリケーションを無効にしてから ALTER TABLE add を実行し \<Table> \<Column> ます。  
   
--   既存のパブリケーションに既存の列を含めるには、[sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。  
+-   既存のパブリケーションに既存の列を含めるには、 [sp_articlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、 [sp_mergearticlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)、または [パブリケーションの**プロパティ- \<Publication> ** ] ダイアログボックスを使用します。  
   
      詳しくは、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。 この場合は、サブスクリプションの再初期化が必要になります。  
   
@@ -97,15 +96,15 @@ ms.locfileid: "68199453"
   
 #### <a name="dropping-columns"></a>列の削除  
   
--   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルから削除するには、ALTER TABLE \<Table> DROP \<Column> を実行します。 この列は、既定ですべてのサブスクライバーのテーブルから削除されます。  
+-   既存のパブリケーションから列を削除し、パブリッシャーのテーブルから列を削除するには、ALTER TABLE drop を実行し \<Table> \<Column> ます。 この列は、既定ですべてのサブスクライバーのテーブルから削除されます。  
   
--   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルからは削除しない場合は、[sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。  
+-   既存のパブリケーションから列を削除し、パブリッシャーのテーブルの列を保持するには、 [sp_articlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)、 [sp_mergearticlecolumn &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)、または [**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスを使用します。  
   
      詳しくは、「 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)」をご覧ください。 この場合は、新しいスナップショットの生成が必要になります。  
   
 -   削除する列は、データベースのどのパブリケーションのどのアーティクルのフィルター句でも使用できません。  
   
--   パブリッシュされたアーティクルから列を削除するときには、データベースに影響する可能性のある列の制約、インデックスまたはプロパティについて考慮する必要があります。 以下に例を示します。  
+-   パブリッシュされたアーティクルから列を削除するときには、データベースに影響する可能性のある列の制約、インデックスまたはプロパティについて考慮する必要があります。 次に例を示します。  
   
     -   主キーで使用されている列をトランザクション パブリケーションのアーティクルから削除することはできません。それらの列は、レプリケーションによって使用されます。  
   
@@ -144,11 +143,11 @@ ms.locfileid: "68199453"
         ||100RTM、ネイティブ モードのスナップショット|100RTM、キャラクター モードのスナップショット|その他すべての互換性レベル|  
         |-|-----------------------------|--------------------------------|------------------------------------|  
         |`hierarchyid`|変更を許可する|変更をブロックする|変更をブロックする|  
-        |`geography` および `geometry`|変更を許可する|変更を許可する<sup>1</sup>|変更をブロックする|  
+        |`geography` および `geometry`|変更を許可する|変更の許可<sup>1</sup>|変更をブロックする|  
         |`filestream`|変更を許可する|変更をブロックする|変更をブロックする|  
-        |`date`、`time`、`datetime2`、および `datetimeoffset`|変更を許可する|変更を許可する<sup>1</sup>|変更をブロックする|  
+        |`date`、`time`、`datetime2`、および `datetimeoffset`|変更を許可する|変更の許可<sup>1</sup>|変更をブロックする|  
   
-         <sup>1</sup> SQL Server Compact サブスクライバー、サブスクライバーでは、これらのデータ型に変換します。  
+         <sup>1</sup> SQL Server Compact サブスクライバーでこれらのデータ型を変換します。  
   
 -   スキーマ変更の適用時にエラー (サブスクライバーで利用できないテーブルを参照する外部キーを追加した結果のエラーなど) が発生すると、同期が失敗し、サブスクリプションを再初期化しなければならなくなります。  
   
@@ -156,13 +155,13 @@ ms.locfileid: "68199453"
   
 -   マージ レプリケーションには、トラブルシューティングの際にスキーマ変更をスキップするストアド プロシージャが用意されています。 詳細については、「[sp_markpendingschemachange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql)」および「[sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
- [ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
- [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
- [ALTER FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
+ [ALTER VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
+ [ALTER PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
+ [ALTER FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
- [データとデータベース オブジェクトのパブリッシュ](publish-data-and-database-objects.md)   
+ [データとデータベースオブジェクトのパブリッシュ](publish-data-and-database-objects.md)   
  [カスタム トランザクション プロシージャの再生成によるスキーマ変更の反映](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
   
   

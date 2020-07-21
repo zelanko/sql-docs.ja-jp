@@ -1,5 +1,5 @@
 ---
-title: データベース ファイルから別のデバイスにバックアップ ファイルがある必要があります |Microsoft Docs
+title: バックアップファイルは、データベースファイルとは別のデバイスに配置する必要があります。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7039bebb-1f25-4cf3-81f1-393dfb78da12
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 09c54c8229351cf27e0f42c8895f2633b8aa7ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5eff9cb3139e1e1043f99ba63d11160b1010c27
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62812626"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936147"
 ---
 # <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>バックアップ ファイルはデータベース ファイルとは別のデバイスに配置する
   このルールでは、データベース ファイルがバックアップ ファイルとは異なるデバイス上にあるかどうかを確認します。 データベース ファイルとバックアップ ファイルが同じデバイスにある場合、デバイスに障害が発生すると、データベースとバックアップの両方が使用できなくなります。 また、データベースとバックアップ ファイルを異なるデバイスに置くと、データベースの運用でもバックアップの書き込みでも I/O パフォーマンスが最適化されます。  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893512"
 ---
 # <a name="using-member-expressions"></a>メンバー式の使用
@@ -20,7 +20,7 @@ ms.locfileid: "68893512"
 
   メンバー式には、メンバー識別子、メンバー関数、またはメンバーに変換できる式が含まれています。  
   
- メンバー識別子には、さまざまな形式があります。 メンバー識別子の最も単純な形式は、メンバーの名前で構成されます。 以下に例を示します。  
+ メンバー識別子には、さまざまな形式があります。 メンバー識別子の最も単純な形式は、メンバーの名前で構成されます。 次に例を示します。  
   
 ```  
 SELECT Amount ON 0  
@@ -56,12 +56,12 @@ Dimension_Name
   
 ```  
   
- MDX 関数には、メンバーを返すものが多数存在します。 完全な一覧については、「 [Mdx 関数リファレンス&#40;&#41; mdx](../mdx/mdx-function-reference-mdx.md) 」を参照してください。  
+ MDX 関数には、メンバーを返すものが多数存在します。 完全な一覧については、「mdx[関数リファレンス &#40;mdx](../mdx/mdx-function-reference-mdx.md) 」を参照してください&#41;  
   
 > [!NOTE]  
->  メンバー名とメンバーキーの詳細については、「メンバーの操作」、「[組&#41;」、および「MDX の設定&#40;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)」を参照してください。  
+>  メンバー名とメンバーキーの詳細については、「 [MDX&#41;&#40;メンバー、組、およびセットの操作](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [MDX &#40;の式&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>参照  
+ [MDX &#40;式&#41;](../mdx/expressions-mdx.md)  
   
   

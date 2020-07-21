@@ -1,5 +1,5 @@
 ---
-title: 株価チャート (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 株価チャート (レポート ビルダー) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 524b04f08b533046e4ed16c02b175c1c30f3442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d59677d4259e8e25e8e58c20b461fe25e2f762dc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65578557"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77077125"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>株価チャート (レポート ビルダーおよび SSRS)
 
@@ -38,7 +38,7 @@ ms.locfileid: "65578557"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、価格指標、相対力指数、MACD など、株価チャートで使用する多くの計算式が用意されています。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [範囲グラフ](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
 [グラフ](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

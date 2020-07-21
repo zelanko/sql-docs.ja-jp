@@ -1,6 +1,7 @@
 ---
-title: マージ サブスクリプションの種類と競合解決の優先度を指定する | Microsoft Docs
-ms.custom: ''
+title: 種類と競合解決の優先度を指定する (マージ)
+description: SQL Server のマージ サブスクリプションで使用される種類と競合解決ポリシーを指定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0fe64a74b85aca2ff02308c384dce89b9be540a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2981f84bd2cbf6c813a4adf761ddd271c8b68fd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737051"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>マージ サブスクリプションの種類と競合解決の優先度を指定する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   サブスクリプションの新規作成ウィザードの **[サブスクリプションの種類]** ページで、マージ サブスクリプションの種類と競合解決の優先度を指定します。 このウィザードの使用方法の詳細については、「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) 」および「 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)」を参照してください。  
   
- サブスクリプションの種類はサブスクリプションの作成後には変更できませんが、サーバー サブスクリプションの種類の優先度は、 **[サブスクリプションのプロパティ - \<Publisher>: \<PublicationDatabase>]** ダイアログ ボックスで変更できます。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
+ サブスクリプションの種類はサブスクリプションの作成後には変更できませんが、サーバー サブスクリプションの種類の優先度は、 **[サブスクリプションのプロパティ - \<Publisher>:\<PublicationDatabase>]** ダイアログ ボックスで変更できます。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
 ### <a name="to-specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>マージ サブスクリプションの種類と競合解決の優先度を指定するには  
   
@@ -34,7 +35,7 @@ ms.locfileid: "67907608"
   
 ### <a name="to-modify-the-conflict-resolution-priority"></a>競合解決の優先度を変更するには  
   
-1.  **サブスクリプションのプロパティ - \<パブリッシャー>:\<PublicationDatabase>** (パブリッシャー) で、**優先度** オプションの値 (0.00 から 99.99) を入力します。  
+1.  パブリッシャーの **[サブスクリプションのプロパティ - \<Publisher>:\<PublicationDatabase>]** で、 **[優先度]** オプションの値 (0.00 ～ 99.99) を入力します。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

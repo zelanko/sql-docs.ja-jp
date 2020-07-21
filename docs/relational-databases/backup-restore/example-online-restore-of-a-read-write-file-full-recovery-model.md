@@ -1,7 +1,8 @@
 ---
-title: 例:読み取り/書き込みファイルのオンライン復元 (完全復旧モデル) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)
+description: この例では、複数のファイル グループを含む完全復旧モデルを使用して、データベースの読み取り/書き込みファイルを復元する SQL Server でのオンライン復元を示します。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a078dbb7547eea3aff98d69d925ef9168c843825
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75c16bab2ed7f8f46ee05af3dedf533530f07f08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737791"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>例:読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックは、複数のファイルやファイル グループを含む、完全復旧モデルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連しています。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68089721"
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  
     RESTORE LOG adb FROM log_backup2 WITH NORECOVERY;  
     RESTORE LOG adb FROM log_backup3 WITH NORECOVERY;  
-    RESTORE LOG adb WITH RECOVERY;  
+    RESTORE DATABASE adb WITH RECOVERY;  
     ```  
   
      ファイル `a1` がオンラインになります。  

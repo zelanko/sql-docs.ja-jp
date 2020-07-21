@@ -14,15 +14,15 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1475b0b2145d40f22760edb5a23e040cb9fef58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056129"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757590"
 ---
 # <a name="dml-triggers"></a>DML トリガー
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   DML トリガーとは、そこに定義されているテーブルまたはビューに影響するようなデータ操作言語 (DML) イベントが発生すると自動的に実行される特殊なストアド プロシージャです。 DML イベントには、INSERT、UPDATE、または DELETE のステートメントが含まれます。 DML トリガーを使用して、ビジネス ルールやデータの整合性を強制的に適用したり、他のテーブルを照会したりできるほか、複雑な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用することもできます。 トリガーとそのトリガーを起動するステートメントは単一のトランザクションとして扱われ、このトランザクションはトリガー内からロールバックできます。 ディスクの空き容量の不足などの重大なエラーが検出されると、このトランザクション全体が自動的にロールバックされます。  
   
 ## <a name="dml-trigger-benefits"></a>DML トリガーの利点  
@@ -55,15 +55,15 @@ ms.locfileid: "68056129"
   
  次の表は、AFTER トリガーと INSTEAD OF トリガーの機能を比較したものです。  
   
-|機能|AFTER トリガー|INSTEAD OF トリガー|  
+|Function|AFTER トリガー|INSTEAD OF トリガー|  
 |--------------|-------------------|------------------------|  
 |適用範囲|テーブル|テーブルとビュー|  
 |テーブルまたはビューごとの数|トリガーを起動する動作 (UPDATE、DELETE、および INSERT) ごとに複数指定できます。|トリガーを起動する動作 (UPDATE、DELETE、および INSERT) ごとに 1 つしか指定できません。|  
 |連鎖参照|制限はありません。|INSTEAD OF UPDATE トリガーと DELETE トリガーは、参照整合性制約の連鎖の対象となっているテーブルでは許可されません。|  
-|実行|次の処理の後<br /><br /> 制約処理<br /><br /> 宣言参照動作<br /><br /> **inserted** テーブルと **deleted** テーブルの作成<br /><br /> トリガーを起動する動作|次の処理の前制約処理<br /><br /> 次の処理の代わり: トリガーを起動する動作<br /><br /> 次の処理の後:  **inserted** テーブルと **deleted** テーブルの作成|  
+|実行|次の処理の後<br /><br /> 制約処理<br /><br /> 宣言参照動作<br /><br /> **inserted** テーブルと **deleted** テーブルの作成<br /><br /> トリガーを起動する動作|次の処理の前: 制約処理<br /><br /> 次の処理の代わり: トリガーを起動する動作<br /><br /> 次の処理の後:  **inserted** テーブルと **deleted** テーブルの作成|  
 |実行の順序|最初と最後の実行内容を指定できます。|適用なし|  
-|**inserted**テーブルと **deleted**テーブル内の **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** の列参照|Allowed|Allowed|  
-|**inserted**テーブルと **deleted**テーブル内の **text** 、 **ntext** 、および **image** の列参照|使用不可|Allowed|  
+|**inserted**テーブルと **deleted**テーブル内の **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** の列参照|許可|許可|  
+|**inserted**テーブルと **deleted**テーブル内の **text** 、 **ntext** 、および **image** の列参照|禁止|許可|  
   
  CLR トリガー  
  CLR トリガーは、AFTER トリガーと INSTEAD OF トリガーのいずれかにすることができます。 また、CLR トリガーは DDL トリガーにすることもできます。 CLR トリガーは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを実行するのではなく、.NET Framework で作成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でアップロードされたアセンブリのメンバーであるマネージド コードに記述されている、1 つ以上のメソッドを実行します。  

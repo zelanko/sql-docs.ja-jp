@@ -13,35 +13,34 @@ helpviewer_keywords:
 - instances of SQL Server, disconnecting
 - disconnecting [SMO]
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68b2dcc56e52ca35359e8af5f4c829a0be1ed6f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 1b7d361ab7648c4cc196aaf9ee2d7be88d980e4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126728"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006369"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>SQL Server のインスタンスからの切断
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを手動で閉じたり切断する処理は必要ありません。 接続を開いたり閉じたりする操作は、必要に応じて行われます。  
   
-## <a name="connection-pooling"></a>接続のプール  
- ときに、 [Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)メソッドが呼び出されると、接続が自動的に解放されません。 [切断](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)接続プールへの接続を解放するメソッドを明示的に呼び出す必要があります。 また、プールされていない接続を要求することもできます。 これを行う、 [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>を参照するプロパティ、 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクト。  
+## <a name="connection-pooling"></a>接続プール  
+ [Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect)メソッドを呼び出すと、接続は自動的には解放されません。 接続プールへの接続を解放するには、 [Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)メソッドを明示的に呼び出す必要があります。 また、プールされていない接続を要求することもできます。 これを行うには、 [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection) <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> [serverconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトを参照するプロパティの nonpooledconnection プロパティを設定します。  
   
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>RMO の SQL Server のインスタンスからの切断  
  RMO を使ったプログラミングでサーバー接続を閉じる方法は、SMO とは若干異なります。  
   
- によって、RMO オブジェクトのサーバー接続が維持されるため、 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトのインスタンスから切断するときにも、このオブジェクトが使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RMO を使用してプログラミングする場合。 使用して接続を終了する、 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトを呼び出し、[切断](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)RMO オブジェクトのメソッド。 接続が閉じられた後は、RMO オブジェクトを使用することはできません。  
+ RMO オブジェクトのサーバー接続は[Serverconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトによって維持されるため、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rmo を使用してプログラムを作成するときに、このオブジェクトはのインスタンスから切断するときにも使用されます。 [Serverconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトを使用して接続を閉じるには、rmo オブジェクトの[Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect)メソッドを呼び出します。 接続が閉じられた後は、RMO オブジェクトを使用することはできません。  
   
 ## <a name="example"></a>例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
  
   
 ## <a name="closing-and-disconnecting-an-smo-object-in-visual-basic"></a>Visual Basic で SMO オブジェクトを閉じたり切断する処理を行う方法  
- このコード例を設定して、プールされていない接続を要求する方法を示しています、 [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>オブジェクト プロパティです。  
+ このコード例では、オブジェクトプロパティの[Nonpooledconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)プロパティを設定して、プールされていない接続を要求する方法を示し <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> ます。  
   
 ```VBNET
 Dim srv As Server
@@ -57,7 +56,7 @@ srv.ConnectionContext.Disconnect()
 ```
   
 ## <a name="closing-and-disconnecting-an-smo-object-in-visual-c"></a>Visual C# で SMO オブジェクトを閉じたり切断する処理を行う方法  
- このコード例を設定して、プールされていない接続を要求する方法を示しています、 [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>オブジェクト プロパティです。  
+ このコード例では、オブジェクトプロパティの[Nonpooledconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection)プロパティを設定して、プールされていない接続を要求する方法を示し <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> ます。  
   
 ```csharp  
 {   
@@ -76,6 +75,6 @@ srv.ConnectionContext.Disconnect();
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
- [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)  
+ [Microsoft.sqlserver.management.common.serverconnection>](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)  
   
   

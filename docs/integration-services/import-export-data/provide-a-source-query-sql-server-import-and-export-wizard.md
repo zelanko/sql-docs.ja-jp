@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5e0f3f4b7f9adfd0d0d5bbe805ec1e607ccac5c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901769"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71285126"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>[基になるクエリの指定]\(SQL Server インポートおよびエクスポート ウィザード)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67901769"
 -   `SELECT *` は、すべての列のコピーを意味します。
 -   `WHERE` 句がない場合は、すべての行のコピーを意味します。
   
- ![インポートおよびエクスポート ウィザードの [基になるクエリの指定] ページ](../../integration-services/import-export-data/media/source-query.png "インポートおよびエクスポート ウィザードの [基になるクエリの指定] ページ")  
+ ![インポートおよびエクスポート ウィザードの [基になるクエリ] ページ](../../integration-services/import-export-data/media/source-query.png "インポートおよびエクスポート ウィザードの [基になるクエリ] ページ")  
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>クエリを指定して構文を確認する
 **SQL ステートメント**  
@@ -59,7 +59,7 @@ WHERE CommissionPct > 0.015
  **[参照]**  
  **[開く]** ダイアログ ボックスを使用して、SQL クエリのテキストを含む保存ファイルを指定します。 ファイルを選択すると、そのファイルのテキストが **[SQL ステートメント]** テキスト ボックスにコピーされます。  
  
-## <a name="excelQueries"></a> Excel のソース クエリを指定する
+## <a name="provide-a-source-query-for-excel"></a><a name="excelQueries"></a> Excel のソース クエリを指定する
 
 > [!IMPORTANT]
 > Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。
@@ -88,6 +88,6 @@ WHERE CommissionPct > 0.015
   
 -   ほとんどの宛先では、次のページは **[コピー元のテーブルおよびビューを選択]** になります。 このページで、指定したクエリを確認し、オプションでコピーする列を選択し、サンプル データをプレビューします。 詳細については、「 [コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」を参照してください。  
   
--   宛先がフラット ファイルの場合、次のページは **[フラット ファイルの変換先の構成]** になります。 このページで、宛先のフラット ファイルの書式設定オプションを指定します (フラット ファイルを構成した後、次に表示されるページは **[コピー元のテーブルおよびビューを選択]** になります)。詳細については、「[フラット ファイルの変換先の構成](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。  
+-   宛先がフラット ファイルの場合、次のページは **[フラット ファイルの変換先の構成]** になります。 このページで、宛先のフラット ファイルの書式設定オプションを指定します (フラット ファイルを構成した後、次に表示されるページは **[コピー元のテーブルおよびビューを選択]** になります)。詳細については、「 [フラット ファイルの変換先の構成](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。  
 
 

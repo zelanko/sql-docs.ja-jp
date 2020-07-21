@@ -1,6 +1,7 @@
 ---
-title: 可用性グループ リスナーのプロパティの表示 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性グループ リスナーのプロパティの表示
+description: SQL Server Management Studio、Transact-SQL、または PowerShell を SQL Server で使用して、Always On 可用性グループ リスナーのプロパティを表示する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55603d6dba2a5f688ce07d1f071019f101d9e955
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2f148deff16e26b8eec4d3c34b0e602e5e7f06e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013377"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893818"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>可用性グループ リスナーのプロパティの表示 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 *で* または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、AlwaysOn [!INCLUDE[tsql](../../../includes/tsql-md.md)] 可用性グループ リスナー [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のプロパティを表示する方法について説明します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **リスナーのプロパティを表示するには**  
   
 1.  オブジェクト エクスプローラーで、リスナーを表示する可用性グループの任意の可用性レプリカをホストするサーバー インスタンスに接続します。 サーバー名をクリックし、サーバー ツリーを展開します。  
@@ -37,11 +38,11 @@ ms.locfileid: "68013377"
   
 5.  これにより、 **[可用性グループ リスナーのプロパティ]** ダイアログ ボックスが開きます。 詳細については、このトピックの「 [[可用性グループ リスナーのプロパティ] (ダイアログ ボックス)](#AgListenerPropertiesDialog)」を参照してください。  
   
-###  <a name="AgListenerPropertiesDialog"></a> [可用性グループ リスナーのプロパティ] (ダイアログ ボックス)  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a> [可用性グループ リスナーのプロパティ] (ダイアログ ボックス)  
  **[リスナーの DNS 名]**  
  可用性グループ リスナーのネットワーク名。  
   
- **ポート**  
+ **[ポート]**  
  このリスナーで使用される TCP ポート。  
   
 > [!NOTE]  
@@ -58,7 +59,7 @@ ms.locfileid: "68013377"
   
  グリッドには、リスナーがリッスンする各サブネットと、そのサブネットに関連付けられた IP アドレスが表示されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **リスナーのプロパティを表示するには**  
   
  可用性グループ リスナーを監視するには、次のビューを使用します。  
@@ -81,7 +82,7 @@ ms.locfileid: "68013377"
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用した [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境の監視の詳細については、「[可用性グループの監視 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 指定のターゲット (スキーマ生成ウィザード) (Analysis Services - 多次元データ) |Microsoft Docs
+title: ターゲットの指定 (スキーマ生成ウィザード) (Analysis Services 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 343cb7d3957f1859b8676629a14b165e756b450d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068250"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940283"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>[対象の指定] (スキーマ生成ウィザード) (Analysis Services - 多次元データ)
   **[対象の指定]** ページを使用すると、リレーショナル スキーマを作成するデータ ソース ビューを指定できます。  
   
-## <a name="options"></a>および  
- **新しいデータ ソース ビューを作成します。**  
+## <a name="options"></a>オプション  
+ **[新しいデータ ソース ビューを作成する]**  
  ウィザードで生成されるリレーショナル スキーマが含まれる、新しいデータ ソース ビューを作成する場合に選択します。  
   
- **データ ソース ビュー名**  
+ **[データ ソース ビュー名]**  
  新しいデータ ソース ビューの名前を入力します。  
   
 > [!NOTE]  
@@ -43,11 +42,11 @@ ms.locfileid: "66068250"
   
  詳細については、「[データ ソース ウィザードの F1 ヘルプ (Analysis Services)](data-source-wizard-f1-help-analysis-services.md)」を参照してください。  
   
- **既存のデータ ソース ビューを使用します。**  
+ **[既存のデータ ソース ビューを使用する]**  
  ウィザードで生成されるリレーショナル スキーマが含まれる、既存のデータ ソース ビューを選択する場合に選択します。  
   
 ## <a name="see-also"></a>参照  
- [スキーマ生成ウィザードの F1 ヘルプ&#40;Analysis Services - 多次元データ&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [スキーマ生成ウィザードの F1 ヘルプ &#40;Analysis Services-多次元データ&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Analysis Services のウィザード &#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

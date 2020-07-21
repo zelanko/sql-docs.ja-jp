@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a70b6c8093b48ce2f258fdfbfaf7f1d4c466561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066953"
 ---
-# <a name="sql-server-httpstorageobject"></a>SQL Server:HTTP_STORAGE_OBJECT
-  **SQLServer:HTTP_STORAGE_OBJECT** パフォーマンス オブジェクトは、Windows Azure ストレージ アカウントを監視する各種のパフォーマンス カウンターで構成されています。 使用して[Windows Azure での SQL Server データ ファイル](../databases/sql-server-data-files-in-microsoft-azure.md)機能、Windows Azure Storage Blob にデータベース ファイルを格納できます。 このパフォーマンス オブジェクトでは、各 Windows Azure ストレージ アカウントが別々のドライブとして処理されます。  
+# <a name="sql-server-http_storage_object"></a>SQL Server:HTTP_STORAGE_OBJECT
+  **SQLServer: HTTP_STORAGE_OBJECT**パフォーマンスオブジェクトは、Azure Storage アカウントを監視するパフォーマンスカウンターで構成されています。 [Azure 機能で SQL Server データファイル](../databases/sql-server-data-files-in-microsoft-azure.md)を使用すると、Azure Storage blob にデータベースファイルを格納できます。 このパフォーマンス オブジェクトでは、各 Azure ストレージ アカウントが別々のドライブとして処理されます。  
   
 |カウンター名|説明|  
 |------------------|-----------------|  
@@ -28,9 +27,9 @@ ms.locfileid: "63250538"
 |**Reads/sec**|HTTP ストレージでの 1 秒あたりの読み取り数。|  
 |**Writes/sec**|HTTP ストレージでの 1 秒あたりの書き込み数。|  
 |**Transfers/sec**|HTTP ストレージでの 1 秒あたりの読み取りおよび書き込み操作数。|  
-|**平均Bytes/Read**|読み取りごとに HTTP ストレージから転送された平均バイト数。|  
-|**平均Bytes/Write**|書き込みごとに HTTP ストレージから転送された平均バイト数。|  
-|**平均Bytes/Transfer**|読み取りまたは書き込み操作中に HTTP ストレージから転送された平均バイト数。|  
+|**平均バイト数/読み取り**|読み取りごとに HTTP ストレージから転送された平均バイト数。|  
+|**Avg. Bytes/Write**|書き込みごとに HTTP ストレージから転送された平均バイト数。|  
+|**平均バイト数/転送**|読み取りまたは書き込み操作中に HTTP ストレージから転送された平均バイト数。|  
 |**Avg. microsec/Read**|HTTP ストレージからの読み取りごとに要する平均マイクロ秒数。|  
 |**Avg. microsec/Write**|HTTP ストレージへの書き込みごとに要する平均マイクロ秒数。|  
 |**Avg. microsec/Transfer**|HTTP ストレージへの転送ごとに要する平均マイクロ秒数。|  

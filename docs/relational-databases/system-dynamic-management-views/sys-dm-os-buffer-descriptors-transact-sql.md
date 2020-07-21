@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_buffer_descriptors (TRANSACT-SQL) |Microsoft Docs
+title: dm_os_buffer_descriptors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -17,60 +17,60 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787012"
 ---
-# <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  現在では、すべてのデータ ページに関する情報を返します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッファー プールです。 このビューの出力は、バッファー プール内のデータベース ページのディストリビューションをデータベース、オブジェクト、または種類に従って決定するために使用できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、次を参照してください。[バッファー プール拡張機能](../../database-engine/configure-windows/buffer-pool-extension.md)します。  
+  現在バッファープールにあるすべてのデータページに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このビューの出力を使用すると、データベース、オブジェクト、または型に応じて、バッファープール内のデータベースページの分布を確認できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、「[バッファープール拡張](../../database-engine/configure-windows/buffer-pool-extension.md)」を参照してください。  
   
- ディスクから読み込まれたデータ ページは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プールにコピーされ、再使用に備えてキャッシュされます。 キャッシュされたデータ ページには、それぞれ 1 つのバッファー記述子が割り当てられます。 このバッファー記述子により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに現在キャッシュされている各データ ページが一意に識別されます。 sys.dm_os_buffer_descriptors では、キャッシュされたページのすべてのユーザーとシステム データベースを返します。 これには、リソース データベースに関連付けられているページも含まれます。  
+ ディスクから読み込まれたデータ ページは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プールにコピーされ、再使用に備えてキャッシュされます。 キャッシュされた各データページには、1つのバッファー記述子があります。 このバッファー記述子により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに現在キャッシュされている各データ ページが一意に識別されます。 dm_os_buffer_descriptors は、すべてのユーザーデータベースおよびシステムデータベースのキャッシュされたページを返します。 これには、リソースデータベースに関連付けられているページも含まれます。  
   
-> **注:** これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_buffer_descriptors**します。  
+> **注:** またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_buffer_descriptors**という名前を使用します。  
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|バッファー プール内のページに関連付けられているデータベースの ID。 NULL 値が許可されます。|  
-|file_id|**int**|ページに関連する保存済みの画像を格納するファイルの ID。 NULL 値が許可されます。|  
+|database_id|**int**|バッファープール内のページに関連付けられているデータベースの ID。 NULL 値が許可されます。|  
+|file_id|**int**|ページの永続化されたイメージを格納するファイルの ID。 NULL 値が許可されます。|  
 |page_id|**int**|ファイル内のページの ID。 NULL 値が許可されます。|  
 |page_level|**int**|ページのインデックス レベル。 NULL 値が許可されます。|  
-|allocation_unit_id|**bigint**|ページのアロケーション ユニットの ID。 この値は sys.allocation_units の結合に使用できます。 NULL 値が許可されます。|  
-|page_type|**nvarchar(60)**|など、ページを種類します。データ ページやインデックス ページです。 NULL 値が許可されます。|  
-|row_count|**int**|ページの行数。 NULL 値が許可されます。|  
-|free_space_in_bytes|**int**|使用できるページの空き領域 (バイト単位)。 NULL 値が許可されます。|  
+|allocation_unit_id|**bigint**|ページのアロケーションユニットの ID。 この値は sys.allocation_units の結合に使用できます。 NULL 値が許可されます。|  
+|page_type|**nvarchar(60)**|ページの種類。たとえば、データページやインデックスページなどです。 NULL 値が許可されます。|  
+|row_count|**int**|ページ上の行の数。 NULL 値が許可されます。|  
+|free_space_in_bytes|**int**|ページの使用可能な空き領域のサイズ (バイト単位)。 NULL 値が許可されます。|  
 |is_modified|**bit**|1 = ディスクからの読み取り後にページが変更されました。 NULL 値が許可されます。|  
 |numa_node|**int**|バッファーの Nonuniform Memory Access ノード。 NULL 値が許可されます。|  
-|read_microsec|**bigint**|バッファーにページを読み込むために必要な実時間 (マイクロ秒)。 この数字では、バッファーを再利用するとリセットされます。 NULL 値が許可されます。|  
-|is_in_bpool_extension|**bit**|1 = ページがバッファー プール拡張機能。 NULL 値が許可されます。|  
-|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
+|read_microsec|**bigint**|バッファーにページを読み込むために必要な実際の時間 (マイクロ秒単位)。 この数値は、バッファーが再利用されるとリセットされます。 NULL 値が許可されます。|  
+|is_in_bpool_extension|**bit**|1 = ページはバッファープール拡張機能に含まれています。 NULL 値が許可されます。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
-## <a name="remarks"></a>コメント  
- sys.dm_os_buffer_descriptors では、リソース データベースによって使用されているページが返されます。 sys.dm_os_buffer_descriptors では、ページの空きや流用ページ、または読み取られたときにエラーを発生したページに関する情報は返されません。  
+## <a name="remarks"></a>Remarks  
+ dm_os_buffer_descriptors によって、リソースデータベースによって使用されているページが返されます。 dm_os_buffer_descriptors では、無料または盗難にあったページ、または読み取り時にエラーが発生したページに関する情報は返されません。  
   
-|From|変換先|基準|リレーションシップ|  
+|From|終了|オン|リレーションシップ|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多対一|  
-|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|多対一|  
-|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|多対一|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys. allocation_units|allocation_unit_id|多対一|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys. database_files|file_id|多対一|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|多対一|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-returning-cached-page-count-for-each-database"></a>A. 各データベースのキャッシュ ページ数を返す  
- 次の例では、各データベースについて、読み込まれたページ数を返します。  
+### <a name="a-returning-cached-page-count-for-each-database"></a>A. 各データベースのキャッシュされたページ数を返す  
+ 次の例では、データベースごとに読み込まれたページ数を返します。  
   
 ```  
 SELECT COUNT(*)AS cached_pages_count  
@@ -83,8 +83,8 @@ GROUP BY DB_NAME(database_id) ,database_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>B. 現在のデータベース内の各オブジェクトのキャッシュ ページ数を返す  
- 次の例では、現在のデータベース内の各オブジェクトについて、読み込まれたページ数を返します。  
+### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>B: 現在のデータベース内の各オブジェクトのキャッシュ ページ数を返す  
+ 次の例では、現在のデータベース内の各オブジェクトに対して読み込まれたページ数を返します。  
   
 ```  
 SELECT COUNT(*)AS cached_pages_count   
@@ -112,10 +112,10 @@ GROUP BY name, index_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
- [SQL Server オペレーティング システム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Resource データベース](../../relational-databases/databases/resource-database.md)   
  [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   

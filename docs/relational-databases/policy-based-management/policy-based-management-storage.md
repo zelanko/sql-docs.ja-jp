@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2f2be2bae147355557925bba1bd475ee9583447d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b927398f565720412bbd9f15b9520a17ef0a960
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727301"
 ---
 # <a name="policy-based-management-storage"></a>ポリシー ベースの管理のストレージ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ポリシーは msdb データベースに格納されます。 ポリシーまたは条件を変更した後、msdb をバックアップする必要があります。 詳細については、「[システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)」を参照してください。  
   
 ## <a name="storing-policies"></a>ポリシーの保存  

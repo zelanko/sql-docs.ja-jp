@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb169478337e160c63ccd538c2d2f8120de8311f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65ebdd2cfac33202437d0c6f515a838ed71e9534
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125032"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720483"
 ---
 # <a name="delete-a-resource-pool"></a>リソース プールの削除
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   リソース プールを削除にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
@@ -28,16 +28,16 @@ ms.locfileid: "68125032"
   
 -   **リソース プールの削除に使用するもの:** [SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  ワークロード グループが含まれている場合は、リソース プールを削除できません。  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  リソース ガバナーの既定のリソース プールや内部リソース プールを削除することはできません。 ワークロード グループが含まれている場合は、リソース プールを削除できません。 詳細については、「 [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md)」を参照してください。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  リソース プールを削除するには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="DelRPSSMS"></a> オブジェクト エクスプ ローラーを使用してリソース プールを削除する  
+##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> オブジェクト エクスプ ローラーを使用してリソース プールを削除する  
  **SQL Server Management Studio を使用してリソース プールを削除するには**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
@@ -46,12 +46,10 @@ ms.locfileid: "68125032"
   
 3.  **[オブジェクトの削除]** ウィンドウの **[削除されるオブジェクト]** ボックスの一覧に、リソース プールが表示されます。 リソース プールを削除するには、 **[OK]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!NOTE]  
-    >  If the resource pool that you are trying to delete contains a workload group, this action will fail.  
+    >  ワークロード グループが含まれているリソース プールを削除しようとすると失敗します。  
   
-##  <a name="DelRPTSQL"></a> Transact-SQL を使用してリソース プールを削除する  
+##  <a name="delete-a-resource-pool-using-transact-sql"></a><a name="DelRPTSQL"></a> Transact-SQL を使用してリソース プールを削除する  
  **Transact-SQL を使用してリソース プールを削除するには**  
   
 1.  削除するリソース プールの名前を指定して **DROP RESOURCE POOL** ステートメントまたは **DROP EXTERNAL RESOURCE POOL** ステートメントを実行します。  

@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ea24081f4b3a41211f3bd8d6bba52aaec8b74fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15432eb3fa96995799c3009483d9f16cbcc5452f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62868744"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551789"
 ---
-# <a name="mssqlserver3168"></a>MSSQLSERVER_3168
+# <a name="mssqlserver_3168"></a>MSSQLSERVER_3168
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|3168|  
@@ -50,7 +49,7 @@ ms.locfileid: "62868744"
 ## <a name="user-action"></a>ユーザーの操作  
  この状況での復元プロセスはかなり複雑になるため、最後の手段としてのみ使用します。 詳細については、「[SQL Server の別のビルドにデータベースのシステム バックアップを復元することができません。](https://support.microsoft.com/kb/264474)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム データベースのバックアップと復元 &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
   

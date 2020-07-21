@@ -1,5 +1,5 @@
 ---
-title: '&lt; (より小さい)(MDX) |Microsoft Docs'
+title: '&lt;(より小さい)(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 70a22115250fd525e4451a5aa110fa4bb61da306
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905703"
 ---
-# <a name="lt-less-than-mdx"></a>&lt; (より小さい)(MDX)
+# <a name="lt-less-than-mdx"></a>&lt;(より小さい)MDX
 
 
   1 つの多次元式 (MDX) 式の値が、別の MDX 式の値よりも小さいかどうかを判別する比較演算を実行します。  
@@ -34,14 +34,14 @@ MDX_Expression < MDX_Expression
 ## <a name="return-value"></a>戻り値  
  次の条件に基づくブール値。  
   
--   **true**かどうかは、両方のパラメーターが null 以外の場合、および最初のパラメーターが 2 番目のパラメーターの値よりも小さい値です。  
+-   両方のパラメーターが null 以外の場合、および最初のパラメーターの値が2番目のパラメーターの値よりも小さい場合は**true** 。  
   
--   **false**両方のパラメーターが null 以外の場合と、最初のパラメーターが値に等しいか、2 番目のパラメーターの値以下であるかどうか。  
+-   両方のパラメーターが null 以外の場合、および最初のパラメーターの値が2番目のパラメーターの値以上の場合は**false** 。  
   
 -   いずれか一方または両方のパラメーターが NULL 値に評価される場合は、NULL です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、この演算子の使用を示します。  
+ この演算子の使用例を次に示します。  
   
 ```  
 -- This query returns the gross profit margin (GPM)  
@@ -60,7 +60,7 @@ WHERE
     ([Measures].[LowGPM])  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 演算子リファレンス &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

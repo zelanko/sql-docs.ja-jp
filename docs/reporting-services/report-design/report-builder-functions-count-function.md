@@ -1,5 +1,5 @@
 ---
-title: Count 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Count 関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579719"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081300"
 ---
 # <a name="report-builder-functions---count-function"></a>レポート ビルダー関数 - Count 関数
   式で指定された NULL 以外の値の数を、指定されたスコープのコンテキストで評価して返します。  
@@ -41,7 +41,7 @@ Count(expression, scope, recursive)
 ## <a name="return-type"></a>戻り値の型  
  **Integer**値を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
   
  *Expression* には、入れ子になった集計関数への呼び出しを含めることができます。ただし、次に示すように、これには例外および条件があります。  
@@ -60,7 +60,7 @@ Count(expression, scope, recursive)
   
  例  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  次のコード例では、既定のスコープおよび親グループのスコープで、 `Size` の NULL でない値の数を計算する式を示します。 この式は、子グループ `GroupbySubcategory`に属する行内のセルに追加されます。 親グループは `GroupbyCategory`です。 この式では、 `GroupbySubcategory` (既定のスコープ) の結果、次に `GroupbyCategory` (親グループのスコープ) の結果が表示されます。  
   
 > [!NOTE]  

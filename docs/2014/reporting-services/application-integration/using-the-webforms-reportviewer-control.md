@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238213"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer コントロールの使用
@@ -24,7 +24,7 @@ ms.locfileid: "63238213"
   
 ###### <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Web アプリケーションで ReportViewer コントロールを使用するには  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] を使用して、新しい [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET Web サイトを作成します。  
+1.  [!INCLUDE[csprcs](../../includes/csprcs-md.md)]また[!INCLUDE[msCoName](../../includes/msconame-md.md)]は[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]を[!INCLUDE[msCoName](../../includes/msconame-md.md)]使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)] 、新しい ASP.NET Web サイトを作成します。  
   
      \- または -  
   
@@ -32,17 +32,17 @@ ms.locfileid: "63238213"
   
 2.  **[ツールボックス]** ウィンドウの **[AJAX Extensions]** で **ScriptManager** コントロールを見つけて、Web フォームのデザイン画面にドラッグします。  
   
-     **ツールボックス**が表示されていない場合は、 **[表示]** メニューの **[ツールボックス]** をクリックするとアクセスできます。  
+     **ツールボックス**が表示されていない場合は、**[表示]** メニューの **[ツールボックス]** をクリックするとアクセスできます。  
   
 3.  **[ツールボックス]** で **ReportViewer** コントロールを見つけて、デザイン画面の **ScriptManager** コントロールの下にドラッグします。  
   
      reportViewer1 という名前の **ReportViewer** コントロールがフォームに追加されます。  
   
- コントロールがフォームに追加されると、 **[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。 表示するレポートがレポート サーバーに配置されている場合は、 **[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 **[\<サーバー レポート>]** オプションを選択すると、 **[レポート サーバー URL]** および **[レポートのパス]** という 2 つの追加プロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、 **[レポートのパス]** は表示するレポートへの完全なパスです。  
+ コントロールがフォームに追加されると、**[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。 表示するレポートがレポートサーバーに配置されている場合は、[**レポートの選択**] ドロップダウンリストから [ ** \<サーバーレポート>** ] オプションを選択します。 [ ** \<サーバーレポート>** ] オプションを選択すると、[**レポートサーバーの Url** ] と [**レポートのパス**] という2つの追加のプロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、**[レポートのパス]** は表示するレポートへの完全なパスです。  
   
- レポートをローカル モードで表示する場合は、 **[新しいレポートをデザインします]** オプションを選択してレポート デザイナーを起動するか、または既存のプロジェクトに既に含まれているレポートを選択します。 レポートを選択した後、ReportViewer コントロールの **[レポートのパス]** プロパティにレポート RDLC ファイルの名前を入力してください。 このプロパティは、 **[プロパティ]** ウィンドウの **[LocalReport]** ノードの下に表示されます。  
+ レポートをローカル モードで表示する場合は、**[新しいレポートをデザインします]** オプションを選択してレポート デザイナーを起動するか、または既存のプロジェクトに既に含まれているレポートを選択します。 レポートを選択した後、ReportViewer コントロールの **[レポートのパス]** プロパティにレポート RDLC ファイルの名前を入力してください。 このプロパティは、**[プロパティ]** ウィンドウの **[LocalReport]** ノードの下に表示されます。  
   
- レポートを表示するときに ReportViewer ツール バーの項目を隠すことができます。 たとえば、印刷ボタンを隠すことができます。 ツールバー項目を非表示にするには次の ReportViewer プロパティを設定`False`で、**プロパティ**ウィンドウ。  
+ レポートを表示するときに ReportViewer ツール バーの項目を隠すことができます。 たとえば、印刷ボタンを隠すことができます。 ツールバー項目を非表示にするには、 `False` [**プロパティ**] ペインで次の ReportViewer プロパティをに設定します。  
   
 -   `ShowBackButton`  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63238213"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>リモート処理モードでのレポートの表示  
  次の例では、レポート サーバーに配置されているレポートの表示方法を示します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル レポート プロジェクトに含まれている Sales Order Detail レポートを使用します。  
   
- この例では統合 Windows 認証を使用するので、最初に権限の借用を有効にする必要があります。 次の行を挿入これを行う、`web.config`ファイル。  
+ この例では統合 Windows 認証を使用するので、最初に権限の借用を有効にする必要があります。 これを行うには、 `web.config`ファイルに次の行を挿入します。  
   
 ```  
 <!-- Web.config file. -->  
@@ -155,9 +155,9 @@ End Class
   
      Sales Order Detail.rdl ファイルが、プロジェクトの一部になります。  
   
-5.  ソリューション エクスプローラーで Sales Order Detail.rdl ファイルを右クリックし、 **[名前の変更]** を選択します。 レポートの名前を **Sales Order Detail.rdlc** に変更し、Enter キーを押します。  
+5.  ソリューション エクスプローラーで Sales Order Detail.rdl ファイルを右クリックし、**[名前の変更]** を選択します。 レポートの名前を **Sales Order Detail.rdlc** に変更し、Enter キーを押します。  
   
-     ソリューション エクスプローラーが表示されていない場合は、 **[表示]** メニューの [ソリューション エクスプローラー] を選択して開くことができます。  
+     ソリューションエクスプローラーが表示されていない場合は、[**表示**] メニューの [ソリューションエクスプローラー] を選択して開くことができます。  
   
  次のコード例では、販売注文データのデータセットが作成され、Sales Order Detail レポートがローカル モードで表示されます。  
   

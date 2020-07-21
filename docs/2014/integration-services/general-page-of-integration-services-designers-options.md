@@ -9,22 +9,21 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f27ec0c9fe8078bb11a48114a3d456793271853d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a657425f4e21c8e81932bcc657ac4aa9884cca8b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768288"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425269"
 ---
 # <a name="general-page"></a>[全般] ページ
   **[オプション]** ダイアログ ボックスの **[Integration Services デザイナー]** ページにある **[全般]** ページを使用すると、パッケージの読み込み、表示、およびアップグレードに関するオプションを指定できます。  
   
  **[全般]** ページを開くには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で **[ツール]** メニューの **[オプション]** をクリックし、 **[ビジネス インテリジェンス デザイナー]** を展開して **[Integration Services デザイナー]** を選択します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[パッケージの読み込み時にデジタル署名を確認する]**  
  パッケージの読み込み時に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] でデジタル署名を確認する場合に選択します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、デジタル署名が存在するか、有効であるか、信頼されるソースから来たものであるかということだけが確認されます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、パッケージの署名後にパッケージが変更されたかどうかは確認されません。  
   

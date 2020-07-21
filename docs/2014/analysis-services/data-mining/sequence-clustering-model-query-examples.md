@@ -1,5 +1,5 @@
 ---
-title: シーケンス クラスター モデルのクエリ例 |Microsoft Docs
+title: シーケンスクラスターモデルのクエリ例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d56924f27f7986861895cf4fff21fa758cc47070
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082920"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520430"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、モデルに格納されている情報の詳細を取得できます。予測クエリでは、モデル内のパターンを使用して、指定した新しいデータに基づく予測を行うことができます。 シーケンス クラスター モデルでコンテンツ クエリを使用すると、一般に、検出されたクラスターやクラスター内の遷移に関する追加情報を取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -28,22 +27,22 @@ ms.locfileid: "66082920"
   
  ここでは、Microsoft シーケンス クラスター アルゴリズムに基づいたモデルに対するクエリの作成方法について説明します。 クエリの作成に関する一般的な情報については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
   
- **Content Queries**  
+ **コンテンツ クエリ**  
   
  [データ マイニング スキーマ行セットを使用してモデル パラメーターを取得する](#bkmk_Query1)  
   
  [状態に対するシーケンス一覧を取得する](#bkmk_Query2)  
   
- [システム ストアド プロシージャを使用する](#bkmk_Query3)  
+ [システムストアドプロシージャの使用](#bkmk_Query3)  
   
  **予測クエリ**  
   
  [次の状態を予測する](#bkmk_Query4)  
   
-##  <a name="bkmk_ContentQueries"></a> シーケンス クラスター モデルに関する情報の入手  
+##  <a name="finding-information-about-the-sequence-clustering-model"></a><a name="bkmk_ContentQueries"></a>シーケンスクラスターモデルに関する情報の検索  
  マイニング モデルのコンテンツに対して意味のあるクエリを作成するには、モデル コンテンツの構造や、各種類のノードに格納されている情報の種類を把握しておく必要があります。 詳細については、「 [シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-sequence-clustering-models.md)」を参照してください。  
   
-###  <a name="bkmk_Query1"></a> サンプル クエリ 1:データ マイニング スキーマ行セットを使用してモデル パラメーターを取得するには  
+###  <a name="sample-query-1-using-the-data-mining-schema-rowset-to-return-model-parameters"></a><a name="bkmk_Query1"></a>サンプルクエリ 1: データマイニングスキーマ行セットを使用してモデルパラメーターを取得する  
  データ マイニング スキーマ行セットに対してクエリを実行すると、モデルに関する各種の情報を取得できます (基本的なメタデータ、モデルが作成された日時、モデルが最後に処理された日時、基になるマイニング構造の名前、予測可能な属性として使用されている列など)。  
   
  次のクエリでは、 `[Sequence Clustering]`モデルの作成とトレーニングに使用されたパラメーターが返されます。 このモデルは、「 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)」のレッスン 5 で作成できます。  
@@ -54,7 +53,7 @@ from $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'Sequence Clustering'  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |MINING_PARAMETERS|  
 |------------------------|  
@@ -66,7 +65,7 @@ WHERE MODEL_NAME = 'Sequence Clustering'
   
  既定値として 10 が使用されているのは、多くの人にとって、クラスター数が少ない方が、データのグループ化を参照および理解しやすいためです。 ただし、それぞれのモデルとデータのセットは異なります。 クラスター数を増減してみて、最も正確なモデルが作成されるパラメーター値を探すようお勧めします。  
   
-###  <a name="bkmk_Query2"></a> サンプル クエリ 2:状態に対するシーケンスの一覧を取得します。  
+###  <a name="sample-query-2-getting-a-list-of-sequences-for-a-state"></a><a name="bkmk_Query2"></a>サンプルクエリ 2: 状態のシーケンスの一覧を取得する  
  マイニング モデル コンテンツには、トレーニング データで検出されたシーケンスが、最初の状態とそれに関連する 2 番目の状態の一覧の組み合わせとして格納されます。 最初の状態がシーケンスのラベルとして使用され、関連する 2 番目の状態は遷移と呼ばれます。  
   
  たとえば、次のクエリでは、モデルにある最初の状態の完全な一覧が返された後、シーケンスがクラスターにグループ化されます。  この一覧を取得するには、モデルのルート ノードを親 (PARENT_UNIQUE_NAME = 0) とするシーケンスの一覧 (NODE_TYPE = 13) を取得します。 FLATTENED キーワードによって、結果が読み取りやすくなります。  
@@ -108,7 +107,7 @@ WHERE NODE_DESCRIPTION = 'Transition row for sequence state 37'
 AND [PARENT_UNIQUE_NAME] = '1081327'  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |NODE_UNIQUE_NAME|  
 |------------------------|  
@@ -126,7 +125,7 @@ FROM [Sequence Clustering].CONTENT
 WHERE NODE_UNIQUE_NAME = '1081365'  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |t.Product2|t.P2 サポート|t.P2 確率|  
 |----------------|------------------|----------------------|  
@@ -142,7 +141,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  たとえば、クラスターが 4 つある場合、あるシーケンスがクラスター 1 に属する可能性は 40%、クラスター 2 に属する可能性は 30%、クラスター 3 に属する可能性は 20%、クラスター 4 に属する可能性は 10% です。 アルゴリズムでは、遷移が属する可能性が最も高いクラスターが特定された後、クラスター内での確率がクラスターの事前確率によって重み付けされます。  
   
-###  <a name="bkmk_Query3"></a> サンプル クエリ 3:システムを使用してストアド プロシージャ  
+###  <a name="sample-query-3-using-system-stored-procedures"></a><a name="bkmk_Query3"></a>サンプルクエリ 3: システムストアドプロシージャを使用する  
  これらのクエリ サンプルから、モデルに格納された情報が複雑であることと、必要な情報を取得するために複数のクエリを作成する必要が生じる場合があることがわかります。 ただし、Microsoft シーケンス クラスター ビューアーには、シーケンス クラスター モデルに含まれている情報をグラフィカルに表示する、一連の強力なツールが用意されています。このビューアーを使用して、モデルにクエリやドリル ダウンを実行することもできます。  
   
  Microsoft シーケンス クラスター ビューアーに表示される情報は、ほとんどの場合、モデルにクエリを実行する Analysis Services システム ストアド プロシージャを使用して作成されます。 モデル コンテンツに対するデータ マイニング拡張機能 (DMX) クエリを記述することによっても、同じ情報を取得できますが、Analysis Services システム ストアド プロシージャを使用すると、探索やモデルのテストをすばやく行うことができます。  
@@ -184,7 +183,7 @@ SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')
  詳細については、「[SELECT FROM &#60;model&#62;.SAMPLE_CASES (DMX)](/sql/dmx/select-from-model-dmx)」を参照してください。  
   
 #### <a name="cluster-characteristics-and-cluster-discrimination"></a>クラスターの特性とクラスターの識別  
- **[クラスターの特性]** タブには、各クラスターの主要な属性が、確率で順位付けされて表示されます。 ケースの数が、クラスターに属するとどのようなケースの分布のように、クラスター内にあります。それぞれの特性では、特定のサポートされています。 特定のクラスターの特性を確認するには、クラスターの ID を知っている必要があります。  
+ **[クラスターの特性]** タブには、各クラスターの主要な属性が、確率で順位付けされて表示されます。 クラスターに属するケースの数と、クラスター内のケースの分布について確認できます。各特性には、特定のサポートがあります。 特定のクラスターの特性を確認するには、クラスターの ID を知っている必要があります。  
   
  次の例では、システム ストアド プロシージャ `GetClusterCharacteristics`を使用して、確率スコアが指定したしきい値 0.0005 よりも高い、クラスター 12 の特性をすべて取得します。  
   
@@ -214,7 +213,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 ## <a name="using-the-model-to-make-predictions"></a>モデルを使用した予測  
  シーケンス クラスター モデルの予測クエリでは、他のクラスター モデルで使用される予測関数の多くを使用できます。 さらに、特別な予測関数 [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx)を使用すると、提案や次の状態についての予測を行うことができます。  
   
-###  <a name="bkmk_Query4"></a> サンプル クエリ 4:次の状態を予測します。  
+###  <a name="sample-query-4-predict-next-state-or-states"></a><a name="bkmk_Query4"></a>サンプルクエリ 4: 次の状態を予測する  
  [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 関数を使用すると、ある値に対して、最も可能性の高い次の状態を予測できます。 また、複数の次の状態を予測することもできます。たとえば、顧客が購入する可能性のある上位 3 製品の一覧を取得して、推奨製品一覧を提供することができます。  
   
  次のサンプル クエリは、上位 5 つの予測とその確率を返す単一予測クエリです。 入れ子になったテーブルがモデルに含まれているため、予測の実行時には、入れ子になったテーブル `[v Assoc Seq Line Items]`を列参照として使用する必要があります。 また、入れ子になった SELECT ステートメントに示されているように、入力として値を指定するときは、ケース テーブルと入れ子になったテーブルの両方の列を結合する必要があります。  
@@ -228,7 +227,7 @@ NATURAL PREDICTION JOIN
 AS t  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |Expression.$Sequence|Expression.Line 番号|Expression.Model|  
 |--------------------------|----------------------------|----------------------|  
@@ -253,28 +252,28 @@ AS t
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
-|[Cluster (DMX)](/sql/dmx/cluster-dmx)|入力したケースを含む可能性の最も高いクラスターを返します。|  
-|[ClusterDistance (DMX)](/sql/dmx/clusterdistance-dmx)|指定されたクラスターと入力したケース間の距離を返します。ただしクラスターが指定されていない場合は、最も可能性の高いクラスターと入力したケース間の距離を返します。<br /><br /> この関数は任意の種類のクラスター モデル (EM、K-Means など) と共に使用できますが、結果はアルゴリズムによって異なります。|  
-|[ClusterProbability (DMX)](/sql/dmx/clusterprobability-dmx)|入力ケースが指定されたクラスターに所属する確率を返します。|  
-|[IsInNode (DMX)](/sql/dmx/isinnode-dmx)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
-|[PredictAdjustedProbability (DMX)](/sql/dmx/predictadjustedprobability-dmx)|指定された状態の調整済みの確率を返します。|  
-|[PredictAssociation (DMX)](/sql/dmx/predictassociation-dmx)|結合メンバーシップを予測します。|  
-|[PredictCaseLikelihood (DMX)](/sql/dmx/predictcaselikelihood-dmx)|入力したケースが既存のモデル内に収まる確率値を返します。|  
+|予測関数|使用法|  
+|[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|入力したケースを含む可能性の最も高いクラスターを返します。|  
+|[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|指定されたクラスターと入力したケース間の距離を返します。ただしクラスターが指定されていない場合は、最も可能性の高いクラスターと入力したケース間の距離を返します。<br /><br /> この関数は任意の種類のクラスター モデル (EM、K-Means など) と共に使用できますが、結果はアルゴリズムによって異なります。|  
+|[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|入力ケースが指定されたクラスターに所属する確率を返します。|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|指定された状態の調整済みの確率を返します。|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|結合メンバーシップを予測します。|  
+|[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|入力したケースが既存のモデル内に収まる確率値を返します。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|指定された列の予測のためのヒストグラムを表すテーブルを返します。|  
-|[PredictNodeId (DMX)](/sql/dmx/predictnodeid-dmx)|ケースが分類されるノードの Node_ID を返します。|  
-|[PredictProbability (DMX)](/sql/dmx/predictprobability-dmx)|指定された状態の確率を返します。|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|ケースが分類されるノードの Node_ID を返します。|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|指定された状態の確率を返します。|  
 |[PredictSequence (DMX)](/sql/dmx/predictsequence-dmx)|指定された一連のシーケンス データに対して予測される将来のシーケンス値です。|  
-|[PredictStdev (DMX)](/sql/dmx/predictstdev-dmx)|指定された列に対して、予測された標準偏差を返します。|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|指定された列に対して、予測された標準偏差を返します。|  
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|指定された状態に対するサポート値を返します。|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|指定された列の分散を返します。|  
   
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 (DMX)](/sql/dmx/general-prediction-functions-dmx)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング クエリ](data-mining-queries.md)   
- [Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft シーケンス クラスター アルゴリズム](microsoft-sequence-clustering-algorithm.md)   
- [シーケンス クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [データマイニングクエリ](data-mining-queries.md)   
+ [Microsoft シーケンスクラスターアルゴリズムテクニカルリファレンス](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft シーケンスクラスターアルゴリズム](microsoft-sequence-clustering-algorithm.md)   
+ [シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-sequence-clustering-models.md)  
   
   

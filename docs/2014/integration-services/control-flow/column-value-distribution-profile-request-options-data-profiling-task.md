@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5a79ba9f2ff211ed4bf56e749acba7f1d4601643
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 59a3adf03dd9d6b33493b8876a79f1a7b7c70583
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832427"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433609"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>[列の値分布プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列の値分布プロファイル要求]** のオプションを設定できます。 列の値分布プロファイルは、選択された列に含まれるすべての異なる値と、それぞれの値が表す行のテーブル内での比率を報告します。 また、テーブル内の指定された比率を超えている行の値も報告できます。 このプロファイルを使用すると、列に含まれる個別の値の数が正しくないなどのデータの問題を特定できます。 たとえば、米国の州の列をプロファイルし、50 個を超える個別の値を検出できます。  
@@ -25,7 +24,7 @@ ms.locfileid: "62832427"
 > [!NOTE]  
 >  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer (Data Profile Viewer)](data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[列の値分布プロファイル要求]** のオプション グループは次のとおりです。  
@@ -34,7 +33,7 @@ ms.locfileid: "62832427"
   
 -   **全般**  
   
--   **Options**  
+-   **[オプション]**  
   
 ### <a name="data-options"></a>[データ] のオプション  
  **[ConnectionManager]**  
@@ -45,7 +44,7 @@ ms.locfileid: "62832427"
   
  詳細については、このトピックの「[TableorView] のオプション」を参照してください。  
   
- **[Column]**  
+ **列**  
  プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、 **[(\*)]** を選択します。  
   
  詳細については、このトピックの「[列] のオプション」を参照してください。  
@@ -68,7 +67,7 @@ ms.locfileid: "62832427"
  文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
->  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、 **[CompareOptions]** は読み取り専用で、 **[Default]** に設定されます。  
+>  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -89,7 +88,7 @@ ms.locfileid: "62832427"
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **[ValueDistributionOption]**  
  すべての列の値の分布を計算するかどうかを指定します。 このオプションの既定値は **[FrequentValues]** です。  
   
@@ -101,8 +100,8 @@ ms.locfileid: "62832427"
  **[FrequentValueThreshold]**  
  0 ～ 1 の値を使用して、列の値が報告されるしきい値を指定します。 **[ValueDistributionOption]** で **[AllValues]** を選択した場合、このオプションは無効になります。 このオプションの既定値は 0.001 です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
- [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

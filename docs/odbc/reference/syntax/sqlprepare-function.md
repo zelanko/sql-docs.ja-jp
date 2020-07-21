@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLPrepare function [ODBC]
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 292b1c4d9cd0281de610af4e53f25aa3d0ab6f90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e9aedd665df2a943627207902d592d597c503c63
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005767"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306883"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0 標準準拠: ISO 92  
   
  **まとめ**  
- **SQLPrepare**実行 SQL 文字列を準備します。  
+ **SQLPrepare**は、SQL 文字列の実行を準備します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,89 +45,89 @@ SQLRETURN SQLPrepare(
   
 ## <a name="arguments"></a>引数  
  *StatementHandle*  
- [入力]ステートメント ハンドルです。  
+ 代入ステートメントハンドル。  
   
  *StatementText*  
- [入力]SQL テキストの文字列です。  
+ 代入SQL テキスト文字列。  
   
  *TextLength*  
- [入力]長さ **StatementText*文字数。  
+ 代入文字の長さ **StatementText* 。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLPrepare** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられている SQLSTATE 値を返しますを呼び出すことによって取得できる**SQLGetDiagRec**で、 *HandleType* sql _ のHANDLE_STMT と*処理*の*StatementHandle*します。 次の表に、一般的にによって返される SQLSTATE 値**SQLPrepare** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。  
+ **SQLPrepare**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLPrepare**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|[エラー]|説明|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01S02|オプション値が変更されました|指定したステートメント属性は、ような値が一時的に代用するための実装の動作状態のため無効でした。 (**SQLGetStmtAttr**一時的に置換された値を特定するということができます)。代替値が有効、 *StatementHandle*カーソルが閉じられるまでです。 変更可能なステートメント属性は次のとおりです。SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
-|21S01|挿入値のリストは、列リストと一致しません|\**StatementText*に含まれている、**挿入**ステートメント、および挿入する値の数と一致しませんでした、派生テーブルの次数。|  
-|21S02|派生テーブルの次数が列の一覧と一致しません|\**StatementText*に含まれている、 **CREATE VIEW**ステートメント、および指定した名前の数は、クエリの仕様で定義されている派生テーブルと同じレベルではありません。|  
-|22018|キャストの無効な文字の値|**StatementText*リテラルまたはパラメーターを含む SQL ステートメントに含まれているし、値が関連付けられているテーブル列のデータ型と互換性がありません。|  
-|22019|無効なエスケープ文字|引数*StatementText*に含まれている、**など**の述語では、**エスケープ**で、**場所**句とエスケープの長さ次の文字**エスケープ**が 1 と等しくありません。|  
-|22025|無効なエスケープ シーケンス|引数*StatementText*に含まれている"**など**_パターン値_**エスケープ**_エスケープ文字_"で、**場所**句、およびパターンの値のエスケープ文字の後の文字が「%」も「_」。|  
-|24000|カーソル状態が無効|(DM)、カーソルが開いて、 *StatementHandle*、および**SQLFetch**または**SQLFetchScroll**が呼び出されました。<br /><br /> カーソルが開いて、 *StatementHandle*が**SQLFetch**または**SQLFetchScroll**呼び出されていない必要があります。|  
-|34000|カーソル名が無効|\**StatementText*位置指定に含まれる**削除**または位置指定**UPDATE**、準備されているステートメントによって参照されたカーソルが開いていなかったとします。|  
-|3D000|無効なカタログ名|指定されたカタログ名*StatementText*が無効です。|  
-|3F000|無効なスキーマ名|指定されたスキーマ名*StatementText*が無効です。|  
-|42000|構文エラーまたはアクセス違反|\**StatementText*準備可能な型がないか、構文エラーに含まれる SQL ステートメントに含まれています。<br /><br /> **StatementText*対象のユーザー権限がない、必要なステートメントに含まれています。|  
-|42S01|ベース テーブルまたはビューが既に存在します|\**StatementText*に含まれている、 **CREATE TABLE**または**CREATE VIEW**ステートメントでは、およびテーブル名またはビューの指定名は既に存在します。|  
-|42S02|ベース テーブルまたはビューが見つかりません|\**StatementText*に含まれている、 **DROP TABLE**または**DROP VIEW**ステートメント、および指定したテーブル名またはビュー名がありませんでした。<br /><br /> \**StatementText*に含まれている、 **ALTER TABLE**ステートメント、および指定したテーブル名が存在しなかった。<br /><br /> \**StatementText*に含まれている、 **CREATE VIEW**ステートメントとテーブル名またはビューのクエリ仕様で定義された名前がありませんでした。<br /><br /> \**StatementText*に含まれている、 **CREATE INDEX**ステートメント、および指定したテーブル名が存在しなかった。<br /><br /> \**StatementText*に含まれている、 **GRANT**または**取り消す**ステートメント、および指定したテーブル名またはビュー名がありませんでした。<br /><br /> \**StatementText*に含まれている、**選択**ステートメント、および指定したテーブル名またはビュー名がありませんでした。<br /><br /> \**StatementText*に含まれている、**削除**、**挿入**、または**UPDATE**ステートメント、および指定したテーブル名が存在しなかった。<br /><br /> \**StatementText*に含まれている、 **CREATE TABLE**ステートメント、および制約 (テーブルを参照する他にも作成されているもの) で指定されたテーブルが存在しなかった。|  
-|42S11|インデックスが既に存在します|\**StatementText*に含まれている、 **CREATE INDEX**ステートメント、および指定したインデックス名が既に存在します。|  
-|42S12|インデックスが見つかりません|\**StatementText*に含まれている、 **DROP INDEX**ステートメント、および指定したインデックス名が存在しなかった。|  
-|42S21|列が既に存在します|\**StatementText*に含まれている、 **ALTER TABLE**ステートメントとで指定された列、**追加**句が一意でない、またはベース テーブルの既存の列を識別します。|  
-|42S22|列が見つかりません|\**StatementText*に含まれている、 **CREATE INDEX**ステートメント、および 1 つ以上の列リストで指定された名前が存在しない列です。<br /><br /> \**StatementText*に含まれている、 **GRANT**または**取り消す**ステートメント、および指定された列名が存在しなかった。<br /><br /> \**StatementText*に含まれている、**選択**、**削除**、**挿入**、または**UPDATE**ステートメント、および指定された列名存在しませんでした。<br /><br /> \**StatementText*に含まれている、 **CREATE TABLE**ステートメント、および制約 (テーブルを参照する他にも作成されているもの) で指定された列が存在しなかった。|  
-|HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
-|HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*関数が呼び出された後、もう一度、 *StatementHandle*します。<br /><br /> 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
-|HY009|無効な null ポインターの使用|(DM) *StatementText*が null ポインター。|  
-|HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLPrepare**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|(DM) 引数*TextLength*以下を 0 には、SQL_NTS 等しくもありませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
-|HYC00|省略可能な機能が実装されていません|同時実行の設定が定義されているカーソルの種類の無効でした。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
-|HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、タイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
-|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
-|IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
-|IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
-|IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|01S02|オプションの値が変更されました|実装の動作条件により、指定されたステートメント属性は無効でした。そのため、類似した値が一時的に置き換えられました。 (**SQLGetStmtAttr**を呼び出して、一時的に置換された値がどのようになるかを判断できます)。代替値は、カーソルが閉じられるまで*StatementHandle*に対して有効です。 変更できるステートメント属性は、SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
+|21S01|挿入する値の一覧が列の一覧と一致しません|\**StatementText*に**INSERT**ステートメントが含まれており、挿入される値の数が派生テーブルの次数と一致しませんでした。|  
+|21S02|派生テーブルの次数が列の一覧と一致しません|\**StatementText*には**CREATE VIEW**ステートメントが含まれており、指定された名前の数は、クエリ仕様で定義されている派生テーブルと同じではありません。|  
+|22018|キャストの指定に無効な文字値があります|**StatementText*には、リテラルまたはパラメーターを含む SQL ステートメントが含まれており、その値は、関連付けられているテーブル列のデータ型と互換性がありませんでした。|  
+|22019|エスケープ文字が無効です|引数*StatementText*に**WHERE**句で**エスケープ**を含む**LIKE**述語が含まれており、エスケープ後のエスケープ文字の長さが 1**ではあり**ませんでした。|  
+|22025|無効なエスケープシーケンスです|引数*StatementText*には、 **WHERE**句に "**LIKE** _pattern 値_**エスケープ**_エスケープ文字_" という文字が含まれており、パターン値のエスケープ文字の後の文字が "%" でも "_" でもありません。|  
+|24000|カーソル状態が無効|(DM) *StatementHandle*でカーソルが開いていたため、 **sqlfetch**または**sqlfetchscroll**が呼び出されました。<br /><br /> *StatementHandle*でカーソルが開いていましたが、 **sqlfetch**または**sqlfetchscroll**が呼び出されていません。|  
+|34000|カーソル名が無効|\**StatementText*に位置指定**削除**または位置指定**更新**が含まれており、準備中のステートメントによって参照されているカーソルが開いていません。|  
+|3D000|無効なカタログ名|*StatementText*で指定されたカタログ名が無効でした。|  
+|3F000|スキーマ名が無効です|*StatementText*で指定されたスキーマ名が無効でした。|  
+|42000|構文エラーまたはアクセス違反|\**StatementText*に、準備可能ではない SQL ステートメントが含まれているか、構文エラーが含まれています。<br /><br /> **StatementText*には、ユーザーが必要な特権を持っていないステートメントが含まれていました。|  
+|42 S01|ベーステーブルまたはビューが既に存在します|\**StatementText*に**CREATE TABLE**または**CREATE VIEW**ステートメントが含まれており、指定されたテーブル名またはビュー名が既に存在します。|  
+|42 S02|ベーステーブルまたはビューが見つかりません|\**StatementText*に**drop Table**または**drop view**ステートメントが含まれており、指定されたテーブル名またはビュー名が存在しませんでした。<br /><br /> \**StatementText*に**ALTER TABLE**ステートメントが含まれており、指定されたテーブル名が存在しませんでした。<br /><br /> \**StatementText*に**CREATE VIEW**ステートメントが含まれており、クエリ仕様で定義されているテーブル名またはビュー名が存在しませんでした。<br /><br /> \**StatementText*に**CREATE INDEX**ステートメントが含まれており、指定されたテーブル名が存在しませんでした。<br /><br /> \**StatementText*に**GRANT**ステートメントまたは**REVOKE**ステートメントが含まれており、指定されたテーブル名またはビュー名が存在しませんでした。<br /><br /> \**StatementText*に**select**ステートメントが含まれており、指定されたテーブル名またはビュー名が存在しませんでした。<br /><br /> \**StatementText*に**DELETE**、 **INSERT**、または**UPDATE**ステートメントが含まれていますが、指定されたテーブル名が存在しませんでした。<br /><br /> \**StatementText*に**CREATE TABLE**ステートメントが含まれており、(作成されているテーブル以外のテーブルを参照している) 制約で指定されたテーブルが存在しませんでした。|  
+|42 S11|インデックスは既に存在します|\**StatementText*に**CREATE INDEX**ステートメントが含まれており、指定されたインデックス名が既に存在します。|  
+|42 S12|インデックスが見つかりません|\**StatementText*に**DROP INDEX**ステートメントが含まれており、指定されたインデックス名が存在しませんでした。|  
+|42 S21|列は既に存在します|\**StatementText*に**ALTER TABLE**ステートメントが含まれており、 **ADD**句で指定された列が一意でないか、ベーステーブル内の既存の列を識別しています。|  
+|42 S22|列が見つかりません|\**StatementText*に**CREATE INDEX**ステートメントが含まれており、列リストで指定された1つ以上の列名が存在しませんでした。<br /><br /> \**StatementText*に**GRANT**ステートメントまたは**REVOKE**ステートメントが含まれており、指定された列名が存在しませんでした。<br /><br /> \**StatementText*に**select**、 **DELETE**、 **INSERT**、または**UPDATE**ステートメントが含まれており、指定された列名が存在しませんでした。<br /><br /> \**StatementText*に**CREATE TABLE**ステートメントが含まれており、制約 (作成されるテーブル以外のテーブルを参照している) で指定された列が存在しませんでした。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、 **SQLCancel**または**Sqlcancelhandle**が*StatementHandle*で呼び出された後、 *StatementHandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
+|HY009|Null ポインターの使い方が正しくありません|(DM) *StatementText*は null ポインターでした。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **SQLPrepare**関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*StatementHandle*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY090|文字列またはバッファーの長さが無効です|(DM) 引数*TextLength*が0以下で、SQL_NTS と等しくない。|  
+|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
+|HYC00|省略可能な機能は実装されていません|定義されているカーソルの種類では、同時実行の設定が無効でした。<br /><br /> SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE statement 属性が、ドライバーがブックマークをサポートしていないカーソルの種類に設定されました。|  
+|HYT00|タイムアウトに達しました|データソースが結果セットを返す前にタイムアウト期間が経過しました。 タイムアウト期間は、 **SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT によって設定されます。|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
+|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して**Sqlcompleteasync**を呼び出す必要があります。|  
   
-## <a name="comments"></a>コメント  
- アプリケーション呼び出し**SQLPrepare**準備のためのデータ ソースに SQL ステートメントを送信します。 準備実行の詳細については、次を参照してください。[準備された実行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)します。 アプリケーションでは、SQL ステートメントの 1 つまたは複数のパラメーター マーカーを含めることができます。 パラメーター マーカーを含めるには、アプリケーションは、適切な位置にある SQL 文字列に疑問符 (?) を埋め込みます。 パラメーターについては、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。  
+## <a name="comments"></a>説明  
+ アプリケーションは**SQLPrepare**を呼び出して、準備のためにデータソースに SQL ステートメントを送信します。 準備実行の詳細については、「[実行の準備](../../../odbc/reference/develop-app/prepared-execution-odbc.md)」を参照してください。 アプリケーションでは、SQL ステートメントに1つ以上のパラメーターマーカーを含めることができます。 パラメーターマーカーを含めるには、アプリケーションで適切な位置に疑問符 (?) を SQL 文字列に埋め込みます。 パラメーターの詳細については、「[ステートメントパラメーター](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。  
   
 > [!NOTE]  
->  アプリケーションで使用する場合**SQLPrepare**を準備して**SQLExecute**を送信する、**コミット**または**ロールバック**ステートメントでは、ことはできませんDBMS の製品間で相互運用可能です。 トランザクションをロールバックまたはコミットは、呼び出す**SQLEndTran**します。  
+>  アプリケーションで**SQLPrepare**を使用して、 **COMMIT**または**ROLLBACK**ステートメントを送信する準備と**SQLEXECUTE**を使用する場合、DBMS 製品間で相互運用することはできません。 トランザクションをコミットまたはロールバックするには、 **SQLEndTran**を呼び出します。  
   
- ドライバーは、データ ソースで使用される SQL のフォームを使用して、準備のためのデータ ソースに送信するステートメントを変更できます。 具体的には、ドライバーは、特定の機能の SQL 構文を定義するために使用するエスケープ シーケンスを変更します。 (SQL ステートメントの文法の説明は、次を参照してください[odbc エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)と[付録 c:。SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md))。ドライバーの場合は、ステートメント ハンドルは埋め込まれた SQL コードでステートメントの識別子に似ています。 データ ソースは、ステートメントの識別子をサポートする場合、ドライバーは、データ ソースにステートメントの識別子とパラメーター値を送信できます。  
+ ドライバーでは、データソースによって使用される SQL の形式を使用するようにステートメントを変更し、準備のためにデータソースに送信することができます。 特に、ドライバーは、特定の機能の SQL 構文を定義するために使用されるエスケープシーケンスを変更します。 (SQL ステートメントの文法の詳細については、「 [ODBC でのエスケープシーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)」および[「付録 C: sql 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)」を参照してください)。ドライバーの場合、ステートメントハンドルは、埋め込まれた SQL コード内のステートメント識別子に似ています。 データソースがステートメント識別子をサポートしている場合、ドライバーは、ステートメント識別子とパラメーター値をデータソースに送信できます。  
   
- ステートメントは準備ができたら、アプリケーションは、ステートメント ハンドルを使用して、後続の関数呼び出しでステートメントを参照してください。 呼び出して、ステートメント ハンドルに関連付けられている、準備されたステートメントを再実行できます**SQLExecute**アプリケーションへの呼び出しでステートメントを解放するまで**SQLFreeStmt** SQL_DROP オプションまたはステートメント ハンドルがへの呼び出しで使用されるまで**SQLPrepare**、 **SQLExecDirect**、またはカタログ関数のいずれか (**SQLColumns**、 **SQLTables**など)。 アプリケーションは、ステートメントを準備すると、結果セットの形式に関する情報を要求できます。 実装によって呼び出す**SQLDescribeCol**または**SQLDescribeParam**後**SQLPrepare** 後に、関数の呼び出しとして効率的でない可能性があります**SQLExecute**または**SQLExecDirect**します。  
+ ステートメントの準備が完了すると、アプリケーションはステートメントハンドルを使用して、後続の関数呼び出しでステートメントを参照します。 ステートメントハンドルに関連付けられた準備されたステートメントは、アプリケーションが SQL_DROP オプションを指定して**SQLFreeStmt**を呼び出すことでステートメントを解放するか、 **SQLPrepare**、 **SQLExecDirect**、またはいずれかのカタログ関数 (**sqlexecute**、 **sqlexecute**など) の呼び出しでステートメントハンドルを使用するまで、 **sqlexecute**を呼び出すことによって再実行できます。 アプリケーションによってステートメントが準備されると、結果セットの形式に関する情報を要求することができます。 実装によっては、 **SQLPrepare**の後に**SQLDescribeCol**または**SQLDescribeParam**を呼び出すと、 **sqlexecute**または**SQLExecDirect**の後に関数を呼び出すほど効率的ではない可能性があります。  
   
- 一部のドライバーが構文エラーが返されることはできませんまたはアプリケーションを呼び出すとき、アクセス違反**SQLPrepare**します。 ドライバーは構文エラーを処理し、アクセス違反、のみ、構文エラーまたは構文エラーでもアクセス違反が発生します。 そのため、アプリケーションが関数など、関連する後続の呼び出し時に、これらの条件を処理することがあります**SQLNumResultCols**、 **SQLDescribeCol**、 **SQLColAttribute**、および**SQLExecute**します。  
+ アプリケーションが**SQLPrepare**を呼び出すと、一部のドライバーが構文エラーやアクセス違反を返すことができません。 ドライバーは、構文エラーとアクセス違反、構文エラーのみ、または構文エラーとアクセス違反のいずれも処理できません。 そのため、 **Sqlnumresultcols**、 **SQLDescribeCol**、 **Sqlcolattribute**、 **sqlexecute**などの後続の関連機能を呼び出すときに、アプリケーションはこれらの条件を処理できる必要があります。  
   
- データ ソースのドライバーの機能、に応じて (すべてのパラメーターがバインドされている) 場合、ステートメントが準備されたときに、パラメーター情報 (などのデータ型) をオンになってまたは (すべてのパラメーターがバインドされていない) 場合の実行時。 相互運用性を最大に、アプリケーションは同じステートメントで新しい SQL ステートメントを準備する前に古い SQL ステートメントに適用されるすべてのパラメーターをバインド解除する必要があります。 これには、新しいステートメントに適用されるパラメーターの情報が古いため、エラーができないようにします。  
+ ドライバーとデータソースの機能によっては、ステートメントの準備 (すべてのパラメーターがバインドされている場合) または実行時 (すべてのパラメーターがバインドされていない場合) に、パラメーター情報 (データ型など) がチェックされることがあります。 相互運用性を最大にするには、同じステートメントで新しい SQL ステートメントを準備する前に、アプリケーションで古い SQL ステートメントに適用されているすべてのパラメーターをバインド解除する必要があります。 これにより、古いパラメーター情報が新しいステートメントに適用されていることが原因で発生したエラーを回避できます。  
   
 > [!IMPORTANT]  
->  明示的に呼び出すことによって、トランザクションのコミット**SQLEndTran**自動コミット モードで作業しての接続ですべてのステートメントへのアクセスの計画を削除するデータ ソースとなることができます。 詳細についてで SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR 情報の種類を参照してください。 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)と[カーソルと準備されたステートメントでトランザクションの効果](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)します。  
+>  **SQLEndTran**を明示的に呼び出すか、自動コミットモードで作業することにより、トランザクションをコミットすると、データソースによって、接続上のすべてのステートメントのアクセスプランが削除される可能性があります。 詳細については、「 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)での SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR の情報の種類」および「[カーソルおよび準備されたステートメントに対するトランザクションの影響](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)」を参照してください。  
   
 ## <a name="code-example"></a>コード例  
- 参照してください[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)、 [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)、および[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)します。  
+ 「 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)、 [sqlputdata](../../../odbc/reference/syntax/sqlputdata-function.md)、 [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)」を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|ステートメント ハンドルの割り当てください。|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|バッファーを結果セット内の列にバインドします。|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|バッファーをパラメーターにバインドします。|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|ステートメントの処理をキャンセル|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|コミットまたはロールバック操作を実行します。|[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)|  
-|SQL ステートメントを実行します。|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|準備された SQL ステートメントを実行します。|[SQLExecute 関数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|ステートメントによって影響を受ける行の数を返す|[SQLRowCount 関数](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
-|カーソル名を設定します。|[SQLSetCursorName 関数](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
+|ステートメントハンドルの割り当て|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|バッファーをパラメーターにバインドする|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|コミットまたはロールバック操作の実行|[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)|  
+|SQL ステートメントの実行|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|準備された SQL ステートメントの実行|[SQLExecute 関数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|ステートメントの影響を受ける行の数を返す|[SQLRowCount 関数](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
+|カーソル名の設定|[SQLSetCursorName 関数](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

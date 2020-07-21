@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Move method [ADO], Visual Basic example
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 258f915b560bf7da9110909ada0f015fdc36af63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 37befcf2e00ad4b3555e114a2c7584ae31e6ca64
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932123"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762493"
 ---
 # <a name="move-method-example-vb"></a>Move メソッドの例 (VB)
-この例では、[移動](../../../ado/reference/ado-api/move-method-ado.md)ユーザー入力に基づいてメソッドをレコード ポインターの位置します。  
+この例では、 [Move](../../../ado/reference/ado-api/move-method-ado.md)メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
   
 ```  
 'BeginMoveVB  
@@ -126,6 +126,6 @@ End Sub
 'EndMoveVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

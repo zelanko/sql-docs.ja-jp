@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: c5b1c2f4-f591-4cc1-aa17-204636a27f29
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f528c32dcaa0757802d9afe40dffb925a654d780
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34de8d39015b1de1ac220146159a1f5b2d164a52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781222"
 ---
-# <a name="mssqlserver1222"></a>MSSQLSERVER_1222
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_1222"></a>MSSQLSERVER_1222
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|1222|  
 |イベント ソース|MSSQLSERVER|  
@@ -43,8 +43,6 @@ ms.locfileid: "68116018"
 2.  トランザクションがロックをまだ保持している場合は、必要に応じてこのトランザクションを中止します。  
   
 3.  クエリを再実行します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 このエラーが頻繁に発生する場合は、ロック要求のタイムアウト時間を変更するか、原因となっているトランザクションを修正してロックの拘束時間を短くします。  
   

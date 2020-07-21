@@ -1,6 +1,6 @@
 ---
-title: Event Tracing for Windows ターゲット | Microsoft Docs
-ms.custom: ''
+title: Event Tracing for Windows ターゲット
+description: Event Tracing for Windows (ETW) をターゲットとして使用する方法について説明します。 ETW トレースは、拡張イベントと組み合わせて使用するか、拡張イベントのイベント コンシューマーとして使用します。
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,16 +15,16 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1191d870d7fe745cdbed0e17892c5c2cf34435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4a20924d617f3c0333d548a3134f2bfc211dab7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733687"
 ---
 # <a name="event-tracing-for-windows-target"></a>Event Tracing for Windows ターゲット
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Event Tracing for Windows (ETW) をターゲットとして使用する前に、ETW を活用するための知識を身に付けておくことをお勧めします。 ETW トレースは、拡張イベントと組み合わせて使用されるか、拡張イベントのイベント コンシューマーとして使用されます。 ETW の背景情報については、次の外部リンクを参照してください。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68021864"
   
  次の表では、ETW ターゲットの構成に使用できるオプションについて説明します。  
   
-|オプション|指定できる値|[説明]|  
+|オプション|使用できる値|説明|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|256 文字までの任意の文字列。 この値は省略可能です。|拡張イベント セッション名。 既定値は、XE_DEFAULT_ETW_SESSION です。|  
 |default_etw_session_logfile_path|256 文字までの任意の文字列。 この値は省略可能です。|拡張イベント セッションのログ ファイルへのパス。 既定値は %TEMP%\ XEEtw.etl です。|  
@@ -80,7 +80,7 @@ ms.locfileid: "68021864"
     > [!IMPORTANT]  
     >  最初のセッションの開始後にファイル パスを変更することはできません。  
   
--   マネージド オブジェクト フォーマット (MOF) ファイルは *\<インストール パス&gt;* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](https://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。
+-   マネージド オブジェクト フォーマット (MOF) ファイルは *\<your install path>* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](https://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。
 
 <!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
 -->

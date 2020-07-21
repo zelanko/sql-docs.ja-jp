@@ -16,10 +16,10 @@ ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84265b1a72d93a2d8de8332e0309093a9a506ea0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571438"
 ---
 # <a name="configurationsetting-method---reencryptsecureinformation"></a>ConfigurationSetting メソッド - ReencryptSecureInformation
@@ -45,7 +45,7 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ReencryptSecureInformation メソッドを使用することによって、管理者は既存の暗号化キーを新しいキーと置き換えることができます。  
   
  このメソッドを呼び出すと、レポート サーバーが新しい暗号化キーを生成し、新しい暗号化キーを使用してすべての暗号化されたコンテンツを反復処理して再度暗号化します。  

@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68045190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773591"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows 上と Linux 上で SQL Server の Always On 可用性グループを構成する (クロスプラットフォーム)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
 
 この記事では、Windows サーバー上の 1 つのレプリカと Linux サーバー上のもう 1 つのレプリカを使用して、Always On 可用性グループ (AG) を作成する手順について説明します。 レプリカが異なるオペレーティング システム上にあるため、この構成はクロスプラットフォームです。 この構成は、プラットフォーム間の移行またはディザスター リカバリー (DR) を目的として使用してください。 クロスプラットフォーム構成を管理するクラスター ソリューションがないため、この構成では高可用性はサポートされません。 
 
@@ -55,7 +55,7 @@ AG を作成する手順は、読み取りスケール ワークロード用に 
 
    **混合モード認証を設定する**
 
-   手順については、「[サーバーの認証モードの変更](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure)」を参照してください。
+   手順については、「[サーバーの認証モードの変更](../database-engine/configure-windows/change-server-authentication-mode.md#change-authentication-mode-with-ssms)」を参照してください。
 
 1. Linux 上に SQL Server 2017 をインストールします。 手順については、[SQL Server のインストール](sql-server-linux-setup.md)に関する記事をご覧ください。 mssql-conf 経由で `hadr` を有効にします。
 
@@ -210,7 +210,7 @@ AG を作成する手順は、読み取りスケール ワークロード用に 
 
    スクリプトを実行する前に、データベース用の値を更新します。
 
-      * `<TestDB>` を、お使いのデータベースの名前に置き換えます。
+      * `<TestDB>` をお使いのデータベースの名前に変更します。
 
       * `<F:\Path>` を、お使いのデータベースとログ ファイルのパスに置き換えます。 データベースとログ ファイルで同じパスを使用します。 
 
@@ -230,7 +230,7 @@ AG を作成する手順は、読み取りスケール ワークロード用に 
 
 1. 自動シード処理を使用しない場合は、セカンダリ レプリカ (Linux) サーバーにデータベースを復元します。 [バックアップと復元を使用して SQL Server データベースを Windows から Linux に移行します](sql-server-linux-migrate-restore-database.md)。 データベースを `WITH NORECOVERY` を指定してセカンダリ レプリカに復元します。 
 
-1. AG にデータベースを追加します。 サンプル スクリプトを更新します。 `<TestDB>` を、お使いのデータベースの名前に置き換えます。 プライマリ レプリカで、次の SQL クエリを実行して、データベースを AG に追加します。
+1. AG にデータベースを追加します。 サンプル スクリプトを更新します。 `<TestDB>` をお使いのデータベースの名前に変更します。 プライマリ レプリカで、次の SQL クエリを実行して、データベースを AG に追加します。
 
    ```sql
    ALTER AG [ag1] ADD DATABASE <TestDB>
@@ -245,7 +245,7 @@ AG を作成する手順は、読み取りスケール ワークロード用に 
 
 この記事では、移行または読み取りスケール ワークロードをサポートするクロスプラットフォーム AG を作成する手順を確認しました。 それは、ディザスター リカバリー目的でも使用できます。 AG をフェールオーバーする方法についても説明しました。 クロスプラットフォーム AG では クラスターの種類として `NONE` が使用され、クロスプラットフォームのクラスター ツールが存在しないため、高可用性はサポートされません。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Always On 可用性グループの概要](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 

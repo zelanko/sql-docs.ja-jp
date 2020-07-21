@@ -1,5 +1,5 @@
 ---
-title: FOR XML AUTO クエリが互換性モード 90 以上で派生テーブル参照を返します |Microsoft Docs
+title: FOR XML AUTO クエリは、90以降の互換性モードで派生テーブル参照を返します。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b42d8fd7694aaa3962d049cb0e9663479778958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 702cb2ca1d437dff03cee09c98d72082500709d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012445"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>互換性モード 90 以上では FOR XML AUTO クエリが派生テーブルの参照を返す
   データベースの互換性レベルが 90 以上に設定されている場合、AUTO モードで実行する FOR XML クエリは派生テーブルの別名への参照を返します。 互換性レベルが 80 に設定されている場合、FOR XML AUTO クエリは派生テーブルを定義するベース テーブルへの参照を返します。  
@@ -60,7 +59,7 @@ FOR XML AUTO;
  派生テーブルを含んでいる FOR XML AUTO クエリのうち、互換性レベル 90 以上で実行されるクエリの結果が変化している場合、必要に応じてアプリケーションを修正してください。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

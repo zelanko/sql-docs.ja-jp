@@ -1,5 +1,5 @@
 ---
-title: Excel ドライバーのプログラムでオプションの設定 |Microsoft Docs
+title: Excel Driver のプログラムによるオプションの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,23 +13,23 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], setting options programmatically
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 47181fca07aff7b2a0d418b8852cfce47cf9e501
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1fcd5542e4beee1f7c7a30d5e0ee9f2815a3f0b6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063521"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300772"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Excel ドライバーのプログラムでオプションの設定
 
-|OPTION|説明|メソッド|  
+|オプション|説明|認証方法|  
 |------------|-----------------|------------|  
-|Data Source Name|給与または担当者など、データ ソースを識別する名前。|このオプションを動的に設定するには、使用、 **DSN**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。|  
-|[データベース]|Microsoft Access データ ソースは、選択するか、データベースを作成することがなく設定できます。 セットアップ時にデータベースが指定されていない場合、ユーザーは、データ ソースに接続するときに、データベース ファイルを選択を求めます。|このオプションを動的に設定するには、使用、 **DBQ**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。|  
-|説明|データ ソース内のデータの説明 (オプション)たとえば、"日付、給与履歴、およびすべての従業員の現在のレビュー。 hire"という|このオプションを動的に設定するには、使用、**説明**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。|  
-|ディレクトリ|現在選択されているディレクトリが表示されます。<br /><br /> Microsoft Excel 3.0 と 4.0 のファイルのパスの表示はラベルが付けられます"Directory"中に Microsoft Excel 5.0、7.0、または 97 のファイル パスの表示のラベルは「ブック」。|このオプションを動的に設定するには、使用、 **DEFAULTDIR**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。|  
-|[読み取り専用]|読み取り専用データベースを指定します。|このオプションを動的に設定するには、使用、 **READONLY**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。|  
-|スキャンする行|各列のデータ型を決定するをスキャンする行の数。 検出されたデータの種類の最大数を指定されたデータ型が決定されます。 列のデータ型に一致しないデータが発生した場合、データ型が NULL 値として返されます。<br /><br /> Microsoft Excel ドライバーの場合をスキャンする行を 16 に、1 から番号を入力できます。 値の既定値は 8 です。0 に設定されている場合は、すべての行がスキャンされます。 (上限外の数値はエラーを返します。)|このオプションを動的に設定するには、使用、 **MAXSCANROWS**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。|  
-|ディレクトリを選択します|アクセスするファイルを含むディレクトリを選択するダイアログ ボックスが表示されます。<br /><br /> (Microsoft Access を除くすべてのドライバー) のデータ ソース ディレクトリを定義するときに、最もよく使用されるファイルが配置されているディレクトリを指定します。 ODBC ドライバーは、このディレクトリを既定のディレクトリとして使用します。 頻繁に使用される場合は、その他のファイルをこのディレクトリにコピーします。 または、ディレクトリの名前を持つ SELECT ステートメント内のファイル名を修飾することができます。<br /><br /> SELECT \* FROM C:\MYDIR\EMP<br /><br /> 使用して、新しい既定のディレクトリを指定することも、 **SQLSetConnectOption**関数 SQL_CURRENT_QUALIFIER オプションを使用します。<br /><br /> Microsoft Excel 3.0 または 4.0 ファイルの場合は、"Directory"というラベルが付いたパスの表示とパスの選択ボタンは「ディレクトリの選択」というラベルが付いたします。 Microsoft Excel 5.0、7.0、または 97 ファイルの場合「ブック」というラベルが付いたパスの表示とパスの選択ボタンは「ブックの選択」というラベルが付いたします。 データのソース ディレクトリを定義するときに、最もよく使用される Microsoft Excel ファイルがあるは、Microsoft Excel 3.0 または 4.0、ディレクトリまたはブック ファイルが Microsoft Excel 5.0、7.0、または 97 のあるディレクトリを指定します。 **現在のディレクトリを使用して、** for Microsoft Excel 5.0、7.0、および 97 は無効です。|このオプションを動的に設定するには、使用、 **DEFAULTDIR**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。|
+|データ ソース名|給与や職員など、データソースを識別する名前。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)への呼び出しで**DSN**キーワードを使用します。|  
+|データベース|Microsoft Access データソースは、データベースを選択または作成せずに設定できます。 セットアップ時にデータベースが指定されていない場合、データソースへの接続時にデータベースファイルを選択するように求めるメッセージがユーザーに表示されます。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)への呼び出しで**dbq**キーワードを使用します。|  
+|説明|データソース内のデータの説明 (省略可能)。たとえば、"入社日、給与履歴、およびすべての従業員の現在のレビュー" などです。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)への呼び出しで**DESCRIPTION**キーワードを使用します。|  
+|ディレクトリ|現在選択されているディレクトリが表示されます。<br /><br /> Microsoft Excel 3.0/4.0 ファイルの場合、パスの表示には "Directory" というラベルが付きますが、Microsoft Excel 5.0、7.0、または97ファイルの場合は、パスの表示に "Workbook" というラベルが付きます。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)への呼び出しで**DEFAULTDIR**キーワードを使用します。|  
+|[読み取り専用]|データベースを読み取り専用として指定します。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)への呼び出しで**READONLY**キーワードを使用します。|  
+|スキャンする行|各列のデータ型を決定するためにスキャンする行の数。 データ型は、見つかったデータの種類の最大数に基づいて決定されます。 列に対して推測されるデータ型と一致しないデータが検出されると、データ型は NULL 値として返されます。<br /><br /> Microsoft Excel ドライバーでは、スキャンする行の数を 1 ~ 16 の数値で入力できます。 既定値は8です。0に設定されている場合は、すべての行がスキャンされます。 (制限外の数値はエラーを返します)。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)への呼び出しで**MAXSCANROWS**キーワードを使用します。|  
+|ディレクトリの選択|アクセスするファイルが格納されているディレクトリを選択できるダイアログボックスを表示します。<br /><br /> データソースディレクトリを定義する場合 (Microsoft Access を除くすべてのドライバー用)、最も一般的に使用されるファイルが置かれているディレクトリを指定します。 ODBC ドライバーでは、このディレクトリが既定のディレクトリとして使用されます。 頻繁に使用する場合は、他のファイルをこのディレクトリにコピーします。 または、次のようにディレクトリ名を指定して、SELECT ステートメント内のファイル名を修飾することもできます。<br /><br /> C:\MYDIR\EMP \*から選択<br /><br /> または、 **SQLSetConnectOption**関数を SQL_CURRENT_QUALIFIER オプションと共に使用して、新しい既定のディレクトリを指定することもできます。<br /><br /> Microsoft Excel 3.0 または4.0 ファイルの場合、パスの表示には "ディレクトリ" と表示され、パスの選択ボタンは "ディレクトリを選択する" というラベルが付いています。 Microsoft Excel 5.0、7.0、または97ファイルの場合、パスの表示には "ブック" と表示され、パスの選択ボタンは "Select Workbook" というラベルが付いています。 データソースディレクトリを定義するときは、microsoft excel 3.0/4.0 の microsoft Excel ファイルが最もよく使用されているディレクトリを指定します。または、Microsoft Excel 5.0、7.0、または97のブックファイルが置かれているディレクトリを指定します。 Microsoft Excel 5.0、7.0、および97で**現在のディレクトリを使用する**ことはできません。|このオプションを動的に設定するには、 [Sqlconfigdatasource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)への呼び出しで**DEFAULTDIR**キーワードを使用します。|

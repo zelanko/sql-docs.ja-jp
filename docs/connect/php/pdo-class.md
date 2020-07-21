@@ -1,5 +1,5 @@
 ---
-title: PDO クラス |Microsoft Docs
+title: PDO Class | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9c77b68d-0649-44af-96fa-586cbb319f5f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b016d850286daf0c2cda9604302d78faa6cc6ae1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbacc1c79789a21b0dbb76ff6f13007ad6368d22
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936284"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919437"
 ---
 # <a name="pdo-class"></a>PDO クラス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ PDO クラスには、PHP アプリケーションが [!INCLUDE[ssNoVersion](../
 PDO {}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO クラスには次のメソッドが含まれています。  
   
 [PDO::__construct](../../connect/php/pdo-construct.md)  

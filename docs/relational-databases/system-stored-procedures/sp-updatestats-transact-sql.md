@@ -1,5 +1,5 @@
 ---
-title: sp_updatestats (TRANSACT-SQL) |Microsoft Docs
+title: sp_updatestats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatestats
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c00bdd453bc4d1bf467b37aca3639eb43f55e022
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4449e2a518ab1bfd12563070a80514d890eae48c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723057"
 ---
-# <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-実行`UPDATE STATISTICS`に対する現在のデータベース内のすべてのユーザー定義および内部テーブルです。  
+`UPDATE STATISTICS`現在のデータベース内のすべてのユーザー定義テーブルと内部テーブルに対して実行します。  
   
-詳細については`UPDATE STATISTICS`を参照してください[UPDATE STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)します。 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
+の詳細について `UPDATE STATISTICS` は、「 [UPDATE STATISTICS &#40;transact-sql&#41;](../../t-sql/statements/update-statistics-transact-sql.md)」を参照してください。 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
     
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,24 +44,25 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (成功) または 1 (失敗)  
   
 ## <a name="arguments"></a>引数  
-`[ @resample = ] 'resample'` 指定します**sp_updatestats**の RESAMPLE オプションを使用、 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)ステートメント。 場合 **'resample'** が指定されていない**sp_updatestats**既定のサンプリングを使用して統計を更新します。 **リサンプル**、 **varchar(8)** を既定値は [いいえ]  
+`[ @resample = ] 'resample'`**Sp_updatestats**で、 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)ステートメントのリサンプリングオプションを使用することを指定します。 **' リサンプリング '** が指定されていない場合、 **sp_updatestats**は既定のサンプリングを使用して統計を更新します。 **リサンプリング**は**varchar (8)** で、既定値は NO です。  
   
-## <a name="remarks"></a>コメント  
- **sp_updatestats**実行`UPDATE STATISTICS`、指定することによって、`ALL`データベース内のすべてのユーザー定義および内部テーブルでのキーワード。 sp_updatestats は、その進行状況を示すメッセージが表示されます。 更新が完了したら、すべてのテーブルの統計情報が更新されたことを報告します。  
+## <a name="remarks"></a>Remarks  
+ **sp_updatestats**は、 `UPDATE STATISTICS` キーワードを指定することによって、 `ALL` データベース内のすべてのユーザー定義テーブルと内部テーブルに対して実行します。 sp_updatestats の進行状況を示すメッセージが表示されます。 更新が完了すると、すべてのテーブルの統計が更新されたことが報告されます。  
   
-sp_updatestats は、無効化された非クラスター化インデックスの統計を更新し、無効になっているクラスター化インデックスの統計を更新できません。  
+無効な非クラスター化インデックスの統計を更新し、無効になっているクラスター化インデックスの統計を更新しません。 **sp_updatestats** 。  
   
-ディスク ベース テーブルでは、 **sp_updatestats**に基づいて統計を更新、 **modification_counter**内の情報、 **sys.dm_db_stats_properties**カタログ ビュー少なくとも 1 つの行が変更されている統計を更新しています。 実行するときに常にメモリ最適化テーブルで統計が更新される**sp_updatestats**します。 実行されません**sp_updatestats**以上必要です。  
+ディスクベーステーブルの場合、 **sp_updatestats**は、 **dm_db_stats_properties**カタログビューの**modification_counter**情報に基づいて統計を更新し、少なくとも1つの行が変更されている統計を更新します。 メモリ最適化テーブルの統計は、 **sp_updatestats**の実行時に常に更新されます。 そのため、 **sp_updatestats**は必要以上に実行しないでください。  
   
-**sp_updatestats**ストアド プロシージャやその他のコンパイル済みコードの再コンパイルをトリガーできます。 ただし、 **sp_updatestats** 1 つのクエリ プランが参照されているテーブルやインデックスに対するだけの場合、再コンパイルをされない可能性があります。 このような場合は、統計が更新されても再コンパイルの必要はありません。  
+**sp_updatestats**は、ストアドプロシージャまたはその他のコンパイル済みコードの再コンパイルをトリガーできます。 ただし、参照されるテーブルとそのインデックスに対してクエリプランが1つしか使用できない場合、 **sp_updatestats**は再コンパイルを発生させない可能性があります。 このような場合は、統計が更新されても再コンパイルの必要はありません。  
   
-実行 90 未満の互換性レベル データベースについて**sp_updatestats**は特定の統計に対する最新の NORECOMPUTE 設定は保持されません。 互換性レベルが 90 以上のデータベースは、sp_updatestats は特定の統計に対する最新の NORECOMPUTE オプションを保持します。 統計の更新の無効化および再有効化について詳しくは、「[統計](../../relational-databases/statistics/statistics.md)」をご覧ください。  
+互換性レベルが90未満のデータベースの場合、 **sp_updatestats**を実行しても、特定の統計の最新の NORECOMPUTE 設定は保持されません。 互換性レベルが90以上のデータベースの場合、sp_updatestats は特定の統計の最新の NORECOMPUTE オプションを保持します。 統計の更新の無効化および再有効化について詳しくは、「[統計](../../relational-databases/statistics/statistics.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **sysadmin**固定サーバー ロール、またはデータベースの所有権 (**dbo**)。  
+
+**Sp_updatestats**を実行するには、ユーザーがデータベースの所有者 ( `dbo` ロールのメンバーではない) である `db_owner` か、sysadmin 固定サーバーロールのメンバーである必要があります。
 
 ## <a name="examples"></a>使用例  
-内のテーブルの統計情報を更新する例を次の[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースです。  
+次の例では、データベース内のテーブルの統計を更新し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -74,11 +75,11 @@ EXEC sp_updatestats;
 
 ## <a name="see-also"></a>関連項目  
  [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [システム ストアド プロシージャ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;の統計の作成](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [DROP STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [sp_autostats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_createstats &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [UPDATE STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [システムストアドプロシージャ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
  

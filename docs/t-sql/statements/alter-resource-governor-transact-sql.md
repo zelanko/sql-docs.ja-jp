@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 710604102132d3b50b328c80f12cf41cd66a1219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bec2a5008b65ea5e20b8e6b784d9fe3ecda64c2
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927210"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381136"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で次のリソース ガバナー操作を実行するために使用します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67927210"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ALTER RESOURCE GOVERNOR   
       { DISABLE | RECONFIGURE }  
     | WITH ( CLASSIFIER_FUNCTION = { schema_name.function_name | NULL } )  
@@ -55,7 +55,10 @@ ALTER RESOURCE GOVERNOR
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  DISABLE  
  Resource Governor を無効にします。 Resource Governor を無効にすると、結果は次のようになります。  
   
@@ -94,11 +97,11 @@ ALTER RESOURCE GOVERNOR
  すべてのワークロード グループとリソース プールの統計をリセットします。 詳細については、「[sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)」と「[sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)」を参照してください。  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。  
   
  キューに登録される I/O 操作のディスク ボリュームごとの最大数を設定します。 これらの I/O 操作では、任意のサイズの読み取りや書き込みを行うことができます。  MAX_OUTSTANDING_IO_PER_VOLUME の最大値は 100 です。 これはパーセントではありません。 この設定は、ディスク ボリュームの IO 特性に合わせて IO リソース管理をチューニングするために設計されています。 さまざまな値をテストし、ストレージ サブシステムの最大値を識別するために IOMeter、[DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223)、SQLIO (非推奨) などの調整ツールの使用を検討することをお勧めします。 この設定では、システム レベルの安全性チェックが提供され、他のプールで MAX_IOPS_PER_VOLUME が無制限に設定されている場合でも、SQL Server でリソース プールの最小 IOPS を満たすことができます。 MAX_IOPS_PER_VOLUME の詳細については、「[CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER RESOURCE GOVERNOR DISABLE、ALTER RESOURCE GOVERNOR RECONFIGURE、および ALTER RESOURCE GOVERNOR RESET STATISTICS は、ユーザー トランザクション内で使用できません。  
   
  RECONFIGURE パラメーターはリソース ガバナー構文の一部であり、個別の DDL ステートメントである [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) とは異なります。  
@@ -108,7 +111,7 @@ ALTER RESOURCE GOVERNOR
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-starting-the-resource-governor"></a>A. Resource Governor を起動する  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最初のインストール時には、リソース ガバナーは無効になっています。 Resource Governor を起動する例を次に示します。 このステートメントを実行した後、Resource Governor が実行され、定義済みのワークロード グループとリソース プールを使用できるようになります。  
@@ -178,7 +181,7 @@ GO
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
-### <a name="e-setting-the-maxoutstandingiopervolume-option"></a>E. MAX_OUTSTANDING_IO_PER_VOLUME オプションを設定する  
+### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. MAX_OUTSTANDING_IO_PER_VOLUME オプションを設定する  
  次の例では、MAX_OUTSTANDING_IO_PER_VOLUME オプションが 20 に設定されます。  
   
 ```  

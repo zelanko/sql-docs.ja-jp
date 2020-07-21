@@ -1,6 +1,6 @@
 ---
-title: SQL Server Agent のプロパティ ([サービス] タブ) | Microsoft Docs
-ms.custom: ''
+title: '[SQL Server Agent のプロパティ] ダイアログ ボックス ([サービス] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,22 +11,22 @@ ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 99de032c12da910bb5e9433bbd42dc20e8b42b2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: ac42d55dea9c8e422a279516afa632810bc83c7c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024213"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75307134"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
+  このサービスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
 ## <a name="options"></a>オプション  
- **バイナリ パス**  
+ **[バイナリ パス]**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
- **エラー制御**  
+ **[エラー制御]**  
  1 は `SERVICE_ERROR_NORMAL`を示します。 コンピューターの起動時にこのサービスが開始しなかった場合は、スタートアップ プログラムによってログにエラーが記録され、ポップアップ メッセージ ボックスが表示されますが、スタートアップ操作は継続します。 この値は変更できません。  
   
  **終了コード**  
@@ -35,7 +35,7 @@ ms.locfileid: "68024213"
  **Host Name**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **[名前]**  
+ **Name**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  
@@ -44,7 +44,7 @@ ms.locfileid: "68024213"
  **[SQL サービスの種類]**  
  呼び出し側プロセスに提供されるサービスの種類が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかのサービスがインストールされます。  
   
- **開始モード**  
+ **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
 -   手動: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
@@ -53,7 +53,7 @@ ms.locfileid: "68024213"
   
 -   \[無効]: このサービスは開始できません。  
   
- **状態**  
+ **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。 " **...** " の場合は、状態の変更が保留になっています。  
   
   

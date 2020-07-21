@@ -1,5 +1,6 @@
 ---
-title: ブラウザーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: ブラウザーを使用したレポートの検索と表示 (レポート ビルダー) | Microsoft Docs
+description: レポート サーバーに直接接続された Web ブラウザーでレポートを表示できます。 そのレポートにはレポート ツールバーが含まれており、移動したり、検索したりできます。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 43e2ae683bdd9dd22bdf3aac1e9c6e15cc7fed59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 489d91bc5f410b6bdce4ef61bd694861bd1c1a7d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580750"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342824"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>ブラウザーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
   Web ブラウザーが対応していれば、レポート サーバーに直接接続してレポートを表示できます。 レポートにはそれぞれ、レポート サーバー上の URL アドレスが割り当てられています。 レポートの Web アドレスを入力すると、レポートを Web アプリケーションとは無関係にブラウザー ウィンドウで開くことができます。 レポートは HTML 形式で表示され、レポート内でページ間の移動やデータ値の検索を行うことができるようにレポート ツール バーが含まれています。 URL でパラメーターを設定すると、ツール バーを非表示にしたりレポートの出力形式を選択したりできます。  
@@ -28,7 +29,7 @@ ms.locfileid: "65580750"
 > [!NOTE]  
 >  ハンドヘルド デバイスからレポートにアクセスする場合は、ブラウザーを使用してレポートを開く必要があります。 レポート マネージャーは、ハンドヘルド デバイスには対応していません。  
   
- 使用できるブラウザーの種類の詳細については、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「Reporting Services でサポートされるブラウザーの種類」を参照してください。  
+ 使用できるブラウザーの種類の詳細については、「[Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,6 +54,6 @@ ms.locfileid: "65580750"
   
  Internet Explorer での URL の最大文字数は 2,083 文字です。 詳細については、「 [[IE] URL に使用可能な文字数は最大 2,083 文字](https://support.microsoft.com/kb/208427)」を参照してください。  
   
- URL の構築方法など、URL を介してレポートにアクセスする方法の詳細については、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「URL アクセス」を参照してください。  
+ URL を使用してレポートにアクセスする方法の詳細 (URL の構成方法に関する情報を含む) については、[URL アクセス](../../reporting-services/url-access-ssrs.md)に関するページを参照してください。  
   
   

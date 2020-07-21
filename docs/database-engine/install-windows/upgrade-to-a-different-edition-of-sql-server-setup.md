@@ -1,7 +1,8 @@
 ---
-title: SQL Server 2016 の別のエディションへのアップグレード (セットアップ) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/24/2017
+title: 別のエディションへのアップグレード
+description: SQL Server セットアップでは、SQL Server のさまざまなエディション間でのエディションのアップグレードをサポートしています。 エディションのアップグレードを開始する前に、この記事のリソースをご確認ください。
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e224e5949fd3f166789e72f7f70d8ca44392179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67a68c2827fffcfd5be0af38cbc38f33fd9a09dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934674"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900194"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>SQL Server の別のエディションへのアップグレード (セットアップ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、[!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] のさまざまなエディション間でのエディションのアップグレードをサポートしています。 各エディションでサポートされるアップグレード パスについては、「 [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)」をご覧ください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インスタンスのエディションのアップグレードを開始する前に、次の記事を確認してください。  
 
@@ -31,7 +32,7 @@ ms.locfileid: "67934674"
 > [!NOTE]  
 > **フェールオーバー クラスター インスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのノードのいずれかで、エディションのアップグレードを実行するだけです。 このノードはアクティブとパッシブのいずれかになります。エディションのアップグレード中にリソースがオフラインになることはありません。 エディションをアップグレードした後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動するか、別のノードにフェールオーバーする必要があります。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限を持つドメイン アカウントを使用する必要があります。  
   
 > [!IMPORTANT]  
@@ -39,7 +40,7 @@ ms.locfileid: "67934674"
   
 ## <a name="procedure"></a>手順  
   
-### <a name="to-upgrade-to-a-different-edition-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] の別のエディションにアップグレードするには  
+### <a name="to-upgrade-to-a-different-edition-of-ssnoversion"></a>[!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] の別のエディションにアップグレードするには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの setup.exe をダブルクリックするか、構成ツールから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターを起動します。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "67934674"
   
 11. [完了] ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。  
   
-12. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」をご覧ください。  
+12. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
 13. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]からアップグレードした場合は、アップグレード済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用する前に、追加の手順を実行する必要があります。  
   
@@ -78,7 +79,15 @@ ms.locfileid: "67934674"
 -   tempdb システム データベースおよび model システム データベースのサイズと復旧モードはアップグレード後も変更されません。 必要に応じて、これらの設定を再構成します。 詳細については、「[システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)」を参照してください。  
   
 -   テンプレート データベースはアップグレード後もコンピューター上に残ります。  
-  
+
+> [!NOTE]  
+> Engine_SqlEngineHealthCheck のルールでプロシージャが失敗した場合は、コマンド ラインのインストール オプションを使用して、この特定のルールをスキップし、アップグレード プロセスを正常に完了することができます。 このルールの確認をスキップするには、コマンド プロンプトを開き、SQL Server セットアップ (Setup.exe) を含むパスに変更します。 続けて、次のコマンドを入力します。 
+
+```console
+setup.exe /q /ACTION=editionupgrade /InstanceName=MSSQLSERVER /PID=<appropriatePid> /SkipRules=Engine_SqlEngineHealthCheck
+```
+
+
 ## <a name="see-also"></a>参照  
  [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)   
  [旧バージョンとの互換性_削除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  

@@ -1,5 +1,5 @@
 ---
-title: ファイル ベースのドライバー |Microsoft Docs
+title: ファイルベースのドライバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], file-based drivers
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 803da51c8507faa47f92b295d3749f00317bc413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 223bd838754f1d656ac71ae37926389097af3ea1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915383"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306665"
 ---
 # <a name="file-based-drivers"></a>ファイル ベースのドライバー
-ファイル ベースのドライバーがドライバーを使用するためのスタンドアロン データベース エンジンを提供しない dBASE などのデータ ソースで使用されます。 これらのドライバーでは、物理的なデータに直接アクセスし、プロセスの SQL ステートメントをデータベース エンジンを実装する必要があります。 ファイル ベースのドライバーでのデータベース エンジンが、最小 SQL への準拠レベルで定義されている ODBC SQL のサブセットを実装する標準的な方法では、この準拠レベル内の SQL ステートメントの一覧は、次を参照してください[付録 c:。SQL 文法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)します。  
+ファイルベースのドライバーは、ドライバーが使用するスタンドアロンデータベースエンジンを提供しない dBASE などのデータソースと共に使用されます。 これらのドライバーは物理データに直接アクセスし、SQL ステートメントを処理するためにデータベースエンジンを実装する必要があります。 標準的な方法として、ファイルベースのドライバーのデータベースエンジンは、SQL の最小一致レベルで定義されている ODBC SQL のサブセットを実装します。この準拠レベルの SQL ステートメントの一覧については、「[付録 C: Sql 文法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)」を参照してください。  
   
- ファイルおよび DBMS ベースのドライバーを比較する、ファイル ベースのドライバーは、データベース エンジンのコンポーネント、ネットワークの部分がないため、構成する簡単なため作成が難しくと性能の低い数人のユーザーがデータベースに書き込む時間企業のデータベースによって生成されたものと、強力なエンジン。  
+ ファイルベースのドライバーと DBMS ベースのドライバーを比較する場合、ファイルベースのドライバーは、データベースエンジンのコンポーネントによって記述するのは困難です。また、データベースエンジンをデータベースエンジンに作成する時間は、データベース企業によって作成されたものと同じほど強力ではないため、あまり複雑ではありません。  
   
- 次の図は、ネットワーク ファイル サーバー上のファイル ベースのドライバーや、データがローカルに存在する 1 つが存在するその他の 2 つの異なる構成を示します。  
+ 次の図は、ファイルベースのドライバーの2つの異なる構成を示しています。1つはデータがローカルにあり、もう1つはネットワークファイルサーバー上に存在します。  
   
- ![2 つの構成ファイルの&#45;ベースのドライバー](../../odbc/reference/media/pr06.gif "pr06")
+ ![ファイル&#45;ベースのドライバーの2つの構成](../../odbc/reference/media/pr06.gif "pr06")

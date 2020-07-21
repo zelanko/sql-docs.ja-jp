@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf33e467e54fda5c29d81e3437730f0ce9547cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098508"
 ---
-# <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="generatedatabasecreationscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseCreationScript メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースの作成で使用する SQL スクリプトを生成します。  
   
 ## <a name="syntax"></a>構文  
@@ -52,7 +52,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  ネイティブ モードと SharePoint 統合モードのどちらでデータベースを作成するかを示します。  
   
 > [!IMPORTANT]  
->  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 *IsSharePointMode* = `True`はサポートされていません、SharePoint モードで[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は SharePoint 共有サービスで、WMI プロバイダーによって制御されていません。 このパラメーターは常に `False` に設定してください。  
+>  以降で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]は、 *issharepointmode* = `True`はサポートされていませ[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ん。 sharepoint モードでは、は sharepoint 共有サービスであり、WMI プロバイダーによって制御されないためです。 このパラメーターは常に `False` に設定してください。  
   
  *[スクリプト]*  
  [out] 生成された SQL スクリプトを含む文字列。  
@@ -63,7 +63,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このメソッドを使用すると、現在接続されているレポート サーバーのバージョンに対応するレポート サーバー データベースを作成する SQL スクリプトが生成されます。  
   
  *DatabaseName* パラメーターに指定する値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース名前付け規則に準拠している必要があります。  

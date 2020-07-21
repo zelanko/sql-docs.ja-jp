@@ -1,6 +1,6 @@
 ---
-title: OLE DB データソースの列挙 (OLE DB) |Microsoft Docs
-description: MSOLEDBSQL 列挙子を使用して OLE DB データソースを列挙する
+title: OLE DB データ ソースの列挙 (OLE DB) | Microsoft Docs
+description: MSOLEDBSQL 列挙子を使用して OLE DB データ ソースを列挙する
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994831"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB データ ソースの列挙 (OLE DB)
@@ -39,15 +39,15 @@ ms.locfileid: "67994831"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB データ ソースを列挙するには  
   
-1.  **ISourceRowset:: GetSourcesRowset**を呼び出して、ソース行セットを取得します。  
+1.  **ISourceRowset::GetSourcesRowset** を呼び出し、ソース行セットを取得します。  
   
-2.  **GetColumnInfo:: IColumnInfo**を呼び出して、列挙子行セットの説明を検索します。  
+2.  **GetColumnInfo::IColumnInfo** を呼び出して、列挙子の行セットの説明を検索します。  
   
 3.  列情報からバインド構造体を作成します。  
   
-4.  **IAccessor:: CreateAccessor**を呼び出して、行セットアクセサーを作成します。  
+4.  **IAccessor::CreateAccessor** を呼び出し、行セット アクセサーを作成します。  
   
-5.  **IRowset:: GetNextRows**を呼び出して、行をフェッチします。  
+5.  **IRowset::GetNextRows** を呼び出し、行をフェッチします。  
   
 6.  **IRowset::GetData** を呼び出して、行の行セットのコピーからデータを取得し、そのデータを処理します。  
   

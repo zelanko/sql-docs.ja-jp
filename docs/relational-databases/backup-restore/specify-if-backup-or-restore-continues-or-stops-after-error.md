@@ -1,7 +1,8 @@
 ---
-title: エラー後にバックアップまたは復元を続行するか中止するかを指定する | Microsoft Docs
-ms.custom: ''
-ms.date: 03/17/2017
+title: エラー後のバックアップまたは復元の設定
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server でエラーが発生したときにバックアップ操作または復元操作を続行するかどうかを指定する方法を学習します。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e40636bc4f76e6963c0c766c36392515f7c200da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 003fbc933de445b6540c797d57b02dbad834e0bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68216175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759054"
 ---
-# <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>エラー後にバックアップまたは復元を続行するか中止するかを指定する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>エラー後にバックアップまたは復元を続行するか中止するかを指定する
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、エラーが発生したときにバックアップ操作または復元操作を中止するか続行するかを指定する方法を説明します。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68216175"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **エラーが発生したときにバックアップ操作または復元操作を続行するかどうかを指定する方法:**  
   
@@ -39,11 +40,11 @@ ms.locfileid: "68216175"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  BACKUP  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "68216175"
   
  RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-specify-whether-backup-continues-or-stops-after-an-error-is-encountered"></a>エラーが発生したときにバックアップ操作を続行するか停止するかを指定するには  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68216175"
   
 2.  **[オプション]** ページの **[信頼性]** セクションで、 **[メディアに書き込む前にチェックサムを行う]** と **[エラーのまま続行する]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-specify-whether-a-backup-operation-continues-or-stops-after-encountering-an-error"></a>エラーが発生したときにバックアップ操作を続行するか停止するかを指定するには  
   

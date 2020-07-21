@@ -51,7 +51,7 @@
       items:
         - name: ドメインの作成
           href: create-a-domain.md
-        - name: 'ドメイン管理:ドメイン リスト'
+        - name: 'ドメイン管理: ドメイン リスト'
           href: domain-management-domain-list.md
         - name: ドメインのプロパティの設定
           href: set-domain-properties.md

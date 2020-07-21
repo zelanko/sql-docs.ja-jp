@@ -1,5 +1,5 @@
 ---
-title: GetObjectOwner および SetObjectOwner メソッドの例 (vc++) |Microsoft Docs
+title: GetObjectOwner メソッドと SetObjectOwner メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], VC++ example
 - GetObjectOwner method [ADOX], VC++ example
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1cf3526681095fd5d1cc1dd67b5dd16061f601b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04c8a84da02d31314146b4f54b93cc0edf7bb30e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966364"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764921"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner および SetObjectOwner メソッドの例 (VC++)
-この例では、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)と[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッド。 このコードを想定して、グループのアカウンティング (を参照してください、[グループとユーザーの Append、ChangePassword メソッドの例 (vc++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)をシステムにこのグループを追加する方法を参照してください)。 Categories テーブルの所有者は、アカウンティングに設定されます。  
+この例では、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)メソッドと[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッドを示します。 このコードは、グループアカウンティングが存在することを前提としています (グループ[とユーザー Append、ChangePassword メソッドの例 (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)を参照して、システムにこのグループを追加する方法を確認してください)。 Categories テーブルの所有者は、Accounting に設定されています。  
   
 ```  
 // BeginOwnersCpp.cpp  
@@ -86,7 +86,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

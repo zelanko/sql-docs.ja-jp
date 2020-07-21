@@ -1,5 +1,5 @@
 ---
-title: データ (SSAS テーブル) を手動で処理 |Microsoft Docs
+title: データの手動処理 (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a861225414ec5bb63f77a0c4ce6c76a9c58c153d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077970"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541844"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>データの手動処理 (SSAS テーブル)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のワークスペースのデータを手動で処理する方法について説明します。  
@@ -30,7 +29,7 @@ ms.locfileid: "66077970"
   
 -   [データ処理の進行状況](#bkmk_data_process_progress)  
   
-##  <a name="bkmk_mahually_process"></a> データの手動処理  
+##  <a name="manually-process-data"></a><a name="bkmk_mahually_process"></a>データを手動で処理する  
   
 #### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>モデル内の 1 つまたはすべてのテーブルのデータを処理するには  
   
@@ -60,10 +59,10 @@ ms.locfileid: "66077970"
   
 3.  [パーティション] リストで処理するパーティションを選択し、 **[OK]** をクリックします。  
   
-##  <a name="bkmk_data_process_progress"></a> データ処理の進行状況  
- **[データ処理の進行状況]** ダイアログ ボックスを使用すると、外部ソースからモデルにインポートしたデータの処理を監視できます。 このダイアログ ボックスにアクセスするには、 **[モデル]** メニューの **[パーティションの処理]** 、 **[テーブルの処理]** 、または **[すべて処理]** をクリックします。  
+##  <a name="data-process-progress"></a><a name="bkmk_data_process_progress"></a>データ処理の進行状況  
+ **[データ処理の進行状況]** ダイアログ ボックスを使用すると、外部ソースからモデルにインポートしたデータの処理を監視できます。 このダイアログ ボックスにアクセスするには、 **[モデル]** メニューの **[パーティションの処理]**、 **[テーブルの処理]** 、または **[すべて処理]** をクリックします。  
   
- **ステータス**  
+ **状態**  
  処理の操作が正常に行われたかどうかを示します。  
   
  **詳細**  
@@ -73,7 +72,7 @@ ms.locfileid: "66077970"
  処理の操作を停止します。 このオプションは、操作に時間がかかりすぎる場合や、エラーが多すぎる場合に有効です。  
   
 ## <a name="see-also"></a>参照  
- [データの処理 (SSAS テーブル)](process-data-ssas-tabular.md)   
- [データの処理のトラブルシューティング (SSAS テーブル)](troubleshoot-process-data-ssas-tabular.md)  
+ [SSAS 表形式&#41;&#40;データを処理する](process-data-ssas-tabular.md)   
+ [データの処理のトラブルシューティング &#40;SSAS テーブル&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

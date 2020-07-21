@@ -12,15 +12,15 @@ ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f336b68b53f95d839eede56fac206ebd390f9e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32e2362d5d106d8605c1c7d7f45a60d8d5d4b044
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726223"
 ---
 # <a name="query-notifications-event-category"></a>Query Notifications イベント カテゴリ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Query Notifications** イベント カテゴリには、開発者と管理者がクエリ通知の監視やトラブルシューティングを行うために使用できる情報を報告するイベント クラスが含まれます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -38,7 +38,7 @@ ms.locfileid: "67908338"
   
 ## <a name="see-also"></a>参照  
  [SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

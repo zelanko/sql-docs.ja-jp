@@ -18,15 +18,15 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0989fda3e2650843b24719e51cd0944713a9ac2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103421"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012246"
 ---
 # <a name="create-statistics"></a>統計の作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のテーブルまたはインデックス付きビューの 1 つまたは複数の列で、クエリの最適化に関する統計 (フィルター選択された統計情報を含む) を作成できます。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成する必要がある場合もあります。  
   
  **このトピックの内容**  
@@ -43,9 +43,9 @@ ms.locfileid: "68103421"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   CREATE STATISTICS ステートメントで統計を作成する前に、AUTO_CREATE_STATISTICS オプションがデータベース レベルで設定されていることを確認します。 これにより、クエリ オプティマイザーが常にクエリ述語列について 1 列ずつの統計を作成し続けるようになります。  
   
@@ -53,12 +53,12 @@ ms.locfileid: "68103421"
   
 -   フィルター選択された統計情報の述語で定義されているテーブル列の定義を削除、名前変更、または変更することはできません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ユーザーがテーブルまたはインデックス付きビューの所有者であるか、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、または **db_ddladmin** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-statistics"></a>統計を作成するには  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68103421"
      **[統計の列]**  
      このグリッドに、この統計の対象となる列が表示されます。 グリッド内のすべての値は読み取り専用です。  
   
-     **[名前]**  
+     **Name**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
      **[データ型]**  
@@ -96,10 +96,10 @@ ms.locfileid: "68103421"
      **[NULL を許容]**  
      列で NULL 値が許容されるかどうかを示します。  
   
-     **[追加]**  
+     **追加**  
      テーブルの列を統計グリッドに追加します。  
   
-     **[削除]**  
+     **Remove**  
      選択されている列を統計グリッドから削除します。  
   
      **[上へ移動]**  
@@ -117,13 +117,13 @@ ms.locfileid: "68103421"
      **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[フィルター]** ページに、以下のプロパティが表示されます。  
   
      **[フィルター式]**  
-     フィルター処理された統計情報にどのデータ行を含めるかを定義します。 例を次に示します。 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     フィルター処理された統計情報にどのデータ行を含めるかを定義します。 たとえば、`Production.ProductSubcategoryID IN ( 1,2,3 )` のように指定します。  
   
-5.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページで、 **[追加]** をクリックします。  
+5.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページで、**[追加]** をクリックします。  
   
      **[列の選択]** ダイアログ ボックスに次のプロパティが表示されます。 この情報は読み取り専用です。  
   
-     **[名前]**  
+     **Name**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
      **[データ型]**  
@@ -135,14 +135,14 @@ ms.locfileid: "68103421"
      **[ID]**  
      オンの場合、ID 列を示します。  
   
-     **Allow NULLs**  
+     **[NULL を許容]**  
      列で NULL 値が許容されるかどうかを示します。  
   
 6.  **[列の選択]** ダイアログ ボックスで、統計を作成する列のチェック ボックスをオンにし、 **[OK]** をクリックします。  
   
-7.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスで、 **[OK]** をクリックします。  
+7.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスで、**[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-statistics"></a>統計を作成するには  
   

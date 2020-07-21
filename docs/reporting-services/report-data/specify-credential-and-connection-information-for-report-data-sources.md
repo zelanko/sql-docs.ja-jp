@@ -1,6 +1,7 @@
 ---
-title: レポート データ ソースに関する資格情報と接続情報を指定する | Microsoft Docs
-ms.date: 08/17/2018
+title: レポート データ ソースに関する資格情報と接続情報を設定する | Microsoft Docs
+description: レポート サーバーは、資格情報を使用して、レポートにコンテンツを提供したり、データ ドリブン サブスクリプションに受信者の情報を提供する外部データ ソースに接続します。
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6b5041b07551ba8bbd23cc3f737fc0c09d72ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575347"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75244562"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>レポート データ ソースに関する資格情報と接続情報を指定する
   レポート サーバーは、資格情報を使用して、レポートにコンテンツを提供したり、データ ドリブン サブスクリプションに受信者の情報を提供する外部データ ソースに接続します。 Windows 認証、データベース認証、認証なし、またはカスタム認証を使用する資格情報を指定できます。 ネットワーク経由で接続要求を送信するときに、レポート サーバーはユーザー アカウントまたは自動実行アカウントのいずれかの権限を借用します。 接続要求の実行時に使用されるセキュリティ コンテキストの詳細については、このトピックの「 [データ ソースの構成とネットワーク接続](#DataSourceConfigurationConnections) 」をご覧ください。  
@@ -39,7 +40,7 @@ ms.locfileid: "65575347"
 > [!NOTE]  
 >  資格情報は、レポート サーバーにアクセスするユーザーを認証するためにも使用されます。 レポート サーバーへのユーザーの認証に関する情報については、別のトピックで説明します。  
   
- レポートを作成すると、外部データ ソースへの接続が定義されます。 レポートをパブリッシュした後は、この接続を個別に管理できます。 動的な一覧からデータ ソースを選択できるようになる静的な接続文字列または式を指定できます。 データ ソースの種類および接続文字列を指定する方法について詳しくは、「 [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」をご覧ください。  
+ レポートを作成すると、外部データ ソースへの接続が定義されます。 レポートをパブリッシュした後は、この接続を個別に管理できます。 動的な一覧からデータ ソースを選択できるようになる静的な接続文字列または式を指定できます。 データ ソースの種類および接続文字列を指定する方法の詳細については、「[データ接続、データ ソース、および接続文字列 - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」をご覧ください。  
   
 ## <a name="when-credentials-are-used-in-report-builder"></a>レポート ビルダーの資格情報を使用する場合  
  レポート ビルダーでは、資格情報はレポート サーバーに接続するときと、埋め込みデータ ソースの作成、データセット クエリの実行、レポートのプレビューなどのデータ関連タスクに使用されます。 資格情報はレポートに格納されません。 資格情報は、レポート サーバー上またはローカル クライアント上で個別に管理されます。 次の一覧に、指定する必要がある資格情報の種類、それらの資格情報の格納場所、およびそれらの資格情報の使用方法を示します。  
@@ -146,22 +147,22 @@ ms.locfileid: "65575347"
 ## <a name="user-name-and-password-login"></a>ユーザー名とパスワードによるログイン  
  **[次のユーザー名とパスワードを使用]** を選択した場合、データ ソースへのアクセスにはユーザー名およびパスワードの指定が必要になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの場合は、この資格情報がデータベース ログイン用となる可能性があります。 この資格情報は、認証用にデータ ソースに渡されます。  
   
-##  <a name="DataSourceConfigurationConnections"></a> データ ソースの構成とネットワーク接続  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> データ ソースの構成とネットワーク接続  
  次の表は、資格情報の種類とデータ処理拡張機能の特定の組み合わせにおける接続方法を示しています。 カスタム データ処理拡張機能を使用している場合は、「 [カスタム データ処理拡張機能の接続を指定する](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md)」をご覧ください。  
   
-|**型**|**ネットワーク接続のコンテキスト**|**データ ソースの種類**<br /><br /> **(SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase)**|  
+|**Type**|**ネットワーク接続のコンテキスト**|**データ ソースの種類**<br /><br /> **(SQL Server、Oracle、ODBC、OLE DB、Analysis Services、XML、SAP NetWeaver BI、Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |統合セキュリティ|現在のユーザーを借用します。|すべてのデータ ソースの種類で、現在のユーザー アカウントを使用して接続します。|  
 |Windows 資格情報|指定したユーザーの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、および OLE DB の場合 : 権限を借用したユーザー アカウントを使用して接続します。|  
-|データベース資格情報|自動実行アカウントまたはサービス アカウントの権限を借用します。<br /><br /> (Reporting Services は、サービス ID を使用して接続要求を送信する際に管理者権限を削除します。)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> ユーザー名とパスワードを接続文字列に追加します。<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の場合:<br /><br /> TCP/IP プロトコルを使用している場合は、接続が正常に行われます。それ以外の場合は、失敗します。<br /><br /> XML の場合 :<br /><br /> データベース資格情報を使用している場合は、レポート サーバーで接続に失敗します。|  
-|なし|自動実行アカウントの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> 接続文字列で定義されている資格情報を使用します。 自動実行アカウントが未定義の場合は、レポート サーバーで接続に失敗します。<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の場合:<br /><br /> 自動実行アカウントが定義されていても、資格情報が指定されていない場合は、必ず接続に失敗します。<br /><br /> XML の場合 :<br /><br /> 自動実行アカウントが定義されている場合は、匿名ユーザーとして接続します。それ以外の場合は、接続に失敗します。|  
+|データベース資格情報|自動実行アカウントまたはサービス アカウントの権限を借用します。<br /><br /> (Reporting Services は、サービス ID を使用して接続要求を送信する際に管理者権限を削除します。)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> ユーザー名とパスワードを接続文字列に追加します。<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の場合:<br /><br /> TCP/IP プロトコルを使用している場合は、接続が正常に行われます。それ以外の場合は、失敗します。<br /><br /> XML の場合 :<br /><br /> データベース資格情報を使用している場合は、レポート サーバーで接続に失敗します。|  
+|なし|自動実行アカウントの権限を借用します。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC、OLE DB の場合:<br /><br /> 接続文字列で定義されている資格情報を使用します。 自動実行アカウントが未定義の場合は、レポート サーバーで接続に失敗します。<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の場合:<br /><br /> 自動実行アカウントが定義されていても、資格情報が指定されていない場合は、必ず接続に失敗します。<br /><br /> XML の場合 :<br /><br /> 自動実行アカウントが定義されている場合は、匿名ユーザーとして接続します。それ以外の場合は、接続に失敗します。|  
   
 ## <a name="setting-credentials-programmatically"></a>プログラム上での資格情報の設定  
  コード内で資格情報を設定して、レポートおよびレポート サーバーへのアクセスを制御できます。 詳しくは、「 [データ ソースと接続のメソッド](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)   
  [レポートのデータ ソースのプロパティを構成する](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

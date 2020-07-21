@@ -1,5 +1,6 @@
 ---
 title: SQL にフラット ファイルをインポートする | Microsoft Docs
+description: '[フラット ファイルのインポート] ウィザードを使用すると、.csv または .txt ファイルのデータを新しいデータベースのテーブルに簡単にコピーできます。 この記事では、このウィザードを使用する方法とタイミングを示します。'
 ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 962ed44bad714125f78cac5adff5af42b0c76685
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88fb60179a5503d3c41bbc253c1f7373c1d97184
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751224"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL のフラット ファイルのインポート ウィザード
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > インポートおよびエクスポート ウィザードに関連するコンテンツについては、「[SQL Server Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)」(SQL Server インポートおよびエクスポート ウィザード) を参照してください。
 
 フラット ファイルのインポート ウィザードを使用すると、フラット ファイル (.csv、.txt) からデータベース内の新しいテーブルにデータを簡単にコピーできます。 この概要では、このウィザードを使用する理由、このウィザードを見つける方法、実行が簡単な例について説明します。
@@ -32,19 +33,17 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 
 フラット ファイルのインポート ウィザードのユーザー エクスペリエンス改善の詳細については、このビデオをご覧ください。
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 この機能は、SQL Server Management Studio (SSMS) v17.3 以降でのみ使用できます。 最新バージョンを使用していることを確認してください。 最新バージョンは[こちら](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)で入手できます。
  
-## <a id="started"></a>はじめに
+## <a name="getting-started"></a><a id="started"></a>はじめに
 フラット ファイルのインポート ウィザードにアクセスするには、次の手順を実行します。
 
 1. **SQL Server Management Studio** を開きます。
 2. SQL Server Database Engine または localhost のインスタンスに接続します。
 3. **[データベース]** を展開し、データベース (下の例では test) を右クリックし、 **[タスク]** をポイントして、[データのインポート] の上の **[フラット ファイルのインポート]** をクリックします。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![ウィザードのメニュー](media/import-flat-file-wizard/importffmenu.png)
 
@@ -81,12 +80,12 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 
 ![ウィザードの変更](media/import-flat-file-wizard/importffmodify.png)
 
-### <a name="step-5-summary"></a>手順 5:[概要]
+### <a name="step-5-summary"></a>手順 5:まとめ
 これは、現在の構成が表示される概要ページです。 問題がある場合は、前のセクションに戻ることができます。 問題がない場合は、[完了] をクリックします。インポート プロセスが開始されます。
 
 ![ウィザードの概要](media/import-flat-file-wizard/importffsummary.png)
 
-### <a name="step-6-results"></a>手順 6:[結果]
+### <a name="step-6-results"></a>手順 6:結果
 このページには、インポートが成功したかどうかが表示されます。 緑のチェック マークが表示される場合は成功です。それ以外の場合は、構成や入力ファイルに誤りがないか確認する必要があります。
 
 ![ウィザードの結果](media/import-flat-file-wizard/importffresults.png)

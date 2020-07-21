@@ -13,15 +13,15 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f9bf3a75323a18b500c5bec35e0a01cb48fa754e
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095482"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302011"
 ---
 # <a name="writing-pages"></a>ページの書き込み
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスからの I/O には論理書き込みと物理書き込みがあります。 論理書き込みは、バッファー キャッシュ内のページのデータが変更されるときに行われます。 物理書き込みは、そのページを [バッファー キャッシュ](../relational-databases/memory-management-architecture-guide.md) からディスクに書き込むときに行われます。
 
@@ -48,7 +48,7 @@ ms.locfileid: "68095482"
  レイジー ライターは、使用頻度の少ないページをバッファー キャッシュから削除することで空きバッファーを使用可能にするシステム プロセスです。 ダーティ ページが最初にディスクに書き込まれます。 
 
 * 集中書き込み   
- 集中書き込みプロセスでは、一括挿入や SELECT INTO 操作など、ログに記録されない操作に関連付けられているダーティ データ ページを書き込みます。 このプロセスにより、新しいページの作成と書き込みを並列に実行できます。 つまり、ページからディスクへの書き込み操作全体が完了するまで呼び出し操作が待機する必要はありません。
+ 集中書き込みプロセスでは、一括挿入や SELECT INTO 操作など、ログに最小限記録される操作に関連付けられているダーティ データ ページを書き込みます。 このプロセスにより、新しいページの作成と書き込みを並列に実行できます。 つまり、ページからディスクへの書き込み操作全体が完了するまで呼び出し操作が待機する必要はありません。
 
 * Checkpoint   
  チェックポイント プロセスでは、指定されたデータベースからのページを含むバッファーのバッファー キャッシュを定期的にスキャンし、ダーティ ページをすべてディスクに書き込みます。 チェックポイントは、すべてのダーティ ページがディスクに書き込まれたことを確認するために作成されるポイントで、その後の復旧の時間を短縮します。 ユーザーは、CHECKPOINT コマンドを使用することでチェックポイント操作を要求できます。または、使用済みのログ容量と最後にチェックポイント操作が行われてからの経過時間に基づいて、 [!INCLUDE[ssDE](../includes/ssde-md.md)] によって自動的にチェックポイントが生成される場合もあります。 さらに、特定の利用状況が発生したときに、チェックポイントが生成されます。 たとえば、データ ファイルやログ ファイルがデータベースに追加されたり、データベースから削除されたりするとき、または SQL Server インスタンスが停止したときなどです。 詳細については、「 [チェックポイントとログのアクティブな部分](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)」を参照してください。

@@ -1,5 +1,5 @@
 ---
-title: '[全般] プロパティ ページ、共有データセット (レポート マネージャー) |Microsoft Docs'
+title: '[全般] プロパティページ、共有データセット (レポートマネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109066"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>[全般] プロパティ ページ、共有データセット (レポート マネージャー)
@@ -24,7 +24,7 @@ ms.locfileid: "66109066"
   
  共有データセットを使用すると、データセットを使用するレポート、コンポーネント、および他のカタログ アイテムとは別にデータセットの設定を管理できます。  
   
-## <a name="navigation"></a>ナビゲーション  
+## <a name="navigation"></a>「ナビゲーション」  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
   
 ###### <a name="to-open-the-shared-dataset-properties-page-for-a-shared-dataset"></a>共有データセットの [共有データセット] プロパティ ページを開くには  
@@ -35,41 +35,41 @@ ms.locfileid: "66109066"
   
 3.  ドロップダウン リストの **[管理]** をクリックします。 [全般] プロパティ ページが開きます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  **名前**  
  共有データセットの名前を入力します。この名前は、レポート サーバーのフォルダー階層内のアイテムを識別するために使用されます。  
   
- **[説明]**  
+ **説明**  
  共有データセットに関する情報を提供します。 この説明は、[コンテンツ] ページに表示されます。  
   
- **リスト ビューで非表示にします。**  
+ **[リスト ビューで非表示にする]**  
  レポート マネージャーでリスト ビュー モードを使用しているユーザーに共有データセットを表示しません。 リスト ビュー モードは、レポート サーバー フォルダー階層を参照するときの既定のビュー形式です。 リスト ビューでは、アイテム名および説明がページに表示されます。 別の形式として詳細ビューがあります。 詳細ビューでは説明が省略されますが、そのアイテムに関するその他の情報は含まれます。 リスト ビューのアイテムは非表示にできますが、詳細ビューのアイテムは非表示にできません。 アイテムへのアクセスを制限する場合は、ロールの割り当てを作成する必要があります。  
   
- **クエリ実行タイムアウト**  
- クエリがタイムアウトするまでの期間を秒数で入力します。0 の場合、クエリはタイムアウトしません。  
+ **[クエリ実行タイムアウト]**  
+ クエリがタイムアウトするまでの秒数を入力します。0の場合、クエリはタイムアウトしません。  
   
- **[適用]**  
+ 適用****  
  変更を保存します。  
   
  **削除**  
  レポート サーバー データベースから共有データセットを削除します。 共有データセットを削除すると、レポートまたはキャッシュされたバージョンすべてが非アクティブ化されます。 レポートを再びアクティブ化するには、レポート作成ツールでレポートを 1 つずつ開き、同じ名前および同じフィールド コレクションでデータセットを指定する必要があります。 別の方法として、各データ領域の参照を更新し、同じフィールド コレクションで異なるデータセットを使用することもできます。  
   
- **Move**  
- レポート サーバーのフォルダー階層内の共有データセットを再配置します。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、次を参照してください。[項目ページに移動&#40;レポート マネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)します。  
+ **合わせ**  
+ レポート サーバーのフォルダー階層内の共有データセットを再配置します。 このボタンをクリックすると、アイテムの移動ページが表示され、フォルダーを参照して新しい場所を選択できます。 詳細については、「[[アイテムの移動] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/move-items-page-report-manager.md)」を参照してください。  
   
  **ダウンロード**  
  共有データセット定義のコピーを抽出します。 このファイルは、コンピューターに定義されているファイルの関連付けに応じて、Visual Studio または他のアプリケーションで開きます。 ほとんどの場合、共有データセットは XML ファイルとして開きます。  
   
- **[置換]**  
+ **ら**  
  共有データセット定義を、ファイル システム上の .rsd ファイルに記述された別の定義に置き換えます。  
   
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
- [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
- [キャッシュ更新オプション&#40;レポート マネージャー&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
- [共有データセットのキャッシュ ページで、&#40;レポート マネージャー&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [共有データセットを管理する](report-data/manage-shared-datasets.md)   
+ [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [レポートマネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [キャッシュ更新オプション &#40;レポートマネージャー&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
+ [[キャッシュ] ページ、共有データセット &#40;レポートマネージャー&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
+ [共有データセットの管理](report-data/manage-shared-datasets.md)   
  [共有データセットのキャッシュ &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

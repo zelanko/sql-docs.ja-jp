@@ -23,15 +23,15 @@ ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99f4c5ac155f821dfaf69f335629730d99eb6933
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2db720e53ae623a63a70271ea6560146e5f6931
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072096"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011071"
 ---
 # <a name="drop-user-transact-sql"></a>DROP USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースからユーザーを削除します。  
   
@@ -60,7 +60,7 @@ DROP USER user_name
  *user_name*  
  データベース内でユーザーを識別する名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  セキュリティ保護可能なリソースを所有するユーザーは、データベースから削除できません。 セキュリティ保護可能なリソースを所有するデータベース ユーザーを削除するには、そのリソースの所有権を削除または譲渡する必要があります。  
   
  guest ユーザーは削除できませんが、master または tempdb 以外のデータベースでは、REVOKE CONNECT FROM GUEST を実行して CONNECT 権限を取り消すことにより、guest ユーザーを無効にできます。  
@@ -71,7 +71,7 @@ DROP USER user_name
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY USER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AbolrousHazem` データベースからデータベース ユーザー `AdventureWorks2012` を削除します。  
   
 ```  

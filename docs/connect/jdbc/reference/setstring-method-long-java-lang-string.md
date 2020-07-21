@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e3e1dfb6447907caa0bd5970df47fe9989b4aab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 64b1800ddd64358a9a6bcc11027391ef258b82a9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972630"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926632"
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString (long, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *po*  
+ *pos*  
   
  CLOB への書き込みを開始する位置です。  
   
@@ -50,13 +50,13 @@ public int setString(long pos,
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setString メソッドは、java.sql.Clob インターフェイスの setString メソッドで規定されています。  
   
  文字データは、指定された開始位置から上書きされ、CLOB の初期データの長さをオーバーランすることができます。 開始位置に CLOB の長さ + 1 の値を指定すると、文字列が追加されます。 開始位置に CLOB の長さ + 2 以上 (または 0 以下) の値を指定すると、位置エラーがスローされます。  
   
 ## <a name="see-also"></a>参照  
- [setString メソッド&#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
+ [setString メソッド &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob のメソッド](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob メンバー](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob クラス](../../../connect/jdbc/reference/sqlserverclob-class.md)  

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 65a5c846313ad6d7d840c272c23c16698530547f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770681"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437559"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
   スクリプト コンポーネントはスクリプトをホストします。これにより、パッケージにカスタム スクリプト コードを含めて実行できます。 スクリプト コンポーネントは、パッケージ内で次の目的に使用できます。  
@@ -56,7 +55,7 @@ ms.locfileid: "62770681"
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 メタデータ デザイン モードでは、スクリプト コンポーネントの入力と出力を追加および変更できますが、コードは記述できません。 すべての入力と出力を構成した後に、コード デザイン モードに切り替え、スクリプトを記述します。 スクリプト コンポーネントは、入力と出力のメタデータから、基本コードを自動的に生成します。 スクリプト コンポーネントで基本コードを生成した後にメタデータを変更すると、更新された基本コードと互換性がない可能性があるため、記述したコードをコンパイルできないことがあります。  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>コンポーネントが使用するスクリプトの記述  
- スクリプト コンポーネントでは、スクリプトを記述する環境として [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用します。 **スクリプト変換エディター**から VSTA にアクセスします。 詳細については、「 [スクリプト変換エディター ([スクリプト] ページ)](../../script-transformation-editor-script-page.md)」を参照してください。  
+ スクリプト コンポーネントでは、スクリプトを記述する環境として [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) が使用されます。 **スクリプト変換エディター**から VSTA にアクセスします。 詳細については、「 [スクリプト変換エディター ([スクリプト] ページ)](../../script-transformation-editor-script-page.md)」を参照してください。  
   
  スクリプト コンポーネントでは、コンポーネントのメタデータを表す、ScriptMain という名前の自動生成クラスが含まれる VSTA プロジェクトが用意されています。 たとえば、スクリプト コンポーネントを 3 つの出力を持つ変換として使用する場合、ScriptMain には各出力のメソッドが含まれます。 ScriptMain は、スクリプトに対するエントリ ポイントです。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "62770681"
 ### <a name="configuring-the-script-component-programmatically"></a>プログラムによるスクリプト コンポーネントの構成  
  **[プロパティ]** ウィンドウまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../../common-properties.md)  
+-   [共通プロパティ](../../common-properties.md)  
   
 -   [変換のカスタム プロパティ](transformation-custom-properties.md)  
   

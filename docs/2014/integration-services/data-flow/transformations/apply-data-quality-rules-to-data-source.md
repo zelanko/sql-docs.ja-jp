@@ -7,18 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c420a52528662cecec1bae8e0e1718152279bc0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d59e6fb5ffb752b3346d40740e0b841bf574344e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770458"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431039"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>データ ソースにデータ品質ルールを適用する
-  Data Quality Services (DQS) を使用して、DQS クレンジング変換をデータ ソースに接続することで、パッケージ データ フロー内のデータを修正できます。 DQS の詳細については、「 [Data Quality Services の概念](../../../data-quality-services/data-quality-services-concepts.md)」を参照してください。 変換の詳細については、「[DQS クレンジング変換](dqs-cleansing-transformation.md)」を参照してください。  
+  Data Quality Services (DQS) を使用して、DQS クレンジング変換をデータ ソースに接続することで、パッケージ データ フロー内のデータを修正できます。 DQS の詳細については、「 [Data Quality Services の概念](../../../data-quality-services/data-quality-services-concepts.md)」を参照してください。 変換の詳細については、「 [DQS クレンジング変換](dqs-cleansing-transformation.md)」を参照してください。  
   
  DQS クレンジング変換によってデータを処理すると、データ品質プロジェクトが Data Quality Server に作成されます。 データ品質クライアントを使用してプロジェクトを管理します。 詳細については、「[データ品質プロジェクトの管理 &#40;開く、ロック解除、名前の変更、および削除&#41;](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)」を参照してください。  
   
@@ -26,7 +25,7 @@ ms.locfileid: "62770458"
   
 1.  パッケージを作成します。  
   
-2.  DQS クレンジング変換を追加し、構成します。 詳細については、「[[DQS クレンジング変換エディター] ダイアログ ボックス](../../dqs-cleansing-transformation-editor-dialog-box.md)」を参照してください。  
+2.  DQS クレンジング変換を追加し、構成します。 詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../dqs-cleansing-transformation-editor-dialog-box.md)」を参照してください。  
   
 3.  データ ソースに DQS クレンジング変換を接続します。  
   

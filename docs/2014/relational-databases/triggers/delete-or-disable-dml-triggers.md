@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39b345ade1258987df06938791ac0024e8612365
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68196530"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014632"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>DML トリガーの削除または無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、DML トリガーを削除または無効にする方法について説明します。  
@@ -31,9 +30,9 @@ ms.locfileid: "68196530"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **DML トリガーを削除または無効にするために使用するもの:**  
   
@@ -41,9 +40,9 @@ ms.locfileid: "68196530"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   トリガーを削除すると、現在のデータベースから削除されます。 トリガーの基になっているテーブルとデータは影響を受けません。 テーブルを削除すると、そのテーブルについて設定されたトリガーはすべて自動的に削除されます。  
   
@@ -51,14 +50,14 @@ ms.locfileid: "68196530"
   
 -   トリガーを無効にしてもトリガーは削除されず、 オブジェクトとして現在のデータベースに残りますが、 ただし、トリガーを起動するようにプログラミングされている INSERT、UPDATE、DELETE のいずれかのステートメントを実行してもトリガーは起動されません。 無効になったトリガーは、再度有効にできます。 トリガーを有効化しても、トリガーが再作成されるわけではありません。 トリガーは、最初に作成したときと同じ動作で起動されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  DML トリガーを削除するには、そのトリガーが定義されているテーブルまたはビューに対する ALTER 権限が必要です。  
   
  DML トリガーを無効または有効にするには、少なくともトリガーが作成されたテーブルまたはビューに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-delete-a-dml-trigger"></a>DML トリガーを削除するには  
   
@@ -80,7 +79,7 @@ ms.locfileid: "68196530"
   
 4.  トリガーを有効にするには、 **[有効化]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-a-dml-trigger"></a>DML トリガーを削除するには  
   
@@ -157,7 +156,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   

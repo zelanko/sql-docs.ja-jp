@@ -1,7 +1,7 @@
 ---
-title: SQLXML データ型のサンプル |Microsoft Docs
+title: SQLXML データ型のサンプル | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4d5e616fa1a510633caf4e5e2e0b20266a1eb771
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f0cc8e3e48024e6d5af789919173454d0ee05e56
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004376"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69027647"
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML データ型のサンプル
 
@@ -38,7 +38,7 @@ Document Object Model (DOM) は、XML のドキュメント、フラグメント
 
 ## <a name="requirements"></a>必要条件
 
-このサンプル アプリケーションを実行するには、クラスパスを設定して sqljdbc4.jar ファイルを含める必要があります。 クラスパスに sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という例外がスローされます。 クラスパスの設定方法の詳細については、「 [JDBC ドライバーの使用](../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。
+このサンプル アプリケーションを実行するには、クラスパスを設定して sqljdbc4.jar ファイルを含める必要があります。 クラスパスに sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という例外がスローされます。 クラスパスを設定する方法の詳細については、「[JDBC ドライバーの使用](../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。
 
 また、このサンプル アプリケーションを実行するには、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースにアクセスする必要があります。
 

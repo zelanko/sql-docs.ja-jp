@@ -52,10 +52,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: af164d4db9b6439f0634d113652b95939827b0f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105856"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>グラフの書式設定 (レポート ビルダーおよび SSRS)
@@ -87,7 +87,7 @@ ms.locfileid: "66105856"
  [グラフへの枠線の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)  
  グラフに枠線を追加する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフへの枠線の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)   
  [パレットを使用したグラフの色の定義 &#40;レポート ビルダーおよび SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   

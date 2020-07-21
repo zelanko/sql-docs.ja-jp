@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_catalog_components (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_fulltext_catalog_components (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb7cbf41a439c5221892142178d1341a9284f555
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055169"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901479"
 ---
-# <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースにあるすべてのフルテキスト カタログに使用されている、すべてのコンポーネント (フィルター、ワード ブレーカー、プロトコル ハンドラー) の一覧を返します。  
   
@@ -45,22 +45,22 @@ sp_help_fulltext_catalog_components
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**フルテキスト カタログ名**|**int**|フルテキスト カタログの名前。|  
-|**フルテキスト カタログ id**|**sysname**|フルテキスト カタログの ID。|  
-|**componenttype**|**sysname**|コンポーネントの型。 次のいずれかです。<br /><br /> Assert<br /><br /> プロトコル ハンドラー<br /><br /> ワード ブレーカー|  
+|**フルテキストカタログ名**|**int**|フルテキストカタログの名前。|  
+|**フルテキストカタログ id**|**sysname**|フルテキストカタログの ID。|  
+|**componenttype**|**sysname**|コンポーネントの種類。 次のいずれか:<br /><br /> Assert<br /><br /> プロトコルハンドラー<br /><br /> 単語|  
 |**componentname**|**sysname**|コンポーネント名。|  
 |**clsid**|**uniqueidentifier**|コンポーネントのクラス ID。|  
-|**fullpath**|**nvarchar (256)**|コンポーネントの場所へのパス。<br /><br /> NULL のメンバーでない呼び出し元を = **serveradmin**固定サーバー ロール。|  
-|**version**|**nvarchar(30)**|コンポーネントのバージョンです。|  
-|**manufacturer**|**sysname**|コンポーネントの製造元の名前です。|  
+|**fullpath**|**nvarchar(256)**|コンポーネントの場所へのパス。<br /><br /> NULL = 呼び出し元は、 **serveradmin**固定サーバーロールのメンバーではありません。|  
+|**version**|**nvarchar(30)**|コンポーネントのバージョン。|  
+|**manufacturer**|**sysname**|コンポーネントの製造元の名前。|  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="see-also"></a>関連項目  
- [フルテキスト検索およびセマンティック検索ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
- [sp_help_fulltext_system_components &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
+ [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+ [fulltext_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sp_help_fulltext_system_components &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)  
   
   

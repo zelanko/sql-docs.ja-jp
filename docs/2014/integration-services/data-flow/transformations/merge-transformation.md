@@ -15,15 +15,14 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2bf405d775acc66e2a260625e8de2c38974f70b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770421"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437629"
 ---
 # <a name="merge-transformation"></a>マージ変換
   マージ変換は、並べ替えられた 2 つのデータセットを 1 つのデータセットに結合します。 各データセットの行は、各キー列の値に基づいて出力に挿入されます。  
@@ -74,7 +73,7 @@ ms.locfileid: "62770421"
 ## <a name="see-also"></a>関連項目  
  [マージ結合変換](merge-join-transformation.md)   
  [全体結合変換](union-all-transformation.md)   
- [データ フロー](../data-flow.md)   
+ [データフロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   
   

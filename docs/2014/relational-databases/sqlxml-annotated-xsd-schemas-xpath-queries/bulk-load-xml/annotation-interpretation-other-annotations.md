@@ -1,5 +1,5 @@
 ---
-title: その他の注釈 (SQLXML 4.0) |マイクロソフトのドキュメント
+title: その他の注釈 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,14 @@ helpviewer_keywords:
 - id-prefix annotation [SQLXML]
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fff698fc4eb92dd1bade50274a289f861e07ede0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b654568c93df0a0c3e08cf6eaa615b7026a9c18a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003122"
 ---
 # <a name="other-annotations-sqlxml-40"></a>その他の注釈 (SQLXML 4.0)
   前のトピックで説明した注釈に加えて、XML 一括読み込みでは、その他の注釈が次のように解釈されます。  
@@ -49,7 +48,7 @@ ms.locfileid: "66013610"
  `sql:key-fields`  
  XML 一括読み込みでは、この注釈は常に無視されます。  
   
-## <a name="see-also"></a>関連項目  
- [注釈の解釈&#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
+## <a name="see-also"></a>参照  
+ [SQLXML 4.0 &#40;の注釈の解釈&#41;](annotation-interpretation-sqlxml-4-0.md)  
   
   

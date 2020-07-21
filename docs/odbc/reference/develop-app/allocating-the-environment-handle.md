@@ -1,5 +1,5 @@
 ---
-title: 環境ハンドルの割り当て |Microsoft Docs
+title: 環境ハンドルを割り当てています |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e33b850b2786960a368720deaf89a2203c7dd159
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077182"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303005"
 ---
 # <a name="allocating-the-environment-handle"></a>環境ハンドルの割り当て
-ODBC アプリケーションの最初のタスクが、ドライバー マネージャーの読み込みにはこれを行う方法は、オペレーティング システムに依存します。 たとえば、Microsoft® Windows NT® Server または Windows 2000 Server、Windows NT ワークステーション/Windows 2000 Professional、または Microsoft Windows® 95/98 を実行するコンピューターでアプリケーションかへのリンク ドライバー マネージャーのライブラリまたは呼び出し**LoadLibrary**ドライバー マネージャーの DLL を読み込めません。  
+ODBC アプリケーションの最初のタスクは、ドライバーマネージャーを読み込むことです。これがどのように行われるかは、オペレーティングシステムに依存します。 たとえば、Microsoft® Windows NT® Server/Windows 2000 Server、Windows NT Workstation/Windows 2000 Professional、または Microsoft Windows®95/98 を実行しているコンピューターでは、アプリケーションは Driver Manager ライブラリにリンクするか、または**LoadLibrary**を呼び出して DRIVER manager DLL を読み込みます。  
   
- 次のタスクは、アプリケーションが、他の ODBC 関数を呼び出す前に完了する必要がありますが、ODBC 環境を初期化し、次のように、環境ハンドルを割り当てるには。  
+ 次のタスクは、アプリケーションが他の ODBC 関数を呼び出すことができるようになる前に実行する必要があります。そのためには、ODBC 環境を初期化し、次のように環境ハンドルを割り当てます。  
   
-1.  アプリケーションは、SQLHENV 型の変数を宣言します。 呼び出して**SQLAllocHandle**し、この変数と sql_handle_env としてオプションのアドレスを渡します。 以下に例を示します。  
+1.  このアプリケーションでは、SQLHENV 型の変数を宣言しています。 次に、 **SQLAllocHandle**を呼び出し、この変数のアドレスと SQL_HANDLE_ENV オプションを渡します。 次に例を示します。  
   
     ```  
     SQLHENV henv1;  
@@ -38,12 +38,12 @@ ODBC アプリケーションの最初のタスクが、ドライバー マネ�
     SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv1);  
     ```  
   
-2.  ドライバー マネージャーは、環境に関する情報を格納する構造体を割り当てるし、変数内の環境ハンドルを返します。  
+2.  ドライバーマネージャーは、環境に関する情報を格納する構造体を割り当て、変数内の環境ハンドルを返します。  
   
- ドライバー マネージャーは呼び出しません**SQLAllocHandle**このドライバーで時間を呼び出すには、どのドライバーがわからないためです。 呼び出し元を遅らせる**SQLAllocHandle**ドライバー、アプリケーションがデータ ソースに接続する関数を呼び出すまでにします。 詳細については、次を参照してください。[接続処理でドライバー マネージャーの役割](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)、このセクションで後述します。  
+ ドライバーマネージャーは、この時点では**SQLAllocHandle**を呼び出しません。これは、ドライバーが呼び出すドライバーを認識しないためです。 アプリケーションが関数を呼び出してデータソースに接続するまで、ドライバーでの**SQLAllocHandle**の呼び出しが遅延します。 詳細については、このセクションで後述する「[接続プロセスでのドライバーマネージャーの役割](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)」を参照してください。  
   
- アプリケーションは、ODBC を使用してが完了したら、使用して、環境ハンドルが解放されます**SQLFreeHandle**します。 これは、環境を解放した後、ODBC 関数呼び出しで、環境のハンドルを使用するアプリケーション プログラミング エラーこれには結果が未定義であるが、致命的な可能性があります。  
+ アプリケーションが ODBC の使用を終了すると、 **Sqlfreehandle**で環境ハンドルが解放されます。 環境を解放した後、ODBC 関数の呼び出しで環境のハンドルを使用するアプリケーションプログラミングエラーになります。この操作を行うと、未定義になりますが、致命的な結果になります。  
   
- ときに**SQLFreeHandle**を呼び出すと、ドライバーのリリースの環境に関する情報を格納する構造体を使用します。 なお**SQLFreeHandle**その環境ハンドルのすべての接続ハンドルが解放されるまでの環境ハンドルを呼び出すことができません。  
+ **Sqlfreehandle**が呼び出されると、ドライバーは環境に関する情報を格納するために使用される構造体を解放します。 環境ハンドルのすべての接続ハンドルが解放されるまで、環境ハンドルに対して**Sqlfreehandle**を呼び出すことはできません。  
   
- 環境ハンドルの詳細については、次を参照してください。[環境処理](../../../odbc/reference/develop-app/environment-handles.md)します。
+ 環境ハンドルの詳細については、「[環境ハンドル](../../../odbc/reference/develop-app/environment-handles.md)」を参照してください。

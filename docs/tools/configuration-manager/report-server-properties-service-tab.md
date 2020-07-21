@@ -1,6 +1,6 @@
 ---
-title: レポート サーバーのプロパティ ([サービス] タブ) | Microsoft Docs
-ms.custom: ''
+title: '[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([サービス] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,19 +11,19 @@ ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e99d8aab84cb06727d5f396a2d89573642b7e70d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 902421968723f52949b352318b864d60714a6059
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058349"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75307905"
 ---
 # <a name="report-server-properties-service-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のレポート サーバー サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
+  このサービスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のレポート サーバー サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
 ## <a name="options"></a>オプション  
- **バイナリ パス**  
+ **[バイナリ パス]**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
  **[エラー制御]**  
@@ -35,7 +35,7 @@ ms.locfileid: "68058349"
  **Host Name**  
  フルテキスト検索を実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **[名前]**  
+ **Name**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  
@@ -44,7 +44,7 @@ ms.locfileid: "68058349"
  **[SQL サービスの種類]**  
  呼び出し側プロセスに提供されるサービスの種類です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかのサービスがインストールされます。  
   
- **開始モード**  
+ **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
 -   手動: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
@@ -53,10 +53,10 @@ ms.locfileid: "68058349"
   
 -   \[無効]: このサービスは開始できません。  
   
- **状態**  
+ **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [[SQL Server のサービス]](../../tools/configuration-manager/sql-server-services.md)  
+ [SQL Server のサービス](../../tools/configuration-manager/sql-server-services.md)  
   
   

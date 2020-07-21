@@ -1,5 +1,5 @@
 ---
-title: 権限借用の設定 (SSAS - 多次元) |Microsoft Docs
+title: 権限借用オプションの設定 (SSAS-多次元) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 730ba13c22c8dcecf503398baae683f5d9c2b667
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072959"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545634"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>権限借用オプションの設定 (SSAS - 多次元)
   Analysis Services モデルで`data source` オブジェクトを作成するときに構成する必要がある設定の 1 つに、権限借用オプションがあります。 このオプションでは、接続関連のローカルの操作 (OLE DB データ プロバイダーの読み込みや、移動プロファイルをサポートする環境でのユーザー プロファイル情報の解決など) を実行するときに、Analysis Services で特定の Windows ユーザー アカウントの ID を使用するかどうかを指定します。  
@@ -45,11 +44,11 @@ ms.locfileid: "66072959"
   
 -   **[アセンブリのプロパティ]** ダイアログ ボックスの、[権限借用情報] プロパティ。  
   
-##  <a name="bkmk_options"></a> 権限借用のオプション  
+##  <a name="impersonation-options"></a><a name="bkmk_options"></a> 権限借用のオプション  
  ダイアログ ボックスのすべてのオプションを使用できますが、すべてのオプションが各シナリオに適しているわけではありません。 以下の情報を参考にして、シナリオに最適なオプションを判断してください。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- このオプションを選択、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトは、この形式で指定された Windows ユーザー アカウントのセキュリティ資格情報を使用します。*\<ドメイン名 >***\\***\<ユーザー アカウント名 >* します。  
+ このオプションを選択すると、オブジェクトは、と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] いう形式で指定された Windows ユーザーアカウントのセキュリティ資格情報を使用します *\<Domain name>***\\***\<User account name>* 。  
   
  データ アクセスのために特別に作成した専用の最小特権 Windows ユーザー ID を使用する場合に、このオプションを選択します。 たとえば、レポートで使用されるデータを取得するための汎用アカウントを定期的に作成している場合は、ここでそのアカウントを指定できます。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66072959"
  DMX OPENQUERY ステートメント、ローカル キューブ、およびマイニング モデルの場合、サービス アカウント オプションを選択しても、現在のユーザーの資格情報が使用されます。 サービス アカウント オプションは、不一致バインドではサポートされていません。  
   
 > [!NOTE]  
->  サービス アカウントに Analysis Services インスタンスに対する管理者権限がない場合、キューブからデータ マイニング モデルを処理するときにエラーが発生することがあります。 詳細については、次を参照してください。[マイニング構造。DataSource が OLAP キューブの場合の処理中に問題](https://go.microsoft.com/fwlink/?LinkId=251610)します。  
+>  サービス アカウントに Analysis Services インスタンスに対する管理者権限がない場合、キューブからデータ マイニング モデルを処理するときにエラーが発生することがあります。 詳細については、「 [マイニング構造: DataSource が OLAP キューブの場合の処理に関する問題](https://go.microsoft.com/fwlink/?LinkId=251610)」を参照してください。  
   
  **[現在のユーザーの資格情報を使用する]**  
  このオプションを選択すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトにより、不一致バインド、DMX OPENQUERY、ローカル キューブ、マイニング モデルに現在のユーザーのセキュリティ資格情報が使用されます。  
@@ -86,7 +85,7 @@ ms.locfileid: "66072959"
  **[既定]** または **[継承]**  
  **[既定]** はデータベース レベルで設定されている権限借用オプションで使用され、 **[継承]** はデータ ソース レベルで設定されている権限借用オプションで使用されます。  
   
- **データ ソースの [継承] オプション**  
+ **データソース-Inherit オプション**  
   
  データ ソース レベルでは、 **[継承]** によって [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が親オブジェクトの権限借用オプションを使用することが指定されます。 多次元モデルでは、親オブジェクトは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースです。 **[継承]** オプションを選択すると、対象のデータ ソースおよび同じデータベースに含まれる他のデータ ソースの権限借用設定を一元的に管理できます。 このオプションを有効にするには、データベース レベルで特定の Windows ユーザー名とパスワードを選択します。 データベース レベルで Windows ユーザー名とパスワードが指定されていない場合、データ ソースの **[継承]** とデータベースの **[既定]** の組み合わせは、サービス アカウント オプションを使用するのと同じです。  
   
@@ -100,15 +99,15 @@ ms.locfileid: "66072959"
   
  データベース レベルでの既定の設定に関する詳細については、「[多次元データベースのプロパティ設定 &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)」を参照してください。  
   
- **データベースの既定のオプション**  
+ **Databases-既定のオプション**  
   
- 表形式データベースの**既定**サービス アカウントを使用することを意味します。  
+ 表形式データベースの場合、**既定**ではサービスアカウントが使用されます。  
   
  多次元データベースの場合、 **[既定]** はサービス アカウントを使用し、データ マイニング操作に現在のユーザーを使用することを意味します。  
   
-## <a name="see-also"></a>関連項目  
- [データ ソースの作成 &#40;SSAS 多次元&#41;](create-a-data-source-ssas-multidimensional.md)   
- [データ ソースのプロパティを設定&#40;SSAS 多次元&#41;](set-data-source-properties-ssas-multidimensional.md)   
- [DirectQuery の配置シナリオ&#40;SSAS 表形式&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [SSAS 多次元&#41;&#40;データソースを作成する](create-a-data-source-ssas-multidimensional.md)   
+ [SSAS 多次元&#41;&#40;データソースプロパティを設定する](set-data-source-properties-ssas-multidimensional.md)   
+ [SSAS 表形式&#41;&#40;DirectQuery デプロイシナリオ](../directquery-deployment-scenarios-ssas-tabular.md)  
   
   

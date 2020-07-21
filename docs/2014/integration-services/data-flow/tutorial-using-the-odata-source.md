@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:[SSIS] OData ソースの使用 |Microsoft Docs
+title: 'チュートリアル: OData ソースの使用 [SSIS] |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,24 +7,23 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6affa33374df4bd8e05e6158a23a46016ef1c644
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770218"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429889"
 ---
-# <a name="tutorial-using-the-odata-source-ssis"></a>チュートリアル:[SSIS] OData ソースの使用
+# <a name="tutorial-using-the-odata-source-ssis"></a>チュートリアル: OData ソースの使用 [SSIS]
   このチュートリアルでは、サンプルの **Northwind** OData サービス (http://services.odata.org/V3/Northwind/Northwind.svc/) ) から **Employees** (従業員) コレクションを抽出し、フラット ファイルに読み込むプロセスについて説明します。  
   
 ## <a name="1-create-an-integration-services-project"></a>1.Integration Services プロジェクトの作成  
   
 1.  **SQL Server Data Tools** または [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]を起動します。  
   
-2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+2.  **[ファイル]** をクリックし、 **[新規作成]** をポイントして、 **[プロジェクト]** をクリックします。  
   
 3.  **[新しいプロジェクト]** ダイアログ ボックスで **[インストール済み]** 、 **[テンプレート]** 、 **[ビジネス インテリジェンス]** の順に展開し、 **[Integration Services]** をクリックします。  
   
@@ -44,9 +43,9 @@ ms.locfileid: "62770218"
   
 5.  **[新規]** をクリックし、新しい OData 接続マネージャーを追加します。  
   
-6.  **[サービス ドキュメントの場所]** に対応する OData サービスの URL を入力します。 サービス ドキュメントに対応する URL、または特定のフィードかエンティティに対応する URL を指定できます。 このチュートリアルでは、「 [ http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)します。  
+6.  **[サービス ドキュメントの場所]** に対応する OData サービスの URL を入力します。 サービス ドキュメントに対応する URL、または特定のフィードかエンティティに対応する URL を指定できます。 このチュートリアルでは、「」と入力 [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/) します。  
   
-7.  OData サービスにアクセスするために、 **[認証]** で **[Windows 認証]** が選択されていることを確認します。 既定では、 **[Windows 認証]** が選択されています。 基本認証を使用するには、 **[次のユーザー名とパスワードを使用]** を選択します。  
+7.  OData サービスにアクセスするために、 **[認証]** で **[Windows 認証]** が選択されていることを確認します。 既定では、**[Windows 認証]** が選択されています。 基本認証を使用するには、 **[次のユーザー名とパスワードを使用]** を選択します。  
   
 8.  接続に対応する **[接続テスト]** をクリックし、 **[OK]** をクリックして OData 接続マネージャーのインスタンスを作成します。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62770218"
   
 13. 左側のナビゲーション ウィンドウで **[列]** をクリックし、 **[列]** ページに切り替えます。  
   
-14. **[使用できる外部列]** で **[EmployeeID]** 、 **[FirstName]** 、 **[LastName]** の各チェック ボックスをオンにし、これらを選択します。  
+14. **[使用できる外部列]** で **[EmployeeID]**、 **[FirstName]** 、 **[LastName]** の各チェック ボックスをオンにし、これらを選択します。  
   
 15. **[OK]** をクリックし、 **[OData ソース エディター]** ダイアログ ボックスを閉じます。  
   

@@ -29,18 +29,18 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - options [SQL Server], date
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fc2ca71731fa632db2a857e1b727574722058c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 247b91b8f222ba1fd06c2ca265aee9a16b2ea02f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119175"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011408"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、特定のセッションにおける、[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) の現在の値を返します。
   
@@ -57,7 +57,7 @@ ms.locfileid: "68119175"
 ## <a name="return-type"></a>戻り値の型  
 **tinyint**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 SET DATEFIRST *n* では、週の最初の日 (日曜日、月曜日、火曜日など) を指定します。 *n* の値は、1 から 7 までの範囲となります。
 
 ```sql
@@ -83,7 +83,7 @@ GO
 SELECT @@DATEFIRST;  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、週の最初の曜日を `5` (金曜日) に設定します。現在の曜日 `Today` は土曜日であると仮定します。 `SELECT` ステートメントでは、`DATEFIRST` の値と現在の曜日を示す数値が返されます。
   
 ```sql
@@ -107,7 +107,7 @@ First Day         Today
 SELECT @@DATEFIRST;  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   

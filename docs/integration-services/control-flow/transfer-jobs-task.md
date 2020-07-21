@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3ae127844a2ffba0a988c23636f487673d737b2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011165"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293868"
 ---
 # <a name="transfer-jobs-task"></a>ジョブ転送タスク
 
@@ -40,12 +40,12 @@ ms.locfileid: "68011165"
   
 -   重複するジョブをスキップします。  
   
- 実行時に、ジョブ転送タスクは 1 つまたは 2 つの SMO 接続マネージャーを使用して、転送元および転送先サーバーに接続します。 SMO 接続マネージャーはジョブ転送タスクとは別に構成され、ジョブ転送タスクで参照されます。 SMO 接続マネージャーは、サーバーと、このサーバーにアクセスするときに使用する認証モードを指定します。 詳細については、「 [SMO 接続マネージャー](../../integration-services/connection-manager/smo-connection-manager.md)」を参照してください。  
+ 実行時に、ジョブ転送タスクは 1 つまたは 2 つの SMO 接続マネージャーを使用して、転送元および転送先サーバーに接続します。 SMO 接続マネージャーはジョブ転送タスクとは別に構成され、ジョブ転送タスクで参照されます。 SMO 接続マネージャーは、サーバーと、このサーバーにアクセスするときに使用する認証モードを指定します。 詳細については、「 [SMO 接続マネージャー](../../integration-services/connection-manager/smo-connection-manager.md)」をご覧ください。  
   
 ## <a name="transferring-jobs-between-instances-of-sql-server"></a>SQL Server のインスタンス間でのジョブの転送  
  ジョブ転送タスクは、転送元または転送先として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートします。 転送元または転送先として使用するバージョンに関する制限はありません。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  ジョブ転送タスクでは、転送されたジョブの数を報告する情報イベントと、ジョブが上書きされた場合の警告イベントが発生します。 ジョブの転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
@@ -60,7 +60,7 @@ ms.locfileid: "68011165"
   
  また、 **OnInformation** イベントのログ エントリは転送されたジョブの数を報告し、 **OnWarning** イベントのログ エントリは転送先でジョブが上書きされると書き込まれます。  
   
-## <a name="security-and-permissions"></a>セキュリティおよび権限  
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可  
  ジョブを転送するユーザーは、sysadmin 固定サーバー ロールのメンバー、または転送元および転送先の両方の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの msdb データベースで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント固定データベース ロールのメンバーである必要があります。  
   
 ## <a name="configuration-of-the-transfer-jobs-task"></a>ジョブ転送タスクの構成  
@@ -83,16 +83,16 @@ ms.locfileid: "68011165"
   **[ジョブ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ジョブ転送タスクの名前と説明を入力できます。  
   
 > [!NOTE]  
->  転送先サーバー上の **sysadmin** 固定サーバー ロールのメンバー、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールのうち 1 つのロールのメンバーだけが、転送先にジョブを正常に作成できます。 転送元サーバー上のジョブにアクセスするには、ユーザーは少なくとも転送元サーバー上で **SQLAgentUserRole** 固定データベース ロールのメンバーである必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールおよびその権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
+>  転送先サーバー上の **sysadmin** 固定サーバー ロールのメンバー、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールのうち 1 つのロールのメンバーだけが、転送先にジョブを正常に作成できます。 転送元サーバー上のジョブにアクセスするには、ユーザーは少なくとも転送元サーバー上で **SQLAgentUserRole** 固定データベース ロールのメンバーである必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールおよびその権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」をご覧ください。  
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **Name**  
  ジョブ転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  ジョブ転送タスクの説明を入力します。  
   
 ## <a name="transfer-jobs-task-editor-jobs-page"></a>[ジョブ転送タスク エディター] ([ジョブ] ページ)
@@ -113,9 +113,9 @@ ms.locfileid: "68011165"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|**True**|すべてのジョブをコピーします。|  
+|**True** にします|すべてのジョブをコピーします。|  
 |**False**|指定のジョブのみをコピーします。|  
   
  **[JobsList]**  
@@ -131,7 +131,7 @@ ms.locfileid: "68011165"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[FailTask]**|ジョブの名前がコピー先サーバーに既に存在する名前と同じである場合、タスクは失敗します。|  
 |**Overwrite**|コピー先サーバーの同じ名前のジョブを上書きします。|  
@@ -142,9 +142,9 @@ ms.locfileid: "68011165"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|**True**|コピー先サーバーのジョブを有効にします。|  
+|**True** にします|コピー先サーバーのジョブを有効にします。|  
 |**False**|コピー先サーバーのジョブを無効にします。|  
   
 ## <a name="see-also"></a>参照  

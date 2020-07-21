@@ -16,10 +16,10 @@ ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 98ff61142ff7b748ba6a16b632b256e8b0ec3c47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579408"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>URL でレポート パラメーターの言語を設定する
@@ -40,7 +40,7 @@ https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Rende
  URL アクセス パラメーター **rc:Parameters** には、値 **True** と *False*以外に、値 **Collapsed**を渡すことができるようになりました。 URL に *rc:Parameters*=**Collapsed** を使用すると、HTML ビューアーのパラメーター プロンプト領域が見えないように折りたたまれます。ただし、ユーザーが切り替えることができます。 値を **False** に設定すると、HTML ビューアーのツール バーからパラメーター プロンプト領域が削除され、エンド ユーザーがその領域を使用できません。  
   
 ## <a name="see-also"></a>参照  
- [URL アクセス &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL アクセス (SSRS)](../reporting-services/url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)  
   
   

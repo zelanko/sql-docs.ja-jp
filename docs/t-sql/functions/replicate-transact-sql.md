@@ -17,18 +17,18 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27078aceb7bbeb4918c6884bd8a1e984e9384ce5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db82218c76a9459c992b3cb8a5177cd06e319053
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944489"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003733"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   文字列値を指定した回数だけ繰り返します。  
   
@@ -36,16 +36,19 @@ ms.locfileid: "67944489"
   
 ## <a name="syntax"></a>構文  
   
-```  
-REPLICATE ( string_expression ,integer_expression )   
+```syntaxsql
+REPLICATE ( string_expression , integer_expression )   
 ```  
   
 ## <a name="arguments"></a>引数  
  *string_expression*  
- 文字列またはバイナリ データ型の式です。 *string_expression* 文字またはバイナリ データのいずれかを指定できます。  
+ 文字列またはバイナリ データ型の式です。  
   
 > [!NOTE]  
->  場合 *string_expression* の種類はありません **varchar (max)** または **nvarchar (max)** , 、戻り値が 8,000 バイトで切り捨てられます。 8,000 バイトの場合より大きい値を返す *string_expression* 適切な大きな値のデータ型に明示的にキャストする必要があります。  
+> *string_expression* の型が **binary** の場合、REPLICATE では、**varchar** への暗黙的変換が実行され、そのため、バイナリ入力は保持されません。  
+
+> [!NOTE]  
+> *string_expression* 入力の型が **varchar(max)** か **nvarchar(max)** の場合、REPLICATE では、8,000 バイトで戻り値が切り詰められます。 8,000 バイトの場合より大きい値を返す *string_expression* 適切な大きな値のデータ型に明示的にキャストする必要があります。  
   
  *integer_expression*  
  **bigint** を含む、整数型の式を指定します。 場合 *であれば、任意* は負の場合、NULL が返されます。  
@@ -53,7 +56,7 @@ REPLICATE ( string_expression ,integer_expression )
 ## <a name="return-types"></a>戻り値の型  
  同じ型を返します *string_expression*です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-replicate"></a>A. REPLICATE を使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの取り扱い品目コードの前に `0` という文字を 4 回繰り返します。  
@@ -117,7 +120,7 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-replicate"></a>C: REPLICATE を使用する  
  次の例では、`ItemCode` 値の前に `0` という文字を 4 回繰り返します。  

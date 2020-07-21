@@ -9,57 +9,56 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a80526b0f4a1b9f122ff79bbbb5a5a8ac08a2d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 29aca0a06fbd4dc0ae28bfeb9c65daafea28ee3a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62893108"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424999"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード)
-  使用して、 **Create Database**ページは、新しいデータベースをコピー先のファイルを定義します。  
+  [**データベースの作成**] ページを使用すると、変換先ファイルの新しいデータベースを定義できます。  
   
- このページでは、新しいデータベースの作成に利用できるオプションのサブセットが提供されます。 すべてのオプションを表示する使用[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+ このページでは、新しいデータベースの作成に利用できるオプションのサブセットが提供されます。 すべてのオプションを表示するには、を使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。  
   
- このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と、ウィザードを起動するオプションについて説明しますを参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
+ このウィザードの詳細については、「 [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。 ウィザードを起動するためのオプション、およびウィザードを正常に実行するために必要な権限については、「 [run the SQL Server Import And Export wizard](start-the-sql-server-import-and-export-wizard.md)」を参照してください。  
   
  SQL Server インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **名前**  
+## <a name="options"></a>Options  
+ **Name**  
  対象になる SQL Server データベースの一意な名前を指定します。 データベースに名前を付けるときは、必ず SQL Server の規約に従ってください。  
   
- **データ ファイル名**  
+ **[データ ファイル名]**  
  データ ファイルの名前を表示します。 この名前は、指定されたデータベース名から派生されます。  
   
- **ログ ファイルの名前**  
+ **ログファイル名**  
  ログ ファイルの名前を表示します。 この名前は、指定されたデータベース名から派生されます。  
   
- **初期サイズ (データ ファイル)**  
+ **[初期サイズ] (データ ファイル)**  
  データ ファイルの初期サイズを MB 単位で指定します。  
   
- **拡張 (データ ファイル) を許可しません。**  
+ **[拡張を許可しない] (データ ファイル)**  
  指定した初期サイズを超えるデータ ファイルの拡張を許可するかどうかを示します。  
   
- **比率で拡張 (データ ファイル)**  
+ **[比率で拡張する] (データ ファイル)**  
  データ ファイルの拡張を許可する比率を指定します。  
   
- **サイズ (データ ファイル) で拡張します。**  
+ **[サイズで拡張する] (データ ファイル)**  
  データ ファイルの拡張を許可するサイズを MB 単位で指定します。  
   
- **初期サイズ (ログ ファイル)**  
+ **[初期サイズ] (ログ ファイル)**  
  ログ ファイルの初期サイズを MB 単位で指定します。  
   
- **拡張を許可しない (ログ ファイル)**  
+ **[拡張を許可しない] (ログ ファイル)**  
  指定した初期サイズを超えるログ ファイルの拡張を許可するかどうかを示します。  
   
- **(ログ ファイル) の比率で拡張します。**  
+ **[比率で拡張する] (ログ ファイル)**  
  ログ ファイルの拡張を許可する比率を指定します。  
   
- **サイズ (ログ ファイル) で拡張します。**  
+ **[サイズで拡張する] (ログ ファイル)**  
  ログ ファイルの拡張を許可するサイズを MB 単位で指定します。  
   
   

@@ -1,37 +1,36 @@
 ---
 title: 使用状況データ コレクションとクラッシュ レポートを有効または無効にする
-titleSuffix: Azure Data Studio
 description: この記事では、使用状況とクラッシュ レポートのデータが収集されて Microsoft に送信されるかどうかを制御する方法について説明します。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.reviewer: alayu, maghan, sstein
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 71ed86e9ad076a41099eaf4e56fe67a25b5f2c21
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ad36e319338c90c33e0969f75ee34e980f3d23f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771934"
 ---
-# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] のデータ コレクションを有効または無効にする
+# <a name="enable-or-disable-usage-data-collection-for-azure-data-studio"></a>Azure Data Studio のデータ コレクションを有効または無効にする
 
 ## <a name="how-to-disable-telemetry-reporting"></a>テレメトリ レポートを無効にする方法
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] では、使用状況データが収集されて Microsoft に送信され、製品やサービスの改善に役立てられます。 詳細については、[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)をお読みください。
+Azure Data Studio では、使用状況データが収集されて Microsoft に送信され、製品やサービスの改善に役立てられます。 詳細については、[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)をお読みください。
 
 使用状況データを Microsoft に送信したくない場合は、*telemetry.enableTelemetry* 設定を *false* に設定できます。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] からのすべてのテレメトリ イベントをサイレント状態にするには、 **[ファイル]**  >  **[基本設定]**  >  **[設定]** で、次のオプションを追加します。
+Azure Data Studio からのすべてのテレメトリ イベントをサイレント状態にするには、 **[ファイル]**  >  **[基本設定]**  >  **[設定]** で、次のオプションを追加します。
 
 ```json
     "telemetry.enableTelemetry": false
 ```
 
-**重要な注意**: このオプションを有効にするには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] の再起動が必要です。 
+**重要な注意**: このオプションを有効にするには、Azure Data Studio の再起動が必要です。 
 
 ## <a name="how-to-disable-crash-reporting"></a>クラッシュ レポートを無効にする方法
 
@@ -41,7 +40,7 @@ ms.locfileid: "67958944"
     "telemetry.enableCrashReporter": false
 ```
 
-**重要な注意**: このオプションを有効にするには、[!INCLUDE[name-sos](../includes/name-sos-short.md)] の再起動が必要です。
+**重要な注意**: このオプションを有効にするには、Azure Data Studio の再起動が必要です。
 
 ## <a name="additional-resources"></a>その他のリソース
 - [ワークスペースとユーザー設定](settings.md)

@@ -13,15 +13,15 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5614e25efc21f4c3b4f4f54249bc26397acbfa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725901"
 ---
 # <a name="sequence-properties-general-page"></a>[順序のプロパティ]\([全般] ページ)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   シーケンス オブジェクトを作成し、そのプロパティを指定します。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて再起動 (繰り返し) するように構成できます。 ID 列とは異なり、シーケンスは、特定のテーブルに関連付けられていません。 アプリケーションは、シーケンス オブジェクトを参照して、次の値を受け取ります。 シーケンスとテーブルの関係は、アプリケーションによって制御されます。 ユーザー アプリケーションは、シーケンス オブジェクトを参照し、複数の行とテーブル間で値を調整できます。  
   
  挿入時に生成される ID 列値とは異なり、アプリケーションで [NEXT VALUE の関数](../../t-sql/functions/next-value-for-transact-sql.md)を呼び出すことで、行を挿入せずに次のシーケンス番号を取得できます。 一度に複数のシーケンス番号を取得するには、 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) を使用します。  
@@ -37,10 +37,10 @@ ms.locfileid: "68126986"
  **[シーケンス スキーマ]**  
  このシーケンスを所有するスキーマを指定します。  
   
- **データ型**  
- シーケンスを任意の整数型として定義できます。 この機能には、次が含まれます。  
+ **データの種類**  
+ シーケンスを任意の整数型として定義できます。 これには次のものが含まれます  
   
-|データ型|範囲|  
+|データ型|Range|  
 |---------------|-----------|  
 |**tinyint**|0 ～ 255|  
 |**smallint**|-32,768 ～ 32,767|  

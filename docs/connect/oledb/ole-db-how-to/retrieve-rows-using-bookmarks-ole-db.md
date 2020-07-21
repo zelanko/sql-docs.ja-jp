@@ -1,5 +1,5 @@
 ---
-title: ブックマークを使用して行を取得する (OLE DB) |Microsoft Docs
+title: ブックマークを使用した行の取得 (OLE DB) | Microsoft Docs
 description: ブックマークを使用した行の取得 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b2ab2e7be75e10ff97fcf254f885bfaa9dd25ec9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994709"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>ブックマークを使用した行の取得 (OLE DB)
@@ -40,7 +40,7 @@ ms.locfileid: "67994709"
   
 4.  バインド構造体の **dwFlag** フィールドに、ブックマークとして使用される列の DBCOLUMNSINFO_ISBOOKMARK フラグを設定します。  
   
-5.  **IRowsetLocate:: GetRowsAt**を使用して、ブックマークからのオフセットによって指定された行で始まる行をフェッチします。  
+5.  **IRowsetLocate::GetRowsAt** メソッドを使用し、ブックマークからのオフセットで指定される行から始まる行を取り出します。  
   
 ## <a name="example"></a>例  
  このサンプルでは、ブックマークを使用して行をフェッチする方法を示します。 このサンプルは IA64 ではサポートされていません。  

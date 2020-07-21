@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 50e62a9232690deb368096723f428118e9de7aa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33d7d7037c4aec5b3694acb175cd39504e2079a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055790"
 ---
 # <a name="xtp-storage"></a>XTP ストレージ
   XTP ストレージのパフォーマンス オブジェクトには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の XTP ストレージに関連するカウンターが含まれています。  
   
- この表は、 **XTP ストレージ**カウンター。  
+ 次の表では、 **XTP ストレージ**カウンターについて説明します。  
   
 |カウンター|説明|  
 |-------------|-----------------|  
@@ -34,6 +33,6 @@ ms.locfileid: "63151152"
 |**マージされているファイルの総数**|マージされているソース ファイルの総数。 この数を使用すると、マージ内のソース ファイル数の平均がわかります。|  
   
 ## <a name="see-also"></a>参照  
- [XTP &#40;、インメモリ OLTP&#41;パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;インメモリ OLTP&#41; パフォーマンスカウンター](../../integration-services/performance/performance-counters.md)  
   
   

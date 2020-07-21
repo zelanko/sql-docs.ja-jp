@@ -1,5 +1,5 @@
 ---
-title: sp_enum_sqlagent_subsystems (TRANSACT-SQL) |Microsoft Docs
+title: sp_enum_sqlagent_subsystems (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_sqlagent_subsystems
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 869071ff8e66b5e9d20269c91823f3019e2b03b6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124673"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891912"
 ---
-# <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  一覧表示、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サブシステムです。  
+  エージェントサブシステムの一覧を表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +39,7 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>引数  
- なし  
+ None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -48,26 +48,26 @@ sp_enum_sqlagent_subsystems
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**subsystem**|**nvarchar(40)**|サブシステムの名前。|  
+|**サブ**|**nvarchar(40)**|サブシステムの名前。|  
 |**description**|**nvarchar(512)**|サブシステムの説明。|  
-|**subsystem_dll**|**nvarchar(510)**|サブシステムを格納している DLL モジュール|  
-|**agent_exe**|**nvarchar(510)**|サブシステムによって使用される実行可能モジュール。|  
-|**start_entry_point**|**nvarchar(30)**|SQL Server エージェントがジョブ ステップの実行中に呼び出すプロシージャです。|  
-|**event_entry_point**|**nvarchar(30)**|SQL Server エージェントがジョブ ステップの実行中に呼び出すプロシージャです。|  
-|**stop_entry_point**|**nvarchar(30)**|SQL Server エージェントがジョブ ステップの実行中に呼び出すプロシージャです。|  
-|**max_worker_threads**|**int**|スレッドの最大数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このサブシステム用にエージェントが開始されます。|  
+|**subsystem_dll**|**nvarchar (510)**|サブシステムを格納している DLL モジュール|  
+|**agent_exe**|**nvarchar (510)**|サブシステムによって使用される実行可能モジュール。|  
+|**start_entry_point**|**nvarchar(30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
+|**event_entry_point**|**nvarchar(30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
+|**stop_entry_point**|**nvarchar(30)**|ジョブステップの実行中に SQL Server エージェント呼び出しを行う手順。|  
+|**max_worker_threads**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このサブシステムに対してエージェントが開始するスレッドの最大数。|  
 |**subsystem_id**|**int**|サブシステムの識別子|  
   
-## <a name="remarks"></a>コメント  
- この手順では、インスタンスで使用できるサブシステムが一覧表示します。  
+## <a name="remarks"></a>注釈  
+ この手順では、インスタンスで使用可能なサブシステムの一覧を示します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 それ以外のユーザーには、 **msdb** データベースの **SQLAgentOperatorRole** 固定サーバー ロールを与える必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 それ以外のユーザーには、 **msdb** データベースの **SQLAgentOperatorRole** 固定サーバー ロールを与える必要があります。  
   
- 詳細については**SQLAgentOperatorRole**を参照してください[SQL Server エージェント固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)します。  
+ **Sqlagentoperatorrole**の詳細については、「 [SQL Server エージェント固定データベースロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [SQL Server エージェントのセキュリティを実装します。](../../ssms/agent/implement-sql-server-agent-security.md)   
+ [SQL Server エージェントセキュリティを実装する](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
   

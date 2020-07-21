@@ -1,5 +1,6 @@
 ---
-title: ビジネス ルールの例 (マスター データ サービス) | Microsoft Docs
+title: ビジネス ルールの例
+description: マスターデータサービスのビジネスルールの例を確認します。 これらの例は、マスターデータサービスのインストールに含まれるサンプルモデルに含まれています。
 ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd74d5e22547cee0383ed2222c1a31d848402974
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 93bbed557f18c847d62dec3e700023f87324e594
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813712"
 ---
 # <a name="business-rule-examples-master-data-services"></a>ビジネス ルールの例 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 この記事では、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のビジネス ルールの例を示します。 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]のインストールに含まれるサンプル モデルに、これらの例が見つかります。   
   
@@ -76,7 +77,7 @@ Else
   
 サンプル モデル  |Entity  |ビジネス ルール名|説明    
 ---------|---------|---------|-------------  
-製品     |Product         |Required fields| 製品エンティティ メンバーの必須の属性を指定します。           
+製品     |製品         |必須フィールド| 製品エンティティ メンバーの必須の属性を指定します。           
 次のビジネス ルールで、すべての条件下で `is required` [検証アクション](../master-data-services/business-rule-actions-master-data-services.md) が指定された属性に対して行われます。 属性値は、Null または空白にすることはできません。  
 ```  
 If  

@@ -1,5 +1,5 @@
 ---
-title: sys.column_type_usages (TRANSACT-SQL) |Microsoft Docs
+title: column_type_usages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,30 +19,30 @@ helpviewer_keywords:
 ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5dc3ff14375d0e07a1235f0ba79ed36e3e084e58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f10f70e95be1571d3b9026a73291e3cb9e167fb3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139992"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901097"
 ---
-# <a name="syscolumntypeusages-transact-sql"></a>sys.column_type_usages (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syscolumn_type_usages-transact-sql"></a>column_type_usages (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザー定義型の列ごとに 1 行のデータを保持します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|この列が属するオブジェクトの ID です。|  
-|**column_id**|**int**|列の ID です。 オブジェクト内で一意です。|  
-|**user_type_id**|**int**|ユーザー定義データ型の ID。<br /><br /> 型の名前を返すには、この列で [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログ ビューに結合します。|  
+|**object_id**|**int**|この列が所属するオブジェクトの ID。|  
+|**column_id**|**int**|列の ID。 は、オブジェクト内で一意です。|  
+|**user_type_id**|**int**|ユーザー定義型の ID。<br /><br /> 型の名前を返すには、この列の[型](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)のカタログビューに結合します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [スカラー型カタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server システム カタログに対するクエリに関してよくあるご質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Transact-sql&#41;&#40;スカラー型のカタログビュー](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

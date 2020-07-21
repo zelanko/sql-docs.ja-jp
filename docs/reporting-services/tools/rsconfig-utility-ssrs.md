@@ -1,5 +1,5 @@
 ---
-title: rsconfig ユーティリティ (SSRS) | Microsoft Docs
+title: rsconfig ユーティリティ | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571526"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082180"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig ユーティリティ (SSRS)
   **rsconfig.exe** ユーティリティは、接続値とアカウント値を RSReportServer.config ファイルへ暗号化して格納します。 暗号化される値は、自動レポート処理に使用される、レポート サーバー データベースの接続情報とアカウント値です。  
@@ -43,9 +43,9 @@ rsconfig {-?}
   
 ## <a name="arguments"></a>引数  
   
-|項目|省略可/必須|定義|  
+|期間|省略可/必須|定義|  
 |----------|------------------------|----------------|  
-|**-?**|省略可。|Rsconfig.exe の引数の構文を表示します。|  
+|**-?**|省略可能。|Rsconfig.exe の引数の構文を表示します。|  
 |**-c**|**-e** 引数を使用しない場合は必須。|レポート サーバーをレポート サーバー データベースに接続するために使用する、接続文字列、資格情報、データ ソース値を指定します。<br /><br /> この引数は値を取りません。 ただし、必須の接続値をすべて指定する場合は、この引数と共に追加の引数を指定する必要があります。<br /><br /> **-c** と共に指定する引数には、 **-m**、 **-s**、 **-i**、 **-d**、 **-a**、 **-u**、 **-p**、および **-t**があります。|  
 |**-e**|**-c** 引数を使用しない場合は必須。|自動的にレポートを実行する場合のアカウントを指定します。<br /><br /> この引数は値を取りません。 ただし、構成ファイルで暗号化されている値を指定する場合は、コマンド ラインに追加の引数を追加する必要があります。<br /><br /> **-e** と共に指定する引数には、 **-u** および **-p**があります。 **-t**を設定することもできます。|  
 |**-m**  *computername*|リモート レポート サーバー インスタンスを構成する場合は必須。|レポート サーバーをホストするコンピューターの名前を指定します。 この引数が省略された場合、既定は **localhost**です。|  
@@ -55,7 +55,7 @@ rsconfig {-?}
 |**-a**  *authmethod*|必須。|レポート サーバーがレポート サーバー データベースへの接続に使用する認証方法を指定します。 有効な値は、 **Windows** または **SQL** です (この引数は大文字と小文字を区別しません)。<br /><br /> **Windows** は、レポート サーバーが Windows 認証を使用することを指定します。<br /><br /> **SQL** は、レポート サーバーが SQL Server 認証を使用することを指定します。|  
 |**-u**  *[domain\\]username*|**-e** の場合は必須。 **-c**の場合は省略可。|レポート サーバー データベース接続または自動アカウントのためのユーザー アカウントを指定します。<br /><br /> **rsconfig -e**では、この引数は必須です。 引数はドメイン ユーザー アカウントであることが必要です。<br /><br /> **rsconfig -c** および **-a SQL**では、この引数には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定する必要があります。<br /><br /> **rsconfig -c** および **-a Windows**では、この引数には、ドメイン ユーザー、組み込みアカウント、またはサービス アカウント資格情報を指定できます。 ドメイン アカウントを指定している場合は、 *domain* と *username* を *domain\username*の形式で指定します。 組み込みアカウントを使用する場合、この引数は省略可能です。 サービス アカウント資格情報を使用する場合、この引数は省略してください。|  
 |**-p**  *password*|**-u** を指定した場合は必須。|*username* 引数と共に使用するパスワードを指定します。 アカウントがパスワードを必要としない場合、この引数を空白に設定できます。 この値は、ドメイン アカウントの大文字と小文字を区別します。|  
-|**-t**|省略可。|エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
+|**-t**|省略可能。|エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
   
 ## <a name="permissions"></a>アクセス許可  
  構成中のレポート サーバーをホストするコンピューターのローカル管理者であることが必要です。  
@@ -63,7 +63,7 @@ rsconfig {-?}
 ## <a name="file-location"></a>ファイルの場所  
  rsconfig.exe は **\Program Files\Microsoft SQL Server\110\Tools\Binn**にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  Rsconfig.exe は次の 2 つの目的で使用します。  
   
 -   レポート サーバー データベースへの接続でレポート サーバーが使用する接続情報の修正。  
@@ -74,7 +74,7 @@ rsconfig {-?}
   
 このユーティリティを実行する前に、構成中のコンピューターに、Windows Management Instrumentation (WMI) をインストールしておく必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、 **rsconfig**の使用方法を示しています。  
   
 #### <a name="specifying-a-domain-user-account"></a>ドメイン ユーザー アカウントの指定  
@@ -92,7 +92,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### <a name="specifying-a-built-in-account"></a>組み込みアカウントの指定  
- 次の例では、ローカルのレポート サーバー データベースに接続する場合に、組み込みアカウントを使用するようにレポート サーバーを構成します。 **-u** は使用されないことに注意してください。 サポートされる組み込みアカウント値の例として、ローカル システムの NT AUTHORITY\SYSTEM、およびネットワーク サービスの NT AUTHORITY\NETWORKSERVICE ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] のみ) などがあります。  
+ 次の例では、ローカルのレポート サーバー データベースに接続する場合に、組み込みアカウントを使用するようにレポート サーバーを構成します。 **-u** は使用されないことに注意してください。 サポートされる組み込みアカウント値の例として、ローカル システムの NT AUTHORITY\SYSTEM、およびネットワーク サービスの NT AUTHORITY\NETWORKSERVICE ([!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] のみ) などがあります。  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  

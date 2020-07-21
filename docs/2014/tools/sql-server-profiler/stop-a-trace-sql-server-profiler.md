@@ -1,5 +1,5 @@
 ---
-title: 停止するトレース (SQL Server Profiler) |Microsoft Docs
+title: トレースの停止 (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a84673b88ce6401986655a16fd407cafea6f3af1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 501ea4a4838f8e2ea42fc475c486466d48020a4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297658"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040010"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>トレースの停止 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、実行中のトレースを停止する方法について説明します。  

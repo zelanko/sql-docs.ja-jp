@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、およびルールの削除 |Microsoft Docs
+title: ルールの作成、変更、および削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d201b20e0bdfd213c62c060250b5674589ab91cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63dbb636c6512eb895f9f22a286b9ca855a1f5a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016005"
 ---
 # <a name="creating-altering-and-removing-rules"></a>ルールの作成、変更、および削除
   SMO では、<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトでルールが表現されます。 ルールは、<xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> プロパティによって定義されます。このプロパティは、IN、LIKE、または BETWEEN などの演算子や述語を使用した条件式を格納したテキスト文字列です。 ルールでは、列や別のデータベース オブジェクトを参照することはできません。 データベース オブジェクトを参照しない組み込み関数は含めることができます。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> プロパティでの定義には、入力されたデータ値を参照する変数が含まれている必要があります。 任意の名前または記号は、ルールを作成するときに、値を表すために使用できますが、最初の文字である必要があります、\@シンボル。  
+ <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> プロパティでの定義には、入力されたデータ値を参照する変数が含まれている必要があります。 ルールを作成するときに、任意の名前または記号を使用して値を表すことができますが、最初の文字は記号である必要があり \@ ます。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net で VISUAL BASIC SMO プロジェクトを作成する](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [Studio .Net で VISUAL C&#35; Smo プロジェクトを作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する」を参照してください。  
   
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>Visual Basic でのルールの作成、変更、および削除  
  このコード例では、ルールの作成、作成したルールの列へのアタッチ、<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトのプロパティの修正、列からのデタッチ、および削除を行う方法を示します。  
@@ -39,7 +38,7 @@ ms.locfileid: "62519326"
   
  <xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトの `Dim` ステートメントを完全なアセンブリ パスで指定して、System.Data アセンブリの <xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトと明確に区別します。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -72,32 +71,28 @@ ms.locfileid: "62519326"
   
  <xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトの `Dim` ステートメントを完全なアセンブリ パスで指定して、System.Data アセンブリの <xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクトと明確に区別します。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-# Define a Rule object variable by supplying the parent database, name and schema in the constructor.   
-$ru = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Rule `  
--argumentlist $db, "TestRule", "Production"  
+# Define a Rule object variable by supplying the parent database, name and schema in the constructor.
+$ru = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Rule -argumentlist $db, "TestRule", "Production"  
   
-#Set the TextHeader and TextBody properties to define the rule.   
+#Set the TextHeader and TextBody properties to define the rule.
 $ru.TextHeader = "CREATE RULE [Production].[TestRule] AS"  
 $ru.TextBody = "@value BETWEEN GETDATE() AND DATEADD(year,4,GETDATE())"  
   
-#Create the rule on the instance of SQL Server.   
+#Create the rule on the instance of SQL Server.
 $ru.Create()  
   
-# Bind the rule to a column in the Product table by supplying the table, schema, and   
-# column as arguments in the BindToColumn method.   
+# Bind the rule to a column in the Product table by supplying the table, schema, and column as arguments in the BindToColumn method.
 $ru.BindToColumn("Product", "SellEndDate", "Production")  
   
-#Unbind from the column before removing the rule from the database.   
+#Unbind from the column before removing the rule from the database.
 $ru.UnbindFromColumn("Product", "SellEndDate", "Production")  
 $ru.Drop()  
 ```  
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.SqlServer.Management.Smo.Rule>  
-  
-  

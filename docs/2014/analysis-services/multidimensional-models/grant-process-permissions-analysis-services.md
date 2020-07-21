@@ -1,5 +1,5 @@
 ---
-title: プロセスの許可 (Analysis Services) |Microsoft Docs
+title: プロセスのアクセス許可を付与する (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02d34bd76a4e5a0ecb183d8e8db5b96bf3e98114
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546654"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>処理権限の付与 (Analysis Services)
   管理者は、Analysis Services 処理操作専用のロールを作成して、その特定のタスクを他のユーザーまたは自動スケジューリング処理用のアプリケーションに委任できます。 処理権限はデータベース、キューブ、ディメンション、およびマイニング構造レベルで許可することができます。 非常に大きなキューブまたは表形式データベースで作業している場合を除き、相互に依存関係にあるものなどすべてのオブジェクトを含めて、データベース レベルで処理権限を付与することをお勧めします。  
@@ -35,9 +34,9 @@ ms.locfileid: "66074888"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
   
-2.  右クリックして**ロール** | **新しいロール**します。 名前と説明を入力します。  
+2.  [**ロール**] [  |  **新しいロール**] を右クリックします。 名前と説明を入力します。  
   
-3.  **全般**ペインで、`Process Database`チェック ボックスをオンします。 さらに、選択`Read Definition`など、SQL Server ツールのいずれかで対話型処理を有効にする[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+3.  **[全般**] ペインで、チェックボックスをオンにし `Process Database` ます。 また、などの `Read Definition` SQL Server ツールのいずれかを使用して対話型の処理を有効にすることもでき [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
 4.  **[メンバーシップ]** ペインで、このデータベースのすべてのオブジェクトを処理する権限のある Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66074888"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
   
-2.  右クリックして**ロール** | **新しいロール**します。 名前と説明を入力します。  
+2.  [**ロール**] [  |  **新しいロール**] を右クリックします。 名前と説明を入力します。  
   
-3.  **全般**ウィンドウで、クリア、`Process Database`チェック ボックスをオンします。 データベース権限によって、ロールのオプションがグレー表示されるか選択不可になることで、下位レベルのオブジェクトに対する権限の設定機能がオーバーライドされます。  
+3.  **[全般**] ペインで、チェックボックスをオフにし `Process Database` ます。 データベース権限によって、ロールのオプションがグレー表示されるか選択不可になることで、下位レベルのオブジェクトに対する権限の設定機能がオーバーライドされます。  
   
-     技術的には、専用の処理ロール用にデータベース権限は必要ありません。 `Read Definition`データベース レベルでデータベースを表示することはできません[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、テストがより難しくなります。  
+     技術的には、専用の処理ロール用にデータベース権限は必要ありません。 ただし、 `Read Definition` データベースレベルでは、でデータベースを表示することはできない [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ため、テストが困難になります。  
   
 4.  処理する個々のオブジェクトを選択します。  
   
@@ -77,11 +76,11 @@ ms.locfileid: "66074888"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>データ マイニング構造に対する処理権限の設定  
  データ マイニング構造を処理するための権限を付与するロールを作成できます。 これには、すべてのマイニング モデルの処理が含まれます。  
   
- **ドリル スルー**と`Read Definition`がアトミックで、マイニング モデルと構造体を参照するために使用されるアクセス許可と、同じロールに追加または別のロールを分けることができます。  
+ **Drill Through** `Read Definition` マイニングモデルとマイニング構造の参照に使用されるドリルスルーと権限はアトミックであり、同じロールに追加することも、別のロールに分割することもできます。  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
   
-2.  右クリックして**ロール** | **新しいロール**します。 名前と説明を入力します。 **[全般]** ペインで、データベース権限のチェック ボックスがオフであることを確認します。 データベース権限によって、ロールのオプションがグレー表示されるか選択不可になることで、下位レベルのオブジェクトに対する権限の設定機能がオーバーライドされます。  
+2.  [**ロール**] [  |  **新しいロール**] を右クリックします。 名前と説明を入力します。 **[全般]** ペインで、データベース権限のチェック ボックスがオフであることを確認します。 データベース権限によって、ロールのオプションがグレー表示されるか選択不可になることで、下位レベルのオブジェクトに対する権限の設定機能がオーバーライドされます。  
   
 3.  **[マイニング構造]** ペインで、各マイニング構造の **[処理]** チェック ボックスをオンにします。  
   
@@ -91,8 +90,8 @@ ms.locfileid: "66074888"
   
 ## <a name="see-also"></a>参照  
  [データベース、テーブル、またはパーティションの処理](../tabular-models/process-database-table-or-partition-analysis-services.md)   
- [多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)   
- [データベース権限の付与 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)   
+ [Analysis Services &#40;データベースのアクセス許可を付与&#41;](grant-database-permissions-analysis-services.md)   
  [オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: パーティション スライス プロパティ (Analysis Services) |Microsoft Docs
+title: パーティションスライスプロパティの設定 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f42c4536b99ba3fecf9b947942b881a3be72784f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072938"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547364"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>パーティション スライス プロパティの設定 (Analysis Services)
   データ スライスとは、該当するパーティションのデータに対する直接的なクエリを円滑に行うための重要な最適化機能です。 Slice プロパティを明示的に設定すると、MOLAP パーティションと HOLAP パーティションに対して生成される既定のスライスがオーバーライドされるため、クエリのパフォーマンスが向上します。 また、Slice プロパティによって、パーティションの処理時に追加の検証チェックが提供されます。  
@@ -41,11 +40,11 @@ ms.locfileid: "66072938"
 > [!NOTE]  
 >  動的 MDX 関数 ([Generate (MDX)](/sql/mdx/generate-mdx) または [Except (MDX)](/sql/mdx/except-mdx-function) など) はパーティションの Slice プロパティでサポートされていないことに注意してください。 明示的な組またはメンバー参照を使用して、スライスを定義する必要があります。  
 >   
->  使用してなどのではなく、 [:&#40;範囲&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)範囲を定義する関数を特定の年で各メンバーを列挙する必要があります。  
+>  たとえば、範囲を定義するために、 [MDX&#41;関数&#41; &#40;: &#40;範囲](/sql/mdx/range-mdx)を使用するのではなく、特定の年で各メンバーを列挙する必要があります。  
 >   
 >  複雑なスライスを定義する必要がある場合は、XMLA Alter スクリプトを使用して、スライスで組を定義することをお勧めします。 続けて、ascmd コマンド ライン ツールまたは SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) タスクを使用してスクリプトを実行し、指定したメンバーのセットをパーティション処理の直前に作成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ローカル パーティションの作成と管理 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)  
   
   

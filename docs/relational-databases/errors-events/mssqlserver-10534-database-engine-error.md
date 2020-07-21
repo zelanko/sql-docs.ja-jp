@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: e65bb118-99d5-4fdb-b1d5-0ec70f0a677b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f718b124bb9fa0fba37619349d2efc0a3bb643f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aff6d18fd429f500bbf71b92e1083ad1517e6a7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781437"
 ---
-# <a name="mssqlserver10534"></a>MSSQLSERVER_10534
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_10534"></a>MSSQLSERVER_10534
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|10534|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_INVALID_PARAMS|  
-|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。 **@params** に指定した値が無効です。 *parameter_name parameter_type* 形式の値を指定するか、NULL を指定してください。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。 **\@params** に指定された値が無効です。 *parameter_name parameter_type* 形式の値を指定するか、NULL を指定してください。|  
   
 ## <a name="explanation"></a>説明  
-**@params** に指定した値が無効です。  
+**\@params** に指定した値が無効です。  
   
 ## <a name="user-action"></a>ユーザーの操作  
 *parameter_name parameter_type* 形式の値を指定するか、NULL を指定してください。  

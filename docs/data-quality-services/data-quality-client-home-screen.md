@@ -1,6 +1,5 @@
 ---
-title: Data Quality Client のホーム画面 | Microsoft Docs
-ms.custom: ''
+title: Data Quality Client のホーム画面
 ms.date: 02/29/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,22 +9,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 2ee3474d5fedd467170c601a7807117c23e37096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 4b1a25fc4bee5c66838c7e29f7c34dc67a572b79
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935402"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899118"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client のホーム画面
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   この画面を使用すると、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) の 3 つの主要なタスク グループ (ナレッジ ベース管理、データ品質プロジェクト、および管理) のそれぞれに対するユーザー インターフェイスにアクセスできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 ### <a name="knowledge-base-management"></a>[ナレッジ ベース管理]  
  DQS ナレッジ ベースは、データの品質を向上させるために DQS によって使用されるメタデータのリポジトリです。 このメタデータは、コンピューター支援型のナレッジ検出プロセスの DQS プラットフォームとインタラクティブなドメイン管理プロセスのデータ スチュワードの両者によって作成されます。  
@@ -56,15 +55,15 @@ ms.locfileid: "67935402"
 ### <a name="administration"></a>管理  
  DQS 管理では、DQS を監視、構成、および保守することができます。  
   
- **[アクティビティ監視]**  
+ **アクティビティの監視**  
  接続されている [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]に関連するすべてのアクティビティ (現在のアクティビティと履歴アクティビティの両方) の状態のビューが表示されます。 監視対象となるアクティビティの種類は、ナレッジ マネージメント、データ品質プロジェクト、および SSIS ベースのデータ修正です。  
   
  **Configuration**  
- 参照データ サービス アカウント (Windows Azure Marketplace 経由と参照データ サービス直接の両方)、一般設定 (対話形式のクレンジング、照合、プロファイリング)、およびログの重大度設定に対する構成プロパティが表示されます。  
+ 参照データサービスアカウントの構成プロパティ (Azure Marketplace を通じて、参照データサービスに直接)、全般設定 (インタラクティブなクレンジング、照合、プロファイル)、およびログの重大度設定を表示します。  
   
 ## <a name="see-also"></a>関連項目  
- [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [データ品質プロジェクト &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
+ [DQS のナレッジベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
+ [DQS&#41;&#40;データ品質プロジェクト](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS 管理](../data-quality-services/dqs-administration.md)  
   
   

@@ -10,15 +10,14 @@ helpviewer_keywords:
 - '| (bitwise inclusive OR)'
 - bitwise inclusive OR (|)
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3f7a092b8ad649285417ee7961ac891b90b87674
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f4256c4a619e24f12341616eca6c33542a23674
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62898146"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429119"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (ビット演算包含的 OR) (SSIS 式)
   2 つの整数値の OR 演算をビット単位で実行します。 最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 いずれかのビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットはゼロ (0) に設定されます。  
@@ -40,7 +39,7 @@ integer_expression1 | integer_expression2
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  条件のいずれかが NULL の場合、式の結果は NULL になります。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -94,7 +93,7 @@ ReorderPoint | SafetyStockLevel
   
 ## <a name="see-also"></a>参照  
  [&#124;&#124; (論理 OR) (SSIS 式)](logical-or-ssis-expression.md)   
- [^ (ビット演算子排他的 OR) (SSIS 式)](bitwise-exclusive-or-ssis-expression.md)   
+ [^ &#40;ビット演算子排他的 OR&#41; &#40;SSIS 式&#41;](bitwise-exclusive-or-ssis-expression.md)   
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   

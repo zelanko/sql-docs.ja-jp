@@ -1,6 +1,5 @@
 ---
-title: 結果セット (拡張ストアド プロシージャ API) サーバーへの送信 |Microsoft Docs
-ms.custom: ''
+title: 結果セットのサーバーへの送信 (拡張ストアド プロシージャ API)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,26 +12,27 @@ helpviewer_keywords:
 ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7121626f3de850c670f160a945ba3de8533cd7ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c0ba957f0cde17f7accfeee66952fe2488a854bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767747"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>結果セットのサーバーへの送信 (拡張ストアド プロシージャ API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。  
   
- 結果セットを送信するときに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、拡張ストアド プロシージャは次のように、適切な API を呼び出す必要があります。  
+ 結果セットをに送信する場合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、拡張ストアドプロシージャは次のように適切な API を呼び出す必要があります。  
   
--   **Srv_sendmsg**前に、または後で送信されたすべての行 (あれば)、任意の順序で関数を呼び出すことが**srv_sendrow**します。 完了ステータスが送信される前に、クライアントにすべてのメッセージを送信する必要があります**srv_senddone**します。  
+-   **Srv_sendmsg**関数は、すべての行 (存在する場合) が**srv_sendrow**と共に送信される前または後に、任意の順序で呼び出すことができます。 完了ステータスが**srv_senddone**と共に送信される前に、すべてのメッセージをクライアントに送信する必要があります。  
   
--   **srv_sendrow** 関数は、クライアントに送信される各行につき 1 回呼び出されます。 すべての行は、メッセージ、状態の値の前に、クライアントに送信する必要がありますまたは完了状態を送信**srv_sendmsg**、 **srv_status**の引数**srv_pfield**、または**srv_senddone**します。  
+-   **srv_sendrow** 関数は、クライアントに送信される各行につき 1 回呼び出されます。 すべての行は、メッセージ、状態値、または完了状態を**srv_sendmsg**と共に送信する前にクライアントに送信する必要があります。また、 **srv_pfield**または**srv_senddone**の**srv_status**引数を使用して送信する必要があります。  
   
--   すべての列で定義されていない行を送信**srv_describe**により、アプリケーションで情報エラー メッセージが生成され、クライアントに FAIL が返されます。 この場合、その行は送信されません。  
+-   **Srv_describe**ですべての列が定義されていない行を送信すると、アプリケーションで情報エラーメッセージが生成され、クライアントに FAIL が返されます。 この場合、その行は送信されません。  
   
 ## <a name="see-also"></a>関連項目  
  [拡張ストアド プロシージャの作成](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)  

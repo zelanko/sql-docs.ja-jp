@@ -1,6 +1,7 @@
 ---
-title: ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する | Microsoft Docs
-ms.custom: ''
+title: ネイティブ コンパイル ストアド プロシージャの CASE 式
+description: ネイティブ コンパイルされた T-SQL モジュールでは、一部のバージョンの SQL Server で CASE 式がサポートされます。 この例では、クエリで CASE 式を実装します。
+ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3819201a24318c7bd48a78757a1284b5548be95b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51d1aed041e25ceaefea1a3237fb1e02848f2d77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723197"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **適用対象:** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server
 

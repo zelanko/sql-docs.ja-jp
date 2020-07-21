@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5fc8cfec5752f88909214301931c69dddfe89dc5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933417"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758798"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord メソッド (ADO)
-によって表されるエンティティのコピーを[レコード](../../../ado/reference/ado-api/record-object-ado.md)別の場所にします。  
+[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティを別の場所にコピーします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,39 +34,39 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Source*  
- 任意。 A**文字列**URL を含むエンティティを指定するコピーする (たとえば、ファイルまたはディレクトリ) の値。 場合*ソース*を省略するか、空の文字列、ファイルまたはディレクトリが現在によって表される指定[レコード](../../../ado/reference/ado-api/record-object-ado.md)がコピーされます。  
+ *ソース*  
+ 任意。 コピーするエンティティ (ファイルやディレクトリなど) を指定する URL を含む**文字列**値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるファイルまたはディレクトリがコピーされます。  
   
- *変換先*  
- 任意。 A**文字列**場所を指定する URL を含む値、*ソース*がコピーされます。  
+ *Destination (宛先)*  
+ 任意。 *Source*をコピーする場所を指定する URL を含む**文字列**値です。  
   
- *UserName*  
- 任意。 A**文字列**値が必要な場合へのアクセスを承認するユーザー ID を含む*先*します。  
+ *ユーザー名*  
+ 任意。 必要に応じて、*宛先*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
   
- *Password*  
- 任意。 A**文字列**値が必要な場合を検証するパスワードを含む*UserName*します。  
+ *パスワード*  
+ 任意。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**値です。  
   
  *[オプション]*  
- 任意。 A [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)の既定値を持つ値**adCopyUnspecified**します。 このメソッドの動作を指定します。  
+ 任意。 **Adcopyunspecified**の既定値を持つ[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)値。 このメソッドの動作を指定します。  
   
  *Async*  
- 任意。 A**ブール**値と**True**、この操作を非同期にすることを指定します。  
+ 任意。 **ブール**値。 **True**の場合、この操作は非同期であることを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**を通常の値を返す値*先*します。 ただし、返される正確な値は、プロバイダーによって異なります。  
+ 通常、*変換先*の値を返す**文字列**値。 ただし、返される正確な値はプロバイダーに依存します。  
   
-## <a name="remarks"></a>コメント  
- 値*ソース*と*先*することはできませんと同じです。 それ以外の場合、実行時エラーが発生します。 少なくとも 1 つのサーバー、パス、またはリソースの名前が異なる必要があります。  
+## <a name="remarks"></a>Remarks  
+ *Source*と*Destination*の値を同じにすることはできません。それ以外の場合は、実行時エラーが発生します。 少なくとも1つのサーバー、パス、またはリソース名が異なる必要があります。  
   
- すべての子 (たとえば、サブディレクトリ)*ソース*はないと、コピーされた再帰的に**adCopyNonRecursive**を指定します。 再帰的な操作で*先*のサブディレクトリではない必要があります*ソース*。 それ以外の操作を完了できません。  
+ **AdCopyNonRecursive**が指定されていない場合、*ソース*のすべての子 (サブディレクトリなど) が再帰的にコピーされます。 再帰演算では、 *Destination*を*Source*のサブディレクトリにすることはできません。それ以外の場合、操作は完了しません。  
   
- このメソッドは失敗*先*しない限り (たとえば、ファイルまたはディレクトリ)、既存のエンティティを識別する**adCopyOverWrite**が指定されて。  
+ このメソッドは、 **Adcopyoverwrite**が指定されていない限り、 *Destination*が既存のエンティティ (ファイルやディレクトリなど) を識別する場合に失敗します。  
   
 > [!IMPORTANT]
->  使用して、 **adCopyOverWrite**慎重オプションします。 など、ファイルをディレクトリにコピーするときに、このオプションを指定する*削除*ディレクトリ、ファイルに置き換えます。  
+>  **Adcopyoverwrite**オプションは慎重に使用してください。 たとえば、ディレクトリにファイルをコピーするときにこのオプションを指定すると、ディレクトリが*削除*され、ファイルに置き換えられます。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

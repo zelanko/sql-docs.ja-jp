@@ -1,5 +1,5 @@
 ---
-title: RS.exe ユーティリティ (SSRS) | Microsoft Docs
+title: RS.exe ユーティリティ | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581286"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081691"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -45,10 +45,10 @@ rs {-?}
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a> ファイルの場所  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> ファイルの場所  
  **RS.exe** は **\Program Files\Microsoft SQL Server\110\Tools\Binn**にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
-##  <a name="bkmk_arguments"></a> 引数  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a> 引数  
  **-?**  
  (省略可) **rs** の引数の構文を表示します。  
   
@@ -92,15 +92,15 @@ rs {-?}
   
  指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v a=** "**1**" **-v b=** "**2**" は、" **1** " の値を持つ**a**という名前の変数と、" **2** " の値を持つ**b**という変数を表します。  
   
- グローバル変数は、スクリプト内のすべての関数で使用できます。 円記号と引用符 ( **\\"** ) は、二重引用符と解釈されます。 引用符は、文字列にスペースが含まれている場合のみ必要です。 変数名は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で有効な名前であることが必要です。また変数名は、アルファベットやアンダースコアで始まり、アルファベット文字、数字、およびアンダースコアを含めることができます。 予約語は、変数名として使用できません。 グローバル変数の使用の詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
+ グローバル変数は、スクリプト内のすべての関数で使用できます。 円記号と引用符 ( **\\"** ) は、二重引用符と解釈されます。 引用符は、文字列にスペースが含まれている場合のみ必要です。 変数名は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で有効な名前であることが必要です。また変数名は、アルファベットやアンダースコアで始まり、アルファベット文字、数字、およびアンダースコアを含めることができます。 予約語は、変数名として使用できません。 グローバル変数の使用の詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
  **-t**  
  (省略可) エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permissions  
  ツールを実行するには、スクリプトの実行対象であるレポート サーバー インスタンスに接続するための権限が必要です。 スクリプトを実行して、ローカル コンピューターまたはリモート コンピューターに変更を加えることができます。 リモート コンピューターにインストールしたレポート サーバーを変更するには、 **-s** 引数でリモート コンピューターを指定します。  
   
-##  <a name="bkmk_examples"></a> 使用例  
+##  <a name="examples"></a><a name="bkmk_examples"></a> 使用例  
  次の例では、実行する [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプト、および Web サービス メソッドを含むスクリプト ファイルの指定方法を示しています。  
   
 ```  
@@ -111,10 +111,10 @@ rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver
   
  その他の例については、「 [Reporting Services スクリプト ファイルを実行する](../../reporting-services/tools/run-a-reporting-services-script-file.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  スクリプトを定義して、システム プロパティの設定、レポートのパブリッシュなどが行えます。 作成したスクリプトには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API の任意のメソッドを含めることができます。 使用可能なメソッドおよびプロパティの詳細については、「 [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md)」を参照してください。  
   
- スクリプトは、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET のコードで記述し、.rss ファイル名拡張子が付いた Unicode または UTF-8 テキスト ファイルとして保存する必要があります。 **rs** ユーティリティを使用して、スクリプトをデバッグすることはできません。 スクリプトをデバッグするには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]内でコードを実行します。  
+ スクリプトは、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET のコードで記述し、.rss ファイル名拡張子が付いた Unicode または UTF-8 テキスト ファイルとして保存する必要があります。 **rs** ユーティリティを使用して、スクリプトをデバッグすることはできません。 スクリプトをデバッグするには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 内でコードを実行します。  
   
 > [!TIP]  
 >  詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  

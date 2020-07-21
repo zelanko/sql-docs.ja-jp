@@ -1,5 +1,5 @@
 ---
-title: ODBC Driver for Oracle ユーザー&#39;ガイド |Microsoft Docs
+title: ODBC Driver for Oracle User&#39;s ガイド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915790"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81293153"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC Driver for Oracle ユーザー&#39;ガイド
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC Driver for Oracle User&#39;s ガイド
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- ODBC Driver for Oracle ユーザー ガイドを通じてアクセスできる、セットアップのヘルプを補完するものでは、 [ODBC データ ソース アドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)します。  
+ ODBC Driver for Oracle User Guide は、 [Odbc データソースアドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)を使用してアクセスできるセットアップのヘルプを補完することを目的としています。  
   
  このセクションでは、次のトピックを扱います。  
   

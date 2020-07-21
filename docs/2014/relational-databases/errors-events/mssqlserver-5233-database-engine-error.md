@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 7a855afa-2d3b-49b7-adef-197b99fc98b1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a54c45746ec786461135fb3f2a50f4753dbe2df5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b955e473817501e34391c1f9c64c530deece93a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62867906"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551277"
 ---
-# <a name="mssqlserver5233"></a>MSSQLSERVER_5233
+# <a name="mssqlserver_5233"></a>MSSQLSERVER_5233
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|5233|  
@@ -46,6 +45,6 @@ ms.locfileid: "62867906"
  問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
- 該当なし。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、マイクロソフト カスタマー サポート サービス (CSS) にご連絡ください。  
+ 適用不可。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、マイクロソフト カスタマー サポート サービス (CSS) にご連絡ください。  
   
   

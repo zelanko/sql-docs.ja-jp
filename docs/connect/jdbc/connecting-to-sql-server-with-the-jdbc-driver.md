@@ -1,21 +1,22 @@
 ---
 title: JDBC ドライバーによる SQL Server への接続 | Microsoft Docs
+description: Microsoft JDBC Driver for SQL Server を使用してデータベースに接続すると、データベースとのすべてのやり取りは、SQLServerConnection オブジェクトを通して行われます。
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b88d1824564a9b4fdd3d5340575a5afdff5ca3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1089960af020e648586f59914ccc91e99bf0b9af
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956812"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487966"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>JDBC ドライバーによる SQL Server への接続
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続するための接続 URL の作成方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの名前付きインスタンスへの接続についても説明します。|  
 |[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)|さまざまな接続プロパティについて、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する際にそれらをどのように使用するかについて説明します。|  
@@ -40,11 +41,11 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[接続の操作](../../connect/jdbc/working-with-a-connection.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続をインスタンス化するためのさまざまな方法について説明します。|  
 |[接続プールの使用](../../connect/jdbc/using-connection-pooling.md)|JDBC ドライバーが接続プールをサポートするしくみについて説明します。|  
 |[データベース ミラーリングの使用 &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|JDBC ドライバーがデータベース ミラーリングの使用をサポートするしくみについて説明します。|  
-|[高可用性、ディザスター リカバリーのための JDBC Driver のサポート](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|AlwaysOn 可用性グループに接続するアプリケーションの開発方法について説明します。|  
+|[高可用性、ディザスター リカバリーのための JDBC ドライバーのサポート](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|AlwaysOn 可用性グループに接続するアプリケーションの開発方法について説明します。|  
 |[Kerberos 統合認証による SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Kerberos 統合認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続するアプリケーションの Java 実装について説明します。|  
 |[Azure SQL Database への接続](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|SQL Azure 上のデータベースに対する接続の問題について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

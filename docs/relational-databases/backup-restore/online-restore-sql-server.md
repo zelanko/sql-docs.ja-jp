@@ -1,5 +1,6 @@
 ---
 title: オンライン復元 (SQL Server) | Microsoft Docs
+description: SQL Server Enterprise Editionでは、データベースがオンラインのまま、ファイル復元、ページ復元、または段階的な部分復元によってデータを復元できる場合があります。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a3703082dedc3d6c5933904e07e8e8724a04d20d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670442"
 ---
 # <a name="online-restore-sql-server"></a>オンライン復元 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   オンライン復元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition でのみサポートされています。 このエディションの既定で、ファイル復元、ページ復元、または段階的な部分復元はオンラインで行われます。 このトピックの内容は、複数のファイルまたはファイル グループを含むデータベース (単純復旧モデルでは、読み取り専用ファイル グループのみ) に関連しています。  
   
  データベースがオンラインのときにデータを復元する処理を *オンライン復元*といいます。 プライマリ ファイル グループがオンラインの場合、1 つ以上のセカンダリ ファイル グループがオフラインでも、そのデータベースはオンラインと見なされます。 どの復旧モデルでも、データベースがオンラインであれば、オフラインのファイルを復元できます。 完全復旧モデルでは、データベースがオンラインであれば、ページも復元できます。  
@@ -36,8 +37,6 @@ ms.locfileid: "68033722"
 1.  データを復元します。  
   
 2.  最後のログの復元に WITH RECOVERY を使用します。 この操作により、復元したデータがオンラインになります。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  場合によっては、ロールバックに必要なデータが起動時にオフラインになっているために、コミットされていないトランザクションをロールバックできないことがあります。 このような場合は、トランザクションの処理が遅延されます。 詳細については、「 [遅延トランザクション &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)」を参照してください。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "68033722"
     > [!NOTE]  
     >  または、復元シーケンスの前に手動でファイルをオフラインにすることもできます。 詳細については、このトピックの「データベースまたはファイルのオフライン化」を参照してください。  
   
-##  <a name="taking_db_or_file_offline"></a> データベースまたはファイルのオフライン化  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> データベースまたはファイルのオフライン化  
  オンライン復元を使用しない場合、次のいずれかの方法で、復元シーケンスを開始する前にデータベースをオフラインにできます。  
   
 -   どの復旧モデルでも、次の [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用することにより、データベースをオフラインにできます。  
@@ -78,7 +77,7 @@ ms.locfileid: "68033722"
   
  データベースがオフライン状態の間、すべての復元処理はオフライン復元になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 > [!NOTE]  
 >  オンライン復元シーケンスでは、オフライン復元シーケンスと同じ構文を使用します。  
@@ -97,7 +96,7 @@ ms.locfileid: "68033722"
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ファイルおよびファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
@@ -110,7 +109,7 @@ ms.locfileid: "68033722"
 -   [機能していないファイル グループの削除 &#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [ファイル復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
+ [ファイルの復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [ファイルの復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [ページ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   

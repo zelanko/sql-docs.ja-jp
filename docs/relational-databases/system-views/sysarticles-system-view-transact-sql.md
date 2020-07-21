@@ -1,5 +1,5 @@
 ---
-title: sysarticles (システム ビュー) (TRANSACT-SQL) |Microsoft Docs
+title: sysarticles (システムビュー) (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,50 +17,50 @@ helpviewer_keywords:
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f0d1f6c1036d946088e2cc1aa91c08f620c3f597
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc8e815063ff1dd6df7a34ff255d632bb0208b64
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129535"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881271"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles (システム ビュー) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Sysarticles**ビュー アーティクルのプロパティを公開します。 このビューは、ディストリビューション データベースに保存されます。  
+  **Sysarticles**ビューは、アーティクルのプロパティを公開します。 このビューは、ディストリビューション データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|アーティクルの一意な ID 番号を示す ID 列です。|  
-|**creation_script**|**nvarchar (255)**|アーティクルのスキーマ スクリプトです。|  
-|**del_cmd**|**nvarchar (255)**|DELETE 時に実行するコマンド、またはログから作成するコマンドです。|  
-|**description**|**nvarchar (255)**|この記事の説明エントリします。|  
+|**creation_script**|**nvarchar(255)**|アーティクルのスキーマスクリプトです。|  
+|**del_cmd**|**nvarchar(255)**|DELETE 時に実行するコマンドです。それ以外の場合は、ログから構築します。|  
+|**description**|**nvarchar(255)**|アーティクルの説明エントリです。|  
 |**dest_table**|**sysname**|対象テーブルの名前です。|  
-|**フィルター (filter)**|**int**|ストアド プロシージャ ID は、水平的パーティション分割に使用します。|  
-|**filter_clause**|**ntext**|フィルターによる行選択に使用する、アーティクルの WHERE 句です。|  
-|**ins_cmd**|**nvarchar (255)**|挿入時に実行するコマンドそれ以外の場合、ログから作成します。|  
-|**name**|**sysname**|パブリケーションの中で一意なアーティクルに関係する名前です。|  
-|**objid**|**int**|パブリッシュするテーブル オブジェクト ID です。|  
-|**pubid**|**int**|そのアーティクルが属するパブリケーションの ID です。|  
-|**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE、または TRUNCATE 事前作成コマンドです。<br /><br /> **0** = none。<br /><br /> **1** = ドロップします。<br /><br /> **2** = 削除します。<br /><br /> **3** = TRUNCATE です。|  
-|**status**|**tinyint**|アーティクル オプションとステータスのビットマスクです。次に示す 1 つ以上の値のビットごとの論理和演算をとります。<br /><br /> **1** = アーティクルはアクティブです。<br /><br /> **8** = INSERT ステートメントに列名を含みます。<br /><br /> **16** = ステートメントをパラメーター化を使用します。<br /><br /> **24** = INSERT ステートメントに列名は、どちらも、パラメーター化されたステートメントを使用しています。<br /><br /> **64**変換可能なサブスクリプションによってアーティクルを定義する場合は、行方向のパーティションを = です。<br /><br /> たとえば、パラメーター化されたステートメントを使用するアクティブなアーティクルの値があります**17**この列にします。 値**0**アーティクルがアクティブでないと、追加のプロパティが定義されていないことを意味します。|  
+|**filter**|**int**|行方向のパーティション分割に使用されるストアドプロシージャの ID です。|  
+|**filter_clause**|**ntext**|行方向のフィルター選択に使用される、アーティクルの WHERE 句。|  
+|**ins_cmd**|**nvarchar(255)**|INSERT 時に実行するコマンドです。それ以外の場合は、ログから構築します。|  
+|**name**|**sysname**|アーティクルに関連付けられた名前です。パブリケーション内で一意です。|  
+|**objid**|**int**|パブリッシュされたテーブルオブジェクト ID です。|  
+|**pubid**|**int**|アーティクルが属しているパブリケーションの ID。|  
+|**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE、または TRUNCATE の事前作成コマンド。<br /><br /> **0** = なし。<br /><br /> **1** = DROP。<br /><br /> **2** = 削除します。<br /><br /> **3** = 切り捨て。|  
+|**status**|**tinyint**|アーティクルのオプションと状態のビットマスク。これらの値の1つ以上のビットごとの論理和演算を実行できます。<br /><br /> **1** = アーティクルはアクティブです。<br /><br /> **8** = INSERT ステートメントに列名を含めます。<br /><br /> **16** = パラメーター化されたステートメントを使用します。<br /><br /> **24** = INSERT ステートメントに列名を含め、パラメーター化されたステートメントを使用します。<br /><br /> **64** = アーティクルの行方向のパーティションは、変換可能なサブスクリプションによって定義されています。<br /><br /> たとえば、パラメーター化されたステートメントを使用するアクティブなアーティクルの場合、この列の値は**17**になります。 値**0**は、アーティクルが非アクティブであり、追加のプロパティが定義されていないことを示します。|  
 |**sync_objid**|**int**|アーティクルの定義を表すテーブルまたはビューの ID です。|  
-|**type**|**tinyint**|アーティクルのタイプです。<br /><br /> **1**ログベースのアーティクルを = です。<br /><br /> **3** = 手動フィルター付きログベースのアーティクルです。<br /><br /> **5** = 手動ビュー付きログベースのアーティクルです。<br /><br /> **7** = 手動フィルターおよび手動ビュー付きログベースのアーティクルです。<br /><br /> **8**ストアド プロシージャの実行を = です。<br /><br /> **24**シリアル化可能なストアド プロシージャの実行を = です。<br /><br /> **32** = ストアド プロシージャ (スキーマのみ)。<br /><br /> **64** = ビュー (スキーマのみ)。<br /><br /> **128** = 関数 (スキーマのみ)。|  
-|**upd_cmd**|**nvarchar (255)**|UPDATE 時に実行するコマンド、またはログから作成するコマンドです。|  
-|**schema_option**|**binary(8)**|サブスクライバーに配信するため、アーティクルのスキーマの部分がスクリプト化を制御する、アーティクルのスキーマ生成オプションのビットマスク。 スキーマ オプションの詳細については、「[sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」を参照してください。|  
-|**dest_owner**|**sysname**|目的のデータベースにおけるテーブルの所有者です。|  
-|**ins_scripting_proc**|**int**|登録したカスタム ストアド プロシージャまたはスクリプト、INSERT ステートメントがレプリケートされるときに実行されます。|  
-|**del_scripting_proc**|**int**|登録したカスタム ストアド プロシージャまたは DELETE ステートメントがレプリケートされるときに実行されるスクリプト。|  
+|**type**|**tinyint**|アーティクルのタイプです。<br /><br /> **1** = ログベースのアーティクル。<br /><br /> **3** = 手動フィルターを使用したログベースのアーティクル。<br /><br /> **5** = 手動ビューを使用したログベースのアーティクル。<br /><br /> **7** = 手動フィルターと手動ビューを使用するログベースのアーティクル。<br /><br /> **8** = ストアドプロシージャの実行。<br /><br /> **24** = シリアル化可能なストアドプロシージャの実行。<br /><br /> **32** = ストアドプロシージャ (スキーマのみ)。<br /><br /> **64** = ビュー (スキーマのみ)。<br /><br /> **128** = 関数 (スキーマのみ)。|  
+|**upd_cmd**|**nvarchar(255)**|更新時に実行するコマンドです。それ以外の場合は、ログから構築します。|  
+|**schema_option**|**binary (8)**|アーティクルのスキーマ生成オプションのビットマスク。サブスクライバーに配信するためにスクリプト化されるアーティクルスキーマの部分を制御します。 スキーマ オプションの詳細については、「[sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」を参照してください。|  
+|**dest_owner**|**sysname**|転送先データベースのテーブルの所有者を指定します。|  
+|**ins_scripting_proc**|**int**|INSERT ステートメントがレプリケートされるときに実行される登録済みのカスタムストアドプロシージャまたはスクリプト。|  
+|**del_scripting_proc**|**int**|DELETE ステートメントがレプリケートされるときに実行される登録済みのカスタムストアドプロシージャまたはスクリプト。|  
 |**upd_scripting_proc**|**int**|UPDATE ステートメントがレプリケートされるときに実行される登録済みのカスタム ストアド プロシージャまたはスクリプトです。|  
 |**custom_script**|**nvarchar(2048)**|DDL トリガーの最後に実行される登録済みのカスタム ストアド プロシージャまたはスクリプトです。|  
-|**fire_triggers_on_snapshot**|**bit**|スナップショットが適用されるときにレプリケートされたトリガーが実行されるかどうかを示します。次のいずれかの値をとります。<br /><br /> **0** = トリガーは実行されません。<br /><br /> **1** = トリガーは実行されます。|  
+|**fire_triggers_on_snapshot**|**bit**|スナップショットが適用されるときにレプリケートされたトリガーが実行されるかどうかを示します。次のいずれかの値をとります。<br /><br /> **0** = トリガーは実行されません。<br /><br /> **1** = トリガーが実行されます。|  
   
-## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sysarticles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sysarticles &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)  
   
   

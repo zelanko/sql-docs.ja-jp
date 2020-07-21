@@ -1,5 +1,5 @@
 ---
-title: 結果セット (ODBC) の情報の取得 |Microsoft Docs
+title: 結果セットの情報の取得 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,36 +11,34 @@ helpviewer_keywords:
 - result sets [ODBC]
 - result sets [ODBC], fetching
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b99d0b97179899b804a31b48a1334172e214f9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: f00fe6310c339d7ec24736c5f659d3b7b7d84ce8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133450"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006575"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>結果の処理 - 結果セットの情報の取得
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### <a name="to-get-information-about-a-result-set"></a>結果セットに関する情報を取得するには  
   
-1.  呼び出す[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)を結果セットの列の数を取得します。  
+1.  [Sqlnumresultcols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)を呼び出して、結果セット内の列の数を取得します。  
   
 2.  結果セット内の各列に対して次の操作を行います。  
   
-    -   呼び出す[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)結果列に関する情報を取得します。  
+    -   [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)を呼び出して、結果列に関する情報を取得します。  
   
      または  
   
-    -   呼び出す[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)結果列に関する具体的な記述子情報を取得します。  
+    -   [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)を呼び出して、結果列に関する特定の記述子情報を取得します。  
   
-## <a name="see-also"></a>関連項目  
-[結果を処理&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
+## <a name="see-also"></a>参照  
+[ODBC&#41;&#40;の結果の処理](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
 
-[結果セットの特性の決定&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+[ODBC&#41;&#40;結果セットの特性の決定](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

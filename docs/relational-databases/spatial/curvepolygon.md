@@ -10,15 +10,15 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb25c33fd2c885eb46c24dbe94e90d052bbf1371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3789ee478e1c77518c7ce1992ed4a5134c886498
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751098"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **CurvePolygon** は、1 つの外部境界リングと 0 個以上の内部リングによって定義された、位相的に閉じた表面です  
   
 > [!IMPORTANT]  
@@ -30,7 +30,7 @@ ms.locfileid: "68048692"
   
 -   **CurvePolygon** インスタンスの内部は、外部リングとすべての内部リングとの間にある空間です。  
   
- **CurvePolygon** インスタンスが **Polygon** インスタンスと異なるのは、**CurvePolygon** インスタンスは次の円弧を含む場合があるという点です:**CircularString** および **CompoundCurve**。  
+ **CurvePolygon** インスタンスが **Polygon** インスタンスと異なるのは、 **CurvePolygon** インスタンスは円弧 ( **CircularString** および **CompoundCurve**) を含む場合があるという点です。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve インスタンス  
  有効な **CurvePolygon** の図を次に示します。  
@@ -44,10 +44,8 @@ ms.locfileid: "68048692"
   
 3.  始点および終点の X 座標と Y 座標が同じであること。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!NOTE]  
-    > Z and M values are ignored.  
+    > Z 値および M 値は無視されます。  
   
 次の例は、許容される **CurvePolygon** インスタンスを示しています。  
   
@@ -114,7 +112,7 @@ DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -12
 SELECT @g.STIsValid();  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. 空の CurvePolygon を使用して geometry インスタンスをインスタンス化する  
  次の例は、空の **CurvePolygon** インスタンスを作成する方法を示しています。  

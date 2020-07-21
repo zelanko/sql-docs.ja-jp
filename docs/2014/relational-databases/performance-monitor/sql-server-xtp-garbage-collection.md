@@ -1,5 +1,5 @@
 ---
-title: XTP Garbage Collection |Microsoft Docs
+title: XTP ガベージコレクション |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5796cc1184e862b4e8afe42b4fa5f5babe8358dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a064fec82054d434cc0ca577bc1dd013f3d16f2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016839"
 ---
 # <a name="xtp-garbage-collection"></a>XTP Garbage Collection
   XTP Garbage Collection パフォーマンス オブジェクトには、XTP エンジンのガベージ コレクターに関連するカウンターが含まれています。  
   
- この表は、 **XTP garbage Collection**カウンター。  
+ 次の表では、 **XTP ガベージコレクション**カウンターについて説明します。  
   
 |カウンター|説明|  
 |-------------|-----------------|  
@@ -38,7 +37,7 @@ ms.locfileid: "63151031"
 |**Sweep rows touched/sec**|ダスティ コーナー スウィープの実行中に操作された行の数に関する 1 秒あたりの平均です。|  
 |**Sweep scans started/sec**|ダスティ コーナー スウィープ スキャンが開始された回数に関する 1 秒あたりの平均。|  
   
-## <a name="see-also"></a>関連項目  
- [XTP &#40;、インメモリ OLTP&#41;パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>参照  
+ [XTP &#40;インメモリ OLTP&#41; パフォーマンスカウンター](../../integration-services/performance/performance-counters.md)  
   
   

@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571575"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
@@ -45,7 +45,7 @@ ms.locfileid: "65571575"
      データ警告デザイナーが開き、レポートによって生成された最初のデータ フィードの先頭 100 行がテーブルに表示されます。  
   
     > [!NOTE]  
-    >  **[新しいデータの警告]** オプションが表示されない場合は、警告サービスが SharePoint サイト上に構成されていない、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションにデータ警告が含まれていません。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください。  
+    >  **[新しいデータの警告]** オプションが表示されない場合は、警告サービスが SharePoint サイト上に構成されていない、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションにデータ警告が含まれていません。 詳細については、「 [Reporting Services の SharePoint サービスとサービス アプリケーション](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)｣を参照してください  
     >   
     >  **[新しいデータの警告]** オプションがグレーで表示されている場合は、レポート データ ソースが、統合セキュリティ資格情報を使用するか、または資格情報の入力を求めるように構成されています。 **[新しいデータの警告]** オプションを利用可能にするには、データ ソースを更新して、保存された資格情報を使用するようにするか、または資格情報を使用しないようにする必要があります。  
   

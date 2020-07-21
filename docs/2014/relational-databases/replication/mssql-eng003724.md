@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 10cb119d-92df-4124-b85d-cd2f2666c99c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f3ea7c8720d43fdba53821091c0664bfe375a57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dbfb68575c5ffa73276b3bbe1643381c3f0cc412
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049280"
 ---
-# <a name="mssqleng003724"></a>MSSQL_ENG003724
+# <a name="mssql_eng003724"></a>MSSQL_ENG003724
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -36,7 +35,7 @@ ms.locfileid: "63191450"
  データベース内のオブジェクトがレプリケートされると、システム テーブル **sysarticles** (スナップショット パブリケーションまたはトランザクション パブリケーションの場合) または **sysmergearticles** (マージ パブリケーションの場合) に、レプリケート済みのマークが付けられています。 レプリケート済みのオブジェクトを削除しようとした場合に、このエラーが発生します。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- データベース オブジェクトを削除する前に、そのオブジェクトがレプリケートされていないことを確認します。 例 :  
+ データベース オブジェクトを削除する前に、そのオブジェクトがレプリケートされていないことを確認します。 次に例を示します。  
   
 -   パブリケーション データベースでエラーが発生した場合、オブジェクトを削除する前にパブリケーションからアーティクルを削除します。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
   

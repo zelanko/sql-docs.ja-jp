@@ -1,5 +1,5 @@
 ---
-title: サーバー インスタンスをアップグレードするときに、ミラー化されたデータベースのダウンタイムを最小限に抑える |Microsoft Docs
+title: サーバーインスタンスをアップグレードするときに、ミラー化されたデータベースのダウンタイムを最小限に抑える |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754282"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933884"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>サーバー インスタンスのアップグレード時に、ミラー化されたデータベースのダウンタイムを最小化する方法
-  サーバー インスタンスをアップグレードするときに[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、順次アップグレードを実行することによって、各ミラー化されたデータベースのダウンタイムを 1 つの手動フェールオーバーのみに抑えることができますと呼ばれる、*ローリング アップグレード*します。 ローリング アップグレードは複数の段階から成るプロセスです。最も単純な形式では、ミラーリング セッションで現在ミラー サーバーとして機能しているサーバー インスタンスをアップグレードした後、ミラー化されたデータベースを手動でフェールオーバーし、以前のプリンシパル サーバーをアップグレードして、ミラーリングを再開します。 実際に実行するプロセスは、動作モードと、アップグレードするサーバー インスタンスで実行しているミラーリング セッションの数やレイアウトによって異なります。  
+  サーバーインスタンスをにアップグレードする場合 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、*ローリングアップグレード*と呼ばれる順次アップグレードを実行することで、ミラー化された各データベースのダウンタイムを1回の手動フェールオーバーのみに減らすことができます。 ローリング アップグレードは複数の段階から成るプロセスです。最も単純な形式では、ミラーリング セッションで現在ミラー サーバーとして機能しているサーバー インスタンスをアップグレードした後、ミラー化されたデータベースを手動でフェールオーバーし、以前のプリンシパル サーバーをアップグレードして、ミラーリングを再開します。 実際に実行するプロセスは、動作モードと、アップグレードするサーバー インスタンスで実行しているミラーリング セッションの数やレイアウトによって異なります。  
   
 > [!NOTE]  
->  サービス パックまたは修正プログラムをインストールするローリング アップグレードを実行する方法の詳細については、次を参照してください。[最小限のダウンタイムでのシステム上でミラー化データベースの Service Pack をインストール](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)します。  
+>  ローリングアップグレードを実行して Service Pack または修正プログラムをインストールする方法については、「[ミラー化されたデータベースのダウンタイムを最小限に抑えてシステムに Service pack をインストール](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)する」を参照してください。  
   
  **推奨される準備 (ベスト プラクティス)**  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62754282"
   
     -   [データベース ミラーリング セッションを手動でフェールオーバーする方法 &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [データベース ミラーリング セッションを手動でフェールオーバーする方法 &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)。  
+    -   [Transact-sql&#41;&#40;データベースミラーリングセッションを手動でフェール](manually-fail-over-a-database-mirroring-session-transact-sql.md)オーバーします。  
   
     > [!NOTE]  
     >  手動フェールオーバーのしくみについては、「[データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)」を参照してください。  
@@ -44,7 +43,7 @@ ms.locfileid: "62754282"
   
     1.  すべてのプリンシパル データベースを対象にデータベースの完全バックアップを実行します。  
   
-         [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+         [SQL Server&#41;&#40;データベースの完全バックアップを作成](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)します。  
   
     2.  すべてのプリンシパル データベースで [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) コマンドを実行します。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62754282"
   
  次の図は、動作モードごとにローリング アップグレードの基本的な段階をフローチャートで示したものです。 図の後で、対応する各手順について説明します。  
   
- ![ローリング アップグレードの手順のフローチャート](../media/dbm-rolling-upgrade.gif "ローリング アップグレードの手順のフローチャート")  
+ ![ローリング アップグレードの手順を示すフローチャート](../media/dbm-rolling-upgrade.gif "ローリング アップグレードの手順を示すフローチャート")  
   
 > [!IMPORTANT]  
 >  同時実行ミラーリング セッションでは、1 つのサーバー インスタンスが複数の異なるミラーリング ロール (プリンシパル サーバー、ミラー サーバー、またはミラーリング監視サーバー) を実行している場合があります。 この場合は、基本的なローリング アップグレード プロセスを適宜調整する必要があります。 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。  
@@ -69,7 +68,7 @@ ms.locfileid: "62754282"
     > [!IMPORTANT]  
     >  ミラー サーバーとプリンシパル サーバーが地理的に離れている場合は、ローリング アップグレードは適しません。  
   
-    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: 変更、**オペレーティング モード**オプションを **(同期) の自動フェールオーバーを伴わない高い安全性**を使用して、[ミラーリング ページ](../../relational-databases/databases/database-properties-mirroring-page.md)の**データベースプロパティ** ダイアログ ボックス。 このページにアクセスする方法については、「[データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)」を参照してください。  
+    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: **[データベースのプロパティ]** ダイアログ ボックスの [[ミラーリング]](../../relational-databases/databases/database-properties-mirroring-page.md) ページで、**[動作モード]** オプションを **[自動フェールオーバーを伴わない高い安全性 (同期)]** に変更します。 このページにアクセスする方法については、「[データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)」を参照してください。  
   
     -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: トランザクションの安全性を FULL に設定します。 詳細については、｢[データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)」を参照してください。  
   
@@ -78,13 +77,13 @@ ms.locfileid: "62754282"
 1.  ミラーリング セッションにミラーリング監視サーバーが存在する場合は、ローリング アップグレードの実行前にミラーリング監視サーバーを削除しておくことをお勧めします。 そうしないと、ミラー サーバー インスタンスをアップグレードする際のデータベースの可用性が、プリンシパル サーバー インスタンスに接続されたミラーリング監視サーバーに依存することになります。 削除したミラーリング監視サーバーは、ローリング アップグレード プロセス中にいつでもアップグレードでき、また、そうすることでデータベースのダウンタイムを最小限に抑えることができます。  
   
     > [!NOTE]  
-    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
     -   [データベース ミラーリング セッションからのミラーリング監視サーバーの削除 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>ローリング アップグレードを実行するには  
   
-1.  ダウンタイムを最小限に抑えるため、次をお勧めします: ローリング アップグレードを開始する際は、すべてのミラーリング セッションにおいてミラー サーバーとして機能しているミラーリング パートナーから先に更新します。 場合によっては、この時点で複数のサーバー インスタンスを更新する必要があります。  
+1.  ローリング アップグレードを開始する際は、ダウンタイムを最小限に抑えるため、すべてのミラーリング セッションにおいてミラー サーバーとして機能しているミラーリング パートナーから先に更新することをお勧めします。 場合によっては、この時点で複数のサーバー インスタンスを更新する必要があります。  
   
     > [!NOTE]  
     >  ミラーリング監視サーバーは、ローリング アップグレード プロセス中、いつでもアップグレードできます。 たとえば、セッション 1 ではミラー サーバーとして、セッション 2 ではミラーリング監視サーバーとして機能しているサーバー インスタンスであれば、今すぐにアップグレードすることもできます。  
@@ -108,7 +107,7 @@ ms.locfileid: "62754282"
     > [!NOTE]  
     >  新しいミラーリング セッションを確立するには、すべてのサーバー インスタンスが同じバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行している必要があります。  
   
-3.  実行することをお勧めフェールオーバーした後、 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) theprincipal データベース コマンド。  
+3.  フェールオーバー後は、プリンシパルデータベースで[DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)コマンドを実行することをお勧めします。  
   
 4.  すべてのミラーリング セッションにおいて、現在ミラー サーバー (パートナー) となっている各サーバー インスタンスをアップグレードします。 場合によっては、この時点で複数のサーバーを更新する必要があります。  
   
@@ -126,9 +125,9 @@ ms.locfileid: "62754282"
   
 1.  必要に応じて、高パフォーマンス モードに戻す場合は、次のいずれかの方法を使用します。  
   
-    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: 変更、**オペレーティング モード**オプションを**高パフォーマンス (非同期)** を使用して、[ミラーリング ページ](../../relational-databases/databases/database-properties-mirroring-page.md)の**データベース プロパティ** ダイアログ ボックス。  
+    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページで、 [[動作モード]](../../relational-databases/databases/database-properties-mirroring-page.md) オプションを **[高パフォーマンス (非同期)]** に変更します。  
   
-    -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) を使用してトランザクションの安全性を OFF に設定します。  
+    -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)を使用してトランザクションの安全性を OFF に設定します。  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>ミラーリング監視サーバーをミラーリング セッションに戻すには  
   
@@ -141,14 +140,14 @@ ms.locfileid: "62754282"
     -   [Windows 認証を使用してデータベースのミラーリング監視を追加する &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [ALTER DATABASE データベースミラーリング &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [ミラー化されたデータベースの状態の確認 &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
- [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [ミラー化されたデータベースの最小限のダウンタイムでのシステム サービス パックをインストールします。](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
- [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [データベース ミラーリング セッションでのサービスの強制 &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
- [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [ミラー化されたデータベース &#40;SQL Server Management Studio の状態を表示&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
+ [データベースミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [ミラー化されたデータベースのダウンタイムを最小限に抑えて、システムに Service Pack をインストールする](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
+ [データベースミラーリングセッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [データベースミラーリングセッションでのサービスの強制 Transact-sql&#41;の &#40;](force-service-in-a-database-mirroring-session-transact-sql.md)   
+ [&#40;SQL Server Management Studio を開始データベースミラーリングモニター&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
  [データベース ミラーリングの動作モード](database-mirroring-operating-modes.md)  
   
   

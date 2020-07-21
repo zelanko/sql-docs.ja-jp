@@ -21,15 +21,14 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b32c9ffdf6f4d8acd5ee7e1d18583cd00536c70e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62896130"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427049"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>カスタム タスクでのイベントの発生と定義
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンには、タスクを検証および実行する際の進行状況の状態を示す、イベントのコレクションが用意されています。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスはこれらのイベントを定義し、<xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> メソッドに対するパラメーターとして、タスクに渡されます。  
@@ -43,7 +42,7 @@ ms.locfileid: "62896130"
   
  次のコード例では、カスタム タスクの `InitializeTask` メソッドを示します。ここでは、2 つのカスタム イベントが作成され、そのプロパティが設定されます。 次に、新しいイベントが <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> コレクションに追加されます。  
   
- 最初のカスタム イベントの *eventName* は "**OnBeforeIncrement**" で、*description* は "**Fires after the initial value is updated**" です。 次のパラメーターの値は `true` であり、イベントを処理するために、イベント ハンドラーのコンテナーの作成を許可する必要があることを示します。 このイベント ハンドラーは、Package、Sequence、ForLoop、ForEachLoop などの他のコンテナーと同様、パッケージの構造およびサービスをタスクに提供するコンテナーです。 ときに、 *allowEventHandlers*パラメーターが`true`、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>イベントのオブジェクトが作成されます。 これで、イベント用に定義された任意のパラメーターが、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> の変数コレクション内の <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> で使用できます。  
+ 最初のカスタム イベントの *eventName* は "**OnBeforeIncrement**" で、*description* は "**Fires after the initial value is updated**" です。 次のパラメーターの値は `true` であり、イベントを処理するために、イベント ハンドラーのコンテナーの作成を許可する必要があることを示します。 このイベント ハンドラーは、Package、Sequence、ForLoop、ForEachLoop などの他のコンテナーと同様、パッケージの構造およびサービスをタスクに提供するコンテナーです。 *AllowEventHandlers*パラメーターがの場合 `true` 、 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> イベント用にオブジェクトが作成されます。 これで、イベント用に定義された任意のパラメーターが、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> の変数コレクション内の <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> で使用できます。  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -189,10 +188,10 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>関連項目  
- [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../integration-services-ssis-event-handlers.md)   
+ [SSIS&#41; イベントハンドラーの Integration Services &#40;](../../integration-services-ssis-event-handlers.md)   
  [パッケージにイベント ハンドラーを追加する](../../add-an-event-handler-to-a-package.md)  
   
   

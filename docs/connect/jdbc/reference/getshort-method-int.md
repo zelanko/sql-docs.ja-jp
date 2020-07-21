@@ -16,10 +16,10 @@ ms.assetid: cd9773c1-b598-4adb-aaf6-0c0f589cbef5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18161201976c0a00a4d32989667198cd8998223c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979880"
 ---
 # <a name="getshort-method-int"></a>getShort (int) メソッド
@@ -35,7 +35,7 @@ public short getShort(int index)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターのインデックスを示す **int** です。  
   
@@ -45,7 +45,7 @@ public short getShort(int index)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getShort メソッドは、java.sql.CallableStatement インターフェイスの getShort メソッドで規定されています。  
   
  このメソッドは、**smallint**、**tinyint**、**bit** などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  

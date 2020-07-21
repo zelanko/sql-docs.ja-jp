@@ -1,5 +1,6 @@
 ---
-title: Reporting Services のレポート レンダリングの問題のトラブルシューティング | Microsoft Docs
+title: Reporting Services のレポート レンダリングの問題のトラブルシューティング
+description: この記事では、コンパイル済みのレポートとレイアウトのデータが SQL Server Reporting Services のレポート レンダラーに送信されたときの表示の問題を診断して修正します。
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 3a834ee415fd725c26314b95d507b86ff5280f78
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574684"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662781"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services のレポート レンダリングの問題のトラブルシューティング
 レポートのデータとレイアウトの情報が結合されると、コンパイルされたレポートがレポート レンダラーに送信されます。 たとえば、レポートをローカルでプレビューする場合、HTML レンダラーを使用してコンパイル済みのレポートが表示されます。 このトピックでは、レポートの表示に固有の問題のトラブルシューティングを行います。   
@@ -58,7 +59,7 @@ Reporting Services には、レポートの最後にある空白を保持する�
 `Query execution failed for dataset 'DataSet1'.`   
 `The request failed with HTTP status 401: Unauthorized.`  
   
-**この問題の回避方法:** Windows 資格情報ではなく保存されている資格情報を使用するようにデータ ソースを変更します。  
+**この問題を回避するには:** Windows 資格情報ではなく保存されている資格情報を使用するようにデータ ソースを変更します。  
   
 **この問題の適用対象:** 資格情報を要求するように構成されているブラウザー。  
   

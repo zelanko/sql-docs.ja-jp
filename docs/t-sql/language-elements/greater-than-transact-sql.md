@@ -23,15 +23,15 @@ ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 977066e40cc35b5a769192005dadc0e52b37a91a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9233dc4647fd0ff6f518e1aa50a1d78bcd39740d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075136"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007375"
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt; (より大きい) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で 2 つの式を比較します (比較演算子)。 NULL でない式を比較したときに、左側のオペランドの値が右側のオペランドの値よりも大きい場合、結果は TRUE です。それ以外の場合、結果は FALSE です。 どちらか一方、または両方のオペランドが NULL の場合は、トピック「[SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)」を参照してください。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68075136"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 expression > expression  
 ```  
   
@@ -50,7 +50,7 @@ expression > expression
 ## <a name="result-types"></a>戻り値の型  
  **Boolean**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using--in-a-simple-query"></a>A. 簡単なクエリで > を使用する  
  次の例では、`HumanResources.Department` テーブル内で、`DepartmentID` の値が値 13 を超えるすべての行を返します。  

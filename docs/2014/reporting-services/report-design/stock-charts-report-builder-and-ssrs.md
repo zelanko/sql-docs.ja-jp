@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8f5b0e6ecc8dab66eb375a568fa1188549ac8ae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104805"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>株価チャート (レポート ビルダーおよび SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66104805"
   
  ![株価チャート](../media/rs-stockchart.gif "株価チャート")  
   
- 株価チャートについては、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] レポート ビルダーのサンプル レポートに例が含まれています。 このサンプル レポートおよびその他のサンプル レポートをダウンロードする方法について詳しくは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の[レポート ビルダーおよびレポート デザイナーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=198283)に関するページをご覧ください。  
+ 株価チャートについては、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] レポート ビルダーのサンプル レポートに例が含まれています。 このサンプルレポートのダウンロードの詳細については、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]「[サンプルレポートのレポートビルダーとレポートデザイナー](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -40,9 +40,9 @@ ms.locfileid: "66104805"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、価格指標、相対力指数、MACD など、株価チャートで使用する多くの計算式が用意されています。  
   
 ## <a name="see-also"></a>参照  
- [範囲グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
+ [範囲グラフ &#40;レポートビルダーと SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [グラフ &#40;レポートビルダーと SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [グラフの書式設定 &#40;レポートビルダーと SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [[軸のオプション] ([軸のプロパティ] ダイアログ ボックス) &#40;レポート ビルダーおよび SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

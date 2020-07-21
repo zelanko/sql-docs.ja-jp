@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 372515da-3b0e-46f6-8c0b-01b1b45c5a2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63416d8d6fcc5eb43fe71645877aae9e4a50ebb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5250e5dc1d16e83107d92b24131294a74f2efdb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976665"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914600"
 ---
 # <a name="nullsaresortedatstart-method-sqlserverdatabasemetadata"></a>nullsAreSortedAtStart メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public boolean nullsAreSortedAtStart()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この nullsAreSortedAtStart メソッドは、nullsAreSortedAtStart メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この nullsAreSortedAtStart メソッドは、nullsAreSortedAtStart メソッドにより java.sql.DatabaseMetaData インターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888648"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>データ ソース ビューの作成 (基本的なデータ マイニング チュートリアル)
@@ -39,17 +39,17 @@ ms.locfileid: "68888648"
   
 5.  **[次へ]** をクリックします。  
   
-6.  既定では、Adventure Works DW 2012 という名前のデータ ソース ビューが **[ウィザードの完了]** ページに表示されます。 名前をに`Targeted Mailing`変更し、 **[完了]** をクリックします。  
+6.  既定では、Adventure Works DW 2012 という名前のデータ ソース ビューが **[ウィザードの完了]** ページに表示されます。 名前をに`Targeted Mailing`変更し、[**完了**] をクリックします。  
   
      新しいデータ ソース ビューが **[Targeted Mailing.dsv [Design]]** タブで開きます。  
   
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
- [データソース&#40;の作成基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [データソースの作成 &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2:絞り込みメール配信構造&#40;の作成基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [レッスン 2: &#40;の基本的なデータマイニングチュートリアルでは、絞り込みメール配信構造の作成&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ ソース ビューの定義 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

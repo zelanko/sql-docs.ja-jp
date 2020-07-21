@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec730fdd8f5dd8e00a3493b5ec96a80a3397fad9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63184306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058119"
 ---
 # <a name="create-queries-visual-database-tools"></a>クエリの作成 (Visual Database Tools)
   クエリを使用すると、データベース内のテーブルおよびビューからデータを取得できます。 クエリの作成と処理には、 **クエリおよびビュー デザイナー**を使用します。クエリおよびビュー デザイナーは、 [ダイアグラム ペイン](visual-database-tools.md)、 [SQL ペイン](sql-pane-visual-database-tools.md)、 [抽出条件ペイン](criteria-pane-visual-database-tools.md)、および [結果ペイン](results-pane-visual-database-tools.md)の 4 つのペインで構成されています。  
@@ -44,10 +43,10 @@ ms.locfileid: "63184306"
  より的確な結果を得るために、 **SQL ペイン** で SQL コードを変更するか、 **抽出条件ペイン**で並べ替え順序や列の別名などのオプションを選択することもできます。  
   
 ## <a name="see-also"></a>参照  
- [クエリの保存&#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
- [クエリの種類&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
- [検索条件を指定&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [クエリ結果の要約&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;クエリを保存する](save-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリの種類&#41;](types-of-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;検索条件を指定し&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリ結果の概要&#41;](summarize-query-results-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

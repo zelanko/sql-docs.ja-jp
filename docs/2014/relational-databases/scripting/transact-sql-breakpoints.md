@@ -1,6 +1,6 @@
 ---
-title: Transact-SQL ブレークポイント | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL ブレークポイント
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoints
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e170a2177ceefb0329e85f8fbf252cc62de76469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1b5d363e7f68ba735168ef17eeff8e9605c54b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063554"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068445"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL ブレークポイント
   ブレークポイントは、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの実行の一時停止を指定し、その時点のコード要素の状態を確認できます。  
@@ -32,7 +31,7 @@ ms.locfileid: "66063554"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |デバッガーを一時停止する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定する方法について説明します。|[ブレークポイントの切り替え](../spatial/point.md)|  
-|ブレークポイントを一時的に非アクティブ化し、後で再アクティブ化する方法について説明します。 ブレークポイントを削除する方法についても説明します。|[ブレークポイントの有効化、無効化、および削除](enable-disable-and-delete-breakpoints.md)|  
+|ブレークポイントを一時的に非アクティブ化し、後で再アクティブ化する方法について説明します。 ブレークポイントを削除する方法についても説明します。|[ブレークポイントの有効化、無効化、削除](enable-disable-and-delete-breakpoints.md)|  
 |指定した Transact-SQL 式の評価に基づいてブレークポイントがブレークするかどうかを決定する条件を指定する方法について説明します。|[ブレークポイント条件の指定](specify-a-breakpoint-condition.md)|  
 |ブレークポイントを含むステートメントが指定の回数実行されたときにのみ、ブレークポイントがブレークするように、ヒット カウントを指定する方法について説明します。|[ヒット カウントの指定](specify-a-hit-count.md)|  
 |指定されたプロセスまたはスレッドでのみブレークポイントがブレークするように、フィルターを指定する方法について説明します。|[ブレークポイント フィルターの指定](specify-a-breakpoint-filter.md)|  

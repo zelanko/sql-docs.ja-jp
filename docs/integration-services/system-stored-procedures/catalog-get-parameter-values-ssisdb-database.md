@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 04007a8f8bd6b8cc98e8d2d83330f4925be137f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7cd37c3c0d7370952d7733594f22ce2ecfda79e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726590"
 ---
-# <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (SSISDB データベース)
+# <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロジェクトおよび対応するパッケージの既定のパラメーター値を解決し、取得します。  
   
@@ -44,10 +44,10 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  パラメーターが存在するプロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
  [ @package_name = ] *package_name*  
- パッケージの名前です。 パッケージ名を指定して、すべてのプロジェクト パラメーターと指定されたパッケージのパラメーターを取得します。 NULL を使用すると、すべてのプロジェクト パラメーターとすべてのパッケージのパラメーターを取得します。 *package_name* は **nvarchar (260)** です。  
+ パッケージの名前です。 パッケージ名を指定して、すべてのプロジェクト パラメーターと指定されたパッケージのパラメーターを取得します。 *package_name* は **nvarchar (260)** です。  
   
  [ @reference_id = ] *reference_id*  
- 環境参照の一意識別子。 このパラメーターはオプションです。 *reference_id* は **bigint** です。  
+ 環境参照の一意識別子。 このパラメーターは省略可能です。 *reference_id* は **bigint** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  
@@ -55,7 +55,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>結果セット  
  次の形式のテーブルを返します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|パラメーターの型。 プロジェクト パラメーターでは値は `20`、パッケージ パラメーターでは値は `30` です。|  
 |parameter_data_type|**nvarchar(128)**|パラメーターのデータ型です。|  

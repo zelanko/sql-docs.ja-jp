@@ -1,5 +1,5 @@
 ---
-title: sys.service_contract_usages (TRANSACT-SQL) |Microsoft Docs
+title: service_contract_usages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,24 +17,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_contract_usages catalog view
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc2a41cb5f7bbd8e5b0b76ed7b571ffdf80a939f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fbf34e4247feb3911201f27518be57375971b40d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132877"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894918"
 ---
-# <a name="sysservicecontractusages-transact-sql"></a>sys.service_contract_usages (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysservice_contract_usages-transact-sql"></a>service_contract_usages (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このカタログ ビューにはごとに 1 行が含まれています (サービス、コントラクト) のペア。  
+  このカタログビューには、(サービス、コントラクト) のペアごとに1行が含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**service_id**|**int**|コントラクトを使用してサービスの識別子です。 Null を許容しません。|  
-|**service_contract_id**|**int**|サービスによって使用されるコントラクトの識別子。 Null を許容しません。|  
+|**service_id**|**int**|コントラクトを使用するサービスの識別子。 NULL 値は許容されません。|  
+|**service_contract_id**|**int**|サービスによって使用されるコントラクトの識別子。 NULL 値は許容されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

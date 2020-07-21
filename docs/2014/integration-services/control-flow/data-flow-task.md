@@ -15,15 +15,14 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7f10a396923fe25e018271fd62d0412c75471c35
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832457"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433649"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
   データ フロー タスクは、変換元と変換先との間でデータを移動するデータ フロー エンジンをカプセル化して、データの移動時にユーザーがデータを変換、クリーンアップ、および変更できるようにします。 データ フロー タスクをパッケージの制御フローに追加すると、パッケージでデータの抽出、変換、および読み込みを行うことができます。  
@@ -51,7 +50,7 @@ ms.locfileid: "62832457"
 |`BufferSizeTuning`|データ フロー タスクでバッファーのサイズが変更されたことを示します。 このログ エントリはサイズ変更の理由を説明し、一時的な新しいバッファー サイズを表示します。|  
 |`OnPipelinePostEndOfRowset`|`ProcessInput` メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePostPrimeOutput`|コンポーネントが `PrimeOutput` メソッドの最終呼び出しを完了したことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。 コンポーネントがソースの場合、このログ エントリは、コンポーネントが行の処理を完了したことを意味します。|  
-|`OnPipelinePreEndOfRowset`|コンポーネントがまもなくの最後の呼び出しで設定される行セットの終了シグナルを受信することを示します、`ProcessInput`メソッド。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
+|`OnPipelinePreEndOfRowset`|コンポーネントが最後にメソッドを呼び出したときに設定された行セットの最後のシグナルを受信しようとしていることを示し `ProcessInput` ます。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
 |`OnPipelinePrePrimeOutput`|コンポーネントに、`PrimeOutput` メソッドからの呼び出しが通知されたことを示します。 データ フローによっては、複数のログ エントリが書き込まれる場合があります。|  
 |`OnPipelineRowsSent`|`ProcessInput` メソッドの呼び出しによってコンポーネント入力に指定された行数を報告します。 ログ エントリにはコンポーネント名が含まれます。|  
 |`PipelineBufferLeak`|バッファー マネージャーの終了後もバッファーを保持しているコンポーネントに関する情報を提供します。 バッファーが保持されたままの場合、バッファー リソースは解放されていないので、メモリ リークが発生する可能性があります。 このログ エントリは、コンポーネントの名前とバッファーの ID を含みます。|  
@@ -88,11 +87,11 @@ ms.locfileid: "62832457"
   
  たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  : 1185 : OLE DB ソースの出力 : 1180 : 並べ替え : 1181 : 並べ替えの入力 : 76" は、列へと解析されています。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに `OnPipelineRowsSent` イベントによって書き込まれました。  
   
-|[列]|説明|値|  
+|列|説明|値|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB ソースと並べ替え変換の間のパスの `ID` プロパティの値です。|1185|  
 |**PathName**|パスの `Name` プロパティの値です。|OLE DB ソースの出力|  
-|**ComponentID**|値、`ID`並べ替え変換のプロパティ。|1180|  
+|**ComponentID**|`ID`並べ替え変換のプロパティの値。|1180|  
 |**ComponentName**|並べ替え変換の `Name` プロパティの値です。|並べ替え|  
 |**InputID**|並べ替え変換に対する入力の `ID` プロパティの値です。|1181|  
 |**InputName**|並べ替え変換に対する入力の `Name` プロパティの値です。|並べ替えの入力|  

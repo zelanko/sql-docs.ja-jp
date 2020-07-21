@@ -16,15 +16,15 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37f9f47b2149bb308bf0e2ca8b5c975d24d11c37
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999437"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004775"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   主キーと外部キーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67999437"
   
  [関連タスク](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> 主キー制約  
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> 主キー制約  
  テーブルには通常、テーブルの各行を一意に識別する値が格納された単一の列または複数の列の組み合わせがあります。 この列、または列の組み合わせを、テーブルの主キー (PK) と呼び、テーブルのエンティティが整合性を持つようにします。 主キー制約は一意なデータを保証するものであるため、通常は ID 列に対して定義されます。  
   
  主キー制約をテーブルに対して指定すると、重複のないインデックスを [!INCLUDE[ssDE](../../includes/ssde-md.md)] が主キー列に対して自動的に作成し、データが一意になるようにします。 また、クエリの中で主キーが使用された場合は、このインデックスによってデータに高速にアクセスできます。 複数の列に一意キー制約が定義されている場合は、1 つの列内で値が重複してもかまいませんが、一意キー制約が定義された列に格納される値の組み合わせは一意である必要があります。  
@@ -57,7 +57,7 @@ ms.locfileid: "67999437"
   
 -   CLR ユーザー定義型の列に対して主キーを定義する場合は、型の実装でバイナリ順がサポートされている必要があります。  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints  
  外部キー (FK) は、2 つのテーブルのデータ間にリンクを確立および設定することによって外部キー テーブルに格納できるデータを制御するための単一の列または複数の列の組み合わせです。 外部キー参照では、1 つのテーブルの主キー値が格納されている列が別のテーブルの 1 つ以上の列によって参照されたときに、2 つのテーブル間にリンクが作成されます。 この列は、2 番目のテーブルの外部キーになります。  
   
  たとえば、 **Sales.SalesOrderHeader** テーブルには、 **Sales.SalesPerson** テーブルへの外部キー リンクが存在します。これは、販売注文と販売員の間に論理リレーションシップが存在するからです。 **SalesOrderHeader** テーブルの **SalesPersonID** 列は、 **SalesPerson** テーブルの主キー列と一致します。 また、 **SalesOrderHeader** テーブルの **SalesPersonID** 列は、 **SalesPerson** テーブルに対する外部キーです。 この外部キー リレーションシップを作成することによって、 **SalesPerson** テーブル内に存在しない **SalesPersonID** の値を **SalesOrderHeader** テーブルに挿入することはできなくなります。  
@@ -118,7 +118,7 @@ ms.locfileid: "67999437"
   
 -   INSTEAD OF トリガーを含んだテーブルに、連鎖動作を指定する REFERENCES 句を同時に指定することはできません。 ただし、連鎖動作の対象になるテーブルの AFTER トリガーは、別のテーブルやビューに対して INSERT、UPDATE、または DELETE ステートメントを実行し、そのオブジェクトに定義されている INSTEAD OF トリガーを起動できます。  
   
-##  <a name="Tasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 関連タスク  
  次の表は、主キー制約および外部キー制約に関連した一般的なタスクの一覧です。  
   
 |タスク|トピック|  
@@ -128,7 +128,7 @@ ms.locfileid: "67999437"
 |主キーを変更する方法について説明します。|[主キーの変更](../../relational-databases/tables/modify-primary-keys.md)|  
 |外部キー リレーションシップを作成する方法について説明します。|[外部キーのリレーションシップの作成](../../relational-databases/tables/create-foreign-key-relationships.md)|  
 |外部キー リレーションシップを変更する方法について説明します。|[外部キー リレーションシップの変更](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
-|外部キー リレーションシップを削除する方法について説明します。|[外部キーのリレーションシップの削除](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
+|外部キー リレーションシップを削除する方法について説明します。|[外部キー リレーションシップの削除](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |外部キーのプロパティを表示する方法について説明します。|[外部キーのプロパティの表示](../../relational-databases/tables/view-foreign-key-properties.md)|  
 |レプリケーションに対して外部キー制約を無効にする方法を説明します。|[レプリケーションに対して外部キー制約を無効にする方法](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
 |INSERT または UPDATE ステートメント時に外部キー制約を無効にする方法について説明します。|[INSERT ステートメントまたは UPDATE ステートメントに対して外部キー制約を無効にする方法](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  

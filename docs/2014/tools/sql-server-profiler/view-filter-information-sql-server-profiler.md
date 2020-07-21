@@ -1,5 +1,5 @@
 ---
-title: 表示フィルター情報 (SQL Server Profiler) |Microsoft Docs
+title: フィルター情報の表示 (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8496eee2134d9f89163fce6b6ad3ef07ba49b1af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 931b83f8087d446cfc7b08d9582cbad5b02cf671
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007010"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>フィルター情報の表示 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してイベント クラスのデータ列のフィルターを表示する方法について説明します。  
@@ -37,7 +36,7 @@ ms.locfileid: "63276796"
 > [!NOTE]  
 >  値が割り当てられている比較演算子は太字で表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

@@ -1,23 +1,23 @@
 ---
-title: データソースのプロパティを設定する |Microsoft Docs
+title: データ ソースのプロパティの設定 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97e285f5f2680e028a9d8fd00901e3e977ffdd80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bdc9c8ba6efc024b8cbe6846daa91f07d548da3e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004425"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909508"
 ---
-# <a name="setting-the-data-source-properties"></a>データ ソースのプロパティの設定」を参照してください。
+# <a name="setting-the-data-source-properties"></a>データ ソースのプロパティの設定
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -25,7 +25,7 @@ ms.locfileid: "68004425"
 
 アプリケーション サーバーやサーブレット/JSP エンジンなどの Java EE 製品では、通常、データベース アクセス用にデータ ソースを構成できます。 構成で "プロパティ=値" ペアとしてプロパティを入力できる場合は、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」に記載されているすべてのプロパティを指定できます。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースの詳細については、「[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラス」を参照してください。 SQLServerDataSource クラスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースに接続する方法の例については、「[データソースのサンプル](../../connect/jdbc/data-source-sample.md)」を参照してください。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースの詳細については、「[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラス」を参照してください。 SQLServerDataSource クラスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続を確立する方法の例については、「[データ ソースのサンプル](../../connect/jdbc/data-source-sample.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
 

@@ -1,5 +1,5 @@
 ---
-title: sp_stop_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_stop_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a0549d247078634feadced301570e00746d5ba7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892993"
 ---
-# <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブの実行を停止します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントにジョブの実行を停止するよう指示します。  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,16 +44,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_name = ] 'job_name'` 停止するジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'`停止するジョブの名前を指定します。 *job_name*は**sysname**,、既定値は NULL です。  
   
-`[ @job_id = ] job_id` 停止するジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id`停止するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
   
-`[ @originating_server = ] 'master_server'` マスター サーバーの名前。 指定した場合、すべてのマルチサーバー ジョブが停止します。 *master_server*は**nvarchar (128)** 、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**をターゲット サーバーにします。  
+`[ @originating_server = ] 'master_server'`マスターサーバーの名前。 指定した場合、すべてのマルチサーバージョブが停止します。 *master_server*は**nvarchar (128)**,、既定値は NULL です。 このパラメーターは、対象サーバーで**sp_stop_job**を呼び出すときにのみ指定します。  
   
 > [!NOTE]  
 >  最初の 3 つのパラメーターは、いずれか 1 つだけを指定できます。  
   
-`[ @server_name = ] 'target_server'` マルチ サーバー ジョブを停止する特定の対象サーバーの名前。 *target_server*は**nvarchar (128)** 、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**マルチ サーバー ジョブのマスター サーバーでします。  
+`[ @server_name = ] 'target_server'`マルチサーバージョブを停止する特定の対象サーバーの名前。 *target_server*は**nvarchar (128)**,、既定値は NULL です。 このパラメーターは、マルチサーバージョブのマスターサーバーで**sp_stop_job**を呼び出すときにのみ指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -61,13 +61,13 @@ sp_stop_job
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- **sp_stop_job**停止信号をデータベースに送信します。 一部のプロセスをすぐに停止して、いくつかは、安定したポイント (または、コード パスのエントリ ポイント) に到達する必要があります未然に防ぐことができます。 いくつか実行時間の長い[!INCLUDE[tsql](../../includes/tsql-md.md)]バックアップ、復元、および一部の DBCC コマンドなどのステートメントは完了までに時間かかることができます。 これらが実行されている場合に、ジョブが取り消されるまでは、しばらくがかかる場合があります。 ジョブを停止すると、ジョブが取り消されたことを示すエントリがジョブ履歴に記録されます。  
+## <a name="remarks"></a>解説  
+ **sp_stop_job**は、データベースに停止シグナルを送信します。 一部のプロセスはすぐに停止することができ、一部のプロセスは安定したポイント (またはコードパスへのエントリポイント) に到着しないと停止できません。 [!INCLUDE[tsql](../../includes/tsql-md.md)]バックアップ、復元、一部の DBCC コマンドなど、長時間実行されるステートメントの完了には時間がかかることがあります。 これらが実行されている場合、ジョブが取り消されるまでにしばらく時間がかかることがあります。 ジョブを停止すると、ジョブが取り消されたことを示すエントリがジョブ履歴に記録されます。  
   
- ジョブが現在型のステップを実行するかどうかは**CmdExec**または**PowerShell**、実行中のプロセス (MyProgram.exe など) は途中で強制終了します。 途中で終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。 その結果、 **sp_stop_job**ジョブには、型のステップが含まれている場合、極端な状況でのみ使用する必要があります**CmdExec**または**PowerShell**します。  
+ ジョブが**CmdExec**または**PowerShell**タイプのステップを現在実行している場合は、実行中のプロセス (MyProgram.exe など) が途中で強制的に終了されます。 途中で終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。 そのため、ジョブに**CmdExec**または**PowerShell**型のステップが含まれている場合は、極端な状況でのみ**sp_stop_job**を使用する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -77,10 +77,10 @@ sp_stop_job
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーの**SQLAgentUserRole**と**SQLAgentReaderRole**だけ自分が所有するジョブを停止できます。 メンバーの**SQLAgentOperatorRole**他のユーザーによって所有されているものも含め、すべてのローカル ジョブを停止することができます。 メンバーの**sysadmin**すべてローカル ジョブおよびマルチ サーバー ジョブを停止することができます。  
+ **SQLAgentUserRole**と**SQLAgentReaderRole**のメンバーは、自分が所有するジョブのみを停止できます。 **Sqlagentoperatorrole**のメンバーは、他のユーザーによって所有されているものも含め、すべてのローカルジョブを停止できます。 **Sysadmin**のメンバーは、すべてのローカルジョブとマルチサーバージョブを停止できます。  
   
-## <a name="examples"></a>使用例  
- 次の例は、という名前のジョブを停止`Weekly Sales Data Backup`します。  
+## <a name="examples"></a>例  
+ 次の例では、という名前のジョブを停止 `Weekly Sales Data Backup` します。  
   
 ```  
 USE msdb ;  
@@ -91,11 +91,11 @@ EXEC dbo.sp_stop_job
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_start_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_start_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

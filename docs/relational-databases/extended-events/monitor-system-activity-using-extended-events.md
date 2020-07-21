@@ -1,6 +1,6 @@
 ---
-title: 拡張イベントを使用したシステムの使用状況の監視 | Microsoft Docs
-ms.custom: ''
+title: 拡張イベントを使用したシステムの使用状況の監視
+description: 拡張イベントを Event Tracing for Windows と共に使用して、システムの使用状況を監視します。 CREATE EVENT SESSION、ALTER EVENT SESSION、および DROP EVENT SESSION について説明します。
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,16 +14,16 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ef39b9e8834d83c564e7480e29c927f4aa194fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d80d0e1deee504d4dd5a2d8ce49303a799f66fb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790850"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>拡張イベントを使用したシステムの使用状況の監視
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   この手順は、拡張イベントを Event Tracing for Windows (ETW) と共に使用してシステムの使用状況を監視する方法を示します。 また、CREATE EVENT SESSION、ALTER EVENT SESSION、DROP EVENT SESSION の各ステートメントの使用方法についても説明します。  
   
@@ -107,8 +107,6 @@ ms.locfileid: "68140130"
     ```  
   
 8.  次のステートメントを実行してイベント セッションを停止し、サーバーから削除します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     ALTER EVENT SESSION test0  

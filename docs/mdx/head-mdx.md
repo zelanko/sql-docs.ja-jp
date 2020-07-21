@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906009"
 ---
 # <a name="head-mdx"></a>Head (MDX)
 
 
-  重複部分を保持しながら、セット内の最初の指定数の要素を返します。  
+  重複部分を保持したまま、セット内の最初に指定した数の要素を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,16 +29,16 @@ Head(Set_Expression [ ,Count ] )
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Count*  
  返す組の数を指定する有効な数値式です。  
   
-## <a name="remarks"></a>コメント  
- **ヘッド**関数は、指定されたセットの先頭から指定数の組を返します。 要素の順序は保持されます。 Count の既定値は 1 です。 指定数の組が 1 未満の場合、**ヘッド**関数は空のセットを返します。 指定された組数がセット内の組数を超える場合は、元のセットを返します。  
+## <a name="remarks"></a>Remarks  
+ **Head**関数は、指定されたセットの先頭から指定された数の組を返します。 要素の順序は保持されます。 Count の既定値は 1 です。 指定された組数が1より小さい場合、 **Head**関数は空のセットを返します。 指定された組数がセット内の組数を超える場合は、元のセットを返します。  
   
 ## <a name="example"></a>例  
- 次の例では、階層とは無関係に、Reseller Gross Profit に基づいて、売上が上位 5 番目までの製品のサブカテゴリを返します。 **ヘッド**関数を使用してを使用して結果を並べ替えてから、結果の最初の 5 つのセットのみを返す、**順序**関数。  
+ 次の例では、階層とは無関係に、Reseller Gross Profit に基づいて、売上が上位 5 番目までの製品のサブカテゴリを返します。 **Head**関数は、結果が**Order**関数を使用して並べ替えられた後に、結果内の最初の5つのセットのみを返すために使用されます。  
   
 ```  
 SELECT   
@@ -54,11 +54,11 @@ Head
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [末尾&#40;MDX&#41;](../mdx/tail-mdx.md)   
- [項目&#40;タプル&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
- [項目&#40;メンバー&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
- [ランク&#40;MDX&#41;](../mdx/rank-mdx.md)   
+## <a name="see-also"></a>参照  
+ [末尾 &#40;MDX&#41;](../mdx/tail-mdx.md)   
+ [項目 &#40;組&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
+ [項目 &#40;メンバー&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
+ [MDX&#41;&#40;順位付け](../mdx/rank-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

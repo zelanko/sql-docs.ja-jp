@@ -1,5 +1,5 @@
 ---
-title: OpenSchema メソッドの例 (vc++) |Microsoft Docs
+title: OpenSchema メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - OpenSchema method [ADO], VC++ example
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4c511e9328bb64928a027df5f9ff72bf93da17a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 50228f2cf6f8564be500f671de797dfbff0aa7c1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931882"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762123"
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema メソッドの例 (VC++)
-この例では、 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)内の各テーブルの種類と名前を表示するメソッド、 ***Pubs***データベース。  
+この例では、 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドを使用して、 ***Pubs***データベース内の各テーブルの名前と種類を表示します。  
   
 ```  
 // OpenSchemaMethodExample.cpp  
@@ -193,5 +193,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [OpenSchema メソッド](../../../ado/reference/ado-api/openschema-method.md)

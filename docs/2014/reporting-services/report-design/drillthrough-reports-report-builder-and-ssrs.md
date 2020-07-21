@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63119bf6d8ba4e9d907b9c6cdfb6bfe0b7765941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105942"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>詳細レポート (レポート ビルダーおよび SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66105942"
 > [!NOTE]  
 >  レポート ビルダーで作業しているときに、メイン レポートのドリルスルー リンクをクリックしたときに開く詳細レポートを表示するには、レポート サーバーに接続している必要があります。  
   
- 詳細レポートをすぐに使い始めるには、「[チュートリアル:詳細レポートとメイン レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)」を参照してください。 詳細レポートは、2 つのビジネス インテリジェンス ソリューションでも取り上げて[BI レポートします。レポートとサブスクリプションのシナリオ](https://technet.microsoft.com/bi/ff769487.aspx)と[企業ダッシュ ボード。売り上げソリューション](https://technet.microsoft.com/bi/ff643005.aspx)  
+ 今すぐ詳細レポートを表示するには、「[チュートリアル: 詳細レポートとメイン レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)」を参照してください。 詳細レポートは、2つのビジネスインテリジェンスソリューションでも取り上げられてい[ます。 BI レポート: レポートとサブスクリプションのシナリオ](https://technet.microsoft.com/bi/ff769487.aspx)と[企業のダッシュボード: Sales Solution](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

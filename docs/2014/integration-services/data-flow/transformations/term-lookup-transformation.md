@@ -17,15 +17,14 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b349710494d52d01ba82c572b4646057b8d52a02
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770318"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430119"
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
   用語参照変換は、変換入力列内のテキストから抽出された用語を、参照テーブルの用語と照合します。 次に、入力データセットで参照テーブル内の用語が検出された回数をカウントし、その数を参照テーブルの用語と共に変換出力の列に書き込みます。 この変換は、単語の使用頻度を示す統計付きのユーザー定義の単語一覧を、入力テキストから作成する場合に便利です。  
@@ -60,9 +59,9 @@ ms.locfileid: "62770318"
 |----------|-----------|  
 |入力用語|Windows 7 Professional|  
 |参照用語|Windows, Windows 7 Professional|  
-|[出力]|Windows|  
+|Output|Windows|  
   
- 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ です。  
+ 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字は次のとおりです:%、@、&、$、#、 \* 、:、;、.、 **、、** !,?, \<, > 、+、=、^、~、|、 \\ 、/、(、)、[、]、{、}、"、および '。  
   
 ## <a name="data-types"></a>データ型  
  用語参照変換で使用できる列は、DT_WSTR または DT_NTEXT データ型のどちらかの列のみです。 列にテキストが含まれていても、これらのデータ型ではない場合、データ変換の変換では、DT_WSTR または DT_NTEXT データ型の列をデータ フローに追加し、列の値を新しい列にコピーできます。 その後、データ変換の変換からの出力を、用語参照変換への入力として使用できます。 詳細については、「 [Data Conversion Transformation](data-conversion-transformation.md)」を参照してください。  
@@ -96,7 +95,7 @@ ms.locfileid: "62770318"
   
 -   [用語参照変換エディター ([参照テーブル] タブ)](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
--   [用語参照変換エディター ([用語参照] タブ)](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+-   [[用語参照変換エディター] &#40;[用語参照] タブ&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
 -   [用語参照変換エディター ([詳細設定] タブ)](../../term-lookup-transformation-editor-advanced-tab.md)  
   
@@ -106,6 +105,6 @@ ms.locfileid: "62770318"
   
 -   [変換のカスタム プロパティ](transformation-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
   

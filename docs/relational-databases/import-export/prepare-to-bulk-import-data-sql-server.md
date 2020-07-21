@@ -1,5 +1,6 @@
 ---
 title: データの一括インポートの準備 (SQL Server) | Microsoft Docs
+description: データ ファイルのみからデータを一括インポートするには、bcp コマンド、BULK INSERT ステートメント、または OPENROWSET(BULK) 関数を使用します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 997033c334543e26b5f769d31b1816df707a84bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772302"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>データの一括インポートの準備 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データ ファイルのみからデータを一括インポートするには、 **bcp** コマンド、BULK INSERT ステートメント、または OPENROWSET(BULK) 関数を使用します。  
   
@@ -36,11 +37,11 @@ ms.locfileid: "68063164"
 > [!NOTE]  
 >  リモート テーブルへのデータの一括インポートはサポートされていません。  
   
- データ ファイルから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスにデータを一括インポートするときは、次のガイドラインに従ってください:  
+ データ ファイルから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータを一括インポートするときは、次のガイドラインに従ってください。  
   
 -   使用しているユーザー アカウントに必要な権限を取得する。  
   
-     **bcp** ユーティリティ、BULK INSERT ステートメント、INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントのいずれかで使用するユーザー アカウントには、テーブル操作に必要な権限がテーブルの所有者によって割り当てられている必要があります。 各方法に必要な権限の詳細については、「[bcp ユーティリティ](../../tools/bcp-utility.md)」、「[OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)」、および「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
+     **bcp** ユーティリティ、BULK INSERT ステートメント、INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントのいずれかで使用するユーザー アカウントには、テーブル操作に必要な権限がテーブルの所有者によって割り当てられている必要があります。 各方法に必要な権限の詳細については、「 [bcp ユーティリティ](../../tools/bcp-utility.md)」、「 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)」、および「 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)) を使用します。  
   
 -   一括ログ復旧モデルを使用する。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68063164"
      一括インポート操作の直前に一括ログ復旧モデルが使用されるようにデータベースを変更することをお勧めします。 一括インポート操作が終了したらすぐに、データベースを完全復旧モデルに戻します。 詳細については、「[データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)」を参照してください。  
   
     > [!NOTE]  
-    >  一括インポート操作時のログ記録を最小限にする方法の詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
+    >  一括インポート操作時のログ記録を最小限にする方法の詳細については、「 [一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
   
 -   データの一括インポート後にバックアップを行う。  
   
@@ -70,9 +71,9 @@ ms.locfileid: "68063164"
   
 ## <a name="see-also"></a>参照  
  [bcp ユーティリティを使用した一括データのインポートとエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
- [BULK INSERT または OPENROWSET#40;BULK...&#41; を使用した一括データのインポート #40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
+ [BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
- [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
+ [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)  
   

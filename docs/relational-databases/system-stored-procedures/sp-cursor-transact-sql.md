@@ -1,5 +1,5 @@
 ---
-title: sp_cursor (TRANSACT-SQL) |Microsoft Docs
+title: sp_cursor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108574"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869686"
 ---
-# <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  位置指定更新を要求します。 このプロシージャは、カーソルのフェッチ バッファー内にある 1 つ以上の行に対して操作を実行します。 sp_cursor は、ID を指定して呼び出される、表形式データ ストリーム (TDS) パケットでは 1 を = です。  
+  位置指定更新を要求します。 このプロシージャは、カーソルのフェッチ バッファー内にある 1 つ以上の行に対して操作を実行します。 sp_cursor は、ID = 1 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
 ||  
 |-|  
-|**適用対象**:SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
+|**適用対象**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,34 +45,34 @@ sp_cursor  cursor, optype, rownum, table
   
 ## <a name="arguments"></a>引数  
  *cursor*  
- カーソル ハンドルです。 *カーソル*が必要なパラメーターです、 **int**値を入力します。 *カーソル*は、*処理*値は SQL Server によって生成され、sp_cursoropen プロシージャから返されます。  
+ カーソル ハンドルです。 *cursor*は、 **int**入力値を必要とする必須パラメーターです。 *cursor*は SQL Server によって生成され、sp_cursoropen プロシージャによって返される*ハンドル*値です。  
   
  *optype*  
- 実行は、カーソル操作を指定する必須パラメーターです。 *optype* 、次のいずれかが必要です**int**値を入力します。  
+ カーソルが実行する操作を指定する必須のパラメーターです。 *optype*には、次のいずれかの**int**入力値が必要です。  
   
 |値|名前|説明|  
 |-----------|----------|-----------------|  
-|0X0001|UPDATE|フェッチ バッファー内の 1 つまたは複数の行を更新するには、使用されます。  指定されている行*rownum*は、再アクセス、更新します。|  
-|0x0002|Del|フェッチ バッファー内の 1 つまたは複数の行を削除に使用されます。 指定されている行*rownum*再アクセス、削除されます。|  
-|0X0004|INSERT|SQL をビルドせずにデータを挿入**挿入**ステートメント。|  
-|0X0008|更新|基になるテーブルのバッファーを補充するために使用して、更新プログラムの場合、行を更新または削除できないオプティミスティック同時実行制御、または更新後に使用できます。|  
-|0X10|ロック|SQL Server U ロックを指定された行が含まれるページに獲得されるが発生します。 このロックは互換性のある、X ロックやその他の U ロックと S ロックします。 短期間のロックを実装する場合に使用できます。|  
-|0X20|SETPOSITION|DELETE または UPDATE ステートメントを配置してプログラムを後続の SQL server を実行するときにのみ使用されます。|  
-|0X40|ABSOLUTE|UPDATE または DELETE との組み合わせでのみ使用できます。  ABSOLUTE は KEYSET カーソルでのみ使用されます (DYNAMIC カーソルでは無視されます。STATIC カーソルは更新できません)。<br /><br /> 注:絶対フェッチされていないキーセット内の行を指定すると、操作の同時実行制御チェックが失敗し、返される結果は保証できません。|  
+|0X0001|UPDATE|は、フェッチバッファー内の1つ以上の行を更新するために使用されます。  *Rownum*で指定した行には、再度アクセスして更新します。|  
+|0x0002|DELETE|は、フェッチバッファー内の1つ以上の行を削除するために使用されます。 *Rownum*で指定した行には、再度アクセスして削除します。|  
+|0X0004|INSERT|SQL の**insert**ステートメントを作成せずにデータを挿入します。|  
+|0X0008|REFRESH|は、基になるテーブルからバッファーを補充するために使用されます。オプティミスティック同時実行制御によって、または更新後に更新または削除が失敗した場合に、行を更新するために使用できます。|  
+|0X10|LOCK|指定された行を含むページで SQL Server U ロックを取得します。 このロックは、S ロックと互換性がありますが、X ロックやその他の U ロックとは互換性がありません。 短期間のロックを実装する場合に使用できます。|  
+|0X20|SETPOSITION|は、プログラムが後続の SQL Server 位置指定 DELETE または UPDATE ステートメントを実行する場合にのみ使用されます。|  
+|0X40|ABSOLUTE|UPDATE または DELETE との組み合わせでのみ使用できます。  ABSOLUTE は KEYSET カーソルでのみ使用されます (DYNAMIC カーソルでは無視されます。STATIC カーソルは更新できません)。<br /><br /> 注: フェッチされていないキーセット内の行に対して ABSOLUTE が指定されている場合、この操作は同時実行チェックに失敗し、返される結果を保証できません。|  
   
- *rownum*  
- これはフェッチ バッファー内の行の操作、更新、または削除は、カーソルを指定します。  
+ *番*  
+ カーソルが操作、更新、または削除を実行するフェッチバッファー内の行を指定します。  
   
 > [!NOTE]  
->  これは、RELATIVE、NEXT、または PREVIOUS のフェッチ操作、更新や sp_cursor を使用して実行された削除の開始点には影響しません。  
+>  これは、相対、次、または前のフェッチ操作の開始位置、および sp_cursor を使用して実行される更新や削除には影響しません。  
   
- *rownum*が必要なパラメーターです、 **int**値を入力します。  
+ *rownum*は、 **int**入力値を必要とする必須パラメーターです。  
   
  1  
- フェッチ バッファー内の最初の行を示します。  
+ フェッチバッファーの最初の行を示します。  
   
  2  
- フェッチ バッファー内の 2 つ目の行を示します。  
+ フェッチバッファーの2番目の行を示します。  
   
  3、4、5  
  3 番目、4 番目、5 番目の行を示します。  
@@ -84,98 +84,98 @@ sp_cursor  cursor, optype, rownum, table
  フェッチ バッファー内のすべての行を示します。  
   
 > [!NOTE]  
->  更新、削除、更新、またはロックで使用するために有効なのみ*optype*値。  
+>  は、UPDATE、DELETE、REFRESH、または LOCK *optype*値と共に使用する場合にのみ有効です。  
   
  *テーブル*  
- テーブルを識別するテーブル名を*optype*カーソル定義は、結合を含むまたはあいまいな列名がによって返されるときに適用される、*値*パラメーター。 特定のテーブルを指定しない場合、既定値は FROM 句の最初のテーブルになります。 *テーブル*文字列入力値を必要とする省略可能なパラメーターです。 文字列は、任意の文字または UNICODE データ型として指定できます。 *テーブル*マルチパートのテーブル名を指定できます。  
+ *Optype*が適用されるテーブルを識別するテーブル名。カーソル定義が結合またはあいまいな列名を含む場合、*値*パラメーターによって返されます。 特定のテーブルを指定しない場合、既定値は FROM 句の最初のテーブルになります。 *table*は、文字列入力値を必要とする省略可能なパラメーターです。 文字列は任意の文字または UNICODE データ型として指定できます。 *テーブル*には、マルチパートテーブル名を指定できます。  
   
  *value*  
- 値を挿入または更新する場合に使用します。 *値*文字列パラメーターは、UPDATE および INSERT でのみ使用*optype*値。 文字列は、任意の文字または UNICODE データ型として指定できます。  
+ 値を挿入または更新する場合に使用します。 *値*の文字列パラメーターは、UPDATE および INSERT の*optype*値でのみ使用されます。 文字列は任意の文字または UNICODE データ型として指定できます。  
   
 > [!NOTE]  
->  パラメーター名*値*ユーザーが割り当てることができます。  
+>  *Value*のパラメーター名は、ユーザーが割り当てることができます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- バッファー番号 0 の位置指定の DELETE または UPDATE 操作が含む DONE メッセージを返す、RPC を使用する場合、 *rowcount* 0 (失敗) またはフェッチ バッファー内の行ごとに 1 (成功)。  
+ RPC を使用する場合、位置指定の DELETE または UPDATE 操作にバッファー番号0を指定すると、フェッチバッファー内のすべての行について、*行数*が 0 (失敗) または 1 (成功) の完了メッセージが返されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="optype-parameter"></a>optype パラメーター  
- SETPOSITION と更新、削除、更新、またはロックの組み合わせを除く絶対と UPDATE または DELETE、または、 *optype*値は相互に排他的です。  
+ SETPOSITION と UPDATE、DELETE、REFRESH、または LOCK の組み合わせを除きます。または、UPDATE または DELETE のいずれかを使用する場合、 *optype*値は相互に排他的です。  
   
- 更新の値の SET 句がから構築された、*値*パラメーター。  
+ UPDATE 値の SET 句は、 *value*パラメーターから構築されます。  
   
- INSERT を使用する利点の 1 つ*optype*値が非文字データ挿入のための文字形式に変換するを回避することができます。 値は、更新プログラムと同じ方法で指定されます。 必須の列が含まれていない場合、INSERT は失敗します。  
+ INSERT *optype*値を使用する利点の1つは、文字以外のデータを挿入用の文字形式に変換しないようにすることです。 値は、UPDATE と同じように指定されます。 必須の列が含まれていない場合、INSERT は失敗します。  
   
--   SETPOSITION の値は、RELATIVE、NEXT、または PREVIOUS のフェッチ操作の開始位置や、sp_cursor インターフェイスを使用して実行される更新や削除には影響しません。 フェッチ バッファー内の行を指定していない任意の数は、エラーは返されません 1 に設定されている位置になります。 SETPOSITION を実行すると、位置を次の sp_cursorfetch 操作、T-SQL まで有効になります**フェッチ**操作、または sp_cursor SETPOSITION の操作、同じカーソルを使用します。 Sp_cursorfetch 操作が他のカーソル呼び出しは位置の値に影響しませんは、新しいフェッチ バッファー内の最初の行にカーソルの位置を設定します。 最後に変更された行の位置の値を設定するには、更新、UPDATE、DELETE、または LOCK を OR 句で SETPOSITION をリンクできます。  
+-   SETPOSITION の値は、RELATIVE、NEXT、または PREVIOUS のフェッチ操作の開始位置や、sp_cursor インターフェイスを使用して実行される更新や削除には影響しません。 フェッチバッファーに行が指定されていない場合は、位置が1に設定され、エラーは返されません。 SETPOSITION を実行すると、次の sp_cursorfetch 操作、T-sql **FETCH**操作、または同じカーソルを介した SP_CURSOR setposition 操作が行われるまで、その位置は有効のままになります。 後続の sp_cursorfetch 操作では、カーソルの位置が新しいフェッチバッファーの最初の行に設定されますが、他のカーソル呼び出しは位置の値に影響しません。 SETPOSITION は、更新、更新、削除、またはロックが設定された OR 句によってリンクすることができ、その位置の値を最後に変更された行に設定するために使用できます。  
   
- を介してフェッチ バッファー内の行が指定されていない場合、 *rownum*パラメーター位置は、返されるエラーの 1 に設定されます。 設定された位置は、同じカーソルを使用して次の sp_cursorfetch 操作、T-SQL FETCH 操作、または sp_cursor SETPOSITION 操作が行われるまで有効なままになります。  
+ フェッチバッファー内の行が、 *rownum*パラメーターによって指定されていない場合、位置は1に設定され、エラーは返されません。 設定された位置は、同じカーソルを使用して次の sp_cursorfetch 操作、T-SQL FETCH 操作、または sp_cursor SETPOSITION 操作が行われるまで有効なままになります。  
   
- SETPOSITION OR 句では、更新、更新、削除、またはロックが最後に変更された行にカーソルの位置を設定することによってリンクします。  
+ SETPOSITION は、UPDATE、UPDATE、DELETE、または LOCK を使用して、または句によってリンクされ、カーソル位置が最後に変更された行に設定されます。  
   
 ## <a name="rownum-parameter"></a>rownum パラメーター  
- 指定した場合、 *rownum*パラメーターは、フェッチ バッファー内の行番号ではなくキーセット内の行番号として解釈できます。 コンカレンシー制御はユーザーが管理する必要があります。 したがって、SCROLL_LOCKS カーソルの場合はその行のロックを独自に保持し (トランザクションを使用できます)、 OPTIMISTIC カーソルの場合は、この操作を実行する前にその行をフェッチしておく必要があります。  
+ 指定した場合、 *rownum*パラメーターは、フェッチバッファー内の行番号ではなく、キーセット内の行番号として解釈できます。 コンカレンシー制御はユーザーが管理する必要があります。 したがって、SCROLL_LOCKS カーソルの場合はその行のロックを独自に保持し (トランザクションを使用できます)、 OPTIMISTIC カーソルの場合は、この操作を実行する前にその行をフェッチしておく必要があります。  
   
 ## <a name="table-parameter"></a>table パラメーター  
- 場合、 *optype*値が UPDATE または INSERT、および完全更新または挿入ステートメントとして送信された、*値*パラメーターで指定された値*テーブル*は無視されます。  
+ *Optype*値が update または insert で、完全な UPDATE または insert ステートメントが*値*パラメーターとして送信された場合、 *table*に指定された値は無視されます。  
   
 > [!NOTE]  
->  ビューに関しては、ビューに参加している 1 つのテーブルを変更できます。 *値*パラメーターの列名は、ビュー内の列名を反映する必要がありますが、テーブル名には、(この場合 sp_cursor はの代わりにビュー名)、基になるベース テーブルの指定できます。  
+>  ビューに関しては、ビューに参加しているテーブルが1つだけ変更されることがあります。 *値*パラメーターの列名にはビューの列名が反映されている必要がありますが、テーブル名には基になるベーステーブルの名前を指定できます (この場合 sp_cursor はビュー名に置き換えられます)。  
   
-## <a name="value-parameter"></a>パラメーターの値  
- 規則を使用するために 2 つの代替案がない*値*「引数」セクションで述べた。  
+## <a name="value-parameter"></a>値パラメーター  
+ 「引数」セクションで前述したように、*値*を使用するための規則には、次の2つの方法があります。  
   
-1.  名前を使用することができます '\@' という名前のいずれかの選択リスト内の列の名前を付けた*値*パラメーター。 この方法には、データ変換が不要になる可能性があるという利点があります。  
+1.  任意の名前 \@ 付きの*値*パラメーターに対して、選択リスト内の列の名前に ' ' という名前を付けることができます。 この方法には、データ変換が不要になる可能性があるという利点があります。  
   
-2.  完全な UPDATE または INSERT ステートメントを送信するか、複数のパラメーターを使用して、完全なステートメントに SQL Server を作成し、UPDATE または INSERT ステートメントの一部を送信するには、パラメーターを使用します。 この例は、このトピックの「例」のセクションで確認できます。  
+2.  パラメーターを使用して、完全な UPDATE または INSERT ステートメントを送信するか、複数のパラメーターを使用して UPDATE ステートメントまたは INSERT ステートメントの一部を送信します。このとき、SQL Server が完全なステートメントに組み込まれます。 この例については、このトピックで後述する「例」のセクションを参照してください。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="alternative-value-parameter-uses"></a>パラメーターを使用して別の値  
- 更新プログラム。  
+### <a name="alternative-value-parameter-uses"></a>代替値パラメーターの使用  
+ 更新プログラム:  
   
- 1 つのパラメーターを使用する場合、次の構文を使用して UPDATE ステートメントを送信できます。  
+ 1つのパラメーターを使用する場合は、次の構文を使用して UPDATE ステートメントを送信できます。  
   
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  場合更新\<テーブル名 > を指定すると、任意の値がの指定、*テーブル*パラメーターは無視されます。  
+>  UPDATE \<table name> を指定した場合、 *table*パラメーターに指定した値は無視されます。  
   
- 複数のパラメーターを使用している場合、最初のパラメーターは、次の形式の文字列である必要があります。  
+ 複数のパラメーターを使用する場合、最初のパラメーターは次の形式の文字列である必要があります。  
   
  `[ SET ] <column name> = expression  [,...n]`  
   
- 後続のパラメーターがの形式である必要があります。  
+ 後続のパラメーターは、次の形式にする必要があります。  
   
  `<column name> = expression  [,...n]`  
   
- ここで、\<テーブル名 > で作成される update ステートメントが指定した値または既定値に 1 つ、*テーブル*パラメーター。  
+ この場合、 \<table name> 構築された update ステートメント内のは、指定されたか、または*table*パラメーターによって既定値になります。  
   
- 挿入。  
+ 挿入の場合:  
   
  1 つのパラメーターを使用する場合は、次の構文を使用して INSERT ステートメントを送信できます。  
   
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  場合挿入 *\<テーブル名 >* を指定すると、任意の値がの指定、*テーブル*パラメーターは無視されます。  
+>  INSERT *\<table name>* を指定した場合、 *table*パラメーターに指定した値は無視されます。  
   
- 複数のパラメーターを使用している場合、最初のパラメーターは、次の形式の文字列である必要があります。  
+ 複数のパラメーターを使用する場合、最初のパラメーターは次の形式の文字列である必要があります。  
   
  `[ VALUES ( ] <expression>  [,...n]`  
   
- 後続のパラメーターがの形式である必要があります。  
+ 後続のパラメーターは、次の形式にする必要があります。  
   
  `expression [,...n]`  
   
- 場所の値が指定されている場合があります、末尾を除く")"の後、最後の式。 ここで、 *\<テーブル名 >* で作成される UPDATE ステートメントが指定した値または既定値に 1 つ、*テーブル*パラメーター。  
+ 値が指定されている場合を除き、最後の式の後に ")" が続く必要があります。 この場合、 *\<table name>* 構築された UPDATE ステートメント内のは、指定されたか、または*table*パラメーターによって既定値になります。  
   
 > [!NOTE]  
->  1 つのパラメーターを名前付きパラメーターとして送信することもできます ("`@VALUES`" など)。 ここで使用することがあります他の名前付きパラメーターはありません。  
+>  1 つのパラメーターを名前付きパラメーターとして送信することもできます ("`@VALUES`" など)。 この場合は、他の名前付きパラメーターは使用できません。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

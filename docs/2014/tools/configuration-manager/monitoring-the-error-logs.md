@@ -1,5 +1,5 @@
 ---
-title: エラー ログの監視 |Microsoft Docs
+title: エラーログの監視 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c376340af1674c05ac3a38c88cde202bd35f314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a47891599dbe735bd437f5239c73bfd34c422ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211173"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057918"
 ---
 # <a name="monitoring-the-error-logs"></a>エラー ログの監視
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、特定のシステム イベントとユーザー定義イベントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログと [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログに記録します。 両方のログで、記録されるすべてのイベントのタイムスタンプが自動的に記録されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログの情報を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に関連する問題のトラブルシューティングを行うことができます。  

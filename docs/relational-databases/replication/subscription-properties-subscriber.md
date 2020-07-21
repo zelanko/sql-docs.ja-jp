@@ -1,6 +1,7 @@
 ---
-title: SQL Server レプリケーションの [サブスクリプションのプロパティ] ダイアログ ボックス | Microsoft Docs
-ms.custom: ''
+title: '[サブスクリプションのプロパティ] ダイアログ ボックス'
+description: SQL Server Management Studio (SSMS) 内の [サブスクリプションのプロパティ] ダイアログ ボックスについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,15 +15,15 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8e8afa7b91d2148ecb69e956a411d12b52d437d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729381"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server レプリケーションの [サブスクリプションのプロパティ] ダイアログ ボックス 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
 ### <a name="publisher-properties"></a>パブリッシャーのプロパティ
 パブリッシャーの **[サブスクリプションのプロパティ]** ダイアログ ボックスを使用すると、プッシュ サブスクリプションのプロパティを表示したり設定したりできます。 プル サブスクリプションのいくつかのプロパティを表示することもできますが、サブスクリプションの **[サブスクリプションのプロパティ]** ダイアログ ボックスではさらに多くのプロパティが表示され、プロパティを変更することができます。  
@@ -64,7 +65,7 @@ ms.locfileid: "68769460"
   
 ## <a name="publisher-options-for-merge-subscriptions"></a>マージ サブスクリプションに対するパブリッシャーのオプション  
  **[パーティション定義 (HOST_NAME)]**  
- パラメーター化されたフィルターを使用するパブリケーションの場合、マージ レプリケーションでは、同期化中に 2 つのシステム関数のうちの 1 つ (フィルターが両方の関数を参照する場合は両方の関数) を評価して、サブスクライバーが受け取る必要のあるデータを決定します。関数は **SUSER_SNAME()** または **HOST_NAME()** です。 既定では、**HOST_NAME()** は、マージ エージェントが実行されているコンピューターの名前を返しますが、この値はサブスクリプションの新規作成ウィザードでオーバーライドすることができます。 パラメーター化されたフィルターと **HOST_NAME()** のオーバーライドの詳細については、「[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+ パラメーター化されたフィルターを使用するパブリケーションの場合、マージ レプリケーションでは、同期化中に 2 つのシステム関数、 **SUSER_SNAME()** または **HOST_NAME()** のうちの 1 つ (フィルターが両方の関数を参照する場合は両方の関数) を評価して、サブスクライバーが受け取る必要のあるデータを決定します。 既定では、**HOST_NAME()** は、マージ エージェントが実行されているコンピューターの名前を返しますが、この値はサブスクリプションの新規作成ウィザードでオーバーライドすることができます。 パラメーター化されたフィルターと **HOST_NAME()** のオーバーライドの詳細については、「[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
  **[サブスクリプションの種類]** と **[優先度]**  
  サブスクリプションがクライアント サブスクリプションまたはサーバー サブスクリプションであるかどうかを表示します (これは、サブスクリプションが作成された後では変更できません)。 サーバー サブスクリプションは、他のサブスクライバーへのデータの再パブリッシュと、競合解決方法の優先度の割り当てができます。  
@@ -113,7 +114,7 @@ ms.locfileid: "68769460"
   
 ## <a name="options-for-merge-subscriptions"></a>マージ サブスクリプションに対するオプション  
  **[パーティション定義 (HOST_NAME)]**  
- パラメーター化されたフィルターを使用するパブリケーションの場合、マージ レプリケーションでは、同期化中に 2 つのシステム関数のうちの 1 つ (フィルターが両方の関数を参照する場合は両方の関数) を評価して、サブスクライバーが受け取る必要のあるデータを決定します。関数は **SUSER_SNAME()** または **HOST_NAME()** です。 既定では、**HOST_NAME()** は、マージ エージェントが実行されているコンピューターの名前を返しますが、この値はサブスクリプションの新規作成ウィザードでオーバーライドすることができます。 パラメーター化されたフィルターと **HOST_NAME()** のオーバーライドの詳細については、「[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+ パラメーター化されたフィルターを使用するパブリケーションの場合、マージ レプリケーションでは、同期化中に 2 つのシステム関数、 **SUSER_SNAME()** または **HOST_NAME()** のうちの 1 つ (フィルターが両方の関数を参照する場合は両方の関数) を評価して、サブスクライバーが受け取る必要のあるデータを決定します。 既定では、**HOST_NAME()** は、マージ エージェントが実行されているコンピューターの名前を返しますが、この値はサブスクリプションの新規作成ウィザードでオーバーライドすることができます。 パラメーター化されたフィルターと **HOST_NAME()** のオーバーライドの詳細については、「[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
  **[サブスクリプションの種類]** と **[優先度]**  
  サブスクリプションがクライアント サブスクリプションまたはサーバー サブスクリプションであるかどうかを表示します (これは、サブスクリプションが作成された後では変更できません)。 サーバー サブスクリプションは、他のサブスクライバーへのデータの再パブリッシュと、競合解決方法の優先度の割り当てができます。  

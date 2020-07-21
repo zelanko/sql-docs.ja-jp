@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28bbed5e92bf6301ad50486c5679e468c626e572
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043947"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062021"
 ---
 # <a name="delete-a-solution"></a>ソリューションを削除する
   ソリューションを完全に削除すると、ソリューションのファイル項目だけでなく、物理的な記憶域のファイルも完全に消去されます。  
@@ -38,9 +37,9 @@ ms.locfileid: "63043947"
 4.  **[ファイル]** メニューの **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
- [新しいソリューションを作成します。](create-a-new-solution.md)   
- [プロジェクトを作成します。](create-a-project.md)   
+ [ソリューション エクスプローラー](solution-explorer.md)   
+ [新しいソリューションを作成する](create-a-new-solution.md)   
+ [プロジェクトを作成する](create-a-project.md)   
  [アイテムやプロジェクトのクリアまたは削除](remove-or-delete-an-item-or-project.md)  
   
   

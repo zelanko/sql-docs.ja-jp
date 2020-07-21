@@ -1,5 +1,5 @@
 ---
-title: 実行アカウント (SSRS ネイティブ モード) |Microsoft Docs
+title: 実行アカウント (SSRS ネイティブモード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.executionaccount.F1
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 17bbc891c54d28f5eedbebc1d51edf11d0ae405b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6cb210be7856566c16f615d90cf879dcae5d6306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042716"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>実行アカウント (SSRS ネイティブ モード)
   このページを使用すると、自動処理に使用するアカウントを構成できます。 このアカウントは、他に使用できる資格情報のソースがないという特殊な状況で使用されます。  
@@ -26,7 +25,7 @@ ms.locfileid: "66095339"
   
 -   外部画像ファイルなど、レポートで参照されるリソースを、レポート サーバーが他のサーバーに接続して取得する場合。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード。  
   
  このアカウントの設定は省略可能ですが、設定しないと、外部画像の使用や一部のデータ ソースへの接続が制限されます。 外部画像ファイルを取得するとき、レポート サーバーでは匿名接続を確立できるかどうかを確認します。 接続がパスワード保護されている場合、レポート サーバーでは自動レポート処理アカウントを使用してリモート サーバーに接続します。 レポート サーバーでレポート用のデータを取得する際には、現在のユーザーの資格情報を借用するか、ユーザーに資格情報を入力するように要求するか、保存されている資格情報を使用するか、またはデータ ソース接続で資格情報の種類として **[なし]** が指定されている場合は自動処理アカウントを使用します。 他のコンピューターに接続する際、レポート サーバーではそのサービス アカウントの資格情報の委任や借用を許可しないので、他の資格情報を使用できない場合は自動処理アカウントを使用する必要があります。  
   
@@ -39,21 +38,21 @@ ms.locfileid: "66095339"
   
  このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、ナビゲーション ウィンドウで **[実行アカウント]** を選択します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[実行アカウントの指定]**  
  アカウントを指定します。  
   
  **アカウント**  
- Windows のドメイン ユーザー アカウントを入力します。 *\<ドメイン>\\<ユーザー アカウント\>* の形式を使用します。  
+ Windows のドメイン ユーザー アカウントを入力します。 * \<domain> \\<ユーザーアカウント \> *の形式を使用します。  
   
- **Password**  
+ **パスワード**  
  パスワードを入力します。  
   
  **[パスワードの確認入力]**  
- 再度、パスワードを入力します。  
+ パスワードを再入力します。  
   
-## <a name="see-also"></a>関連項目  
- [Reporting Services 構成マネージャーの F1 ヘルプ トピック&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+## <a name="see-also"></a>参照  
+ [Reporting Services Configuration Manager F1 ヘルプトピック &#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   

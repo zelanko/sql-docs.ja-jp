@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265143"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>カスタム レポート アイテムのデザイン時コンポーネントの作成
@@ -184,7 +184,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>装飾の使用  
- カスタム レポート アイテム クラスには、`Microsoft.ReportDesigner.Design.Adornment` クラスを実装することもできます。 装飾を使用すると、カスタム レポート アイテムのコントロールで、デザイン画面のメインの四角形の外に領域を作成できます。 これらの領域では、マウス クリックやドラッグ アンド ドロップ操作などのユーザー インターフェイス イベントを扱うことができます。 `Adornment`クラスで定義されている、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner`名前空間はのパススルー実装、<xref:System.Windows.Forms.Design.Behavior.Adorner>クラスは、Windows フォームで見つかりました。 完全なドキュメントについて、`Adorner`クラスを参照してください[動作サービスの概要](https://go.microsoft.com/fwlink/?LinkId=116673)MSDN ライブラリ。 実装するサンプル コードについては、`Microsoft.ReportDesigner.Design.Adornment`クラスを参照してください[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)します。  
+ カスタム レポート アイテム クラスには、`Microsoft.ReportDesigner.Design.Adornment` クラスを実装することもできます。 装飾を使用すると、カスタム レポート アイテムのコントロールで、デザイン画面のメインの四角形の外に領域を作成できます。 これらの領域では、マウス クリックやドラッグ アンド ドロップ操作などのユーザー インターフェイス イベントを扱うことができます。 名前空間`Adornment`で[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]定義されているクラスは、Windows フォームで見つかった<xref:System.Windows.Forms.Design.Behavior.Adorner>クラスのパススルー実装です。 `Microsoft.ReportDesigner` `Adorner`クラスの完全なドキュメントについては、MSDN ライブラリの「[動作サービスの概要](https://go.microsoft.com/fwlink/?LinkId=116673)」を参照してください。 `Microsoft.ReportDesigner.Design.Adornment`クラスを実装するサンプルコードについては、「 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」を参照してください。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] での Windows フォームを使ったプログラミングの詳細については、MSDN ライブラリの次のトピックを参照してください。  
   
@@ -192,12 +192,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のコンポーネント  
   
--   チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成  
+-   チュートリアル : Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成  
   
 ## <a name="see-also"></a>参照  
- [カスタム レポート アイテムのアーキテクチャ](custom-report-item-architecture.md)   
- [カスタム レポート アイテムの実行時コンポーネントの作成](creating-a-custom-report-item-run-time-component.md)   
- [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)   
- [方法:カスタム レポート アイテムを配置する](how-to-deploy-a-custom-report-item.md)  
+ [カスタムレポートアイテムのアーキテクチャ](custom-report-item-architecture.md)   
+ [カスタムレポートアイテムの実行時コンポーネントの作成](creating-a-custom-report-item-run-time-component.md)   
+ [カスタムレポートアイテムクラスライブラリ](custom-report-item-class-libraries.md)   
+ [方法: カスタム レポート アイテムを配置する](how-to-deploy-a-custom-report-item.md)  
   
   

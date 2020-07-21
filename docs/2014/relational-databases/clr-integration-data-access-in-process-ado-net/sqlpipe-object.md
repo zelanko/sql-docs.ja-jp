@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91ac39b10cc5670a7b6a8a5243c19334d15989f3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62920054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955116"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe オブジェクト
   以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、結果や出力パラメーターを呼び出し側のクライアントに送信するストアド プロシージャ (または拡張ストアド プロシージャ) を作成することがごく一般的でした。  
@@ -54,7 +53,7 @@ ms.locfileid: "62920054"
 >  `SendResultsStart` メソッドを呼び出した後に呼び出せるのは、`SendResultsRow` と `SendResultsEnd` のみです。 `SqlPipe` の同じインスタンスで他のどのメソッドを呼び出しても、`InvalidOperationException` が発生することになります。 `SendResultsEnd` は、`SqlPipe` を初期状態に戻し、他のメソッドを呼び出せるようにします。  
   
 ### <a name="example"></a>例  
- `uspGetProductLine` ストアド プロシージャは、指定した製品ライン内のすべての製品の名前、製品番号、色、および表示価格を返します。 このストアド プロシージャでは、完全に一致する*prodLine*します。  
+ `uspGetProductLine` ストアド プロシージャは、指定した製品ライン内のすべての製品の名前、製品番号、色、および表示価格を返します。 このストアドプロシージャは、 *prodLine*と完全に一致するものを受け取ります。  
   
  C#  
   
@@ -140,7 +139,7 @@ EXEC uspGetProductLineVB 'T';
   
 ## <a name="see-also"></a>参照  
  [SqlDataRecord オブジェクト](sqldatarecord-object.md)   
- [CLR ストアド プロシージャ](../../database-engine/dev-guide/clr-stored-procedures.md)   
+ [CLR ストアドプロシージャ](../../database-engine/dev-guide/clr-stored-procedures.md)   
  [ADO.NET に対する SQL Server インプロセス固有の拡張機能](sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

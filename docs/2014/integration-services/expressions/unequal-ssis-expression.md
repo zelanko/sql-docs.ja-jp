@@ -10,15 +10,14 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4752685d9590056cb47e88ee2ec4fea5128cc86b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b70350ab2214b16c3fc9f531dd541b0a7fa2c966
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62896519"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437049"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (等しくない) (SSIS 式)
   互換性のあるデータ型の 2 つの式が等しくないかどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  
@@ -35,24 +34,24 @@ expression1 != expression2
   
 ## <a name="arguments"></a>引数  
  *expression1、expression2*  
- 有効な式を指定します。  
+ 任意の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  比較する式のいずれかが NULL の場合、比較結果は NULL になります。 両方の式が NULL の場合も、結果は NULL になります。  
   
  設定する式の *expression1* と *expression2*は、次のいずれかのルールに従う必要があります。  
   
--   **数値** *expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  
+-   **数値***expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  
   
--   **文字** *expression1* と *expression2* は、どちらも DT_STR または DT_WSTR データ型に評価される必要があります。 2 つの式が評価される文字列データ型は、異なっていてもかまいません。  
+-   **文字***expression1* と *expression2* は、どちらも DT_STR または DT_WSTR データ型に評価される必要があります。 2 つの式が評価される文字列データ型は、異なっていてもかまいません。  
   
     > [!NOTE]  
     >  文字列の比較では、大文字と小文字、アクセント、かな、および文字幅が区別されます。  
   
--   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも次のいずれかのデータ型に評価される必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、DT_FILETIME。  
+-   **日付、時刻、または日付/時刻***expression1* と *expression2* は、どちらも DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME のいずれかのデータ型に評価される必要があります。  
   
     > [!NOTE]  
     >  時刻データ型に評価される式と、日付データ型または日付/時刻データ型に評価される式との間の比較はサポートされていません。 システムによってエラーが生成されます。  
@@ -75,13 +74,13 @@ expression1 != expression2
   
     -   それぞれの式が日付データ型であり、一方のみにタイム ゾーン オフセットがある場合、タイム ゾーン オフセットがない日付データ型は協定世界時 (UTC) と見なされます。  
   
--   **論理** *expression1* と *expression2* は、どちらもブール型に評価される必要があります。  
+-   **論理***expression1* と *expression2* は、どちらもブール型に評価される必要があります。  
   
--   **GUID** *expression1* と *expression2* は、どちらも DT_GUID データ型に評価される必要があります。  
+-   **GUID***expression1* と *expression2* は、どちらも DT_GUID データ型に評価される必要があります。  
   
--   **バイナリ** *expression1* と *expression2* は、どちらも DT_BYTES データ型に評価される必要があります。  
+-   **バイナリ***expression1* と *expression2* は、どちらも DT_BYTES データ型に評価される必要があります。  
   
--   **BLOB** *expression1* と *expression2* のいずれも評価された結果、値は次の内いずれかの同じバイナリ ラージ オブジェクト ブロック (BLOB) データ型になる必要があります。DT_TEXT、DT_NTEXT または DT_IMAGE。  
+-   **BLOB***expression1* と *expression2* は、どちらも同じバイナリ ラージ オブジェクト ブロック (BLOB) データ型 (DT_TEXT、DT_NTEXT、または DT_IMAGE) に評価される必要があります。  
   
  データ型について詳しくは、「 [Integration Services のデータ型](../data-flow/integration-services-data-types.md)」をご覧ください。  
   

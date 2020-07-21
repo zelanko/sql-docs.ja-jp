@@ -1,5 +1,5 @@
 ---
-title: データ型 (OLE DB) |マイクロソフトのドキュメント
+title: データ型 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,21 +13,19 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 620b285a0c21865ff5155377cb446b3267d328da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 62d7a3b828effb7b7daa3f8a92e18f8408b5d46d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128498"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998219"
 ---
 # <a name="data-types-ole-db"></a>データ型 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  実行するために[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを使用して、結果を処理し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]知る必要があります Native Client OLE DB プロバイダーでは、方法、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのマップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を OLE DB データ型をバインドするときパラメーターまたは列を使用する場合と、行セットで、 **ITableDefinition**でテーブルを作成するインターフェイス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]Native client OLE DB プロバイダーを使用してステートメントを実行し、結果を処理するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行セット内のパラメーターまたは列をバインドするとき、および**itabledefinition**インターフェイスを使用してでテーブルを作成するときに、native client OLE DB プロバイダーがデータ型を OLE DB データ型にマップする方法を把握しておく必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -37,7 +35,7 @@ ms.locfileid: "68128498"
   
 -   [SSVARIANT 構造体](../../relational-databases/native-client-ole-db-data-types/ssvariant-structure.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

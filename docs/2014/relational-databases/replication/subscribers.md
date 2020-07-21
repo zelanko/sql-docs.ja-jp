@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff5492a10f42aa83b2756ba55ec861eeb9bde6bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047630"
 ---
 # <a name="subscribers"></a>[サブスクライバー]
-  選択したパブリケーションへのサブスクリプションを受け取る [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバー、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーを指定します。  
+  選択した [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションへのサブスクリプションを受け取るサブスクライバーまたは以外のサブスクライバーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-## <a name="options"></a>および  
- **[サブスクライバー]**  
+## <a name="options"></a>オプション  
+ **[パブリッシャーのプロパティ]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [パブリケーション][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで選択したパブリケーションへのサブスクライバーとして、 **のデータ ソースまたは** 以外のデータ ソースを有効にするには、グリッド内の対応するチェック ボックスをオンにします。 サブスクライバーが一覧にない場合、 **[サブスクライバーの追加]** または **[SQL Server サブスクライバーの追加]** をクリックします。  
   
  **サブスクリプション データベース**  

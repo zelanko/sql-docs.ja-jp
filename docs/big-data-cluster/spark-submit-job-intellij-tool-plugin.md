@@ -1,28 +1,29 @@
 ---
-title: SQL Server ビッグ データ クラスター上の Azure Toolkit for IntelliJ で Spark ジョブを実行する
-titleSuffix: SQL Server big data clusters
+title: 'Spark ジョブを実行する: Azure Toolkit for IntelliJ'
+titleSuffix: SQL Server Big Data Clusters
 description: SQL Server ビッグ データ クラスター上の Azure Toolkit for IntelliJ で Spark ジョブを送信します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 02/28/2019
 ms.topic: conceptual
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f17544ed4dd37ff43be97d114abb58f4fbbbe319
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470697"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634948"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>SQL Server ビッグ データ クラスター上の IntelliJ で Spark ジョブを送信する
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上の IntelliJ で Spark ジョブを送信する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-SQL Server ビッグ データ クラスターの主なシナリオの 1 つに、Spark ジョブを送信する機能があります。 Spark ジョブ送信機能を使用すると、SQL Server ビッグ データ クラスターへの参照を含むローカル Jar ファイルまたは Py ファイルを送信できます。 また、HDFS ファイル システムに既に配置されている Jar ファイルまたは Py ファイルを実行することもできます。 
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の主なシナリオの 1 つは、Spark ジョブを送信する機能です。 Spark ジョブの送信機能では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]への参照を含むローカル Jar ファイルまたは Py ファイルを送信できます。 また、HDFS ファイル システムに既に配置されている Jar ファイルまたは Py ファイルを実行することもできます。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - SQL Server ビッグ データ クラスター。
 - Oracle Java Development Kit。 [Oracle Web サイト](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)からインストールできます。
@@ -32,9 +33,9 @@ SQL Server ビッグ データ クラスターの主なシナリオの 1 つに�
 ## <a name="link-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのリンク
 1. IntelliJ IDEA ツールを開きます。
 
-2. 自己署名証明書を使用している場合は、 **[Tools]\(ツール\)** メニューの SSL 証明書の検証を無効にし、 **[Azure]** 、 **[Validate Spark Cluster SSL Certificate]\(Spark クラスター SSL 証明書の検証\)** 、 **[Disable]\(無効にする\)** の順に選択して SSL 証明書の検証を無効にします。
+2. 自己署名証明書を使用している場合は、 **[Tools]\(ツール\)** メニューから、 **[Azure]** 、 **[Validate Spark Cluster SSL Certificate]\(Spark クラスター SSL 証明書の検証\)** 、 **[Disable]\(無効にする\)** の順に選択して TLS/SSL 証明書の検証を無効にします。
 
-    ![SQL Server ビッグ データ クラスターのリンク - SSL を無効にする](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![SQL Server ビッグ データ クラスターのリンク - TLS/SSL を無効にする](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. **[View]\(表示\)** メニューから Azure エクスプローラーを開き、 **[Tool Windows]\(ツール ウィンドウ\)** 、 **[Azure Explorer]\(Azure エクスプローラー\)** の順に選択します。
 4. **[SQL Server big data cluster]\(SQL Server ビッグ データ クラスター\)** を右クリックし、 **[Link SQL Server big data cluster]\(SQL Server ビッグ データ クラスターのリンク\)** を選択します。 **[Server]\(サーバー\)** 、 **[User Name]\(ユーザー名\)** 、および **[Password]\(パスワード\)** を入力し、 **[OK]** をクリックします。
@@ -51,9 +52,9 @@ SQL Server ビッグ データ クラスターの主なシナリオの 1 つに�
 
 1. IntelliJ IDEA を開始し、プロジェクトを作成します。 **[New Project]\(新しいプロジェクト\)** ダイアログ ボックスで、次の手順を実行します。 
 
-   A. **[Azure Spark/HDInsight]**  >  **[Project with Samples (Scala)]\(サンプル付きのプロジェクト (Scala)\)** を選択します。
+   a. **[Azure Spark/HDInsight]**  >  **[Project with Samples (Scala)]\(サンプル付きのプロジェクト (Scala)\)** を選択します。
 
-   B. **[Build tool]\(ビルド ツール\)** 一覧で、必要に応じて次のいずれかを選択します。
+   b. **[Build tool]\(ビルド ツール\)** 一覧で、必要に応じて次のいずれかを選択します。
 
       * **Maven** (Scala プロジェクト作成ウィザードのサポートの場合)
       * **SBT** (依存関係を管理し、Scala プロジェクトのために構築する場合)
@@ -74,9 +75,9 @@ SQL Server ビッグ データ クラスターの主なシナリオの 1 つに�
 
     ![Spark SDK の選択](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. プロジェクトの名前と場所を入力します。
+   a. プロジェクトの名前と場所を入力します。
 
-   B. **[Project SDK]\(プロジェクト SDK\)** ドロップダウン リストで、Spark 2.x クラスターの場合は **[Java 1.8]** を選択し、Spark 1.x クラスターの場合は **[Java 1.7]** を選択します。
+   b. **[Project SDK]\(プロジェクト SDK\)** ドロップダウン リストで、Spark 2.x クラスターの場合は **[Java 1.8]** を選択し、Spark 1.x クラスターの場合は **[Java 1.7]** を選択します。
 
    c. **[Spark version]\(Spark のバージョン\)** ドロップダウン リストで、Scala プロジェクトの作成ウィザードで、Spark SDK と Scala SDK の適切なバージョンが統合されます。 Spark クラスターのバージョンが 2.0 より前の場合は、 **[Spark 1.x]** を選択します。 それ以外の場合は、 **[Spark2.x]** を選択します。 この例では、 **[Spark 2.0.2 (Scala 2.11.8)]** を使用します。
 
@@ -84,9 +85,9 @@ SQL Server ビッグ データ クラスターの主なシナリオの 1 つに�
 
 7. Spark プロジェクトによって自動的に成果物が作成されます。 成果物を表示するには、次の手順を実行します。
 
-   A. **[File]\(ファイル\)** メニューの **[Project Structure]\(プロジェクト構造\)** をクリックします。
+   a. **[File]\(ファイル\)** メニューの **[Project Structure]\(プロジェクト構造\)** をクリックします。
 
-   B. **[Project Structure]\(プロジェクト構造\)** ダイアログ ボックスで、 **[Artifacts]\(成果物\)** を選択して、作成された既定の成果物を表示します。 プラス記号 ( **+** ) を選択して、独自の成果物を作成することもできます。
+   b. **[Project Structure]\(プロジェクト構造\)** ダイアログ ボックスで、 **[Artifacts]\(成果物\)** を選択して、作成された既定の成果物を表示します。 プラス記号 ( **+** ) を選択して、独自の成果物を作成することもできます。
 
       ![ダイアログ ボックスの成果物情報](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -139,7 +140,7 @@ WINUTILS.EXE の前提条件を満たしていることを確認します。
 
 4. 次の値を指定し、 **[OK]** を選択します。
 
-    |プロパティ |[値] |
+    |プロパティ |値 |
     |----|----|
     |ジョブのメイン クラス|既定値は、選択したファイルのメイン クラスです。 クラスを変更するには、省略記号 ( **...** ) をクリックし、別のクラスを選択します。|
     |環境変数|HADOOP_HOME の値が正しいことを確認します。|
@@ -173,7 +174,7 @@ Spark Livy Interactive Session Console(Scala) は、IntelliJ 2018.2 および 20
 
 4. 次の値を指定し、 **[OK]** を選択します。
 
-    |プロパティ |[値] |
+    |プロパティ |値 |
     |----|----|
     |Spark クラスター (Linux のみ)|アプリケーションを実行する SQL Server ビッグ データ クラスターを選択します。|
     |メイン クラス名|既定値は、選択したファイルのメイン クラスです。 クラスを変更するには、省略記号 ( **...** ) をクリックし、別のクラスを選択します。|
@@ -194,5 +195,5 @@ Local Console または Livy Interactive Session Console(Scala) に何らかの�
 
    ![選択内容を Spark コンソールに送信する](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
-## <a name="next-steps"></a>次の手順
-SQL Server ビッグ データ クラスターと関連するシナリオの詳細については、[SQL Server 2019 ビッグ データ クラスターの概要](big-data-cluster-overview.md)のページを参照してください。
+## <a name="next-steps"></a>次のステップ
+SQL Server ビッグ データ クラスターと関連するシナリオの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の概要](big-data-cluster-overview.md)に関するページを参照してください。

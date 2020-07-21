@@ -1,5 +1,5 @@
 ---
-title: AddNew メソッドの例 (vc++) |Microsoft Docs
+title: AddNew メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - AddNew method [ADO], VC++ example
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5962d04ddae54f2455a99eb29587d3dc98d69420
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d47003a392ade09b1ba4d83c5dccfb1538364f1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921257"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760608"
 ---
 # <a name="addnew-method-example-vc"></a>AddNew メソッドの例 (VC++)
-この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを指定した名前の新しいレコードを作成します。  
+この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを使用して、指定した名前の新しいレコードを作成します。  
   
 ```  
 // BeginAddNewCpp.cpp  
@@ -213,6 +213,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

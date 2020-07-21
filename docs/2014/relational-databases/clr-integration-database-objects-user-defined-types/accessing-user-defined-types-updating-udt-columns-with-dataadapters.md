@@ -1,5 +1,5 @@
 ---
-title: Dataadapter による UDT 列の更新 |Microsoft Docs
+title: Dataadapter | を使用した UDT 列の更新Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,19 +22,18 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5f0642644632c40f7f95e731c61e0a968cd83b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970752"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>データ アダプターによる UDT 列の更新
   UDT (ユーザー定義型) は、データの取得や変更を行う `System.Data.DataSet` と `System.Data.SqlClient.SqlDataAdapter` を使用することでサポートされます。  
   
-## <a name="populating-a-dataset"></a>Dataset の読み込み  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例であること、**ポイント**次の構造と一部のサンプル データで定義されたテーブル。 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを作成、**ポイント**テーブルが表示され、いくつかの行を挿入します。  
+## <a name="populating-a-dataset"></a>データセットの設定  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントを使用して UDT 列の値を選択すれば、データ アダプターを使用してデータセットにデータを設定できます。 次の例では、次の構造といくつかのサンプルデータを使用して、 **Points**テーブルが定義されていることを前提としています。 次のステートメントでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **Points**テーブルを作成し、いくつかの行を挿入します。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +45,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- ADO.NET コードを次の有効な接続文字列を取得、新たに作成します`SqlDataAdapter`、し、設定、`System.Data.DataTable`からのデータの行を含む、**ポイント**テーブル。  
+ 次の ADO.NET コード片では、有効な接続文字列を取得し、新しいを作成 `SqlDataAdapter` し、 `System.Data.DataTable` **Points**テーブルのデータ行をに設定します。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,9 +84,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  次の ADO.NET の例には 2 つのメソッドが含まれています。  
   
--   `UserProvidedCommands`、を指定する方法を示しています`InsertCommand`、 `UpdateCommand`、および`DeleteCommand`オブジェクトを更新するため、`Point`で UDT、**ポイント**テーブル (が含まれていない、`timestamp`列)。  
+-   `UserProvidedCommands`、、、およびの各オブジェクトを指定し `InsertCommand` `UpdateCommand` て、 `DeleteCommand` `Point` **Points**テーブル (列を含まない) の UDT を更新する方法を示し `timestamp` ます。  
   
--   `CommandBuilder`を使用する方法を示しています、`SqlCommandBuilder`で、 **Points_ts**を含むテーブル、`timestamp`列。  
+-   `CommandBuilder``SqlCommandBuilder`。この列を含む**Points_ts**テーブルでを使用する方法を示し `timestamp` ます。  
   
 ```vb  
 Imports System  

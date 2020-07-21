@@ -1,5 +1,5 @@
 ---
-title: supportsPositionedUpdate メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsPositionedUpdate メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f963fb70-377d-43f5-8d56-326591f6d3e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 73c85e41df64757a77bc26ff0b1a9534fdbb5ffa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: df4b44c54284d4b74a50e0059a4a271cc8d774dc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67969012"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920055"
 ---
 # <a name="supportspositionedupdate-method-sqlserverdatabasemetadata"></a>supportsPositionedUpdate メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public boolean supportsPositionedUpdate()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この supportsPositionedUpdate メソッドは、supportsPositionedUpdate メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsPositionedUpdate メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsPositionedUpdate メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

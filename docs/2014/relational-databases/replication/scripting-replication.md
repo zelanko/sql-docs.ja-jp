@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52c0129c18f3248813c663026797b86ea23d5b13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056901"
 ---
 # <a name="scripting-replication"></a>レプリケーションのスクリプト作成
-  トポロジ内のすべてのレプリケーション コンポーンネントは、ディザスター リカバリー計画の一部としてスクリプト化され、スクリプトはタスクの繰り返しの自動化にも使用することができます。 スクリプトには、パブリケーションやサブスクリプションなどスクリプト化されたレプリケーション コンポーネントを実装するために必要な Transact-SQL システム ストアド プロシージャが格納されます。 スクリプトはウィザード (パブリケーションの新規作成ウィザードなど) で作成することができ、コンポーネントの作成後、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して作成することもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または **sqlcmd**を使用すると、スクリプトの表示、変更、および実行を行うことができます。 スクリプトをバックアップ ファイルと共に保存して、レプリケーション トポロジの再構成が必要な場合に使用できます。  
+  トポロジ内のすべてのレプリケーション コンポーンネントは、ディザスター リカバリー計画の一部としてスクリプト化され、スクリプトはタスクの繰り返しの自動化にも使用することができます。 スクリプトには、パブリケーションやサブスクリプションなどスクリプト化されたレプリケーション コンポーネントを実装するために必要な Transact-SQL システム ストアド プロシージャが格納されます。 スクリプトはウィザード (パブリケーションの新規作成ウィザードなど) で作成することができ、コンポーネントの作成後、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して作成することもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または **sqlcmd**を使用すると、スクリプトの表示、変更、および実行を行うことができます。 スクリプトをバックアップ ファイルと共に保存して、レプリケーション トポロジの再構成が必要な場合に使用できます。  
   
  プロパティが変更された場合は、コンポーネントのスクリプトを再作成する必要があります。 トランザクション レプリケーションでカスタム ストアド プロシージャを使用している場合は、各プロシージャのコピーをスクリプトと共に保存しておく必要があります。プロシージャが変更された場合は、プロシージャのコピーも更新する必要があります (スキーマやアプリケーション要件が変更されると、通常、プロシージャが更新されます)。 カスタム プロシージャの詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
@@ -54,9 +53,9 @@ ms.locfileid: "63250515"
   
 -   [パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)  
   
--   [パブリケーションの作成](publish/create-a-publication.md)  
+-   [パブリケーションを作成する](publish/create-a-publication.md)  
   
--   [Create a Push Subscription](create-a-push-subscription.md)  
+-   [プッシュ サブスクリプションを作成する](create-a-push-subscription.md)  
   
 -   [Create a Pull Subscription](create-a-pull-subscription.md)  
   
@@ -82,7 +81,7 @@ ms.locfileid: "63250515"
   
 3.  パブリケーションまたはサブスクリプションを右クリックし、 **[スクリプトの生成]** をクリックします。  
   
-4.  **[SQL スクリプトの生成 - \<ReplicationObject>]** ダイアログ ボックスでオプションを指定します。  
+4.  [ **SQL スクリプトの生成- \<ReplicationObject> ** ] ダイアログボックスでオプションを指定します。  
   
 5.  **[スクリプトをファイルに保存]** をクリックします。  
   

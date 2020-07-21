@@ -7,21 +7,21 @@ ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c753e12b17047f397aeb619c758e2160e5d38e09
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5f2e8502956b808556c0ac6ddb83f95a61cbe5c9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892526"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900110"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法を説明します。
 
 > [!NOTE]
-> Linux 上の MSDTC は、累積的な更新プログラム 16 以降が適用された SQL Server 2019 プレビュー SQL Server 2017 でサポートされています。
+> Linux 上の MSDTC は、累積的な更新プログラム 16 以降が適用された SQL Server 2017 でサポートされています。
 
 ## <a name="overview"></a>概要
 
@@ -29,7 +29,7 @@ ms.locfileid: "68892526"
 
 MSDTC では、mssql-conf ユーティリティ用に次の 2 つの構成パラメーターを使用します。
 
-| mssql-conf の設定 | [説明] |
+| mssql-conf setting | 説明 |
 |---|---|
 | **network.rpcport** | RPC エンドポイント マッパー プロセスのバインド先の TCP ポート。 |
 | **distributedtransaction.servertcpport** | MSDTC サーバーがリッスンするポート。 設定しない場合、MSDTC サービスはサービス再起動時にランダムな一時ポートを使用するため、MSDTC サービスが通信を継続できるようにファイアウォールの例外を再構成する必要があります。 |
@@ -184,7 +184,7 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 SQL Server on Linux の MSDTC では、既定で RPC 通信で認証が使用されません。 ただし、ホスト マシインが Active Directory (AD) ドメインに参加しているときは、次の **mssql-conf** 設定を使用して認証された RPC 通信を使用するように MSDTC を構成できます。
 
-| 設定 | [説明] |
+| 設定 | 説明 |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します。 既定値は 0 です。 |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します。 既定値は 0 です。 |
@@ -205,6 +205,6 @@ Windows オペレーティング システム上のクライアントが SQL Ser
 | [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
 | [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server on Linux について詳しくは、「[SQL Server on Linux](sql-server-linux-overview.md)」をご覧ください。

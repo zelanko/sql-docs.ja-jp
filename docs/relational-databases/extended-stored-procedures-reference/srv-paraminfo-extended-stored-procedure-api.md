@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85efd235861522754cbcdc209d6cf28558907d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 9a291487402d4299176b583f4bc6e25e297f314a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756710"
 ---
-# <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo (拡張ストアド プロシージャ API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="srv_paraminfo-extended-stored-procedure-api"></a>srv_paraminfo (拡張ストアド プロシージャ API)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -76,7 +76,7 @@ pfNull
  パラメーターの最大長へのポインターです。  
   
  *pcbActualLen*  
- パラメーターの実際の長さへのポインターです。 **pfNull* が FALSE に設定されている場合、値 0 (\**pcbActualLen* == 0) はデータの長さがゼロであることを示します。  
+ パラメーターの実際の長さへのポインターです。 *pfNull* が FALSE に設定されている場合、値 0 (\**pcbActualLen* == 0) はデータの長さがゼロであることを示します。  
   
  *pbData*  
  パラメーター データのバッファーへのポインターです。 *pbData* が NULL でない場合、拡張ストアド プロシージャ API により \**pbData* に \**pcbActualLen* バイトのデータが書き込まれます。 *pbData* が NULL の場合、\**pbData* にデータは書き込まれませんが、関数により \**pbType*、\**pcbMaxLen*、\**pcbActualLen*、**pfNull* が返されます。 このバッファーのメモリは、アプリケーションで管理する必要があります。  
@@ -88,9 +88,9 @@ pfNull
  パラメーター情報が正常に取得された場合は SUCCEED を返し、それ以外の場合は FAIL を返します。 FAIL が返されるのは、現在のリモート ストアド プロシージャがない場合、および *n* 番目のリモート ストアド プロシージャ パラメーターがない場合です。  
   
 ## <a name="remarks"></a>Remarks  
- **セキュリティに関する注意** 拡張ストアド プロシージャのソース コードを十分に確認し、コンパイルした DLL をテストしたうえで実稼働サーバーにインストールしてください。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)をご覧ください。  
+ **セキュリティに関する注意** 拡張ストアド プロシージャのソース コードを十分に確認し、コンパイルした DLL をテストしたうえで実稼働サーバーにインストールしてください。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張ストアド プロシージャのプログラマーズ リファレンス](../../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  
   
   

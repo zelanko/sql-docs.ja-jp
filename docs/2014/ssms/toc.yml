@@ -68,13 +68,13 @@
           href: object/delete-objects.md
         - name: '[オブジェクトの依存関係]'
           href: object/object-dependencies.md
-        - name: '[オブジェクトの選択]\(オブジェクト エクスプローラー)'
+        - name: '[オブジェクトの選択] (オブジェクト エクスプローラー)'
           href: object/select-objects-object-explorer.md
         - name: '[オブジェクトの追加]'
           href: object/add-objects.md
         - name: '[オブジェクトの種類を選択] (オブジェクト エクスプローラー)'
           href: object/select-object-types-object-explorer.md
-        - name: '[フィルターの設定] \(オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)'
+        - name: '[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)'
           href: object/filter-settings-object-explorer-and-utility-explorer.md
         - name: '[名前が見つかりません] ダイアログ ボックス'
           href: object/name-not-found-dialog-box.md
@@ -214,9 +214,9 @@
     - name: '[サーバーへの接続] (データベース エンジン)'
       href: f1-help/connect-to-server-database-engine.md
       items:
-        - name: '[サーバーへの接続] \([ログイン] ページ) (データベース エンジン)'
+        - name: '[サーバーへの接続] ([ログイン] ページ) (データベース エンジン)'
           href: f1-help/connect-to-server-login-page-database-engine.md
-        - name: '[サーバーへの接続] \([接続プロパティ] ページ) (データベース エンジン)'
+        - name: '[サーバーへの接続] ([接続プロパティ] ページ) (データベース エンジン)'
           href: f1-help/connect-to-server-connection-properties-page-database-engine.md
     - name: '[サーバーへの接続] (Analysis Services)'
       href: ../database-engine/connect-to-server-analysis-services.md
@@ -249,7 +249,7 @@
       href: ../database-engine/connection-properties-dialog-box.md
     - name: '[パスワードの有効期限が切れました]'
       href: ../database-engine/password-expired.md
-    - name: Windows Azure ストレージへの接続
+    - name: Azure Storage への接続
       href: ../database-engine/connect-to-windows-azure-storage.md
 - name: Visual Database Tools +
   href: visual-db-tools/visual-database-tools.md
@@ -279,9 +279,9 @@
           href: tutorials/lesson-1-7-set-the-startup-options.md
         - name: SQL Server Management Studio の既定の構成の復元
           href: tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md
-        - name: 'まとめ:基本操作'
+        - name: '概要: 基本操作'
           href: tutorials/lesson-1-9-summary-basic-navigation.md
-    - name: 'レッスン 2:Transact-SQL の記述'
+    - name: 'レッスン 2: Transact-SQL の記述'
       href: tutorials/lesson-2-writing-transact-sql.md
       items:
         - name: クエリ エディターとの接続
@@ -305,5 +305,5 @@
           href: tutorials/lesson-3-2-create-custom-templates.md
         - name: プロジェクトまたはソリューションとしてスクリプトを保存する
           href: tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md
-        - name: 'まとめ:ソリューションおよびスクリプト プロジェクト'
+        - name: '概要: ソリューションおよびスクリプト プロジェクト'
           href: tutorials/lesson-3-4-summary-solutions-and-script-projects.md

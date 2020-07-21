@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67724c0816ceb77e61bc6e4a0cf8650a9228f39d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049377"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>マージ同期中のビジネス ロジックの実行
   ビジネス ロジック ハンドラー フレームワークを使用すると、マネージド コードのアセンブリを記述して、マージ同期処理中に呼び出すことができます。 このアセンブリには、データの変更、競合、およびエラーなど、同期中に発生するさまざまな状況に対処するためのビジネス ロジックを記述できます。 ビジネス ロジック ハンドラー フレームワークには単純なプログラミング モデルが用意されており、マージ処理によってアセンブリに提供されるデータは ADO.NET データセットの形式になっています。このため、専用インターフェイスについての知識ではなく ADO.NET についての知識を活用できます。 ビジネス ロジック ハンドラーのプログラミングの詳細については、以下のトピックを参照してください。  
@@ -59,7 +58,7 @@ ms.locfileid: "62999563"
      これは、特定のデータの値または操作をオーバーライドする必要があるアプリケーションに役立ちます。 たとえば、アプリケーションでは、行の削除を、その行の **status** 列を "削除" の値に設定するという特殊な更新方法に変更して、その削除を実行するクライアントの ID を追跡することができます。 これは、監査やワークフローにも役立ちます。  
   
 ### <a name="custom-conflict-resolution"></a>カスタム競合解決  
- マージ レプリケーションには、競合の検出機能と解決機能が用意されており、既定の解決方法を受け入れるか、競合に対するカスタム解決方法を選択することができます。 詳しくは、「 [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)を使用して、マージ アーティクル競合回避モジュールを指定する方法について説明します。 ビジネス ロジック ハンドラーは、競合しているデータの変更処理中に呼び出すことができ、次の 2 つの操作のいずれかを実行できます。  
+ マージ レプリケーションには、競合の検出機能と解決機能が用意されており、既定の解決方法を受け入れるか、競合に対するカスタム解決方法を選択することができます。 詳細については、「[高度なマージレプリケーションの競合の検出と解決](advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。 ビジネス ロジック ハンドラーは、競合しているデータの変更処理中に呼び出すことができ、次の 2 つの操作のいずれかを実行できます。  
   
 -   既定の解決の受け入れ  
   
@@ -90,9 +89,9 @@ ms.locfileid: "62999563"
 -   インターネット インフォメーション サービス (IIS) サーバー (Web 同期を使用する場合)。 Web 同期を使用して同期されたプル サブスクリプションを使用します。ビジネス ロジック ハンドラーが IIS サーバーで実行されます。  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーション](merge-replication.md)   
+ [マージレプリケーション](merge-replication.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)   
  [データの同期](../synchronize-data.md)   
- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
+ [マージ レプリケーションの Web 同期](../web-synchronization-for-merge-replication.md)  
   
   

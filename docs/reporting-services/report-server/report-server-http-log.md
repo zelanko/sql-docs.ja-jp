@@ -11,10 +11,10 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140462"
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
@@ -27,7 +27,7 @@ ms.locfileid: "67140462"
   
 |||  
 |-|-|  
-|[ファイル名]|既定のファイル名は ReportServerService_HTTP_\<timestamp>.log です。 ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
+|ファイル名|既定のファイル名は ReportServerService_HTTP_\<timestamp>.log です。 ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
 |ファイルの場所|このファイルは、\Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles に格納されています。|  
 |ファイル形式|このファイルは EN-US 形式です。 ASCII テキスト ファイルです。|  
 |ファイルの作成および保存|HTTP ログは、構成ファイルでログ機能を有効にし、サービスを再開した後、レポート サーバーによって HTTP 要求が処理されて初めて作成されます。 設定を構成したにもかかわらずログ ファイルが見つからない場合は、レポートを開くか、レポート サーバー アプリケーション (Web ポータルなど) を起動し、HTTP 要求を生成してログ ファイルを作成します。<br /><br /> ログ ファイルの新しいインスタンスは、各サービスが再開され、その後、HTTP 要求がレポート サーバーに送信されると作成されます。<br /><br /> 既定では、トレース ログのサイズの上限は 32 MB であり、14 日後に削除されます。|  
@@ -54,16 +54,16 @@ ms.locfileid: "67140462"
 ## <a name="log-file-fields"></a>ログ ファイル フィールド  
  次の表は、ログで利用できるフィールドの一覧です。 ログに含めるフィールドは、 **HTTPTraceSwitches** 構成設定で指定できます。 **既定** 列は、 **HTTPTraceSwitches**を指定しなかった場合に、対応するフィールドがログ ファイルに自動的に追加されるかどうかを示しています。  
   
-|フィールド|[説明]|既定|  
+|フィールド|説明|Default|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|この値は省略可能です。 既定値は ReportServerServiceHTTP_ です。 別のファイル名前付け規則 (ログ ファイルを一元管理する場合はサーバー名など) を使用する場合は、異なる値を指定できます。|はい|  
 |HTTPTraceSwitches|この値は省略可能です。 指定した場合、ログ ファイルに使用するフィールドをコンマ区切り形式で構成できます。|いいえ|  
-|date|アクティビティが発生した日付。|いいえ|  
+|Date|アクティビティが発生した日付。|いいえ|  
 |Time|アクティビティが発生した時刻。|いいえ|  
 |ClientIp|レポート サーバーにアクセスしているクライアントの IP アドレス。|はい|  
 |UserName|レポート サーバーにアクセスしたユーザー名。|いいえ|  
 |ServerPort|接続に使用されたポート番号。|いいえ|  
-|ホスト|ホスト ヘッダーの内容。|いいえ|  
+|Host|ホスト ヘッダーの内容。|いいえ|  
 |方法|クライアントから呼び出されたアクションまたは SOAP メソッド。|はい|  
 |UriStem|アクセスされたリソース。|はい|  
 |UriQuery|リソースへのアクセスに使用されたクエリ。|いいえ|  

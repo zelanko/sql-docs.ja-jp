@@ -1,5 +1,5 @@
 ---
-title: position メソッド (NClob, long) |Microsoft Docs
+title: position メソッド (java.sql.NClob, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea868190b635a9471bfad424d6fc74572970799b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed9313f31d30308b448381276608e119f279ea2a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976363"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914153"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position (java.sql.NClob, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定された**NClob** object *searchstr*がこの**NClob**オブジェクトに含まれる文字位置を取得します。  
+  指定された **NClob** オブジェクトの *searchstr* が、この **NClob** オブジェクト内で出現する文字位置を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,11 +45,11 @@ long position(java.sql.NClob searchstr,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この位置メソッドは、NClob インターフェイスの position メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この position メソッドは、java.sql.NClob インターフェイスの position メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
- [position メソッド&#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
+ [position メソッド &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
  [SQLServerNClob のメソッド](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob のメンバー](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob クラス](../../../connect/jdbc/reference/sqlservernclob-class.md)  

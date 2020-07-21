@@ -1,5 +1,6 @@
 ---
 title: 列挙ファセット | Microsoft Docs
+description: SQL Server で列挙ファセットを使用して、XML スキーマを検証する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9fd368cdf5289d1b21818d6c7d6e51d395e340d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8939b3c8654452f50b280ad66fe221f94220754
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006836"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633138"
 ---
 # <a name="enumeration-facets"></a>列挙ファセット
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファセットに違反するパターン ファセットや列挙を含む型を使用する XML スキーマを拒否します。  
   
 ## <a name="example"></a>例  

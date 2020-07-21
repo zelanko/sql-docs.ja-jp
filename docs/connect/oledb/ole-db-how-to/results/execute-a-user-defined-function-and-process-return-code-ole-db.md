@@ -1,6 +1,6 @@
 ---
 title: ユーザー定義関数の実行とリターン コードの処理 (OLE DB) | Microsoft Docs
-description: OLE DB Driver for SQL Server を使用したユーザー定義関数の実行とリターンコードの処理
+description: OLE DB Driver for SQL Server を使用してユーザー定義関数を実行し、リターン コードを処理する
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 8964bb97acef2a26f65740522f5f5a05aa7a9810
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994745"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>ユーザー定義関数の実行とリターン コードの処理 (OLE DB)

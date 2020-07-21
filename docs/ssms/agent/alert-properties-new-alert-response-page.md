@@ -1,10 +1,9 @@
 ---
-title: '[警告のプロパティ] - [新しい警告] ([応答] ページ) | Microsoft Docs'
-ms.custom: ''
+title: '[警告のプロパティ] - [新しい警告] ([応答] ページ)'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1af60c77e97c22dca5a6e2c5e80008261e6fcb8f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c8faf533bd04fb3052fa3678fd1da05cb36129de
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266413"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254506"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>[警告のプロパティ] - [新しい警告] ([応答] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "68266413"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このページを使用すると、実行するジョブや、オペレーターの一覧を取得するジョブを指定できます。この一覧のオペレーターは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に関する通知を受け取ります。  
+このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に応答して、実行する必要があるジョブを指定し、通知されるオペレーターの一覧を取得できます。  
 
 ## <a name="options"></a>オプション  
 **[ジョブの実行]**  
@@ -44,13 +45,13 @@ ms.locfileid: "68266413"
 **[オペレーター一覧]**  
 警告の発生時に通知するオペレーターの一覧を表示します。 通知方法を指定するには、オペレーター名の後に表示されている **[電子メール]** 、 **[ポケットベル]** 、または **[Net Send]** チェック ボックスをオンにします。 **[オペレーターに通知する]** が選択されていない場合、このオプションは使用できません。  
   
-**[電子メール]**  
+**電子メール**  
 電子メールを使用してオペレーターに通知します。  
   
-**[ポケットベル]**  
+**ポケットベル**  
 ポケットベルの電子メール アドレスを使用してオペレーターに通知します。  
   
-**[Net Send]**  
+**Net send**  
 **net send** を使用してオペレーターに通知します。  
   
 **[新しいオペレーター]**  

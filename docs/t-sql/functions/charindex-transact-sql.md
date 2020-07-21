@@ -1,6 +1,6 @@
 ---
 title: CHARINDEX (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CHARINDEX 関数の Transact-SQL リファレンス。
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24c005d2b9b95827dce28bc78303a75828270143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bd8a0c883e49ef9846dc74acf0b3080ce1edcd7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105041"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002218"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、2 番目の文字式内の 1 つの文字式を検索して、見つかった場合には最初の式の開始位置を返します。
   
@@ -54,7 +54,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 ## <a name="return-types"></a>戻り値の型
 *expressionToSearch* が **varchar(max)** 、**nvarchar(max)** 、または **varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 *expressionToFind* または *expressionToSearch* のいずれかの式が Unicode データ型 (**nchar** または **nvarchar**) の場合で、他の式がそうでない場合、CHARINDEX 関数はその他の式を Unicode データ型に変換します。 CHARINDEX は、**image**、**ntext**、または **text** データ型では使用できません。
   
 *expressionToFind* 式または *expressionToSearch* のいずれかに NULL 値がある場合、CHARINDEX は NULL を返します。
@@ -70,7 +70,7 @@ CHARINDEX は、入力の照合順序に基づいて比較を行います。 特
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
 SC の照合順序を使用する場合、*start_location* と戻り値では、サロゲート ペアが 2 文字ではなく 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-starting-position-of-an-expression"></a>A. 式の開始位置を返す  
 この例では、検索された文字列値の変数 `@document` で `bicycle` を検索します。
@@ -189,7 +189,7 @@ GO
 11
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-searching-from-the-start-of-a-string-expression"></a>F. 文字列式の先頭から検索する  
 この例では、`This is a string` の位置 1 (最初の文字) から開始して、文字列 `This is a string` に含まれる文字列 `is` の最初の位置を返します。
@@ -233,7 +233,7 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 0
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
  [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  

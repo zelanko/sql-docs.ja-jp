@@ -1,24 +1,24 @@
 ---
-title: PATH モードで入れ子になった JSON 出力を書式設定する (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/17/2017
+title: PATH モードで入れ子になった JSON 出力を書式設定する
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 032761b0-6358-42e4-b05c-dbfd663ac881
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c1f70b6a1c80273b64f7db33c57304630bd864d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fee7d60d05e1238dc48e872338ed1a19cdb81667
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722283"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>PATH モードで入れ子になった JSON 出力を書式設定する (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **FOR JSON** 句の出力を完全に制御するには、**PATH** オプションを指定します。  
   
@@ -89,10 +89,10 @@ SELECT TOP 5
  **クエリ**  
   
 ```sql  
-SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
-        OrderDate AS 'Order.Date',  
-        UnitPrice AS 'Product.Price',  
-        OrderQty AS 'Product.Quantity'  
+SELECT TOP 2 H.SalesOrderNumber AS 'Order.Number',  
+        H.OrderDate AS 'Order.Date',  
+        D.UnitPrice AS 'Product.Price',  
+        D.OrderQty AS 'Product.Quantity'  
 FROM Sales.SalesOrderHeader H  
    INNER JOIN Sales.SalesOrderDetail D  
      ON H.SalesOrderID = D.SalesOrderID  

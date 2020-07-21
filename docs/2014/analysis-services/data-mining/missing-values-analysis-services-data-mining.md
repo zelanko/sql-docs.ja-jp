@@ -1,5 +1,5 @@
 ---
-title: 欠損値 (Analysis Services - データ マイニング) |Microsoft Docs
+title: 欠損値 (Analysis Services-データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bc709d61c786c165711cfdb31ff696456997ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083355"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521218"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>不足値 (Analysis Services - データ マイニング)
-  *不足値*の適切な処理は効果的なモデル化の重要な部分です。 このセクションでは、不足値を定義すると共に、データ マイニング構造およびマイニング モデルの作成時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供する不足値の処理機能について説明します。  
+  *不足値* の適切な処理は効果的なモデル化の重要な部分です。 このセクションでは、不足値を定義すると共に、データ マイニング構造およびマイニング モデルの作成時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供する不足値の処理機能について説明します。  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>データ マイニングにおける不足値の定義  
  不足値は、さまざまな状況を表します。 たとえば、フィールドが該当しなかった、イベントが発生しなかった、データを使用できなかった、 データの入力者が正しい値を知らなかった、入力者がフィールドにデータが入力されていなくてもかまわないと考えた、などです。  
@@ -54,7 +53,7 @@ ms.locfileid: "66083355"
 |1|9098|  
 |Missing|0|  
   
- この分布からは、自転車を購入した顧客と購入しなかった顧客の数がほぼ半々であることがわかります。 このデータセットは完璧であるため、すべてのケースが [Bike Buyer] 列の値を持ち、`Missing` 値の数は 0 になっています。 ただし、ケースが [Bike Buyer] フィールドに、null があった場合[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]その行を持つケースとしてカウントされます、`Missing`値。  
+ この分布からは、自転車を購入した顧客と購入しなかった顧客の数がほぼ半々であることがわかります。 このデータセットは完璧であるため、すべてのケースが [Bike Buyer] 列の値を持ち、`Missing` 値の数は 0 になっています。 ただし、いずれかのケースで [自転車購入者] フィールドに null が含まれている場合、では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] その行が値を持つケースとしてカウントさ `Missing` れます。  
   
  入力が連続列の場合には、この属性に対して `Existing` と `Missing` の 2 つの可能な状態が適用されます。 つまり、その列に何らかの数値データ型の値が含まれているか、値が何も含まれていないかのいずれかになります。 値があるケースの場合は、平均、標準偏差、およびその他の意味のある統計がモデルで計算されます。 値がないケースの場合は、`Missing` 値の数がカウントされ、それに基づいて予測が調整されます。 予測を調整する方法はアルゴリズムによって異なります。詳細については次のセクションを参照してください。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66083355"
 ## <a name="related-tasks"></a>Related Tasks  
  次のトピックでは、不足値の処理方法の詳細について説明します。  
   
-|処理手順|リンク|  
+|タスク|リンク|  
 |-----------|-----------|  
 |不足値の処理を制御するためのフラグを個々のモデル列に追加する。|[モデリング フラグの表示または変更 &#40;データ マイニング&#41;](modeling-flags-data-mining.md)|  
 |マイニング モデルに、不足値の処理を制御するためのプロパティを設定する。|[マイニング モデルのプロパティの変更](change-the-properties-of-a-mining-model.md)|  
@@ -114,7 +113,7 @@ ms.locfileid: "66083355"
 |マイニング構造が不足値を処理する方法を変更する。|[マイニング構造のプロパティの変更](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
  [モデリング フラグ (データ マイニング)](modeling-flags-data-mining.md)  
   
   

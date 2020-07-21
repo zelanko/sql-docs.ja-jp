@@ -12,14 +12,14 @@ helpviewer_keywords:
 - custom foreach enumerators [Integration Services], about custom foreach enumerators
 - foreach enumerators [Integration Services]
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e5e8ac60eb14289618e436e90c9bfe480fd411bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3aedd7aef35555fe11bf67a11254833c52083f9d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116219"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297179"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>カスタム ForEach 列挙子の開発
 
@@ -42,7 +42,7 @@ ms.locfileid: "68116219"
  [カスタム ForEach 列挙子用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
  ユーザー インターフェイス クラスと、カスタム foreach 列挙子の構成に使用するフォームの実装方法について説明します。  
   
-## <a name="related-topics"></a>関連項目  
+## <a name="related-topics"></a>関連トピック  
   
 ### <a name="information-common-to-all-custom-objects"></a>すべてのカスタム オブジェクトに共通の情報  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。  

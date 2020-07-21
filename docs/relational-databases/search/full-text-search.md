@@ -12,15 +12,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d17a2d0f2abb6324d1cb990dcf673458fb5205dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 87924fccd112be6090d24e64826c72b79381e062
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082765"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091756"
 ---
 # <a name="full-text-search"></a>フルテキスト検索
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。
   
@@ -40,7 +40,7 @@ ms.locfileid: "68082765"
   
  フルテキスト クエリでは、英語や日本語などの特定の言語の規則に基づいて語や句を操作することにより、フルテキスト インデックス内のテキスト データに対して言語検索を実行できます。 フルテキスト クエリには、単純な語や句、または複数の形式の語や句を含めることができます。 フルテキスト クエリでは、1 つ以上の一致 ( *ヒット*とも呼ばれます) が含まれているすべてのドキュメントが返されます。 一致は、フルテキスト クエリに指定されたすべての語句が対象のドキュメントに含まれていて、その他の検索条件 (一致する語句間の距離など) を満たしているときに、発生します。    
   
-##  <a name="queries"></a> フルテキスト検索クエリ  
+##  <a name="full-text-search-queries"></a><a name="queries"></a> フルテキスト検索クエリ  
  フルテキスト インデックスに列が追加されると、ユーザーとアプリケーションはその列のテキストに対してフルテキスト クエリを実行できるようになります。 クエリで検索できる対象は次のとおりです。  
   
 -   1 つ以上の語または句 (*単純語句*)  
@@ -57,7 +57,7 @@ ms.locfileid: "68082765"
   
  フルテキスト クエリでは大文字と小文字は区別されません。 たとえば、"Aluminum" を検索した場合と "aluminum" を検索した場合では、同じ結果が返されます。  
   
- フルテキスト クエリでは、少数の [!INCLUDE[tsql](../../includes/tsql-md.md)] 述語 (CONTAINS と FREETEXT) および関数 (CONTAINSTABLE と FREETEXTTABLE) が使用されます。 ただし、ビジネス シナリオの検索目的によってフルテキスト クエリの構造は異なります。 例:  
+ フルテキスト クエリでは、少数の [!INCLUDE[tsql](../../includes/tsql-md.md)] 述語 (CONTAINS と FREETEXT) および関数 (CONTAINSTABLE と FREETEXTTABLE) が使用されます。 ただし、ビジネス シナリオの検索目的によってフルテキスト クエリの構造は異なります。 次に例を示します。  
   
 -   e ビジネス - Web サイト上で製品を検索する場合:  
   
@@ -73,15 +73,15 @@ ms.locfileid: "68082765"
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';  
     ```  
   
  詳細については、「 [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
   
-##  <a name="like"></a> フルテキスト検索クエリと LIKE 述語の比較
- フルテキスト検索とは異なり、 [LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 述語は、文字パターンにのみで動作します。 また、フォーマットされたバイナリ データのクエリには LIKE 述語を使用できません。 さらに、構造化されていない大量のテキスト データに対して LIKE クエリを実行すると、同じデータに対して同等のフルテキスト検索を実行する場合に比べてはるかに時間がかかります。 数百万行のテキスト データに対して LIKE クエリを実行すると、結果が得られるまでに数分かかる場合があります。一方、同じデータに対してフルテキスト クエリを実行すると、返される行数にもよりますが、数秒以内で結果を取得できます。  
+##  <a name="compare-full-text-search-queries-to-the-like-predicate"></a><a name="like"></a> フルテキスト検索クエリと LIKE 述語の比較
+ フルテキスト検索とは異なり、[LIKE](../../t-sql/language-elements/like-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 述語は、文字パターンにのみで動作します。 また、フォーマットされたバイナリ データのクエリには LIKE 述語を使用できません。 さらに、構造化されていない大量のテキスト データに対して LIKE クエリを実行すると、同じデータに対して同等のフルテキスト検索を実行する場合に比べてはるかに時間がかかります。 数百万行のテキスト データに対して LIKE クエリを実行すると、結果が得られるまでに数分かかる場合があります。一方、同じデータに対してフルテキスト クエリを実行すると、返される行数にもよりますが、数秒以内で結果を取得できます。  
   
-##  <a name="architecture"></a> フルテキスト検索のアーキテクチャ
+##  <a name="full-text-search-architecture"></a><a name="architecture"></a> フルテキスト検索のアーキテクチャ
  フルテキスト検索のアーキテクチャは、次のプロセスで構成されています。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス (sqlservr.exe)。  
@@ -94,7 +94,7 @@ ms.locfileid: "68082765"
   
  ![フルテキスト検索のアーキテクチャ](../../relational-databases/search/media/ifts-arch.gif "フルテキスト検索のアーキテクチャ")  
 
-###  <a name="sqlprocess"></a> SQL Server プロセス  
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a> SQL Server プロセス  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスでは、フルテキスト検索に次のコンポーネントが使用されます。  
   
 -   **ユーザー テーブル。** これらのテーブルには、フルテキスト インデックスを作成する対象のデータが格納されます。  
@@ -111,12 +111,12 @@ ms.locfileid: "68082765"
 
     >[!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、Full-Text Engine は、個別のサービスではなく [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス内に存在します。 Full-Text Engine をデータベース エンジンに統合することにより、フルテキストの管理、混合クエリの最適化、および全体的なパフォーマンスが向上しています。  
- 
+
 -   **インデックス ライター (インデクサー)。** インデックス ライターは、インデックスが作成されたトークンの保存に使用される構造を構築します。  
   
 -   **フィルター デーモン マネージャー。** フィルター デーモン マネージャーは、Full-Text Engine フィルター デーモン ホストの状態を監視します。  
   
-###  <a name="fdhostprocess"></a> Filter Daemon Host process  
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a> Filter Daemon Host process  
  フィルター デーモン ホストは、Full-Text Engine によって起動されるプロセスです。 このプロセスでは、次に示されているフルテキスト検索コンポーネントが実行されます。これらのコンポーネントは、テーブルのデータにアクセスしたりフィルターを適用したり、データを単語に区切ったりします。また、クエリ入力の単語区切りやステミングを行います。  
   
  フィルター デーモン ホストのコンポーネントは次のとおりです。  
@@ -127,10 +127,10 @@ ms.locfileid: "68082765"
   
 -   **ワード ブレーカーとステミング機能。** ワード ブレーカーは、特定の言語の語彙の規則に基づいて単語の境界を検出する言語固有のコンポーネントです (*単語区切り*)。 各ワード ブレーカーには、動詞を活用して変化形の拡張を行う言語固有のステミング機能コンポーネントが関連付けられています。 インデックスの作成時、フィルター デーモン ホストでは、ワード ブレーカーとステミング機能を使用して特定のテーブル列のテキスト データに関する言語分析を実行します。 列のインデックス作成に使用されるワード ブレーカーとステミング機能は、フルテキスト インデックスのテーブル列に関連付けられた言語によって決まります。 詳細については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
-##  <a name="processing"></a> フルテキスト検索処理  
+##  <a name="full-text-search-processing"></a><a name="processing"></a> フルテキスト検索処理  
  フルテキスト検索は Full-Text Engine によって実行されます。 Full-Text Engine にはインデックス作成サポートとクエリ サポートの 2 つの役割があります。  
   
-###  <a name="indexing"></a> フルテキスト インデックス作成のプロセス  
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a> フルテキスト インデックス作成のプロセス  
  フルテキスト作成 (クロールとも呼ばれます) を開始すると、Full-Text Engine は大きなデータをバッチでメモリにプッシュして、フィルター デーモン ホストに通知します。 フィルター デーモン ホストは、データをフィルター処理してから分解し、逆単語リストに変換します。 次にフルテキスト検索が、変換されたデータを単語リストからプルし、データを処理してストップワードを削除し、バッチ用の単語リストを 1 つ以上の逆インデックスに保持します。  
   
  **varbinary(max)** 型または **image** 型の列に格納されたデータにインデックスを作成する場合には、 **IFilter** インターフェイスを実装するフィルターが、そのデータに指定されたファイル フォーマット ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word など) に基づいてテキストを抽出します。 場合によっては、フィルター コンポーネントは **varbinary(max)** 型または **image** 型のデータを filterdata フォルダーに書き込む必要があります。この場合、メモリへのプッシュは行われません。  
@@ -141,7 +141,7 @@ ms.locfileid: "68082765"
   
  作成が完了すると、最終的なマージ プロセスが起動され、インデックス フラグメントが 1 つのマスター フルテキスト インデックスにマージされます。 これにより、多数のインデックス フラグメントではなく、1 つのマスター インデックスのみをクエリすれば済むため、クエリのパフォーマンスが向上し、関連順位付けにもより的確なスコア (評価) 統計を適用できます。  
   
-###  <a name="querying"></a> フルテキスト クエリのプロセス  
+###  <a name="full-text-querying-process"></a><a name="querying"></a> フルテキスト クエリのプロセス  
  クエリ プロセッサは、処理を行うためにクエリのフルテキストの一部を Full-Text Engine に送ります。 Full-Text Engine は、単語区切りと、必要に応じて、類義語の拡張、語幹への分割、ストップワード (ノイズ ワード) の処理を実行します。 次に、クエリのフルテキストの一部を SQL 演算子の形式で、主にストリーミング テーブル値関数 (STVF) として表現します。 クエリの実行中、STVF は正しい結果を取り出すために逆インデックスにアクセスします。 結果は、この時点でクライアントに戻されるか、さらに処理を加えてからクライアントに戻されます。  
 
 ## <a name="full-text-index-architecture"></a>フルテキスト インデックスのアーキテクチャ
@@ -151,12 +151,12 @@ ms.locfileid: "68082765"
   
 1 つのテーブルに対し、1 つのフルテキスト インデックスしか使用できません。 フルテキスト インデックスをテーブルに作成するためには、一意で NULL が許容されない列がそのテーブルに 1 つ必要です。 フルテキスト インデックスを作成できるのは、データ型が **char**、 **varchar**、 **nchar**、 **nvarchar**、 **text**、 **ntext**、 **image**、 **xml**、 **varbinary**および **varbinary(max)** の列です。これらの列には、フルテキスト検索用のインデックスを作成できます。 データ型が  **varbinary**、 **varbinary(max)** 、 **image**、または **xml** の列にフルテキスト インデックスを作成する場合は、型列を指定する必要があります。 *型列* は、各行のドキュメントのファイル拡張子 (.doc、.pdf、.xls など) を格納するテーブル列です。  
 
-###  <a name="structure"></a> フルテキスト インデックスの構造  
+###  <a name="full-text-index-structure"></a><a name="structure"></a> フルテキスト インデックスの構造  
  フルテキスト インデックスの構造をよく理解しておくことは、Full-Text Engine の動作を理解するのに役立ちます。 このトピックでは、 **の** Document [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] テーブルの抜粋をテーブル例として使用します。 この抜粋には、テーブルの 2 つの列 ( **DocumentID** 列および **Title** 列) と 3 つの行のみが含まれています。  
   
  この例では、 **Title** 列に対してフルテキスト インデックスが作成されているものとします。  
   
-|DocumentID|[タイトル]|  
+|DocumentID|タイトル|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -195,10 +195,10 @@ ms.locfileid: "68082765"
   
  **Occurrence** 列には整数値が含まれます。 DocId 値ごとに、その DocId 内の特定キーワードの相対的な単語オフセットに対応するオカレンス値の一覧があります。 オカレンス値は、句または近接検索の判定に役立ちます。たとえば、句には数値の近いオカレンス値が含まれます。 また、関連性スコアを計算するのにも役立ちます。たとえば、DocId のキーワードのオカレンス数をスコアリングに使用できます。   
   
-###  <a name="fragments"></a> フルテキスト インデックス フラグメント  
+###  <a name="full-text-index-fragments"></a><a name="fragments"></a> フルテキスト インデックス フラグメント  
  論理フルテキスト インデックスは、通常、複数の内部テーブルに分割されます。 各内部テーブルは、フルテキスト インデックス フラグメントと呼ばれます。 これらのフラグメントの一部は、他のフラグメントよりも新しいデータを含んでいることがあります。 たとえば、DocId が 3 である次の行をユーザーが更新し、テーブルの変更が自動的に追跡される場合、新しいフラグメントが作成されます。  
   
-|DocumentID|[タイトル]|  
+|DocumentID|タイトル|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
@@ -238,7 +238,7 @@ ms.locfileid: "68082765"
 |フルテキスト インデックスへのデータの追加は*作成*と呼ばれ、スケジュールによる要求または個別の要求のどちらかを通じて要求できます。または、新規データの追加と共に自動的に行うことができます。|関連するデータが挿入、更新、または削除されたときに、自動的に更新されます。|  
 |同じデータベース内で 1 つ以上のフルテキスト カタログにグループ化されます。|グループ化されません。|  
 
-##  <a name="components"></a> フルテキスト検索の言語コンポーネントと言語サポート
+##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> フルテキスト検索の言語コンポーネントと言語サポート
  フルテキスト検索では、英語、スペイン語、中国語、日本語、アラビア語、ベンガル語、ヒンディー語など、約 50 種類の言語を使用できます。 サポートされているフルテキスト言語の一覧については、「[sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)」を参照してください。 フルテキスト インデックスに含まれている各列には Microsoft Windows ロケール識別子 (LCID) が関連付けられています。これは、フルテキスト検索でサポートされている言語を表します。 たとえば、LCID 1033 は米国英語を表し、LCID 2057 は英国英語を表しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サポート対象の言語ごとに、その言語で格納されているフルテキスト データのインデックスを作成し、クエリを実行するための言語コンポーネントが用意されています。  
   
  言語固有のコンポーネントは、次のとおりです。  
@@ -254,4 +254,3 @@ ms.locfileid: "68082765"
  ワード ブレーカー (およびステミング機能) とフィルターは、フィルター デーモン ホスト プロセス (fdhost.exe) で実行されます。  
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-

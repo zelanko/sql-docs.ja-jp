@@ -1,5 +1,5 @@
 ---
-title: ドキュメントの免責 |Microsoft Docs
+title: ドキュメントの免責事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,23 @@ helpviewer_keywords:
 - undocumented [SQL Server]
 - documentation policy [SQL Server]
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d9bf67d1c71e9802ac7c90c79e69b1cea6af3a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62837522"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926683"
 ---
 # <a name="legal-notice-for-documentation"></a>ドキュメントの免責事項
-  このドキュメントは現状有姿で提供されます。 このドキュメントに記載されている情報や見解 (URL 等のインターネット Web サイトに関する情報を含む) は、将来予告なしに変更されることがあります。 お客様は、その使用に関するリスクを負うものとします。  
+  このドキュメントは "現状のまま" 提供されます。 このドキュメントに記載されている情報および見解 (URL 等のインターネット Web サイトに関する情報を含む) は、将来予告なしに変更されることがあります。 お客様は、その使用に関するリスクを負うものとします。  
   
- ここで使用される例は架空のものであり、説明のためだけに使用されます。 実在するものとは一切関係ありません。  
+ ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。 実在のものとの関連性または関係性は一切ありません。  
   
- このドキュメントは、Microsoft 製品の無体財産権に関する法的な権利をお客さまに許諾するものではありません。 内部的な参照目的に限り、このドキュメントを複製して使用することができます。  
+ このドキュメントは、マイクロソフト製品に含まれる知的財産に対していかなる法的権利も付与しません。 お客様は、内部的な参照目的に限り、このドキュメントを複製して使用することができます。  
   
- © 2013 Microsoft. All rights reserved.  
+ © 2013 Microsoft.  All rights reserved.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server のサポートおよびアップグレードに関するドキュメント ポリシー  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ソフトウェア マニュアルには、マイクロソフトによって発行された [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の Microsoft オンライン ブック、インストール マニュアル、デベロッパー向けリファレンス マニュアル、チュートリアル、Readme ファイル、既知の問題、サンプル コード、サンプル データベース、サポート技術情報などがあり、それらすべてに SQL Server の特徴および機能に関する内容が含まれています。 このサポートおよびアップグレードに関するポリシーは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースおよびサービス パックの Readme ファイルを含む [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ドキュメントに適用されます。Readme は、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] オンライン ブックの追加ファイルとして扱われます。  

@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_jobserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobserver
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3a93fb689cf812ad48a9c77469621a2d523796bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078203"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879961"
 ---
-# <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  指定されたジョブを、特定のサーバーにおける対象ジョブにします。  
+  指定されたサーバーで、指定されたジョブを対象とします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,14 +40,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id`ジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'`ジョブの名前。 *job_name*は**sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+>  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @server_name = ] 'server'` ジョブの対象サーバーの名前。 *server*は**nvarchar (30)** 、既定値は、(local) ' です。 *server*かまいません **(LOCAL)** ローカル サーバーの場合、または既存の対象サーバーの名前。  
+`[ @server_name = ] 'server'`ジョブを対象とするサーバーの名前。 *サーバー*は**nvarchar (30)**,、既定値は N ' (LOCAL) ' です。 *サーバー*には、ローカルサーバーの場合は **(local)** 、または既存の対象サーバーの名前を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -55,13 +55,13 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- **@automatic_post** 内に存在する**sp_add_jobserver**は引数の下に記載されていません。 **@automatic_post** 内部使用のため予約されています。  
+## <a name="remarks"></a>解説  
+ ** \@ automatic_post**は**sp_add_jobserver**に存在しますが、[引数] の下には表示されません。 ** \@ automatic_post**は、内部使用のために予約されています。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -71,15 +71,15 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_jobserver**の複数のサーバーに関連するジョブ。  
+ 複数のサーバーを含むジョブの**sp_add_jobserver**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-assigning-a-job-to-the-local-server"></a>A. ローカル サーバーにジョブを割り当てる  
- 次の例には、ジョブが割り当てられます。`NightlyBackups`ローカル サーバー上で実行します。  
+### <a name="a-assigning-a-job-to-the-local-server"></a>A. ローカルサーバーへのジョブの割り当て  
+ 次の例では、ジョブを `NightlyBackups` ローカルサーバーで実行するように割り当てます。  
   
 > [!NOTE]  
->  この例では、`NightlyBackups`ジョブが既に存在します。  
+>  この例では、ジョブが既に存在していることを前提としてい `NightlyBackups` ます。  
   
 ```  
 USE msdb ;  
@@ -90,8 +90,8 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. 異なるサーバーで実行するようジョブを割り当てる  
- 次の例には、マルチ サーバー ジョブが割り当てられます。`Weekly Sales Backups`サーバーに`SEATTLE2`します。  
+### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B: 別のサーバーで実行するジョブの割り当て  
+ 次の例では、マルチ `Weekly Sales Backups` サーバージョブをサーバーに割り当て `SEATTLE2` ます。  
   
 > [!NOTE]  
 >  この例では、`Weekly Sales Backups` ジョブが既に存在し、`SEATTLE2` が現在のインスタンスに対するターゲット サーバーとして登録されていることを前提としています。  
@@ -106,9 +106,9 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [sp_apply_job_to_targets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_apply_job_to_targets &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

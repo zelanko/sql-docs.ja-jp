@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108846"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>レポート サーバー URL の構成 (SSRS 構成マネージャー)
@@ -50,7 +50,7 @@ ms.locfileid: "66108846"
   
 |要素|値|説明|  
 |----------|-----------|-----------------|  
-|IP アドレス (IP address)|すべて割り当て|ネットワーク上のドメイン ネーム サービスによって、URL のホスト名がコンピューターの IP アドレスに解決されます。 定義した URL に IP アドレスが指定されていれば、特定のホストに送られる要求は目的の宛先に届きます。|  
+|IP アドレス|すべて割り当て|ネットワーク上のドメイン ネーム サービスによって、URL のホスト名がコンピューターの IP アドレスに解決されます。 定義した URL に IP アドレスが指定されていれば、特定のホストに送られる要求は目的の宛先に届きます。|  
 |Port|80|ポート 80 は、コンピューターにおける TCP/IP 接続の既定のポートです。 レポート サーバーはポート 80 でリッスンしているため、URL ではポート番号を省略できます。 別のポートを指定する場合は、URL 内でそのポートを指定する必要があります。|  
 |仮想ディレクトリ|ReportServer|どちらの URL 例にも仮想ディレクトリ名が含まれていることに注目してください。 URL 定義をカスタマイズしない限り、アプリケーションの仮想ディレクトリ名を必ず URL 内に指定する必要があります。|  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66108846"
  [URL の予約と登録について &#40;SSRS 構成マネージャー&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  アプリケーションおよびレポートへのアクセスには URL が使用されます。 このトピックでは、アプリケーションの URL、既定の URL、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]での URL 予約と登録のしくみについて説明します。  
   
- [URL 予約構文 &#40;SSRS 構成マネージャー&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用される既定の URL 予約は、ほとんどのシナリオに有効です。 ただし、アクセスを制限する場合や、インターネットまたはエクストラネットにアクセスできるように配置を拡張する場合は、要件に合わせて設定をカスタマイズする必要があります。 このトピックでは、URL 予約の構文について説明し、各自の配置に合わせてカスタムの予約を作成する場合の推奨事項を示します。  
   
  [構成ファイル内の URL &#40;SSRS 構成マネージャー&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
@@ -79,8 +79,8 @@ ms.locfileid: "66108846"
  [レポート サーバーの複数インスタンス配置における URL 予約 &#40;SSRS 構成マネージャー&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  1 台のコンピューターに複数の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスをインストールすると、URL 登録時に URL の重複が発生する可能性が高くなります。 このエラーを回避するには、このトピックの推奨事項に従ってインスタンス固有の URL 予約を作成します。  
   
-## <a name="see-also"></a>関連項目  
- [URL の構成 &#40;SSRS 構成マネージャー&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Web サービスの URL &#40;SSRS ネイティブ モード&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
+## <a name="see-also"></a>参照  
+ [SSRS Configuration Manager の URL &#40;構成&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Web サービス URL &#40;SSRS ネイティブモード&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   
   

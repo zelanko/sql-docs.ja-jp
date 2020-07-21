@@ -1,5 +1,5 @@
 ---
-title: パラメーターと行セットのメタデータ |Microsoft Docs
+title: パラメーターと行セットのメタデータ | Microsoft Docs
 description: パラメーターと行セットのメタデータ
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995097"
 ---
 # <a name="metadata---parameter-and-rowset"></a>メタデータ - パラメーターと行セット
@@ -66,11 +66,11 @@ ms.locfileid: "67995097"
 |datetime2 または DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- *Bprecision*パラメーターは無視されます。  
+ *bPrecision* パラメーターは無視されます。  
   
- データをサーバーに送信する場合、"DBPARAMFLAGS_SS_ISVARIABLESCALE" は無視されます。 アプリケーションでは、プロバイダー固有の型名 "**datetime**" および "**smalldatetime**" を使用して、従来の表形式のデータ ストリーム (TDS) の型を強制的に使用することができます。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (以降の) サーバーに接続されている場合、"**datetime2**" 形式が使用され、型名が "**datetime2**" または "DBTYPE_DBTIMESTAMP" の場合は、必要に応じて、暗黙的なサーバー変換が発生します。 プロバイダー固有の型名 "**datetime**" または "**smalldatetime**" が使用されている場合、 *bscale*は無視されます。 それ以外の場合、アプリケーションは*Bscale*が正しく設定されていることを確認する必要があります。 "DBTYPE_DBTIMESTAMP" を使用している MDAC および[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] OLE DB Driver for SQL Server からアップグレードされたアプリケーションは、 *bscale*を正しく設定しないと失敗します。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] より前のサーバー インスタンスに接続されている場合は、"DBTYPE_DBTIMESTAMP" で 0 または 3 以外に設定された *bScale* の値はエラーになり、E_FAIL が返されます。  
+ データをサーバーに送信する場合、"DBPARAMFLAGS_SS_ISVARIABLESCALE" は無視されます。 アプリケーションでは、プロバイダー固有の型名 "**datetime**" および "**smalldatetime**" を使用して、従来の表形式のデータ ストリーム (TDS) の型を強制的に使用することができます。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (以降の) サーバーに接続されている場合、"**datetime2**" 形式が使用され、型名が "**datetime2**" または "DBTYPE_DBTIMESTAMP" の場合は、必要に応じて、暗黙的なサーバー変換が発生します。 プロバイダー固有の型名に "**datetime**" または "**smalldatetime**" が使用されている場合は、*bScale* が無視されます。 それ以外の場合は、アプリケーションで *bScale* が正しく設定されるようにする必要があります。 MDAC からアップグレードされたアプリケーション、および "DBTYPE_DBTIMESTAMP" を使用する [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] からアップグレードされた OLE DB Driver for SQL Server は、*bScale* が正しく設定されていないと失敗します。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] より前のサーバー インスタンスに接続されている場合は、"DBTYPE_DBTIMESTAMP" で 0 または 3 以外に設定された *bScale* の値はエラーになり、E_FAIL が返されます。  
   
- ICommandWithParameters:: SetParameterInfo が呼び出されない場合、プロバイダーは、次のように IAccessor:: CreateAccessor で指定されているように、バインドの種類からサーバーの種類を示します。  
+ ICommandWithParameters::SetParameterInfo が呼び出されない場合、プロバイダーは、次のように、IAccessor::CreateAccessor で指定されたバインドの種類を基にサーバーの種類を示します。  
   
 |バインドの種類|*pwszDataSourceType*<br /><br /> (プロバイダー固有)|  
 |------------------|----------------------------------------------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "67995097"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- **IColumnsRowset:: GetColumnsRowset**は、次の列を返します。  
+ **IColumnsRowset::GetColumnsRowset** は次の列を返します。  
   
 |列の型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  

@@ -1,5 +1,6 @@
 ---
 title: データベース マスター キーの復元 | Microsoft Docs
+description: SQL Server Management Studio と Transact-SQL を使用して SQL Server でデータベース マスター キーを復元する方法について説明します。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -9,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: a7f63b1186d1d008b1091fa56a4ec71a2ee22801
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 9860b952751937b18ca5e95e92ac959bb86abd23
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112147"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892242"
 ---
 # <a name="restore-a-database-master-key"></a>データベース マスター キーの復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でデータベース マスター キーを復元する方法について説明します。  
   
 ## <a name="before-you-begin"></a>はじめに  
@@ -34,7 +35,7 @@ ms.locfileid: "68112147"
   
 - 現在のデータベースにマスター キーが存在しない場合は、RESTORE MASTER KEY を実行するとマスター キーが作成されます。 この新しいマスター キーは、サービス マスター キーで自動的に暗号化されません。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可
 データベースに対する CONTROL 権限が必要です。  
@@ -51,8 +52,6 @@ ms.locfileid: "68112147"
   
 4. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```sql
     -- Restores the database master key of the AdventureWorks2012 database.  
     USE AdventureWorks2012;  
@@ -65,6 +64,6 @@ ms.locfileid: "68112147"
     ```  
   
     > [!NOTE]  
-    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.  
+    > キーのファイル パスとキーのパスワード (存在する場合) は、実際は上に示したものと異なります。 両方がサーバーとキーのセットアップで固有であることをご確認ください。  
   
  詳細については、「[RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-master-key-transact-sql.md)」を参照してください。  

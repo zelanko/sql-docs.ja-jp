@@ -16,22 +16,21 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011109"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004047"
 ---
 # <a name="query-with-full-text-search"></a>フルテキスト検索でのクエリ
-  フルテキスト検索を定義するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト クエリでは、フルテキスト述語 (CONTAINS と FREETEXT) およびフルテキスト関数 (CONTAINSTABLE と FREETEXTTABLE) が使用されます。 この述語と関数は、さまざまな形式のクエリ用語に対応する豊富な [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文をサポートします。 フルテキスト クエリを記述するには、これらの述語と関数をいつどのように使用するかを理解する必要があります。  
+  フルテキスト検索を定義するため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト クエリでは、フルテキスト述語 (CONTAINS と FREETEXT) およびフルテキスト関数 (CONTAINSTABLE と FREETEXTTABLE) が使用されます。 この述語と関数は、さまざまな形式のクエリ用語に対応する豊富な [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文をサポートします。 フルテキスト クエリを記述するには、これらの述語と関数をいつどのように使用するかを理解する必要があります。  
   
-##  <a name="OV_ft_predicates"></a> 概要、フルテキストの述語 (CONTAINS と FREETEXT)  
+##  <a name="overview-of-the-full-text-predicates-contains-and-freetext"></a><a name="OV_ft_predicates"></a>フルテキスト述語 (CONTAINS と FREETEXT) の概要  
  CONTAINS 述語と FREETEXT 述語は、TRUE 値または FALSE 値を返します。 これらの述語は、特定の行がフルテキスト クエリと一致するかどうかを判断する選択基準としてのみ使用します。 一致する行は結果セットで返されます。 CONTAINS と FREETEXT は、SELECT ステートメントの WHERE 句または HAVING 句で指定します。 これらの述語は、LIKE や BETWEEN など他の [!INCLUDE[tsql](../../includes/tsql-md.md)] 述語と組み合わせて使用できます。  
   
 > [!NOTE]  
->  これらの述語の引数と構文については、次を参照してください。 [CONTAINS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql)と[FREETEXT &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)します。  
+>  これらの述語の構文と引数の詳細については、「 [CONTAINS &#40;transact-sql&#41;](/sql/t-sql/queries/contains-transact-sql) 」と「 [FREETEXT &#40;transact-sql&#41;](/sql/t-sql/queries/freetext-transact-sql)」を参照してください。  
   
  CONTAINS または FREETEXT を使用する場合は、検索するテーブルの単一の列、一連の列、すべての列のいずれかを指定できます。 また、フルテキスト クエリで単語区切りとステミング、類義語辞典の検索、およびノイズ ワードの削除を行うために使用される言語リソースの言語を指定することもできます。  
   
@@ -39,21 +38,21 @@ ms.locfileid: "66011109"
   
 -   CONTAINS (または CONTAINSTABLE) は、単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での近接検索、または重み付き検索に使用します。 CONTAINS を使用する場合は、検索するテキストを指定する検索条件を少なくとも 1 つ指定し、一致を判断する条件を指定する必要があります。  
   
-     検索条件の間には論理演算を使用できます。 詳細については、次を参照してください。[ブール演算子の AND、OR、AND NOT (CONTAINS と CONTAINSTABLE) で](#Using_Boolean_Operators)、このトピックで後述します。  
+     検索条件の間には論理演算を使用できます。 詳細については、このトピックの「 [CONTAINS および CONTAINSTABLE でのブール演算子 (AND、OR、および NOT) の使用](#Using_Boolean_Operators)」を参照してください。  
   
 -   FREETEXT (または FREETEXTTABLE) は、指定した単語、語句、または文章 ( *freetext 文字列*) の正確な文字列の並びではなく、意味を照合する場合に使用します。 指定した列のフルテキスト インデックスに、用語または一定の形式の用語が見つかった場合は、一致すると判断されます。  
   
  この作業を終えると、CONTAINS または FREETEXT 述語に 4 つの要素で構成される名前を使用して、リンク サーバー上の対象のテーブルのフルテキスト インデックス列にクエリを実行できます。 フルテキスト クエリを受け取るようリモート サーバーを準備するには、リモート サーバー上の検索対象のテーブルおよび列にフルテキスト インデックスを作成し、リモート サーバーをリンク サーバーとして追加します。  
   
 > [!NOTE]  
->  データベースの互換性レベルが 100 に設定されている場合、 [OUTPUT 句](/sql/t-sql/queries/output-clause-transact-sql) でフルテキスト述語を使用することはできません。  
+>  データベース互換性レベルが100に設定されている場合、 [OUTPUT 句](/sql/t-sql/queries/output-clause-transact-sql)でフルテキスト述語を使用することはできません。  
   
  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
   
-#### <a name="a-using-contains-with-simpleterm"></a>A. CONTAINS を <simple_term> と共に使用する  
- 次の例では、`$80.99` という単語を含み、価格が `"Mountain"` であるすべての製品を検索します。  
+#### <a name="a-using-contains-with-simple_term"></a>A. CONTAINS を <simple_term> と共に使用する  
+ 次の例では、 `"Mountain"` という単語を含み、価格が `$80.99` であるすべての製品を検索します。  
   
 ```  
 USE AdventureWorks2012  
@@ -81,11 +80,11 @@ GO
   
  
   
-##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a> フルテキスト関数 (CONTAINSTABLE と FREETEXTTABLE) の概要  
+##  <a name="overview-of-the-full-text-functions-containstable-and-freetexttable"></a><a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a>フルテキスト関数 (CONTAINSTABLE と FREETEXTTABLE) の概要  
  CONTAINSTABLE 関数と FREETEXTTABLE 関数は、SELECT ステートメントの FROM 句で通常のテーブル名と同じように指定できます。 この関数では、フルテキスト クエリと一致する 0 行、1 行、または 2 行以上で構成されるテーブルが返されます。 返されたテーブルには、ベース テーブルの行のうち、関数のフルテキスト検索条件に指定した選択基準に一致する行のみが含まれます。  
   
 > [!NOTE]  
->  これらの関数の引数と構文については、次を参照してください。 [CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql)と[FREETEXTTABLE &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)します。  
+>  これらの関数の構文と引数の詳細については、「 [CONTAINSTABLE &#40;transact-sql&#41;](/sql/relational-databases/system-functions/containstable-transact-sql) 」と「 [FREETEXTTABLE &#40;transact-sql&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)」を参照してください。  
   
  このいずれかの関数を使用するクエリでは、次のように、各行の関連順位値 (RANK) とフルテキスト キー (KEY) が取得されます。  
   
@@ -101,11 +100,11 @@ GO
   
  CONTAINSTABLE は CONTAINS と同様の検索に役立ち、FREETEXTTABLE は FREETEXT と同様の検索に役立ちます。 詳細については、このトピックの前の「 [フルテキスト述語 (CONTAINS と FREETEXT) の概要](#OV_ft_predicates)」を参照してください。 CONTAINSTABLE 関数と FREETEXTTABLE 関数を使用するクエリを実行する場合は、返された行を元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ベース テーブルの行と明示的に結合する必要があります。  
   
- 通常、CONTAINSTABLE または FREETEXTTABLE の結果をベース テーブルと結合します。 その場合、一意なキー列の名前を把握している必要があります。 この列は、フルテキスト処理に対応する各テーブルに含まれ、テーブルの行を一意にするために使用されます ("*一意なキー列*")。 詳細については、「 [フルテキスト インデックスの管理](../indexes/indexes.md)」をご覧ください。  
+ 通常、CONTAINSTABLE または FREETEXTTABLE の結果をベース テーブルと結合します。 その場合、一意なキー列の名前を把握している必要があります。 この列は、フルテキストが有効なすべてのテーブルで発生し、テーブルに一意の行を適用するために使用されます (*一意の * * キー列*)。 詳細については、「 [フルテキスト インデックスの管理](../indexes/indexes.md)」をご覧ください。  
   
  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
   
 #### <a name="a-using-containstable"></a>A. CONTAINSTABLE を使用する  
  次の例では、 **Description** 列の "light" または "lightweight" という語の近くに "aluminum" という語があるすべての製品の説明 ID と説明を返します。 また、順位値が 2 以上の行だけを返します。  
@@ -130,7 +129,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. FREETEXTTABLE を使用する  
- 次の例では、FREETEXTTABLE クエリを拡張して、順位の高いものから順に行を返し、各行の順位を選択リストに追加します。 を、クエリを指定するを確認する必要があります**ProductDescriptionID**の一意のキー列には、`ProductDescription`テーブル。  
+ 次の例では、FREETEXTTABLE クエリを拡張して、順位の高いものから順に行を返し、各行の順位を選択リストに追加します。 クエリを指定するには、 **Productdescriptionid**がテーブルの一意のキー列であることを把握している必要があり `ProductDescription` ます。  
   
 ```  
 USE AdventureWorks2012  
@@ -165,8 +164,8 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a> ブール演算子 - を使用して、OR、CONTAINS および CONTAINSTABLE ではなく、  
- CONTAINS 述語と CONTAINSTABLE 関数は、同じ検索条件を使用します。 ブール演算子を使用していくつかの検索語句を結合は両方ともサポート-AND、OR、および NOT の論理操作を実行します。 たとえば、AND を使用して "latte" と "New York-style bagel" の両方を含む行を検索できます。 また、AND NOT を使用して "bagel" を含み、かつ "cream cheese" を含まない行を検索することもできます。  
+##  <a name="using-boolean-operators---and-or-and-not---in-contains-and-containstable"></a><a name="Using_Boolean_Operators"></a>ブール演算子-AND、OR、および NOT in CONTAINS と CONTAINSTABLE の使用  
+ CONTAINS 述語と CONTAINSTABLE 関数は、同じ検索条件を使用します。 どちらも、論理演算子 (AND、OR、および NOT) を使用して複数の検索語句を結合し、論理演算を実行します。 たとえば、AND を使用して "latte" と "New York-style bagel" の両方を含む行を検索できます。 また、AND NOT を使用して "bagel" を含み、かつ "cream cheese" を含まない行を検索することもできます。  
   
 > [!NOTE]  
 >  一方、FREETEXT と FREETEXTTABLE では、ブール演算子は検索対象の語として扱われます。  
@@ -189,7 +188,7 @@ GO
   
  
   
-##  <a name="Additional_Considerations"></a> フルテキスト クエリの追加の考慮事項  
+##  <a name="additional-considerations-for-full-text-queries"></a><a name="Additional_Considerations"></a>フルテキストクエリに関するその他の考慮事項  
  フルテキスト クエリを記述する場合は、次の点も考慮してください。  
   
 -   LANGUAGE オプション  
@@ -204,13 +203,13 @@ GO
   
      FREETEXT クエリと FREETEXTTABLE クエリでは、類義語辞典を既定で使用します。 CONTAINS と CONTAINSTABLE では、省略可能な THESAURUS 引数をサポートしています。  
   
--   大文字と小文字の区別  
+-   大文字小文字の区別  
   
      フルテキスト検索クエリでは大文字と小文字は区別されません。 ただし、日本語の場合は、同じ発音を複数の方法で表記できます。この表記方法を正規化することは、大文字と小文字の区別をなくすことに似ています。たとえば、「かな」で検索することで、大文字小文字を区別しない検索に近い検索を実現できます。 しかし、このような正規化はサポートされていません。  
   
 
   
-##  <a name="varbinary"></a> Varbinary (max) 列および xml 列にクエリを実行します。  
+##  <a name="querying-varbinarymax-and-xml-columns"></a><a name="varbinary"></a>Varbinary (max) 列および xml 列のクエリ  
  `varbinary(max)` 列、`varbinary` 列、または `xml` 列にフルテキスト インデックスが設定されている場合は、他のフルテキスト インデックス列と同様に、フルテキスト述語 (CONTAINS および FREETEXT) とフルテキスト関数 (CONTAINSTABLE および FREETEXTTABLE) を使用して、これらの列に対するクエリを実行できます。  
   
 > [!IMPORTANT]  
@@ -232,29 +231,29 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>xml データ  
  `xml` データ型の列には、XML ドキュメントと XML フラグメントのみが格納されます。XML ドキュメントには XML フィルターのみが使用されるため、 型列は必要ありません。 `xml` 列では、フルテキスト インデックスによって XML 要素のコンテンツにインデックスが設定されますが、XML マークアップは無視されます。 属性値には、数値でない限り、フルテキスト インデックスが設定されます。 要素タグはトークンの境界として使用されます。 複数言語を含む整形式の XML または HTML ドキュメントやフラグメントはサポートされます。  
   
- に対するクエリの実行の詳細については、`xml`列を参照してください[XML 列でフルテキスト検索の使用](../xml/use-full-text-search-with-xml-columns.md)します。  
+ 列に対するクエリの詳細につい `xml` ては、「 [XML 列でのフルテキスト検索の使用](../xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
   
  
   
-##  <a name="supported"></a> サポートされるクエリ用語の形式  
+##  <a name="supported-forms-of-query-terms"></a><a name="supported"></a>サポートされているクエリ用語の形式  
  このセクションでは、フルテキスト述語および行セット値関数による各クエリ形式のサポートの概要について説明します。  
   
 > [!NOTE]  
 >  指定したクエリ語句の構文については、次の表の **Supported by** 列の対応するリンクをクリックしてください。  
   
-|クエリ用語の形式|説明|Supported by|  
+|クエリ用語の形式|説明|サポートしているもの|  
 |----------------------|-----------------|------------------|  
-|1 つ以上の語または句 (*単純語句*)|フルテキスト検索において、語 (または *トークン*) とは、指定された言語の規則に従って適切なワード ブレーカーによって境界が識別された文字列です。 有効な句は、複数の語から構成されます。句読点を含む場合も含まない場合もあります。<br /><br /> たとえば、「クロワッサン」は、word、および"カフェ?? オーストラリア lait"は、語句です。 このような語や句は単純語句と呼ばれています。<br /><br /> 詳細については、このトピックの後の「 [特定の語または句 (単純語句) の検索](#Simple_Term)」を参照してください。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) および [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) は、句に完全一致するものを検索します。<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) および [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) は、句を個々の語に分解します。|  
-|指定した文字列で始まる語または句 (*プレフィックス語句*)|プレフィックス語句とは、派生語または変化形を生成するために語の前に付けられる文字列です。<br /><br /> 1 つのプレフィックス語句の場合、指定したプレフィックス語句で始まるすべての語が、結果セットに含まれます。 たとえば、"auto*" は、"automatic"、"automobile" などに一致します。<br /><br /> 句の場合、句を構成する各語がプレフィックス語句と見なされます。 たとえば、"auto tran\*" は "automatic transmission" や "automobile transducer" に一致しますが、"automatic motor transmission" には一致しません。<br /><br /> 詳細については、このトピックの後の「 [プレフィックス検索 (プレフィックス語句) の実行](#Prefix_Term)」を参照してください。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) および [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
-|特定の単語の変化形 (*用語変化形生成*)|変化形は、動詞のさまざまな時制および活用、または名詞の単数形と複数形です。 たとえば、"drive" という語の変化形を検索します。 テーブルのさまざまな行に、"drive"、"drives"、"drove"、"driving"、および "driven" が含まれている場合、これらはどれも drive という語から変化して生成されているので結果セットに入ります。<br /><br /> 詳細については、このトピックの後の「 [特定の語の変化形 (生成語) の検索](#Inflectional_Generation_Term)」を参照してください。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) および [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) は、指定されたすべての語の変化形の語句を既定で検索します。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) および [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) は、省略可能な INFLECTIONAL 引数をサポートしています。|  
-|特定の単語のシノニム形 (*生成の用語の類義語辞典*)|類義語辞典は、ユーザー指定の用語のシノニムを定義します。 たとえば、エントリ "{car, automobile, truck, van}" が類義語辞典に追加されると、"car" という語の類義語形式を検索できます。 "automobile"、"truck"、"van"、または "car" という語は、"car" という語を含むシノニムの拡張セットに属しているため、クエリ処理されるテーブルの行のうち、これらのいずれかの語を含むすべての行が結果セットに表示されます。<br /><br /> 類義語辞典ファイルの構造の詳細については、「 [フルテキスト検索に使用する類義語辞典ファイルの構成と管理](configure-and-manage-thesaurus-files-for-full-text-search.md)」を参照してください。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) と [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) は、類義語辞典を既定で使用します。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) および [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) は、省略可能な THESAURUS 引数をサポートしています。|  
+|1 つ以上の語または句 (*単純語句*)|フルテキスト検索において、語 (または *トークン*) とは、指定された言語の規則に従って適切なワード ブレーカーによって境界が識別された文字列です。 有効な句は、複数の語から構成されます。句読点を含む場合も含まない場合もあります。<br /><br /> たとえば、"クロワッサン" は単語で、"caf? au lait "は、語句です。 このような語や句は単純語句と呼ばれています。<br /><br /> 詳細については、このトピックの後の「 [特定の語または句 (単純語句) の検索](#Simple_Term)」を参照してください。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) および [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) は、句に完全一致するものを検索します。<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) および [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) は、句を個々の語に分解します。|  
+|指定したテキストで始まる語または句 (*プレフィックス語句*)|プレフィックス語句とは、派生語または変化形を生成するために語の前に付けられる文字列です。<br /><br /> 1 つのプレフィックス語句の場合、指定したプレフィックス語句で始まるすべての語が、結果セットに含まれます。 たとえば、"auto*" は、"automatic"、"automobile" などに一致します。<br /><br /> 句の場合、句を構成する各語がプレフィックス語句と見なされます。 たとえば、"auto tran\*" は "automatic transmission" や "automobile transducer" に一致しますが、"automatic motor transmission" には一致しません。<br /><br /> 詳細については、このトピックの後の「 [プレフィックス検索 (プレフィックス語句) の実行](#Prefix_Term)」を参照してください。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) および [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
+|特定の語の変化形 (*生成語-変化形*)|変化形は、動詞のさまざまな時制および活用、または名詞の単数形と複数形です。 たとえば、"drive" という語の変化形を検索します。 テーブルのさまざまな行に、"drive"、"drives"、"drove"、"driving"、および "driven" が含まれている場合、これらはどれも drive という語から変化して生成されているので結果セットに入ります。<br /><br /> 詳細については、このトピックの後の「 [特定の語の変化形 (生成語) の検索](#Inflectional_Generation_Term)」を参照してください。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql)および[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql)は、指定されたすべての単語の変化形条項を既定で検索します。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) および [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) は、省略可能な INFLECTIONAL 引数をサポートしています。|  
+|特定の単語の同義語形式 (*生成語-類義語辞典*)|類義語辞典は、ユーザー指定の用語のシノニムを定義します。 たとえば、エントリ "{car, automobile, truck, van}" が類義語辞典に追加されると、"car" という語の類義語形式を検索できます。 "automobile"、"truck"、"van"、または "car" という語は、"car" という語を含むシノニムの拡張セットに属しているため、クエリ処理されるテーブルの行のうち、これらのいずれかの語を含むすべての行が結果セットに表示されます。<br /><br /> 類義語辞典ファイルの構造の詳細については、「 [フルテキスト検索に使用する類義語辞典ファイルの構成と管理](configure-and-manage-thesaurus-files-for-full-text-search.md)」を参照してください。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) と [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) は、類義語辞典を既定で使用します。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) および [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) は、省略可能な THESAURUS 引数をサポートしています。|  
 |他の語または句に近接する語または句 (*近接語句*)|近接語句とは、互いに近接する語または句を表します。最初の検索語句と最後の検索語句を分離する非検索用語の最大数を指定することもできます。 さらに、任意の順序で語や句を検索したり、指定した順序で語や句を検索したりすることができます。<br /><br /> たとえば、"ice" という語の近くに "hockey" という語がある行や、"ice skating" という句の近くに "ice hockey" という句がある行を検索できます。<br /><br /> 詳細については、「 [NEAR による他の単語の近くにある単語の検索](search-for-words-close-to-another-word-with-near.md)」を参照してください。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) および [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
 |重み付け値を使用している語または句 (*重み付け語句*)|一連の語句内における各語句の重要度を示す重み付け値です。 重み付け値 0.0 は最低値であり、重み付け値 1.0 は最高値です。<br /><br /> たとえば、複数の語句を検索するクエリでは、検索条件の各検索語に、他の語との相対的な重要性を示す重み付け値を割り当てることができます。 この種のクエリ結果では、検索語に割り当てた相対的な重みに従って、最も関連性の高い行が最初に返されます。 結果セットには、指定した語句 (またはそれらの間のコンテンツ) のいずれかを含むドキュメントまたは行が含まれます。ただし、各検索語句に関連付けられている重み付け値の違いにより、一部の結果が他の結果より関連性が高いと見なされます。<br /><br /> 詳細については、このトピックの後の「 [重み付け値を使用する語または句 (重み付け語句) の検索](#Weighted_Term)」を参照してください。|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
   
 
   
-###  <a name="Simple_Term"></a> 特定の語または句 (単純語句) の検索  
- [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)、または [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) を使用すると、テーブルで特定の句を検索できます。 検索する場合など、`ProductReview`テーブルに、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]次のように CONTAINS 述語を使用することで、"learning curve"という句を使用して、製品に関するすべてコメントを検索するデータベース。  
+###  <a name="searching-for-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>特定の語または句 (単純語句) の検索  
+ [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)、または [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) を使用すると、テーブルで特定の句を検索できます。 たとえば、データベース内のテーブルを検索して、 `ProductReview` [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] "learning curve" という語句の製品に関するすべてのコメントを検索する場合は、次のように CONTAINS 述語を使用できます。  
   
 ```  
 USE AdventureWorks2012  
@@ -270,7 +269,7 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a> プレフィックス検索 (プレフィックス語句) の実行  
+###  <a name="performing-prefix-searches-prefix-term"></a><a name="Prefix_Term"></a>プレフィックス検索 (プレフィックス語句) の実行  
  [CONTAINS](/sql/t-sql/queries/contains-transact-sql) または [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) を使用すると、指定したプレフィックスを持つ語または句を検索することができます。 指定したプレフィックスで始まるテキストが含まれる列のすべてのエントリが返されます。 たとえば、 `top`というプレフィックス ( `top``ple`、 `top``ping`、 `top`など) が含まれるすべての行を検索する場合、 クエリは次のようになります。  
   
 ```  
@@ -289,7 +288,7 @@ GO
   
  
   
-###  <a name="Inflectional_Generation_Term"></a> 変化形 (生成語) の特定の単語の検索  
+###  <a name="searching-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>特定の語の変化形形式の検索 (生成語)  
  [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)、または [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) を使用すると、動詞のさまざまな時制および活用、または名詞の単数形と複数形 (変化形検索)、または特定の語のシノニム形 (類義語辞典検索) を検索できます。  
   
  次の例は `Comments` データベースの `ProductReview` テーブルの `AdventureWorks` 列にある "foot" のすべての語形 ("foot"、"feet" など) を検索します。  
@@ -309,7 +308,7 @@ GO
   
 
   
-###  <a name="Weighted_Term"></a> 重み付け値 (重み付け語句) の語または句を使用して検索  
+###  <a name="searching-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a>重み付け値を使用した単語または語句の検索 (重み付け語句)  
  [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) を使用すると、重み付け値を指定して語または句を検索することができます。 重みは 0.0 ～ 1.0 の数値で指定し、一連の語句内における各語句の重要度を示します。 重み 0.0 は最低値であり、重み 1.0 は最高値です。  
   
  次の例のクエリは、重みを使用して、文字列 "Bay" で始まるテキストに "Street" または "View" が含まれる顧客住所をすべて検索します。 結果では、指定した語が多く含まれている行ほど高い順位が付けられます。  
@@ -333,13 +332,13 @@ GO
   
 
   
-##  <a name="tokens"></a> ワード ブレーカー、類義語辞典、およびストップ リストの組み合わせのトークン化の結果を表示します。  
+##  <a name="viewing-the-tokenization-result-of-a-word-breaker-thesaurus-and-stoplist-combination"></a><a name="tokens"></a>ワードブレーカー、類義語辞典、およびストップリストの組み合わせによるトークン化の結果の表示  
  特定のワード ブレーカー、類義語辞典、ストップリストの組み合わせをクエリ文字列入力に適用した後に、**sys.dm_fts_parser** 動的管理ビューを使用すると、トークン化の結果を確認できます。 詳細については、「[sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)」を参照してください。  
   
  
   
 ## <a name="see-also"></a>参照  
- [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
+ [Transact-sql&#41;を含む &#40;](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   

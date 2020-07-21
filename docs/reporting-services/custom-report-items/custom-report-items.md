@@ -1,5 +1,6 @@
 ---
 title: カスタム レポート アイテム | Microsoft Docs
+description: カスタム レポート アイテムとそれが実行時コンポーネントとデザイン時コンポーネントで構成されるしくみについて説明します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee4b1e82ec3671cdc978c9af889d201ec430ed87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d3c799f70e0b3df67096e1e6ca2e3a17bcc11572
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194127"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216937"
 ---
 # <a name="custom-report-items"></a>カスタム レポート アイテム
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、包括的な API により、エンタープライズ レポートの作成とパブリッシュ、セキュリティとサブスクリプションの管理、およびレポート機能の拡張を行う一連の豊富なツールを備えています。 レポートは、レポート定義言語 (RDL) と呼ばれる XML ベースの言語を使用して定義されます。 RDL は、レイアウト、クエリ情報、およびレポートのアイテムの種類を説明する一連の命令を提供します。 RDL は、カスタム レポート アイテムを作成することによって拡張できます。 カスタム レポート アイテムは、実行時にレポート プロセッサによって呼び出される実行時コンポーネント、およびカスタム レポート アイテムをレポート デザイナーで使用できるようにするデザイン時コンポーネントで構成されています。  
@@ -42,7 +43,7 @@ ms.locfileid: "63194127"
  [カスタム レポート アイテムのデザイン時コンポーネントの作成](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
  カスタム レポート アイテムのデザイン時コンポーネントの作成方法について説明します。  
   
- [カスタム レポート アイテムを配置する方法](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [方法: カスタム レポート アイテムを配置する](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
  カスタム レポート アイテムの配置方法について説明します。  
   
  [カスタム レポート アイテムのクラス ライブラリ](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  

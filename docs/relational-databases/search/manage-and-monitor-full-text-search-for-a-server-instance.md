@@ -1,5 +1,5 @@
 ---
-title: サーバー インスタンスでのフルテキスト検索の管理と監視 | Microsoft Docs
+title: SQL Server インスタンスでのフルテキスト検索の管理と監視
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -13,15 +13,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68d1ea1ee1adc7c5126606bd0cf72ca8e54a725c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629458"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>サーバー インスタンスでのフルテキスト検索の管理と監視
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   サーバー インスタンスのフルテキスト検索の管理には次の作業があります。  
   
 -   FDHOST ランチャー サービス (MSSQLFDLauncher) の管理、サービス アカウント資格情報の変更時のフィルター デーモン ホスト プロセスの再起動、サーバー全体のフルテキスト プロパティの構成、フルテキスト カタログのバックアップなどのシステム管理作業。 たとえば、サーバー レベルでは、サーバー インスタンス全体の既定の言語とは異なる、既定のフルテキスト言語を指定できます。  
@@ -30,7 +31,7 @@ ms.locfileid: "68132260"
   
 -   フルテキスト検索を行うためのユーザー データベースの構成。 データベース用のフルテキスト カタログを 1 つ以上作成し、フルテキスト クエリを実行する各テーブルまたは各インデックス付きビューにフルテキスト インデックスを定義します。  
   
-##  <a name="props"></a> フルテキスト検索のサーバー プロパティを表示および変更する  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> フルテキスト検索のサーバー プロパティを表示および変更する  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのフルテキスト プロパティは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で表示できます。  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>フルテキスト検索のサーバー プロパティを表示および変更するには  
@@ -38,8 +39,6 @@ ms.locfileid: "68132260"
 1.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[サーバーのプロパティ]** ダイアログ ボックスで、 **[詳細設定]** ページをクリックし、フルテキスト検索に関するサーバーの情報を表示します。 フルテキスト プロパティは次のとおりです。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   **[既定のフルテキスト言語]**  
   
@@ -59,7 +58,7 @@ ms.locfileid: "68132260"
   
          フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 このオプションは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースでのみ使用できます。  
   
-         **Rebuild**  
+         **リビルド**  
          フルテキスト カタログは、導入された新しい拡張機能であるワード ブレーカーを使用して再構築されます。 インデックスの再構築には時間がかかり、アップグレード後にかなりの量の CPU とメモリが必要になる可能性があります。  
   
          **リセット**  
@@ -70,19 +69,19 @@ ms.locfileid: "68132260"
         > [!NOTE]  
         >  フルテキスト アップグレード オプションは、[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) の **upgrade_option** 操作を使用して設定することもできます。  
   
-##  <a name="metadata"></a> その他のフルテキスト サーバー プロパティの表示  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> その他のフルテキスト サーバー プロパティの表示  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数を使用すると、フルテキスト検索のさまざまなサーバー レベルのプロパティの値を取得できます。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバー インスタンスのフルテキスト プロパティと各プロパティに関連する [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の一覧を次の表に示します。  
   
-|プロパティ|[説明]|機能|  
+|プロパティ|説明|Function|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|フルテキスト コンポーネントが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の現在のインスタンスと共にインストールされているかどうかを示します。|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  
 |**LoadOSResources**|オペレーティング システムのワード ブレーカーやフィルターが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに登録され、使用されているかどうかを示します。|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|Full-Text Engine に署名付きバイナリのみを読み込むかどうかを指定します。|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> フルテキスト検索の利用状況の監視  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> フルテキスト検索の利用状況の監視  
  サーバー インスタンスでのフルテキスト検索の実行状況を監視する場合は、以下の動的管理ビューと関数が役立ちます。  
   
  **作成操作が進行中のフルテキスト カタログに関する情報を表示するには**  

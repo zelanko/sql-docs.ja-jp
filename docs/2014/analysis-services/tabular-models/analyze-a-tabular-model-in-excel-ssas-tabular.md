@@ -1,5 +1,5 @@
 ---
-title: Excel (SSAS テーブル) で表形式モデルの分析 |Microsoft Docs
+title: Excel でのテーブルモデルの分析 (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 47fa45fc-60ab-41a1-bde3-5781c8462889
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17d2b9fee3c4e733ed46f9b975e69f84f05b93f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36b28a97b920e5c43644451ebee1e0c50df019c2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067758"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939937"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>Excel でのテーブル モデルの分析 (SSAS テーブル)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [Excel で分析] 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、ピボットテーブルがワークシートに追加されます。 モデル オブジェクト (テーブル、列、メジャー、階層、および KPI) は、ピボットテーブルのフィールドの一覧にフィールドとして含まれています。  
@@ -25,7 +24,7 @@ ms.locfileid: "66067758"
 > [!NOTE]  
 >  [Excel で分析] 機能を使用するには、レポート デザイナーがインストールされているコンピューターに Microsoft Office 2003 以降が [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]と同じコンピューターにインストールされている必要があります。 Office が同じコンピューターにインストールされていない場合は、別のコンピューターの Excel を使用して、データ ソースとしてモデル ワークスペース データベースに接続できます。 これにより、ピボットテーブルをワークシートに手動で追加することができます。 モデル オブジェクト (テーブル、列、メジャー、および KPI) は、ピボットテーブルのフィールドの一覧にフィールドとして含まれています。  
   
-## <a name="tasks"></a>処理手順  
+## <a name="tasks"></a>タスク  
   
 #### <a name="to-analyze-a-tabular-model-project-by-using-the-analyze-in-excel-feature"></a>[Excel で分析] 機能を使用してテーブル モデル プロジェクトを分析するには  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66067758"
   
 3.  パースペクティブを使用するには、 **[パースペクティブ]** ボックスの一覧からパースペクティブを選択します。  
   
-     パースペクティブ (既定値以外) は [パースペクティブ] ダイアログ ボックスを使用して定義する必要があります。 詳細については、「[パースペクティブの作成と管理 (SSAS テーブル)](perspectives-ssas-tabular.md)」を参照してください。  
+     パースペクティブ (既定値以外) は [パースペクティブ] ダイアログ ボックスを使用して定義する必要があります。 詳細については、「 [SSAS テーブル&#41;&#40;パースペクティブの作成と管理](perspectives-ssas-tabular.md)」を参照してください。  
   
 > [!NOTE]  
 >  Excel のピボットテーブルのフィールドの一覧は、モデル デザイナーでモデル プロジェクトに変更を加えても自動的に更新されません。 ピボットテーブルのフィールドの一覧を更新するには、Excel の **[オプション]** リボンで **[更新]** をクリックします。  

@@ -1,5 +1,6 @@
 ---
 title: PolyBase クエリのシナリオ | Microsoft Docs
+description: SQL Server の PolyBase 機能を利用したクエリの例をご覧ください。外部テーブルからの SELECT、外部テーブルのローカル テーブルとの JOIN、データのインポート/エクスポート、新しいカタログ ビューなどです。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 021e73a48da72cf02aa561cbd2ad757a5958d070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92416e1dc528880767ccebd1873707e0a1259a31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062128"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901266"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase クエリのシナリオ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 この記事では、SQL Server (2016 以降) の [PolyBase](../../relational-databases/polybase/polybase-guide.md) 機能を使用するクエリの例を示します。 これらの例を使用する前に、先に PolyBase をインストールして構成しておく必要があります。 詳細については、[PolyBase の概要](polybase-guide.md)に関する記事を参照してください。
   
@@ -133,6 +134,6 @@ SELECT * FROM sys.external_tables;
 SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'   
 ```  
 
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 
 トラブルシューティングの詳細については、「 [PolyBase のトラブルシューティング](../../relational-databases/polybase/polybase-troubleshooting.md)」を参照してください。

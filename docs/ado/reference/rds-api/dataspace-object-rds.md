@@ -1,5 +1,5 @@
 ---
-title: DataSpace オブジェクト (RDS) |Microsoft Docs
+title: 領域スペースオブジェクト (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,43 +11,43 @@ apitype: COM
 helpviewer_keywords:
 - DataSpace object [RDS]
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bbd27490e20e8c615ba934299e80f55eb06a5481
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8e0340eb56ec2b72c0f917f33a639ed5227d2c0b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964354"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752567"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace オブジェクト (RDS)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 中間層にあるカスタム ビジネス オブジェクトにクライアント側プロキシを作成します。  
+ は、中間層に配置されているカスタムビジネスオブジェクトに対してクライアント側プロキシを作成します。  
   
- リモート データ サービスには、クライアント側コンポーネントは、中間層にあるビジネス オブジェクトと通信できるように、ビジネス オブジェクトのプロキシが必要があります。 パッケージ化、アンパッケージ処理、およびトランスポート (マーシャ リング) のアプリケーションのプロキシを容易に[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)プロセスやコンピューターの境界を越えてデータ。  
+ リモートデータサービスでは、クライアント側コンポーネントが中間層に配置されているビジネスオブジェクトと通信できるように、ビジネスオブジェクトプロキシが必要です。 プロキシは、プロセスまたはコンピューターの境界を越えて、アプリケーションの[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)データのパッケージ化、unpackaging、および転送 (マーシャリング) を容易にします。  
   
- リモート データ サービスを使用して、 **rds.DataSpace**オブジェクトの[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)ビジネス オブジェクトのプロキシを作成します。 中間層ビジネス オブジェクトの対応のインスタンスが作成されるたびに、ビジネス オブジェクトのプロキシが動的に作成されます。 リモート データ サービスには、次のプロトコルがサポートされています。HTTP、HTTPS (HTTP Secure Sockets)、DCOM、およびインプロセス (クライアント コンポーネントと同じコンピューター上にビジネス オブジェクト)。  
-  
-> [!NOTE]
->  RDS の「ステートレス」方法で動作時に、 **rds.DataSpace**オブジェクトが HTTP または HTTPS プロトコルを使用します。 つまり、サーバーに応答が返された後にクライアント要求に関する内部情報は破棄されます。  
+ リモートデータサービスは RDS を使用**します。** ビジネスオブジェクトプロキシを作成するための、領域スペースオブジェクトの[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッド。 ビジネスオブジェクトプロキシは、対応する中間層ビジネスオブジェクトのインスタンスが作成されるたびに動的に作成されます。 リモートデータサービスは、HTTP、HTTPS (HTTP Secure Sockets)、DCOM、およびインプロセス (クライアントコンポーネントとビジネスオブジェクトが同じコンピューターに存在する) のプロトコルをサポートしています。  
   
 > [!NOTE]
->  ビジネス オブジェクトは、ビジネス オブジェクトのプロキシの有効期間にわたって存在に見えますが、ビジネス オブジェクトは、要求に応答が送信されるまでの間だけに実際に存在します。 要求が発行されたとき (つまり、メソッドが呼び出されるビジネス オブジェクトで)、プロキシ サーバーへの新しい接続を開くし、サーバーは、ビジネス オブジェクトの新しいインスタンスを作成します。 ビジネス オブジェクトは、要求に応答して、サーバーが、ビジネス オブジェクトを破棄して、接続を閉じます。  
+>  Rds は、Rds が "ステートレス" な方法で動作**します。領域間オブジェクトは**、HTTP または HTTPS プロトコルを使用します。 つまり、サーバーが応答を返すと、クライアント要求に関する内部情報は破棄されます。  
   
 > [!NOTE]
->  この動作により、ビジネス オブジェクトのプロパティまたは変数を使用して、1 つの要求からデータを渡すことはできません。 ファイルやメソッドの引数、状態データを永続化など、他のメカニズムを採用する必要があります。  
+>  ビジネスオブジェクトは、ビジネスオブジェクトプロキシの有効期間中は存在するように見えますが、ビジネスオブジェクトが実際に存在するのは、要求に応答が送信されるまでの間だけです。 要求が発行されると (つまり、ビジネスオブジェクトでメソッドが呼び出されると)、プロキシはサーバーへの新しい接続を開き、サーバーはビジネスオブジェクトの新しいインスタンスを作成します。 ビジネスオブジェクトが要求に応答すると、サーバーはビジネスオブジェクトを破棄し、接続を閉じます。  
   
- クラス ID を**rds.DataSpace**オブジェクトが BD96C556 65A3-11 D 00C04FC29E36 983A 0。  
+> [!NOTE]
+>  この動作は、ビジネスオブジェクトのプロパティまたは変数を使用して、ある要求から別の要求にデータを渡すことができないことを意味します。 状態データを永続化するには、ファイルやメソッドの引数など、他のメカニズムを使用する必要があります。  
   
- **DataSpace**オブジェクトがスクリプトを実行します。  
+ RDS のクラス ID **。領域スペース**オブジェクトは BD96C556-65A3-11D0-983A-00C04FC29E36 です。  
   
- このセクションには、次のトピックが含まれています。  
+ オブジェクト**スペース**オブジェクトは、スクリプト作成には安全です。  
+  
+ ここでは、次のトピックについて説明します。  
   
 -   [DataSpace オブジェクト (RDS) のプロパティ、メソッド、およびイベント](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
 
 

@@ -1,8 +1,10 @@
 ---
-title: 電子メールの設定 - Reporting Services のネイティブ モード (Configuration Manager) | Microsoft Docs
-ms.date: 06/01/2016
+title: SSRS ネイティブ モードでの電子メールの設定 (構成マネージャー) | Microsoft Docs
+description: SQL Server Reporting Services には電子メール配信拡張機能があり、電子メールを使用してレポートを配布できます。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
@@ -11,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c371558070ee6ef41afe167e3be2ed4adbd80cc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513604"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74866005"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)
-Reporting Services にはメール配信拡張機能があり、メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。
+SQL Server Reporting Services には電子メール配信拡張機能があり、電子メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。
 
 既定では、レポート サーバーの電子メール配信拡張機能は構成されていません。 Reporting Services 構成マネージャーを使用して、この拡張機能の最低限の構成を行う必要があります。 詳細なプロパティを設定するには、RSReportServer.config ファイルを編集します。 この拡張機能を使用するようにレポート サーバーを構成できない場合は、代わりに共有フォルダーにレポートを配信できます。 詳細については、「Reporting Services でのファイル共有の配信」をご覧ください。
 
@@ -41,12 +43,12 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 
 - SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するだけの場合は、Reporting Services 構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。
 
-- (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 構成ファイルの検索と変更の詳細については、SQL Server オンライン ブックの「 [Reporting Services の構成ファイル (RSreportserver.config) の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) 」をご覧ください。
+- (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 構成ファイルの検索と変更の詳細については、「[Reporting Services の構成ファイル (RSreportserver.config) の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。
 
 > [!NOTE] 
 > レポート サーバーの電子メール設定は CDO に基づいています。 特定の設定に関する詳細については、CDO の製品マニュアルを参照してください。
 
-## <a name="a-namersconfigmanconfigure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Reporting Services 構成マネージャーを使用してレポート サーバーのメールを構成する
+## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Reporting Services 構成マネージャーを使用してレポート サーバーのメールを構成する
 
 1. Reporting Services 構成マネージャーを起動して、レポート サーバー インスタンスに接続します。
 
@@ -77,7 +79,7 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 6. 必要に応じて、rsreportserver.config 内でメール構成用に追加フィールドを調整することもできます。
 
 ## <a name="example-report-server-e-mail-configuration"></a>レポート サーバーの電子メール構成の例
-次の例は、リモート SMTP サーバーに対する RSreportserver.config ファイルでの設定を示しています。 設定に関する説明と有効な値については、SQL Server オンライン ブックの「 [Rsreportserver.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」をご覧ください。
+次の例は、リモート SMTP サーバーに対する RSreportserver.config ファイルでの設定を示しています。 設定に関する説明と有効な値を読み取るには、「[Rsreportserver.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。
 
 ```
 <RSEmailDPConfiguration>
@@ -215,12 +217,12 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
      
      既定の場所は、 *C:\inetpub\mailroot\Pickup*になります。
      
-16. `<From>`を設定します。 これには、メール メッセージの **[送信者]** 行に使用する値を設定します。
+16. `<From>` を設定します。 これには、メール メッセージの **[送信者]** 行に使用する値を設定します。
      
 17. ファイルを保存します。
   
 ## <a name="see-also"></a>参照  
-[Reporting Services 構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Reporting Services Configuration Manager (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 [Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   

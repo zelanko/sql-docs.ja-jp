@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dd7dab4f59aa5667b72e51a065a7698e5f76c697
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9202cf969f87c23af7af7d68b01b4a42cff167d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101738"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298706"
 ---
 # <a name="how-to-work-with-cdc-services"></a>CDC Service の操作方法
 

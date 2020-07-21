@@ -1,6 +1,7 @@
 ---
-title: 例:Windows 認証でのデータベース ミラーリングの設定 (T-SQL) | Microsoft Docs
-ms.custom: ''
+title: Windows 認証でのデータベース ミラーリングの構成 (T-SQL)
+description: この記事には、SQL Server で Transact-SQL による Windows 認証を使用して、ミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する例が含まれています。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b30804974d472f06dc2ab5971d4d3f7674c61e16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 343b04fe9f548c8f3c1274384c731cf6b74c1f95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754656"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>例:Windows 認証を使用したデータベース ミラーリングの設定 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>例:Windows 認証を使用したデータベース ミラーリングの構成 (Transact-SQL)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   この例では、Windows 認証を使用してミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する場合に必要なすべての段階を示しています。 このトピックの例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用する代わりに、データベース ミラーリング セキュリティ構成ウィザードを使用してデータベース ミラーリングを設定することもできます。 詳細については、このトピックの後半の「 [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)」を参照してください。  
   
 ## <a name="prerequisite"></a>前提条件  
@@ -144,7 +145,7 @@ GO
     GO  
     ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

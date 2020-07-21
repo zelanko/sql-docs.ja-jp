@@ -25,13 +25,13 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 890c84330005c3d9f6c4b30a06662d67dfef46f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67941658"
 ---
-# <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
+# <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "67941658"
 SET SHOWPLAN_XML { ON | OFF }
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 SET SHOWPLAN_XML は、解析時ではなく実行時に設定されます。
 
@@ -85,7 +85,7 @@ SELECT、INSERT、UPDATE、DELETE、EXEC "*ストアド プロシージャ*"、E
 
 DDL、USE "*データベース名*"、SET、DECLARE、動的 SQL など、その他すべてのステートメントでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限だけが必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の 2 つのステートメントは、SET SHOWPLAN_XML の設定を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリ内のインデックスの使用状況を分析し最適化する方法を示しています。
 

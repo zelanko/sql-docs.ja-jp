@@ -1,5 +1,5 @@
 ---
-title: データ ソース オブジェクトを永続化 |Microsoft Docs
+title: 保存されるデータ ソース オブジェクト | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 584032b958494e6b33b729a8d0657a4ee544a86e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056358"
 ---
 # <a name="persisted-data-source-objects"></a>保存されるデータ ソース オブジェクト
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは永続化されたデータ ソース オブジェクトをサポート、 **IPersistFile**インターフェイス。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **IPersistFile**インターフェイスを使用して、永続化されたデータソースオブジェクトをサポートします。  
   
-## <a name="examples"></a>使用例  
- **A.データ ソースの初期化の保存:**  
+## <a name="examples"></a>例  
+ **A. データ ソースの初期化の保存 :**  
   
  次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名は、関数の *pLocation* パラメーターと *pDatasource* パラメーターで受け取ります。  
   
@@ -137,7 +136,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B.保存されたデータ ソースの初期化の使用:**  
+ **B. 保存されたデータ ソースの初期化の使用 :**  
   
  次の例では、保存されたデータ ソース オブジェクトを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとパスワードを指定する初期化プロパティを追加します。  
   
@@ -227,7 +226,7 @@ HRESULT InitFromPersistedDS
   
  **IPersistFile::Save** メソッドは、**IDBInitialize::Initialize** の呼び出しの前または後に呼び出すことができます。 **IDBInitialize::Initialize** から正常に制御が戻った後にこのメソッドを呼び出すと、有効なデータ ソース指定が確実に保存されます。  
   
-## <a name="see-also"></a>関連項目  
- [データ ソース オブジェクト&#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+## <a name="see-also"></a>参照  
+ [データ ソース オブジェクト &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

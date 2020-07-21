@@ -1,5 +1,5 @@
 ---
-title: Optimize プロパティの例 (vc++) |Microsoft Docs
+title: Optimize プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc8268f65e8bd7206ff0be1423785e1862147bed
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931838"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762075"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize プロパティの例 (VC++)
-この例では、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト動的**最適化**プロパティ。 **Zip**のフィールド、**作成者**テーブルに、 **Pubs**データベースのインデックス付けされていません。 設定、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**上、 **zip**フィールドのパフォーマンスを向上させるインデックスの構築に ADO の承認、 [を見つける](../../../ado/reference/ado-api/find-method-ado.md)メソッド。  
+この例では、 [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの dynamic **Optimize**プロパティを示します。 **Pubs**データベースの Authors テーブルの**zip**フィールドにはインデックスが**作成**されません。 **Zip**フィールドの[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**に設定すると、ADO によって、 [Find](../../../ado/reference/ado-api/find-method-ado.md)メソッドのパフォーマンスを向上させるインデックスが作成されます。  
   
 ## <a name="example"></a>例  
   
@@ -132,7 +132,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto 3 Silver-2-xクランベリー クリーク CA**   
-## <a name="see-also"></a>関連項目  
+ **Akiko Yokomoto 3 シルバー Ct Walnut ドーソンクリーク CA**   
+## <a name="see-also"></a>参照  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Optimize プロパティ - 動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: 例:データベース (単純復旧モデル) の段階的な部分復元 |Microsoft Docs
+title: データベースの段階的な部分復元 (単純復旧モデル) の例 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9834b14a-4e56-4654-b190-c2a38624b6b4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c2e44148d1cd250e575b46f83b7d801d40fc47b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69de84fa2ff3a853eb9926549ad4859d2f1ae38e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62921610"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958112"
 ---
 # <a name="example-piecemeal-restore-of-database-simple-recovery-model"></a>例:データベースの部分復元 (単純復旧モデル)
   段階的な部分復元シーケンスでは、プライマリ ファイル グループからすべての読み取り/書き込みセカンダリ ファイル グループの順に、ファイル グループ レベルで段階的にデータベースが復元および復旧されます。  
@@ -63,7 +62,7 @@ ms.locfileid: "62921610"
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;完全復旧モデル&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ## <a name="see-also"></a>参照  
- [オンライン復元 &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [段階的な部分復元 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  

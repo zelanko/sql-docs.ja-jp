@@ -28,18 +28,18 @@ helpviewer_keywords:
 - time [SQL Server], validate
 - ISDATE function [SQL Server]
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1385a80df97bc02af60cb5c151424dc79bd03913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c17165c22130bd92c8c0cdd96d5f9cb7c5c222c3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109454"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999835"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   *expression* が有効な **date**、**time**、または **datetime** 値の場合は 1 を返し、それ以外の場合は 0 を返します。  
   
@@ -62,7 +62,7 @@ ISDATE ( expression )
 ## <a name="return-type"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ISDATE は、[CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数と共に使用され、CONVERT スタイル パラメーターが指定されており、スタイルが 0、100、9、または 109 と等しくない場合にのみ決定的関数になります。  
   
  ISDATE の戻り値は、[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)、および [default language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)の設定に依存します。  
@@ -80,7 +80,7 @@ ISDATE ( expression )
 |3 を超える秒の有効桁数のスケールを持つ任意の値 (.0000 から 0000000...n)。 ISDATE は、*expression* が **datetime2** 値の場合は 0 を返し、*expression* が有効な **datetime** 値の場合は 1 を返します。|0|  
 |有効な日付と無効な値を組み合わせた任意の値 (1995-10-1a など)。|0|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. ISDATE を使用して datetime 式が有効かどうかをテストする  
  次の例は、`ISDATE` を使用して、文字列が有効な **datetime** かどうかをテストする方法を示しています。  
@@ -140,7 +140,7 @@ SET LANGUAGE us_english;
 SET DATEFORMAT mdy;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>C. ISDATE を使用して datetime 式が有効かどうかをテストする  
  次の例は、`ISDATE` を使用して、文字列が有効な **datetime** かどうかをテストする方法を示しています。  

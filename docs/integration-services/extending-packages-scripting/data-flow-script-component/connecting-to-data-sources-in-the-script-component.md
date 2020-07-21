@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], connecting to data sources
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ce23e61be7264ecb958604681cd7271446540eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82ec2ddf98780a7230ccc123e3de152ad643669a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104014"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296970"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>スクリプト コンポーネントでのデータ ソースへの接続
 

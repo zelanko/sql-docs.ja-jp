@@ -1,5 +1,5 @@
 ---
-title: メソッドをサポートしています |。Microsoft Docs
+title: Method | をサポートします。Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3fbfbf28c430fb698f5e024fe3359027c84512c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936702"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765363"
 ---
 # <a name="supports-method"></a>Supports メソッド
-指定したかどうかを判断します[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、特定の種類の機能をサポートしています。  
+指定した[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトが特定の種類の機能をサポートするかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,22 +34,22 @@ boolean = recordset.Supports(CursorOptions )
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 返します、**ブール**で識別されるすべての機能かどうかを示す値、 *CursorOptions*引数が、プロバイダーによってサポートされています。  
+ *カーソルオプション*引数によって識別されるすべての機能がプロバイダーによってサポートされているかどうかを示す**ブール**値を返します。  
   
 #### <a name="parameters"></a>パラメーター  
  *CursorOptions*  
- A**長い**の 1 つまたは複数で構成される式[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)値。  
+ 1つ以上の[カーソルオプションの列挙](../../../ado/reference/ado-api/cursoroptionenum.md)値で構成される**Long**式です。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**サポート**機能の種類を特定する方法、**レコード セット**サポートしています。 場合、**レコード セット**オブジェクトが定数に対応するが、機能をサポートしている*CursorOptions*、**サポート**メソッドを返します**True。** . 返しますそれ以外の場合、 **False**します。  
+## <a name="remarks"></a>Remarks  
+ **サポート**メソッドを使用して、**レコードセット**オブジェクトがサポートする機能の種類を決定します。 対応する定数が*カーソルオプション*に含まれる機能を**レコードセット**オブジェクトがサポートしている場合、 **supports**メソッドは**True**を返します。 それ以外の場合は**False**を返します。  
   
 > [!NOTE]
->  ただし、**サポート**メソッドが返す可能性があります**True**の特定の機能が保証されないこと、プロバイダーが利用できる機能は、あらゆる状況下で。 **サポート**メソッドは単に特定の条件が満たされたと仮定した場合で、指定された機能をプロバイダーがサポートできるかどうかを返します。 など、**サポート**メソッドを示します、**レコード セット**オブジェクトが、カーソルが一部の列は更新できない複数のテーブル結合に基づいている場合でも、更新プログラムをサポートします。  
+>  **サポート**メソッドは特定の機能に対して**True**を返す場合がありますが、プロバイダーがすべての状況でこの機能を使用できるようにすることは保証されません。 **サポート**メソッドは、特定の条件が満たされていることを前提として、プロバイダーが指定された機能をサポートできるかどうかを単純に返します。 たとえば、**サポート**されているメソッドは、カーソルが複数のテーブルの結合に基づいている場合でも、**レコードセット**オブジェクトが更新をサポートしていることを示している可能性があります。この場合、更新できない列もあります。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Supports メソッドの例 (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [Supports メソッドの例 (vc++)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
+ [Supports メソッドの例 (VC + +)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

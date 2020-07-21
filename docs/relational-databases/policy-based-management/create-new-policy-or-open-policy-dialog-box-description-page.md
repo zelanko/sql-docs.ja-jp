@@ -1,6 +1,7 @@
 ---
-title: '[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ | Microsoft Docs'
-ms.custom: ''
+title: '[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ'
+description: SQL Server のポリシーベース管理の [新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,31 +11,31 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d95b4eaeb42f2f7a15de22b58a1e7c42a0893a1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46425eba2f2334ad6fe5bf70a9067bf4ce8fd48c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749503"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーに説明と詳細情報を追加できます。  
   
 ## <a name="options"></a>オプション  
  **カテゴリ**  
  新しいポリシーを作成する場合は、ポリシー カテゴリを選択します。  
   
- **[説明]**  
+ **説明**  
  ポリシーの説明を入力します。  
   
- **追加のヘルプ ハイパーリンク:表示するテキスト**  
+ **[追加のヘルプ ハイパーリンク: 表示するテキスト]**  
  ポリシーを実行している場合は、 **[結果の詳細ビュー]** ページに追加のヘルプ ハイパーリンクが表示されます。 ハイパーリンクとして表示するテキストを入力します。  
   
- **追加のヘルプ ハイパーリンク:アドレス**  
+ **[追加のヘルプ ハイパーリンク: アドレス]**  
  ユーザーが **[結果の詳細ビュー]** ページに表示されるハイパーリンク テキストをクリックしたときに開く Web ページのハイパーリンクを入力します。  
   
- **追加のヘルプ ハイパーリンク:テスト リンク**  
+ **[追加のヘルプ ハイパーリンク: リンクのテスト]**  
  クリックすると、リンクの有効性をテストするハイパーリンクが開きます。  
   
  **作成日**  

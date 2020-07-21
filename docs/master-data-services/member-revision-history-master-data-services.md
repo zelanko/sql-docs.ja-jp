@@ -1,5 +1,5 @@
 ---
-title: メンバー リビジョン履歴 (マスター データ サービス) | Microsoft Docs
+title: メンバー リビジョン履歴
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0ee2921a8e7178385651dc52c48b7bf82866dc49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ab7e110b66f27ecb738585215567e1aa96f9788
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812717"
 ---
 # <a name="member-revision-history-master-data-services"></a>メンバー リビジョン履歴 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   メンバー リビジョン履歴は、エンティティのトランザクション ログの種類がメンバーの場合、メンバーに変更が加えられるたびに記録されます。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68092579"
 |メンバー リビジョン履歴のロールバック|[メンバー リビジョン履歴のロールバック (マスター データ サービス)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
 ## <a name="see-also"></a>関連項目  
- [モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)   
+ [モデル &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [システム設定 (マスター データ サービス)](../master-data-services/system-settings-master-data-services.md)  
   
   

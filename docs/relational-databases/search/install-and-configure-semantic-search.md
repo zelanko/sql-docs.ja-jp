@@ -12,20 +12,20 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c6bfd48773c066ffc29600156475495c0c2a6521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50686881f950d16fb0fc7b5f8bb2dc5a3c63c1c1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629383"
 ---
 # <a name="install-and-configure-semantic-search"></a>セマンティック検索のインストールと構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   統計的セマンティック検索の前提条件と、これらをインストールまたは確認する方法について説明します。  
   
 ## <a name="install-semantic-search"></a>セマンティック検索のインストール  
   
-###  <a name="HowToCheckInstalled"></a> セマンティック検索がインストールされているかどうかを確認する  
+###  <a name="check-whether-semantic-search-is-installed"></a><a name="HowToCheckInstalled"></a> セマンティック検索がインストールされているかどうかを確認する  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md) メタデータ関数の **IsFullTextInstalled** プロパティに対してクエリを実行します。  
   
  戻り値 1 は、データベースに対してフルテキスト検索とセマンティック検索がインストールされていることを示します。戻り値 0 は、フルテキスト検索とセマンティック検索がインストールされていないことを示します。  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> セマンティック検索のインストール  
+###  <a name="install-semantic-search"></a><a name="BasicsSemanticSearch"></a> セマンティック検索のインストール  
  セマンティック検索をインストールするには、SQL Server のセットアップ時に、 **[インストールする機能]** ページで **[検索のためのフルテキスト抽出とセマンティック抽出]** を選択します。  
   
  セマンティック検索はフルテキスト検索に依存します。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つのオプション機能は一緒にインストールされます。  
@@ -43,7 +43,7 @@ GO
 ## <a name="install-the-semantic-language-statistics-database"></a>セマンティック言語統計データベースをインストールする  
  セマンティック検索は、別途、"セマンティック言語統計データベース" と呼ばれる外部の機能に依存しています。 このデータベースには、セマンティック検索で必要な統計的言語モデルが含まれています。 1 つのセマンティック言語統計データベースには、セマンティック インデックス作成でサポートされるすべての言語の言語モデルが含まれています。  
   
-###  <a name="HowToCheckDatabase"></a> セマンティック言語統計データベースがインストールされているかどうかを確認する  
+###  <a name="check-whether-the-semantic-language-statistics-database-is-installed"></a><a name="HowToCheckDatabase"></a> セマンティック言語統計データベースがインストールされているかどうかを確認する  
  カタログ ビュー [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md) に対してクエリを実行します。  
   
  実行対象のインスタンスにセマンティック言語統計データベースがインストールされ登録されている場合、クエリ結果には、そのデータベースに関する単一行から成る情報が格納されています。  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> セマンティック言語統計データベースをインストール、アタッチ、および登録する  
+###  <a name="install-attach-and-register-the-semantic-language-statistics-database"></a><a name="HowToInstallModel"></a> セマンティック言語統計データベースをインストール、アタッチ、および登録する  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ プログラムでは、セマンティック言語統計データベースはインストールされません。 セマンティック インデックス作成の前提条件であるセマンティック言語統計データベースをセットアップするには、次の手順を実行します。  
   
  **1.セマンティック言語統計データベースをインストールします。**  
@@ -100,7 +100,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
 
-##  <a name="reqinstall"></a> セマンティック言語統計データベースの要件と制限  
+##  <a name="requirements-and-restrictions-for-the-semantic-language-statistics-database"></a><a name="reqinstall"></a> セマンティック言語統計データベースの要件と制限  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでアタッチおよび登録できるセマンティック言語統計データベースは 1 つのみです。  
   
@@ -112,7 +112,7 @@ GO
   
 -   セマンティック言語統計データベースはデタッチまたは削除することができます。 アクティブなインデックス作成操作があり、データベースが読み取りロックされている場合、デタッチおよび削除の操作は失敗またはタイムアウトになります。これは、従来と同じ動作です。 データベースが削除された後は、セマンティック インデックス作成操作が失敗します。  
  
-##  <a name="HowToUnregister"></a> セマンティック言語統計データベースを削除する  
+##  <a name="remove-the-semantic-language-statistics-database"></a><a name="HowToUnregister"></a> セマンティック言語統計データベースを削除する  
 
 ###  <a name="unregister-detach-and-remove-the-semantic-language-statistics-database"></a>セマンティック言語統計データベースを登録解除、デタッチ、および削除する 
 
@@ -143,7 +143,7 @@ GO
   
 ## <a name="install-optional-support-for-newer-document-types"></a>新しいドキュメントの種類のオプション サポートをインストールする  
   
-###  <a name="office"></a> Microsoft Office およびその他の Microsoft ドキュメントの種類の最新のフィルターをインストールする  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の最新のワード ブレーカーとステマーがインストールされますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office ドキュメントおよびその他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ドキュメントの種類の最新のフィルターはインストールされません。 これらのフィルターは、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office およびその他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アプリケーションで作成されたドキュメントのインデックスを作成するために必要です。 最新のフィルターをダウンロードするには、「 [Microsoft Office 2010 フィルター パック](https://go.microsoft.com/fwlink/?LinkId=218293)」を参照してください。 (Office 2013 または Office 2016 用のフィルター パック リリースはありません)。
+###  <a name="install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a> Microsoft Office およびその他の Microsoft ドキュメントの種類の最新のフィルターをインストールする  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の最新のワード ブレーカーとステマーがインストールされますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office ドキュメントおよびその他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ドキュメントの種類の最新のフィルターはインストールされません。 これらのフィルターは、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office およびその他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アプリケーションで作成されたドキュメントのインデックスを作成するために必要です。 最新のフィルターをダウンロードするには、「 [Microsoft Office 2010 フィルター パック](https://www.microsoft.com/download/details.aspx?id=17062)」を参照してください。 (Office 2013 または Office 2016 用のフィルター パック リリースはありません)。
   
   

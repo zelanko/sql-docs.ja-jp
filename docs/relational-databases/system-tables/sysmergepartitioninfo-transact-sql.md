@@ -1,5 +1,5 @@
 ---
-title: sysmergepartitioninfo (TRANSACT-SQL) |Microsoft Docs
+title: sysmergepartitioninfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,41 +15,41 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepartitioninfo system table
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c188cf1ad72033976136496914844c14c3a35867
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 44f44ede09eaf6eabfee9ef6b240e599c8eec744
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68029830"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889253"
 ---
-# <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  各アーティクルのパーティションに情報を提供します。 ローカル データベースに定義されているマージ アーティクルごとに 1 行のデータを格納します。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
+  各アーティクルのパーティションに関する情報を提供します。 ローカルデータベースで定義されているマージアーティクルごとに1行のデータを格納します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**artid**|**uniqueidentifier**|指定したアーティクルの一意な ID 番号です。|  
-|**pubid**|**uniqueidentifier**|このパブリケーションの一意な識別番号パブリケーションが追加されたときに生成されます。|  
-|**partition_view_id**|**int**|このテーブルに関するパーティション ビューの ID です。 記事の別のパーティション id に属している行ごとのマッピングを表示します。|  
+|**artid**|**uniqueidentifier**|指定されたアーティクルの一意の識別番号。|  
+|**pubid**|**uniqueidentifier**|このパブリケーションの一意な識別番号です。パブリケーションが追加されるときに生成されます。|  
+|**partition_view_id**|**int**|このテーブルに関するパーティション ビューの ID です。 ビューには、アーティクル内の各行と、それが属している別のパーティション id とのマッピングが表示されます。|  
 |**repl_view_id**|**int**|追加されます。|  
 |**partition_deleted_view_rule**|**nvarchar (4000)**|マージ レプリケーション トリガー内で、列の古い値に基づいて削除または更新された各行のパーティション ID を取得するために使用される SQL ステートメントです。|  
-|**partition_inserted_view_rule**|**nvarchar (4000)**|マージ レプリケーション トリガー内で挿入または更新された各行のパーティション ID を取得するために使用する SQL ステートメントは、新しい列の値に基づいています。|  
-|**membership_eval_proc_name**|**sysname**|内の行の現在のパーティション Id を評価するプロシージャの名前**MSmerge_contents**します。|  
-|**column_list**|**nvarchar (4000)**|アーティクル内でレプリケートされた列のコンマ区切り一覧。|  
+|**partition_inserted_view_rule**|**nvarchar (4000)**|マージレプリケーショントリガー内で使用される SQL ステートメントは、新しい列値に基づいて挿入または更新された各のパーティション ID を取得します。|  
+|**membership_eval_proc_name**|**sysname**|**MSmerge_contents**内の行の現在のパーティション id を評価するプロシージャの名前。|  
+|**column_list**|**nvarchar (4000)**|アーティクルでレプリケートされた列のコンマ区切りの一覧です。|  
 |**column_list_blob**|**nvarchar (4000)**|Binary Large Object の列を含む、アーティクル内でレプリケートされた列のコンマ区切りの一覧です。|  
-|**expand_proc**|**sysname**|パーティションを新たに挿入された親行のすべての子行とすると、パーティションの変更が発生したかが削除された親行の Id を再評価するプロシージャの名前。|  
-|**logical_record_parent_nickname**|**int**|論理レコード内の、指定されたアーティクルのトップレベルにある親のニックネームです。|  
+|**expand_proc**|**sysname**|新しく挿入された親行のすべての子行のパーティション Id を再評価するプロシージャの名前。または、パーティションの変更または削除が行われた親行の場合。|  
+|**logical_record_parent_nickname**|**int**|論理レコード内の特定のアーティクルの最上位レベルの親のニックネーム。|  
 |**logical_record_view**|**int**|それぞれの子の rowguid に対応する、トップレベルにある親アーティクルの rowguid を出力するビューです。|  
-|**logical_record_deleted_view_rule**|**nvarchar (4000)**|ような**logical_record_view**を除き、it の"deleted"テーブル内の子行の update および delete トリガーを示しています。|  
-|**logical_record_level_conflict_detection**|**bit**|競合を、論理レコード レベルと、行または列レベルのどちらで検出するかを示します。<br /><br /> **0** = 行レベルまたは列レベルの競合検出を使用します。<br /><br /> **1** = 論理レコードの競合検出を使用すると、パブリッシャーでの行の変更と、別の変更の同じ論理行レコードはサブスクライバー側では、競合として処理します。<br /><br /> この値が**1**、論理レコード レベルの競合解決だけを使用できます。|  
-|**logical_record_level_conflict_resolution**|**bit**|競合を、論理レコード レベルと、行または列レベルのどちらで解決するかを示します。<br /><br /> **0** = 行レベルまたは列レベルの解決が使用されます。<br /><br /> **1** = 場合に、競合を優先されなかった論理レコード全体に優先されなかった論理レコード全体が上書きされます。<br /><br /> 値**1**両方論理レコード レベルの検出と、行または列レベルの検出に使用することができます。|  
-|**partition_options**|**tinyint**|アーティクル内のデータをパーティション分割する方法を定義します。パーティション分割することにより、すべての行が 1 つのパーティションまたは 1 つのサブスクリプションに属している場合に、パフォーマンスを最適化できます。 *partition_options*値は次のいずれかを指定できます。<br /><br /> **0** =、フィルタ リング、情報の記事が静的か、つまり「重複する」パーティションまたは各パーティションのデータの一意なサブセットは生成されません。<br /><br /> **1** = パーティションが重複していると、サブスクライバーで実行された DML 更新は、行が属するパーティションを変更できません。<br /><br /> **2**記事、重複しないパーティションが得られますが、複数のサブスクライバーが同じパーティションを受け取ることができます = フィルター選択します。<br /><br /> **3** =、フィルタ リング、情報の記事には、サブスクリプションごとに固有の重複しないパーティションが得られます。|  
+|**logical_record_deleted_view_rule**|**nvarchar (4000)**|**Logical_record_view**に似ていますが、update トリガーと delete トリガーの "deleted" テーブルに子行が表示される点が異なります。|  
+|**logical_record_level_conflict_detection**|**bit**|競合を、論理レコード レベルと、行または列レベルのどちらで検出するかを示します。<br /><br /> **0** = 行レベルまたは列レベルの競合検出が使用されます。<br /><br /> **1** = 論理レコードの競合検出が使用されます。この場合、パブリッシャーでの行の変更と、サブスクライバーでの同じ論理レコードの変更は競合として処理されます。<br /><br /> この値が**1**の場合は、論理レコードレベルの競合解決だけを使用できます。|  
+|**logical_record_level_conflict_resolution**|**bit**|競合を、論理レコード レベルと、行または列レベルのどちらで解決するかを示します。<br /><br /> **0** = 行または列レベルの解決が使用されます。<br /><br /> **1** = 競合が発生した場合、勝者からの論理レコード全体が、損失側の論理レコード全体を上書きします。<br /><br /> 値**1**は、論理レコードレベルの検出と、行レベルまたは列レベルの検出の両方で使用できます。|  
+|**partition_options**|**tinyint**|アーティクル内のデータをパーティション分割する方法を定義します。これにより、すべての行が1つのパーティションまたは1つのサブスクリプションのみに属している場合に、パフォーマンスを最適化できます。 *partition_options* 、次のいずれかの値を指定できます。<br /><br /> **0** = アーティクルのフィルター選択は静的であるか、またはパーティションごとに一意のデータのサブセットを生成しません。つまり "重複する" パーティションです。<br /><br /> **1** = パーティションは重複しており、サブスクライバーで行われた DML の更新では、行が属するパーティションを変更することはできません。<br /><br /> **2** = アーティクルのフィルター選択によって重複しないパーティションが生成されますが、複数のサブスクライバーが同じパーティションを受け取ることができます。<br /><br /> **3** = アーティクルのフィルター選択により、各サブスクリプションで一意な重複しないパーティションが生成されます。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

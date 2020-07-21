@@ -1,5 +1,6 @@
 ---
 title: SQL Server のインスタンスへの機能の追加 (セットアップ) | Microsoft Docs
+description: この記事では、インスタンス対応機能を SQL Server 2019 のインスタンスに追加する手順について詳しく説明します。
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -14,22 +15,22 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3ddd9eba40cc7df81b0e86df7733d840bccace2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051204"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899693"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>SQL Server のインスタンスへの機能の追加 (セットアップ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
  この記事では、機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスに追加する手順について詳しく説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントまたはサービスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに固有のものがあります。 これらは、インスタンス対応とも呼ばれます。 また、これらをホストしているインスタンスとバージョンが同じで、そのインスタンスにのみ使用されます。 インスタンス対応のコンポーネントがまだインストールされていない場合は、共有コンポーネントと共に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに追加できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
   
  コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに機能を追加する方法については、「[コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」をご覧ください。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  続行する前に、「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」の記事をご覧ください。  
   
 > [!NOTE]  
@@ -40,9 +41,9 @@ ms.locfileid: "68051204"
   
 ## <a name="procedures"></a>手順  
   
-#### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>コマンド プロンプトから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-add-features-to-an-instance-of-sscurrent"></a>コマンド プロンプトから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、setup.exe をダブルクリックします。 [ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ] ダイアログ ボックスが表示されます。必須コンポーネントをインストールする場合は [!INCLUDE[clickOK](../../includes/clickok-md.md)] **をインストールしない場合は** [キャンセル] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をクリックします。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、setup.exe をダブルクリックします。 [ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ] ダイアログ ボックスが表示されます。必須コンポーネントをインストールする場合は [!INCLUDE[clickOK](../../includes/clickok-md.md)]**をインストールしない場合は** [キャンセル] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をクリックします。  
   
 2.  インストール ウィザードによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが起動されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既存のインスタンスに新しい機能を追加するには、左側のナビゲーション領域の **[インストール]** をクリックし、[**新規[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** をクリックします。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "68051204"
   
      詳細については、「 [データベース エンジンの構成 - データ ディレクトリ](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)」を参照してください。  
   
-15. [!INCLUDE[ssDE](../../includes/ssde-md.md)][の構成 - FILESTREAM] ページを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する FILESTREAM を有効にします。 FILESTREAM の詳細については、「 [データベース エンジンの構成 - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)」を参照してください。 続行するには、[次へ] をクリックします。  
+15. [!INCLUDE[ssDE](../../includes/ssde-md.md)] [の構成 - FILESTREAM] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対する FILESTREAM を有効にします。 FILESTREAM の詳細については、「 [データベース エンジンの構成 - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)」を参照してください。 続行するには、[次へ] をクリックします。  
   
 16. [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の構成 - アカウントの準備] ページを使用して、サーバー モードと [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者権限を持つユーザーまたはアカウントを指定します。 サーバー モードによって、サーバーで使用されるメモリとストレージ サブシステムが決まります。 サーバー モードによって、実行されるソリューションの種類も異なります。 サーバーで多次元キューブ データベースを実行する場合は、既定の [多次元データおよびデータ マイニング] サーバー モード オプションを選択します。 管理者権限に関しては、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のシステム管理者を少なくとも 1 人指定する必要があります。 SQL Server セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の管理者権限を持つユーザー、グループ、またはコンピューターの一覧を編集します。 サーバー モードと管理者権限の詳細については、「 [Analysis Services の構成 - アカウントの準備](https://msdn.microsoft.com/library/169b1af2-6fe2-467f-8ca4-919f24c620ce)」を参照してください。  
   
@@ -142,7 +143,7 @@ ms.locfileid: "68051204"
   
 26. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールを構成します。  
   
 -   システムのセキュリティを向上するため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、主要なサービスと機能を個別にインストールし、アクティブ化できるようになっています。 詳細については、「 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)」を参照してください。  

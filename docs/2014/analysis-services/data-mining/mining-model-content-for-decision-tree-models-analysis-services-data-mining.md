@@ -1,5 +1,5 @@
 ---
-title: デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
+title: デシジョンツリーモデルのマイニングモデルコンテンツ (Analysis Services データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a5d8d0591c99e52071270689941adc45af7a835
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083669"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521599"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。 Microsoft デシジョン ツリー アルゴリズムは、まったく機能の異なる多様なモデルを作成できる複合アルゴリズムであることに注意してください。デシジョン ツリーでは、アソシエーションやルールのほか、線形回帰も表すことができます。 ツリーの構造は本質的には同じですが、モデルを作成した目的によって情報を解釈する方法が異なります。  
   
-##  <a name="bkmk_Top"></a> デシジョン ツリー モデルの構造について  
+##  <a name="understanding-the-structure-of-a-decision-trees-model"></a><a name="bkmk_Top"></a>デシジョンツリーモデルの構造について  
  デシジョン ツリー モデルには、モデルとそのメタデータを表す 1 つの親ノードがあります。 その親ノードの下には、選択した予測可能な属性を表す独立したツリーがあります。 たとえば、顧客が購入を行うかどうかを予測するためのデシジョン ツリー モデルを設定し、性別と収入の入力を指定した場合、モデルでは購入の属性に対して 1 つのツリーが作成され、その中に性別と収入に関連する条件で分割される多数の分岐が含まれます。  
   
  一方、その後で顧客報酬プログラムへの参加についての別の予測可能な属性を追加した場合、アルゴリズムによって、親ノードの下に 2 つの個別のツリーが作成されます。 1 つは購入についての分析を含むツリーで、もう 1 つは顧客報酬プログラムについての分析を含むツリーです。  デシジョン ツリー アルゴリズムを使用してアソシエーション モデルを作成する場合、アルゴリズムでは、予測される製品ごとの個別のツリーと、対象の属性の選択に役立つその他のすべての製品の組み合わせを含むツリーが作成されます。  
@@ -32,7 +31,7 @@ ms.locfileid: "66083669"
 > [!NOTE]  
 >  モデルに複数のツリーが含まれる場合、 **Microsoft ツリー ビューアー**で同時に表示できるツリーは 1 つだけです。 ただし、 **汎用コンテンツ ツリー ビューアー** では、同じモデル内のすべてのツリーを同時に表示することができます。  
   
- ![デシジョン ツリーのモデル コンテンツの構造体](../media/modelcontentstructure-dt.gif "デシジョン ツリーのモデル コンテンツの構造")  
+ ![デシジョン ツリーのモデル コンテンツの構造](../media/modelcontentstructure-dt.gif "デシジョン ツリーのモデル コンテンツの構造")  
   
  予測可能な属性ごとに作成されるツリーには、選択した入力列が特定の予測可能な属性の結果にどのように影響するかを示す情報が含まれます。 各ツリーの先頭に予測可能な属性を格納するノード (NODE_TYPE = 9) があり、その下に入力属性を表す一連のノード (NODE_TYPE = 10) があります。 属性は、ケース レベルの列か、入れ子になったテーブル列の値 (通常は入れ子になったテーブルの `Key` 列の値) のいずれかに対応します。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66083669"
 > [!NOTE]  
 >  連続属性のバケット方法は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で自動的に選択されますが、入力に含まれる連続値の分離方法は制御することができます。これを行うには、マイニング構造列のコンテンツの種類を `Discretized` に設定し、<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> プロパティまたは <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> プロパティを設定します。  
   
-##  <a name="bkmk_ModelContent"></a> デシジョン ツリー モデルのモデル コンテンツ  
+##  <a name="model-content-for-a-decision-trees-model"></a><a name="bkmk_ModelContent"></a> デシジョン ツリー モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、デシジョン ツリー モデルに関連する列についてのみ詳細と例を紹介します。 スキーマ行セットの汎用の列の詳細や、マイニング モデルの用語の説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
   
  MODEL_CATALOG  
@@ -157,7 +156,7 @@ ms.locfileid: "66083669"
  MSOLAP_NODE_SHORT_CAPTION  
  表示目的で使用されるラベル。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  デシジョン ツリー モデルには、Naive Bayes またはニュートラル ネットワーク モデルに含まれるマージナル統計ノードのような、モデル全体の統計を格納する独立したノードはありません。 代わりに、予測可能な属性ごとに、最上位ノードを [(すべて)] ノードとする個別のツリーが作成されます。 各ツリーは互いに独立しています。 モデルに含まれる予測可能な属性が 1 つしかない場合、ツリーは 1 つだけ、つまり [(すべて)] ノードだけになります。  
   
  出力属性を表す各ツリーは、分割を表す内部分岐 (NODE_TYPE = 3) にさらに分割されます。 それらのツリーのそれぞれに、対象の属性の分布に関する統計が含まれます。 さらに、各リーフ ノード (NODE_TYPE = 4) に、属性と値の各ペアをサポートするケース数と共に、入力属性とその値を表す統計が含まれます。 したがって、デシジョン ツリーの分岐では、ソース データに対してクエリを実行しなくても、確率やデータの分布を簡単に確認できます。 ツリーの各レベルは、必ずその直接の子ノードの合計を表します。  
@@ -171,12 +170,12 @@ ms.locfileid: "66083669"
   
  各内部ツリー ノードには、現在の分類結果から得られる結果の内訳を示すリーフ ノードが含まれます。 たとえば、Age >= 30 かつ Gender = Male を表す内部ノードがあるとします。 このグループのノードには、このカテゴリに含まれる購入した顧客または購入しなかった顧客の数が示されます。 たとえば、分類には次のようなツリーの分割が含まれます。  
   
-|内部ツリー|分割|  
+|内部ツリー|Split|  
 |-------------------|-----------|  
 |Age >= 30|Age >= 30 かつ Gender = Male|  
 ||Age >= 30 かつ Gender = Female|  
 |Age < 30|Age < 30 かつ Gender = Male|  
-||年齢\<30 かつ Gender = Female|  
+||Age \< 30 および性別 = 女性|  
   
  デシジョン ツリー モデルを使用して予測を行う場合、モデルでは、引数として指定された属性を受け取り、ツリーの下位方向にその属性のパスをたどります。 一般に、すべての予測はリーフまで進み、内部ノードは分類のためだけに使用されます。  
   
@@ -184,23 +183,23 @@ ms.locfileid: "66083669"
   
  予測可能な属性が連続する数値である場合、アルゴリズムでは、予測可能な属性と入力のリレーションシップをモデル化する回帰式の作成が試行されます。  
   
-###  <a name="NodeCaption"></a> ノードのキャプションとノードの記述  
+###  <a name="node-caption-and-node-description"></a><a name="NodeCaption"></a>ノードのキャプションとノードの説明  
  デシジョン ツリー モデルでは、ノードのキャプションとノードの記述に同様の情報が含まれます。 ただし、ノードの記述の方が含まれる情報が多く、その情報はリーフ ノードに近いほど詳細になります。 ノードのキャプションとノードの記述の文字列は、どちらもローカライズされます。  
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|親ノードを基準に特定のノードを区別する属性が表示されます。 ノードのキャプションでは、分割条件の基になる設定のサブセグメントが定義されます。 [Age] での分割した場合の例では 3 方向の分割、ノードがある 3 つの子ノードのキャプションは"[Age] < 40"、"40 < = [Age] \< 50"、"[Age] > = 50"。|  
+|**NODE_CAPTION**|親ノードを基準に特定のノードを区別する属性が表示されます。 ノードのキャプションでは、分割条件の基になる設定のサブセグメントが定義されます。 たとえば、分割が [Age] であり、3方向の分割であった場合、3つの子ノードのノードキャプションは "[Age] < 40", "40 <= [Age] \< 50", "[Age] > = 50" になります。|  
 |**NODE_DESCRIPTION**|ノードを他のノードと区別するすべての属性を示す、モデルの親ノードから始まる一覧が含まれます。 たとえば、Product name = Apple かつ Color = Red のようになります。|  
   
-###  <a name="NodeRule"></a> ノード ルールとマージナル ルール  
+###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a>ノードルールとルールの規則  
  NODE_RULE 列と MARGINAL_RULE 列には、NODE_CAPTION 列および NODE_DESCRIPTION 列と同じ情報が格納されますが、これらの列では情報が XML フラグメントとして表現されます。 ノード ルールは XML バージョンの完全なパスであるのに対し、マージナル ルールは最新の分割を示します。  
   
  XML フラグメントで表現される属性は、単純な属性または複雑な属性のいずれかになります。 単純な属性には、モデル列の名前、および属性の値が含まれます。 モデル列に入れ子になったテーブルが含まれる場合は、入れ子になったテーブルの属性は、テーブル名、キー値、および属性を連結して表現されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、バージョン 2.0 の PMML 標準規格と、入れ子になったテーブルの使用をサポートする拡張機能がサポートされています。 入れ子になったテーブルがデータに含まれている場合に PMML バージョンのモデルを生成すると、述語を含むモデル内のすべての要素に拡張機能であることを示すマークが付けられます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、バージョン2.0 の PMML 標準がサポートされ、入れ子になったテーブルの使用をサポートする拡張機能がサポートされています。 入れ子になったテーブルがデータに含まれている場合に PMML バージョンのモデルを生成すると、述語を含むモデル内のすべての要素に拡張機能であることを示すマークが付けられます。  
   
-###  <a name="bkmk_NodeDist_Discrete"></a> 不連続属性のノード分布  
+###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>不連続属性のノード分布  
  デシジョン ツリー モデルの NODE_DISTRIBUTION テーブルには、役立つ統計が含まれています。 ただし、統計の種類は、ツリーで連続属性と不連続属性のどちらを予測するかによって異なります。 ここでは、不連続属性のノード分布統計の意味について説明します。  
   
 #### <a name="attribute-name-and-attribute-value"></a>属性名と属性値  
@@ -225,7 +224,7 @@ ms.locfileid: "66083669"
 |Age < 30|40|Age < 30 かつ Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 かつ Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- すべてのモデルで、考えられる不足値を計算に含めるためにわずかな調整が行われます。 連続属性は、それぞれの値または値の範囲が状態として表される (たとえば、Age \<30、Age = 30、age > 30)、次のように確率が計算: 状態が存在する (値 = 1)、他のいくつかの状態が存在する (値 = 0)、状態が`Missing`. 不足値を反映するように確率を調整する方法の詳細については、「[Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md)」 (不足値 (Analysis Services - データ マイニング)) を参照してください。  
+ すべてのモデルで、考えられる不足値を計算に含めるためにわずかな調整が行われます。 連続属性の場合、各値または値の範囲は状態 (たとえば、Age 30) として表され、 \<30, Age = 30, and Age > 確率は次のように計算されます。状態が存在する (値 = 1)、他の状態が存在する (値 = 0)、状態は `Missing` です。 不足値を反映するように確率を調整する方法の詳細については、「[Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md)」 (不足値 (Analysis Services - データ マイニング)) を参照してください。  
   
  各ノードの確率は、次のように分布からほぼ直接的に計算されます。  
   
@@ -240,19 +239,19 @@ ms.locfileid: "66083669"
   
  連続値での分散の計算方法の詳細については、「[線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)」を参照してください。  
   
-#### <a name="value-type"></a>値の型  
+#### <a name="value-type"></a>値型  
  値の型の列には、NODE_DISTRIBUTION テーブル内の他の列で指定された数値の意味に関する情報が示されます。 クエリで値の型を使用すると、入れ子になったテーブルから特定の行を取得できます。 例については、「 [デシジョン ツリー モデルのクエリ例](decision-trees-model-query-examples.md)」を参照してください。  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> 列挙に含まれる型のうち、分類ツリーでは以下の型が使用されます。  
   
-|[値の型]|説明|  
+|値の型|説明|  
 |----------------|-----------------|  
 |1 (Missing: 不足)|不足値に関連する数、確率、またはその他の統計を示します。|  
 |4 (Discrete: 不連続)|不連続値または分離された値に関連する数、確率、またはその他の統計を示します。|  
   
  モデルに連続する予測可能な属性が含まれる場合は、ツリーに回帰式特有の値の型も含まれることがあります。 回帰ツリーで使用されている値の方の一覧については、「[線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)」を参照してください。  
   
-###  <a name="NodeScore"></a> ノード スコア  
+###  <a name="node-score"></a><a name="NodeScore"></a>ノードスコア  
  ノード スコアは、ツリーのレベルごとに少しずつ異なる情報を表します。 一般に、スコアは、条件での分割によって行われた分割がどの程度適切かを示す数値です。 値は倍精度浮動小数点数で表され、値が大きいほど適切であることを示します。  
   
  定義上、モデル ノードおよびすべてのリーフ ノードのノード スコアは 0 です。  
@@ -261,12 +260,12 @@ ms.locfileid: "66083669"
   
  ツリーのその他のすべてのノード (リーフ ノードを除く) では、各ノードのスコアは、現在のノードの最も高い分割スコアから親ノードの分割スコアを引いた値になります。 通常、親ノードの分割スコアは、必ずどの子ノードの分割スコアよりも高くなります。 これは、デシジョン ツリー モデルを重要な属性から分割するのが理想的であるためです。  
   
- 分割のスコアは、選択したアルゴリズム パラメーターに応じてさまざまな方法で計算されます。 それぞれのスコアリング方法でのスコアの計算方法については、このトピックでは説明しません。 詳細については、次を参照してください。"[ベイジアン ネットワークの学習。組み合わせの知識と統計データ](https://go.microsoft.com/fwlink/?LinkId=45963)"で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research Web サイト。  
+ 分割のスコアは、選択したアルゴリズム パラメーターに応じてさまざまな方法で計算されます。 それぞれのスコアリング方法でのスコアの計算方法については、このトピックでは説明しません。 詳細については、[Research Web サイトの「](https://go.microsoft.com/fwlink/?LinkId=45963)ベイジアン ネットワークの学習 : 知識と統計データの組み合わせ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  
   
 > [!NOTE]  
 >  予測可能な属性として連続属性と不連続属性の両方を含むデシジョン ツリー モデルを作成する場合、それぞれのツリーの種類を表す [(すべて)] ノードでまったく異なるスコアが表示されます。 各モデルは独立していると見なされ、回帰のスコアリングと分類のスコアリングでそれぞれまったく異なる方法が使用されます。 ノード スコアの値を比較することはできません。  
   
-##  <a name="bkmk_RegressionNodes"></a> デシジョン ツリー モデル内の回帰ノード  
+##  <a name="regression-nodes-within-a-decision-tree-model"></a><a name="bkmk_RegressionNodes"></a>デシジョンツリーモデル内の回帰ノード  
  デシジョン ツリー モデルに連続する数値データを持つ予測可能な属性が含まれる場合、Microsoft デシジョン ツリー アルゴリズムでは、予測された状態と入力変数のリレーションシップが線形になるデータ内の領域を特定するためにシークが行われます。 アルゴリズムで線形のリレーションシップを特定できると、線形回帰を表す特殊なツリー (NODE_TYPE = 25) が作成されます。 これらの回帰ツリーのノードは、不連続値を表すノードよりも複雑になります。  
   
  一般に、回帰では、連続する従属側 (予測可能な変数) の変化が入力の変化の関数としてマップされます。 従属変数に連続する入力があり、入力と予測値のリレーションシップが十分に安定していて線グラフで処理できる場合、回帰のノードに式が含まれます。  
@@ -275,16 +274,16 @@ ms.locfileid: "66083669"
   
 |分割条件|ノードの結果|  
 |---------------------|--------------------|  
-|n \< 5|リレーションシップを式 1 で表現可能|  
+|n 5 の場合 \<|リレーションシップを式 1 で表現可能|  
 |n が 5 ～ 10 の場合|式なし|  
 |n > 10 の場合|リレーションシップを式 2 で表現可能|  
   
  回帰ノードの詳細については、「[線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
- [データ マイニング モデル ビューアー](data-mining-model-viewers.md)   
- [データ マイニング クエリ](data-mining-queries.md)   
- [Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)  
+ [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [データマイニングモデルビューアー](data-mining-model-viewers.md)   
+ [データマイニングクエリ](data-mining-queries.md)   
+ [Microsoft デシジョンツリーアルゴリズム](microsoft-decision-trees-algorithm.md)  
   
   

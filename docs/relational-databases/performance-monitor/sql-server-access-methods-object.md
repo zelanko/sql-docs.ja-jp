@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787411"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server の Access Methods オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Access Methods** オブジェクトには、データベース内の論理データへのアクセス方法を監視するためのカウンターがあります。 ディスク上のデータベース ページへの物理アクセスは、 **Buffer Manager** カウンターを使用して監視します。 データベースに格納されているデータへのアクセス方法を監視すれば、インデックスの追加や変更、パーティションの追加や移動、ファイルまたはファイル グループの追加、インデックスのデフラグ、クエリの書き直しなど、どのような措置によってクエリ パフォーマンスが向上するかを判断する際に役立ちます。 **Access Methods** カウンターを使用して、データベース内のデータ、インデックス、および空き領域サイズを監視し、各サーバー インスタンスのデータ量と断片化状況を確認することもできます。 インデックスが過度に断片化されると、パフォーマンスの低下につながります。  
   
  データ量、断片化、および使用状況の詳細な情報を得るには、次の動的管理ビューを使用します。  
@@ -42,9 +42,9 @@ ms.locfileid: "67987363"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Access Methods** カウンターについて説明します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** カウンターについて説明します。  
   
-|SQL Server の Access Methods カウンター|[説明]|  
+|SQL Server の Access Methods カウンター|説明|  
 |----------------------------------------|-----------------|  
 |**AU cleanup batches/sec**|遅延および削除済みアロケーション ユニットをクリーンアップするバックグラウンド タスクによって正常に完了した 1 秒あたりのバッチの数。|  
 |**AU cleanups/sec**|遅延および削除済みアロケーション ユニットをクリーンアップするバックグラウンド タスクによって正常に削除された 1 秒あたりのアロケーション ユニットの数。 各アロケーション ユニットの削除には複数のバッチが必要です。|  
@@ -88,7 +88,7 @@ ms.locfileid: "67987363"
 |**Used tree page cookie**|ツリー ページの親ページで変更が行われなかったため、インデックス検索時にツリー ページ クッキーが正常に使用された回数。 クッキーはインデックス検索を高速化するために使用されます。|  
 |**Workfiles Created/sec**|1 秒あたりに作成された作業ファイルの数。 たとえば、作業ファイルを使用して、ハッシュ結合やハッシュ集計の一時結果を保存できます。|  
 |**Worktables Created/sec**|1 秒あたりに作成された作業テーブルの数。 たとえば、作業テーブルを使用して、クエリ スプール、LOB 変数、XML 変数、およびカーソルの一時的な結果を保存できます。|  
-|**Worktables From Cache Base**|内部使用のみです。|  
+|**Worktables From Cache Base**|内部使用専用です。|  
 |**Worktables From Cache Ratio**|作成された作業テーブルのうち、作業テーブルの最初の 2 ページが割り当てられなかったが、作業テーブル キャッシュから直ちに使用できるようになった作業テーブルの割合。 作業テーブルを削除した場合、2 つのページが割り当てられたままになり、作業テーブル キャッシュに返されます。 これによりパフォーマンスが向上します。|  
   
 ## <a name="see-also"></a>参照  

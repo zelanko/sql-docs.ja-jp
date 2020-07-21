@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_get_column_ordinal (TRANSACT-SQL) |Microsoft Docs
+title: fn_cdc_get_column_ordinal (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 893c7b0a4c7c88c0fdc7bf89b01b61bfaae6f2f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97c9c8d5b8c15bd2400874104bc1595aa93a4def
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046500"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898415"
 ---
-# <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  表示されます、として指定された列の列の序数を返します、[変更テーブル](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)指定したキャプチャ インスタンスに関連付けられています。  
+  指定されたキャプチャインスタンスに関連付けられている[変更テーブル](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)に表示される、指定された列の序数を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,21 +43,21 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
   
 ## <a name="arguments"></a>引数  
  **'** *capture_instance* **'**  
- 指定された列がキャプチャ対象列として識別されるキャプチャ インスタンスの名前です。 *capture_instance*は**sysname**します。  
+ 指定された列がキャプチャ対象列として識別されるキャプチャインスタンスの名前を指定します。 *capture_instance*は**sysname**です。  
   
  **'** *column_name* **'**  
- レポートに列です。 *column_name*は**sysname**します。  
+ レポート対象の列を示します。 *column_name*は**sysname**です。  
   
 ## <a name="return-type"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>コメント  
- この関数は、変更データ キャプチャの更新マスク内のキャプチャ対象列の序数位置を識別するために使用されます。 これは、関数と組み合わせてで使用して主[sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)変更データのクエリを実行するときに、更新マスクから情報を抽出します。  
+## <a name="remarks"></a>注釈  
+ この関数は、変更データキャプチャの更新マスク内でキャプチャされた列の序数位置を識別するために使用されます。 主に、変更データを照会するときに更新マスクから情報を抽出するために、関数[sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)と組み合わせて使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。 場合は、データベース ロールの変更データ キャプチャ コンポーネントには、キャプチャ インスタンスが指定されて、そのロールのメンバーシップも必要にです。  
+ ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。 変更データキャプチャコンポーネントのデータベースロールがキャプチャインスタンスに対して指定されている場合は、そのロールのメンバーシップも必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`VacationHours` キャプチャ インスタンスの更新マスク内の、`HumanResources_Employee` 列の序数位置を取得します。 さらに、この値を `sys.fn_cdc_is_bit_set` 関数の中で使用し、返された更新マスクから情報を抽出します。  
   
 ```  
@@ -76,10 +76,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [変更データ キャプチャの関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
- [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [sys.sp_cdc_get_captured_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
- [sys.fn_cdc_is_bit_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
+ [変更データキャプチャ関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
+ [変更データキャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
+ [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sp_cdc_get_captured_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)   
+ [fn_cdc_is_bit_set &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)  
   
   

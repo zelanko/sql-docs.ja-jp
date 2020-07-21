@@ -1,5 +1,5 @@
 ---
-title: 変更するマップの凡例、カラー スケール、および関連付けられているルール (レポート ビルダーおよび SSRS) |Microsoft Docs
+title: マップの凡例、カラースケール、および関連付けられているルールの変更 (レポートビルダーと SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35ea86d2e03c903736a5900da3da5c10986a3f9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106356"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)
@@ -56,11 +56,11 @@ ms.locfileid: "66106356"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Viewport"></a> ビューポートを基準とする凡例の相対位置を変更するには  
+##  <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a><a name="Viewport"></a> ビューポートを基準とする凡例の相対位置を変更するには  
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>ビューポートを基準とする凡例の相対位置を変更するには  
   
-1.  デザイン ビューで、凡例を右クリックし、開く、 _\<レポート項目]、[_ **プロパティ**ページ。  
+1.  デザインビューで、凡例を右クリックし、[ _ \<レポートアイテム->_ の**プロパティ**] ページを開きます。  
   
 2.  **[位置]** で、ビューポートを基準とする凡例の相対的な表示位置をクリックします。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="MapLegend"></a> マップの凡例のレイアウトを変更するには  
+##  <a name="to-change-the-layout-of-a-map-legend"></a><a name="MapLegend"></a> マップの凡例のレイアウトを変更するには  
   
 #### <a name="to-change-the-layout-of-a-map-legend"></a>マップの凡例のレイアウトを変更するには  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="MapLegendTitle"></a> マップの凡例のタイトルを表示または非表示にするには  
+##  <a name="to-show-or-hide-a-map-legend-title"></a><a name="MapLegendTitle"></a> マップの凡例のタイトルを表示または非表示にするには  
   
 #### <a name="to-show-or-hide-a-map-legend-title"></a>マップの凡例のタイトルを表示または非表示にするには  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="ColorScaleTitle"></a> カラー スケールのタイトルを表示または非表示にするには  
+##  <a name="to-show-or-hide-a-color-scale-title"></a><a name="ColorScaleTitle"></a> カラー スケールのタイトルを表示または非表示にするには  
   
 #### <a name="to-show-or-hide-a-color-scale-title"></a>カラー スケールのタイトルを表示または非表示にするには  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="MoveItems"></a> 最初の凡例からアイテムを移動するには  
+##  <a name="to-move-items-out-of-the-first-legend"></a><a name="MoveItems"></a> 最初の凡例からアイテムを移動するには  
  追加の凡例を必要な数だけ作成し、各マップ レイヤーのルールを更新して、ルールの結果を表示する凡例を指定します。  
   
 #### <a name="to-create-a-new-legend"></a>新しい凡例を作成するには  
@@ -114,7 +114,7 @@ ms.locfileid: "66106356"
   
 1.  デザイン ビューで、マップ ペインが表示されるまでマップをクリックします。  
   
-2.  データが をクリックしてレイヤーを右クリックして _\<要素の型をマップ\>_ **色のルール**します。  
+2.  目的のデータが含まれているレイヤーを右クリックし、[ _ \<マップ要素の\>種類_の**色ルール**] をクリックします。  
   
 3.  **[凡例]** をクリックします。  
   
@@ -124,13 +124,13 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="TemplateStyle"></a> テンプレート スタイルに基づいてマップ要素の色を変えるには  
+##  <a name="to-vary-map-element-colors-based-on-a-template-style"></a><a name="TemplateStyle"></a> テンプレート スタイルに基づいてマップ要素の色を変えるには  
   
 #### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>テンプレート スタイルに基づいてマップ要素の色を変えるには  
   
 1.  デザイン ビューで、マップ ペインが表示されるまでマップをクリックします。  
   
-2.  データが をクリックしてレイヤーを右クリックして _\<要素の型をマップ\>_ **色のルール**します。  
+2.  目的のデータが含まれているレイヤーを右クリックし、[ _ \<マップ要素の\>種類_の**色ルール**] をクリックします。  
   
 3.  **[テンプレート スタイルを適用する]** をクリックします。  
   
@@ -140,13 +140,13 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="ColorPalette"></a> カラー パレットに基づいてマップ要素の色を変えるには  
+##  <a name="to-vary-map-element-colors-based-on-color-palette"></a><a name="ColorPalette"></a> カラー パレットに基づいてマップ要素の色を変えるには  
   
 #### <a name="to-vary-map-element-colors-based-on-color-palette"></a>カラー パレットに基づいてマップ要素の色を変えるには  
   
 1.  デザイン ビューで、マップ ペインが表示されるまでマップをクリックします。  
   
-2.  をクリックし、データがレイヤーを右クリックして _\<要素の型をマップ\>_ **色のルール**します。  
+2.  目的のデータが含まれているレイヤーを右クリックし、[ _ \<マップ要素の種類\>_ の**色ルール**] をクリックします。  
   
 3.  **[色パレットを使用してデータを表示する]** をクリックします。  
   
@@ -160,13 +160,13 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="ColorRanges"></a> 色の範囲に基づいてマップ要素の色を変えるには  
+##  <a name="to-vary-map-element-colors-based-on-color-ranges"></a><a name="ColorRanges"></a> 色の範囲に基づいてマップ要素の色を変えるには  
   
 #### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>色の範囲に基づいてマップ要素の色を変えるには  
   
 1.  デザイン ビューで、マップ ペインが表示されるまでマップをクリックします。  
   
-2.  をクリックし、データがレイヤーを右クリックして _\<要素の型をマップ\>_ **色のルール**します。  
+2.  目的のデータが含まれているレイヤーを右クリックし、[ _ \<マップ要素の種類\>_ の**色ルール**] をクリックします。  
   
 3.  **[色の範囲を使用してデータを表示する]** をクリックします。  
   
@@ -184,13 +184,13 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="CustomColors"></a> カスタム色に基づいてマップ要素の色を変えるには  
+##  <a name="to-vary-map-element-colors-based-on-custom-colors"></a><a name="CustomColors"></a> カスタム色に基づいてマップ要素の色を変えるには  
   
 #### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>カスタム色に基づいてマップ要素の色を変えるには  
   
 1.  デザイン ビューで、マップ ペインが表示されるまでマップをクリックします。  
   
-2.  をクリックし、データがレイヤーを右クリックして _\<要素の型をマップ\>_ **色のルール**します。  
+2.  目的のデータが含まれているレイヤーを右クリックし、[ _ \<マップ要素の種類\>_ の**色ルール**] をクリックします。  
   
 3.  **[作成した色を使用してデータを表示する]** をクリックします。  
   
@@ -204,15 +204,15 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="DistributionOptions"></a> 凡例の分布オプションを設定するには  
+##  <a name="to-set-distribution-options-for-a-legend"></a><a name="DistributionOptions"></a> 凡例の分布オプションを設定するには  
   
 #### <a name="to-set-distribution-options-for-a-legend"></a>凡例の分布オプションを設定するには  
   
 1.  デザイン ビューで、マップ ペインが表示されるまでマップをクリックします。  
   
-2.  をクリックし、データがレイヤーを右クリックして _\<要素の型をマップ\>_ **色のルール**します。  
+2.  目的のデータが含まれているレイヤーを右クリックし、[ _ \<マップ要素の種類\>_ の**色ルール**] をクリックします。  
   
-3.  選択、**を使用してデータを視覚化して**\<規則の種類\>オプション。 分布オプションを使用するには、レイヤーに関連付けられている分析データに基づき、 **[分布]** ページで範囲を作成する必要があります。  
+3.  [ルールの種類\> **を使用** \<してデータを表示する] オプションを選択します。 分布オプションを使用するには、レイヤーに関連付けられている分析データに基づき、 **[分布]** ページで範囲を作成する必要があります。  
   
 4.  **[分布]** をクリックします。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66106356"
   
     -   **[最適]** 。 釣り合いのとれた部分範囲を形成するように分布が自動的に調整されます。  
   
-    -   **[カスタム]** 。 範囲の数を独自に指定して、値の分布を制御します。  
+    -   **カスタム**: 範囲の数を独自に指定して、値の分布を制御します。  
   
      分布のオプションの詳細については、「[ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
   
@@ -238,15 +238,15 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="RuleLegend"></a> ルールの凡例の内容を変更するには  
+##  <a name="to-change-the-contents-of-a-rule-legend"></a><a name="RuleLegend"></a> ルールの凡例の内容を変更するには  
   
 #### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>色、サイズ、幅、またはマーカーの種類の凡例の内容を変更するには  
   
 1.  デザイン ビューで、マップ ペインが表示されるまでマップをクリックします。  
   
-2.  をクリックし、データがレイヤーを右クリックして _\<要素の型をマップ\>_ **ルール**します。  
+2.  目的のデータが含まれているレイヤーを右クリックし、[ _ \<マップ要素の種類\>_ の**ルール**] をクリックします。  
   
-3.  **[** *rule type* を使用してデータを表示する]\< が選択されていることを確認します。  
+3.  **[** \<rule type *> を使用してデータを表示する]* が選択されていることを確認します。  
   
 4.  **[データ フィールド]** で、レイヤー上に視覚化しようとしている分析データが選択されていることを確認します。  
   
@@ -261,15 +261,15 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="ColorScale"></a> カラー スケールの内容を変更するには  
+##  <a name="to-change-the-contents-of-the-color-scale"></a><a name="ColorScale"></a> カラー スケールの内容を変更するには  
   
 #### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>カラー スケールまたは色の凡例の内容を変更するには  
   
 1.  デザイン ビューで、マップ ペインが表示されるまでマップをクリックします。  
   
-2.  をクリックし、データがレイヤーを右クリックして _\<要素の型をマップ\>_ **色のルール**します。  
+2.  目的のデータが含まれているレイヤーを右クリックし、[ _ \<マップ要素の種類\>_ の**色ルール**] をクリックします。  
   
-3.  使用する色ルールを選択します。 マップの凡例またはカラー スケールにアイテムを表示するには、 **[\<rule type> を使用してデータを表示する]** のいずれかのオプションを選択する必要があります。  
+3.  使用する色ルールを選択します。 マップの凡例またはカラー スケールにアイテムを表示するには、 **[** rule type> を使用してデータを表示する]\< のいずれかのオプションを選択する必要があります。  
   
 4.  **[データ フィールド]** で、レイヤー上に視覚化しようとしている分析データが選択されていることを確認します。  
   
@@ -284,13 +284,13 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="HideItems"></a> すべてのアイテムを凡例から削除するには  
+##  <a name="to-remove-all-items-from-a-legend"></a><a name="HideItems"></a> すべてのアイテムを凡例から削除するには  
   
 #### <a name="to-hide-items-based-on-a-rule"></a>ルールに基づいてアイテムを非表示にするには  
   
 1.  デザイン ビューで、マップ ペインが表示されるまでマップをクリックします。  
   
-2.  をクリックし、データがレイヤーを右クリックして _\<要素の型をマップ\>_ **ルール**します。  
+2.  目的のデータが含まれているレイヤーを右クリックし、[ _ \<マップ要素の種類\>_ の**ルール**] をクリックします。  
   
 3.  **[凡例]** をクリックします。  
   
@@ -298,14 +298,14 @@ ms.locfileid: "66106356"
   
   
   
-##  <a name="ChangeFormatItems"></a> 凡例の内容の書式を変更するには  
+##  <a name="to-change-the-format-of-content-in-a-legend"></a><a name="ChangeFormatItems"></a> 凡例の内容の書式を変更するには  
  マップの凡例に関連付けられているルールの凡例オプションを設定します。  
   
 #### <a name="to-change-the-format-of-content-in-a-legend"></a>凡例の内容の書式を変更するには  
   
 1.  デザイン ビューで、マップ ペインが表示されるまでマップをクリックします。  
   
-2.  をクリックし、データがレイヤーを右クリックして _\<要素の型をマップ\>_ **ルール**します。  
+2.  目的のデータが含まれているレイヤーを右クリックし、[ _ \<マップ要素の種類\>_ の**ルール**] をクリックします。  
   
 3.  **[凡例]** をクリックします。  
   

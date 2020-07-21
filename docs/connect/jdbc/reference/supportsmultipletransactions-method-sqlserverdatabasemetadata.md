@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 34ff8dcb-5487-46d1-a4c1-25e33eb3eee4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e16b4f5590057424cfe67491cf4943399d54c01c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6753cb6ab567b00ac381364fcd8da81b4de39c0a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67969184"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80912618"
 ---
 # <a name="supportsmultipletransactions-method-sqlserverdatabasemetadata"></a>supportsMultipleTransactions メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public boolean supportsMultipleTransactions()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Supports多重トランザクションメソッドは、java メタデータインターフェイスの Supports多重トランザクションメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsMultipleTransactions メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsMultipleTransactions メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

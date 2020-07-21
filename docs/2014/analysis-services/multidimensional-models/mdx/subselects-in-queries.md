@@ -1,5 +1,5 @@
 ---
-title: クエリのサブセレクト |Microsoft Docs
+title: クエリ内のサブセレクト |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41471645e3443d59294f980eba35fbf9074d7728
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546146"
 ---
 # <a name="subselects-in-queries"></a>クエリのサブセレクト
   サブセレクト式とは、入れ子になった SELECT 式です。この式は、外側にある外部の SELECT が評価されているキューブ空間を制限するために使用されます。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
@@ -27,10 +26,10 @@ ms.locfileid: "66073902"
   
 |||||  
 |-|-|-|-|  
-||Sum of Years|Year 1|[...]|  
+||Sum of Years|Year 1|...|  
 |Sum of Top 10 Products||||  
 |Product A||||  
-|[...]||||  
+|...||||  
   
  上記のようなことを実行するために、次の MDX 式を記述します。  
   
@@ -202,10 +201,10 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|$29,358,677.22|$80,450,596.98|  
-|米国|$9,389,789.51|$80,450,596.98|  
-|Oregon|$1,170,991.54|$80,450,596.98|  
+|アメリカ合衆国|$9,389,789.51|$80,450,596.98|  
+|オレゴン|$1,170,991.54|$80,450,596.98|  
 |Portland|$110,649.54|$80,450,596.98|  
-|Washington|$2,467,248.34|$80,450,596.98|  
+|ワシントン|$2,467,248.34|$80,450,596.98|  
 |Seattle|$75,164.86|$80,450,596.98|  
   
  上記の例では Seattle は Washington の子であり、Portland は Oregon の子であり、Oregon および Washington は United States の子であり、United States は [Customer Geography].[All Customers] の子です。 この例で示したすべてのメンバーには、親の集計値に影響を与える、他の兄弟が存在します。たとえば、Spokane、Tacoma、および Everett は、Seattle の兄弟都市であり、すべて Washington Internet Sales Amount に影響を与えます。 Reseller Sales Amount 値は Customer Geography 属性から独立しています。このため、All 値が結果に表示されます。 次の MDX 式は、サブセレクト句に影響を与えるフィルターを示しています。  
@@ -230,8 +229,8 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|$2,467,248.34|$80,450,596.98|  
-|United States|$2,467,248.34|$80,450,596.98|  
-|Washington|$2,467,248.34|$80,450,596.98|  
+|アメリカ合衆国|$2,467,248.34|$80,450,596.98|  
+|ワシントン|$2,467,248.34|$80,450,596.98|  
 |Seattle|$75,164.86|$80,450,596.98|  
   
  上記の結果は、Washington State の先祖および子孫のみが、外側の SELECT ステートメントが評価されたサブ空間の一部であることを示しています。Washington が指定されたのに対し、Oregon およびすべての他の兄弟州はサブセレクトで指定されなかったため、Oregon および Portland はサブキューブから削除されています。  
@@ -255,12 +254,12 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Road|Touring|  
+||All Products|Accessory|コンポーネント|Mountain|道路|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
-|米国|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
-|Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
+|アメリカ合衆国|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
+|オレゴン|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
 |Portland|$110,649.54|$2,834.17|(null)|$47,099.91|$53,917.17|$6,798.29|  
-|Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|ワシントン|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
 ```  
@@ -280,10 +279,10 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Road|Touring|  
+||All Products|Accessory|コンポーネント|Mountain|道路|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|米国|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|アメリカ合衆国|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|ワシントン|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
  上記の結果は、All Products 値が、期待どおりに Washington State の値のみに調整されたことを示しています。  
@@ -305,7 +304,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Australia|Canada|Central|Northwest|Southwest|  
+||All Sales Territories|オーストラリア|Canada|Central|Northwest|Southwest|  
 |All Products|$7,591,495.49|$1,281,059.99|$1,547,298.12|$600,205.79|$1,924,763.50|$2,238,168.08|  
 |Mountain-200 Silver, 38|$1,449,576.15|$248,702.93|$275,052.45|$141,103.65|$349,487.01|$435,230.12|  
 |Mountain-200 Black, 38|$1,722,896.50|$218,024.05|$418,726.43|$123,929.46|$486,694.63|$475,521.93|  
@@ -328,7 +327,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Australia|Canada|Northwest|Southwest|イギリス|  
+||All Sales Territories|オーストラリア|Canada|Northwest|Southwest|イギリス|  
 |All Products|$7,938,218.56|$1,096,312.24|$1,474,255.49|$2,042,674.72|$2,238,099.55|$1,086,876.56|  
 |Mountain-200 Silver, 38|$1,520,958.53|$248,702.93|$275,052.45|$349,487.01|$435,230.12|$212,486.03|  
 |Mountain-200 Silver, 42|$1,392,237.14|$198,127.15|$229,679.01|$361,233.58|$407,854.24|$195,343.16|  
@@ -338,7 +337,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  両方のセットの結果には、違いがあることがわかります。 最初のクエリは、上位 5 販売地域の最も販売された製品は何かという質問に対する結果を返し、2 番目のクエリは、上位 5 販売製品が最も販売された場所はどこかという質問に対する結果を返しています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  サブセレクトには、次の制限事項と制約事項があります。  
   
 -   WHERE 句はサブ空間に対してフィルターを適用しません。  
@@ -349,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   HAVING 句は軸句では使用できません。代わりに [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx) 関数式を使用します。  
   
--   既定で、計算されるメンバーはサブセレクト; で許可されませんただし、この制限は、セッション単位で値を割り当てることで、`SubQueries`で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または`DBPROP_MSMD_SUBQUERIES`プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). 参照してください[サブセレクトとサブキューブで計算されるメンバー](calculated-members-in-subselects-and-subcubes.md)の値によって計算されるメンバーの動作の詳細については`SubQueries`または`DBPROP_MSMD_SUBQUERIES`します。  
+-   既定では、計算されるメンバーはサブセレクトでは許可されません。ただし、 `SubQueries` <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> `DBPROP_MSMD_SUBQUERIES` [サポートされている xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)の接続文字列プロパティに値を割り当てることによって、セッションごとにこの制限を変更できます。 またはの値に応じて計算されるメンバーの動作の詳細については、「サブ[セレクトとサブキューブで計算されるメンバー](calculated-members-in-subselects-and-subcubes.md) 」を参照してください `SubQueries` `DBPROP_MSMD_SUBQUERIES` 。  
   
   

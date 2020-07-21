@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100340"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>レポート デザイナーのレポート データ ペインをドッキングする (SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66100340"
   
 ### <a name="to-display-the-report-data-pane"></a>レポート データ ペインを表示するには  
   
--   デザイン ビューでの**ビュー**メニューの **レポート データ**します。  
+-   デザインビューで、[**表示**] メニューの [**レポートデータ**] をクリックします。  
   
 ### <a name="to-dock-the-report-data-pane"></a>レポート データ ペインをドッキングするには  
   
@@ -34,11 +34,11 @@ ms.locfileid: "66100340"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>レポート データ ペインをドッキング ウィンドウからタブ付きウィンドウに変更するには  
   
--   レポート データ ペインのタイトル バーを右クリックし、をクリックし、**タブ付きドキュメント**します。  
+-   レポートデータペインのタイトルバーを右クリックし、[**タブ付きドキュメント**] をクリックします。  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>レポート データ ペインをタブ付きウィンドウからドッキング ウィンドウに変更するには  
   
--   レポート データ タブを右クリックし、をクリックし、**ドッキング可能**します。  
+-   [レポートデータ] タブを右クリックし、[**ドッキング**可能] をクリックします。  
   
      最後の 2 つの表示状態の間で切り替えるには、レポート データ ペインのタイトル バーをダブルクリックします。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.services (TRANSACT-SQL) |Microsoft Docs
+title: sys. services (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,26 +17,26 @@ dev_langs:
 helpviewer_keywords:
 - sys.services catalog view
 ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c19e65117a03de6b473eced3c7c1379943c851a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6372f1073bbcb4746aafce78048e4af7c05f7158
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078663"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901729"
 ---
-# <a name="sysservices-transact-sql"></a>sys.services (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysservices-transact-sql"></a>sys. services (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このカタログ ビューには、データベース内の各サービスに 1 行が含まれています。  
+  このカタログビューには、データベース内のサービスごとに1行のデータが含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|サービスの名前。大文字と小文字が区別されます。データベース内で一意です。 Null を許容しません。|  
-|**service_id**|**int**|サービスの識別子です。 Null を許容しません。|  
-|**principal_id**|**int**|このサービスを所有するデータベース プリンシパルの識別子。 NULL 値を許容します。|  
-|**service_queue_id**|**int**|このサービスが使用するキューのオブジェクト id。 Null を許容しません。|  
+|**name**|**sysname**|サービスの名前。大文字と小文字が区別されます。データベース内で一意です。 NULL 値は許容されません。|  
+|**service_id**|**int**|サービスの識別子。 NULL 値は許容されません。|  
+|**principal_id**|**int**|このサービスを所有するデータベースプリンシパルの識別子。 NULLABLE.|  
+|**service_queue_id**|**int**|このサービスが使用するキューのオブジェクト id。 NULL 値は許容されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f595b9f0e0a6d7bceffc5cb283c60b6f40e025b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047817"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>プラン ガイドを使用したクエリのパラメーター化動作の指定
   PARAMETERIZATION データベース オプションが SIMPLE に設定されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーはクエリのパラメーター化を選択することがあります。 これは、クエリに含まれるリテラル値がすべてパラメーターに置き換えられることを意味します。 この処理を簡易パラメーター化と呼びます。 簡易パラメーター化が有効であれば、クエリのパラメーター化を行う場合と行わない場合を制御することはできません。 ただし、PARAMETERIZATION データベース オプションを FORCED に設定することにより、データベース内のすべてのクエリをパラメーター化するように指定できます。 この処理を強制パラメーター化と呼びます。  
@@ -53,7 +52,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  パラメーター化された形式のクエリのプラン ガイドを作成し、PARAMETERIZATION FORCED クエリ ヒントを指定します。  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はクエリのパラメーター化処理の一環として、リテラルの値とサイズに従って、リテラル値を置き換えるパラメーターにデータ型を割り当てます。 **sp_get_query_template** の **@stmt** 出力パラメーターに定数リテラルの値が渡される場合も、これと同じ処理が行われます。 **sp_create_plan_guide** の **@params** 引数に指定されたデータ型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がパラメーター化を行う場合にクエリのデータ型と一致する必要があるので、クエリのパラメーター値としてとり得る値すべてに対応できるように、複数のプラン ガイドを作成しなければならない可能性があります。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はクエリのパラメーター化処理の一環として、リテラルの値とサイズに従って、リテラル値を置き換えるパラメーターにデータ型を割り当てます。 **@stmt** **Sp_get_query_template**の出力パラメーターに渡される定数リテラルの値に対しても同じ処理が行われます。 Sp_create_plan_guide の引数で指定されたデータ型は、 **@params** によってパラメーター化されるクエリと一致する必要があるため**sp_create_plan_guide** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、クエリに使用できるパラメーター値の完全な範囲をカバーするために、複数のプランガイドを作成することが必要になる場合があります。  
   
  次のスクリプトを使用すると、パラメーター化クエリの取得と、このクエリのプラン ガイドの作成の両方の処理を行えます。  
   

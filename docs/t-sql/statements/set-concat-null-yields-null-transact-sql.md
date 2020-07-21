@@ -23,14 +23,14 @@ ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdaa57594049ca9c7bd088120ae119ec7c58c151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac123431796331485544b34b15023d34c26a7d6e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041844"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634428"
 ---
-# <a name="set-concatnullyieldsnull-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
+# <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   連結の結果が NULL として取り扱われるのか、空文字列として取り扱われるのかを制御します。  
@@ -42,19 +42,19 @@ ms.locfileid: "68041844"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
     
 SET CONCAT_NULL_YIELDS_NULL { ON | OFF }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET CONCAT_NULL_YIELDS_NULL が ON の場合、NULL 値を文字列と連結すると、結果は NULL になります。 たとえば、`SELECT 'abc' + NULL` の結果は `NULL` になります。 SET CONCAT_NULL_YIELDS_NULL が OFF の場合、NULL 値を文字列と連結すると、結果は元の文字列になり、NULL 値は空文字列として扱われます。 たとえば、`SELECT 'abc' + NULL` の結果は `abc` になります。  
   
  SET CONCAT_NULL_YIELDS_NULL を指定しなかった場合は、**CONCAT_NULL_YIELDS_NULL** データベース オプションの設定が適用されます。  
@@ -70,17 +70,16 @@ SET CONCAT_NULL_YIELDS_NULL ON
   
  この設定の現在の設定を表示するには、次のクエリを実行します。  
   
+```sql
+DECLARE @CONCAT_SETTING VARCHAR(3) = 'OFF';  
+IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_SETTING = 'ON';  
+SELECT @CONCAT_SETTING AS CONCAT_NULL_YIELDS_NULL; 
 ```  
-DECLARE @CONCAT_NULL_YIELDS_NULL VARCHAR(3) = 'OFF';  
-IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_NULL_YIELDS_NULL = 'ON';  
-SELECT @CONCAT_NULL_YIELDS_NULL AS CONCAT_NULL_YIELDS_NULL;  
   
-```  
-  
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、両方の `SET CONCAT_NULL_YIELDS_NULL` 設定を示します。  
   
-```  
+```sql
 PRINT 'Setting CONCAT_NULL_YIELDS_NULL ON';  
 GO  
 -- SET CONCAT_NULL_YIELDS_NULL ON and testing.  

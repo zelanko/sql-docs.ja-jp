@@ -1,7 +1,8 @@
 ---
-title: 'バックアップと復元: 相互運用性と共存 (SQL Server) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/05/2016
+title: 'バックアップと復元: 機能の相互運用性'
+description: この記事では、データベースの起動、オンライン復元と無効化されたインデックス、データベース ミラーリングなど、SQL Server のバックアップと復元の機能について説明します。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3dcf1473fc92ba69d68f9aae9d871540e2604b52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737829"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>バックアップと復元: 相互運用性と共存 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のいくつかの機能のバックアップと復元に関する考慮事項について説明します。 このような機能には、ファイル復元とデータベースの起動、オンライン復元と無効化されたインデックス、データベース ミラーリング、段階的な部分復元、およびフルテキスト インデックスが含まれます。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "67940876"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> ファイル復元とデータベースの起動  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> ファイル復元とデータベースの起動  
  ここで説明する内容は、複数のファイル グループを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのみに適用されます。  
   
 > [!NOTE]  
@@ -54,18 +55,18 @@ ms.locfileid: "67940876"
   
  起動に成功した場合、オフライン ファイルが含まれるファイル グループはすべてオフライン状態で維持されます。  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> オンライン復元と無効化されたインデックス  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> オンライン復元と無効化されたインデックス  
  ここで説明する内容は、複数のファイル グループを含むデータベースと、単純復旧モデルの場合の 1 つ以上の読み取り専用ファイル グループに適用されます。  
   
  これらのケースにおいて、データベースがオンラインの場合、インデックスの作成、削除、有効化や無効化を行うことができるのは、インデックスのいずれかの部分を保持しているファイル グループがすべてオンラインのときだけです。  
   
  オフラインのファイル グループを復元する方法については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
   
-##  <a name="DbMandBnR"></a> データベース ミラーリングおよびバックアップと復元  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> データベース ミラーリングおよびバックアップと復元  
  ここで説明する内容は、複数のファイル グループを含む完全復旧モデルのデータベースだけに関連しています。  
   
 > [!NOTE]  
->  データベース ミラーリング機能は、将来のバージョンの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用します。  
+>  データベース ミラーリング機能は、将来のバージョンの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用してください  
   
  データベース ミラーリングは、データベースの可用性を高めるためのソリューションです。 ミラーリングはデータベースごとに実装され、完全復旧モデルを使用するデータベースでのみ機能します。 詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
@@ -73,9 +74,9 @@ ms.locfileid: "67940876"
 >  データベースのファイル グループのサブセットのコピーを配布するには、レプリケーションを使用します。ファイル グループ内のオブジェクトのうち、他のサーバーにコピーしたいものだけをレプリケートします。 レプリケーションの詳細については、「 [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)」を参照してください。  
   
 ### <a name="creating-the-mirror-database"></a>ミラー データベースの作成  
- WITH NORECOVERY を指定してプリンシパル データベースのバックアップをミラー サーバーに復元すると、ミラー データベースが作成されます。 この復元したデータベースの名前は、元のデータベースと同じ名前のままにする必要があります。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)のいくつかの機能のバックアップと復元に関する考慮事項について説明します。  
+ WITH NORECOVERY を指定してプリンシパル データベースのバックアップをミラー サーバーに復元すると、ミラー データベースが作成されます。 この復元したデータベースの名前は、元のデータベースと同じ名前のままにする必要があります。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
   
- 段階的な部分復元シーケンスの使用がサポートされている場合は、これを使用してミラー データベースを作成できます。 ただし、ミラーリングを開始できるのは、すべてのファイル グループを復元し、通常はログ バックアップを復元して、ミラー データベースの状態をプリンシパル データベースの状態に十分近づけてからです。 詳細については、「[段階的な部分復元の実行 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
+ 段階的な部分復元シーケンスの使用がサポートされている場合は、これを使用してミラー データベースを作成できます。 ただし、ミラーリングを開始できるのは、すべてのファイル グループを復元し、通常はログ バックアップを復元して、ミラー データベースの状態をプリンシパル データベースの状態に十分近づけてからです。 詳細については、「[段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
   
 ### <a name="restrictions-on-backup-and-restore-during-mirroring"></a>ミラーリング中のバックアップおよび復元の制限  
  データベース ミラーリング セッションがアクティブの場合は、次の制限があります。  
@@ -86,7 +87,7 @@ ms.locfileid: "67940876"
   
 -   プリンシパル データベースの復元は実行できません。  
   
-##  <a name="PiecemealAndFTIndexes"></a> 段階的な部分復元とフルテキスト インデックス  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> 段階的な部分復元とフルテキスト インデックス  
  ここで説明する内容は、複数のファイル グループを含むデータベースのみ (単純復旧モデルのデータベースでは、読み取り専用ファイル グループのみ) に適用されます。  
   
  フルテキスト インデックスは、データベース ファイル グループに格納され、段階的な部分復元による影響を受ける可能性があります。 関連するテーブル データのいずれかと同じファイル グループにフルテキスト インデックスが格納されている場合、段階的な部分復元は想定どおりに機能します。  
@@ -113,7 +114,7 @@ ms.locfileid: "67940876"
   
  ベース テーブルのファイル グループとフルテキスト インデックスのファイル グループの両方がオンラインになるとすぐに、一時停止中のフルテキスト作成がすべて再開されます。  
   
-##  <a name="FileBnRandCompression"></a> ファイル バックアップと復元と圧縮  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> ファイル バックアップと復元と圧縮  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、読み取り専用ファイル グループや読み取り専用データベースの NTFS ファイル システム データ圧縮がサポートされます。  
   
  圧縮された NTFS ファイルでは、読み取り専用ファイル グループのファイルの復元がサポートされます。 このようなファイル グループのバックアップや復元は、基本的には読み取り専用ファイル グループと同様に機能しますが、次の例外があります。  
@@ -125,7 +126,7 @@ ms.locfileid: "67940876"
 > [!NOTE]  
 >  読み取りと書き込みが可能なデータベースのログ ファイルは、圧縮されたファイル システムには配置しないでください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9cc81d957c754eb792ca589d445f32f2bcd076b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057001"
 ---
 # <a name="replication-backward-compatibility"></a>レプリケーションの旧バージョンとの互換性
-  旧バージョンとの互換性のセクションの各トピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションのバージョン間における動作の違いについて説明します。 アップグレードを行う場合や、レプリケーション トポロジ内に複数のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在する場合は、旧バージョンとの互換性を理解することが重要です。  
+  「旧バージョンとの互換性」セクションのトピックでは、レプリケーションのバージョン間の動作の変更について説明し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 アップグレードを行う場合や、レプリケーション トポロジ内に複数のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在する場合は、旧バージョンとの互換性を理解することが重要です。  
   
  [SQL Server レプリケーションの非推奨の機能](deprecated-features-in-sql-server-replication.md)  
- 旧バージョンとの互換性を維持するため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では引き続き使用できるが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のバージョンでは削除される予定のレプリケーション機能  
+ 旧バージョンとの互換性のためにで保持されているが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、今後のバージョンでは削除される予定のレプリケーション機能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  [SQL Server レプリケーションにおける重大な変更](breaking-changes-in-sql-server-replication.md)  
  場合によっては、アプリケーションの修正が必要となるレプリケーション機能の変更  

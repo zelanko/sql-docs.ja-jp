@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 81808f6387942bd3ba8aa01f4eeaa5bd93b2dcba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 598f292c88cdd8516610df7b9a8b0a64424fab1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762216"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンス内の指定した地点を返します。
   
@@ -43,11 +43,11 @@ ms.locfileid: "68066409"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型:**Point**  
+ Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ユーザーが作成した **geometry** インスタンスの場合、`STPointN()` は、最初に入力した順序で地点を並べ替えることで、*expression* で指定された地点を返します。  
   
  システムによって作成された **geometry** インスタンスの場合、`STPointN()` は、出力する順序ですべての地点を並べ替えることで、*expression* で指定された地点を返します。出力する順序にするには、geometry、geometry 内のリング (必要な場合)、リング内の地点の順序に並べ替えます。 この順序は決定的です。  
@@ -56,7 +56,7 @@ ms.locfileid: "68066409"
   
  インスタンス内の地点の数より大きい値を指定してこのメソッドを呼び出すと、メソッドは NULL を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `LineString` インスタンスを作成し、`STPointN()` を使用して、このインスタンスの記述に含まれる 2 番目の地点を取得する例を次に示します。  
   
 ```  

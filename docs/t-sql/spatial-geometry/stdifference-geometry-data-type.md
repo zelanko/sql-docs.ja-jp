@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f511c6fa7a0d41b0f072981898216fde050d1742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3c89b8573f7694093027073199788560f664f31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748692"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 別の **geometry** インスタンス内に含まれていない、任意の **geometry** インスタンスの地点のセットを表すオブジェクトを返します。
   
@@ -43,12 +43,12 @@ ms.locfileid: "68127367"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。   結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-computing-the-difference-between-two-polygon-instances"></a>A. 2 つの Polygon インスタンス間の差異を計算する  
  `STDifference()` を使用して 2 つの多角形の差異を計算する例を次に示します。  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e28bcfb7a5478dd90053094dbf38d79a41a42021
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f5b67b73f4be4d8403600821ddd35843c65f2b5
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141121"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391787"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   アプリケーション ロールを現在のデータベースに追加します。  
   
@@ -39,13 +39,15 @@ ms.locfileid: "68141121"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE APPLICATION ROLE application_role_name   
     WITH PASSWORD = 'password' [ , DEFAULT_SCHEMA = schema_name ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *application_role_name*  
  アプリケーション ロールの名前を指定します。 この名前は、データベース内のどのプリンシパルへの参照にも使用されていない名前である必要があります。  
   
@@ -55,7 +57,7 @@ CREATE APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA **=** _schema\_name_  
  このロール用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 DEFAULT_SCHEMA が定義されていない場合、アプリケーション ロールでは既定のスキーマとして DBO が使用されます。 *schema_name* にはデータベースに存在しないスキーマを指定できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  アプリケーション ロールのパスワードを設定するときには、パスワードの複雑性が確認されます。 アプリケーション ロールを呼び出すアプリケーションは、これらのパスワードを格納する必要があります。 アプリケーション ロールのパスワードは常に暗号化して保存する必要があります。  
@@ -70,10 +72,10 @@ CREATE APPLICATION ROLE application_role_name
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、アプリケーション ロール `weekly_receipts` を作成します。このアプリケーション ロールのパスワードは `987Gbv876sPYY5m23` で、既定のスキーマは `Sales` です。  
   
-```  
+```sql  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987G^bv876sPY)Y5m23'   
     , DEFAULT_SCHEMA = Sales;  

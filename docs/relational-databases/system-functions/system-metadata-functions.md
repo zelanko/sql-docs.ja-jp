@@ -1,5 +1,5 @@
 ---
-title: システム メタデータ関数 |Microsoft Docs
+title: システムメタデータ関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: a6fb85b2-b010-4ca9-b65f-4402917076ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6da1ec838a3c3f52778400b23c804e18388b79ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94161328366e96e051039824ca46ef20d7431825
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059085"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738549"
 ---
 # <a name="system-metadata-functions"></a>システム メタデータ関数
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次のメタデータ関数があります。  
   

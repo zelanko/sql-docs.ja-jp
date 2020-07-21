@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_maintenance_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a37600763a02b4ed2fa49cddac0b514c80618f22
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104581"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879686"
 ---
-# <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  メンテナンス プランを追加し、プラン ID を返します。  
+  メンテナンスプランを追加し、プラン ID を返します。  
   
 > [!NOTE]  
->  このストアド プロシージャは、データベース メンテナンス プランで使用されます。 この機能は、このストアド プロシージャを使用しないメンテナンス プランに置き換わりました。 このプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
+>  このストアドプロシージャは、データベースメンテナンスプランで使用されます。 この機能は、このストアドプロシージャを使用しないメンテナンスプランに置き換えられました。 このプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -45,19 +45,19 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @plan_name = ] 'plan_name'` 追加するメンテナンス プランの名前を指定します。 *plan_name*は**varchar (128)** します。  
+`[ @plan_name = ] 'plan_name'`追加するメンテナンスプランの名前を指定します。 *plan_name*は**varchar (128)** です。  
   
- **@plan_id = '** *plan_id* **'**  
- メンテナンス プランの ID を指定します。 *plan_id*は**uniqueidentifier**します。  
+ ** @plan_id = '** *plan_id* **'**  
+ メンテナンスプランの ID を指定します。 *plan_id*は**uniqueidentifier**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_add_maintenance_plan**から実行する必要があります、 **msdb**データベースにあり、新しいが空で、メンテナンス プランを作成します。 1 つまたは複数のデータベースを追加し、ジョブまたはジョブに関連付けるを実行**sp_add_maintenance_plan_db**と**sp_add_maintenance_plan_job**します。  
+## <a name="remarks"></a>解説  
+ **sp_add_maintenance_plan**は、 **msdb**データベースから実行する必要があり、新しい (空の) メンテナンスプランを作成します。 1つ以上のデータベースを追加し、ジョブまたはジョブに関連付けるには、 **sp_add_maintenance_plan_db**を実行し、 **sp_add_maintenance_plan_job**します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_maintenance_plan**します。  
+ **Sp_add_maintenance_plan**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
  Myplan というメンテナンス プランを作成します。  
@@ -77,6 +77,6 @@ GO
   
 ## <a name="see-also"></a>関連項目  
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [データベース メンテナンス プラン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [データベースメンテナンスプランのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

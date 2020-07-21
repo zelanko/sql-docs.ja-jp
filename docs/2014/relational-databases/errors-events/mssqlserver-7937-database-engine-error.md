@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1a78aac96c0f0362c36367511035d8e4544b2017
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bec894ea9d28601c962d2f3d93885344d101b293
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762795"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553302"
 ---
-# <a name="mssqlserver7937"></a>MSSQLSERVER_7937
+# <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7937|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID の列 ID C_ID に対する Filestream ディレクトリ、インデックス ID I_ID、パーティション ID PN_ID は見つかりませんでした。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列 ID C_ID に対する FileStream ディレクトリが見つかりませんでした。|  
   
 ## <a name="explanation"></a>説明  
  指定された列はパーティションに存在します。しかし、対応する FILESTREAM ディレクトリは FILESTREAM データ領域で見つかりませんでした。  
@@ -48,6 +47,6 @@ ms.locfileid: "62762795"
  問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
- 該当なし。 このエラーを自動的に修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
+ 適用不可。 このエラーを自動的に修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   
   

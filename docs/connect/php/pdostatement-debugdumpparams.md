@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::d Eバグダンプ Params |Microsoft Docs
+title: PDOStatement::debugDumpParams | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cf156d65-d933-4235-b89a-18e172d61c15
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5584d645bc506d1399a47852bed481791988623
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 46df6dbe61e591acbcd25aa454ba6b8713b2861e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993090"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921704"
 ---
 # <a name="pdostatementdebugdumpparams"></a>PDOStatement::debugDumpParams
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67993090"
 bool PDOStatement::debugDumpParams();  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  

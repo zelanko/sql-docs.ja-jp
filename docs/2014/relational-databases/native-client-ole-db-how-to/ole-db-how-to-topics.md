@@ -1,5 +1,5 @@
 ---
-title: OLE DB の操作方法に関するトピック |Microsoft Docs
+title: OLE DB の使用法に関するトピック | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,24 +9,23 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB, how-to topics
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e1e195cf27e6d961bc7d53dac6439554022761d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8ed0c66981075fd88b066deac05aa14184ff41c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209887"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056253"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB の使用法に関するトピック
-  使用する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、サーバーへの接続、コマンドを実行し、結果を処理する方法を理解する必要があります。  
+  Native Client OLE DB プロバイダーを使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーへの接続を作成し、コマンドを実行して結果を処理する方法を理解する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 -   [結果を処理する方法に関するトピック &#40;OLE DB&#41;](results/processing-results-how-to-topics-ole-db.md)  
   
--   [大きなデータを設定&#40;OLE DB&#41;](set-large-data-ole-db.md)  
+-   [大きなデータの設定 &#40;OLE DB&#41;](set-large-data-ole-db.md)  
   
 -   [OLE DB データ ソースの列挙 &#40;OLE DB&#41;](enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "63209887"
   
 -   [IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 &#40;OLE DB&#41;](send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [大きな CLR Udt を使用して、 &#40;OLE DB&#41;](use-large-clr-udts-ole-db.md)  
+-   [大きな CLR UDT の使用 &#40;OLE DB&#41;](use-large-clr-udts-ole-db.md)  
   
 -   [スパース列に対する列およびカタログ メタデータの表示 &#40;OLE DB&#41;](display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "63209887"
   
 -   [テーブル値パラメーターの使用 &#40;OLE DB&#41;](../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](../native-client/sql-server-native-client-programming.md)  
   
   

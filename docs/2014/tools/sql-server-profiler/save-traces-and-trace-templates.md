@@ -1,5 +1,5 @@
 ---
-title: トレースとトレース テンプレートの保存 |Microsoft Docs
+title: トレースとトレーステンプレートを保存する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36db7ccfd8b185d60eb39c20a58842f469e7878d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048311"
 ---
 # <a name="save-traces-and-trace-templates"></a>トレースとトレース テンプレートの保存
   トレース ファイルの保存とトレース テンプレートの保存は、区別して考えることが重要です。 トレース ファイルを保存すると、キャプチャされたイベント データが特定の場所に保存されます。 トレース テンプレートを保存すると、特定のデータ列、イベント クラス、フィルターなどのトレースの定義が保存されます。  

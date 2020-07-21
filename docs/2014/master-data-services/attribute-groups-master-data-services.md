@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bacb199a87cd0d9e388b49b00cbc2e245571d2ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88ea7681ec3f7dfacfee77e05306eb60007eef4b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972202"
 ---
 # <a name="attribute-groups-master-data-services"></a>属性グループ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループがエンティティ内の属性の整理に役立ちます。 エンティティ内に多数の属性がある場合、属性グループを使用すると、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションでのエンティティの表示が見やすくなります。  
@@ -50,7 +49,7 @@ ms.locfileid: "65483704"
 |新しい属性グループを作成して属性を追加する。|[属性グループを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
 |属性グループがユーザーに表示されるようにする。|[属性グループのユーザーへの表示 (マスター データ サービス)](make-an-attribute-group-visible-to-users-master-data-services.md)|  
 |既存の属性グループの名前を変更する。|[属性グループ名を変更する (マスター データ サービス)](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
-|既存の属性グループを削除する。|[属性グループを削除する (マスター データ サービス)](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)|  
+|既存の属性グループを削除する。|[属性グループを削除する &#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   

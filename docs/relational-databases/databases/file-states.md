@@ -29,15 +29,15 @@ ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a58f92ebb7e6c59d80277cc17457927cff01ff8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934440"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002953"
 ---
 # <a name="file-states"></a>ファイルの状態
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、データベース ファイルの状態はデータベースの状態とは別に管理されます。 ファイルは常に、ONLINE または OFFLINE などの特定の状態にあります。 ファイルの現在の状態を表示するには、 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューまたは [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) カタログ ビューを使用します。 データベースがオフラインになっている場合、 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューからファイルの状態を表示できます。  
   
  ファイル グループ内のファイルの状態により、ファイル グループ全体の可用性が決まります。 ファイル グループを使用可能にするには、ファイル グループ内のすべてのファイルがオンラインである必要があります。 ファイル グループの現在の状態を表示するには、 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) カタログ ビューを使用します。 ファイル グループがオフラインのときに、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してファイル グループにアクセスしようとすると、エラーが発生して失敗します。 クエリ オプティマイザーで SELECT ステートメントのクエリ プランを作成すると、オフライン ファイル グループに存在する非クラスター化インデックスおよびインデックス付きビューが無視され、これらのステートメントが成功します。 ただし、オフラインのファイル グループに、対象テーブルのヒープやクラスター化インデックスが含まれている場合には、SELECT ステートメントは失敗します。 また、オフラインのファイル グループ内にあるインデックス付きのテーブルを変更する INSERT、UPDATE、または DELETE ステートメントは失敗します。  
@@ -45,7 +45,7 @@ ms.locfileid: "67934440"
 ## <a name="file-state-definitions"></a>ファイルの状態の定義  
  次の表では、ファイルの状態を定義しています。  
   
-|状態|定義|  
+|State|定義|  
 |-----------|----------------|  
 |ONLINE|すべての操作でファイルを使用できます。 データベース自体がオンラインである場合、プライマリ ファイル グループ内のファイルは常にオンラインです。 プライマリ ファイル グループ内のファイルがオンラインでない場合、データベースはオンラインにならないので、セカンダリ ファイルの状態は未定義となります。|  
 |OFFLINE|ファイルにアクセスできません。また、ファイルがディスク上に存在しない可能性があります。 ファイルは、ユーザーの明示的な操作によってオフラインになり、ユーザーが追加操作を行うまではオフラインのままになります。<br /><br /> **\*\* 注意 \*\*** ファイルが破損しているとき、ファイルの状態がオフラインに設定されることがありますが、オンラインに戻すことができます。 オフラインに設定されたファイルをオンラインに設定する唯一の方法は、バックアップからファイルを復元することです。 単一ファイルの復元の詳細については、「[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。 <br /><br /> データベースが完全または一括のログ復旧状態のとき、ファイルが削除されると、データベース ファイルもオフラインに設定されます。 sys.master_files のエントリは、drop_lsn 値を超えたためにトランザクション ログが切り詰められるまで残ります。 詳細については、「[トランザクション ログの切り捨て](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation)」を参照してください. |  

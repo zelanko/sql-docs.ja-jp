@@ -1,6 +1,6 @@
 ---
-title: チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用 | Microsoft Docs
-ms.custom: ''
+title: 'チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用'
+ms.custom: seo-dt-2019
 ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: ''
@@ -14,35 +14,33 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 246f450a1782a6f00e32ce725c244915dc95054c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4143785a4789dd2f9dd2510b96bcc4de3a21c82e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753778"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 Microsoft Azure Blob Storage サービスでの SQL Server 2016 の使用に関するチュートリアルへようこそ。 このチュートリアルは、Microsoft Azure Blob Storage サービスを SQL Server データ ファイルや SQL Server バックアップに使用する方法を理解するのに役立ちます。  
   
 SQL Server による Microsoft Azure Blob Storage サービスの統合のサポートは、SQL Server 2012 Service Pack 1 CU2 の拡張機能として開始され、SQL Server 2014 および SQL Server 2016 でさらに強化されました。 この機能の概要と使用した場合の利点については、「[Microsoft Azure 内の SQL Server データ ファイル](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)」をご覧ください。 ライブ デモについては、 [特定の時点での復元に関するデモ](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)を参照してください。  
 
 このチュートリアルでは、複数のセクションに分けて、Microsoft Azure Blob Storage サービス上で SQL Server データ ファイルを使用する方法を説明します。 各セクションでは特定のタスクに重点を置いており、セクションは順番に完了する必要があります。 まず、格納済みアクセス ポリシーと Shared Access Signature で Blob ストレージに新しいコンテナーを作成する方法を学習します。 次に、SQL Server を Azure Blob Storage と統合するための SQL Server 資格情報を作成する方法を学習します。 さらに、Blob ストレージにデータベースをバックアップし、Azure の仮想マシンに復元します。 SQL Server 2016 のファイル スナップショットのトランザクション ログ バックアップを使用して、特定の時点、または新しいデータベースに復元することができます。 最後に、このチュートリアルでは、ファイル スナップショットのバックアップについて理解し、使用できるようにするために、メタ データ システムのストアド プロシージャと関数の使用方法を紹介します。
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念と T-SQL 構文についての知識が必要です。 このチュートリアルを使用するには、Azure ストレージ アカウント、SQL Server Management Studio (SSMS)、オンプレミスの SQL Server のインスタンスへのアクセス、SQL Server 2016 を実行している Azure 仮想マシン (VM) へのアクセス、および AdventureWorks2016 データベースが必要です。 また、BACKUP コマンドと RESTORE コマンドの実行に使用するアカウントは、**alter any credential** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。 
 
 - 無料の [Azure アカウント](https://azure.microsoft.com/offers/ms-azr-0044p/)を取得する。
-- [Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)を作成する。
+- [Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)を作成します。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 - [SQL Server を実行している Azure VM](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/) をプロビジョニングする
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 - [AdventureWorks2016 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
 - ユーザー アカウントを [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) のロールに割り当て、[alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 権限を付与する。 
-
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 格納済みアクセス ポリシーと共有アクセス ストレージを作成する
 
@@ -55,8 +53,8 @@ Shared Access Signature とは、コンテナー、BLOB、キュー、または�
   
 格納済みアクセス ポリシーと Shared Access Signature を作成するには、Azure PowerShell、Azure Storage SDK、Azure REST API、またはサードパーティのユーティリティを使用します。 このチュートリアルでは、Azure PowerShell スクリプトを使用して、このタスクを実行する方法について説明します。 スクリプトは、Resource Manager デプロイ モデル ルを使用して、次の新しいリソースを作成します  
   
--   リソース グループ   
--   [ストレージ アカウント]  
+-   Resource group   
+-   ストレージ アカウント  
 -   Azure BLOB コンテナー   
 -   SAS ポリシー    
 
@@ -73,12 +71,12 @@ Shared Access Signature とは、コンテナー、BLOB、キュー、または�
   
 1.  Window PowerShell または Windows PowerShell ISE (前述のバージョン要件を参照してください) を開きます。  
   
-2.  b のスクリプトを編集してから、実行します。  
+2.  以下のスクリプトを編集してから、実行します。  
   
     ```powershell
     # Define global variables for the script  
     $prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
-    $subscriptionID=='<your subscription ID>'   # the ID  of subscription name you will use  
+    $subscriptionID = '<your subscription ID>'   # the ID  of subscription name you will use  
     $locationName = '<a data center location>'  # the data center region you will use  
     $storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
@@ -387,7 +385,7 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
     SELECT COUNT (*) FROM AdventureWorks2016.Production.Location ;
     ```  
   
-5.  出力を確認します。 復元後、行数は 18,389 行になっています。この値は、ログ バックアップ 5 の行数 ～ ログ バックアップ 6 の行数の範囲内の値です (行数は変動します)。  
+5.  出力結果を確認します。 復元後、行数は 18,389 行になっています。この値は、ログ バックアップ 5 の行数 ～ ログ バックアップ 6 の行数の範囲内の値です (行数は変動します)。  
   
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
@@ -483,7 +481,7 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
 ## <a name="see-also"></a>参照
 
 [Microsoft Azure 内の SQL Server データ ファイル](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Azure でのデータベース ファイルのファイル スナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Azure でのデータベース ファイルのスナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [Shared Access Signature, 第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [コンテナーの作成](https://msdn.microsoft.com/library/azure/dd179468.aspx)  

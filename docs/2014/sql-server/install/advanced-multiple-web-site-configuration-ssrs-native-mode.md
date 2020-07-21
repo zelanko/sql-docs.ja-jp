@@ -1,5 +1,5 @@
 ---
-title: 複数の Web サイトの構成 (SSRS ネイティブ モード) の高度な |Microsoft Docs
+title: 高度な複数 Web サイト構成 (SSRS ネイティブモード) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,19 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c04b5cc4dd75d2f9f8305b7af00e389317a92537
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096827"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045776"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>高度な複数 Web サイト構成 (SSRS ネイティブ モード)
   このダイアログ ボックスは、レポート サーバーまたはレポート マネージャーへのアクセスに使用される URL を作成し、管理するために使用します。 **[高度な複数 Web サイト構成]** ダイアログ ボックスでは、追加の URL、つまりホスト ヘッダー名を含んだカスタム URL を作成することも、IPv4 または IPv6 形式の IP アドレスを指定することもできます。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード。  
   
  レポート サーバーに複数の方法でアクセスできるように構成する場合は、複数の URL を作成すると便利です。 たとえば、イントラネットおよびエクストラネット接続を介してレポート サーバーにアクセスするには、接続の種類ごとに異なる URL を用意する必要があります。  
   
@@ -30,9 +29,9 @@ ms.locfileid: "66096827"
   
  **[OK]** をクリックして変更を保存します。 URL を追加または削除した後に、 **[OK]** をクリックせずにダイアログ ボックスを閉じると、変更は失われます。  
   
-## <a name="options"></a>および  
- **[IP アドレス]**  
- TCP/IP ネットワーク上でレポート サーバー コンピューターを識別します。 有効な値は次のとおりです。  
+## <a name="options"></a>オプション  
+ **IP アドレス**  
+ TCP/IP ネットワーク上でレポート サーバー コンピューターを識別します。 有効な値は、次のとおりです。  
   
 -   **[すべて割り当て]** は、レポート サーバー アプリケーションを指す URL に、コンピューターに割り当てられている IP アドレスをどれでも使用できることを示します。 コンピューターに割り当てられている IP アドレスに対してドメイン ネーム サーバーによって解決されるわかりやすいホスト名 (コンピューター名など) も、この値の対象に含まれます。 これは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL の既定値です。  
   
@@ -40,12 +39,12 @@ ms.locfileid: "66096827"
   
 -   **[127.0.0.1]** は、localhost にアクセスする場合に使用します。 この値は、レポート サーバー コンピューターでのローカル管理をサポートします。 この値のみを選択すると、レポート サーバー コンピューターにローカルにログオンしているユーザーだけがアプリケーションにアクセスできるようになります。  
   
--   "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの IPv4 アドレスです。 IP アドレスは、次の形式のような 4 バイト フィールドが 8 の 128 ビット値になります、ネットワークが IPv6 のアドレス指定を使用する場合:\<ヘッダー >:*nnnn:nnnn:nnnn:nnnn*します。  
+-   "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの IPv4 アドレスです。 ネットワークで IPv6 アドレス指定を使用している場合、IP アドレスは、次の形式の 8 4 バイトのフィールドの128ビット値になります: \<header> :*nnnn: nnnn: nnnn: nnnn*。  
   
      複数のカードがある場合は、それぞれに IP アドレスが割り当てられます。 この値のみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。  
   
  **[ポート]**  
- レポート サーバーが要求を監視するポートを指定します。 既定のポートは、ポート 80 です。 ポート 80 を使用する場合は、URL にポートを含める必要はありません。 その他の任意のポート番号を使用する場合をする必要がありますに含める URL (たとえば、 http://localhost:8181/reports) します。  
+ レポート サーバーが要求を監視するポートを指定します。 既定のポートは、ポート 80 です。 ポート 80 を使用する場合は、URL にポートを含める必要はありません。 その他のポート番号を使用する場合は、URL に必ず含める必要があります (たとえば、 http://localhost:8181/reports)  
   
  **ホスト ヘッダー**  
  コンピューターに解決されるホスト ヘッダーをドメイン ネーム サーバーに既に定義している場合は、レポート サーバー アクセス用に構成する URL にそのホスト ヘッダーを指定できます。  
@@ -76,7 +75,7 @@ ms.locfileid: "66096827"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager の URL &#40;構成&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

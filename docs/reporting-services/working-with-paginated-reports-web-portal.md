@@ -9,10 +9,10 @@ ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68222642"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>ページ分割されたレポートの使用 (Web ポータル)
@@ -62,18 +62,18 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## <a name="data-source"></a>[データ ソース]  
+## <a name="data-source"></a>Data Source  
 共有データ ソースをポイントしたり、カスタム データ ソースの接続情報を入力したりできます。  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
   
 以下のオプションを使用して、カスタム データ ソースを指定します。  
   
-**型**  
+**Type**  
   
 データ ソースから取得したデータの処理に使用する、データ処理拡張機能を指定します。 組み込みデータ拡張機能の一覧については、[Reporting Services でサポートされるデータ ソース (SSRS)] をご覧ください。 サード パーティ ベンダーから、別のデータ処理拡張機能を入手できる可能性もあります。  
   
-**[接続文字列]**  
+**接続文字列**  
   
 レポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続の種類によって使用する構文が決まります。 たとえば、XML データ処理拡張機能の接続文字列は、XML ドキュメントの URL になります。 ほとんどの場合、データベース サーバーおよびデータ ファイルは一般的な接続文字列で指定されます。 次に、MyData という名前の SQL Server データベースへの接続に使用する接続文字列の例を示します。  
   
@@ -81,7 +81,7 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
 接続文字列は式として構成できます。これにより、データ ソースを実行時に指定することができます。 データ ソースの式は、レポート デザイナーを使用してレポートで定義されます。 データ ソースの式は、Web ポータル上で定義、表示、変更できません。 ただし、 **[既定値よりオーバーライド]** をクリックして静的な接続文字列を入力することで、データ ソースの式をオーバーライドすることができます。 式に戻す場合は、 **[既定値に戻す]** をクリックします。 レポート サーバーは、復元する必要がある場合に備えて元の接続文字列を保存します。 データ ソースの式を使用するには、レポートに本来パブリッシュされていたデータ ソース接続情報を使用する必要があります。 共有データ ソースでは、接続文字列の式の使用はサポートされていません。  
   
-**[資格情報]**  
+**資格情報**  
   
 資格情報の取得方法を決めるオプションを指定できます。  
   
@@ -188,7 +188,7 @@ Reporting Services サブスクリプションは、特定の時刻に、また�
   
 現在のアイテムに定義されているセキュリティを変更する場合に選択します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)  
 [共有データセットの操作](../reporting-services/work-with-shared-datasets-web-portal.md)

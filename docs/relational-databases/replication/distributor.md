@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 22770207bd0c6da38f88680313d8da433e1da286
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 5d03c0c68750b2d2f5febbd024f7f1d5d32ec4d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653307"
 ---
 # <a name="distributor"></a>ディストリビューター
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[ディストリビューター]** ページは、ディストリビューションの構成ウィザードとパブリケーションの新規作成ウィザードで表示されます。 ディストリビューターは、ディストリビューション データベースを備え、あらゆる種類のレプリケーションのメタデータおよび履歴データを格納するサーバーです。 ディストリビューターは、トランザクション レプリケーションのトランザクションも格納します。 ディストリビューターは、パブリッシャーと同じサーバーであっても、別のサーバーであってもかまいません。前者の場合はローカル ディストリビューターで、後者の場合はリモート ディストリビューターになります。 ディストリビューターの役割は、実装するレプリケーションの種類によって異なります。 一般に、マージ レプリケーションやスナップショット レプリケーションに比べて、トランザクション レプリケーションに対するディストリビューターの役割は大きくなります。 マージ レプリケーションおよびスナップショット レプリケーションではローカル ディストリビューターを使用するのが一般的です。ただし、非常に稼働率が高いシステムでのトランザクション レプリケーションの場合は、リモート ディストリビューターを利用すると効果的です。  
   
  サーバーがディストリビューターとして指定されると、次のようなリソースが新たに消費されることになります。  
@@ -34,14 +34,14 @@ ms.locfileid: "68768523"
   
  ディストリビューターとして指定するサーバーには、サーバー上でさまざまな機能を果たしながら、レプリケーションの処理を実行できるだけの十分なディスク容量とプロセッサ パワーが必要です。  
   
-## <a name="options"></a>オプション  
- **['\<ServerName>' を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]**  
+## <a name="options"></a>Options  
+ **'\<ServerName>' を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)**  
  このオプションを選択すると、ディストリビューターとして接続するサーバーを構成できます。  
   
  **[以下のサーバーをディストリビューターとして使用する (選択するサーバーはディストリビューターとして構成されている必要があります)]**  
  別のサーバーをディストリビューターとして構成するには、このオプションを選択し、以下のサーバーの名前をクリックします。  
   
- **[追加]**  
+ **追加**  
  ディストリビューターとして構成するサーバーが表示されていない場合は、 **[追加]** をクリックし、目的のサーバーを識別して一覧に追加します。  
   
 > [!NOTE]  

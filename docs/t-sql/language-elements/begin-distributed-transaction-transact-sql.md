@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0faddc5b763a2728dc507d2aad17b26501846452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f81dd17da405d1fe9b3dd6e73e569df91e10d4e2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125319"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898943"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散トランザクション コーディネーター (MS DTC) によって管理される、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクションの開始を指定します。  
     
@@ -43,7 +43,7 @@ ms.locfileid: "68125319"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 BEGIN DISTRIBUTED { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable ]   
@@ -57,7 +57,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  @*tran_name_variable*  
  MS DTC ユーティリティ内で分散管理トランザクションの追跡に使用するトランザクション名を含む、ユーザー定義の変数名を指定します。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  BEGIN DISTRIBUTED TRANSACTION ステートメントを実行する [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスは、トランザクションの発行元となり、トランザクションの完了を制御します。 このセッションで後続の COMMIT TRANSACTION または ROLLBACK TRANSACTION ステートメントを実行すると、制御側のインスタンスから MS DTC に対して、関係する全インスタンス間の分散トランザクションの完了を管理するように要求されます。  
   
  トランザクション レベルのスナップショット分離では、分散トランザクションはサポートされません。  
@@ -79,7 +79,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssDE](../../includes/ssde-md.md)] のローカル インスタンスとリモート サーバーのインスタンス両方の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースから候補者を削除します。 ローカルとリモートの両方のデータベースで、トランザクションのコミットまたはロールバックのいずれかが実行されます。  
   
 > [!NOTE]  

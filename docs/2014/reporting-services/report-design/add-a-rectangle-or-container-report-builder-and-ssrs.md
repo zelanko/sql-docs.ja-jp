@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1f9750813d305834fe36f2c6ab7abfaa1d95075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106768"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>四角形またはコンテナーの追加 (レポート ビルダーおよび SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66106768"
 2.  **[罫線]** ボタンの横にある矢印をクリックして、四角形のどの辺を変更するかを指定します。  
   
     > [!NOTE]  
-    >  線のスタイルを設定した場合**二重**と線の幅が 1 1/2 ポイントより狭いします線が表示されるか double レポート ビルダー、レポート デザイナーまたはレポート マネージャーでレポートを実行するとします。 レポートを他の形式 (Microsoft Word、Acrobat PDF など) にエクスポートすると、二重に表示されます。  
+    >  線のスタイルを [**二重**線] に設定し、線の幅が 1 1/2 pt または狭い場合は、レポートをレポートビルダー、レポートデザイナー、またはレポートマネージャーで実行すると、線が二重に表示されないことがあります。 レポートを他の形式 (Microsoft Word、Acrobat PDF など) にエクスポートすると、二重に表示されます。  
   
 ## <a name="see-also"></a>参照  
  [四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   

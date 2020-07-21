@@ -1,5 +1,5 @@
 ---
-title: 多次元モデルのアクション |Microsoft Docs
+title: 多次元モデルでのアクション |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19754c99e87c50121fc79b80649d7555b79ca59e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077502"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544876"
 ---
 # <a name="actions-in-multidimensional-models"></a>多次元モデルのアクション
   アクションは、選択したキューブまたはキューブの一部でエンド ユーザーが行う操作です。 この操作では、選択されているアイテムをパラメーターとして設定してアプリケーションを起動したり、選択されているアイテムに関する情報を取得したりすることができます。 アクションの詳細については、「[アクション &#40;Analysis Services - 多次元データ&#41;](actions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -41,7 +40,7 @@ ms.locfileid: "66077502"
   
 -   [ディメンションのメンバー]  
   
--   Hieararchy  
+-   Hierarchy  
   
 -   [階層メンバー]  
   
@@ -57,26 +56,26 @@ ms.locfileid: "66077502"
  **[アクションの内容]**  
  アクションの種類を選択します。 次の表は、使用できる種類をまとめたものです。  
   
-|型|説明|  
+|種類|[説明]|  
 |----------|-----------------|  
 |[データ セット]|データセットを取得します。|  
 |[専用]|この一覧に表示されていないインターフェイスを使用して操作を実行します。|  
 |[行セット]|行セットを取得します。|  
-|ステートメントから削除してください。|OLE DB コマンドを実行します。|  
-|[URL]|インターネット ブラウザーで変数ページを表示します。|  
+|ステートメント|OLE DB コマンドを実行します。|  
+|URL|インターネット ブラウザーで変数ページを表示します。|  
   
  **[アクションの式]** に、アクションが実行されたときに渡されるパラメーターを指定します。 構文の評価結果は文字列型になる必要があり、MDX で記述した式を含める必要があります。 たとえば、MDX 式では、構文に含まれるキューブの一部を指定できます。 MDX 式が評価されてから、パラメーターが渡されます。 また、MDX ビルダーを使用すると、MDX 式を作成できます。  
   
- **[追加のプロパティ]**  
+ **追加のプロパティ**  
  プロパティを選択します。 次の表は、使用できるプロパティをまとめたものです。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|**[呼び出し]**|アクションを実行する方法を指定します。 既定の [インタラクティブ] を指定すると、アクションはユーザーがオブジェクトにアクセスしたときに実行されます。 次の設定が可能です。<br /><br /> [バッチ]<br /><br /> Interactive<br /><br /> [オープン時]|  
-|**アプリケーション**|アクションのアプリケーションについて説明します。|  
-|**[説明]**|アクションについて説明します。|  
-|**Caption**|アクションに関して表示されるキャプションを指定します。 キャプションが MDX の場合は、指定`True`の**キャプションに MDX**します。|  
-|**キャプションに MDX**|キャプションが MDX の場合は `True`、MDX でない場合は `False` を指定します。|  
+|**呼び出し**|アクションを実行する方法を指定します。 既定の [インタラクティブ] を指定すると、アクションはユーザーがオブジェクトにアクセスしたときに実行されます。 次の設定が可能です。<br /><br /> Batch<br /><br /> Interactive<br /><br /> [オープン時]|  
+|**Application**|アクションのアプリケーションについて説明します。|  
+|**説明**|アクションについて説明します。|  
+|**Caption**|アクションに関して表示されるキャプションを指定します。 キャプションが MDX の場合は、 `True` [**キャプションに mdx**を使用する] を指定します。|  
+|**True**|キャプションが MDX の場合は `True`、MDX でない場合は `False` を指定します。|  
   
 > [!NOTE]  
 >  HTML およびコマンド ラインのアクションの種類を定義するには、Analysis Services スクリプト言語 (ASSL) または分析管理オブジェクト (AMO) を使用する必要があります。 詳細については、「[アクション要素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)」「[Type 要素 &#40;アクション&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl)」、および「[高度な AMO OLAP オブジェクトのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)」を参照してください。  
@@ -84,7 +83,7 @@ ms.locfileid: "66077502"
 ## <a name="creating-a-reporting-action"></a>レポート アクションの作成  
  レポート サーバーは、レポートに関する URL ベースの要求に応答します。 レポート アクションを作成するには、 **[キューブ]** メニューの **[新しいレポート アクション]** をクリックします。 次のオプションは、レポート アクションに固有です。  
   
- **レポート サーバー**  
+ **レポートサーバー**  
  次の表で説明するプロパティは、レポート サーバーに対して指定されます。  
   
 |プロパティ|説明|  
@@ -111,7 +110,7 @@ parametervalue1
 & ...  
 ```  
   
- 以下に例を示します。  
+ 次に例を示します。  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  

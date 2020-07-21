@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 13ca11c107604c3da6d162b63a6d72ec6f76a201
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8f9771910ecfa69e6fa0cfb81a5d40ee9af4c1b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749570"
 ---
-# <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (SSISDB データベース)
+# <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのフォルダーにプロジェクトを配置するか、以前に配置した既存のプロジェクトを更新します。  
   
@@ -30,9 +30,9 @@ ms.locfileid: "68007813"
   
 ```sql  
 catalog.deploy_project [@folder_name =] folder_name   
-      , [@project_name =] project_name   
-      , [@project_stream =] projectstream   
-    [ , [@operation_id ] = operation_id OUTPUT ]   
+      , [ @project_name = ] project_name   
+      , [ @project_stream = ] projectstream   
+    [ , [ @operation_id = ] operation_id OUTPUT ]   
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -72,11 +72,11 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   存在しないオブジェクトを参照するパラメーター、既に存在するオブジェクトを作成しようとするパラメーター、または何かの方法で無効になるパラメーター  
   
--   パラメーター *@project_name* の値が、配置ファイルのプロジェクトの名前に一致しない  
+-   パラメーター *\@project_name* の値が、配置ファイルのプロジェクトの名前に一致しない  
   
 -   ユーザーに十分な権限がない  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロジェクトの配置または更新中、ストアド プロシージャは、プロジェクトの個々のパッケージの保護レベルをチェックしません。  
   
   

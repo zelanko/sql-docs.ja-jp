@@ -1,6 +1,6 @@
 ---
 title: IF...ELSE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Transact-SQL ステートメントで制御フローを指定する IF-ELSE ステートメントの Transact-SQL 言語参照。
 ms.date: 07/11/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,15 +21,15 @@ ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0b19216ce352256355da9b2f0c458f49c036773
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 580339512f25c409030c7fdd18869a0269cddde8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075070"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007360"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行する条件を設定します。 IF キーワードおよびその条件に続く [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、条件が満たされる (ブール式から TRUE が返される) 場合に実行されます。 オプションの ELSE キーワードは、IF 条件が満たされない (ブール式から FALSE が返される) 場合に実行される別の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68075070"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -53,14 +53,14 @@ IF Boolean_expression
   
  ステートメント ブロックを定義するには、流れ制御キーワードの BEGIN と END を使用してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  IF...ELSE 構造は、バッチ、ストアド プロシージャ、およびアドホック クエリ内で使うことができます。 この構造がストアド プロシージャで使用される場合、あるパラメーターの存在を調べるためによく使用されます。  
   
  IF テストは、他の IF の後、または ELSE の後で入れ子にすることができます。 入れ子のレベルの制限は、使用可能なメモリによって異なります。  
   
 ## <a name="example"></a>例  
   
-```  
+```sql
 IF DATENAME(weekday, GETDATE()) IN (N'Saturday', N'Sunday')
        SELECT 'Weekend';
 ELSE 
@@ -69,26 +69,23 @@ ELSE
   
  例については、「[ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md)」を参照してください。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`IF...ELSE` を使用し、`DimProduct` テーブルの項目の重み付けを基にして、2 つの応答のどちらをユーザーに表示するかを決定します。  
   
-```  
+```sql
 -- Uses AdventureWorksDW  
-  
+
 DECLARE @maxWeight float, @productKey integer  
 SET @maxWeight = 100.00  
 SET @productKey = 424  
-IF @maxWeight <= (SELECT Weight from DimProduct 
-                  WHERE ProductKey = @productKey)   
-    (SELECT @productKey AS ProductKey, EnglishDescription, Weight, 
-    'This product is too heavy to ship and is only available for pickup.' 
+IF @maxWeight <= (SELECT Weight from DimProduct WHERE ProductKey = @productKey)   
+    SELECT @productKey AS ProductKey, EnglishDescription, Weight, 'This product is too heavy to ship and is only available for pickup.' 
         AS ShippingStatus
-    FROM DimProduct WHERE ProductKey = @productKey);  
+    FROM DimProduct WHERE ProductKey = @productKey
 ELSE  
-    (SELECT @productKey AS ProductKey, EnglishDescription, Weight, 
-    'This product is available for shipping or pickup.' 
+    SELECT @productKey AS ProductKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' 
         AS ShippingStatus
-    FROM DimProduct WHERE ProductKey = @productKey);  
+    FROM DimProduct WHERE ProductKey = @productKey
 ```  
   
 ## <a name="see-also"></a>参照  
@@ -98,8 +95,3 @@ ELSE
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
-  
-  
-
-
-

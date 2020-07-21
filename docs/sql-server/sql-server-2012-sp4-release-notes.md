@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2012 Service Pack のリリース ノート | Microsoft Docs
+description: この記事には、SQL Server 2012 の 4 つのサービス パックの集約したリリース ノートが含まれています。 各サービス パックは、前のサービス パックの累積です。
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
@@ -7,15 +8,15 @@ ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1198933f5dd996b2cf050ea0fbb7960410095869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d49f60415135a40ffeb470f09903cd3cd080ab69
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136518"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999463"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack のリリース ノート
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +32,9 @@ Service Pack は、インストール メディアではなくオンラインで
 
 ### <a name="download-pages"></a>ダウンロード ページ
 
-- [SQL Server 2012 SP4 Feature Pack](https://go.microsoft.com/fwlink/?linkid=846907)
-- [SQL Server 2012 SP4 の更新プログラムのインストール](https://go.microsoft.com/fwlink/?linkid=846829)
-- [SQL Server 2012 SP4 Express](https://go.microsoft.com/fwlink/?linkid=846905)
+- [SQL Server 2012 SP4 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041)
+- [SQL Server 2012 SP4 の更新プログラムのインストール](https://www.microsoft.com/download/details.aspx?id=56040)
+- [SQL Server 2012 SP4 Express](https://www.microsoft.com/download/details.aspx?id=56042)
 
 
 ### <a name="performance-and-scale-improvements"></a>パフォーマンスとスケーリングの改善
@@ -107,7 +108,7 @@ Service Pack は、インストール メディアではなくオンラインで
 |SQL Server 2012 のクライアントと管理ツールのみの 32 ビット バージョン (SQL Server 2012 Management Studio を含む)|SQL Server 2012 SP1 の 32 ビット バージョンにクライアントと管理ツールをアップグレード|SQLManagementStudio_x86_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=267905)から)|  
 |SQL Server 2012 Management Studio Express の 32 ビット バージョン|SQL Server 2012 SP1 Management Studio Express の 32 ビット バージョンにアップグレード|SQLManagementStudio_x86_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=267905)から)|  
 |SQL Server 2012 のいずれかのエディションの 32 ビット バージョン **および** クライアントと管理ツールの 32 ビット バージョン (SQL Server 2012 RTM Management Studio 含む)|SQL Server 2012 SP1 の 32 ビット バージョンにすべての製品をアップグレード|SQLServer2012SP1-KB2674319-x86-ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
-|[Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)の 1 つ以上のツールの 32 ビット バージョン|Microsoft SQL Server 2012 SP1 用 Feature Pack の 32 ビット バージョンにツールをアップグレード|[Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)の 1 つ以上のファイル|  
+|[Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)の 1 つ以上のツールの 32 ビット バージョン|Microsoft SQL Server 2012 SP1 用 Feature Pack の 32 ビット バージョンにツールをアップグレード|[Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)の 1 つ以上のファイル|  
 |SQL Server 2012 の 32 ビット インストールなし|SP1 を含む 32 ビット バージョンの SQL Server 2012 をインストール (SP1 がプレインストールされた新しいインスタンス)|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **および** SQLServer2012SP1-FullSlipstream-x86-ENU.box ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
 |SQL Server 2012 Management Studio の 32 ビット インストールなし|32 ビットの SQL Server 2012 Management Studio をインストール (SP1 を含む)|SQLManagementStudio_x86_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=267905)から)|  
 |SQL Server 2012 RTM Express の 32 ビット バージョンなし|32 ビットの SQL Server 2012 Express をインストール (SP1 を含む)|SQLEXPR32_x86_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=267905)から)|  
@@ -118,7 +119,7 @@ Service Pack は、インストール メディアではなくオンラインで
 |SQL Server 2012 のクライアントと管理ツールのみの 64 ビット バージョン (SQL Server 2012 Management Studio 含む)|SQL Server 2012 SP1 の 64 ビット バージョンにクライアントと管理ツールをアップグレード|SQLManagementStudio_x64_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=267905)から)|  
 |SQL Server 2012 Management Studio Express の 64 ビット バージョン|SQL Server 2012 SP1 Management Studio Express の 64 ビット バージョンにアップグレード|SQLManagementStudio_x64_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=267905)から)|  
 |SQL Server 2012 のいずれかのエディションの 64 ビット バージョン **および** クライアントと管理ツールの 64 ビット バージョン (SQL Server 2012 RTM Management Studio を含む)|SQL Server 2012 SP1 の 64 ビット バージョンにすべての製品をアップグレード|SQLServer2012SP1-KB2674319-x64-ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
-|[Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=16978)の 1 つ以上のツールの 64 ビット バージョン|Microsoft SQL Server 2012 SP1 用 Feature Pack の 64 ビット バージョンにツールをアップグレード|[Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)の 1 つ以上のファイル|  
+|[Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)の 1 つ以上のツールの 64 ビット バージョン|Microsoft SQL Server 2012 SP1 用 Feature Pack の 64 ビット バージョンにツールをアップグレード|[Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)の 1 つ以上のファイル|  
 |SQL Server 2012 の 64 ビット インストールなし|SP1 を含む 64 ビット バージョンの SQL Server 2012 をインストール (SP1 がプレインストールされた新しいインスタンス)|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **および** SQLServer2012SP1-FullSlipstream-x64-ENU.box ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
 |SQL Server 2012 Management Studio の 64 ビット インストールなし|64 ビットの SQL Server 2012 Management Studio をインストール (SP1 含む)|SQLManagementStudio_x64_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=267905)から)|  
 |SQL Server 2012 RTM Express の 64 ビット バージョンなし|64 ビットの SQL Server 2012 Express をインストール (SP1 含む)|SQLEXPR_x64_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=267905)から)|  
@@ -128,16 +129,16 @@ Service Pack は、インストール メディアではなくオンラインで
 この Service Pack で修正されたすべてのバグと既知の問題については、 [サポート技術情報記事](https://support.microsoft.com/kb/2674319)を参照してください。   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>同じ IP アドレスを使用すると SQL Server フェールオーバー クラスターのインスタンスの再インストールに失敗する  
-**問題点:** SQL Server フェールオーバー クラスター インスタンスのインストール中に不正な IP アドレスを指定すると、インストールは失敗します。 失敗したインスタンスをアンインストールした後に、同じインスタンス名と適切な IP アドレスを使用して SQL Server フェールオーバー クラスター インスタンスを再インストールしようとすると、インストールは失敗します。 このエラーは、前のインストールによって残されたリソース グループが重複するため発生します。  
+**問題:** SQL Server フェールオーバー クラスター インスタンスのインストール中に不正な IP アドレスを指定すると、インストールは失敗します。 失敗したインスタンスをアンインストールした後に、同じインスタンス名と適切な IP アドレスを使用して SQL Server フェールオーバー クラスター インスタンスを再インストールしようとすると、インストールは失敗します。 このエラーは、前のインストールによって残されたリソース グループが重複するため発生します。  
   
-**回避策:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストール前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。 
+**対処法:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストール前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services と PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>PowerPivot 構成ツールで PowerPivot ギャラリーが作成されない  
-**問題点:** PowerPivot 構成ツールはチーム サイトを準備するため、PowerPivot ギャラリーは作成されません。  
+**問題:** PowerPivot 構成ツールはチーム サイトを準備するため、PowerPivot ギャラリーは作成されません。  
   
-**回避策:** 新しいアプリ (ライブラリ) を作成します。  
+**対処法:** 新しいアプリ (ライブラリ) を作成します。  
   
 1.  サイト コレクション機能の **[サイト コレクションの PowerPivot 機能の統合]** がアクティブになっていることを確認します。  
   
@@ -146,14 +147,14 @@ Service Pack は、インストール メディアではなくオンラインで
 3.  **[PowerPivot ギャラリー]** をクリックします。  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Excel 2013 で PowerPivot for Excel を使用する場合は Excel と一緒にインストールされたアドインを使用する必要がある  
-**問題点:** Office 2010 では、PowerPivot for Excel は [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) からダウンロードできるスタンドアロンのアドインです。 このアドインは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=29074)からもダウンロードできます。 PowerPivot アドインは 2 つのバージョンをダウンロードできることにご留意ください。SQL Server 2008 R2 と SQL Server 2012 にそれぞれ付属するバージョンです。 ただし、Office 2013 の場合、PowerPivot for Excel は Offce に付属していて、Excel のインストール時にインストールされます。 SQL Server 2008 R2 および SQL Server 2012 に付属の PowerPivot for Excel 2010 には Excel 2013 との互換性はありませんが、Excel 2010 と Excel 2013 をサイド バイ サイドで実行する場合は、クライアント コンピューターに PowerPivot for Excel 2010 をインストールできます。 つまり、2 つのバージョンの Excel が共存できるため、対応する PowerPivot アドインも共存できます。  
+**問題:** Office 2010 では、PowerPivot for Excel は [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) からダウンロードできるスタンドアロンのアドインです。 このアドインは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=29074)からもダウンロードできます。 PowerPivot アドインは 2 つのバージョンをダウンロードできることにご留意ください。SQL Server 2008 R2 と SQL Server 2012 にそれぞれ付属するバージョンです。 ただし、Office 2013 の場合、PowerPivot for Excel は Offce に付属していて、Excel のインストール時にインストールされます。 SQL Server 2008 R2 および SQL Server 2012 に付属の PowerPivot for Excel 2010 には Excel 2013 との互換性はありませんが、Excel 2010 と Excel 2013 をサイド バイ サイドで実行する場合は、クライアント コンピューターに PowerPivot for Excel 2010 をインストールできます。 つまり、2 つのバージョンの Excel が共存できるため、対応する PowerPivot アドインも共存できます。  
   
-**回避策:** PowerPivot for Excel 2013 を使用するには、COM アドインを有効にする必要があります。 Excel 2013 で、 **[ファイル]**  |  **[オプション]**  |  **[アドイン]** の順にクリックします。 **[管理]** ドロップダウン ボックスの一覧で **[COM アドイン]** を選択し、 **[設定]** をクリックします。 **[COM アドイン]** で、 **[Microsoft Office PowerPivot for Excel 2013]** を選択し、 **[OK]** をクリックします。  
+**対処法:** PowerPivot for Excel 2013 を使用するには、COM アドインを有効にする必要があります。 Excel 2013 で、 **[ファイル]**  |  **[オプション]**  |  **[アドイン]** の順にクリックします。 **[管理]** ドロップダウン ボックスの一覧で **[COM アドイン]** を選択し、 **[設定]** をクリックします。 **[COM アドイン]** で、 **[Microsoft Office PowerPivot for Excel 2013]** を選択し、 **[OK]** をクリックします。  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>Reporting Services をインストールする前に SharePoint Server 2013 をインストールおよび構成する  
-**問題点:** SQL Server Reporting Services (SSRS) をインストールする**前に**、次の要件を完了します。  
+**問題:** SQL Server Reporting Services (SSRS) をインストールする**前に**、次の要件を完了します。  
   
 1.  SharePoint 2013 製品準備ツールを実行します。  
   
@@ -161,7 +162,7 @@ Service Pack は、インストール メディアではなくオンラインで
   
 3.  SharePoint 2013 製品構成ウィザードを実行するか、同等の構成手順を完了して SharePoint ファームを構成します。  
   
-**回避策:** SharePoint ファームが構成される前に [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールした場合、必要な回避策は、インストールされている他のコンポーネントによって異なります。  
+**対処法:** SharePoint ファームが構成される前に [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールした場合、必要な回避策は、インストールされている他のコンポーネントによって異なります。  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>SharePoint Server 2013 の Power View には Microsoft.AnalysisServices.SPClient.dll が必要  
 **問題点:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、必須コンポーネントの **Microsoft.AnalysisServices.SPClient.dll** がインストールされません。 SharePoint Server 2013 Preview と [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールしても、PowerPivot for SharePoint 2013 インストーラー パッケージ ( **spPowerPivot.msi** ) をダウンロードしてインストールしないと、Power View は動作せず、Power View では次の現象が発生します。  
@@ -174,7 +175,7 @@ Service Pack は、インストール メディアではなくオンラインで
   
 -   "値 'SharePoint Principal' は、接続文字列プロパティ 'User Identity' ではサポートされていません。"  
   
-**回避策:** SharePoint Server 2013 に PowerPivot for SharePoint 2013 インストーラー パッケージ (**spPowerPivot.msi**) をインストールします。 インストーラー パッケージは、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 機能パックに付属しています。 この機能パックは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ダウンロード センターの [SQL Server 2012 SP1 機能パック](https://go.microsoft.com/fwlink/p/?LinkID=268266) からダウンロードできます。  
+**対処法:** SharePoint Server 2013 に PowerPivot for SharePoint 2013 インストーラー パッケージ (**spPowerPivot.msi**) をインストールします。 インストーラー パッケージは、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 機能パックに付属しています。 この機能パックは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ダウンロード センターの [SQL Server 2012 SP1 機能パック](https://go.microsoft.com/fwlink/p/?LinkID=268266) からダウンロードできます。  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>定期データ更新の後で、PowerPivot ブックの Power View シートが削除される  
 **問題点**: PowerPivot for SharePoint アドインでは、Power View が含まれたブックで **定期データ更新** を使用すると、すべての Power View シートが削除されます。  
@@ -184,7 +185,7 @@ Service Pack は、インストール メディアではなくオンラインで
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS がサポートされていないエディションの SQL Server 2012 で使用可能になる  
-**問題点:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM リリースでは、Enterprise、Business Intelligence、Developer 以外のエディションの SQL Server でも Data Quality Services (DQS) 機能を使用できます。 SQL Server 2012 SP1 のインストール後は、Enterprise、Business Intelligence、および Developer 以外のエディションで DQS を使用できなくなります。  
+**問題:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM リリースでは、Enterprise、Business Intelligence、Developer 以外のエディションの SQL Server でも Data Quality Services (DQS) 機能を使用できます。 SQL Server 2012 SP1 のインストール後は、Enterprise、Business Intelligence、および Developer 以外のエディションで DQS を使用できなくなります。  
   
 **回避策**:サポートされていないエディションで DQS を使用している場合は、サポートされているエディションにアップグレードするか、アプリケーションをこの機能に依存しないように変更します。  
   
@@ -196,9 +197,9 @@ SQL Server 2012 Express Service Pack 1 (SP1) リリースには、SQL Server 201
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity と Change Data Capture Designer for Oracle by Attunity  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>CDC Service および CDC Designer のアップグレード  
-**問題点:** SQL Server 2012 SP1 をインストールする時点で、Change Data Capture Designer for Oracle および Change Data Capture Service for Oracle by Attunity がコンピューターにインストールされている場合、SP1 をインストールしてもこれらのコンポーネントはアップグレードされません。  
+**問題:** SQL Server 2012 SP1 をインストールする時点で、Change Data Capture Designer for Oracle および Change Data Capture Service for Oracle by Attunity がコンピューターにインストールされている場合、SP1 をインストールしてもこれらのコンポーネントはアップグレードされません。  
   
-**回避策:** 次の手順に従って CDC コンポーネントを最新バージョンにアップグレードしてください。  
+**対処法:** 次の手順に従って CDC コンポーネントを最新バージョンにアップグレードしてください。  
   
 1.  [SQL Server 2012 SP1 Feature Pack ダウンロード ページ](https://go.microsoft.com/fwlink/p/?LinkID=268266)から Change Data Capture Service for Oracle by Attunity の .msi ファイルをダウンロードします。  
   
@@ -225,11 +226,11 @@ DACFx は、すべての DAC シナリオとクライアント ツールで、SX
   
 **SqlPackage.exe (DACFx コマンド ライン ツール) に対する更新**  
   
--   データを含む DACPAC の抽出: データベース スキーマの他にユーザー テーブルのデータを含むライブ SQL Server または Windows Azure SQL データベースから、データベース スナップショット ファイル (.dacpac) を作成します。 これらのパッケージは、SqlPackage.exe の Publish 操作を使用して、新規または既存の SQL Server または Windows Azure SQL データベースにパブリッシュできます。 パッケージに含まれているデータによって、ターゲット データベースの既存のデータは置き換えられます。  
+-   データを含む DACPAC の抽出 - データベース スキーマの他にユーザー テーブルのデータを含むライブ SQL Server または Azure SQL Database から、データベース スナップショット ファイル (.dacpac) を作成します。 これらのパッケージは、SqlPackage.exe の Publish 操作を使用して、新規または既存の SQL Server または Azure SQL Database にパブリッシュできます。 パッケージに含まれているデータによって、ターゲット データベースの既存のデータは置き換えられます。  
   
--   BACPAC のエクスポート: オンプレミス SQL Server から Windows Azure SQL データベースへのデータベースの移行に使用できる、データベース スキーマおよびユーザー データを含むライブ SQL Server または Windows Azure SQL データベースの論理バックアップ ファイル (.bacpac) を作成します。 サポートされているバージョンの SQL Server 間で、Azure と互換性のあるデータベースをエクスポートし、後でインポートできます。  
+-   BACPAC のエクスポート - オンプレミスの SQL Server から Azure SQL Database へのデータベースの移行に使用できる、データベース スキーマおよびユーザー データを含むライブ SQL Server または Azure SQL Database の論理バックアップ ファイル (.bacpac) を作成します。 サポートされているバージョンの SQL Server 間で、Azure と互換性のあるデータベースをエクスポートし、後でインポートできます。  
   
--   BACPAC のインポート: .bacpac ファイルをインポートして、SQL Server または Windows Azure SQL データベースを新規に作成したり、空のデータベースにデータを入力したりできます。  
+-   BACPAC のインポート - .bacpac ファイルをインポートして、SQL Server または Azure SQL Database を新規に作成したり、空のデータベースにデータを入力したりできます。  
   
 SqlPackage.exe の完全なドキュメントは、MSDN の [ここ](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)にあります。  
   

@@ -1,5 +1,5 @@
 ---
-title: 軸の間隔の指定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 軸の間隔の指定 (レポート ビルダー) | Microsoft Docs
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecee87ddf31314b8e54c98148ab0570db08a1caf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7467cc02ec7351edb879da18c20e0cf2af4bb099
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65578497"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487709"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>軸の間隔の指定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割されたレポートで軸の間隔を設定して、グラフのカテゴリ (x) 軸に表示するラベル数と目盛り数を変更する方法について説明します。
@@ -22,7 +22,7 @@ ms.locfileid: "65578497"
 
 ただし、カテゴリ軸 (通常は x 軸) では、軸の間隔の自動調整によって、カテゴリの軸ラベルが表示されないことがあります。 軸の Interval プロパティで、必要な間隔の数を指定できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、実行時に、結果セットのデータに基づいて間隔の数が計算されます。 軸の間隔を計算する方法の詳細については、「 [グラフの軸ラベルの書式設定](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
 
-サンプル データを使って軸の間隔を設定するには、「[チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)」を参照してください。
+サンプル データを使って軸の間隔を設定するには、「[チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)」を参照してください。
   
 > [!NOTE]  
 >  カテゴリ軸は、通常、横軸 (X 軸) です。 ただし、横棒グラフの場合は、縦軸 (Y 軸) です。  

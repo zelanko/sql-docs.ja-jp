@@ -1,5 +1,5 @@
 ---
-title: FAST_FORWARD カーソルを取得 |Microsoft Docs
+title: FAST_FORWARD カーソルの取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,28 +10,26 @@ ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75402ddc6c04ef9487f544fb070a143138cf66ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: cd52acb22e4ce5304e0a1598b44fc562607b48b9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110124"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006480"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>FAST_FORWARD カーソルの取得
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+# <a name="obtain-a-fast_forward-cursor"></a>FAST_FORWARD カーソルの取得
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   読み取り専用の順方向専用カーソルを取得するには、行セット プロパティ DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT、および DBPROP_OWNUPDATEDELETE を VARIANT_TRUE に設定します。  
   
- 完全なサンプル コードには、行セット プロパティを設定して FAST_FORWARD カーソルを取得する方法が示されています。 プロパティを設定した後、SELECT ステートメントを実行し、**AdventureWorks** データベースの **Purchasing.Vendor** テーブルから **Name** 列を取得して表示します。  
+ 完全なサンプル コードには、行セット プロパティを設定して FAST_FORWARD カーソルを取得する方法が示されています。 プロパティが設定されると、SELECT ステートメントが実行され、 **AdventureWorks**データベース内の**Vendor**テーブルの**Name**列が取得されて表示されます。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
   
-### <a name="to-obtain-fastforward-cursor"></a>FAST_FORWARD カーソルを取得するには  
+### <a name="to-obtain-fast_forward-cursor"></a>FAST_FORWARD カーソルを取得するには  
   
 1.  データ ソースへの接続を確立します。  
   
@@ -39,14 +37,12 @@ ms.locfileid: "68110124"
   
 3.  コマンドを実行します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="example"></a>例  
  このサンプルでは、行セット プロパティを設定して FAST_FORWARD カーソルを取得する方法を示しています。 プロパティを設定した後、SELECT ステートメントを実行し、AdventureWorks データベースの Purchasing.Vendor テーブルから Name 列を取得して表示します。 このサンプルは IA64 ではサポートされていません。  
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

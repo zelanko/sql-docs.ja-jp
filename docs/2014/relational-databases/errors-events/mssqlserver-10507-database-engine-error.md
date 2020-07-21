@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c32441ebcf8804f712fad3061bbd380864db3426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 810419dede861e7447bfda9d50aea22ce8b2cf53
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916301"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552387"
 ---
-# <a name="mssqlserver10507"></a>MSSQLSERVER_10507
+# <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|10507|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_STMT_DOES_NOT_MATCH|  
-|メッセージ テキスト|プラン ガイドを作成することはできません ' % です。\*ls' によって指定されたステートメント`@stmt`と`@module_or_batch`、または`@plan_handle`と`@statement_start_offset`は、指定したモジュール ステートメントと一致またはバッチ処理します。 モジュールまたはバッチのステートメントと一致するように値を変更してください。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。`@stmt` と `@module_or_batch` または `@plan_handle` と `@statement_start_offset` で指定したステートメントが、指定したモジュールまたはバッチのステートメントと一致しません。 モジュールまたはバッチのステートメントと一致するように値を変更してください。|  
   
 ## <a name="explanation"></a>説明  
  指定したモジュールまたはバッチのステートメントが、指定したステートメントまたはステートメントのオフセット値と一致しませんでした。  
@@ -39,7 +38,7 @@ ms.locfileid: "62916301"
  モジュールまたはバッチのステートメントと一致するように指定のパラメーター値を変更します。  
   
 ## <a name="see-also"></a>参照  
- [プラン ガイド](../performance/plan-guides.md)   
+ [プランガイド](../performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

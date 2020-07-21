@@ -1,19 +1,20 @@
 ---
-title: レポート サーバー データベース接続の構成 (SSRS 構成マネージャー) | Microsoft Docs
+title: レポート サーバー データベース接続の構成 (構成マネージャー) | Microsoft Docs
+description: レポート サーバーの各インスタンスには、サーバーの管理対象であるレポート、共有データ ソース、リソース、およびメタデータが保存された、レポート サーバー データベースへの接続が必要です。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 04/26/2019
-ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 01/04/2020
+ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264980"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531161"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)
 
@@ -90,6 +91,13 @@ ms.locfileid: "68264980"
   
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが Windows 認証用に構成されており、レポート サーバー コンピューターと同じドメインまたは信頼関係のあるドメインにある場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで接続プロパティとして管理するサービス アカウントまたはドメイン ユーザー アカウントを使用するように接続を構成できます。 データベース サーバーが別のドメインにある場合、またはワークグループ セキュリティを使用している場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用するように接続を構成する必要があります。 この場合、必ず接続を暗号化してください。  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Azure SQL Managed Instance を使用してレポート サーバー データベースをホストする場合、サポートされている資格情報の種類は SQL Server 認証だけです。 また、Managed Instance ではレポート サーバー インスタンスをホストできないことにご注意ください。
+
+::: moniker-end
+
 #### <a name="using-service-accounts-and-integrated-security"></a>サービス アカウントと統合セキュリティの使用
 
 Windows 統合セキュリティを使用すると、レポート サーバー サービス アカウント経由で接続できます。 レポート サーバー サービス アカウントには、レポート サーバー データベースへのログイン権限が与えられます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合、セットアップは、Windows 統合セキュリティを既定の資格情報の種類として選択します。  
@@ -104,7 +112,7 @@ Windows 統合セキュリティを使用すると、レポート サーバー �
 
 #### <a name="using-a-sql-server-login"></a>SQL Server ログインの使用
 
-レポート サーバー データベースに接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを 1 つだけ指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用しており、レポート サーバー データベースがリモート コンピューター上にある場合は、サーバー間のデータ転送をセキュリティで保護するため、IPSec を使用してください。 データベース ログインを使用する場合、パスワードまたはアカウントを変更するたびにレポート サーバー データベース接続を更新する必要があります。  
+レポート サーバー データベースに接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを 1 つだけ指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用しており、レポート サーバー データベースがリモート コンピューター上にある場合は、サーバー間のデータ転送をセキュリティで保護するために、IPSec を使用してください。 データベース ログインを使用する場合、パスワードまたはアカウントを変更するたびにレポート サーバー データベース接続を更新する必要があります。
 
 ### <a name="database-permissions"></a>データベース権限
 
@@ -128,7 +136,7 @@ Windows 統合セキュリティを使用すると、レポート サーバー �
 
 複数のレポート サーバーで同じレポート サーバー データベースを使用するように構成できます。 この配置構成はスケールアウト配置と呼ばれます。 サーバー クラスター内で複数のレポート サーバーを実行する場合は、この構成が前提条件となります。 ただし、この構成は、サービス アプリケーションを分割する場合や、新しいレポート サーバー インスタンスのインストールと設定をテストして既存のレポート サーバーのインストールと比較する場合にも使用できます。 詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [レポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 - [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   

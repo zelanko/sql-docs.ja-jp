@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2964e02ad49ef21b61949da7eec2f48ede553b02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728442"
 ---
 # <a name="master-database"></a>master データベース
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **master** データベースには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのシステム レベルの情報がすべて記録されます。 記録される情報には、ログオン アカウント、エンドポイント、リンク サーバー、システム構成設定など、インスタンス全体のメタデータが含まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、システム オブジェクトが **master** データベースではなく、 [Resource データベース](../../relational-databases/databases/resource-database.md)に格納されるようになりました。 また、 **master** は、他のすべてのデータベースの存在、それらのデータベース ファイルの場所、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の初期化情報を記録するデータベースでもあります。 したがって、 **master** データベースが使用できないと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始できません。  
 
 > [!IMPORTANT]
@@ -35,7 +35,7 @@ ms.locfileid: "68133601"
 |ファイル|論理名|物理名|ファイル拡張|  
 |----------|------------------|-------------------|-----------------|  
 |プライマリ データ|master|master.mdf|ディスクがいっぱいになるまで 10% ずつ自動拡張|  
-|Log|mastlog|mastlog.ldf|最大 2 TB まで 10% ずつ自動拡張|  
+|ログ|mastlog|mastlog.ldf|最大 2 TB まで 10% ずつ自動拡張|  
   
 **master** のデータ ファイルとログ ファイルの移動方法の詳細については、「 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
 
@@ -100,7 +100,7 @@ SQL Server と Azure SQL Database Managed Instance に向けた **master** デ�
 - データベースの OFFLINE への設定。  
 - データベースまたはプライマリ ファイル グループの READ_ONLY への設定。  
   
-## <a name="recommendations"></a>推奨事項  
+## <a name="recommendations"></a>Recommendations  
 **master** データベースで作業を行っているときは、次の推奨設定を考慮してください。  
   
 - **master** データベースの現在のバックアップを、常に使用可能にする。  

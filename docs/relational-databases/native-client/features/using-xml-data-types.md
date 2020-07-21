@@ -1,5 +1,5 @@
 ---
-title: XML データ型の使用 |Microsoft Docs
+title: XML データ型の使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,19 +27,17 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 - COLUMNS rowset
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e202e2b8a7766d4dde711a7f89d27177d176b3a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: fc526febaed2fd049fb8fa95fd0b0585933fff9b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073651"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009835"
 ---
 # <a name="using-xml-data-types"></a>XML データ型の使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] には **xml** データ型が導入されています。このデータ型を使用すると XML ドキュメントや XML フラグメントを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに格納できます。 **xml** データ型は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] での組み込みデータ型の 1 つであり、**int** や **varchar** などの他の組み込みデータ型といくつかの点で似ています。 **xml** データ型は、他の組み込みデータ型と同様に、テーブル作成時の列の型、変数の型、パラメーターの型、または関数の戻り値の型として使用したり、CAST 関数や CONVERT 関数でも使用できます。  
   
@@ -64,38 +62,38 @@ ms.locfileid: "68073651"
 -   **ISequentialStream**  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、SAX リーダーは含まれませんが、 **ISequentialStream** msxml SAX、DOM オブジェクトに簡単に渡すことができます。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーには sax リーダーは含まれていませんが、MSXML では**ISEQUENTIALSTREAM**を sax および DOM オブジェクトに簡単に渡すことができます。  
   
- **ISequentialStream**大きな XML ドキュメントの取得のために使用をする必要があります。 他の大きな値の型で使用される方法と同じ方法を XML でも使用できます。 詳細については、次を参照してください。[大きな値の型を使用して](../../../relational-databases/native-client/features/using-large-value-types.md)します。  
+ **ISequentialStream**は、大きな XML ドキュメントを取得するために使用する必要があります。 他の大きな値の型で使用される方法と同じ方法を XML でも使用できます。 詳細については、「[大きな値をとるデータ型の使用](../../../relational-databases/native-client/features/using-large-value-types.md)」を参照してください。  
   
- 行セットの XML 型の列に格納されているデータは、アプリケーションで **IRow::GetColumns**、**IRowChange::SetColumns**、**ICommand::Execute** などの通常のインターフェイスを使用することにより、取得、挿入、または更新することもできます。 同様に取得の場合に、アプリケーション プログラムを渡すことができます、テキスト文字列または**ISequentialStream**を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー。  
+ 行セットの XML 型の列に格納されているデータは、アプリケーションで **IRow::GetColumns**、**IRowChange::SetColumns**、**ICommand::Execute** などの通常のインターフェイスを使用することにより、取得、挿入、または更新することもできます。 検索の場合と同様に、アプリケーションプログラムは、テキスト文字列または**ISequentialStream**を Native Client OLE DB プロバイダーに渡すことができ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
 > [!NOTE]  
 >  **ISequentialStream** インターフェイスを使用して XML データを文字列形式で送信するには、DBTYPE_IUNKNOWN を指定して **ISequentialStream** を取得し、その *pObject* 引数をバインドの際に NULL に設定する必要があります。  
   
- コンシューマーのバッファーが小さすぎて取得した XML データが切り捨てられるときは、データ長が 0xffffffff で返されます。この値は、長さが不明であることを意味します。 この動作は、実際のデータの前に長さの情報を送信しないでクライアントにストリーム送信されるデータ型の実装と一貫性を持たせています。 場合によっては、実際の長さは、プロバイダーがなど、値全体をバッファーがときに返される**irowset::getdata**データ変換が実行されます。  
+ コンシューマーのバッファーが小さすぎて取得した XML データが切り捨てられるときは、データ長が 0xffffffff で返されます。この値は、長さが不明であることを意味します。 この動作は、実際のデータの前に長さの情報を送信しないでクライアントにストリーム送信されるデータ型の実装と一貫性を持たせています。 場合によっては、プロバイダーが**IRowset:: GetData**などの値全体をバッファーに格納し、データ変換が実行されるときに、実際の長さが返されることがあります。  
   
  SQL Server に送信される XML データは、サーバーではバイナリ データとして扱われます。 その結果、変換が行われず、XML パーサーが XML エンコードを自動検出できます。 これにより、広範な XML ドキュメント (UTF-8 でエンコードされた XML ドキュメントなど) を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への入力として受け取ることができます。  
   
  入力 XML が DBTYPE_WSTR にバインドされる場合、不要なデータ変換によってデータが破損しないようにするために、アプリケーションでは入力 XML が Unicode でエンコードされていることを確認する必要があります。  
   
 ### <a name="data-bindings-and-coercions"></a>データ バインドと強制型変換  
- 次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **xml** データ型と共に使用した場合に行われるバインドおよび強制型変換を示します。  
+ 次の表に、特定のデータ型を  の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **xml** データ型と共に使用した場合に行われるバインドおよび強制型変換を示します。  
   
-|データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **XML 以外から**|サーバーから<br /><br /> **XML**|サーバーから<br /><br /> **XML 以外から**|  
+|データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **XML 以外から**|サーバーからの<br /><br /> **XML**|サーバーからの<br /><br /> **XML 以外から**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|パス スルー<sup>6、7</sup>|エラー<sup>1</sup>|[OK]<sup>11、6</sup>|エラー<sup>8</sup>|  
-|DBTYPE_BYTES|パス スルー<sup>6、7</sup>|該当なし<sup>2</sup>|可 <sup>11、6</sup>|該当なし <sup>2</sup>|  
-|DBTYPE_WSTR|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|[OK]<sup>4、6、12</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_XML|パス スルー<sup>6、7</sup>|エラー<sup>1</sup>|OK<sup>11、6</sup>|エラー<sup>8</sup>|  
+|DBTYPE_BYTES|パス スルー<sup>6、7</sup>|N/A<sup>2</sup>|可 <sup>11、6</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_WSTR|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|OK<sup>4、6、12</sup>|該当なし <sup>2</sup>|  
 |DBTYPE_BSTR|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|可 <sup>3</sup>|該当なし <sup>2</sup>|  
-|DBTYPE_STR|[OK]<sup>6、9、10</sup>|該当なし <sup>2</sup>|可<sup>5、6、12</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_STR|OK<sup>6、9、10</sup>|該当なし <sup>2</sup>|可<sup>5、6、12</sup>|該当なし <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|**ISequentialStream** 経由のバイト ストリーム<sup>7</sup>|該当なし <sup>2</sup>|**ISequentialStream** 経由のバイト ストリーム<sup>11</sup>|該当なし <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|パス スルー<sup>6、7</sup>|該当なし <sup>2</sup>|なし|該当なし <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|パス スルー<sup>6、7</sup>|該当なし <sup>2</sup>|該当なし|該当なし <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|可<sup>3</sup>|該当なし <sup>2</sup>|  
   
  <sup>1</sup>DBTYPE_XML 以外のサーバー型が **ICommandWithParameters::SetParameterInfo** で指定され、アクセサー型が DBTYPE_XML の場合、ステートメントの実行時にエラーが発生します (DB_E_ERRORSOCCURRED、パラメーターの状態は DBSTATUS_E_BADACCESSOR)。それ以外の場合は、データがサーバーに送信されますが、XML 型からパラメーターのデータ型への暗黙の変換が行われないことを示すエラーがサーバーから返されます。  
   
- <sup>2</sup>このトピックの範囲を超えています。  
+ <sup>2</sup>このトピックでは扱いません。  
   
  <sup>3</sup>形式は UTF-16 です。バイト順マーク (BOM)、エンコード仕様、および終端を示す NULL は付加されません。  
   
@@ -115,12 +113,12 @@ ms.locfileid: "68073651"
   
  <sup>11</sup>形式は UTF-16 です。エンコード仕様は付加されません。サーバーから受け取ったデータに BOM が追加されます。 サーバーから空文字列が返されても、アプリケーションには BOM が返されます。 バッファー長が奇数バイトの場合、データは適切に切り捨てられます。 1 つの値が複数のチャンクで返される場合、それぞれを連結して正しい値を再構成できます。  
   
- <sup>12</sup>バッファー長が 2 未満である文字、null で終端--の領域が不足している場合、オーバーフロー エラーが報告されます。  
+ <sup>12</sup>バッファーの長さが2文字未満の場合 (つまり、null 終了に十分な領域がない場合)、オーバーフローエラーが報告されます。  
   
 > [!NOTE]  
 >  NULL の XML 値の場合は、データは返されません。  
   
- XML 標準では、UTF-16 でエンコードされた XML をバイト順マーク (BOM) で始める必要があります。BOM は UTF-16 の文字コードでは 0xFEFF です。 WSTR と BSTR のバインディングを使用する場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client が必要がありますまたはバインドによってエンコードが暗黙的に BOM を追加していません。 BYTES バインド、XML バインド、または IUNKNOWN バインドを使用する場合、その目的は他の XML プロセッサや XML ストレージ システムでの処理を簡単にすることです。 この場合、BOM は UTF-16 でエンコードされた XML を示し、SQL Server を含め XML プロセッサの多くは値の先頭の数バイトを調べてエンコードを推定するので、アプリケーションで実際のエンコードを考慮する必要はありません。 受信した XML データ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (バイト)、XML、または IUNKNOWN を使用してバインドは常にでエンコードされた utf-16 BOM とエンコード宣言は埋め込まれません。  
+ XML 標準では、UTF-16 でエンコードされた XML をバイト順マーク (BOM) で始める必要があります。BOM は UTF-16 の文字コードでは 0xFEFF です。 WSTR と BSTR バインドを使用する場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] バインドによってエンコードが暗黙的に使用されるため、Native Client では BOM が必要でも追加されません。 BYTES バインド、XML バインド、または IUNKNOWN バインドを使用する場合、その目的は他の XML プロセッサや XML ストレージ システムでの処理を簡単にすることです。 この場合、BOM は UTF-16 でエンコードされた XML を示し、SQL Server を含め XML プロセッサの多くは値の先頭の数バイトを調べてエンコードを推定するので、アプリケーションで実際のエンコードを考慮する必要はありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]バイト、xml、または IUNKNOWN バインドを使用してネイティブクライアントから受信した xml データは、常に、BOM では utf-16 でエンコードされ、エンコード宣言は埋め込まれません。  
   
  OLE DB Core Services で提供されるデータ変換 (**IDataConvert**) は、DBTYPE_XML 型には適用できません。  
   
@@ -133,24 +131,24 @@ ms.locfileid: "68073651"
  DBTYPE_IUNKNOWN は上記の表に示したようにサポート済みのバインドですが、DBTYPE_XML と DBTYPE_IUNKNOWN との間では変換は行われません。 DBTYPE_IUNKNOWN は、DBTYPE_BYREF と共に使用することはできません。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行セットに関する追加事項と変更事項  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、新しい値が追加され、多くの主要な OLE DB スキーマ行セットへの変更します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、新しい値または多くのコア OLE DB スキーマ行セットへの変更が追加されます。  
   
-#### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS スキーマ行セットと PARAMETERS スキーマ行セット  
+#### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>COLUMNS スキーマ行セットと PARAMETERS スキーマ行セット  
  COLUMNS スキーマ行セットと PROCEDURE_PARAMETERS スキーマ行セットに次の列が追加されました。  
   
-|列名|型|説明|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているカタログの名前。 XML 型以外の列または型指定されていない XML 列の場合は NULL です。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているスキーマの名前。 XML 型以外の列または型指定されていない XML 列の場合は NULL です。|  
 |SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|XML スキーマ コレクションの名前。 XML 型以外の列または型指定されていない XML 列の場合は NULL です。|  
   
-#### <a name="the-providertypes-schema-rowset"></a>PROVIDER_TYPES スキーマ行セット  
+#### <a name="the-provider_types-schema-rowset"></a>PROVIDER_TYPES スキーマ行セット  
  PROVIDER_TYPES スキーマ行では、**xml** データ型の COLUMN_SIZE の値は 0 で、DATA_TYPE は DBTYPE_XML です。  
   
-#### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA スキーマ行セット  
+#### <a name="the-ss_xmlschema-schema-rowset"></a>SS_XMLSCHEMA スキーマ行セット  
  クライアントで XML スキーマ情報を取得できるように、新しいスキーマ行セット SS_XMLSCHEMA が導入されました。 SS_XMLSCHEMA 行セットには、次の列が含まれています。  
   
-|列名|型|説明|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML コレクションが属するカタログ。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML コレクションが属するスキーマ。|  
@@ -165,21 +163,21 @@ ms.locfileid: "68073651"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB プロパティ セットに関する追加事項と変更事項  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、新しい値を追加します。 またはに多くの主要な OLE DB プロパティ セットを変更します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、多くの主要な OLE DB プロパティセットに新しい値または変更が追加されます。  
   
-#### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
- サポートするために、 **xml** OLE DB でのデータ型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティ セット。  
+#### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
+ OLE DB で**xml**データ型をサポートするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティセットが実装されています。  
   
-|名前|型|説明|  
+|名前|Type|説明|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションを定義しているカタログ (データベース) の名前。 SQL の 3 部構成による名前の識別子の一部になります。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|スキーマ コレクションに含まれている XML スキーマの名前。 SQL の 3 部構成による名前の識別子の一部になります。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|カタログに含まれている XML スキーマ コレクションの名前。SQL の 3 部構成による名前の識別子の一部になります。|  
   
-#### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN プロパティ セット  
- 内のテーブルの作成をサポートするために、 **ITableDefinition**インターフェイス、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに 3 つの新しい列を追加します。  
+#### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN プロパティ セット  
+ **Itabledefinition**インターフェイスでのテーブルの作成をサポートするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では DBPROPSET_SQLSERVERCOLUMN プロパティセットに3つの新しい列が追加されています。  
   
-|名前|型|説明|  
+|名前|Type|説明|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|型指定された XML 列の場合、このプロパティは XML スキーマが格納されているカタログ名を指定する文字列です。 他のデータ型の列の場合、このプロパティでは空文字列が返されます。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|型指定された XML 列の場合、このプロパティはこの列を定義している XML スキーマ名を指定する文字列です。|  
@@ -188,18 +186,18 @@ ms.locfileid: "68073651"
  SSPROP_PARAM 値と同様に、これらのプロパティはすべて省略可能なプロパティで、既定値は空です。 SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME と SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME は、SSPROP_COL_XML_SCHEMACOLLECTIONNAME が指定されている場合のみ指定できます。 XML をサーバーに渡すときにこれらの値が含まれていると、これらの値が妥当かどうかが現在のデータベースとの比較によりチェックされ、インスタンス データがスキーマとの比較によりチェックされます。 どの場合でも、これらはすべて空かすべて設定されている場合に妥当と判断されます。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB インターフェイスに関する追加事項と変更事項  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、新しい値が追加または多くの主要な OLE DB インターフェイスに変更します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、コア OLE DB インターフェイスの多くに新しい値または変更を追加します。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters インターフェイス  
- サポートするために、 **xml** OLE DB でのデータ型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、多数の変更の追加など、 [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)インターフェイス。 この新しいインターフェイスは、主要な OLE DB インターフェイス **ICommandWithParameters** から継承されます。 継承した次の 3 つのメソッドだけでなく**ICommandWithParameters**;**GetParameterInfo**、 **MapParameterNames**、および**SetParameterInfo**;**ISSCommandWithParameters**提供、 [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)と[SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)サーバー固有の処理に使用されるメソッドデータ型。  
+ OLE DB で**xml**データ型をサポートするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、 [Isscommandwithparameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)インターフェイスの追加など、多数の変更が実装されています。 この新しいインターフェイスは、主要な OLE DB インターフェイス **ICommandWithParameters** から継承されます。 **ICommandWithParameters**から継承された3つのメソッドに加えて、**Getparameterinfo**、 **Mapparameternames**、および**setparameterinfo**;**Isscommandwithparameters**には、サーバー固有のデータ型を処理するために使用される[getparameterproperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)メソッドと[setparameterproperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)メソッドが用意されています。  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters** インターフェイスでは、新しい SSPARAMPROPS 構造体も使用されます。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset インターフェイス  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、以下を追加します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定の列によって返される行セットに、 **:getcolumnsrowset**メソッド。 これらの列には、XML スキーマ コレクションの 3 部構成の名前が含まれます。 XML 以外の列または型指定されていない XML 列の場合、これら 3 列の既定値はすべて NULL になります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **IColumnRowset:: GetColumnsRowset**メソッドによって返される行セットに、次の固有の列が追加されます。 これらの列には、XML スキーマ コレクションの 3 部構成の名前が含まれます。 XML 以外の列または型指定されていない XML 列の場合、これら 3 列の既定値はすべて NULL になります。  
   
-|列名|型|説明|  
+|列名|Type|説明|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML スキーマ コレクションが属するカタログ。<br /><br /> それ以外の場合は、NULL です。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML スキーマ コレクションが属するスキーマ。 それ以外の場合は、NULL です。|  
@@ -219,56 +217,56 @@ ms.locfileid: "68073651"
   
  DBTYPE_BSTR、DBTYPE_WSTR、または DBTYPE_VARIANT の場合、コンシューマーのバッファーに存在する XML インスタンスがプロバイダーによって適切な列に格納されます。  
   
- DBTYPE_IUNKNOWN と isequentialstream をコンシューマーが、任意のストレージ オブジェクトを指定しない場合、コンシューマー作成する必要があります、 **ISequentialStream**オブジェクトをあらかじめ、オブジェクト、XML ドキュメントをバインドし、オブジェクトを渡します使用して、プロバイダー、 **irowsetchange::setdata**メソッド。 また、ストレージ オブジェクトを作成して pObject 引数に IID_ISequentialStream を設定し、**ISequentialStream** オブジェクトを作成してから、その **ISequentialStream** オブジェクトを **IRowsetChange::SetData** メソッドに渡すこともできます。 どちらの場合も、プロバイダーは **ISequentialStream** オブジェクトを使用して XML オブジェクトを取得し、それを適切な列に挿入できます。  
+ DBTYPE_IUNKNOWN/ISequentialStream の場合、コンシューマーがストレージオブジェクトを指定していない場合は、コンシューマーが**ISequentialStream**オブジェクトを事前に作成し、XML ドキュメントをオブジェクトにバインドしてから、 **IRowsetChange:: SetData**メソッドを使用してそのオブジェクトをプロバイダーに渡す必要があります。 また、ストレージ オブジェクトを作成して pObject 引数に IID_ISequentialStream を設定し、**ISequentialStream** オブジェクトを作成してから、その **ISequentialStream** オブジェクトを **IRowsetChange::SetData** メソッドに渡すこともできます。 どちらの場合も、プロバイダーは **ISequentialStream** オブジェクトを使用して XML オブジェクトを取得し、それを適切な列に挿入できます。  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate インターフェイス  
- **IRowsetUpdate** インターフェイスには遅延更新のための機能が用意されています。 行セットで使用できるデータがコンシューマー呼び出されるまでは他のトランザクションから使用できない、 **IRowsetUpdate:Update**メソッド。  
+ **IRowsetUpdate** インターフェイスには遅延更新のための機能が用意されています。 行セットで使用できるデータは、コンシューマーが**IRowsetUpdate: Update**メソッドを呼び出すまで、他のトランザクションでは使用できません。  
   
 #### <a name="the-irowsetfind-interface"></a>IRowsetFind インターフェイス  
  **IRowsetFind::FindNextRow** メソッドでは、**xml** データ型を処理できません。 *hAccessor* 引数に DBTYPE_XML の列を指定して **IRowsetFind::FindNextRow** を呼び出すと、DB_E_BADBINDINFO が返されます。 この動作は、検索対象の列の型とは無関係に行われます。 その他のバインドの型では、検索対象の列が **xml** データ型の場合、**FindNextRow** が DB_E_BADCOMPAREOP を返して失敗します。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、変更の数に加えさまざまな機能をサポートする、 **xml**データ型。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 **xml**データ型をサポートするために、さまざまな関数にいくつかの変更が加えられています。  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
- [SQLColAttribute](../../../relational-databases/native-client-odbc-api/sqlcolattribute.md)関数には、SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME、SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME、sql_ca_ss _XML_SCHEMACOLLECTION_NAME を含む、3 つの新しいフィールド識別子。  
+ [Sqlcolattribute](../../../relational-databases/native-client-odbc-api/sqlcolattribute.md)関数には、SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME、SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME、SQL_CA_SS _XML_SCHEMACOLLECTION_NAME を含む3つの新しいフィールド識別子があります。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが、SQL_DESC_DISPLAY_SIZE 列と SQL_DESC_LENGTH 列に関して SQL_SS_LENGTH_UNLIMITED を報告します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、SQL_DESC_DISPLAY_SIZE 列と SQL_DESC_LENGTH 列の SQL_SS_LENGTH_UNLIMITED が報告されます。  
   
 ### <a name="sqlcolumns"></a>SQLColumns  
- [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)関数には、次の 3 つの新しい列を含むという、SS_XML_SCHEMACOLLECTION_SCHEMA_NAME、および追加されました。 既存の TYPE_NAME 列を使用して XML 型の名前が示されます。XML 型の列または XML 型のパラメーターの DATA_TYPE は SQL_SS_XML になります。  
+ [Sqlcolumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)関数には、SS_XML_SCHEMACOLLECTION_CATALOG_NAME、SS_XML_SCHEMACOLLECTION_SCHEMA_NAME、SS_XML_SCHEMACOLLECTION_NAME を含む3つの新しい列があります。 既存の TYPE_NAME 列を使用して XML 型の名前が示されます。XML 型の列または XML 型のパラメーターの DATA_TYPE は SQL_SS_XML になります。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、column_size 値と CHAR_OCTET_LENGTH 値に関して SQL_SS_LENGTH_UNLIMITED を報告します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、COLUMN_SIZE と CHAR_OCTET_LENGTH 値の SQL_SS_LENGTH_UNLIMITED を報告します。  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で、列のサイズを特定できない場合、Native Client ODBC ドライバーは SQL_SS_LENGTH_UNLIMITED を報告、 [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md)関数。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md)関数で列のサイズを特定できない場合に SQL_SS_LENGTH_UNLIMITED が報告されます。  
   
 ### <a name="sqlgettypeinfo"></a>SQLGetTypeInfo  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、column_size の最大の値として SQL_SS_LENGTH_UNLIMITED を報告、 **xml**のデータ型の[SQLGetTypeInfo](../../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)関数。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 [SQLGetTypeInfo](../../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)関数の**xml**データ型の最大 COLUMN_SIZE として SQL_SS_LENGTH_UNLIMITED が報告されます。  
   
 ### <a name="sqlprocedurecolumns"></a>SQLProcedureColumns  
- [SQLProcedureColumns](../../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md)関数が同じ列の追加として、 **SQLColumns**関数。  
+ [SQLProcedureColumns](../../../relational-databases/native-client-odbc-api/sqlprocedurecolumns.md)関数には、 **sqlcolumns**関数と同じ列が追加されています。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、column_size の最大の値として SQL_SS_LENGTH_UNLIMITED を報告、 **xml**データ型。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、 **xml**データ型の最大 COLUMN_SIZE として SQL_SS_LENGTH_UNLIMITED が報告されます。  
   
 ### <a name="supported-conversions"></a>サポートされる変換  
  SQL データ型から C データ型に変換する際、SQL_C_WCHAR、SQL_C_BINARY、および SQL_C_CHAR は、次の条件下ですべて SQL_SS_XML に変換できます。  
   
--   SQL_C_WCHAR:形式は、null で終端 utf-16 バイト順マーク (BOM) なし。  
+-   SQL_C_WCHAR: 形式は UTF-16 で、バイト順マーク (BOM) は付加されず、NULL で終端が示されます。  
   
--   SQL_C_BINARY:形式では、utf-16 はない null で終端します。 サーバーから受け取ったデータに BOM が追加されます。 サーバーから空文字列が返されても、アプリケーションには BOM が返されます。 バッファー長が奇数バイトの場合、データは適切に切り捨てられます。 1 つの値が複数のチャンクで返される場合、それぞれを連結して正しい値を再構成できます。  
+-   SQL_C_BINARY: 形式は UTF-16 で、NULL で終端は示されません。 サーバーから受け取ったデータに BOM が追加されます。 サーバーから空文字列が返されても、アプリケーションには BOM が返されます。 バッファー長が奇数バイトの場合、データは適切に切り捨てられます。 1 つの値が複数のチャンクで返される場合、それぞれを連結して正しい値を再構成できます。  
   
--   SQL_C_CHAR:形式は、null で終端のクライアント コード ページでエンコードされたマルチバイト文字です。 UTF-16 を使用できるサーバーから変換するとデータが破損する場合があるので、このバインドはお勧めしません。  
+-   SQL_C_CHAR: クライアント コード ページでエンコードされ、NULL で終端が示される、マルチバイト文字列形式です。 UTF-16 を使用できるサーバーから変換するとデータが破損する場合があるので、このバインドはお勧めしません。  
   
  C データ型から SQL データ型に変換する際、SQL_C_WCHAR、SQL_C_BINARY、および SQL_C_CHAR は、次の条件下ですべて SQL_SS_XML に変換できます。  
   
--   SQL_C_WCHAR:BOM は、サーバーに送信されるデータに常に追加されます。 既にデータが BOM で始まる場合、この動作により、バッファーの先頭に 2 つの BOM が存在することになります。 サーバーでは、1 つ目の BOM からエンコードを UTF-16 と認識した後、その BOM を破棄します。 2 つ目の BOM は、幅が 0 の改行を行わない空白文字として解釈されます。  
+-   SQL_C_WCHAR: サーバーに送信されるデータには必ず BOM が追加されます。 既にデータが BOM で始まる場合、この動作により、バッファーの先頭に 2 つの BOM が存在することになります。 サーバーでは、1 つ目の BOM からエンコードを UTF-16 と認識した後、その BOM を破棄します。 2 つ目の BOM は、幅が 0 の改行を行わない空白文字として解釈されます。  
   
--   SQL_C_BINARY:変換は行われません、および"です」と、サーバーにデータが渡される UTF-16 データは BOM で始まる必要があります。BOM で始まらない場合、エンコードがサーバーで適切に認識されません。  
+-   SQL_C_BINARY: 変換が行われないので、データはそのままの状態でサーバーに渡されます。 UTF-16 データは BOM で始まる必要があります。BOM で始まらない場合、エンコードがサーバーで適切に認識されません。  
   
--   SQL_C_CHAR:データでは、クライアントで utf-16 に変換され、SQL_C_WCHAR (、BOM が追加を含む) と同様に、サーバーに送信します。 XML がクライアントのコード ページでエンコードされない場合、この変換が原因でデータが破損することがあります。  
+-   SQL_C_CHAR: データはクライアント上で UTF-16 に変換され、サーバーにそのまま SQL_C_WCHAR として送信されます (ただし、BOM が追加されます)。 XML がクライアントのコード ページでエンコードされない場合、この変換が原因でデータが破損することがあります。  
   
- XML 標準では、UTF-16 でエンコードされた XML をバイト順マーク (BOM) で始める必要があります。BOM は UTF-16 の文字コードでは 0xFEFF です。 SQL_C_BINARY バインドを使用する場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client が必要がありますまたはバインドによってエンコードが暗黙的に、BOM を追加していません。 SQL_C_BINARY バインドを使用する目的は、その他の XML プロセッサや XML ストレージ システムでの処理を簡単にすることです。 この場合、BOM は UTF-16 でエンコードされた XML を示し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を含め XML プロセッサの多くは値の先頭の数バイトを調べてエンコードを推定するので、アプリケーションで実際のエンコードを考慮する必要はありません。 受信した XML データ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client SQL_C_BINARY を使用してバインドは常にでエンコードされた utf-16 BOM とエンコード宣言は埋め込まれません。  
+ XML 標準では、UTF-16 でエンコードされた XML をバイト順マーク (BOM) で始める必要があります。BOM は UTF-16 の文字コードでは 0xFEFF です。 SQL_C_BINARY バインドを使用する場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] バインドによってエンコードが暗黙的に使用されるため、Native Client では BOM が必要でも追加されません。 SQL_C_BINARY バインドを使用する目的は、その他の XML プロセッサや XML ストレージ システムでの処理を簡単にすることです。 この場合、BOM は UTF-16 でエンコードされた XML を示し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を含め XML プロセッサの多くは値の先頭の数バイトを調べてエンコードを推定するので、アプリケーションで実際のエンコードを考慮する必要はありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQL_C_BINARY バインディングを使用してネイティブクライアントから受信した XML データは、常に、BOM と共に utf-16 でエンコードされ、エンコード宣言は埋め込まれません。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   

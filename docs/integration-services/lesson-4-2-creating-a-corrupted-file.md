@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d7601ba8a9cdb05372b27358488ab7f621a65809
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cd9266512675c4127a99903e6de0d1da5ccaec70
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055843"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295960"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>レッスン 4-2:破損したファイルを作成する
 
@@ -59,8 +59,8 @@ ms.locfileid: "68055843"
     > [!NOTE]  
     > 数値 27 はコンポーネントの ID です。 この値はデータ フローを構築したときに割り当てられるもので、パッケージの値とは異なることがあります。  
   
-## <a name="go-to-next-task"></a>次の実習に進む  
-[手順 3:エラー フロー リダイレクションを追加する](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+## <a name="go-to-next-task"></a>次のタスクに進む  
+[ステップ 3:エラー フロー リダイレクションを追加する](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
   
   

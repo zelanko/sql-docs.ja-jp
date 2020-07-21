@@ -1,5 +1,6 @@
 ---
 title: ft notify bandwidth サーバー構成オプション | Microsoft Docs
+description: "\"ft notify bandwidth\" オプションについて説明します。 これが、小規模メモリ バッファーのプールで SQL Server によって保持されるバッファー数にどのように影響するかについて説明します。"
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - small memory buffers
 - memory [SQL Server], buffers
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6b0589f5b3622d4271f6307427f49d804b76c4e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb6bf13a1f8e71f419350946d156f2504274b6d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772462"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>ft notify bandwidth サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **ft notify bandwidth** オプションは、小規模メモリ バッファーのプールの最大サイズを指定する際に使用します。 小規模メモリ バッファーのサイズは 64 KB です。 *max* パラメーターの値によって、小規模バッファー プールでフルテキスト メモリ マネージャーが保持する必要があるバッファーの最大数が指定されます。 **max** の値がゼロ (0) の場合、小規模バッファー プールで保持できるバッファー数に上限はありません。  
   

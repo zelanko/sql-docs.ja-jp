@@ -13,14 +13,14 @@ helpviewer_keywords:
 - containers [Integration Services], grouping
 - grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9da09f5b8c2936cf0fadf3a281169e1d03523659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 999bdd02c0cbfa2f8d2df6be93b3261c5bdc1dc5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102740"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296375"
 ---
 # <a name="group-or-ungroup-components"></a>コンポーネントのグループ化とグループの解除
 

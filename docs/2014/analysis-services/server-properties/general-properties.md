@@ -1,5 +1,5 @@
 ---
-title: '[全般] プロパティ |Microsoft Docs'
+title: 全般プロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -37,18 +37,17 @@ helpviewer_keywords:
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3297e1e931b024aa765d451b9acd2d0fbe31e98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940673"
 ---
 # <a name="general-properties"></a>全般プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元および表形式サーバー モードでは、それ以外の場合に記載されていない場合  
+ **適用対象:** 特に記載のない限り、多次元サーバー モードおよびテーブル サーバー モードが対象となります。  
   
 ## <a name="non-specific-category"></a>不特定カテゴリ  
  `AdminTimeout`  
@@ -60,7 +59,7 @@ ms.locfileid: "66069028"
  Analysis Services のダイアログ ボックスでファイルを保存、開く、および検索するときに参照できるフォルダーを区切り記号で区切った一覧で指定する文字列プロパティです。 Analysis Services のサービス アカウントには、リストに追加するすべてのフォルダーの読み取り権限と書き込み権限が必要です。  
   
  `BackupDir`  
- バックアップ コマンドの一部として、パスが指定されていない場合に、既定では、バックアップのファイルが格納されるディレクトリの名前を指定する文字列プロパティ。  
+ Backup コマンドの一部としてパスが指定されていない場合に、既定でバックアップファイルが格納されるディレクトリの名前を指定する文字列プロパティです。  
   
  `CollationName`  
  サーバーの照合順序を指定する文字列プロパティです。 詳細については、「[言語および照合順序 &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)」を参照してください。  
@@ -95,11 +94,11 @@ ms.locfileid: "66069028"
  データを保存するディレクトリの名前を指定する文字列プロパティです。  
   
  `DeploymentMode`  
- Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログ ボックス、メッセージ、およびドキュメントの「サーバー モード」と呼ばれます。 このプロパティは、Analysis Services のインストール時に選択したサーバー モードに基づいて、SQL Server セットアップによって構成されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
+ Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログボックス、メッセージ、およびドキュメントでは "サーバーモード" と呼ばれます。 このプロパティは、Analysis Services のインストール時に選択したサーバー モードに基づいて、SQL Server セットアップによって構成されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
   
  このプロパティの有効値を以下に示します。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0|これが既定値です。 MOLAP、HOLAP、ROLAP の各ストレージ、およびデータ マイニング モデルを使用する多次元データベースの処理に使用される多次元モードを指定します。|  
 |1|PowerPivot for SharePoint 配置の一部としてインストールされた Analysis Services インスタンスを指定します。 PowerPivot for SharePoint インストールの一部である Analysis Services インスタンスの配置モード プロパティは変更しないでください。 モードを変更すると、PowerPivot データがサーバー上で実行されなくなります。|  
@@ -153,7 +152,7 @@ ms.locfileid: "66069028"
  サーバー ログを保存するディレクトリの名前を指定する文字列プロパティです。 このプロパティは、データベース テーブル (既定の動作) ではなく、ディスク ファイルがログ記録に使用される場合にのみ適用されます。  
   
  `MaxIdleSessionTimeout`  
- アイドル状態のセッションの最大タイムアウトを秒単位で定義する整数のプロパティです。 既定値は 0 (ゼロ) で、セッションがタイムアウトにならないことを示します。ただし、サーバーにリソースの制約がある場合はアイドル状態のセッションが削除されます。  
+ アイドル状態のセッションの最大タイムアウトを秒単位で定義する整数のプロパティです。 既定値はゼロ (0) で、セッションがタイムアウトしないことを示します。ただし、サーバーがリソースの制約を受けている場合でも、アイドル状態のセッションは削除されます。  
   
  `MinIdleSessionTimeout`  
  アイドル状態のセッションがタイムアウトになるまでの最短時間を秒単位で定義する整数のプロパティです。 既定値は 2700 秒です。 この時間を経過すると、メモリが必要な場合に限り、アイドル状態のセッションがサーバーによって終了されます。  
@@ -161,7 +160,7 @@ ms.locfileid: "66069028"
  `Port`  
  サーバーがクライアント接続をリッスンするポート番号を定義する整数のプロパティです。 このプロパティを設定しない場合、サーバーは最初の未使用ポートを動的に検出します。  
   
- このプロパティの既定値は 0 であり、ポート 2383 が既定により使用されます。 ポートの構成の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご覧ください。  
+ このプロパティの既定値は 0 であり、ポート 2383 が既定により使用されます。 ポートの構成の詳細については、「 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご覧ください。  
   
  `ServerTimeout`  
  クエリのタイムアウトを秒単位で定義する整数です。 既定値は 3600 秒 (60 分) です。 ゼロ (0) はクエリがタイムアウトにならないことを指定します。  
@@ -177,7 +176,7 @@ ms.locfileid: "66069028"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis services サーバーのプロパティを構成します。](server-properties-in-analysis-services.md)   
+ [Analysis Services でのサーバープロパティの構成](server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

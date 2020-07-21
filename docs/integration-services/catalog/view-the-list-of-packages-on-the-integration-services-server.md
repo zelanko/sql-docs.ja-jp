@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 67d877d0ce4ea137c36a12a28140de85d2b527c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 68c9fca56732dd0757d7c602152b523132d5eafc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074672"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294878"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>Integration Services サーバー上のパッケージの一覧を表示する
 
@@ -27,10 +27,10 @@ ms.locfileid: "68074672"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセス  
  サーバーに格納されているパッケージの一覧を表示するには、ビュー [catalog.packages (SSISDB データベース)](../../integration-services/system-views/catalog-packages-ssisdb-database.md) に対してクエリを実行します。  
   
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーを使用して、サーバーに格納されているパッケージを表示するには、次の手順を実行します。  
   
-### <a name="to-view-packages-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>パッケージを表示するには - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+### <a name="to-view-packages-using-ssmanstudiofull"></a>パッケージを表示するには - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。 つまり、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベースをホストする [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインスタンスに接続します。  
   

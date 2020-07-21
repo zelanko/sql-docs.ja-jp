@@ -10,15 +10,14 @@ helpviewer_keywords:
 - non-deterministic content models
 - content models [XML in SQL Server]
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea86115b88c693e70faa677fdea518f8886bae0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 703f90a11adbf6d190e68fc50609cc282594ba53
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065561"
 ---
 # <a name="non-deterministic-content-models"></a>非決定的コンテンツ モデル
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) よりも前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、非決定的コンテンツ モデルを含む XML スキーマは拒否されていました。  

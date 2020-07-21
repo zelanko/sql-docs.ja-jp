@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2910ac2c0ba1390eb8d82900bb3c8d64947a6944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 613eb5742f295b1169befca8ba988ed8282076e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737922"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   パスワードをハッシュし、そのハッシュを既存のパスワードのハッシュと比較します。 PWDCOMPARE を使用すると、空白の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン パスワードや、よくある脆弱なパスワードを検索できます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67914298"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 PWDCOMPARE ( 'clear_text_password'  
    , password_hash   
@@ -50,7 +50,7 @@ PWDCOMPARE ( 'clear_text_password'
  パスワードの暗号化ハッシュです。 *password_hash* が **varbinary (128)** です。  
   
  *version*  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降に移行されたが [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] システムには変換されていない [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 以前のログインからの値を *password_hash* が表している場合に、1 に設定される可能性がある、古いパラメーターです。 *バージョン* は **int**です。  
+ *以降に移行されたが* システムには変換されていない [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 以前のログインからの値を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]password_hash[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] が表している場合に、1 に設定される可能性がある、古いパラメーターです。 *バージョン* は **int**です。  
   
 > [!CAUTION]  
 >  このパラメーターは旧バージョンとの互換性を維持するために提供されていますが、パスワード ハッシュ BLOB は独自のバージョンの説明を含んでいるため、無視されます。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
@@ -60,7 +60,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  場合 1 を返しますのハッシュ、 *clear_text_password* と一致する、 *password_hash* パラメーター、および、そうでない場合は 0 です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  PWDCOMPARE 関数は、パスワード ハッシュの強度に対する脅威にはなりません。このテストは、最初のパラメーターとして渡されるパスワードを使用してログインしようとした場合に実行されるテストと同じテストです。  
   
  **PWDCOMPARE** 包含データベース ユーザーのパスワードを使用することはできません。 包含データベースに相当するものがありません。  
@@ -70,7 +70,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  sys.sql_logins の password_hash 列を調べるには CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-identifying-logins-that-have-no-passwords"></a>A. パスワードがないログインを特定する  
  次の例では、パスワードがない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを特定します。  

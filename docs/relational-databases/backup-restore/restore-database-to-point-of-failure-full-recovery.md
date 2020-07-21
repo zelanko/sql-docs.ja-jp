@@ -1,7 +1,8 @@
 ---
-title: データベースを障害発生時点まで復元する - 完全復旧 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'データベースの復旧: 障害発生時点 - 完全復旧'
+description: この記事では、完全復旧モデルまたは一括ログ復旧モデルを使用して、データベースの障害発生時点まで SQL Server データベースを復元する方法について説明します。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ad5b91a85db47b500d8a48d0fa3384eb65ba2a19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e63d8c84b455fbcf991485486bb7bb197032827a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737708"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>データベースを障害発生時点まで復元する - 完全復旧
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、障害が発生する直前の状態まで復元する方法について説明します。 このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用しているデータベースのみを対象としています。  
   
@@ -57,8 +58,6 @@ ms.locfileid: "68041538"
     ```  
   
 5.  次の RESTORE DATABASE ステートメントを実行して、データベースを復旧します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     RESTORE DATABASE <database_name>   

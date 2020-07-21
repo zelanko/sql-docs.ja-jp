@@ -1,5 +1,5 @@
 ---
-title: 手順 2:メイン リスト ボックスの初期化 |Microsoft Docs
+title: '手順 2: メインリストボックスを初期化する |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -8,17 +8,17 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924083"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760818"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>手順 2:Main リスト ボックスを初期化する
-グローバルのレコードとレコード セット オブジェクトを宣言するには、([全般]) (宣言) Form1 に、次のコードを挿入します。  
+グローバルレコードとレコードセットオブジェクトを宣言するには、Form1 の (宣言) に次のコードを挿入します。  
   
 ```  
 Option Explicit  
@@ -26,10 +26,10 @@ Dim grec As Record
 Dim grs As Recordset  
 ```  
   
- このコードは、このシナリオでは後で使用されるレコードとレコード セット オブジェクトのグローバル オブジェクト参照を宣言します。  
+ このコードは、このシナリオで後ほど使用するレコードおよびレコードセットオブジェクトのグローバルオブジェクト参照を宣言します。  
   
-## <a name="to-connect-to-a-url-and-populate-lstmain"></a>URL に接続し、lstMain を設定するには  
- Form1 の Form Load イベント ハンドラーに次のコードを挿入します。  
+## <a name="to-connect-to-a-url-and-populate-lstmain"></a>URL に接続して lstMain を設定するには  
+ Form1 のフォーム読み込みイベントハンドラーに次のコードを挿入します。  
   
 ```  
 Private Sub Form_Load()  
@@ -45,11 +45,11 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- このコードは、グローバルのレコードとレコード セット オブジェクトをインスタンス化します。 Record オブジェクトでは、 `grec`、ActiveConnection として指定された URL を開くとします。 URL が存在する場合が開きます。ファイルは既に存在しない場合は作成されます。 置き換える必要がありますに注意してください"<https://servername/foldername/>"環境からの有効な URL を使用します。  
+ このコードは、グローバルレコードとレコードセットオブジェクトをインスタンス化します。 レコードオブジェクトは、 `grec` ActiveConnection として指定された URL で開かれます。 URL が存在する場合は、それが開かれます。まだ存在しない場合は、作成されます。 " <https://servername/foldername/> " は、使用している環境の有効な URL に置き換える必要があることに注意してください。  
   
- Recordset オブジェクトを`grs`、レコードの子で開かれた`grec`します。 `lstMain`は URL に公開されているリソースのファイル名が格納されます。  
+ レコードセットオブジェクトは、 `grs` レコードの子で開かれ `grec` ます。 次に、 `lstMain` URL に発行されたリソースのファイル名を入力します。  
   
-## <a name="see-also"></a>関連項目  
- [インターネットのシナリオへの発行](../../../ado/guide/data/internet-publishing-scenario.md)   
- [ステップ 1: Visual Basic プロジェクトを設定します。](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [手順 3:フィールド リスト ボックスを設定します。](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+## <a name="see-also"></a>参照  
+ [インターネット公開のシナリオ](../../../ado/guide/data/internet-publishing-scenario.md)   
+ [手順 1: Visual Basic プロジェクトを設定する](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
+ [手順 3:Fields リスト ボックスに値を設定する](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

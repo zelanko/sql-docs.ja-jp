@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b78691b0300b6098dfa88c35b4b61c7aa63fed4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099823"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig ユーティリティ (SSRS)
@@ -45,18 +45,18 @@ ms.locfileid: "66099823"
   
 ## <a name="arguments"></a>引数  
   
-|項目|省略可/必須|定義|  
+|期間|省略可/必須|定義|  
 |----------|------------------------|----------------|  
-|**-?**|任意。|Rsconfig.exe の引数の構文を表示します。|  
-|`-c`|`-e` 引数を使用しない場合は必須。|レポート サーバーをレポート サーバー データベースに接続するために使用する、接続文字列、資格情報、データ ソース値を指定します。<br /><br /> この引数は値を取りません。 ただし、必須の接続値をすべて指定する場合は、この引数と共に追加の引数を指定する必要があります。<br /><br /> 引数で指定できる`-c`含める`-m`、 **-s**、 `-i`、`-d`、`-a`、`-u`、`-p`と`-t`。|  
+|**-?**|省略可能。|Rsconfig.exe の引数の構文を表示します。|  
+|`-c`|`-e` 引数を使用しない場合は必須。|レポート サーバーをレポート サーバー データベースに接続するために使用する、接続文字列、資格情報、データ ソース値を指定します。<br /><br /> この引数は値を取りません。 ただし、必須の接続値をすべて指定する場合は、この引数と共に追加の引数を指定する必要があります。<br /><br /> で`-c`指定できる引数には、 `-m` **-s**、 `-i`、`-d`、`-a``-u`、`-p`、、および`-t`があります。|  
 |`-e`|`-c` 引数を使用しない場合は必須。|自動的にレポートを実行する場合のアカウントを指定します。<br /><br /> この引数は値を取りません。 ただし、構成ファイルで暗号化されている値を指定する場合は、コマンド ラインに追加の引数を追加する必要があります。<br /><br /> `-e` と共に指定する引数には、`-u` および `-p` があります。 `-t` を設定することもできます。|  
-|`-m`  *computername*|リモート レポート サーバー インスタンスを構成する場合は必須。|レポート サーバーをホストするコンピューターの名前を指定します。 この引数が省略された場合、既定は `localhost` です。|  
+|`-m`  *コンピューター名*|リモート レポート サーバー インスタンスを構成する場合は必須。|レポート サーバーをホストするコンピューターの名前を指定します。 この引数が省略された場合、既定は `localhost` です。|  
 |**-s**  *servername*|必須。|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  
 |`-i`  *instancename*|名前付きインスタンスを使用する場合は必須。|名前付き [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用してレポート サーバー データベースをホストする場合、この値には名前付きインスタンスを指定します。|  
 |`-d`  *databasename*|必須。|レポート サーバー データベースの名前を指定します。|  
 |`-a`  *authmethod*|必須。|レポート サーバーがレポート サーバー データベースへの接続に使用する認証方法を指定します。 有効な値は、`Windows` または `SQL` です (この引数は大文字と小文字を区別しません)。<br /><br /> `Windows` は、レポート サーバーが Windows 認証を使用することを指定します。<br /><br /> `SQL` は、レポート サーバーが SQL Server 認証を使用することを指定します。|  
-|`-u`  *[ドメイン\\] ユーザー名*|`-e` の場合は必須。`-c` の場合は省略可。|レポート サーバー データベース接続または自動アカウントのためのユーザー アカウントを指定します。<br /><br /> **rsconfig -e**では、この引数は必須です。 引数はドメイン ユーザー アカウントであることが必要です。<br /><br /> **Rsconfig-c**と`-a SQL`、この引数を指定する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。<br /><br /> **Rsconfig-c**と`-a Windows`、この引数は、ドメイン ユーザー、組み込みアカウント、またはサービス アカウントの資格情報を指定できます。 ドメイン アカウントを指定している場合は、 *domain* と *username* を *domain\username*の形式で指定します。 組み込みアカウントを使用する場合、この引数は省略可能です。 サービス アカウント資格情報を使用する場合、この引数は省略してください。|  
-|`-p`  *パスワード*|`-u` を指定した場合は必須。|*username* 引数と共に使用するパスワードを指定します。 アカウントがパスワードを必要としない場合、この引数を空白に設定できます。 この値は、ドメイン アカウントの大文字と小文字を区別します。|  
+|`-u`  *[ドメイン\\] ユーザー名*|`-e` の場合は必須。`-c` の場合は省略可。|レポート サーバー データベース接続または自動アカウントのためのユーザー アカウントを指定します。<br /><br /> **rsconfig -e**では、この引数は必須です。 引数はドメイン ユーザー アカウントであることが必要です。<br /><br /> **Rsconfig-c**および`-a SQL`の場合、この引数には[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインを指定する必要があります。<br /><br /> **Rsconfig-c**および`-a Windows`の場合、この引数には、ドメインユーザー、組み込みアカウント、またはサービスアカウント資格情報を指定できます。 ドメイン アカウントを指定している場合は、 *domain* と *username* を *domain\username*の形式で指定します。 組み込みアカウントを使用する場合、この引数は省略可能です。 サービス アカウント資格情報を使用する場合、この引数は省略してください。|  
+|`-p`  *入力*|`-u` を指定した場合は必須。|*username* 引数と共に使用するパスワードを指定します。 アカウントがパスワードを必要としない場合、この引数を空白に設定できます。 この値は、ドメイン アカウントの大文字と小文字を区別します。|  
 |`-t`|任意。|エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)」を参照してください。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -65,7 +65,7 @@ ms.locfileid: "66099823"
 ## <a name="file-location"></a>ファイルの場所  
  rsconfig.exe は **\Program Files\Microsoft SQL Server\110\Tools\Binn**にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  Rsconfig.exe は次の 2 つの目的で使用します。  
   
 -   レポート サーバー データベースへの接続でレポート サーバーが使用する接続情報の修正。  
@@ -94,7 +94,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### <a name="specifying-a-built-in-account"></a>組み込みアカウントの指定  
- 次の例では、ローカルのレポート サーバー データベースに接続する場合に、組み込みアカウントを使用するようにレポート サーバーを構成します。 `-u` は使用されないことに注意してください。 サポートされる組み込みアカウント値の例として、ローカル システムの NT AUTHORITY\SYSTEM、およびネットワーク サービスの NT AUTHORITY\NETWORKSERVICE ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] のみ) などがあります。  
+ 次の例では、ローカルのレポート サーバー データベースに接続する場合に、組み込みアカウントを使用するようにレポート サーバーを構成します。 `-u` は使用されないことに注意してください。 サポートされているビルトインアカウント値の例としては、ローカルシステムの nt AUTHORITY\SYSTEM と[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]ネットワークサービスの nt AUTHORITY\NETWORKSERVICE (のみ) などがあります。  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  
@@ -122,12 +122,12 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;レポートサーバーデータベース接続の構成&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;自動実行アカウントを構成&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../report-server/reporting-services-report-server-native-mode.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 構成ファイル](../report-server/reporting-services-configuration-files.md)   
- [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [SSRS&#41;&#40;レポートサーバーのコマンドプロンプトユーティリティ](report-server-command-prompt-utilities-ssrs.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)  
   
   

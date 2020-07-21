@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dfa610b7632455c5d7d7a84efcb6101ffc7575b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63044157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052509"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change イベント クラス
-  **Server Memory Change** イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用率が 1 MB または最大サーバー メモリ容量の 5 % のどちらか大きい方を超えて増加または減少したときに発生します。  
+  **Server Memory Change** イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用率が 1 MB または最大サーバー メモリ容量の 5 % のどちらか大きい方を超えて増加または減少したときに発生します。  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change イベント クラスのデータ列  
   

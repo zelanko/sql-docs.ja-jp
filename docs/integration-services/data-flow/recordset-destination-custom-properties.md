@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d15beadf6ee7dcc765afa4dee182a6d05e1ce43c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a8c4908e3a2269733a71dc8fe5c6d6a9e697a576
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034329"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292049"
 ---
 # <a name="recordset-destination-custom-properties"></a>レコードセット変換先のカスタム プロパティ
 
@@ -26,7 +26,7 @@ ms.locfileid: "68034329"
   
  次の表は、レコードセット変換先のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |VariableName|String|ADO レコードセットが保持する変数の名前。|  
   

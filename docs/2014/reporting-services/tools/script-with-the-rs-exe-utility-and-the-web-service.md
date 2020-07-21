@@ -17,20 +17,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d84bb8722fd31a08ff7788ad31c601b377c23d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099719"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>rs.exe ユーティリティと Web サービスを使用したスクリプト
-  開発者およびレポート サーバー管理者は、 **rs** ユーティリティ (RS.exe) を使用してレポート サーバーを操作できます。 このユーティリティでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述されたスクリプトを使用し、プログラムによってレポート サーバーを管理できます。  
+  開発者およびレポート サーバー管理者は、 **rs** ユーティリティ (RS.exe) を使用してレポート サーバーを操作できます。 このユーティリティでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述されたスクリプトを使用し、プログラムによってレポート サーバーを管理できます。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スクリプトを使用すると、レポート サーバー Web サービスのあらゆる操作を実行できます。 スクリプトを使用すれば、サーバー上の複数のレポートにセキュリティをコピーしたり、アイテムを追加または削除したり、サーバー間でレポート サーバー アイテムをコピーすることができます。 スクリプト環境の詳細については、「 [Reporting Services スクリプト ファイルを実行する](run-a-reporting-services-script-file.md)」を参照してください。 スクリプト ファイルは特定の書式を使用しており、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET で記述されます。 詳細については、「 [Reporting Services スクリプト ファイルを書式設定する](format-a-reporting-services-script-file.md)」を参照してください。  
   
  スクリプトの例については、次を参照してください。  
   
- [レポート サーバー間でコンテンツを移行するサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)  
+ [サンプル Reporting Services、レポートサーバー間でコンテンツを移行するための rs .Exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)です。  
   
  [SQL Server Reporting Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   

@@ -10,15 +10,14 @@ helpviewer_keywords:
 - schema rowsets [OLE DB]
 - table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)
 ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff0086d6b8c724ef83575cde387217ad69549d56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e09d5127f332c8b6cc948be3eeb74e600bb856f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213853"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018034"
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>OLE DB テーブル値パラメーター向けに変更されたスキーマ行セット
   テーブル値パラメーターをサポートするために変更または追加されたスキーマ行セットは次のとおりです。  

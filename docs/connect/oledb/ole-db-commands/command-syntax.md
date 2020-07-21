@@ -1,6 +1,6 @@
 ---
-title: コマンド構文 |Microsoft Docs
-description: コマンドの構文とストアドプロシージャ
+title: コマンド構文 | Microsoft Docs
+description: コマンド構文とストアド プロシージャ
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68016123"
 ---
 # <a name="command-syntax"></a>コマンドの構文
@@ -27,7 +27,7 @@ ms.locfileid: "68016123"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server は、DBGUID_SQL マクロで指定されたコマンド構文を認識します。 OLE DB Driver for SQL Server の場合、指定子は、ODBC SQL、ISO、および[!INCLUDE[tsql](../../../includes/tsql-md.md)]の混在が有効な構文であることを示します。 たとえば、次の SQL ステートメントでは、ODBC SQL のエスケープ シーケンスを使用して、LCASE 文字列関数を指定しています。  
+  OLE DB Driver for SQL Server は、DBGUID_SQL マクロで指定されたコマンド構文を認識します。 OLE DB Driver for SQL Server のために、ODBC SQL、ISO、および [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの混在する構文が有効な構文であることを指定子で示すことができます。 たとえば、次の SQL ステートメントでは、ODBC SQL のエスケープ シーケンスを使用して、LCASE 文字列関数を指定しています。  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -57,6 +57,6 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     ```  
   
 ## <a name="see-also"></a>参照  
- [[コマンド]](../../oledb/ole-db-commands/commands.md)  
+ [コマンド](../../oledb/ole-db-commands/commands.md)  
   
   

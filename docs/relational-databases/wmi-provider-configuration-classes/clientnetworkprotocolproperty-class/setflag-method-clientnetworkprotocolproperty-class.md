@@ -1,6 +1,6 @@
 ---
-title: SetFlag メソッド (ClientNetworkProtocolProperty クラス) |Microsoft Docs
-ms.custom: ''
+title: SetFlag メソッド (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c16ae47f80a9d349090684bf7e9c7faf1dca641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c87ae61bb04f697271610780db3b9ba85cb5bd37
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035313"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888923"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>SetFlag メソッド (ClientNetworkProtocolProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  によって参照される現在のプロパティのフラグを設定、 [PropertyIdx プロパティ (ClientNetworkProtocolProperty クラス)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md)値。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [Propertyidx プロパティ (ClientNetworkProtocolProperty クラス)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md)の値によって参照される現在のプロパティのフラグを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,20 +35,20 @@ ms.locfileid: "68035313"
 object.SetFlag(BoolValue) [=]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ClientNetworkProtocolProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)によって使用されるネットワーク プロトコルの属性を表すオブジェクトを[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント。  
+ クライアントによって使用されるネットワークプロトコルの属性を表す[Clientnetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*BoolValue*|フラグの新しい値を指定するブール値|  
+|*ブール値*|フラグの新しい値を指定するブール値|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **uint32** 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  

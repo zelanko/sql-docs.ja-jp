@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 09491a8a-1931-411e-9b35-2b269c1b7f12
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08d74e16d8d841503ea729d28518be8018e2bc6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a3c35e701b80ea371dd14d1a90580a2b5080269e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67983073"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924789"
 ---
 # <a name="getfloat-method-javalangstring-sqlserverresultset"></a>getFloat (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public float getFloat(java.lang.String columnName)
  列名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- **浮動小数点**値です。  
+ **float** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getFloat メソッドは、java.sql.ResultSet インターフェイスの getFloat メソッドで規定されています。  
   
  このメソッドは、数値ベースのすべての型を、Java の**float** の忠実性を使用して返します。  

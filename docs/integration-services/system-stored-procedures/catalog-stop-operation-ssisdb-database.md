@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 983593ce6ee82c834ffa038e0c6860b526bdca34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 22f4a0a20039af5ea274d9b6c0fc00aa1f7b10f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674183"
 ---
-# <a name="catalogstopoperation-ssisdb-database"></a>catalog.stop_operation (SSISDB データベース)
+# <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの実行の検証またはインスタンスを停止します。  
   
@@ -60,7 +60,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   操作が既に停止されている  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログで操作を停止できるのは、一度に 1 人のユーザーだけです。 複数のユーザーが操作を停止しようとすると、ストアド プロシージャは最初の試行で成功 (値 `0`) を返しますが、2 回目以降の試行ではエラーが発生します。  
   
   

@@ -12,15 +12,15 @@ dev_langs:
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b63cbd1498021fdf9ed8418c3ff36ddec9143f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce5ba2ef3b5bcb3849a710744bfb8de701b418c3
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022230"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196830"
 ---
-# <a name="sessionid-transact-sql"></a>SESSION_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="session_id-transact-sql"></a>SESSION_ID (Transact-SQL)
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   現在の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] セッションの ID を返します。  
   
@@ -43,7 +43,7 @@ SESSION_ID ( )
   
  ビュー [sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) をクエリして、この関数と同じ情報を取得できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のセッション ID を返します。  
   
 ```  

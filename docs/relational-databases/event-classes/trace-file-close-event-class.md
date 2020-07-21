@@ -12,20 +12,20 @@ ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb3fd4e2bc815e143ba1ff6d690d2c55a40c6f31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dfe6ed9ef27255b634fbbcec4361d8cbb49b6d23
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728341"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Trace File Close** イベント クラスは、トレース ファイルのロールオーバー中にトレース ファイルが閉じられたことを示します。  
   
 ## <a name="trace-file-close-event-class-data-columns"></a>Trace File Close イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**EventClass**|**int**|イベントの種類 = 150。|27|いいえ|  
 |**EventSequence**|**int**|このトレースで起動されたこのイベントの固有のタイムスタンプ。 この数字は、イベントが起動されるたびに単調に増加します。|51|いいえ|  

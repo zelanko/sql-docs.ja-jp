@@ -1,5 +1,5 @@
 ---
-title: 付録 A:プロバイダー |Microsoft Docs
+title: '付録 A: Providers |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,63 +14,63 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39e1670d9d37b1404e65ecb50f09dc214abdaaff
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926977"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760548"
 ---
-# <a name="appendix-a-data-and-service-providers"></a>付録 A:データとサービス プロバイダー
-このセクションでは、次の 3 つの種類のプロバイダーを取り上げます。 データ プロバイダー、サービス プロバイダー、およびサービスのコンポーネント。 プロバイダーは、2 つのカテゴリに分類されます。 データとサービスを提供するものを提供するものです。 A*データ プロバイダー*が独自のデータを所有し、アプリケーションに表形式で公開します。 A*サービス プロバイダー*作成や、ADO アプリケーションの機能を強化して、データの利用によって、サービスをカプセル化します。 サービス プロバイダーがさらとして定義しても、*サービス コンポーネント*、他のサービス プロバイダーまたはコンポーネントと連携する必要があります。
+# <a name="appendix-a-data-and-service-providers"></a>付録 A: データおよびサービスプロバイダー
+このセクションでは、データプロバイダー、サービスプロバイダー、およびサービスコンポーネントの3種類のプロバイダーについて説明します。 プロバイダーは、データを提供するカテゴリとサービスを提供するカテゴリの2つのカテゴリに分類されます。 *データプロバイダー*は独自のデータを所有し、アプリケーションに表形式で公開します。 *サービスプロバイダー*は、データを生成して使用することによってサービスをカプセル化し、ADO アプリケーションの機能を強化します。 サービスプロバイダーは、他のサービスプロバイダーまたはコンポーネントと連携して動作する必要がある*サービスコンポーネント*としてさらに定義することもできます。
 
 ## <a name="data-providers"></a>データ プロバイダー
- ADO では、強力で柔軟ないくつかの異なるデータ プロバイダーのいずれかに接続し、指定されたプロバイダーの特定の機能に関係なく、同じプログラミング モデルを公開するためにします。
+ ADO は、さまざまなデータプロバイダーのいずれかに接続でき、特定のプロバイダーの特定の機能に関係なく同じプログラミングモデルを公開できるため、強力で柔軟性があります。
 
- ただし、各データ プロバイダーは、一意であるため、アプリケーションが ADO と対話する方法はによって多少異なりますデータ プロバイダー。 違いは、通常は 3 つのカテゴリに分類されます。
+ ただし、各データプロバイダーは一意であるため、アプリケーションと ADO の対話方法はデータプロバイダーによって多少異なります。 これらの違いは、通常、次の3つのカテゴリのいずれかに分類されます。
 
--   接続のパラメーター、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
+-   [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティの接続パラメーター。
 
--   [コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの使用量。
+-   [コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの使用法。
 
--   プロバイダー固有[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)動作します。
+-   プロバイダー固有の[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の動作。
 
- 現在、Microsoft から入手できるデータ プロバイダーの詳細は次のとおりです。
+ Microsoft から現在提供されている各データプロバイダーの詳細については、次の一覧を参照してください。
 
 |領域|トピック|
 |----------|-----------|
 |ODBC データベース|[Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
-|Microsoft インテックス サービス|[Microsoft OLE DB Provider for Microsoft インテックス サービス](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
+|Microsoft インデックスサービス|[Microsoft OLE DB Provider for Microsoft Indexing Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
 |Active Directory サービス|[Microsoft OLE DB Provider for Microsoft Active Directory サービス](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
-|Microsoft Jet データベース|[OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
+|Microsoft Jet データベース|[Microsoft Jet 用 OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Microsoft SQL Server|[Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Oracle データベース|[Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
-|インターネットへの発行|[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
-|単純なデータ ソース|[Microsoft OLE DB の単純なプロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
+|インターネット公開|[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
+|単純なデータソース|[Microsoft OLE DB Simple プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
 ## <a name="provider-specific-dynamic-properties"></a>プロバイダー固有の動的プロパティ
- [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、および[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトに固有の動的なプロパティが含まれます、。プロバイダー。 これらのプロパティは、ADO をサポートする組み込みのプロパティ以外のプロバイダーに固有の機能に関する情報を提供します。
+ [Connection](../../../ado/reference/ado-api/connection-object-ado.md)、 [Command](../../../ado/reference/ado-api/command-object-ado.md)、および[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションには、プロバイダー固有の動的プロパティが含まれます。 これらのプロパティは、ADO がサポートする組み込みプロパティ以外のプロバイダー固有の機能に関する情報を提供します。
 
- 接続を確立すると、これらのオブジェクトを作成、使用、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを**プロパティ**プロバイダー固有のプロパティを取得するオブジェクトのコレクション。 プロバイダーのマニュアルを参照してください、 [OLE DB プログラマ ガイド](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)のこれらの動的プロパティに関する詳細情報。
+ 接続を確立し、これらのオブジェクトを作成したら、オブジェクトの**properties**コレクションに対して[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、プロバイダー固有のプロパティを取得します。 これらの動的プロパティの詳細については、プロバイダーのドキュメントと[OLE DB プログラマーガイド](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)を参照してください。
 
 ## <a name="service-providers"></a>サービス プロバイダー
- サービス プロバイダーを使用するには、キーワードを指定する必要があります。 各サービス プロバイダーに関連付けられているプロバイダーに固有の動的プロパティの注意する必要があります。 プロバイダー固有の詳細については、現在、Microsoft から提供されている各サービス プロバイダーのとおりです。
+ サービスプロバイダーを使用するには、キーワードを指定する必要があります。 また、各サービスプロバイダーに関連付けられているプロバイダー固有の動的プロパティにも注意する必要があります。 プロバイダー固有の詳細については、Microsoft から現在提供されているサービスプロバイダーごとに記載されています。
 
 -   [Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
 
--   [Microsoft OLE DB の永続化プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+-   [Microsoft OLE DB 永続化プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
 
--   [Microsoft OLE DB のリモート処理のプロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)
+-   [Microsoft OLE DB リモート処理プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)
 
 ## <a name="service-components"></a>サービス コンポーネント
- [For OLE DB カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)サービス コンポーネントがデータ プロバイダーのカーソル サポート機能を補完します。 また、キーワードを必要しは動的なプロパティがあります。
+ OLE DB サービスコンポーネント[用の Cursor service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)は、データプロバイダーのカーソルサポート機能を補完します。 また、キーワードと動的プロパティが必要です。
 
- OLE DB プロバイダーの詳細については、次を参照してください。 [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)します。
+ OLE DB プロバイダーの詳細については、「 [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)」を参照してください。
 
-## <a name="provider-commands"></a>プロバイダー コマンド
- プロバイダーごとに、アプリケーションがプロバイダーのコマンドとして、SQL ステートメントを入力するユーザーを許可する場合は、ここでは、一覧表示、常にユーザー入力を検証して、危険性のある SQL ステートメントを使用してハッカーの攻撃に備える`DROP TABLE t1`、ユーザー入力の一部として。
+## <a name="provider-commands"></a>プロバイダーコマンド
+ ここに一覧表示されているプロバイダーごとに、アプリケーションでプロバイダーコマンドとして SQL ステートメントを入力できるようにするには、ユーザー入力を常に検証する必要があり `DROP TABLE t1` ます。また、ユーザー入力の一部として、などの危険な sql ステートメントを使用してハッカー攻撃を受ける可能性があります。
 
 ## <a name="see-also"></a>参照
- [コマンド オブジェクト (ADO) を](../../../ado/reference/ado-api/command-object-ado.md)[接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [Microsoft OLE DB Provider for Microsoft Active Directory サービス](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Microsoft OLE DB Provider for Microsoft インテックス サービス](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [Microsoft OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [プロパティのコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Refresh メソッド (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
+ [コマンドオブジェクト (ado)](../../../ado/reference/ado-api/command-object-ado.md) [接続オブジェクト (ado)](../../../ado/reference/ado-api/connection-object-ado.md) Microsoft [OLE DB provider For Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) Microsoft [OLE DB Provider for microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [microsoft OLE DB PROVIDER for microsoft インデックスサービス](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)Microsoft OLE DB provider For [ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) microsoft OLE DB provider For [MICROSOFT Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (](../../../ado/reference/ado-api/properties-collection-ado.md) ado) [Recordset Object (](../../../ado/reference/ado-api/recordset-object-ado.md) ado) [Refresh Method (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md) [を実行](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)します。

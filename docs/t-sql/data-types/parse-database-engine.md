@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de603ecc1d221dad96c7aaf70330198f7732c60c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759596"
 ---
 # <a name="parse-database-engine"></a>Parse (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 正規文字列形式に変換する **hierarchyid** を **hierarchyid** 値。 解析 から文字列型を変換するとき暗黙的に呼び出されます **hierarchyid** が発生します。 逆の役割を果たします [ToString](../../t-sql/data-types/tostring-database-engine.md)です。 Parse() 静的メソッドです。
   
@@ -46,19 +46,19 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>引数  
 *input*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]:変換対象となる文字データ型の値。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] : 変換対象となる文字データ型の値。
   
-CLR:評価される String 値。
+CLR : 評価される String 値。
   
 ## <a name="return-types"></a>戻り値の型  
 **SQL Server の戻り値の型: hierarchyid**
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 場合 解析 の有効な文字列表記ではない値を受け取る、 **hierarchyid**, 、例外が発生します。 たとえば場合、 **cha**r データ型には、末尾のスペースが含まれている、例外が発生します。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. テーブルを使用しない Transact-SQL 値の変換  
 次のコード例では、`ToString` を使用して **hierarchyid** 値を文字列に変換し、`Parse` を使用して文字列値を **hierarchyid** に変換します。

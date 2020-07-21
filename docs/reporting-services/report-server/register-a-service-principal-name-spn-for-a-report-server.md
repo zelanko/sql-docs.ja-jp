@@ -1,6 +1,6 @@
 ---
 title: レポート サーバーのサービス プリンシパル名 (SPN) の登録 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500232"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77256425"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>レポート サーバーのサービス プリンシパル名 (SPN) の登録
   相互認証に Kerberos プロトコルを使用するネットワークに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を配置する場合に、レポート サーバー サービスをドメイン ユーザー アカウントとして実行するように構成するには、レポート サーバー サービスのサービス プリンシパル名 (SPN) を作成する必要があります。  
@@ -21,19 +21,20 @@ ms.locfileid: "66500232"
 ## <a name="about-spns"></a>SPN について  
  SPN は、Kerberos 認証を使用するネットワークでのサービスの一意識別子です。 サービス クラスとホスト名で構成されますが、ポートが含まれることもあります。 HTTP SPN の場合、ポートは不要です。 Kerberos 認証を使用するネットワークでは、ビルトイン コンピューター アカウント (NetworkService や LocalSystem など) またはユーザー アカウントにサーバーの SPN を登録する必要があります。 ビルトイン アカウントには、自動的に SPN が登録されます。 一方、ドメイン ユーザー アカウントでサービスを実行する場合は、使用するアカウントに手動で SPN を登録する必要があります。  
   
- SPN を作成するには、 **SetSPN** コマンド ライン ユーティリティを使用します。 詳細については、以下を参照してください。  
+ SPN を作成するには、 **SetSPN** コマンド ライン ユーティリティを使用します。 詳細については、「  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx) 。  
+-   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) 。  
   
 -   [サービス プリンシパル名 (SPN) SetSPN の構文 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) 。  
   
  このユーティリティをドメイン コントローラーで実行するには、ドメイン管理者であることが必要です。  
   
 ## <a name="syntax"></a>構文  
- SetSPN ユーティリティを使用してレポート サーバーの SPN を作成する場合は、次のようなコマンド構文を使用します。  
+
+setspn を使用して SPN を操作する場合は、SPN を正しい形式で入力する必要があります。 SPN の形式は `<serviceclass>/host:<por>` です。 SetSPN ユーティリティを使用してレポート サーバーの SPN を作成する場合は、次のようなコマンド構文を使用します。  
   
 ```  
-Setspn -s http/<computername>.<domainname> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
 ```  
   
  **SetSPN** は、Windows Server で使用できます。 **-s** 引数は、重複する SPN がないことを検証してから、SPN を追加します。 **注: -s** は Windows Server 2008 以降の Windows Server で使用できます。  
@@ -44,7 +45,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 ## <a name="register-an-spn-for-domain-user-account"></a>ドメイン ユーザー アカウントに対する SPN の登録  
   
-#### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>ドメイン ユーザーとして実行されるレポート サーバー サービスの SPN を登録するには  
+### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>ドメイン ユーザーとして実行されるレポート サーバー サービスの SPN を登録するには  
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールし、レポート サーバー サービスをドメイン ユーザー アカウントとして実行するように構成します。 この手順が完了しないと、ユーザーはレポート サーバーに接続できないので注意してください。  
   
@@ -55,10 +56,10 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 4.  次のコマンドをコピーし、プレースホルダーの値を実際のネットワークで有効な値で置き換えます。  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     例: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+    例: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  コマンドを実行します。  
   

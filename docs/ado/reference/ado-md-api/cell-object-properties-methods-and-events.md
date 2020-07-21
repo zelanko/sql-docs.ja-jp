@@ -1,5 +1,5 @@
 ---
-title: セルのオブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: Cell オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Cell object [ADO MD], members
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7f76a24c4db4d6a5144188be2ee0fa00ca5679f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60424bed2d6496ce23f7bf9ed28d4c49a222e3f2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947970"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761790"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Cell オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -25,7 +25,7 @@ ms.locfileid: "67947970"
   
  [Ordinal プロパティ (セル)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)  
   
- [Positions コレクション](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+ [位置のコレクション](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
   
  [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
@@ -37,5 +37,5 @@ ms.locfileid: "67947970"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)

@@ -21,18 +21,18 @@ helpviewer_keywords:
 - date and time [SQL Server], SWITCHOFFSET
 - time zones [SQL Server]
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce69487c1550314dc7cfe3641333728fd07155e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46d5834ff1e9c519b7ac675fd93b75d2b089317e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117559"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85993889"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返します、 **datetimeoffset** 、保存されているタイム ゾーン オフセットから、指定された新しいタイム ゾーン オフセットへ変更された値。  
   
@@ -56,7 +56,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 ## <a name="return-type"></a>戻り値の型  
  **datetimeoffset** の小数部の有効桁数を持つ、 *DATETIMEOFFSET* 引数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SWITCHOFFSET を使用して、選択、 **datetimeoffset** に最初に格納されているタイム ゾーン オフセットとは異なるタイム ゾーン オフセットの値です。 SWITCHOFFSET は、保存されているは更新されません *time_zone* 値。  
   
  SWITCHOFFSET を使用して、更新、 **datetimeoffset** 列です。  
@@ -70,7 +70,7 @@ WHERE c1 > @dt OPTION (RECOMPILE);
   
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`SWITCHOFFSET` を使用して、データベースに保存されている値とは異なるタイム ゾーン オフセットを表示します。  
   
 ```  

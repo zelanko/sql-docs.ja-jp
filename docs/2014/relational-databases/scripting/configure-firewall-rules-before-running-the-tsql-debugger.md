@@ -1,6 +1,6 @@
 ---
-title: TRANSACT-SQL デバッガーの構成 |Microsoft Docs
-ms.custom: ''
+title: Transact-SQL デバッガーの構成
+ms.custom: seo-lt-2019
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,15 +18,14 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ec17b61d0ea5d3f44967b517ea3e60c6b6785c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 28e5515f5132f5e8b7859da1a11b5466b90c5579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056916"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Transact-SQL デバッガーの構成
   [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターとは別のコンピューター上で動作する [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続するときに [!INCLUDE[ssDE](../../includes/ssde-md.md)] デバッグを有効にするように Windows ファイアウォール規則を構成する必要があります。  
@@ -56,7 +55,7 @@ ms.locfileid: "66064188"
   
     2.  **[規則の種類]** ダイアログで、 **[プログラム]** をクリックし、 **[次へ]** をクリックします。  
   
-    3.  **[プログラム]** ダイアログで、 **[このプログラムのパス:]** をクリックし、このインスタンスの sqlservr.exe の完全なパスを入力します。 既定では、sqlservr.exe は C:\Program files \microsoft SQL Server\MSSQL12 でインストールします。*InstanceName*\MSSQL\Binn 場所*InstanceName*は、既定のインスタンスの場合は MSSQLSERVER、名前付きインスタンスのいずれかのインスタンス名。  
+    3.  **[プログラム]** ダイアログで、 **[このプログラムのパス:]** をクリックし、このインスタンスの sqlservr.exe の完全なパスを入力します。 既定では、sqlservr.exe は C:\Program の SQL Server\MSSQL12. にインストールされます。*Instancename*\MSSQL\Binn。 *instancename*は既定のインスタンスの場合は MSSQLSERVER、名前付きインスタンスの場合はインスタンス名です。  
   
     4.  **[操作]** ダイアログで、 **[接続を許可する]** をクリックし、 **[次へ]** をクリックします。  
   
@@ -156,13 +155,13 @@ ms.locfileid: "66064188"
   
 * [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 以降の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスに接続されている必要があります。 クエリ エディター ウィンドウがシングル ユーザー モードのインスタンスに接続されているときは、デバッガーを実行できません。
 
-* サーバーとクライアントが RPC 経由で通信をしている必要があります。 サービスが実行されている SQL Server が実行がアカウントでは、クライアントへのアクセス許可を認証します。  
+* サーバーとクライアントが RPC 経由で通信をしている必要があります。 SQL Server サービスが実行されているアカウントは、クライアントに対する認証権限を持っている必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-SQL デバッガー](transact-sql-debugger.md)   
- [Transact-SQL デバッガーの実行](run-the-transact-sql-debugger.md)   
- [Transact-SQL コードのステップ実行](step-through-transact-sql-code.md)   
- [Transact-SQL デバッガー情報](transact-sql-debugger-information.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql デバッガー](transact-sql-debugger.md)   
+ [Transact-sql デバッガーの実行](run-the-transact-sql-debugger.md)   
+ [Transact-sql コードのステップ実行](step-through-transact-sql-code.md)   
+ [Transact-sql デバッガー情報](transact-sql-debugger-information.md)   
  [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

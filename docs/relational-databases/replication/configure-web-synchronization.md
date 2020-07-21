@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da05c6156a401eee4eaba87c6888281b2f28c773
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903098"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773968"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マージ レプリケーションの Web 同期オプションを使用すると、インターネット経由で HTTPS プロトコルを使用してデータをレプリケートできます。 Web 同期を使用するには、最初に次の構成操作を実行する必要があります。  
   
@@ -51,8 +51,6 @@ ms.locfileid: "67903098"
 3.  Web 同期が許可されるようにマージ パブリケーションを構成します。  
   
 4.  Web 同期が使用されるように 1 つ以上のサブスクリプションを構成します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  大量のデータや **varchar(max)** などのサイズの大きなデータ型を含むデータをレプリケートする場合は、このトピックの「大量のデータのレプリケート」を参照してください。  
@@ -83,14 +81,14 @@ ms.locfileid: "67903098"
   
  Web 同期は、バージョン 5.0 以降の IIS でサポートされます。 IIS 7.0 では、Web 同期の構成ウィザードはサポートされていません。 SQL Server 2012 以降では、IIS サーバーで Web 同期コンポーネントを使用する場合は、レプリケーションとともに SQL Server をインストールすることをお勧めします。 これは無料の SQL Server Express edition で構いません。  
   
- Web 同期では SSL は必須です。 証明機関によって発行されたセキュリティ証明書が必要になります。 テストだけが目的の場合は、独自に発行したセキュリティ証明書を使用できます。  
+ Web 同期には TLS が必要です。 証明機関によって発行されたセキュリティ証明書が必要になります。 テストだけが目的の場合は、独自に発行したセキュリティ証明書を使用できます。  
    
   
  **Web 同期用に IIS を構成するには**  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS の構成](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][ ] :[Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Web ガーデンの作成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーでは、スレッドごとに同時に 2 つの同期処理がサポートされます。 この制限を超えると、レプリケーション リスナーが応答しなくなる可能性があります。 replisapi.dll に割り当てられるスレッドの数は、アプリケーション プールの "ワーカー プロセスの最大数" プロパティで決まります。 既定では、このプロパティは 1 に設定されます。  
@@ -146,7 +144,7 @@ ms.locfileid: "67903098"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューターおよびパブリッシャーは、同じコンピューター上に存在できます (マージ レプリケーションの一般的なセットアップ)。 ただし、IIS は別のコンピューターにインストールする必要があります。  
   
--   SSL (Secure Sockets Layer) を使用して、IIS を実行しているコンピューターとサブスクライバーとの間の接続を暗号化します。 これは、Web 同期では必須です。  
+-   トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して、IIS を実行しているコンピューターとサブスクライバーとの間の接続を暗号化します。 これは、Web 同期では必須です。  
   
 -   サブスクライバーから IIS までの接続に基本認証を使用します。 基本認証を使用すると、IIS では、委任を必要とすることなくサブスクライバーの代わりにパブリッシャーやディストリビューターに接続できます。 統合認証を使用する場合は、委任が必要です。  
   
@@ -157,7 +155,7 @@ ms.locfileid: "67903098"
   
      エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
--   サブスクリプションの新規作成ウィザードの **[Web サーバー情報]** ページでアカウントとパスワードを指定するとき、または **@internet_url** 」および「 **@internet_login** および [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)」を参照してください。 このアカウントには、スナップショット共有の読み取り権限が必要です。  
+-   サブスクリプションの新規作成ウィザードの **[Web サーバー情報]** ページでアカウントとパスワードを指定するとき、または [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) の `@internet_url` および `@internet_login` パラメーターの値を指定するときに、マージ エージェントで使用されるドメイン アカウントと同じアカウントを指定します。 このアカウントには、スナップショット共有の読み取り権限が必要です。  
   
 -   各パブリケーションでは、IIS 用に個別の仮想ディレクトリを使用する必要があります。  
   
@@ -167,11 +165,11 @@ ms.locfileid: "67903098"
   
 -   レプリケーション トポロジ内のサーバーがファイアウォールの内側にあるとき、Web 同期を有効にするために、ファイアウォールのポートを開くことが必要になる場合があります。  
   
-    -   サブスクライバー コンピューターは、SSL を使用する HTTPS (通常はポート 443 を使用するように構成されます) 経由で、IIS を実行しているコンピューターに接続します。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーは、HTTP (通常はポート 80 を使用するように構成されます) 経由の接続を実行することもできます。  
+    -   サブスクライバー コンピューターは、TLS を使用する HTTPS (通常はポート 443 を使用するように構成されます) 経由で、IIS を実行しているコンピューターに接続します。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] サブスクライバーは、HTTP (通常はポート 80 を使用するように構成されます) 経由の接続を実行することもできます。  
   
     -   通常、IIS を実行しているコンピューターは、ポート 1433 (既定のインスタンス用) を使用してパブリッシャーまたはディストリビューターに接続します。 パブリッシャーまたはディストリビューターが、サーバー上の既定のインスタンスとは別に存在する名前付きインスタンスである場合、その名前付きインスタンスへの接続には通常はポート 1500 が使用されます。  
   
-    -   IIS を実行しているコンピューターがファイアウォールによってディストリビューターから分離されており、スナップショットの配信に FTP 共有が使用される場合は、FTP 用のポートが開かれている必要があります。 詳細については、「[Transfer Snapshots Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」(FTP によるスナップショットの転送) をご覧ください。  
+    -   IIS を実行しているコンピューターがファイアウォールによってディストリビューターから分離されており、スナップショットの配信に FTP 共有が使用される場合は、FTP 用のポートが開かれている必要があります。 詳細については、「[FTP によるスナップショットの転送](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  ファイアウォールのポートを開くと、サーバーが攻撃を受けやすくなります。 ポートを開く前に、ファイアウォール システムについて理解しておいてください。 詳細については、「 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)」を参照してください。  

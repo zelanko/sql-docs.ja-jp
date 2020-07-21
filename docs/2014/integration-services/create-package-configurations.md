@@ -1,5 +1,5 @@
 ---
-title: パッケージ構成を作成する |Microsoft Docs
+title: パッケージの構成を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8931df95aba03710c5feb8b8270dcf9453ba1789
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060165"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437919"
 ---
 # <a name="create-package-configurations"></a>パッケージ構成を作成する
   パッケージの構成は、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスまたはパッケージ構成ウィザードを使用して作成します。 これらのツールにアクセスするには、 **で** [SSIS] **メニューの** [パッケージ構成] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をクリックします。  
@@ -69,17 +68,17 @@ ms.locfileid: "66060165"
  ウィザードの終了後、新しい構成が **[パッケージ構成オーガナイザー]** ダイアログ ボックスの構成の一覧に追加されます。  
   
 > [!NOTE]  
->  パッケージ構成ウィザードの最後に表示される [ウィザードの完了] ページには、構成内の対象プロパティが一覧表示されます。 **dtexec** コマンド プロンプト ユーティリティを使用してパッケージの実行時にプロパティを更新するには、パッケージ構成ウィザードを実行してプロパティのパスを表す文字列を生成し、それらの文字列をコピーしてコマンド プロンプト ウィンドウに貼り付け、**dtexec** の set オプションと一緒に使用します。  
+>  パッケージ構成ウィザードの最後に表示される [ウィザードの完了] ページには、構成内の対象プロパティが一覧表示されます。 **dtexec** コマンド プロンプト ユーティリティを使用してパッケージの実行時にプロパティを更新するには、パッケージ構成ウィザードを実行してプロパティのパスを表す文字列を生成し、それらの文字列をコピーしてコマンド プロンプト ウィンドウに貼り付け、 **dtexec**の set オプションと一緒に使用します。  
   
  次の表に、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスの構成の一覧の列を示します。  
   
-|[列]|説明|  
+|列|説明|  
 |------------|-----------------|  
-|**[構成名]**|構成の名前です。|  
-|**[構成の種類]**|構成の種類です。|  
-|**[構成文字列]**|構成の場所です。 場所は、パス、環境変数、レジストリ キー、親パッケージの変数名、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのテーブルの場合があります。|  
-|**[対象になるオブジェクト]**|構成を持つプロパティを設定するオブジェクトの名前です。 構成が XML 構成ファイルの場合、構成で複数のオブジェクトを更新できるため、この列は空白になります。|  
-|**[対象になるプロパティ]**|プロパティの名前。 構成が XML 構成ファイルまたは SQL Server テーブルに書き込まれる場合は、構成で複数のオブジェクトを更新できるため、この列は空白になります。|  
+|**構成名**|構成の名前です。|  
+|**構成の種類**|構成の種類です。|  
+|**構成文字列**|構成の場所です。 場所は、パス、環境変数、レジストリ キー、親パッケージの変数名、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのテーブルの場合があります。|  
+|**ターゲットオブジェクト**|構成を持つプロパティを設定するオブジェクトの名前です。 構成が XML 構成ファイルの場合、構成で複数のオブジェクトを更新できるため、この列は空白になります。|  
+|**Target プロパティ**|プロパティの名前。 構成が XML 構成ファイルまたは SQL Server テーブルに書き込まれる場合は、構成で複数のオブジェクトを更新できるため、この列は空白になります。|  
   
 ### <a name="to-create-a-package-configuration"></a>パッケージの構成を作成するには  
   
@@ -112,13 +111,13 @@ ms.locfileid: "66060165"
   
 -   msdn.microsoft.com の技術記事「 [Integration Services パッケージ構成について](https://go.microsoft.com/fwlink/?LinkId=165643)」  
   
--   ブログ エントリ「[コード - パッケージ構成でパッケージを作成する](https://go.microsoft.com/fwlink/?LinkId=217663)、www.sqlis.com にします。  
+-   Www.sqlis.com のブログ記事「[コードパッケージ構成でのパッケージの作成](https://go.microsoft.com/fwlink/?LinkId=217663)」をご覧ください。  
   
--   ブログ エントリ「 [API のサンプル - がプログラムによって構成ファイル パッケージに追加](https://go.microsoft.com/fwlink/?LinkId=217664)、blogs.msdn.com します。  
+-   ブログ記事「 [API サンプル-プログラムによるパッケージへの構成ファイルの追加](https://go.microsoft.com/fwlink/?LinkId=217664)」 (blogs.msdn.com) をご覧ください。  
   
 ## <a name="see-also"></a>関連項目  
- [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
- [パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
- [プログラムによる変数の使用](building-packages-programmatically/working-with-variables-programmatically.md)  
+ [パッケージの構成](../../2014/integration-services/package-configurations.md)   
+ [SSIS&#41;&#40;パッケージの配置](packages/legacy-package-deployment-ssis.md)   
+ [プログラムでの変数の使用](building-packages-programmatically/working-with-variables-programmatically.md)  
   
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5e1114b1d77ed339e752f11e9364df7e58880a8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c0b29d0e74d25739b72e712080d2f379ae3be437
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038476"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296724"
 ---
 # <a name="system-variables"></a>システム変数
 
@@ -35,7 +35,7 @@ ms.locfileid: "68038476"
 ## <a name="system-variables-for-packages"></a>パッケージ用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がパッケージ用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|[説明]|  
+|システム変数|データ型|説明|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|タスクがシグナルを送信して実行を停止する必要があることを示す、Windows イベント オブジェクトへのハンドルです。|  
 |**ContainerStartTime**|DateTime|コンテナーの開始時刻です。|  
@@ -63,16 +63,16 @@ ms.locfileid: "68038476"
 ## <a name="system-variables-for-containers"></a>コンテナー用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が、For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナー用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|[説明]|コンテナー|  
+|システム変数|データ型|説明|コンテナー|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|コンテナーが使用するロケールです。|For ループ コンテナー<br /><br /> Foreach ループ コンテナー<br /><br /> シーケンス コンテナー|  
   
 ## <a name="system-variables-for-tasks"></a>タスク用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がタスク用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|[説明]|  
+|システム変数|データ型|説明|  
 |---------------------|---------------|-----------------|  
-|**CreationName**|String|タスクの名前です。|  
+|**CreationName**|String|タスクの名前。|  
 |**LocaleId**|Int32|タスクが使用するロケールです。|  
 |**TaskID**|String|タスク インスタンスの一意識別子です。|  
 |**TaskName**|String|タスク インスタンスの名前です。|  
@@ -81,7 +81,7 @@ ms.locfileid: "68038476"
 ## <a name="system-variables-for-event-handlers"></a>イベント ハンドラー用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がイベント ハンドラー用に提供するシステム変数について説明します。 すべての変数がすべてのイベント ハンドラーで使用できるわけではありません。  
   
-|システム変数|データ型|[説明]|イベント ハンドラー|  
+|システム変数|データ型|説明|イベント ハンドラー|  
 |---------------------|---------------|-----------------|-------------------|  
 |**キャンセル**|Boolean|エラー、警告、またはクエリのキャンセルが発生したときに、イベント ハンドラーが実行を停止するかどうかを示します。|OnError イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー<br /><br /> OnQueryCancel イベント ハンドラー|  
 |**ErrorCode**|Int32|エラー識別子です。|OnError イベント ハンドラー<br /><br /> OnInformation イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー|  
@@ -93,7 +93,7 @@ ms.locfileid: "68038476"
 |**ProgressCountHigh**|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の上位部分です。|OnProgress イベント ハンドラー|  
 |**ProgressCountLow**|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の下位部分です。|OnProgress イベント ハンドラー|  
 |**ProgressDescription**|String|進行状況の説明です。|OnProgress イベント ハンドラー|  
-|**Propagate**|Boolean|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注:変数 **Propagate** の値は、パッケージの検証中は無視されます。 子パッケージ内で **Propagate** を **False** に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
+|**Propagate**|Boolean|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注: 変数 **Propagate** の値は、パッケージの検証中は無視されます。 子パッケージ内で **Propagate** を **False** に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
 |**SourceDescription**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの説明です。|すべてのイベント ハンドラー|  
 |**[SourceID]**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの一意識別子です。|すべてのイベント ハンドラー|  
 |**[SourceName]**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの名前です。|すべてのイベント ハンドラー|  

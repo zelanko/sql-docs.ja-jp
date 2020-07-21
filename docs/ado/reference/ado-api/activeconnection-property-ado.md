@@ -15,57 +15,57 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921514"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764573"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection プロパティ (ADO)
-先を示します[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの指定した[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが現在属しています。  
+指定した[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが現在どの[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに属しているかを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定または取得を**文字列**場合は、接続を終了すると、接続の定義を含む値**バリアント**現在を含む**接続**オブジェクトの場合、接続は開いています。 既定では、null オブジェクト参照です。 参照してください、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。  
+ 接続が閉じられている場合は接続の定義を含む**文字列**値、または接続が開いている場合は現在の**接続**オブジェクトを含む**バリアント**を設定または返します。 既定値は null オブジェクト参照です。 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを参照してください。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **ActiveConnection**プロパティの**接続**オブジェクトを指定した**コマンド**オブジェクトが実行されますか、指定された**レコード セット**が開きます。  
+## <a name="remarks"></a>Remarks  
+ **ActiveConnection**プロパティを使用して、指定した**コマンド**オブジェクトを実行する**接続**オブジェクトを決定します。指定した**レコードセット**が開かれます。  
   
 ## <a name="command"></a>コマンド  
- **コマンド**、オブジェクト、 **ActiveConnection**読み取り/書き込みプロパティです。  
+ **Command**オブジェクトの場合、 **ActiveConnection**プロパティは読み取り/書き込み可能です。  
   
- 呼び出すしようとした場合、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドを**コマンド**、オープンにこのプロパティを設定する前にオブジェクト**接続**オブジェクトか、有効な接続文字列、エラーが発生します。  
+ このプロパティを開いている**接続**オブジェクトまたは有効な接続文字列に設定する前に**Command**オブジェクトで[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドを呼び出そうとすると、エラーが発生します。  
   
- 場合、**接続**に割り当てられているオブジェクト、 **ActiveConnection**プロパティ、オブジェクトを開く必要があります。 閉じた接続オブジェクトを割り当てると、エラーが発生します。  
+ **接続**オブジェクトが**ActiveConnection**プロパティに割り当てられている場合は、オブジェクトを開く必要があります。 閉じた接続オブジェクトを割り当てると、エラーが発生します。  
   
 ### <a name="note"></a>注意  
- **Microsoft Visual Basic**設定、 **ActiveConnection**プロパティを*Nothing*の関連付けを解除、**コマンド**オブジェクトから現在**接続**と、データ ソースに関連付けられているリソースを解放するプロバイダー。 関連付けることができますし、**コマンド**同一または別のオブジェクト**接続**オブジェクト。 一部のプロバイダーでは、いずれかから、プロパティの設定を変更できます。**接続**を最初に、プロパティを設定することなく別*Nothing*します。  
+ **Microsoft Visual Basic****ActiveConnection**プロパティを*Nothing*に設定すると、現在の**接続**から**コマンド**オブジェクトの関連付けが解除され、プロバイダーによって、データソースに関連付けられているすべてのリソースが解放されます。 その後、**コマンド**オブジェクトを同じまたは別の**接続**オブジェクトに関連付けることができます。 プロバイダーによっては、プロパティを最初に*Nothing*に設定しなくても、プロパティ設定をある接続から別の**接続**に変更することができます。  
   
- 場合、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)のコレクション、**コマンド**オブジェクトには、プロバイダーによって指定されたパラメーターが含まれています、設定した場合、コレクションの消去、 **ActiveConnection**プロパティを*Nothing*または別**接続**オブジェクト。 手動で作成する場合[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトし、入力して、**パラメーター**のコレクション、**コマンド**オブジェクト、設定、 **ActiveConnection**プロパティを*Nothing*または別**接続**リーフ オブジェクト、**パラメーター**コレクションをそのまま残ります。  
+ **コマンド**オブジェクトの[parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションにプロバイダーによって提供されるパラメーターが含まれている場合、 **ActiveConnection**プロパティを*Nothing*または別の**接続**オブジェクトに設定すると、コレクションはクリアされます。 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトを手動で作成し、それを使用して**Command**オブジェクトの**Parameters**コレクションを設定する場合は、 **ActiveConnection**プロパティを*Nothing*または別の**接続**オブジェクトに設定しても、**パラメーター**コレクションはそのまま残ります。  
   
- 閉じる、**接続**オブジェクトを**コマンド**オブジェクトが関連付けられているセット、 **ActiveConnection**プロパティを*Nothing*します。 このプロパティの設定を閉じている**接続**オブジェクト、エラーが発生します。  
+ **Command**オブジェクトが関連付けられている**接続**オブジェクトを閉じると、 **ActiveConnection**プロパティが*Nothing*に設定されます。 閉じている**接続**オブジェクトにこのプロパティを設定すると、エラーが生成されます。  
   
 ## <a name="recordset"></a>レコードセット  
- オープンの**レコード セット**オブジェクトまたは**レコード セット**オブジェクト[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)プロパティが有効な**コマンド**オブジェクト、 **ActiveConnection**プロパティは読み取り専用です。 それ以外の場合、読み取り/書き込みになります。  
+ Open **recordset**オブジェクト、または[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)プロパティが有効な**Command**オブジェクトに設定されている**レコードセット**オブジェクトの場合、 **ActiveConnection**プロパティは読み取り専用です。 それ以外の場合は、読み取り/書き込みです。  
   
- このプロパティを設定するには有効な**接続**オブジェクトまたは有効な接続文字列にします。 この場合、プロバイダーを作成、新しい**接続**オブジェクトのこの定義を使用して、接続が開かれます。 さらに、プロバイダーはこのプロパティの新しいに設定が**接続**にアクセスする方法を提供するオブジェクト、**接続**オブジェクトの拡張エラー情報またはその他のコマンドを実行します。  
+ このプロパティは、有効な**接続**オブジェクトまたは有効な接続文字列に設定できます。 この場合、プロバイダーはこの定義を使用して新しい**接続**オブジェクトを作成し、接続を開きます。 さらに、プロバイダーは、このプロパティを新しい**接続**オブジェクトに設定することにより、**接続**オブジェクトにアクセスして、エラーの詳細情報を表示したり、その他のコマンドを実行したりすることができます。  
   
- 使用する場合、 *ActiveConnection*の引数、[開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを開き、**レコード セット**オブジェクト、 **ActiveConnection**プロパティは引数の値を継承します。  
+ [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドの*ActiveConnection*引数を使用して**レコードセット**オブジェクトを開くと、 **ActiveConnection**プロパティは引数の値を継承します。  
   
- 設定した場合、**ソース**のプロパティ、**レコード セット**を有効なオブジェクト**コマンド**オブジェクト変数を**ActiveConnection**のプロパティ**Recordset**の設定を継承、**コマンド**オブジェクトの**ActiveConnection**プロパティ。  
-  
-> [!NOTE]
->  **リモート データ サービスの使用状況**クライアント側で使用すると**Recordset**オブジェクト、または (Microsoft Visual Basic または Visual Basic Scripting Edition) で接続文字列にのみ、このプロパティを設定できます*Nothing*.  
-  
-## <a name="record"></a>レコード  
- このプロパティは読み取り/書き込み時に、**レコード**オブジェクトが閉じられるし、接続文字列または開いているへの参照を含めることができます**接続**オブジェクト。 このプロパティは読み取り専用ときに、**レコード**オブジェクトを開くと、および開いているへの参照が含まれています**接続**オブジェクト。  
-  
- A**接続**オブジェクトが暗黙的に作成されるときに、**レコード**オブジェクトは、URL から開きます。 開く、**レコード**開き、既存の**接続**オブジェクトを割り当てることによって、**接続**オブジェクトをこのプロパティは、またはを使用して、 **の接続**オブジェクト内のパラメーターとして、[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドの呼び出し。 場合、**レコード**を既存の開いた**レコード**または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)が自動的に関連付けられている**レコード**または**レコード セット**オブジェクトの**接続**オブジェクト。  
+ **Recordset**オブジェクトの**Source**プロパティを有効な**command**オブジェクト変数に設定した場合、**レコードセット**の**ActiveConnection**プロパティは、 **command**オブジェクトの**ActiveConnection**プロパティの設定を継承します。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  **リモートデータサービスの使用状況**クライアント側の**レコードセット**オブジェクトで使用する場合、この*プロパティを設定*できるのは、接続文字列または (Microsoft Visual Basic または Visual Basic Scripting Edition の場合) のみです。  
+  
+## <a name="record"></a>Record  
+ このプロパティは、 **Record**オブジェクトが閉じている場合は読み取り/書き込み可能であり、接続文字列または開いている**接続**オブジェクトへの参照が含まれている場合があります。 このプロパティは、 **Record**オブジェクトが開いていて、開いている**接続**オブジェクトへの参照が含まれている場合に読み取り専用になります。  
+  
+ **接続**オブジェクトは、**レコード**オブジェクトが URL から開かれたときに暗黙的に作成されます。 **接続**オブジェクトをこのプロパティに割り当てるか、 [open](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド呼び出しのパラメーターとして**connection**オブジェクトを使用して、既存の開いている**接続**オブジェクトを含む**レコード**を開きます。 **レコード**が既存の**レコード**またはレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)から開かれた場合は、その**レコードまたは**レコード**セット**オブジェクトの**接続**オブジェクトに自動的に関連付けられます。  
+  
+> [!NOTE]
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -74,8 +74,8 @@ ms.locfileid: "67921514"
 |[Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (vc++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)

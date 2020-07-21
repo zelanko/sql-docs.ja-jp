@@ -1,5 +1,5 @@
 ---
-title: サービス プロジェクトの開発、統合の |Microsoft Docs
+title: Integration Services のプロジェクトの開発 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,22 +12,21 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da648b3b09b25fa2a7b1cf886ad1bf770296f5ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059461"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429579"
 ---
 # <a name="development-of-an-integration-services-project"></a>Integration Services プロジェクトの開発
-  プロジェクトに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを追加します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成して作業するには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境をインストールする必要があります。 詳細については、「 [Integration Services のインストール](install-windows/install-integration-services.md)」を参照してください。  
+  プロジェクトに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを追加します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成して作業するには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境をインストールする必要があります。 詳細については、「 [Install Integration Services](install-windows/install-integration-services.md)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトを作成する場合は、 **[新しいプロジェクト]** ダイアログ ボックスに **[Integration Services プロジェクト]** テンプレートが表示されます。 このプロジェクト テンプレートでは、パッケージを 1 つ含む新しいプロジェクトが作成されます。  
   
-## <a name="projects-and-solutions"></a>プロジェクトとソリューション  
+## <a name="projects-and-solutions"></a>プロジェクトおよびソリューション  
  プロジェクトはソリューション内に保存されます。 最初にソリューションを作成し、次に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトをそのソリューションに追加できます。 既存のソリューションがない場合、最初にプロジェクトを作成したときに [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] は自動的にソリューションを作成します。 1 つのソリューションにさまざまな種類の複数のプロジェクトを含めることができます。  
   
 > [!NOTE]  

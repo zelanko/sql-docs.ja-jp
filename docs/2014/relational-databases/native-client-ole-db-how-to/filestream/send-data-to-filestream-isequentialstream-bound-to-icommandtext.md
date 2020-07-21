@@ -1,5 +1,5 @@
 ---
-title: ICommandText パラメーター (OLE DB) にバインドされた ISequentialStream を使用して、FILESTREAM 列にデータを送信 |Microsoft Docs
+title: ICommandText Parameter (OLE DB) にバインドされた ISequentialStream を使用して FILESTREAM 列にデータを送信します。Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -7,25 +7,24 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b661288c88a707eb81d4008b4c33c7497dfe40a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5beb81ad035cecc4c1caa698e27f3eb3f0fa5a70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62643359"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998704"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>ICommandText パラメーターにバインドされた ISequentialStream を使用したデータの FILESTREAM 列への送信 (OLE DB)
   このサンプルでは、ICommandText パラメーターにバインドされた ISequentialStream インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
   
- Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)します。  
+ Filestream 機能の詳細については、「 [Filestream Support &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../blob/enable-and-configure-filestream.md))。  
+ このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にしてください (「[FILESTREAM の有効化と構成](../../blob/enable-and-configure-filestream.md)」を参照)。  
   
- INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  サーバーには、データベースの作成場所として、C:\DBFsa という名前のディレクトリが存在している必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには、この場所への書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   

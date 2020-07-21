@@ -1,6 +1,7 @@
 ---
-title: '[ポリシーの評価] ダイアログ ボックスの [ポリシーの選択] ページ | Microsoft Docs'
-ms.custom: ''
+title: '[ポリシーの評価] ダイアログ ボックスの [ポリシーの選択] ページ'
+description: SQL Server Management Studio (SSMS) のポリシーベース管理のための [ポリシーの評価] ダイアログ ボックスの [ポリシーの選択] ページについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f82a5b8760710f0d72554e1f0b5b083ccd58294c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749424"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>[ポリシーの評価] ダイアログ ボックスの [ポリシーの選択] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを評価できます。 **[評価の結果]** ページを選択すると、ポリシーに準拠していない対象セット内の項目にポリシーを適用できます。  
   
 ## <a name="options"></a>オプション  
@@ -33,13 +34,13 @@ ms.locfileid: "67901141"
  **[サーバー]**  
  必要なポリシーを含む [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続する場合に選択します。  
   
- **ポリシー: ポリシー**  
+ **[ポリシー: ポリシー]**  
  クリックすると、指定したポリシーの [ポリシー] ダイアログ ボックスが開きます。  
   
- **ポリシー: カテゴリ**  
+ **[ポリシー: カテゴリ]**  
  ポリシーのカテゴリ。 このボックスは読み取り専用です。  
   
- **ポリシー: ファセット**  
+ **[ポリシー: ファセット]**  
  ポリシーによって実装されるファセット。 このボックスは読み取り専用です。  
   
  **[評価]**  

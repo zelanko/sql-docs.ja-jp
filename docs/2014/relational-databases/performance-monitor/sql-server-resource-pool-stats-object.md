@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c2ca8360e752146dac13e9cc6a3737ac2373cc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066096"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer:Resource Pool Stats オブジェクト
   SQLServer:Resource Pool Stats オブジェクトには、リソース ガバナーのリソース プール統計に関する情報を報告するパフォーマンス カウンターが含まれています。  
@@ -36,7 +35,7 @@ ms.locfileid: "63183020"
 |Memory grants/sec|1 秒間にこのリソース プールで発生しているメモリ許可の数。|  
 |Active memory grants count|メモリ許可の現在の合計数。 この情報は、 [sys.dm_exec_query_memory_grants](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql)で取得することもできます。|  
 |Memory grant timeouts/sec|メモリ許可の 1 秒あたりのタイムアウト数。|  
-|Active memory grant amount (KB)|許可されているメモリの現在の合計量 (KB 単位)。 この情報は、[sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql) で取得することもできます。|  
+|Active memory grant amount (KB)|許可されているメモリの現在の合計量 (KB 単位)。 この情報は、 [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql)で取得することもできます。|  
 |Pending memory grant count|キューに保留されているメモリ許可の要求の数。 この情報は、 [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql)で取得することもできます。|  
 |Max memory (KB)|リソース プール設定とサーバーの状態に基づいてリソース プールで利用できるメモリの最大量 (KB 単位)。|  
 |Used memory (KB)|リソース プールに使用されているメモリ量 (KB 単位)。|  
@@ -50,9 +49,9 @@ ms.locfileid: "63183020"
 |Disk Write Bytes/sec|最後の 1 秒間にディスクに書き込まれたバイト数。|  
 |Avg Disk Write IO (ms)|ディスクへの書き込み操作の平均時間 (秒単位)。|  
   
-## <a name="see-also"></a>関連項目  
- [リソースの利用状況の監視 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)   
- [SQLServer:Workload Group Stats オブジェクト](sql-server-workload-group-stats-object.md)   
+## <a name="see-also"></a>参照  
+ [リソース使用状況の監視 &#40;システムモニタ&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server、ワークロードグループの Stats オブジェクト](sql-server-workload-group-stats-object.md)   
  [リソース ガバナー](../resource-governor/resource-governor.md)  
   
   

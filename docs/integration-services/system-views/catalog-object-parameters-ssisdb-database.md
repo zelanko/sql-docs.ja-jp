@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 907678a77620f432411b1714ec7a1603e147129e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 69c9c6247acd2adfbc3f22b03cb52da1bf5c4980
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671885"
 ---
-# <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters (SSISDB データベース)
+# <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのすべてのパッケージおよびプロジェクトのパラメーターを表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|パラメーターの一意識別子 (ID)。|  
 |project_id|**bigint**|プロジェクトの一意な ID。|  

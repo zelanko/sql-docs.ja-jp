@@ -1,7 +1,7 @@
 ---
-title: sp_adddistributor (TRANSACT-SQL) |Microsoft Docs
+title: sp_adddistributor (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d4a4105496fff9cf9fa9674495ec44f62b16adba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af202181425b751d684d833946a52df036633afb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760233"
 ---
-# <a name="spadddistributor-transact-sql"></a>sp_adddistributor (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-sql)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  エントリを作成、 [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)テーブル (が存在しない) 場合は、ディストリビューターとしてサーバー エントリをマークし、プロパティ情報を格納します。 このストアド プロシージャは、master データベースでディストリビューターに登録し、サーバーをディストリビューターとしてのマークで実行されます。 リモート ディストリビューターの場合、このストアド プロシージャは、master データベースからパブリッシャー側でも実行され、リモート ディストリビューターを登録します。  
+  [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md)テーブルにエントリを作成します (存在しない場合)。は、サーバーエントリをディストリビューターとしてマークし、プロパティ情報を格納します。 このストアドプロシージャは、ディストリビューター側で master データベースに対して実行され、サーバーをディストリビューターとして登録してマークします。 リモート ディストリビューターの場合、このストアド プロシージャは、master データベースからパブリッシャー側でも実行され、リモート ディストリビューターを登録します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,14 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @distributor = ] 'distributor'` ディストリビューション サーバー名です。 *ディストリビューター*は**sysname**、既定値はありません。 このパラメーターは、リモート ディストリビューターを設定する場合にのみ使用します。 ディストリビューターのプロパティ エントリを追加します、 **msdb.MSdistributor**テーブル。  
+`[ @distributor = ] 'distributor'`ディストリビューションサーバーの名前を指定します。 *ディストリビューター*は**sysname**,、既定値はありません。 このパラメーターは、リモート ディストリビューターを設定する場合にのみ使用します。 このメソッドは、ディストリビューターのプロパティのエントリを msdb. に追加します。 **MSdistributor**テーブル。  
+
+> [!NOTE]
+> サーバー名はとして指定でき `<Hostname>,<PortNumber>` ます。 SQL Server が Linux または Windows でカスタムポートを使用して展開され、browser サービスが無効になっている場合は、接続のポート番号を指定する必要があります。
+
+`[ @heartbeat_interval = ] heartbeat_interval`エージェントが進行状況メッセージをログに記録しなくてもよい最大時間を分単位で指定します。 *heartbeat_interval*は**int**,、既定値は10分です。 この間隔で実行され、実行されているレプリケーションエージェントの状態を確認する SQL Server エージェントジョブが作成されます。  
   
-`[ @heartbeat_interval = ] heartbeat_interval` エージェントは、進行状況メッセージをログ記録しなくてもよい分の最大数です。 *heartbeat_interval*は**int**、既定値は 10 分です。 実行されているレプリケーション エージェントの状態を確認するには、この間隔で実行されている SQL Server エージェント ジョブが作成されます。  
-  
-`[ @password = ] 'password']` パスワード、 **distributor_admin**ログインします。 *パスワード*は**sysname**、既定値は NULL です。 NULL または空の文字列にパスワードをリセットかどうか、ランダムな値。 パスワードは最初のリモート ディストリビューターを追加するときに構成する必要があります。 **distributor_admin**ログインと*パスワード*に使用されるリンク サーバー エントリ用の保存されて、*ディストリビューター*ローカル接続を含む、RPC 接続します。 場合*ディストリビューター*がローカルでのパスワードを**distributor_admin**が新しい値に設定します。 同じ値をリモート ディストリビューターとパブリッシャーの場合、*パスワード*を実行するときに指定する必要があります**sp_adddistributor**パブリッシャーとディストリビューターの両方でします。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)ディストリビューターのパスワードを変更するために使用できます。  
+`[ @password = ] 'password']`**Distributor_admin**ログインのパスワードを入力します。 *パスワード*は**sysname**,、既定値は NULL です。 NULL または空の文字列の場合、パスワードはランダムな値にリセットされます。 パスワードは最初のリモート ディストリビューターを追加するときに構成する必要があります。 **distributor_admin**ログインと*パスワード*は、ローカル接続を含む*ディストリビューター* RPC 接続に使用されるリンクサーバーエントリ用に格納されます。 *ディストリビューター*がローカルの場合、 **distributor_admin**のパスワードは新しい値に設定されます。 リモートディストリビューターを持つパブリッシャーの場合、パブリッシャーとディストリビューターの両方で**sp_adddistributor**を実行するときに、 *password*に同じ値を指定する必要があります。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)を使用して、ディストリビューターのパスワードを変更できます。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
@@ -56,21 +59,21 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_adddistributor**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_adddistributor**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistributor-transa_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_adddistributor**します。  
+ **Sp_adddistributor**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
- [sp_dropdistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+ [sp_changedistributor_property &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_dropdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
   
   

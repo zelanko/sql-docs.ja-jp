@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be19f42fa5e8a154d8f29e359b6a52395c6504d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104028"
 ---
 # <a name="configure-report-builder-access"></a>レポート ビルダーへのアクセスの構成
@@ -35,9 +35,9 @@ ms.locfileid: "66104028"
  レポート ビルダーを使用するには、作業するためのパブリッシュされたレポート モデルが必要です。  
   
 ## <a name="prerequisites"></a>前提条件  
- レポート ビルダーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ レポート ビルダーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
- クライアント コンピューターには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 がインストールされている必要があります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] は、 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] アプリケーションを実行するためのインフラストラクチャを提供します。  
+ クライアントコンピューターに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 がインストールされている必要があります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] は、 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] アプリケーションを実行するためのインフラストラクチャを提供します。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 以降を使用する必要があります。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66104028"
   
 11. **[コンテンツ マネージャー]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-12. **[モデルの表示]** 、 **[モデルの管理]** 、および **[レポートの使用]** を選択し、 **[OK]** をクリックします。  
+12. **[モデルの表示]**、 **[モデルの管理]**、および **[レポートの使用]** を選択し、 **[OK]** をクリックします。  
   
 13. **[パブリッシャー]** を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -107,9 +107,9 @@ ms.locfileid: "66104028"
   
     4.  [説明] に、レポート マネージャーのユーザーがロールの目的を把握できるようにするためのロールの説明を入力します。  
   
-    5.  次のタスクを追加します。**レポートを利用する**、**レポートを表示する**、**モデルの表示**、**リソースを表示**、**フォルダーを表示する**、および**個々 のサブスクリプションを管理**秒。  
+    5.  **[レポートの使用]**、 **[レポートの表示]**、 **[モデルの表示]**、 **[リソースの表示]**、 **[フォルダーの表示]**、 **[個別のサブスクリプションを管理]** の各タスクを追加します。  
   
-    6.  **[OK]** をクリックして、ロールを保存します。  
+    6.  [ **OK** ] をクリックして役割を保存します。  
   
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>レポート ビルダーへのアクセスを許可するロールの割り当てを作成するには  
   
@@ -159,15 +159,15 @@ ms.locfileid: "66104028"
 |---------------------------------------|--------------------------------------------------------------------|  
 |ネゴシエート (既定)<br /><br /> NTLM (既定)|Windows 統合セキュリティでは、クライアントとサーバーが同じドメインに配置されており、ユーザーがレポート ビルダーへのアクセス権を持つドメイン アカウントを使用してクライアント コンピューターにログインしており、レポート サーバーが Windows 認証用に構成されている場合は、通常、ClickOnce とレポート ビルダーからの認証済み要求は成功します。<br /><br /> ClickOnce とブラウザーのレポート サーバーへの接続では同じユーザー ID が使用されるので、要求は成功します。<br /><br /> ユーザーが [実行するアカウント名] で Internet Explorer を開き、既定以外の資格情報を指定した場合、要求は失敗します。 レポート サーバー上のユーザー セッションが特定のアカウントで確立されている場合、ClickOnce を別のアカウントで実行すると、レポート サーバーによってファイルへのアクセスが拒否されます。|  
 |Kerberos|レポート ビルダーを使用するために必要な Internet Explorer では、Kerberos は直接サポートされていません。|  
-|[基本認証]|ClickOnce では基本認証はサポートされていません。 認証ヘッダーで基本認証を指定する要求は作成されません。 資格情報を渡したりユーザーに資格情報の入力を求めたりすることもありません。 これらの問題を回避するには、レポート ビルダーのアプリケーション ファイルへの匿名アクセスを有効にします。<br /><br /> レポート ビルダーのアプリケーション ファイルへの匿名アクセスを有効にすると、レポート サーバーで認証ヘッダーが無視されるので、要求は成功します。 レポート ビルダーへの匿名アクセスを有効にする方法の詳細については、「 [Configure Basic Authentication on the Report Server](../security/configure-basic-authentication-on-the-report-server.md)」(レポート サーバーで基本認証を構成する) を参照してください。<br /><br /> ClickOnce がアプリケーション ファイルを取得すると、レポート ビルダーによってレポート サーバーへの個別の接続が開かれます。 ユーザーは、レポート ビルダーからレポート サーバーに接続するために、資格情報を再入力する必要があります。 レポート ビルダーは、Internet Explorer または ClickOnce から資格情報を収集しません。<br /><br /> レポート サーバーが基本認証用に構成されている場合、レポート ビルダーのプログラム ファイルへの匿名アクセスを有効にしないと、要求は失敗します。 ClickOnce は要求で Windows 統合セキュリティを指定するので、要求は失敗します。 レポート サーバーを基本認証用に構成すると、無効なセキュリティ パッケージが指定されること、およびレポート サーバーが想定する資格情報がないことが原因で、サーバーによって要求が拒否されます。<br /><br /> また、SharePoint 統合モードを使用するようにレポート サーバーが構成されている場合に SharePoint サイトで基本認証を使用すると、ClickOnce を使用してレポート ビルダーをクライアント コンピューターにインストールしようとしたときに 401 エラーが発生します。 このような状況が発生するのは、SharePoint ではセッションが継続している間はクッキーを使用してユーザーを認証された状態に維持しておくのに対して、ClickOnce ではクッキーがサポートされないためです。 ユーザーがレポート ビルダーなどの ClickOnce アプリケーションを起動した場合、アプリケーションはクッキーを SharePoint に渡さないため、SharePoint ではアクセスが拒否され、401 エラーが返されます。<br /><br /> この問題は、次のいずれかの方法を使用して回避できます。<br /><br /> 選択、**パスワードを保存する**オプション、ユーザーの資格情報を提供する場合。<br /><br /> SharePoint サイト コレクションへの匿名アクセスを有効にします。<br /><br /> ユーザーが資格情報を指定しないように環境を構成します。 たとえば、イントラネット環境で、ワークグループに属するように SharePoint サーバーを構成してから、ローカル コンピューターでユーザー アカウントを作成します。|  
-|カスタム|カスタム認証を使用するようにレポート サーバーを構成すると、レポート サーバーで匿名アクセスが有効になり、認証チェックなしで要求が受け付けられます。<br /><br /> ClickOnce がアプリケーション ファイルを取得すると、レポート ビルダーによってレポート サーバーへの個別の接続が開かれます。 ユーザーは、レポート ビルダーからレポート サーバーに接続するために、資格情報を再入力する必要があります。 レポート ビルダーは、Internet Explorer または ClickOnce から資格情報を収集しません。|  
+|基本認証|ClickOnce では基本認証はサポートされていません。 認証ヘッダーで基本認証を指定する要求は作成されません。 資格情報を渡したりユーザーに資格情報の入力を求めたりすることもありません。 これらの問題を回避するには、レポート ビルダーのアプリケーション ファイルへの匿名アクセスを有効にします。<br /><br /> レポート ビルダーのアプリケーション ファイルへの匿名アクセスを有効にすると、レポート サーバーで認証ヘッダーが無視されるので、要求は成功します。 レポート ビルダーへの匿名アクセスを有効にする方法の詳細については、「 [Configure Basic Authentication on the Report Server](../security/configure-basic-authentication-on-the-report-server.md)」(レポート サーバーで基本認証を構成する) を参照してください。<br /><br /> ClickOnce がアプリケーション ファイルを取得すると、レポート ビルダーによってレポート サーバーへの個別の接続が開かれます。 ユーザーは、レポート ビルダーからレポート サーバーに接続するために、資格情報を再入力する必要があります。 レポート ビルダーは、Internet Explorer または ClickOnce から資格情報を収集しません。<br /><br /> レポート サーバーが基本認証用に構成されている場合、レポート ビルダーのプログラム ファイルへの匿名アクセスを有効にしないと、要求は失敗します。 ClickOnce は要求で Windows 統合セキュリティを指定するので、要求は失敗します。 レポート サーバーを基本認証用に構成すると、無効なセキュリティ パッケージが指定されること、およびレポート サーバーが想定する資格情報がないことが原因で、サーバーによって要求が拒否されます。<br /><br /> また、SharePoint 統合モードを使用するようにレポート サーバーが構成されている場合に SharePoint サイトで基本認証を使用すると、ClickOnce を使用してレポート ビルダーをクライアント コンピューターにインストールしようとしたときに 401 エラーが発生します。 このような状況が発生するのは、SharePoint ではセッションが継続している間はクッキーを使用してユーザーを認証された状態に維持しておくのに対して、ClickOnce ではクッキーがサポートされないためです。 ユーザーがレポート ビルダーなどの ClickOnce アプリケーションを起動した場合、アプリケーションはクッキーを SharePoint に渡さないため、SharePoint ではアクセスが拒否され、401 エラーが返されます。<br /><br /> この問題は、次のいずれかの方法を使用して回避できます。<br /><br /> ユーザーの資格情報を指定するときに、[**パスワードを保存**する] オプションを選択します。<br /><br /> SharePoint サイト コレクションへの匿名アクセスを有効にします。<br /><br /> ユーザーが資格情報を指定しないように環境を構成します。 たとえば、イントラネット環境で、ワークグループに属するように SharePoint サーバーを構成してから、ローカル コンピューターでユーザー アカウントを作成します。|  
+|Custom|カスタム認証を使用するようにレポート サーバーを構成すると、レポート サーバーで匿名アクセスが有効になり、認証チェックなしで要求が受け付けられます。<br /><br /> ClickOnce がアプリケーション ファイルを取得すると、レポート ビルダーによってレポート サーバーへの個別の接続が開かれます。 ユーザーは、レポート ビルダーからレポート サーバーに接続するために、資格情報を再入力する必要があります。 レポート ビルダーは、Internet Explorer または ClickOnce から資格情報を収集しません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポート サーバーでの認証](../security/authentication-with-the-report-server.md)   
- [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
- [レポート ビルダーの起動&#40;レポート ビルダー&#41;](../report-builder/start-report-builder.md)   
+ [Reporting Services と Power View のブラウザーサポートの計画 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [&#40;レポートビルダーを開始レポートビルダー&#41;](../report-builder/start-report-builder.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [Management Studio でレポート サーバーに接続する](../tools/connect-to-a-report-server-in-management-studio.md)   
+ [Management Studio でレポートサーバーに接続する](../tools/connect-to-a-report-server-in-management-studio.md)   
  [レポート サーバーのシステム プロパティ](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

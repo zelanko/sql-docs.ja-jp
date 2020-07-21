@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 037eb57f53bf583195efdf1f91fcd55f94ebaddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a356550796cc682b2292defffd6565b7fea0783
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676905"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049529"
 ---
 # <a name="working-with-policy-based-management-facets"></a>ポリシー ベースの管理ファセットの操作
   ポリシー ベースの管理ファセットは、管理対象の領域に関連する一連の論理プロパティです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、いくつかの定義済みファセットが用意されています。 たとえば、セキュリティ構成ファセットは既定で無効になる機能をプロパティとして定義します。  
@@ -29,13 +28,13 @@ ms.locfileid: "62676905"
   
  このトピックでは、ファセットの状態を XML ファイルにコピーする方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> 権限  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissions  
  このトピックの手順では、msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
 ## <a name="viewing-and-copying-facet-states"></a>ファセットの状態の表示とコピー  
- [SQL Server オブジェクトのポリシー ベースの管理ファセットの表示](view-the-policy-based-management-facets-on-a-sql-server-object.md)  
+ [SQL Server オブジェクトのポリシーベースの管理ファセットの表示](view-the-policy-based-management-facets-on-a-sql-server-object.md)  
   
- [XML ファイルへのポリシー ベースの管理ファセットの状態のコピー](copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
+ [XML ファイルへのポリシーベースの管理ファセットの状態のコピー](copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)  

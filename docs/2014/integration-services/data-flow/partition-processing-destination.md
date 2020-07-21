@@ -13,18 +13,17 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 53ef09d19b62c0e6ce7742c41581d3cdefdfc374
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 96da9fed29680b654e4404093547c75d7ab27300
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890561"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431689"
 ---
 # <a name="partition-processing-destination"></a>パーティション処理変換先
-  パーティション処理変換先は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパーティションを読み込んで処理します。 パーティションの詳細については、「[パーティション (Analysis Services - 多次元データ)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)」を参照してください。  
+  パーティション処理変換先では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパーティションが読み込まれ処理されます。 パーティションの詳細については、「[パーティション (Analysis Services - 多次元データ)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)」を参照してください。  
   
  パーティション処理変換先には、次の機能が含まれます。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "68890561"
 >  ここで説明されているタスクは、Analysis Services テーブル モデルには適用されません。  テーブル モデルで入力列をパーティション列にマップすることはできません。 代わりに Analysis Services DDL 実行タスク [Analysis Services Execute DDL Task](../control-flow/analysis-services-execute-ddl-task.md) を使用してパーティションを処理することができます。  
   
 ## <a name="configuration-of-the-partition-processing-destination"></a>パーティション処理変換先の構成  
- パーティション処理変換先は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを接続して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト、または変換先が処理するキューブとパーティションを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 詳細については、「 [Analysis Services 接続マネージャー](../connection-manager/analysis-services-connection-manager.md)」を参照してください。  
+ パーティション処理変換先は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを接続して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト、または変換先が処理するキューブとパーティションを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
   
  この変換先は 1 つの入力をとります。 エラー出力はサポートされていません。  
   
@@ -48,11 +47,11 @@ ms.locfileid: "68890561"
   
  **[パーティション処理変換先エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [パーティション処理変換先エディター ([接続マネージャー] ページ)](../partition-processing-destination-editor-connection-manager-page.md)  
+-   [[パーティション処理変換先エディター] &#40;[接続マネージャー] ページ&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
   
 -   [パーティション処理変換先エディター ([マッピング] ページ)](../partition-processing-destination-editor-mappings-page.md)  
   
--   [パーティション処理変換先エディター ([詳細設定] ページ)](../partition-processing-destination-editor-advanced-page.md)  
+-   [[パーティション処理変換先エディター] &#40;[詳細設定] ページ&#41;](../partition-processing-destination-editor-advanced-page.md)  
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   

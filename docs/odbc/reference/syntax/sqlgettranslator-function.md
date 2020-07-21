@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetTranslator function [ODBC]
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f769d3c5b2dcfe5d2aa8a431695cb18a52893b91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bcd5aeebab8539b8b94db56ff30892f4a7dbbac1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030650"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303273"
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator 関数
-**準拠**  
- バージョンが導入されました。ODBC 2.0  
+**互換性**  
+ 導入されたバージョン: ODBC 2.0  
   
- **概要**  
- **SQLGetTranslator**ユーザーが翻訳者を選択できるダイアログ ボックスが表示されます。  
+ **まとめ**  
+ [ **Sqlgettranslator** ] ユーザーが翻訳者を選択できるダイアログボックスが表示されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,60 +50,60 @@ BOOL SQLGetTranslator(
   
 ## <a name="arguments"></a>引数  
  *hwndParent*  
- [入力]親ウィンドウ ハンドル。  
+ 代入親ウィンドウハンドル。  
   
  *lpszName*  
- [入力/出力]システム情報の変換プログラムの名前。  
+ [入力/出力]システム情報からの変換プログラムの名前。  
   
  *cbNameMax*  
- [入力]最大長、 *lpszName*バッファー。  
+ 代入*Lpszname*バッファーの最大長。  
   
  *pcbNameOut*  
- [入力/出力]\(Null 終了バイトを除く) バイトの合計数が指定値を渡したりで返される*lpszName*です。 返される使用可能なバイト数がより大きいかに等しい場合*cbNameMax*、翻訳者名*lpszName*に切り捨てられます*cbNameMax*マイナス、null 終了文字です。 *PcbNameOut*引数が null ポインターを指定できます。  
+ [入力/出力]*Lpszname*で渡された (null 終了バイトを除く) 合計バイト数。 返される使用可能なバイト数が*cbNameMax*以上の場合、 *lpszname*の翻訳者名は、 *cbNameMax*から null 終了文字を引いた値に切り捨てられます。 *Pcbnameout*引数は null ポインターにすることができます。  
   
  *lpszPath*  
- [出力]トランスレーター DLL の完全パス。  
+ Output変換 DLL の完全パスです。  
   
  *cbPathMax*  
- [入力]最大長、 *lpszPath*バッファー。  
+ 代入*Lpszpath*バッファーの最大長。  
   
  *pcbPathOut*  
- [出力]合計バイト数 (null 終了バイトを除く) で返される*lpszPath*します。 返される使用可能なバイト数がより大きいかに等しい場合*cbPathMax*、翻訳の DLL パス*lpszPath*に切り捨てられます*cbPathMax*マイナス、null 終了文字です。 *PcbPathOut*引数が null ポインターを指定できます。  
+ Output*Lpszpath*で返された合計バイト数 (null 終端バイトを除く)。 返される使用可能なバイト数が*Cbpathmax*以上の場合、 *lpszpath*内の翻訳 DLL パスは、 *cbpathmax*から null 終了文字を引いた値に切り捨てられます。 *Pcbpathout*引数は null ポインターにすることができます。  
   
  *pvOption*  
- [出力] の 32 ビットの変換オプション。  
+ [出力] 32-ビット変換オプション。  
   
 ## <a name="returns"></a>戻り値  
- 関数は、失敗した場合、またはユーザーがダイアログ ボックスをキャンセルした場合に FALSE である場合に TRUE を返します。  
+ 関数は、成功した場合は TRUE を返し、失敗した場合、またはユーザーがダイアログボックスをキャンセルした場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLGetTranslator** 、関連付けられている FALSE が返されます *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**します。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
+ **Sqlgettranslator**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーのエラー|エラーが発生する特定のインストーラーのエラーがなかった。|  
-|ODBC_ERROR_INVALID_BUFF_LEN|無効なバッファーの長さ|*CbNameMax*または*cbPathMax*引数が 0 未満でした。|  
-|ODBC_ERROR_INVALID_HWND|無効なウィンドウ ハンドル|*HwndParent*引数が無効または NULL。|  
-|ODBC_ERROR_INVALID_NAME|無効なドライバーまたは翻訳者名|*LpszName*引数が無効です。 レジストリに見つかりませんでした。|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|ドライバーまたはトランスレーター セットアップ ライブラリを読み込むことができません。|Translator ライブラリを読み込むことができませんでした。|  
-|ODBC_ERROR_INVALID_OPTION|無効なトランザクションのオプション|*PvOption*引数に無効な値が含まれています。|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|インストーラーは、メモリ不足のため、関数を実行できませんでした。|  
+|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
+|ODBC_ERROR_INVALID_BUFF_LEN|バッファーの長さが無効です|*CbNameMax*または*cbpathmax*引数が0以下でした。|  
+|ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent*引数が無効であるか、NULL でした。|  
+|ODBC_ERROR_INVALID_NAME|ドライバーまたは翻訳者名が無効です|*Lpszname*引数が無効でした。 レジストリに見つかりませんでした。|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|ドライバーまたはトランスレーターセットアップライブラリを読み込めませんでした|トランスレーターライブラリを読み込めませんでした。|  
+|ODBC_ERROR_INVALID_OPTION|無効なトランザクションオプション|*Pvoption*引数に無効な値が含まれています。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
- 場合*hwndParent*が null 場合、または*lpszName*、 *lpszPath*、または*pvOption* null ポインターの場合は、 **SQLGetTranslator** FALSE を返します。 それ以外の場合、次のダイアログ ボックスでインストールされている翻訳者の一覧が表示されます。  
+## <a name="comments"></a>説明  
+ *HwndParent*が null の場合、または*lpszname*、 *Lpszname*、または*Pvoption*が null ポインターの場合、 **sqlgettranslator**は FALSE を返します。 それ以外の場合は、次のダイアログボックスにインストールされている翻訳者の一覧が表示されます。  
   
- ![翻訳者 ダイアログ ボックスをオン](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
+ ![[トランスレーターの選択] ダイアログ ボックス](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
- 場合*lpszName* translator の有効な名前が含まれていますが選択されています。 それ以外の場合、\<いいえ Translator > を選択します。  
+ *Lpszname*に有効な変換者名が含まれている場合は、それが選択されます。 それ以外\<の場合は、[トランスレーター> が選択されていません。  
   
- ユーザーが選択した場合\<いいえ Translator > の内容*lpszName*、 *lpszPath*、および*pvOption*に影響はないです。 **SQLGetTranslator**設定*pcbNameOut*と*pcbPathOut* 0 と、TRUE を返します。  
+ ユーザーがトランスレーター> \<を選択しなかった場合、 *lpszname*、 *Lpszname*、および*pvoption*の内容には影響しません。 **Sqlgettranslator**は*pcbnameout*と*pcbnameout*を0に設定し、TRUE を返します。  
   
- ユーザーが、翻訳者が選択した場合**SQLGetTranslator**呼び出し**ConfigTranslator** translator のセットアップ DLL。 場合**ConfigTranslator** FALSE を返します**SQLGetTranslator**そのダイアログ ボックスに戻ります。 場合**ConfigTranslator** TRUE を返します**SQLGetTranslator**と共に選択した翻訳者名、パス、および変換オプションは、TRUE を返します。  
+ ユーザーがトランスレーターを選択すると、 **Sqlgettranslator**は translator のセットアップ DLL で**configtranslator**を呼び出します。 **Configtranslator**が FALSE を返す場合、 **sqlgettranslator**はそのダイアログボックスに戻ります。 **Configtranslator**によって true が返された場合、 **sqlgettranslator**は、選択した変換プログラムの名前、パス、および翻訳オプションと共に true を返します。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|変換を構成します。|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
-|翻訳の属性の取得|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|翻訳の属性を設定|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+|変換プログラムの構成|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
+|変換属性の取得|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|変換属性の設定|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

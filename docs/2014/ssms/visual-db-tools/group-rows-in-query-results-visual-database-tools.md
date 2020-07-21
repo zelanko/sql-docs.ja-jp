@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1817e2b91ba46b14e0884d48423a5a7c9f6e95f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63154813"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001374"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>クエリ結果内の行のグループ化 (Visual Database Tools)
   小計を作成したり、テーブルのサブセットの他の集計情報を表示したりする場合は、集計クエリを使用してグループを作成します。 各グループは、テーブルで同じ値を持つすべての行のデータを集計します。  
   
  たとえば、 `titles` テーブルの本の平均価格を出版社ごとに分類して表示するとします。 そのためには、クエリを出版社 (たとえば、 `pub_id`) でグループ化します。 クエリの出力結果は次のようになります。  
   
- ![クエリ結果: 出版社別にグループ化された平均価格](../../database-engine/media//dv3w9e1.gif "クエリ結果: 出版社別にグループ化された平均価格")  
+ ![クエリ結果: パブリッシャーごとにグループ化された平均価格](../../database-engine/media//dv3w9e1.gif "クエリ結果: パブリッシャーごとにグループ化された平均価格")  
   
  データをグループ化すると、次のように集計データまたはグループ化データだけを表示できます。  
   
@@ -48,7 +47,7 @@ GROUP BY pub_id, type
   
  出力結果は、次のようになります。  
   
- ![クエリ結果: 出版社と種類別にグループ化された価格](../../database-engine/media//dv3w9e2.gif "クエリ結果: 出版社と種類別にグループ化された価格")  
+ ![クエリ結果: パブリッシャーおよび種類ごとにグループ化された価格](../../database-engine/media//dv3w9e2.gif "クエリ結果: パブリッシャーおよび種類ごとにグループ化された価格")  
   
 ### <a name="to-group-rows"></a>列をグループ化するには  
   
@@ -72,7 +71,7 @@ GROUP BY pub_id, type
   
      集計する列に別名が自動的に割り当てられます。 この自動的に割り当てられた別名は、わかりやすい名前に変更することができます。 詳細については、「[列の別名の作成 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)」を参照してください。  
   
-     ![クエリ結果セットに列の別名を追加](../../database-engine/media//dv3w9e3.gif "クエリ結果セットに列の別名を追加")  
+     ![クエリ結果セットへの列の別名の追加](../../database-engine/media//dv3w9e3.gif "クエリ結果セットへの列の別名の追加")  
   
      **SQL** ペインのステートメントは、次のようになります。  
   

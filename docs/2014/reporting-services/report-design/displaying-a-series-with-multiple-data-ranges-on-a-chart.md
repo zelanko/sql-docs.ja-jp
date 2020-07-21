@@ -1,5 +1,5 @@
 ---
-title: グラフ (レポート ビルダーおよび SSRS) 上で複数のデータ範囲を持つ系列の表示 |Microsoft Docs
+title: グラフ上の複数のデータ範囲を持つ系列の表示 (レポートビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c226cc9603aa687616d54fa95ee82c7f2b86792
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106003"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>グラフ上で複数のデータ範囲を持つ系列の表示 (レポート ビルダーおよび SSRS)
@@ -58,14 +58,14 @@ ms.locfileid: "66106003"
   
 -   グラフの種類が極座標グラフ、レーダー グラフ、円グラフ、ドーナツ グラフ、じょうごグラフ、ピラミッド グラフ、または積み上げグラフである場合  
   
- スケール区切り付きのグラフについては、サンプル レポートに例が含まれています。 このサンプル レポートおよびその他のサンプル レポートをダウンロードする方法の詳細については、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][のレポート ビルダーおよびレポート デザイナーのサンプル レポートに関するページ](https://go.microsoft.com/fwlink/?LinkId=198283)を参照してください。  
+ スケール区切り付きのグラフについては、サンプル レポートに例が含まれています。 このサンプルレポートのダウンロードの詳細については、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]「[サンプルレポートのレポートビルダーとレポートデザイナー](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [グラフ上の複数の系列 (レポート ビルダーおよび SSRS)](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [グラフに対する 3D、傾斜、およびその他の効果 (レポート ビルダーおよび SSRS)](chart-effects-3d-bevel-and-other-report-builder.md)   
- [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [[軸のオプション] ([軸のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
+ [グラフ上の複数の系列 &#40;レポートビルダーと SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [グラフの書式設定 &#40;レポートビルダーと SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
+ [グラフに対する3D、傾斜、およびその他の効果 &#40;レポートビルダーと SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [グラフ &#40;レポートビルダーと SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [[軸のオプション] ([軸のプロパティ] ダイアログボックス) &#40;レポートビルダーと SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

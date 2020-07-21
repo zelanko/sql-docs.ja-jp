@@ -1,10 +1,9 @@
 ---
-title: ORDER BY 句での並べ替え (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: ORDER BY 句での並べ替え
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7d14acc5485bb3037f769784ee4daf012a5944e2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7bdc069c09322b15141d9a8cc6bf00b4926aad06
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263596"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254983"
 ---
 # <a name="sort-with-order-by-visual-database-tools"></a>ORDER BY 句での並べ替え (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +38,7 @@ ORDER BY 句を使用すると、返される行内のクエリの結果を、1 
 抽出条件ペインで操作を行うと、最後に行った操作に合わせてクエリの UNION 句が変化します。  
   
 > [!NOTE]  
-> 複数の列を使用して結果を並べ替えるときは、 **[並べ替え順序]** 列を使用して、列を検索する順序を互いの列を基準にして指定します。 詳細については、「**ソフト NUMA を使用するようにクエリ内の複数の列の並べ替え**に関するページを参照してください。  
+> 複数の列を使用して結果を並べ替えるときは、 **[並べ替え順序]** 列を使用して、列を検索する順序を互いの列を基準にして指定します。 詳細については、「 **クエリ内の複数の列を並べ替える方法**」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

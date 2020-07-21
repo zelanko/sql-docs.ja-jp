@@ -1,5 +1,6 @@
 ---
 title: affinity Input-Output mask サーバー構成オプション | Microsoft Docs
+description: affinity I/O mask オプションについて説明します。 これを使用すると、指定した CPU にディスク I/O がバインドされ、I/O を発行する SQL Server スレッドのパフォーマンスを向上させることができます。
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0f7af8a254bea06745c85cfdd0442b28eef876de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fa19cdc7db8b5966eb5ab89a5df8103e7f417244
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789852"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  マルチタスクを実行するため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows では、プロセス スレッドが別のプロセッサに移動される場合があります。 オペレーティング システムにとっては効率的であっても、この操作で各プロセッサのキャッシュに繰り返しデータが再読み込みされるため、システムの負荷が高くなり、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが低下する場合があります。 このような状況では、特定のスレッドにプロセッサを割り当てることで、プロセッサの再読み込みを回避してパフォーマンスを向上できます。このようなスレッドとプロセッサ間の関連付けを "プロセッサ関係 (processor affinity)" と言います。  
+  マルチタスクを実行するため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows では、プロセス スレッドが別のプロセッサに移動される場合があります。 オペレーティング システムにとっては効率的であっても、このアクティビティで各プロセッサのキャッシュに繰り返しデータが再読み込みされるため、システムの負荷が高くなり、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが低下する場合があります。 このような状況では、特定のスレッドにプロセッサを割り当てることで、プロセッサの再読み込みを回避してパフォーマンスを向上できます。このようなスレッドとプロセッサ間の関連付けを "プロセッサ関係 (processor affinity)" と言います。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **affinity mask** (別名 **CPU affinity mask**) と **affinity I/O mask**の 2 つの affinity mask オプションにより、プロセッサ関係をサポートします。 **affinity mask** オプションの詳細については、「 [affinity mask サーバー構成オプション](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)」を参照してください。 プロセッサが 33 から 64 個のサーバーに対して CPU および I/O affinity をサポートするには、 [affinity64 mask サーバー構成オプション](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) および [affinity64 I/O mask サーバー構成オプション](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md) がそれぞれ必要になります。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "68013217"
   
  affinity I/O パターンで 1 が設定されているビットは、対応する CPU で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク I/O 操作を実行できることを示します。また、0 が設定されているビットは、対応する CPU に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク I/O 操作のスケジュールを設定できないことを示します。 すべてのビットがゼロに設定されているか、 **affinity I/O mask** が指定されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク I/O は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスレッドを処理できるすべての CPU にスケジュール設定されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** オプションの設定は特殊な操作なので、特に必要な場合にのみこのオプションを使用することをお勧めします。 通常は、Windows 2000 または Windows 2003 の既定の関係 (affinity) で、最適なパフォーマンスが得られます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** オプションの設定は特殊な操作なので、必要な場合にのみ使用してください。 通常は、Windows 2000 または Windows 2003 の既定の関係 (affinity) で、最適なパフォーマンスが得られます。  
   
  **affinity I/O mask** オプションを指定する場合は、 **affinity mask** 構成オプションと共に使用する必要があります。 **affinity I/O mask** スイッチと **affinity mask** オプションの両方で同じ CPU を有効にしないようにしてください。 各 CPU に対応するビットは、次の 3 つの状態のうちのいずれかに設定します。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "68013217"
  **affinity I/O mask** オプションは拡張オプションです。 **sp_configure** システム ストアド プロシージャを使用して **affinity I/O mask** の設定を変更するには、**show advanced options** を 1 に設定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**affinity I/O mask[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプションを再構成した場合、** のインスタンスを再起動する必要があります。  
   
 > [!CAUTION]  
->  Windows オペレーティング システムでの CPU 関係の構成と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での関係マスクの構成は、同時に行わないようにしてください。 この 2 つの設定は、同じ効果をねらったものであり、これらの構成間に一貫性がない場合は、予期しない結果を招く可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 関係を構成する場合は、 **の** sp_configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションを使用する方法が最適です。  
+>  Windows オペレーティング システムでの CPU 関係の構成と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での関係マスクの構成は、同時に行わないようにしてください。 この 2 つの設定は、同じ効果をねらったものであり、これらの構成間に一貫性がない場合は、予期しない結果を招く可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 関係を構成する場合は、 **の** sp_configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションを使用する方法が最適です。  
   
 ## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   

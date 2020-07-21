@@ -1,6 +1,7 @@
 ---
-title: Oracle パブリッシャーの管理上の注意点 | Microsoft Docs
-ms.custom: ''
+title: Oracle パブリッシャーの管理上の注意点
+description: Oracle パブリッシャーが SQL Server サブスクライバーに変更をパブリッシュする場合の管理上の注意点です。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17e5d46a2737fe47d9ed704ff7e6ae7dc7d6f159
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8cde9d19b4f8b1c04290f6b36006b83aadc0e5ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020037"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900789"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle パブリッシャーの管理上の注意点
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Oracle データベース システムの管理者は、Oracle パブリッシャーを構成して、レプリケーションの変更追跡のメカニズムを設定した後でも、標準の Oracle データベース ユーティリティを使用したり、通常のシステム管理作業を実行したりすることができます。 しかし、特定の管理作業を実行してパブリッシュされたデータへの影響については注意する必要があります。  
   
  レプリケーション用にパブリッシュされた列の削除や変更、またはレプリケーション オブジェクトの削除や変更の場合を除いて、これらの注意点はスナップショット パブリケーションには当てはまりません。  

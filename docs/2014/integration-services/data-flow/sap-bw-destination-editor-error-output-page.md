@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 196d7f2bb3a227bd29ccc6fd5d427a59070d525a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fc348bdd4ddbd5380987994691ec462a248f7a4b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770918"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431319"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>[SAP BW 変換先エディター] ([エラー出力] ページ)
   **[SAP BW 変換先エディター]** の **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62770918"
   
 3.  **[SAP BW 変換先エディター]** で、 **[エラー出力]** をクリックして **[エラー出力]** ページを開きます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 > [!NOTE]  
 >  変換先を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
@@ -50,7 +49,7 @@ ms.locfileid: "62770918"
  **切り捨て**  
  このオプションは使用されません。  
   
- **[説明]**  
+ **説明**  
  操作の説明を表示します。  
   
  **[選択したセルに設定する値]**  

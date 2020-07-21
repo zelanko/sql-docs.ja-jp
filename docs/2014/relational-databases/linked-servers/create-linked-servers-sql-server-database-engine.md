@@ -16,35 +16,34 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62743499"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024974"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリンク サーバーを作成し、別の [!INCLUDE[tsql](../../includes/tsql-md.md)]からデータにアクセスする方法について説明します。 リンク サーバーを作成すると、複数のソースのデータを操作できます。 リンク サーバーは別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスである必要はありませんが、そのようにするのが一般的です。  
   
-##  <a name="Background"></a> 背景情報  
+##  <a name="background"></a><a name="Background"></a> 背景情報  
  リンク サーバーを使用すると、OLE DB データ ソースに対する異種の分散クエリの利用が可能になります。 リンク サーバーを作成すると、このサーバーに対して分散クエリを実行でき、クエリを使用して複数のデータ ソースのテーブルを結合できます。 リンク サーバーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスとして定義した場合は、リモート ストアド プロシージャを実行できます。  
   
  リンク サーバーの機能と必須の引数は大きく異なることがあります。 このトピックでは、一般的な例を紹介しますが、すべてのオプションについて説明しているわけではありません。 詳細については、「 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)からデータにアクセスする方法について説明します。  
   
-##  <a name="Security"></a> セキュリティ  
+##  <a name="security"></a><a name="Security"></a> セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
- 使用する場合[!INCLUDE[tsql](../../includes/tsql-md.md)]、ステートメントが必要です`ALTER ANY LINKED SERVER`メンバーシップまたはサーバーに対する権限、 **setupadmin**固定サーバー ロール。 使用する場合[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]必要`CONTROL SERVER`権限またはメンバーシップ、 **sysadmin**固定サーバー ロール。  
+ ステートメントを使用する場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] `ALTER ANY LINKED SERVER` は、サーバーに対する権限、または**setupadmin**固定サーバーロールのメンバーシップが必要です。 を使用する場合 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] `CONTROL SERVER` は、 **sysadmin**固定サーバーロールの権限またはメンバーシップが必要です。  
   
-##  <a name="Procedures"></a> リンク サーバーを作成する方法  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> リンク サーバーを作成する方法  
  次のいずれかを使用できます。  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>SQL Server Management Studio を使用して別の SQL Server インスタンスへのリンク サーバーを作成するには  
   
@@ -70,10 +69,10 @@ ms.locfileid: "62743499"
      **[プロバイダー文字列]**  
      データ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) を入力します。 有効なプロバイダー文字列の例については、「 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)からデータにアクセスする方法について説明します。  
   
-     **場所**  
+     **Location**  
      OLE DB プロバイダーで解釈されるデータベースの場所を入力します。  
   
-     **Catalog**  
+     **カタログ**  
      OLE DB プロバイダーへの接続を作成するときに使用するカタログの名前を入力します。  
   
      リンク サーバーに接続できるかどうかをテストするには、オブジェクト エクスプローラーでリンク サーバーを右クリックし、 **[接続テスト]** をクリックします。  
@@ -120,11 +119,11 @@ ms.locfileid: "62743499"
 5.  必要に応じてサーバー オプションを表示または指定する場合は、 **[サーバー オプション]**  ページをクリックします。  
   
      **[照合順序互換]**  
-     リンク サーバーに対する分散クエリの実行に影響を与えます。 このオプションを true に設定した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、文字セットと照合順序 (並べ替え順) に関して、リンク サーバー内のすべての文字がローカル サーバーと互換性があると見なします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からプロバイダーに文字を含む列の比較を送信できるようになります。 このオプションが設定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では文字列を含む列の比較の評価は常にローカルで行われます。  
+     リンク サーバーに対する分散クエリの実行に影響を与えます。 このオプションを true に設定した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、文字セットと照合順序 (並べ替え順) に関して、リンク サーバー内のすべての文字がローカル サーバーと互換性があると見なします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からプロバイダーに文字を含む列の比較を送信できるようになります。 このオプションが設定されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では文字列を含む列の比較の評価は常にローカルで行われます。  
   
      このオプションは、リンク サーバーに対応するデータ ソースがローカル サーバーと同じ文字セットと並べ替え順を持っていることが確認できている場合のみ設定します。  
   
-     **[データ アクセス]**  
+     **データアクセス**  
      分散クエリ アクセスに対してリンク サーバーを有効または無効にします。  
   
      **RPC**  
@@ -140,19 +139,19 @@ ms.locfileid: "62743499"
   
      false の場合、分散クエリは常にローカル サーバーの既定の照合順序を使用します。[照合順序名] とリモート列の照合順序は無視されます。 既定値は false です。  
   
-     **[照合順序名]**  
+     **照合順序名**  
      [リモート照合順序を使用] が true、かつ、データ ソースが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースでない場合に、リモート データ ソースが使用する照合順序の名前を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がサポートしている照合順序名のいずれかを指定する必要があります。  
   
      このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外の OLE DB データ ソースにアクセスし、その照合順序が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序のいずれかと一致する場合に使用します。  
   
      リンク サーバーは、そのサーバー内のすべての列で使用される単一の照合順序をサポートしている必要があります。 リンク サーバーが、単一のデータ ソース内で複数の照合順序をサポートしている、またはリンク サーバーの照合順序が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序のいずれかと一致するかどうかが判断できない場合は、このオプションを設定しないでください。  
   
-     **[接続タイムアウト]**  
+     **接続のタイムアウト**  
      リンク サーバーに接続する場合のタイムアウト値です (秒単位)。  
   
      0 の場合は、 **sp_configure** の [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) オプションの既定値が使用されます。  
   
-     **[クエリ タイムアウト]**  
+     **クエリのタイムアウト**  
      リンク サーバーに対するクエリのタイムアウト値です (秒単位)。  
   
      0 の場合は、 **sp_configure** の [remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) オプションの既定値が使用されます。  
@@ -160,15 +159,15 @@ ms.locfileid: "62743499"
      **[分散トランザクションのプロモーションを有効化]**  
      このオプションを使用して、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションにより、サーバー間のプロシージャのアクションを保護します。 このオプションが TRUE の場合、リモート ストアド プロシージャを呼び出すと分散トランザクションが開始され、トランザクションは MS DTC に参加します。 詳細については、「 [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)からデータにアクセスする方法について説明します。  
   
-6.  クリックして **OK**です。  
+6.  **[OK]** をクリックします。  
   
 ##### <a name="to-view-the-provider-options"></a>プロバイダー オプションを表示するには  
   
--   プロバイダーを使用可能にするオプションを表示するには、 **プロバイダー オプション** ページを使用します。  
+-   プロバイダーを使用可能にするオプションを表示するには、 **プロバイダー オプション]** ページを使用します。  
   
      すべてのプロバイダーで同じオプションを使用できるとは限りません。 たとえば、インデックスを利用できるデータ型と利用できないデータ型があります。 このダイアログ ボックスを使用することで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がプロバイダーの機能を認識できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は一般的なデータ プロバイダーをインストールしますが、データを提供する製品が変わると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされたプロバイダーが最新機能をすべてサポートしているとは限りません。 データを提供する製品の機能の詳細については、その製品のマニュアルを参照してください。  
   
-     **[動的パラメーター]**  
+     **動的パラメーター**  
      プロバイダーが、パラメーター化クエリに "?" パラメーター マーカー構文を使用できることを示します。 このオプションは、プロバイダーが **ICommandWithParameters** インターフェイスをサポートしており、パラメーター化マーカーとして "?" をサポートしている場合にのみ設定してください。 このオプションを設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はプロバイダーに対してパラメーター化クエリを実行できます。 プロバイダーに対してパラメーター化クエリを実行できることにより、特定のクエリではパフォーマンスが向上します。  
   
      **[入れ子になったクエリ]**  
@@ -192,7 +191,7 @@ ms.locfileid: "62743499"
      **['Like' 演算子をサポートします]**  
      プロバイダーが LIKE キーワードを使用したクエリをサポートしていることを示します。  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してリンク サーバーを作成するには、[sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) ステートメント、[CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql) ステートメント、および [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql) ステートメントを使用します。  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Transact-SQL を使用して別の SQL Server インスタンスへのリンク サーバーを作成するには  
@@ -220,7 +219,7 @@ ms.locfileid: "62743499"
   
     ```  
   
-##  <a name="FollowUp"></a>補足情報: リンク サーバーの作成後に行う手順  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a>補足情報: リンクサーバーの作成後に実行する手順  
   
 #### <a name="to-test-the-linked-server"></a>リンク サーバーをテストするには  
   
@@ -246,9 +245,9 @@ ms.locfileid: "62743499"
   
      リンク サーバー ログインに対して NULL が返される場合は、リンク サーバー上にログインが存在しないことを示します。 リンク サーバーが別のセキュリティ コンテキストを渡すように構成されている場合、またはリンク サーバーが匿名接続を許可する場合を除き、これらのログインではリンク サーバーを使用できません。  
   
-## <a name="see-also"></a>関連項目  
- [リンク サーバー &#40;データベース エンジン&#41;](linked-servers-database-engine.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
+## <a name="see-also"></a>参照  
+ [リンクサーバー &#40;データベースエンジン&#41;](linked-servers-database-engine.md)   
+ [sp_addlinkedserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  
   
   

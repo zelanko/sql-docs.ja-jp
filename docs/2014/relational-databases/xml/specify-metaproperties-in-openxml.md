@@ -13,15 +13,14 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c52d1162aa495deff8a0fde314fdcde0735d9c2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62679503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046507"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
   XML ドキュメントに含まれるメタプロパティ属性は、XML アイテム (要素、属性、その他の DOM ノードなど) のプロパティを示す属性です。 これらの属性は、物理的に XML ドキュメントのテキスト内に存在するものではありません。 ただし、OPENXML では、すべての XML アイテムに、これらのメタプロパティが提供されます。 これらのメタプロパティを使用すると、XML ノードの情報 (ローカルの位置や名前空間の情報など) を抽出できます。 これらの情報からは、テキストで表現されている情報よりも詳細な情報を得られます。  
@@ -55,7 +54,7 @@ ms.locfileid: "62679503"
 |**\@mp:parentnamespacerui**|**../\@mp:namespaceuri** と対応します。|  
 |**\@mp:parentprefix**|**../\@mp:prefix** と対応します。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に、OPENXML を使用してさまざまな行セット ビューを作成する方法の例を示します。  
   
 ### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. OPENXML 行セット列のメタプロパティへのマップ  
@@ -164,7 +163,7 @@ EXEC sp_xml_removedocument @idoc
   
  SELECT ステートメントは OPENXML で提供される行セットを返します。  
   
- この例では、OPENXML によって生成された行セット内の列 (**ParentLocalName**) に対して **\@mp:parentlocalname** メタプロパティが設定されます。 その結果、この列には親要素のローカル名が含まれます。  
+ この例では、OPENXML によって生成された行セット内の列 (**ParentLocalName\@) に対して** **mp:parentlocalname** メタプロパティが設定されます。 その結果、この列には親要素のローカル名が含まれます。  
   
  行セットには他に 2 つの列 ( **parent** と **comment**) が指定されています。 **parent** 列は **\@mp:parentid** にマップされ、この列に、要素の親要素の XML ID が含まれることを示します。 comment 列は、 **\@mp:xmltext** メタプロパティにマップすることによって、オーバーフロー列として識別されます。  
   

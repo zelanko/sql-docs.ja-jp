@@ -1,5 +1,5 @@
 ---
-title: getTablePrivileges メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getTablePrivileges メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d0fe3b01fd02bf48fb5f38707530e3b3344133e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979221"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges メソッド (SQLServerDatabaseMetaData)
@@ -55,12 +55,12 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getTablePrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスの getTablePrivileges メソッドで規定されています。  
   
  getTablePrivileges メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|カタログ名。|  
 |TABLE_SCHEM|**String**|テーブル スキーマ名です。|  

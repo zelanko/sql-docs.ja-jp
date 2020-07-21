@@ -1,5 +1,6 @@
 ---
 title: サーバーのプロパティ ([セキュリティ] ページ) | Microsoft Docs
+description: SQL Server でのサーバーのセキュリティ設定について理解します。 サーバー認証、プロキシ アカウント、その他の機能を制御するオプションについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e864eced90a190dc7e7c0f204691ed02b9a2cff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031427"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724000"
 ---
 # <a name="server-properties---security-page"></a>[サーバーのプロパティ] - [セキュリティ] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、サーバー セキュリティ オプションを表示したり変更したりできます。  
   
 ## <a name="server-authentication"></a>[サーバー認証]  
@@ -65,7 +66,7 @@ ms.locfileid: "68031427"
  **パスワード**  
  プロキシ アカウントのパスワードを指定します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[C2 監査トレースを有効にする]**  
  ステートメントおよびオブジェクトへのアクセスの試行をすべて監査し、\MSSQL\Data ディレクトリ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスの場合)、または \MSSQL$*instancename*\Data ディレクトリ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の名前付きインスタンスの場合) のファイルに記録します。 詳細については、「 [c2 audit mode サーバー構成オプション](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)」を参照してください。  
   

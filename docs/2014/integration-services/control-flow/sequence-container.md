@@ -14,20 +14,19 @@ helpviewer_keywords:
 - containers [Integration Services], Sequence
 - subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec92f58f4dcd44fc39bfc34968a7883cb9c4cb4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9769eddb7c10492f867395dfc1fa69b6b1260060
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62830122"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432699"
 ---
 # <a name="sequence-container"></a>シーケンス コンテナー
   シーケンス コンテナーは、パッケージ制御フローのサブセットである制御フローを定義します。 シーケンス コンテナーは、パッケージを複数の個別の制御フローにグループ化します。各制御フローには、パッケージ制御フロー全体の中で実行される、1 つ以上のタスクおよびコンテナーが含まれます。  
   
- シーケンス コンテナーには、他のコンテナーの他に、複数のタスクを含めることができます。 シーケンス コンテナーにタスクとコンテナーを追加する手順は、タスクとコンテナーをドラッグする先がパッケージ コンテナーではなくシーケンス コンテナーであること以外は、パッケージに追加する手順と同様です。 シーケンス コンテナーに複数のタスクまたはコンテナーが含まれる場合、パッケージの場合と同様に、優先順位制約を使用してそれらを連結できます。 優先順位制約の詳細については、「 [優先順位制約](precedence-constraints.md)」を参照してください。  
+ シーケンス コンテナーには、他のコンテナーの他に、複数のタスクを含めることができます。 シーケンス コンテナーにタスクとコンテナーを追加する手順は、タスクとコンテナーをドラッグする先がパッケージ コンテナーではなくシーケンス コンテナーであること以外は、パッケージに追加する手順と同様です。 シーケンス コンテナーに複数のタスクまたはコンテナーが含まれる場合、パッケージの場合と同様に、優先順位制約を使用してそれらを連結できます。 詳細については、「 [優先順位制約](precedence-constraints.md)」を参照してください。  
   
  シーケンス コンテナーを使用すると、次のような多くの利点があります。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62830122"
   
 -   シーケンス コンテナー上でトランザクションの属性を設定し、パッケージ制御フローのサブセットのトランザクションを定義します。 この方法により、より細かなレベルでトランザクションを管理できます。  
   
-     たとえば、シーケンス コンテナーに 2 つの関連タスクが含まれ、1 つはテーブル内のデータを削除するタスクで、もう 1 つはテーブルにデータを挿入するタスクの場合、挿入アクションが失敗した場合に削除アクションをロールバックするようにトランザクションを構成できます。 詳細については、「 [Integration Services のトランザクション](../integration-services-transactions.md)」を参照してください。  
+     たとえば、シーケンス コンテナーに 2 つの関連タスクが含まれ、1 つはテーブル内のデータを削除するタスクで、もう 1 つはテーブルにデータを挿入するタスクの場合、挿入アクションが失敗した場合に削除アクションをロールバックするようにトランザクションを構成できます。 詳細については、「 [Integration Services のトランザクション](../integration-services-transactions.md)」をご覧ください。  
   
 ## <a name="configuration-of-the-sequence-container"></a>シーケンス コンテナーの構成  
  シーケンス コンテナーにはカスタム ユーザー インターフェイスはなく、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ウィンドウ、またはプログラムによってのみ構成できます。  

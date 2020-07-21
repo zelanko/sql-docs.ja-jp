@@ -1,7 +1,7 @@
 ---
 title: SQL データの検出と分類 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 08a02ed004c5edd7b849b0c5ae1a43f21da031ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 722cf9bf616d1e98beb7b9cbd1dc0bbdd89d8a4b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956742"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69028135"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 
@@ -30,7 +30,7 @@ ms.locfileid: "67956742"
 
 ## <a name="requirements"></a>必要条件  
 
-このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスの設定方法の詳細については、「 [JDBC ドライバーの使用](../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。
+このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスを設定する方法の詳細については、「[JDBC ドライバーの使用](../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。
 
 ```java
 import java.sql.Connection;
@@ -184,4 +184,4 @@ public class DataDiscoveryAndClassification {
 
 ## <a name="see-also"></a>参照
 
-[サンプル JDBC Driver アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[サンプル JDBC ドライバー アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  

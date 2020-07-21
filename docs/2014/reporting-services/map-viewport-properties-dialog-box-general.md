@@ -1,5 +1,5 @@
 ---
-title: マップ ビューポートのプロパティ ダイアログ ボックスの 全般 |Microsoft Docs
+title: '[全般] ([マップビューポートのプロパティ] ダイアログボックス)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ec0aaa051ba317cd05a9784c80fb997f5fa19e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108242"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>[全般] ([マップ ビューポートのプロパティ] ダイアログ ボックス)
   **[マップ ビューポートのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、座標系、投影法、および境界に関するオプションを変更できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **座標系**  
  マップ データで使用する座標系の種類を指定します。  
   
@@ -54,22 +54,22 @@ ms.locfileid: "66108242"
   
 -   **[Bonne]** 地図帳でよく見かけるような世界地図を表示するには、このオプションを指定します。  
   
- **改ページのオプション**  
+ **[改ページのオプション]**  
  コンテンツをレポート ページにどのように収めるかを指定するオプションを選択します。  
   
- **境界のオプション**  
+ **[境界オプション]**  
  座標の下限および上限を指定して、レポートに表示するマップを制御します。  
   
- **X の最小値**  
+ **[X の最小値]**  
  最小の X 値です。 **[平面]** に対してのみ使用できます。  
   
- **最大の X**  
+ **[X の最大値]**  
  最大の X 値です。 **[平面]** に対してのみ使用できます。  
   
- **Y の最小値**  
+ **[Y の最小値]**  
  最小の Y 値です。 **[平面]** に対してのみ使用できます。  
   
- **Y の最大値**  
+ **[Y の最大値]**  
  最大の Y 値です。 **[平面]** に対してのみ使用できます。  
   
  **[最小経度]**  
@@ -85,6 +85,6 @@ ms.locfileid: "66108242"
  最大緯度です。 **[地理]** に対してのみ使用できます。  
   
 ## <a name="see-also"></a>参照  
- [マップ (レポート ビルダーおよび SSRS)](report-design/maps-report-builder-and-ssrs.md)  
+ [マップ &#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

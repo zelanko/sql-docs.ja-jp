@@ -1,5 +1,5 @@
 ---
-title: setMultiSubnetFailover メソッド (SQLServerDataSource) |Microsoft Docs
+title: setMultiSubnetFailover メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7ffd282d-c2f6-4d1b-a7a6-859d18b388aa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5d8cbb5d941e9d5bd6476b0baa91d5891d6297d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2b24c4bb7cda0bc83a9c3f28591bffeb6226c569
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973969"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925720"
 ---
 # <a name="setmultisubnetfailover-method-sqlserverdatasource"></a>setMultiSubnetFailover メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  **MultiSubnetFailover** connection プロパティの値を設定します。  
+  **multiSubnetFailover** 接続プロパティの値が設定されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,10 +31,10 @@ public void setMultiSubnetFailover(boolean multiSubnetFailover);
 #### <a name="parameters"></a>パラメーター  
  *multiSubnetFailover*  
   
- **MultiSubnetFailover** connection プロパティの新しい値です。  
+ **multiSubnetFailover** 接続プロパティの新しい値。  
   
-## <a name="remarks"></a>Remarks  
- **MultiSubnetFailover**接続プロパティの詳細については、「[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。  
+## <a name="remarks"></a>解説  
+ **multiSubnetFailover** 接続プロパティの詳細については、「[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource.getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)   

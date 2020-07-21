@@ -1,21 +1,21 @@
 ---
-title: ラッパーとインターフェイス |Microsoft Docs
+title: ラッパーとインターフェイス | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7be51a27364107afe6b79ebcce5de109909b1836
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dc8a8277147dd2dc136379471f6a4f7df789c3ee
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916060"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923936"
 ---
 # <a name="wrappers-and-interfaces"></a>ラッパーとインターフェイス
 
@@ -27,9 +27,9 @@ ms.locfileid: "67916060"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、java.sql.Wrapper インターフェイスをサポートします。 このインターフェイスには、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能に対し、プロキシ インターフェイス経由でアクセスするためのメカニズムが備わっています。
 
-**IsWrapperFor** インターフェイスでは、2つのメソッドが定義されています。これは、 と**ラップ**解除です。 **isWrapperFor** は、指定された入力オブジェクトに、このインターフェイスが実装されているかどうかをチェックするメソッドです。 **unwrap** メソッドは、このインターフェイスを実装するオブジェクトを返します。このメソッドから返されたオブジェクトを使用することで、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 固有のメソッドにアクセスできます。
+java.sql.Wrapper インターフェイスには、**isWrapperFor** と **unwrap** の 2 つのメソッドが定義されています。 **isWrapperFor** は、指定された入力オブジェクトに、このインターフェイスが実装されているかどうかをチェックするメソッドです。 **unwrap** メソッドは、このインターフェイスを実装するオブジェクトを返します。このメソッドから返されたオブジェクトを使用することで、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 固有のメソッドにアクセスできます。
 
-**isWrapperFor**メソッドと**ラップ**解除メソッドは次のように公開されます。
+**isWrapperFor** メソッドと **unwrap** メソッドは、次のとおり公開されています。
 
 - [isWrapperFor メソッド &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67916060"
 
 - [isWrapperFor メソッド &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
-- [SQLServerDataSource メソッド&#40;のラップ解除&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+- [unwrap メソッド &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
 - [isWrapperFor メソッド &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
@@ -49,11 +49,11 @@ ms.locfileid: "67916060"
 
 - [isWrapperFor メソッド &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
 
-- [SQLServerStatement メソッド&#40;のラップ解除&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+- [unwrap メソッド &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
 
 - [isWrapperFor メソッド &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
 
-- [SQLServerXADataSource メソッド&#40;のラップ解除&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [unwrap メソッド &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
 ## <a name="interfaces"></a>インターフェイス
 
@@ -77,7 +77,7 @@ ms.locfileid: "67916060"
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>[説明]
+### <a name="description"></a>説明
 
 このサンプルは、DataSource オブジェクトから [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 固有の関数にアクセスする方法を示しています。 この DataSource クラスはアプリケーション サーバーによってラップされた可能性があります。 JDBC Driver 固有の関数または定数にアクセスするには、データソースを ISQLServerDataSource インターフェイスにアンラップし、このインターフェイスで宣言された関数を使用できます。
 

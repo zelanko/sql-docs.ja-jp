@@ -18,18 +18,18 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 569e02b434d3e2f8d919b30fb91dc922f0588a5c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135921"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005929"
 ---
-# <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、結果セット パーティション内の各行の順位値をギャップなしで返します。 特定の行の順位は、その行より 1 つ前の順位値に 1 を加算したものになります。  
   
@@ -51,14 +51,14 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 2 つ以上の行で同じパーティションの順位値が同じになる場合、それぞれの行に同じ順位が与えられます。 たとえば、上位 2 人の販売員の SalesYTD 値が同じ場合は、両方に順位値 1 が与えられます。 SalesYTD が次に高い販売員には、順位値 2 が与えられます。 これは、対象となる行より 1 つ前の順位値に 1 を加算したものになります。 したがって、`DENSE_RANK` 関数からは、ギャップのない、連続する順位値が常に返されます。  
   
 クエリ全体に使用される並べ替え順序によって、結果セットにおける行の順序が決まります。 つまり、順位が 1 位である行が必ずしもパーティションの先頭の行とは限りません。  
   
 `DENSE_RANK` は非決定的です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. パーティション内の行に順位を付ける  
 この例では、指定された在庫場所の在庫内の製品を数量に応じて順位付けしています。 `DENSE_RANK` は `LocationID` で結果セットをパーティション分割し、`Quantity` で論理的に結果セットを並べ替えます。 494 と 495 の製品が同じ数量であることを確認します。 いずれの数量値も同じであるため、両方に順位値 1 が与えられます。  
@@ -172,7 +172,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 |Ranjit|Varkey Chudukatil|13|6|2|4|3827950.238|98055| 
 
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D:パーティション内の行に順位を付ける  
 この例では、売上合計に応じて販売区域ごとに販売担当者をランク付けします。 `DENSE_RANK` は `SalesTerritoryGroup` で行セットをパーティション分割し、`SalesAmountQuota` で結果セットを並べ替えます。  

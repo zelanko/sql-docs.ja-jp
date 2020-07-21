@@ -1,5 +1,5 @@
 ---
-title: ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: ゲージのポインターの書式設定 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 541cc806804dc2095d7a33c33c449d6cf8768608
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575632"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079769"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのゲージ ポインターは、ゲージの現在の値を示します。   
@@ -29,29 +29,29 @@ ms.locfileid: "65575632"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="HowPointer"></a> ポインターとデータの接続に関する情報  
+##  <a name="how-the-pointer-is-connected-to-data"></a><a name="HowPointer"></a> ポインターとデータの接続に関する情報  
  既定では、追加されたゲージにはフィールドが関連付けられていないポインターが 1 つ含まれています。 これは、空のポインターと呼ばれます。 フィールドをデータ ペインに追加するまで、ポインターには 0 (ゼロ) が表示されます。 データ ペインにフィールドを追加すると、ポインターはそのフィールドに接続されます。 データ ペインからフィールドを削除すると、そのフィールドに関連付けられたポインターも削除されます。  
   
  データが追加された後、ポインターを右クリックすると、 **[ポインターをクリア]** および **[ポインターの削除]** オプションが有効になります。 **[ポインター値のクリア]** オプションを使用すると、ゲージに付加されているフィールドが削除されますが、ポインターはゲージに表示されたままになります。 **[ポインターの削除]** オプションを使用すると、ゲージからフィールドが削除され、ポインターも非表示になります。 フィールドをゲージに再び追加すると、既定のポインターが再表示されます。 ポインターの **Hidden** プロパティを **True**に設定すると、デザイン画面でポインターは表示されますが、実行時に非表示になります。  
   
-##  <a name="DisplayingMultiple"></a> ゲージでの複数のポインターの表示  
+##  <a name="displaying-multiple-pointers-on-the-gauge"></a><a name="DisplayingMultiple"></a> ゲージでの複数のポインターの表示  
  複数のポインターをゲージに追加して、同じスケール上の複数の値を示すことができます。 これは、小さい値と大きい値を同時に表示する場合に便利です。 同じスケールのゲージに複数のポインターを指定するには、ゲージ内を右クリックし、ショートカット メニューの **[ポインターの追加]** をクリックします。 または、ゲージ内を右クリックし、 **[スケールの追加]** をクリックしてスケールを追加し、 続いて新しいポインターを追加できます。このポインターは、最後のスケールに自動的に関連付けられます。  
   
  ポインターが重なる場合、ポインターの描画順序はゲージにポインターが追加された順序です。 データ ペインでフィールドの順序を変更して、ポインターの描画順序を変更することはできません。 複数のポインターの描画順序を変更するには、プロパティ ペインを開き、 **[ポインター (…)]** をクリックします。次に、ポインター コレクションでポインターの順序を変更します。  
   
-##  <a name="SettingGradients"></a> ニードル キャップのグラデーションの設定  
+##  <a name="setting-gradients-on-a-needle-cap"></a><a name="SettingGradients"></a> ニードル キャップのグラデーションの設定  
  放射状ゲージに限り、ポインターの上部または下部に描画できるニードル キャップを指定できます。 すべてのニードル キャップ スタイルは、変更できない組み込みのグラデーションを使用して描画されます。 ただし、例外として **RoundedDark** スタイルではグラデーションの色とスタイルを指定できます。  
   
-##  <a name="SettingSnappingInterval"></a> スナップ間隔の設定  
+##  <a name="setting-a-snapping-interval"></a><a name="SettingSnappingInterval"></a> スナップ間隔の設定  
  スナップ間隔とは、値を丸める際の倍数を定義するものです。 既定では、ゲージは、データ ペインで指定したフィールドの正確な値を指し示します。 ただし必要であれば、事前に設定した間隔にポインターが合うように、正確な値を切り上げたり、切り捨てたりすることができます。 たとえば、ゲージの値が 34.2 であるとき、スナップ間隔として 5 を指定した場合、ゲージ ポインターが指し示す値は 35 になります。 ゲージの値が 31.2 であるとき、スナップ間隔として 5 を指定した場合、ゲージ ポインターが指し示す値は 30 になります。 詳細については、「 [ゲージへのスナップ間隔の設定 (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)」を参照してください。  
   
-##  <a name="SpecifyingImage"></a> 画像を放射状ゲージのポインターとして指定する  
+##  <a name="specifying-an-image-as-a-pointer-on-a-radial-gauge"></a><a name="SpecifyingImage"></a> 画像を放射状ゲージのポインターとして指定する  
  ポインターには、組み込みの一連のポインター スタイルの他に、画像を指定できます。 既存の針ポインター スタイルを画像で置き換えた場合、最も効果的です。 画像はポインターに重ね合わせられますが、ポインター機能はすべて適用可能です。 ポインターに画像が使用されている場合、色とグラデーションのオプションは適用されません。  
   
- ポインターの画像が不規則な形状の場合は、ゲージに表示しない画像部分を非表示にするために透明色を定義する必要があります。 透明色を定義すると、ゲージで画像が既存のポインターの上に配置され、ポインターの形状だけ表示されるように画像がトリミングされます。 ゲージでは、ポインターのサイズに合わせて画像が再スケールされます。 ポインターに画像を指定すると、その後、ゲージの上部に追加されるポインターは、画像の下に描画されます。 したがって、ゲージに複数のポインターがある場合は、ポインターに画像を指定しないことをお勧めします。 詳細については、「 [画像をゲージのポインターとして指定する (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)」を参照してください。  
+ ポインターの画像が不規則な形状の場合は、ゲージに表示しない画像部分を非表示にするために透明色を定義する必要があります。 透明色を定義すると、ゲージで画像が既存のポインターの上に配置され、ポインターの形状だけ表示されるように画像がトリミングされます。 ゲージでは、ポインターのサイズに合わせて画像が再スケールされます。 ポインターに画像を指定すると、その後、ゲージの上部に追加されるポインターは、画像の下に描画されます。 したがって、ゲージに複数のポインターがある場合は、ポインターに画像を指定しないことをお勧めします。 詳細については、「[画像をゲージのポインターとして指定する (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [ゲージのスケールの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client を使用して Azure SQL Database に接続する |Microsoft Docs
+title: SQL Server Native Client | を使用した Azure SQL Database への接続Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,18 +7,17 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5599bbb0aa1736ba5c88904ae5152a0d73856dc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 177c655f97e32f2044460e87c6cd775cdf8fcde9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213791"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017644"
 ---
-# <a name="connecting-to-a-azure-sql-database-using-sql-server-native-client"></a>SQL Server Native Client を使用した Azure SQL データベースへの接続
-  接続する方法を示すサンプルを[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]を使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client を参照してください[開発。操作方法に関するトピック (Windows Azure SQL データベース)](https://msdn.microsoft.com/library/ee621787.aspx)します。  
+# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>SQL Server Native Client を使用した Azure SQL データベースへの接続
+  Native Client を使用してに接続する方法を示すサンプルについ [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「[開発: 操作方法に関するトピック (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx)」を参照してください。  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>SQL データベースに接続するときの既知の問題  
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する場合、次のような既知の問題があります。  

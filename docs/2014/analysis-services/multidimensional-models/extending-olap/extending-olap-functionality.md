@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 49a17ff3-94e9-4969-84fc-37d49e63933b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2d4d08795351b93615954ad64e004482745f768d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d64d1ac46e2571aa6f8065a8ea42e4cc43aa589e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62725956"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546724"
 ---
 # <a name="extending-olap-functionality"></a>OLAP 機能の拡張
   プログラマは、複数のデータベース アプリケーションで使用および用途変更する必要がある機能を提供するアセンブリ、パーソナル化拡張機能、およびストアド プロシージャを記述して Analysis Services を拡張できます。 アセンブリを使用すると、新しいプロシージャや機能を MDX 言語に追加したり、パーソナル化アドインを使用したりして、多次元モデルの機能を拡張できます。  

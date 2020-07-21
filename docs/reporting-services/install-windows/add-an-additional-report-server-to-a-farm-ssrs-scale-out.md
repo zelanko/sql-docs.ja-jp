@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63225698"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>ファームへのレポート サーバーの追加 (SSRS スケールアウト)
@@ -27,10 +27,10 @@ ms.locfileid: "63225698"
   
  ネイティブ モードのレポート サーバーをスケールアウトする方法の詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
   
-##  <a name="bkmk_loadbalancing"></a> 負荷分散  
+##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> 負荷分散  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの負荷分散は、カスタムまたはサードパーティの負荷分散ソリューションが環境に含まれていない限り、SharePoint によって自動的に管理されます。 SharePoint の既定の負荷分散動作では、各 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーション サービスは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスを開始したすべてのアプリケーション サーバー間で分散されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスがインストールされていて開始されていることを確認するには、SharePoint サーバーの全体管理で **[サーバーのサービスの管理]** をクリックします。  
   
-##  <a name="bkmk_prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> 前提条件  
   
 -   SQL Server セットアップを実行するには、ローカル管理者である必要があります。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63225698"
   
 -   新しいサーバーのバージョンは、現在のファーム サーバーが実行されているインストール済みの SharePoint のバージョンと同じである必要があります。 たとえば、SharePoint 2013 Service Pack 1 (SP1) が既にファームにインストールされている場合は、新しいサーバーをファームに参加させる前に、新しいサーバーにも SP1 をインストールする必要があります。  
   
-##  <a name="bkmk_steps"></a> 手順  
+##  <a name="steps"></a><a name="bkmk_steps"></a> 手順  
  このトピックの手順では、SharePoint ファームの管理者がサーバーをインストールして構成すると想定しています。 この図は標準的な 3 層環境を示しています。次に、図の番号付き項目の説明を示します。  
   
 -   (1) 複数の Web フロントエンド (WFE) サーバー。 WFE サーバーには、SharePoint 2016 用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインが必要です。  
@@ -53,7 +53,7 @@ ms.locfileid: "63225698"
   
 -   (4) ソフトウェアまたはハードウェアのネットワーク負荷分散ソリューション (NLB) を表します。  
   
- ![Reporting Services アプリケーション サーバーを追加する](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Reporting Services アプリケーション サーバーを追加する")  
+ ![Reporting Services アプリケーション サーバーの追加](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Reporting Services アプリケーション サーバーの追加")  
   
  次の手順では、管理者がサーバーをインストールして構成すると想定しています。 サーバーは、新しいアプリケーション サーバーとしてファームにセットアップされ、Web フロントエンド (WFE) としては使用されません。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63225698"
 |Reporting Services SharePoint モードをインストールして構成します。|SQL Server のインストールを実行します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのインストールの詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」を参照してください。<br /><br /> サーバーをアプリケーション サーバーとしてのみ使用し、WFE として使用しない場合は、 **[SharePoint 製品用 Reporting Services アドイン]** を選択する必要はありません。<br /><br /> 1) **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]** を選択します。<br /><br /> 2) **[機能の選択]** ページで、 **[Reporting Services - SharePoint]** を選択します。<br /><br /> 3) **[Reporting Services 構成]**  ページで、 **[Reporting Services SharePoint モード]** に **[インストールのみ]** オプションが選択されていることを確認します。|  
 |Reporting Services が動作することを確認します。|1) SharePoint サーバーの全体管理で、 **[システム設定]** の **[このファームのサーバーの管理]** をクリックします。<br /><br /> 2) **SQL Server Reporting Services サービス**を確認します。<br /><br />詳細については、「 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)」をご覧ください。|  
   
-##  <a name="bkmk_additional"></a> その他の構成  
+##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> その他の構成  
  スケールアウト配置では、個々の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーを最適化して、バックグラウンド処理のみを実行できます。そのため、リソースの確保を求めて対話型のレポート実行との競合が発生することはありません。 バックグラウンド処理には、スケジュール、サブスクリプション、およびデータ警告が含まれます。  
   
  個々のレポート サーバーの動作を変更するには、**RSreportServer.config** 構成ファイルで **\<IsWebServiceEnable>** を false に設定します。  
@@ -76,7 +76,7 @@ ms.locfileid: "63225698"
  
  詳細については、「[Reporting Services の構成ファイルの変更 &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SharePoint Server 2016 での SharePoint サーバーのファームへの追加](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [SharePoint Server 2013 での SharePoint サーバーのファームへの追加](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)

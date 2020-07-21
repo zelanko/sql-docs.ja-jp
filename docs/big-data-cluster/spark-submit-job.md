@@ -1,28 +1,29 @@
 ---
-title: SQL Server ビッグ データ クラスター上の Azure Data Studio で Spark ジョブを送信する
-titleSuffix: SQL Server big data clusters
+title: 'Spark ジョブを送信する: Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: SQL Server ビッグ データ クラスター上の Azure Data Studio で Spark ジョブを送信します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6731a753c643512cd05dbc9d7b7de2c9a064576f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.openlocfilehash: 13510f430c11253a569540e02dc83d3b8b3ca113
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470663"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606744"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>SQL Server ビッグ データ クラスター上の Azure Data Studio で Spark ジョブを送信する
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-azure-data-studio"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上の Azure Data Studio で Spark ジョブを送信する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-ビッグ データ クラスターの主なシナリオの 1 つに、SQL Server 2019 プレビュー用の Spark ジョブを送信する機能があります。 Spark ジョブ送信機能を使用すると、SQL Server 2019 ビッグ データ クラスターへの参照を含むローカル Jar ファイルまたは Py ファイルを送信できます。 また、HDFS ファイル システムに既に配置されている Jar ファイルまたは Py ファイルを実行することもできます。 
+ビッグ データ クラスターの主なシナリオの 1 つに、SQL Server 用の Spark ジョブを送信する機能があります。 Spark ジョブ送信機能を使用すると、SQL Server 2019 ビッグ データ クラスターへの参照を含むローカル Jar ファイルまたは Py ファイルを送信できます。 また、HDFS ファイル システムに既に配置されている Jar ファイルまたは Py ファイルを実行することもできます。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 ビッグ データ ツール](deploy-big-data-tools.md):
    - **Azure Data Studio**
@@ -75,6 +76,6 @@ Spark ジョブが送信されると、Spark ジョブの送信と実行状態�
 
     ![出力の Spark ジョブ リンク](./media/submit-spark-job/monitor-spark-job-submission-2.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server ビッグ データ クラスターと関連するシナリオの詳細については、「[SQL Server ビッグ データ クラスターとは](big-data-cluster-overview.md)」を参照してください。

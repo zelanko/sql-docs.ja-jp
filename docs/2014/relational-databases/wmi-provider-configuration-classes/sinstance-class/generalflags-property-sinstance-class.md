@@ -1,5 +1,5 @@
 ---
-title: GeneralFlags プロパティ (SInstance クラス) |Microsoft Docs
+title: 一般フラグプロパティ (SInstance クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b5d59bf8398d43304f4888f3a3ad3a93b98b70ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1db667d8f7b81506ec6d68a4ebbbabd01f22ed1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63137263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037382"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags プロパティ (SInstance クラス)
-  関連付けられている一般的なフラグを取得のインスタンス[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+  のインスタンスに関連付けられた一般的なフラグを取得し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,16 +35,16 @@ object
 .GeneralFlags [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- [SInstance クラス](sinstance-class.md)サーバー インスタンスを表すオブジェクト。  
+ サーバーインスタンスを表す[Sinstance クラス](sinstance-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスによってサポートされる一般的なフラグを表すオブジェクトの配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

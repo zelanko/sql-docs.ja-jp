@@ -1,5 +1,5 @@
 ---
-title: MSagent_parameters (TRANSACT-SQL) |Microsoft Docs
+title: MSagent_parameters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ dev_langs:
 helpviewer_keywords:
 - MSagent_parameters system table
 ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38c6bb0ae74ffe54e9637610139374e458e3649d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9070fd9ee8b3e1bb9a32f5a28ccf189496e6b38b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095702"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890084"
 ---
-# <a name="msagentparameters-transact-sql"></a>MSagent_parameters (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSagent_parameters**テーブルには、エージェント プロファイルに関連付けられているパラメーターが含まれています。 パラメーター名は、エージェントでサポートされているものと同じです。 このテーブルに格納されます、 **msdb**データベース。  
+  **MSagent_parameters**テーブルには、エージェントプロファイルに関連付けられているパラメーターが含まれています。 パラメーター名は、エージェントでサポートされている名前と同じです。 このテーブルは、 **msdb**データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**int**|プロファイルの ID、 **MSagent_profiles**テーブル。|  
+|**profile_id**|**int**|**MSagent_profiles**テーブルのプロファイル ID。|  
 |**parameter_name**|**sysname**|パラメーターの名前。|  
-|**value**|**nvarchar (255)**|パラメーターの値。|  
+|**value**|**nvarchar(255)**|パラメーターの値。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

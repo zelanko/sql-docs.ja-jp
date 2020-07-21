@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b4ca6f804352b57b30b42012da93e0d031be8d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066639"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>ポリシー カテゴリへのデータベースのサブスクライブまたはアンサブスクライブ
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブする方法について説明します。  
@@ -34,14 +33,14 @@ ms.locfileid: "68212133"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブするには  
   
@@ -59,10 +58,10 @@ ms.locfileid: "68212133"
      **名前**  
      ポリシー カテゴリの名前です。  
   
-     **[サブスクライブ済み]**  
+     **まだ**  
      対象がポリシー カテゴリにサブスクライブしているかどうかを示します。 このチェック ボックスが無効になっている場合、ポリシー カテゴリの **[データベースのサブスクリプションの要求]** が設定されています。 つまり、ポリシー カテゴリはサーバー上のすべてのデータベースに適用されます。  
   
-     **[ポリシー]**  
+     **ポリシー**  
      ポリシー グループを展開すると、ポリシー カテゴリ内のポリシーが表示されます。  
   
      **有効**  
@@ -71,14 +70,14 @@ ms.locfileid: "68212133"
      **[実行モード]**  
      ポリシーの実行モードが表示されます。  
   
-     **履歴**  
+     **HISTORY**  
      ログ ファイル ビューアーを開いてポリシー履歴を確認するには、[履歴の表示] ハイパーリンクをクリックします。  
   
 4.  ポリシー ベースの管理カテゴリにサブスクライブするには、 **[サブスクライブ済み]** 列の下のカテゴリのチェック ボックスをオンにします。 カテゴリからアンサブスクライブするには、チェック ボックスをオフにします。  
   
-5.  完了したら、 **[OK]** をクリックします。  
+5.  完了したら、[**OK**] をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>ポリシー カテゴリにデータベースをサブスクライブするには  
   

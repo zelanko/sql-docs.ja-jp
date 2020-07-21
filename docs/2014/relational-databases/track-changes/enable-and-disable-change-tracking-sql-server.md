@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: db1a34a93c740aac5e24734f0a5f07c2d6719b73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 402c63ae03df14e3a725fbc440575f5233d502f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62670601"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037334"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>変更の追跡の有効化と無効化 (SQL Server)
   このトピックでは、データベースとテーブルに対する変更の追跡を有効または無効にする方法について説明します。  
@@ -84,7 +83,7 @@ DISABLE CHANGE_TRACKING;
   
 ## <a name="see-also"></a>参照  
  [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../databases/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables)   
  [データ変更の追跡 &#40;SQL Server&#41;](track-data-changes-sql-server.md)   

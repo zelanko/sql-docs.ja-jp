@@ -1,5 +1,5 @@
 ---
-title: ドリルスルーを使用して、ソース データ (MDX) を取得する |Microsoft Docs
+title: ドリルスルーを使用したソースデータの取得 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b437016cc29b2e4a85f781e3a422fb40c70f37c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5601a3ddfa7075ed53330e12c260af88648db990
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074299"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546394"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>DRILLTHROUGH を使用したソース データの取得 (MDX)
   多次元式 (MDX) では、キューブ セルのソース データから行セットを取得するために [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)ステートメントを使用します。  

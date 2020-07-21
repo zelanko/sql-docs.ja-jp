@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 26b101ca8bdc582b2497f7462707a2a2db7e67c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6e2af58481babf1ba9e19465a67c530275db0402
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028475"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295684"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>プログラムによるパッケージの実行と管理
 

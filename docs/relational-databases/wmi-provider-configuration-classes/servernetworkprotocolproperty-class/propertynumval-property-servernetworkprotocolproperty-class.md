@@ -1,6 +1,6 @@
 ---
-title: PropertyNumVal プロパティ (ServerNetworkProtocolProperty クラス) |Microsoft Docs
-ms.custom: ''
+title: PropertyNumVal プロパティ (ServerNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 apiname:
-- PropertyNumVal Property (ServerNetworkProtocolProperty Class)
+- PropertyNumVal Property (ServerNetworkProtocolProperty
 apilocation:
 - sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c26333400387803f9d31e67616114238d11a46b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6836060c0e928dc82662437c616d89801c2fd645
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097584"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880812"
 ---
 # <a name="propertynumval-property-servernetworkprotocolproperty-class"></a>PropertyNumVal プロパティ (ServerNetworkProtocolProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   参照されたプロパティの数値を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +35,16 @@ ms.locfileid: "68097584"
 object.PropertyNumVal [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ServerNetworkProtocolProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクトのインスタンス上のネットワーク プロトコルの属性を表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ のインスタンス上のネットワークプロトコルの属性を表す[Servernetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- A **uint32**参照されたプロパティの数値の値を指定する値。  
+ 参照されるプロパティの数値を指定する**uint32**値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

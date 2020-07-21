@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 85e7c3a2-f2da-49bf-9d90-5fd246fd60e1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5adfcb9127e6bc073bda7385387edf0946a96021
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6432cd0d09dac50857a0bd1da16a3ded92bb09c5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954716"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924253"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>executeUpdate (java.lang.String) メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public int executeUpdate(java.lang.String sql)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この executeUpdate メソッドは、java.sql.Statement インターフェイスの executeUpdate メソッドで規定されています。  
   
  更新数が 1 より大きくなる (または複数の結果セットが生成される) ストアド プロシージャは [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドを使用して実行してください。  

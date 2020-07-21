@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4d0c3b205b457b35d39e8e2648661c1de5e494fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 056c31859fcd9eb70bb0ccf7d3ec86c3ffdcc070
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132196"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750957"
 ---
 # <a name="save-trace-results-to-a-file"></a>トレース結果のファイルへの保存
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   トレース結果をファイルに保存できます。 トレース ファイルは、トレース結果が書き込まれるファイルです。 トレース ファイルは、ローカル ディレクトリ (C:\\*foldername*\\*filename.trc*など) またはネットワーク ディレクトリ ( \\\computername\sharename\filename.trc など) に配置できます。  
   
  トレース ファイルを使用して、次のことを行えます。  
@@ -35,7 +35,7 @@ ms.locfileid: "68132196"
   
 -   クエリの最適化の実行  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャ **@tracefile** の **@tracefile**引数にパスとファイル名を指定すると、によりファイルにトレース結果が保存されます。  
+ ストアド プロシージャ **sp_trace_create** の **\@tracefile** 引数にパスとファイル名を指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりファイルにトレース結果が保存されます。  
   
 > [!NOTE]  
 >  トレース ファイルの保存用に、 **sp_trace_create** ストアド プロシージャにパスを指定する場合は、サーバーからそのディレクトリにアクセスできる必要があります。 また、 **sp_trace_create**にローカル ディレクトリを指定すると、サーバー コンピューターのローカル ディレクトリを指定したことになるので注意してください。  

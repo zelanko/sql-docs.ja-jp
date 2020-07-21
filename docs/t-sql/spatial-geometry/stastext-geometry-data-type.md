@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1d38aee9c7fdb7f7142af5f5d72b5b08b0e18ccd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f6b3cd7a13c52511b049fd15679f8f32b69daadb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930195"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748782"
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスの Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します。 このテキストは、インスタンスに格納されている Z (標高) 値または M (メジャー) 値を含みません。
   
@@ -39,9 +39,9 @@ ms.locfileid: "67930195"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
- CLR の戻り値の型:**SqlChars**  
+ CLR の戻り値の型: **SqlChars**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、(0,0) から (2,3) までの `LineString` geometry インスタンスをテキストから作成します。 `STAsText()` は結果をテキストで返します。  
   
 ```  

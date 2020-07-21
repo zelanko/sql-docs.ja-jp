@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38065b8cc27526cccc8c1554b25a288662fef8a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 303ad6f59cbe24265aec66f3cb780a5b4ad4f157
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151161"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066891"
 ---
 # <a name="delete-a-plan-guide"></a>プラン ガイドの削除
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してプラン ガイドを削除できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用すると、データベース内のすべてのプラン ガイドを削除することもできます。  
@@ -26,7 +25,7 @@ ms.locfileid: "63151161"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **プラン ガイドの削除に使用するもの:**  
   
@@ -34,14 +33,14 @@ ms.locfileid: "63151161"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  OBJECT プラン ガイドの削除には、プラン ガイドによって参照されるオブジェクト (関数、ストアド プロシージャなど) に対する ALTER 権限が必要です。 その他すべてのプラン ガイドでは、ALTER DATABASE 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-delete-a-plan-guide"></a>プラン ガイドを削除するには  
   
@@ -53,7 +52,7 @@ ms.locfileid: "63151161"
   
 4.  **[オブジェクトの削除]** ダイアログ ボックスで、正しいプラン ガイドが選択されていることを確認し、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-a-single-plan-guide"></a>単一のプラン ガイドを削除するには  
   

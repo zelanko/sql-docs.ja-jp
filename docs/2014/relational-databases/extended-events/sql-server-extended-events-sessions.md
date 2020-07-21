@@ -1,7 +1,7 @@
 ---
 title: SQL Server 拡張イベント セッション | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 05/26/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xevents
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6aab8f1203c34ab65b394ee2355b340f17ba8198
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705746"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050882"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 拡張イベント セッション
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拡張イベント セッションは、拡張イベント エンジンをホストしている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロセス内で作成されます。 拡張イベント インフラストラクチャとその全体的な処理を理解するには、拡張イベント セッションの次の側面に注目します。  
@@ -30,9 +29,9 @@ ms.locfileid: "62705746"
   
 ## <a name="session-states"></a>セッション状態  
  拡張イベント セッションの各種の状態を次の図に示します。  
-  
- ![拡張イベント セッションの状態](../../database-engine/media/xesessionstate.gif "拡張イベント セッションの状態")  
-  
+
+![拡張イベント セッションの状態](../../database-engine/media/xesessionstate.png "拡張イベント セッションの状態")
+
  前の図を見ると、イベント セッションに対して異なる DDL コマンドが発行されたときに、セッション状態が変化していることがわかります。 このような状態の変化について次の表で説明します。  
   
 |図ラベル|DDL ステートメント|説明|  
@@ -50,7 +49,7 @@ ms.locfileid: "62705746"
   
  次の図は、セッションの内容、およびパッケージとセッションの関係を示しています。  
   
- ![セッションでのオブジェクトの共存と共有。](../../database-engine/media/xesessions.gif "セッションでのオブジェクトの共存と共有。")  
+ ![セッション内でのオブジェクトの共存と共有です。](../../database-engine/media/xesessions.gif "セッション内でのオブジェクトの共存と共有です。")  
   
  次の点に注目してください。  
   

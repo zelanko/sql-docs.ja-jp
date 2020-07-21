@@ -19,12 +19,12 @@ ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bf3ef8a31946379631dfb0ddc706235aa11bce8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914930"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73843653"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -43,10 +43,10 @@ NEWID ( )
 ## <a name="return-types"></a>戻り値の型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `NEWID()` は RFC4122 に準拠しています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. NEWID 関数を変数と共に使用する  
  次の例では、`NEWID()` を使用して、**uniqueidentifier** データ型として宣言された変数に値を割り当てます。 値、 **uniqueidentifier** 値をテストする前に、データ型の変数が出力されます。  
@@ -124,7 +124,7 @@ GO
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [一意識別子 &#40;Transact-SQL&#41;](../../t-sql/data-types/uniqueidentifier-transact-sql.md)   
  [シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   

@@ -1,10 +1,8 @@
 ---
 title: ISJSON (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -16,13 +14,14 @@ helpviewer_keywords:
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 0d3060af2114f62c1c21b25e79abf4714acfbe4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea2ab6218dc91e93680196b940f5fd2e43aebad0
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109441"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423099"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -46,10 +45,10 @@ ISJSON ( expression )
   
  エラーは返されません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **ISJSON** は、同じレベルのキーの一意性をチェックしません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="example-1"></a>例 1  
 次の例では、パラメーター値 `@param` に有効な JSON が含まれている場合は、ステートメント ブロックを条件付きで実行します。  
@@ -62,7 +61,6 @@ IF (ISJSON(@param) > 0)
 BEGIN  
      -- Do something with the valid JSON value of @param.  
 END
- 
 ```  
   
 ### <a name="example-2"></a>例 2  

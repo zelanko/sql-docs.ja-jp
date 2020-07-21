@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bdf5da8a7e7414bc41a43d9dd007e66709ff86d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f1e80f153b8bf8b6e5b37ea6dd11811f3994106f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060777"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298806"
 ---
 # <a name="edit-instance-properties"></a>インスタンスのプロパティの編集
 

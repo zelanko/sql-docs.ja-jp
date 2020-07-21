@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4583fd37837c9703325fd577b6bd984505fbd98e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44b62d04c52ddb707bfd094d3b29fbfe84cf5bb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762398"
 ---
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスが空白である場合、1 を返します。 **geometry** インスタンスが空白ではない場合は、0 を返します。
   
@@ -39,9 +39,9 @@ ms.locfileid: "68106099"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `geometry` インスタンスを作成し、`STIsEmpty()` を使用して、このインスタンスが空白かどうかをテストする例を次に示します。  
   
 ```  

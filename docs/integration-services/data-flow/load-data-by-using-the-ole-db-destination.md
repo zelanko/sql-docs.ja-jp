@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 190108f859280fa3656a4bc68c91ed48e5f22262
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 235491b5a3595098b42689f77fdc9077efd9b758
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941397"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292340"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 変換先を使用してデータを読み込む
 
@@ -69,6 +69,6 @@ ms.locfileid: "67941397"
  [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)  
   
   

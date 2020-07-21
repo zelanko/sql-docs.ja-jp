@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e450059-a083-428d-80a2-e52750f65f9f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6642024b7283c0302d58e77d7657844c27178f41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af429cd3237b35d75802c327de0592baa2e342d9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081815"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528688"
 ---
 # <a name="details-ssas"></a>[詳細] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、成功または失敗したデータ インポート操作に関する情報を表示できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

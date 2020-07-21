@@ -1,5 +1,5 @@
 ---
-title: SQL Server で SQLXML がインストールされていない |マイクロソフトのドキュメント
+title: SQL Server で SQLXML がインストールされない
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,31 +11,31 @@ ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2adac1703facccda712db1e3f5826f784c0be141
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3412b02a7164a5cb57421c52b3662e226bf7e537
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665913"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQL Server で SQLXML がインストールされない
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンでは、SQLXML 4.0 は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属してリリースされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのバージョン ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] を除く) の既定のインストールに含まれていました。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、SQLXML の最新バージョン (SQLXML 4.0 SP1) が含まれないようになりました。 SQLXML 4.0 SP1 をインストールするダウンロードから[SQLXML 4.0 SP1 のインストール場所](https://www.microsoft.com/download/details.aspx?id=30403)します。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンでは、SQLXML 4.0 は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属してリリースされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのバージョン ([!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] を除く) の既定のインストールに含まれていました。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、SQLXML の最新バージョン (SQLXML 4.0 SP1) が含まれないようになりました。 SQLXML 4.0 SP1 をインストールするには、 [sqlxml 4.0 sp1 のインストール場所](https://www.microsoft.com/download/details.aspx?id=30403)からダウンロードします。  
   
- アプリケーションを実行している場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLXML 4.0 を必要と SQLXML 4.0 SP1 ダウンロードしてインストールする必要があります。  
+ アプリケーションがで実行さ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れ、sqlxml 4.0 が必要な場合は、sqlxml 4.0 SP1 をダウンロードしてインストールする必要があります。  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>SQLOLEDB および SQL Server Native Client OLE DB プロバイダーを使用した場合の新しいデータ型による SQLXML 4.0 SP1 の動作  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SQLXML を使用して開発者が使用することも、次のデータ型が導入されています。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]では次のデータ型が導入されました。 SQLXML を使用する開発者は、を使用することをお勧めします。  
   
 -   **Date**  
   
--   **時刻**  
+-   **Time**  
   
 -   **DateTime2**  
   
 -   **DateTimeOffset**  
   
- SQLOLEDB の SQLXML 4.0 SP1 を使用する場合または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB から[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、これらの型が開発者に文字列として表示されます。 SQLXML 4.0 SP1 では組み込みのスカラー型で使用する場合として、これら 4 つの新しいデータ型が有効にする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB Provider 11.0 以降。 SQLXML 4.0 SP1 をダウンロードしないと、これらの型を文字列以外の型にマッピングした場合、一部のデータが切り捨てられる可能性があります。 たとえば、マッピング**DateTime2**に**xsd:date**によりデータに切り捨てられますが、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **DateTime** 3.33 ミリ秒の精度。  
+ SQLOLEDB または Native Client OLE DB のいずれかを使用して SQLXML 4.0 SP1 を使用する場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、これらの型は開発者に文字列として表示されます。 SQLXML 4.0 SP1 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider 11.0 以降で使用する場合に、これら4つの新しいデータ型を組み込みスカラー型として有効にします。 SQLXML 4.0 SP1 をダウンロードしないと、これらの型を文字列以外の型にマッピングした場合、一部のデータが切り捨てられる可能性があります。 たとえば、 **DateTime2**を**xsd: date**にマッピングすると、データは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 3.33 ミリ秒の**DateTime**有効桁数に切り捨てられます。  
   
 ## <a name="see-also"></a>関連項目  
  [SQLXML 4.0 のプログラミング概念](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  

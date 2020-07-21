@@ -1,35 +1,36 @@
 ---
 title: Azure Kubernetes Service の構成
-titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) の展開のために Azure Kubernetes Service (AKS) を構成する方法について説明します。
+titleSuffix: SQL Server Big Data Clusters
+description: SQL Server 2019 ビッグ データ クラスターの展開のために Azure Kubernetes Service (AKS) を構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ba5b4b06d31f391733603ce146a7d05e05aebaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.openlocfilehash: 6a725cdbc5424da3820e5cd404306465482b3d94
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470815"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606934"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために Azure Kubernetes Service を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) の展開のために Azure Kubernetes Service (AKS) を構成する方法について説明します。
+この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のデプロイ用に Azure Kubernetes Service (AKS) を構成する方法について説明します。
 
 AKS を使用すると、コンテナー化されたアプリケーションを実行するために、Kubernetes クラスターを利用して事前に構成された仮想マシンのクラスターを簡単に作成、構成、管理できます。 これにより、既存のスキルを使用したり、規模が拡大している専門知識コミュニティを利用したりして、コンテナー ベースのアプリケーションを Microsoft Azure 上に展開して管理することができます。
 
 この記事では、Azure CLI を使用して AKS 上に Kubernetes を展開する手順について説明します。 Azure サブスクリプションをお持ちでない場合は、開始する前に無料アカウントを作成してください。
 
 > [!TIP]
-> また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](deploy-notebooks.md)において、この操作を行う方法を確認してください。
+> また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](notebooks-deploy.md)において、この操作を行う方法を確認してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 ビッグ データ ツールを展開する](deploy-big-data-tools.md):
    - **kubectl**
@@ -37,11 +38,11 @@ AKS を使用すると、コンテナー化されたアプリケーションを�
    - **SQL Server 2019 の拡張機能**
    - **Azure CLI**
 
-- Kubernetes サーバーでの最小の 1.10 バージョン。 AKS の場合、`--kubernetes-version` パラメータ―を使用して、既定値とは異なるバージョンを指定する必要があります。
+- Kubernetes サーバーでの最小の 1.13 バージョン。 AKS の場合、`--kubernetes-version` パラメータ―を使用して、既定値とは異なるバージョンを指定する必要があります。
 
-- AKS 上で基本のシナリオを検証する際の最適なエクスペリエンスのためには、次を使用してください。
+- AKS の基本的なシナリオを検証しながら、正常なデプロイと最適なエクスペリエンスを確保するために、次のリソースを使用可能な単一ノードまたはマルチノードの AKS クラスターを使用できます。
    - すべてのノード全体で 8個の vCPU
-   - VM ごとに 32 GB のメモリ
+   - VM ごとに 64 GB のメモリ
    - すべてのノード全体で 24 個以上の接続されたディスク
 
    > [!TIP]
@@ -67,6 +68,12 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
    ```azurecli
    az account set --subscription <subscription id>
+   ```
+
+1. このコマンドを使用して、クラスターとリソースをデプロイする Azure リージョンを特定します。
+
+   ```azurecli
+   az account list-locations -o table
    ```
 
 1. **az group create** コマンドを使用して、リソース グループを作成します。 次の例では、`westus2` の場所に `sqlbdcgroup` という名前のリソース グループを作成します。
@@ -131,7 +138,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
    --kubernetes-version <version number>
    ```
 
-   Kubernetes エージェント ノードの数を増減するには、`--node-count <n>` を変更します。`<n>` は、使用するエージェント ノードの数です。 これには、AKS によってバックグラウンドで管理されるマスター Kubernetes ノードは含まれません。 上記の例では、評価目的のために 1 つのノードのみを使用しています。
+   Kubernetes エージェント ノードの数を増減するには、`--node-count <n>` を変更します。`<n>` は、使用するエージェント ノードの数です。 これには、AKS によってバックグラウンドで管理されるマスター Kubernetes ノードは含まれません。 上記の例では、評価目的のために 1 つのノードのみを使用しています。 また、`--node-vm-size` を変更して、ワークロードの要件に適した仮想マシンのサイズを選択することもできます。 `az vm list-sizes --location westus2 -o table` コマンドを使用して、リージョンで使用可能な仮想マシンのサイズを一覧表示します。
 
    数分後、コマンドが完了すると、クラスターに関する JSON 形式の情報が返されます。
 
@@ -154,15 +161,16 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
    kubectl get nodes
    ```
 
-## <a id="troubleshoot"></a> トラブルシューティング
+## <a name="troubleshooting"></a><a id="troubleshoot"></a> トラブルシューティング
 
 上記のコマンドを利用して Azure Kubernetes サービスを作成する際に問題が発生した場合は、次の解決策を試してください。
 
 - [最新の Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) がインストールされていることを確認してください。
 - 別のリソース グループとクラスター名を使用して、同じ手順を試してください。
+- 詳細な [AKS のトラブルシューティングのドキュメント](https://docs.microsoft.com/azure/aks/troubleshooting)を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 この記事の手順では、AKS に Kubernetes クラスターを構成しました。 次のステップとして、AKS Kubernetes クラスター上に SQL Server 2019 ビッグ データ クラスターを展開します。 ビッグ データ クラスターを展開する方法の詳細については、次の記事を参照してください。
 
-[Kubernetes 上に SQL Server ビッグ データ クラスターを展開する方法](deployment-guidance.md)
+[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する方法](deployment-guidance.md)

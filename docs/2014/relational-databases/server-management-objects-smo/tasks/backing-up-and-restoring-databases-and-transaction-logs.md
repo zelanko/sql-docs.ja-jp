@@ -1,5 +1,5 @@
 ---
-title: バックアップおよびデータベースとトランザクション ログを復元します。マイクロソフトのドキュメント
+title: データベースとトランザクションログのバックアップと復元 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,28 +18,27 @@ helpviewer_keywords:
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1fc7ff4dc3142fa6f6cd18fc7b00e691d3bf29df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cacffbae4f2b31349b04d159c9756609d2d9c1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997000"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>データベースおよびトランザクション ログのバックアップと復元
-  SMO の <xref:Microsoft.SqlServer.Management.Smo.Backup> クラスおよび <xref:Microsoft.SqlServer.Management.Smo.Restore> クラスは、バックアップおよび復元の特定のタスクを実行するツールを提供するユーティリティ クラスです。 A<xref:Microsoft.SqlServer.Management.Smo.Backup>オブジェクトの代わりに必要な特定のバックアップ ・ タスクを表す、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サーバー インスタンス上のオブジェクトです。  
+  SMO の <xref:Microsoft.SqlServer.Management.Smo.Backup> クラスおよび <xref:Microsoft.SqlServer.Management.Smo.Restore> クラスは、バックアップおよび復元の特定のタスクを実行するツールを提供するユーティリティ クラスです。 オブジェクトは、 <xref:Microsoft.SqlServer.Management.Smo.Backup> [!INCLUDE[msCoName](../../../includes/msconame-md.md)] サーバーインスタンス上のオブジェクトの代わりに必要な特定のバックアップタスクを表し [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
  データの損失や破損が発生した場合、バックアップを完全に、または部分的に復元する必要があります。 部分的な復元では、復元するデータを分割するために <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> コレクションが使用されます。 トランザクション ログのバックアップの場合、<xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Restore> プロパティを使用して、データが特定の時点まで復元されます。 データは、<xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> メソッドを使用して検証することができます。 推奨されるバックアップ手順は、復元操作とデータベース内のデータのチェックを定期的に実行することによってバックアップの整合性をチェックすることです。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Backup> オブジェクトと同様、<xref:Microsoft.SqlServer.Management.Smo.Restore> オブジェクトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上のオブジェクトを表現しているのではないので、`Create` メソッドを使用して作成する必要はありません。 <xref:Microsoft.SqlServer.Management.Smo.Restore> オブジェクトは、データベースの復元に使用されるプロパティとメソッドのセットです。  
   
-## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+## <a name="examples"></a>例  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net で VISUAL BASIC SMO プロジェクトを作成する](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [Studio .Net で VISUAL C&#35; Smo プロジェクトを作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する」を参照してください。  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Visual Basic でのデータベースおよびトランザクション ログのバックアップ  
  このコード例では、既存のデータベースをファイルにバックアップする方法と復元する方法を示します。  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Common  
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.VisualBasic.MyServices  
@@ -179,7 +178,7 @@ End Module
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-c"></a>Visual C# でのデータベースおよびトランザクション ログのバックアップ  
  このコード例では、既存のデータベースをファイルにバックアップする方法と復元する方法を示します。  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
   
@@ -317,9 +316,7 @@ class A {
 ## <a name="backing-up-databases-and-transaction-logs-in-powershell"></a>PowerShell でのデータベースおよびトランザクション ログのバックアップ  
  このコード例では、既存のデータベースをファイルにバックアップする方法と復元する方法を示します。  
   
-```  
-#Backing up and restoring a Database from PowerShell  
-  
+```powershell
 #Connect to the local, default instance of SQL Server.  
   
 #Get a server object which corresponds to the default instance  
@@ -452,7 +449,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 > [!NOTE]  
 >  <xref:System.Collections.Specialized.StringCollection> オブジェクトの場合は、`imports System.Collections.Specialized` ステートメントの使用による名前空間への参照が必要になります。  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -482,7 +479,7 @@ End Module
 > [!NOTE]  
 >  <xref:System.Collections.Specialized.StringCollection> オブジェクトの場合は、`imports System.Collections.Specialized` ステートメントの使用による名前空間への参照が必要になります。  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
@@ -514,16 +511,14 @@ class A {
 > [!NOTE]  
 >  <xref:System.Collections.Specialized.StringCollection> オブジェクトの場合は、`imports System.Collections.Specialized` ステートメントの使用による名前空間への参照が必要になります。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 $sc = $db.CheckTables([Microsoft.SqlServer.Management.SMO.RepairType]::None)  
-foreach ($c in $sc)  
+ForEach ($c In $sc)  
 {  
     $c  
- }  
+}  
 ```  
-  
-  

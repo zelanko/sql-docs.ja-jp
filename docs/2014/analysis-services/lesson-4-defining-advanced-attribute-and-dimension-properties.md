@@ -1,5 +1,5 @@
 ---
-title: レッスン 4:高度な属性およびディメンションのプロパティの定義 |Microsoft Docs
+title: 'レッスン 4: 高度な属性とディメンションのプロパティの定義 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 450fc1a727af028cd1ad0a8e1619b4f65eae1d3b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888254"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542914"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>レッスン 4:高度な属性およびディメンションのプロパティの定義
   このレッスンでは、属性、属性階層、およびディメンションの高度なプロパティをいくつか取り上げ、その使用方法を学習します。  
@@ -34,24 +33,24 @@ ms.locfileid: "68888254"
  [属性メンバーの自動的なグループ化](lesson-4-3-automatically-grouping-attribute-members.md)  
  ここでは、属性階層内のメンバーの配置に基づいて、属性メンバーのグループを自動的に作成します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
   
- [属性階層の非表示化と無効化](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [属性階層の非表示化と無効化](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  ここでは、属性階層を無効にし、非表示にする方法と、そのタイミングについて学習します。  
   
  [2 次属性に基づく属性メンバーの並べ替え](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
  ここでは、2 次属性に基づいて、ディメンションを目的の順序で並べ替える方法を学習します。  
   
  [ユーザー定義階層の属性間での属性リレーションシップの指定](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
- ここでは、属性のメンバーのプロパティを定義する方法と、プロパティ間の集計リレーションシップを指定する方法を学習します。 詳細については、「[属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)」および「[ユーザー階層プロパティ](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)」を参照してください。  
+ ここでは、属性のメンバーのプロパティを定義する方法と、プロパティ間の集計リレーションシップを指定する方法を学習します。 詳細については、「[属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)」および「[ユーザー階層のプロパティ](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)」を参照してください。  
   
  [不明なメンバーと NULL 処理のプロパティの定義](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  この実習では、UnknownMember プロパティと UnknownMemberName プロパティを構成し、null ディメンション メンバーによって発生するエラー状況を処理します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 5: ディメンションとメジャーグループ間のリレーションシップの定義](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [レッスン 5: ディメンションおよびメジャー グループ間のリレーションシップの定義](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
- [多次元モデリング&#40;の Adventure works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Adventure Works チュートリアル &#40;の多次元モデリング&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

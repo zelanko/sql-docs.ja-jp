@@ -1,6 +1,6 @@
 ---
-title: 拡張イベントの概要 - SQL Server | Microsoft Docs
-ms.custom: ''
+title: Xevent の概要 - SQL Server
+description: SQL Server 拡張イベントのアーキテクチャを使用すると、パフォーマンスの問題を特定してトラブルシューティングを行うために必要なデータを収集できます。 このアーキテクチャは、構成可能でスケーラブルです。
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,22 +15,22 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: fdca475c71f2f1b81dac9b2a37850cea697a4414
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727341"
 ---
 # <a name="extended-events-overview"></a>拡張イベントの概要
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントのアーキテクチャを使用すると、ユーザーは、パフォーマンスの問題のトラブルシューティングや特定に必要最小限のデータを収集できます。 拡張イベントは構成可能で、スケーリングにとても優れています。
 
 拡張イベントの詳細については、「[クイック スタート:SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」を参照してください。
 
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
+## <a name="benefits-of-ssnoversion-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
 
 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースは最小限です。 拡張イベントには、セッション データを作成、変更、表示、分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています。 これらのインターフェイスには次の名前が付けられています。
 
@@ -42,7 +42,7 @@ ms.locfileid: "68941137"
   
  次の表は、拡張イベントにおける各種の概念を示しています。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[SQL Server 拡張イベント パッケージ](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|オブジェクトを含む拡張イベント パッケージについて説明します。 これらのオブジェクトは、拡張イベント セッションの実行中にデータを取得して処理するために使用されます。|  
 |[SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|イベント セッション中にデータを受け取ることができるイベント コンシューマーについて説明します。|  
@@ -108,6 +108,23 @@ ms.locfileid: "68941137"
 |拡張イベントを Event Tracing for Windows と共に使用してシステムの使用状況を監視する方法について説明します。|[拡張イベントを使用したシステムの使用状況の監視](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 |拡張イベントに対するカタログ ビューと動的管理ビュー (DMV) の使用。 | [SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 | &nbsp; | &nbsp; |
+
+次の Transact-SQL (T-SQL) クエリを使用して、可能なすべての拡張イベントとその説明を一覧表示します。
+
+```sql
+SELECT
+     obj1.name as [XEvent-name],
+     col2.name as [XEvent-column],
+     obj1.description as [Descr-name],
+     col2.description as [Descr-column]
+  FROM
+               sys.dm_xe_objects        as obj1
+      JOIN sys.dm_xe_object_columns as col2 on col2.object_name = obj1.name
+  ORDER BY
+    obj1.name,
+    col2.name
+```
+
 
 ## <a name="code-examples-can-differ-for-azure-sql-database"></a>Azure SQL Database では、コード例が異なる可能性があります。
 

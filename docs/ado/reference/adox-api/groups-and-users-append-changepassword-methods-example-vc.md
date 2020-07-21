@@ -1,5 +1,5 @@
 ---
-title: Groups および Users Append、ChangePassword メソッドの例 (vc++) |Microsoft Docs
+title: Groups および Users Append、ChangePassword メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,20 +15,20 @@ helpviewer_keywords:
 - Append method [ADOX], VC++ example
 - Users Append method [ADOX], VC++ example
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ff06ece1485ce8f140e1295e8bee3036cc1686a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e11cb872d01182f037dd84ab3dd676e4f35e508
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966194"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764885"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Groups および Users Append、ChangePassword メソッドの例 (VC++)
-この例では、 [Append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドの[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、だけでなく[Append](../../../ado/reference/adox-api/append-method-adox-users.md)メソッドの[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)新しいを追加することで[グループ](../../../ado/reference/adox-api/group-object-adox.md)され、新しい[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)システムにします。 新しい**グループ**に追加されますが、**グループ**の新しいコレクション**ユーザー**します。 その結果、新しい**ユーザー**に追加されます、**グループ**します。 また、 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドを使用して、指定、**ユーザー**パスワード。  
+この例では、[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)の[append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドと、システムに新しい[グループ](../../../ado/reference/adox-api/group-object-adox.md)と新しい[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)を追加することによる[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)の[追加](../../../ado/reference/adox-api/append-method-adox-users.md)方法を示します。 新しい**グループ**は、新しい**ユーザー**の**Groups**コレクションに追加されます。 その結果、新しい**ユーザー**が**グループ**に追加されます。 また、 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドを使用して**ユーザー**パスワードを指定します。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
   
 ```  
 // BeginGroupCpp.cpp  
@@ -124,7 +124,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
   
    ::CoUninitialize();  

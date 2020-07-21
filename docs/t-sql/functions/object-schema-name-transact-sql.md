@@ -19,16 +19,16 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 - OBJECT_SCHEMA_NAME function
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 70556dd6365c6c3b204456db2877fdbc61e53d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: fbebb46cc091d8a4a033480237827cf95b6b0c59
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914751"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822412"
 ---
-# <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
+# <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   スキーマ スコープ オブジェクトのデータベース スキーマ名を返します。 スキーマ スコープ オブジェクトの一覧については、「[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」をご覧ください。  
@@ -37,7 +37,7 @@ ms.locfileid: "67914751"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 OBJECT_SCHEMA_NAME ( object_id [, database_id ] )  
 ```  
@@ -60,7 +60,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>アクセス許可  
  オブジェクトに対する ANY 権限が必要です。 データベース ID を指定するには、そのデータベースの CONNECT 権限を持っているか、ゲスト アカウントが有効である必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 詳しくは、「[式](../../t-sql/language-elements/expressions-transact-sql.md)」および「[WHERE](../../t-sql/queries/where-transact-sql.md)」をご覧ください。  
   
  このシステム関数が返す結果セットには、現在のデータベースの照合順序が使用されます。  
@@ -81,7 +81,7 @@ FROM master.sys.objects;
   
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-object-schema-name-and-object-name"></a>A. オブジェクト スキーマ名とオブジェクト名を取得する  
  この例では、アドホック ステートメントでも準備されたステートメントでもない、キャッシュされたすべてのクエリ プランについて、オブジェクト スキーマ名、オブジェクト名、SQL テキストを返します。  

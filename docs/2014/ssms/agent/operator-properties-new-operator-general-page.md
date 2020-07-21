@@ -1,5 +1,5 @@
 ---
-title: オペレーターのプロパティと新しいオペレーター (全般 ページ) |Microsoft Docs
+title: '[演算子のプロパティ] と [新しい演算子] ([全般] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c036d1c9-83d1-4a95-b67e-29d283b1a046
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8d339867a7b8183b00f7825c2f5059dddd2ed9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211348"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067734"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>[オペレーターのプロパティ] および [新しいオペレーター] ([全般] ページ)
-  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オペレーターの全般プロパティを表示および変更できます。  
+  このページを使用すると、エージェントオペレーターの全般プロパティを表示および変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  **名前**  
  オペレーターの名前を変更します。  
   

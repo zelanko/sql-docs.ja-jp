@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ab87d5d8aa08b7b2860fe52fd097f33af327a94
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774886"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931163"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>ログ配布の監視 (Transact-SQL)
   ログ配布を構成すると、すべてのログ配布サーバーの状態に関する情報を監視できます。 ログ配布操作の履歴と状態は、ログ配布ジョブにより、常にローカルに保存されます。 バックアップ操作の履歴と状態はプライマリ サーバーに格納され、コピー操作と復元操作の履歴と状態はセカンダリ サーバーに格納されます。 リモートの監視サーバーを実装している場合、この情報はリモートの監視サーバーにも格納されます。  
@@ -59,7 +58,7 @@ ms.locfileid: "62774886"
 |[sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)|**log_shipping_secondary**、 **log_shipping_secondary_databases** 、および **log_shipping_monitor_secondary** の各テーブルからセカンダリ データベースの設定を取得します。|セカンダリ サーバー|  
 |[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql)|セカンダリ サーバーにある指定されたプライマリ データベースの設定を取得します。|セカンダリ サーバー|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ログ配布レポートの表示 &#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)   
  [ログ配布のストアド プロシージャとテーブル](log-shipping-tables-and-stored-procedures.md)  
   

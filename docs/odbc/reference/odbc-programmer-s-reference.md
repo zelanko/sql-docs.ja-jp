@@ -1,5 +1,5 @@
 ---
-title: ODBC プログラマ&#39;リファレンス |Microsoft Docs
+title: ODBC プログラマー&#39;s リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,115 +10,115 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], reference
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6a9ca32627b9703465dcfca554fdc32ae01442e7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111191"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280512"
 ---
-# <a name="odbc-programmer39s-reference"></a>ODBC プログラマ&#39;リファレンス
-*ODBC プログラマ リファレンス*次のセクションが含まれています。  
+# <a name="odbc-programmer39s-reference"></a>ODBC プログラマー&#39;s リファレンス
+*ODBC プログラマーズリファレンス*には、次のセクションが含まれています。  
   
--   [ODBC 3.8 の新](../../odbc/reference/what-s-new-in-odbc-3-8.md)Windows 8 SDK に追加された新しい ODBC の機能を一覧表示されます。  
+-   [Odbc 3.8 の新](../../odbc/reference/what-s-new-in-odbc-3-8.md)機能 WINDOWS 8 SDK に追加された odbc の新機能を紹介します。  
   
--   [ODBC プログラムのサンプル](../../odbc/reference/sample-odbc-program.md)ODBC のサンプル プログラムを表示します。  
+-   サンプル[Odbc プログラム](../../odbc/reference/sample-odbc-program.md)は、サンプル odbc プログラムを示しています。  
   
--   [ODBC の概要](../../odbc/reference/introduction-to-odbc.md)構造化照会言語と、ODBC と ODBC インターフェイスの概要についての簡単な歴史を提供します。  
+-   [Odbc の概要](../../odbc/reference/introduction-to-odbc.md)では、構造化照会言語と odbc の簡単な履歴と、odbc インターフェイスに関する概念的な情報を提供します。  
   
--   [アプリケーションの開発](../../odbc/reference/develop-app/developing-applications.md)ODBC インターフェイスとそれを実装するドライバーを使用するアプリケーションの開発に関する情報を格納します。  
+-   [アプリケーションの開発](../../odbc/reference/develop-app/developing-applications.md)には、ODBC インターフェイスを使用するアプリケーションの開発と、それを実装するドライバーが含まれます。  
   
--   [ODBC ソフトウェアのインストールと構成](../../odbc/reference/install/installing-and-configuring-the-odbc-software.md)のインストールとセットアップ DLL 関数の参照に関する情報を提供します。  
+-   [ODBC ソフトウェアのインストールと構成](../../odbc/reference/install/installing-and-configuring-the-odbc-software.md)に関する情報を参照してください。  
   
--   [ODBC ドライバーの開発](../../odbc/reference/develop-driver/developing-an-odbc-driver.md)ドライバーの記述に関する情報が含まれています。  
+-   [ODBC ドライバーの開発](../../odbc/reference/develop-driver/developing-an-odbc-driver.md)には、ドライバーの記述に関する情報が含まれています。  
   
--   [API リファレンス](../../odbc/reference/syntax/odbc-reference.md)構文とすべての ODBC 関数のセマンティック情報が含まれています。  
+-   [API リファレンス](../../odbc/reference/syntax/odbc-reference.md)には、すべての ODBC 関数の構文とセマンティック情報が含まれています。  
   
--   [ODBC の付録](../../odbc/reference/appendixes/odbc-appendixes.md)技術的な詳細を含み、ODBC エラー コード、データ型、および SQL 文法のテーブルを参照します。  
+-   [Odbc](../../odbc/reference/appendixes/odbc-appendixes.md)の各付録には、odbc エラーコード、データ型、および SQL 文法の技術的な詳細と参照テーブルが含まれています。  
   
-## <a name="working-with-the-odbc-documentation"></a>ODBC のドキュメントの操作  
- ODBC インターフェイスは、C プログラミング言語で使用するために設計されています。 ODBC インターフェイスの使用では、3 つの領域に します。SQL ステートメント、ODBC 関数呼び出し、C プログラミングします。 このドキュメントには、次の前提としています。  
+## <a name="working-with-the-odbc-documentation"></a>ODBC ドキュメントの操作  
+ ODBC インターフェイスは、C プログラミング言語で使用するために設計されています。 ODBC インターフェイスは、SQL ステートメント、ODBC 関数呼び出し、C プログラミングという 3 つの領域で使用されます。 このドキュメントでは、次のことを前提としています。  
   
--   C のプログラミング言語の知識。  
+-   C プログラミング言語に関する実用的な知識。  
   
--   一般的な DBMS の知識と SQL に精通します。  
+-   DBMS に関する一般的な知識と SQL に関する知識。  
   
  次の表記規則が使用されます。  
   
-|Format|使用目的|  
+|フォーマット|使用目的|  
 |------------|--------------|  
-|選択 * から|大文字の文字は、SQL ステートメント、マクロ名、およびオペレーティング システム コマンド レベルで使用される用語を示します。|  
-|`RETCODE SQLFetch(hdbc)`|固定幅フォントは、コマンドラインのサンプルとプログラム コードに使用されます。|  
-|*argument*|斜体の単語は、プログラムの引数については、ユーザーまたはアプリケーションを提供する必要があります強調を word ことを示します。|  
-|**SQLEndTran**|太字では、構文を正確に示すように、関数名を含む入力する必要があることを示します。|  
-|&#124;|垂直バーは、構文の行で相互に排他的な 2 つの選択肢を分離します。|  
-|[...]|省略記号は、する引数は複数回繰り返すことを示します。|  
-|. と呼ばれています。 .|3 つのドットの列では、前のコード行の継続を示します。|  
+|SELECT * FROM|大文字は、SQL ステートメント、マクロ名、およびオペレーティングシステムのコマンドレベルで使用される用語を示します。|  
+|`RETCODE SQLFetch(hdbc)`|サンプルのコマンドラインとプログラムコードでは、等幅フォントが使用されます。|  
+|*argument*|斜体の単語は、プログラムの引数、ユーザーまたはアプリケーションが提供する必要がある情報、または単語の強調を示します。|  
+|**SQLEndTran**|太字で表示されているように、関数名を含む構文を正確に入力する必要があることを示します。|  
+|&#124;|垂直バーは、構文行で相互に排他的な2つの選択肢を区切ります。|  
+|...|省略記号は、引数を複数回繰り返すことができることを示します。|  
+|. . .|3つのドットの列は、前のコード行の継続を示します。|  
   
 ## <a name="about-the-code-examples"></a>コード例について  
- このガイドのコード例は、あくまで説明のために設計されています。 ODBC の原則を示すために主に書き込まれるため、効率性も確保されているわかりやすくするため。 さらに、コードのセクション全体は、わかりやすくするため除外された場合があります。 非 ODBC 関数 (これらの関数が名前が"SQL"で始まらない) およびほとんどのエラー処理の定義が含まれます。  
+ このガイドのコード例は、説明のためだけに設計されています。 これらは主に ODBC の原則を示すために記述されているので、わかりやすくするために効率が確保されることもあります。 さらに、わかりやすくするために、コードのセクション全体が省略されている場合もあります。 これには、非 ODBC 関数 (名前が "SQL" で始まらない関数) とほとんどのエラー処理の定義が含まれます。  
   
- ANSI 文字列と同じデータベース スキーマの先頭に表示されているすべてのコード例を使用して[カタログ関数](../../odbc/reference/develop-app/catalog-functions.md)します。  
+ すべてのコード例では、ANSI 文字列と同じデータベーススキーマを使用します。これは、[カタログ関数](../../odbc/reference/develop-app/catalog-functions.md)の開始時に表示されます。  
   
 ## <a name="recommended-reading"></a>推奨トピック  
- SQL の詳細については、次の標準を使用できます。  
+ SQL の詳細については、次の基準を参照してください。  
   
--   データベースの整合性機能強化、ANSI、1989 ANSI X3.135 1989 と SQL の言語。  
+-   データベース言語-整合性を強化した SQL、ANSI、1989 ANSI X 3.135-1989。  
   
--   データベース表現言語 - SQL:ANSI X3H2 および ISO/IEC JTC1/SC21 WG3 9075:1992 (SQL 92)。  
+-   データベース言語-SQL: ANSI X3H2 と ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92)。  
   
--   グループを開く、データ管理:構造化照会言語 (SQL) バージョン 2 (Open Group、1996)。  
+-   グループを開き、データ管理: 構造化照会言語 (SQL)、バージョン 2 (Open Group, 1996) を開きます。  
   
- 多くの書籍を標準とベンダー固有の SQL ガイドだけでなく、SQL をについて説明しますなど。  
+ 標準およびベンダー固有の SQL ガイドに加えて、多くの書籍には次のような SQL が記述されています。  
   
--   C. J.、Darwen、Hugh での日付:*SQL Standard のガイド*(Addison-wesley、1993)。  
+-   Date, .C, with Darwen, Hugh: SQL Standard (Addison-Wesley, 1993)*のガイド*です。  
   
--   Emerson、Sandra L.、Darnovsky、Marcy、および Bowman、Judith S.:*実際的な SQL Handbook* (Addison-wesley、1989)。  
+-   Emerson electric、Sandra L、Darnovsky、Marcy、Bowman、Judith S.:*実用的な SQL ハンドブック*(Addison-Wesley、1989)。  
   
--   Groff、James R. と Weinberg、Paul N.:*SQL を使用して*(Osborne Mcgraw-hill、1990)。  
+-   Groff、James の r. Weinberg、Paul N.: *SQL の使用*(osborne、1990)。  
   
--   グルーバー、Martin:*SQL を理解する*(Sybex、1990)。  
+-   Gruber, Martin: *SQL* (Sybex, 1990) について理解します。  
   
--   回線のモジュラー ジャック L. および林さんの j. Hursch:*SQL、構造化照会言語*(タブ書籍、1988)。  
+-   Hursch、Jack L. と Carolyn J.: *SQL、構造化照会言語*(タブブック、1988)。  
   
--   Melton、Jim、および Simon、Alan R.:*新しい SQL をについて理解します。完全なガイド*(Morgan Kaufmann 発行元、1993)。  
+-   メルトン、Jim、Simon、Alan R.:*新しい SQL を理解する: 完全なガイド*(Morgan gray Publishers、1993)。  
   
--   Fabian Pascal:*SQL とリレーショナルの基礎*(M & T Books、1990)。  
+-   Pascal, Fabian: *SQL とリレーショナルの基礎*(M & T 本、1990)。  
   
--   Trimble、J. Harvey、Jr. および Chappell、David:*SQL の概要*(Wiley、1989)。  
+-   Trimble、Jr、および Chappell、David: *SQL の視覚的な概要*(ワイリー、1989)。  
   
--   Van der Lan、Rick F.:*SQL の概要*(Addison-wesley、1988)。  
+-   Van der Lan, Rick F.: *SQL の概要*(Addison-Wesley, 1988)。  
   
--   Vang、Soren:*SQL とリレーショナル データベース*(Microtrend 書籍、1990)。  
+-   Vang、Soren: *SQL およびリレーショナルデータベース*(マイクロトレンドブック、1990)。  
   
--   Viescas、John:*SQL へのクイック リファレンス ガイド*(Microsoft Corp.、1989)。  
+-   Viescas、John: *SQL のクイックリファレンスガイド*(Microsoft Corp.、1989)。  
   
- トランザクション処理の詳細については、次を参照してください。  
+ トランザクション処理の詳細については、以下を参照してください。  
   
--   グレーの場合、j. n. 最も、Andreas:*トランザクションの処理:概念と手法*(Morgan Kaufmann 発行元、1993)。  
+-   灰色、j.。 N と Reuter、Andreas:*トランザクション処理: 概念と手法*(Morgan gray Publishers、1993)。  
   
--   Hackathorn、Richard D.:*エンタープライズ データベース接続*(Wiley & Sons、1993)。  
+-   Hackathorn、Richard D.:*エンタープライズデータベース接続*(ワイリー & 息子、1993)。  
   
- コールレベル インターフェイスの詳細については、次の標準を使用できます。  
+ 呼び出しレベルのインターフェイスの詳細については、次の基準を参照してください。  
   
--   Open Group、*データ管理。SQL 呼び出しレベルのインターフェイス (CLI)、C451* (Open Group、1995)。  
+-   [グループを開く]、*データ管理: SQL 呼び出しレベルインターフェイス (CLI)、C451* (open group、1995) を開きます。  
   
--   ISO/IEC 9075-3:1995、コールレベル インターフェイス (SQL/CLI)。  
+-   ISO/IEC 9075-3:1995、呼び出しレベルのインターフェイス (SQL/CLI)。  
   
- ODBC の詳細については、本の数はなどです。  
+ ODBC の詳細については、次のような多数の書籍が用意されています。  
   
--   Geiger、Kyle:*ODBC の内部*(Microsoft Press®、1995)。  
+-   Geiger、Kyle: *ODBC 内部*(Microsoft Press®、1995)。  
   
--   Gryphon、Robert、Charpentier、Luc、Oelschlager、Jon、Shoemaker、Andrew、Jim、クロスと Lilley、Albert W.:*ODBC 2 を使用して*(キュー、1994)。  
+-   Gryphon、Robert、Charpentier、Luc、Oelschlager、Jon、Shoemaker、Andrew、十字、Jim、Lilley、アルバート W.: ODBC 2 (クエリ、1994)*を使用*します。  
   
--   Johnston、Tom および Osborne、マークを付けます。*ODBC の開発者ガイド*(Howard W. Sams & 会社、1994)。  
+-   ジョンストン、Tom、Osborne、Mark: *ODBC 開発者ガイド*(Howard W. Sam & Company、1994)。  
   
--   北、Ken:*Windows のマルチ DBMS プログラミング:C++、Visual Basic、ODBC、OLE 2 およびツールを使用して、プロジェクトの DBMS* (John Wiley & Sons, inc., 1995)。  
+-   Ken: *Windows マルチ DBMS プログラミング: C++、Visual Basic、ODBC、OLE 2 およびツールを DBMS プロジェクト*(John ワイリー & 息子、inc.、1995) で使用しています。  
   
--   Stegman、Michael O.、Signore、Robert、および Creamer、John:*ODBC ソリューション、Open Database Connectivity で分散環境*(Mcgraw-hill 刊、1995)。  
+-   McGraw、Robert、および Creamer、John: *ODBC Open Database Connectivity ソリューションは、分散環境*(、1995) に含まれていますが、このような場合には、このようなことを示します。  
   
--   ウェルチ、Keith:*ODBC 2 を使用して*(キュー、1994)。  
+-   Keith: *ODBC 2* (クエリ, 1994) の使用。  
   
--   Whiting、請求書:*Teach Yourself 21 日間に ODBC* (Howard W. Sams & 会社、1994)。
+-   ご自分の ODBC については、 *20 日でご自身*の Howard をご提供します (W. Sam & Company, 1994)。

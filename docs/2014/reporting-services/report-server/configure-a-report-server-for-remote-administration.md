@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104101"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>リモート管理用のレポート サーバーの構成
@@ -58,15 +58,15 @@ ms.locfileid: "66104101"
   
  このトピックでは、これらのタスクを実行する方法について説明します。  
   
-### <a name="to-open-ports-in-windows-firewall"></a>Windows ファイアウォールでポートを開く  
+### <a name="to-open-ports-in-windows-firewall"></a>Windows ファイアウォールでポートを開くには  
   
-1.  [データベース エンジン アクセスの Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)します。  
+1.  [データベースエンジンアクセスできるように Windows ファイアウォールを構成](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)します。  
   
-2.  [レポート サーバーへのアクセスのファイアウォールを構成する](configure-a-firewall-for-report-server-access.md)します。  
+2.  [レポートサーバーアクセス用のファイアウォールを構成](configure-a-firewall-for-report-server-access.md)します。  
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>レポート サーバー データベースへのリモート接続を構成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 2.  左側のペインで、 **[SQL Server ネットワークの構成]** を展開し、 **のインスタンスの** [プロトコル] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をクリックします。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66104101"
   
 1.  リモート管理を有効にするコンピューターに、ローカル管理者としてログオンします。  
   
-2.  レポート サーバーが Windows Vista で実行している場合を右クリックして**コマンド プロンプト**選択**管理者として実行**します。 その他のオペレーティング システムの場合は、コマンド プロンプト ウィンドウを開きます。  
+2.  レポートサーバーが Windows Vista で実行されている場合は、[**コマンドプロンプト**] を右クリックし、[**管理者として実行**] を選択します。 その他のオペレーティング システムの場合は、コマンド プロンプト ウィンドウを開きます。  
   
 3.  次のコマンドを実行します。  
   
@@ -92,13 +92,14 @@ ms.locfileid: "66104101"
     netsh.exe firewall show state  
     ```  
   
-5.  コンピューターを再起動します。  
+5.  コンピューターを再起動します。
+  
   
 ### <a name="to-set-dcom-permissions-to-enable-remote-wmi-access-for-non-administrators"></a>DCOM 権限を設定して管理者以外のユーザーによるリモート WMI アクセスを有効にするには  
   
 1.  [スタート] メニューで、 **[管理ツール]** をポイントし、 **[コンポーネント サービス]** をクリックします。  
   
-     Windows Vista では、スタート メニューをクリックして**すべてのプログラム**、 をクリックして**実行**、し、入力`mmc comexp.msc`します。  
+     Windows Vista の場合は、[スタート] メニューの [**すべてのプログラム**] をクリックし`mmc comexp.msc`、[**実行**] をクリックして、「」と入力します。  
   
 2.  [コンポーネント サービス] フォルダーを開きます。  
   
@@ -116,7 +117,7 @@ ms.locfileid: "66104101"
   
 9. 自分のアカウントの名前を入力して、 **[OK]** をクリックします。  
   
-10. **[\<ユーザーまたはグループ のアクセス許可>]** で、 **[許可]** 列の **[リモートからの起動]** と **[リモートからのアクティブ化]** をオンにして、 **[OK]** をクリックします。  
+10. **[\<ユーザーまたはグループ のアクセス許可>]** で、**[許可]** 列の **[リモートからの起動]** と **[リモートからのアクティブ化]** をオンにして、**[OK]** をクリックします。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>管理者以外のユーザーにレポート サーバーの WMI 名前空間に対する権限を設定するには  
   
@@ -144,7 +145,7 @@ ms.locfileid: "66104101"
   
 12. **[追加]** をクリックして、サーバーを管理するために使用するユーザー アカウントを入力します。  
   
-13. **[許可]** 列の **[アカウントの有効化]** 、 **[リモートの有効化]** 、 **[セキュリティの読み取り]** をオンにして、 **[OK]** をクリックします。  
+13. **[許可]** 列の **[アカウントの有効化]**、 **[リモートの有効化]**、 **[セキュリティの読み取り]** をオンにして、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

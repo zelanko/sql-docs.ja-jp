@@ -1,26 +1,26 @@
 ---
-title: データベースの復元
+title: データベースを復元する
 titleSuffix: SQL Server big data clusters
-description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のマスター インスタンスにデータベースを復元する方法について説明します。
+description: この記事では、SQL Server 2019 ビッグ データ クラスターのマスター インスタンスにデータベースを復元する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
-ms.translationtype: MT
+ms.openlocfilehash: 722c826f5b9a9dd7d1ebe7e1cf444b779f7d4e67
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969486"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606774"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server ビッグ データ クラスターのマスター インスタンスにデータベースを復元する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のマスター インスタンスに既存のデータベースを復元する方法について説明します。 バックアップ、コピー、復元の方法を使用することをお勧めします。
+この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のマスター インスタンスに既存のデータベースを復元する方法について説明します。 バックアップ、コピー、復元の方法を使用することをお勧めします。
 
 ## <a name="backup-your-existing-database"></a>既存のデータベースをバックアップする
 
@@ -29,7 +29,7 @@ ms.locfileid: "68969486"
 この記事では、AdventureWorks データベースを復元する方法について説明しますが、どのようなデータベース バックアップでも使用できます。 
 
 > [!TIP]
-> AdventureWorks のバックアップは[こちら](https://www.microsoft.com/download/details.aspx?id=49502)からダウンロードできます。
+> [AdventureWorks のバックアップ](../samples/adventureworks-install-configure.md)をダウンロードします。
 
 ## <a name="copy-the-backup-file"></a>バックアップ ファイルをコピーする
 
@@ -110,8 +110,8 @@ GO
 > [!NOTE]
 > 以前のバージョンの SQL Server から復元されたデータベースに対してのみ、これらのセットアップ スクリプトを実行する必要があります。 SQL Server マスター インスタンスに新しいデータベースを作成した場合、データ プールと記憶域プールのストアド プロシージャは既に構成されています。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-SQL Server ビッグ データ クラスターに関する詳細については、次の概要を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、次の概要を参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)

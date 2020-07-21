@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_4104 | Microsoft Docs
+description: 指定されたマルチパート識別子を既存のエンティティにマップできませんでした。 エラーの説明と、考えられる解決策をご確認ください。
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27f6dfb6a41bab31fb716671f431115468d8bd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d3cac9c566928baac5a32fe0aa318fbb823c57d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763071"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|4104|  
 |イベント ソース|MSSQLSERVER|  
@@ -113,7 +114,7 @@ ms.locfileid: "68120587"
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-    内の複数の  
+    or  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  

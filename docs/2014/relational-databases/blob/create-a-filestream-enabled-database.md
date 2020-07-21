@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fe6e5bc6e4f60bc0703482f3bf4d761104b3c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955682"
 ---
 # <a name="create-a-filestream-enabled-database"></a>FILESTREAM が有効なデータベースを作成する方法
   このトピックでは、FILESTREAM をサポートするデータベースを作成する方法について説明します。 FILESTREAM は特殊なファイル グループを使用するので、データベースの作成時に少なくとも 1 つのファイル グループに対して CONTAINS FILESTREAM 句を指定する必要があります。  
@@ -28,7 +27,7 @@ ms.locfileid: "66010315"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[新しいクエリ]** をクリックしてクエリ エディターを表示します。  
   
-2.  コピー、[!INCLUDE[tsql](../../includes/tsql-md.md)]コードは、アーカイブと呼ばれる FILESTREAM が有効なデータベースを作成します。  
+2.  コードをコピー [!INCLUDE[tsql](../../includes/tsql-md.md)] すると、Archive という名前の FILESTREAM が有効なデータベースが作成されます。  
   
     > [!NOTE]  
     >  このスクリプトでは、ディレクトリ C:\Data が存在している必要があります。  

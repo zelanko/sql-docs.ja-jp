@@ -1,10 +1,7 @@
 ---
-title: マスター サーバーからの複数のターゲット サーバーの参加の解除 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: マスター サーバーからの複数のターゲット サーバーの参加の解除
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,15 +14,20 @@ helpviewer_keywords:
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dc5ad3034885805272ed1d507e0168d5884c4c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dcce797597d2f0ed4700ad17d716d31c49a4cffa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267228"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254723"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>マスター サーバーからの複数のターゲット サーバーの参加の解除
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -33,7 +35,7 @@ ms.locfileid: "68267228"
 
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、マルチサーバー管理構成から複数のターゲット サーバーの参加を解除する方法について説明します。 この手順はマスター サーバーから実行します。  
   
-## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-defect-multiple-target-servers-from-a-master-server"></a>マスター サーバーから複数のターゲット サーバーの参加を解除するには  
   

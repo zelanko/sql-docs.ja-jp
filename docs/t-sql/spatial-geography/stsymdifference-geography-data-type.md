@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f1e7824f864d7d764529fb6860496316bf00537d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 208994b0a931fa6960071f730391d36cc83e619a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701691"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   任意の **geography** インスタンスと別の **geography** インスタンスのいずれかに存在する地点すべてを表すオブジェクトを返します。つまり、両方のインスタンスに存在する地点は除外されます。  
   
@@ -43,16 +43,16 @@ ms.locfileid: "68120772"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、半球より大きい空間インスタンスをサポートしています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバー上で使用可能な結果セットが **FullGlobe** インスタンスに拡張されています。  
   
  結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>A. 2 つの多角形の対称差を計算する  
  次の例では、`STSymDifference()` を使用して 2 つの `Polygon` インスタンスの対称差を計算します。  

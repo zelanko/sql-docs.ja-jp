@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6776cea91288d22ed6765e8c4651266c0bcffa7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d242fc31411bc0fdb05cca1f65355f49acec575a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640427"
 ---
 # <a name="login-for-updatable-subscriptions"></a>[更新可能なサブスクリプション] のログイン
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   即時更新するために、このウィザードの **[更新可能なサブスクリプション]** ページで **[レプリケート]** を選択した場合は、パブリッシャーへの接続に使用する、サブスクライバーでのアカウントを指定する必要があります。 
   
  接続はサブスクライバーで起動されるトリガーによって使用され、サブスクライバーに変更を反映します。 このアカウントは、 **[更新可能なサブスクリプション]** ページで **[変更をキューに登録し、可能な場合はコミット]** を選択している場合でも必要です。 サブスクリプションの新規作成ウィザードでは、必要に応じて即時更新に切り替えることができるキュー更新が既定で構成されます。  
@@ -35,25 +35,25 @@ ms.locfileid: "67943704"
   
 -   レプリケーションによって作成されるリンク サーバー。サブスクライバーで変更を行うユーザーの資格情報を使用して接続を行います。  
   
- 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、[sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) を使用した場合にだけ指定できます。 **@security_mode** パラメーターに値 **1** を指定します。  
+ 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、[sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) を使用した場合にだけ指定できます。`@security_mode` パラメーターに値 **1** を指定します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[SQL Server 認証を使用して接続するリンク サーバーを作成する]**  
  レプリケーションにより、 **[ログイン]** フィールドおよび **[パスワード]** フィールドに指定された資格情報に基づいてリンク サーバーが作成されます。  
   
- **[ログイン]**  
- このトピックに記載された権限だけを持つ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを入力します。  
+ **Login**  
+ このトピックに記載されたアクセス許可のみを持つ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを入力します。  
   
- **[パスワード]**  
+ **パスワード**  
  **[ログイン]** に指定したログインに使用する複雑なパスワードを入力します。  
     
  **[定義済みのリンク サーバーまたはリモート サーバーを使用する]**  
  このオプションを使用するには、定義済みのリンク サーバーまたはリモート サーバーが必要です。 詳細については、「[リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」および「[リモート サーバー](../../database-engine/configure-windows/remote-servers.md)」を参照してください。 リンク サーバーまたはリモート サーバーに使用するログインに対して複雑なパスワードが設定されていて、このトピックに記載された権限だけが設定されていることを確認してください。  
   
-## <a name="see-also"></a>参照  
- [トランザクション パブリケーションの更新可能なサブスクリプションの作成](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+## <a name="see-also"></a>関連項目  
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [トランザクション レプリケーションの更新可能なサブスクリプション](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

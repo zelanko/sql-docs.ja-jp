@@ -18,17 +18,17 @@ helpviewer_keywords:
 - current lock time-out setting
 - locking [SQL Server], time-outs
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 767ccc61139886a1e81bbeb390b89676267b0d79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fd99b8be28b8b637a1d4128a83a359af7fea05f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732230"
 ---
-# <a name="x40x40locktimeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のセッションの現在のロック タイムアウト設定をミリ秒単位で返します。  
   
@@ -41,14 +41,14 @@ ms.locfileid: "68059899"
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET LOCK_TIMEOUT を使用して、使用されないようにブロックされているリソースが使用できるようになるまでのステートメントの最大待ち時間を設定できます。 ステートメントの待機時間が LOCK_TIMEOUT の設定を超えると、ブロックされているステートメントが自動的に取り消され、エラー メッセージがアプリケーションに返されます。  
   
  現在のセッションで SET LOCK_TIMEOUT がまだ実行されていない場合、@@LOCK_TIMEOUT は値 -1 を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、LOCK_TIMEOUT 値が設定されていない場合の結果セットを示します。  
   
 ```  

@@ -1,7 +1,8 @@
 ---
-title: 例:データベースの段階的な部分復元 (完全復旧モデル) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: '段階的な部分復元: 完全復旧モデル'
+description: この例では、ログ末尾のバックアップから始まる完全復旧モデルを使用した、SQL Server でのデータベースの段階的な部分復元を示します。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 959b42665fa46a6e1216c0f1cb11f90569714ed8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f680bae8939aa6c4f6648c6076616564cd7d195c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737767"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>例:データベースの部分復元 (完全復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   段階的な部分復元シーケンスでは、プライマリ ファイル グループとすべての読み書き可能なセカンダリ ファイル グループから順に、ファイル グループ レベルで段階的にデータベースが復元され、復旧されます。  
   
@@ -75,15 +76,13 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 3.  ファイル グループ `B`をオンライン復元します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
+   3 番目の復元シーケンスでは、データベース管理者がファイル グループ `B`を復元します。 ファイル グループ `B` のバックアップは、ファイル グループ B が読み取り専用になってから行います。このため、復旧中にこのファイル グループをロールフォワードする必要はありません。  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
-    ```  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
+   ```  
   
-     All filegroups are now online.  
+   すべてのファイル グループがオンラインになります。  
   
 ## <a name="additional-examples"></a>その他の例  
   

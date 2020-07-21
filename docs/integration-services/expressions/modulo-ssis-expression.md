@@ -12,14 +12,14 @@ helpviewer_keywords:
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cbd48fc88f2b7298418f2e428c283131bf2e08fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6b663a99e8e0e5dd7d9d91a81fe39fecef6802b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941224"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71288804"
 ---
 # <a name="modulo-ssis-expression"></a>(剰余) (SSIS 式)
 
@@ -46,7 +46,7 @@ dividend % divisor
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  両方の式は、符号付きまたは符号なし整数データ型に評価される必要があります。  
   
  オペランドのいずれかが NULL の場合、結果は NULL になります。  
@@ -72,7 +72,7 @@ SalesQuota % 12
 @[Sales$] % @Month  
 ```  
   
- この例では、剰余演算子を使用して、**Value** 変数の値が偶数か奇数かを判別し、条件演算子を使用して結果を示す文字列を返します。 詳しくは、「[? : &#40;条件&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/conditional-ssis-expression.md)」をご覧ください。  
+ この例では、剰余演算子を使用して、 **Value** 変数の値が偶数か奇数かを判別し、条件演算子を使用して結果を示す文字列を返します。 詳しくは、「[? : &#40;条件&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/conditional-ssis-expression.md)」をご覧ください。  
   
 ```  
 @Value % 2 == 0? "even":"odd"  

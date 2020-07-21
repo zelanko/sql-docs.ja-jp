@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105787"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66105787"
   
  書式設定するアイテムを選択し、そのアイテムの [プロパティ] ダイアログ ボックスを開くと、書式設定オプションを変更できます。 たとえば、テキスト ボックス全体のコンテンツやテキスト ボックスの選択した単語の書式を設定するには、アイテムを右クリックして、 **[テキスト ボックスのプロパティ]** を選択します。 次に、書式設定するスタイルを適用することができます。  
   
- すぐに使用するには、「[チュートリアル:テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。  
+ すぐに使用するには、「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,7 +53,7 @@ ms.locfileid: "66105787"
  [レポートまたはテキスト ボックスのロケールの設定 &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  日付、通貨、数値など、言語や地域ごとに異なるデータの表示形式の設定を変更する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

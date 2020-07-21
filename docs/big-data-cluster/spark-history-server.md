@@ -1,33 +1,34 @@
 ---
-title: Spark アプリケーションのデバッグと診断
-titleSuffix: SQL Server big data clusters
+title: Spark アプリケーションをデバッグおよび診断する
+titleSuffix: SQL Server Big Data Clusters
 description: Spark History Server を使用して、SQL Server 2019 ビッグ データ クラスター上で実行されている Spark アプリケーションをデバッグおよび診断します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aabf68c2f1294dfb3873fdfcbec41827e4f80fec
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
-ms.translationtype: MT
+ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731075"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606504"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>SQL Server ビッグ データ クラスター上の Spark History Server の Spark アプリケーションのデバッグと診断
+# <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の Spark History Server の Spark アプリケーションのデバッグと診断
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、拡張 Spark History Server を使用して、SQL Server 2019 (プレビュー) ビッグ データ クラスターで Spark アプリケーションをデバッグおよび診断する方法に関するガイダンスを提供します。 これらのデバッグ機能と診断機能は、Microsoft が提供する Spark History Server に組み込まれています。 拡張機能には、データ タブ、グラフ タブ、診断タブがあります。データ タブで、ユーザーは Spark ジョブの入力データと出力データを確認できます。 グラフ タブで、ユーザーはデータフローを確認し、ジョブ グラフを再生できます。 診断タブで、ユーザーはデータ スキュー、時間のずれ、および実行プログラムの使用状況の分析を参照できます。
+この記事では、拡張 Spark History Server を使用して、SQL Server ビッグ データ クラスターで Spark アプリケーションをデバッグおよび診断する方法に関するガイダンスを提供します。 これらのデバッグ機能と診断機能は、Microsoft が提供する Spark History Server に組み込まれています。 拡張機能には、データ タブ、グラフ タブ、診断タブがあります。データ タブで、ユーザーは Spark ジョブの入力データと出力データを確認できます。 グラフ タブで、ユーザーはデータフローを確認し、ジョブ グラフを再生できます。 診断タブで、ユーザーはデータ スキュー、時間のずれ、および実行プログラムの使用状況の分析を参照できます。
 
 ## <a name="get-access-to-spark-history-server"></a>Spark History Server へのアクセスを取得する
 
 オープン ソースの Spark History Server ユーザー エクスペリエンスは、ジョブ固有のデータや、ビッグ データ クラスターのジョブ グラフとデータ フローの対話型の視覚化などの情報によって強化されています。 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>URL を指定して Spark History Server Web UI を開く
-次の URL を参照して Spark History Server を開き、`<Ipaddress>` と `<Port>` をビッグ データ クラスター固有の情報に置き換えます。 詳細については、次の情報を参照してください。[SQL Server ビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md)
+次の URL を参照して Spark History Server を開き、`<Ipaddress>` と `<Port>` をビッグ データ クラスター固有の情報に置き換えます。 基本認証 (ユーザー名/パスワード) のビッグ クラスター セットアップでは、ゲートウェイ (Knox) エンドポイントにログインするように求められたとき、ユーザー **root** を指定する必要があります。 詳細については、次の情報を参照してください。[SQL Server ビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -91,7 +92,7 @@ Spark History Server Web UI は次のような外観です。
 
     ![グラフのジョブ ID](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ **[Progress]\(進行状況\)** は既定値のままにします。 ユーザーは、**表示**のドロップダウンリストで **[読み取り]** または **[書き込み]** を選択して、データフローを確認できます。
++ **[Progress]\(進行状況\)** は既定値のままにします。 ユーザーがデータ フローを確認するには、 **[Display]\(表示\)** のドロップダウン リストで **[Read]\(読み取り\)** または **[Written]\(書き込み\)** を選択します。
 
     ![グラフの表示](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -163,9 +164,9 @@ Spark History Server Web UI は次のような外観です。
 ### <a name="data-skew"></a>[Data Skew]\(データ スキュー\)
 **[Data Skew]\(データ スキュー\)** タブをクリックすると、指定したパラメーターに基づいて、対応する偏りのあるタスクが表示されます。 
 
-+ **[Specify Parameters]\(パラメーターの指定\)** - 最初のセクションには、[Data Skew]\(データ スキュー\) の検出に使用されるパラメーターが表示されます。 組み込みの規則は次のとおりです。[Task Data Read]\(読み取られたタスク データ\) が、読み取られたタスクの平均読み取り回数の 3 倍を超えており、読み取られたタスク データが 10 MB を超えています。 偏りのあるタスクに対して独自の規則を定義する場合は、 **[Skewed Stage]\(偏りのあるステージ\)** パラメーターを選択します。それに応じて、 **[Skew Char]\(スキュー グラフ\)** セクションが更新されます。 
++ **[パラメーターの指定]** - 最初のセクションには、データ スキューの検出に使用するパラメーターが表示されます。 組み込みの規則は次のとおりです。読み取られたタスク データが、読み取られたタスク データの平均量の 3 倍を超えており、なおかつ 10 MB を超えていることが指定されています。 偏りのあるタスクに対して独自の規則を定義する場合は、 **[Skewed Stage]\(偏りのあるステージ\)** パラメーターを選択します。それに応じて、 **[Skew Char]\(スキュー グラフ\)** セクションが更新されます。 
 
-+ **[Skewed Stage]\(偏りのあるステージ\)** - 2 つ目のセクションには、上で指定した条件を満たす偏りのあるタスクがあるステージが表示されます。 ステージに偏りのあるタスクが複数ある場合、偏りのあるステージ テーブルには、最も偏りの大きなタスク (たとえば、データ スキューの最大データ) のみが表示されます。 
++ **[傾斜したステージ]** - 2 番目のセクションには、上記で指定した条件を満たす偏りのあるタスクがあるステージが表示されます。 ステージに偏りのあるタスクが複数ある場合、偏りのあるステージ テーブルには、最も偏りの大きなタスク (たとえば、データ スキューの最大データ) のみが表示されます。 
 
     ![データ スキュー section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
@@ -176,7 +177,7 @@ Spark History Server Web UI は次のような外観です。
 ### <a name="time-skew"></a>[Time Skew]\(時間のずれ\)
 **[Time Skew]\(時間のずれ\)** タブには、タスクの実行時間に基づいて偏りのあるタスクが表示されます。 
 
-+ **[Specify Parameters]\(パラメーターの指定\)** - 最初のセクションには、[Time Skew]\(時間のずれ\) の検出に使用されるパラメーターが表示されます。 時間のずれを検出する既定の条件は、タスクの実行時間が平均実行時間の 3 倍を超えており、タスクの実行時間が 30 秒を超えていることです。 必要に応じてパラメーターを変更できます。 **[Skewed Stage]\(偏りのあるステージ\)** と **[Skew Chart]\(スキュー グラフ\)** には、上の **[Data Skew]\(データ スキュー\)** タブと同様に対応するステージとタスクの情報が表示されます。
++ **[パラメーターの指定]** - 最初のセクションには、時間のずれの検出に使用するパラメーターが表示されます。 時間のずれを検出する既定の条件は、タスクの実行時間が平均実行時間の 3 倍を超えており、なおかつ 30 秒を超えていることです。 必要に応じてパラメーターを変更できます。 **[Skewed Stage]\(偏りのあるステージ\)** と **[Skew Chart]\(スキュー グラフ\)** には、上の **[Data Skew]\(データ スキュー\)** タブと同様に対応するステージとタスクの情報が表示されます。
 
 + **[Time Skew]\(時間のずれ\)** をクリックすると、 **[Specify Parameters]\(パラメーターの指定\)** セクションに設定されたパラメーターに従って、フィルター処理された結果が **[Skewed Stage]\(偏りのあるステージ\)** セクションに表示されます。 **[Skewed Stage]\(偏りのあるステージ\)** セクションのいずれかの項目をクリックすると、section3 に対応するグラフの下書きが描写され、タスクの詳細が右下のパネルに表示されます。
 
@@ -201,7 +202,8 @@ Spark History Server には、次の既知の問題があります。
 
 + RDD を使用した入力/出力データは、[Data]\(データ\) タブに表示されません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-* [SQL Server ビッグ データ クラスターの概要](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
-* [Spark の設定を構成する](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
+* [SQL Server ビッグ データ クラスターの概要](../big-data-cluster/deploy-get-started.md)
+* Spark の設定を構成する
+* [Spark の設定を構成する](/azure/hdinsight/spark/apache-spark-settings/)

@@ -1,5 +1,5 @@
 ---
-title: 使用して、HAVING 句および WHERE 句と同じではクエリ (Visual Database Tools) |Microsoft Docs
+title: 同じクエリ内で HAVING 句と WHERE 句を使用する方法 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 190566ef770a69f5303bb07bb357b8685f66e78d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63204630"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040690"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>同一クエリ内で HAVING 句および WHERE 句を使用する (Visual Database Tools)
   場合によっては、HAVING を使用してグループ全体に条件を適用する前に、WHERE 句を使用してグループから個別の行を除外する必要があります。  
@@ -88,8 +87,8 @@ HAVING AVG(price) > 10
     GROUP BY titles.pub_id  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [クエリ結果の並べ替えとグループ化&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>参照  
+ [クエリ結果の並べ替えとグループ化 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [クエリ結果の要約 (Visual Database Tools)](summarize-query-results-visual-database-tools.md)  
   
   

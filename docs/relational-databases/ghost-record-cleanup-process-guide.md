@@ -1,5 +1,6 @@
 ---
 title: ゴースト クリーンアップ プロセスのガイド | Microsoft Docs
+description: SQL Server で削除対象としてマークされているページからレコードを削除するバックグラウンド プロセスである、ゴースト クリーンアップ プロセスについて説明します。
 ms.custom: ''
 ms.date: 05/02/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1b4075a577991909ac129ce51c7625ae44ad1aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035961"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859094"
 ---
 # <a name="ghost-cleanup-process-guide"></a>ゴースト クリーンアップ プロセスのガイド
 
@@ -38,7 +39,7 @@ ms.locfileid: "68035961"
 
  ```sql
  SELECT sum(ghost_record_count) total_ghost_records, db_name(database_id) 
- FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL)
+ FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, 'SAMPLED')
  group by database_id
  order by total_ghost_records desc
 ```
@@ -55,7 +56,7 @@ ms.locfileid: "68035961"
  > ゴースト クリーンアップ プロセスを無効にすることは、一般には推奨されません。 これを行う場合は、運用環境で完全に実装する前に、制御された環境で十分テストする必要があります。
 
 
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 [ゴースト クリーンアップ プロセスの無効化](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
 <br>[単一のデータベースのファイルからゴースト レコードを削除する](system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
 <br>[すべてのデータベースのデータ ファイルからゴースト レコードを削除する](system-stored-procedures/sp-clean-db-free-space-transact-sql.md)

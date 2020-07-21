@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: e1346cf21d0fb7fe9d81afc9740edf02957a0009
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e4c1911eb90d2878d51eeb91961042db8ca2917
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102170"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883998"
 ---
 # <a name="database-console-commands"></a>データベース コンソール コマンド
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、以下の管理コマンドが用意されています。
   

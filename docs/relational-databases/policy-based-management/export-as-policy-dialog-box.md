@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 14333d96ce4a1022979a2998cb808bfa16cd7a0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 40fe56e0cd726ca9dd3c129bd46dabd38c4aecfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749408"
 ---
 # <a name="export-as-policy-dialog-box"></a>[ポリシーとしてエクスポート] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティ セットをポリシーとしてエクスポートできます。 ポリシーは、XML ファイルで保存することも、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の現在のインスタンスに直接保存することもできます。  
   
 ## <a name="options"></a>オプション  

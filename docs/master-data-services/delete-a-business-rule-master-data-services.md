@@ -1,5 +1,5 @@
 ---
-title: ビジネス ルールを削除する (マスター データ サービス) | Microsoft Docs
+title: ビジネス ルールを削除する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec560acba23c5423c295f569745da1f8d6bc86e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 475af6465a5e79e6577c60ac88a312fb5d0d4cf9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812777"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>ビジネス ルールを削除する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になったビジネス ルールを削除します。  
   
 > [!NOTE]  
 >  ビジネス ルールに対するデータの検証が行われないようにするには、ビジネス ルールを削除する代わりに除外することができます。 詳細については、「 [ビジネス ルールを除外する (マスター データ サービス)](../master-data-services/exclude-a-business-rule-master-data-services.md)」を参照してください。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-a-business-rule"></a>ビジネス ルールを削除するには  
   
@@ -59,8 +59,8 @@ ms.locfileid: "68094404"
 10. 確認のダイアログ ボックスで **[OK]** をクリックします。 削除されたビジネス ルールはグリッドに表示されなくなります。  
   
 ## <a name="see-also"></a>関連項目  
- [ビジネス ルールを除外する (マスター データ サービス)](../master-data-services/exclude-a-business-rule-master-data-services.md)   
- [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [ビジネスルール &#40;マスターデータサービスを除外する&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
+ [ビジネスルール &#40;マスターデータサービスを作成して発行&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   
   

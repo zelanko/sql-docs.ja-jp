@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4badd9c961f5a0d7ca2d3e32185a7ab742628d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 072b6e6f2e7d98b5c6b8967dfab6a5aafe7e6d8c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62901786"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432069"
 ---
 # <a name="look-up-rfc-destination"></a>[RFC 転送先の参照]
   SAP Netweaver BW システムで定義された RFC 転送先を参照する場合、 **[RFC 転送先の参照]** ダイアログ ボックスを使用します。 使用できる RFC 転送先の一覧が表示されたら目的の転送先を選択すると、関連するオプションに必要な値が設定されます。  
@@ -37,8 +36,8 @@ ms.locfileid: "62901786"
   
      **[SAP BW 変換元エディター]** で、 **[RFC 転送先]** は、 **[実行モード]** の値が **[P - プロセス チェーンをトリガー]** または **[W - 通知を待機]** である場合にのみ表示されます。  
   
-## <a name="options"></a>および  
- **変換先**  
+## <a name="options"></a>オプション  
+ **宛先**  
  SAP Netweaver BW システムで定義された RFC 転送先の名前を表示します。  
   
  **ゲートウェイ ホスト**  
@@ -50,7 +49,7 @@ ms.locfileid: "62901786"
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SAP BW ソース エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  

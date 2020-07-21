@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14d8b3f1a998b18ae0153c1771fa11afd925da9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038071"
 ---
 # <a name="create-a-publication"></a>パブリケーションの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリケーションを作成する方法について説明します。  
@@ -41,21 +40,21 @@ ms.locfileid: "63022505"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   パブリケーション名およびアーティクル名には、% , \* , [ , ] , | , : , " , ? を使用できません。 , ' , \ , / , \< , >. データベースのオブジェクトにこれらの文字が含まれ、これらをレプリケートする場合は、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスで、オブジェクト名と異なるアーティクル名を指定する必要があります。このダイアログ ボックスは、ウィザードの **[アーティクル]** ページより利用可能です。  
+-   パブリケーション名およびアーティクル名には、% , \* , [ , ] , | , : , " , ? を使用できません。 , ' , \ , / , \< , >. データベース内のオブジェクトにこれらの文字が含まれていて、それらをレプリケートする場合は、[アーティクルの**プロパティ- \<Article> ** ] ダイアログボックスでオブジェクト名とは異なるアーティクル名を指定する必要があります。このダイアログボックスは、ウィザードの [**アーティクル**] ページから使用できます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../../includes/msconame-md.md)] を使用します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションの新規作成ウィザードにより、パブリケーションを作成し、アーティクルを定義します。 パブリケーションを作成したら、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでパブリケーションのプロパティを表示および変更します。 Oracle データベースからパブリケーションを作成する方法については、「[Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md)」(Oracle データベースからパブリケーションを作成する) をご覧ください。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+ パブリケーションの新規作成ウィザードにより、パブリケーションを作成し、アーティクルを定義します。 パブリケーションが作成されたら、[**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスでパブリケーションのプロパティを表示および変更します。 Oracle データベースからパブリケーションを作成する方法については、「[Create a Publication from an Oracle Database](create-a-publication-from-an-oracle-database.md)」(Oracle データベースからパブリケーションを作成する) をご覧ください。  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>パブリケーションを作成し、アーティクルを定義するには  
   
-1.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
+1.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] でパブリッシャーに接続し、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを右クリックします。  
   
@@ -91,11 +90,11 @@ ms.locfileid: "63022505"
   
          詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md) 」および「 [Replication Security Best Practices](../security/replication-security-best-practices.md)」を参照してください。  
   
-    -   必要に応じて、パブリケーションのスクリプトを作成します。 詳しくは、「 [Scripting Replication](../scripting-replication.md)」をご覧ください。  
+    -   必要に応じて、パブリケーションのスクリプトを作成します。 詳細については、「[レプリケーションのスクリプト作成](../scripting-replication.md)」を参照してください。  
   
     -   パブリケーションの名前を指定します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  パブリケーションは、レプリケーションのストアド プロシージャを使用してプログラムから作成できます。 どのストアド プロシージャを使用するかは、作成するパブリケーションの種類によって異なります。  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションを作成するには  
@@ -108,45 +107,45 @@ ms.locfileid: "63022505"
   
     -   パブリッシュされたデータベース用のログ リーダー エージェント ジョブが存在するかどうかわからない場合は、パブリッシャー側のパブリケーション データベースに対して [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) を実行します。  
   
-    -   結果セットが空の場合は、ログ リーダー エージェント ジョブを作成します。 パブリッシャーで、[sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) を実行します。 エージェントの実行に使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報を **@job_name** と **@password** を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** 」および「 **@publisher_password** 」を参照してください。 手順 3. に進みます。  
+    -   結果セットが空の場合は、ログ リーダー エージェント ジョブを作成します。 パブリッシャーで、[sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) を実行します。 エージェントの実行に使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報を **\@job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合は、 **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** と **\@publisher_password** に [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要もあります。 手順 3. に進みます。  
   
-3.  パブリッシャーで、[sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 パブリケーション名を指定 **@publication** 、あり、さらに、 **@repl_freq** パラメーターの値を指定`snapshot`スナップショット パブリケーションまたはの値の`continuous`のトランザクション パブリケーション。 必要に応じて、その他のパブリケーション オプションを指定してください。 これにより、パブリケーションが定義されます。  
+3.  パブリッシャーで、[sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 ** \@ パブリケーション**のパブリケーション名を指定し、 ** \@ repl_freq**パラメーターには、スナップショットパブリケーションの場合はの値を、 `snapshot` トランザクションパブリケーションの場合は値を指定し `continuous` ます。 必要に応じて、その他のパブリケーション オプションを指定してください。 これにより、パブリケーションが定義されます。  
   
     > [!NOTE]  
     >  パブリケーション名に、次の文字を含めることはできません。  
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-4.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 3. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@snapshot_job_name** と **@password** を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password** を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+4.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 3 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@snapshot_job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **\@publisher_security_mode** に **0** を指定し、**\@publisher_login** と **\@publisher_password** に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
-5.  パブリケーションにアーティクルを追加します。 詳しくは、「 [Define an Article](define-an-article.md)」をご覧ください。  
+5.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
-6.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+6.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 #### <a name="to-create-a-merge-publication"></a>マージ パブリケーションを作成するには  
   
 1.  パブリッシャーで [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行し、マージ レプリケーションを使用して現在のデータベースのパブリケーションを有効にします。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) を実行します。 **@publication** にパブリケーションの名前を指定し、必要に応じて他のパブリケーション オプションを指定します。 これにより、パブリケーションが定義されます。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) を実行します。 **\@publication** にパブリケーションの名前を指定し、必要に応じて他のパブリケーション オプションを指定します。 これにより、パブリケーションが定義されます。  
   
     > [!NOTE]  
     >  パブリケーション名に、次の文字を含めることはできません。  
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-3.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 2. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@snapshot_job_name** と **@password** を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password** を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+3.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 2 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@snapshot_job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **\@publisher_security_mode** に **0** を指定し、**\@publisher_login** と **\@publisher_password** に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
-4.  パブリケーションにアーティクルを追加します。 詳しくは、「 [Define an Article](define-an-article.md)」をご覧ください。  
+4.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
-5.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳しくは、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+5.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、トランザクション パブリケーションを作成します。 スナップショット エージェント ジョブおよびログ リーダー エージェント ジョブの作成に必要な Windows 資格情報は、スクリプト変数を使用して渡しています。  
   
  [!code-sql[HowTo#sp_AddTranPub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranpub)]  
@@ -155,7 +154,7 @@ ms.locfileid: "63022505"
   
  [!code-sql[HowTo#sp_AddMergePub](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergepub)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーション管理オブジェクト (RMO) を使用することで、プログラムによってパブリケーションを作成できます。 パブリケーションの作成に使用する RMO クラスは、作成するパブリケーションの種類によって異なります。  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションを作成するには  
@@ -171,7 +170,7 @@ ms.locfileid: "63022505"
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> (または <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>) フィールドを設定して、ログ リーダー エージェントを実行するときに使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows アカウントの資格情報を指定します。  
   
         > [!NOTE]  
-        >  パブリケーションが `sysadmin` 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> の設定は不要です。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
+        >  パブリケーションが `sysadmin` 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> の設定は不要です。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../security/replication-agent-security-model.md)」を参照してください。  
   
     -   (省略可) SQL Server 認証を使用してパブリッシャーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> ) フィールドを設定します。  
   
@@ -183,14 +182,14 @@ ms.locfileid: "63022505"
   
     -   パブリッシュするデータベースの名前を <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>に指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> にパブリケーションの名前を指定します。  
+    -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>にパブリケーションの名前を指定します。  
   
     -   <xref:Microsoft.SqlServer.Replication.PublicationType> または <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> の <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>を指定します。  
   
     -   <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドに、スナップショット エージェントの実行に使用する Windows アカウントの資格情報を指定します。 このアカウントは、Windows 認証を使用している場合に、スナップショット エージェントがローカル ディストリビューターへの接続や任意のリモート接続を行うときにも使用されます。  
   
         > [!NOTE]  
-        >  パブリケーションが `sysadmin` 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> の設定は不要です。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [Replication Agent Security Model](../security/replication-agent-security-model.md)」を参照してください。  
+        >  パブリケーションが `sysadmin` 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> の設定は不要です。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../security/replication-agent-security-model.md)」を参照してください。  
   
     -   (省略可) SQL Server 認証を使用してパブリッシャーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> ) フィールドを設定します。  
   
@@ -221,7 +220,7 @@ ms.locfileid: "63022505"
   
     -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>にパブリケーションの名前を指定します。  
   
-    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> フィールドに、スナップショット エージェントの実行に使用する Windows アカウントの資格情報を指定します。 このアカウントは、Windows 認証を使用している場合に、スナップショット エージェントがローカル ディストリビューターへの接続や任意のリモート接続を行うときにも使用されます。  
+    -   <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> フィールドに、スナップショット エージェントの実行に使用する Windows アカウントの資格情報を指定します。 このアカウントは、Windows 認証を使用している場合に、スナップショット エージェントがローカル ディストリビューターへの接続や任意のリモート接続を行うときにも使用されます。  
   
         > [!NOTE]  
         >  パブリケーションが `sysadmin` 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> の設定は不要です。 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../security/replication-agent-security-model.md)」を参照してください。  
@@ -235,7 +234,7 @@ ms.locfileid: "63022505"
   
 6.  <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> メソッドを呼び出して、パブリケーションに対するスナップショット エージェント ジョブを作成します。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、AdventureWorks データベースでトランザクション パブリッシュを有効にして、ログ リーダー エージェント ジョブを定義し、AdvWorksProductTran パブリケーションを作成します。 このパブリケーションには、アーティクルを定義する必要があります。 ログ リーダー エージェント ジョブとスナップショット エージェント ジョブの作成に必要な Windows アカウントの資格情報は、実行時に渡されます。 RMO を使用してスナップショット アーティクルとトランザクション アーティクルを定義する方法については、「 [Define an Article](define-an-article.md)」を参照してください。  
   
  [!code-csharp[HowTo#rmo_CreateTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranpub)]  

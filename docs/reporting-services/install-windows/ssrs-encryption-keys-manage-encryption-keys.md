@@ -1,8 +1,10 @@
 ---
-title: 暗号化キーの構成と管理 (SSRS 構成マネージャー) | Microsoft Docs
-ms.date: 05/31/2016
+title: 暗号化キーを構成および管理する (構成マネージャー) | Microsoft Docs
+description: Reporting Services では、暗号化キーを使用して、レポート サーバー データベースに格納されている資格情報および接続情報をセキュリティで保護します。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -14,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d45ec74ab78ad9b201f7829af00d417215e3ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 250e522e922dc282f14628ae625a4a28db97787e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651749"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74866290"
 ---
-# <a name="ssrs-encryption-keys---manage-encryption-keys"></a>SSRS 暗号化キー - 暗号化キーの管理
+# <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>暗号化キーの構成と管理 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化キーを使用して、レポート サーバー データベースに格納されている資格情報および接続情報をセキュリティで保護します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の暗号化では、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 対称キーは、レポート サーバーをインストールまたは構成するとき、レポート サーバーの初期化中に作成されます。レポート サーバーはこの対称キーを使用して、レポート サーバーに保存される機密データを暗号化します。 公開キーと秘密キーはオペレーティング システムによって作成され、これらのキーを使用して対称キーが保護されます。 公開キーと秘密キーのペアは、レポート サーバー データベースに機密データを格納するレポート サーバー インスタンスごとに作成されます。  
   
  暗号化キーを管理するには、対称キーのバックアップ コピーを作成するほか、キーの復元、削除、変更のタイミングと方法を知る必要があります。 レポート サーバーのインストールを移行する場合、またはスケールアウト配置を構成する場合は、対称キーを新しいインストールに適用できるように、対称キーのバックアップ コピーが必要です。  

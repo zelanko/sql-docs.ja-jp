@@ -1,5 +1,5 @@
 ---
-title: Tablix データ領域部分 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Tablix データ領域部分 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 944b6c7053b024a0a62cc24c53095464844d4387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 890d15b32f26664aca1e9144d42aa480789f2eb7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573946"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080861"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix データ領域部分 (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートの Tablix データ領域には、Tablix セルを含む 4 つの領域があります。   
@@ -26,7 +26,7 @@ ms.locfileid: "65573946"
   
 デザイン画面では、選択した Tablix データ領域の 4 つの部分が点線で示されます。 次の図に Tablix 領域の部分を示します。入れ子になった行グループはカテゴリとサブカテゴリに基づいており、入れ子になった列グループは地理と国/地域に基づいており、隣接する列グループは年に基づいています。  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Tablix データ領域部分](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix データ領域部分")  
   
  次の一覧では、各領域について説明します。  
   

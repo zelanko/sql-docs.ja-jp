@@ -1,7 +1,7 @@
 ---
 title: float 型と real 型 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,15 +23,15 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75b888832f9694907af1fbab7031294f32fdda0e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086749"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999237"
 ---
 # <a name="float-and-real-transact-sql"></a>float 型と real 型 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 浮動小数点数値データで使用する概数型です。 浮動小数点データは概数であるため、データ型の範囲に含まれるすべての値を正確に表せるわけではありません。 **real** の ISO シノニムは、 **float (24)** です。
   
@@ -40,7 +40,7 @@ ms.locfileid: "68086749"
 ## <a name="syntax"></a>構文  
 **float** [ **(** _n_ **)** ]。*n* は、科学的表記法で **float** 数の仮数部を格納するために使用されるビット数であるため、精度と格納サイズを指示します。 *n* を指定する場合、**1** から **53** までの値にする必要があります。 *n* の既定値は **53** です。
   
-|*n* 値|有効桁数|ストレージ サイズ|  
+|*n* 値|Precision|ストレージ サイズ|  
 |---|---|---|
 |**1 ～ 24**|7 桁|4 バイト|  
 |**25-53**|15 桁|8 バイト|  
@@ -48,11 +48,11 @@ ms.locfileid: "68086749"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*n* は次の 2 つの値のいずれかの値として扱われます。 **1**<=n<=**24** の場合、*n* は **24** として処理されます。 **25**<=n<=**53** の場合、*n* は **53** として処理されます。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float** **[(n)]** データ型は、*n* (**1** ～ **53**) のすべての値で ISO 標準に準拠しています。 **double precision** のシノニムは **float (53)** です。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float** **[(n)]** データ型は、*n* (**1** から **53**) のすべての値で ISO 標準に準拠しています。 **double precision** のシノニムは **float (53)** です。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-|データ型|範囲|ストレージ|  
+|データ型|Range|ストレージ|  
 |---|---|---|
 |**float**|- 1.79E+308 から -2.23E-308、0、および 2.23E-308 から 1.79E+308|*n* の値により異なります|  
 |**real**|- 3.40E + 38 から -1.18E - 38、0、および 1.18E - 38 から 3.40E + 38|4 バイト|  
@@ -62,7 +62,7 @@ ms.locfileid: "68086749"
   
 **float** または **real** を文字データに変換するときには、STR 文字列関数を使用する方が CAST () よりも便利です。 これは、STR 関数の方がより柔軟に形式を制御できるためです。 詳細については、「[STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)」と「[関数 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)」を参照してください。
   
-科学的表記法を使用した **float** 値から **decimal** または **numeric** への変換は、有効桁数 17 桁までの値に制限されます。 5E-18 未満のすべての値は 0 に切り捨てられます。
+[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] より前では、**float** 値から **decimal** または **numeric** への変換は、有効桁数 17 桁までの値に制限されます。 5E-18 未満の **float** 値はすべて (5E-18 の科学的記数法または 0.0000000000000000050000000000000005 の小数点表記のいずれかを使用して設定されている場合) 0 に丸められます。 これは [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] の時点で制限がなくなりました。
   
 ## <a name="see-also"></a>参照
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

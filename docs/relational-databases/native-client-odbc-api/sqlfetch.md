@@ -1,5 +1,5 @@
 ---
-title: SQLFetch |マイクロソフトのドキュメント
+title: SQLFetch |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,26 +10,24 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLFetch function
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f76163e0577a9490a21362bda70fad1b0105a16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: f77208bdd1bcd5a96d08aa57d9be170cda53b7be
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135498"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003546"
 ---
 # <a name="sqlfetch"></a>SQLFetch
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  SQLFetch サポートには、日付と時刻の機能が強化されています。  
+  SQLFetch は、機能強化された日付と時刻をサポートしています。  
   
- 日付/時刻型の結果列の値に変換する方法については、次を参照してください。 [SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)します。  
+ Date 型または time 型の結果列の値を変換する方法の詳細については、「 [SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)」を参照してください。  
   
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>SQLFetch による大きな CLR UDT のサポート  
- **SQLFetch**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
+ **Sqlfetch**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   

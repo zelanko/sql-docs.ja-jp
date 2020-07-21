@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3f169daa1a885024366e0d2f5aae4df3d245ff75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f83ecbec76bfb142da55aa659ce3ef1cc95dad1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911489"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295895"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>レッスン 5-3:Directory プロパティの構成値の変更
 

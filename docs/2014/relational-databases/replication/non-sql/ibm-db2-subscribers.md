@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54263e75c0f4c7da7c6d9c24ea499c202372aa64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022197"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068619"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server に含まれている OLE DB プロバイダーを経由した IBM DB2/AS 400、DB2/MVS、および DB2/Universal Database へのプッシュ サブスクリプションをサポートします。  
@@ -87,7 +86,7 @@ ms.locfileid: "63022197"
   
 -   テーブル内の 1 つ以上の主キー列がデータ型 DECIMAL(32-38, 0-38) または NUMERIC(32-38, 0-38) である場合は、トランザクション レプリケーションを使用して DB2 サブスクライバーにテーブルをパブリッシュしないでください。 トランザクション レプリケーションは、主キーを使用して行を識別します。この結果、これらのデータ型はサブスクライバーでは VARCHAR(41) にマップされるため、エラーになります。 これらのデータ型を使用する主キーを持つテーブルは、スナップショット レプリケーションを使用してパブリッシュできます。  
   
--   サブスクライバーでテーブルを事前作成する場合は、レプリケーションによって作成するのではなく、replication support only オプションを使用します。 詳細については、「[Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md)」(スナップショットを使用しないトランザクション サブスクリプションの初期化) を参照してください。  
+-   サブスクライバーでテーブルを事前作成する場合は、レプリケーションによって作成するのではなく、replication support only オプションを使用します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、DB2 よりも長いテーブル名と列名を使用できます。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "63022197"
 ## <a name="mapping-data-types-from-sql-server-to-ibm-db2"></a>SQL Server から IBM DB2 へのデータ型マッピング  
  次の表は、IBM DB2 を実行しているサブスクライバーへのデータのレプリケーションで使用される、データ型のマッピングを示しています。  
   
-|SQL Server データ型|IBM DB2 データ型|  
+|SQL Server のデータ型|IBM DB2 データ型|  
 |--------------------------|-----------------------|  
 |`bigint`|DECIMAL(19,0)|  
 |`binary(1-254)`|CHAR(1-254) FOR BIT DATA|  
@@ -106,53 +105,53 @@ ms.locfileid: "63022197"
 |`bit`|SMALLINT|  
 |`char(1-254)`|CHAR(1-254)|  
 |`char(255-8000)`|VARCHAR(255-8000)|  
-|`date`|[DATE]|  
+|`date`|DATE|  
 |`datetime`|timestamp|  
 |`datetime2(0-7)`|VARCHAR(27)|  
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`decimal(32-38, 0-38)`|VARCHAR(41)|  
 |`float(53)`|DOUBLE|  
-|`float`|[FLOAT]|  
-|`geography`|IMAGE|  
-|`geometry`|IMAGE|  
-|`hierarchyid`|IMAGE|  
-|`image`|VARCHAR (0) FOR BIT DATA<sup>1</sup>|  
+|`float`|FLOAT|  
+|`geography`|イメージ|  
+|`geometry`|イメージ|  
+|`hierarchyid`|イメージ|  
+|`image`|BIT データ<sup>1</sup>の場合は VARCHAR (0)|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR(0)<sup>1</sup>|  
+|`ntext`|VARCHAR (0)<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
+|`nvarchar(max)`|VARCHAR (0)<sup>1</sup>|  
 |`real`|real|  
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|なし|  
+|`sql_variant`|N/A|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR(0)<sup>1</sup>|  
+|`text`|VARCHAR (0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
 |`uniqueidentifier`|CHAR(38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|VARCHAR (0) FOR BIT DATA<sup>1</sup>|  
-|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
-|`xml`|VARCHAR(0)<sup>1</sup>|  
+|`varbinary(max)`|BIT データ<sup>1</sup>の場合は VARCHAR (0)|  
+|`varchar(max)`|VARCHAR (0)<sup>1</sup>|  
+|`xml`|VARCHAR (0)<sup>1</sup>|  
   
- <sup>1</sup> varchar (0) へのマッピングの詳細については、次のセクションを参照してください。  
+ <sup>1</sup> VARCHAR (0) へのマッピングの詳細については、次のセクションを参照してください。  
   
 ### <a name="data-type-mapping-considerations"></a>データ型マッピングに関する注意点  
  DB2 サブスクライバーにレプリケートするときは、次に示すデータ型のマッピングに関する問題点について考慮してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の `char`、`varchar`、`binary`、および `varbinary` がそれぞれ DB2 の CHAR、VARCHAR、CHAR FOR BIT DATA、および VARCHAR FOR BIT DATA にマップされると、DB2 データ型の長さはレプリケーションによって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型と同じ長さに設定されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` 、 `varchar` 、 `binary` および `varbinary` を db2 CHAR、varchar、CHAR for bit data、および varchar for bit data にマップする場合、レプリケーションでは、db2 データ型の長さが型の長さと同じになるように設定され [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
      これによって、DB2 ページ サイズ制約が行の最大サイズに対応するために十分な大きさである限り、生成されるテーブルはサブスクライバーで正常に作成できます。 DB2 データベースにアクセスするために使用されるログインに、DB2 にレプリケートされているテーブルに対して十分なサイズを持つテーブル スペースにアクセスするための権限があることを確認します。  
   
--   DB2 は、32 KB の VARCHAR 列をサポートできます。このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB 列の一部は問題なく DB2 VARCHAR 列にマップできる可能性があります。 ただし、レプリケーションが DB2 に対して使用する OLE DB プロバイダーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を DB2 の LOB にマップする処理はサポートしていません。 このため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の `text`、`varchar(max)`、`ntext`、および `nvarchar(max)` 列は、生成される作成スクリプトでは VARCHAR(0) にマップされます。 長さの値が 0 の場合は、サブスクライバーにスクリプトを適用する前に、適切な値に変更する必要があります。 データ型の長さが変更されない場合、DB2 サブスクライバーでテーブルの作成を試みると、DB2 でエラー 604 が発生します (エラー 604 は、データ型の有効桁数または長さの属性が有効でないことを示します)。  
+-   DB2 は、32 KB の VARCHAR 列をサポートできます。このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB 列の一部は問題なく DB2 VARCHAR 列にマップできる可能性があります。 ただし、レプリケーションが DB2 に対して使用する OLE DB プロバイダーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を DB2 の LOB にマップする処理はサポートしていません。 このため、、、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text` `varchar(max)` 、およびの各 `ntext` `nvarchar(max)` 列は、生成された create スクリプトでは VARCHAR (0) にマップされます。 長さの値が 0 の場合は、サブスクライバーにスクリプトを適用する前に、適切な値に変更する必要があります。 データ型の長さが変更されない場合、DB2 サブスクライバーでテーブルの作成を試みると、DB2 でエラー 604 が発生します (エラー 604 は、データ型の有効桁数または長さの属性が有効でないことを示します)。  
   
      レプリケートするソース テーブルの情報に基づいて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を可変長の DB2 項目にマップすることが適切であるかどうかを判断し、カスタム作成スクリプトで適切な最大長を指定してください。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
   
@@ -161,12 +160,12 @@ ms.locfileid: "63022197"
   
      LOB 列が適切にマップされていない場合は、アーティクルに列フィルターを使用して、列がレプリケートされないようにすることを検討してください。 詳細については、「[パブリッシュされたデータのフィルター選択](../publish/filter-published-data.md)」を参照してください。  
   
--   レプリケートするときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`nchar`と`nvarchar`を DB2 の CHAR と VARCHAR、レプリケーションとしての DB2 のデータ型を同じ長さ指定子を使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型。 ただし、データ型の長さが、生成された DB2 テーブルには小さくなりすぎる可能性があります。  
+-   とを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` `nvarchar` DB2 CHAR および VARCHAR にレプリケートする場合、レプリケーションでは、型と同じ長さ指定子が db2 型に対して使用され [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 ただし、データ型の長さが、生成された DB2 テーブルには小さくなりすぎる可能性があります。  
   
-     一部の DB2 の環境で、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`データ項目は 1 バイト文字に制限されません。 CHAR または VARCHAR 項目の長さはアカウントにこれを考慮する必要があります。 また、必要に応じて、 *シフト イン* 文字と *シフト アウト* 文字についても考慮する必要があります。 テーブルをレプリケートする場合`nchar`と`nvarchar`列、カスタム作成スクリプトでデータ型の場合より大きな最大長を指定する必要があります。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
+     DB2 環境によっ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` ては、データ項目が1バイト文字に限定されない場合があります。 CHAR または VARCHAR 項目の長さは、これを考慮する必要があります。 また、必要に応じて、 *シフト イン* 文字と *シフト アウト* 文字についても考慮する必要があります。 列と列を含むテーブルをレプリケートする場合は `nchar` `nvarchar` 、カスタム作成スクリプトでデータ型の最大長を指定する必要があります。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
- [パブリケーションのサブスクライブ](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

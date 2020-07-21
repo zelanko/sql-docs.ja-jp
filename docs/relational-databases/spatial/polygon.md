@@ -13,16 +13,16 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74e6c8cc19bac4c0428924effda87952642a37dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3522345ce61af05d3934bff0fb240f8b5100987a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666898"
 ---
-# <a name="polygon"></a>Polygon
+# <a name="polygon"></a>多角形
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **Polygon** は、1 つの外部境界リングと 0 個以上の内部リングを定義する一連の点として格納される 2 次元表面です。  
   
@@ -43,15 +43,13 @@ ms.locfileid: "68081659"
   
 3.  図 3 の **Polygon** インスタンスは、内部リングが 1 つの接点で交差しているため有効です。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### <a name="accepted-instances"></a>許容されるインスタンス  
  許容される **Polygon** インスタンスとは、例外をスローすることなく **geometry** 変数または **geography** 変数に格納できるインスタンスです。 次に示す **Polygon** インスタンスは許容されます。  
   
 -   空の **Polygon** インスタンス  
--   1 つの許容される外部境界リングと 0 個以上の許容される内部リングを持つ **Polygon** インスタンス  
+-   1 つの許容される外部境界リング (**LineString**) と 0 個以上の許容される内部リング (**LineString**) を持つ **Polygon** インスタンス  
   
-リングが許容されるためには、次の条件を満たす必要があります。  
+リング (**LineString**) が許容されるためには、次の条件を満たす必要があります。  
   
 -   **LineString** インスタンスが許容されていること。  
 -   **LineString** インスタンスに 4 つ以上の点があること。  
@@ -108,7 +106,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
  `@g1` 内部リングが 2 か所で外部リングに接しているため、無効です。 `@g2` 2 つ目の内部リングが 1 つ目の内部リングの内側にあるため、無効です。 `@g3` 2 つの内部リングが連続する複数の点で接しているため、無効です。 `@g4` 2 つの内部リングの内部が交差しているため、無効です。 `@g5` 外部リングが 1 つ目のリングでないため、無効です。 `@g6` リングが 3 つ以上の異なる点を持たないため、無効です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="example-a"></a>例 A.  
 次の例では、1 つのすき間を持つ単純な `geometry` `Polygon` インスタンスを作成しています。SRID は 10 です。
   

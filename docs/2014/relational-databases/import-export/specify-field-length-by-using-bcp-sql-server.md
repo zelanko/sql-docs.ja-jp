@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13343b4f3778df1bbe7ef1c99b3d06338f18631c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011838"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050416"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp を使用したフィールド長の指定 (SQL Server)
-  フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、`int` データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp**コマンドによってフィールド長、既定のフィールド長、および含んでいるデータ ファイル内のデータ ストレージに対するフィールド長の影響のプロンプトが`char`データ。  
+  フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、`int` データ型では 4 バイトになります。 プレフィックス長に0を指定した場合、 **bcp**コマンドを実行すると、フィールド長、既定のフィールド長、およびデータを格納するデータファイル内のデータストレージに対するフィールド長の影響を確認するプロンプトが表示され `char` ます。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>フィールド長を要求する bcp プロンプト  
  対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f**) またはデータ形式スイッチ ( **-n**、 **-c**、 **-w** または **-N**) のどちらも付けずに **in** または **out** オプションを指定すると、次のように各データ フィールドの長さを要求するプロンプトが表示されます。  
@@ -42,15 +41,15 @@ ms.locfileid: "66011838"
   
 -   非文字データを文字データに変換するとき、 **bcp** によってデータの保存に十分な長さの既定フィールド長が提示されます。  
   
--   ファイル保存形式が非文字である場合、 **bcp** コマンドによってフィールド長を要求するプロンプトは表示されません。 データは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ データ表現 (ネイティブ形式) で保存されます。  
+-   ファイル保存形式が非文字である場合、 **bcp** コマンドによってフィールド長を要求するプロンプトは表示されません。 データは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ データ表現 (ネイティブ形式) で格納されます。  
   
 ## <a name="using-default-field-lengths"></a>既定のフィールド長の使用  
  通常、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、 **bcp**によって提示された既定値をフィールド長に使用することをお勧めします。 キャラクター モードのデータ ファイルが作成された場合、既定のフィールド長を使用することによって、データの切り捨てや数値オーバーフロー エラーの発生を防止できます。  
   
- 不適切なフィールド長を指定すると、問題が発生する場合があります。 たとえば、数値データをコピーするときに、そのデータに対して短すぎるフィールド長を指定すると、 **bcp** ユーティリティによってオーバーフロー エラー メッセージが出力され、データはコピーされません。 また、エクスポートする場合は`datetime`データの文字列に対して 26 バイトよりも短いフィールド長を指定し、 **bcp**ユーティリティには、エラー メッセージなしでデータが切り捨てられます。  
+ 不適切なフィールド長を指定すると、問題が発生する場合があります。 たとえば、数値データをコピーするときに、そのデータに対して短すぎるフィールド長を指定すると、 **bcp** ユーティリティによってオーバーフロー エラー メッセージが出力され、データはコピーされません。 また、データをエクスポート `datetime` し、文字列に対して26バイト未満のフィールド長を指定すると、 **bcp**ユーティリティによってデータが切り捨てられ、エラーメッセージも表示されません。  
   
 > [!IMPORTANT]  
->  既定のサイズ オプションを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は文字列全体を読み取ります。 場合によっては、既定のフィールド長を使用すると、"予期しないファイルの終了" エラーが発生することもあります。 通常は、このエラーが発生します、`money`と`datetime`データ型は、データ ファイルで、予期されるフィールドの一部だけが発生したときなど、`datetime`の値*mm*/*dd* / *yy* 、時刻部分なしで指定され、は、そのための予期される 24 文字の長さより短い、`datetime`値`char`形式。 この種類のエラーを防止するには、フィールド ターミネータまたは固定長データ フィールドを使用するか、既定のフィールド長を別の値に変更します。  
+>  既定のサイズ オプションを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は文字列全体を読み取ります。 場合によっては、既定のフィールド長を使用すると、"予期しないファイルの終了" エラーが発生することもあります。 通常、このエラーは、データ `money` `datetime` ファイル内で予期されるフィールドの一部のみが発生した場合に、データ型およびデータ型で発生します。たとえば、 `datetime` *mm* / *dd* / *yy*の値が時刻部分なしで指定されている場合、は、形式の値の予期される24文字の長さよりも短くなり `datetime` `char` ます。 この種類のエラーを防止するには、フィールド ターミネータまたは固定長データ フィールドを使用するか、既定のフィールド長を別の値に変更します。  
   
 ### <a name="default-field-lengths-for-character-file-storage"></a>文字ファイル保存の既定のフィールド長  
  次の表は、文字ファイル保存形式として保存されるデータの既定のフィールド長を示しています。 NULL 値を使用できるデータの長さは、NULL 値を使用できないデータの長さと同じです。  
@@ -84,10 +83,10 @@ ms.locfileid: "66011838"
 |`varchar(max)`|0|  
 |`varbinary(max)`|0|  
 |`nvarchar(max)`|0|  
-|UDT (UDT)|ユーザー定義型 (UDT) 列の長さ|  
+|UDT|ユーザー定義型 (UDT) 列の長さ|  
 |XML|0|  
   
- \*詳細については、`decimal`と`numeric`、データ型を参照してください[decimal および numeric &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)します。  
+ \*およびデータ型の詳細につい `decimal` `numeric` ては、「 [decimal および numeric &#40;transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)」を参照してください。  
   
 > [!NOTE]  
 >  `tinyint` 型の列には、0 ～ 255 の値を入力できます。この範囲の任意の数を表現するために必要な最大文字数は 3 です。これは、100 ～ 255 に相当します。  
@@ -116,11 +115,11 @@ ms.locfileid: "66011838"
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
- <sup>1</sup>の詳細については、`decimal`と`numeric`、データ型を参照してください[decimal および numeric &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)します。  
+ <sup>1</sup>およびデータ型の詳細につい `decimal` ては `numeric` 、「 [decimal および numeric &#40;transact-sql&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)」を参照してください。  
   
  前述のすべての場合に、後で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に再読み込みするためにデータ ファイルを作成して、保存領域を最小限に抑えるには、既定のファイル保存形式と既定のフィールド長と共に、フィールド長プレフィックスを使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   

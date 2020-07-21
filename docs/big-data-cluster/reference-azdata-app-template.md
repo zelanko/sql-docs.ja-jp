@@ -1,39 +1,38 @@
 ---
 title: azdata app template リファレンス
-titleSuffix: SQL Server big data clusters
 description: azdata app template コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3b257a2bacc56a7907ab0d25f492ed0ebd605543
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.openlocfilehash: da1b98649eeb48d5ae2d6ca05e61da53f519e944
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426332"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251050"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下の記事では、**azdata** ツールの **app template** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
+以下の記事では、`azdata` ツールの `app template` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
 | --- | --- |
-[azdata app template list](#azdata-app-template-list) | サポートされているテンプレートを取得します。
-[azdata app template pull](#azdata-app-template-pull) | サポートされているテンプレートをダウンロードします。
+[`azdata app template list`](#azdata-app-template-list) | サポートされているテンプレートを取得します。
+[`azdata app template pull`](#azdata-app-template-pull) | サポートされているテンプレートをダウンロードします。
 ## <a name="azdata-app-template-list"></a>azdata app template list
 指定した [URL] github リポジトリにある、サポートされているテンプレートを取得します。
 ```bash
-azdata app template list [--url -u] 
-                         
+azdata app template list [--url -u]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 既定のテンプレート リポジトリの場所にあるすべてのテンプレートを取得します。
 ```bash
 azdata app template list
@@ -53,7 +52,7 @@ azdata app template list --url https://github.com/diffrent/templates.git
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-app-template-pull"></a>azdata app template pull
@@ -63,7 +62,7 @@ azdata app template pull [--name -n]
                          [--url -u]  
                          [--destination -d]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 既定のテンプレート リポジトリの場所にあるすべてのテンプレートをダウンロードします。
 ```bash
 azdata app template pull
@@ -92,10 +91,10 @@ azdata app template pull --name ssis
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。
+`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

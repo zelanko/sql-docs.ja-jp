@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: cd81b601-2ec3-4358-ad58-c2655496e6a1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fb9020dd5759d0ec4cab86cb3ecc82cba345a4d1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 200ebed7a8c8b1b258020e9a5db29fdde894cf0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770444"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721803"
 ---
-# <a name="mssqleng014164"></a>MSSQL_ENG014164
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="mssql_eng014164"></a>MSSQL_ENG014164
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>メッセージの詳細  
   

@@ -1,5 +1,5 @@
 ---
-title: レッスン 1:マージ レプリケーションを使用してデータのパブリッシュ |Microsoft Docs
+title: 'レッスン 1 : マージ レプリケーションを使用したデータのパブリッシュ | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 30d7c1e04c305a74f99d5d2818b344bfd8f83bd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721180"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065989"
 ---
-# <a name="lesson-1-publishing-data-using-merge-replication"></a>レッスン 1:マージ レプリケーションを使用してデータのパブリッシュ
-  このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してマージ パブリケーションを作成し、 **サンプル データベースの**Employee **テーブル、** SalesOrderHeader **テーブル、および** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルのサブセットをパブリッシュします。 ここでは、パラメーター化された行フィルターを使ってこれらのテーブルをフィルター処理し、サブスクリプションごとに一意のデータ部分が含まれるようにします。 また、マージ エージェントにより使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインをパブリケーション アクセス リスト (PAL) に追加します。 このチュートリアルを学習するには、前のチュートリアル「 [レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)」を完了している必要があります。  
+# <a name="lesson-1-publishing-data-using-merge-replication"></a>レッスン 1 : マージ レプリケーションを使用したデータのパブリッシュ
+   このレッスンでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してマージ パブリケーションを作成し、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースの **Employee** テーブル、**SalesOrderHeader** テーブル、および **SalesOrderDetail** テーブルのサブセットをパブリッシュします。 ここでは、パラメーター化された行フィルターを使ってこれらのテーブルをフィルター処理し、サブスクリプションごとに一意のデータ部分が含まれるようにします。 また、マージ エージェントにより使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインをパブリケーション アクセス リスト (PAL) に追加します。 このチュートリアルを学習するには、前のチュートリアル「 [レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)」を完了している必要があります。  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>パブリケーションを作成し、アーティクルを定義するには  
   
@@ -51,7 +50,7 @@ ms.locfileid: "62721180"
   
 9. **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** をクリックして、 **[OK]** をクリックします。  
   
-10. **[テーブル行のフィルター選択]** ページで、 **[Employee (Human Resources)]** 、 **[追加]** の順にクリックし、 **[選択したフィルターを拡張するために結合を追加する]** をクリックします。  
+10. **[テーブル行のフィルター選択]** ページで、 **[Employee (Human Resources)]**、 **[追加]** の順にクリックし、 **[選択したフィルターを拡張するために結合を追加する]** をクリックします。  
   
 11. **[結合の追加]** ダイアログ ボックスで、 **[結合テーブル]** の下の **[Sales.SalesOrderHeader]** をクリックして、 **[JOIN ステートメントを手動で作成する]** をクリックし、JOIN ステートメントを次のように完成させます。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62721180"
   
 12. **[結合オプションを指定します]** で、 **[一意キー]** を選択して **[OK]** をクリックします。  
   
-13. [テーブル行のフィルター選択] ページで、 **[SalesOrderHeader]** 、 **[追加]** の順にクリックし、 **[選択したフィルターを拡張するために結合を追加する]** をクリックします。  
+13. [テーブル行のフィルター選択] ページで、 **[SalesOrderHeader]**、 **[追加]** の順にクリックし、 **[選択したフィルターを拡張するために結合を追加する]** をクリックします。  
   
 14. **[結合の追加]** ダイアログ ボックスで、 **[結合テーブル]** の下の **[Sales.SalesOrderDetail]** をクリックします。  
   
@@ -77,13 +76,13 @@ ms.locfileid: "62721180"
   
 18. **[結合オプションを指定します]** で、 **[一意キー]** を選択して **[OK]** をクリックします。  
   
-19. **[テーブル行のフィルター選択]** ページで、 **[SalesOrderHeader (Sales)]** 、 **[追加]** の順にクリックし、 **[選択したフィルターを拡張するために結合を追加する]** をクリックします。  
+19. **[テーブル行のフィルター選択]** ページで、 **[SalesOrderHeader (Sales)]**、 **[追加]** の順にクリックし、 **[選択したフィルターを拡張するために結合を追加する]** をクリックします。  
   
 20. **[結合の追加]** ダイアログボックスで、 **[結合テーブル]** の下の **[Sales.SalesOrderDetail]** をクリックして **[OK]** をクリックし、 **[次へ]** をクリックします。  
   
 21. **[スナップショットをすぐに作成する]** を選択し、 **[以下のスケジュールでスナップショット エージェントを実行する]** をオフにして、 **[次へ]** をクリックします。  
   
-22. [エージェント セキュリティ] ページで、 **[セキュリティの設定]** をクリックして、 **[プロセス アカウント]** ボックスに「\<_コンピューター名>_ **\repl_snapshot**」と入力します。さらに、このアカウントのパスワードを入力して、 **[OK]** をクリックします。 **[完了]** をクリックします。  
+22. [エージェントセキュリティ] ページで、[**セキュリティ設定**] をクリックし、[ \<_Machine_Name> **プロセスアカウント**] ボックスに「_**\ repl_snapshot** 」と入力して、このアカウントのパスワードを入力し、[ **OK]** をクリックします。 **[完了]** をクリックします。  
   
 23. [ウィザードの完了] ページで、 **[パブリケーション名]** ボックスに「 **AdvWorksSalesOrdersMerge** 」と入力し、 **[完了]** をクリックします。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "62721180"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>スナップショット生成の状態を表示するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続して、サーバー ノードを展開し、 **[レプリケーション]** フォルダーを展開します。  
+1.  でパブリッシャーに接続し、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーノードを展開して、[**レプリケーション**] フォルダーを展開します。  
   
 2.  [ローカル パブリケーション] フォルダーを展開し、 **[AdvWorksSalesOrdersMerge]** を右クリックして、 **[スナップショット エージェントの状態の表示]** をクリックします。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "62721180"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>マージ エージェントのログインを PAL に追加するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続して、サーバー ノードを展開し、 **[レプリケーション]** フォルダーを展開します。  
+1.  でパブリッシャーに接続し、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーノードを展開して、[**レプリケーション**] フォルダーを展開します。  
   
 2.  [ローカル パブリケーション] フォルダーを展開し、 **[AdvWorksSalesOrdersMerge]** パブリケーションを右クリックして、 **[プロパティ]** をクリックします。  
   
@@ -107,14 +106,14 @@ ms.locfileid: "62721180"
   
 3.  **[パブリケーション アクセス リスト]** ページを選択して、 **[追加]** をクリックします。  
   
-4.  [パブリケーション アクセスの追加] ダイアログ ボックスで、 _<コンピューター名>_ **\repl_merge** を選択して **[OK]** をクリックします。 **[OK]** をクリックします。  
+4.  [パブリケーション アクセスの追加] ダイアログ ボックスで、_<コンピューター名>_**\repl_merge** を選択して **[OK]** をクリックします。 **[OK]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- ここでは、マージ パブリケーションを作成しました。 次は、このパブリケーションをサブスクライブします。 「[レッスン 2:マージ パブリケーションに対するサブスクリプションを作成する](lesson-2-creating-a-subscription-to-the-merge-publication.md)します。  
+ ここでは、マージ パブリケーションを作成しました。 次は、このパブリケーションをサブスクライブします。 「 [レッスン 2: マージ パブリケーションへのサブスクリプションの作成](lesson-2-creating-a-subscription-to-the-merge-publication.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシュされたデータのフィルター処理](publish/filter-published-data.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [パラメーター化された行フィルター](merge/parameterized-filters-parameterized-row-filters.md)   
  [アーティクルの定義](publish/define-an-article.md)  
   
   

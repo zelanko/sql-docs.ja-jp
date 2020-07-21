@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セキュリティ構成ウィザードの起動 | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリング セキュリティ構成ウィザード
+description: SQL Server Management Studio のデータベース ミラーリング セキュリティ構成ウィザードの説明です。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1858a76625e4caaaa913c4d1bf91a466e04ef712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd7bdb74f679f32132361aac5c2b751b9bda9494
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048021"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756464"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>データベース ミラーリング セキュリティ構成ウィザードの起動
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリング セキュリティ構成ウィザードを使用して、ミラーリングで使用されるすべてまたは一部のサーバー インスタンスでセキュリティ設定を初期構成できます。 このウィザードは、 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページから開きます。  
   
 ### <a name="to-launch-the-configure-database-mirroring-security-wizard"></a>データベース ミラーリング セキュリティ構成ウィザードを起動するには  

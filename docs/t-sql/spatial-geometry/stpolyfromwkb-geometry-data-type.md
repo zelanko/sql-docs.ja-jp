@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 358553f62952c9bea60076ea34e85387b95bf543
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b732254b9b900a2513243641f8a309695d5eaf9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762189"
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現を基に **geometryPolygon** インスタンスを返します。
   
@@ -46,14 +46,14 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- OGC の型:**多角形**  
+ OGC の型: **Polygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STPolyFromWKB()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aa07788bc00cc3317024d287f1054a67c6447356
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905881"
 ---
 # <a name="kpistatus-mdx"></a>KPIStatus (MDX)
 
 
-  指定された主要業績評価指標 (KPI) の [状態] 領域を表す正規化された値を返します。  
+  指定された主要業績評価指標 (KPI) のステータス部分を表す正規化された値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,14 +28,14 @@ KPIStatus(KPI_Name)
 ```  
   
 ## <a name="arguments"></a>引数  
- *Kpi 名*  
- KPI の名前を指定する有効な文字列式。  
+ *KPI_Name*  
+ KPI の名前を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>コメント  
- 状態値は-1 ~ 1 の正規化された値では一般にします。  
+## <a name="remarks"></a>Remarks  
+ 通常、状態の値は、-1 ~ 1 の範囲の正規化された値です。  
   
 ## <a name="example"></a>例  
- 次の例では、KPI の値、KPI 目標、KPI の状態、および、Fiscal Year 属性階層の 3 つのメンバーの子孫に対する、channel revenue メジャーの KPI の傾向を返します。  
+ 次の例では、会計年度の属性階層の3つのメンバーの子孫について、チャネル収益メジャーの KPI 値、KPI 目標、KPI の状態、および KPI の傾向を返します。  
   
 ```  
 SELECT  
@@ -53,7 +53,7 @@ Descendants
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -12,21 +12,21 @@ f1_keywords:
 helpviewer_keywords:
 - Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 114bf1f77c6b55099a60a18e89d54e4ac8d51a3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0de4fe433a1f34b49dbfb12082759c954e87a7a4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898930"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298568"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]が動作しているサーバーへの接続を作成したり、接続プロパティを編集したりできます。  
+  **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が動作しているサーバーへの接続を作成したり、接続プロパティを編集したりできます。  
   
  Analysis Services 接続マネージャーの詳細については、「 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)」を参照してください。  
   

@@ -1,5 +1,5 @@
 ---
-title: OriginalValue および UnderlyingValue プロパティの例 (VB) |Microsoft Docs
+title: OriginalValue プロパティと UnderlyingValue プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], Visual Basic example
 - OriginalValue property [ADO]
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f6a4332853a238f316689b67ee71410c59719786
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917798"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762065"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue および UnderlyingValue プロパティの例 (VB)
-この例では、 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)と[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)にレコードのデータを基になる場合は、メッセージを表示することでプロパティが変更された、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)バッチ更新します。  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue プロパティと UnderlyingValue プロパティの例 (VB)
+この例では、レコードの基になるデータがレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のバッチ更新中に変更された場合にメッセージを表示することによって、 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md)プロパティと[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)プロパティを示します。  
   
 ```  
 'BeginOriginalValueVB  
@@ -119,7 +119,7 @@ End Sub
 'EndOriginalValueVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [OriginalValue プロパティ (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue プロパティ](../../../ado/reference/ado-api/underlyingvalue-property.md)

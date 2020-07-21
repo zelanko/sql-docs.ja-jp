@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3de8f9e708149669a65b8abf4114227392aa15a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102708"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>レポートの実行プロパティを構成する (レポート マネージャー)
@@ -38,7 +38,7 @@ ms.locfileid: "66102708"
   
 1.  ドロップダウン メニューで、 **[管理]** をクリックし、 **[処理オプション]** タブを選択します。  
   
-2.   **[このレポートを実行スナップショットから表示する]** をクリックしてから、次のオプションのいずれかを選択します。  
+2.  **[このレポートを実行スナップショットから表示する]** をクリックしてから、次のオプションのいずれかを選択します。  
   
     -   スナップショットを作成する場合は、 **[次のスケジュールを使用して、レポート実行スナップショットを作成する]** を選択し、レポート固有のスケジュールを定義するか、または **[共有スケジュール]** 一覧からスケジュールを選択します。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "66102708"
   
 ## <a name="see-also"></a>参照  
  [レポート処理プロパティの設定](../report-server/set-report-processing-properties.md)   
- [レポートを開閉する (レポート マネージャー)](../reports/open-and-close-a-report-report-manager.md)   
+ [レポート &#40;レポートマネージャーを開いて閉じる&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [[コンテンツ] ページ (レポート マネージャー)](../contents-page-report-manager.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [[処理オプション] プロパティ ページ (レポート マネージャー)](../processing-options-properties-page-report-manager.md)  
+ [[処理オプション] プロパティ ページ &#40;レポート マネージャー&#41;](../processing-options-properties-page-report-manager.md)  
   
   

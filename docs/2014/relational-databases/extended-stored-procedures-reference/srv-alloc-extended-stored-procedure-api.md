@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61157ab8ba2b9f47caf89b6a16a3edd830437abf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 729675f7df3a4e394bb28f4074644289489ef248
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050796"
 ---
 # <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc (拡張ストアド プロシージャ API)
     
@@ -51,7 +50,7 @@ size
 ## <a name="returns"></a>戻り値  
  新しく割り当てた領域を指すポインターを返します。 *size* で指定したバイト数を割り当てられない場合は、NULL ポインターを返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **srv_alloc** 関数は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows API の **GlobalAlloc** 関数に相当します。 拡張ストアド プロシージャ API アプリケーションでは、通常の Windows API C ランタイムのメモリ管理関数を使用できます。  
   
 > [!IMPORTANT]  

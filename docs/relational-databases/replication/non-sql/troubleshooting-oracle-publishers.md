@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3edd60a47ac4cebcdea3f70a0658ce837e3d63ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a2bbbbc6bb18e3239091e0d2902bf65b85deec2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095653"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883221"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle パブリッシャーのトラブルシューティング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、Oracle パブリッシャーを構成および使用する際に発生する可能性のあるいくつかの問題を示します。  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Oracle クライアントおよびネットワーキング ソフトウェアに関連するエラーが発生する  
@@ -56,7 +56,7 @@ ms.locfileid: "68095653"
   
 -   Oracle データベースがオンラインになっており、SQL*Plus などのツールを使用して Oracle データベースに接続できるかどうか。  
   
--   レプリケーションが Oracle パブリッシャーに接続する際に使用するログインに十分な権限があるかどうか。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
+-   レプリケーションが Oracle パブリッシャーに接続する際に使用するログインに十分な権限があるかどうか。 詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
   
 -   Oracle パブリッシャーの構成中に定義された TNS 名が tnsnames.ora ファイルに記載されているかどうか。  
   
@@ -79,14 +79,12 @@ ms.locfileid: "68095653"
   
 3.  SQL コマンド `DROP USER <replication_administrative_user_schema>``CASCADE;`を実行します。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>主キーの欠如に関する SQL Server エラー 21663 が発生する  
  トランザクション パブリケーションのアーティクルには、有効な主キーが必要です。 有効な主キーがない場合は、アーティクルを追加しようとすると、次のエラー メッセージが表示されます。  
   
  "ソース テーブル [\<*TableOwner*>].[\<*TableName*>] に有効な主キーが見つかりません。"  
   
- 主キーの要件の詳細については、トピック「 [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」の「一意のインデックスおよび制約」を参照してください。  
+ 主キーの要件の詳細については、トピック「[Oracle パブリッシャーの設計上の注意点および制限](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」の「一意のインデックスおよび制約」を参照してください。  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>リンク サーバー ログインの重複に関する SQL Server エラー 21642 が発生する  
  Oracle パブリッシャーを最初に構成するときに、パブリッシャーとディストリビューター間の接続用にリンク サーバー エントリが作成されます。 リンク サーバーには、Oracle TNS サービスと同じ名前が付けられます。 同じ名前でリンク サーバーを作成しようとすると、次のエラー メッセージが表示されます。  
@@ -114,7 +112,7 @@ ms.locfileid: "68095653"
   
 5.  開いている各ダイアログ ボックスで **[OK]** をクリックして作業を終了し、変更を保存します。  
   
- ディストリビューターで sqlplus.exe が見つからない場合は、Oracle クライアント ソフトウェアの現在のバージョンをディストリビューターにインストールします。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
+ ディストリビューターで sqlplus.exe が見つからない場合は、Oracle クライアント ソフトウェアの現在のバージョンをディストリビューターにインストールします。 詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
   
 ## <a name="sql-server-error-21620-is-raised"></a>SQL Server エラー 21620 が発生する  
  Oracle データベースのバージョン 8.1 よりも前のバージョンに接続している場合、Oracle パブリッシングでは、ディストリビューターにインストールされている Oracle クライアント ソフトウェアが、バージョン 9 からのものである必要があります。 Oracle データベースのバージョン 8.1 以降に接続している場合は、Oracle クライアント ソフトウェアのバージョン 10 以降を使用することをお勧めします。  
@@ -132,7 +130,7 @@ ms.locfileid: "68095653"
   
 -   "Oracle 用の Oracle OLEDB プロバイダー OraOLEDB.Oracle が登録されていることを示す CLSID レジストリ キーがディストリビューターに存在しません。 ディストリビューターに Oracle OLEDB プロバイダーがインストールおよび登録されていることを確認してください。"  
   
- Oracle クライアント ソフトウェア バージョン 10g を使用している場合、プロバイダーは OraOLEDB10.dll です。バージョン 9i の場合、プロバイダーは OraOLEDB.dll です。 プロバイダーは %ORACLE_HOME%\BIN (たとえば、C:\oracle\product\10.1.0\Client_1\bin) にインストールされます。 ディストリビューターに Oracle OLEDB プロバイダーがインストールされていない場合は、Oracle が提供する Oracle クライアント ソフトウェア インストール ディスクからインストールしてください。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
+ Oracle クライアント ソフトウェア バージョン 10g を使用している場合、プロバイダーは OraOLEDB10.dll です。バージョン 9i の場合、プロバイダーは OraOLEDB.dll です。 プロバイダーは %ORACLE_HOME%\BIN (たとえば、C:\oracle\product\10.1.0\Client_1\bin) にインストールされます。 ディストリビューターに Oracle OLEDB プロバイダーがインストールされていない場合は、Oracle が提供する Oracle クライアント ソフトウェア インストール ディスクからインストールしてください。 詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
   
  Oracle OLEDB プロバイダーがインストールされている場合は、そのプロバイダーが登録されていることを確認してください。 プロバイダーの DLL を登録するには、DLL がインストールされているディレクトリから次のコマンドを実行し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを停止して再起動します。  
   
@@ -196,7 +194,7 @@ ms.locfileid: "68095653"
  `CREATE TRIGGER`  
   
 ## <a name="you-encounter-permissions-issues-for-the-replication-user-schema"></a>レプリケーション ユーザー スキーマの権限に関する問題が発生する  
- レプリケーション ユーザー スキーマには、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」の「Creating the User Schema Manually (手動によるユーザー スキーマの作成)」で説明されている権限が必要です。  
+ レプリケーション ユーザー スキーマには、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」の「手動によるユーザー スキーマの作成」で説明されている権限が必要です。  
   
 ## <a name="oracle-error-ora-01000"></a>Oracle エラー ORA-01000  
  パブリケーションへアーティクルを追加処理中に、レプリケーションは Oracle パブリッシャーでカーソルを使用します。 この処理中にパブリッシャーで使用できるカーソルの最大数を超える可能性があります。 最大数を超えると、次のエラーが発生します。  
@@ -232,7 +230,7 @@ ms.locfileid: "68095653"
  "ORA-22285: non-existent directory or file for FILEOPEN operation"  
   
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>パブリッシャーの再構成が必要になる変更  
- レプリケーション メタデータ テーブルまたはプロシージャを変更した場合は、パブリッシャーを削除して再構成する必要があります。 パブリッシャーを再構成するには、パブリッシャーを削除し、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、Transact-SQL、または RMO を使用してパブリッシャーを再構成する必要があります。 パブリッシャーの構成の詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
+ レプリケーション メタデータ テーブルまたはプロシージャを変更した場合は、パブリッシャーを削除して再構成する必要があります。 パブリッシャーを再構成するには、パブリッシャーを削除し、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、Transact-SQL、または RMO を使用してパブリッシャーを再構成する必要があります。 パブリッシャーの構成の詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
   
  **Oracle パブリッシャーを削除するには (** SQL Server Management Studio **)**  
   
@@ -249,7 +247,7 @@ ms.locfileid: "68095653"
 -   **sp_dropdistpublisher**を実行します。 詳細については、「[sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

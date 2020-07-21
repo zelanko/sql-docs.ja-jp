@@ -1,5 +1,5 @@
 ---
-title: PDO_SQLSRV ドライバーリファレンス |Microsoft Docs
+title: PDO_SQLSRV Driver Reference | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a8aa5f04ab9ae510ec0a7c3ead0c30600ebb9b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2e440a1ecbdcc7ae6d504b475367872467a9fb98
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936183"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918934"
 ---
-# <a name="pdosqlsrv-driver-reference"></a>PDO_SQLSRV ドライバー リファレンス
+# <a name="pdo_sqlsrv-driver-reference"></a>PDO_SQLSRV ドライバー リファレンス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 次の 2 つのオブジェクトは、PDO をサポートします。  

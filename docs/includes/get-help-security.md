@@ -1,12 +1,4 @@
----
-ms.openlocfilehash: c05116da2b0949a5f54fc5bbc4812f4cacd9d78d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68231472"
----
-##  <a name="info-tippngmediainfo-tippng-get-help"></a>![info-tip.png](media/info-tip.png) ヘルプの参照
+##  <a name="info-tippng-get-help"></a>![info-tip.png](media/info-tip.png) ヘルプの参照
 
 - [UserVoice - SQL Server 機能強化のためのご提案](https://feedback.azure.com/forums/908035-sql-server)
 - [SQL Server セキュリティ - MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)

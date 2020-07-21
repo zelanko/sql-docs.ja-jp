@@ -1,5 +1,5 @@
 ---
-title: ADORecordsetConstruction インターフェイス |Microsoft Docs
+title: ADORecordsetConstruction Interface |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,27 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920790"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747084"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction インターフェイス
-**ADORecordsetConstruction**インターフェイスは、ADO の構築に使用**レコード セット**から OLE DB オブジェクト**行セット**C/C++ アプリケーション内のオブジェクト。  
+**ADORecordsetConstruction**インターフェイスは、C/c + + アプリケーションの OLE DB**行**セットオブジェクトから ADO**レコードセット**オブジェクトを構築するために使用されます。  
   
- このインターフェイスには、次のプロパティがサポートされています。  
+ このインターフェイスは、次のプロパティをサポートしています。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
-|[」の章](../../../ado/reference/ado-api/chapter-property-ado.md)|読み取り/書き込みです。<br />OLE DB を取得/設定**章**オブジェクトとの間にこの ADO **Recordset**オブジェクト。|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|読み取り/書き込みです。<br />OLE DB を取得/設定**RowPosition**オブジェクトとの間にこの ADO **Recordset**オブジェクト。|  
-|[行セット](../../../ado/reference/ado-api/rowset-property-ado.md)|読み取り/書き込みです。<br />OLE DB を取得/設定**行セット**オブジェクトとの間にこの ADO **Recordset**オブジェクト。|  
+|[章](../../../ado/reference/ado-api/chapter-property-ado.md)|読み取り/書き込み。<br />この ADO**レコードセット**オブジェクトから OLE DB**チャプター**オブジェクトを取得/設定します。|  
+|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|読み取り/書き込み。<br />この ADO**レコードセット**オブジェクトの/から OLE DB **rowposition**オブジェクトを取得/設定します。|  
+|[[行セット]](../../../ado/reference/ado-api/rowset-property-ado.md)|読み取り/書き込み。<br />この ADO**レコードセット**オブジェクトの/から OLE DB**行**セットオブジェクトを取得/設定します。|  
   
 ## <a name="methods"></a>メソッド  
  [なし] :  
@@ -41,17 +41,17 @@ ms.locfileid: "67920790"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="remarks"></a>コメント  
- OLE DB を指定された**行セット**オブジェクト (`pRowset`)、ADO の構築**Recordset**オブジェクト (`adoRs`) に次の 3 つの基本的な操作。  
+## <a name="remarks"></a>Remarks  
+ OLE DB の**行**セットオブジェクト ( `pRowset` ) がある場合、ADO**レコードセット**オブジェクト () の構造は、 `adoRs` 次の3つの基本的な操作になります。  
   
-1.  ADO の作成**Recordset**オブジェクト。  
+1.  ADO**レコードセット**オブジェクトを作成します。  
   
     ```  
     Recordset20Ptr adoRs;  
     adoRs.CreateInstance(__uuidof(Recordset));  
     ```  
   
-2.  クエリ、 **IADORecordsetConstruction**インターフェイスを**Recordset**オブジェクト。  
+2.  **レコードセット**オブジェクトの**IADORecordsetConstruction**インターフェイスに対してクエリを実行します。  
   
     ```  
     adoRecordsetConstructionPtr adoRsConstruct=NULL;  
@@ -59,7 +59,7 @@ ms.locfileid: "67920790"
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  呼び出す、`IADORecordsetConstruction::put_Rowset`プロパティを設定するメソッド、OLE DB `Rowset` ADO 上のオブジェクト`Recordset`オブジェクト。  
+3.  `IADORecordsetConstruction::put_Rowset`プロパティメソッドを呼び出して、ADO オブジェクトの OLE DB オブジェクトを設定し `Rowset` `Recordset` ます。  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -67,17 +67,17 @@ ms.locfileid: "67920790"
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- 結果として得られる`adoRs`オブジェクトが、ADO を表すようになりました**レコード セット**OLE DB から構築されたオブジェクト**行セット**オブジェクト。  
+ 結果の `adoRs` オブジェクトは、OLE DB**行**セットオブジェクトから構築された ADO**レコードセット**オブジェクトを表します。  
   
- ADO を構築することもできます。 **Recordset**から OLE DB オブジェクト**章**または**RowPosition**オブジェクト。  
+ また、OLE DB**チャプター**または**ROWPOSITION**オブジェクトから ADO**レコードセット**オブジェクトを構築することもできます。  
   
 ## <a name="requirements"></a>必要条件  
- **バージョン：** ADO 2.0 以降  
+ **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>関連項目  
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Rowset プロパティ (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

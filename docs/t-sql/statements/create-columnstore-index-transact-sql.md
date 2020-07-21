@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52aeeca0dc61f36fbde2ad4a708d359f1dd19567
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 2fa18ece825ba55479eac3d5c421c6d5acba363c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809753"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633272"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68809753"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
@@ -101,16 +101,16 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
-    [ORDER (column [,...n] ) ] -- in preview
+    [ORDER (column [,...n] ) ]  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
+
 ```
-  
 ## <a name="arguments"></a>引数  
 
 一部のオプションは、すべてのデータベース エンジンのバージョンで使用できません。 次の表では、CLUSTERED COLUMNSTORE インデックスおよび NONCLUSTERED COLUMNSTORE インデックスに導入されているオプションのバージョンを示します。
@@ -120,7 +120,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 | COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 | DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
 | ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| WHERE 句 | なし | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| WHERE 句 | 該当なし | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 
 すべてのオプションは、Azure SQL Database で使用できます。
 
@@ -175,7 +175,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    COMPRESSION_DELAY を使用する場合の推奨事項については、「[列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)」をご覧ください。  
   
 ##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。   
+   指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のようなオプションがあります。   
 - `COLUMNSTORE` は既定で、最もパフォーマンスの高い列ストア圧縮を使用して圧縮します。 これは、一般的な選択です。  
 - `COLUMNSTORE_ARCHIVE` では、さらにテーブルまたはパーティションを小さいサイズに圧縮します。 このオプションは、保存に必要なストレージ サイズが少なく、保存と取得の速度を落とすことが可能な状況などで使用できます。  
   
@@ -240,7 +240,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]
->  並列インデックス操作は、[!INCLUDE[msC](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+>  並列インデックス操作は、[!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
 - `ON` の場合、インデックスの新しいコピーが構築されている間、列ストア インデックスはオンラインのままで、利用可能です。
@@ -254,7 +254,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
    行がデルタ行グループに残る期間の下限を指定します。この下限までは、圧縮された行グループに移行できます。 たとえば、行が 120 分間変更されない場合、単票格納形式に圧縮するという顧客がいるかもしれません。 ディスクベース テーブルの列ストア インデックスの場合、行が挿入または更新された時刻は追跡しません。代わりに、行のプロキシとして、デルタ行グループの終了時刻を利用します。 既定の継続時間は 0 分です。 100 万行がデルタ行グループに累積されると、1 行が単票格納に移行されます。その行に終了の印が付きます。  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
-   指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 非クラスター化列ストアとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 次のオプションがあります。
+   指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 非クラスター化列ストアとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 次のようなオプションがあります。
    
 - 既定の `COLUMNSTORE` では、最もパフォーマンスの高い列ストア圧縮を使用して圧縮します。 これは、一般的な選択です。  
 - `COLUMNSTORE_ARCHIVE` COLUMNSTORE_ARCHIVE は、テーブルまたはパーティション サイズをより小さなサイズに圧縮します。 これは、アーカイブ用や、ストレージのサイズを減らす必要があり、かつ保存と取得に時間をかける余裕があるその他の状況で使用できます。  
@@ -292,11 +292,13 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 このコンテキストでの default という用語はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON **"** default **"** または ON **[** default **]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
-##  <a name="GenRemarks"></a> 全般的な解説  
- 列ストア インデックスは一時テーブルに作成できます。 テーブルが削除されるかセッションが終了すると、インデックスも削除されます。  
+##  <a name="general-remarks"></a><a name="GenRemarks"></a> 全般的な解説  
+列ストア インデックスは一時テーブルに作成できます。 テーブルが削除されるかセッションが終了すると、インデックスも削除されます。  
+
+順序付けされたクラスター化列ストア インデックスは、文字列型の列を除く Azure SQL Data Warehouse でサポートされている任意のデータ型の列に作成できます。  
  
 ## <a name="filtered-indexes"></a>フィルター選択されたインデックス  
 フィルター選択されたインデックスは、最適化された非クラスター化インデックスであり、テーブルから選択する行の少ないクエリに適しています。 フィルター選択されたインデックスは、フィルター述語を使用してテーブル内の一部のデータにインデックスを作成します。 フィルター選択されたインデックスを適切に設計すると、クエリのパフォーマンスを向上させ、ストレージ コストとメンテナンス コストを削減することができます。  
@@ -307,7 +309,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 - INSERT、UPDATE、DELETE、MERGE のいずれかの操作で、フィルター選択されたインデックスのデータを変更するとき。  
 - クエリ オプティマイザーで、クエリ プランの生成にフィルター選択されたインデックスが使用されるとき。  
   
-    |SET オプション|必要な値|既定のサーバー値|既定<br /><br /> OLE DB および ODBC 値|既定<br /><br /> DB-Library 値|  
+    |SET オプション|必須値|既定のサーバー値|Default<br /><br /> OLE DB および ODBC 値|Default<br /><br /> DB-Library 値|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -329,7 +331,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  フィルター選択されたインデックスについて詳しくは、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」をご覧ください。 
   
-##  <a name="LimitRest"></a> 制限事項と制約事項  
+##  <a name="limitations-and-restrictions"></a><a name="LimitRest"></a> 制限事項と制約事項  
 
 **列ストア インデックスの各列は、次の一般的なビジネス データ型のいずれかである必要があります。** 
 -   datetimeoffset [ ( *n* ) ]  
@@ -343,11 +345,11 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
+-   smallmoney  
+-   bigint  
 -   INT  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
 -   nvarchar(max)  (クラスタ化列ストア インデックスのみの [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] および Premium 層、Standard 層 (S3 以上)、すべての VCore サービス層に適用されます)   
@@ -396,7 +398,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] に固有の制限事項**  
 これらの制限は [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にのみ適用されます。 このリリースでは、更新可能なクラスター化列ストア インデックスを導入しました。 非クラスター化列ストア インデックスは引き続き読み取り専用でした。  
 
--   変更の追跡。 読み取り専用のため、非クラスター化列ストア インデックス (NCCI) で変更履歴を使用することはできません。 クラスター化列ストア インデックス (CCI) では機能します。  
+-   変更の追跡。 列ストア インデックスで変更履歴を使用することはできません。  
 -   変更データ キャプチャ。 読み取り専用のため、非クラスター化列ストア インデックス (NCCI) に変更データ キャプチャを使用することはできません。 クラスター化列ストア インデックス (CCI) では機能します。  
 -   読み取り可能セカンダリ。 AlwaysOn 可用性グループの読み取り可能セカンダリからクラスター化列ストア インデックス (CCI) にアクセスすることはできません。  読み取り可能セカンダリから非クラスター化列ストア インデックス (NCCI) にアクセスできます。  
 -   複数のアクティブな結果セット (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、列ストア インデックスを含むテーブルに読み取り専用で接続するために、MARS が使用されます。 ただし、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、列ストア インデックスを含むテーブルで DML (データ操作言語) を同時操作する場合、MARS を利用できません。 この場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は接続を強制終了し、トランザクションを中止します。  
@@ -404,7 +406,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  列ストア インデックスのパフォーマンス上の利点と制限の詳細については、「[列ストア インデックス - 概要](../../relational-databases/indexes/columnstore-indexes-overview.md)」をご覧ください。
   
-##  <a name="Metadata"></a> メタデータ  
+##  <a name="metadata"></a><a name="Metadata"></a> メタデータ  
  列ストア インデックス内のすべての列は、付加列としてメタデータに格納されます。 列ストア インデックスにキー列はありません。 列ストア インデックスに関する情報は、次のシステム ビューによって提供されます。  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
@@ -414,7 +416,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
 
-##  <a name="convert"></a> 行ストア テーブルを列ストアに変換する例  
+##  <a name="examples-for-converting-a-rowstore-table-to-columnstore"></a><a name="convert"></a> 行ストア テーブルを列ストアに変換する例  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. ヒープをクラスター化列ストア インデックスに変換する  
  この例では、テーブルをヒープとして作成してから、cci_Simple という名前のクラスター化 columnstore インデックスに変換します。 こうすることで、テーブル全体のストレージが行ストアから列ストアに変更されます。  
@@ -599,7 +601,7 @@ REBUILD PARTITION = ALL
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-##  <a name="nonclustered"></a> 非クラスター化列ストア インデックスの例  
+##  <a name="examples-for-nonclustered-columnstore-indexes"></a><a name="nonclustered"></a> 非クラスター化列ストア インデックスの例  
   
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. 行ストア テーブルのセカンダリ インデックスとして列ストア インデックスを作成する  
  この例では、行ストア テーブルに非クラスター化列ストア インデックスを作成します。 このような状況では、1 つのみ列ストア インデックスを作成できます。 列ストア インデックスには、行ストア テーブルのデータのコピーが含まれているために、追加のストレージが必要です。 次の例では、単純なテーブルとクラスター化インデックスを作成します。その後、非クラスター化列ストア インデックスを作成する構文を示します。  
@@ -649,12 +651,12 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
     WHERE EndDate IS NOT NULL;  
 ```  
   
-###  <a name="ncDML"></a> D. 非クラスター化列ストア インデックス内のデータを変更する  
+###  <a name="d-change-the-data-in-a-nonclustered-columnstore-index"></a><a name="ncDML"></a> D. 非クラスター化列ストア インデックス内のデータを変更する  
    適用対象: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。
   
  テーブルに非クラスター化列ストア インデックスを作成すると、そのテーブル内のデータは変更できなくなります。 INSERT、UPDATE、DELETE、または MERGE を使用するクエリは失敗し、エラー メッセージが返されます。 そのテーブル内のデータを追加または変更するには、次のいずれかの操作を行います。  
   
--   列ストア インデックスを無効にするか削除します。 その後、テーブル内のデータを更新できます。 列ストア インデックスを無効にした場合、データの更新の終了時に列ストア インデックスを再構築できます。 例を次に示します。  
+-   列ストア インデックスを無効にするか削除します。 その後、テーブル内のデータを更新できます。 列ストア インデックスを無効にした場合、データの更新の終了時に列ストア インデックスを再構築できます。 たとえば、次のように入力します。  
   
     ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
@@ -666,7 +668,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   列ストア インデックスを持つテーブルから空のステージング テーブルにパーティションを切り替えます。 ステージング テーブルに列ストア インデックスがある場合は、列ストア インデックスを無効にします。 更新を実行します。 列ストア インデックスを構築 (または再構築) します。 ステージング テーブルを切り替えて、メイン テーブルの (空になった) パーティションに戻します。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. クラスター化インデックスをクラスター化列ストア インデックスに変換する  
  DROP_EXISTING = ON で CREATE CLUSTERED COLUMNSTORE INDEX ステートメントを使用すると、次のことができます。  
@@ -747,11 +749,35 @@ WITH ( DROP_EXISTING = ON);
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
-### <a name="f-create-an-ordered-clustered-columnstore-index"></a>F. 順序付けされたクラスター化列ストア インデックスを作成する
-
-SHIPDATE で順序付けされた、順序付けされたクラスター化列ストア インデックスを作成します。
+### <a name="f-create-an-ordered-clustered-columnstore-index-on-a-table-with-no-index"></a>F. インデックスのないテーブル上で順序付けされたクラスター化列ストア インデックスを作成する
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( SHIPDATE );
 ```
+
+### <a name="g-convert-a-clustered-columnstore-index-to-an-ordered-clustered-columnstore-index"></a>G. クラスター化列ストア インデックスを順序付けされたクラスター化列ストア インデックスに変換する
+
+```sql  
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+WITH (DROP_EXISTING = ON)
+```
+
+### <a name="h-add-a-column-to-the-ordering-of-an-ordered-clustered-columnstore-index"></a>H. 順序付けされたクラスター化列ストア インデックスの順序に列を追加する
+
+```sql
+-- The original ordered clustered columnstore index was ordered on SHIPDATE column only.  Add PRODUCTKEY column to the ordering.
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE, PRODUCTKEY );
+WITH (DROP_EXISTING = ON)
+```
+### <a name="i-change-the-ordinal-of-ordered-columns"></a>I. 順序付けされた列の序数を変更する  
+```sql
+-- The original ordered clustered columnstore index was ordered on SHIPDATE, PRODUCTKEY.  Change the ordering to PRODUCTKEY, SHIPDATE.  
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( PRODUCTKEY,SHIPDATE );
+WITH (DROP_EXISTING = ON)
+```
+
+

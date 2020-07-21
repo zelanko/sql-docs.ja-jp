@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d163148930b656bd31301193d7a5fe22201adedf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8050e55674f801608053938f14f1c5456ee9217d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930269"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731191"
 ---
 # <a name="hasm-geography-data-type"></a>HasM (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 空間オブジェクトに少なくとも 1 つの M 値が含まれている場合は 1 (true)、それ以外の場合は 0 (false) が返されます。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "67930269"
 ## <a name="return-types"></a>戻り値の型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
-CLR の戻り値の型:**Boolean**  
+CLR 戻り値の型: **Boolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```sql  
 DECLARE @p GEOGRAPHY = 'Point(1 1 1 1)'  

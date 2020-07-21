@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 512cbeba4e3199b8e94e990a0f1611c5ad549568
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: d4683e635e6eb30d8ac628e55d109d0d81794764
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065872"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301980"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
 
   データベースを透過的に暗号化するために使用する暗号化キーおよび証明書を変更します。 透過的データベース暗号化について詳しくは、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」をご覧ください。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "68065872"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER DATABASE ENCRYPTION KEY  
@@ -45,10 +46,13 @@ ALTER DATABASE ENCRYPTION KEY
         ASYMMETRIC KEY Encryptor_Name  
     }  
 [ ; ]  
-```  
+```
   
-```  
--- Syntax for Parallel Data Warehouse  
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
+  
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER DATABASE ENCRYPTION KEY  
     {  
@@ -62,7 +66,9 @@ ALTER DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  REGENERATE WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
  暗号化キーに使用する暗号化アルゴリズムを指定します。  
   
@@ -72,7 +78,7 @@ ALTER DATABASE ENCRYPTION KEY
  ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
  データベース暗号化キーを暗号化するために使用する非対称キーの名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベース暗号化キーの暗号化に使用する証明書または非対称キーは、マスター システム データベースに配置されている必要があります。  
   
  データベース所有者 (dbo) が変わっても、データベース暗号化キーを再生成する必要はありません。
@@ -82,7 +88,7 @@ ALTER DATABASE ENCRYPTION KEY
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する CONTROL 権限と、データベース暗号化キーの暗号化に使用する証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AES_256` アルゴリズムを使用するようにデータベース暗号化キーを変更します。  
   
 ```  

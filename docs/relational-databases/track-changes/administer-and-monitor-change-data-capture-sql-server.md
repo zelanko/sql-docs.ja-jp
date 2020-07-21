@@ -1,5 +1,5 @@
 ---
-title: 変更データ キャプチャの管理と監視 (SQL Server) | Microsoft Docs
+title: 変更データ キャプチャの管理と監視
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,19 +13,20 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add1b0fc86c5e43bedd1e3ebbf7921fb1e9847c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 327adcd406e4fa79591529265acc2d6b23b3a044
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058061"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889169"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、変更データ キャプチャを管理および監視する方法について説明します。  
   
-## <a name="Capture"></a> キャプチャ ジョブ
+## <a name="capture-job"></a><a name="Capture"></a> キャプチャ ジョブ
 
 キャプチャ ジョブは、パラメーターなしのストアド プロシージャ `sp_MScdc_capture_job` を実行することによって開始されます。 このストアド プロシージャは、msdb.dbo.cdc_jobs からキャプチャ ジョブの `maxtrans`、`maxscans`、`continuous`、および `pollinginterval` の構成値を抽出することによって開始されます。 これらの構成値は、パラメーターとしてストアド プロシージャ `sp_cdc_scan` に渡されます。 これは `sp_replcmds` を呼び出してログ スキャンを実行する場合に使用されます。  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68058061"
 
 キャプチャ ジョブでは、追加のロジックを適用することにより、固定したポーリング間隔に依存せずに、新しいスキャンをすぐに開始するか、スリープ状態を経てから新しいスキャンを開始するかを決定できます。 この決定は単に時刻に基づきます。たとえば、アクティビティのピーク時に非常に長いスリープを強制したり、その日の処理を完了し、夜間の運用に備えることが重要な 1 日の終わりにポーリング間隔を 0 にしたりします。 また、キャプチャ プロセスの進捗状態を監視して、午前零時までにコミットされたすべてのトランザクションのスキャンが完了して変更テーブルに格納された時刻を判断することもできます。 これにより、キャプチャ ジョブを終了して、毎日 1 回のスケジュールで再起動することが可能になります。 `sp_cdc_scan` を呼び出すジョブ ステップを、ユーザーが作成した `sp_cdc_scan` のラッパーに置き換えることにより、高度にカスタマイズされた動作を簡単に実現できます。  
 
-## <a name="Cleanup"></a> クリーンアップ ジョブ
+## <a name="cleanup-job"></a><a name="Cleanup"></a> クリーンアップ ジョブ
 
 ここでは、変更データ キャプチャのクリーンアップ ジョブの仕組みについて説明します。  
   
@@ -89,7 +90,7 @@ ms.locfileid: "68058061"
 
  クリーンアップ ジョブの場合、カスタマイズが可能なのは、破棄する変更テーブル エントリを決定する戦略です。 配布されたクリーンアップ ジョブでサポートされる唯一の戦略は時間ベースのものです。 この状況では、新しい低水位マークは最後に処理されたトランザクションのコミット時刻から許容保有期間を引いて計算します。 基になるクリーンアップ プロシージャは、時間ではなく `lsn` に基づいているため、変更テーブルに保持する最小の `lsn` を決定する戦略はいくつもあります。 厳密には時間ベースのものはそのうちの一部のみです。 たとえばクライアントに関する知識は、変更テーブルへのアクセスを必要とするダウンストリーム プロセスを実行できない場合にフェールセーフを提供するために使用できます。 また、既定の戦略ではすべてのデータベースの変更テーブルのクリーンアップに同じ `lsn` を使用しますが、基になるクリーンアップ プロシージャを呼び出してキャプチャ インスタンス レベルでクリーンアップすることもできます。  
 
-## <a name="Monitor"></a> 変更データ キャプチャ プロセスの監視
+## <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> 変更データ キャプチャ プロセスの監視
 
 変更データ キャプチャ プロセスを監視すると、変更が変更テーブルに適切に書き込まれているかどうか、および書き込み時の待機時間が妥当かどうかを判断できます。 また、発生する可能性のあるエラーを特定することもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、変更データ キャプチャの監視に役立つ 2 つの動的管理ビューが用意されています。 [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) と [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)です。  
   
@@ -175,9 +176,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 4. 手順 1. で構成したデータ ウェアハウスで、custom_snapshots.cdc_log_scan_data テーブルを検索します。 このテーブルには、ログ スキャン セッションのデータの履歴スナップショットが格納されています。 このデータを使用すると、待機時間やスループットなどのパフォーマンス指標を時系列で分析できます。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-## <a name="ScriptUpgrade"></a> スクリプト アップグレード モード
+## <a name="script-upgrade-mode"></a><a name="ScriptUpgrade"></a> スクリプト アップグレード モード
 
 累積更新プログラムまたはサービス パックをインスタンスに適用する場合、再起動時に、インスタンスがスクリプト アップグレード モードになることがあります。 このモードでは、SQL Server が内部 CDC テーブルを分析し、アップグレードする手順を行うため、キャプチャ テーブルのインデックスなどのオブジェクトが再作成されることがあります。 関連するデータの量によっては、この手順にいくらかの時間がかかったり、または有効にされている CDC データベースのトランザクション ログの使用率が高くなったりする可能性があります。
 

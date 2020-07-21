@@ -1,5 +1,6 @@
 ---
 title: ログ配布について (SQL Server) | Microsoft Docs
+description: SQL Server のログ配布について説明します。これにより、トランザクション ログ バックアップが、プライマリ サーバー インスタンスのプライマリ データベースからセカンダリ データベースに送信されます。
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -25,22 +26,22 @@ ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3909f2e2ce97bcfb02efe850cf4d9456ed396464
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057909"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883501"
 ---
 # <a name="about-log-shipping-sql-server"></a>ログ配布について (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログ配布を使用すると、トランザクション ログ バックアップを、 *プライマリ サーバー* インスタンスの *プライマリ データベース* から、別の *セカンダリ サーバー* インスタンスの 1 つ以上の *セカンダリ データベース* に自動的に送信できます。 トランザクション ログ バックアップはセカンダリ データベースごとに個別に適用されます。 オプションで用意する 3 台目のサーバー インスタンス ( *監視サーバー*) では、バックアップ操作と復元操作の履歴と状態が記録されます。また、これらの操作がスケジュールどおりに実行されなかった場合に警告を通知することもできます。  
   
  **このトピックの内容**  
   
--   [利点](#Benefits)  
+-   [メリット](#Benefits)  
   
 -   [用語と定義](#TermsAndDefinitions)  
   
@@ -50,7 +51,7 @@ ms.locfileid: "68057909"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 利点  
+##  <a name="benefits"></a><a name="Benefits"></a> 利点  
   
 -   1 つのプライマリ データベースと 1 つ以上のセカンダリ データベース (それぞれが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の個別のインスタンスに存在) で構成される災害復旧ソリューションを提供します。  
   
@@ -58,11 +59,11 @@ ms.locfileid: "68057909"
   
 -   プライマリ サーバーでプライマリ データベースのログをバックアップする時点と、セカンダリ サーバーがそのログ バックアップを復元 (適用) する時点との間に生じる遅延時間をユーザーが指定できます。 たとえば、プライマリ データベースでデータが誤って変更された場合などに、長い遅延が役立ちます。 誤った変更にすぐに気付いた場合、遅延があれば、変更が反映される前に、セカンダリ データベースにあるまだ変更されていないデータを取得できます。  
   
-##  <a name="TermsAndDefinitions"></a> 用語と定義  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> 用語と定義  
  プライマリ データベース  
  実稼働サーバーである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。  
   
- プライマリ サーバー  
+ プライマリ データベース  
  別のサーバーにバックアップするプライマリ サーバーのデータベース。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用したログ配布構成の管理は、すべてプライマリ データベースから実行されます。  
   
  セカンダリ データベース  
@@ -98,7 +99,7 @@ ms.locfileid: "68057909"
 > [!TIP]  
 >  警告 1 件につき警告番号を指定する必要があります。 また、警告が発生するとオペレーターに通知されるよう警告を構成してください。  
   
-##  <a name="ComponentsAndConcepts"></a> ログ配布の概要  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> ログ配布の概要  
  ログ配布は、次に示す 3 つの操作から構成されます。  
   
 1.  プライマリ サーバー インスタンスでトランザクション ログをバックアップする。  
@@ -126,9 +127,9 @@ ms.locfileid: "68057909"
   
  プライマリ サーバー インスタンスおよびセカンダリ サーバー インスタンスは、それぞれの履歴および状態を監視サーバー インスタンスに送信します。  
   
- ![バックアップ ジョブ、コピー ジョブ、復元ジョブを示す構成](../../database-engine/log-shipping/media/ls-typical-configuration.gif "バックアップ ジョブ、コピー ジョブ、復元ジョブを示す構成")  
+ ![ジョブのバックアップ、コピー、復元を示す構成](../../database-engine/log-shipping/media/ls-typical-configuration.gif "ジョブのバックアップ、コピー、復元を示す構成")  
   
-##  <a name="Interoperability"></a> 相互運用性  
+##  <a name="interoperability"></a><a name="Interoperability"></a> 相互運用性  
  ログ配布は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次の機能またはコンポーネントと共に使用できます。  
   
 -   [ログ配布から AlwaysOn 可用性グループへの移行の前提条件 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
@@ -140,7 +141,7 @@ ms.locfileid: "68057909"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] とデータベース ミラーリングは、相互に排他的です。 これらの機能のいずれかに対して構成されたデータベースを他の機能用に構成することはできません。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [SQL Server 2016 へのログ配布のアップグレード &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -163,6 +164,6 @@ ms.locfileid: "68057909"
 -   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

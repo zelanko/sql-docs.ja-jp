@@ -1,6 +1,7 @@
 ---
-title: SQLdiag ユーティリティ | Microsoft Docs
-ms.custom: ''
+title: SQLdiag ユーティリティ
+description: SQLdiag ユーティリティを使用して、SQL Server やその他の種類のサーバーからログやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、問題をトラブルシューティングしたりします。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df0001449d5ec1d2fded885fb932436a313bbfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: fdeeb1b5d16612415b1661df257f0530d8749df5
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986298"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151644"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ sqldiag
   
 ## <a name="arguments"></a>引数  
  **/?**  
- 使用方法についての情報を表示します。  
+ 使用方法に関する情報を表示します。  
   
  **/I** _configuration_file_  
  **SQLdiag** が使用する構成ファイルを設定します。 既定では、 **/I** は SQLDiag.Xml に設定されます。  
@@ -103,7 +104,7 @@ sqldiag
 >  **SQLDIAG /P %cd%**  
   
  **/N** _output_folder_management_option_  
- 起動時に **SQLdiag** が出力フォルダーを上書きまたは名前を変更するかどうかを設定します。 使用できるオプションは次のとおりです。  
+ 起動時に **SQLdiag** が出力フォルダーを上書きまたは名前を変更するかどうかを設定します。 使用できるオプションは  
   
  1 = 出力フォルダーを上書きします (既定)。  
   
@@ -112,13 +113,13 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** は起動時に、現在の出力フォルダーに出力を追加しません。 既定の出力フォルダーを上書きするか (オプション 1)、または既定のフォルダー名を変更して (オプション 2)、SQLDIAG という名前の新しい既定の出力フォルダーに出力を書き込むかのどちらかです。  
   
- **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *\@machinelistfile*  
  構成ファイルで指定されたコンピューターをオーバーライドします。 既定では、構成ファイルは SQLDiag.Xml です。または **/I** パラメーターで設定されます。 複数のコンピューターを指定する場合、それぞれのコンピューター名をスペースで区切ります。  
   
- *@machinelistfile* を使用すると、構成ファイルに保存するコンピューター一覧のファイル名が指定されます。  
+ *\@machinelistfile* を使用すると、構成ファイルに保存するコンピューター一覧のファイル名が指定されます。  
   
  **/C** _file_compression_type_  
- **SQLdiag** 出力フォルダー ファイルで使用されるファイル圧縮の種類を設定します。 使用できるオプションは次のとおりです。  
+ **SQLdiag** 出力フォルダー ファイルで使用されるファイル圧縮の種類を設定します。 使用できるオプションは  
   
  0 = なし (既定)。  
   
@@ -159,11 +160,11 @@ sqldiag
   
  *SQLdiag_application_name* を使用すると、 **SQLdiag** サービスの特定のインスタンスを開始または停止できます。  
   
- 例:  
+ 次に例を示します。  
   
  **SQLDIAG START /A**  _SQLdiag_application_name_  
   
- **/R** オプションと共に使用し、 **SQLdiag** の特定のインスタンスをサービスとして登録することもできます。 例:  
+ **/R** オプションと共に使用し、 **SQLdiag** の特定のインスタンスをサービスとして登録することもできます。 次に例を示します。  
   
  **SQLDIAG /R /A** _SQLdiag_application_name_  
   
@@ -222,16 +223,16 @@ sqldiag
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** サービスを開始または停止します。 **STOP_ABORT** は、現在実行されている診断収集が終了していなくても、できるだけ早く強制的にサービスをシャットダウンします。  
   
- このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 例:  
+ このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 次に例を示します。  
   
  **SQLDIAG START**  
   
- **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 例:  
+ **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 次に例を示します。  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>セキュリティ要件  
- **SQLdiag** を汎用モード ( **/G** コマンド ライン引数を指定) 以外のモードで実行する場合は、 **SQLdiag** を実行するユーザーは、Windows **Administrators** グループのメンバー、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールのメンバーであることが必要です。 既定では、 **SQLdiag** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証もサポートされます。  
+ **SQLdiag** を汎用モード ( **/G** コマンド ライン引数を指定) 以外のモードで実行する場合、**SQLdiag** を実行するユーザーは、Windows **Administrators** グループのメンバー、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールのメンバーであることが必要です。 既定では、 **SQLdiag** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証もサポートされます。  
   
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
  **SQLdiag** を実行した場合のパフォーマンスへの影響は、収集用に構成した診断データの種類によって異なります。 たとえば、 **のトレース情報を収集するように** SQLdiag [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] を構成した場合、トレースを選択したイベント クラスの数に従ってサーバー パフォーマンスも影響を受けます。  
@@ -260,7 +261,7 @@ sqldiag
   
  **SQLdiag** を使用して、再現可能な問題を診断する場合、このメッセージを受け取ってから、問題をサーバー上で再現する必要があります。  
   
- **SQLdiag** は、多数の診断データを並行して収集します。 情報が Windows パフォーマンス ログおよびイベント ログから収集される場合を除いて、すべての診断情報は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** ユーティリティや Windows コマンド プロセッサなどのツールに接続することで収集されます。 **SQLdiag** は、1 台のコンピューターにつき 1 つのワーカー スレッドを使用して、これらのツールによる診断データの収集を監視します。通常、複数のツールが終了するのを同時に待機します。 収集プロセスの間、 **SQLdiag** は出力を各診断から出力フォルダーへルーティングします。  
+ **SQLdiag** は、多数の診断データを並行して収集します。 情報が Windows パフォーマンス ログおよびイベント ログから収集される場合を除いて、すべての診断情報は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** ユーティリティや Windows コマンド プロセッサなどのツールに接続することで収集されます。 **SQLdiag** は、1 台のコンピューターにつき 1 つのワーカー スレッドを使用して、これらのツールによる診断データの収集を監視します。通常、複数のツールが終了するのを同時に待機します。 収集プロセスの間、 **SQLdiag** は出力を各診断から出力フォルダーへルーティングします。  
   
 ## <a name="stopping-data-collection"></a>データ収集の停止  
  **SQLdiag** が診断データの収集を開始した後は、これを停止するか、指定した時間に停止するように構成しない限り、データ収集は継続されます。 **SQLdiag** が指定された時間に停止するように構成するには、停止時間の指定ができる **/E** 引数を使用するか、 **SQLdiag** をスナップショット モードで実行する **/X** 引数を使用します。  
@@ -303,7 +304,7 @@ sqldiag /B +01:00:00 /E +03:00:00
   
  相対的な *start_time* が指定された場合、 **SQLdiag** は、現在の日時を基準とした相対的な時間に開始されます。 相対的な *end_time* が指定された場合、 **SQLdiag** は、指定された *start_time*を基準とした相対的な時間に終了します。 指定した開始日時または終了日時が過去の場合、 **SQLdiag** は開始日を未来の開始日時に強制的に変更します。  
   
- これは、選択する開始日および終了日に対して重大な影響があります。 次の例を参照してください。  
+ これは、選択する開始日および終了日に対して重大な影響があります。 次の例を確認してください。  
   
 ```  
 sqldiag /B +01:00:00 /E 08:30:00  

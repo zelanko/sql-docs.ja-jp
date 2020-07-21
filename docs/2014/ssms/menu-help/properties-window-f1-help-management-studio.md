@@ -22,20 +22,19 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73ac04e428a07cd607969a18ec88c68ea07df9ed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062055"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>[プロパティ] ウィンドウの F1 ヘルプ (Management Studio)
   **[プロパティ]** ウィンドウを使用すると、選択した要素のプロパティを表示できます。 また、 **[プロパティ]** ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティを表示することもできます。 **[プロパティ]** ウィンドウは、 **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックすると表示されます。  
   
  **[プロパティ]** ウィンドウには、さまざまな種類の編集フィールドが表示されます。表示されるフィールドは、特定のプロパティで必要となる内容に応じて異なります。 淡色で表示されているプロパティは変更できません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **オブジェクト名です。**  
  現在選択している 1 つまたは複数のオブジェクトを一覧に表示します。 アクティブなエディターまたはデザイナーのオブジェクトのみが表示されます。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62661759"
  **アルファベット順**  
  選択したオブジェクトのデザイン時のすべてのプロパティおよびイベントをアルファベット順に並べ替えます。  
   
- **[プロパティ]**  
+ **Properties**  
  オブジェクトのプロパティを表示します。  
   
  **説明ペイン**  

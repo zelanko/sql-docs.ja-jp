@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3aa054a04b236c419b833df42ba668926e97e312
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 93d938b45f9820c1de2b7f225c222cab8dd0d11b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762381"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Open Geospatial Consortium (OGC) の型に基づいて **geometry** インスタンスが整形式になっている場合は、true を返します。 **geometry** インスタンスが整形式になっていない場合は false を返します。
   
@@ -39,14 +39,14 @@ Open Geospatial Consortium (OGC) の型に基づいて **geometry** インスタ
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) を呼び出すことによって判別できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、有効な **geometry** インスタンスのみを生成しますが、無効なインスタンスの取得と格納が可能です。 無効なインスタンスと同じ地点のセットを表す有効なインスタンスは、`MakeValid()` メソッドを使用して取得できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `geometry` インスタンスを作成し、`STIsValid()` を使用してこのインスタンスが有効かどうかをテストする例を次に示します。  
   
 ```  

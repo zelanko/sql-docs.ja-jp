@@ -1,5 +1,5 @@
 ---
-title: ページで、表示レポート (レポート マネージャー) |Microsoft Docs
+title: '[表示] ページ、レポート (レポートマネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098741"
 ---
 # <a name="view-page-reports-report-manager"></a>[表示] ページ、レポート (レポート マネージャー)
   レポートの [表示] ページではレポートを参照できます。 レポートをレポート マネージャーで最初に開くと、HTML で書式設定されます。 HTML レポートの場合、レポートの一番上に [レポート] ツール バーが表示されます。このツール バーを使用すると、レポート ページ間の移動、レポート内の検索、または異なる形式でのレポートの表示が可能になります。 次の図は、[レポート] ツール バーを示しています。  
   
- ![レポート ツールバー](media/htmlviewer-toolbar.gif "レポート ツールバー")  
+ ![レポート ツール バー](media/htmlviewer-toolbar.gif "レポート ツール バー")  
 レポート ツール バー  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポートを要求時に実行するか、レポート実行スナップショットから実行するかを構成できます。 レポートを要求時に実行する場合、すべてのデータ処理およびレポート処理が、レポートを開くたびに実行されます。 レポートをレポート実行スナップショットとして実行するよう構成している場合、スナップショットの作成時にデータ処理が行われます。  
@@ -37,7 +37,7 @@ ms.locfileid: "66098741"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のどのエディションでも、レポート実行スナップショットおよび一部のエクスポート形式は使用できません。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   

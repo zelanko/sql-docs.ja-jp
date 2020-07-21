@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f3e7c74fcaebb0aaaf246cba94e32c6b602b6e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b21508761bdfbaf8918242b074f78203c1bcaed
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62873588"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953133"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>コレクション アイテムをコレクション セットに追加する (Transact-SQL)
   データ コレクターに備わっているストアド プロシージャを使用して、コレクション アイテムを既存のコレクション セットに追加できます。  
@@ -97,7 +96,7 @@ ms.locfileid: "62873588"
   
      コレクション セットとそのコレクション アイテムは、 **[結果]** タブに表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ジェネリック T-SQL Query コレクター型を使用するカスタム コレクション セットの作成 &#40;Transact-SQL&#41;](create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: " SQL Server の [オプション] ページ - [環境] - [スタートアップ] | Microsoft Docs"
+title: " SQL Server の [オプション] ページ - [環境] - [スタートアップ]"
 ms.date: 11/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -7,12 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 80fff1e8db1fb9dabe6ed12d425bd844e954dac9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 13814422be321a3b26577909588385af43ad3406
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257275"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75252219"
 ---
 # <a name="options-environment---startup-page"></a>[オプション] ([環境] - [スタートアップ] ページ)
 
@@ -24,7 +24,7 @@ ms.locfileid: "68257275"
 
 **[スタートアップ時]**
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の起動時に実行されるアクションを選択します。 使用可能なオプションは次のとおりです。
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の起動時に実行されるアクションを選択します。 オプションは次のとおりです。
 
 - **[オブジェクト エクスプローラーを開く]** 。接続を要求してからオブジェクト エクスプローラーを開きます。
 

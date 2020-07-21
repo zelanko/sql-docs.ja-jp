@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data flow task [Integration Services], adding
 - MainPipe object
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4744e013547e05e09ec392c5ab5a4077bad8a0f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: db9545df35823161dbe6fa64673cac1361c3d34b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052222"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294921"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>プログラムによるデータ フロー タスクの追加
 

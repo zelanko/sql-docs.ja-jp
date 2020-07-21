@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098604"
 ---
-# <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>BackupEncryptionKey メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="backupencryptionkey-method-wmi-msreportserver_configurationsetting"></a>BackupEncryptionKey メソッド (WMI MSReportServer_ConfigurationSetting)
   指定されたレポート サーバー インスタンスの暗号化キーをバックアップします。 暗号化キーは、パスワードを使用して暗号化されて格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -43,13 +43,13 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *Password*  
+ *パスワード*  
  暗号化キーを暗号化するための文字列。暗号化キーを返す前に、この文字列を使用して暗号化されます。  
   
  *KeyFile[]*  
  [out] 暗号化された暗号化キーを含む配列。  
   
- *Length*  
+ *[データ型]*  
  [out] メソッドによって返される配列の長さ。  
   
  *HRESULT*  

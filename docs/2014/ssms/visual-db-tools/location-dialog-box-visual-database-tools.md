@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c07f0fa1937887f2f685d235232385dd216eb393
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040780"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>場所ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスを使用すると、必要なファイルが含まれているフォルダーを見つけて、選択できます。 選択したフォルダーのパスが、このダイアログ ボックスから呼び出し元のダイアログに返されます。 次の方法でこのダイアログ ボックスにアクセスできます。  
   
 -   **[ファイル]** メニューの **[新規作成]** を選択し、 **[プロジェクト]** を選択します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されたら、 **[参照]** を選択します。 " **プロジェクトの場所** " というタイトルの **場所**ダイアログ ボックスが開きます。  
   
- **[探す場所]**  
+ **Look in**  
  必要なフォルダーをこの一覧から見つけます。 選択したフォルダーのサブフォルダーが表示されます。  
   
 ## <a name="my-places-bar"></a>マイ プレース バー  
@@ -44,7 +43,7 @@ ms.locfileid: "63306216"
  **[ファイル]**  
  **[フォルダー名]** フィールドで選択されているフォルダーのパスを呼び出し元のダイアログ ボックスに返します。  
   
-## <a name="toolbar"></a>[ツール バー]  
+## <a name="toolbar"></a>ツール バー  
  **最近参照した場所**  
  最近参照したフォルダー、ドライブ、またはインターネットの場所を返します。  
   

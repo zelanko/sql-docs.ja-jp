@@ -1,6 +1,6 @@
 ---
-title: XML エディター (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: XML エディター
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 28d0de4233147ae0a0dd5f0874d281a4697d93d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 18efec618d3f4afd0c740147ec2612be36442028
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068419"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML エディター (SQL Server Management Studio)
   XML スキーマ、ADO.NET データセット、および XML ドキュメントを操作するためのビジュアルなツールのセットが用意されています。 XML デザイナーは、WC3 (World Wide Web Consortium) で定義されている XML スキーマ定義 (XSD) 言語をサポートします。 デザイナーは、DTD (文書型定義) や XDR (XML-Data Reduced) などのその他の XML スキーマ言語をサポートしません。  
@@ -81,10 +80,10 @@ ms.locfileid: "66063198"
 ## <a name="data-view"></a>データ ビュー  
  データ ビューでは、.xml ファイルを編集するためにデータ グリッドを使用できます。 データ ビューでは、XML ファイルの内容 (タグおよび構造体を除く) だけを編集できます。  
   
- データ ビューには 2 つの独立した領域があります: **[データ テーブル]** と **[データ]** です。 **[データ テーブル]** 領域には、XML ファイルに定義されている関係の一覧がその入れ子の順 (最も外側から最も内側の順) に示されます。 **[データ]** 領域は、[データ テーブル] 領域の選択内容に基づいてデータを表示するデータ グリッドです。  
+ データ ビューは、 **[データ テーブル]** 領域と **[データ]** 領域から構成されます。 **[データ テーブル]** 領域には、XML ファイルに定義されている関係の一覧がその入れ子の順 (最も外側から最も内側の順) に示されます。 **[データ]** 領域は、[データ テーブル] 領域の選択内容に基づいてデータを表示するデータ グリッドです。  
   
 > [!NOTE]  
->  新しく作成された XML ファイルにはデータは含まれていないので、データ ビューに表示することはできません。 また、データ ビューをまったく呼び出すことができない XML ドキュメントのインスタンスもあります。 XML は適切な形式と見なされますが、構造化データではない場合、データ ビューに切り替えようとすると次のメッセージが表示されます:「このドキュメントは正しい形式ですが、データ ビューで表示できない構造を含んでいます。」  
+>  新しく作成された XML ファイルにはデータは含まれていないので、データ ビューに表示することはできません。 また、データ ビューをまったく呼び出すことができない XML ドキュメントのインスタンスもあります。 XML は適切な形式と見なされますが、構造化データではなく、データ ビューへの切り替えが試行されている場合は、"この XML ドキュメントは正しい形式ですが、データ ビューで表示できない構造体を含んでいます。" というメッセージが表示されます。  
   
  データ ビューでは、次の操作を行うことができます。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "66063198"
 -   XML ドキュメントから XML スキーマを生成する。  
   
 ## <a name="xml-view"></a>XML ビュー  
- XML ビューは、生の XML を編集するためのエディターを提供すると共に、IntelliSense および色分け表示機能を提供します。 入力候補機能は、関連スキーマを持つ .xsd ファイルおよび .xml ファイルを操作している場合に使用できます。 型\<開始タグとするには、その場所で有効な要素の一覧が表示されます。 要素名を入力し、Space キーを押すと、その要素でサポートされる属性の一覧が表示されます。  
+ XML ビューは、生の XML を編集するためのエディターを提供すると共に、IntelliSense および色分け表示機能を提供します。 入力候補機能は、関連スキーマを持つ .xsd ファイルおよび .xml ファイルを操作している場合に使用できます。 「」と入力して \< タグを開始すると、その場所で有効な要素の一覧が表示されます。 要素名を入力し、Space キーを押すと、その要素でサポートされる属性の一覧が表示されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense オプションは、ツール バーからは利用できません。 XML エディターを使用しているときにこれらのオプションにアクセスするには、 **[編集]** メニューの **[IntelliSense]** をクリックします。  

@@ -1,5 +1,5 @@
 ---
-title: updateDate メソッド (int, java .sql. Date) |Microsoft Docs
+title: updateDate (int, java.sql.Date) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c5fb1292-a5cf-4cdd-8c4a-d1679944a6d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3318bc5ebd8eb6496262cc9992a4e516aeebf9fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 172589af18c3643caba2b082a997f2d16f0f3c97
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999158"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920934"
 ---
 # <a name="updatedate-method-int-javasqldate"></a>updateDate (int, java.sql.Date) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public void updateDate(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  列インデックスを示す **int** です。  
   
@@ -47,7 +47,7 @@ public void updateDate(int index,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateDate メソッドは、java.sql.ResultSet インターフェイスの updateDate メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

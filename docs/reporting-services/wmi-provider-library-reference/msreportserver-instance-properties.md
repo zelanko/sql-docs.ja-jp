@@ -16,13 +16,13 @@ ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d1b8de8961ef9001c7ef94356a2b82bb248271af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65569135"
 ---
-# <a name="msreportserverinstance-properties"></a>MSReportServer_Instance プロパティ
+# <a name="msreportserver_instance-properties"></a>MSReportServer_Instance プロパティ
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  
   
 ## <a name="public-properties"></a>パブリック プロパティ  

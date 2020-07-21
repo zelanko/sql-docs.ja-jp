@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 184c1e29296a14d530648ae2e621fdc5da188864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0230354bfe53de8c362bcdb70caa597652706ee2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011317"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293981"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>データ プロファイル タスクのセットアップ
 
@@ -48,7 +48,7 @@ ms.locfileid: "68011317"
  詳細については、「[データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)」および「[単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)」をご覧ください。  
   
 > [!IMPORTANT]  
->  出力ファイルには、データベースに関する機密データやデータベースに格納されているデータが含まれる場合があります。 このファイルの安全性を高める方法の推奨事項については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」をご覧ください。  
+>  出力ファイルには、データベースに関する機密データやデータベースに格納されているデータが含まれる場合があります。 このファイルの安全性を高める方法の推奨事項については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」を参照してください。  
   
 ## <a name="selection-and-configuration-of-the-profiles-to-be-computed"></a>計算するプロファイルの選択と構成  
  出力ファイルを設定したら、計算するデータ プロファイルを選択する必要があります。 データ プロファイル タスクでは、8 つの異なるデータ プロファイルを計算できます。 これらのプロファイルのうち 5 つは個々の列を分析し、残りの 3 つは複数の列または列とテーブル間のリレーションシップを分析します。 単一のデータ プロファイル タスクで、複数のテーブルまたはビューの複数の列または列の組み合わせに対して複数のプロファイルを計算することができます。  
@@ -92,10 +92,10 @@ ms.locfileid: "68011317"
   
 -   [[機能依存プロファイル要求] のオプション (データ プロファイル タスク)](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [[値包含プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [[値包含プロファイル要求] のオプション (データ プロファイル タスク)](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>データ プロファイル タスクを含むパッケージの実行  
- データ プロファイル タスクを設定したら、このタスクを実行できるようになります。 実行すると、データ プロファイルが計算され、XML 形式のこの情報がファイルまたはパッケージ変数に出力されます。 この XML の構造は、DataProfile.xsd スキーマに基づきます。 このスキーマは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで開くことができます。 データ品質情報に関するこのスキーマは、次の目的に役立ちます。  
+ データ プロファイル タスクを設定したら、このタスクを実行できるようになります。 実行すると、データ プロファイルが計算され、XML 形式のこの情報がファイルまたはパッケージ変数に出力されます。 この XML の構造は、DataProfile.xsd スキーマに基づきます。 このスキーマは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで開くことができます。 データ品質情報に関するこのスキーマは、次の目的に役立ちます。  
   
 -   組織内および組織間でデータ品質情報を交換する。  
   

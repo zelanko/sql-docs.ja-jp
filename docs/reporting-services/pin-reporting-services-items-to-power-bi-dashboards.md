@@ -1,6 +1,6 @@
 ---
 title: Power BI のダッシュボードへのページ分割されたレポート アイテムのピン留め ‐ Reporting Services | Microsoft Docs
-ms.date: 12/05/2018
+ms.date: 01/14/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892000"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75952480"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Power BI のダッシュボードへの Reporting Services のページ分割されたレポート アイテムのピン留め
 
@@ -28,7 +28,7 @@ ms.locfileid: "68892000"
 
 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] サービスのダッシュ ボードに、オンプレミスの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のページ分割されたレポート アイテムを、新しいタイルとしてピン留めできます。   ピン留めするには、管理者がレポート サーバーを Azure Active Directory および [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合しておく必要があります。  
   
-##  <a name="bkmk_requirements_to_pin"></a> ピン留めの要件  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> ピン留めの要件  
   
 -   レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 統合用に構成されている必要があります。 詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。 レポート サーバーが構成されていない場合、レポート ビューアーのツール バーには **[Power BI ダッシュボードにピン留めする]** ボタンは表示されません。  
   
@@ -40,21 +40,21 @@ ms.locfileid: "68892000"
   
 -   ピン留めしたアイテムを更新する場合は、保存された資格情報を使用するようにレポートを構成する必要があります。  アイテムをピン留めすると、ダッシュボードでのアイテムのデータ更新を管理するために、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションが自動的に作成されます。  レポートで保存された資格情報を使用していない場合、サブスクリプションの実行時に、 **[個人用サブスクリプション]** ページに次のようなエラー メッセージが表示されます。  
   
-    "PowerBI 配信エラー: ダッシュ ボード: IT 支払い分析のサンプル、ビジュアル: Chart2、エラー: 現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報か。"
+    "Power BI 配信エラー: ダッシュボード:IT 支払い分析のサンプル、ビジュアル:Chart2、エラー:現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報か。"
  
     資格情報を保存する方法の詳細については、「 [Reporting Services データ ソースに資格情報を保存する](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)」の「レポート固有のデータ ソース用の保存された資格情報を構成する (ネイティブ モード)」を参照してください。  
   
-##  <a name="bkmk_supported_items"></a> ピン留めできるアイテム  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> ピン留めできるアイテム  
  次のレポート アイテムは、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。  データ領域内で入れ子になっているアイテムをピン留めすることはできません。 たとえば、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のテーブルまたはリスト内で入れ子になっているアイテムはピン留めできません。  
   
 -   グラフ  
 -   ゲージ パネル  
 -   マップ  
--   画像  
+-   イメージ  
 -   アイテムはレポート本文に含まれている必要があります。  ページ ヘッダーまたはページ フッター内のアイテムをピン留めすることはできません。  
 -   最上位の四角形内の個々のアイテムはピン留めできますが、そのすべてのアイテムを 1 つのグループとしてピン留めすることはできません。  
   
-##  <a name="bkmk_to_pin"></a> レポート アイテムをピン留めするには  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> レポート アイテムをピン留めするには  
   
 1. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]にサインインしていることを確認します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、メニュー項目の **[個人用設定]** を選択し、サインインします。 詳細については、「[Power BI 統合の個人用設定 &#40;Web ポータル&#41;](my-settings-for-power-bi-integration-web-portal.md)」をご覧ください。
 
@@ -68,7 +68,7 @@ ms.locfileid: "68892000"
   
 4. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]にピン留めするレポート アイテムをクリックします。 ピン留めできるアイテムは一度に 1 つに限られます。  レポート ビューアーにレポートの影付きのビューが表示されます。ピン留めできるレポート アイテムは強調表示され、ピン留めできないアイテムは濃い影付きになります。  
   
-    **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択します。   ![注:](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
+    **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択します。   ![注](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68892000"
   
 6. **[閉じる]** をクリックして、レポートを通常のビューに戻します。  
   
-##  <a name="bkmk_in_the_dashboard"></a> ダッシュ ボードでの操作
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> ダッシュ ボードでの操作
 
 ダッシュボードにレポート アイテムをピン留めすると、そのタイルは他のダッシュボード タイルと同様に表示され、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]からピン留めされたタイルであることを示すものは表示されません。 タイルのプロパティがレポート アイテムからどのように設定されるのかを以下に示します。  
   
@@ -94,40 +94,42 @@ ms.locfileid: "68892000"
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> 問題のトラブルシューティング  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> 問題のトラブルシューティング  
   
--   **レポート ビューアー ツール バーに [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ボタンがない:**  このメッセージは、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] と統合されていないことを示しています。 詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。  
+-   **レポート ビューアー ツール バーに [[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]] ボタンがない。** このメッセージは、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合されていないことを意味します。 詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。  
   
-- **ピン留めできない**: アイテムをピン留めしようとすると、次のエラー メッセージが表示されます。「 [ピン留めできるアイテム](#bkmk_supported_items)」を参照してください。  
+- **ピン留めできない。** アイテムをピン留めしようとすると、次のエラー メッセージが表示されます。「[ピン留めできるアイテム](#bkmk_supported_items)」のセクションを参照してください。  
   
-      Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
+    "ピン留めできません:このページには [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] にピン留めできるレポート アイテムはありません。"  
   
 -   [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードで**ピン留めされたアイテムに古いデータが表示され**、一定期間更新されなかった:  ユーザーの資格情報トークンの有効期限が切れているので、もう一度サインインする必要があります。  Azure と [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] へのユーザーの資格情報登録の有効期間は 90 日間です。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、 **[個人用設定]** をクリックします。 詳細については、「 [Power BI 統合の個人用設定 &#40;Web ポータル&#41;](my-settings-for-power-bi-integration-web-portal.md)」を参照してください。  
   
 -   [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードで**ピン留めされたアイテムに古いデータが表示され**、一度も更新されていない:  問題は、保存された資格情報を使用するようにレポートが構成されていないことです。 レポート アイテムのピン留め操作により、タイルの更新スケジュールを管理する [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションが作成されるため、レポートでは保存された資格情報を使用する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションでは、保存された資格情報が必要です。 **[個人用サブスクリプション]** ページを確認すると、次のようなエラー メッセージが表示されます。  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+    "Power BI 配信エラー: ダッシュボード:SSRS アイテム、ビジュアル:Image3、エラー:現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報がレポート サーバー データベースに格納されていないか、ユーザー データ ソースが、資格情報を要求しないように構成されているにもかかわらず、自動実行アカウントが指定されていません。 (rsInvalidDataSourceCredentialSetting)"
   
--   **Power BI の資格情報の有効期限が切れている:**  アイテムをピン留めしようとすると、次のエラー メッセージが表示されます。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、 **[個人用設定]** をクリックし、[個人用設定] ページで **[サインイン]** をクリックします。 詳細については、「[Power BI 統合の個人用設定 &#40;Web ポータル&#41;](my-settings-for-power-bi-integration-web-portal.md)」をご覧ください。  
+-   **Power BI の資格情報の有効期限が切れている。** アイテムをピン留めしようとすると、次のエラー メッセージが表示されます。 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、 **[個人用設定]** をクリックし、[個人用設定] ページで **[サインイン]** をクリックします。 詳細については、「[Power BI 統合の個人用設定 &#40;Web ポータル&#41;](my-settings-for-power-bi-integration-web-portal.md)」をご覧ください。  
   
-        Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+    "ピン留めできません:予期しないサーバー エラー:Power BI 資格情報が見つからないか、無効または期限切れです。"  
   
--   **ピン留めできない**: 読み取り専用状態のダッシュボードにアイテムをピン留めしようとすると、次のようなエラー メッセージが表示されます。  
+-   **ピン留めできない。** 読み取り専用状態のダッシュボードにアイテムをピン留めしようとすると、次のようなエラー メッセージが表示されます。  
   
-        Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
-  
-##  <a name="bkmk_subscription_management"></a> サブスクリプション管理  
+    "サーバー エラー:アイテム 'ダッシュボードが削除されました 015cf022-8e2f-462e-88e5-75ab0a04c4d0' が見つかりません。 (rsItemNotFound)"  
+
+-   **Power BI アプリのタイルに古いデータが表示される:** Reporting Services のレポート アイテムをダッシュボードにピン留めし、そのダッシュボードをアプリで配布した場合、そのダッシュボードにピン留めされたレポート アイテムは更新されません。 
+
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> サブスクリプション管理  
  トラブルシューティングのセクションで説明したサブスクリプション関連の問題に加え、次の情報も [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 関連のサブスクリプションの維持に役立ちます。
   
--   **アイテム名の変更:** ピン留めされたレポート アイテムの名前を変更したり、アイテムを削除したりすると、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] のタイルが更新されなくなり、次のようなエラー メッセージが表示されます。  アイテムを元の名前に戻すと、サブスクリプションが再び機能し始め、サブスクリプションのスケジュールどおりにタイルが更新されるようになります。  
+-   **アイテム名の変更。** ピン留めされたレポート アイテムの名前が変更されたり、削除されたりすると、[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] のタイルは更新されなくなり、次のようなエラー メッセージが表示されます。  アイテムを元の名前に戻すと、サブスクリプションが再び機能し始め、サブスクリプションのスケジュールどおりにタイルが更新されるようになります。  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
+    "Power BI 配信エラー: ダッシュボード:SSRS アイテム、ビジュアル:Image1、エラー:エラー:レポート アイテム 'Image1' が見つかりません。"  
   
-     サブスクリプションのプロパティを編集し、 **レポートのビジュアル名** を適切なレポート アイテム名に変更することもできます。 ![power bi の更新に使用する、ビジュアルの変更](../reporting-services/media/ssrs-powerbi-subscription-visual.png "power bi の更新に使用する、ビジュアルの変更")  
+    サブスクリプションのプロパティを編集し、 **レポートのビジュアル名** を適切なレポート アイテム名に変更することもできます。 ![Power BI の更新に使用するビジュアルを変更する](../reporting-services/media/ssrs-powerbi-subscription-visual.png "Power BI の更新に使用するビジュアルを変更する")  
   
--   **タイルの削除**: [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]でタイルを削除しても、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] と **[個人用サブスクリプション]** ページで関連するサブスクリプションが削除されず、次のようなエラー メッセージが表示されます。 サブスクリプションを削除できます。  
+-   **タイルの削除**: [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] でタイルを削除しても、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] と **[個人用サブスクリプション]** ページで関連するサブスクリプションが削除されず、次のようなエラー メッセージが表示されます。 サブスクリプションを削除できます。  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
+    "Power BI 配信エラー: ダッシュボード:SSRS アイテム、ビジュアル:Image3、エラー:アイテム 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' が見つかりません。"  
 
 ## <a name="video"></a>ビデオ
 

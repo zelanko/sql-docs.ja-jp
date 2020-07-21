@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_help_jobs (TRANSACT-SQL) |Microsoft Docs
+title: sp_cdc_help_jobs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_help_jobs
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 9820476ecdee25551d09c8206595b637421b9efd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0e5f1bc891a9ed3ce41d2b692d94995fc8ff0909
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083722"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891069"
 ---
-# <a name="sysspcdchelpjobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_cdc_help_jobs-transact-sql"></a>sp_cdc_help_jobs (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースを対象に、変更データ キャプチャのすべてのクリーンアップ ジョブまたはキャプチャ ジョブについての情報をレポートします。  
   
@@ -48,16 +48,16 @@ sys.sp_cdc_help_jobs
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ジョブの ID。|  
-|**job_type**|**nvarchar(20)**|ジョブの種類。|  
-|**maxtrans**|**int**|各スキャン サイクルで処理する最大トランザクション数。<br /><br /> **maxtrans**はキャプチャ ジョブでのみ有効です。|  
-|**maxscans**|**int**|ログからすべての行を抽出するために実行する最大スキャン サイクル数。<br /><br /> **maxscans**はキャプチャ ジョブでのみ有効です。|  
-|**継続的です**|**bit**|キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を示すフラグ。 詳細については、次を参照してください。 [sys.sp_cdc_add_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)します。<br /><br /> **継続的な**はキャプチャ ジョブでのみ有効です。|  
-|**pollinginterval**|**bigint**|ログ スキャン サイクル間の秒数。<br /><br /> **pollinginterval**はキャプチャ ジョブでのみ有効です。|  
-|**保有期間**|**bigint**|変更行が変更テーブルに保持される分数。<br /><br /> **保有期間**はクリーンアップ ジョブでのみ有効です。|  
-|**threshold**|**bigint**|クリーンアップ時に 1 つのステートメントを使用して削除できる最大削除エントリ数。|  
+|**job_type**|**nvarchar (20)**|ジョブの種類。|  
+|**maxtrans**|**int**|各スキャンサイクルで処理するトランザクションの最大数。<br /><br /> **maxtrans**はキャプチャジョブでのみ有効です。|  
+|**maxscans**|**int**|ログからすべての行を抽出するために実行する最大スキャン サイクル数。<br /><br /> **maxscans**は、キャプチャジョブに対してのみ有効です。|  
+|**連続**|**bit**|キャプチャ ジョブを連続的に実行するか (1)、1 回だけ実行するか (0) を示すフラグ。 詳細については、「 [sys. sp_cdc_add_job &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)」を参照してください。<br /><br /> **continuous**は、キャプチャジョブに対してのみ有効です。|  
+|**pollinginterval**|**bigint**|ログ スキャン サイクル間の秒数。<br /><br /> **pollinginterval**はキャプチャジョブに対してのみ有効です。|  
+|**保有**|**bigint**|変更行が変更テーブルに保持される時間 (分単位)。<br /><br /> **リテンション期間**はクリーンアップジョブに対してのみ有効です。|  
+|**threshold**|**bigint**|クリーンアップ時に1つのステートメントを使用して削除できる削除エントリの最大数。|  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **db_owner**固定データベース ロール。  
+ **Db_owner**固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例は、`AdventureWorks2012` データベースに定義されているキャプチャ ジョブおよびクリーンアップ ジョブについての情報を返します。  
@@ -69,8 +69,8 @@ EXEC sys.sp_cdc_help_jobs;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

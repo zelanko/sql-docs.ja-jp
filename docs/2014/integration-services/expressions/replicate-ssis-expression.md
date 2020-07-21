@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 349a100a295ef00b19b2de69214fdd7af8bd2d32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 94869b1144631c76b242e61617fbe64c23e09904
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897351"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428269"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (SSIS 式)
   指定された回数だけレプリケートされた文字式を返します。 *times* 引数は整数に評価される必要があります。  
@@ -42,7 +41,7 @@ REPLICATE(character_expression,times)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *times* が 0 の場合、関数は長さが 0 の文字列を返します。  
   
  *times* が負の値の場合、関数はエラーを返します。  

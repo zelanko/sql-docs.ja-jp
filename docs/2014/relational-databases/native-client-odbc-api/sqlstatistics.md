@@ -11,18 +11,17 @@ topic_type:
 helpviewer_keywords:
 - SQLStatistics function
 ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fcae3e323f735d93bc0cc6024595ec597089b1e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021499"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
-  **SQLStatistics**静的カーソルで実行できます。 実行しようとすると、 **SQLStatistics**で更新可能な (キーセット ドリブンまたは動的) 返しますが、カーソルの種類を示す SQL_SUCCESS_WITH_INFO が変更されました。  
+  **Sqlstatistics**は、静的カーソルで実行できます。 更新可能な (キーセットドリブンまたは動的) で**Sqlstatistics**を実行しようとすると、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLStatistics 関数](https://go.microsoft.com/fwlink/?LinkId=59372)   

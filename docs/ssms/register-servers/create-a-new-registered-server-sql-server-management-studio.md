@@ -1,10 +1,7 @@
 ---
-title: 新しい登録済みサーバーの作成 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 新しい登録済みサーバーの作成
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2fd57edd00e2e5cd6a8921f324b1de20260bfa9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267792"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75246570"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>新しい登録済みサーバーの作成 (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  このトピックでは、サーバーを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の 登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。 ローカル コンピューターのサーバー インスタンスを登録するには、特殊なメニュー オプションを使用します。  
+
+このトピックでは、サーバーを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の 登録済みサーバー コンポーネントに登録することによって、頻繁にアクセスするサーバーの接続情報を保存する方法について説明します。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。 ローカル コンピューターのサーバー インスタンスを登録するには、特殊なメニュー オプションを使用します。  
   
  登録済みサーバーには、次の 2 種類があります。  
   
@@ -39,7 +42,7 @@ ms.locfileid: "68267792"
   
      サーバー登録は、ファイル システムではなく中央管理サーバーに保存されます。 中央管理サーバーおよび従属登録済みサーバーは、Windows 認証を使用しないと登録できません。 中央管理サーバーを登録すると、そのサーバーに関連する登録済みサーバーが自動的に表示されます。 中央管理サーバーの詳細については、「 [中央管理サーバーを使用した複数のサーバーの管理](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、中央管理サーバーを指定できません。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>ローカル サーバー インスタンスを自動的に登録するには  
   
@@ -55,19 +58,19 @@ ms.locfileid: "68267792"
      **サーバー名**  
      登録するサーバー インスタンスを、 *\<servername>* [\\ *\<instancename>* ] という形式で選択します。  
   
-     **[認証]**  
+     **認証**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続する際には、2 つの認証モードのいずれかを選択します。  
   
      **[Windows 認証]**  
      Windows 認証モードを使用すると、ユーザーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウントを使用して接続できます。  
   
-     **SQL Server 認証 (SQL Server Authentication)**  
+     **SQL Server 認証**  
      指定されたログイン名とパスワードを使用して、信頼関係の低い接続から接続した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン アカウントが設定されているかどうか、指定されたパスワードが以前に記録されたパスワードと一致しているかどうかを確認することで認証を行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログイン アカウントが設定されていない場合、認証は失敗し、エラー メッセージが返されます。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 詳細については、「 [認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
   
-     **User name**  
+     **ユーザー名**  
      接続に使用されている、現在のユーザー名を表示します。 この読み取り専用オプションは、Windows 認証を使用した接続が指定されている場合にのみ使用できます。 **[ユーザー名]** を変更するには、別のユーザーとしてコンピューターにログインします。  
   
      **Login**  
@@ -91,7 +94,7 @@ ms.locfileid: "68267792"
      **テスト**  
      クリックすると、 **[サーバー名]** で選択されたサーバーへの接続をテストします。  
   
-     **[保存]**  
+     **および**  
      クリックすると、登録済みサーバーの設定を保存します。  
   
 ## <a name="multiserver-queries"></a>マルチサーバー クエリ  

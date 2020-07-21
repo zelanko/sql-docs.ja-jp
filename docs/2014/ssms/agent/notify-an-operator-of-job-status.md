@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 268f75902f752551e33467e422b6f33ea6c4dcb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a202327ad63cf7ef8f51d3572b257816ee6d9419
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211352"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064460"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントからジョブに関する通知をオペレーターに送信するための通知オプションを設定する方法について説明します。  
+  このトピックでは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、、、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがジョブに関する通知をオペレーターに送信できるように、で通知オプションを設定する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -41,18 +40,18 @@ ms.locfileid: "68211352"
   
      [SQL Server 管理オブジェクト](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>オペレーターにジョブの状態を通知するには  
   
-1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** 、 **[ジョブ]** の順に展開し、編集するジョブを右クリックして、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、編集するジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
 3.  **[ジョブのプロパティ]** ダイアログ ボックスで、 **[通知]** ページをクリックします。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "68211352"
   
     -   **[ジョブ完了時]** : 完了時の状態とは関係なくオペレーターに通知します。  
   
-##  <a name="TSQL"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL の使用  
   
 #### <a name="to-notify-an-operator-of-job-status"></a>オペレーターにジョブの状態を通知するには  
   
@@ -90,7 +89,7 @@ ms.locfileid: "68211352"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     -- adds an e-mail notification for the specified alert (Test Alert).  
     -- This example assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name.  
     USE msdb ;  
@@ -102,11 +101,9 @@ ms.locfileid: "68211352"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)します。  
+ 詳細については、「 [sp_add_notification &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)」を参照してください。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **オペレーターにジョブの状態を通知するには**  
   
- 使用して、 `Job` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
-  
-  
+ `Job`Visual Basic、Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

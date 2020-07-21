@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8803ead9f5ec779a024a0f1980b0e3dab3a746ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b8443f62768f73fb93ff0518c89327845edf2df
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981156"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904859"
 ---
 # <a name="getobject-method-javalangstring-javautilmap"></a>getObject (java.lang.String, java.util.Map) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.lang.Object getObject(java.lang.String sCol,
   
  *m*  
   
- マップオブジェクト。  
+ Map オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
  **Object** 値。  
@@ -53,7 +53,7 @@ public java.lang.Object getObject(java.lang.String sCol,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getObject メソッドは、java.sql.CallableStatement インターフェイスの getObject メソッドで規定されています。  
   
  このメソッドは、指定された列の値を Java オブジェクトとして返します。 この Java オブジェクトの型は、JDBC 仕様に指定されている組み込み型のマッピングに基づく、列の SQL 型に対応する既定の Java オブジェクト型です。 値が SQL NULL の場合、ドライバーは Java の null を返します。  

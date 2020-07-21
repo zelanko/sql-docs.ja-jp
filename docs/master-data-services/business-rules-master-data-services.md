@@ -1,5 +1,6 @@
 ---
-title: ビジネス ルール (マスター データ サービス) | Microsoft Docs
+title: ビジネス ルール
+description: データを更新したり、電子メールを送信したり、ビジネスプロセスまたはワークフローを開始したりできる、マスターデータサービスのビジネスルールについて説明します。
 ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: aa05b563fc72f3908fe2ab796d77917d58b16636
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 229ac06d8d37922f5ca0abca4f5d327137e18499
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813668"
 ---
 # <a name="business-rules-master-data-services"></a>ビジネス ルール (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のビジネス ルールは、マスター データの品質と精度を保証するために使用するルールです。 ビジネス ルールを使用して自動的にデータを更新したり、電子メールを送信したり、ビジネス プロセスまたはワークフローを開始したりできます。  
   
@@ -85,7 +86,7 @@ ms.locfileid: "68047390"
 |ビジネス ルールが適用されたときに通知を送信するように [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を構成する。|[通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |特定のメンバーにビジネス ルールを適用する。|[ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |ビジネス ルールを除外して、使用されないようにする。|[ビジネス ルールを除外する &#40;マスター データ サービス&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|既存のビジネス ルールを削除する。|[ビジネス ルールを削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)|  
+|既存のビジネス ルールを削除する。|[ビジネス ルールを削除する (マスター データ サービス)](../master-data-services/delete-a-business-rule-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   

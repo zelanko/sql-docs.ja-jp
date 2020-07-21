@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.isprojectprop.versions.f1
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f61073e5b04e36a5ba6028e47e5c6c13e5c819a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9b1715b517f6933a9f904b17ff268fdf7162464d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070547"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294896"
 ---
 # <a name="project-versions-dialog-box"></a>[プロジェクトのバージョン] ダイアログ ボックス
 
@@ -34,7 +34,7 @@ ms.locfileid: "68070547"
   
 -   [プロジェクトのバージョンの復元](#restore)  
   
-##  <a name="open_dialog"></a> [プロジェクトのバージョン] ダイアログ ボックスを開く  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> [プロジェクトのバージョン] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68070547"
   
  **[プロジェクトのバージョン]** ダイアログ ボックスの **[バージョン]** テーブルには、サーバー上に配置されたプロジェクトのバージョン、バージョンが配置された日時、バージョンが復元された日時 (復元された場合)、バージョンの説明、およびバージョンの識別子の一覧が表示されます。 このテーブルでは、現在アクティブなバージョンの **[現在]** 列にチェック マークが付きます。  
   
-##  <a name="restore"></a> プロジェクトのバージョンの復元  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> プロジェクトのバージョンの復元  
  以前のバージョンのプロジェクトを復元するには、 **[バージョン]** テーブルでバージョンを選択し、 **[選択したバージョンに復元]** をクリックします。 プロジェクトが選択したバージョンに復元され、 **[バージョン]** テーブルでは、そのバージョンの **[現在]** 列にチェック マークが付きます。  
   
   

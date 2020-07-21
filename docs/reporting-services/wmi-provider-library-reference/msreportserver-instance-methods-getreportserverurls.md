@@ -11,13 +11,13 @@ ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571947"
 ---
-# <a name="msreportserverinstance-methods---getreportserverurls"></a>MSReportServer_Instance メソッド - GetReportServerUrls
+# <a name="msreportserver_instance-methods---getreportserverurls"></a>MSReportServer_Instance メソッド - GetReportServerUrls
   ユーザーがレポート サーバーと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]へのアクセスに使用できる URL の一覧を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -47,7 +47,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>戻り値  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  WMI 管理オブジェクトによって公開されるメソッドは、InvokeMethod 関数によって呼び出されます。 詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI ドキュメントの「管理オブジェクトのメソッドの実行」を参照してください。  
   
 ## <a name="requirements"></a>必要条件  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c88d8dd92fcedac2facff27f52492be5ccb74269
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103609"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>レポート サーバーのサービス プリンシパル名 (SPN) の登録
@@ -23,11 +23,11 @@ ms.locfileid: "66103609"
 ## <a name="about-spns"></a>SPN について  
  SPN は、Kerberos 認証を使用するネットワークでのサービスの一意識別子です。 SPN は、サービス クラス、ホスト名、およびポートで構成されます。 Kerberos 認証を使用するネットワークでは、ビルトイン コンピューター アカウント (NetworkService や LocalSystem など) またはユーザー アカウントにサーバーの SPN を登録する必要があります。 ビルトイン アカウントには、自動的に SPN が登録されます。 一方、ドメイン ユーザー アカウントでサービスを実行する場合は、使用するアカウントに手動で SPN を登録する必要があります。  
   
- SPN を作成するには、 **SetSPN** コマンド ライン ユーティリティを使用します。 詳細については、以下を参照してください。  
+ SPN を作成するには、 **SetSPN** コマンド ライン ユーティリティを使用します。 詳細については、「  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx) 。  
+-   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   
--   [サービス プリンシパル名 (SPN) SetSPN の構文 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) 。  
+-   [サービスプリンシパル名 (spn) SetSPN の構文 (setspn)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)。  
   
  このユーティリティをドメイン コントローラーで実行するには、ドメイン管理者であることが必要です。  
   
@@ -42,7 +42,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
  `HTTP` はサービス クラスです。 レポート サーバー Web サービスは、HTTP.SYS で実行されます。 HTTP 用に SPN を作成すると、副次的に、HTTP.SYS で実行される同じコンピューター上のすべての Web アプリケーション (IIS でホストされるアプリケーションを含む) に対して、ドメイン ユーザー アカウントに基づいてチケットが付与されます。 これらのサービスを別のアカウントで実行すると、認証要求が失敗します。 この問題を回避するには、すべての HTTP アプリケーションが同じアカウントで実行されるように構成するか、またはアプリケーションごとにホスト ヘッダーを作成し、作成したホスト ヘッダーごとに個別の SPN を作成することを検討してください。 ホスト ヘッダーを構成する場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成にかかわらず DNS を変更する必要があります。  
   
- \<*computername*>、\<*domainname*>、\<*port*> に指定した値で、レポート サーバーをホストするコンピューターのネットワーク アドレスが一意に識別されます。 これは、ローカル ホスト名にすることも、完全修飾ドメイン名 (FQDN) にすることもできます。 ドメインが 1 つしかなく、かつポート 80 を使用している場合は、コマンド ラインで \<*domainname*> と \<*port*> を省略できます。 \<*domain-user-account*> は、レポート サーバー サービスが実行され、SPN を登録する必要があるユーザー アカウントです。  
+ \< *Computername*>、 \< *domainname*>、および\< *port*> に指定する値によって、レポートサーバーをホストするコンピューターの一意のネットワークアドレスが識別されます。 これは、ローカル ホスト名にすることも、完全修飾ドメイン名 (FQDN) にすることもできます。 ドメインが1つしかなく、かつポート80を使用している\<場合は、コマンドラインから*domainname*> と\< *port*> を省略できます。 \<*ドメイン-ユーザーアカウント*> は、レポートサーバーサービスを実行するユーザーアカウントであり、SPN を登録する必要があります。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>ドメイン ユーザー アカウントに対する SPN の登録  
   
@@ -60,7 +60,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
     Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     例: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+     たとえば次のようになります。`Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  コマンドを実行します。  
   
@@ -69,7 +69,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 7.  このセクションの最初のエントリとして `<RSWindowsNegotiate/>` を追加して、NTLM を有効にします。  
   
 ## <a name="see-also"></a>参照  
- [サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;サービスアカウントを構成&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Reporting Services ネイティブ モードのレポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md)  
   

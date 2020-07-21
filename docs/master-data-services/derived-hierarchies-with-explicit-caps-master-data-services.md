@@ -1,5 +1,5 @@
 ---
-title: 明示的なキャップを持つ派生階層 (Master Data Services) | Microsoft Docs
+title: 明示的なキャップを持つ派生階層
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9d62f40807c4e7be3c2e585540dfd79ae85a6228
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0966fff84b46a6fbfbea4b99dd628bf957151017
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813008"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>明示的なキャップを持つ派生階層 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の、派生階層の最上位レベルとして使用される明示的階層のレベルは、明示的なキャップを持つ派生階層と呼ばれます。  
   

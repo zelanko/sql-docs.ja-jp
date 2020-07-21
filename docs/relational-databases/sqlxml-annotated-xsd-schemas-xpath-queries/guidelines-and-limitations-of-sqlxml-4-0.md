@@ -1,5 +1,6 @@
 ---
-title: SQLXML 4.0 のガイドラインと制限 |マイクロソフトのドキュメント
+title: SQLXML 4.0 のガイドラインと制限
+description: SQLXML 4.0 の使用に関するガイドラインと制限事項について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 411495986ed700a069a7c8124a7d0829102138fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8031178d268af10169bc8b8ca441bd7d7668c82b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649964"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0 のガイドラインと制限
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   SQLXML 4.0 を使用する場合は次の点に注意してください。  
   
 -   クエリ結果として返される XML は、XML を生成したマッピング スキーマに対して検証されません。  
@@ -30,6 +31,6 @@ ms.locfileid: "68073374"
   
      つまり、SQLXML 4.0 とバージョン固有の PROGID を使用するアプリケーションを実行している状態で、他のソフトウェア プログラムをインストールすると、 このプログラムによって以前のバージョンの SQLXML がインストールされる可能性があり、 この場合、アプリケーションのバージョン固有の PROGID では以前のバージョンの SQLXML が参照されるため、アプリケーションで使用する SQLXML 機能が含まれていないと、エラーが発生します。  
   
--   SQLXML の機能のプロバイダーを設定するはありません、SQLXMLOLEDB プロバイダーを使用して、SQLOLEDB を使用する代わりに、何らかの理由で場合、 **SQLXML Version**プロパティを"SQLXML.4.0"。  
+-   何らかの理由で SQLXMLOLEDB プロバイダーを使用せず、代わりに SQLOLEDB プロバイダーを SQLXML 機能に使用する場合は、 **Sqlxml Version**プロパティを "sqlxml. 4.0" に設定します。  
   
   

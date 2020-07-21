@@ -12,17 +12,17 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7d350d78a4a79bd66cd6bda5794b87d97cf043dc
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809844"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196892"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-特定の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 計算ノードまたは制御ノードで実行されているクエリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行プランを表示します。 クエリの計算ノードと制御ノードでの実行中に、クエリ パフォーマンスの問題のトラブルシューティングを行うにはこれを使用します。
+特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 計算ノードまたは制御ノードで実行されているクエリの [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 実行プランを表示します。 クエリの計算ノードと制御ノードでの実行中に、クエリ パフォーマンスの問題のトラブルシューティングを行うにはこれを使用します。
   
 計算ノードで実行されている SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリについて、クエリのパフォーマンスに問題があることがわかった場合、パフォーマンスを向上する方法がいくつかあります。 計算ノードでのクエリのパフォーマンスを向上させる方法として、複数列統計の作成、非クラスター化インデックスの作成、クエリ ヒントの使用が考えられます。
   
@@ -31,13 +31,13 @@ ms.locfileid: "68809844"
 ## <a name="syntax"></a>構文  
 Azure SQL Data Warehouse の構文:
 
-```sql
+```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
 [;]  
 ```  
 Azure 並列データ ウェアハウスの構文:
   
-```sql
+```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [;]  
 ```  
@@ -57,7 +57,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 アプライアンスに対する VIEW-SERVER-STATE アクセス許可が必要です。
   
-## <a name="examples-includesssdwincludessssdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+## <a name="examples-sssdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
 ### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. DBCC PDW_SHOWEXECUTIONPLAN の基本的な構文  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] インスタンスで実行している場合は、上記のクエリを変更して distribution_id も選択します。  
@@ -75,7 +75,7 @@ order by request_id, [dms_step_index];
 DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );  
 ```  
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. DBCC PDW_SHOWEXECUTIONPLAN の基本的な構文  
  実行時間が長すぎるクエリでは、DMS クエリプラン操作または SQL クエリ プラン操作が実行されています。  
   

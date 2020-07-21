@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (TRANSACT-SQL) |Microsoft Docs
+title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -19,17 +19,17 @@ ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6f7e9d8d9ab99ebe4a7c5749033eacf85b8feb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 948b2b1e9ee9a8827322cf05fcb2f812d925de93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734432"
 ---
-# <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-sql)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  CHANGETABLE(CHANGES...) 関数によって返される SYS_CHANGE_COLUMNS 値を解釈します。 これにより、指定した列が SYS_CHANGE_COLUMNS に返された値に含まれているかどうかを、アプリケーションで判断することができます。  
+  CHANGETABLE (CHANGES...) 関数によって返される SYS_CHANGE_COLUMNS 値を解釈します。 これにより、指定した列が SYS_CHANGE_COLUMNS に返された値に含まれているかどうかを、アプリケーションで判断することができます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 ## <a name="arguments"></a>引数  
  *column_id*  
- チェックする列の ID です。 列の ID を使用して取得できます、 [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)関数。  
+ チェックする列の ID です。 列 ID を取得するには、 [Columnproperty](../../t-sql/functions/columnproperty-transact-sql.md)関数を使用します。  
   
  *change_columns*  
- バイナリ データの SYS_CHANGE_COLUMNS 列から、 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)データ。  
+ [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)データの SYS_CHANGE_COLUMNS 列のバイナリデータです。  
   
 ## <a name="return-type"></a>戻り値の型  
  **bit**  
@@ -55,14 +55,14 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
   
 |戻り値|説明|  
 |------------------|-----------------|  
-|0|指定した列がない、 *change_columns*一覧。|  
-|1|指定した列は、 *change_columns*一覧。|  
+|0|指定された列が*change_columns*一覧にありません。|  
+|1|指定された列が*change_columns*一覧に含まれています。|  
   
-## <a name="remarks"></a>コメント  
- CHANGE_TRACKING_IS_COLUMN_IN_MASK を検証するには、どのチェックは行われず、 *column_id*値、すなわち、 *change_columns*パラメーターは、元のテーブルから取得された、 *column_id*取得されました。  
+## <a name="remarks"></a>Remarks  
+ CHANGE_TRACKING_IS_COLUMN_IN_MASK では、 *column_id*値を検証するためのチェックは実行されません。また、 *column_id*を取得したテーブルから*change_columns*パラメーターが取得されたこともあります。  
   
 ## <a name="examples"></a>使用例  
- 次の例を決定するかどうか、`Salary`の列、`Employees`テーブルが更新されました。 `COLUMNPROPERTY`関数の列の ID を返します、`Salary`列。 `@change_columns` CHANGETABLE をデータ ソースとして使用して、クエリの結果をローカル変数を設定する必要があります。  
+ 次の例では、 `Salary` テーブルの列が更新されたかどうかを確認し `Employees` ます。 関数は、 `COLUMNPROPERTY` 列の列 ID を返し `Salary` ます。 `@change_columns`ローカル変数は、データソースとして CHANGETABLE を使用して、クエリの結果に設定する必要があります。  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
@@ -71,8 +71,8 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [変更追跡関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
+ [Change Tracking 関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [CHANGETABLE &#40;Transact-sql&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

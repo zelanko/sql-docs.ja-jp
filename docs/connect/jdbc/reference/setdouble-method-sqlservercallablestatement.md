@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b103bae2e7de26997545d0158ec2e3c440a0c59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d4ba5cce322b9fe925f3455929f0a040e05b3aa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213685"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925793"
 ---
 # <a name="setdouble-method-sqlservercallablestatement"></a>setDouble メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,12 +42,12 @@ public void setDouble(java.lang.String sCol,
   
  *d*  
   
- **Double**値。  
+ **double** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setDouble メソッドは、java.sql.CallableStatement インターフェイスの setDouble メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  

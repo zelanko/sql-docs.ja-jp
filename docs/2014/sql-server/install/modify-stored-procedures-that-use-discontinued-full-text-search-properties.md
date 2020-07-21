@@ -1,5 +1,5 @@
 ---
-title: 廃止されたフルテキスト検索プロパティを使用するストアド プロシージャの変更 |Microsoft Docs
+title: 廃止されたフルテキスト検索プロパティを使用するストアドプロシージャの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9392d9-a9ba-4378-84e4-59f516b67ddb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f19fa2dc044d5975edfbc201c8fc3eb9e9244936
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093850"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044607"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>廃止されたフルテキスト検索プロパティを使用するストアド プロシージャを変更する
   ストアド プロシージャが正しく実行されるようにするには、既存のプロシージャを編集し、削除または非推奨とされたフルテキスト関連のプロパティおよび設定を削除する必要があります。  

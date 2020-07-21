@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 基本的な表レポートの作成 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:基本的な表レポートの作成 (レポート ビルダー) | Microsoft Docs
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,24 +9,24 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041205"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>チュートリアル:基本的な表レポートの作成 (レポート ビルダー)
 このチュートリアルでは、サンプルの売上データに基づいて基本的な表レポートを作成する方法を説明します。 次の図に、ここで作成するレポートを示します。  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-このチュートリアルの推定所要時間 : 20 分  
+このチュートリアルの推定所要時間:20 分  
   
 ## <a name="requirements"></a>必要条件  
 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
-## <a name="CreateTable"></a>1.ウィザードを使用してレポートを作成する  
+## <a name="1-create-a-report-using-a-wizard"></a><a name="CreateTable"></a>1.ウィザードを使用してレポートを作成する  
 テーブルまたはマトリックス ウィザードを使用してテーブルを追加します。 レポート デザイン モードと共有データセット デザイン モードの 2 つのモードがあります。 レポート デザイン モードでは、レポート データ ペインでデータを指定し、デザイン画面でレポート レイアウトを指定します。 共有データセット デザイン モードでは、他のユーザーと共有するデータセット クエリを作成します。 このチュートリアルでは、レポート デザイン モードを使用します。  
   
 ### <a name="to-create-a-report"></a>レポートを作成するには  
@@ -41,7 +41,7 @@ ms.locfileid: "63041205"
   
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
-## <a name="DataConnection"></a>1a. テーブル ウィザードでデータ接続を指定する  
+## <a name="1a-specify-a-data-connection-in-the-table-wizard"></a><a name="DataConnection"></a>1a. テーブル ウィザードでデータ接続を指定する  
 データ接続には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 通常、使用する接続情報と資格情報の種類はデータ ソースの所有者から提供されます。 データ接続を指定するには、レポート サーバーの共有データ ソースを使用するか、このレポートでのみ使用する埋め込みデータ ソースを作成します。  
   
 このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用方法の詳細については、「[別の方法でデータ接続を取得する &#40;レポート ビルダー&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)」を参照してください。  
@@ -76,7 +76,7 @@ ms.locfileid: "63041205"
   
 9. **[次へ]** をクリックします。  
   
-## <a name="Query"></a>1b. テーブル ウィザードでクエリを作成する  
+## <a name="1b-create-a-query-in-the-table-wizard"></a><a name="Query"></a>1b. テーブル ウィザードでクエリを作成する  
 レポートでは、クエリが事前に定義された共有データセットを使用するか、そのレポートでのみ使用する埋め込みデータセットを作成できます。 このチュートリアルでは、埋め込みデータセットを作成します。  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ ms.locfileid: "63041205"
   
 4.  **[次へ]** をクリックします。  
   
-## <a name="Groups"></a>1c. テーブル ウィザードでデータをグループにまとめる  
+## <a name="1c-organize-data-into-groups-in-the-table-wizard"></a><a name="Groups"></a>1c. テーブル ウィザードでデータをグループにまとめる  
 グループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むテーブルをデザインします。  
   
 ### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -159,7 +159,7 @@ ms.locfileid: "63041205"
   
 6.  **[次へ]** をクリックします。  
   
-## <a name="Subtotals"></a>1d. テーブル ウィザードで小計行と合計行を追加する  
+## <a name="1d-add-subtotal-and-total-rows-in-the-table-wizard"></a><a name="Subtotals"></a>1d. テーブル ウィザードで小計行と合計行を追加する  
 グループを作成したら、フィールドの集計値を表示する行を追加して書式を設定できます。 すべてのデータを表示するか、グループ化されたデータの展開と折りたたみをユーザーが対話的に行えるようにするかを選択できます。  
   
 ### <a name="to-add-subtotals-and-totals"></a>小計と合計を追加するには  
@@ -184,9 +184,9 @@ ms.locfileid: "63041205"
   
 4.  **[次へ]** をクリックしてテーブルを確認し、 **[完了]** をクリックします。  
   
-テーブルがデザイン画面に追加されます。 テーブルには 5 列および 5 行が含まれています。 行グループ ペインに、SalesDate、Subcategory、および Details の 3 つの行グループが表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+テーブルがデザイン画面に追加されます。 テーブルには 5 列および 5 行が含まれています。 [行グループ] ウィンドウには 3 つの行グループが表示されます。SalesDate、Subcategory、Details です。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
   
-## <a name="FormatCurrency"></a>2.データに通貨の書式を設定する  
+## <a name="2-format-data-as-currency"></a><a name="FormatCurrency"></a>2.データに通貨の書式を設定する  
 既定では、Sales フィールドの集計データは通常の数値として表示されます。 このフィールドを書式設定して、数値を通貨として表示します。   
   
 ### <a name="to-format-a-currency-field"></a>通貨フィールドを書式設定するには  
@@ -203,7 +203,7 @@ ms.locfileid: "63041205"
   
 Sales の集計値が通貨として表示されます。  
   
-## <a name="FormatDate"></a>3.データに日付の書式を設定する  
+## <a name="3-format-data-as-date"></a><a name="FormatDate"></a>3.データに日付の書式を設定する  
 既定では、SalesDate フィールドに日付と時刻の両方が表示されます。 このフィールドを書式設定して、日付のみを表示できます。  
   
 ### <a name="to-format-a-date-field-as-the-default-format"></a>日付フィールドの書式を既定の書式に設定するには  
@@ -242,7 +242,7 @@ SalesDate の値が、既定の日付の書式で表示されます。
   
 SalesDate の値が、月の数字ではなく月の名前で表示されます。  
   
-## <a name="Width"></a>4.列幅を変更する  
+## <a name="4-change-column-widths"></a><a name="Width"></a>4.列幅を変更する  
 テーブルの各セルには、既定でテキスト ボックスが含まれます。 テキスト ボックスは、ページを表示するときにテキストに合わせて垂直方向に拡張されます。 表示されるレポートでは、各行がその行で最も高いテキスト ボックスの高さに拡張されます。 デザイン画面の行の高さは、表示されるレポートの行の高さには影響しません。  
   
 各行の垂直方向の領域を小さくするには、列の幅を広げ、列で想定されるテキスト ボックスの内容が 1 行に収まるようにします。  
@@ -259,7 +259,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
   
 4.  **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="Title"></a>5.レポート タイトルを追加する  
+## <a name="5-add-a-report-title"></a><a name="Title"></a>5.レポート タイトルを追加する  
 レポート タイトルは、レポートの最上部に表示されます。 レポート ヘッダーがあれば、そこにレポート タイトルを配置します。レポート ヘッダーを使用しない場合は、レポート本文の一番上のテキスト ボックスに配置します。 このチュートリアルでは、自動的にレポート本文の一番上に配置されるテキスト ボックスを使用します。  
   
 テキストの語句や文字のフォントのスタイル、サイズ、および色を変更して、テキストをさらに強調することもできます。 詳細については、「[テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
@@ -282,7 +282,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Save"></a>6.レポートを保存する  
+## <a name="6-save-the-report"></a><a name="Save"></a>6.レポートを保存する  
 レポートをレポート サーバーまたは自分のコンピューターに保存します。 レポート サーバーに保存しない場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のいくつかの機能 (レポート パーツ、サブレポートなど) が使用できなくなります。  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>レポート サーバーにレポートを保存するには  
@@ -311,7 +311,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
   
 4.  **[保存]** をクリックします。  
   
-## <a name="Export"></a>7.レポートをエクスポートする  
+## <a name="7-export-the-report"></a><a name="Export"></a>7.レポートをエクスポートする  
 レポートは、Microsoft Excel や CSV (コンマ区切り) ファイル形式など、別の形式にエクスポートすることができます。 詳しくは、「 [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)におけるページ割り付けの制御規則を理解しておく必要があります。  
   
 このチュートリアルでは、レポートを Excel にエクスポートします。また、レポートのプロパティを設定して、ブック見出しに独自の名前を指定します。  
@@ -350,7 +350,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
   
 2.  ブック見出しの名前が「 **Product Sales Excel**」であることを確認します。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 これで、基本的なテーブル レポートを作成する方法のチュートリアルは終了です。 テーブルの詳細については、「[テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

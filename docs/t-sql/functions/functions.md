@@ -17,15 +17,15 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd604a4f25783e7621f348ea532677cda3da433
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b96b1d6f1229dba624076abc4cb0c82e49249a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940124"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752350"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Microsoft SQL データベース関数とは
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ SQL データベースで使うことができる組み込み関数のカテゴ�
 
 ### <a name="categories-of-scalar-functions"></a>スカラー関数のカテゴリ
   
-|関数のカテゴリ|[説明]|  
+|関数のカテゴリ|説明|  
 |-----------------------|-----------------|  
 |[構成関数](configuration-functions-transact-sql.md)|現在の構成についての情報を返します。|  
 |[変換関数](conversion-functions-transact-sql.md)|データ型のキャストと変換をサポートします。|  
@@ -64,7 +64,7 @@ SQL データベースで使うことができる組み込み関数のカテゴ�
 |[メタデータ関数](metadata-functions-transact-sql.md)|データベースおよびデータベース オブジェクトについての情報を返します。|  
 |[セキュリティ関数](security-functions-transact-sql.md)|ユーザーとロールについての情報を返します。|  
 |[文字列関数](string-functions-transact-sql.md)|文字列型 (**char** または **varchar**) の入力値に対して操作を実行し、文字列値または数値を返します。|  
-|[システム関数](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|値、オブジェクト、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内の設定値に対して操作を実行し、それについての情報を返します。|  
+|[システム関数](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|値、オブジェクト、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内の設定値に対して操作を実行し、それについての情報を返します。|  
 |[システム統計関数](system-statistical-functions-transact-sql.md)|システムについての統計情報を返します。|  
 |[テキストとイメージ関数](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|テキスト入力値、イメージ入力値、または列に対して操作を実行し、値についての情報を返します。|  
   

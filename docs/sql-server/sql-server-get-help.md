@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 7588cb2c2c49992bbed4ceea29b035200a70128d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926950"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80380763"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server のヘルプとフィードバック
 
@@ -22,13 +22,13 @@ ms.locfileid: "68926950"
 
 ## <a name="contact-microsoft-support"></a>Microsoft サポートに問い合わせる
 
-サポート プランをご利用の場合は、Microsoft サポートとの[チケットを開く](https://support.microsoft.com/en-us/hub/4343728/support-for-business)ことができます。  詳細については、[企業のサポート オプション](https://support.microsoft.com/en-us/help/4341255/support-for-business)を参照してください。 
+サポート プランをご利用の場合は、Microsoft サポートとの[チケットを開く](https://support.microsoft.com/hub/4343728/support-for-business)ことができます。  詳細については、[企業のサポート オプション](https://support.microsoft.com/help/4341255/support-for-business)を参照してください。 
 
 サポート プランをご利用ではない場合は、コミュニティに支援を求めるか、[https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback) の UserVoice 経由でバグを送信できます。
 
 ## <a name="ask-community-for-help"></a>コミュニティに支援を求める
 
-活気のある SQL Server コミュニティの支援を受けたい場合は、複数の選択肢があります。
+活気のある SQL Server コミュニティに参加してそのサポートを受けたい場合は、様々な方法を選ぶことができます。
 
 
 ### <a name="msdn-forums"></a>MSDN フォーラム
@@ -38,7 +38,7 @@ SQL Server の問題に役立つ可能性がある MSDN フォーラムが多数
 - [セットアップとアップグレード](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [高可用性とディザスター リカバリー](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
 - [SQL Server ツール](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
-- [セキュリティ](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
+- [Security](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
 - [レプリケーション](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
 - [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
 - [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
@@ -60,10 +60,11 @@ SQL Server の問題に役立つコミュニティがいくつかあります。
 改善のための提案を送信するだけでなく、バグを送信することもできます。
 
 - **SQL Server のフィードバック**: [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
+- **SQL Server ビッグ データ クラスターのフィードバック**:[SQL Server ビッグ データ クラスターのフィードバック](https://aka.ms/sql-server-bdc-feedback)
 - **Azure Data Studio の問題**:[Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
  
 
-###  <a name="sql-server-documentation"></a>SQL Server のドキュメント
+###  <a name="sql-server-documentation"></a>SQL Server ドキュメント
 
 SQL Server コンテンツ チームに連絡する最善の方法は、Git Issue を使用することです。 ほとんどのページの下部には、Git Issue を送信するための次のオプションがあります。 
 

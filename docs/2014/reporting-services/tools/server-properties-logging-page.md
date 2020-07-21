@@ -13,29 +13,29 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099529"
 ---
 # <a name="server-properties-logging-page"></a>[サーバーのプロパティ]\([ログ記録] ページ)
   このページを使用すると、レポート サーバーで収集されるレポート実行データに制限を設定できます。 実行データはレポート サーバー データベースに内部的に格納されます。 ネイティブ モードまたは SharePoint 統合モードで実行されているレポート サーバーのレポート処理を追跡できます。 レポート サーバーがスケールアウト配置の一部である場合、レポート実行ログでは、配置全体に対するすべてのレポート処理のレコードが 1 つのログ ファイルで保持されます。  
   
- このページを開くには、開始[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]レポート サーバーへの接続で、レポート サーバーの名前を右クリックし、選択**プロパティ**します。 **[ログ記録]** をクリックするとこのページが開きます。  
+ このページを開くには[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、を起動してレポートサーバーに接続し、レポートサーバー名を右クリックして、[**プロパティ**] を選択します。 **[ログ記録]** をクリックするとこのページが開きます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[レポート実行のログ記録を有効にする]**  
- サーバーのレポート処理に関する情報を作成して保存する場合にクリックします。 このオプションを有効にした場合、レポート サーバーにより、使用されたレポートの種類、レポート処理の頻度、実行されたレポート操作の種類、出力形式、およびレポートの実行者が追跡されます。 ログにキャプチャされるその他のデータ ポイントの詳細については、次を参照してください。[レポート サーバー実行ログと ExecutionLog3 ビュー](../report-server/report-server-executionlog-and-the-executionlog3-view.md)します。  
+ サーバーのレポート処理に関する情報を作成して保存する場合にクリックします。 このオプションを有効にした場合、レポート サーバーにより、使用されたレポートの種類、レポート処理の頻度、実行されたレポート操作の種類、出力形式、およびレポートの実行者が追跡されます。 ログにキャプチャされるその他のデータポイントの詳細については、「[レポートサーバー実行ログと ExecutionLog3 ビュー](../report-server/report-server-executionlog-and-the-executionlog3-view.md)」を参照してください。  
   
  **[次の日数が経過したログ エントリを削除する]**  
  レポート実行ログからログ エントリが削除されるまでの経過日数を指定します。 既定値は 60 日です。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)   
- [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
+ [レポートサーバーのプロパティ &#40;Management Studio の設定&#41;](set-report-server-properties-management-studio.md)   
+ [Management Studio でレポートサーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
- [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
+ [Management Studio F1 ヘルプのレポートサーバー](report-server-in-management-studio-f1-help.md)   
  [レポート サーバー実行ログと ExecutionLog3 ビュー](../report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 複合ドメインの作成 | Microsoft Docs
-ms.custom: ''
+title: 複合ドメインの作成
 ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,18 +10,18 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: f6c146146a039958937a74cbdbd072dfb482bf4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 4af1fc255fd5691b3caaf3f5ce92a28740d1b7b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935553"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900485"
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの複合ドメインを作成する方法について説明します。 複合ドメインは、1 つのデータ フィールドに適用される 1 つ以上の単一ドメインで構成されます。 複合ドメインについて詳しくは、「[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)」をご覧ください。  
   
@@ -30,19 +29,19 @@ ms.locfileid: "67935553"
   
  複合ドメインを作成したら、複合ドメインのプロパティの変更、ドメインへの参照データ サービスのアタッチ、ドメイン間のルールの作成、または値のリレーションの作成を行うことができます。 そのためには、 **[ドメイン管理]** ページの **[ドメイン リスト]** で複合ドメインを選択し、適切なタブを選択します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  複合ドメインを作成するには、ナレッジ ベースを作成して開いておく必要があります。また、複合ドメインに追加する単一ドメインを少なくとも 2 つ作成しておく必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  複合ドメインを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="ParsingKnowledgeDiscoveryActivity"></a> ナレッジ検出アクティビティでの複合ドメインの作成  
+##  <a name="create-a-composite-domain-in-the-knowledge-discovery-activity"></a><a name="ParsingKnowledgeDiscoveryActivity"></a>ナレッジ検出アクティビティでの複合ドメインの作成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベースを開く]** をクリックし、ナレッジ ベースを選択するか、 **[新しいナレッジ ベース]** をクリックし、新しいナレッジ ベースのプロパティを入力します。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "67935553"
   
 7.  **[複合ドメインの作成]** アイコンをクリックします。  
   
-##  <a name="DomainManagementActivity"></a> ドメイン管理アクティビティでの複合ドメインの作成  
+##  <a name="create-a-composite-domain-in-the-domain-management-activity"></a><a name="DomainManagementActivity"></a>ドメイン管理アクティビティで複合ドメインを作成する  
   
 1.  Data Quality Services クライアントのホーム ページで、 **[ナレッジ ベースを開く]** をクリックし、ナレッジ ベースを選択するか、 **[新しいナレッジ ベース]** をクリックし、新しいナレッジ ベースのプロパティを入力します。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "67935553"
   
 7.  **[OK]** をクリックします。  
   
-##  <a name="CompositeDomainProperties"></a> 複合ドメインのプロパティの設定  
+##  <a name="set-composite-domain-properties"></a><a name="CompositeDomainProperties"></a>複合ドメインのプロパティの設定  
   
 1.  **[複合ドメインの作成]** ダイアログ ボックスで、ナレッジ ベースに一意の名前と 256 文字までの説明を入力します。  
   
@@ -82,20 +81,20 @@ ms.locfileid: "67935553"
   
 4.  **[解析方法]** で、次のいずれかを選択します。  
   
-    -   **[参照データ]** : 参照データ サービス (RDS) によるデータの書式設定の方法に従ってフィールドの値を解析します。 Data Quality Services は複合ドメインの値を RDS に送信し、RDS は複合ドメイン内のドメインに従って修正および解析されたデータを返します。  
+    -   **[参照データ]**: 参照データ サービス (RDS) によるデータの書式設定の方法に従ってフィールドの値を解析します。 Data Quality Services は複合ドメインの値を RDS に送信し、RDS は複合ドメイン内のドメインに従って修正および解析されたデータを返します。  
   
-    -   **[順番]** : 複合ドメイン内のドメインの順序に従ってフィールドの値を解析します。 最初の値は最初のドメインに、2 番目の値は 2 番目のドメインに含まれます。  
+    -   **[順番]**: 複合ドメイン内のドメインの順序に従ってフィールドの値を解析します。 最初の値は最初のドメインに、2 番目の値は 2 番目のドメインに含まれます。  
   
-    -   **[区切り記号]** : [区切り記号] が選択されているときに表示されるオプション ボタンから選択された区切り記号に基づいてフィールドの値を解析します。 **[タブ]** 、 **[セミコロン]** 、 **[コンマ]** 、 **[スペース]** 、または **[その他]** を選択できます。 **[その他]** の場合は、区切り記号として使用する値を入力します。  
+    -   **[区切り記号]**: [区切り記号] が選択されているときに表示されるオプション ボタンから選択された区切り記号に基づいてフィールドの値を解析します。 **[タブ]**、 **[セミコロン]**、 **[コンマ]**、 **[スペース]**、または **[その他]** を選択できます。 **[その他]** の場合は、区切り記号として使用する値を入力します。  
   
 5.  解析方法として **[区切り記号]** を選択した場合は、 **[ナレッジ ベース解析を使用します]** を選択することもできます。 詳細については、「 [Knowledge-Based Parsing](#KnowledgeBaseParsing)」をご参照ください。  
   
 6.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="FollowUp"></a>補足情報: 複合ドメインの作成後  
+##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a>補足情報: 複合ドメインの作成後  
  複合ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
-##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
+##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a>ナレッジベースの解析  
  Data Quality Services では、区切り記号または順序だけでなく、ナレッジに基づいてデータを解析することができます。 ナレッジ ベースの解析は、参照データ サービスを使用せずに複合ソース データを複合ドメインにマップする場合に使用します。 ナレッジ ベースの解析を使用すると、データ ソースのデータを関連する単一ドメインに解析できます。 ナレッジ ベースの解析では、まず、ナレッジを使用して複合データを単一ドメインに解析する処理が試行されます。 可能な場合は、文字列の一部が 1 つ以上のドメインに属すると見なされ、文字列がそのさまざまなドメインに解析されます。 たとえば、氏名複合ドメインによって表される氏名フィールドに複合値 "John B. Doe" があるとします。 "John" が "名" ドメインに、"Doe" が "姓" ドメインに属すると見なされた場合、"B." はドメイン ナレッジに基づいて “ミドル ネーム” ドメインに追加されます。  
   
  ナレッジ ベースの解析は、区切り記号ベースの解析も選択している場合にのみ使用できます。 ナレッジ ベースの解析は区切り記号の解析に代わるものではなく、その解析を強化するものです。 解析を行うためのナレッジが存在しない場合にのみ、区切り記号を使用して解析が行われます。 場合によっては、ナレッジ ベースの解析によって一部の解析が決定されてから、区切り記号ベースの解析によってその他の解析が決定されます。  

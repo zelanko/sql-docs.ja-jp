@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8aae17057d9b4b114ed7ad03fd7e29ad61f127b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9f1a31c807c14fa047eff5bd244563cbfcc7e955
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731169"
 ---
 # <a name="hasz-geography-data-type"></a>HasZ (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   空間オブジェクトに少なくとも 1 つの Z 値が含まれている場合は 1 (true)、それ以外の場合は 0 (false) を返します。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "67930240"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**Boolean**  
+ CLR 戻り値の型: **Boolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```sql  
 DECLARE @p GEOGRAPHY = 'Point(1 1 1 1)'  

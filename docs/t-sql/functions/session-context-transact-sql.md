@@ -18,13 +18,13 @@ ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2949c4bbf5e72fad99f6698287880ec2a2f97f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68067559"
 ---
-# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
+# <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   現在のセッションのコンテキストで指定されたキーの値を返します。 値が、を使用して設定 [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)プロシージャです。  
@@ -50,10 +50,10 @@ SESSION_CONTEXT(N'key')
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは、そのセッションのセッションのコンテキストを読み取ることができます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SESSION_CONTEXT の MARS の動作は CONTEXT_INFO の動作と同様です。 MARS バッチにキーと値のペアが設定された場合、新しい値を設定しているバッチが完了した後に他のバッチが開始された場合を除き、同じ接続上の他の MARS バッチで新しい値が返されることはありません。 接続上で複数の MARS バッチがアクティブな場合、値には "read_only" を設定できません。 これにより、どちらの値が "勝つ" かという観点での競合状態と非決定論を回避します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のような単純な例は、キーのセッション コンテキスト値を設定 `user_id` 4、および、使用する、 **SESSION_CONTEXT** 値を取得する関数。  
   
 ```  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c3435ae2275b9d83b3631bb426ac060bddd3c7c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c596f37cb0a83682c5c8dff370a92a5d3d73eb5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091231"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71285794"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>[フラット ファイルの変換先の構成] (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -43,29 +43,29 @@ ms.locfileid: "68091231"
  **[行区切り記号]**  
  出力で行を区切るための区切り記号を一覧から選択します。 *カスタム*の行区切り記号を指定するオプションはありません。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|復帰と改行の組み合わせで行を区切ります。|  
 |**{CR}**|復帰で行を区切ります。|  
 |**{LF}**|改行で行を区切ります。|  
-|**セミコロン {;}**|セミコロンで行を区切ります。|  
-|**コロン {:}**|コロンで行を区切ります。|  
+|**[セミコロン {;}]**|セミコロンで行を区切ります。|  
+|**[コロン {:}]**|コロンで行を区切ります。|  
 |**[コンマ {,}]**|コンマで行を区切ります。|  
 |**[タブ {t}]**|タブで行を区切ります。|  
-|**縦棒 {&#124;}**|垂直バーで行を区切ります。|  
+|**[縦棒 {&#124;}]**|垂直バーで行を区切ります。|  
   
  **列区切り記号**  
  出力で列を区切るための区切り記号を一覧から選択します。 *カスタム*の列区切り記号を指定するオプションはありません。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**{CR}{LF}**|復帰と改行の組み合わせで列を区切ります。|  
 |**{CR}**|復帰で列を区切ります。|  
 |**{LF}**|改行で列を区切ります。|  
-|**セミコロン {;}**|セミコロンで列を区切ります。|  
-|**コロン {:}**|コロンで列を区切ります。|  
+|**[セミコロン {;}]**|セミコロンで列を区切ります。|  
+|**[コロン {:}]**|コロンで列を区切ります。|  
 |**[コンマ {,}]**|コンマで列を区切ります。|  
-|**タブ {t}**|タブで列を区切ります。|  
+|**[タブ {t}]**|タブで列を区切ります。|  
 |**[縦棒 {&#124;}]**|垂直バーで列を区切ります。|  
 
 ## <a name="optionally-review-column-mappings-and-preview-data"></a>必要に応じて、列マッピングとプレビュー データをレビューします。

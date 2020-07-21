@@ -6,16 +6,15 @@ ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: replication
 ms.topic: conceptual
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 1f66ba095ef884e9b3a876ced0565aedbbf54629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4c1128f36115134d54e554830dc85fea42b09d5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010692"
 ---
 # <a name="errors-and-events-replication"></a>エラーとイベント (レプリケーション)
-  さまざまなレプリケーションに関連するエラーの原因と解決方法については、次を参照してください。[エラーおよびイベント リファレンス (レプリケーション)](../errors-and-events-reference-replication.md)します。  
+  レプリケーションに関連するさまざまなエラーの原因と解決方法については、「[エラーとイベントのリファレンス (レプリケーション)](../errors-and-events-reference-replication.md)」を参照してください。  
   

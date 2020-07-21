@@ -1,5 +1,5 @@
 ---
-title: 集計デザイン ウィザードの F1 ヘルプ |Microsoft Docs
+title: 集計のデザインウィザードの F1 ヘルプ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9778bfde1e63163c8fae89b93d0673cbde16a8cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a29cc4c248b1cdc4d671890f980cb7fe14c8414a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062748"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528168"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>集計のデザイン ウィザードの F1 ヘルプ
-  集計を利用するとパフォーマンスが向上しますが、これは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が各クエリの基となるデータ ソースからデータを取得して再計算を行うのではなく、キューブのストレージから直接、事前に計算された合計を取得するためです。  
+  集計を使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クエリごとに基になるデータソースのデータを再計算するのではなく、キューブストレージから事前計算済みの合計を直接取得できるため、パフォーマンスが向上します。  
   
  こうした集計のデザインは、集計のデザイン ウィザードを使用して行います。 このウィザードでは、次の手順に従います。  
   
@@ -36,20 +35,20 @@ ms.locfileid: "66062748"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [変更するパーティションを選択します&#40;集計のデザイン ウィザード。&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
+-   [集計のデザインウィザード &#40;変更するパーティションの選択&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
   
--   [集計使用法の確認&#40;集計のデザイン ウィザード&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
+-   [集計の使用状況の確認 &#40;集計のデザインウィザード&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
   
--   [オブジェクト カウントの指定&#40;集計のデザイン ウィザード&#41;](specify-object-counts-aggregation-design-wizard.md)  
+-   [集計のデザインウィザード &#40;オブジェクト数の指定&#41;](specify-object-counts-aggregation-design-wizard.md)  
   
--   [集計オプションの設定&#40;集計のデザイン ウィザード&#41;](set-aggregation-options-aggregation-design-wizard.md)  
+-   [集計のデザインウィザード &#40;集計オプションの設定&#41;](set-aggregation-options-aggregation-design-wizard.md)  
   
--   [ウィザードの完了&#40;集計のデザイン ウィザード&#41;](completing-the-wizard-aggregation-design-wizard.md)  
+-   [集計のデザインウィザードの [ウィザードの完了] &#40;&#41;](completing-the-wizard-aggregation-design-wizard.md)  
   
 ## <a name="see-also"></a>参照  
- [集計と集計デザイン](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [集計と集計のデザイン](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [使用法に基づく最適化ウィザードの F1 ヘルプ](usage-based-optimization-wizard-f1-help.md)   
- [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services のウィザード &#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

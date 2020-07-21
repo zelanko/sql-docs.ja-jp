@@ -13,14 +13,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff3a7b7c39eb8f161621b22315ad5ff8e8f6f807
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 09850707b83481909a881dcefdf00e710e6a8790
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928231"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291247"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB コマンド変換
 
@@ -74,7 +74,7 @@ ms.locfileid: "67928231"
   
 8.  **[文字列値エディター]** で、各パラメーターのパラメーター マーカーとして疑問符 (?) を使用して、パラメーター化 SQL ステートメントを入力します。  
   
-9. **[更新]** をクリックします。 **[更新]** をクリックすると、この変換は各パラメーターに対する列を External Columns コレクションに作成し、DBParamInfoFlags プロパティを設定します。  
+9. **[最新の情報に更新]** をクリックします。 **[更新]** をクリックすると、この変換は各パラメーターに対する列を External Columns コレクションに作成し、DBParamInfoFlags プロパティを設定します。  
   
 10. **[入力プロパティと出力プロパティ]** タブをクリックします。  
   

@@ -1,5 +1,5 @@
 ---
-title: CountDistinct 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: CountDistinct 関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e7e7f39553d538359395470fca995122a006659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ff5931ea437a2b91bf2232472fbf5780153f38cb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579614"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081280"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>レポート ビルダー関数 - CountDistinct 関数
   式で指定された NULL 以外の値が全部で何種類あるかを、指定されたスコープのコンテキストで評価して返します。  
@@ -41,7 +41,7 @@ CountDistinct(expression, scope, recursive)
 ## <a name="return-type"></a>戻り値の型  
  **Integer**値を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
   
  *Expression* には、入れ子になった集計関数への呼び出しを含めることができます。ただし、次に示すように、これには例外および条件があります。  

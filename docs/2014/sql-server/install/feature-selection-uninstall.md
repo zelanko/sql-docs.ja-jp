@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 33fa3b75-3257-44e1-919e-3d2ff12accbc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c5159e9a29da96ca1364658c8dcc3290cb799c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7760bb7c0f45fa9b92303141b78963f5f975e5e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095236"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062414"
 ---
 # <a name="feature-selection-uninstall"></a>機能の選択 (アンインストール)
-  機能の選択を使用して、-、ページの指定されたインスタンスから削除する機能の選択をアンインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  [機能の選択-アンインストール] ページを使用して、指定したインスタンスから削除する機能を選択し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  機能はいくつでも選択できます。  
   
   

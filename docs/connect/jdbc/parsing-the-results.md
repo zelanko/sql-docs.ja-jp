@@ -1,7 +1,7 @@
 ---
-title: 結果の解析 |Microsoft Docs
+title: 結果の解析 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,24 +11,24 @@ ms.assetid: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 163055a630f8e37678f99359a244bf211b035e7e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 127c97ec155ef1e19df4103b12a6e10b8b67fe74
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894074"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69027863"
 ---
 # <a name="parsing-the-results"></a>結果の解析
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-この記事では、ユーザーが任意のクエリから返された結果を完全に処理することを期待する SQL Server 方法について説明します。
+この記事では、ユーザーがクエリから返される結果を完全に処理することを SQL Server がどのように想定するかについて説明します。
 
 ## <a name="update-counts-and-result-sets"></a>更新数と結果セット
 
-このセクションでは、SQL Server から返される最も一般的な2つの結果について説明します。更新数と ResultSet です。 一般に、ユーザーが実行するすべてのクエリによって、次のいずれかの結果が返されます。ユーザーは、結果の処理時に両方を処理することが想定されています。
+このセクションでは、SQL Server から返される最も一般的な 2 つの結果、つまり更新数と結果セットについて説明します。 一般に、ユーザーがクエリを実行すると、これら 2 つの結果のいずれかが返されます。ユーザーは、結果を処理するときに両方を処理することが想定されます。
 
-次のコードは、ユーザーがサーバーからのすべての結果を反復処理する方法を示しています。
+次のコード例は、ユーザーがサーバーからのすべての結果を反復処理する方法を示しています。
 ```java
 try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
     boolean resultsAvailable = statement.execute(USER_SQL);
@@ -48,9 +48,9 @@ try (Connection connection = DriverManager.getConnection(URL); Statement stateme
 ```
 
 ## <a name="exceptions"></a>例外
-エラーまたは情報メッセージを返すステートメントを実行すると、実行プランを生成できるかどうかによって SQL Server の応答が異なります。 エラーメッセージは、ステートメントの実行直後にスローすることも、別の結果セットが必要になる場合もあります。 後者の場合、アプリケーションでは、例外を取得するために結果セットを解析する必要があります。
+エラーまたは情報メッセージを生成するステートメントを実行すると、実行計画を生成できるかどうかによって SQL Server の応答が異なります。 ステートメントの実行直後にエラー メッセージをスローすることができます。また、エラー メッセージが別個の結果セットを必要とする場合もあります。 後者の場合、アプリケーションでは、結果セットを解析して例外を取得する必要があります。
 
-SQL Server が実行プランを生成できない場合、直ちに例外がスローされます。
+SQL Server が実行プランを生成できない場合、例外はただちにスローされます。
 
 ```java
 String SQL = "SELECT * FROM nonexistentTable;";
@@ -61,7 +61,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-SQL Server が結果セットにエラーメッセージを返す場合は、例外を取得するために結果セットを処理する必要があります。
+SQL Server が結果セットにエラー メッセージを返す場合、その結果セットを処理して例外を取得する必要があります。
 
 ```java
 String SQL = "SELECT 1/0;";
@@ -78,7 +78,7 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-ステートメントの実行によって複数の結果セットが生成される場合、各結果セットは、例外が発生するまで処理する必要があります。
+ステートメント実行によって複数の結果セットが生成される場合、例外を含む結果セットに到達するまで、各結果セットを処理する必要があります。
 
 ```java
 String SQL = "SELECT 1; SELECT * FROM nonexistentTable;";
@@ -99,9 +99,9 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-の`String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`場合、例外はすぐ`SELECT 1`に`execute()`スローされ、実行されません。
+`String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`の場合、例外は `execute()` でただちにスローされ、`SELECT 1` は実行されません。
 
-SQL Server からのエラーの重大度がの`0` `9`場合は、情報メッセージと見なされ、として`SQLWarning`返されます。
+SQL Server からのエラーの重大度が `0` から `9` までの場合、情報メッセージと見なされ、`SQLWarning`として返されます。
 
 ```java
 String SQL = "RAISERROR ('WarningLevel5', 5, 2);";
@@ -112,6 +112,6 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)

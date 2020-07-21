@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 424df547068ee0a3b0573ba5bb74de08f600421c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2718f1b290ae110fc2eaf42e22aea0edf7769ff3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62643097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059733"
 ---
 # <a name="propertynumval-property-servernetworkprotocolproperty-class"></a>PropertyNumVal プロパティ (ServerNetworkProtocolProperty クラス)
   参照されたプロパティの数値を取得します。  
@@ -36,16 +35,16 @@ object
 .PropertyNumVal [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ServerNetworkProtocolProperty クラス](servernetworkprotocolproperty-class.md)オブジェクトのインスタンス上のネットワーク プロトコルの属性を表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ のインスタンス上のネットワークプロトコルの属性を表す[Servernetworkprotocolproperty クラス](servernetworkprotocolproperty-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  参照されたプロパティの数値を指定する `uint32` 値  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 382fed65bcbe1aab171a774a7ddd58ec8a63b010
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46381a16f77187d65e3bc388801cb8bf02be4397
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044098"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901631"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   既存のメッセージ型を削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68044098"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP MESSAGE TYPE message_type_name  
 [ ; ]  
@@ -50,10 +50,10 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="permissions"></a>アクセス許可  
  メッセージ型を削除する権限は、既定ではメッセージ型の所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  いずれかのコントラクトがメッセージ型を参照する場合は、そのメッセージ型を削除できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベースからメッセージ型 `//Adventure-Works.com/Expenses/SubmitExpense` を削除します。  
   
 ```  

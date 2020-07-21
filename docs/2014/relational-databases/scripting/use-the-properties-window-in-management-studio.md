@@ -1,6 +1,6 @@
 ---
-title: Management Studio の [プロパティ] ウィンドウの使用 | Microsoft Docs
-ms.custom: ''
+title: Management Studio の [プロパティ] ウィンドウの使用
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - complex properties [SQL Server Management Studio]
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9095bb81099c2e84d087cb92991c0a1757376ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 208aadd4f082e92987a5f7dfce4668a7b1cf51c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997812"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Management Studio の [プロパティ] ウィンドウの使用
   [プロパティ] ウィンドウには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]内の項目 (接続、プラン表示操作など) の状態や、データベース オブジェクト (テーブル、ビュー、デザイナーなど) の情報が表示されます。  

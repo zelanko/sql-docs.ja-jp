@@ -13,14 +13,14 @@ helpviewer_keywords:
 - datasets [Integration Services], extending
 - joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 058e4713b667cad6dc69e66c42003983fb4b1c02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c3e144b1e866bd4bce8b7f8709c11f5b125b1f84
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944443"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291439"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>マージ結合変換を使用してデータセットを拡張する
 
@@ -65,9 +65,9 @@ ms.locfileid: "67944443"
 11. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+ [マージ結合変換](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
   
   

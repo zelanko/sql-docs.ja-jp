@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d83bfe63c3a9b24c2be8d08916dd2384c59edc93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62630726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996556"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>イベント通知のダイアログ セキュリティの構成
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログ セキュリティを構成する必要があります。 ダイアログ セキュリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログの完全セキュリティ モデルに従って手動で構成する必要があります。 完全セキュリティ モデルでは、リモート サーバーとの間で送受信するメッセージの暗号化および暗号化解除が可能です。 イベント通知は一方向に送信されますが、エラーなどのメッセージは逆方向にも返されます。  
@@ -28,11 +27,11 @@ ms.locfileid: "62630726"
 > [!IMPORTANT]  
 >  すべての証明書は、有効となる開始日と有効期限終了日を指定して作成する必要があります。  
   
- **ステップ 1: TCP ポート番号と送信先サービスの名前を確立します。**  
+ **手順 1. : TCP ポート番号と送信先サービスの名前を設定します。**  
   
  ソース サーバーとターゲット サーバーの両方がメッセージを受信する TCP ポートを設定します。 送信先サービスの名前も決定する必要があります。  
   
- **手順 2:暗号化とデータベース レベルの認証に共有証明書を構成します。**  
+ **手順 2. : データベース レベルの認証で共有される暗号化と証明書を構成します。**  
   
  ソース サーバーとターゲット サーバーの両方で次の操作を実行します。  
   
@@ -42,10 +41,10 @@ ms.locfileid: "62630726"
 |送信元データベースにマスター キーが存在しない場合は、 [マスター キーを作成](/sql/t-sql/statements/create-master-key-transact-sql)します。 マスター キーは、送信元サーバーと送信先サーバーの両方のデータベースで、それぞれの証明書のセキュリティを確保するために必要となります。|送信先データベースにマスター キーが存在しない場合は、マスター キーを作成します。|  
 |送信元データベースで[ログインの作成](/sql/t-sql/statements/create-login-transact-sql) とそれに対応する [ユーザー](/sql/t-sql/statements/create-user-transact-sql) の作成を行います。|送信先データベースでログインとそれに対応するユーザーを作成します。|  
 |送信元データベースのユーザーが所有する[証明書を作成](/sql/t-sql/statements/create-certificate-transact-sql) します。|送信先データベースのユーザーが所有する証明書を作成します。|  
-|送信先サーバーからアクセス可能なファイルに[証明書をバックアップ](/sql/t-sql/statements/backup-certificate-transact-sql) します。|送信元サーバーからアクセス可能なファイルに証明書をバックアップします。|  
+|ターゲット サーバーからアクセス可能なファイルに[証明書をバックアップ](/sql/t-sql/statements/backup-certificate-transact-sql)します。|送信元サーバーからアクセス可能なファイルに証明書をバックアップします。|  
 |送信先データベースのユーザーと WITHOUT LOGIN を指定して[ユーザーを作成](/sql/t-sql/statements/create-user-transact-sql)します。 このユーザーは、バックアップ ファイルから作成された送信先データベースの証明書を所有します。 このユーザーをログインにマッピングする必要はありません。なぜなら、このユーザーの唯一の目的は、後述の手順 3. で作成する送信先データベースの証明書を所有することだからです。|送信元データベースのユーザーと WITHOUT LOGIN を指定してユーザーを作成します。 このユーザーは、バックアップ ファイルから作成された送信元データベースの証明書を所有します。 このユーザーをログインにマッピングする必要はありません。なぜなら、このユーザーの唯一の目的は、後述の手順 3. で作成する送信元データベースの証明書を所有することだからです。|  
   
- **ステップ 3:証明書を共有し、データベース レベルの認証のアクセス許可を付与します。**  
+ **手順 3. : データベース レベルの認証で使用する証明書を共有し、権限を許可します。**  
   
  ソース サーバーとターゲット サーバーの両方で次の操作を実行します。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62630726"
 ||送信元データベースのユーザーに、送信先サービスに対する[SEND 権限を許可](/sql/t-sql/statements/grant-transact-sql) します。|  
 |送信元データベースの Service Broker 識別子をターゲット サーバーに指定します。 この識別子は、 **sys.databases** カタログ ビューの [service_broker_guid](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列にクエリを実行することで取得できます。 サーバー レベルのイベント通知の場合は、Service Broker 識別子として **msdb**を使用します。|送信先データベースの Service Broker 識別子を送信元サーバーに指定します。|  
   
- **手順 4:ルートを作成し、サーバー レベルの認証を設定します。**  
+ **手順 4. : ルートを作成し、サーバー レベルの認証を設定します。**  
   
  ソース サーバーとターゲット サーバーの両方で次の操作を実行します。  
   
@@ -69,13 +68,13 @@ ms.locfileid: "62630726"
 |**master** データベースに切り替えて、サーバー レベルの認証を構成します。|**master** データベースに切り替えて、サーバー レベルの認証を構成します。|  
 |**master** データベースにマスター キーが存在しない場合は、 [マスター キーを作成](/sql/t-sql/statements/create-master-key-transact-sql)します。|**master** データベースにマスター キーが存在しない場合は、マスター キーを作成します。|  
 |データベースを認証する[証明書を作成](/sql/t-sql/statements/create-certificate-transact-sql) します。|データベースを認証する証明書を作成します。|  
-|送信先サーバーからアクセス可能なファイルに[証明書をバックアップ](/sql/t-sql/statements/backup-certificate-transact-sql) します。|送信元サーバーからアクセス可能なファイルに証明書をバックアップします。|  
+|ターゲット サーバーからアクセス可能なファイルに[証明書をバックアップ](/sql/t-sql/statements/backup-certificate-transact-sql)します。|送信元サーバーからアクセス可能なファイルに証明書をバックアップします。|  
 |[エンドポイントを作成](/sql/t-sql/statements/create-endpoint-transact-sql)し、設定済み TCP ポート番号、FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE *certificate_name*)、および認証で使用する証明書の名前を指定します。|エンドポイントを作成し、設定済み TCP ポート番号、FOR SERVICE_BROKER (AUTHENTICATION = CERTIFICATE *certificate_name*)、および認証で使用する証明書の名前を指定します。|  
-|[ログインを作成](/sql/t-sql/statements/create-login-transact-sql)し、送信先サーバーのログインを指定します。|ログインを作成し、送信元サーバーのログインを指定します。|  
+|[ログインを作成](/sql/t-sql/statements/create-login-transact-sql)し、ターゲット サーバーのログインを指定します。|ログインを作成し、送信元サーバーのログインを指定します。|  
 |送信先の認証子のログインに、エンドポイントに対する[CONNECT 権限を許可](/sql/t-sql/statements/grant-transact-sql) します。|送信元の認証子のログインに、エンドポイントに対する CONNECT 権限を許可します。|  
 |[ユーザーを作成](/sql/t-sql/statements/create-user-transact-sql)し、送信先の認証子のログインを指定します。|ユーザーを作成し、送信元の認証子のログインを指定します。|  
   
- **手順 5:サーバー レベルの認証に証明書を共有し、イベント通知を作成します。**  
+ **手順 5. : サーバー レベルの認証で使用する証明書を共有し、イベント通知を作成します。**  
   
  ソース サーバーとターゲット サーバーの両方で次の操作を実行します。  
   

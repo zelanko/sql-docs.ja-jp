@@ -1,10 +1,8 @@
 ---
-title: ワークロード要素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Workload 要素 (DTA)
+description: dta ユーティリティでは、Workload 要素によって、チューニング セッションで使用するワークロードが指定されます。 この記事では、その要素について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fb526f31bb36ca7d4dd046f8a0f3a4f7962c6ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 5ac7f5a55ce968eeb2ca274deff09ff8b7f2e4ae
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105943"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151468"
 ---
 # <a name="workload-element-dta"></a>Workload 要素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  チューニング セッションで使用するワークロードを指定します。  
+
+チューニング セッションで使用するワークロードを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +41,7 @@ ms.locfileid: "68105943"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
@@ -50,7 +54,7 @@ ms.locfileid: "68105943"
 |**親要素**|[データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
 |**子要素**|[File 要素 &#40;DTA&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Workload の Database 要素 &#40;DTA&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString 要素 &#40;DTA&#41;](../../tools/dta/eventstring-element-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ワークロードとは、チューニングするデータベースに対して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットです。 データベース エンジン チューニング アドバイザーは、ワークロードとして [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト、トレース ファイル、およびトレース テーブルを使用できます。  
   
  XML 入力ファイルでワークロードを指定し、 **dta** ツールを使用してコマンド ラインでもワークロードを指定した場合、コマンド ラインで指定したワークロードがチューニングに使用されます。 コマンド ラインで指定したチューニング オプションはすべて、XML 入力ファイルで指定したオプションをオーバーライドします。 唯一の例外は、ユーザー定義の構成が XML 入力ファイルに評価モードで入力されている場合だけです。 たとえば、XML 入力ファイルの **Configuration** 要素に構成が入力されており、**EvaluateConfiguration** 要素も同様にチューニング オプションの 1 つとして指定されている場合、XML 入力ファイルで指定されたチューニング オプションは、コマンド プロンプトから入力されるいずれのチューニング オプションをオーバーライドします。  

@@ -1,5 +1,5 @@
 ---
-title: 手順 3:レッスン 6 パッケージのテスト |Microsoft Docs
+title: '手順 3: レッスン 6 のパッケージのテスト | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 37c4bbccc7c63ab2c2fdc6f64793281cf4c88349
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62890858"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440329"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>手順 3:レッスン 6 のパッケージのコピー
   パッケージを実行すると、VarFolderName パラメーターから Directory プロパティの値が取得されます。  
@@ -31,7 +30,7 @@ ms.locfileid: "62890858"
   
  **データ フロー**  
   
- ![データ フロー](../../2014/tutorials/media/task3lesson6data.jpg "データ フロー")  
+ ![データ フロー](../../2014/tutorials/media/task3lesson6data.jpg "Data Flow")  
   
 ### <a name="to-test-the-lesson-6-tutorial-package"></a>レッスン 6 のチュートリアル パッケージをテストするには  
   
@@ -40,6 +39,6 @@ ms.locfileid: "62890858"
 2.  パッケージの実行が完了したら、[デバッグ] メニューの [デバッグの停止] をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 4:レッスン 6 パッケージの展開](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+ [手順 4:レッスン 6 のパッケージの展開](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

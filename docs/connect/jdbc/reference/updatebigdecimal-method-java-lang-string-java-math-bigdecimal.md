@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b844cd9d-3d2d-4385-ab01-ecc89692054f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5eb50fafceefa312fe1b73daf2b2d88d4238403d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 88b5936ab055379954f0bd0215d0d5524f47fd4f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985431"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922884"
 ---
 # <a name="updatebigdecimal-method-javalangstring-javamathbigdecimal"></a>updateBigDecimal (java.lang.String, java.math.BigDecimal) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,13 +42,13 @@ public void updateBigDecimal(java.lang.String columnName,
   
  *x*  
   
- BigDecimal オブジェクト。  
+ BigDecimal オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この updateBigDecimal メソッドは、java. ResultSet インターフェイスの updateBigDecimal メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この updateBigDecimal メソッドは、java.sql.ResultSet インターフェイスの updateBigDecimal メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateBigDecimal メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)   

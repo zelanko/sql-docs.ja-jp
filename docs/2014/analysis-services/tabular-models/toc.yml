@@ -27,7 +27,7 @@
           href: power-view-configure-default-field-set-for-reports.md
         - name: Power View レポートのテーブル動作プロパティの構成
           href: power-view-configure-table-behavior-properties-for-reports.md
-    - name: プロジェクト プロパティ
+    - name: プロジェクトのプロパティ
       href: project-properties-ssas-tabular.md
     - name: モデルのプロパティ
       href: model-properties-ssas-tabular.md
@@ -143,7 +143,7 @@
   items:
     - name: 階層の作成および管理
       href: create-and-manage-hierarchies-ssas-tabular.md
-- name: '[メジャー グループ]'
+- name: メジャー グループ
   href: partitions-ssas-tabular.md
   items:
     - name: ワークスペース データベースのパーティションの作成と管理
@@ -166,7 +166,7 @@
     - name: Excel でのテーブル モデルの分析
       href: analyze-a-tabular-model-in-excel-ssas-tabular.md
 - name: テーブル モデル ソリューションの配置
-  href: tabular-model-solution-deployment-ssas-tabular.md
+  href: 'https://docs.microsoft.com/analysis-services/deployment/tabular-model-solution-deployment'
   items:
     - name: SQL Server データ ツールからの配置
       href: deploy-from-sql-server-data-tools-ssas-tabular.md

@@ -1,5 +1,5 @@
 ---
-title: レポート ウィザードへようこそ |Microsoft Docs
+title: レポートウィザードへようこそ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58643214df2caa53ddf88810e1fe519a243fc739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098650"
 ---
 # <a name="welcome-to-the-report-wizard"></a>レポート ウィザードへようこそ
   レポート ウィザードのこのページを使用すると、実行するタスクの概要を表示できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときにこのページを表示しない場合は、このチェック ボックスをオンにします。  
   

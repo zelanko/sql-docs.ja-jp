@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3b5d76c06096dd2dab13bd6dcf7ff59fbd612302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22ee1b502487ac191cf5e39c5908a1e44dee969c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483760"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972312"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>コレクションにメンバーを追加する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーおよび統合メンバーをコレクションに追加できます。  

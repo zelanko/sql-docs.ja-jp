@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb8fb3ffafc001ed6bd63a10f8f1620521cc0435
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030233"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute イベント クラス
-  **CursorExecute** イベント クラスは、API (アプリケーション プログラミング インターフェイス) のカーソルで発生する、カーソル実行イベントを記述しています。 カーソル実行イベントは、カーソル準備イベントで作成された実行プランから、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によってカーソルの作成およびデータ設定が行われたときに発生します。  
+  **CursorExecute** イベント クラスは、API (アプリケーション プログラミング インターフェイス) のカーソルで発生する、カーソル実行イベントを記述しています。 カーソル実行イベントは、カーソル準備イベントで作成された実行プランから、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によってカーソルの作成およびデータ設定が行われたときに発生します。  
   
  **CursorExecute** イベント クラスは、カーソルのパフォーマンスを記録しているトレース内で使用します。 **CursorExecute** イベント クラスをトレースに含めた場合、発生するオーバーヘッドの量は、トレース中にデータベースに対してカーソルを使用する頻度によって異なります。 カーソルの使用頻度が高い場合は、トレースによってパフォーマンスが大幅に低下する可能性があります。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "62663508"
 |**IntegerData**|**int**|カーソルの種類。 値は次のとおりです。<br /><br /> 1 = キー セット<br /><br /> 2 = 動的<br /><br /> 4 = 順方向専用<br /><br /> 8 = 静的<br /><br /> 16 = 高速順方向|25|いいえ|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の Windows ログイン資格情報)。|11|はい|  
-|**LoginSid**|**image**|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**画像**|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**RequestID**|**int**|カーソルを実行した要求 ID。|49|はい|  

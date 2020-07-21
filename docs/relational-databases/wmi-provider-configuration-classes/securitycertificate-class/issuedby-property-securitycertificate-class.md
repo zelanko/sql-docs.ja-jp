@@ -1,6 +1,6 @@
 ---
-title: IssuedBy プロパティ (SecurityCertificate クラス) |Microsoft Docs
-ms.custom: ''
+title: プロパティのプロパティ (SecurityCertificate)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d80b7f65c901bcd8e6d03f35e97efcbe63fe01a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54932f9bc2ebd8c1ddcfd4589e3df863bf6be433
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989950"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880937"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>IssuedBy プロパティ (SecurityCertificate クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   セキュリティ証明書を発行したオブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,16 +35,16 @@ ms.locfileid: "67989950"
 object.IssuedBy [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  セキュリティ証明書を表す [SecurityCertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書を発行したオブジェクトを指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

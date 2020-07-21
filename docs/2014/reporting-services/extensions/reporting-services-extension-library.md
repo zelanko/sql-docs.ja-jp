@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d09464ce4a61903a3e9b74711482d2ce07bd0c4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985751"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services 拡張機能ライブラリ
-  Reporting Services 拡張機能ライブラリは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれているクラス、インターフェイス、および値の型のセットです。 このライブラリは、システムの機能にアクセスし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アプリケーションを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントを拡張するための土台となるように設計されています。  
+  Reporting Services 拡張機能ライブラリは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれているクラス、インターフェイス、および値の型のセットです。 このライブラリは、システム関数にアクセスでき、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アプリケーションを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントを拡張する土台となるように設計されています。  
   
 ## <a name="namespaces"></a>名前空間  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 拡張機能ライブラリには次の名前空間があります。  
@@ -37,7 +37,7 @@ ms.locfileid: "62985751"
  `Microsoft.ReportingServices.ReportRendering`  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の表示機能を拡張できるクラスとインターフェイスが含まれています。 この名前空間のメンバーを <xref:Microsoft.ReportingServices.Interfaces> 名前空間のメンバーと共に使用することで、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用する独自のカスタム表示拡張機能を作成できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Reporting Services の拡張機能](reporting-services-extensions.md)  
   
   

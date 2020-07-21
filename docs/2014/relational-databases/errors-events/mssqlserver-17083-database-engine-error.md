@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 6c83737d-0531-4fd9-88f6-2da5a150532d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c04d010a690d99d90ea3a18ae7f70d33ed39f24b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aaf5b3707849dcba93909f7706787b675f1cae76
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62915499"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553727"
 ---
-# <a name="mssqlserver17083"></a>MSSQLSERVER_17083
+# <a name="mssqlserver_17083"></a>MSSQLSERVER_17083
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|17083|  
@@ -36,7 +35,7 @@ ms.locfileid: "62915499"
  ネイティブ コンパイル ストアド プロシージャの本体に ATOMIC ブロックがありませんでした。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- ネイティブ コンパイル ストアド プロシージャには ATOMIC ブロックが必要です。 例 :  
+ ネイティブ コンパイル ストアド プロシージャには ATOMIC ブロックが必要です。 次に例を示します。  
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

@@ -1,5 +1,6 @@
 ---
 title: 表示拡張機能にデバイス情報設定を渡す | Microsoft Docs
+description: 表示パラメーターは表示拡張機能に渡されます。 デバイス情報設定は、Render メソッド、URL パラメーター、または構成ファイルで指定します。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9c8dc233904cb94520d9074924c3aabc30be85a7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128886"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509773"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>表示拡張機能にデバイス情報設定を渡す
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]では、デバイス情報設定を使用して、表示パラメーターを表示拡張機能に渡します。 レポート サーバー Web サービスの設定は **DeviceInfo** XML 要素として渡し、レポート サーバーで処理されます。 デバイス情報設定には既定値があるため、表示プロセスでは省略可能な引数と見なされます。 しかし、デバイス情報設定を使用して、表示をカスタマイズし、サーバーで提供される既定値をオーバーライドできます。  
@@ -40,7 +41,7 @@ ms.locfileid: "63128886"
 </DeviceInfo>  
 ```  
   
- レポートが HTML 断片として表示される場合、レポートの内容は TABLE 要素内に含まれ、HTML または BODY 要素は使用されません。 HTML 断片を使用して、既存の HTML ドキュメントにレポートを組み込むことができます。 HTML 出力のデバイス情報設定の詳細については、「 [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md)」をご覧ください。  
+ レポートが HTML 断片として表示される場合、レポートの内容は TABLE 要素内に含まれ、HTML または BODY 要素は使用されません。 HTML 断片を使用して、既存の HTML ドキュメントにレポートを組み込むことができます。 HTML 出力のデバイス情報設定の詳細については、「[HTML デバイス情報設定](../../../reporting-services/html-device-information-settings.md)」を参照してください。  
   
 ## <a name="passing-device-information-using-url-access"></a>URL アクセスを使用してデバイス情報を渡す  
  URL アクセスを使用してデバイス情報設定を渡すこともできます。 デバイス情報設定は URL パラメーターとして渡されます。 次の URL アクセス文字列をレポート サーバーに渡すと、HTML ビューアー ツール バーなしで表示するレポートを生成できます。  

@@ -1,5 +1,5 @@
 ---
-title: Visual C で ADO のコード例 |Microsoft Docs
+title: Visual C++ | の ADO コード例Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, Visual C++
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7741b6757cef08dcc4d5a05574f22c4f4538d97f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ac6e639001c84142604ca54664784922da05d682
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921188"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760568"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ での ADO のコード例
-次のコード例を使用して、ADO メソッド、プロパティ、および Microsoft Visual C で記述するときにイベントを使用する方法について説明します。  
+次のコード例を使用して、Microsoft Visual C++ に書き込むときに ADO のメソッド、プロパティ、およびイベントを使用する方法を学習します。  
   
 > [!NOTE]
->  全体のコード例は、最初から最後まで、コード エディターに貼り付けます。 例を部分的に使用した場合や段落のフォーマットが失われた場合、この例は正しく動作しない可能性があります。  
+>  コード例全体をコードエディターに貼り付けます。 部分例が使用されている場合や段落の書式設定が失われた場合、この例は正常に実行されない可能性があります。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67921188"
   
 -   [Delete メソッドの例](../../../ado/reference/ado-api/delete-method-example-vc.md)  
   
--   [Execute、Requery、および Clear の例のメソッド](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)  
+-   [Execute、Requery、および Clear メソッドの例](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)  
   
 -   [Find メソッドの例](../../../ado/reference/ado-api/find-method-example-vc.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67921188"
   
 -   [GetString メソッドの例](../../../ado/reference/ado-api/getstring-method-example-vc.md)  
   
--   [MoveFirst、MoveLast、MoveNext、MovePrevious メソッドの例](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)  
+-   [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)  
   
 -   [NextRecordset メソッドの例](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)  
   
@@ -69,43 +69,43 @@ ms.locfileid: "67921188"
   
 -   [Seek メソッドおよび Index プロパティの例](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
   
--   [メソッドの例をサポートしています](../../../ado/reference/ado-api/supports-method-example-vc.md)  
+-   [Supports メソッドの例](../../../ado/reference/ado-api/supports-method-example-vc.md)  
   
 -   [Update および CancelUpdate メソッドの例](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)  
   
 -   [UpdateBatch および CancelBatch メソッドの例](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
--   [AbsolutePage、PageCount、PageSize プロパティの例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
+-   [AbsolutePage、PageCount、および PageSize プロパティの例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
   
--   [AbsolutePosition および CursorLocation プロパティの例](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)  
+-   [AbsolutePosition およびカーソルの場所のプロパティの例](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)  
   
 -   [ActiveCommand プロパティの例](../../../ado/reference/ado-api/activecommand-property-example-vc.md)  
   
--   [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)  
+-   [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)  
   
--   [ActualSize および DefinedSize プロパティの例](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)  
+-   [ActualSize とのサイズプロパティの例](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)  
   
--   [属性と Name プロパティの例](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)  
+-   [属性と名前プロパティの例](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)  
   
 -   [BOF、EOF、および Bookmark プロパティの例](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)  
   
 -   [CacheSize プロパティの例](../../../ado/reference/ado-api/cachesize-property-example-vc.md)  
   
--   [ConnectionString、ConnectionTimeout、および状態のプロパティの例](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)  
+-   [ConnectionString、ConnectionTimeout、State プロパティの例](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)  
   
 -   [Count プロパティの例](../../../ado/reference/ado-api/count-property-example-vc.md)  
   
--   [CursorType、LockType、EditMode プロパティの例](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)  
+-   [CursorType、LockType、および EditMode プロパティの例](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)  
   
--   [Description、HelpContext、HelpFile、NativeError、数、ソース、および SQLState プロパティの例](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)  
+-   [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)  
   
--   [Filter および RecordCount プロパティの例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)  
+-   [Filter プロパティと RecordCount プロパティの例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)  
   
--   [Index プロパティとメソッドの例をシークします。](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
+-   [Index プロパティと Seek メソッドの例](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
   
--   [IsolationLevel および Mode プロパティの例](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)  
+-   [IsolationLevel と Mode プロパティの例](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)  
   
 -   [Item プロパティの例](../../../ado/reference/ado-api/item-property-example-vc.md)  
   
@@ -117,9 +117,9 @@ ms.locfileid: "67921188"
   
 -   [Optimize プロパティの例](../../../ado/reference/ado-api/optimize-property-example-vc.md)  
   
--   [OriginalValue および UnderlyingValue プロパティの例](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)  
+-   [OriginalValue プロパティと UnderlyingValue プロパティの例](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)  
   
--   [Prepared プロパティの例](../../../ado/reference/ado-api/prepared-property-example-vc.md)  
+-   [準備されたプロパティの例](../../../ado/reference/ado-api/prepared-property-example-vc.md)  
   
 -   [Provider および DefaultDatabase プロパティの例](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "67921188"
   
 -   [StayInSync プロパティの例](../../../ado/reference/ado-api/stayinsync-property-example-vc.md)  
   
--   [Type プロパティの例 (フィールド)](../../../ado/reference/ado-api/status-property-example-vc.md)  
+-   [Type プロパティの例 (Fields)](../../../ado/reference/ado-api/status-property-example-vc.md)  
   
 -   [Type プロパティの例 (プロパティ)](../../../ado/reference/ado-api/type-property-example-property-vc.md)  
   
@@ -141,11 +141,11 @@ ms.locfileid: "67921188"
   
 -   [Version プロパティの例](../../../ado/reference/ado-api/version-property-example-vc.md)  
   
-## <a name="other"></a>Other  
+## <a name="other"></a>その他  
   
--   [ADO イベント モデルの例](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
+-   [ADO イベントモデルの例](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   
-## <a name="see-also"></a>関連項目  
- [Visual Basic での ADO のコード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [ADO のコード例の VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
+## <a name="see-also"></a>参照  
+ [Visual Basic の ADO コード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
+ [ADO コード例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [付録 D: ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

@@ -1,5 +1,6 @@
 ---
-title: CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: CSV ファイルへのエクスポート (レポート ビルダー) | Microsoft Docs
+description: レポートビルダーの CSV 表示拡張機能では、ページ分割されたレポートを、さまざまなアプリケーションで読むことが可能で、互換性のあるプレーンテキスト形式として表示します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1104054faef55ca3b3b661ea210c279c9aa55841
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581215"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342888"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   CSV (コンマ区切り値) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でページ分割されたレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。  
@@ -27,7 +28,7 @@ ms.locfileid: "65581215"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV の表示  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> CSV の表示  
  既定の設定を使用して表示された場合、CSV 形式のレポートは次のような特徴のレポートになります。  
   
 -   既定のフィールド区切り記号は、コンマ (,) です。  
@@ -53,11 +54,11 @@ ms.locfileid: "65581215"
   
 -   カスタム レポート アイテム  
   
--   線  
+-   Line  
   
--   image  
+-   Image  
   
--   四角形  
+-   Rectangle  
   
 -   自動集計  
   
@@ -65,12 +66,12 @@ ms.locfileid: "65581215"
   
  次の表では、表示した際のレポート アイテムの外観について説明します。  
   
-|アイテム|表示動作|  
+|Item|表示動作|  
 |----------|------------------------|  
 |テキスト ボックス|テキスト ボックスの内容を表示します。 既定のモードでは、アイテムは、そのアイテムの書式設定プロパティに基づいて書式が設定されます。 準拠モードでは、デバイス情報設定によって書式を変更できます。 CSV 表示モードの詳細については、以下の説明を参照してください。|  
 |テーブル|テーブルを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。 詳細レポートはサポートされません。|  
-|マトリックス|マトリックスを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。|  
-|一覧|一覧の詳細行またはインスタンスそれぞれに対応するレコードが表示されます。|  
+|Matrix|マトリックスを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。|  
+|List|一覧の詳細行またはインスタンスそれぞれに対応するレコードが表示されます。|  
 |サブレポート|親アイテムは、コンテンツのインスタンスごとに繰り返し表示されます。|  
 |グラフ|それぞれのグラフ値の行およびメンバー ラベルを作成することにより表示します。 階層内の系列およびカテゴリのラベルは、フラット化され、グラフ値の行内に含まれています。|  
 |データ バー|グラフのように表示されます。 通常、データ バーには階層またはラベルは含まれません。|  
@@ -92,10 +93,10 @@ ms.locfileid: "65581215"
   
 -   ピア データ領域は、一般的なデータ領域または動的な先祖を共有する、データ領域または動的グループです。 ピア データがフラットなツリーの分岐で識別されます。  
   
- 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)を返します。  
+ 詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
   
-##  <a name="RenderingModes"></a> 表示モード  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> 表示モード  
  CSV 表示拡張機能は 2 つのモードで操作できます。1 つは Excel に最適なモード、もう 1 つは、RFC 4180 の CSV 仕様に厳密に準拠することが要求されるサードパーティのアプリケーションに最適なモードです。 使用するモードによって、ピア データ領域の処理は異なります。  
   
 ### <a name="default-mode"></a>既定モード  
@@ -119,7 +120,7 @@ ms.locfileid: "65581215"
 #### <a name="formatting"></a>書式設定  
  値の書式は設定されていません。  
   
-##  <a name="Interactivity"></a> 対話性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 対話性  
  このレンダラーによって生成されたどちらの CSV 形式でも、対話性はサポートされていません。 次の対話型要素は表示されません。  
   
 -   ハイパーリンク  
@@ -137,7 +138,7 @@ ms.locfileid: "65581215"
 -   ブックマーク  
   
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> デバイス情報設定  
  このレンダラーでは、デバイス情報設定を変更することで既定の設定の一部を変更できます。たとえば、表示モード、区切り記号として使用する文字、テキスト修飾子の既定の文字として使用する文字などを変更できます。 詳細については、「 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)」を参照してください。  
   
   

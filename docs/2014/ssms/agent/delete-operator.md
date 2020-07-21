@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c8d483b6ed67c67b901fcd25a4eeb76a550ce385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 161eae146ce0b6e80eee3e2a94b55350ee7415f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666603"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995224"
 ---
 # <a name="delete-operator"></a>Delete 操作
   このページを使用すると、オペレーターを削除できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[削除されるオブジェクト]**  
  削除されるオペレーターを表示します。  
   
  **[再割り当てするオペレーター]**  
  削除されるオペレーターに通知を再割り当てします。  
   
- **Properties**  
+ **プロパティ**  
  通知を再割り当てする対象オペレーターのプロパティを表示します。  
   
 ## <a name="see-also"></a>参照  

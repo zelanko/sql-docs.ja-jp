@@ -1,5 +1,5 @@
 ---
-title: テンプレートから単一予測クエリの作成 |Microsoft Docs
+title: テンプレートからの単一予測クエリの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54523b9c2302deafb0faa9c23708224470bd69b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085491"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523758"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>テンプレートからの単一予測クエリの作成
-  単一クエリは、外部入力データ セットにマップしたり一括予測を行う必要はありませんが、使用、予測に使用するモデルがある場合に便利です。 単一クエリでは、モデルに 1 つまたは複数の値を提供し、予測される値を即時に参照できます。  
+  単一クエリは、予測に使用するモデルがあり、それを外部入力データセットにマップしたり、一括予測を行ったりしない場合に便利です。 単一クエリでは、モデルに 1 つまたは複数の値を提供し、予測される値を即時に参照できます。  
   
  たとえば、次の DMX クエリは、メーリング対象モデル TM_Decision_Tree に対する単一クエリを表しています。  
   
@@ -47,7 +46,7 @@ AS [t]
   
 3.  **[Analysis Services への接続]** ダイアログ ボックスで、クエリの対象であるマイニング モデルを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのあるサーバー名を入力します。  
   
-4.  **[接続]** をクリックします。  
+4.  **[Connect]** をクリックします。  
   
 5.  指定したデータベースでテンプレートが開き、データ マイニング関数と、データ マイニング構造および関連するモデルの一覧を示す、マイニング モデルのオブジェクト ブラウザーが表示されます。  
   
@@ -69,20 +68,20 @@ AS [t]
   
 5.  **mining model** 行には、 **オブジェクト エクスプローラー**に表示されるマイニング モデルの一覧からマイニング モデルの名前を入力します。  
   
-     このトピックの冒頭に示したサンプル コードについては、**マイニング モデル**行は、名前に設定された`TM_Decision_Tree`します。  
+     このトピックの冒頭に示したサンプルコードでは、[**マイニングモデル**] 行にという名前が設定されて `TM_Decision_Tree` います。  
   
 6.  **value** 行には、予測を行う新しいデータを入力します。  
   
-     このトピックの冒頭に示したサンプル コードについては、**値**行に設定された`2`自転車の購買世帯の子供の数に基づく行動を予測します。  
+     このトピックの冒頭に示したサンプルコードでは、[**値**] 行をに設定して、 `2` 自宅の子供の数に基づいて自転車の購買行動を予測しました。  
   
 7.  **column** 行には、新しいデータをマップするマイニング モデルの列名を入力します。  
   
-     このトピックの冒頭に示したサンプル コードについては、**列**行に設定された`Number Children at Home`します。  
+     このトピックの冒頭に示したサンプルコードでは、**列**行はに設定されてい `Number Children at Home` ます。  
   
     > [!NOTE]  
     >  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスを使用する場合、列名を角かっこで囲む必要はありません。 角かっこは自動的に追加されます。  
   
-8.  ままに、**入力のエイリアス**として`t`します。  
+8.  入力の**エイリアス**はのままにし `t` ます。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

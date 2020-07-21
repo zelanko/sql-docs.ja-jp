@@ -1,7 +1,7 @@
 ---
-title: SQL Server 拡張イベント セッション | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: SQL Server 拡張イベント セッション
+description: SQL Server 拡張イベント セッションは、拡張イベント エンジンをホストしている SQL Server プロセス内で作成されます。 セッション状態とセッションの内容について説明します。
+ms.date: 05/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea63b8d8b417f829bda722297d0c69a0b5c5fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fec4a507a8a40cb38bf9b5faf58545aa89a55167
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756841"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 拡張イベント セッション
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント セッションは、拡張イベント エンジンをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス内で作成されます。 拡張イベント インフラストラクチャとその全体的な処理を理解するには、拡張イベント セッションの次の側面に注目します。  
   
@@ -34,12 +34,12 @@ ms.locfileid: "68009332"
   
 ## <a name="session-states"></a>セッション状態  
  拡張イベント セッションの各種の状態を次の図に示します。  
-  
- ![拡張イベント セッションの状態](../../relational-databases/extended-events/media/xesessionstate.gif "拡張イベント セッションの状態")  
-  
+
+![拡張イベント セッションの状態](../../relational-databases/extended-events/media/xesessionstate.png "拡張イベント セッションの状態")
+
  前の図を見ると、イベント セッションに対して異なる DDL コマンドが発行されたときに、セッション状態が変化していることがわかります。 このような状態の変化について次の表で説明します。  
   
-|図ラベル|DDL ステートメント|[説明]|  
+|図ラベル|DDL ステートメント|説明|  
 |------------------------|-------------------|-----------------|  
 |作成|CREATE EVENT SESSION|CREATE EVENT SESSION によって提供されたメタデータを含むセッション オブジェクトがホスト プロセスによって作成されます。 ホスト プロセスは、セッション定義を検証し、ユーザーの権限レベルを検証した後、メタデータを master データベースに格納します。 このときセッションはまだアクティブではありません。|  
 |Alter|ALTER EVENT SESSION, STATE=START|ホスト プロセスによってセッションが開始されます。 ホスト プロセスは、格納されているメタデータを読み取って、セッション定義を検証し、ユーザーの権限レベルを検証して、セッションを作成します。 イベントやターゲットなどのセッション オブジェクトが読み込まれ、イベント処理がアクティブになります。|  
@@ -54,7 +54,7 @@ ms.locfileid: "68009332"
   
  次の図は、セッションの内容、およびパッケージとセッションの関係を示しています。  
   
- ![セッションでのオブジェクトの共存と共有。](../../relational-databases/extended-events/media/xesessions.gif "セッションでのオブジェクトの共存と共有。")  
+ ![セッション内でのオブジェクトの共存と共有です。](../../relational-databases/extended-events/media/xesessions.gif "セッション内でのオブジェクトの共存と共有です。")  
   
  次の点に注目してください。  
   

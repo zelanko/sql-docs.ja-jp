@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e642034d445e52485874c71df110bff81b9c1aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096936"
 ---
 # <a name="xml-device-information-settings"></a>XML デバイス情報設定
@@ -33,12 +33,12 @@ ms.locfileid: "66096936"
 |`OmitSchema`|XML からスキーマの場所を省略するかどうかを示します。 場所は SchemaLocation 属性です。 OmitSchema の既定値は OmitNamespace の値によって決まります。<br /><br /> OmitNamespace = False の場合、既定では、OmitSchema = `False` です。 ユーザーは OmitSchema = True を設定して既定値をオーバーライドできます。<br /><br /> OmitNamespace = True の場合、OmitShema に明示的に構成した値に関係なく、OmitSchema は `True` として機能します。|  
 |**[エンコード]**|.NET Framework でサポートされている文字エンコードの Internet Assigned Numbers Authority (IANA) 名。 既定値は `UTF-8` です。 他の値には、ASCII、UTF-7、UTF-16 などがあります。|  
 |**FileExtension**|生成されたファイルに使用するファイル拡張子。|  
-|**[スキーマ]**|XML スキーマ定義 (XSD) を表示するか、実際の XML データを表示するかを示します。 `true` の値は、XML スキーマを表示することを示します。 既定値は `false` です。|  
+|**スキーマ**|XML スキーマ定義 (XSD) を表示するか、実際の XML データを表示するかを示します。 `true` の値は、XML スキーマを表示することを示します。 既定値は `false` です。|  
   
 ## <a name="see-also"></a>参照  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [表示拡張機能にデバイス情報設定を渡す](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer の表示拡張機能パラメーターをカスタマイズする](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [テクニカル リファレンス (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

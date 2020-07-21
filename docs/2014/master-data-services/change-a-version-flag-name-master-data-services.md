@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6037c1d31b52fba0f961020f1e514b3354e535b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce3fd9d9758c878ed091d1d3125da6d5a7c299b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972072"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>バージョン フラグ名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、バージョン フラグの名前を変更できます。  
@@ -27,7 +26,7 @@ ms.locfileid: "65484043"
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-a-version-flag-name"></a>バージョン フラグ名を変更するには  
   
@@ -43,8 +42,8 @@ ms.locfileid: "65484043"
   
 6.  Enter キーを押します。  
   
-## <a name="see-also"></a>関連項目  
- [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [バージョン &#40;マスターデータサービス&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [バージョンにフラグを割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
   

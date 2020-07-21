@@ -1,5 +1,5 @@
 ---
-title: 手順 1:配置バンドルのコピー | Microsoft Docs
+title: '手順 1: 配置バンドルのコピー | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6078f133e8f14f570540ff02a9f107578c5fada1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 12fd42ba8f7fa5abf7f35c14001cb1bc68f10096
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086528"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295988"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>レッスン 3-1 - 配置バンドルのコピー
 
@@ -37,7 +37,7 @@ ms.locfileid: "68086528"
 3.  ターゲット コンピューターで、フォルダーをコピーするパブリック共有を探し、 **[貼り付け]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 2:パッケージ インストール ウィザードの実行](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+[手順 2: パッケージ インストール ウィザードの実行](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
   
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 46e1f5f0f6eb868d6590ffdd01fd0aa2cca6a4af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901732"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71284939"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>[パッケージの保存および実行]\(SQL Server インポートおよびエクスポート ウィザード)
 
@@ -30,7 +30,7 @@ ms.locfileid: "67901732"
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>[パッケージの保存および実行] ページのスクリーン ショット  
 次のスクリーン ショットは、ウィザードの **[パッケージの保存および実行]** ページを示しています。 
    
-![インポートおよびエクスポート ウィザードの [パッケージ] ページの保存と実行](../../integration-services/import-export-data/media/save-and-run.png "インポートおよびエクスポート ウィザードの [パッケージ] ページの保存と実行") 
+![インポートおよびエクスポート ウィザードの [パッケージの保存および実行] ページ](../../integration-services/import-export-data/media/save-and-run.png "インポートおよびエクスポート ウィザードの [パッケージの保存および実行] ページ") 
   
 ## <a name="run-and-save-the-package"></a>パッケージの実行および保存 
  次に進むには、次の 2 つのオプションから少なくとも 1 つを選択する必要があります。  
@@ -58,12 +58,12 @@ SQL Server Data Tools (SSDT) がインストールされている Visual Studio 
 > [!IMPORTANT]
 > このオプションでは、SSIS カタログ データベース (SSISDB) にパッケージを保存できません。  
 
- ターゲット サーバーを選択し、サーバーに接続するための資格情報を次のページ **[SSIS パッケージの保存]** で指定します。 詳細については、「 [[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)」を参照してください。  
+ ターゲット サーバーを選択し、サーバーに接続するための資格情報を次のページ **[SSIS パッケージの保存]** で指定します。 詳細については、「[[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)」を参照してください。  
   
  **ファイル システム**  
  **.dtsx** 拡張子を持つファイルとしてパッケージを保存するには、このオプションを選択します。  
   
- パッケージの対象フォルダーとファイル名を、次のページ **[SSIS パッケージの保存]** で選択します。 詳細については、「 [[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)」を参照してください。  
+ パッケージの対象フォルダーとファイル名を、次のページ **[SSIS パッケージの保存]** で選択します。 詳細については、「[[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)」を参照してください。  
  
  ## <a name="specify-the-package-protection-level"></a>パッケージの保護レベルを指定する
  **パッケージの保護レベル**  
@@ -85,7 +85,7 @@ SQL Server Data Tools (SSDT) がインストールされている Visual Studio 
   
 -   現在のページで、SQL Server またはファイルのどちらにパッケージを保存するかを選択します。 保存されたパッケージのセキュリティ設定も選択します。  
   
--   次に、 **[SSIS パッケージの保存]** ページで、パッケージの名前および保存場所に関する詳細情報を指定します。 詳細については、「 [[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)」を参照してください。  
+-   次に、 **[SSIS パッケージの保存]** ページで、パッケージの名前および保存場所に関する詳細情報を指定します。 詳細については、「[[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)」を参照してください。  
   
  これらのオプションを使用できるのは、このページで **[SSIS パッケージの保存]** オプションを選択する場合のみです。  
   
@@ -94,7 +94,7 @@ SQL Server Data Tools (SSDT) がインストールされている Visual Studio 
   
 -   パッケージをすぐに実行することを選択した場合、次のページは **[ウィザードの完了]** です。 このページでは、ウィザードで選択した内容を確認し、コピー操作を開始します。 詳細については、「 [[ウィザードの完了] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)」を参照してください。  
   
--   パッケージを保存するオプションを選択した場合、次のページは **[SSIS パッケージの保存]** です。 このページでは、パッケージを保存するための追加オプションを指定します。 (パッケージを保存すると、その後のページは **[ウィザードの完了]** になります。)詳細については、「[[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)」を参照してください。  
+-   パッケージを保存するオプションを選択した場合、次のページは **[SSIS パッケージの保存]** です。 このページでは、パッケージを保存するための追加オプションを指定します。 (パッケージを保存すると、その後のページは **[ウィザードの完了]** になります。)詳細については、「 [[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [パッケージを保存する](../../integration-services/save-packages.md)  

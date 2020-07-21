@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SIN function
 - sine
 ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08463a1014a6226b12fa652e9bffb54782050289
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6e08898a6a9c51e80c003ef871960a88b44bb54
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907123"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005049"
 ---
 # <a name="sin-transact-sql"></a>SIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ラジアンでと概数型の場合、指定された角度の三角関数サインが返されます **float**, 、式です。  
   
@@ -42,12 +42,12 @@ SIN ( float_expression )
 
 ## <a name="arguments"></a>引数  
  *float_expression*  
- **float** 型、または暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ **float** 型、またはラジアンで暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、指定された角度の SIN を計算します。  
   
 ```  
@@ -65,7 +65,7 @@ The SIN of the angle is: 0.929607
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、指定された角度の sine を計算します。  
   
 ```  

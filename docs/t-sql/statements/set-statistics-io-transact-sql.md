@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cf335242bd0f0e33939c0a72c19390d90252103
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84d113230152bdade11192db086f44911028a474
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941842"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765694"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによって生成されるディスク利用状況に関する情報を表示します。  
   
@@ -41,12 +41,12 @@ ms.locfileid: "67941842"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  STATISTICS IO が ON のときは統計情報が表示され、OFF のときは表示されません。   
   
  このオプションを ON に設定した後は、オプションを OFF に設定するまで、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで統計情報が返されます。  
@@ -56,7 +56,7 @@ SET STATISTICS IO { ON | OFF }
 |出力アイテム|意味|  
 |-----------------|-------------|  
 |**Table**|テーブルの名前。|  
-|**Scan count**|出力の最終的なデータセットを構築するすべての値を取得するため、リーフ レベルに達した後で任意の方向に開始されたシークまたはスキャンの数。<br /><br /> 使用されているインデックスが主キーの一意なインデックスまたはクラスター化インデックスで、1 つの値のみをシークしている場合、Scan count は 0 になります。 たとえば、`WHERE Primary_Key_Column = <value>` のようになります。<br /><br /> 主キーではない列で定義されている一意ではないクラスター化インデックスを使用して 1 つの値を検索する場合、Scan count は 1 になります。 この処理は、検索対象のキー値の重複値を確認するために行われます。 たとえば、`WHERE Clustered_Index_Key_Column = <value>` のようになります。<br /><br /> インデックス キーを使用してキー値を特定した後、リーフ レベルで左側または右側に向かって開始された異なるシークまたはスキャンの数が N である場合、Scan count は N になります。|  
+|**Scan count**|出力の最終的なデータセットを構築するすべての値を取得するため、リーフ レベルに達した後で任意の方向に開始されたシークまたはスキャンの数。<br /><br /> 使用されているインデックスが主キーの一意なインデックスまたはクラスター化インデックスで、1 つの値のみをシークしている場合、Scan count は 0 になります。 たとえば、「 `WHERE Primary_Key_Column = <value>` 」のように入力します。<br /><br /> 主キーではない列で定義されている一意ではないクラスター化インデックスを使用して 1 つの値を検索する場合、Scan count は 1 になります。 この処理は、検索対象のキー値の重複値を確認するために行われます。 たとえば、「 `WHERE Clustered_Index_Key_Column = <value>` 」のように入力します。<br /><br /> インデックス キーを使用してキー値を特定した後、リーフ レベルで左側または右側に向かって開始された異なるシークまたはスキャンの数が N である場合、Scan count は N になります。|  
 |**logical reads**|データ キャッシュから読み取られたページ数。|  
 |**physical reads**|ディスクから読み取られたページ数。|  
 |**read-ahead reads**|クエリ用のキャッシュに読み取られたページ数。|  
@@ -72,10 +72,10 @@ SET STATISTICS IO { ON | OFF }
 ## <a name="permissions"></a>アクセス許可  
  SET STATISTICS IO を使用するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限が必要です。 SHOWPLAN 権限は必要ありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でステートメントの処理に使用された論理読み取りと物理読み取りの数を示します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS IO ON;  

@@ -1,5 +1,5 @@
 ---
-title: SQLServerResultSet メソッド |Microsoft Docs
+title: SQLServerResultSet のメソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9a1f4d07-ada9-43c7-9281-1f059554c4d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0c0ee81adc6b278cbd20bfa51658c702008203e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 311aed0e3efd6d365a7327e0196adcc30d3a601e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970547"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927079"
 ---
 # <a name="sqlserverresultset-methods"></a>SQLServerResultSet のメソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQLServerResultSet のメンバーの詳細については、「 [SQLServerResultSet members](../../../connect/jdbc/reference/sqlserverresultset-members.md)」を参照してください。  
+  SQLServerResultSet のメンバーの詳細については、「[SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

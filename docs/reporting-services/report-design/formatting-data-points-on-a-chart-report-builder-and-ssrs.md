@@ -1,5 +1,5 @@
 ---
-title: グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: グラフでのデータ ポイントの書式設定 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 5fbcae6cbbadb8665086c65088c32513a632c34a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580334"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079927"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、データ ポイントは、グラフにおける最小単位のエンティティです。 図形以外のグラフのデータ ポイントは、そのグラフの種類に応じて表されます。 たとえば、線系列は 1 つまたは複数の連続したデータ ポイントで構成されます。 図形グラフのデータ ポイントは、個々のスライスやセグメントによって表され、これらのスライスやセグメントがグラフ全体を形成します。 たとえば、円グラフでは、それぞれのピースがデータ ポイントです。 詳細については、「 [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
@@ -56,7 +56,7 @@ ms.locfileid: "65580334"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>データ ポイント ラベル、ツールヒント、および凡例テキストへのキーワードの追加  
  大文字と小文字の区別があるグラフに固有のキーワードを使用すると、グラフ内に存在する項目を表すことができます。 これらのキーワードは、ツールヒント、カスタムの凡例テキスト、データ ポイント ラベルのプロパティにのみ適用されます。 多くの場合、グラフ キーワードには同等の簡単な式がありますが、キーワードを入力する方がすばやく簡単です。 グラフ キーワードの一覧は次のとおりです。  
   
-|グラフ キーワード|[説明]|適用可能なグラフの種類|同等の簡単な式の例|  
+|グラフ キーワード|説明|適用可能なグラフの種類|同等の簡単な式の例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|データ ポイントの Y 値|All|`=Fields!MyDataField.Value`|  
 |#VALY2|データ ポイントの Y 値の 2 番目の値|範囲、バブル|なし|  
@@ -70,7 +70,7 @@ ms.locfileid: "65580334"
 |#TOTAL|系列のすべての Y 値の合計|All|`=Sum(Fields!MyDataField.Value)`|  
 |#LEGENDTEXT|凡例項目のテキストに対応するテキスト|All|なし|  
 |#AVG|系列内のすべての Y 値の平均|All|`=Avg(Fields!MyDataField.Value)`|  
-|#MIN|系列内のすべての Y 値の最小値|すべて|`=Min(Fields!MyDataField.Value)`|  
+|#MIN|系列内のすべての Y 値の最小値|All|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|系列内のすべての Y 値の最大値|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|系列内のすべての Y 値の最初の値|All|`=First(Fields!MyDataField.Value)`|  
   

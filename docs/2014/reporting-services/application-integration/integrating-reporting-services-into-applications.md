@@ -17,16 +17,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ad6d24495bb44a7bd1013dbc822eefe346f02d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126151"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>アプリケーションへの Reporting Services の統合
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、拡張性のあるオープンなレポート プラットフォームであり、ソリューションを開発するための API の包括的なセットを開発者に提供するように設計されています。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム アプリケーションに統合するには、レポート サーバー Web サービス ([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API ともいう)、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] の ReportViewer コントロール、および URL アクセスの 3 つのオプションがあります。 アプリケーションに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を統合する方法は、オプションごとに異なります。  
+ カスタム[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アプリケーションに統合するには、レポートサーバー Web サービス ( [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API とも呼ばれます)、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]ReportViewer コントロール、および URL アクセスの3つのオプションがあります。 アプリケーションに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を統合する方法は、オプションごとに異なります。  
   
 ## <a name="report-server-web-service"></a>レポート サーバー Web サービス  
  レポート サーバー Web サービスは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に対して開発を行うための主要なインターフェイスです。 レポート カタログを管理するためのコードを開発する場合でも、サポートされている形式でレポートを表示するためのコードを開発する場合でも、Web サービスでは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をアプリケーションに統合するために必要なすべての方法が公開されています。 そのようなアプリケーションの一例が、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に付属のレポート マネージャーです。レポート マネージャーでは、Web サービスを使用してレポート サーバー データベースを管理します。  
@@ -50,7 +50,7 @@ ms.locfileid: "63126151"
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [URL アクセスと SOAP の選択](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
- [テクニカル リファレンス &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
+ [SSRS&#41;&#40;テクニカルリファレンス](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [レポート サーバー web サービス](../report-server-web-service/report-server-web-service.md)  
   
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RTRIM function
 - trailing blanks
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c1a637f55f2aedcb27844777ef2b392c3cd2f30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb899229cf38697ea7abf25fb82dddb7d2826842
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967866"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297385"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (SSIS 式)
 
@@ -44,7 +44,7 @@ RTRIM(character expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  RTRIM は、DT_WSTR データ型でのみ機能します。 *character_expression* 引数が DT_STR データ型の文字列リテラルまたはデータ列である場合は、RTRIM による演算の実行前に、暗黙的に DT_WSTR データ型にキャストされます。 その他のデータ型は、明示的に DT_WSTR データ型にキャストされる必要があります。 詳しくは、「[Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」および「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」をご覧ください。  
   
  引数が NULL の場合、RTRIM は NULL を返します。  
@@ -70,7 +70,7 @@ RTRIM(@FirstName)
   
 ## <a name="see-also"></a>参照  
  [LTRIM (SSIS 式)](../../integration-services/expressions/ltrim-ssis-expression.md)   
- [TRIM (SSIS 式)](../../integration-services/expressions/trim-ssis-expression.md)   
+ [TRIM &#40;SSIS 式&#41;](../../integration-services/expressions/trim-ssis-expression.md)   
  [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

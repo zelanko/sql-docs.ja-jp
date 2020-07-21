@@ -1,26 +1,29 @@
 ---
-title: SQL Server Data Tools (SSDT) での Azure Active Directory | Microsoft Docs
-ms.custom: ''
-ms.date: 05/31/2018
+title: SSDT での Azure Active Directory
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
+manager: jroth
+reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4ea9e05d0a3f1c330fc24f52670384b2a3cd844d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984687"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79286206"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 SQL Server Data Tools (SSDT) では、[Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) の認証方法がいくつか用意されています。
+
+Visual Studio で **[SQL Server オブジェクト エクスプローラー]** ( **[表示]** メニュー) を開き、 **[SQL Server の追加]** を選択します。
 
 ![SSDT 接続ダイアログ](media/azure-active-directory/interactive.png)
 
@@ -38,11 +41,11 @@ SQL Server Data Tools (SSDT) では、[Azure Active Directory (Azure AD)](https:
 - Azure とフェデレーションしていないドメインから資格情報を利用して Windows にログインしている。
 - Azure AD 認証と Azure AD を利用している。その基盤は初期またはクライアント ドメインである。
 
-詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)」を参照してください。  
+詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)に関するページを参照してください。  
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 統合認証
 
-*Active Directory 統合認証*は、Azure Active Directory (Azure AD) の ID を使用して上記の Azure SQL 製品に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して接続します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)」を参照してください。
+*Active Directory 統合認証*は、Azure Active Directory (Azure AD) の ID を使用して上記の Azure SQL 製品に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して接続します。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)に関するページを参照してください。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 対話型認証
 

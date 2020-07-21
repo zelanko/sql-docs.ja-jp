@@ -1,5 +1,5 @@
 ---
-title: あいまいグループ化変換エディター (詳細 タブ) |Microsoft Docs
+title: '[あいまいグループ化変換エディター] ([詳細設定] タブ)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,24 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30bac381b301de4d94f8b587f324b41985dd221f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058366"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425309"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>[あいまいグループ化変換エディター] ([詳細設定] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、入力列と出力列の指定、類似性のしきい値の設定、区切り記号の定義ができます。  
   
 > [!NOTE]  
->  `Exhaustive`と`MaxMemoryUsage`、あいまいグループ化変換のプロパティが表示されない、**あいまいグループ化変換エディター**を使用して設定することが、**高度なエディター**. これらのプロパティの詳細については、「 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
+>  `Exhaustive` `MaxMemoryUsage` あいまいグループ化変換のおよびプロパティは、[**あいまいグループ化変換エディター**] では使用できませんが、**詳細エディター**を使用して設定できます。 これらのプロパティの詳細については、「 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
   
  あいまいグループ化変換の詳細については、「 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[入力キー列名]**  
  各入力行の一意の識別子を含む、出力列の名前を指定します。 [`_key_in`] 列は各行を一意に識別する値を持ちます。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66058366"
  変換により、トークンにするデータの区切り記号の既定のセットが提供されます。必要に応じて、一覧を編集して区切り記号の追加や削除を行うことができます。  
   
 ## <a name="see-also"></a>関連項目  
- [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [あいまいグループ化変換を使用して類似のデータ行を識別する](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

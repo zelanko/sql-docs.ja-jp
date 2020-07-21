@@ -1,5 +1,5 @@
 ---
-title: getDatabaseProductVersion メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getDatabaseProductVersion メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 19c0c15d-223f-45bd-a215-2867dfefecb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eb131223c59586d30fdf4cfbee84f63c483959f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd09db3880b7e4294620f9e8f0476fc759d1a54a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984093"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923196"
 ---
 # <a name="getdatabaseproductversion-method-sqlserverdatabasemetadata"></a>getDatabaseProductVersion メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public java.lang.String getDatabaseProductVersion()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getDatabaseProductVersion メソッドは、java メタデータインターフェイスの getDatabaseProductVersion メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getDatabaseProductVersion メソッドは、java.sql.DatabaseMetaData インターフェイスの getDatabaseProductVersion メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

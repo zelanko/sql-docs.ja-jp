@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07381b5450ecb238d09b96cbf9a3983ff178d1f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015304"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026119"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>インメモリ OLTP への移行
   このセクションでは、データベース オブジェクトを移行してインメモリ OLTP を使用する方法について説明します。  
@@ -24,9 +23,9 @@ ms.locfileid: "63015304"
   
 -   [メモリ最適化アドバイザー](memory-optimization-advisor.md)  
   
--   [ネイティブ コンパイル アドバイザー](native-compilation-advisor.md)  
+-   [ネイティブコンパイルアドバイザー](native-compilation-advisor.md)  
   
--   [インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+-   [インメモリ OLTP でサポートされていない transact-sql の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
 -   [メモリ最適化テーブルへの LOB 列の実装](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
   
@@ -44,9 +43,9 @@ ms.locfileid: "63015304"
   
 -   [メモリ最適化テーブルへの IDENTITY の実装](implementing-identity-in-a-memory-optimized-table.md)  
   
- 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
+ 移行方法の詳細については、「[インメモリ OLTP-一般的なワークロードパターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](in-memory-oltp-in-memory-optimization.md)   
  [メモリ最適化テーブルのメモリ必要量の推定](memory-optimized-tables.md)  
   

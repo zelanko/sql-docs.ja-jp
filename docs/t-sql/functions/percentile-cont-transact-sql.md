@@ -16,17 +16,17 @@ helpviewer_keywords:
 - analytic functions, PERCENTILE_CONT
 - PERCENTILE_CONT function
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f14ab522a9ead9054868096841a5dc1840c95fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dada9214720bbe30711dbc0d722ea2904e0bb491
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914373"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832938"
 ---
-# <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
+# <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の列値の連続型分散に基づく百分位数を計算します。 結果には値が挿入され、列内の特定の値と一致しない可能性があります。  
@@ -35,7 +35,7 @@ ms.locfileid: "67914373"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 PERCENTILE_CONT ( numeric_literal )   
     WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )  
     OVER ( [ <partition_by_clause> ] )  
@@ -49,7 +49,7 @@ PERCENTILE_CONT ( numeric_literal )
  並べ替える数値の一覧を指定し、百分位数を計算します。 *order_by_expression* は 1 つだけ許可されます。 式は、真数型または概数型に評価される必要があります。他のデータ型は使用できません。 真数型には、**int**、**bigint**、**smallint**、**tinyint**、**numeric**、**bit**、**decimal**、**smallmoney**、**money** があります。 概数型は **float** と **real** です。 既定の並べ替え順は昇順です。  
   
  OVER **(** \<partition_by_clause> **)**  
- FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。 OVER 構文の \<ORDER BY clause> と \<rows or range clause> は、PERCENTILE_CONT 関数では指定できません。  
+ FROM 句で生成された結果セットをパーティションに分割します。このパーティションにパーセンタイル関数が適用されます。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). OVER 構文の \<ORDER BY clause> と \<rows or range clause> は、PERCENTILE_CONT 関数では指定できません。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float(53)**  
@@ -62,7 +62,7 @@ PERCENTILE_CONT ( numeric_literal )
   
  PERCENTILE_CONT は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-basic-syntax-example"></a>A. 基本構文例  
  次の例では、PERCENTILE_CONT と PERCENTILE_DISC を使用して、各部門の従業員給与の中央値を検索します。 これらの関数は同じ値を返さない可能性があります。 PERCENTILE_CONT ではデータセットに存在するかどうかに関係なく適切な値が挿入され、PERCENTILE_DISC では常にセットから実際の値を返します。  
@@ -93,9 +93,7 @@ Engineering            34.375       32.6923
 Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
+
 ### <a name="b-basic-syntax-example"></a>B. 基本構文例  
  次の例では、PERCENTILE_CONT と PERCENTILE_DISC を使用して、各部門の従業員給与の中央値を検索します。 これらの関数は同じ値を返さない可能性があります。 PERCENTILE_CONT ではデータセットに存在するかどうかに関係なく適切な値が挿入され、PERCENTILE_DISC では常にセットから実際の値を返します。  
   

@@ -1,7 +1,7 @@
 ---
 title: PowerPivot for SharePoint (SSAS) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -9,27 +9,26 @@ ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 486db389b3cca8936a5350da61880637406a1387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34a4cc6b16e22a20e0e8be3ded12b0465ba46eab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071143"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535130"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
-  PowerPivot for SharePoint は、SharePoint モードで実行される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーです。 PowerPivot for SharePoint は、SharePoint ファーム内の PowerPivot データのサーバー ホスティングを実現します。 PowerPivot データを使用して、次のいずれかをビルドする分析データ モデルです。  
+  PowerPivot for SharePoint は、SharePoint モードで実行される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーです。 PowerPivot for SharePoint は、SharePoint ファーム内の PowerPivot データのサーバー ホスティングを実現します。 PowerPivot データは、次のいずれかを使用して構築する分析データモデルです。  
   
 -   PowerPivot for Excel 2010 アドイン  
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 |[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2010  
   
  そのデータをサーバーでホストするには、SharePoint、Excel Services、および PowerPivot for SharePoint のインストールが必要です。 PowerPivot for SharePoint インスタンスにデータが読み込まれます。このデータは、PowerPivot データ更新機能を使用してスケジュール設定された間隔で更新できます。Excel 2010 ブックの場合はこの更新機能がサーバーで実行され、Excel 2013 ブックの場合は SharePoint 2013 Excel Services で実行されます。  
   
 ## <a name="powerpivot-for-sharepoint-2013"></a>PowerPivot for SharePoint 2013  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 Excel Services による、データ モデルと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power View レポートを含む Excel ブックの使用をサポートします。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]サポート [!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint 2013 の Excel Services では、データモデルと Power View レポートを含む Excel ブックが使用さ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] れます。  
   
  SharePoint 2013 の Excel Services には、ブラウザー上で PowerPivot ブックを操作できるようにするためのデータ モデル機能が含まれます。 ファームに PowerPivot for SharePoint 2013 アドインを配置する必要はありません。 必要な操作は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを SharePoint モードでインストールし、Excel Services の **[データ モデルの設定]** でサーバーを登録するだけです。  
   
@@ -53,20 +52,20 @@ ms.locfileid: "66071143"
   
  SharePoint 統合モードの Analysis Service サーバー インスタンスで、配置が完了します。 データの読み込み、クエリ、アンロードを行います。 ブックに PowerPivot データ更新が構成されている場合、データの処理も行います。  各インスタンスは、同じインストールに含まれるローカルの PowerPivot System サービスと緊密に連携します。  
   
-##  <a name="bkmk_RelatedContent"></a> トピックの内容  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a> トピックの内容  
  [サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Windows PowerShell を使用した PowerPivot の構成](power-pivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot 構成ツール](power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
  [PowerPivot の認証および承認](power-pivot-authentication-and-authorization.md)  
   
- [PowerPivot の正常性ルール - 構成します。](configure-power-pivot-health-rules.md)  
+ [PowerPivot の正常性ルール - 構成](configure-power-pivot-health-rules.md)  
   
  [PowerPivot 管理ダッシュボードと使用状況データ](power-pivot-management-dashboard-and-usage-data.md)  
   
- [PowerPivot ギャラリー](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [PowerPivot ギャラリー](../../2014-toc/index.yml)  
   
  [PowerPivot データ アクセス](power-pivot-data-access.md)  
   
@@ -74,21 +73,21 @@ ms.locfileid: "66071143"
   
  [PowerPivot データ フィード](power-pivot-data-feeds.md)  
   
- [PowerPivot BI セマンティック モデル接続&#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
+ [PowerPivot BI セマンティックモデル接続 &#40;。 bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
  **他のセクション**  
   
-## <a name="additional-topics"></a>その他のトピック  
+## <a name="additional-topics"></a>関連トピック  
  [PowerPivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
  [PowerPivot for SharePoint 2013 のインストール](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
- [PowerPivot for SharePoint 用 PowerShell リファレンス](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+ [PowerShell リファレンス (PowerPivot for SharePoint)](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
- [ライセンスのトポロジの例と SQL Server 2014 セルフ サービス ビジネス インテリジェンスのコスト](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
+ [SQL Server 2014 セルフサービスビジネスインテリジェンスのライセンストポロジとコストの例](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
-## <a name="see-also"></a>関連項目  
- [PowerPivot の計画と展開](https://go.microsoft.com/fwlink/?linkID=220972)   
- [Powerpivot for SharePoint の災害復旧](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
+## <a name="see-also"></a>参照  
+ [PowerPivot の計画と配置](https://go.microsoft.com/fwlink/?linkID=220972)   
+ [PowerPivot for SharePoint の災害復旧](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

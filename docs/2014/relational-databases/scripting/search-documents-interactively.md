@@ -1,6 +1,6 @@
 ---
-title: ドキュメントの対話形式の検索 | Microsoft Docs
-ms.custom: ''
+title: ドキュメントの対話形式の検索
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], interactive
 - Query Editor [SQL Server Management Studio], interactive search
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 858724b4447c6602db14980a27225b3b8fe69eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f93fd39957a2fc6f0c22e1bcfdddd06e3b441440
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063788"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009296"
 ---
 # <a name="search-documents-interactively"></a>ドキュメントの対話形式の検索
   **[検索と置換]** ダイアログ ボックスを使用して、1 つ以上の開いているファイルやウィンドウで検索し、検索結果の文字列に 1 つずつ移動して確認することができます。 この方法では、検索結果の各文字列をその前後のテキストのコンテキストで個別に確認できます。 さらに、 **[検索と置換]** ダイアログ ボックスには、一括検索操作を実行し、結果をレポート形式で確認するオプションも用意されています。  
@@ -55,7 +54,7 @@ ms.locfileid: "66063788"
   
 5.  **[置換]** をクリックし、最後のファイル内で最後に見つかった検索結果の置換が完了するまで **[置換]** のクリックを続けます。 検索結果を置換しないでスキップする場合は、 **[次を検索]** をクリックします。  
   
-     \- または -  
+     または  
   
      **[すべて置換]** をクリックしてすべての検索結果を置換します。 置換の総数を示すメッセージ ボックスが表示されます。  
   

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services プロジェクト (SSDT) の作成 |Microsoft Docs
+title: Analysis Services プロジェクトの作成 (SSDT) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,36 +16,35 @@ helpviewer_keywords:
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c215d2967fdea20cd6828d41bd4c96a70ff4b35e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076237"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536354"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services プロジェクトの作成 (SSDT)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して定義できます。具体的には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト テンプレートを使用するか、または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのインポート ウィザードを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのコンテンツを読み取ります。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に読み込まれているソリューションがない場合は、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを作成すると自動的に新しいソリューションが作成されます。 それ以外の場合は、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトが既存のソリューションに追加されます。 ソリューション開発のベスト プラクティスでは、アプリケーション データの種類ごとにプロジェクトを個別に作成することが必要です。複数のプロジェクトが関係していても、使用するソリューションは 1 つです。 たとえば、Integration Services パッケージ、Analysis Services データベース、および Reporting Services レポートすべてを同じビジネス アプリケーションが使用し、これらのための独立した複数プロジェクトを含むソリューションが 1 つ存在する場合があります。  
   
  Analysis Services プロジェクトには、1 つの Analysis Services データベースで使用されるオブジェクトが複数存在します。 プロジェクトの配置プロパティは、プロジェクト メタデータがインスタンス化されたオブジェクトとして配置されるデータベース名とサーバーを指定します。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
  [Analysis Services プロジェクト テンプレートを使用して、新しいプロジェクトを作成します。](#bkmk_NewUsingTemplate)  
   
- [既存の Analysis Services データベースを使用した新しいプロジェクトの作成](#bkmk_NewUsingWizard)  
+ [既存の Analysis Services データベースを使用して新しいプロジェクトを作成する](#bkmk_NewUsingWizard)  
   
- [既存ソリューションへの Analysis Services プロジェクトの追加](#bkmk_AddtoExistingSolution)  
+ [既存のソリューションに Analysis Services プロジェクトを追加する](#bkmk_AddtoExistingSolution)  
   
- [ソリューションの作成と配置](#bkmk_buildDeploy)  
+ [ソリューションをビルドして配置する](#bkmk_buildDeploy)  
   
  [Analysis Services のプロジェクト フォルダー](#bkmk_ProjectFolders)  
   
- [Analysis Services のファイルの種類](#bkmk_FileTypes)  
+ [Analysis Services ファイルの種類](#bkmk_FileTypes)  
   
  [Analysis Services 項目テンプレート](#bkmk_ItemTemplates)  
   
-##  <a name="bkmk_NewUsingTemplate"></a> Analysis Services プロジェクト テンプレートを使用して、新しいプロジェクトを作成します。  
+##  <a name="create-a-new-project-using-the-analysis-services-project-template"></a><a name="bkmk_NewUsingTemplate"></a>Analysis Services プロジェクトテンプレートを使用して新しいプロジェクトを作成する  
  次に示す手順を使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを定義する空のプロジェクトを作成します。このオブジェクトは、その後に新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースとして配置できます。  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ペインで、 **[ビジネス インテリジェンス プロジェクト]** を選択します。  
@@ -64,7 +63,7 @@ ms.locfileid: "66076237"
   
 6.  **[OK]** をクリックします。  
   
-##  <a name="bkmk_NewUsingWizard"></a> 既存の Analysis Services データベースを使用した新しいプロジェクトの作成  
+##  <a name="create-a-new-project-using-an-existing-analysis-services-database"></a><a name="bkmk_NewUsingWizard"></a> 既存の Analysis Services データベースを使用した新しいプロジェクトの作成  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのインポート ウィザードを使用して、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのオブジェクトに基づいて新しいプロジェクトを作成できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに基づいて定義した場合、そのデータベースのメタデータは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]プロジェクトで開きます。 これらのオブジェクトは元のオブジェクトに影響を及ぼすことなくプロジェクト内で変更できます。そして、配置プロパティがそのデータベースを指定する場合は同じ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに配置できます。または、新たに作成した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに配置して、比較テストを行うこともできます。 変更内容が配置されるまでは、既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対する変更は有効になりません。  
   
  また、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをインポート テンプレートを使用して、元の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトが配置された後に変更が直接行われた実稼働データベースから新しいプロジェクトを作成することもできます。  
@@ -89,7 +88,7 @@ ms.locfileid: "66076237"
   
 7.  [ソリューション エクスプローラー] ウィンドウを開き、プロジェクトのコンテンツを表示します。  
   
-##  <a name="bkmk_AddtoExistingSolution"></a> 既存ソリューションへの Analysis Services プロジェクトの追加  
+##  <a name="add-an-analysis-services-project-to-an-existing-solution"></a><a name="bkmk_AddtoExistingSolution"></a> 既存ソリューションへの Analysis Services プロジェクトの追加  
  あるビジネス アプリケーションのソース ファイルをすべて含んだソリューションが既にある場合、そのソリューションに新しい Analysis Services プロジェクトを追加できます。  
   
  ソリューションに既存プロジェクトを追加すると、プロジェクトがそのソリューションに関連付けられますが、コピーはされません。 その Analysis Services プロジェクトが別のソリューションで作成された場合、プロジェクト ファイルは元の作成対象ソリューションにとどまります。 つまり、いずれのソリューションを通じてプロジェクトに加えられた変更も、同じソース ファイル セットに反映されます。 この動作が望ましくない場合は、プロジェクト ファイルを最初に新しいソリューション フォルダーにコピーまたは移動してから、プロジェクトをソリューションに追加します。  
@@ -98,7 +97,7 @@ ms.locfileid: "66076237"
   
 2.  ソリューションに追加する .dwproj ファイルを選択します。  
   
-##  <a name="bkmk_buildDeploy"></a> ソリューションの作成と配置  
+##  <a name="build-and-deploy-the-solution"></a><a name="bkmk_buildDeploy"></a> ソリューションの作成と配置  
  既定では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、ローカル コンピューター上の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスにプロジェクトを配置します。 この配置先を変更するには、 **プロジェクトの** [プロパティ ページ] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ダイアログ ボックスで **[サーバー]** 構成プロパティを変更します。  
   
 > [!NOTE]  
@@ -110,21 +109,21 @@ ms.locfileid: "66076237"
   
  プロジェクトが完成したら、配置ウィザードを使用して、ソリューションの作成時に生成された配置スクリプトを宛先インスタンスに配置し、最終的なテスト、ステージング、および配置を行うことができます。  
   
-##  <a name="bkmk_ProjectFolders"></a> Analysis Services のプロジェクト フォルダー  
+##  <a name="analysis-services-project-folders"></a><a name="bkmk_ProjectFolders"></a>Analysis Services のプロジェクトフォルダー  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトには、プロジェクトに含まれているアイテムを整理するための次のフォルダーがあります。  
   
-|フォルダー|説明|  
+|Folder|説明|  
 |------------|-----------------|  
 |ソリューション エクスプローラー|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのデータ ソースが含まれています。 これらのオブジェクトは、データ ソース ウィザードで作成し、データ ソース デザイナーで編集します。|  
 |データ ソース ビュー|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのデータ ソース ビューが含まれています。 これらのオブジェクトは、データ ソース ビュー ウィザードで作成し、データ ソース ビュー デザイナーで編集します。|  
 |キューブ|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのキューブが含まれています。 これらのオブジェクトは、キューブ ウィザードで作成し、キューブ デザイナーで編集します。|  
-|ディメンション|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのディメンションが含まれています。 これらのオブジェクトは、ディメンション ウィザードまたはキューブ ウィザードで作成し、ディメンション デザイナーで編集します。|  
+|Dimensions|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのディメンションが含まれています。 これらのオブジェクトは、ディメンション ウィザードまたはキューブ ウィザードで作成し、ディメンション デザイナーで編集します。|  
 |マイニング構造|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのマイニング構造が含まれています。 これらのオブジェクトは、マイニング モデル ウィザードで作成し、マイニング モデル デザイナーで編集します。|  
 |ロール|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのデータベース ロールが含まれています。 ロール デザイナーでロールを作成および管理します。|  
 |アセンブリ|[!INCLUDE[msCoName](../../includes/msconame-md.md)] プロジェクトの COM ライブラリおよび [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .NET Framework アセンブリへの参照が含まれています。 **[参照の追加]** ダイアログ ボックスで参照を作成します。|  
 |その他|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の種類のファイルを除くすべての種類のファイルが含まれています。 このフォルダーを使用して、プロジェクトの注釈が書かれているテキスト ファイルなど、その他のファイルを追加します。|  
   
-##  <a name="bkmk_FileTypes"></a> Analysis Services のファイルの種類  
+##  <a name="analysis-services-file-types"></a><a name="bkmk_FileTypes"></a> Analysis Services のファイルの種類  
  1 つの [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ソリューションで、複数のファイルの種類を使用できます。ファイルの種類は、ソリューションに含まれるプロジェクトおよびそのソリューションの各プロジェクトに含まれるアイテムによって異なります。 通常、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ソリューションの各プロジェクトのファイルは、ソリューションのフォルダー内でプロジェクト別に異なるフォルダーに保存されます。  
   
 > [!NOTE]  
@@ -145,7 +144,7 @@ ms.locfileid: "66076237"
 |データベース ファイル (.database)|勘定科目の種類、翻訳、データベース権限など、データベースのメタデータを定義する ASSL の要素が含まれています。|  
 |データベース ロール ファイル (.role)|ロール メンバーなど、データベース ロールのメタデータを定義する ASSL の要素が含まれています。|  
   
-##  <a name="bkmk_ItemTemplates"></a> Analysis Services 項目テンプレート  
+##  <a name="analysis-services-item-templates"></a><a name="bkmk_ItemTemplates"></a>Analysis Services 項目テンプレート  
  **[新しい項目の追加]** ダイアログ ボックスを使用して新しいアイテムを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加する場合は、指定された動作を実行する方法を示した事前定義済みのスクリプトまたはステートメントである、項目テンプレートを必要に応じて使用します。  
   
  次の表に示す項目テンプレートは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [新しい項目の追加] **ダイアログ ボックスの [** プロジェクト アイテム] カテゴリにあります。  
@@ -153,15 +152,15 @@ ms.locfileid: "66076237"
 |カテゴリ|項目テンプレート|説明|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト アイテム|Cube|キューブ ウィザードを起動して、新しいキューブを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
-||[データ ソース]|データ ソース ウィザードを起動して、新しいデータ ソースを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
+||Data Source|データ ソース ウィザードを起動して、新しいデータ ソースを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
 ||[データ ソース ビュー]|データ ソース ビュー ウィザードを起動して、新しいデータ ソース ビューを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
 ||データベース ロール|新しいデータベース ロールを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加して、新しいデータベース ロールのロール デザイナーを表示します。|  
-||[ディメンション]|ディメンション ウィザードを起動して、新しいデータベース ディメンションを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
+||Dimension|ディメンション ウィザードを起動して、新しいデータベース ディメンションを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
 ||[マイニング構造]|データ マイニング ウィザードを起動して、新しいマイニング構造と関連マイニング モデルを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
   
-## <a name="see-also"></a>関連項目  
- [Analysis Services プロジェクトのプロパティの構成 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
- [Analysis Services プロジェクトのビルド &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+## <a name="see-also"></a>参照  
+ [SSDT&#41;&#40;Analysis Services プロジェクトのプロパティを構成する](configure-analysis-services-project-properties-ssdt.md)   
+ [ビルド Analysis Services プロジェクト &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 322b755357da597d3bdcb41e4a83685075f4d991
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077027"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544642"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services データベースのバックアップと復元
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、特定の時点からデータベースとそのオブジェクトを復旧できるように、バックアップと復元機能が用意されています。 また、バックアップと復元は、アップグレードされたサーバーへのデータベースの移行、サーバー間でのデータベースの移動、実稼働サーバーへのデータベースの配置を行うための有効な方法でもあります。 バックアップ計画をまだ確立しておらず、重要なデータを保持している場合は、データ復旧のために、できるだけ早く計画を作成して実行してください。  
@@ -41,18 +40,18 @@ ms.locfileid: "66077027"
   
 -   [バックアップの準備](#bkmk_prep)  
   
--   [多次元データベースまたはテーブル データベースのバックアップ](#bkmk_cube)  
+-   [多次元データベースまたは表形式データベースのバックアップ](#bkmk_cube)  
   
 -   [Analysis Services データベースの復元](#bkmk_restore)  
   
-##  <a name="bkmk_prereq"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 前提条件  
  Analysis Services インスタンス上に管理権限を持っている、またはバックアップしようとしているデータベース上に、フル コントロール (管理者) 権限を持っている必要があります。  
   
  復元の場所は、バックアップが作成されたインスタンスと同じバージョン、またはそれよりも新しいバージョンの Analysis Services インスタンスである必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスから以前のバージョンの Analysis Services にデータベースを復元することはできませんが、新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスで SQL Server 2012 などの以前のバージョンのデータベースを復元するのはよくあることです。  
   
  復元の場所は、同じサーバーの種類である必要があります。 テーブル データベースは、表形式モードで実行されている Analysis Services にしか復元できません。 多次元データベースには、多次元モードで実行されているインスタンスが必要です。  
   
-##  <a name="bkmk_prep"></a> バックアップの準備  
+##  <a name="preparing-for-backup"></a><a name="bkmk_prep"></a>バックアップの準備中  
  次のチェック リストに従って、バックアップの準備をします。  
   
 -   バックアップ ファイルを格納する場所を確認します。 リモートの場所を使用している場合は、UNC フォルダーとして指定する必要があります。 UNC パスにアクセスできることを確認します。  
@@ -63,7 +62,7 @@ ms.locfileid: "66077027"
   
 -   同じ名前の既存のファイルを確認してください。 同じ名前のファイルが既に存在する場合、ファイルを上書きするオプションを指定しないと、バックアップは失敗します。  
   
-##  <a name="bkmk_cube"></a> 多次元データベースまたはテーブル データベースのバックアップ  
+##  <a name="backing-up-a-multidimensional-or-a-tabular-database"></a><a name="bkmk_cube"></a> 多次元データベースまたはテーブル データベースのバックアップ  
  管理者は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのサイズにかかわらず、データベースを 1 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) にバックアップできます。 手順の詳細については、「 [Analysis Services データベースをバックアップする方法 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 」と「 [Analysis Services データベースのバックアップの自動化 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)」を参照してください。  
   
 > [!NOTE]  
@@ -81,7 +80,7 @@ ms.locfileid: "66077027"
 |------------------|-----------------------------|  
 |多次元 MOLAP パーティションおよびディメンション|メタデータ、ソース データ、および集計|  
 |多次元 HOLAP パーティションおよびディメンション|メタデータおよび集計|  
-|多次元 ROLAP パーティションおよびディメンション|メタデータ|  
+|多次元 ROLAP パーティションおよびディメンション|Metadata|  
 |テーブル インメモリ モデル|メタデータとソース データ|  
 |テーブル DirectQuery モデル|メタデータのみ|  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66077027"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのバックアップの詳細については、「 [バックアップ オプション](backup-options.md)」 (Backup Options) を参照してください。  
   
-##  <a name="bkmk_restore"></a> Analysis Services データベースの復元  
+##  <a name="restoring-an-analysis-services-database"></a><a name="bkmk_restore"></a>Analysis Services データベースの復元  
  管理者は、1 つまたは複数のバックアップ ファイルから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを復元できます。  
   
 > [!NOTE]  
@@ -124,7 +123,7 @@ ms.locfileid: "66077027"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの復元の詳細については、「 [復元オプション](restore-options.md)」 (Restore Options) を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データベースのバックアップ、復元、および同期 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
+ [XMLA&#41;&#40;のデータベースのバックアップ、復元、および同期](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [Analysis Services PowerShell](../analysis-services-powershell.md)  
   
   

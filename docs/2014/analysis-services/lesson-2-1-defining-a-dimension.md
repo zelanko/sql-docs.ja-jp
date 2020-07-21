@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bfc4b3a0890ebf662fd5a4ac2697aa3c63464c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079090"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543524"
 ---
 # <a name="defining-a-dimension"></a>ディメンションの定義
   この実習では、ディメンション ウィザードを使用して Date ディメンションを構築します。  
@@ -47,11 +46,11 @@ ms.locfileid: "66079090"
   
     -   **Calendar Quarter**  
   
-    -   **Calendar Year**  
+    -   **暦年**  
   
     -   **Calendar Semester**  
   
-8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 **[Date]**  >  **[Calendar]**  >  **[Date]** の順にクリックします。 **[OK]** をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
+8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 次に、 **[カレンダーの日付]** をクリックし  >  **Calendar**  >  **Date**ます。 **[OK]** をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
   
     -   **English Month Name** から **Month**  
   
@@ -74,9 +73,9 @@ ms.locfileid: "66079090"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [キューブの定義](lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [既存のテーブルを使用したディメンションを作成します。](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
+ [既存のテーブルを使用してディメンションを作成する](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [ディメンション ウィザードを使用したディメンションの作成](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   
   

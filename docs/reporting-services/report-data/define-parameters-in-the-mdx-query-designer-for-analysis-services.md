@@ -15,10 +15,10 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65573655"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Analysis Services の MDX クエリ デザイナーでのパラメーターの定義
@@ -29,7 +29,7 @@ ms.locfileid: "65573655"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>MDX のデザイン モードでクエリ パラメーターを定義するには  
   
-1.  レポート データ ペインで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースの種類から作成されたデータセットを右クリックし、 **[クエリ]** をクリックします。 MDX クエリ デザイナーがデザイン モードで開きます。  
+1.  レポート データ ペインで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースの種類から作成されたデータセットを右クリックし、 **[クエリ]** をクリックします。 MDX クエリ デザイナーがデザイン モードで開きます。  
   
 2.  ディメンションをフィルター領域にドラッグし、 **[ディメンション]** 列の最初のセルにドロップします。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65573655"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>MDX のクエリ モードでクエリ パラメーターを定義するには  
   
-1.  レポート データ ペインで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースの種類から作成されたデータセットを右クリックし、 **[クエリ]** をクリックします。 MDX クエリ デザイナーがデザイン モードで開きます。  
+1.  レポート データ ペインで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースの種類から作成されたデータセットを右クリックし、 **[クエリ]** をクリックします。 MDX クエリ デザイナーがデザイン モードで開きます。  
   
 2.  ツール バーの **[デザイン]** をクリックして、クエリ モードに切り替えます。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "65573655"
      レポート パラメーターで使用可能な値を示すデータセットを確認するには、レポート データ ペインの空白部分を右クリックし、 **[非表示のデータセットの表示]** をクリックします。 レポート データ ペインに、レポート内のすべてのデータセットが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [MDX のための Analysis Services の接続の種類 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
  [Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

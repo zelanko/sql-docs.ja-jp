@@ -1,5 +1,6 @@
 ---
 title: レプリケーション エージェントの監視 | Microsoft Docs
+description: SQL Server レプリケーション モニターを使用すると、レプリケーションの利用状況を体系的に表示し、特定のエージェントに関する情報を見つけることができます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: aa72ae36463f191ef8f127562d231b2e58480039
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fe45b96570d9090aff4de1858c7d3bb455896cd5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767719"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159810"
 ---
 # <a name="monitor-replication-agents"></a>レプリケーション エージェントの監視
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターを使用すると、レプリケーションの利用状況を体系的に表示でき、特定のエージェントに関する情報を簡単に見つけることもできます。 次の一覧に、各エージェント、各エージェントを利用できるレプリケーション モニターのタブ、およびそれらのタブへのアクセス方法について説明しているトピックへのリンクを示します。  
   
 -   以下のエージェントは、レプリケーション モニターでパブリケーションと関連付けられています。  

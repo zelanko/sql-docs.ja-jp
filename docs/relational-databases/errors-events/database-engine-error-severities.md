@@ -1,5 +1,6 @@
 ---
 title: データベース エンジン エラーの重大度 | Microsoft Docs
+description: この重大度レベルの一覧を使用して、SQL Server データベース エンジンでエラーが発生したときに発生した SQL Server の問題の種類を把握します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 436945f79d862f50443455de1b74dcd927852e78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16bf5154c5ab08b790739e287ccb2934b942e591
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127044"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727523"
 ---
 # <a name="database-engine-error-severities"></a>データベース エンジン エラーの重大度
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によってエラーが発生した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に発生した問題の種類がエラーの重大度によって示されます。  
   
 ## <a name="levels-of-severity"></a>重大度レベル  
  次の表は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって発生したエラーの重大度レベルについて示しています。  
   
-|重大度レベル|[説明]|  
+|重大度レベル|説明|  
 |--------------------|-----------------|  
 |0-9|ステータス情報を返すか、重大ではないエラーを報告する情報メッセージです。 重大度 0 ～ 9 のシステム エラーが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって発生することはありません。|  
 |10|ステータス情報を返すか、重大ではないエラーを報告する情報メッセージです。 互換性の理由から、呼び出し側アプリケーションにエラー情報を返す前に [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって重大度 10 から重大度 0 に変換されます。|  
@@ -63,7 +64,7 @@ ms.locfileid: "68127044"
   
  接続が終了すると実行は中断されるため、データベース接続を終了させるエラー (通常の場合、重大度 20 ～ 25 のエラー) は CATCH ブロックでは処理されません。  
   
- 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)に発生した問題の種類がエラーの重大度によって示されます。  
+ 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)」を参照してください。  
   
 ## <a name="retrieving-error-severity"></a>エラーの重大度の取得  
  システム関数 ERROR_SEVERITY を使用して、TRY...CATCH コンストラクトの CATCH ブロックを実行したエラーの重大度を取得することができます。 CATCH ブロックの範囲外で呼び出された場合、ERROR_SEVERITY は NULL を返します。 詳細については、「[ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)」を参照してください。  
@@ -71,7 +72,7 @@ ms.locfileid: "68127044"
 ## <a name="see-also"></a>参照  
  [データベース エンジン エラーについて](../../relational-databases/errors-events/understanding-database-engine-errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   

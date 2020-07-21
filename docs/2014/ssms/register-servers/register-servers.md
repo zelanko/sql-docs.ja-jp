@@ -1,6 +1,6 @@
 ---
-title: サーバーの登録 | Microsoft Docs
-ms.custom: ''
+title: サーバーの登録
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,15 +15,14 @@ helpviewer_keywords:
 - server management [SQL Server], registering servers
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10cf7256c5190f9ba94dff70118f43f0ad926aa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c6008c1d719fa7c452bb64c51fa573432e0ce4c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058410"
 ---
 # <a name="register-servers"></a>サーバーの登録
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にサーバーを登録することで、サーバー接続情報を保存して、その後の接続時に使用できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にサーバーを登録するには、次の 3 とおりの方法があります。  
@@ -62,7 +61,7 @@ ms.locfileid: "63049318"
 ## <a name="related-tasks"></a>Related Tasks  
  登録したサーバーの基礎知識については、次の各トピックを参照してください。  
   
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |---------------------|---------------|  
 |ローカル サーバー インスタンスの登録|[接続済みのサーバーの登録 &#40;SQL Server Management Studio&#41;](register-a-connected-server-sql-server-management-studio.md)|  
 |サーバーの登録|[新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)|  
@@ -80,7 +79,7 @@ ms.locfileid: "63049318"
 |中央管理サーバーおよびサーバー グループの作成|[中央管理サーバーとサーバー グループの作成 &#40;SQL Server Management Studio&#41;](create-a-central-management-server-and-server-group.md)|  
 |複数のサーバーに対するステートメントの同時実行|[複数のサーバーに対してステートメントを同時に実行する方法 &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リモート サーバー](../../database-engine/configure-windows/remote-servers.md)  
   
   

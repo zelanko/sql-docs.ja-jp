@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c689a30eb9357d940a547af503d8ff4edd7c087
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000905"
 ---
 # <a name="sort-rows-visual-database-tools"></a>行の並べ替え (Visual Database Tools)
   クエリ結果の行は、並べ替えることができます。 つまり、特定の列または列のセットを指定し、その値で結果セットの行の順序を決定できます。  
@@ -89,7 +88,7 @@ ms.locfileid: "63049157"
   
      2 番目の並べ替えの基準にする列として、 `state` 列が指定されています。 したがって、著者の数が同じ州がある場合は、アルファベット順に表示されます。  
   
--   **各種言語のデータを使用して並べ替える** つまり、列の既定の規則とは異なる照合規則を使用して、列を並べ替えることができます。 たとえば、Jaime Pati によってすべてのブック タイトルを取得するクエリを記述できます??o します。 アルファベット順に書名を表示するには、書名列に対してスペイン語の照合規則を使用します。 結果の SQL ステートメントは次のようになります。  
+-   **各種言語のデータを使用して並べ替える** つまり、列の既定の規則とは異なる照合規則を使用して、列を並べ替えることができます。 たとえば、Jaime Pati?? を使用してすべての書名を取得するクエリを作成できます。i/o. アルファベット順に書名を表示するには、書名列に対してスペイン語の照合規則を使用します。 結果の SQL ステートメントは次のようになります。  
   
     ```  
     SELECT title  
@@ -111,7 +110,7 @@ ms.locfileid: "63049157"
     ```  
   
 ## <a name="see-also"></a>参照  
- [クエリ結果の並べ替えとグループ化&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [クエリ結果の並べ替えとグループ化 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

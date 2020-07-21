@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4993dfe1-2232-4b3c-b931-dfdb35dd225a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 796a31238a8340b5604797bbb8e38e7ebd1b4237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e319b94105a6055c4e37abc02c7783bcb780c9f4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998723"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919747"
 ---
 # <a name="updateobject-method-int-javalangobject"></a>updateObject (int, java.lang.Object) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public void updateObject(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  列インデックスを示す **int** です。  
   
@@ -47,7 +47,7 @@ public void updateObject(int index,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateObject メソッドは、java.sql.ResultSet インターフェイスの updateObject メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

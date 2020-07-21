@@ -1,21 +1,21 @@
 ---
-title: 基本的なデータ型のサンプル |Microsoft Docs
+title: 基本データ型のサンプル | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68e1cbb3a17cd85b95c01446adcd02b493f65c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 43a19765231aeea5f28ead28b74130befb10bb1a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957291"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922616"
 ---
 # <a name="basic-data-types-sample"></a>基本データ型のサンプル
 
@@ -31,7 +31,7 @@ ms.locfileid: "67957291"
 
 ## <a name="requirements"></a>必要条件  
 
-このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスの設定方法の詳細については、「 [JDBC ドライバーの使用](../../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。  
+このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスを設定する方法の詳細については、「[JDBC ドライバーの使用](../../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。  
   
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、「[JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)」を参照してください。  
@@ -154,7 +154,7 @@ public class BasicDataTypes {
 }
 ```
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 [データ型の処理 &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
   

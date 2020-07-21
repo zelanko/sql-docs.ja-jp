@@ -1,5 +1,6 @@
 ---
 title: データ ソースと接続のメソッド | Microsoft Docs
+description: レポート サービスでは、これらのメソッドを使用して、データ ソースの接続と資格情報を設定および管理できます。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 464a24e9a23103323a14140c25563e753c6c3e18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c30b5343041c2fd8f1916d560a8ca2556990be09
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62512594"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198259"
 ---
 # <a name="data-sources-and-connection-methods"></a>データ ソースと接続のメソッド
   これらのメソッドを使用して、データ ソースの接続と資格情報を設定および管理できます。  
   
-|方法|操作|  
+|方法|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateDataSource%2A>|レポート サーバー データベースまたは SharePoint ライブラリの新しいデータ ソースを作成します。|  
 |<xref:ReportService2010.ReportingService2010.DisableDataSource%2A>|有効になっているデータ ソースを無効にします。|  

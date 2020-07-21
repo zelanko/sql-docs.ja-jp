@@ -1,5 +1,5 @@
 ---
-title: スキーマ要素 (DTA) データベースの対応 |Microsoft Docs
+title: Database の Schema 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74e72deb65d3f693e309926870174ebe72817c3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb89a55e8e4568af00854fc487c51dcdff0658dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057709"
 ---
 # <a name="schema-element-for-database-dta"></a>Database の Schema 要素 (DTA)
   チューニングするデータベースのスキーマを指定します。  
@@ -35,7 +34,7 @@ ms.locfileid: "63273328"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
@@ -51,7 +50,7 @@ ms.locfileid: "63273328"
 ## <a name="example"></a>例  
  この要素の使用例については、「[Server 要素 &#40;DTA&#41;](server-element-dta.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

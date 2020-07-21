@@ -1,9 +1,11 @@
 ---
-title: Web アプリケーションでの URL アクセスの使用 | Microsoft Docs
+title: Web アプリケーションでの URL アクセスの使用
+description: Reporting Services での URL アクセスにより、ネットワーク経由でレポートにアクセスできるようになります。これにより、レポートの表示とナビゲーションをカスタム Web アプリケーションに統合できます。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - links [Reporting Services], URL access
@@ -15,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f2a3c9db568d6c6cddc71ec221f68306acb7f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 731ed382c029fb2115c4351d306bf5b33d294a48
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741695"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198519"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>URL アクセスを使用した Reporting Services の統合 - Web アプリケーション
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL アクセスは、ネットワークを介して各レポートにアクセスできるように特別に設計されています。 この種類のアクセスは、レポートの表示およびナビゲーションをカスタム Web アプリケーションに統合するのに最適です。 Web アプリケーションで URL アクセスを使用するには、次の方法があります。  

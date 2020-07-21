@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 847f3fccdca31f62ecaebe9451426283fa741b04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120583"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79287846"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>実行中のパッケージとその他の操作の監視
 
@@ -31,7 +31,7 @@ ms.locfileid: "68120583"
   
      詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
--   [レポート]  
+-   Reports  
   
      詳細については、「 [Reports for the Integration Services Server](#reports)」を参照してください。  
   
@@ -55,12 +55,12 @@ ms.locfileid: "68120583"
   
  9 つの状態の種類を使用して、操作の状態を示します。 状態の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。  
 
-## <a name="active_ops"></a> [アクティブな操作] ダイアログ ボックス
-  配置、検証、パッケージの実行など、 **サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、** [アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
+## <a name="active-operations-dialog-box"></a><a name="active_ops"></a> [アクティブな操作] ダイアログ ボックス
+  配置、検証、パッケージの実行など、** サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、**[アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
   
  関連 [!INCLUDE[tsql](../../includes/tsql-md.md)] ビューの詳細については、「[catalog.operations (SSISDB データベース)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」、「[catalog.validations (SSISDB データベース)](../../integration-services/system-views/catalog-validations-ssisdb-database.md)」、「[catalog.executions (SSISDB データベース)](../../integration-services/system-views/catalog-executions-ssisdb-database.md)」を参照してください。  
   
-###  <a name="open_dialog"></a> [アクティブな操作] ダイアログ ボックスを開く  
+###  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a> [アクティブな操作] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を開きます。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68120583"
   
 ### <a name="configure-the-options"></a>オプションの構成  
   
- **型**  
+ **Type**  
  操作の種類を指定します。 **[種類]** フィールドに指定できる値、および Transact-SQL の **catalog.operations** ビューに含まれる operations_type 列の対応する値を次に示します。  
   
 |||  
@@ -86,7 +86,7 @@ ms.locfileid: "68120583"
 |パッケージの検証|301|  
 |カタログの構成|1000|  
   
- **[停止]**  
+ **Stop**  
  現在実行中の操作を停止する場合にクリックします。  
 
 ## <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services サーバーで実行中のパッケージの表示と停止
@@ -117,7 +117,7 @@ ms.locfileid: "68120583"
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
   
 ### <a name="viewing-the-history-of-packages-that-have-run"></a>実行したパッケージの履歴の表示  
- 実行したパッケージの履歴を [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で確認するには、 **[すべての実行]** レポートを使用します。 **[すべての実行]** レポートとその他の標準レポートの詳細については、「[Integration Services サーバーのレポート](#reports)」を参照してください。  
+ 実行したパッケージの履歴を [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で確認するには、 **[すべての実行]** レポートを使用します。 **[すべての実行]** レポートとその他の標準レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」を参照してください。  
   
  実行中のパッケージの履歴を表示するその他の方法については、次のトピックをご覧ください。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "68120583"
  マネージド API を使用したプログラムによるアクセス  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
 
-## <a name="reports"></a> Reports for the Integration Services Server
+## <a name="reports-for-the-integration-services-server"></a><a name="reports"></a> Reports for the Integration Services Server
   現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。 これらのレポートは、パッケージの状態と履歴を確認したり、必要に応じてパッケージ実行の失敗の原因を特定したりするのに役立ちます。  
   
  各レポート ページの先頭にある戻るアイコンをクリックすると、前に表示されていたページに戻ります。最新の情報に更新アイコンをクリックすると、ページに表示されている情報が更新されます。印刷アイコンをクリックすると、現在のページが印刷されます。  
@@ -139,7 +139,7 @@ ms.locfileid: "68120583"
   
  このレポートには、次の情報のセクションが表示されます。  
   
-|セクション|[説明]|  
+|Section|説明|  
 |-------------|-----------------|  
 |**実行情報**|過去 24 時間のさまざまな状態 (失敗、実行中、成功、その他) の実行の数を示します。|  
 |**Package Information**|過去 24 時間に実行されたパッケージの合計数を示します。|  
@@ -153,7 +153,7 @@ ms.locfileid: "68120583"
   
  このレポートには、次の情報のセクションが表示されます。  
   
-|セクション|[説明]|  
+|Section|説明|  
 |-------------|-----------------|  
 |Assert|レポートに適用される現在のフィルターを示します (開始時間範囲など)。|  
 |実行情報|各パッケージの実行の開始時刻、終了時刻、および持続時間を示します。パッケージの実行で使用されたパラメーター値 (パッケージ実行タスクで子パッケージに渡された値など) の一覧を表示できます。 パラメーターの一覧を表示するには、[概要] をクリックします。|  
@@ -167,7 +167,7 @@ ms.locfileid: "68120583"
   
  このレポートには、次の情報のセクションが表示されます。  
   
-|セクション|[説明]|  
+|Section|説明|  
 |-------------|-----------------|  
 |Assert|レポートに適用される現在のフィルター (指定した文字列を使用し、 **[前回失敗した日時]** 範囲にある接続など) を示します。<br /><br /> 特定の日付範囲中に発生した接続エラーのみを表示するには、 **[前回失敗した日時]** を設定します。 範囲には、複数の日、月、または年を指定できます。|  
 |詳細|接続文字列、接続中に失敗した実行の回数、および最後に失敗した日付を示します。|  
@@ -187,7 +187,7 @@ ms.locfileid: "68120583"
  カスタム レポートの作成および追加方法については、「 [Add a Custom Report to Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)」(Management Studio へのカスタム レポートの追加) を参照してください。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートの表示
-  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」をご覧ください。  
+  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」を参照してください。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートを表示するには  
   

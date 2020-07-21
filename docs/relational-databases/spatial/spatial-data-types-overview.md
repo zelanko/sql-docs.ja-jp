@@ -1,6 +1,6 @@
 ---
 title: 空間データ型の概要 | Microsoft Docs
-ms.date: 11/01/2016
+ms.date: 05/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,20 +15,20 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7bc2464e8304a46fcbeada30453e2295e4fd2015
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758827"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   
 空間データには 2 つの型があります。 **geometry** データ型は平面 (ユークリッド (平面地球)) データをサポートしています。 **geometry** データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 および SQL MM (ISO 標準) の両方に準拠しています。
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではそのほかに、 **geography** データ型もサポートされています。このデータ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。
 
-##  <a name="objects"></a> 空間データ オブジェクト  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> 空間データ オブジェクト  
 **geometry** データ型と **geography** データ型は、16 の空間データ オブジェクト (インスタンス型) をサポートしています。 ただし、 *インスタンス化可能*なインスタンス型、つまりデータベース内でインスタンスを作成して使用することができる (インスタンス化できる) インスタンス型は、そのうちの 11 種類のみです。 これらのインスタンスは、親データ型から派生するプロパティによって、 **Points**、 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** 、または **GeometryCollection** 内の複数の **geometry** インスタンスや **geography**インスタンスとして識別されます。 **Geography** 型には、 **FullGlobe**という追加のインスタンス型があります。  
 
 次の図は、 **geometry** の階層を表しています。 **geometry** データ型と **geography** データ型はこの階層に基づいています。 **geometry** と **geography** のインスタンス化可能な型は青で示されています。  
@@ -44,16 +44,16 @@ geometry 型および geography 型のサブタイプには、単純型とコレ
 -   [LineString](../../relational-databases/spatial/linestring.md)  
 -   [CircularString](../../relational-databases/spatial/circularstring.md)  
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
--   [多角形](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
 
 コレクション型は、次のとおりです。  
 -   [MultiPoint](../../relational-databases/spatial/multipoint.md)  
 -   [MultiLineString](../../relational-databases/spatial/multilinestring.md)  
 -   [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
--   [geography](../../relational-databases/spatial/geometrycollection.md)  
+-   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> geometry データ型と geography データ型の違い  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> geometry データ型と geography データ型の違い  
 2 つの空間データ型の動作はよく似ていますが、データの格納および操作の方法にいくつかの重要な違いがあります。  
 
 ### <a name="how-connecting-edges-are-defined"></a>接続エッジの定義方法  
@@ -70,7 +70,7 @@ geometry 型の円弧セグメントは、XY デカルト座標平面上に定�
 ### <a name="orientation-of-spatial-data"></a>空間データの方向  
 平面座標系では、ポリゴンのリングの方向は重要ではありません。 たとえば、((0, 0), (10, 0), (0, 20), (0, 0)) によって表されるポリゴンは、((0, 0), (0, 20), (10, 0), (0, 0)) によって表されるポリゴンと同じです。 OGC Simple Features for SQL Specification では、リングの順序は定められていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でもリングの順序は強制されません。  
 
-楕円体座標系では、ポリゴンは方向がないと意味がなくなります (あいまいになります)。 たとえば、赤道の周りのリングが北半球を表すのか南半球を表すのかがわからなくなります。 **geography** データ型を使用して空間インスタンスを格納する場合は、リングの方向を指定し、インスタンスの位置を正確に示す必要があります。 楕円体座標系の多角形の内部は、左辺ルールによって定義されます。  
+楕円体座標系では、ポリゴンは方向がないと意味がなくなります (あいまいになります)。 たとえば、赤道の周りのリングが北半球を表すのか南半球を表すのかがわからなくなります。 **geography** データ型を使用して空間インスタンスを格納する場合は、リングの方向を指定し、インスタンスの位置を正確に示す必要があります。 楕円体座標系でのポリゴンの内部は、"左手の法則" によって定義されています。geography のポリゴンのリングに沿って歩いていると想像する場合、点が一覧表示されている順序に従って、左側の領域がポリゴンの内部として扱われ、右側の領域がポリゴンの外部として扱われます。
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で互換性レベルが 100 以下である場合、 **geography** データ型には次の制約があります。  
 -   各 **geography** インスタンスが 1 つの半球に収まる必要があります。 半球よりも大きい空間オブジェクトを格納することはできません。  
@@ -80,13 +80,13 @@ geometry 型の円弧セグメントは、XY デカルト座標平面上に定�
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の **FullGlobe** は、球全体を覆う特殊な多角形です。 **FullGlobe** には領域がありますが、境界や頂点はありません。  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>`geography` データ型では外部リングと内部リングは重要ではない  
-OGC Simple Features for SQL Specification では外部リングと内部リングが取り上げられていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型ではこの区別はほとんど意味を持ちません。ポリゴンのリングはすべて外部リングと見なすことができます。  
+OGC Simple Features for SQL Specification では外部リングと内部リングが取り上げられていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型ではこの区別はほとんど意味を持ちません。ポリゴンのリングはすべて外部リングと見なすことができます。  
 
 OGC の仕様の詳細については、以下を参照してください。  
 -   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [OGC の仕様、簡易機能アクセス Part 2 - SQL オプション](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
-##  <a name="circular"></a> 円弧セグメント  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> 円弧セグメント  
 円弧セグメントでは、次の 3 つのインスタンス化可能な型を使用できます:**CircularString**、**CompoundCurve**、**CurvePolygon**。  円弧セグメントは、2 次元平面内の 3 つの点によって定義されます。3 番目のポイントを最初のポイントと同じにすることはできません。  
 
 図 A と図 B は、一般的な円弧のセグメントを示します。 3 つの点が 1 つの円周上にあることに注意してください。  
@@ -114,7 +114,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 **CircularString** インスタンスでは、三角形を定義するために 7 つの点が必要ですが、 **LineString** インスタンスでは、三角形を定義するために必要な点は 4 つだけです。 その理由は、 **CircularString** インスタンスは直線セグメントではなく円弧セグメントを格納するためです。 したがって、 **CircularString** インスタンスに格納される三角形の辺は ABC、CDE、および EFA であるのに対し、 **LineString** インスタンスに格納される三角形の辺は AC、CE、および EA です。  
 
-次の例を参照してください。  
+次の例を確認してください。  
 
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);

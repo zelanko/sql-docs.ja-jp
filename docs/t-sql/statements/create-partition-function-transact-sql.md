@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55269acfdb6f739c398a8f71712d34d7cb62f816
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912613"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392700"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   テーブルまたはインデックスの行を指定された列の値に基づいてパーティションにマップする関数を、現在のデータベース内に作成します。 CREATE PARTITION FUNCTION の使用は、パーティション テーブルまたはパーティション インデックスを作成する最初の手順です。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、1 つのテーブルまたはインデックスは、最大 15,000 個のパーティションに分割できます。  
   
@@ -43,14 +43,16 @@ ms.locfileid: "67912613"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE PARTITION FUNCTION partition_function_name ( input_parameter_type )  
 AS RANGE [ LEFT | RIGHT ]   
 FOR VALUES ( [ boundary_value [ ,...n ] ] )   
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *partition_function_name*  
  パーティション関数の名前です。 パーティション関数の名前は、データベース内で一意であり、かつ[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   
@@ -75,7 +77,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **LEFT** | RIGHT  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]が境界値を左から右の昇順にソートする場合に、*boundary_value* [ **,** _...n_ ] が各境界値間隔のどちら側 (左または右) に属するかを指定します。 指定しない場合は、LEFT が既定値です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パーティション関数のスコープは、関数が作成されたデータベース内に制限されます。 データベース内では、パーティション関数は他の関数とは別の名前空間に配置されます。  
   
  NULL が境界値として指定され、RIGHT が指定された場合を除き、パーティション分割列に NULL 値がある行はすべて、左端のパーティションに配置されます。 この場合、左端のパーティションは空のパーティションになり、NULL 値は次のパーティションに配置されます。  
@@ -89,7 +91,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 -   パーティション関数が作成されているデータベースのサーバーでの CONTROL SERVER 権限または ALTER ANY DATABASE 権限。  
   
-##  <a name="BKMK_examples"></a> 使用例  
+##  <a name="examples"></a><a name="BKMK_examples"></a> 使用例  
   
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. int 型の列に RANGE LEFT パーティション関数を作成する  
  次のパーティション関数は、テーブルまたはインデックスを 4 つのパーティションに分割します。  
@@ -101,7 +103,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
   
  次の表は、パーティション分割列 **col1** でこのパーティション関数を使用するテーブルがどのようにパーティション分割されるかを示します。  
   
-|パーティション|1|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**値**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
@@ -115,7 +117,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
  次の表は、パーティション分割列 **col1** でこのパーティション関数を使用するテーブルがどのようにパーティション分割されるかを示します。  
   
-|パーティション|1|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**値**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
   
@@ -131,7 +133,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
  次の表は、パーティション分割列 **datecol** で、このパーティション関数を使用するテーブルまたはインデックスがどのようにパーティション分割されるかを示します。  
   
-|パーティション|1|2|[...]|11|12|  
+|Partition|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
 |**値**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
@@ -145,7 +147,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
   
  次の表は、パーティション分割列 **col1** でこのパーティション関数を使用するテーブルがどのようにパーティション分割されるかを示します。  
   
-|パーティション|1|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**値**|**col1** \< `EX`...|**col1** >= `EX` AND **col1** \< `RXE`...|**col1** >= `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   

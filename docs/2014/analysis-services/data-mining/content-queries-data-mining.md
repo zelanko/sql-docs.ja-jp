@@ -1,5 +1,5 @@
 ---
-title: コンテンツ クエリ (データ マイニング) |Microsoft Docs
+title: コンテンツクエリ (データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44b162c34f5f505462a713205d8434484473afa4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085650"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524058"
 ---
 # <a name="content-queries-data-mining"></a>コンテンツ クエリ (データ マイニング)
   コンテンツ クエリは、マイニング モデルの内部の統計および構造に関する情報を抽出するための手段です。 コンテンツ クエリを使用すると、ビューアーでは簡単に得られない詳細な情報がわかる場合があります。 また、コンテンツ クエリの結果を利用して、他の用途のためにプログラムで情報を抽出できます。  
@@ -24,7 +23,7 @@ ms.locfileid: "66085650"
   
  [基本的なコンテンツ クエリ](#bkmk_ContentQuery)  
   
--   [構造およびケース データに対するクエリ](#bkmk_Structure)  
+-   [構造およびケースデータに対するクエリ](#bkmk_Structure)  
   
 -   [モデル パターンに対するクエリ](#bkmk_Patterns)  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66085650"
   
  [クエリ結果の操作](#bkmk_Results)  
   
-##  <a name="bkmk_ContentQuery"></a> 基本的なコンテンツ クエリ  
+##  <a name="basic-content-queries"></a><a name="bkmk_ContentQuery"></a>基本的なコンテンツクエリ  
  コンテンツ クエリは、予測クエリ ビルダーを使用しても作成できます。SQL Server Management Studio で提供される DMX コンテンツ クエリ テンプレートを使用するか、DMX に直接クエリを書き込みます。 コンテンツ クエリは、予測クエリと異なり、外部データを結合する必要がないため、簡単に書き込むことができます。  
   
  ここでは、作成できるコンテンツ クエリの種類の概要について説明します。  
@@ -45,7 +44,7 @@ ms.locfileid: "66085650"
   
 -   モデルに対するクエリでは、パターン、属性一覧、数式などが返されます。  
   
-###  <a name="bkmk_Structure"></a> 構造およびケース データに対するクエリ  
+###  <a name="queries-on-structure-and-case-data"></a><a name="bkmk_Structure"></a> 構造およびケース データに対するクエリ  
  DMX では、マイニング構造およびモデルの構築に使用されるキャッシュ データに対するクエリをサポートしています。 既定では、このキャッシュは、マイニング構造が定義されると作成され、構造またはモデルが処理されると値が設定されます。  
   
 > [!WARNING]  
@@ -88,7 +87,7 @@ ms.locfileid: "66085650"
   
  このステートメントを使用すると、トレーニング済みのモデルから詳細なケース データを取得できます。 特定のノードを指定する必要があります。たとえば、クラスターのノード ID、デシジョン ツリーの特定の分岐などを認識している必要があります。また、このクエリを実行するには、モデルのドリルスルー権限を持っている必要があります。  
   
-###  <a name="bkmk_Patterns"></a> モデル パターン、統計、および属性に対するクエリ  
+###  <a name="queries-on-model-patterns-statistics-and-attributes"></a><a name="bkmk_Patterns"></a>モデルパターン、統計、および属性に対するクエリ  
  データ マイニング モデルのコンテンツは、多くの目的で役に立ちます。 モデル コンテンツのクエリを使用すると、以下の操作を実行できます。  
   
 -   独自の計算を行うために式または確率を抽出します。  
@@ -129,12 +128,12 @@ ms.locfileid: "66085650"
   
  PMML 形式でモデルを表す XML ドキュメントを取得します。 すべてのモデルの種類がサポートされているわけではありません。  
   
-##  <a name="bkmk_Examples"></a> 使用例  
+##  <a name="examples"></a><a name="bkmk_Examples"></a> 使用例  
  すべてのアルゴリズムに対して標準であるようなモデル コンテンツもありますが、一部のコンテンツは、そのモデルの構築に使用したアルゴリズムによってかなり異なります。 したがって、コンテンツ クエリを作成する際には、特定のモデルに関してどのような情報が最も有用であるかを把握しておく必要があります。  
   
  ここでは、アルゴリズムの選択がモデルに保存されている情報の種類にどのように影響するかを、例を使用して説明します。 マイニング モデル コンテンツ、および各種のモデルに特有のコンテンツの詳細については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
-###  <a name="bkmk_Assoc"></a> 例 1: アソシエーション モデルに対するコンテンツ クエリ  
+###  <a name="example-1-content-query-on-an-association-model"></a><a name="bkmk_Assoc"></a> 例 1: アソシエーション モデルに対するコンテンツ クエリ  
  `SELECT FROM <model>.CONTENT`ステートメントは、クエリの対象となるモデルの種類に応じてさまざまな種類の情報を返します。 アソシエーション モデルの場合、重要な情報は *ノード型*です。 ノードは、モデル コンテンツの情報のコンテナーのようなものです。 アソシエーション モデルでは、ルールを表すノードは NODE_TYPE の値が 8 で、アイテムセットを表すノードは NODE_TYPE の値が 7 です。  
   
  したがって、次のクエリでは、サポートで順位付けされた (既定の順序) 上位 10 個のアイテムセットが返されます。  
@@ -144,7 +143,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- 次のクエリはこの情報に対して構築されます。 クエリは 3 つの列を返します: ノード、完全なルール、およびアイテム セットの右側にある製品の ID のアイテム セットの一部として他の製品に関連する予測された製品は、します。  
+ 次のクエリはこの情報に対して構築されます。 このクエリでは、ノードの ID、完全なルール、およびアイテムセットの右辺の製品 (アイテムセットの一部として他の製品に関連付けられていることが予測された製品) の3つの列が返されます。  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -166,7 +165,7 @@ ORDER BY NODE_SUPPORT DESC
   
  例については、「 [結合モデルのクエリ例](association-model-query-examples.md)」を参照してください。  
   
-###  <a name="bkmk_DecTree"></a> 例 2: デシジョン ツリー モデルに対するコンテンツ クエリ  
+###  <a name="example-2-content-query-on-a-decision-trees-model"></a><a name="bkmk_DecTree"></a> 例 2: デシジョン ツリー モデルに対するコンテンツ クエリ  
  デシジョン ツリー モデルは、予測や分類のために使用できます。  この例では、結果を予測するためにモデルを使用していますが、結果の分類に使用できる要因またはルールを見つけることもできます。  
   
  デシジョン ツリー モデルでは、ノードはツリーとリーフ ノードの両方を表すために使用されます。 各ノードのキャプションに結果へのパスの説明が含まれています。 したがって、特定の結果のパスをトレースするには、そのパスを含むノードを識別して、そのノードの詳細を取得する必要があります。  
@@ -190,13 +189,13 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  例については、「 [デシジョン ツリー モデルのクエリ例](decision-trees-model-query-examples.md)」を参照してください。  
   
-##  <a name="bkmk_Results"></a> クエリ結果の操作  
+##  <a name="working-with-the-query-results"></a><a name="bkmk_Results"></a>クエリ結果の操作  
  例が示すように、多くの場合、コンテンツ クエリは表形式の行セットを返しますが、入れ子になった列からの情報も含まれます。 返された行セットはフラット化できますが、結果の操作が複雑になります。 特に、NODE_DISTRIBUTION ノードのコンテンツはネスト化されていますが、モデルに関して非常に興味深い情報を含みます。  
   
  階層的な行セットの操作方法の詳細については、MSDN で OLEDB の仕様を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [DMX 選択ステートメントについて](/sql/dmx/understanding-the-dmx-select-statement)   
- [データ マイニング クエリ](data-mining-queries.md)  
+## <a name="see-also"></a>参照  
+ [DMX Select ステートメントについて](/sql/dmx/understanding-the-dmx-select-statement)   
+ [データマイニングクエリ](data-mining-queries.md)  
   
   

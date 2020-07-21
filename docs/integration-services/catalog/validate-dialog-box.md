@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.ssms.isprojectvalidate.f1
 - sql13.ssis.ssms.ispackagevalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 999b409025cce7ec209f527841d8ecb9fc416af9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070509"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294870"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
 
@@ -35,7 +35,7 @@ ms.locfileid: "68070509"
   
 -   [[全般] ページのオプションの設定](#general)  
   
-##  <a name="open_dialog"></a> [検証] ダイアログ ボックスを開く  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> [検証] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -49,8 +49,8 @@ ms.locfileid: "68070509"
   
 5.  プロジェクトまたはパッケージを右クリックし、 **[検証]** をクリックします。  
   
-##  <a name="general"></a> [全般] ページのオプションの設定  
- **環境**  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> [全般] ページのオプションの設定  
+ **Environment**  
  プロジェクトまたはパッケージの検証に使用する環境を選択します。  
   
  **32 ビット ランタイム**  
@@ -74,7 +74,7 @@ ms.locfileid: "68070509"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **[名前]**  
+ **Name**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  

@@ -32,18 +32,18 @@ helpviewer_keywords:
 - dates [SQL Server], system date and time
 - time [SQL Server], system
 ms.assetid: 48a5b230-102e-4a89-bb2a-fcf0cac862bb
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d47b39d84350b6f2397a7f06d75c8539caa9864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c774816cfc09a5694cadc06d5ce4d5ce35c0c9f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910662"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000738"
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   として現在のデータベース システムのタイムスタンプを返す、 **datetime** 値。 データベースのタイム ゾーン オフセットは含まれません。 この値は、現在の UTC 時 (協定世界時) を表します。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから取得されます。  
   
@@ -63,12 +63,12 @@ GETUTCDATE()
 ## <a name="return-types"></a>戻り値の型  
  **datetime**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを参照できます GETUTCDATE を参照できる任意の場所、 **datetime** 式です。  
   
  GETUTCDATE は、非決定的関数です。 この関数を列内で参照するビューと式には、インデックスを付けることができません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在の日付と時刻を返す 6 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム関数を使用して、日付、時刻、またはその両方を取得しています。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
   
 ### <a name="a-getting-the-current-system-date-and-time"></a>A. 現在のシステム日付と時刻を取得する  

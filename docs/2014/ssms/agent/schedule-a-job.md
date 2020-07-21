@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abb84377c48778d0c7244c13620fe192b5421ad6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1077766d6853ed7c029b8eefa76515c89ad861fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995024"
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュールを設定する方法について説明します。  
   
--   **作業を開始する準備:**   
+-   **作業を開始する準備:** 、  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ジョブのスケジュールを設定する方法:**  
   
@@ -36,16 +35,16 @@ ms.locfileid: "62666766"
   
      [SQL Server 管理オブジェクト](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-and-attach-a-schedule-to-a-job"></a>スケジュールを作成してジョブにアタッチするには  
   
-1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、スケジュールを設定するジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "62666766"
   
 #### <a name="to-attach-a-schedule-to-a-job"></a>ジョブにスケジュールをアタッチするには  
   
-1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー**で、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、スケジュールを設定するジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62666766"
   
 7.  **[ジョブのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
-##  <a name="TSQL"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL の使用  
   
 #### <a name="to-schedule-a-job"></a>ジョブのスケジュールを設定するには  
   
@@ -91,7 +90,7 @@ ms.locfileid: "62666766"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
     -- creates a schedule named NightlyJobs.   
@@ -109,9 +108,7 @@ ms.locfileid: "62666766"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_schedule &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)と[sp_attach_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)します。  
+ 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql) 」と「 [transact-sql &#40;の sp_attach_schedule ](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)」を参照してください。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
- 使用して、 `JobSchedule` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。 詳細については、「[SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
-  
-  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+ `JobSchedule`Visual Basic、Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。 詳細については、「[SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

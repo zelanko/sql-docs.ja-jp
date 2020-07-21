@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5ede54aca3588a6fcd7cee8759112b606eac752
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754675"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934035"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベース ミラーリング セッションからミラーリング監視サーバーを削除する方法について説明します。 データベース ミラーリング セッション中のどの時点でも、データベース所有者は、データベース ミラーリング セッションのミラーリング監視サーバーを無効にできます。  
@@ -36,16 +35,16 @@ ms.locfileid: "62754675"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:** [ミラーリング監視サーバーを削除した後](#FollowUp)  
+-   **補足情報:**  [ミラーリング監視サーバーを削除した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-remove-the-witness"></a>ミラーリング監視サーバーを削除するには  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62754675"
     > [!NOTE]  
     >  自動フェールオーバーを伴う高い安全性モードから高パフォーマンス モードに切り替えると、 **[ミラーリング監視]** フィールドの内容は自動的に消去されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-remove-the-witness"></a>ミラーリング監視サーバーを削除するには  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62754675"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a>補足情報: ミラーリング監視サーバーを削除した後  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a>補足情報: ミラーリング監視サーバーを削除した後  
  ミラーリング監視を無効にすると、 [動作モード](database-mirroring-operating-modes.md)トランザクションの安全性の設定に応じて変更されます。  
   
 -   トランザクションの安全性の設定が FULL (既定値) の場合、セッションは自動フェールオーバーを伴わない高い安全性の同期モードで動作します。  
@@ -90,16 +89,16 @@ ms.locfileid: "62754675"
 > [!TIP]  
 >  データベースのトランザクションの安全性設定は、各パートナーについて [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) カタログ ビューの **mirroring_safety_level** 列と **mirroring_safety_level_desc** 列に記録されます。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [Windows 認証を使用してデータベースのミラーリング監視を追加する &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 -   [データベース ミラーリング監視サーバーを追加または置き換える方法 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
- [データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
- [Windows 認証を使用してデータベースのミラーリング監視を追加する &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
+ [ALTER DATABASE データベースミラーリング &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [データベースミラーリングセッションでのトランザクションの安全性の変更 Transact-sql&#41;の &#40;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
+ [Windows 認証 &#40;使用してデータベースミラーリング監視サーバーを追加する Transact-sql&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
  [データベース ミラーリング監視サーバー](database-mirroring-witness.md)  
   
   

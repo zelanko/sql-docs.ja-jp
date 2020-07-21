@@ -1,5 +1,5 @@
 ---
-title: テーブルとビュー (データ ソース ビュー ウィザード) を選択 (Analysis Services) |Microsoft Docs
+title: '[テーブルとビューの選択] (データソースビューウィザード) (Analysis Services) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,29 +11,28 @@ f1_keywords:
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b1b878935ffc0dee51c112581a130dde99043e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069250"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940813"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>[テーブルとビューの選択] (データ ソース ビュー ウィザード) (Analysis Services)
   **[テーブルとビューの選択]** ページを使用すると、データ ソース ビューに含めるテーブルまたはビューをデータ ソースから選択できます。  
   
-## <a name="options"></a>および  
- **使用可能なオブジェクト**  
+## <a name="options"></a>オプション  
+ **Available objects**  
  データ ソース スキーマのテーブルおよびビューをリストします。 複数のスキーマが一覧される場合、スキーマ名が各オブジェクトの名前のプレフィックスになります。 スキーマが 1 つしか表示されない場合、スキーマ名はオブジェクトの名前のプレフィックスにはなりません。  
   
  昇順または降順でリストを並べ替えるには、 **[名前]** または **[種類]** をクリックします。  
   
- **含まれるオブジェクト**  
+ **Included objects**  
  データ ソース ビューに含めるテーブルとビューを一覧表示します。  
   
  昇順または降順でリストを並べ替えるには、 **[名前]** または **[種類]** をクリックします。  
   
- **[フィルター]**  
+ **Assert**  
  **[使用できるオブジェクト]** にリストされるオブジェクトをフィルターします。 文字列を入力して **[フィルター]** ボタンをクリックすると、指定された文字列を含む名前のみが一覧表示されます。 正確な文字列を検索するには、文字列を二重引用符で囲みます。 大文字と小文字は区別されません。  
   
  次の表に一覧表示されているワイルドカード文字をフィルター文字列に含めることができます。  
@@ -45,14 +44,14 @@ ms.locfileid: "66069250"
 |**?**|1 つの文字|  
 |**"** *string* **"**|リテラル文字列。 このワイルドカード文字は、オブジェクト名内の任意の部分文字列に一致します。|  
   
- **システム オブジェクトを表示します。**  
+ **Show system objects**  
  **[使用できるオブジェクト]** にシステム オブジェクトを表示します。 このオプションは、データ ソース プロバイダーがシステム オブジェクトを公開する場合にのみ使用できます。 **[含まれているオブジェクト]** の一覧からシステム オブジェクトを削除すると、自動的にこのオプションが選択されます。  
   
- **関連テーブルを追加します。**  
+ **Add related tables**  
  **[含まれているオブジェクト]** の一覧に関連するすべてのテーブルを追加します。 このオプションではビューを追加することはできません。 ただし、パーティション テーブルは追加できます。 ウィザードの **[名前の一致]** ページで名前の一致条件を選択した場合、このオプションは選択された条件に従って、論理的な関連テーブルも含みます。 テーブルには、新しく追加された関連テーブルに関連している場合や、元のテーブルと同一の構造を持つ場合のテーブルも含まれます。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース ビュー ウィザードの F1 ヘルプ&#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
- [多次元モデルのデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [データソースビューウィザードの F1 ヘルプ &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [多次元モデル内のデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

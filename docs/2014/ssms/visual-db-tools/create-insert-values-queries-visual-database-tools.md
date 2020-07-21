@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 019c2fe96be00c6e86e0c94286770d30e7a54a9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b16937a6502d227b077a1db67179b778be9cbfa6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058156"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>値の挿入クエリの作成 (Visual Database Tools)
   値の挿入クエリを使用すると、現在のテーブルに新しい行を作成できます。 値の挿入クエリを作成するときは、次の項目を指定します。  
@@ -67,8 +66,8 @@ VALUES   ('BU9876', 'Creating Web Pages', 'business', '1389', '29.99')
  値の挿入クエリを実行しても、 [結果ペイン](results-pane-visual-database-tools.md)には結果が表示されません。 代わりに、変更された行数を示すメッセージが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [クエリの種類がサポートされている&#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools &#40;サポートされているクエリの種類&#41;](supported-query-types-visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

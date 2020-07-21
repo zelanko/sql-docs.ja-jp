@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35484da616b4a6fc06d9d112471f87051330f583
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195021"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001216"
 ---
 # <a name="page-setup-dialog-box"></a>[ページ設定] ダイアログ ボックス
   **[ページ設定]** ダイアログ ボックスでオプションを選択して、ページのデザインをカスタマイズできます。 インストールされている言語、および編集が有効になっている言語によっては、使用できないオプションもあります。  
   
-## <a name="paper"></a>[用紙]  
- **Size**  
+## <a name="paper"></a>論文  
+ **[サイズ]**  
  一覧からサイズを選択します。  
   
- **Source**  
+ **ソース**  
  使用する用紙を指定します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] により、選択したプリンターで使用できるソースの一覧が表示されます。  
   
 ## <a name="orientation"></a>方向  
@@ -46,7 +45,7 @@ ms.locfileid: "63195021"
  TOP  
  ページの上端とページの先頭行の上部との距離を設定します。  
   
- Bottom  
+ [下]  
  ページの下端とページの最終行の下部との距離を設定します。  
   
 ## <a name="other"></a>その他  

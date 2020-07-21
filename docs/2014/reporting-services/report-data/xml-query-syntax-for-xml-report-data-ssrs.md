@@ -15,15 +15,15 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5f8840e0204847d447ea794e94312221ec1cc72
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66106948"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "80380793"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML レポート データの XML クエリ構文 (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML `Query` または要素パスを指定する必要があります。 XML`Query`で始まる、 **\<クエリ >** タグし、名前空間と、データ ソースによって異なります XML 要素が含まれています。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML `Query` または要素パスを指定する必要があります。 Xml `Query`は、 ** \<クエリ>** のタグで始まり、データソースによって異なる名前空間と xml 要素が含まれています。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
   
  次のような種類の XML データについて、XML データ ソースを作成できます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66106948"
   
 |XML データ ソース|クエリの例|  
 |---------------------|-------------------|  
-|ListChildren メソッドからの web サービスの XML データ。|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|Web サービスの XML データ ( ListChildren メソッドから)|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
 |Web サービスの XML データ (SoapAction から)|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
 |XML ドキュメントまたは埋め込み XML データ (名前空間を使用)<br /><br /> Query 要素 (要素パスに名前空間を指定)|`<Query xmlns:es="https://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |埋め込み XML ドキュメント|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
@@ -87,10 +87,10 @@ ms.locfileid: "66106948"
   
 |XML Query 要素|データセットとして取得されるフィールド|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|A: 値 https://schemas.microsoft.com/.. します。<br /><br /> 値 b: https://schemas.microsoft.com/.. します。<br /><br /> 値の c: https://schemas.microsoft.com/.. します。|  
-|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<Query/>|値 A: `https://schemas.microsoft.com/..`。<br /><br /> 値 B: `https://schemas.microsoft.com/..`。<br /><br /> 値 C: `https://schemas.microsoft.com/.`..|  
+|\<xmldp: Query xmlns: xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns: ns = "https://schemas.microsoft.com/..."><br /><br /> \<xmldp: ElementPath>Root {}/Ns: Element2/Node\</xmldp: ElementPath><br /><br /> \</xmldp: クエリ>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
-#### <a name="xml-document-dpnamespacexml"></a>XML ドキュメント:DPNamespace.xml  
+#### <a name="xml-document-dpnamespacexml"></a>XML document: DPNamespace.xml  
  この XML をコピーして、レポート デザイナーからアクセスできる URL (http://localhost/DPNamespace.xml など) に保存すると、XML データ ソースとして使用できます。  
   
 ```  
@@ -109,7 +109,7 @@ ms.locfileid: "66106948"
 ```  
   
 ## <a name="see-also"></a>参照  
- [XML の接続の種類 &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
+ [XML 接続の種類 &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
  [Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
   

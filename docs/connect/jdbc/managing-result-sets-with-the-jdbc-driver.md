@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver を使用した結果セットの管理 |Microsoft Docs
+title: JDBC ドライバーによる結果セットの管理 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e2f6b7dac1be8309ff5ece21dbb863b410edbf61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956342"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69027909"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>JDBC ドライバーによる結果セットの管理
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67956342"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[カーソルの種類について](../../connect/jdbc/understanding-cursor-types.md)|[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] でサポートされるカーソルの種類について説明します。|  
 |[コンカレンシー制御について](../../connect/jdbc/understanding-concurrency-control.md)|JDBC ドライバーがコンカレンシー制御をサポートするしくみについて説明します。|  

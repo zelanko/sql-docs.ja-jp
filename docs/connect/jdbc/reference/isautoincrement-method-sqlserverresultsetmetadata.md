@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 028b8d61-9557-4c9f-b732-29e87a962de8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27238772e437bc6bd5f8b33bed7e89dd0c294a3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 314336220393eb05dab17164e33516c3740f24b7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67977825"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909818"
 ---
 # <a name="isautoincrement-method-sqlserverresultsetmetadata"></a>isAutoIncrement メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +45,8 @@ public boolean isAutoIncrement(int column)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この isAutoIncrement メソッドは、java. ResultSetMetaData インターフェイスの isAutoIncrement メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この isAutoIncrement メソッドは、java.sql.ResultSetMetaData インターフェイスの isAutoIncrement メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

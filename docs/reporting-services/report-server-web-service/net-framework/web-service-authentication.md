@@ -1,5 +1,6 @@
 ---
 title: Web サービス認証 | Microsoft Docs
+description: クライアントがレポート サーバーに SOAP 要求を送信する場合は、認証のクライアント部分を実装します。 Web サービスの認証を実装する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3ea255c03803f6191d3161d3ef2fa149ef157f56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 34873835231c122f3d086c3490be2bab7a684925
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63069921"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198534"
 ---
 # <a name="web-service-authentication"></a>Web サービス認証
-  Windows 認証または基本認証を使用して、レポート サーバー Web サービスへの呼び出しを認証できます。 レポート サーバーへの SOAP 要求を作成するクライアントは、サポートされる認証プロトコルのいずれかのクライアント部分を実装している必要があります。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を使っている場合は、マネージド コード HTTP クラスを使って認証を実装できます。 これらの API を使用すると、認証情報を SOAP 要求と一緒に容易に送信できます。  
+  Windows 認証または基本認証を使用して、レポート サーバー Web サービスへの呼び出しを認証できます。 レポート サーバーへの SOAP 要求を作成するクライアントは、サポートされる認証プロトコルのいずれかのクライアント部分を実装している必要があります。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を使っている場合は、マネージド コード HTTP クラスを使って認証を実装できます。 これらの API を使用すると、認証情報を SOAP 要求と一緒に容易に送信できます。  
   
  レポート サーバー Web サービスへの呼び出しを作成する前に適切な資格情報を持っていないと、呼び出しが失敗します。 実行時に、メソッドを呼び出す前の Web サービスを表すクライアント側オブジェクトの **Credentials** プロパティを設定することによって、資格情報を Web サービスに渡すことができます。  
   

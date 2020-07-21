@@ -1,5 +1,5 @@
 ---
-title: Prepared プロパティ (ADO) |Microsoft Docs
+title: 準備されたプロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,31 +13,31 @@ f1_keywords:
 helpviewer_keywords:
 - Prepared property [ADO]
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee7a94a06aa574c84c01cb8b9d05ebfcdf327d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 58cce35e57116618137f4ee776901dba2a44eff4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917596"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761960"
 ---
 # <a name="prepared-property-ado"></a>Prepared プロパティ (ADO)
-コンパイル済みのバージョンを保存するかどうかを示す、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)実行前にします。  
+コンパイルされたバージョンの[コマンド](../../../ado/reference/ado-api/command-object-ado.md)を実行前に保存するかどうかを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定または取得を**ブール**値に設定**True**コマンドを準備することを示します。  
+ **ブール**値を設定または返します。 **True**に設定されている場合は、コマンドの準備が必要であることを示します。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**準備**プロパティで指定されたクエリの準備済み (またはコンパイル済み) のバージョンを保存するプロバイダーが、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)前に、プロパティ、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの最初に実行します。 これは、コマンドの最初の実行を遅い可能性がありますが、プロバイダーはパフォーマンスを向上させると、その後の実行のコンパイル済みのバージョンのコマンドを使用して、プロバイダーがコマンドをコンパイルするとします。  
+## <a name="remarks"></a>解説  
+ **Prepared**プロパティを使用して、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの最初の実行前に、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティで指定されたクエリの準備済み (またはコンパイル済み) のバージョンをプロバイダーが保存するようにします。 これにより、コマンドの最初の実行が遅くなることがありますが、プロバイダーがコマンドをコンパイルすると、プロバイダーはその後の実行に対してコンパイルされたバージョンのコマンドを使用します。これにより、パフォーマンスが向上します。  
   
- プロパティが場合**False**、プロバイダーが実行、**コマンド**コンパイル済みのバージョンを作成せずに直接オブジェクト。  
+ プロパティが**False**の場合、プロバイダーはコンパイルされたバージョンを作成せずに**コマンド**オブジェクトを直接実行します。  
   
- このプロパティ設定されている場合に、エラーを返す可能性がありますが、プロバイダーがコマンドの準備をサポートしていない場合**True**します。 コマンドとセットを準備する要求を無視しますプロバイダーでエラーが返されない場合、**準備**プロパティを**False**します。  
+ プロバイダーがコマンドの準備をサポートしていない場合、このプロパティが**True**に設定されていると、エラーが返されることがあります。 プロバイダーがエラーを返さない場合は、単にコマンドを準備する要求を無視し、**準備**されたプロパティを**False**に設定します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Prepared プロパティの例 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Prepared プロパティの例 (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

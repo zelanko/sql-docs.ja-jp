@@ -8,28 +8,28 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d047bd8af1ed8a30daa9dc1d550029a7a62279ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc1b1a119fe1aef66165da05d9250a7c0f79b1e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749609"
 ---
-# <a name="catalogdeleteenvironmentvariable-ssisdb-database"></a>catalog.delete_environment_variable (SSISDB データベース)
+# <a name="catalogdelete_environment_variable-ssisdb-database"></a>catalog.delete_environment_variable (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの環境から環境変数を削除します。  
   
 ## <a name="syntax"></a>構文  
   
 ```sql  
-delete_environment_variable [ @folder_name = ] folder_name  
+catalog.delete_environment_variable [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
 ```  

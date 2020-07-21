@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d0a425bda3d32f19aca5be09dbb8ba4b7b6ac899
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b57f3479bc0c6c377fe4fff6458b7bc2d902b86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62911719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013645"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService メソッド (SqlService クラス)
   サービスを開始状態にする動作を試行します。  
@@ -37,7 +36,7 @@ object
   
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
@@ -48,7 +47,7 @@ object
  正常終了しました。 要求が受け入れられました。  
   
  1  
- サポートされていません。 要求はサポートされていません。  
+ サポート範囲外。 要求はサポートされていません。  
   
  2  
  アクセスが拒否されました。 ユーザーには適切なアクセス権がありませんでした。  
@@ -69,7 +68,7 @@ object
  サービス要求タイムアウト。 サービスは適切な時間内に開始要求に応答しませんでした。  
   
  8  
- 不明なエラー。 サービスの開始時に不明なエラーが発生しました。  
+ 不明なエラーです。 サービスの開始時に不明なエラーが発生しました。  
   
  9  
  パスが見つかりません。 サービス実行可能ファイルへのディレクトリ パスが見つかりませんでした。  
@@ -119,9 +118,9 @@ object
  24  
  サービスは既に一時停止しています。 サービスは現在システムで一時停止されています。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

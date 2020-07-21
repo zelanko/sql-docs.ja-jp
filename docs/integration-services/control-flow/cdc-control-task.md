@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f07faf757a8d2bf4b8f2f93042e0af196e6e6d50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1ef859193b0a2410b7057365c64506976d7ee8ab
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904185"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294260"
 ---
 # <a name="cdc-control-task"></a>CDC 制御タスク
 
@@ -33,7 +33,7 @@ ms.locfileid: "67904185"
   
  次の操作は、初期読み込みと変更処理との間の同期処理を行います。  
   
-|演算|[説明]|  
+|操作|説明|  
 |---------------|-----------------|  
 |ResetCdcState|この操作は、現在の CDC コンテキストに関連付けられた、永続的な CDC の状態をリセットするために使用されます。 この操作の実行後に、LSN-timestamp `sys.fn_cdc_get_max_lsn` テーブルの現在の最大 LSN が次の処理範囲の開始位置になります。 この操作には、ソース データベースへの接続が必要です。|  
 |MarkInitialLoadStart|この操作は初期読み込みパッケージの開始時に使用され、ソース データベースで現在の LSN を記録します。その後、初期読み込みパッケージがソース テーブルの読み取りを開始します。 この操作には、 `sys.fn_cdc_get_max_lsn`を呼び出すための、ソース データベースへの接続が必要です。<br /><br /> (Oracle ではなく) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC での作業時に MarkInitialLoadStart を選択した場合、接続マネージャーで指定されたユーザーは、db_owner か sysadmin である必要があります。|  
@@ -42,10 +42,10 @@ ms.locfileid: "67904185"
   
  処理範囲の管理には、次の操作を使用します。  
   
-|演算|[説明]|  
+|操作|説明|  
 |---------------|-----------------|  
 |GetProcessingRange|この操作は、CDC ソース データ フローを使用するデータ フローを呼び出す前に使用されます。 この操作は、呼び出し時に CDC ソース データ フローが読み取る LSN の範囲を設定します。 範囲は、データ フローの処理中に CDC ソースによって使用される SSIS パッケージ変数に格納されます。<br /><br /> 格納される状態の詳細については、「 [状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。|  
-|MarkProcessedRange|:この操作は、CDC 実行で完全に処理された最後の LSN を記録するために、各 CDC の実行後 (CDC データ フローが正常に完了した後) に実行されます。 GetProcessingRange を次に実行する際、この位置が次の処理範囲の開始位置になります。|  
+|MarkProcessedRange|この操作は、CDC 実行で完全に処理された最後の LSN を記録するために、各 CDC の実行後 (CDC データ フローが正常に完了した後) に実行されます。 GetProcessingRange を次に実行する際、この位置が次の処理範囲の開始位置になります。|  
   
 ## <a name="handling-cdc-state-persistency"></a>CDC 状態の永続性の処理  
  CDC 制御タスクは、アクティブ化のたびに永続的な状態を維持します。 CDC 状態に格納される情報を使用して CDC パッケージの処理範囲およびエラー条件を検出する処理範囲を決定し、管理します。 永続的な状態は文字列として格納されます。 詳細については、「 [状態変数の定義](../../integration-services/data-flow/define-a-state-variable.md)」を参照してください。  

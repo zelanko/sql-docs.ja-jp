@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6d94ffd0182bfad3ed95f52640a2aed01ceeaa54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d4fcf2cf0eb10bc7312923c887314b36e04b369d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118972"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682649"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -42,9 +42,9 @@ DECOMPRESS ( expression )
 ## <a name="return-types"></a>戻り値の型  
 データ型 **varbinary(max)** の値。 `DECOMPRESS` は ZIP アルゴリズムを使用し、入力引数の圧縮を解除します。 ユーザーは、必要な場合、結果をターゲットの型に明示的にキャストする必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-decompress-data-at-query-time"></a>A. クエリ時にデータの圧縮を解除する  
 この例では、圧縮されたテーブル データを返す方法を示します。  

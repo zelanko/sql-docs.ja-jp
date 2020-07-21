@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00659f76da827bf5e00df72d966b32ec56e1f7ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dbe9620620e8895fa831e269edcd2fba2f4421de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735717"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のデータベースから、別名データ型または共通言語ランタイム (CLR) ユーザー定義型を削除します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68072111"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]  
 ```  
   
@@ -52,7 +52,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
  *type_name*  
  削除する別名データ型またはユーザー定義型の名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次のいずれかに当てはまる場合には、DROP TYPE ステートメントは実行されません。  
   
 -   別名データ型またはユーザー定義型の列を含むテーブルがデータベースにある場合。 別名型またはユーザー定義型の列の情報は、[sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) カタログ ビューまたは [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) カタログ ビューをクエリすることによって取得できます。  
@@ -64,7 +64,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ## <a name="permissions"></a>アクセス許可  
  *type_name* に対する CONTROL 権限、または *schema_name* に対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`ssn` という名前の型が現在のデータベースに既に作成されていることを前提としています。  
   
 ```  

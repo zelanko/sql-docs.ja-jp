@@ -22,14 +22,14 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e1ede10be1fe3ce9e225502ca9fd1ceb6108d7ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 56dc5d83a23bfbf175c203edbdeb27d30760557b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070644"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71299026"
 ---
 # <a name="handling-events-programmatically"></a>プログラムによるイベントの処理
 

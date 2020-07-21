@@ -1,5 +1,6 @@
 ---
 title: バックアップ タイムライン | Microsoft Docs
+description: SQL Server では、[バックアップ タイムライン] ダイアログ ボックスを使用して、データベースを特定の時点に復元するためのバックアップを検索および指定することができます。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 30bf006998ac543b732b4aecac97280f07d36a99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0918928c8180bffc67476bbbe8f475f9f51a06a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728512"
 ---
 # <a name="backup-timeline"></a>バックアップ タイムライン
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[バックアップ タイムライン]** ダイアログ ボックスを使用して、特定の時点のデータベースを復元するためのバックアップを検索および指定します。 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスするには、 **[データベースの復元] ([全般] ページ)** ペイン上の **[タイムライン]** をクリックします。 このダイアログ ボックスで、データベースで実行される復元操作のタイムラインを表示できます。  
   
- データベース復旧アドバイザーによって、特定の時点に復元するために必要なバックアップだけが選択されます。 これらの選択されたバックアップは、復元操作用として推奨される復元プランを示しています。 選択されたバックアップのみを使用する必要があります。 データベースの復旧アドバイザーの詳細については、「[復元と復旧の概要&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」を参照してください。  
+ データベース復旧アドバイザーによって、特定の時点に復元するために必要なバックアップだけが選択されます。 これらの選択されたバックアップは、復元操作用として推奨される復元プランを示しています。 選択されたバックアップのみを使用する必要があります。 データベースの復旧アドバイザーの詳細については、「[復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」を参照してください。  
   
 ## <a name="restore-to"></a>[復元先]  
  既定では、 **[最後に作成されたバックアップ]** が選択されています。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] データベースを復元するための適切なバックアップを選択し、最後のバックアップの時点のデータベースを復元します。 **[特定の日付と時刻]** をクリックすると、手動で日時を設定できます (特定の時点を選択します)。  
   
  **[特定の日付と時刻]** では、選択した特定の日時で復元を停止できます。 タイムラインは、選択された日時の 24 時間の範囲で行われたバックアップ操作を表示します。  
   
- **日付**  
+ **Date**  
  日付を入力するか、ボックスの一覧から選択します。  
   
- **[時刻]**  
+ **Time**  
  復元を停止する特定の時点を指定する日付を入力または選択します。  
   
  **[タイムラインの間隔]**  

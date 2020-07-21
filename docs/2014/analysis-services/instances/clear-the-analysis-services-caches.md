@@ -1,5 +1,5 @@
 ---
-title: Analysis Services キャッシュのクリア |Microsoft Docs
+title: Analysis Services キャッシュをクリアする |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bf3dbf1658686738403bc9bfe4a5dd8941c75a7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080301"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544077"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Analysis Services キャッシュのクリア
   Analysis Services は、クエリのパフォーマンス向上のためにデータをキャッシュします。 このトピックでは、MDX クエリへの応答で作成されたキャッシュを、XMLA ClearCache コマンドを使用してクリアするための推奨事項について説明します。 ClearCache を実行した場合の効果は、テーブル モデルまたは多次元モデルのどちらを使用しているかによって異なります。  
@@ -46,13 +45,13 @@ ms.locfileid: "66080301"
   
  キャッシュをクリアするには、XMLA クエリの `ClearCache` ステートメントに、オブジェクトの識別子を指定する必要があります。 このトピックの最初のステップでは、オブジェクト識別子を取得する方法を説明します。  
   
-#### <a name="step-1-get-the-object-identifier"></a>手順 1:オブジェクト識別子を取得します。  
+#### <a name="step-1-get-the-object-identifier"></a>手順 1: オブジェクトの識別子を取得する  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でオブジェクトを右クリックし、 **[プロパティ]** を選択して、 **[プロパティ]** ペインの ID プロパティの値をコピーします。 この方法は、データベース、キューブ、ディメンション、またはテーブルに使用できます。  
   
 2.  メジャー グループの ID を取得するには、メジャー グループを右クリックし、 **[メジャー グループをスクリプト化]** を選択します。 **[作成]** または **[変更]** のいずれかを選択し、クエリをウィンドウに送信します。 メジャー グループの ID は、オブジェクト定義に表示されます。 オブジェクト定義の ID をコピーします。  
   
-#### <a name="step-2-run-the-query"></a>手順 2:クエリを実行します。  
+#### <a name="step-2-run-the-query"></a>手順 2: クエリを実行する  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でデータベースを右クリックし、 **[新しいクエリ]** をポイントして、 **[XMLA]** を選択します。  
   
@@ -87,8 +86,8 @@ ms.locfileid: "66080301"
     </return>  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [Analysis Services の管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)   
+## <a name="see-also"></a>参照  
+ [Analysis Services での管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)   
  [Analysis Services インスタンスの監視](monitor-an-analysis-services-instance.md)  
   
   

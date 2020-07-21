@@ -12,24 +12,24 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - ordinary arguments [ODBC]
 ms.assetid: a18cdae1-6b85-41cb-875c-b5a01ec90aeb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 997604b4376656d36d2bc4bc31f1959aa6c8a229
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 97362f93e91ccd8b592b4c05a0714b7602c1ba94
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987820"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282468"
 ---
 # <a name="ordinary-arguments"></a>通常の引数
-カタログ関数の文字列引数に通常の引数がある場合は、リテラル文字列として扱われます。 通常の引数は、文字列の検索パターンも値の一覧を受け入れます。 通常の引数の大文字と小文字が重要でと、文字列内の引用符文字が文字どおり表示。 SQL_ATTR_METADATA_ID ステートメントの属性が SQL_FALSE; に設定されている場合、これらの引数は通常の引数として扱われますとして扱われます識別子引数代わりにこの属性が SQL_TRUE に設定されている場合。  
+カタログ関数文字列引数が通常の引数の場合は、リテラル文字列として扱われます。 通常の引数は、文字列検索パターンも値のリストも受け入れません。 通常の引数の大文字と小文字が区別され、文字列内の引用符が文字どおりに使用されます。 SQL_ATTR_METADATA_ID statement 属性が SQL_FALSE に設定されている場合、これらの引数は通常の引数として扱われます。この属性が SQL_TRUE に設定されている場合は、代わりに識別子引数として扱われます。  
   
- SQL_ERROR と SQLSTATE HY009 場合、通常の引数が null ポインターに設定されているし、引数が必要な引数、関数を返します (null ポインターの無効な使用)。 通常の引数が null ポインターに設定されている、引数が必要な引数ではない場合は、ドライバーによって異なりますが、引数の動作。 必須の引数は、次の表に一覧表示されます。  
+ 通常の引数が null ポインターに設定され、引数が必須の引数である場合、関数は SQL_ERROR と SQLSTATE HY009 (null ポインターの無効な使用) を返します。 通常の引数が null ポインターに設定され、引数が必須の引数でない場合、引数の動作はドライバーに依存します。 次の表に、必要な引数を示します。  
   
 |関数|必須の引数|  
 |--------------|------------------------|  
 |**SQLColumnPrivileges**|*TableName*|  
-|**SQLForeignKeys**|*PKTableName*、 *FKTableName*|  
+|**SQLForeignKeys**|*Pktablename*、 *FKTableName*|  
 |**SQLPrimaryKeys**|*TableName*|  
 |**SQLSpecialColumns**|*TableName*|  
 |**SQLStatistics**|*TableName*|

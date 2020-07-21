@@ -1,5 +1,5 @@
 ---
-title: 'IRowsetFastLoad:: Commit (OLE DB) |Microsoft Docs'
+title: IRowsetFastLoad::Commit (OLE DB) | Microsoft Docs
 description: IRowsetFastLoad::Commit (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d76ad5dc881ab4f31808d738d9beacd85929d279
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994411"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "67994411"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  挿入される行のバッチの終わりをマークし、挿入された行を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のテーブルに書き込みます。 サンプルについては、「 [IRowsetFastLoad &#40;OLE DB&#41;を使用した一括データコピー](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 」および「 [IRowsetFastLoad と&#40;ISEQUENTIALSTREAM&#41;OLE DB を使用して SQL SERVER に BLOB データを送信する](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)」を参照してください。  
+  挿入される行のバッチの終わりをマークし、挿入された行を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のテーブルに書き込みます。 サンプルについては、「[IRowsetFastLoad を使用したデータの一括コピー (OLE DB)](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)」と「[IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,8 +51,8 @@ HRESULT Commit(
  E_UNEXPECTED  
  既に **IRowsetFastLoad::Commit** メソッドによって無効になっている一括コピー行セットに対して呼び出されました。  
   
-## <a name="remarks"></a>Remarks  
- SQL Server 一括コピー行セットの OLE DB ドライバーは、遅延更新モードの行セットとして動作します。 ユーザーが行セットを使用して行データを挿入すると、挿入された行は、**IRowsetUpdate** をサポートする行セットでの保留中の挿入と同様の形式で扱われます。  
+## <a name="remarks"></a>解説  
+ OLE DB Driver for SQL Server の一括コピー行セットは、遅延更新モードの行セットとして動作します。 ユーザーが行セットを使用して行データを挿入すると、挿入された行は、**IRowsetUpdate** をサポートする行セットでの保留中の挿入と同様の形式で扱われます。  
   
  コンシューマーは、**IRowsetUpdate::Update** メソッドを使用して保留中の行を SQL Server のインスタンスに送信するのと同様に、一括コピー行セットに対して **Commit** メソッドを呼び出して、挿入された行を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルに書き込む必要があります。  
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dca8a4f49a8c7ffbef251a90d72bdd13395185e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114602"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296292"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Access データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -54,7 +54,7 @@ Access ファイルのパスとファイル名を指定します。 たとえば
  **[参照]**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、データベース ファイルを検索します。  
   
- **User name**  
+ **ユーザー名**  
 ワークグループの情報ファイルがデータベースに関連付けられている場合は、有効なユーザー名を指定します。  
   
  **パスワード**  
@@ -62,27 +62,27 @@ Access ファイルのパスとファイル名を指定します。 たとえば
  
 データベースがすべてのユーザーに対して 1 つのパスワードで保護されている場合は、「[データベース ファイルはパスワードで保護されているか](#database_password)」を参照してください。
   
- **詳細設定**  
+ **詳細**  
 **[データ リンク プロパティ]** ダイアログ ボックスで、データベースのパスワードや既定以外のワークグループ情報ファイルなどの詳細なオプションを指定します。  
 
 ## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>データ ソースのリストに Access が表示されない
 データ ソースのリストに Access が表示されない場合は、64 ビットのウィザードを実行していないか確認してください。 Excel と Access のプロバイダーは、通常 32 ビットで、64 ビットのウィザードでは表示されません。 代わりに 32 ビットのウィザードを実行します。
 
 > [!NOTE]
-> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールできます。
+> 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
 
-## <a name="officeDownloads"></a>Access に接続するために必要なファイルを取得する  
-Access と Excel を含む Microsoft Office データ ソース用の接続コンポーネントがまだインストールされていない場合は、必要に応じてダウンロードします。 Access と Excel の両方のファイルの最新バージョンの接続コンポーネントを [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)でダウンロードします。
+## <a name="get-the-files-you-need-to-connect-to-access"></a><a name="officeDownloads"></a>Access に接続するために必要なファイルを取得する  
+Access と Excel を含む Microsoft Office データ ソース用の接続コンポーネントがまだインストールされていない場合は、必要に応じてダウンロードします。 [Microsoft Access データベース エンジン 2016 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=54920)で、Access と Excel の両方のファイルの最新バージョンの接続コンポーネントをダウンロードします。
   
 以前のバージョンの Access で作成したファイルは、最新バージョンのコンポーネントで開くことができます。
 
 コンピューターに 32 ビット バージョンの Office が存在する場合は、32 ビット バージョンのコンポーネントをインストールする必要があるほか、32 ビット モードでパッケージが実行されるようにする必要があります。
 
-Office 365 サブスクリプションがある場合は、Microsoft Access 2016 ランタイムではなく、必ず Access データベース エンジン 2016 再頒布可能パッケージをダウンロードしてください。 インストーラーを実行するときに、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示すエラー メッセージが表示される場合があります。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例:
+Office 365 サブスクリプションがある場合は、Microsoft Access 2016 ランタイムではなく、必ず Access データベース エンジン 2016 再頒布可能パッケージをダウンロードしてください。 インストーラーを実行するときに、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示すエラー メッセージが表示される場合があります。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 次に例を示します。
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="database_password"></a> データベース ファイルはパスワードで保護されているか
+## <a name="is-the-database-file-password-protected"></a><a name="database_password"></a> データベース ファイルはパスワードで保護されているか
 Access データベースがパスワードで保護されているものの、ワークグループの情報ファイルを使用していない場合があります。 すべてのユーザーが同じパスワードを指定する必要がありますが、ユーザー名を入力する必要はありません。 データベースのパスワードを提供するには、次の手順を実行します。
 
 1.  **[データ ソースの選択]** または **[変換先の選択]** ページで、 **[詳細設定]** をクリックして、 **[データ リンク プロパティ]** ダイアログ ボックスを開きます。  

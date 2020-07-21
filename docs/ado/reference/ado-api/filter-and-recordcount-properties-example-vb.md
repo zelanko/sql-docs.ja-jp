@@ -13,17 +13,17 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8eeb68293e7c800fda4c4dd395f840cfeeb2d572
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918639"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756767"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter および RecordCount プロパティの例 (VB)
-この例のオープン、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)で発行元のテーブルで、 ***Pubs***データベース。 次を使用して、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを特定の国/地域のパブリッシャーに対して表示されるレコードの数を制限します。 **RecordCount**プロパティを使用してフィルター処理されたとフィルター処理されていないレコード セットの間の差分を表示します。  
+次の例では、 ***Pubs***データベースの Publishers テーブルで[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開きます。 次に、 [Filter](../../../ado/reference/ado-api/filter-property.md)プロパティを使用して、表示されるレコードの数を特定の国/地域の出版社に限定します。 **RecordCount**プロパティは、フィルター処理されたレコードセットとフィルター処理されていないレコードセットの違いを示すために使用されます。  
   
 ```  
 'BeginFilterVB  
@@ -108,13 +108,13 @@ End Sub
 ```  
   
 > [!NOTE]
->  選択するデータがわかっている場合に、開く方が効率的な**レコード セット**SQL ステートメントを使用します。 この例は、1 つだけを作成する方法を示しています。 **Recordset**し、特定の国からのレコードを取得します。  
+>  選択するデータがわかっている場合は、通常、SQL ステートメントを使用して**レコードセット**を開く方が効率的です。 この例では、1つの**レコードセット**だけを作成し、特定の国からレコードを取得する方法を示します。  
   
 ```  
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [プロパティをフィルター処理します。](../../../ado/reference/ado-api/filter-property.md)   
+## <a name="see-also"></a>参照  
+ [Filter プロパティ](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

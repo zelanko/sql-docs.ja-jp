@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ecbaa54a723fae6a3c5fd11363bf42f1f2a57da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 18a19848db8050cfbcdf5889c545a4e0666eb593
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766828"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422649"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>プログラムによるパッケージの実行と管理
   開発環境以外で [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理および実行する必要がある場合は、プログラムでパッケージを操作できます。 その場合、次に示すいくつかの方法があります。  
@@ -28,14 +27,14 @@ ms.locfileid: "62766828"
   
  数行のコードを記述するだけで、クライアント アプリケーションから既存のパッケージを読み込んで実行することができます。  
   
- ここでは、プログラムで既存のパッケージを実行する方法、および他のアプリケーションからデータ フローの出力にアクセスする方法について説明します。 詳細なプログラミング オプションとして、「[プログラムによるパッケージの作成](../building-packages-programmatically/building-packages-programmatically.md)」トピックの説明に従い、1 行ずつプログラムを指定して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成できます。  
+ ここでは、プログラムで既存のパッケージを実行する方法、および他のアプリケーションからデータ フローの出力にアクセスする方法について説明します。 詳細なプログラミング オプションとして、「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]プログラムによるパッケージの作成[」トピックの説明に従い、1 行ずつプログラムを指定して ](../building-packages-programmatically/building-packages-programmatically.md) パッケージを作成できます。  
   
  また、保存されているパッケージ、実行中のパッケージ、およびパッケージ ロールを管理するためにプログラムによって実行できる他の管理タスクについても説明します。  
   
 ## <a name="running-packages-on-the-integration-services-server"></a>Integration Services サーバー上のパッケージの実行  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにパッケージを配置するときに、<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間を使用してパッケージをプログラムで実行できます。 Microsoft.SqlServer.Management.IntegrationServices アセンブリは、.NET Framework 3.5 でコンパイルされます。 .NET Framework 4.0 アプリケーションを構築する場合は、プロジェクト ファイルに直接アセンブリ参照を追加する必要がある場合があります。  
   
- 名前空間を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置および管理することもできます。 名前空間とコード スニペットの概要については、blogs.msdn.com のブログ エントリ「[SSIS カタログ マネージド オブジェクト モデルの概要](https://go.microsoft.com/fwlink/?LinkId=253122)」を参照してください。  
+ 名前空間を使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置および管理することもできます。 名前空間とコード スニペットの概要については、blogs.msdn.com のブログ エントリ「[SSIS カタログ マネージド オブジェクト モデルの概要](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ローカル実行とリモート実行の相違点について](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -76,9 +75,9 @@ ms.locfileid: "62766828"
  [プログラムによるパッケージの作成](../building-packages-programmatically/building-packages-programmatically.md)  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをプログラムで作成、構成、および保存する方法について説明します。  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

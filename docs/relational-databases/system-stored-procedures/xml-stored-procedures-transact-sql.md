@@ -1,5 +1,5 @@
 ---
-title: XML ストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
+title: XML ストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 66f944e1be0edec50492f0eb732bdd03575891f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47634ca0584dce437802977263a3a098ba3e9b8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783625"
 ---
-# <a name="xml-stored-procedures-transact-sql"></a>XML ストアド プロシージャ (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="xml-stored-procedures-transact-sql"></a>XML ストアドプロシージャ (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステム ストアド、XML テキストの管理に使用されるプロシージャです。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、XML テキストの管理に使用される次のシステムストアドプロシージャがサポートされています。  
   
 |||  
 |-|-|  

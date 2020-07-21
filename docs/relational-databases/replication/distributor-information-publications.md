@@ -16,16 +16,16 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653552"
 ---
 # <a name="distributor-information-publications"></a>ディストリビューター情報、パブリケーション
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[パブリケーション]** タブを使用すると、左ペインで選択したディストリビューターにおけるすべてのパブリケーションに関する要約情報を取得できます。  
   
 ディストリビューターによりサポートされるパブリケーションについて表示される情報には、パブリッシャーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを含む列などがあります。 それ以外は、レプリケーション モニターのパブリッシャー ビューに表示されるものと同じパブリケーション情報です。 **[パブリケーション]** タブ内の列の詳細については、「 [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md)」を参照してください。  
@@ -52,16 +52,16 @@ ms.locfileid: "68768591"
  この後のセクションでは、このタブで表示されるディストリビューター エージェントおよびマージ エージェントのデータについて説明します。  
   
 ### <a name="distributor-agent"></a>[ディストリビューター エージェント]  
- **ステータス**  
+ **状態**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   Error    
+-   エラー    
 -   [再試行]    
 -   実行中    
 -   停止中   
 -   [一度も開始していない]  
   
- **パブリッシャー**  
+ **発行元**  
  パブリッシャーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスです。  
   
  **パブリケーション**  
@@ -70,7 +70,7 @@ ms.locfileid: "68768591"
  **サブスクリプション**  
  [*SubscriberName*].[*Database*] という形式のサブスクリプションの名前です。  
   
- **型**  
+ **Type**  
  レプリケーションの種類 (プッシュ、プル、または匿名) です。  
   
  **[前回の開始時刻]**  
@@ -85,7 +85,7 @@ ms.locfileid: "68768591"
  **[配信率]**  
  エージェントが最後に実行されたときにディストリビューション データベースで初期化コマンドがコミットされた頻度 (1 秒あたりのコマンド数) です。  
   
- **[待機時間]**  
+ **待機時間**  
  パブリケーション データベースで最新の変更がコミットされてから、ディストリビューション データベースで対応するコマンドがコミットされるまでに経過した時間 (秒単位) です。  
   
  **[#Trans]**  
@@ -94,14 +94,14 @@ ms.locfileid: "68768591"
  **[#Cmds]**  
  エージェントが最後に実行されたときにディストリビューション データベースでコミットされたコマンドの数です。 更新などのデータ変更がコマンドに相当します。  
   
- **[コマンド数の平均]**  
+ **[Avg. #Cmds]**  
  エージェントが最後に実行されたときの 1 トランザクションあたりの平均コマンド数です。  
   
 ### <a name="merge-agent"></a>[マージ エージェント]  
- **ステータス**  
+ **状態**  
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   Error  
+-   エラー  
   
 -   [再試行]  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68768591"
   
 -   [一度も開始していない]  
   
- **パブリッシャー**  
+ **発行元**  
  パブリッシャーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスです。  
   
  **パブリケーション**  
@@ -120,7 +120,7 @@ ms.locfileid: "68768591"
  **サブスクリプション**  
  [*SubscriberName*].[*Database*] という形式のサブスクリプションの名前です。  
   
- **型**  
+ **Type**  
  レプリケーションの種類 (プッシュ、プル、または匿名) です。  
   
  **[前回の開始時刻]**  

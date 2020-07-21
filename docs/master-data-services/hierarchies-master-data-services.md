@@ -1,5 +1,6 @@
 ---
-title: 階層 (Master Data Services) | Microsoft Docs
+title: 階層
+description: 階層は、類似したメンバーをグループ化し、マスターデータサービスでレポートと分析のためにメンバーを統合/要約するために使用できるツリー構造です。
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec9d1ce1e665abf0ce8f61218051e41e795b6441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5990a9f60700f034c372bf74382908b261a43608
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812731"
 ---
 # <a name="hierarchies-master-data-services"></a>階層 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の階層とは、次の処理に使用できるツリー構造です。  
   

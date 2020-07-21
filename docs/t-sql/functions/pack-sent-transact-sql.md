@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e3c4519771cbb91a33b9a7f802c5ad3689d9a24b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 022186462e8dcacf73322506b098f22809c9faba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914418"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892153"
 ---
-# <a name="x40x40packsent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="x40x40pack_sent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動してからネットワークに書き込まれた出力パケット数を返します。  
   
@@ -43,12 +43,12 @@ ms.locfileid: "67914418"
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 送信または受信されると、パケットをなどの統計情報の実行 **sp_monitor** です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、`@@PACK_SENT` の使用方法を示しています。  
   
 ```sql

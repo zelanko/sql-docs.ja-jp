@@ -1,10 +1,9 @@
 ---
-title: クエリのプロパティ (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: クエリのプロパティ
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5365ffd384ae7feeee35924388ad0f89b03d629
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0be86ddee956542e2637547acc989cf35407f2dd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266290"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255328"
 ---
 # <a name="query-properties-visual-database-tools"></a>クエリのプロパティ (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,10 +32,10 @@ ms.locfileid: "68266290"
 **[IDENTITY] カテゴリ**  
 展開して **[オブジェクト名]** プロパティを表示します。  
   
-**[名前]**  
+**Name**  
 現在のクエリの名前を表示します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では変更できません。  
   
-**Database Name**  
+**データベース名**  
 選択したテーブルのデータ ソースの名前が表示されます。  
   
 **[サーバー名]**  
@@ -43,7 +44,7 @@ ms.locfileid: "68266290"
 **[クエリ デザイナー] カテゴリ**  
 展開すると、その他のプロパティが表示されます。  
   
-**[ターゲット テーブル]**  
+**ターゲット テーブル**  
 データを挿入するテーブルの名前を指定します。 この一覧は、INSERT クエリまたは MAKE TABLE クエリを作成する場合に表示されます。 INSERT クエリの場合は、一覧でテーブル名を選択します。  
   
 MAKE TABLE クエリの場合は、新しいテーブルの名前を入力します。 テーブルを別のデータ ソースに作成する場合は、データ ソースの名前、所有者 (必要な場合)、テーブルの名前を含めた、完全修飾テーブル名を指定します。  
@@ -69,7 +70,7 @@ SQL ステートメントの説明を表示します。 説明全体を表示し
 **[Top の指定] カテゴリ**  
 展開すると、 **[Top]** 、 **[パーセント]** 、 **[式]** 、および **[With Ties]** の各プロパティが表示されます。  
   
-**[[(Top)]]**  
+**[(Top)]**  
 クエリに TOP 句が含まれるように指定します。この場合、最初の *n* 行または最初の *n* % の行だけが結果セットに返されます。 既定では、クエリは最初の 10 行を結果セットに返します。  
   
 このボックスは、返される行数を変更するか、異なるパーセントを指定する場合に使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降だけに適用されます。  

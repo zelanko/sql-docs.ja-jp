@@ -13,15 +13,15 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfbe6343432453b26b3283959cf8dd15bfa7cf81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3f7ad93673d874c6627d495c23a89218fb7d08c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048573"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640375"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **MultiPolygon** インスタンスは、0 個以上の **Polygon** インスタンスのコレクションです。  
   
 ## <a name="polygon-instances"></a>Polygon インスタンス  
@@ -65,8 +65,6 @@ MultiPolygon の 2 番目のインスタンスは LineString インスタンス�
   
 2.  **MultiPolygon** インスタンスを構成する **Polygon** インスタンスは重複しません。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 次に、2 つの有効な **MultiPolygon** インスタンスと 1 つの無効な **MultiPolygon** インスタンスの例を示します。  
   
 ```sql  
@@ -78,8 +76,8 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 `@g2` は、2 つの **Polygon** インスタンスが 1 つの接点のみで接しているため有効です。 `@g3` は、2 つの **Polygon** インスタンスの内部が互いに重なっているため無効です。  
   
-## <a name="examples"></a>使用例  
-### <a name="example-a"></a>例 A。
+## <a name="examples"></a>例  
+### <a name="example-a"></a>例 A.
 次の例では、 `geometry``MultiPolygon` インスタンスを作成し、2 つ目の構成要素の Well-Known Text (WKT) を返します。  
   
 ```sql  

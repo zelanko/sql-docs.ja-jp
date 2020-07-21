@@ -1,5 +1,5 @@
 ---
-title: データ コレクター関数 (TRANSACT-SQL) |Microsoft Docs
+title: データコレクター関数 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6098b0a94947ddca1c35f91ed02469c7d23d3be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c28c06896deb30c290973663e53a2e5215cb4fd3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042895"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898489"
 ---
-# <a name="data-collector-functions--transact-sql"></a>データ コレクター関数 (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="data-collector-functions--transact-sql"></a>データコレクター関数 (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データ コレクターには、データ コレクションやデータ コレクターの統計情報を取得したり、データを取得したりするための関数が使用されています。  
   
@@ -34,9 +34,9 @@ ms.locfileid: "68042895"
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)||  
   
 ## <a name="see-also"></a>関連項目  
- [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
- [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [データ コレクターのビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [管理データ ウェアハウスのストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)  
+ [データコレクション](../../relational-databases/data-collection/data-collection.md)   
+ [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [データコレクタービュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [管理データ ウェアハウスのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)  
   
   

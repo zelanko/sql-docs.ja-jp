@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931973"
 ---
 # <a name="upgrade-database-engine"></a>データベース エンジンのアップグレード
   ここでは、アップグレード プロセスの準備および理解に必要な情報を提供します。内容は以下のとおりです。  
@@ -43,10 +42,10 @@ ms.locfileid: "62774980"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のいずれかのエディションから別のエディションへアップグレードする前に、現在使用している機能がアップグレード先のエディションでサポートされているかどうかを確認します。  
   
 > [!NOTE]  
->  アップグレードすると[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の以前のバージョンから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition、Enterprise Edition を選択します。コア ベース ライセンスと Enterprise Edition。 これらの Enterprise エディションは、ライセンス モードのみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
+>  以前のバージョンの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise Edition から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードする場合は、"Enterprise Edition: コアベースのライセンス" または "Enterprise Edition" を選択してください。 これらの Enterprise エディションは、ライセンス モードのみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
 ## <a name="pre-upgrade-checklist"></a>アップグレード前のチェック リスト  
- 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアップグレードは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムでサポートされています。 また、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンのデータベースを移行することもできます。 移行は、同じコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で行うことも、別のコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから行うこともできます。 移行オプションには、データベース コピー ウィザードの使用、バックアップ機能と復元機能、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インポート/エクスポート ウィザードの使用、一括エクスポート/一括インポート方式があります。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアップグレードは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムでサポートされています。 また、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンのデータベースを移行することもできます。 移行は、同じコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で行うことも、別のコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから行うこともできます。 移行オプションには、データベース コピー ウィザードの使用、バックアップ機能と復元機能、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インポート/エクスポート ウィザードの使用、一括エクスポート/一括インポート方式があります。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードする前に、次のトピックを確認してください。  
   
@@ -68,9 +67,9 @@ ms.locfileid: "62774980"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップグレードする前に、以下の問題点を確認して変更を行います。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが MSX/TSX リレーションシップに参加している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをアップグレードする場合は、マスター サーバーをアップグレードする前に、対象サーバーをアップグレードします。 ターゲット サーバーより前にマスター サーバーをアップグレードすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマスター インスタンスに接続できなくなります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが MSX/TSX リレーションシップに参加している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをアップグレードする場合は、マスター サーバーをアップグレードする前に、ターゲット サーバーをアップグレードします。 ターゲット サーバーより前にマスター サーバーをアップグレードすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマスター インスタンスに接続できなくなります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 64 ビット版から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の 64 ビット版にアップグレードする場合は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をアップグレードしてから [!INCLUDE[ssDE](../../includes/ssde-md.md)] をアップグレードする必要があります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 64 ビット版から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の 64 ビット版にアップグレードする場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をアップグレードしてから [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードする必要があります。  
   
 -   アップグレード対象のインスタンスからすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ファイルをバックアップして、必要な場合はこれらのファイルを復元できるようにします。  
   
@@ -97,12 +96,12 @@ ms.locfileid: "62774980"
 >  SQL Server 2014 セットアップ プログラムの実行中に、アップグレード前チェックの実行の一部として、SQL Server インスタンスが停止し、再起動します。  
   
 > [!CAUTION]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードすると、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは上書きされて、コンピューター上に存在しなくなります。 アップグレードする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースおよび以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関連するその他のオブジェクトをバックアップしてください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップグレードすると、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは上書きされて、コンピューター上に存在しなくなります。 アップグレードする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースおよび以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関連するその他のオブジェクトをバックアップしてください。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] をアップグレードするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを使用します。  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>アップグレード後のデータベース互換性レベル  
- 互換性レベル、 `tempdb`、 `model`、`msdb`と**リソース**データベースはアップグレード後に 120 に設定されます。 `master` システム データベースの互換性レベルは、アップグレード前と同じです。  
+ `tempdb`、 `model` 、 `msdb` および**リソース**データベースの互換性レベルは、アップグレード後に120に設定されます。 `master` システム データベースの互換性レベルは、アップグレード前と同じです。  
   
  アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレード前の互換性レベルが 90 の場合、アップグレードされたデータベースの互換性レベルは 100 に設定されます。これは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でサポートされている下限の互換性レベルです。  
   
@@ -134,7 +133,7 @@ ms.locfileid: "62774980"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パーティション テーブルとインデックスでのクエリの処理方法が異なります。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で生成されたプランに USE PLAN ヒントを使用する、パーティション分割されたオブジェクトのクエリには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で使用できないプランが含まれる場合があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードした後は、次の手順を実行することをお勧めします。  
   
-     **USE PLAN ヒントをクエリで直接指定した場合。**  
+     **USE PLAN ヒントがクエリ内で直接指定されている場合 :**  
   
     1.  USE PLAN ヒントをクエリから削除します。  
   
@@ -142,7 +141,7 @@ ms.locfileid: "62774980"
   
     3.  オプティマイザーによって適切なプランが選択されない場合は、クエリをチューニングし、USE PLAN ヒントを必要なクエリ プランと共に指定することを検討します。  
   
-     **USE PLAN ヒントをプラン ガイドで指定した場合。**  
+     **USE PLAN ヒントがプラン ガイドで指定されている場合 :**  
   
     1.  sys.fn_validate_plan_guide 関数を使用して、プラン ガイドの有効性を確認します。 また、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で、Plan Guide Unsuccessful イベントを使用して無効なプラン ガイドを確認することもできます。  
   
@@ -164,7 +163,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
   
 ## <a name="see-also"></a>参照  
  [サポートされているバージョンとエディションのアップグレード](supported-version-and-edition-upgrades.md)   
- [複数のバージョンおよび SQL Server のインスタンスを使用します。](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ [SQL Server の複数のバージョンおよびインスタンスの操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [旧バージョンとの互換性](../../getting-started/backward-compatibility.md)   
  [レプリケートされたデータベースのアップグレード](upgrade-replicated-databases.md)  
   

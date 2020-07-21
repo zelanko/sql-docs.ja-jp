@@ -1,7 +1,9 @@
 ---
-title: SQL Server 2016 におけるデータベース エンジン機能の重大な変更 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/27/2016
+title: データベース エンジン:重大な変更 | Microsoft Docs
+titleSuffix: SQL Server 2016
+description: アップグレードすると以前のバージョンの機能を使用できなくなる可能性がある、SQL Server 2016 (13. x) 以前のデータベース エンジンの変更について説明します。
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,19 +15,20 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 875e78cee077ec902dc1f845a330148e93f9edb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c6dad3c9ec55f9e895cc9f7ed430ed5816a73a8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751264"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 におけるデータベース エンジン機能の重大な変更
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] および以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に関する重要な変更について説明します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするときに発生することがあります。  
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
+
+  このトピックでは、[!INCLUDE[sssql15-md](../includes/sssql15-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] および以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に関する重要な変更について説明します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするときに発生することがあります。  
   
-##  <a name="SQL15"></a> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] における重大な変更  
+##  <a name="breaking-changes-in-sssql15"></a><a name="SQL15"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] における重大な変更  
   
 -   `sys.dm_io_virtual_file_stats` の *sample_ms* 列が **int** データ型から **bigint** データ型に拡張されました。  
   
@@ -35,7 +38,7 @@ ms.locfileid: "68013341"
 
 -   データベース互換性レベル 130 では、特定の数値データ型と datetime データ型の間で暗黙的な変換を実行する操作の精度が向上し、変換後の値が異なる可能性があります。 これには、`DATEDIFF` や `ROUND` などの計算が必要な関数の使用が含まれます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/help/4010261)をご覧ください。
 
-## <a name="previous-versions"></a> 以前のバージョン  
+## <a name="previous-versions"></a><a name="previous-versions"></a> 以前のバージョン  
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] およびそれより前の一部のバージョンでの重大な変更については、「[SQL Server 2014 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)」をご覧ください。
 

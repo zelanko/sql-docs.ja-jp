@@ -22,11 +22,11 @@
       href: modified-features-contained-database.md
     - name: 包含データベースの照合順序
       href: contained-database-collations.md
-    - name: Security Best Practices with Contained Databases
+    - name: 包含データベースでのセキュリティのベスト プラクティス
       href: security-best-practices-with-contained-databases.md
     - name: Migrate to a Partially Contained Database
       href: migrate-to-a-partially-contained-database.md
-- name: Windows Azure 内の SQL Server データ ファイル
+- name: Azure 内の SQL Server データ ファイル
   href: sql-server-data-files-in-microsoft-azure.md
 - name: データベース ファイルとファイル グループ
   href: database-files-and-filegroups.md

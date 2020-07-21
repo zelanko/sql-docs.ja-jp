@@ -1,5 +1,5 @@
 ---
-title: SQLServerConnection (ステートメント) メソッド () |Microsoft Docs
+title: prepareStatement メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 744e76a5a41305df909ef29df6c1a1719751064e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976095"
 ---
 # <a name="preparestatement-method-sqlserverconnection"></a>prepareStatement メソッド (SQLServerConnection)
@@ -29,7 +29,7 @@ ms.locfileid: "67976095"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[prepareStatement (java.lang.String)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string.md)|パラメーター化された SQL ステートメントをデータベースに送信するための [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトを作成します。|  
 |[prepareStatement (java.lang.String, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int.md)|パラメーター化された SQL ステートメントをデータベースに送信するための S[QLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトを作成します。自動生成キーを取得する機能を備えています。|  

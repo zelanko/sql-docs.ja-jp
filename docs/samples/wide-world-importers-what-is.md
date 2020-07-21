@@ -1,5 +1,6 @@
 ---
 title: Wide World のインポーター-SQL のサンプルデータベース |Microsoft Docs
+description: WideWorldImporters サンプルデータベースが架空の WideWorldImporters 会社のワークフローをサポートする方法について説明します。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 872892d307883bb7df31b08de701b2030d9aeb1f
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: adc2e7d74f8479384bd9f34b5442e796e4b74d66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718547"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL 用の大規模なインポーターのサンプルデータベース
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 これは、架空の会社全体のインポーターと、SQL Server および Azure SQL Database 用の WideWorldImporters サンプルデータベースで対処されているワークフローの概要です。  
 
 Wide World のインポーター (WWI) は、サンフランシスコベイ領域からの卸売分野商品インポーターおよびディストリビューターです。
@@ -31,7 +32,7 @@ WWI は、分野、おもちゃの製造元、その他の分野卸売などの�
 ## <a name="workflow-for-warehouse-stock-items"></a>倉庫の在庫品目のワークフロー
 
 項目の在庫と分散の一般的なフローは次のとおりです。
-- WWI は発注書を作成し、仕入先に送信します。
+- WWI は注文書を作成し、仕入先に注文を送信します。
 - サプライヤーは、項目を送信し、WWI を受け取り、倉庫で在庫します。
 - 顧客が WWI から品目を注文する
 - WWI は倉庫の在庫品目に顧客の注文を入力します。在庫が十分でない場合は、サプライヤーから追加の在庫を注文します。
@@ -60,8 +61,8 @@ SQL Server Analysis Services は、ディメンションデータモデルのデ
 
 この会社は、11月1日に開始する財務年度を操作します。
 
-## <a name="terms-of-use"></a>利用規約
+## <a name="terms-of-use"></a>使用条件
 
-サンプルデータベースとサンプルコードのライセンスについては、「 [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt) 」を参照してください。
+サンプルデータベースとサンプルコードのライセンスについては、次を参照してください: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 サンプルデータベースには、data.gov および自然 EarthData から読み込まれたパブリックデータが含まれています。 使用条件は次のとおりです。[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 770090cbef3c3e7b00d53164a986ffc80bfbd7c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bebc684684d3337a7b90d33aad1059349a723c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191177"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062753"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName プロパティ (ClientNetLibInfo クラス)
   クライアント ネットワーク ライブラリ ファイルのファイル名を取得します。  
@@ -36,14 +35,14 @@ object
 .FileName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  クライアント ネットワーク ライブラリに関する情報を表す [ClientNetLibInfo クラス](clientnetlibinfo-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク ライブラリ ファイルの名前を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  

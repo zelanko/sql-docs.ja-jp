@@ -1,5 +1,5 @@
 ---
-title: 例:ELEMENT ディレクティブの指定 | Microsoft Docs
+title: '例 : ELEMENT ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d91c0ddc4bd9c15a033e728d450abd153cac2756
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067810"
 ---
-# <a name="example-specifying-the-element-directive"></a>例:ELEMENT ディレクティブの指定
+# <a name="example-specifying-the-element-directive"></a>例 : ELEMENT ディレクティブの指定
   この例では、次に示すように従業員情報を取得し、要素中心の XML を生成します。  
   
 ```  
@@ -31,7 +30,7 @@ ms.locfileid: "63287164"
 </Employee>  
 ```  
   
- クエリも似ていますが、列名に `ELEMENT` ディレクティブを指定する点が異なります。 そのため、<`Name`> 要素には、属性ではなく、<`FName`> 子要素と <`LName`> 子要素が追加されます。 `Employee!1!EmpID` 列では `ELEMENT` ディレクティブが指定されていないので、`EmpID` は <`Employee`> 要素の属性として追加されます。  
+ クエリも似ていますが、列名に `ELEMENT` ディレクティブを指定する点が異なります。 そのため、<`FName`> 要素には、属性ではなく、<`LName`> 子要素と <`Name`> 子要素が追加されます。 `Employee!1!EmpID` 列では `ELEMENT` ディレクティブが指定されていないので、`EmpID` は <`Employee`> 要素の属性として追加されます。  
   
 ```  
 SELECT 1    as Tag,  

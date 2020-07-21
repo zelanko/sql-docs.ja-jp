@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a564dc4bcabc46689fbf1a521a9ecb1209654594
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68210692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010500"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>条件付き削除の追跡によるマージ レプリケーション パフォーマンスの最適化
     
@@ -46,10 +45,10 @@ ms.locfileid: "68210692"
   
  **削除が追跡されないように指定するには**  
   
--   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: [マージ アーティクルに対して削除を追跡しないように指定する (レプリケーション Transact-SQL プログラミング)](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
+-   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: [マージ アーティクルに対して削除を追跡しないように指定する &#40;レプリケーション Transact-SQL プログラミング&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーションのアーティクルのオプション](article-options-for-merge-replication.md)   
+ [マージレプリケーションのアーティクルオプション](article-options-for-merge-replication.md)   
  [ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

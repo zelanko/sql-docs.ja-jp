@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0b9722ad68107c626f0b4e569ac6e7cbf8c3bf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106091"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>データ領域とマップ (レポート ビルダーおよび SSRS)
@@ -30,17 +30,17 @@ ms.locfileid: "66106091"
 ## <a name="table"></a>テーブル  
  テーブルは、データを行ごとに表示するデータ領域です。 テーブルの列は静的です。列数はレポートのデザイン時に指定します。 テーブルの行は動的であり、データに応じて下方向に拡張されます。 テーブルにグループを追加すると、選択したフィールドまたは式ごとにデータを整理できます。 レポートにテーブルを追加する方法の詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="matrix"></a>マトリックス  
- マトリックスは、クロス集計ともいいます。 マトリックス データ領域では、動的な列と行の両方がデータに応じて拡張されます。 マトリックスには、動的な列と行、および静的な列と行を含めることができます。 列または行には、他の列または行を含めることができ、データのグループ化にも使用できます。 レポートにマトリックスを追加する方法の詳細については、次を参照してください[マトリックス&#40;レポート ビルダーおよび SSRS。&#41;](create-a-matrix-report-builder-and-ssrs.md)  
+## <a name="matrix"></a>Matrix  
+ マトリックスは、クロス集計ともいいます。 マトリックス データ領域では、動的な列と行の両方がデータに応じて拡張されます。 マトリックスには、動的な列と行、および静的な列と行を含めることができます。 列または行には、他の列または行を含めることができ、データのグループ化にも使用できます。 レポートにマトリックスを追加する方法については、「[マトリックス &#40;レポートビルダーと SSRS](create-a-matrix-report-builder-and-ssrs.md) 」を参照してください&#41;  
   
-## <a name="list"></a>リスト  
- 一覧は、任意の形式で配置されたデータを表すデータ領域です。 レポート アイテムを配置して、テキスト ボックス、画像、およびその他のデータ領域が一覧内の任意の場所に配置されたフォームを作成できます。 レポートに一覧を追加する方法の詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  
+## <a name="list"></a>List  
+ 一覧は、任意の形式で配置されたデータを表すデータ領域です。 レポート アイテムを配置して、テキスト ボックス、画像、およびその他のデータ領域が一覧内の任意の場所に配置されたフォームを作成できます。 レポートに一覧を追加する方法の詳細については、「 [&#40;レポートビルダーと SSRS&#41;の一覧](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="chart"></a>グラフ  
- グラフを使用すると、データをグラフィカルに表示できます。 グラフの例としては、棒グラフ、円グラフ、折れ線グラフなどがありますが、その他にも多くの形式がサポートされています。 レポートにグラフを追加する方法の詳細については、次を参照してください。[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  
+ グラフを使用すると、データをグラフィカルに表示できます。 グラフの例としては、棒グラフ、円グラフ、折れ線グラフなどがありますが、その他にも多くの形式がサポートされています。 レポートにグラフを追加する方法の詳細については、「[グラフ &#40;レポートビルダーと SSRS&#41;](charts-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="gauge"></a>ゲージ  
- ゲージは、特定の値を指すインジケーターを内部に含む領域としてデータを表示します。 ゲージは、主要業績評価指標 (KPI) やその他の基準を表示するために使用されます。 ゲージの例として、線形ゲージや円形ゲージなどがあります。 レポートにゲージを追加する方法の詳細については、次を参照してください。[ゲージ&#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)します。  
+ ゲージは、特定の値を指すインジケーターを内部に含む領域としてデータを表示します。 ゲージは、主要業績評価指標 (KPI) やその他の基準を表示するために使用されます。 ゲージの例として、線形ゲージや円形ゲージなどがあります。 ゲージをレポートに追加する方法の詳細については、「[ゲージ &#40;レポートビルダーと SSRS&#41;](gauges-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="map"></a>マップ  
  マップでは、地理的な背景にデータを表現することができます。 マップ データには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ、ESRI シェープファイル、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing マップのタイルの空間データを指定できます。 空間データは、形状または領域を表す多角形、ルートまたはパスを表す線、およびマーカーで表されるポイントを定義する座標のセットで構成されます。 集計データをマップ要素に関連付けて、マップ要素の色とサイズを自動的に変化させることができます。 たとえば、売上高に基づいて店舗のマーカーの種類を変えたり、制限速度に基づいて道路の色を変えたりできます。 詳細については、「[マップ &#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)」を参照してください。  
@@ -64,10 +64,10 @@ ms.locfileid: "66106091"
  詳細については、「[式 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート作成の概念 &#40;レポート ビルダーおよび SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [レポート作成の概念 &#40;レポートビルダーと SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [レポート、レポートパーツ、およびレポート定義 &#40;レポートビルダーと SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
- [チュートリアル&#40;レポート ビルダー&#41;](../report-builder-tutorials.md)   
+ [チュートリアル &#40;レポートビルダー&#41;](../report-builder-tutorials.md)   
  [Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
   

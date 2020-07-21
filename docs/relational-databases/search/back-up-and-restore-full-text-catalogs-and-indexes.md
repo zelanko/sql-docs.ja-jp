@@ -1,5 +1,5 @@
 ---
-title: フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元 | Microsoft Docs
+title: フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,24 +16,25 @@ ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 51ab502a0b4aa1c0740a41fee15bee098bddfd5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3458c111b32ae42a71d062df091b01b4723fc6d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729249"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で作成されたフルテキスト インデックスのバックアップと復元を行う方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、フルテキスト カタログは論理的概念であり、ファイル グループ内には存在しません。 そのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でフルテキスト カタログをバックアップするには、カタログに属しているフルテキスト インデックスが含まれるファイル グループをすべて特定する必要があります。 そのうえで、これらのファイルのグループを 1 つずつバックアップする必要があります。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースをアップグレードする場合は、フルテキスト カタログをインポートすることができます。 インポートした各フルテキスト カタログは、自身のファイル グループのデータベース ファイルです。 インポートされたカタログをバックアップするには、単にそのファイル グループをバックアップします。 詳細については、 [オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkID=121052)フルテキスト カタログのバックアップと復元 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 」を参照してください。  
   
-##  <a name="backingup"></a> フルテキスト カタログのフルテキスト インデックスのバックアップ  
+##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> フルテキスト カタログのフルテキスト インデックスのバックアップ  
   
-###  <a name="Find_FTIs_of_a_Catalog"></a> フルテキスト カタログのフルテキスト インデックスの検索  
+###  <a name="finding-the-full-text-indexes-of-a-full-text-catalog"></a><a name="Find_FTIs_of_a_Catalog"></a> フルテキスト カタログのフルテキスト インデックスの検索  
  次の [SELECT](../../t-sql/queries/select-transact-sql.md) ステートメントを使用して、フルテキスト インデックスのプロパティを取得できます。このステートメントでは、 [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) カタログ ビューおよび [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) カタログ ビューから列を選択します。  
   
 ```  
@@ -49,7 +50,7 @@ GO
 ```  
   
   
-###  <a name="Find_FG_of_FTI"></a> フルテキスト インデックスが含まれるファイル グループまたはファイルの検索  
+###  <a name="finding-the-filegroup-or-file-that-contains-a-full-text-index"></a><a name="Find_FG_of_FTI"></a> フルテキスト インデックスが含まれるファイル グループまたはファイルの検索  
  フルテキスト インデックスが作成されたら、次の場所のいずれかに配置されます。  
   
 -   ユーザー指定のファイル グループ。  
@@ -72,7 +73,7 @@ GO
 ```  
   
   
-###  <a name="Back_up_FTIs_of_FTC"></a> フルテキスト インデックスを含んだファイル グループのバックアップ  
+###  <a name="backing-up-the-filegroups-that-contain-full-text-indexes"></a><a name="Back_up_FTIs_of_FTC"></a> フルテキスト インデックスを含んだファイル グループのバックアップ  
  フルテキスト カタログのインデックスが含まれるファイル グループを検索したら、各ファイル グループをバックアップする必要があります。 バックアップの処理中に、フルテキスト カタログを削除したり、追加したりすることはできません。  
   
  ファイル グループの最初のバックアップは、ファイルの完全バックアップである必要があります。 ファイル グループの完全バックアップを作成した後は、その完全バックアップに基づいたファイルの差分バックアップを 1 つ以上作成して、ファイル グループの変更内容のみをバックアップできます。  
@@ -84,7 +85,7 @@ GO
 -   [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
   
-##  <a name="Restore_FTI"></a> フルテキスト インデックスの復元  
+##  <a name="restoring-a-full-text-index"></a><a name="Restore_FTI"></a> フルテキスト インデックスの復元  
  バックアップされたファイル グループを復元すると、フルテキスト インデックス ファイルがファイル グループのその他のファイルと共に復元されます。 既定では、ファイル グループはファイル グループがバックアップされたディスク位置に復元されます。  
   
  バックアップが作成されたときに、フルテキスト インデックスが設定されたテーブルがオンラインで、インデックスを作成中だった場合は、復元後に作成が再開されます。  

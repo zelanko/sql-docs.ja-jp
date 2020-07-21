@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 456911c1-9881-4574-8576-0070eff78c27
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 134e5a05f0dcb79daab40c53723dff467c83e5f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6a44280fd94dfedf82b05f98f59dc5527a8e9dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62736192"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059948"
 ---
 # <a name="instancename-property-servernetworkprotocol-class"></a>InstanceName プロパティ (ServerNetworkProtocol クラス)
-  インスタンスの名前を取得[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サーバー ネットワーク プロトコルによって参照されます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サーバーネットワークプロトコルによって参照されているのインスタンスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,16 +35,16 @@ object
 .InstanceName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ServerNetworkProtocol クラス](servernetworkprotocol-class.md)のインスタンスによって使用されるネットワーク プロトコルを表すオブジェクトを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ のインスタンスによって使用されるネットワークプロトコルを表す[Servernetworkprotocol クラス](servernetworkprotocol-class.md)オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー ネットワーク プロトコルによって参照された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

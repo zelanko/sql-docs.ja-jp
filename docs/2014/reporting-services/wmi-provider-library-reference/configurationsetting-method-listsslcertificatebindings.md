@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a2a33d7aa992fd434b29fd519c805f57b2b46fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098358"
 ---
-# <a name="listsslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificateBindings メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="listsslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificateBindings メソッド (WMI MSReportServer_ConfigurationSetting)
   コンピューターにインストールされている SSL 証明書の一覧を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,7 +39,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *LCID (LCID)*  
+ *LCID*  
  返されるエラー メッセージに使用するロケール。  
   
  *Application[]*  
@@ -57,7 +57,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
  *Errors[]*  
  [out] 発生したエラーの説明。  
   
- *Length*  
+ *[データ型]*  
  [out] メソッドによって返される配列の長さ。  
   
  *HRESULT*  
@@ -66,7 +66,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

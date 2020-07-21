@@ -1,6 +1,7 @@
 ---
-title: 利用状況モニターを開く方法 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 利用状況モニターを開く (SSMS)
+description: SQL Server Management Studio (SSMS) で利用状況モニターを開く方法。
+ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5e99f31afdef2ed6653cc7a508f2bb5fceebfdb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16d08bbc2b651ef21ee80be1e8af74a00b45a253
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987392"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787438"
 ---
-# <a name="open-activity-monitor-sql-server-management-studio"></a>利用状況モニターを開く方法 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) で利用状況モニターを開く
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
    
  利用状況モニターでは、監視対象となるインスタンスでクエリを実行し、[利用状況モニター] 表示ペインに表示する情報を取得します。 更新間隔を 10 秒未満に設定すると、これらのクエリを実行する時間がサーバーのパフォーマンスに影響を与える可能性があります。  
   
   
-##  <a name="Permissions"></a> 権限を確認してください。  
+##  <a name="check-your-permissions"></a><a name="Permissions"></a> 権限を確認してください。  
  実際のアクティビティを表示するには、VIEW SERVER STATE 権限が必要です。 利用状況モニターの [データ ファイル I/O] セクションを表示するには、VIEW SERVER STATE に加えて、CREATE DATABASE、ALTER ANY DATABASE、VIEW ANY DEFINITION のいずれかの権限が必要です。  
   
  プロセスを強制終了するには、sysadmin 固定サーバー ロールまたは processadmin 固定サーバー ロールのメンバーである必要があります。  
@@ -41,7 +42,7 @@ ms.locfileid: "67987392"
 
  >**ヒント!** SSMS のアイコンにマウスを移動すると、説明と、実行するキーボード ショートカットが表示されます。
 
-### <a name="toolbar"></a>[ツール バー]
+### <a name="toolbar"></a>ツール バー
 
 [標準] ツール バーの **[利用状況モニター]** アイコンをクリックします。 中央の [元に戻す]/[やり直し] ボタンの右にあります。
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  
@@ -57,8 +58,6 @@ ms.locfileid: "67987392"
 3.  **[スタートアップ時]** ドロップダウン リストで **[オブジェクト エクスプローラーと利用状況モニターを開く]** をクリックします。  
 
 4.  **[OK]** をクリックします。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   

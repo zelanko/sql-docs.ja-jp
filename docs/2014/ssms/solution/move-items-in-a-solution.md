@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c6711b736f0313508f74b6c30253e7b2e2a3f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd0a8a89686c62b4d4d00aea5479bb956fe3011f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63154706"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061149"
 ---
 # <a name="move-items-in-a-solution"></a>ソリューションのアイテムの移動
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトに含まれるプロジェクト アイテムには、クエリ、接続、およびその他のファイルがあります。 クエリとその他のファイルはソリューション エクスプローラーで別のプロジェクトに移動することができますが、接続は移動できません。  
@@ -39,8 +38,8 @@ ms.locfileid: "63154706"
 > [!NOTE]  
 >  接続を指定したクエリを移動しても、接続は移動先のプロジェクトに移動しません。 クエリを別のプロジェクトに移動すると、接続の設定は消去されます。  
   
-## <a name="see-also"></a>関連項目  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
+## <a name="see-also"></a>参照  
+ [ソリューション エクスプローラー](solution-explorer.md)   
  [ソリューションの項目のコピー](copy-items-in-a-solution.md)  
   
   

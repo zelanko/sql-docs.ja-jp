@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtAttr (カーソル ライブラリ) |Microsoft Docs
+title: SQLGetStmtAttr (カーソルライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b6f12b4b60e1914cab5ab1a52f48b0ac939aa8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a035a114e0ffd5c3fb44b856ea4c3016af240e82
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073851"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306003"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLGetStmtAttr**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLGetStmtAttr**を参照してください[SQLGetStmtAttr 関数](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)します。  
+ このトピックでは、カーソルライブラリでの**SQLGetStmtAttr**関数の使用について説明します。 **SQLGetStmtAttr**の一般的な情報については、「 [SQLGetStmtAttr 関数](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)」を参照してください。  
   
- カーソル ライブラリでは、次のステートメント属性をサポートしている**SQLGetStmtAttr**:  
+ カーソルライブラリでは、 **SQLGetStmtAttr**で次のステートメント属性がサポートされています。  
   
 |||  
 |-|-|  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 68f3d3c7d49d5951296e3c3cee42a7cb3299b4e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912528"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71285877"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -33,7 +33,7 @@ ms.locfileid: "67912528"
 ![変換先の選択](../../integration-services/import-export-data/media/choose-destination.png)
 
 ## <a name="choose-a-destination"></a>[変換先の選択]
- **変換先**  
+ **宛先**  
  変換先を指定するには、変換先にデータをインポートすることができるデータ プロバイダーを選択します。
  
 -   **必要なデータ プロバイダーは通常、その名前で判断できます**。プロバイダーの名前には通常、変換先の名前が含まれているからです。例: *フラット ファイル*変換先、Microsoft *Excel*、Microsoft *Access*、.NET Framework Data Provider for *SqlServer*、.NET Framework Data Provider for *Oracle* など。

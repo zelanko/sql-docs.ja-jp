@@ -1,6 +1,6 @@
 ---
-title: ブレークポイント フィルターの指定 | Microsoft Docs
-ms.custom: ''
+title: ブレークポイント フィルターの指定
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,27 +9,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c86f31bc79dae5c257f58d59bbfc8039e02f7e4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7bf434243cf02c3827e48feb4543339bfcfab32b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049019"
 ---
 # <a name="specify-a-breakpoint-filter"></a>ブレークポイント フィルターの指定
   ブレークポイント フィルターは、ブレークポイントが指定したコンピューター、オペレーティング システム プロセス、およびスレッドだけで動作するように制限します。 通常、ブレークポイント フィルターは、並列アプリケーションをデバッグするときに使用されます。  
   
-##  <a name="BKMK_ActionConsiderations"></a> フィルターに関する注意点  
+##  <a name="filter-considerations"></a><a name="BKMK_ActionConsiderations"></a> フィルターに関する注意点  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトおよびストアド プロシージャは並列アプリケーションではないため、ブレークポイント フィルターは [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは通常使用されません。  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>ブレークポイント フィルターを指定するには  
   
 1.  エディター ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[フィルター]** をクリックします。  
   
-     \- または -  
+     または  
   
      **[ブレークポイント]** ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[フィルター]** をクリックします。  
   

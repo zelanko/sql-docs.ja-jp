@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1a2c275604d9c74699eeb2b3c77a90e2d819fb6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bec2f363cd8c4f7dea45935568a88722b19323fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060419"
 ---
 # <a name="replicate-schema-changes"></a>スキーマ変更のレプリケート
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、スキーマの変更をレプリケートする方法について説明します。  
@@ -47,51 +46,51 @@ ms.locfileid: "68199323"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   ALTER TABLE ...DROP COLUMN ステートメントは、スキーマ変更のレプリケーションを無効にした場合でも、サブスクリプションに削除対象の列が含まれているすべてのサブスクライバーに必ずレプリケートされます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションに対するスキーマ変更をレプリケートしない場合は、 **[パブリケーションのプロパティ - \<パブリケーション>]** ダイアログ ボックスでスキーマ変更のレプリケーションを無効にします。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+ パブリケーションのスキーマ変更をレプリケートしない場合は、[**パブリケーションのプロパティ- \<Publication> ** ] ダイアログボックスでスキーマ変更のレプリケーションを無効にします。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](view-and-modify-publication-properties.md)」を参照してください。  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>スキーマ変更のレプリケーションを無効にするには  
   
-1.  **[パブリケーションのプロパティ - \<パブリケーション>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで、 **[スキーマ変更のレプリケート]** プロパティの値を **[False]** に設定します。  
+1.  [**パブリケーションの \<Publication> プロパティ-** ] ダイアログボックスの [**サブスクリプションオプション**] ページで、[**スキーマ変更のレプリケート**] プロパティの値を**False**に設定します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
      特定のスキーマ変更だけを反映させるには、スキーマを変更する前にプロパティを **[True]** に設定し、変更後に **[False]** に設定します。 逆に、ほとんどのスキーマ変更を反映するには、スキーマ変更前にプロパティを **[False]** に設定し、変更後に **[True]** に設定します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーションのストアド プロシージャを使用すると、これらのスキーマ変更をレプリケートするかどうかを指定できます。 どのストアド プロシージャを使用するかは、パブリケーションの種類によって異なります。  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>スキーマ変更をレプリケートしないスナップショット パブリケーションまたはトランザクション パブリケーションを作成するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。このとき、 **@replicate_ddl** には **0** を指定します。 詳細については、「 [Create a Publication](create-a-publication.md)」を参照してください。  
+1.  パブリッシャー側のパブリケーションデータベースに対して[sp_addpublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)を実行します。このとき、 ** \@ replicate_ddl**には**0**の値を指定します。 詳しくは、「 [パブリケーションを作成](create-a-publication.md)」をご覧ください。  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>スキーマ変更をレプリケートしないマージ パブリケーションを作成するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) を実行します。このとき、 **@replicate_ddl** には **0** を指定します。 詳細については、「 [Create a Publication](create-a-publication.md)」を参照してください。  
+1.  パブリッシャー側のパブリケーションデータベースに対して[sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)を実行します。このとき、 ** \@ replicate_ddl**には**0**の値を指定します。 詳しくは、「 [パブリケーションを作成](create-a-publication.md)」をご覧ください。  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションでスキーマ変更のレプリケートを一時的に無効化するには  
   
-1.  スキーマ変更のレプリケーションを伴うパブリケーションで、[sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。このとき、 **@property** には **replicate_ddl** を、 **@value** には **0** を指定します。  
+1.  スキーマ変更のレプリケーションを含むパブリケーションの場合は、 [sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を実行します。このとき、 ** \@ プロパティ**には**replicate_ddl**を、値には**0**を指定します** \@ **。  
   
 2.  パブリッシュされたオブジェクトに対し、DDL コマンドを実行します。  
   
-3.  (省略可) [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行して、スキーマ変更のレプリケートを再度有効にします。このとき、 **@property** には **replicate_ddl** を、 **@value** には **1** を指定します。  
+3.  Optional[Sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を実行して、スキーマ変更のレプリケートを再度有効にします。 ** \@ プロパティ**には**replicate_ddl**を、値には**1**を指定します** \@ **。  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>マージ パブリケーションでスキーマ変更のレプリケートを一時的に無効化するには  
   
-1.  スキーマ変更のレプリケーションを伴うパブリケーションで、[sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) を実行します。このとき、 **@property** には **replicate_ddl** を、 **@value** には **0** を指定します。  
+1.  スキーマ変更のレプリケーションを含むパブリケーションの場合は、 [sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。このとき、 ** \@ プロパティ**には**replicate_ddl**を、値には**0**を指定します** \@ **。  
   
 2.  パブリッシュされたオブジェクトに対し、DDL コマンドを実行します。  
   
-3.  (省略可) [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) を実行して、スキーマ変更のレプリケートを再度有効にします。このとき、 **@property** には **replicate_ddl** を、 **@value** には **1** を指定します。  
+3.  Optional[Sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行して、スキーマ変更のレプリケートを再度有効にします。 ** \@ プロパティ**には**replicate_ddl**を、値には**1**を指定します** \@ **。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パブリケーション データベースでのスキーマの変更](make-schema-changes-on-publication-databases.md)   
  [パブリケーション データベースでのスキーマの変更](make-schema-changes-on-publication-databases.md)  
   

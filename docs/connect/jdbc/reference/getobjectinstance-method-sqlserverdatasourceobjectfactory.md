@@ -1,5 +1,5 @@
 ---
-title: getObjectInstance メソッド (SQLServerDataSourceObjectFactory) |Microsoft Docs
+title: getObjectInstance メソッド (SQLServerDataSourceObjectFactory) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: de25e608c9fbdbdf6ff91d08e7a6502765bb590e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dac2ff8e4b88d9d8c2517cde92e7fbaaae0e2077
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981053"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925243"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance メソッド (SQLServerDataSourceObjectFactory)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,8 +60,8 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- この getObjectInstance メソッドは、Javax.naming.spi.objectfactory インターフェイスの getObjectInstance メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getObjectInstance メソッドは、javax.naming.spi.ObjectFactory インターフェイスの getObjectInstance メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSourceObjectFactory のメソッド](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   

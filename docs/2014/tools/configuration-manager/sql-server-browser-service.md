@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4e06fe371602956b6b43714038f41d8486cf2ae0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef1360e52bec7955f157c98639e23f5e678883f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054491"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser Service
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser プログラムは Windows サービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、このコンピューター上にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は次の操作に役立ちます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser プログラムは Windows サービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、このコンピューター上にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は次の操作に役立ちます。  
   
 -   使用可能なサーバーの一覧の参照  
   
@@ -43,7 +42,7 @@ ms.locfileid: "63253642"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスをインストールする場合  
   
-## <a name="background"></a>背景情報  
+## <a name="background"></a>バックグラウンド  
  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]より前は、コンピューターにインストールできる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは 1 つだけでした。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、公式の Internet Assigned Numbers Authority (IANA) によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てられたポート 1433 で着信要求を待ちます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのインスタンスしかポートを使用できないので、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の複数のインスタンスをサポートするようになったとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) が開発され、UDP ポート 1434 で受信待ちするようになりました。 このリスナー サービスは、インストールされているインスタンスの名前と、そのインスタンスが使用しているポートまたは名前付きパイプでクライアント要求に応答していました。 SSRP システムの制限を解消するため、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では SSRP の代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを導入しています。  
   
 ## <a name="how-sql-server-browser-works"></a>SQL Server Browser のしくみ  
@@ -78,7 +77,7 @@ ms.locfileid: "63253642"
   
 -   各インスタンスに対して選択したポートがサーバー上の別のサービスまたはアプリケーションによって使用されている場合があります。この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは使用できません。  
   
-## <a name="clustering"></a>クラスター  
+## <a name="clustering"></a>クラスタリング  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser はクラスター化されたリソースではなく、クラスター ノード間のフェールオーバーはサポートしません。 そのため、クラスターの場合は、クラスターのノードごとに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser をインストールして有効にする必要があります。 クラスターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は IP_ANY で受信待ちします。  
   
 > [!NOTE]  
@@ -95,7 +94,7 @@ ms.locfileid: "63253642"
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="account-privileges"></a>アカウントの権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は UDP ポートで受信待ちし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) を使用して、認証されていない要求を受け入れます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser を権限が制限されているユーザーのセキュリティ コンテキストで実行することにより、悪意のある攻撃にさらされる危険性を最小限に抑える必要があります。 ログオン アカウントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser の最小限のユーザー権限は次のとおりです。  
@@ -125,9 +124,9 @@ ms.locfileid: "63253642"
  非表示インスタンスは、共有メモリ接続のみをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は、 `HideInstance` Browser がこのサーバー インスタンスに関する情報を返さないことを示すために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フラグを設定します。  
   
 ### <a name="using-a-firewall"></a>ファイアウォールの使用  
- ファイアウォールの背後にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスと通信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される TCP ポート (1433 など) のほかに UDP ポート 1434 も開きます。 ファイアウォールの使用については、次を参照してください。"する方法。ファイアウォールの構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセス"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+ ファイアウォールの背後にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスと通信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される TCP ポート (1433 など) のほかに UDP ポート 1434 も開きます。 ファイアウォールの使用方法については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスのためのファイアウォールの設定」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ネットワーク プロトコルとネットワーク ライブラリ](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  
   
   

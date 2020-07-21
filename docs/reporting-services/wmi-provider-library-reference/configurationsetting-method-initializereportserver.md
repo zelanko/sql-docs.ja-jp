@@ -16,10 +16,10 @@ ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e5612bc9326a359a287501aedc5227436cc576eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570865"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting メソッド - InitializeReportServer
@@ -50,7 +50,7 @@ public void InitializeReportServer(string InstallationID,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドを呼び出すと、レポート サーバー データベースのセキュリティで保護された情報にアクセスする暗号化キーが、 *InstallationID*で特定されるレポート サーバーの公開キーを使用して暗号化されます。  
   
  指定したレポート サーバーの公開キーは、レポート サーバー データベースに書き込んでおく必要があります。  

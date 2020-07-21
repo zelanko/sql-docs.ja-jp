@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1333cfc819b8027260c715ed3398c0099f96a854
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: d2294e12af7e22a70ab064a2c3d1163007631eef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755914"
 ---
 # <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (拡張ストアド プロシージャ API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -51,10 +51,10 @@ len
  *srvproc*  
  特定のクライアント接続のためのハンドルである SRV_PROC 構造体を指すポインターです。 この構造体には、アプリケーションとクライアントの間の通信やデータを管理するために、拡張ストアド プロシージャ API ライブラリで使用する情報が格納されます。  
   
- *field*  
+ *分野*  
  返す *srvproc* フィールドを指定します。  
   
-|フィールド|[説明]|戻り値の型|  
+|フィールド|説明|戻り値の型|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|現在のセッションのメッセージ LCID。|ULONG*|  
 |SRV_INSTANCENAME|インスタンス名 (指定されている場合)。それ以外の場合は NULL を返します。|WCHAR*|  

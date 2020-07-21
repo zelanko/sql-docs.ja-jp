@@ -1,5 +1,6 @@
 ---
 title: データ ソースとレポートのパブリッシュ | Microsoft Docs
+description: データ ソースとレポートをパブリッシュして、レポート サーバーまたは SharePoint サイトに対する権限を持っている個人がレポートを実行できるようにする方法について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e98421a76fda260c71c691551151bd9dad245a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 93e0c70d19d4f64278603c062e4f59aedd97070b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579968"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510073"
 ---
 # <a name="publishing-data-sources-and-reports"></a>データ ソースとレポートのパブリッシュ
   レポートをパブリッシュする前に、レポートをプレビューしてレポート実行時の表示を確認する必要があります。 プレビュー後も、表示結果に満足できるまでデザインを調整できます。  
@@ -37,12 +38,12 @@ ms.locfileid: "65579968"
  レポートを SharePoint サイトにパブリッシュする方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [ページ レイアウトとレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [レポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
+ [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
   
   

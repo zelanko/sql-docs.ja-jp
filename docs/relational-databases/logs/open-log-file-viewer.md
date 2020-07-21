@@ -1,5 +1,6 @@
 ---
 title: '[ログ ファイルの表示] を開く | Microsoft Docs'
+description: SQL Server Management Studio の [ログ ファイルの表示] を使用して、複数のログに記録されたエラーおよびイベントに関する情報にアクセスする方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6124fa7c8b4a0ab4637c52d7ceb38d4abc698fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667952"
 ---
 # <a name="open-log-file-viewer"></a>[ログ ファイルの表示] を開く
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [ログ ファイルの表示] を使用すると、次のログに記録されたエラーおよびイベントに関する情報にアクセスできます。  
   
 -   監査コレクション  
   
--   データ コレクション  
+-   データ収集  
   
 -   データベース メール  
   
@@ -41,12 +42,12 @@ ms.locfileid: "68083984"
   
  [ログ ファイルの表示] は、表示する情報に応じていくつかの方法で開くことができます。  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissions  
  オンラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、securityadmin 固定サーバー ロールのメンバーシップが必要です。  
   
  オフラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間、およびログ ファイルの保存されているフォルダーの両方に対する読み取りアクセス権が必要です。 詳細については、「 [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)」トピックの「セキュリティ」セクションを参照してください。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>セキュリティ  
  securityadmin 固定サーバー ロールのメンバーシップが必要です。  
   
 ### <a name="view-log-files"></a>ログ ファイルの表示  

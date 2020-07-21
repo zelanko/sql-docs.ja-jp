@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c92a6c3e746babe0d4e5025250c7ab8c5ccd6d37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016989"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQLServer:Workload Group Stats オブジェクト
   SQLServer:Workload Group Stats オブジェクトには、リソース ガバナーのワークロード グループ統計に関する情報を報告するパフォーマンス カウンターが含まれています。  
@@ -40,8 +39,8 @@ ms.locfileid: "63151101"
 |Active parallel threads|並列スレッド使用の現在の数。|  
   
 ## <a name="see-also"></a>参照  
- [リソースの利用状況の監視 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)   
- [SQLServer:Resource Pool Stats オブジェクト](sql-server-resource-pool-stats-object.md)   
+ [リソース使用状況の監視 &#40;システムモニタ&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server、リソースプールの統計オブジェクト](sql-server-resource-pool-stats-object.md)   
  [リソース ガバナー](../resource-governor/resource-governor.md)  
   
   

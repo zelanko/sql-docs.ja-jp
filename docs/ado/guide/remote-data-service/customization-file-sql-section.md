@@ -1,5 +1,5 @@
 ---
-title: カスタマイズ ファイルの SQL セクション |Microsoft Docs
+title: カスタマイズファイル SQL Section |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,28 +11,28 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922798"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749877"
 ---
 # <a name="customization-file-sql-section"></a>カスタマイズ ファイルの SQL セクション
-**Sql**セクションは、クライアントのコマンド文字列を置換する新しい SQL 文字列を含めることができます。 セクション内に SQL 文字列がない場合は、セクションは無視されます。  
+**Sql**セクションには、クライアントのコマンド文字列を置き換える新しい sql 文字列を含めることができます。 セクションに SQL 文字列がない場合、セクションは無視されます。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 新しい SQL 文字列がある*パラメーター化された*します。 内のパラメーターは、 **sql** SQL 文字列のセクション (で指定された、' ですか?' 文字) に対応する引数を置き換え、*識別子*クライアントのコマンド文字列で (によって指定された、コンマ区切りリストをかっこで)。 識別子と引数リストは、関数呼び出しのように動作します。  
+ 新しい SQL 文字列を*パラメーター化*することができます。 つまり、 **sql**セクションの sql 文字列 ('? ' 文字で指定された) のパラメーターは、クライアントのコマンド文字列内の*識別子*内の対応する引数に置き換えることができます (かっこで囲まれたコンマ区切りのリストで指定されます)。 識別子と引数リストは関数呼び出しのように動作します。  
   
- たとえば、クライアントのコマンド文字列は`"CustomerByID(4)"`、SQL セクション ヘッダーが`[SQL CustomerByID]`、新しい SQL セクション文字列は`"SELECT * FROM Customers WHERE CustomerID = ?".`、ハンドラーが生成されます`"SELECT * FROM Customers WHERE CustomerID = 4"`し、その文字列を使用して、データ ソースのクエリにします。  
+ たとえば、クライアントのコマンド文字列がで、 `"CustomerByID(4)"` sql section ヘッダーがで、 `[SQL CustomerByID]` 新しい sql section 文字列がハンドラーによって生成され、 `"SELECT * FROM Customers WHERE CustomerID = ?".` その文字列を使用してデータソースにクエリを実行するとし `"SELECT * FROM Customers WHERE CustomerID = 4"` ます。  
   
- 新しい SQL ステートメントが null の文字列の場合 ("") のセクションは無視されます。  
+ 新しい SQL ステートメントが null 文字列 ("") の場合、セクションは無視されます。  
   
- 新しい SQL ステートメントの文字列が有効でない場合は、ステートメントの実行は失敗します。 クライアントのパラメーターは無視されます。 指定することで、クライアントのすべての SQL コマンドを「オフにする」に意図的にこれを行うことができます。  
+ 新しい SQL ステートメント文字列が有効でない場合、ステートメントの実行は失敗します。 クライアントパラメーターは事実上無視されます。 次のように指定して、クライアントのすべての SQL コマンドを無効にすることができます。  
   
 ```console
 [SQL default]   
@@ -40,23 +40,23 @@ SQL = " "
 ```  
   
 ## <a name="syntax"></a>構文  
- 形式は、交換用の SQL 文字列を入力します。  
+ 代替の SQL 文字列エントリの形式は次のとおりです。  
   
- **SQL=**    
+ **SQL =**   
  ***sqlString***  
   
-|要素|説明|  
+|パーツ|説明|  
 |----------|-----------------|  
-|**SQL**|これを示すリテラル文字列は、SQL セクション エントリです。|  
-|***sqlString***|クライアントの文字列を置換する SQL 文字列です。|  
+|**SQL**|これが SQL セクションエントリであることを示すリテラル文字列。|  
+|***sqlString***|クライアント文字列を置き換える SQL 文字列。|  
   
-## <a name="see-also"></a>関連項目  
- [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [カスタマイズ ファイル Logs セクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [カスタマイズ ファイル UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+## <a name="see-also"></a>参照  
+ [カスタマイズファイルの接続セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [カスタマイズファイルログセクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [カスタマイズファイルの UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [カスタマイズ ファイルの概要](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [カスタマイズファイルについて](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 
 

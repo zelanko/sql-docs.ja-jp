@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 4003b08205f1c7db98d2656e17fe653a3616638d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748949"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 次の操作を実行し、指定したデータベース内のすべてのオブジェクトの論理的および物理的な整合性をチェックします。    
     
@@ -64,7 +64,7 @@ DBCC CHECKALLOC、DBCC CHECKTABLE、または DBCC CHECKCATALOG コマンドは�
     
 ## <a name="syntax"></a>構文    
     
-```    
+```syntaxsql
 DBCC CHECKDB     
     [ ( database_name | database_id | 0    
         [ , NOINDEX     
@@ -161,14 +161,14 @@ DATA_PURITY
  DBCC 修復オプションを使用して、このオプションによって報告された検証エラーを修正することはできません。 これらのエラーを手動で修正する方法の詳細については、次のサポート技術情報の資料 923247 を参照してください。[SQL Server 2005 以降のバージョンでの DBCC エラー 2570 のトラブルシューティング](https://support.microsoft.com/kb/923247)。  
     
  MAXDOP  
- **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降)。  
     
  ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP の値がリソース ガバナーで構成されている値を超える場合は、「[ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)」で説明されているように、[!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]でリソース ガバナーの MAXDOP 値が使用されます。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
  
 > [!WARNING] 
 > MAXDOP が 0 に設定されている場合、SQL Server では使用する最大限の並列処理が選択されます。    
 
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>解説    
 DBCC CHECKDB は、無効なインデックスについては検査しません。 無効なインデックスの詳細については、「[インデックスと制約の無効化](../../relational-databases/indexes/disable-indexes-and-constraints.md)」を参照してください。    
 
 ユーザー定義型がバイト順としてマークされている場合、シリアル化されたユーザー定義型は 1 つだけ存在する必要があります。 シリアル化されたバイト順のユーザー定義型が一貫して存在していない場合、DBCC CHECKDB の実行中にエラー 2537 が発生します。 詳細については、「[ユーザー定義型の要件](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)」を参照してください。    
@@ -213,7 +213,7 @@ Microsoft SQL Server 2012 または SQL Server の以前のバージョンでは
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて    
 DBCC CHECKDB コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常に処理されたこととコマンドの実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、およびコマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
     
-|状態|[説明]|    
+|State|説明|    
 |-----------|-----------------|    
 |0|エラー番号 8930 が発生しました。 このエラーは、メタデータの破損により DBCC コマンドが終了したことを示します。|    
 |1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|    
@@ -221,7 +221,13 @@ DBCC CHECKDB コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion
 |3|このエラーは、メタデータの破損により DBCC コマンドが終了したことを示します。|    
 |4|アサートまたはアクセス違反が検出されました。|    
 |5|不明なエラーが発生し、DBCC コマンドが終了しました。|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、エラーが発生していない (または整合性チェックが "クリーン" である) データベースに対して整合性チェックが実行された日時が記録されます。 これは、`last known clean check` と呼ばれます。 データベースが最初に起動されると、この日付が次の形式で EventLog (EventID-17573) とエラー ログに書き込まれます。 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## <a name="error-reporting"></a>[エラー報告]    
 DBCC CHECKDB により破損エラーが検出されるたびに、ダンプ ファイル (`SQLDUMP*nnnn*.txt`) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の LOG ディレクトリに生成されます。 *機能の使用状況*データ収集と*エラー報告*機能が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して有効になっている場合、ダンプ ファイルは自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] に転送されます。 収集されたデータは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能向上のために使用されます。
 このダンプ ファイルには、DBCC CHECKDB コマンドの結果と追加の診断出力が含まれます。 アクセスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントと sysadmin ロールのメンバーに制限されます。 既定では、sysadmin ロールには、Windows の `BUILTIN\Administrators` グループとローカルの管理者のグループのすべてのメンバーが含まれています。 データ収集プロセスが失敗しても、DBCC コマンドは失敗しません。
@@ -367,7 +373,7 @@ ESTIMATEONLY を指定した場合、DBCC CHECKDB は以下の結果セットを
 ## <a name="permissions"></a>アクセス許可    
 Sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーシップが必要です。
     
-## <a name="examples"></a>使用例    
+## <a name="examples"></a>例    
     
 ### <a name="a-checking-both-the-current-and-another-database"></a>A. 現在のデータベースと別のデータベースの両方をチェックする    
 次の例では、現在のデータベースと [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して `DBCC CHECKDB` を実行します。
@@ -393,5 +399,5 @@ GO
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[システム テーブル &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+[システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 

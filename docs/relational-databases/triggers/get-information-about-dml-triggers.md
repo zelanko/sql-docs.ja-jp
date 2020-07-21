@@ -17,22 +17,22 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1aefc7661b21f6fc6b93e74239820020796151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abd315f75626b337c2183f34121aeb7660e0ed66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056067"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786881"
 ---
 # <a name="get-information-about-dml-triggers"></a>DML トリガーに関する情報の取得
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して DML トリガーに関する情報を取得する方法について説明します。 この情報には、テーブルに設定されたトリガーの種類、名前、所有者、および作成日または変更日を確認できます。 トリガーが作成時に暗号化されていない場合は、トリガーの定義を取得します。 定義は、トリガーを定義しているテーブルに対してそのトリガーがどのように作用するかを理解するのに役立ちます。 また、特定のトリガーが使用しているオブジェクトを見つけることもできます。 この情報を使用すると、データベースで変更または削除された場合にトリガーに影響を及ぼすオブジェクトを確認できます。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **DML トリガーに関する情報を取得するために使用するもの:**  
   
@@ -40,13 +40,13 @@ ms.locfileid: "68056067"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  **sys.sql.modules**、 **sys.object**、 **sys.triggers**、 **sys.events**、 **sys.trigger_events**  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
  OBJECT_DEFINITION、OBJECTPROPERTY、 **sp_helptext**  
  ロール **public** のメンバーシップが必要です。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または次のいずれかの権限を許可された人が表示できます。ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
@@ -54,7 +54,7 @@ ms.locfileid: "68056067"
  **sys.sql_expression_dependencies**  
  データベースに対する VIEW DEFINITION 権限およびデータベースの **sys.sql_expression_dependencies** に対する SELECT 権限が必要です。 既定では、SELECT 権限は **db_owner** 固定データベース ロールのメンバーだけに与えられます。 SELECT 権限と VIEW DEFINITION 権限が別のユーザーに与えられている場合、権限が許可されているユーザーはデータベース内のすべての依存関係を表示できます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>DML トリガーの定義を表示するには  
   
@@ -64,8 +64,6 @@ ms.locfileid: "68056067"
   
 3.  **[トリガー]** を展開します。目的のトリガーを右クリックし、 **[変更]** をクリックします。 DML トリガーの定義がクエリ ウィンドウに表示されます。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>DML トリガーの依存関係を表示するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
@@ -74,15 +72,15 @@ ms.locfileid: "68056067"
   
 3.  **[トリガー]** を展開します。目的のトリガーを右クリックし、 **[依存関係の表示]** をクリックします。  
   
-4.  **[オブジェクトの依存関係]** ウィンドウで DML トリガーに依存するオブジェクトを表示するには、 **[\<DML トリガー名 に依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。  
+4.  **[オブジェクトの依存関係]** ウィンドウで DML トリガーに依存するオブジェクトを表示するには、 **[\<DML trigger name> に依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。  
   
-     DML が依存するオブジェクトを表示するには、 **[\<DML トリガー名 が依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。 すべてのオブジェクトを表示するには、各ノードを展開します。  
+     DML が依存するオブジェクトを表示するには、 **[\<DML trigger name> が依存するオブジェクト]** を選択します。 オブジェクトが **[依存関係]** 領域に表示されます。 すべてのオブジェクトを表示するには、各ノードを展開します。  
   
 5.  **[依存関係]** 領域に表示されたオブジェクトに関する情報を取得するには、そのオブジェクトをクリックします。 **[選択したオブジェクト]** フィールドの **[名前]** 、 **[種類]** 、および **[依存関係の種類]** の各ボックスに情報が表示されます。  
   
 6.  **[オブジェクトの依存関係]** ウィンドウを閉じるには、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>DML トリガーの定義を表示するには  
   

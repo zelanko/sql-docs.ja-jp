@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d06a2ec19b4a84dcd0d69fb70389d68974813be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f7bbaccf2580b4c7b8781a5de20c53f0729b9506
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62894981"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426689"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>スクリプト タスクによる ForEach ループの一覧の収集
   Foreach from Variable 列挙子は、変数で渡された一覧の項目を列挙し、各項目に対して同じタスクを実行します。 スクリプト タスクでカスタム コードを使用して、このための一覧を設定することができます。 この列挙子の詳細については、「[Foreach ループ コンテナー](../control-flow/foreach-loop-container.md)」を参照してください。  
@@ -44,7 +43,7 @@ ms.locfileid: "62894981"
   
 3.  `FileAge` 変数をスクリプト タスクの `ReadOnlyVariables` プロパティに追加し、`FileList` 変数を `ReadWriteVariables` プロパティに追加します。  
   
-4.  コードで、インポート、`System.Collections`と`System.IO`名前空間。  
+4.  コードで、 `System.Collections` との名前空間をインポートし `System.IO` ます。  
   
 ### <a name="code"></a>コード  
   
@@ -245,10 +244,10 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
- [Foreach ループ コンテナー](../control-flow/foreach-loop-container.md)   
+## <a name="see-also"></a>関連項目  
+ [Foreach ループコンテナー](../control-flow/foreach-loop-container.md)   
  [Foreach ループ コンテナーを構成する](../configure-a-foreach-loop-container.md)  
   
   

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - tracing options [ODBC], about tracing
 - driver manager [ODBC], tracing
 ms.assetid: 77ed4c6c-d976-4eb2-8526-a12697b0ef83
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a00861365df27357099176151bcd681e15e585e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4a08047409b203916fe5403cf28802d8570647cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985114"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298049"
 ---
 # <a name="tracing"></a>トレース
-ODBC ドライバー マネージャーが、記録し、ログ ファイルに議事録を作成する ODBC アプリケーションによって行われる関数呼び出しのシーケンスを許可するトレース機能。 トレースは、トレース、アプリケーションと、ドライバー マネージャーとドライバー マネージャーとドライバーの間の呼び出しをキャプチャする DLL によって実行されます。 トレースには、このメソッドは、ODBC 2 によって実行されるトレースを置き換えます *.x*ドライバー マネージャーと、トレースは、ODBC 2 で実行される *.x* ODBC スパイでします。  
+ODBC ドライバーマネージャーにはトレース機能があり、ODBC アプリケーションによって実行される一連の関数呼び出しをログファイルに記録し、書き起こしすることができます。 トレースは、アプリケーションとドライバーマネージャーの間、およびドライバーマネージャーとドライバーの間の呼び出しをキャプチャするトレース DLL によって実行されます。 このトレース方法は、odbc*2.X ドライバーマネージャー*によって実行されるトレースと odbc 2.x によって実行される*トレースを odbc* Spy で置き換えます。  
   
  このセクションでは、次のトピックを扱います。  
   

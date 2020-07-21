@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2fce5bb4c78446da3bb786c0d3e3b3e22256ca05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081501"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71285931"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
 
@@ -40,7 +40,7 @@ ms.locfileid: "68081501"
  **ソース**  
  選択した変換元のテーブル、ビュー、またはクエリ。  
   
- **変換先**  
+ **宛先**  
  選択した変換先のテーブルまたはビュー。  
 
 ## <a name="optionally-create-a-new-destination-table"></a>必要に応じて、新しい変換先テーブルを作成する
@@ -91,12 +91,12 @@ autonumber 列または ID 列があるデータをエクスポートする場�
 -    **ソース**  
      各ソース列を表示します。  
   
--   **変換先**  
+-   **宛先**  
     マップされる変換先列を確認するか、別の列を選択します。
     
     ソース テーブルからすべての列をコピーする必要はありません。 コピーしない列については、 **[変換先]** を選択すると、列のサブセットのみをコピーできます。 列をマップする前に、マップされないすべての列を無視する必要があります。  
   
--   **型**  
+-   **Type**  
     変換先列のデータ型を確認するか、別のデータ型を選択します。
   
 -   **NULL 値の使用**  
@@ -108,7 +108,7 @@ autonumber 列または ID 列があるデータをエクスポートする場�
 -    **[精度]**  
     桁数を参照して、変換先列での数値データの有効桁数を指定します (該当する場合)。  
   
- -   **[スケール]**  
+ -   **スケール**  
     小数点以下の桁数を参照して、変換先列での数値データの小数点以下の精度を指定します (該当する場合)。  
   
 ## <a name="whats-next"></a>次の操作  

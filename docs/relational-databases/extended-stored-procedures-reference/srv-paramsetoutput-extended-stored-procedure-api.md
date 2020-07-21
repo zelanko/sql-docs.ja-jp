@@ -1,6 +1,6 @@
 ---
-title: srv_paramsetoutput (拡張ストアド プロシージャ API) | Microsoft Docs
-ms.custom: ''
+title: srv_paramsetoutput (拡張ストアド プロシージャ API)
+ms.custom: seo-dt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1060fb2babf5578eb161ec47802297deb94045f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 5b00f2fedd9c1053e332aaee8691207fbf990649
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755956"
 ---
 # <a name="srv_paramsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (拡張ストアド プロシージャ API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  

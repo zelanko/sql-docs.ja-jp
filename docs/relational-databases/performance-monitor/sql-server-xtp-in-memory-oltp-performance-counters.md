@@ -1,6 +1,6 @@
 ---
-title: SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター | Microsoft Docs
-ms.custom: ''
+title: XTP (インメモリ OLTP) パフォーマンス カウンター
+ms.custom: seo-dt-2019
 ms.date: 04/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2ed90197774cb7be9d8229aa6b5e79ae811fbd88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84d07784cbd167f036cfe4540faf93784ba762cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715231"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP (インメモリ OLTP) パフォーマンス カウンター
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、パフォーマンス モニターがインメモリ OLTP のアクティビティを監視するために使用できるオブジェクトとカウンターが用意されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降では、オブジェクトとカウンターがマシン上で指定した [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]バージョンのすべてのインスタンス間で共有されます。  
   
  以前は、オブジェクトおよびカウンター名は *XTP Cursors*のように、 **XTP**から始まりました。 現在は、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]から始まり、名前は次のようなパターンとなります。  
   
--   **SQL Server** *\<version>* **XTP Cursors**  
+-   **SQL Server** *\<version>* の **XTP Cursors**  
   
  *\<version>* の値は、2016 のようになります。  
   
-##  <a name="SQLServerPOs"></a> SQL Server XTP パフォーマンス オブジェクト  
+##  <a name="sql-server-xtp-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server XTP パフォーマンス オブジェクト  
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンス オブジェクトについて説明します。  
   
-|パフォーマンス オブジェクト|[説明]|  
+|パフォーマンス オブジェクト|説明|  
 |------------------------|-----------------|  
 |[SQL Server の XTP Cursors](../../relational-databases/performance-monitor/sql-server-xtp-cursors.md)|SQL Server XTP Cursors パフォーマンス オブジェクトには、インメモリ OLTP エンジンの内部カーソルに関連するカウンターが含まれています。 カーソルとは、インメモリ OLTP エンジンが [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを処理するために使用する、低レベルの構成要素です。 このため、通常はユーザー側でカーソルを直接管理することはありません。|  
 |[SQL Server XTP Databases](../../relational-databases/performance-monitor/sql-server-xtp-databases.md)|SQL Server XTP Databases パフォーマンス オブジェクトは、インメモリ OLTP データベース固有のカウンターを提供します。|  

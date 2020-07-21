@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: e0d552c02131bd630c4ca828050278cd7f3105cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd6c55f439b9d95473c5e36ea88cc7c5e1fb555e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122863"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "72915993"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Azure にデプロイされた SQL Server Integration Services (SSIS) パッケージを検証する
 
@@ -45,8 +45,8 @@ SQL Server Integration Services (SSIS) プロジェクトを Azure サーバー�
 |--------------------|----------|-----------|-----|-----------|-------------------|
 | Ado                | âœ“        |           |     | âœ“         | âœ“                 |
 | AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |
-| Cache              |          | âœ“         | âœ“   |           |                   |
-| [エクスポート]              |          | âœ“         | âœ“   |           |                   |
+| キャッシュ              |          | âœ“         | âœ“   |           |                   |
+| Excel              |          | âœ“         | âœ“   |           |                   |
 | ファイル               |          | âœ“         | âœ“   |           |                   |
 | FlatFile           |          | âœ“         | âœ“   |           |                   |
 | Ftp                |          |           |     | âœ“         |                   |
@@ -83,5 +83,5 @@ SQL Server Integration Services (SSIS) プロジェクトを Azure サーバー�
 
 Orc 形式は HDFS ターゲットと Azure Data Lake Store ターゲットでサポートされていません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 Azure でパッケージ実行をスケジュールする方法については、「[Azure で SSIS パッケージのスケジュールを設定する](ssis-azure-schedule-packages.md)」を参照してください。

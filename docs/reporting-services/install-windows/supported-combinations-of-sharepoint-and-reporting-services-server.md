@@ -1,8 +1,10 @@
 ---
 title: SharePoint および Reporting Services サーバーのサポートされる組み合わせ | Microsoft Docs
-ms.date: 07/01/2017
+description: SharePoint モードでインストールされている SQL Server Reporting Services レポート サーバーには、SharePoint のバージョン、および SharePoint サーバーにインストールする SharePoint 製品の SQL Server Reporting Services アドイン (rsSharePoint.msi) が必要です。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
@@ -12,12 +14,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea2af6514d04d24ce77bb88f391350d7c33059eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513364"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74866065"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>SharePoint および Reporting Services サーバーのサポートされる組み合わせ
 
@@ -42,17 +44,18 @@ SharePoint モードでインストールされている SQL Server Reporting Se
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
 |3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
 |4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
-|5|SQL Server 2012 SP3|SQL Server 2014 および SQL Server 2012 SP3|SharePoint 2013|
-|6|SQL Server 2012 SP2|SQL Server 2014 および SQL Server 2012 SP2|SharePoint 2013|
-|7|SQL Server 2012 SP1|SQL Server 2014 および SQL Server 2012 SP1|SharePoint 2013|
-|8|SQL Server 2012 および SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
-|9|SQL Server 2012|SQL Server 2012|SharePoint 2010|
-|10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
-|11|SQL Server 2008 R2|SQL Server 2012 および SQL Server 2012 SP1 以降|SharePoint 2010|
-|12|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
-|13|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
-|14|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
-|15|SQL Server 2008 SP2|SQL Server 2008 および SQL Server 2008 SP2|SharePoint 2007|
+|5|SQL Server 2012 SP4|SQL Server 2014 および SQL Server 2012 SP4|SharePoint 2013|
+|6|SQL Server 2012 SP3|SQL Server 2014 および SQL Server 2012 SP3|SharePoint 2013|
+|7|SQL Server 2012 SP2|SQL Server 2014 および SQL Server 2012 SP2|SharePoint 2013|
+|8|SQL Server 2012 SP1|SQL Server 2014 および SQL Server 2012 SP1|SharePoint 2013|
+|9|SQL Server 2012 および SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
+|10|SQL Server 2012|SQL Server 2012|SharePoint 2010|
+|11|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
+|12|SQL Server 2008 R2|SQL Server 2012 および SQL Server 2012 SP1 以降|SharePoint 2010|
+|13|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
+|14|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
+|15|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
+|16|SQL Server 2008 SP2|SQL Server 2008 および SQL Server 2008 SP2|SharePoint 2007|
 
  \* 例外: Power View の統合はサポートされていません。
 
@@ -72,7 +75,7 @@ SharePoint モードでインストールされている SQL Server Reporting Se
 
 - **アップグレード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインと共にインストールされた SharePoint 2010 を SharePoint 2013 にインプレース アップグレードすることはできません。 SharePoint 2013 には、SQL Server 2012 SP1 以降の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインとレポート サーバーが必要です。 アップグレードの詳細については、「 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
  [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-components-of-sql-server-2017.md)   

@@ -11,27 +11,30 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 149e83acd2a8e0e6d3022d74f929584190c91374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f5f015d4a0689a17a900bc711a6ccc9c6d7f4aff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85636891"
 ---
-# <a name="mssqlserver8992"></a>MSSQLSERVER_8992
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+|Item|値|
+|:---|:---|
 |製品名|SQL Server|  
 |イベント ID|8992|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC3_CHECK_CATALOG|  
 |メッセージ テキスト|カタログ メッセージ ERROR Level LEVEL の確認、状態 STATE:MESSAGE|  
-  
+
+> [!NOTE]
+> 8992 エラー メッセージでは、実際の不整合に関する別の特定のメッセージ (3851 から 3858 まで) が参照されます。
+
 ## <a name="explanation"></a>説明  
 DBCC CHECKCATALOG または DBCC CHECKDB により、指定されたオブジェクトの不整合がシステム メタデータ テーブルで検出されました。 つまり、記録されたオブジェクト ID とエラー メッセージで指定されたオブジェクトの間に不整合があります。  
   
@@ -40,23 +43,18 @@ DBCC CHECKCATALOG または DBCC CHECKDB により、指定されたオブジェ
 このエラーは、SQL Server 2000 から SQL Server 2005 以降にアップグレードされたデータベースに対して DBCC CHECKDB を実行しているときに発生することがあります。 SQL Server 2000 では、DBCC CHECKDB に DBCC CHECKCATALOG 機能がありませんでした。そのため、SQL Server 2000 のデータベースに対して DBCC CHECKCATALOG を指定して実行しない限り、アップグレード前にこのエラーはキャッチされません。  
   
 エラー 8992 と共に、次のいずれかのエラーが表示される場合があります。  
-  
-メッセージ 3851 - システム テーブル sys.%ls%ls に無効な行 (%ls) が見つかりました。  
-  
-メッセージ 3852 - sys.%ls%ls の行 (%ls) と一致する行 (%ls) が sys.%ls%ls にありません。  
-  
-3853 - sys.%ls%ls の行 (%ls) の属性 (%ls) には、sys.%ls%ls に一致する行 (%ls) がありません。  
-  
-3854 - 属性 (%ls) (sys.%ls%ls の行 (%ls)) には、sys.%ls%ls に一致する行 (%ls) がありますが、無効です。  
-  
-3855 - 属性 (%ls) が存在しますが、sys.%ls%ls の行 (%ls) がありません。  
-  
-3856 - 属性 (%ls) が存在しますが、sys.%ls%ls の行 (%ls) では使用できません。  
-  
-3857 - 属性 (%ls) が必要ですが、sys.%ls%ls の行 (%ls) にはありません。  
-  
-3858 - sys.%ls%ls の行 (%ls) の属性 (%ls) には、無効な値が含まれています。  
-  
+
+|メッセージ ID|メッセージ テキスト|
+|:---|:---|
+|3851|システム テーブル sys.%ls%ls に無効な行 (%ls) が見つかりました。|
+|3852|sys.%ls%ls の行 (%ls) と一致する行 (%ls) が sys.%ls%ls にありません。|
+|3853|sys.%ls%ls の行 (%ls) の属性 (%ls) には、sys.%ls%ls に一致する行 (%ls) がありません。|
+|3854|sys.%ls%ls の行 (%ls) の属性 (%ls) には、sys.%ls%ls に一致する行 (%ls) がありますが、無効です。|
+|3855|属性 (%ls) が存在しますが、sys.%ls%ls の行 (%ls) がありません。|
+|3856|属性 (%ls) が存在しますが、sys.%ls%ls の行 (%ls) では使用できません。|
+|3857|属性 (%ls) が必要ですが、sys.%ls%ls の行 (%ls) にはありません。|
+|3858|sys.%ls%ls の行 (%ls) の属性 (%ls) には、無効な値が含まれています。|
+
 ## <a name="user-action"></a>ユーザーの操作  
   
 ### <a name="drop-and-re-create-the-specified-object"></a>指定されたオブジェクトを削除して再作成する  
@@ -72,8 +70,22 @@ DBCC CHECKCATALOG または DBCC CHECKDB により、指定されたオブジェ
 このエラーを修正することはできません。  バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   
 ### <a name="do-not-manually-update-system-tables"></a>システム テーブルを手動で更新しない  
-システム テーブルは手動で更新しないでください。 SQL Server では、システム テーブルを手動で変更することはサポートされていません。 SQL Server データベース内のシステム テーブルを更新すると、2 つのイベント (イベント ID 17659 とイベント ID 3859) がログに記録されます。 詳細については、サポート技術情報の資料 2688307「SQL Server データベース内のシステム テーブルを更新するとイベント ID 17659 とイベント ID 3859 がログに記録される」を参照してください。  
-  
-## <a name="see-also"></a>参照  
-[SQL Server データベース内のシステム テーブルを更新するとイベント ID 17659 とイベント ID 3859 がログに記録される](https://support.microsoft.com/kb/2688307/EN-US)  
+
+システム テーブルは手動で更新しないでください。 SQL Server では、システム テーブルを手動で変更することはサポートされていません。 SQL Server データベース内のシステム テーブルを更新すると、次のイベントがログに記録されます。
+
+#### <a name="when-a-system-table-is-manually-updated"></a>システム テーブルが手動で更新された場合
+
+メッセージ 17659: 警告: システム テーブル <id> がデータベース <id> で直接更新されました。キャッシュの一貫性が維持されていない可能性があります。 SQL Server を再起動してください。
+
+#### <a name="starting-a-database-with-a-system-table-that-was-manually-updated"></a>手動で更新されたシステム テーブルを使用してデータベースを開始する
+
+メッセージ 3859: 警告: システム カタログがデータベース ID <id> で直接更新されました。最新の更新は date_time で行われました。
+
+#### <a name="when-you-execute-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>システム テーブルが手動で更新された後に DBCC_CHECKDB コマンドを実行する場合
+
+メッセージ 3859: 警告: システム カタログがデータベース ID <id> で直接更新されました。最新の更新は date_time で行われました。  
+
+## <a name="see-also"></a>参照
+
+[システム ベース テーブル](../system-tables/system-base-tables.md)
   

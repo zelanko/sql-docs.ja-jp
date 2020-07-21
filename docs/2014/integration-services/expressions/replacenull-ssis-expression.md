@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 884561561f9b5a37d69f7246b446d547599920b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 42111e6a6c322808decd1f807646e8905bc59551
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897509"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437149"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (SSIS 式)
   1 番目の式パラメーターの値が NULL の場合、2 番目の式パラメーターの値を返します。NULL でない場合は、1 番目の式の値を返します。  
@@ -36,7 +35,7 @@ REPLACENULL(expression 1,expression 2)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 -   *expression 2* の長さは 0 にできます。  
   

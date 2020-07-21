@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9eb59f03b1526153bec88039a0d619bac8ad6368
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250641"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066981"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server: General Statistics オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:General Statistics** オブジェクトには、現在の接続数や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行しているコンピューターとの間で接続または切断を行っている 1 秒あたりのユーザー数など、一般的なサーバー全体の利用状況を監視するためのカウンターがあります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスとの間で接続と切断を行うクライアントの数が多い、大規模オンライン トランザクション処理 (OLTP) で作業している場合に便利です。  
   
- 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** カウンターについて説明します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** カウンターについて説明します。  
   
 |SQL Server General Statistics カウンター|説明|  
 |--------------------------------------------|-----------------|  
@@ -47,7 +46,7 @@ ms.locfileid: "63250641"
 |**Temp Tables For Destruction**|クリーンアップ システム スレッドによって破棄されるのを待機している一時テーブル/テーブル変数の数。|  
 |**Trace Event Notifications Queue**|Service Broker によって送信されるのを内部キューで待機しているトレース イベント通知インスタンスの数。|  
 |**トランザクション**|参加中のトランザクションの数 (ローカル、DTC、およびバインド済みのすべてのトランザクション)。|  
-|**User Connections**|SQL Server に現在接続しているユーザー数。|  
+|**ユーザー接続**|SQL Server に現在接続しているユーザー数。|  
   
 ## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  

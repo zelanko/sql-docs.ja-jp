@@ -1,6 +1,7 @@
 ---
-title: プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: プライマリ ログとセカンダリ ログ配布のロールの変更
+description: SQL Server ログ配布ソリューションに対してプライマリ データベースとして機能するようにセカンダリ データベースを構成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d1263cec8cf59826357388a148e0bb19bc332bdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b2a032663343223bcfab58075343e61c72e1df7c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696780"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布構成をセカンダリ サーバーにフェールオーバーした後、プリイマリ データベースとして機能するようにセカンダリ データベースを構成できます。 その後、プライマリ データベースとセカンダリ データベースを必要に応じて切り替えることができます。  
   
 ## <a name="performing-the-initial-role-change"></a>初期ロール切り替えの実行  
@@ -42,17 +43,17 @@ ms.locfileid: "68057917"
   
     3.  **[セカンダリ データベースの設定]** ダイアログ ボックスで、 **[いいえ、セカンダリ データベースは初期化されています]** を選択します。  
   
-4.  ログ配布モニターが以前のログ配布構成で有効になっていた場合は、新しいログ配布構成を監視するようにログ配布モニターを再構成します。  *database_name* をデータベースの名前に置き換えて、次のコマンドを実行します。  
+4.  ログ配布モニターが以前のログ配布構成で有効になっていた場合は、新しいログ配布構成を監視するようにログ配布モニターを再構成します。  threshold_alert_enabled を 1 に設定して、restore_threshold を超えたらアラートが生成されるように指定します。 *database_name* をデータベースの名前に置き換えて、次のコマンドを実行します。  
   
     1.  **新しいプライマリ サーバーで、**  
   
          次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new primary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   
@@ -60,11 +61,11 @@ ms.locfileid: "68057917"
   
          次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new secondary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   
@@ -80,7 +81,7 @@ ms.locfileid: "68057917"
 > [!IMPORTANT]  
 >  セカンダリ データベースをプライマリ データベースに変更するときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、新しいプライマリ サーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要がある場合があります。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   

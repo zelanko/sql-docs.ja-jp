@@ -1,7 +1,7 @@
 - name: SQL Server と対話するプログラミング
   href: ../connect/homepage-sql-connection-programming.md
-- name: SQL Server へようこそ >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+- name: SQL Server へようこそ >
+  href: ../sql-server/index.yml
 - name: SQL Server ドライバー
   href: ../connect/sql-connection-libraries.md
 - name: SQL Server のドライバーの履歴
@@ -11,18 +11,140 @@
 - name: ADO.NET
   items:
     - name: Microsoft ADO.NET for SQL Server
-      href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
-    - name: '手順 1:ADO.NET 開発用に開発環境を構成する'
-      href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
-    - name: '手順 2:ADO.NET 開発用の SQL データベースを作成する'
-      href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
-    - name: '手順 3:ADO.NET を使用した SQL への接続を概念実証する'
-      href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
-    - name: '手順 4:ADO.NET で SQL に弾性的に接続する'
-      href: ../connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md
+      href: ../connect/ado-net/microsoft-ado-net-sql-server.md
+    - name: SqlClient ドライバーの使用を開始する
+      href: ../connect/ado-net/get-started-sqlclient-driver.md
+      items:
+        - name: '手順 1:ADO.NET 開発用に開発環境を構成する'
+          href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
+        - name: '手順 2:ADO.NET 開発用の SQL データベースを作成する'
+          href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
+        - name: '手順 3:ADO.NET を使用した SQL への接続を概念実証する'
+          href: ../connect/ado-net/step-3-connect-sql-ado-net.md
+        - name: '手順 4:ADO.NET で SQL に弾性的に接続する'
+          href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
+    - name: SqlClient ドライバーの概要
+      href: ../connect/ado-net/overview-sqlclient-driver.md
+      items:
+        - name: Microsoft.Data.SqlClient 名前空間の概要
+          href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
+        - name: Microsoft SqlClient Data Provider for SQL Server をダウンロードする
+          href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: SqlClient ドライバーのサポート ライフサイクル
+          href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
+        - name: 追加の SqlClient ドライバー情報の検索
+          href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: SQL Server と ADO.NET
+      href: ../connect/ado-net/sql/index.md
+      items:
+        - name: SQL Server のセキュリティ
+          href: ../connect/ado-net/sql/sql-server-security.md
+          items:
+            - name: SQL Server での認証
+              href: ../connect/ado-net/sql/authentication-sql-server.md
+            - name: SQL Server におけるアプリケーション セキュリティのシナリオ
+              href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
+              items:
+                - name: SQL Server での安全な動的 SQL の作成
+                  href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
+            - name: SQL Server Express のセキュリティ
+              href: ../connect/ado-net/sql/sql-server-express-security.md
+        - name: SQL Server のデータ型と ADO.NET
+          href: ../connect/ado-net/sql/sql-server-data-types.md
+          items:
+            - name: SqlTypes とデータセット
+              href: ../connect/ado-net/sql/sqltypes-dataset.md
+            - name: null 値の処理
+              href: ../connect/ado-net/sql/handle-null-values.md
+            - name: GUID と uniqueidentifier 値の比較
+              href: ../connect/ado-net/sql/compare-guid-uniqueidentifier-values.md
+            - name: 日付型と時刻型のデータ
+              href: ../connect/ado-net/sql/date-time-data.md
+            - name: 大きな UDT
+              href: ../connect/ado-net/sql/large-udts.md
+            - name: SQL Server における XML データ
+              href: ../connect/ado-net/sql/xml-data-sql-server.md
+              items:
+                - name: SQL XML 列の値
+                  href: ../connect/ado-net/sql/sql-xml-column-values.md
+                - name: パラメーターとしての XML 値の指定
+                  href: ../connect/ado-net/sql/specify-xml-values-parameters.md
+        - name: SQL Server のバイナリ データと大きな値のデータ
+          href: ../connect/ado-net/sql/sql-server-binary-large-value-data.md
+          items:
+            - name: ADO.NET での大きな値 (max) データの変更
+              href: ../connect/ado-net/sql/modify-large-value-max-data.md
+            - name: FILESTREAM データ
+              href: ../connect/ado-net/sql/filestream-data.md
+            - name: ファイルからのイメージの挿入
+              href: ../connect/ado-net/sql/insert-image-file.md
+        - name: ADO.NET での SQL Server のデータ操作
+          href: ../connect/ado-net/sql/sql-server-data-operations.md
+          items:
+            - name: SQL Server での一括コピー操作
+              href: ../connect/ado-net/sql/bulk-copy-operations-sql-server.md
+              items:
+                - name: 一括コピーのセットアップ例
+                  href: ../connect/ado-net/sql/bulk-copy-example-setup.md
+                - name: 単一の一括コピー操作
+                  href: ../connect/ado-net/sql/single-bulk-copy-operations.md
+                - name: 複数の一括コピー操作
+                  href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
+                - name: トランザクションと一括コピー操作
+                  href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+            - name: 複数のアクティブな結果セット (MARS)
+              href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
+              items:
+                - name: 複数のアクティブな結果セットの有効化
+                  href: ../connect/ado-net/sql/enable-multiple-active-result-sets.md
+                - name: データの操作
+                  href: ../connect/ado-net/sql/manipulate-data.md
+            - name: 非同期操作
+              href: ../connect/ado-net/sql/asynchronous-operations.md
+              items:
+                - name: コールバックを使用する Windows アプリケーション
+                  href: ../connect/ado-net/sql/windows-applications-callbacks.md
+                - name: 待機ハンドルを使用する ASP.NET アプリケーション
+                  href: ../connect/ado-net/sql/aspnet-apps-use-wait-handles.md
+                - name: コンソール アプリケーションでのポーリング
+                  href: ../connect/ado-net/sql/poll-console-applications.md
+            - name: テーブル値パラメーター
+              href: ../connect/ado-net/sql/table-valued-parameters.md
+        - name: SQL Server の機能と ADO.NET
+          href: ../connect/ado-net/sql/sql-server-features-adonet.md
+          items:
+            - name: SQL Server のインスタンスの列挙 (ADO.NET)
+              href: ../connect/ado-net/sql/enumerate-instances-sql-server.md
+            - name: SQL Server のプロバイダー統計情報
+              href: ../connect/ado-net/sql/provider-statistics-sql-server.md
+            - name: SQL Server Express のユーザー インスタンス
+              href: ../connect/ado-net/sql/sql-server-express-user-instances.md
+            - name: SQL Server のデータベース ミラーリング
+              href: ../connect/ado-net/sql/database-mirroring-sql-server.md
+            - name: コンテキスト接続
+              href: ../connect/ado-net/sql/context-connection.md
+            - name: SQL Server でのクエリ通知
+              href: ../connect/ado-net/sql/query-notifications-sql-server.md
+              items:
+                - name: クエリ通知の有効化
+                  href: ../connect/ado-net/sql/enable-query-notifications.md
+                - name: ASP.NET アプリケーションでの SqlDependency
+                  href: ../connect/ado-net/sql/sqldependency-aspnet-app.md
+                - name: SqlDependency を使用した変更の検出
+                  href: ../connect/ado-net/sql/detect-changes-sqldependency.md
+                - name: SqlCommand の実行と SqlNotificationRequest
+                  href: ../connect/ado-net/sql/sqlcommand-execution-sqlnotificationrequest.md
+            - name: SQL Server でのスナップショット分離
+              href: ../connect/ado-net/sql/snapshot-isolation-sql-server.md
+            - name: 高可用性、ディザスター リカバリーのための SqlClient のサポート
+              href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
+            - name: SqlClient による LocalDB のサポート
+              href: ../connect/ado-net/sql/sqlclient-support-localdb.md
+            - name: SqlClient による Always Encrypted のサポート
+              href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
 - name: JDBC
   items:
-    - name: Microsoft SQL Server 用 JDBC Driver
+    - name: SQL Server 用 Microsoft JDBC ドライバー
       href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md
     - name: JDBC Driver API リファレンス
       href: ../connect/jdbc/reference/jdbc-driver-api-reference.md
@@ -2387,8 +2509,6 @@
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: JDBC Driver の展開
           href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: Microsoft JDBC Driver の再配布
-          href: ../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md
         - name: JDBC ドライバーの追加情報の検索
           href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
         - name: Microsoft SQL Server 用 JDBC Driver のサポート表
@@ -2406,14 +2526,14 @@
           href: ../connect/jdbc/validating-user-input.md
         - name: アプリケーション セキュリティ
           href: ../connect/jdbc/application-security.md
-        - name: SSL 暗号化の使用
+        - name: 暗号化の使用
           href: ../connect/jdbc/using-ssl-encryption.md
           items:
-            - name: SSL のサポートについて
+            - name: 暗号化のサポートについて
               href: ../connect/jdbc/understanding-ssl-support.md
-            - name: SSL 暗号化を使用した接続
+            - name: 暗号化を使用した接続
               href: ../connect/jdbc/connecting-with-ssl-encryption.md
-            - name: SSL 暗号化のためのクライアントの構成
+            - name: 暗号化のためのクライアントの構成
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: FIPS モード
           href: ../connect/jdbc/fips-mode.md
@@ -2510,6 +2630,9 @@
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
         - name: JDBC ドライバーで Always Encrypted を使用する
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
+          items:
+            - name: セキュア エンクレーブを使用する Always Encrypted
+              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
         - name: ガイド記事
           items:
             - name: SQL でのステートメントの使用
@@ -2649,10 +2772,12 @@
       items:
         - name: システム要件
           href: ../connect/odbc/linux-mac/system-requirements.md
-        - name: ドライバー マネージャーのインストール
+        - name: ドライバー マネージャーをインストールする
           href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-        - name: Microsoft ODBC Driver for SQL Server をインストールする
+        - name: ODBC ドライバーをインストールする (Linux)
           href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+        - name: ODBC ドライバーをインストールする (macOS)
+          href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
         - name: 機能ガイド
           items:
             - name: 接続文字列のキーワードとデータ ソース名 (DSN)
@@ -2795,7 +2920,7 @@
                     - name: ODBC アーキテクチャ
                       href: ../odbc/reference/odbc-architecture.md
                       items:
-                        - name: '[アプリケーション]'
+                        - name: アプリケーション
                           href: ../odbc/reference/applications.md
                         - name: ドライバー マネージャー
                           href: ../odbc/reference/the-driver-manager.md
@@ -3322,7 +3447,7 @@
                               href: ../odbc/reference/develop-app/setting-the-transaction-isolation-level.md
                             - name: スクロール可能なカーソルとトランザクション分離
                               href: ../odbc/reference/develop-app/scrollable-cursors-and-transaction-isolation.md
-                        - name: コンカレンシー制御
+                        - name: 同時実行制御
                           href: ../odbc/reference/develop-app/concurrency-control.md
                           items:
                             - name: コンカレンシーの種類
@@ -3451,7 +3576,7 @@
                         - name: 診断ツール
                           href: ../odbc/reference/develop-app/diagnostic-tools.md
                           items:
-                            - name: 追跡
+                            - name: トレース
                               href: ../odbc/reference/develop-app/tracing.md
                               items:
                                 - name: トレース DLL
@@ -3488,7 +3613,7 @@
                                   href: ../odbc/reference/develop-app/types-of-drivers.md
                                 - name: 互換性マトリックス
                                   href: ../odbc/reference/develop-app/compatibility-matrix.md
-                            - name: 新しい機能
+                            - name: 新機能
                               href: ../odbc/reference/develop-app/new-features.md
                               items:
                                 - name: ODBC 3.x アプリケーション用のブロック カーソル、スクロール可能なカーソル、および下位互換性
@@ -3996,7 +4121,7 @@
                               href: ../odbc/reference/appendixes/sql-to-c-bit.md
                             - name: 'SQL から C へ: 文字'
                               href: ../odbc/reference/appendixes/sql-to-c-character.md
-                            - name: 'SQL から C へ: date'
+                            - name: 'SQL から C へ: Date'
                               href: ../odbc/reference/appendixes/sql-to-c-date.md
                             - name: 'SQL から C へ: 日付と時刻の間隔'
                               href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
@@ -4021,7 +4146,7 @@
                               href: ../odbc/reference/appendixes/c-to-sql-bit.md
                             - name: 'C から SQL へ: 文字'
                               href: ../odbc/reference/appendixes/c-to-sql-character.md
-                            - name: 'C から SQL へ: date'
+                            - name: 'C から SQL へ: Date'
                               href: ../odbc/reference/appendixes/c-to-sql-date.md
                             - name: 'C から SQL へ: 日付と時刻の間隔'
                               href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
@@ -4947,7 +5072,7 @@
       href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
     - name: OLE DB Driver for SQL Server の詳細情報の検索
       href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
-    - name: '[機能]'
+    - name: 特徴
       href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
       items:
         - name: 拡張イベント ログの診断情報へのアクセス
@@ -4998,7 +5123,7 @@
           href: ../connect/oledb/features/working-with-query-notifications.md
         - name: スナップショット分離を使用した作業
           href: ../connect/oledb/features/working-with-snapshot-isolation.md
-    - name: '[アプリケーション]'
+    - name: アプリケーション
       href: ../connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server.md
       items:
         - name: OLE DB Driver for SQL Server のコンポーネント
@@ -5246,10 +5371,10 @@
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
                 - name: 'ISSCommandWithParameters::SetParameterProperties'
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
-            - name: 操作方法
+            - name: 方法
               href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
               items:
-                - name: '[結果]'
+                - name: 結果
                   href: ../connect/oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md
                   items:
                     - name: ユーザー定義関数の実行とリターン コードの処理
@@ -5323,7 +5448,7 @@
           href: ../connect/oledb/help-topics/sql-server-login-dialog.md
         - name: ユニバーサル データ リンク (UDL) の構成
           href: ../connect/oledb/help-topics/data-link-pages.md
-- name: PHP (PHP)
+- name: PHP
   items:
     - name: Microsoft SQL Server 用 Drivers for PHP
       href: ../connect/php/microsoft-php-driver-for-sql-server.md
@@ -5462,6 +5587,10 @@
           href: ../connect/php/logging-activity.md
         - name: SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する
           href: ../connect/php/using-always-encrypted-php-drivers.md
+        - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を SQL Server 用 PHP ドライバー
+          href: ../connect/php/always-encrypted-secure-enclaves.md
+        - name: システム ロケール以外の設定
+          href: ../connect/php/non-system-locale-settings.md
         - name: 定数 (Microsoft Drivers for PHP for SQL Server)
           href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
         - name: SQLSRV ドライバー API リファレンス
@@ -6097,7 +6226,7 @@
               href: ../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md
             - name: ログ ファイルの使用領域の最小化
               href: ../ado/guide/remote-data-service/minimizing-log-file-space-usage.md
-    - name: '付録 A: [プロバイダー]'
+    - name: '付録 A: プロバイダー'
       href: ../ado/guide/appendixes/appendix-a-providers.md
       items:
         - name: Microsoft Cursor Service for OLE DB
@@ -7503,7 +7632,7 @@
               href: ../ado/reference/adox-api/parentcatalog-property-example-vc.md
             - name: PrimaryKey および Unique プロパティの例 (VC++)
               href: ../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md
-    - name: '非推奨: RDS の API リファレンス'
+    - name: '非推奨:RDS の API リファレンス'
       href: ../ado/reference/rds-api/rds-api-reference.md
     - name: RDS オブジェクト
       href: ../ado/reference/rds-api/rds-objects.md

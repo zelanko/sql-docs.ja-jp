@@ -1,6 +1,7 @@
 ---
-title: トランザクション アーティクルに変更を反映する方法の指定 | Microsoft Docs
-ms.custom: ''
+title: 変更の反映方法の指定 (トランザクション)
+description: SQL Server でトランザクション パブリケーションに対して変更の反映方法を指定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f50946b1540300bafbae9cac9b59b21dbb7eddf5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769342"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159400"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>トランザクション アーティクル - 変更の反映方法の指定
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   トランザクション レプリケーションを使用すると、パブリッシャーからサブスクライバーに変更を反映する方法を指定できます。 パブリッシュされた各テーブルに対して、次の 4 つの方法のいずれかを指定して、各操作 (INSERT、UPDATE、または DELETE) をサブスクライバーに反映できます。  
   
 -   トランザクション レプリケーションのスクリプトを作成し、その後、ストアド プロシージャを呼び出して変更をサブスクライバーに反映するように指定します (既定値)。  
@@ -45,7 +46,7 @@ ms.locfileid: "68769342"
   
 -   **sp_MSdel_\<** *tablename* **>** 。削除処理を行います。  
   
- このプロシージャで使用される **\<** _tablename_ **>** は、アーティクルがパブリケーションにどのように追加されたか、およびサブスクリプション データベースに所有者が異なる同じ名前のテーブルが含まれているかどうかに応じて異なります。  
+ このプロシージャで使用される **\<**_tablename_**>** は、アーティクルがパブリケーションにどのように追加されたか、およびサブスクリプション データベースに所有者が異なるものの同じ名前のテーブルが含まれているかどうかに応じて異なります。  
   
  これらのすべてのプロシージャは、パブリケーションにアーティクルを追加するときに指定したカスタム プロシージャと置き換えることができます。 カスタム プロシージャは、サブスクライバーでの行の更新時にデータを監査テーブルに挿入するなど、アプリケーションにカスタム ロジックが必要な場合に使用されます。 カスタム ストアド プロシージャの指定の詳細については、上記のトピックを参照してください。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68769342"
   
 -   スキーマの変更をパブリッシュされたテーブルに加える場合は、カスタム プロシージャを再生成する必要があります。 詳細については、「[カスタム トランザクション プロシージャの再生成によるスキーマ変更の反映](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)」を参照してください。  
   
--   ディストリビューション エージェントの **-SubscriptionStreams** パラメーターに対して 1 を超える値を使用した場合は、主キー列に対する更新が成功したことを確認する必要があります。 例:  
+-   ディストリビューション エージェントの **-SubscriptionStreams** パラメーターに対して 1 を超える値を使用した場合は、主キー列に対する更新が成功したことを確認する必要があります。 次に例を示します。  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -150,7 +151,7 @@ old-c1, old-c2, old-c3,... old-cn
 > [!NOTE]  
 >  XCALL は、 **text** 列および **image** 列の前イメージ値が NULL であるという前提で使用してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のプロシージャは、 `Vendor Table` サンプル データベース内の [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] に対して作成された既定のプロシージャです。  
   
 ```  

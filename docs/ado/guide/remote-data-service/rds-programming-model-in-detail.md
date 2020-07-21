@@ -1,5 +1,5 @@
 ---
-title: RDS のプログラミング モデルの詳細 |Microsoft Docs
+title: RDS プログラミングモデルの詳細 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,71 +10,71 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6bf59580985a4c46fa163a00423bb7dd90ad9463
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922527"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747754"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS のプログラミング モデルの詳細
-以下は、RDS のプログラミング モデルの主な要素です。  
+RDS プログラミングモデルの主な要素は次のとおりです。  
   
 -   RDS.DataSpace  
   
--   RDSServer.DataFactory  
+-   RDSServer DataFactory  
   
 -   RDS.DataControl  
   
--   event  
+-   イベント  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="rdsdataspace"></a>RDS.DataSpace  
- クライアント アプリケーションには、サーバーおよび起動するサーバーのプログラムを指定する必要があります。 代わりに、アプリケーションでは、サーバー プログラムへの参照を受信し、サーバー プログラム自体の場合と同様に、参照を扱うことができます。  
+ クライアントアプリケーションでは、起動するサーバーとサーバープログラムを指定する必要があります。 返されると、アプリケーションはサーバープログラムへの参照を受け取り、その参照をサーバープログラム自体のように扱うことができます。  
   
- RDS オブジェクト モデルでのこの機能を実現する、 [rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。  
+ RDS オブジェクトモデルは、Rds でこの機能を具体化し[ます。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。  
   
- プログラム識別子を持つサーバー プログラムを指定または*ProgID*します。 サーバーを使用して、 *ProgID*およびサーバー コンピューターのレジストリを開始する実際のプログラムに関する情報を検索します。  
+ サーバープログラムには、プログラム識別子 ( *ProgID*) が指定されています。 サーバーは、 *ProgID*とサーバーコンピューターのレジストリを使用して、開始する実際のプログラムに関する情報を検索します。  
   
- RDS は、インターネットまたはイントラネット; の間でリモート サーバーでサーバーのプログラムがあるかによって内部的に区別ローカル エリア ネットワーク; 上のサーバーまたは、すべてのサーバーではなくが代わりに、ローカルのダイナミック リンク ライブラリ (DLL) にします。 情報のクライアントとサーバー間で交換され、クライアント アプリケーションに返される参照の型の具体的な違いは、この区別を決定します。 ただしの観点から、このような区別特殊は意味がありません。 重要なは、使用可能なプログラムの参照を受け取ります。  
+ RDS は、サーバープログラムがインターネットまたはイントラネット経由のリモートサーバー上にあるかどうかによって、内部的に区別を行います。ローカルエリアネットワーク上のサーバーまたは、サーバー上ではなく、ローカルダイナミックリンクライブラリ (DLL) 上にあります。 この区別によって、クライアントとサーバーの間で情報がどのように交換されるかが決まり、クライアントアプリケーションに返される参照の種類が明確に区別されます。 しかし、視点から見ると、この区別は特別な意味を持ちません。 重要なのは、使用可能なプログラム参照を受け取ることだけです。  
   
-## <a name="rdsserverdatafactory"></a>RDSServer.DataFactory  
- RDS は、データ ソースと戻り値に対して SQL クエリを実行できるか、既定のサーバー プログラムを提供します、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトまたは、**レコード セット**オブジェクトし、データ ソースを更新します。  
+## <a name="rdsserverdatafactory"></a>RDSServer DataFactory  
+ RDS には、データソースに対して SQL クエリを実行し、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを返すか、**レコードセット**オブジェクトを取得してデータソースを更新できる既定のサーバープログラムが用意されています。  
   
- RDS オブジェクト モデルでのこの機能を実現する、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト。  
+ RDS オブジェクトモデルは、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを使用してこの機能を具体化します。  
   
- また、このオブジェクトでは、空の作成方法の**レコード セット**オブジェクトをプログラムで入力することができます ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md))、および変換するための別のメソッドを**レコード セット**を Web ページを構築するテキスト文字列にオブジェクト ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md))。  
+ さらに、このオブジェクトには、プログラムによる入力が可能な空の**レコードセット**オブジェクト ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)) と、**レコードセット**オブジェクトをテキスト文字列に変換して Web ページを構築するための別の方法 ([converttostring](../../../ado/reference/rds-api/converttostring-method-rds.md)) を作成するメソッドがあります。  
   
- 標準の接続の一部とのコマンドの動作をオーバーライドする、ADO を使用した、 **RDSServer.DataFactory**で、 **DataFactory**ハンドラーと、接続が含まれているカスタマイズ ファイルは、次のコマンドをおよびセキュリティ パラメーター。  
+ ADO では、 **DataFactory**ハンドラーと、接続、コマンド、およびセキュリティの各パラメーターを含むカスタマイズファイルを使用して、 **DataFactory**の標準接続とコマンド動作の一部をオーバーライドできます。  
   
- サーバーのプログラムとも呼ばれます、*ビジネス オブジェクト*します。 複雑なデータ アクセスや妥当性検査を実行できる、独自のカスタム ビジネス オブジェクトを記述することができます。 インスタンスを作成するには、カスタム ビジネス オブジェクトを記述する場合でも、 **RDSServer.DataFactory**オブジェクトをそのメソッドの一部を使用して、独自のタスクを実行します。  
+ サーバープログラムは、*ビジネスオブジェクト*と呼ばれることもあります。 複雑なデータアクセスや有効性チェックなどを実行できる、独自のカスタムビジネスオブジェクトを作成できます。 カスタムビジネスオブジェクトを作成する場合でも、 **RDSServer**オブジェクトのインスタンスを作成し、そのメソッドを使用して独自のタスクを実行することができます。  
   
 ## <a name="rdsdatacontrol"></a>RDS.DataControl  
- RDS の機能を結合するための手段を提供する、 **rds.DataSpace**と**RDSServer.DataFactory**も簡単に使用するビジュアル コントロールを有効にして、 **Recordset**データ ソースからクエリによって返されるオブジェクト。 RDS は、自動的にサーバー上の情報にアクセスしてビジュアル コントロールで表示可能な限り行う、最も一般的なケースを試行します。  
+ RDS は、Rds の機能を組み合わせる手段を提供し**ます。データ領域と** **RDSServer**を使用すると、データソースのクエリによって返される**レコードセット**オブジェクトをビジュアルコントロールで簡単に使用できるようになります。 RDS は、最も一般的なケースとして、サーバー上の情報へのアクセスを自動的に取得してビジュアルコントロールに表示するために、可能な限り多くのことを試みます。  
   
- RDS オブジェクト モデルでのこの機能を実現する、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
+ RDS オブジェクトモデルは、Rds でこの機能を具体化し[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
- **Rds.DataControl**は 2 つの側面があります。 1 つの側面は、データ ソースに関連します。 コマンドと接続情報を使用して設定した場合、 **Connect**と**SQL**のプロパティ、 **rds.DataControl**が自動的に使用されている、 **rds.DataSpace**既定値への参照を作成する**RDSServer.DataFactory**オブジェクト。 **RDSServer.DataFactory**を使用して、 **Connect**プロパティの値をデータ ソースへの接続を使用、 **SQL**プロパティの値を取得、 **レコード セット**データ ソース、および戻り値から、 **Recordset**オブジェクトを**rds.DataControl**します。  
+ **RDS。DataControl**には2つの側面があります。 データソースに関連する側面が1つあります。 RDS の**Connect**および**SQL**プロパティを使用して、コマンドと接続情報を設定する場合 **。DataControl**は、RDS を自動的に使用し**ます。** RDSServer を作成して、既定の**DataFactory**オブジェクトへの参照を作成します。 次に、 **RDSServer**は**connect**プロパティ値を使用してデータソースに接続し、 **SQL**プロパティ値を使用してデータソースから**レコードセット**を取得し、**レコードセット**オブジェクトを RDS に返し**ます。DataControl**。  
   
- 2 つ目の側面に関連の表示に返される**Recordset**ビジュアル コントロール内の情報。 ビジュアルなコントロールに関連付けることができます、 **rds.DataControl** (バインディングと呼ばれるプロセス) 内で関連付けられている情報にアクセスできると**レコード セット**Microsoft® Internet Explorer で Web ページ上のクエリの結果を表示するオブジェクト。 各**rds.DataControl**オブジェクトは 1 つにバインド**Recordset** (たとえば、テキスト ボックス、コンボ ボックス、グリッド コントロールとなど) 1 つまたは複数のビジュアル コントロールへの 1 つのクエリの結果を表すオブジェクト。 1 つ以上あります**rds.DataControl**各ページ上のオブジェクト。 各**rds.DataControl**オブジェクトが別のデータ ソースに接続できるし、別のクエリの結果が含まれます。  
+ 2番目の側面は、ビジュアルコントロールで返される**レコードセット**情報の表示に関連しています。 ビジュアルコントロールを RDS に関連付けることができ**ます。DataControl** (バインディングと呼ばれるプロセス内) で、関連付けられた**レコードセット**オブジェクトの情報にアクセスし、Microsoft® Internet Explorer の Web ページにクエリ結果を表示します。 各**RDS。DataControl**オブジェクトは、1つのクエリの結果を表す1つの**レコードセット**オブジェクトを1つ以上のビジュアルコントロール (たとえば、テキストボックス、コンボボックス、グリッドコントロールなど) にバインドします。 複数の RDS が存在する場合があり**ます。** 各ページの DataControl オブジェクト。 各**RDS。DataControl**オブジェクトは、別のデータソースに接続し、別のクエリの結果を含めることができます。  
   
- **Rds.DataControl**オブジェクトに移動、並べ替え、および関連付けられている行をフィルター処理の独自のメソッドもあります**Recordset**オブジェクト。 これらのメソッドと同様に、ADO 上のメソッドとして同じ**Recordset**オブジェクト。  
+ **RDS。DataControl**オブジェクトには、関連付けられた**レコードセット**オブジェクトの行を移動、並べ替え、およびフィルター処理するための独自のメソッドもあります。 これらのメソッドは似ていますが、ADO**レコードセット**オブジェクトのメソッドと同じではありません。  
   
 ## <a name="events"></a>イベント  
- RDS では、独自のイベントは、ADO イベント モデルとは無関係の 2 つサポートしています。 [OnReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)イベントが呼び出されるたびに、 **rds.DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)プロパティの変更を非同期操作が正常に完了したら、通知を終了すると、またはエラーが発生しました。 [OnError](../../../ado/reference/rds-api/onerror-event-rds.md)イベントは、その非同期操作中にエラーが発生した場合でもエラーが発生するたびに呼び出されます。  
+ RDS は、ADO イベントモデルに依存しない独自のイベントを2つサポートしています。 [OnReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)イベントは、RDS が呼び出されるたびに呼び出され**ます。DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)プロパティが変更され、非同期操作が正常に完了したか、終了したか、またはエラーが発生したときに通知されます。 [OnError](../../../ado/reference/rds-api/onerror-event-rds.md)イベントは、非同期操作中にエラーが発生した場合でも、エラーが発生するたびに呼び出されます。  
   
 > [!NOTE]
->  Microsoft Internet Explorer では、RDS の 2 つの追加イベント:**詳細**、ことを示します、**レコード セット**機能ですがまだ、行を取得するには、 **詳細について**、ことを示します、 **Recordset**行の取得が完了します。  
+>  Microsoft Internet Explorer では、RDS に2つの追加イベントを提供しています。 **Ondatasetchanged**。これは、**レコードセット**が機能していても行を取得し、 **Ondatasetchanged**で、**レコードセット**が行の取得を完了したことを示します。  
   
-## <a name="see-also"></a>関連項目  
- [RDS のプログラミング モデルとオブジェクト](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
+## <a name="see-also"></a>参照  
+ [オブジェクトを使用した RDS プログラミングモデル](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [領域スペースオブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS の使用方法とセキュリティ](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

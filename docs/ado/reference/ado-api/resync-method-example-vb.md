@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Resync method [ADO], Visual Basic example
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f8ad898c7a02a46b12c546ae11b2387f8da0479e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0ead85b2e2b4dfc23c60dc247f1d9c2bc04979a6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917156"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756385"
 ---
 # <a name="resync-method-example-vb"></a>Resync メソッドの例 (VB)
-この例では、[再同期](../../../ado/reference/ado-api/resync-method.md)静的レコード セット内のデータを更新する方法。  
+この例では、再[同期](../../../ado/reference/ado-api/resync-method.md)メソッドを使用して、静的レコードセット内のデータを更新する方法を示します。  
   
 ```  
 'BeginResyncVB  
@@ -103,6 +103,6 @@ End Sub
 'EndResyncVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Resync メソッド](../../../ado/reference/ado-api/resync-method.md)

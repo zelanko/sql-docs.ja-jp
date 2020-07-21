@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c4b791e77ceea4de4a39245adcaf95cc37aec62
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117126"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392930"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   新しいユーザー定義サーバー ロールを作成します。  
   
@@ -44,14 +44,16 @@ ms.locfileid: "68117126"
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *role_name*  
  作成するサーバー ロールの名前を指定します。  
   
  AUTHORIZATION *server_principal*  
  新しいサーバー ロールを所有するログインです。 ログインを指定しない場合、サーバー ロールは CREATE SERVER ROLE を実行するログインが所有します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー ロールは、サーバー レベルのセキュリティ保護可能なリソースです。 サーバー ロールを作成した後は、GRANT、DENY、および REVOKE を使って、ロールのサーバー レベルの権限を構成します。 サーバー ロールのログインを追加または削除するには、[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md) を使用します。 サーバー ロールを削除するには、[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md) を使用します。 詳細については、「[sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)」を参照してください。  
   
  [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) および [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューに対してクエリを実行することで、サーバー ロールを確認できます。  
@@ -73,7 +75,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
 -   サーバー ロールの所有権を別のサーバー ロールに割り当てるには、割り当て先のサーバー ロールのメンバーシップまたはそのサーバー ロールに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>A. ログインが所有するサーバー ロールを作成する  
  次の例では、ログイン `buyers` が所有するサーバー ロール `BenMiller` を作成します。  

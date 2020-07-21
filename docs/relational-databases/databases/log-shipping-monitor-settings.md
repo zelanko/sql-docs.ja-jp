@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 216fb75c9dcdffc83e8f4f21469aaa9cfc1b11d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4ff8d6e7348ece5f09f9ac529c474a302e30be7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726436"
 ---
 # <a name="log-shipping-monitor-settings"></a>[ログ配布モニターの設定]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、ログ配布監視サーバーのプロパティを構成および変更できます。  
   
- ログ配布の概念については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
+ ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
 ## <a name="options"></a>オプション  
  **[監視サーバー インスタンス]**  

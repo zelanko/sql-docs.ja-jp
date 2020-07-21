@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 604eac1d089c488210db2d95ad92f2d23e09f373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f36908102a09eb1ef1f7a485898da715deb4253b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62789977"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936731"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>可用性グループの強制手動フェールオーバーの実行 (SQLServer)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の PowerShell を使用して、AlwaysOn 可用性グループに対する強制フェールオーバー (データ損失の可能性あり) を実行する方法について説明します。 強制フェールオーバーは、[計画的な手動フェールオーバー](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)を実行できない場合に、ディザスター リカバリーのみを目的として実行する手動フェールオーバーです。 非同期のセカンダリ レプリカに対して強制フェールオーバーを実行した場合、データ損失の可能性があります。 したがって、強制フェールオーバーは、データ損失のリスクを引き受けたうえで、可用性グループに対するサービスを直ちに復旧する必要がある場合のみ実行することを強くお勧めします。  
@@ -32,12 +31,12 @@ ms.locfileid: "62789977"
   
  強制フェールオーバーは、次のような緊急事態が発生した場合に実行する必要があります。  
   
--   WSFC クラスターに対してクォーラムを強制した後 (*"強制クォーラム"*)、各可用性グループに対して強制フェールオーバーを実行する必要があります (このとき、データ損失の可能性もあります)。 強制フェールオーバーが必要なのは、WSFC クラスター値の実際の状態が失われている可能性があるためです。 ただし、強制クォーラムを実行する前にプライマリ レプリカであったレプリカをホストしていたサーバー インスタンスで強制フェールオーバーを実行できる場合、または強制クォーラムを実行する前に同期されていたセカンダリ レプリカに対してフェールオーバーを実行できる場合は、データ損失を回避できます。 詳細については、このトピックの「 [クォーラム強制後のデータ損失を回避できる方法](#WaysToAvoidDataLoss)」を参照してください。  
+-   WSFC クラスターに対してクォーラムを強制した後 ( *"強制クォーラム"* )、各可用性グループに対して強制フェールオーバーを実行する必要があります (このとき、データ損失の可能性もあります)。 強制フェールオーバーが必要なのは、WSFC クラスター値の実際の状態が失われている可能性があるためです。 ただし、強制クォーラムを実行する前にプライマリ レプリカであったレプリカをホストしていたサーバー インスタンスで強制フェールオーバーを実行できる場合、または強制クォーラムを実行する前に同期されていたセカンダリ レプリカに対してフェールオーバーを実行できる場合は、データ損失を回避できます。 詳細については、このトピックの「 [クォーラム強制後のデータ損失を回避できる方法](#WaysToAvoidDataLoss)」を参照してください。  
   
     > [!IMPORTANT]  
     >  クォーラムが強制ではなく通常の方法で再取得される場合、可用性レプリカは通常の方法で復元されます。 クォーラムの再取得後にプライマリ レプリカがまだ使用できない場合は、同期セカンダリ レプリカに対して計画的な手動フェールオーバーを実行できます。  
   
-     強制フォーラムの詳細については、「[WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)」を参照してください。 強制クォーラム後に強制フェールオーバーが必要な理由については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」を参照してください。  
+     強制フォーラムの詳細については、「 [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)の PowerShell を使用して、AlwaysOn 可用性グループに対する強制フェールオーバー (データ損失の可能性あり) を実行する方法について説明します。 強制クォーラム後に強制フェールオーバーが必要な理由については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」を参照してください。  
   
 -   WSFC クラスターに正常なクォーラムがあるときにプライマリ レプリカが使用不能になった場合は、ロールが SECONDARY または RESOLVING 状態である任意のレプリカに、強制フェールオーバー (データ損失の可能性あり) を実行できます。 可能であれば、プライマリ レプリカが失われたときに同期されていた、同期コミット セカンダリ レプリカへの強制フェールオーバーを実行します。  
   
@@ -48,9 +47,9 @@ ms.locfileid: "62789977"
 >  フェールオーバーを強制する場合の前提条件と推奨事項の詳細、および強制フェールオーバーを使用して重大なエラーから復旧するシナリオの例については、この記事の後半にある「[サンプル シナリオ: 重大なエラーから復旧するための強制フェールオーバーの使用](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)」を参照してください。  
   
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   強制フェールオーバーは、Windows server フェールオーバー クラスタリング (WSFC) にクォーラムが存在しない場合のみ実行できません。  
   
@@ -65,13 +64,13 @@ ms.locfileid: "62789977"
     > [!NOTE]  
     >  複数のデータベースにまたがるトランザクションおよび分散トランザクションは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ではサポートされません。 詳細については、「[データベース ミラーリングまたは AlwaysOn 可用性グループではサポートされない複数データベースにまたがるトランザクション &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md)」を参照してください。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   WSFC クラスターにクォーラムがあること。 クラスターにクォーラムが存在しない場合は、「 [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)の PowerShell を使用して、AlwaysOn 可用性グループに対する強制フェールオーバー (データ損失の可能性あり) を実行する方法について説明します。  
   
 -   ロールが SECONDARY または RESOLVING 状態であるレプリカをホストするサーバー インスタンスに接続できる必要があります。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   プライマリ レプリカが実行中である間は、強制フェールオーバーを実行しないでください。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62789977"
   
 -   クライアントが元のプライマリに接続できる場合は、強制フェールオーバーによってスプリット ブレイン動作のリスクが発生します。 強制フェールオーバーを実行する前に、クライアントが元のプライマリ レプリカにアクセスできないようにすることを強くお勧めします。 そうしないと、強制フェールオーバーの実行後に元のプライマリ データベースと現在のプライマリ データベースがそれぞれ、他方とは無関係に更新されることがあります。  
   
-###  <a name="WaysToAvoidDataLoss"></a> クォーラム強制後のデータ損失を回避できる方法  
+###  <a name="potential-ways-to-avoid-data-loss-after-quorum-is-forced"></a><a name="WaysToAvoidDataLoss"></a> クォーラム強制後のデータ損失を回避できる方法  
  クォーラムが失われた後のエラー状態中は、以下に示すように、データ損失を回避できます。  
   
 -   **元のプライマリ レプリカがオンラインになる場合**  
@@ -102,7 +101,7 @@ ms.locfileid: "62789977"
     ```  
   
     > [!CAUTION]  
-    >  復元されるノードがクォーラムの消失時に起動していなかった場合、 **is_failover_ready** は、プライマリ レプリカがオフラインになった時点のクラスターの実際の状態を反映していない可能性があります。 したがって、**is_failover_ready** 値は、エラー発生時のホスト ノードにのみ有効です。 詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」の「クォーラムの強制後に強制フェールオーバーが必要な理由」を参照してください。  
+    >  復元されるノードがクォーラムの消失時に起動していなかった場合、 **is_failover_ready** は、プライマリ レプリカがオフラインになった時点のクラスターの実際の状態を反映していない可能性があります。 したがって、 **is_failover_ready** 値は、エラー発生時のホスト ノードにのみ有効です。 詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」の「クォーラムの強制後に強制フェールオーバーが必要な理由」を参照してください。  
   
      **is_failover_ready** = 1 の場合、データベースはクラスター内で同期済みとマークされ、フェールオーバーの準備ができています。 特定のセカンダリ レプリカのすべてのデータベースで **is_failover_ready** = 1 の場合は、そのセカンダリ レプリカに対して、データ損失なしで強制フェールオーバー (FORCE_FAILOVER_ALLOW_DATA_LOSS) を実行できます。 同期セカンダリ レプリカは、すべてのデータを保持したまま、新しいプライマリ レプリカとしてプライマリ ロールでオンラインになります。  
   
@@ -111,25 +110,25 @@ ms.locfileid: "62789977"
     > [!NOTE]  
     >  セカンダリ レプリカに対して強制フェールオーバーを実行する場合、データ損失の量は、フェールオーバー ターゲットがどの程度プライマリ レプリカより遅れているかによって決まります。 残念ながら、WSFC クラスターにクォーラムが存在しない、またはクォーラムが強制されている場合は、失われる可能性があるデータの量を評価できません。 ただし、WSFC クラスターが正常なクォーラムを再取得した後、データ損失の可能性を追跡できます。 詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」の「データ損失の可能性の追跡」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **強制フェールオーバー (データ損失の可能性あり) を実行するには**  
   
 1.  オブジェクト エクスプローラーで、フェールオーバーを行う必要がある可用性グループでロールが SECONDARY または RESOLVING 状態であるレプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
 2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
-3.  フェールオーバーする [可用性グループ] ノードを右クリックし、**[フェールオーバー]** を選択します。  
+3.  フェールオーバーする [可用性グループ] ノードを右クリックし、 **[フェールオーバー]** を選択します。  
   
-4.  可用性グループのフェールオーバー ウィザードが起動します。 詳細については、このトピックの「 [可用性グループのフェールオーバー ウィザードの使用 &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)の PowerShell を使用して、AlwaysOn 可用性グループに対する強制フェールオーバー (データ損失の可能性あり) を実行する方法について説明します。  
+4.  可用性グループのフェールオーバー ウィザードが起動します。 詳細については、「[可用性グループのフェールオーバー ウィザードの使用 &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)」を参照してください。  
   
 5.  可用性グループを強制的にフェールオーバーした後で、必要なフォローアップ手順を実行します。 詳細については、このトピックで後述する「[補足情報:強制フェールオーバー後の必須タスク](#FollowUp)」を参照してください。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **強制フェールオーバー (データ損失の可能性あり) を実行するには**  
   
 1.  フェールオーバーを行う必要がある可用性グループでロールが SECONDARY または RESOLVING 状態であるレプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
@@ -142,16 +141,16 @@ ms.locfileid: "62789977"
   
      次の例では、 `AccountsAG` 可用性グループのローカル セカンダリ レプリカへのフェールオーバーを強制的に実行します。  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
     ```  
   
 3.  可用性グループを強制的にフェールオーバーした後で、必要なフォローアップ手順を実行します。 詳細については、このトピックで後述する「[補足情報:強制フェールオーバー後の必須タスク](#FollowUp)」を参照してください。  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **強制フェールオーバー (データ損失の可能性あり) を実行するには**  
   
-1.  ディレクトリ変更コマンド (`cd`) ロールが SECONDARY または RESOLVING 状態をフェールオーバーする必要がある可用性グループ内であるレプリカをホストするサーバー インスタンスにします。  
+1.  ディレクトリの変更 ( `cd` ) を、フェールオーバーする必要がある可用性グループ内のロールがセカンダリまたは解決状態であるレプリカをホストするサーバーインスタンスに変更します。  
   
 2.  次の形式のいずれかで `Switch-SqlAvailabilityGroup` パラメーターを指定して `AllowDataLoss` コマンドレットを使用します。  
   
@@ -161,10 +160,8 @@ ms.locfileid: "62789977"
   
          次の例では、可用性グループ `MyAg` に対して、 `SecondaryServer\InstanceName`というサーバー インスタンスのセカンダリ レプリカへの強制フェールオーバー (データ損失の可能性あり) が実行されます。 この操作の確認を求めるメッセージが表示されます。  
   
-        ```  
-        Switch-SqlAvailabilityGroup `  
-           -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg `  
-           -AllowDataLoss  
+        ```powershell
+        Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg -AllowDataLoss  
         ```  
   
     -   **-AllowDataLoss-Force**  
@@ -173,10 +170,8 @@ ms.locfileid: "62789977"
   
          次の例では、可用性グループ `MyAg` に対して、 `SecondaryServer\InstanceName`というサーバー インスタンスへの強制フェールオーバー (データ損失の可能性あり) が実行されます。 `-Force` オプションにより、この操作の確認は表示されません。  
   
-        ```  
-        Switch-SqlAvailabilityGroup `  
-           -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg `  
-           -AllowDataLoss -Force  
+        ```powershell
+        Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg -AllowDataLoss -Force  
         ```  
   
     > [!NOTE]  
@@ -188,7 +183,7 @@ ms.locfileid: "62789977"
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報:強制フェールオーバー後の必須タスク  
+##  <a name="follow-up-essential-tasks-after-a-forced-failover"></a><a name="FollowUp"></a>補足情報: 強制フェールオーバー後の必須タスク  
   
 1.  強制フェールオーバーの後で、フェールオーバー先のセカンダリ レプリカが新しいプライマリ レプリカになります。 ただし、この可用性レプリカにクライアントからアクセスできるようにするには、WSFC クォーラムの再構成または可用性グループの可用性モード構成の調整が必要な場合があります。次の手順を実行してください。  
   
@@ -246,10 +241,10 @@ ms.locfileid: "62789977"
   
     -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-##  <a name="ExampleRecoveryFromCatastrophy"></a> サンプル シナリオ:重大なエラーから復旧するための強制フェールオーバーの使用  
+##  <a name="example-scenario-using-a-forced-failover-to-recover-from-a-catastrophic-failure"></a><a name="ExampleRecoveryFromCatastrophy"></a> サンプル シナリオ:重大なエラーから復旧するための強制フェールオーバーの使用  
  プライマリ レプリカが失敗し、使用可能な同期されたセカンダリ レプリカがない場合は、可用性グループの強制フェールオーバーが適切な対応であることがあります。 フェールオーバーの強制が適切かどうかは、(1) プライマリ レプリカがオフラインになっている時間がサービス レベル契約 (SLA) で許容される時間よりも長くなると見込まれるかどうかと、(2) プライマリ データベースをすぐに使用できるようにする目的でデータ損失の可能性のリスクを許容できるかどうかという 2 点によって決まります。 可用性グループに強制フェールオーバーが必要だと判断したとしても、実際の強制フェールオーバーは、複数の手順から成るプロセスの中の 1 つの手順です。  
   
- 重大なエラーからの強制フェールオーバーによる復旧に必要な手順を説明するために、このトピックでは 1 つの災害復旧シナリオを示します。 このサンプル シナリオで想定する可用性グループは、元のトポロジがメイン データ センターとリモート データ センターで構成されています。メイン データ センターは、3 つの同期コミット可用性レプリカをホストしており、これにはプライマリ レプリカが含まれています。リモート データ センターは、2 つの非同期コミット セカンダリ レプリカをホストしています。 次の図は、この例の可用性グループの元のトポロジを示しています。 可用性グループは、メイン データ センターに 3 つのノード (**Node 01**、 **Node 02**、および **Node 03**) があり、リモート データ センターに 2 つのノード (**Node 04** と **Node 05**) があるマルチサブネット WSFC クラスターによってホストされています。  
+ 重大なエラーからの強制フェールオーバーによる復旧に必要な手順を説明するために、このトピックでは 1 つのディザスター リカバリー シナリオを示します。 このサンプル シナリオで想定する可用性グループは、元のトポロジがメイン データ センターとリモート データ センターで構成されています。メイン データ センターは、3 つの同期コミット可用性レプリカをホストしており、これにはプライマリ レプリカが含まれています。リモート データ センターは、2 つの非同期コミット セカンダリ レプリカをホストしています。 次の図は、この例の可用性グループの元のトポロジを示しています。 可用性グループは、メイン データ センターに 3 つのノード (**Node 01**、 **Node 02**、および **Node 03**) があり、リモート データ センターに 2 つのノード (**Node 04** と **Node 05**) があるマルチサブネット WSFC クラスターによってホストされています。  
   
  ![可用性グループの元のトポロジ](../../media/aoag-failurerecovery-origtopology.gif "可用性グループの元のトポロジ")  
   
@@ -260,20 +255,20 @@ ms.locfileid: "62789977"
  データベース管理者 (DBA) は、リモートの非同期コミット セカンダリ レプリカのいずれかに可用性グループを強制フェールオーバーすることが最善の対応であると判断しました。 この例では、可用性グループをリモート レプリカに強制フェールオーバーし、最終的には可用性グループを元のトポロジに戻す場合に必要な、一般的な手順について説明します。  
   
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="responding-to-the-catastrophic-failure-of-the-main-data-center"></a><a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  次の図は、メイン データ センターでの重大なエラーに対応して、リモート データ センターで実行される一連の操作を示しています。  
   
  ![メイン データ センターのエラーに対応する手順](../../media/aoag-failurerecovery-actions-part1.gif "メイン データ センターのエラーに対応する手順")  
   
  この図の手順は、次の手順を示しています。  
   
-|手順|操作|リンク|  
+|手順|アクション|リンク|  
 |----------|------------|-----------|  
 |**1.**|DBA またはネットワーク管理者は、WSFC クラスターに正常なクォーラムがあることを確認します。 この例では、クォーラムが強制される必要があります。|[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)<br /><br /> [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)|  
 |**2.**|DBA は、待機時間が最も少ないサーバー インスタンス ( **Node 04**) に接続し、強制手動フェールオーバーを実行します。 強制フェールオーバーにより、このセカンダリ レプリカがプライマリ ロールに移行され、残りのセカンダリ レプリカ ( **Node 05**) のセカンダリ データベースが中断されます。|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) ( **end_of_log_lsn** 列に対するクエリ)。 詳細については、このトピックの「 [推奨事項](#Recommendations)」を参照してください。)|  
 |**3.**|DBA は、残りのセカンダリ レプリカの各セカンダリ データベースを手動で再開します。|[可用性データベースの再開 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)|  
   
-###  <a name="ReturnToOrigTopology"></a> 可用性グループの元のトポロジへの復帰  
+###  <a name="returning-the-availability-group-to-its-original-topology"></a><a name="ReturnToOrigTopology"></a> 可用性グループの元のトポロジへの復帰  
  次の図は、メイン データ センターがオンラインに戻り、WSFC ノードが WSFC クラスターとの通信を再確立した後で、可用性グループを元のトポロジに復帰させる一連の操作を示しています。  
   
 > [!IMPORTANT]  
@@ -287,10 +282,10 @@ ms.locfileid: "62789977"
 |-|----------|-----------|  
 |**1.**|メイン データ センターのノードがオンラインに戻り、WSFC クラスターとの通信を再確立します。 その可用性レプリカは、中断されたデータベースと共にセカンダリ レプリカとしてオンラインに戻り、DBA は直ちに手動で各データベースを再開する必要があります。|[可用性データベースの再開 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)<br /><br /> ヒント:フェールオーバー後のプライマリ データベースでデータ損失の可能性が懸念される場合は、同期コミットのセカンダリ データベースの 1 つで、中断されたデータベースにデータベース スナップショットの作成を試みる必要があります。 プライマリ データベースでは、いずれかのセカンダリ データベースが中断している間、トランザクション ログの切り捨てが遅延されることに注意してください。 また、同期コミット セカンダリ レプリカの同期状態は、いずれかのローカル データベースが中断している間、HEALTHY に移行できません。|  
 |**2.**|データベースが再開されたら、DBA は新しいプライマリ レプリカを一時的に同期コミット モードに変更します。 これには、次の 2 つの手順があります。<br /><br /> 1) 1 つのオフライン可用性レプリカを非同期コミット モードに変更する。 <br />2) 新しいプライマリ レプリカを同期コミット モードに変更する。<br />注:この手順により、再開された同期コミット セカンダリ データベースを SYNCHRONIZED にすることができます。|[可用性レプリカの可用性モードの変更 &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
-|**3.**|**Node 03** の同期コミット セカンダリ レプリカ (元のプライマリ レプリカ) が HEALTHY 同期状態になったら、DBA はそのレプリカに計画的な手動フェールオーバーを実行して、プライマリ レプリカに戻します。 **Node 04** のレプリカは、セカンダリ レプリカに戻ります。|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [AlwaysOn ポリシーを使用して、可用性グループのヘルスを表示する&#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [可用性グループの計画的な手動フェールオーバーの実行 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
+|**3.**|**Node 03** の同期コミット セカンダリ レプリカ (元のプライマリ レプリカ) が HEALTHY 同期状態になったら、DBA はそのレプリカに計画的な手動フェールオーバーを実行して、プライマリ レプリカに戻します。 **Node 04** のレプリカは、セカンダリ レプリカに戻ります。|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [AlwaysOn ポリシーを使用して、可用性グループ &#40;SQL Server の正常性を表示&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [可用性グループの計画的な手動フェールオーバーの実行 &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|DBA は、新しいプライマリ レプリカに接続し、次の操作を行います。<br /><br /> 1) 元のプライマリ レプリカ (リモート センター内) を非同期コミット モードに戻します。<br />2) メイン データ センターの非同期コミット セカンダリ レプリカを同期コミット モードに戻します。|[可用性レプリカの可用性モードの変更 &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **クォーラム投票を調整するには:**  
   
 -   [クラスター クォーラムの NodeWeight 設定を表示](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
@@ -307,11 +302,11 @@ ms.locfileid: "62789977"
   
  **トラブルシューティングするには:**  
   
--   [AlwaysOn 可用性グループの構成のトラブルシューティングを行う&#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+-   [AlwaysOn 可用性グループ構成 &#40;SQL Server のトラブルシューティング&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
--   [ファイル追加失敗の操作のトラブルシューティング&#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [失敗したファイルの追加操作のトラブルシューティング &#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **ブログ:**  
   
@@ -321,16 +316,16 @@ ms.locfileid: "62789977"
   
 -   **ホワイト ペーパー:**  
   
-     [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性モード&#40;AlwaysOn 可用性グループ&#41;](availability-modes-always-on-availability-groups.md)   
- [フェールオーバーとフェールオーバー モード&#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [可用性モード &#40;AlwaysOn 可用性グループ&#41;](availability-modes-always-on-availability-groups.md)   
+ [フェールオーバーとフェールオーバーモード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [可用性グループの監視 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

@@ -1,6 +1,7 @@
 ---
-title: 可用性レプリカのプロパティの表示 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性レプリカのプロパティの表示
+description: SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、または SQL PowerShell で可用性グループ レプリカのプロパティを表示する手順。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f569074893a5894c0823f1a1af7864bacceb9eda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 624cf6c008ff18aefed8d0b58c1e7097b3b5ceb0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013372"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901083"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>可用性レプリカのプロパティの表示 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用して、AlwaysOn 可用性グループの可用性レプリカのプロパティを表示する方法について説明します。  
   
  
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性レプリカのプロパティを表示および変更するには**  
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
@@ -40,7 +41,7 @@ ms.locfileid: "68013372"
    >クラスターの種類がなしの場合は、フェールオーバー モードを変更できません。
   
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **可用性レプリカのプロパティおよび状態を表示するには**  
   
  可用性レプリカのプロパティおよび状態を表示するには、次のビューとシステム関数を使用します。  
@@ -74,10 +75,10 @@ ms.locfileid: "68013372"
  現在のレプリカが推奨されるバックアップ レプリカであるかどうかを判別します。 現在のサーバー インスタンス上のデータベースが推奨されるレプリカの場合は 1 を返します。 それ以外の場合は 0 を返します。  
   
 > [!NOTE]  
->  可用性レプリカのパフォーマンス カウンター ( **SQLServer:Availability Replica**  パフォーマンス オブジェクト) の詳細については、「 [SQL Server、Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)」を参照してください。  
+>  可用性レプリカのパフォーマンス カウンター ( **SQLServer:可用性レプリカ**  パフォーマンス オブジェクト) の詳細については、「 [SQL Server、可用性レプリカ](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)」を参照してください。  
   
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **可用性グループに関する情報を表示するには**  
   
 -   [可用性グループのプロパティの表示 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  

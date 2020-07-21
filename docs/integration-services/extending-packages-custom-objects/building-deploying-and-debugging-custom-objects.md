@@ -10,14 +10,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a4b1f74a10542c11c2248f35af4e1b5e5a6b39d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 112a925c051b5345933ee4c8fc1fb3b1147c2e48
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947738"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297314"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>カスタム オブジェクトのビルド、配置、およびデバッグ
 
@@ -26,7 +26,7 @@ ms.locfileid: "67947738"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 用カスタム オブジェクトのコードを記述したら、アセンブリをビルドして配置し、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに統合してパッケージで使用できるようにし、テストとデバッグを行う必要があります。  
   
-##  <a name="top"></a> Integration Services 用カスタム オブジェクトのビルド、配置、およびデバッグ手順  
+##  <a name="steps-in-building-deploying-and-debugging-a-custom-object-for-integration-services"></a><a name="top"></a> Integration Services 用カスタム オブジェクトのビルド、配置、およびデバッグ手順  
  オブジェクトのカスタム機能は既に記述しました。 次に、オブジェクトをテストし、ユーザーが使用できるようにする必要があります。 そのための手順は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 用に作成できるカスタム オブジェクトのすべての種類でほぼ同じです。  
   
  ビルド、配置、およびテストの手順を以下に示します。  
@@ -47,7 +47,7 @@ ms.locfileid: "67947738"
   
  SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のさまざまなバージョンをターゲットとするパッケージを作成、管理、および実行できるようになりました。 この機能強化がカスタム拡張機能に与える影響に関する詳細については、「[Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)」 (SSIS のカスタム拡張機能を SSDT 2015 for SQL Server 2016 用 SSDT 2015 の複数バージョン サポートでサポートされるようにする) を参照してください。  
   
-##  <a name="signing"></a> アセンブリへの署名  
+##  <a name="signing-the-assembly"></a><a name="signing"></a> アセンブリへの署名  
  アセンブリを共有することを目的としている場合は、アセンブリをグローバル アセンブリ キャッシュにインストールする必要があります。 グローバル アセンブリ キャッシュに追加されたアセンブリは、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] などのアプリケーションで使用できるようになります。 グローバル アセンブリ キャッシュの要件として、アセンブリに厳密な名前で署名する必要があります。これにより、アセンブリがグローバルに一意であることが保証されます。 厳密な名前が付けられたアセンブリは、アセンブリの名前、カルチャ、公開キー、およびバージョン番号を含む完全修飾名を持ちます。 ランタイムはこの情報を使用して、アセンブリを検索し、同じ名前の他のアセンブリと区別します。  
   
  アセンブリに厳密な名前で署名するには、公開キーと秘密キーのペアを保持しているか、または作成する必要があります。 この暗号化用の公開キーと秘密キーのペアがビルド時に使用され、厳密な名前のアセンブリが作成されます。  
@@ -62,7 +62,7 @@ ms.locfileid: "67947738"
   
  アセンブリには、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] でビルド時に厳密な名前を使用して簡単に署名できます。 **[プロジェクトのプロパティ]** ダイアログ ボックスで、 **[署名]** タブをクリックします。 **[アセンブリの署名]** を選択し、キー (.snk) ファイルのパスを指定します。  
   
-##  <a name="building"></a> アセンブリのビルド  
+##  <a name="building-the-assembly"></a><a name="building"></a> アセンブリのビルド  
  プロジェクトに署名したら、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] の **[ビルド]** メニューで使用可能なコマンドを使用して、プロジェクトまたはソリューションを、ビルドまたはリビルドする必要があります。 ソリューションには、カスタム ユーザー インターフェイス用の独立したプロジェクトが含まれている場合があります。このプロジェクトにも厳密な名前で署名する必要があり、同時にビルドすることが可能です。  
   
  アセンブリの配置とグローバル アセンブリ キャッシュへのインストールを実行するための最も便利な方法は、これらの手順を [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] でビルド後のイベントとしてスクリプト処理することです。 ビルド イベントは、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] プロジェクトのプロジェクト プロパティの **[コンパイル]** ページ、および C# プロジェクトの **[ビルド イベント]** ページから使用できます。 **gacutil.exe** などのコマンド プロンプト ユーティリティは、完全なパスで指定する必要があります。 スペースを含むパスと、スペースを含むパスに展開される $(TargetPath) などのマクロは、引用符で囲む必要があります。  
@@ -75,7 +75,7 @@ ms.locfileid: "67947738"
 copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProviders "  
 ```  
   
-##  <a name="deploying"></a> アセンブリの配置  
+##  <a name="deploying-the-assembly"></a><a name="deploying"></a> アセンブリの配置  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール時に作成される一連のフォルダー内で検索されたファイルを列挙することにより、パッケージで使用できるカスタム オブジェクトを検索します。 既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール設定を使用した場合、この一連のフォルダーは **C:\Program Files\Microsoft SQL Server\130\DTS** の下にあります。 ただし、カスタム オブジェクトのセットアップ プログラムを作成する場合は、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\Setup\DtsPath** レジストリ キーの値をチェックしてこのフォルダーの場所を確認してください。  
   
 > [!NOTE]  
@@ -89,9 +89,9 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
  **C:\Program Files\Microsoft SQL Server\130\DTS** にある次の配置フォルダーは、さまざまな種類のカスタム オブジェクトに使用されます。  
   
-|カスタム オブジェクト|配置フォルダー|  
+|カスタム オブジェクト|デプロイ フォルダー|  
 |-------------------|-----------------------|  
-|タスク|処理手順|  
+|タスク|タスク|  
 |[ODBC 入力元エディター]|接続|  
 |ログ プロバイダー|LogProviders|  
 |カスタム データ フロー コンポーネント|PipelineComponents|  
@@ -99,7 +99,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
 > [!NOTE]  
 >  アセンブリは、使用可能なタスクや接続マネージャーなどの列挙をサポートするために、これらのフォルダーにコピーされます。 したがって、カスタム オブジェクトのカスタム ユーザー インターフェイスのみを含むアセンブリをこれらのフォルダーに配置する必要はありません。  
   
-##  <a name="installing"></a> グローバル アセンブリ キャッシュへのアセンブリのインストール  
+##  <a name="installing-the-assembly-in-the-global-assembly-cache"></a><a name="installing"></a> グローバル アセンブリ キャッシュへのアセンブリのインストール  
  タスク アセンブリをグローバル アセンブリ キャッシュ (GAC) にインストールするには、コマンド ライン ツール **gacutil.exe** を使用するか、アセンブリを `%system%\assembly` ディレクトリにドラッグします。 便宜上、**gacutil.exe** への呼び出しもビルド後のイベントに含めることができます。  
   
  次のコマンドでは、**gacutil.exe** を使用して *MyTask.dll* という名前のコンポーネントを GAC にインストールします。  
@@ -110,7 +110,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
  グローバル アセンブリ キャッシュの詳細については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ツールのグローバル アセンブリ キャッシュ ツール (Gactutil.exe) を参照してください。  
   
-##  <a name="troubleshooting"></a> 配置のトラブルシューティング  
+##  <a name="troubleshooting-the-deployment"></a><a name="troubleshooting"></a> 配置のトラブルシューティング  
  カスタム オブジェクトが **[ツールボックス]** または使用可能なオブジェクトの一覧に表示されるのに、パッケージに追加できない場合は、次の操作を試してください。  
   
 1.  グローバル アセンブリ キャッシュにコンポーネントの複数のバージョンがないか検索します。 グローバル アセンブリ キャッシュにコンポーネントの複数のバージョンがある場合、デザイナーはコンポーネントを読み込めないことがあります。 アセンブリのすべてのインスタンスをグローバル アセンブリ キャッシュから削除し、アセンブリを再度追加してください。  
@@ -121,7 +121,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 4.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を **devenv.exe** にアタッチし、ブレークポイントを設定して初期化コードを実行し、例外が発生しないことを確認します。  
   
-##  <a name="testing"></a> コードのテストとデバッグ  
+##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> コードのテストとデバッグ  
  カスタム オブジェクトの実行時のメソッドをデバッグするための最も簡単な方法は、カスタム オブジェクトのビルド後に [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] から **dtexec.exe** を起動し、コンポーネントを使用するパッケージを実行することです。  
   
  **Validate** メソッドなど、コンポーネントのデザイン時のメソッドをデバッグする場合は、コンポーネントを使用するパッケージを [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の 2 番目のインスタンスで開き、**devenv.exe** プロセスにアタッチします。  
@@ -134,7 +134,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 2.  **[プロジェクトのプロパティ]** の **[デバッグ]** タブで、 **[開始動作]** として **[外部プログラムの開始]** を選択し、**dtexec.exe** を探します。これは、既定では C:\Program Files\Microsoft SQL Server\130\DTS\Binn にインストールされています。  
   
-3.  **[開始オプション]** の **[コマンド ライン オプション]** テキスト ボックスに、コンポーネントを使用するパッケージを実行するために必要なコマンド ライン引数を入力します。 多くの場合、コマンド ライン引数は /F[ILE] スイッチと、それに続く .dtsx ファイルのパスおよびファイル名で構成されます。 詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
+3.  **[開始オプション]** の **[コマンド ライン オプション]** テキスト ボックスに、コンポーネントを使用するパッケージを実行するために必要なコマンド ライン引数を入力します。 多くの場合、コマンド ライン引数は /F[ILE] スイッチと、それに続く .dtsx ファイルのパスおよびファイル名で構成されます。 詳細については、「[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
 4.  コンポーネントの実行時のメソッド内の適切な位置のソース コードに、ブレークポイントを設定します。  
   

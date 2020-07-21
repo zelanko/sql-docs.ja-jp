@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: e04a1934-e57d-420e-ac79-97071745824e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6e8fd1c3ee57b1e85411eb9a546e8330ce53054
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75705bfaa80c030cae24d57439bd000783afecf1
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62867856"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551247"
 ---
-# <a name="mssqlserver5243"></a>MSSQLSERVER_5243
+# <a name="mssqlserver_5243"></a>MSSQLSERVER_5243
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|5243|  
@@ -36,7 +35,7 @@ ms.locfileid: "62867856"
  メモリ内ストレージ エンジン構造の一貫性が損なわれていることが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により検出されました。  
   
 ## <a name="see-also"></a>参照  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
+ [DBCC CHECKDB &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
  [データベース ファイルとファイル グループ](../databases/database-files-and-filegroups.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 挿入、更新、およびメンバー (XMLA) の削除 |Microsoft Docs
+title: メンバーの挿入、更新、および削除 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aef124abc8398f1b314a391291b52340a90689ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62727166"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544976"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>メンバーの挿入、更新、および削除 (XMLA)
-  使用することができます、[挿入](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)、[更新](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)、および[ドロップ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)コマンドでは、XML for Analysis (XMLA) それぞれを挿入するには、更新、またはメンバーを書き込み許可ディメンションから削除します。 書き込み許可ディメンションの詳細については、次を参照してください。 [Write-Enabled ディメンション](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)します。  
+  XML for Analysis (XMLA) の[insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)、 [Update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)、および[Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)コマンドを使用して、書き込み許可ディメンションのメンバーをそれぞれ挿入、更新、または削除することができます。 書き込み許可ディメンションの詳細については、「[書き込み許可ディメンション](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)」を参照してください。  
   
 ## <a name="inserting-new-members"></a>新しいメンバーの挿入  
  `Insert` コマンドは、書き込み許可ディメンション内の指定された属性に新しいメンバーを挿入します。  
@@ -46,9 +45,9 @@ ms.locfileid: "62727166"
   
  `Insert` コマンドのプロパティは、以下の 2 つだけです。  
   
--   [オブジェクト](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)プロパティで、メンバーが挿入されるのディメンションのオブジェクト参照が含まれています。 オブジェクト参照には、そのディメンションに関するデータベース識別子、キューブ識別子、およびディメンション識別子が含まれます。  
+-   [オブジェクト](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)のプロパティ。メンバーを挿入するディメンションのオブジェクト参照が含まれています。 オブジェクト参照には、そのディメンションに関するデータベース識別子、キューブ識別子、およびディメンション識別子が含まれます。  
   
--   [属性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla)プロパティで、1 つ以上含む[属性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla)メンバーの挿入する属性を識別する要素。 各 `Attribute` 要素は、属性を識別し、その属性に追加する 1 つのメンバーの、名前、値、翻訳、単項演算子、カスタム ロールアップ、カスタム ロールアップ演算子、およびスキップされたレベルを指定します。  
+-   [Attributes](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla)プロパティ。メンバーが挿入される属性を識別する1つ以上の[属性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla)要素が含まれています。 各 `Attribute` 要素は、属性を識別し、その属性に追加する 1 つのメンバーの、名前、値、翻訳、単項演算子、カスタム ロールアップ、カスタム ロールアップ演算子、およびスキップされたレベルを指定します。  
   
     > [!NOTE]  
     >  `Attribute` 要素には、すべてのプロパティを含める必要があります。 そうでない場合、エラーが発生する可能性があります。  
@@ -75,13 +74,13 @@ ms.locfileid: "62727166"
     > [!NOTE]  
     >  `Attribute` 要素には、すべてのプロパティを含める必要があります。 そうでない場合、エラーが発生する可能性があります。  
   
--   [場所](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla)プロパティで、1 つ以上含む`Attribute`メンバーの更新する属性を制限する要素。 `Where`プロパティは、制限するために重要な`Update`メンバーの特定のインスタンスにコマンド。 場合、`Where`プロパティが指定されていない、指定されたメンバーのすべてのインスタンスが更新されます。 たとえば、3 人の顧客について、都市名を Redmond から Bellevue に変更したいとします。 都市名を変更するには、変更する City 属性のメンバーに対して、Customer 属性の 3 つのメンバーを識別する `Where` プロパティを指定する必要があります。 この `Where` プロパティを指定せずに `Update` コマンドを実行すると、都市名が現在 Redmond であるすべての顧客について、都市名が Bellevue に変更されます。  
+-   [Where](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla)プロパティ `Attribute` 。メンバーを更新する属性を制限する1つ以上の要素が含まれています。 プロパティは、 `Where` `Update` コマンドをメンバーの特定のインスタンスに制限するために重要です。 `Where`プロパティが指定されていない場合は、特定のメンバーのすべてのインスタンスが更新されます。 たとえば、3 人の顧客について、都市名を Redmond から Bellevue に変更したいとします。 都市名を変更するには、変更する City 属性のメンバーに対して、Customer 属性の 3 つのメンバーを識別する `Where` プロパティを指定する必要があります。 この `Where` プロパティを指定せずに `Update` コマンドを実行すると、都市名が現在 Redmond であるすべての顧客について、都市名が Bellevue に変更されます。  
   
     > [!NOTE]  
-    >  新しいメンバーを除く、`Update`コマンドに含まれていない属性の属性のキー値で更新できる、`Where`句。 たとえば、ある顧客が更新されている場合には都市名を更新できません。それ以外の場合には、すべての顧客に関して都市名が変更されます。  
+    >  新しいメンバーを除き、このコマンドでは、 `Update` 句に含まれていない属性の属性キー値のみを更新でき `Where` ます。 たとえば、ある顧客が更新されている場合には都市名を更新できません。それ以外の場合には、すべての顧客に関して都市名が変更されます。  
   
 ### <a name="updating-members-in-parent-attributes"></a>親階層のメンバーの更新  
- 親の属性をサポートするために、`Update`省略可能なコマンド[MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants プロパティ。 `MoveWithDescendants` プロパティを true に設定すると、親メンバーの識別子が変更された場合に、その親メンバーの子孫も親メンバーと一緒に移動します。 この値が false に設定されている場合は、親メンバーを移動すると、その親メンバーの直接の子孫が親メンバーのあったレベルに昇格します。  
+ 親属性をサポートするために、コマンドは、 `Update` オプションの[Movewithdescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants プロパティを指定します。 `MoveWithDescendants` プロパティを true に設定すると、親メンバーの識別子が変更された場合に、その親メンバーの子孫も親メンバーと一緒に移動します。 この値が false に設定されている場合は、親メンバーを移動すると、その親メンバーの直接の子孫が親メンバーのあったレベルに昇格します。  
   
  親属性のメンバーを更新する場合、`Update` コマンドで他の属性のメンバーを更新することはできません。  
   
@@ -101,19 +100,19 @@ ms.locfileid: "62727166"
 -   `Where` プロパティ。メンバーを削除するディメンションを制限するための 1 つ以上の `Attribute` 要素が含まれます。 `Where` プロパティは、`Drop` コマンドをメンバーの特定のインスタンスに制限する場合に不可欠です。 `Where` プロパティが指定されない場合、特定のメンバーのすべてのインスタンスが削除されます。 たとえば、Redmond から 3 人の顧客を削除したいとします。 これらの顧客を削除するには、Customer 属性で削除対象の 3 つのメンバーと、3 人の顧客を削除する City 属性の Redmond メンバーの両方を識別する `Where` プロパティを指定する必要があります。 `Where` プロパティで City 属性の Redmond メンバーだけが指定されている場合、Redmond に関連付けられているすべての顧客が `Drop` コマンドによって削除されます。 `Where` プロパティで Customer 属性の 3 つのメンバーだけが指定されている場合、3 人の顧客に関して、`Drop` コマンドによって全体が削除されます。  
   
     > [!NOTE]  
-    >  `Attribute`に含まれる要素を`Drop`のみコマンドを含める必要があります、`AttributeName`と`Keys`プロパティ。 そうでない場合、エラーが発生する可能性があります。  
+    >  `Attribute`コマンドに含まれる要素には、 `Drop` プロパティとプロパティのみが含まれている必要があり `AttributeName` `Keys` ます。 そうでない場合、エラーが発生する可能性があります。  
   
 ### <a name="dropping-members-in-parent-attributes"></a>親階層のメンバーの削除  
- 設定、 [DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla)プロパティは親メンバーの子孫が親メンバーを削除するかも示します。 この値が false に設定されている場合は、その親メンバーの直接の子孫が、親メンバーのあったレベルに昇格します。  
+ [Deletewithdescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla)プロパティを設定すると、親メンバーの子孫も親メンバーと共に削除されることが示されます。 この値が false に設定されている場合は、その親メンバーの直接の子孫が、親メンバーのあったレベルに昇格します。  
   
 > [!IMPORTANT]  
 >  親メンバーとその子孫の両方を削除するためにユーザーに必要な権限は、親メンバーに対する削除権限だけです。 ユーザーが子孫に対する削除権限を持っている必要はありません。  
   
 ## <a name="see-also"></a>参照  
- [Drop 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
- [要素を挿入&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
- [Update 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
- [定義するオブジェクトを識別したり&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)   
+ [XMLA&#41;&#40;の要素の削除](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
+ [XMLA&#41;&#40;の要素の挿入](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
+ [XMLA&#41;&#40;の要素の更新](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+ [XMLA&#41;&#40;のオブジェクトの定義と識別](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)   
  [Analysis Services での XMLA による開発](developing-with-xmla-in-analysis-services.md)  
   
   

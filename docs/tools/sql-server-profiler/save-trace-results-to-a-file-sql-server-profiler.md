@@ -1,28 +1,29 @@
 ---
-title: トレース結果のファイルへの保存 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: トレース結果のファイルへの保存
+titleSuffix: SQL Server Profiler
+description: SQL Server Profiler で、キャプチャされたイベント データのトレース ファイルへの保存、トレース ファイルの最大サイズの指定、およびファイルのロールオーバー オプションの有効化を行う方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
 ms.assetid: ac528747-0c19-4f3d-96f5-44c762a4abed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 264443f7c994b598446385876500c28c42737bfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: f792be448dc9e11ce4245e7dd5cda08d9d750c2b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928799"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151704"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>トレース結果のファイルへの保存 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレース結果をファイルに保存する方法について説明します。  
+
+このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレース結果をファイルに保存する方法について説明します。  
   
 ### <a name="to-save-trace-results-to-a-file"></a>トレース結果をファイルに保存するには  
   

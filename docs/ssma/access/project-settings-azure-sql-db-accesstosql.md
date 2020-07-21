@@ -1,5 +1,5 @@
 ---
-title: プロジェクトの設定 (Azure SQL DB) (AccessToSQL) |Microsoft Docs
+title: プロジェクトの設定 (Azure SQL DB) (データベースの設定) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,35 +13,35 @@ ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 60140559f94cdeebea935b423fbbeef24bce7a08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929466"
 ---
-# <a name="project-settings-azure-sql-db-accesstosql"></a>プロジェクトの設定 (Azure SQL DB) (AccessToSQL)
-SQL Azure プロジェクトの設定を使用して、接続ダイアログで追加して、SQL Azure 接続でハートビート メカニズムを実装することもできますを SQL Azure データベース サフィックスを構成できます。  
+# <a name="project-settings-azure-sql-db-accesstosql"></a>プロジェクトの設定 (Azure SQL DB) (Sql server による)
+SQL Azure プロジェクトの設定を使用すると、接続ダイアログに追加する SQL Azure データベースサフィックスを構成し、SQL Azure 接続でハートビートメカニズムを実装することもできます。  
   
-SQL Azure のウィンドウが表示されます、**プロジェクト設定**と**プロジェクト設定の既定の** ダイアログ ボックス。  
+SQL Azure ウィンドウは、[プロジェクトの**設定**] ダイアログボックスと [**既定のプロジェクトの設定**] ダイアログボックスで使用できます。  
   
--   プロジェクトの設定 ダイアログ ボックスを使用すると、現在のプロジェクトの構成オプションを設定できます。 SQL Azure の設定にアクセスする、**ツール**メニューの [**プロジェクト設定**、] をクリックして**全般**選択し、左側のウィンドウの下部にある**SQLAzure**します。  
+-   [プロジェクトの設定] ダイアログボックスを使用すると、現在のプロジェクトの構成オプションを設定できます。 SQL Azure 設定にアクセスするには、[**ツール**] メニューの [**プロジェクトの設定**] を選択し、左側のウィンドウの下部にある [**全般**] をクリックして、[ **SQL Azure**] を選択します。  
   
--   プロジェクトの既定の設定 ダイアログ ボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 SQL Azure の設定にアクセスする、**ツール**メニューの  **DefaultProject 設定**で"SQL Azure"として、プロジェクトの種類を選択します**移行ターゲット バージョン**にコンボ ボックス。SQL Azure のウィンドウでの設定で、**全般**選択し、左側のウィンドウの下部にある**SQL Azure**します。  
+-   [既定のプロジェクトの設定] ダイアログボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 SQL Azure 設定にアクセスするには、[**ツール**] メニューの [ **Defaultproject の設定**] を選択し、[**移行先のバージョン**] コンボボックスで [SQL Azure] としてプロジェクトの種類を選択して SQL Azure ウィンドウの設定にアクセスします。次に、左側のウィンドウの下部にある [**全般**] をクリックし、[ **SQL Azure**] を選択します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 ## <a name="connectivity"></a>接続  
 **ハートビートの間隔**  
   
-SQL Azure 接続を維持するハートビート メカニズムを使用する時間間隔を指定します。 ' 分: 秒の形式。  
+SQL Azure 接続を ' 分: seconds ' 形式で保持するハートビートメカニズムに使用する時間間隔を指定します。  
   
-**既定値**:' 4:45 '  
+**既定値**: ' 4:45 '  
   
-値を指定する必要がありますでいます: ss の形式 (たとえば、' 4:45 '、' 0:50 ')。  
+値は、' m:ss ' 形式 (たとえば、' 4:45 ' または ' 0:50 ') で指定する必要があります。  
   
-**SQL Azure サーバーのサフィックス**  
+**SQL Azure サーバーサフィックス**  
   
 SQL Azure サーバーのサフィックスを指定します  
   
-**既定値**: 'database.windows.net'。  
+**既定値**: ' database.windows.net '。  
   

@@ -1,6 +1,7 @@
 ---
-title: パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理 | Microsoft Docs
-ms.custom: ''
+title: パラメーター化されたフィルターのパーティションの管理 (マージ)
+description: SQL Server マージ レプリケーションに使用するパラメーター化されたフィルターを使用してパーティションを管理します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e454850de56674a594b23585aaf1f5af1f3549a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4793260717225b731f6675098a8fa187884de206
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002686"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882176"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パラメーター化されたフィルターを利用し、マージ パブリケーションのパーティションを管理する方法ついて説明します。 パラメーター化された行フィルターを使用して、重複しないパーティションを生成できます。 パーティションを制限することで、特定のパーティションを 1 つのサブスクリプションだけが受け取るようにできます。 このような場合、サブスクリプションの数が多いと多数のパーティションが生成されるため、それと同数のパーティション スナップショットが必要になります。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
 -   **パラメーター化されたフィルターによるマージ パブリケーションのパーティションを管理するために使用するもの:**  
   
@@ -39,15 +40,15 @@ ms.locfileid: "68002686"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
--   レプリケーション トポロジをスクリプト化する場合 (推奨)、パブリケーション スクリプトには、データ パーティションを作成するためのストアド プロシージャの呼び出しが含まれます。 このスクリプトによって、作成されたパーティションの参照、および必要に応じて 1 つ以上のパーティションを再作成する方法を利用できます。 詳しくは、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
+-   レプリケーション トポロジをスクリプト化する場合 (推奨)、パブリケーション スクリプトには、データ パーティションを作成するためのストアド プロシージャの呼び出しが含まれます。 このスクリプトによって、作成されたパーティションの参照、および必要に応じて 1 つ以上のパーティションを再作成する方法を利用できます。 詳細については、「[レプリケーションのスクリプト作成](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
--   パブリケーションが、重複しないパーティションを含むサブスクリプションを返すパラメーター化されたフィルターを持つ場合に、特定のサブスクリプションが失われて再作成が必要になったときは、サブスクライブされたパーティションを削除し、サブスクリプションを再作成してから、パーティションを再作成する必要があります。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。 パブリケーション作成スクリプトが生成されると、レプリケーションによって既存のサブスクライバー パーティション用の作成スクリプトが生成されます。 詳しくは、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
+-   パブリケーションが、重複しないパーティションを含むサブスクリプションを返すパラメーター化されたフィルターを持つ場合に、特定のサブスクリプションが失われて再作成が必要になったときは、サブスクライブされたパーティションを削除し、サブスクリプションを再作成してから、パーティションを再作成する必要があります。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。 パブリケーション作成スクリプトが生成されると、レプリケーションによって既存のサブスクライバー パーティション用の作成スクリプトが生成されます。 詳細については、「[レプリケーションのスクリプト作成](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[データ パーティション]** ページでパーティションを管理します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。 このページでは、パーティションを作成および削除する、サブスクライバーがスナップショットの生成および配信を開始できるようにする、1 つ以上のパーティションのスナップショットを生成する、スナップショットをクリーンアップするなどの操作を行うことができます。  
   
 #### <a name="to-create-a-partition"></a>パーティションを作成するには  
@@ -63,8 +64,6 @@ ms.locfileid: "68002686"
     2.  スナップショットの既定の更新スケジュールをそのまま使用するか、または **[変更]** をクリックして別のスケジュールを指定します。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-delete-a-partition"></a>パーティションを削除するには  
   
@@ -90,7 +89,7 @@ ms.locfileid: "68002686"
   
 2.  **[既存のスナップショットをクリーンアップする]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  パラメーター化されたフィルターを使ってパブリケーションをより詳細に管理するために、プログラムからレプリケーション ストアド プロシージャを使用して既存のパーティションを列挙できます。 既存のパーティションの作成と削除も行えます。 既存パーティションに関する次の情報も取得できます。  
   
 -   パーティションのフィルター方法 ([SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) または [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) を使用)。  
@@ -103,29 +102,29 @@ ms.locfileid: "68002686"
   
 #### <a name="to-view-information-on-existing-partitions"></a>既存のパーティションに関する情報を表示するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md) を実行します。 パブリケーションの名前を **@publication** 」をご覧ください。 (省略可) 1 つのフィルター条件に基づく情報のみが返されるように、 **@suser_sname** または **@host_name** を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md) を実行します。 `@publication` にパブリケーション名を指定します。 (省略可能) 1 つのフィルター条件に基づく情報のみが返されるように、`@suser_sname` または `@host_name` を指定します。  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>新しいパーティションを定義して、新しいパーティション スナップショットを生成するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) を実行します。 パブリケーションの名前を **@publication** にパブリケーションの名前を指定し、次のいずれかのパラメーターに、パーティションを定義するパラメーター値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) を実行します。 `@publication` にパブリケーションの名前を指定し、次のいずれかのパラメーターにパーティションを定義するパラメーター値を指定します。  
   
-    -   **@suser_sname** - [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
+    -   `@suser_sname` - [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
   
-    -   **@host_name** - [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
+    -   `@host_name` - [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
   
 2.  この新しいパーティションのパラメーター化スナップショットを作成し、初期化します。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
 #### <a name="to-delete-a-partition"></a>パーティションを削除するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md) を実行します。 パブリケーションの名前を **@publication** にパブリケーションの名前を指定し、次のいずれかのパラメーターに、パーティションを定義するパラメーター値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md) を実行します。 `@publication` にパブリケーションの名前を指定し、次のいずれかのパラメーターにパーティションを定義するパラメーター値を指定します。  
   
-    -   **@suser_sname** - [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
+    -   `@suser_sname` - [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
   
-    -   **@host_name** - [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
+    -   `@host_name` - [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
   
      これにより、そのパーティションのスナップショット ジョブおよびすべてのスナップショット ファイルも削除されます。  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  パラメーター化されたフィルターを使ってパブリケーションをより適切に管理するために、レプリケーション管理オブジェクト (RMO) を使用して、新しいサブスクライバー パーティションの作成、既存のサブスクライバー パーティションの列挙、およびサブスクライバーの削除をプログラムで行うことができます。 サブスクライバー パーティションを作成する方法の詳細については、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。 既存のパーティションに関する次の情報を取得できます。  
   
 -   パーティションの基になる値およびフィルター関数。  
@@ -164,6 +163,7 @@ ms.locfileid: "68002686"
   
 ## <a name="see-also"></a>参照  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+ [パラメーター化されたフィルターを使用したマージ パブリケーションのスナップショット](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+  
   
   

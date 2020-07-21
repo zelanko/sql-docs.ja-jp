@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: f846e74e0afd89c6bb10a4aa9a23a6420b6a613a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060234"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server とデータベースの暗号化キー (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化キーを使用して、サーバー データベースに格納されているデータ、資格情報、および接続情報のセキュリティを保護します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *対称* と *非対称*の 2 種類のキーがあります。 対称キーでは、データの暗号化と暗号化解除に同じパスワードが使用されます。 非対称キーでは、データを暗号化するパスワード ( *公開* キー) とデータの暗号化を解除するパスワード ( *秘密* キー) が使い分けられます。  
@@ -61,7 +60,7 @@ ms.locfileid: "63011318"
 >  上記のキーすべてにアクセスできなくなると、それらのキーで保護されているオブジェクト、接続、およびデータにもアクセスできなくなります。 ここで示したリンクの説明に従ってサービス マスター キーを復元するか、または元の暗号化システムに戻ってアクセスを復旧します。 アクセスを復旧するための "抜け道" はありません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Service Master Key](service-master-key.md)  
+ [サービスマスターキー](service-master-key.md)  
  サービス マスター キーとその推奨事項について簡単に説明します。  
   
  [拡張キー管理 &#40;EKM&#41;](extensible-key-management-ekm.md)  
@@ -72,13 +71,13 @@ ms.locfileid: "63011318"
   
  [サービス マスター キーの復元](restore-the-service-master-key.md)  
   
- [データベース マスター キーの作成](create-a-database-master-key.md)  
+ [データベースマスターキーの作成](create-a-database-master-key.md)  
   
- [データベース マスター キーのバックアップ](back-up-a-database-master-key.md)  
+ [データベースマスターキーのバックアップ](back-up-a-database-master-key.md)  
   
- [データベース マスター キーの復元](restore-a-database-master-key.md)  
+ [データベースマスターキーの復元](restore-a-database-master-key.md)  
   
- [2 台のサーバーでの同じ対称キーの作成](create-identical-symmetric-keys-on-two-servers.md)  
+ [2つのサーバーに同一の対称キーを作成する](create-identical-symmetric-keys-on-two-servers.md)  
   
  [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
@@ -89,12 +88,12 @@ ms.locfileid: "63011318"
   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
- [データベース マスター キーの復元](restore-a-database-master-key.md)  
+ [データベースマスターキーの復元](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services の暗号化キーのバックアップと復元](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [暗号化キーの削除と再作成  &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS構成マネージャー&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [暗号化キーのバックアップと復元 Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [SSRS Configuration Manager&#41;&#40;暗号化キーを削除して再作成します](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [SSRS Configuration Manager &#40;のスケールアウト配置に対する暗号化キーの追加と削除&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)  
   
   

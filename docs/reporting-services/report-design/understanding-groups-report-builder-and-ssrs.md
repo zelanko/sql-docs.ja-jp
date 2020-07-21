@@ -1,5 +1,5 @@
 ---
-title: グループについて (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: グループについて (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b9d8dda589d5753a406fb46fa848191c1e4793a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 8a24833de353f4a524dd12f3a37a343fdc1a9151
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574458"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080854"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>グループについて (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、グループは、データ領域にバインドされたレポート データセットの名前付きセットです。 グループは基本的に、レポート データセットのビューを整理します。 データ領域のグループはすべて、同じレポート データセットの異なるビューを指定します。  
   
  グループとはどのようなものかを視覚的に理解するために、[プレビュー] で Tablix データ領域を示した次の図を参照してください。 この図では、行グループで製品タイプ別にデータセットが分類され、列グループで地理的領域と年度別にデータセットが分類されています。  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Tablix データ領域部分](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix データ領域部分")  
   
  次のセクションでは、グループのさまざまな側面について説明します。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "65574458"
 ## <a name="see-also"></a>参照  
  [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [グループまたは Tablix データ領域への合計の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [データ領域内のデータの並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [ドリルダウン アクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

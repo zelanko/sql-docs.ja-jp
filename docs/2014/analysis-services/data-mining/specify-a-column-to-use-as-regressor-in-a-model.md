@@ -1,5 +1,5 @@
 ---
-title: モデルでリグレッサーとして使用する列の指定 |Microsoft Docs
+title: モデルでリグレッサーとして使用する列を指定します |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3ce5a339275c834673afedcbbec50078407acdd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082909"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520410"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>モデルでリグレッサーとして使用する列の指定
   線形回帰モデルでは、予測可能な属性の値が、データをできる限り推定回帰直線に近づけるように入力を組み合わせる式の結果として表されます。 このアルゴリズムでは、入力として使用できるのは数値だけであり、最適な入力が自動的に検出されます。  
@@ -61,8 +60,8 @@ ms.locfileid: "66082909"
   
 ## <a name="see-also"></a>参照  
  [Microsoft 線形回帰アルゴリズム](microsoft-linear-regression-algorithm.md)   
- [データ マイニング クエリ](data-mining-queries.md)   
- [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [データマイニングクエリ](data-mining-queries.md)   
+ [Microsoft 線形回帰アルゴリズムテクニカルリファレンス](microsoft-linear-regression-algorithm-technical-reference.md)   
  [線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

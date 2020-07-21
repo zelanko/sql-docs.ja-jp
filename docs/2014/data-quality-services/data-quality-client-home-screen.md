@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d3dd0bf00f9ca0917e94e2d942dcb929ef35055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edb0a9e0384804b733441d7fe256d11a150469d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937823"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client のホーム画面
   この画面を使用すると、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) の 3 つの主要なタスク グループ (ナレッジ ベース管理、データ品質プロジェクト、および管理) のそれぞれに対するユーザー インターフェイスにアクセスできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 ### <a name="knowledge-base-management"></a>[ナレッジ ベース管理]  
  DQS ナレッジ ベースは、データの品質を向上させるために DQS によって使用されるメタデータのリポジトリです。 このメタデータは、コンピューター支援型のナレッジ検出プロセスの DQS プラットフォームとインタラクティブなドメイン管理プロセスのデータ スチュワードの両者によって作成されます。  
@@ -56,12 +55,12 @@ ms.locfileid: "65480742"
  **[アクティビティ監視]**  
  接続されている [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]に関連するすべてのアクティビティ (現在のアクティビティと履歴アクティビティの両方) の状態のビューが表示されます。 監視対象となるアクティビティの種類は、ナレッジ マネージメント、データ品質プロジェクト、および SSIS ベースのデータ修正です。  
   
- **Configuration**  
- 参照データ サービス アカウント (Windows Azure Marketplace 経由と参照データ サービス直接の両方)、一般設定 (対話形式のクレンジング、照合、プロファイリング)、およびログの重大度設定に対する構成プロパティが表示されます。  
+ **構成**  
+ 参照データサービスアカウントの構成プロパティ (Azure Marketplace を通じて、参照データサービスに直接)、全般設定 (インタラクティブなクレンジング、照合、プロファイル)、およびログの重大度設定を表示します。  
   
-## <a name="see-also"></a>関連項目  
- [DQS のナレッジ ベースとドメイン](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [データ品質プロジェクト &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)   
+## <a name="see-also"></a>参照  
+ [DQS のナレッジベースとドメイン](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   
+ [DQS&#41;&#40;データ品質プロジェクト](../../2014/data-quality-services/data-quality-projects-dqs.md)   
  [DQS 管理](../../2014/data-quality-services/dqs-administration.md)  
   
   

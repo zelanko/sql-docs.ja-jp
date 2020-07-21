@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a4711f9673ba5acf7a4a7398588c6e27f80a9179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6584b472749d1e0e773e4d0fee6bfc45d98db95f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024491"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894302"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (関数) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   INTO を伴う SELECT ステートメントでのみ使用 *テーブル* 句を新しいテーブルに id 列を挿入します。 似ていますが、IDENTITY 関数は CREATE TABLE と ALTER TABLE で使用される IDENTITY プロパティではありません。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68024491"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 IDENTITY (data_type [ , seed , increment ] ) AS column_name  
 ```  
@@ -61,7 +61,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 ## <a name="return-types"></a>戻り値の型  
  同じを返します *data_type*です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数ではテーブルに列が作成されるので、次のいずれかの方法で選択リストから列名を指定する必要があります。  
   
 ```  
@@ -77,8 +77,8 @@ FROM OldTable;
   
 ```  
   
-## <a name="examples"></a>使用例  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Contact` テーブルにあるすべての行を、`NewContact` という新しいテーブルに追加します。 IDENTITY 関数を使用して、`NewContact` テーブルの識別番号を 1 ではなく 100 から開始するようにします。  
+## <a name="examples"></a>例  
+ 次の例では、`Contact` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルにあるすべての行を、`NewContact` という新しいテーブルに追加します。 IDENTITY 関数を使用して、`NewContact` テーブルの識別番号を 1 ではなく 100 から開始するようにします。  
   
 ```  
 USE AdventureWorks2012;  

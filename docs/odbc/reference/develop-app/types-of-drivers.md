@@ -13,52 +13,52 @@ helpviewer_keywords:
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea99ec6a5b0a76ce0647e3681a4cf919d3f086b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de6d8e1473f127d28c69969e0fc298afd69d3023
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087776"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304873"
 ---
 # <a name="types-of-drivers"></a>ドライバーの種類
 ODBC ドライバーは、次のように分類できます。  
   
--   **32 ビット ODBC 2.**  
-     **_x_ドライバー** 32 ビットのドライバーです。  
+-   **32-ビット ODBC 2。**  
+     ** _x_ドライバー** A 32 ビットドライバー:  
   
-    -   ODBC のみをエクスポートします*2.x*関数。  
+    -   ODBC 2.x 関数のみをエクスポート*します。*  
   
-    -   ODBC の欠落を表す*2.x*動作の変更点の動作。  
+    -   動作変更に関する ODBC 2.x の動作について解説*します。*  
   
--   **ISO と開いているグループ準拠のドライバー** 32 ビット ドライバーです。  
+-   **ISO とオープングループに準拠しているドライバー**次のような32ビットドライバー。  
   
-    -   グループを開くまたは ISO CLI のドキュメントで説明されているすべての関数をエクスポートします。 ODBC では非推奨の機能の一部を含めます。  
+    -   Open Group または ISO CLI ドキュメントに記載されているすべての関数をエクスポートします。 これには、ODBC で非推奨とされる関数が含まれます。  
   
-    -   動作の変更点の ODBC 3.0 現象が発生します。  
+    -   動作の変更に対する ODBC 3.0 の動作を解説します。  
   
-    -   ODBC 3.0 のドライバー マネージャーを必ずしも通過しません。  
+    -   は必ずしも ODBC 3.0 ドライバーマネージャーを経由するわけではありません。  
   
--   **ODBC 3.0 ドライバー** 32 ビットのドライバーです。  
+-   **ODBC 3.0 ドライバー**次のような32ビットドライバー。  
   
-    -   非推奨の関数-ODBC 3.0 では関数だけをエクスポートします。  
+    -   ODBC 3.0 に含まれている関数を非推奨の関数から除き、エクスポートします。  
   
-    -   ODBC が発生することのできる*2.x* SQL_ATTR_APP_ODBC_VERSION 環境属性に基づいて動作または動作の変更に関する ODBC 3.0 動作します。  
+    -   では、SQL_ATTR_APP_ODBC_VERSION 環境属性に基づいて、動作の変更に関し*て odbc 2.x*の動作または odbc 3.0 の動作が可能です。  
   
--   **ODBC 3.5 (またはそれ以降) の ANSI ドライバー** 32 ビットのドライバーです。  
+-   **ODBC 3.5 (またはそれ以降) ANSI ドライバー**次のような32ビットドライバー。  
   
-    -   非推奨の関数-ODBC 3.5 では関数だけをエクスポートします。  
+    -   ODBC 3.5 に含まれている関数を非推奨の関数から除き、エクスポートします。  
   
-    -   ODBC が発生することのできる*2.x* SQL_ATTR_APP_ODBC_VERSION 環境属性に基づいて動作または ODBC 3.0 の動作または動作の変更に関して、ODBC 3.5 動作します。  
+    -   では、SQL_ATTR_APP_ODBC_VERSION 環境属性に基づいて *、odbc 2.x の動作また*は odbc 3.0 の動作、または動作の変更に関して odbc 3.5 の動作が可能です。  
   
--   **ODBC 3.5 (またはそれ以降) の Unicode ドライバー** 32 ビットのドライバーです。  
+-   **ODBC 3.5 (またはそれ以降) Unicode ドライバー**次のような32ビットドライバー。  
   
-    -   ODBC 3.5 ANSI ドライバーのすべての機能をサポートしています。  
+    -   では、ODBC 3.5 ANSI ドライバーのすべての機能がサポートされています。  
   
-    -   ODBC 文字列 Api のすべての Unicode バージョンをエクスポートします。  
+    -   すべての ODBC 文字列 Api の Unicode バージョンをエクスポートします。  
   
-    -   データ ソース上の Unicode データの処理し、格納できます。  
+    -   では、データソースに Unicode データを格納して処理できます。  
   
 > [!NOTE]  
->  16 ビット ODBC ドライバーは、ODBC で直接は動作しません*3.x*ドライバー マネージャー。 ただし、その後最大サンク 2.0 ODBC ドライバー マネージャーを使用する 16 ビットのドライバーのことが、 *3.x*ドライバー マネージャー。
+>  16ビット*odbc ドライバーは、odbc 3.X*ドライバーマネージャーで直接動作しません。 ただし、16ビットドライバーが 2.0 ODBC ドライバーマネージャーで動作する可能性があります。この場合は、その後、 *3. x*ドライバーマネージャーにサンクを行います。

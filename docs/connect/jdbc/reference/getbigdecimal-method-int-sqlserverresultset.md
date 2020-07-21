@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 49872b95-a11c-472e-a0d2-a794e8f32f52
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 425540c4ce37f0d30de503b1aebec7d086e6f94c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ce5fed0a79eb2023d456292f45c5f37f48ab9c73
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953991"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920645"
 ---
 # <a name="getbigdecimal-method-int-sqlserverresultset"></a>getBigDecimal (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +40,13 @@ public java.math.BigDecimal getBigDecimal(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- BigDecimal オブジェクト。  
+ BigDecimal オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getBigDecimal メソッドは、java. ResultSet インターフェイスの getBigDecimal メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getBigDecimal メソッドは、java.sql.ResultSet インターフェイスの getBigDecimal メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [getBigDecimal メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

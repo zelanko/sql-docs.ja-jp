@@ -1,6 +1,5 @@
 ---
-title: DQS 操作のためのデータへのアクセス | Microsoft Docs
-ms.custom: ''
+title: DQS 操作のためのデータへのアクセス
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,18 +7,18 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 846eec4cb8ac678b5636bc436acce62dc7e2ecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: b9bb91a34a2755ba14f8e64eecae2dc14498a07d
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935234"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942896"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 操作のためのデータへのアクセス
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 操作にソース データを使用し、処理後のデータをエクスポートするには、次のいずれかの方法を使用できます。  
   
@@ -27,13 +26,13 @@ ms.locfileid: "67935234"
   
 -   DQS 操作のソース データと、処理後のデータのエクスポート先に、自分専用のデータベースを使用する。 これを行うには、自分のデータベースが、Data Quality Server データベースと同じ SQL Server インスタンス内に存在する必要があります。 それ以外の場合、DQS 操作を行うために Data Quality Client でデータベースを利用することはできません。 また、Windows ユーザー アカウントには、照合結果をエクスポートする DQS_STAGING_DATA データベースへのアクセス権も付与する必要があります。これは、照合結果のエクスポートが、最初に照合結果が DQS_STAGING_DATA データベース内の一時テーブルにエクスポートされてから、エクスポート先データベース内のテーブルに移動されるという 2 段階で構成されるためです。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
   
 -   DQSInstaller.exe ファイルを実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了しておく必要があります。 詳細については、「 [Data Quality Server のインストールを完了するための DQSInstaller.exe の実行](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)」をご覧ください。  
   
 -   データベースの SQL ログインへのアクセスを付与または変更するには、Windows ユーザー アカウントがデータベース エンジン インスタンスの適切な固定サーバー ロール (securityadmin、serveradmin、sysadmin など) のメンバーであることが必要です。  
   
-### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>DQS_STAGING_DATA データベースへの読み取り/書き込みアクセス権をユーザーに付与するには  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqs_staging_data-database"></a>DQS_STAGING_DATA データベースへの読み取り/書き込みアクセス権をユーザーに付与するには  
   
 1.  Microsoft SQL Server Management Studio を起動します。  
   
@@ -43,13 +42,13 @@ ms.locfileid: "67935234"
   
 4.  **[ログインのプロパティ]** ダイアログ ボックスの左ペインで **[ユーザー マッピング]** をクリックします。  
   
-5.  右ウィンドウで、 **[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、 **[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ウィンドウで次のロールを選択します。  
+5.  右ペインで、 **[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、 **[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ペインで次のロールを選択します。  
   
-    -   **db_datareader**:テーブル/ビューからのデータの読み取り。  
+    -   **db_datareader**: テーブル/ビューからのデータの読み取り。  
   
-    -   **db_datawriter**:テーブル内のデータの追加、削除、または変更。  
+    -   **db_datawriter**: テーブル内のデータの追加、削除、または変更。  
   
-    -   **db_ddladmin**:テーブル/ビューの作成、変更、または削除。  
+    -   **db_ddladmin**: テーブル/ビューの作成、変更、または削除。  
   
 6.  **[ログインのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックして変更を適用します。  
   

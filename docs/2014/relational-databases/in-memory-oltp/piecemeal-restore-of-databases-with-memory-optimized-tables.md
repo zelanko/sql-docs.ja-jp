@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed23f08d40e23b1d43c1b642f4089fe77646b675
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806694"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025836"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>メモリ最適化テーブルを持つデータベースの段階的な部分復元
   段階的な部分復元は、次に説明する 1 つの制限を除き、メモリ最適化テーブルを持つデータベースでサポートされています。 段階的なバックアップと部分復元の詳細については、「[RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」および「 [段階的な部分復元 &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
@@ -28,7 +27,7 @@ ms.locfileid: "62806694"
   
  段階的なバックアップと部分復元に関する主要なシナリオは、次のとおりです。  
   
--   段階的なバックアップを使用すると、バックアップのサイズを小さくすることができます。 いくつかの例を挙げます。  
+-   段階的なバックアップを使用すると、バックアップのサイズを小さくすることができます。 次に例をいくつか示します。  
   
     -   異なる時刻または日にデータベースのバックアップを実行するように構成し、ワークロードに及ぼす影響を最小限に抑えます。 1 つの例は、割り当てられるデータベースのメンテナンス時間内にデータベースの完全バックアップを完了することができない、非常に大規模なデータベース (1 TB 以上) です。 この状況では、段階的なバックアップを使用し、データベース全体を分割して複数の段階的なバックアップの対象にすることができます。  
   

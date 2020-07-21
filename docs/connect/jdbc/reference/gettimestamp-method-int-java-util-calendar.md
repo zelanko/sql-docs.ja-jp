@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50aa202837bee9e091cbb2ad31f56da6ea15eef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3a86f7c3b9483257a38095adfff6969c04d43fb4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978872"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927351"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>getTimestamp (int, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,21 +36,21 @@ public java.sql.Timestamp getTimestamp(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターのインデックスを示す **int** です。  
   
- *カレンダー*  
+ *cal*  
   
  Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- タイムスタンプオブジェクト。  
+ Timestamp オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getTimestamp メソッドは、java.sql.CallableStatement インターフェイスの getTimestamp メソッドで規定されています。  
   
  このメソッドでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **datetime** 列と **smalldatetime** 列からのみ値が返されます。  

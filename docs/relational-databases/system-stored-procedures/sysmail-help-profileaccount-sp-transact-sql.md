@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_profileaccount_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f8fae7b7f9ec0fbd5a8310bcbdacc6a436dd232c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044487"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890872"
 ---
-# <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1 つ以上のデータベース メール プロファイルに関連付けられているアカウントを一覧表示します。  
     
@@ -43,13 +43,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @profile_id = ] profile_id` 表示するプロファイルのプロファイル ID です。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_id = ] profile_id`一覧表示するプロファイルのプロファイル ID を示します。 *profile_id*は**int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @profile_name = ] 'profile_name'` 表示するプロファイルのプロファイル名です。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_name = ] 'profile_name'`一覧表示するプロファイルのプロファイル名を指定します。 *profile_name*は**sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @account_id = ] account_id` 一覧にアカウント ID です。 *account_id*は**int**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示されます。  
+`[ @account_id = ] account_id`一覧表示するアカウント ID を示します。 *account_id*は**int**,、既定値は NULL です。 *Account_id*と*account_name*が両方とも NULL の場合、はプロファイル内のすべてのアカウントを一覧表示します。  
   
-`[ @account_name = ] 'account_name'` 一覧にアカウントの名前です。 *account_name*は**sysname**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示されます。  
+`[ @account_name = ] 'account_name'`一覧表示するアカウントの名前を指定します。 *account_name*は**sysname**,、既定値は NULL です。 *Account_id*と*account_name*が両方とも NULL の場合、はプロファイル内のすべてのアカウントを一覧表示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -60,24 +60,24 @@ sysmail_help_profileaccount_sp
 ||||  
 |-|-|-|  
 |列名|データ型|説明|  
-|**profile_id**|**int**|プロファイルのプロファイル ID です。|  
+|**profile_id**|**int**|プロファイルのプロファイル ID。|  
 |**profile_name**|**sysname**|プロファイルの名前。|  
 |**account_id**|**int**|アカウントのアカウント ID。|  
 |**account_name**|**sysname**|アカウントの名前。|  
 |**sequence_number**|**int**|プロファイル内のアカウントのシーケンス番号。|  
   
-## <a name="remarks"></a>コメント  
- ない場合*profile_id*または*profile_name*を指定すると、このストアド プロシージャがインスタンス内のすべてのプロファイル情報を返します。  
+## <a name="remarks"></a>注釈  
+ *Profile_id*または*profile_name*が指定されていない場合、このストアドプロシージャは、インスタンス内のすべてのプロファイルに関する情報を返します。  
   
- ストアド プロシージャ**sysmail_help_profileaccount_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
+ ストアドプロシージャ**sysmail_help_profileaccount_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
+ このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
- **A.名前で、特定のプロファイルのアカウントを一覧表示**  
+## <a name="examples"></a>例  
+ **A. 特定のプロファイルのアカウントを名前順に一覧表示する**  
   
- 次の例ではの情報を一覧表示、`AdventureWorks Administrator`プロファイル名を指定してプロファイルできます。  
+ 次の例では、プロファイル名を指定して、プロファイルの情報を一覧表示し `AdventureWorks Administrator` ます。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_profileaccount_sp  
@@ -93,7 +93,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **B.特定のプロファイルのプロファイル ID のアカウントを一覧表示**  
+ **B. 特定のプロファイルのアカウントをプロファイル ID 順に一覧表示する**  
   
  次の例では、`AdventureWorks Administrator` プロファイルの情報を、プロファイル ID を指定して一覧表示します。  
   
@@ -111,9 +111,9 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **C.すべてのプロファイルのアカウントを一覧表示**  
+ **C. すべてのプロファイルのアカウントを一覧表示する**  
   
- インスタンス内のすべてのプロファイルのアカウントを一覧表示する次の例を示しています。  
+ 次の例では、インスタンス内のすべてのプロファイルのアカウントを一覧表示します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_profileaccount_sp;  
@@ -131,8 +131,8 @@ profile_id  profile_name                 account_id  account_name         sequen
   
 ## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール アカウントを作成します。](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

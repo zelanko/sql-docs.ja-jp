@@ -1,6 +1,6 @@
 ---
-title: SetFlag メソッド (ServerNetworkProtocolProperty クラス) |Microsoft Docs
-ms.custom: ''
+title: SetFlag メソッド (ServerNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a44646c2ba369654d90bf30cdbc3f992444a67c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c042ae6dee0ad8e621d4de47faa93b0c6b8de96b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053020"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888640"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag メソッド (ServerNetworkProtocolProperty クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   参照されたプロパティのフラグを設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,22 +35,22 @@ ms.locfileid: "68053020"
 object.SetFlag(BoolValue)  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ServerNetworkProtocolProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクトのインスタンス上のネットワーク プロトコルの属性を表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ のインスタンス上のネットワークプロトコルの属性を表す[Servernetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*BoolValue*|フラグの新しい値を指定するブール値|  
+|*ブール値*|フラグの新しい値を指定するブール値|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **uint32** 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

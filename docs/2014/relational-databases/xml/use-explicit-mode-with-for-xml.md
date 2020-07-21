@@ -11,15 +11,14 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059402"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML での EXPLICIT モードの使用
   トピック「 [FOR XML を使用した XML の構築](../xml/for-xml-sql-server.md)」で説明されているように、RAW モードと AUTO モードでは、クエリ結果から生成される XML の構造を厳密に制御することはできません。 一方、EXPLICIT モードを使用すると、クエリ結果から生成される XML の構造を柔軟に制御することができます。  
@@ -51,28 +50,28 @@ ms.locfileid: "63231272"
   
 -   このユニバーサル テーブルから XML を生成する際、このテーブルのデータは列方向に (列グループに) パーティション分割されます。 このグループ化は、 **Tag** 列の値と列名によって決まります。 XML の生成時には、各行ごとに 1 つの列グループが選択され、1 つの要素が構築されます。 この処理は、この例では次のように行われます。  
   
-    -   1 行目の **Tag** 列の値は 1 なので、同じタグ番号を列名に含んでいる **Customer!1!cid**  列と **Customer!1!name** 列でグループが形成されます。 これらの列が行の処理に使用され、生成される要素の形式は <`Customer id=... name=...`> のようになります。 列名の形式については、このトピックの後半で説明します。  
+    -   1 行目の **Tag** 列の値は 1 なので、同じタグ番号を列名に含んでいる **Customer!1!cid** 列と **Customer!1!name**列でグループが形成されます。 これらの列が行の処理に使用され、生成される要素の形式は <`Customer id=... name=...`> のようになります。 列名の形式については、このトピックの後半で説明します。  
   
     -   **Tag** 列の値が 2 の行については、**Order!2!id** 列と **Order!2!date** 列でグループが形成され、<`Order id=... date=... /`> という形式の要素が生成されます。  
   
-    -   **Tag** 列の値が 3 の行については、**OrderDetail!3!id!id** 列と **OrderDetail!3!pid!idref** 列でグループが形成されます。 これらの列からは、<`OrderDetail id=... pid=...`> という形式の要素が生成されます。  
+    -   **Tag** 列の値が 3 の行については、 **OrderDetail!3!id!id** 列と **OrderDetail!3!pid!idref** 列でグループが形成されます。 これらの列からは、<`OrderDetail id=... pid=...`> という形式の要素が生成されます。  
   
 -   XML 階層の生成時、行は順番に処理されます。 XML 階層は、次のように決定されます。  
   
-    -   1 行目では、**Tag** 列に値 1 が指定され、**Parent** 列には NULL が指定されています。 したがって、対応する <`Customer`> 要素は、XML の最上位要素として追加されます。  
+    -   1 行目では、 **Tag** 列に値 1 が指定され、 **Parent** 列には NULL が指定されています。 したがって、対応する <`Customer`> 要素は、XML の最上位要素として追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
         ```  
   
-    -   2 行目では、**Tag** 列に値 2、**Parent** 列に値 1 が指定されています。 したがって、<`Customer`> 要素の子要素として、<`Order`> 要素が追加されます。  
+    -   2 行目では、 **Tag** 列に値 2、 **Parent** 列に値 1 が指定されています。 したがって、<`Order`> 要素の子要素として、<`Customer`> 要素が追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
            <Order id="O1" date="1/20/1996">  
         ```  
   
-    -   次の 2 行では、**Tag** 列に値 3、**Parent** 列に値 2 が指定されています。 したがって、<`Order`> 要素の子要素として、2 つの <`OrderDetail`> 要素が追加されます。  
+    -   次の 2 行では、 **Tag** 列に値 3、 **Parent** 列に値 2 が指定されています。 したがって、<`OrderDetail`> 要素の子要素として、2 つの <`Order`> 要素が追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -81,7 +80,7 @@ ms.locfileid: "63231272"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   最後の行では、**Tag** 列に値 2 が指定され、**Parent** 列には値 1 が指定されています。 したがって、<`Customer`> 親要素には、別の <`Order`> 子要素が追加されます。  
+    -   最後の行では、 **Tag** 列に値 2 が指定され、 **Parent** 列には値 1 が指定されています。 したがって、<`Order`> 親要素には、別の <`Customer`> 子要素が追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -93,7 +92,7 @@ ms.locfileid: "63231272"
         </Customer>  
         ```  
   
- つまり、EXPLICIT モードでは、**Tag** メタデータ列と **Parent** メタデータ列の値、各列名に提供されている情報、および列の正しい順序に基づいて、必要な XML を生成できるということになります。  
+ つまり、EXPLICIT モードでは、 **Tag** メタデータ列と **Parent** メタデータ列の値、各列名に提供されている情報、および列の正しい順序に基づいて、必要な XML を生成できるということになります。  
   
 ### <a name="universal-table-row-ordering"></a>ユニバーサル テーブルの行の順序  
  XML の生成時、ユニバーサル テーブルの行は順番に処理されます。 そのため、親と関連付けられている適切な子インスタンスを取得するには、各親ノードの直後がその親の子ノードになるという順序で、行セットの行が並んでいる必要があります。  
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  各部分の説明は、次のとおりです。  
   
  *ElementName*  
- 結果の要素の汎用識別子。 たとえば、*ElementName* として **Customers** が指定されている場合、\<Customers> 要素が生成されます。  
+ 結果の要素の汎用識別子。 たとえば、 *ElementName*として**Customers**が指定されている場合、 \<Customers> 要素が生成されます。  
   
  *TagNumber*  
  要素に割り当てられる一意なタグの値。 この値と **Tag** および **Parent**の 2 つのメタデータ列の組み合わせにより、生成される XML 内の要素の入れ子構造が決定されます。  
@@ -149,21 +148,21 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [例: 従業員情報の取得](../xml/example-retrieving-employee-information.md)  
   
--   [例: ELEMENT ディレクティブの指定](../xml/example-specifying-the-element-directive.md)  
+-   [例 : ELEMENT ディレクティブの指定](../xml/example-specifying-the-element-directive.md)  
   
--   [例: ELEMENTXSINIL ディレクティブの指定](../xml/example-specifying-the-elementxsinil-directive.md)  
+-   [例 : ELEMENTXSINIL ディレクティブの指定](../xml/example-specifying-the-elementxsinil-directive.md)  
   
 -   [例: EXPLICIT モードを使用した兄弟の構築](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [例: ID ディレクティブと IDREF ディレクティブの指定](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [例 : ID ディレクティブと IDREF ディレクティブの指定](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [例: ID ディレクティブと IDREFS ディレクティブの指定](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [例 : ID ディレクティブと IDREFS ディレクティブの指定](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [例: HIDE ディレクティブの指定](../xml/example-specifying-the-hide-directive.md)  
+-   [例 : HIDE ディレクティブの指定](../xml/example-specifying-the-hide-directive.md)  
   
--   [例: ELEMENT ディレクティブとエンティティのエンコードの指定](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [例 : ELEMENT ディレクティブとエンティティのエンコードを指定する](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [例: CDATA ディレクティブの指定](../xml/example-specifying-the-cdata-directive.md)  
+-   [例 : CDATA ディレクティブの指定](../xml/example-specifying-the-cdata-directive.md)  
   
 -   [例: XMLTEXT ディレクティブの指定](../xml/example-specifying-the-xmltext-directive.md)  
   

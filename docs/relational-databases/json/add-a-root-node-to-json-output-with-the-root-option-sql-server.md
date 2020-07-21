@@ -1,9 +1,7 @@
 ---
-title: ROOT オプションを使用して JSON 出力にルート ノードを追加する (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/02/2016
+title: ROOT オプションを使用して JSON 出力にルート ノードを追加する
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,22 +9,24 @@ helpviewer_keywords:
 ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f82e33c3b8d1168068d5ceb131467973984276e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 801fd50761c561db67405c5cc47210ba43facdf2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722306"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>ROOT オプションを使用して JSON 出力にルート ノードを追加する (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **FOR JSON** 句の JSON 出力に最上位の単一要素を追加するには、 **ROOT** オプションを指定します。  
   
  **ROOT** オプションを指定しないと、JSON 出力にルート要素が含まれません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の表に、 **ROOT** オプションを指定した場合と指定しなかった場合の **FOR JSON** 句の出力例を示します。  
   
  次の表の例では、追加の *RootName* 引数が空であると想定しています。 ルート要素に名前を指定すると、例の **root** の値がこの値に置き換わります。  

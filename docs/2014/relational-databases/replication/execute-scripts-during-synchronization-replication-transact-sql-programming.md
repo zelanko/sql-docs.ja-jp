@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c2739e301baf843f61c62e72e7ce7520d0445b73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bc217ad160a0238cc4247600d65eb32f156071f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721257"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010701"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>同期中のスクリプトの実行 (レプリケーション Transact-SQL プログラミング)
   レプリケーションでは、トランザクション パブリケーションおよびマージ パブリケーションのサブスクライバーに対し、要求時にスクリプトを実行できます。 スクリプトはレプリケーションの作業ディレクトリにコピーされ、サブスクライバー側で **sqlcmd** を使って適用されます。 トランザクション パブリケーションのサブスクリプションに対してスクリプトを適用しているときにエラーが発生した場合、既定では、ディストリビューション エージェントの実行が停止します。 レプリケーションのストアド プロシージャを使用すると、指定した [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをプログラムから実行できます。  
@@ -32,7 +31,7 @@ ms.locfileid: "62721257"
   
 2.  スクリプト ファイルを、パブリケーションのスナップショット エージェントがアクセスできる場所に保存します。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql) を実行します。 **@publication** を指定し、手順 2. で作成したスクリプト ファイル名を完全 UNC パスで **@scriptfile** に指定して、さらに、次のいずれかの値を **@skiperror** に指定します。  
+3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql) を実行します。 [ ** \@ パブリケーション**] を指定し、 ** \@ scriptfile**に手順 2. で作成した完全な UNC パスを含むスクリプトファイルの名前と、 ** \@ skiperror**に次の値のいずれかを指定します。  
   
     -   **0** - エラーが発生した場合、エージェントがスクリプトの実行を停止します。  
   

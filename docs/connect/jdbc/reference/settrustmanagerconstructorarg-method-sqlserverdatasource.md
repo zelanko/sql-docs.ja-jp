@@ -1,5 +1,5 @@
 ---
-title: setTrustManagerConstructorArg メソッド (SQLServerDataSource) |Microsoft Docs
+title: setTrustManagerConstructorArg メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,19 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13eb5b436bc813ae448fd88045e2726ab6a0ebcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d5d191be3a0b03a45c17083ddc754cdce9e54f79
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972221"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901956"
 ---
 # <a name="settrustmanagerconstructorarg-method-sqlserverdatasource"></a>setTrustManagerConstructorArg メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  TrustManagerConstructorArg connection プロパティの文字列値を設定します。
+  TrustManagerConstructorArg 接続プロパティの文字列値が設定されます。
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +37,7 @@ public void setTrustManagerConstructorArg(java.lang.String trustManagerClass)
 #### <a name="parameters"></a>パラメーター  
  *trustManagerClass*  
   
- カスタム javax.mail の完全修飾クラス名を格納している**文字列**。信頼マネージャー。
+ カスタム javax.net.ssl.TrustManager の完全修飾クラス名を含む**文字列**。
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

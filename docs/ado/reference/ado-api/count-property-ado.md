@@ -13,27 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9b611546b63dec8484785ba855f299925933e89e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919353"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760238"
 ---
 # <a name="count-property-ado"></a>Count プロパティ (ADO)
 コレクション内のオブジェクトの数を示します。  
   
 ## <a name="return-value"></a>戻り値  
- 返します、**長い**値。  
+ **Long 型**の値を返します。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**カウント**プロパティを指定したコレクション内のオブジェクトの数を確認します。  
+## <a name="remarks"></a>Remarks  
+ **Count**プロパティを使用して、特定のコレクションに含まれるオブジェクトの数を確認します。  
   
- ループの値で始まり、0 個のメンバーとをコーディングするため、ゼロから始まる番号のコレクションのメンバーは、常にする必要があります、**カウント**から 1 を引いたプロパティ。 Microsoft Visual Basic を使用しているをチェックせずにコレクションのメンバーをループ処理する場合、**カウント**プロパティを使用して、**ごとにしています.[次へ]** コマンド。  
+ コレクションのメンバーの番号はゼロで始まるので、常にゼロのメンバーで始まり、 **Count**プロパティの値から1を引いた値で終わる必要があります。 Microsoft Visual Basic を使用していて、 **Count**プロパティを確認せずにコレクションのメンバーをループする場合は、for each を使用します。 **次**のコマンド。  
   
- 場合、**カウント**プロパティが 0 で、コレクション内のオブジェクトはありません。  
+ **Count**プロパティが0の場合、コレクションにはオブジェクトが存在しません。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67919353"
 |[Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Count プロパティの例 (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
- [Count プロパティの例 (vc++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
+ [Count プロパティの例 (VC + +)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

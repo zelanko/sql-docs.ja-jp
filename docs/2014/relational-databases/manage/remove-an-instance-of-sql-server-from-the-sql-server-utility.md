@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49459743e2eb8af64b1c41910c660f713dbdb2a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9541179125655bf173dd2080df57e2b5b0cde5ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023292"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>SQL Server ユーティリティからの SQL Server のインスタンスの削除
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスを削除するには、次の手順を実行します。 この手順では、UCP リスト ビューから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが削除されるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのデータ収集が停止します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスはアンインストールされません。  
@@ -27,9 +26,9 @@ ms.locfileid: "63035965"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のユーティリティ エクスプローラーで、 **[マネージド インスタンス]** をクリックします。 ユーティリティ エクスプローラーのコンテンツ ウィンドウで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスのリスト ビューを確認します。  
   
-2.  リスト ビューの **[SQL Server インスタンス名]** 列で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから削除する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します。 削除するインスタンスを右クリックし、**[マネージ インスタンスの削除...]** をクリックします。  
+2.  リスト ビューの **[SQL Server インスタンス名]** 列で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから削除する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します。 削除するインスタンスを右クリックし、 **[マネージ インスタンスの削除...]** をクリックします。  
   
-3.  インスタンスの管理者特権を持つ資格情報を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:クリックして**接続しています.** で情報を確認、**サーバーへの接続**] ダイアログ ボックスの [ **Connect**。 **[マネージド インスタンスの削除]** ダイアログ ボックスにログイン情報が表示されます。  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、管理者特権のある資格情報を指定します。これには、 **[接続...]** をクリックし、 **[サーバーへの接続]** ダイアログ ボックスで情報を確認して、 **[接続]** をクリックします。 **[マネージド インスタンスの削除]** ダイアログ ボックスにログイン情報が表示されます。  
   
 4.  操作を実行する場合は **[OK]** をクリックします。 操作を終了する場合は **[キャンセル]** をクリックします。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "63035965"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティから削除します。  
   
-```  
+```powershell
 # Get Ucp connection  
 $UcpServerInstanceName = "ComputerName\InstanceName";  
 $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server $UcpServerInstanceName;  
@@ -57,9 +56,11 @@ $ManagedInstance = $Utility.ManagedInstances[$ServerInstanceName];
 $ManagedInstance.Remove($InstanceConnection);  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス名を正確に参照することが重要です。 大文字と小文字を区別する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの場合、@@SERVERNAME によって返された文字種を正確に使用して、インスタンス名を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンスのインスタンス名を取得するには、マネージド インスタンスで次のクエリを実行します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス名は、に格納されているとおりに正確に参照することが重要です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 大文字と小文字を区別する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの場合、@@SERVERNAME によって返された文字種を正確に使用して、インスタンス名を指定する必要があります。 
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンスのインスタンス名を取得するには、マネージド インスタンスで次のクエリを実行します。  
   
-```  
+```sql
 select @@SERVERNAME AS instance_name  
 ```  
   
@@ -68,5 +69,3 @@ select @@SERVERNAME AS instance_name
 ## <a name="see-also"></a>参照  
  [ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理](use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [SQL Server ユーティリティのトラブルシューティング](../../database-engine/troubleshoot-the-sql-server-utility.md)  
-  
-  

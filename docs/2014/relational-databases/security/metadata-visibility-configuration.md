@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5198dc4ba4e81bc1d7a8dd2411da59da81596102
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060223"
 ---
 # <a name="metadata-visibility-configuration"></a>メタデータ表示の構成
   メタデータの表示は、ユーザーが所有するセキュリティ保護可能なリソース、またはそのユーザーが権限を許可されているセキュリティ保護可能なリソースに制限されています。 たとえば、次のクエリを実行すると、ユーザーがテーブル `myTable`に対する SELECT または INSERT 権限を許可されている場合は、1 行が返されます。  
@@ -77,7 +76,7 @@ END;
 GO  
 ```  
   
- 呼び出し元でのメタデータの表示を可能にするには、呼び出し元にオブジェクト レベル、データベース レベル、サーバー レベルのいずれかの適切なスコープで VIEW DEFINITION 権限を許可できます。 したがって、上記の例では、呼び出し元に `myTable` に対する VIEW DEFINITION 権限が許可されていると、ストアド プロシージャから行が返されます。 詳細については、「[GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)」と「[GRANT &#40;データベースの権限の許可&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql)」を参照してください。  
+ 呼び出し元でのメタデータの表示を可能にするには、呼び出し元にオブジェクト レベル、データベース レベル、サーバー レベルのいずれかの適切なスコープで VIEW DEFINITION 権限を許可できます。 したがって、上記の例では、呼び出し元に `myTable`に対する VIEW DEFINITION 権限が許可されていると、ストアド プロシージャから行が返されます。 詳細については、「[GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)」と「[GRANT &#40;データベースの権限の許可&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql)」を参照してください。  
   
  また、ストアド プロシージャを所有者の資格情報で実行するように変更することもできます。 プロシージャの所有者とテーブルの所有者が同じ場合は、所有権の継承が適用されます。したがって、プロシージャの所有者のセキュリティ コンテキストにより、 `myTable`のメタデータにアクセスできます。 このシナリオで次のコードを実行すると、メタデータの行が呼び出し元に返されます。  
   
@@ -187,7 +186,7 @@ GO
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   

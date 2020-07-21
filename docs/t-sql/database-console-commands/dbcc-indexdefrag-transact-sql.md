@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7372051d8dfb23430f834ca159125822c6892956
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1894e33de743e8e4b7f4053b7b77746cca3e124
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116534"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901659"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 指定されたテーブルまたはビューのインデックスをデフラグします。
   
@@ -44,7 +44,7 @@ ms.locfileid: "68116534"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC INDEXDEFRAG  
 (  
     { database_name | database_id | 0 }   
@@ -70,7 +70,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 DBCC INDEXDEFRAG は、リーフ ページの物理順序がリーフ ノードでの左から右への論理順序と一致するように、インデックスのリーフ レベルをデフラグするので、インデックスのスキャンのパフォーマンスが向上します。
   
 > [!NOTE]  
@@ -111,9 +111,9 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>アクセス許可  
 呼び出し元はテーブルまたはインデックス付きビューを所有しているか、固定サーバー ロール **sysadmin**、固定データベース ロール **db_owner**、または固定データベース ロール **db_ddladmin** のメンバーである必要があります。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. DBCC INDEXDEFRAG を使用してインデックスの断片化を解消する  
-次の例では、`AdventureWorks` データベースの `Production.Product` テーブルにある `PK_Product_ProductID` インデックスのすべてのパーティションをデフラグします。
+次の例では、`PK_Product_ProductID` データベースの `Production.Product` テーブルにある `AdventureWorks` インデックスのすべてのパーティションをデフラグします。
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

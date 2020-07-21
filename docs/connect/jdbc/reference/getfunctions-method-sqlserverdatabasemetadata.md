@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b799fb56207294041c52fe455ad2acceff508d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cafef140d505197bfe1993f65ef17d4cb53e19f5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982954"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920330"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  *functionNamePattern*  
   
- 関数の名前。  
+ 関数の名前です。  
   
 ## <a name="return-value"></a>戻り値  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
@@ -50,7 +50,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getFunctions メソッドは、java.sql.DatabaseMetaData インターフェイスの getFunctions メソッドで規定されています。  
   
  このメソッドは、指定されたスキーマ名および関数名に一致するシステム関数およびユーザー関数だけを返します。  
@@ -60,7 +60,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  各関数の記述には、次の列が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|関数が存在するデータベースの名前です。|  
 |FUNCTION_SCHEM|**String**|関数が存在するスキーマの名前です。|  

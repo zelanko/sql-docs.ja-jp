@@ -22,14 +22,14 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 798ec9b823c324ea67d50023dd12f4fe585c5de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100854"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295664"
 ---
 # <a name="ssis-designer"></a>SSIS デザイナー
 
@@ -52,7 +52,7 @@ ms.locfileid: "68100854"
   
  次の図は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーと **[ツールボックス]** ウィンドウを示しています。  
   
- ![SSIS デザイナーとツールボックスのスクリーンショット](../integration-services/media/denali-designerandtoolbox.gif "SSIS デザイナーとツールボックスのスクリーンショット")  
+ ![SSIS デザイナーおよびツールボックスのスクリーン ショット](../integration-services/media/denali-designerandtoolbox.gif "SSIS デザイナーおよびツールボックスのスクリーン ショット")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、さらに、パッケージに機能を追加するダイアログ ボックスとウィンドウが含まれており、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、開発環境を構成しパッケージを使用するためのウィンドウとダイアログ ボックスが用意されています。 詳細については、「 [Integration Services のユーザー インターフェイス](../integration-services/integration-services-user-interface.md)」を参照してください。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68100854"
 ## <a name="event-handlers-tab"></a>[イベント ハンドラー] タブ
   **デザイナーの** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの制御フローを構築できます。 イベント ハンドラーは、パッケージによって生成されたイベントまたはパッケージ内のタスクまたはコンテナーによって生成されたイベントに応答して実行されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[実行可能ファイル]**  
  イベント ハンドラーを作成する実行可能ファイルを選択します。 実行可能ファイルとは、パッケージか、パッケージ内のタスクまたはコンテナーです。  
   

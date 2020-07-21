@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f92f64fe005bb49dd919f77e25931d5af025a8ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68762760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757873"
 ---
-# <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-sql)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   パラメーターとして渡されたエージェント タイプについて、既定の構成の ID を取得します。 このストアド プロシージャは、任意のデータベース上のディストリビューター側で実行されます。  
   
@@ -44,16 +44,16 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
   
 |値|説明|  
 |-----------|-----------------|  
-|**1**|スナップショットエージェント。|  
-|**2**|ログ リーダー エージェント|  
-|**3**|ディストリビューションエージェント。|  
-|**4**|マージエージェント。|  
+|**1**|スナップショット エージェント。|  
+|**2**|ログ リーダー エージェント。|  
+|**3**|ディストリビューション エージェント。|  
+|**4**|マージ エージェント。|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_help_agent_default**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  

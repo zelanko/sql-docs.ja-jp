@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Compact, destination
 - inserting data
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ebc177a5971e667abafbe1e444a4a50a568a4a6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a9192e96bb99082b63e4feac451a378eabd8093
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019610"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298057"
 ---
 # <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition 変換先
 

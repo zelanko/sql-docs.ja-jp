@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 167e799c873d586b06300a7e9433324391968d32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6dbd26125679c95f20bbeea08fcffbc596b4e990
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62827930"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432319"
 ---
 # <a name="create-infocube-for-transaction-data"></a>[トランザクション データのインフォキューブの作成]
   SAP Netweaver BW システムでトランザクション データ用の新しいインフォキューブを作成するには、 **[トランザクション データのインフォキューブの作成]** ダイアログ ボックスを使用します。  
@@ -42,7 +41,7 @@ ms.locfileid: "62827930"
  **長い説明**  
  新しいインフォキューブの説明を入力します。  
   
- **保存とアクティブ化**  
+ **保存と有効化**  
  新しいインフォキューブを保存してアクティブ化します。  
   
 ## <a name="infocube-transfer-structure-options"></a>[インフォキューブ転送構造] のオプション  
@@ -57,13 +56,13 @@ ms.locfileid: "62827930"
  **インフォオブジェクト**  
  データ フロー列に関連付けられているインフォオブジェクトの名前を表示します。  
   
- **[種類]**  
+ **Type**  
  データ フロー列に関連付けられているインフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
 |値|説明|  
 |-----------|-----------------|  
 |CHA|特性|  
-|UNI|単位|  
+|UNI|Units|  
 |KYF|主要データ|  
 |TIM|時間の特性|  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62827930"
  **Iobject - 削除**  
  インフォオブジェクトと現在の行のデータ フロー列との関連付けを削除します。 関連付けを削除するには、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

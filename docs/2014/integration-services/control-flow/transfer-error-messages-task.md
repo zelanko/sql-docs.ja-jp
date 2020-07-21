@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3a70942ca364e3d49dc26f9856587f9402b1ec07
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62830128"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438129"
 ---
 # <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク
   エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。 ユーザー定義メッセージとは、ID の値が 50000 以上のメッセージのことです。 ID の値が 50000 未満のメッセージはシステム エラー メッセージなので、エラー メッセージ転送タスクを使用して転送することはできません。  
@@ -40,7 +39,7 @@ ms.locfileid: "62830128"
   
  エラー メッセージ転送タスクは、転送元および転送先として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートしています。 転送元または転送先として使用するバージョンに関する制限はありません。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  このタスクは、転送されたエラー メッセージの数を報告する情報イベントを発生させます。  
   
  エラー メッセージ転送タスクでは、エラー メッセージ転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
@@ -57,7 +56,7 @@ ms.locfileid: "62830128"
   
  また、`OnInformation` イベントのログ エントリは転送されたエラー メッセージの数をレポートし、`OnWarning event` のログ エントリは転送先でエラー メッセージが上書きされるたびに書き込まれます。  
   
-## <a name="security-and-permissions"></a>セキュリティおよび権限  
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可  
  新しいエラー メッセージを作成する場合、パッケージを実行するユーザーは、転送先サーバーで sysadmin または serveradmin サーバー ロールのメンバーである必要があります。  
   
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>エラー メッセージ転送タスクの構成  

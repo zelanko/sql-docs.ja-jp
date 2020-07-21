@@ -13,29 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - MaxRecords property [ADO]
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5acd8997af6993a49ac4cbcca6e3b4c8bd26acfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b9e4beaaa4b38a26089d1136d1b32090ea12231f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932232"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754381"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords プロパティ (ADO)
-返されるレコードの最大数を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)クエリから。  
+クエリから[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に返されるレコードの最大数を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定または取得を**長い**返されるレコードの最大数を示す値。 既定値は 0 (**0**)、これは無制限を意味します。  
+ 返されるレコードの最大数を示す**Long 型**の値を設定または返します。 既定値はゼロ (**0**) です。これは制限がないことを意味します。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **MaxRecords**プロパティをデータ ソースから、プロバイダーが返すレコードの数を制限します。 このプロパティの既定値は 0 で、プロバイダーが要求されたすべてのレコードを返します。  
+## <a name="remarks"></a>Remarks  
+ データソースからプロバイダーが返すレコードの数を制限するには、 **MaxRecords**プロパティを使用します。 このプロパティの既定の設定は0です。これは、プロバイダーが要求されたすべてのレコードを返すことを意味します。  
   
- **MaxRecords**プロパティが読み取り/書き込み時に、**レコード セット**が開いているときに閉じており、読み取り専用です。  
+ レコードセットが開いている場合は、**レコードセット**が閉じられ、読み取り専用になっている場合、 **MaxRecords**プロパティは読み取り/書き込み可能です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MaxRecords プロパティの例 (VB)](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
  [MaxRecords プロパティの例 (VC++)](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)   

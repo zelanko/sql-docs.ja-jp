@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd8ad58e96956e1ab0f7b542bab4168272b3f968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 516c2c3efefd0c9a1384823b8eb1f6c04abd29c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141293"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705972"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **text**、**ntext**、**image** 列から **text**、**ntext**、**image** 値を読み取ります。 指定されたオフセットから開始し、指定されたバイト数を読み取ります。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68141293"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
@@ -58,7 +58,7 @@ _size_ データ型として **text** または **image** が使用されると�
 HOLDLOCK  
 トランザクションが終了するまでテキスト値の読み取りをロックします。 他のユーザーは値を読み取ることができますが、変更はできません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 有効な _text\_ptr_ 値を取得するには、[TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) 関数を使用します。 TEXTPTR は指定行で **text**、**ntext**、**image** 列のポインターを返します。 TEXTPRT はまた、クエリが複数の行を返す場合の最後の行で **text**、**ntext**、**image** 列のポインターを返します。 TEXTPTR は 16 バイトのバイナリ文字列を返すため、テキスト ポインターを保持するローカル変数を宣言し、READTEXT でその変数を使用することをお勧めします。 ローカル変数の宣言の詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行内テキスト ポインターが存在しても、有効ではない場合があります。 **text in row** オプションの詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。 テキスト ポインターを無効にする方法の詳細については、「[sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)」を参照してください。  
@@ -68,11 +68,11 @@ READTEXT で指定されたサイズよりも @@TEXTSIZE 関数の値の方が�
 ## <a name="permissions"></a>アクセス許可  
 READTEXT 権限は、特に指定のない限り指定されたテーブルで SELECT 権限を持つユーザーに与えられます。 SELECT 権限を譲渡した場合は、READTEXT 権限を譲渡できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、`pr_info` テーブルの `pub_info` 列の 2 文字目から 26 文字目までを読み取ります。  
   
 > [!NOTE]  
->  この例を実行するには、**pubs** サンプル データベースをインストールする必要があります。  
+>  この例を実行するには、[**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases) サンプル データベースをインストールする必要があります。  
   
 ```  
 USE pubs;  

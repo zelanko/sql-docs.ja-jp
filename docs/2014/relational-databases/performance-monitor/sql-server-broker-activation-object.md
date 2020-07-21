@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 59c66bc237b496fd913658f168b7b1c0089fdc00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4048c2baecaeb4bde7a1e215a15e8c51a60a01bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250701"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038745"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server: Broker Activation オブジェクト
   **SQLServer:BrokerActivation** パフォーマンス オブジェクトには、ストアド プロシージャのアクティブ化に関する情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
@@ -35,6 +34,6 @@ ms.locfileid: "63250701"
 ## <a name="see-also"></a>参照  
  [sys.dm_broker_activated_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-activated-tasks-transact-sql)   
  [sys.dm_broker_queue_monitors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-queue-monitors-transact-sql)   
- [リソースの利用状況の監視 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
+ [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   
   

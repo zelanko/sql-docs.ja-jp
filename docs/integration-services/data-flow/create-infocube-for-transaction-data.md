@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f0ca83c61a09c03c5c066da4b65a5a342f86c631
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 07e92734aebb13d04d715a727c8b2bbe2e0dc785
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045251"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293267"
 ---
 # <a name="create-infocube-for-transaction-data"></a>[トランザクション データのインフォキューブの作成]
 
@@ -46,7 +46,7 @@ ms.locfileid: "68045251"
  **長い説明**  
  新しいインフォキューブの説明を入力します。  
   
- **保存とアクティブ化**  
+ **保存と有効化**  
  新しいインフォキューブを保存してアクティブ化します。  
   
 ## <a name="infocube-transfer-structure-options"></a>[インフォキューブ転送構造] のオプション  
@@ -61,13 +61,13 @@ ms.locfileid: "68045251"
  **インフォオブジェクト**  
  データ フロー列に関連付けられているインフォオブジェクトの名前を表示します。  
   
- **[種類]**  
+ **Type**  
  データ フロー列に関連付けられているインフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |CHA|特性|  
-|UNI|単位|  
+|UNI|Units|  
 |KYF|主要データ|  
 |TIM|時間の特性|  
   

@@ -1,5 +1,5 @@
 ---
-title: オブジェクト (リンク オブジェクト ウィザード) を選択します |。Microsoft Docs
+title: '[オブジェクトの選択] (リンクオブジェクトウィザード)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 733afc25-5055-4411-bab5-dd9e0595cd2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6825417c53e0b0f9eb79e42e1a38737f6a60ce63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10b6405545a3f47a644394be08eb3e93f1945edb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940913"
 ---
 # <a name="select-objects-linked-object-wizard"></a>[オブジェクトの選択] (リンク オブジェクト ウィザード)
   **[オブジェクトの選択]** ページを使用すると、リンクまたはインポートするオブジェクトを選択できます。  
@@ -25,8 +24,8 @@ ms.locfileid: "66069317"
 > [!NOTE]  
 >  ディメンションおよび (関連するメジャーを含む) メジャー グループがリンクされます。 アクション、主要業績評価指標 (KPI)、および計算がインポートされます。  
   
-## <a name="options"></a>および  
- **使用可能なオブジェクト**  
+## <a name="options"></a>オプション  
+ **Available objects**  
  リンクまたはインポートするオブジェクトを選択します。  
   
 > [!NOTE]  

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio - 使用状況および診断データ (SSMS) | Microsoft Docs
-ms.custom: ''
+title: 使用状況と診断データ
+ms.custom: seo-lt-2019
 ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c79a2c3da9ee7f877c3d13bf17ca7912117df883
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5b61b32ab266c4068f610b9138bf3fc8ea364f0e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264700"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245699"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS の使用状況および診断データの収集のローカル監査
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,4 +64,4 @@ SSMS の使用状況データの収集をオプトインまたはオプトアウ
 ## <a name="see-also"></a>参照
 
 - [Configure usage and diagnostic data collection for SQL Server (SQL Server の使用状況および診断データの収集を構成する)](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [SQL Server の使用状況と診断データの収集のローカル監査](http://msdn.microsoft.com/library/mt743085.aspx)
+- [SQL Server の使用状況と診断データの収集のローカル監査](https://msdn.microsoft.com/library/mt743085.aspx)

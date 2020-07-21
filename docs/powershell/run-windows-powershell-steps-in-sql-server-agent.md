@@ -1,6 +1,7 @@
 ---
-title: SQL Server エージェントでの Windows PowerShell ステップの実行 | Microsoft Docs
-ms.custom: ''
+title: SQL Server エージェントでの Windows PowerShell ステップの実行
+description: SQL Server エージェント ジョブで Windows PowerShell の手順を行う方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1fe4fa35e5916bd64c88dd9276f09d111ca1a7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e42f8927d293772cc227513acebece255964eeb4
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049100"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809777"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server エージェントでの Windows PowerShell ステップの実行
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
 SQL Server エージェントを使用して、スケジュールされた時刻に SQL Server PowerShell スクリプトを実行します。  
   
@@ -36,13 +37,13 @@ SQL Server エージェントを使用して、スケジュールされた時刻
 
 - コマンド プロンプト ジョブ ステップを使用して PowerShell.exe を実行し、 **sqlps** モジュールをインポートするスクリプトを指定します。
 
-### <a name="LimitationsRestrictions"></a> メモリ使用量に関する注意
+### <a name="caution-about-memory-consumption"></a><a name="LimitationsRestrictions"></a> メモリ使用量に関する注意
 
 **sqlps** モジュールで PowerShell を実行する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブのステップごとに、約 **20 MB** のメモリを消費するプロセスが起動されます。 大量の Windows PowerShell ジョブ ステップを同時実行すると、パフォーマンスに悪影響が及びます。  
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="PShellJob"></a> PowerShell ジョブ ステップの作成  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a> PowerShell ジョブ ステップの作成  
  **PowerShell ジョブ ステップを作成するには**  
   
 1.  **[SQL Server エージェント]** を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]** をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](../ssms/agent/create-jobs.md)」を参照してください。  
@@ -59,7 +60,7 @@ SQL Server エージェントを使用して、スケジュールされた時刻
   
 7.  **[詳細設定]** ページをクリックして、ジョブ ステップのオプションのうち、ジョブ ステップが成功または失敗した場合のアクション、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントによるジョブ ステップの再試行回数、および再試行間隔を設定します。  
   
-##  <a name="CmdExecJob"></a> コマンド プロンプト ジョブ ステップの作成  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a> コマンド プロンプト ジョブ ステップの作成  
  **CmdExec ジョブ ステップを作成するには**  
   
 1.  **[SQL Server エージェント]** を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]** をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](../ssms/agent/create-jobs.md)」を参照してください。  

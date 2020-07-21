@@ -1,5 +1,5 @@
 ---
-title: コマンド |Microsoft Docs
+title: コマンド | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,21 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, commands
 - commands [OLE DB]
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17591d2420b23c741d988b87a6de2519cbcc4bb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a292f7c37f304f6ca3e9f62d4b0b578f0fcab80
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62826987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056406"
 ---
 # <a name="commands"></a>コマンド
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **ICommand**インターフェイスとコマンド オブジェクトのこのセクションで説明されています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、次のセクションで説明されている**ICommand**インターフェイスとコマンドオブジェクトを公開します。  
   
 -   [コマンドの構文](command-syntax.md)  
   
--   [コマンド パラメーター](command-parameters.md)  
+-   [コマンドパラメーター](command-parameters.md)  
   
 -   [コマンドの準備](preparing-commands.md)  
   

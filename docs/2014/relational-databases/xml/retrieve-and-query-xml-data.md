@@ -10,24 +10,23 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 40e4fbf76bbed28822cc86cc5c04ea26adb6c7a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065475"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML データの取得および XML データに対するクエリの実行
   このトピックでは、XML データのクエリを実行するために指定する必要があるクエリ オプションについて説明します。 また、XML インスタンスをデータベースに格納するときに保持されない部分についても説明します。  
   
-##  <a name="features"></a> 保持されない XML インスタンスの機能  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> 保持されない XML インスタンスの機能  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML インスタンスの内容は保持されますが、XML データ モデルで重要と見なされない側面は保持されません。 つまり、取得した XML インスタンスは、サーバーに格納されたインスタンスと同一とは限りませんが、含まれている情報は同じです。  
   
 ### <a name="xml-declaration"></a>XML 宣言  
- インスタンスをデータベースに格納する場合は、そのインスタンスの XML 宣言は保持されません。 例 :  
+ インスタンスをデータベースに格納する場合は、そのインスタンスの XML 宣言は保持されません。 次に例を示します。  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -40,7 +39,7 @@ FROM T1
   
  結果は `<doc/>`です。  
   
- `<?xml version='1.0'?>` などの XML 宣言は、XML データを `xml` データ型インスタンスに格納するときに保持されません。 これは仕様です。 XML 宣言 () とその属性 (バージョン/エンコード/スタンドアロン) が失われるデータは、型に変換されます`xml`します。 XML 宣言は、XML パーサーが使用するディレクティブとして扱われます。 XML データは、ucs-2 として内部的に保存されます。 XML インスタンスのその他すべての PI は保持されます。  
+ `<?xml version='1.0'?>` などの XML 宣言は、XML データを `xml` データ型インスタンスに格納するときに保持されません。 これは仕様です。 XML 宣言 () とその属性 (バージョン/エンコーディング/スタンドアロン) は、データを型に変換した後に失われ `xml` ます。 XML 宣言は、XML パーサーが使用するディレクティブとして扱われます。 XML データは、ucs-2 として内部的に保存されます。 XML インスタンスのその他すべての PI は保持されます。  
   
   
 ### <a name="order-of-attributes"></a>属性の順序  
@@ -79,15 +78,15 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- 結果の名前空間プレフィックスは、異なる可能性があります。 例 :  
+ 結果の名前空間プレフィックスは、異なる可能性があります。 次に例を示します。  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
 ```  
   
   
-##  <a name="query"></a> 必要なクエリ オプションの設定  
- クエリを実行するときに`xml`型の列または変数を使用して`xml`示すように、データ型のメソッドを次のオプションを設定する必要があります。  
+##  <a name="setting-required-query-options"></a><a name="query"></a> 必要なクエリ オプションの設定  
+ `xml`データ型のメソッドを使用して型の列または変数に対してクエリを実行する場合は、 `xml` 次のオプションを示すように設定する必要があります。  
   
 |SET オプション|設定する値|  
 |-----------------|---------------------|  
@@ -99,7 +98,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|ON|  
   
- ように、クエリと変更のオプションが設定されていない場合`xml`データ型のメソッドは失敗します。  
+ オプションが表示されるように設定されていない場合、データ型のメソッドに対するクエリおよび変更 `xml` は失敗します。  
   
   
 ## <a name="see-also"></a>参照  

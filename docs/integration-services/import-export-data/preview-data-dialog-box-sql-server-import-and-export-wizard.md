@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b766a1615e0dd75efca5a47dca7f4d0dcab553b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: feeef370bc64697e3fa9ef3a279e31ba047301fd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901787"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296321"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>[データのプレビュー] ダイアログ ボックス (SQL Server インポートおよびエクスポート ウィザード)
 

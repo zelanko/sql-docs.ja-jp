@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 39c0937448194dba61eb20d5e1492c71a57bf80a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9ce3042bedd23c5ee173b1df7669a09cce35351
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968067"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75831750"
 ---
 # <a name="excel-connection-manager"></a>Excel 接続マネージャー
 
@@ -68,7 +68,35 @@ ms.locfileid: "67968067"
   
  **[先頭行に列名を含める]**  
  選択されているワークシートのデータの 1 行目に列名が含まれているかどうかを指定します。 このオプションの既定値は **[true]** です。  
+
+## <a name="solution-to-import-data-with-mixed-data-types-from-excel"></a>データ型が混在しているデータを Excel からインポートするためのソリューション
+
+既定でデータ型が混在するデータを使用する場合、Excel ドライバーでは最初の 8 行が読み取られます (**TypeGuessRows** レジスタ キーで設定される)。 Excel ドライバーでは、データの最初の 8 行に基づき、各列のデータ型が推測されます。 たとえば、Excel のデータ ソースで 1 列に数字とテキストが入っているとき、最初の 8 行が数字であれば、その最初の 8 行に基づき、その列のデータが整数型であるとドライバーでは判断される可能性があります。 その場合、SSIS では、テキスト値がスキップされ、NULL としてインポート先にインポートされます。
+
+この問題を解決するには、次の解決策のいずれかをお試しいただけます。
+
+* Excel ファイルで Excel 列の種類を **[テキスト]** に変更します。
+* IMEX 拡張プロパティを接続文字列に追加し、ドライバーの既定動作をオーバーライドします。 ";IMEX=1" という拡張プロパティを接続文字列の終わりに追加すると、Excel ではデータがすべてテキストとして扱われます。 次の例を参照してください。
+    
+  ```ACE OLEDB connection string:
+  Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\ExcelFileName.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES;IMEX=1";
+  ```
+
+   この解決策で解決するには、場合によってはレジストリ設定も変更する必要があります。 main.cmd ファイルは次のようになります。
   
+   ```cmd
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\12.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines\Excel" /t REG_DWORD /v TypeGuessRows /d 0 /f
+   ```
+
+* ファイルを CSV 形式で保存し、CSV インポートをサポートするように SSIS パッケージを変更します。
+
 ## <a name="related-tasks"></a>Related Tasks  
 [SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む](../load-data-to-from-excel-with-ssis.md)  
 [Excel ソース](../data-flow/excel-source.md)  

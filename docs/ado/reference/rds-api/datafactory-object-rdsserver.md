@@ -11,38 +11,38 @@ apitype: COM
 helpviewer_keywords:
 - DataFactory object [ADO]
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97597e15bc5cd8ee8d3008c97f3a4e8b07b2d43d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38b07258488539638729c55cef65770b0788a1c8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964323"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752615"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory オブジェクト (RDSServer)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- この既定のサーバー側ビジネス オブジェクトは、クライアント側のアプリケーションの指定したデータ ソースへの読み取り/書き込みデータのアクセスを提供するメソッドを実装します。  
+ この既定のサーバー側ビジネスオブジェクトは、クライアント側アプリケーションの指定されたデータソースへの読み取り/書き込みデータアクセスを提供するメソッドを実装します。  
   
- **RDSServer.DataFactory**オブジェクトがクライアント要求を受信するサーバー側のオートメーション オブジェクトとして設計されています。 インターネット実装では、Web サーバー上に存在し、ADISAPI コンポーネントによりインスタンス化されます。 **RDSServer.DataFactory**オブジェクトは読み取りを提供し、指定されたデータへの書き込みアクセスが、ソースしますが、検証やビジネス ルールのロジックが含まれていません。  
+ RDSServer オブジェクトは、クライアント要求を受け取るサーバー側オートメーションオブジェクトとして設計されてい**ます**。 インターネット実装では、Web サーバー上に存在し、ADISAPI コンポーネントによってインスタンス化されます。 **RDSServer**オブジェクトは、指定されたデータソースへの読み取りおよび書き込みアクセスを提供しますが、検証やビジネスルールのロジックは含まれません。  
   
- 両方で使用できるメソッドを使用する場合、 **RDSServer.DataFactory**と[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの場合、リモート データ サービスを使用して、 **rds.DataControl**既定のバージョン。 既定の基本的なプログラミング シナリオでは、前提としています、 **RDSServer.DataFactory**汎用的なサーバー側ビジネス オブジェクトとして機能します。  
+ **RDSServer DataFactory**と RDS の両方で使用できるメソッドを使用する場合[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトでは、リモートデータサービスは RDS を使用し**ます。** 既定で DataControl バージョン。 既定では、基本的なプログラミングシナリオが想定されています。ここでは、 **RDSServer**が汎用的なサーバー側ビジネスオブジェクトとして機能します。  
   
- タスク固有のサーバー側の処理を処理するために、Web アプリケーションを実行する場合に、置き換えることができます、 **RDSServer.DataFactory**カスタム ビジネス オブジェクトを使用します。  
+ Web アプリケーションでタスク固有のサーバー側の処理を処理する場合は、 **RDSServer DataFactory**をカスタムビジネスオブジェクトに置き換えることができます。  
   
- 呼び出すサーバー側ビジネス オブジェクトを作成することができます、 **RDSServer.DataFactory**メソッドなど[クエリ](../../../ado/reference/rds-api/query-method-rds.md)と[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)します。 これは、ビジネス オブジェクトに機能を追加、既存のリモート データ サービス テクノロジを活用する場合に役立ちます。  
+ [クエリ](../../../ado/reference/rds-api/query-method-rds.md)や[CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)などの**DataFactory**メソッドを呼び出すサーバー側ビジネスオブジェクトを作成できます。 これは、ビジネスオブジェクトに機能を追加するが、既存のリモートデータサービステクノロジを利用する場合に便利です。  
   
  **DataFactory**オブジェクトは、クライアント側で実行されるスクリプトに対して安全ではありません。  
   
- クラス ID を**RDSServer.DataFactory**オブジェクトが 9381D8F5-0288-11 D 0-9501-00AA00B911A5 します。  
+ **DataFactory**オブジェクトのクラス ID は9381D8F5-0288-11D0-9501-00AA00B911A5 です。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
--   [DataControl オブジェクト (RDSServer) のプロパティ、メソッド、およびイベント](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
+-   [DataFactory オブジェクト (RDSServer) のプロパティ、メソッド、およびイベント](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
- [DataFactory オブジェクト、クエリ メソッド、および CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
+## <a name="see-also"></a>参照  
+ [DataFactory オブジェクト、Query メソッド、および CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

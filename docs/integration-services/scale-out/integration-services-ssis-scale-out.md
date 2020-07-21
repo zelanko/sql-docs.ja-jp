@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: abdb0350e90e1e9d1907db0405f696862434390e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4b4a5b5f27f959f3a04bb3cf5468d198d3ef5267
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897938"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295652"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out
 
@@ -46,7 +46,7 @@ Scale Out をセットアップすると、次のことができます。
 
 -   Scale Out Manager アプリで、Scale Out トポロジを管理します。 詳細については、「[Integration Services Scale Out](integration-services-ssis-scale-out-manager.md)」をご覧ください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 -   [1 台のコンピューターでの Integration Services (SSIS) Scale Out の概要](get-started-with-ssis-scale-out-onebox.md)
 
--   [チュートリアル:Integration Services Scale Out を設定する](walkthrough-set-up-integration-services-scale-out.md)
+-   [チュートリアル: Integration Services Scale Out をセットアップする](walkthrough-set-up-integration-services-scale-out.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ea6539e0d004f573281d54f7bb4a4c055c7b3e73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c87c76f5e082e3d5c4abc158ff2be2ad33fe9a52
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901113"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883069"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle パブリッシャーのバックアップと復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   バックアップと復元を実行する場合は、次のガイドラインに従ってください。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67901113"
   
 -   データベースを復元した結果、パブリッシャーまたはディストリビューターが同期しなくなった場合は、レプリケーション エージェントによってエラー メッセージが記録されます。 この時点で、関連するパブリケーションとサブスクリプションをすべて削除して再作成する必要があります。  
   
-    1.  パブリケーションおよびサブスクリプションの定義のスクリプトを作成します。 詳細については、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
+    1.  パブリケーションおよびサブスクリプションの定義のスクリプトを作成します。 詳しくは、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
   
          パブリッシャーとディストリビューターの状態のバージョン間でパブリケーションの定義が変更された場合は、スクリプトを変更する必要があります。  
   

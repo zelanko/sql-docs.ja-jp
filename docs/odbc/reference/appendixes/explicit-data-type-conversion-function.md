@@ -12,25 +12,25 @@ helpviewer_keywords:
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6982f7b7caa71abc08c5b84ef1bb6211dcadaecd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2de8a8cb6177e9210e8d48c0ce097d13c9a276fd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913610"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306993"
 ---
 # <a name="explicit-data-type-conversion-function"></a>データ型の明示的な変換用関数
-SQL データ型の定義では、明示的なデータ型の変換を指定します。  
+明示的なデータ型の変換は、SQL データ型定義の観点から指定されます。  
   
- 明示的なデータ型の変換関数の ODBC 構文では、変換は制限されません。 1 つのデータ型の別のデータ型への特定の変換の有効性は、各ドライバー固有の実装によって決定されます。 ドライバーは、ネイティブの構文に ODBC 構文を変換として拒否される ODBC 構文では有効ですが、データ ソースでサポートされていない変換のします。 ODBC 関数**SQLGetInfo**、変換 (SQL_CONVERT_BIGINT、SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH、具合) などのオプションは、データ ソースでサポートされている変換について照会する方法を提供します.  
+ 明示的なデータ型変換関数の ODBC 構文では、変換は制限されません。 あるデータ型から別のデータ型への特定の変換の有効性は、ドライバー固有の各実装によって決まります。 ドライバーは ODBC 構文をネイティブ構文に変換するので、ODBC 構文で有効であってもデータソースではサポートされていない変換を拒否します。 ODBC 関数**SQLGetInfo**は、変換オプション (SQL_CONVERT_BIGINT、SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH など) と共に、データソースによってサポートされている変換について照会する手段を提供します。  
   
- 形式、**変換**関数は。  
+ **CONVERT**関数の形式は次のとおりです。  
   
- **変換 (** _value_exp_、 _data_type_ **)**  
+ **CONVERT (** _value_exp_、 _data_type_**)**  
   
- 指定された値を返します*value_exp*を指定した変換*data_type*ここで、 *data_type*は、次のキーワードの 1 つです。  
+ 関数は、指定された*data_type*に変換*value_exp*によって指定された値を返します。 *data_type*は、次のいずれかのキーワードです。  
   
 |||  
 |-|-|  
@@ -54,9 +54,9 @@ SQL データ型の定義では、明示的なデータ型の変換を指定し�
 |SQL_INTERVAL_DAY_TO_MINUTE||  
 |SQL_INTERVAL_DAY_TO_SECOND||  
   
- 明示的なデータ型の変換関数の ODBC 構文は、変換形式の仕様をサポートしていません。 明示的な形式の仕様は、基になるデータ ソースでサポートされていますが場合、ドライバーが既定値を指定または形式の仕様を実装する必要があります。  
+ 明示的なデータ型変換関数の ODBC 構文では、変換形式の指定はサポートされていません。 明示的な形式の指定が基になるデータソースでサポートされている場合、ドライバーは既定値を指定するか、形式指定を実装する必要があります。  
   
- 引数*value_exp*列名、または指定できます、もう 1 つのスカラー関数、または数値の結果の文字列リテラル。 以下に例を示します。  
+ 引数*value_exp*には、列名、別のスカラー関数の結果、または数値または文字列リテラルを指定できます。 次に例を示します。  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
@@ -64,49 +64,49 @@ SQL データ型の定義では、明示的なデータ型の変換を指定し�
   
  CURDATE スカラー関数の出力を文字列に変換します。  
   
- ODBC からの戻り値のデータ型を必要としませんので、スカラー関数 (関数は、データ ソースに固有では多くの場合) ため、アプリケーションは、データ型の変換を強制的に可能な限りの CONVERT スカラー関数を使用する必要があります。  
+ ODBC では、スカラー関数からの戻り値のデータ型が必須ではないため (関数はデータソースに固有のものであるため)、データ型の変換を強制するために、可能な場合は常に CONVERT スカラー関数を使用する必要があります。  
   
- 次の 2 つの例の使用方法を示します、**変換**関数。 これらの例は、型 SQL_SMALLINT の EMPNO 列および SQL_CHAR 型の EMPNAME 列で、従業員をという名前のテーブルの存在を想定しています。  
+ 次の2つの例は、 **CONVERT**関数の使用方法を示しています。 これらの例では、EMPLOYEES という名前のテーブルが存在することを前提としています。 SQL_SMALLINT 型の EMPNO 列と SQL_CHAR 型の EMPNO 列が含まれています。  
   
- 場合は、アプリケーションは、次の SQL ステートメントを指定します。  
+ アプリケーションで次の SQL ステートメントを指定する場合:  
   
 ```  
 SELECT EMPNO FROM EMPLOYEES WHERE {fn CONVERT(EMPNO,SQL_CHAR)} LIKE '1%'  
 ```  
   
--   ORACLE 用のドライバーでは、SQL ステートメントを変換します。  
+-   Driver for ORACLE は、SQL ステートメントを次のように変換します。  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE to_char(EMPNO) LIKE '1%'  
     ```  
   
--   SQL Server 用のドライバーでは、SQL ステートメントを変換します。  
+-   SQL Server のドライバーは、SQL ステートメントを次のように変換します。  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE convert(char,EMPNO) LIKE '1%'  
     ```  
   
- 場合は、アプリケーションは、次の SQL ステートメントを指定します。  
+ アプリケーションで次の SQL ステートメントを指定する場合:  
   
 ```  
 SELECT {fn ABS(EMPNO)}, {fn CONVERT(EMPNAME,SQL_SMALLINT)}  
    FROM EMPLOYEES WHERE EMPNO <> 0  
 ```  
   
--   ORACLE 用のドライバーでは、SQL ステートメントを変換します。  
+-   Driver for ORACLE は、SQL ステートメントを次のように変換します。  
   
     ```  
     SELECT abs(EMPNO), to_number(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  
     ```  
   
--   SQL Server 用のドライバーでは、SQL ステートメントを変換します。  
+-   SQL Server のドライバーは、SQL ステートメントを次のように変換します。  
   
     ```  
     SELECT abs(EMPNO), convert(smallint, EMPNAME) FROM EMPLOYEES  
        WHERE EMPNO <> 0  
     ```  
   
--   Ingres 用のドライバーでは、SQL ステートメントに変換します。  
+-   Ingres のドライバーは、SQL ステートメントを次のように変換します。  
   
     ```  
     SELECT abs(EMPNO), int2(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  

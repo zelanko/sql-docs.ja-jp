@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e365b03b5a6a475f98a940f5b6f243bc7fa31789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 04779617fb0cdc26153a0830be6db991ef56e7ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898225"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897913"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーから資格情報を削除します。  
   
@@ -47,7 +47,7 @@ DROP CREDENTIAL credential_name
  *credential_name*  
  サーバーから削除する資格情報の名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  資格情報自体は削除せずに、資格情報に関連付けられているシークレットを削除するには、[ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md) を使います。  
   
  資格情報に関する情報は、**sys.credentials** カタログ ビューで確認できます。  
@@ -58,7 +58,7 @@ DROP CREDENTIAL credential_name
 ## <a name="permissions"></a>アクセス許可  
  ALTER ANY CREDENTIAL 権限が必要です。 システム資格情報を削除するには、CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、資格情報 `Saddles` を削除します。  
   
 ```  

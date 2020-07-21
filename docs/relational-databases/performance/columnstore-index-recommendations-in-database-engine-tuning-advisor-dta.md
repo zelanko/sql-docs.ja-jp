@@ -1,6 +1,6 @@
 ---
-title: データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項 | Microsoft Docs
-ms.custom: ''
+title: 列ストア インデックスの推奨事項 - データベース エンジン チューニング アドバイザー (DTA)
+ms.custom: seo-dt-2019
 ms.date: 01/09/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2899945661ca2f0502b9553cc8e78b751570a092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a115a1135ab0b7ded6bdde57e50ce1be190953b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985012"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655874"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
  
   データ ウェアハウスと分析ワークロードでは、[列ストア インデックス](../../t-sql/statements/create-columnstore-index-transact-sql.md)および従来の行ストア インデックスから大きな効果を得ることができます。 データベースを構築するために選択する行ストア インデックスおよび列ストア インデックスは、アプリケーションのワークロードに依存します。 SQL Server 2016 では、[データベース エンジン チューニング アドバイザー (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) でワークロードを分析し、データベースに構築するために適切な行ストア インデックスと列ストア インデックスの組み合わせが推奨されます。 
@@ -55,7 +55,7 @@ dta.exe コマンド ライン ユーティリティの詳細については、�
 ## <a name="see-also"></a>参照
 [列ストア インデックス ガイド](../../relational-databases/indexes/columnstore-indexes-overview.md)       
 [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)      
-[チュートリアル:データベース エンジン チューニング アドバイザー](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)
+[チュートリアル:データベース エンジン チューニング アドバイザー](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
 
 
 

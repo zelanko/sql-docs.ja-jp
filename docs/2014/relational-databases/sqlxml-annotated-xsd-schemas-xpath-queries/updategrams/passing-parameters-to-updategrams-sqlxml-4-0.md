@@ -1,5 +1,5 @@
 ---
-title: (SQLXML 4.0) アップデート グラムにパラメーターを渡す |Microsoft Docs
+title: アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,33 +13,32 @@ helpviewer_keywords:
 - updategrams [SQLXML], passing parameters
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d9e699ea80253934ecc6f3ce744feaed6fd6a392
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047467"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
-  アップデートグラムはテンプレートであり、パラメーターを渡すことができます。 テンプレートに渡すパラメーターの詳細については、次を参照してください。[アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)します。  
+  アップデートグラムはテンプレートであり、パラメーターを渡すことができます。 テンプレートにパラメーターを渡す方法の詳細については、「[アップデートグラムのセキュリティに関する考慮事項 &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)」を参照してください。  
   
  アップデートグラムでは、パラメーター値として NULL を渡すことができます。 NULL パラメーター値を渡すには、`nullvalue` 属性を指定し、 `nullvalue` 属性に割り当てられる値をパラメーター値として指定します。 アップデートグラムでは、この値は NULL として扱われます。  
   
 > [!NOTE]  
 >  `<sql:header>` および `<updg:header>` では、`nullvalue` を修飾子なしで指定し、`<updg:sync>` では、`nullvalue` を `updg:nullvalue` のように修飾子付きで指定します。  
   
-## <a name="examples"></a>使用例  
- 次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要があります[SQLXML の例を実行するための要件](../../sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+## <a name="examples"></a>例  
+ 次の例を使用して実際のサンプルを作成するには、 [SQLXML の例を実行するための要件](../../sqlxml/requirements-for-running-sqlxml-examples.md)を満たす必要があります。  
   
- アップデート グラムの例を使用する前に、次のことを確認してください。  
+ アップデートグラムの例を使用する前に、次の点に注意してください。  
   
--   例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
+-   例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピングスキーマを使用するアップデートグラムの例については、「[アップデートグラムでの注釈付きマッピングスキーマの指定 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. アップデートグラムにパラメーターを渡す  
- この例では、アップデートグラムで HumanResources.Shift テーブル内の従業員の姓を変更します。 アップデート グラムには、2 つのパラメーターが渡されます。ShiftID を一意に識別し、名前を使用します。  
+ この例では、アップデートグラムで HumanResources.Shift テーブル内の従業員の姓を変更します。 アップデートグラムには、勤務時間を一意に識別する ShiftID と、Name の 2 つのパラメーターが渡されます。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -62,7 +61,7 @@ ms.locfileid: "66014732"
   
 1.  上のアップデートグラムをメモ帳にコピーし、UpdategramWithParameters.xml としてファイルに保存します。  
   
-2.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を準備する[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)後に次の行を追加することで、アップデート グラムを実行する、 `cmd.Properties("Output Stream").Value = outStream`:  
+2.  次の行を追加して、 [ADO を使用して sqlxml 4.0 クエリを実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)し、アップデートグラムを実行するための sqlxml 4.0 テストスクリプト (sqlxml4test.vbs) を準備し `cmd.Properties("Output Stream").Value = outStream` ます。  
   
     ```  
     cmd.NamedParameters = True  
@@ -97,7 +96,7 @@ ms.locfileid: "66014732"
   
 1.  上のアップデートグラムをメモ帳にコピーし、UpdategramPassingNullvalues.xml としてファイルに保存します。  
   
-2.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を準備する[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)後に次の行を追加することで、アップデート グラムを実行する、 `cmd.Properties("Output Stream").Value = outStream`:  
+2.  次の行を追加して、 [ADO を使用して sqlxml 4.0 クエリを実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)し、アップデートグラムを実行するための sqlxml 4.0 テストスクリプト (sqlxml4test.vbs) を準備し `cmd.Properties("Output Stream").Value = outStream` ます。  
   
     ```  
     cmd.NamedParameters = True  
@@ -107,6 +106,6 @@ ms.locfileid: "66014732"
     ```  
   
 ## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [SQLXML 4.0&#41;&#40;アップデートグラムのセキュリティに関する考慮事項](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

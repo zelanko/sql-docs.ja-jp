@@ -1,5 +1,5 @@
 ---
-title: Setワークステーション Id メソッド (SQLServerDataSource) |Microsoft Docs
+title: setWorkstationID メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08b09958276a5cc7f7cc3de6e56f7d7336ca9e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2c7664cb50f25d429ee74a163c589436bacf8902
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972036"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901588"
 ---
 # <a name="setworkstationid-method-sqlserverdatasource"></a>setWorkstationID メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,8 +39,8 @@ public void setWorkstationID(java.lang.String workstationID)
   
  クライアント コンピューターの名前を含む **String** です。  
   
-## <a name="remarks"></a>Remarks  
- workstationID は、クライアント コンピューターまたはワークステーションの名前です。 "ワークステーション Id" プロパティが設定されていない場合、既定値は、InetAddress () メソッドを呼び出すことによって作成されます。 GetHostName が空の値を返す場合は、getHostAddress (). toString () メソッドが呼び出されます。  
+## <a name="remarks"></a>解説  
+ workstationID は、クライアント コンピューターまたはワークステーションの名前です。 workstationID プロパティが設定されていない場合、既定値は InetAddress.getLocalHost().getHostName() メソッドを呼び出して構成されます。 getHostName によって空白の値が返された場合は、getHostAddress().toString() メソッドが呼び出されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

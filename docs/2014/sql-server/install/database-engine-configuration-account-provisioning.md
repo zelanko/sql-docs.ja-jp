@@ -1,5 +1,5 @@
 ---
-title: データベース エンジンの構成 - アカウントの準備 |Microsoft Docs
+title: データベースエンジンの構成-アカウントの準備 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd3e075f187118c6c2ab7f6898b911be44d2cf31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095873"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012889"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>データベース エンジンの構成 - アカウントの準備
   このページは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ モードを設定し、Windows ユーザーまたはグループを [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の管理者として追加するために使用します。  
   
-## <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の実行に関する注意点  
+## <a name="considerations-for-running-sscurrent"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の実行に関する注意点  
  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 **のログインとして** BUILTIN\Administrators [!INCLUDE[ssDE](../../includes/ssde-md.md)] グループが準備され、ローカル Administrators グループのメンバーは、管理者資格情報を使用してログインできました。 しかし、引き上げられたアクセス許可を使用するのはベスト プラクティスではありません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 **BUILTIN\Administrators** グループはログインとして準備されていません。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスのインストール時に、管理ユーザーごとに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ログインを作成し、そのログインを sysadmin 固定サーバー ロールに追加する必要があります。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの実行に使用する Windows アカウントに対しても、同様の操作を行う必要があります。 それらのジョブには、レプリケーション エージェント ジョブも含まれます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[セキュリティ モード]** : インストール用に Windows 認証または混合モード認証を選択します。  
   
  **[Windows プリンシパルの準備]** : 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、Windows の Builtin\Administrator ローカル グループが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin サーバー ロールに配置されました。これは、Windows 管理者に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスへのアクセス許可を付与する効果的な方法でした。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、Builtin\Administrator グループは sysadmin  サーバー ロールで提供されません。 代わりに、セットアップ時に新規インストール用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者を明示的に用意する必要があります。  
@@ -31,7 +30,7 @@ ms.locfileid: "66095873"
 > [!IMPORTANT]  
 >  セットアップ時に新規インストール用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者を明示的に用意する必要があります。 セットアップは、この手順を完了するまで続行できません。  
   
- **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者の指定]** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの Windows プリンシパルを少なくとも 1 つ指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザー]** ボタンをクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。  
+ **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者の指定]**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの Windows プリンシパルを少なくとも 1 つ指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、**[現在のユーザー]** ボタンをクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。  
   
  一覧の編集が完了したら、 **[OK]** をクリックし、構成ダイアログ ボックスで管理者の一覧を確認します。 一覧が完成したら、 **[次へ]** をクリックします。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66095873"
  このページで入力するパスワードは、強力なパスワード ポリシーの要件を満たす必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用したオートメーションを使用している場合、必ず強力なパスワード ポリシーの要件を満たすパスワードを指定してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- Windows 認証と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のどちらを選択するかについて詳しくは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「**認証モードの選択**」を参照してください。  
+ Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のどちらを選択するかについて詳しくは、 **オンライン ブックの「** 認証モードの選択 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]を実行するアカウントの選択の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「**Windows サービス アカウントと権限の構成**」を参照してください。  
   

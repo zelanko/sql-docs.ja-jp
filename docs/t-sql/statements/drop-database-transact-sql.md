@@ -25,12 +25,12 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fcda20d3efa458808ad9313965feb279a0010c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898102"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73982190"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -62,7 +62,7 @@ DROP DATABASE database_name [;]
 *database_name* 削除するデータベースの名前を指定します。 データベースの一覧を表示するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。
 
 *database_snapshot_name*
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。
 
 削除するデータベース スナップショットの名前を指定します。
 
@@ -77,7 +77,7 @@ DROP DATABASE database_name [;]
 データベースを削除すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからそのデータベースが削除され、そのデータベースで使用されている物理ディスク ファイルも削除されます。 削除の際にデータベースまたはディスク ファイルのいずれかがオフラインの場合、ディスク ファイルは削除されません。 これらのファイルは Windows エクスプローラーを使用して手動で削除できます。 ファイルをファイル システムから削除せずにデータベースを現在のサーバーから削除するには、[sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) を使用します。
 
 > [!WARNING]
-> FILE_SNAPSHOT を持つデータベースを削除すると、関連付けられているバックアップは成功しますが、スナップショットが関連付けられているデータベース ファイルは、これらのデータベース ファイルを参照するバックアップの無効化を回避するためには削除されません。 ファイルは切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的には削除されません。 詳細については、「 [Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで。
+> FILE_SNAPSHOT を持つデータベースを削除すると、関連付けられているバックアップは成功しますが、スナップショットが関連付けられているデータベース ファイルは、これらのデータベース ファイルを参照するバックアップの無効化を回避するためには削除されません。 ファイルは切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的には削除されません。 詳細については、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで。
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -134,7 +134,7 @@ DROP DATABASE ステートメントは SQL バッチ内の唯一のステート�
 
 データベースの **CONTROL** 権限、**ALTER ANY DATABASE** 権限、または **db_owner** 固定データベース ロールのメンバーシップが必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-dropping-a-single-database"></a>A. 1 つのデータベースを削除する
 
@@ -146,7 +146,7 @@ DROP DATABASE Sales;
 
 ### <a name="b-dropping-multiple-databases"></a>B. 複数のデータベースを削除する
 
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。
 
 次の例では、一覧表示された各データベースを削除します。
 
@@ -156,7 +156,7 @@ DROP DATABASE Sales, NewSales;
 
 ### <a name="c-dropping-a-database-snapshot"></a>C. データベース スナップショットを削除する
 
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。
 
 次の例では、`sales_snapshot0600` というデータベース スナップショットを、ソース データベースには影響を与えずに削除します。
 

@@ -11,18 +11,17 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 229a5f6b5a0194f7bd815077274a4e7f97a21185
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831869"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433459"
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
-  プロセス実行タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部として、アプリケーションまたはバッチ ファイルを実行します。 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] や [!INCLUDE[ofprword](../../includes/ofprword-md.md)]などの標準的なアプリケーションを開くためにプロセス実行タスクを使用することもできますが、一般に、このタスクはデータ ソースを処理対象とするビジネス アプリケーションやバッチ ファイルを実行する場合に使用します。 たとえば、プロセス実行タスクを使用して、圧縮されたテキスト ファイルを展開できます。 さらに、そのテキスト ファイルをパッケージ内のデータ フローのデータ ソースとして使用できます。 その他の例として、プロセス実行タスクを使用し、毎日の売り上げレポートを生成するカスタムの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを実行することもできます。 その後、このレポートをメール送信タスクに添付し、配信リストに転送できます。  
+  プロセス実行タスクでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部として、アプリケーションまたはバッチ ファイルが実行されます。 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] や [!INCLUDE[ofprword](../../includes/ofprword-md.md)]などの標準的なアプリケーションを開くためにプロセス実行タスクを使用することもできますが、一般に、このタスクはデータ ソースを処理対象とするビジネス アプリケーションやバッチ ファイルを実行する場合に使用します。 たとえば、プロセス実行タスクを使用して、圧縮されたテキスト ファイルを展開できます。 さらに、そのテキスト ファイルをパッケージ内のデータ フローのデータ ソースとして使用できます。 その他の例として、プロセス実行タスクを使用し、毎日の売り上げレポートを生成するカスタムの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを実行することもできます。 その後、このレポートをメール送信タスクに添付し、配信リストに転送できます。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージの実行など、ワークフロー操作を実行するその他のタスクが含まれます。 詳細については、「 [パッケージ実行タスク](execute-package-task.md)」を参照してください。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "62831869"
   
 -   [[プロセス実行タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[プロセス実行タスク エディター] &#40;[処理] ページ&#41;](../execute-process-task-editor-process-page.md)  
+-   [[プロセス実行タスク エディター] ([処理] ページ)](../execute-process-task-editor-process-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62831869"
   
  プロセス実行タスクの各種プロパティを設定する際にも、式を使用できます。  
   
- 使用すると、 **StandardInputVariable**入力を提供するプロセス実行タスクを構成するプロパティを呼び出す、`Console.ReadLine`で入力を読み取るアプリケーションからのメソッド。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリで、[Console.ReadLine メソッド](https://go.microsoft.com/fwlink/?LinkId=129201)のトピックを参照してください。  
+ **Standardinputvariable**プロパティを使用して入力を提供するようにプロセス実行タスクを構成する場合は、 `Console.ReadLine` アプリケーションからメソッドを呼び出して入力を読み取ります。 詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリの「[Console.ReadLine メソッド](https://go.microsoft.com/fwlink/?LinkId=129201)」トピックを参照してください。  
   
  **Arguments** プロパティを使用して入力を提供するようにプロセス実行タスクを構成した場合は、次のいずれかの手順を実行して、引数を取得します。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62831869"
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

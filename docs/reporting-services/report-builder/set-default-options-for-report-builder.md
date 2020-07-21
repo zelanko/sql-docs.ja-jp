@@ -1,5 +1,6 @@
 ---
 title: レポート ビルダーの既定のオプションを設定する | Microsoft Docs
+description: この記事では、レポート ビルダーで設定できる便利な既定値について説明します。 これらの既定値によってレポートを短時間で簡単に作成できます。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577918"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290775"
 ---
 # <a name="set-default-options-for-report-builder"></a>レポート ビルダーの既定のオプションを設定する
   レポート ビルダーで、レポート作成を簡単かつ迅速にすることができる既定値を設定できます。  たとえば、既定のレポート サーバーを設定または変更すると、特に指定しない限り、同じレポート サーバーに自動的にレポートが保存されます。  

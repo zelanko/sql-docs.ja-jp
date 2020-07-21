@@ -1,5 +1,5 @@
 ---
-title: タスク 10:参照データ サービスを使用する複合ドメインの構成 |Microsoft Docs
+title: 'タスク 10: 参照データサービスを使用するように複合ドメインを構成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -9,46 +9,45 @@ ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd1727ffaa24edf12ed7ad8a5fb4f55f4910855e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481236"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064811"
 ---
-# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>タスク 10:参照データ サービスを使用して複合ドメインを構成する
-  このタスクで構成する、 **Address Validation**複合ドメインを使用して、**メリッサ データ - アドレスの確認**サービス。 実行時のクレンジング アクティビティでは、クレンジングのために Address Validation ドメインのドメイン値が DQS からこのサービスに渡されます。 参照してください[参照データにドメイン/複合ドメインをマップ](https://msdn.microsoft.com/library/hh213030.aspx)の詳細。  
+# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>タスク 10: 参照データ サービスを使用して複合ドメインを構成する
+  このタスクでは、 **Melissa Check**サービスを使用するように**Address Validation**複合ドメインを構成します。 実行時のクレンジング アクティビティでは、クレンジングのために Address Validation ドメインのドメイン値が DQS からこのサービスに渡されます。 詳細については、「[参照データへのドメインまたは複合ドメインのマップ」を](https://msdn.microsoft.com/library/hh213030.aspx)参照してください。  
   
-1.  メイン ページで**DQS クライアント**、] をクリックして**Suppliers (ドメイン管理)** [**最近使用したナレッジ ベース**を起動する、**ドメイン管理**ページ。  
+1.  **DQS クライアント**のメインページで、[**最近使用したナレッジベース**] の下の [**サプライヤー (ドメイン管理)** ] をクリックして、[**ドメイン管理**] ページを起動します。  
   
-2.  選択、 **Address Validation**複合ドメインを**ドメインの一覧**します。  
+2.  **ドメインの一覧**で [**アドレス検証**複合ドメイン] を選択します。  
   
-3.  右側のウィンドウに切り替えると、**参照データ**タブ。  
+3.  右ペインで、[**参照データ**] タブに切り替えます。  
   
-     ![[データ] タブを参照](../../2014/tutorials/media/et-configuringcdtouserds-01.jpg "参照データ タブ")  
+     ![[参照データ] タブ](../../2014/tutorials/media/et-configuringcdtouserds-01.jpg "[参照データ] タブ")  
   
-4.  クリックして**参照**ツールバーのボタンをクリックします。  
+4.  ツールバーの [**参照**] ボタンをクリックします。  
   
-5.  **オンライン参照データ プロバイダーのカタログ**ダイアログ ボックスで、**チェック ボックスをオン**横に**Melissa Data の Address Check**します。  
+5.  [**オンライン参照データプロバイダーのカタログ**] ダイアログボックスで、 **Melissa**の横の**チェックボックス**をオンにします。  
   
-     ![Melissa Data のアドレス確認を選択します。](../../2014/tutorials/media/et-configuringcdtouserds-02.jpg "Melissa Data のアドレス確認を選択します。")  
+     ![[メリッサ データ - アドレスをチェック] の選択](../../2014/tutorials/media/et-configuringcdtouserds-02.jpg "[メリッサ データ - アドレスをチェック] の選択")  
   
-6.  右側のウィンドウでの**スキーマ**セクションで、マップ**Address Line**ドメインを**Address Line (M)** ドロップダウン リストを使用して、スキーマ項目。  
+6.  右側のウィンドウの [**スキーマ**] セクションで、ドロップダウンリストを使用して**アドレス行**ドメインを**アドレス行 (M)** スキーマ項目にマップします。  
   
-     ![RDS スキーマ アイテムをドメインにマップ](../../2014/tutorials/media/et-configuringcdtouserds-03.jpg "RDS スキーマ アイテムをドメインにマップします。")  
+     ![RDS スキーマのアイテムをドメインにマップ](../../2014/tutorials/media/et-configuringcdtouserds-03.jpg "RDS スキーマのアイテムをドメインにマップ")  
   
-7.  クリックして**スキーマ エントリの追加 (+)** リストにエントリを作成するには、ツールバーのボタンをクリックします。  
+7.  ツールバーの [**スキーマエントリの追加] (+)** ボタンをクリックして、一覧にエントリを作成します。  
   
-     ![スキーマ エントリのツール バー ボタンの追加](../../2014/tutorials/media/et-configuringcdtouserds-04.jpg "スキーマ エントリのツール バー ボタンの追加")  
+     ![[スキーマ エントリの追加] ツール バー ボタン](../../2014/tutorials/media/et-configuringcdtouserds-04.jpg "[スキーマ エントリの追加] ツール バー ボタン")  
   
 8.  次の図に示すように、ドロップダウン リストを使用して次の DQS ドメインをマップします。  
   
-     ![RDS スキーマ アイテムをドメインにマッピング](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "RDS スキーマ アイテムをドメインにマッピングします。")  
+     ![RDS スキーマ項目をドメインにマップする](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "RDS スキーマ項目をドメインにマップする")  
   
 9. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 11:ナレッジ ベースをパブリッシュ](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
+ [タスク 11: ナレッジ ベースをパブリッシュする](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
   
   

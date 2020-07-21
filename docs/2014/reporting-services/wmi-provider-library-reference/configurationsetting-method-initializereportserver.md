@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098346"
 ---
-# <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="initializereportserver-method-wmi-msreportserver_configurationsetting"></a>InitializeReportServer メソッド (WMI MSReportServer_ConfigurationSetting)
   指定されたレポート サービス インスタンスを初期化します。  
   
 ## <a name="syntax"></a>構文  
@@ -53,14 +53,14 @@ public void InitializeReportServer(string InstallationID,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このメソッドを呼び出すと、レポート サーバー データベースのセキュリティで保護された情報にアクセスする暗号化キーが、 *InstallationID*で特定されるレポート サーバーの公開キーを使用して暗号化されます。  
   
  指定したレポート サーバーの公開キーは、レポート サーバー データベースに書き込んでおく必要があります。  
   
  セキュリティで保護された情報に既にアクセスしたレポート サーバーに対して、 *InitializeReportServer* メソッドを呼び出して、暗号化キーの暗号を解除する必要があります。 次に、暗号化された暗号化キーがレポート サーバー データベースに格納されます。  
   
- 場合、レポート サーバーの[IsInitialized](configurationsetting-property-isinitialized.md)プロパティに設定されて`true`InitializeReportServer メソッドが呼び出されたときに、メソッドは、暗号化キーの暗号化を試みないで成功を返します。  
+ [初期化](configurationsetting-property-isinitialized.md)された初期化メソッドが呼び出された`true`ときに、レポートサーバーの isinitialized プロパティがに設定されている場合、メソッドは暗号化キーの暗号化を試行せずに成功を返します。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

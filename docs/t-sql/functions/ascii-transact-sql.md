@@ -1,7 +1,7 @@
 ---
 title: ASCII (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a629e38a978d435cb1c3fa4b023e3b489c33a497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37c3298f693754943e355f91ee6e6b15bb6ab66a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019758"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002281"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 文字式の左端の文字の ASCII コード値を返します。
   
@@ -37,22 +37,25 @@ ms.locfileid: "68019758"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 ASCII ( character_expression )  
 ```  
   
 ## <a name="arguments"></a>引数  
 *character_expression*  
-**char** 型または **varchar** 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。
+[char](../../t-sql/language-elements/expressions-transact-sql.md) 型または **varchar** 型の**式**。
   
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
-## <a name="remarks"></a>Remarks
-ASCII は、情報交換用米国標準コード (**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange) の略語です。 最新のコンピューター上で文字エンコード標準として機能します。 ASCII 文字の一覧については、「[ASCII](https://www.wikipedia.org/wiki/ASCII)」の**印刷可能文字**に関するセクションを参照してください。
+## <a name="remarks"></a>解説
+ASCII は、情報交換用米国標準コード (**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange) の略語です。 最新のコンピューター上で文字エンコード標準として機能します。 ASCII 文字の一覧については、「**ASCII**」の[印刷可能文字](https://www.wikipedia.org/wiki/ASCII)に関するセクションを参照してください。
 
-## <a name="examples"></a>使用例  
-この例では、ASCII 文字セットの使用を前提として、6 つの文字の `ASCII` 値を返します。
+ASCII は 7 ビット文字セットです。 拡張 ASCII または高 ASCII は、`ASCII` 関数によって処理されない 8 ビット文字セットです。 
+
+## <a name="examples"></a>例 
+
+### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>A. この例では、ASCII 文字セットの使用を前提として、6 つの文字の `ASCII` 値を返します。
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -62,18 +65,57 @@ ASCII(1) AS [1], ASCII(2) AS [2];
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 A           B           a           b           1           2  
 ----------- ----------- ----------- ----------- ----------- -----------  
 65          66          97          98          49          50  
 ```  
   
+### <a name="b-this-examples-shows-how-a-7-bit-ascii-value-is-returned-correctly-but-an-8-bit-extended-ascii-value-is-not-handled"></a>B. この例では、7 ビットの ASCII 値が正しく返されますが、8 ビットの拡張 ASCII 値は処理されないことを確認できます。
+
+```sql
+SELECT ASCII('P') AS [ASCII], ASCII('æ') AS [Extended_ASCII];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+ASCII       Extended_ASCII
+----------- --------------
+80          195
+```
+
+上の結果が正しい文字コード ポイントにマッピングされているかどうかを確認するには、`CHAR` または `NCHAR` 関数で出力値を使用します。
+
+```sql
+SELECT NCHAR(80) AS [CHARACTER], NCHAR(195) AS [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+CHARACTER CHARACTER
+--------- ---------
+P         Ã
+```
+
+前の結果から、コードポイント 195 の文字が **Ã** であり、**æ** ではないことを確認してください。 これは、`ASCII` 関数で最初の 7 ビット ストリームを読み取れるが、余分なビットは読み取れないためです。 文字 `æ` の正しいコード ポイントは `UNICODE` 関数で見つけることができます。この関数では正しい文字コード ポイントを返すことができます。
+
+```sql
+SELECT UNICODE('æ') AS [Extended_ASCII], NCHAR(230) AS [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+Extended_ASCII CHARACTER
+-------------- ---------
+230            æ
+```
+
 ## <a name="see-also"></a>参照
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
-  
-
-

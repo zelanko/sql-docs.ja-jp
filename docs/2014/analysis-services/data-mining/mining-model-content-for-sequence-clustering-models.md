@@ -1,5 +1,5 @@
 ---
-title: シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
+title: シーケンスクラスターモデルのマイニングモデルコンテンツ (Analysis Services データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf196f1c026fe8878f572a6797ba2e738ba5b782
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083568"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521274"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
-  このトピックでは、Microsoft シーケンス クラスター アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+  このトピックでは、Microsoft シーケンス クラスター アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>シーケンス クラスター モデルの構造について  
  シーケンス クラスター モデルには、モデルとそのメタデータを表す 1 つの親ノード (NODE_TYPE = 1) があります。 親ノードには、 **(すべて)** というラベルが付けられ、トレーニング データで検出されたすべての遷移を一覧表示するシーケンス ノード (NODE_TYPE = 13) が関連付けられています。  
@@ -45,7 +44,7 @@ ms.locfileid: "66083568"
  常に空白です。  
   
  NODE_NAME  
- ノードの名前。 現在は NODE_UNIQUE_NAME と同じ値です。  
+ ノード名。 現在は NODE_UNIQUE_NAME と同じ値です。  
   
  NODE_UNIQUE_NAME  
  ノードの一意の名前。  
@@ -126,10 +125,10 @@ ms.locfileid: "66083568"
  この値から、遷移に含まれるトレーニング ケースの数がわかります。  
   
  MSOLAP_MODEL_COLUMN  
- 該当なし。  
+ 適用不可。  
   
  MSOLAP_NODE_SCORE  
- 該当なし。  
+ 適用不可。  
   
  MSOLAP_NODE_SHORT_CAPTION  
  NODE_DESCRIPTION と同じ。  
@@ -143,22 +142,22 @@ ms.locfileid: "66083568"
   
  次の表は、モデルで情報がどのように格納され、ノードがどのように関連しているかをまとめたものです。  
   
-|ノード|含まれる子ノード|NODE_DISTRIBUTION テーブル|  
+|Node|含まれる子ノード|NODE_DISTRIBUTION テーブル|  
 |----------|--------------------|------------------------------|  
 |モデル ルート|複数のクラスター ノード<br /><br /> モデル全体のシーケンスを含むノード|モデル内のすべての製品が、サポートと確率と共に一覧表示されます。<br /><br /> このクラスタリング手法では複数のクラスターでの部分的なメンバーシップが許可されるため、サポートと確率が小数値になる場合があります。 つまり、1 つのケースが一度だけカウントされるのではなく、各ケースが複数のクラスターに属する可能性があります。 このため、最後のクラスター メンバーシップが決まると、そのクラスターの確率によって値が調整されます。|  
 |モデルのシーケンス ノード|複数の遷移ノード|モデル内のすべての製品が、サポートと確率と共に一覧表示されます。<br /><br /> このレベルでは、モデルのシーケンス数がわかるので、サポートと確率の計算は簡単です。<br /><br /> サポート = ケース数。<br /><br /> 確率 = モデル内の各シーケンスの未加工の確率。 すべての確率を合計すると 1 になります。|  
 |個々のクラスター ノード|そのクラスターだけのシーケンスを含むノード|クラスター内のすべての製品が一覧表示されますが、サポートと確率については、クラスターの特性を示す製品に対する値のみ提供されます。<br /><br /> サポートは、このクラスター内の各ケースの調整済みのサポート値を表します。 確率値は調整済みの確率です。|  
 |個々のクラスターのシーケンス ノード|そのクラスターだけのシーケンスの遷移を含む複数のノード|個々のクラスター ノードとまったく同じ情報です。|  
-|遷移|子はありません|関連する最初の状態の遷移が一覧表示されます。<br /><br /> サポートは調整済みのサポート値で、各遷移に関係するケースを示します。 確率は調整済みの確率で、パーセンテージで表されます。|  
+|Transitions|子はありません|関連する最初の状態の遷移が一覧表示されます。<br /><br /> サポートは調整済みのサポート値で、各遷移に関係するケースを示します。 確率は調整済みの確率で、パーセンテージで表されます。|  
   
-###  <a name="bkmk_NODEDIST"></a> NODE_DISTRIBUTION テーブル  
+###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION テーブル  
  NODE_DISTRIBUTION テーブルには、特定のクラスターの遷移およびシーケンスについての確率とサポートの詳細な情報が示されます。  
   
- 遷移のテーブルには、有効な `Missing` 値を表すための行が常に 1 行追加されます。 詳細については、`Missing`値の意味と、計算に与える影響を参照してください。[欠損値&#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)します。  
+ 遷移のテーブルには、有効な `Missing` 値を表すための行が常に 1 行追加されます。 値の意味と計算に与える影響の詳細については、 `Missing` 「[欠損値 &#40;Analysis Services データマイニング&#41;](missing-values-analysis-services-data-mining.md)」を参照してください。  
   
  サポートと確率の計算は、トレーニング ケースと完成したモデルのどちらに適用するかによって異なります。 これは、既定のクラスタリング手法である Expectation Maximization (EM) で、どのケースも複数のクラスターに所属できることが前提になっているためです。 モデル内のケースのサポートを計算する場合、未加工のカウント数および未加工の確率を使用できます。 ただし、クラスター内の特定のシーケンスの確率は、シーケンスとクラスターのあらゆる組み合わせの合計によって重み付けされる必要があります。  
   
-###  <a name="bkmk_cardinality"></a> 基数  
+###  <a name="cardinality"></a><a name="bkmk_cardinality"></a>基数  
  クラスター モデルの親ノードのカーディナリティは、通常、モデル内のクラスターの数を表します。 ただし、シーケンス クラスター モデルには、クラスター レベルに 2 種類のノードがあります。クラスターを格納するノードと、モデル全体のシーケンスの一覧を格納するノードです。  
   
  したがって、モデル内のクラスター数を調べるには、[(すべて)] ノードの NODE_CARDINALITY の値から 1 を減算します。 たとえば、モデルで 9 個のクラスターが作成された場合、モデル ルートのカーディナリティは 10 です。 これは、それぞれ固有のシーケンス ノードを含む 9 個のクラスター ノードの他に、モデルのシーケンスを表すクラスター 10 というラベルの 1 つのシーケンス ノードが含まれるためです。  
@@ -176,7 +175,7 @@ ORDER BY Count(*) DESC
   
  これらの結果から、注文番号 "SO72656"、"SO58845"、および "SO70714" に最大のシーケンスが含まれており、それぞれに 8 つの品目があることがわかります。 注文 ID を使用して特定の注文の詳細を表示し、どの注文でどの品目が購入されたかを確認することができます。  
   
-|OrderNumber|LineNumber|[モデル]|  
+|OrderNumber|LineNumber|モデル|  
 |-----------------|----------------|-----------|  
 |SO58845|1|Mountain-500|  
 |SO58845|2|LL Mountain Tire|  
@@ -260,9 +259,9 @@ ORDER BY Count(*) DESC
   
  モデル コンテンツのクエリを実行して検出されたパスの一覧を取得する方法、およびシーケンス クラスター モデルのクエリのその他の例については、「 [シーケンス クラスター モデルのクエリの例](clustering-model-query-examples.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [シーケンス クラスター モデルのクエリの例](clustering-model-query-examples.md)  
+## <a name="see-also"></a>参照  
+ [マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft シーケンスクラスターアルゴリズム](microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)  
   
   

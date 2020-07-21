@@ -1,5 +1,5 @@
 ---
-title: レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f48415c35b57b889b764abfe44f5bf937ee3f650
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2ea76e42cb7230bc4195cc8c2dc1615308fa4058
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576622"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082351"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダーおよび SSRS)
   レポート パーツは、レポート サーバーに個別にパブリッシュされ、別のページ分割されたレポートで再利用できる、ページ分割されたレポート用のアイテムです。 レポート パーツを既定の設定を使用して既定の場所でパブリッシュすることも、名前や説明などのレポート パーツのメタデータを編集し、レポート サーバー上に保存することもできます。 適切な権限があれば、レポート サーバーと統合された SharePoint サイトに保存することもできます。  

@@ -1,8 +1,8 @@
 ---
-title: SQL Server のアップグレード アシスタントで実験をデータベース内分析レポートの表示
-description: データベース実験アシスタント分析レポートの表示
-ms.custom: ''
-ms.date: 10/22/2018
+title: SQL Server アップグレードの分析レポートの表示
+description: Database Experimentation Assistant で分析レポートを表示する
+ms.custom: seo-lt-2019
+ms.date: 02/04/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,84 +10,79 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 066297daff3393304b83b77238277f873e1c97fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050447"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "76977597"
 ---
-# <a name="view-analysis-reports-in-database-experimentation-assistant"></a>データベース実験アシスタント分析レポートの表示
+# <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Database Experimentation Assistant で分析レポートを表示する
 
-したら[分析レポートを作成](database-experimentation-assistant-create-report.md)でデータベース実験アシスタント (DEA)、レポートを表示し、A によって提供されるパフォーマンスの洞察を得るには、この記事で説明されている手順を完了する/B テストします。
+Database Experimentation Assistant (DEA) を使用して[分析レポートを作成](database-experimentation-assistant-create-report.md)した後、実行した A/B テストに基づいて、パフォーマンスの洞察をレポートで確認できます。
 
-## <a name="select-a-server"></a>サーバーを選択します。
+## <a name="open-an-existing-analysis-report"></a>既存の分析レポートを開く
 
-DEA では、メニュー アイコンを選択します。 展開されたメニューで、次のように選択します。**分析レポート**分析レポート ウィンドウを開いてチェックリストのアイコンの横にあります。
+1. DEA で、リストアイコンを選択し、サーバー名と認証の種類を指定して、シナリオに応じて [**接続の暗号化**] と [**サーバー証明書の信頼**] チェックボックスをオンまたはオフにし、[**接続**] を選択します。
 
-**分析レポート**、分析データベースが SQL Server を実行しているコンピューターの名前を入力します。 **[接続]** を選択します。 
+   ![レポートを使用してサーバーに接続する](./media/database-experimentation-assistant-view-report/dea-connect-to-server-with-report-files.png)
 
-![既存のレポートへの接続します。](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+2. [**分析レポート**] 画面の左側で、表示するレポートのエントリを選択します。
 
-すべての依存関係が不足している場合、**の前提条件**ページによってインストールへのリンクを求められます。 前提条件をインストールし、**もう一度お試し**します。
+   ![既存のレポートファイルを開く](./media/database-experimentation-assistant-view-report/dea-select-report-to-view.png)
 
-![前提条件 ページ](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
-
-## <a name="select-an-analysis-report-to-view"></a>表示する分析レポートを選択します。
-
-分析レポートの一覧で、レポートを開きますをダブルクリックします。
-
-![既存のレポートを表示します。](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
-
-このグラフの例で示すように、どの程度、ワークロードが表される、洞察を取得できます。
-
-![ワークロード Rep グラフ](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
-
-## <a name="view-and-understand-the-analysis-report"></a>表示し、分析レポートを理解します。
+## <a name="view-and-understand-the-analysis-report"></a>分析レポートを表示して理解する
 
 このセクションでは、分析レポートについて説明します。
 
-### <a name="query-categories"></a>クエリのカテゴリ
+レポートの最初のページには、実験が実行された対象サーバーのバージョンとビルド情報に関する情報が表示されます。 しきい値を使用すると、A/B テスト分析の感度や許容範囲を調整できます。 既定では、しきい値は 5%; に設定されます。パフォーマンスの向上 (>= 5%) は、"向上" として分類されます。  ドロップダウンリストを使用すると、パフォーマンスしきい値が異なるレポートを評価できます。
 
-そのカテゴリに分類するクエリのみを表示する左の円グラフの各種のスライスを選択します。
+レポート内のデータを CSV ファイルにエクスポートするには、[**エクスポート**] ボタンを選択します。  分析レポートの任意のページで [**印刷**] を選択すると、その時点で画面に表示される内容を印刷できます。
 
-![レポートの円スライス](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+### <a name="query-distribution"></a>クエリの配布
 
-- **クエリを低下**:も A から b の方がクエリ  
-- **エラー**:インスタンス A ではなくインスタンス B には、エラーを表示するクエリ  
-- **クエリの改善**:インスタンス A に向上よりも、インスタンス B でを実行したクエリ  
-- **中間クエリ**:中間のパフォーマンスを持つクエリを変更します。  
-- **同じ**:これでパフォーマンスままで、A と B のインスタンス間でのクエリ
+- 円グラフのさまざまなスライスを選択すると、そのカテゴリに属するクエリのみが表示されます。
 
-### <a name="individual-query-drill-down"></a>個々 のクエリのドリルダウン
+   ![カテゴリを円スライスとしてレポートする](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
 
-特定のクエリに関する詳細な情報を表示するクエリ テンプレートへのリンクを選択することができます。
+  - **低下**: ターゲット2で、ターゲット1よりも悪化したクエリ。
+  - **エラー**: 少なくとも1つのターゲットに対して少なくとも1回エラーを示したクエリ。
+  - **改善**: ターゲット2でより適切に実行されたクエリがターゲット1よりも優れています。
+  - **評価できません**: サンプルサイズが小さすぎるクエリは、統計分析に使用できません。 A/B テスト分析の場合、DEA では、各ターゲットで同じクエリに対して少なくとも15回の実行が必要です。
+  - **同じ**: ターゲット1とターゲット2の間に統計的な差がないクエリ。
 
-![クエリのドリルダウン](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
+  エラークエリ (存在する場合) は、別のグラフに表示されます。エラーを種類別に分類し、円グラフでエラーをエラー ID 別に分類する棒グラフ。
 
-クエリの概要の比較を開くには特定のクエリを選択します。
+   ![エラークエリのグラフ](./media/database-experimentation-assistant-view-report/dea-error-query-charts.png)
 
-![比較の概要](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
+  次の4種類のエラーが考えられます。
 
-クエリが実行された A と B のインスタンスを確認できます。 クエリのテンプレートを確認することもできます。 テーブルには、A と B のインスタンスに固有のクエリ情報が表示されます。
+  - [**既存のエラー**]: ターゲット1とターゲット2の両方に存在するエラー。
+  - **新しいエラー**: ターゲット2の新しいエラー。
+  - **解決済みのエラー**: ターゲット1に存在するが、ターゲット2で解決されるエラー。
+  - **アップグレードブロッカー**: 対象サーバーへのアップグレードをブロックするエラー。
 
-### <a name="error-queries"></a>エラーのクエリ
+  グラフの横棒または円のセクションをクリックすると、カテゴリにドリルダウンされ、[**評価できません**] カテゴリの場合でも、パフォーマンスメトリックが表示されます。
 
-比較の概要レポートが展開可能な**エラー情報**と**クエリ計画情報**セクション。 セクションでは、エラーを表示する両方のインスタンスの情報を検討してください。
+  さらに、ダッシュボードには、パフォーマンスの概要をすばやく向上させるために、上位5つの改善および低下したクエリが表示されます。
 
-この種のエラーを表示するエラー (赤) 円を選択します。
-- **既存のエラー**:A. に含まれていたエラー
-- **新しいエラー**:B. に含まれていたエラー
-- **エラーを解決**:A が B でないエラー
+### <a name="individual-query-drill-down"></a>個々のクエリのドリルダウン
 
-![エラー グラフ](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
+クエリテンプレートのリンクを選択すると、特定のクエリに関する詳細情報を確認できます。
 
-## <a name="next-steps"></a>次のステップ
+![特定のクエリにドリルダウンする](./media/database-experimentation-assistant-view-report/dea-query-drill-down-report.png)
 
-- コマンド プロンプトで、分析レポートを生成する方法については、次を参照してください。[コマンド プロンプトで実行](database-experimentation-assistant-run-command-prompt.md)します。
+- 特定のクエリを選択すると、関連する比較の概要が表示されます。
 
-- DEA とデモンストレーションを 19 分については、次のビデオをご覧ください。
+   ![比較の概要](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+   実行回数、平均期間、平均 CPU、平均読み取り/書き込み数、エラー数など、そのクエリの概要統計情報を確認できます。  クエリがエラークエリの場合、エラーの詳細が [**エラー情報**] タブに表示されます。  [**クエリプラン情報**] タブでは、ターゲット1とターゲット2でクエリに使用されるクエリプランに関する情報を確認できます。
+
+   > [!NOTE]
+   > 拡張イベントを分析している場合 (の場合)。XEL) ファイル、クエリプラン情報は収集されず、ユーザーのコンピューターのメモリ負荷が制限されます。
+
+## <a name="see-also"></a>関連項目
+
+- コマンドプロンプトで分析レポートを生成する方法については、「[コマンドプロンプトでの実行](database-experimentation-assistant-run-command-prompt.md)」を参照してください。

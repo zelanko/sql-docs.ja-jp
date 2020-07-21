@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16e3af1d37f177dfe6d4e0cb090e7b8b0a4988d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011128"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003931"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>セマンティクス検索の管理および監視
   セマンティック インデックス作成プロセスと、インデックスの管理および監視に関連するタスクについて説明します。  
   
-##  <a name="HowToMonitorStatus"></a> 方法:セマンティック インデックス作成の状態を確認してください。  
- **セマンティック インデックス作成の最初のフェーズが完了しますか。**  
+##  <a name="how-to-check-the-status-of-semantic-indexing"></a><a name="HowToMonitorStatus"></a>方法: セマンティックインデックス作成の状態を確認する  
+ **セマンティック インデックス作成の最初のフェーズは完了していますか?**  
  動的管理ビュー [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql) に対してクエリを実行し、**status** 列と **status_description** 列を確認します。  
   
  インデックス作成の最初のフェーズでは、フルテキスト キーワード インデックスおよびセマンティック キー フレーズ インデックスの作成のほか、ドキュメンの類似性データの抽出が行われます。  
@@ -37,7 +36,7 @@ SELECT * FROM sys.dm_fts_index_population WHERE table_id = OBJECT_ID('table_name
 GO  
 ```  
   
- **セマンティック インデックス作成の 2 番目のフェーズが完了しますか。**  
+ **セマンティック インデックス作成の 2 番目のフェーズは完了していますか?**  
  動的管理ビュー [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql) に対してクエリを実行し、**status** 列と **status_description** 列を確認します。  
   
  インデックス作成の 2 番目のフェーズには、ドキュメントの類似性に関するセマンティック インデックスの作成が含まれます。  
@@ -50,8 +49,8 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> 方法:セマンティック インデックスのサイズを確認してください。  
- **セマンティック キー フレーズ インデックスまたはセマンティックのドキュメントの類似性インデックスの論理サイズは?**  
+##  <a name="how-to-check-the-size-of-the-semantic-indexes"></a><a name="HowToCheckSize"></a>方法: セマンティックインデックスのサイズを確認する  
+ **セマンティック キー フレーズ インデックスまたはドキュメントの類似性に関するセマンティック インデックスの論理サイズは?**  
  動的管理ビュー [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql) に対してクエリを実行します。  
   
  論理サイズは、インデックス ページの数で表示されます。  
@@ -64,7 +63,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
- **フルテキスト カタログのフルテキストおよびセマンティック インデックスの合計サイズは?**  
+ **フルテキスト カタログのフルテキスト インデックスとセマンティック インデックスの合計サイズは?**  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) メタデータ関数の **IndexSize** プロパティに対してクエリを実行します。  
   
 ```sql  
@@ -72,7 +71,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **項目の数は、フルテキスト カタログのフルテキストおよびセマンティック インデックスでインデックスを作成しますか。**  
+ **フルテキスト カタログのフルテキスト インデックスおよびセマンティック インデックスでインデックス化されているアイテム数は?**  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) メタデータ関数の **ItemCount** プロパティに対してクエリを実行します。  
   
 ```sql  
@@ -80,12 +79,12 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> 方法:強制的にセマンティック インデックス作成  
+##  <a name="how-to-force-the-population-of-the-semantic-indexes"></a><a name="HowToForcePopulation"></a>方法: セマンティックインデックスの作成を強制する  
  START/STOP/PAUSE 句または RESUME POPULATION 句を使用して、フルテキスト インデックスおよびセマンティック インデックスを強制的に作成できます (これらの句の構文と動作については、フルテキスト インデックスに関する説明に示されています)。 詳細については、「[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)」および「[フルテキスト インデックスの作成](../indexes/indexes.md)」を参照してください。  
   
  セマンティック インデックス作成はフルテキスト インデックス作成に依存しているため、セマンティック インデックスは関連するフルテキスト インデックスが作成されたときにのみ作成されます。  
   
- **例:フルテキスト インデックスとセマンティック インデックスの完全作成を開始する**  
+ **例: フルテキスト インデックスとセマンティック インデックスの完全作成を開始する**  
   
  次の例では、AdventureWorks2012 サンプル データベースの **Production.Document** テーブルの既存のフルテキスト インデックスを変更することにより、フルテキスト インデックスとセマンティック インデックスの両方の完全作成を開始します。  
   
@@ -98,8 +97,8 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> 方法:無効にするか、またはセマンティック インデックス作成を再度有効にします。  
- ENABLE/DISABLE 句を使用して、フルテキスト インデックスまたはセマンティック インデックスの作成を有効または無効にすることができます (これらの句の構文と動作については、フルテキスト インデックスに関する説明に示されています)。 詳細については、「[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)」を参照してください。  
+##  <a name="how-to-disable-or-re-enable-semantic-indexing"></a><a name="HowToDisableIndexing"></a>方法: セマンティックインデックス作成を無効化または再有効化する  
+ ENABLE/DISABLE 句を使用して、フルテキスト インデックスまたはセマンティック インデックスの作成を有効または無効にすることができます (これらの句の構文と動作については、フルテキスト インデックスに関する説明に示されています)。 詳細については、「 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)」を参照してください。  
   
  セマンティック インデックスの作成が無効化または中断された後でもセマンティック データに対するクエリは正常に動作し、以前にインデックスが作成されたデータを返します。 この動作は、フルテキスト検索の動作と一致しません。  
   
@@ -119,7 +118,7 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a> セマンティック インデックス作成のフェーズ  
+##  <a name="phases-of-semantic-indexing"></a><a name="SemanticIndexing"></a>セマンティックインデックス作成のフェーズ  
  セマンティック検索では、セマンティック検索が有効なそれぞれの列に対して、次の 2 種類のデータに関するインデックスが作成されます。  
   
 1.  **キー フレーズ**  
@@ -133,14 +132,14 @@ GO
 2.  **フェーズ 2:** ドキュメントの類似性に関するセマンティック インデックスが作成されます。 このインデックスは、前のフェーズで作成された 2 つのインデックスに依存します。  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> 問題:セマンティック インデックスが作成されない  
- **関連付けられた、フルテキスト インデックスが作成されますか。**  
+##  <a name="problem-semantic-indexes-are-not-populated"></a><a name="ProblemNotPopulated"></a>問題: セマンティックインデックスが設定されない  
+ **関連するフルテキスト インデックスが作成されていますか?**  
  セマンティック インデックス作成はフルテキスト インデックス作成に依存しているため、セマンティック インデックスは関連するフルテキスト インデックスが作成されたときにのみ作成されます。  
   
- **フルテキスト検索とセマンティック検索のインストールし、構成ですか。**  
+ **フルテキスト検索およびセマンティック検索が適切にインストールおよび構成されていますか?**  
  詳細については、「 [セマンティック検索のインストールと構成](install-and-configure-semantic-search.md)」を参照してください。  
   
- **FDHOST サービスをご利用いただけません、フルテキストのインデックスが失敗する原因となるもう 1 つの条件ではありますか。**  
+ **FDHOST サービスが使用できない状態ではありませんか? または、フルテキスト インデックス作成が失敗するそれ以外の原因はありませんか?**  
  詳細については、「 [フルテキスト インデックスの作成のトラブルシューティング](troubleshoot-full-text-indexing.md)」を参照してください。  
   
   

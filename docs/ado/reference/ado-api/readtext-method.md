@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d6c174d2e6a659a3b9da8f89816b5bdf90342416
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8afabd90ee6251be650036b285de0f08a3776723
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917372"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754234"
 ---
 # <a name="readtext-method"></a>ReadText メソッド
-指定されたテキストの文字数を読み取ります[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
+テキスト[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトから指定された数の文字を読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,21 +35,21 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>パラメーター  
  *NumChars*  
- 任意。 A**長い**ファイルから読み取る文字の数を指定する値または[StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)値。 既定値は**adReadAll**します。  
+ 任意。 ファイルから読み取る文字数、または[Streamreadenum](../../../ado/reference/ado-api/streamreadenum.md)値を指定する**Long**値。 既定値は**Adreadall**です。  
   
 ## <a name="return-value"></a>戻り値  
- **ReadText**メソッドは、指定された数の文字、行全体、または全体のストリームからを読み取り、 **Stream**オブジェクトし、結果の文字列を返します。  
+ **ReadText**メソッドは、指定された文字数、行全体、またはストリーム全体を**ストリーム**オブジェクトから読み取り、結果の文字列を返します。  
   
-## <a name="remarks"></a>コメント  
- 場合*NumChar*がストリームの左の文字数よりも多い、残りの文字のみが返されます。 指定された長さと一致する文字列の読み取りが行われていない*NumChar*します。 読み取り対象文字がない場合は、バリアントの値は null が返されます。 **ReadText**旧バージョンと読み取りに使用することはできません。  
+## <a name="remarks"></a>Remarks  
+ *Numchar*がストリームに残された文字数よりも多い場合は、残りの文字だけが返されます。 読み取られた文字列は、 *Numchar*で指定された長さと一致するように埋め込まれていません。 読み取る文字が残っていない場合は、値が null であるバリアントが返されます。 **ReadText**を後方読み取りに使用することはできません。  
   
 > [!NOTE]
->  **ReadText**メソッドは、テキスト ストリームの使用 ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**)。 バイナリ ストリームの (**型**は**adTypeBinary**) を使用して、[読み取り](../../../ado/reference/ado-api/read-method.md)します。  
+>  **ReadText**メソッドはテキストストリームと共に使用されます ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**)。 バイナリストリーム (**Type**は**adtypebinary**) の場合は、 [Read](../../../ado/reference/ado-api/read-method.md)を使用します。  
   
- クエリから返される XML データの量が大きくなる、 **ReadText** ActiveX データ オブジェクト (ADO) Stream オブジェクトのメソッドは、これを行う COM + コンポーネントから呼び出された場合; を実行する時間を大幅にかかる場合があります、ASP ページで、ユーザーのセッション タイムアウトになる可能性があります。ADO から utf-8 エンコードが Unicode; に Stream オブジェクト データを変換します一度に大量のデータの変換に関連するメモリが頻繁に再割り当てが非常に時間がかかります。 を解決することを繰り返し呼び出す、 **ReadText** ADO のメソッド、オブジェクトのコマンドし、より小さい文字数を指定します。 128 K (131,072) と等価の値が最適な表示がテストされます。 この値が減少すると、応答時間が減少します。 詳細については、サポート技術情報記事 280067 を参照してください。"[prb]。ADO のストリーム オブジェクトの ReadText メソッドを使用して SQL Server 2000 から非常に大きな XML ドキュメントを取得する場合があります"、Microsoft サポート技術情報で https://support.microsoft.com します。  
+ ADO (ActiveX Data Object) ストリームオブジェクトの**ReadText**メソッドによって返される大量の XML データを生成するクエリは、実行に時間がかかることがあります。これが ASP ページから呼び出された COM + コンポーネントで実行された場合、ユーザーのセッションがタイムアウトすることがあります。ADO は、ストリームオブジェクトデータを UTF-8 エンコードから Unicode に変換します。大量のデータを一度に変換するために頻繁に使用されるメモリの再割り当てには、かなりの時間がかかります。 解決するには、ADO command オブジェクトの**ReadText**メソッドを繰り返し呼び出し、より少ない文字数を指定します。 テストでは、128K (131072) に相当する値が最適であることが示されています。 この値が減少すると応答時間が短縮されます。 詳細については、サポート技術情報の記事280067「」を参照してください。 "PRB: ADO stream オブジェクトの ReadText メソッドを使用して SQL Server 2000 から非常に大きな XML ドキュメントを取得するには、Microsoft サポート技術情報の「」を参照してください https://support.microsoft.com 。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Read メソッド](../../../ado/reference/ado-api/read-method.md)

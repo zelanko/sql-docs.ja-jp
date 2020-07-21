@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 0d9e50da-4f42-4b3a-bc84-daf05cf0e0e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e3d2a420529778584b9e187550772a112d459c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3720d8a0965a28d56f1db118c034dc19c6c63ca8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62867966"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551302"
 ---
-# <a name="mssqlserver5229"></a>MSSQLSERVER_5229
+# <a name="mssqlserver_5229"></a>MSSQLSERVER_5229
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|5229|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_ANTIMATTER_IN_HEAP_OR_CLUSTERED_INDEX|  
-|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) は、問題のある列が含まれていますが、非クラスター化インデックスではありません。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) は問題のある列を含みますが、非クラスター化インデックスではありません。|  
   
 ## <a name="explanation"></a>説明  
  ヒープまたはクラスター化インデックスに、含まれていてはいけない問題のある列が含まれています。  
@@ -48,6 +47,6 @@ ms.locfileid: "62867966"
  問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
- 該当なし。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
+ 適用不可。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   
   

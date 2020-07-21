@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f734a6779847aa72b9a41015470b377489c686bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6282e994eff5b8b06ac59b97f6ef1223dd6172a7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213710"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921544"
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>getCatalogName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.lang.String getCatalogName(int column)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getCatalogName メソッドは、java.sql.ResultSetMetaData インターフェイスの getCatalogName メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

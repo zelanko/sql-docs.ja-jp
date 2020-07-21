@@ -7,21 +7,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f167e52d6ee3c1111058a098c2fbd219999c0f10
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62834644"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435259"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC デザイナー コンソールの概要
   ここでは、Change Data Capture Designer for Oracle by Attunity のインストール手順について説明します。  
   
 ## <a name="installation"></a>インストール  
- ここでは、Change Data Capture Designer for Oracle by Attunity のインストール手順について説明します。 CDC デザイナー コンソールをインストールするには、手動で実行**AttunityOracleCdcDesigner.msi** SQL Server のインストール メディアから。  X86 および x64 インストール パッケージにある **.\Tools\AttunityCDCOracle\\**  SQL Server インストール メディアにします。  
+ ここでは、Change Data Capture Designer for Oracle by Attunity のインストール手順について説明します。 CDC Designer コンソールをインストールするには、SQL Server のインストールメディアから手動で**AttunityOracleCdcDesigner.msi**を実行します。  X86 および x64 用のインストールパッケージは、SQL Server インストールメディアの **.\Tools\AttunityCDCOracle \\ **にあります。  
   
 ## <a name="supported-windows-environments"></a>サポートされている Windows 環境  
  CDC デザイナー コンソールは、次の Windows 環境で実行できます。  
@@ -39,11 +38,11 @@ ms.locfileid: "62834644"
   
  **Oracle データベース**  
   
--   Oracle Database 10 g リリース 2:10.2.0.1 ~ 10.2.0.5 (2010 年 4 月の時点のパッチセット)  
+-   Oracle Database 10g Release 2: 10.2.0.1 ～ 10.2.0.5 (2010 年 4 月の時点のパッチセット)  
   
--   Oracle Database 11 g リリース 1:11.1.0.6 ~ 11.1.0.7 (2008 年 9 月の時点のパッチセット)  
+-   Oracle Database 11g Release 1: 11.1.0.6 ～ 11.1.0.7 (2008 年 9 月の時点のパッチセット)  
   
--   Oracle Database 11 g リリース 2:11.2.0.1 ~ 11.2.0.3 (2011 年 9 月の時点のパッチセット)  
+-   Oracle Database 11g Release 2: 11.2.0.1 ～ 11.2.0.3 (2011 年 9 月の時点のパッチセット)  
   
  **SQL Server データベース**  
   
@@ -52,11 +51,11 @@ ms.locfileid: "62834644"
 ## <a name="software-prerequisites"></a>ソフトウェアの必要なコンポーネント  
  次のソフトウェアが必要です。  
   
--   Oracle 10.x クライアント  
+-   Oracle 10 .x クライアント  
   
 -   Oracle 11.x クライアント  
   
- **注**:インストールされている Oracle CDC デザイナー コンソールのバージョンに応じて、このソフトウェアの 32 ビットまたは 64 ビット バージョンを使用する必要があります。  
+ **注**: インストールされている Oracle CDC Designer コンソールのバージョンに応じて、このソフトウェアの32ビット版または64ビット版を使用する必要があります。  
   
  Oracle CDC デザイナー コンソールでは、Oracle ODBC プロバイダーを使用してソースの Oracle データベースと通信します。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3aecc41-4d79-49b2-a11c-7b2203fa79bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3753014d3a30b92b77bfd2b836224a7edf1d2dbf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058263"
 ---
 # <a name="display-the-query-window"></a>クエリ ウィンドウの表示
   複数のクエリ ウィンドウを開くと、タブ付きドキュメント ウィンドウとして表示されます。  
@@ -26,7 +25,7 @@ ms.locfileid: "63281992"
   
 1.  ツール バーの **[データベース エンジン クエリ]** をクリックします。 **[データベース エンジンへの接続]** ダイアログ ボックスで、 **[接続]** をクリックします。  
   
-2.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]** をクリックします。 この場合、クエリ エディターは [登録済みサーバー] の接続情報を使用します。  
+2.  オブジェクトエクスプローラーで、サーバーを右クリックし、[**新しいクエリ**] をクリックします。 この場合、クエリ エディターは [登録済みサーバー] の接続情報を使用します。  
   
      ウィンドウがオブジェクト エクスプローラーの右側にタブ付きウィンドウとして表示されていることに注目してください。  
   

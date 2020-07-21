@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1d5f5d846a690676942e0d4ffcba0475a35595a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105677"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>列の挿入または削除 (レポート ビルダーおよび SSRS)
@@ -29,13 +29,13 @@ ms.locfileid: "66105677"
   
 -   [デザイン] ビューで、Tablix データ領域の左上隅をクリックすると、その上部および横に列ハンドルと行ハンドルが表示されます。  
   
-     データ領域部分についての詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)します。  
+     データ領域の領域の詳細については、「 [&#40;レポートビルダーと SSRS&#41;の一覧](tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="to-insert-a-column-in-a-selected-data-region"></a>選択したデータ領域に列を挿入するには  
   
 -   列の挿入位置にある列ハンドルを右クリックし、 **[列の挿入]** をクリックして、 **[左]** または **[右]** をクリックします。  
   
-     または  
+     -- または --  
   
 -   データ領域で、行の挿入位置にあるセルを右クリックし、 **[列の挿入]** をクリックして、 **[左]** または **[右]** をクリックします。  
   

@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 486fb3fd6edcd50ba90a5ce76fb34119f4c1e681
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831747"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433049"
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
   ファイル システム タスクは、ファイル システム内のファイルとディレクトリの操作を実行します。 たとえば、ファイル システム タスクを使用すると、パッケージはディレクトリやファイルの作成、移動、または削除を実行できます。 また、ファイル システム タスクを使用して、ファイルやディレクトリの属性を設定することもできます。 たとえば、ファイル システム タスクを使用すると、ファイルを非表示にしたり読み取り専用にできます。  
@@ -31,7 +30,7 @@ ms.locfileid: "62831747"
 ## <a name="predefined-file-system-operations"></a>定義済みのファイル システム操作  
  ファイル システム タスクには、定義済みの操作のセットが含まれています。 次の表では、これらの操作について説明します。  
   
-|操作|Description|  
+|Operation|説明|  
 |---------------|-----------------|  
 |ディレクトリのコピー|ある場所から別の場所にフォルダーをコピーします。|  
 |ファイルのコピー|ある場所から別の場所にファイルをコピーします。|  
@@ -77,7 +76,7 @@ ms.locfileid: "62831747"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理するタスクが含まれます。 詳細については、「 [FTP タスク](ftp-task.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

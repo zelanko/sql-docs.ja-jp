@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 61f19faa-3006-4a1c-974c-55951e3b3000
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e4ab210a30080472a777d151695a04ec49ff1041
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 77e5b4c13d6ff298f1a12127dffba8be2bda8c5b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973384"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920850"
 ---
 # <a name="setobject-method-int-javalangobject"></a>setObject (int, java.lang.Object) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public final void setObject(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターの番号を示す **int** です。  
   
@@ -47,7 +47,7 @@ public final void setObject(int index,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setObject メソッドは、java.sql.PreparedStatement インターフェイスの setObject メソッドで指定されています。  
   
  この setObject メソッドを呼び出す前に、指定したパラメーターが次のいずれかのメソッドを使用してアプリケーションで設定されている場合があります。  
@@ -56,15 +56,15 @@ public final void setObject(int index,
   
 -   SQLServerPreparedStatement クラスまたは SQLServerCallableStatement クラスの setNull メソッド  
   
--   SQLServerCallableStatement クラスの[Registeroutparameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)メソッド  
+-   SQLServerCallableStatement クラスの [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッド  
   
  このような場合、パラメーターの型が自動的に設定されます。 アプリケーションで obj 値を NULL に設定してこの setObject メソッドを呼び出すと、ドライバーでは、パラメーターの型は以前に呼び出されたメソッドで設定された型であると見なされます。  
   
  obj 値が NULL で、そのパラメーターの型情報を特定できない場合、この setObject メソッドは、指定したパラメーターを CHAR に変換してからデータベースに送信します。  
   
- JDBC Driver 3.0 以降では、このメソッドの動作は **sendTimeAsDatetime** 接続プロパティ ([接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)) によって変更されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SQLServerDataSource Sqlserverdatasource.setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 以降、このメソッドの動作は **sendTimeAsDatetime** 接続プロパティ (「[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)」を参照) および [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) によって変更されます。  
   
- 詳細については、「 [java .sql の時刻値をサーバーに送信する方法の構成](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)」を参照してください。  
+ 詳細については、「[java.sql.Time の値をサーバーに送信する方法の構成](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [setObject メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   

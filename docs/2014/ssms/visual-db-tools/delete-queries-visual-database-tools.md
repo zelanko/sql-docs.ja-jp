@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b7cd5584485f12912f39ee940cdd960ab95b5bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62670475"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061773"
 ---
 # <a name="delete-queries-visual-database-tools"></a>クエリの削除 (Visual Database Tools)
   クエリを削除することにより、プロジェクトからそのクエリを除外し、ファイル システムから完全に削除できます。 次に示す手順で削除されたクエリは、ごみ箱に保存されないため、復元できません。  
@@ -39,9 +38,9 @@ ms.locfileid: "62670475"
 >  クエリを削除せずにプロジェクトから除外する場合は、 **[削除]** をクリックします。 その後、クエリのフォルダーを右クリックして **[項目の追加]** を選択すると、そのクエリを検索してプロジェクトに戻すことができます。  
   
 ## <a name="see-also"></a>参照  
- [クエリ結果の消去&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [クエリに加えられた変更を破棄&#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリ結果をクリア&#41;](visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリに対して行われた変更を破棄&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

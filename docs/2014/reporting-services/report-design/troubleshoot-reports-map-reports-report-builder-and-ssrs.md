@@ -1,5 +1,5 @@
 ---
-title: レポートのトラブルシューティング:マップ レポート (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 'レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104636"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング:マップ レポート (レポート ビルダーおよび SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66104636"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Embedded"></a> レポート定義のサイズの問題  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a> レポート定義のサイズの問題  
  レポート定義のサイズに関連した問題の解決方法については、このセクションを参照してください。  
   
 ### <a name="how-do-i-reduce-the-report-definition-size"></a>レポート定義のサイズを小さくするには  
@@ -49,7 +49,7 @@ ms.locfileid: "66104636"
   
   
   
-##  <a name="Spatial"></a> 空間データの問題  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a> 空間データの問題  
  空間データに関連した問題の解決方法については、このセクションを参照してください。  
   
 ### <a name="on-the-design-surface-i-see-sample-spatial-data"></a>デザイン画面にサンプルの空間データが表示される  
@@ -102,7 +102,7 @@ ms.locfileid: "66104636"
   
   
   
-##  <a name="Viewport"></a> ビューポートの中心とビューの問題  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a>ビューポートの中心とビューの問題  
  ビューポートのオプションに関連した問題の解決方法については、このセクションを参照してください。  
   
 ### <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>埋め込みマップ要素の中心とビューを設定できない  
@@ -126,7 +126,7 @@ ms.locfileid: "66104636"
   
   
   
-##  <a name="Layers"></a> レイヤーの問題  
+##  <a name="layer-issues"></a><a name="Layers"></a> レイヤーの問題  
  レイヤーのオプションに関連した問題の解決方法については、このセクションを参照してください。  
   
 ### <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>マップ内の 1 つまたは複数のレイヤーが表示されない  
@@ -138,9 +138,9 @@ ms.locfileid: "66104636"
   
 -   **レイヤーの順序 :** マップ ペインにおけるレイヤーの順序とは、レポート レンダラーでレイヤーが描画される順序をいいます。 先に描画されたレイヤー上の空間データは、それより後に描画されるレイヤーの空間データによって上書きされます。 一覧の先頭に表示されたレイヤーから先に描画されます。 一覧でレイヤーの順序を変更すると、レイヤーの描画順序も変更されます。  
   
--   **透明度 :** 透明度は、各マップ レイヤーに対して別々に指定することができます。 透明度の既定値は、レイヤーの追加方法によって異なります。 透明度 0% は、そのレイヤーが不透明であり、他のレイヤー データは一切透けて見えないことを意味します。 既存のレイヤーをとおして他のデータが透けて見えるようにするには、思うような効果が得られるまで、このパーセンテージを大きくします。  
+-   **透明化.** 透明度は、各マップ レイヤーに対して別々に指定することができます。 透明度の既定値は、レイヤーの追加方法によって異なります。 透明度 0% は、そのレイヤーが不透明であり、他のレイヤー データは一切透けて見えないことを意味します。 既存のレイヤーをとおして他のデータが透けて見えるようにするには、思うような効果が得られるまで、このパーセンテージを大きくします。  
   
--   **表示 :** レイヤーの表示は、マップ ビューポートのズーム レベルに基づいて、 **[表示]** 、 **[非表示]** 、 or **[ZoomBased]** 、 based on the zoom level of the map viewport. ズーム レベルには、最大と最小の範囲を指定することもできます。 いずれかの値に評価されるような式を使って表示を制御することができます。  
+-   **非.** レイヤーの表示は、マップ ビューポートのズーム レベルに基づいて、 **[表示]**、 **[非表示]**、 or **[ZoomBased]**、 based on the zoom level of the map viewport. ズーム レベルには、最大と最小の範囲を指定することもできます。 いずれかの値に評価されるような式を使って表示を制御することができます。  
   
     > [!TIP]  
     >  マップ ペインでは各レイヤーの表示/非表示を切り替えることができます。 各レイヤーをデザインする際、それ以外のすべてのレイヤーをオフにすることで、問題の原因が個々のレイヤーにあるのか、レイヤー間の透明度の問題なのかを特定することができます。  
@@ -148,7 +148,7 @@ ms.locfileid: "66104636"
 ### <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>マップ レイヤーにフィルターを設定したがまったく効果がない  
  レイヤーのデータをフィルター処理するには、フィルター式でデータ型を指定する必要があります。 指定した条件がフィルター式によって正しく評価されるように、基になるデータ型が正しく指定されていることを確認してください。 詳細については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Legend"></a> 凡例、カラー スケール、およびルールの問題  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> 凡例、カラー スケール、およびルールの問題  
  ルール、凡例、およびカラー スケールのオプションに関連した問題の解決方法については、このセクションを参照してください。  
   
 ### <a name="how-do-i-control-the-values-in-the-map-legend"></a>マップの凡例の値を制御するには  
@@ -181,7 +181,7 @@ ms.locfileid: "66104636"
   
   
   
-##  <a name="Tile"></a> タイルの問題  
+##  <a name="tile-issues"></a><a name="Tile"></a> タイルの問題  
  タイルの背景のオプションに関連した問題の解決方法については、このセクションを参照してください。  
   
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>Bing のマップ タイルの背景を表示できない  
@@ -204,7 +204,7 @@ ms.locfileid: "66104636"
   
   
   
-##  <a name="Tooltip"></a> ツールヒントとラベルの問題  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a> ツールヒントとラベルの問題  
  ラベルまたはツールヒントのオプションに関連した問題の解決方法については、このセクションを参照してください。  
   
 ### <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>ラベルまたはツールヒントに式を設定したところ、データセットのスコープに関するエラーが発生した  

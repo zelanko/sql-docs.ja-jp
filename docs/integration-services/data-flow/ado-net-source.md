@@ -19,14 +19,14 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 262d28de4c765a6bc6edaf89db52e57a79ff0c85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ade0d29ed20bb8b39d9ac2a1762977abe24d8f65
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901832"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293515"
 ---
 # <a name="ado-net-source"></a>ADO NET ソース
 
@@ -35,7 +35,7 @@ ms.locfileid: "67901832"
 
   ADO NET ソースは .NET プロバイダーのデータを呼び出し、そのデータをデータ フローで使用できるようにします。  
   
- ADO NET 変換元を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]に接続できます。 OLE DB を使用した [!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続はサポートされていません。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]の詳細については、「 [Azure SQL Database の一般的な制限事項とガイドライン](https://go.microsoft.com/fwlink/?LinkId=248228)」を参照してください。  
+ ADO NET ソースを使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] に接続できます。 OLE DB を使用した [!INCLUDE[ssSDS](../../includes/sssds-md.md)] への接続はサポートされていません。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の詳細については、「[一般的な制限事項とガイドライン (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)」を参照してください。  
   
 ## <a name="data-type-support"></a>データ型のサポート  
  ソースは、特定の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型にマップされないデータ型を DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型に変換します。 この変換はデータ型が **System.Object**である場合でも行われます。  
@@ -115,7 +115,7 @@ ms.locfileid: "67901832"
  **[データ アクセス モード]**  
  ソースからデータを選択する方法を指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|[!INCLUDE[vstecado](../../includes/vstecado-md.md)] データ ソースのテーブルまたはビューからデータを取得します。|  
 |[SQL コマンド]|SQL クエリを使用して、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データ ソースからデータを取得します。|  
@@ -155,7 +155,7 @@ ms.locfileid: "67901832"
   
 3.  **[ADO NET 変換元エディター]** で、 **[列]** をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "67901832"
   
 3.  **[ADO NET 変換元エディター]** で、 **[エラー出力]** をクリックします。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   
@@ -188,12 +188,12 @@ ms.locfileid: "67901832"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連トピック:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
   
- **[説明]**  
+ **説明**  
  エラーの説明を表示します。  
   
  **[選択したセルに設定する値]**  

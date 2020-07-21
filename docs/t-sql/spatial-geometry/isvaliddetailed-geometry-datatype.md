@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f67b291da8de3dcb0ec84891ac69789d132b420b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49d0d65ae6f8eed112847b471620ba8ccb3c825d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759553"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 無効な空間オブジェクトの問題の特定に役立つメッセージを返します。 オブジェクトが無効な場合は、最初のエラーだけが返されます。 オブジェクトが有効な場合は、値 24400 が返されます。
   
@@ -38,10 +38,10 @@ ms.locfileid: "68101221"
   
  CLR 戻り値の型: **string**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、返される可能性のある戻り値を示します。  
   
-|戻り値|[説明]|  
+|戻り値|説明|  
 |------------------|-----------------|  
 |24400|有効|  
 |24401|無効です。原因は不明です。|  
@@ -61,7 +61,7 @@ ms.locfileid: "68101221"
 |24415|一部の多角形が無効なリング構造になっているため無効です。|  
 |24416|曲線 {0} のポイント {1} から開始するエッジが直線または対蹠エンドポイントを含む逆円弧であるため無効です。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、**IsValidDetailed()** メソッドの動作方法を示す、無効な空間オブジェクトの例です。  
   
 ```sql  

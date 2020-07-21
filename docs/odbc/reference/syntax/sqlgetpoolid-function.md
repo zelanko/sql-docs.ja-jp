@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetPoolID function [ODBC]
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7daef4785a77df294a831d69089108cbb1d88489
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 32cc973f4dab5bde7bcedade0365d233987dda72
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061483"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303319"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.81 規格に準拠します。ODBC  
+**互換性**  
+ 導入されたバージョン: ODBC 3.81 標準準拠: ODBC  
   
- **概要**  
- **SQLGetPoolID**プール ID を取得します。  
+ **まとめ**  
+ **SQLGetPoolID**はプール ID を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,27 +37,27 @@ SQLRETURN  SQLGetPoolID (
   
 ## <a name="arguments"></a>引数  
  *hDbcInfoToken*  
- [入力]すべての接続情報を含むトークン ハンドル。  
+ 代入すべての接続情報を含むトークンハンドル。  
   
  *pPoolID*  
- [出力]プール ID は、同じ意味で使用できる接続のセットを特定するために使用 (追加のリセットが必要な可能性があります)。  
+ Outputプール ID。これは、相互に使用できる一連の接続を識別するために使用されます (追加のリセットが必要になる場合があります)。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLGetPoolID**返します SQL_ERROR または SQL_SUCCESS_WITH_INFO、ドライバー マネージャーを使用して、 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN の**処理**の*hDbcInfoToken*します。  
+ **SQLGetPoolID**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返すと、ドライバーマネージャーは SQL_HANDLE_DBC_INFO_TOKEN の**Handletype**および*Hdbcinfotoken*の**ハンドル**を使用します。  
   
-## <a name="remarks"></a>コメント  
- **SQLGetPoolID**一連の接続情報を指定されたプールの ID を取得するために使用 (から**SQLSetConnectAttrForDbcInfo**、 **SQLSetDriverConnectInfo**、および**SQLSetConnectInfo**)。 このプールを置き換えて使用できる接続のセットを識別する ID を使用 (追加のリセットが必要な可能性があります)。 プール ID がそのグループの接続の接続プールを識別するために使用されます。  
+## <a name="remarks"></a>Remarks  
+ **SQLGetPoolID**は、接続情報のセット ( **SQLSetConnectAttrForDbcInfo**、 **SQLSetDriverConnectInfo**、および**SQLSETCONNECTINFO**) を指定してプール ID を取得するために使用されます。 このプール ID は、相互に使用できる接続のセットを識別するために使用されます (追加のリセットが必要になる場合があります)。 プール ID は、その接続グループの接続プールを識別するために使用されます。  
   
- ドライバー マネージャーが、アプリケーションにエラーを返します、ドライバーが SQL_ERROR または SQL_INVALID_HANDLE を返すたびに (で[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)または[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
+ ドライバーが SQL_ERROR または SQL_INVALID_HANDLE を返すたびに、ドライバーマネージャーはそのエラーをアプリケーションに返します ( [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)または[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
   
- ドライバー マネージャーがから診断情報を取得するたびに、ドライバーは SQL_SUCCESS_WITH_INFO を返します、 *hDbcInfoToken*でアプリケーションに SQL_SUCCESS_WITH_INFO を返すと[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)します。  
+ ドライバーが SQL_SUCCESS_WITH_INFO を返すたびに、ドライバーマネージャーは*Hdbcinfotoken*から診断情報を取得し、SQL_SUCCESS_WITH_INFO を[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)および[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)のアプリケーションに返します。  
   
- アプリケーションでは、この関数を直接呼び出さないでください。 ドライバー対応接続プールをサポートする ODBC ドライバーでは、この関数を実装する必要があります。  
+ アプリケーションでは、この関数を直接呼び出すことはできません。 ドライバー対応接続プールをサポートする ODBC ドライバーでは、この関数を実装する必要があります。  
   
- ODBC ドライバーの開発の sqlspi.h が含まれます。  
+ ODBC ドライバーの開発には sqlspi. h を含めます。  
   
 ## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

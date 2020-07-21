@@ -13,14 +13,14 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eb09e3904fbfaf6a7b285eb297b5568f2f8e51b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 96110e35227fbca970fd3bc92bcee314b5ebae6c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045597"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293702"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server データ ツールでのパッケージの作成
 
@@ -31,7 +31,7 @@ ms.locfileid: "68045597"
   
 -   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に含まれるパッケージ テンプレートを使用する。  
   
--   カスタム テンプレートを使用する。  
+-   カスタム テンプレートを使用する  
   
      新しいパッケージを作成するためのテンプレートとしてカスタム パッケージを使用する操作は簡単で、カスタム パッケージを DataTransformationItems フォルダーにコピーするだけです。 既定では、このフォルダーは、C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\ProjectItems\DataTransformationProject にあります。  
   

@@ -1,20 +1,20 @@
 ---
 title: SQL データの検出と分類 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b6f9962be0fa138786af425ab24bf9608bf3264f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d9f2613d4cd25402bd2e10b1a862210f503d8b37
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957240"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922597"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 
@@ -30,7 +30,7 @@ ms.locfileid: "67957240"
 
 ## <a name="requirements"></a>必要条件  
 
-このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスの設定方法の詳細については、「 [JDBC ドライバーの使用](../../jdbc/using-the-jdbc-driver.md)」を参照してください。
+このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスを設定する方法の詳細については、「[JDBC ドライバーの使用](../../jdbc/using-the-jdbc-driver.md)」を参照してください。
 
 ```java
 import java.sql.Connection;
@@ -184,4 +184,4 @@ public class DataDiscoveryAndClassification {
 
 ## <a name="see-also"></a>参照
 
-[サンプル JDBC Driver アプリケーション](../../jdbc/code-samples/sample-jdbc-driver-applications.md)  
+[サンプル JDBC ドライバー アプリケーション](../../jdbc/code-samples/sample-jdbc-driver-applications.md)  

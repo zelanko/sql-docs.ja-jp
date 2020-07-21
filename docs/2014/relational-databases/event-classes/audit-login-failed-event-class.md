@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2860e10ef74676fb013b43e1740c9cf82223baa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72734a0d8fa24cc69fd0f29b34fba4f6b2f61b6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63000366"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053215"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed イベント クラス
-   **Audit Login Failed** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインしようとして失敗したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  
+  **Audit Login Failed** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインしようとして失敗したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  
   
 ## <a name="audit-login-failed-event-class-data-columns"></a>Audit Login Failed イベント クラスのデータ列  
   
@@ -45,10 +44,10 @@ ms.locfileid: "63000366"
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|**成功**|**int**|1 = 成功。 0 = 失敗。 このイベントの値は常に失敗 (0) になります。|23|はい|  
+|**Success**|**int**|1 = 成功。 0 = 失敗。 このイベントの値は常に失敗 (0) になります。|23|はい|  
 |**TextData**|**ntext**|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

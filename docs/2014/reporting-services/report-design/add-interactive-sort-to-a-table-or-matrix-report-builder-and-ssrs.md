@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 961a2a76f2a839ccc9fa8fb90027bec180d870d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106643"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106643"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="BackToTop"></a> この記事の内容  
+##  <a name="in-this-article"></a><a name="BackToTop"></a> この記事の内容  
  [グループのないテーブルの詳細行の並べ替え](#SortingDetailRows)  
   
  [テーブルまたはマトリックスの最上位レベル親行グループの並べ替え](#SortingTopLevelParent)  
@@ -41,7 +41,7 @@ ms.locfileid: "66106643"
   
  [複数のデータ領域の並べ替え順序の同期](#SynchronizingSortOrder)  
   
-##  <a name="SortingDetailRows"></a> グループのないテーブルの詳細行の並べ替え  
+##  <a name="sorting-detail-rows-for-a-table-with-no-groups"></a><a name="SortingDetailRows"></a> グループのないテーブルの詳細行の並べ替え  
  ユーザーが列見出しをクリックすることにより、その列に表示されている値に基づいてテーブル内の詳細行を並べ替えられるようにするには、対話的な並べ替えボタンを列見出しに追加します。  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>テーブルを値で並べ替えるための対話的な並べ替えボタンを列見出しに追加するには  
@@ -64,7 +64,7 @@ ms.locfileid: "66106643"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-##  <a name="SortingTopLevelParent"></a> テーブルまたはマトリックスの最上位レベル親行グループの並べ替え  
+##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> テーブルまたはマトリックスの最上位レベル親行グループの並べ替え  
  ユーザーが列見出しをクリックすることにより、その列に表示されている値に基づいてテーブルまたはマトリックス内の親グループ行を並べ替えられるようにするには、対話的な並べ替えボタンを列見出しに追加します。 子グループの順序は変更されません。  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>グループを並べ替えるための対話的な並べ替えボタンを列見出しに追加するには  
@@ -88,7 +88,7 @@ ms.locfileid: "66106643"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-##  <a name="SortingChildGroups"></a> グループの子グループまたは詳細行の並べ替え  
+##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> グループの子グループまたは詳細行の並べ替え  
  ユーザーが親グループ内の子グループの値を並べ替えたり、最も内側にある子グループの詳細行を並べ替えたりできるようにするには、対話的な並べ替えボタンをグループ ヘッダー行に追加します。  
   
 #### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>子グループまたは詳細行を並べ替えるための対話的な並べ替えボタンをグループ行ヘッダーのテキスト ボックスに追加するには  
@@ -111,7 +111,7 @@ ms.locfileid: "66106643"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-##  <a name="SortingMultipleRowGroups"></a> 複雑なグループ式に基づく行の並べ替え  
+##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> 複雑なグループ式に基づく行の並べ替え  
  ユーザーが列見出しをクリックすることにより、親グループと子グループの組み合わせを並べ替えられるようにするには、対話的な並べ替えボタンを列見出しに追加します。 この機能を実現するには、両方のグループを複合したものにグループ式を変更する必要があります。 たとえば、ある店舗の在庫合計を表示するマトリックスがあり、色とサイズの両方でアイテムがグループ化されているとします。 この場合に、色とサイズの組み合わせに基づいて行を並べ替えるには、色とサイズのグループを別々に定義するのではなく、色とサイズの組み合わせに基づいたグループを 1 つ定義します。 グループ式の定義の詳細については、「[グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)」を参照してください。  
   
  次の手順では、Tablix データ領域部分を指定する用語が使用されています。 詳細については、「[Tablix データ領域部分 &#40;レポート ビルダーおよび SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
@@ -168,7 +168,7 @@ ms.locfileid: "66106643"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-##  <a name="SynchronizingSortOrder"></a> 複数のデータ領域の並べ替え順序の同期  
+##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> 複数のデータ領域の並べ替え順序の同期  
  ユーザーが 1 つの並べ替えボタンをクリックすることによって、複数のデータ領域を並べ替えられるようにする、対話的な並べ替えボタンを追加します。 対話的な並べ替えボタンを作成する場合は、複数のデータ領域の並べ替えを同じレポート データセットに基づいて同期するかどうかを指定できます。 たとえば、マトリックスおよびデータをグラフィカルに表示するグラフが含まれたレポートがあるとします。 ユーザーがこのマトリックス内の行の並べ替え順序を変更すると、それと同じ並べ替え順序がグラフに自動的に表示されます。  
   
  並べ替え順序を同期するには、並べ替えるデータ領域またはグループに同一の並べ替え式を使用し、並べ替えの範囲が両方のデータ領域に共通の先祖になるように定義する必要があります。 共通の先祖は、両方のデータ領域が関連付けられているデータセットになる場合も、両方のデータ領域を内部に表示するデータ領域になる場合もあります。 たとえば、同じデータセットからのデータを表示し、同じ一覧に含まれているマトリックスとグラフが両方ともレポートに含まれているとします。 並べ替えアクションを同期するには、マトリックス内の列の 1 つで対話的な並べ替えを指定し、並べ替えの範囲を一覧に設定する必要があります。 ユーザーがこのマトリックスを並べ替えると、グラフも並べ替えられます。  

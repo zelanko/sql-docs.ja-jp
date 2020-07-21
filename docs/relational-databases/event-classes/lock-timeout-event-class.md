@@ -1,5 +1,6 @@
 ---
 title: Lock:Timeout イベント クラス | Microsoft Docs
+description: Lock:Timeout イベント クラスは、SQL Server のリソースに対するブロッキング ロックが原因で、そのリソースのロック要求がタイムアウトしたことを示します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc89f8df5d34a2a2c1f20756c743c74a5a5851f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d0f1a43ab06c931fd9fda6498790ccc7dce3476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737201"
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout イベント クラス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Lock:Timeout イベント クラスは、要求したリソースで別のトランザクションがブロッキング ロックを保持しているために、ページなどのリソースのロック要求がタイムアウトしたことを示します。 タイムアウトは @@LOCK_TIMEOUT システム関数で判定され、SET LOCK_TIMEOUT ステートメントで設定できます。  
   
  Lock:Timeout イベント クラスを使用すると、タイムアウト状態がいつ発生するかを監視できます。 この情報は、タイムアウトがアプリケーションのパフォーマンスに重大な影響を与えるかどうかの判断と、関係しているオブジェクトの特定に役立ちます。 これらのオブジェクトを変更するアプリケーション コードを調べて、タイムアウトを最小限に抑える変更を行えるかどうかを判断できます。  
@@ -29,7 +30,7 @@ ms.locfileid: "67910328"
   
 ## <a name="locktimeout-event-class-data-columns"></a>Lock:Timeout イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BinaryData|**image**|ロック リソース ID。|2|はい|  
@@ -59,7 +60,7 @@ ms.locfileid: "67910328"
 |StartTime|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|**ntext**|タイムアウトが発生したときに取得されていたロックの種類に依存するテキスト値。|1|はい|  
 |TransactionID|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
-|型|**int**|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|はい|  
+|Type|**int**|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|はい|  
   
 ## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

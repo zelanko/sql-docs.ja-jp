@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104646"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix データ領域のセル、行、および列 (レポート ビルダーおよび SSRS)
-  レポートの Tablix データ領域の行および列にデータを表示する方法を制御するには、詳細データ、グループ データ、ラベル、および合計に対して行と列を指定する方法を理解する必要があります。 多くの場合、テーブル、マトリックス、または一覧の既定の構造を使用してデータを表示できます。 詳細については、次を参照してください[テーブル&#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)、[マトリックス&#40;レポート ビルダーおよび SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)、または[一覧&#40;レポート ビルダーと。SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)します。  
+  レポートの Tablix データ領域の行および列にデータを表示する方法を制御するには、詳細データ、グループ データ、ラベル、および合計に対して行と列を指定する方法を理解する必要があります。 多くの場合、テーブル、マトリックス、または一覧の既定の構造を使用してデータを表示できます。 詳細については、「[テーブル &#40;レポートビルダーと ssrs&#41;](tables-report-builder-and-ssrs.md)」、「[マトリックス &#40;レポートビルダーと ssrs&#41;](create-a-matrix-report-builder-and-ssrs.md)」、または「 [&#40;レポートビルダーと ssrs&#41;の一覧](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)」を参照してください。  
   
  Tablix データ領域では、詳細行および詳細列に詳細データが表示され、グループ行およびグループ列にグループ化されたデータが表示されます。 Tablix データ領域に行グループおよび列グループを追加すると、データを表示するための行および列が自動的に追加されます。 行および列を手動で追加および削除して、Tablix データ領域をカスタマイズし、レポートでデータを表示する方法を制御することができます。  
   
@@ -42,10 +42,10 @@ ms.locfileid: "66104646"
 |----------|-----------------|  
 |![詳細行の 3 本の平行線がある行ハンドル](../media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")|行グループ階層に詳細グループのみ|  
 |![詳細行と 1 つの外部グループがある行ハンドル](../media/rs-icontablix-groupwithdetails.gif "詳細行と 1 つの外部グループがある行ハンドル")|1 つの外部グループと子詳細グループ|  
-|![入れ子になったグループを示す 2 つの平行なかっこ](../media/rs-icontablix-nestedgroupnodetails.gif "入れ子になったグループを示す 2 つの平行なかっこ")|1 つの外部グループ、1 つの内部グループがあり、詳細グループはなし|  
-|![入れ子と詳細を示す 2 つのかっこと三重線](../media/rs-icontablix-nestedgroupwithdetails.gif "入れ子と詳細を示す 2 つのかっこと三重線")|1 つの外部グループ、1 つの内部グループ、および子詳細グループ|  
+|![入れ子になったグループを示す 2 つの平行な角かっこ](../media/rs-icontablix-nestedgroupnodetails.gif "入れ子になったグループを示す 2 つの平行な角かっこ")|1 つの外部グループ、1 つの内部グループがあり、詳細グループはなし|  
+|![入れ子と詳細を示す 2 つの角かっこと三重線](../media/rs-icontablix-nestedgroupwithdetails.gif "入れ子と詳細を示す 2 つの角かっこと三重線")|1 つの外部グループ、1 つの内部グループ、および子詳細グループ|  
 |![フッター行がある 1 つの外部グループ、1 つの内部グループ](../media/rs-icontablix-nestedgroupwithparentfooter.gif "フッター行がある 1 つの外部グループ、1 つの内部グループ")|合計のフッター行のある 1 つの外部グループと、1 つの内部グループ|  
-|![外部グループのかっこ、内部グループのかっこ、詳細](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部グループのかっこ、内部グループのかっこ、詳細")|合計のフッター行のある 1 つの外部グループ、合計のフッター行のある 1 つの内部グループ、および 1 つの詳細行|  
+|![外部グループの角かっこ、内部グループの角かっこ、詳細](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "外部グループの角かっこ、内部グループの角かっこ、詳細")|合計のフッター行のある 1 つの外部グループ、合計のフッター行のある 1 つの内部グループ、および 1 つの詳細行|  
 |![親ヘッダーとフッター、および子グループ](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "親ヘッダーとフッター、および子グループ")|ラベルのヘッダーと合計のフッターのある 1 つの外部グループと、内部グループがあり、詳細グループはなし|  
   
 ### <a name="group-rows"></a>グループ行  
@@ -84,7 +84,7 @@ ms.locfileid: "66104646"
   
  次の図に、入れ子になった行グループと詳細グループのある Tablix データ領域を示します。  
   
- ![デザイン ビュー、グループとテーブルに合計行を追加](../media/rs-basictablegroupstotalscolordesign.gif "デザイン ビュー、グループとテーブルに合計行を追加")  
+ ![[デザイン] ビュー、グループとテーブルに合計行を追加](../media/rs-basictablegroupstotalscolordesign.gif "[デザイン] ビュー、グループとテーブルに合計行を追加")  
   
  Tablix データ領域に詳細データを表示する場合、詳細グループは最も内側の子グループです。 詳細グループに追加される行は、この Tablix データ領域にリンクされているデータセットのクエリの結果セットに含まれている行ごとに 1 回繰り返されます。 次の図に、表示されたレポートの最後のページを示します。 この図には、最新の詳細行と、最新の発注の小計行が示されています。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66104646"
  Tablix 本体領域のセルには、セルが詳細行または詳細列内にある場合は詳細データを、セルがグループ行またはグループ列内にある場合は集計グループ データを表示できます。 セルのデータのスコープは、そのセルが属する最も内側の行グループと最も内側の列グループの交点です。  
   
 > [!NOTE]  
->  各セルについて表示される実際のデータは、セルに含まれているレポート アイテムの評価済みの式 (通常、テキスト ボックス) です。 詳細行または詳細列に属するセルの場合、式は既定で詳細データ (例: **[LineTotal]** ) になります。 詳細行または詳細列に属さないセルの場合、式は既定で集計関数 (例: **Sum[LineTotal]** ) になります。 セルがグループ行またはグループ列に属していても、式で集計関数が指定されていない場合、グループ内の最初の値が表示されます。 集計の詳細については、「[合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
+>  各セルについて表示される実際のデータは、セルに含まれているレポート アイテムの評価済みの式 (通常、テキスト ボックス) です。 詳細行または詳細列に属するセルの場合、式は既定で詳細データ (例: **[LineTotal]**) になります。 詳細行または詳細列に属さないセルの場合、式は既定で集計関数 (例: **Sum[LineTotal]**) になります。 セルがグループ行またはグループ列に属していても、式で集計関数が指定されていない場合、グループ内の最初の値が表示されます。 集計の詳細については、「[合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
 ### <a name="merging-and-splitting-cells"></a>セルの結合と分割  
  Tablix 領域内では、隣接する複数のセルを結合できます。 たとえば、複数の列または行にまたがるラベルのセルを作成できます。  
@@ -120,6 +120,6 @@ ms.locfileid: "66104646"
  以前に結合したセルを分割できます。 セルを水平方向に列に分割するか、垂直方向に行に分割できます。 セルを、セルのブロックに分割するには、最初にセルを水平方向に分割し、次に、垂直方向に必要な数だけ分割します。  
   
 ## <a name="see-also"></a>参照  
- [Tablix データ領域 (レポート ビルダーおよび SSRS)](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

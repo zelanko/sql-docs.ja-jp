@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6ae333cce365fb9bede046fcea911b633a0f2311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941472"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292374"
 ---
 # <a name="hdfs-file-destination"></a>HDFS ファイル変換先
 
@@ -33,12 +33,12 @@ ms.locfileid: "67941472"
 ## <a name="options"></a>オプション
  **[Hadoop File Destination Editor]** (Hadoop ファイル変換先エディター) ダイアログ ボックスの **[全般]** タブで、次のオプションを構成します。
 
-|フィールド|[説明]|
+|フィールド|説明|
 |-----------|-----------------|
 |**Hadoop 接続**|既存の Hadoop 接続マネージャーを指定するか、新しい Hadoop 接続マネージャーを作成します。 この接続マネージャーは、HDFS ファイルがホストされる場所を示します。|
 |**ファイル パス**|HDFS ファイルの名前を指定します。|
 |**ファイル形式**|HDFS ファイルの形式を指定します。 テキスト、Avro、または ORC 形式を選択できます。|
-|**Column delimiter character (列区切り文字)**|テキスト形式を選択した場合は、列区切り文字を指定します。|
+|**列区切り文字**|テキスト形式を選択した場合は、列区切り文字を指定します。|
 |**先頭データ行を列名として使用する**|テキスト形式を選択した場合は、ファイルの最初の行に列の名前が含まれるかどうかを示します。|
 
  これらのオプションを構成した後、 **[列]** タブを選択し、データ フローのソース列を変換先列にマップします。

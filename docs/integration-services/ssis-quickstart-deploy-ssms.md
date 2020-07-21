@@ -6,14 +6,14 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b600ebb27007504d0625222be713a8d7d39535c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04f7231dc4781b3c7194a7a34002b67087c9eaf2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068895"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74947116"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する
 
@@ -24,7 +24,7 @@ ms.locfileid: "68068895"
 
 SQL Server Management Studio は、SQL Server から SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS については、「[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)」をご覧ください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
 
@@ -46,12 +46,12 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 
 プロジェクトを Azure SQL Database にデプロイするには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
-1. [Azure ポータル](https://portal.azure.com/)にログインします。
+1. [Azure Portal](https://portal.azure.com/) にログインします。
 2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
-## <a name="wizard_auth"></a> デプロイ ウィザードでの認証方法
+## <a name="authentication-methods-for-deployment"></a>デプロイの認証方法
 
 デプロイ ウィザードで SQL Server にデプロイする場合、Windows 認証を使用する必要があります。SQL Server 認証は使用できません。
 
@@ -63,13 +63,13 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
 
 1. SQL Server Management Studio を開きます。
 
-2. **[サーバーへの接続]** ダイアログ ボックスに次の情報を入力します。
+2. **[サーバーへの接続]** ダイアログ ボックスで、次の情報を入力します。
 
-   | 設定       | 提案される値 | 詳細 | 
+   | 設定       | 推奨値 | 詳細情報 | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバーの種類** | データベース エンジン | この値は必須です。 |
    | **サーバー名** | 完全修飾サーバー名 | Azure SQL Database サーバーに接続する場合、名前は次の形式になります。`<server_name>.database.windows.net` |
-   | **[認証]** | SQL Server 認証 (SQL Server Authentication) | SQL Server 認証を使用すると、SQL Server または Azure SQL Database に接続できます。 この記事の「[デプロイ ウィザードでの認証方法](#wizard_auth)」を参照してください。 |
+   | **認証** | SQL Server 認証 | SQL Server 認証を使用すると、SQL Server または Azure SQL Database に接続できます。 この記事の「[デプロイ ウィザードでの認証方法](#authentication-methods-for-deployment)」を参照してください。 |
    | **Login** | サーバー管理者アカウント | このアカウントは、サーバーの作成時に指定したアカウントです。 |
    | **パスワード** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーの作成時に指定したパスワードです。 |
 
@@ -94,7 +94,7 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
   
 3.  **[配置先の選択]** ページで、プロジェクトの配置先を選びます。
     -   完全修飾サーバー名を入力します。 ターゲット サーバーが Azure SQL Database サーバーの場合、名前は `<server_name>.database.windows.net` 形式になります。
-    -   認証情報を入力し、 **[接続]** を選択します。 この記事の「[デプロイ ウィザードでの認証方法](#wizard_auth)」を参照してください。
+    -   認証情報を入力し、 **[接続]** を選択します。 この記事の「[デプロイ ウィザードでの認証方法](#authentication-methods-for-deployment)」を参照してください。
     -   次に、 **[参照]** を選択し、SSISDB でターゲット フォルダーを選択します。
     -   **[次へ]** を選択し、 **[レビュー]** ページを開きます。 ( **[次へ]** ボタンは、 **[接続]** を選択した後でないと有効になりません。)
   
@@ -109,14 +109,14 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
     -   必要に応じて、 **[レポートの保存]** をクリックして結果を XML ファイルに保存します。
     -   **[閉じる]** をクリックしてウィザードを終了します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - パッケージを配置する他の方法を検討します。
     - [Transact-SQL (SSMS) を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-tsql-ssms.md)
     - [Transact-SQL (VS Code) を使用して SSIS パッケージを配置する](ssis-quickstart-deploy-tsql-vscode.md)
     - [コマンド プロンプトから SSIS パッケージを配置する](./ssis-quickstart-deploy-cmdline.md)
     - [PowerShell を使用して SSIS パッケージを配置する](ssis-quickstart-deploy-powershell.md)
     - [C# を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-dotnet.md) 
-- 配置されたパッケージを実行します。 パッケージを実行するには、いくつかのツールおよび言語から選択することができます。 詳細については、次の記事をご覧ください。
+- 配置されたパッケージを実行します。 パッケージを実行するには、いくつかのツールおよび言語から選択することができます。 詳細については、次の記事を参照してください。
     - [SSMS を使用して SSIS パッケージを実行する](./ssis-quickstart-run-ssms.md)
     - [Transact-SQL (SSMS) を使用して SSIS パッケージを実行する](./ssis-quickstart-run-tsql-ssms.md)
     - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)

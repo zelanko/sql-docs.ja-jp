@@ -1,5 +1,5 @@
 ---
-title: ファイル データ ソースを使用して接続する |Microsoft Docs
+title: ファイルデータソースを使用した接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ helpviewer_keywords:
 - connecting to data source [ODBC], file data sources
 - file data sources [ODBC]
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aa340c64f6eb92d803d8918bc99ecf112b19f1e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8c752fc3b09c06c68dcc216cacac63744dc3101b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083116"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81287412"
 ---
 # <a name="connecting-using-file-data-sources"></a>ファイル データ ソースを使用した接続
-ファイルのデータ ソースの接続情報は、.dsn ファイルに格納されます。 その結果、接続文字列を 1 人のユーザーによって繰り返し使用または適切なドライバーがインストールされている場合は、複数のユーザーの間で共有します。 ファイルには、ドライバー名 (または共有不能なファイルのデータ ソースの場合、別のデータ ソース名) が含まれています。 必要に応じて、で使用できる接続文字列と**SQLDriverConnect**します。 ドライバー マネージャーへの呼び出しの接続文字列をビルドする**SQLDriverConnect** .dsn ファイル内のキーワードから。  
+ファイルデータソースの接続情報は、dsn ファイルに格納されます。 このため、接続文字列は、1人のユーザーが繰り返し使用することも、適切なドライバーがインストールされていれば複数のユーザー間で共有することもできます。 このファイルには、ドライバー名 (または unshareable file データソースの場合は別のデータソース名) と、必要に応じて**SQLDriverConnect**で使用できる接続文字列が含まれています。 ドライバーマネージャーは、 **SQLDriverConnect**への呼び出し用の接続文字列を、dsn ファイル内のキーワードから作成します。  
   
- ファイルのデータ ソースにより、アプリケーションで使用するための接続文字列を構築することがなく接続オプションを指定する**SQLDriverConnect**します。 通常、ファイルのデータ ソースが指定することによって作成は、 **SAVEFILE**キーワードで、ドライバー マネージャーへの呼び出しによって作成された出力の接続文字列を保存すると、 **SQLDriverConnect** .dsn ファイルにします。 接続文字列を呼び出すことで繰り返し使用できること**SQLDriverConnect**で、 **FILEDSN**キーワード。 これにより、接続プロセスを合理化し、接続文字列の永続的なソースを提供します。  
+ ファイルデータソースを使用すると、アプリケーションで接続オプションを指定できます。 **SQLDriverConnect**で使用する接続文字列を作成する必要はありません。 通常、ファイルデータソースは**SAVEFILE**キーワードを指定することによって作成されます。これにより、ドライバーマネージャーは**SQLDriverConnect**の呼び出しによって作成された出力接続文字列を、dsn ファイルに保存します。 この接続文字列は、 **FILEDSN**キーワードを使用して**SQLDriverConnect**を呼び出すことによって、繰り返し使用できます。 これにより、接続プロセスが効率化され、接続文字列の永続的なソースが提供されます。  
   
- ファイル データ ソースも作成できます呼び出して**SQLCreateDataSource**インストーラー DLL。 情報は、呼び出すことによって、.dsn ファイルに書き込まれることができます**SQLWriteFileDSN**、呼び出して .dsn ファイルから読み取ると**SQLReadFileDSN**; インストーラー DLL もこれらの関数。 インストーラー DLL については、次を参照してください。[データ ソースを構成する](../../../odbc/reference/install/configuring-data-sources.md)します。  
+ ファイルデータソースは、インストーラー DLL で**Sqlcreatedatasource**を呼び出すことによっても作成できます。 **SQLWriteFileDSN**を呼び出すことによって、dsn ファイルに情報を書き込むことができます。また、 **SQLReadFileDSN**を呼び出して、dsn ファイルから読み取ることもできます。これらの関数はどちらも、インストーラー DLL に含まれています。 インストーラー DLL の詳細については、「[データソースの構成](../../../odbc/reference/install/configuring-data-sources.md)」を参照してください。  
   
- 接続情報の使用されるキーワードは、.dsn ファイルの [ODBC] セクションには。 [ODBC] セクションでは共有可能 .dsn ファイルが、最小限の情報は、DRIVER キーワードを示します。  
+ 接続情報に使用されるキーワードは、dsn ファイルの [ODBC] セクションにあります。 [ODBC] セクションで共有可能な dsn ファイルの最小情報は、DRIVER キーワードです。  
   
 ```  
 DRIVER = SQL Server  
 ```  
   
- 共有可能 .dsn ファイルは通常、接続文字列としては、次のように含みます。  
+ 共有可能な dsn ファイルには、通常、次のような接続文字列が含まれています。  
   
 ```  
 DRIVER = SQL Server  
@@ -45,13 +45,13 @@ UID = Larry
 DATABASE = MyDB  
 ```  
   
- ファイルのデータ ソースが共有可能 .dsn ファイルのみを含む、 **DSN**キーワード。 接続で示されるデータ ソースに必要なドライバー マネージャーは、共有不能なファイルのデータ ソースの情報を送信するとき、 **DSN**キーワード。 共有不能な .dsn ファイルは、次のキーワードが含まれます。  
+ ファイルデータソースが unshareable の場合、dsn ファイルには**dsn**キーワードだけが含まれます。 ドライバーマネージャーは、unshareable file データソース内の情報を送信すると、 **DSN**キーワードによって示されるデータソースに必要に応じて接続します。 Unshareable ファイルには、次のキーワードが含まれています。  
   
 ```  
 DSN = MyDataSource  
 ```  
   
- ファイルのデータ ソースを使用する接続文字列は .dsn ファイルで指定したキーワードと接続文字列への呼び出しで指定したキーワードの和集合**SQLDriverConnect**します。 接続文字列キーワードを持つ .dsn ファイル内のキーワードのいずれかが競合する場合、ドライバー マネージャーは、キーワード値を使用する必要がありますを決定します。 詳細については、次を参照してください。 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)します。  
+ ファイルデータソースに使用される接続文字列は、dsn ファイルで指定されたキーワードと、 **SQLDriverConnect**の呼び出しで接続文字列で指定されたキーワードの和集合です。 Dsn ファイル内のいずれかのキーワードが接続文字列のキーワードと競合する場合は、使用するキーワード値がドライバーマネージャーによって決定されます。 詳細については、「 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

@@ -1,6 +1,6 @@
 ---
-title: テキストのドラッグ アンド ドロップ | Microsoft Docs
-ms.custom: ''
+title: テキストのドラッグ アンド ドロップ
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - dragging and dropping text
 - Query Editor [SQL Server Management Studio], dragging and dropping text
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c103672bbc8dcb6028190a624c1f9ecdb3caf3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5104db8ce520b8a98ffe223fd8832806564d5f12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064141"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056808"
 ---
 # <a name="drag-and-drop-text"></a>テキストのドラッグ アンド ドロップ
   テキストを選択して、別の場所にドラッグ アンド ドロップすることができます。 次のような場合にテキストをドラッグ アンド ドロップできます。  
@@ -43,7 +42,7 @@ ms.locfileid: "66064141"
   
  テキストをドラッグすると、テキストが移動します。つまり、テキストが元の場所から消去されて新しい場所に移動します。 Ctrl キーを押しながらテキストをドラッグすると、テキストが新しい場所にコピーされます。 オブジェクト エクスプローラーからオブジェクトをドラッグする場合は例外で、オブジェクト エクスプローラーからオブジェクト名は削除されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コード内とテキスト内の移動](navigate-code-and-text.md)  
   
   

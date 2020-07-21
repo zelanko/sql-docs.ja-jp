@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1607d1b6122c4a703ee93cd17705807626e2f0db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00838b68427e856287ede5fd066baddcb106be05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62867754"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551187"
 ---
-# <a name="mssqlserver53"></a>MSSQLSERVER_53
+# <a name="mssqlserver_53"></a>MSSQLSERVER_53
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|53|  
@@ -40,10 +39,10 @@ ms.locfileid: "62867754"
 ## <a name="user-action"></a>ユーザーの操作  
  クライアントで入力したサーバー名に間違いがなく、そのサーバー名を解決できることを確認します。 TCP/IP 名前解決を確認するには、Windows オペレーティング システムで **ping** コマンドを使用します。  
   
-## <a name="see-also"></a>関連項目  
- [ネットワーク プロトコルとネットワーク ライブラリ](../../sql-server/install/network-protocols-and-network-libraries.md)   
+## <a name="see-also"></a>参照  
+ [ネットワークプロトコルとネットワークライブラリ](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [クライアント ネットワーク構成](../../database-engine/configure-windows/client-network-configuration.md)   
- [クライアント プロトコルを構成します。](../../database-engine/configure-windows/configure-client-protocols.md)   
+ [クライアントプロトコルの構成](../../database-engine/configure-windows/configure-client-protocols.md)   
  [サーバー ネットワーク プロトコルの有効化または無効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
   

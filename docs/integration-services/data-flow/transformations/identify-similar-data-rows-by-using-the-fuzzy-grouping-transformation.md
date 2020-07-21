@@ -13,16 +13,16 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 04dd344f9d62e3bc10d26c66a87c8e4bf8395787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a8acc9dfcfc908a0e1c196eb7b9ac2c6af088eaf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944325"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903921"
 ---
-# <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換を使用して類似のデータ行を識別する
+# <a name="identify-similar-data-rows-with-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換を使用して類似のデータ行を識別する
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -87,6 +87,6 @@ ms.locfileid: "67944325"
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
   
   

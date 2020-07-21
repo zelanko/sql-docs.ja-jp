@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 11cef86218092a0cdbe39a2141f2368cd05bf16e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5643e4e1d900b0c4152a422927a29302f40f952
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080969"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297628"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Integration Services 式の詳細の例
 
@@ -29,7 +29,7 @@ ms.locfileid: "68080969"
 
   このセクションでは、複数の演算子と関数を組み合わせた詳細な式の例について説明します。 式が優先順位制約または条件分割変換で使用される場合、式はブール型に評価される必要があります。 ただしこの制限は、プロパティ式、変数、派生列変換、または For ループ コンテナーで使用される式には適用されません。  
   
- 次の例では、 **AdventureWorks** および [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用します。 それぞれの例では、式で使用するテーブルを判別します。  
+ 次の例では、**AdventureWorks** および [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用します。 それぞれの例では、式で使用するテーブルを判別します。  
   
 ## <a name="boolean-expressions"></a>ブール式  
   

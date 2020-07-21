@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9808157b943a45f9d23320d270752e7ec712c310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3897e0a92083f292ba2edd062536ebdd6bda6c69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781515"
 ---
-# <a name="mssqlserver10509"></a>MSSQLSERVER_10509
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|10509|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_INVALID_STMT|  
-|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。 **@stmt** または **@statement_start_offset** で指定したステートメントが構文エラーを含んでいるか、またはプラン ガイドでの使用に適していません。 有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つだけ指定するか、またはバッチ内のステートメントの有効な開始位置を指定します。 有効な開始位置を取得するには、動的管理関数 sys.dm_exec_query_stats の statement_start_offset 列のクエリを実行します。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。 **\@stmt** または **\@statement_start_offset** で指定されたステートメントは、構文エラーを含んでいるか、プラン ガイドで使用するには不適切です。 有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つだけ指定するか、またはバッチ内のステートメントの有効な開始位置を指定します。 有効な開始位置を取得するには、動的管理関数 sys.dm_exec_query_stats の statement_start_offset 列のクエリを実行します。|  
   
 ## <a name="explanation"></a>説明  
-**@stmt** または **@statement_start_offset** で指定したステートメントが構文エラーを含んでいるか、またはプラン ガイドでの使用に適していません。  
+**\@stmt** または **\@statement_start_offset** で指定されたステートメントは、構文エラーを含んでいるか、プラン ガイドで使用するには不適切です。  
   
 ## <a name="user-action"></a>ユーザーの操作  
 有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つだけ指定するか、またはバッチ内のステートメントの有効な開始位置を指定します。 有効な開始位置を取得するには、動的管理関数 sys.dm_exec_query_stats の statement_start_offset 列のクエリを実行します。  

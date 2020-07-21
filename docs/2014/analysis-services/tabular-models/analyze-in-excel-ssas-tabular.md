@@ -1,5 +1,5 @@
 ---
-title: Excel (SSAS テーブル) での分析 |Microsoft Docs
+title: Excel で分析 (SSAS テーブル)Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 429245f875ce6d13ef3818cf7bae874f72c500ed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067686"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939943"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Excel で分析 (SSAS テーブル)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の "Excel で分析" 機能を使用すると、テーブル モデルの作成者は、開発時にモデル プロジェクトを迅速に分析できます。 "Excel で分析" 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、自動的にピボットテーブルがワークシートに追加されます。 ワークスペース データベース オブジェクト (テーブル、列、およびメジャー) は、ピボットテーブルのフィールドの一覧にフィールドとして含まれます。 これによりオブジェクトとデータは、有効なユーザーまたはロールおよびパースペクティブのコンテキスト内で表示できるようになります。  
@@ -24,11 +23,11 @@ ms.locfileid: "66067686"
   
  このトピックのセクション:  
   
--   [利点](#bkmk_benefits)  
+-   [メリット](#bkmk_benefits)  
   
 -   [関連タスク](#bkmk_rt)  
   
-##  <a name="bkmk_benefits"></a> 利点  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 利点  
  "Excel で分析" 機能によって、モデルの作成者は Microsoft Excel という一般的なデータ分析アプリケーションを使用して、モデル プロジェクトの有効性をテストできます。 "Excel で分析" 機能を使用するには、Microsoft Office 2003 以降が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]と同じコンピューターにインストールされている必要があります。  
   
 > [!NOTE]  
@@ -47,17 +46,17 @@ ms.locfileid: "66067686"
  **ロール**  
  ロールは、オブジェクト メタデータおよびデータに対するユーザーの権限の定義に使用されます。 ロールは通常、特定の Windows ユーザーまたは Windows ユーザー グループに対して定義されます。 一部の適切なロールには、DAX 式で定義した追加の行レベル フィルターを含めることができます。 "Excel で分析" 機能を使用する際には、必要に応じて使用するロールを選択することもできます。 オブジェクト メタデータおよびデータの表示は、ロールに対して定義された権限とフィルターによって制限されます。 詳細については、「[ロールの作成および管理 (SSAS テーブル)](roles-ssas-tabular.md)」を参照してください。  
   
- 有効なユーザーまたはロールに加え、パースペクティブを指定することもできます。 モデル作成者はパースペクティブを使用して、ビジネス シナリオに基づいてモデル オブジェクトとデータの表示を定義できます。 既定では、パースペクティブは使用されません。 "Excel で分析" 機能でパースペクティブを使用するには、あらかじめ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で [パースペクティブ] ダイアログ ボックスを使用して、パースペクティブを定義しておく必要があります。 パースペクティブが指定されている場合、ピボットテーブルのフィールドの一覧には、パースペクティブで選択されたオブジェクトのみが表示されます。 詳細については、「[パースペクティブの作成と管理 (SSAS テーブル)](perspectives-ssas-tabular.md)」を参照してください。  
+ 有効なユーザーまたはロールに加え、パースペクティブを指定することもできます。 モデル作成者はパースペクティブを使用して、ビジネス シナリオに基づいてモデル オブジェクトとデータの表示を定義できます。 既定では、パースペクティブは使用されません。 "Excel で分析" 機能でパースペクティブを使用するには、あらかじめ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で [パースペクティブ] ダイアログ ボックスを使用して、パースペクティブを定義しておく必要があります。 パースペクティブが指定されている場合、ピボットテーブルのフィールドの一覧には、パースペクティブで選択されたオブジェクトのみが表示されます。 詳細については、「 [SSAS テーブル&#41;&#40;パースペクティブの作成と管理](perspectives-ssas-tabular.md)」を参照してください。  
   
-##  <a name="bkmk_rt"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="bkmk_rt"></a> 関連タスク  
   
-|**トピック**|**[説明]**|  
+|**トピック**|**説明**|  
 |---------------|---------------------|  
 |[Excel でのテーブル モデルの分析 (SSAS テーブル)](analyze-a-tabular-model-in-excel-ssas-tabular.md)|このトピックでは、モデル デザイナーで "Excel で分析" 機能を使用する方法、モデル ワークスペース データベースへのデータ ソース接続を作成する方法、およびワークシートにピボットテーブルを追加する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [Excel でのテーブル モデルの分析 (SSAS テーブル)](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [ロール (SSAS テーブル)](roles-ssas-tabular.md)   
- [パースペクティブ (SSAS テーブル)](perspectives-ssas-tabular.md)  
+ [Excel でのテーブルモデルの分析 &#40;SSAS 表形式&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+ [SSAS 表形式のロール &#40;&#41;](roles-ssas-tabular.md)   
+ [パースペクティブ &#40;SSAS テーブル&#41;](perspectives-ssas-tabular.md)  
   
   

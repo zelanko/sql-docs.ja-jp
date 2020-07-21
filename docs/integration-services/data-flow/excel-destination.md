@@ -16,14 +16,14 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4dff3986f3f733095adc1d4d0bc20d59b386eb2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 418d3c214f667807df997902f97bfa271c8c4742
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941584"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292817"
 ---
 # <a name="excel-destination"></a>Excel 変換先
 
@@ -75,7 +75,7 @@ ms.locfileid: "67941584"
  **[データ アクセス モード]**  
  ソースからデータを選択する方法を指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|Excel データ ソースのワークシートまたは名前付き範囲にデータを読み込みます。|  
 |[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -116,7 +116,7 @@ ms.locfileid: "67941584"
 ## <a name="excel-destination-editor-mappings-page"></a>[Excel 変換先エディター] ([マッピング] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "67941584"
 ## <a name="excel-destination-editor-error-output-page"></a>[Excel 変換先エディター] ([エラー出力] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理オプションを指定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **入力または出力**  
  データ ソースの名前を表示します。  
   
@@ -142,12 +142,12 @@ ms.locfileid: "67941584"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連トピック:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
   
- **[説明]**  
+ **説明**  
  エラーの説明を表示します。  
   
  **[選択したセルに設定する値]**  

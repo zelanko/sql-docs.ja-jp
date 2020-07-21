@@ -1,5 +1,6 @@
 ---
-title: ODBC のトランザクション。マイクロソフトのドキュメント
+title: ODBC でのトランザクション |Microsoft Docs
+description: ODBC では、接続レベルでトランザクションを管理し、自動コミットモードまたは手動コミットモードで、完了したすべての作業をコミットまたはロールバックします。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,23 +13,21 @@ helpviewer_keywords:
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f076622b30d1f1102bac8ff6c89ecf2e36a96860
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: d3a303bd33d9f4ee0118512d9c346a5eab0ad9a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913162"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009734"
 ---
 # <a name="performing-transactions-in-odbc"></a>ODBC でのトランザクションの実行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  ODBC のトランザクションは接続レベルで管理されます。 アプリケーションはトランザクションの完了時に、その接続のすべてのステートメント ハンドルで完了したすべての作業を、コミットまたはロールバックします。 コミットするトランザクションをロールバックするか、アプリケーションを呼び出す必要があります[sqlendtran を呼び出してと](../../../relational-databases/native-client-odbc-api/sqlendtran.md)COMMIT または ROLLBACK ステートメントを送信する代わりにします。  
+  ODBC のトランザクションは接続レベルで管理されます。 アプリケーションはトランザクションの完了時に、その接続のすべてのステートメント ハンドルで完了したすべての作業を、コミットまたはロールバックします。 トランザクションをコミットまたはロールバックするには、COMMIT または ROLLBACK ステートメントを送信するのではなく、アプリケーションで[SQLEndTran](../../../relational-databases/native-client-odbc-api/sqlendtran.md)を呼び出す必要があります。  
   
- アプリケーションを呼び出す[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)のトランザクションを管理する 2 つの ODBC のモードを切り替えます。  
+ アプリケーションは、 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出して、トランザクションを管理する2つの ODBC モードを切り替えます。  
   
 -   自動コミット モード  
   
@@ -36,15 +35,15 @@ ms.locfileid: "67913162"
   
 -   手動コミット モード  
   
-     呼び出すことによって、明示的に停止されるまで、同じトランザクションで実行されるすべてのステートメントが含まれる**sqlendtran を呼び出してと**。  
+     実行されたすべてのステートメントは、 **SQLEndTran**を呼び出すことによって明示的に停止されるまで、同じトランザクションに含まれます。  
   
- 自動コミット モードは、ODBC の既定のトランザクション モードです。 までオート コミット ・ モードでは、接続が行われると、 **SQLSetConnectAttr**を自動コミット モードの設定を手動コミット モードに切り替えると呼ばれます。 アプリケーションが自動コミットを無効にすると、次にデータベースに送信されるステートメントでトランザクションが開始されます。 その後、トランザクションがアプリケーション呼び出しまで有効になります**SQLEndTran**した状態または SQL_ROLLBACK オプションを使用します。 後にデータベースに送信されたコマンド**sqlendtran を呼び出してと**次のトランザクションを開始します。  
+ 自動コミット モードは、ODBC の既定のトランザクション モードです。 接続が確立されると、 **SQLSetConnectAttr**が呼び出され、自動コミットモードをオフに設定して手動コミットモードに切り替えるまで、自動コミットモードになります。 アプリケーションが自動コミットを無効にすると、次にデータベースに送信されるステートメントでトランザクションが開始されます。 その後、トランザクションは、アプリケーションが SQL_COMMIT オプションまたは SQL_ROLLBACK オプションを使用して**SQLEndTran**を呼び出すまで有効になります。 **SQLEndTran**の後にデータベースに送信されるコマンドは、次のトランザクションを開始します。  
   
  手動コミット モードから自動コミット モードに切り替えると、ドライバーは接続で現在開かれているすべてのトランザクションをコミットします。  
   
- ODBC アプリケーションで BEGIN TRANSACTION、COMMIT TRANSACTION、ROLLBACK TRANSACTION などの Transact-SQL トランザクション ステートメントを使用すると、ドライバーの動作が不確定になる可能性があるので、このような Transact-SQL トランザクション ステートメントは使用しないでください。 ODBC アプリケーションする必要があります自動コミット モードで実行し、トランザクション管理関数やステートメントを使用して、または手動コミット モードで実行されず、ODBC を使用して、 **sqlendtran を呼び出してと**関数がコミットまたはトランザクションをロールバックします。  
+ ODBC アプリケーションで BEGIN TRANSACTION、COMMIT TRANSACTION、ROLLBACK TRANSACTION などの Transact-SQL トランザクション ステートメントを使用すると、ドライバーの動作が不確定になる可能性があるので、このような Transact-SQL トランザクション ステートメントは使用しないでください。 ODBC アプリケーションは自動コミットモードで実行する必要があり、トランザクション管理関数やステートメントを使用したり、手動コミットモードで実行したり、ODBC **SQLEndTran**関数を使用してトランザクションをコミットまたはロールバックしたりする必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [トランザクションを実行する&#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+## <a name="see-also"></a>参照  
+ [ODBC&#41;&#40;のトランザクションの実行](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

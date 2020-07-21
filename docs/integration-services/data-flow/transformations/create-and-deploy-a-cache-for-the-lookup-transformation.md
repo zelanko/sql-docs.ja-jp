@@ -12,14 +12,14 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1583d849b28a2ef8ae6e22e311304c3f258cc706
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e53569a8680ec3a6414aeeaa83e9322e77568ecf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112639"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297973"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>参照変換用のキャッシュを作成および配置する
 
@@ -30,7 +30,7 @@ ms.locfileid: "68112639"
   
  参照変換は、接続されているデータ ソースの入力列のデータを参照データセットの列と結合することにより参照を実行します。  
   
- キャッシュ接続マネージャーおよびキャッシュ変換を使用して、キャッシュ ファイルを作成します。 詳細については、「 [キャッシュ接続マネージャー](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 」と「 [キャッシュ変換](../../../integration-services/data-flow/transformations/cache-transform.md)」を参照してください。  
+ キャッシュ接続マネージャーおよびキャッシュ変換を使用して、キャッシュ ファイルを作成します。 詳細については、「 [キャッシュ接続マネージャー](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 」および「 [キャッシュ変換](../../../integration-services/data-flow/transformations/cache-transform.md)」をご覧ください。  
   
  参照変換とキャッシュ ファイルの詳細については、「 [参照変換](../../../integration-services/data-flow/transformations/lookup-transformation.md)」を参照してください。  
   

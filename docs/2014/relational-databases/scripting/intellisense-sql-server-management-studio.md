@@ -1,21 +1,20 @@
 ---
-title: IntelliSense (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: IntelliSense
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb3e97175b1580b7f149fd3ba0e97584e281ec04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 58c1c769d8120dc0be08508e3595d98c092ff116
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063424"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のエディターは [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense オプションをサポートしているので、入力操作を減らし、構文情報をすばやく提示し、複合式の区切りをわかりやすく表示できます。  

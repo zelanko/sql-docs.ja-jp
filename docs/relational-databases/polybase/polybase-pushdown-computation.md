@@ -1,25 +1,26 @@
 ---
 title: PolyBase でのプッシュダウン計算 | Microsoft Docs
+dexcription: Enable pushdown computation to improve performance of queries on your Hadoop cluster. You can select a subset of rows/columns in an external table for pushdown.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: dcc59e6aad686cb97e4439701967dddd21182e45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b8af2373969353597036a3c538d0a8ab8945ae24
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062119"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901271"
 ---
 # <a name="pushdown-computations-in-polybase"></a>PolyBase でのプッシュダウン計算
 
 ## <a name="dmv"></a>DMV (DMV)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 プッシュダウン計算を使用すると、Hadoop クラスター上でのクエリ パフォーマンスを改善できます。
 
@@ -54,7 +55,7 @@ SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_bal
 
 SQL Server では、述語のプッシュダウンに次の基本的な式と演算子を使用できます。
 
-+ 数値、日付値、時間値の 2 項比較演算子 (\<、>、=、!=、<>、>=、<=)。
++ 数値、日付値、時間値の 2 項比較演算子 (\<, >、=、!=、<>、>=、<=)。
 
 + 算術演算子 (+、-、*、/、%)。
 
@@ -88,6 +89,6 @@ WHERE Speed > 65
 OPTION (DISABLE EXTERNALPUSHDOWN);
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase について詳しくは、「[PolyBase とは](polybase-guide.md)」をご覧ください。

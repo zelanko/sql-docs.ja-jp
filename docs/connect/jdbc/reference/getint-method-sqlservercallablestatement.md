@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 19d60b8b-7e01-4d7b-afa9-f0705d634cf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cafa92966962bbb033cfa2642f7d1a0be343ec1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2910e27c21d03bf5f8318d54e9f5ed73b837a13e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982724"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921446"
 ---
 # <a name="getint-method-sqlservercallablestatement"></a>getInt メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67982724"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getInt (int)](../../../connect/jdbc/reference/getint-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値が Java プログラミング言語の **int** として取得されます。|  
 |[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string.md)|パラメーターに渡された名前を使用して、指定されたパラメーターの値が Java プログラミング言語の **int** として取得されます。|  

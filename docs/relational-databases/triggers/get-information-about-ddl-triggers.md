@@ -14,15 +14,15 @@ ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42c4a2e8ccf9a3ac91aef0d38b64637cb37c95d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7453a890fb3b905c025003114c287584fdb35c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757571"
 ---
 # <a name="get-information-about-ddl-triggers"></a>DDL トリガーに関する情報の取得
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   ここに記載されているカタログ ビューを使用すると、DDL トリガーに関する情報を取得できます。  
   
  **DDL トリガーを起動できるイベントまたはイベント グループに関する情報を取得するには**  

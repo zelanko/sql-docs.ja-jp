@@ -1,5 +1,6 @@
 ---
 title: フィールド ターミネータと行ターミネータの指定 (SQL Server) | Microsoft Docs
+description: フィールド ターミネータと行ターミネータは、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示します。
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9859db8e22110e228386dfe23f94341ab1f7be15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d36cb40971fc371022eb71dc922eb22a198bab9e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062551"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001709"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ( *フィールド ターミネータ* を使用) と各行の末尾 ( *行ターミネータ*を使用) を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。  
   
 > [!IMPORTANT]
@@ -84,7 +85,7 @@ ms.locfileid: "68062551"
         >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  
   
 ### <a name="guidelines-for-using-terminators"></a>ターミネータ使用のガイドライン  
- 状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 例:  
+ 状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 次に例を示します。  
   
 -   プレフィックス長がわからないプログラムにインポートされるデータ ファイル内で NULL 値が含まれるデータ列。  
   
@@ -96,20 +97,20 @@ ms.locfileid: "68062551"
 
 ### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>`\n` を一括エクスポートの行ターミネータとして指定する
 
-`\n` を一括エクスポートの行ターミネータとして指定するか、既定の行ターミネータを暗黙的に使用する場合、bcp では復帰と改行の組み合わせ (CRLF) が行ターミネータとして出力されます。 行ターミネータとして改行文字のみ (LF) を出力する場合 (Unix および Linux コンピュータの標準)、16 進数表記を使用して LF 行ターミネータを指定します。 例:
+`\n` を一括エクスポートの行ターミネータとして指定するか、既定の行ターミネータを暗黙的に使用する場合、bcp では復帰と改行の組み合わせ (CRLF) が行ターミネータとして出力されます。 行ターミネータとして改行文字のみ (LF) を出力する場合 (Unix および Linux コンピュータの標準)、16 進数表記を使用して LF 行ターミネータを指定します。 次に例を示します。
 
 ```cmd
 bcp -r '0x0A'
 ```
 
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  この例では、フィールド ターミネータにコンマ、行ターミネータに改行文字 (\n) を使用して、文字形式で `AdventureWorks.HumanResources.Department` テーブルから `Department-c-t.txt` データ ファイルにデータが一括エクスポートされます。  
   
  **bcp** コマンドには、次のスイッチがあります。  
   
-|スイッチ|[説明]|  
+|Switch|説明|  
 |------------|-----------------|  
-|**-t**|データ フィールドが文字データとして読み込まれることを指定します。|  
+|**-c**|データ フィールドが文字データとして読み込まれることを指定します。|  
 |**-t** `,`|コンマ (,) をフィールド ターミネータとして指定します。|  
 |**-r** \n|改行文字を行ターミネータとして指定します。 改行文字は既定の行ターミネータなので省略できます。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** と **-P** を指定する必要があります。|  
@@ -135,7 +136,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      次の表に示す修飾子を使用して、フォーマット ファイル内の個別のフィールドまたはデータ ファイル全体にターミネータを指定できます。  
   
-    |Qualifier|[説明]|  
+    |Qualifier|説明|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|文字データ ファイルや Unicode 文字データ ファイルに使用されるフィールド ターミネータを指定します。<br /><br /> 既定値は \t (タブ文字) です。|  
     |ROWTERMINATOR **='***row_terminator***'**|文字データ ファイルや Unicode 文字データ ファイルに使用される行ターミネータを指定します。<br /><br /> 既定値は \n (改行記号) です。|  
@@ -155,7 +156,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
     ROWTERMINATOR = '0x0A'
 ```
  
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  この例では、前述の例で作成された `Department-c-t.txt` データ ファイルから、 `myDepartment` サンプル データベースの [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] テーブルに、文字データを一括インポートします。 このテーブルを作成しないと、例を実行できません。 **dbo** スキーマでこのテーブルを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  
   
 ```sql  
@@ -204,7 +205,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [bcp を使用したフィールド長の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: SMO 構文表記規則。マイクロソフトのドキュメント
+title: SMO 構文表記規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,24 +13,23 @@ helpviewer_keywords:
 - syntax [SMO]
 - SQL Server Management Objects, syntax conventions
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c61e53366e05e57e768c55e73f70a76b648f597
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 1c7a883ff0a596e6e258ea6fcb9557697bbea986
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092823"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012264"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 構文表記規則
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の表記規則に基づいてで使用されている[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio .NET の参考資料です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) の表記規則は、Visual Studio .NET のリファレンス資料で使用されている表記規則に基づいてい [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
 |表記|使用目的|  
 |----------------|--------------|  
-|大文字|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、マクロ名、オペレーティング システム レベルで使用される用語、あるいはテキスト内でのファイル名。|  
+|UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、マクロ名、オペレーティング システム レベルで使用される用語、あるいはテキスト内でのファイル名。|  
 |`monospace`|サンプルのコマンド ラインおよびプログラム コード。|  
 |*斜体*|テキストに記述されている変数、数式、または定義されている用語。 構文では、斜体文字はユーザーが指定する情報のプレースホルダーを示しています。|  
 |**太字**|SMO のオブジェクト、イベント、メソッド、プロパティなど。テキストに記述されているプログラミング用語。|  

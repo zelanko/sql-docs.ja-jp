@@ -1,6 +1,6 @@
 ---
-title: SQL Server 構成マネージャーのヘルプ | Microsoft Docs
-ms.custom: ''
+title: SQL Server 構成マネージャーのヘルプ
+ms.custom: seo-lt-2019
 ms.date: 02/01/2018
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,24 +13,24 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fa579e072ffdddc70e10d3ad1e9a205840374aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 8ade0d0e0944b01005866fc5c38e50ce45fae0fd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024087"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306955"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 構成マネージャーのヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種サービスやネットワーク接続を構成します。 データベース オブジェクトの作成または管理、セキュリティの構成、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリの作成には、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ツールを使用します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
 
  > [!TIP]
- > Linux でを構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する必要がある場合は、 **mssql-conf**ツールを使用します。 詳細については、「 [mssql-conf ツールを使用した SQL Server on Linux の構成](../../linux/sql-server-linux-configure-mssql-conf.md)」を参照してください。
+ > Linux で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成する必要がある場合は、**mssql-conf** ツールを使用します。 詳しくは、「[mssql-conf ツールを使用して SQL Server on Linux を構成する](../../linux/sql-server-linux-configure-mssql-conf.md)」をご覧ください。
 
  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの各ダイアログ ボックスの F1 ヘルプ トピックについて紹介します。  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を構成することはできません。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] よりも前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成することはできません。  
   
 ## <a name="services"></a>サービス  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に関連する各種サービスを管理します。 これらのタスクの多くは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の [サービス] ダイアログ ボックスからも実行できますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、管理対象のサービスに関して追加の操作を実行できます。たとえば、サービス アカウントの変更時に正しい権限を適用することなどが可能です。 また、Windows の通常の [サービス] ダイアログ ボックスから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種サービスを構成すると、そのサービスが正しく機能しないことがあります。  
@@ -73,7 +73,7 @@ ms.locfileid: "68024087"
 -   **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** (バージョン)、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
   
- **[!INCLUDE[win8](../../includes/win8-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーにアクセスするには**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[win8](../../includes/win8-md.md)] 構成マネージャーにアクセスするには**  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではありません。そのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している場合、 [!INCLUDE[win8](../../includes/win8-md.md)]構成マネージャーはアプリケーションとして表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、**検索** チャームで、 **[アプリ]** の下に「**SQLServerManager12.msc**」 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の場合) または「**SQLServerManager11.msc**」 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の場合) と入力し、**Enter** キーを押します。  
   

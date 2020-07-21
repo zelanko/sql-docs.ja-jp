@@ -1,6 +1,7 @@
 ---
-title: サービス アカウント (データベース ミラーリング セキュリティ構成ウィザード) | Microsoft Docs
-ms.custom: ''
+title: 'セキュリティの構成ウィザード: サービス アカウント'
+description: SQL Server Management Studio の [データベース ミラーリング セキュリティ構成ウィザード] の [サービス アカウント] ページについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c0fb67d173ed0f4ade469c5233a7fdff59dd1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 04f55c8081f6c2a6aa7cfcc1b1d9c1ac8d9d31fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735153"
 ---
-# <a name="service-accounts-configure-database-mirroring-security-wizard"></a>[サービス アカウント] (データベース ミラーリング セキュリティ構成ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="configure-database-mirroring-security-wizard-service-accounts"></a>データベース ミラーリング セキュリティ構成ウィザード: サービス アカウント
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Windows 認証でサーバー インスタンスが別のアカウントを使用している場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のサービス アカウントを指定します。 これらのサービス アカウントは、すべて (同じドメインまたは信頼関係のあるドメインの) ドメイン アカウントである必要があります。  
   
  すべてのサーバー インスタンスが同じアカウントを使用している場合、または証明書ベースの認証を使用している場合、フィールドは空のままにします。 **[完了]** をクリックするだけで、現在のウィザードのアカウントに基づいてアカウントが自動的に構成されます。  
@@ -34,7 +35,7 @@ ms.locfileid: "68025249"
   
 -   [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **プリンシパル**  
  プリンシパル サーバー インスタンスのサービス アカウントを指定します。 ドメイン名を大文字で入力します。  
   

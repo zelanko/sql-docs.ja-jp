@@ -1,5 +1,5 @@
 ---
-title: ExtendedAnsiSQL 接続文字列の属性を使用して |Microsoft Docs
+title: ExtendedAnsiSQL 接続文字列属性を使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - extendedANSISQL [ODBC]
 - extendedANSISQL [ODBC], about ExtendedAnsiSQL
 ms.assetid: 92675c30-9100-43ae-aa35-041f3006a54f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bdd80ab8f23e0c940130ad058155f032572bea08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 718df701282e530fa72574e024a9daf2675cf044
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088013"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292712"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>ExtendedAnsiSQL 接続文字列属性の使用 (Access ドライバー)
-Jet 4.0 では、ODBC デスクトップ データベース ドライバー バージョン 4.0 で既定で無効になっているいくつかの新しい機能があります。 これらの新機能を利用するには、アプリケーションは、新しい接続属性を設定、接続文字列 に新しい属性を追加または DSN で属性を設定する必要があります。 属性と ExtendedAnsiSQL と呼びます。 以降、Microsoft ODBC デスクトップ データベース ドライバー 4.0 のみに関連します。  
+Jet 4.0 には、ODBC Desktop Database driver version 4.0 で既定で有効になっていない新機能がいくつかあります。 これらの新機能を利用するには、アプリケーションで新しい接続属性を設定するか、接続文字列に新しい属性を追加するか、または DSN で属性を設定する必要があります。 属性は ExtendedAnsiSQL と呼ばれ、Microsoft ODBC Desktop Database driver 4.0 以降にのみ関連します。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -32,6 +32,6 @@ Jet 4.0 では、ODBC デスクトップ データベース ドライバー バ�
   
 -   [ExtendedAnsiSQL を使用したビューとプロシージャの作成と削除](../../odbc/microsoft/creating-and-dropping-views-and-procedures-using-extendedansisql.md)  
   
--   [ExtendedAnsiSQL を使用して有効になっているデータ切り捨ての検出](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
+-   [ExtendedAnsiSQL を使用したデータ Trunctation 検出の有効化](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
   
--   [ExtendedAnsiSQL を設定するときに、jet 4.0 がで sql-92 の予約語の一覧を使用します。](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)
+-   [Jet 4.0 で ExtendedAnsiSQL が設定されている場合、SQL-92 の予約語の一覧が使用される](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)

@@ -1,5 +1,5 @@
 ---
-title: バージョン名を変更する (マスター データ サービス) | Microsoft Docs
+title: バージョン名を変更する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,27 +12,27 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 20c12d6eceac9c68ad30486f7bb5b7fcf861eb07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d58e5aaa11a69b6b4c733a238bf6d0e0b15ddef
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813616"
 ---
 # <a name="change-a-version-name-master-data-services"></a>バージョン名を変更する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で組織に合わせてバージョン名を変更してカスタマイズします。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
--   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-the-version-name"></a>バージョン名を変更するには  
   
@@ -45,9 +45,9 @@ ms.locfileid: "68047303"
 4.  Enter キーを押します。  
   
 ## <a name="see-also"></a>関連項目  
- [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [バージョンをロックする (マスター データ サービス)](../master-data-services/lock-a-version-master-data-services.md)   
- [バージョンをコミットする (マスター データ サービス)](../master-data-services/commit-a-version-master-data-services.md)   
+ [ビジネスルールに対してバージョンを検証する &#40;マスターデータサービス&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [マスターデータサービス &#40;のバージョンをロックする&#41;](../master-data-services/lock-a-version-master-data-services.md)   
+ [マスターデータサービス &#40;のバージョンをコミット&#41;](../master-data-services/commit-a-version-master-data-services.md)   
  [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
   
   

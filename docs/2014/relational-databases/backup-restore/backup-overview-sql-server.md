@@ -21,28 +21,27 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60fbd0341c4e29c6f98cc4d5fe5a2cfabc9b703f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922123"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959066"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ コンポーネントについて説明します。 データを保護するためには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースをバックアップすることが不可欠です。 ここでは、バックアップの種類およびバックアップの制限事項について説明します。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ デバイスとバックアップ メディアについても取り上げます。  
   
  **このトピックの内容**  
   
--   [コンポーネントと概念](#TermsAndDefinitions)  
+-   [コンポーネントおよび概念](#TermsAndDefinitions)  
   
 -   [バックアップの圧縮](#BackupCompression)  
   
--   [SQL Server でのバックアップ操作に関する制限事項](#Restrictions)  
+-   [SQL Server でのバックアップ操作の制限事項](#Restrictions)  
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a> コンポーネントおよび概念  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a>コンポーネントと概念  
  バックアップ (back up) (動詞)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースまたはそのトランザクション ログからバックアップ デバイス (ディスクなど) にデータまたはログ レコードをコピーすることによって、データ バックアップまたはログ バックアップを作成します。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62922123"
   
  **バックアップの種類**  
   
- [コピーのみのバックアップ](copy-only-backups-sql-server.md)  
+ [コピーのみのバックアップ (copy-only backup)](copy-only-backups-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の通常のバックアップ シーケンスから独立した特殊な用途のバックアップ。  
   
  データ バックアップ (data backup)  
@@ -77,16 +76,16 @@ ms.locfileid: "62922123"
  [ログ バックアップ (log backup)](transaction-log-backups-sql-server.md)  
  前回のログ バックアップでバックアップされなかったすべてのログ レコードを含むトランザクション ログのバックアップ (完全復旧モデル)。  
   
- [ファイルのバックアップ](full-file-backups-sql-server.md)  
+ [ファイル バックアップ (file backup)](full-file-backups-sql-server.md)  
  1 つ以上のデータベース ファイルまたはファイル グループから成るバックアップ。  
   
- [部分バックアップ](partial-backups-sql-server.md)  
+ [部分バックアップ (partial backup)](partial-backups-sql-server.md)  
  データベースの一部のファイル グループのデータのみを格納します。プライマリ ファイル グループ、すべての読み取り/書き込みファイル グループのほか、必要に応じて指定した読み取り専用ファイルが含まれます。  
   
- **バックアップ メディア用語と定義**  
+ **バックアップメディアの用語と定義**  
   
- [バックアップ デバイス](backup-devices-sql-server.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Windows Azure BLOB ストレージ サービスに書き込むことができます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳しくは、「 [Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
+ [バックアップ デバイス (backup device)](backup-devices-sql-server.md)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップの書き込みと復元に使用されるディスクまたはテープ デバイス。 SQL Server のバックアップは、Azure Blob Storage サービスに書き込むこともできます。バックアップ先とバックアップ ファイルの名前を指定するには **URL** 形式を使用します。 詳細については、「 [Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
   
  [バックアップ メディア (backup media)](media-sets-media-families-and-backup-sets-sql-server.md)  
  バックアップの書き込み先となる 1 つまたは複数のテープまたはディスク ファイル。  
@@ -100,13 +99,13 @@ ms.locfileid: "62922123"
  [メディア セット (media set)](media-sets-media-families-and-backup-sets-sql-server.md)  
  テープやディスク ファイルなどのバックアップ メディアに順番を付けてまとめたもの。バックアップ メディアには、1 回以上のバックアップ操作によって、固定型の複数のバックアップ デバイスを使用して書き込まれます。  
   
- [ミラー化メディア セット](mirrored-backup-media-sets-sql-server.md)  
+ [ミラー化メディア セット (mirrored media set)](mirrored-backup-media-sets-sql-server.md)  
  メディア セットの複数のコピー (ミラー)。  
   
-##  <a name="BackupCompression"></a> バックアップの圧縮  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a>バックアップの圧縮  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降のバージョンでは、バックアップの圧縮がサポートされ、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、圧縮されたバックアップを復元することができます。 詳細については、「[バックアップの圧縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)」を参照してください。  
   
-##  <a name="Restrictions"></a> SQL Server でのバックアップ操作に関する制限事項  
+##  <a name="restrictions-on-backup-operations-in-sql-server"></a><a name="Restrictions"></a>SQL Server でのバックアップ操作に関する制限事項  
  オンラインでデータベースを使用中であってもバックアップを行うことができます。 ただし、次の制限事項があります。  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>オフライン データはバックアップできない  
@@ -133,10 +132,10 @@ ms.locfileid: "62922123"
   
 -   バックアップ操作実行中にデータベース ファイルを作成または削除しようとすると、作成操作または削除操作は失敗します。  
   
- バックアップ操作がファイル管理操作または圧縮操作の実行と重複すると、競合が発生します。 競合する操作のどちらが先に開始されたかにかかわらず、1 つ目の操作によって設定されたロックのタイムアウトを 2 つ目の操作が待機します (タイムアウト期間はセッション タイムアウトの設定によって制御されます)。ロックがタイムアウト期間内に解放されると、2 番目の操作が開始されます。 ロックがタイムアウトになると、2 番目の操作は実行されません。  
+ バックアップ操作がファイル管理操作または圧縮操作の実行と重複すると、競合が発生します。 競合する操作のどちらが先に開始されたかにかかわらず、1 つ目の操作によって設定されたロックのタイムアウトを 2 つ目の操作が待機します(タイムアウト期間はセッション タイムアウトの設定によって制御されます)。ロックがタイムアウト期間内に解放されると、2 番目の操作が開始されます。 ロックがタイムアウトになると、2 番目の操作は実行されません。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
- **バックアップ デバイスとバックアップ メディアを使用するには**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
+ **バックアップ デバイスとバックアップ メディアを操作するには**  
   
 -   [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62922123"
   
 -   [デバイスからのバックアップ復元 &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [チュートリアル:Azure Blob Storage サービスへの SQL Server のバックアップと復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **バックアップを作成するには**  
   
@@ -179,7 +178,7 @@ ms.locfileid: "62922123"
   
 -   [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [チュートリアル:Azure Blob Storage サービスへの SQL Server のバックアップと復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](back-up-and-restore-of-sql-server-databases.md)   

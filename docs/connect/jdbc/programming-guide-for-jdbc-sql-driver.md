@@ -1,21 +1,21 @@
 ---
-title: JDBC SQL Driver のプログラミングガイド |Microsoft Docs
+title: JDBC SQL ドライバーのプログラミング ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db6b49afc2d7a152a2cc24d3b44f0754d043d177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bb39448beac608280fc7bbaadc2def6679d30a64
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956197"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923738"
 ---
 # <a name="programming-guide-for-jdbc-sql-driver"></a>JDBC SQL ドライバーのプログラミング ガイド
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "67956197"
 * [JDBC ドライバーを使用したトランザクションの実行](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)
 * [JDBC ドライバーによるメタデータの処理](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)
 * [JDBC ドライバーでの一括コピーの使用](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md)
-* [JDBC ドライバーで Always Encrypted を使用する](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
+* [JDBC ドライバーでの Always Encrypted の使用](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
 * [テーブル値パラメーターの使用](../../connect/jdbc/using-table-valued-parameters.md)
-* [JDBC ドライバーの国際対応機能](../../connect/jdbc/international-features-of-the-jdbc-driver.md)
-* [JDBC Driver API リファレンス](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+* [JDBC ドライバーの国際化機能](../../connect/jdbc/international-features-of-the-jdbc-driver.md)
+* [JDBC ドライバーの API リファレンス](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

@@ -1,5 +1,6 @@
 ---
 title: '例: EXPLICIT モードを使用した兄弟の構築 | Microsoft Docs'
+description: FOR XML 句で EXPLICIT モードを使用して、XML の兄弟を構築する SQL クエリの例を示します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e969fd0d003d44b3aaf97efad6e029d52e146dfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633109"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>例:EXPLICIT モードを使用した兄弟の構築
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   販売注文情報を提供する XML を生成するとします。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟です。 各注文には、<`OrderHeader`> 要素が 1 つ、<`SalesPerson`> 要素が 1 つ、<`OrderDetail`> 要素が 1 つ以上あります。  
   
 ```  

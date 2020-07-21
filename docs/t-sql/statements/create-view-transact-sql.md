@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,15 +37,15 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de62120fd28e67c4323a88f73bc5bac939aedc64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938880"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002493"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   クエリによって内容 (列と行) が定義される仮想テーブルを作成します。 このステートメントを使用して、データベースの 1 つまたは複数のテーブル内のデータのビューを作成します。 たとえば、ビューは次の目的で使用できます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67938880"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
@@ -76,7 +76,7 @@ AS select_statement
 }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
@@ -142,7 +142,7 @@ OR ALTER
 >  ビューの基になるテーブルに対して直接更新が実行された場合は、CHECK OPTION を指定してもビューに対する確認は行われません。  
   
  ENCRYPTION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  CREATE VIEW ステートメントのテキストが含まれている [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) のエントリを暗号化します。 WITH ENCRYPTION を使用すると、そのビューを SQL Server レプリケーションの一部として発行できなくなります。  
   
@@ -158,14 +158,14 @@ OR ALTER
   
  WITH VIEW_METADATA を使用してビューを作成するとき、**timestamp** 列を除くすべての列は、ビューに INSTEAD OF INSERT または INSTEAD OF UPDATE トリガーが含まれている場合に更新可能になります。 更新可能なビューの詳細については、「解説」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ビューは現在のデータベースでのみ作成できます。 CREATE VIEW は、クエリ バッチの最初のステートメントであることが必要です。 1 つのビューで保持できる列の数は最大 1,024 です。  
   
  ビューからクエリを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ステートメントで参照されているデータベース オブジェクトがすべて存在すること、データベース オブジェクトがステートメントのコンテキストで有効であること、およびデータ変更ステートメントがデータの整合性規則に違反していないことが確認されます。 確認に失敗すると、エラー メッセージが返されます。 確認に成功すると、そのアクションが、基になるテーブルに対するアクションに変換されます。  
   
  削除されたテーブル (またはビュー) に従属しているビューを使用すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラー メッセージが返されます。 テーブルの構造が以前のベース テーブルから変わっていなければ、削除されたテーブルやビューの代わりになる、新しいテーブルまたはビューを作成すると、ビューは再び使用可能になります。 新しいテーブルまたはビューの構造が変化した場合は、ビューを削除し、再作成する必要があります。  
   
- ビューが SCHEMABINDING 句を使用して作成したものでない場合、ビューの基になっているオブジェクトに対して、ビューの定義に影響するような変更が行われた際には、[sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) を実行する必要があります。 それ以外の場合は、ビューのクエリ時に、予期しない結果が生成される可能性があります。  
+ ビューが SCHEMABINDING 句を使用して作成したものでない場合、ビューの基になっているオブジェクトに対して、ビューの定義に影響するような変更が行われた際には、[sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) を実行します。 それ以外の場合は、ビューのクエリ時に、予期しない結果が生成される可能性があります。  
   
  ビューが作成されると、ビューについての情報がカタログ ビュー [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)、[sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) に格納されます。 CREATE VIEW ステートメントのテキストは、[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) カタログ ビューに格納されます。  
   
@@ -210,7 +210,7 @@ OR ALTER
   
  `Server1` のパーティション ビューは次のように定義されます。  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -229,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  一般に、次の形式の場合、ビューをパーティション ビューといいます。  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -245,15 +245,15 @@ FROM Tn;
   
 1.  選択リスト (`list`  
   
-    -   メンバー テーブルのすべての列は、ビュー定義の列リストで選択する必要があります。  
+    -   ビュー定義の列リストで、メンバー テーブルのすべての列を選択します。  
   
-    -   それぞれの `select list` の同じ位置にある列は、照合順序も含めて同じ型であることが必要です。 一般的に UNION の場合のように、列が暗黙的に変換される型にするだけでは十分ではありません。  
+    -   それぞれの `select list` の同じ位置にある列は、照合順序も含めて同じ型にします。 一般的に UNION の場合のように、列が暗黙的に変換される型にするだけでは十分ではありません。  
   
-         また、すべての選択リストの同じ位置に、少なくとも 1 つの列 (たとえば `<col>`) が指定されている必要があります。 この `<col>` は、メンバー テーブル `T1, ..., Tn` の `<col>` にそれぞれ CHECK 制約 `C1, ..., Cn` を指定することで定義します。  
+         また、すべての選択リストの同じ位置に、少なくとも 1 つの列 (たとえば `<col>`) が指定されている必要があります。 `<col>` は、メンバー テーブル `T1, ..., Tn` の `<col>` にそれぞれ CHECK 制約 `C1, ..., Cn` が定義されるように定義します。  
   
          テーブル `C1` の制約 `T1` は、次の形式で定義する必要があります。  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -261,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
-    -   これらの制約は、`<col>` に指定したすべての値が `C1, ..., Cn` の制約の 1 つにのみ該当するような形式にする必要があります。つまり、連続せずかつ重複しない間隔を持つ制約セットを形成するように定義します。 連続しない制約が定義されている列 `<col>` は、パーティション分割列と呼ばれます。 パーティション分割列は、基になるテーブルではそれぞれ異なる名前が付いている場合があります。 前に示したパーティション分割列の条件を満たすには、パーティション分割列に対して制約が有効かつ信頼されている必要があります。 制約が無効の場合は、ALTER TABLE の CHECK CONSTRAINT *constraint_name* オプションを使用して制約チェックを再度有効にし、WITH CHECK オプションを使用して制約を検証します。  
+    -   制約は、連続せずかつ重複しない間隔を持つ制約セットを形成されるよう、`<col>` に指定したすべての値が `C1, ..., Cn` の制約の 1 つにのみ該当するような形式にする必要があります。 連続しない制約が定義されている列 `<col>` は、パーティション分割列と呼ばれます。 パーティション分割列は、基になるテーブルではそれぞれ異なる名前が付いている場合があります。 前に示したパーティション分割列の条件を満たすには、パーティション分割列に対して制約が有効かつ信頼されている必要があります。 制約が無効の場合は、ALTER TABLE の CHECK CONSTRAINT *constraint_name* オプションを使用して制約チェックを再度有効にし、WITH CHECK オプションを使用して制約を検証します。  
   
          次は、有効な制約のセットの例です。  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -280,7 +280,7 @@ FROM Tn;
   
     -   計算列、ID 列、既定の列、または **timestamp** 列に対して指定することはできません。  
   
-    -   メンバー テーブルの同じ列に複数の制約が定義されている場合、データベース エンジンではすべての制約が無視され、ビューがパーティション ビューであるかどうかを判断する際にそれらの制約は考慮されません。 パーティション ビューの条件を満たすには、パーティション分割列にパーティション分割制約を 1 つだけにする必要があります。  
+    -   メンバー テーブルの同じ列に複数の制約が定義されている場合、データベース エンジンではすべての制約が無視され、ビューがパーティション ビューであるかどうかを判断する際にそれらの制約は考慮されません。 パーティション ビューの条件を満たすには、パーティション分割列にパーティション分割制約を 1 つだけにします。  
   
     -   パーティション分割列の更新可能性に制限はありません。  
   
@@ -294,16 +294,16 @@ FROM Tn;
   
     -   メンバー テーブルでは、テーブル内の計算列上にインデックスを作成することはできません。  
   
-    -   メンバー テーブルでは、すべての PRIMARY KEY 制約が同じ数の列に対して含める必要があります。  
+    -   メンバー テーブルでは、すべての PRIMARY KEY 制約が同じ数の列に対して与えられます。  
   
-    -   ビューのすべてのメンバー テーブルには、同じ ANSI PADDING 設定を含める必要があります。 これは、**sp_configure** の **user options** オプションまたは SET ステートメントを使用して設定できます。  
+    -   ビューのすべてのメンバー テーブルには、同じ ANSI PADDING 設定が与えられます。 これは、**sp_configure** の **user options** オプションまたは SET ステートメントを使用して設定できます。  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>パーティション ビューのデータを変更する条件  
  パーティション ビューのデータを変更するステートメントには、次の制限が適用されます。  
   
--   INSERT ステートメントでは、基になるメンバー テーブルで列に DEFAULT 制約があるか、NULL 値が許可されている場合でも、ビューのすべての列に値を提供する必要があります。 メンバー テーブルの列に DEFAULT 定義がある場合、ステートメントで明示的に DEFAULT キーワードを使用することはできません。  
+-   INSERT ステートメントでは、基になるメンバー テーブルで列に DEFAULT 制約があるか、NULL 値が許可されている場合でも、ビューのすべての列に値を提供します。 メンバー テーブルの列に DEFAULT 定義がある場合、ステートメントで明示的に DEFAULT キーワードを使用することはできません。  
   
--   パーティション分割列に挿入する値は、基になる制約の少なくとも 1 つを満たしている必要があります。満たしていない場合、INSERT アクションは制約違反で失敗します。  
+-   パーティション分割列に挿入する値は、基になる制約の少なくとも 1 つを満たします。満たしていない場合、INSERT アクションは制約違反で失敗します。  
   
 -   UPDATE ステートメントでは、対応するメンバー テーブルで列の DEFAULT 値が定義されている場合でも、SET 句の値として DEFAULT キーワードを指定することはできません。  
   
@@ -325,7 +325,7 @@ FROM Tn;
   
 -   更新によって影響を受けるすべてのノードを超えて原子性を保証するため、分散トランザクションが起動されます。  
   
--   INSERT、UPDATE、または DELETE ステートメントが動作するには、XACT_ABORT SET オプションを ON に設定する必要があります。  
+-   INSERT、UPDATE、または DELETE ステートメントが動作するには、XACT_ABORT SET オプションを ON に設定します。  
   
 -   パーティション ビューで参照されるリモート テーブルの **smallmoney** 型の列は、**money** としてマップされます。 このため、ローカル テーブルの対応する列 (選択リストの同じ順番にある列) も、**money** 型であることが必要です。  
   
@@ -340,7 +340,7 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>レプリケーションに関する注意点  
  レプリケーションに関係するメンバー テーブルのパーティション ビューを作成するには、次の点に注意してください。  
   
--   基になるテーブルが、更新サブスクライバーとのマージ レプリケーションまたはトランザクション レプリケーションに関係する場合、選択リストには **uniqueidentifier** 列も含まれる必要があります。  
+-   基になるテーブルが、更新サブスクライバーとのマージ レプリケーションまたはトランザクション レプリケーションに関係する場合、選択リストには **uniqueidentifier** 列も含まれるようにします。 
   
      パーティション ビューに対する INSERT 操作では、**uniqueidentifier** 列の NEWID() 値を指定する必要があります。 **uniqueidentifier** 列に対する UPDATE 操作では、DEFAULT キーワードを使用できないので、NEWID() を値として指定する必要があります。  
   
@@ -349,14 +349,14 @@ FROM Tn;
 ## <a name="permissions"></a>アクセス許可  
  データベースの CREATE VIEW 権限と、ビューが作成されているスキーマの ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 次の例では、AdventureWorks 2012 または AdventureWorksDW データベースを使用します。  
 
 ### <a name="a-using-a-simple-create-view"></a>A. シンプルな CREATE VIEW を使用する  
  次の例では、単純な `SELECT` ステートメントを使用してビューを作成します。 簡易ビューは、列の組み合わせを頻繁にクエリする場合に便利です。 このビューのデータは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `HumanResources.Employee` テーブルと `Person.Person` テーブルから取得されます。 このデータには、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の従業員の名前と採用日の情報が含まれています。 従業員の勤続祝いの担当者用にビューを作成することができますが、この担当者はテーブルのすべてのデータにアクセスできるわけではありません。  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -369,9 +369,9 @@ GO
 ### <a name="b-using-with-encryption"></a>B. 暗号化を使用する  
  次の例では、`WITH ENCRYPTION` オプションを使用して、計算列、名前変更された列、複数列を表示します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -387,7 +387,7 @@ GO
 ### <a name="c-using-with-check-option"></a>C. WITH CHECK OPTION を使用する  
  次の例では、5 つのテーブルを参照する `SeattleOnly` というビューを表示し、シアトル在住の従業員だけにデータ変更を許可します。  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -408,7 +408,7 @@ GO
 ### <a name="d-using-built-in-functions-within-a-view"></a>D. ビュー内の組み込み関数を使用する  
  次の例では、組み込み関数を含むビュー定義を示しています。 関数を使用するときには、派生列に列名を指定する必要があります。  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -422,7 +422,7 @@ GO
 ### <a name="e-using-partitioned-data"></a>E. パーティション分割されたデータを使用する  
  次の例では、`SUPPLY1`、`SUPPLY2`、`SUPPLY3`、`SUPPLY4` というテーブルを使用します。 これらのテーブルは、異なる国や地域にある 4 か所のオフィスの仕入れ先テーブルに対応しています。  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -464,12 +464,12 @@ INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd'
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-creating-a-simple-view"></a>F. 単純なビューを作成する  
  次の例では、ソース テーブルから一部の列のみを選択することで、ビューを作成します。  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -478,7 +478,7 @@ FROM DimEmployee;
 ### <a name="g-create-a-view-by-joining-two-tables"></a>G. 2 つのテーブルを結合することでビューを作成する  
  次の例では、`OUTER JOIN` と共に `SELECT` ステートメントを使用することで、ビューを作成します。 結合クエリの結果によって、ビューが設定されます。  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

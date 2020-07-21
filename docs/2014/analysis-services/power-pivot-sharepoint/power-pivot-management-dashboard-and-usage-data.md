@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 管理ダッシュ ボードと使用状況データ |Microsoft Docs
+title: PowerPivot 管理ダッシュボードと使用状況データ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,33 +9,32 @@ ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c6b4df30ec422df0dd79b2fc9d58766e6dbcf7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071118"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535044"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理ダッシュボードと使用状況データ
   PowerPivot 管理ダッシュボードとは、SQL Server PowerPivot for SharePoint の配置の管理に役立つ SharePoint サーバーの全体管理の定義済みのレポートおよび Web パーツのコレクションです。 管理ダッシュボードでは、サーバーの状態、ブックの利用状況、およびデータ更新に関連する情報が示されます。 ダッシュボードは、SharePoint 使用状況データ コレクションのデータを使用します。  
   
  [前提条件](#prereq)  
   
- [ダッシュ ボードのセクションの概要](#items)  
+ [ダッシュボードのセクションの概要](#items)  
   
- [開いている PowerPivot 管理ダッシュ ボード](#open)  
+ [PowerPivot 管理ダッシュボードを開く](#open)  
   
- [ダッシュ ボードのソース データ](#sourcedata)  
+ [ダッシュボードのソース データ](#sourcedata)  
   
- [PowerPivot ダッシュ ボードを編集します。](#edit)  
+ [PowerPivot 管理ダッシュボードの編集](#edit)  
   
- [PowerPivot 管理ダッシュ ボード用カスタム レポートを作成します。](#reports)  
+ [PowerPivot 管理ダッシュボード用カスタム レポートの作成](#reports)  
   
-##  <a name="prereq"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="prereq"></a> 前提条件  
  管理する PowerPivot サービス アプリケーションの PowerPivot 管理ダッシュボードを開くには、サービス管理者である必要があります。  
   
-##  <a name="items"></a> ダッシュボードのセクションの概要  
+##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a>ダッシュボードのセクションの概要  
  PowerPivot 管理ダッシュボードには、特定の情報カテゴリにドリル ダウンする Web パーツおよび埋め込みレポートが用意されています。 ダッシュボードの各部分の説明を次に示します。  
   
 |ダッシュボード|説明|  
@@ -46,9 +45,9 @@ ms.locfileid: "66071118"
 |ブックの利用状況 - リスト|データ アクセスの頻度をレポートします。 PowerPivot データ ソースへの接続が発生する頻度を日単位または週単位で確認できます。|  
 |データ更新 - 最近の利用状況|データ更新ジョブの状態をレポートします (実行に失敗したジョブを含む)。 このレポートは、データ更新操作をアプリケーション レベルで総合的に理解するのに役立ちます。 管理者は、PowerPivot サービス アプリケーション全体に対して定義されているデータ更新ジョブの数が一目でわかります。|  
 |データ更新 - 最近のエラー|データ更新が正常に完了しなかった PowerPivot ブックを一覧表示します。|  
-|[レポート]|Excel で開くことができるレポートへのリンクを示します。|  
+|Reports|Excel で開くことができるレポートへのリンクを示します。|  
   
-##  <a name="open"></a> 開いている PowerPivot 管理ダッシュ ボード  
+##  <a name="open-powerpivot-management-dashboard"></a><a name="open"></a>PowerPivot 管理ダッシュボードを開く  
  ダッシュボードには、一度に 1 つの PowerPivot サービス アプリケーションの情報が表示されます。 管理ダッシュボードは、異なる 2 つの場所から開くことができます。  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>[アプリケーションの全般設定] からダッシュボードを開く  
@@ -66,33 +65,33 @@ ms.locfileid: "66071118"
 ### <a name="change-the-current-service-application"></a>現在のサービス アプリケーションを変更する  
  管理ダッシュボードで現在の PowerPivot サービス アプリケーションを変更するには、次の手順を実行します。  
   
-1.  PowerPivot 管理ダッシュ ボードの上部にあるには、現在のサービス アプリケーションの名前をたとえばメモ**Default PowerPivot Service Application**します。  
+1.  PowerPivot 管理ダッシュボードの上部に、現在のサービスアプリケーションの名前 (**既定の Powerpivot サービスアプリケーション**など) があることを確認します。  
   
 2.  **[アクション]** ダッシュボードで、 **[サービス アプリケーションの一覧を表示する]** をクリックします。  
   
 3.  管理ダッシュボードのレポートを表示する PowerPivot サービス アプリケーションの名前をクリックします。  
   
-##  <a name="sourcedata"></a> ダッシュボードのソース データ  
+##  <a name="source-data-in-dashboards"></a><a name="sourcedata"></a>ダッシュボードのソースデータ  
  ダッシュボード、レポート、および Web パーツでは、システムおよび PowerPivot アプリケーション データベースからデータを取り出す内部データ モデルのデータが表示されます。 内部データ モデルは、サーバーの全体管理サイトでホストされている PowerPivot ブックに埋め込まれています。 データ モデルの構造は固定されています。 PowertPivot ブックをデータ ソースとして使用して新しいレポートを作成できますが、構造は変更しないでください。変更すると、その構造を使用する定義済みのレポートが壊れます。  
   
  データの収集方法の詳細については、以下を参照してください。  
   
 -   [PowerPivot 使用状況データ収集](power-pivot-usage-data-collection.md)  
   
--   [使用状況データ収集の構成&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+-   [&#40;PowerPivot for SharePoint の使用状況データ収集の構成](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- PowerPivot サーバー システムに関するデータをキャプチャするために、イベント メッセージング、データ更新の履歴、およびその他の使用状況履歴が各 PowerPivot サービス アプリケーションに対して有効になっていることを確認してください。 通常のサーバー操作中に収集されるサーバーおよび使用状況のデータは、最終的に、内部データ モデルに格納されるソース データになります。 **注:** イベントまたは使用状況履歴を無効にした場合、複合レポートは不完全またはエラーになります。  
+ PowerPivot サーバー システムに関するデータをキャプチャするために、イベント メッセージング、データ更新の履歴、およびその他の使用状況履歴が各 PowerPivot サービス アプリケーションに対して有効になっていることを確認してください。 通常のサーバー操作中に収集されるサーバーおよび使用状況のデータは、最終的に、内部データ モデルに格納されるソース データになります。 **注:** イベントまたは使用状況履歴を無効にすると、複合レポートは不完全またはエラーになります。  
   
-##  <a name="edit"></a> PowerPivot ダッシュ ボードを編集します。  
+##  <a name="edit-powerpivot-dashboard"></a><a name="edit"></a>PowerPivot ダッシュボードの編集  
  ダッシュボードの開発またはカスタマイズに関する専門知識がある場合は、ダッシュボードを編集して新しい Web パーツを含めることができます。 また、ダッシュボードに含まれる Web パーツのプロパティも編集できます。  
   
-##  <a name="reports"></a> PowerPivot 管理ダッシュ ボード用カスタム レポートを作成します。  
+##  <a name="create-custom-reports-for-powerpivot-management-dashboard"></a><a name="reports"></a>PowerPivot 管理ダッシュボードのカスタムレポートを作成する  
  レポートを作成するため、PowerPivot の使用状況データと履歴は、ダッシュボードと共に作成および構成される内部の PowerPivot ブックに保持されます。 必要な情報が既定のレポートに含まれていない場合は、ブックに基づいて Excel でカスタム レポートを作成できます。 後で PowerPivot ソリューション ファイルをアップグレードまたはアンインストールした場合、ブックと作成したカスタム レポートは両方とも保持されます。 ブックとレポートは、サーバーの全体管理サイト内の PowerPivot 管理ライブラリに格納されます。 このライブラリは既定では表示されませんが、[サイトの操作] にある [すべてのサイト コンテンツの表示] 操作を使用すると表示できます。  
   
  カスタム レポートでの作業を簡単に開始できるように、PowerPivot 管理ダッシュボードには、ソースのブックに接続するための Office データ接続 (.odc) ファイルが用意されています。 たとえば、.odc ファイルを Excel で使用して、追加のレポートを作成できます。  
   
 > [!NOTE]  
->  Excel で .odc ファイルを使用するときに、次のエラーを回避するためにファイルを編集します。「データ ソースの初期化に失敗しました」。 自動生成される .odc ファイルには、MSOLAP OLE DB プロバイダーでサポートされていないパラメーターが 1 つ含まれています。 次の手順では、これらのパラメーターを削除する回避策について説明します。  
+>  Excel で .odc ファイルを使用しようとしたときに "データ ソースの初期化に失敗しました" というエラーが表示されないように、ファイルを編集してください。 自動生成される .odc ファイルには、MSOLAP OLE DB プロバイダーでサポートされていないパラメーターが 1 つ含まれています。 次の手順では、これらのパラメーターを削除する回避策について説明します。  
   
  PowerPivot ブックに基づいて全体管理でレポートを作成するには、ファーム管理者またはサービス管理者である必要があります。  
   
@@ -118,15 +117,15 @@ ms.locfileid: "66071118"
   
     4.  .ODC ファイルが表示されている場合はそのファイルをクリックします。 .ODC ファイルが表示されない場合は、 **[参照]** をクリックし、ファイル パスで .odc ファイルを指定します。  
   
-    5.  **[開く]** をクリックします。  
+    5.  [**開く**] をクリック  
   
     6.  **[接続のテスト]** をクリックして、接続に成功したことを確認します。  
   
     7.  接続の名前を指定して、 **[次へ]** をクリックします。  
   
-    8.  MDX クエリの指定 をクリックして**デザイン**を使用するデータを収集する MDX クエリ デザイナーを開く**エラー メッセージが表示された場合**「Edit Mode のプロパティ名形式が正しくありません」ことを確認します。編集します。ODC ファイルです。  
+    8.  [MDX クエリの指定] で、[**デザイン**] をクリックして mdx クエリデザイナーを開き、[編集モードのプロパティ名が正しく書式設定されていません。] という**エラーメッセージが表示**された場合に、操作するデータをアセンブルします。.ODC ファイル。  
   
-    9. **[OK]** をクリックし、 **[完了]** をクリックします。  
+    9. [ **OK]** をクリックし、[**完了**] をクリックします。  
   
     10. ピボットテーブル レポートまたはピボットグラフ レポートを作成して、データを Excel で表示します。  
   
@@ -149,7 +148,7 @@ ms.locfileid: "66071118"
     9. [MDX クエリの指定] で、 **[デザイン]** をクリックして MDX クエリ デザイナーを開き、操作するデータを収集してから、ピボットテーブル レポートまたはピボットグラフ レポートを作成して、データを Excel で表示します。  
   
 ## <a name="see-also"></a>参照  
- [SharePoint 2010 で PowerPivot データ更新](../powerpivot-data-refresh-with-sharepoint-2010.md)   
- [使用状況データ収集の構成&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
+ [SharePoint 2010 での PowerPivot データ更新](../powerpivot-data-refresh-with-sharepoint-2010.md)   
+ [&#40;PowerPivot for SharePoint の使用状況データ収集の構成](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

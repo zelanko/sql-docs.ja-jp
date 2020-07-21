@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519204"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Reporting Services における SOAP の役割
@@ -41,7 +41,7 @@ ms.locfileid: "62519204"
 </soap:Envelope>  
 ```  
   
- SOAP 自体は、メッセージを `Envelope` 要素に入れるよう要求します。メッセージは一括して `Body` 要素内に入ります。 この例では、Body には <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドの呼び出しが入っています。このメソッドは、削除するアイテムのパスを表す文字列パラメーターを取ります。 すべての SOAP 操作をメソッドにカプセル化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クライアント プロキシ クラスを作成できます。 次の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] メソッドは上記の SOAP の例を表しています。  
+ SOAP 自体は、メッセージを `Envelope` 要素に入れるよう要求します。メッセージは一括して `Body` 要素内に入ります。 この例では、Body には <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドの呼び出しが入っています。このメソッドは、削除するアイテムのパスを表す文字列パラメーターを取ります。 すべての SOAP 操作[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]をメソッドにカプセル化するクライアントプロキシクラスを作成できます。 次[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)]のメソッドは、前に示した SOAP の例を表しています。  
   
 ```  
 public void DeleteItem(string item);  
@@ -62,7 +62,7 @@ public void DeleteItem(string item);
 ## <a name="see-also"></a>参照  
  [SOAP API へのアクセス](accessing-the-soap-api.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services Report Server](../reporting-services-report-server.md)   
+ [レポートサーバーの Reporting Services](../reporting-services-report-server.md)   
  [レポート サーバー web サービス](report-server-web-service.md)  
   
   

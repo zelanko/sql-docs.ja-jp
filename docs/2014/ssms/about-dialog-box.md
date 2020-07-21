@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef885898893de1c0c29ca3b963a30b46d71486f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045278"
 ---
 # <a name="about-dialog-box"></a>[バージョン情報] ダイアログ ボックス
-  **[バージョン情報]** ダイアログ ボックスには、製品情報が記載されており、このダイアログ ボックスから製品を実行しているコンピューターに関する情報にアクセスできます。 評価版の場合、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のエントリにはインストールの期限切れまでの日数が表示されます。 このダイアログ ボックスは、 **[ヘルプ]** メニューから利用できます。  
+  **[バージョン情報]** ダイアログ ボックスには、製品情報が記載されており、このダイアログ ボックスから製品を実行しているコンピューターに関する情報にアクセスできます。 評価版の場合、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のエントリにはインストールの期限切れまでの日数が表示されます。 このダイアログ ボックスは、 **[ヘルプ]** メニューから利用できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[コンポーネント名]**  
  インストールされているすべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の項目の名前が一覧表示されます。  
   

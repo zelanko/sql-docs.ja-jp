@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 27524b92157657779e49ff8facaf235e5a524065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b893108ba79952fe803fceea64387c06f05190ee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040612"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898015"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC TRACEOFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 指定されたトレース フラグを無効にします。
   
@@ -37,7 +37,7 @@ ms.locfileid: "68040612"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]  
 ```  
   
@@ -51,7 +51,7 @@ DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]
 WITH NO_INFOMSGS  
 重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 トレース フラグは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがどのように動作するかを制御する特定の特性をカスタマイズするために使用します。
   
 ## <a name="result-sets"></a>結果セット  
@@ -64,7 +64,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、トレース フラグ `3205` を無効にします。
   
 ```sql

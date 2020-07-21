@@ -26,15 +26,15 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac673a94b0d85eb4ac2623139231392ba7da4b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a2d74236b0c58776a43f4f2a56f7f240de72d2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117100"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002499"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   テーブル、インデックス付きビュー、または、外部テーブルの 1 つまたは複数の列に関するクエリ最適化の統計を作成します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、クエリのパフォーマンスを向上させるために CREATE STATISTICS で追加の統計を作成したりクエリのデザインを変更したりする必要がある場合もあります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68117100"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create statistics on an external table  
@@ -88,7 +88,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     [ PAGECOUNT = numeric_contant ] 
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
@@ -136,7 +136,7 @@ CREATE STATISTICS statistics_name
   
 -   CLR ユーザー定義型の列は、データ型でバイナリ順がサポートされている場合に指定できます。 ユーザー定義型列のメソッド呼び出しとして定義されている計算列は、メソッドが決定的とマークされている場合に指定できます。  
   
- WHERE \<filter_predicate> は、統計オブジェクトを作成するときに含める行のサブセットを選択するための式を指定します。 フィルター述語を使用して作成された統計は、フィルター選択された統計情報と呼ばれます。 フィルター述語には単純な比較ロジックを使用するので、計算列、UDT 列、空間データ型列、または **hierarchyID** データ型列を参照することはできません。 比較演算子では、NULL リテラルを使用する比較を実行できません。 代わりに、IS NULL 演算子と IS NOT NULL 演算子を使用します。  
+ WHERE \<filter_predicate> 統計オブジェクトを作成するときに含める行のサブセットを選択するための式を指定します。 フィルター述語を使用して作成された統計は、フィルター選択された統計情報と呼ばれます。 フィルター述語には単純な比較ロジックを使用するので、計算列、UDT 列、空間データ型列、または **hierarchyID** データ型列を参照することはできません。 比較演算子では、NULL リテラルを使用する比較を実行できません。 代わりに、IS NULL 演算子と IS NOT NULL 演算子を使用します。  
   
  次に、Production.BillOfMaterials テーブルのフィルター述語の例をいくつか示します。  
   
@@ -165,7 +165,10 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = { ON | OFF }  
  **ON** の場合、統計では、サンプリング率が明示的に指定されていない後続の更新の作成サンプリング率が保持されます。 **OFF** の場合、統計サンプリング率は、サンプリング率が明示的に指定されていない後続の更新で既定のサンプリングにリセットされます。 既定値は **OFF** です。 
  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 以降) から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。    
+ > [!NOTE]
+ > テーブルが切り捨てられた場合、切り捨てられた HoBT に基づいて作成されたすべての統計は、既定のサンプリング率を使用するように戻されます。
+
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 以降) 以降 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。    
   
  STATS_STREAM **=** _stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -193,7 +196,7 @@ CREATE STATISTICS statistics_name
 -   内部テーブルに対して作成された統計。  
 -   空間インデックスまたは XML インデックスを使用して作成された統計。  
   
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。  
   
 MAXDOP = *max_degree_of_parallelism*  
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
@@ -240,8 +243,9 @@ MAXDOP = *max_degree_of_parallelism*
 * 統計オブジェクトごとに最大 64 列の一覧を取得できます。
 * MAXDOP オプションは、STATS_STREAM、ROWCOUNT、PAGECOUNT オプションと互換性がありません。
 * MAXDOP オプションは、Resource Governor ワークロード グループの MAX_DOP の設定によって制限されます (使用されている場合)。
+* Azure SQL Database では、外部テーブルの CREATE と DROP STATISTICS はサポートされていません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="examples-use-the-adventureworks-database"></a>使用例では、AdventureWorks データベースを使用します。  
 
@@ -275,7 +279,7 @@ GO
 ```  
   
 ### <a name="d-create-statistics-on-an-external-table"></a>D. 外部テーブルの統計を作成する  
- 列の一覧を指定する以外に、外部テーブルの統計を作成するときに必要な決定事項は、統計を作成する際に行をサンプリングするか、すべての行をスキャンするかという点のみです。  
+ 列の一覧を指定する以外に、外部テーブルの統計を作成するときに必要な決定事項は、統計を作成する際に行をサンプリングするか、すべての行をスキャンするかという点のみです。 Azure SQL Database では、外部テーブルの CREATE と DROP STATISTICS はサポートされていません。
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フル スキャンのオプション、統計を作成するを一時テーブルに外部テーブルからデータをインポートがかなり長くかかります。 大きなテーブルの場合、通常は既定のサンプリング方法で十分です。  
   
@@ -287,19 +291,19 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
+### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
  次の例では、`Person` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行について `NamePurchase` 統計を作成し、サンプリング率を明示的に指定しない後続のすべての更新について 100 パーセントのサンプリング率を設定します。  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
-```  
+```  
   
-### Examples using AdventureWorksDW database. 
+### <a name="examples-using-adventureworksdw-database"></a>AdventureWorksDW データベースの使用例。 
   
-### F. Create statistics on two columns  
- The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
+### <a name="f-create-statistics-on-two-columns"></a>F. 2 つの列の統計を作成する  
+ 次の例では、`DimCustomer` テーブルの `CustomerKey` 列と `EmailAddress` 列に基づいて、`CustomerStats1` 統計を作成します。 統計は、`Customer` テーブルの行の統計的に優位なサンプリングに基づいて作成されます。  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  

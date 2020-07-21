@@ -12,20 +12,20 @@ ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b039f0cb4ff6aa944adf981ad5fa26e1cc4cbeea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f07f207cf61c65a3343faf855d1f270ec820433
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727361"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  **Server Memory Change** イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用率が 1 MB または最大サーバー メモリ容量の 5 % のどちらか大きい方を超えて増加または減少したときに発生します。  
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+  **Server Memory Change** イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用率が 1 MB または最大サーバー メモリ容量の 5 % のどちらか大きい方を超えて増加または減少したときに発生します。  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|はい|  
+|データ列名|データ型|説明|列 ID|はい|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |**EventClass**|**int**|イベントの種類 = 81。|27|いいえ|  
 |**EventSequence**|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  

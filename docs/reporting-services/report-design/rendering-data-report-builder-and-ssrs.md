@@ -1,5 +1,5 @@
 ---
-title: データの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: データのレンダリング (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31eee586a5e825f3c2252e6e790d27263f04304d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: e7645c285ed63ae241fe9df0f5dd468685e5f143
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576426"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77077004"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>データの表示 (レポート ビルダーおよび SSRS)
   HTML、MHTML、Word、Excel、PDF、Image などのレイアウト レンダラーを使用した場合、データとその構造は変更されません。 CSV (コンマ区切り) や XML などのデータ レンダラー形式を使用してエクスポートした場合、視覚的なレイアウト要素は表示されません。 CSV および XML では、レポートを表示する際に、特定の規則がレポート本文とそのコンテンツに適用されます。 これらの規則により、データがこの形式でどのように表示されるかが決定します。  

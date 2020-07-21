@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parent packages [Integration Services]
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04b99a2607e73bbcd612b43be1bdb30324a37e9f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058156"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436869"
 ---
 # <a name="implementation-of-the-parent-package"></a>親パッケージの実装
   さまざまなサーバー間で SSIS パッケージの負荷を分散する場合、子パッケージの作成と配置を行い、その子パッケージを実行するためのリモート SQL Server エージェント ジョブを作成したら、次のステップは親パッケージを作成することです。 親パッケージには、SQL Server エージェント ジョブの実行タスクが多数含まれます。各タスクは、子パッケージの 1 つを実行する個別の SQL Server エージェント ジョブを呼び出します。 親パッケージ内にある SQL Server エージェント ジョブの実行タスクは、各種の SQL Server エージェント ジョブを次々に実行します。 親パッケージ内の各タスクには、リモート サーバーへの接続方法やそのサーバーで実行するジョブなどの情報が含まれています。 詳しくは、「 [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md)」をご覧ください。  
@@ -42,6 +41,6 @@ ms.locfileid: "66058156"
 >  **sp_start_job N'package_name'** の Transact-SQL ステートメントを含む SQL 実行タスクを使用できます。 詳細については、「[sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)」をご覧ください。  
   
 ## <a name="debugging-environment"></a>デバッグ環境  
- 親パッケージをテストする場合は、[デバッグ] メニューの [デバッグの開始] をクリックして (または F5 キーを押して) そのパッケージを実行し、デザイナーのデバッグ環境を使用します。 または、コマンド プロンプト ユーティリティ **dtexec**を使用できます。 詳しくは、「 [dtexec Utility](packages/dtexec-utility.md)」をご覧ください。  
+ 親パッケージをテストする場合は、[デバッグ] メニューの [デバッグの開始] をクリックして (または F5 キーを押して) そのパッケージを実行し、デザイナーのデバッグ環境を使用します。 または、コマンド プロンプト ユーティリティ **dtexec**を使用できます。 詳細については、「[dtexec ユーティリティ](packages/dtexec-utility.md)」を参照してください。  
   
   

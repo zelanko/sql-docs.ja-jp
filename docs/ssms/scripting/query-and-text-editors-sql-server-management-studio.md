@@ -1,10 +1,9 @@
 ---
-title: クエリおよびテキスト エディター (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: クエリ エディターとテキスト エディター (SSMS)
+description: SQL Server Management Studio (SSMS) エディターを使用してファイルを対話的にクエリ、編集、およびテストする方法について説明します。
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -24,23 +23,28 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e83ad20b181e96320bc051db7b719ae4827dde9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: afd2bc9b3477ad7b3d4448c83cdf20453794a79c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266030"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261691"
 ---
-# <a name="query-and-text-editors-sql-server-management-studio"></a>クエリおよびテキスト エディター (SQL Server Management Studio)
+# <a name="query-and-text-editors-sql-server-management-studio"></a>クエリ エディターとテキスト エディター (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のいずれかのエディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、または XML/A スクリプトを対話的に編集し、テストできます。XML またはプレーンテキスト ファイルを編集することもできます。 各エディターでは、キーワードを色分け表示したり、言語固有の構文や使用方法のエラーをチェックするサービスがサポートされています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの問題を解決するのに役立つ [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが用意されています。  
   
-## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio のエディター  
+## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio のエディター
+
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の 4 つのエディターは、共通のアーキテクチャを備えています。 テキスト エディターは基本的なレベルの機能を実装し、テキスト ファイル用の基本的なエディターとして使用できます。 それ以外の 3 つのエディター (クエリ エディター) は、SQL Server でサポートされるいずれかの言語の構文を定義する言語サービスを追加することで、この基本的な機能を拡張したものです。 クエリ エディターには、IntelliSense やデバッグなど、さまざまなエディター機能が実装されています。 クエリ エディターには、データベース エンジン クエリ エディター (Transact-SQL および XQuery ステートメントを含んだスクリプトの作成用)、MDX エディター (MDX 言語用)、DMX エディター (DMX 言語用)、および XML/A エディター (XML for Analysis 言語用) があります。  
   
-## <a name="common-components"></a>共通コンポーネント  
+## <a name="common-components"></a>共通コンポーネント
+
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のすべてのエディターに共通のコンポーネントを次に示します。  
   
  **コード ペイン**  
@@ -60,7 +64,8 @@ ms.locfileid: "68266030"
  **右端で折り返す**  
  テキストまたはコードの長い行を複数の行に分けて表示して、すべてのテキストを見ることができるようにします。 右端で折り返すオプションは、テキストの実行時または印刷時の動作には影響を与えません。 右端で折り返す設定をオンにするには、 **[ツール]** メニューの **[オプション]** ダイアログ ボックスで、[テキスト エディター] ページまたは特定のエディター ページのいずれかにある [すべての言語] の [全般] ページを使用します。  
   
-## <a name="code-editor-components"></a>コード エディターのコンポーネント  
+## <a name="code-editor-components"></a>コード エディターのコンポーネント
+
  コード エディターには、テキスト エディターや XML エディターに共通の機能に加えて、次の機能があります。  
   
  **結果**  
@@ -78,13 +83,14 @@ ms.locfileid: "68266030"
  **テンプレート**  
  テンプレートは、データベース内にオブジェクトを作成するのに必要なステートメントの基本構造が含まれたファイルです。 スクリプトの作成を迅速化するのに使用できます。  
   
- **メッセージ**  
+ **Messages (メッセージ)**  
  スクリプトの実行時にサーバーから返されるエラー、警告、および情報メッセージが表示されます。 メッセージの一覧は、スクリプトが再び実行されるまで変更されません。  
   
  **ステータス バー**  
  クエリ エディター ウィンドウに関連付けられたシステム情報 (たとえばクエリ エディターの接続先のインスタンス) を表示します。  
   
-## <a name="database-engine-query-editor-components"></a>データベース エンジン クエリ エディターのコンポーネント  
+## <a name="database-engine-query-editor-components"></a>データベース エンジン クエリ エディターのコンポーネント
+
  以下のコンポーネントは、データベース エンジン クエリ エディターにのみ該当します。  
   
  **デバッガー**  
@@ -130,7 +136,6 @@ ms.locfileid: "68266030"
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用してコードをステップ実行したり、デバッグ情報 (変数やパラメーターの値など) を表示したりする方法について説明します。|[Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]の各インスタンスに対して独自の色を設定したり、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターのウィンドウのステータス バーの背景としてそれらの色を設定する方法について説明します。|[ステータス バー &#40;データベース エンジン クエリ エディター&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>参照  
- [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  
+## <a name="next-steps"></a>次のステップ
+
+[SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

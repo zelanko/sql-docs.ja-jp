@@ -19,20 +19,20 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1cd1d720f5f5e9a9896e341a31d604405ae7d0d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722884"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>ユーザー定義関数の作成 (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してユーザー定義関数 (UDF) を作成する方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   ユーザー定義関数は、データベースの状態を変更するアクションの実行に使用することはできません。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "68138750"
   
     -   `SEND`  
   
-###  <a name="Security"></a> Permissions 
+###  <a name="permissions"></a><a name="Security"></a> Permissions 
 
 データベースの `CREATE FUNCTION` 権限と、関数を作成するスキーマの `ALTER` 権限が必要です。 関数でユーザー定義型が指定されている場合は、その型に対する `EXECUTE` 権限が必要です。  
   
-##  <a name="Scalar"></a> スカラー関数  
+##  <a name="scalar-functions"></a><a name="Scalar"></a> スカラー関数  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに複数ステートメントの**スカラー関数 (スカラー UDF)** を作成します。 この関数は、1 つの入力値 `ProductID`を受け取り、単一のデータ値 (在庫品目中の指定された製品に関する集計量) を返します。  
   
 ```sql  
@@ -104,7 +104,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > [!NOTE]  
 > スカラー関数の詳細および例については、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」を参照してください。 
 
-##  <a name="TVF"></a> テーブル値関数  
+##  <a name="table-valued-functions"></a><a name="TVF"></a> テーブル値関数  
 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに**インライン テーブル値関数 (TVF)** を作成します。 この関数は、入力パラメーターとして 1 つの顧客 (商店) ID を受け取り、 `ProductID`列と `Name`列、および過去 1 年間の集計である `YTD Total` を商店に販売した製品ごとに返します。  
   
 ```sql  

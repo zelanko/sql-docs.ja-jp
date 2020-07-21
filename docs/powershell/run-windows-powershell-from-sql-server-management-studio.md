@@ -10,10 +10,10 @@ ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 239a031c64a8f195a5731d9ff9930b9b0d345034
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68049094"
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>SQL Server Management Studio から Windows PowerShell を実行する方法

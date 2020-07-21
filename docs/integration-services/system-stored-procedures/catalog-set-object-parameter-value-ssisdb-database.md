@@ -8,34 +8,34 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ab13bd89c73a898167d551b61aa8027299ff81b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c9263e3855fcb9617baf3d9d3d7e0a55d079316
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674530"
 ---
-# <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB データベース)
+# <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのパラメーターの値を設定します。 他の値が割り当てられていない場合は、値を環境変数に関連付けるか、または既定で使用されるリテラル値を割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
 ```sql  
-catalog.set_object_parameter_value [@object_type =] object_type   
-    , [@folder_name =] folder_name   
-    , [@project_name =] project_name   
-    , [@parameter_name =] parameter_name   
-    , [@parameter_value =] parameter_value   
- [  , [@object_name =] object_name ]  
- [  , [@value_type =] value_type ]  
+catalog.set_object_parameter_value [ @object_type = ] object_type   
+    , [ @folder_name = ] folder_name   
+    , [ @project_name = ] project_name   
+    , [ @parameter_name = ] parameter_name   
+    , [ @parameter_value = ] parameter_value   
+ [  , [ @object_name = ] object_name ]  
+ [  , [ @value_type = ] value_type ]  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -88,7 +88,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 -   *value_type* が指定されていない場合は、*parameter_value* のリテラル値が既定で使用されます。 リテラル値を使用すると、[object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) ビューの *value_set* が `1` に設定されます。 NULL パラメーター値は許可されません。  
   

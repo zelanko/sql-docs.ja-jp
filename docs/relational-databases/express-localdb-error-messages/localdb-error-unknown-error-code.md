@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: 8f8472b6-e6fc-44f3-82c7-25f127461fa8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cd2a159b67670a2bbffa28bae7e2cc449b8ba6e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3d3e432ee3e223b575f1f199a31943f498205a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641354"
 ---
-# <a name="localdberrorunknownerrorcode"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="localdb_error_unknown_error_code"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細  
   

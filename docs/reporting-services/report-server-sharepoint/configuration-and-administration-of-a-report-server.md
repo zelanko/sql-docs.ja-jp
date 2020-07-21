@@ -1,5 +1,5 @@
 ---
-title: レポート サーバーの構成と管理 (SSRS) | Microsoft Docs
+title: レポート サーバーの構成と管理 | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e39153fb15c79cdbc07dc7d97407e2880bdc156
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 557eab9a01bd7be8b93de9015b2dd497b5264e3b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574421"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77077421"
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>SQL Server Reporting Services (SSRS) レポート サーバーの構成と管理
 

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4396fe9586dfffe5e88bf7949216206d95e2a96b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48111db11e943f6a1e306f290e48e318579a99f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044223"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766335"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベースからフルテキスト ストップリストを削除します。  
   
@@ -50,13 +50,13 @@ DROP FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  データベースから削除するフルテキスト ストップリストの名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  削除するフルテキスト ストップリストを参照するフルテキスト インデックスが 1 つでもあると、DROP FULLTEXT STOPLIST は失敗します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ストップリストを削除するには、ストップリストの DROP 権限を持っているか、**db_owner** 固定データベース ロールまたは **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`myStoplist` というフルテキスト ストップリストを削除します。  
   
 ```  

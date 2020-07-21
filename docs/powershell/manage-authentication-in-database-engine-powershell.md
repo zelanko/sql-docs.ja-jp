@@ -1,6 +1,8 @@
 ---
-title: データベース エンジン PowerShell での認証の管理 | Microsoft Docs
-ms.custom: ''
+title: PowerShell:認証を管理する
+titleSuffix: SQL Server on Linux
+description: PowerShell を使用して SQL Server への Windows および SQL 認証を管理する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c246a68216d6de4b1a21d2d2c5c0999703362c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22c48323aa7570440a3edb06400d9a96e9bd9924
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049145"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75557967"
 ---
-# <a name="manage-authentication-in-database-engine-powershell"></a>データベース エンジン PowerShell での認証の管理
+# <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell: SQL Server への認証を管理する
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスへの接続に Windows 認証を使用します。 SQL Server 認証を使用するには、PowerShell 仮想ドライブを定義するか、**Invoke-Sqlcmd** の **-Username** および **-Password** パラメーターを指定します。  
@@ -27,12 +29,12 @@ ms.locfileid: "68049145"
 > **SqlServer** モジュールをインストールする場合は、「[SQL Server PowerShell のインストール](download-sql-server-ps-module.md)」を参照してください。
 
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスで実行できるすべての操作は、そのインスタンスへの接続に使用された認証資格情報に付与されている権限によって制御されます。 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーとコマンドレットは、それが実行されている Windows アカウントを使用して、 [!INCLUDE[ssDE](../includes/ssde-md.md)]への Windows 認証接続を行います。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証接続を行うには、SQL Server 認証のログイン ID およびパスワードを指定する必要があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーを使用するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログイン資格情報を仮想ドライブに関連付けた後、ディレクトリの変更コマンド (**cd**) を使用してそのドライブに接続する必要があります。 Windows PowerShell では、セキュリティ資格情報は仮想ドライブにのみ関連付けることができます。  
   
-##  <a name="SQLAuthVirtDrv"></a> 仮想ドライブを使用する SQL Server 認証  
+##  <a name="sql-server-authentication-using-a-virtual-drive"></a><a name="SQLAuthVirtDrv"></a> 仮想ドライブを使用する SQL Server 認証  
  **SQL Server 認証ログインに関連付けられた仮想ドライブを作成するには**  
   
 1.  次のような関数を作成します。  
@@ -70,7 +72,7 @@ sqldrive SQLAuth
 cd SQLAuth  
 ```  
   
-##  <a name="SQLAuthInvSqlCmd"></a> Invoke-Sqlcmd を使用する SQL Server 認証  
+##  <a name="sql-server-authentication-using-invoke-sqlcmd"></a><a name="SQLAuthInvSqlCmd"></a> Invoke-Sqlcmd を使用する SQL Server 認証  
  **SQL Server 認証で Invoke-Sqlcmd を使用するには**  
   
 1.  **-Username** パラメーターでログイン ID を指定し、 **-Password** パラメーターで関連付けられているパスワードを指定します。  

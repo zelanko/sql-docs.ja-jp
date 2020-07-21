@@ -1,5 +1,5 @@
 ---
-title: データ ソースの多次元モデルのビュー |Microsoft Docs
+title: 多次元モデルのデータソースビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e76f06cab4fba292e5295a4814816c36929c9f4a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076101"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547216"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多次元モデル内のデータ ソース ビュー
   データ ソース ビュー (DSV) は、リレーショナル データ ソースを抽象化し、多次元プロジェクト内でキューブやディメンションを作成する基礎となります。 DSV の目的は、プロジェクトで使用するデータ構造をユーザーが制御できるようにすることと、基になるデータ ソースから独立して動作することです (たとえば、元のデータ ソースを変更せずに、列の名前の変更や列の連結を行うことができます)。  
@@ -35,7 +34,7 @@ ms.locfileid: "66076101"
   
  [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
- [データ ソース ビューのプロパティの変更 (Analysis Services)](change-properties-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューのプロパティの変更 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
  [データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66076101"
  [データ ソース ビューでのスキーマの更新 (Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
 ## <a name="see-also"></a>参照  
- [スキーマ生成ウィザード (Analysis Services)](schema-generation-wizard-analysis-services.md)   
- [サポートされるデータ ソース&#40;SSAS 多次元&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [スキーマ生成ウィザード &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   
+ [SSAS 多次元&#41;&#40;サポートされるデータソース](supported-data-sources-ssas-multidimensional.md)  
   
   

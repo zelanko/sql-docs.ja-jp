@@ -1,5 +1,5 @@
 ---
-title: '[警告のプロパティ]:新しい警告] ([オプション] ページ) |Microsoft Docs'
+title: '[警告のプロパティ]: [新しい警告] ([オプション] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b84c2472c56d50fa5c0595ea7046ed3ab9a2b352
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061276"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056602"
 ---
 # <a name="alert-properties-new-alert-options-page"></a>[警告のプロパティ]:[新しい警告] ([オプション] ページ)
-  このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告のオプションを表示および変更できます。  
+  このページを使用すると、エージェントの警告のオプションを表示および変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
-## <a name="options"></a>および  
- **電子メール**  
+## <a name="options"></a>オプション  
+ **メッセージ**  
  イベントからのエラー テキストがある場合は、それを電子メール通知に含めます。  
   
- **ポケットベル**  
+ **ポケット**  
  イベントからのエラー テキストがある場合は、それをポケットベル通知に含めます。  
   
  **Net send**  
@@ -36,15 +35,15 @@ ms.locfileid: "63061276"
  通知メッセージに含める追加のテキストを入力します。  
   
  **[応答の遅延]**  
- 反復的に発生するイベントの遅延を指定します。 イベントの中には、短時間に頻繁に発生するものがあります。 そのようなイベントに対しては、その発生を認識するだけで、すべてのイベントについて応答を返さないようにする場合があります。 このオプションは、タイムアウトを指定するために使用します。遅延を指定した場合、イベントに対して警告が返された後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、イベントが遅延中に発生するかどうかに関係なく、再び応答するまでに指定の遅延を待ちます。  
+ 反復的に発生するイベントの遅延を指定します。 イベントの中には、短時間に頻繁に発生するものがあります。 そのようなイベントに対しては、その発生を認識するだけで、すべてのイベントについて応答を返さないようにする場合があります。 このオプションを使用して、タイムアウトを指定します。遅延が発生すると、警告がイベントに応答した後、エージェントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントが遅延中に発生したかどうかに関係なく、指定された遅延を待機してからもう一度応答します。  
   
- **Minutes**  
+ **~**  
  遅延を分単位で指定します。 イベントが発生するごとに応答するには、0 分 0 秒を指定します。  
   
- **Seconds**  
+ **待ち時間**  
  遅延を秒単位で指定します。 イベントが発生するごとに応答するには、0 分 0 秒を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [警告](alerts.md)  
   
   

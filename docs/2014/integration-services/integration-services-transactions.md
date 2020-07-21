@@ -12,18 +12,17 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c963113a5c55f07c7f80dfa06f9c2fe7bf245e82
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767634"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436259"
 ---
 # <a name="integration-services-transactions"></a>Integration Services のトランザクション
-  パッケージではトランザクションを使用して、タスクがアトミック単位で実行するデータベース処理をバインドし、この処理によってデータの整合性を保ちます。 すべての種類の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンテナー (パッケージ、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスクをカプセル化するタスク ホスト) でトランザクションを使用するように設定できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、トランザクションを設定するオプションとして、**NotSupported**、**Supported**、**Required** の 3 つが用意されています。  
+  パッケージではトランザクションを使用して、タスクがアトミック単位で実行するデータベース処理をバインドし、この処理によってデータの整合性を保ちます。 すべての種類の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コンテナー (パッケージ、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスクをカプセル化するタスク ホスト) でトランザクションを使用するように設定できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、トランザクションを設定するオプションとして、 **NotSupported**、 **Supported**、および **Required**の 3 つが用意されています。  
   
 -   **Required** は、親コンテナーで既に開始されているトランザクションがない限り、コンテナーでトランザクションを開始するように指定します。 開始されているトランザクションが存在する場合は、トランザクションが結合されます。 たとえば、トランザクションをサポートするように設定されていないパッケージに **Required** オプションが設定されたシーケンス コンテナーが含まれている場合、シーケンス コンテナーは固有のトランザクションを開始します。 パッケージが **Required** オプションを使用するように設定されている場合、シーケンス コンテナーはパッケージのトランザクションを結合します。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62767634"
  トランザクションの設定は、コンテナーの TransactionOption プロパティで設定します。 このプロパティは、 **の [** プロパティ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]] ウィンドウを使用して、またはプログラムによって設定できます。  
   
 > [!NOTE]  
->  `TransactionOption` プロパティは、コンテナーによって要求された `IsolationLevel` プロパティの値が適用されるかどうかに影響します。 詳細については、の説明を参照して、`IsolationLevel`プロパティのトピック「[パッケージ プロパティの設定](set-package-properties.md)します。  
+>  `TransactionOption` プロパティは、コンテナーによって要求された `IsolationLevel` プロパティの値が適用されるかどうかに影響します。 詳細については、「パッケージのプロパティの設定」のプロパティの説明を参照してください `IsolationLevel` 。 [Setting Package Properties](set-package-properties.md)  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>パッケージでトランザクションを使用するように設定するには  
   
@@ -44,8 +43,8 @@ ms.locfileid: "62767634"
   
 -   www.mssqltips.com のブログ [「SQL Server Integration Services (SSIS) でトランザクションを使用する方法」](https://go.microsoft.com/fwlink/?LinkId=157783)  
   
-## <a name="see-also"></a>参照  
- [トランザクションの継承](../../2014/integration-services/inherited-transactions.md)   
+## <a name="see-also"></a>関連項目  
+ [継承されたトランザクション](../../2014/integration-services/inherited-transactions.md)   
  [複数のトランザクション](../../2014/integration-services/multiple-transactions.md)  
   
   

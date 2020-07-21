@@ -1,5 +1,5 @@
 ---
-title: Null 値許容と 3 値論理比較 |Microsoft Docs
+title: Null 値の許容と3つの値の論理比較 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b8000c1c28d5a1d3d129b6e8d01c4ab2fbbbc7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954712"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>NULL 値の許容と 3 値論理比較
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型に慣れているユーザーであれば、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の `System.Data.SqlTypes` 名前空間でもよく似たセマンティクスや有効桁数を使用していることがわかるはずです。 ただし、いくつか違いもあります。このトピックでは、これらの違いの中から最も重要な点について説明します。  
@@ -36,7 +35,7 @@ ms.locfileid: "62919633"
  `System.Data.SqlTypes` 名前空間では、この 3 つの論理値を表す `SqlBoolean` 型が導入されます。 `SqlTypes` 間の比較では、`SqlBoolean` 型の値が返されます。 UNKNOWN 値は、`SqlBoolean` 型の NULL 値で表現されます。 `IsTrue` 型の値を確認するために、プロパティ `IsFalse`、`IsNull`、および `SqlBoolean` が用意されています。  
   
 ## <a name="operations-functions-and-null-values"></a>演算、関数、および NULL 値  
- すべての算術演算子 (+、-、 \*、/、%)、ビットごとの演算子 (~、&、|)、ほとんどの関数は、オペランドのいずれかまたはの引数に NULL を返すと`SqlTypes`は NULL。 `IsNull` プロパティで返される値は、常に true または false です。  
+ すべての算術演算子 (+、-、 \* 、/、%)、ビットごとの演算子 (~、&、|)、およびほとんどの関数は、のオペランドまたは引数のいずれかが null の場合に null を返し `SqlTypes` ます。 `IsNull` プロパティで返される値は、常に true または false です。  
   
 ## <a name="precision"></a>有効桁数  
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR の decimal データ型の最大値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の numeric データ型や decimal データ型の最大値とは異なります。 また、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR の decimal データ型では、最大有効桁数が想定されます。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR で、`SqlDecimal` の最大有効桁数、最大小数点以下桁数、およびセマンティクスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の decimal データ型と同じです。  

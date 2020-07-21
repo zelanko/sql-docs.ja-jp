@@ -1,21 +1,20 @@
 ---
 title: SQL Server インポートの拡張機能
-titleSuffix: Azure Data Studio
 description: Azure Data Studio 用の SQL Server インポートの拡張機能をインストールして使用する
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a2795282c7a43c5ae582a059ae8b56d1f592e6e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758341"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server インポートの拡張機能 (プレビュー)
 
@@ -46,9 +45,9 @@ SQL Server インポートの拡張機能 (プレビュー) では、.txt ファ
     
     **[参照]** をクリックしてファイルを選択します。 ファイル名に基づくテーブル名が自動的に入力されますが、それを自分で変更することもできます。
 
-    既定では、スキーマは dbo になりますが、これは変更することができます。 **[次へ]** をクリックします。
+    既定では、スキーマは dbo になりますが、これは変更することができます。 **[次へ]** をクリックして続行します。
     ![入力ファイル](media/sql-server-import-extension/import-wizard-input-file.png)
-1. ウィザードでは、最初の 50 行に基づいてプレビューが生成されます。 データが正確に見えることを確認する以外に、このページに追加のアクションはありません。 **[次へ]** をクリックします。
+1. ウィザードでは、最初の 50 行に基づいてプレビューが生成されます。 データが正確に見えることを確認する以外に、このページに追加のアクションはありません。 **[次へ]** をクリックして続行します。
     ![インポート ウィザードを開く](media/sql-server-import-extension/import-wizard-preview-data.png)
 2. このページでは、列名またはデータ型に変更を加えたり、主キーかどうか、または null を許容するかどうかを変更したりできます。 変更は必要なだけ行うことができます。 **[データのインポート]** をクリックして続行します。
     ![インポート ウィザードを開く](media/sql-server-import-extension/import-wizard-modify-columns.png)
@@ -58,6 +57,6 @@ SQL Server インポートの拡張機能 (プレビュー) では、.txt ファ
     ![インポート ウィザードを開く](media/sql-server-import-extension/import-wizard-summary.png)
 1. ご利用のターゲット データベースを更新するか、テーブル名に対して SELECT クエリを実行することにより、テーブルが正常にインポートされたかどうかを確認します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - インポート ウィザードの詳細については、[こちら](https://cloudblogs.microsoft.com/sqlserver/2018/08/30/the-august-release-of-sql-operations-studio-is-now-available/)のブログの投稿を参照してください。
 - PROSE の詳細については、[こちら](https://microsoft.github.io/prose/)のドキュメントを参照してください。

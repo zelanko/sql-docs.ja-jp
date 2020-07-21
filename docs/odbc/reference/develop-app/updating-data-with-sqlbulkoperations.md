@@ -1,5 +1,5 @@
 ---
-title: SQLBulkOperations によるデータの更新 |Microsoft Docs
+title: SQLBulkOperations を使用したデータの更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d1aa9b3300cba78f34e876a8501dbaaa421390a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b96e3a43b8385910e4260cf51dea7e4ff508200
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091661"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298486"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>SQLBulkOperations によるデータの更新
-アプリケーションへの呼び出しで、データ ソースの基になるテーブルでの一括更新、削除、fetch、または挿入操作を実行できます**SQLBulkOperations**します。 呼び出す**SQLBulkOperations**を構築して、SQL ステートメントの実行に代わる便利な方法です。 位置指定更新をサポートして、データ ソースが配置されている SQL ステートメントをサポートしていない場合にも ODBC ドライバーことができます。 関数呼び出しを使用してデータベースの完全なアクセスを実現するためのパラダイムの一部になります。  
+アプリケーションでは、 **Sqlbulkoperations**を呼び出すことにより、データソースの基になるテーブルに対して一括更新、削除、フェッチ、挿入などの操作を実行できます。 **Sqlbulkoperations**の呼び出しは、SQL ステートメントの構築と実行に代わる便利な方法です。 データソースで位置指定 SQL ステートメントがサポートされていない場合でも、ODBC ドライバーで位置指定更新をサポートできます。 これは、関数呼び出しを使用してデータベースへの完全アクセスを実現するパラダイムの一部です。  
   
- **SQLBulkOperations**は現在の行セットを操作しへの呼び出し後にのみ使用することができます**SQLFetch**または**SQLFetchScroll**します。 アプリケーションでは、更新、削除、またはそのブックマークをキャッシュすることで更新する行を指定します。 ドライバーは、新しいデータを更新する行または行セットのバッファーから、基になるテーブルに挿入する新しいデータを取得します。  
+ **Sqlbulkoperations**は現在の行セットに対して動作し、 **sqlfetch**または**sqlbulkoperations**の呼び出しの後にのみ使用できます。 アプリケーションでは、ブックマークをキャッシュすることによって、更新、削除、または更新する行を指定します。 ドライバーは、更新する行の新しいデータ、または基になるテーブルに挿入する新しいデータを行セットバッファーから取得します。  
   
- 使用される行セット サイズ**SQLBulkOperations**への呼び出しで設定されて**SQLSetStmtAttr**で、*属性*引数 sql_attr_row_array_size を指定します。 異なり**SQLSetPos**への呼び出し後にのみ新しい行セット サイズを使用する**SQLFetch**または**SQLFetchScroll**、 **SQLBulkOperations**を使用して、呼び出しの後の新しい行セット サイズ**SQLSetStmtAttr**します。  
+ **Sqlbulkoperations**によって使用される行セットのサイズは、SQL_ATTR_ROW_ARRAY_SIZE の*属性*引数を指定して**SQLSetStmtAttr**を呼び出すことによって設定されます。 Sqlfetch または**Sqlfetchscroll**の呼び出しの後に新しい行**SQLFetch**セットサイズを使用する**SQLSetPos**とは異なり、 **sqlbulkoperations**は**SQLSetStmtAttr**の呼び出し後に新しい行セットサイズを使用します。  
   
- Sql、リレーショナル データベースとのほとんどの対話が行われるため、 **SQLBulkOperations**広くサポートされていません。 ただし、ドライバーを簡単にエミュレートできますが構築して実行する**更新**、**削除**、または**挿入**ステートメント。  
+ リレーショナルデータベースとのほとんどのやり取りは SQL を通じて行われるため、 **Sqlbulkoperations**は広くサポートされていません。 ただし、ドライバーは、 **UPDATE**、 **DELETE**、または**INSERT**ステートメントを構築して実行することで、簡単にエミュレートできます。  
   
- 操作を決定する**SQLBulkOperation**サポートされており、アプリケーションを呼び出す**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または (カーソルの種類) に応じて SQL_STATIC_CURSOR_ATTRIBUTES1 情報オプション。  
+ **Sqlbulkoperation**がサポートする操作を特定するために、アプリケーションでは、SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1 情報オプションを使用して**SQLGetInfo**を呼び出します (カーソルの種類によって異なります)。  
   
  このセクションでは、次のトピックを扱います。  
   

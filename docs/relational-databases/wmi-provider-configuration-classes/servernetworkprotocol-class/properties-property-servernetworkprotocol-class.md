@@ -1,6 +1,6 @@
 ---
-title: Properties プロパティ (ServerNetworkProtocol クラス) |Microsoft Docs
-ms.custom: ''
+title: Properties プロパティ (ServerNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6c971bfc-c277-4c1e-a06e-146dcc34e759
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 71e99af016ab114eecaa170374f9e07bf53bd3f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec7eb7bca850277b42de62a7e245d21e7f7f3f6a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933668"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880924"
 ---
 # <a name="properties-property-servernetworkprotocol-class"></a>Properties プロパティ (ServerNetworkProtocol クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   サーバー ネットワーク プロトコルに関連付けられたプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,12 +35,12 @@ ms.locfileid: "67933668"
 object.Properties [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ServerNetworkProtocol クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)のインスタンスによって使用されるネットワーク プロトコルを表すオブジェクトを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ のインスタンスによって使用されるネットワークプロトコルを表す[Servernetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 配列の[ServerNetworkProtocolProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)サーバー ネットワーク プロトコルによってサポートされるプロパティを表すオブジェクト。  
+ サーバーネットワークプロトコルによってサポートされるプロパティを表す[Servernetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクトの配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   

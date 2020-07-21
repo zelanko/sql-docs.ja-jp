@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a761f50c734132a0219fc4e7063dc4adf764d601
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67894799"
 ---
-# <a name="-division-assignment-transact-sql"></a>/= (除算代入) (TRANSACT-SQL)
+# <a name="-division-assignment-transact-sql"></a>/= (除算代入) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   1 つの数値を別の数値で除算し、値に演算の結果を設定します。 たとえば、変数 @x が 34 である場合、`@x /= 2` は @x の元の値を取得し、2 で除算して、@x にその新しい値 (17) を設定します。  
@@ -48,10 +48,10 @@ expression /= expression
 ## <a name="result-types"></a>戻り値の型  
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  詳細については、「[&#40;除算&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md)」を参照してください。  
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、変数を 17 に設定します。 `/=` 演算子を使用して、変数を元の値の半分に設定します。  
 ```sql  
 DECLARE @myVariable decimal(5,2);

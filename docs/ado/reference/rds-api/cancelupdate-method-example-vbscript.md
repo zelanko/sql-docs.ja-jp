@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - CancelUpdate method [ADO], VBScript example
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b92db747267f250501b11200c870526fe79e713b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d560233efc7623a390fbd2fc63e8add5f26cd157
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964605"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746416"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- この例をテストする切り取りし、の間には、このコードを貼り付け、\<本文 > と\</Body > の通常の HTML タグを文書化し、名前を**CancelUpdateVBS.asp**します。 ASP スクリプトは、インターネット サーバーで識別されます。 独自のセットアップを反映するように、サーバーの名前を編集する必要があります。 単純に MyServer から接続文字列の値を SQL Server インストールの名前に変更します。  
+ この例をテストするには、このコードを切り取って、 \< 通常の HTML ドキュメントの body> と body> タグの間に貼り付け、「 \< **Cancelupdatevbs**」という名前を付けます。 ASP スクリプトによって、インターネットサーバーが識別されます。 サーバーの名前を編集して、独自のセットアップを反映する必要があります。 MyServer からの接続文字列の値を、SQL Server インストールの名前に変更するだけです。  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  
@@ -117,7 +117,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CancelUpdate メソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
 
 

@@ -11,25 +11,25 @@ helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7e12e63be770a7547e61b1fd546171d4f5cae4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 05fb06f9e15557628f37d0bc6c113606f04dd19b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671880"
 ---
-# <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
+# <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでの操作中に記録されるメッセージを表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|メッセージの一意識別子 (ID)。|  
 |operation_id|**bigint**|操作の一意の ID。|  
@@ -39,17 +39,17 @@ ms.locfileid: "68045228"
 |message|**nvarchar(max)**|メッセージのテキストです。|  
 |extended_info_id|**bigint**|操作メッセージに関連する追加情報の ID については、[extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) ビューを参照してください。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューには、カタログでの操作中に記録される各メッセージの行が表示されます。 このメッセージは、サーバー、パッケージの実行プロセス、または実行エンジンによって生成されます。  
   
  このビューに表示されるメッセージの種類は次のとおりです。  
   
-|**message_type** 値|[説明]|  
+|**message_type** 値|説明|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
-|120|Error|  
+|120|エラー|  
 |110|警告|  
-|70|[情報]|  
+|70|Information|  
 |10|検証前|  
 |20|検証後|  
 |30|実行前|  
@@ -66,7 +66,7 @@ ms.locfileid: "68045228"
   
  このビューに表示されるメッセージ ソースの種類は次のとおりです。  
   
-|**message_source_type**|[説明]|  
+|**message_source_type**|説明|  
 |-------------------------------|-----------------|  
 |10|T-SQL や CLR ストアド プロシージャのようなエントリの API|  
 |20|パッケージ (ISServerExec.exe) を実行するために使用する外部プロセス|  

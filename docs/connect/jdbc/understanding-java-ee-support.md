@@ -1,21 +1,21 @@
 ---
 title: Java EE のサポートについて | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 45d77963651ee5d7c796204c02bb65d88c60fcb8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892308"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920285"
 ---
 # <a name="understanding-java-ee-support"></a>Java EE のサポートについて
 
@@ -38,10 +38,12 @@ JDBC Driver 7.0 では、ドライバーは **mssql-jdbc-7.0.0.jre8.jar** また
 JDBC Driver 7.2 では、ドライバーは **mssql-jdbc-7.2.2.jre8.jar** または **mssql-jdbc-7.2.2.jre11.jar** に含まれています。
 
 JDBC Driver 7.4 では、ドライバーは **mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar**、または **mssql-jdbc-7.4.1.jre12.jar** に含まれています。
+
+JDBC Driver 8.2 では、ドライバーは **mssql-jdbc-8.2.2.jre8.jar**、**mssql-jdbc-8.2.2.jre11.jar**、または **mssql-jdbc-8.2.2.jre13.jar** に含まれています。
+
+JDBC DriverManager クラスを使用してドライバーを読み込む場合、および任意のドライバー構成でドライバーのクラス名を指定する場合は常に、このクラス名が使用されます。 たとえば、Java EE アプリケーション サーバー内でデータ ソースを構成するには、ドライバーのクラス名を入力する必要が生じる場合があります。  
   
-クラス名は、JDBC DriverManager クラスを使用してドライバーを読み込むたびに、任意のドライバー構成でドライバーのクラス名を指定するたびに使用されます。 たとえば、Java EE アプリケーション サーバー内でデータ ソースを構成するには、ドライバーのクラス名を入力する必要が生じる場合があります。  
-  
-## <a name="data-sources"></a>ソリューション エクスプローラー
+## <a name="data-sources"></a>データ ソース
 
 この JDBC ドライバーは、Java EE または JDBC 3.0 データ ソースをサポートします。 JDBC ドライバー [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスは `com.microsoft.sqlserver.jdbc.SQLServerXADataSource` によって実装されます。  
   
@@ -55,7 +57,7 @@ JDBC Driver 7.4 では、ドライバーは **mssql-jdbc-7.4.1.jre8.jar**、**ms
 |ConnectionPoolDataSource|`com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource` <br/> <br/> JAVA EE アプリケーション サーバー接続プールを構成するデータ ソース。 通常は、アプリケーションが JAVA EE アプリケーション サーバー内で実行される場合に使用されます。|  
 |XADataSource|`com.microsoft.sqlserver.jdbc.SQLServerXADataSource` <br/> <br/> JAVA EE XA データ ソースを構成するデータ ソース。 通常は、アプリケーションが JAVA EE アプリケーション サーバーおよび XA トランザクション マネージャー内で実行される場合に使用されます。|  
   
-### <a name="data-source-properties"></a>データ ソースのプロパティ
+### <a name="data-source-properties"></a>[データ ソースのプロパティ]
 
 すべてのデータ ソースは、基になるドライバーのプロパティ セットに関連付けられているプロパティを設定または取得する機能をサポートします。  
   
@@ -76,6 +78,6 @@ Connection c = ds.getConnection("user", "pwd");
 
 データ ソースのプロパティの詳細については、「[データ ソースのプロパティの設定](../../connect/jdbc/setting-the-data-source-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91dea7b15b00d9ebc08b97f3dd8e7a8f512ae097
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105190"
 ---
 # <a name="max-function-report-builder-and-ssrs"></a>Max 関数 (レポート ビルダーおよび SSRS)
@@ -43,7 +43,7 @@ Max(expression, scope, recursive)
 ## <a name="return-type"></a>戻り値の型  
  式の型によって決まります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  式で指定されたデータセットは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、`CInt`、`CDbl`、`CDec` などの変換関数を使用します。 詳細については、「 [データ型変換関数](https://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
   
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
@@ -54,7 +54,7 @@ Max(expression, scope, recursive)
   
 -   入れ子集計の*Scope* には、データセット名は使用できません。  
   
--   *式*する必要がありますが含まれていない`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
+-   *式*には、 `First`、 `Last`、 `Previous`、また`RunningValue`は関数を含めることはできません。  
   
 -   *Expression* には、 *recursive*を指定する入れ子集計を含めることができません。  
   
@@ -69,7 +69,7 @@ Max(expression, scope, recursive)
 =Max(Fields!OrderTotal.Value, "Year")  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   

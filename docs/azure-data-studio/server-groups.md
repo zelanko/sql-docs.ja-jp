@@ -1,23 +1,22 @@
 ---
 title: サーバー グループ
-titleSuffix: Azure Data Studio
 description: Azure Data Studio のサーバー グループについて説明します
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a1edfb7566d47b8c02dbd53fcccbd7441239a949
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: dfdc9f3c80b61d65d164b8328122a4785b37ba54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758390"
 ---
-# <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] のサーバー グループ
+# <a name="server-groups-in-azure-data-studio"></a>Azure Data Studio のサーバー グループ
 
 サーバー グループを使用すると、使用するサーバーやデータベースへの接続を整理することができます。 サーバー グループを作成すると、構成の詳細が*ユーザー設定*に保存されます。
 
@@ -38,4 +37,4 @@ ms.locfileid: "67959308"
 
 
 ## <a name="additional-resources"></a>その他のリソース
-- [ワークスペースとユーザーの設定](settings.md)
+- [ワークスペースとユーザー設定](settings.md)

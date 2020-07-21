@@ -39,16 +39,16 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11aac623d6648fb08e65cff12cdfcf3beaaa2499
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 296616f71102f5a5c68fe817b409273f6bf9428a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419639"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999775"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 句 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリによって返されるデータを並べ替えます。 この句は次の場合に使用します。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68419639"
 
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -81,7 +81,7 @@ ORDER BY order_by_expression
 }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 [ ORDER BY   
@@ -116,7 +116,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  クエリ式から行を取得する前にスキップする行の数を指定します。 0 以上の整数の定数か式を指定できます。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  *offset_row_count_expression* には、変数、パラメーター、または定数スカラー サブクエリを指定できます。 サブクエリを使用する場合は、クエリ スコープの外部で定義された列は参照できません。 つまり、外部のクエリと関連付けることはできません。  
   
@@ -127,7 +127,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  OFFSET 句が処理された後に取得する行の数を指定します。 1 以上の整数の定数か式を指定できます。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  *fetch_row_count_expression* には、変数、パラメーター、または定数スカラー サブクエリを指定できます。 サブクエリを使用する場合は、クエリ スコープの外部で定義された列は参照できません。 つまり、外部のクエリと関連付けることはできません。  
   
@@ -152,7 +152,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  **ntext**、**text**、**image**、**geography**、**geometry**、および **xml** 型の列は、ORDER BY 句では使用できません。  
   
- 順位付け関数に *order_by_expression* が使用されている場合、整数または定数は指定できません。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。  
+ 順位付け関数に *order_by_expression* が使用されている場合、整数または定数は指定できません。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  FROM 句でテーブルの別名を指定している場合、ORDER BY 句でその列を修飾する際に使用できるのは別名だけです。  
   
@@ -197,7 +197,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  ページング ソリューションにおいて、一貫性のある実行プランが重要な場合は、OFFSET および FETCH のパラメーターに OPTIMIZE FOR クエリ ヒントを使用することを検討してください。 例については、このトピックの「例」セクションの「OFFSET と FETCH の値として式を指定する」を参照してください。 OPTIMIZE FOR の詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
 |[返される行の数の制限](#Offset)|OFFSET および FETCH|  
 |[UNION、EXCEPT、および INTERSECT と ORDER BY の併用](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a> 基本構文  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本構文  
  このセクションの例では、最低限必要な構文を使用して ORDER BY 句の基本機能を示します。  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. 選択リストで定義されている単一の列を指定する  
@@ -260,7 +260,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a> 昇順と降順の並べ替え順序を指定する  
+###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a> 昇順と降順の並べ替え順序を指定する  
   
 #### <a name="a-specifying-a-descending-order"></a>A. 降順を指定する  
  次の例では、数値列 `ProductID` を基準に、結果セットを降順で並べ替えます。  
@@ -298,7 +298,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a> 照合順序の指定  
+###  <a name="specifying-a-collation"></a><a name="Collation"></a> 照合順序の指定  
  次の例では、ORDER BY 句での照合順序の指定により、クエリ結果が返される順序がどう変化するかを示します。 作成されるテーブルには、大文字と小文字、およびアクセントを区別しない照合順序で定義された列が含まれます。 大文字と小文字、およびアクセントが混じった値が挿入されます。 ORDER BY 句で照合順序が指定されていないため、最初のクエリでは、値を並べ替えるときに列の照合順序が使用されます。 2 番目のクエリでは、大文字と小文字、およびアクセントを区別する照合順序が ORDER BY 句で指定されているため、行が返される順序が変わります。  
   
 ```sql
@@ -319,7 +319,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a> 条件に基づく順序の指定  
+###  <a name="specifying-a-conditional-order"></a><a name="Case"></a> 条件に基づく順序の指定  
  次の例では、ORDER BY 句で CASE 式を使用して、指定された列の値に基づいて、条件に応じて行の並べ替え順序を決定しています。 最初の例では、`SalariedFlag` テーブルの `HumanResources.Employee` 列の値を評価します。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 `SalariedFlag` が 0 に設定されている従業員は `BusinessEntityID` の昇順で返されます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
   
 ```sql
@@ -340,7 +340,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a> 順位付け関数での ORDER BY の使用  
+###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a> 順位付け関数での ORDER BY の使用  
  次の例では、順序付け関数 ROW_NUMBER、RANK、DENSE_RANK、および NTILE で ORDER BY 句を使用しています。  
   
 ```sql
@@ -361,10 +361,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a> 返される行の数の制限  
+###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a> 返される行の数の制限  
  次の例では、OFFSET と FETCH を使用して、クエリによって返される行の数を制限します。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. OFFSET と FETCH の値として整数の定数を指定する  
  次の例では、OFFSET および FETCH 句の値として整数の定数を指定します。 最初のクエリにより、`DepartmentID` 列で並べ替えられたすべての行が返されます。 このクエリによって返される結果と、後の 2 つのクエリの結果を比べてみてください。 次のクエリは、`OFFSET 5 ROWS` 句を使用して最初の 5 行をスキップし、残りのすべての行を返します。 最後のクエリでは、`OFFSET 0 ROWS` 句を使用して最初の行から処理を開始した後、`FETCH NEXT 10 ROWS ONLY` を使用して、返される行を、並べ替えられた結果セットからの 10 行に制限します。  
@@ -392,20 +392,19 @@ ORDER BY DepartmentID
 ```  
   
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. OFFSET と FETCH の値として変数を指定する  
- 次の例では、変数 `@StartingRowNumber` および `@FetchRows` を宣言し、これらの変数を OFFSET および FETCH 句で指定しています。  
+ 次の例では、変数 `@RowsToSkip` および `@FetchRows` を宣言し、これらの変数を OFFSET および FETCH 句で指定しています。  
   
 ```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
-DECLARE @StartingRowNumber tinyint = 1  
+DECLARE @RowsToSkip tinyint = 2
       , @FetchRows tinyint = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
-    OFFSET @StartingRowNumber ROWS   
+    OFFSET @RowsToSkip ROWS   
     FETCH NEXT @FetchRows ROWS ONLY;  
-  
 ```  
   
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. OFFSET と FETCH の値として式を指定する  
@@ -489,7 +488,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-###  <a name="Union"></a> UNION、EXCEPT、および INTERSECT と ORDER BY の併用  
+###  <a name="using-order-by-with-union-except-and-intersect"></a><a name="Union"></a> UNION、EXCEPT、および INTERSECT と ORDER BY の併用  
  クエリで UNION、EXCEPT、または INTERSECT 演算子を使用する場合は、ORDER BY 句をステートメントの末尾に指定する必要があります。この場合、結合されたクエリの結果が並べ替えられます。 次の例では、赤色または黄色のすべての製品が返され、この結合リストが `ListPrice` 列を基準に並べ替えられます。  
   
 ```sql
@@ -506,7 +505,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例は、`EmployeeKey` の数値列を昇順で並べ替えた結果セットの順序付けを示しています。  
   
 ```sql
@@ -537,7 +536,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName;  
 ```  
   
- 次の例では、2 つの列を基準に並べ替えます。 このクエリでは、`FirstName` 列で昇順に並べ替えを行ってから、`LastName` 列の共通の `FirstName` 値を降順に並べ替えます。  
+ 次の例では、2 つの列を基準に並べ替えます。 このクエリでは、`FirstName` 列で昇順に並べ替えを行ってから、`FirstName` 列の共通の `LastName` 値を降順に並べ替えます。  
   
 ```sql
 -- Uses AdventureWorks  

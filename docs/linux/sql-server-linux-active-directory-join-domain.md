@@ -1,7 +1,7 @@
 ---
 title: SQL Server on Linux を Active Directory に参加させる
 titleSuffix: SQL Server
-description: ''
+description: この記事では、SQL Server Linux ホスト マシンを AD ドメインに参加させるためのガイダンスを提供します。 組み込みの SSSD パッケージを使用することも、サードパーティの AD プロバイダーを使用することもできます。
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,25 +9,25 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027342"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896972"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux ホスト上の SQL Server を Active Directory ドメインに参加させる
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、SQL Server Linux ホスト コンピューターを Active Directory (AD) ドメインに参加させる方法に関する一般的なガイダンスを提供します。 組み込みの SSSD パッケージを使用する方法と、サードパーティの Active Directory プロバイダーを使用する方法の 2 つがあります。 サードパーティのドメイン参加製品の例としては、[PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/)、[One Identity](https://www.oneidentity.com/products/authentication-services/)、[Centrify](https://www.centrify.com/) があります。 このガイドには、Active Directory の構成を確認する手順が含まれます。 ただし、サードパーティのユーティリティを使用してコンピューターをドメインに参加させる方法については説明しません。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 Active Directory 認証を構成する前に、ネットワーク上に Active Directory ドメイン コントローラー (Windows) をセットアップする必要があります。 その後、SQL Server on Linux ホストを Active Directory ドメインに参加させます。
 
 > [!IMPORTANT]
-> この記事で説明するサンプル手順は、ガイダンスのみを目的としています。 環境全体の構成方法によって、お使いの環境での実際の手順は若干異なる場合があります。 環境のシステム管理者とドメイン管理者を、特定の構成、カスタマイズ、および必要なトラブルシューティングに参加させます。
+> この記事で説明されている手順の例はガイダンスのみを目的としており、Ubuntu 16.04、Red Hat Enterprise Linux (RHEL) 7.x、および SUSE Enterprise Linux (SLES) 12 オペレーティング システムを参照しています。 お使いの環境での実際の手順は、環境全体の構成方法やオペレーティング システムのバージョンによって多少異なる場合があります。 たとえば、ネットワークの管理と構成には、Ubuntu 18.04 では netplan が使用されますが、Red Hat Enterprise Linux (RHEL) 8.x では nmcli のツールが特に使用されます。 具体的なツール、構成、カスタマイズ、および必要なトラブルシューティングについては、お使いの環境のシステム管理者とドメイン管理者と連携することをお勧めします。
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>ドメイン コントローラーへの接続を確認する
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 これらの名前のチェックのいずれかが失敗した場合は、ドメイン検索リストを更新します。 以下のセクションでは、Ubuntu、Red Hat Enterprise Linux (RHEL)、および SUSE Linux Enterprise Server (SLES) について説明します。
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. **/etc/network/interfaces** ファイルを編集して、Active Directory ドメインがドメイン検索リストに含まれるようにします。
 
@@ -71,7 +71,7 @@ ping contoso.com
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. **/etc/sysconfig/network-scripts/ifcfg-eth0** ファイルを編集して、Active Directory ドメインがドメイン検索リストに含まれるようにします。 または、必要に応じて別のインターフェイス構成ファイルを編集します。
 
@@ -100,7 +100,7 @@ ping contoso.com
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. **/etc/sysconfig/network/config** ファイルを編集して、Active Directory ドメイン コントローラーの IP アドレスが DNS クエリに対して使用され、Active Directory ドメインがドメイン検索リストに含まれるようにします。
 
@@ -129,7 +129,7 @@ ping contoso.com
 - [オプション 1: SSSD パッケージを使用する](#option1)
 - [オプション 2: サードパーティの openldap プロバイダー ユーティリティを使用する](#option2)
 
-### <a id="option1"></a> オプション 1: SSSD パッケージを使用して AD ドメインに参加する
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> オプション 1: SSSD パッケージを使用して AD ドメインに参加する
 
 この方法では、**realmd** パッケージと **sssd** パッケージを使用して、SQL Server ホストを AD ドメインに参加させます。
 
@@ -197,20 +197,20 @@ SQL Server ホストを Active Directory ドメイン に参加させるには�
    ```
 
    > [!NOTE]
-   > - **id user@contoso.com** で `No such user` が返される場合は、`sudo systemctl status sssd` コマンドを実行して、SSSD サービスが正常に開始されていることを確認します。 サービスが実行されているのにエラーが表示される場合は、SSSD の詳細ログを有効にしてみます。 詳しくは、[SSSD のトラブルシューティング](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)に関する Red Hat のドキュメントを参照してください。
+   > - **id user\@contoso.com** で `No such user` が返される場合は、`sudo systemctl status sssd` コマンドを実行して、SSSD サービスが正常に開始されていることを確認します。 サービスが実行されているのにエラーが表示される場合は、SSSD の詳細ログを有効にしてみます。 詳しくは、[SSSD のトラブルシューティング](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)に関する Red Hat のドキュメントを参照してください。
    >
-   > - **kinit user@CONTOSO.COM** から `KDC reply did not match expectations while getting initial credentials` が返される場合は、領域を大文字で指定したことを確認します。
+   > - **kinit user\@CONTOSO.COM** から `KDC reply did not match expectations while getting initial credentials` が返される場合は、領域を大文字で指定したことを確認します。
 
 詳しくは、[ID ドメインの検出と参加](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)に関する Red Hat のドキュメントを参照してください。
 
-### <a id="option2"></a> オプション 2: サードパーティの openldap プロバイダー ユーティリティを使用する
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> オプション 2: サードパーティの openldap プロバイダー ユーティリティを使用する
 
 [PBIS](https://www.beyondtrust.com/)、[VAS](https://www.oneidentity.com/products/authentication-services/)、[Centrify](https://www.centrify.com/) などのサードパーティ製ユーティリティを使用できます。 この記事では、個々のユーティリティの手順については説明しません。 最初に、これらのユーティリティのいずれかを使って、SQL Server 用 Linux ホストをドメインに参加させる必要があります。  
 
 SQL Server では、AD 関連のクエリに対して、サードパーティのインテグレーターのコードまたはライブラリは使われません。 SQL Server では常に、このセットアップでの openldap ライブラリの直接呼び出しを使って、AD のクエリが行われます。 サードパーティのインテグレーターは、Linux ホストを AD ドメインに参加させるためにのみ使われ、SQL Server ではこれらのユーティリティとの直接的な通信は行われません。
 
 > [!IMPORTANT]
-> 記事「[SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md#additionalconfig)」の「**その他の構成オプション**」セクションで、**mssql-conf** `network.disablesssd` 構成オプションの使用に関する推奨事項を参照してください。
+> 記事「[SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md#additionalconfig)」の「**その他の構成オプション**」セクションで、**mssql-conf**`network.disablesssd` 構成オプションの使用に関する推奨事項を参照してください。
 
 **/etc/krb5.conf** が正しく構成されていることを確認します。 ほとんどのサードパーティ製 Active Directory プロバイダーでは、この構成は自動的に行われます。 ただし、後で問題が発生するのを防ぐため、 **/etc/krb5.conf** で次の値を確認してください。
 
@@ -237,6 +237,6 @@ host **<IP address of SQL Server host>**
 
 このコマンドの出力は、`**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com` のようになる必要があります。 このコマンドでホストの FQDN が返されない場合、または FQDN が正しくない場合は、SQL Server on Linux ホストの逆引き DNS エントリを DNS サーバーに追加します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 この記事では、Active Directory 認証を使用する Linux ホストコンピューターで SQL Server を構成するための前提条件が示されています。 Active Directory アカウントをサポートするための SQL Server on Linux の構成を完了するには、「[SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md)」の手順に従ってください。

@@ -1,6 +1,7 @@
 ---
-title: 暗号化された列のデータをレプリケートする (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 暗号化された列をレプリケートする (SSMS)
+description: SQL Server Management Studio (SSMS) を使用して、暗号化された列のデータをレプリケートする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e311043882f88f7063a5709c761a88f84cb76066
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4f7e7f7752bfa5aa7698914da1cf38fe1e823dfe
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769592"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160050"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>暗号化された列のデータをレプリケートする (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   レプリケーションでは、暗号化された列データをパブリッシュできます。 このデータの暗号化を解除してサブスクライバーで使用するには、パブリッシャーでのデータの暗号化に使用されたキーがサブスクライバーにも存在する必要があります。 レプリケーションでは、暗号化キーを送信する安全なメカニズムは提供されません。 このため、暗号化キーはサブスクライバーで手動で再作成する必要があります。 このトピックでは、パブリッシャーで列を暗号化し、暗号化キーをサブスクライバーで使用できるようにする方法について説明します。  
   
  基本的な手順は次のとおりです。  
@@ -42,8 +43,6 @@ ms.locfileid: "68769592"
   
 7.  暗号化された列データにアクセスします。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  列データを暗号化するには、対称キーを使用する必要があります。 対称キー自体は、パブリッシャーとサブスクライバーで、それぞれ異なる手段で保護できます。  
   
@@ -60,11 +59,11 @@ ms.locfileid: "68769592"
   
 4.  [CLOSE SYMMETRIC KEY](../../../t-sql/statements/close-symmetric-key-transact-sql.md) を実行してキーを閉じます。  
   
-5.  暗号化された列を含むテーブルをパブリッシュします。 詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
+5.  暗号化された列を含むテーブルをパブリッシュします。 詳しくは、「 [パブリケーションを作成](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
 6.  パブリケーションにサブスクライブします。 詳細については、「[プル サブスクリプションの作成](../../../relational-databases/replication/create-a-pull-subscription.md)」または「[プッシュ サブスクリプションの作成](../../../relational-databases/replication/create-a-push-subscription.md)」を参照してください。  
   
-7.  サブスクリプションを初期化します。 詳しくは、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+7.  サブスクリプションを初期化します。 詳しくは、「 [初期スナップショットの作成および適用](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 8.  手順 1 と同じ値を ALGORITHM、KEY_SOURCE、および IDENTITY_VALUE に使用して、サブスクライバーで [CREATE SYMMETRIC KEY](../../../t-sql/statements/create-symmetric-key-transact-sql.md) を実行します。 ENCRYPTION BY には別の値を指定することもできます。  
   

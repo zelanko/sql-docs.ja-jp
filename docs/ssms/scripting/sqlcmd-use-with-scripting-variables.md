@@ -1,6 +1,6 @@
 ---
-title: sqlcmd でのスクリプト変数の使用 | Microsoft Docs
-ms.custom: ''
+title: sqlcmd でのスクリプト変数の使用
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.technology: scripting
@@ -18,18 +18,18 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142fd6bdd0ceb39003aba5c8ec8131c9df6427dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262859"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "76761616"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - スクリプト変数の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   スクリプトで使用される変数は、スクリプト変数と呼ばれます。 スクリプト変数を使用すると、1 つのスクリプトを複数のシナリオで使用できます。 たとえば、1 つのスクリプトを複数のサーバーに対して実行する場合、各サーバー用にスクリプトを変更するのではなく、サーバー名にスクリプト変数を使用することができます。 サーバー名をスクリプト変数で指定することで、同じスクリプトを複数のサーバーで実行することができるようになります。  
   
- スクリプト変数は、 **setvar** コマンドを使用して明示的に定義するか、または **sqlcmd -v** オプションを使用して暗黙的に定義できます。  
+ スクリプト変数は、**setvar** コマンドを使用して明示的に定義するか、または **sqlcmd -v** オプションを使用して暗黙的に定義できます。  
   
  このトピックでは、 **SET**を使用して Cmd.exe コマンド プロンプトで環境変数を定義する例も紹介しています。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68262859"
   
 2.  ユーザー レベル環境変数  
   
-3.  **SET X=Y**の起動前にコマンド プロンプトで設定されたコマンド シェル ( **SET X=Y**)  
+3.  **sqlcmd**の起動前にコマンド プロンプトで設定されたコマンド シェル (**SET X=Y**)  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd -v** X=Y  
   
 5.  **:Setvar** X Y  
   
@@ -109,7 +109,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd スクリプト変数  
  **sqlcmd** で定義される変数はスクリプト変数と呼ばれます。 次の表は、 **sqlcmd** スクリプト変数の一覧です。  
   
-|        変数         | 関連するオプション | R/W |         既定         |
+|        変数         | 関連するオプション | R/W |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER\*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD\*         | -P             | --  | ""                      |
@@ -121,7 +121,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDHEADERS           | -H             | R/W | "0"                     |
 | SQLCMDCOLSEP            | -S             | R/W | " "                     |
 | SQLCMDCOLWIDTH          | -w             | R/W | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
+| SQLCMDPACKETSIZE        | -a             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | R/W | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | R/W | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | R/W | "0" = 無制限         |
@@ -134,7 +134,7 @@ R は、その値がプログラムの初期化時に一度だけ設定できる
   
 R/W は、 **setvar** コマンドを使用して値を再設定できること、および後続のコマンドで新しい値が使用されることを示します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-setvar-command-in-a-script"></a>A. スクリプトでの setvar コマンドの使用  
  多くの **sqlcmd** オプションは、スクリプトで **setvar** コマンドを使用して制御できます。 次の例では、スクリプト `test.sql` が作成されます。このスクリプトでは、変数 `SQLCMDLOGINTIMEOUT` が `60` 秒に設定され、別のスクリプト変数 `server`が `testserver`に設定されています。 `test.sql`のコードを次に示します。  
@@ -332,7 +332,7 @@ C:\> sqlcmd
   
 ## <a name="see-also"></a>参照  
  [sqlcmd ユーティリティの使用](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
- [-b](../../tools/sqlcmd-utility.md)   
+ [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
  [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

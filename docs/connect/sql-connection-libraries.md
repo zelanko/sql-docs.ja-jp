@@ -1,105 +1,98 @@
 ---
-title: Microsoft SQL データベースの接続ライブラリ |Microsoft Docs
-description: さまざまなプログラミング言語のクライアントから Microsoft SQL Server、Azure SQL Database への接続を有効にするモジュールのダウンロード リンクを提供します。
-author: MightyPen
+title: Microsoft SQL データベースの接続ライブラリ | Microsoft Docs
+description: 各種のクライアント プログラミング言語から Microsoft SQL Server および Azure SQL Database への接続を可能にするモジュールのダウンロード リンクを示します。
+author: David-Engel
 ms.prod: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.custom: ''
 ms.topic: article
-ms.date: 06/18/2018
-ms.author: genemi
-ms.openlocfilehash: 7f759dbe9022cff557461d900a35b3ccc91d2c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.date: 03/06/2020
+ms.author: v-daenge
+ms.openlocfilehash: a60c1314164ddc6b662914d828e4bf5973f38d2f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62862425"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219381"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL データベースの接続モジュール
 
-この記事では接続モジュールのダウンロード リンクまたは*ドライバー*と対話するために、クライアント プログラムが使用できる[Microsoft SQL Server](../relational-databases/database-features.md)、クラウド内のツインを使用して[AzureSQL Database](https://docs.microsoft.com/azure/sql-database/)します。 ドライバーは、次のオペレーティング システムで実行されているプログラミング言語のさまざまな利用できます。
+この記事では、クライアント プログラムが [Microsoft SQL Server](../relational-databases/database-features.md)、およびそれとよく似たクラウド版 [Azure SQL Database](/azure/sql-database/) との対話に使用できる接続モジュール (*ドライバー*) のダウンロード リンクを示します。 次のオペレーティング システムで実行されるさまざまなプログラミング言語用のドライバーが用意されています。
 
 - Linux
-- MacOS
+- macOS
 - Windows
 
-#### <a name="oop-to-relational-mismatch"></a>OOP とリレーショナルの不一致
+**OOP とリレーショナルの不一致:**
 
-*リレーショナル*: 多くの場合、オブジェクト指向プログラミング (OOP) 言語で記述されたクライアント プログラムは、オブジェクト指向より以上のリレーショナル形式で照会されたデータを返す SQL ドライバーを使用します。 C# と ADO.NET を使用して、1 つの例です。 OOP リレーショナル形式が一致しない場合があります、OOP によりコードが記述も理解が困難になります。
+*リレーショナル*:オブジェクト指向プログラミング (OOP) 言語で記述されたクライアント プログラムでは、多くの場合、オブジェクト指向よりもリレーショナルな形式でクエリ データを返す SQL ドライバーを使用します。 ADO.NET を使用する C# がその一例です。 OOP とリレーショナルの形式の不一致により、OOP コードの記述と理解が困難になることがあります。
 
-*ORM*: 他のドライバーやフレームワークには、不一致を回避、OOP 形式で照会されたデータを返します。 これらのドライバーは、クラスを特定の SQL テーブルのデータ列に一致するように定義されていることを想定して動作します。 ドライバーを実行し、*オブジェクト リレーショナル マッピング*(ORM) クラスのインスタンスとして照会されたデータを返すにします。 C# の場合は、マイクロソフトの Entity Framework (EF) と java の場合、休止状態は、2 つの例を示します。
+*ORM*:ほかのドライバーまたはフレームワークは、OOP 形式のクエリ データを返すことで、不一致を回避します。 これらのドライバーは、特定の SQL テーブルのデータ列と一致するようにクラスが定義されていることを前提として機能します。 次に、ドライバーは*オブジェクト リレーショナル マッピング* (ORM) を実行して、クエリ データをクラスのインスタンスとして返します。 Microsoft の Entity Framework (EF) for C#、および Hibernate for Java の 2 つがその例です。
 
-この記事では、個別のセクションを専用接続ドライバーのこれらの 2 種類にします。
+この記事では、この 2 種類の接続ドライバーに個別のセクションを割り当てています。
 
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>リレーショナル アクセス用のドライバー
 
-
-<!--
-Each given Microsoft Download Center page should be enhanced
-with a link to the next NEWER version page, on the day that the
-original page is no longer the latest because the newer page is being added.
-But this policy is not agreed on or observed,
-putting the links in the following table at risk for being outdated.
-
-PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
--->
-
-| [言語] | SQL driver をダウンロードします。 |
+| Language | SQL ドライバーのダウンロード |
 | :------- | :---------------------- |
-| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[Linux-Ubuntu 用の .NET Core](https://www.microsoft.com/net/core#Ubuntu)<br />[MacOS 用の .NET core](https://www.microsoft.com/net/core#macos)<br />[Windows 用の .NET core](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core: Linux-Ubuntu、macOS、Windows](https://dotnet.microsoft.com/download) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js ドライバー、インストール手順](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
-| PHP (PHP) | [PHP](./php/download-drivers-php-sql-server.md) |
-| Python | [pyodbc、インストール手順](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[ODBC をダウンロードします。](./odbc/download-odbc-driver-for-sql-server.md) |
-| Ruby | [インストール手順については、ruby ドライバー](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby のダウンロード ページ](https://rubyinstaller.org/downloads/) |
-| &nbsp; | <br /> |
+| PHP | [PHP](./php/download-drivers-php-sql-server.md) |
+| Python | [pyodbc、インストール手順](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[ODBC のダウンロード](./odbc/download-odbc-driver-for-sql-server.md) |
+| Ruby | [Ruby ドライバー、インストール手順](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby のダウンロード ページ](https://rubyinstaller.org/downloads/) |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-40-drivers-orm-access" />
 
-## <a name="drivers-for-orm-access"></a>ORM へのアクセス用のドライバー
+## <a name="drivers-for-orm-access"></a>ORM アクセス用のドライバー
 
+次の表は、クライアントアプリケーションが Microsoft SQL データベースに接続するために使用するオブジェクト リレーショナル マッピング (ORM) フレームワークの例を示しています。
 
-次の表では、Microsoft SQL データベースに接続するクライアント アプリケーションを使用するオブジェクト リレーショナル マッピング (ORM) フレームワークの例を示します。
-
-
-| [言語] | ORM ドライバーのダウンロード |
+| Language | ORM ドライバーのダウンロード |
 | :------- | :------------------ |
 | C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x 以降)](https://docs.microsoft.com/ef/) |
-| Java | [ORM を休止状態します。](https://hibernate.org/orm)|
-| PHP (PHP) | [連ねました ORM、Laravel のインストールに含まれる](https://laravel.com/docs/) |
-| Node.js | [ORM を sequelize します。](https://docs.sequelizejs.com) |
+| Java | [Hibernate ORM](https://hibernate.org/orm)|
+| PHP | [Eloquent ORM (Laravel のインストールに含まれています)](https://laravel.com/docs/) |
+| Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-
+| &nbsp; | &nbsp; |
 
 <a name="anchor-60-build-an-app-webpages" />
 
-## <a name="build-an-app-webpages"></a>ビルドのアプリ、web ページ
-[https://aka.ms/sqldev](https://aka.ms/sqldev) セットに移動 *- アプリをビルド*web ページ。 Web ページは、プログラミング言語、オペレーティング システム、および SQL の接続用ドライバーのさまざまな組み合わせに関する情報を提供します。 などのビルドのアプリ、web ページによって提供される情報には、次の項目を示します。
+## <a name="build-an-app-webpages"></a>Build-an-app の Web ページ
 
-- 言語 + オペレーティング システム、ドライバーの組み合わせごとに、最初から開始する方法の詳細。
-    - SQL 接続の最新のドライバーをインストールするための手順です。
-- 次の項目ごとのコード例:
-    - オブジェクト リレーショナルのコード例です。
-    - RDS のコード例です。
-    - パフォーマンスを向上させる多くの列ストア インデックスのデモンストレーションします。
+**[https://aka.ms/sqldev](https://aka.ms/sqldev)** により、*Build-an-app* の一連の Web ページが表示されます。 これらの Web ページには、プログラミング言語、オペレーティング システム、および SQL 接続ドライバーのさまざまな組み合わせに関する情報が記載されています。 Build-an-app の Web ページで提供される情報の中には、次の項目があります。
 
-#### <a name="first-page-of-build-an-app-webpages"></a>ビルドのアプリ、web ページの最初のページ
-![ビルドのアプリ、web ページ、最初のページのスクリーン ショット][image-ref-163-buildanapp-webpages-first-page]
+- 言語 + オペレーティングシステム + ドライバーの組み合わせごとに、作業を開始する方法についての詳細。
+  - 最新の SQL 接続ドライバーをインストールするための手順。
+- 次の各項目のコード例。
+  - オブジェクト リレーショナル コードの例。
+  - RDS のコード例です。
+  - パフォーマンスの大幅な向上のための列ストア インデックスのデモ。
 
-#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Java - ビルド-アプリ、web ページの Ubuntu のメニュー
-![ビルドのアプリ、web ページ、Java Ubuntu メニュー][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
+**Build-an-app の Web ページの最初のページ:**  
+![Build-an-app の Web ページの最初のページのスクリーンショット](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
+
+**Build-an-app の Web ページの [Java] メニューの [Ubuntu]**  
+![Build-an-app の Web ページの [Java] メニューの [Ubuntu]](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png)
 
 &nbsp;
 
 ## <a name="related-links"></a>関連リンク
-- [コード例では、Java とその他の言語では、クラウドでの Azure SQL Database に接続するため](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)します。
 
-<!-- Image references -->
+- [Java およびその他の言語を使用してクラウド内の Azure SQL Database に接続する方法のコード例](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)
+
+<!--
+Image references, **obsolete** markdown syntax alternative:
+
+![Build-an-app webpages, first page screenshot][image-ref-163-buildanapp-webpages-first-page]
+![Build-an-app webpages, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
 
 [image-ref-163-buildanapp-webpages-first-page]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
 [image-ref-167-buildanapp-webpages-menu-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
+-->

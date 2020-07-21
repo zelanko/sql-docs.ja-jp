@@ -12,25 +12,25 @@ helpviewer_keywords:
 - registry entries for components [ODBC], drivers subkey
 - drivers subkey [ODBC]
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eb54ba7becad42d8d9d2c2870c02db37a3c7d89f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dd1f8d3293e35a543cce6b5079d9c6e10a331a88
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093982"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304033"
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC ドライバーのサブキー
-ODBC ドライバーのサブキーの下の値には、インストールされているドライバーが一覧表示します。 これらの値の形式は、次の表に示します。  
+[ODBC ドライバー] サブキーの下の値には、インストールされているドライバーが一覧表示されます。 これらの値の形式を次の表に示します。  
   
-|名前|データ型|data|  
+|名前|データの種類|データ|  
 |----------|---------------|----------|  
-|*ドライバーの説明*|REG_SZ|**インストールされています。**|  
+|*ドライバー-説明*|REG_SZ|**インストール済み**|  
   
- *ドライバー説明*名は、ドライバーの開発者によって定義されます。 これは通常、ドライバーに関連付けられている DBMS の名前です。  
+ *ドライバーの説明*名は、ドライバーの開発者によって定義されます。 通常は、ドライバーに関連付けられている DBMS の名前です。  
   
- たとえば、書式設定されたテキスト ファイルと SQL Server のドライバーがインストールされているとします。 ODBC ドライバーのサブキーの下の値は次のようになります。  
+ たとえば、フォーマットされたテキストファイルと SQL Server にドライバーがインストールされているとします。 ODBC ドライバーサブキーの下の値は次のようになります。  
   
 ```  
 Text : REG_SZ : Installed  

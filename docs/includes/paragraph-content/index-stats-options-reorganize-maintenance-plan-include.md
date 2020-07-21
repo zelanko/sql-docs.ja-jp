@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 78b372942de6ec62823dddecd08fdb7221cbe7a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68219686"
----
 
 
 ### <a name="index-stats-options"></a>インデックス統計オプション
@@ -32,7 +24,7 @@ Initially used in:
  システムは、インデックス統計情報を収集するために、リソースを使用する必要があります。 必要とするインデックス統計情報の精度に応じて、比較的少ないリソースを消費するか、多くのリソースを消費するかを選択できます。 UI には次の精度レベルの一覧があり、ユーザーはそのうち 1 つを選択する必要があります。
 
 
-- [高速]
+- 速い
 - サンプリング
 - 詳細
 
@@ -41,7 +33,7 @@ Initially used in:
  UI には、まだ最新情報に更新する必要のないインデックスが更新されないようにするために使用できる、次の調節可能なフィルターが提供されています。
 
 
-- 断片化&gt; *(%)*
+- 断片化 &gt; *(%)*
 - ページ数&gt;
 - 最終使用 *(日)*
 

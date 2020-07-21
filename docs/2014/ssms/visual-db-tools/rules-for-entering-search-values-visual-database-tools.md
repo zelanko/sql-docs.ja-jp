@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fc11acccd25dafd811379384bf9975e74e8986b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2263e2565137d50f318b8593e6ca9c16736c6cbe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63070986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067128"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>検索値を入力するときの規則 (Visual Database Tools)
   このトピックでは、検索条件に対して次の種類のリテラル値を入力するときに従う規則について説明します。  
@@ -116,7 +115,7 @@ ms.locfileid: "63070986"
   
 |**ペイン**|**日付形式**|  
 |--------------|---------------------|  
-|[抽出条件]|ロケール固有&#x2028;データベース固有&#x2028;ANSI 標準<br /><br /> [抽出条件ペイン](visual-database-tools.md) で入力された日付は、SQL ペインではデータベース互換の形式に変換されます。|  
+|条件|ロケール固有&#x2028;データベース固有&#x2028;ANSI 標準<br /><br /> [抽出条件ペイン](visual-database-tools.md) で入力された日付は、SQL ペインではデータベース互換の形式に変換されます。|  
 |SQL|データベース固有&#x2028;ANSI 標準|  
 |[結果]|ロケール固有|  
   

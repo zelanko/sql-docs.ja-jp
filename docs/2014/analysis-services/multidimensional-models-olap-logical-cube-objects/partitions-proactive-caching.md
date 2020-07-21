@@ -1,5 +1,5 @@
 ---
-title: プロアクティブ キャッシュ (パーティション) |Microsoft Docs
+title: プロアクティブキャッシュ (パーティション) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a903d73394b191dbfe96dea710fb2c6c86165402
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62727276"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545234"
 ---
 # <a name="proactive-caching-partitions"></a>プロアクティブ キャッシュ (パーティション)
   プロアクティブ キャッシュでは、自動 MOLAP キャッシュの作成と、OLAP オブジェクトの管理が可能です。 データベース内のデータに加えられた変更は、データベースからの通知に基づき、すぐにキューブに反映されます。 プロアクティブ キャッシュの目標は、従来の MOLAP のパフォーマンスを提供しながら、ROLAP の即時性と管理のしやすさを保つことです。  
@@ -43,7 +42,7 @@ ms.locfileid: "62727276"
  待機時間を削減する一方でパフォーマンスを最適化するために、現在の MOLAP オブジェクトを削除せずにキャッシュを使用することもできます。 クエリは、データが新しいキャッシュに読み込まれ、処理されている間に MOLAP オブジェクトに対して続行されます。 この方法では、パフォーマンスは向上しますが、新しいキャッシュが構築されている間に、クエリが古いデータを返す場合があります。  
   
 ## <a name="see-also"></a>参照  
- [ディメンションのストレージ](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
+ [ディメンションストレージ](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [パーティション ストレージの設定 (Analysis Services - 多次元)](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

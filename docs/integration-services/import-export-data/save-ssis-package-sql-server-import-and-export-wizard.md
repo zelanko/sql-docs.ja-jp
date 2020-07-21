@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.savedtspackage.f1
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dbf07e5a0583520b563bb33a0c5823c5fa458b4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901748"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296260"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
 
@@ -35,10 +35,10 @@ ms.locfileid: "67901748"
 ![パッケージの保存 - 共通オプション](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>パッケージの名前と説明を指定します。  
- **[名前]**  
+ **Name**  
  パッケージの一意な名前を指定します。  
   
- **[説明]**  
+ **説明**  
  パッケージの説明を指定します。 パッケージを見るだけでその内容がわかり、保守が容易になるように、パッケージの目的について記述することをお勧めします。  
   
  **移行先**  
@@ -58,13 +58,13 @@ ms.locfileid: "67901748"
  **サーバー名**  
  保存先のサーバー名を入力または選択します。  
    
- **Windows 認証を使用する**  
+ **[Windows 認証を使用する]**  
 Windows 統合認証を使用してサーバーに接続します。 これは、推奨される認証方法です。  
   
- **SQL Server 認証を使用する**  
+ **[SQL Server 認証を使用する]**  
 SQL Server 認証を使用してサーバーに接続します。  
   
- **User name**  
+ **ユーザー名**  
 SQL Server 認証を指定した場合は、ユーザー名を入力します。  
   
  **パスワード**  

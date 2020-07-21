@@ -1,5 +1,5 @@
 ---
-title: メンバー オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: メンバーオブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Member object [ADO MD]
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb8efcb41ea0a82f11351e5a439ee8b9cf7a053e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7715566aec18b3ac9fdcc8a44c6dba12df9d27d7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949484"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765112"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -29,15 +29,15 @@ ms.locfileid: "67949484"
   
  [Description プロパティ](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
   
- [DrilledDown プロパティ](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)  
+ [Dril"Down" プロパティ](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)  
   
- [データセットに LevelDepth プロパティ](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)  
+ [LevelDepth プロパティ](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)  
   
  [LevelName プロパティ](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)  
   
  [Name プロパティ](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
- [親プロパティ](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
+ [Parent プロパティ](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
   
  [ParentSameAsPrev プロパティ](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
   
@@ -53,5 +53,5 @@ ms.locfileid: "67949484"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

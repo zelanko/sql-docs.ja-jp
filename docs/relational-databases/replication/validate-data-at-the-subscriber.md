@@ -17,15 +17,15 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e666a14b93725b833ec8a050bb637ee71c39c6ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720656"
 ---
 # <a name="validate-replicated-data"></a>レプリケートされたデータの検証
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、サブスクライバーでデータを検証する方法について説明します。  
   
 トランザクション レプリケーションとマージ レプリケーションを使用すると、サブスクライバーのデータがパブリッシャーのデータと一致するかどうかを検証できます。 検証は、1 つのパブリケーションの特定のサブスクリプション、またはすべてのサブスクリプションに対して行うことができます。 次のいずれかの種類の検証を指定すると、ディストリビューション エージェントまたはマージ エージェントは次回の実行時にデータを検証します。  
@@ -89,7 +89,7 @@ ms.locfileid: "68769286"
   
 ## <a name="articles-in-transactional-replication"></a>トランザクション レプリケーションのアーティクル 
 
-### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用
+### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio を使用する
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。    
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。    
@@ -108,7 +108,7 @@ ms.locfileid: "68769286"
 
 #### <a name="all-articles"></a>すべてのアーティクル 
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md) を実行します。 **@publication** を指定し、 **@rowcount_only** に次のいずれかの値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md) を実行します。 `@publication` を指定し、`@rowcount_only` には次のいずれかの値を指定します。  
   
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** - 行数とバイナリ チェックサム  
@@ -120,7 +120,7 @@ ms.locfileid: "68769286"
   
 #### <a name="single-article"></a>単一のアーティクル  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) を実行します。 **@publication** を指定し、 **@article** にアーティクルの名前を、 **@rowcount_only** に次のいずれかの値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) を実行します。 `@publication` を指定し、`@article` にはアーティクルの名前、`@rowcount_only` には次のいずれかの値を指定します。  
   
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** - 行数とバイナリ チェックサム  
@@ -134,9 +134,9 @@ ms.locfileid: "68769286"
 #### <a name="single-subscriber"></a>単一のサブスクライバー 
   
 1.  パブリッシャーのパブリケーション データベースで、[BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md) を使用して明示的なトランザクションを開始します。    
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md) を実行します。 **@publication** にパブリケーションを、 **@subscriber** にサブスクライバーの名前を、 **@destination_db** にサブスクリプション データベースの名前を指定します。    
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md) を実行します。 `@publication` にはパブリケーション、`@subscriber` にはサブスクライバーの名前、`@destination_db` にはサブスクリプション データベースの名前を指定します。    
 3.  (省略可) 検証の対象となる各サブスクリプションについて、手順 2. を繰り返します。    
-4.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) を実行します。 **@publication** を指定し、 **@article** にアーティクルの名前を、 **@rowcount_only** に次のいずれかの値を指定します。    
+4.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) を実行します。 `@publication` を指定し、`@article` にはアーティクルの名前、`@rowcount_only` には次のいずれかの値を指定します。    
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** - 行数とバイナリ チェックサム  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68769286"
   
 ## <a name="for-a-single-subscription-to-a-merge-publication"></a>マージ パブリケーションの単一のサブスクリプション
 
-### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用
+### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio を使用する
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。    
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。   
@@ -185,7 +185,7 @@ ms.locfileid: "68769286"
   
 ## <a name="for-all-subscriptions-to-a-merge-publication"></a>マージ パブリケーションのすべてのサブスクリプション
 
-### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用  
+### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio を使用する  
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。    
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。   
 3.  サブスクリプションを検証するパブリケーションを右クリックし、 **[すべてのサブスクリプションの検証]** をクリックします。    
@@ -214,7 +214,7 @@ ms.locfileid: "68769286"
     3.  **[同期の履歴]** タブの **[選択されたセッションの最終メッセージ]** テキスト領域に情報が表示されます。  
 
 ### <a name="using-transact-sql"></a>Transact-SQL の使用
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md) を実行します。 **@publication** を指定し、 **@subscriber** にサブスクライバーの名前を、 **@subscriber_db** にサブスクリプション データベースの名前を、 **@level** に次のいずれかの値を指定します。   
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md) を実行します。 `@publication` を指定し、`@subscriber` にはサブスクライバーの名前、`@subscriber_db` にはサブスクリプション データベースの名前、`@level` には次のいずれかの値を指定します。   
     -   **1** - 行数の検証のみ    
     -   **3** - 行数とバイナリ チェックサムの検証  
   
@@ -241,7 +241,7 @@ ms.locfileid: "68769286"
     3.  **[同期の履歴]** タブの **[選択されたセッションの最終メッセージ]** テキスト領域に情報が表示されます。 
   
 ### <a name="using-transact-sql"></a>Transact-SQL の使用
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md) を実行します。 **@publication** を指定し、 **@level** に次のいずれかの値を指定します。    
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md) を実行します。 `@publication` を指定し、`@level` には次のいずれかの値を指定します。    
     -   **1** - 行数の検証のみ   
     -   **3** - 行数とバイナリ チェックサムの検証  
   
@@ -259,7 +259,7 @@ ms.locfileid: "68769286"
   
      詳細については、「 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 」または「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」を参照してください。  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーションでは、サブスクライバーのデータがパブリッシャーのデータと一致するかどうかを、レプリケーション管理オブジェクト (RMO) を使用してプログラムから検証できます。 使用するオブジェクトは、レプリケーション トポロジの種類によって異なります。 トランザクション レプリケーションでは、パブリケーションのサブスクリプションをすべて検証する必要があります。  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ ms.locfileid: "68769286"
   
 5.  目的のサブスクリプションについてマージ エージェントを実行して検証を開始するか、次回予定されているエージェントの実行を待ちます。 詳細については、「 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 」および「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」を参照してください。 検証操作の結果は、エージェントの履歴に出力されます。この履歴は、レプリケーション モニターを使って表示できます。 詳しくは、「 [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)」をご覧ください。  
   
-###  <a name="RMOExample"></a> 例 (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> 例 (RMO)  
  次の例では、トランザクション パブリケーションのすべてのサブスクリプションを、行数検証の対象としてマークします。  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

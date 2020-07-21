@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81b33843ccf0096453fe1cabbde4a1741f89aff2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960162"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server エージェントでの Windows PowerShell ステップの実行
   SQL Server エージェントを使用して、スケジュールされた時刻に SQL Server PowerShell スクリプトを実行します。  
   
-1.  **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)  
+1.  **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)  
   
-2.  **SQL Server エージェントから PowerShell を実行するには:**[PowerShell ジョブ ステップ](#PShellJob)、[コマンド プロンプト ジョブ ステップ](#CmdExecJob)  
+2.  **SQL Server エージェントから PowerShell を実行するには:** [PowerShell ジョブ ステップ](#PShellJob)、[コマンド プロンプト ジョブ ステップ](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>はじめに  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントのジョブ ステップにはいくつかの種類があります。 それぞれの種類は、レプリケーション エージェントやコマンド プロンプト環境など、特定の環境を実装するサブシステムに関連付けられています。 Windows PowerShell スクリプトのコードを作成した後、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントを使用して、スケジュールされた時刻に実行されるジョブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] イベントに応答して実行されるジョブにそのスクリプトを含めることができます。 コマンド プロンプト ジョブ ステップまたは PowerShell ジョブ ステップを使用して、Windows PowerShell スクリプトを実行できます。  
@@ -31,12 +30,12 @@ ms.locfileid: "62922901"
   
 2.  コマンド プロンプト ジョブ ステップを使用して PowerShell.exe を実行し、`sqlps` モジュールをインポートするスクリプトを指定する。  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
   
 > [!CAUTION]  
 >  `sqlps` モジュールで PowerShell を実行する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブ ステップでは、それぞれ、約 20 MB のメモリを消費するプロセスが起動されます。 大量の Windows PowerShell ジョブ ステップを同時実行すると、パフォーマンスに悪影響が及びます。  
   
-##  <a name="PShellJob"></a> PowerShell ジョブ ステップの作成  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a>PowerShell ジョブステップの作成  
  **PowerShell ジョブ ステップを作成するには**  
   
 1.  **[SQL Server エージェント]** を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]** をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](../ssms/agent/create-jobs.md)」を参照してください。  
@@ -53,7 +52,7 @@ ms.locfileid: "62922901"
   
 7.  **[詳細設定]** ページをクリックして、ジョブ ステップのオプションのうち、ジョブ ステップが成功または失敗した場合のアクション、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントによるジョブ ステップの再試行回数、および再試行間隔を設定します。  
   
-##  <a name="CmdExecJob"></a> コマンド プロンプト ジョブ ステップの作成  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a>コマンドプロンプトジョブステップの作成  
  **CmdExec ジョブ ステップを作成するには**  
   
 1.  **[SQL Server エージェント]** を展開し、新しいジョブを作成するか、既存のジョブを右クリックして **[プロパティ]** をクリックします。 ジョブの作成に関する詳細については、「 [ジョブの作成](../ssms/agent/create-jobs.md)」を参照してください。  

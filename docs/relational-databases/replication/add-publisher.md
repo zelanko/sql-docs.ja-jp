@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bd972c1825deb947537473096653fc33e07a92fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726092"
 ---
 # <a name="add-publisher"></a>[パブリッシャーの追加]
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[パブリッシャーの追加]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに 1 つまたは複数のパブリッシャーを追加できます。 パブリッシャーを追加した後、左ペインでパブリッシャーを選択すると、そのパブリッシャーに関する情報が右ペインに表示されます。  
   
 ## <a name="options"></a>オプション  
- **[追加]**  
- クリックすると、追加するパブリッシャーの種類を選択するための **[サーバーへの接続]** ダイアログ ボックスが表示されます。 使用可能なオプションは次のとおりです。  
+ **追加**  
+ クリックすると、追加するパブリッシャーの種類を選択するための **[サーバーへの接続]** ダイアログ ボックスが表示されます。 オプションは次のとおりです。  
   
 -   **[SQL Server パブリッシャーの追加]**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68768855"
 > [!NOTE]  
 >  通常はディストリビューターとパブリッシャーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同一インスタンス上で実行しますが、ディストリビューターを別のインスタンス上で実行することもできます (この構成をリモート ディストリビューターと呼びます)。  
   
- **[削除]**  
+ **Remove**  
  ダイアログ ボックスの上部のグリッドでパブリッシャーを選択し、 **[削除]** をクリックすると、追加対象のパブリッシャーの一覧からパブリッシャーを削除できます。  
   
 > [!NOTE]  

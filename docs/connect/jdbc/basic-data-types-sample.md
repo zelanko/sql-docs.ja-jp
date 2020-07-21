@@ -1,7 +1,7 @@
 ---
-title: 基本的なデータ型のサンプル |Microsoft Docs
+title: 基本データ型のサンプル | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d995dc6fb4b58249abd4fc2d3fc879adc66b5b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 9374c76a76aa12f60fc3fa5f911916f39000d8b4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957398"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69028459"
 ---
 # <a name="basic-data-types-sample"></a>基本データ型のサンプル
 
@@ -31,9 +31,9 @@ ms.locfileid: "67957398"
 
 ## <a name="requirements"></a>必要条件
 
-このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスの設定方法の詳細については、「 [JDBC ドライバーの使用](../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。
+このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスを設定する方法の詳細については、「[JDBC ドライバーの使用](../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。
 
-このサンプルでは、必要なテーブルを作成し、サンプル[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]データベースにサンプルデータを挿入します。
+このサンプルでは、必要なテーブルを作成し、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースにサンプル データを挿入します。
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、「[JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)」を参照してください。

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2b80156459988793ae4733c9617562b5b6120ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa0bc1c078e476fbf888f632f583179c6066e1e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748803"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   geometry インスタンスの Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現を返します。  
  
@@ -39,9 +39,9 @@ ms.locfileid: "68100981"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **varbinary(max)**  
   
- CLR の戻り値の型:**SqlBytes**  
+ CLR 戻り値の型: **SqlBytes**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、(0,0) から (2,3) までの `LineString` geometry インスタンスをテキストから作成します。 `STAsBinary()` は結果を WKB で返します。  
   
 ```  

@@ -1,7 +1,7 @@
 ---
-title: sys.column_encryption_key_values (TRANSACT-SQL) |Microsoft Docs
+title: column_encryption_key_values (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,42 +17,46 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_encryption_key_values catalog view
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c4a9f214ca9a947e8f488dd347f69b487b963e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c9c17ef0384d1b4ef1bc5534ffeffa8b2ba3d598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718881"
 ---
-# <a name="syscolumnencryptionkeyvalues-transact-sql"></a>sys.column_encryption_key_values (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="syscolumn_encryption_key_values-transact-sql"></a>column_encryption_key_values (Transact-sql)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  暗号化キー (CEKs) のいずれかの方法で作成された列の暗号化された値についての情報を取得、[列の暗号化キーの作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)または[列の暗号化キーの変更&#40;Transact SQL&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)ステートメントです。 それぞれの行は、列のマスター_キー (CMK) を使用して暗号化を CEK の値を表します。  
+  列の暗号化キー (CEKs) の暗号化された値に関する情報を返します、列の暗号化キーを[作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)するか、 [ALTER column 暗号化キー &#40;transact-sql&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)ステートメントです。 各行は、列マスターキー (CMK) で暗号化された CEK の値を表します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**column_encryption_key_id**|**int**|データベース CEK の ID です。|  
-|**column_master_key_id**|**int**|CEK 値の暗号化に使用された列のマスター_キーのキーの ID です。|  
-|**encrypted_value**|**varbinary(8000)**|CEK コンテンツ column_master_key_id で指定された CMK で暗号化された値。|  
-|**encryption_algorithm_name**|**sysname**|CEK 値を暗号化するためのアルゴリズムの名前です。<br /><br /> 値の暗号化に使用する暗号化アルゴリズムの名前です。 システム プロバイダーのアルゴリズムである必要があります**RSA_OAEP**します。|  
+|**column_encryption_key_id**|**int**|データベース内の CEK の ID。|  
+|**column_master_key_id**|**int**|CEK 値の暗号化に使用された列マスターキーの ID。|  
+|**encrypted_value**|**varbinary(8000)**|Column_master_key_id で指定された CMK で暗号化された CEK 値。|  
+|**encryption_algorithm_name**|**sysname**|CEK 値の暗号化に使用されるアルゴリズムの名前。<br /><br /> 値を暗号化するために使用する暗号化アルゴリズムの名前です。 システムプロバイダーのアルゴリズムは**RSA_OAEP**である必要があります。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 必要です、**ビューの列の暗号化キー**のアクセス許可。  
+ **VIEW ANY COLUMN ENCRYPTION KEY**権限が必要です。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
- [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
- [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
- [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
+ [Transact-sql&#41;&#40;の列暗号化キーの作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+ [Transact-sql&#41;&#40;列暗号化キーの変更](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+ [Transact-sql&#41;&#40;列暗号化キーを削除します。](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [CREATE COLUMN MASTER KEY &#40;Transact-sql&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+ [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [column_encryption_keys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
+ [column_master_keys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
+ [&#40;Transact-sql&#41;の列](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Secure enclaves での Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+
   
   

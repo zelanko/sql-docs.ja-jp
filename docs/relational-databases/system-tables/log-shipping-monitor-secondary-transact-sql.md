@@ -1,5 +1,5 @@
 ---
-title: log_shipping_monitor_secondary (TRANSACT-SQL) |Microsoft Docs
+title: log_shipping_monitor_secondary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,53 +15,53 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_secondary system table
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 838c810c28c03ae11237f449483789ed8dbbf740
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 31ea0a1a0bd9c7895f1c705cfebd69cfa8ff4193
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989958"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890174"
 ---
-# <a name="logshippingmonitorsecondary-transact-sql"></a>log_shipping_monitor_secondary (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="log_shipping_monitor_secondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ログ配布構成におけるセカンダリ データベースごとに 1 つの監視レコードを格納します。 このテーブルに格納されます、 **msdb**データベース。  
+  ログ配布構成のセカンダリデータベースごとに1つの監視レコードを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
- 履歴や監視に関連するテーブルは、プライマリ サーバーとセカンダリ サーバーにも使用されます。  
+ 履歴と監視に関連するテーブルは、プライマリサーバーとセカンダリサーバーでも使用されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**secondary_server**|**sysname**|セカンダリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。|  
-|**secondary_database**|**sysname**|ログ配布構成におけるセカンダリ データベースの名前。|  
+|**secondary_server**|**sysname**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのセカンダリインスタンスの名前です。|  
+|**secondary_database**|**sysname**|ログ配布構成のセカンダリデータベースの名前。|  
 |**secondary_id**|**uniqueidentifier**|ログ配布構成におけるセカンダリ サーバーの ID。|  
 |**primary_server**|**sysname**|ログ配布構成における [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のプライマリ インスタンスの名前。|  
-|**primary_database**|**sysname**|ログ配布構成におけるプライマリ データベースの名前。|  
-|**restore_threshold**|**int**|許容経過時間を分単位の数は、アラートを生成する前に、操作を復元します。|  
+|**primary_database**|**sysname**|ログ配布構成のプライマリデータベースの名前。|  
+|**restore_threshold**|**int**|復元操作の間に、アラートが生成されるまでの経過時間 (分単位)。|  
 |**threshold_alert**|**int**|復元のしきい値を超えたときに発生する警告。|  
-|**threshold_alert_enabled**|**bit**|復元のしきい値の警告を有効にするかどうか。 1 = 有効にします。<br /><br /> 0 = 無効になっています。|  
-|**last_copied_file**|**nvarchar(500)**|セカンダリ サーバーにコピーされた最後のバックアップ ファイルの名前。|  
-|**last_copied_date**|**datetime**|セカンダリ サーバーに最後にコピー操作の日付と時刻。|  
-|**last_copied_date_utc**|**datetime**|世界協定時刻で表される、セカンダリ サーバーに最後にコピー操作の日付と時刻。|  
-|**last_restored_file**|**nvarchar(500)**|セカンダリ データベースに復元される最後のバックアップ ファイルの名前。|  
-|**last_restored_date**|**datetime**|最後の日付と時刻は、セカンダリ データベースに対する操作を復元します。|  
-|**last_restored_date_utc**|**datetime**|最後の日付と時刻、世界協定時刻で表される、セカンダリ データベースに対する操作を復元します。|  
-|**last_restored_latency**|**int**|プライマリ ログ バックアップの作成時に、セカンダリで復元された場合との間経過した時間 (分) の量。<br /><br /> 初期値には NULL です。|  
-|**history_retention_period**|**int**|時間、分単位でログ配布履歴されるレコードは削除する前に特定のセカンダリ データベースに保持されます。|  
+|**threshold_alert_enabled**|**bit**|復元のしきい値の警告を有効にするかどうか。 1 = 有効。<br /><br /> 0 = 無効です。|  
+|**last_copied_file**|**nvarchar (500)**|セカンダリ サーバーにコピーされた最後のバックアップ ファイルの名前。|  
+|**last_copied_date**|**datetime**|セカンダリサーバーに最後にコピー操作を行った日時です。|  
+|**last_copied_date_utc**|**datetime**|セカンダリサーバーへの最後のコピー操作の日時。協定世界時で表されます。|  
+|**last_restored_file**|**nvarchar (500)**|セカンダリデータベースに復元された最後のバックアップファイルのファイル名。|  
+|**last_restored_date**|**datetime**|セカンダリデータベースに対する最後の復元操作の日時。|  
+|**last_restored_date_utc**|**datetime**|セカンダリデータベースでの最後の復元操作の日時。協定世界時で表されます。|  
+|**last_restored_latency**|**int**|ログバックアップがプライマリで作成されてからセカンダリに復元されるまでの経過時間 (分単位)。<br /><br /> 初期値が NULL です。|  
+|**history_retention_period**|**int**|指定されたセカンダリデータベースのログ配布履歴レコードが保持されてから削除されるまでの時間 (分単位)。|  
   
-## <a name="remarks"></a>コメント  
- に加えて、リモート監視サーバーでは、格納されているし、セカンダリ サーバーでセカンダリ サーバーに関連する情報が格納されていることもその**log_shipping_monitor_secondary**テーブル。  
+## <a name="remarks"></a>Remarks  
+ リモート監視サーバーに格納されているだけでなく、セカンダリサーバーに関連する情報は、セカンダリサーバーの**log_shipping_monitor_secondary**テーブルにも格納されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_refresh_log_shipping_monitor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [sp_add_log_shipping_secondary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
- [sp_change_log_shipping_secondary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
- [sp_delete_log_shipping_secondary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [sp_add_log_shipping_secondary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
+ [sp_change_log_shipping_secondary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
+ [sp_delete_log_shipping_secondary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
- [sp_help_log_shipping_monitor_secondary &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [システム テーブル &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+ [sp_help_log_shipping_monitor_secondary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

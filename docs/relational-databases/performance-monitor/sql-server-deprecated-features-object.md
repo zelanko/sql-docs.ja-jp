@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69c415d66ca3f490f0a3b293090ccac36bf9cc51
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724783"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SQLServer:Deprecated Features オブジェクトには、非推奨に指定された機能を監視するためのカウンターがあります。 いずれの場合も、このカウンターは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動してから非推奨の機能が検出された回数を示す使用カウントを表示します。  
   
@@ -36,13 +36,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 次の表に、SQL Server **Deprecated Features** パフォーマンス オブジェクトの説明を示します。
 
-|**SQL Server:Deprecated Features カウンター**|Description|  
+|**SQL Server:Deprecated Features カウンター**|説明|  
 |-------------|-----------------|  
 |**使用方法**|SQL Server の前回起動以降の機能の使用状況。|
   
  次の表に、SQL Server Deprecated Features カウンター インスタンスの説明を示します。  
   
-|SQL Server Deprecated Features カウンター インスタンス|Description|  
+|SQL Server Deprecated Features カウンター インスタンス|説明|  
 |------------------------------------------------------|-----------------|  
 |'#' および ' ##' 一時テーブルおよびストアド プロシージャの名前として|# 以外の文字を含んでいない識別子が見つかりました。 別の文字を少なくとも 1 文字は使用してください。 コンパイルごとに 1 回発生します。|  
 |'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 `SELECT column_list FROM` *< function_name>* `()` に置き換えてください。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
@@ -118,7 +118,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |INSERT_HINTS||  
 |Korean_Wansung_Unicode|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。|  
 |Lithuanian_Classic|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。|  
-|Macedonian|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。 代わりに Macedonian_FYROM_90 を使用してください。|  
+|マケドニア語|イベントは、データベースを起動するごとに 1 回、および照合順序を使用するごとに 1 回発生します。 この照合順序を使用するアプリケーションの変更を計画してください。 代わりに Macedonian_FYROM_90 を使用してください。|  
 |MODIFY FILEGROUP READONLY|MODIFY FILEGROUP READONLY 構文が見つかりました。 READ_ONLY 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READWRITE 構文が見つかりました。 READ_WRITE 構文を使用してステートメントを書き直してください。 コンパイルごとに 1 回発生します。|  
 |3 つ以上の部分で構成される列名|クエリの列リストで 3 部または 4 部構成の名前が使用されています。 標準に準拠した 2 部構成の名前を使用するようにクエリを変更してください。 コンパイルごとに 1 回発生します。|  
@@ -254,7 +254,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sysobjects|sysobjects への参照が見つかりました。 代わりに sys.objects を使用してください。 コンパイルごとに 1 回発生します。|  
 |sysoledbusers|sysoledbusers への参照が見つかりました。 代わりに sys.linked_logins を使用してください。 コンパイルごとに 1 回発生します。|  
 |sysopentapes|sysopentapes への参照が見つかりました。 代わりに sys.dm_io_backup_tapes を使用してください。 コンパイルごとに 1 回発生します。|  
-|sysperfinfo|sysperfinfo への参照が見つかりました。 代わりに、sys.dm_os_performance_counters を 使用します。 コンパイルごとに 1 回発生します。|  
+|sysperfinfo|sysperfinfo への参照が見つかりました。 代わりに、sys.dm_os_performance_counters を instead. (要求オブジェクトを解析できませんでした: JSON マップ フィールド base_parameters には 'key' と 'value' が設定されることが予期されていましたが、代わりに 'key: "..."' が設定されました。) コンパイルごとに 1 回発生します。|  
 |syspermissions|syspermissions への参照が見つかりました。 代わりに sys.database_permissions および sys.server_permissions を使用してください。 コンパイルごとに 1 回発生します。|  
 |sysprocesses|sysprocesses への参照が見つかりました。 代わりに sys.dm_exec_connections、sys.dm_exec_sessions、および sys.dm_exec_requests を使用してください。 コンパイルごとに 1 回発生します。|  
 |sysprotects|sysprotects への参照が見つかりました。 代わりに sys.database_permissions および sys.server_permissions を使用してください。 コンパイルごとに 1 回発生します。|  

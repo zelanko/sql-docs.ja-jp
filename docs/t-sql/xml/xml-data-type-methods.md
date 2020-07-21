@@ -1,5 +1,5 @@
 ---
-title: xml データ型のメソッド | Microsoft Docs
+title: xml データ型のメソッド
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f1cb562110c113b5d56f680dd1fa86ef41a4c23
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948040"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393250"
 ---
 # <a name="xml-data-type-methods"></a>xml データ型のメソッド
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **xml** データ型メソッドを使用すると、**xml** 型の変数または列に格納されている XML インスタンスに対してクエリを実行できます。 このセクションのトピックでは、**xml** データ型メソッドの使用方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[query&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/query-method-xml-data-type.md)|query() メソッドを使用して XML インスタンスに対してクエリを実行する方法について説明します。|  
 |[value&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/value-method-xml-data-type.md)|value() メソッドを使用して XML インスタンスから SQL 型の値を取得する方法について説明します。|  
@@ -38,7 +38,7 @@ ms.locfileid: "67948040"
 |[XML データ内部のリレーショナル データのバインド](../../t-sql/xml/binding-relational-data-inside-xml-data.md)|XML 内部の XML 以外のデータをバインドする方法について説明します。|  
 |[xml データ型メソッドの使用に関するガイドライン](../../t-sql/xml/guidelines-for-using-xml-data-type-methods.md)|**xml** データ型メソッドの使用に関するガイドラインを示します。|  
   
- これらのメソッドは、ユーザー定義型メソッドの呼び出し構文を使用して呼び出します。 例:  
+ これらのメソッドは、ユーザー定義型メソッドの呼び出し構文を使用して呼び出します。 次に例を示します。  
   
 ```  
 SELECT XmlCol.query(' ... ')  

@@ -23,28 +23,27 @@ helpviewer_keywords:
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b70742b07fd6450b01cf205147a05f40c4b6121
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62736395"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545674"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 規則
   Analysis Services スクリプト言語 (ASSL) はオブジェクトの階層を要素の型のセットとして表し、それぞれが含むことのできる子要素を定義します。  
   
  ASSL では、次の XML 規則を使用してオブジェクトの階層を表します。  
   
--   すべてのオブジェクトおよびプロパティは、'xml:lang' などの標準の XML 属性を除き、要素として表されます。  
+-   ' Xml: lang ' などの標準 XML 属性を除き、すべてのオブジェクトとプロパティは要素として表されます。  
   
--   要素名と列挙値の両方が pascal 形式の Microsoft .NET Framework 名前付け規則に従っていないアンダー スコアで大文字小文字の区別します。  
+-   要素名と列挙値はどちらも、アンダースコアを使用しない、Pascal 文字種の Microsoft .NET Framework 名前付け規則に従います。  
   
 -   すべての値の大文字と小文字の区別が保持されます。 列挙の値も大文字と小文字が区別されます。  
   
  これらの規則の他にも、Analysis Services はカーディナリティ、継承、空白文字、データ型、既定値などに関する一定の規則に従います。  
   
-## <a name="cardinality"></a>Cardinality  
+## <a name="cardinality"></a>カーディナリティ  
  要素に 1 より大きいカーディナリティがある場合は、この要素をカプセル化する XML 要素のコレクションがあります。 コレクションの名前は、コレクションに含まれている要素の複数形を使用します。 たとえば、次の XML フラグメントは `Dimensions` 要素内の `Database` コレクションを表します。  
   
  `<Database>`  
@@ -135,10 +134,10 @@ ms.locfileid: "62736395"
   
 -   内部の空白文字は保持されます。  
   
- `Name` プロパティと `ID` プロパティには、文字列要素の有効な文字に特別な制限があります。 詳細については`Name`と`ID`規則を参照してください[ASSL オブジェクトとオブジェクトの特性](assl-objects-and-object-characteristics.md)します。  
+ `Name` プロパティと `ID` プロパティには、文字列要素の有効な文字に特別な制限があります。 および規約の詳細について `Name` `ID` は、「 [assl オブジェクトとオブジェクトの特性](assl-objects-and-object-characteristics.md)」を参照してください。  
   
  `DateTime`  
- A`DateTime`から .NET Framework の構造体。 `DateTime` の値を NULL にすることはできません。 `DataTime` データ型がサポートしている下限の日付は 1601 年 1 月 1 日です。プログラマはこの日付を `DateTime.MinValue` として使用できます。 サポートされている下限の日付は、`DateTime` の値が欠落していることを示します。  
+ `DateTime`.NET Framework からの構造体。 `DateTime` の値を NULL にすることはできません。 `DataTime` データ型がサポートしている下限の日付は 1601 年 1 月 1 日です。プログラマはこの日付を `DateTime.MinValue` として使用できます。 サポートされている下限の日付は、`DateTime` の値が欠落していることを示します。  
   
  `Boolean`  
  {true, false} や {0, 1} のように値が 2 つだけの列挙。  
@@ -151,7 +150,7 @@ ms.locfileid: "62736395"
 |`Boolean`|False|  
 |`String`|"" (空の文字列)|  
 |`Integer` または `Long`|0 (ゼロ)|  
-|`Timestamp`|12時 00分: 00 AM、1/1/0001 (に対応する、.NET フレームワーク`System.DateTime`0 タイマー刻みで)|  
+|`Timestamp`|12:00:00 AM、1/1/0001 (0 ティックを持つ .NET Framework に対応 `System.DateTime` )|  
   
  要素が存在するが空の場合は、既定値ではなく NULL 文字列の値を含んでいるとして解釈されます。  
   
@@ -178,6 +177,6 @@ ms.locfileid: "62736395"
   
  `</Dimension>`  
   
- 継承された既定値の詳細については、次を参照してください。 [ASSL オブジェクトとオブジェクトの特性](assl-objects-and-object-characteristics.md)します。  
+ 継承された既定値の詳細については、「 [Assl オブジェクトとオブジェクトの特性](assl-objects-and-object-characteristics.md)」を参照してください。  
   
   

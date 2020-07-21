@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b1454c1112f12800e010974159d4ea7ad3526e1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ec8045ffb6e8b555f8b199170b171f8f01e25d4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023442"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749667"
 ---
-# <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB データベース)
+# <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの実行のインスタンスを作成します。  
   
@@ -31,14 +31,14 @@ ms.locfileid: "68023442"
 ## <a name="syntax"></a>構文  
   
 ```sql  
-catalog.create_execution [@folder_name = folder_name  
-     , [@project_name =] project_name  
-     , [@package_name =] package_name  
-  [  , [@reference_id =] reference_id ]  
-  [  , [@use32bitruntime =] use32bitruntime ] 
-  [  , [@runinscaleout =] runinscaleout ]
-  [  , [@useanyworker =] useanyworker ] 
-     , [@execution_id =] execution_id OUTPUT  
+catalog.create_execution [ @folder_name = ] folder_name  
+     , [ @project_name = ] project_name  
+     , [ @package_name = ] package_name  
+  [  , [ @reference_id = ] reference_id ]  
+  [  , [ @use32bitruntime = ] use32bitruntime ] 
+  [  , [ @runinscaleout = ] runinscaleout ]
+  [  , [ @useanyworker = ] useanyworker ] 
+     , [ @execution_id = ] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -52,13 +52,13 @@ catalog.create_execution [@folder_name = folder_name
  実行するパッケージの名前。 *package_name* は **nvarchar (260)** です。  
   
  [@reference_id =] *reference_id*  
- 環境参照の一意識別子。 このパラメーターはオプションです。 *reference_id* は **bigint** です。  
+ 環境参照の一意識別子。 このパラメーターは省略可能です。 *reference_id* は **bigint** です。  
   
  [@use32bitruntime =] *use32bitruntime*  
- 64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行すべきかどうかを示します。 値 1 を使用すると、64 ビット オペレーティング システムで実行しているときに、32 ビット ランタイムでパッケージを実行します。 値 0 を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージを実行します。 このパラメーターはオプションです。 *Use32bitruntime* は **bit** です。  
+ 64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行すべきかどうかを示します。 値 1 を使用すると、64 ビット オペレーティング システムで実行しているときに、32 ビット ランタイムでパッケージを実行します。 値 0 を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージを実行します。 このパラメーターは省略可能です。 *Use32bitruntime* は **bit** です。  
  
  [@runinscaleout =] *runinscaleout*  
- 実行が Scale Out であるかどうかを示します。パッケージを Scale Out で実行するには、値 1 を使用します。Scale Out を使用せずにパッケージを実行するには、値 0 を使用します。このパラメーターはオプションです。 指定しない場合、その値は [SSISDB].[catalog].[catalog_properties] で DEFAULT_EXECUTION_MODE に設定されます。 *runinscaleout* は **bit** です。 
+ 実行が Scale Out であるかどうかを示します。パッケージを Scale Out で実行するには、値 1 を使用します。Scale Out を使用せずにパッケージを実行するには、値 0 を使用します。このパラメーターは省略可能です。 指定しない場合、その値は [SSISDB].[catalog].[catalog_properties] で DEFAULT_EXECUTION_MODE に設定されます。 *runinscaleout* は **bit** です。 
  
 [@useanyworker =] *useanyworker*  
 任意の Scale Out Worker の実行が許可されるかどうかを示します。
@@ -67,13 +67,13 @@ catalog.create_execution [@folder_name = folder_name
 
 -   すべての Scale Out Worker にパッケージの実行を許可しないことを示すには、値 0 を使用します。 `@useanyworker` を False に設定すると、Scale Out Manager を使用するか、ストアド プロシージャ `[catalog].[add_execution_worker]` を呼び出し、パッケージの実行が許可される Worker を指定する必要があります。 別のパッケージを既に実行している Worker を指定した場合、その Worker は現在のパッケージの実行を完了してから別の実行を要求します。
 
-このパラメーターはオプションです。 指定しない場合、その値は 1 に設定されます。 *useanyworker* は **bit** です。 
+このパラメーターは省略可能です。 指定しない場合、その値は 1 に設定されます。 *useanyworker* は **bit** です。 
   
  [@execution_id =] *execution_id*  
  実行のインスタンスの一意識別子を返します。 *execution_id* は **bigint** です。  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  実行は、パッケージの実行の 1 つのインスタンス中にパッケージによって使用されるパラメーター値を指定するために使用されます。  
   
  環境参照を指定した場合、*reference_id* パラメーター、ストアド プロシージャは、プロジェクトおよびパッケージ パラメーターをリテラル値や対応する環境変数から参照される値を設定します。 環境参照が指定されている場合は、パッケージの実行中、既定のパラメーター値が使用されます。 特定の実行のインスタンスに使用される値を正確に判断するには、このストアド プロシージャからの *execution_id* 出力パラメーター値を使用して、[execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) ビューをクエリします。  

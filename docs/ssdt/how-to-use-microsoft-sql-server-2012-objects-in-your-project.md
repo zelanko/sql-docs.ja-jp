@@ -1,23 +1,24 @@
 ---
-title: 方法:プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: プロジェクトの SQL Server 2012 オブジェクト
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 222b725e7e5497adaf679f710fa390dcea8aecf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034978"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75244250"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>方法:プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する方法
+
 この例では、Microsoft SQL Server 2012 をターゲットとするデータベース プロジェクトに、シーケンス オブジェクトを追加します。  
   
 シーケンスは、Microsoft SQL Server 2012 で導入されたものです。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。  シーケンス オブジェクトについて詳しくは、「[シーケンス番号](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)」をご覧ください。 Microsoft SQL Server 2012 の新機能に関する情報は、「[SQL Server 2012 における新機能」](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)」をご覧ください。  
@@ -31,7 +32,7 @@ ms.locfileid: "68034978"
   
 2.  左ペインの **[プログラミング]** をクリックし、 **[シーケンス]** をクリックします。 **[追加]** をクリックして新しいオブジェクトをプロジェクトに追加します。  
   
-3.  既定のコードを次のコードに置き換えます。  
+3.  既定のコードを以下で置き換えます。  
   
     ```  
     CREATE SEQUENCE [dbo].[Seq1]  

@@ -1,5 +1,5 @@
 ---
-title: レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server) |Microsoft Docs
+title: レプリケーション、Change Tracking、変更データキャプチャ、AlwaysOn 可用性グループ (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936553"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
   
  
   
-##  <a name="Overview"></a> AlwaysOn 可用性グループのレプリケーションの概要  
+##  <a name="overview-of-replication-on-alwayson-availability-groups"></a><a name="Overview"></a>AlwaysOn 可用性グループでのレプリケーションの概要  
   
-###  <a name="PublisherRedirect"></a> パブリッシャー リダイレクト  
+###  <a name="publisher-redirection"></a><a name="PublisherRedirect"></a>パブリッシャーのリダイレクト  
  パブリッシュされたデータベースが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に対応している場合、パブリッシング データベースへのエージェント アクセス権を提供するディストリビューターは、redirected_publishers エントリで構成されます。 これらのエントリは、パブリッシャーとパブリッシング データベースへの接続に可用性グループ リスナー名を使用して、最初に構成されていたパブリッシャー/データベース ペアをリダイレクトします。 可用性グループ リスナー名を介して確立された接続は、フェールオーバーに失敗します。 フェールオーバー後にレプリケーション エージェントを再起動すると、接続は自動的に新しいプライマリにリダイレクトされます。  
   
  AlwaysOn 可用性グループでセカンダリ データベースをパブリッシャーにすることはできません。 レプリケーションを [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]と組み合わせている場合、再パブリッシュはサポートされません。  
@@ -39,7 +38,7 @@ ms.locfileid: "62814058"
 > [!NOTE]  
 >  セカンダリ レプリカにフェールオーバーした後、レプリケーション モニターは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のパブリッシング インスタンスの名前を調整できないため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の元のプライマリ インスタンスの名前を引き続き使ってレプリケーション情報が表示されます。 フェールオーバー後は、トレーサー トークンはレプリケーション モニターを使用して入力できませんが、新しいパブリッシャーで [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して入力されたトレース トークンがレプリケーション モニターに表示されます。  
   
-###  <a name="Changes"></a> AlwaysOn 可用性グループをサポートするためにレプリケーション エージェントへの変更の概要  
+###  <a name="general-changes-to-replication-agents-to-support-alwayson-availability-groups"></a><a name="Changes"></a>AlwaysOn 可用性グループをサポートするためのレプリケーションエージェントへの一般的な変更  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]をサポートするために、3 つのレプリケーション エージェントが変更されました。 ログ リーダー、スナップショット、およびマージ エージェントは、リダイレクトされたパブリッシャーについてディストリビューション データベースにクエリを実行し、リダイレクトされたパブリッシャーが宣言されていた場合は、返された可用性グループ リスナー名を使用してデータベース パブリッシャーに接続するように変更されました。  
   
  既定では、エージェントがディストリビューターにクエリを実行して、元のパブリッシャーがリダイレクトされたかどうかを判断する場合、リダイレクトされたホストがエージェントに戻る前に、現在のターゲットまたはリダイレクトの適合性が検証されます。 これは推奨される動作です。 ただし、エージェントの起動が非常に頻繁に行われる場合、検証ストアド プロシージャに関連するオーバーヘッドのコストが高くなる可能性があります。 新しいコマンド ライン スイッチ *BypassPublisherValidation*が、ログ リーダー、スナップショット、およびマージ エージェントに追加されました。 スイッチが使用される場合、リダイレクトされたパブリッシャーはエージェントに即時に戻り、検証ストアド プロシージャの実行が省略されます。  
@@ -59,7 +58,7 @@ ms.locfileid: "62814058"
   
      トレース フラグ 1448 は、非同期セカンダリ レプリカで変更の受信が確認されていない場合でも、レプリケーション ログ リーダーが前へ進めるようにします。 このトレース フラグが有効でも、ログ リーダーは常に同期セカンダリ レプリカを待機します。 ログ リーダーは同期セカンダリ レプリカの最小 ack を超えることはありません。 このトレース フラグは、可用性グループ、可用性データベース、またはログ リーダー インスタンスだけでなく、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスにも適用されます。 再起動しなくても、トレース フラグはすぐに有効になります。 このトレース フラグは、事前にアクティブにすることも、非同期セカンダリ レプリカで障害が発生したときにアクティブにすることもできます。  
   
-###  <a name="StoredProcs"></a> AlwaysOn をサポートするストアド プロシージャ  
+###  <a name="stored-procedures-supporting-alwayson"></a><a name="StoredProcs"></a>AlwaysOn をサポートするストアドプロシージャ  
   
 -   **sp_redirect_publisher**  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62814058"
   
      このストアド プロシージャは、常に手動で実行されます。 呼び出し元は、ディストリビューターでの **sysadmin** であるか、ディストリビューション データベースの **dbowner** であるか、またはパブリッシャー データベースのパブリケーションの **パブリケーション アクセス リスト** のメンバーである必要があります。 また、呼び出し元のログインは、すべての可用性レプリカ ホストに対して有効なログインであり、パブリッシャー データベースに関連付けられている可用性データベースに対する select 特権を持っている必要があります。  
   
-###  <a name="CDC"></a> 変更データ キャプチャ  
+###  <a name="change-data-capture"></a><a name="CDC"></a>変更データキャプチャ  
  障害が発生してもデータベースを引き続き使用できるだけでなく、データベース テーブルへの変更も引き続き監視され、CDC 変更テーブルに格納されることを保証するために、変更データ キャプチャ (CDC) が有効になっているデータベースで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を利用できます。 CDC と [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の構成順序は重要ではありません。 CDC 対応データベースは [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に追加でき、AlwaysOn 可用性グループのメンバーであるデータベースでは CDC を有効にできます。 ただし、どちらの場合も、CDC 構成は常に現在または目的のプライマリ レプリカで実行されます。 CDC はログ リーダー エージェントを使用するため、このトピックの「 **ログ リーダー エージェントの変更** 」に記載されているのと同じ制限事項があります。  
   
 -   **レプリケーションなしでの変更データ キャプチャの変更の取得**  
@@ -109,9 +108,9 @@ ms.locfileid: "62814058"
     ```  
   
     > [!NOTE]  
-    >  フェールオーバーの前にすべてのフェールオーバー ターゲット候補でジョブを作成し、ホストの可用性レプリカが新しいプライマリ レプリカになるまで無効としてマークしておく必要があります。 ローカル データベースがセカンダリ データベースになったときに、古いプライマリ データベースで実行されている CDC ジョブも無効にする必要があります。 ジョブを無効/有効にするには、[sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) の *@enabled* オプションを使用します。 CDC ジョブの作成の詳細については、「 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
+    >  フェールオーバーの前にすべてのフェールオーバー ターゲット候補でジョブを作成し、ホストの可用性レプリカが新しいプライマリ レプリカになるまで無効としてマークしておく必要があります。 ローカル データベースがセカンダリ データベースになったときに、古いプライマリ データベースで実行されている CDC ジョブも無効にする必要があります。 ジョブを無効または有効にするには、 *@enabled* sp_update_job のオプション[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)を使用します。 CDC ジョブの作成の詳細については、「 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。  
   
--   **AlwaysOn プライマリ データベースのレプリカへの CDC ロールの追加**  
+-   **AlwaysOn プライマリ データベース レプリカへの CDC ロールの追加**  
   
      CDC に対してテーブルを有効にした場合は、データベース ロールをキャプチャ インスタンスに関連付けることができます。 ロールが指定されている場合、CDC テーブル値関数を使用してテーブルの変更にアクセスするユーザーは、追跡されるテーブル列への選択アクセス権を持つだけでなく、名前付きロールのメンバーでもある必要があります。 指定したロールが存在しない場合は、ロールが作成されます。 AlwaysOn プライマリ データベースにデータベース ロールが自動的に追加されると、ロールは可用性グループのセカンダリ データベースにも反映されます。  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62814058"
   
      可用性グループ リスナー名または明示的なノード名を使用してセカンダリ レプリカを検索できます。 可用性グループ リスナー名を使用すると、アクセスは適切なセカンダリ レプリカに送られます。  
   
-     ときに`sp_addlinkedserver`セカンダリにアクセスするリンク サーバーを作成するために使用、 *@datasrc* 、可用性グループ リスナー名または明示的なサーバー名、パラメーターを使用し、  *@provstr* パラメーターを使用して読み取り専用の目的を指定します。  
+     を `sp_addlinkedserver` 使用してセカンダリにアクセスするリンクサーバーを作成する場合、 *@datasrc* パラメーターは可用性グループリスナー名または明示的なサーバー名に使用され、 *@provstr* パラメーターは読み取り専用の目的を指定するために使用されます。  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -172,7 +171,7 @@ ms.locfileid: "62814058"
   
      一般に、AlwaysOn 可用性グループのメンバーであるデータベースに存在する変更データへのクライアント アクセスには、ドメイン ログインを使用する必要があります。 フェールオーバー後に変更データへの継続的なアクセスを保証するには、ドメイン ユーザーに、可用性グループ レプリカをサポートするすべてのホストに対するアクセス権限が必要です。 データベース ユーザーがプライマリ レプリカのデータベースに追加され、ユーザーがドメイン ログインに関連付けられている場合、データベース ユーザーはセカンダリ データベースに反映され、引き続き指定されたドメイン ログインに関連付けられます。 新しいデータベース ユーザーが SQL Server 認証ログインに関連付けられている場合、セカンダリ データベースのユーザーはログインなしで反映されます。 関連付けられた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ログインを使用して、データベース ユーザーが最初に定義されたプライマリの変更データにアクセスできますが、ノードはアクセスが可能な唯一のノードです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証ログインは、セカンダリ データベースのデータにアクセスすることも、データベース ユーザーが定義された元のデータベース以外の新しいプライマリ データベースのデータにアクセスすることもできません。  
   
-###  <a name="CT"></a> 変更の追跡  
+###  <a name="change-tracking"></a><a name="CT"></a>Change Tracking  
  変更の追跡 (CT) が有効になっているデータベースは、AlwaysOn 可用性グループに含めることができます。 追加の構成は必要ありません。 変更データにアクセスするために CDC テーブル値関数 (TVF) を使用する変更の追跡クライアント アプリケーションには、フェールオーバー後にプライマリ レプリカを検索する機能が必要です。 クライアント アプリケーションが可用性グループ リスナー名を通じて接続する場合、接続要求は常に現在のプライマリ レプリカに適切に送られます。  
   
 > [!NOTE]  
@@ -182,7 +181,7 @@ ms.locfileid: "62814058"
 >   
 >  セカンダリ レプリカのメンバーであるデータベース (セカンダリ データベース) では、変更の追跡はサポートされていません。 変更の追跡クエリをプライマリ レプリカのデータベースに対して実行します。  
   
-##  <a name="Prereqs"></a> レプリケーションの使用に関する前提条件、制限、および考慮事項  
+##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a>レプリケーションを使用するための前提条件、制限事項、および考慮事項  
  ここでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]でレプリケーションを配置する際の前提条件、制限、推奨などの考慮事項について説明します。  
   
 ### <a name="prerequisites"></a>前提条件  
@@ -191,30 +190,30 @@ ms.locfileid: "62814058"
   
 -   単一の可用性グループ内でマージ レプリケーションとパブリッシング データベースを使用する場合は、次のことが適用されます。  
   
-    -   プッシュ サブスクリプション: パブリッシャーとディストリビューターの両方が少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] を実行する必要があります。  
+    -   プッシュ サブスクリプション: パブリッシャーとディストリビューターの両方が少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を実行する必要があります。  
   
-    -   プル サブスクリプション: パブリッシャー、ディストリビューター、およびサブスクライバー データベースは、少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 上にある必要があります。 これは、可用性グループがセカンダリにフェールオーバーする方法を、サブスクライバー上のマージ エージェントが把握しておく必要があることが原因です。  
+    -   プル サブスクリプション: パブリッシャー、ディストリビューター、およびサブスクライバー データベースは、少なくとも [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]である必要があります。 これは、可用性グループがセカンダリにフェールオーバーする方法を、サブスクライバー上のマージ エージェントが把握しておく必要があることが原因です。  
   
 -   ディストリビューション データベースを可用性グループに配置することはサポートされていません。  
   
--   パブリッシャーのインスタンスは、AlwaysOn 可用性グループに参加するために必要なすべての前提条件を満たす必要があります。 詳細については、「[AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
+-   パブリッシャーのインスタンスは、AlwaysOn 可用性グループに参加するために必要なすべての前提条件を満たす必要があります。 詳細については[、「AlwaysOn 可用性グループ &#40;SQL Server&#41;の前提条件、制限事項、および推奨事項](prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
-### <a name="restrictions"></a>制限  
+### <a name="restrictions"></a>制約  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーションでサポートされている組み合わせは次のとおりです。  
   
 |||||  
 |-|-|-|-|  
-||**パブリッシャー**|**ディストリビューター** <sup>3</sup>|**サブスクライバー (Subscriber)**|  
+||**発行元**|**ディストリビューター** <sup>3</sup>|**サブスクライバー**|  
 |**トランザクション**|可<sup>1</sup>|いいえ|はい<sup>2</sup>|  
 |**P2P**|いいえ|いいえ|いいえ|  
 |**Merge**|はい|いいえ|はい<sup>2</sup>|  
 |**スナップショット**|はい|いいえ|はい<sup>2</sup>|  
   
- <sup>1</sup>双方向相互トランザクション レプリケーションのサポートは含まれません。  
+ <sup>1</sup>双方向の相互トランザクションレプリケーションのサポートは含まれません。  
   
- <sup>2</sup>レプリカ データベースへのフェールオーバーは手動で行います。 自動フェールオーバーは提供されていません。  
+ <sup>2</sup>レプリカデータベースへのフェールオーバーは手動で行います。 自動フェールオーバーは提供されていません。  
   
- <sup>3</sup>で使用するディストリビューター データベースはサポートされていません[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]またはデータベース ミラーリングします。  
+ <sup>3</sup>ディストリビューターデータベースは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベースミラーリングでの使用がサポートされていません。  
   
 ### <a name="considerations"></a>考慮事項  
   
@@ -224,16 +223,16 @@ ms.locfileid: "62814058"
   
 -   ログイン、ジョブ、リンク サーバーなど、データベースの外部に存在するメタデータやオブジェクトはセカンダリ レプリカに反映されません。 フェールオーバー後に新しいプライマリ データベースでこれらのメタデータやオブジェクトが必要な場合は、手動でコピーする必要があります。 詳細については、「 [可用性グループのデータベースのためのログインとジョブの管理 &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)と呼ばれるプロセスで交換されることがあります。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **レプリケーション**  
   
--   [AlwaysOn 可用性グループ (SQL Server) のレプリケーションを構成します。](always-on-availability-groups-sql-server.md)  
+-   [AlwaysOn 可用性グループ用のレプリケーションの構成 (SQL Server)](always-on-availability-groups-sql-server.md)  
   
--   [AlwaysOn パブリケーション データベースのメンテナンス&#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
+-   [AlwaysOn パブリケーションデータベースのメンテナンス &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
 -   [レプリケーション管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **変更データキャプチャ**  
   
 -   [変更データ キャプチャの有効化と無効化 &#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   
@@ -249,14 +248,14 @@ ms.locfileid: "62814058"
   
 -   [変更の追跡のしくみ &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーション サブスクライバーと AlwaysOn 可用性グループ&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
- [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性グループ:相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
- [変更データ キャプチャについて &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [変更の追跡について &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
- [SQL Server のレプリケーション](../../../relational-databases/replication/sql-server-replication.md)   
+## <a name="see-also"></a>参照  
+ [レプリケーションサブスクライバーと AlwaysOn 可用性グループ &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の前提条件、制限事項、推奨事項&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ: 相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [AlwaysOn フェールオーバークラスターインスタンス (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [変更データキャプチャについて &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
+ [Change Tracking &#40;SQL Server について&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
+ [SQL Server レプリケーション](../../../relational-databases/replication/sql-server-replication.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)  
   

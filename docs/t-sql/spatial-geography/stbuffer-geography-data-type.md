@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 366cd986b9c707c6cef6d8b814204ce506afb601
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704956"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスからの距離が指定した値以下となる、すべての地点の和集合を表す geography オブジェクトを返します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68042530"
   
  CLR の戻り値の型:**SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  STBuffer() は、*tolerance* = abs(distance) \* .001 および *relative* = **false** を指定して [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) を呼び出すのと同じ方法でバッファーを計算します。  
   
  バッファーに負の値を指定すると、**geography** インスタンスの境界から、指定された距離の範囲内にある地点がすべて削除されます。  
@@ -64,7 +64,7 @@ ms.locfileid: "68042530"
   
  理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents * 1.E-7) です。tolerance は distance \* .001 になります。 エクステントの詳細は、「[geography データ型メソッド リファレンス](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`LineString``geography` インスタンスを作成します。 次に、`STBuffer()` を使用して、インスタンスから 1 m 以内にある領域を返します。  
   
 ```  

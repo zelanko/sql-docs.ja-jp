@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1de402650df0f3e9181750fb17d74c4329e4ca93
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c47cddef676487ac44223c73ffcd8b67ce4c4e77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721705"
 ---
-# <a name="mssqleng020574"></a>MSSQL_ENG020574
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="mssql_eng020574"></a>MSSQL_ENG020574
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68770398"
  サブスクライバーのデータがパブリッシャーのデータに対して検証され、データが一致しなかったため検証に失敗しました。 検証の詳細については、「 [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)」を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 次のように対処することをお勧めします。  
+ 次を実行することをお勧めします。  
   
 -   検証に失敗した原因を確認します。  
   

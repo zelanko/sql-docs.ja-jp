@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b22ba097-6cb8-4c5d-916b-6360dd01d2c5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf00138e512b966614a19adaf152f038c516f9fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dc27b8e6a070123928f18366cf40fc58fbe72e0a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953491"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926334"
 ---
 # <a name="getbyte-method-int-sqlserverresultset"></a>getByte (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public byte getByte(int columnIndex)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getByte メソッドは、java.sql.ResultSet インターフェイスの getByte メソッドで規定されています。  
   
  このメソッドは、tinyint や bit などのバイト値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされています。 その他のデータ型では例外がスローされます。  

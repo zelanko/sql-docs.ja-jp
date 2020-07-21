@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7e9294de10be0df9ef470c75d0934e9f8787b55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856135"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047250"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>テーブルへの列の追加 (データベース エンジン)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルに新しい列を追加する方法について説明します。  
@@ -32,23 +31,23 @@ ms.locfileid: "62856135"
   
      [Security](#Security)  
   
--   **使用して列を挿入するには。**  
+-   **列を挿入する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  ALTER TABLE ステートメントを使用してテーブルに列を追加すると、これらの列は自動的にテーブルの最後に追加されます。 テーブル内の列を特定の順序で表示する場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。 ただし、これはデータベース デザインのベスト プラクティスではないことに注意してください。 列が返される順序をアプリケーションおよびクエリ レベルで指定することをお勧めします。 テーブルで定義されている順序に基づいて、すべての列が予想される順序で返されるようにするために、SELECT * の使用に依存しないでください。 クエリまたはアプリケーションでは必ず、表示される順序で列の名前を指定してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>テーブル デザイナーでテーブルに列を挿入するには  
   
@@ -61,16 +60,16 @@ ms.locfileid: "62856135"
 4.  Tab キーを押して **[データ型]** セルに移動し、ドロップダウンからデータ型を選択します。 データ型も必須の値です。選択しない場合は既定の値が割り当てられます。  
   
     > [!NOTE]  
-    >  この既定の値は、 **[データベース ツール]** の下の **[オプション]** ダイアログ ボックスで変更できます。  
+    >   この既定の値は、 **[データベース ツール]** の下の **[オプション]** ダイアログ ボックスで変更できます。  
   
 5.  次に **[列のプロパティ]** タブで他の列のプロパティを定義します。  
   
     > [!NOTE]  
     >  新しい列の作成時には、列プロパティの既定の値が追加されますが、 **[列のプロパティ]** タブで値を変更できます。  
   
-6.  列の追加が完了したら、 **ファイル** メニューの **table name**_の保存_をクリックします。  
+6.  列の追加が完了したら、**[ファイル]** メニューで [_<テーブル名>_**を保存**] を選択します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-insert-columns-into-a-table"></a>テーブルに列を挿入するには  
   
@@ -84,6 +83,6 @@ ms.locfileid: "62856135"
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 詳細については、「[ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
+##  <a name="for-more-information-see-alter-table-40transact-sql41"></a><a name="FollowUp"></a>詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql) 」を参照してください。  
   
   

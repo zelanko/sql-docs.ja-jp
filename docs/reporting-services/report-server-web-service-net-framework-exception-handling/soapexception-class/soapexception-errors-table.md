@@ -1,5 +1,6 @@
 ---
 title: SoapException エラー テーブル | Microsoft Docs
+description: レポート サーバー Web サービスの SoapException を使用してメソッドからアクセスできるエラーについて説明します。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 95427ddaa6d220afe3397a138f9b5baa085f324d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d8025cc433a8ef6b773b51d86452a6a2f6b07534
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991550"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215637"
 ---
 # <a name="soapexception-errors-table"></a>SoapException エラー テーブル
   レポート サーバーでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で発生するエラーに基づいて、SOAP 例外のエラーとエラー メッセージが生成されます。 次の表は、レポート サーバー Web サービスの **SoapException** を使用してメソッドからアクセスできるエラーを示します。 例外をスローする 1 つまたは複数のメソッド別に分類されています。  

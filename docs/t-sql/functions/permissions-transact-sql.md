@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8d0fbe116eb10d89d52e1ec5ebdf7ada16ef53dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41cf0607ae8d308d4d1f243e8b987ca6c9d541fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737959"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在のユーザーのステートメント権限、オブジェクト権限、または列権限を示すビットマップを含む値を返します。  
   
@@ -42,14 +42,14 @@ ms.locfileid: "67914352"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
 ## <a name="arguments"></a>引数  
  *objectid*  
- セキュリティ保護可能なリソースの ID を指定します。 *objectid* を指定しない場合、ビットマップ値には現在のユーザーのステートメント権限が含まれます。それ以外の場合、ビットマップ値には現在のユーザーのセキュリティ保護可能なリソースについての権限が含まれます。 指定したセキュリティ保護可能なリソースは、現在のデータベースに存在する必要があります。 *objectid* 値を確認するには、[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 関数を使用します。  
+ セキュリティ保護可能なリソースの ID を指定します。 *objectid* を指定しない場合、ビットマップ値には現在のユーザーのステートメント権限が含まれます。それ以外の場合、ビットマップ値には現在のユーザーのセキュリティ保護可能なリソースについての権限が含まれます。 指定したセキュリティ保護可能なリソースは、現在のデータベースに存在する必要があります。 [objectid](../../t-sql/functions/object-id-transact-sql.md) 値を確認するには、*OBJECT_ID* 関数を使用します。  
   
  **'** *column* **'**  
  権限情報を返す列の名前を指定します (省略可能)。 *objectid* で指定したテーブル内の有効な列名を指定する必要があります。  
@@ -57,7 +57,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  PERMISSIONS は、現在のユーザーがステートメントを実行するのに必要な権限を所有しているか、または別のユーザーに対して権限を許可 (GRANT) できるかを調べるときに使用できます。  
   
  返される権限情報は 32 ビットのビットマップです。  
@@ -80,7 +80,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |32|0x20|CREATE DEFAULT|  
 |64|0x40|BACKUP DATABASE|  
 |128|0x80|BACKUP LOG|  
-|256|0x100|予約済み。|  
+|256|0x100|予約済み|  
   
  次の表は、*objectid* だけを指定したときに返される、オブジェクト権限に使用されるビットです。  
   
@@ -110,7 +110,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
  現在のデータベース内のユーザーに与えられている権限の一覧を返すには、sp_helprotect システム ストアド プロシージャを使用することもできます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. PERMISSIONS 関数をステートメント権限に対して使用する  
  次の例では、現在のユーザーが `CREATE TABLE` ステートメントを実行できるかどうかを判定します。  
@@ -148,6 +148,6 @@ ELSE
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

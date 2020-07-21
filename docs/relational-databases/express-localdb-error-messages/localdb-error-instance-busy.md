@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: 0ed9d0f8-3297-4e31-a3e9-4a827f381789
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 48af2bc8153373484aa9c6641a9d6ad4b68cab51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a1939fdd950a794990daa966e2e32634b0da280c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756905"
 ---
-# <a name="localdberrorinstancebusy"></a>LOCALDB_ERROR_INSTANCE_BUSY
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="localdb_error_instance_busy"></a>LOCALDB_ERROR_INSTANCE_BUSY
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_update_category (TRANSACT-SQL) |Microsoft Docs
+title: sp_update_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3ebee467890e26aa58171690f5fdabaef3607ee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084923"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891357"
 ---
-# <a name="spupdatecategory-transact-sql"></a>sp_update_category (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   カテゴリの名前を変更します。  
   
@@ -42,26 +42,26 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @class = ] 'class'` 更新するカテゴリのクラス。 *クラス*は**varchar (8)** , で、既定値はありませんはこれらの値のいずれかを指定します。  
+`[ @class = ] 'class'`更新するカテゴリのクラス。 *クラス*は**varchar (8)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**アラートを生成します。**|アラートのカテゴリを更新します。|  
-|**JOB**|ジョブ カテゴリを更新します。|  
-|**演算子**|オペレーター カテゴリを更新します。|  
+|**アラート**|アラートカテゴリを更新します。|  
+|**補足**|ジョブ カテゴリを更新します。|  
+|**OPERATOR**|オペレーターカテゴリを更新します。|  
   
-`[ @name = ] 'old_name'` カテゴリの現在の名前。 *古い名前*は**sysname**、既定値はありません。  
+`[ @name = ] 'old_name'`カテゴリの現在の名前。 *old_name*は**sysname**であり、既定値はありません。  
   
-`[ @new_name = ] 'new_name'` カテゴリの新しい名前。 *新しい名前*は**sysname**、既定値はありません。  
+`[ @new_name = ] 'new_name'`カテゴリの新しい名前。 *new_name*は**sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_update_category**から実行する必要があります、 **msdb**データベース。  
+## <a name="remarks"></a>Remarks  
+ **sp_update_category**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
+ このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
 ## <a name="examples"></a>使用例  
  次の例では、ジョブ カテゴリの名前を `AdminJobs` から `Administrative Jobs` に変更します。  
@@ -78,9 +78,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

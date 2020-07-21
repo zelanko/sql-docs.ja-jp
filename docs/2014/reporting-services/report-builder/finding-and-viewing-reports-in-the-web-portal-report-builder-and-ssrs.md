@@ -1,5 +1,5 @@
 ---
-title: 検索して、レポート マネージャーでの表示レポート (レポート ビルダーおよび SSRS) |Microsoft Docs
+title: レポートマネージャーでのレポートの検索と表示 (レポートビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22d183aa8ddbad06b0dc949bfe1780f360eb96ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107871"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>レポート マネージャーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
-  レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../report-server/configure-web-portal.md)」を参照してください。  
+  レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件の詳細については、「 [Planning for Reporting Services」および「Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)」を参照してください。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../report-server/configure-web-portal.md)」を参照してください。  
   
  レポート マネージャーを使用するときに表示される内容は、レポート サーバーに対してシステム管理者が設定した権限によって決まります。 権限はロールの割り当てによって与えられます。 レポートを検索および表示するには、ロールの割り当てに "レポートの表示" タスクが含まれている必要があります。 レポート サーバーでレポートを検索するには、名前または説明からレポートを検索するか、レポート サーバーのフォルダーを参照します。 検索または参照できるのは、レポート サーバーにパブリッシュまたはアップロードされたレポートのみです。 レポートの検索方法の詳細については、「 [レポートおよび他のアイテムの検索 &#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66107871"
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>レポート マネージャーでのフォルダー階層の移動  
  実行するレポートを参照する場合は、ホーム ページを使用できます。このページは、レポート マネージャーを起動したとき、およびフォルダー階層内で任意のフォルダーを開いたときに自動的に表示されます。 ホーム ページには、表示権限のあるアイテムだけが表示されます。 フォルダー パスは、ホーム ページの上部にリンク行として表示されます。 ルート フォルダー ([ホーム]) を先頭に、フォルダー名が順に一覧表示されます。 各サブフォルダーを開くと、ページの最上部のフォルダー パスにフォルダー名が追加されます。 下のイメージの **(1)** 。 レポートを開くと、レポートの名前もフォルダー パスに追加されます。  
   
- ![レポート マネージャーのリボンとナビゲーション](../media/rs-reportmanager-ribbon.gif "レポート マネージャーのリボンとナビゲーション")  
+ ![レポート マネージャー リボンとナビゲーション](../media/rs-reportmanager-ribbon.gif "レポート マネージャー リボンとナビゲーション")  
 レポート マネージャーのリボン  
   
  フォルダー階層内を移動するには、次の方法を使用します。  
@@ -55,7 +55,7 @@ ms.locfileid: "66107871"
 -   レポート内の特定のテキストを検索するには、レポートの最上部にあるツール バーを使用します。  
   
 ## <a name="see-also"></a>参照  
- [レポートおよび他のアイテムの検索 &#40;レポート ビルダーおよび SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [レポートやその他のアイテム &#40;レポートビルダーおよび SSRS&#41;を検索する](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

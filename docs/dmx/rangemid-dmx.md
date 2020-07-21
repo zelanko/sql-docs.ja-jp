@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee926e04dc5b845be152e96150c99cb17182a7c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8450107e9d591b8d789037303edbcaeea1ec08e5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042107"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669633"
 ---
 # <a name="rangemid-dmx"></a>RangeMid (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  離散化列に対して検出される予測バケットの中点を返します。  
+  分離された列に対して検出される予測バケットの中間点を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,16 +28,16 @@ RangeMid(<scalar column reference>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- 離散化スカラー列。  
+ 分離スカラー列。  
   
 ## <a name="return-type"></a>戻り値の型  
- スカラー値です。  
+ スカラー値。  
   
-## <a name="remarks"></a>コメント  
- 使用すると[SELECT FROM&#60;モデル&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)、 **RangeMin**、 **RangeMid**、および**RangeMax**関数、指定されたバケットの実際の境界値を返します。 たとえば、離散化列で予測を実行する場合、クエリは予測されたバケット数を離散化列に返します。 **RangeMin**、 **RangeMid**、および**RangeMax**関数が、予測が指定したバケットを説明します。 ときに、 **RangeMid** PREDICTION JOIN ステートメントを使用して関数を使用すると、スカラー列参照は不連続列および予測可能な列のみを保持できます。  
+## <a name="remarks"></a>Remarks  
+ [DMX&#41;&#40;の SELECT FROM &#60;モデル&#62; 予測結合](../dmx/select-from-model-prediction-join-dmx.md)で使用する場合、 **RangeMin**、 **Rangemid**、および**RangeMax**関数は、指定されたバケットの実際の境界値を返します。 たとえば、離散化列で予測を実行する場合、クエリは予測されたバケット数を離散化列に返します。 **RangeMin**、 **rangemid**、および**RangeMax**関数は、予測によって指定されるバケットを記述します。 **Rangemid**関数が予測結合ステートメントで使用されている場合、スカラー列参照には不連続の予測可能列のみを含めることができます。  
   
-## <a name="examples"></a>使用例  
- 次の例では、TM Decision Tree マイニング モデルの Yearly Income 連続列の最小、最大、平均値を返します。  
+## <a name="examples"></a>例  
+ 次の例では、TM デシジョンツリーマイニングモデルの年収連続列の最小値、最大値、および平均値が返されます。  
   
 ```  
 SELECT DISTINCT   
@@ -47,11 +47,11 @@ SELECT DISTINCT
 FROM [TM Decision Tree]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)   
- [RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)  
+## <a name="see-also"></a>参照  
+ [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;RangeMax](../dmx/rangemax-dmx.md)   
+ [DMX&#41;&#40;RangeMin](../dmx/rangemin-dmx.md)  
   
   

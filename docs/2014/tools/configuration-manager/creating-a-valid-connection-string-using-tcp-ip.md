@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6449b073adb406d15f41cfe02d477a05ad8b0b31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26c891b6d2af218d3450cdec14fdcac7a2d0ddf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63065510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057973"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>TCP/IP を使用した有効な接続文字列の作成
   TCP/IP を使用した有効な接続文字列を作成するには、次の操作を行ってください。  
@@ -37,7 +36,7 @@ ms.locfileid: "63065510"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client コンポーネントは接続の時点で、指定された別名のサーバー、プロトコル、ポート番号の値をレジストリから読み取り、 `tcp:<servername>[\<instancename>],<port>` または `tcp:<IPAddress>[\<instancename>],<port>`の形式で接続文字列を作成します。  
   
 > [!NOTE]  
->  既定では、ポート 1433 が [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ファイアウォールによって閉じられます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はポート 1433 経由で通信するため、TCP/IP を使用する着信クライアントをリッスンするように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成している場合は、このポートを再度開く必要があります。 ファイアウォールの構成方法の詳細については、次を参照してください。"する方法。ファイアウォールを構成する SQL Server アクセス用"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックまたはファイアウォールのマニュアルを確認します。  
+>  既定では、ポート 1433 が [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ファイアウォールによって閉じられます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はポート 1433 経由で通信するため、TCP/IP を使用する着信クライアントをリッスンするように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成している場合は、このポートを再度開く必要があります。 ファイアウォールの構成方法については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「SQL Server アクセスのためのファイアウォール構成方法」か、またはファイアウォールについてのドキュメンテーションを参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、インターネット プロトコル バージョン 4 (IPv4) とインターネット プロトコル バージョン 6 (IPv6) の両方が完全にサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは、IPv4 と IPv6 のどちらの形式の IP アドレスも受け入れます。 IPv6 の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「IPv6 を使用した接続」を参照してください。  
   
@@ -54,7 +53,7 @@ WHERE session_id = @@SPID;
   
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  サーバー名による接続:  
   
 ```  
@@ -166,7 +165,7 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  としてネットワーク プロトコルを指定することについて、 **sqlcmd**パラメーターを参照してください"する方法。接続に sqlcmd.exe を使用して、データベース エンジン"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+>  **sqlcmd** パラメーターとしてネットワーク プロトコルを指定することについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「sqlcmd.exe を使用してデータベース エンジンに接続する方法」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [共有メモリ プロトコルを使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

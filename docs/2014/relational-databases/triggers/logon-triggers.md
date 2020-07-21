@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cda0be25f07ed2ee283b9707884041e7c6e4692f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62473233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014470"
 ---
 # <a name="logon-triggers"></a>ログオン トリガー
   ログオン トリガーは、LOGON イベントに応答してストアド プロシージャを起動します。 このイベントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスでユーザー セッションが確立されるときに発生します。 ログオン トリガーは、ログインの認証段階が終了した後、ユーザー セッションが実際に確立されるまでの間に発生します。 したがって、通常、エラー メッセージや PRINT ステートメントからのメッセージはユーザーに通知されますが、このトリガー内で発生したすべてのメッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログに記録されます。 認証に失敗した場合は、ログオン トリガーが作動しません。  
@@ -50,7 +49,7 @@ ms.locfileid: "62473233"
 -   重大度が 20 を超えるエラーがトリガー内部で発生した。  
   
 ## <a name="disabling-a-logon-trigger"></a>ログオン トリガーを無効にする  
- ログオン トリガーを使用すると、`sysadmin` 固定サーバー ロールのメンバーを含むすべてのユーザーの[!INCLUDE[ssDE](../../../includes/ssde-md.md)]への接続を効率的に禁止できます。 ログオン トリガーによって接続が禁止されているときでも、`sysadmin` 固定サーバー ロールのメンバーは、専用管理者接続を使用するか、または[!INCLUDE[ssDE](../../../includes/ssde-md.md)]を最小構成モード (-f) で起動することにより、接続できます。 詳細については、「[データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
+ ログオン トリガーを使用すると、`sysadmin` 固定サーバー ロールのメンバーを含むすべてのユーザーの[!INCLUDE[ssDE](../../../includes/ssde-md.md)]への接続を効率的に禁止できます。 ログオン トリガーによって接続が禁止されているときでも、`sysadmin` 固定サーバー ロールのメンバーは、専用管理者接続を使用するか、または[!INCLUDE[ssDE](../../../includes/ssde-md.md)]を最小構成モード (-f) で起動することにより、接続できます。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

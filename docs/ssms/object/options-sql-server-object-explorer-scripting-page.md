@@ -1,6 +1,6 @@
 ---
-title: オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ) | Microsoft Docs
-ms.custom: ''
+title: オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)
+ms.custom: seo-lt-2019
 ms.date: 08/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ccd2812261b4d71fb7553f3f1ab40216cc89016
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0991ab88cb37ab2f4decb67194ae78ed62d2c13d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264060"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251080"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,11 +32,14 @@ ms.locfileid: "68264060"
   
 -   このページでは、 **SQL Server スクリプト生成ウィザード**で使用するスクリプト オプションの既定値も設定できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **[編集]** コマンドおよび **[変更]** コマンドを実行した場合は、同じオプション設定に対して **[<object> をスクリプト化]** コマンドを実行した場合と異なる結果になることがあります。 **[編集]** コマンドおよび **[変更]** コマンドは、クエリ エディター セッション中に現在のデータベースでオブジェクトを変更するために設計されています。 **[<object> をスクリプト化]** コマンドは、後でオブジェクトの作成に使用できるスクリプトを生成するために設計されています。  
   
 ## <a name="options"></a>オプション  
-スクリプト オプションを指定するには、各オプションの右にあるリストから、いずれかの設定を選択します。  
+スクリプト オプションを指定するには、各オプションの右にあるリストから、いずれかの設定を選択します。
+
+> [!NOTE]
+> 一覧表示される既定の設定は、 **[データベース全体とすべてのデータベース オブジェクトのスクリプトを作成]** オプションにのみ適用されます。 **[特定のデータベース オブジェクトの選択]** オプションを使用すると、異なる場合があります。
   
 ### <a name="general-scripting-options"></a>全般スクリプト作成オプション  
 **[各ステートメントを区切る]**  

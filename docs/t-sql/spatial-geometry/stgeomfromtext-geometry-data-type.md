@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7850a3fec40dcdd6606086d44e626e2e5f57ea93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9fb51645067d84863cf8488d8e17e7986ab6ebca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762474"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geometry** インスタンスを返します。
   
@@ -46,14 +46,14 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `STGeomFromText()` によって返された **geometry** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  
   
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STGeomFromText()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  

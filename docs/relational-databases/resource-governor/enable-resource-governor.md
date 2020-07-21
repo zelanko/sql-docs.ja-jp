@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 23ff55d4fcb9e9cf398e732376a01ab5495b2a4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: acb23caea9e74af5a1f25f8d6d2acab31fbeb39f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720451"
 ---
 # <a name="enable-resource-governor"></a>リソース ガバナーの有効化
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   リソース ガバナーは、既定ではオフになっています。 リソース ガバナーを有効にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
 -   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
 -   **リソース ガバナーの有効化に使用するもの:** [オブジェクト エクスプローラー](#RGOnObjEx)、[リソース ガバナーのプロパティ](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  リソース ガバナーを有効にすると、結果は次のようになります。  
   
 -   新しい接続に対して分類子関数が実行され、それらのワークロードがワークロード グループに割り当てられます。  
@@ -35,20 +35,20 @@ ms.locfileid: "68099248"
   
 -   リソース ガバナーを有効にする前に存在していた要求に、リソース ガバナーが無効であったときに加えた構成の変更が反映されます。  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  ユーザー トランザクション内でリソース ガバナーを有効にする場合、 **ALTER RESOURCE GOVERNOR** ステートメントを使用できません。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  リソース ガバナーを有効にするには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="RGOnObjEx"></a> オブジェクト エクスプローラーを使用してリソース ガバナーを有効にする  
+##  <a name="enable-resource-governor-using-object-explorer"></a><a name="RGOnObjEx"></a> オブジェクト エクスプローラーを使用してリソース ガバナーを有効にする  
  **オブジェクト エクスプローラーを使用してリソース ガバナーを有効にするには**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
   
 2.  **[リソース ガバナー]** を右クリックし、 **[有効化]** をクリックします。  
   
-##  <a name="RGOnProp"></a> リソース ガバナーのプロパティを使用してリソース ガバナーを有効にする  
+##  <a name="enable-resource-governor-using-resource-governor-properties"></a><a name="RGOnProp"></a> リソース ガバナーのプロパティを使用してリソース ガバナーを有効にする  
  **[リソース ガバナーのプロパティ] ページでリソース ガバナーを有効にするには**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
@@ -57,7 +57,7 @@ ms.locfileid: "68099248"
   
 3.  **[リソース ガバナーの有効化]** チェック ボックスをオンにしてから、 **[OK]** をクリックします。  
   
-##  <a name="RGOnTSQL"></a> Transact-SQL を使用してリソース ガバナーを有効にする  
+##  <a name="enable-resource-governor-using-transact-sql"></a><a name="RGOnTSQL"></a> Transact-SQL を使用してリソース ガバナーを有効にする  
  **Transact-SQL を使用してリソース ガバナーを有効にするには**  
   
 1.  **ALTER RESOURCE GOVERNOR RECONFIGURE** ステートメントを実行します。  

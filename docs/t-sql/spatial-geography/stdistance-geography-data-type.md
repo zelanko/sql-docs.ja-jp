@@ -1,7 +1,7 @@
 ---
 title: STDistance (geography データ型) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d739e9a6320781725f3cc498c9bc68e8ade8d684
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c958f789e1c8eadc027c4144bae711b1288599c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703751"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   任意の **geography** インスタンスの地点と別の **geography** インスタンスの地点との最短距離を返します。  
   
@@ -46,15 +46,16 @@ ms.locfileid: "68042287"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
- CLR の戻り値の型:**SqlDouble**  
+ CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
- **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STDistance() は常に null を返します。  
+## <a name="remarks"></a>解説  
+ この結果は、空間データの [SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) によって定義された測定単位で表されます。
+**geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STDistance() は常に *null* を返します。  
   
 > [!NOTE]  
->  面積や距離を計算する、**geography** データ型のメソッドの結果は、メソッドで使用されるインスタンスの SRID に応じて異なります。   SRID の詳細については、「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
+>  面積や距離を計算する、**geography** データ型のメソッドの結果は、メソッドで使用されるインスタンスの SRID に応じて異なります。 SRID の詳細については、「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  2 つの **geography** インスタンスの間の距離を計算する例を次に示します。  
   
 ```  

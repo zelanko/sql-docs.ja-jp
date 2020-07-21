@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1003a1a33565da9b48135123d83c4ea6551debeb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e04daaa5be757df60f07a8bd9205e1fd44f95502
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775740"
 ---
-# <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-sql)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   サーバーで有効なレプリケーション オプションの種類を示します。 このストアドプロシージャは、任意のデータベースの任意のサーバーで実行されます。  
   
@@ -39,7 +39,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>引数  
 `[ @optname = ] 'option_name'`クエリを実行するレプリケーションオプションの名前を指定します。 *option_name*は**sysname**,、既定値は NULL です。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**パブリケーション**|トランザクションレプリケーションが有効になっている場合は、結果セットが返されます。|  
 |**merge**|結果セットは、マージレプリケーションが有効になっている場合に返されます。|  
@@ -53,13 +53,13 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**改定**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_helpreplicationoption**は、特定のサーバーで有効になっているレプリケーションオプションに関する情報を取得するために使用されます。 特定のデータベースに関する情報を取得するには、 **sp_helpreplicationdboption**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b6665165d3b50ef4ac73be2d530a018c0ef5d86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c2a81eeea47f1241057c91e21b06ae1360be6589
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771568"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438929"
 ---
 # <a name="cdc-instance-deployment-script"></a>[CDC インスタンス配置スクリプト]
   CCD インスタンス配置スクリプトを表示する [CDC インスタンス配置スクリプト] ダイアログ ボックスです。 このスクリプトは、すべてのアーティファクトが異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにある CDC データベースを再作成するために使用できます。  
@@ -33,10 +32,10 @@ ms.locfileid: "62771568"
  **[名前を付けて保存]**  
  任意の場所に保存できるテキスト ファイルにスクリプトを保存します。 スクリプトを含むファイルを他の任意のサーバーにコピーして、そのサーバーで実行できます。  
   
- **コピー**  
+ **Copy** に設定する必要があります  
  スクリプトをクリップボードにコピーします。 その後、スクリプトを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または任意のテキスト エディターに貼り付けて、後でスクリプトを実行できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CDC 用の SQL Server の準備](prepare-sql-server-for-cdc.md)  
   
   

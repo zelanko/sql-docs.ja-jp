@@ -1,6 +1,6 @@
 ---
-title: レポート サーバーのプロパティ ([詳細設定] タブ) | Microsoft Docs
-ms.custom: ''
+title: '[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([詳細設定] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,16 +11,16 @@ ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7214cf97b4f7d23f8845e9a6506d1d778883b497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 42cc01602f1f09958bbff07af7525bb48bca3cc8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058453"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306365"
 ---
 # <a name="report-server-properties-advanced-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。 カスタム プロパティが定義されていれば、そのプロパティと値がこのタブに表示されます。  
+  このサービスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] です。 カスタム プロパティが定義されていれば、そのプロパティと値がこのタブに表示されます。  
   
 ## <a name="options"></a>オプション  
  **[カスタマー フィードバック レポート]**  

@@ -1,5 +1,5 @@
 ---
-title: トレースおよび再生のイベント |マイクロソフトのドキュメント
+title: イベントのトレースと再生 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,24 +13,23 @@ helpviewer_keywords:
 - events [SMO], replaying
 - events [SMO], tracing
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f441cceed84b873b31c7d4691b08a541a0aee06f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 3576791ae4cf5e282c6bfb90ebc3861622486071
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030164"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005949"
 ---
 # <a name="tracing-and-replaying-events"></a>イベントのトレースおよび再生
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  SMO では、**トレース**と**再生**内のオブジェクト、<xref:Microsoft.SqlServer.Management.Trace>名前空間へのプログラムによるアクセスを提供する、 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] のインスタンスを監視するために使用される機能、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]または[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]します。 各イベントに関するデータをキャプチャし、ファイルやテーブルに保存して、後で分析できます。 たとえば、実稼動環境を監視して、どのプロシージャの実行が遅く、パフォーマンスに影響を与えているかを確認できます。  
+  SMO では、名前空間の**Trace**オブジェクトと**Replay**オブジェクトによって、 <xref:Microsoft.SqlServer.Management.Trace> [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] またはのインスタンスの監視に使用される機能にプログラムからアクセス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] できます。 各イベントに関するデータをキャプチャし、ファイルやテーブルに保存して、後で分析できます。 たとえば、実稼動環境を監視して、どのプロシージャの実行が遅く、パフォーマンスに影響を与えているかを確認できます。  
   
- **トレース**と**再生**オブジェクトのインスタンスでトレースの作成に使用できるオブジェクトのセットを提供する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 これらのオブジェクトをユーザー独自のアプリケーションから使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] に対してトレースを手動で作成することもできます。 さらに、SMO**トレース**オブジェクトは、SQL トレース ファイルと監視することによって作成されたテーブルの読み取りに使用できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、または DTS ログを記録します。  
+ **Trace**オブジェクトと**Replay**オブジェクトには、のインスタンスでトレースを作成するために使用できる一連のオブジェクトが用意されて [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] います。 これらのオブジェクトをユーザー独自のアプリケーションから使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] に対してトレースを手動で作成することもできます。 また、SMO**トレース**オブジェクトを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、または DTS ログを監視することによって作成された SQL トレースファイルとテーブルを読み取ることができます。  
   
- SMO**トレース**オブジェクトでは、次の関数を実行できます。  
+ SMO**トレース**オブジェクトを使用すると、次の機能を実行できます。  
   
 -   トレースの作成。  
   
@@ -52,13 +51,13 @@ ms.locfileid: "68030164"
   
 -   トレース ファイルまたはトレース テーブルの再生。  
   
- トレース データ、**トレース**と**再生**オブジェクトは、SMO アプリケーションで使用できるかを使用して手動で調べることができます[SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)します。 トレース データと互換性のあるでも、 [SQL トレース](../../../relational-databases/sql-trace/sql-trace.md)トレース機能を提供するストアド プロシージャ。  
+ **トレース**オブジェクトと**再生**オブジェクトからのトレースデータは、SMO アプリケーションで使用できます。また、 [SQL Server プロファイラー](../../../tools/sql-server-profiler/sql-server-profiler.md)を使用して手動で調べることもできます。 トレースデータは、トレース機能を提供する[SQL トレース](../../../relational-databases/sql-trace/sql-trace.md)ストアドプロシージャとも互換性があります。  
   
  SMO トレース オブジェクトは、Microsoft.SQLServer.ConnectionInfo.dll ファイルへの参照が必要となる <xref:Microsoft.SqlServer.Management.Trace> 名前空間に存在します。  
   
- **トレース**と**再生**オブジェクトを必要とする[ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>オブジェクトのインスタンスとの接続を確立するために[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトに格納されて、 [Microsoft.SqlServer.Management.Common](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common)名前空間は、Microsoft.SQLServer.ConnectionInfo.dll ファイルへの参照が必要です。  
+ **Trace**オブジェクトと**Replay**オブジェクトには、のインスタンスとの接続を確立するための[serverconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> オブジェクトが必要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] です。 [Serverconnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)オブジェクトは、Microsoft.SQLServer.ConnectionInfo.dll ファイルへの参照を必要とする、 [Microsoft の SqlServer](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common)名前空間に存在します。  
   
 > [!NOTE]  
->  **トレース**と**再生**オブジェクトは、64 ビット プラットフォームでサポートされていません。  
+>  **トレース**オブジェクトと**再生**オブジェクトは、64ビットプラットフォームではサポートされていません。  
   
   

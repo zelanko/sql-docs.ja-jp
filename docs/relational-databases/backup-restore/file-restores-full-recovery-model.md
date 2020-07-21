@@ -1,5 +1,6 @@
 ---
 title: ファイル復元 (完全復旧モデル) | Microsoft Docs
+description: SQL Server でのファイル復元は、データベース全体を復元することなく、1 つ以上のデータ ファイルをコピーし、ロールフォワードし、復旧する単一の復元シーケンスです。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8c7c50136b05c94bacda9d400bf8afd5d8640f0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d0af1b6f32ddc31cef057b2eb13a123dd13e348
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718086"
 ---
 # <a name="file-restores-full-recovery-model"></a>ファイル復元 (完全復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックは、複数のファイルまたはファイル グループが含まれている、完全復旧モデルまたは一括読み込み復旧モデルを使用するデータベースだけに関連しています。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68138757"
     >  ファイル復元のためにデータベースをオフラインにする場合は、次の [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントを実行して復元シーケンスを開始する前に、データベースをオフラインにしてください。ALTER DATABASE *database_name* SET OFFLINE。  
   
   
-##  <a name="Overview"></a> 破損したファイルのファイル バックアップからの復元  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> 破損したファイルのファイル バックアップからの復元  
   
 1.  1 つ以上の破損したファイルを復元するには、 [ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)を作成してください。  
   
@@ -75,8 +76,6 @@ ms.locfileid: "68138757"
      データベースを一貫性のある状態にするには、ファイル バックアップより後に作成されたトランザクション ログ バックアップを復元する必要があります。 トランザクション ログ バックアップは、復元するファイルに関連のある変更のみが適用されるので、すばやくロールフォワードできます。 破損していないファイルに関しては、コピーされずにロールフォワードが行われるので、データベース全体の復元より個別のファイルの復元の方が適している場合があります。 ただし、ログ バックアップのチェーンは、全体を読み取る必要があります。  
   
 5.  データベースを復旧します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  ファイル バックアップを使用して、データベースを以前の時点の状態に復元することもできます。 この操作を行うには、ファイル バックアップの完全なセットを復元してから、一番最近に復元されたファイル バックアップの後の時点までのトランザクション ログ バックアップを順番に復元する必要があります。 特定の時点への復旧の詳細については、「[SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
@@ -115,7 +114,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
    WITH RECOVERY;  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 -   [例: 読み取り/書き込みファイルのオンライン復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
@@ -123,7 +122,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [例: プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **ファイルおよびファイル グループを復元するには**  
   
 -   [新しい場所へのファイルの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  

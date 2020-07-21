@@ -14,15 +14,15 @@ ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2127b9164537afca99b8bd556458137d6713001c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5af131c9824de651a198fb99afaa526f3dd0bd6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637298"
 ---
 # <a name="row-compression-implementation"></a>「行の圧縮の実装」
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] に実装されている行の圧縮方法の概要を説明します。 この概要では、データに必要なストレージ領域の計画に役立つ基本的な情報を提供します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68030518"
 ## <a name="how-row-compression-affects-storage"></a>行の圧縮によるストレージへの影響  
  次の表では、行の圧縮が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]の既存の型に与える影響について説明します。 この表では、ページの圧縮を使用して実現可能な節約は示されていません。  
   
-|データ型|ストレージへの影響の有無|[説明]|  
+|データ型|ストレージへの影響の有無|説明|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|いいえ|1 バイトの最小ストレージが必要です。|  
 |**smallint**|はい|値が 1 バイトに収まる場合は、1 バイトしか使用されません。|  
@@ -65,10 +65,10 @@ ms.locfileid: "68030518"
 |**nchar**|はい|末尾の埋め込み文字が削除されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、使用される照合順序に関係なく、同じ埋め込み文字が挿入されることに注意してください。|  
 |**nvarchar**|いいえ|影響しません。|  
 |**ntext**|いいえ|影響しません。|  
-|**binary**|はい|末尾の 0 が削除されます。|  
+|**[バイナリ]**|はい|末尾の 0 が削除されます。|  
 |**varbinary**|いいえ|影響しません。|  
-|**image**|いいえ|影響しません。|  
-|**カーソル (cursor)**|いいえ|影響しません。|  
+|**画像**|いいえ|影響しません。|  
+|**cursor**|いいえ|影響しません。|  
 |**timestamp** / **rowversion**|はい|8 バイトを使用して、整数データ表現を使用します。 データベースごとに保持されるタイムスタンプ カウンターがあり、その値は 0 から始まります。 これは、その他の整数値と同様に圧縮できます。|  
 |**sql_variant**|いいえ|影響しません。|  
 |**uniqueidentifier**|いいえ|影響しません。|  
@@ -79,6 +79,6 @@ ms.locfileid: "68030518"
   
 ## <a name="see-also"></a>参照  
  [データの圧縮](../../relational-databases/data-compression/data-compression.md)   
- [ページの圧縮の実装](../../relational-databases/data-compression/page-compression-implementation.md)  
+ [ページ圧縮の実装](../../relational-databases/data-compression/page-compression-implementation.md)  
   
   

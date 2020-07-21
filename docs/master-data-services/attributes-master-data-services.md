@@ -1,5 +1,6 @@
 ---
-title: 属性 (マスター データ サービス) | Microsoft Docs
+title: 属性
+description: マスターデータサービスエンティティ内のオブジェクトである属性について説明します。 属性値はエンティティのメンバーを表します。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4634ae8941b9acd0667b69974b3192109b81fff2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f9a8b66f7b499f508378fa0d73eef4650063a08f
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811654"
 ---
 # <a name="attributes-master-data-services"></a>属性 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   属性とは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] エンティティに含まれるオブジェクトです。 属性値はエンティティのメンバーを表します。 属性を使用してリーフ メンバー、統合メンバー、またはコレクションを表すことができます。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "68047582"
  エンティティを作成すると、Name 属性と Code 属性が自動的に作成されます。 Code 属性には値が必要であり、Code 属性はエンティティ内で一意であることが必要です。 Name 属性と Code 属性を削除することはできません。  
   
 ## <a name="attribute-types"></a>属性の種類  
- 属性には、次の 3 種類があります。  
+ 次の 3 種類の属性があります。  
   
 -   自由形式属性。テキスト、数値、日付、またはリンクを自由形式で入力できます。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68047582"
 -   浮動小数点数が含まれていると、値が " *ラウンド トリップ* " されない場合があります。 値のラウンド トリップとは、演算で元の浮動小数点数が別の形式に変換され、逆の演算で変換後の形式から浮動小数点数に戻されて、最終の浮動小数点数が元の浮動小数点数に等しくなる場合をいいます。 変換で最小有効数字が 1 桁以上失われるか、または変更された場合は、ラウンド トリップが失敗します。  
   
 ## <a name="attribute-examples"></a>属性の例  
- 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
+ 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto という属性があります。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
  ![自転車製品エンティティ テーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
   
@@ -88,7 +89,7 @@ ms.locfileid: "68047582"
 |新しいドメインベース属性を作成する。|[ドメイン ベースの属性を作成する (マスター データ サービス)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |既存の属性の名前を変更する。|[属性名とデータ型を変更する (マスター データ サービス)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
 |変更の追跡グループに既存の属性を追加する。|[変更の追跡グループに属性を追加する (マスター データ サービス)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|既存の属性を削除する。|[属性を削除する (マスター データ サービス)](../master-data-services/delete-an-attribute-master-data-services.md)|  
+|既存の属性を削除する。|[属性を削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-an-attribute-master-data-services.md)|  
 |属性の順序を変更する。|[属性の順序の変更](../master-data-services/change-the-order-of-attributes.md)|  
 |日付属性を作成する|[日付属性を作成する (マスター データ サービス)](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   

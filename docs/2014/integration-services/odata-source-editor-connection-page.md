@@ -1,5 +1,5 @@
 ---
-title: OData ソース エディター ([接続] ページ) |Microsoft Docs
+title: '[OData ソースエディター] ([接続] ページ)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e06b670e80d1f63d35d4d37b264c8dd9c9d9ad4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057316"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424429"
 ---
 # <a name="odata-source-editor-connection-page"></a>[OData ソース エディター] ([接続] ページ)
   **[ODBC ソース エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、OData ソースに対応する ODBC 接続マネージャーを選択できます。 また、このページで、コレクションまたはリソースのパスと、どのデータを OData ソースから取得する必要があるかを示すクエリ オプションを指定することができます。 OData ソースの詳細については、「 [OData ソース](data-flow/odata-source.md)」を参照してください。  
@@ -34,10 +33,10 @@ ms.locfileid: "66057316"
   
 |オプション|説明|  
 |------------|-----------------|  
-|Collection|コレクション名を使用して、Odata ソースからデータを取得します。|  
+|コレクション|コレクション名を使用して、Odata ソースからデータを取得します。|  
 |リソースのパス|リソースのパスを使用して、Odata ソースからデータを取得します。|  
   
- **クエリ オプション**  
+ **クエリオプション**  
  クエリのオプションを指定します。  例: $top=5  
   
  **フィード URL**  
@@ -49,16 +48,16 @@ ms.locfileid: "66057316"
 ## <a name="dynamic-options"></a>動的オプション  
   
 ### <a name="use-collection-or-resource-path--collection"></a>コレクション、またはリソースのパス = Collection を使用します。  
- **Collection**  
+ **コレクション**  
  ドロップダウン リストからコレクションを選択します。  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
- **Resource path**  
- リソースのパスを入力します。 例 :Employees  
+ **リソースパス**  
+ リソースのパスを入力します。 例: Employees  
   
 ## <a name="see-also"></a>関連項目  
- [OData ソース エディター ([列] ページ)](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [OData ソース エディター ([エラー出力] ページ)](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData Connection Manager](connection-manager/odata-connection-manager.md)  
+ [OData ソースエディター &#40;列のページ&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [OData ソースエディター &#40;エラー出力ページ&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData 接続マネージャー](connection-manager/odata-connection-manager.md)  
   
   

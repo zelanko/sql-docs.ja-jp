@@ -1,6 +1,6 @@
 ---
-title: 計算列を使用した使用頻度の高い XML 値の昇格 | Microsoft Docs
-ms.custom: ''
+title: 計算列を使用した高頻度の XML 値の昇格 | Microsoft Docs
+description: クエリの効率性を上げるため、計算列を作成することで、頻繁に使用される XML 値を昇格する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4b68ca111fc14682f5e11a6a865d15c0356a954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772092"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   クエリが主に少数の要素や属性の値に対して行われる場合、対象になる値をリレーショナル列に昇格できます。 XML インスタンス全体を取得する一方で、XML データの一部に対してクエリを実行する場合に昇格が役立ちます。 XML 列に XML インデックスを作成する必要はありません。 代わりに、昇格した列にインデックスを設定できます。 クエリは昇格した列を使用するように記述する必要があります。 クエリ オプティマイザーは、クエリの対象を XML 列から、昇格した列に振り替えないためです。  
   
  昇格した列は、同一のテーブルで計算列にすることができます。また、任意のテーブルでユーザーが管理する独立した列にすることもできます。 これは、各 XML インスタンスから単一の値を昇格するときには十分です。 しかし、複数の値から構成されるプロパティの場合、個々のプロパティ用に個別のテーブルを作成する必要があります。詳細については、次のセクションを参照してください。  
@@ -156,7 +157,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例: 著者の名が同一の XML インスタンスの検索  
- XML 列に対するクエリも作成できますが、 プロパティ テーブルで名 "David" を検索し、ベース テーブルとの逆結合を実行して XML インスタンスを返すこともできます。 例:  
+ XML 列に対するクエリも作成できますが、 プロパティ テーブルで名 "David" を検索し、ベース テーブルとの逆結合を実行して XML インスタンスを返すこともできます。 次に例を示します。  
   
 ```  
 SELECT xCol   
@@ -172,8 +173,6 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  CLR クラスを起動するため、アセンブリおよび Transact-SQL ユーザー定義関数を作成します。  
   
 3.  ユーザー定義関数を使用して、プロパティ テーブルのメンテナンスに使用する挿入トリガー、更新トリガー、および削除トリガーを定義します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  まず、ストリーミング CLR 関数を作成します。 **xml** データ型は ADO.NET のマネージド クラス SqlXml として公開します。このデータ型は XmlReader を返す **CreateReader()** メソッドをサポートします。  
   

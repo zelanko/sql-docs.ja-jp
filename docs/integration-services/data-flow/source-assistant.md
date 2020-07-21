@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.sourceassistant.f1
 - sql13.dts.designer.addNewSource.f1
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 493d5a0d7ab5e9971747abe022fa46edbf615ae4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0312349652ad1854efdeacdbfc25726e1766862f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096659"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298036"
 ---
 # <a name="source-assistant"></a>ソース アシスタント
 
@@ -48,7 +48,7 @@ ms.locfileid: "68096659"
 ## <a name="add-new-source-dialog-box"></a>[新しいソースの追加] ダイアログ ボックス
 次の表に、 **[新しいソースの追加]** ダイアログ ボックスで使用できるオプションをリストします。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |型|接続先のソースの種類を選択します。|  
 |接続マネージャー|既存の接続マネージャーを選択するか、 **[\<新規作成>]** をクリックして新しい接続マネージャーを作成します。|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0bb761cf3402080842ae0eaff7b04a0f312a3a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd437dec39566ae01e03df5414e29cac0c28a5d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048296"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>トレース ファイルの最大ファイル サイズの設定 (SQL Server Profiler)
   トレース ファイルの最大ファイル サイズを設定するには、次の手順を実行します。  

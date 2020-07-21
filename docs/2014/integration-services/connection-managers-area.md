@@ -1,5 +1,5 @@
 ---
-title: 接続マネージャー 領域 |Microsoft Docs
+title: 接続マネージャー領域 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.connectionstray.f1
 ms.assetid: 0d0c4862-19c0-4513-a5f4-3fe97f635cf6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7ad0bce83215b3e6e06af6f0f43fd17f33d24b84
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060401"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438279"
 ---
 # <a name="connection-managers-area"></a>[接続マネージャー] 領域
   パッケージでは、接続マネージャーを使用してファイル、リレーショナル データベース、サーバーなどのデータ ソースに接続します。  
@@ -26,8 +25,8 @@ ms.locfileid: "66060401"
   
  この領域を右クリックし、メニューから実行する作業のオプションをクリックします。  
   
-## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; の接続](connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>関連項目  
+ [SSIS&#41; 接続の Integration Services &#40;](connection-manager/integration-services-ssis-connections.md)   
  [SSIS デザイナー](ssis-designer.md)  
   
   

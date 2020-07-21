@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580086"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint サービス アプリケーションの管理
@@ -34,7 +34,7 @@ ms.locfileid: "65580086"
   
 2.  サービス アプリケーションの名前の近くか、または **[種類]** 列をクリックして列全体を選択し、SharePoint リボンで **[プロパティ]** をクリックします。  
   
- サービス アプリケーション プロパティの詳細については、「 [3: Reporting Services サービス アプリケーションの作成](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)」を参照してください。  
+ サービス アプリケーション プロパティの詳細については、「[手順 3: Reporting Services サービス アプリケーションの作成](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)」の「サービス アプリケーション」セクションをご覧ください。  
   
 ## <a name="open-service-application-management-pages"></a>サービス アプリケーションの管理ページを開く
 
@@ -52,7 +52,7 @@ ms.locfileid: "65580086"
   
 ### <a name="report-settings"></a>レポートの設定
   
-|設定|コメント|  
+|設定|説明|  
 |-------------|--------------|  
 |外部イメージのタイムアウト|既定値は 600 秒です。|  
 |スナップショットの圧縮|既定値は SQL です|  
@@ -63,7 +63,7 @@ ms.locfileid: "65580086"
   
 ### <a name="session-settings"></a>セッションの設定
   
-|設定|コメント|  
+|設定|説明|  
 |-------------|--------------|  
 |セッションのタイムアウト|既定値は 600 秒です。|  
 |セッション Cookie の使用|既定値は TRUE です。|  
@@ -71,16 +71,16 @@ ms.locfileid: "65580086"
   
 ### <a name="system-settings-for-logging"></a>ログ記録用のシステム設定
   
-|設定|コメント|  
+|設定|説明|  
 |-------------|--------------|  
-|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 をクリックします。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
+|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。|  
 |実行ログの保持日数|既定の日数は 60 日です。|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-### <a name="security-settings"></a>セキュリティ設定
+### <a name="security-settings"></a>セキュリティの設定
   
-|設定|コメント|  
+|設定|説明|  
 |-------------|--------------|  
 |統合セキュリティを有効にする|既定値は TRUE です。<br /><br /> レポートを要求したユーザーの Windows セキュリティ トークンを使用してレポート データ ソースに接続するかどうかを指定します。|  
 |レポート定義の読み込みを有効にする|既定値は TRUE です。|  
@@ -89,10 +89,10 @@ ms.locfileid: "65580086"
   
 ### <a name="client-settings"></a>クライアントの設定
   
-|設定|コメント|  
+|設定|説明|  
 |-------------|--------------|  
 |レポート ビルダーのダウンロードを有効にする|既定値は TRUE です。<br /><br /> レポート ビルダー アプリケーションのダウンロード ボタンをクライアントに表示するかどうかを指定します。|  
-|レポート ビルダーの起動 URL|レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定は省略可能です。 この値を指定しなかった場合は、レポート ビルダーを起動する既定の URL が使用されます。 レポート ビルダー 3.0 を ClickOnce アプリケーションとして起動するには、「 https://\<コンピューター名>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application」と入力します。|  
+|レポート ビルダーの起動 URL|レポート サーバーで既定のレポート ビルダー URL を使用しない場合に、カスタムの URL を指定します。 この設定はオプションです。 この値を指定しなかった場合は、レポート ビルダーを起動する既定の URL が使用されます。 レポート ビルダー 3.0 を ClickOnce アプリケーションとして起動するには、「 https://\<コンピューター名>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application」と入力します。|  
 |クライアントの印刷を有効にする|既定値は TRUE です。<br /><br /> ユーザーがクライアント側のコントロール (印刷オプションを提供します) をダウンロードできるかどうかを指定します。|  
 |セッション タイムアウトの編集|既定値は 7200 秒です。|  
 |セッション キャッシュ制限の編集|既定値は 5 です。|  
@@ -109,7 +109,7 @@ ms.locfileid: "65580086"
 > [!IMPORTANT]  
 >  セキュリティを高めるために、Reporting Services の暗号化キーは定期的に変更することをお勧めします。 キーを変更する推奨されるタイミングは、Reporting Services のメジャー バージョンのアップグレードの直後です。 アップグレード後であれば、アップグレード サイクル以外での Reporting Services の暗号化キーの変更に伴う他のサービスの中断を最小限に抑えることができます。  
   
-|ページ|[説明]|  
+|ページ|説明|  
 |----------|-----------------|  
 |暗号化キーのバックアップ|1) **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスにパスワードを入力し、 **[エクスポート]** をクリックします。 入力したパスワードがドメイン ポリシーの複雑さの要件を満たしていない場合は、警告が表示されます。<br /><br /> 2) キー ファイルを保存する場所を指定するよう求められます。 キー ファイルは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を実行しているコンピューターとは別のコンピューター上に保存することをお勧めします。 既定のファイル名は、サービス アプリケーションと同じ名前です。|  
 |暗号化キーの復元|1) キー ファイルを入力するか、または **[ファイルの場所]** ボックスでファイルの場所を参照します。<br /><br /> 2) **[パスワード]** ボックスで、暗号化ファイルのバックアップに使用されたパスワードを入力します。<br /><br /> 3) **[OK]** をクリックします。|  
@@ -140,7 +140,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  詳細については、「 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」をご覧ください。  
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
  **[実行アカウントの指定]**  
  アカウントを指定します。  
@@ -152,13 +152,13 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  パスワードを入力します。  
   
  **[パスワードの確認入力]**  
- 再度、パスワードを入力します。  
+ パスワードを再入力します。  
 
 ## <a name="e-mail-settings"></a>電子メールの設定
 
  このページを使用すると、レポート サーバーからのレポート サーバー電子メール配信を有効にする簡易メール転送プロトコル (SMTP) の設定を指定できます。 レポート サーバーの電子メール配信拡張機能により、電子メール サブスクリプションを通じてレポートやレポート処理通知を配信できます。 レポート サーバーの電子メール配信拡張機能を使用するには、SMTP サーバーと、差出人フィールドに使用する電子メール アドレスが必要です。  
 
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
  **[SMTP サーバーの使用]**  
  レポート サーバー電子メールが SMTP サーバーによってルーティングされるように指定します。  

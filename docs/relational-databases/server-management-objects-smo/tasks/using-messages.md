@@ -1,5 +1,5 @@
 ---
-title: メッセージを使用して |Microsoft Docs
+title: Messages | を使用するMicrosoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,25 +10,24 @@ ms.topic: reference
 helpviewer_keywords:
 - messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d30b267a0a821c015990ff54ac47eb91e925e982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 4d79ac396f480100319bec8ea6a9c82bd984bce5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68029998"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008935"
 ---
 # <a name="using-messages"></a>メッセージの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  SMO では、システム メッセージがによって表される、<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>オブジェクトに属し、 **Server**オブジェクト。 システム メッセージが変更されることはできません、ため**SystemMessage**オブジェクトのプロパティは読み取り専用です。  
+  SMO では、システムメッセージは、 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> **サーバー**オブジェクトに属するオブジェクトによって表されます。 システムメッセージは変更できないため、 **Systemmessage**オブジェクトのプロパティは読み取り専用です。  
   
- SMO では、プログラム上では <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> オブジェクトを使用してユーザー定義メッセージを表現します。 既存のユーザー定義メッセージは、コレクションを反復処理することで検索することができます。 新しいをインスタンス化して、新しいユーザー定義メッセージを作成できる**UserDefinedMessage**オブジェクトと適切なプロパティを設定します。  
+ SMO では、プログラム上では <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> オブジェクトを使用してユーザー定義メッセージを表現します。 既存のユーザー定義メッセージは、コレクションを反復処理することで検索することができます。 新しいユーザー定義メッセージを作成するには、新しい**Userdefinedmessage**オブジェクトをインスタンス化し、適切なプロパティを設定します。  
   
-## <a name="examples"></a>使用例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+## <a name="examples"></a>例  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Visual Basic での特定のシステム メッセージの検索  
  このコード例では、システム メッセージを ID 番号で識別してメッセージを表示する方法を示します。  

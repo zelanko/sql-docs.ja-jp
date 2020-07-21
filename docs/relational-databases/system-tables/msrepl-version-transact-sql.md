@@ -1,5 +1,5 @@
 ---
-title: MSrepl_version (TRANSACT-SQL) |Microsoft Docs
+title: MSrepl_version (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_version system table
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 45dad1cfaa6057cd50ee4c01b484df8250121a46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3176da347195e7410c5062a442c7f1d5b5881791
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079154"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889473"
 ---
-# <a name="msreplversion-transact-sql"></a>MSrepl_version (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="msrepl_version-transact-sql"></a>MSrepl_version (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSrepl_version**テーブルにインストールされているレプリケーションの現在のバージョンとの 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
+  **MSrepl_version**テーブルには、現在のバージョンのレプリケーションがインストールされている1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**major_version**|**int**|ディストリビューション データベースのメジャー バージョン番号。|  
 |**minor_version**|**int**|ディストリビューション データベースのマイナー バージョン番号。|  
-|**revision**|**int**|リビジョン番号。|  
-|**db_existed**|**bit**|前に、ディストリビューション データベースが存在するかどうかを示す**sp_adddistributiondb**が呼び出されます。|  
+|**改定**|**int**|リビジョン番号。|  
+|**db_existed**|**bit**|**Sp_adddistributiondb**が呼び出される前に、ディストリビューションデータベースが存在するかどうかを示します。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

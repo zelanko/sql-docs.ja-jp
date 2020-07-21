@@ -1,5 +1,5 @@
 ---
-title: ジョブ ステップのプロパティ:新しいジョブ ステップ (詳細 ページ) |Microsoft Docs
+title: '[ジョブステップのプロパティ]: [新しいジョブステップ] ([詳細設定] ページ)Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22b5877fb70a66fd9864e52223b30eca4b01b6db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62937199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064474"
 ---
 # <a name="job-step-properties-new-job-step-advanced-page"></a>[ジョブ ステップのプロパティ]:[新しいジョブ ステップ] ([詳細] ページ)
-  このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップのプロパティを表示したり、変更したりできます。  
+  このページを使用すると、エージェントジョブステップのプロパティを表示したり、変更したり [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[成功した場合のアクション]**  
  ジョブ ステップが成功した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。  
   
- **[再試行回数]**  
+ **再試行**  
  失敗したジョブ ステップを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで再試行する回数を設定します。  
   
  **[再試行間隔 (分)]**  
@@ -39,11 +38,11 @@ ms.locfileid: "62937199"
  **[出力ファイル]**  
  ジョブ ステップからの出力に使用するファイルを設定します。 このオプションは、 **sysadmin** 固定サーバー ロールのメンバーである場合にのみ使用できます。  
   
- **[...]**  
+ **...**  
  ジョブ ステップからの出力に使用するファイルを参照します。  
   
- **[表示]**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
+ **表示**  
+ で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
  **[既存のファイルに出力を追加する]**  
  ファイルの既存の内容に出力を追加します。 このオプションを指定しなければ、ジョブ ステップが実行されるたびに前のファイルの内容が上書きされます。  
@@ -51,7 +50,7 @@ ms.locfileid: "62937199"
  **[テーブルにログ記録する]**  
  **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
- **[表示]**  
+ **表示**  
  ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
   
  **[テーブル内の既存のエントリに出力を追加する]**  
@@ -67,11 +66,11 @@ ms.locfileid: "62937199"
  **[出力ファイル]**  
  ジョブ ステップからの出力に使用するファイルを設定します。  
   
- **[...]**  
+ **...**  
  ジョブ ステップからの出力に使用するファイルを参照します。  
   
- **[表示]**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
+ **表示**  
+ で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
  **[既存のファイルに出力を追加する]**  
  ジョブ ステップを実行するたびに、その出力を前のファイルの内容に追加します。  
@@ -79,7 +78,7 @@ ms.locfileid: "62937199"
  **[テーブルにログ記録する]**  
  **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
- **[表示]**  
+ **表示**  
  ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
   
  **[テーブル内の既存のエントリに出力を追加する]**  
@@ -92,11 +91,11 @@ ms.locfileid: "62937199"
  **[出力ファイル]**  
  ジョブ ステップからの出力に使用するファイルを設定します。  
   
- **[...]**  
+ **...**  
  ジョブ ステップからの出力に使用するファイルを参照します。  
   
- **[表示]**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
+ **表示**  
+ で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、このボタンを使用して出力ファイルを表示することはできません。 代わりに、メモ帳を使用してジョブ ステップの出力ファイルを表示します。  
   
  **[既存のファイルに出力を追加する]**  
  ジョブ ステップを実行するたびに、その出力を前のファイルの内容に追加します。  
@@ -104,7 +103,7 @@ ms.locfileid: "62937199"
  **[テーブルにログ記録する]**  
  **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
- **[表示]**  
+ **表示**  
  ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
   
  **[テーブル内の既存のエントリに出力を追加する]**  
@@ -124,7 +123,7 @@ ms.locfileid: "62937199"
  **[出力ファイル]**  
  ジョブ ステップからの出力に使用するファイルを設定します。 このオプションは、 **sysadmin** 固定サーバー ロールのメンバーである場合にのみ使用できます。  
   
- **[...]**  
+ **...**  
  ジョブ ステップからの出力に使用するファイルを参照します。  
   
  **表示**  
@@ -136,7 +135,7 @@ ms.locfileid: "62937199"
  **[テーブルにログ記録する]**  
  **msdb** データベースの **sysjobstepslogs** テーブルに、ジョブ ステップの出力のログを記録します。  
   
- **[表示]**  
+ **表示**  
  ジョブ ステップを 1 回以上実行した後で **[表示]** をクリックすると、出力がテーブルに表示されます。  
   
  **[テーブル内の既存のエントリに出力を追加する]**  

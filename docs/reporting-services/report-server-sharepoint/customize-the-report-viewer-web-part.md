@@ -7,16 +7,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0974e9bd7e2e4c2306a5ada0a3a41f657073a267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c908965e745b32222fbddcc7f5691774f02ede4e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580006"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77256695"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタマイズ
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -63,7 +63,7 @@ ms.locfileid: "65580006"
   
  次に、レポート ビューアー Web パーツのカスタム プロパティを示します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |レポート|現在の SharePoint サイトまたは同じ Web アプリケーションやファーム内のサイト上のレポートへの完全修飾パス。 追加プロパティの設定で最良の結果を得るには、レポート URL を指定した後で [適用] をクリックしてください。|  
 |[ハイパーリンク ターゲット]|現在のドキュメント内のリンク対象コンテンツを表示するためのターゲット フレームを指定する標準 HTML。 外部 Web サイトへのハイパーリンクを含むレポートについて、現在のウィンドウ内の既存のレポートを対象ドキュメントに置き換えるか、対象ドキュメントを新しいブラウザー ウィンドウで開くかを指定できます。 有効な値には、 **_Top**、 **_Blank**、および **_Self**が含まれます。 **_Top** を指定すると、現在のウィンドウが使用されます。 **_Blank** を指定すると、新しいブラウザー ウィンドウにドキュメントが読み込まれます。 **_Self** を指定すると、現在のフレーム内にドキュメントが開きます。 HTML の Target 属性では **_Parent** も有効な値ですが、ページに埋め込むレポート ビューアー Web パーツでは使用しないでください。|  
@@ -78,7 +78,7 @@ ms.locfileid: "65580006"
 |[[戻る] ボタンを表示する]|ツール バーの [戻る] ボタンの表示と非表示を切り替えます。|  
 |[検索コントロールを表示する]|ツール バーの検索コントロールの表示と非表示を切り替えます。 ユーザーは検索コントロールを使用して、表示されたレポート内のテキストを検索できます。 このオプションは、すべての検索コントロールの表示を変更します。|  
 |[ズーム コントロールを表示する]|ツール バーのズーム コントロールの表示と非表示を切り替えます。|  
-|[ATOM フィードのボタンを表示する]|ツール バーの ATOM フィードのボタンの表示と非表示を切り替えます。<br /><br /> ![HTML ビューアーのデータ フィード](../../reporting-services/media/htmlviewer-datafeed.gif "HTML ビューアーのデータ フィード")|  
+|[ATOM フィードのボタンを表示する]|ツール バーの ATOM フィードのボタンの表示と非表示を切り替えます。<br /><br /> ![htmlviewer_datafeed](../../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |[ツール バーの位置]|レポート ビューアー内のツール バーの位置を決定します。 有効な値には、 **Top** と **Bottom**が含まれます。|  
 |[プロンプト領域]|有効な値には、 **Displayed**、 **Collapsed**、および **Hidden**が含まれます。 **Displayed** を指定すると、パラメーター化された値が含まれ実行前にユーザー入力を必要とするレポートの場合に、パラメーター領域が表示されます。 すべてのレポート パラメーターが指定されており、パラメーター領域をユーザーに対して表示しない場合には、 **Hidden** を使用します。|  
 |[パラメーター領域の幅]|測定単位と値を選択できます。 既定値は 200 ピクセルです。 このプロパティの唯一の要件は、0 より大きい値を設定することです。|  

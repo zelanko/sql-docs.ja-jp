@@ -1,5 +1,6 @@
 ---
 title: Web サービスの Url プロパティを設定 | Microsoft Docs
+description: Microsoft .NET Framework アプリケーションでは、ご自分のアプリケーションのダイレクト先であるレポート サーバー Web サービスの基本 URL を変更できます。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13fc37cd6b0b7396196ad8f514ec34fb9b317a16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 982b1c80e9c9cd71b67e0f5a2fb227a9dc8d999f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128830"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198509"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Web サービスの Url プロパティの設定
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションでは、アプリケーションのダイレクト先であるレポート サーバー Web サービスの基本 URL をいつでも変更できます。 そのためには、サービス オブジェクトの **Url** プロパティを設定します。 例:  
+  お使いの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションでは、ご自分のアプリケーションのダイレクト先であるレポート サーバー Web サービスの基本 URL をいつでも変更できます。 そのためには、サービス オブジェクトの **Url** プロパティを設定します。 次に例を示します。  
   
 ```vb  
 Dim rs As New ReportingService2010()  

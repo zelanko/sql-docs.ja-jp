@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 71d58431-b671-49c5-939a-f581d1fef7cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2af23d551982787c7c20332f2c48049b95fd83d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f567de2206542e78b427951f7534b604ac5ad43d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981972"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906498"
 ---
 # <a name="getmaxstatements-method-sqlserverdatabasemetadata"></a>getMaxStatements メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public int getMaxStatements()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMaxStatements メソッドは、java メタデータインターフェイスの getMaxStatements メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getMaxStatements メソッドは、java.sql.DatabaseMetaData インターフェイスの getMaxStatements メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

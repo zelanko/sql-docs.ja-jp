@@ -1,7 +1,8 @@
 ---
-title: Server Core への SQL Server 2016 のインストール | Microsoft Docs
+title: Server Core への SQL Server のインストール | Microsoft Docs
+description: Server Core インストールに SQL Server をインストールできます。 Server Core インストール オプションでは、特定のサーバー ロールを実行するための最低限の環境が提供されます。
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6054c8a7f7fc4c9c6580d2d84f438d376b4bd61b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: edde54e4f64f55bac2b3e25912a256b3c3b99bdd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991082"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883562"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Server Core インストールにインストールできます。   
   
@@ -27,19 +28,19 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
  現在サポートされているオペレーティング システムの一覧については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
   
 |要件|インストール方法|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 以外のすべてのエディションの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、セットアップには、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile が必要です。 まだインストールされていない場合、SQL Server セットアップを実行すると自動的にインストールされます。 インストールには再起動が必要です。 再起動を回避するには、セットアップを実行する前に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] をインストールします。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 以外のすべてのエディションの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] では、セットアップには、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile が必要です。 まだインストールされていない場合、SQL Server セットアップを実行すると自動的にインストールされます。 インストールには再起動が必要です。 再起動を回避するには、セットアップを実行する前に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] をインストールします。|  
 |Windows インストーラー 4.5|Server Core インストールに付属しています。|  
 |Windows PowerShell|Server Core インストールに付属しています。|  
 |Java ランタイム |PolyBase を使用するには、適切な Java ランタイムをインストールする必要があります。 詳細については、「[PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md)」を参照してください。|
   
-##  <a name="BK_SupportedFeatures"></a> サポートされている機能  
- Server Core インストールの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされている機能については、次の表を参照してください。  
+##  <a name="supported-features"></a><a name="BK_SupportedFeatures"></a> サポートされている機能  
+ Server Core インストールの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でサポートされている機能については、次の表を参照してください。  
   
-|機能|Supported|追加情報|  
+|特徴量|サポートされています|追加情報|  
 |-------------|---------------|----------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|はい||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|はい||  
@@ -58,16 +59,16 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |分散再生コントローラー|いいえ||  
 |分散再生クライアント|リモートのみ|Server Core へのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。|  
 |SQL クライアント接続 SDK|はい||  
-|Microsoft Sync Framework|はい|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
+|Microsoft Sync Framework|はい|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|いいえ||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|いいえ||  
   
 ## <a name="supported-scenarios"></a>サポートされるシナリオ  
- 次の表では、Server Core に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールする場合のサポートされるシナリオのマトリックスを示します。  
+ 次の表では、Server Core に [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] をインストールする場合のサポートされるシナリオのマトリックスを示します。  
   
-|||  
+| インストール | 有効なターゲット |  
 |-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション|すべての [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 ビット エディション |  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディション|すべての [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 64 ビット エディション |  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語|すべての言語|  
 |OS の言語とロケール (組み合わせ) での[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語|JPN (日本語) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> GER (ドイツ語) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> CHS (中国語 - 中国) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ARA (アラビア語 (SA)) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> THA (タイ語) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> TRK (トルコ語) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> pt-PT (ポルトガル語 - ポルトガル) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> ENG (英語) Windows への ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Windows のエディション|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
@@ -75,8 +76,8 @@ Server Core インストール オプションでは、特定のサーバー ロ
 ## <a name="upgrade"></a>アップグレード 
  Server Core インストールでは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] へのアップグレードがサポートされています。  
   
-## <a name="install"></a>Install  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、Server Core オペレーティング システムでのインストール ウィザードを使用したセットアップはサポートされていません。 Server Core にインストールする場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、/Q パラメーターを使用した非表示モード、または /QS パラメーターを使用した簡易非表示モードがサポートされます。 詳細については、「 [コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。  
+## <a name="install"></a>インストール  
+ [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では、Server Core オペレーティング システムでのインストール ウィザードを使用したセットアップはサポートされていません。 Server Core にインストールする場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、/Q パラメーターを使用した非表示モード、または /QS パラメーターを使用した簡易非表示モードがサポートされます。 詳細については、「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。  
   
  どのインストール方法を使用するかにかかわらず、個人として、または組織を代表して、ソフトウェア ライセンス条項に同意するかどうかを確認する必要があります。ただし、ソフトウェアの使用に別の契約 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ボリューム ライセンス契約、ISV や OEM とのサード パーティ契約など) が適用される場合を除きます。  
   
@@ -89,7 +90,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
 ### <a name="feature-parameters"></a>機能パラメーター  
   
-|機能パラメーター|[説明]|  
+|機能パラメーター|説明|  
 |-----------------------|-----------------|  
 |SQLENGINE|[!INCLUDE[ssDE](../../includes/ssde-md.md)]のみをインストールします。|  
 |レプリケーション|[!INCLUDE[ssDE](../../includes/ssde-md.md)]と共にレプリケーション コンポーネントをインストールします。|  
@@ -102,7 +103,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 
  機能パラメーターの使い方の例を参照してください。  
   
-|パラメーターおよび値|[説明]|  
+|パラメーターおよび値|説明|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|[!INCLUDE[ssDE](../../includes/ssde-md.md)]のみをインストールします。|  
 |/FEATURES=SQLEngine,FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] とフルテキストをインストールします。|  
@@ -112,13 +113,13 @@ Server Core インストール オプションでは、特定のサーバー ロ
 
   
 ### <a name="installation-options"></a>インストール オプション  
- Server Core オペレーティング システムへの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール中に、セットアップで次のインストール オプションをサポートします。  
+ Server Core オペレーティング システムへの [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] のインストール中に、セットアップで次のインストール オプションをサポートします。  
   
 1.  **コマンド ラインからのインストール**  
   
      コマンド プロンプトのインストール オプションを使用して特定の機能をインストールするには、/FEATURES パラメーターを使用して、親機能の値または機能の値を指定します。 コマンド ラインからパラメーターを使用する方法の例を次に示します。  
   
-    ```  
+    ```console
     Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /TCPENABLED=1 /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
@@ -129,44 +130,44 @@ Server Core インストール オプションでは、特定のサーバー ロ
     - [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインストール。 
     
     次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]を含む新しいスタンドアロン インスタンスをインストールする方法を示します。  
-  
-        ```  
-        ; SQL Server Configuration File  
-        [OPTIONS]  
-  
-        ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
-  
-        ACTION="Install"  
-  
-        ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
-  
-        FEATURES=SQLENGINE  
-  
-        ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
-  
-        INSTANCENAME="MSSQLSERVER"  
-  
-        ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
-  
-        INSTANCEID="MSSQLSERVER"  
-  
-        ; Account for ssNoVersion service: Domain\User or system account.   
-  
-        SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
-  
-        ; Windows account(s) to provision as ssNoVersion system administrators.   
-  
-        SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
-  
-        ; Accept the License agreement to continue with Installation  
-  
-        IAcceptSQLServerLicenseTerms="True"  
-  
-        ```  
-  
+
+    ```console
+    ; SQL Server Configuration File  
+    [OPTIONS]  
+    
+    ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
+    
+    ACTION="Install"  
+    
+    ; Specifies features to install, uninstall, or upgrade. The lists of features include SQLEngine, FullText, Replication, AS, IS, and Conn.   
+    
+    FEATURES=SQLENGINE  
+    
+    ; Specify a default or named instance. MSSQLSERVER is the default instance for non-Express editions and SQLExpress for Express editions. This parameter is required when installing the ssNoVersion Database Engine, and Analysis Services (AS).  
+    
+    INSTANCENAME="MSSQLSERVER"  
+    
+    ; Specify the Instance ID for the ssNoVersion features you have specified. ssNoVersion directory structure, registry structure, and service names will incorporate the instance ID of the ssNoVersion instance.   
+    
+    INSTANCEID="MSSQLSERVER"  
+    
+    ; Account for ssNoVersion service: Domain\User or system account.   
+    
+    SQLSVCACCOUNT="NT Service\MSSQLSERVER"  
+    
+    ; Windows account(s) to provision as ssNoVersion system administrators.   
+    
+    SQLSYSADMINACCOUNTS="\<DomainName\UserName>"  
+    
+    ; Accept the License agreement to continue with Installation  
+    
+    IAcceptSQLServerLicenseTerms="True"  
+    
+    ```
+
     -   接続コンポーネントのインストール。 次の例では、接続コンポーネントをインストールする方法を示します。  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
   
@@ -186,9 +187,9 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
     -   サポートされるすべての機能のインストール  
   
-        次の例では、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のサポートされる全機能を Server Core にインストールする方法を示します。  
+        次の例では、 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] のサポートされる全機能を Server Core にインストールする方法を示します。  
   
-        ```  
+        ```console
         ; SQL Server Configuration File  
         [OPTIONS]  
         ; Specifies a Setup work flow, like INSTALL, UNINSTALL, or UPGRADE. This is a required parameter.   
@@ -242,13 +243,13 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
          コマンド プロンプトで構成ファイルを指定するには  
   
-        ```  
+        ```console
         Setup.exe /QS /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
          構成ファイルの代わりにコマンド プロンプトでパスワードを指定するには  
   
-        ```  
+        ```console
         Setup.exe /QS /SQLSVCPASSWORD="************" /ASSVCPASSWORD="************"  /ConfigurationFile=MyConfigurationFile.INI  
         ```  
   
@@ -258,21 +259,21 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
          DefaultSetup.ini ファイルが存在しない場合は、作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ソース メディアのルート レベルの \x86 および \x64 フォルダーにコピーできます。  
   
-## <a name="configure-remote-access-of-includessnoversionincludesssnoversion-mdmd-on-server-core"></a>Server Core で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート アクセスを構成する  
- Server Core で実行している [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスのリモート アクセスを構成するには、以下で説明する操作を実行します。  
+## <a name="configure-remote-access-of-ssnoversion-on-server-core"></a>Server Core で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート アクセスを構成する  
+ Server Core で実行している [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] インスタンスのリモート アクセスを構成するには、以下で説明する操作を実行します。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>のインスタンスでリモート接続を有効にする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-ssnoversion"></a>のインスタンスでリモート接続を有効にする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
 リモート接続を有効にするには、SQLCMD.exe をローカルで使用して、Server Core インスタンスに対して次のステートメントを実行します。  
 
-   ```Transact-SQL
-   EXEC sys.sp_configure N'remote access', N'1'  
-   GO
-   RECONFIGURE WITH OVERRIDE
-   GO
-   ```  
+```sql
+EXEC sys.sp_configure N'remote access', N'1'  
+GO
+RECONFIGURE WITH OVERRIDE
+GO
+```  
   
-### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
+### <a name="enable-and-start-the-ssnoversion-browser-service"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  Browser サービスは、既定では無効になっています。  Server Core で実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで無効になっている場合、このサービスを有効にするには、コマンド プロンプトから次のコマンドを実行します。  
   
  `sc config SQLBROWSER start= auto`  
@@ -284,16 +285,12 @@ Server Core インストール オプションでは、特定のサーバー ロ
 ### <a name="create-exceptions-in-windows-firewall"></a>Windows ファイアウォールで例外を作成する  
  Windows ファイアウォールで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスの例外を作成するには、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」で指定されている手順に従います。  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 以下の操作を行ってください。  
+### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 次の手順に従います。  
   
-1.  サーバーで、タスク マネージャーを起動します。  
+1.  PowerShell では次のとおりです。Import-Module SQLPS  
   
-2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
-  
-3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[開く]** フィールドに **sqlps.exe** と入力して、 **[OK]** をクリックします。 **[[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell]** ウィンドウが開きます。  
-  
-4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
+2.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
@@ -308,11 +305,11 @@ $Tcp
   
 ## <a name="uninstall"></a>アンインストール
 
- Server Core を実行しているコンピューターにログオンした後は、管理者コマンド プロンプトのデスクトップ環境に制限されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のアンインストールを起動するときに、このコマンド プロンプトを使用できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスをアンインストールするには、/Q パラメーターを使用した非表示モード、または /QS パラメーターを使用した簡易非表示モードで、コマンド プロンプトからアンインストールを起動します。 /QS パラメーターを指定すると、UI に進捗状況が表示されますが、入力は受け付けられません。 /Q は、ユーザー インターフェイスのない非表示モードで実行します。  
+ Server Core を実行しているコンピューターにログオンした後は、管理者コマンド プロンプトのデスクトップ環境に制限されます。 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] のアンインストールを起動するときに、このコマンド プロンプトを使用できます。 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]のインスタンスをアンインストールするには、/Q パラメーターを使用した非表示モード、または /QS パラメーターを使用した簡易非表示モードで、コマンド プロンプトからアンインストールを起動します。 /QS パラメーターを指定すると、UI に進捗状況が表示されますが、入力は受け付けられません。 /Q は、ユーザー インターフェイスのない非表示モードで実行します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既存のインスタンスをアンインストールするには、次のコマンドを実行します。  
   
-```  
+```console
 Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERVER  
 ```  
   
@@ -326,7 +323,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
 3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[名前]** フィールドに「 **cmd** 」と入力して、 [!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構成ファイルを使用した SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [エディションと SQL Server 2017 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md)   

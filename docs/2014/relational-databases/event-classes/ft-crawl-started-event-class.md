@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a3dbaa76fcc54bf35b72d0a81efce479be51974
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63023889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029654"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started イベント クラス
   **FT:Crawl Started** イベント クラスは、フルテキスト クロール (作成) が開始されたことを示します。 このイベント クラスを使用して、クロール要求がワーカー タスクによって実際に取得されたかどうかを確認します。  
   
-## <a name="ft-crawl-started-event-class-data-columns"></a>FT:クロールの開始イベント クラスのデータ列  
+## <a name="ft-crawl-started-event-class-data-columns"></a>FT:Crawl Started イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -39,7 +38,7 @@ ms.locfileid: "63023889"
 |**TextData**|**ntext**|フルテキスト クロールの種類です。 値は、Full、Incremental、Manual、または Auto です。|1|はい|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

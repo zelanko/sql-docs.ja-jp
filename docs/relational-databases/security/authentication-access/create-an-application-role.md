@@ -1,5 +1,6 @@
 ---
 title: アプリケーション ロールの作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して SQL Server でアプリケーション ロールを作成し、アプリケーションを使用した場合を除いてデータベースへのアクセスを制限します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ca72f042d8a41501cef58e321654fa8c8374a88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f76734e5c640e7044c9b6ddc2eed5d62ce50e4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628119"
 ---
 # <a name="create-an-application-role"></a>アプリケーション ロールの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]でアプリケーション ロールを作成する方法について説明します。 アプリケーション ロールは、特定のアプリケーションを使用する場合を除き、データベースへのユーザー アクセスを制限します。 アプリケーション ロールにはユーザーが含まれないため、 **[アプリケーション ロール]** が選択されている場合には、 **[ロール メンバー]** の一覧は表示されません。  
   
 > [!IMPORTANT]  
@@ -33,7 +34,7 @@ ms.locfileid: "68094927"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **アプリケーション ロールを作成する方法:**  
   
@@ -41,14 +42,14 @@ ms.locfileid: "68094927"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 ##### <a name="to-create-an-application-role"></a>アプリケーション ロールを作成するには  
   
@@ -70,8 +71,6 @@ ms.locfileid: "68094927"
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### <a name="additional-options"></a>追加オプション  
  **[アプリケーション ロール - 新規 ]** ダイアログ ボックスには次の 2 つのページもあり、それぞれにオプションが用意されています: **[セキュリティ保護可能なリソース]** 、 **[拡張プロパティ]** 。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "68094927"
   
 -   **[拡張プロパティ]** ページでは、カスタム プロパティをデータベース ユーザーに追加できます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-an-application-role"></a>アプリケーション ロールを作成するには  
   

@@ -11,21 +11,21 @@ f1_keywords:
 - sql13.ssis.ssms.ispackageprop.general.f1
 - sql13.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff402435688d2471b7e6bd871a2e9a3f1cbd98c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007987"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298978"
 ---
 # <a name="package-properties-dialog-box"></a>[パッケージのプロパティ] ダイアログ ボックス
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **[パッケージのプロパティ]** ダイアログ ボックスでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージのプロパティを表示できます。  
+  **[パッケージのプロパティ]** ダイアログ ボックスでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージのプロパティを表示できます。  
   
  詳細については、「[Integration Services &#40;SSIS&#41; Packages](../integration-services-ssis-packages.md)」(Integration Services &#40;SSIS&#41; のパッケージ) を参照してください。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68007987"
   
 -   [オプションの構成](#options)  
   
-##  <a name="open_dialog"></a> [パッケージのプロパティ] ダイアログ ボックスを開く  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> [パッケージのプロパティ] ダイアログ ボックスを開く  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
@@ -49,23 +49,23 @@ ms.locfileid: "68007987"
   
 5.  パッケージを右クリックし、 **[プロパティ]** をクリックします。  
   
-##  <a name="options"></a> オプションの構成  
+##  <a name="configure-the-options"></a><a name="options"></a> オプションの構成  
  **[全般]** ページでは、選択されているパッケージのプロパティを表示できます。  
   
  **[全般]** ページに表示されるすべてのプロパティは読み取り専用です。  
   
- **[名前]**  
+ **Name**  
  パッケージの名前が表示されます。  
   
- **[Identifier]**  
+ **識別子**  
  パッケージ ID を一覧表示します。  
   
  **エントリ ポイント**  
- 値 **True** は、パッケージが直接起動されることを示します。 値 **False** は、パッケージ実行タスクを使用して、パッケージが別のパッケージによって起動されることを示します。 既定値は **True** です。  
+ 値 **True** は、パッケージが直接起動されることを示します。 値 **False** は、パッケージ実行タスクを使用して、パッケージが別のパッケージによって起動されることを示します。 既定値は **True**です。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で親パッケージと子パッケージの両方に対してこのプロパティを設定するには、ソリューション エクスプローラーでパッケージを右クリックし、 **[エントリ ポイント パッケージ]** をクリックします。  
   
- **[説明]**  
+ **説明**  
  省略可能なパッケージの説明が表示されます。  
   
   

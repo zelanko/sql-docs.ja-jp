@@ -1,5 +1,5 @@
 ---
-title: 'コマンド (Visual C 構文のインデックスで #import) |Microsoft Docs'
+title: 'Command (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Command collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad88bd09f82863586694ce1ea1eda7720a8d3af8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dfde0a07bee9f169fea3c0041afe0ac4d490a292
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919776"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760458"
 ---
-# <a name="command-visual-c-syntax-index-with-import"></a>コマンド (Visual C 構文のインデックスで #import)
+# <a name="command-visual-c-syntax-index-with-import"></a>Command (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
   
 ```  
@@ -31,7 +31,7 @@ _RecordsetPtr Execute( VARIANT * RecordsAffected, VARIANT * Parameters, long Opt
 _ParameterPtr CreateParameter( _bstr_t Name, enum DataTypeEnum Type, enum ParameterDirectionEnum Direction, long Size, const _variant_t & Value = vtMissing );  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 _ConnectionPtr GetActiveConnection( );  
@@ -59,5 +59,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

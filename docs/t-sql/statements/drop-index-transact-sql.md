@@ -32,28 +32,28 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0daffb09a458ba9e4329907e83958f794a95d02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d6e1349f98bdf5b98d1d70ff68d50014f0dcdde
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044139"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009256"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   1 つ以上のリレーショナル インデックス、空間インデックス、フィルター選択されたインデックス、または XML インデックスを現在のデータベースから削除します。 MOVE TO オプションを指定すると、1 つのトランザクションで、クラスター化インデックスを削除し、その結果生成されたテーブルを別のファイル グループまたはパーティション構成に移動できます。  
   
  DROP INDEX ステートメントは、PRIMARY KEY 制約または UNIQUE 制約を定義することで作成されたインデックスには適用されません。 制約および対応するインデックスを削除するには、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を DROP CONSTRAINT 句と共に使用します。  
   
 > [!IMPORTANT]
->  `<drop_backward_compatible_index>` で定義される構文は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは削除される予定です。 新規の開発作業ではこの構文を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、`<drop_relational_or_xml_index>` で指定されている構文を使用してください。 XML インデックスは、旧バージョンとの互換性のための構文を使用して削除することはできません。  
+>  `<drop_backward_compatible_index>` で定義される構文は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは削除される予定です。 新規の開発作業ではこの構文を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、`<drop_relational_or_xml_index>` で指定されている構文を使用してください。 XML インデックスは、旧バージョンとの互換性のための構文を使用して削除することはできません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server (All options except filegroup and filestream apply to Azure SQL Database.)  
   
 DROP INDEX [ IF EXISTS ]   
@@ -85,7 +85,7 @@ DROP INDEX [ IF EXISTS ]
 }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Database  
   
 DROP INDEX  
@@ -99,7 +99,7 @@ DROP INDEX
 { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
@@ -126,15 +126,15 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  オブジェクトに対するインデックスのレポートを表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューを使用します。  
   
- Windows Azure SQL データベースでは、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name をサポートします。  
+ Azure SQL Database では、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name がサポートされます。  
   
  \<drop_clustered_index_option>  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  クラスター化インデックス オプションを制御します。 これらのオプションは、他のインデックス型では使用できません。  
   
  MAXDOP = *max_degree_of_parallelism*  
- **に適用されます**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] を通じて [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (パフォーマンス レベル P2、P3 のみ)。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (パフォーマンス レベル P2 と P3 のみ)。  
   
  インデックス操作の間、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
@@ -158,7 +158,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  並列インデックス操作は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一部のエディションで使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
  ONLINE = ON | **OFF**  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。  
   
@@ -174,21 +174,21 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  オンラインでのインデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
  MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ **)**  | _filegroup\_name_ |  **"** default **"**  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] はファイル グループの名前として "default" をサポートしています。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] はファイル グループの名前として "default" をサポートしています。  
   
  現在クラスター化インデックスのリーフ レベルにあるデータ行を移動する場所を指定します。 データは、ヒープの形式で新しい場所に移動されます。 新しい場所としてパーティション構成またはファイル グループを指定できますが、このパーティション構成やファイル グループはあらかじめ存在している必要があります。 MOVE TO は、インデックス付きビューまたは非クラスター化インデックスに対しては有効ではありません。 パーティション構成やファイル グループを指定しないと、結果のテーブルは、クラスター化インデックスに対して定義されているのと同じパーティション構成またはファイル グループに配置されます。  
   
  MOVE TO を使用してクラスター化インデックスを削除すると、ベース テーブル上の非クラスター化インデックスが再構築されますが、元のファイル グループまたはパーティション構成からは移動されません。 ベース テーブルを別のファイル グループやパーティション構成に移動しても、非クラスター化インデックスは、ベース テーブルの新しい場所 (ヒープ) に同時に移動されません。 したがって、以前に非クラスター化インデックスがクラスター化インデックスに対応した位置にあっても、ヒープとは対応しなくなる可能性があります。 パーティション インデックスの位置合わせの詳細については、「[パーティション テーブルとパーティション インデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
  _partition_scheme_name_ **(** _column_name_ **)**  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  結果のテーブルのための場所として、パーティション構成を指定します。 パーティション構成は、[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) または [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) のどちらかを実行して、あらかじめ作成しておく必要があります。 場所を指定しないでテーブルをパーティション分割すると、テーブルは既存のクラスター化インデックスと同じパーティション構成に格納されます。  
   
  構成内の列名は、インデックス定義内の列に制限されません。 ベース テーブルの任意の列を指定できます。  
   
  *filegroup_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  結果のテーブルのための場所として、ファイル グループを指定します。 場所を指定しないでテーブルをパーティション分割すると、結果のテーブルはクラスター化インデックスと同じファイル グループに格納されます。 ファイル グループは既に存在している必要があります。  
   
@@ -199,7 +199,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  このコンテキストでは、default はキーワードではありません。 これは、既定のファイル グループの識別子で、MOVE TO **"** default **"** または MOVE TO **[** default **]** のように区切り記号で区切る必要があります。 **"** default **"** を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON に設定されている必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"** }  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  現在クラスター化インデックスのリーフ レベルに格納されている FILESTREAM テーブルを移動する場所を指定します。 データは、ヒープの形式で新しい場所に移動されます。 新しい場所としてパーティション構成またはファイル グループを指定できますが、このパーティション構成やファイル グループはあらかじめ存在している必要があります。 FILESTREAM ON は、インデックス付きビューまたは非クラスター化インデックスに対しては無効です。 パーティション構成が指定されていない場合、データは、クラスター化インデックスに定義されていたものと同じパーティション構成に格納されます。  
   
@@ -217,7 +217,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]
 >  このコンテキストでは、default はキーワードではありません。 これは、既定のファイル グループの識別子で、MOVE TO **"** default **"** または MOVE TO **[** default **]** のように区切り記号で区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  非クラスター化インデックスを削除すると、インデックス定義がメタデータから削除され、インデックス データ ページ (B ツリー) がデータベース ファイルから削除されます。 クラスター化インデックスを削除すると、インデックス定義がメタデータから削除され、クラスター化インデックスのリーフ レベルに格納されたデータ行は、結果の順序付けられていないテーブル (ヒープ) に格納されます。 それまでインデックスが使用していたすべての領域は解放されます。 この領域は、任意のデータベース オブジェクトに使用できます。  
   
  インデックスが格納されているファイル グループがオフラインであるか読み取り専用に設定されている場合には、インデックスを削除することはできません。  
@@ -266,7 +266,7 @@ OFFLINE でクラスター化インデックスを削除すると、クラスタ
 ## <a name="permissions"></a>アクセス許可  
  DROP INDEX を実行するには、少なくとも、テーブルまたはビューの ALTER 権限が必要です。 この権限は、固定サーバー ロール **sysadmin** と、固定データベース ロール **db_ddladmin** および **db_owner** に既定で許可されています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-dropping-an-index"></a>A. インデックスを削除する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `ProductVendor` テーブルの `IX_ProductVendor_VendorID` インデックスを削除します。  
@@ -290,7 +290,7 @@ GO
 ### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>C. クラスター化インデックスをオンラインで削除し、MAXDOP オプションを設定する  
  次の例では、`ONLINE` オプションに `ON` を設定し、`MAXDOP` オプションに `8` を設定してクラスター化インデックスを削除します。 MOVE TO オプションは指定していないため、結果のテーブルは、インデックスと同じファイル グループに格納されます。 この例では [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -301,7 +301,7 @@ GO
 ### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>D. クラスター化インデックスをオンラインで削除し、テーブルを新しいファイル グループに移動する  
  次の例では、クラスター化インデックスをオンラインで削除し、 `NewGroup` 句を使用することで、結果のテーブル (ヒープ) をファイル グループ `MOVE TO` に移動します。 移動の前後で `sys.indexes`、 `sys.tables`、および `sys.filegroups` カタログ ビューを参照し、ファイル グループ内のインデックスとテーブルの配置を確認します。 (以降で [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] インデックス IF EXISTS の DROP 構文を使用することができます)。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
@@ -374,7 +374,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
 ### <a name="g-dropping-a-clustered-index-on-a-filestream-table"></a>G. FILESTREAM テーブルのクラスター化インデックスを削除する  
  次の例では、クラスター化インデックスをオンラインで削除し、`MyPartitionScheme` 句と `MOVE TO` 句の両方を使用して、結果のテーブル (ヒープ) と FILESTREAM データを `FILESTREAM ON` パーティション構成に移動します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```  
 DROP INDEX PK_MyClusteredIndex   

@@ -1,5 +1,6 @@
 ---
 title: プル サブスクリプションの作成 | Microsoft Docs
+description: SQL Server Management Studio、Transact-SQL、またはレプリケーション管理オブジェクトを使用して SQL Server のプル サブスクリプションを作成する方法について説明します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,21 +17,29 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 259ff6d422788f302d05b435026839970b9f75db
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4f2cf1f98203b89e25fa3b6c5d165c40798163df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773929"
 ---
 # <a name="create-a-pull-subscription"></a>プル サブスクリプションの作成
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+<!--
+2019-10-24 , GeneMi:
+This article .md file exists in the so-called "2016+" section of repo 'sql-docs-pr'.
+No article in 2016+ should ever have the moniker 'sql-server-2014' on its metadata line 'monikerRange:', I think.
+Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
+-->
+
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用してプル サブスクリプションを作成する方法について説明します。  
   
  P2P レプリケーションのプル サブスクリプションの設定にはスクリプトを使用できますが、ウィザードは使用できません。  
  
-  ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+  ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  サブスクリプションの新規作成ウィザードを使用して、パブリッシャーまたはサブスクライバーでプル サブスクリプションを作成します。 ウィザードのページに従って、次の操作を実行します。  
   
 -   パブリッシャーとパブリケーションを指定します。  
@@ -57,15 +66,13 @@ ms.locfileid: "68768656"
   
 #### <a name="to-create-a-pull-subscription-from-the-publisher"></a>パブリッシャーからプル サブスクリプションを作成するには  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でパブリッシャーに接続し、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
 3.  1 つ以上のサブスクリプションを作成するパブリケーションを右クリックし、 **[新しいサブスクリプション]** をクリックします。  
   
 4.  サブスクリプションの新規作成ウィザードのページに従って操作を実行します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-create-a-pull-subscription-from-the-subscriber"></a>サブスクライバーからプル サブスクリプションを作成するには  
   
@@ -75,7 +82,7 @@ ms.locfileid: "68768656"
   
 3.  **[ローカル サブスクリプション]** フォルダーを右クリックし、 **[新しいサブスクリプション]** をクリックします。  
   
-4.  サブスクリプションの新規作成ウィザードの **[パブリケーション]** ページで、 **[パブリッシャー]** ボックスの一覧から **[\<SQL Server パブリッシャーの検索>]** または **[\<Oracle パブリッシャーの検索>]** を選択します。  
+4.  サブスクリプションの新規作成ウィザードの **[パブリケーション]** ページで、 **[パブリッシャー]** ドロップダウン リストから **[\<Find SQL Server Publisher>]** または **[\<Find Oracle Publisher>]** を選択します。  
   
 5.  **[サーバーへの接続]** ダイアログ ボックスでパブリッシャーに接続します。  
   
@@ -83,7 +90,7 @@ ms.locfileid: "68768656"
   
 7.  サブスクリプションの新規作成ウィザードのページに従って操作を実行します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーション ストアド プロシージャを使用して、プル サブスクリプションをプログラムで作成できます。 使用するストアド プロシージャは、サブスクリプションが属するパブリケーションの種類によって変わります。  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプル サブスクリプションを作成するには  
@@ -144,7 +151,7 @@ ms.locfileid: "68768656"
   
 4.  パブリッシャーで [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) を実行します。 **\@publication**、 **\@subscriber**、 **\@subscriber_db**、 **\@subscription_type** に対する **pull** の値を指定します。 これにより、プル サブスクリプションが登録されます。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トランザクション パブリケーションに対するプル サブスクリプションを作成します。 最初のバッチはサブスクライバーで実行され、2 番目のバッチはパブリッシャーで実行されます。 ログインとパスワードの値は、実行時に sqlcmd スクリプト変数を使用して入力されます。  
   
 ```  
@@ -264,7 +271,7 @@ EXEC sp_addmergesubscription @publication = @myMergePub,
 GO  
 ```  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  プル サブスクリプションの作成に使用する RMO のクラスは、サブスクリプションが属しているパブリケーションの種類によって異なります。  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプル サブスクリプションを作成するには  
@@ -350,7 +357,7 @@ GO
   
 9. 手順 2. で作成した <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを使用して、 <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> メソッドを呼び出し、パブリッシャーにプル サブスクリプションを登録します。 既に登録されている場合は、例外が発生します。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、トランザクション パブリケーションに対するプル サブスクリプションを作成します。 ディストリビューション エージェント ジョブを作成するために使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントの資格情報は実行時に渡されます。  
   
 ```csharp  

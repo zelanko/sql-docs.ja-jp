@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f807060994c2225dc1e6605344bbb3bd5d2709e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106242"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>一般的に使用されるフィルター (レポート ビルダーおよび SSRS)
@@ -46,15 +46,15 @@ ms.locfileid: "66106242"
 ## <a name="examples-with-report-parameters"></a>レポート パラメーターの例  
  次の表は、単一値か複数値のパラメーター参照を含むフィルター式の例を示します。  
   
-|パラメーターの型|(フィルター) 式|演算子|値|データ型|  
+|パラメーターのタイプ|(フィルター) 式|演算子|値|データ型|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
 |単一値|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
 |MultiValue|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
   
-## <a name="see-also"></a>関連項目  
- [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)   
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [レポートパラメーター &#40;レポートビルダーとレポートデザイナー&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [データセットフィルター、データ領域フィルター、およびグループフィルターを追加 &#40;レポートビルダーと SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [レポートでの式の使用 &#40;レポートビルダーと SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

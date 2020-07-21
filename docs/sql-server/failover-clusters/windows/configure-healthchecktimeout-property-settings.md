@@ -1,6 +1,7 @@
 ---
-title: HealthCheckTimeout プロパティ設定の構成 | Microsoft Docs
-ms.custom: ''
+title: 可用性グループの HealthCheckTimeout を構成する
+description: Always On 可用性グループの HealthCheckTimeout を構成します。これは、無応答を報告するまでに SQL Server リソース DLL が待機する時間を指定するために使用されます。
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfcb5d25b207af35e9a26b95b86997c803828f3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3baf48a747db8dfdc9fb18387ac92dd0c53b4c8
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002472"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925122"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout プロパティ設定の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,17 +25,17 @@ ms.locfileid: "68002472"
   
 -   **HeathCheckTimeout 設定を構成するには、次を使用:** [PowerShell](#PowerShellProcedure)、[フェールオーバー クラスター マネージャー](#WSFC)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Limits"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Limits"></a> 制限事項と制約事項  
  このプロパティの既定値は 30,000 ミリ秒 (30 秒) です。 最小値は 15,000 ミリ秒 (15 秒) です。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ALTER SETTINGS 権限および VIEW SERVER STATE 権限が必要です。  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
   
 ##### <a name="to-configure-healthchecktimeout-settings"></a>HealthCheckTimeout 設定を構成するには  
   
@@ -60,13 +61,13 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>関連コンテンツ (PowerShell)  
   
--   [クラスターと高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (フェールオーバー クラスタリングとネットワーク負荷分散のチームのブログ)  
+-   [クラスターと高可用性](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (フェールオーバー クラスタリングとネットワーク負荷分散のチームのブログ)  
   
 -   [フェールオーバー クラスターの Windows PowerShell の概要](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
 -   [クラスター リソースのコマンドと同等の Windows PowerShell コマンドレット](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
-##  <a name="WSFC"></a> フェールオーバー クラスター マネージャー スナップインの使用  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WSFC"></a> フェールオーバー クラスター マネージャー スナップインの使用  
  **HealthCheckTimeout 設定を構成するには**  
   
 1.  フェールオーバー クラスター マネージャー スナップインを開きます。  
@@ -77,10 +78,10 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 4.  **[プロパティ]** タブをクリックし、 **[HealthCheckTimeout]** プロパティに適切な値を入力し、 **[OK]** をクリックして変更を適用します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用すると、HealthCheckTimeOut プロパティ値を指定できます。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、HealthCheckTimeout オプションを 15,000 ミリ秒 (15 秒) に設定します。  
   
 ```  
@@ -89,6 +90,6 @@ SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;
 ```  
   
 ## <a name="see-also"></a>参照  
- [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

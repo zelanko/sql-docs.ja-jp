@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 485bcddc0c6a7fe34d5e1c6e55efcf13762aaa38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5dc1ae24d927247a1af61ff974a535b6bdb48502
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065323"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298669"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC インスタンスのデータ型
 
@@ -41,7 +41,7 @@ ms.locfileid: "68065323"
 |NAVARCHAR2|NVARCHAR|  
 |RAW|VARBINARY|  
 |real|FLOAT|  
-|TIMESTAMP|DATETIME2|  
+|timestamp|DATETIME2|  
 |TIMESTAMP WITH TIME ZONE|VARCHAR (37)|  
 |TIMESTAMP WITH LOCAL TIME ZONE|VARCHAR (37)|  
 |VARCHAR2|VARCHAR|  
@@ -72,7 +72,7 @@ ms.locfileid: "68065323"
   
  テーブルに次のデータ型が存在する場合、LogMinder はそのテーブルの列のデータを取得できません。  
   
--   ユーザー定義のデータ型  
+-   ユーザー定義データ型  
   
 -   VARRAY  
   

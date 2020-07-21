@@ -13,14 +13,14 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c0b4286836f3ed7060eceee1b1201670574123cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c0f04255feb2eec4b7cc8fc2fd9df0eed67ef25f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944284"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297900"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>キャッシュなしモードまたは部分キャッシュ モードの参照を実装する
 
@@ -64,17 +64,17 @@ ms.locfileid: "67944284"
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成します。  
   
-         \- または -  
+         または  
   
          **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** で用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         \- または -  
+         または  
   
          **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   
      SQL クエリを検証するには、 **[クエリの解析]** をクリックします。  
   
-     データのサンプルを表示するには、 **[プレビュー]** をクリックします。  
+     データのサンプルを表示するには、 **[プレビュー**] をクリックします。  
   
 9. **[列]** ページをクリックし、 **[使用できる入力列]** 一覧の 1 列以上を **[使用できる参照列]** 一覧の列にドラッグします。  
   

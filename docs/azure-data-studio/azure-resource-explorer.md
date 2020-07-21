@@ -1,32 +1,31 @@
 ---
 title: Azure Resource Explorer を使用して Azure SQL リソースを調べる
-titleSuffix: Azure Data Studio
 description: Azure Resource Explorer を使用して、Azure SQL Server、Azure SQL Database、Azure SQL Managed Instance を調査し、管理する方法について学習します。
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-ms.date: 09/24/2018
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.date: 09/24/2018
+ms.openlocfilehash: 733df6ea8abf40785ccab97596a4f74d28dbdcf5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774714"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Azure Resource Explorer を使用して Azure SQL リソースを調査および管理する
 
 このドキュメントでは、[!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] の Azure Resource Explorer を使用して、Azure SQL Server、Azure SQL Database、Azure SQL Managed Instance のリソースを調査し、管理する方法について学習します。
 
 >[!NOTE]
->Azure Resource Explorer は、10 月の SQL Server 2019 プレビューでサポートされる予定です。 その後、[拡張機能マネージャー](extensions.md)または **[ファイル]**  >  **[Install Package from VSIX Package]\(VSIX パッケージからパッケージをインストールする\)** を使用して、プレビュー拡張機能をインストールすることができます。
-
+>Azure Resource Explorer は SQL Server 2019 でサポートされています。 その後、[拡張機能マネージャー](extensions.md)または **[ファイル]**  >  **[Install Package from VSIX Package]\(VSIX パッケージからパッケージをインストールする\)** を使用して、拡張機能をインストールできます。
 
 ## <a name="connect-to-azure"></a>Azure に接続する
 
-SQL プレビュー プラグインをインストールした後、Azure アイコンが左側のメニュー バーに表示されます。 アイコンをクリックして Azure Resource Explorer を開きます。 Azure アイコンが表示されない場合は、左側のメニュー バーを右クリックし、 **[Azure Resource Explorer]** を選択します。
+SQL プラグインをインストールした後、Azure アイコンが左側のメニュー バーに表示されます。 アイコンをクリックして Azure Resource Explorer を開きます。 Azure アイコンが表示されない場合は、左側のメニュー バーを右クリックし、 **[Azure Resource Explorer]** を選択します。
 
 ### <a name="add-an-azure-account"></a>Azure アカウントを追加する
 
@@ -34,7 +33,7 @@ Azure アカウントに関連付けられている SQL リソースを表示す
 
 1. 左下の [アカウント管理] アイコンから、または Azure Resource Explorer の **[Azure にサインイン]** から、 **[リンクされたアカウント]** ダイアログを開きます。
 
-    ![Azure にサインインする](media/azure-resource-explorer/sign-in-to-azure.png)
+    ![Azure へのサインイン](media/azure-resource-explorer/sign-in-to-azure.png)
 
 2. **[リンクされたアカウント]** ダイアログで **[アカウントの追加]** をクリックします。
 
@@ -87,7 +86,7 @@ Azure Resource Explorer で Azure SQL リソースを移動するには、Azure 
 
 ## <a name="connect-to-azure-sql-resources"></a>Azure SQL リソースに接続する
 
-Azure Resource Explorer では、クエリおよび管理のために SQL Server およびデータベースに接続する際に役立つクイック アクセスが提供されます。 
+Azure Resource Explorer では、クエリおよび管理のために SQL Server およびデータベースに接続する際に役立つクイック アクセスが提供されます。
 
 1. ツリー ビューから、接続する SQL リソースを探索します。
 2. リソースを右クリックして **[接続]** を選択し、リソースの右側にある [接続] ボタンを見つけることもできます。
@@ -99,7 +98,7 @@ Azure Resource Explorer では、クエリおよび管理のために SQL Server
    ![SQL 接続ダイアログ](media/azure-resource-explorer/sql-connection-dialog.png)
 4. 接続に成功すると、新しく接続された SQL Server またはデータベースを使って、 **[サーバー]** ウィンドウが自動的に開きます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] を使用した Azure SQL データベースに対する接続およびクエリ](quickstart-sql-database.md)
 - [[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] を使用した Azure SQL Data Warehouse のデータに対する接続およびクエリ](quickstart-sql-dw.md)

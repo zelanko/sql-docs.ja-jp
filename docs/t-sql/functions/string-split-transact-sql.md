@@ -1,6 +1,6 @@
 ---
 title: STRING_SPLIT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: STRING_SPLIT 関数の Transact-SQL リファレンス。 このテーブル値関数では、文字区切り記号に基づき、文字列が部分文字列に分割されます。
 ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afbd05a22b40cfa24fd1eaef18d9aa63aa095be9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714806"
 ---
-# <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+# <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -41,7 +41,7 @@ STRING_SPLIT は、互換性レベル 130 以上にする必要があります�
   
 ## <a name="syntax"></a>構文  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
 
@@ -57,11 +57,13 @@ STRING_SPLIT ( string , separator )
 
 行が部分文字列の、単一列のテーブルを返します。 列の名前は **value** です。 入力引数のいずれかが **nvarchar** または **nchar** の場合は、**nvarchar** を返します。 それ以外の場合は **varchar** を返します。 戻り値の型の長さは、文字列引数の長さと同じです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 **STRING_SPLIT** には、部分文字列を区切った文字列と、区切り記号や区切りとして使用される 1 文字を入力します。 STRING_SPLIT では、行に部分文字列が含まれる、単一列テーブルが出力されます。 出力列の名前は **value** です。
 
 出力行には任意の順序を指定できます。 この順序が入力文字列の部分文字列の順序と一致するかどうかは保証_されません_。 SELECT ステートメントで ORDER BY 句 (`ORDER BY value`) を使用して、最終的な並べ替え順序をオーバーライドできます。
+
+0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、STRING_SPLIT に含めることができません。
 
 入力文字列に区切り文字が 2 つ以上連続して含まれている場合、長さ 0 の空の部分文字列が存在します。 空の部分文字列は、プレーンな部分文字列と同じように扱われます。 WHERE 句 (`WHERE value <> ''`) を使用して、空の部分文字列が含まれているすべての行をフィルター処理できます。 入力文字列が NULL の場合、STRING_SPLIT テーブル値関数は空のテーブルを返します。  
 
@@ -82,7 +84,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 |amet.|  
 | &nbsp; |
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-split-comma-separated-value-string"></a>A. コンマ区切り値文字列を分割する
 
@@ -102,7 +104,7 @@ WHERE RTRIM(value) <> '';
 
 次の例のように、Product テーブルには、コンマで区切られたタグのリストを含む列があります。  
   
-|ProductId|[オブジェクト名]|Tags|  
+|ProductId|名前|Tags|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -118,10 +120,10 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|[オブジェクト名]|value|  
+|ProductId|名前|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
-|1|Full-Finger Gloves|road|  
+|1|Full-Finger Gloves|道路|  
 |1|Full-Finger Gloves|touring|  
 |1|Full-Finger Gloves|bike|  
 |2|LL Headset|bike|  
@@ -187,10 +189,10 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 
 ## <a name="see-also"></a>参照
 
-[LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)<br />
-[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)<br />
-[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)<br />
-[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)<br />
-[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)<br />
-[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)<br />
-[文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
+- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)
+- [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)
+- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)
+- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)
+- [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)
+- [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

@@ -1,42 +1,43 @@
 ---
-title: Azure SQL database に接続する |Microsoft Docs
+title: Azure SQL Database への接続
+description: この記事では、Microsoft JDBC Driver for SQL Server を使用して Azure SQL データベースに接続する際の問題について説明します。
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d709a8dee2577a9689a43a839126dcb2ec741e7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956854"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632533"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL Database への接続
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-この記事では、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に発生する問題について説明します。 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] への接続に関する詳細については、次のトピックを参照してください。  
+この記事では、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際の問題について説明します。 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] への接続に関する詳細については、次をご覧ください。  
   
 - [SQL Azure データベース](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [JDBC を使用して SQL Azure に接続する方法](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [方法: JDBC を使用して SQL Azure に接続する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
-- [Azure Active Directory 認証を利用した接続](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+- [Azure Active Directory 認証を利用した接続](connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>詳細
 
-に[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]接続するときは、master データベースに接続して SQLServerDatabaseMetaData を呼び出す必要があり**ます**。  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 **SQLServerDatabaseMetaData**は、カタログを取得するために、データベースビューを使用します。 での**SQLServerDatabaseMetaData**の[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]動作を理解するには、「データベースのアクセス許可[(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 」を参照してください。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際には、master データベースに接続して **SQLServerDatabaseMetaData.getCatalogs** を呼び出す必要があります。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 **SQLServerDatabaseMetaData.getCatalogs** は sys.databases ビューを使用してカタログを取得します。 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] での **SQLServerDatabaseMetaData.getCatalogs** の動作を 理解するには、[sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) の権限に関する説明を参照してください。  
   
 ## <a name="connections-dropped"></a>接続のドロップ
 
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] への接続時に非アクティブな状態が一定時間続くと、ファイアウォールなどのネットワーク コンポーネントにより、アイドル接続が終了されることがあります。 このコンテキストでのアイドル接続には、次の 2 種類があります。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] への接続時に非アクティブな状態が一定時間続くと、ネットワーク コンポーネント (ファイアウォールなど) によってアイドル接続が終了されることがあります。 このコンテキストでのアイドル接続には、次の 2 種類があります。  
 
 - TCP レイヤーでのアイドル状態。これは、任意の数のネットワーク デバイスによる切断が可能である状態です。  
 
@@ -52,7 +53,7 @@ ms.locfileid: "67956854"
   
 設定後にコンピューターを再起動して、レジストリ設定を有効にします。  
 
-Windows Azure の実行時にこの操作を行うには、スタートアップ タスクを作成してこれらのレジストリ キーを追加します。  たとえば、次のスタートアップ タスクをサービス定義ファイルに追加します。  
+Azure で実行している場合にこれを行うには、スタートアップ タスクを作成してこれらのレジストリ キーを追加します。  たとえば、次のスタートアップ タスクをサービス定義ファイルに追加します。  
 
 ```xml
 <Startup>  
@@ -74,20 +75,20 @@ shutdown /r /t 1
 :done  
 ```
 
-## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>接続文字列内の UserId へのサーバー名の追加  
+## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>接続文字列内の userId へのサーバー名の追加  
 
-Version 4.0 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に、接続文字列内の UserId にサーバー名を追加する必要がありました。 たとえば、user@servername のようになります。 Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続文字列内の UserId に @servername を追加する必要がなくなりました。  
+Version 4.0 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に、接続文字列内の UserId にサーバー名を追加する必要がありました。 たとえば、「 user@servername 」のように入力します。 Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続文字列内の UserId に @servername を追加する必要がなくなりました。  
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>暗号化の使用に必要な hostNameInCertificate の設定
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]の7.2 バージョンより前では[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]、に接続するときに、 **encrypt = true** (接続文字列のサーバー名が*shortName*の場合) を指定すると、 **hostNameInCertificate**を指定する必要があります。*domainName*、 **hostNameInCertificate**プロパティをに\*設定します。*domainName*.)。 ドライバーのバージョン7.2 では、このプロパティは省略可能です。
+バージョン 7.2 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、**encrypt=true** を指定した場合、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に **hostNameInCertificate** を指定する必要がありました (接続文字列のサーバー名が *shortName*.*domainName* の場合、**hostNameInCertificate** プロパティを \*.*domainName* に設定します)。 バージョン 7.2 以降のドライバーでは、このプロパティは省略可能です。
 
-例:
+次に例を示します。
 
 ```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[JDBC ドライバーによる SQL Server への接続](connecting-to-sql-server-with-the-jdbc-driver.md)  

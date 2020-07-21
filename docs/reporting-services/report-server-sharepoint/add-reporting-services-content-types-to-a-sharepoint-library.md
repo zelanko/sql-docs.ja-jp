@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68887751"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加
@@ -38,7 +38,7 @@ ms.locfileid: "68887751"
 > [!TIP]  
 >  以前にライブラリのコンテンツの種類を構成して **いない** 場合は、コンテンツの種類の管理を有効にしてから、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のコンテンツの種類を有効にします。 単一のドキュメント ライブラリでコンテンツの種類の管理を有効にするための手順を参照してください。  
   
- **短いビデオ:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](https://www.youtube.com/watch?v=yqhm3DrtT1w) (https://www.youtube.com/watch?v=yqhm3DrtT1w) 。  
+ **短いビデオ:** [(SSRS) Enabling Content Types in SharePoint2010.wmv ((SSRS) Share Point 2010 でコンテンツの種類を有効にする.wmv)](https://www.youtube.com/watch?v=yqhm3DrtT1w) (https://www.youtube.com/watch?v=yqhm3DrtT1w) 。  
   
  **このトピックの内容:**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68887751"
   
 -   [複数の BI サイトのコンテンツの種類とコンテンツ管理を有効にするには](#bkmk_enable_multiple_sites)  
   
-##  <a name="bkmk_enable_all"></a> 既存のビジネス インテリジェント センターのすべてのドキュメント ライブラリでコンテンツの種類を有効にする  
+##  <a name="enable-content-types-in-all-document-libraries-in-an-existing-bi-center"></a><a name="bkmk_enable_all"></a> 既存のビジネス インテリジェント センターのすべてのドキュメント ライブラリでコンテンツの種類を有効にする  
   
 1.  既存の **ビジネス インテリジェント センター** サイトのすべてのドキュメント ライブラリでコンテンツの種類とコンテンツ管理を有効にするには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 統合機能を切り替えます。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68887751"
   
      ![](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
-##  <a name="bkmk_enable_content_management"></a> 1 つのドキュメント ライブラリでコンテンツの種類の管理を有効にするには (SharePoint 2013)  
+##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> 1 つのドキュメント ライブラリでコンテンツの種類の管理を有効にするには (SharePoint 2013)  
   
 1.  複数のコンテンツの種類を有効にする対象ライブラリを開きます。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68887751"
   
 6.  **[OK]** をクリックします。  
   
-##  <a name="bkmk_add_single"></a> Reporting Services のコンテンツの種類を追加するには (SharePoint 2013)  
+##  <a name="to-add-reporting-services-content-types-sharepoint-2013"></a><a name="bkmk_add_single"></a> Reporting Services のコンテンツの種類を追加するには (SharePoint 2013)  
   
 1.  Reporting Services のコンテンツの種類を追加する対象のライブラリを開きます。  
   
@@ -121,9 +121,9 @@ ms.locfileid: "68887751"
   
     -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのコンテンツの種類が既にライブラリに追加されています。 すべてのコンテンツの種類がライブラリの一部である場合、このグループは **[コンテンツ タイプの追加]** ページから削除されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の 1 つまたは複数のコンテンツの種類を削除すると、 **[SQL Server Reporting Services のコンテンツの種類]** グループが **[コンテンツ タイプの追加]** ページに表示されます。  
   
-##  <a name="bkmk_enable_content_management_2010"></a> 1 つのドキュメント ライブラリでコンテンツの種類の管理を有効にするには (SharePoint 2010)  
+##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2010"></a><a name="bkmk_enable_content_management_2010"></a> 1 つのドキュメント ライブラリでコンテンツの種類の管理を有効にするには (SharePoint 2010)  
   
-1.  複数のコンテンツの種類を有効にする対象ライブラリを開きます。 ライブラリ メニュー バーに表示されるメニューは、 **[新規作成]** 、 **[アップロード]** 、 **[アクション]** 、および **[設定]** です。 コンテンツの種類を追加する権限を持っていない場合は、 **[設定]** が表示されません。  
+1.  複数のコンテンツの種類を有効にする対象ライブラリを開きます。 ライブラリ メニュー バーには、以下のメニューが表示されます。 **[新規]** 、 **[アップロード]** 、 **[アクション]** 、 **[設定]** 。 コンテンツの種類を追加する権限を持っていない場合は、 **[設定]** が表示されません。  
   
 2.  **[ライブラリ ツール]** リボンで、 **[ライブラリ]** をクリックします。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "68887751"
   
 6.  **[OK]** をクリックします。  
   
-##  <a name="bkmk_add_single_2010"></a> レポート サーバーのコンテンツの種類を追加するには (SharePoint 2010)  
+##  <a name="to-add-report-server-content-types-sharepoint-2010"></a><a name="bkmk_add_single_2010"></a> レポート サーバーのコンテンツの種類を追加するには (SharePoint 2010)  
   
 1.  Reporting Services のコンテンツの種類を追加する対象のライブラリを開きます。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68887751"
   
 8.  コンテンツの種類の追加操作が完了したら、 **[OK]** をクリックします。  
   
-##  <a name="bkmk_enable_multiple_sites"></a> 複数の BI サイトのコンテンツの種類とコンテンツ管理を有効にするには  
+##  <a name="to-enable-content-types-and-content-management-for-multiple-bi-sites"></a><a name="bkmk_enable_multiple_sites"></a> 複数の BI サイトのコンテンツの種類とコンテンツ管理を有効にするには  
   
 1.  SQL Server Reporting Services 2008 および 2008 R2 レポート サーバーの場合は、複数のビジネス インテリジェンス センター サイトのコンテンツの種類とコンテンツ管理を有効にすることができます。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "68887751"
   
 4.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)  
   

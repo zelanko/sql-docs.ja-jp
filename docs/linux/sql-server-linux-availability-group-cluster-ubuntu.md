@@ -1,7 +1,8 @@
 ---
-title: SQL Server 可用性グループ用の Ubuntu クラスターを構成する
-titleSuffix: SQL Server
-description: Ubuntu 用に可用性グループ クラスターを作成する方法について説明します
+title: 可用性グループ用の Ubuntu クラスターを構成する
+titleSuffix: SQL Server on Linux
+description: Ubuntu で 3 ノードのクラスターを作成し、以前に作成した可用性グループ リソースをクラスターに追加する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027310"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892327"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu クラスターと可用性グループ リソースを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-このドキュメントでは、Ubuntu で 3 ノードのクラスターを作成し、以前に作成した可用性グループをクラスター内のリソースとして追加する方法について説明します。 高可用性を実現するためには、Linux 上の可用性グループには 3 つのノードが必要です。可用性グループの構成については、「[可用性グループ構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)」を参照してください。
+このドキュメントでは、Ubuntu で 3 ノードのクラスターを作成し、以前に作成した可用性グループをクラスター内のリソースとして追加する方法について説明します。 高可用性を実現するため、Linux 上の可用性グループには 3 つのノードが必要です。[可用性グループ構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)に関するページを参照してください。
 
 > [!NOTE] 
-> 現時点では、Linux での Pacemaker との SQL Server の統合は、Windows の WSFC とは結合されていません。 SQL の内部にはクラスターの存在に関する情報はなく、すべての調整は外部で実行され、サービスはスタンドアロン インスタンスとして Pacemaker によって制御されます。 さらに、仮想ネットワーク名は WSFC に固有であり、Pacemaker にはそれに相当するものはありません。 クラスターの情報を照会する Always On の動的管理ビューでは、空の行が返されます。 フェールオーバー後に透過的な再接続に使用するリスナーを引き続き作成できますが、仮想 IP リソースの作成に使用する IP で、DNS サーバーにリスナー名を手動で登録する必要があります (以下のセクションで説明します)。
+> 現時点では、Linux 上の SQL Server と Pacemaker の統合では、Windows 上の WSFC のような連携は行われていません。 SQL の内部にはクラスターの存在に関する情報はなく、すべての調整は外部で実行され、サービスはスタンドアロン インスタンスとして Pacemaker によって制御されます。 さらに、仮想ネットワーク名は WSFC に固有のものであり、Pacemaker にはそれに該当するものはありません。 クラスターの情報を照会する Always On の動的管理ビューでは、空の行が返されます。 フェールオーバー後に透過的な再接続に使用するリスナーを引き続き作成できますが、仮想 IP リソースの作成に使用する IP で、DNS サーバーにリスナー名を手動で登録する必要があります (以下のセクションで説明します)。
 
 次のセクションでは、フェールオーバー クラスター ソリューションを設定する手順について説明します。 
 
@@ -36,14 +37,16 @@ ms.locfileid: "68027310"
 
 2. [可用性グループを作成します](sql-server-linux-availability-group-configure-ha.md)。 
 
-3. Pacemaker などのクラスター リソース マネージャーを構成します。 これらの手順はこのドキュメントで説明します。
+3. Pacemaker などのクラスター リソース マネージャーを構成します。 これらの手順についてはこのドキュメントで説明します。
    
    クラスター リソース マネージャーを構成する方法は、特定の Linux ディストリビューションによって異なります。 
 
    >[!IMPORTANT]
    >運用環境では、高可用性のために STONITH のようなフェンス エージェントが必要です。 このドキュメントに含まれているデモでは、フェンス エージェントは使用しません。 このデモはテストと検証専用です。 
-   
+   >
    >Linux クラスターでは、フェンスを使用して、クラスターが既知の状態に戻されます。 フェンスを構成する方法は、ディストリビューションと環境によって異なります。 現時点では、一部のクラウド環境ではフェンスを利用できません。 詳細については、「[RHEL 高可用性クラスターのサポート ポリシー - 仮想化プラットフォーム](https://access.redhat.com/articles/29440)」をご覧ください。
+   >
+   >フェンスは通常、オペレーティング システムで実装され、環境に依存します。 フェンスの取扱説明はオペレーティング システムのディストリビューターが提供するドキュメントにあります。
 
 5.  [可用性グループをクラスターのリソースとして追加します](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource)。 
 
@@ -134,7 +137,7 @@ sudo systemctl enable pacemaker
 
 ## <a name="configure-fencing-stonith"></a>フェンスを構成する (STONITH)
 
-Pacemaker クラスターのベンダーでは、STONITH が有効になっていることと、サポートされているクラスター セットアップ用にフェンス デバイスが構成されている必要があります。 クラスター リソース マネージャーでノードまたはノード上のリソースの状態を判断できない場合は、フェンスを使用してクラスターが既知の状態に戻されます。 リソース レベルのフェンスにより主に、リソースを構成することによって障害が発生した場合にデータが破損しないことが保証されます。 たとえば DRBD (分散レプリケートされたブロックデバイス) でリソース レベルのフェンスを使用して、通信リンクがダウンしたときにノード上のディスクを期限切れとしてマークすることができます。 ノード レベルのフェンスでは、ノードによってリソースが実行されないことが保証されます。 これはノードをリセットすることによって行われ、Pacemaker の実装は "STONITH" ("Shoot the Other Node in the Head") と呼ばれます。 Pacemaker では、サーバーの無停電電源装置や管理インターフェイス カードなど、さまざまな種類のフェンス デバイスがサポートされています。 詳細については、「[ゼロから始める Pacemaker クラスター](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)」および「[フェンスと STONITH](https://clusterlabs.org/doc/crm_fencing.html)」をご覧ください 
+Pacemaker クラスターのベンダーは、STONITH を有効にして、サポートされているクラスター セットアップ用にフェンス デバイスを構成する必要があります。 クラスター リソース マネージャーでノードまたはノード上のリソースの状態を判断できない場合は、フェンスを使用してクラスターが既知の状態に戻されます。 リソース レベルのフェンスにより主に、リソースを構成することによって障害が発生した場合にデータが破損しないことが保証されます。 たとえば DRBD (分散レプリケートされたブロックデバイス) でリソース レベルのフェンスを使用して、通信リンクがダウンしたときにノード上のディスクを期限切れとしてマークすることができます。 ノード レベルのフェンスでは、ノードによってリソースが実行されないことが保証されます。 これはノードをリセットすることによって行われ、Pacemaker の実装は "STONITH" ("Shoot the Other Node in the Head") と呼ばれます。 Pacemaker では、サーバーの無停電電源装置や管理インターフェイス カードなど、さまざまな種類のフェンス デバイスがサポートされています。 詳細については、「[ゼロから始める Pacemaker クラスター](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)」および「[フェンスと STONITH](https://clusterlabs.org/doc/crm_fencing.html)」をご覧ください 
 
 ノード レベルのフェンス構成は環境に大きく依存しているため、このチュートリアルでは無効にします (後で構成できます)。 プライマリ ノードで次のスクリプトを実行します。 
 
@@ -143,7 +146,7 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->STONITH を無効にするのは、テスト目的の場合だけです。 運用環境で Pacemaker を使用する予定がある場合は、環境に応じて STONITH の実装を計画し、有効にしておく必要があります。 現時点では、どのクラウド環境 (Azure を含む) または Hyper-V にもフェンス エージェントがないことに注意してください。 そのため、クラスター ベンダーでは、これらの環境で運用クラスターを実行するためのサポートは提供されていません。 
+>STONITH を無効にするのは、テスト目的の場合だけです。 運用環境で Pacemaker を使用する予定がある場合は、環境に応じて STONITH の実装を計画し、有効にしておく必要があります。 特定のディストリビューションのフェンス エージェントに関する詳細は、オペレーティング システム ベンダーにお問い合わせください。 
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>クラスター プロパティ cluster-recheck-interval を設定する
 
@@ -156,7 +159,7 @@ sudo pcs property set cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> 既に Pacemaker クラスターによって管理されている可用性グループ リソースがある場合は、使用可能な最新の Pacemaker パッケージ 1.1.18-11.el7 を使用しているすべてのディストリビューションで、start-failure-is-fatal クラスター設定の値が false の場合はその動作が変更されることに注意してください。 この変更は、フェールオーバー ワークフローに影響します。 プライマリ レプリカで障害が発生した場合、クラスターは使用可能なセカンダリ レプリカのいずれかにフェールオーバーする必要があります。 代わりに、クラスターが失敗したプライマリ レプリカを起動しようとしていることがユーザーに通知されます。 そのプライマリが永久に停止したためにオンラインにならない場合、クラスターは別の使用可能なセカンダリ レプリカにフェールオーバーすることはありません。 この変更により、以前に start-failure-is-fatal を設定するために推奨されていた構成が有効ではなくなったため、この設定は既定値の `true` に戻す必要があります。 さらに、`failover-timeout` プロパティを含めるには、AG リソースを更新する必要があります。 
+> 既に Pacemaker クラスターによって管理されている可用性グループ リソースがある場合、使用可能な最新の Pacemaker パッケージ 1.1.18-11.el7 を使用しているすべてのディストリビューションでは、値が false の場合に start-failure-is-fatal クラスター設定の動作が変更されることに注意してください。 この変更は、フェールオーバー ワークフローに影響します。 プライマリ レプリカで障害が発生した場合、クラスターは使用可能なセカンダリ レプリカのいずれかにフェールオーバーする必要があります。 代わりに、クラスターが失敗したプライマリ レプリカを起動しようとしていることがユーザーに通知されます。 そのプライマリが永久に停止したためにオンラインにならない場合は、クラスターが別の使用可能なセカンダリ レプリカにフェールオーバーすることはありません。 この変更により、以前に start-failure-is-fatal を設定するために推奨されていた構成が有効ではなくなったため、この設定を既定値の `true` に戻す必要があります。 さらに、`failover-timeout` プロパティを含めるには、AG リソースを更新する必要があります。 
 >
 >プロパティ値を `true` に更新するには、次を実行します。
 >
@@ -164,7 +167,7 @@ sudo pcs property set cluster-recheck-interval=2min
 >sudo pcs property set start-failure-is-fatal=true
 >```
 >
->既存の AG リソース プロパティ `failure-timeout` を `60s` 更新して、次を実行します (`ag1` は可用性グループ リソースの名前に置き換えてください)。
+>既存の AG リソース プロパティ `failure-timeout` を `60s` に更新して、次を実行します (`ag1` は可用性グループ リソースの名前に置き換えてください)。
 >
 >```bash
 >pcs resource update ag1 meta failure-timeout=60s
@@ -178,16 +181,16 @@ sudo pcs property set cluster-recheck-interval=2min
 sudo apt-get install mssql-server-ha
 ```
 
-## <a name="create-a-sql-server-login-for-pacemaker"></a>Pacemaker 用 SQL Server ログインを作成する
+## <a name="create-a-sql-server-login-for-pacemaker"></a>Pacemaker 用の SQL Server ログインを作成する
 
 [!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## <a name="create-availability-group-resource"></a>可用性グループのリソースを作成する
 
-可用性グループ リソースを作成するには、`pcs resource create` コマンドを使用し、リソースのプロパティを設定します。 次のコマンドでは、`ag1` という名前の可用性グループに対して、`ocf:mssql:ag` というマスター/スレーブ タイプのリソースが作成されます。 
+可用性グループ リソースを作成するには、`pcs resource create` コマンドを使用し、リソースのプロパティを設定します。 次のコマンドを実行すると、`ag1` という名前の可用性グループに対して、`ocf:mssql:ag` というマスター/下位タイプのリソースが作成されます。 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true
 
 ```
 
@@ -213,9 +216,9 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 
 ## <a name="add-ordering-constraint"></a>順序制約を追加する
 
-コロケーション制約には、暗黙的な順序制約があります。 それにより、可用性グループ リソースが移動される前に、仮想 IP リソースが移動されます。 既定では、イベントの順序は次のとおりです。
+コロケーション制約には、暗黙的な順序制約があります。 これにより、可用性グループ リソースが移動する前に、仮想 IP リソースが移動します。 既定では、イベントの順序は次のとおりです。
 
-1. ユーザーは、node1 から node2 への可用性グループのプライマリに `pcs resource move` を発行します。
+1. ユーザーは、ノード 1 からノード 2 の可用性グループのプライマリに `pcs resource move` を発行します。
 1. 仮想 IP リソースが node1 で停止します。
 1. 仮想 IP リソースが node2 で開始します。
 
@@ -238,7 +241,7 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 
 <!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [HA 可用性グループの操作](sql-server-linux-availability-group-failover-ha.md)
 

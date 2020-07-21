@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d362670facc0638b435cfa604777a6631ac87e30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9681bc22ea07ed3bed1d218ba752c2d4d6a666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716842"
 ---
 # <a name="results-detailed-view-dialog-box"></a>[結果の詳細ビュー] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[ポリシーの評価]** ダイアログ ボックスを使用してポリシーを実行し、 **[評価]** をクリックすると、このダイアログ ボックスにポリシーの評価結果が表示されます。 このダイアログ ボックスは読み取り専用で、プロパティ式のどの部分に問題があるかを把握するのに役立ちます。  
   
 ## <a name="options"></a>オプション  
@@ -46,7 +46,7 @@ ms.locfileid: "68021739"
  **[ポリシーの説明]**  
  ポリシーの説明。  
   
- **[追加のヘルプ]**  
+ **追加のヘルプ**  
  ハイパーリンクをクリックすると、このポリシーに関連する Web ページが開きます。 追加のヘルプ ハイパーリンクは、ポリシーの作成時に構成され、空白である場合や使用できない場合があります。  
   
 ## <a name="see-also"></a>参照  

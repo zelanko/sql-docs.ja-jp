@@ -1,31 +1,29 @@
 ---
-title: フィルター情報の表示 (SQL Server プロファイラー) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: フィルター情報を表示する
+titleSuffix: SQL Server Profiler
+description: トレース対象のイベントを制限するために SQL Server Profiler によってデータ列に現在適用されているフィルターを表示する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- displaying filter information
-- filters [SQL Server], viewing
-- filters [SQL Server], traces
-- traces [SQL Server], filters
-- viewing filter information
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 94cdf7dcde876b18a6080eefb5afde8137d2e021
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 39c2d73e634d26ab28b890d72f08b55abfe2394b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059612"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151621"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>フィルター情報の表示 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してイベント クラスのデータ列のフィルターを表示する方法について説明します。  
+
+このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してイベント クラスのデータ列のフィルターを表示する方法について説明します。  
   
 ### <a name="to-view-filter-information"></a>フィルター情報を表示するには  
   

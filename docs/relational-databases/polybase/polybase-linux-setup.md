@@ -2,19 +2,19 @@
 title: Linux への PolyBase のインストール
 titlesuffix: SQL Server
 description: この記事では、Linux に SQL Server PolyBase をインストールする方法について説明します。
-author: aboke
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.date: 7/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 82659c1fdbf4293812db0807ffbb216ba66048b5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893213"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77173555"
 ---
 # <a name="install-polybase-on-linux"></a>Linux への PolyBase のインストール
 
@@ -36,7 +36,7 @@ Linux に [PolyBase](../../relational-databases/search/full-text-search.md) (**m
 
 
 
-## <a name="RHEL">RHEL へのインストール</a>
+## <a name=""></a><a name="RHEL">RHEL へのインストール</a>
 
 Red Hat Enterprise Linux に **mssql-server-polybase** をインストールするには、次のコマンドを使用します。 
 
@@ -55,7 +55,7 @@ sudo systemctl restart mssql-server
 
 オフライン インストールが必要な場合は、[リリース ノート](../../linux/sql-server-linux-release-notes.md)の PolyBase パッケージのダウンロードを参照してください。 次に、[SQL Server のインストール](../../linux/sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
-## <a name="ubuntu">Ubuntu へのインストール</a>
+## <a name=""></a><a name="ubuntu">Ubuntu へのインストール</a>
 
 Ubuntu に **mssql-server-polybase** をインストールするには、次のコマンドを使用します。 
 
@@ -74,7 +74,7 @@ sudo systemctl restart mssql-server
 
 オフライン インストールが必要な場合は、[リリース ノート](../../linux/sql-server-linux-release-notes.md)の PolyBase パッケージのダウンロードを参照してください。 次に、[SQL Server のインストール](../../linux/sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
-## <a name="SLES">SLES へのインストール</a>
+## <a name=""></a><a name="SLES">SLES へのインストール</a>
 
 SUSE Linux Enterprise Server に **mssql-server-polybase** をインストールするには、次のコマンドを使用します。 
 
@@ -95,13 +95,13 @@ sudo systemctl restart mssql-server
 オフライン インストールが必要な場合は、[リリース ノート](../../linux/sql-server-linux-release-notes.md)の PolyBase パッケージのダウンロードを参照してください。 次に、[SQL Server のインストール](../../linux/sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
 
-## <a name="enable">PolyBase を有効にする</a> 
+## <a name=""></a><a name="enable">PolyBase を有効にする</a> 
 
 インストールが完了したら、PolyBase を有効にしてその機能にアクセスできるようにする必要があります。 インストールされている SQL Server インスタンスに接続し、次の Transact-SQL コマンドを使用して有効にします。
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
-RECONFIGURE [WITH OVERRIDE];
+RECONFIGURE WITH OVERRIDE;
 ```
 
 ## <a name="update-polybase"></a>PolyBase を更新する
@@ -153,7 +153,7 @@ sudo systemctl restart mssql-server
 >[!NOTE]
 >インストール後に、[PolyBase 機能を有効にする](#enable)必要があります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Linux 上の PolyBase は、次のデータ ソースにアクセスできます。 PolyBase が有効になっているこれらのソースから外部テーブルを作成する方法の詳細については、提供されているリンクを参照してください。 
 

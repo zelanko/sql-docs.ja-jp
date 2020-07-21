@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c734833e71bcfc0ffb04deb227404b089b78d3cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736286"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 句 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 FOR 句を使用し、クエリ結果に次のいずれかのオプションを指定します。
   
@@ -44,7 +44,7 @@ FOR 句を使用し、クエリ結果に次のいずれかのオプションを�
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  
@@ -216,7 +216,7 @@ _不要な改行を非表示にする:_ SQL Server Management Studio (SSMS) を�
  列を副要素として返します。 指定していない場合は、XML 属性にマップされます。 このオプションは、RAW、AUTO、および PATH モードでのみサポートされます。 詳細については、「 [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)」を参照してください。  
   
  XSINIL  
- 列の値が NULL の場合、**xsi:nil** 属性が **True** に設定されている要素を作成します。 このオプションは、ELEMENTS ディレクティブでのみ指定できます。 詳細については、以下をご覧ください。
+ 列の値が NULL の場合、**xsi:nil** 属性が **True** に設定されている要素を作成します。 このオプションは、ELEMENTS ディレクティブでのみ指定できます。 詳細については、次を参照してください。
 
 - [XSINIL パラメーターを使用した NULL 値に対する要素の生成](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)。
 - [SELECT ステートメントでの FOR XML](../../relational-databases/xml/for-xml-sql-server.md)

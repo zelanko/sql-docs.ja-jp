@@ -1,7 +1,7 @@
 ---
-title: SQL Server の複数のバージョンおよびインスタンスの使用 | Microsoft Docs
-ms.custom: ''
-ms.date: 08/25/2017
+title: 複数のバージョンおよびインスタンスの使用
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba5e4fdaab769fca0443f6395536dc31207b1374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42359f4b8b6f36eec3c4618d39ee68d0f8c84ba5
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045659"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528410"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>SQL Server の複数のバージョンおよびインスタンスの使用
 
@@ -38,9 +38,8 @@ SQL Server の複数のインスタンスをインストールすること、ま
 
 - Analysis Services
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- Reporting Services
-::: moniker-end
+- Reporting Services (SQL Server 2016 およびそれ以前)。 SQL Server 2016 以降。 SQL Server Reporting Services (SSRS) は個別にインストールされます。 
+
 
 他のバージョンの SQL Server が既にインストールされているコンピューターで、以前のバージョンの SQL Server をアップグレードできます。 サポートされるアップグレード シナリオについては、「 [サポートされるバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。
   
@@ -60,13 +59,13 @@ SQL Server の複数のインスタンスをインストールすること、ま
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、以前のバージョンと区別するために、メジャー リリースやマイナー リリースごとにバージョン番号を増加させています。 このバージョンに対する変更は、さまざまな目的に使用されます。 たとえば、ユーザー インターフェイスでのバージョン情報の表示、アップグレード時のファイルの置換方法の制御、およびサービス パックの適用に使用されることも、一連のバージョン間での機能の違いを区別するためのメカニズムとして使用されることもあります。
   
-### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>すべてのバージョンで共有されるコンポーネント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-by-all-versions-of-ssnoversion"></a>すべてのバージョンで共有されるコンポーネント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
  特定のコンポーネントは、インストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのバージョンのすべてのインスタンスで共有されます。 同じコンピューターにバージョンが異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサイド バイ サイドでインストールすると、それらのコンポーネントは自動的に最新バージョンにアップグレードされます。 通常、このようなコンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最後のインスタンスがアンインストールされると自動的にアンインストールされます。
   
  例 :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser および Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer。
   
-### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>メジャー バージョンが同一の すべてのインスタンス間で共有されるコンポーネント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>メジャー バージョンが同一の すべてのインスタンス間で共有されるコンポーネント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メジャー バージョンが同一ののバージョンでは、一部のコンポーネントをすべてのインスタンス間で共有します。 アップグレード時に共有コンポーネントが選択されると、既存のコンポーネントは最新バージョンにアップグレードされます。
   
@@ -78,13 +77,13 @@ SQL Server の複数のインスタンスをインストールすること、ま
   
 例:セットアップ サポート ファイル。
   
-### <a name="components-specific-to-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>のインスタンスに固有のコンポーネント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="components-specific-to-an-instance-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに固有のコンポーネント
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントまたはサービスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに固有のものがあります。 これらは、インスタンス対応とも呼ばれます。 また、これらをホストしているインスタンスとバージョンが同じで、そのインスタンスにのみ使用されます。
   
 例: [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに依存しないコンポーネント
+### <a name="components-that-are-independent-of-the-ssnoversion-versions"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに依存しないコンポーネント
 
 特定のコンポーネントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にインストールされますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバージョンに依存しません。 これらは、メジャー バージョン間で共有されたり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのバージョンで共有されたりすることがあります。  
 
@@ -92,26 +91,27 @@ SQL Server の複数のインスタンスをインストールすること、ま
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact のインストールの詳細については、「[インストール ウィザードからの SQL Server 2016 のインストール &#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact のアンインストール方法の詳細については、「[SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)」を参照してください。  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と以前のバージョンの並列使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と以前のバージョンの並列使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを既に実行しているコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールすることができます。 既定のインスタンスが既にコンピューターに存在する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は名前付きインスタンスとしてインストールする必要があります。  
+
+次の表では、一般にサポートされているバージョンの Windows での SQL Server の各バージョンのサイド バイ サイドのサポートと、インストールされている必要の .NET のバージョンを示します。
+
+| 既存のインスタンス | サイド バイ サイドのサポート| 
+|-------------------|----------------------------|
+| SQL Server 2019 | SQL Server 2008 から SQL Server 2017| 
+| SQL Server 2017 | SQL Server 2008 から SQL Server 2016| 
+| SQL Server 2016 | SQL Server 2008 から SQL Server 2014| 
+
+詳細については、[Windows 8 以降での SQL Server の使用](https://support.microsoft.com/help/2681562/using-sql-server-in-windows-8-and-later-versions-of-windows-operating)に関する記事をご覧ください。 
+
   
 > [!CAUTION]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、以前のバージョンの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] と同じコンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスをサイド バイ サイドでインストールすることはサポートされていません。 たとえば、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスと共に [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の準備済みインスタンスをサイド バイ サイドで準備することはできません。 ただし、同じメジャー バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数の準備済みインスタンスを、同じコンピューターにサイド バイ サイドでインストールできます。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
 >
-> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Windows Server 2008 R2 Server Core SP1 を搭載するコンピューターに、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とサイド バイ サイドでインストールすることはできません。 Server Core インストールの詳細については、「 [Server Core への SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
+> Windows Server 2008 R2 Server Core SP1 が実行されているコンピューターに、SQL Server 2016 以降と、それより前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサイド バイ サイドでインストールすることはできません。 Server Core インストールの詳細については、「 [Server Core への SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
   
-次の表に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のサイド バイ サイドのサポートを示します。
-  
-|の既存のインスタンス [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サイド バイ サイドのサポート|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32 ビット)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32 ビット)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32 ビット)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32 ビット)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32 ビット)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] <br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
 
-次の表に、以前のバージョンの [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のサイド バイ サイドのサポートを示します。
-
-|の既存のインスタンス [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|以前のバージョンのサイド バイ サイドのサポート|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32 ビット)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32 ビット)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32 ビット)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32 ビット)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32 ビット)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64 ビット) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|  
 
 ## <a name="preventing-ip-address-conflicts"></a>IP アドレス競合の回避
 

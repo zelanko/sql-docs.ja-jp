@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 00d5f282b209c4e705fc07e056f7014c0eaf47bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d44b0ea05b2917235c89d6f98f496a4b6dcfac51
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701966"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 インスタンスに格納されている Z (標高) 値および M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geography** インスタンスを返します。
   
@@ -46,14 +46,14 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
- OGC の型:**多角形**  
+ OGC の型: **Polygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STPolyFromText()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

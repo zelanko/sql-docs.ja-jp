@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518652"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>表示拡張機能にデバイス情報設定を渡す
@@ -42,7 +42,7 @@ ms.locfileid: "62518652"
 </DeviceInfo>  
 ```  
   
- レポートが HTML 断片として表示される場合、レポートの内容は TABLE 要素内に含まれ、HTML または BODY 要素は使用されません。 HTML 断片を使用して、既存の HTML ドキュメントにレポートを組み込むことができます。 HTML 出力のデバイス情報設定の詳細については、「 [HTML Device Information Settings](../../html-device-information-settings.md)」をご覧ください。  
+ レポートが HTML 断片として表示される場合、レポートの内容は TABLE 要素内に含まれ、HTML または BODY 要素は使用されません。 HTML 断片を使用して、既存の HTML ドキュメントにレポートを組み込むことができます。 HTML 出力のデバイス情報設定の詳細については、「[HTML デバイス情報設定](../../html-device-information-settings.md)」を参照してください。  
   
 ## <a name="passing-device-information-using-url-access"></a>URL アクセスを使用してデバイス情報を渡す  
  URL アクセスを使用してデバイス情報設定を渡すこともできます。 デバイス情報設定は URL パラメーターとして渡されます。 次の URL アクセス文字列をレポート サーバーに渡すと、HTML ビューアー ツール バーなしで表示するレポートを生成できます。  
@@ -55,7 +55,7 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
   
 ## <a name="see-also"></a>参照  
  [表示拡張機能のデバイス情報設定 &#40;Reporting Services&#41;](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
- [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer の表示拡張機能パラメーターをカスタマイズする](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

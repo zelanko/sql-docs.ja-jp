@@ -1,5 +1,5 @@
 ---
-title: Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Tablix データ領域の柔軟性について (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45cc3c743c8ece0aecf3a286baef9e1f907c157d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: aaddc6f5671ceb2727ca950459e60dc24402bb9e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579124"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082114"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、リボンの [挿入] タブからテーブル、マトリックス、または一覧のデータ領域を追加するとき、Tablix データ領域用の初期テンプレートを使用します。 ただし、そのテンプレートによって制限されることはありません。 グループ、行、列などの Tablix データ領域機能を追加または削除することによって、引き続きデータの表示方法を設定できます。  

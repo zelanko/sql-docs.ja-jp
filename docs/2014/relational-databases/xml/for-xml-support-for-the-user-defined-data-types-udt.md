@@ -10,15 +10,14 @@ helpviewer_keywords:
 - UDTs [SQL Server], XML
 - user-defined types [SQL Server], XML
 ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e41f5a97c4b32611589e5da24a95e237416a5b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b668ad2da13fdfc880ab26cb2b2759ff3693f7d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63204997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046698"
 ---
 # <a name="for-xml-support-for-the-user-defined-data-types-udt"></a>ユーザー定義データ型 (UDT) の FOR XML サポート
   FOR XML は、共通言語ランタイム (CLR) のユーザー定義データ型 (UDT) をサポートしていません。  

@@ -1,5 +1,5 @@
 ---
-title: Integration Services サーバーのレポートの表示 |Microsoft Docs
+title: Integration Services Server のレポートを表示する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,18 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 244b641d2b7e56ecfb9bafac68ea9fc06c727255
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054547"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439889"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートの表示
-  現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](../../2014/integration-services/reports-for-the-integration-services-server.md)」をご覧ください。  
+  現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](../../2014/integration-services/reports-for-the-integration-services-server.md)」を参照してください。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートを表示するには  
   

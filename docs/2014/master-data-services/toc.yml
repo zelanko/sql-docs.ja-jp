@@ -76,13 +76,13 @@
 - name: モデル
   href: models-master-data-services.md
   items:
-    - name: モデルを作成する
+    - name: モデルの作成
       href: create-a-model-master-data-services.md
     - name: モデル名を変更する
       href: change-a-model-name-master-data-services.md
     - name: モデルを削除する
       href: delete-a-model-master-data-services.md
-- name: '[エンティティ]'
+- name: エンティティ
   href: entities-master-data-services.md
   items:
     - name: エンティティを作成する
@@ -288,7 +288,7 @@
       href: validation-statuses-master-data-services.md
     - name: 検証ストアド プロシージャ
       href: validation-stored-procedure-master-data-services.md
-- name: メタデータ
+- name: Metadata
   href: metadata-master-data-services.md
   items:
     - name: メタデータの追加 (マスター データ サービス)
@@ -317,7 +317,7 @@
       href: create-a-model-administrator-master-data-services.md
     - name: システム管理者アカウントの変更
       href: change-the-system-administrator-account-master-data-services.md
-- name: ユーザーおよびグループ
+- name: ユーザーとグループ
   href: users-and-groups-master-data-services.md
   items:
     - name: ユーザーを追加する

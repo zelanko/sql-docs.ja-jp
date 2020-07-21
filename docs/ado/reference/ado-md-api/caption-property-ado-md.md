@@ -1,5 +1,5 @@
 ---
-title: キャプション プロパティ (ADO MD) |Microsoft Docs
+title: Caption プロパティ (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,20 +15,20 @@ f1_keywords:
 helpviewer_keywords:
 - Caption property [ADO MD]
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63c43cb220bc58f83da13fde7af83893a8316c4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 79b8108f832e70aca4620c35c95e34952b4a0268
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930482"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765163"
 ---
 # <a name="caption-property-ado-md"></a>Caption プロパティ (ADO MD)
-表示するときに使用するテキスト キャプションを示す、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)または[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクト。  
+[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)または[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクトを表示するときに使用するテキストキャプションを示します。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**文字列**は読み取り専用であるとします。  
+ は**文字列**を返し、読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -36,6 +36,6 @@ ms.locfileid: "67930482"
 |-|-|  
 |[Level オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Description プロパティ (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)

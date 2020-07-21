@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ceccd88d57a934da69bead726399edf2b39d45be
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762072"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553195"
 ---
-# <a name="mssqlserver833"></a>MSSQLSERVER_833
+# <a name="mssqlserver_833"></a>MSSQLSERVER_833
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|833|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|BUF_LONG_IO|  
-|メッセージ テキスト|SQL Server データベースのファイル [%ls] での完了に %d 秒以上かかった I/O 要求の %d 個検出しましたが`[%ls] (%d)`します。  OS ファイル ハンドルは 0x%p です。  最新の実行時間の長い I/O のオフセットは %#016I64x です。|  
+|メッセージ テキスト|SQL Server が、データベースのファイル [% ls] で完了するまでに% d 秒以上かかった i/o 要求を% d 個検出しました `[%ls] (%d)` 。  OS ファイル ハンドルは 0x%p です。  最新の実行時間の長い I/O のオフセットは %#016I64x です。|  
   
 ## <a name="explanation"></a>説明  
  このメッセージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がディスクからの読み取り要求やディスクへの書き込み要求を発行してからその要求が完了するまでの時間が 15 秒を超えたことを示しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からこのエラーが報告された場合は、IO サブシステムに問題があります。  

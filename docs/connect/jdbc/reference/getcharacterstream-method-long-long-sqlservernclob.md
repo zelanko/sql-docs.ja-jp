@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 10cd57cff29c73a2b99d1489eb122eed37859768
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 69b626e84288764fbe1da34ac0a5e6430eaa8217
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953275"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913138"
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>getCharacterStream (long, long) メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public java.io.Reader getCharacterStream(long pos,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *po*  
+ *pos*  
   
  取得する部分的な値の最初の文字へのオフセットを示す **long** です。  
   
@@ -45,7 +45,7 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getCharacterStream メソッドは、java.sql.NClob インターフェイスの getCharacterStream メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

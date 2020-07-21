@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2018
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,26 +15,26 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e431b51db33f889acd9bcce5e93222b451ad3237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad3a4659009ceb6d36aba9e3e97dc4e6f170788c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736506"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 後で処理できるように結果セットを格納するための特別なデータ型です。 **table** は主に、テーブル値関数の結果セットとして返される行のセットの一時的な保存に使用します。 型には、関数および変数を宣言することができます **テーブル**です。 **テーブル** 変数は、関数、ストアド プロシージャ、およびバッチで使用できます。 **table** 型の変数を宣言するには、[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)を使用します。
   
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 table_type_definition ::=   
     TABLE ( { <column_definition> | <table_constraint> } [ ,...n ] )   
   
@@ -65,7 +65,7 @@ CREATE TABLE でテーブルを定義するために使用する情報のサブ�
 *collation_definition*  
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ロケールと比較形式、Windows ロケールとバイナリ表記から構成される列の照合順序、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序です。 *collation_definition* が指定されていない場合、列は現在のデータベースの照合順序を継承します。 または、列が共通言語ランタイム (CLR) ユーザー定義型として定義されている場合は、ユーザー定義型の照合順序が列に継承されます。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 以下の例に示すように、バッチの FROM 句の名前による **table** 参照変数:
   
 ```sql
@@ -82,7 +82,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 **table** 変数では、クエリ プランが変化せず、再コンパイルの影響が大きい場合がある小規模のクエリに対して、次の利点を提供します。
--   A **テーブル** 変数は、ローカル変数のように動作します。 この変数には適切に定義されたスコープがあります。 この変数は、それが宣言されている関数、ストアド プロシージャ、またはバッチです。  
+-   A **テーブル** 変数は、ローカル変数のように動作します。 この変数には適切に定義されたスコープがあります。 この変数は、それが宣言されている関数、ストアド プロシージャ、またはバッチで使用できます。  
      そのスコープの中、 **テーブル** 変数は、通常のテーブルのように使用できます。 また、SELECT、INSERT、UPDATE、および DELETE の各ステートメントで、テーブルまたはテーブル式が使用されている任意の場所で適用できます。 ただし、**table** は次のステートメントで使用できません。  
   
 ```sql
@@ -100,6 +100,10 @@ SELECT select_list INTO table_variable;
 **table** 変数は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプティマイザーのコストベース推論モデルでサポートされていません。 したがって、効果的なクエリ プランを実現するためにコストベースの選択が必要な場合は、使用しないでください。 コストベースの選択が必要な場合は、一時テーブルが推奨されます。 このプランには通常、結合、並列処理の決定、インデックス選択を含むクエリが含まれます。
   
 **table** 変数を変更するクエリでは、並列クエリ実行プランを生成しません。 大きな **table** 変数や複雑なクエリの **table** 変数を変更すると、パフォーマンスに影響が出ることがあります。 **table** 変数が変更されるような状況では、一時テーブルを代わりに使用することを検討してください。 詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。 読み取るクエリは **テーブル** 変数を変更せずの並列処理を実行できます。
+
+> [!IMPORTANT]
+> データベース互換性レベル 150 では、**テーブル変数の遅延コンパイル**の導入により、テーブル変数のパフォーマンスが向上します。  詳細については、「[テーブル変数の遅延コンパイル](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)」をご覧ください。
+>
   
 **table** 変数でインデックスを明示的に作成することはできません。**table** 変数では統計が保持されません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降では、特定のインデックスの種類をテーブル定義にインライン作成できる新しい構文が導入されました。  この新しい構文を使うと、テーブル定義の一部として**テーブル**変数にインデックスを作成できます。 場合によっては、完全なインデックスのサポートと統計を提供する一時テーブルを使用した方が、パフォーマンスが向上する場合があります。 一時テーブルとインライン インデックス作成について詳しくは、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」をご覧ください。
 
@@ -110,63 +114,8 @@ CHECK 制約、既定値、計算列、**table** 型の宣言は、ユーザー�
 **table** 変数はスコープが限られており、持続性のあるデータベースに含まれないため、トランザクション ロールバックの影響を受けません。
   
 table 変数は作成後に変更できません。
-
-## <a name="table-variable-deferred-compilation"></a>テーブル変数の遅延コンパイル
-**テーブル変数の遅延コンパイル**を使用すると、テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のプランのコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。 この正確な行数の情報は、ダウンストリーム プラン操作を最適化するために使用されます。
-
-> [!NOTE]
-> テーブル変数の遅延コンパイルは、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] でのパブリック プレビュー機能です。
-
-テーブル変数の遅延コンパイルを使用すると、テーブル変数を参照するステートメントのコンパイルは、そのステートメントが最初に実際に実行されるまで遅延されます。 この遅延コンパイルの動作は、一時テーブルの動作と同じです。 この変更によって、元の 1 行の推定値ではなく、実際のカーディナリティを使用できるようになります。 
-
-テーブル変数の遅延コンパイルのパブリック プレビューを有効にするには、クエリを実行する際に接続されるデータベースのデータベース互換レベル 150 を有効にします。
-
-テーブル変数の遅延コンパイルを使用することで、テーブル変数のその他の特性が変更されることは**ありません**。 たとえば、この機能はテーブル変数に列統計を追加しません。
-
-テーブル変数の遅延コンパイルによって**再コンパイルの頻度が増加することはありません**。 最初のコンパイルを行った場所でシフトします。 結果として得られるキャッシュされたプランは、最初の遅延コンパイルのテーブル変数の行数に基づいて生成されます。 キャッシュされたプランは、連続するクエリによって再利用されます。 プランが削除されるか、再コンパイルされるまで再利用されます。 
-
-最初のプランのコンパイルに使用される table 変数の行数で示される標準値は、固定行数の推定値とは異なる場合があります。 異なる場合、ダウンストリーム操作が役立ちます。 テーブル変数の行数が実行全体で大幅に変化する場合は、この機能を使用してもパフォーマンスが改善しない可能性があります。
-
-### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>互換性レベルを変更することなく、テーブル変数の遅延コンパイルを無効にする
-table 変数の遅延コンパイルは、データベースの互換性レベル 150 以上を維持しながら、データベースまたはステートメント範囲で無効にします。 データベースを発生源とするすべてのクエリ実行に対してテーブル変数の遅延コンパイルを無効にするには、該当するデータベースとの関連で次のサンプルを実行します。
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
-```
-
-データベースを発生源とするすべてのクエリ実行に対してテーブル変数の遅延コンパイルを再度有効にするには、該当するデータベースとの関連で次のサンプルを実行します。
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
-```
-
-DISABLE_DEFERRED_COMPILATION_TV を USE HINT クエリ ヒントとして割り当てることで、特定のクエリに対してテーブル変数の遅延コンパイル無効にすることもできます。  例:
-
-```sql
-DECLARE @LINEITEMS TABLE 
-    (L_OrderKey INT NOT NULL,
-     L_Quantity INT NOT NULL
-    );
-
-INSERT @LINEITEMS
-SELECT L_OrderKey, L_Quantity
-FROM dbo.lineitem
-WHERE L_Quantity = 5;
-
-SELECT  O_OrderKey,
-    O_CustKey,
-    O_OrderStatus,
-    L_QUANTITY
-FROM    
-    ORDERS,
-    @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
-    AND O_OrderStatus = 'O'
-OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
-```
-
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. table 型の変数を宣言する  
 次の例では、UPDATE ステートメントの OUTPUT 句で指定される値を格納する `table` 変数を作成します。 この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 `INSERTED.ModifiedDate` 列の結果が、`Employee` テーブルの `ModifiedDate` 列の値と異なります。 この違いは、`AFTER UPDATE` の値を現在の日付に更新する `ModifiedDate` トリガーが `Employee` テーブルで定義されることに起因します。 ただし、`OUTPUT` が返す列には、トリガーが起動される前の値が反映されています。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。
@@ -229,7 +178,7 @@ GO
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)  

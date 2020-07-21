@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccaafe71d4137fd4b31eec412c1e35595861bdd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68210712"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049396"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>時間ベースの行フィルターの推奨事項
   アプリケーションのユーザーは、テーブルに対して時間ベースのデータ サブセットを要求することがよくあります。 たとえば、販売員が先週の注文データを必要としたり、イベント プランナーが次週のイベントのデータを必要とする場合などです。 多くの場合、アプリケーションでは、`GETDATE()` 関数を含むクエリを使用して、この処理を実行します。 次の行フィルター ステートメントについて考えてみましょう。  
@@ -26,7 +25,7 @@ ms.locfileid: "68210712"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- このタイプのフィルターを使用すると、マージ エージェントの実行時には、2 つの処理 (このフィルターに適合する行をサブスクライバーにレプリケートする処理と、このフィルターに適合しない行をサブスクライバー側でクリーンアップする処理) が常に発生すると推測するのが普通です (によるフィルター処理の詳細については`HOST_NAME()`を参照してください[Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md))。ところがマージ レプリケーションでは、データに対して行フィルターをどのように定義したかに関係なく、前回の同期以降に変更されたデータのレプリケートおよびクリーンアップのみが行われます。  
+ このタイプのフィルターを使用すると、マージ エージェントの実行時には、2 つの処理 (このフィルターに適合する行をサブスクライバーにレプリケートする処理と、このフィルターに適合しない行をサブスクライバー側でクリーンアップする処理) が常に発生すると推測するのが普通です (でのフィルター処理の詳細につい `HOST_NAME()` ては、「[パラメーター化](parameterized-filters-parameterized-row-filters.md)された行フィルター」を参照してください)。ただし、マージレプリケーションでは、そのデータに対して行フィルターを定義する方法に関係なく、前回の同期以降に変更されたデータのみをレプリケートおよびクリーンアップします。  
   
  マージ レプリケーションで行を処理するには、行内のデータが行フィルターに適合していて、前回の同期以降にデータが変更されている必要があります。 **SalesOrderHeader** テーブルでは、行が挿入されると **OrderDate** が入力されます。 挿入はデータ変更なので、行は、期待どおりにサブスクライバーにレプリケートされます。 ただし、フィルターに適合しなくなった行 (7 日前以前の注文の行) がサブスクライバー側にある場合、他のなんらかの理由で更新されていない限り、その行はサブスクライバーから削除されません。  
   
@@ -60,7 +59,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|1|  
-|2|Dinner|112|2006-10-10|0|  
+|2|夕食|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
   
@@ -84,13 +83,13 @@ GO
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|1|  
+|2|夕食|112|2006-10-10|1|  
 |3|Party|112|2006-10-11|1|  
 |4|Wedding|112|2006-10-12|1|  
   
  次週のイベントは、レプリケート準備済みとしてフラグが付けられています。 イベント コーディネーター 112 が使用するサブスクリプションでマージ エージェントが次に実行されると、1 行目以外の行がサブスクライバーにダウンロードされ、1 行目がサブスクライバーから削除されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [GETDATE (Transact-SQL)](/sql/t-sql/functions/getdate-transact-sql)   
  [ジョブの実装](../../../ssms/agent/implement-jobs.md)   
  [パラメーター化された行フィルター](parameterized-filters-parameterized-row-filters.md)  

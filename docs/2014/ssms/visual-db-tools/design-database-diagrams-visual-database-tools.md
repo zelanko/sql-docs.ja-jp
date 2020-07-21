@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e348ace954e19c3e213c7de1779cbfbcb1768887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c8bb22ba6fdeb9e39b7173c4975af22d5124a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316099"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044433"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>データベース ダイアグラムのデザイン (Visual Database Tools)
   データベース デザイナーは、接続先のデータベースをデザインしたりビジュアル化したりできるビジュアル ツールです。 データベースをデザインするときは、データベース デザイナーを使用して、テーブル、列、キー、インデックス、リレーションシップ、および制約の作成、編集、または削除を行うことができます。 データベースをビジュアル化するには、データベースに含まれるテーブル、列、キー、およびリレーションシップの一部または全部を表すダイアグラムを作成します。  
   
- ![テーブルのリレーションシップを説明するデータベース ダイアグラム](../../database-engine/media//dv3w7c1.gif "テーブル間のリレーションシップを説明するデータベース ダイアグラム")  
+ ![テーブル リレーションシップを説明するデータベース ダイアグラム](../../database-engine/media//dv3w7c1.gif "テーブル リレーションシップを説明するデータベース ダイアグラム")  
   
  1 つのデータベースから、いくつでもデータベース ダイアグラムを作成できます。また、1 つのデータベース テーブルは、複数のダイアグラムに含めることができます。 したがって、異なるダイアグラムを作成し、データベースの異なる部分をビジュアル化したり、デザインの異なる面を強調したりできます。 たとえば、大きなダイアグラムを作成した場合はすべてのテーブルと列を表示することができ、小さいダイアグラムの場合は列を表示しないですべてのテーブルだけを表示するようにできます。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63316099"
   
  テーブルを変更し、まだ保存していない場合は、保存されていない変更があることを示すアスタリスク (*) がテーブル名の最後に表示されます。 変更したテーブルおよびダイアグラムの保存については、「 [データベース ダイアグラムの使用 (Visual Database Tools)](visual-database-tools.md)  
   
- **行セレクター** 行セレクターをクリックすると、テーブルの中のデータベース列を選択できます。 列がテーブルの主キーに含まれる場合は、行セレクターに鍵の記号が表示されます。 主キーについては、次を参照してください。 [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md)します。  
+ **行セレクター** 行セレクターをクリックすると、テーブルの中のデータベース列を選択できます。 列がテーブルの主キーに含まれる場合は、行セレクターに鍵の記号が表示されます。 主キーの詳細については、「 [Primary Key 制約と Foreign Key 制約](../../relational-databases/tables/primary-and-foreign-key-constraints.md)」を参照してください。  
   
  **プロパティ列** プロパティ列は、テーブルの特定のビューにだけ表示されます。 テーブルは、5 種類のいずれのビューでも表示できるので、ダイアグラムのサイズとレイアウトを管理するときの参考になります。  
   
@@ -68,8 +67,8 @@ ms.locfileid: "63316099"
  [データベース ダイアグラム デザイナーを開く (Visual Database Tools)](open-database-diagram-designer-visual-database-tools.md)  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムを扱う&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [データベース ダイアグラムでテーブルを操作する&#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
+ [データベースダイアグラムの使用 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [データベースダイアグラムでのテーブルの操作 &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
  [ダイアグラムのレイアウトの操作 (Visual Database Tools)](work-with-diagram-layout-visual-database-tools.md)  
   
   

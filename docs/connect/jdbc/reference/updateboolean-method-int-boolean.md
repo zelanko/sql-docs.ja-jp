@@ -1,5 +1,5 @@
 ---
-title: updateBoolean (int, boolean) メソッドMicrosoft Docs
+title: updateBoolean (int, boolean) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7937f4bb-8537-4012-af81-837f9ac123a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 658d23f4a2a2a465a6c7344858f67efb005f81bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 88dc682abfff75f5668888d2d4598e0619ed033e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997009"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924717"
 ---
 # <a name="updateboolean-method-int-boolean"></a>updateBoolean (int, boolean) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public void updateBoolean(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  列インデックスを示す **int** です。  
   
@@ -47,8 +47,8 @@ public void updateBoolean(int index,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この updateBoolean メソッドは、java. ResultSet インターフェイスの updateBoolean メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この updateBoolean メソッドは、java.sql.ResultSet インターフェイスの updateBoolean メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateBoolean メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   

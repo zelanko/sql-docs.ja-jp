@@ -1,10 +1,9 @@
 ---
-title: マスター サーバーへのターゲット サーバーの参加 | Microsoft Docs
-ms.custom: ''
+title: マスター サーバーへのターゲット サーバーの参加
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 88cecde3bcfd3a7b0c5f7512506dc7c259b1b2cd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 53262aac5d8f89929c66272674a6f0104b73efd5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265883"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087544"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>マスター サーバーへのターゲット サーバーの参加
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,17 +35,9 @@ ms.locfileid: "68265883"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス用に使用される Windows アカウントがマルチサーバー環境に与える影響については、「 [マルチサーバー環境の作成](../../ssms/agent/create-a-multiserver-environment.md)」を参照してください。  
   
-マスター サーバーとターゲット サーバーの間の接続では、完全な Secure Sockets Layer (SSL) 暗号化と証明書の検証が既定で有効になります。 詳しくは、「[ターゲット サーバーでの暗号化オプションの設定](../../ssms/agent/set-encryption-options-on-target-servers.md)」をご覧ください。  
+マスター サーバーとターゲット サーバー間の接続では、既定で完全なトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) の暗号化と証明書の検証が有効です。 詳しくは、「[ターゲット サーバーでの暗号化オプションの設定](../../ssms/agent/set-encryption-options-on-target-servers.md)」をご覧ください。  
   
-**このトピックの内容**  
-  
--   **ターゲット サーバーを参加させるために使用するもの:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
-  
-## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-enlist-a-target-server"></a>ターゲット サーバーを参加させるには  
   
@@ -54,7 +47,7 @@ ms.locfileid: "68265883"
   
 3.  ターゲット サーバー設定ウィザードを実行し、指示に従って操作します。  
   
-## <a name="TsqlProcedure"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL の使用  
   
 #### <a name="to-enlist-a-target-server"></a>ターゲット サーバーを参加させるには  
   

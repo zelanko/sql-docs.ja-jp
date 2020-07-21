@@ -1,5 +1,6 @@
 ---
-title: PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: PDF ファイルへのエクスポート (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーの PDF 表示拡張機能を使用すると、ページ分割されたレポートを、Adobe Acrobat およびその他のサードパーティ製 PDF ビューアーで開くことが可能なファイルとして表示します。
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,24 +9,24 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff2c93000c1b5f0e9d01a3204858717640733228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: e9c00901c1a409ec2a8a52476b201f2bf7992017
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580787"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342854"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   PDF 表示拡張機能を使用すると、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割レポートを、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことが可能なファイルとして表示できます。 PDF 1.3 は Adobe Acrobat 4.0 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でサポートされるのは Adobe Acrobat 11.0 以降です。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。  
   
- PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体字中国語、簡体字中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限事項の詳細については、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
+ PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体中国語、簡体中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限事項の詳細については、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
   
  PDF レンダラーは物理的なページ レンダラーなので、HTML や Excel などの他のレンダラーとは異なり、改ページ機能があります。 ここでは、PDF レンダラー固有の情報を提供し、規則の例外について説明します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> フォント埋め込み  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a> フォント埋め込み  
  PDF 表示拡張機能は、可能な場合、レポートを PDF ファイルで表示するために必要な各フォントのサブセットを埋め込みます。 レポートに使用されているフォントが、レポート サーバーにインストールされている必要があります。 レポート サーバーは、レポートを PDF 形式で生成する際に、レポートで参照されるフォントに保存されている情報を使用して、PDF ファイル内の文字マッピングを作成します。 参照されているフォントがレポート サーバーにインストールされていないと、結果の PDF ファイルに適切なマッピングが作成されず、正しく表示されなくなる可能性があります。  
   
  フォントは、次の条件が該当する場合、PDF ファイルに埋め込まれます。  
@@ -54,20 +55,20 @@ ms.locfileid: "65580787"
   
  PDF ファイルに埋め込まれているフォントは、ファイルと共に保存される Fonts プロパティにメタデータとして追加されます。  
   
-##  <a name="Metadata"></a> メタデータ  
+##  <a name="metadata"></a><a name="Metadata"></a> メタデータ  
  PDF 表示拡張機能では、レポート レイアウトに加えて PDF ドキュメント情報ディクショナリに次のメタデータを書き込みます。  
   
 |PDF プロパティ|作成元|  
 |------------------|------------------|  
 |**Title**|**Name** RDL 要素の **Report** 属性です。|  
-|**Author**|**Author** RDL 要素です。|  
-|**[Subject]**|**Description** RDL 要素です。|  
-|**Creator**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 製品の名前およびバージョンです。|  
+|**作成者**|**Author** RDL 要素です。|  
+|**件名**|**Description** RDL 要素です。|  
+|**作成者**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 製品の名前およびバージョンです。|  
 |**Producer**|表示拡張機能の名前とバージョンです。|  
 |**CreationDate**|PDF **datetime** 形式でのレポートの実行時間です。|  
   
   
-##  <a name="Interactivity"></a> 対話性  
+##  <a name="interactivity"></a><a name="Interactivity"></a> 対話性  
  PDF では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  
   
 ### <a name="show-and-hide"></a>表示/非表示  
@@ -88,7 +89,7 @@ ms.locfileid: "65580787"
  レポート内のハイパーリンクは、PDF ファイル内でクリック可能なリンクとして表示されます。 クリックすると、Acrobat により、既定のクライアント ブラウザーが起動し、ハイパーリンクの URL に移動できます。  
   
   
-##  <a name="Compression"></a> 圧縮  
+##  <a name="compression"></a><a name="Compression"></a> 圧縮  
  画像の圧縮は、画像の元のファイルの種類に基づいて行われます。 PDF 表示拡張機能は、既定で PDF ファイルを圧縮します。  
   
  PDF ファイルに含まれる画像の圧縮を可能な限り保持するために、JPEG 画像は JPEG として保存され、その他の種類の画像はすべて BMP として保存されます。  
@@ -97,7 +98,7 @@ ms.locfileid: "65580787"
 >  PDF ファイルは PNG 画像の埋め込みをサポートしていません。  
   
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> デバイス情報設定  
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。 詳細については、「 [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md)」を参照してください。  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f98d3bf43707caedd8c9d0a01349f36d5a5bfbcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63028419"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001466"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>[フルテキスト インデックス] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスを使用すると、データベース テーブルのテキスト ベースの列に対するフルテキスト検索用にフルテキスト インデックスを作成できます。 フルテキスト インデックスは、通常のインデックスに基づくため、最初に通常のインデックスを作成する必要があります。 通常のインデックスは、単一の非 null 列に作成する必要があります。大きな値を格納している列ではなく、小さな値を格納している列を選択するのが最も適切です。  
@@ -26,13 +25,13 @@ ms.locfileid: "63028419"
 >  フルテキスト インデックスを作成する場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、Enterprise Manager などの外部ツールを使用して、あらかじめデータベースのフルテキスト カタログを作成しておく必要があります。  
   
 > [!NOTE]  
->  フルテキスト インデックスの機能は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  フルテキスト インデックスの機能は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できるわけではありません。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[選択されたフルテキスト インデックス]**  
  既存のフルテキスト インデックスを一覧表示します。 インデックスを選択すると、右のグリッドにそのインデックスのプロパティが表示されます。 一覧が空の場合、テーブルにフルテキスト インデックスは定義されていません。  
   
- **[追加]**  
+ **追加**  
  新しいフルテキスト インデックスを作成します。  
   
  **削除**  
@@ -53,17 +52,17 @@ ms.locfileid: "63028419"
  **[IDENTITY] カテゴリ**  
  展開してインデックスの名前フィールドを表示します。  
   
- **名前**  
+ **Name**  
  システムが指定したフルテキスト インデックスの名前を表示します。  
   
  **[テーブル デザイナー] カテゴリ**  
  展開してインデックスの実行方法を指定するプロパティを表示します。  
   
- **Active**  
+ **アクティブ**  
  該当するフルテキスト インデックスを使用して、フルテキスト検索を現在実行できるかどうかを示します。  
   
  **[トラッキング設定の変更]**  
- 該当するインデックスの変更履歴の状態を示します([手動]、[自動]、または [オフ])。  
+ 該当するインデックスの変更履歴の状態を示します。[手動]、[自動]、または [オフ]。  
   
  **[クロールの完了]**  
  最近のクロールが完了したかどうかを示します。 このプロパティ値が [いいえ] の場合、クロールは現在進行中です。  
@@ -87,13 +86,13 @@ ms.locfileid: "63028419"
  次のクロールが開始する日時を表示します。  
   
  **[現在または最近のクロールの種類]**  
- 現在のクロールまたは最近のクロールの種類を表示します(空き領域なし、インクリメンタル、更新、自動伝達)。  
+ 現在のクロールまたは最近のクロールの型を表示します。[空き領域なし]、[インクリメンタル]、[更新]、または [自動伝達]。  
   
  **[一意のインデックス名]**  
  一意の単一列インデックスを持つ、データベース内のすべての列の名前を一覧表示します。 これらの列は、フルテキスト インデックスの作成に使用できます。  
   
 ## <a name="see-also"></a>参照  
- [フルテキスト インデックス作成ウィザードを使用してください。](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
+ [フルテキストインデックス作成ウィザードの使用](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
   

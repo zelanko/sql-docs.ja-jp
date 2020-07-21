@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff67ed908a9fe89d24c23d836ce608206575d649
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 048ead08bf4a0f3f275eb265434581c8be4405bc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941298"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292322"
 ---
 # <a name="look-up-process-chain"></a>[プロセス チェーンの参照]
 
@@ -44,10 +44,10 @@ ms.locfileid: "67941298"
 ## <a name="lookup-options"></a>[参照] のオプション  
  参照フィールドで、アスタリスクのワイルドカード文字 (*) を使用して、または部分的な文字列をアスタリスクのワイルドカード文字と組み合わせて使用して、結果をフィルター処理できます。 ただし、参照フィールドを空にした場合、参照操作は、フィールドの空の文字列のみを検索します。  
   
- **Process chain**  
+ **プロセス チェーン**  
  参照するプロセス チェーンの名前、または部分的な名前をアスタリスクのワイルドカード文字 (*) と入力します。 すべてのプロセス チェーンを含めるには、アスタリスクのワイルドカード文字を単独で使用します。  
   
- **[プロセス チェーンの参照]**  
+ **[参照]**  
  SAP Netweaver BW システムで定義されている一致するプロセス チェーンを参照します。  
   
 ## <a name="lookup-results"></a>参照結果  
@@ -56,7 +56,7 @@ ms.locfileid: "67941298"
  **[プロセス チェーン]**  
  SAP Netweaver BW システムで定義されたプロセス チェーンの名前を表示します。  
   
- **[説明]**  
+ **説明**  
  プロセス チェーンの説明を表示します。  
   
  使用できるプロセス チェーンの一覧が表示されたら目的のチェーンを選択すると、関連するオプションに必要な値が設定されます。  

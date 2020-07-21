@@ -1,5 +1,5 @@
 ---
-title: sysdbmaintplans (TRANSACT-SQL) |Microsoft Docs
+title: sysdbmaintplans (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,36 +15,36 @@ dev_langs:
 helpviewer_keywords:
 - sysdbmaintplans system table
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a47ae49ab640b18cbcd7286bc5d95bdc74143aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7eb84e9d50a797e52aca749cf590ca95b4f3e835
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68029972"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881399"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  次の表に記載されて[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既存の情報を保持するために、以前のバージョンからアップグレードされたインスタンス[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このテーブルの内容は変更されません。 このテーブルに格納されます、 **msdb**データベース。  
+  このテーブルは、以前のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードされたインスタンスの情報を保持するために、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属されたものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、このテーブルの内容は変更されません。 このテーブルは、 **msdb**データベースに格納されます。  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
 
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**plan_id**|**uniqueidentifier**|データベース メンテナンス プランの id。|  
+|**plan_id**|**uniqueidentifier**|データベースメンテナンスプランの ID。|  
 |**plan_name**|**sysname**|データベース メンテナンス プランの名前。|  
 |**date_created**|**datetime**|データベース メンテナンス プランが作成された日付。|  
-|**所有者**|**sysname**|データベース メンテナンス プランの所有者です。|  
+|**責任**|**sysname**|データベースメンテナンスプランの所有者。|  
 |**max_history_rows**|**int**|システム テーブル内で、データベース メンテナンス プランの履歴の記録用に割り当てられる行数の最大値。|  
-|**remote_history_server**|**sysname**|履歴レポートが書き込まれる先のリモート サーバーの名前。|  
-|**max_remote_history_rows**|**int**|履歴レポートが書き込まれる先のリモート サーバー上のシステム テーブルに割り当てられる行数の最大数。|  
-|**user_defined_1**|**int**|既定値は NULL|  
-|**user_defined_2**|**nvarchar(100)**|既定値は NULL|  
-|**user_defined_3**|**datetime**|既定値は NULL|  
-|**user_defined_4**|**uniqueidentifier**|既定値は NULL|  
-|**log_shipping**|**bit**|ログ配布の状態。<br /><br /> **0** = 無効になっている**1** = 有効になっています。|  
+|**remote_history_server**|**sysname**|履歴レポートが書き込まれるリモートサーバーの名前。|  
+|**max_remote_history_rows**|**int**|履歴レポートが書き込まれるリモートサーバー上のシステムテーブルに割り当てられる最大行数。|  
+|**user_defined_1**|**int**|既定値は NULL です。|  
+|**user_defined_2**|**nvarchar (100)**|既定値は NULL です。|  
+|**user_defined_3**|**datetime**|既定値は NULL です。|  
+|**user_defined_4**|**uniqueidentifier**|既定値は NULL です。|  
+|**log_shipping**|**bit**|ログ配布の状態。<br /><br /> **0** = 無効**1** = 有効|  
   
   

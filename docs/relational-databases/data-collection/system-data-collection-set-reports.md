@@ -1,5 +1,6 @@
 ---
 title: システム データ コレクション セット レポート | Microsoft Docs
+description: データ コレクターは、SQL Server でシステムの容量とシステムのパフォーマンスを監視するための、システム データ コレクション セットごとのレポートを提供します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d171085f34e2a20f9e4b1db809327d078ce08436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34992877bd226fd62df290e5d196fdf1a667f031
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715543"
 ---
 # <a name="system-data-collection-set-reports"></a>システム データ コレクション セット レポート
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データ コレクターは、各システム データ コレクション セットの履歴レポートを提供します。 次の各レポートでは、管理データ ウェアハウスに格納されているデータが使用されます。  
   
 -   [ディスク使用量の概要](#Disk)  
@@ -38,7 +39,7 @@ ms.locfileid: "67990591"
   
  これらのレポートを使用すると、システム容量の監視やシステム パフォーマンスのトラブルシューティングに役立つ情報を取得できます。  
   
-##  <a name="Disk"></a> ディスク使用量の概要レポート  
+##  <a name="disk-usage-summary-report"></a><a name="Disk"></a> ディスク使用量の概要レポート  
  ディスク使用量の概要レポートには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。 このレポートに表示されるデータは、ジェネリック T-SQL Query コレクター型を使用するディスク使用量コレクション セットを使用して取得されます。  
   
  ディスク使用量の概要レポートには、オブジェクト エクスプローラーからアクセスできます。 レポートを表示するには、 **[管理]** フォルダーを展開し、 **[データ コレクション]** を右クリックします。次に、 **[レポート]** 、 **[管理データ ウェアハウス]** の順にポイントし、 **[ディスク使用量の概要]** をクリックします。 詳細については、「 [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。  
@@ -50,19 +51,19 @@ ms.locfileid: "67990591"
   
 -   傾向および平均拡張率の情報が、データ ファイルとログ ファイルの両方についてグラフと数値で示されます。  
   
-#### <a name="disk-usage-collection-set---database-databasename-subreport"></a>ディスク使用量コレクション セット - データベース: <database_name> サブレポート  
+#### <a name="disk-usage-collection-set---database-database_name-subreport"></a>ディスク使用量コレクション セット - データベース: <database_name> サブレポート  
  ディスク使用量コレクション セット - データベース: *<database_name>* サブレポートは、ディスク使用量コレクション セット レポートの概要テーブルで特定のデータベースまたはログ ファイルの傾向を表す線をクリックすると表示されます。 このレポートでは、レポートの期間にわたるディスク使用領域の拡張傾向がグラフィカルに表示されます。 ディスク使用量は、データ ファイルについては使用済みの領域、データ領域、未割り当ての領域、インデックス領域ごとに、ログ ファイルについては使用済みの領域、未使用領域ごとに分類されてレポートされます。  
   
  グラフの下にあるテーブルには、データ収集時間と、対応する使用量データの一覧が表示されます。  
   
-#### <a name="disk-usage-for-database-databasename-subreport"></a>データベースのディスク使用量: <database_name> サブレポート  
+#### <a name="disk-usage-for-database-database_name-subreport"></a>データベースのディスク使用量: <database_name> サブレポート  
  **[データベースのディスク使用量]:** _<database_name>_ サブレポートは、ディスク使用量コレクション セット レポートの概要テーブルでデータベース名をクリックすると表示されます。 このレポートには、データベースのデータ ファイルおよびトランザクション ログ ファイルによる使用領域の内訳が数値とグラフで示されます。 データ ファイルの使用領域は、インデックス ページ、未割り当ての領域、データ ページ、および未使用領域に割り当てられた割合として分類されます。 これらのカテゴリは、次のように定義されています。  
   
 |カテゴリ|定義|  
 |--------------|----------------|  
 |インデックス|インデックス ページを保持するために使用されているディスク領域のサイズ。|  
 |未割り当て|データベースで利用可能なディスク領域のうち、どのオブジェクトにもまだ割り当てられていない領域のサイズ。|  
-|data|データ ページで使用されているディスク領域のサイズ。|  
+|Data|データ ページで使用されているディスク領域のサイズ。|  
 |未使用|1 つ以上のオブジェクトに割り当てられているディスク領域のうち、まだ使用されていない領域のサイズ。|  
   
  トランザクション ログ ファイルの使用領域は、使用済み領域と未使用領域に分類されます。  
@@ -71,7 +72,7 @@ ms.locfileid: "67990591"
   
  データベースの各データ ファイルによって使用されているディスク領域がレポートされます。 予約済みの領域としてレポートされる領域は、使用済みの領域と、ファイルに割り当てられた未使用の領域の合計になります。 使用済みの領域としてレポートされる領域は、割り当て済みの領域を除く、ファイルで現在使用されている実際の領域です。  
   
-##  <a name="Query"></a> クエリ統計の履歴レポート  
+##  <a name="query-statistics-history-report"></a><a name="Query"></a> クエリ統計の履歴レポート  
  クエリ統計の履歴レポートには、クエリ実行の統計が示されます。 このレポートで使用されるデータは、Query Activity コレクター型を使用するクエリ統計情報コレクション セットを使用して取得されます。  
   
  クエリ統計の履歴レポートには、オブジェクト エクスプローラーからアクセスできます。 レポートを表示するには、 **[管理]** フォルダーを展開し、 **[データ コレクション]** を右クリックします。次に、 **[レポート]** 、 **[管理データ ウェアハウス]** の順にポイントし、 **[クエリ統計の履歴]** をクリックします。 詳細については、「 [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)のインスタンス内にあるすべてのデータベースのディスク領域の使用状況に関するデータが示されます。  
@@ -118,7 +119,7 @@ ms.locfileid: "67990591"
   
  カレンダー ボタンを使用すると、レポート対象にするデータの開始日、開始時刻、および実行時間を指定できます。  
   
-###  <a name="Server"></a> サーバーの利用状況の履歴レポート  
+###  <a name="server-activity-history-report"></a><a name="Server"></a> サーバーの利用状況の履歴レポート  
  サーバーの利用状況の履歴レポートには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスとホスト オペレーティング システムのサーバー利用状況の初期表示が示されます。  
   
  次の表に、レポートに表示される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とシステムの利用状況を示すグラフ、およびグラフからアクセスできる詳細なサブレポートを示します。  
@@ -130,7 +131,7 @@ ms.locfileid: "67990591"
 |ディスク I/O の使用量|ディスク I/O の使用量のグラフで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはシステムのグラフ線の任意の箇所をクリックすると、以下のサブレポートにアクセスできます。<br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** :[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディスク I/O の使用量レポートには、ディスクの応答時間およびディスクの転送速度のグラフが表示されます。 また、ディスク、データベース、およびファイル別の仮想ファイルの統計を含むテーブルも表示されます。<br /><br /> **システム**:システムのディスク使用量レポートには、ディスクの応答時間、ディスク キューの平均の長さ、ディスクの転送速度、および各プロセスの I/O の書き込みと読み取りに関する情報を含むテーブルが表示されます。|  
 |ネットワーク使用量|追加のレポートはありません。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の待機|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の待機のグラフには、実行されたスレッドにより検出された待機が待機のカテゴリ別に表示されます。 グラフで任意のセグメントをクリックすると、詳細なレポートにアクセスできます。 このレポートでは、限られたタイムフレームの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の待機統計グラフに加えて、待機のカテゴリに関する情報が表形式で示されます。 このテーブルには、CPU やそのサブカテゴリなどのカテゴリごとに、待機の数、待機時間、および合計待機時間に対する割合が示されます。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況のグラフから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況のさまざまな側面にアクセスできます。 1 秒あたりの SQL コンパイル数を示すグラフ線をクリックすることで取得できるレポートを次に示します。<br /><br /> <br /><br /> 接続とセッション<br /><br /> 要求<br /><br /> プラン キャッシュのヒット率<br /><br /> tempdb の特性|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況のグラフから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況のさまざまな側面にアクセスできます。 1 秒あたりの SQL コンパイル数を示すグラフ線をクリックすることで取得できるレポートを次に示します。<br /><br /> <br /><br /> 接続とセッション<br /><br /> Requests<br /><br /> プラン キャッシュのヒット率<br /><br /> tempdb の特性|  
   
 ## <a name="see-also"></a>参照  
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   

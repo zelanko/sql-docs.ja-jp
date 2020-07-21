@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b70449ace66d4e33a547eca1c0b19eafabde5a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63137524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001999"
 ---
 # <a name="implement-sql-server-agent-security"></a>SQL Server エージェントのセキュリティの実装
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、データベース管理者は、各ジョブ ステップをそのジョブ ステップの実行に必要な権限だけがあるセキュリティ コンテキスト内で実行できます。適切なセキュリティ コンテキストは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシによって決まります。 特定のジョブ ステップに対応する権限を設定するには、必要な権限のあるプロキシを作成し、そのプロキシをジョブ ステップに割り当てます。 プロキシは、複数のジョブ ステップに対して指定できます。 同じ権限を必要とするジョブ ステップに対しては、同じプロキシを使用します。  
@@ -75,8 +74,8 @@ ms.locfileid: "63137524"
   
 ## <a name="see-also"></a>参照  
  [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
- [sp_droprolemember の各&#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
+ [sp_addrolemember &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
+ [sp_droprolemember &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
  [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

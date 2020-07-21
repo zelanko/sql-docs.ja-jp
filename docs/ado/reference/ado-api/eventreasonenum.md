@@ -1,5 +1,5 @@
 ---
-title: EventReasonEnum |Microsoft Docs
+title: Event理由 Enum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,56 +13,56 @@ f1_keywords:
 helpviewer_keywords:
 - EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 28d923476d8abff4dfa283e58eb6394bdb3b9593
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918872"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755187"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
-イベントの発生の原因となった理由を指定します。  
+イベントの発生原因となった理由を指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|操作は、新しいレコードを追加します。|  
-|**adRsnClose**|9|操作の終了、 **Recordset**します。|  
-|**adRsnDelete**|2|操作は、レコードを削除します。|  
-|**adRsnFirstChange**|11|操作は、レコードに、最初の変更を加えた。|  
-|**adRsnMove**|10|操作内のレコード ポインターを移動する、 **Recordset**します。|  
-|**adRsnMoveFirst**|12|操作の最初のレコードをレコード ポインターを移動する、 **Recordset**します。|  
-|**adRsnMoveLast**|15|操作は、最後のレコードをレコード ポインターを移動、 **Recordset**します。|  
-|**adRsnMoveNext**|13|操作は次のレコードをレコード ポインターを移動、 **Recordset**します。|  
-|**adRsnMovePrevious**|14|操作の前のレコードをレコード ポインターを移動する、 **Recordset**します。|  
-|**adRsnRequery**|7|クエリを再実行する操作、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。|  
-|**adRsnResynch**|8|操作が再同期、 **Recordset**データベースとします。|  
-|**adRsnUndoAddNew**|5|新しいレコードの追加が取り消されました。|  
-|**adRsnUndoDelete**|6|レコードの削除が取り消されました。|  
-|**adRsnUndoUpdate**|4|レコードの更新が取り消されました。|  
-|**adRsnUpdate**|3|操作は、既存のレコードを更新します。|  
+|**adRsnAddNew**|1|操作によって新しいレコードが追加されました。|  
+|**adRsnClose**|9|操作が**レコードセット**を閉じました。|  
+|**adRsnDelete**|2|操作によってレコードが削除されました。|  
+|**adRsnFirstChange**|11|レコードに対する最初の変更を行った操作。|  
+|**adRsnMove**|10|操作によってレコード**セット**内のレコードポインターが移動されました。|  
+|**adRsnMoveFirst**|12|操作は、レコードポインターをレコード**セット**内の最初のレコードに移動しました。|  
+|**adRsnMoveLast**|15|操作はレコードポインターをレコード**セット**内の最後のレコードに移動しました。|  
+|**adRsnMoveNext**|13|操作は、レコードポインターをレコード**セット**内の次のレコードに移動しました。|  
+|**adRsnMovePrevious**|14|操作はレコードポインターをレコード**セット**内の前のレコードに移動しました。|  
+|**adRsnRequery**|7|操作は、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を再度実行します。|  
+|**adRsnResynch 同期**|8|操作は、データベースを使用して**レコードセット**を再同期します。|  
+|**adRsnUndoAddNew**|5|操作によって、新しいレコードの追加が取り消されました。|  
+|**adRsnUndoDelete**|6|操作により、レコードの削除が取り消されました。|  
+|**adRsnUndoUpdate**|4|操作により、レコードの更新が取り消されました。|  
+|**adRsnUpdate**|3|操作により、既存のレコードが更新されました。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
 |定数|  
 |--------------|  
-|AdoEnums.EventReason.ADDNEW|  
-|AdoEnums.EventReason.CLOSE|  
-|AdoEnums.EventReason.DELETE|  
-|AdoEnums.EventReason.FIRSTCHANGE|  
-|AdoEnums.EventReason.MOVE|  
-|AdoEnums.EventReason.MOVEFIRST|  
-|AdoEnums.EventReason.MOVELAST|  
-|AdoEnums.EventReason.MOVENEXT|  
-|AdoEnums.EventReason.MOVEPREVIOUS|  
-|AdoEnums.EventReason.REQUERY|  
-|AdoEnums.EventReason.RESYNCH|  
-|AdoEnums.EventReason.UNDOADDNEW|  
-|AdoEnums.EventReason.UNDODELETE|  
-|AdoEnums.EventReason.UNDOUPDATE|  
-|AdoEnums.EventReason.UPDATE|  
+|AdoEnums. ADDNEW|  
+|AdoEnums を終了します。|  
+|AdoEnums を削除します。|  
+|AdoEnums の変更|  
+|AdoEnums。移動|  
+|AdoEnums. MOVEFIRST|  
+|AdoEnums. MOVELAST|  
+|AdoEnums. MOVENEXT|  
+|AdoEnums. MOVEPREVIOUS|  
+|AdoEnums。 REQUERY|  
+|AdoEnums の再同期|  
+|AdoEnums. UNDOADDNEW|  
+|AdoEnums. UNDODELETE|  
+|AdoEnums. UNDOUPDATE|  
+|AdoEnums を更新します。|  
   
 ## <a name="applies-to"></a>適用対象  
   

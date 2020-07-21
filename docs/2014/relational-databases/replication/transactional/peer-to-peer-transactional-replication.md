@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 8c781435bdf8458b7f2714141d659750b0f31055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793925"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998054"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   ピア ツー ピア レプリケーションは、データのコピーを複数のサーバー インスタンス ( *ノード*) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。 ピア ツー ピア レプリケーションはトランザクション レプリケーションを基礎としており、トランザクション的に一貫性のある変更がほぼリアルタイムで反映されます。 これにより、読み取り操作のスケールアウトを必要とするアプリケーションで、クライアントからの読み取りを複数のノードに分散することができます。 また、データがほぼリアルタイムで複数のノードに保持されるため、データの冗長性が実現され、データの可用性が向上します。  
@@ -40,10 +39,10 @@ ms.locfileid: "67793925"
   
 -   変更がレプリケートされるときには常にある程度の遅延が生じます。 最新の変更が直ちに反映される必要があるアプリケーションでは、複数のノードで動的に負荷を分散すると問題が発生する場合があります。  
   
- ピア ツー ピア レプリケーションには、ピア ツー ピア トポロジの競合の検出を有効にするオプションが含まれています。 このオプションは、検出されない競合によって引き起こされる問題 (アプリケーションの動作の矛盾や更新データの喪失など) の防止に役立ちます。 このオプションを有効にすると、競合する変更が、ディストリビューション エージェントの障害を引き起こす重大なエラーとして既定で扱われるようになります。 競合が発生した場合は、その競合が手動で解決されて、トポロジでデータの一貫性が確保されるまで、トポロジが一貫性のない状態のままになります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
+ ピア ツー ピア レプリケーションには、ピア ツー ピア トポロジの競合の検出を有効にするオプションが含まれています。 このオプションは、検出されない競合によって引き起こされる問題 (アプリケーションの動作の矛盾や更新データの喪失など) の防止に役立ちます。 このオプションを有効にすると、競合する変更が、ディストリビューション エージェントの障害を引き起こす重大なエラーとして既定で扱われるようになります。 競合が発生した場合は、その競合が手動で解決されて、トポロジでデータの一貫性が確保されるまで、トポロジが一貫性のない状態のままになります。 詳細については、「 [ピア ツー ピア レプリケーションにおける競合検出](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
   
 > [!NOTE]  
->  データの不整合が生じないようにするため、競合の検出を有効にしている場合でも、ピア ツー ピア トポロジで競合を発生させないようにしてください。 特定の行の書き込み操作が 1 つのノードだけで行われるようにするには、データにアクセスしてそのデータを変更するアプリケーションで、挿入、更新、および削除の各操作をパーティション分割する必要があります。 これにより、1 つのノードの特定の行に対する変更は、トポロジ内の他のすべてのノードと同期されてから、別のノードでその行が変更されるようになります。 競合の検出と解決のための高度な機能がアプリケーションに必要な場合は、マージ レプリケーションを使用します。 詳細については、「[Merge Replication](../merge/merge-replication.md)」 (マージ レプリケーション) と「[Detect and Resolve Merge Replication Conflicts](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)」 (マージ レプリケーションの競合の検出と解決) を参照してください。  
+>  データの不整合が生じないようにするため、競合の検出を有効にしている場合でも、ピア ツー ピア トポロジで競合を発生させないようにしてください。 特定の行の書き込み操作が 1 つのノードだけで行われるようにするには、データにアクセスしてそのデータを変更するアプリケーションで、挿入、更新、および削除の各操作をパーティション分割する必要があります。 これにより、1 つのノードの特定の行に対する変更は、トポロジ内の他のすべてのノードと同期されてから、別のノードでその行が変更されるようになります。 競合の検出と解決のための高度な機能がアプリケーションに必要な場合は、マージ レプリケーションを使用します。 詳細については、「[Merge Replication](../merge/merge-replication.md)」 (マージ レプリケーション) と「[マージ レプリケーションの競合の検出と解決](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)」 を参照してください。  
   
 ## <a name="peer-to-peer-topologies"></a>ピア ツー ピア トポロジ  
  次のシナリオは、ピア ツー ピア レプリケーションの典型的な使用方法を示しています。  
@@ -92,7 +91,7 @@ ms.locfileid: "67793925"
 ## <a name="considerations-for-using-peer-to-peer-replication"></a>ピア ツー ピア レプリケーションの使用に関する注意点  
  ここでは、ピア ツー ピア レプリケーションを使用する際に考慮する必要がある情報とガイドラインを示します。  
   
-### <a name="general-considerations"></a>全般的な注意点  
+### <a name="general-considerations"></a>一般的な考慮事項  
   
 -   ピア ツー ピア レプリケーションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の Enterprise バージョンでのみ使用できます。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "67793925"
   
 -   サブスクリプションを作成するには、パブリケーションをピア ツー ピア レプリケーションで有効にする必要があります。  
   
--   サブスクリプションは、バックアップを使用するか、 **[レプリケーションのサポートのみ]** オプションで初期化する必要があります。 詳細については、「[Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md)」 (スナップショットを使用しないトランザクション サブスクリプションの初期化) を参照してください。  
+-   サブスクリプションは、バックアップを使用するか、 **[レプリケーションのサポートのみ]** オプションで初期化する必要があります。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 -   ID 列の使用はお勧めできません。 ID を使用する場合は、各参加データベースのテーブルに割り当てられた範囲を手動で管理する必要があります。 詳細については、「[Replicate Identity Columns](../publish/replicate-identity-columns.md)」 (ID 列のレプリケート) で、"Assigning Ranges for Manual Identity Range Management" (手動で ID 範囲を管理する場合の範囲の割り当て) セクションを参照してください。  
   
@@ -137,24 +136,24 @@ ms.locfileid: "67793925"
   
 -   ディストリビューション エージェントのパラメーター **-SubscriptionStreams** とログ リーダー エージェントのパラメーター **-MaxCmdsInTran**  
   
--   アーティクルのプロパティ **\@destination_owner**と **\@destination_table**します。  
+-   アーティクルのプロパティ** \@ destination_owner**および** \@ destination_table**。  
 
 -   ピア ツー ピア トランザクション レプリケーションでは、ピア ツー ピア パブリケーションの一方向トランザクション サブスクリプションを作成できません
   
  次のプロパティには特別な注意が必要です。  
   
--   パブリケーションのプロパティを **\@allow_initialize_from_backup**の値が必要です`true`します。  
+-   パブリケーションプロパティ** \@ allow_initialize_from_backup**には値が必要です `true` 。  
   
--   アーティクルのプロパティ **\@replicate_ddl**の値が必要です`true`; **\@identityrangemanagementoption**の値が必要です`manual`; と **\@状態**そのオプションが必要です**24**設定されています。  
+-   アーティクルのプロパティ** \@ replicate_ddl**には、の値が必要です `true` 。** \@ identityrangemanagementoption**には値が必要です `manual` 。および** \@ status**では、オプション**24**が設定されている必要があります。  
   
--   アーティクルのプロパティの値 **\@ins_cmd**、  **\@del_cmd**、および **\@upd_cmd**に設定することはできません`SQL`します。  
+-   アーティクルのプロパティ** \@ ins_cmd**、 ** \@ del_cmd**、および** \@ upd_cmd**の値をに設定することはできません `SQL` 。  
   
--   サブスクリプション プロパティ **\@sync_type**の値が必要です`none`または`automatic`します。  
+-   サブスクリプションプロパティ** \@ sync_type**には、またはの値が必要です `none` `automatic` 。  
   
 ### <a name="maintenance-considerations"></a>メンテナンスの注意事項  
  次のアクションを実行する場合は、システムを停止する必要があります。 システムの停止を実行するには、すべてのノードのパブリッシュされたテーブルで処理を停止し、他のすべてのノードからのすべての変更を各ノードが受信しているかどうかを確認します。  
   
--   追加、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]既存のトポロジへのノード  
+-   既存の [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] トポロジへのノードの追加  
   
 -   既存のパブリケーションへのアーティクルの追加  
   
@@ -168,9 +167,9 @@ ms.locfileid: "67793925"
   
 -   ピア ツー ピア トポロジでは、サブスクリプションの再初期化を実行できません。 ノードで新しいデータのコピーを確実に保持する必要がある場合は、そのノードでバックアップを復元してください。  
   
-## <a name="see-also"></a>関連項目  
- [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
+## <a name="see-also"></a>参照  
+ [ピアツーピアトポロジの管理 &#40;レプリケーション Transact-sql プログラミング&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [スナップショットレプリケーションおよびトランザクションレプリケーションのバックアップと復元の方法](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [トランザクション レプリケーションで使用するパブリケーションの種類](transactional-replication.md)  
   
   

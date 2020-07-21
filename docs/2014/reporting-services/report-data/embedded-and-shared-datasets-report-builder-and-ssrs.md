@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01f37190ac96486235cbdd4477a0eed0e9974389
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107274"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
@@ -48,8 +48,8 @@ ms.locfileid: "66107274"
     |--------------|--------------------------------------------|------------------------------------------|  
     |クエリ テキスト|クエリを構成する (クエリを式として定義するなど)|クエリの変更は不可|  
     |クエリ パラメーター|レポート パラメーターの参照は不可<br /><br /> 既定値を含む<br /><br /> 読み取り専用フラグを含む|定義で読み取り専用とマークされていないパラメーターを構成する|  
-    |フィルター|フィルターの定義|定義の一部を構成するデータセット フィルターの表示または変更は不可<br /><br /> 追加フィルターの作成は可能|  
-    |[データ ソース]|共有データ ソースである必要がある|データ ソースの変更は不可|  
+    |フィルター|フィルターを定義する|定義の一部を構成するデータセット フィルターの表示または変更は不可<br /><br /> 追加フィルターの作成は可能|  
+    |Data Source|共有データ ソースである必要がある|データ ソースの変更は不可|  
     |フィールド|クエリ コマンドのフィールド<br /><br /> データセット定義の一部を構成しない計算フィールド|フィールドの表示 (変更は不可)<br /><br /> フィールド コレクションは静的で、共有データセットをレポートに追加したときのクエリに基づきます。 更新するには、 **[データセットのプロパティ]** ダイアログ ボックスの **[フィールドの更新]** をクリックします。 定義内の現在のクエリから返されるコレクションが、実際のフィールド コレクションです。<br /><br /> 計算フィールドの追加|  
     |データセット|大文字と小文字の区別などのデータ オプション|インスタンスのデータ オプションのオーバーライド|  
   
@@ -59,11 +59,11 @@ ms.locfileid: "66107274"
  埋め込みデータセットを作成または編集するには、[レポート データ] ペインを使用します。 データセットを作成した後は、 **[データセットのプロパティ]** ダイアログ ボックスでプロパティを構成できます。  
   
 ## <a name="see-also"></a>参照  
- [埋め込みおよび共有のデータ接続またはデータ ソース &#40;レポート ビルダーおよび SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)   
+ [埋め込みデータ接続または共有データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS を &#40;共有データセットまたは埋め込みデータセットを作成&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-datasets-ssrs.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [レポートビルダーのデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Reporting Services でのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

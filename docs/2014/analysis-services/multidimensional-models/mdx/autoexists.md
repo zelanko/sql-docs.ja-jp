@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd35958a364456c12d58392afe3754f6adcf97b8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074727"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546594"
 ---
-# <a name="autoexists"></a>Autoexists
+# <a name="autoexists"></a>autoexists
   *autoexists* の概念を導入すると、このキューブ空間を、同じ階層から属性階層メンバーの可能なすべての組み合わせを作成した結果として存在するセルでなく、実際に存在するセルのみに限定できます。 これは、1 つの属性階層のメンバーは、同じディメンション内の別の属性階層のメンバーと共存できないためです。 SELECT ステートメントに同じディメンションの属性階層を複数使用した場合、こうした属性のメンバーは、Analysis Services が属性の式を評価する際、それ以外のすべての属性の条件を満たすよう、適切に絞り込まれます。  
   
  たとえば、Geography ディメンションの属性を指定したとします。 一方の式で City 属性のすべてのメンバーを返し、もう一方の式で Country 属性のメンバーを欧州内の国のみに限定した場合、結果として得られる City メンバーは、欧州の国に属する市区町村に限定されます。 これは、Analysis Services が備えている Autoexists という特性のためです。 Autoexists が同じディメンションの属性にのみ適用されるのは、一方の属性式で排除されたディメンション レコードが、もう一方の属性式で含められるのを防ぐように機能するためです。 ディメンション行に複数の属性式を適用した結果の共通集合と考えることもできます。  
@@ -62,7 +61,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  このクエリでは、列軸を表す axis(0) の略記である 0 を使用して、列軸を指定しています。  
   
- 上のクエリを実行すると、クエリ内の各属性階層から、共存できるメンバーのセルのみが返されます。 前のクエリは、新しいを使用して書き込むこともできます * のバリアント、 [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx)関数。  
+ 上のクエリを実行すると、クエリ内の各属性階層から、共存できるメンバーのセルのみが返されます。 上記のクエリは、 [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx)関数の新しい * バリアントを使用して記述することもできます。  
   
 ```  
 SELECT   
@@ -85,7 +84,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  結果セットのメタデータが異なりますが、返されるセルの値は同一です。 たとえば上のクエリで、Country 階層は (WHERE 句の) スライサー軸に移動されたので、結果セットに明示的には出現しません。  
   
- これら 3 つのクエリはいずれも、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の autoexist の効果を示しています。  
+ 上記の3つのクエリはそれぞれ、の自動存在の動作の効果を示して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] います。  
   
 ## <a name="deep-and-shallow-autoexists"></a>Deep および Shallow Autoexists  
  Autoexists は、式に対して深く (deep) または浅く (shallow) 適用できます。 `Deep Autoexists` では、スライサーの式、軸の下位選択式などを適用した後、可能な限り深い場所に到達するように、すべての式が評価されます。 `Shallow Autoexists` では、現在の式より前に外部の式が評価され、その結果が現在の式に渡されます。 既定の設定は deep autoexists です。  
@@ -136,9 +135,9 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
+|**道路 650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
 |**Touring 1000**|**$6,723,794.29**|**$166,144.17**|**2.47%**|  
-|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
+|**道路-w 550**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
 |**Road-150**|**$2,363,805.16**|**$0.00**|**0.00%**|  
@@ -188,9 +187,9 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
-|**Road-650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
+|**道路 650**|**$7,442,141.81**|**$39,698.30**|**0.53%**|  
 |**Touring 1000**|**$6,723,794.29**|**$166,144.17**|**2.47%**|  
-|**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
+|**道路-w 550**|**$3,668,383.88**|**$1,901.97**|**0.05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0.57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
 |**Road-150**|**$2,363,805.16**|**$0.00**|**0.00%**|  
@@ -220,7 +219,7 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
-|**Mountain-300**|**$1,907,249.38**|**$876.95**|**0.05%**|  
+|**Mountain ～ 300**|**$1,907,249.38**|**$876.95**|**0.05%**|  
 |**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1.62%**|  
 |**Mountain-400-W**|**$592,450.05**|**$303.49**|**0.05%**|  
 |**LL Mountain Frame**|**$521,864.42**|**$252.41**|**0.05%**|  
@@ -308,15 +307,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
+ Autoexists の動作は、接続文字列の AUTOEXISTS = [1 | 2 | 3] パラメーターを使用して変更できます。パラメーターの使用法については、「 [xmla&#41;&#40;サポートされる Xmla プロパティ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)」を参照してください <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
   
 ## <a name="see-also"></a>参照  
- [MDX の主な概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX &#40;Analysis Services の主な概念&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [キューブ空間](cube-space.md)   
  [組](tuples.md)   
- [メンバー、組、およびセットの操作 (MDX)](working-with-members-tuples-and-sets-mdx.md)   
- [表示部分の合計と非表示部分の合計](visual-totals-and-non-visual-totals.md)   
- [MDX 言語リファレンス &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [MDX&#41;&#40;メンバー、組、およびセットの操作](working-with-members-tuples-and-sets-mdx.md)   
+ [ビジュアルの合計と非表示の合計](visual-totals-and-non-visual-totals.md)   
+ [Mdx 言語リファレンス &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [多次元式 &#40;MDX&#41; リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

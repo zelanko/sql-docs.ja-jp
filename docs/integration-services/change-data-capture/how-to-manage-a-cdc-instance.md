@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0bc4025f51722b64d88bd0841ca616b3e2287bc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d5e7029c531928e746b8ca2099d71a7d27f2ff5f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076392"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298817"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
 
@@ -44,11 +44,11 @@ ms.locfileid: "68076392"
   
     -   **[リセット]** : CDC インスタンスを初期 (空) の状態にリセットするには、 **[リセット]** をクリックします。 このオプションは、CDC インスタンスが停止しているときに使用できます。 変更テーブル内のすべての変更および CDC インスタンスの内部状態が削除されます。 CDC インスタンスが後から開始されると、変更キャプチャはその時点から開始され、CDC インスタンスの開始後に開始されたトランザクションのみがキャプチャの対象となります。  
   
-    -   **[削除]** :CDC インスタンスを削除します。  
+    -   **[削除]** : CDC インスタンスを削除します。  
   
     -   **[Oracle ログ スクリプト]** : [Oracle ログ スクリプト] ダイアログ ボックスに Oracle 補足ログ スクリプトを表示するには、 **[Oracle ログ スクリプト]** をクリックします。 このダイアログ ボックスで実行できる操作の詳細については、「 [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)」を参照してください。  
   
-         **注**:補足ログ スクリプトを実行すると、[スクリプトを実行するための Oracle 資格情報] ダイアログ ボックスが表示されます。このダイアログ ボックスで、有効な Oracle ユーザー名とパスワードを指定します。 適切な Oracle 資格情報を指定する方法については、「 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)」を参照してください。  
+         **注**: 補足ログ スクリプトを実行すると、[スクリプトを実行するための Oracle 資格情報] ダイアログ ボックスが表示されます。このダイアログ ボックスで、有効な Oracle ユーザー名とパスワードを指定します。 適切な Oracle 資格情報を指定する方法については、「 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)」を参照してください。  
   
     -   **[CDC インスタンスの配置]** : CDC インスタンスの配置スクリプトを生成します。 このダイアログ ボックスの詳細については、「 [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)」を参照してください。  
   

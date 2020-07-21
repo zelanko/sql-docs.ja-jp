@@ -1,8 +1,7 @@
 ---
-title: オンプレミスの SQL Server または Azure Vm 上の SQL Server を Azure SQL Database を使用して移行 Data Migration Assistant |Microsoft Docs
-description: Data Migration Assistant を使用して Azure SQL Database に、オンプレミスの SQL Server を移行する方法について説明します
-ms.custom: ''
-ms.date: 07/15/2019
+title: Data Migration Assistant を使用して SQL Server を Azure SQL Database に移行する
+description: Data Migration Assistant を使用して、オンプレミスの SQL Server をに移行する方法について説明し Azure SQL Database
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,114 +11,115 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 37e0065ed711c3cf550fec4bafe9aa08be8398e6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.custom: seo-lt-2019
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749787"
 ---
-# <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database へのオンプレミスの SQL Server または Azure Vm 上の SQL Server を移行します。
+# <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して、オンプレミスの SQL Server または Azure Vm の SQL Server を Azure SQL Database に移行する
 
-Data Migration Assistant は、Azure Vm または Azure SQL Database で SQL Server オンプレミスと以降のバージョンの SQL Server へのアップグレードまたは SQL Server への移行のシームレスな評価を提供します。
+Data Migration Assistant は、オンプレミスの SQL Server と、それ以降のバージョンの SQL Server へのアップグレード、または Azure Vm または Azure SQL Database での SQL Server への移行をシームレスに評価します。
 
-Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server をオンプレミスの詳細な手順を説明します。
+この記事では、Data Migration Assistant を使用してオンプレミス SQL Server を Azure SQL Database に移行する手順について説明します。
 
-## <a name="create-a-new-migration-project"></a>新しい移行プロジェクトを作成します。
+## <a name="create-a-new-migration-project"></a>新しい移行プロジェクトを作成する
 
-1. 左側のウィンドウで次のように選択します。**新規**(+) を選び、**移行**プロジェクトの種類。
+1. 左側のウィンドウで、[**新規**] (+) を選択し、**移行**プロジェクトの種類を選択します。
 
-2. ソースの種類を設定**SQL Server**と型をターゲット サーバー **Azure SQL Database**します。
+2. [ソースの種類] を [ **SQL Server** ] に設定し、対象サーバーの種類を [ **Azure SQL Database**] に設定します。
 
-3. **[作成]** を選択します。
+3. **［作成］** を選択します
 
-   ![移行プロジェクトを作成します。](../dma/media/NewCreate1.png)
+   ![移行プロジェクトの作成](../dma/media/NewCreate1.png)
 
-## <a name="specify-the-source-server-and-database"></a>移行元サーバーとデータベースを指定します。
+## <a name="specify-the-source-server-and-database"></a>ソース サーバーとデータベースの指定
 
-1. ソースの下で**ソース サーバーへの接続**の**サーバー名**テキスト ボックスに、ソース SQL Server インスタンスの名前を入力します。
+1. [ソース] の [ソース**サーバーへの接続**] で、[**サーバー名**] テキストボックスにソース SQL Server インスタンスの名前を入力します。
 
-2. 選択、**認証の種類**ソース SQL Server のインスタンスによってサポートされています。
+2. ソース SQL Server インスタンスによってサポートされる **[認証の種類]** を選択します。
 
    > [!NOTE]
-   > 選択して、接続を暗号化することをお勧め、**接続を暗号化**下のチェック ボックス**接続 poperties**します。
+   > 接続を暗号化する場合は、[接続] の下にある [**暗号化接続**] チェックボックスをオンにすることをお**勧めします**。
 
-    ![移行元サーバーを選択します。](../dma/media/select-source-server.png)
+    ![ソースサーバーの選択](../dma/media/select-source-server.png)
 
 3. **[接続]** を選択します。
 
-4. Azure SQL Database に移行する 1 つのソース データベースを選択します。
+4. Azure SQL Database に移行する1つのソースデータベースを選択します。
 
    > [!NOTE]
-   > データベースとビューを評価し、適用したい場合は、移行を選択する前に修正プログラムをお勧めします、**移行する前にデータベースを評価するでしょうか。** チェック ボックスをオンします。
+   > 移行前にデータベースを評価し、推奨される修正プログラムを表示して適用する場合は、[**移行前にデータベースを評価**する] チェックボックスをオンにします。
 
-    ![ソース データベースを選択します。](../dma/media/select-source-database.png)
+    ![ソースデータベースの選択](../dma/media/select-source-database.png)
 
 5. **[次へ]** を選択します。
 
-## <a name="specify-the-target-server-and-database"></a>ターゲット サーバーとデータベースを指定します。
+## <a name="specify-the-target-server-and-database"></a>ターゲット サーバーとデータベースの指定
 
-1. ターゲットには、**ターゲット サーバーへの接続**の**サーバー名**テキスト ボックスに、Azure SQL Database インスタンスの名前を入力します。 
+1. ターゲットについては、[**接続先のサーバーへの接続**] の [**サーバー名**] ボックスに、Azure SQL Database インスタンスの名前を入力します。 
 
-2. 選択、**認証の種類**ターゲット Azure SQL Database インスタンスによってサポートされています。
+2. ターゲット Azure SQL Database インスタンスでサポートされている**認証の種類**を選択します。
 
    > [!NOTE]
-   > 選択して、接続を暗号化することをお勧め、**接続を暗号化**下のチェック ボックス**接続 poperties**します。
+   > 接続を暗号化する場合は、[接続] の下にある [**暗号化接続**] チェックボックスをオンにすることをお**勧めします**。
 
-     ![ターゲット サーバーの選択](../dma/media/select-target-server.png)
+     ![対象サーバーの選択](../dma/media/select-target-server.png)
 
 3. **[接続]** を選択します。
 
-4. 移行する先の 1 つのターゲット データベースを選択します。
+4. 移行先の単一の対象になるデータベースを選択します。
 
    > [!NOTE]
-   > Windows ユーザーを移行する場合、**ターゲット外部ユーザーのドメイン名**テキスト ボックスに、ターゲット外部ユーザーのドメイン名が正しく指定されていることを確認します。
+   > Windows ユーザーを移行する場合は、[**ターゲットの外部ユーザーのドメイン名**] テキストボックスで、ターゲットの外部ユーザーのドメイン名が正しく指定されていることを確認します。
 
-    ![ターゲット データベースを選択します。](../dma/media/select-target-database.png)
+    ![ターゲットデータベースの選択](../dma/media/select-target-database.png)
 
 5. **[次へ]** を選択します。
 
-## <a name="select-schema-objects"></a>スキーマ オブジェクトを選択します。
+## <a name="select-schema-objects"></a>スキーマ オブジェクトの選択
 
 1. Azure SQL Database に移行するソース データベースからスキーマ オブジェクトを選択します。
 
-    ![スキーマ オブジェクトを選択します。](../dma/media/select-schema-objects.png)
+    ![スキーマ オブジェクトの選択](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > そのまま変換できないオブジェクトの一部が、自動修正の可能性と共に表示されます。 左側のウィンドウでこれらのオブジェクトをクリックすると、右側のウィンドウに提案された修正が表示されます。 修正を確認して、オブジェクトごとにすべての変更を適用するか、無視するかを選びます。 1 つのオブジェクトに対してすべての変更を適用するか、無視しても、他のデータベース オブジェクトには変更が適用されないことに注意してください。 変換できない、または自動修正できないというステートメントが、対象になるデータベースに対して再現され、コメントされます。
 
-    ![推奨される修正プログラム](../dma/media/suggested-fix.png)
+    ![修正案](../dma/media/suggested-fix.png)
 
-2. 選択**一般的な SQL スクリプト**します。
+2. [**全般] [SQL スクリプト**] を選択します。
 
 3. 生成されたスクリプトを確認します。
 
-    ![生成されるスクリプト](../dma/media/generated-script.png)
+    ![生成されたスクリプト](../dma/media/generated-script.png)
 
-## <a name="deploy-schema"></a>スキーマを配置します。
+## <a name="deploy-schema"></a>スキーマの配置
 
-1. 選択**Deploy schema**します。
+1. [**スキーマの配置**] を選択します。
 
-2. スキーマの展開の結果を確認します。
+2. スキーマの配置の結果を確認します。
 
-    ![スキーマのデプロイの結果](../dma/media/schema-deployment-results.png)
+    ![スキーマの配置結果](../dma/media/schema-deployment-results.png)
 
-3. 選択**データ移行**データ移行プロセスを開始します。
+3. データ移行プロセスを開始するには、[**データの移行**] を選択します。
 
-4. テーブルに移行するデータを選択します。
+4. 移行するデータを含むテーブルを選択します。
 
     ![移行するテーブルの選択](../dma/media/select-tables-to-migrate.png) 
 
-5. 選択**データ移行を開始**します。
+5. [**データ移行の開始**] を選択します。
 
-最後の画面には、全体的な状態が表示されます。
+最後の画面に全体的な状態が表示されます。
 
    ![移行の状態](../dma/media/migration-status.png) 
 
 ## <a name="see-also"></a>関連項目
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-* [Data Migration Assistant:構成設定](../dma/dma-configurationsettings.md)
-* [Data Migration Assistant:ベスト プラクティス](../dma/dma-bestpractices.md)
+* [Data Migration Assistant: 構成設定](../dma/dma-configurationsettings.md)
+* [Data Migration Assistant: ベストプラクティス](../dma/dma-bestpractices.md)

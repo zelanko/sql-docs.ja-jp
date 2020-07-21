@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92b068b4bfa7f8b61b5be0904bc47cf080afc861
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106838"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>レポートへのゲージの追加 (レポート ビルダーおよび SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66106838"
     > [!NOTE]  
     >  グラフと異なり、ゲージの種類は線形と放射状だけです。 **[ゲージの種類の選択]** ダイアログ ボックスには、この 2 種類のゲージがテンプレートとして表示されます。 そのため、ゲージをレポートに追加した後にゲージの種類を変更することはできません。 ゲージの種類を変更するには、一度ゲージを削除してから再度追加する必要があります。  
   
-     レポートにデータ ソースとデータセットがない場合は、 **[データ ソースのプロパティ]** ダイアログ ボックスが表示され、手順に従ってそれらの両方を作成できます。 詳細については、「[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](../report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
+     レポートにデータ ソースとデータセットがない場合は、 **[データ ソースのプロパティ]** ダイアログ ボックスが表示され、手順に従ってそれらの両方を作成できます。 詳細については、「[データ接続またはデータソースの追加と検証 &#40;レポートビルダーと SSRS&#41;](../report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
      レポートにデータ ソースがありデータセットがない場合は、 **[データセットのプロパティ]** ダイアログ ボックスが表示され、手順に従ってデータセットを作成できます。 詳細については、「 [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66106838"
   
      ゲージ スケールを右クリックし、 **[スケールのプロパティ]** を選択します。 スケールの **[最小]** および **[最大]** の値を入力します。 詳細については、「[ゲージへの最小値または最大値の設定 &#40;レポート ビルダーおよび SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)  
   

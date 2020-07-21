@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c99847dcb8d4d65272dd3660c7fd60d3efb8d951
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63036228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049910"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスの別のファイル グループへの移動
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、既存のインデックスを現在のファイル グループから別のファイル グループに移動する方法について説明します。  
@@ -32,7 +31,7 @@ ms.locfileid: "63036228"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **既存のインデックスを別のファイル グループに移動するために使用するもの:**  
   
@@ -40,20 +39,20 @@ ms.locfileid: "63036228"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   テーブルにクラスター化インデックスがある場合、クラスター化インデックスを新しいファイル グループに移動すると、テーブルはそのファイル グループに移動します。  
   
 -   UNIQUE 制約または PRIMARY KEY 制約を使用して作成されたインデックスは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を使用して移動することはできません。 これらのインデックスを移動するには、 [で](/sql/t-sql/statements/create-index-transact-sql) CREATE INDEX [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを (DROP_EXISTING=ON) オプションと共に使用します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>テーブル デザイナーを使用して既存のインデックスを別のファイル グループに移動するには  
   
@@ -95,11 +94,11 @@ ms.locfileid: "63036228"
   
      クラスター化インデックスを移動する場合は、オンライン処理を使用できます。 オンライン処理を使用すると、インデックス操作中、基になるデータや非クラスター化インデックスへの同時ユーザー アクセスが可能になります。 詳しくは、「 [Perform Index Operations Online](perform-index-operations-online.md)」をご覧ください。  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用するマルチプロセッサ コンピューターでは、並列処理の最大許容値を設定することで、インデックス ステートメントの実行に使用するプロセッサの数を構成できます。 並列インデックス操作機能は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 並列インデックス操作の詳細については、「 [並列インデックス操作の構成](configure-parallel-index-operations.md)」を参照してください。  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用するマルチプロセッサ コンピューターでは、並列処理の最大許容値を設定することで、インデックス ステートメントの実行に使用するプロセッサの数を構成できます。 並列インデックス操作機能は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。 並列インデックス操作の詳細については、「 [並列インデックス操作の構成](configure-parallel-index-operations.md)」を参照してください。  
   
 8.  **[OK]** をクリックします。  
   
- **[インデックスのプロパティ – _index_name_]** ダイアログ ボックスの **[ストレージ]** ページでは、次の情報が利用できます。  
+ **[インデックスのプロパティ -** index_name **]** ダイアログ ボックスの _[ストレージ]_ ページでは、次の情報を利用できます。  
   
  **[ファイル グループ]**  
  指定したファイル グループのインデックスを格納します。 一覧には、標準 (ROW) ファイル グループのみが表示されます。 既定で選択されているのは、データベースのプライマリ ファイル グループです。  
@@ -107,7 +106,7 @@ ms.locfileid: "63036228"
  **[Filestream ファイル グループ]**  
  FILESTREAM データのファイル グループを指定します。 この一覧には FILESTREAM ファイル グループのみが表示されます。 既定で選択されているのは、PRIMARY FILESTREAM ファイル グループです。  
   
- **パーティション構成**  
+ **[パーティション構成]**  
  パーティション構成のインデックスを格納します。 **[パーティション構成]** をクリックすると、下のグリッドが有効になります。 既定で選択されているのは、テーブルのデータを格納するために使用されるパーティション構成です。 一覧にある他のパーティション構成を選択すると、グリッドに表示される情報が更新されます。  
   
  この [パーティション構成] オプションは、データベースにパーティション構成がなければ使用できません。  
@@ -141,7 +140,7 @@ ms.locfileid: "63036228"
 > [!NOTE]  
 >  使用可能な CPU 数よりも多い値を指定すると、実際に使用可能な CPU 数が使用されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスを別のファイル グループに移動するには  
   

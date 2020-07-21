@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_locks (TRANSACT-SQL) |Microsoft Docs
+title: dm_tran_locks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -17,64 +17,60 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32140a9ef5b1a8965876c4ee30fe72559ba8b7ce
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MT
+ms.openlocfilehash: d3e453de669cc69373b8e3fc1fc76a1056721bec
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262623"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000249"
 ---
-# <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="sysdm_tran_locks-transact-sql"></a>dm_tran_locks (Transact-sql)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Manager リソースで現在アクティブなロックに関する情報を返します[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 各行は、ロック マネージャーに対して現在アクティブになっている要求を示しています。この要求は、許可されたロックまたは許可を待機しているロックに対するものです。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で現在アクティブなロック マネージャーのリソースに関する情報を返します。 各行は、ロック マネージャーに対して現在アクティブになっている要求を示しています。この要求は、許可されたロックまたは許可を待機しているロックに対するものです。  
   
  結果セットの列は、リソースと要求の 2 つの主要グループに分けられます。 リソース グループは、ロック要求が出されているリソースを示し、要求グループはロック要求を示します。  
   
 > [!NOTE]  
-> これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_tran_locks**します。  
+> またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_tran_locks**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**resource_type**|**nvarchar(60)**|リソースの種類。 値は次のいずれかになります。データベース、ファイル、オブジェクト、ページ、キー、EXTENT、RID、アプリケーション、メタデータ、HOBT、または ALLOCATION_UNIT します。|  
-|**resource_subtype**|**nvarchar(60)**|サブタイプ**resource_type**します。 親タイプのサブタイプ化されていないロックを保持せずに、サブタイプのロックを取得することができます。 サブタイプが異なる場合でも、サブタイプどうしや、サブタイプ化されていない親タイプとの競合は発生しません。 また、すべての種類のリソースにサブタイプが含まれるわけではありません。|  
+|**resource_type**|**nvarchar(60)**|リソースの種類。 値は DATABASE、FILE、OBJECT、PAGE、KEY、EXTENT、RID、APPLICATION、METADATA、HOBT、ALLOCATION_UNIT のいずれかです。|  
+|**resource_subtype**|**nvarchar(60)**|**resource_type** のサブタイプ。 親タイプのサブタイプ化されていないロックを保持せずに、サブタイプのロックを取得することができます。 サブタイプが異なる場合でも、サブタイプどうしや、サブタイプ化されていない親タイプとの競合は発生しません。 また、すべての種類のリソースにサブタイプが含まれるわけではありません。|  
 |**resource_database_id**|**int**|リソースのスコープとなっているデータベースの ID。 ロック マネージャーによって処理されるすべてのリソースのスコープは、このデータベース ID に基づいて決定されます。|  
-|**resource_description**|**nvarchar (256)**|別のリソース列からは使用できない情報のみを含むリソースの説明。|  
+|**resource_description**|**nvarchar(256)**|別のリソース列からは使用できない情報のみを含むリソースの説明。|  
 |**resource_associated_entity_id**|**bigint**|リソースが関連付けられているデータベース内のエンティティの ID。 この ID はリソースの種類に応じて、オブジェクト ID、Hobt ID、またはアロケーション ユニット ID になります。|  
 |**resource_lock_partition**|**Int**|ロック リソースがパーティション分割されている場合の、ロック パーティションの ID。 パーティション分割されていないロック リソースの値は 0 です。|  
-|**request_mode**|**nvarchar(60)**|要求のモード。 許可された要求については許可モード、待機中の要求については要求中モードになります。|  
+|**request_mode**|**nvarchar(60)**|要求のモード。 許可された要求については許可モード、待機中の要求については要求中モードになります。 <br /><br /> NULL = リソースへのアクセスは許可されていません。 プレースホルダーとして機能します。<br /><br /> Sch-m (スキーマの安定性) = スキーマ要素に対するスキーマの安定性ロックを保持しているセッションがある間、テーブルやインデックスなどのスキーマ要素が削除されないようにします。<br /><br /> Sch-m-M (スキーマ変更) = 指定されたリソースのスキーマを変更する必要があるすべてのセッションによって保持される必要があります。 指定されたオブジェクトを参照している他のセッションがないことを確認します。<br /><br /> S (共有) = 保持するセッションには、リソースへの共有アクセスが許可されます。<br /><br /> U (更新) = 最終的に更新される可能性のあるリソースに対して取得された更新ロックを示します。 これは、後で更新される可能性があるリソースが複数のセッションによってロックされるとき、一般的な形式のデッドロックが発生するのを防止するために使用します。<br /><br /> X (排他) = 保持するセッションには、リソースへの排他アクセスが許可されます。<br /><br /> IS (インテント共有) = ロック階層内の下位のリソースに S ロックを配置することを示します。<br /><br /> IU (インテント更新) = ロック階層内の下位のリソースに U ロックを設定することを示します。<br /><br /> IX (インテント排他) = ロック階層内の下位のリソースに X ロックを配置することを示します。<br /><br /> SIU (共有インテント更新) = ロック階層内の下位のリソースに更新ロックを取得する目的で、リソースへの共有アクセスを示します。<br /><br /> 6 (共有インテント排他) = ロック階層内の下位のリソースに排他ロックを取得する目的で、リソースへの共有アクセスを示します。<br /><br /> [UIX (更新インテント排他)] = ロック階層内の下位のリソースに排他ロックを取得することを目的として、リソースに対する更新ロックが保持されていることを示します。<br /><br /> BU = 一括操作で使用されます。<br /><br /> RangeS_S (共有キー範囲と共有リソースロック) = シリアル化可能な範囲スキャンを示します。<br /><br /> RangeS_U (共有キー範囲と更新リソースロック) = シリアル化可能な更新プログラムのスキャンを示します。<br /><br /> RangeI_N (挿入キー範囲と Null リソースロック) = 新しいキーをインデックスに挿入する前に範囲をテストするために使用されます。<br /><br /> RangeI_S = RangeI_N と S ロックの重なりによって作成されるキー範囲変換ロック。<br /><br /> RangeI_U = RangeI_N と U ロックの重なりによって作成されるキー範囲変換ロック。<br /><br /> RangeI_X = RangeI_N と X ロックの重なりによって作成されるキー範囲変換ロック。<br /><br /> RangeX_S = RangeI_N と RangeS_S の重なりによって作成されるキー範囲変換ロック。 固定.<br /><br /> RangeX_U = RangeI_N と RangeS_U ロックの重なりによって作成されるキー範囲変換ロック。<br /><br /> RangeX_X (排他キー範囲と排他リソースロック) = これは、範囲内のキーを更新するときに使用される変換ロックです。|  
 |**request_type**|**nvarchar(60)**|要求の種類。 値は LOCK です。|  
-|**request_status**|**nvarchar(60)**|この要求の現在の状態。 使用できる値は、GRANTED、CONVERT、WAIT、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT、または ABORT_BLOCKERS です。 優先度の低い待機とアボート ブロッカーの詳細については、[ALTER INDEX(Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)の*low_priority_lock_wait*のセクションを参照してください。|  
+|**request_status**|**nvarchar(60)**|この要求の現在の状態。 指定できる値は、許可、変換、待機、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT、または ABORT_BLOCKERS です。 優先度の低い待機と中止ブロッカーの詳細については、「 [ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)」の「 *low_priority_lock_wait* 」を参照してください。|  
 |**request_reference_count**|**smallint**|同じ要求元がこのリソースを要求した回数の概数。|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|要求を現在所有するセッション ID。 所有セッション ID は、分散トランザクションとバインドされたトランザクションでは異なります。 値が -2 の場合、その要求が孤立した分散トランザクションに属することを示します。 値が -3 の場合、その要求が遅延復旧トランザクションに属することを示します。遅延復旧トランザクションとは、たとえば、ロールバックが正常に完了しなかったためにロールバックの復旧を遅延したトランザクションのことです。|  
 |**request_exec_context_id**|**int**|要求を現在所有するプロセスの、実行コンテキスト ID。|  
 |**request_request_id**|**int**|要求を現在所有するプロセスの要求 ID (バッチ ID)。 この値は、トランザクションに対する複数のアクティブな結果セット (MARS) 接続が変わるたびに変化します。|  
-|**request_owner_type**|**nvarchar(60)**|要求を所有するエンティティの種類。 ロック マネージャーの要求は、さまざまな種類のエンティティで所有されます。 有効な値は次のとおりです。<br /><br /> TRANSACTION = 要求はトランザクションが所有しています。<br /><br /> CURSOR = 要求はカーソルが所有しています。<br /><br /> SESSION = 要求はユーザー セッションが所有しています。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求は、トランザクション ワークスペースの共有部分が所有しています。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求は、トランザクション ワークスペースの排他部分が所有しています。<br /><br /> NOTIFICATION_OBJECT = 要求は内部で所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネント。 このコンポーネントは、別のコンポーネントがロックの取得を待機しているときに、そのことを通知するようにロック マネージャーに要求しました。 FileTable 機能は、この値を使用するコンポーネントです。<br /><br /> **注:** 作業スペースは、参加しているセッションのロックを保持するために内部的に使用されます。|  
-
-|**request_owner_id**|**bigint**|この要求の特定の所有者の ID。<br /><br /> トランザクションが要求の所有者である場合、この値にはトランザクション ID が含まれます。<br /><br /> FileTable が要求の所有者である場合、**request_owner_id**は次の値のいずれか。<br /><br /> <br /><br /> -4:FileTable が、データベースのロックを取得しました。<br /><br /> -3:FileTable が、テーブル ロックを取得しました。<br /><br /> その他の値:この値は、ファイル ハンドルを表します。 また、この値は動的管理ビュー[sys.dm_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)では**fcb_id**としても表示されます。|  
-
+|**request_owner_type**|**nvarchar(60)**|要求を所有するエンティティの種類。 ロック マネージャーの要求は、さまざまな種類のエンティティで所有されます。 次のいずれかの値になります。<br /><br /> TRANSACTION = 要求はトランザクションが所有しています。<br /><br /> CURSOR = 要求はカーソルが所有しています。<br /><br /> SESSION = 要求はユーザー セッションが所有しています。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求は、トランザクション ワークスペースの共有部分が所有しています。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求は、トランザクション ワークスペースの排他部分が所有しています。<br /><br /> NOTIFICATION_OBJECT = 要求は、内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントが所有しています。 このコンポーネントは、別のコンポーネントがロックの取得を待機しているときに、そのことを通知するようにロック マネージャーに要求しました。 FileTable 機能は、この値を使用するコンポーネントです。<br /><br /> **注:** ワークスペースは、参加しているセッションのロックを保持するために内部的に使用されます。|  
+|**request_owner_id**|**bigint**|この要求の特定の所有者の ID。<br /><br /> トランザクションが要求の所有者である場合、この値にはトランザクション ID が含まれます。<br /><br /> FileTable が要求の所有者である場合、**request_owner_id** には次のいずれかの値が含まれます。<br /> <ul><li>**-4** : FileTable はデータベースロックを取得しました。<li> **-3** : FileTable はテーブルロックを取得しました。<li> **その他の値**: 値はファイルハンドルを表します。 この値は、動的管理ビューの dm_filestream_non_transacted_handles の**fcb_id**としても表示され[ます。 transact-sql&#41;&#40;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)ます。</li></ul>|  
 |**request_owner_guid**|**uniqueidentifier**|この要求の特定の所有者の GUID。 この値は、分散トランザクションの MS DTC GUID に対応する場合に、そのトランザクションによってのみ使用されます。|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]この値は、要求元のロック領域 ID を示します。 ロック領域 ID によって、2 つの要求元の間に互換性があり、互いに競合しないモードでロックを許可できるかどうかを判断できます。|  
-|**lock_owner_address**|**varbinary(8)**|要求を追跡するときに使用される内部データ構造のメモリ アドレス。 この列を結合できますで**resource_address**列**sys.dm_os_waiting_tasks**します。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> この配布であるノードの識別子。|  
+|**lock_owner_address**|**varbinary (8)**|要求を追跡するときに使用される内部データ構造のメモリ アドレス。 この列は **sys.dm_os_waiting_tasks** の **resource_address** 列と結合できます。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
-
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
  
 ## <a name="remarks"></a>コメント  
- 要求が許可された状態とは、要求元に対してリソースのロックが許可されたことを示します。 要求を待機している状態とは、その要求がまだ許可されていないことを示します。 次の要求待機の種類がによって返される、 **request_status**列。  
+ 要求が許可された状態とは、要求元に対してリソースのロックが許可されたことを示します。 要求を待機している状態とは、その要求がまだ許可されていないことを示します。 次に示す要求待機の種類は、**request_status** 列で返されます。  
   
 -   要求変換の状態とは、要求元がリソース要求を既に許可されており、最初の要求からさらに上の段階の許可を現在待機中であることを示します。  
   
 -   要求待機の状態とは、要求元が現在、リソースに対して許可された要求を保持していないことを示します。  
   
- **Sys.dm_tran_locks**は内部ロック マネージャー データ構造は、この情報は定期的に余分なオーバーヘッドの処理を追加していない管理から取得されます。 ビューを具現化するには、ロック マネージャーの内部データ構造にアクセスする必要があります。 これによって、サーバーでの通常の処理にわずかな影響が生じることがありますが、 このような影響は重要ではなく、頻繁に使用されるリソースのみに影響します。 このビューのデータはアクティブなロック マネージャーの状態に対応しているので、データはいつでも変更される可能性があります。ロックが取得または解放されるときに、行が追加または削除されます。 このビューには、履歴情報はありません。  
+ **sys.dm_tran_locks** には内部のロック マネージャーのデータ構造を基にデータが追加されるため、この情報を保持していても、通常の処理に余分なオーバーヘッドはかかりません。 ビューを具現化するには、ロック マネージャーの内部データ構造にアクセスする必要があります。 これによって、サーバーでの通常の処理にわずかな影響が生じることがありますが、 このような影響は重要ではなく、頻繁に使用されるリソースのみに影響します。 このビューのデータはアクティブなロック マネージャーの状態に対応しているので、データはいつでも変更される可能性があります。ロックが取得または解放されるときに、行が追加または削除されます。 このビューには、履歴情報はありません。  
   
  2 つの要求は、すべてのリソース グループの行が等しい場合のみ、同じリソースに実行されます。  
   
@@ -82,32 +78,35 @@ ms.locfileid: "68262623"
   
 -   SET TRANSACTION ISOLATION LEVEL を使用すると、セッションに対するロックのレベルを指定できます。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
--   テーブル ヒントをロックすると、FROM 句内にあるテーブルの個別の参照に対してロックのレベルを指定できます。 構文と制限事項については、[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md) を参照してください。  
+-   テーブル ヒントをロックすると、FROM 句内にあるテーブルの個別の参照に対してロックのレベルを指定できます。 構文と制限については、「 [transact-sql&#41;&#40;テーブルヒント](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
- 1 つのセッション ID で実行されているリソースには、複数のロックを許可できます。 それぞれの 1 つのセッションを実行している別のエンティティが同じリソースのロックを所有できるし、情報が表示されます、 **request_owner_type**と**request_owner_id**である列によって返される**sys.dm_tran_locks**します。 場合の同じインスタンスを複数**request_owner_type**が存在する、 **request_owner_id**列は、各インスタンスを区別するために使用されます。 分散トランザクションの場合、 **request_owner_type**と**request_owner_guid**列は、異なるエンティティ情報が表示されます。  
+ 1 つのセッション ID で実行されているリソースには、複数のロックを許可できます。 つまり、1 つのセッションで実行中の複数のエンティティが、同じリソースに対して別々のロックを保持できます。この情報は、**sys.dm_tran_locks** で返される **request_owner_type** 列と **request_owner_id** 列に表示されます。 **request_owner_type** 列の値が同じになっているインスタンスが複数存在する場合、各インスタンスを区別するには **request_owner_id** 列を使用します。 分散トランザクションでは、**request_owner_type** 列と **request_owner_guid** 列に基づいて、異なるエンティティ情報が表示されます。  
   
- たとえば、セッション S1 に共有ロックを保持している**Table1**; も、トランザクション T1 で、セッション S1 で実行されているに共有ロックを所有している**Table1**します。 ここで、 **resource_description**列によって返される**sys.dm_tran_locks**同じリソースの 2 つのインスタンスが表示されます。 **Request_owner_type**列として、セッション、トランザクションとしてもう 1 つのインスタンスが表示されます。 また、 **resource_owner_id**列は異なる値になります。  
+ たとえば、セッション S1 が**テーブル 1** に共有ロックを保持しており、セッション S1 で実行中のトランザクション T1 も**テーブル 1** に共有ロックを保持しているとします。 この場合、**sys.dm_tran_locks** で返される **resource_description** 列には、同じリソースの 2 つのインスタンスが表示されます。 **request_owner_type** 列には、1 つのインスタンスがセッションとして表示され、もう 1 つのインスタンスがトランザクションとして表示されます。 また、**resource_owner_id** 列には異なる値が設定されます。  
   
  1 つのセッションで実行する複数のカーソルは区別できないため、1 つのエンティティとして扱われます。  
   
- セッション ID 値に関連付けられていない分散トランザクションは孤立したトランザクションで、セッション ID 値 -2 が割り当てられます。 詳細については、[KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md) を参照してください。  
-  
+ セッション ID 値に関連付けられていない分散トランザクションは孤立したトランザクションで、セッション ID 値 -2 が割り当てられます。 詳しくは、「[KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)」をご覧ください。  
+
+## <a name="locks"></a><a name="locks"></a>固定
+ロックは、複数のトランザクションで同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースが同時に使用されるのを防ぐために、トランザクション中に読み取られたり変更されたりする行などにかけられます。 たとえば、あるトランザクションによってテーブルの行に排他 (X) ロックがかけられると、他のトランザクションはロックが解除されるまでその行を変更できません。 ロックを最小限にとどめるとコンカレンシーが向上し、パフォーマンスが向上します。 
+
 ## <a name="resource-details"></a>リソースの詳細  
- 次の表に、リソースで表される、 **resource_associated_entity_id**列。  
+ 次の表は、**resource_associated_entity_id** 列に表示されるリソースの一覧です。  
   
 |リソースの種類|リソースの説明|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
-|DATABASE|データベースを示します。|適用なし|  
-|FILE|データベース ファイルを示します。 このファイルは、データまたはログ ファイルのいずれかになります。|適用なし|  
+|DATABASE|データベースを示します。|適用できません|  
+|ファイル|データベース ファイルを示します。 このファイルは、データまたはログ ファイルのいずれかになります。|適用できません|  
 |OBJECT|データベース オブジェクトを示します。 このオブジェクトは、データ テーブル、ビュー、ストアド プロシージャ、拡張ストアド プロシージャ、またはオブジェクト ID 付きのオブジェクトのいずれかになります。|Object ID|  
-|PAGE|データ ファイル内の 1 ページを示します。|HoBt ID。 この値に対応**sys.partitions.hobt_id**します。 PAGE リソースに対し常に HoBt ID が使用できるとは限りません。HoBt ID は呼び出し元から提供される追加情報であり、呼び出し元によってはこの情報を提供できないことがあります。|  
-|KEY|インデックス内の行を示します。|HoBt ID。 この値に対応**sys.partitions.hobt_id**します。|  
-|EXTENT|データ ファイルのエクステントを示します。 エクステントは連続する 8 ページのグループです。|適用なし|  
-|RID|ヒープ内の物理的な行を示します。|HoBt ID。 この値に対応**sys.partitions.hobt_id**します。 RID リソースに対し常に HoBt ID が使用できるとは限りません。HoBt ID は呼び出し元から提供される追加情報であり、呼び出し元によってはこの情報を提供できないことがあります。|  
-|APPLICATION|アプリケーション固有のリソースを示します。|適用なし|  
-|METADATA|メタデータの情報を示します。|適用なし|  
-|HOBT|ヒープまたは B-Tree を示します。 これは、基本的なアクセス パス構造です。|HoBt ID。 この値に対応**sys.partitions.hobt_id**します。|  
-|ALLOCATION_UNIT|インデックス パーティションなどの関連ページのセットを示します。 各アロケーション ユニットは、1 つの IAM (Index Allocation Map) チェーンを対象としています。|アロケーション ユニット ID。 この値に対応**sys.allocation_units.allocation_unit_id**します。|  
+|PAGE|データ ファイル内の 1 ページを示します。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。 PAGE リソースに対し常に HoBt ID が使用できるとは限りません。HoBt ID は呼び出し元から提供される追加情報であり、呼び出し元によってはこの情報を提供できないことがあります。|  
+|KEY|インデックス内の行を示します。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。|  
+|EXTENT|データ ファイルのエクステントを示します。 エクステントは連続する 8 ページのグループです。|適用できません|  
+|RID|ヒープ内の物理的な行を示します。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。 RID リソースに対し常に HoBt ID が使用できるとは限りません。HoBt ID は呼び出し元から提供される追加情報であり、呼び出し元によってはこの情報を提供できないことがあります。|  
+|APPLICATION|アプリケーション固有のリソースを示します。|適用できません|  
+|METADATA|メタデータの情報を示します。|適用できません|  
+|HOBT|ヒープまたは B-Tree を示します。 これは、基本的なアクセス パス構造です。|HoBt ID。 この値は **sys.partitions.hobt_id** に対応します。|  
+|ALLOCATION_UNIT|インデックス パーティションなどの関連ページのセットを示します。 各アロケーション ユニットは、1 つの IAM (Index Allocation Map) チェーンを対象としています。|アロケーション ユニット ID。 この値は **sys.allocation_units.allocation_unit_id** に対応します。|  
   
  次の表は、各リソースの種類に関連付けられるサブタイプの一覧です。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "68262623"
 |DATABASE.SHRINK|データベースの圧縮操作。|  
 |DATABASE.STARTUP|データベースの起動を同期するときに使用します。|  
 |FILE.SHRINK|ファイルの圧縮操作。|  
-|HOBT.BULK_OPERATION|スナップショット、コミットされていない読み取り、および行のバージョン管理使用によるコミット読み取りのいずれかの分離レベルで実行される、同時スキャンによるヒープ最適化一括読み込み操作。|  
+|HOBT.BULK_OPERATION|SNAPSHOT、READ COMMITTED、および行のバージョン管理を使用する READ COMMITTED の分離レベルでの、ヒープが最適化された一括読み込み操作と同時実行スキャン。|  
 |HOBT.INDEX_REORGANIZE|ヒープまたはインデックスの再構成操作。|  
 |OBJECT.COMPILE|ストアド プロシージャのコンパイル。|  
 |OBJECT.INDEX_OPERATION|インデックス操作。|  
@@ -195,20 +194,20 @@ ms.locfileid: "68262623"
 |METADATA.XML_COMPONENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- 次の表の形式、 **resource_description**リソースの種類ごとの列。  
+ 次の表は、各リソースの種類に対する **resource_description** 列の形式です。  
   
-|リソース|[形式]|説明|  
+|リソース|Format|説明|  
 |--------------|------------|-----------------|  
-|DATABASE|適用なし|データベース ID が記載されて既に、 **resource_database_id**列。|  
-|FILE|< file_id >|このリソースが示すファイルの ID。|  
-|OBJECT|< object_id >|このリソースが示すオブジェクトの ID。 このオブジェクトは、任意のオブジェクトで表示されている**sys.objects**、テーブルだけでなく。|  
+|DATABASE|適用できません|データベース ID は **resource_database_id** 列で既に使用可能になっています。|  
+|ファイル|<file_id>|このリソースが示すファイルの ID。|  
+|OBJECT|<object_id>|このリソースが示すオブジェクトの ID。 テーブルだけでなく、**sys.objects** に一覧表示されるあらゆるオブジェクトが対象になります。|  
 |PAGE|<file_id>:<page_in_file>|このリソースが示すページの、ファイルおよびページ ID。|  
-|KEY|< hash_value >|このリソースが示す行のキー列のハッシュ。|  
+|KEY|<hash_value>|このリソースが示す行のキー列のハッシュ。|  
 |EXTENT|<file_id>:<page_in_files>|このリソースが示すエクステントの、ファイルおよびページ ID。 エクステント ID は、そのエクステント内にある最初のページのページ ID と同じになります。|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|このリソースが示すページ ID と、行の行 ID。 関連するオブジェクト ID が 99 の場合、このリソースは、IAM チェーンの最初の IAM ページにある、8 つの混合ページ スロットのいずれかを表すことに注意してください。|  
-|APPLICATION|\<DbPrincipalId >:\<最大 32 文字まで >:(< hash_value >)|アプリケーションのロック リソースのスコープに使用する、データベース プリンシパルの ID。 アプリケーションのロック リソースに対応する、最大 32 文字のリソース文字列も含まれます。 場合によっては、完全な文字列が使用できず、2 文字のみが表示されることがあります。 この動作は、データベース復旧時、復旧処理の一部として再取得されるアプリケーション ロックに関してのみ発生します。 ハッシュ値は、このアプリケーション ロック リソースに対応する、完全リソース文字列のハッシュを示します。|  
-|HOBT|適用なし|として含まれる HoBt ID、 **resource_associated_entity_id**します。|  
-|ALLOCATION_UNIT|適用なし|アロケーション ユニット ID として含まれていますが、 **resource_associated_entity_id**します。|  
+|APPLICATION|\<DbPrincipalId>: \<upto 32 characters> :(<hash_value>)|アプリケーションのロック リソースのスコープに使用する、データベース プリンシパルの ID。 アプリケーションのロック リソースに対応する、最大 32 文字のリソース文字列も含まれます。 場合によっては、完全な文字列が使用できず、2 文字のみが表示されることがあります。 この動作は、データベース復旧時、復旧処理の一部として再取得されるアプリケーション ロックに関してのみ発生します。 ハッシュ値は、このアプリケーション ロック リソースに対応する、完全リソース文字列のハッシュを示します。|  
+|HOBT|適用できません|**resource_associated_entity_id** として含まれる HoBt ID。|  
+|ALLOCATION_UNIT|適用できません|**resource_associated_entity_id** として含まれるアロケーション ユニット ID。|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_CLR_NAME|$qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.ASSEMBLY_TOKEN|assembly_id = A, $token_id|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -275,7 +274,7 @@ ms.locfileid: "68262623"
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- 次の Xevent は、パーティションに関連する**SWITCH**とオンライン インデックス再構築します。 構文については、[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)と[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) を参照してください。 
+ 次の Xevent は、パーティション**切り替え**とオンラインインデックス再構築に関連しています。 構文の詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) 」および「 [Alter INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   
 -   lock_request_priority_state  
   
@@ -283,12 +282,12 @@ ms.locfileid: "68262623"
   
 -   ddl_with_wait_at_low_priority  
   
- 既存の XEvent **progress_report_online_index_operation**オンラインのインデックス操作に追加することによって拡張された**partition_number**と**partition_id**します。  
+ オンラインインデックス操作用の既存の XEvent **progress_report_online_index_operation**は、 **partition_number**と**partition_id**を追加することによって拡張されました。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-sysdm_tran_locks-with-other-tools"></a>A. 別のツールで sys.dm_tran_locks を使用する  
- 次の例では、更新操作が別のトランザクションによってブロックされたシナリオを処理します。 使用して**sys.dm_tran_locks**し、その他のツールでは、リソースのロックに関する情報が提供されます。  
+ 次の例では、更新操作が別のトランザクションによってブロックされたシナリオを処理します。 **sys.dm_tran_locks** と追加ツールを使用すると、リソースのロックに関する情報を取得できます。  
   
 ```sql  
 USE tempdb;  
@@ -326,7 +325,7 @@ BEGIN TRAN
     UPDATE t_lock SET c1 = 10  
 ```  
   
- 次のクエリでは、ロックの情報を表示します。 値は、`<dbid>`置き換える必要があります、 **database_id**から**sys.databases**します。  
+ 次のクエリでは、ロックの情報を表示します。 `<dbid>` の値は、**sys.databases** からの **database_id** に置き換える必要があります。  
   
 ```sql  
 SELECT resource_type, resource_associated_entity_id,  
@@ -371,7 +370,7 @@ ROLLBACK;
 GO  
 ```  
   
-### <a name="b-linking-session-information-to-operating-system-threads"></a>B. セッション情報を、オペレーティング システムのスレッドにリンクする  
+### <a name="b-linking-session-information-to-operating-system-threads"></a>B. セッション情報のオペレーティングシステムスレッドへのリンク  
  次の例では、セッション ID と Windows のスレッド ID を関連付ける情報を返します。 スレッドのパフォーマンスは、Windows パフォーマンス モニターで監視できます。 このクエリでは、現在休止しているセッション ID は返されません。  
   
 ```sql  
@@ -385,7 +384,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_tran_database_transactions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [トランザクション関連の動的管理ビューおよび関数  &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
+[dm_tran_database_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
+[Transact-sql&#41;&#40;の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+[トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
+[SQL Server の Locks オブジェクト](../../relational-databases/performance-monitor/sql-server-locks-object.md)      

@@ -1,5 +1,5 @@
 ---
-title: 実装に関する注意事項 |Microsoft Docs
+title: 実装に関するメモ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95b60ba35a867135cfc1f823e08b1a99f0262ca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 970188a2fca45706405e398cece0f04d38dfdc68
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135743"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284313"
 ---
 # <a name="implementation-notes"></a>実装に関するメモ
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このセクションでは、ODBC カーソル ライブラリを実装する方法について説明します。 方法カーソル ライブラリのキャッシュを保持、SQL ステートメントを実行および ODBC 関数を実装がについて説明します。  
+ ここでは、ODBC カーソルライブラリの実装方法について説明します。 カーソルライブラリがどのようにキャッシュを保持し、SQL ステートメントを実行し、ODBC 関数を実装するかについて説明します。  
   
  このセクションでは、次のトピックを扱います。  
   

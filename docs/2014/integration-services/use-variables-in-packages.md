@@ -11,18 +11,17 @@ helpviewer_keywords:
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96bfbf87789aa1d683b6368f210539a191f7ee95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4955eb023e7785e85cce96e7b2097c0340da7916
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054689"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420179"
 ---
 # <a name="use-variables-in-packages"></a>パッケージで変数を使用する
-  変数は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージに追加できる便利で柔軟な機能です。変数を使用すると、パッケージのオブジェクト間、および親パッケージと子パッケージとの間で情報を交換できます。 また、変数は式やスクリプトでも使用できます。  
+  変数は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージに追加できる便利で柔軟な機能です。変数を使用すると、パッケージのオブジェクト間、および親パッケージと子パッケージとの間で情報を交換できます。 また、変数は式やスクリプトでも使用できます。  
   
 ## <a name="user-defined-variables-and-system-variables"></a>ユーザー定義変数とシステム変数  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ではシステム変数が用意されているほか、ユーザー定義変数をサポートします。 新しいパッケージを作成した場合、コンテナーやタスクをパッケージに追加した場合、またはイベント ハンドラーを作成した場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によってコンテナーに一連のシステム変数が追加されます。 システム変数には、パッケージ、コンテナー、タスク、またはイベント ハンドラーに関する有益な情報が含まれています。 たとえば、パッケージの実行時に、 **MachineName** システム変数にはパッケージを実行しているコンピューターの名前が含まれ、 **StartTime** にはパッケージの実行が開始された時刻が含まれます。 システム変数は読み取り専用です。 詳細については、「 [システム変数](system-variables.md)」を参照してください。  
@@ -42,7 +41,7 @@ ms.locfileid: "66054689"
   
  **パラメーターおよびリターン コード** 入力パラメーターに値を提供したり、出力パラメーターおよびリターン コードの値を格納したりします。 そのためには、変数をパラメーターおよび戻り値にマップします。 たとえば、変数 `varProductId` を 23 に設定して SQL ステートメント `SELECT * from Production.Product WHERE ProductID = ?`を実行すると、 `ProductID` が 23 である製品が取得されます。 詳細については、「 [SQL 実行タスク](control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)」を参照してください。  
   
- **For ループ式** For ループの初期化式、評価式、および代入式で使用する値を提供します。 たとえば、変数 `varCount` が 2、変数 `varMaxCount` が 10、初期化式が `@varCount`、評価式が  `@varCount < @varMaxCount`、代入式が `@varCount =@varCount +1`の場合、ループは 8 回繰り返されます。 詳細については、「 [For ループ コンテナー](control-flow/for-loop-container.md)」を参照してください。  
+ **For ループ式** For ループの初期化式、評価式、および代入式で使用する値を提供します。 たとえば、変数 `varCount` が 2、変数 `varMaxCount` が 10、初期化式が `@varCount`、評価式が  `@varCount < @varMaxCount`、代入式が `@varCount =@varCount +1`の場合、ループは 8 回繰り返されます。 詳細については、「 [For ループ コンテナー](control-flow/for-loop-container.md)に評価されるまでそのワークフローを繰り返します。  
   
  **親パッケージ変数の構成** 親パッケージから子パッケージに値を渡します。 子パッケージは、親パッケージ変数の構成を使用することにより、親パッケージの変数にアクセスできます。 たとえば、子パッケージが親パッケージと同じ日付を使用する必要がある場合、子パッケージは親パッケージの GETDATE 関数によって設定される変数を指定する親パッケージ変数の構成を定義できます。 詳細については、「 [パッケージ実行タスク](control-flow/execute-package-task.md) 」と「 [パッケージ構成](../../2014/integration-services/package-configurations.md)」を参照してください。  
   

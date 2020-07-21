@@ -1,5 +1,5 @@
 ---
-title: getConnection メソッド (SQLServerStatement) |Microsoft Docs
+title: getConnection メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6f341d0b-265a-415e-abe5-8f408fedbb21
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62b60d2f35e1149f7f809f486f5a64e8bb99f45a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952680"
 ---
 # <a name="getconnection-method-sqlserverstatement"></a>getConnection メソッド (SQLServerStatement)
@@ -37,8 +37,8 @@ public final java.sql.Connection getConnection()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getConnection メソッドは、java. .sql. ステートメントインターフェイスの getConnection メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getConnection メソッドは、java.sql.Statement インターフェイスの getConnection メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

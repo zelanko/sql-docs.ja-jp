@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cad8fec605a56a60cfcc7024739225e474fd42f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036692"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
 
 
-  MDX 形式の文字列によって指定された数値を返します。  
+  多次元式 (MDX) 形式の文字列で指定された数値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,18 +31,18 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  直接的または間接的に 1 つのセルに解決される有効な文字列式です。  
   
-## <a name="remarks"></a>コメント  
- **StrToValue**関数が MDX 式で指定された値を返します。 **StrToValue**を 1 つのセルに解決される MDX ステートメントを外部関数から MDX 式を返す関数は通常使用のユーザー定義関数。  
+## <a name="remarks"></a>Remarks  
+ **Strtovalue**関数は、MDX 式によって指定された数値を返します。 **Strtovalue**関数は、通常、ユーザー定義関数と共に使用して、mdx 式を外部関数から mdx ステートメントに返し、1つのセルに解決できるようにします。  
   
--   CONSTRAINED フラグを使用する場合、MDX 式にはスカラー値のみを含める必要があります。 CONSTRAINED フラグは、指定された文字列によるインジェクション攻撃の危険性を軽減するために使用します。 MDX 式は、スカラー値に直接解決ではありませんが、次のエラーが表示されます。"CONSTRAINED によって設定された制限 STRTOVALUE 関数でフラグに違反しました"。  
+-   CONSTRAINED フラグを使用する場合、MDX 式にはスカラー値のみを含める必要があります。 CONSTRAINED フラグは、指定された文字列によるインジェクション攻撃の危険性を軽減するために使用します。 直接スカラー値に解決できない MDX 式を指定すると、"STRTOVALUE 関数の CONSTRAINED フラグによって設定された制限に違反しました。" というエラー メッセージが表示されます。  
   
 -   CONSTRAINED フラグを使用しない場合は、1 つのセルを返す有効な多次元式 (MDX) 式に解決される範囲で複雑な MDX 式を指定できます。  
   
 > [!NOTE]  
->  数値の値として、MDX 式の結果を返すことは、値はテキストとして格納され、返される値に対して算術演算を実行する場合役立ちます。  
+>  MDX 式の結果を数値として返すと、値がテキストとして格納され、戻り値に対して算術演算を実行する場合に役立ちます。  
   
 ## <a name="example"></a>例  
- 次の例では、 **StrToValue**値として、各自転車の重量を返す関数。  
+ 次の例では、 **Strtovalue**関数を使用して、各自転車の重量を値として返します。  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -56,7 +56,7 @@ FROM [Adventure Works]
 WHERE [Product].[Product Categories].[Bikes]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

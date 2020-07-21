@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c2a02ae5bc9572265cc33392a02c596cfcfec0ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf078c2689163196e5424c526ad46642e470bf1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072010"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892095"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 XML スキーマ コレクション全体とそのすべてのコンポーネントを削除します。  
   
@@ -50,7 +50,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 *sql_identifier*  
 削除する XML スキーマ コレクションの名前。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 XML スキーマ コレクションの削除は、トランザクション操作です。 トランザクション内で XML スキーマ コレクションを削除した後にそのトランザクションをロールバックすると、その XML スキーマ コレクションは削除されなかったことになります。  
   
 使用中の XML スキーマ コレクションは削除できません。 つまり、次のいずれかの条件に該当するコレクションは削除できません。  
@@ -76,7 +76,7 @@ XML スキーマ コレクションの削除は、トランザクション操作
 ## <a name="permissions"></a>アクセス許可  
 XML SCHEMA COLLECTION を削除するには、コレクションに対する DROP 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、XML スキーマ コレクションを削除します。  
   
 ```  

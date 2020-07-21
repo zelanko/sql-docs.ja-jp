@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 4217acf163e8603c5993cfa8ade4207c9a79c6cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054566"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure でデプロイされている SQL Server Integration Services (SSIS) パッケージの実行スケジュールを設定する
@@ -36,17 +36,17 @@ ms.locfileid: "68054566"
 - [Azure Data Factory パイプラインの一部としてパッケージのスケジュールを間接的に設定する](#activity)
 
 
-## <a name="ssms"></a> SSMS でパッケージをスケジュールする
+## <a name="schedule-a-package-with-ssms"></a><a name="ssms"></a> SSMS でパッケージをスケジュールする
 
 SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB に配置されたパッケージを右クリックして **[スケジュール]** を選択することで、 **[新しいスケジュール]** ダイアログ ボックスを開くことができます。 詳細については、「[SSMS を利用して Azure で SSIS パッケージのスケジュールを設定する](ssis-azure-schedule-packages-ssms.md)」を参照してください。
 
 この機能には、SQL Server Management Studio バージョン 17.7 以降が必要です。 最新バージョンの SSMS を入手するには、「[SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
-## <a name="elastic"></a> SQL Database エラスティック ジョブを使用してパッケージをスケジュールする
+## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> SQL Database エラスティック ジョブを使用してパッケージをスケジュールする
 
 SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 エラスティック ジョブを使用して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されている SSIS パッケージをスケジュール設定するには、事前に次の作業を行う必要があります。
 
@@ -88,7 +88,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
     @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
-## <a name="agent"></a> オンプレミス SQL Server エージェントを使用してパッケージのスケジュールを設定する
+## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> オンプレミス SQL Server エージェントを使用してパッケージのスケジュールを設定する
 
 SQL Server エージェントの詳細については、「[パッケージに対する SQL Server エージェント ジョブ](../packages/sql-server-agent-jobs-for-packages.md)」を参照してください。
 
@@ -160,7 +160,7 @@ SQL Server エージェントの詳細については、「[パッケージに�
 
 6.  ジョブの構成とスケジュール設定を完了します。
 
-## <a name="activity"></a> Azure Data Factory パイプラインの一部としてパッケージのスケジュールを設定する
+## <a name="schedule-a-package-as-part-of-an-azure-data-factory-pipeline"></a><a name="activity"></a> Azure Data Factory パイプラインの一部としてパッケージのスケジュールを設定する
 
 SSIS パッケージを実行する Azure Data Factory パイプラインの実行トリガーを使用し、パッケージのスケジュールを間接的に設定できます。
 
@@ -178,6 +178,6 @@ Data Factory パイプラインの一部として SSIS パッケージを実行�
 
 - [ストアド プロシージャ アクティビティ](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure にデプロイされている SSIS パッケージの実行オプションを確認してください。 詳細については、「[Azure で SSIS パッケージを実行する](ssis-azure-run-packages.md)」を参照してください。

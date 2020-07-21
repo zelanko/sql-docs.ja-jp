@@ -11,15 +11,15 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19ac88cbc9db29dfeb06614a50869adfe8d3cc6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c08dd6c0e04c3c323af592ca015b5e1604a05e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048792"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751146"
 ---
 # <a name="circularstring"></a>CircularString
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **CircularString** は、0 個以上の連続する円弧セグメントのコレクションです。 円弧セグメントは、2 次元平面内の 3 つの点によって定義された曲線セグメントです。最初のポイントを 3 番目のポイントと同じにすることはできません。 円弧セグメントの 3 つのポイントすべてが同一線上にある場合は、円弧セグメントが直線セグメントとして扱われます。  
   
 > [!IMPORTANT]  
@@ -81,7 +81,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 -   最初のポイントと中間のポイントは同一だが、3 番目のポイントが異なる場合 (例: (1 3, 1 3, 7 5))。  
 -   中間のポイントと最後のポイントは同一だが、最初のポイントが異なる場合 (例: (1 3, 4 4, 4 4))。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. 空の CircularString を使用して geometry インスタンスをインスタンス化する  
  次の例は、空の **CircularString** インスタンスを作成する方法を示しています。  
@@ -168,6 +168,6 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
  [STIsRing &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisring-geometry-data-type.md)   
  [STIsClosed &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [STPointOnSurface &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)   
- [CircularString](../../relational-databases/spatial/linestring.md)  
+ [LineString](../../relational-databases/spatial/linestring.md)  
   
   

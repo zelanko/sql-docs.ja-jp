@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a76e1690f93065a001094675f38c7ff388b2203a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b9ac40997cd2d9962d067d181a66e9614de477d1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034004"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297691"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (ビット演算 Not) (SSIS 式)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68034004"
 ## <a name="result-types"></a>戻り値の型  
  データ型を返す *integer_expression*です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  なし  
   
 ## <a name="expression-examples"></a>式の例  

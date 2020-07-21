@@ -4,11 +4,11 @@ ms.service: analysis-services
 ms.topic: include
 ms.date: 06/06/2019
 ms.author: owend
-ms.openlocfilehash: ca09964b5eadf79299b39ff982088bfa3d97a4f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28729ea1a91f4e85c1da1d46c5ee5c1d73f49c77
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68163473"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80501790"
 ---
-**適用対象:** ![○](media/yes.png)SQL Server Analysis Services ![○](media/yes.png)Azure Analysis Services ![X](media/no.png)Power BI Premium
+**適用対象:** ![はい](media/yes-icon.png)SQL Server Analysis Services ![はい](media/yes-icon.png)Azure Analysis Services ![いいえ](media/no-icon.png)Power BI Premium

@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c20631f9a24ddf3950a14897bca8934f6794045
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a2894c2b9919f3f270bad4407a70ef9aedda5223
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770593"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159820"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>レプリケーション モニターを使用したパフォーマンスの監視
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] &#xA0;レプリケーション モニターを使用すると、トランザクション レプリケーションとマージ レプリケーションのパフォーマンスを次の方法で監視できます。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターを使用すると、トランザクション レプリケーションとマージ レプリケーションのパフォーマンスを次の方法で監視できます。  
   
 -   警告およびしきい値の設定  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68770593"
  詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
 ## <a name="view-performance-measurements"></a>パフォーマンス測定値の表示  
- レプリケーション モニターでは、パブリケーションの **[現在の平均パフォーマンス]** 列と **[現在の最低パフォーマンス]** 列、およびサブスクリプションの **[パフォーマンス]** 列に、トランザクション レプリケーションおよびマージ レプリケーションのパフォーマンスの品質を示す値が表示されます。 値は以下のとおりです。  
+ レプリケーション モニターでは、パブリケーションの **[現在の平均パフォーマンス]** 列と **[現在の最低パフォーマンス]** 列、およびサブスクリプションの **[パフォーマンス]** 列に、トランザクション レプリケーションおよびマージ レプリケーションのパフォーマンスの品質を示す値が表示されます。 値は次のとおりです。  
   
 -   [非常に良い]  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68770593"
   
 -   トランザクション レプリケーションの場合、パフォーマンス品質は待機時間のしきい値によって決定されます。 しきい値が設定されていない場合、値は表示されません。 次の表は、しきい値とパフォーマンス品質値の相関関係を示しています。 たとえば、しきい値が 60 秒に設定されている場合に、実際の待機時間が 30 秒であるとすると、待機時間はしきい値の 50% となり、値は [良い] になります。  
   
-    |[非常に良い]|[良い]|[普通]|悪い|重大|  
+    |[非常に良い]|[良い]|[普通]|悪い|Critical|  
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   

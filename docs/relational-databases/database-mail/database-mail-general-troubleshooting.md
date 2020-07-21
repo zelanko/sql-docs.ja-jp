@@ -1,9 +1,7 @@
 ---
-title: SQL Server による一般的なデータベース メールのトラブルシューティング | Microsoft Docs
-ms.custom: ''
-ms.date: 04/22/2019
+title: 一般的データベース メール トラブルシューティング
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -13,15 +11,16 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 01b58ac9ebbcb7cdfba9ac8c8fe3f58b67278547
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 92496d6c02903ad6c7c14c5b2fd134797f608997
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134413"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726511"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>一般的データベース メール トラブルシューティング手順 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 データベース メールのトラブルシューティングを行うには、データベース メール システムに関して次の点を確認する必要があります。 以下の手順は論理的な順序で示していますが、どのような順序で行ってもかまいません。
 
@@ -55,8 +54,6 @@ ms.locfileid: "68134413"
     ```
 
 1. sp_configure プロシージャを既定の状態に戻して、詳細設定オプションが表示されないようにするには、次のコードを実行します。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql 
     sp_configure 'show advanced', 0; 
@@ -153,7 +150,7 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 
 
-##  <a name="RelatedContent"></a> 参照
+##  <a name="see-also"></a><a name="RelatedContent"></a> 参照
   
 -   [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   

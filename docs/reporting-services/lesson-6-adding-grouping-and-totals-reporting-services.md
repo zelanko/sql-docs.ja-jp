@@ -9,10 +9,10 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65089661"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループと合計の追加 (Reporting Services)
@@ -38,7 +38,7 @@ ms.locfileid: "65089661"
 
 5. 二重線の右側にある元の `[Date]` 式と `[Order]` 式の列を削除します。 2 つの列の列ハンドルを選択し、右クリックして **[列の削除]** を選択します。 レポート デザイナーにより個々の行の式が削除され、グループ式のみが表示されるようになります。
 
-    ![削除する列を選択する](media/rs-basictablegroupsdeletecols.gif "削除する列を選択する")
+    ![削除する列の選択](media/rs-basictablegroupsdeletecols.gif "削除する列の選択")
 
 6. 新しい `[Date]` 列の書式を設定するには、`[Date]` 式が含まれるデータ領域セルを右クリックし、 **[テキスト ボックスのプロパティ]** を選択します。
 7. 左端の列リスト ボックスから **[数値]** を選択し、 **[カテゴリ]** リストボックスから **[日付]** を選択します。
@@ -58,7 +58,7 @@ ms.locfileid: "65089661"
 6. **[書式]** メニューから、 **[背景色]**  >  **[淡い灰色]** スクエアの順に選択します。square.
 7. **[OK]** を選択して書式を適用します。
 
-   ![デザイン ビュー: 注文合計がある基本的なテーブル](media/rs-basictablesumlinetotaldesign.gif "デザイン ビュー: 注文合計がある基本的なテーブル")
+   ![デザイン ビュー:注文合計がある基本的なテーブル](media/rs-basictablesumlinetotaldesign.gif "デザイン ビュー:注文合計がある基本的なテーブル")
 
 ## <a name="add-the-daily-total-to-the-report"></a>レポートに毎日の合計を追加する
 
@@ -68,7 +68,7 @@ ms.locfileid: "65089661"
 4. **[書式]** メニューから、 **[背景色]**  >  **[オレンジ]** スクエアの順に選択します。
 5. **[OK]** を選択して書式を適用します。
 
-   ![背景色をオレンジ色に設定する](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
+   ![背景色をオレンジに設定する](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
 
 ## <a name="add-the-grand-total-to-the-report"></a>レポートに総計を追加する
 
@@ -78,13 +78,13 @@ ms.locfileid: "65089661"
 4. **[書式]** メニューから、 **[背景色]**  >  **[薄い青]** スクエアの順に選択します。
 5. **[OK]** を選択して書式を適用します。
 
-    ![デザイン ビュー: 基本的なテーブルの総計](media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー: 基本的なテーブルの総計")
+    ![デザイン ビュー:基本的なテーブルの総計](media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー:基本的なテーブルの総計")
 
 ## <a name="preview-the-report"></a>レポートをプレビューする
 
 書式の変更をプレビューするには、 **[プレビュー]** タブを選択します。 **[プレビュー]** ツールバーで、![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png) のように表示されている **[最終ページ]** ボタンを選択します。 結果は次のように表示されます。
 
-   ![プレビュー: 総計がある基本的なテーブルの](media/rs-basictablesumgrandtotalpreview.gif "プレビュー: 総計がある基本的なテーブル")
+   ![プレビュー:総計がある基本的なテーブル](media/rs-basictablesumgrandtotalpreview.gif "プレビュー:総計がある基本的なテーブル")
 
 ## <a name="publishing-the-report-to-the-report-server-optional"></a>レポートを*レポート サーバー*にパブリッシュする (オプション)
 
@@ -101,15 +101,15 @@ ms.locfileid: "65089661"
 
     **[出力]** ウィンドウに次のようなメッセージが表示されていれば、正常に配置されたことを示しています。
 
-    > ------ ビルド開始: プロジェクト: tutorial、構成: デバッグ ------  
+    > ------ ビルド開始:プロジェクト: tutorial、構成:デバッグ ------  
     > 'Sales Orders.rdl' をスキップしています。 アイテムは最新の状態です。  
     > ビルドの完了 -- エラー 0 個、警告 0 個  
-    > ------ ビルド開始: プロジェクト: tutorial、構成: デバッグ ------  
+    > ------ 配置開始:プロジェクト: tutorial、構成:デバッグ ------  
     > `https://[server name]/reportserver` に配置しています  
     > レポート '/tutorial/Sales Orders' を配置しています。  
     > 配置完了 -- エラー 0 個、警告 0 個  
-    > ========== ビルド: 正常終了または最新の状態 1、失敗 0、スキップ 0 ==========  
-    > ========== 配置: 1 正常終了、0 失敗、0 スキップ ==========  
+    > ========== ビルド:1 正常終了または最新の状態、0 失敗、0 スキップ ==========  
+    > ========== 配置:1 正常終了、0 失敗、0 スキップ ==========  
 
     次のようなメッセージが表示されている場合は、レポート サーバーに対する適切な権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。
     >
@@ -126,6 +126,6 @@ ms.locfileid: "65089661"
 
 これで、 **「基本的なテーブル レポートの作成」チュートリアル**を終了します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)

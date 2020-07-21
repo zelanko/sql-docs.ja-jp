@@ -1,6 +1,7 @@
 ---
-title: GRANT-DENY-REVOKE Perms-Azure SQL データおよび並列データ ウェアハウス | Microsoft Docs
-ms.custom: ''
+title: GRANT-DENY-REVOKE の権限
+titleSuffix: Azure SQL Data Warehouse
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
@@ -13,15 +14,15 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8d19d21b7bcd1e9ab72732dab439355da1794e0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129368"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197429"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>権限:GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   セキュリティ保護可能なリソース (データベース、テーブル、ビューなど) からセキュリティ プリンシパル (ログイン、データベース ユーザー、またはデータベース ロール) にアクセス許可 (**UPDATE** など) を付与または拒否するには、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** および **DENY** ステートメントを使用します。 アクセス許可を許可または拒否するには、**REVOKE** を使用します。  
   
@@ -35,11 +36,11 @@ ms.locfileid: "68129368"
   
 -   **REVOKE** は、既存の **GRANT** または **DENY** アクセス許可を削除します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Azure SQL Data Warehouse and Parallel Data Warehouse  
 GRANT   
     <permission> [ ,...n ]  
@@ -125,7 +126,7 @@ REVOKE
   
  暗黙的なアクセス許可は、包含または親のアクセス許可からも継承できます。 たとえば、テーブルの **UPDATE** アクセス許可は、テーブルが含まれるスキーマに対する **UPDATE** アクセス許可、またはテーブルの **CONTROL** アクセス許可を持つことによって継承できます。  
   
-### <a name="ownership-chaining"></a>組み合わせ所有権  
+### <a name="ownership-chaining"></a>所有権の継承  
  複数のデータベース オブジェクトが連続して互いにアクセスしている場合、このシーケンスは*チェーン*と呼ばれます。 このようなチェーンは単独では存在しませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がチェーン内のリンクを移動する際に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、構成要素であるオブジェクトに対する権限が、オブジェクトに個別にアクセスした場合とは異なる方法で評価されます。 所有権の継承は、セキュリティの管理に重要な影響を与えます。 所有権の継承の詳細については、次を参照してください「[所有権の継承](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)」および「[チュートリアル:所有権の継承とコンテキストの切り替え](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)」です。  
   
 ## <a name="permission-list"></a>アクセス許可の一覧  
@@ -243,7 +244,7 @@ REVOKE
   
  ![APS セキュリティの権限ポスター](../../t-sql/statements/media/aps-security-perms-poster.png "APS セキュリティの権限ポスター")  
   
- このポスターのフル サイズ バージョンをダウンロードするには、APS Yammer サイトのファイルのセクションの「[SQL Server PDW のアクセス許可](https://go.microsoft.com/fwlink/?LinkId=244249)」を参照してください (または **apsdoc@microsoft.com** に電子メールで要求してください)。  
+ このポスターのフル サイズ バージョンをダウンロードするには、APS Yammer サイトのファイルのセクションの「[SQL Server PDW のアクセス許可](https://go.microsoft.com/fwlink/?LinkId=244249)」を参照してください (または **apsdoc\@microsoft.com** に電子メールで要求してください)。  
   
 ## <a name="default-permissions"></a>既定の権限  
  次に、既定のアクセス許可について説明します。  
@@ -262,7 +263,7 @@ REVOKE
   
 -   **USE** ステートメントでは、権限は必要ありません。 すべてのプリンシパルが、**USE** ステートメントを任意のデータベース上で実行できます。  
   
-##  <a name="Examples"></a> 例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> 例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>A. ログインに、サーバー レベル権限を許可する  
  次の 2 つのステートメントでは、ログインに、サーバー レベルの権限を付与します。  

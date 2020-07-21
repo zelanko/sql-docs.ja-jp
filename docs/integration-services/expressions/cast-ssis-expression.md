@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bf33110b09b4ecc5e3709a59a19eaa47bdafad2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 618c30a29473e7ade84812abeba52d23ff52da9e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033990"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71290352"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 式)
 
@@ -48,7 +48,7 @@ ms.locfileid: "68033990"
 ## <a name="result-types"></a>戻り値の型  
  *type_spec*のデータ型です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の図は、有効なキャスト演算を示しています。  
   
  ![データ型間の有効および無効なキャスト](../../integration-services/expressions/media/data-conversion.gif "データ型間の有効および無効なキャスト")  
@@ -60,8 +60,8 @@ ms.locfileid: "68033990"
 |DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252) は、1252 コード ページを使用して、30 バイトまたは 30 文字を DT_STR データ型にキャストします。|  
 |DT_WSTR|*Charcount*|(DT_WSTR,20) は、20 バイト ペアまたは 20 Unicode 文字を DT_WSTR データ型にキャストします。|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) は、50 バイトを DT_BYTES データ型にキャストします。|  
-|DT_DECIMAL|*[スケール]*|(DT_DECIMAL,2) は、数値を小数点以下 2 桁の DT_DECIMAL データ型にキャストします。|  
-|DT_NUMERIC|*有効桁数*<br /><br /> *Scale*|(DT_NUMERIC,10,3) は、数値を有効桁数 10 桁で小数点以下 3 桁の DT_NUMERIC データ型にキャストします。|  
+|DT_DECIMAL|*スケール*|(DT_DECIMAL,2) は、数値を小数点以下 2 桁の DT_DECIMAL データ型にキャストします。|  
+|DT_NUMERIC|*[精度]*<br /><br /> *スケール*|(DT_NUMERIC,10,3) は、数値を有効桁数 10 桁で小数点以下 3 桁の DT_NUMERIC データ型にキャストします。|  
 |DT_TEXT|*Codepage*|(DT_TEXT,1252) は、1252 コード ページを使用して、値を DT_TEXT データ型にキャストします。|  
   
  文字列を DT_DATE にキャストする場合、またはその逆のキャストを行う場合、変換のロケールが使用されます。 ただし、ロケール設定で ISO 形式を使用するかどうかにかかわらず、日付は YYYY-MM-DD の ISO 形式となります。  

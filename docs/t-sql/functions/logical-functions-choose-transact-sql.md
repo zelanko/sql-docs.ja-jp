@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a96f4e48c56be6558ecb6523ebd687e50d9f82a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2c2894f44ca54d26c8a0a4392e91d052de3a55aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784469"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>論理関数 - CHOOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の値の一覧から指定されたインデックスにある項目を返します。  
   
@@ -33,13 +33,13 @@ ms.locfileid: "68059743"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  
   
 ## <a name="arguments"></a>引数  
- *index*  
+ *インデックス*  
  後に続く項目のリストへの 1 から始まるインデックスを表す整数式を指定します。  
   
  入力されたインデックス値が **int** 以外の数値データ型である場合、暗黙的に値が整数に変換されます。 インデックス値が値の配列の境界を超えると、CHOOSE は NULL を返します。  
@@ -50,10 +50,10 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ## <a name="return-types"></a>戻り値の型  
  関数に渡される一連の型の中から最も優先順位の高いデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  CHOOSE は、配列へのインデックスと同じように機能します。ここで、配列はインデックス引数の後に続く引数で構成されます。 インデックス引数は、後続の値のうちどの値が返されるのかを決定します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="a-simple-choose-example"></a>A. 単純な CHOOSE の例
 

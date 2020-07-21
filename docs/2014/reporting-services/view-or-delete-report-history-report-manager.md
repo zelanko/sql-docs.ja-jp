@@ -1,5 +1,5 @@
 ---
-title: 表示、または (レポート マネージャー) レポート履歴の削除 |Microsoft Docs
+title: レポート履歴の表示または削除 (レポートマネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098704"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>レポート履歴を表示または削除する (レポート マネージャー)
@@ -41,7 +41,7 @@ ms.locfileid: "66098704"
   
 2.  レポート マネージャーで **[コンテンツ]** ページに移動します。 履歴スナップショットを作成または表示するレポートに移動し、そのレポートをクリックして開きます。  
   
-3.  **[履歴]** タブをクリックします。履歴スナップショットが表示されます、**実行**列。  
+3.  [**履歴**] タブをクリックします。履歴スナップショットは、[**実行時に実行する**列に表示されます。  
   
 4.  履歴スナップショットを表示するには、スナップショットをクリックします。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "66098704"
   
 1.  レポート マネージャーで **[コンテンツ]** ページに移動します。 履歴スナップショットを作成するレポートに移動し、そのレポートをクリックして開きます。  
   
-2.  **[履歴]** タブをクリックします。履歴スナップショットが表示されます、**実行**列。  
+2.  [**履歴**] タブをクリックします。履歴スナップショットは、[**実行時に実行する**列に表示されます。  
   
-3.  クリックして、削除する履歴スナップショットの横にあるチェック ボックスをオン**削除**します。  
+3.  削除する履歴スナップショットの横にあるチェックボックスをオンにし、[**削除**] をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [レポート履歴ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
+## <a name="see-also"></a>参照  
+ [レポート履歴へのスナップショットの追加 &#40;レポートマネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [[レポート履歴] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [レポート処理プロパティの設定](report-server/set-report-processing-properties.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [レポート履歴のスナップショットの作成、変更および削除](report-server/create-modify-and-delete-snapshots-in-report-history.md)  

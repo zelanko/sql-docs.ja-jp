@@ -1,5 +1,5 @@
 ---
-title: MSpeer_topologyresponse (TRANSACT-SQL) |Microsoft Docs
+title: MSpeer_topologyresponse (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,34 +15,33 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_topologyresponse
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d64e4aa90aadb45e7f3c2aa09d23e06e5bda187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: d485e2942d9f941c3ea064f531f83d6314c6bc8e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026646"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002698"
 ---
-# <a name="mspeertopologyresponse-transact-sql"></a>MSpeer_topologyresponse (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="mspeer_topologyresponse-transact-sql"></a>MSpeer_topologyresponse (Transact-sql)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  トポロジ状態要求に対する各ノードの応答を保存するために、ピア ツー ピア レプリケーションで使用されます。 このテーブルは、パブリケーション データベース内に保存されます。  
+  トポロジ状態要求に対する各ノードの応答を保存するために、ピア ツー ピア レプリケーションで使用されます。 このテーブルは、パブリケーションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|request_id|**int**|内のトポロジ状態要求エントリを識別、 [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)テーブル。|  
-|ピア|**sysname**|応答を生成するサーバー インスタンスの名前です。|  
+|request_id|**int**|[MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)テーブルのトポロジ状態要求エントリを識別します。|  
+|peer|**sysname**|応答を生成したサーバーインスタンスの名前。|  
 |peer_version|**int**|パブリッシャーのバージョン番号を識別します。|  
-|peer_db|**sysname**|応答を生成したピアでサブスクリプション データベースです。|  
-|originator_id|**int**|競合検出のためにトポロジの各ノードを識別します。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。|  
-|peer_conflict_retention|**int**|期間を日、そのメタデータは競合テーブルに格納されます。|  
+|peer_db|**sysname**|応答を生成したピアのサブスクリプションデータベース。|  
+|originator_id|**int**|競合検出のためにトポロジの各ノードを識別します。 詳細については、「 [ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。|  
+|peer_conflict_retention|**int**|メタデータが競合テーブルに格納される期間 (日数)。|  
 |received_date|**datetime**|トポロジ要求を受信した時刻です。|  
 |connection_info|**xml**|要求に応答したノードに関する情報。|  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

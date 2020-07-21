@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 4b983e76-bb77-43c5-b44b-19919d3da619
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f2a0aa29f032dfed7202430aeb44b20e05c78c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8cf85181e444385e1a3908761ba71414b68cf3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676829"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049166"
 ---
-# <a name="mssqleng014161"></a>MSSQL_ENG014161
+# <a name="mssql_eng014161"></a>MSSQL_ENG014161
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62676829"
   
 -   [レプリケーション モニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   
   

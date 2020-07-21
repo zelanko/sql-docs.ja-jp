@@ -26,14 +26,14 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8367157d0b3547690b4675a9da7cc8f0bfc58966
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e8cec010923591d3fc05ef2920578bdebc4f9f5c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944418"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297937"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
 
@@ -71,7 +71,7 @@ ms.locfileid: "67944418"
   
  あいまいグループ化変換の入力の列のプロパティを設定することで、この変換で実行されるグループ化をカスタマイズできます。 たとえば、FuzzyComparisonFlags プロパティは、変換で列の文字列データを比較する方法を指定します。ExactFuzzy プロパティは、変換であいまい一致または完全一致を実行するかどうかを指定します。  
   
- あいまいグループ化変換で使用されるメモリの量は、MaxMemoryUsage カスタム プロパティを設定することによって構成できます。 メガバイト (MB) 単位の数値または 0 を指定できます。0 を指定すると、変換に必要なメモリの量と使用できる物理メモリの量に基づいて、変換に使用されるメモリの量が動的に決まります。 MaxMemoryUsage カスタム プロパティは、パッケージの読み込み時にプロパティ式で更新できます。 詳しくは、「[Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../../integration-services/expressions/use-property-expressions-in-packages.md)」、および「[変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」をご覧ください。  
+ あいまいグループ化変換で使用されるメモリの量は、MaxMemoryUsage カスタム プロパティを設定することによって構成できます。 メガバイト (MB) 単位の数値または 0 を指定できます。0 を指定すると、変換に必要なメモリの量と使用できる物理メモリの量に基づいて、変換に使用されるメモリの量が動的に決まります。 MaxMemoryUsage カスタム プロパティは、パッケージの読み込み時にプロパティ式で更新できます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../../integration-services/expressions/use-property-expressions-in-packages.md)」、および「[変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」を参照してください。  
   
  この変換は 1 つの入力と 1 つの出力をとります。 エラー出力はサポートされていません。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "67944418"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "67944418"
  **使用できる入力列**  
  重複する値を持つ行をグループ化するために使用する入力列を、この一覧から選択します。  
   
- **[名前]**  
+ **Name**  
  使用できる入力列の名前を表示します。  
   
  **[パススルー]**  
@@ -148,7 +148,7 @@ ms.locfileid: "67944418"
  **[数字]**  
  列データを比較する際の先頭および末尾の数字の有意性を指定します。 たとえば、先頭の数字が有意である場合、"123 Main Street" は "456 Main Street" と同じグループとは見なされません。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[Neither]**|先頭および末尾の数字は考慮されません。|  
 |**[Leading]**|先頭の数字のみが考慮されます。|  

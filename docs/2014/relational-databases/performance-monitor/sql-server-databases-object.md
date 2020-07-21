@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f4f46bd388476934226e41d371c85fa13b94d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250646"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066090"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases オブジェクト
   SQL Server の **SQLServer:Databases** オブジェクトには、一括コピー操作、バックアップと復元のスループット、およびトランザクション ログの利用状況を監視するためのカウンターがあります。 トランザクションとトランザクション ログを監視すると、データベースで発生しているユーザーの利用状況と、トランザクション ログの空き容量を調べることができます。 ユーザーの利用状況は、データベースのパフォーマンスを決定し、ログ サイズ、ロック、およびレプリケーションに影響を与えます。 下位レベルのログの利用状況を監視して、ユーザーの利用状況やリソースの利用状況を計測すると、パフォーマンスのボトルネックを突き止めるのに役立ちます。  
@@ -42,7 +41,7 @@ ms.locfileid: "63250646"
 |**Log Cache Reads/sec**|ログ マネージャー キャッシュを使用して 1 秒間に実行された読み取り数。|  
 |**Log File(s) Size (KB)**|データベース内のすべてのトランザクション ログ ファイルの合計サイズ (KB)。|  
 |**Log File(s) Used Size (KB)**|データベース内のすべてのログ ファイルの合計使用サイズ (KB)。|  
-|**Log Flush Wait Time**|ログがフラッシュされるまでの合計待ち時間 (ミリ秒)。 AlwaysOn セカンダリ データベースの場合、この値はディスクへのログ レコードの書き込みの待ち時間を示します。|  
+|**ログフラッシュの待機時間**|ログがフラッシュされるまでの合計待ち時間 (ミリ秒)。 AlwaysOn セカンダリ データベースの場合、この値はディスクへのログ レコードの書き込みの待ち時間を示します。|  
 |**Log Flush Waits/sec**|ログ フラッシュを待機中だった 1 秒あたりのコミットの数。|  
 |**Log Flush Write Time (ms)**|最後の 1 秒間に完了したログ フラッシュの書き込みを実行するのにかかった時間 (ミリ秒)。|  
 |**Log Flushes/sec**|1 秒あたりのログ フラッシュの回数。|  
@@ -52,16 +51,16 @@ ms.locfileid: "63250646"
 |**Log Pool Disk Reads/sec**|ログ ブロックをフェッチするためにログ プールが実行したディスクの読み取り回数。|  
 |**Log Pool Requests/sec**|ログ プールで処理されるログ ブロック要求の数。|  
 |**Log Truncations**|トランザクション ログが圧縮された回数。|  
-|**Percent Log Used**|ログの中で使用中の領域の割合。|  
-|**Repl.Pending Xacts**|レプリケーション用にマークされていてまだディストリビューション データベースに配信されていないパブリケーション データベースのトランザクション ログ内のトランザクションの数。|  
-|**Repl.Trans.Rate**|1 秒間に、パブリケーション データベースのトランザクション ログから読み取られ、ディストリビューション データベースに配信されたトランザクションの数。|  
+|**使用されたログの割合**|ログの中で使用中の領域の割合。|  
+|**Repl. 保留中の Xacts**|レプリケーション用にマークされていてまだディストリビューション データベースに配信されていないパブリケーション データベースのトランザクション ログ内のトランザクションの数。|  
+|**Repl. Trans. Rate**|1 秒間に、パブリケーション データベースのトランザクション ログから読み取られ、ディストリビューション データベースに配信されたトランザクションの数。|  
 |**Shrink Data Movement Bytes/sec**|自動圧縮操作、DBCC SHRINKDATABASE ステートメント、または DBCC SHRINKFILE ステートメントによって 1 秒間に移動されているデータの量。|  
 |**Tracked transactions/sec**|データベースのコミット テーブルに記録するコミット済みトランザクションの数。|  
 |**Transactions/sec**|1 秒間にデータベースに対して開始されたトランザクションの数。<br /><br /> **Transactions/sec** は、XTP のみのトランザクション (ネイティブ コンパイル ストアド プロシージャによって開始されたトランザクション) はカウントしません。|  
-|**Write Transactions/sec**|最後の 1 秒間にデータベースに書き込んでコミットしたトランザクションの数。|  
+|**書き込みトランザクション/秒**|最後の 1 秒間にデータベースに書き込んでコミットしたトランザクションの数。|  
   
-## <a name="see-also"></a>関連項目  
- [リソースの利用状況の監視 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)   
+## <a name="see-also"></a>参照  
+ [リソース使用状況の監視 &#40;システムモニタ&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server、Database Replica](sql-server-database-replica.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: supportsDifferentTableCorrelationNames メソッド |Microsoft Docs
+title: supportsDifferentTableCorrelationNames メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b4f8db0c-2eaf-476b-b916-3e83355778f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c938fc0da6ed235f080492e573ad558d75751c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 18b6c1dcb74f369e0b2e2bf7118d8e262b929abf
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67969426"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924402"
 ---
 # <a name="supportsdifferenttablecorrelationnames-method-sqlserverdatabasemetadata"></a>supportsDifferentTableCorrelationNames メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public boolean supportsDifferentTableCorrelationNames()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この supportsDifferentTableCorrelationNames メソッドは、supportsDifferentTableCorrelationNames メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsDifferentTableCorrelationNames メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsDifferentTableCorrelationNames メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: テスト_ケース (OracleToSQL) の作成 |Microsoft Docs
+title: テストケースの作成 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,35 +13,35 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266132"
 ---
 # <a name="creating-test-cases-oracletosql"></a>テスト ケースの作成 (OracleToSQL)
-テストを作成するのにには、テスト_ケースのウィザードを使用します。 このウィザードを使用して、テストおよび検証オブジェクトを選択し、テストのパラメーターを指定して、テスト_ケースを作成できます。  
+テストケースウィザードを使用して、テストを作成します。 このウィザードでは、テスト済みオブジェクトと検証済みオブジェクトを選択し、テストパラメーターを指定することによって、テストケースを作成できます。  
   
-## <a name="starting-the-test-case-wizard"></a>テスト_ケースのウィザードを開始します。  
-テスト_ケースのウィザードを起動する **新しいテスト_ケース** から、 **テスター** メニュー。  
+## <a name="starting-the-test-case-wizard"></a>テストケースウィザードの開始  
+テストケースウィザードを開始するには、[テスト**担当**者] メニューの [**新しいテストケース**] をクリックします。  
   
-起動すると、ウィザードは、ソース Oracle サーバー上のスキーマ SSMATESTER_ORACLE を検索します。 テスト担当者拡張機能のスキーマの補助オブジェクトの格納に使用することをお勧めします。 テスト_ケースのウィザードでは、SSMATESTER_ORACLE を見つけられない場合は、スキーマを作成することを提案する ダイアログ ウィンドウが表示されます。 (そのような状況通常発生 SSMA テスターの最初の実行中にします。)  
+ウィザードを開始すると、ソース Oracle サーバーでスキーマ SSMATESTER_ORACLE が検索されます。 補助オブジェクトを格納するために使用される Tester 拡張機能スキーマです。 テストケースウィザードで SSMATESTER_ORACLE が見つからない場合は、スキーマの作成を提案するダイアログウィンドウが表示されます。 (通常、この状況は SSMA Tester の初回実行時に発生します)。  
   
-ダイアログ ウィンドウが表示された場合は、クリックして**はい**移行元サーバーで SSMATESTER_ORACLE スキーマを作成します。 新しいユーザーを作成し、このユーザーのスキーマでオブジェクトを作成する Oracle の権限がありますに注意してください。  
+ダイアログウィンドウが表示されたら、[**はい**] をクリックして、移行元サーバーに SSMATESTER_ORACLE スキーマを作成します。 新しいユーザーを作成し、このユーザーのスキーマにオブジェクトを作成するには、Oracle 特権が必要であることに注意してください。  
   
-## <a name="overview-of-creating-test-cases-using-the-wizard"></a>ウィザードを使用してテスト_ケースの作成の概要  
-テスト_ケースの作成のプロセスは、5 つの手順で構成されます。  
+## <a name="overview-of-creating-test-cases-using-the-wizard"></a>ウィザードを使用したテストケースの作成の概要  
+テストケースを作成するプロセスは、次の5つの手順で構成されます。  
   
-1.  [テスト_ケースの初期化&#40;OracleToSQL&#41;](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
+1.  [テストケース &#40;OracleToSQL&#41;の初期化](../../ssma/oracle/initializing-test-cases-oracletosql.md)  
   
-2.  [選択し、テストするオブジェクトを構成する&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+2.  [&#40;OracleToSQL&#41;をテストするオブジェクトの選択と構成](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-3.  [影響を受けるオブジェクトの選択と構成&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+3.  [影響を受けるオブジェクトの選択と構成 &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-4.  [呼び出し順序のカスタマイズ&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+4.  [呼び出し順序のカスタマイズ &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-5.  [テスト_ケースの準備の終了&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+5.  [テストケースの準備 &#40;OracleToSQL&#41;を終了しています](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-## <a name="see-also"></a>関連項目  
-[移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>参照  
+[移行されたデータベースオブジェクト &#40;OracleToSQL&#41;のテスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

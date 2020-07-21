@@ -1,5 +1,6 @@
 ---
 title: string 関数 (XQuery) |Microsoft Docs
+description: 文字列として表現された引数の値を返す XQuery 関数文字列 () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4c0dee40eb08aac425f93570c98fc88d32bcc60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730974"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>データ アクセサー関数 - string (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  値を返します *$arg*を文字列として表されます。  
+  文字列として表される *$arg*の値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +40,23 @@ fn:string($arg as item()?) as xs:string
  *$arg*  
  ノードまたはアトミック値です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
--   場合 *$arg*空のシーケンスでは、長さ 0 の文字列が返されます。  
+-   *$Arg*が空のシーケンスの場合は、長さ0の文字列が返されます。  
   
--   場合 *$arg*ノードで、関数は、文字列値のアクセサーを使用して取得したノードの文字列値を返します。 これは、W3C XQuery 1.0 and XPath 2.0 データ モデルの仕様で定義されます。  
+-   *$Arg*がノードの場合、関数は、文字列値アクセサーを使用して取得されたノードの文字列値を返します。 これは、W3C XQuery 1.0 および XPath 2.0 データモデル仕様で定義されています。  
   
--   場合 *$arg*は、アトミック値としてキャスト式によって返されるのと同じ文字列を返します**xs:string**、 *$arg*、以外の場合、それ以外の場合に注意します。  
+-   *$Arg*がアトミック値である場合、この関数は、式によって返される文字列を**xs: string**, *$arg*として返します。ただし、特に指定がない場合は例外です。  
   
--   場合の種類 *$arg*は**xs:anyURI**URI は、特殊文字をエスケープせず、文字列に変換されます。  
+-   *$Arg*の型が**xs: anyURI**の場合、URI は特殊文字をエスケープせずに文字列に変換されます。  
   
--   この実装では、 **fn:string()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的にのみ使用できます角かっこ () 内で。  
+-   この実装では、引数のない**fn: string ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。  
   
 ## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
+ このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-string-function"></a>A. String 関数の使用  
- 次のクエリを取得します <`Features`> の子要素ノード、<`ProductDescription`> 要素。  
+### <a name="a-using-the-string-function"></a>A: String 関数の使用  
+ 次のクエリでは、 `Features` <> 要素の <> 子要素ノードが取得され `ProductDescription` ます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -79,7 +80,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- 指定した場合、 **string()** 関数の場合、指定したノードの文字列値を表示します。  
+ **String ()** 関数を指定すると、指定したノードの文字列値が返されます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -97,8 +98,8 @@ These are the product highlights.
 3 yearsparts and labor...    
 ```  
   
-### <a name="b-using-the-string-function-on-various-nodes"></a>B. 異なるノードに対する string 関数の使用  
- 次の例では、XML インスタンスが xml 型の変数に割り当てられています。 クエリが適用した結果を示すために指定された**string()** さまざまなノードにします。  
+### <a name="b-using-the-string-function-on-various-nodes"></a>B: さまざまなノードでの string 関数の使用  
+ 次の例では、XML インスタンスが xml 型の変数に割り当てられています。 クエリは、さまざまなノードに**文字列 ()** を適用した結果を示すために指定されます。  
   
 ```  
 declare @x xml  
@@ -112,7 +113,7 @@ just text
 '  
 ```  
   
- 次のクエリでは、ドキュメント ノードの文字列値を取得します。 この値は、そのすべての子孫のテキスト ノードの文字列値を連結して形成されます。  
+ 次のクエリでは、ドキュメントノードの文字列値を取得します。 この値は、そのすべての子孫のテキストノードの文字列値を連結することによって形成されます。  
   
 ```  
 select @x.query('string(/)')  
@@ -126,13 +127,13 @@ just text
  20  
 ```  
   
- 次のクエリは、processing-instruction ノードの文字列値を取得します。 テキスト ノードが含まれていないため、空のシーケンスになります。  
+ 次のクエリは、processing-instruction ノードの文字列値を取得します。 テキストノードが含まれていないため、結果は空のシーケンスになります。  
   
 ```  
 select @x.query('string(/processing-instruction()[1])')  
 ```  
   
- 次のクエリでは、コメント ノードの文字列値を取得し、テキスト ノードを返します。  
+ 次のクエリでは、コメントノードの文字列値を取得し、テキストノードを返します。  
   
 ```  
 select @x.query('string(/comment()[1])')  

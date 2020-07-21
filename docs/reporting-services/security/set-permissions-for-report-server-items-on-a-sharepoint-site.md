@@ -12,10 +12,10 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570612"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>SharePoint サイト上のレポート サーバー アイテムに対する権限の設定

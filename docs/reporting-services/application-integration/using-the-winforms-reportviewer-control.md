@@ -1,23 +1,25 @@
 ---
-title: WinForms ReportViewer コントロールの使用 | Microsoft Docs
+title: WinForms ReportViewer コントロールの使用
+description: レポート サーバーに配置されたレポートまたはローカル ファイル システム上のレポートを表示するには、WinForms ReportViewer コントロールを使用して Windows アプリケーションでレポートを表示します。
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 8ae42ea326af05bd715b9380b794384d6690fdb7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195263"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198444"
 ---
-# <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer コントロールの使用
+# <a name="use-the-winforms-reportviewer-control"></a>WinForms ReportViewer コントロールの使用
   レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WinForms ReportViewer コントロールを使用して Windows アプリケーションでレポートを表示します。  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Windows アプリケーションに ReportViewer コントロールを追加するには  
@@ -30,7 +32,7 @@ ms.locfileid: "63195263"
   
 2.  **ツールボックス**で ReportViewer コントロールを探します。 **ツールボックス**が表示されていない場合は、 **[表示]** メニューの **[ツールボックス]** をクリックするとアクセスできます。  
   
-     ![ReportViewer コントロールを選択する](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "ReportViewer コントロールを選択する")  
+     ![ReportViewer コントロールの選択](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "ReportViewer コントロールの選択")  
   
 3.  ReportViewer コントロールを Windows フォームのデザイン画面にドラッグします。  
   
@@ -38,7 +40,7 @@ ms.locfileid: "63195263"
   
  コントロールがフォームに追加されると、 **[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。  
   
- 表示するレポートがレポート サーバーに配置されている場合は、 **[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 **[\<サーバー レポート>]** オプションを選択すると、 **[レポート サーバー URL]** および **[レポートのパス]** という 2 つの追加プロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、 **[レポートのパス]** は表示するレポートへの完全なパスです。  
+ 表示するレポートがレポート サーバーに配置されている場合は、**[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 **[\<サーバー レポート>]** オプションを選択すると、 **[レポート サーバー URL]** および **[レポートのパス]** という 2 つの追加プロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、 **[レポートのパス]** は表示するレポートへの完全なパスです。  
   
  ![サーバー レポートの選択](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "サーバー レポートの選択")  
   
@@ -168,7 +170,7 @@ End Class
   
 6.  レポートの名前を変更したら、ファイルを選択して [プロパティ] ウィンドウに置きます。 **[出力ディレクトリにコピー]** プロパティを **[新しい場合はコピーする]** に変更します。  
   
-     ![出力にコピーの設定を構成する](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "出力にコピーの設定を構成する")  
+     ![出力へのコピーの設定の構成](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "出力へのコピーの設定の構成")  
   
      **[プロパティ]** ウィンドウが表示されていない場合は、 **[表示]** メニューから **[プロパティ ウィンドウ]** を選択して開くことができます。  
   

@@ -21,15 +21,15 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 641604c814ce6494834e6cc382bef590c534a2d0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075267"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004989"
 ---
 # <a name="-equals-transact-sql"></a>= (等しい) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] で 2 つの式の等価性を比較します (比較演算子)。  
   
@@ -48,7 +48,7 @@ expression = expression
 ## <a name="result-types"></a>戻り値の型  
  Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  NULL 式を使用して比較した場合、結果は `ANSI_NULLS` の設定に応じて以下のように異なります。  
   
 -   `ANSI_NULLS` が ON に設定されている場合、NULL は不明な値であり、別の NULL を含む、他の値と比較できないという ANSI 規則に従って、NULL との比較結果が UNKNOWN となります。  
@@ -60,7 +60,7 @@ expression = expression
  結果が UNKNOWN となるブール式は、ほとんどの場合、FALSE と同じように動作しますが、すべての場合ではありません。 詳細については、「[NULL と UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md)」と「[NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)」を参照してください。  
   
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using--in-a-simple-query"></a>A. 簡単なクエリで = を使用する  
  次の例では、等号演算子を使用して、`HumanResources.Department` テーブル内の `GroupName` 列の値が "Manufacturing" という単語と等しいすべての行を返します。  

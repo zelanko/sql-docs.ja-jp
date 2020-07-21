@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 199e2ad5b72e1f468e39766d7fb5f8b18a6c7453
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 13a86cc2d5cdd02ded0cece1e08ed8d95f802ed4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011371"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298769"
 ---
 # <a name="high-availability-support"></a>高可用性のサポート
 

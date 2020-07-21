@@ -1,10 +1,7 @@
 ---
-title: 警告 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: 警告
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,16 +19,21 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 58e8393531f6e08e5a2eb6d8d75ce7072559210c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 666b10f91db9fa5cdf53dd2a826b38752708e3cd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264654"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217001"
 ---
 # <a name="alerts"></a>警告
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
@@ -52,7 +54,7 @@ ms.locfileid: "68264654"
 ## <a name="selecting-an-event-type"></a>イベントの種類の選択  
 警告は特定の種類のイベントに応答します。 警告は次のイベントの種類に応答します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベント  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベント  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス状態  
   
@@ -82,7 +84,7 @@ ms.locfileid: "68264654"
 ## <a name="selecting-a-performance-condition"></a>パフォーマンス状態の選択  
 特定のパフォーマンス状態に応答する警告を指定できます。 この場合、監視するパフォーマンス カウンター、警告を発生するしきい値、および警告発生時にカウンターが示す動作を指定します。 パフォーマンス状態を設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **[新しい警告]** または **[警告のプロパティ]** ダイアログ ボックスを開き、 **[全般]** ページで次の項目を定義する必要があります。  
   
--   **オブジェクト**  
+-   **Object**  
   
     オブジェクトは、監視されるパフォーマンスの領域です。  
   
@@ -103,6 +105,14 @@ ms.locfileid: "68264654"
     > [!NOTE]  
     > パフォーマンス データは定期的にサンプリングされます。したがって、しきい値に達してからパフォーマンス警告が発せられるまでの間にわずかな遅延 (数秒) が生じる可能性があります。  
   
+    > [!NOTE]  
+    > サーバー名を格納するイベント ログ変数は、32 文字までに制限されています。 したがって、ホスト名とインスタンス名の合計サイズが 32 文字を超えると、次のエラーが表示されることがあります。
+    
+   ``` 
+   Warning,[466] Failed to copy server name LONGNAMESQLSERV\LONGINSTANCENAME while generating performance counter alerts.
+   ```
+  
+  
 ## <a name="selecting-a-wmi-event"></a>WMI イベントの選択  
 特定の WMI イベントに応答して警告が発生するように指定できます。 WMI イベントを選択するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **[新しい警告]** または **[警告のプロパティ]** ダイアログ ボックスを開き、 **[全般]** ページで次の項目を定義する必要があります。  
   
@@ -110,7 +120,7 @@ ms.locfileid: "68264654"
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを WMI クライアントとして、イベントをクエリするために用意された WMI 名前空間に登録します。  
   
--   **Query**  
+-   **クエリ**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、Windows Management Instrumentation Query Language (WQL) ステートメントを使用して、特定のイベントを識別します。  
   

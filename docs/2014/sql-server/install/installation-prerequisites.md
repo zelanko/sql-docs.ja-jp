@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9b3670192308efdb2bc9d1e74f5ace1d15406e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094348"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042244"
 ---
 # <a name="installation-prerequisites"></a>インストールの前提条件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を正常にインストールするには、インストール対象のコンピューターに以下のソフトウェア コンポーネントが用意されている必要があります。 これらは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムによりインストールされます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66094348"
 > [!NOTE]  
 >  セットアップに失敗した場合、またはセットアップを中止した場合でも、これらのコンポーネントは削除されません。 これらを削除するには、コントロール パネルの **[プログラムの追加と削除]** を使用します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  必須ファイルをインストールするには、 **[インストール]** をクリックします。 インストールしない場合は、 **[キャンセル]** をクリックします。  
   
   

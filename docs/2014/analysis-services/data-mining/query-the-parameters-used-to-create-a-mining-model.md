@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルを作成するために使用されたパラメーターのクエリ |Microsoft Docs
+title: マイニングモデルの作成に使用するパラメーターを照会する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d24d3316275e649a62e2c66d01e683a20b7a640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083035"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520588"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>マイニング モデルの作成に使用されたパラメーターのクエリ
   マイニング モデルの構成は、トレーニング ケースだけでなく、モデルの作成時に設定されたパラメーターの影響も受けます。 したがって、既存のモデルのパラメーター設定を取得すると、モデルの動作をよりよく理解できる可能性があります。 そのモデルの特定のバージョンのドキュメントを作成する場合にも便利です。  
@@ -67,7 +66,7 @@ WHERE MODEL_NAME = 'TM Clustering'
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
 ## <a name="see-also"></a>参照  
- [データ マイニングのクエリ タスクと操作方法](data-mining-query-tasks-and-how-tos.md)   
- [データ マイニング クエリ](data-mining-queries.md)  
+ [データマイニングのクエリタスクと操作方法](data-mining-query-tasks-and-how-tos.md)   
+ [データマイニングクエリ](data-mining-queries.md)  
   
   

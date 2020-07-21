@@ -21,15 +21,15 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: faab44501aa1cae4245d745598e32fab8d66a9f6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948248"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012582"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、クエリの結果セットとして返される行を、指定した行の数または割合に制限します。 TOP と ORDER BY 句を使用すると、結果セットは並べ替えられた行の先頭の *N* 行に制限されます。 それ以外の場合、TOP では特定の順序になっていない先頭の *N* 行が返されます。 この句を使用して、SELECT ステートメントから返される行の数を指定します。 または、TOP を使用して、INSERT、UPDATE、MERGE、DELETE ステートメントによって影響を受ける行数を指定します。  
   
@@ -137,7 +137,7 @@ GO
   
 TOP と ORDER BY をサブセレクト操作で使用することにより、ORDER BY 句の結果が TOP 句に適用され、UNION 操作の結果の並べ替えには使用されなくなります。  
   
- 以下に結果セットを示します。  
+ 結果セットは次のようになります。  
   
  ```
  Model         Color      Price  
@@ -153,7 +153,7 @@ INSERT、UPDATE、MERGE、または DELETE で TOP を使用すると、参照�
   
 (同じクエリ スコープ内の) 同じクエリ式で TOP を OFFSET および FETCH と組み合わせて使用することはできません。 詳細については、「[ORDER BY 句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
@@ -161,7 +161,7 @@ INSERT、UPDATE、MERGE、または DELETE で TOP を使用すると、参照�
 |[同順位の値を含む](#tie)|WITH TIES|  
 |[DELETE、INSERT、または UPDATE の影響を受ける行の制限](#DML)|DELETE、INSERT、UPDATE|  
   
-###  <a name="BasicSyntax"></a> 基本構文  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本構文  
 このセクションの例では、最低限必要な構文を使用して ORDER BY 句の基本機能を示します。  
   
 #### <a name="a-using-top-with-a-constant-value"></a>A. 定数値を指定して TOP を使用する  
@@ -206,7 +206,7 @@ ORDER BY HireDate DESC;
 GO    
 ```  
   
-###  <a name="tie"></a> 同順位の値を含む  
+###  <a name="including-tie-values"></a><a name="tie"></a> 同順位の値を含む  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. WITH TIES を使用して、最後の行の値と一致する行を含める  
 次の例では、給与の高い上位 `10` % の全従業員を取得し、結果を給与の降順で返します。 `WITH TIES` を指定すると、返された最も低い給与 (最後の行) と同じ給与の従業員も返されるので、結果は全従業員の `10` % を超える場合があります。  
@@ -225,7 +225,7 @@ ORDER BY Rate DESC;
 GO    
 ```  
   
-###  <a name="DML"></a> DELETE、INSERT、または UPDATE の影響を受ける行の制限  
+###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a> DELETE、INSERT、または UPDATE の影響を受ける行の制限  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. TOP を使用して削除する行数を制限する  
 DELETE で TOP (*n*) 句を使用した場合、任意に選択される *n* 行に対して削除操作が実行されます。 つまり、DELETE ステートメントは WHERE 句で定義した条件を満たす任意の数 (*n*) の行を選択します。 次の例では、納期が 2002 年 7 月 1 日より早い `20` 行を `PurchaseOrderDetail` テーブルから選択して削除します。  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 次の例では、クエリ条件に一致する上位 31 行を返します。 **ORDER BY** 句により、返される 31 行は、`LastName` 列のアルファベット順に基づく最初の 31 行になります。  
   
 ties を指定せずに **TOP** を使用する。  

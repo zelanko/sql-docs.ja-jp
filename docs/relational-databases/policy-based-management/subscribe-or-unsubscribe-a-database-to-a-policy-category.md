@@ -1,6 +1,7 @@
 ---
-title: ポリシー カテゴリへのデータベースのサブスクライブまたはアンサブスクライブ | Microsoft Docs
-ms.custom: ''
+title: ポリシー カテゴリへのデータベースのサブスクライブまたはアンサブスクライブ
+description: SQL Server Management Studio と Transact-SQL (T-SQL) を使用し、ポリシーベース管理のポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8b658fc2589ad0c39173ac206036b8274acc858
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774130"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>ポリシー カテゴリへのデータベースのサブスクライブまたはアンサブスクライブ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブする方法について説明します。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用し、ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブする方法について説明します。  
   
  **このトピックの内容**  
   
@@ -35,14 +36,14 @@ ms.locfileid: "68021552"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブするには  
   
@@ -57,13 +58,13 @@ ms.locfileid: "68021552"
      [列の展開]  
      クリックすると、ポリシー カテゴリが展開され、 カテゴリに含まれているすべてのポリシーが一覧表示されます。  
   
-     **[名前]**  
+     **Name**  
      ポリシー カテゴリの名前です。  
   
      **[サブスクライブ済み]**  
      対象がポリシー カテゴリにサブスクライブしているかどうかを示します。 このチェック ボックスが無効になっている場合、ポリシー カテゴリの **[データベースのサブスクリプションの要求]** が設定されています。 つまり、ポリシー カテゴリはサーバー上のすべてのデータベースに適用されます。  
   
-     **[ポリシー]**  
+     **ポリシー**  
      ポリシー グループを展開すると、ポリシー カテゴリ内のポリシーが表示されます。  
   
      **有効**  
@@ -72,14 +73,14 @@ ms.locfileid: "68021552"
      **[実行モード]**  
      ポリシーの実行モードが表示されます。  
   
-     **履歴**  
+     **HISTORY**  
      ログ ファイル ビューアーを開いてポリシー履歴を確認するには、[履歴の表示] ハイパーリンクをクリックします。  
   
 4.  ポリシー ベースの管理カテゴリにサブスクライブするには、 **[サブスクライブ済み]** 列の下のカテゴリのチェック ボックスをオンにします。 カテゴリからアンサブスクライブするには、チェック ボックスをオフにします。  
   
 5.  完了したら、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>ポリシー カテゴリにデータベースをサブスクライブするには  
   

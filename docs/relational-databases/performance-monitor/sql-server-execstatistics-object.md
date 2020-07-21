@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c1dad11470d76b0759c7c0b1d4f26c84bfb67a45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aaf66cf2be025262d0d59b7a06421689b93bab91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775899"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server の ExecStatistics オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft SQL Server の **SQLServer:ExecStatistics** オブジェクトには、さまざまな実行を監視するためのカウンターがあります。  
   
  次の表では、SQL Server の **Exec Statistics** カウンターについて説明します。  
   
-|SQL Server Exec Statistics のカウンター|[説明]|  
+|SQL Server Exec Statistics のカウンター|説明|  
 |-----------------------------------------|-----------------|  
 |**Distributed Query**|分散クエリの実行に関連する統計データ。|  
 |**DTC calls**|DTC 呼び出しの実行に関連する統計データ。|  
@@ -35,7 +35,7 @@ ms.locfileid: "68093581"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|アイテム|[説明]|  
+|アイテム|説明|  
 |----------|-----------------|  
 |**Average execution time (ms)**|選択した種類の実行の平均実行時間。|  
 |**Cumulative execution time (ms) per second**|選択した種類の実行の 1 秒あたりの累積実行時間。|  

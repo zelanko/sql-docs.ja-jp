@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2bcccb16-007f-4a34-a449-61fc89e99218
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ed2f52993ae50b5de6d476f44ab2b797a938d7c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9dd0e63bd07135a2abe571e0db4178beb03b5a9b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953639"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921677"
 ---
 # <a name="getbinarystream-method-sqlserverresultset"></a>getBinaryStream メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67953639"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getBinaryStream (int)](../../../connect/jdbc/reference/getbinarystream-method-int.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、未解釈のバイトのバイナリ ストリームとして取得します。|  
 |[getBinaryStream (java.lang.String)](../../../connect/jdbc/reference/getbinarystream-method-java-lang-string.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、未解釈のバイトのバイナリ ストリームとして取得します。|  

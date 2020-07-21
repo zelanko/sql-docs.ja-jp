@@ -1,6 +1,6 @@
 ---
-title: オプション (環境 - ヘルプ - [全般] ページ) | Microsoft Docs
-ms.custom: ''
+title: オプション (環境 - ヘルプ - [全般] ページ)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63331d03066e10a5e6364b73bc61814569e41102
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b5c3935ebf4c42cf971c7b01dd7d79b9d2d1b5c1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257222"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75252352"
 ---
 # <a name="options-environment---help---general-page"></a>オプション (環境 - ヘルプ - [全般] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "68257222"
 > [!NOTE]  
 > このページのオプションに加えた変更は、環境が再起動されるまで有効になりません。  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
 **[次を使用してヘルプを表示する]**  
-ヘルプの表示方法を指定します。 ドロップダウン リストで **[外部ヘルプ ビューアー]** を選択すると、外部のフローティング ウィンドウにトピックが表示されます。 **[統合ヘルプ ビューアー]** を選択すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の内側にドッキングした Web ブラウザー ウィンドウにヘルプ トピックを表示します。  
+ヘルプの表示方法を指定します。 ドロップダウン リストで **[外部ヘルプ ビューアー]** を選択すると、外部のフローティング ウィンドウにトピックが表示されます。 **[統合ヘルプ ビューアー]** を選択すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の内側にドッキングした Web ブラウザー ウィンドウにヘルプ トピックを表示します。  
   
 **[ページ毎の検索結果]**  
 1 つの **[検索結果]** ページに表示するトピックの数を指定します。  

@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68119849"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>リテラル日付文字列を DATE 値に非決定論的に変換する
@@ -27,7 +27,7 @@ CHARACTER 文字列を DATE データ型に変換することを許可すると�
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE の例:ポーランド語の月の名前
+## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE 例: ポーランド語の月名
 
 - `SET LANGUAGE Polish;`
 
@@ -119,12 +119,12 @@ YMD-Interpretation--?--NotGuaranteed
 
 上のコード例の最後の例では、**ymd** 形式と入力文字列が一致していません。 入力文字列の 3 番目のノードは数値ですが、日としては大きすぎます。 Microsoft は、このような不一致から値が出力されることは保証しません。
 
-#### <a name="convert-offers-explicit-codes-for-deterministic-control-of-date-formats"></a>CONVERT からは、日付書式を_決定的に_制御するための明示的コードが与えられます。
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT からは、日付書式を_決定的に_制御するための明示的コードが与えられます。
 
 CAST と CONVERT に関する Microsoft のドキュメント記事には、CONVERT 関数と併用し、日付変換を_決定的に_制御できる明示的コードの一覧があります。 この記事は毎月、飛び抜けて高い閲覧数を記録します。
 
-- [CAST および CONVERT (Transact-SQL):日付および時刻のスタイル](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [CAST および CONVERT (Transact-SQL):一部の datetime 変換が非決定的である](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [CAST と CONVERT (Transact-SQL): 日付と時刻のスタイル](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
+- [CAST と CONVERT (Transact-SQL): 一部の datetime 変換が非決定論的である](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 

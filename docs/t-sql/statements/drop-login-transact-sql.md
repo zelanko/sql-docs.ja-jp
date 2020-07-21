@@ -22,15 +22,15 @@ ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a26dbcc45f5c236b6cbe8998b2d12808711ff6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 589b4e90a1518079618f97f31efb31e2a9a4abb3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044121"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002478"
 ---
 # <a name="drop-login-transact-sql"></a>DROP LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン アカウントを削除します。  
   
@@ -46,7 +46,7 @@ DROP LOGIN login_name
  *login_name*  
  削除するログインの名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ログイン中のログインは削除できません。 セキュリティ保護可能なリソース、サーバー レベル オブジェクト、または SQL Server エージェント ジョブを所有するログインは削除できません。  
   
  データベース ユーザーがマップされているログインは削除できますが、これにより孤立したユーザーが作成されます。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。  
@@ -56,7 +56,7 @@ DROP LOGIN login_name
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-dropping-a-login"></a>A. ログインを削除する  
  次の例では、ログイン `WilliJo` を削除します。  

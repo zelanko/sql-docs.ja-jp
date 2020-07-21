@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 36f7da07-f008-4b02-922b-4a28ca93018e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9d3f1a5e021eb564e4570e9f115e40329edcdd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4407143e3e045326011fdb4e8a1eb4a0ee61f95b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045115"
 ---
 # <a name="license-terms"></a>ライセンス条項
   [ライセンス条項] ページを使用して、このリリースのライセンス条項に同意します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  インストールを続行するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のライセンス条項に同意する必要があります。  
   
- 使用して、**印刷**このリリースのライセンス条項のコピーを印刷するボタンをクリックします。 インストールを終了するには、次のようにクリックします。**キャンセル**します。  
+ [**印刷**] ボタンを使用して、このリリースのライセンス条項のコピーを印刷します。 インストールを終了するには、[**キャンセル**] をクリックします。  
   
   

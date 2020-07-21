@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b1f6f2ae1e1d3043e7f505527599b7035c777cff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 19a234b8c2939730a6c5a815885606dac15d0a0a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038761"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298165"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
 
@@ -104,13 +104,13 @@ ms.locfileid: "68038761"
 #### <a name="connection-manager"></a>[ODBC 入力元エディター]  
  既存の ODBC 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。 ODBC でサポートされているデータベースへの接続を選択または入力できます。  
   
-#### <a name="new"></a>ボタンを使用して新しい  
+#### <a name="new"></a>新規  
  **[新規作成]** をクリックします。 新しい ODBC 接続マネージャーを作成できる **[ODBC 接続マネージャーの構成エディター]** ダイアログ ボックスが開きます。  
   
 #### <a name="data-access-mode"></a>[データ アクセス モード]  
  入力元のデータを選択する方法を選択します。 次の表に示すオプションがあります。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |テーブル名|ODBC データ ソースのテーブルまたはビューからデータを取得します。 このオプションを選択する場合は、以下の一覧から値を選択します。|  
 ||**[テーブル名またはビュー名]** : 使用できるテーブルまたはビューを一覧から選択するか、正規表現を入力してテーブルを特定します。|  
@@ -165,22 +165,22 @@ ms.locfileid: "68038761"
 #### <a name="inputoutput"></a>[入力または出力]  
  データ ソースの名前を表示します。  
   
-#### <a name="column"></a>[列]  
+#### <a name="column"></a>列  
  使用されていません。  
   
-#### <a name="error"></a>Error  
+#### <a name="error"></a>エラー  
  ODBC 入力元でフローのエラーを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
 #### <a name="truncation"></a>切り捨て  
  ODBC 入力元でフローの切り捨てを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
-#### <a name="description"></a>[説明]  
+#### <a name="description"></a>説明  
  使用されていません。  
   
 #### <a name="set-this-value-to-selected-cells"></a>[選択したセルに設定する値]  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルを ODBC 入力元でどのように処理するか (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
-#### <a name="apply"></a>[適用]  
+#### <a name="apply"></a>適用  
  選択したセルにエラー処理オプションを適用します。  
   
 ### <a name="error-handling-options"></a>エラー処理オプション  

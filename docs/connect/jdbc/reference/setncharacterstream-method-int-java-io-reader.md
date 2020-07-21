@@ -1,5 +1,5 @@
 ---
-title: Setn文字ストリームメソッドから Reader オブジェクト-int |Microsoft Docs
+title: Reader オブジェクトへの setNCharacterStream メソッド - int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 01e501bbe9ae68b35c4e9b8373b0dfe1f55d9f6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: db62ff8815a1ac4ca9c27a6da0de720f653ef9c7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973912"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925519"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>setNCharacterStream (int, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,10 +42,10 @@ public final void setNCharacterStream(int parameterIndex,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Setn; Stream メソッドは、PreparedStatement インターフェイスの Setn Stream メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setNCharacterStream メソッドは、java.sql.PreparedStatement インターフェイスの setNCharacterStream メソッドによって指定されます。  
   
- このメソッドは、 **NCHAR**、 **NVARCHAR**、 **NTEXT**、および**XML**データ型に対して使用する必要があります。  
+ このメソッドは、**NCHAR**、**NVARCHAR**、**NTEXT**、**XML** の各データ型に対して使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [setNCharacterStream メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 99133efc-b1f2-46e9-8203-d90c324a8e4c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e206edda86a8143962a1d658d507fa88daad3e6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933483"
 ---
 # <a name="metadata-odbc"></a>メタデータ (ODBC)
   ここでは、パラメーター、列の結果、およびカタログ メタデータについて説明します。  
@@ -31,6 +30,6 @@ ms.locfileid: "62781232"
  `SQLColumns` および `SQLProcedureColumns` によって返される列のメタデータと、`SQLGetTypeInfo` によって返されるデータ型のメタデータについて説明します。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;の日付と時刻の改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -13,34 +13,32 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f302d5fec4c9089d764a99e1bb4798be82d8742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 278dd48749168495c2678e58e25ae732060b12fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750992"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>既存のトレースの変更 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、ストアド プロシージャを使用して既存のトレースを変更する方法について説明します。  
   
 ### <a name="to-modify-an-existing-trace"></a>既存のトレースを変更するには  
   
-1.  トレースが既に実行中の場合は、 **@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
+1.  トレースが既に実行中の場合は、**@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
   
 2.  トレース イベントを変更するには、パラメーターを使用して変更を指定し、 **sp_trace_setevent** を実行します。 パラメーターは次の順序で指定します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    -   **@traceid** (トレース ID)  
+    -   **\@traceid** (トレース ID)  
   
-    -   **@eventid** (イベント ID)  
+    -   **\@eventid** (イベント ID)  
   
-    -   **@columnid** (列 ID)  
+    -   **\@columnid** (列 ID)  
   
-    -   **@on** (ON)  
+    -   **\@on** (ON)  
   
-     **@on** パラメーターを変更する場合は、 **@columnid** パラメーターとの相互作用を考慮してください。  
+     **\@on** パラメーターを変更する場合は、 **\@columnid** パラメーターとの相互作用を考慮してください。  
   
     |ON|列 ID|結果|  
     |--------|---------------|------------|  

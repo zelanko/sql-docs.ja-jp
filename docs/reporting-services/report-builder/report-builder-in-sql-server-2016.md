@@ -1,5 +1,6 @@
 ---
 title: SQL Server のレポート ビルダー | Microsoft Docs
+description: レポート ビルダーは、ページ分割されたレポートを作成するためのツールです。 レポートを作成するには、取得するデータ、それを取得する場所、表示方法を指定します。
 ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688511"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290894"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server のレポート ビルダー
 
@@ -30,21 +31,21 @@ ms.locfileid: "67688511"
   
  この改ページ調整されたレポートでは、行グループ、列グループ、スパークライン、インジケーター、およびコーナー セルの概要円グラフが含まれたマトリックスが使用されています。色と円サイズで表される 2 組の地理データが含まれた地図も使用されています。  
   
-##  <a name="JumpStartReptCreation"></a> レポート作成の開始  
+##  <a name="jump-start-report-creation"></a><a name="JumpStartReptCreation"></a> レポート作成の開始  
   
 -   **共有データセットから開始する**。 共有データセットは、共有データ ソースに基づくクエリで、ネイティブ モードまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに保存されます。  
   
 -   **テーブル、マトリックス、グラフの各ウィザードから開始**します。 データ ソース接続を選択したり、フィールドをドラッグ アンド ドロップしてデータセット クエリを作成したりできます。また、レイアウトとスタイルを選択して、レポートをカスタマイズできます。  
   
--   **マップ ウィザードから開始** して、地図や幾何図形を背景として集計データを表示するレポートを作成します。 マップ データには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリや Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの空間データを指定できます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing のマップ タイルの背景を追加することもできます。  
+-   **マップ ウィザードから開始** して、地図や幾何図形を背景として集計データを表示するレポートを作成します。 マップ データには、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリや Environmental Systems Research Institute, Inc.(ESRI) シェープファイルの空間データを指定できます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing のマップ タイルの背景を追加することもできます。  
   
 -   **レポート パーツからレポートの作成を開始する**。 レポート パーツとは、ネイティブ モードまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに個別にパブリッシュされたレポート アイテムです。 レポート パーツは、他のレポートに再利用できます。 テーブル、マトリックス、グラフ、画像などのレポート アイテムを、レポート パーツとしてパブリッシュできます。  
   
-##  <a name="DesignRept"></a> レポートのデザイン  
+##  <a name="design-your-report"></a><a name="DesignRept"></a> レポートのデザイン  
   
 -   **テーブル、マトリックス、グラフ、および自由形式のレポート レイアウトの改ページ調整されたレポートを作成します。** 列単位のデータにはテーブル形式のレポート、集約されたデータにはマトリックス形式のレポート (クロス集計レポートや PivotTable レポートなど)、グラフィック データにはグラフ形式のレポート、これ以外のすべてのデータには自由形式のレポートを作成します。 レポートでは、Web ベースの動的アプリケーションのリスト、グラフィック、およびコントロールと共に、他のレポートやグラフを埋め込むことができます。  
   
--   **さまざまなデータ ソースからレポートを作成します。** [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] マネージド データ プロバイダー、OLE DB プロバイダー、ODBC データ ソースのいずれかを含む任意のデータ ソースの種類のデータを使用してレポートを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion、およびその他のデータベースのリレーショナル データおよび多次元データを使用するレポートを作成できます。 XML データ処理拡張機能を使用すると、任意の XML データ ソースからデータを取得できます。 テーブル値関数を使用すると、カスタム データ ソースをデザインできます。  
+-   **さまざまなデータ ソースからレポートを作成します。** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] マネージド データ プロバイダー、OLE DB プロバイダー、ODBC データ ソースのいずれかを含む任意のデータ ソースの種類のデータを使用してレポートを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion、およびその他のデータベースのリレーショナル データおよび多次元データを使用するレポートを作成できます。 XML データ処理拡張機能を使用すると、任意の XML データ ソースからデータを取得できます。 テーブル値関数を使用すると、カスタム データ ソースをデザインできます。  
   
 -   **既存のレポートを変更します。** [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]を使用すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで作成されたレポートをカスタマイズおよび更新できます。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "67688511"
   
 -   外部コンテンツなど、**画像やその他のリソースを埋め込んだり参照したりします。**  
   
-##  <a name="ManageRpt"></a> レポートの管理  
+##  <a name="manage-your-report"></a><a name="ManageRpt"></a> レポートの管理  
   
 -   コンピューターまたはレポート サーバーに**レポートの定義を保存** し、そこでレポートを管理し、他のユーザーと共有します。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "67688511"
 
   [SQL Server Reporting Services とレポート ビルダーの新機能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   このバージョンの [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]の新機能について説明します。   
-  [チュートリアル: オフラインでのクイック グラフ レポートの作成](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [チュートリアル:オフラインでのクイック グラフ レポートの作成](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] とレポートの作成に使用できるウィザードを紹介します。 このチュートリアルには、作業用の一連のデータが用意されているため、データ ソースに接続せずに実習を開始できます。  
   
  [レポートの計画 (レポート ビルダー)](../../reporting-services/report-design/planning-a-report-report-builder.md)  
@@ -84,7 +85,7 @@ ms.locfileid: "67688511"
  [Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のドキュメント全体で使用する主要な概念について説明します。  
   
- [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)  
+ [レポート デザイン ビュー &#40;レポート ビルダー&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  レポート デザイン ビューの各ペインと領域について説明します。  
   
  [共有データセット デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)  

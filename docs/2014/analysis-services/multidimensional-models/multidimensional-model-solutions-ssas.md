@@ -1,5 +1,5 @@
 ---
-title: 多次元モデル ソリューション (SSAS) |Microsoft Docs
+title: 多次元モデルソリューション (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ab0103a32ef674a3521f7ce13be721a8ea60df8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073569"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546014"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>多次元モデル ソリューション (SSAS)
     
@@ -28,10 +27,10 @@ ms.locfileid: "66073569"
  [多次元モデル データベース &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを定義する方法について説明します。  
   
- [サポートされるデータ ソース&#40;SSAS 多次元&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [SSAS 多次元&#41;&#40;サポートされるデータソース](supported-data-sources-ssas-multidimensional.md)  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソース オブジェクトを定義する方法について説明します。  
   
- [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)  
+ [多次元モデル内のデータ ソース ビュー](data-source-views-in-multidimensional-models.md)  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でデータ ソース ビューを設計する方法について説明します。  
   
  [多次元モデル内のディメンション](dimensions-in-multidimensional-models.md)  
@@ -44,6 +43,6 @@ ms.locfileid: "66073569"
  既存のリレーショナル スキーマを使用せずに多次元データベース オブジェクトを設計する方法について説明します。  
   
  [Analysis Services のパーソナル化拡張機能](extending-olap/analysis-services-personalization-extensions.md)  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の Personalization Extensions をデザインする方法について説明します。  
+ のパーソナル化拡張機能をデザインする方法について説明し [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。  
   
   

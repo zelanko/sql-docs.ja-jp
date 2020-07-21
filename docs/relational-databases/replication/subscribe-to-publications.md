@@ -1,5 +1,6 @@
 ---
 title: パブリケーションのサブスクライブ | Microsoft Docs
+description: SQL Server レプリケーションでのサブスクリプションの種類、必要な種類の選択方法、およびサブスクリプションの作成方法について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5c1734fba82d819b9bce8e253d780d44952dbea7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765164"
 ---
 # <a name="subscribe-to-publications"></a>パブリケーションのサブスクライブ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   サブスクリプションとは、パブリケーションのデータとデータベース オブジェクトのコピーを要求することです。 サブスクリプションでは、受信するパブリケーションおよびパブリケーションの受信場所と受信時間が定義されます。 サブスクリプションを設計する場合は、エージェント処理を実行する場所を考慮してください。 選択するサブスクリプションの種類によって、エージェントが実行される場所が決まります。 プッシュ サブスクリプションではマージ エージェントまたはディストリビューション エージェントがディストリビューターで実行されるのに対し、プル サブスクリプションではサブスクライバーでエージェントが実行されます。 サブスクリプションの作成後にその種類を変更することはできません。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "68768356"
   
  **プッシュ サブスクリプションを作成するには**  
   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)  
+ [プッシュ サブスクリプションを作成する](../../relational-databases/replication/create-a-push-subscription.md)  
   
  **プッシュ サブスクリプションのプロパティを表示または変更するには**  
   

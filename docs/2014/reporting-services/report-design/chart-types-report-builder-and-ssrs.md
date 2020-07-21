@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106267"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>グラフの種類 (レポート ビルダーおよび SSRS)
@@ -34,22 +34,22 @@ ms.locfileid: "66106267"
   
 |グラフの種類|比率データの表示|株価データの表示|線形データの表示|複数値データの表示|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
-|[面グラフ (レポート ビルダーおよび SSRS)](area-charts-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")||  
-|[横棒グラフ (レポート ビルダーおよび SSRS)](bar-charts-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")||  
-|[データ バー](sparklines-and-data-bars-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")||  
-|[縦棒グラフ (レポート ビルダーおよび SSRS)](column-charts-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")||  
-|[折れ線グラフ (レポート ビルダーおよび SSRS)](line-charts-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")||  
-|[円グラフ (レポート ビルダーおよび SSRS)](pie-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||||  
-|[極座標グラフ (レポート ビルダーおよび SSRS)](polar-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||||  
-|[範囲グラフ (レポート ビルダーおよび SSRS)](range-charts-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")|![使用可能](../media/greencheck.gif "使用可能")|  
-|[散布図 (レポート ビルダーおよび SSRS)](scatter-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||![使用可能](../media/greencheck.gif "使用可能")||  
-|[図形グラフ (レポート ビルダーおよび SSRS)](shape-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||||  
-|[スパークライン](sparklines-and-data-bars-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")|![使用可能](../media/greencheck.gif "使用可能")|![使用可能](../media/greencheck.gif "使用可能")|![使用可能](../media/greencheck.gif "使用可能")|  
-|[株価チャート (レポート ビルダーおよび SSRS)](stock-charts-report-builder-and-ssrs.md)||![使用可能](../media/greencheck.gif "使用可能")||![使用可能](../media/greencheck.gif "使用可能")|  
+|[面グラフ (レポート ビルダーおよび SSRS)](area-charts-report-builder-and-ssrs.md)|||![利用可能](../media/greencheck.gif "利用可能")||  
+|[横棒グラフ (レポート ビルダーおよび SSRS)](bar-charts-report-builder-and-ssrs.md)|||![利用可能](../media/greencheck.gif "利用可能")||  
+|[データ バー](sparklines-and-data-bars-report-builder-and-ssrs.md)|||![利用可能](../media/greencheck.gif "利用可能")||  
+|[縦棒グラフ (レポート ビルダーおよび SSRS)](column-charts-report-builder-and-ssrs.md)|||![利用可能](../media/greencheck.gif "利用可能")||  
+|[折れ線グラフ (レポート ビルダーおよび SSRS)](line-charts-report-builder-and-ssrs.md)|||![利用可能](../media/greencheck.gif "利用可能")||  
+|[円グラフ &#40;レポート ビルダーおよび SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![利用可能](../media/greencheck.gif "利用可能")||||  
+|[極座標グラフ (レポート ビルダーおよび SSRS)](polar-charts-report-builder-and-ssrs.md)|![利用可能](../media/greencheck.gif "利用可能")||||  
+|[範囲グラフ (レポート ビルダーおよび SSRS)](range-charts-report-builder-and-ssrs.md)|||![利用可能](../media/greencheck.gif "利用可能")|![利用可能](../media/greencheck.gif "利用可能")|  
+|[散布図 (レポート ビルダーおよび SSRS)](scatter-charts-report-builder-and-ssrs.md)|![利用可能](../media/greencheck.gif "利用可能")||![利用可能](../media/greencheck.gif "利用可能")||  
+|[図形グラフ (レポート ビルダーおよび SSRS)](shape-charts-report-builder-and-ssrs.md)|![利用可能](../media/greencheck.gif "利用可能")||||  
+|[スパークライン](sparklines-and-data-bars-report-builder-and-ssrs.md)|![利用可能](../media/greencheck.gif "利用可能")|![利用可能](../media/greencheck.gif "利用可能")|![利用可能](../media/greencheck.gif "利用可能")|![利用可能](../media/greencheck.gif "利用可能")|  
+|[株価チャート (レポート ビルダーおよび SSRS)](stock-charts-report-builder-and-ssrs.md)||![利用可能](../media/greencheck.gif "利用可能")||![利用可能](../media/greencheck.gif "利用可能")|  
   
 ## <a name="see-also"></a>参照  
- [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)   
- [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [レポートへのグラフの追加 (レポート ビルダーおよび SSRS)](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [グラフ &#40;レポートビルダーと SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [グラフ内の空のデータポイントおよび Null データポイント &#40;レポートビルダーと SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5954a96ce62e74643087ee4723b1977b140bbf96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63064902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058319"
 ---
 # <a name="solutions-sql-server-management-studio"></a>ソリューション (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ソリューションは、1 つまたは複数の関連プロジェクトのコレクションです。 プロジェクトは、一般的に使用される管理スクリプトなどの関連ファイルを編成するために開発者が使用できるコンテナーです。  
@@ -52,9 +51,9 @@ ms.locfileid: "63064902"
 |ソリューション内のプロジェクト間で項目を移動する方法について説明します。|[ソリューションのアイテムの移動](move-items-in-a-solution.md)|  
 |ソリューションまたはソリューション内の項目の名前を変更する方法について説明します。|[ソリューションとプロジェクト アイテムの名前変更](rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>関連項目  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
- [プロジェクト&#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
+## <a name="see-also"></a>参照  
+ [ソリューション エクスプローラー](solution-explorer.md)   
+ [プロジェクト &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [ソリューション エクスプローラーのソース管理](../../database-engine/solution-explorer-source-control.md)  
   
   

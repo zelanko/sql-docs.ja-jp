@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 19b9b00c-330f-4dd3-9052-9d88bce83849
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 696a7d536dc3fbb64e08ae9ccef21adbc4d9954d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c789fb5017b8d64e450d424d4ffde7dd0db37dc5
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914924"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552107"
 ---
-# <a name="mssqlserver2522"></a>MSSQLSERVER_2522
+# <a name="mssqlserver_2522"></a>MSSQLSERVER_2522
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|2522|  
@@ -50,6 +49,6 @@ ms.locfileid: "62914924"
  問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
- 該当なし。 このエラーを自動的に修正することはできません。  
+ 適用不可。 このエラーを自動的に修正することはできません。  
   
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 575950a1bb98441240cb38fd387c3efb4872d23b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114473"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296286"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68114473"
 ![インポートおよびエクスポート ウィザードの [データベースの作成] ページ](../../integration-services/import-export-data/media/create-database.png "インポートおよびエクスポート ウィザードの [データベースの作成] ページ")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>新しいデータベースの名前を入力する  
-**[名前]**  
+**Name**  
  対象になる SQL Server データベースの名前を指定します。
  
 ### <a name="naming-requirements"></a>名前付けに関する要件
@@ -87,7 +87,7 @@ ms.locfileid: "68114473"
  **サイズで拡張する**  
  ログ ファイルの拡張を許可するサイズを MB 単位で指定します。  
 
-### <a name="more-info"></a>詳細
+### <a name="more-info"></a>詳細情報
 このページに表示されるファイル サイズ オプションの詳細については、「[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)」をご覧ください。 
 
 ## <a name="whats-next"></a>次の操作  

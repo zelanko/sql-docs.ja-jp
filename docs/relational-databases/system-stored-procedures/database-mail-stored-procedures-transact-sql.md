@@ -1,5 +1,5 @@
 ---
-title: データベース メールのストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
+title: データベースメールストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - e-mail [SQL Server], stored procedures
 - system stored procedures [SQL Server], mail
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 326f1634c19939c1d6044a2842474c4c7dd1c547
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6127fae185a556387d0469998c383445d74e6fc8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942372"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898173"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>データベース メール ストアド プロシージャ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステム ストアド プロシージャのインスタンス内から電子メール操作を実行に使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、のインスタンス内から電子メール操作を実行するために使用される次のシステムストアドプロシージャをサポートしてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-## <a name="database-mail-procedures"></a>データベース メール プロシージャ  
+## <a name="database-mail-procedures"></a>データベースメールプロシージャ  
   
 |||  
 |-|-|  

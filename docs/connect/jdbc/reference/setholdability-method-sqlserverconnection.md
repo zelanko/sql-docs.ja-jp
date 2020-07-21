@@ -1,5 +1,5 @@
 ---
-title: setHoldability メソッド (SQLServerConnection) |Microsoft Docs
+title: setHoldability メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe53c38e1b3f1633be27f4c82a9c2edfe9820495
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68213665"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability メソッド (SQLServerConnection)
@@ -46,8 +46,8 @@ public void setHoldability(int nNewHold)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setHoldability メソッドは、setHoldability インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setHoldability メソッドは、java.sql.Connection インターフェイスの setHoldability メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

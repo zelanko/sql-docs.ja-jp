@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9470b5e4a9e7283930a38c393a4117333fb0fb08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f1221d85e40fc3bd8e05137a808f0873a404179a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992932"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915678"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "67992932"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |---------|---------------|  
 |[サーバーへの接続](../../connect/php/connecting-to-the-server.md)|SQL Server に接続するためのオプションと手順について説明します。|  
 |[実行関数の比較](../../connect/php/comparing-execution-functions.md)|それぞれに対して異なるユース ケースを試し、クエリの実行に使用する関数を比較します。 特に、このドキュメントでは、単一クエリの実行と、準備されたクエリの複数回の実行を比較します。|  

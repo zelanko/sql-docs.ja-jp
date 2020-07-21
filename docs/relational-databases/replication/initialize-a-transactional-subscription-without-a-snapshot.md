@@ -1,6 +1,7 @@
 ---
-title: スナップショットを使用しないトランザクション サブスクリプションの初期化 | Microsoft Docs
-ms.custom: ''
+title: スナップショットを使用しないサブスクリプションの初期化 (トランザクション)
+description: SQL Server のスナップショットを使用せずに、トランザクション レプリケーションを初期化する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: aeee5d947a2af0f58030ce6ba94091df10d56c49
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 992a95f793611094971e894c6a974b959bce8ca7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790804"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>スナップショットを使用しないトランザクション サブスクリプションの初期化
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   トランザクション パブリケーションへのサブスクリプションは、既定ではスナップショットを使用して初期化されます。このスナップショットはスナップショット エージェントによって生成され、ディストリビューション エージェントによって適用されます。 初期データセットが大規模な場合など、状況によっては、別の方法でサブスクリプションを初期化するのが望ましい場合があります。 サブスクライバーを初期化する他の方法としては、以下のものがあります。  
   
 -   バックアップを指定する方法。 サブスクライバー上でバックアップを復元してから、ディストリビューション エージェントにより、必要なレプリケーション メタデータとシステム プロシージャがコピーされます。 バックアップを使用した初期化は、サブスクライバーにデータを配信する最も高速な方法であり便利です。バックアップを使用した初期化をパブリケーションで有効にした後で取得したバックアップであれば、どのバックアップでも使用できます。  
@@ -46,7 +47,7 @@ ms.locfileid: "68767774"
   
  バックアップを使用してサブスクリプションを初期化するには、まずパブリケーションを作成する際にオプションを有効にし、さらにサブスクリプションを作成する際にいくつかのオプションに値を指定する必要があります。 パブリケーションは、パブリケーションの新規作成ウィザードかプログラムで有効にできます。 ただし、サブスクリプション オプションで必要な値は、プログラムでしか指定できません。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[トランザクション パブリケーションに対してバックアップを使用した初期化を有効にする &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [トランザクション パブリケーションに対してバックアップを使用した初期化を有効にする &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   レプリケーション Transact-SQL プログラミング: [トランザクション サブスクリプションのバックアップからの初期化 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   
@@ -76,6 +77,6 @@ ms.locfileid: "68767774"
  代替手段を使用してサブスクリプションを初期化するには、「 [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [サブスクリプションの初期化](../../relational-databases/replication/initialize-a-subscription.md)  
+ [サブスクリプションを初期化する](../../relational-databases/replication/initialize-a-subscription.md)  
   
   

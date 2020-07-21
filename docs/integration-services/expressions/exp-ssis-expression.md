@@ -11,14 +11,14 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d98032d040c29e8c1455bbc0e037f920a8588e4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f53939adac7e0593245c4dfd35222696961a83b8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080951"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71289774"
 ---
 # <a name="exp-ssis-expression"></a>EXP (SSIS 式)
 
@@ -41,7 +41,7 @@ EXP(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  数値式は、指数の計算前に DT_R8 データ型にキャストされます。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
  返される結果は、常に正の数値です。  

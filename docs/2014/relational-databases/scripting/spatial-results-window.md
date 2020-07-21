@@ -1,21 +1,20 @@
 ---
-title: '[空間結果] ウィンドウ | Microsoft Docs'
-ms.custom: ''
+title: '[空間結果] ウィンドウ'
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 606ac348ce4ee7bed65a7bcbe6d7ebbbd0a7f87d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d4a438cdaf0025397faec463f99e91a4c349d1b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048995"
 ---
 # <a name="spatial-results-window"></a>[空間結果] ウィンドウ
   **[空間結果]** ウィンドウには、空間データを表示するための視覚的なマッピング ツールが用意されています。 空間結果を表示するには、geometry 型または geography 型のデータを含む空間列がクエリ結果に含まれている必要があります。  
@@ -23,7 +22,7 @@ ms.locfileid: "66063800"
 > [!NOTE]  
 >  **[空間結果]** ウィンドウを使用できるのは、 **[結果]** ウィンドウ内のグリッドに結果が返される場合だけです。 結果がテキストとして返されるように設定すると、このウィンドウは使用できません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[空間列の選択]**  
  クエリ結果の空間列から、表示する空間列を指定します。 列は、一度に 1 つしか選択できません。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66063800"
  クエリで Point インスタンスのみが返される場合は、このオプションを使用できません。  
   
  **[投影の選択]**  
- geography 型のデータを、4 つの投影法のいずれかで表示します:正距円筒図法、メルカトル図法、ロビンソン図法、ボンヌ図法。  
+ geography 型のデータを、正距円筒図法、メルカトル図法、ロビンソン図法、ボンヌ図法という 4 つの投影法のいずれかで表示します。  
   
  このオプションは、geometry 型のデータには使用できません。  
   

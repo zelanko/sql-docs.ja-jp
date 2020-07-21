@@ -1,5 +1,5 @@
 ---
-title: 'sql: マッピング (SQLXML 4.0) |マイクロソフトのドキュメント'
+title: 'sql: マップ済み (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,17 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bec8be3253811018dac345abdefda8f560e9dc2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013474"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068228"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML 一括読み込みの処理、`sql:mapped`予想こととして、XSD スキーマで注釈は、マッピング スキーマが指定されている場合`sql:mapped="false"`の任意の要素または属性を使用して、XML 一括読み込みを試行しません、対応する列に関連付けられているデータを格納します。  
+  XML 一括読み込みで `sql:mapped` は、XSD スキーマの注釈が想定どおりに処理されます。つまり、マッピングスキーマで `sql:mapped="false"` 任意の要素または属性にが指定されている場合、Xml 一括読み込みでは、関連付けられたデータは対応する列に格納されません。  
   
  XML 一括読み込みでは、スキーマに記述されていないか、XSD スキーマで `sql:mapped="false"` 注釈が付けられているためマップされない要素と属性は無視されます。 `sql:overflow-field` を使用してオーバフロー列が指定されている場合、マップされないデータはすべてこの列に格納されます。  
   
@@ -53,11 +52,11 @@ ms.locfileid: "66013474"
 </xsd:schema>  
 ```  
   
- **HomePhone**属性を指定します`sql:mapped="false"`、XML 一括読み込みでは、この属性の対応する列にマップされません。 XSD スキーマ、オーバーフロー列を識別する (**OverflowColumn**) この未使用のデータを格納する XML 一括ロードします。  
+ **HomePhone**属性ではが指定されているため `sql:mapped="false"` 、XML 一括読み込みでは、この属性は対応する列にマップされません。 XSD スキーマでは、XML 一括読み込みでこの未使用データが格納されるオーバーフロー列 (**OverflowColumn**) が識別されます。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
-1.  次の表を作成、 **tempdb**データベース。  
+1.  次のテーブルを**tempdb**データベースに作成します。  
   
     ```  
     USE tempdb  
@@ -93,7 +92,7 @@ ms.locfileid: "66013474"
     set objBL=Nothing  
     ```  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  

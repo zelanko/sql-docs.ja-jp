@@ -1,5 +1,5 @@
 ---
-title: 介在する COMPUTE コマンドを使用してコマンドをパラメーター化された |Microsoft Docs
+title: パラメーター化されたコマンドと介在する COMPUTE コマンド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f66bde29a5036ed671f9af17bf5aab1df4acbca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924725"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764783"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>介在する COMPUTE コマンドを含むパラメーター化されたコマンド
-一般的なパラメーター化された shape の APPEND コマンドが親を作成する句を**レコード セット**クエリ コマンドと子を作成するもう 1 つの句**Recordset**でパラメーター化クエリ コマンド -パラメーターのプレース ホルダーを含むコマンドは、(、疑問符"?")。 シェイプ**レコード セット**親が上位のレベルを占有する 2 つのレベルがあり、子は、下位のレベルを占有します。  
+一般的なパラメーター化された shape APPEND コマンドには、クエリコマンドを使用して親**レコードセット**を作成する句と、パラメーター化されたクエリコマンドを使用して子**レコードセット**を作成する句があります。これは、パラメーターのプレースホルダー (疑問符 "?") を含むコマンドです。 結果の整形された**レコードセット**には、親が上位レベルを占め、子が下位レベルを占める2つのレベルがあります。  
   
- 子を作成する句**Recordset**が現在任意の数の図形を入れ子になったコンピューティング コマンドでは、最も深く入れ子になったコマンドにパラメーター化クエリが含まれています。 シェイプ**レコード セット**親が最上位のレベルを占有する、複数のレベルには、低位側のレベルと任意の数の子が占有**レコード セット**s によって生成された、コンピューティングの図形のコマンドは、介在するレベルを占有します。  
+ 子**レコードセット**を作成する句は、任意の数の入れ子になった shape COMPUTE コマンドにすることができます。この場合、最も深い入れ子になったコマンドにはパラメーター化クエリが含まれます。 結果の整形された**レコードセット**には複数のレベルがあり、親は最上位レベルを占め、子は lowermost レベルを占有し、shape COMPUTE コマンドによって生成される任意の数の**レコードセット**が、介在するレベルを占有します。  
   
- 介在するを作成するためのコマンドは、この機能を shapeCOMPUTE の能力をグループ化および集計関数を呼び出す一般的な使用**Recordset**子に関する分析情報を持つオブジェクト**レコード セット**. さらに、これはパラメーター化された図形コマンドであるため、毎回、親のチャプター列は、新しい子**Recordset**を取得できます。 間のレベルは、子から派生した、ため、これらも再計算されます。  
+ この機能の一般的な用途は、shapeCOMPUTE コマンドの集計関数とグループ化の機能を呼び出して、子**レコードセット**に関する分析情報を含む中間**レコードセット**オブジェクトを作成することです。 さらに、これはパラメーター化された shape コマンドであるため、親のチャプター列にアクセスするたびに、新しい子**レコードセット**が取得される場合があります。 介在するレベルは子から派生しているので、再計算されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)

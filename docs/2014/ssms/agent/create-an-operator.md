@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfe07042f9a4b8ac595ada8b86e7bad131032700
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63136418"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067789"
 ---
 # <a name="create-an-operator"></a>オペレーターの作成
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブに関する通知を受信するようにユーザーを構成する方法について説明します。  
+  このトピック [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は、またはを使用して、でエージェントジョブに関する通知を受信するようにユーザーを構成する方法について説明し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。  
   
  **このトピックの内容**  
   
@@ -41,22 +40,22 @@ ms.locfileid: "63136418"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
+-   ポケットベルと**net send**のオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンでエージェントから削除される予定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
 -   SQL Server エージェントは、データベース メールを使用して、電子メールおよびポケットベルによる通知をオペレーターへ送信するように構成する必要があります。 詳細については、「 [オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)」を参照してください。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  オペレーターを作成できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-an-operator"></a>オペレーターを作成するには  
   
@@ -103,16 +102,16 @@ ms.locfileid: "63136418"
      **ジョブ**  
      インスタンス内のジョブを表示します。  
   
-     **[警告の一覧]**  
+     **アラートの一覧**  
      インスタンス内の警告を一覧表示します。  
   
-     **[ジョブ一覧]**  
+     **ジョブ一覧**  
      インスタンス内のジョブを一覧表示します。  
   
-     **電子メール**  
+     **メッセージ**  
      電子メールを使用してこのオペレーターに通知します。  
   
-     **ポケットベル**  
+     **ポケット**  
      電子メールをポケット ベルに送信することによって、このオペレーターに通知します。  
   
      **Net send**  
@@ -120,7 +119,7 @@ ms.locfileid: "63136418"
   
 4.  新しいオペレーターの作成が完了したら、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-an-operator"></a>オペレーターを作成するには  
   
@@ -147,6 +146,6 @@ ms.locfileid: "63136418"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql)します。  
+ 詳細については、「 [sp_add_operator &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql)」を参照してください。  
   
   

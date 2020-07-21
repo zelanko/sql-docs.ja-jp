@@ -1,21 +1,22 @@
 ---
-title: JDBC ドライバーでの一括コピーの使用 | Microsoft Docs
+title: JDBC ドライバーでの一括コピーの使用
+description: SQLServerBulkCopy クラスを使用すると、標準の JDBC API よりも大幅にパフォーマンスが向上するデータ読み込みソリューションを Java で記述することができます。
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 499504d3cc238b10b62fe9dc554c77ebf72ec4b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 945bdaf05c9a10e3ab72b11e0049c6053dd108b5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003999"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634022"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC ドライバーでの一括コピーの使用
 
@@ -117,7 +118,7 @@ SQL Server の一括コピー操作を実行する最も簡単な方法は、デ
   
 > [!NOTE]  
 > エラーの発生時に一括コピー処理の全部または一部をロールバックする必要がある場合は、SQLServerBulkCopy により管理されるトランザクションを使用するか、既存のトランザクション内で一括コピー操作を実行できます。  
-> 詳細については、「[トランザクションと一括コピー操作](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#transaction-and-bulk-copy-operations)」を参照してください。  
+> 詳細については、「[トランザクションと一括コピー操作](#transaction-and-bulk-copy-operations)」を参照してください。  
   
  通常、一括コピー操作の実行手順は次のようになります。  
   
@@ -143,7 +144,7 @@ SQL Server の一括コピー操作を実行する最も簡単な方法は、デ
 次のアプリケーションでは、SQLServerBulkCopy クラスを使用してデータを読み込む方法を示します。 この例では、ResultSet を使用し、SQL Server の AdventureWorks データベースに格納された Production.Product テーブルのデータを、同じデータベース内の同等のテーブルにコピーします。  
   
 > [!IMPORTANT]  
-> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すればより簡単かつ高速にデータをコピーすることができます。  
+> このサンプルは、「[テーブルのセットアップ](#table-setup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すればより簡単かつ高速にデータをコピーすることができます。  
 
 ```java
 import java.sql.Connection;
@@ -237,7 +238,7 @@ SQLServerBulkCopy クラスの単一のインスタンスを使用して、一�
 同じ SQLServerBulkCopy オブジェクトを使用して一括コピー操作を複数回実行する場合、コピー元またはコピー先の情報が各操作ごとに一致しているか異なっているかに関する制限はありません。 ただし、サーバーに書き込み処理を行うときは、列の関連付け情報を毎回正しく設定する必要があります。  
   
 > [!IMPORTANT]  
-> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すればより簡単かつ高速にデータをコピーすることができます。  
+> このサンプルは、「[テーブルのセットアップ](#table-setup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すればより簡単かつ高速にデータをコピーすることができます。  
 
 ```java
 import java.sql.Connection;
@@ -366,7 +367,7 @@ public class BulkCopyMultiple {
 この一括コピー操作は、**BatchSize** プロパティを 10 に設定して実行されます。 操作中に無効な行が検出されると、例外がスローされます。 次に示す最初の例の一括コピー操作はトランザクション処理ではありません。 エラー発生ポイントまでにコピーされたバッチはすべてコミットされ、重複キーが含まれるバッチはロールバックされます。また、一括コピー操作は、他のバッチを処理する前に中止されます。  
   
 > [!NOTE]  
-> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すればより簡単かつ高速にデータをコピーすることができます。  
+> このサンプルは、「[テーブルのセットアップ](#table-setup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すればより簡単かつ高速にデータをコピーすることができます。  
 
 ```java
 import java.sql.Connection;
@@ -475,7 +476,7 @@ copyOptions.setUseInternalTransaction(true);
 次のアプリケーションは、**BulkCopyNonTransacted** と似ていますが、一括コピー操作がより大きな外部トランザクションに含まれている点が異なります。 主キー違反エラーが発生した場合、トランザクション全体がロールバックされ、コピー先のテーブルに行は追加されません。
 
 > [!NOTE]  
-> このサンプルは、「[テーブルのセットアップ](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すればより簡単かつ高速にデータをコピーすることができます。  
+> このサンプルは、「[テーブルのセットアップ](#table-setup)」で説明しているように作業テーブルを作成してからでないと動作しません。 このコードでは、SQLServerBulkCopy のみを使用する構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server のインスタンス内に存在する場合、Transact-SQL INSERT ...SELECT ステートメントを使用すればより簡単かつ高速にデータをコピーすることができます。  
 
 ```java
 import java.sql.Connection;
@@ -570,7 +571,7 @@ public class BulkCopyExistingTransactions {
  次のアプリケーションでは、SQLServerBulkCopy クラスを使用してデータを読み込む方法を示します。 この例では、CSV ファイルを使用し、SQL Server の AdventureWorks データベース内の Production.Product テーブルからエクスポートされたデータを、このデータベース内の同等のテーブルにコピーします。  
   
 > [!IMPORTANT]  
-> このサンプルは、「[テーブルのセットアップ](../../ssms/download-sql-server-management-studio-ssms.md)」で説明しているように作業テーブルを作成して取得してからでないと動作しません。  
+> このサンプルは、「[テーブルのセットアップ](#table-setup)」で説明しているように作業テーブルを作成して取得してからでないと動作しません。  
   
 1. **SQL Server Management Studio** を開き、AdventureWorks データベースを含む SQL Server に接続します。  
   
@@ -582,7 +583,7 @@ public class BulkCopyExistingTransactions {
   
 5. **[転送するデータを指定するためのクエリを記述する]** をオンにして、 **[次へ]** をクリックします。  **SQL ステートメント**の SELECT ProductID、Name、ProductNumber FROM Production.Product を入力し、 **[次へ]** をクリックします。  
   
-6. 構成の確認: 行区切り記号を {CR}{LF}、列区切り記号をコンマ {,} にしておくことができます。  **[マッピングの編集]** を選択し ... 各列のデータの **[型]** が適切かどうか (ProductID には整数、他は Unicode 文字列など) を確認します。  
+6. 次のように構成を確認します。行区切り記号を {CR}{LF}、列区切り記号をコンマ {,} にしておくことができます。  **[マッピングの編集]** を選択し ... 各列のデータの **[型]** が適切かどうか (ProductID には整数、他は Unicode 文字列など) を確認します。  
   
 7. **[完了]** に進んで、エクスポートを実行します。  
 
@@ -658,7 +659,7 @@ Microsoft JDBC Driver 6.0 for SQL Server 以降では、[Always Encrypted] 列�
   
 一括コピーのオプションと、コピー元およびコピー先テーブルの暗号化の種類によっては、JDBC ドライバーはデータを透過的に復号し、暗号化することがあります。あるいは、暗号化されたデータをそのまま送信することがあります。 たとえば、暗号化されている列から暗号化されていない列にデータを一括コピーするとき、このドライバーは SQL Server に送信する前にデータを透過的に復号します。 同様に、暗号化されていない列から (あるいは、CSV ファイルから) 暗号化されている列にデータを一括コピーするとき、このドライバーは SQL Server に送信する前にデータを透過的に復号します。 コピー元とコピー先の両方が暗号化されている場合、**allowEncryptedValueModifications** 一括コピー オプションによっては、このドライバーはデータをそのまま送信するか、復号し、再び暗号化してから SQL Server に送信します。  
   
-詳細については、下の **allowEncryptedValueModifications** 一括コピー オプションと「[JDBC ドライバーで Always Encrypted を使用する](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)」を参照してください。  
+詳細については、下の **allowEncryptedValueModifications** 一括コピー オプションと「[JDBC ドライバーで Always Encrypted を使用する](using-always-encrypted-with-the-jdbc-driver.md)」を参照してください。  
   
 > [!IMPORTANT]  
 > CSV ファイルから暗号化されている列にデータを一括コピーするときの Microsoft JDBC Driver 6.0 for SQL Server の制限:  
@@ -677,17 +678,17 @@ Microsoft SQL Server には、単一のサーバー上または複数のサー�
   
 SQLServerBulkCopy クラスは、SQL Server テーブルのみにデータを書き込む場合に使用できます。 ただし、データ ソースが SQL Server に制限されているわけではありません。ResultSet インスタンスか ISQLServerBulkRecord の実装で読み取れるデータであれば、任意のデータ ソースを使用できます。  
   
-| コンストラクター                             | [説明]                                                                                                                                                                                                                    |
+| Constructor                             | 説明                                                                                                                                                                                                                    |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | SQLServerBulkCopy(Connection)           | SQLServerConnection の指定した開いているインスタンスを使用して、SQLServerBulkCopy クラスの新しいインスタンスを初期化します。 接続でトランザクションが有効になっている場合、コピー操作はそのトランザクション内で実行されます。 |
 | SQLServerBulkCopy(String connectionURL) | 指定された connectionURL に基づき、SQLServerConnection の新しいインスタンスを初期化して開きます。 コンストラクターは SQLServerConnection を使用して、SQLServerBulkCopy クラスの新しいインスタンスを初期化します。                     |
   
-| プロパティ                    | [説明]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| プロパティ                    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | String DestinationTableName | サーバー上にあるコピー先のテーブルの名前。<br /><br /> DestinationTableName が設定されていない場合、WriteToServer が呼び出されると、SQLServerException がスローされます。<br /><br /> DestinationTableName は、3 つの部分 (\<database>.\<owningschema>.\<name>) で構成されています。 必要に応じ、テーブル名をデータベースと所有しているスキーマで修飾することができます。 ただし、テーブル名にアンダースコア ("_") またはその他の特殊文字を使用する場合は、角かっこで囲んで、名前をエスケープする必要があります。 詳細については、SQL Server オンライン ブックの「識別子」をご覧ください。 |
 | ColumnMappings              | 列のマッピングでは、データ ソース内の列とコピー先の列の間の関係を定義します。<br /><br /> マッピングが定義されていない場合、列は序数の位置に基づいて暗黙的にマップされます。 これを行うには、コピー元のスキーマとコピー先のスキーマが一致する必要があります。 一致しない場合、例外がスローされます。<br /><br /> マッピングが空でない場合、データ ソースに存在するすべての列を指定する必要はありません。 マップされていない列は無視されます。<br /><br /> コピー元とコピー先の列は、名前か序数のいずれかで参照できます。               |
   
-| 方法                                                                | [説明]                                                                                                                                                                |
+| Method                                                                | 説明                                                                                                                                                                |
 | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Void addColumnMapping((int sourceColumn, int destinationColumn)       | 序数を使用してコピー元とコピー先の両方の列を指定する、新しい列マッピングを追加します。                                                                                  |
 | Void addColumnMapping ((int sourceColumn, String destinationColumn)   | コピー元の列の序数とコピー先の列の列名を使用する、新しい列マッピングを追加します。                                                            |
@@ -707,13 +708,13 @@ SQLServerBulkCopy クラスは、SQL Server テーブルのみにデータを書
 
  SQLServerBulkCopy インスタンス内の writeToServer メソッドの動作を制御する設定のコレクション。  
   
-| コンストラクター                | [説明]                                                                                              |
+| Constructor                | 説明                                                                                              |
 | -------------------------- | -------------------------------------------------------------------------------------------------------- |
 | SQLServerBulkCopyOptions() | すべての設定に既定値を使用して SQLServerBulkCopyOptions クラスの新しいインスタンスを初期化します。 |
   
  get アクセス操作子および set アクセス操作子は、次のオプションのために存在します。  
   
-| オプション                                   | [説明]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 既定                                                              |
+| オプション                                   | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Default                                                              |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | Boolean CheckConstraints                 | データが挿入される際の制約をチェックします。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | False - 制約はチェックされません                                   |
 | Boolean FireTriggers                     | このオプションを指定すると、データベースに挿入される行に対する挿入トリガーがサーバーで発生します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | False - トリガーは発生しません。                                        |
@@ -723,11 +724,11 @@ SQLServerBulkCopy クラスは、SQL Server テーブルのみにデータを書
 | Boolean UseInternalTransaction           | 指定した場合、一括コピー操作の各バッチがトランザクション内で発生します。 SQLServerBulkCopy がコンストラクターで指定されている既存の接続を使用する場合、SQLServerException が発生します。  SQLServerBulkCopy で専用の接続が作成された場合、トランザクションが有効になります。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False - トランザクションなし                                               |
 | Int BatchSize                            | 各バッチに含まれる行数。 各バッチの最後に、バッチ内の行がサーバーに送信されます。<br /><br /> BatchSize 分の行が処理されるか、コピー先のデータ ソースに送信する行がなくなると、バッチは完了します。  UseInternalTransaction オプションを有効にせず、SQLServerBulkCopy インスタンスが宣言されている場合、行はサーバーの BatchSize 行に一度に送信されますが、トランザクション関連のアクションは実行されません。 UseInternalTransaction が有効になっている場合は、行の各バッチが個別のトランザクションとして挿入されます。                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0 - 各 writeToServer 操作が 1 つのバッチであることを示します    |
 | Int BulkCopyTimeout                      | タイムアウトになる前に完了する操作の秒数。値 0 は無制限を意味しており、一括コピーは無期限に待機します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60 秒。                                                          |
-| Boolean allowEncryptedValueModifications | このオプションは、Microsoft JDBC Driver 6.0 (以降) for SQL Server で利用できます。<br /><br /> **allowEncryptedValueModifications** を指定すると、データを復号することなく、テーブル間またはデータベース間で暗号化されたデータを一括コピーできます。 一般的に、アプリケーションはデータを復号せずに 1 つのテーブルの暗号化された列からデータを選択し (アプリは、列の暗号化設定キーワードを無効に設定しているデータベースに接続します)、それからこのオプションを使用し、依然として暗号化されたままのデータを一括挿入します。 詳細については、「[JDBC ドライバーでの Always Encrypted の使用](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)」を参照してください。<br /><br /> データベースが破損する可能性があるので、**allowEncryptedValueModifications** を指定する際には注意が必要です。これは、データが実際に暗号化されているかどうか、またはターゲット列と同じ暗号化のタイプ、アルゴリズム、およびキーを使用して正しく暗号化されているかどうかを、ドライバーがチェックしないためです。 |
+| Boolean allowEncryptedValueModifications | このオプションは、Microsoft JDBC Driver 6.0 (以降) for SQL Server で利用できます。<br /><br /> **allowEncryptedValueModifications** を指定すると、データを復号することなく、テーブル間またはデータベース間で暗号化されたデータを一括コピーできます。 一般的に、アプリケーションはデータを復号せずに 1 つのテーブルの暗号化された列からデータを選択し (アプリは、列の暗号化設定キーワードを無効に設定しているデータベースに接続します)、それからこのオプションを使用し、依然として暗号化されたままのデータを一括挿入します。 詳細については、「[JDBC ドライバーでの Always Encrypted の使用](using-always-encrypted-with-the-jdbc-driver.md)」を参照してください。<br /><br /> データベースが破損する可能性があるので、**allowEncryptedValueModifications** を指定する際には注意が必要です。これは、データが実際に暗号化されているかどうか、またはターゲット列と同じ暗号化のタイプ、アルゴリズム、およびキーを使用して正しく暗号化されているかどうかを、ドライバーがチェックしないためです。 |
   
  ゲッターとセッター:  
   
-| メソッド                                                                            | [説明]                                                                                                                                                                               |
+| メソッド                                                                            | 説明                                                                                                                                                                               |
 | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Boolean isCheckConstraints()                                                       | データの挿入中、制約を確認するかどうかを示します。                                                                                                      |
 | Void setCheckConstraints(Boolean checkConstraints)                                 | データの挿入中、制約を確認するかどうかを設定します。                                                                                                           |
@@ -752,7 +753,7 @@ SQLServerBulkCopy クラスは、SQL Server テーブルのみにデータを書
 
  ISQLServerBulkRecord インターフェイスを使用すると、ファイルなどの任意のソースからデータを読み取るクラスを作成して、SQLServerBulkCopy インスタンスでそのデータを含む SQL Server テーブルを一括して読み込むことができます。  
   
-| インターフェイス メソッド                   | [説明]                                                                                                                                                                                                                                                                                            |
+| インターフェイス メソッド                   | 説明                                                                                                                                                                                                                                                                                            |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Set\<Integer> getColumnOrdinals()   | このデータ レコード内に表示される各列の序数を取得します。                                                                                                                                                                                                                              |
 | String getColumnName(int column)    | 指定した列の名前を取得します。                                                                                                                                                                                                                                                                      |
@@ -779,13 +780,13 @@ SQLServerBulkCopy クラスは、SQL Server テーブルのみにデータを書
   
 5. 改行文字は行ターミネータとして使用され、データ内には使用できません。  
   
-| コンストラクター                                                                                                                                                                 | [説明]                                                                                                                                                                                                                                                                                                                        |
+| Constructor                                                                                                                                                                 | 説明                                                                                                                                                                                                                                                                                                                        |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SQLServerBulkCSVFileRecord(String fileToParse, String encoding, String delimiter, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, String, String, boolean) | 指定された区切り記号とエンコードを使用して fileToParse 内の各行を解析する SQLServerBulkCSVFileRecord クラスの新しいインスタンスを初期化します。 FirstLineIsColumnNames が True に設定されている場合、ファイルの最初の行は列名として解析されます。  エンコードが NULL の場合、既定のエンコードが使用されます。            |
 | SQLServerBulkCSVFileRecord(String fileToParse, String encoding, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, String, boolean)                           | コンマを区切り記号とし、指定されたエンコードを使用して fileToParse 内の各行を解析する SQLServerBulkCSVFileRecord クラスの新しいインスタンスを初期化します。 FirstLineIsColumnNames が True に設定されている場合、ファイルの最初の行は列名として解析されます。  エンコードが NULL の場合、既定のエンコードが使用されます。 |
 | SQLServerBulkCSVFileRecord(String fileToParse, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, boolean)                                                    | コンマを区切り記号とし、既定のエンコードを使用して fileToParse 内の各行を解析する SQLServerBulkCSVFileRecord クラスの新しいインスタンスを初期化します。 FirstLineIsColumnNames が True に設定されている場合、ファイルの最初の行は列名として解析されます。                                                           |
   
-| 方法                                                                                                 | [説明]                                                                                         |
+| Method                                                                                                 | 説明                                                                                         |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
 | Void addColumnMetadata(int positionInFile, String columnName, int jdbcType, int precision, int scale)  | ファイル内の指定した列にメタデータを追加します。                                                     |
 | Void close()                                                                                           | ファイル リーダーに関連付けられている任意のリソースを解放します。                                             |
@@ -794,6 +795,6 @@ SQLServerBulkCopy クラスは、SQL Server テーブルのみにデータを書
 | Void setTimeWithTimezoneFormat(DateTimeForm atter dateTimeFormatter)                                   | ファイルからのタイム データを java.sql.Types.TIME_WITH_TIMEZONE として解析するための書式を設定します。           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | ファイルからのタイム データを java.sql.Types.TIME_WITH_TIMEZONE として解析するための書式を設定します。           |
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
-[JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC ドライバーの概要](overview-of-the-jdbc-driver.md)  

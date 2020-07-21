@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062225"
 ---
 # <a name="manage-job-steps"></a>ジョブ ステップの管理
   ジョブ ステップは、ジョブがデータベースまたはサーバーで行う処理です。 すべてのジョブには、最低 1 つのジョブ ステップを含める必要があります。 ジョブ ステップには次のような種類があります。  
@@ -57,7 +56,7 @@ ms.locfileid: "68893132"
   
 -   実行可能プログラムまたはオペレーティング システムのコマンド。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのいずれでもサポートされません。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント。  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] タスク。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "68893132"
   
 -   コマンドが正常に終了した場合に返されるプロセス終了コード。  
   
--   実行するコマンド。 オペレーティング システム コマンドを実行する場合、これはコマンド自体を指します。 外部プログラムの場合は、これはプログラムの名前とプログラムの引数になります。例:**C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   実行するコマンドです。 オペレーティング システム コマンドを実行する場合、これはコマンド自体を指します。 外部プログラムの場合は、 **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"** など、プログラム名とそのプログラムの引数を指します。  
   
     > [!NOTE]  
     >  システム パスまたはジョブ ステップの実行ユーザーのパスで指定されたディレクトリ内に、実行可能ファイルが存在しない場合は、実行可能ファイルの完全パスを指定する必要があります。  
@@ -101,7 +100,7 @@ ms.locfileid: "68893132"
   
 -   開く対象の既存の PowerShell スクリプト ファイル。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの PowerShell サブシステムは、PowerShell セッションを開いて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell スナップインを読み込みます。ジョブ ステップ コマンドとして使用される PowerShell スクリプトでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーおよびコマンドレットを参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell スナップインを使用した PowerShell スクリプトの作成の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントの powershell サブシステムが powershell セッションを開き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell スナップインを読み込みます。ジョブステップコマンドとして使用される PowerShell スクリプトでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell プロバイダーおよびコマンドレットを参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell スナップインを使用した PowerShell スクリプトの作成の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」を参照してください。  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX スクリプティング ジョブ ステップ  
   
@@ -128,8 +127,7 @@ oServer.LoginSecure = True
 oServer.Connect "(local)"  
 'Disconnect and destroy the server object  
 oServer.DisConnect  
-Set oServer = nothing  
-  
+Set oServer = nothing
 ```  
   
 ## <a name="replication-job-steps"></a>レプリケーション ジョブ ステップ  
@@ -157,7 +155,7 @@ Set oServer = nothing
   
 -   ジョブ ステップが実行される OLAP サーバーのデータベースを特定します。  
   
--   実行するステートメントを入力します。 ステートメントは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** メソッドの XML である必要があります。 ステートメントには、完全な SOAP エンベロープまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** メソッドの XML が含まれていない可能性があります。 SOAP エンベロープおよび [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Discover **メソッドは、** ではサポートされていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップではサポートされていません。  
+-   実行するステートメントを入力します。 ステートメントは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** メソッドの XML である必要があります。 ステートメントには、完全な SOAP エンベロープまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** メソッドの XML が含まれていない可能性があります。 SOAP エンベロープおよび [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Discover **メソッドは、** ではサポートされていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップではサポートされていません。  
   
 ### <a name="analysis-services-query-job-steps"></a>Analysis Services クエリ ジョブ ステップ  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] クエリ ジョブ ステップを作成するには、次の操作を行う必要があります。  
@@ -166,7 +164,7 @@ Set oServer = nothing
   
 -   実行するステートメントを入力します。 このステートメントでは、多次元式 (MDX) クエリを使用する必要があります。  
   
- MDX の詳細については、「 [Mdx &#40;クエリ&#41;の基礎 Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)」を参照してください。  
+ MDX の詳細については、「 [Mdx クエリの基礎 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)」を参照してください。  
   
 ## <a name="integration-services-packages"></a>Integration Services パッケージ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ジョブ ステップを作成するには、次の操作を行う必要があります。  
@@ -199,20 +197,18 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |実行可能プログラムを使用してジョブ ステップを作成する方法について説明します。|[CmdExec ジョブ ステップの作成](create-a-cmdexec-job-step.md)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアクセス許可をリセットする方法について説明します。|[SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアクセス許可をリセットする方法について説明します。|[Configure a User to Create and Manage SQL Server Agent Jobs](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップを作成する方法について説明します。|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
 |Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント Transact-SQL ジョブ ステップのオプションを定義する方法について説明します。|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
 |ActiveX スクリプト ジョブ ステップを作成する方法について説明します。|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Service のコマンドとクエリを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップを作成し、定義する方法について説明します。|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
 |ジョブの実行中にエラーが発生した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行する必要があるアクションについて説明します。|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
-|[ジョブ ステップのプロパティ] ダイアログ ボックスにジョブ ステップの詳細を表示する方法について説明します。|[ジョブ ステップ情報の表示](view-job-step-information.md)|  
+|[ジョブ ステップのプロパティ] ダイアログ ボックスにジョブ ステップの詳細を表示する方法について説明します。|[View Job Step Information](view-job-step-information.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップのログを削除する方法について説明します。|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>参照  
- [dbo. sysjobstepslogs &#40;transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [ジョブの作成](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
-  
-  

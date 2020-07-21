@@ -1,10 +1,9 @@
 ---
-title: クエリおよびビュー デザイナー ツール (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: クエリおよびビュー デザイナー ツール
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -22,18 +21,20 @@ helpviewer_keywords:
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8a1cbdc010f614c9b3cc72c1d3f9549b00ec8b2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: a146d1697c506aa031ab3e9551075cfba635e9b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266326"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255336"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>クエリおよびビュー デザイナー ツール (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 クエリ、ビュー、インライン関数、または単一ステートメント ストアド プロシージャをデザインするときに使用するデザイナーは、ダイアグラム ペイン、抽出条件ペイン、SQL ペイン、および結果ペインで構成されています。  
   
-![クエリ デザイナー](../../ssms/visual-db-tools/media/vs_queryviewdsgpanes.gif "クエリ デザイナー")  
+![クエリ デザイナー](../../ssms/visual-db-tools/media/vs_queryviewdsgpanes.gif "[クエリ デザイナー]")  
   
 -   ダイアグラム ペインには、問い合わせているテーブルおよび他のテーブル値オブジェクトが表示されます。 それぞれの四角形は、テーブルまたはテーブル値オブジェクトを表し、使用可能なデータ列を表示します。 結合は、四角形の間を結ぶ線で示されます。 詳細については、「[ダイアグラム ペイン (Visual Database Tools)](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)」を参照してください。  
   

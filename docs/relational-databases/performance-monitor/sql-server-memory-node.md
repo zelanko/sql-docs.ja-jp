@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 40014049e46f10778ede60e9f1597d740bde882f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfa8eb11b89919a3a1f151a0deddd24528631fe1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775793"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server、Memory Node
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Memory Node** オブジェクトには、NUMA ノードのサーバー メモリの使用状況を監視するためのカウンターが用意されています。  
   
 ## <a name="memory-node-counters"></a>Memory Node カウンター  
- 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Node** カウンターについて説明します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Node** カウンターについて説明します。  
   
-|SQL Server Memory Manager カウンター|[説明]|  
+|SQL Server Memory Manager カウンター|説明|  
 |----------------------------------------|-----------------|  
 |**Database Node Memory (KB)**|このノードでデータベース ページに現在使用しているメモリの量を指定します。|  
 |**Free Node Memory (KB)**|このノードの未使用のメモリの量を指定します。|  

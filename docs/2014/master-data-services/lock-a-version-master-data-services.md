@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e38a4c75ad6cf8c65d7120e0eb98163f7ee0fccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3048a3845e3e65c305abdde3f75a30f777ed1ed
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971282"
 ---
 # <a name="lock-a-version-master-data-services"></a>バージョンをロックする (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをロックして、モデルのメンバーおよびメンバーの属性に対する変更を防止します。  
@@ -31,7 +30,7 @@ ms.locfileid: "65482873"
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 -   バージョンのステータスは、 **[未処理]** である必要があります。  
   
@@ -51,8 +50,8 @@ ms.locfileid: "65482873"
   
 -   [バージョンをコミットする (マスター データ サービス)](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
- [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [バージョン &#40;マスターデータサービス&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [バージョンをロック解除する (マスター データ サービス)](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
   
   

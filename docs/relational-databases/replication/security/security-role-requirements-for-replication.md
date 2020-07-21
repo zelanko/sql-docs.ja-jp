@@ -1,5 +1,6 @@
 ---
 title: レプリケーションのセキュリティ ロール要件 | Microsoft Docs
+description: SQL Server の一般的なレプリケーション セットアップ タスクと一般的なレプリケーション メンテナンス タスクに必要な認証レベルについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c0b8d89fd9e276edfffd6635da1518aacef0a25c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bb98851eb2dc285c6eab404f862992e2c044c9df
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768421"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159460"
 ---
 # <a name="security-role-requirements-for-replication"></a>レプリケーションのセキュリティ ロール要件
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   レプリケーションでは、ユーザーのログインがマップされているロールに基づいて、ユーザーが実行できる操作が制限されます。 レプリケーションでは、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、およびパブリケーション アクセス リスト (PAL) 内のログインに、特定の権限が許可されています。  
   
 ## <a name="security-role-requirements-for-replication-setup"></a>レプリケーション セットアップのセキュリティ ロール要件  

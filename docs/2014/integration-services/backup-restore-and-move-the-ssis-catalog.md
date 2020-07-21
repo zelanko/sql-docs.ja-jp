@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9de552ddd54168f516f42d9988302561616fd65
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670508"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439369"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS カタログのバックアップ、復元、および移動
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] には SSISDB データベースが用意されています。 **SSISDB** カタログに格納されているオブジェクト、設定、および業務データを検査するには、SSISDB データベースのビューに対してクエリを実行します。 このトピックでは、データベースのバックアップと復元の手順について説明します。  
   
  **SSISDB** カタログは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置したパッケージを格納します。 カタログの詳細については、「 [SSIS カタログ](catalog/ssis-catalog.md)」を参照してください。  
   
-##  <a name="backup"></a> SSIS データベースをバックアップするには  
+##  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a> SSIS データベースをバックアップするには  
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに接続します。  
   
@@ -38,19 +37,19 @@ ms.locfileid: "68670508"
   
     ```  
   
-3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、[データベースをバックアップする方法 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812) に関する記事をご覧ください。  
+3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、「 [データベースをバックアップする方法 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)」を参照してください。  
   
 4.  次の手順を実行して、##MS_SSISServerCleanupJobLogin## の CREATE LOGIN スクリプトを生成します。 詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)」を参照してください。  
   
-    1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで、 **[セキュリティ]** ノードを展開し、 **[ログイン]** ノードを展開します。  
+    1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 **[セキュリティ]** ノードを展開し、 **[ログイン]** ノードを展開します。  
   
-    2.  **[##MS_SSISServerCleanupJobLogin##]** を右クリックし、 **[ログインをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+    2.  **[##MS_SSISServerCleanupJobLogin##]** を右クリックし、 **[ログインをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 5.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、次の操作を行って、sp_ssis_startup の CREATE PROCEDURE スクリプトを生成します。 詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)」を参照してください。  
   
-    1.  オブジェクトエクスプローラーで、 **[データベース]** ノードを展開し、 **[システムデータベース** > ] [**master** > ] [**プログラミング** > ] **[ストアドプロシージャ]** ノードの順に展開します。  
+    1.  オブジェクトエクスプローラーで、[**データベース**] ノードを展開し、[**システムデータベース**] [master] [プログラミング] [  >  **master**  >  **Programmability**  >  **ストアドプロシージャ**] ノードの順に展開します。  
   
-    2.  **[dbo.sp_ssis_startup]** を右クリックし、 **[ストアド プロシージャをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+    2.  **[dbo.sp_ssis_startup]** を右クリックし、 **[ストアド プロシージャをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 6.  SQL Server エージェントが起動したことを確認します。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "68670508"
   
     1.  オブジェクト エクスプローラーで、 **[SQL Server エージェント]** ノードを展開し、 **[ジョブ]** ノードを展開します。  
   
-    2.  SSIS サーバー メンテナンス ジョブを右クリックし、 **[ジョブをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+    2.  [SSIS サーバーメンテナンスジョブ] を右クリックし、[ジョブをスクリプト化] をクリックし**て**  >  **CREATE To**  >  **新しいクエリエディターウィンドウ**を作成します。  
   
 ### <a name="to-restore-the-ssis-database"></a>SSIS データベースを復元するには  
   
@@ -89,7 +88,7 @@ ms.locfileid: "68670508"
   
     ```  
   
-3.  **の** [データベースの復元] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、バックアップから SSISDB データベースを復元します。 詳細については、次の各トピックを参照してください。  
+3.  **の** [データベースの復元] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、バックアップから SSISDB データベースを復元します。 詳しくは、次のトピックをご覧ください。  
   
     -   [[データベースの復元] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)  
   
@@ -105,11 +104,11 @@ ms.locfileid: "68670508"
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[ログインのプロパティ]** ダイアログ ボックスを使用して、SSISDB ユーザーの ##MS_SSISServerCleanupJobUser## (SSISDB database) を ##MS_SSISServerCleanupJobLogin## にマップします。  
+6.  **の** [ログインのプロパティ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、SSISDB ユーザーの ##MS_SSISServerCleanupJobUser## (SSISDB database) を ##MS_SSISServerCleanupJobLogin## にマップします。  
   
 7.  次のいずれかの方法を使用して、マスター キーを復元します。 暗号化の詳細については、「 [暗号化階層](../relational-databases/security/encryption/encryption-hierarchy.md)」を参照してください。  
   
-    -   **方法 1**  
+    -   **方法1**  
   
          この方法は、データベース マスター キーのバックアップが実行済みで、マスター キーの暗号化に使用するパスワードがある場合に使用します。  
   
@@ -127,11 +126,11 @@ ms.locfileid: "68670508"
         > [!NOTE]  
         >  データベース マスター キーがサービス マスター キーによって暗号化されていない場合、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には次の警告メッセージが表示されます。 この警告メッセージは無視してください。  
         >   
-        >  **現在のマスター キーは暗号化解除できません。FORCE オプションが指定されたので、エラーは無視されました。**  
+        >  **現在のマスターキーの暗号化を解除できません。FORCE オプションが指定されているため、エラーは無視されました。**  
         >   
         >  FORCE 引数は、現在のデータベース マスター キーが開いていない場合でも復元プロセスを続行するように指定します。 SSISDB カタログについては、データベースを復元するインスタンスでデータベース マスター キーが開いていないため、このメッセージが表示されます。  
   
-    -   **方法 2**  
+    -   **方法2**  
   
          この方法は、SSISDB の作成に使用した元のパスワードがある場合に使用します。  
   

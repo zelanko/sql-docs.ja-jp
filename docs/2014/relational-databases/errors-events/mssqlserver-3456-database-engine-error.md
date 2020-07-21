@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2077d736f15787fe35a4a18d5c03dbd9ddd36a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 129e1d8aa2725594871eaa48c2c983767eb46d73
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914291"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551557"
 ---
-# <a name="mssqlserver3456"></a>MSSQLSERVER_3456
+# <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|3456|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|REC_REDOLSNMISMATCH|  
-|メッセージ テキスト|トランザクション ID %S_XID、ページ %S_PGID、データベース '%.*ls' (データベース ID %d) のログ レコード %S_LSN を再実行できませんでした。 ページ:LSN = %S_LSN、型 = %ld。 ログ:OpCode = %ld、コンテキスト %ld、PrevPageLSN: %S_LSN。 データベースをバックアップから復元するか、データベースを修復してください。|  
+|メッセージ テキスト|トランザクション ID %S_XID、ページ %S_PGID、データベース '%.*ls' (データベース ID %d) のログ レコード %S_LSN を再実行できませんでした。 ページ:LSN = %S_LSN、型 = %ld。 Log:OpCode = %ld、コンテキスト %ld、PrevPageLSN: %S_LSN。 データベースをバックアップから復元するか、データベースを修復してください。|  
   
 ## <a name="explanation"></a>説明  
  復元操作で、トランザクション ログを再実行できませんでした。 このエラーによって、データベースは SUSPECT 状態になっています。 プライマリ ファイル グループ、また場合によってはその他のファイル グループには、問題があり、損傷している可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動中はデータベースを復旧できないため、データベースを使用できません。 問題を解決するには、ユーザーによる操作が必要です。  
@@ -44,7 +43,7 @@ ms.locfileid: "62914291"
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
+ [DBCC CHECKDB &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
  [データベースの全体復元 &#40;単純復旧モデル&#41;](../backup-restore/complete-database-restores-simple-recovery-model.md)   
  [MSSQLSERVER_824](mssqlserver-824-database-engine-error.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  

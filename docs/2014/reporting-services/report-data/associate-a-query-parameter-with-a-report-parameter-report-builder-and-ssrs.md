@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 697a8bbfa77a8afcabfdf00deef93620ff607233
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107468"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>クエリ パラメーターのレポート パラメーターへの関連付け (レポート ビルダーおよび SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66107468"
 3.  クエリ パラメーターを追加する場合は、手順 2. を繰り返します。  
   
 ## <a name="see-also"></a>参照  
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [レポート パラメーターの概念&#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [レポートパラメーターの概念 &#40;レポートビルダーと SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
   

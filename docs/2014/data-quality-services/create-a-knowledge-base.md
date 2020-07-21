@@ -12,30 +12,29 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2402a69f428fe0c9ba2359f100e2baf16e1a1d04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12da6306d7d67cee75fd8aec2397bc6b568ef3a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481004"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937903"
 ---
 # <a name="create-a-knowledge-base"></a>ナレッジ ベースの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースを作成し、ドメイン管理、ナレッジ検出、または照合ポリシーの追加の準備を行う方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  ナレッジ ベースを作成するには、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] と [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]をインストールしている必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ナレッジ ベースを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Createaknowledgebase"></a> Create a knowledge base  
+##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a>ナレッジベースの作成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../../2014/data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../../2014/data-quality-services/run-the-data-quality-client-application.md)します。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[新しいナレッジ ベース]** をクリックします。  
   
@@ -57,9 +56,9 @@ ms.locfileid: "65481004"
   
     -   **[照合ポリシー]** を選択すると、照合ポリシーを作成してナレッジ ベースに追加します。  
   
-6.  **[作成]** をクリックします。  
+6.  **Create** をクリックしてください。  
   
-##  <a name="FollowUp"></a>補足情報: ナレッジ ベースを作成した後  
+##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a>補足情報: ナレッジベースを作成した後  
  ナレッジ ベースを作成した後は、ナレッジ検出を実行するためのウィザード、照合ポリシーを作成するためのウィザード、またはドメイン管理を実行するためのページが表示されます。 ナレッジ検出、ドメイン管理、または照合ポリシーについて詳しくは、「[ナレッジ検出の実行](../../2014/data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../../2014/data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

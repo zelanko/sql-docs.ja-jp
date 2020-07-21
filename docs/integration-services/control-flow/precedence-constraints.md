@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cb2d6637098e791a61cbceaf6a6823dfc25cef6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 10deeb5de3a74e765f99a76d59d2184a6b76b106
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099649"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294009"
 ---
 # <a name="precedence-constraints"></a>優先順位制約
 
@@ -35,13 +35,13 @@ ms.locfileid: "68099649"
   
  優先順位制約は、優先実行可能オブジェクトと制約付きの実行可能オブジェクトを連結します。 優先実行可能オブジェクトは制約付きの実行可能オブジェクトの前に実行され、優先実行可能オブジェクトの実行結果により、制約付きの実行可能オブジェクトを実行するかどうかが決まる場合があります。 次の図は、優先順位制約によってリンクされた 2 つの実行可能ファイルを示しています。  
   
- ![優先順位制約によってリンクされた実行可能ファイル](../../integration-services/control-flow/media/ssis-pcsimple.gif "優先順位制約によってリンクされた実行可能ファイル")  
+ ![優先順位制約によって接続された実行可能ファイル](../../integration-services/control-flow/media/ssis-pcsimple.gif "優先順位制約によって接続された実行可能ファイル")  
   
  直線的な制御フロー、つまり分岐のない制御フローでは、優先順位制約のみがタスクの実行順序を制御します。 制御フローに分岐がある場合には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイム エンジンが、分岐の直後に続くタスクとコンテナーの実行順序を決定します。 ランタイム エンジンは、制御フロー内で連結されていないワークフローの実行順序も決定します。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のアーキテクチャではコンテナーを入れ子にできるので、1 つのタスクのみをカプセル化するタスク ホスト コンテナーを除き、すべてのコンテナーに他のコンテナーと独自の制御フローを含めることができます。 For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナーには、タスクとその他のコンテナーを複数含めることができます。さらに、そのコンテナーにも複数のタスクとコンテナーを含めることができます。 たとえば、スクリプト タスクとシーケンス コンテナーを持つパッケージに、そのスクリプト タスクとシーケンス コンテナーをリンクする優先順位制約を含めます。 シーケンス コンテナーには 3 つのスクリプト タスクが含まれ、その優先順位制約は 3 つのスクリプト タスクをリンクして制御フローを作成します。 次の図は、2 レベルの入れ子構造のパッケージの優先順位制約を示しています。  
   
- ![パッケージの優先順位制約](../../integration-services/control-flow/media/mw-dts-12.gif "パッケージの優先順位制約")  
+ ![パッケージ内の優先順位制約](../../integration-services/control-flow/media/mw-dts-12.gif "パッケージ内の優先順位制約")  
   
  パッケージは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] コンテナー階層の最上層にあるため、複数のパッケージを優先順位制約によってリンクすることはできません。ただし、パッケージ実行タスクをパッケージに追加して、別のパッケージを間接的に制御フローにリンクできます。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68099649"
 ## <a name="precedence-constraint-editor"></a>優先順位制約エディター
 **[優先順位制約エディター]** ダイアログ ボックスを使用すると、優先順位制約を構成できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[評価操作]**  
  優先順位制約で使用する評価操作を指定します。 操作は次のとおりです: **[制約]** 、 **[式]** 、 **[式と制約]** 、 **[式または制約]** 。  
   
@@ -152,13 +152,13 @@ ms.locfileid: "68099649"
   
     |読み取り/書き込みプロパティ|構成アクション|  
     |--------------------------|--------------------------|  
-    |[説明]|説明を指定します。|  
+    |説明|説明を指定します。|  
     |EvalOp|評価操作を選択します。 **Expression**、 **ExpressionAndConstant**、 **ExpressionOrConstant** のいずれかの操作を選択した場合は、式を指定することができます。|  
-    |[式]|評価操作に and 式が含まれる場合は、式を指定します。 式はブール値に評価される必要があります。 式言語の詳細については、「[Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)」をご覧ください。|  
+    |式|評価操作に and 式が含まれる場合は、式を指定します。 式はブール値に評価される必要があります。 式言語の詳細については、「[Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)」をご覧ください。|  
     |LogicalAnd|**[論理 AND]** を設定し、複数の実行可能ファイルを先に実行して制約付き実行可能ファイルにリンクする場合、優先順位制約を他の優先順位制約と組み合わせて評価するかどうかを指定します。|  
-    |[オブジェクト名]|優先順位制約の名前を更新します。|  
+    |名前|優先順位制約の名前を更新します。|  
     |ShowAnnotation|使用する注釈の種類を指定します。 注釈を無効にするには **[Never]** 、要求時に注釈を有効にするには **[AsNeeded]** 、Name プロパティの値を使用して注釈を自動的に設定するには **[ConstraintName]** 、Description プロパティの値を使用して注釈を自動的に設定するには **[ConstraintDescription]** 、Value プロパティと Expression プロパティの値を使用して注釈を自動的に設定するには **[ConstraintOptions]** をそれぞれ選択します。|  
-    |[値]|EvalOP プロパティで指定された評価操作に制約が含まれる場合は、制約付き実行可能ファイルの実行結果を選択します。|  
+    |値|EvalOP プロパティで指定された評価操作に制約が含まれる場合は、制約付き実行可能ファイルの実行結果を選択します。|  
   
 5.  [プロパティ] ウィンドウを閉じます。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "68099649"
 ## <a name="add-expressions-to-precedence-constraints"></a>優先順位制約に式を追加する
  優先順位制約では、優先順位付き実行可能ファイルと、制約付き実行可能ファイルの 2 つの実行可能ファイル間の制約を定義するために、式を使用できます。 これらの実行可能ファイルには、タスクまたはコンテナーを設定できます。 式は単独で使用することも、優先順位付き実行可能ファイルの実行結果と組み合わせて使用することもできます。 実行可能ファイルの実行結果は、成功または失敗のどちらかです。 優先順位制約の実行結果を構成する場合、実行結果を **Success**、 **Failure**、または **Completion**に設定できます。 **Success** に設定した場合、優先順位付き実行可能ファイルは成功する必要があります。 **Failure** に設定した場合、優先順位付き実行可能ファイルは失敗する必要があります。 **Completion** は、優先順位付きタスクの成功または失敗にかかわらず、制約つき実行可能ファイルが実行されることを示します。 詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
   
- 式は **True** または **False** に評価される、有効な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式である必要があります。 式では、リテラル、システム変数とカスタム変数、および [!INCLUDE[ssIS](../../includes/ssis-md.md)] の式文法で用意されている関数と演算子を使用できます。 たとえば、式 `@Count == SQRT(144) + 10` では、変数 **Count**、SQRT 関数、等号 (==) 演算子、および加算 (+) 演算子が使用されています。 詳細については、「[Integration Services (SSIS) の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
+ 式は **True** または **False** に評価される、有効な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式である必要があります。 式では、リテラル、システム変数とカスタム変数、および [!INCLUDE[ssIS](../../includes/ssis-md.md)] の式文法で用意されている関数と演算子を使用できます。 たとえば、式 `@Count == SQRT(144) + 10` では、変数 **Count**、SQRT 関数、等号 (==) 演算子、および加算 (+) 演算子が使用されています。 詳細については、「 [Integration Services (SSIS) 式](../../integration-services/expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
  次の図では、実行結果と式を使用する優先順位制約によって、タスク A とタスク B がリンクされています。 制約値は **Success** に設定され、式は  `@X >== @Z`です。 タスク B は制約付きタスクで、タスク A が正常に完了し、変数 **X** の値が変数 **Z**の値以上の場合にのみ実行されます。  
   
@@ -216,10 +216,10 @@ ms.locfileid: "68099649"
   
 |[評価操作]|制約の評価|式の評価|制約付き実行可能ファイルの実行|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|制約|True|なし|True|  
-|制約|False|なし|False|  
-|式|なし|True|True|  
-|式|なし|False|False|  
+|制約|True|該当なし|True|  
+|制約|False|該当なし|False|  
+|式|該当なし|True|True|  
+|式|該当なし|False|False|  
 |制約と式の両方|True|True|True|  
 |制約と式の両方|True|False|False|  
 |制約と式の両方|False|True|False|  
@@ -231,11 +231,11 @@ ms.locfileid: "68099649"
 
 
 ## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>複数の優先順位制約を含む複雑な制約シナリオ 
-優先順位制約は、2 つのタスク、2 つのコンテナー、1 つのタスクと 1 つのコンテナーなど、2 つの実行可能ファイルを連結します。 これらは優先順位付き実行可能ファイル、および制約付き実行可能ファイルと呼ばれています。 制約付き実行可能ファイルには、複数の優先順位制約を含めることができます。 優先順位制約の詳細については、「[優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
+優先順位制約は、2 つのタスク、2 つのコンテナー、1 つのタスクと 1 つのコンテナーなど、2 つの実行可能ファイルを連結します。 これらは優先順位付き実行可能ファイル、および制約付き実行可能ファイルと呼ばれています。 制約付き実行可能ファイルには、複数の優先順位制約を含めることができます。 詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
   
  制約をグループ化して複雑な制約シナリオを組み立てると、複雑な制御フローをパッケージに実装できます。 たとえば、次の図で、タスク D は、 **成功** 制約によってタスク A にリンクされ、 **失敗** 制約によってタスク B にリンクされ、さらに **成功** 制約によってタスク C にリンクされています。 タスク D とタスク A の間、タスク D とタスク B の間、およびタスク D とタスク C の間の優先順位制約は、論理 *AND* リレーションシップになります。 したがって、タスク D を実行するには、タスク A の実行が成功し、タスク B が失敗し、タスク C の実行が成功する必要があります。  
   
- ![優先順位制約によってリンクされているタスク](../../integration-services/control-flow/media/precedenceconstraints.gif "優先順位制約によってリンクされているタスク")  
+ ![優先順位制約によってリンクされたタスク](../../integration-services/control-flow/media/precedenceconstraints.gif "優先順位制約によってリンクされたタスク")  
   
 ### <a name="logicaland-property"></a>LogicalAnd プロパティ  
  タスクまたはコンテナーに複数の制約がある場合、 **LogicalAnd** プロパティにより、優先順位制約を単独で評価するか、別の制約と組み合わせて評価するかを指定します。  

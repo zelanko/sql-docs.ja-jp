@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6811363e2465d7de24e31e136920feba345a2706
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 65b3853db8fb20ef3c2a21846db59ce0981485cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672786"
 ---
-# <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics 
+# <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このビューは、特定のパッケージ実行で、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行を表示します。 このビューの情報が使用して、コンポーネントのデータ スループットを計算できます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|データの一意識別子 (ID)。|  
 |execution_id|**bigint**|実行のインスタンスの一意の ID。|  
@@ -40,7 +40,7 @@ ms.locfileid: "68080765"
 |created_time|**datatimeoffset(7)**|値の取得時刻。|  
 |execution_path|**nvarchar(max)**|コンポーネントの実行パス。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 -   コンポーネントから複数の出力がある場合、出力ごとに 1 行追加されます。  
   

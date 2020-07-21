@@ -1,5 +1,6 @@
 ---
 title: モバイル レポートにパラメーターを追加する | Reporting Services | Microsoft Docs
+description: Reporting Services モバイル レポートには、パラメーターを含めることができるため、レポートの閲覧者はレポートをフィルター処理できます。 このようなレポートは、ドリルスルーの対象にすることもできます。
 ms.date: 07/30/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 348a8c1fa8ccdb4ade5b2ee3d39d6ecacf6e5a03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 41895890a5528a1ddac90a4c9f9eea05d80fac93
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63317064"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448293"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>モバイル レポートにパラメーターを追加する | Reporting Services
 パラメーターを備えた [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートを作成し、レポートのフィルター処理を可能にすることができます。 パラメーターを備えたレポートは、[ソース レポートからのドリルスルー](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)の対象にすることもできます。 
@@ -54,7 +55,7 @@ ms.locfileid: "63317064"
 
    ![sql-server-mobile-report-publisher-Selection-List-Category-Selected](../../reporting-services/mobile-reports/media/sql-server-mobile-report-publisher-selection-list-category-selected.png)   
   
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
 -  [特定のクエリ文字列パラメーターを使用してモバイル レポートを開く](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md)
 -  [モバイル レポートから他のモバイル レポートまたは URL にドリルスルーを追加する](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)
 -  [共有データセットまたは埋め込みデータセットの作成](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: cf09640b63328dde0dee11b0b5f4bcd037cb1524
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716710"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   スナップショットとトランザクション レプリケーション サブスクライバーとして機能するテーブルは、ピア ツー ピア トランザクション レプリケーションを除き、メモリ最適化テーブルとして構成できます。 その他のレプリケーション構成はメモリ最適化テーブルとは互換性がありません。 この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降のバージョンで使用できます。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "68769657"
   
 -   **メモリ最適化テーブルへのレプリケーションがサポートされるように、サブスクライバー データベースを構成する**  
   
-     [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) または [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) を使用して、 **\@memory_optimized** プロパティを **true** に設定します。  
+     [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) または [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) を使用して、**\@memory_optimized** プロパティを **true** に設定します。  
   
 -   **メモリ最適化テーブルへのレプリケーションがサポートされるように、アーティクルを構成する**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68769657"
   
 #### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>メモリ最適化テーブルをサブスクライバーとして構成するには  
   
-1.  トランザクション パブリケーションを作成します。 詳細については、「 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
+1.  トランザクション パブリケーションを作成します。 詳しくは、「 [パブリケーションを作成](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
 2.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
@@ -44,11 +44,9 @@ ms.locfileid: "68769657"
   
 3.  [アーティクルのプロパティ] ウィンドウで **[Enable Memory optimization]** (メモリ最適化を有効にする) を **true**に設定します。  
   
-4.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
+4.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳しくは、「 [初期スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 5.  ここで、新しいサブスクリプションを作成します。 **サブスクリプションの新規作成ウィザード** で **[Memory Optimized Subscription]** (メモリ最適化サブスクリプション) を **true**に設定します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  これでメモリ最適化テーブルはパブリッシャーから更新を受け取り始めます。  
   
@@ -86,7 +84,7 @@ ms.locfileid: "68769657"
   
 -   メモリ最適化テーブルでは、すべての Transact-SQL 機能がサポートされているわけではありません。 詳細については、「[インメモリ OLTP でサポートされていない Transact-SQL の構造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)」を参照してください。  
   
-##  <a name="Schema"></a> スキーマ ファイルの変更  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a> スキーマ ファイルの変更  
   
 -   メモリ最適化テーブルのオプション `DURABILITY = SCHEMA_AND_DATA` を使用する場合、テーブルには非クラスター化主キー インデックスが必要です。  
   

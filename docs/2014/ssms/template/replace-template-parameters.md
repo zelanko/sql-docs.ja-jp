@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1fa26c1bfec54e4e684bcd7e0967281a6ef3301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d87b17a110efe118f7796487448e4d3bae30375
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63070974"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061903"
 ---
 # <a name="replace-template-parameters"></a>[テンプレート パラメーターの置換]
   テンプレートには、テンプレートを使用するたびに実装固有の値に置き換えることができるパラメーターが含まれています。 コード エディターでテンプレートを開いた後、パラメーターを実装に関する値に置き換えることができます。  
@@ -42,7 +41,7 @@ ms.locfileid: "63070974"
 3.  **[OK]** をクリックして **[テンプレート パラメーターを置き換える]** ダイアログ ボックスを閉じ、クエリ エディターでスクリプトを変更します。  
   
 ## <a name="see-also"></a>参照  
- [テンプレート エクスプ ローラー](template-explorer.md)   
+ [テンプレートエクスプローラー](template-explorer.md)   
  [テンプレートを開く](open-a-template.md)  
   
   

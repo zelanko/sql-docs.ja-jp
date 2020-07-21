@@ -10,15 +10,14 @@ helpviewer_keywords:
 - smallest integer great than or equal to expression
 - CEILING function [SSIS]
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a8306fa98194fbf314796b199fea98ddd53cb1fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3ed1cf4d70dc1e04f2419070b3672522833524c6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62769428"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429019"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 式)
   数値式以上で最小の整数値を返します。  
@@ -37,7 +36,7 @@ CEILING(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  関数に送信された数値式のデータ型です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、CEILING は NULL を返します。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -53,13 +52,13 @@ CEILING(123.74)
 CEILING(-124.27)  
 ```  
   
- -124.00 を返します。  
+ -124.00 を返します  
   
 ```  
 CEILING(0.00)  
 ```  
   
- 0.00 を返します。  
+ 0\.00 を返します。  
   
 ## <a name="see-also"></a>参照  
  [FLOOR &#40;SSIS 式&#41;](floor-ssis-expression.md)   

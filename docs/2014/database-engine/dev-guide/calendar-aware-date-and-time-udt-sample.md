@@ -1,5 +1,5 @@
 ---
-title: カレンダー対応の日付と時刻 UDT サンプル |Microsoft Docs
+title: カレンダー対応の日付と時刻の UDT のサンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,21 +9,20 @@ ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a8d632b538104e490fb70542cdd0f8bd73b87f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933736"
 ---
-# <a name="calendar-aware-date-and-time-udt-sample"></a>カレンダー対応の日付と時刻 UDT サンプル
+# <a name="calendar-aware-date-and-time-udt-sample"></a>カレンダー対応の日付と時刻の UDT サンプル
   使用されているカレンダー システムを把握していないと日付は意味を持たないため、日付を文字列として格納すると混乱が生じる可能性があります。`CADatetime` サンプルでは、日付と時刻のカレンダー対応処理を行う `CADatetime` と `CADate` という 2 つのユーザー定義データ型を定義しています。  
   
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62753784"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にするには、 `ALTER SETTINGS` サーバーレベルの権限が必要です。この権限は、 `sysadmin` 固定サーバーロールおよびのメンバーによって暗黙的に保持されてい `serveradmin` ます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62753784"
   
 3.  c:\MySample で、`CalendarAware.cs` を作成し、C# サンプル コード (下記) をこのファイルにコピーします。  
   
-4.  C:\MySample でファイルを作成`calendars.txt`サンプル コードをファイルにコピーします。  
+4.  C:\MySample で、ファイルを作成 `calendars.txt` し、サンプルコードをファイルにコピーします。  
   
 5.  c:\MySample で、ファイル `calendars.ar-SA.txt` を作成し、以下のコードをこのファイルにコピーします。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "62753784"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. コピー[!INCLUDE[tsql](../../includes/tsql-md.md)]ファイルにコマンド スクリプトをテストし、保存`test.sql`サンプル ディレクトリにします。  
+14. [!INCLUDE[tsql](../../includes/tsql-md.md)]テストコマンドスクリプトをファイルにコピーし、として `test.sql` サンプルディレクトリに保存します。  
   
 15. 次のコマンドを使用してテスト スクリプトを実行します。  
   
@@ -181,7 +180,7 @@ ms.locfileid: "62753784"
         private static readonly char[] allowedDoublePatternChars = new char[] { 'g', '\\' };  
   
         /// <summary>  
-        ///     Each tick is 100 nanoseconds.  This conversion factor when multipled by the number of  
+        ///     Each tick is 100 nanoseconds.  This conversion factor when multiplied by the number of  
         ///     days yields the number of ticks which make up that day.  Ticks are interesting as they  
         ///     can be used to construct DateTime instances in order to perform various date based computations.  
         /// </summary>  

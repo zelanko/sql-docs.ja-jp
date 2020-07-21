@@ -1,5 +1,5 @@
 ---
-title: リンク メジャー グループ |Microsoft Docs
+title: リンクメジャーグループ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41c7501b85776fbba61ab9fd8159ac5ce25a0fa7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546604"
 ---
 # <a name="linked-measure-groups"></a>リンク メジャー グループ
   リンク メジャー グループは、同じデータベースまたは別の Analysis Services データベースにある別のキューブ内の別のメジャー グループに基づいています。 複数のキューブ内にある一連のメジャー、および対応するデータ値を再使用する場合は、リンク メジャー グループを使用することができます。  
   
- 同じサーバー上で実行されるソリューションに、元のメジャー グループとリンク メジャー グループが存在することをお勧めします。 リモート サーバー上のメジャー グループへのリンクは、将来のリリースで廃止予定が (を参照してください[SQL Server 2014 で非推奨の Analysis Services 機能](../deprecated-analysis-services-features-in-sql-server-2014.md))。  
+ 同じサーバー上で実行されるソリューションに、元のメジャー グループとリンク メジャー グループが存在することをお勧めします。 リモートサーバー上のメジャーグループへのリンクは、今後のリリースで廃止予定としてスケジュールされています ( [SQL Server 2014 の非推奨の Analysis Services 機能](../deprecated-analysis-services-features-in-sql-server-2014.md)を参照してください)。  
   
 > [!IMPORTANT]  
 >  リンク メジャー グループは読み取り専用です。 最新の変更内容を取得するには、すべてのリンク メジャー グループを削除し、変更後のソース オブジェクトに基づいてリンク メジャー グループを再作成する必要があります。 したがって、メジャー グループに対して今後変更を加える必要がある場合は、プロジェクト間でメジャー グループのコピーと貼り付けを行うことを、代わりのアプローチとして検討する必要があります。  

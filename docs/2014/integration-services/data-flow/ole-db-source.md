@@ -12,15 +12,14 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f619d24503527c8067d56fa94a404af58a882c03
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770998"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431849"
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
   OLE DB ソースは、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなリレーショナル データベースからデータを抽出します。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルからデータを抽出できます。  
@@ -113,11 +112,11 @@ ms.locfileid: "62770998"
 -   [マージ変換およびマージ結合変換用にデータを並べ替える](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- social.technet.microsoft.com の Wiki の記事「 [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670)(SSIS から Oracle への接続)」  
+ Social.technet.microsoft.com の Wiki 記事、 [Oracle コネクタを使用した SSIS](https://go.microsoft.com/fwlink/?LinkId=220670)。  
   
 ## <a name="see-also"></a>関連項目  
- [OLE DB 変換先](ole-db-destination.md)   
- [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)   
+ [OLE DB の宛先](ole-db-destination.md)   
+ [SSIS&#41; 変数の Integration Services &#40;](../integration-services-ssis-variables.md)   
  [データ フロー](data-flow.md)  
   
   

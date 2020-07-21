@@ -1,6 +1,6 @@
 ---
-title: クエリおよびテキスト エディター (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: クエリ エディターとテキスト エディター
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -22,15 +22,14 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b6d7e62118f4fe3a01bca158d9dce13d9e7bfb52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009658"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>クエリおよびテキスト エディター (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のいずれかのエディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、または XML/A スクリプトを対話的に編集し、テストできます。XML またはプレーンテキスト ファイルを編集することもできます。 各エディターでは、キーワードを色分け表示したり、言語固有の構文や使用方法のエラーをチェックするサービスがサポートされています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの問題を解決するのに役立つ [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが用意されています。  
@@ -46,7 +45,7 @@ ms.locfileid: "68891756"
   
  コード ペインでは、テキストのインデント、タブ、ドラッグ アンド ドロップなどに関連する、テキストの動作に影響を与えるオプションを設定できます。 クエリ ウィンドウの機能は、ドキュメント ウィンドウ内のタブとして、または別個のドキュメントとして構成することができます。  
   
- **マージン**  
+ **選択余白**  
  インジケーター マージンとコード テキストの間の空白の列です。クリックするとテキストの行を選択できます。 マージンは表示または非表示にすることができます。  
   
  **水平スクロール バーと垂直スクロール バー**  
@@ -76,7 +75,7 @@ ms.locfileid: "68891756"
  **テンプレート**  
  テンプレートは、データベース内にオブジェクトを作成するのに必要なステートメントの基本構造が含まれたファイルです。 スクリプトの作成を迅速化するのに使用できます。  
   
- **メッセージ**  
+ **Messages (メッセージ)**  
  スクリプトの実行時にサーバーから返されるエラー、警告、および情報メッセージが表示されます。 メッセージの一覧は、スクリプトが再び実行されるまで変更されません。  
   
  **ステータス バー**  
@@ -108,8 +107,8 @@ ms.locfileid: "68891756"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|MDX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[MDX クエリ エディター &#40;Analysis Services - 多次元データ&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
-|DMX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[DMX クエリ エディター &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
+|MDX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[MDX クエリ エディター &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
+|DMX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[DMX クエリ エディター &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |XML/A エディターの基本的な機能を表示し、使用する方法について説明します。|[XML エディター &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |行番号表示や IntelliSense オプションなど、各種エディターのオプションを構成する方法について説明します。|[エディターの構成 &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でエディターを開くための、さまざまな方法について説明します。|[エディターの表示 &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
@@ -128,5 +127,5 @@ ms.locfileid: "68891756"
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用してコードをステップ実行したり、デバッグ情報 (変数やパラメーターの値など) を表示したりする方法について説明します。|[Transact-SQL デバッガー](transact-sql-debugger.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]の各インスタンスに対して独自の色を設定したり、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターのウィンドウのステータス バーの背景としてそれらの色を設定する方法について説明します。|[ステータス バー &#40;データベース エンジン クエリ エディター&#41;](status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

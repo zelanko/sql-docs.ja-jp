@@ -13,30 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectOptionEnum enumeration [ADO]
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 819fb89d7f8c43e76ba9260a72fafa68084bf880
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fa372f05a80290e907298a0969d9eb9f14355f90
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933443"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762603"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
-指定するかどうか、[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)(同期的に) 接続が確立された後、またはオブジェクトを返す必要があります (非同期)。  
+接続の確立後に (同期的に)、またはそれ以前 (非同期) に[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドを返すかどうかを指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adAsyncConnect**|16|非同期的に接続を開きます。 [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)イベントを使用して、接続が使用可能な場合があります。|  
-|**adConnectUnspecified**|-1|既定値です。 同期的に接続を開きます。|  
+|**adAsyncConnect**|16|接続を非同期的に開きます。 接続が使用可能かどうかを判断するには、 [Connectcomplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)イベントを使用できます。|  
+|**指定された Adの場合**|-1|既定値。 接続を同期的に開きます。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
 |定数|  
 |--------------|  
-|AdoEnums.ConnectOption.ASYNCCONNECT|  
-|AdoEnums.ConnectOption.CONNECTUNSPECIFIED|  
+|AdoEnums ConnectOption|  
+|AdoEnums ConnectOption.|  
   
 ## <a name="applies-to"></a>適用対象  
  [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)

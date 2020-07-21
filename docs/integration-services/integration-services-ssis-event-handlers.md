@@ -19,14 +19,14 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6566424b766cba5f106bec883b6f8e4e2b56f339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057500"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296196"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) のイベント ハンドラー
 
@@ -75,7 +75,7 @@ ms.locfileid: "68057500"
 ## <a name="run-time-events"></a>実行時イベント  
  次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で用意されているイベント ハンドラーの一覧を示します。また、イベント ハンドラーによって実行される実行時イベントについて説明します。  
   
-|イベント ハンドラー|イベント|  
+|イベント ハンドラー|Event|  
 |-------------------|-----------|  
 |**OnError**|**OnError** イベントのイベント ハンドラーです。 このイベントは、エラー発生時に実行可能ファイルから発生します。|  
 |**OnExecStatusChanged**|**OnExecStatusChanged** イベントのイベント ハンドラーです。 このイベントは、実行状態が変化したときに実行可能ファイルから発生します。|  
@@ -87,7 +87,7 @@ ms.locfileid: "68057500"
 |**OnProgress**|**OnProgress** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルで重要な進行があったときに、実行可能ファイルから発生します。|  
 |**OnQueryCancel**|**OnQueryCancel** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの実行を停止するかどうかを決定するために、実行可能ファイルから発生します。|  
 |**OnTaskFailed**|**OnTaskFailed** イベントのイベント ハンドラーです。 このイベントは、タスクが失敗したときにタスクから発生します。|  
-|**OnVariableValueChanged**|**OnVariableValueChanged** イベントのイベント ハンドラーです。 このイベントは、変数の値が変化したときに実行可能ファイルから発生します。 イベントは、変数が定義されている実行可能ファイルで発生します。 変数の **RaiseChangeEvent** プロパティが **False** に設定されている場合、このイベントは発生しません。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)」を参照してください。|  
+|**OnVariableValueChanged**|**OnVariableValueChanged** イベントのイベント ハンドラーです。 このイベントは、変数の値が変化したときに実行可能ファイルから発生します。 イベントは、変数が定義されている実行可能ファイルで発生します。 変数の **RaiseChangeEvent** プロパティが **False**に設定されている場合、このイベントは発生しません。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)」を参照してください。|  
 |**OnWarning**|**OnWarning** イベントのイベント ハンドラーです。 このイベントは、警告の発生時に実行可能ファイルから発生します。|  
 
 ## <a name="add-an-event-handler-to-a-package"></a>パッケージにイベント ハンドラーを追加する
@@ -109,7 +109,7 @@ ms.locfileid: "68057500"
   
 3.  **[イベント ハンドラー]** タブをクリックします。  
   
-     ![イベント ハンドラーが表示されたデザイン画面のスクリーンショット](../integration-services/media/eventhandlers.gif "イベント ハンドラーが表示されたデザイン画面のスクリーンショット")  
+     ![イベント ハンドラーのデザイン画面のスクリーン ショット](../integration-services/media/eventhandlers.gif "イベント ハンドラーのデザイン画面のスクリーン ショット")  
   
      イベント ハンドラー内で制御フローとデータ フローを作成する手順は、パッケージ内で制御フローとデータ フローを作成する手順と同様です。 詳細については、「 [制御フロー](../integration-services/control-flow/control-flow.md) 」と「 [データ フロー](../integration-services/data-flow/data-flow.md)」を参照してください。  
   
@@ -130,9 +130,9 @@ ms.locfileid: "68057500"
   
  これらのプロパティを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で設定する方法については、「 [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)」を参照してください。  
   
- これらのプロパティのプログラムでの設定については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>」を参照してください。  
+ プログラムによってこれらのプロパティを設定する方法については、 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- パッケージにイベント ハンドラーを追加する方法については、「[パッケージにイベント ハンドラーを追加する](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)」を参照してください。  
+ パッケージにイベント ハンドラーを追加する方法については、「 [パッケージにイベント ハンドラーを追加する](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)」を参照してください。  
   
   

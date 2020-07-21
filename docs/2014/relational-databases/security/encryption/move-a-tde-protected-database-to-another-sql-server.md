@@ -10,18 +10,17 @@ helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 3b03b4d9ecf31e9953fd3e22cec5c51bbacc0c25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060301"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>別の SQL Server への TDE で保護されたデータベースの移動
-  このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、Transparent Data Encryption (TDE) によってデータベースを保護し、そのデータベースを別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに移動する方法について説明します。 TDE では、データとログ ファイルの暗号化および暗号化解除がリアルタイムの I/O で実行されます。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK とは、サーバーの `master` データベースに保存されている証明書を使用して保護される対称キー、または EKM モジュールによって保護される非対称キーのことです。  
+  このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、Transparent Data Encryption (TDE) によってデータベースを保護し、そのデータベースを別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに移動する方法について説明します。 TDE は、データとログ ファイルの I/O 暗号化と複合化をリアルタイムで実行します。 暗号化は、復旧中に、可用性のためのデータベース ブート レコードに格納されるデータベース暗号化キー (DEK) を使用します。 DEK とは、サーバーの `master` データベースに保存されている証明書を使用して保護される対称キー、または EKM モジュールによって保護される非対称キーのことです。  
   
  **このトピックの内容**  
   
@@ -43,39 +42,39 @@ ms.locfileid: "63012054"
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   TDE で保護されたデータベースを移動するとき、DEK を開くために使用される証明書または非対称キーも移動する必要があります。 証明書または非対称キーをインストールする必要があります、 `master` 、移行先サーバーのデータベースように[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベース ファイルにアクセスできます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)」を参照してください。  
+-   TDE で保護されたデータベースを移動するとき、DEK を開くために使用される証明書または非対称キーも移動する必要があります。 が `master` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースファイルにアクセスできるようにするには、証明書または非対称キーが移行先サーバーのデータベースにインストールされている必要があります。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)」を参照してください。  
   
 -   証明書を復旧するために、証明書ファイルと秘密キー ファイルの両方のコピーを保持する必要があります。 秘密キーのパスワードは、データベース マスター キーのパスワードと同じにする必要はありません。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ここで作成されたファイルを格納**C:\Program files \microsoft SQL Server\MSSQL12 します。MSSQLSERVER\MSSQL\DATA**既定。 ただし、ファイル名と場所は異なる場合があります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ここで作成したファイルを**C:\Program SERVER\MSSQL12. SQL に格納します。** 既定では MSSQLSERVER\MSSQL\DATA。 ただし、ファイル名と場所は異なる場合があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
--   必要があります`CONTROL DATABASE`に対する権限、`master`データベース マスター _ キーを作成するデータベース。  
+-   データベース `CONTROL DATABASE` `master` マスターキーを作成するには、データベースに対する権限が必要です。  
   
--   必要があります`CREATE CERTIFICATE`に対する権限、 `master` DEK を保護する証明書を作成するデータベース。  
+-   `CREATE CERTIFICATE` `master` Dek を保護する証明書を作成するには、データベースに対する権限が必要です。  
   
 -   暗号化されたデータベースに対する `CONTROL DATABASE` 権限、およびデータベース暗号化キーの暗号化に使用する証明書または非対称キーに対する `VIEW DEFINITION` 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> 透過的なデータ暗号化で保護されたデータベースを作成するには  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a>Transparent data encryption によって保護されたデータベースを作成するには  
   
-###  <a name="SSMSCreate"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> SQL Server Management Studio の使用  
   
-1.  データベースのマスター _ キーを作成し、証明書、`master`データベース。 詳細については、「 **Transact-SQL の使用** 」をご覧ください。  
+1.  データベースにデータベースマスターキーと証明書を作成し `master` ます。 詳細については、「 **Transact-SQL の使用** 」をご覧ください。  
   
-2.  サーバーの証明書のバックアップを作成、`master`データベース。 詳細については、「 **Transact-SQL の使用** 」をご覧ください。  
+2.  データベースにサーバー証明書のバックアップを作成 `master` します。 詳細については、「 **Transact-SQL の使用** 」をご覧ください。  
   
 3.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを右クリックし、 **[新しいデータベース]** をクリックします。  
   
 4.  **[新しいデータベース]** ダイアログ ボックスで、 **[データベース名]** ボックスに新しいデータベースの名前を入力します。  
   
-5.  **[所有者]** ボックスに新しいデータベースの所有者を入力します。 または、省略記号 **[...]** をクリックして **[データベース所有者の選択]** ダイアログ ボックスを開きます。 新しいデータベースの作成の詳細については、「 [Create a Database](../../databases/create-a-database.md)」をご覧ください。  
+5.  **[所有者]** ボックスに新しいデータベースの所有者を入力します。 または、省略記号ボタン ([. **..])** をクリックして [**データベース所有者の選択**] ダイアログボックスを開きます。 新しいデータベースの作成の詳細については、「 [Create a Database](../../databases/create-a-database.md)」をご覧ください。  
   
 6.  オブジェクト エクスプローラーで、プラス記号をクリックして **[データベース]** フォルダーを展開します。  
   
@@ -95,9 +94,9 @@ ms.locfileid: "63012054"
      **[データベース暗号化をオンに設定]**  
      データベースを変更して TDE をオンまたはオフにします。  
   
-8.  完了したら、 **[OK]** をクリックします。  
+8.  完了したら、[**OK**] をクリックします。  
   
-###  <a name="TsqlCreate"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Transact-SQL の使用  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -143,7 +142,7 @@ ms.locfileid: "63012054"
     GO  
     ```  
   
- 詳細については、以下をご覧ください。  
+ 詳細については、次を参照してください。  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
@@ -157,18 +156,18 @@ ms.locfileid: "63012054"
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
-##  <a name="TsqlProcedure"></a> データベースを移動するには  
+##  <a name="to-move-a-database"></a><a name="TsqlProcedure"></a>データベースを移動するには  
   
-###  <a name="SSMSMove"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> SQL Server Management Studio の使用  
   
-1.  オブジェクト エクスプローラーで、暗号化したデータベースを右クリックし、 **[タスク]** をポイントして **[デタッチ]** をクリックします。  
+1.  オブジェクトエクスプローラーで、上で暗号化したデータベースを右クリックし、[**タスク**] をポイントして [**デタッチ...**] を選択します。  
   
      **[データベースのデタッチ]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
      **[デタッチするデータベース]**  
      デタッチするデータベースを一覧表示します。  
   
-     **Database Name**  
+     **データベース名**  
      デタッチするデータベースの名前を表示します。  
   
      **[接続の削除]**  
@@ -177,21 +176,21 @@ ms.locfileid: "63012054"
     > [!NOTE]  
     >  アクティブな接続があるデータベースをデタッチすることはできません。  
   
-     **統計の更新**  
+     **統計情報の更新**  
      既定では、データベースをデタッチしても、古い最適化統計情報が保持されます。既存の最適化統計情報を更新するには、このチェック ボックスをオンにします。  
   
      **[フルテキスト カタログの保持]**  
      既定では、デタッチ操作を行っても、データベースに関連付けられたフルテキスト カタログが保持されます。 これらのカタログを削除するには、 **[フルテキスト カタログの保持]** チェック ボックスをオフにします。 このオプションは、データベースを [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]からアップグレードする場合にのみ表示されます。  
   
-     **ステータス**  
-     次のどちらかの状態が表示されます: **[準備完了]** または **[準備ができていません]** 。  
+     **状態**  
+     **[準備完了]** または **[準備ができていません]** のどちらかの状態を表示します。  
   
      **メッセージ**  
      **[メッセージ]** 列に、次のようにデータベースに関する情報が表示される場合があります。  
   
     -   データベースがレプリケーションに含まれている場合、 **[状態]** は **[準備ができていません]** になり、 **[メッセージ]** 列に **[データベースがレプリケートされました]** と表示されます。  
   
-    -   データベースに 1 つまたは複数のアクティブな接続、**状態**は**準備ができていません**と**メッセージ**列が表示されます _< number_of_active_connections>_ **アクティブな接続**- 例。 **[1 のアクティブな接続]** 。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
+    -   データベースに1つ以上のアクティブな接続がある場合、**状態**は [準備ができて**いません**] と表示され、[**メッセージ**] 列には _<number_of_active_connections>_ の**アクティブな接続 (** 例: **1 active connection)** が表示されます。 データベースをデタッチするには、 **[接続の削除]** を選択してアクティブな接続を切断する必要があります。  
   
      メッセージについてより詳しい情報を得るには、ハイパーリンクのテキストをクリックして利用状況モニターを開きます。  
   
@@ -205,18 +204,18 @@ ms.locfileid: "63012054"
   
 6.  元のサーバー証明書のバックアップ ファイルを使用して、サーバー証明書を再作成します。 詳細については、「 **Transact-SQL の使用** 」をご覧ください。  
   
-7.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで、 **[データベース]** フォルダーを右クリックし、 **[アタッチ]** をクリックします。  
+7.  のオブジェクトエクスプローラーで、[ [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] **データベース**] フォルダーを右クリックし、[**アタッチ**] を選択します。  
   
 8.  **[データベースのインポート]** ダイアログ ボックスで、 **[アタッチするデータベース]** の下の **[追加]** をクリックします。  
   
-9. **データベース ファイルの検索 -** _server_name_ダイアログ ボックスで、新しいサーバーにアタッチし、をクリックする、データベース ファイルを選択**OK**します。  
+9. [**データベースファイルの検索-**_server_name_ ] ダイアログボックスで、新しいサーバーにアタッチするデータベースファイルを選択し、[ **OK**] をクリックします。  
   
      **[データベースのインポート]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
      **[アタッチするデータベース]**  
      選択されたデータベースに関する情報を表示します。  
   
-     \<空白の列ヘッダー>  
+     \<no column header>  
      アタッチ操作の状態を示すアイコンが表示されます。 表示されるアイコンの種類は、下の **[状態]** の説明に示します。  
   
      **[MDF ファイルの場所]**  
@@ -228,28 +227,28 @@ ms.locfileid: "63012054"
      **[次の名前でアタッチ]**  
      データベースを別の名前でアタッチする場合に、その名前を指定します。  
   
-     **[所有者]**  
+     **所有者**  
      データベースの所有者のドロップダウン リストです。これを使用して、必要に応じて別の所有者を選択できます。  
   
-     **ステータス**  
+     **状態**  
      次の表に示すように、データベースの状態を表示します。  
   
     |アイコン|状態テキスト|説明|  
     |----------|-----------------|-----------------|  
     |(アイコンなし)|(テキストなし)|このオブジェクトのアタッチ操作が開始されていないか、保留されています。 これは、ダイアログ ボックスを開いたときの既定の状態です。|  
-    |緑の右向き三角形|[実行中]|アタッチ操作が開始されましたが、完了していません。|  
-    |緑のチェック マーク|成功|オブジェクトは正常にアタッチされました。|  
-    |赤い丸の中に白い×印|[エラー]|アタッチ操作でエラーが発生し、正常に完了しませんでした。|  
-    |4 つに区切られた丸印 (左右の領域が黒、上下の領域が白)|停止|ユーザーがアタッチ操作を停止したため、正常に完了しませんでした。|  
+    |緑の右向き三角形|進行中|アタッチ操作が開始されましたが、完了していません。|  
+    |緑のチェック マーク|Success|オブジェクトは正常にアタッチされました。|  
+    |赤い丸の中に白い×印|エラー|アタッチ操作でエラーが発生し、正常に完了しませんでした。|  
+    |4 つに区切られた丸印 (左右の領域が黒、上下の領域が白)|停止済み|ユーザーがアタッチ操作を停止したため、正常に完了しませんでした。|  
     |丸の中に反時計回りの矢印|[ロールバックされました]|アタッチ操作は正常に完了しましたが、他のオブジェクトのアタッチ中にエラーが発生したため、ロールバックされました。|  
   
      **メッセージ**  
      空白のメッセージ、または "ファイルが見つかりません" のハイパーリンクが表示されます。  
   
-     **[追加]**  
+     **追加**  
      主な必須データベース ファイルを検索します。 ユーザーが .mdf ファイルを選択した場合、 **[アタッチするデータベース]** グリッドの対応するフィールドに、対応する情報が自動的に入力されます。  
   
-     **[削除]**  
+     **Remove**  
      選択したファイルを **[アタッチするデータベース]** グリッドから削除します。  
   
      **"** _<database_name>_ **" データベースの詳細**  
@@ -270,7 +269,7 @@ ms.locfileid: "63012054"
      **メッセージ**  
      空白のメッセージ、または **"ファイルが見つかりません"** ハイパーリンクが表示されます。  
   
-###  <a name="TsqlMove"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Transact-SQL の使用  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -311,7 +310,7 @@ ms.locfileid: "63012054"
     GO  
     ```  
   
- 詳細については、以下をご覧ください。  
+ 詳細については、次を参照してください。  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

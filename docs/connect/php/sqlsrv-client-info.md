@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_client_info |Microsoft Docs
+title: sqlsrv_client_info | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_client_info
 - sqlsrv_client_info
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 861e686d4a64b1030224b8ec35551fade4188ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d17d3a49a241ee1ff042fceb3602b1d84f2cca9b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992829"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920118"
 ---
-# <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
+# <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 接続とクライアントの履歴に関する情報を返します。  
@@ -43,7 +43,7 @@ sqlsrv_client_info( resource $conn)
   
 **PHP for SQL Server バージョン 3.2 および 3.1 用**:  
   
-|Key|[説明]|  
+|Key|説明|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (SQL Server 用 ODBC Driver 11)|  
 |DriverODBCVer|ODBC version (xx.yy)|  
@@ -52,7 +52,7 @@ sqlsrv_client_info( resource $conn)
   
 **PHP for SQL Server バージョン 3.0 および 2.0 用**:  
   
-|Key|[説明]|  
+|Key|説明|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] バージョン 2.0)|  
 |DriverODBCVer|ODBC version (xx.yy)|  

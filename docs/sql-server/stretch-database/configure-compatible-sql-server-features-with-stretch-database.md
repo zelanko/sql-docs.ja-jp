@@ -1,5 +1,5 @@
 ---
-title: Stretch Database と互換性のある SQL Server 機能を構成する | Microsoft Docs
+title: 互換性のある SQL Server 機能を構成する
 ms.date: 03/14/2017
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -7,19 +7,20 @@ ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7ff4a816d7255f667ece0a4984f464d152280ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d558dad38492bcd9ce2bad0eb00a887a2225de33
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136288"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73844572"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Stretch Database と互換性のある SQL Server 機能を構成する
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
 簡単な手順で、Stretch Database を操作できるように次の SQL Server 機能を構成します。
--   Always On
+-   常時接続
 -   Always Encrypted
 -   Transparent Data Encryption (TDE)
 -   テンポラル テーブル

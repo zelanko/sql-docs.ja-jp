@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_runtime_stats_interval (TRANSACT-SQL) |Microsoft Docs
+title: query_store_runtime_stats_interval (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -18,41 +18,41 @@ helpviewer_keywords:
 - sys.query_store_runtime_stats_interval catalog view
 - query_store_runtime_stats_interval catalog view
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c76e22bc0041c69ffc8ab9d0632ff69f8518031b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4c652ee6f0634816a4bc5313c968ee2e59197b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067944"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834121"
 ---
-# <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (TRANSACT-SQL)
+# <a name="sysquery_store_runtime_stats_interval-transact-sql"></a>query_store_runtime_stats_interval (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  クエリの実行の統計情報の収集されたランタイムでは、各間隔の開始および終了時間について説明します。  
+  クエリのランタイム実行統計情報が収集された各間隔の開始時刻と終了時刻に関する情報を格納します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_interval_id**|**bigint**|主キー。|
+|**runtime_stats_interval_id**|**bigint**|主キー|
 |**start_time**|**datetimeoffset**|間隔の開始時刻。|
 |**end_time**|**datetimeoffset**|間隔の終了時刻。|
-|**comment**|**nvarchar(32)**|常に NULL になります。|
+|**comment**|**nvarchar(32)**|常に NULL です。|
   
 ## <a name="permissions"></a>アクセス許可  
- 必要があります、 **VIEW DATABASE STATE**権限。  
+ **VIEW DATABASE STATE**権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [query_context_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [クエリ ストアのストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

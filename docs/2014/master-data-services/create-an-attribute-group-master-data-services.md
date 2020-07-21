@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c832fe601eb7151e438d7f93c3e39e9b249ea246
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a9959189b3ce805c7d8e97dd3b4948a3674b0cb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971732"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>属性グループを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** グリッドの個々のタブに属性を表示する場合、属性グループを作成します。  
@@ -29,9 +28,9 @@ ms.locfileid: "65483318"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../../2014/master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../../2014/master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   少なくとも 1 つの属性が必要です。 詳細については、「 [テキスト属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)」を参照してください。  
   
@@ -39,20 +38,20 @@ ms.locfileid: "65483318"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **モデル ビュー**  ページで、ポイントして、メニュー バーから**管理** をクリック**属性グループ**します。  
+2.  [**モデルビュー** ] ページのメニューバーから [**管理**] をポイントし、[**属性グループ**] をクリックします。  
   
 3.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
 4.  **[エンティティ]** の一覧からエンティティを選択します。  
   
-5.  **[リーフ グループ]** 、 **[統合グループ]** 、または **[コレクション グループ]** をクリックして、リーフ メンバー、統合メンバー、またはコレクションの属性グループを作成します。  
+5.  **[リーフ グループ]**、 **[統合グループ]**、または **[コレクション グループ]** をクリックして、リーフ メンバー、統合メンバー、またはコレクションの属性グループを作成します。  
   
-6.  クリックして**属性グループの追加**します。  
+6.  [**属性グループの追加**] をクリックします。  
   
-7.  **リーフ グループ名**ボックスに、グループの名前を入力します。 これで、タブに表示される名前は、**エクスプ ローラー**します。  
+7.  [**リーフグループ名**] ボックスに、グループの名前を入力します。 これは、**エクスプローラー**のタブに表示される名前です。  
   
     > [!NOTE]  
-    >  選択した場合**統合グループ**または**コレクション グループ**このボックスは、手順 5 で、**統合グループ名**または**コレクション グループ名**、それぞれします。  
+    >  手順 5. で [**統合グループ**] または [**コレクショングループ**] を選択した場合、このボックスはそれぞれ [**統合グループ名**] または [**コレクショングループ名**] になります。  
   
 8.  **[グループの保存]** をクリックします。  
   
@@ -60,11 +59,11 @@ ms.locfileid: "65483318"
   
 10. **[属性]** をクリックします。  
   
-11. クリックして**選択した項目の編集**します。  
+11. [**選択したアイテムの編集**] をクリックします。  
   
-12. 属性をクリックして、**利用可能な**ボックス、をクリックし、**追加**矢印。 すべてを追加するには、 **[すべて追加]** 矢印をクリックします。  
+12. **使用可能な**ボックスの [属性] をクリックし、[**追加**] 矢印をクリックします。 すべてを追加するには、 **[すべて追加]** 矢印をクリックします。  
   
-13. 必要に応じて、をクリックして、**を**と**ダウン**属性の左から右の順序を変更します。  
+13. 必要に応じて、**上**矢印と**下**矢印をクリックして、属性の順序を左から右に変更します。  
   
 14. **[保存]** をクリックします。  
   
@@ -73,11 +72,11 @@ ms.locfileid: "65483318"
 -   [属性グループのユーザーへの表示 (マスター データ サービス)](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## <a name="see-also"></a>参照  
- [属性グループ (マスター データ サービス)](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)   
- [属性グループ名を変更する (マスター データ サービス)](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [属性グループを削除する &#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
- [リーフ アクセス許可&#40;マスター データ サービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
- [アクセス許可を統合&#40;マスター データ サービス&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+ [属性グループ &#40;マスターデータサービス&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [属性グループ名を変更する &#40;マスターデータサービス&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [属性グループ &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
+ [リーフアクセス許可 &#40;マスターデータサービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
+ [統合アクセス許可 &#40;マスターデータサービス&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

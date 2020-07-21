@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80198964075bc6de2bdd816c54ccf2ca1e3710f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42c403674d9ea8b34035631409a274bcce0b55bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005858"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [説明] ページ
   このダイアログ ボックスを使用すると、ポリシー ベースの管理条件に説明を追加できます。  
   
-## <a name="options"></a>および  
- **[説明]**  
+## <a name="options"></a>オプション  
+ **説明**  
  条件の説明を入力します。  
   
  **作成日**  

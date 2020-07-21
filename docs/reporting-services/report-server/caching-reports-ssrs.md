@@ -1,5 +1,5 @@
 ---
-title: レポートのキャッシュ (SSRS) | Microsoft Docs
+title: レポートのキャッシュ | Microsoft Docs
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 3e94ed2c05d3c23585abde1f2452f491be089e84
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175586"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082560"
 ---
 # <a name="caching-reports-ssrs"></a>複数のレポートのキャッシュ (SSRS)
   レポート サーバーでは、処理済みレポートのコピーをキャッシュして、ユーザーがレポートを開いたときにそのコピーを返すことができます。 レポートがキャッシュされたコピーかどうかをユーザーが判断できる唯一の方法は、レポートが実行された日時を確認することです。 その日時が現在の日時ではなく、レポートがスナップショットでない場合、そのレポートはキャッシュから取得されたレポートです。  

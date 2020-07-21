@@ -1,5 +1,5 @@
 ---
-title: XMLA を使用したモデル ソリューションの配置 |Microsoft Docs
+title: XMLA を使用してモデルソリューションを配置する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8cb1837-fcac-4730-bea4-a72cf94d9f7c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 68700aaba6c335bf7fe9686961933eac5c52f8f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b78490c5ab6ad3ba5e52bb82d4be254e3f5f102b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075372"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546904"
 ---
 # <a name="deploy-model-solutions-using-xmla"></a>XMLA を使用したモデル ソリューションの配置
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[データベースをスクリプト化]** コマンドの **[CREATE]** オプションを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース全体またはデータベースを構成するいずれかのオブジェクトの XML スクリプトを作成できます。 作成したスクリプトは、別のコンピューターで実行し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのスキーマ (メタデータ) を再作成できます。 このスクリプトによって、データベース全体が生成されます。スクリプトを使用するときに、既に配置済みのオブジェクトを増分更新するメカニズムはありません。 スクリプトを実行してデータベースを配置したら、新たに作成されたデータベースを処理して、ユーザーが参照できるようにする必要があります。  
@@ -34,7 +33,7 @@ ms.locfileid: "66075372"
 >  XML スクリプトには、データ ソースへの接続文字列内または権限借用の目的で指定されたパスワードは含まれません。 このシナリオの処理ではパスワードが必要であるため、実行前に XML スクリプトに手動でパスワードを追加するか、XML スクリプト実行後にパスワードを追加する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)   
+ [配置ウィザードを使用したモデルソリューションの配置](deploy-model-solutions-using-the-deployment-wizard.md)   
  [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)  
   
   

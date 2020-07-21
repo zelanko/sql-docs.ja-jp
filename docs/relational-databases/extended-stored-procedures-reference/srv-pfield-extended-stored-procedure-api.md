@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 2711fa3c1e7035b75228b02e9d52de8fd3dcd6d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755934"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (拡張ストアド プロシージャ API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -54,10 +54,10 @@ len
  *srvproc*  
  データベース接続を特定するポインターです。  
   
- *field*  
+ *分野*  
  その接続について返すデータを指定します。  
   
-|[値]|戻り値|  
+|値|戻り値|  
 |-----------|-------------|  
 |SRV_APPLNAME|接続の確立時にクライアントから提供されたアプリケーション名。|  
 |SRV_BCPFLAG|クライアントが一括コピー操作の準備中である場合は TRUE、それ以外の場合は FALSE を示すフラグ。|  

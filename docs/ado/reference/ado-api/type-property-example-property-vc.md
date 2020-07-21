@@ -1,5 +1,5 @@
 ---
-title: 入力プロパティの例 (プロパティ) (vc++) |Microsoft Docs
+title: Type プロパティの例 (プロパティ) (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Type property [property] [ADO], VC++ example
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e13079d18c8887aa0cdba8e5ae06f86eebca897c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16f3e7152c939567b6fdcccf670a7df26334d588
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938862"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759548"
 ---
 # <a name="type-property-example-property-vc"></a>Type プロパティの例 (プロパティ) (VC++)
-この例では、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティ。 これは、モデルなどの名前と、コレクションの型を一覧表示するためのユーティリティの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)など。  
+この例では、 [Type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 これは、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)などのコレクションの名前と種類を一覧表示するためのユーティリティのモデルです。  
   
- 開く必要はありません、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)へのアクセスをその**プロパティ**コレクションが存在することになるときに、**レコード セット**オブジェクトがインスタンス化します。 ただし、設定、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**をいくつかの動的プロパティを追加、**レコード セット**オブジェクトの**プロパティ**コレクション、例では、もう少し興味深いものを作成します。 図では、単純に明示的に使用して、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティにアクセスする各[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。  
+ **プロパティ**コレクションにアクセスするために[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く必要はありません。これらは、**レコードセット**オブジェクトがインスタンス化されるときに存在します。 ただし、[[カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md)] プロパティを**adUseClient**に設定すると、**レコードセット**オブジェクトの**properties**コレクションに動的なプロパティがいくつか追加されるため、この例はもう少し興味深いものになります。 具体的には、 [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して各[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトにアクセスします。  
   
 ```  
 // BeginTypePropertyCpp.cpp  
@@ -215,6 +215,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクトのプロパティ (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

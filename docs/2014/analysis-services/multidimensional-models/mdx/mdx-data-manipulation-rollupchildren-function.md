@@ -1,5 +1,5 @@
 ---
-title: RollupChildren 関数 (MDX) の操作 |Microsoft Docs
+title: RollupChildren 関数の操作 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 341468d521cebe1fda33d73ea999f3b6571cb01e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074265"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546354"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>RollupChildren 関数の操作 (MDX)
-  多次元式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [検索と置換用スクリプト] 関数は、それぞれの子に異なる単項演算子を適用するメンバーの子のロールアップし、数値としてこのプログラムのロールアップの値を返します。 単項演算子は、子メンバーに関連付けられたメンバー プロパティによって提供されるか、関数に直接指定される文字列式の場合もあります。  
+  多次元式 (MDX) [Rollupchildren](/sql/mdx/rollupchildren-mdx) [Script for Search and Replace] 関数は、メンバーの子をロールアップし、それぞれの子に異なる単項演算子を適用して、このロールアップの値を数値として返します。 単項演算子は、子メンバーに関連付けられたメンバー プロパティによって提供されるか、関数に直接指定される文字列式の場合もあります。  
   
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 関数の例  
  `RollupChildren` 関数を多次元式 (MDX) ステートメントで使用する方法は簡単に説明できますが、この関数が MDX クエリに与える影響は広範囲にわたります。  
@@ -64,7 +63,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  関数が呼び出されると、それぞれの子の値は、メンバー プロパティに格納されている演算子を使用して合計に算入されます。 国内と国外の返品のメンバーは無視され、`RollupChildren` 関数によって返されるロールアップ合計に 1.1 が乗算されます。  
   
 ### <a name="using-the-iif-function"></a>IIf 関数の使用  
- 操作の例が一般的でない場合、または操作が 1 つの MDX クエリのみに適用される場合、 [IIf](/sql/mdx/iif-mdx)関数で使用できる、`RollupChildren`同じ結果を提供する関数。 次の MDX クエリでは、前の例の MDX クエリと同じ結果を返します。ただし、カスタム メンバー プロパティは使用していません。  
+ この例の操作が一般的でない場合、または操作が1つの MDX クエリのみに適用される場合は、関数と共に[IIf](/sql/mdx/iif-mdx)関数を使用して同じ結果を得ることができ `RollupChildren` ます。 次の MDX クエリでは、前の例の MDX クエリと同じ結果を返します。ただし、カスタム メンバー プロパティは使用していません。  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

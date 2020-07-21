@@ -1,10 +1,9 @@
 ---
-title: Analysis Services ジョブ ステップの作成 | Microsoft Docs
-ms.custom: ''
+title: Create an Analysis Services Job Step
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +11,15 @@ helpviewer_keywords:
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e27f429820039b7d804f52776e9cf5dd33bf27dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 45f053ee1c69e5e36885fd72c6099823647381f1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267279"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75258493"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 
@@ -43,17 +44,17 @@ ms.locfileid: "68267279"
   
     [SQL Server 管理オブジェクト](#SMO)  
   
-## <a name="BeforeYouBegin"></a>はじめに  
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Restrictions"></a>制限事項と制約事項  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a>制限事項と制約事項  
   
 -   ジョブ ステップで Analysis Services コマンドを使用する場合、コマンド ステートメントは XML for Analysis Services の **Execute** メソッドである必要があります。 ステートメントには、完全な SOAP (Simple Object Access Protocol) エンベロープまたは XML for Analysis の **Discover** メソッドを含めることはできません。 完全な SOAP エンベロープと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Discover **メソッドは、** ではサポートされていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップではサポートされていません。 XML for Analysis Services の詳細については、「 [XML for Analysis の概要 (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx)」を参照してください。  
   
 -   ジョブ ステップで Analysis Services クエリを使用する場合、クエリ ステートメントは多次元式 (MDX) クエリである必要があります。 MDX の詳細については、「 [MDX ステートメントの基礎 (MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)」を参照してください。  
   
-### <a name="Security"></a>セキュリティ  
+### <a name="security"></a><a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>アクセス許可  
+#### <a name="permissions"></a><a name="Permissions"></a>アクセス許可  
   
 -   Analysis Services サブシステムを使用するジョブ ステップを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーであるか、このサブシステム用に定義された有効なプロキシ アカウントへアクセスできるユーザーだけです。 さらに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントまたはプロキシは、Analysis Services 管理者であり、かつ有効な Windows ドメイン アカウントである必要があります。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68267279"
   
 -   詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
-## <a name="SSMS"></a>SQL Server Management Studio の使用  
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Analysis Services コマンド ジョブ ステップを作成するには  
   
@@ -103,7 +104,7 @@ ms.locfileid: "68267279"
   
 9. **[詳細設定]** ページをクリックして、ジョブ ステップが成功または失敗した場合に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクション、ジョブ ステップの試行回数、ジョブ ステップ出力の出力先など、このジョブ ステップに関するさまざまなオプションを定義します。  
   
-## <a name="TSQL"></a>Transact-SQL の使用  
+## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL の使用  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Analysis Services コマンド ジョブ ステップを作成するには  
   
@@ -175,7 +176,7 @@ ms.locfileid: "68267279"
   
 詳細については、「 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)」を参照してください。  
   
-## <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+## <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
 **PowerShell スクリプト ジョブ ステップを作成するには**  
   
 XMLA や MDX などのプログラミング言語で、 **JobStep** クラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

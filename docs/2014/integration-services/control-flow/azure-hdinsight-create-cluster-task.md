@@ -10,22 +10,21 @@ f1_keywords:
 - sql12.dts.designer.afpcreatecltask.f1
 - sql11.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f41d86d0f757f9ccd0e698ac1bc81423a3118bb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2e0d73034bc131b0cc65d475f00efd4f54612b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832783"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433919"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight Create Cluster Task
 **Azure HDInsight Create Cluster Task** を使用すると、指定された Azure サブスクリプションとリソース グループの Azure HDInsight クラスターを SSIS パッケージで作成できます。
   
 > [!NOTE]  
 > - 新しい HDInsight クラスターの作成には 10 分から 20 分かかる場合があります。  
-> - Azure HDInsight クラスターの作成と実行には、料金がかかります。 詳細については、「[HDInsight の価格](http://azure.microsoft.com/en-us/pricing/details/hdinsight/)」を参照してください。  
+> - Azure HDInsight クラスターの作成と実行には、料金がかかります。 詳細については、「[HDInsight の価格](https://azure.microsoft.com/pricing/details/hdinsight/)」を参照してください。  
   
 **Azure HDInsight Create Cluster Task**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックします。すると、次の **[Azure HDInsight Create Cluster Task エディター]** ダイアログ ボックスが表示されます。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "62832783"
   
 |||  
 |-|-|  
-|**フィールド**|**[説明]**|  
+|**フィールド**|**説明**|  
 |AzureResourceManagerConnection|既存の Azure Resource Manager 接続マネージャーを選択するか、HDInsight クラスターを作成するために使用する新しいものを作成します。|  
 |AzureStorageConnection|既存の Azure ストレージ接続マネージャーを選ぶか、HDInsight クラスターに関連付けられている Azure ストレージ アカウントを参照する新しい接続マネージャーを作成します。|
 |SubscriptionId|HDInsight クラスターが作成されるサブスクリプションの ID を指定します。|
@@ -43,7 +42,7 @@ ms.locfileid: "62832783"
 |ClusterSize|クラスターに作成するノードの数を指定します。|  
 |BlobContainer|HDInsight クラスターに関連付けられる既定のストレージ コンテナーの名前を指定します。|  
 |UserName|HDInsight クラスターに接続するために使用するユーザー名を指定します。|  
-|パスワード|HDInsight クラスターに接続するために使用するパスワードを指定します。|
+|Password|HDInsight クラスターに接続するために使用するパスワードを指定します。|
 |SshUserName|SSH を使用して HDInsight クラスターをリモートでアクセスするために使用するユーザー名を指定します。|
 |SshPassword|SSH を使用して HDInsight クラスターをリモートでアクセスするために使用するパスワードを指定します。|
 |FailIfExists|クラスターが既に存在する場合に、タスクがエラーになるかどうかを指定します。|  

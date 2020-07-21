@@ -1,5 +1,5 @@
 ---
-title: データベースの処理、テーブル、またはパーティション |Microsoft Docs
+title: データベース、テーブル、またはパーティションの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea2d05c2862445737ea544fdab9c4ca8fc5e6c76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08c0856df10c2b70dc58ab1b52b0b7a4a1041e1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066844"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938743"
 ---
 # <a name="process-database-table-or-partition"></a>データベース、テーブル、またはパーティションの処理
-  このトピックのタスクを使用してテーブル モデル データベース、テーブル、またはパーティションを手動で処理する方法を説明する、**プロセス\<オブジェクト >**  ダイアログ ボックスで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+  このトピックのタスクでは、の [ ** \<object> 処理**] ダイアログボックスを使用して、テーブルモデルデータベース、テーブル、またはパーティションを手動で処理する方法について説明し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。  
   
  テーブル モデルの処理の詳細については、[「データの処理 (SSAS テーブル)」](../process-data-ssas-tabular.md) を参照してください。  
   
-##  <a name="bkmk_process_tasks"></a> 処理手順  
+##  <a name="tasks"></a><a name="bkmk_process_tasks"></a>タスク  
   
-###  <a name="bkmk_process_db"></a> データベースを処理するには  
+###  <a name="to-process-a-database"></a><a name="bkmk_process_db"></a>データベースを処理するには  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で処理対象のデータベースを右クリックし、 **[データベースの処理]** をクリックします。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66066844"
   
 3.  **[処理]** チェックボックス列で、選択したモードで処理するパーティションを選択し、 **[OK]** をクリックします。  
   
-###  <a name="bkmk_process_table"></a> テーブルを処理するには  
+###  <a name="to-process-a-table"></a><a name="bkmk_process_table"></a>テーブルを処理するには  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、処理対象のテーブルを含むテーブル モデル データベースの **[テーブル]** ノードを展開し、処理対象のテーブルを右クリックしてから **[テーブルの処理]** をクリックします。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66066844"
   
 3.  テーブルのチェックボックス列でテーブルを確認し、必要に応じて処理対象の追加のテーブルを選択し、 **[OK]** をクリックします。  
   
-###  <a name="bkmk_process_partition"></a> 1 つ以上のパーティションを処理するには  
+###  <a name="to-process-one-or-more-partitions"></a><a name="bkmk_process_partition"></a>1つ以上のパーティションを処理するには  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、処理対象のパーティションが存在するテーブルを右クリックして **[パーティション]** をクリックします。  
   
@@ -75,8 +74,8 @@ ms.locfileid: "66066844"
   
 4.  **[処理]** チェックボックス列で、選択したモードで処理するパーティションを選択し、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [テーブル モデル パーティション (SSAS テーブル)](tabular-model-partitions-ssas-tabular.md)   
+## <a name="see-also"></a>参照  
+ [SSAS 表形式&#41;&#40;テーブルモデルパーティション](tabular-model-partitions-ssas-tabular.md)   
  [テーブル モデル パーティションの作成および管理 (SSAS テーブル)](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

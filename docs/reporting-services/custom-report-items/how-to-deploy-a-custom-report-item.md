@@ -1,5 +1,6 @@
 ---
-title: カスタム レポート アイテムを配置する方法 | Microsoft Docs
+title: 方法:カスタム レポート アイテムを配置する | Microsoft Docs
+description: カスタム レポート アイテムを配置する方法について説明します。 レポート サーバー構成ファイルを変更し、コンポーネント アセンブリを適切なフォルダーにコピーします。
 ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 31347efeda4805d4faffc993c164441cba1697c4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194139"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216924"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置する方法
+# <a name="how-to-deploy-a-custom-report-item"></a>方法:カスタム レポート アイテムを配置する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でカスタム レポート アイテムを配置するには、レポート サーバー構成ファイルを変更し、デザイン時と実行時のコンポーネント アセンブリをレポート デザイナーとレポート サーバーの両方に対する適切なアプリケーション フォルダーにコピーする必要があります。  
   
 ### <a name="to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置するには  
   
-1.  Rsreportdesigner.config ファイルを編集して、デザイナーで使用するカスタム レポート アイテムの実行時とデザイン時のコンポーネントを構成します。 **ReportItemName** エントリは、**CustomReportItemDesigner** クラスで使用される **CustomReportItemAttribute** 属性と一致する必要があることにご注意ください。 例:  
+1.  Rsreportdesigner.config ファイルを編集して、デザイナーで使用するカスタム レポート アイテムの実行時とデザイン時のコンポーネントを構成します。 **ReportItemName** エントリは、**CustomReportItemDesigner** クラスで使用される **CustomReportItemAttribute** 属性と一致する必要があることにご注意ください。 次に例を示します。  
   
     ```  
     <ReportItems>  
@@ -36,7 +37,7 @@ ms.locfileid: "63194139"
     </ReportItemConverter>  
     ```  
   
-2.  Rsreportserver.config ファイルを編集して、カスタム レポート アイテムの実行時コンポーネントを登録します。 例:  
+2.  Rsreportserver.config ファイルを編集して、カスタム レポート アイテムの実行時コンポーネントを登録します。 次に例を示します。  
   
     ```  
     <ReportItems>  
@@ -44,7 +45,7 @@ ms.locfileid: "63194139"
     </ReportItems>  
     ```  
   
-3.  Rsssrvpolicy.config ファイルを編集して、カスタム レポート アイテムに適切なアクセス許可を付与する **CodeGroup** を追加します。 例:  
+3.  Rsssrvpolicy.config ファイルを編集して、カスタム レポート アイテムに適切なアクセス許可を付与する **CodeGroup** を追加します。 次に例を示します。  
   
     ```  
     <CodeGroup   

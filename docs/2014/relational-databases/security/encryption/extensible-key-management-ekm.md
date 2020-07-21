@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 4fc9b002b57f8118494709f8fe27a8b19ce28d8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011664"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068404"
 ---
 # <a name="extensible-key-management-ekm"></a>拡張キー管理 (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *拡張キー管理* (EKM) を含むデータ暗号化機能が用意されています。暗号化とキーの生成には *Microsoft Cryptographic API* (MSCAPI) が使用されます。 データとキーの暗号化のための暗号化キーは一時的なキー コンテナーに作成され、それらをデータベースに格納するには、まずプロバイダーからエクスポートする必要があります。 この方法により、暗号化キー階層とキーのバックアップを含むキー管理を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で処理できるようになります。  
@@ -35,7 +34,7 @@ ms.locfileid: "63011664"
  Azure 仮想マシンで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401)に格納されたキーを使用できます。 詳細については、「 [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)で処理できるようになります。  
   
 ## <a name="ekm-configuration"></a>EKM の構成  
- 拡張キー管理は [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションでサポートされているわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ 拡張キー管理は [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションでサポートされているわけではありません。 の各エディションでサポートされる機能の一覧につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2014 の各エディションがサポートする機能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
  既定では、拡張キー管理は無効です。 この機能を有効にするには、次のオプションと値を使用して sp_configure コマンドを実行します。  
   
@@ -139,7 +138,7 @@ DECRYPTION BY EKM_AKey1
   
  [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
  [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   

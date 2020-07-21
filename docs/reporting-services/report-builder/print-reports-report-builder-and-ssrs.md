@@ -1,5 +1,6 @@
 ---
-title: レポートの印刷 (SSRS) | Microsoft Docs
+title: レポートの印刷 | Microsoft Docs
+description: レポートは Web ポータルで表示し、印刷するか、レポートの表示に利用するアプリケーションから印刷できます。 クライアント コンピューターで必要に応じて印刷処理が実行されます。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45b38940afcd0fe73ad2c79abc59db9dc7b549b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f81be70bf4de9d9f15a3c35d3a3dc4b5c81f2609
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581154"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290882"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>レポートの印刷 - Reporting Services (SSRS)
   レポートをレポート サーバーに保存した後は、Web ポータル、またはエクスポートされたレポートの表示に使用する任意のアプリケーションで、レポートを表示および印刷できます。 レポートを保存する前にプレビューする場合は、印刷することができます。  
@@ -44,12 +45,12 @@ ms.locfileid: "65581154"
  別のアプリケーションにエクスポートされたレポートを印刷する方法を説明します。  
   
  [レポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
- レポートを印刷する手順、ページの余白を制御する手順、およびハード改ページ レンダラー (PDF、画像、または印刷) によってレンダリングされるレポートの用紙サイズを指定する手順について説明します。  
+ レポートを印刷する手順、ページの余白を制御する手順、およびハード改ページ レンダラーを使用してレンダリングされるレポートの用紙サイズを指定する手順について説明します(PDF、画像、または印刷のハード改ページレンダラー)。  
   
 ## <a name="see-also"></a>参照  
- [レポートのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
+ [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [画像 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
+ [画像 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

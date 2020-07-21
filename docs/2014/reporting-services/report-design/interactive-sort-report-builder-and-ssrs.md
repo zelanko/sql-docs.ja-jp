@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 02735bafde927ba110de6465c5380987ddb6b5f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105614"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>対話的な並べ替え (レポート ビルダーおよび SSRS)
@@ -27,9 +27,9 @@ ms.locfileid: "66105614"
   
  対話的な並べ替えを追加する場合、次の項目を指定する必要があります。  
   
--   **並べ替え対象**:行または列。  
+-   **並べ替え対象:** 行または列。  
   
--   **並べ替え基準**:テーブル列に表示されるフィールドですか? または表示されないフィールド。  
+-   **並べ替えの基準:** テーブル列に表示されるフィールド、 または表示されないフィールド。  
   
 -   **並べ替えを行うコンテキスト:** たとえば、行グループに関連付けられた行、列グループに関連付けられた列、詳細行、親グループ内の子グループ、親グループと子グループの両方などを並べ替えることができます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66105614"
   
  対話型の並べ替えボタンを使用して実現できる効果を次の表にまとめます。  
   
-|操作|並べ替え対象|並べ替えボタンを追加する場所|並べ替え基準|並べ替えの範囲|  
+|アクション|並べ替え対象|並べ替えボタンを追加する場所|並べ替え基準|並べ替えの範囲|  
 |------------|------------------|----------------------------------|---------------------|----------------|  
 |グループのないテーブルの詳細行を並べ替える|詳細|列ヘッダー|この列にバインドされたデータセット フィールド|データ領域|  
 |マトリックスの最上位レベルのグループ インスタンスを並べ替える|グループ|列ヘッダー|親グループのグループ式|データ領域|  
@@ -56,9 +56,9 @@ ms.locfileid: "66105614"
   
  それには、複数のフィールドを組み合わせる式に基づいてグループ化するようにテーブルをデザインし直す必要があります。 たとえば、在庫数を含むデータセットで、元のテーブルがサイズ、色の順にグループ化されている場合、サイズと色を組み合わせたグループ式で 1 つのグループを指定できます。 詳細については、「 [テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

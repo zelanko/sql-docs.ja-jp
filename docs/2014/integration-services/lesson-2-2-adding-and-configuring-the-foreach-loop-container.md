@@ -1,5 +1,5 @@
 ---
-title: 手順 2:Foreach ループ コンテナーの追加と構成 | Microsoft Docs
+title: '手順 2: Foreach ループ コンテナーの追加と構成 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77aac43aa6fc00a408c049ea7f6d078417a8d4dd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767524"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440619"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>手順 2:Foreach ループ コンテナーの追加と構成
   この実習では、フラット ファイルのフォルダー全体にループ機能を付加し、レッスン 1 で使用したデータ フロー変換と同じ変換を各フラット ファイルに適用します。 そのためには、Foreach ループ コンテナーを制御フローに追加して、構成します。  
@@ -24,9 +23,9 @@ ms.locfileid: "62767524"
   
  レッスン 1 で作成したフラット ファイル接続マネージャーは、現在、1 つのフラット ファイルにのみ接続しています。 フォルダーの各フラット ファイルに 1 つずつ接続するには、Foreach ループ コンテナーとフラット ファイル接続マネージャーをそれぞれ次のように構成します。  
   
--   **Foreach ループ コンテナー:** このコンテナーの列挙値をユーザー定義のパッケージ変数にマップします。 ForEach ループ コンテナーは、このユーザー定義の変数を使用して、フラット ファイル接続マネージャーの `ConnectionString` プロパティを動的に変更しながら、フォルダー内の各フラット ファイルへ順番に接続します。  
+-   **ForEach ループ コンテナー:** このコンテナーの列挙値をユーザー定義のパッケージ変数にマップします。 ForEach ループ コンテナーは、このユーザー定義の変数を使用して、フラット ファイル接続マネージャーの `ConnectionString` プロパティを動的に変更しながら、フォルダー内の各フラット ファイルへ順番に接続します。  
   
--   **フラット ファイル接続マネージャー:** ユーザー定義変数を使用して、接続マネージャーの設定によって、レッスン 1 で作成された接続マネージャーを変更`ConnectionString`プロパティ。  
+-   **フラットファイル接続マネージャー:** レッスン1で作成した接続マネージャーを変更するには、ユーザー定義変数を使用して接続マネージャーのプロパティを設定し `ConnectionString` ます。  
   
  この実習の手順では、ForEach ループ コンテナーを作成し、ユーザー定義パッケージ変数を使用するように変更する方法、およびデータ フロー タスクをこのループに追加する方法を説明します。 次の実習では、ユーザー定義変数を使用するようにフラット ファイル接続マネージャーを変更します。  
   
@@ -43,9 +42,9 @@ ms.locfileid: "62767524"
   
 3.  新しく追加した **[ForEach ループ コンテナー]** を右クリックし、 **[編集]** をクリックします。  
   
-4.  **Foreach ループ エディター**  ダイアログ ボックスの 、**全般** ページの**名前**、入力`Foreach File in Folder`します。 **[OK]** をクリックします。  
+4.  [ **Foreach ループエディター** ] ダイアログボックスの **[全般**] ページで、[**名前**] に「」と入力し `Foreach File in Folder` ます。 **[OK]** をクリックします。  
   
-5.  Foreach ループ コンテナーを右クリックし、をクリックして**プロパティ**、[プロパティ] ウィンドウであることを確認し、`LocaleID`プロパティに設定されて**英語 (米国)** します。  
+5.  [Foreach ループコンテナー] を右クリックし、[**プロパティ**] をクリックします。プロパティウィンドウで、 `LocaleID` プロパティが**英語 (米国)** に設定されていることを確認します。  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>ForEach ループ コンテナーの列挙子を構成するには  
   
@@ -63,9 +62,9 @@ ms.locfileid: "62767524"
   
     1.  「 [Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
-    2.  **[ダウンロード]** タブをクリックします。  
+    2.  [**ダウンロード**] タブをクリックします。  
   
-    3.  ハイパーリンクをクリックして"http://msftisprodsamples.codeplex.com/downloads/get/578097"SQL2012 します。Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip ファイルです。  
+    3.  ハイパーリンク " https://msftisprodsamples.codeplex.com/downloads/get/578097 " SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip ファイルをクリックします。  
   
 6.  **[ファイル]** ボックスに「**Currency_\*.txt**」と入力します。  
   
@@ -73,9 +72,9 @@ ms.locfileid: "62767524"
   
 1.  **[変数のマッピング]** をクリックします。  
   
-2.  **[変数のマッピング]** ページで、 **[変数]** 列の空いているセルをクリックし、 **\<新しい変数...>** をクリックします。  
+2.  [**変数のマッピング**] ページの [**変数**] 列で、空のセルをクリックしてを選択し **\<New Variable...>** ます。  
   
-3.  **変数の追加** ダイアログ ボックスの**名前**、型`varFileName`します。  
+3.  [**変数の追加**] ダイアログボックスで、[**名前**] に「」と入力 `varFileName` します。  
   
     > [!IMPORTANT]  
     >  変数名では大文字と小文字が区別されます。  
@@ -86,13 +85,12 @@ ms.locfileid: "62767524"
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>データ フロー タスクをループに追加するには  
   
--   ドラッグ、 **Extract Sample Currency Data**データ フロー タスクの名前を変更した Foreach ループ コンテナーを`Foreach File in Folder`します。  
+-   [ **Extract Sample Currency data** ] データフロータスクを、名前を変更した Foreach ループコンテナーにドラッグし `Foreach File in Folder` ます。  
   
 ## <a name="next-lesson-task"></a>次のレッスンの作業  
  [手順 3:フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>参照  
- [Foreach ループ コンテナーを構成する](control-flow/foreach-loop-container.md)   
+## <a name="see-also"></a>関連項目  
+ [Foreach ループコンテナーの構成](control-flow/foreach-loop-container.md)   
  [パッケージで変数を使用する](use-variables-in-packages.md)  
-  
   

@@ -13,14 +13,14 @@ apilocation:
 - SQLServerCallableStatement.getCharacterStream()
 apitype: Assembly
 ms.assetid: 6207ad4b-56b3-4c66-bad5-6e590591ac2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e88522dcea0371db8341fc129f23c90a7620d342
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d6af696605475e29f1606fe3fdc408b54d0a4dd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953248"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907758"
 ---
 # <a name="getcharacterstream-method-sqlservercallablestatement"></a>getCharacterStream メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67953248"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getCharacterStream &#40;int&#41;](../../../connect/jdbc/reference/getcharacterstream-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  
 |[getCharacterStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getcharacterstream-java-lang-string.md)|パラメーターに渡された名前を使用して、指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  

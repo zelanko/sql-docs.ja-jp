@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 543fd750047d171e353940bc2b4a22a4e54aed57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8e67d65ca316134b4f801cccf9bded31408bb1a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022463"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049148"
 ---
 # <a name="heterogeneous-database-replication"></a>異種データベース レプリケーション
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、トランザクション レプリケーションとスナップショット レプリケーションに対する次の異種シナリオをサポートします。  
@@ -42,7 +41,7 @@ ms.locfileid: "63022463"
 |データ ウェアハウジング ステージング サーバー|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ステージング データベースと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のデータベースとの同期を保ちます。|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|ソース システムの変更のレプリケーション中に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に対してアプリケーションをリアルタイムでテストします。 移行に問題がなければ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に切り替えます。|  
   
- 詳細については、「[Oracle Publishing Overview](oracle-publishing-overview.md)」 (Oracle パブリッシングの概要) を参照してください。  
+ 詳細については、「[Oracle パブリッシングの概要](oracle-publishing-overview.md)」を参照してください。  
   
 ## <a name="publishing-data-to-non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバーへのデータのパブリッシュ  
  以下の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のデータベースは、スナップショット パブリケーションとトランザクション パブリケーションに対するサブスクライバーとしてサポートされています。  

@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], JScript example
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b6a81b69fc16c587786685897c476c65937bb4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6194866ef1b4649e6d54af8b8777cca8bce9bf52
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932634"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760118"
 ---
 # <a name="find-method-example-jscript"></a>Find メソッドの例 (JScript)
-この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[検索](../../../ado/reference/ado-api/find-method-ado.md)メソッドを見つけて、企業での表示、 ***Northwind*** G. 切り取り文字で始まる名前のデータベースし、貼り付け次のコードをメモ帳または別のテキスト エディターととして保存**FindJS.asp**します。  
+この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Find](../../../ado/reference/ado-api/find-method-ado.md)メソッドを使用して、名前が G で始まる***Northwind***データベース内の会社を検索して表示します。次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **findjs**として保存します。  
   
 ```  
 <!-- BeginFindJS -->  
@@ -152,6 +152,6 @@ BODY {
 <!-- EndFindJS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

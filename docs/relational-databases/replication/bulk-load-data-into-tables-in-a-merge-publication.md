@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44c3549b04bd2bf534e626764bbc56c688b3ca5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc2a57e7ce3323b2982ab862f73e0188174e8aa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722187"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication"></a>マージ パブリケーションでのテーブルへのデータの一括読み込み
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [bcp ユーティリティ](../../tools/bcp-utility.md)または [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) コマンドを使用してテーブルにデータを読み込むと、既定では、[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) システム テーブル内の追跡データを維持するマージ レプリケーション トリガーが起動されなくなります。 データが読み込まれたときにマージ レプリケーション トリガーを強制的に起動するか、一括コピー操作の後にレプリケーション ストアド プロシージャを使用して、生成されたレプリケーション メタデータをプログラムによって挿入できます。  
   
 ### <a name="to-bulk-load-data-into-tables-published-by-merge-replication-using-the-bcp-utility"></a>マージ レプリケーションによってパブリッシュされたテーブルに bcp ユーティリティを使用してデータを一括読み込みするには  
@@ -35,6 +35,6 @@ ms.locfileid: "68085839"
   
     -   FIRE_TRIGGERS オプションを使用して一括コピーを実行する。  
   
-    -   データの挿入先のデータベースで、[sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md) を実行する。 データの挿入先のテーブル名を **@table_name** を実行する。  
+    -   データの挿入先のデータベースで、[sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md) を実行する。 `@table_name` には、データが挿入されたテーブルの名前を指定します。  
   
   

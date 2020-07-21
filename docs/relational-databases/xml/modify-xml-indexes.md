@@ -1,5 +1,6 @@
 ---
 title: XML インデックスの変更 | Microsoft Docs
+description: ALTER INDEX (Transact-SQL) DDL ステートメントを使用して、既存の XML と XML 以外のインデックスを変更する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a579fcf8809c8c05838dad70126421362cd8048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e89c0bc3a0cb7731507f1693fbd554011c62926
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729873"
 ---
 # <a name="modify-xml-indexes"></a>XML インデックスの変更
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用すると、既存の XML インデックスや XML 以外のインデックスを変更できます。 ただし、一部の ALTER INDEX オプションは XML インデックスに使用できません。 次のオプションは、XML インデックスの変更時には無効です。  
   
 -   再構築と設定オプションの IGNORE_DUP_KEY は XML インデックスでは無効です。 再構築オプション ONLINE は、セカンダリ XML インデックスでは OFF に設定されている必要があります。 オプション DROP_EXISTING は、ALTER INDEX ステートメントでは使用できません。  

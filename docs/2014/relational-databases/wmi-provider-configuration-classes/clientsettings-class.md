@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e1dae21a1a02ea92e6f75a2471a1180e2634b2d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cca2bfc19048c20a48d97d0d6660740de632d10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242875"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060071"
 ---
 # <a name="clientsettings-class"></a>ClientSettings クラス
-  [ClientSettings クラス](clientsettings-class.md)を表す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントで設定します。  
+  [Clientsettings クラス](clientsettings-class.md)は、クライアントの設定を表し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  このクラスにより、プログラムによるクライアントの管理が可能になります。  
   

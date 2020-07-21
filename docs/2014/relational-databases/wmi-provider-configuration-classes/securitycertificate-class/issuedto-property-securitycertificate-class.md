@@ -1,5 +1,5 @@
 ---
-title: IssuedTo プロパティ (SecurityCertificate クラス) |Microsoft Docs
+title: プロパティのプロパティ (SecurityCertificate クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ff7916969608889a0c7b3a0e7e93cf65fff5b6af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37a38f3072a4a64d8be5bd81cc9cb659bc433922
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278866"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060009"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>IssuedTo プロパティ (SecurityCertificate クラス)
   セキュリティ証明書の発行先のオブジェクトを取得します。  
@@ -36,16 +35,16 @@ object
 .IssuedTo [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  セキュリティ証明書を表す [SecurityCertificate クラス](securitycertificate-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書の発行先のオブジェクトを指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

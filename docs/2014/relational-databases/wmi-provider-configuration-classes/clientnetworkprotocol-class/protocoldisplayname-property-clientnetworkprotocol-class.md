@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 69e79a461be199cb0ed661ecf2bac876a2afaff9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da1f1fbee054536890ceeaa243818d3e32247d78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065624"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>ProtocolDisplayName プロパティ (ClientNetworkProtocol クラス)
-  によって指定されたクライアント ネットワーク プロトコルの表示名を取得、 [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)します。  
+  [クライアントプロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)によって指定されたクライアントネットワークプロトコルの表示名を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,16 +35,16 @@ object
 .ProtocolDisplayName [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ClientNetworkProtocol クラス](clientnetworkprotocol-class.md)によって使用されるネットワーク プロトコルを表すオブジェクトを[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント。  
+ クライアントによって使用されるネットワークプロトコルを表す[Clientnetworkprotocol クラス](clientnetworkprotocol-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク プロトコルの表示名を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>関連項目  
- [クライアント ネットワーク プロトコルとネットワーク ライブラリの構成](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>参照  
+ [クライアントのネットワーク プロトコルと Net-Library の構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 再生をブレークポイント (SQL Server Profiler) |Microsoft Docs
+title: ブレークポイントまで再生する (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33860d4e84e828b404236527dbe3c8c8cf6becc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19c21fc2e4a8a2c3b941eaf8c2a62f3ad44644aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183518"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007426"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>ブレークポイントまでの再生 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、再生するトレース ファイルまたはトレース テーブルにブレークポイントを設定する方法について説明します。 トレースの再生を開始する前に、トレース ファイルまたはトレース テーブルにブレークポイントを設定しておくと、特定のイベントが発生したときにトレースの再生を一時停止できます。 トレース再生中にブレークポイントを使用するとデバッグが簡単になります。これは、長いトレース スクリプトの再生を短いセグメントに分けて小刻みに分析できるからです。  
@@ -51,7 +50,7 @@ ms.locfileid: "63183518"
   
 6.  手順 5. をトレースの最後まで繰り返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カーソルまでの再生 &#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
  [トレースの再生](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  

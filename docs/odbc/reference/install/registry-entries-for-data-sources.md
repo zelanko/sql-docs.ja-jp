@@ -1,5 +1,5 @@
 ---
-title: データ ソースのレジストリ エントリ |Microsoft Docs
+title: データソースのレジストリエントリ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,38 +14,30 @@ helpviewer_keywords:
 - data sources [ODBC], configuring
 - registry entries for data sources [ODBC]
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0b9d101395a3276f92f3ccf49e36effc65420f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c73ea704b091bc37afb1ac42b520304022d929c3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093880"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296272"
 ---
 # <a name="registry-entries-for-data-sources"></a>データ ソースのレジストリ エントリ
 > [!NOTE]  
->  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
+>  Windows XP および windows Server 2003 以降では、ODBC は Windows オペレーティングシステムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールする必要があります。  
   
- インストーラー DLL では、レジストリ内の各データ ソースについての情報を保持します。 Microsoft Windows NT または Windows 2000 および Microsoft Windows 95/98 では、この情報は、レジストリの次の 2 つのキーのいずれかの下のサブキーに格納されます。  
-  
- HKEY_LOCAL_MACHINE  
-  
- ソフトウェア  
-  
- ODBC  
-  
- Odbc.ini  
-  
- HKEY_CURRENT_USER  
-  
- ソフトウェア  
-  
- ODBC  
-  
- Odbc.ini  
-  
- どのキーが使用されるかどうかは、データ ソースに依存、*システム データ ソース、* にすべてのユーザーに表示されるまたは*ユーザー データ ソース、* これは、現在のユーザーにのみ使用できます。 システム データ ソースは、HKEY_LOCAL_MACHINE ツリーに格納されているし、ユーザー データ ソースは、HKEY_CURRENT_USER ツリーに格納されます。 その他のすべての点では、システム データ ソースおよびデータ ソースのユーザーは同じです。  
+ インストーラー DLL は、各データソースに関する情報をレジストリに保持します。 Microsoft Windows NT/Windows 2000 および Microsoft Windows 95/98 では、この情報はレジストリの次の2つのキーのいずれかの下のサブキーに格納されます。  
+
+ ```console
+ HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbc.ini  
+ ```
+
+ ```console
+ HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
+ ```
+
+ どのキーが使用されるかは、データソースが*システムデータソース*であるか、すべてのユーザーが利用できるか、または現在のユーザーのみが使用できる*ユーザーデータソース*であるかによって異なります。 システムデータソースは HKEY_LOCAL_MACHINE ツリーに格納され、ユーザーデータソースは HKEY_CURRENT_USER ツリーに格納されます。 それ以外の点では、システムデータソースとユーザーデータソースは同じです。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], examples
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0e178d20d77b454e649b43c91d5e54513b4a53b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d74a4a6ab596f6762e405a81b2365281b4f6b95c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112473"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297104"
 ---
 # <a name="additional-script-component-examples"></a>その他のスクリプト コンポーネントの例
 

@@ -1,5 +1,6 @@
 ---
 title: XML インデックス (SQL Server) | Microsoft Docs
+description: XML データ型の列に XML インデックスを作成して、クエリのパフォーマンスを向上させる方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729783"
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **xml** データ型の列には xml インデックスを作成できます。 列に保存されている XML インスタンスのすべてのタグ、値、およびパスにインデックスが設定されるので、クエリのパフォーマンスが向上します。 次のような場合、XML インデックスの効果が得られる可能性があります。  
   
 -   ワークロードで XML 列へのクエリが頻繁に行われる場合。 データ変更時の XML インデックスのメンテナンス コストを考慮する必要があります。  
@@ -94,7 +95,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   ベース テーブルの主キー。 ベース テーブルとの逆結合のため、ベース テーブルの主キーがプライマリ XML インデックスにコピーされます。ベース テーブルの主キーの最大列数は 15 です。  
   
- このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 例:  
+ このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 次に例を示します。  
   
 -   `//ContactRecord/PhoneNumber` 最後の 2 つのロケーション ステップだけが既知です。  
   
@@ -104,7 +105,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  [xml データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md) に関係するクエリの場合、クエリ プロセッサでプライマリ XML インデックスが使用され、スカラー値またはプライマリ インデックス自体の XML サブツリーのどちらかが返されます。 (このプライマリ XML インデックスには XML インスタンスの再構築に必要なすべての情報が格納されています)。  
   
- たとえば、次のクエリからは `ProductModel` テーブルの `CatalogDescription`**xml** 型の列に格納された集計情報が返されます。 このクエリでは、カタログの説明に <`Features`> の説明も含まれている製品モデルに限り <`Summary`> 情報が返されます。  
+ たとえば、次のクエリからは `CatalogDescription`**テーブルの** xml `ProductModel` 型の列に格納された集計情報が返されます。 このクエリでは、カタログの説明に <`Features`> の説明も含まれている製品モデルに限り <`Summary`> 情報が返されます。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -216,6 +217,6 @@ WHERE ProductModelID = 19
   
 ## <a name="see-also"></a>参照  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

@@ -14,29 +14,28 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86a9538e81881a3b42b95447f4264200e2fe9d4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68190965"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065306"
 ---
-# <a name="instance-configuration"></a>インスタンスの構成
+# <a name="instance-configuration"></a>[インスタンスの構成]
   **インストール ウィザードの** [インスタンスの構成] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスまたは名前付きインスタンスのどちらを作成するのかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがまだインストールされていない場合は、名前付きインスタンスを指定しない限り、既定のインスタンスが作成されます。  
   
  各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、照合順序などのオプションに固有の設定を持つ異なるサービス セットから構成されます。 ディレクトリ構造、レジストリ構造、およびサービス名には、すべて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ中に作成されるインスタンス名および特定のインスタンス ID が反映されます。  
   
  インスタンスには、既定のインスタンスと名前付きインスタンスがあります。 既定のインスタンス名は MSSQLSERVER です。 接続時に、クライアントでインスタンス名を指定する必要はありません。 名前付きインスタンスは、ユーザーがセットアップ中に指定します。 先に既定のインスタンスをインストールしなくても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を名前付きインスタンスとしてインストールできます。 既定のインスタンスにできるのは、バージョンにかかわらず、一度に 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールだけです。  
   
- **警告!** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、 **[インスタンスの構成]** ページで準備済みインスタンスを完了するときにインスタンス名を指定できます。 コンピューター上に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のインスタンスがない場合は、完了しようとしている準備済みインスタンスを既存のインスタンスとして構成するように選択できます。  
+ **アラート!** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、**[インスタンスの構成]** ページで準備済みインスタンスを完了するときにインスタンス名を指定できます。 コンピューター上に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のインスタンスがない場合は、完了しようとしている準備済みインスタンスを既存のインスタンスとして構成するように選択できます。  
   
 ## <a name="multiple-instances"></a>複数のインスタンス  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、1 台のサーバー (1 つのプロセッサ) 上に複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをインストールできます。ただし、既定のインスタンスにできるのはそのうち 1 つだけです。 その他のインスタンスはすべて、名前付きインスタンスにする必要があります。 コンピューターは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを同時に実行でき、それぞれ他のインスタンスとは関係なく動作します。  
   
  詳しくは、「 [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md)」をご覧ください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  フェールオーバー クラスター インスタンスのみ - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのネットワーク名を指定します。 この名前は、ネットワーク上のフェールオーバー クラスター インスタンスを識別します。  
   
  既定のインスタンスまたは名前付きインスタンス - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスと名前付きインスタンスのどちらをインストールするか決定する場合は、次の事項を考慮してください。  
@@ -71,12 +70,12 @@ ms.locfileid: "68190965"
   
 -   埋め込み型スペースなどの特殊文字は、インスタンス名に使用できません。 円記号 (\\)、コンマ (,)、コロン (:)、セミコロン (;)、単一引用符 (')、アンパサンド (&)、ハイフン (-)、およびアット マーク (@) も使用できません。  
   
--   **現在の Windows コード ページで有効な文字のみで使用できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス名。サポートされていない Unicode 文字を使用すると、セットアップ エラーが発生します。**  
+-   **インスタンス名に使用できるのは、現在の Windows コードページで有効な文字だけ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。サポートされていない Unicode 文字を使用すると、セットアップエラーが発生します。**  
   
- **検出されたインスタンスと機能**  
+ **[検出されたインスタンスと機能]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行中のコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとコンポーネントが一覧表示されます。  
   
- **[インスタンス ID]** : 既定では、インスタンス名がインスタンス ID として使用されます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 既定のインスタンスの場合、インスタンス名とインスタンス ID は、MSSQLSERVER になります。 既定以外のインスタンス ID を使用するには、 **Instance ID** フィールドで指定します。  
+ **インスタンス id** -既定では、インスタンス名がインスタンス id として使用されます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 既定のインスタンスの場合、インスタンス名とインスタンス ID は、MSSQLSERVER になります。 既定以外のインスタンス ID を使用するには、 **Instance ID** フィールドで指定します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、このページに表示されるインスタンス ID は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep プロセスのイメージの準備手順で指定したインスタンス ID です。 イメージの完了手順では別のインスタンス ID を指定できません。  

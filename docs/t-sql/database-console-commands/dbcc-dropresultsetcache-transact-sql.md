@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e0f4646d6c67931bbbede9b44b97a52251b1b024
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: e0f87333a1767a8d0a618d2afe5097852b7a6dee
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809913"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634781"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE  (Transact-SQL)
 
@@ -29,7 +29,7 @@ Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースからす�
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC DROPRESULTSETCACHE
 [;]  
 ```  
@@ -37,9 +37,18 @@ DBCC DROPRESULTSETCACHE
 ## <a name="permissions"></a>アクセス許可
 
 DB_OWNER 固定サーバー ロールのメンバーシップが必要です。
-  
+
+## <a name="remarks"></a>解説
+
+- このコマンドでは、すべてのクエリの結果セット キャッシュが空になります。  
+
+- データベースの結果セット キャッシュ機能をオフにしても、キャッシュされたすべての結果が削除されます。  
+
+- 結果セット キャッシュが有効になっているデータベースを一時停止すると、キャッシュされた結果は削除されません。  
+
 ## <a name="see-also"></a>参照
 
+[結果セットのキャッシュを使用したパフォーマンスのチューニング](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

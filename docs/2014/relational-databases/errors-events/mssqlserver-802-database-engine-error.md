@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c1caf78bedc85f7de7a55b67daee4c227d2a8dd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0495e3d3b4ec835f33254152874b21f5f989808b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762364"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553209"
 ---
-# <a name="mssqlserver802"></a>MSSQLSERVER_802
+# <a name="mssqlserver_802"></a>MSSQLSERVER_802
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|802|  
@@ -40,7 +39,7 @@ ms.locfileid: "62762364"
   
 1.  このサーバー上で、他のアプリケーションやサービスによってメモリが消費されていないか確認します。 重要度の低いアプリケーションやサービスのメモリ消費量が少なくなるように、構成を変更します。  
   
-2.  パフォーマンス モニター カウンターを収集を開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:バッファー マネージャー**、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:Memory Manager**します。  
+2.  次のパフォーマンス モニター カウンターの収集を開始します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:Buffer Manager**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:Memory Manager**。  
   
 3.  次に示す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ構成パラメーターを確認します。  
   

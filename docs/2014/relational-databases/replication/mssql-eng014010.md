@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8af9ae77562cb8ece9cb23e32c4e4ce216987715
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: c3d989eb7ae78562fb77d9896545539ba4ca3c7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049322"
 ---
 # <a name="mssql_eng014010"></a>MSSQL_ENG014010
     
@@ -46,7 +45,7 @@ ms.locfileid: "68811118"
   
      10.193.17.129 inst1  
   
--   レプリケーションを削除し、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録して、レプリケーションを再設定します。 クラスター化されて@SERVERNAMEいないインスタンスに対して @ の値が正しくない場合は、次の手順を実行します。  
+-   レプリケーションを削除し、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録して、レプリケーションを再設定します。 @@SERVERNAME の値が、クラスター化されていないインスタンスに対して適切でない場合は、次の手順を実行してください。  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -59,7 +58,7 @@ ms.locfileid: "68811118"
   
      @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [@@SERVERNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/servername-transact-sql)   
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   

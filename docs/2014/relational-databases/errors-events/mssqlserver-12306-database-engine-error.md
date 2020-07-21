@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1f83d927-a215-4e43-98a9-4dab9d6e68bb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cdfbfd7ec4ac12d6c144eac399711ed587f2c9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a0ffe6f1246814887f6c0acf449b3ef83ffe328
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870082"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552367"
 ---
-# <a name="mssqlserver12306"></a>MSSQLSERVER_12306
+# <a name="mssqlserver_12306"></a>MSSQLSERVER_12306
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|12306|  
@@ -35,7 +34,7 @@ ms.locfileid: "62870082"
 ## <a name="user-action"></a>ユーザーの操作  
  カーソルは使用しないでください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

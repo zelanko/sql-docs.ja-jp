@@ -1,5 +1,5 @@
 ---
-title: 接続のフィルターまたはドキュメント Web パーツ (SharePoint 統合モードで Reporting Services) |Microsoft Docs
+title: フィルター Web パーツまたはドキュメント Web パーツの接続 (SharePoint 統合モードの Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109715"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>フィルター Web パーツまたはドキュメント Web パーツの接続 (Reporting Services の SharePoint 統合モード)
@@ -27,7 +27,7 @@ ms.locfileid: "66109715"
   
  フィルター Web パーツは、レポートで値を 1 つ以上のパラメーターに送信するために使用します。 フィルター Web パーツを使用するには、この Web パーツによって送信される値、データ型、および形式との互換性がある、この Web パーツ用のパラメーターをレポートに定義しておく必要があります。  
   
- ドキュメント Web パーツは、ホーム サイトのドキュメント ライブラリに関連付けられます。 ドキュメント ライブラリからアイテムを表示、追加、または削除するには、 **[すべてのサイト コンテンツの表示]** をクリックします。 ライブラリで、 **[ドキュメント]** をクリックします。 **[新規]** 、 **[アップロード]** 、および **[アクション]** メニューを使用してドキュメント ライブラリのアイテムを管理できます。  
+ ドキュメント Web パーツは、ホーム サイトのドキュメント ライブラリに関連付けられます。 ドキュメント ライブラリからアイテムを表示、追加、または削除するには、 **[すべてのサイト コンテンツの表示]** をクリックします。 ライブラリで、 **[ドキュメント]** をクリックします。 **[新規]**、 **[アップロード]**、および **[アクション]** メニューを使用してドキュメント ライブラリのアイテムを管理できます。  
   
 ### <a name="to-connect-a-filter-web-part"></a>フィルター Web パーツを接続するには  
   
@@ -35,15 +35,15 @@ ms.locfileid: "66109715"
   
 2.  **[サイトの操作]** メニューの **[ページの編集]** をクリックします。  
   
-3.  **[Web パーツの追加]** をクリックします。  
+3.  [ **Web パーツの追加] を**クリックします。  
   
-4.  **[すべての Web パーツ]** の **[その他]** カテゴリで、 **[SQL Server Reporting Services レポート ビューアー]** をクリックします。  
+4.  [**すべての Web パーツ**の [**その他**] カテゴリで、[ **SQL Server Reporting Services レポートビューアー**] を選択します。  
   
 5.  **[追加]** をクリックします。 Web パーツが、ゾーンの一番上に追加されます。  
   
-6.  同一の Web パーツ ページまたはダッシュボードの別の領域で、 **[Web パーツの追加]** をクリックします。  
+6.  同じ Web パーツページまたはダッシュボードの別のゾーンで、[ **Web パーツの追加**] をクリックします。  
   
-7.  **[すべての Web パーツ]** の **[フィルター]** セクションで、Web パーツを選択します。  
+7.  [**すべての Web パーツ**の [**フィルター** ] セクションで、Web パーツを選択します。  
   
 8.  **[追加]** をクリックします。 Web パーツが、ゾーンの一番上に追加されます。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66109715"
   
 2.  **[サイトの操作]** メニューの **[ページの編集]** をクリックします。  
   
-3.  **[Web パーツの追加]** をクリックします。  
+3.  [ **Web パーツの追加] を**クリックします。  
   
 4.  **[すべての Web パーツ]** の **[リストまたはライブラリ]** セクションで **[ドキュメント]** をクリックします。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66109715"
   
 6.  ツール ペインの下部で **[適用]** をクリックし、 **[OK]** をクリックしてペインを閉じます。  
   
-7.  同一の Web パーツ ページまたはダッシュボードの別の領域で、 **[Web パーツの追加]** をクリックします。  
+7.  同じ Web パーツページまたはダッシュボードの別のゾーンで、[ **Web パーツの追加**] をクリックします。  
   
 8.  **[すべての Web パーツ]** の **[その他]** カテゴリで、 **[SQL Server Reporting Services レポート ビューアー].**  
   
@@ -76,8 +76,8 @@ ms.locfileid: "66109715"
 11. 変更をチェックインし、ページを保存します。  
   
 ## <a name="see-also"></a>参照  
- [レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
- [SharePoint サイトのレポート ビューアー Web パーツ](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [レポート ビューアー Web パーツのカスタマイズ](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
+ [SharePoint 統合モードの Reporting Services &#40;Web ページにレポートビューアー Web パーツを追加&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [SharePoint サイトのレポートビューアー Web パーツ](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [レポートビューアー Web パーツのカスタマイズ](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   
   

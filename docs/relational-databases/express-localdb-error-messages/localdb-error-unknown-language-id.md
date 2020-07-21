@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 93d770fde71fe51b06bfe8fc95b87d023765eb5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 488199547cd5b96190b30ab415b08f9be2b4bd66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641268"
 ---
-# <a name="localdberrorunknownlanguageid"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="localdb_error_unknown_language_id"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細  
   

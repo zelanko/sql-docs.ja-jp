@@ -9,28 +9,27 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 18b97b67590bfff4f01e5dff332722a3aba1cf7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62893597"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436879"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード)
-  使用して、**データ ソースの選択**ページをコピーするデータのソースを指定します。  
+  [**データソースの選択**] ページを使用すると、コピーするデータのソースを指定できます。  
   
- このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と、ウィザードを起動するオプションについて説明しますを参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
+ このウィザードの詳細については、「 [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。 ウィザードを起動するためのオプション、およびウィザードを正常に実行するために必要な権限については、「 [run the SQL Server Import And Export wizard](start-the-sql-server-import-and-export-wizard.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **Data Source**  
- ソースのデータ保存形式に対応したデータ プロバイダーを選択します。 データ ソースに使用できるプロバイダーが複数存在する可能性があります。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、.NET Framework Data Provider for SQL Server、または、Microsoft OLE DB Provider for SQL Server。  
+## <a name="options"></a>オプション  
+ **データ ソース**  
+ ソースのデータ保存形式に対応したデータ プロバイダーを選択します。 データ ソースに使用できるプロバイダーが複数存在する可能性があります。 たとえば、では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、SQL Server の .NET Framework Data Provider、または SQL Server 用の Microsoft OLE DB プロバイダーを使用できます。  
   
- **データソース**プロパティは、さまざまなオプションは、コンピューターにインストールされているプロバイダーに依存します。 次の表に、使用頻度の高いプロバイダーのオプションを一覧表示します。 他のプロバイダーについては、プロバイダー固有のマニュアルを参照してください。  
+ **データソース**プロパティには、コンピューターにインストールされているプロバイダーに応じて、さまざまなオプションがあります。 次の表に、使用頻度の高いプロバイダーのオプションを一覧表示します。 他のプロバイダーについては、プロバイダー固有のマニュアルを参照してください。  
   
 ## <a name="dynamic-options"></a>動的オプション  
  以下では、いくつかのデータ ソースで利用可能なオプションを示します。 [データ ソース] のドロップダウンで利用可能なすべてのデータ ソースが、ここに一覧表示されているわけではありません。  
@@ -42,25 +41,25 @@ ms.locfileid: "62893597"
  **[Windows 認証を使用する]**  
  データベースへのログインに、パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用するかどうかを指定します。 より高いセキュリティのためには Windows 認証をお勧めします。  
   
- **[SQL Server 認証を使用する]**  
+ **SQL Server 認証を使用する**  
  データベースへのログインに、パッケージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するかどうかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
   
  **ユーザー名**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のユーザー名を指定します。  
   
- **Password**  
+ **パスワード**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のパスワードを指定します。  
   
  **[データベース]**  
  指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータベースの一覧から選択します。  
   
- **更新**  
+ **Refresh\(更新\)**  
  **[更新]** をクリックして、利用可能なデータベースの一覧を復元します。  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>[データ ソース] = [.Net Framework Data Provider for SQL Server]  
  このページでは、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ プロバイダーのオプションがアルファベット順で一覧表示されます。 最も重要なオプションを次の表に示します。  
   
- **Data Source**  
+ **データ ソース**  
  データが格納されているサーバーの名前を入力するか、一覧からサーバーを選択します。  
   
  **初期カタログ**  
@@ -69,10 +68,10 @@ ms.locfileid: "62893597"
  **統合セキュリティ**  
  `True` を指定して Windows 統合認証を使用して接続するか (推奨)、`False` を指定して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続します。 `False` を指定した場合は、ユーザー ID とパスワードを入力する必要があります。 既定値は `False` です。  
   
- **User ID**  
+ **[ユーザー ID]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のユーザー名を指定します。  
   
- **Password**  
+ **パスワード**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合に、データベース接続用のパスワードを指定します。  
   
  このプロバイダーを選択したときに一覧表示される追加オプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース データベースに正しく接続するために必須というわけではありません。 これらの追加オプションの説明については、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ソフトウェア開発キットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Provider for [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のマニュアルを参照してください。  
@@ -80,12 +79,12 @@ ms.locfileid: "62893597"
 ### <a name="data-source--microsoft-excel"></a>[データ ソース] = [Microsoft Excel]  
   
 > [!NOTE]  
->  選択**Excel** Excel 2003 を使用するデータ ソースに接続する場合にのみ、またはそれ以前。 Excel 2007 を使用するデータ ソースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**、 をクリックして**プロパティ**、し、**すべて**のタブ、**データ リンク プロパティ** ダイアログ ボックスに、入力`Excel 12.0`の値として**拡張プロパティ**します。  
+>  Excel 2003 以前を使用しているデータソースに接続する場合にのみ、[ **Microsoft Excel** ] を選択します。 Excel 2007 を使用するデータソースに接続するには、[ **Microsoft Office 12.0 Access データベースエンジン OLE DB プロバイダー**] を選択し、[**プロパティ**] をクリックします。次に、[**データリンクプロパティ**] ダイアログボックスの [**すべて**] タブで、 `Excel 12.0` **拡張プロパティ**の値として「」と入力します。  
   
  **[Excel ファイル パス]**  
- データをインポートするスプレッドシートのパスとファイル名を指定します。 たとえば、 **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**します。 または、 **[参照]** をクリックします。  
+ データをインポートするスプレッドシートのパスとファイル名を指定します。 たとえば、 **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**です。 または、**[参照]** をクリックします。  
   
- **[参照]**  
+ **参照**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、ワークシートを検索します。  
   
  **[Excel バージョン]**  
@@ -97,22 +96,22 @@ ms.locfileid: "62893597"
 ### <a name="data-source--microsoft-access"></a>[データ ソース] = [Microsoft Access]  
   
 > [!NOTE]  
->  選択**Access** Access 2003 を使用するデータベースに接続する場合にのみ、またはそれ以前。 Access 2007 を使用するデータベースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**代わりにします。  
+>  Access 2003 以前を使用しているデータベースに接続する場合にのみ、[ **Microsoft access** ] を選択します。 Access 2007 を使用するデータベースに接続するには、代わりに [ **Microsoft Office 12.0 access データベースエンジン OLE DB プロバイダー** ] を選択します。  
   
  **[ファイル名]**  
- データをインポートするデータベース ファイルのパスとファイル名を指定します。 たとえば、**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb** などです。 または、 **[参照]** をクリックします。  
+ データをインポートするデータベース ファイルのパスとファイル名を指定します。 たとえば、**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb** などです。 または、**[参照]** をクリックします。  
   
- **[参照]**  
+ **参照**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、データベース ファイルを検索します。  
   
  **ユーザー名**  
  ワークグループの情報ファイルがデータベースに関連付けられている場合は、データベース接続のために有効なユーザー名を指定します。  
   
- **Password**  
- ワークグループの情報ファイルがデータベースに関連付けられている場合は、データベース接続のためにユーザーのパスワードを指定します。 ただし、データベースがすべてのユーザーに対して 1 つのパスワードで保護する場合は、この値を指定する必要があります、**データ リンク プロパティ** ダイアログ ボックスをクリックしてアクセスされる**詳細**します。  
+ **パスワード**  
+ ワークグループの情報ファイルがデータベースに関連付けられている場合は、データベース接続のためにユーザーのパスワードを指定します。 ただし、データベースがすべてのユーザーに対して1つのパスワードで保護されている場合は、[**データリンクプロパティ**] ダイアログボックスでこの値を指定する必要があります。このダイアログボックスにアクセスするには、[**詳細設定**] をクリックします。  
   
  **詳細設定**  
- 使用してデータベースのパスワードや既定以外のワークグループ情報ファイルなどの高度なオプションを指定する、**データ リンク プロパティ** ダイアログ ボックス。 OLE DB プロバイダーのプロパティの詳細については、の [データ アクセス] セクションで検索、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?linkid=62553)します。  
+ [**データリンクプロパティ**] ダイアログボックスを使用して、データベースパスワードや既定以外のワークグループ情報ファイルなどの詳細オプションを指定することもできます。 OLE DB プロバイダーのプロパティの詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?linkid=62553)の「データアクセス」セクションを検索してください。  
   
 ### <a name="data-source--flat-file-source"></a>[データ ソース] = [フラット ファイル ソース]  
  フラット ファイル ソースのオプションの詳細については、次のトピックを参照してください。  

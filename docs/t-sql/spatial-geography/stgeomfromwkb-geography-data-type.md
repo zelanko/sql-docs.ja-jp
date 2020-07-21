@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 34fcb2841d414d56a8718f3864039aa85d390d85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9986c5eabd68afeeb16ece4a670c0014b5adfc05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703174"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現から **geography** インスタンスを返します。
   
@@ -48,16 +48,16 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `STGeomFromText()` によって返された **geography** インスタンスの OGC 型は、対応する WKB 入力に設定されます。  
   
- このメソッドは、入力が整形式でない場合に、**FormatException** をスローします。  
+ このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
  このメソッドは、入力に対蹠点が含まれている場合、**ArgumentException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STGeomFromWKB()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

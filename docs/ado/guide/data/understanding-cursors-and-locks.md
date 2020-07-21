@@ -1,5 +1,5 @@
 ---
-title: カーソルとロック |Microsoft Docs
+title: カーソルとロックについて |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a175d9e98fec5795c2756e79f96304b2ab2cc6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923796"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759018"
 ---
 # <a name="understanding-cursors-and-locks"></a>カーソルとロックを理解する
-アプリケーションのデータ アクセス要件の最適なと最も効率的なカーソルの種類を選択する、カーソルの動作を理解しておく必要があります。 最適のないカーソルの構成には、データ アクセス操作を落としてをことができます。  
+アプリケーションのデータアクセス要件に最適で効率的なカーソルの種類を選択できるように、カーソルの動作を理解することが重要です。 カーソル構成が最適でない場合、データアクセス操作のつらいが遅くなる可能性があります。  
   
- 多くの機能、ADO の**Recordset**オブジェクトは、ロックの種類と同様に、カーソルの場所と種類によって決まります。  
+ ADO**レコードセット**オブジェクトの多くの機能は、カーソルの種類と場所、およびロックの種類によって決まります。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bdd38b66a62b3d839f89f078904f7a3a9cc82d66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098171"
 ---
-# <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>RemoveURL メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="removeurl-method-wmi-msreportserver_configurationsetting"></a>RemoveURL メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー用に予約されている URL を削除します。 削除の対象となる URL が複数ある場合は、この API を 1 つずつ呼び出して URL を削除する必要があります。  
   
 ## <a name="syntax"></a>構文  
@@ -36,7 +36,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *アプリケーション*  
+ *Application*  
  予約を削除する対象のアプリケーションの名前。  
   
  *URLString*  
@@ -54,7 +54,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *UrlString* には、仮想ディレクトリの名前が含まれていません。その目的では、[SetVirtualDirectory Method (WMI MSReportServer_ConfigurationSetting)](configurationsetting-method-setvirtualdirectory.md) メソッドが提供されます。  
   
  [ReserveURL](configurationsetting-method-reserveurl.md) メソッドを呼び出す前に、 *Application* パラメーターの VirtualDirectory 構成プロパティの値を指定する必要があります。 [SetVirtualDirectory Method (WMI MSReportServer_ConfigurationSetting)](configurationsetting-method-setvirtualdirectory.md) メソッドを利用し、VirtualDirectory プロパティを設定します。  

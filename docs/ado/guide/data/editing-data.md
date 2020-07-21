@@ -12,19 +12,19 @@ helpviewer_keywords:
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc80c8ad9985efc21e2f583d8ca72751e21c1a2b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925492"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761038"
 ---
 # <a name="editing-data"></a>データの編集
-説明しました ADO を使用してデータ ソースへの接続、コマンドを実行で、結果を得る方法、**レコード セット**オブジェクト内を移動したり、**レコード セット**します。 このセクションでは、次の基本的な ADO 操作について重点的に取り上げます。: データを編集します。  
+ADO を使用してデータソースに接続し、コマンドを実行して、**レコードセット**オブジェクトの結果を取得し、**レコードセット**内を移動する方法について説明しました。 このセクションでは、データの編集に関する次の基本的な ADO 操作について説明します。  
   
- このセクションは、サンプルを使用して引き続き**レコード セット**で導入された[データを調べる](../../../ado/guide/data/examining-data.md)、1 つの重要な変更。 次のコードの使用を開く、 **Recordset**:  
+ このセクションでは、[データの検査](../../../ado/guide/data/examining-data.md)で導入されたサンプル**レコードセット**を使用します。重要な変更点が1つあります。 **レコードセット**を開くには、次のコードを使用します。  
   
 ```  
 'BeginEditIntro  
@@ -43,13 +43,13 @@ ms.locfileid: "67925492"
 'EndEditIntro  
 ```  
   
- コードに重要な変更は、設定、 **CursorLocation**のプロパティ、**接続**オブジェクトと等しい**adUseClient**で、 *GetNewConnection*クライアント カーソルの使用を示します (次の例で示すように) 関数。 クライアント側とサーバー側のカーソルの違いの詳細については、次を参照してください。[カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)します。  
+ このコードの重要な変更点は、 *Getnewconnection*関数の**AdUseClient**に等しい**接続**オブジェクトの**cursor location**プロパティを設定することです (次の例を参照)。これは、クライアントカーソルの使用を示します。 クライアント側とサーバー側のカーソルの相違点の詳細については、「[カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)について」を参照してください。  
   
- **CursorLocation**プロパティの**adUseClient**設定は、データ ソース (この場合は SQL Server) から、カーソルの位置をクライアント コード (デスクトップ ワークステーション) の場所に移動します。 この設定が強制的に作成し、カーソルを管理するためにクライアントで OLE DB 用のクライアント カーソル エンジンを起動します。  
+ Cursor **location**プロパティの**adUseClient**設定によって、カーソルの位置がデータソース (この場合は SQL Server) からクライアントコード (デスクトップワークステーション) の場所に移動します。 この設定では、カーソルを作成して管理するために、クライアント上の OLE DB のクライアントカーソルエンジンが ADO によって強制的に呼び出されます。  
   
- お気付きかもしれませんが、 **LockType**のパラメーター、**オープン**方法に変更**adLockBatchOptimistic**します。 これにより、カーソルがバッチ モードで開きます。 (プロバイダーが複数の変更をキャッシュし、呼び出すときにのみ、基になるデータ ソースに書き込む、 **UpdateBatch**メソッドです)。加えられた変更、 **Recordset**までデータベースには更新されません、 **UpdateBatch**メソッドが呼び出されます。  
+ **Open**メソッドの**LockType**パラメーターが**adlockbatchoptimistic**に変更されたことにも気が付きます。 バッチモードでカーソルが開きます。 (プロバイダーによって複数の変更がキャッシュされ、 **UpdateBatch**メソッドを呼び出すと、基になるデータソースに書き込まれます)。この**レコードセット**に加えられた変更は、 **UpdateBatch**メソッドが呼び出されるまでデータベースで更新されません。  
   
- 最後に、このセクションのコードでは、GetNewConnection 関数の変更バージョンを使用します。 このバージョンの関数は、クライアント側カーソルを返すようになりました。 関数のようになります。  
+ 最後に、このセクションのコードでは、GetNewConnection 関数の変更バージョンを使用します。 このバージョンの関数では、クライアント側のカーソルが返されるようになりました。 関数は次のようになります。  
   
 ```  
 'BeginNewConnection  
@@ -91,4 +91,4 @@ End Function
   
 -   [Delete メソッドを使用してレコードを削除する](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [代替手段:SQL ステートメントを使用](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [代替: SQL ステートメントの使用](../../../ado/guide/data/alternatives-using-sql-statements.md)

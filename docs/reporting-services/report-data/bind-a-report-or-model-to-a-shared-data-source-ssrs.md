@@ -1,5 +1,5 @@
 ---
-title: レポートを共有データ ソースにバインドする (SSRS) | Microsoft Docs
+title: レポートを共有データ ソースにバインドする | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd958c0bbe781f7c39c2a2e00ecbc0ccfde7164e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c5aa5e504c8434d3634b903c08b6a03c0e62345c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573252"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081422"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>レポートを共有データ ソースにバインドする (SSRS)
   レポートをテスト サーバーから実稼働サーバーに移動するときなど、ファイルをローカル コンピューターに保存した後で別のレポート サーバーにアップロードする操作が必要になる場合があります。 レポートを新しいサーバーにアップロードしたときは、新しいレポート サーバー上に格納されている共有データ ソースにレポートを再バインドする必要があります。 レポートの再バインドを行わないと、レポートが新しいレポート サーバーからアクセスされたときに正常に動作しません。  
@@ -34,7 +34,7 @@ ms.locfileid: "65573252"
   
 4.  データ ソースを選択し、 **[保存]** をクリックします。  
   
-5.  **[適用]** をクリックします。  
+5.  **[Apply]** をクリックします。  
   
      これで選択したデータ ソースにレポートがバインドされます。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65573252"
 ## <a name="see-also"></a>参照  
  [SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
  [共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
- [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
   

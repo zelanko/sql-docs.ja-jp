@@ -1,5 +1,5 @@
 ---
-title: 'Stream (Visual C 構文のインデックスで #import) |Microsoft Docs'
+title: 'Stream (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Stream collection [ADO]
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bdbd75a8b89ffdc6c100d3d124329c8212c4bdc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a38140e32f594e78e047c83eb1b4d6a495483e21
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930687"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759618"
 ---
-# <a name="stream-visual-c-syntax-index-with-import"></a>Stream (Visual C 構文のインデックスで #import)
+# <a name="stream-visual-c-syntax-index-with-import"></a>Stream (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
   
 ```  
@@ -57,7 +57,7 @@ HRESULT WriteText( _bstr_t Data, enum StreamWriteEnum
     Options );  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 _bstr_t GetCharset( );  
@@ -91,5 +91,5 @@ void PutType( enum StreamTypeEnum ptype );
 __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c187caf0dc0027d6d7fa86cbd1bee09e76f0228d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bc33fcff2531add1912e44d0bad81443cfd84b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682715"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は非対称キーを使用して暗号化データを復号します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68118959"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  
@@ -57,13 +57,13 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 ## <a name="return-types"></a>戻り値の型  
 最大サイズが 8,000 バイトの **varbinary**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 対称暗号化/復号と比べると、非対称キーの暗号化/復号はコストが高くなります。 テーブルに保存されているユーザー データなど、大量のデータセットを扱うとき、非対称キーの暗号化/復号は回避するように開発者には提案しています。  
   
 ## <a name="permissions"></a>アクセス許可  
 `DECRYPTBYASYMKEY` には、非対称キーに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、非対称キー `JanainaAsymKey02` で最初に暗号化された暗号化テキストが復号されます。 `AdventureWorks2012.ProtectedData04` によって、この非対称キーが格納されました。 返されたデータが非対称キー `JanainaAsymKey02` で復号されました。 パスワード `pGFD4bb925DGvbd2439587y` を使用し、この非対称キーが復号されました。 返されたプレーンテキストが型 **nvarchar** に変換されました。  
   
 ```  

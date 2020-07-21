@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f7796b766ac8593f557e64d2ebb6e324abf0ec82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6a3103b7a6c9119d2c3892e8bca744f0d216263
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980593"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925157"
 ---
 # <a name="getref-method-int"></a>getRef (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.sql.Ref getRef(int i)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getRef メソッドは、java.sql.CallableStatement インターフェイスの getRef メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  

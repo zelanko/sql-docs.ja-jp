@@ -1,5 +1,5 @@
 ---
-title: MSsnapshot_agents (TRANSACT-SQL) |Microsoft Docs
+title: MSsnapshot_agents (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,42 +15,42 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d57700abecccf3dae55289b49d4fd6c1af3e537
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 20394d5204059b7ec55c09b9feb6092415ccda12
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079965"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889429"
 ---
-# <a name="mssnapshotagents-transact-sql"></a>MSsnapshot_agents (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSsnapshot_agents**ローカル ディストリビューターに関連付けられているスナップショット エージェントごとのテーブルに 1 つの行が含まれます。 このテーブルは、ディストリビューション データベースに格納されます。  
+  **MSsnapshot_agents**テーブルには、ローカルディストリビューターに関連付けられているスナップショットエージェントごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|スナップショット エージェントの ID。|  
-|**name**|**nvarchar(100)**|スナップショット エージェントの名前。|  
+|**id**|**int**|スナップショットエージェントの ID。|  
+|**name**|**nvarchar (100)**|スナップショット エージェントの名前。|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
-|**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前を指定します。|  
-|**publication_type**|**int**|パブリケーションの種類:<br /><br /> **0** = トランザクション。<br /><br /> **1** = スナップショット。<br /><br /> **2** = マージします。|  
+|**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
+|**レプリケーション**|**sysname**|パブリケーションの名前を指定します。|  
+|**publication_type**|**int**|パブリケーションの種類です。<br /><br /> **0** = トランザクション。<br /><br /> **1** = スナップショット。<br /><br /> **2** = Merge。|  
 |**local_job**|**bit**|ローカル ディストリビューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブがあるかどうかを示します。|  
-|**job_id**|**binary(16)**|ジョブの識別番号。|  
-|**profile_id**|**int**|ある構成 ID、 [MSagent_profiles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブル。|  
-|**dynamic_filter_login**|**sysname**|評価するために使用される値、 [SUSER_SNAME &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/suser-sname-transact-sql.md)パーティションを定義するパラメーター化されたフィルター内の関数。 この列は、パーティションのスナップショットに使用されます。|  
-|**dynamic_filter_hostname**|**sysname**|評価するために使用される値、 [HOST_NAME &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/host-name-transact-sql.md)パーティションを定義するパラメーター化されたフィルター内の関数。 この列は、パーティションのスナップショットに使用されます。|  
-|**publisher_security_mode**|**smallint**|次のいずれかの値と、パブリッシャーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
-|**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログイン。|  
-|**publisher_password**|**nvarchar(524)**|パブリッシャーに接続するときに使用されるパスワードの暗号化された値。|  
+|**job_id**|**binary(16)**|ジョブの識別番号を指定します。|  
+|**profile_id**|**int**|[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブルの構成 ID。|  
+|**dynamic_filter_login**|**sysname**|パーティションを定義するパラメーター化されたフィルターで[SUSER_SNAME &#40;transact-sql&#41;](../../t-sql/functions/suser-sname-transact-sql.md)関数を評価するために使用される値。 この列は、パーティションスナップショットに使用されます。|  
+|**dynamic_filter_hostname**|**sysname**|パーティションを定義するパラメーター化されたフィルターで[HOST_NAME &#40;transact-sql&#41;](../../t-sql/functions/host-name-transact-sql.md)関数を評価するために使用される値。 この列は、パーティションスナップショットに使用されます。|  
+|**publisher_security_mode**|**smallint**|パブリッシャーに接続するときにエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
+|**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログインです。|  
+|**publisher_password**|**nvarchar (524)**|パブリッシャーに接続するときに使用されるパスワードの暗号化された値。|  
 |**job_step_uid**|**uniqueidentifier**|エージェントが起動される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップの一意な ID|  
 |**job_login**|**sysname**||  
-|**job_password**|**nvarchar(524)**||  
+|**job_password**|**nvarchar (524)**||  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

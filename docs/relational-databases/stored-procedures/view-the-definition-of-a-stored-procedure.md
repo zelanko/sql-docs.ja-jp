@@ -15,27 +15,29 @@ ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6feaa13db08a16e0171e1a8e3e8c44fa4ff70314
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 72ee7154ec834e30522d0eb49486b7de6ccb34ce
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136572"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85997420"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>ストアド プロシージャの定義の表示
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
     
-##  <a name="Top"></a> ストアド プロシージャの定義は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でオブジェクト エクスプローラーのメニュー オプションを使用するか、クエリ エディターで [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して表示できます。 このトピックでは、オブジェクト エクスプローラーでプロシージャの定義を表示する方法について説明します。さらに、クエリ エディターでのシステム プロシージャ、システム関数、およびオブジェクト カタログ ビューを使用した表示方法について説明します。  
+##  <a name="view-the-definition-of-a-stored-procedure"></a><a name="Top"></a> ストアド プロシージャの定義を表示する 
+
+このトピックでは、オブジェクト エクスプローラーでプロシージャの定義を表示する方法について説明します。さらに、クエリ エディターでのシステム プロシージャ、システム関数、およびオブジェクト カタログ ビューを使用した表示方法について説明します。  
   
 -   **作業を開始する準備:** [セキュリティ](#Security)  
   
 -   **プロシージャの定義を表示するには、次を使用:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  システム ストアド プロシージャ: **sp_helptext**  
  ロール **public** のメンバーシップが必要です。 システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または次のいずれかの権限を許可された人が表示できます。ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION。  
   
@@ -45,14 +47,14 @@ ms.locfileid: "68136572"
  オブジェクト カタログ ビュー: **sys.sql_modules**  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-##  <a name="Procedures"></a> ストアド プロシージャの定義の表示方法  
+##  <a name="how-to-view-the-definition-of-a-stored-procedure"></a><a name="Procedures"></a> ストアド プロシージャの定義の表示方法  
  次のいずれかを使用します。  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **オブジェクト エクスプローラーでプロシージャの定義を表示するには**  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
@@ -61,11 +63,9 @@ ms.locfileid: "68136572"
   
 3.  **[ストアド プロシージャ]** を展開し、プロシージャを右クリックしてから **[ストアド プロシージャをスクリプト化]** をクリックします。その後、次のいずれかをクリックします: **[新規作成]** 、 **[構造変更]** 、 **[削除および作成]** 。  
   
-4.  **[新しいクエリ エディター ウィンドウ]** をクリックします。 プロシージャの定義が表示されます。  
+4.  **新しいクエリ エディター ウィンドウ**を選択します。 プロシージャの定義が表示されます。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **クエリ エディターでプロシージャの定義を表示するには**  
   
  システム ストアド プロシージャ: **sp_helptext**  

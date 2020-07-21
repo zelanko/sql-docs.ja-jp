@@ -17,15 +17,14 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e09d338f7f8e29f5b499a64f9f84e042b1fd1234
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62898860"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428599"
 ---
 # <a name="identifiers-ssis"></a>識別子 (SSIS)
   識別子とは、式の内部で演算に使用できる列および変数のことです。 式では、標準識別子と修飾された識別子を使用できます。  
@@ -101,7 +100,7 @@ ms.locfileid: "62898860"
 ## <a name="unique-variable-names"></a>一意の変数名  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ではカスタム変数がサポートされ、さらにシステム変数のセットが用意されています。 既定では、カスタム変数は **User** 名前空間に属し、システム変数は **System** 名前空間に属します。 カスタム変数用に別の名前空間を作成し、名前空間の名前をアプリケーションのニーズに合わせて更新できます。 式ビルダーでは、すべての名前空間にあるスコープ内の変数が一覧表示されます。  
   
- すべての変数はスコープを持ち、名前空間に属します。 変数は、パッケージ スコープまたは、パッケージ内のコンテナーあるいはタスクのスコープを持ちます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの式ビルダーでは、スコープ内の変数のみが一覧表示されます。 詳細については、「[Integration Services (SSIS) の変数](../integration-services-ssis-variables.md)」および「[パッケージで変数を使用する](../use-variables-in-packages.md)」を参照してください。  
+ すべての変数はスコープを持ち、名前空間に属します。 変数は、パッケージ スコープまたは、パッケージ内のコンテナーあるいはタスクのスコープを持ちます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの式ビルダーでは、スコープ内の変数のみが一覧表示されます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../use-variables-in-packages.md)」をご覧ください。  
   
  式で使用される変数名は、式エバリュエーターが式を正しく評価できるよう、一意である必要があります。 パッケージで複数の変数を同じ名前で使用する場合、その変数は、それぞれ別の名前空間に属する必要があります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、2 つのコロン (::) から成る、名前空間を解決する演算子が用意され、変数は名前空間で修飾されます。 たとえば、次の式では、 **Count**という名前の 2 つの変数が使用されています。変数の 1 つは **User** 名前空間、もう 1 つの変数は **MyNamespace** 名前空間に属します。  
   
@@ -112,9 +111,9 @@ ms.locfileid: "62898860"
 > [!IMPORTANT]  
 >  名前空間の組み合わせおよび修飾された変数名は、式エバリュエーターが変数を認識できるよう、角かっこで囲む必要があります。  
   
- 場合の値**カウント**で、**ユーザー**名前空間は 10 の値**カウント**で**MyNamespace** 式の評価結果が2の場合`true`式エバリュエーターが 2 つの異なる変数を認識したためです。  
+ **User**名前空間の**count**の値が10で、 **MyNamespace**の**count**の値が2の場合、式 `true` エバリュエーターが2つの異なる変数を認識するため、式はに評価されます。  
   
- 変数名が一意でない場合でもエラーは発生せず、 式エバリュエーターは、変数のインスタンスを 1 つのみ使用して式を評価し、間違った結果を返します。 たとえば、次の式のものを 2 つの個別の値 (10 および 2) を比較する**カウント**に変数が式の評価`false`式エバリュエーターは、の同じインスタンスを使用するため**カウント**変数 2 回です。  
+ 変数名が一意でない場合でもエラーは発生せず、 式エバリュエーターは、変数のインスタンスを 1 つのみ使用して式を評価し、間違った結果を返します。 たとえば、次の式は、2つの個別の**カウント**変数の値 (10 と 2) を比較するためのものですが、式エバリュエーターでは `false` **count**変数の同じインスタンスが2回使用されるため、式はと評価されます。  
   
 ```  
 @Count > @Count  

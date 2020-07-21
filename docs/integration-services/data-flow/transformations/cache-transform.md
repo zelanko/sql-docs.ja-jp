@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1120ffadb47e2494213b15a5859fcc6d591820dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b934ea191a0dc4f9f276b4e483f5f5671bd0cc3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112793"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297997"
 ---
 # <a name="cache-transform"></a>キャッシュ変換
 
@@ -67,7 +67,7 @@ ms.locfileid: "68112793"
  キャッシュ接続マネージャーの詳細については、「 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)」を参照してください。  
   
 ### <a name="options"></a>オプション  
- **Cache connection manager**  
+ **[フル キャッシュ]**  
  既存の OLE DB 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  

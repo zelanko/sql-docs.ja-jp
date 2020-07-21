@@ -1,5 +1,5 @@
 ---
-title: データ型の制限事項 |Microsoft Docs
+title: データ型の制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - data types [ODBC], desktop database drivers
 - desktop database drivers [ODBC], data types
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4beaf91a4ead743e3e8a2e32578796baba3c17be
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096460"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280672"
 ---
 # <a name="data-type-limitations"></a>データ型の制限事項
-Microsoft ODBC のデスクトップ データベース ドライバーでは、データ型には、以下の制限を強制します。  
+Microsoft ODBC Desktop データベースドライバーでは、データ型に次の制限が適用されます。  
   
-|データの種類|説明|  
+|データ型|説明|  
 |---------------|-----------------|  
-|すべてのデータ型|型変換に失敗すると、影響を受ける列を NULL に設定されている可能性があります。|  
-|BINARY|長さ 0 のバイナリ列を作成すると、255 バイトのバイナリ列実際に返されます。|  
-|DATE|DATE データ型は、CONVERT 関数によって別のデータ型 (または自体) に変換できません。|  
-|10 進数 (正確な数値)|サポートされていません。|  
-|浮動小数点データ型|浮動小数点数の小数点以下桁数は、Windows コントロール パネルの国際化のセクションで設定されている数値書式によって制限される可能性があります。|  
-|NUMERIC|最大有効桁数と小数点以下桁数が 28 をサポートしています。|  
-|TIMESTAMP|TIMESTAMP データ型は、CONVERT 関数によってそれ自体に変換できません。|  
-|TINYINT|TINYINT 値は常に符号付きではありません。|  
-|長さ 0 の文字列|DBASE、Excel、Paradox、または Textdriver を使用すると、長さ 0 の文字列を列に挿入します。 実際に挿入 NULL 代わりにします。|
+|すべてのデータ型|型変換エラーが発生すると、影響を受ける列が NULL に設定される可能性があります。|  
+|BINARY|長さ0のバイナリ列を作成すると、実際には255バイトのバイナリ列が返されます。|  
+|DATE|CONVERT 関数では、DATE データ型を別のデータ型 (またはそれ自体) に変換することはできません。|  
+|DECIMAL (真数)|サポートされていません。|  
+|浮動小数点データ型|浮動小数点数の小数点以下の桁数は、Windows のコントロールパネルの [インターナショナル] セクションで設定した数値形式によって制限される場合があります。|  
+|NUMERIC|最大有効桁数と28の小数点以下桁数をサポートします。|  
+|timestamp|TIMESTAMP データ型は、CONVERT 関数によってそれ自体に変換することはできません。|  
+|TINYINT|TINYINT 値は常に符号なしです。|  
+|長さ0の文字列|DBASE、Microsoft Excel、Paradox、または Textdriver を使用するときに、長さ0の文字列を列に挿入すると、実際には NULL が挿入されます。|

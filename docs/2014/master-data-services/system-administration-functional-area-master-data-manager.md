@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3dc7d153bb9e680d1948f5cddc118d51a2b1e792
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c7b269b3dcea8dee30f149ece8541ba1f7e0e54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482748"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971032"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>[システム管理] 機能領域 (マスター データ マネージャー)
   [システム管理] 機能領域では、管理者はモデルとそのすべてのオブジェクトを作成できます。 また、ビジネス ルールを作成し、モデル パッケージを配置することも可能です。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  
   
-## <a name="model"></a>[モデル]  
+## <a name="model"></a>モデル  
  [モデル (マスター データ サービス)](../../2014/master-data-services/models-master-data-services.md)  
   
  [モデルを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-master-data-services.md)  
@@ -31,7 +30,7 @@ ms.locfileid: "65482748"
   
  [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)  
   
- [明示的階層およびコレクションに対してエンティティを有効にする&#40;マスター データ サービス&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)  
+ [明示的階層およびコレクションに対してエンティティを有効にする &#40;マスターデータサービス&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)  
   
  [ドメインベースの属性 (マスター データ サービス)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
@@ -60,7 +59,7 @@ ms.locfileid: "65482748"
   
  [ビジネス ルール アクション (マスター データ サービス)](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーション](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

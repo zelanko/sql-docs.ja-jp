@@ -1,5 +1,5 @@
 ---
-title: コレクション (Visual C 構文用の ADO) |Microsoft Docs
+title: Collections (Visual C++ 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO for Visual C++ syntax
 - collections [ADO], ADO for Visual C++ syntax
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dc708e467c226440b861057b0498ed3bd80135d1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919916"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748877"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (Visual C++ 構文用の ADO)
 ## <a name="parameters"></a>パラメーター  
@@ -43,7 +43,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
@@ -74,7 +74,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
@@ -102,7 +102,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
@@ -115,7 +115,7 @@ get_Item(VARIANT Index, ADOError **ppvObject);
   
 -   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ### <a name="methods"></a>メソッド  
   
@@ -127,7 +127,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
@@ -140,8 +140,8 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="see-also"></a>関連項目  
- [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+## <a name="see-also"></a>参照  
+ [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

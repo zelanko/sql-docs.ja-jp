@@ -1,6 +1,7 @@
 ---
-title: 'レッスン 2 : 接続情報の指定 (Reporting Services) | Microsoft Docs'
-ms.date: 05/01/2019
+title: 'レッスン 2: 接続情報の指定 (Reporting Services) | Microsoft Docs'
+description: このレッスンでは、リレーショナル データベースやその他のソースのデータにアクセスするためにレポートで使用されるデータ ソース接続情報を定義します。
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106048"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75258462"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>レッスン 2 : 接続情報の指定 (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>レッスン 2: 接続情報の指定 (Reporting Services)
 
 レッスン 1 で、[!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを Tutorial プロジェクトに追加しました。
   
 このレッスンでは、リレーショナル データベースやその他のリソースのデータにアクセスするためにレポートで使用される接続情報である*データ ソース*を定義する必要があります。
 
-このレポートの場合、AdventureWorks2016 サンプル データベースをデータ ソースとして追加します。 このチュートリアルでは、このデータベースが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに配置されており、ローカル コンピューターにインストールされいるものとします。  
+このレポートの場合、AdventureWorks2016 サンプル データベースをデータ ソースとして追加します。 このチュートリアルでは、このデータベースが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに配置されており、ローカル コンピューターにインストールされているものとします。  
 
 ## <a name="to-set-up-a-connection"></a>接続を設定するには  
 
@@ -46,7 +47,7 @@ ms.locfileid: "65106048"
     > [!NOTE]
     > この接続文字列は、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、レポート サーバー、および AdventureWorks2016 データベースがすべてローカル コンピューターにインストールされていることが前提となります。
     >
-    >この前提が成り立っていない場合、接続文字列を変更し、"localhost" をデータベース サーバー/インスタンスの名前に置き換えます。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] または SQL Server の名前付きインスタンスを使用している場合、接続文字列を変更してインスタンス情報を含める必要があります。 例:
+    >この前提が成り立っていない場合、接続文字列を変更し、"localhost" をデータベース サーバー/インスタンスの名前に置き換えます。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] または SQL Server の名前付きインスタンスを使用している場合、接続文字列を変更してインスタンス情報を含める必要があります。 次に例を示します。
     >
     > `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2016`
     >
@@ -60,10 +61,10 @@ ms.locfileid: "65106048"
 
 ![ssrs-adventureworks-datasource](media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-このレッスンでは、AdventureWorks2016 サンプル データベースへの接続を正常に定義しました。 「[レッスン 3: テーブル レポートのデータセットの定義 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)」に進み、レポートのデータセットを定義します。
+このレッスンでは、AdventureWorks2016 サンプル データベースへの接続を正常に定義しました。 「[レッスン 3:テーブル レポートのデータセットの定義 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)」に進み、レポートのデータセットを定義します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Reporting Services でのデータ接続、データ ソース、および接続文字列](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+[データ接続文字列の作成 - レポート ビルダーおよび SSRS](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

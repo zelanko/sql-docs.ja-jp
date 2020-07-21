@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f7457b8a-df31-4999-883e-8cc386a48ceb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8695cd34f088f62ef5fa6f2b82c6103396801179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f123a708698c5ebfd4aac0eac13655a9f30e2f94
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974546"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920908"
 ---
 # <a name="setclob-method-javalangstring-javaioreader"></a>setClob (java.lang.String, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,12 +37,12 @@ public final void setClob(java.lang.String parameterName,
   
  *reader*  
   
- リーダーオブジェクト。  
+ Reader オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setClob メソッドは、java.sql.CallableStatement インターフェイスの setClob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

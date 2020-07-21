@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_unbind_db_resource_pool (TRANSACT-SQL) |Microsoft Docs
+title: sp_xtp_unbind_db_resource_pool (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - sp_xtp_unbind_db_resource_pool
 - sys.sp_xtp_unbind_db_resource_pool
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d7cfca8eea2051ab8c1f070e0da9603604c5296a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041003"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829942"
 ---
-# <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (TRANSACT-SQL)
+# <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sp_xtp_unbind_db_resource_pool (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  このシステム ストアド プロシージャは、追跡の目的でデータベースとリソース プールの既存のバインドを削除します。[!INCLUDE[hek_2](../../includes/hek-2-md.md)]メモリ使用量。  指定したデータベースに現在バインドされたプールがない場合、成功が返されます。 データベースがバインドされている場合は、メモリ最適化オブジェクトの以前に割り当てられたメモリは以前のリソース プールに割り当てられたままです。 割り当てられたメモリを解放するデータベースを再起動する必要があります。 リソース プールからデータベースをバインドすることが解除されると、バインドは既定のリソース プールを行います。  
+  このシステムプロシージャは、メモリ使用量を追跡するために、データベースとリソースプールの間の既存のバインドを削除し [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ます。  指定したデータベースに現在バインドされたプールがない場合、成功が返されます。 データベースがバインド解除されると、以前に割り当てられたメモリ最適化オブジェクトのメモリは、前のリソースプールに割り当てられたままになります。 割り当てられたメモリを解放するには、データベースを再起動する必要があります。 データベースがリソースプールからバインド解除されると、バインドは既定のリソースプールに並べ替えられます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,12 +42,12 @@ sys.sp_xtp_unbind_db_resource_pool 'database_name'
   
 ## <a name="arguments"></a>引数  
  database_name  
- 既存の名前[!INCLUDE[hek_2](../../includes/hek-2-md.md)]データベースを有効にします。  
+ 既存の [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 有効なデータベースの名前。  
   
 #### <a name="parameters"></a>パラメーター  
   
-## <a name="messages"></a>Messages  
- かどうかは、データベースが名前付きリソース プールにバインドされた、プロシージャは正常に終了します。 ただし、データベースを有効にするバインド解除を再起動する必要があります。  
+## <a name="messages"></a>メッセージ  
+ データベースが名前付きリソースプールにバインドされている場合、プロシージャは正常に返されます。 ただし、バインド解除を有効にするには、データベースを再起動する必要があります。  
  指定したデータベースに既存のバインドが存在しない場合、`sp_xtp_unbind_db_resource_pool` は正常に終了しますが、次のような情報メッセージが表示されます。  
   
 ```  
@@ -65,12 +65,12 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
   
 ## <a name="requirements"></a>必要条件  
   
--   指定されるデータベース`database_name`へのバインドがあります、[!INCLUDE[hek_2](../../includes/hek-2-md.md)]リソース プール。  
+-   によって指定されたデータベースには、 `database_name` リソースプールへのバインドが必要 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] です。  
   
 -   CONTROL SERVER 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [データベースを作成してリソース プールにバインドする方法については、「](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_bind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [メモリ最適化テーブルを含むデータベースをリソースプールにバインドする](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

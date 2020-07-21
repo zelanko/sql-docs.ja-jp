@@ -11,20 +11,20 @@ apitype: COM
 helpviewer_keywords:
 - Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98254c2f26db08b7c5308248c596b7f70264f10c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963264"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750570"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize メソッド (RDS)
-ADO 2.5 以降で使用するための接続文字列で指定されたデータベースでは、特定のレコード セットを同期します。  
+指定したレコードセットを、ADO 2.5 以降で使用する接続文字列で指定されたデータベースと同期します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,37 +34,37 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ConnectionString*  
- 要求が送信され、OLE DB プロバイダーへの接続に使用する文字列。 ハンドラーを使用する場合、ハンドラーが編集または接続文字列を置換可能性があります。  
+ *文字列*  
+ 要求が送信される OLE DB プロバイダーに接続するために使用される文字列。 ハンドラーが使用されている場合、ハンドラーは接続文字列を編集または置換できます。  
   
  *HandlerString*  
- 文字列は、この実行で使用するハンドラーを識別します。 文字列には、2 つの部分が含まれています。 最初の部分には、使用するハンドラーの名前 (ProgID) が含まれています。 文字列の 2 番目の部分には、ハンドラーに渡される引数が含まれています。 特定のハンドラーには、引数文字列を解釈する方法です。 2 つの部分は、(ただし、引数文字列には、追加のコンマを含めることができます)、コンマ、文字列内の最初のインスタンスで区切られます。 引数は省略可能です。  
+ 文字列は、この実行で使用されるハンドラーを識別します。 文字列には2つの部分が含まれています。 最初の部分には、使用するハンドラーの名前 (ProgID) が含まれています。 文字列の2番目の部分には、ハンドラーに渡される引数が含まれています。 引数文字列の解釈方法は、ハンドラー固有です。 2つの部分は、文字列内のコンマの最初のインスタンスによって区切られます (ただし、引数の文字列には追加のコンマが含まれる場合があります)。 引数は省略可能です。  
   
  *lSynchronizeOptions*  
- 同期オプションのビット マスクです。  
+ 同期オプションのビットマスク。  
   
- 1 =*UpdateTransact*データベースへの更新は、トランザクションにラップされます。 更新プログラムの失敗した場合は、トランザクションが中止されました。  
+ 1 = データベースに対する*Updatetransact*更新は、トランザクションでラップされます。 更新のいずれかが失敗すると、トランザクションは中止されます。  
   
- 2 =*RefreshWithUpdate*原因は、どちらの場合に返される状態を行*更新*も*RefreshConflicts*設定されます。  
+ 2 =*Refreshwithupdate*では、*更新*も*refreshconflicts*も設定されていない場合、行の状態が返されます。  
   
- 4 =*更新*データベースの現在のデータでレコード セットが更新されます。 保留中の更新は データベースにプッシュされません。 このビットが設定されていない場合、レコード セットは更新されませんし、保留中の更新プログラムがデータベースにプッシュされます。  
+ 4 = レコードセットを*更新*するには、データベースの現在のデータを使用して更新します。 保留中の更新はデータベースにプッシュされません。 このビットが設定されていない場合、レコードセットは更新されず、保留中の更新はすべてデータベースにプッシュされます。  
   
- 8 =*RefreshConflicts*保留中の変更行の更新が失敗します。 更新に失敗した行は、データベースの現在のデータで更新されます。  
+ 8 =*Refreshconflicts*は、保留中の変更があるすべての行を更新できません。 更新に失敗した行は、データベースの現在のデータで更新されます。  
   
  *ppRecordset*  
- 同期するレコード セットへのポインター。  
+ 同期されるレコードセットへのポインター。  
   
  *pStatusArray*  
- 影響を受ける行の行の状態のセーフ配列を返すために使用バリアントを同期します。 次の同期オプションのいずれも設定されている場合を設定できません。*RefreshWithUpdate*、*更新*と*RefreshConflicts*します。  
+ Synchronize の影響を受ける行の状態の安全な配列を返すために使用されるバリアント。 *Refreshwithupdate*、 *Refresh* 、および*refreshconflicts*のいずれの同期オプションも設定されていない場合は設定されません。  
   
  *lcid*  
- 返されるエラーをビルドするために使用、LCID *pInformation*します。  
+ *Pinformation*で返されたエラーを構築するために使用される LCID。  
   
  *pInformation*  
- によって返されるエラーの情報へのポインター **Execute**します。 NULL の場合、エラー情報は返されません。  
+ **Execute**によって返された情報エラーへのポインター。 NULL の場合、エラー情報は返されません。  
   
-## <a name="remarks"></a>コメント  
- *HandlerString*パラメーターを null にすることがあります。 この場合の動作は、RDS サーバーを構成する方法によって異なります。 "MSDFMAP.handler"のハンドラーの文字列では、Microsoft から提供されたハンドラー (Msdfmap.dll) を使用することを示します。 "MASDFMAP.handler,sample.ini"のハンドラーの文字列は、Msdfmap.dll ハンドラーを使用することと、ハンドラーに"sample.ini"引数を渡す必要がありますを示します。 Msdfmap.dll は、方向、sample.ini を使用して、接続およびクエリ文字列を確認すると、引数を解釈します。  
+## <a name="remarks"></a>Remarks  
+ *ハンドラー文字列*パラメーターは null にすることができます。 この場合の動作は、RDS サーバーがどのように構成されているかによって異なります。 "MSDFMAP. handler" というハンドラー文字列は、Microsoft 提供のハンドラー (Msdfmap .dll) を使用する必要があることを示します。 "" のハンドラー文字列 "は、" "のハンドラー文字列" は、Msdfmap .dll ハンドラーを使用する必要があり、引数 "sample .ini" をハンドラーに渡す必要があることを示します。 次に、msdfmap .dll は、この引数を、サンプルの .ini を使用して接続とクエリ文字列を確認するための方向として解釈します。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

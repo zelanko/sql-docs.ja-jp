@@ -11,26 +11,25 @@ f1_keywords:
 helpviewer_keywords:
 - Unpivot Transformation Editor
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45aeb428f0905b7bf96900b6d592ff11963d8f4d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054839"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420319"
 ---
 # <a name="unpivot-transformation-editor"></a>[ピボット解除変換エディター]
   **[ピボット解除変換エディター]** ダイアログ ボックスを使用すると、行でピボットする列を選択したり、データ列および新しいピボット値出力列を指定したりできます。  
   
 > [!NOTE]  
->  このトピックでは、「 [ピボット解除変換](data-flow/transformations/unpivot-transformation.md) 」に示されているピボット解除の例に基づいて、オプションの使用方法を説明します。  
+>   このトピックでは、「 [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md) 」に示されているピボット解除の例に基づいて、オプションの使用方法を説明します。  
   
  ピボット解除変換の詳細については、「 [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **使用できる入力列**  
+## <a name="options"></a>オプション  
+ **[使用できる入力列]**  
  チェック ボックスを使用して、行でピボットする列を指定します。  
   
  **名前**  
@@ -62,7 +61,7 @@ ms.locfileid: "66054839"
  「 [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)」のピボット解除の例では、ピボット キー値列の名前は **Product** です。これは、 **Product** 、 **Product**, **Product**, **Product**, **Product**の列のピボット解除が行われる新しい **Product** 列を示しています。  
   
 ## <a name="see-also"></a>関連項目  
- [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [ピボット変換](data-flow/transformations/pivot-transformation.md)  
   
   

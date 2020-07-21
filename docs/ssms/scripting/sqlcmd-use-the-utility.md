@@ -1,6 +1,6 @@
 ---
-title: sqlcmd ユーティリティの使用 | Microsoft Docs
-ms.custom: ''
+title: sqlcmd ユーティリティの使用
+ms.custom: seo-lt-2019
 ms.date: 06/06/2017
 ms.prod: sql
 ms.technology: scripting
@@ -17,18 +17,18 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbdb412284c67fdccce8c3628aed41b6be0cae04
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267634"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79090595"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - ユーティリティの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **sqlcmd** ユーティリティは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 **sqlcmd** を対話形式で使用したり、 **sqlcmd**を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)]を理解している必要があります。 **sqlcmd** ユーティリティは一般的に次のように使用されます。  
   
--   コマンド プロンプトでの操作と同様、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを入力します。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、Windows の検索ボックスに「cmd」と入力し、"**コマンド プロンプト**" をクリックして開きます。 コマンド プロンプトで「 **sqlcmd** 」と入力し、その後に必要なオプションのリストを入力します。 **sqlcmd**でサポートされるオプションの一覧については、「 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)」を参照してください。  
+-   コマンド プロンプトでの操作と同様、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを入力します。 結果はコマンド プロンプトに表示されます。 コマンド プロンプト ウィンドウを開くには、Windows の検索ボックスに「cmd」と入力し、 **[コマンド プロンプト]** をクリックして開きます。 コマンド プロンプトで「 **sqlcmd** 」と入力し、その後に必要なオプションのリストを入力します。 **sqlcmd**でサポートされるオプションの一覧については、「 [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)」を参照してください。  
   
 -   実行する **ステートメントを 1 つ指定するか、実行する** ステートメントの入ったテキスト ファイルをユーティリティに指定して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブを実行します。 出力先はコマンド プロンプトにすることもできますが、通常はテキスト ファイルに出力されます。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68267634"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     内の複数の  
+     or  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -97,7 +97,7 @@ ms.locfileid: "68267634"
     > **ヒント** **sqlcmd** ユーティリティでサポートされているオプションの一覧を表示するには、 `sqlcmd -?`を実行してください。  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd を使用して Transact-SQL ステートメントを対話的に実行する  
- コマンド プロンプト ウィンドウでは、 **sqlcmd** ユーティリティを対話的に使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **を使用して対話的に**ステートメントを実行するには、入力ファイルまたはクエリを指定するための **-Q**、 **-q**、 **-Z**、または **-i** オプションを使用せずにこのユーティリティを実行します。 例:  
+ コマンド プロンプト ウィンドウでは、 **sqlcmd** ユーティリティを対話的に使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **を使用して対話的に**ステートメントを実行するには、入力ファイルまたはクエリを指定するための **-Q**、 **-q**、 **-Z**、または **-i** オプションを使用せずにこのユーティリティを実行します。 次に例を示します。  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68267634"
 ## <a name="quoted-strings"></a>引用符で囲まれた文字列  
  引用符で囲まれた文字列は、前処理がまったく行われずそのまま使用されます。ただし、例外として、2 つの連続する引用符を入力することで、引用符自体を文字列に挿入できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この文字の並びを 1 つの引用符として扱います (ただし、この変換はサーバーで行われます)。スクリプト変数が文字列内に存在する場合は展開されません。  
   
- 例:  
+ 次に例を示します。  
   
  `sqlcmd`  
   
@@ -209,7 +209,7 @@ ms.locfileid: "68267634"
   
 -   メモ帳などのテキスト エディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含んだテキスト ファイルを作成する。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-running-a-script-by-using-sqlcmd"></a>A. sqlcmd を使用したスクリプトの実行  
  メモ帳を起動し、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを入力します。  
@@ -249,13 +249,13 @@ ms.locfileid: "68267634"
   
  `C:\>sqlcmd -S ServerName -A`  
   
- `1> SELECT blocked FROM sys.dm_exec_requests WHERE blocked <> 0;`  
+ `1> SELECT session_id, blocking_session_id FROM sys.dm_exec_requests WHERE blocking_session_id <> 0;`  
   
  `2> GO`  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `spid   blocked`  
+ `session_id   blocking_session_id`  
   
  `------ -------`  
   
@@ -312,7 +312,7 @@ ms.locfileid: "68267634"
   
  `1> :Setvar LastName Achong`  
   
- `1> EXEC dbo.ContactEmailAddress $(Gustavo),$(Achong)`  
+ `1> EXEC dbo.ContactEmailAddress $(FirstName),$(LastName)`  
   
  `2> GO`  
   
@@ -473,7 +473,7 @@ ms.locfileid: "68267634"
   
  `SQLCMD returned 100 to the command shell`  
   
-### <a name="g-using-sqlcmd-to-set-encryption-on-windows-azure-sql-database"></a>G. sqlcmd を使用した Windows Azure SQL データベースでの暗号化の設定  
+### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. sqlcmd を使用した Azure SQL Database での暗号化の設定  
  **データへの接続時に**sqlcmd [!INCLUDE[ssSDS](../../includes/sssds-md.md)] を実行して、通信を暗号化するかどうか、および証明書を信頼するかどうかを指定できます。 次の 2 つの **sqlcmd**``オプションを使用できます。  
   
 -   暗号化された接続を要求するには、クライアント側で -N スイッチを使用します。 このオプションは、ADO.net オプションの `ENCRYPT = true`と同等です。  

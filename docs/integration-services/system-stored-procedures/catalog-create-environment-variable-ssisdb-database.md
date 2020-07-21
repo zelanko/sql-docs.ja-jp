@@ -8,34 +8,34 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 83dea4c55a06aa139a561e9e5c7f99e0c5559f4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fab10f0b4629c9936d4ff8df439b970c362ef41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749681"
 ---
-# <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB データベース)
+# <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログで環境変数を作成します。  
   
 ## <a name="syntax"></a>構文  
   
 ```sql  
-catalog.create_environment_variable [@folder_name =] folder_name  
-    , [@environment_name =] environment_name  
-    , [@variable_name =] variable_name  
-    , [@data_type =] data_type  
-    , [@sensitive =] sensitive  
-    , [@value =] value  
-    , [@description =] description  
+catalog.create_environment_variable [ @folder_name = ] folder_name  
+    , [ @environment_name = ] environment_name  
+    , [ @variable_name = ] variable_name  
+    , [ @data_type = ] data_type  
+    , [ @sensitive = ] sensitive  
+    , [ @value = ] value  
+    , [ @description = ] description  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -84,7 +84,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パッケージの実行で使用するため、値をプロジェクト パラメーターまたはパッケージ パラメーターに効率的に割り当てるには、環境変数を使用できます。 環境変数は、パラメーター値を編成できるようにします。 変数名は、環境内で一意である必要があります。  
   
  ストアド プロシージャは変数のデータ型を検証して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでサポートされることを確認します。  

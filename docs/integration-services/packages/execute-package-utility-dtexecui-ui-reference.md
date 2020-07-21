@@ -21,21 +21,21 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 95dbf7aabbc124a9419b0cff30ec5d4685eacf27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 651311d70b17ce4be761e7ecc246e8839ef34eb0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051171"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295829"
 ---
 # <a name="execute-package-utility-dtexecui"></a>パッケージ実行ユーティリティ (dtexecui)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザー インターフェイスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **コマンド プロンプト ツールを使用してパッケージを実行する代わりに使用できます。これは、** から開くか、またはコマンド プロンプトで「 **dtexecui** 」と入力して表示します。  
+  **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザー インターフェイスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **コマンド プロンプト ツールを使用してパッケージを実行する代わりに使用できます。これは、** から開くか、またはコマンド プロンプトで「 **dtexecui** 」と入力して表示します。  
   
  **dtexecui.exe** ユーティリティと同じ手順でパッケージを実行します。 このユーティリティは 32 ビット ツールであるため、64 ビット環境では Windows on Win32 (WOW) で実行される 64 ビット環境の **dtexecui.exe** を使用して、パッケージを実行します。 64 ビット コンピューターで dtexecui.exe ユーティリティを使用してコマンドを開発およびテストする場合、実稼働サーバー上でコマンドの配置またはスケジュール設定を行う前に、64 ビット バージョンの **dtexec.exe** を使用してコマンドのテストを 64 ビット モードで行う必要があります。  
   
@@ -70,8 +70,8 @@ ms.locfileid: "68051171"
   
 |||  
 |-|-|  
-|[値]|[説明]|  
-|**SQL Server**|パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に存在する場合は、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に使用するユーザー名とパスワードを指定します。 各ユーザー名とパスワードは、 **/USER** _username_ および **/PASSWORD** _password_ options to the commおよび prompt.|  
+|値|説明|  
+|**SQL Server**|パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に存在する場合は、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に使用するユーザー名とパスワードを指定します。 各ユーザー名とパスワードによって、 **/USER** _ユーザー名_ および **/PASSWORD** _パスワード_ オプションがコマンド プロンプトに追加されます。|  
 |**ファイル システム**|パッケージがファイル システムに存在する場合は、このオプションを選択します。|  
 |**[SSIS パッケージ ストア]**|パッケージが [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに存在する場合は、このオプションを選択します。|  
   
@@ -101,11 +101,11 @@ ms.locfileid: "68051171"
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。  
   
- **[パッケージ]**  
+ **Package**  
  パッケージ名を入力するか、参照ボタン ( **[...]** ) をクリックし **[SSIS パッケージの選択]** ダイアログ ボックスを使用してパッケージを検索します。  
   
 #### <a name="package-source--file-system"></a>[パッケージ ソース] = [ファイル システム]  
- **[パッケージ]**  
+ **Package**  
  パッケージ名を入力するか、参照ボタン ( **[...]** ) をクリックし [開く] ダイアログ ボックスを使用してパッケージを検索します。 既定では、.dtsx 拡張子を持つファイルのみがダイアログ ボックスに一覧表示されます。  
   
 #### <a name="package-source--ssis-package-store"></a>[パッケージ ソース] = [SSIS パッケージ ストア]  
@@ -121,7 +121,7 @@ ms.locfileid: "68051171"
  **[SQL Server 認証を使用する]**  
  **[SSIS パッケージ ストア]** に格納されているパッケージを実行する場合は、このオプションは使用できません。  
   
- **[パッケージ]**  
+ **Package**  
  パッケージ名を入力するか、参照ボタン ( **[...]** ) をクリックし **[SSIS パッケージの選択]** ダイアログ ボックスを使用してパッケージを検索します。  
   
 ## <a name="configurations-page"></a>[構成] ページ  
@@ -137,10 +137,10 @@ ms.locfileid: "68051171"
 > [!NOTE]  
 >  複数の構成によって同じプロパティが修正される場合、最後に読み込まれる構成が使用されます。  
   
- **[追加]**  
+ **追加**  
  **[開く]** ダイアログ ボックスを使用して、構成を追加します。 既定では、.dtsconfig 拡張子を持つファイルのみがダイアログ ボックスに一覧表示されます。  
   
- **[削除]**  
+ **Remove**  
  一覧で構成を選択し、次に **[削除]** をクリックします。  
   
  **実行**  
@@ -153,16 +153,16 @@ ms.locfileid: "68051171"
  **[パッケージ実行ユーティリティ]** ダイアログ ボックスの **[コマンド ファイル]** ページを使用すると、実行時に読み込むコマンド ファイルを選択できます。  
   
 ### <a name="options"></a>オプション  
- **Command files**  
+ **[コマンド ファイル]**  
  パッケージが使用するコマンド ファイルを一覧表示します。 パッケージは、複数のファイルを使用してコマンド ライン オプションを設定できます。  
   
  **方向キー**  
  一覧でコマンド ファイルを選択し、右側にある方向キーを使用して読み込み順序を変更します。 コマンド ファイルは、一覧の一番上から順に読み込みます。  
   
- **[追加]**  
+ **追加**  
  **[開く]** ダイアログ ボックスを使用して、コマンド ファイルを追加します。  
   
- **[削除]**  
+ **Remove**  
  テキスト ボックスでコマンド ファイルを選択し、 **[削除]** ボタンを使用して削除します。  
   
  **実行**  
@@ -178,10 +178,10 @@ ms.locfileid: "68051171"
  **接続マネージャー**  
  チェック ボックスをオンにすると、 **[接続文字列]** 列が編集可能になります。  
   
- **[説明]**  
+ **説明**  
  それぞれの接続マネージャーの説明を表示します。 説明は編集できません。  
   
- **[接続文字列]**  
+ **接続文字列**  
  接続マネージャーの接続文字列を編集します。 このフィールドは、 **[接続マネージャー]** チェック ボックスがオンの場合にのみ編集できます。  
   
  **実行**  
@@ -218,7 +218,7 @@ ms.locfileid: "68051171"
  **[再開オプション]**  
  再開オプションをオーバーライドする場合、チェックポイントの使用方法を選択します。  
   
- **Execute**  
+ **実行**  
  パッケージを実行します。  
   
  **[閉じる]**  
@@ -249,19 +249,19 @@ ms.locfileid: "68051171"
  **情報**  
  情報メッセージをレポートに記録する場合に選択します。  
   
- **Verbose**  
+ **詳細**  
  詳細レポートを使用する場合に選択します。  
   
  **[コンソールのログ記録]**  
  選択したイベントが発生したときにログに書き込まれる情報を指定します。  
   
- **[名前]**  
+ **Name**  
  パッケージを作成した人物の名前をレポートに記録する場合に選択します。  
   
- **[Computer]**  
+ **コンピューター**  
  パッケージが実行されるコンピューターの名前をレポートに記録する場合に選択します。  
   
- **演算子**  
+ **[オペレーター]**  
  パッケージを起動した人物の名前をレポートに記録する場合に選択します。  
   
  **ソース名**  
@@ -295,7 +295,7 @@ ms.locfileid: "68051171"
  **[構成文字列]**  
  ログの場所を指すパッケージから接続マネージャーの名前を選択するか、ログ プロバイダーに接続するための接続文字列を入力します。  
   
- **[削除]**  
+ **Remove**  
  ログ プロバイダーを選択し、クリックして削除します。  
   
  **実行**  
@@ -314,7 +314,7 @@ ms.locfileid: "68051171"
  **Value**  
  プロパティの値を入力します。  
   
- **[削除]**  
+ **Remove**  
  プロパティのパスを選択し、クリックして削除します。  
   
  **実行**  
@@ -333,7 +333,7 @@ ms.locfileid: "68051171"
  **[パッケージのビルドを検証する]**  
  パッケージのビルドを検証します。  
   
- ビルド  
+ Build  
  ビルドに関連付けられた連続するビルド番号を指定します。  
   
  **[パッケージ ID を確認する]**  
@@ -345,7 +345,7 @@ ms.locfileid: "68051171"
  **[バージョン ID を確認する]**  
  バージョン ID を確認します。  
   
- [バージョン ID]  
+ バージョン ID  
  バージョンの識別番号を指定します。  
   
  **実行**  
@@ -364,7 +364,7 @@ ms.locfileid: "68051171"
  **[コマンド ラインを手動で編集する]**  
  **[コマンド ライン]** テキスト ボックスのコマンド ラインを編集します。  
   
- **Command line**  
+ **コマンド ライン**  
  現在のコマンド ラインを表示します。 コマンド ラインを手動で編集するためにこのオプションを選択した場合に編集可能です。  
   
  **実行**  

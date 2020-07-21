@@ -1,6 +1,5 @@
 ---
-title: ドメインの管理 | Microsoft Docs
-ms.custom: ''
+title: ドメインの管理
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,18 +7,18 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 77e1dc6a2e0039c8ff9a2f66c6b3ed45a2176a17
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991923"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898101"
 ---
 # <a name="managing-a-domain"></a>ドメインの管理
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのドメインの使用について説明します。 ドメインは、分析対象のデータ ソースの特定のフィールドに含まれているデータのセマンティック表現です。 ドメインは、データ ソースに対して作成するナレッジ ベースの一部で、サンプル データ ソースを分析するか、データをインポートして構築するナレッジは、ナレッジ ベースで定義されたドメインに追加されます。 これらのドメインのナレッジは、データ品質プロジェクトでクレンジングおよび照合を実行するために後で使用されます。 ドメインは、Data Quality Services のすべてのアクティビティの中核になります。  
   
@@ -47,12 +46,12 @@ ms.locfileid: "67991923"
   
 |||  
 |-|-|  
-|特定のデータ型を持つデータ フィールドのセマンティック表現を作成し、ドメインの作成方法を指定して、ドメインの出力形式を設定する|[ドメインを作成する](../data-quality-services/create-a-domain.md)|  
-|ドメインを別のドメインにリンクして、ドメインが同じ設定と値を共有できるようにする|[リンク ドメインを作成する](../data-quality-services/create-a-linked-domain.md)|  
-|参照データ サービスを単一または複合ドメインにアタッチする|[参照データにドメインまたは複合ドメインをアタッチする](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|ナレッジ ベース内の値を変更または拡張する|[ドメイン値を変更する](../data-quality-services/change-domain-values.md)|  
-|検証と標準化の規則を使用する|[ドメイン ルールを作成する](../data-quality-services/create-a-domain-rule.md)|  
-|リレーションを使用してドメインの値の一部である用語を修正する|[用語ベースのリレーションを作成する](../data-quality-services/create-term-based-relations.md)|  
+|特定のデータ型を持つデータ フィールドのセマンティック表現を作成し、ドメインの作成方法を指定して、ドメインの出力形式を設定する|[ドメインの作成](../data-quality-services/create-a-domain.md)|  
+|ドメインを別のドメインにリンクして、ドメインが同じ設定と値を共有できるようにする|[リンク ドメインの作成](../data-quality-services/create-a-linked-domain.md)|  
+|参照データ サービスを単一または複合ドメインにアタッチする|[参照データへのドメインまたは複合ドメインのアタッチ](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|ナレッジ ベース内の値を変更または拡張する|[ドメイン値の変更](../data-quality-services/change-domain-values.md)|  
+|検証と標準化の規則を使用する|[ドメイン ルールの作成](../data-quality-services/create-a-domain-rule.md)|  
+|リレーションを使用してドメインの値の一部である用語を修正する|[用語ベースのリレーションの作成](../data-quality-services/create-term-based-relations.md)|  
 |ドメイン管理アクティビティを完了、終了、またはキャンセルする|[ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

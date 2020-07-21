@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream (long, long) メソッドMicrosoft Docs
+title: getBinaryStream メソッド (long, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5cc12f9e7ed7a83363766355fa5d340a459a332b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 70ad7dfb297e1ec1b3d34f657f48a67f16debab5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953658"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921700"
 ---
 # <a name="getbinarystream-method-long-long"></a>getBinaryStream (long, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *po*  
+ *pos*  
   
  取得する部分的な値の最初のバイトへのオフセットです。  
   
@@ -44,7 +44,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getBinaryStream メソッドは、java.sql.Blob インターフェイスの getBinaryStream メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

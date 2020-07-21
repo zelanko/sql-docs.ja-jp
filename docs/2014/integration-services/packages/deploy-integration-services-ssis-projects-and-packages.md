@@ -1,5 +1,5 @@
 ---
-title: プロジェクトとパッケージの展開 |Microsoft Docs
+title: プロジェクトとパッケージの配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e900225cc4215d586ea7494a60ba04835bcd2652
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62890255"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423711"
 ---
 # <a name="deployment-of-projects-and-packages"></a>プロジェクトとパッケージの展開
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、プロジェクト配置モデルとパッケージ配置モデルの 2 つの配置モデルがサポートされています。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「 [Integration Services サーバーへのプロジェクトの配置](../deploy-projects-to-integration-services-server.md)」を参照してください。  
   
- パッケージ配置モデルの詳細については、次を参照してください。[パッケージの配置&#40;SSIS&#41;](legacy-package-deployment-ssis.md)します。  
+ パッケージ配置モデルの詳細については、「[パッケージ配置 &#40;SSIS&#41;](legacy-package-deployment-ssis.md)」を参照してください。  
   
 ## <a name="compare-project-deployment-and-package-deployment"></a>プロジェクト配置とパッケージ配置の比較  
  プロジェクトに対して選択する配置モデルの種類によって、そのプロジェクトに使用できる開発オプションと管理オプションが決まります。 次の表に、プロジェクト配置モデルを使用した場合とパッケージ配置モデルを使用した場合の相違点と共通点を示します。  
@@ -62,7 +61,7 @@ ms.locfileid: "62890255"
 ## <a name="related-content"></a>関連コンテンツ  
  mattmasson.com のブログ「 [SSIS プロジェクトの分岐方法について](https://go.microsoft.com/fwlink/?LinkId=245739)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dtexec ユーティリティ](dtexec-utility.md)  
   
   

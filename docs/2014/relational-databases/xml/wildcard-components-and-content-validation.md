@@ -10,24 +10,23 @@ helpviewer_keywords:
 - wildcard components [XML]
 - content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b824b240c6801317b16ac84820e0fc82054875b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07cff70d32d7d39619ecf3ee4ce36e37f2dee924
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63193005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012881"
 ---
 # <a name="wildcard-components-and-content-validation"></a>ワイルドカード コンポーネントと内容検証
   ワイルドカード コンポーネントは、コンテンツ モデルで使用できる表現の柔軟性を高めるために使用されます。 ワイルドカード コンポーネントは、次のように XSD 言語でサポートされています。  
   
--   要素ワイルドカード コンポーネント。 これらは **\<xsd:any>** 要素で表現されます。  
+-   要素ワイルドカード コンポーネント。 これらは、要素によって表され **\<xsd:any>** ます。  
   
--   属性ワイルドカード コンポーネント。 これらは **\<xsd:anyAttribute>** 要素で表現されます。  
+-   属性ワイルドカード コンポーネント。 これらは、要素によって表され **\<xsd:anyAttribute>** ます。  
   
- 両方のワイルドカード文字要素 ( **\<xsd:any>** および **\<xsd:anyAttribute>** ) で **processContents** 属性を使用できます。 この属性を使用して、ワイルドカード文字要素で関連付けられるドキュメントの内容の違反を、XML アプリケーションで検証する方法を示す値を指定できます。 検証方法を示す値には、次のようにそれぞれ異なる効果があります。  
+ 両方のワイルドカード文字要素 (と) では、 **\<xsd:any>** **\<xsd:anyAttribute>** **processContents**属性の使用がサポートされています。 この属性を使用して、ワイルドカード文字要素で関連付けられるドキュメントの内容の違反を、XML アプリケーションで検証する方法を示す値を指定できます。 検証方法を示す値には、次のようにそれぞれ異なる効果があります。  
   
 -   **strict** 値は、内容を完全に検証することを指定します。  
   
@@ -76,7 +75,7 @@ SELECT @var
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー上の XML スキーマ コレクションの要件と制限](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

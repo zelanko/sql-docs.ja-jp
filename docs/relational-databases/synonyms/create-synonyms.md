@@ -14,15 +14,15 @@ ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3500552ae0dde03b7cd4b354560bc3d0857eebec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44e814efc2cc1d48698dda9d4b413a494f53ef3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787237"
 ---
 # <a name="create-synonyms"></a>シノニムの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、シノニムを作成する方法について説明します。  
   
  **このトピックの内容**  
@@ -37,14 +37,14 @@ ms.locfileid: "68050901"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  ユーザーが特定のスキーマ内にシノニムを作成するには、CREATE SYNONYM 権限が必要であり、さらにスキーマを所有しているか ALTER SCHEMA 権限が与えられている必要があります。 CREATE SYNONYM 権限は、譲与可能な権限です。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-synonym"></a>シノニムを作成するには  
   
@@ -54,30 +54,28 @@ ms.locfileid: "68050901"
   
 3.  **[シノニムの追加]** ダイアログ ボックスで、次の情報を入力します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     **Synonym name**  
-     Type the new name you will use for this object.  
+     **[シノニム名]**  
+     このオブジェクトに対して使用する新しい名前を入力します。  
   
-     **Synonym schema**  
-     Type the schema of the new name you will use for this object.  
+     **[シノニム スキーマ]**  
+     このオブジェクトに対して使用する新しい名前のスキーマを入力します。  
   
-     **Server name**  
-     Type the server instance to connect to.  
+     **サーバー名**  
+     接続するサーバー インスタンスを入力します。  
   
-     **Database name**  
-     Type or select the database containing the object.  
+     **データベース名**  
+     オブジェクトを含んでいるデータベースを入力または選択します。  
   
-     **Schema**  
-     Type or select the schema that owns the object.  
+     **[スキーマ]**  
+     オブジェクトを所有しているスキーマを入力または選択します。  
   
-     **Object type**  
-     Select the type of object.  
+     **オブジェクトの種類**  
+     オブジェクトの型を選択します。  
   
-     **Object name**  
-     Type the name of the object to which the synonym refers.  
+     **オブジェクト名です。**  
+     シノニムで参照するオブジェクトの名前を入力します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-synonym"></a>シノニムを作成するには  
   
@@ -87,7 +85,7 @@ ms.locfileid: "68050901"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の既存のテーブルに対してシノニムを作成します。 このシノニムは、その後の例で使用されます。  
   
 ```  

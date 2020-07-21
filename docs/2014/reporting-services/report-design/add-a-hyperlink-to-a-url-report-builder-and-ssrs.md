@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106816"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)
@@ -27,10 +27,10 @@ ms.locfileid: "66106816"
   
  URL へのハイパーリンクは、グラフ内のテキスト ボックス、画像、計算系列などの **Action** プロパティがあるアイテムに追加できます。 ユーザーがそのレポート アイテムをクリックすると、定義されたアクションが実行されます。 詳細については、「[[アクション プロパティ] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)」と「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
- すぐに使用するには、「[チュートリアル:テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。  
+ すぐに使用するには、「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。  
   
 > [!NOTE]  
->  データセット フィールドにバインドされているリンクは、悪意的な改ざんに対して脆弱である可能性があります。 詳細については、msdn.microsoft.com で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=154888)の「[レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
+>  データセット フィールドにバインドされているリンクは、悪意的な改ざんに対して脆弱である可能性があります。 詳細については、msdn.microsoft.com で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=154888)の「[レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
   
 ### <a name="to-add-a-hyperlink"></a>ハイパーリンクを追加するには  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66106816"
 7.  リンクをテストするには、 **[実行]** をクリックしてレポートをプレビューし、リンクを設定したレポート アイテムをクリックします。  
   
 ## <a name="see-also"></a>参照  
- [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [対話的な並べ替え、ドキュメントマップ、およびリンク &#40;レポートビルダーと SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [ドキュメント マップの作成 &#40;レポート ビルダーおよび SSRS&#41;](create-a-document-map-report-builder-and-ssrs.md)  
   
   

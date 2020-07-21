@@ -1,5 +1,5 @@
 ---
-title: コレクション (ADO - WFC 構文) |Microsoft Docs
+title: Collections (ADO-WFC 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - collections [ADO], ADO/WFC syntax
 - ADO/WFC syntax index [ADO]
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b26c78f514ef6786f642c534b2621d0c81c71e51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d5213e1c50f603663bb0405748f5dda882be5cfe
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919904"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748893"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Collections (ADO - WFC 構文)
-**package com.ms.wfc.data**  
+**パッケージ com.. wfc. データ**  
   
 ## <a name="parameters"></a>パラメーター  
   
@@ -38,7 +38,7 @@ public Parameter getItem(int n)
 public Parameter getItem(String s)  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getCount()  
@@ -59,7 +59,7 @@ public com.ms.wfc.data.Field getItem(int n)
 public com.ms.wfc.data.Field getItem(String s)  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getCount()  
@@ -76,13 +76,13 @@ public com.ms.wfc.data.Error getItem(int n)
 public com.ms.wfc.data.Error getItem(String s)  
 ```  
   
-### <a name="properties"></a>Properties  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getCount()  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+## <a name="see-also"></a>参照  
+ [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

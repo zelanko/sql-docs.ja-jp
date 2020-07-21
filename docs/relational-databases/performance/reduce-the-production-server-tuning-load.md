@@ -19,15 +19,15 @@ ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f05ede948892b7f9ae6a9f9ee24a3b6878586917
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54b656c95323c8f6cb2a4f5f6d4666555de5e02a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719575"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>実稼動サーバーのチューニング負荷の軽減
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、ワークロードの分析とチューニング推奨設定の生成をクエリ オプティマイザーに依存します。 実稼働サーバー上でこの分析を実行すると、サーバーの負荷が増し、チューニング セッション中のサーバーのパフォーマンスが低下することがあります。 実稼働サーバーに加えてテスト サーバーを使用することで、チューニング セッション中のサーバーの負荷への影響を小さくすることができます。  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>データベース エンジン チューニング アドバイザーでテスト サーバーを使用する方法  
@@ -59,7 +59,7 @@ ms.locfileid: "68113384"
   
  次の図は、テスト サーバーと実稼働サーバーのシナリオを示しています。  
   
- ![データベース エンジン チューニング アドバイザー テスト サーバーの使用状況](../../relational-databases/performance/media/testsvr.gif "データベース エンジン チューニング アドバイザー テスト サーバーの使用状況")  
+ ![データベース エンジン チューニング アドバイザーでのテスト サーバーの使用法](../../relational-databases/performance/media/testsvr.gif "データベース エンジン チューニング アドバイザーでのテスト サーバーの使用法")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) では、テスト サーバーのチューニング機能はサポートされません。  

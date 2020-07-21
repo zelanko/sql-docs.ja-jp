@@ -1,5 +1,6 @@
 ---
 title: マスター データ サービスのアップグレード | Microsoft Docs
+description: Microsoft SQL Server マスター データ サービスのアップグレードについて 4 つのシナリオを確認します。 ファイルの場所とアップグレードのトラブルシューティングについて説明します。
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934823"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900274"
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] マスター データ サービスのアップグレードには、次のシナリオがあります。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "67934823"
 > -   モデル配置パッケージは作成されたエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のみで使用できます。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で作成されたモデル配置パッケージを [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]に配置することはできません。  
 > -   Data Quality Services およびマスター データ サービスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードした後は、以前のバージョンの Excel 用マスター データ サービス アドインは機能しなくなります。 Excel 用の [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] マスター データ サービス アドインは、「[Microsoft Excel 用マスター データ サービス アドイン](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)」からダウンロードできます。  
   
-##  <a name="fileLocation"></a> ファイルの場所  
+##  <a name="file-location"></a><a name="fileLocation"></a> ファイルの場所  
   
 -   [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]では、既定で、ファイルが *drive*:\Program Files\Microsoft SQL Server\140\Master Data Services にインストールされます。  
 
@@ -50,7 +51,7 @@ ms.locfileid: "67934823"
   
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]では、既定で、ファイルが *drive*:\Program Files\Microsoft SQL Server\Master Data Services にインストールされます。  
   
-##  <a name="noengine"></a> データベース エンジンのアップグレードを伴わないアップグレード  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a> データベース エンジンのアップグレードを伴わないアップグレード  
  このシナリオでは、引き続き [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] を使用して、MDS データベースをホストします。 ただし、MDS データベースのスキーマをアップグレードしてから、現在の [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] Web アプリケーションを作成して MDS データベースにアクセスする必要があります。 アップグレード後、以前の Web アプリケーションからは MDS データベースにアクセスできなくなります。  
   
  現在の [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] と以前のバージョンの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を同じコンピューターにインストールできます。 ファイルは、 [ファイルの場所](#fileLocation)に示すように、異なる場所にインストールされます。  
@@ -71,7 +72,7 @@ ms.locfileid: "67934823"
   
 2.  MDS データベース スキーマをアップグレードします。  
   
-    1.  現在の [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
+    1.  現在の [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
   
         > [!IMPORTANT]  
         >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。  
@@ -84,7 +85,7 @@ ms.locfileid: "67934823"
   
 3.  Web アプリケーションを作成します。  
   
-    1.  現在の [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
+    1.  現在の [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] を開きます。  
   
     2.  左ペインで **[Web の構成]** をクリックします。  
   
@@ -105,20 +106,20 @@ ms.locfileid: "67934823"
   
     2.  MDS データベースを選択します。  
   
-    3.  **[適用]** をクリックします。  
+    3.  **[Apply]** をクリックします。  
   
-##  <a name="engine"></a> データベース エンジンのアップグレードを伴うアップグレード  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> データベース エンジンのアップグレードを伴うアップグレード  
  このシナリオでは、データベース エンジンと[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] アプリケーションの両方を、以前のバージョンから [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] のいずれかにアップグレードします。  
   
  **データベース エンジンをアップグレードしてアップグレードするには**  
   
-1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の場合のみ**: **[コントロール パネル]**  >  **[プログラムと機能]** の順に開き、Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をアンインストールします。  
+1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の場合のみ**: **[コントロール パネル]**  >  **[プログラムと機能]** の順に開き、Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をアンインストールします。  
   
 2.  データベース エンジンを [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] にアップグレードします。 詳細については、「 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」を参照してください。  
   
 3.  「 [データベース エンジンのアップグレードを伴わないアップグレード](#noengine) 」のすべての手順を完了します。  
   
-##  <a name="twocomputer"></a> 2 台のコンピューターのシナリオでのアップグレード  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> 2 台のコンピューターのシナリオでのアップグレード  
  このシナリオでは、SQL Server が 2 台のコンピューターにインストールされているシステムをアップグレードします。1 台は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]、もう 1 台は以前のバージョンの [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] です。  
   
  以前のバージョンの [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] がインストールされている場合は、引き続き以前のバージョンを使用して、1 台のコンピューターで MDS データベースをホストします。 ただし、MDS データベースのスキーマをアップグレードしてから、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Web アプリケーションをそれぞれ使用して、MDS データベースにアクセスする必要があります。 以前のバージョンの Web アプリケーションからは、MDS データベースにアクセスできなくなります。  
@@ -127,7 +128,7 @@ ms.locfileid: "67934823"
   
 -   「 [データベース エンジンのアップグレードを伴わないアップグレード](#noengine)」のすべての手順を完了します。  
   
-##  <a name="restore"></a> アップグレードおよびバックアップからのデータベースの復元  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> アップグレードおよびバックアップからのデータベースの復元  
  このシナリオでは、1 台の同じコンピューターまたは 2 台の異なるコンピューターに、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] が、以前のバージョンと共にインストールされています。 アップグレードの前に、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] リリースより前のバージョンでデータベースがバックアップされており、そのデータベースを復元する必要があります。  
   
  **バックアップからのデータベースを復元してアップグレードするには**  
@@ -149,7 +150,7 @@ ms.locfileid: "67934823"
 3.  MDS データベース スキーマをアップグレートして、Web アプリケーションを作成し、新しい Web アプリケーションとアップグレードされた MDS データベースを関連付けます。 手順については、「 [データベース エンジンのアップグレードを伴わないアップグレード](#noengine)」の手順 2 ～ 4 を参照してください。  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
- **問題点:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web アプリケーションを開くと、"クライアントのバージョンがデータベースのバージョンと互換性がない" ことを示すエラー メッセージが表示される。  
+ **問題:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web アプリケーションを開くと、"クライアントのバージョンがデータベースのバージョンと互換性がない" ことを示すエラー メッセージが表示される。  
   
  **解決方法:** この問題は、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のマスター データ マネージャー Web アプリケーションが、[!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] マスター データ サービスにアップグレードされたデータベースにアクセスしようとするときに発生します。 代わりに、[!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Web アプリケーションを使用する必要があります。  
   

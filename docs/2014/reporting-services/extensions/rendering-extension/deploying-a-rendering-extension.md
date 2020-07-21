@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298599"
 ---
 # <a name="deploying-a-rendering-extension"></a>表示拡張機能の配置
@@ -26,12 +26,12 @@ ms.locfileid: "63298599"
 ## <a name="configuration-file-rendering-extension-element"></a>構成ファイルの表示拡張機能要素  
  表示拡張機能を .DLL にコンパイルした後、rsreportserver.config ファイルにエントリを追加します。 既定では、%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer にあります。 親要素は \<Render> です。 Render 要素の下には、各表示拡張機能の Extension 要素があります。 `Extension` 要素には、Name と Type という 2 つの属性があります。  
   
- 次の表の属性、`Extension`要素の表示拡張機能。  
+ 次の表では、表示拡張`Extension`機能の要素の属性について説明します。  
   
-|属性|説明|  
+|Attribute|説明|  
 |---------------|-----------------|  
-|**名前**|拡張機能の一意の名前。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extensions** 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
-|**型**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
+|**Name**|拡張機能の一意の名前。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extensions** 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
+|**Type**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
 |**[表示]**|値が `false` の場合、表示拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は `true` になります。|  
 |**LogAllExecutionRequests**|値が `false` の場合、エントリがログに記録されるのは、セッションでレポートが最初に実行されるときのみであることを示します。 この属性が指定されない場合、既定値は `true` になります。<br /><br /> この設定によって、レポートに最初に表示されるページについてのみエントリをログに記録するか (`false` の場合)、レポートに表示されるページごとにエントリをログに記録するか (`true` の場合) が決まります。|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63298599"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     **Name** の値は、表示拡張機能の一意な名前です。 **Type** の値は、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 実装の完全修飾名前空間に続けて、アセンブリの名前 (.dll ファイル拡張子を含まない) をコンマで区切って指定したものです。 既定では、表示拡張機能が表示されます。 レポート マネージャーなどのユーザー インターフェイスで拡張機能を非表示にするには追加、 **Visible**属性を`Extension`要素に設定し、`false`します。  
+     **Name** の値は、表示拡張機能の一意な名前です。 **Type** の値は、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 実装の完全修飾名前空間に続けて、アセンブリの名前 (.dll ファイル拡張子を含まない) をコンマで区切って指定したものです。 既定では、表示拡張機能が表示されます。 レポートマネージャーなどのユーザーインターフェイスから拡張機能を非表示にするに**Visible**は、 `Extension`要素に Visible 属性を追加し、 `false`それをに設定します。  
   
 ## <a name="verifying-the-deployment"></a>配置の確認  
  また、レポート マネージャーを開き、配信拡張機能がレポートに有効なエクスポートの種類の一覧に含まれていることを確認することもできます。  

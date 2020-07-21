@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.welcome.f1
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b75d728536da8ba89fbbf8bc6ca315016cdacf6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f989a68f104387095f4b834a2152fc1fc04f9c8c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943853"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71290954"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンション ウィザードへようこそ]
 

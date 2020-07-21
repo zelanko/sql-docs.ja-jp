@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ce06937840fc70d77d190915e200b9783fce34e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa9bf38512b2ba817156f216161d21bc1d27c129
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074657"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294863"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>CDC へのテーブルの追加
 
@@ -38,7 +38,7 @@ ms.locfileid: "68074657"
 > [!NOTE]  
 >  これらのフィールドの一方または両方に条件を入力できます。  
   
--   **[一致するテーブルのうち最初の 1000 個を表示する]** : 既定では、このチェック ボックスはオンになっています。 一致するテーブルのうち最初の 1000 個のみが表示されます。 このチェック ボックスをオフにすると、条件に一致するすべてのテーブルが表示されます。 テーブルが多数存在する場合、一覧の表示に時間がかかる場合があります。  
+-   **[一致するテーブルのうち最初の 1000 個を表示する]** : 既定ではこのチェック ボックスはオンになっています。 一致するテーブルのうち最初の 1000 個のみが表示されます。 このチェック ボックスをオフにすると、条件に一致するすべてのテーブルが表示されます。 テーブルが多数存在する場合、一覧の表示に時間がかかる場合があります。  
   
  **CDC インスタンスに含めるテーブルを選択するには**  
  含めるテーブルの横のチェック ボックスをオンにして、 **[追加]** をクリックします。 新しいインスタンス ウィザードの **[テーブルと列の選択]** ページの一覧にテーブルが追加されます。  

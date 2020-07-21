@@ -1,6 +1,7 @@
 ---
-title: メモリ最適化テーブルのクエリ処理のガイド | Microsoft Docs
-ms.custom: ''
+title: メモリ最適化テーブルのクエリ処理
+description: SQL Server のインメモリ OLTP におけるメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャの両方に対するクエリ処理について説明します。
+ms.custom: seo-dt-2019
 ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668873"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、インメモリ OLTP によってメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャが導入されています。 ここでは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャの両方に対するクエリ処理の概要について説明します。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68811149"
   
 -   不適切なクエリ プランを修正する方法。  
   
-## <a name="example-query"></a>クエリの例  
+## <a name="example-query"></a>サンプル クエリ  
  次の例を使用して、この記事で説明するクエリ処理の概念を示します。  
   
  ここでは、Customer と Order という 2 個のテーブルについて検討します。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトには、2 個のテーブルおよび関連するインデックスの定義が (従来の) ディスク ベース形式で含まれています。  
@@ -63,7 +64,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- ここでは、クエリ プランを構築できるように、2 個のテーブルに Northwind サンプル データベースのサンプル データが読み込まれています。このサンプル データベースは「 [SQL Server 2000 用の Northwind サンプル データベースと pubs サンプル データベース](https://www.microsoft.com/download/details.aspx?id=23654)」からダウンロードできます。  
+ ここでは、クエリ プランを構築できるように、2 個のテーブルに Northwind サンプル データベースのサンプル データが読み込まれています。このサンプル データベースは「 [SQL Server 2000 用の Northwind サンプル データベースと pubs サンプル データベース](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)」からダウンロードできます。  
   
  次のクエリについて考えてみます。このクエリでは、Customer テーブルと Order テーブルを結合し、注文の ID および関連付けられた顧客情報を返します。  
   
@@ -97,13 +98,13 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  このクエリでは、Orders テーブルの行はクラスター化インデックスを使用して取得されます。 これで、 **Hash Match** 物理演算子は **Inner Join**に使用されます。 Order のクラスター化インデックスは CustomerID で並べ替えられません。したがって、 **Merge Join** はパフォーマンスに影響を与えるソート演算子を必要とします。 前の例の **Hash Match** 演算子のコスト (46%) と比較して、 **Merge Join** 演算子 (75%) の相対コストを確認してください。 オプティマイザーでは、前の例でも **Hash Match** 演算子を検討したうえで、 **Merge Join** 演算子の方がパフォーマンスがよいと判断されています。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディスク ベース テーブルに対するクエリ処理  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディスク ベース テーブルに対するクエリ処理  
  次の図は、アドホック クエリに対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリ処理フローの概要を示しています。  
   
  ![SQL Server クエリ処理パイプライン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "SQL Server クエリ処理パイプライン。")  
 SQL Server クエリ処理パイプライン。  
   
- このシナリオでは、次のようになります。  
+ このシナリオでは:  
   
 1.  ユーザーがクエリを実行します。  
   
@@ -117,11 +118,9 @@ SQL Server クエリ処理パイプライン。
   
 6.  Access Methods は、バッファー プールのインデックスおよびデータ ページから行を取得し、必要に応じてバッファー プールにディスクからページを読み込みます。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  クエリの最初の例の場合、実行エンジンは、Customer のクラスター化インデックスおよび Order の非クラスター化インデックスの行を Access Methods から要求します。 Access Methods は、要求された行を取得するために B ツリー インデックス構造をスキャンします。 この場合は、プランがフル インデックス スキャンを必要とするため、すべての行が取得されます。  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセス  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセス  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] アドホック バッチおよびストアド プロシージャは、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]とも呼ばれます。 "解釈された" とは、クエリ プラン内の各演算子について、クエリ実行エンジンによってクエリ プランが解釈されることを意味します。 実行エンジンは、演算子とそのパラメーターを読み取り、操作を実行します。  
   
  解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、メモリ最適化テーブルとディスク ベース テーブルの両方にアクセスできます。 次の図は、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスのクエリ処理を示しています。  
@@ -205,7 +204,7 @@ END
 ### <a name="compilation-and-query-processing"></a>コンパイルとクエリ処理  
  次の図は、ネイティブ コンパイル ストアド プロシージャのコンパイル処理を示しています。  
   
- ![ストアド プロシージャのネイティブでのコンパイル。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "ストアド プロシージャのネイティブでのコンパイル。")  
+ ![ストアド プロシージャのネイティブでのコンパイル](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "ストアド プロシージャのネイティブでのコンパイル")  
 ストアド プロシージャのネイティブでのコンパイル  
   
  この処理は次のとおりです。  
@@ -227,7 +226,7 @@ END
   
  ネイティブ コンパイル ストアド プロシージャの呼び出しは、次のとおりです。  
   
-1.  ユーザーは、 **EXEC**_usp_myproc_ ステートメントを実行します。  
+1.  ユーザーは、**EXEC** _usp_myproc_ ステートメントを実行します。  
   
 2.  パーサーは、名前とストアド プロシージャのパラメーターを抽出します。  
   
@@ -241,10 +240,10 @@ END
   
  解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャは最初の実行時にコンパイルされますが、ネイティブ コンパイル ストアド プロシージャは作成時にコンパイルされます。 解釈されたストアド プロシージャが呼び出し時にコンパイルされる場合、この呼び出しに指定されたパラメーターの値が、実行プランの生成時にオプティマイザーによって使用されます。 コンパイル時にパラメーターをこのように使用することを、"パラメーターを見つけ出す" と表現します。  
   
- パラメーターを見つけ出すことは、ネイティブ コンパイル ストアド プロシージャのコンパイルには使用されません。 ストアド プロシージャに対するすべてのパラメーターは、UNKNOWN 値があると見なされます。 解釈されたストアド プロシージャと同様に、ネイティブ コンパイル ストアド プロシージャでも、**OPTIMIZE FOR** ヒントがサポートされます。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
+ パラメーターを見つけ出すことは、ネイティブ コンパイル ストアド プロシージャのコンパイルには使用されません。 ストアド プロシージャに対するすべてのパラメーターは、UNKNOWN 値があると見なされます。 解釈されたストアド プロシージャと同様に、ネイティブ コンパイル ストアド プロシージャでも、 **OPTIMIZE FOR** ヒントがサポートされます。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランの取得  
- ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **推定実行プラン** または [!INCLUDE[tsql](../../includes/tsql-md.md)]の SHOWPLAN_XML オプションを使用して取得できます。 例:  
+ ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **推定実行プラン** または [!INCLUDE[tsql](../../includes/tsql-md.md)]の SHOWPLAN_XML オプションを使用して取得できます。 次に例を示します。  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -260,7 +259,7 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのクエリ演算子  
  次の表は、ネイティブ コンパイル ストアド プロシージャの内部でサポートされるクエリ演算子をまとめたものです。  
   
-|演算子|サンプル クエリ|注|  
+|演算子|サンプル クエリ|Notes|  
 |--------------|------------------|-----------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  

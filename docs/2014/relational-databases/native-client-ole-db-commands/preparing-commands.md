@@ -1,5 +1,5 @@
 ---
-title: コマンドの準備 |Microsoft Docs
+title: コマンドの準備 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - commands [OLE DB]
 - command preparation [SQL Server Native Client]
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fa927574dad6b6f811a6fbc8ad5496b0ff098b68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865022"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056389"
 ---
 # <a name="preparing-commands"></a>コマンドの準備
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、1 つのコマンドを最適化された状態で複数回実行できるように、コマンドを準備できます。ただし、コマンドを準備することでオーバーヘッドが生じるので、コンシューマーではコマンドを 2 回程度実行する場合は準備する必要はありません。 一般的には、コマンドを 4 回以上実行する場合に準備します。  
@@ -52,6 +51,6 @@ ms.locfileid: "62865022"
  コマンド オブジェクトは、最大で 1 つだけ一時ストアド プロシージャを **tempdb** に保持します。 既存の一時ストアド プロシージャは、特定のコマンド オブジェクトに関する現在のコマンド テキストを表します。  
   
 ## <a name="see-also"></a>参照  
- [[コマンド]](commands.md)  
+ [コマンド](commands.md)  
   
   

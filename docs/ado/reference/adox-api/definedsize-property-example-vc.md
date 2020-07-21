@@ -1,5 +1,5 @@
 ---
-title: DefinedSize プロパティの例 (vc++) |Microsoft Docs
+title: "\"持つサイズ\" プロパティの例 (VC + +) |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4c6930cd849ca7d0dd8b8905d52fd8355a38b66a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9cafc18fb00a0adeb6d219d901ea40ca79510be5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966460"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759178"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize プロパティの例 (VC++)
-この例では、 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)のプロパティを[列](../../../ado/reference/adox-api/column-object-adox.md)します。 コードが FirstName 列のサイズを再定義、**従業員**のテーブル、 *Northwind*データベース。 FirstName の値に変更し、[フィールド](../../../ado/reference/ado-api/field-object.md)の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)に基づいて、**従業員**テーブルが表示されます。 既定では、FirstName フィールドが空白で埋められます再定義した後に注意してください、 **DefinedSize**プロパティ。  
+この例では、[列](../../../ado/reference/adox-api/column-object-adox.md)の "値の[サイズ](../../../ado/reference/adox-api/definedsize-property-adox.md)" プロパティを示します。 コードによって、 *Northwind*データベースの**Employees**テーブルの FirstName 列のサイズが再定義されます。 次に、 **Employees**テーブルに基づいて[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の FirstName[フィールド](../../../ado/reference/ado-api/field-object.md)の値が変更されます。 既定では、"定義された**サイズ**" プロパティを再定義した後、[FirstName] フィールドに空白が埋め込まれていることに注意してください。  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -149,7 +149,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in DefinedSizeX...." << endl;  
+      cout << "Error occurred in DefinedSizeX...." << endl;  
    }  
   
    if (m_pRstEmployees)  
@@ -162,6 +162,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+## <a name="see-also"></a>参照  
+ [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize プロパティ (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

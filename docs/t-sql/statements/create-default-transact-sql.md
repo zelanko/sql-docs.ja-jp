@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 361963d6836cb4c4b89c62f8ca1481b292bc803e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902847"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392760"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 デフォルトと呼ばれるオブジェクトを作成します。 列または別名データ型にバインドすると、オブジェクトがバインドされる列 (別名データ型の場合はすべての列) で、挿入時に値が明示的に指定されない場合は、デフォルトによってそれらに挿入される値が指定されます。  
   
@@ -40,13 +40,15 @@ ms.locfileid: "67902847"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE DEFAULT [ schema_name . ] default_name   
 AS constant_expression [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 *schema_name*  
  デフォルトが所属するスキーマの名前を指定します。  
   
@@ -56,7 +58,7 @@ AS constant_expression [ ; ]
 *constant_expression*  
 定数値のみを含む[式](../../t-sql/language-elements/expressions-transact-sql.md) (列名や他のデータベース オブジェクト名を含めることはできません)。 任意の定数、組み込み関数、または数式を使用できます。別名データ型を含むものは使用できません。 ユーザー定義関数は使用できません。 文字および日付定数は単一引用符 ( **'** ) で囲んでください。金額、整数、および浮動小数点定数には引用符は必要ありません。 バイナリ データの前には 0x を付ける必要があり、通貨データの前にはドル記号 ($) を付ける必要があります。 既定値は、列のデータ型と互換性がある必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  デフォルト名は現在のデータベース内にのみ作成できます。 データベース内で、既定の名前はスキーマにより一意である必要があります。 デフォルトを作成したら、**sp_bindefault** を使用してデフォルトを列または別名データ型にバインドします。  
   
  デフォルトとバインド先の列に互換性がない場合、既定値の挿入を試みると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラー メッセージが生成されます。 たとえば、**numeric** 型の列のデフォルトとして N/A を使用することはできません。  
@@ -80,14 +82,14 @@ AS constant_expression [ ; ]
 |列の定義|入力なし、既定値なし|入力なし、デフォルトあり|NULL を入力、デフォルトなし|NULL を入力、既定値あり|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
 |**NULL**|NULL|既定値 (default)|NULL|NULL|  
-|**NOT NULL**|Error|既定値 (default)|error|error|  
+|**NOT NULL**|エラー|既定値 (default)|error|error|  
   
  デフォルトの名前を変更するには、**sp_rename** を使用します。 デフォルトに関するレポートを表示するには、**sp_help** を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  CREATE DEFAULT を実行するには、ユーザーは少なくとも現在のデータベース内では CREATE DEFAULT 権限を、デフォルトが作成されるスキーマに対しては ALTER 権限を持っている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-simple-character-default"></a>A. シンプルな文字の既定値を作成する  
  次の例では、"`unknown`" という文字のデフォルトを作成します。  
@@ -99,7 +101,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
 ```  
   
 ### <a name="b-binding-a-default"></a>B. 既定値をバインドする  
- 次の例では、例 A で作成したデフォルトをバインドします。デフォルトが有効になるのは、`Contact` テーブルの `Phone` 列にエントリが指定されていない場合のみです。 
+ 次の例では、例 A で作成したデフォルトをバインドします。デフォルトが有効になるのは、`Phone` テーブルの `Contact` 列にエントリが指定されていない場合のみです。 
  
  > [!Note] 
  >  任意のエントリを省略することは、INSERT ステートメントで NULL を明示的に示すこととは異なります。  

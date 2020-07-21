@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89f02cfd7ab2116528adb82d6e98023c912c6437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 453a34eb45010daecf635e941b61181f0f627c55
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62868665"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551684"
 ---
-# <a name="mssqlserver33028"></a>MSSQLSERVER_33028
+# <a name="mssqlserver_33028"></a>MSSQLSERVER_33028
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|33028|  
@@ -41,7 +40,7 @@ ms.locfileid: "62868665"
 |1|失敗しました。 未定義のエラーまたは予期しないエラーが発生しました。 追加情報は入手できません。|  
 |2|バッファーが不足しています。 暗号化サービス プロバイダー用の領域を割り当てることができませんでした。|  
 |3|サポートされていません。 問題となる暗号化サービス プロバイダーが、このリリースではサポートされていません。 別の暗号化サービス プロバイダーを選択してください。|  
-|4|検出されませんでした。 指定した暗号化サービス プロバイダーが存在しないか、ファイルにアクセスする承認を得ていません。|  
+|4|Not Found. (見つかりませんでした。) 指定した暗号化サービス プロバイダーが存在しないか、ファイルにアクセスする承認を得ていません。|  
 |5|承認エラーです。 資格情報の作成時に指定したパスワードまたはユーザー名が正しくないか、 資格情報が存在しない可能性があります。|  
 |6|引数が無効です。 暗号化サービス プロバイダーに無効な引数が渡されました。|  
   

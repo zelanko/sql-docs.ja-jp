@@ -1,5 +1,5 @@
 ---
-title: sp_droptype (TRANSACT-SQL) |Microsoft Docs
+title: sp_droptype (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_droptype
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 13ef625d778fe20aa5d33b2958c90aa8cd5a2a8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6417edeacfd9462e5619e2844d4a162976d038b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783762"
 ---
-# <a name="spdroptype-transact-sql"></a>sp_droptype (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_droptype-transact-sql"></a>sp_droptype (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  別名データ型からの削除**systypes**します。  
+  **Systypes**から別名データ型を削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,25 +39,25 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @typename = ] 'type'` 所有している別名データ型の名前です。 *型*は**sysname**、既定値はありません。  
+`[ @typename = ] 'type'`所有する別名データ型の名前を指定します。 *種類*は**sysname**で、既定値はありません。  
   
-## <a name="return-code-type"></a>リターン コードの種類  
+## <a name="return-code-type"></a>リターンコードの種類  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- **型**エイリアス テーブルやその他のデータベース オブジェクトが参照している場合のデータ型を削除することはできません。  
+## <a name="remarks"></a>解説  
+ テーブルまたは他のデータベースオブジェクトが参照している場合、**型**の別名データ型を削除することはできません。  
   
 > [!NOTE]  
->  別名データ型は、テーブル定義内で使用されている場合、またはをルールまたはデフォルトがバインドされている場合、別名データ型を削除できません。  
+>  別名データ型がテーブル定義内で使用されている場合、またはルールまたは既定値がバインドされている場合、別名データ型を削除することはできません。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロール。  
+ **Db_owner**固定データベースロールまたは**db_ddladmin**固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、別名データ型を削除する`birthday`します。  
+ 次の例では、別名データ型を削除し `birthday` ます。  
   
 > [!NOTE]  
 >  この別名データ型は存在している必要があります。存在しない場合、この例ではエラー メッセージが返されます。  
@@ -70,8 +70,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addtype &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_addtype &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

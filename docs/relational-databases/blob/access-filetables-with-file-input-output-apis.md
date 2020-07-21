@@ -1,5 +1,6 @@
 ---
 title: ファイル I/O API を使用した FileTable へのアクセス | Microsoft Docs
+description: FileTable でファイル I/O API を使用する方法を確認し、FileTable と互換性のあるファイル システム操作について説明します。
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,27 +13,25 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: de6b89d8c561df851b3cbc8696283f1ed95489f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d73f6f8e993784def2dd9325933778e2048d5eae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041198"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744697"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>ファイル I/O API を使用した FileTable へのアクセス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FileTable でファイル システム I/O が動作するしくみについて説明します。  
   
-##  <a name="accessing"></a> FileTable でのファイル I/O API の使用  
+##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> FileTable でのファイル I/O API の使用  
  FileTable を使用する際、多くの場合は Windows ファイル システムとファイル I/O API が利用されます。 FileTable は、さまざまなファイル I/O API を利用した非トランザクション アクセスをサポートしています。  
   
 1.  一般的に、ファイル I/O API は、ファイルまたはディレクトリの論理 UNC パスを取得することによって起動されます。 アプリケーションは、[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 関数を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、ファイルまたはディレクトリの論理パスを取得できます。 詳しくは、「 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)」をご覧ください。  
   
 2.  次に、この論理パスを使用して、ファイルまたはディレクトリに対するハンドルを取得し、オブジェクトを操作します。 CreateFile()、CreateDirectory() など、サポート対象のファイル システム API 関数にパスを渡して、ファイルを作成したり、開いたり、ハンドルを取得したりできます。 そのハンドルを使用することで、データのストリーミング、ディレクトリの列挙と編成、ファイル属性の取得と設定、ファイルまたはディレクトリの削除などの操作を実行できます。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="create"></a> FileTable でのファイルおよびディレクトリの作成  
+##  <a name="creating-files-and-directories-in-a-filetable"></a><a name="create"></a> FileTable でのファイルおよびディレクトリの作成  
  ファイル I/O API (CreateFile、CreateDirectory など) を呼び出すことで、FileTable にファイルまたはディレクトリを作成できます。  
   
 -   すべての CREATION_DISPOSITION フラグ、共有モード、およびアクセス モードがサポートされています。 これには、ファイルの作成、削除、およびインプレース変更が含まれます。 さらに、ディレクトリの作成と削除、名前の変更、移動の操作など、ファイル名前空間の更新もサポートされています。  
@@ -45,10 +44,10 @@ ms.locfileid: "68041198"
   
 -   複数のファイル I/O 操作または [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作が同時に行われ、その影響が階層内の同じファイルまたはディレクトリに及ぶ場合、アクセスの共有とコンカレンシーが適用されます。  
   
-##  <a name="read"></a> FileTable 内のファイルおよびディレクトリの読み取り  
+##  <a name="reading-files-and-directories-in-a-filetable"></a><a name="read"></a> FileTable 内のファイルおよびディレクトリの読み取り  
  ストリームおよび属性データに対するすべてのファイル I/O アクセス操作に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Read Committed 分離セマンティクスが適用されます。  
   
-##  <a name="write"></a> FileTable 内のファイルおよびディレクトリへの書き込みおよび更新  
+##  <a name="writing-and-updating-files-and-directories-in-a-filetable"></a><a name="write"></a> FileTable 内のファイルおよびディレクトリへの書き込みおよび更新  
   
 -   FileTable に対するファイル I/O 書き込み操作または更新操作は、すべて非トランザクションです。 つまり、これらの操作にバインドされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションは存在せず、ACID 保証はありません。  
   
@@ -56,14 +55,14 @@ ms.locfileid: "68041198"
   
 -   ファイル I/O API を介して FILESTREAM のデータまたは属性を更新すると、FileTable 内の対応する **file_stream** および対応するファイル属性列が更新されます。  
   
-##  <a name="delete"></a> FileTable 内のファイルおよびディレクトリの削除  
+##  <a name="deleting-files-and-directories-in-a-filetable"></a><a name="delete"></a> FileTable 内のファイルおよびディレクトリの削除  
  ファイルまたはディレクトリを削除すると、Windows ファイル I/O API のすべてのセマンティクスが適用されます。  
   
 -   ディレクトリにファイルまたはサブディレクトリが含まれる場合、そのディレクトリの削除は失敗します。  
   
 -   ファイルまたはディレクトリを削除すると、対応する行が FileTable から削除されます。 これは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作を介して行を削除することと同じです。  
   
-##  <a name="supported"></a> サポートされているファイル システム操作  
+##  <a name="supported-file-system-operations"></a><a name="supported"></a> サポートされているファイル システム操作  
  FileTable は、以下のファイル システム操作に関連するファイル システム API をサポートしています。  
   
 -   ディレクトリ管理  
@@ -78,15 +77,15 @@ ms.locfileid: "68041198"
   
 -   トランザクション NTFS  
   
-##  <a name="considerations"></a> FileTable へのファイル I/O アクセスに関するその他の注意点  
+##  <a name="additional-considerations-for-file-io-access-to-filetables"></a><a name="considerations"></a> FileTable へのファイル I/O アクセスに関するその他の注意点  
   
-###  <a name="vnn"></a> Always On 可用性グループでの仮想ネットワーク名 (VNN) の使用  
+###  <a name="using-virtual-network-names-vnns-with-always-on-availability-groups"></a><a name="vnn"></a> Always On 可用性グループでの仮想ネットワーク名 (VNN) の使用  
  FILESTREAM データまたは FileTable データを格納するデータベースが Always On 可用性グループに属する場合、ファイル システム API を介した FILESTREAM データまたは FileTable データへのすべてのアクセスではコンピューター名ではなく仮想ネットワーク名 (VNN) を使用する必要があります。 詳細については、「[FILESTREAM および FileTable と AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)」を参照してください。  
   
-###  <a name="partial"></a> 部分更新  
+###  <a name="partial-updates"></a><a name="partial"></a> 部分更新  
  FileTable 内の FILESTREAM データ用に [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 関数を使用して取得された書き込み可能なハンドルは、FILESTREAM コンテンツのインプレース部分更新を実行するために使用できます。 この操作は、トランザクション FILESTREAM アクセスとは異なります。トランザクション FILESTREAM アクセスでは、 **OpenSQLFILESTREAM()** を呼び出して明示的なトランザクション コンテキストを渡すことによって取得されたハンドルが使用されます。  
   
-###  <a name="trans"></a> トランザクション セマンティクス  
+###  <a name="transactional-semantics"></a><a name="trans"></a> トランザクション セマンティクス  
  ファイル I/O API を使用して FileTable 内のファイルにアクセスする場合、このような操作はユーザー トランザクションと関連付けされず、次のような特徴を持ちます。  
   
 -   FileTable 内の FILESTREAM データの非トランザクション アクセスは、いずれのトランザクションにも関連付けられていないため、特定の分離セマンティクスがありません。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では内部トランザクションを使用して、FileTable データに対してロックまたはコンカレンシーのセマンティクスを適用することができます。 このタイプの内部トランザクションは、すべて READ COMMITTED 分離によって実行されます。  
@@ -97,15 +96,15 @@ ms.locfileid: "68041198"
   
  ただし、FileTable 内の FILESTREAM 列は、 **OpenSqlFileStream()** の呼び出しによるトランザクション FILESTREAM アクセスによって、アクセスすることもできます。 この種のアクセスは完全にトランザクション アクセスであり、現在サポートされている全レベルのトランザクション一貫性を保持します。  
   
-###  <a name="concurrency"></a> コンカレンシー制御  
+###  <a name="concurrency-control"></a><a name="concurrency"></a> コンカレンシー制御  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ファイル システム アプリケーション間の FileTable アクセス、およびファイル システム アプリケーションと [!INCLUDE[tsql](../../includes/tsql-md.md)] アプリケーション間の FileTable アクセスに対して、コンカレンシー制御が適用されます。 このコンカレンシー制御は、FileTable の行に適切なロックを設定することによって実現されます。  
   
-###  <a name="triggers"></a> トリガー  
+###  <a name="triggers"></a><a name="triggers"></a> トリガー  
  ファイル システムを利用して、ファイルまたはディレクトリ、あるいはその属性の作成、変更、または削除を行うと、FileTable 内で対応する挿入操作、更新操作、または削除操作が実行されます。 そのような操作の中で、関連する [!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガーが起動されます。  
   
-##  <a name="funclist"></a> FileTable でサポートされているファイル システム機能  
+##  <a name="file-system-functionality-supported-in-filetables"></a><a name="funclist"></a> FileTable でサポートされているファイル システム機能  
   
-|機能|Supported|コメント|  
+|機能|サポートされています|説明|  
 |----------------|---------------|--------------|  
 |**oplock**|はい|レベル 2、レベル 1、バッチ、およびフィルターの各 oplock がサポートされます。|  
 |**拡張属性**|いいえ||  
@@ -125,7 +124,7 @@ ms.locfileid: "68041198"
 |**バイト範囲ロック**|はい|バイト範囲ロックの要求は、NTFS ファイル システムに渡されます。|  
 |**メモリ マップ ファイル**|いいえ||  
 |**キャンセル I/O**|はい||  
-|**セキュリティ**|いいえ|Windows 共有レベルのセキュリティと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルおよび列レベルのセキュリティが適用されます。|  
+|**Security**|いいえ|Windows 共有レベルのセキュリティと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルおよび列レベルのセキュリティが適用されます。|  
 |**USN ジャーナル**|いいえ|FileTable 内のファイルおよびディレクトリに対するメタデータの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの DML 操作です。 したがって、これらの操作は対応するデータベース ログ ファイルに記録されます。 ただし、(サイズの変更を除き) NTFS USN ジャーナルには記録されません。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変更の追跡機能を使用して、同様の情報をキャプチャします。|  
   
 ## <a name="see-also"></a>参照  

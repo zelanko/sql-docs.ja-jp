@@ -1,9 +1,14 @@
 ---
-ms.openlocfilehash: 241d2ef94d5d6d1510d0c9f766a89c45b7b3934d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+author: MikeRayMSFT
+ms.service: sql
+ms.topic: include
+ms.date: 01/13/2020
+ms.author: mikeray
+ms.openlocfilehash: a7dded72cae07614ffc1d31bd1b3058b813faa34
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215115"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80502089"
 ---
-<Token>**このトピックの適用対象:** ![○](media/yes.png)SQL Server、Linux のみ) ![X](media/no.png)Azure SQL Database![X](media/no.png)Azure SQL Data Warehouse ![X](media/no.png)Parallel Data Warehouse </Token>
+<Token>**このトピックの適用対象:** ![○](media/yes-icon.png)SQL Server 2019 以降 (Linux のみ) ![×](media/no-icon.png)Azure SQL Database![×](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![×](media/no-icon.png)Parallel Data Warehouse </Token>

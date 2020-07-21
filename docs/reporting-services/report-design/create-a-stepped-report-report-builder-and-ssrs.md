@@ -1,5 +1,5 @@
 ---
-title: 階段状レポートの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 階段状レポートの作成 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: dca297ff55b9bd845e6fcb8379dcb7cc7147d32e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581536"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080611"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>階段状レポートの作成 (レポート ビルダーおよび SSRS)
 階段状レポートは  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートで、次の例に示すように、親グループとその下でインデントされた詳細行または子グループが、同じ列内に表示されます。  
@@ -70,7 +70,7 @@ ms.locfileid: "65581536"
         |-|-|  
         |**in**|インチ (1 インチ = 2.54 cm)|  
         |**cm**|センチメートル|  
-        |**mm**|ミリメートル|  
+        |**mm**|mm|  
         |**pt**|ポイント (1 ポイント = 1/72 インチ)|  
         |**pc**|パイカ (1 パイカ = 12 ポイント)|  
   

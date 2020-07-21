@@ -1,5 +1,6 @@
 ---
 title: Audit Login イベント クラス | Microsoft Docs
+description: Audit Login イベント クラスは、ユーザーが Microsoft SQL Server に正常にログインしたことを示します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47f7ec984eed0ae86d031aa18a52c91a94f41a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 908120d252bbaa499e94eab4e0dd74819f42735f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629937"
 ---
 # <a name="audit-login-event-class"></a>Audit Login イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  **Audit Login** イベント クラスは、ユーザーが正常に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にログインしたことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+  **Audit Login** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に正常にログインしたことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。  
   
 ## <a name="audit-login-event-class-data-columns"></a>Audit Login イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BinaryData**|**image**|ANSI NULL、ANSI PADDING、cursor close on commit、NULL 連続、引用符で囲まれた識別子などの、セッション レベルの設定。|2|はい|  
@@ -47,7 +48,7 @@ ms.locfileid: "67897540"
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|**成功**|**int**|1 = 成功。 0 = 失敗。 このイベントでは、常に成功 (1) が表示されます。|23|はい|  
+|**Success**|**int**|1 = 成功。 0 = 失敗。 このイベントでは、常に成功 (1) が表示されます。|23|はい|  
 |**TextData**|**ntext**|設定されるすべてのオプションをセミコロンで区切ったリスト。|1|はい|  
 |**GroupID**|**int**|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
   

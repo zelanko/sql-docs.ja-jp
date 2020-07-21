@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 07/16/2019
-ms.openlocfilehash: cd8f8e05e9be4bcd7a48c5e2fb800c2ebbc9e308
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.date: 12/11/2019
+ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329272"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75244400"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>ネットワーク負荷分散クラスターにおけるレポート サーバーの構成
 
@@ -30,7 +30,7 @@ ms.locfileid: "68329272"
 
  配置をインストールして構成するには、次のガイドラインに従ってください。  
   
-|手順|[説明]|詳細情報|  
+|手順|説明|詳細情報|  
 |----------|-----------------|----------------------|  
 |1|NLB クラスター内のサーバー ノードに Reporting Services をインストールする前に、スケールアウト配置の要件を確認します。|[ネイティブ モード レポート サーバーのスケールアウト配置の構成](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|NLB クラスターを構成し、正常に動作することを確認します。<br /><br /> 必ずホスト ヘッダー名を NLB クラスターの仮想サーバー IP にマップしてください。 ホスト ヘッダー名は、レポート サーバーの URL で使用されます。IP アドレスに比べて容易に記憶でき、入力も簡単です。|詳細については、実行する Windows オペレーティング システムのバージョンの Windows Server の製品マニュアルを参照してください。|  
@@ -40,7 +40,7 @@ ms.locfileid: "68329272"
 |6|NLB クラスターの仮想サーバー IP を使用するように **Hostname** と **UrlRoot** を構成します。|このトピックの「[Hostname と UrlRoot を構成する方法](#SpecifyingVirtualServerName) 」|  
 |7|指定したホスト名でサーバーにアクセスできることを確認します。|このトピックの「[レポート サーバーへのアクセスの確認](#Verify) 」|  
   
-## <a name="ViewState"></a> ビュー ステート検証を構成する方法
+## <a name="how-to-configure-view-state-validation"></a><a name="ViewState"></a> ビュー ステート検証を構成する方法
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 NLB クラスターでスケールアウト配置を運用するには、ユーザーが対話型の HTML レポートを表示できるように、ビュー ステート検証を構成する必要があります。  これは、Report Server Web Service のために実行する必要があります。
@@ -56,21 +56,21 @@ NLB クラスターでスケールアウト配置を運用するには、ユー�
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]により提供される自動生成機能を使用して、検証キーと暗号化解除キーを生成します。 最終的に、スケールアウト配置内の各 Report Server インスタンスの Web.config ファイルに貼り付けることができる単一の <`MachineKey`> エントリが必要です。  
+1. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]により提供される自動生成機能を使用して、検証キーと暗号化解除キーを生成します。 最終的に、スケールアウト配置内の各 Report Server インスタンスの Web.config ファイルに貼り付けることができる単一の <`machineKey`> エントリが必要です。  
   
     次の例は、取得する必要がある値を示しています。 例を構成ファイルにコピーしないでください。このキーの値は有効ではありません。  
   
     ```xml
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Report Server 用の Web.config ファイルを開き、生成した <`MachineKey`> 要素を <`system.web`> セクションに貼り付けます。 既定では、レポート マネージャーの Web.config ファイルは、\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config にあります。  
+2. Report Server 用の Web.config ファイルを開き、生成した <`machineKey`> 要素を <`system.web`> セクションに貼り付けます。 既定では、レポート マネージャーの Web.config ファイルは、\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config にあります。  
   
 3. ファイルを保存します。  
   
 4. スケールアウト配置内の各レポート サーバーに対し、前の手順を繰り返します。  
   
-5. \Reporting Services\Reportserver フォルダーにあるすべての Web.Config ファイルの <`system.web`> セクションに同一の <`MachineKey`> 要素が含まれていることを確認します。  
+5. \Reporting Services\Reportserver フォルダーにあるすべての Web.Config ファイルの <`system.web`> セクションに同一の <`machineKey`> 要素が含まれていることを確認します。  
 
 ::: moniker-end
 
@@ -92,7 +92,7 @@ NLB クラスターでスケールアウト配置を運用するには、ユー�
 
 ::: moniker-end
 
-## <a name="SpecifyingVirtualServerName"></a> Hostname と UrlRoot を構成する方法
+## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> Hostname と UrlRoot を構成する方法
 
  NLB クラスターでレポート サーバー スケールアウト配置を構成するには、サーバー クラスターへの単一のアクセス ポイントとして 1 つの仮想サーバー名を定義する必要があります。 次に、この仮想サーバー名を使用環境のドメイン ネーム サーバー (DNS) に登録します。  
   
@@ -122,7 +122,7 @@ NLB クラスターでスケールアウト配置を運用するには、ユー�
   
 6. スケールアウト配置内の各レポート サーバーの RSReportServer.config ファイルごとに、これらの手順を繰り返します。  
   
-## <a name="Verify"></a> レポート サーバーへのアクセスの確認
+## <a name="verify-report-server-access"></a><a name="Verify"></a> レポート サーバーへのアクセスの確認
 
  仮想サーバー名 (`https://MyVirtualServerName/reportserver` や `https://MyVirtualServerName/reports` など) を使用してスケールアウト配置にアクセスできることを確認します。  
   

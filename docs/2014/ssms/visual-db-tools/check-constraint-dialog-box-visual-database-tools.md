@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7244984b869a1c68e597984a1cd03e16e53d0306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63067458"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066245"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>[制約のチェック] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスは、テーブル デザイナーのテーブル定義グリッドを右クリックし、 **[制約のチェック]** をクリックすると表示されます。 このダイアログ ボックスには、データベースのテーブルに関連付けられた、一意でない制約のプロパティ セットが含まれています。 UNIQUE 制約に適用されるプロパティは、 **[インデックス/キー]** ダイアログ ボックスに表示されます。  
@@ -25,11 +24,11 @@ ms.locfileid: "63067458"
 > [!NOTE]  
 >  テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[選択された制約のチェック]**  
  使用できる CHECK 制約を一覧表示します。 制約のプロパティを表示するには、一覧の中から選択します。  
   
- **[追加]**  
+ **追加**  
  選択したデータベース テーブルの制約を新しく作成し、その制約に既定の名前と他の値を割り当てます。 制約は、その制約用の式を入力するまで、有効にできません。  
   
  **削除**  
@@ -44,10 +43,10 @@ ms.locfileid: "63067458"
  **[IDENTITY] カテゴリ**  
  展開して **[名前]** と **[説明]** のプロパティを表示します。  
   
- **[名前]**  
+ **Name**  
  選択した CHECK 制約の名前を表示します。 この制約の名前を変更するには、プロパティ フィールドに直接テキストを入力します。  
   
- **[説明]**  
+ **説明**  
  この CHECK 制約の説明を記述します。 プロパティ フィールドに入力することで説明を編集できます。またプロパティ フィールドの右側に表示されている省略記号ボタン ( **[...]** ) をクリックすると、 **[説明のプロパティ]** ダイアログ ボックスで説明を編集できます。  
   
  **[テーブル デザイナー] カテゴリ**  
@@ -64,6 +63,6 @@ ms.locfileid: "63067458"
   
 ## <a name="see-also"></a>参照  
  [Unique 制約と Check 制約](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
- [インデックスを作成し、[キー] ダイアログ ボックス&#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [[インデックスとキー] ダイアログボックス &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

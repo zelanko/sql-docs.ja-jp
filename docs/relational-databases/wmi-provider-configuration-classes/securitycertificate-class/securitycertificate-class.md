@@ -1,5 +1,5 @@
 ---
-title: SecurityCertificate クラス |Microsoft Docs
+title: SecurityCertificate クラス
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 202e91d9fee69ddc74edbd352a7d018151f70a14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2153724ef3e8a7ea31c2b99c344c6f824318a982
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058561"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888807"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [SecurityCertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)セキュリティ証明書を表します。 証明書の公開キーの値のインスタンスにバインドするデジタル署名されたステートメントは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、対応する秘密キーが格納されます。 証明書は証明機関から発行されます。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [Securitycertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)は、セキュリティ証明書を表します。 証明書は、公開キーの値を、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 対応する秘密キーを保持するのインスタンスにバインドする、デジタル署名されたステートメントです [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 証明書は証明機関から発行されます。  
   
- [SecurityCertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)、次のタスクを実行することができます。  
+ [Securitycertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)を使用すると、次のタスクを実行できます。  
   
 -   セキュリティ証明書のプロパティの表示  
   

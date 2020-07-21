@@ -10,17 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014464"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882567"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 可用性グループで読み取りスケールを使用する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-可用性グループは、SQL Server で高可用性機能を実現するだけではなく、統合されたスケーリング ソリューションも提供する、包括的なソリューションです。 一般的なデータベース アプリケーションでは、複数のクライアントがさまざまな種類のワークロードを実行します。 リソースの制約のために、ボトルネックが発生することもあります。 リソースを解放すると、OLTP ワークロードのために、より高いスループットを達成することができます。 また、読み取り専用ワークロードで、より優れたパフォーマンスとスケールを実現することもできます。 SQL Server の高速レプリケーション技術を活用し、複製されたデータベースのグループを作成し、レポートと分析のワークロードを読み取り専用レプリカに移します。
+可用性グループは、SQL Server で高可用性機能を実現するだけではなく、統合されたスケーリング ソリューションも提供する、包括的なソリューションです。 一般的なデータベース アプリケーションでは、複数のクライアントがさまざまな種類のワークロードを実行します。 リソースの制約のために、ボトルネックが発生することもあります。 
+
+可用性グループにおいては、読み取りスケールによって読み取りワークロードがセカンダリ レプリカに移されます。 リソースを解放すると、OLTP ワークロードのために、より高いスループットを達成することができます。 また、読み取り専用ワークロードで、より優れたパフォーマンスとスケールを実現することもできます。 SQL Server の高速レプリケーション技術を活用し、複製されたデータベースのグループを作成し、レポートと分析のワークロードを読み取り専用レプリカに移します。
 
 可用性グループによって、セカンダリ データベースに読み取り専用アクセスができるように 1 つまたは複数のセカンダリ レプリカを構成できます。
 
@@ -46,7 +48,7 @@ ms.locfileid: "68014464"
 
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Linux で読み取りスケール可用性グループを構成する](../../../linux/sql-server-linux-availability-group-configure-rs.md)
 

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b77aaffe4e6f0f0163978ba346abdd31cdc61ce8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2822c1390b7807c60eecfad1d4ba41eaa232b16a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897308"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437119"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (SSIS 式)
   数値式の符号として正 (+1)、負 (-1)、0 のいずれかを返します。  
@@ -38,7 +37,7 @@ SIGN(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、SIGN は NULL を返します。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -54,7 +53,7 @@ SIGN(-123.45)
 SIGN(DealerPrice - StandardCost)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

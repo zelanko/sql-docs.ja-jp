@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 571f6f3a0d44f0fc87c67885249fca441776946d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055573"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>ディストリビューターとパブリッシャーのプロパティの表示および変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、ディストリビューターとパブリッシャーのプロパティを表示および変更する方法について説明します。  
@@ -29,7 +28,7 @@ ms.locfileid: "68212028"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
      [Security](#Security)  
   
@@ -41,16 +40,16 @@ ms.locfileid: "68212028"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]より前のバージョンのパブリッシャーでは、固定サーバー ロール **sysadmin** のユーザーが、 **[サブスクライバー]** ページでサブスクライバーを登録できます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、サブスクライバーをレプリケーションに明示的に登録する必要はありません。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンのパブリッシャーでは、固定サーバー ロール **sysadmin** のユーザーが、**[サブスクライバー]** ページでサブスクライバーを登録できます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、サブスクライバーをレプリケーションに明示的に登録する必要はありません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>ディストリビューターのプロパティを表示および変更するには  
   
@@ -58,13 +57,13 @@ ms.locfileid: "68212028"
   
 2.  **[レプリケーション]** フォルダーを右クリックし、 **[ディストリビューターのプロパティ]** をクリックします。  
   
-3.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスで、プロパティを表示および変更します。  
+3.  [**ディストリビューターのプロパティ- \<Distributor> ** ] ダイアログボックスでプロパティを表示および変更します。  
   
-    -   ディストリビューション データベースのプロパティを表示および変更するには、ダイアログ ボックスの **[全般]** ページにあるデータベースのプロパティ ボタン ( **[...]** ) をクリックします。  
+    -   ディストリビューション データベースのプロパティを表示および変更するには、ダイアログ ボックスの **[全般]** ページにあるデータベースのプロパティ ボタン (**[...]**) をクリックします。  
   
     -   ディストリビューターと関連付けられたパブリッシャーのプロパティを表示および変更するには、ダイアログ ボックスの **[パブリッシャー]** ページでパブリッシャーのプロパティ ボタン ( **[...]** ) をクリックします。  
   
-    -   レプリケーション エージェントのプロファイルにアクセスするには、ダイアログ ボックスの **[全般]** ページの **[プロファイルの既定値]** をクリックします。 詳しくは、「 [Replication Agent Profiles](agents/replication-agent-profiles.md)」をご覧ください。  
+    -   レプリケーション エージェントのプロファイルにアクセスするには、ダイアログ ボックスの **[全般]** ページの **[プロファイルの既定値]** をクリックします。 詳しくは、「 [レプリケーション エージェント プロファイル](agents/replication-agent-profiles.md)」をご覧ください。  
   
     -   パブリッシャーで管理用のストアド プロシージャを実行したり、ディストリビューターで情報を更新したりするときに使用するアカウントのパスワードを変更するには、ダイアログ ボックスの **[パブリッシャー]** ページで **[パスワード]** ボックスおよび **[パスワードの確認入力]** ボックスに新しいパスワードを入力します。 詳細については、「[ディストリビューターのセキュリティ保護](security/secure-the-distributor.md)」を参照してください。  
   
@@ -76,13 +75,13 @@ ms.locfileid: "68212028"
   
 2.  **[レプリケーション]** フォルダーを右クリックし、 **[パブリッシャーのプロパティ]** をクリックします。  
   
-3.  プロパティの表示および変更、**パブリッシャーのプロパティ -\<パブリッシャー >**  ダイアログ ボックス。  
+3.  [**パブリッシャーのプロパティ- \< Publisher > ** ] ダイアログボックスでプロパティを表示および変更します。  
   
     -   固定サーバー ロール **sysadmin** のユーザーは、 **[パブリケーション データベース]** のページでデータベースのレプリケーションを有効化できます。 データベースを有効化しても、そのデータベースがパブリッシュされるわけではありません。固定データベース ロール **db_owner** の任意のユーザーが、1 つ以上のパブリケーションをデータベースに作成できるようになります。  
   
 4.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  パブリッシャーとディストリビューターのプロパティは、プログラムからレプリケーション ストアド プロシージャを使用して表示できます。  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>ディストリビューターとディストリビューション データベースのプロパティを表示するには  
@@ -104,7 +103,7 @@ ms.locfileid: "68212028"
   
 4.  ディストリビューターを使用しているパブリッシャーのプロパティを変更するには、ディストリビューターで [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) を実行します。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトによってディストリビューターおよびディストリビューション データベースに関する情報を返します。  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
@@ -122,7 +121,7 @@ ms.locfileid: "68212028"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributor_password)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>ディストリビューターのプロパティを表示および変更するには  
   
@@ -173,7 +172,7 @@ ms.locfileid: "68212028"
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> メソッドを呼び出します。 新しいパスワード値を *password* パラメーターに渡します。  
   
     > [!IMPORTANT]  
-    >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+    >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework によって提供される[暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733)を使用し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
 6.  (省略可) このディストリビューターを使用している各リモート パブリッシャーでパスワードを変更するには、次の手順に従います。  
   
@@ -187,7 +186,7 @@ ms.locfileid: "68212028"
   
     5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> メソッドを呼び出します。 手順 5. の新しいパスワード値を *password* パラメーターに渡します。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>例 (RMO)  
  次の例に、ディストリビューションのプロパティおよびディストリビューション データベースのプロパティを変更する方法を示します。  
   
 > [!IMPORTANT]  
@@ -197,13 +196,13 @@ ms.locfileid: "68212028"
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## <a name="see-also"></a>関連項目  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [パブリッシングおよびディストリビューションの無効化](disable-publishing-and-distribution.md)   
- [[ディストリビューションの構成]](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>参照  
+ [レプリケーション管理オブジェクトの概念](concepts/replication-management-objects-concepts.md)   
+ [パブリッシングおよびディストリビューションを無効にする](disable-publishing-and-distribution.md)   
+ [ディストリビューションの構成](configure-distribution.md)   
+ [レプリケーション管理オブジェクトの概念](concepts/replication-management-objects-concepts.md)   
  [ディストリビューターおよびパブリッシャーの情報スクリプト](administration/distributor-and-publisher-information-script.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [レプリケーションシステムストアドプロシージャの概念](concepts/replication-system-stored-procedures-concepts.md)   
  [レプリケーション モニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

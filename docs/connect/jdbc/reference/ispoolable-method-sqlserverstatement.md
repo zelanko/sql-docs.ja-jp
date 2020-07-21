@@ -1,5 +1,5 @@
 ---
-title: isPoolable メソッド (SQLServerStatement) |Microsoft Docs
+title: isPoolable メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8a12ac5-57cb-4288-9973-c7d5cebd197c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 225584f3c60f0494af987581574d8f4205e04e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3f0b0e45e24d1eb8ddf23b3b544d7f6e7b52d728
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67977509"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925817"
 ---
 # <a name="ispoolable-method-sqlserverstatement"></a>isPoolable メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public boolean isPoolable() throws SQLException
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md) により、オブジェクトをプールできるかどうかを変更します。  
   
 ## <a name="see-also"></a>参照  

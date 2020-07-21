@@ -1,5 +1,5 @@
 ---
-title: '[選択項目の場所] ページ (レポート マネージャー) |Microsoft Docs'
+title: '[アイテムの場所の選択] ページ (レポートマネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109898"
 ---
 # <a name="choose-item-location-page-report-manager"></a>[アイテムの場所の選択] ページ (レポート マネージャー)
   新しいリンク レポートまたは新しいモデル用のフォルダーを選択するには、[アイテムの場所の選択] ページを使用します。 特定のユーザー グループ用のリンク レポートまたはモデルを作成している場合、それらのユーザーが使用する他のレポートおよびモデルと同じフォルダーにそのアイテムを配置できます。 既に存在し、コンテンツを追加する権限があるフォルダーを選択する必要があります。  
   
-## <a name="navigation"></a>ナビゲーション  
+## <a name="navigation"></a>「ナビゲーション」  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
   
 ###### <a name="to-open-the-choose-item-location-page-for-a-report"></a>レポートの [アイテムの場所の選択] ページを開くには  
@@ -51,18 +51,18 @@ ms.locfileid: "66109898"
   
 4.  プロパティ ページの **[全般]** タブで **[場所の変更]** をクリックし、[アイテムの場所の選択] ページを開きます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **場所**  
  作成するアイテムを格納するフォルダーの名前を指定します。 フル ネームを入力するか、ツリー ビューを使用して、使用するフォルダーに移動できます。  
   
- **ツリー ビュー**  
+ **ツリービュー**  
  レポート サーバーの名前空間のフォルダー構造を表示します。 フォルダー名をクリックすると、 **[場所]** フィールドに完全なパスが追加されます。  
   
  ツリー ビューの展開 (+) および折りたたみ (-) を行うアイコンをクリックすると、 **[場所]** フィールドにフォルダー名を追加せずにフォルダーを開いたり閉じたりすることができます。 **[場所]** フィールドにフォルダー名を追加するには、フォルダーの名前をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [新しいリンク レポート ページ &#40;レポート マネージャー&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
- [新しいモデル ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
+## <a name="see-also"></a>参照  
+ [[新しいリンクレポート] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+ [[新しいモデル] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

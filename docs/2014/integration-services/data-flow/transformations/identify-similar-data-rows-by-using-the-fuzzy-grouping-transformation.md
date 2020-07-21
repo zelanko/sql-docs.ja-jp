@@ -12,15 +12,14 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 828d299e47ecf582918ce5524e3b6c2bc2925d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c860bad3b8453c58b1eb035b8d1f16db90b5a09c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770718"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430589"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換を使用して類似のデータ行を識別する
   あいまいグループ化変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -83,6 +82,6 @@ ms.locfileid: "62770718"
  [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   
- [[データ フロー タスク]](../../control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../control-flow/data-flow-task.md)  
   
   

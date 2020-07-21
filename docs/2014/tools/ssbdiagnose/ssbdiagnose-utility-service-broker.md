@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8efc581eebd7d8fa7fa265abb54168af78b57ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211004"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057644"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
   **ssbdiagnose** ユーティリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換または [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスの構成に関する問題を報告します。 構成チェックは 2 つまたは 1 つのサービスに対して実行できます。 問題点は、コマンド プロンプト ウィンドウにユーザーが解釈できる形式で報告されるか、ファイルまたは別のプログラムにリダイレクトできる XML 形式で報告されます。  
@@ -163,9 +162,9 @@ WHERE database_id = DB_ID();
  **ANONYMOUS**:匿名ダイアログ セキュリティが構成されているかどうかを検証します。 一方の証明書が配置されていること、リモート サービス バインドで匿名句が指定されていること、および発信先サービスに対する GRANT SEND ステートメントで **public** ロールを指定していることを確認します。  
   
  **RUNTIME**  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の実行時エラーの原因である問題に関するレポートを要求します。 **-NEW** も **-ID** も指定されていない場合、 **ssbdiagnose** では、接続オプションで指定されたすべてのデータベース内のメッセージ交換をすべて監視します。 **-NEW** または **-ID** が指定されている場合、**ssbdiagnose** では、パラメーターで指定された ID の一覧が作成されます。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の実行時エラーの原因である問題に関するレポートを要求します。 **-NEW** も **-ID** も指定されていない場合、 **ssbdiagnose** では、接続オプションで指定されたすべてのデータベース内のメッセージ交換をすべて監視します。 **-NEW** または **-ID** が指定されている場合、 **ssbdiagnose** では、パラメーターで指定された ID の一覧が作成されます。  
   
- **ssbdiagnose[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、実行中に、実行時エラーを示す**  イベントをすべて記録します。 また、指定された ID に対して発生するイベントに加え、システムレベルのイベントも記録します。 実行時エラーが検出されると、 **ssbdiagnose** では、関連付けられている構成に対して構成レポートを実行します。  
+ **ssbdiagnose[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、実行中に、実行時エラーを示す ** イベントをすべて記録します。 また、指定された ID に対して発生するイベントに加え、システムレベルのイベントも記録します。 実行時エラーが検出されると、 **ssbdiagnose** では、関連付けられている構成に対して構成レポートを実行します。  
   
  既定では、出力レポートに実行時エラーは含まれず、構成の分析結果のみが含まれます。 レポートに実行時エラーを含めるには、 **-SHOWEVENTS** を使用してください。  
   
@@ -183,24 +182,24 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  アプリケーション内のメッセージ交換エンドポイントを識別する一意識別子です。 メッセージ交換ハンドルは、メッセージ交換の一方のエンドポイントに対して一意であり、発信側と発信先のエンドポイントのメッセージ交換ハンドルは異なります。  
   
- によって、アプリケーションにメッセージ交換ハンドルが返されます、 *@dialog_handle* のパラメーター、 **BEGIN DIALOG**ステートメントでは、および`conversation_handle`の結果の列のセットを**受信**ステートメント。  
+ メッセージ交換ハンドルは、 *@dialog_handle* **BEGIN DIALOG**ステートメントのパラメーターと、 `conversation_handle` **RECEIVE**ステートメントの結果セットの列によって、アプリケーションに返されます。  
   
- メッセージ交換ハンドルで報告される、`conversation_handle`の列、 **sys.transmission_queue**と**sys.conversation_endpoints**カタログ ビューです。  
+ メッセージ交換ハンドルは `conversation_handle` 、 **transmission_queue**および**conversation_endpoints**カタログビューの列で報告されます。  
   
  *conversation_group_id*  
  メッセージ交換グループを識別する一意識別子です。  
   
- によって、アプリケーションにメッセージ交換グループ Id が返されます、 *@conversation_group_id* のパラメーター、 **GET CONVERSATION GROUP**ステートメントおよび`conversation_group_id`の結果セット内の列**受信**ステートメント。  
+ メッセージ交換グループ Id は *@conversation_group_id* 、 **GET メッセージ交換グループ**ステートメントのパラメーターと、 `conversation_group_id` **RECEIVE**ステートメントの結果セットの列によって、アプリケーションに返されます。  
   
- メッセージ交換グループ Id が報告、`conversation_group_id`の列、 **sys.conversation_groups**と**sys.conversation_endpoints**カタログ ビューです。  
+ メッセージ交換グループ Id は、 `conversation_group_id` **conversation_groups**および**conversation_endpoints**カタログビューの列で報告されます。  
   
  *conversation_id*  
  メッセージ交換を識別する一意識別子です。 メッセージ交換 ID は、メッセージ交換の発信側と発信先の両方のエンドポイントで同じです。  
   
- メッセージ交換 Id が報告、`conversation_id`の列、 **sys.conversation_endpoints**カタログ ビューです。  
+ メッセージ交換 Id は `conversation_id` 、 **conversation_endpoints**カタログビューの列で報告されます。  
   
  **-TIMEOUT** *timeout_interval*  
- **RUNTIME** レポートを実行する秒数を指定します。 **-TIMEOUT** が指定されていない場合、ランタイム レポートは無制限に実行されます。 **-TIMEOUT** は、**CONFIGURATION** レポートではなく、**RUNTIME** レポートのみで使用されます。 **-TIMEOUT** が指定されていない場合に **ssbdiagnose** を終了したり、タイムアウト間隔を経過する前にランタイム レポ **-** トを終了したりするには、Ctrl キーを押しながら C キーを押します。 *timeout_interval* は 1 から 2,147,483,647 までの数値にする必要があります。  
+ **RUNTIME** レポートを実行する秒数を指定します。 **-TIMEOUT** が指定されていない場合、ランタイム レポートは無制限に実行されます。 **-TIMEOUT** は、**CONFIGURATION** レポートではなく、**RUNTIME** レポートのみで使用されます。 **-TIMEOUT** が指定されていない場合に **ssbdiagnose** を終了したり、タイムアウト間隔を経過する前にランタイム レポートを終了したりするには、Ctrl キーを押しながら C キーを押します。 **-** *timeout_interval* は 1 から 2,147,483,647 までの数値にする必要があります。  
   
  **\<runtimeconnectionoptions>**  
  監視対象のメッセージ交換要素に関連付けられたサービスが格納されているデータベースについての接続情報を指定します。 すべてのサービスが同じデータベースに格納されている場合は、 **CONNECT TO** 句を 1 つ指定するだけで十分です。 サービスが異なるデータベースに格納されている場合は、各データベースに対して **CONNECT TO** 句を指定する必要があります。 **runtimeconnectionoptions** が指定されていない場合、 **ssbdiagnose** では **baseconnectionoptions**の接続情報を使用します。  
@@ -214,7 +213,7 @@ WHERE database_id = DB_ID();
   
  **-E** オプションが **-U** オプションまたは **-P** オプションと共に使用されると、エラー メッセージが生成されます。  
   
- **ｰU** *login_id*  
+ **-U** *login_id*  
  指定されたログイン ID を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証接続を開きます。 ログインは **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
  **-E** も **ｰU** も指定されていない場合、 **ssbdiagnose** では、SQLCMDUSER 環境変数の値を使用します。 SQLCMDUSER も設定されていない場合、 **ssbdiagnose** では、 **ssbdiagnose**を実行しているユーザーの Windows アカウントに基づいた Windows 認証モードを使用して接続を試行します。  
@@ -230,7 +229,7 @@ WHERE database_id = DB_ID();
  パスワードなしで **-P** オプションが指定されている場合、 **ssbdiagnose** では既定のパスワード (NULL) を使用します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 詳細については、「 [Strong Passwords](../../relational-databases/security/strong-passwords.md)」を参照してください。  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」を参照してください。  
   
  パスワード プロンプトは、次のようにパスワード プロンプトをコンソールに出力することによって表示されます。 `Password:`  
   
@@ -243,7 +242,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  分析対象の [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスが格納されている、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスを指定します。  
   
- サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] を指定します。 サーバー上の [!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスに接続するには、*server_name***\\***instance_name* を指定します。 **-S** が指定されていない場合、 **ssbdiagnose** では、SQLCMDSERVER 環境変数の値を使用します。 SQLCMDSERVER も設定されていない場合、 **ssbdiagnose** はローカル コンピューター上にある [!INCLUDE[ssDE](../../includes/ssde-md.md)] の既定のインスタンスに接続します。  
+ サーバー上の *の既定のインスタンスに接続するには、* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] を指定します。 サーバー上のの名前付きインスタンスに接続するには、 *server_name ***\\*** instance_name*を指定し [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 **-S** が指定されていない場合、 **ssbdiagnose** では、SQLCMDSERVER 環境変数の値を使用します。 SQLCMDSERVER も設定されていない場合、 **ssbdiagnose** はローカル コンピューター上にある [!INCLUDE[ssDE](../../includes/ssde-md.md)] の既定のインスタンスに接続します。  
   
  **-d** *database_name*  
  分析対象の [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスが格納されているデータベースを指定します。 データベースが存在しない場合は、エラー メッセージが生成されます。 **-d** が指定されていない場合、ログインの既定のデータベースのプロパティに指定されたデータベースが既定値になります。  
@@ -254,7 +253,7 @@ WHERE database_id = DB_ID();
  **-?**  
  コマンド ライン ヘルプを表示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **ssbdiagnose** を使用すると、次の操作を実行できます。  
   
 -   新しく構成された [!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションに構成エラーがないことを確認する。  
@@ -299,7 +298,7 @@ WHERE database_id = DB_ID();
  **診断**  
  構成上の問題を報告します。 これには、 **CONFIGURATION** レポートの実行中または **RUNTIME** レポートの構成フェーズ中に見つかった問題が含まれます。 **ssbdiagnose** は、構成上の各問題を一度だけ報告します。  
   
- **イベント**  
+ **Event**  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] RUNTIME **レポートの実行中に監視されるメッセージ交換で問題が検出されたことを示す** イベントを報告します。 **ssbdiagnose** は、イベントが生成されるたびにイベントを報告します。 複数のメッセージ交換で問題が検出される場合は、イベントが複数回報告されます。  
   
  **問題**  
@@ -311,7 +310,7 @@ WHERE database_id = DB_ID();
 ## <a name="permissions"></a>アクセス許可  
  各 **connectionoptions** 句では、 **-E** または **-U** のいずれかで指定されたログインが、 **-S** で指定されたインスタンスの **sysadmin**固定サーバー ロールのメンバーである必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  ここでは、コマンド プロンプトでの **ssbdiagnose** の使用例を示します。  
   
 ### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>A. 同じデータベース内の 2 つのサービスの構成を確認する  
@@ -445,7 +444,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/begin-dialog-conversation-transact-sql)   
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-broker-priority-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: 検索プロパティ リストを使用したドキュメント プロパティの検索 | Microsoft Docs
+title: 検索プロパティ リストを使用したドキュメント プロパティの検索
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -18,20 +18,21 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f105b175cf2a9673fff0626fba726d6b7f68b50e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e838636d3d52fa05933601c2ad9fae1f6006f7b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629163"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   以前のバージョンでは、ドキュメント プロパティの内容はドキュメントの本文の内容と区別できませんでした。 この制限により、フルテキスト クエリは、ドキュメント全体に対する汎用検索に制限されていました。 しかし、現在のバージョンでは、 **varbinary**、 **varbinary(max)** ( **FILESTREAM**を含む)、または **image** バイナリ データ列がサポートされているドキュメントの種類については、フルテキスト インデックスを構成することで、Author や Title などの特定のプロパティに対するプロパティ スコープの検索をサポートすることができます。 この形式の検索を、 *プロパティ検索*と呼びます。  
   
  特定の種類のドキュメントでプロパティ検索が可能かどうかは、対応する [フィルター](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) によって異なります。 ドキュメントの種類によっては、ドキュメント本文の内容に加えて、そのドキュメントの種類に対して定義されている検索プロパティの一部またはすべてが、対応する IFilter によって抽出されます。 フルテキスト インデックスの作成時に IFilter によって抽出されたプロパティに対してのみプロパティ検索をサポートするように、フルテキスト インデックスを構成することができます。 さまざまなドキュメント プロパティを抽出する IFilter の一例として、Microsoft Office のドキュメントの種類 (.docx、.xlsx、.pptx など) に対応した IFilter があります。 一方、XML IFilter では、プロパティは生成されません。  
   
-##  <a name="How_FTS_Works_with_search_properties"></a> 検索プロパティのフルテキスト検索  
+##  <a name="how-full-text-search-works-with-search-properties"></a><a name="How_FTS_Works_with_search_properties"></a> 検索プロパティのフルテキスト検索  
   
 ### <a name="internal-property-ids"></a>内部プロパティ ID  
  Full-Text Engine は、登録されている各プロパティに対して内部プロパティ ID を適宜割り当てます。この内部プロパティ ID は、特定の検索リスト内のプロパティを一意に識別するためのもので、検索プロパティ リストで固有の ID になります。 また、1 つのプロパティを複数の検索プロパティ リストに追加した場合、その内部 ID がリスト間で異なる可能性があります。  
@@ -40,7 +41,7 @@ ms.locfileid: "67912987"
   
  次の図は、Title と Keywords の 2 つのプロパティを指定する検索プロパティ リストの論理的なビューを示しています。 Keywords のプロパティ リスト名は "Tags" です。 これらのプロパティは、F29F85E0-4FF9-1068-AB91-08002B27B3D9 という GUID を持つ同じプロパティ セットに属します。 Title のプロパティ整数識別子は 2、Tags (Keywords) のプロパティ整数識別子は 5 です。 Full-Text Engine は、各プロパティを、検索プロパティ リストで一意となる内部プロパティ ID に適宜関連付けます。 Title プロパティの内部プロパティ ID は 1、Tags プロパティの内部プロパティ ID は 2 になります。  
   
- ![内部テーブルへの検索プロパティ リストのマッピング](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "内部テーブルへの検索プロパティ リストのマッピング")  
+ ![検索プロパティ リストを内部テーブルにマッピングする](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "検索プロパティ リストを内部テーブルにマッピングする")  
   
  内部プロパティ ID は、プロパティのプロパティ整数識別子とは異なる場合があります。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。 たとえば、ある検索プロパティ リストでは内部プロパティ ID が 4 である一方で、別の検索プロパティ リストでは内部プロパティ ID が 1 であったり 3 であったりする場合があります。 これに対し、プロパティ整数識別子はプロパティに固有な識別子であるため、プロパティがどこで使用されるかに関係なく同じ値になります。  
   
@@ -55,14 +56,14 @@ ms.locfileid: "67912987"
   
  プロパティスコープのフルテキスト クエリでは、フルテキスト インデックスの現在の検索プロパティ リストに登録されている内部プロパティ ID が使用されます。  
   
-##  <a name="impact"></a> プロパティ検索を有効にした場合の影響  
+##  <a name="impact-of-enabling-property-searching"></a><a name="impact"></a> プロパティ検索を有効にした場合の影響  
  1 つまたは複数のプロパティを対象とした検索をサポートするようにフルテキスト インデックスを構成すると、検索プロパティ リストに指定したプロパティの数および各プロパティの内容に応じて、インデックスのサイズが増加します。  
   
  マイクロソフトでは、Microsoft Word、Excel、PowerPoint の一般的なドキュメント コーパスのテストにおいて、フルテキスト インデックスを構成して、一般的な検索プロパティのインデックスを作成しました。 これらのプロパティのインデックスを作成した結果、フルテキスト インデックスのサイズは約 5% 増加しました。 サイズの増加に関するこの概算値は、ほとんどのドキュメント コーパスに当てはまると考えられます。 ただし、最終的には、サイズの増加量は、全体的なデータ量に関連する特定のドキュメント コーパス内のプロパティ データの量に依存します。  
   
-##  <a name="creating"></a> 検索プロパティ リストの作成とプロパティ検索の有効化  
+##  <a name="creating-a-search-property-list-and-enabling-property-search"></a><a name="creating"></a> 検索プロパティ リストの作成とプロパティ検索の有効化  
   
-###  <a name="creating_sub"></a> 検索プロパティ リストの作成  
+###  <a name="creating-a-search-property-list"></a><a name="creating_sub"></a> 検索プロパティ リストの作成  
  **Transact-SQL を使用して検索プロパティ リストを作成するには**  
   
  少なくともリストの名前を指定して、[CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md) ステートメントを使用します。  
@@ -91,7 +92,7 @@ ms.locfileid: "67912987"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="adding"></a> 検索プロパティ リストへのプロパティの追加  
+###  <a name="adding-properties-to-a-search-property-list"></a><a name="adding"></a> 検索プロパティ リストへのプロパティの追加  
  プロパティを検索するには、 *検索プロパティ リスト* を作成し、検索可能にする 1 つまたは複数のプロパティを指定する必要があります。 プロパティを検索プロパティ リストに追加すると、プロパティはその特定のリスト用に登録されます。 プロパティを検索プロパティ リストに追加するには、次の値が必要です。  
   
 -   プロパティ セット GUID  
@@ -140,7 +141,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **[検索プロパティ リストのプロパティ]** ダイアログ ボックスを使用して、検索プロパティを追加および削除します。 オブジェクト エクスプローラーでは、関連するデータベースの **[ストレージ]** ノードの下に **[検索プロパティ リスト]** があります。  
   
-###  <a name="associating"></a> 検索プロパティ リストとフルテキスト インデックスの関連付け  
+###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a> 検索プロパティ リストとフルテキスト インデックスの関連付け  
  検索プロパティ リストに登録されているプロパティを対象としたプロパティ検索をフルテキスト インデックスでサポートするためには、検索プロパティ リストとインデックスを関連付けた後、インデックスを再作成する必要があります。 フルテキスト インデックスを再作成すると、登録された各プロパティに含まれている検索語句に対して、プロパティ固有のインデックス エントリが作成されます。  
   
  フルテキスト インデックスがこの検索プロパティ リストに関連付けられている限り、フルテキスト クエリで CONTAINS 述語の PROPERTY オプションを使用して、検索プロパティ リストに登録されているプロパティを対象に検索を実行できます。  
@@ -155,7 +156,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスの **[全般]** ページで、 **[検索プロパティ リスト]** の値を指定します。  
   
-##  <a name="Ov_CONTAINS_using_PROPERTY"></a> CONTAINS を使用した検索プロパティのクエリ  
+##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> CONTAINS を使用した検索プロパティのクエリ  
  プロパティ スコープのフルテキスト クエリのための [CONTAINS](../../t-sql/queries/contains-transact-sql.md) の基本的な構文を次に示します。  
   
 ```sql  
@@ -175,9 +176,9 @@ GO
   
  この例では、ドキュメントの IFilter で Title プロパティが抽出されること、Title プロパティが検索プロパティ リストに追加されること、および検索プロパティ リストがフルテキスト インデックスに関連付けられていることを前提としています。  
   
-##  <a name="managing"></a> 検索プロパティ リストの管理  
+##  <a name="managing-search-property-lists"></a><a name="managing"></a> 検索プロパティ リストの管理  
   
-###  <a name="viewing"></a> 検索プロパティ リストの表示および変更  
+###  <a name="viewing-and-changing-a-search-property-list"></a><a name="viewing"></a> 検索プロパティ リストの表示および変更  
  **Transact-SQL を使用して検索プロパティ リストを変更するには**  
   
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) ステートメントを使用して、検索プロパティを追加または削除します。  
@@ -204,7 +205,7 @@ GO
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="deleting"></a> 検索プロパティ リストの削除  
+###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a> 検索プロパティ リストの削除  
  リストがいずれかのフルテキスト インデックスに関連付けられている場合は、データベースからプロパティ リストを削除できません。  
   
  **Transact-SQL を使用して検索プロパティ リストを削除するには**  

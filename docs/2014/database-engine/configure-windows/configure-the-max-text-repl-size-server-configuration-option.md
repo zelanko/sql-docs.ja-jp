@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2af0cf426583ee328f0a484de1c3539836c0d8af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62811576"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935643"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>max text repl size サーバー構成オプションの構成
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **Max text repl サイズ**オプションの指定の最大サイズ (バイト単位) で`text`、 `ntext`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、 `xml`、および`image`に追加できるデータレプリケート対象列または単一の INSERT、UPDATE、WRITETEXT、または UPDATETEXT ステートメントでキャプチャ対象列。 既定値は 65536 バイトです。 値 -1 は、データ型で許容されるサイズの範囲内であれば、サイズ制限がないことを示します。  
+  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **Max text repl size**オプションは、 `text` 単一の `ntext` `varchar(max)` `nvarchar(max)` `varbinary(max)` `xml` `image` INSERT、UPDATE、WRITETEXT、または UPDATETEXT ステートメントで、レプリケートされた列またはキャプチャ対象列に追加できる、、、、、、、およびの各データの最大サイズ (バイト単位) を指定します。 既定値は 65536 バイトです。 値 -1 は、データ型で許容されるサイズの範囲内であれば、サイズ制限がないことを示します。  
   
  **このトピックの内容**  
   
@@ -38,18 +37,18 @@ ms.locfileid: "62811576"
   
 -   **補足情報:** [max text repl size オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   このオプションは、トランザクション レプリケーションと変更データ キャプチャに適用されます。 サーバーでトランザクション レプリケーションと変更データ キャプチャの両方が構成されている場合、指定された値が両方の機能に適用されます。 スナップショット レプリケーションおよびマージ レプリケーションでは、このオプションは無視されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを指定して **sp_configure** を実行し構成オプションを変更したり RECONFIGURE ステートメントを実行したりするには、ALTER SETTINGS サーバーレベル権限がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>max text repl size オプションを構成するには  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62811576"
   
 3.  **[その他]** の **[テキスト レプリケーションの最大サイズ]** オプションを目的の値に変更します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>max text repl size オプションを構成するには  
   
@@ -84,7 +83,7 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a>補足情報: max text repl size オプションを構成した後  
+##  <a name="follow-up-after-you-configure-the-max-text-repl-size-option"></a><a name="FollowUp"></a>補足情報: max text repl size オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

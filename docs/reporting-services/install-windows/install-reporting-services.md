@@ -1,31 +1,41 @@
 ---
-title: SQL Server Reporting Services のインストール (2017 以降) | Microsoft Docs
-ms.date: 12/20/2017
+title: SQL Server Reporting Services のインストール | Microsoft Docs
+ms.date: 05/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d636086c909d1d486040df6fc8d31cfea57c4f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 07669b5c0466c725a271f71ed207c332ffdb5a26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502689"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693800"
 ---
-# <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services のインストール (2017 以降)
+# <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services のインストール
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 SQL Server Reporting Services をインストールするには、レポート アイテムの格納、レポートの表示、およびサブスクリプションや他のレポート サービスの処理を行うためのサーバー コンポーネントが必要です。 
 
-SQL Server 2017 Reporting Services をダウンロードするには、「[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)」に移動します。
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+Microsoft ダウンロード センターから [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) をダウンロードします。
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Microsoft ダウンロード センターから [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) をダウンロードします。
+
+::: moniker-end
 
 > [!NOTE]
 > Power BI Report Server が見つからない場合は、 「[Power BI Report Server のインストール](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)」を参照してください。
+> 
+> SQL Server 2016 以前のバージョンの Reporting Services からのアップグレードまたは移行については、 「[Reporting Services のアップグレードと移行](upgrade-and-migrate-reporting-services.md)」を参照してください。
 
-## <a name="before-you-begin"></a>アンインストールの準備
+## <a name="before-you-begin"></a>開始する前に
 
 Reporting Services をインストールする前に、「[Hardware and software requirements for installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」 (SQL Server のインストールに必要なハードウェアおよびソフトウェア) を確認してください。
 
@@ -40,36 +50,26 @@ Reporting Services をインストールする前に、「[Hardware and software
 
 2. **[Reporting Services のインストール]** を選択します。
 
-    ![Reporting Services のインストール](media/install-reporting-services/report-server-install.png)
-
 3. インストールするエディションを選択して、 **[次へ]** を選択します。
-
-    ![エディションの選択](media/install-reporting-services/report-server-install-edition.png)
 
     無料版の場合、ドロップダウンから [Evaluation] または [Developer] を選択します。
 
     ![Evaluation エディションまたは Developer エディション](media/install-reporting-services/report-server-install-edition-select.png)
 
-    それ以外の場合は、プロダクト キーを入力します。 [SQL Server 2017 Reporting Services のプロダクト キーを見つけます](find-reporting-services-product-key-ssrs.md)。
+    それ以外の場合は、プロダクト キーを入力します。 [SQL Server Reporting Services のプロダクト キーを見つけます](find-reporting-services-product-key-ssrs.md)。
 
 4. ライセンス条項および条件を読んで同意し、 **[次へ]** をクリックします。
 
 5. レポート サーバー データベースを格納するには、データベース エンジンを利用可能にする必要があります。 **[次へ]** を選択して、レポート サーバーのみをインストールします。
 
-    ![インストールにデータベースは必要ありません](media/install-reporting-services/report-server-install-db-engine.png)
-
 6. レポート サーバーをインストールする場所を指定します。 **[インストール]** を選択して次に進みます。
-
-    ![インストール パスの指定](media/install-reporting-services/report-server-install-file-path.png)
 
     > [!NOTE]
     > 既定のパスは、C:\Program Files\Microsoft SQL Server Reporting Services です。
 
 7. 正常にセットアップした後、 **[レポート サーバーの構成]** を選択して、Reporting Services Configuration Manager を起動します。
 
-    ![レポート サーバーの構成](media/install-reporting-services/report-server-install-configure.png)
-
-## <a name="configuration-your-report-server"></a>レポート サーバーの構成
+## <a name="configure-your-report-server"></a>レポート サーバーを構成する
 
 セットアップで **[レポート サーバーの構成]** を選択したら、**レポート サーバー Configuration Manager** が表示されます。 詳細については、[Report Server 構成マネージャー](reporting-services-configuration-manager-native-mode.md)に関するページを参照してください。
 
@@ -95,9 +95,9 @@ Windows サービスは、インストールの一部として作成されます
 
 URL 予約は、プレフィックス、ホスト名、ポート、および仮想ディレクトリで構成されます。
 
-|要素|[説明]|
+|要素|説明|
 |----------|-----------------|
-|Prefix|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|
+|Prefix|既定のプレフィックスは HTTP です。 以前にトランスポート層セキュリティ(TLS) (旧称 Secure Sockets Layer (SSL)) 証明書をインストールした場合は、セットアップによって、HTTPS プレフィックスを使用する URL 予約の作成が試みられます。|
 |ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`https://<computername>/reportserver`、`https://localhost/reportserver`、`https://<IPAddress>/reportserver.`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|
 |Port|既定のポートは 80 です。 ポート 80 以外のポートを使用する場合は、Web ポータルをブラウザー ウィンドウで開くときに、そのポートを URL に明示的に追加する必要があります。|
 |仮想ディレクトリ|既定では、仮想ディレクトリは、レポート サーバー Web サービスの場合は ReportServer の形式で作成され、Web ポータルの場合は Reports の形式で作成されます。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 Web ポータルの既定の仮想ディレクトリは、**reports** です。|
@@ -114,7 +114,7 @@ URL 予約は、プレフィックス、ホスト名、ポート、および仮�
 
 Web サービス URL および Web ポータル URL 用に構成されている TCP ポートを開く必要があります。 既定では、これらは TCP ポート 80 で構成されます。
 
-## <a name="additional-configuration"></a>その他の構成
+## <a name="additional-configuration"></a>追加構成
 
 - Power BI ダッシュボードにレポート アイテムをピン留めできるように、Power BI サービスとの統合を構成するには、[Power BI サービスとの統合](power-bi-report-server-integration-configuration-manager.md)に関するページを参照してください。
 
@@ -132,7 +132,7 @@ SharePoint 統合モードで SQL Server 2016 Reporting Services (およびそ�
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 インストールされたレポート サーバーを使用して、レポートの作成を開始し、自分のレポート サーバーに配置します。 レポート ビルダーの使用を開始する方法については、「[レポート ビルダーをインストールする](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。
 

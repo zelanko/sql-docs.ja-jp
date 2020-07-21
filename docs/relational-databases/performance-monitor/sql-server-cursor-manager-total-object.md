@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6478c1b0f1e453fd10f18a403a00f471309f6f35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce6e923f856693ea32b7651d88d7a5a9f5434f22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730318"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server: Cursor Manager Total オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SQLServer:Cursor Manager Total** オブジェクトには、カーソルを監視するためのカウンターが用意されています。  
   
  次の表で、SQL Server **Cursor Manager Total** カウンターについて説明します。  
   
-|Cursor Manager Total カウンター|[説明]|  
+|Cursor Manager Total カウンター|説明|  
 |-----------------------------------|-----------------|  
 |**Async population count**|非同期に生成されているカーソルの数。|  
 |**Cursor conversion rate**|1 秒間に行われたカーソル変換の回数。|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7ac008fe139adf55376bb50fbf60dddcd6b9ae5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010893"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>初期スナップショットの作成および適用
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、初期スナップショットを作成および適用する方法について説明します。 パラメーター化されたフィルターを使用するマージ パブリケーションでは、2 つの部分から成るスナップショットが必要です。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
@@ -33,7 +32,7 @@ ms.locfileid: "62721684"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されている場合、パブリケーションの新規作成ウィザードでパブリケーションが作成された直後に、スナップショット エージェントによってスナップショットが生成されます。 既定では、スナップショットはディストリビューション エージェント (スナップショット レプリケーションおよびトランザクション レプリケーションの場合) またはマージ エージェント (マージ サブスクリプションの場合) によって、すべてのサブスクリプションに対して適用されます。 スナップショットは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] およびレプリケーション モニターを使用して生成することもできます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 #### <a name="to-create-a-snapshot-in-management-studio"></a>Management Studio でスナップショットを作成するには  
@@ -44,7 +43,7 @@ ms.locfileid: "62721684"
   
 3.  スナップショットを作成するパブリケーションを右クリックして、 **[スナップショット エージェントの状態の表示]** をクリックします。  
   
-4.  **[スナップショット エージェントの状態の表示 - \<Publication>]** ダイアログ ボックスで **[開始]** をクリックします。  
+4.  [**スナップショットエージェントの状態の表示 \<Publication> -** ] ダイアログボックスで、[**開始**] をクリックします。  
   
  スナップショット エージェントによるスナップショットの生成が完了すると、"[100%] 17 個のアーティクルのスナップショットが生成されました。" などのメッセージが表示されます。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62721684"
   
 2.  スナップショットを生成するパブリケーションを右クリックして、 **[スナップショットの生成]** をクリックします。  
   
-3.  スナップショット エージェントの状態を表示するには、 **[エージェント]** タブをクリックします。詳細情報については、グリッドでスナップショット エージェントを右クリックし、 **[詳細表示]** をクリックしてください。  
+3.  スナップショットエージェントの状態を表示するには、[**エージェント**] タブをクリックします。詳細については、グリッド内のスナップショットエージェントを右クリックし、[**詳細の表示**] をクリックしてください。  
   
 #### <a name="to-apply-a-snapshot"></a>スナップショットを適用するには  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62721684"
   
      サブスクリプションの同期の詳細については、「 [Synchronize a Push Subscription](synchronize-a-push-subscription.md) 」および「 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)ダイアログ ボックスを使用します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  初期スナップショットは、スナップショット エージェント ジョブを作成、実行するか、スナップショット エージェントの実行可能ファイルをバッチ ファイルから実行することによってプログラムから作成できます。 生成された初期スナップショットは、サブスクリプションの初回同期時にサブスクライバーに転送されて適用されます。 スナップショット エージェントをコマンド プロンプトまたはバッチ ファイルから実行する場合、既存のスナップショットが無効になるたびにエージェントを再実行する必要があります。  
   
 > [!IMPORTANT]  
@@ -78,15 +77,15 @@ ms.locfileid: "62721684"
   
 1.  スナップショット パブリケーション、トランザクション パブリケーション、またはマージ パブリケーションを作成します。 詳細については、「 [Create a Publication](publish/create-a-publication.md)」を参照してください。  
   
-2.  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 このとき、 **@publication** パラメーターを指定したうえで、次のパラメーターを指定します。  
+2.  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 **@publication**と次のパラメーターを指定します。  
   
     -   **ディストリビューターで実行するスナップショット エージェントが使用するための Windows 認証の資格情報を @job_login に指定します。**  
   
     -   **Windows 資格情報に対応するパスワードを @job_password** に指定します。  
   
-    -   (省略可) エージェントからパブリッシャーへの接続に SQL Server 認証を使用する場合は、 **@publisher_security_mode** の値に **@publisher_security_mode** を指定します。 この場合は、さらに、 **@publisher_login** 」および「 **@publisher_password** 」をご覧ください。  
+    -   (省略可) エージェントからパブリッシャーへの接続に SQL Server 認証を使用する場合は、 **@publisher_security_mode** の値に **@publisher_security_mode** を指定します。 この場合は、およびに対して SQL Server 認証ログイン情報も指定する必要があり **@publisher_login** **@publisher_password** ます。  
   
-    -   (省略可) スナップショット エージェント ジョブの同期スケジュールを指定します。 詳しくは、「 [Specify Synchronization Schedules](specify-synchronization-schedules.md)」をご覧ください。  
+    -   (省略可) スナップショット エージェント ジョブの同期スケジュールを指定します。 詳細については、「[同期スケジュールの指定](specify-synchronization-schedules.md)」を参照してください。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -103,11 +102,11 @@ ms.locfileid: "62721684"
   
 3.  コマンド プロンプトまたはバッチ ファイルから、次のコマンド ライン引数を指定して [snapshot.exe](agents/replication-snapshot-agent.md) を実行し、 **レプリケーション マージ エージェント**を起動します。  
   
-    -   **-Publication**  
+    -   **-パブリケーション**  
   
-    -   **-Publisher**  
+    -   **-パブリッシャー**  
   
-    -   **-Distributor**  
+    -   **-ディストリビューター**  
   
     -   **-PublisherDB**  
   
@@ -119,15 +118,15 @@ ms.locfileid: "62721684"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode**  = **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** =  **@publisher_security_mode**  
+    -   **-PublisherSecurityMode**  = **0**  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トランザクション パブリケーションを作成し、 **sqlcmd** スクリプト変数を使用して、新しいパブリケーション用にスナップショット エージェント ジョブを追加します。 ジョブを開始するコードも含まれています。  
   
  [!code-sql[HowTo#sp_trangenerate_snapshot](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubinitialsnapshot.sql#sp_trangenerate_snapshot)]  
@@ -143,11 +142,11 @@ ms.locfileid: "62721684"
   
  [!code-sql[HowTo#startmergesnapshot_10](../../snippets/tsql/SQL15/replication/howto/tsql/createmergesnapshot_10.bat)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  スナップショット エージェントは、パブリッシャーが作成された後でスナップショットを生成します。 レプリケーション管理オブジェクト (RMO) およびレプリケーション エージェント機能への直接的なマネージド コード アクセスを使用して、これらのスナップショットをプログラムで生成できます。 使用するオブジェクトは、レプリケーションの種類によって異なります。 スナップショット エージェントを同期的に開始する場合は <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> オブジェクトを使用し、非同期的に開始する場合はエージェント ジョブを使用します。 初期スナップショットの生成後、サブスクリプションを最初に同期するときに、初期スナップショットをサブスクライバーに転送して適用することができます。 既存のスナップショットに最新の有効なデータが含まれていない場合は、エージェントを再実行する必要があります。 詳細については、「[Maintain Publications](publish/maintain-publications.md)」(パブリケーションの管理) を参照してください。  
   
 > [!IMPORTANT]  
->  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+>  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework によって提供される[暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733)を使用し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>スナップショット エージェント ジョブを非同期的に開始して、スナップショット パブリケーションまたはトランザクション パブリケーションの初期スナップショットを生成するには  
   
@@ -217,7 +216,7 @@ ms.locfileid: "62721684"
   
 3.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> メソッドを呼び出します。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a>例 (RMO)  
  次の例では、スナップショット エージェントを同期的に実行して、トランザクション パブリケーションの初期スナップショットを生成します。  
   
  [!code-csharp[HowTo#rmo_GenerateSnapshot](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_generatesnapshot)]  
@@ -230,16 +229,16 @@ ms.locfileid: "62721684"
   
  [!code-vb[HowTo#rmo_vb_GenerateSnapshot_WithJob](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_generatesnapshot_withjob)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Create a Publication](publish/create-a-publication.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [ssSDSFull](create-a-push-subscription.md)   
- [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
- [スナップショットの作成および適用](create-and-apply-the-snapshot.md)   
- [Initialize a Subscription with a Snapshot (スナップショットを使用したサブスクリプションの初期化)](initialize-a-subscription-with-a-snapshot.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [プッシュサブスクリプションを作成する](create-a-push-subscription.md)   
+ [同期スケジュールの指定](specify-synchronization-schedules.md)   
+ [スナップショットを作成して適用する](create-and-apply-the-snapshot.md)   
+ [スナップショットを使用したサブスクリプションの初期化](initialize-a-subscription-with-a-snapshot.md)   
+ [レプリケーション管理オブジェクトの概念](concepts/replication-management-objects-concepts.md)   
+ [レプリケーションのセキュリティに関するベストプラクティス](security/replication-security-best-practices.md)   
+ [レプリケーションシステムストアドプロシージャの概念](concepts/replication-system-stored-procedures-concepts.md)   
  [sqlcmd でのスクリプト変数の使用](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

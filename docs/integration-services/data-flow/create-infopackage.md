@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: acae1d88d7bfd6e61eeeca582444f6be5627414c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25f1497b7801c7891681324b12fa9a5eda4eb842
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110559"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293210"
 ---
 # <a name="create-infopackage"></a>インフォパッケージの作成
 

@@ -1,11 +1,10 @@
 ---
-title: リンク サーバーの作成 (SQL Server データベース エンジン) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/20/2015
+title: リンク サーバーを作成する
+ms.date: 01/24/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -17,36 +16,37 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3112a23426054740a0c716648c94d83d4c39925a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: e4252d018df169f6fac238b4cb0b39991f9c8996
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719035"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリンク サーバーを作成し、別の [!INCLUDE[tsql](../../includes/tsql-md.md)]からデータにアクセスする方法について説明します。 リンク サーバーを作成すると、複数のソースのデータを操作できます。 リンク サーバーは別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスである必要はありませんが、そのようにするのが一般的です。  
   
-##  <a name="Background"></a> 背景情報  
+##  <a name="background"></a><a name="Background"></a> 背景情報  
  リンク サーバーを使用すると、OLE DB データ ソースに対する異種の分散クエリの利用が可能になります。 リンク サーバーを作成すると、このサーバーに対して分散クエリを実行でき、クエリを使用して複数のデータ ソースのテーブルを結合できます。 リンク サーバーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスとして定義した場合は、リモート ストアド プロシージャを実行できます。  
   
  リンク サーバーの機能と必須の引数は大きく異なることがあります。 このトピックでは、一般的な例を紹介しますが、すべてのオプションについて説明しているわけではありません。 詳細については、「 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)からデータにアクセスする方法について説明します。  
   
-##  <a name="Security"></a> セキュリティ  
+##  <a name="security"></a><a name="Security"></a> セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用する場合は、サーバーに対する **ALTER ANY LINKED SERVER** 権限または **setupadmin** 固定サーバー ロールのメンバーシップが必要です。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用する場合は、 **CONTROL SERVER** 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-##  <a name="Procedures"></a> リンク サーバーを作成する方法  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> リンク サーバーを作成する方法  
  次のいずれかを使用できます。  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>SQL Server Management Studio を使用して別の SQL Server インスタンスへのリンク サーバーを作成するには  
   
@@ -72,10 +72,10 @@ ms.locfileid: "68073668"
      **[プロバイダー文字列]**  
      データ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) を入力します。 有効なプロバイダー文字列の例については、「 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)からデータにアクセスする方法について説明します。  
   
-     **場所**  
+     **Location**  
      OLE DB プロバイダーで解釈されるデータベースの場所を入力します。  
   
-     **Catalog**  
+     **カタログ**  
      OLE DB プロバイダーへの接続を作成するときに使用するカタログの名前を入力します。  
   
      リンク サーバーに接続できるかどうかをテストするには、オブジェクト エクスプローラーでリンク サーバーを右クリックし、 **[接続テスト]** をクリックします。  
@@ -97,14 +97,17 @@ ms.locfileid: "68073668"
   
      **[リモート ユーザー]**  
      リモート ユーザーを使用して、 **[ローカル ログイン]** で定義されないユーザーをマップします。 **リモート ユーザー** は、リモート サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインである必要があります。  
-  
+
+    > [!WARNING]
+    > Azure SQL Database のマネージド インスタンス デプロイで "リモート ユーザー" を使用できるのは、SQL Server ユーザーのみです。  
+
      **[リモート パスワード]**  
      リモート ユーザーのパスワードを指定します。  
   
-     **[追加]**  
+     **追加**  
      新しいローカル ログインを追加します。  
   
-     **[削除]**  
+     **Remove**  
      既存のローカル ログインを削除します。  
   
      **[接続を許可しない]**  
@@ -126,7 +129,7 @@ ms.locfileid: "68073668"
   
      このオプションは、リンク サーバーに対応するデータ ソースがローカル サーバーと同じ文字セットと並べ替え順を持っていることが確認できている場合のみ設定します。  
   
-     **[データ アクセス]**  
+     **データ アクセス**  
      分散クエリ アクセスに対してリンク サーバーを有効または無効にします。  
   
      **RPC**  
@@ -162,7 +165,7 @@ ms.locfileid: "68073668"
      **[分散トランザクションのプロモーションを有効化]**  
      このオプションを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションにより、サーバー間のプロシージャのアクションを保護します。 このオプションが TRUE の場合、リモート ストアド プロシージャを呼び出すと分散トランザクションが開始され、トランザクションは MS DTC に参加します。 詳細については、「 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)からデータにアクセスする方法について説明します。  
   
-6.  クリックして **OK**です。  
+6.  **[OK]** をクリックします。  
   
 ##### <a name="to-view-the-provider-options"></a>プロバイダー オプションを表示するには  
   
@@ -194,7 +197,7 @@ ms.locfileid: "68073668"
      **['Like' 演算子をサポートします]**  
      プロバイダーが LIKE キーワードを使用したクエリをサポートしていることを示します。  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してリンク サーバーを作成するには、[sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ステートメント、[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md) ステートメント、および [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) ステートメントを使用します。  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Transact-SQL を使用して別の SQL Server インスタンスへのリンク サーバーを作成するには  
@@ -222,7 +225,7 @@ ms.locfileid: "68073668"
   
     ```  
   
-##  <a name="FollowUp"></a>補足情報: リンク サーバーの作成後に実行する手順  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> 補足情報: リンク サーバーの作成後に実行する手順  
   
 #### <a name="to-test-the-linked-server"></a>リンク サーバーをテストするには  
   

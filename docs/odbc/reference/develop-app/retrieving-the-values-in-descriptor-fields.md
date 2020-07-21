@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], retrieving or setting field values
 ms.assetid: c05b180f-c2b0-437b-8d1c-ce7f4da93287
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55d7017c659ca4d0b8094ed4a665d27c10b355f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 43467d19f3f2e576efa0402c4ba513e23da59390
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020450"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304323"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>記述子フィールドの値の取得
-アプリケーションが呼び出すことができます**SQLGetDescField**記述子レコードの 1 つのフィールドを取得します。 **SQLGetDescField** ODBC では、定義されているすべての記述子フィールドをドライバーで定義されたフィールドも、アプリケーションにアクセスします。  
+アプリケーションは**SQLGetDescField**を呼び出すことで、記述子レコードの1つのフィールドを取得できます。 **SQLGetDescField**では、ODBC で定義されているすべての記述子フィールドとドライバー定義フィールドへのアクセスがアプリケーションに与えられます。  
   
- **SQLGetDescRec**呼び出すデータ型に影響する複数の記述子フィールドの設定と列またはパラメーターのデータのストレージを取得することができます。
+ **Sqlgetdescrec**を呼び出して、列またはパラメーターのデータのデータ型とストレージに影響を与える複数の記述子フィールドの設定を取得できます。

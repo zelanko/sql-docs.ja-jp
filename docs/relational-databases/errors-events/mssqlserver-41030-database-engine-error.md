@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: c85341ae-0fbf-42ae-9275-4cfe678238f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c5a9ef8027571650265292f298a8a0c2835241b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b82b11292006be54a2f97c32d4963ea623c6ad02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694615"
 ---
-# <a name="mssqlserver41030"></a>MSSQLSERVER_41030
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_41030"></a>MSSQLSERVER_41030
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|41030|  
 |イベント ソース|MSSQLSERVER|  
@@ -40,5 +40,5 @@ WSFC クラスターを再作成した後、AlwaysOn が有効になっている
   
 ## <a name="see-also"></a>参照  
 [AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
-[Windows Server フェールオーバー クラスタリン &#40;WSFC&#41; と SQL Server](~/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
+[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](~/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   

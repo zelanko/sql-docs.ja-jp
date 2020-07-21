@@ -15,10 +15,10 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580416"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>リモート管理用のレポート サーバーの構成
@@ -32,7 +32,7 @@ ms.locfileid: "65580416"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  ファイアウォールの設定を変更するには、ローカルの Administrators グループのメンバーとして、ローカルでログオンする必要があります。 リモート接続を経由してリモート コンピューターの Windows のファイアウォール設定を変更することはできません。  
   
  管理者以外のユーザーがリモート管理を実行できるようにするには、DCOM (Distributed Component Object Model) の "リモートからのアクティブ化" アクセス許可をアカウントに与える必要があります。 管理者以外のユーザーがアクセスできるようにサーバーを構成する手順は、このトピックで説明します。  
@@ -68,7 +68,7 @@ ms.locfileid: "65580416"
   
 1.  リモート管理を有効にするコンピューターに、ローカル管理者としてログオンします。  
   
-2.  管理者特権を使用してコマンド プロンプトを開きます。  
+2.  管理特権でコマンド プロンプトを開きます。  
   
 3.  次のコマンドを実行します。  
   

@@ -1,6 +1,7 @@
 ---
-title: SQL Server の使用状況と診断データの収集のローカル監査 | Microsoft Docs
-ms.custom: ''
+title: 使用状況および診断データの収集のローカル監査
+description: 使用状況および診断データを収集して Microsoft に送信するために SQL Server で使用されるローカル監査について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -13,35 +14,35 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984768"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79286276"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server の使用状況と診断データの収集のローカル監査 (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-## <a name="introduction"></a>概要
+## <a name="introduction"></a>はじめに
 
 Microsoft SQL Server は、お客様のコンピューターまたはデバイスに関する情報を収集して送信するインターネット対応の機能を備えています。 これは*標準的なコンピューター情報*と呼ばれています。 [SQL Server の使用状況と診断データの収集](usage-and-diagnostic-data-configuration-for-sql-server.md)のローカル監査コンポーネントでは、サービスによって収集されたデータが保存先フォルダーに出力されます。このデータは、Microsoft に送信されるデータ (ログ) です。 ローカル監査の目的は、Microsoft がこの機能を使用して収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。  
 
-SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと Analysis Services (SSAS) のインスタンス レベルで構成できるようになりました。 SQL Server 2016 CU4 および SQL Server 2016 SP1 では、ローカル監査は SQL Server Integration Services (SSIS) に対しても有効になります。 セットアップ中にインストールされる他の SQL Server コンポーネントと、セットアップ後にダウンロードまたはインストールされる SQL Server ツールには、使用状況と診断データの収集用のローカル監査機能はありません。
+SQL Server 2016 CU2 および CU3 の場合、ローカル監査は SQL Server Database Engine and Analysis Services (SSAS) のインスタンス レベルで構成できるようになりました。 SQL Server 2016 CU4、2016 SP1、およびそれ以降のリリースの場合、ローカル監査は SQL Server Integration Services (SSIS) に対しても有効になります。 セットアップ中にインストールされる他の SQL Server コンポーネントと、セットアップ後にダウンロードまたはインストールされる SQL Server ツールには、使用状況と診断データの収集用のローカル監査機能はありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
  - SQL CEIP サービスの削除または無効化はサポートされていません。 
  - クラスター グループからの SQL CEIP リソースの削除はサポートされていません。 
 
 データ収集をオプト アウトするには、「[ローカル監査の有効/無効を切り替える](#turning-local-audit-on-or-off)」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>前提条件 
 
 各 SQL Server インスタンス上でローカル監査を有効にする前提条件は次のとおりです。 
 
-1. インスタンスには SQL Server 2016 RTM CU2 以降の修正プログラムが適用されている。 Integration Services の場合、インスタンスには SQL 2016 RTM CU4 または SQL 2016 SP1 の修正プログラムが適用されている。
+1. インスタンスには SQL Server 2016 RTM CU2 以降の修正プログラムが適用されている。 Integration Services の場合、インスタンスには SQL 2016 RTM CU4、SQL 2016 SP1、およびそれ以降の修正プログラムが適用されている。
 
 1. ユーザーはシステム管理者であるか、レジストリ キーの追加および変更、フォルダーの作成、フォルダー セキュリティの管理、および Windows サービスの停止/開始を行うアクセス権を持つロールである必要があります。  
 
@@ -64,7 +65,7 @@ SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと An
  
 1. **サービス** コンソールを起動します。 これを行うには、キーボードで **Windows キーを押しながら R キー**を押し、 **[実行]** ダイアログ ボックスを開きます。 次に、テキスト フィールドに「*services.msc*」と入力し、 **[OK]** を選択して**サービス** コンソールを起動します。  
 
-2. 目的のサービスに移動します。 たとえば、データベース エンジンの場合、**SQL Server CEIP サービス** **(*Your-Instance-Name*)** を探します。 Analysis Services の場合、**SQL Server Analysis Services CEIP** **(*Your-Instance-Name*)** を探します。 Integration Services の場合は、**SQL Server Integration Services CEIP サービス**を探します。
+2. 目的のサービスに移動します。 たとえば、データベース エンジンの場合、**SQL Server CEIP サービス** **(*Your-Instance-Name*)** を探します。 Analysis Services の場合、**SQL Server Analysis Services CEIP** **(*Your-Instance-Name*)** を検索します。 Integration Services の場合は、**SQL Server Integration Services CEIP サービス**を探します。
 
 3. サービスを右クリックし、 **[プロパティ]** を選択します。 
 
@@ -79,10 +80,10 @@ SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと An
 
   ||設計上の決定|推奨|  
   |------|-----------------|----------|  
-  |![チェック ボックス](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|空き領域 |データベース数が約 10 個で中程度のワークロードの場合、インスタンスごとにデータベースあたり約 2 MB のディスク領域で計画を立てます。|  
-|![チェック ボックス](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|別のディレクトリ | 各インスタンス用にディレクトリを作成します。 たとえば、`MSSQLSERVER` という SQL Server インスタンス用には *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* を使用します。 こうすることでファイルの管理が簡単になります。
-|![チェック ボックス](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|別のディレクトリ |サービスごとに別のフォルダーを使用します。 たとえば、1 つのインスタンス名について、データベース エンジン用に 1 つのフォルダーを用意します。 Analysis Services のインスタンスで同じインスタンス名を使用する場合は、Analysis Services 用に別のフォルダーを作成します。 データベース エンジンと Analysis Services の両インスタンスを同じフォルダーに構成すると、すべてのローカル監査で両インスタンスのログが同じログ ファイルに出力されます。| 
-|![チェック ボックス](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|SQL Server CEIP サービス ログオン アカウントにアクセス許可を付与する|SQL Server CEIP サービス ログオン アカウントに対する **フォルダーの内容の一覧表示**、**読み取り**、および**書き込み**の各アクセス権を有効にします|
+  |![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|空き領域 |データベース数が約 10 個で中程度のワークロードの場合、インスタンスごとにデータベースあたり約 2 MB のディスク領域で計画を立てます。|  
+|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|別のディレクトリ | 各インスタンス用にディレクトリを作成します。 たとえば、`MSSQLSERVER` という SQL Server インスタンス用には *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* を使用します。 こうすることでファイルの管理が簡単になります。
+|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|別のディレクトリ |サービスごとに別のフォルダーを使用します。 たとえば、1 つのインスタンス名について、データベース エンジン用に 1 つのフォルダーを用意します。 Analysis Services のインスタンスで同じインスタンス名を使用する場合は、Analysis Services 用に別のフォルダーを作成します。 データベース エンジンと Analysis Services の両インスタンスを同じフォルダーに構成すると、すべてのローカル監査で両インスタンスのログが同じログ ファイルに出力されます。| 
+|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|SQL Server CEIP サービス ログオン アカウントにアクセス許可を付与する|SQL Server CEIP サービス ログオン アカウントに対する **フォルダーの内容の一覧表示**、**読み取り**、および**書き込み**の各アクセス権を有効にします|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>SQL Server CEIP サービス ログオン アカウントにアクセス許可を付与する
@@ -93,7 +94,7 @@ SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと An
 
 1. **[セキュリティ]** タブの **[編集]** を選択し、権限を管理します。
 
-1. **[追加]** を選択し、SQL Server CEIP サービスの資格情報を入力します。 たとえば、 `NT Service\SQLTELEMETRY`があります。
+1. **[追加]** を選択し、SQL Server CEIP サービスの資格情報を入力します。 たとえば、「 `NT Service\SQLTELEMETRY` 」のように指定します。
 
 1. **[名前の確認]** を選択して入力した名前を検証し、 **[OK]** を選択します。
 
@@ -107,23 +108,26 @@ SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと An
 
 1. 目的の CPE パスに移動します。
 
-   | バージョン | ***データベース エンジン*** - レジストリ キー |
+   | Version | ***データベース エンジン*** - レジストリ キー |
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Your-Instance-Name*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*Your-Instance-Name*\\CPE |
    | &nbsp; | &nbsp; |
 
-   | バージョン | ***Analysis Services*** - レジストリ キー |
+   | Version | ***Analysis Services*** - レジストリ キー |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Your-Instance-Name*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*Your-Instance-Name*\\CPE |  
    | &nbsp; | &nbsp; |
 
-  | バージョン | ***Integration Services*** - レジストリ キー |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-  | &nbsp; | &nbsp; |
+   | Version | ***Integration Services*** - レジストリ キー |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
+   | &nbsp; | &nbsp; |
 
 1. CPE パスを右クリックし、 **[新規]** を選択します。 **[文字列値]** を選択します。
 
@@ -156,6 +160,7 @@ SQL Server CEIP が既に実行中の場合、ローカル監査設定は直ち�
     - Integration Services の場合、 
         - SQL 2016 の場合、「*SQL Server Integration Services CEIP サービス 13.0*」を使用します。
         - SQL 2017 の場合、「*SQL Server Integration Services CEIP サービス 14.0*」を使用します。
+    - SQL 2019 の場合、"*SQL Server Integration Services CEIP サービス 15.0*" を使用します。
 
 1. サービスを右クリックし、[再起動] を選択します。 
 
@@ -185,18 +190,18 @@ SQL Server CEIP が既に実行中の場合、ローカル監査設定は直ち�
 
 | 論理的なローカル監査情報階層 | 関連する列 |
 | ------ | -------|
-| Header | emitTime、schemaVersion 
+| ヘッダー | emitTime、schemaVersion 
 | Machine | operatingSystem 
 | インスタンス | instanceUniqueID, correlationID, clientVersion 
 | Session | sessionID、traceName 
 | クエリ | sequence、querySetVersion、queryIdentifier、query、queryTimeInTicks 
-| data |  data 
+| Data |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>名前/値ペアの定義と例 
 
 以下の列は、ローカル監査ファイル出力の順を表しています。 以下の複数列の匿名化された値に対して、SHA 256 による一方向のハッシュが使用されています。  
 
-| [オブジェクト名] | [説明] | 値の例
+| 名前 | 説明 | 値の例
 |-------|--------| ----------|
 |instanceUniqueID| 匿名のインスタンス識別子。 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| SQLCEIP のスキーマ バージョン |  3 
@@ -315,7 +320,7 @@ Local Audit ログ ファイルは JSON 形式で出力されます。 各行は
 ローカル監査ファイルが出力されなくなります。
 
 **インターネット接続がない場合やコンピューターがファイアウォールの背後にある場合はどうなりますか?**
-SQL Server 2016 の使用状況と診断データは Microsoft に送信されなくなります。 構成が正しければ、Local Audit ログの出力は試行されます。
+SQL Server の使用状況と診断データは Microsoft に送信されなくなります。 構成が正しければ、Local Audit ログの出力は試行されます。
 
 **DBA がローカル監査を無効にするにはどうすればよいですか?**
 UserRequestedLocalAuditDirectory レジストリ キー エントリを削除します。
@@ -328,7 +333,7 @@ UserRequestedLocalAuditDirectory レジストリ キー エントリを削除し
 
 **この JSON 出力を読み取るために使用できるクライアントまたはツールはありますか?**
 出力は、メモ帳、Visual Studio、JSON リーダーなど任意のツールで読み取ることができます。
-また、JSON ファイルを読み取り、以下の図のように SQL Server 2016 インスタンスのデータを分析することもできます。 SQL Server で JSON ファイルを読み取る方法の詳細については、「 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)」(OPENROWSET (BULK) と OPENJSON (Transact-SQL) を使用して JSON ファイルを SQL Server にインポートする) を参照してください。
+また、JSON ファイルを読み取り、以下の図のように SQL Server インスタンスのデータを分析することもできます。 SQL Server で JSON ファイルを読み取る方法の詳細については、「 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)」(OPENROWSET (BULK) と OPENJSON (Transact-SQL) を使用して JSON ファイルを SQL Server にインポートする) を参照してください。
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)
@@ -374,5 +379,5 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Local audit for SSMS usage and diagnostic data collection (SSMS の使用状況および診断データの収集のローカル監査)](../ssms/sql-server-management-studio-telemetry-ssms.md)

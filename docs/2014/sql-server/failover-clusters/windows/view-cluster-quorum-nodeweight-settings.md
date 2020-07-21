@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bab64e8a33baae2c87e8068a1e4d23799742b55c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef2176d4916e8affbb9ef89c9b26499289c520ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049387"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045987"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>クラスター クォーラムの NodeWeight 設定を表示
   このトピックでは、Windows Server フェールオーバー クラスタリング (WSFC) クラスター内の各メンバー ノードの NodeWeight 設定を表示する方法について説明します。 NodeWeight 設定は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのディザスター リカバリーとマルチサブネットのシナリオをサポートするためのクォーラムの投票時に使用されます。  
@@ -27,9 +26,9 @@ ms.locfileid: "63049387"
   
 -   **クォーラムの NodeWeight 設定を表示する方法:** [Transact-SQL の使用](#TsqlProcedure)、[PowerShell の使用](#PowerShellProcedure)、[Cluster.exe の使用](#CommandPromptProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始前の準備  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 開始前の準備  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  この機能は [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 以降のバージョンでのみサポートされています。  
   
 > [!IMPORTANT]  
@@ -40,10 +39,10 @@ ms.locfileid: "63049387"
 > [!TIP]  
 >  この修正プログラムがインストールされていない場合、このトピックの例では、NodeWeight に対して空の値または NULL 値が返されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  ユーザーは、WSFC クラスターの各ノードのローカル Administrators グループのメンバーであるドメイン アカウントを使用する必要があります。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 ##### <a name="to-view-nodeweight-settings"></a>NodeWeight 設定を表示するには  
   
@@ -59,9 +58,9 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
  FROM   sys.dm_hadr_cluster_members;  
 ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
   
-##### <a name="to-view-nodeweight-settings"></a>NodeWeight 設定を表示するには  
+### <a name="to-view-nodeweight-settings"></a>NodeWeight 設定を表示するには
   
 1.  **[実行管理者として実行]** から高度な権限で Windows PowerShell を起動します。  
   
@@ -80,10 +79,10 @@ Import-Module FailoverClusters
 $cluster = "Cluster001"  
 $nodes = Get-ClusterNode -Cluster $cluster  
   
-$nodes | Format-Table -property NodeName, State, NodeWeight  
+$nodes | Format-Table -Property NodeName, State, NodeWeight  
 ```  
   
-##  <a name="CommandPromptProcedure"></a> cluster.exe の使用  
+##  <a name="using-clusterexe"></a><a name="CommandPromptProcedure"></a> cluster.exe の使用  
   
 > [!NOTE]  
 >  cluster.exe ユーティリティは [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] リリースでは非推奨とされます。  今後は PowerShell とフェールオーバー クラスタリングを使用してください。  cluster.exe ユーティリティは、Windows Server の次のリリースで削除されます。 詳細については、「 [フェールオーバー クラスターの Windows PowerShell コマンドレットへの Cluster.exe コマンドのマッピング](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx)」を参照してください。  
@@ -97,14 +96,12 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ### <a name="example-clusterexe"></a>例 (Cluster.exe)  
  次の例では、"Cluster001" というクラスターについて、ノードの一部のプロパティを出力します。  
   
-```ms-dos  
+```cmd
 cluster.exe Cluster001 node /status /properties  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [クラスター クォーラムの NodeWeight の設定の構成](configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)   
  [タスク フォーカスによって一覧表示される Windows PowerShell でのフェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
-  
-  

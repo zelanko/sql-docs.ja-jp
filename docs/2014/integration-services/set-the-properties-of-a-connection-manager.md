@@ -1,5 +1,5 @@
 ---
-title: 接続マネージャーのプロパティを設定 |Microsoft Docs
+title: 接続マネージャーのプロパティを設定する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], modifying
 - modifying connection managers
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1e3d0780e761cb5b0cdd4fd267bdfb2662f55cf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e435d5f3ea00707ba1b392058b118a06cfd7ce83
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66055834"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421609"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>接続マネージャーのプロパティを設定する
   すべての接続マネージャーは **[プロパティ]** ウィンドウを使用して構成できます。  
@@ -51,13 +50,13 @@ ms.locfileid: "66055834"
   
 4.  **[接続マネージャー]** 領域で接続マネージャーをダブルクリックして、 **[接続マネージャー]** ダイアログ ボックスを開きます。 特定の種類の接続マネージャーおよび各種類で使用するオプションの詳細については、次の表を参照してください。  
   
-    |[接続マネージャー]|および|  
+    |[ODBC 入力元エディター]|オプション|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](configure-ado-net-connection-manager.md)|  
     |[Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)|[[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Excel 接続マネージャー](connection-manager/excel-connection-manager.md)|[Excel 接続マネージャー エディター](../../2014/integration-services/excel-connection-manager-editor.md)|  
-    |[ファイル接続マネージャー](connection-manager/file-connection-manager.md)|[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)|  
+    |[Excel 接続マネージャー](connection-manager/excel-connection-manager.md)|[Excel 接続マネージャー](../../2014/integration-services/excel-connection-manager-editor.md)|  
+    |[ファイル接続マネージャー](connection-manager/file-connection-manager.md)|[[ファイル接続マネージャー エディター] ダイアログ ボックス](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[複数ファイル接続マネージャー](connection-manager/multiple-files-connection-manager.md)|[[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[フラット ファイル接続マネージャー](connection-manager/flat-file-connection-manager.md)|[[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
     |[複数フラット ファイル接続マネージャー](connection-manager/multiple-flat-files-connection-manager.md)|[[複数フラット ファイル接続マネージャー エディター] ([全般] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] ([列] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [[複数フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
@@ -73,8 +72,8 @@ ms.locfileid: "66055834"
   
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; の接続](connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>関連項目  
+ [SSIS&#41; 接続の Integration Services &#40;](connection-manager/integration-services-ssis-connections.md)   
  [パッケージの接続マネージャーを追加、削除、または共有する](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   
   

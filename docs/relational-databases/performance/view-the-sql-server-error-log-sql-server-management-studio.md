@@ -1,6 +1,7 @@
 ---
-title: SQL Server エラー ログの表示 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: SQL Server エラー ログの表示 (SSMS)
+description: SQL Server Management Studio (SSMS) で SQL Server エラー ログを表示します。
+ms.custom: seo-dt-2019
 ms.date: 09/29/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,18 +16,19 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 35bd9553376b7e8887271a0a51c023a0be95c4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a10948a63d119ec86c156b79d925f1b905b152f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986625"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737085"
 ---
-# <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>SQL Server エラー ログの表示 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) で SQL Server エラー ログを表示する
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログには、トラブルシューティングに利用できるユーザー定義のイベントや特定のシステム イベントが含まれています。 
 
-## <a name="view-the-logs"></a>ログの表示
+## <a name="view-the-logs"></a>ログを表示する
 
 1. SQL Server Management Studio で **[オブジェクト エクスプローラー]** を選択します。 **オブジェクト エクスプローラー**を開くには、F8 キーを押します。 または、上部メニューで **[表示]** 、 **[オブジェクト エクスプローラー]** の順に選択します。
     
@@ -41,8 +43,6 @@ ms.locfileid: "67986625"
     ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
 5. **ログ ファイル ビューアー**でログの一覧が表示されます (少し時間がかかることがあります)。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   ## <a name="see-also"></a>参照
   詳細については、[MSSQLTips.com](https://www.mssqltips.com/) の参考になる投稿「[Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/)」(SQL Server エラー ログ ファイルの場所を探す) を参照してください。

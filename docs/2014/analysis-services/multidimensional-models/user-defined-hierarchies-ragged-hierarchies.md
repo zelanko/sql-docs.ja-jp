@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a4f14a1f853a99ccb6b2dbbed72bd38b70f2ea7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889330"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535634"
 ---
 # <a name="ragged-hierarchies"></a>不規則階層
   不規則階層はユーザー定義の階層で、不均一な数のレベルが含まれています。 一般的な例として、部門の管理者と管理者以外のメンバーの両方が直属の部下として上級管理者に属している組織図や、国 - 地域 - 市から構成される地理的な階層 (ワシントン D.C.、バチカン、ニューデリーなど、親となる州や省などを持たない市がいくつかあります) などを挙げることができます。  
@@ -28,15 +27,15 @@ ms.locfileid: "68889330"
   
  まず、クライアント アプリケーションを調べて、ドリル ダウン パスの処理方法を確認します。 たとえば、Excel では、不足値のプレースホルダーとして親の名前が繰り返されます。 この動作を確認するには、Adventure Works 多次元モデルの Sales Territory ディメンションを使用してピボットテーブルを構築します。 ピボットテーブルでは、Sales Territory 属性として "グループ"、"国"、"地域" を設定します。地域の値が欠落している場合、国がプレースホルダーとして使用されることを確認します。この場合は、地域の上の親 (国名) が繰り返し使用されます。 この動作は、Excel 内で固定されている MDX Compatibility=1 接続文字列プロパティから派生します。 必要としているドリル ダウンの動作をクライアントが実現しない場合は、それらの動作のいくつかを変更するように、モデルのプロパティを設定することができます。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
--   [不規則階層でのドリル ダウン ナビゲーションを変更する方法](#bkmk_approach)  
+-   [不規則階層でのドリルダウンナビゲーションを変更する方法](#bkmk_approach)  
   
 -   [HideMemberIf を設定して標準階層のメンバーを非表示にする](#bkmk_Hide)  
   
 -   [MDX の互換性を設定してクライアント アプリケーションでのプレースホルダーの表示方法を指定する](#bkmk_Mdx)  
   
-##  <a name="bkmk_approach"></a> 不規則階層でのドリル ダウン ナビゲーションを変更する方法  
+##  <a name="approaches-for-modifying-drilldown-navigation-in-a-ragged-hierarchy"></a><a name="bkmk_approach"></a> 不規則階層でのドリル ダウン ナビゲーションを変更する方法  
  ドリル ダウン ナビゲーションが予期した値を返さない場合や使いにくい場合、不規則階層の存在が問題になります。 不規則階層が原因となるナビゲーションの問題を解決するには、次の点を検討してください。  
   
 -   標準階層を使用します。ただし、各レベルの `HideMemberIf` プロパティを設定し、ユーザーに対して欠落しているレベルを表示するかどうかを指定します。 `HideMemberIf` を設定するとき、接続文字列で `MDXCompatibility` も設定し、既定のナビゲーション動作をオーバーライドします。 これらのプロパティの設定手順をこのトピックで説明します。  
@@ -45,7 +44,7 @@ ms.locfileid: "68889330"
   
  ディメンションに複数の不規則階層が含まれている場合は、第 1 の方法である、`HideMemberIf` の設定を使用してください。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 この手法の詳細について[は、「Martin を使用した SSAS 財務キューブ-パート 1a-不規則階層 (ブログ)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 」を参照してください。  
   
-##  <a name="bkmk_Hide"></a> HideMemberIf を設定して標準階層のメンバーを非表示にする  
+##  <a name="set-hidememberif-to-hide-members-in-a-regular-hierarchy"></a><a name="bkmk_Hide"></a> HideMemberIf を設定して標準階層のメンバーを非表示にする  
  不規則なディメンションのテーブルでは、論理的に欠落しているメンバーはさまざまな方法で表されます。 テーブルのセルに NULL または空の文字列を含めたり、親と同じ値を含めてプレースホルダーとして使用できます。 プレースホルダーの表示は、子メンバーのプレースホルダーのステータス、`HideMemberIf` プロパティ、クライアント アプリケーションの `MDX Compatibility` 接続文字列プロパティによって決まります。  
   
  不規則階層の表示をサポートしているクライアント アプリケーションの場合、これらのプロパティを使用して、論理的に欠落しているメンバーを非表示にできます。  
@@ -62,10 +61,10 @@ ms.locfileid: "68889330"
     |**NoName**|レベル メンバーは、その名前が空の場合、表示されません。|  
     |**ParentName**|レベル メンバーは、名前がその親の名前と同じである場合、表示されません。|  
   
-##  <a name="bkmk_Mdx"></a> MDX の互換性を設定してクライアント アプリケーションでのプレースホルダーの表示方法を指定する  
+##  <a name="set-mdx-compatibility-to-determine-how-placeholders-are-represented-in-client-applications"></a><a name="bkmk_Mdx"></a>クライアントアプリケーションでのプレースホルダーの表示方法を決定するための MDX 互換性の設定  
  階層レベルで `HideMemberIf` を設定したら、クライアント アプリケーションから送信される接続文字列の `MDX Compatibility` プロパティも設定する必要があります。 `MDX Compatibility` の設定によって、`HideMemberIf` が使用されるかどうかが決まります。  
   
-|MDX Compatibility の設定|説明|使用方法|  
+|MDX Compatibility の設定|説明|使用法|  
 |-------------------------------|-----------------|-----------|  
 |**1**|プレースホルダーの値を表示します。|この値は、Excel、SSDT、SSMS で既定で使用される値です。 この値は、サーバーに対して、不規則階層で空のレベルがドリル ダウンされた場合にプレースホルダーの値を返すように指示します。 プレースホルダーの値をクリックすると、ドリル ダウンを継続して、子 (リーフ) ノードを取得できます。<br /><br /> Excel には Analysis Services に接続する際に使用される接続文字列があり、この接続文字列では、新しく接続を行うたびに `MDX Compatibility` が必ず 1 に設定されます。 この動作は、旧バージョンとの互換性のために保持されています。|  
 |**2**|プレースホルダーの値 (null 値または親レベルの複製) を非表示にします。ただし、関連する値を持つ他のレベルとノードは表示します。|不規則階層では、通常、`MDX Compatibility`=2 が優先される設定として示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートと一部のサードパーティのクライアント アプリケーションでは、この設定を保存できます。|  

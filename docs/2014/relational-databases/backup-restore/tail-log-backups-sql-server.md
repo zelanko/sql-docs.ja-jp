@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd7c505701a4edb1f66ca516d06179b2eb1a222d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62920677"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956252"
 ---
 # <a name="tail-log-backups-sql-server"></a>ログ末尾のバックアップ (SQL Server)
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのバックアップと復元のみに関連しています。  
@@ -34,10 +33,10 @@ ms.locfileid: "62920677"
   
  
   
-##  <a name="TailLogScenarios"></a> ログ末尾のバックアップが必要となるシナリオ  
+##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> ログ末尾のバックアップが必要となるシナリオ  
  以下に示すシナリオでは、ログ末尾のバックアップをお勧めします。  
   
--   データベースがオンライン状態であり、データベースに対して復元操作を実行する予定がある場合に、ログ末尾のバックアップを最初に行う。 オンライン データベースのエラーを防ぐには、WITH NORECOVERY オプション、[バックアップ](/sql/t-sql/statements/backup-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
+-   データベースがオンライン状態であり、データベースに対して復元操作を実行する予定がある場合に、ログ末尾のバックアップを最初に行う。 オンラインデータベースでエラーが発生しないようにするには、...[BACKUP](/sql/t-sql/statements/backup-transact-sql)ステートメントの with NORECOVERY オプション [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
 -   データベースがオフラインで起動できず、データベースを復元する必要がある場合に、まずログの末尾をバックアップする。 このとき、トランザクションは発生しないので、WITH NORECOVERY の指定は省略できます。  
   
@@ -47,12 +46,12 @@ ms.locfileid: "62920677"
   
  次の表は、BACKUP NORECOVERY と CONTINUE_AFTER_ERROR オプションをまとめたものです。  
   
-|BACKUP LOG オプション|コメント|  
+|BACKUP LOG オプション|説明|  
 |-----------------------|--------------|  
-|NORECOVERY|データベースの復元操作を続行する場合は、必ず NORECOVERY を使用します。 NORECOVERY を指定すると、データベースは復元中の状態になります。 これにより、ログ末尾のバックアップの後にデータベースが変化しないことが保障されます。  ログには、NO_TRUNCATE オプションまたは COPY_ONLY オプションが指定されてもいない場合は切り捨てられます。<br /><br /> **\*\* 重要な\* \*** データベースが破損している場合を除き、NO_TRUNCATE を使用しないことをお勧めします。|  
-|CONTINUE_AFTER_ERROR|破損したデータベースの末尾をバックアップする場合に限り、CONTINUE_AFTER_ERROR を使用します。<br /><br /> 注:破損したデータベースにログ末尾のバックアップを適用する場合、通常であればログ バックアップにキャプチャされるメタデータの一部を使用できない場合があります。 詳細については、後の「[不完全なバックアップ メタデータが含まれたログ末尾のバックアップ](#IncompleteMetadata)」を参照してください。|  
+|NORECOVERY|データベースの復元操作を続行する場合は、必ず NORECOVERY を使用します。 NORECOVERY を指定すると、データベースは復元中の状態になります。 これにより、ログ末尾のバックアップの後にデータベースが変化しないことが保障されます。  NO_TRUNCATE オプションまたは COPY_ONLY オプションも指定されていない限り、ログは切り捨てられます。<br /><br /> 重要データベースが破損している場合を除き、NO_TRUNCATE を使用しないことをお勧めします。 ** \* \* \* \* **|  
+|CONTINUE_AFTER_ERROR|破損したデータベースの末尾をバックアップする場合に限り、CONTINUE_AFTER_ERROR を使用します。<br /><br /> 注: 破損したデータベースでログの末尾のバックアップを使用すると、通常はログバックアップでキャプチャされたメタデータの一部が使用できなくなる場合があります。 詳細については、後の「[不完全なバックアップ メタデータが含まれたログ末尾のバックアップ](#IncompleteMetadata)」を参照してください。|  
   
-##  <a name="IncompleteMetadata"></a> 不完全なバックアップ メタデータが含まれたログ末尾のバックアップ  
+##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a>不完全なバックアップメタデータが含まれるログ末尾のバックアップ  
  データベースがオフラインである場合、データベースが破損している場合、またはデータ ファイルが欠落している場合でも、ログ末尾のバックアップではログの末尾がキャプチャされます。 これが原因で、復元情報コマンドや **msdb**のメタデータが不完全になる場合があります。 ただし、メタデータが不完全なだけで、キャプチャされたログは完全であり、使用できます。  
   
  ログ末尾のバックアップに不完全なメタデータが含まれている場合は、 [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) テーブルの **has_incomplete_metadata** が **1**に設定されます。 また、 [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)の出力で **HasIncompleteMetadata** が **1**に設定されます。  
@@ -63,13 +62,13 @@ ms.locfileid: "62920677"
   
 -   **filegroup_id**  
   
--   **型**  
+-   **type**  
   
 -   **type_desc**  
   
 -   **is_readonly**  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  ログ末尾のバックアップを作成するには、「[データベースが破損したときのトランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)」をご覧ください。  
   
  トランザクション ログ バックアップを復元するには、「[トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)」をご覧ください。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7c4078c4efd38d2313b6b7c89e8fe7721086bc40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d7a0e8974f781f5f69817cf3374416de7bc32580
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967858"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71288382"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 式)
 
@@ -41,7 +41,7 @@ REVERSE(character_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *character_expression* 引数は、DT_WSTR データ型である必要があります。  
   
  *character_expression* が NULL の場合、REVERSE は NULL を返します。  

@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfbe6ede99184ea806b24bb7f8565b616a561cd
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4f84fc174f63ebf6e58e93a3ba19b39897fbf7e9
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769749"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159520"
 ---
 # <a name="view-and-modify-article-properties"></a>アーティクルのプロパティの表示および変更
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、アーティクルのプロパティを表示および変更する方法について説明します。  
   
  **このトピックの内容**  
@@ -39,7 +39,7 @@ ms.locfileid: "68769749"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
 -   **アーティクルのプロパティを表示および変更するために使用するもの:**  
   
@@ -49,17 +49,17 @@ ms.locfileid: "68769749"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   パブリケーションの作成後には変更できないプロパティや、パブリケーションへのサブスクリプションがある場合には変更できないプロパティもあります。 変更できないプロパティは、読み取り専用として表示されます。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
--   パブリケーションの作成後、プロパティの変更によっては新しいスナップショットが必要となります。 パブリケーションにサブスクリプションが含まれている場合、変更によっては、すべてのサブスクリプションを再初期化する必要もあります。 詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) と「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」(既存パブリケーションでのアーティクルの追加と削除) をご覧ください。  
+-   パブリケーションの作成後、プロパティの変更によっては新しいスナップショットが必要となります。 パブリケーションにサブスクリプションが含まれている場合、変更によっては、すべてのサブスクリプションを再初期化する必要もあります。 詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」 (パブリケーションおよびアーティクルのプロパティの変更) と「[既存のパブリケーションでのアーティクルの追加および削除](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」を参照してください。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] とレプリケーション モニターにある **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、アーティクルのプロパティを表示および変更します。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 -   **[全般]** ページ。パブリケーションの名前と説明、データベースの名前、パブリケーションの種類、およびサブスクリプションの有効期限の設定が含まれています。  
@@ -88,47 +88,47 @@ ms.locfileid: "68769749"
   
 2.  プロパティの変更を適用するアーティクルを選択します。  
   
-    -   **[反転表示された \<ObjectType> アーティクルのプロパティを設定]** をクリックし、 **[アーティクルのプロパティ - \<ObjectName>]** ダイアログ ボックスを表示します。このダイアログ ボックスで行われたプロパティの変更は、 **[アーティクル]** ページのオブジェクト ペインで反転表示されたオブジェクトだけに適用されます。  
+    -   **[反転表示された \<ObjectType> アーティクルのプロパティを設定]** をクリックして、 **[アーティクルのプロパティ - \<ObjectName>]** ダイアログ ボックスを表示します。このダイアログ ボックスで行われたプロパティの変更は、 **[アーティクル]** ページのオブジェクト ペインで反転表示されたオブジェクトのみに適用されます。  
   
-    -   **[すべての\<ObjectType> アーティクルのプロパティを設定]** をクリックし、 **[すべての \<ObjectType> アーティクルのプロパティ]** ダイアログ ボックスを表示します。このダイアログ ボックスで行われたプロパティの変更は、パブリケーションが選択されていないオブジェクトも含めた、 **[アーティクル]** ページのオブジェクト ペインにあるこの種類のすべてのオブジェクトに適用されます。  
+    -   **[すべての\<ObjectType> アーティクルのプロパティを設定]** をクリックして、 **[すべての \<ObjectType> アーティクルのプロパティ]** ダイアログ ボックスを表示します。このダイアログ ボックスで行われたプロパティの変更は、パブリケーション用に選択されていないオブジェクトも含め、 **[アーティクル]** ページのオブジェクト ペインにあるこの種類のすべてのオブジェクトに適用されます。  
   
         > [!NOTE]  
-        >  **[すべての \<ObjectType&gt; アーティクルのプロパティ]** ダイアログ ボックスで行われたプロパティの変更は、 **[アーティクルのプロパティ - \<ObjectName&gt;]** ダイアログ ボックスで以前行われたすべての変更をオーバーライドします。 たとえば、あるオブジェクトの種類のすべてのアーティクルに対して複数の既定を設定し、かつそれぞれのオブジェクトに対してプロパティを設定する場合には、最初にすべてのアーティクルに対する既定を設定します。 次に、それぞれのオブジェクトに対してプロパティを設定します。  
+        >  **[すべての \<ObjectType> アーティクルのプロパティ]** ダイアログ ボックスで行われたプロパティの変更は、 **[アーティクルのプロパティ - \<ObjectName>]** ダイアログ ボックスで以前行われた変更をすべてオーバーライドします。 たとえば、あるオブジェクトの種類のすべてのアーティクルに対して複数の既定を設定し、かつそれぞれのオブジェクトに対してプロパティを設定する場合には、最初にすべてのアーティクルに対する既定を設定します。 次に、それぞれのオブジェクトに対してプロパティを設定します。  
   
 3.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
   
 4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  アーティクルのプロパティは、レプリケーションのストアド プロシージャを使用して、プログラムから変更および取得できます。 使用するストアド プロシージャは、アーティクルが属するパブリケーションの種類によって異なります。  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに属するアーティクルのプロパティを表示するには  
   
-1.  テーブル アーティクルについて [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)を実行します。 **@publication** パラメーターにはパブリケーションの名前を指定し、 **@article** パラメーターにはアーティクルの名前を指定します。 **@article** を指定しない場合は、パブリケーションのすべてのアーティクルに関する情報が返されます。  
+1.  `@publication` パラメーターにパブリケーションの名前、`@article` パラメーターにアーティクルの名前を指定して、[sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md) を実行します。 `@article` を指定しない場合は、パブリケーションのすべてのアーティクルに関する情報が返されます。  
   
 2.  テーブル アーティクルについて [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) を実行し、ベース テーブルで使用できるすべての列を一覧表示します。  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに属するアーティクルのプロパティを変更するには  
   
-1.  テーブル アーティクルについて [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)を実行します。このとき、変更するアーティクルのプロパティを **@property** パラメーターに指定し、このプロパティの新しい値を **@value** パラメーターにはアーティクルの名前を指定します。  
+1.  `@property` パラメーターに変更するアーティクルのプロパティを指定し、`@value` パラメーターにこのプロパティの新しい値を指定して、[sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を実行します。  
   
     > [!NOTE]  
-    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot** を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_invalidate_snapshot** に **@force_reinit_subscription** 」を参照してください。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
+    >  変更で新しいスナップショットを生成する必要がある場合は、`@force_invalidate_snapshot` に対して値 `1` を指定する必要もあり、変更でサブスクライバーを再初期化する必要がある場合は、`@force_reinit_subscription` に対して値 `1` を指定する必要もあります。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>マージ パブリケーションに属するアーティクルのプロパティを表示するには  
   
-1.  テーブル アーティクルについて [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)を実行します。 **@publication** パラメーターにはパブリケーションの名前を指定し、 **@article** パラメーターにはアーティクルの名前を指定します。 これらのパラメーターを指定しない場合、パブリケーションまたはパブリッシャーのすべてのアーティクルに関する情報が返されます。  
+1.  `@publication` パラメーターにパブリケーションの名前、`@article` パラメーターにアーティクルの名前を指定して、[sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) を実行します。 これらのパラメーターを指定しない場合、パブリケーションまたはパブリッシャーのすべてのアーティクルに関する情報が返されます。  
   
 2.  テーブル アーティクルに対して [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) を実行し、ベース テーブルで使用できるすべての列を一覧表示します。  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>マージ パブリケーションに属するアーティクルのプロパティを変更するには  
   
-1.  テーブル アーティクルについて [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。このとき、変更するアーティクルのプロパティを **@property** パラメーターに指定し、このプロパティの新しい値を **@value** パラメーターにはアーティクルの名前を指定します。  
+1.  `@property` パラメーターに変更するアーティクルのプロパティを指定し、`@value` パラメーターにこのプロパティの新しい値を指定して、[sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。  
   
     > [!NOTE]  
-    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot** を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_invalidate_snapshot** に **@force_reinit_subscription** 」を参照してください。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
+    >  変更で新しいスナップショットを生成する必要がある場合は、`@force_invalidate_snapshot` に対して値 `1` を指定する必要もあり、変更でサブスクライバーを再初期化する必要がある場合は、`@force_reinit_subscription` に対して値 `1` を指定する必要もあります。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  パブリッシュされたアーティクルのプロパティを取得するトランザクション レプリケーションの例を、次に示します。  
   
  [!code-sql[HowTo#sp_helptranarticle](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-article-_1.sql)]  
@@ -145,7 +145,7 @@ ms.locfileid: "68769749"
   
  [!code-sql[HowTo#sp_changemergearticle](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-article-_4.sql)]  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  アーティクルのプロパティは、レプリケーション管理オブジェクト (RMO) を使用してプログラムから変更できます。 アーティクルのプロパティを表示または変更する際に使用する RMO のクラスは、アーティクルが属しているパブリケーションの種類によって異なります。  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに属しているアーティクルのプロパティを表示または変更するには  
@@ -180,7 +180,7 @@ ms.locfileid: "68769749"
   
 7.  (省略可) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を指定した場合、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に値 **false** (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、マージ アーティクルに変更を加え、アーティクル用のビジネス ロジック ハンドラーを指定しています。  
   
  [!code-cs[HowTo#rmo_ChangeMergeArticle_BLH](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changemergearticle_blh)]  

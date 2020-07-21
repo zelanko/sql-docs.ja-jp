@@ -16,17 +16,17 @@ helpviewer_keywords:
 - '@@DBTS function'
 - timestamp data type
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 61743139f35ed3e8a5dd4bbac9bd1f4660cb2ec2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5493589b7a87af2ea856a63e81c3b366eb410d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136030"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682941"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は、現在のデータベースの現在の **timestamp** 型の値を返します。 現在のデータベースには、保証付きの一意のタイムスタンプ値が与えられます。
   
@@ -41,13 +41,13 @@ ms.locfileid: "68136030"
 ## <a name="return-types"></a>戻り値の型
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 @@DBTS は、現在のデータベースで最後に使用されたタイムスタンプを返します。 **timestamp** 列を持つ行を挿入するか更新すると、新しいタイムスタンプ値が生成されます。
   
 トランザクション分離レベルでの変更は、@@DBTS 関数に影響を与えません。
   
-## <a name="examples"></a>使用例  
-この例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースから現在の **timestamp** を返します。
+## <a name="examples"></a>例  
+この例は、**データベースから現在の**timestamp[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] を返します。
   
 ```sql
 USE AdventureWorks2012;  

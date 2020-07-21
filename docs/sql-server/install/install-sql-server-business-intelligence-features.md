@@ -1,23 +1,24 @@
 ---
-title: SQL Server 2016 のビジネス インテリジェンス機能のインストール | Microsoft Docs
-ms.custom: ''
-ms.date: 11/02/2016
+title: ビジネス インテリジェンス機能のインストール
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 418852430170e40308d1d37446b9868281960f49
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f1fe29347adabe175745d6994000d7f1f68b05dd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894048"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253452"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>SQL Server のビジネス インテリジェンス機能のインストール
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Microsoft Business Intelligence プラットフォームに含まれる SQL Server 機能には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および分析データの作成または操作に使用されるいくつかのクライアント アプリケーションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのドキュメントのこのセクションでは、これらの機能のインストール方法について説明します。  

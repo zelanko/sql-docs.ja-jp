@@ -1,5 +1,5 @@
 ---
-title: 物理アーキテクチャ (Analysis Services - 多次元データ) |Microsoft Docs
+title: 物理アーキテクチャ (Analysis Services-多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 7109fad3-65d3-4971-87db-31194bc85e05
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 68e1bba4999f237d5b38ac3f475d2b67fc41959b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc98ce256342d17ae8d5433089c2a742ff612648
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724807"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545874"
 ---
 # <a name="physical-architecture-analysis-services---multidimensional-data"></a>物理アーキテクチャ (Analysis Services - 多次元データ)
     
 ## <a name="in-this-section"></a>このセクションの内容  
- 次のトピックの説明のアーキテクチャの詳細について、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]ソリューション。  
+ 次のトピックでは、ソリューションのアーキテクチャの詳細について説明し [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ます。  
   
 |トピック|説明|  
 |-----------|-----------------|  
 |[OLAP エンジンのサーバー コンポーネント](olap-engine-server-components.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのコンポーネントについて説明します。|  
-|[ローカル キューブ&#40;Analysis Services - 多次元データ&#41;](local-cubes-analysis-services-multidimensional-data.md)|スタンドアロンのキューブの実装方法と [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ソリューションにおけるこのような実装のスコープについて説明します。|  
+|[ローカルキューブ &#40;Analysis Services-多次元データ&#41;](local-cubes-analysis-services-multidimensional-data.md)|スタンドアロンのキューブの実装方法と [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ソリューションにおけるこのような実装のスコープについて説明します。|  
 |[Analysis Services 開発に関するクライアント アーキテクチャの要件](client-architecture-requirements-for-analysis-services-development.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ソリューションからデータとメタデータにアクセスするためのクライアント アーキテクチャについて説明します。|  
   
   

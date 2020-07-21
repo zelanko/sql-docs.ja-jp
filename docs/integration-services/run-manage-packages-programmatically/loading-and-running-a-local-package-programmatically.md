@@ -18,14 +18,14 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3f127aeb7d9e86e70460190d11ea7c61b57c1d24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d8f9264a456464b40cfce4382cb7d70cbb7ce4cf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028585"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295753"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>プログラムによるローカル パッケージの読み込みと実行
 
@@ -45,7 +45,7 @@ ms.locfileid: "68028585"
 ## <a name="loading-a-package-programmatically"></a>プログラムによるパッケージの読み込み  
  プログラムによってローカル コンピューターでパッケージを読み込むには、パッケージがローカルまたはリモートのどちらに保存されているかに関係なく、次のいずれかの方法を使用できます。  
   
-|ストレージの場所|呼び出すメソッド|  
+|保存先|呼び出すメソッド|  
 |----------------------|--------------------|  
 |ファイル|<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A>|  
 |[SSIS パッケージ ストア]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>|  

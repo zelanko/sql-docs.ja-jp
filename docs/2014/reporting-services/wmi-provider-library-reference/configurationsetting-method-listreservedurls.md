@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098264"
 ---
-# <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>ListReservedURLs メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="listreservedurls-method-wmi-msreportserver_configurationsetting"></a>ListReservedURLs メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー上のすべてのアプリケーション用に予約されている URL を一覧表示します。  
   
 ## <a name="syntax"></a>構文  
@@ -49,7 +49,7 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
  *AccountSID[]*  
  [out] URL 予約のアカウントに関連付けられているアカウントの SID。  
   
- *長さ*  
+ *[データ型]*  
  [out] メソッドによって返される配列の長さ。  
   
  *HRESULT*  
@@ -58,7 +58,7 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

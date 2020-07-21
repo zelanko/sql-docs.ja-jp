@@ -1,5 +1,5 @@
 ---
-title: 予測クエリ ビルダーを使用して予測クエリの作成 |Microsoft Docs
+title: 予測クエリビルダーを使用して予測クエリを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 759830666c3da1faa8deccb754fc2955b47e5bd7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085347"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523718"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>予測クエリ ビルダーを使用した予測クエリの作成
-  予測クエリは、BI Development Studio でデータ マイニング ソリューションを構築しているときに作成できます。また、SQL Server Management Studio で既存のマイニング モデルを右クリックし、**[予測クエリの作成]** オプションを選択して、作成することもできます。  
+  予測クエリは、BI Development Studio でデータ マイニング ソリューションを構築しているときに作成できます。また、SQL Server Management Studio で既存のマイニング モデルを右クリックし、 **[予測クエリの作成]** オプションを選択して、作成することもできます。  
   
  **予測クエリ ビルダー** には、次の 3 種類のデザイン モードがあります。これらのモードを切り替えるには、左上隅のアイコンをクリックします。  
   
--   **デザイン**  
+-   **設計**  
   
 -   **クエリ**  
   
@@ -33,22 +32,22 @@ ms.locfileid: "66085347"
   
  **[デザイン]** モードでは予測クエリを作成できます。それには、入力データを選択し、そのデータをモデルにマップし、グリッドを使用して作成したステートメントに予測関数を追加します。 デザイン グリッドには、次の構成要素があります。  
   
- **Source**  
+ **ソース**  
  新しい列のソースを選択します。 マイニング モデル、データ ソース ビューに含まれる入力テーブル、予測関数、またはカスタマイズされた式からの列を使用できます。  
   
  **フィールド**  
  **[ソース]** 列の選択に関連付けられている特定の列または関数を決定します。  
   
- **[エイリアス]**  
+ **Alias**  
  結果セット内で列に付けられる名前を決定します。  
   
- **[表示]**  
+ **表示**  
  **[ソース]** 列の選択項目を結果に表示するかどうかを決定します。  
   
- **[グループ]**  
+ **グループ**  
  **[ルールの適用条件]** 列と共に使用して、かっこで式をグループ化します。 たとえば、(expr1 or expr2) and expr3 のようになります。  
   
- **[ルールの適用条件]**  
+ **And/Or**  
  クエリでロジックを作成します。 たとえば、(expr1 or expr2) and expr3 のようになります。  
   
  **[条件と引数]**  
@@ -91,7 +90,7 @@ ms.locfileid: "66085347"
 8.  **[マイニング モデル予測]** タブのツール バーにある最初のボタンをクリックし、 **[結果]** を選択して、クエリを実行します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング デザイナーでの単一クエリの作成](create-a-singleton-query-in-the-data-mining-designer.md)   
- [データ マイニング クエリ](data-mining-queries.md)  
+ [データマイニングデザイナーでの単一クエリの作成](create-a-singleton-query-in-the-data-mining-designer.md)   
+ [データマイニングクエリ](data-mining-queries.md)  
   
   

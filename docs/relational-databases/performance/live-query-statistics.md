@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2705923e404273046b828b2cc4144a3f65c296a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731803"
 ---
 # <a name="live-query-statistics"></a>[ライブ クエリ統計]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、アクティブ クエリのライブ実行プランを表示できます。 このライブ クエリ プランでは、[クエリ プラン演算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)間の制御フローとして、クエリ実行プロセスをリアルタイムで洞察できます。 ライブ クエリ プランには、全体的なクエリ進捗状況と演算子レベルのランタイム実行統計が表示されます。生成された行の数、経過時間、演算子の進捗状況などです。このデータはクエリの完了を待つことなくリアルタイムで利用できるため、これらの実行統計はクエリ パフォーマンス問題のデバッグで非常に役立ちます この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から利用できますが、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]でも動作します。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、アクティブ クエリのライブ実行プランを表示できます。 このライブ クエリ プランでは、[クエリ プラン演算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)間の制御フローとして、クエリ実行プロセスをリアルタイムで洞察できます。 ライブ クエリ プランには、全体的なクエリ進捗状況と演算子レベルのランタイム実行統計が表示されます。生成された行の数、経過時間、演算子の進捗状況などです。このデータはクエリの完了を待つことなくリアルタイムで利用できるため、これらの実行統計はクエリ パフォーマンス問題のデバッグで非常に役立ちます この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 以降のバージョンで使用できますが、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] でも動作します。  
 
 > [!NOTE]
 > 内部的には、ライブ クエリ統計では、[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV を利用します。
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 > [!WARNING]  
 > この機能は、主にトラブルシューティングの目的で使用されます。 この機能を利用すると、特に [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で、全体的なクエリ パフォーマンスがやや遅くなることがあります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。  
@@ -54,17 +54,21 @@ ms.locfileid: "68051884"
   
 ## <a name="to-view-live-query-statistics-for-any-query"></a>任意のクエリのライブ クエリ統計を表示するには 
 
-ライブ実行プランは、 **[プロセス]** または **[アクティブなコストの高いクエリ]** テーブルの任意のクエリを右クリックすることで、 **[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)** からもアクセスできます。  
+ライブ実行プランは、**[プロセス]** または **[アクティブなコストの高いクエリ]** テーブルの任意のクエリを右クリックすることで、**[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)** からもアクセスできます。  
   
- ![利用状況モニターの [ライブ クエリ統計] ボタン](../../relational-databases/performance/media/livequerystatsactmon.png "利用状況モニターの [ライブ クエリ統計] ボタン")  
+ ![利用状況モニターでの [ライブ クエリ統計] ボタン](../../relational-databases/performance/media/livequerystatsactmon.png "利用状況モニターでの [ライブ クエリ統計] ボタン")  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ライブ クエリ統計でクエリの進捗状況に関する情報を記録するには、この統計プロファイル インフラストラクチャを有効にする必要があります。 バージョンによっては、オーバーヘッドが大きくなる可能性があります。 このオーバーヘッドの詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。
   
 ## <a name="permissions"></a>アクセス許可  
- **ライブ クエリ統計**の結果ページに入力するにはデータベース レベルの `SHOWPLAN` アクセス許可が、ライブ統計を表示するにはサーバー レベルの `VIEW SERVER STATE` アクセス許可が、クエリを実行するには必要な任意のアクセス許可が必要になります。  
+**[ライブ クエリ統計]** 結果ページに値を設定するにはデータベース レベルの `SHOWPLAN` アクセス許可が必要です。クエリを実行するには必要なすべてのアクセス許可が必要です。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でライブ統計を表示するには、サーバーレベルの `VIEW SERVER STATE` アクセス許可が必要です。  
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] の Premium 階層でライブ統計を表示するには、データベースの `VIEW DATABASE STATE` アクセス許可が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の Standard 階層と Basic 階層でライブ統計を表示するには、**サーバー管理者**または **Azure Active Directory 管理者**のアカウントが必要です。
   
 ## <a name="see-also"></a>参照  
+ [実行プラン](../../relational-databases/performance/execution-plans.md)    
+ [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)    
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [利用状況モニターを開く方法 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     

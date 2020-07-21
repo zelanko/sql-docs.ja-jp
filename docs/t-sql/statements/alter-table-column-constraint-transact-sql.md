@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 25d7cc42f65e762ad0a83546aeeb5621c094636c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6e943dd07c7687d6ab56cc74ebde1cc2ed77214
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070463"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381236"
 ---
-# <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用してテーブルに追加された新しい列定義の一部になっている PRIMARY KEY、FOREIGN KEY、UNIQUE、または CHECK 制約のプロパティを指定します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68070463"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 [ CONSTRAINT constraint_name ]   
 {   
     [ NULL | NOT NULL ]   
@@ -56,7 +56,9 @@ ms.locfileid: "68070463"
 }  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  CONSTRAINT  
  PRIMARY KEY、UNIQUE、FOREIGN KEY、または CHECK 制約の定義の開始を指定します。  
   
@@ -91,7 +93,7 @@ ms.locfileid: "68070463"
 > [!IMPORTANT]  
 >  マニュアルには、WITH FILLFACTOR = *fillfactor* が PRIMARY KEY 制約または UNIQUE 制約に適用される唯一のインデックス オプションとして記述されていますが、これは旧バージョンとの互換性を維持するために記載されており、将来のリリースではこのような記述はなくなります。 ALTER TABLE の [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 句で他のインデックス オプションも指定できます。  
   
- ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  制約に対して作成されるインデックスの格納場所を指定します。 *partition_scheme_name* を指定した場合、インデックスがパーティション分割され、分割後のパーティションは *partition_scheme_name* で指定したファイル グループにマップされます。 *filegroup* を指定すると、インデックスは指定されたファイル グループに作成されます。 **"** default **"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに作成されます。 PRIMARY KEY 制約または UNIQUE 制約のクラスター化インデックスを追加する場合に ON を指定すると、クラスター化インデックスの作成時に、指定したファイル グループにテーブル全体が移動します。  
   
@@ -109,7 +111,7 @@ ms.locfileid: "68070463"
  *ref_column*  
  新しい FOREIGN KEY 制約によって参照される、かっこで囲んだ列です。  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  変更対象のテーブル内の行に参照関係があり、参照先の行が親テーブルから削除された場合に、変更対象のテーブル内の行に対して実行する操作を指定します。 既定値は NO ACTION です。  
   
  NO ACTION  
@@ -134,7 +136,7 @@ ms.locfileid: "68070463"
   
  これに対し、NO ACTION を指定した場合は、**ProductVendor** テーブルに Vendor テーブルの行を参照する行が 1 つでもあると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラーが発生し、**Vendor** テーブルの行に対する削除操作はロールバックされます。  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  変更対象のテーブル内の行が参照関係を持ち、親テーブルで参照先の行が更新された場合、変更対象のテーブル内の行に対して発生する操作を指定します。 既定値は NO ACTION です。  
   
  NO ACTION  
@@ -160,7 +162,7 @@ ms.locfileid: "68070463"
  これに対して、NO ACTION を指定した場合は、**ProductVendor** テーブルに Vendor テーブルの行を参照する行が 1 つでもあると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラーが発生し、**Vendor** テーブルの行に対する更新操作はロールバックされます。  
   
  NOT FOR REPLICATION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  FOREIGN KEY 制約と CHECK 制約に対して指定できます。 制約でこの句を指定すると、レプリケーション エージェントが挿入、更新、削除操作を行う際に制約が適用されません。  
   
@@ -170,12 +172,12 @@ ms.locfileid: "68070463"
  *logical_expression*  
  CHECK 制約で使用する論理式を指定します。この式は TRUE または FALSE を返します。 CHECK 制約と共に使用する *logical_expression* では他のテーブルを参照できませんが、同じテーブルで同じ行の他の列は参照できます。 この式では別名データ型は参照できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  FOREIGN 制約または CHECK 制約を追加すると、WITH NOCHECK オプションが指定されない限り、既存のすべてのデータに対して、制約違反の確認が行われます。 違反がある場合、ALTER TABLE は失敗し、エラーが返されます。 既存の列に新しい PRIMARY KEY 制約または UNIQUE 制約を追加するとき、列内のデータは一意であることが必要です。 重複する値が見つかると、ALTER TABLE は失敗します。 PRIMARY KEY 制約または UNIQUE 制約を追加する場合、WITH NOCHECK オプションによる影響はありません。  
   
  PRIMARY KEY 制約と UNIQUE 制約では、それぞれインデックスが生成されます。 UNIQUE 制約と PRIMARY KEY 制約によって生成されるテーブル上のインデックスの個数は、999 個の非クラスター化インデックスと 1 つのクラスター化インデックスに収まる必要があります。 外部キー制約では、自動的にインデックスが生成されることはありません。 ただし、クエリ内で、一方のテーブルの外部キー制約内の列を、他方のテーブルの主キー列または一意なキー列と照合することによって、クエリ内の結合条件で外部キー列は頻繁に使用されます。 外部キー列のインデックスを使用すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]により、外部キー テーブルの関連データがすばやく検索されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  例については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

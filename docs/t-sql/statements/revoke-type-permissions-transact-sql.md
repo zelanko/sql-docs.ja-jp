@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1932d5e174154d0c51d4693b49400aaf6282e7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3cd5a1b5404728dde5f72928111391e13842fe35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735337"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE (型の権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   型に対する権限を取り消します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67913912"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON TYPE :: [ schema_name ]. type_name   
@@ -72,7 +72,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
- AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消すには、その権限を派生元のプリンシパルを指定します。  
+ AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  
@@ -81,34 +81,34 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  データベース ロールを指定します。  
   
  *Application_role*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  アプリケーション ロールを指定します。  
   
  *Database_user_mapped_to_Windows_User*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  Windows ユーザーにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_Windows_Group*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  Windows グループにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_certificate*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  証明書にマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_asymmetric_key*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  非対称キーにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  型は、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。  
   
 > [!IMPORTANT]  
@@ -127,7 +127,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="permissions"></a>アクセス許可  
  型に対する CONTROL 権限が必要です。 AS 句を使用する場合は、指定したプリンシパルが型を所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ユーザー定義型 `PhoneNumber` に対する `VIEW DEFINITION` 権限を、ユーザー `KhalidR` から取り消します。 `CASCADE` オプションは、`KhalidR` が `VIEW DEFINITION` 権限を許可したプリンシパルからも権限を取り消すことを示します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
   
 ```  

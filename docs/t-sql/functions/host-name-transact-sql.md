@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c39d56ec338be798f9e9dd5589d3a63a65b95d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7bde33153b10b7c708c92150104414d326fb1f0b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024413"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011664"
 ---
-# <a name="hostname-transact-sql"></a>HOST_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="host_name-transact-sql"></a>HOST_NAME (Transact-SQL)
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   ワークステーション名を返します。  
   
@@ -42,7 +42,7 @@ HOST_NAME ()
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  システム関数へのパラメーターが省略可能の場合は、現在のデータベース、ホスト コンピューター、サーバー ユーザー、またはデータベース ユーザーが推測されます。 組み込み関数の後には常にかっこが必要です。  
   
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。  
@@ -50,7 +50,7 @@ HOST_NAME ()
 > [!IMPORTANT]  
 >  クライアント アプリケーションによりワークステーション名が提供されます。また、不正確なデータが提供されることもあります。 HOST_NAME はセキュリティ機能としては期待しないでください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、受注を記録するテーブルに行を挿入するコンピューターのワークステーション名を記録するために、`HOST_NAME()` 定義内で `DEFAULT` を使用するテーブルを作成します。  
   
 ```  
@@ -66,6 +66,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

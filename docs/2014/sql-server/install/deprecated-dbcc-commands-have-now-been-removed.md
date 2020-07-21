@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: affb6da7-c9ba-401c-ab7f-0d2f4ab93e2d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea195f2316e888882fdfad693a39b1b29bb031d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95c5c33536ce33824cc80bb452dafcf17719fbac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012634"
 ---
 # <a name="deprecated-dbcc-commands-have-now-been-removed"></a>非推奨の DBCC コマンドが削除された
   次の表に、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] で非推奨と発表された DBCC コマンドを示します。 これらのコマンドは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは削除されています。 これらの非推奨コマンドへの参照を削除するために、アプリケーションおよびスクリプトを更新する必要があります。  
@@ -29,8 +28,8 @@ ms.locfileid: "66095579"
 |DBCC TEXTALLOC|  
 |DBCC TEXTALL|  
   
-## <a name="see-also"></a>関連項目  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>参照  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

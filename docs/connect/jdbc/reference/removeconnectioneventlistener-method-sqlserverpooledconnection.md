@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b9d2980b86704efe7e611878d373e0dd9b5cb7fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2d7849fb0f55dd44a3af5590af2bccf6a06648a0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975749"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921251"
 ---
 # <a name="removeconnectioneventlistener-method-sqlserverpooledconnection"></a>removeConnectionEventListener メソッド (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public void removeConnectionEventListener(javax.sql.ConnectionEventListener list
   
  ConnectionEventListener オブジェクトです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この removeConnectionEventListener メソッドは、javax.sql.PooledConnection インターフェイスの removeConnectionEventListener メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

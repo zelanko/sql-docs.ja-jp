@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproc (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropextendedproc (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproc
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 032bca0112d1fb109ad96305426a55202d5349b9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054299"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85859964"
 ---
-# <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  拡張ストアド プロシージャを削除します。  
+  拡張ストアドプロシージャを削除します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [CLR 統合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[CLR 統合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)を使用してください。  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,7 +42,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @functname = ] 'procedure'` 削除する拡張ストアド プロシージャの名前です。 *プロシージャ*は**nvarchar (517)** 、既定値はありません。  
+`[ @functname = ] 'procedure'`削除する拡張ストアドプロシージャの名前を指定します。 *プロシージャ*は**nvarchar (517)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -50,21 +50,21 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- 実行**sp_dropextendedproc**からユーザー定義の拡張ストアド プロシージャ名を削除、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ ビューからエントリを削除して、 [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)カタログ ビューです。 このストアド プロシージャでのみ実行できる、**マスター**データベース。  
+## <a name="remarks"></a>解説  
+ **Sp_dropextendedproc**を実行すると、ユーザー定義の拡張ストアドプロシージャ名[が、](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) extended_procedures カタログビューから削除され、そのエントリが削除されます[。](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) このストアドプロシージャは、 **master**データベースでのみ実行できます。  
   
-**sp_dropextendedproc**システム拡張ストアド プロシージャを削除できません。 代わりに、システム管理者がする拡張ストアド プロシージャに対する EXECUTE 権限を拒否する必要があります、**パブリック**ロール。  
+**sp_dropextendedproc**では、システム拡張ストアドプロシージャは削除されません。 代わりに、システム管理者は、拡張ストアドプロシージャに対する EXECUTE 権限を**public**ロールに対して拒否する必要があります。  
   
- **sp_dropextendedproc**トランザクション内で実行することはできません。  
+ **sp_dropextendedproc**をトランザクション内で実行することはできません。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_dropextendedproc**します。  
+ **Sp_dropextendedproc**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、削除、`xp_hello`拡張ストアド プロシージャ。  
+ 次の例では、 `xp_hello` 拡張ストアドプロシージャを削除します。  
   
 > [!NOTE]  
->  既に存在する必要がありますこの拡張ストアド プロシージャまたは例では、エラー メッセージを返します。  
+>  この拡張ストアドプロシージャは既に存在している必要があります。このような場合、この例ではエラーメッセージが返されます。  
   
 ```  
 USE master;  
@@ -73,8 +73,8 @@ EXEC sp_dropextendedproc 'xp_hello';
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_addextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_helpextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
