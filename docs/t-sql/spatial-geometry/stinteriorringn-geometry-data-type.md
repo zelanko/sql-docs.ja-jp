@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a98567d42b701178f0996a82e563e5655a062dac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e78d4d7fd52e018d4224726c82f1251bb1fe22a1
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762449"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554653"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762449"
 .STInteriorRingN ( expression )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *式 (expression)*  
  1 から **geometry** インスタンスの内部リング数までの **int** 式です。  
   

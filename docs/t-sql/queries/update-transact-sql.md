@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 530e207035ea2442b9413d92ec4215f3d72d5086
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a8db85a2dc347cbfda62713dab61946e6f57cc0e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011364"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554435"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +135,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 [;]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  WITH \<common_table_expression>  
  UPDATE ステートメントのスコープ内で定義された、一時的な名前付き結果セットまたはビュー (共通テーブル式 (CTE) とも呼ばれる) を指定します。 CTE 結果セットは単純なクエリから派生し、UPDATE ステートメントで参照されます。  
   
@@ -187,7 +189,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  DEFAULT  
  列に格納された値を列に定義された既定値で置き換えることを指定します。 列に既定値が定義されておらず、NULL 値が許されている場合は、この句を使用して列を NULL に変更できます。  
   
- { **+=**  |  **-=**  |  **\*=**  |  **/=**  |  **%=**  |  **&=**  |  **^=**  |  **|=** }  
+ { **+=** \| **-=** \| **\*=** \| **/=** \| **%=** \| **&=** \| **^=** \| **|=** }  
  複合代入演算子です。  
  +=                       加算して、割り当てる  
  -=                        減算して代入  

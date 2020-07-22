@@ -1,5 +1,5 @@
 ---
-title: float 型と real 型 (Transact-SQL) | Microsoft Docs
+title: float 型と real 型 (Transact-SQL)
 ms.custom: ''
 ms.date: 09/10/2019
 ms.prod: sql
@@ -23,14 +23,15 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75b888832f9694907af1fbab7031294f32fdda0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 921f6e0b26f9187f8dcf241996b601e46ba1cb2e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999237"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554514"
 ---
 # <a name="float-and-real-transact-sql"></a>float 型と real 型 (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 浮動小数点数値データで使用する概数型です。 浮動小数点データは概数であるため、データ型の範囲に含まれるすべての値を正確に表せるわけではありません。 **real** の ISO シノニムは、 **float (24)** です。
@@ -49,7 +50,9 @@ ms.locfileid: "85999237"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*n* は次の 2 つの値のいずれかの値として扱われます。 **1**<=n<=**24** の場合、*n* は **24** として処理されます。 **25**<=n<=**53** の場合、*n* は **53** として処理されます。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float** **[(n)]** データ型は、*n* (**1** から **53**) のすべての値で ISO 標準に準拠しています。 **double precision** のシノニムは **float (53)** です。
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>解説  
   
 |データ型|Range|ストレージ|  

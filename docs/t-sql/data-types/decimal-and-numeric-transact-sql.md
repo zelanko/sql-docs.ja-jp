@@ -23,19 +23,19 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f812c03b26df551aa90ecb5dbcca5f0c43ba7a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f7bd1dcb906e7ba0ced0939313b21952d5ecd090
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008033"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554515"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 型と numeric 型 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 固定長の有効桁数と小数点以下保持桁数を持つ数値データ型です。 decimal と numeric は同義であり、どちらを使ってもかまいません。
   
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>引数
 **decimal**[ **(** _p_[ **,** _s_] **)** ] and **numeric**[ **(** _p_[ **,** _s_] **)** ]  
 固定長の有効桁数と小数点以下保持桁数です。 最大有効桁数を使用した場合、有効値は - 10^38 +1 から 10^38 - 1 です。 **decimal** の ISO のシノニムは、**dec** および **dec(** _p_, _s_ **)** です。 **numeric** は機能的には **decimal** と同じです。
   

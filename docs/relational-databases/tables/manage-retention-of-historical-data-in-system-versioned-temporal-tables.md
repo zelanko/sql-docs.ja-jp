@@ -11,16 +11,16 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f58db948bbe7b6fe03f895dacc5fca0b74cc1c54
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 01ca3494bce1f392757206a5ae68ae736d0f9a95
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977852"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552708"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 テンポラル テーブルがシステム バージョン管理されているとき、履歴データによりデータベースのサイズが通常のテーブルより増えることがあります。特に、次の条件下で当てはまります。
 
@@ -42,11 +42,13 @@ ms.locfileid: "85977852"
 
  いずれの手法でも、履歴データを移行またはクリーンアップするためのロジックは、現在のテーブルの期間終了に相当する列に基づきます。 各行の期間終了値により、そのバージョンの行が "閉じられる"、つまり、履歴テーブルに入るタイミングが決定されます。 たとえば、条件 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` では、1 か月以上経過した履歴データは履歴テーブルから削除されます。
 
-> **注:** このトピックの例はこの[テンポラル テーブル例](creating-a-system-versioned-temporal-table.md)を利用しています。
+> [!NOTE]
+> このトピックの例はこの[テンポラル テーブル例](creating-a-system-versioned-temporal-table.md)を利用しています。
 
 ## <a name="using-stretch-database-approach"></a>Stretch Database 手法の利用
 
-> **注:** Stretch Database 手法の利用は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にのみ適用され、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] には適用されません。
+> [!NOTE]
+> Stretch Database 手法の利用は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にのみ適用され、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] には適用されません。
 
 [Stretch Database](../../sql-server/stretch-database/stretch-database.md) の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、履歴データが Azure に透過的に移行されます。 セキュリティ強化のために、SQL Server の [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) 機能で移行中のデータを暗号化できます。 また、 [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md) やその他の高度な SQL Server セキュリティ機能を Temporal/Stretch Database と共に使用し、データを保護できます。
 
@@ -58,7 +60,8 @@ Stretch Database 手法の利用では、一時的な履歴テーブルの一部
 
   決定性の述語関数を利用することで、現行データと同じデータベースに履歴の一部を保有できます。残りは Azure に移行されます。 例と制限については、「 [フィルター関数を使用して移行する行を選択する (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。 非決定性の関数は有効ではないため、スライディング ウィンドウで履歴データを転送する場合、ローカルで保有する行の時間枠が経過時間において変わらないように、インライン述語関数の定義を定期的に変更する必要性が生じることがあります。 スライディング ウィンドウでは、1 か月以上経過した履歴データを Azure に継続的に移動できます。 この手法の例は次のようになります。
 
-> **注:** Stretch Database はデータを Azure に移行します。 そのため、Azure アカウントとサブスクリプションを請求のために用意する必要があります。 無料の試用版 Azure アカウントを入手するには、[1 か月間の無料試用版](https://azure.microsoft.com/pricing/free-trial/)をクリックしてください。
+> [!NOTE]
+> Stretch Database はデータを Azure に移行します。 そのため、Azure アカウントとサブスクリプションを請求のために用意する必要があります。 無料の試用版 Azure アカウントを入手するには、[1 か月間の無料試用版](https://azure.microsoft.com/pricing/free-trial/)をクリックしてください。
 
 一時的な履歴テーブルの Stretch は Stretch ウィザードまたは Transact-SQL で構成できます。システム バージョン管理を **オン**に設定しているとき、一時的な履歴テーブルのストレッチを有効にできます。 現行テーブルはストレッチできません。ストレッチする意味がないためです。
 
@@ -81,7 +84,8 @@ Stretch Database 手法の利用では、一時的な履歴テーブルの一部
     ![Stretch Database ウィザードの [IP アドレスの選択] ページ](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database ウィザードの [IP アドレスの選択] ページ")
 6. ウィザードが終わったら、データベースのストレッチが有効になっていることを確認してください。 データベースが拡張されたことは、オブジェクト エクスプローラーのアイコンに示されるので注目してください。
 
-> **注:** データベースのストレッチを有効化できなかった場合、エラー ログを確認してください。 ファイアウォール ルールの構成が間違えていることが多々あります。
+> [!NOTE]
+> データベースのストレッチを有効化できなかった場合、エラー ログを確認してください。 ファイアウォール ルールの構成が間違えていることが多々あります。
 
 関連項目:
 
@@ -159,7 +163,8 @@ COMMIT ;
 
 テーブル パーティション分割では、スライディング ウィンドウ手法を実行し、経過時間に基づき、履歴テーブルから古い履歴データを除外し、保有部分のサイズを一定に維持できます。必須保有期間に相当するデータを履歴テーブルで維持します。 履歴テーブルからデータをスイッチ アウトする操作は、SYSTEM_VERSIONING がオンになっているときにサポートされます。つまり、保守管理ウィンドウを導入したり、通常の作業負荷をブロックしたりしなくても履歴データの一部をクリーンアップできます。
 
-> **注:** パーティションを切り替えるには、履歴テーブルのクラスター化インデックスがパーティション分割スキーマと連携している必要があります (SysEndTime が含まれている必要があります)。 システムにより作成される既定の履歴テーブルには、SysEndTime 列と SysStartTime 列を含むクラスター化インデックスが含まれており、パーティション分割、新しい履歴データの挿入、標準的な一時的クエリ実行に最適です。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
+> [!NOTE]
+> パーティションを切り替えるには、履歴テーブルのクラスター化インデックスがパーティション分割スキーマと連携している必要があります (SysEndTime が含まれている必要があります)。 システムにより作成される既定の履歴テーブルには、SysEndTime 列と SysStartTime 列を含むクラスター化インデックスが含まれており、パーティション分割、新しい履歴データの挿入、標準的な一時的クエリ実行に最適です。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
 スライディング ウィンドウ手法は 2 セットのタスクからなり、ユーザーがそれを実行する必要があります。
 
@@ -174,7 +179,8 @@ COMMIT ;
 
 ![パーティション分割](../../relational-databases/tables/media/partitioning.png "パーティション分割")
 
-> **注:** パーティション分割を構成するとき、RANGE LEFT または RANGE RIGHT を利用するときのパフォーマンス上の違いについては、下の「テーブル パーティション分割におけるパフォーマンス上の考慮事項」を参照してください。
+> [!NOTE]
+> パーティション分割を構成するとき、RANGE LEFT または RANGE RIGHT を利用するときのパフォーマンス上の違いについては、下の「テーブル パーティション分割におけるパフォーマンス上の考慮事項」を参照してください。
 
 最初と最後のパーティションがそれぞれ、下と上の境界で "オープン" になっており、パーティション分割列の値に関係なく、すべての新しい行に対象パーティションがあることを確実にします。 時間の経過と共に、履歴テーブルの新しい行が上位のパーティションに入ります。 6 番目のパーティションがいっぱいになると、目標とした保有期間に到達したことになります。 その瞬間、定期 (繰り返し) パーティション保守管理タスクが初めて始まります (定期的に実行するようにスケジュールする必要があり、この例では月 1 回になっています)。
 
@@ -410,7 +416,8 @@ COMMIT;
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>テンポラル履歴保有期間ポリシー手法の利用
 
-> **注:** テンポラル履歴保有期間ポリシーを使う方法は、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] および SQL Server 2017 の CTP 1.3 以降に適用されます。
+> [!NOTE]
+> テンポラル履歴保有期間ポリシーを使う方法は、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] および SQL Server 2017 の CTP 1.3 以降に適用されます。
 
 テンポラル履歴保有期間は個々のテーブル レベルで構成でき、ユーザーは柔軟なエージング ポリシーを作成できます。 テンポラル保有期間は簡単に適用できます。必要なのは、テーブル作成時またはスキーマ変更時にパラメーターを 1 つ設定することだけです。
 

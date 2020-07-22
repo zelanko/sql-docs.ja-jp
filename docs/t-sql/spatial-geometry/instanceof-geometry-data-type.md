@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9622a762b8ac7e40dfcbd61c9ff4acdbe2aef67c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 33752578feb12ce8471e9f7bf01b6138e2e8b8e7
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748883"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552851"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748883"
 .InstanceOf (geometry_type )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 *geometry_type*  
 **geometry** 型の階層で公開されている 15 種類の型のうちの 1 つを指定する **nvarchar(4000)** 文字列。  
   
