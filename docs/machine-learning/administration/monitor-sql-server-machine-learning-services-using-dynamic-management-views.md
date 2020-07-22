@@ -119,9 +119,9 @@ ON s.session_id = r.session_id;
 | last_wait_type | 要求がブロックされていた場合の最後の待機の種類。 |
 | total_elapsed_time | 要求を受信してから経過した総時間 (ミリ秒単位)。 |
 | cpu_time | 要求で使用される CPU 時間 (ミリ秒単位)。 |
-| 読み取り | 要求で実行された読み取りの数。 |
+| reads | 要求で実行された読み取りの数。 |
 | logical_reads | 要求で実行された論理読み取りの数。 |
-| 書き込み | 要求で実行された書き込みの数。 |
+| writes | 要求で実行された書き込みの数。 |
 | language | サポートされているスクリプト言語を表すキーワードです。 |
 | degree_of_parallelism | 作成された並列処理の数を示す数値です。 この値は、要求された並列処理の数と異なる場合があります。 |
 | external_user_name | スクリプトが実行されたときの Windows ワーカー アカウント。 |
@@ -280,8 +280,8 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 |--------|-------------|
 | Package | インストールされているパッケージの名前。 |
 | Version | パッケージのバージョン。 |
-| 依存 | インストールされているパッケージが依存しているパッケージを一覧表示します。 |
-| ライセンス | インストールされているパッケージのライセンス。 |
+| Depends | インストールされているパッケージが依存しているパッケージを一覧表示します。 |
+| License | インストールされているパッケージのライセンス。 |
 | LibPath | パッケージが格納されているディレクトリ。 |
 
 ### <a name="installed-packages-for-python"></a>Python 用にインストールされたパッケージ
@@ -306,7 +306,7 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 |--------|-------------|
 | Package | インストールされているパッケージの名前。 |
 | Version | パッケージのバージョン。 |
-| 場所 | パッケージが格納されているディレクトリ。 |
+| Location | パッケージが格納されているディレクトリ。 |
 
 ## <a name="next-steps"></a>次のステップ
 
