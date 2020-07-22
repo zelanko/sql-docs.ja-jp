@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 0c71bda5a459c7993de824cdb6665978ba57166f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1ac71b9cf171e66486c40310bfd8be0e7bc6ae91
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892462"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86911528"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>メモリ内データベース システムとテクノロジ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 このページは、SQL Server 内のインメモリ機能とテクノロジに関するリファレンス ページとして使用できます。 概念上、メモリ内データベース システムとは、最新のデータベース システムで使用できるより大きなメモリ容量を利用するように設計されたデータベース システムを指します。 メモリ内データベースは、本質的にリレーショナルまたは非リレーショナルです。
 
@@ -36,19 +36,19 @@ ms.locfileid: "85892462"
 
 ## <a name="hybrid-buffer-pool"></a>ハイブリッド バッファー プール
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md) は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]を搭載した Windows と Linux の両方のプラットフォームのバイト アドレス指定可能な永続メモリ ストレージ デバイス上にあるデータベース ファイル用のバッファー プールを拡張します。
 
 ## <a name="memory-optimized-tempdb-metadata"></a>メモリ最適化 `tempdb` メタデータ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、[メモリ最適化 tempdb メタデータ](./databases/tempdb-database.md#memory-optimized-tempdb-metadata)という新機能が導入されています。この機能により、効果的に一部の競合ボトルネックが除去され、tempdb が多用されるワークロードに対して新たなレベルのスケーラビリティが実現されます。
 
 ## <a name="in-memory-oltp"></a>インメモリ OLTP
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [インメモリ OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../includes/sssds-md.md)] で、トランザクション処理のパフォーマンスの最適化、データ インジェスト、データの読み込み、一時的なデータのシナリオに使用できるデータベース テクノロジです。
 
