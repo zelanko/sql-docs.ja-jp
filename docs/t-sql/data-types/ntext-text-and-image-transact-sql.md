@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2881ad1cc83e7916c325c0492c8243d09833c3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95d3209fd08f08820966294b96b0fd11831e73ea
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734211"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555937"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext、text、および image (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "85734211"
   
 >**重要:**  **ntext**、**text**、および **image** データ型は、今後のバージョンの SQL Server で削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) を使用してください。  
   
-  
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>引数
 **ntext**  
 文字列の最大長が 2^30 - 1 (1,073,741,823) の可変長の Unicode データを指定します。 ストレージ サイズは、入力する文字列長の 2 倍のバイト長です。 ISO シノニムは、 **ntext** は **national text**です。
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9c3a365a2bd2d6b244ca2394c8a871aee4ce87ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48a7a94cea5334a1644dd5a886298b70bea06e47
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748853"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555096"
 ---
 # <a name="parse-geometry-data-type"></a>Parse (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を基に **geo
 Parse ( 'geometry_tagged_text' )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *geometry_tagged_text*  
  返される **geometry** インスタンスの WKT 表現です。 *geometry_tagged_text* は **nvarchar** 式です。  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8957857f11f993a09cae4604a89178ef66856b86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e551d74df5418ca16c4428531ea1d4beeed6f478
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762301"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554967"
 ---
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現から **geometry
 STMPolyFromWKB ( 'WKB_multipolygon' , SRID )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *WKB_multipolygon*  
  返される **geometryMultiPolygon** インスタンスの WKB 表現です。 *WKB_multipolygon* は、**varbinary (max)** 式です。  
   

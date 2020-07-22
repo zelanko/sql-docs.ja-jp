@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 679b7aa785d5a662992bd6bdf8d1dc9476aad358
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e93cb4a8e079d54098ff0a7c466de0227965487
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759509"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555107"
 ---
 # <a name="null-geometry-data-type"></a>Null (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "85759509"
 Null  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **geometry**  

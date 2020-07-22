@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba9a1a0b2922cba5c2aadef862bec56bbc66666b
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: 692bd0bf6bd493ee8133e9c428670d5c46829780
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032443"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554817"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
 
@@ -55,9 +55,7 @@ BACKUP コマンドで作成した SQL Database のバックアップを復元�
 
 構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
 
-## <a name="click-a-product"></a>製品をクリックしてください
-
-次の行から興味がある製品名をクリックしてみてください。 クリックした製品に合わせて、異なるコンテンツが表示されます。
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 

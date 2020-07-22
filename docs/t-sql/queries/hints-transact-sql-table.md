@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c73969d5bd4b02373d9a16d292504530a626650b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731327"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555866"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,9 @@ WITH  ( <table_hint> [ [, ]...n ] )
 }   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 WITH **(** \<table_hint> **)** [ **[,]** ...*n* ]  
 いくつかの例外を除き、テーブル ヒントは、FROM 句で WITH キーワードを使用して指定した場合にのみサポートされます。 また、テーブル ヒントはかっこを使用して指定する必要があります。  
   
@@ -393,18 +395,20 @@ GO
 NOEXPAND は*インデックス付きビュー*にのみ適用できます。 インデックス付きビューとは、一意なクラスター化インデックスが作成されているビューを示します。 インデックス付きビューおよびベース テーブルの両方に存在する列への参照がクエリに含まれていて、クエリ オプティマイザーがクエリの実行にインデックス付きビューを使用する方が最適であると判断した場合、クエリ オプティマイザーはビューのインデックスを利用します。 この機能は、*インデックス付きビューのマッチング*と呼ばれます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のエディションでのみ、クエリ オプティマイザーではインデックス付きビューが自動的に使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
 ただし、オプティマイザーで、インデックス付きビューのマッチングを検討したり、NOEXPAND ヒントで参照されるインデックス付きビューを使用したりするには、以下の SET オプションを ON に設定する必要があります。  
- 
-> [!NOTE]  
+
+> [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、NOEXPAND ヒントを指定しなくても、自動的なインデックス付きビューの使用がサポートされます。
-  
-||||  
-|-|-|-|  
-|ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
-|ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
-  
- <sup>1</sup> ARITHABORT は、ANSI_WARNINGS が ON に設定されている場合は、暗黙的に ON に設定されます。 したがって、この設定を手動で調整する必要はありません。  
-  
- また、NUMERIC_ROUNDABORT オプションは OFF に設定する必要があります。  
+
+- ANSI_NULLS
+- ANSI_PADDING
+- ANSI_WARNINGS
+- ARITHABORT<sup>1</sup>
+- CONCAT_NULL_YIELDS_NULL
+- QUOTED_IDENTIFIER
+
+<sup>1</sup> ARITHABORT は、ANSI_WARNINGS が ON に設定されている場合は、暗黙的に ON に設定されます。 したがって、この設定を手動で調整する必要はありません。  
+
+また、NUMERIC_ROUNDABORT オプションは OFF に設定する必要があります。  
   
  オプティマイザーがインデックス付きビューのインデックスを使用するように強制するには、NOEXPAND オプションを指定します。 このヒントは、ビューがクエリ内でも指定されている場合にのみ使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、FROM 句で直接ビューを指定していないクエリで、特定のインデックス付きビューが使用されるようにするヒントは用意されていません。しかし、クエリ オプティマイザーでは、インデックス付きビューがクエリで直接参照されていなくても、その使用が検討されます。 NOEXPAND テーブル ヒントを使用すると、SQL Server はインデックス付きビューに対してのみ自動的に統計を作成します。 このヒントを省略すると、統計を手動で作成することでは解決できない、統計がないことに関する実行プランの警告につながる場合があります。 クエリの最適化中、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クエリがビューを直接参照し、NOEXPAND ヒントが使用されるときに、自動的または手動で作成された統計情報の表示を使用します。    
   

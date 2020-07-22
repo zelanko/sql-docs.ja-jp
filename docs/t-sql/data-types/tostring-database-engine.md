@@ -1,5 +1,5 @@
 ---
-title: ToString (Database Engine) | Microsoft Docs
+title: ToString (データベース エンジン)
 ms.custom: ''
 ms.date: 07/23/2017
 ms.prod: sql
@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9b08bb0737507f6d4fbeb8ec62b932fa6e674b08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c1bf4c72881482ed1b4d99224554576f6a7a3cc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729652"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555928"
 ---
 # <a name="tostring-database-engine"></a>ToString (データベース エンジン)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 *this* の論理的表現に基づく文字列を返します ToString から変換するとき暗黙的に呼び出されます **hierarchyid** を文字列型が発生します。 逆の役割を果たします #40 を[解析する (& a)";"データベース エンジン"&"#41;](../../t-sql/data-types/parse-database-engine.md).
@@ -43,8 +44,11 @@ CAST(node AS nvarchar(4000))
 -- CLR syntax  
 string ToString  ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>戻り値の型
+
 **SQL Server の戻り値の型 :nvarchar(4000)**
   
 **CLR の戻り値の型: String**

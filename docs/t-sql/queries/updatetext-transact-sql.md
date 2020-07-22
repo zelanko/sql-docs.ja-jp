@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 43786561a88d970cc89587ed5a37adcc45c646d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5da5354681ff38fbcf818294f85b9381db21659a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900104"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554747"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,9 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
     | { table_name.src_column_name src_text_ptr } ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  BULK  
  アップロード ツールによるバイナリ データ ストリームのアップロードを有効にします。 ストリームは、TDS プロトコル レベルでツールが提供する必要があります。 データ ストリームが存在しない場合、クエリ プロセッサは BULK オプションを無視します。  
   

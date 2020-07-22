@@ -11,16 +11,16 @@ ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c8e6a640b1e90b54709ca3bb743dd5f35dc9901
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6e00ccde6b0b0788c9007a26cb922ccfcecdc21
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85984297"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555897"
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>システムでバージョン管理されたメモリ最適化テンポラル テーブルの監視
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 既存のビューを使用して、システムでバージョン管理されたすべてのメモリ最適化テーブルについてのメモリ使用量の詳細と概要を追跡できます。
 

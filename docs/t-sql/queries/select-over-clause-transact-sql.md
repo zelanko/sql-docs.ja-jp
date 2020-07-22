@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe397ae8b508e7821af6b3b9d837434129a3e56
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d38afcb410b6af58bbe3088e6984ce405bfca91e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999766"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555573"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -107,7 +107,9 @@ ORDER BY order_by_expression
 OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  PARTITION BY  
  クエリ結果セットをパーティションに分割します。 ウィンドウ関数は各パーティションに対して個別に適用され、各パーティションで計算が再開されます。  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25574476947c3232c8491923d1e5c69b87c43960
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 561235acc489c60742a393e444621c9dd7504d04
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902254"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555297"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -34,9 +34,7 @@ SQL Server、SQL Database、Azure Synapse Analytics、または Analytics Platfo
 
 構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
 
-## <a name="click-a-product"></a>製品をクリックしてください
-
-次の行から興味がある製品名をクリックしてみてください。 この Web ページでは、クリックした製品に合わせて、異なるコンテンツが表示されます。
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -682,7 +680,7 @@ WITH
 場所を設定する場合の追加の注意事項とガイダンス:
 
 - 既定のオプションでは、[Azure Data Lake Storage Gen 2 のプロビジョニング時に`enable secure SSL connections`] を使用します。 この設定を有効にした場合は、セキュリティで保護された TLS/SSL 接続を選択したときに `abfss` を使用する必要があります。 注意 `abfss` は、セキュリティで保護されていない TLS 接続にも使用できます。
-- Azure Synapse では、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
+- Azure Synapse では、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 . 検証するには、外部データ ソースを使用して外部テーブルを作成します。
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
 - `wasbs` は、セキュリティで保護された TLS 接続を使用してデータが送信されるため、推奨されます。
 - wasb:// インターフェイスを使用して PolyBase 経由でデータにアクセスする場合、Azure V2 Storage アカウントでは階層型名前空間はサポートされません。

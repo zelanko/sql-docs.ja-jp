@@ -22,14 +22,15 @@ ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eaec4d3e43f0a24b0b7ed297589a2699e41bc2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ac0442c2dfe609d112c12ada4f2dedb3be20b8ee
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007994"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556187"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 日付を時刻と組み合わせて定義します。 時間は 24 時制とし、秒は常にゼロ (: 00) にし、秒の小数部は使用しません。
@@ -39,8 +40,8 @@ ms.locfileid: "86007994"
   
 ## <a name="smalldatetime-description"></a>smalldatetime の説明
   
-|||  
-|-|-|  
+|プロパティ|値|
+|--------|-----|
 |構文|**smalldatetime**|  
 |使用法|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |既定の文字列リテラル形式<br /><br /> (下位クライアントに使用)|適用なし|  
@@ -179,7 +180,7 @@ SELECT
         'datetimeoffset';  
 ```  
   
-|データ型|Output|  
+|データ型|出力|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
@@ -188,6 +189,6 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   

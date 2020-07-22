@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2fab8310cf59a2d6209f6c4111241071c648df46
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad2ad92952a3848982c9cf8873f70217db654ee8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762133"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554918"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762133"
 .STUnion ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *other_geometry*  
  `STUnion()` を呼び出したインスタンスとの和集合を形成する、別の **geometry** インスタンスです。  
   

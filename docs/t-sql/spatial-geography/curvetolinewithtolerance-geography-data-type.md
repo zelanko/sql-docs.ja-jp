@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4d8eab0f281349dd1602525c8d64976b6a15c37f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3de1674efb17e3826cb1e999922016a0ed55c924
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736160"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555462"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85736160"
 .CurveToLineWithTolerance( tolerance, relative )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 _tolerance_  
 元の円弧とその線形近似の間の最大誤差を定義する **double** 式です。  
   

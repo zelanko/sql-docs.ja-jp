@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 576e026f19310ac596e4808b104e21bfb94cee7e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce954aaf4bab45b359bd57fea9af7b6e94933124
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731250"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555587"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -113,7 +113,9 @@ n -  positive integer only.
  
 ```
 
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 *graph_search_pattern*  
 グラフでの検索パターンまたは走査するパスを指定します。 このパターンは、グラフでパスを走査するために ASCII アート構文を使用します。 このパターンは、提供される矢印の方向でエッジを使用して 1 つのノードから別のノードに移動します。 エッジ名またはエイリアスは、かっこ内に表示されます。 ノード名またはエイリアスは、矢印の 2 つの端に表示されます。 矢印は、パターンのいずれの方向に移動できます。
 

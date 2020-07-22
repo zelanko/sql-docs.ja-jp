@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: dc24a1ed9998c478b7ca7a272c00d68656a2285e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9dcc83f9b164f27d50e047792a069b148239872
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762242"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554948"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762242"
 STPointFromText ( 'point_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *point_tagged_text*  
  返される **geometryPoint** インスタンスの WKT 表現です。 *point_tagged_text* は **nvarchar(max)** 式です。  
   

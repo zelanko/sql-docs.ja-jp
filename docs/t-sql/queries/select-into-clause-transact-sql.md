@@ -29,12 +29,12 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c4e7add7cdc8d4dd804c91730db3bb7c121b9df
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 36bd2fd7e30c3b32486ec489c93d298c5b827977
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007591"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555241"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,9 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
 [ ON filegroup ]
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *new_table*   
  新しいテーブルの名前を指定します。このテーブルは選択リストで指定した列とデータ ソースから選択された行を基に作成されます。  
  

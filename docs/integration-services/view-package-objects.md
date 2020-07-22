@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28393d15ade12562dbcaa4af457bf0de0e51948b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67e178d43f07a7b2b2e9f2af822cee74ac49e1f7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295020"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86900068"
 ---
 # <a name="view-package-objects"></a>パッケージ オブジェクトを表示する
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでは、 **[パッケージ エクスプローラー]** タブで、パッケージをエクスプローラー表示できます。 この表示には、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アーキテクチャのコンテナー階層が反映されます。 パッケージ コンテナーはこの階層の最上層にあり、パッケージを展開すると、そのパッケージ内にある接続、実行可能ファイル、イベント ハンドラー、ログ プロバイダー、優先順位制約、および変数が表示されます。  

@@ -16,19 +16,19 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5661008bcb550461466deddea947f205639ae98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008001"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555607"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar および nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 固定サイズ (**nchar**)、または可変サイズ (**nvarchar**) の文字データ型です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) が有効になっている照合順序を使用する場合、これらのデータ型には [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 文字データの全範囲が格納され、[UTF-16](https://www.wikipedia.org/wiki/UTF-16) 文字エンコードが使用されます。 SC が無効の照合順序を指定する場合、これらのデータ型には [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 文字エンコードでサポートされている文字データのサブセットのみが格納されます。
-  
-## <a name="arguments"></a>引数  
+
+## <a name="arguments"></a>引数
 **nchar** [ ( n ) ]  
 固定サイズの文字列データです。 *n* によってバイト ペアでの文字列のサイズが定義されます。1 から 4,000 までの値にする必要があります。 ストレージのサイズは、*n* の 2 倍のバイト数です。 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) エンコードの場合、ストレージのサイズは *n* の 2 倍のバイト数となり、格納できる文字数もまた *n* となります。 UTF-16 エンコードの場合、ストレージのサイズは引き続き *n* の 2 倍のバイト数ですが、補助文字によって 2 つのバイト ペア (または[サロゲート ペア](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)) が使用されるため、格納できる文字数は *n* よりも少なくなる場合があります。 **nchar** の ISO シノニムは、**national char** および **national character** です。
   
