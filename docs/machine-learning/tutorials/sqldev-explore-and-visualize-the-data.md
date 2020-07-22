@@ -58,13 +58,13 @@ ms.locfileid: "81632112"
     |派生列名|ルール|
     |-|-|
      |tipped|tip_amount > 0 の場合、tipped = 1、それ以外では tipped = 0|
-    |tip_class|クラス 0: tip_amount = $0<br /><br />クラス 1: tip_amount > $0 および tip_amount <= $5<br /><br />クラス 2: tip_amount > $5 および tip_amount <= $10<br /><br />クラス 3: tip_amount > $10 および tip_amount <= $20<br /><br />クラス 4: tip_amount > $20|
+    |tip_class|クラス 0: tip_amount = $0<br /><br />クラス 1: tip_amount > $0 かつ tip_amount <= $5<br /><br />クラス 2: tip_amount > $5 かつ tip_amount <= $10<br /><br />クラス 3: tip_amount > $10 かつ tip_amount <= $20<br /><br />クラス 4: tip_amount > $20|
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>rxHistogram を使用してデータをプロットするストアド プロシージャを作成する
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!IMPORTANT]
-> SQL Server 2019 から、分離メカニズムが変更されています。 そのため、プロット ファイルが格納されているディレクトリに適切なアクセス許可を付与する必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
+> SQL Server 2019 から、分離メカニズムが変更されています。 そのため、プロット ファイルが格納されているディレクトリに適切なアクセス許可を付与する必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
 ::: moniker-end
 
 プロットを作成するには、[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) で提供されている拡張 R 関数の 1 つである [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) を使用します。 この手順では、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアド プロシージャ **RxPlotHistogram** でラップすることができます。
@@ -122,7 +122,7 @@ ms.locfileid: "81632112"
     
     *plot* *0xFFD8FFE000104A4649...*
   
-2. PowerShell コマンド プロンプトを開き、次のコマンドを実行します。引数として適切なインスタンス名、データベース名、ユーザー名、資格情報を指定します。 Windows ID を使用する場合は、 **-U** や **-P** を **T**に置き換えることができます。
+2. PowerShell コマンド プロンプトを開き、次のコマンドを実行します。引数として適切なインスタンス名、データベース名、ユーザー名、資格情報を指定します。 Windows ID を使用する場合は、 **-U** や **-P** を **-T**に置き換えることができます。
   
     ```powershell
     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
@@ -284,7 +284,7 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[レッスン 2:T-SQL を使用してデータ機能を作成する](sqldev-create-data-features-using-t-sql.md)
+[レッスン 2:T-SQL を使用してデータの特徴量を作成する](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 

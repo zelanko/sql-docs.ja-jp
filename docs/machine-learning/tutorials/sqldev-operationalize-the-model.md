@@ -69,7 +69,7 @@ GO
 
 より一般的なシナリオは、バッチ モードで複数の観測の予測を生成することです。 この手順では、バッチ スコアリングのしくみを見てみましょう。
 
-1.  最初に、使用する入力データの小さなセットを取得します。 このクエリは、予測に必要な乗客数とその他の機能を利用し、乗車の "上位 10" 一覧を作成します。
+1.  最初に、使用する入力データの小さなセットを取得します。 このクエリは、予測に必要な乗客数とその他の特徴量を利用し、乗車の "上位 10" 一覧を作成します。
   
     ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -168,7 +168,7 @@ GO
 
 2. 手動で値を指定し、お試しください。
   
-    新しい **クエリ** ウィンドウを開き、ストアド プロシージャを呼び出して、各パラメーターの値を指定します。 パラメーターは、モデルで使用される特徴列を表し、必須です。
+    新しい **クエリ** ウィンドウを開き、ストアド プロシージャを呼び出して、各パラメーターの値を指定します。 パラメーターは、モデルで使用される特徴量列を表し、必須です。
 
     ```sql
     EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',

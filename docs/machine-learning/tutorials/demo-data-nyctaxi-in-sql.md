@@ -59,8 +59,8 @@ ms.locfileid: "81116665"
 |**オブジェクト名です。**|**オブジェクトの種類**|**説明**|
 |----------|------------------------|---------------|
 |**NYCTaxi_Sample** | database | データベースと 2 つのテーブルを作成します。<br /><br />dbo. nyctaxi_sample テーブル:メインの NYC タクシー データセットを格納します。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。 NYC タクシー データセットの 1% のサンプルが、このテーブルに挿入されます。<br /><br />dbo.nyc_taxi_models テーブル:トレーニング済みの Advanced Analytics モデルを保持するために使用します。|
-|**fnCalculateDistance** |スカラー値関数 (scalar-valued function) | 乗車と降車の場所間の直線距離を計算します。 この関数は、[データ機能の作成](sqldev-create-data-features-using-t-sql.md)、[モデルのトレーニングと保存](sqldev-train-and-save-a-model-using-t-sql.md)、[R モデルの運用](sqldev-operationalize-the-model.md)に使用されます。|
-|**fnEngineerFeatures** |テーブル値関数 (table-valued function) | モデル トレーニング用の新しいデータ機能を作成します。 この関数は、[データ機能の作成](sqldev-create-data-features-using-t-sql.md)、[モデルのトレーニングと保存](sqldev-operationalize-the-model.md)、R モデルの運用に使用されます。|
+|**fnCalculateDistance** |スカラー値関数 (scalar-valued function) | 乗車と降車の場所間の直線距離を計算します。 この関数は、[データの特徴量の作成](sqldev-create-data-features-using-t-sql.md)、[モデルのトレーニングと保存](sqldev-train-and-save-a-model-using-t-sql.md)、[R モデルの運用](sqldev-operationalize-the-model.md)に使用されます。|
+|**fnEngineerFeatures** |テーブル値関数 (table-valued function) | モデル トレーニング用の新しいデータの特徴量を作成します。 この関数は、[データの特徴量の作成](sqldev-create-data-features-using-t-sql.md)、[モデルのトレーニングと保存](sqldev-operationalize-the-model.md)、R モデルの運用に使用されます。|
 
 
 ストアド プロシージャは、さまざまなチュートリアルに記載されている R および Python スクリプトを使用して作成されます。 次のテーブルは、さまざまなレッスンでスクリプトを実行するときに、必要に応じて NYC タクシー デモ データベースに追加できるストアド プロシージャをまとめたものです。
@@ -71,7 +71,7 @@ ms.locfileid: "81116665"
 |**RPlotRHist** |R| Hist 関数を使用してグラフィックを作成し、出力をローカル PDF ファイルとして保存します。 このストアド プロシージャは、[データの調査と視覚化](sqldev-explore-and-visualize-the-data.md)のために使用されます。|
 |**RxTrainLogitModel**  |R| R パッケージを呼び出して、ロジスティック回帰モデルをトレーニングします。 モデルは、tipped 列の値を予測し、ランダムに選択した 70% のデータを使用してトレーニングされます。 ストアド プロシージャの出力は、テーブル nyc_taxi_models に保存されているトレーニング済みのモデルです。 このストアド プロシージャは、[モデルのトレーニングと保存](sqldev-train-and-save-a-model-using-t-sql.md)のために使用されます。|
 |**RxPredictBatchOutput**  |R | モデルを使用して予測を作成するトレーニング済みモデルを呼び出します。 ストアド プロシージャは、その入力パラメーターとしてクエリを受け取り、入力行のスコアを格納する数値の列を返します。 このストアド プロシージャは、[可能性のある結果の予測](sqldev-operationalize-the-model.md)のために使用されます。|
-|**RxPredictSingleRow**  |R| モデルを使用して予測を作成するトレーニング済みモデルを呼び出します。 このストアド プロシージャは、インライン パラメーターとして渡された個々の機能の値と共に、入力として新しい監視を受け取り、新しい監視の結果を予測する値を返します。 このストアド プロシージャは、[可能性のある結果の予測](sqldev-operationalize-the-model.md)のために使用されます。|
+|**RxPredictSingleRow**  |R| モデルを使用して予測を作成するトレーニング済みモデルを呼び出します。 このストアド プロシージャは、インライン パラメーターとして渡された個々の特徴量の値と共に、入力として新しい監視を受け取り、新しい監視の結果を予測する値を返します。 このストアド プロシージャは、[可能性のある結果の予測](sqldev-operationalize-the-model.md)のために使用されます。|
 
 ## <a name="query-the-data"></a>データにクエリを実行する
 

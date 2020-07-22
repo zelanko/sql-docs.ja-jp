@@ -111,4 +111,4 @@ ms.locfileid: "81115745"
 ## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [R と SQL を使用してデータ機能を作成する](walkthrough-create-data-features.md)
+> [R と SQL を使用してデータの特徴量を作成する](walkthrough-create-data-features.md)

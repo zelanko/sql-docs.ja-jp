@@ -30,7 +30,7 @@ SQL プログラマー向けのこのチュートリアルでは、SQL Server �
 機械学習ソリューションを構築するプロセスは、複数のツールおよび複数の段階にわたる該当分野の専門家の連携に関連する可能性がある複雑なものです。
 
 + データの取得とクリーニング
-+ モデリングに役立つデータと構築機能の探索
++ モデリングに役立つデータの探索と特徴量の構築
 + モデルのトレーニングと最適化
 + 運用環境に展開する
 
@@ -40,7 +40,7 @@ SQL プログラマー向けのこのチュートリアルでは、SQL Server �
 
 - [レッスン 1:ストアド プロシージャ中の R 関数を呼び出して、データの形状と分布を調べ、視覚化する](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [レッスン 2:T-SQL 関数で R を使用してデータ機能を作成する](sqldev-create-data-features-using-t-sql.md)
+- [レッスン 2:T-SQL 関数で R を使用してデータの特徴量を作成する](sqldev-create-data-features-using-t-sql.md)
   
 - [レッスン 3:関数とストアド プロシージャを使用した R モデルのトレーニングと保存](sqldev-train-and-save-a-model-using-t-sql.md)
   
@@ -52,7 +52,7 @@ SQL プログラマー向けのこのチュートリアルでは、SQL Server �
 
 すべてのタスクは、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを使用して実行できます。
 
-このチュートリアルでは、データベースと表の作成、データのインポート、SQL クエリの作成などの基本的なデータベース操作について理解していることを前提としています。 R がわかっていることを前提としていません。そのため、すべての R コードが提供されます。 
+このチュートリアルでは、データベースとテーブルの作成、データのインポート、SQL クエリの作成などの基本的なデータベース操作について理解していることを前提としています。 R がわかっていることを前提としていません。そのため、すべての R コードが提供されます。 
 
 + R が有効になっている [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) または [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
