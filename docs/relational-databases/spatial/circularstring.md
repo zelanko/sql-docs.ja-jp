@@ -1,7 +1,7 @@
 ---
 title: CircularString | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 07/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,19 +11,16 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c08dd6c0e04c3c323af592ca015b5e1604a05e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c322662347302504d789599aab5887f2ee7ae47e
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751146"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438204"
 ---
 # <a name="circularstring"></a>CircularString
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **CircularString** は、0 個以上の連続する円弧セグメントのコレクションです。 円弧セグメントは、2 次元平面内の 3 つの点によって定義された曲線セグメントです。最初のポイントを 3 番目のポイントと同じにすることはできません。 円弧セグメントの 3 つのポイントすべてが同一線上にある場合は、円弧セグメントが直線セグメントとして扱われます。  
-  
-> [!IMPORTANT]  
-> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]CircularString **サブタイプを含む、** で導入された新しい空間機能の詳細な説明とサンプルについては、ホワイト ペーパー『 [New Spatial Features in SQL Server 2012 (SQL Server 2012 の新しい空間機能)](https://go.microsoft.com/fwlink/?LinkId=226407)』をダウンロードして参照してください。  
   
 ## <a name="circularstring-instances"></a>CircularString インスタンス  
  次の図は有効な **CircularString** インスタンスを示しています。  

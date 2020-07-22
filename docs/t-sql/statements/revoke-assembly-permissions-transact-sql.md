@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 34a96fda9eea349abef5b53701556148ae56225a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40a79e0c59c3e392d5d36a341b663b41ed8678c2
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897075"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485390"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE (アセンブリの権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
     [ AS revoking_principal ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  GRANT OPTION FOR  
  指定した権限を与えるまたは拒否する許可を取り消します。 権限自体は取り消されません。  
   

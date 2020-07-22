@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f48d933dec2dc87d0171641146f652a4e881045e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735679"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483724"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,9 @@ DDL Triggers with Database Scope
   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  **CALLER**  
  モジュール内のステートメントを、モジュールの呼び出し元のコンテキストで実行します。 モジュールを実行するユーザーは、モジュール自体に対してだけでなく、そのモジュールによって参照されるすべてのデータベース オブジェクトに対する、適切な権限を持っている必要があります。  
   

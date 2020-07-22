@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs
+title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -12,14 +12,15 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d350d78a4a79bd66cd6bda5794b87d97cf043dc
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 0895a01f3110c90172ab763ebd0991c259da985d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196892"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484603"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 計算ノードまたは制御ノードで実行されているクエリの [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 実行プランを表示します。 クエリの計算ノードと制御ノードでの実行中に、クエリ パフォーマンスの問題のトラブルシューティングを行うにはこれを使用します。
@@ -41,7 +42,7 @@ Azure 並列データ ウェアハウスの構文:
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [;]  
 ```  
-  
+
 ## <a name="arguments"></a>引数  
  *distribution_id*  
  クエリ プランを実行しているディストリビューションの識別子です。 これは整数であり、NULL にすることはできません。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] をターゲットとする場合に使用されます。  
@@ -96,5 +97,6 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );
 ```  
 
 ## <a name="see-also"></a>参照
-[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)
+
+- [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
+- [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)

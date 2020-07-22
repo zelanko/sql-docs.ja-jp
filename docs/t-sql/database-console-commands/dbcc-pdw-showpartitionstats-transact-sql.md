@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL) | Microsoft Docs
+title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -11,14 +11,15 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4cb7824e3efd5a0d6cca969a790834a4e61968cb
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 6d1a1a72fbe5ef1b8382901a62adfd95a907b765
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196912"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484263"
 ---
 # <a name="dbcc-pdw_showpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースに含まれるテーブルの各パーティションについて、サイズと行数を表示します。
@@ -32,7 +33,7 @@ Show the partition stats for a table
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  
 ```  
-  
+
 ## <a name="arguments"></a>引数  
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
  表示される 1 部、2 部、または 3 部構成のテーブル名。  2 部または 3 部構成のテーブル名は、二重引用符 ("") で囲む必要があります。 1 部構成のテーブル名を囲む引用符を使用することは省略できます。  
@@ -61,7 +62,8 @@ DBCC PDW_SHOWPARTITIONSTATS ("ssawPDW.dbo.FactInternetSales");
 DBCC PDW_SHOWPARTITIONSTATS ("dbo.FactInternetSales");  
 DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);  
 ```  
+
 ## <a name="see-also"></a>参照
-[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
- 
+
+- [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+- [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  

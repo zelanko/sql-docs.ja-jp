@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 90bb787880cf212cfeb4a70b8e76b265f59e532a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4ae4a7c20902299362e1001246d76364cbbb368b
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902231"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483623"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY (サーバー プリンシパルの権限の拒否) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,9 @@ DENY permission [ ,...n ] }
     | server_role  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *permission*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインで拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   

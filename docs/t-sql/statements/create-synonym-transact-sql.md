@@ -1,5 +1,5 @@
 ---
-title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
+title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f4fd357cb833832beb03e23e3b7ba6e1f26fb03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d4131868fbaf40c59be2b55aad5fe078490c824
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766971"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484571"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   新しいシノニムを作成します。  
@@ -61,7 +62,9 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 }  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *schema_name_1*  
  シノニムを作成するスキーマを指定します。 *schema* を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって現在のユーザーの既定のスキーマが使用されます。  
   
@@ -89,15 +92,19 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  次の種類のオブジェクトに対してシノニムを作成することができます。  
   
-|||  
-|-|-|  
-|アセンブリ (CLR) ストアド プロシージャ|アセンブリ (CLR) テーブル値関数|  
-|アセンブリ (CLR) スカラー関数|アセンブリ集計 (CLR) 集計関数|  
-|レプリケーション フィルター プロシージャ|拡張ストアド プロシージャ|  
-|SQL スカラー関数|SQL テーブル値関数|  
-|SQL インラインテーブル値関数|SQL ストアド プロシージャ|  
-|表示|テーブル<sup>1</sup> (ユーザー定義)|  
-  
+- アセンブリ (CLR) ストアド プロシージャ
+- アセンブリ (CLR) テーブル値関数
+- アセンブリ (CLR) スカラー関数
+- アセンブリ集計 (CLR) 集計関数
+- レプリケーション フィルター プロシージャ
+- 拡張ストアド プロシージャ
+- SQL スカラー関数
+- SQL テーブル値関数
+- SQL インラインテーブル値関数
+- SQL ストアド プロシージャ
+- テーブル<sup>1</sup> (ユーザー定義)
+- 表示
+
  <sup>1 ローカル一時テーブルとグローバル一時テーブルが含まれます。</sup>  
   
  4 部構成の関数ベース オブジェクト名はサポートされません。  

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfea3cb27b67208179dcb7dcce8a0352f369b84c
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748924"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484289"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,9 @@ DBCC OPENTRAN
 ]   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *database_name* | *database_id*| 0  
  最も古いトランザクションに関する情報を表示するデータベースの名前または ID を指定します。 値を指定しないか 0 を指定した場合は、現在のデータベースが使用されます。 データベース名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   

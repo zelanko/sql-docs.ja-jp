@@ -1,5 +1,5 @@
 ---
-title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
+title: CREATE TRIGGER (Transact-SQL)
 description: CREATE TRIGGER ステートメントの Transact-SQL リファレンス。DML、DDL、ログオン トリガーの作成に使用されます。
 ms.date: 10/30/2019
 ms.prod: sql
@@ -28,16 +28,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2434250e8ea3fe4abd7c17ed5fc4041c63880321
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766943"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481888"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DML トリガー、DDL トリガー、またはログオン トリガーを作成します。 トリガーとは、特別な種類のストアド プロシージャであり、データベース サーバーでイベントが発生したときに自動的に実行されます。 DML トリガーは、ユーザーがデータ操作言語 (DML) イベントを介してデータを変更しようとしたときに実行されます。 DML イベントは、テーブルやビューに対する INSERT、UPDATE、または DELETE ステートメントによって発生するイベントです。 これらのトリガーは、テーブル行が影響を受けるかどうかにかかわらず、有効なイベントが発生したときに起動されます。 詳しくは、「 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)」をご覧ください。  
   
@@ -160,6 +160,8 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
     [ EXECUTE AS Clause ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数
 OR ALTER  
 **適用対象**:Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降)。 
@@ -310,20 +312,27 @@ TRUNCATE TABLE ステートメントは実質的には DELETE ステートメン
 ログに記録されるかどうかにかかわらず、WRITETEXT ステートメントによってトリガーがアクティブになることはありません。  
   
 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは DML トリガーでは許可されません。  
-  
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
-|RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
-  
+
+- ALTER DATABASE
+- CREATE DATABASE
+- DROP DATABASE
+- RESTORE DATABASE
+- RESTORE LOG
+- RECONFIGURE
+
 また、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、トリガーによって起動される操作の対象となるテーブルまたはビューに対して使用する場合は、DML トリガー内では使用できません。  
   
-||||  
-|-|-|-|  
-|CREATE INDEX (CREATE SPATIAL INDEX および CREATE XML INDEX を含む)|ALTER INDEX|DROP INDEX|  
-|DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|ALTER TABLE (次の操作で使用する場合)<br /><br /> 列の追加、変更、または削除<br /><br /> パーティションの切り替え<br /><br /> PRIMARY KEY 制約や UNIQUE 制約の追加または削除|||  
-  
+- CREATE INDEX (CREATE SPATIAL INDEX および CREATE XML INDEX を含む)
+- ALTER INDEX
+- DROP INDEX
+- DROP TABLE
+- DBCC DBREINDEX
+- ALTER PARTITION FUNCTION
+- ALTER TABLE (次の操作で使用する場合)
+    - 列の追加、変更、または削除
+    - パーティションの切り替え
+    - PRIMARY KEY 制約や UNIQUE 制約の追加または削除
+
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではシステム テーブルに対するユーザー定義トリガーがサポートされないため、システム テーブルに対してはユーザー定義トリガーを作成しないことをお勧めします。 
 

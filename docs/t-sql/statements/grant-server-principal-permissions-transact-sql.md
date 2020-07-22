@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 91df6d2f20f7ba5a18a5dbdff30712d17b8c0e24
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: df5bb7686871a14abf3de705bf2a8a8553a18000
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880356"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484348"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT (サーバー プリンシパルの権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,9 @@ GRANT permission [ ,...n ] }
     | server_role  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *permission*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   

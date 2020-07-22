@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1ccb7e5313ed36ad6fd3b08b030a9e60d3118bf6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 337ee4188d85ef83814ae6beb9095b835767dcb2
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894539"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483913"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>REVOKE (検索プロパティ リスト権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
     [ AS revoking_principal ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  GRANT OPTION FOR  
  指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   

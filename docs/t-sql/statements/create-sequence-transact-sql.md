@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f350f2d2a9b1f4b90030f928792570cc80653916
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: fae3e0c336af71fc73e8b39fd52d8ded0b478237
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392960"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465269"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 
@@ -253,8 +253,9 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 |`is_cached`|`1`|  
 |`current_value`|`-9223372036854775808`|  
   
-### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. 特定のデータ型のシーケンスを作成する  
- 次の例では、-32,768 ～ 32,767 の範囲の **smallint** データ型を使用して、シーケンスを作成します。  
+### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. 特定のデータ型のシーケンスを作成する
+
+次の例では、-32,768 ～ 32,767 の範囲の **smallint** データ型を使用して、シーケンスを作成します。  
   
 ```sql  
 CREATE SEQUENCE SmallSeq 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 50d0a3ea940347e0d921ba01e4a81aeaef8b4aab
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22b811a7048e48ba213e6bb83b799679ae5f6b99
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766628"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485513"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY (対称キーの権限の拒否) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,9 @@ DENY permission [ ,...n ]
     | Database_user_with_no_login   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *permission*  
  対称キーで拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   

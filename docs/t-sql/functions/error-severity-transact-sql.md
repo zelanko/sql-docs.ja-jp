@@ -22,12 +22,12 @@ ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f3f6988a766966b35fc247e9fc17a2b9f8c558d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7f5fe6fff7417567d7440b16acffc550471aa0f9
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999053"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465215"
 ---
 # <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85999053"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 ERROR_SEVERITY ( )  
 ```  
   
@@ -61,6 +61,7 @@ ERROR_SEVERITY ( )
   
 ### <a name="a-using-error_severity-in-a-catch-block"></a>A. CATCH ブロックで ERROR_SEVERITY を使用する  
 この例では、0 除算エラーを生成したストアド プロシージャを示します。 `ERROR_SEVERITY` はそのエラーの重大度を返します。  
+
 ```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  

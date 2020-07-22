@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b327105398388615aa507ceaf30734347fbf2683
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d72a643f1bc9774ebfa412ff50db21b8800e934e
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882592"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484856"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85882592"
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  ON | OFF  
  ON の場合、ローカル トランザクションからリモート ストアド プロシージャが実行されると、[!INCLUDE[tsql](../../includes/tsql-md.md)] 分散トランザクションが開始されます。 OFF の場合、ローカル トランザクションからリモート ストアド プロシージャを呼び出しても、[!INCLUDE[tsql](../../includes/tsql-md.md)] 分散トランザクションは開始されません。  
   

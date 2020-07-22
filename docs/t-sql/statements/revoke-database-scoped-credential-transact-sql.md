@@ -19,12 +19,12 @@ ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67182129b86953c99d3228fb7df20b0987910a5d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0469f4f03430433135c827bb8f6e6fa9ed5dcc4a
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735357"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485123"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE (データベース スコープの資格情報の取り消し) (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -44,7 +44,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
     [ AS revoking_principal ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  GRANT OPTION FOR  
  指定した権限を与える許可を取り消すことを示します。 権限自体は取り消されません。  
   

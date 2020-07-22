@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 261f2c20c60c138708791d73319da2bb153a23c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d95efb94cd955a822ac9b07cce0b20063283d35f
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735655"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484081"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT (証明書の権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ GRANT permission  [ ,...n ]
     [ AS granting_principal ]   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *permission*  
  証明書に対して許可できる権限を指定します。 以下に一覧を示します。  
   

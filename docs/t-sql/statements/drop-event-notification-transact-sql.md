@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18cc9317b8e610b442299cfee3777a183c9146df
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 22621d34994c7c137b741ad01086d7226608584d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895450"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484547"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ ON { SERVER | DATABASE | QUEUE queue_name }
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *notification_name*  
  削除するイベント通知の名前です。 複数のイベント通知を指定できます。 現在作成されているイベント通知の一覧を表示するには、「[sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)」を参照してください。  
   

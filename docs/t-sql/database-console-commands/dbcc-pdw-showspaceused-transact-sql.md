@@ -1,5 +1,5 @@
 ---
-title: DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs
+title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -12,21 +12,22 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a8a016fe9852c076b563796caf4cc196ea3ecce
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 748ed216b16788e176db5ad459d8e2b05c563c96
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197218"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484238"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースの特定のテーブルまたはすべてのテーブルの行数、予約済みのディスク領域、使用済みのディスク領域を表示します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>構文
   
 ```syntaxsql
 -- Show the space used for all user tables and system tables in the current database  
@@ -37,15 +38,18 @@ DBCC PDW_SHOWSPACEUSED
 DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name .] table_name  " )  
 [;]  
 ```  
-  
-## <a name="arguments"></a>引数  
+
+## <a name="arguments"></a>引数
+
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
- 表示される 1 部、2 部、または 3 部構成のテーブル名。 2 部または 3 部構成のテーブル名は、二重引用符 ("") で囲む必要があります。 1 部構成のテーブル名を囲む引用符を使用することは省略できます。 テーブル名が指定されていない場合は、現在のデータベースの情報が表示されます。  
+表示される 1 部、2 部、または 3 部構成のテーブル名。 2 部または 3 部構成のテーブル名は、二重引用符 ("") で囲む必要があります。 1 部構成のテーブル名を囲む引用符を使用することは省略できます。 テーブル名が指定されていない場合は、現在のデータベースの情報が表示されます。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
+
 VIEW SERVER STATE 権限が必要です。
   
-## <a name="result-sets"></a>結果セット  
+## <a name="result-sets"></a>結果セット
+
 これは、すべてのテーブルの結果セットです。
   
 |列|データ型|説明|  
@@ -82,6 +86,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
 ```  
   
 ### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. 現在のデータベース内のすべてのテーブルで使用されているディスク領域を表示する  
+
  次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] のすべてのユーザー テーブルとシステム テーブルで使用される予約済みのディスク領域を示します。  
   
 ```sql
@@ -89,8 +94,8 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
   
 DBCC PDW_SHOWSPACEUSED;  
 ```  
- ## <a name="see-also"></a>参照
-[DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 
-  
+## <a name="see-also"></a>参照
+
+- [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
+- [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
