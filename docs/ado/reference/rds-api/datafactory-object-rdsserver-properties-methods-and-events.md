@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15cc2596022889fe855145cd538d82676620aa13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2ac5645910a4b5339e696d793c167222b80cc6c3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752627"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942856"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory オブジェクト (RDSServer) のプロパティ、メソッド、およびイベント
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "82752627"
   
 ## <a name="methods"></a>メソッド  
   
-|||  
+|メソッド|説明|  
 |-|-|  
 |[ConvertToString メソッド (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|レコードセットを MIME64 文字列に変換します。|  
 |[CreateRecordset メソッド (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|空のレコードセットを作成して返します。|  

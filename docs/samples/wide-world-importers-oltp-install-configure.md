@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718662"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942381"
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +80,9 @@ Bacpac を新しい SQL Database にインポートするには、Management Stu
 
 SQL Server で監査を有効にするには、サーバー構成が必要です。 WideWorldImporters サンプルの SQL Server 監査を有効にするには、データベースで次のステートメントを実行します。
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+```sql
+EXECUTE [Application].[Configuration_ApplyAuditing]
+```
 
 Azure SQL Database では、 [Azure portal](https://portal.azure.com/)によって監査が構成されます。
 
@@ -90,5 +92,7 @@ Azure SQL Database では、 [Azure portal](https://portal.azure.com/)によっ�
 
 行レベルのセキュリティは、WideWorldImporters の bacpac ダウンロードでは既定で有効になっていません。 データベースで行レベルのセキュリティを有効にするには、次のストアドプロシージャを実行します。
 
-    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```sql
+EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```
 

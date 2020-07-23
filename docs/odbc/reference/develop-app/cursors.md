@@ -1,5 +1,5 @@
 ---
-title: カーソル | Microsoft Docs
+title: カーソル (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da899e4dc47daff03c31277b3edd4d9c642b87cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a7484de48edaecea56fc135ca3b803875f9557c
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305293"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977779"
 ---
 # <a name="cursors"></a>カーソル
 アプリケーションは*カーソル*を使用してデータをフェッチします。 カーソルは、結果セットとは異なります。結果セットは、特定の検索条件に一致する行のセットです。一方、カーソルは、それらの行をアプリケーションに返すソフトウェアです。 データベースに適用される名前*カーソル*。これは、コンピューターターミナルの点滅カーソルから発生することがあります。 カーソルが画面上の現在位置を示し、型指定された単語が次に表示されるのと同様に、結果セットのカーソルは結果セット内の現在の位置と、次に返される行を示します。  

@@ -1,5 +1,5 @@
 ---
-title: ITableDefinition でのデータ型のマッピング | Microsoft Docs
+title: ITableDefinition (Native Client OLE DB provider) でのデータ型マッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,12 @@ ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ee1ea1327f2dd52a7496486f0d33b5d5d91e86d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a308a4c7dfbff5462080d696675759c8c781815f
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005475"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86976639"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition でのデータ型のマッピング
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "86005475"
   
  DBCOLUMNDESC 構造の*Wtype*メンバーを使用して OLE DB データ型で新しい列のデータ型を指定する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは OLE DB のデータ型を次のようにマップします。  
   
-|OLE DB データ型|SQL Server<br /><br /> データ型 (data type)|追加情報|  
+|OLE DB データ型|SQL Server<br /><br /> データ型 (data type)|関連情報|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
 |DBTYPE_BYTES|**binary**、**varbinary**、**image**、**varbinary(max)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、DBCOLUMNDESC 構造体の*Ulcolumnsize*メンバーを検査します。 Native Client OLE DB プロバイダーは、値とインスタンスのバージョンに基づいて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型を**image**にマップします。<br /><br /> *Ulcolumnsize*の値が**binary**データ型の列の最大長よりも小さい場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE CLIENT OLE DB プロバイダーは dbcolumndesc *rgPropertySets*メンバーを検査します。 DBPROP_COL_FIXEDLENGTH が VARIANT_TRUE 場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって型が**バイナリ**にマップされます。 プロパティの値が VARIANT_FALSE 場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーはその型を**varbinary**にマップします。 いずれの場合も、DBCOLUMNDESC の *ulColumnSize* メンバーによって、作成される SQL Server の列の幅が決まります。|  
