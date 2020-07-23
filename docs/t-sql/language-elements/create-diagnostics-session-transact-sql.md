@@ -12,12 +12,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c7d3419d7dfe087dfbae8ce11d8afd68f461892
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68088972"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914058"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68088972"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 Creating a new diagnostics session:  
 CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';  
   
@@ -55,7 +55,9 @@ Removing results for a diagnostics session:
 DROP DIAGNOSTICS SESSION diagnostics_name ;  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *diagnostics_name*  
  診断セッションの名前。 診断セッションの名前には、文字 a - z、A - Z、0 - 9 のみを含めることができます。 また、診断セッションの名前は、文字で開始する必要があります。 *diagnostics_name* の上限は 127 文字です。  
   
@@ -63,7 +65,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  ビューに保存されるイベントの数。 たとえば、100 を指定した場合は、フィルター条件に一致する最新の 100 イベントが診断セッションに保存されます。 見つかった一致するイベントが 100 より少ない場合は、診断セッションに含まれるイベントは 100 未満になります。 *max_item_count_num* は 100 以上 100,000 以下である必要があります。  
   
  *event_name*  
- 診断セッションで収集する実際のイベントを定義します。  *event_name* は、`sys.pdw_diag_events.is_enabled='True'` の場合に [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md) に列挙されるイベントの 1 つです。  
+ 診断セッションで収集する実際のイベントを定義します。  *event_name* は、[ の場合に ](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)sys.pdw_diag_events`sys.pdw_diag_events.is_enabled='True'` に列挙されるイベントの 1 つです。  
   
  *filter_property_name*  
  結果を制限するプロパティの名前です。 たとえば、セッション ID に基づいて制限する場合は、*filter_property_name* を *SessionId* にする必要があります。 *filter_property_name* に使用できる値の一覧については、以下の *property_name* を参照してください。  
