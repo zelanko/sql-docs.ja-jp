@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d6f5d30d107bb2011a470849dd78e940b74a38d6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2933700c24e34748d2c0d6593d5f34eb8e69bc2
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666952"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970840"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指定された状態の確率を返します。  
   
@@ -33,8 +33,8 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>Remarks  
- 予測された状態が省略されている場合、省略した状態バケットを除いて、確率が最も高い状態が使用されます。 欠落状態のバケットを含めるには、予測された \< 状態の> を**INCLUDE_NULL**に設定します。 欠落状態の確率を返すには、予測された \< 状態> を NULL に設定します。  
+## <a name="remarks"></a>注釈  
+ 予測された状態が省略されている場合、省略した状態バケットを除いて、確率が最も高い状態が使用されます。 欠落している状態バケットを含めるには、 \<predicted state> を**INCLUDE_NULL**に設定します。 欠落状態の確率を返すには、を \<predicted state> NULL に設定します。  
   
 > [!NOTE]  
 >  一部のマイニングモデルには確率値が指定されていないため、この関数を使用することはできません。 また、特定のターゲット値の確率値は異なる方法で計算されます。また、クエリを実行するモデルの種類によっては、解釈が異なる場合があります。 特定の種類のモデルに対する確率の計算方法の詳細については、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」の個々のアルゴリズムに関するトピックを参照してください。  

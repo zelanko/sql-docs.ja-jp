@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e17363aa255591977dc1a9e9ecb4ece04604814
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1bddae4cf71b30a2a1365d0d5748170c0d5bac53
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670077"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969815"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Analysis Services バックアップファイル (abf) ファイルからサーバーにマイニングモデルまたはマイニング構造を読み込みます。  
   
@@ -31,7 +31,7 @@ IMPORT FROM <filename>
  *ファイル名*  
  インポートするファイルの名前と場所を表す文字列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  オブジェクトが指定されていない場合は、.dmb ファイルの内容全体が読み込まれます。 .dmb ファイルに、サーバー上に存在しないデータベースが含まれている場合、そのデータベースが作成されます。  
   
  オブジェクトをエクスポートまたはインポートするには、データベースまたはサーバーの管理者である必要があります。  

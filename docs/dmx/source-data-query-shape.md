@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 4d5d93d4236b3cf86719c416ba87517401e4b4f5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881802"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970306"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;ソースデータ &gt; のクエリ-図形
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   複数のデータソースのクエリを1つの階層テーブル (入れ子になったテーブルを含むテーブル) に結合します。これは、マイニングモデルのケーステーブルになります。  
   
@@ -54,7 +54,7 @@ APPEND ({ <child table query> }
  *列テーブル名*  
  入れ子になったテーブルの親テーブルに、列名を新たに追加します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  親テーブルおよび子テーブルに関連付けられている列によってクエリを並べ替える必要があります。  
   
 ## <a name="examples"></a>例  

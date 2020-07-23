@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669852"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969979"
 ---
 # <a name="bottomcount-dmx"></a>下端のカウント (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   式によって指定されたランクの増加順に、指定された最下位の行数を返します。  
   
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- テーブル列参照> などのテーブルを返す式、 \< またはテーブルを返す関数。  
+ などのテーブルを返す式、 \<table column reference> またはテーブルを返す関数。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式の>  
+ \<table expression>  
   
-## <a name="remarks"></a>Remarks  
- Rank expression> 引数によって指定された値によって、 \< テーブル式> 引数に指定された行のランクの増加順序が決定され、 \< count> 引数で指定されている行の最下位行の数 \< が返されます。  
+## <a name="remarks"></a>注釈  
+ 引数によって指定された値によって、 \<rank expression> 引数に指定された行のランクの増加順序が決定され、 \<table expression> 引数に指定されている最下位行の数 \<count> が返されます。  
   
 ## <a name="examples"></a>例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  

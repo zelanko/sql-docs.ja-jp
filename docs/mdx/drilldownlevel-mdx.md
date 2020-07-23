@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fdbc6ef265d51484160ab57a87e5672362326cc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049290"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970073"
 ---
 # <a name="drilldownlevel-mdx"></a>ドリルダウンレベル (MDX)
 
@@ -35,13 +35,13 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Level_Expression*  
  (省略可能)。 ドリルダウンするレベルを明示的に識別する MDX 式。 レベル式を指定する場合は、以下の index 引数をスキップします。  
   
- *化*  
+ *Index*  
  (省略可能)。 セット内でドリルダウンする階層番号を指定する有効な数値式です。 Level_Expression の代わりにインデックスレベルを使用して、ドリルダウンするレベルを明示的に指定することができます。  
   
  *Include_Calc_Members*  
  (省略可能)。 計算されるメンバーがドリルダウン レベルに存在する場合にそれらを含めるかどうかを示すフラグです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **ドリルダウンレベル**関数は、指定されたセットに含まれるメンバーに基づいて、階層の順序で子メンバーのセットを返します。 順序は、指定されたセット内の元のメンバーの間で保持されます。ただし、関数の結果セットに含まれるすべての子メンバーは、その親メンバーの直下に含まれます。  
   
  複数レベルの階層データ構造を指定した場合は、ドリルダウンするレベルを明示的に選択できます。 レベルを指定するには、相互に排他的な2つの方法があります。 1つ目の方法は、レベルを返す MDX 式を使用して**level_expression**引数を設定することです。別の方法として、数値でレベルを指定する数値式を使用して、**インデックス**引数を指定することもできます。  
@@ -52,9 +52,9 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  レベル式もインデックス値も指定されていない場合、関数は、指定されたセット内で参照されている最初のディメンションの最下位レベルにあるメンバーの子だけを取得することによって、階層の順序でセットを構築します。  
   
- XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「[サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
+ XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「[サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  SSMS の MDX クエリウィンドウでは、Adventure Works キューブを使用して、次の例を試すことができます。  
   
  **例 1-最小構文を示します。**  

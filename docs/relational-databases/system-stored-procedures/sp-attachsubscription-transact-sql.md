@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1017c3332ca4e399984c01c68585d96aad86666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c039ce9a5f54f3c0498ef613df15353217d91036
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716187"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923464"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   既存のサブスクリプション データベースを任意のサブスクライバーにアタッチします。 このストアドプロシージャは、master データベースの新しいサブスクライバーで実行されます。  
   
@@ -105,7 +105,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_attachsubscription**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  パブリケーションの保有期間が終了している場合、サブスクリプションをパブリケーションにアタッチすることはできません。 保有期間が経過したサブスクリプションが指定されている場合、サブスクリプションがアタッチされているか、最初に同期されたときに、エラーが発生します。 パブリケーションの保有期間が**0** (期限切れにならない) のパブリケーションは無視されます。  
@@ -113,7 +113,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_attachsubscription**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

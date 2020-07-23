@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5a616db3e2fd0927faf9273bfaf55bb31e94391c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c8247440f0e9d074e24eab3e9836fdb46bd0855e
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669903"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970239"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   累積合計が指定された値以上になるテーブルの最上位行を、ランクの減少順 (降順) に返します。  
   
@@ -28,13 +28,13 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- テーブル列参照> などのテーブルを返す式、 \< またはテーブルを返す関数。  
+ などのテーブルを返す式、 \<table column reference> またはテーブルを返す関数。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式の>  
+ \<table expression>  
   
-## <a name="remarks"></a>Remarks  
- **TopSum**関数は、各行の rank 式> 引数の評価値に基づいて、ランクの降順で最上位行を返し \< \< ます。これは、> 値の順位付け式の合計が、sum> 引数で指定されている指定された合計以上であることを示し \< ます。 **TopSum**は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
+## <a name="remarks"></a>注釈  
+ **TopSum**関数は、各行の引数の評価値に基づいて、順位の降順で最上位行を返し \<rank expression> ます。これは、値の合計が、引数で指定された指定された合計値以上であることを \<rank expression> 示し \<sum> ます。 **TopSum**は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
   
 ## <a name="examples"></a>例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  

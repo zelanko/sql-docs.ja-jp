@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7ffc372ad0c44208d246a2afc9259428e354e480
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: d16b8b01251be6703350a1a64bb9cdd2bdc5cadb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669584"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970590"
 ---
 # <a name="select-from-ltmodelgtdimension_content-dmx"></a>[モデルから] を選択し &lt; &gt; ます。DIMENSION_CONTENT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  マイニング モデルは、OLAP キューブのディメンションとして使用できます。このとき、モデルの各ノードは、ディメンションのメンバーとして表されます。 **SELECT FROM \< model>。Dimension_CONTENT**ステートメントは、ディメンションとしての使用に関連するモデルのコンテンツを返します。  
+  マイニング モデルは、OLAP キューブのディメンションとして使用できます。このとき、モデルの各ノードは、ディメンションのメンバーとして表されます。 **SELECT FROM \<model> です。Dimension_CONTENT**ステートメントは、ディメンションとしての使用に関連するモデルのコンテンツを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="arguments"></a>引数  
  *n*  
- 任意。 返す行数を指定する整数値です。  
+ 省略可能。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  コンテンツ スキーマ行セットから派生する、関連する列識別子のコンマ区切りのリストです。  
@@ -40,12 +40,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  モデル識別子。  
   
  *条件式*  
- 任意。 列リストから返される値を制限する条件。  
+ 省略可能。 列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 任意。 スカラー値を返す式。  
+ 省略可能。 スカラー値を返す式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  アルゴリズムプロバイダーは、返されるコンテンツとその編成方法を定義します。 たとえば、プロバイダーはディメンション コンテンツに示されるノード数を制限する場合があります。  
   
  次の表は、ディメンション コンテンツのためにクエリできる列と、各列がデータ マイニング ディメンションとして実行する関数について示しています。  

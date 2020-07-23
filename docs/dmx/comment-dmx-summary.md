@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 71e6c616cef5a2f4945a1335e1297aa3ad3a2ce4
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4f0f01b0dc3550c6b09e6c2342232e6b7c7fac8f
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669377"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969913"
 ---
 # <a name="---comment-dmx-summary"></a>--(コメント) (DMX) の概要
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   実行しないテキスト文字列を示し [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 コメントは、データマイニング拡張機能 (DMX) ステートメント内で入れ子にしたり、コード行の末尾に含めたり、別の行に挿入したりすることができます。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "83669377"
  *Comment_Text*  
  コメントのテキストを含む文字列です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  この演算子は、単一行または入れ子になったコメントに使用します。 --を使用して挿入されたコメントは、改行文字で区切られます。  
   
  コメントの長さには制限がありません。  

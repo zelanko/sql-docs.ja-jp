@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669874"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971840"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   既存のマイニング構造に基づく新しいマイニングモデルを作成します。  **ALTER マイニング structure**ステートメントを使用して新しいマイニングモデルを作成する場合は、構造が既に存在している必要があります。 これに対して、ステートメントを使用して、 [DMX&#41;&#40;のマイニングモデルを作成](../dmx/create-mining-model-dmx.md)すると、モデルが作成され、基になるマイニング構造が同時に自動的に生成されます。  
   
@@ -55,15 +55,15 @@ USING <algorithm> [(<parameter list>)]
  プロバイダーによって定義されたデータマイニングアルゴリズムの名前。  
   
 > [!NOTE]  
->  現在のプロバイダーでサポートされているアルゴリズムの一覧は[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)を使用して取得できます。 の現在のインスタンスでサポートされているアルゴリズムを表示するには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、「[データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
+>  現在のプロバイダーでサポートされているアルゴリズムの一覧は[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))を使用して取得できます。 の現在のインスタンスでサポートされているアルゴリズムを表示するには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、「[データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
   
  *パラメーターリスト*  
- 任意。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
+ 省略可能。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
   
  *フィルター条件*  
  ケーステーブルの列に適用されるフィルター式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  マイニング構造に複合キーが含まれている場合、マイニングモデルには、構造体で定義されているすべてのキー列が含まれている必要があります。  
   
  クラスタリングアルゴリズムとシーケンスクラスターアルゴリズムを使用して作成されたモデルなど、予測可能な列がモデルに必要ない場合は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] ステートメントに列定義を含める必要はありません。 結果として得られるモデルのすべての属性が入力として扱われます。  
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PREDICT**|この列はモデルによって予測できます。また、その値を入力として使用して、その他の予測可能列の値を予測することもできます。|  
+|**将来**|この列はモデルによって予測できます。また、その値を入力として使用して、その他の予測可能列の値を予測することもできます。|  
 |**PREDICT_ONLY**|この列はモデルによって予測できますが、その値を入力ケースで使用して他の予測可能列の値を予測することはできません。|  
   
 ## <a name="filter-criteria-expressions"></a>フィルター条件式  

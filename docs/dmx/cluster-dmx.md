@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669824"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969925"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   入力ケースを含んでいる可能性が最も高いクラスターを返します。  
   
@@ -33,9 +33,9 @@ Cluster()
 ## <a name="return-type"></a>戻り値の型  
  **クラスター**関数では、パラメーターは必要ありません。  
   
- **クラスター**関数は、クラスター名のスカラー値を返します。 ただし、この関数を別の関数の引数として使用する場合は、> クラスター列参照として考慮する必要があり \< ます。  
+ **クラスター**関数は、クラスター名のスカラー値を返します。 ただし、この関数を別の関数の引数として使用する場合は、として扱う必要があり \<cluster column reference> ます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **クラスター**は `<` `>` 、 **PredictHistogram**関数のクラスター列参照として使用することもできます。  
   
 ## <a name="examples"></a>例  

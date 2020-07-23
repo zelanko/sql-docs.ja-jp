@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 09911d0d0d8553ab26d0fc141bcc07ed2f479728
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: acb1982e61e622b150ee79af08e36ddcf24048ba
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666972"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970750"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指定された一連のシーケンス データに対して予測される将来のシーケンス値です。  
   
@@ -30,9 +30,9 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式>。  
+ \<table expression>。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  *N*パラメーターを指定すると、次の値が返されます。  
   
 -   *N*が0より大きい場合は、次の*n*ステップで最も可能性の高いシーケンス値です。  

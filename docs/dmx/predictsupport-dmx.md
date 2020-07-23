@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a6509980065c2293a0b2697beacae1ba2d4b0d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: da8673d58a6d1889017b0f79ea7cb4bf41c64466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83667188"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970700"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指定された状態に対するサポート値を返します。  
   
@@ -31,12 +31,12 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  スカラー列。  
   
 ## <a name="return-type"></a>戻り値の型  
- スカラー列参照によって指定された型のスカラー値 *\<* *>* 。  
+ によって指定された型のスカラー値 *\<*scalar column reference*>* 。  
   
-## <a name="remarks"></a>Remarks  
- 予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 欠落状態のバケットを含めるには、予測された \< 状態の> を**INCLUDE_NULL**に設定します。  
+## <a name="remarks"></a>注釈  
+ 予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 欠落している状態バケットを含めるには、 \<predicted state> を**INCLUDE_NULL**に設定します。  
   
- 欠落状態のサポートを返すには、予測された \< 状態> を NULL に設定します。  
+ 不足状態のサポートを返すには、を \<predicted state> NULL に設定します。  
   
 > [!NOTE]  
 >  サポートされている値の計算方法は異なります。つまり、クエリの対象となるモデルに応じてこの値の解釈は異なる場合があります。 特定の種類のモデルのサポートを計算する方法の詳細については、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」の個々のアルゴリズムの種類を参照してください。  

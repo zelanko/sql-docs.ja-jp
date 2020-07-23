@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6753f90b76f70de9f7368a5656ba93b16a3740d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669610"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970623"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>[モデルから] を選択し &lt; &gt; ます。ケース (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   ドリルスルーをサポートし、モデルのトレーニングに使用されたケースを返します。 マイニング構造とマイニング モデルについてドリルスルーを有効にした場合、ユーザーが適切な権限を持っているときは、モデルに含まれていない構造列も返すことができます。  
   
@@ -37,7 +37,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>引数  
  *n*  
- 任意。 返す行数を指定する整数値です。  
+ 省略可能。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  式のコンマ区切りのリストです。 式には、列識別子、ユーザー定義関数、Udf、および VBA 関数などを含めることができます。  
@@ -51,9 +51,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 任意。 スカラー値を返す式。  
+ 省略可能。 スカラー値を返す式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  マイニングモデルとマイニング構造の両方でドリルスルーが有効になっている場合、モデルおよび構造に対するドリルスルー権限を持つロールのメンバーであるユーザーは、マイニングモデルに含まれていないマイニング構造の列にアクセスできます。 したがって、機密データや個人情報を保護するには、個人情報をマスクするデータソースビューを作成し、必要な場合にのみ、マイニング構造に対する**Allowdrillthrough スルー**権限を付与する必要があります。  
   
  [Lag &#40;DMX&#41;](../dmx/lag-dmx.md)関数をタイムシリーズモデルと共に使用して、各ケースと初期時間の間のタイムラグを返したりフィルター処理したりできます。  

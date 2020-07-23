@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c0355c8f0286fe894b7c723177c4146b1e460758
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 440256a7349d7c77581c4369e901ce0da9c3212f
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669474"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971824"
 ---
 # <a name="create-mining-model-dmx"></a>マイニングモデル (DMX) の作成
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   新しいマイニング モデルとマイニング構造の両方をデータベースに作成します。 モデルを作成するには、ステートメントで新しいモデルを定義するか、予測モデルマークアップ言語 (PMML) を使用します。 後者については、詳しい知識のあるユーザーのみ使用してください。  
   
@@ -47,10 +47,10 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  現在のプロバイダーによって定義された、データ マイニング アルゴリズムの名前です。  
   
 > [!NOTE]  
->  現在のプロバイダーでサポートされているアルゴリズムの一覧は[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)を使用して取得できます。 の現在のインスタンスでサポートされているアルゴリズムを表示するには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、「[データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
+>  現在のプロバイダーでサポートされているアルゴリズムの一覧は[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))を使用して取得できます。 の現在のインスタンスでサポートされているアルゴリズムを表示するには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、「[データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
   
  *パラメーターリスト*  
- 任意。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
+ 省略可能。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
   
  *XML 文字列*  
  (高度な用途の場合のみ)。XML エンコードモデル (PMML)。 文字列は単一引用符 (') で囲む必要があります。  
@@ -68,7 +68,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   データ型 (必須)  
   
--   配布  
+-   Distribution  
   
 -   モデリングフラグの一覧  
   
@@ -102,16 +102,16 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [モデリング フラグ (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- ステートメントに句を追加して、2つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次の列リレーションシップ> 句の使用がサポートされてい \< ます。  
+ ステートメントに句を追加して、2つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次の句の使用がサポートされてい \<Column relationship> ます。  
   
  **関連**  
  この形式は値の階層を示します。 関連する列のターゲットには、入れ子になったテーブルのキー列、ケース行の個別値列、または関連する TO 句を持つ別の列 (より深い階層を示す) を指定できます。  
   
  予測列の使用方法を説明するには、予測句を使用します。 次の表では、使用可能な2つの句について説明します。  
   
-|\<予測> 句|説明|  
+|\<prediction> clause|説明|  
 |---------------------------|-----------------|  
-|**PREDICT**|この列は、モデルによって予測できます。また、入力ケースで指定して、その他の予測可能列の値を予測することもできます。|  
+|**将来**|この列は、モデルによって予測できます。また、入力ケースで指定して、その他の予測可能列の値を予測することもできます。|  
 |**PREDICT_ONLY**|この列はモデルによって予測できますが、その値を入力ケースで使用して他の予測可能列の値を予測することはできません。|  
   
 ### <a name="parameter-definition-list"></a>パラメーター定義リスト  
@@ -123,7 +123,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  各アルゴリズムに関連付けられているパラメーターの一覧については、「データマイニング[アルゴリズム &#40;Analysis Services データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  組み込みのテストデータセットを含むモデルを作成する場合は、ステートメント CREATE マイニング STRUCTURE の後に ALTER マイニング STRUCTURE を使用する必要があります。 ただし、すべての種類のモデルで予約データセットがサポートされるわけではありません。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
   
  CREATEMODEL ステートメントを使用してマイニングモデルを作成する方法のチュートリアルについては、「[タイムシリーズ予測 DMX のチュートリアル](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)」を参照してください。  
@@ -174,7 +174,7 @@ USING Microsoft_Sequence_Clustering
  次の例では、 [!INCLUDE[msCoName](../includes/msconame-md.md)] タイムシリーズアルゴリズムを使用して、ARTxp アルゴリズムを使用して新しいマイニングモデルを作成します。 ReportingDate は時系列のキー列で、ModelRegion はデータ系列のキー列です。 この例では、データの周期を 12 か月としています。 したがって、 *PERIODICITY_HINT*パラメーターは12に設定されます。  
   
 > [!NOTE]  
->  *PERIODICITY_HINT*パラメーターを指定するには、中かっこ文字を使用する必要があります。 また、値は文字列であるため、単一引用符で囲む必要があります: "{ \< numeric value>}"。  
+>  *PERIODICITY_HINT*パラメーターを指定するには、中かっこ文字を使用する必要があります。 また、値は文字列であるため、単一引用符で囲む必要があります: "{ \<numeric value> }"。  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

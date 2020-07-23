@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 462fe9e3634ea1dfa844fe4a97f1086bdef82cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f83d85ab2a79a4f5f27143de655f7748fe7f0fd4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716360"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915296"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-sql)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   パブリッシャーに新しいサブスクライバーを追加し、サブスクライバーがパブリケーションを受け取れるようにします。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで、スナップショットパブリケーションおよびトランザクションパブリケーションに対して実行されます。また、リモートディストリビューターを使用するマージパブリケーションの場合、このストアドプロシージャはディストリビューター側で実行されます。  
   
@@ -107,7 +107,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**2**|オン デマンド|  
 |**4**|毎日|  
 |**8**|週次|  
-|**16**|月単位|  
+|**16**|月 1 回|  
 |**32**|月単位の相対|  
 |**64** (既定値)|自動開始|  
 |**128**|繰り返し|  
@@ -125,8 +125,8 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|First|  
-|**2**|Second|  
-|**4**|第 3 週|  
+|**2**|秒|  
+|**4**|Third|  
 |**8**|4 番目|  
 |**16**|末尾|  
   
@@ -143,7 +143,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|Second|  
+|**2**|秒|  
 |**4** (既定値)|分|  
 |**8**|時間|  
   
@@ -192,7 +192,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_addsubscriber**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  サブスクライバーがマージパブリケーションへの匿名サブスクリプションのみを持つ場合、 **sp_addsubscriber**は必要ありません。  
@@ -202,8 +202,8 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_addsubscriber**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [プッシュサブスクリプションを作成する](../../relational-databases/replication/create-a-push-subscription.md)   
+## <a name="see-also"></a>参照  
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   

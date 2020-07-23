@@ -19,15 +19,15 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: ececd62311cd3eb227c3f9d5f5fb898076666d5b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 068495c78aada8e62add19c849b2d1dba4e9c36b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676870"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914819"
 ---
 # <a name="sysdm_exec_compute_pools-transact-sql"></a>dm_exec_compute_pools (Transact-sql)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -39,6 +39,6 @@ ms.locfileid: "85676870"
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [概要 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] ](../../big-data-cluster/big-data-cluster-overview.md)

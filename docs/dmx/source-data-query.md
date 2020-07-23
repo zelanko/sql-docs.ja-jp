@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670008"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970287"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;source data query&gt;
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  データマイニングモデルをトレーニングし、マイニングモデルから予測を作成するには、データベースの外部にあるデータにアクセスする必要があり [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 \<この外部データを定義するには、データマイニング拡張機能 (DMX) でソースデータクエリ> 句を使用します。 [Dmx&#41;&#40;への挿入](../dmx/insert-into-dmx.md)、 [&#60;&#62; モデルからの選択、dmx &#40;の選択](../dmx/select-from-model-prediction-join-dmx.md)、および [[自然予測 join ステートメントからの選択](../dmx/select-from-model-prediction-join-dmx.md)] では、すべて** \< ソースデータクエリ&#41;** が使用されます。  
+  データマイニングモデルをトレーニングし、マイニングモデルから予測を作成するには、データベースの外部にあるデータにアクセスする必要があり [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 \<source data query>この外部データを定義するには、データマイニング拡張機能 (DMX) で句を使用します。 [Dmx&#41;に挿入する &#40;](../dmx/insert-into-dmx.md)、 [&#60;モデルから選択して dmx &#40;に&#62; 予測結合を選択](../dmx/select-from-model-prediction-join-dmx.md)し、[すべて[選択] を選択](../dmx/select-from-model-prediction-join-dmx.md)し **\<source data query>** ます。  
   
 ## <a name="query-types"></a>クエリ型  
  ソース データの指定には、最も一般的な次の 3 つの方法があります。  

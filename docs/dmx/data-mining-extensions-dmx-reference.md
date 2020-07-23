@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 02c7185ebbf264ebf8ed8adda4915170f888e74b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670402"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971787"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>データ マイニング拡張機能 (DMX) リファレンス
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   データマイニング拡張機能 (DMX) は、でデータマイニングモデルを作成および操作するために使用できる言語です [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 DMX を使用して、新しいデータ マイニング モデルの構造の作成、これらのモデルの学習、およびモデルの参照、管理、予測を行うことができます。 DMX は、データ定義言語 (DDL) ステートメント、データ操作言語 (DML) ステートメント、および関数と演算子で構成されています。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "83670402"
   
  DMX のデータ操作ステートメントを使用して、次のタスクを実行できます。  
   
--   [INSERT INTO](../dmx/insert-into-dmx.md)ステートメントを使用して、マイニングモデルをトレーニングします。 これは、実際のソースデータをデータマイニングモデルオブジェクトに挿入するのではなく、アルゴリズムによって作成されるマイニングモデルを記述する抽象化を作成します。 INSERT INTO ステートメントのソースクエリについては、「 [ \< source data query>](../dmx/source-data-query.md)」を参照してください。  
+-   [INSERT INTO](../dmx/insert-into-dmx.md)ステートメントを使用して、マイニングモデルをトレーニングします。 これは、実際のソースデータをデータマイニングモデルオブジェクトに挿入するのではなく、アルゴリズムによって作成されるマイニングモデルを記述する抽象化を作成します。 INSERT INTO ステートメントのソースクエリについては、「」を参照 [\<source data query>](../dmx/source-data-query.md) してください。  
   
 -   モデルのトレーニング中に計算され、ソースデータの統計情報など、データマイニングモデルに格納されている情報を参照するには、SELECT ステートメントを拡張します。 SELECT ステートメントの機能を拡張するために含めることができる句は次のとおりです。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "83670402"
   
     -   [&#60;モデル&#62; から選択します。DMX&#41;&#40;の DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   SELECT ステートメントの[予測結合](../dmx/select-from-model-prediction-join-dmx.md)句を使用して、既存のマイニングモデルに基づく予測を作成します。 予測結合ステートメントのソースクエリについては、「 [ \< source data query>](../dmx/source-data-query.md)」を参照してください。  
+-   SELECT ステートメントの[予測結合](../dmx/select-from-model-prediction-join-dmx.md)句を使用して、既存のマイニングモデルに基づく予測を作成します。 予測結合ステートメントのソースクエリについては、「」を参照して [\<source data query>](../dmx/source-data-query.md) ください。  
   
 -   [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)ステートメントを使用して、モデルまたは構造からすべてのトレーニング済みデータを削除します。  
   

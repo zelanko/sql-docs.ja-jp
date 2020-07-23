@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 149285ac5888d6b23272b40fbbb1aef9cf55909e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5a4e589455a86f4ffe47e34a6d74d0b6890a5528
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669811"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969981"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **Clusterdistance**関数は、指定されたクラスターから入力したケースの距離を返します。クラスターが指定されていない場合は、最も可能性の高いクラスターと入力したケース間の距離を返します。  
   
@@ -33,7 +33,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **Clusterdistance**関数は、入力したケースと、その入力ケースの確率が最も高いクラスターとの距離を返します。  
   
  K がクラスター化されている場合、いずれのケースも1つのクラスターに属することができますが、メンバーシップの重みは1.0 であるため、クラスターの距離は常に0になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 階層の値を取得するには、マイニングモデルコンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION を照会または参照します。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)」を参照してください。  
@@ -75,7 +75,7 @@ NATURAL PREDICTION JOIN
   
  結果の例:  
   
-|正規表現|  
+|Expression|  
 |----------------|  
 |0.0477390930705145|  
   

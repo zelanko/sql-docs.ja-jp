@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21348f838ab51f2352ea975b81688ac0777fe277
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b37eeff2ffcee5b8b2434e096783916af30b17a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730717"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914625"
 ---
 # <a name="xqueries-involving-hierarchy"></a>階層に関係する XQuery
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   **AdventureWorks**データベースのほとんどの**xml**型の列は、半構造化されたドキュメントです。 したがって、各行に格納されているドキュメントは、外観が異なる場合があります。 このトピックのクエリサンプルでは、これらのさまざまなドキュメントから情報を抽出する方法について説明します。  
   
@@ -84,7 +84,7 @@ WHERE ProductModelID=7
 </ManuInstr>   
 ```  
   
-### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B: AdditionalContactInfo 列のすべての電話番号の検索  
+### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. AdditionalContactInfo 列のすべての電話番号の検索  
  次のクエリでは、階層全体で <> 要素を検索することによって、特定の顧客の連絡先の追加の電話番号を取得し `telephoneNumber` ます。 <`telephoneNumber`> 要素は階層内のどこにでも表示できるので、クエリでは検索で子孫と自己演算子 (//) を使用します。  
   
 ```sql

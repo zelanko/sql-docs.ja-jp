@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669983"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970316"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指定したケースに対応する構造列の値、または指定したケースの入れ子になったテーブルのテーブル値を返します。  
   
@@ -32,11 +32,11 @@ StructureColumn('structure column name')
  ケースまたは入れ子になったテーブルのマイニング構造列の名前。  
   
 ## <a name="result-type"></a>結果の種類  
- 返される型は、 \< 構造列名> パラメーターで参照されている列の型によって異なります。 たとえば、参照されるマイニング構造列がスカラー値を含む場合、関数はスカラー値を返します。  
+ 返される型は、パラメーターで参照されている列の型によって異なり \<structure column name> ます。 たとえば、参照されるマイニング構造列がスカラー値を含む場合、関数はスカラー値を返します。  
   
  参照されるマイニング構造列が入れ子になったテーブルの場合、関数はテーブル値を返します。 返されるテーブル値は、サブ SELECT ステートメントの FROM 句で使用できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  この関数はポリモーフィックであり、SELECT 式リスト、WHERE 条件式、および ORDER BY 式など、式を使用できるステートメント内の任意の場所で使用できます。  
   
  マイニング構造内の列の名前は文字列値であるため、単一引用符で囲む必要があります (たとえば、 `StructureColumn('` **列 1**) `')` 。 同じ名前を持つ列が複数ある場合、名前は SELECT ステートメントが含まれるコンテキスト内で解決されます。  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 262d8f9f62718bcb91ef034177375035a37dfc84
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4fcf803bb76bfb894faa75e6e51180cc25434abe
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668962"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969818"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX のチュートリアル (Analysis Services - データ マイニング)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   次のチュートリアルでは、データマイニング構造およびデータマイニングモデルでのデータマイニング拡張機能 (DMX) ステートメントの使用について説明します。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "83668962"
   
  このチュートリアルでは、同時に購入される傾向が高い製品を予測するマイニング モデルを作成する方法を学習します。 このチュートリアルでは、データマイニングで入れ子になったテーブルを使用する方法についても説明します。  
   
-## <a name="reference"></a>関連項目  
+## <a name="reference"></a>リファレンス  
  [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [データ マイニング拡張機能 (DMX) データ定義ステートメント](../dmx/dmx-statements-data-definition.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "83668962"
   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [多次元モデルのデータアクセス &#40;Analysis Services-多次元データ&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
 ## <a name="see-also"></a>参照  

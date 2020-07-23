@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cceeac44646b904a7d7e1b45bd3c92d4ad07a0d5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669843"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969937"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   累積合計が指定された値以上になるテーブルの最下位行を、ランクの増加順 (昇順) に返します。  
   
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- テーブル列参照> などのテーブルを返す式、 \< またはテーブルを返す関数。  
+ などのテーブルを返す式、 \<table column reference> またはテーブルを返す関数。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式の>  
+ \<table expression>  
   
-## <a name="remarks"></a>Remarks  
- **BottomSum**関数は、順位の昇順で一番下の行を返します。 ランクは、各行の順位式> 引数の評価値に基づいています。これは、 \< \<> 値の順位付け式の合計が、sum> 引数で指定されている指定された合計以上であることを示し \< ます。 **BottomSum**は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
+## <a name="remarks"></a>注釈  
+ **BottomSum**関数は、順位の昇順で一番下の行を返します。 順位付けは、各行の引数の評価値に基づいて行われます。これは、値の合計が、引数で指定された指定された \<rank expression> 合計以上であることを示し \<rank expression> \<sum> ます。 **BottomSum**は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
   
 ## <a name="examples"></a>例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f6371df8d1ab987bf1f49d149ff7856ba2d111c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666663"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970560"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>モデルから &lt; 選択 &gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   空の予測結合を実行し、指定された列の最も可能性の高い値を返します。 マイニング モデルのコンテンツのみが予測の作成に使用できます。  
   
@@ -34,18 +34,18 @@ SELECT <expression list> [TOP <n>] FROM <model>
  式、予測、または列のみの予測のコンマ区切りのリストです。  
   
  *n*  
- 任意。 返す行数を指定する整数値です。  
+ 省略可能。 返す行数を指定する整数値です。  
   
  *model*  
  モデル識別子。  
   
  *条件一覧*  
- 任意。 列リストから返される値を制限する条件。  
+ 省略可能。 列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 任意。 スカラー値を返す式。  
+ 省略可能。 スカラー値を返す式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  [*式] ボックスの一覧*の列は、予測または予測のみとして定義するか、予測可能列に関連付けられている必要があります。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes の例  

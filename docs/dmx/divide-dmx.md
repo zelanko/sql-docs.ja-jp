@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2d75bd4a1d4b75d9acb153c3a3aec9efcf58d876
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 01d9c838e8b7a40d19a59997ae670eee19e6309b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669744"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969853"
 ---
 # <a name="divide-dmx"></a>(除算) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   1つの数値を別の数値で除算する算術演算を実行します。  
   
@@ -37,7 +37,7 @@ Dividend / Divisor
 ## <a name="return-value"></a>戻り値  
  優先順位の高いパラメーターのデータ型を持つ値です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  この演算子が返す値は、最初の式が2番目の式で除算した商を表します。  
   
  両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 除算の結果が NULL 値になる場合、演算子はエラーになります。 除数と被除数の両方が null 値に評価される場合、演算子は null 値を返します。  

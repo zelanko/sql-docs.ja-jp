@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1b8fe4c8a83eaf56aea70abc810e7dc45f35eebb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670416"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971778"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>データ マイニング拡張機能 (DMX) ステートメント
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   でデータマイニングモデルを使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] するには、次の主要なタスクが必要です。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "83670416"
  [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)ステートメントを使用して、既存のマイニングモデルの構造を新しいマイニングモデルにコピーし、同じデータを使用して新しいモデルをトレーニングします。  
   
  マイニングモデルの参照  
- [Select &#40;DMX&#41;](../dmx/select-dmx.md)ステートメントを使用して、データマイニングアルゴリズムによって計算され、モデルのトレーニング中にデータマイニングモデルに格納される情報を参照します。 と同様に、 [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT ステートメントで複数の句を使用して、その機能を拡張することができます。 これらの句には、モデル> の[ \< モデル>](../dmx/select-distinct-from-model-dmx.md)とは別のものが含ま[ \< れます。](../dmx/select-from-model-cases-dmx.md)[モデル> からのケース \< 。](../dmx/select-from-model-sample-cases-dmx.md)[モデル> からの SAMPLE_CASES \< 。コンテンツ](../dmx/select-from-model-content-dmx.md)および[モデルからの \<>。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)。  
+ [Select &#40;DMX&#41;](../dmx/select-dmx.md)ステートメントを使用して、データマイニングアルゴリズムによって計算され、モデルのトレーニング中にデータマイニングモデルに格納される情報を参照します。 と同様に、 [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT ステートメントで複数の句を使用して、その機能を拡張することができます。 これらの句には、からの[DISTINCT \<model> ](../dmx/select-distinct-from-model-dmx.md)が含ま[れて \<model> います。ケース](../dmx/select-from-model-cases-dmx.md) [ \<model> 。SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)、[から \<model> です。コンテンツ](../dmx/select-from-model-content-dmx.md)および[からの \<model> 。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)。  
   
  マイニングモデルに対する予測  
  既存のマイニングモデルに基づいた予測を作成するには、SELECT ステートメントの[予測結合](../dmx/select-from-model-prediction-join-dmx.md)句を使用します。  

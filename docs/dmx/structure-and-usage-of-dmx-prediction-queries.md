@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669990"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970284"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>構造と DMX 予測クエリの使用
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   で [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、データマイニング拡張機能 (DMX) の予測クエリを使用して、マイニングモデルの結果に基づいて、新しいデータセット内の不明な列の値を予測できます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "83669990"
   
 -   **TOP**  
   
--   **FROM*** \< モデル>***予測結合**から      
+-   **FROM** *\<model>***予測結合**      
   
 -   **ON**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "83669990"
   
 -   データ列を返す関数。  
   
- **FROM** * \< model>* **予測結合**要素は、予測の作成に使用するソースデータを定義します。 単一クエリの場合、これは列に割り当てられる一連の値です。 空の予測結合の場合は、空のままとなります。  
+ **FROM** *\<model>* **予測結合**要素は、予測の作成に使用するソースデータを定義します。 単一クエリの場合、これは列に割り当てられる一連の値です。 空の予測結合の場合は、空のままとなります。  
   
  **ON**要素は、マイニングモデルで定義されている列を外部データセットの列にマップします。 空の予測結合クエリまたは自然予測結合を作成する場合は、この要素を含める必要はありません。  
   

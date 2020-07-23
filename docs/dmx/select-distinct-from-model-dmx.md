@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669624"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970633"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt; model &gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   モデル内の選択された列に対して可能なすべての状態を返します。 返される値は、指定された列に不連続値、分離された数値、または連続する数値が含まれているかどうかによって異なります。  
   
@@ -30,7 +30,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>引数  
  *n*  
- 任意。 返す行数を指定する整数。  
+ 省略可能。 返す行数を指定する整数。  
   
  *式の一覧*  
  関連する列識別子 (モデルから派生したもの) または式のコンマ区切りのリスト。  
@@ -42,9 +42,9 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 任意。 スカラー値を返す式。  
+ 省略可能。 スカラー値を返す式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **SELECT DISTINCT FROM**ステートメントは、1つの列、または関連する列のセットでのみ機能します。 この句は、関連しない列のセットでは動作しません。  
   
  **SELECT DISTINCT FROM**ステートメントを使用すると、入れ子になったテーブル内の列を直接参照できます。 次に例を示します。  
@@ -53,11 +53,11 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- **SELECT DISTINCT FROM \< model>** ステートメントの結果は、列の型によって異なります。 次の表は、サポートされている列の型およびステートメントからの出力について示しています。  
+ **SELECT DISTINCT FROM \<model> **ステートメントの結果は、列の種類によって異なります。 次の表は、サポートされている列の型およびステートメントからの出力について示しています。  
   
 |列の型|出力|  
 |-----------------|------------|  
-|Discrete|列内の一意の値。|  
+|離散|列内の一意の値。|  
 |Discretized|列内の分離された各バケットの中間点。|  
 |継続的|列内の値の中間点。|  
   

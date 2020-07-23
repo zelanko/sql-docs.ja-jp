@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a1c2719323bad884db77860590d0a95080c1a234
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e6bdfe1e3d22a2d2c4752e43df254231725fa447
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670204"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969547"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   ケースが、指定されたデータ マイニング モデルまたはマイニング構造のトレーニング ケースとして使用されるかどうかを示します。  
   
@@ -30,7 +30,7 @@ IsTrainingCase()
 ## <a name="result-type"></a>結果の種類  
  ケースがトレーニングデータセットの一部である場合に**true**を返します。それ以外の場合は**false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  データマイニングウィザードを使用してマイニング構造および関連マイニングモデルを作成する場合、既定では、ケースの30% がテストデータセットとして使用するために確保されます。 指定したデータソース内の残りのケースは、モデルのトレーニングに使用されます。 ただし、データ マイニング拡張機能 (DMX) を使用してマイニング モデルを作成する場合は、既定ですべてのデータがモデルのトレーニングに使用され、テスト セットは作成されません。 テストデータセットの作成を有効にするには、WITH 予約句のパラメーターを設定する必要があります。  
   
  <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> プロパティと <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> プロパティの値を表示すると、特定のデータ マイニング構造のデータがテスト セットとトレーニング セットにパーティション分割されているかどうかを確認できます。  

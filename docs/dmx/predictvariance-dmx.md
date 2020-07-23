@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13beb2a9a99ceea1d517e9ef2c77a071d7c72d30
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 6217df2efb63b691ad565ea4d6466cdbd5831830
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666863"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970680"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指定された列の分散を返します。  
   
@@ -31,9 +31,9 @@ PredictVariance(<scalar column reference>)
  スカラー列。  
   
 ## <a name="return-type"></a>戻り値の型  
- * \< スカラー列参照>* によって指定された型のスカラー値。  
+ によって指定された型のスカラー値 *\<scalar column reference>* 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  列参照が不連続の場合、 **Predictvariance**は0を返します。これは、不連続値から分散を計算できないためです。  
   
 ## <a name="examples"></a>例  

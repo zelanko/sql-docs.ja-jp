@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 283ce289d890d9a4d76801a59709463324f45f88
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: dab02107467b75aa418592ce640d88d3789e6cff
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670218"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971750"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>データマイニング拡張機能 (DMX) の構文表記規則
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   のデータマイニング拡張機能 (dmx) のリファレンスドキュメントでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dmx 言語を説明するために次の規則を使用します。  
   
-|表記|使用法|  
+|表記|使用方法|  
 |----------------|-----------|  
 |**太字**|表示されたとおりに正確に入力する必要がある DMX キーワードとテキスト。|  
 |*斜体*|ユーザーが指定する DMX 構文の引数を示します。|  
@@ -28,7 +28,7 @@ ms.locfileid: "83670218"
 |`[ ]` (角かっこ)|省略可能な構文項目が含まれています。 角かっこは入力しません。|  
 |{} (中かっこ)|必須の構文項目が含まれています。 中かっこは入力しないでください。|  
 |, ...|コンマの前の項目を任意の回数繰り返すことを示します。 項目はコンマで区切られます。|  
-|\<label> ::=|構文のブロックの名前を示します。 この表記規則は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付ける際に使用します。 構文のブロックを使用できる場所は、ラベル> など、山かっこで囲まれたラベルで示され \< ます。|  
+|\<label>::=|構文のブロックの名前を示します。 この表記規則は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付ける際に使用します。 構文のブロックを使用できる場所は、など、山かっこで囲まれたラベルで示され \<label> ます。|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)  

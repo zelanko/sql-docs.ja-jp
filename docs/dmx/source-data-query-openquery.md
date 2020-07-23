@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a075f314af0eb8ea2eb0bc941ada0bc38e22fec3
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670033"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970427"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;ソースデータクエリ &gt; -OPENQUERY
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   クエリを使用してソースデータクエリを既存のデータソースに置き換えます。 INSERT、SELECT FROM 予測結合、および SELECT FROM ナチュラル予測結合ステートメントでは、 **OPENQUERY**がサポートされています。  
   
@@ -34,10 +34,10 @@ OPENQUERY(<named datasource>, <query syntax>)
  *クエリ構文*  
  行セットを返すクエリ構文です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **OPENQUERY**は、データソースのアクセス許可をサポートすることにより、外部データにアクセスするより安全な方法を提供します。 接続文字列はデータソースに格納されるため、管理者はデータソースのプロパティを使用してデータへのアクセスを管理できます。 データソースの詳細については、「[サポートされるデータソース &#40;SSAS-多次元&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)」を参照してください。  
   
- サーバーで使用できるデータソースの一覧を取得するには、 **MDSCHEMA_INPUT_DATASOURCES**スキーマ行セットに対してクエリを実行します。 **MDSCHEMA_INPUT_DATASOURCES**の使用方法の詳細については、「 [MDSCHEMA_INPUT_DATASOURCES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)」を参照してください。  
+ サーバーで使用できるデータソースの一覧を取得するには、 **MDSCHEMA_INPUT_DATASOURCES**スキーマ行セットに対してクエリを実行します。 **MDSCHEMA_INPUT_DATASOURCES**の使用方法の詳細については、「 [MDSCHEMA_INPUT_DATASOURCES 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126243(v=sql.110))」を参照してください。  
   
  次の DMX クエリを使用して、現在の Analysis Services データベースのデータソースの一覧を返すこともできます。  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669455"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971813"
 ---
 # <a name="create-mining-structure-dmx"></a>マイニング構造の作成 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   データベースに新しいマイニング構造を作成し、必要に応じてトレーニングパーティションとテストパーティションを定義します。 マイニング構造を作成した後は、 [ALTER マイニング構造 &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)ステートメントを使用して、マイニング構造にモデルを追加できます。  
   
@@ -61,7 +61,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  既定値 : REPEATABLE(0)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  マイニング構造を定義するには、列リストを指定し、必要に応じて列間の階層リレーションシップを指定して、さらに必要に応じてマイニング構造をトレーニング データセットとテスト データセットにパーティション分割します。  
   
  オプションの SESSION キーワードは、その構造が、現在のセッションの間しか使用できない一時的な構造であることを示します。 セッションが終了すると、構造と、その構造に基づくすべてのモデルが削除されます。 一時的なマイニング構造およびモデルを作成するには、まずデータベースプロパティ AllowSessionMiningModels を設定する必要があります。 詳細については、「 [データ マイニング プロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
@@ -73,7 +73,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   データ型 (必須)  
   
--   配布  
+-   Distribution  
   
 -   モデリングフラグの一覧  
   
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  列には複数のモデリング フラグ値を定義できます。 ただし、1つの列に対して使用できるコンテンツの種類は1つとデータ型は1つだけです。  
   
 ### <a name="column-relationships"></a>列のリレーションシップ  
- 任意の列定義ステートメントに句を追加して、2つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次の列リレーションシップ> 句の使用がサポートされてい \< ます。  
+ 任意の列定義ステートメントに句を追加して、2つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次の句の使用がサポートされてい \<column relationship> ます。  
   
  **関連**  
  値の階層を示します。 関連する列のターゲットには、入れ子になったテーブルのキー列、ケース行の個別値列、または関連する TO 句を持つ別の列 (より深い階層を示す) を指定できます。  

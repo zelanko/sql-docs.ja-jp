@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 60c95521ba42dc5877c0e10a3f34453a497ad438
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669354"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969952"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   入力ケースが指定されたクラスターに所属する確率を返します。  
   
@@ -33,16 +33,16 @@ ClusterProbability([<Node_Caption>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  次の構文では、マイニングモデルコンテンツスキーマ行セットを使用して、マイニングモデルに存在するノードのキャプションを返します。  
   
 ```  
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- この構文の使用方法の詳細については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;のコンテンツ &#40;](../dmx/select-from-model-content-dmx.md)ます。 マイニングモデルコンテンツスキーマ行セットの詳細については、「 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)」を参照してください。  
+ この構文の使用方法の詳細については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;のコンテンツ &#40;](../dmx/select-from-model-content-dmx.md)ます。 マイニングモデルコンテンツスキーマ行セットの詳細については、「 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110))」を参照してください。  
   
- ノードの \< キャプション> が指定されていない場合、関数は、入力ケースが最も可能性の高いクラスターに属する確率を返します。 **クラスター**関数を使用して、最も可能性の高いクラスターを返します。  
+ \<node caption>が指定されていない場合、関数は、入力ケースが最も可能性の高いクラスターに属する確率を返します。 **クラスター**関数を使用して、最も可能性の高いクラスターを返します。  
   
 ## <a name="examples"></a>例  
  次の例は、指定したケースが Cluster 2 というラベルが付けられたクラスターに存在する確率を返します。  

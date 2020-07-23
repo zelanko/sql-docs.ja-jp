@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf2e0f2d57ce8bf1834813d4e39d06afc9724fd7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a0a245d152ddd9946142f5f115ee1db64ee5998b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670094"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970558"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   既存のマイニングモデルのマイニング構造に基づいて構築された新しいマイニングモデルを作成します。 **SELECT INTO**ステートメントでは、スキーマや実際のアルゴリズムに固有ではないその他の情報をコピーすることによって、新しいマイニングモデルを作成します。  
   
@@ -37,7 +37,7 @@ FROM <existing model>
  プロバイダーによって定義された、データ マイニング アルゴリズムの名前です。  
   
  *パラメーターリスト*  
- 任意。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
+ 省略可能。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
   
  *式 (expression)*  
  トレーニングデータの有効なフィルター条件に評価される式。 フィルターとして使用できる式の詳細については、「 [Analysis Services データマイニング&#41;&#40;マイニングモデルのフィルター ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)」を参照してください。  
@@ -45,7 +45,7 @@ FROM <existing model>
  *既存のモデル*  
  コピーする既存のモデルの名前。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  既存のモデルがトレーニングされている場合は、このステートメントの実行時に新しいモデルが自動的に処理されます。 学習済みではない場合、新しいモデルは処理されないままとなります。  
   
  **SELECT INTO**ステートメントは、既存のモデルの構造が新しいモデルのアルゴリズムと互換性がある場合にのみ機能します。 このため、このステートメントは、同じアルゴリズムに基づくモデルを迅速に作成およびテストする場合に最も役立ちます。 アルゴリズムの種類を変更する場合、新しいアルゴリズムでは、既存のモデル内の各列のデータ型をサポートする必要があります。または、モデルの処理時にエラーが発生する可能性があります。  

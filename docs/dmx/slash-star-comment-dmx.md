@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b3186c0646ad54fc0632f8b023dcd448cebd1ee9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: f09533b68ab6dc3c771a09b70faf71087ed69a62
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670039"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970426"
 ---
 # <a name="slash-star-comment-dmx"></a>スラッシュの星 (コメント) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   実行しないテキスト文字列を示し [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 サーバーでは、コメント文字/* と/の間のテキストは評価されません \* 。 コメントは、データマイニング拡張機能 (DMX) ステートメント内で入れ子にしたり、コード行の末尾に含めたり、別の行に挿入したりすることができます。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "83670039"
  *Comment_Text*  
  コメントのテキストを含む文字列です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  複数行のコメントは、/* と \*/ で示す必要があります。  
   
  コメントの長さには制限がありません。  

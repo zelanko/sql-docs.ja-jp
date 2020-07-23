@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 564f09564349fa5709cefa87eca8fe847638b9b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ea3cacd8fe2d80e6037cf83df9eea1fd112a4b05
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669859"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971831"
 ---
 # <a name="and-dmx"></a>AND (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   2つの数値式の論理積を実行します。  
   
@@ -37,14 +37,14 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>戻り値  
  両方のパラメーターが TRUE と評価される場合に TRUE を返すブール値です。それ以外の場合は FALSE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  どちらのパラメーターもブール値として処理されます (FALSE の場合は0、それ以外の場合は TRUE)。 次の表に、パラメーター値のさまざまな組み合わせに基づいて返される値を示します。  
   
 |Expression1|Expression2|戻り値はです。|  
 |-----------------------|-----------------------|---------------------|  
 |true|true|true|  
-|true|false|false|  
-|FALSE|TRUE|false|  
+|TRUE|FALSE|false|  
+|FALSE|TRUE|FALSE|  
 |false|false|false|  
   
 ## <a name="see-also"></a>参照  

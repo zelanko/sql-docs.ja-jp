@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670100"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970438"
 ---
 # <a name="select-from-ltstructuregtcases"></a>[構造から] を選択し &lt; &gt; ます。場合
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   マイニング構造の作成に使用されたケースを返します。  
   
@@ -39,7 +39,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>引数  
  *n*  
- 任意。 返す行数を指定する整数値です。  
+ 省略可能。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  式のコンマ区切りのリストです。  
@@ -53,9 +53,9 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 任意。 スカラー値を返す式。  
+ 省略可能。 スカラー値を返す式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  モデルと構造の両方でドリルスルーが有効になっている場合、マイニング構造およびモデルに対するドリルスルー権限を持つロールのメンバーは、モデルに含まれていない構造列を返すことができます。そのためには、次の構文を使用します。  
   
 ```  

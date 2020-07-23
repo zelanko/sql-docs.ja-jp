@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 544071565a18ade74b3dd4f26945991987295cbc
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: bf4164308b0fdc9e6ba3fabb756c18214757cde5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669599"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970619"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   データマイニング拡張機能 (DMX) の**SELECT**ステートメントは、データマイニングの次のタスクに使用されます。  
   
@@ -46,11 +46,11 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>上位 \< n> と ORDER BY  
- 式を使用してクエリの結果を並べ替えることができます。その後、 **ORDER by**句と**TOP**句の組み合わせを使用して、結果のサブセットを返すことができます。 これは、最も可能性の高い応答者にのみ結果を送信するような配信先指定メーリングなどのシナリオで役に立ちます。 予測確率によってターゲットメーリングの予測クエリの結果を並べ替え、上位 n の> の結果のみを返すことができ \< ます。  
+## <a name="top-n-and-order-by"></a>TOP \<n> と ORDER BY  
+ 式を使用してクエリの結果を並べ替えることができます。その後、 **ORDER by**句と**TOP**句の組み合わせを使用して、結果のサブセットを返すことができます。 これは、最も可能性の高い応答者にのみ結果を送信するような配信先指定メーリングなどのシナリオで役に立ちます。 予測確率によってターゲットメーリングの予測クエリの結果を並べ替え、上位の結果のみを返すことができ \<n> ます。  
   
 ## <a name="select-list"></a>リストの選択  
- * \< 選択リスト>* には、スカラー列参照、予測関数、および式を含めることができます。 使用可能なオプションは、アルゴリズムと、次のコンテキストによって異なります。  
+ には、 *\<select list>* スカラー列参照、予測関数、および式を含めることができます。 使用可能なオプションは、アルゴリズムと、次のコンテキストによって異なります。  
   
 -   マイニング構造またはマイニングモデルに対してクエリを実行するかどうか  
   
@@ -76,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- **WHERE**句を使用すると、クエリによって返されるケースを制限できます。 Where**句は**、 **where**式の列参照が**select ステートメントの** * \< 選択>リスト*内の列参照と同じセマンティクスを持つ必要があることを指定します。また、ブール式のみを返すことができます。 **Where**句の構文は次のとおりです。  
+ **WHERE**句を使用すると、クエリによって返されるケースを制限できます。 Where**句は**、 **where**式の列参照が、SELECT ステートメントの内の列参照と同じセマンティクスを持つ必要があり、 *\<select list>* ブール式のみを返すことを指定し**SELECT**ます。 **Where**句の構文は次のとおりです。  
   
 ```  
 WHERE < condition expression >  

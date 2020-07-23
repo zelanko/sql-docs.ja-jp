@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e22aadcb6da106c28ff38fc5b9d455f04152d0ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58522408e025b45c2424272942055bb7e0d374d4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753593"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920058"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>ノードの関数 - namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   *$Arg*で指定された QName の名前空間 URI を xs: string として返します。  
   
@@ -39,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  名前空間 URI 部分が取得されるノードの名前。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
 -   引数が省略された場合、既定値はコンテキスト ノードです。  
   
@@ -49,10 +49,10 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   *$Arg*が、名前空間に含まれていない展開 QName を持つ要素ノードまたは属性ノードの場合、関数は長さ0の文字列を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A: 特定のノードの名前空間 URI を取得する  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. 特定のノードの名前空間 URI を取得する  
  次のクエリは、型指定されていない XML インスタンスに対して指定されています。 クエリ式 `namespace-uri(/ROOT[1])` によって、指定されたのノードの名前空間 URI 部分が取得されます。  
   
 ```  
@@ -78,7 +78,7 @@ WHERE ProductModelID=7
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
-### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B: 述語で引数を指定せずに namespace-uri() を使用する  
+### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. 述語で引数を指定せずに namespace-uri() を使用する  
  次のクエリは、CatalogDescription 型指定された xml 列に対して指定されています。 この式は、名前空間 URI がであるすべての要素ノードを返し `https://www.adventure-works.com/schemas/OtherFeatures` ます。 名前空間**uri ()** 関数は、引数なしで指定され、コンテキストノードを使用します。  
   
 ```  
@@ -106,7 +106,7 @@ WHERE ProductModelID=19
   
 -   **名前空間 uri ()** 関数は、Xs: anyURI の代わりに xs: string 型のインスタンスを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ノードの関数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [ローカル名関数 &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   

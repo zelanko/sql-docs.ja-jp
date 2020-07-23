@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ece175be7fa0791bf1355ed6020121999d62660b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8098ddebb61a33c017f22598bec16041f112097a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775480"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918482"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>モジュールとプロローグ - XQuery プロローグ
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery クエリは、プロローグ (序文) と本文で構成されます。 XQuery プロローグは、クエリ処理に必要な環境を作成する一連の宣言と定義です。 SQL Server では、XQuery プロローグに名前空間の宣言を含めることができます。 XQuery 本文は、目的のクエリ結果を指定する一連の式で構成されます。  
   
@@ -101,7 +101,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0264c6d5c533510e7350e2f88e270d2cc7538dd3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24840ac01f448270e43065887746fd7230be4d35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643599"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914663"
 ---
 # <a name="atomization-xquery"></a>アトミック化 (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   アトミック化とは、アイテムの型指定された値を抽出するプロセスです。 このプロセスは、特定の状況では暗黙的に実行されます。 算術演算子や比較演算子などの一部の XQuery 演算子は、このプロセスに依存します。 たとえば、算術演算子を直接ノードに適用する場合、ノードの型指定された値は、[データ関数](../xquery/data-accessor-functions-data-xquery.md)を暗黙的に呼び出すことによって最初に取得されます。 これにより、アトミック値がオペランドとして算術演算子に渡されます。  
   
@@ -77,7 +77,7 @@ where ProductModelID=7
   
  アトミック化は、関数に渡される比較式のパラメーター、関数によって返される値、 **cast ()** 式、および order by 句で渡される順序付け式でも発生します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XQuery の基礎](../xquery/xquery-basics.md)   
  [XQuery&#41;&#40;比較式](../xquery/comparison-expressions-xquery.md)   
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  

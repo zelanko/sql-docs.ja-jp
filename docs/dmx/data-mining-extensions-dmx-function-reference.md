@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c296948a41096c5c63b0e7019649d48bac8a23ca
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7b25146ce36a0b58bb46bcacb4348f8e34221068
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669437"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971815"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>データマイニング拡張機能 (DMX) 関数リファレンス
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、データ マイニング拡張機能 (DMX) 言語のいくつかの関数をサポートしています。 関数では、予測クエリの結果が拡張され、予測に関する詳細情報が含まれます。 また、関数を使用すると、予測の結果を返す方法をより細かく制御できます。 次の表に、DMX での関数の使用方法を理解するのに役立つリソースへのリンクを示します。  
   
-|関数|説明|  
+|機能|説明|  
 |--------------|-----------------|  
 |[DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)|すべてのモデルの種類で使用できる関数を一覧表示し、特定の種類のマイニングモデルに対してクエリを実行する方法に関する詳細情報へのリンクを示します。|  
 |[構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|DMX を使用して予測クエリを作成する方法の概要について説明します。|  
@@ -28,7 +28,7 @@ ms.locfileid: "83669437"
   
  次の表は、DMX がサポートする関数の一覧を示しています。  
   
-|関数|説明|  
+|機能|説明|  
 |--------------|-----------------|  
 |[DMX&#41;&#40;下数](../dmx/bottomcount-dmx.md)|順位付け式に基づいて昇順に並べ替えた、テーブル式の最後の n 項目行を含むテーブルを返します。|  
 |[DMX&#41;&#40;の割合](../dmx/bottompercent-dmx.md)|順位付け式に基づいて、指定された割合の式に一致する最下位行の最小数を含むテーブルを返します。|  

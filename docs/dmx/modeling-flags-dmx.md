@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cf7389ee0097428bd5825c81abd36f3bdc5c02d2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7e05d629f46f1c94bbe9305510daf37c09a39c9b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83667945"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969123"
 ---
 # <a name="modeling-flags-dmx"></a>モデリング フラグ (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のモデリング フラグを使用すると、ケース テーブルで定義されているデータに関する追加情報をデータ マイニング アルゴリズムに提供できます。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。 モデリングフラグは、マイニング構造列とマイニングモデル列の両方に定義できます。  
   

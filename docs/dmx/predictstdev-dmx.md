@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: def9b352b97921b080e379d235972bb9dfc84510
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 25dde754c2e71c6aa40d763d7e3a81c3edca6938
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666753"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970710"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指定された列に対して、予測された標準偏差を返します。  
   
@@ -31,9 +31,9 @@ PredictStdev(<scalar column reference>)
  スカラー列。  
   
 ## <a name="return-type"></a>戻り値の型  
- * \< スカラー列参照>* によって指定された型のスカラー値。  
+ によって指定された型のスカラー値 *\<scalar column reference>* 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  列参照が不連続の場合、 **Predictstdev**は0を返します。これは、不連続値から標準偏差を計算できないためです。  
   
 ## <a name="examples"></a>例  

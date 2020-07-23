@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0d4c83626c11def14f1ed9f745fca54e94995c97
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669948"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970265"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   式によって指定された順位の降順で、指定された数の最上位行を返します。  
   
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- テーブル列参照> などのテーブルを返す式、 \< またはテーブルを返す関数。  
+ などのテーブルを返す式、 \<table column reference> またはテーブルを返す関数。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式の>  
+ \<table expression>  
   
-## <a name="remarks"></a>Remarks  
- Rank expression> 引数によって指定された値によって、 \< テーブル式> 引数に指定された行の順位の降順が決定され、 \< count> 引数で指定された最上位行の数 \< が返されます。  
+## <a name="remarks"></a>注釈  
+ 引数によって指定された値によって、 \<rank expression> 引数に指定された行の順位の降順が決定され、 \<table expression> 引数に指定されている最上位の行の数 \<count> が返されます。  
   
  TopCount 関数は、最初に、結合された予測を有効にするために導入されており、一般的には、 **SELECT TOP**句と**ORDER BY**句を含むステートメントと同じ結果を生成します。 予測の数の指定をサポートする**Predict (DMX)** 関数を使用すると、結合された予測のパフォーマンスが向上します。  
   

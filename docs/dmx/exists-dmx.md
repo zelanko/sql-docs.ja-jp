@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fdf58a943986dc43f82ef7023b68a2c6168a5518
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670238"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971717"
 ---
 # <a name="exists-dmx"></a>存在 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指定されたサブクエリが少なくとも1つの行を返す場合に**true**を返します。  
   
@@ -28,13 +28,13 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>引数  
- *演算子*  
- Select * FROM \< 列名> [WHERE \< 述語 list>] の形式の select ステートメント。  
+ *subquery*  
+ Select * FROM [WHERE] 形式の SELECT ステートメント \<column name> \<predicate list> 。  
   
 ## <a name="result-type"></a>結果の種類  
  サブクエリによって返される結果セットに少なくとも1つの行が含まれている場合に**true**を返します。それ以外の場合は**false**を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  EXISTS の前に NOT キーワードを使用できます。たとえば、のように `WHERE NOT EXISTS (<subquery>)` なります。  
   
  EXISTS のサブクエリ引数に追加する列の一覧は、関係ありません。関数は、条件を満たす行が存在するかどうかのみをチェックします。  

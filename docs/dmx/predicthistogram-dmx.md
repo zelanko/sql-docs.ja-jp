@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666796"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967906"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指定された列の予測のためのヒストグラムを表すテーブルを返します。  
   
@@ -33,11 +33,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>戻り値の型  
  テーブルです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  ヒストグラムでは、統計列が生成されます。 返されるヒストグラムの列構造は、 **PredictHistogram**関数で使用される列参照の型によって異なります。  
   
 ## <a name="scalar-columns"></a>スカラー列  
- \<スカラー列参照> の場合、 **PredictHistogram**関数が返すヒストグラムは、次の列で構成されます。  
+ では \<scalar column reference> 、 **PredictHistogram**関数が返すヒストグラムは、次の列で構成されています。  
   
 -   予測されている値。  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      **$AdjustedProbability**列は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] データマイニング仕様の OLE DB の拡張機能です。  
   
 ## <a name="cluster-columns"></a>クラスター列  
- クラスター列参照> に対して**PredictHistogram**関数が返すヒストグラムは、 \< 次の列で構成されます。  
+ に対して**PredictHistogram**関数が返すヒストグラムは、次の列で構成されてい \<cluster column reference> ます。  
   
 -   **$Cluster** (クラスター名を表します)  
   

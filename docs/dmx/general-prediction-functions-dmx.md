@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cd9fb1243f083871c4ff35e70ac9ad835b99440c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cde2fe9da61ca9d877f0c905609d8baf832ea509
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669334"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971678"
 ---
 # <a name="general-prediction-functions-dmx"></a>一般的な予測関数 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   データマイニング拡張機能 (DMX) で**select**ステートメントを使用すると、さまざまな種類のクエリを作成できます。 クエリを使用すると、マイニング モデル自体の情報を返したり、新しい予測を作成したり、新しいデータを使用してトレーニングしてモデルを変更したりできます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]には、クエリで返される情報の種類を制御するさまざまな特殊な関数が用意されています。 これらの関数を DMX クエリに追加すると、データの統計または列を取得できます。 ただし、各クエリの種類とモデルの種類では、特定の関数しかサポートされていません。  
   
@@ -58,15 +58,15 @@ ms.locfileid: "83669334"
   
  DMX の関数に関する一般的な情報については、「[データマイニング拡張機能 &#40;dmx&#41; 関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
-|クエリの種類|サポートされる関数|Remarks|  
+|クエリの種類|サポートされる関数|注釈|  
 |----------------|-------------------------|-------------|  
-|[モデルから DISTINCT を選択 \<>](../dmx/select-distinct-from-model-dmx.md)|[DMX&#41;&#40;RangeMin](../dmx/rangemin-dmx.md)<br /><br /> [&#40;DMX&#41;の RangeMid](../dmx/rangemid-dmx.md)<br /><br /> [DMX&#41;&#40;RangeMax](../dmx/rangemax-dmx.md)|これらの関数を使用すると、列が連続しているか分離されているかどうかにかかわらず、数値データ型を含む任意の列に対して最大値、最小値、および平均値を指定できます。|  
-|[モデル> から選択し \< ます。情報](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [モデル> から選択し \< ます。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|この関数は、モデル内の指定されたノードの子ノードを取得します。また、この関数を使用すると、たとえば、マイニング モデル コンテンツのノードを繰り返し処理できます。 マイニングモデルコンテンツ内のノードの配置は、モデルの種類によって異なります。 各マイニングモデルの種類の構造については、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」を参照してください。<br /><br /> マイニングモデルコンテンツをディメンションとして保存した場合は、属性階層のクエリに使用できる他の多次元式 (MDX) 関数を使用することもできます。|  
-|[モデル> から選択し \< ます。場合](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag クラス](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [DMX&#41;&#40;IsTrainingCase](../dmx/istrainingcase-dmx.md)<br /><br /> [DMX&#41;&#40;IsTestCase](../dmx/istestcase-dmx.md)|Lag 関数は、タイムシリーズモデルでのみサポートされています。<br /><br /> IsTestCase 関数は、テストデータセットを作成するために、提示オプションを使用して作成された構造に基づくモデルでサポートされています。 モデルが、提示されたテストセットの構造に基づいていない場合、すべてのケースがトレーニングケースと見なされます。|  
-|[モデル> から選択し \< ます。SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|このコンテキストでは、IsInNode 関数は、一連の理想的なサンプルケースに属するケースを返します。|  
-|モデル> から選択し \< ます。PMML|適用不可。 代わりに、XML クエリ関数を使用してください。|PMML 表現は、次のモデルの種類のみでサポートされます。<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)]デシジョンツリー<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスター|  
-|[\<モデル> 予測結合から選択します](../dmx/select-from-model-prediction-join-dmx.md)|モデルの構築に使用するアルゴリズムに固有の予測関数。|各種類のモデルの予測関数の一覧については、「[データマイニングクエリ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)」を参照してください。|  
-|[モデルから選択 \<>](../dmx/select-from-model-dmx.md)|モデルの構築に使用するアルゴリズムに固有の予測関数。|各種類のモデルの予測関数の一覧については、「[データマイニングクエリ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)」を参照してください。|  
+|[SELECT DISTINCT FROM \<model>](../dmx/select-distinct-from-model-dmx.md)|[DMX&#41;&#40;RangeMin](../dmx/rangemin-dmx.md)<br /><br /> [&#40;DMX&#41;の RangeMid](../dmx/rangemid-dmx.md)<br /><br /> [DMX&#41;&#40;RangeMax](../dmx/rangemax-dmx.md)|これらの関数を使用すると、列が連続しているか分離されているかどうかにかかわらず、数値データ型を含む任意の列に対して最大値、最小値、および平均値を指定できます。|  
+|[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> または<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|この関数は、モデル内の指定されたノードの子ノードを取得します。また、この関数を使用すると、たとえば、マイニング モデル コンテンツのノードを繰り返し処理できます。 マイニングモデルコンテンツ内のノードの配置は、モデルの種類によって異なります。 各マイニングモデルの種類の構造については、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」を参照してください。<br /><br /> マイニングモデルコンテンツをディメンションとして保存した場合は、属性階層のクエリに使用できる他の多次元式 (MDX) 関数を使用することもできます。|  
+|[SELECT FROM \<model>.CASES](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag クラス](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [DMX&#41;&#40;IsTrainingCase](../dmx/istrainingcase-dmx.md)<br /><br /> [DMX&#41;&#40;IsTestCase](../dmx/istestcase-dmx.md)|Lag 関数は、タイムシリーズモデルでのみサポートされています。<br /><br /> IsTestCase 関数は、テストデータセットを作成するために、提示オプションを使用して作成された構造に基づくモデルでサポートされています。 モデルが、提示されたテストセットの構造に基づいていない場合、すべてのケースがトレーニングケースと見なされます。|  
+|[SELECT FROM \<model>.SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|このコンテキストでは、IsInNode 関数は、一連の理想的なサンプルケースに属するケースを返します。|  
+|[開始] を選択し \<model> ます。PMML|適用されません。 代わりに、XML クエリ関数を使用してください。|PMML 表現は、次のモデルの種類のみでサポートされます。<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)]デシジョンツリー<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスター|  
+|[SELECT FROM \<model> PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|モデルの構築に使用するアルゴリズムに固有の予測関数。|各種類のモデルの予測関数の一覧については、「[データマイニングクエリ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)」を参照してください。|  
+|[SELECT FROM\<model>](../dmx/select-from-model-dmx.md)|モデルの構築に使用するアルゴリズムに固有の予測関数。|各種類のモデルの予測関数の一覧については、「[データマイニングクエリ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   

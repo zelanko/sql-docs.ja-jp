@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f2f97ef9c7a1cdfa2bb1ba1b86dbe4cf60c8404
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669922"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970240"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **TopPercent**関数は、累積合計が少なくとも指定した割合になるテーブルの最上位行を、順位を下げる順序で返します。  
   
@@ -28,13 +28,13 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- テーブル列参照> などのテーブルを返す式、 \< またはテーブルを返す関数。  
+ などのテーブルを返す式、 \<table column reference> またはテーブルを返す関数。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式の>  
+ \<table expression>  
   
-## <a name="remarks"></a>Remarks  
- **TopPercent**関数は、各行の rank 式> 引数の評価値に基づいて、順位の降順で最上位行を返し \< \< ます。これは、順位付け式> 値の合計が、パーセント> 引数で指定されているパーセント以上になるようにし \< ます。 **TopPercent**は、指定された割合の値を維持しながら、可能な限り最小の要素数を返します。  
+## <a name="remarks"></a>注釈  
+ **TopPercent**関数は、各行の引数の評価値に基づいて、順位の降順で最上位の行を返し \<rank expression> ます。これは、値の合計 \<rank expression> が引数で指定された指定の割合以上になるようにするためです \<percent> 。 **TopPercent**は、指定された割合の値を維持しながら、可能な限り最小の要素数を返します。  
   
 ## <a name="examples"></a>例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  

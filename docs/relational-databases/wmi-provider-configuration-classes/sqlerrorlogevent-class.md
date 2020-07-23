@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61769119b041f629884b99660a5937b72a83acbd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c2ea09a98128ff5d4c1df9ba61c918360613641
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880679"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918472"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent クラス
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル内のイベントの表示に関するプロパティを提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -41,18 +41,18 @@ class SQLErrorLogEvent
 ## <a name="properties"></a>Properties  
  SQLErrorLogEvent クラスは、次のプロパティを定義します。  
   
-|||  
-|-|-|  
+| プロパティ | 説明 |
+| -------- | ----------- |
 |FileName|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> エラー ログ ファイルの名前です。|  
 |InstanceName|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
 |LogDate|データ型: **datetime**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> イベントがログ ファイルに記録された日時。|  
 |Message|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベント メッセージ。|  
 |ProcessInfo|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベントのソース サーバー プロセス ID (SPID) に関する情報。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
-|||  
-|-|-|  
+| Type | 名前 |
+| ---- | ---- |
 |MOF|Sqlmgmproviderxpsp2up.mof|  
 |[DLL]|Sqlmgmprovider.dll|  
 |名前空間|\root\Microsoft\SqlServer\ComputerManagement10|  
@@ -78,7 +78,7 @@ WScript.Echo "Instance Name: " & logEvent.InstanceName & vbNewLine _
 Next  
 ```  
   
-## <a name="comments"></a>説明  
+## <a name="comments"></a>コメント  
  WQL ステートメントで*InstanceName*または*FileName*が指定されていない場合、クエリは既定のインスタンスと現在のログファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) 上の現在のログ ファイル (ERRORLOG) に含まれるすべてのログ イベントを返します。  
   
 ```  
@@ -96,7 +96,7 @@ Next
   
  ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](https://go.microsoft.com/fwlink/?LinkId=178848)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SqlErrorLogFile クラス](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)  
   

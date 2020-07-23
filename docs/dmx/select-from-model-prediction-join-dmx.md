@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670130"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970509"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>&lt;モデル &gt; 予測結合 (DMX) からの選択
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   では、マイニングモデルを使用して、外部データソースの列の状態を予測します。 **予測結合**ステートメントは、各ケースをソースクエリからモデルに一致させます。  
   
@@ -33,7 +33,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>引数  
  *n*  
- 任意。 返す行数を指定する整数値です。  
+ 省略可能。 返す行数を指定する整数値です。  
   
  *式リストの選択*  
  マイニング モデルから派生する、列の識別子と式のコンマ区切りのリストです。  
@@ -48,16 +48,16 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  ソース クエリです。  
   
  *結合マッピングの一覧*  
- 任意。 モデルの列をソースクエリの列と比較する論理式。  
+ 省略可能。 モデルの列をソースクエリの列と比較する論理式。  
   
  *条件式*  
- 任意。 列リストから返される値を制限する条件。  
+ 省略可能。 列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 任意。 スカラー値を返す式。  
+ 省略可能。 スカラー値を返す式。  
   
-## <a name="remarks"></a>Remarks  
- ON 句は、ソースクエリの列とマイニングモデルの列との間のマッピングを定義します。 このマッピングは、列を入力として使用して予測を作成できるように、ソースクエリの列をマイニングモデルの列に転送するために使用されます。 \<次の例に示すように、*結合マッピングリスト*> の列は、等号 (=) を使用して関連付けられています。  
+## <a name="remarks"></a>注釈  
+ ON 句は、ソースクエリの列とマイニングモデルの列との間のマッピングを定義します。 このマッピングは、列を入力として使用して予測を作成できるように、ソースクエリの列をマイニングモデルの列に転送するために使用されます。 内の列 \<*join mapping list*> は、次の例に示すように等号 (=) を使用して関連付けられています。  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  予測結合のソース クエリは、テーブルまたは単一クエリのどちらかにできます。  
   
- [式の選択] ボックスの一覧でテーブル式を返さない予測関数を指定でき \< *select expression list* \< ます。*条件式*>> ます。  
+ およびでは、テーブル式を返さない予測関数を指定でき \<*select expression list*> \<*condition expression*> ます。  
   
  **自然予測結合**では、モデル内の列名に一致するソースクエリの列名が自動的にマップされます。 **自然予測**を使用する場合は、ON 句を省略できます。  
   

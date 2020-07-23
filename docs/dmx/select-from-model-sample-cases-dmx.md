@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670112"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970510"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>[モデルから] を選択し &lt; &gt; ます。SAMPLE_CASES (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   データ マイニング モデルの学習に使用されるケースを表すサンプル ケースを返します。  
   
@@ -32,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
   
 ## <a name="arguments"></a>引数  
  *n*  
- 任意。 返す行数を指定する整数値です。  
+ 省略可能。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  関連付けられた列識別子のコンマ区切りのリストです。  
@@ -41,15 +41,15 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  モデル識別子。  
   
  *条件一覧*  
- 任意。 列リストから返される値を制限する条件。  
+ 省略可能。 列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 任意。 スカラー値を返す式。  
+ 省略可能。 スカラー値を返す式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  サンプルケースは生成される場合があり、実際にはトレーニングデータに存在しない可能性があります。 返されたケースは、指定されたコンテンツ ノードを表します。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンスクラスターアルゴリズムは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] モデル> からの選択の使用をサポートする唯一のアルゴリズムです \< 。SAMPLE_CASES サードパーティ製のアルゴリズムでもサポートされている場合があります。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンスクラスターアルゴリズムは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] SELECT FROM の使用をサポートする唯一のアルゴリズムです \<model> 。SAMPLE_CASES サードパーティ製のアルゴリズムでもサポートされている場合があります。  
   
 ## <a name="examples"></a>例  
  次の例では、Target Mail マイニング モデルの学習に使用されるサンプル ケースを返しています。 **WHERE**句で[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)関数を使用すると、' 000000003 内 ' ノードに関連付けられているケースのみが返されます。 ノード文字列は、スキーマ行セットの NODE_UNIQUE_NAME 列にあります。  
