@@ -20,29 +20,29 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 129ac690a0615062bb620c8b81dfbdb16a41659e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518642"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942674"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Hadoop、Azure Blob Storage、Azure Data Lake Store に格納される外部データを定義する、または外部ストリームに関連付けられている入力および出力ストリーム用の外部ファイル形式オブジェクトを作成します。 外部ファイル形式の作成は、外部テーブルを作成するための前提条件です。 外部ファイル形式を作成することで、外部テーブルによって参照されるデータの実際のレイアウトを指定します。  
+Hadoop、Azure Blob Storage、Azure Data Lake Store に格納される外部データを定義する、または外部ストリームに関連付けられている入力および出力ストリーム用の外部ファイル形式オブジェクトを作成します。 外部ファイル形式の作成は、外部テーブルを作成するための前提条件です。 外部ファイル形式を作成することで、外部テーブルによって参照されるデータの実際のレイアウトを指定します。  
   
 次のファイル形式がサポートされています。
   
--   区切りテキスト  
+- 区切りテキスト  
   
--   Hive RCFile  
+- Hive RCFile  
   
--   Hive ORC
+- Hive ORC
   
--   Parquet
+- Parquet
 
--   JSON - Azure SQL Edge にのみ適用されます。
+- JSON - Azure SQL Edge にのみ適用されます。
 
 
 外部テーブルの作成については、「[CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)」をご覧ください。
@@ -113,33 +113,33 @@ WITH (
 ```  
   
 ## <a name="arguments"></a>引数  
- *file_format_name*  
- 外部ファイル形式の名前を指定します。
+*file_format_name*  
+外部ファイル形式の名前を指定します。
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] 外部データの形式を指定します。
+FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] 外部データの形式を指定します。
   
-   -   PARQUET は、Parquet 形式を指定します。
+- PARQUET は、Parquet 形式を指定します。
   
-   -   ORC  
-   最適化行多桁式 (ORC) 形式を指定します。 このオプションでは、外部の Hadoop クラスター上で 0.11 以降のバージョンの Hive が必要です。 Hadoop では、ORC ファイル形式の方が RCFILE ファイル形式よりも圧縮とパフォーマンスに優れています。
+- ORC  
+  最適化行多桁式 (ORC) 形式を指定します。 このオプションでは、外部の Hadoop クラスター上で 0.11 以降のバージョンの Hive が必要です。 Hadoop では、ORC ファイル形式の方が RCFILE ファイル形式よりも圧縮とパフォーマンスに優れています。
 
-   -   RCFILE (SERDE_METHOD = *SERDE_method* との組み合わせ): レコード単票形式ファイル形式 (RcFile)。 このオプションでは、Hive のシリアライザーとデシリアライザー (SerDe) メソッドを指定する必要があります。 この要件は、Hadoop の Hive/HiveQL を使用して RC ファイルに対してクエリを実行する場合と同じです。 SerDe メソッドは大文字と小文字の区別があることに注意してください。
+- RCFILE (SERDE_METHOD = *SERDE_method* との組み合わせ): レコード単票形式ファイル形式 (RcFile)。 このオプションでは、Hive のシリアライザーとデシリアライザー (SerDe) メソッドを指定する必要があります。 この要件は、Hadoop の Hive/HiveQL を使用して RC ファイルに対してクエリを実行する場合と同じです。 SerDe メソッドは大文字と小文字の区別があることに注意してください。
 
-   PolyBase をサポートする 2 つの SerDe メソッドを使用して RCFile を指定する例です。
+  PolyBase をサポートする 2 つの SerDe メソッドを使用して RCFile を指定する例です。
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
-   -   DELIMITEDTEXT: フィールド ターミネータとも呼ばれる、列の区切り記号付きのテキスト形式を指定します。
+- DELIMITEDTEXT: フィールド ターミネータとも呼ばれる、列の区切り記号付きのテキスト形式を指定します。
    
-   -  JSON: JSON 形式を指定します。 Azure SQL Edge にのみ適用されます。 
+- JSON: JSON 形式を指定します。 Azure SQL Edge にのみ適用されます。 
   
- FIELD_TERMINATOR = *field_terminator*  
+FIELD_TERMINATOR = *field_terminator*  
 区切りテキスト ファイルにのみ適用されます。 フィールド ターミネータは、テキスト区切りファイルでの各フィールド (列) の終了を示す 1 つ以上の文字を指定します。 既定値はパイプ文字 ꞌ|ꞌ です。 サポートが保証されるよう、1 つまたは複数の Ascii 文字を使うことをお勧めします。
   
   
- 例 :  
+例 :  
   
 -   FIELD_TERMINATOR = '|'  
   
@@ -149,7 +149,7 @@ WITH (
   
 -   FIELD_TERMINATOR = '~|~'  
   
- STRING_DELIMITER = *string_delimiter*  
+STRING_DELIMITER = *string_delimiter*  
 テキスト区切りのファイル内の文字列型のデータにはフィールド ターミネータを指定します。 文字列の区切り記号の長さは 1 文字または複数文字とし、単一引用符で囲みます。 既定値は空の文字列 "" です。 サポートが保証されるよう、1 つまたは複数の Ascii 文字を使うことをお勧めします。
  
   

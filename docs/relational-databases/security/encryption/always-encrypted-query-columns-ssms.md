@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f33d58a0fe9b61519c8946708dcd22c84dff90ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7cd8ae48dd5e1403b2dd84f6654c6954d9cd8e64
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627406"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942644"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -204,13 +204,15 @@ SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
 ```
 
-    Msg 402, Level 16, State 2, Line 5   
-    The data types char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
-    encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
-    column_encryption_key_database_name = 'Clinic') collation_name = 'Latin1_General_BIN2' 
-    and nchar(11) encrypted with (encryption_type = 'DETERMINISTIC', 
-    encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
-    column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator. 
+```output
+Msg 402, Level 16, State 2, Line 5   
+The data types char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
+encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
+column_encryption_key_database_name = 'Clinic') collation_name = 'Latin1_General_BIN2' 
+and nchar(11) encrypted with (encryption_type = 'DETERMINISTIC', 
+encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
+column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator.
+```
 
 > [!NOTE]
 > パラメーター化しないと、型変換を含め、クエリ全体が SQL Server/Azure SQL Database 内で処理されます。 パラメーター化が有効になっている場合は、SQL Server Management Studio 内の .NET Framework でいくつかの型変換が実行されます。 .NET Framework 型システムと SQL Server 型システムには違いがある (float など、いくつかの型の精度が異なる) ため、パラメーター化を有効にして実行されたクエリでは、パラメーター化を有効にせずに実行されたクエリとは異なる結果が生成される場合があります。 
