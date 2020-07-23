@@ -34,12 +34,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 055599b3aba3fb84c3b3e2c5e3d710ac32a434f4
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 3cff1d920326f3ca9c0ecbdb04cd81fe98180747
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159750"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915674"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,9 @@ KILL 'session_id'
 [;]   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 _セッション ID_  
 終了するプロセスのセッション ID です。 _セッション ID_ は、接続されたときに各ユーザー接続に割り当てられる一意の整数 (**int** 型) です。 セッション ID の値は、接続の間、接続に関連付けられます。 接続が終了すると、この整数値は解放され、新しい接続に再度割り当てることができます。  
 次のクエリを使用して、強制終了する `session_id` を識別できます。  

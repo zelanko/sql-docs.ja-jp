@@ -16,16 +16,16 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1adc541d08e5ce74e6130d6994bd583ae58030d1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75501921"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916080"
 ---
 # <a name="power-query-source-preview"></a>Power Query ソース (プレビュー)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 この記事では、SQL Server Integration Services (SSIS) データ フロー内の Power Query ソースのプロパティを構成する方法について説明します。 Power Query は、Excel/Power BI Desktop を使用したさまざまなデータ ソースへの接続とデータの変換を可能にするテクノロジです。 詳細については、「[Power Query - 概要と学習](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d)」の記事を参照してください。 Power Query によって生成されたスクリプトをコピーし、SSIS データ フローの Power Query ソースに貼り付けて構成することができます。
   
@@ -70,7 +70,7 @@ SSDT で Power Query ソースを含むデータ フローを設計するとき�
 
 ![PQ ソース接続マネージャー エディター (種類)](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-一部のソース (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) では、[Power Query の前提条件](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a)に関する記事から取得できる ADO.NET ドライバーを追加でインストールする必要があります。 カスタム セットアップ インターフェイスを使用して Azure-SSIS IR にインストールできます。[Azure-SSIS IR のカスタマイズ](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)に関する記事を参照してください。
+一部のソース (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) では、[Power Query の前提条件](/power-bi/desktop-data-source-prerequisites)に関する記事から取得できる ADO.NET ドライバーを追加でインストールする必要があります。 カスタム セットアップ インターフェイスを使用して Azure-SSIS IR にインストールできます。[Azure-SSIS IR のカスタマイズ](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)に関する記事を参照してください。
 
 **[データ ソース パス]** では、接続文字列を形成するデータ ソース固有のプロパティを認証情報なしで入力できます。 たとえば、**SQL** データ ソースのパスは、`<Server>;<Database>` 形式になります。 **[編集]** ボタンを選択して、パスを形成するデータ ソース固有のプロパティに値を割り当てることできます。
 
@@ -82,7 +82,7 @@ SSDT で Power Query ソースを含むデータ フローを設計するとき�
 
 ### <a name="current-limitations"></a>現在の制限
 
--   **Oracle** データ ソースは現時点では Azure-SSIS IR で使用できません。Azure-SSIS IR に Oracle ADO.NET ドライバーをインストールできないためです。代わりに Oracle ODBC ドライバーをインストールし、当面は **ODBC** データ ソースを使用して Oracle に接続してください。[Azure-SSIS IR のカスタマイズ](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)に関する記事の **ORACLE STANDARD ODBC** の例を参照してください。
+-   **Oracle** データ ソースは現時点では Azure-SSIS IR で使用できません。Azure-SSIS IR に Oracle ADO.NET ドライバーをインストールできないためです。代わりに Oracle ODBC ドライバーをインストールし、当面は **ODBC** データ ソースを使用して Oracle に接続してください。**Azure-SSIS IR のカスタマイズ**に関する記事の [ORACLE STANDARD ODBC](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) の例を参照してください。
 
 -   **Web** データ ソースは、現時点ではカスタム セットアップのある Azure-SSIS IR 上では使用できないため、現在のところはカスタム設定のない Azure-SSIS IR 上で使用してください。
 

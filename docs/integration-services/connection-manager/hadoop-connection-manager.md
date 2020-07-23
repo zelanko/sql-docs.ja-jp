@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93565cbcc0140dd439dc2e7c52880879c6d815ba
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735108"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915102"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 接続マネージャー
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Hadoop 接続マネージャーでは、プロパティに指定された値を使用して SQL Server Integration Services (SSIS) パッケージを Hadoop クラスターに接続できます。  

@@ -20,12 +20,12 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b3bbb0c09f819e686185f65dab28123b95f6e2f6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007638"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915458"
 ---
 # <a name="set-operators---union-transact-sql"></a>セット演算子 - UNION (Transact-SQL)
 
@@ -58,7 +58,9 @@ ms.locfileid: "86007638"
   [ ...n ] }
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 \<query_specification> | ( \<query_expression> ) 別のクエリ仕様またはクエリ式からのデータと結合するデータを返すクエリ仕様またはクエリ式。 UNION 操作の一部である列の定義は同じである必要はありませんが、暗黙的な変換により一致させる必要があります。 データ型が異なるとき、最終的なデータ型は[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)ルールに基づいて決定されます。 型は同じだが、有効桁数、小数点以下桁数、または長さが異なる場合、結果は式の結合と同じルールに基づいて決定されます。 詳しくは、「[有効桁数、小数点以下桁数、および長さ (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」をご覧ください。  
   
 **xml** データ型の列は同じである必要があります。 すべての列が XML スキーマに型指定されているか、型指定されていない必要があります。 型指定されている場合は、同じ XML スキーマ コレクションに従って型指定されている必要があります。  

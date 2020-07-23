@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 844b0a958b241de985a22067b4e3175137e1c6bb
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 86ef2c561979d7f2578863f35366ee33cb21dcdc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087412"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915885"
 ---
 # <a name="install-integration-services-ssis"></a>Integration Services (SSIS) のインストール
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントと共にまたは単独で、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を 1 台のコンピューターにインストールするには、セットアップを使います。
 

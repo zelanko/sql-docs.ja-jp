@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f152f3c0115ad2af67a1b258ff19aa0142b277d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e4b14fae3600b30c1e4f2d8fe5547533a4673242
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294050"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915408"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、SQL 実行タスクの SQL ステートメントに MERGE ステートメントを含めることができます。 この MERGE ステートメントを使用すると、1 つのステートメントで複数の INSERT、UPDATE、および DELETE 操作を実行できます。  
