@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b49133cc16466224b842232f860cb29118f197e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bdb02dc7a2bc8a5f8fc58b197481f3135907e0fe
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706286"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918508"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt;(より大きくない) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85706286"
 expression !> expression  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *式 (expression)*  
  任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。 変換は、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)のルールに依存します。  
   

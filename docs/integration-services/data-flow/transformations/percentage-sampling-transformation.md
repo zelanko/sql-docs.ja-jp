@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c51d65dabef5efa4de7ecb4c62b633e62ed0b082
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba85ead154888f68cab1ed343fc03b643049f91a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297886"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919568"
 ---
 # <a name="percentage-sampling-transformation"></a>比率サンプリング変換
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   比率サンプリング変換は、変換入力行の比率を選択することにより、サンプル データセットを作成します。 サンプル データセットとは、変換入力からランダムに行を選択し、その結果、入力のサンプルとなるデータセットのことです。  

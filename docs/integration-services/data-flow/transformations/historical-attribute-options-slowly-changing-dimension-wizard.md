@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4b06f56346e8e17fbdb9284dded2bfc154b9ae1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4dfa3579fb37fab94f8bc5731738ed024676018e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297914"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919308"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>[履歴属性オプション] (緩やかに変化するディメンション ウィザード)
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **[履歴属性オプション]** ダイアログ ボックスを使用すると、開始日や終了日によって履歴属性を表示したり、専用に作成された列に履歴属性を記録したりできます。  

@@ -25,12 +25,12 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 428e6370a7e4afc1b43be1edb86b8fb032f9dd3e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8391d620955baf6e20c3c128475d1eb6649e8cfe
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896001"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916818"
 ---
 # <a name="-modulus-transact-sql"></a>% (剰余) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "85896001"
 dividend % divisor  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *dividend*  
  除算される数値式です。 *dividend* には、整数および通貨型に分類されるデータ型、または **numeric** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定する必要があります。  
   

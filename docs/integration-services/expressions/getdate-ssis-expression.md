@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b17deb29406ff70d777e45ceed8db8ca23275f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 36646e7411312cd6285f61dafbb64628bb82eb20
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289753"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916993"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (SSIS 式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   システムの現在の日付を、DT_DBTIMESTAMP 形式で返します。 GETDATE 関数に引数はありません。  

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 385db632232fabe3639384b4792a621e1023075a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 988157321eff73ecc9e4a77db9b09a52281f3f40
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298288"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917908"
 ---
 # <a name="expression-task"></a>式タスク
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   式タスクでは、式ビルダーを使用して、実行時に変数値を設定する式を作成して評価します。 タスクを編集するときは、 [Expression Builder](../../integration-services/expressions/expression-builder.md) が起動します。  

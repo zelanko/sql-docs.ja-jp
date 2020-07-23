@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cf3c23908b3ec391afc7b9073796ab4c2f47100
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2f4f0f63aa108f16a8649007c200d8f93261367
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298265"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918220"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>[機能依存プロファイル要求] のオプション (データ プロファイル タスク)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[機能依存プロファイル要求]** のオプションを設定できます。 機能依存プロファイルは、ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているかを報告します。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 このプロファイルでは、郵便番号によって州が一意に決定されますが、依存関係の違反を検出できます。  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb8a305b4cec56e9c17209068f1a192edbaaaae7
-ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
+ms.openlocfilehash: 32d2870ed0c64919b325a5a267ce695323bf4e04
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469357"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917589"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   次の表に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で事前定義されているエラー メッセージ、警告メッセージ、および情報メッセージの一覧を示します。この一覧では、数値コードおよびシンボル名と共に、メッセージをカテゴリごとに昇順の番号順に示します。 ここに示す各エラーは、<xref:Microsoft.SqlServer.Dts.Runtime> 名前空間の [Microsoft.SqlServer.Dts.Runtime.Hresults](/dotnet/api/microsoft.sqlserver.dts.runtime.hresults) クラスのフィールドとして定義されています。  

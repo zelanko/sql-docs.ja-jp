@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f53fe9d295fdd5cd34c6391332af12b9f6788668
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4e5e945b1d6a43829d1e9cb3998335559808480
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294764"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918758"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 変更データベースの作成
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   新しいインスタンス ウィザードを起動すると、[CDC データベースの作成] ページが表示されます。 [CDC データベースの作成] ページを使用して、新しい CDC インスタンスに関する情報を提供し、新しい変更データベースを作成します。  

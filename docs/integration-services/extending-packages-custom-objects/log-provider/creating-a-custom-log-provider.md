@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d946868dad2aa9facc9b08a8ab32a1a4218406e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a4eaaf0e4c441fd4f08589d98c58cbac65b9e7f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297206"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916431"
 ---
 # <a name="creating-a-custom-log-provider"></a>カスタム ログ プロバイダーの作成
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム環境には広範なログ記録機能があります。 ログを使用すると、パッケージの実行中に発生するイベントをキャプチャできます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、さまざまなログ プロバイダーを使用でき、ログを作成して XML、テキスト、データベースなどの形式で保存したり、Windows イベント ログに格納したりできます。 これらのログ プロバイダーまたは出力形式の中に要件を満たすものがない場合は、カスタム ログ プロバイダーを作成できます。  

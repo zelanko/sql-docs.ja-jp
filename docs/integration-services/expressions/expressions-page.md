@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e3bbe6e788512144211ed35d1cfa8326d8f3ef7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1fe673f96f3272c2f23005588f0ad49271e943fe
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290014"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917043"
 ---
 # <a name="expressions-page"></a>[式] ページ
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **[式]** ページを使用すると、プロパティ式を編集でき、 **[プロパティ式エディター]** ダイアログ ボックスや **[式ビルダー]** ダイアログ ボックスにアクセスできます。  
@@ -36,7 +36,7 @@ ms.locfileid: "71290014"
  **式 (...)**  
  [...] をクリックすると、 **[プロパティ式エディター]** ダイアログ ボックスが表示されます。 詳細については、「 [プロパティ式エディター](../../integration-services/expressions/property-expressions-editor.md)」を参照してください。  
   
- **\<プロパティ名>**  
+ **\<property name>**  
  [...] をクリックすると、 **[式ビルダー]** ダイアログ ボックスが表示されます。 詳細については、「 [式ビルダー](../../integration-services/expressions/expression-builder.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

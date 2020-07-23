@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca74bc7970cb54264b2e8043ad02c8b36d520f93
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72251985"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918757"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローが完了したので、次の作業では、変更データを取得するテーブル値関数を作成します。 この関数は、最初の増分読み込みの前に一度作成するだけで済みます。  
@@ -216,7 +216,7 @@ go
 |**__$seqval**|**binary(10)**|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
 |**__$operation**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作。 以下のいずれかを指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (更新操作前の値)<br /><br /> 4 = 更新 (更新操作後の値)|  
 |**__$update_mask**|**varbinary (128)**|変更された列を識別する、変更テーブルの列序数に基づくビットマスク。 変更された列を特定する必要がある場合にこの値を調べることができます。|  
-|**\< キャプチャ対象のソース テーブルの列 >**|多様|この関数によって返されるその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が最初に指定されなかった場合、ソース テーブルのすべての列が返されます。|  
+|**\<captured source table columns>**|多様|この関数によって返されるその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が最初に指定されなかった場合、ソース テーブルのすべての列が返されます。|  
   
  詳細については、「[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)」を参照してください。  
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4e4c68d5c85f8e31837d24e9cd5e3074620bd303
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a293e7d3151341753cdf1228f7a3d6958a8e3b3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294969"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917258"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの追加
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   データ フローを作成するには、最初にコンポーネントを追加します。 次に、追加したコンポーネントを構成して相互に接続し、実行時のデータ フローを確立します。 このセクションでは、データ フロー タスクへのコンポーネントの追加、コンポーネントのデザイン時インスタンスの作成、およびコンポーネントの構成について説明します。 コンポーネントの接続方法については、「[プログラムによるデータ フロー コンポーネントの接続](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)」を参照してください。  

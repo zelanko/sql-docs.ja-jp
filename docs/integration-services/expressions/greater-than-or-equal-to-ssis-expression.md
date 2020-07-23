@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c312bd28a56dd3a22596e61b0612591a0a1a2712
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 165c016e7352b1ca90b3962763074b2df81a83ee
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289904"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916988"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (以上) (SSIS 式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   最初の式が 2 番目の式以上かどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  

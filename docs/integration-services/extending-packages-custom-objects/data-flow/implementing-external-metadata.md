@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 530a0e9a472638d5c401488cc408adc3957007f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65757d974c6deb690248343140a157e81e083a70
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297230"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919670"
 ---
 # <a name="implementing-external-metadata"></a>外部メタデータの実装
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   コンポーネントがそのデータ ソースから切断されると、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> インターフェイスを使用することによって、入力および出力列のコレクション内の列を、その外部データ ソースの列に対して検証できます。 このインターフェイスを使用すると、外部データ ソースの列のスナップショットを保持し、これらの列をコンポーネントの入力および出力列コレクションの列にマップできます。  

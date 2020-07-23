@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58534c37ab2ee5d857bcf9ce823b3aa336c1f477
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1db13057275f9a255ad247bd5f86ca35d7bd29d3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291367"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919271"
 ---
 # <a name="import-column-transformation"></a>列インポート変換
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   列インポート変換は、ファイルのデータを読み取り、そのデータをデータ フローの列に追加します。 この変換を使用すると、パッケージは、別々のファイルに格納されているテキストや画像を 1 つのデータ フローに追加できます。 たとえば、製品情報を保存するテーブルにデータを読み込むデータ フローに列インポート変換を含めると、各製品に対する顧客評価をファイルからインポートし、データ フローに追加できます。  

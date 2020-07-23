@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44750102897653d8ec1329e66ecf3fc78165db79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283689"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917368"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>レッスン 1-5:フラット ファイルの変換元を追加し、構成する
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 ここでは、フラット ファイル ソースをパッケージに追加し、構成します。 フラット ファイル ソースとは、フラット ファイル接続マネージャーにより定義されるメタデータを使用するデータ フロー コンポーネントです。 このメタデータは、変換処理によってフラット ファイルから取得されるデータの形式や構造を指定します。 フラット ファイル ソースは、フラット ファイル接続マネージャーの形式定義を利用し、1 つのフラット ファイルからデータを抽出します。  

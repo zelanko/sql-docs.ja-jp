@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 23d700f7886b046896397eb1cce4eb21f9c32850
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0ad24013ea2662898857cef3b1359e284e5244b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296011"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916881"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>レッスン 2: SSIS での配置バンドルの作成
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [「レッスン 1: 配置バンドルを作成する準備」](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)では、Deployment Tutorial という名前の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとサポート ファイルをプロジェクトに追加して、パッケージに構成を実装しました。  

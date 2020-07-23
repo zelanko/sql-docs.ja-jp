@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 34da25ac87cbcfbeb815b4053d60c390a9140f5d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296187"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917516"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   パッケージは、接続、制御フロー要素、データ フロー要素、イベント ハンドラー、変数、パラメーター、および構成の組み合わせとして構成されています。パッケージは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に用意されているグラフィカル デザイン ツールを使用して作成するか、プログラムによって構築します。  完成したパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、またはファイル システムに保存します。または、ssISnoversion プロジェクトを [!INCLUDE[ssIS](../includes/ssis-md.md)] サーバーに配置することができます。 パッケージとは、取得、実行、および保存の対象となる作業単位のことです。  

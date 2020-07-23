@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c33d928d7cba81c58053ecc983a3d32b4bffd59d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 311b7d3117d0c8675ed6399c9eeaf85247373295
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297858"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919238"
 ---
 # <a name="map-columns-to-composite-domains"></a>複合ドメインへの列のマップ
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   複合ドメインは 2 つ以上の単一ドメインで構成されています。 ドメインに複数の列をマップすることも、区切られた値を含む単一の列をドメインにマップすることもできます。  

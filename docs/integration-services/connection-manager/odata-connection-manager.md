@@ -13,16 +13,16 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f97998b439fca6e0290966e2ee8fc2bdd785150
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74542181"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919672"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  OData 接続マネージャーを使用して、OData データ ソースに接続します。 OData ソース コンポーネントは OData 接続マネージャーを使用して OData データ ソースに接続し、サービスから取得したデータを使用します。 詳細については、「 [OData Source](../../integration-services/data-flow/odata-source.md)」を参照してください。  

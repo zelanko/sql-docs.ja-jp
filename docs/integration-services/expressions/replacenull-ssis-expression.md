@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 335ccdfb3857ba7d32147424a46f76bc0ccdbe17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52366d8d4eb99ccab769894cbf5c39023c89c199
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71288422"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919080"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (SSIS 式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   1 番目の式パラメーターの値が NULL の場合、2 番目の式パラメーターの値を返します。NULL でない場合は、1 番目の式の値を返します。  

@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: a631e6e3192e6b727d6fc50feaae2aadaa2d7dc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 48ed32fedde7d3874f01644eec257f4450e0555e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764863"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919025"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>1 台のコンピューターでの Integration Services (SSIS) Scale Out の概要
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 このセクションでは、コンピューターが 1 台の環境で Integration Services Scale Out を設定する方法を紹介します。既定の設定を利用します。

@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f51c7dc5dcde2535e822a8f1d832e3747bdfd35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291222"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919538"
 ---
 # <a name="pivot-transformation"></a>ピボット変換
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   ピボット変換は、入力データを列の値でピボットすることにより、正規化されたデータセットを、正規化の度合は低いがより圧縮された形に設定します。 たとえば、顧客名、製品、購入した数量を一覧表示する、正規化された **Orders** データセットには、通常、複数の製品を購入した顧客に対して複数の行があり、その顧客に対する各行には製品ごとに注文の詳細が示されています。 ピボット変換では、データセットを製品列でピボットすることにより、各顧客のデータセットを単一行で出力できます。 その行では顧客のすべての購入情報が一覧となり、列名に製品名が表示され、製品列の値には購入した数量が表示されます。 すべての顧客がすべての製品を購入するわけではないので、多くの列に NULL 値が含まれることがあります。  

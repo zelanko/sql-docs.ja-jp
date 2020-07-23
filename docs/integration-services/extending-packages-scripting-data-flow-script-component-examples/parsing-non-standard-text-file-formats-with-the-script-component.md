@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 733c3a909629514b55042d21f02cfca563d3c531
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fba18c5524c0d46438bc36d4856c02b7c5af7b83
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297064"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919221"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   ソース データが標準以外の形式の場合、複数の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換を連結するより、すべての解析ロジックを単一のスクリプトに統合する方がより便利で、同じ結果が得られる場合があります。  

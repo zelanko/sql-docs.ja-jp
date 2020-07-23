@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1844f4088c026dda5636cd31a7f90b5effe4bfbc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 498c5a94e92b595f84f128b6b469ba88464125bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298247"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918178"
 ---
 # <a name="history-cleanup-task"></a>履歴クリーンアップ タスク
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   履歴クリーンアップ タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースの、次の履歴テーブル内のエントリを削除します。  

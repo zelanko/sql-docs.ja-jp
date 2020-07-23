@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee61de08afac103f0280b905100683011460972
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292940"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916737"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  

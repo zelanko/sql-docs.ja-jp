@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f09e1b7bb54e6f694469e406dbf80232569105f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf8461adf02267d433a12543208d48fea00ff953
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287001"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916434"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>カスタム タスクにおけるデバッグのサポートの追加
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンでは、ブレークポイントを使用することにより、パッケージ、タスク、およびその他の種類のコンテナーを実行中に中断できます。 ブレークポイントを使用すると、アプリケーションまたはタスクの正しい動作を妨げるエラーを確認し、修正できます。 ブレークポイントのアーキテクチャにより、クライアントは、タスクの処理を中断している間にパッケージ内のオブジェクトのランタイム値を定義された実行地点で評価できます。  

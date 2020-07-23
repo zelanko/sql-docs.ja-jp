@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1fd5584a5c43762c4d732c677de225436e191a7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71fdb19fb47f953ceb6266be38d5c3b191a30f91
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297811"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919487"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   緩やかに変化するディメンション変換は、データ ウェアハウスのディメンション テーブル内にある、レコードの更新および挿入を調整します。 たとえば、この変換を使用すると、AdventureWorks OLTP データベースの Production.Products テーブルにあるデータを使って [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] データベースの DimProduct テーブルに挿入や更新を行う変換出力を構成できます。  

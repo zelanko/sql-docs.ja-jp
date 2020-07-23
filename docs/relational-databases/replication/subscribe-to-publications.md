@@ -26,15 +26,15 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5c1734fba82d819b9bce8e253d780d44952dbea7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 347566a8187cbe61132e1c7f024e3f0dc6cd814e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765164"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917734"
 ---
 # <a name="subscribe-to-publications"></a>パブリケーションのサブスクライブ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
   サブスクリプションとは、パブリケーションのデータとデータベース オブジェクトのコピーを要求することです。 サブスクリプションでは、受信するパブリケーションおよびパブリケーションの受信場所と受信時間が定義されます。 サブスクリプションを設計する場合は、エージェント処理を実行する場所を考慮してください。 選択するサブスクリプションの種類によって、エージェントが実行される場所が決まります。 プッシュ サブスクリプションではマージ エージェントまたはディストリビューション エージェントがディストリビューターで実行されるのに対し、プル サブスクリプションではサブスクライバーでエージェントが実行されます。 サブスクリプションの作成後にその種類を変更することはできません。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
