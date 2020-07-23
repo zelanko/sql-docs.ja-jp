@@ -29,12 +29,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d30d04f709a4caac5f3ec266f1130737264029f3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72278103"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922958"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,14 +45,14 @@ ms.locfileid: "72278103"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Applies to SQL Server (starting with 2008) and Azure SQL Database
   
 COMMIT [ { TRAN | TRANSACTION }  [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
 [ ; ]  
 ```  
  
-```  
+```syntaxsql
 -- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse Database
   
 COMMIT [ TRAN | TRANSACTION ] 
@@ -60,7 +60,9 @@ COMMIT [ TRAN | TRANSACTION ]
 ``` 
  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *transaction_name*  
  **適用対象:** SQL Server および Azure SQL Database
  
@@ -81,7 +83,7 @@ COMMIT [ TRAN | TRANSACTION ]
   
  コミットされるトランザクションが [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散トランザクションの場合、COMMIT TRANSACTION では MS DTC が起動され、2 フェーズ コミット プロトコルによって、トランザクションに参加しているすべてのサーバーがコミットされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の同じインスタンス上にある 2 つ以上のデータベースがローカル トランザクションの対象となっている場合、インスタンスでは内部の 2 フェーズ コミットを使用して、トランザクションに参加しているすべてのデータベースをコミットします。  
   
- 入れ子にされたトランザクションで使用する場合は、入れ子内のトランザクションをコミットしてもリソースは解放されず、修正も永久保存されません。 データ修正が永久保存され、リソースが解放されるのは、入れ子の外側のトランザクションをコミットした場合だけです。 @@TRANCOUNT が 1 より大きい場合に発行される各 COMMIT TRANSACTION では、@@TRANCOUNT が単純に 1 ずつ減らされます。 最終的に @@TRANCOUNT が 0 になると、外側のトランザクション全体がコミットされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では *transaction_name* は無視されるので、入れ子内に完了していないトランザクションがあるとき、外側のトランザクションの名前を参照する COMMIT TRANSACTION を実行しても、@@TRANCOUNT が 1 減少されるだけです。  
+ 入れ子にされたトランザクションで使用する場合は、入れ子内のトランザクションをコミットしてもリソースは解放されず、修正も永久保存されません。 データ修正が永久保存され、リソースが解放されるのは、入れ子の外側のトランザクションをコミットした場合だけです。 @@TRANCOUNT が 1 より大きい場合に発行される各 COMMIT TRANSACTION では、@@TRANCOUNT が単純に 1 ずつ減らされます。 最終的に @@TRANCOUNT が 0 になると、外側のトランザクション全体がコミットされます。 *では*transaction_name[!INCLUDE[ssDE](../../includes/ssde-md.md)] は無視されるので、入れ子内に完了していないトランザクションがあるとき、外側のトランザクションの名前を参照する COMMIT TRANSACTION を実行しても、@@TRANCOUNT が 1 減少されるだけです。  
   
  @@TRANCOUNT が 0 のときに COMMIT TRANSACTION を実行すると、対応する BEGIN TRANSACTION がないためエラーが発生します。  
   

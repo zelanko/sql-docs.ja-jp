@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 710a9796ae2eb68da9d95c7d9a075bba8b7a7482
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf1f0f443bbc89e38291b9ecb6927cace18334e8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726132"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921788"
 ---
 # <a name="reading-pages"></a>ページの読み取り
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスからの I/O には、論理読み取りと物理読み取りがあります。 論理読み取りは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] が [バッファー キャッシュ](../relational-databases/memory-management-architecture-guide.md)からページを要求するたびに行われます。 要求したページがバッファー キャッシュに存在しない場合、物理読み取りが行われ、まず、ディスクからキャッシュにページがコピーされます。
 

@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c93f0be480341abb59038db34616a94d4b475952
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc4c1b81917e07ec23b543f64cb81942104ad31d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298504"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923111"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>複数フラット ファイル接続マネージャー
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   複数フラット ファイル接続マネージャーを使用すると、パッケージで複数のフラット ファイルのデータにアクセスできます。 たとえば、データ フロー タスクが For ループ コンテナーなどのループ コンテナーの内部にある場合は、フラット ファイル ソースで複数フラット ファイル接続マネージャーを使用できます。 コンテナーの各ループで、フラット ファイル ソースは、複数フラット ファイル接続マネージャーが提供する次のファイル名からデータを読み込みます。  
@@ -56,7 +56,7 @@ ms.locfileid: "71298504"
   
  複数フラット ファイル接続マネージャーが複数のファイルを参照する場合、ファイルのパスをパイプ (|) 文字で区切ります。 この接続マネージャーの **ConnectionString** プロパティの形式は、次のとおりです。  
   
- \<*パス*>|\<*パス*>  
+ \<*path*>|\<*path*>  
   
  複数のファイルを指定する場合、ワイルドカード文字を使用することもできます。 たとえば、C ドライブ内のすべてのテキスト ファイルを参照するには、 **ConnectionString** プロパティの値を「C:\\\*.txt」に設定します。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "71298504"
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **接続マネージャー名**  
  ワークフローにおける複数フラット ファイル接続の一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "71298504"
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **接続マネージャー名**  
  ワークフロー内の複数フラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 **デザイナーの** [接続マネージャー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 領域内に表示されます。  
   
@@ -237,10 +237,10 @@ ms.locfileid: "71298504"
 |プロパティ|説明|  
 |--------------|-----------------|  
 |**[列の型]**|列が区切り形式、固定幅形式、幅合わせしない形式のうちどれであるかを示します。 このプロパティは読み取り専用です。 幅合わせしないファイルとは、最後の列以外のすべての列が固定幅を持つファイルです。最後の列は、行区切り記号で終了します。|  
-|**[出力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 データ フロー タスクでは、この値を使用してフラット ファイル ソースの出力列の幅を設定します。<br /><br /> 注: オブジェクト モデルでは、このプロパティの名前は MaximumWidth です。|  
+|**[出力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 データ フロー タスクでは、この値を使用してフラット ファイル ソースの出力列の幅を設定します。<br /><br /> 注:オブジェクト モデルでは、このプロパティの名前は MaximumWidth です。|  
 |**DataType**|使用できるデータ型を一覧から選択します。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
-|**[テキスト修飾子]**|テキスト データがテキスト修飾子文字を使用して修飾されるかどうかを示します。<br /><br /> **True**: フラット ファイルのテキスト データは修飾されます。<br /><br /> **False**: フラット ファイルのテキスト データは修飾されません。|  
-|**Name**|列名を指定します。 既定では列の番号になりますが、わかりやすい一意な名前を選択することもできます。|  
+|**[テキスト修飾子]**|テキスト データがテキスト修飾子文字を使用して修飾されるかどうかを示します。<br /><br /> **True**:フラット ファイルのテキスト データは修飾されます。<br /><br /> **False**:フラット ファイルのテキスト データは修飾されません。|  
+|**名前**|列名を指定します。 既定では列の番号になりますが、わかりやすい一意な名前を選択することもできます。|  
 |**[データ スケール]**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[列区切り記号]**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR}{LF}** - 列は、復帰と改行の組み合わせで区切られます<br /><br /> **{CR}** - 列は、復帰で区切られます<br /><br /> **{LF}** - 列は、改行で区切られます<br /><br /> **Semicolon {;}** - 列は、セミコロンで区切られます<br /><br /> **Colon {:}** - 列は、コロンで区切られます<br /><br /> **Comma {,}** - 列は、コンマで区切られます<br /><br /> **Tab {t}** - 列は、タブで区切られます<br /><br /> **Vertical bar {&#124;}** - 列は、縦棒で区切られます|  
 |**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
@@ -266,7 +266,7 @@ ms.locfileid: "71298504"
   
  複数フラット ファイル接続マネージャーの詳細については、「 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **接続マネージャー名**  
  ワークフローにおける複数フラット ファイル接続の一意な名前を指定します。 指定された名前は、 **デザイナーの** [接続マネージャー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 領域内に表示されます。  
   

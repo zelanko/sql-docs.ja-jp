@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 274eabcf6db0902f18bc8d6348e9b5e5a2314d12
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe313e317a2d57bbb8547f66ccac6f44eaad264
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706566"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922964"
 ---
 # <a name="compound-operators-transact-sql"></a>複合演算子 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85706566"
 expression operator expression  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *式 (expression)*  
  任意の数値型に分類されるデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
