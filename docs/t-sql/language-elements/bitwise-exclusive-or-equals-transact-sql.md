@@ -23,12 +23,12 @@ ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 814d71913ad58463ad15908e189ae299f2ac7f48
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f459aa18d5f744d64dc5ca385c6773ca4937416
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252180"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919696"
 ---
 # <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^= (ビットごとの排他的 OR 代入) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "75252180"
 expression ^= expression  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *式 (expression)*  
  数値型に分類される任意のデータ型を持つ有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。ただし、**bit** データ型は除きます。  
   

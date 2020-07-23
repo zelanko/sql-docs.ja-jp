@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fa50c1de5a5cf1cd1963e60774617bd92713872
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296267"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920162"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認]\(SQL Server インポートおよびエクスポート ウィザード)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 指定したデータ型マッピングが **[列マッピング]** ダイアログ ボックスの **[マッピング]** 一覧で成功しなかった場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [インポートおよびエクスポート ウィザード] に **[データ型マッピングの確認]** ページが表示されます。 このページでは、変換元のデータと変換先のデータの互換性を確保するためにウィザードで実行する必要があるデータ型変換についての詳細情報を確認します。 この情報には、成功すると予測されるデータ型変換と、エラーまたは切り捨てが発生する可能性があるデータ型変換を区別するための視覚的な手掛かりが含まれています。 変換ごとに、ウィザードによって提案された変換を受け入れるかどうかを決定したり、発生したエラーの処理方法を指定したりします。   

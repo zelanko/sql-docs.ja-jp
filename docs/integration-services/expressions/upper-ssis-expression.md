@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e5a444d6dea225f37b8640fd642d91ae83618d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f14c91f8f1bd21701d43d42388963ed22d105a43
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297334"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920638"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   小文字が大文字に変換された状態の文字式を返します。  
