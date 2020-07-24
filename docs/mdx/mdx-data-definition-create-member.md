@@ -1,6 +1,6 @@
 ---
 title: CREATE MEMBER ステートメント (MDX) |Microsoft Docs
-ms.date: 06/04/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ca2c664246dfeab8070337a0daf818fb0a3327c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69494074"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110150"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX データ操作 - CREATE MEMBER
 
@@ -46,7 +46,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *Property_Value*  
  計算されるメンバープロパティの値を定義する有効なスカラー式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  CREATE MEMBER ステートメントでは、セッション全体で使用できる計算されるメンバーを定義します。そのため、セッション中に複数のクエリで使用できます。 詳細については、「 [MDX&#41;&#40;セッションスコープの計算されるメンバーを作成する](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members)」を参照してください。  
   
  また、1つのクエリで使用するために、計算されるメンバーを定義することもできます。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、「 [MDX&#41;&#40;クエリスコープの計算されるメンバーを作成する](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)」を参照してください。  
@@ -57,13 +57,13 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  OLE DB によって定義されるメンバープロパティの詳細については、OLE DB のドキュメントを参照してください。  
   
-## <a name="scope"></a>スコープ  
+## <a name="scope"></a>Scope  
  計算されるメンバーは、次の表に示すいずれかのスコープ内で発生する可能性があります。  
   
  クエリ スコープ  
  計算されるメンバーの表示設定と有効期間は、クエリに限定されます。 そのような計算されるメンバーは、個々のクエリの中で定義します。 クエリスコープは、セッションスコープよりも優先されます。 詳細については、「 [MDX&#41;&#40;クエリスコープの計算されるメンバーを作成する](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members)」を参照してください。  
   
- セッションスコープ  
+ セッション スコープ  
  計算されるメンバーの可視性と有効期間は、そのメンバーが作成されたセッションに限定されます。 (計算されるメンバーに対して DROP MEMBER ステートメントが実行された場合、有効期間はセッションの継続時間よりも短くなります)。CREATE MEMBER ステートメントは、セッションスコープを持つ計算されるメンバーを作成します。  
   
 ### <a name="scope-isolation"></a>スコープの分離  
@@ -105,18 +105,18 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>標準のプロパティ  
- 計算されるメンバーには、それぞれ既定のプロパティのセットがあります。 クライアントアプリケーションがに[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]接続されている場合、管理者が選択すると、既定のプロパティがサポートされるか、サポートされるようになります。  
+ 計算されるメンバーには、それぞれ既定のプロパティのセットがあります。 クライアントアプリケーションがに接続されている場合 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、管理者が選択すると、既定のプロパティがサポートされるか、サポートされるようになります。  
   
  キューブの定義によっては、追加のメンバープロパティを使用できる場合があります。 以下のプロパティは、キューブ内のディメンション レベルに関係する情報を表します。  
   
-|プロパティの識別子|説明|  
+|プロパティの識別子|意味|  
 |-------------------------|-------------|  
 |SOLVE_ORDER|計算されるメンバーがもう 1 つの他の計算されるメンバーを参照する場合 (つまり、計算されるメンバーが互いに交差する場合) に、計算されるメンバーが解決される順序です。|  
 |FORMAT_STRING|クライアントアプリケーションがセル値を表示するときに使用できる Office スタイルの書式指定文字列。|  
 |表示|計算されるメンバーがスキーマ行セットに表示されるかどうかを示す値です。 表示される計算されるメンバーは、 [Add演算メンバー](../mdx/addcalculatedmembers-mdx.md)関数を使用してセットに追加できます。 0以外の値は、計算されるメンバーが表示されることを示します。 このプロパティの既定値が*表示*されます。<br /><br /> 表示されない計算されるメンバー (この値がゼロに設定されている場合) は、一般に、より複雑な計算されるメンバーの中間手順として使用されます。 これらの計算されるメンバーは、メジャーなど、他の種類のメンバーによって参照することもできます。|  
-|NON_EMPTY_BEHAVIOR|空のセルを解決するときの計算されるメンバーの動作を決定するために使用されるメジャーまたはセットです。<br /><br /> ** \*警告\* \* **このプロパティは非推奨とされます。 これを設定しないでください。 詳細については、「 [SQL Server 2014 の非推奨の Analysis Services 機能](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014)」を参照してください。|  
+|NON_EMPTY_BEHAVIOR|空のセルを解決するときの計算されるメンバーの動作を決定するために使用されるメジャーまたはセットです。<br /><br /> 警告このプロパティは非推奨とされます。 ** \* \* \* \* ** これを設定しないでください。 詳細については、「 [SQL Server 2014 の非推奨の Analysis Services 機能](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014)」を参照してください。|  
 |キャプション|メンバーのキャプションとしてクライアント アプリケーションが使用する文字列です。|  
-|DISPLAY_FOLDER|クライアントアプリケーションがメンバーを表示するために使用する表示フォルダーのパスを識別する文字列。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 によって[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供されるツールとクライアントでは\\、円記号 () がレベルの区切り記号です。 定義されたメンバーで複数の表示フォルダーを指定するには、セミコロン (;) を使用してフォルダーを区切ります。|  
+|DISPLAY_FOLDER|クライアントアプリケーションがメンバーを表示するために使用する表示フォルダーのパスを識別する文字列。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 によって提供されるツールとクライアントで [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、円記号 ( \\ ) がレベルの区切り記号です。 定義されたメンバーで複数の表示フォルダーを指定するには、セミコロン (;) を使用してフォルダーを区切ります。|  
 |ASSOCIATED_MEASURE_GROUP|このメンバーが関連付けられているメジャー グループの名前です。|  
   
 ## <a name="see-also"></a>参照  

@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677914"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112765"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>dm_db_index_physical_stats (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -110,11 +110,17 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|平均レコード サイズ (バイト単位)。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルでの平均レコード サイズになります。<br /><br /> ヒープでは、IN_ROW_DATA アロケーション ユニットに含まれる平均レコード サイズになります。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットでは、アロケーション ユニット全体での平均レコード サイズになります。<br /><br /> *Mode* = が制限されている場合は NULL です。|  
 |forwarded_record_count|**bigint**|別のデータの場所への転送ポインターを持つ、ヒープ内の転送されたレコード数 (この状態は、更新中に、新しい行を格納できる十分なスペースが元の場所にない場合に発生します)。<br /><br /> ヒープの IN_ROW_DATA アロケーション ユニット以外のアロケーション ユニットでは NULL になります。<br /><br /> *Mode*が制限されている場合のヒープの場合は NULL です。|  
 |compressed_page_count|**bigint**|圧縮されたページ数。<br /><br /> ヒープの場合、新しく割り当てられたページはページ圧縮されません。 ヒープは、2 つの特殊な条件、つまりデータを一括インポートする場合、またはヒープを再構築する場合に、ページ圧縮されます。 ページ割り当ての原因となる通常の DML 操作ではページ圧縮されません。 compressed_page_count の値が目標のしきい値を超えた場合は、ヒープを再構築してください。<br /><br /> クラスター化インデックスを含むテーブルの場合、compressed_page_count の値はページ圧縮の効果を示します。|  
-|hobt_id|bigint|**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 列ストアインデックスの場合にのみ、これはパーティションの内部列ストアデータを追跡する行セットの ID です。 行セットは、データヒープまたはバイナリツリーとして格納されます。 親列ストアインデックスと同じインデックス ID を持っています。 詳細については、「 [sys. internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)」を参照してください。<br /><br /> NULL の場合|  
-|column_store_delete_buffer_state|tinyint|**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN <br /><br /> 2 = ドレイン中<br /><br /> 3 = フラッシュ<br /><br /> 4 = インベントリからの削除<br /><br /> 5 = 準備完了|  
-|column_store_delete_buff_state_desc||**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 無効-親インデックスが列ストアインデックスではありません。<br /><br /> OPEN-deleters とスキャナーはこれを使用します。<br /><br /> ドレイン中-deleters はドレインされますが、スキャナーでは引き続き使用されます。<br /><br /> フラッシュ-バッファーが閉じられ、バッファー内の行が削除ビットマップに書き込まれています。<br /><br /> 削除-閉じた削除バッファーの行が delete ビットマップに書き込まれましたが、スキャナーがまだ使用しているため、バッファーが切り捨てられていません。 開いているバッファーが十分であるため、新しいスキャナーでは、インベントリから削除するバッファーを使用する必要はありません。<br /><br /> READY-この削除バッファーは使用する準備ができています。|  
-  
-## <a name="remarks"></a>Remarks  
+|hobt_id|bigint|列ストアインデックスの場合にのみ、これはパーティションの内部列ストアデータを追跡する行セットの ID です。 行セットは、データヒープまたはバイナリツリーとして格納されます。 親列ストアインデックスと同じインデックス ID を持っています。 詳細については、「 [sys. internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)」を参照してください。<br /><br /> NULL の場合 <br /><br /> **適用対象**: SQL Server 2016 以降、Azure SQL Database、Azure SQL Managed Instance|  
+|column_store_delete_buffer_state|tinyint| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN <br /><br /> 2 = ドレイン中<br /><br /> 3 = フラッシュ<br /><br /> 4 = インベントリからの削除<br /><br /> 5 = 準備完了<br /><br />**適用対象**: SQL Server 2016 以降、Azure SQL Database、Azure SQL Managed Instance|  
+|column_store_delete_buff_state_desc|| 無効-親インデックスが列ストアインデックスではありません。<br /><br /> OPEN-deleters とスキャナーはこれを使用します。<br /><br /> ドレイン中-deleters はドレインされますが、スキャナーでは引き続き使用されます。<br /><br /> フラッシュ-バッファーが閉じられ、バッファー内の行が削除ビットマップに書き込まれています。<br /><br /> 削除-閉じた削除バッファーの行が delete ビットマップに書き込まれましたが、スキャナーがまだ使用しているため、バッファーが切り捨てられていません。 開いているバッファーが十分であるため、新しいスキャナーでは、インベントリから削除するバッファーを使用する必要はありません。<br /><br /> READY-この削除バッファーは使用する準備ができています。 <br /><br /> **適用対象**: SQL Server 2016 以降、Azure SQL Database、Azure SQL Managed Instance|  
+|version_record_count|**bigint**|このインデックスで保持されている行バージョンレコードの数です。  これらの行バージョンは、[高速データベース復旧](../../relational-databases/accelerated-database-recovery-concepts.md)機能によって維持されます。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|inrow_version_record_count|**bigint**|高速取得のためにデータ行に保持されている ADR バージョンレコードの数。 <br /><br />  [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e|  
+|inrow_diff_version_record_count|**bigint**| 基本バージョンとは異なる形式で保持されている ADR バージョンレコードの数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|total_inrow_version_payload_size_in_bytes|**bigint**|このインデックスの行内バージョンレコードの合計サイズ (バイト単位)。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_regular_version_record_count|**bigint**|元のデータ行の外部に保持されているバージョンレコードの数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_long_term_version_record_count|**bigint**|長期間と見なされるバージョンレコードの数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+
+## <a name="remarks"></a>注釈  
  sys.dm_db_index_physical_stats 動的管理関数は、DBCC SHOWCONTIG ステートメントの代わりに使用できます。  
   
 ## <a name="scanning-modes"></a>スキャン モード  
@@ -264,7 +270,7 @@ GO
   
 ```  
   
-### <a name="b-returning-information-about-a-heap"></a>B: ヒープに関する情報を返す  
+### <a name="b-returning-information-about-a-heap"></a>B. ヒープに関する情報を返す  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのヒープ `dbo.DatabaseLog` に関するすべての統計を返します。 テーブルには LOB データが含まれているため、ヒープのデータ ページを格納している `LOB_DATA` アロケーション ユニットの行だけではなく、`IN_ROW_ALLOCATION_UNIT` アロケーション ユニットの行も返されます。 このクエリを実行するには、少なくとも `dbo.DatabaseLog` テーブルに対する CONTROL 権限が必要です。  
   
 ```  
@@ -284,7 +290,7 @@ GO
   
 ```  
   
-### <a name="c-returning-information-for-all-databases"></a>C: すべてのデータベースに関する情報を返す  
+### <a name="c-returning-information-for-all-databases"></a>C. すべてのデータベースに関する情報を返す  
  次の例では、すべてのパラメーターにワイルドカード `NULL` を指定して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのテーブルとインデックスに関する統計を返します。 このクエリを実行するには、VIEW SERVER STATE 権限が必要です。  
   
 ```  
@@ -293,7 +299,7 @@ GO
   
 ```  
   
-### <a name="d-using-sysdm_db_index_physical_stats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D: スクリプトでの dm_db_index_physical_stats を使用したインデックスの再構築または再構成  
+### <a name="d-using-sysdm_db_index_physical_stats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. スクリプトでの dm_db_index_physical_stats を使用したインデックスの再構築または再構成  
  次の例では、平均断片化が 10% を超えるデータベース内のすべてのパーティションを、自動的に再構成または再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 現在のデータベースの互換性レベルが 80 以下になっているとエラーが発生します。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、「 [ALTER Database Compatibility Level &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ```  
@@ -423,13 +429,13 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

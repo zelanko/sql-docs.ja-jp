@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45f4851acf2d3c92807a571f6c8c6b436b86936b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ba592cd0bb0dc10c094784fbb7d41585d5b6dd6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764833"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942294"
 ---
 # <a name="rds-objects"></a>RDS オブジェクト
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
-|||  
+|Object|説明|  
 |-|-|  
 |[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|データクエリ**レコードセット**を1つ以上のコントロール (たとえば、テキストボックス、グリッドコントロール、またはコンボボックス) にバインドして、Web ページに**レコードセット**データを表示します。<br /><br /> **DataControl**オブジェクトは、スクリプト作成には安全です。|  
 |[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|クライアント側アプリケーションの指定されたデータソースへの読み取り/書き込みデータアクセスを提供するメソッドを実装します。<br /><br /> **DataFactory**オブジェクトは、スクリプト作成には安全ではありません。|  

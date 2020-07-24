@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e6a0d89b4976076f14fe567b7a95e7cbb47c9f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401123"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942334"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Analytics Platform System (APS) アプライアンスのハードウェアのインストール
 この記事では、SQL Server PDW アプライアンスのハードウェアを移動、開梱、およびインストールする方法について説明します。 この記事は情報提供のみを目的としており、プロセスを理解するのに役立ちます。 アプライアンスをオンにする前に、アプライアンスを開梱し、インストールして、確認しておく必要があります。 データセンターへのアクセス、電力、イーサネット接続などの項目については、お客様による参加が必要です。  
@@ -54,12 +54,12 @@ ms.locfileid: "74401123"
 ## <a name="install-additional-components"></a><a name="AfterMoving"></a>追加コンポーネントのインストール  
 次のチェックリストを使用して、追加コンポーネントをインストールします。  
   
-|タスク|説明||  
-|--------|---------------|-|  
-|ネットワークスイッチと Pdu を開梱し、ラックに取り付ける|ラック図を使用して、ネットワークスイッチと Pdu をラック内の適切な場所に配置します。||  
-|ケーブルラベルに従って Infiniband ケーブルとイーサネットケーブルを接続する|ケーブル配線の図を参照してください。 各ケーブルには、接続する必要がある場所を指定する各端のラベルがあります。||  
-|すべての電源ケーブルを接続する|ケーブル配線の図を参照してください。||  
-|ラックと Pdu の電源をオンにする|電源装置をラックに接続し、ラックから Pdu に接続します。 **現時点では、他のどのアプライアンスコンポーネントにも電源を入れないでください。**||  
+|タスク|説明|
+|--------|---------------|
+|ネットワークスイッチと Pdu を開梱し、ラックに取り付ける|ラック図を使用して、ネットワークスイッチと Pdu をラック内の適切な場所に配置します。|
+|ケーブルラベルに従って Infiniband ケーブルとイーサネットケーブルを接続する|ケーブル配線の図を参照してください。 各ケーブルには、接続する必要がある場所を指定する各端のラベルがあります。|
+|すべての電源ケーブルを接続する|ケーブル配線の図を参照してください。|
+|ラックと Pdu の電源をオンにする|電源装置をラックに接続し、ラックから Pdu に接続します。 **現時点では、他のどのアプライアンスコンポーネントにも電源を入れないでください。**|
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

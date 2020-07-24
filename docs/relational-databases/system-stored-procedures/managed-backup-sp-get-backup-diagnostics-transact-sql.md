@@ -20,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 7ce40edcea8e734aae84b5f24ec5f0e71890c7d6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053498"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977515"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup。 sp_get_backup_diagnostics (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86053498"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @xevent_channel  
  拡張イベントの種類。 既定値は、それまでの 30 分間にログに記録されたすべてのイベントを返すよう設定されています。 ログに記録されるイベントは、有効になっている拡張イベントの種類によって異なります。 このパラメーターを使用すると、特定の種類のイベントのみが表示されるようにストアド プロシージャにフィルターを適用できます。 完全なイベント名を指定するか、部分文字列 ( **' admin**'、' analytics **'**、 **' Operational '**、 **' Debug '** など) を指定することができます。 @event_channelは**VARCHAR (255)** です。  
   
@@ -56,14 +57,13 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ## <a name="table-returned"></a>返されるテーブル  
  このストアドプロシージャは、次の情報を含むテーブルを返します。  
   
-||||  
-|-|-|-|  
-|列名|データ型|説明|  
+| 列名 | データ型 | 説明 |  
+| ----------- | --------- | ----------- |
 |event_type|NVARCHAR (512)|拡張イベントの種類。|  
 |Event|NVARCHAR (512)|イベント ログの概要|  
 |Timestamp|timestamp|イベントの発生時刻を示す、イベントのタイムスタンプ|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  ストアドプロシージャに対する**EXECUTE**権限が必要です。 また、この権限を必要とする他のシステムオブジェクトを内部で呼び出すため、 **VIEW SERVER STATE**権限も必要です。  

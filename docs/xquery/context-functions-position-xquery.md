@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 82774aa6d515d7056f59e432807c6560ecb70772
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 83f744f2b9361a81afada82245bf2d4265cea833
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783583"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923655"
 ---
 # <a name="context-functions---position-xquery"></a>コンテキスト関数 - position (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   現在処理されているアイテムのシーケンス内のコンテキスト アイテムの位置を示す整数値を返します。  
   
@@ -35,13 +35,13 @@ ms.locfileid: "85783583"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、 **fn: position ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。この関数と比較しても、静的な型の推論時にカーディナリティが減少することはありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
-### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A: Position () XQuery 関数を使用した最初の2つの製品機能の取得  
+### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Position () XQuery 関数を使用した最初の2つの製品機能の取得  
  次のクエリでは、製品モデルカタログの説明から、最初の2つの機能、<> 要素の最初の2つの子要素を取得し `Features` ます。 その他の機能がある場合は、<`there-is-more/`> 要素を結果に追加します。  
   
 ```  
@@ -96,7 +96,7 @@ WHERE CatalogDescription is not null
 ...  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

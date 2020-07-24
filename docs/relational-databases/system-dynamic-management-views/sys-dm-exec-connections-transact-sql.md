@@ -20,12 +20,12 @@ ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 948feee2b133f7135f753d789cca119af60bd8b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d128ee81a4465bdb24b9e6fde48d5dbe8cc8b8cc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676663"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942364"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>dm_exec_connections (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,13 +71,13 @@ ms.locfileid: "85676663"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-||||  
-|-|-|-|  
+| 最初の要素 | 2番目の要素 | リレーションシップ |
+| --------------| -------------- | ------------ |  
 |dm_exec_sessions。 session_id|dm_exec_connections.session_id|一対一|  
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|多対一|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|1対1|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  クエリ所有の接続に関する情報を収集するための一般的なクエリ。  
   
 ```sql  
@@ -93,7 +93,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 
  [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

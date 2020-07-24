@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9fa783dfb2ac1d7e3cbca735c9f2a2cbca19dbda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e48fb5448284cc90a87aff88a9cf7a0304c661d
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720025"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87107221"
 ---
 # <a name="functions-on-string-values---upper-case"></a>文字列値に使用する関数 - upper-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +37,11 @@ fn:upper-case($arg as xs:string?) as xs:string
   
 ## <a name="arguments"></a>引数  
   
-|||  
-|-|-|  
-|用語|定義|  
+|期間|定義|  
+|-|-|
 |*$arg*|大文字に変換する文字列値。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  *$Arg*の値が空の場合は、長さ0の文字列が返されます。  
   
 ## <a name="examples"></a>例  
@@ -55,7 +54,7 @@ DECLARE @x xml = N'abcDEF!@4';
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>B: 特定の文字列を検索する  
+### <a name="b-search-for-a-specific-character-string"></a>B. 特定の文字列を検索する  
  この例では、upper-case 関数を使用して、大文字と小文字を区別せずに検索を行う方法を示しています。  
   
 ```  
@@ -119,7 +118,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

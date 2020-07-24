@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401176"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942344"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Parallel Data Warehouse 用の dwloader コマンドラインローダー
 **dwloader**は、並列データウェアハウス (PDW) のコマンドラインツールで、テーブルの行を既存のテーブルに一括して読み込みます。 行を読み込むときに、テーブルの末尾にすべての行を追加 (*追加モード*または*fastappend モード*) したり、新しい行を追加して既存の行を更新 (*upsert モード*) したり、読み込み前に既存のすべての行を削除してから、すべての行を空のテーブルに挿入したり (*再読み込みモード*) できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "74401176"
   
 5.  **Dwloader**を実行します。  
   
-    読み込み中のサーバーにサインインし、適切なコマンドラインオプションを使用して実行可能な**dwloader**を実行します。  
+    読み込み中のサーバーにサインインし、適切なコマンドラインオプションを使用して**dwloader.exe**実行可能ファイルを実行します。  
   
 6.  結果を確認します。  
   
@@ -123,7 +123,7 @@ dwloader.exe
 **-U** *login_name*  
 負荷を実行するための適切なアクセス許可を持つ有効な SQL Server 認証ログイン。  
   
-**-P** *パスワード*  
+**-P** *password*  
 SQL Server 認証*login_name*のパスワード。  
   
 **-W**  
@@ -136,9 +136,9 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 コマンドラインパラメーターの代わりにパラメーターファイル*parameter_file_name*を使用します。 *parameter_file_name*には、 *user_name*と*パスワード*を除く任意のコマンドラインパラメーターを含めることができます。 パラメーターがコマンドラインとパラメーターファイルに指定されている場合、コマンドラインはファイルパラメーターをオーバーライドします。  
   
-パラメーターファイルには、プレフィックスの**-** ない1つのパラメーターが行ごとに含まれています。  
+パラメーターファイルには、プレフィックスのない1つのパラメーターが行ごとに含まれてい **-** ます。  
   
-次に例を示します。  
+例 :  
   
 `rt=percentage`  
   
@@ -193,17 +193,17 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   すべてのファイルは1つのファイルと同じように連結されて読み込まれ、拒否された行は1つの拒否ファイルに送られます。  
   
-次に例を示します。  
+例 :  
   
--   -i \\、load、毎日\\* gz  
+-   -i、 \\ \\ load、毎日 * gz  
   
--   -i \\\ load\ \ (毎日\\) * .txt  
+-   -i \\ \ load\ \ (毎日) \\ * .txt  
   
--   -i \\\loadserver\loads\daily\monday. *  
+-   -i \\ \loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
--   -i \\\ 1 日に1回\\*  
+-   -i \\ \ 1 日に1回\\*  
   
 **-R** *load_failure_file_name*  
 読み込みエラーが発生した場合、 **dwloader**は、読み込みに失敗した行とエラーの説明を*load_failure_file_name*という名前のファイルに格納します。 このファイルが既に存在する場合は、dwloader によって既存のファイルが上書きされます。 *load_failure_file_name*は、最初のエラーが発生したときに作成されます。 すべての行が正常に読み込まれた場合、 *load_failure_file_name*は作成されません。  
@@ -234,7 +234,7 @@ ASCII ファイルの場合、区切り記号を連続して配置すること�
   
 パイプ文字をコマンドラインで指定するには、二重引用符 "|" で囲みます。 これは、コマンドラインパーサーによって誤って解釈されることを回避します。 その他の文字は単一引用符で囲みます。  
   
-次に例を示します。  
+例 :  
   
 -t "|"  
   
@@ -274,7 +274,7 @@ Unix には LF が必要です。 Windows には CR が必要です。
 **-s** *string_delimiter*  
 テキスト区切りの入力ファイルの文字列データ型フィールドの区切り記号。 文字列の区切り記号は、1つまたは複数の ASCII 値です。  これは、文字 (たとえば、-s *) として、または16進数値として指定できます (例:-s 0x22 (二重引用符の場合))。  
   
-次に例を示します。  
+例 :  
   
 2$s  
   
@@ -290,9 +290,9 @@ Unix には LF が必要です。 Windows には CR が必要です。
   
 このファイルは、読み込み中のサーバー上に存在する必要があります。 パスには、UNC、相対パス、または絶対パスを指定できます。 *Fixed_width_config_file*の各行には、1つの列の名前とその列の文字数が含まれています。 次のように、列ごとに1つの行があり、ファイル内の順序は、コピー先のテーブルの順序と一致している必要があります。  
   
-*column_name*=*num_chars*  
+*column_name* =*num_chars*  
   
-*column_name*=*num_chars*  
+*column_name* =*num_chars*  
   
 固定幅構成ファイルの例:  
   
@@ -340,17 +340,17 @@ LF の例:
   
 Unix には LF が必要です。 Windows には CR が必要です。  
   
-**-D** { **ymd** | ydm | mdy | myd | dmy |dym |*custom_date_format* }  
+**-D** { **ymd** \| ydm \| mdy \| myd \| dmy \| dym \| *custom_date_format* }  
 入力ファイル内のすべての datetime フィールドの月 (m)、日 (d)、および年 (y) の順序を指定します。 既定の順序は ymd です。 同じソースファイルに対して複数の注文形式を指定するには、-dt オプションを使用します。  
   
-ymd |dmy  
+ymd \| dmy  
 ydm と dmy では、同じ入力形式を使用できます。 どちらも、年を日付の先頭または末尾にすることができます。 たとえば、 **ydm**と**dmy**の両方の日付形式の場合、入力ファイルに2013-02-03 または02-03-2013 を含めることができます。  
   
 ydm  
 データ型が datetime および smalldatetime の列には、ydm として書式設定された入力のみを読み込むことができます。 Datetime2、date、または datetimeoffset データ型の列に ydm 値を読み込むことはできません。  
   
 mdy  
-mdy が<month> <space> <day> <comma>許可<year>します。  
+mdy が許可 \<month> \<space> \<day> \<comma> \<year> します。  
   
 1975年1月1日の mdy 入力データの例を次に示します。  
   
@@ -380,7 +380,7 @@ dym
   
 各行には、変換先テーブルの列の名前とその datetime 形式が含まれています。  
   
-次に例を示します。  
+例 :  
   
 `LastReceiptDate=ymd`  
   
@@ -443,12 +443,12 @@ SQL Server 2012 PDW 以降では、コントロールノードは、既定で各
 -Rt パーセントを使用する場合、ローダーは間隔 (-rs オプション) で割合を計算します。 したがって、失敗した行の割合は*reject_value*を超える可能性があります。  
   
 **-rs** *reject_sample_size*  
-`-rt percentage`オプションと共に使用して、増分パーセンテージチェックを指定します。 たとえば、reject_sample_size が1000の場合、ローダーは1000行の読み込みを試行した後に失敗した行の割合を計算します。 追加の1000行の読み込みを試行した後、失敗した行の割合を再計算します。  
+オプションと共に使用して `-rt percentage` 、増分パーセンテージチェックを指定します。 たとえば、reject_sample_size が1000の場合、ローダーは1000行の読み込みを試行した後に失敗した行の割合を計算します。 追加の1000行の読み込みを試行した後、失敗した行の割合を再計算します。  
   
 **-c**  
 Char、nchar、varchar、および nvarchar の各フィールドの左辺と右辺から空白文字を削除します。 空白文字のみを含む各フィールドを空の文字列に変換します。  
   
-次に例を示します。  
+例 :  
   
 ' ' は ' ' に切り捨てられます。  
   
@@ -490,7 +490,7 @@ CU 7.4 更新プログラムで使用可能で、読み込むことができる�
 ## <a name="return-code-values"></a>リターン コードの値  
 0 (成功) またはその他の整数値 (失敗)  
   
-コマンドウィンドウまたはバッチファイルで、を`errorlevel`使用してリターンコードを表示します。 次に例を示します。  
+コマンドウィンドウまたはバッチファイルで、を使用し `errorlevel` てリターンコードを表示します。 次に例を示します。  
   
 ```  
 dwloader  
@@ -499,7 +499,7 @@ if not %errorlevel%==0 echo Fail
 if %errorlevel%==0 echo Success  
 ```  
   
-PowerShell を使用する場合`$LastExitCode`は、を使用します。  
+PowerShell を使用する場合は、を使用 `$LastExitCode` します。  
   
 ## <a name="permissions"></a>アクセス許可  
 コピー先のテーブルには、読み込み権限と適用可能な権限 (INSERT、UPDATE、DELETE) が必要です。 ステージングデータベースに CREATE 権限 (一時テーブルを作成する場合) が必要です。 ステージングデータベースが使用されていない場合は、コピー先データベースに対して CREATE 権限が必要です。 
@@ -568,7 +568,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 ## <a name="examples"></a>例  
   
 ### <a name="a-simple-dwloader-example"></a>A. 単純な dwloader の例  
-次の例では、必要なオプションだけを選択して**ローダー**を開始します。 その他のオプションは、グローバル構成ファイルである*loadparamfile*から取得されます。  
+次の例では、必要なオプションだけを選択して**ローダー**を開始します。 その他のオプションは、グローバル構成ファイルの*loadparamfile.txt*から取得されます。  
   
 SQL Server 認証を使用する例。  
   
@@ -598,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. AdventureWorks テーブルへのデータの読み込み  
-次の例は、 **AdventureWorksPDW2012**にデータを読み込むバッチスクリプトの一部です。  完全なスクリプトを表示するには、 **AdventureWorksPDW2012**インストールパッケージに付属している aw_create の .bat ファイルを開きます。 
+次の例は、 **AdventureWorksPDW2012**にデータを読み込むバッチスクリプトの一部です。  完全なスクリプトを表示するには、 **AdventureWorksPDW2012**インストールパッケージに付属している aw_create.bat ファイルを開きます。 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-次のスクリプトスニペットでは、dwloader を使用して、Dbo.dimaccount テーブルと DimCurrency テーブルにデータを読み込みます。 このスクリプトは、イーサネットアドレスを使用しています。 InfiniBand を使用していた場合、サーバーは`-SQLCTL01` *>appliance_name<* されます。  
+次のスクリプトスニペットでは、dwloader を使用して、Dbo.dimaccount テーブルと DimCurrency テーブルにデータを読み込みます。 このスクリプトは、イーサネットアドレスを使用しています。 InfiniBand を使用していた場合、サーバーは *>appliance_name<* され `-SQLCTL01` ます。  
   
 ```  
 set server=10.193.63.134  
@@ -646,7 +646,7 @@ with (CLUSTERED INDEX(AccountKey),
 DISTRIBUTION = REPLICATE);  
 ```  
   
-次に、テーブル Dbo.dimaccount に読み込むデータを含むデータファイル Dbo.dimaccount の例を示します。  
+次に、Dbo.dimaccount テーブルに読み込むデータを含むデータファイル DimAccount.txt の例を示します。  
   
 ```  
 --Sample of data in the DimAccount.txt load file.  
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 コマンドラインパラメーターの説明:  
   
--   *SQL Server C:\Program Warehouse\100\dwloader.exe Parallel Data*は、インストールされている dwloader .exe です。  
+-   *C:\Program ・ SQL Server Parallel Data Warehouse\100\dwloader.exe*は dwloader.exe のインストール場所です。  
   
 -   *-S*の後に、コントロールノードの IP アドレスを指定します。  
   
@@ -685,17 +685,17 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-e UTF16*は、ソースファイルでリトルエンディアン文字エンコードの種類が使用されていることを示します。  
   
--   *-i .\DimAccount.txt*は、現在のディレクトリに存在する dbo.dimaccount という名前のファイルにデータがあることを指定します。  
+-   *-i .\DimAccount.txt* 、現在のディレクトリに存在する DimAccount.txt という名前のファイルにデータがあることを指定します。  
   
 -   *-T AdventureWorksPDW2012 dbo.dimaccount*は、データを受信するテーブルの3部構成の名前を指定します。  
   
 -   *-R dbo.dimaccount*は、読み込みに失敗した行が dbo.dimaccount という名前のファイルに書き込まれることを指定します。  
   
--   *-t "|"* 入力ファイル Dbo.dimaccount のフィールドがパイプ文字で区切られていることを示します。  
+-   *-t "|"* 入力ファイル内のフィールドがパイプ文字で区切られた DimAccount.txt であることを示します。  
   
--   *-r \R\n* dbo.dimaccount の各行は、キャリッジリターンと改行文字で終了します。  
+-   *-r \r\n* DimAccount.txt 内の各行が復帰と改行文字で終わることを指定します。  
   
--   *-U <login_name>-P <password> *は、読み込みを実行するアクセス許可を持つログインのログインとパスワードを指定します。  
+-   *-U <login_name>-P <password> *読み込みを実行する権限を持つログインのログインとパスワードを指定します。  
   
 
 <!-- MISSING LINK

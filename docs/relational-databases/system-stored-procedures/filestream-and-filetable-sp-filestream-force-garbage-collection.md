@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc56f1434c0b1670495d30accdb70e0456295b01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0068e1afb8f096b3758d45a770f1aac56512d0c6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717431"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977602"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,9 +53,8 @@ sp_filestream_force_garbage_collection
   
 ## <a name="return-code-values"></a>リターン コードの値  
   
-|||  
-|-|-|  
-|値|説明|  
+| 値 | 説明 |
+| ----- | ----------- |   
 |0|操作に成功しました。|  
 |1|操作エラー|  
   
@@ -69,7 +68,7 @@ sp_filestream_force_garbage_collection
 |*num_unprocessed_items*|この FILESTREAM コンテナー内の、ガベージ コレクションで処理されなかった対象となる FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 アイテムは次のようなさまざまな理由で処理されないことがあります。<br /><br /> ログのバックアップまたはチェックポイントが作成されていないために、固定する必要があるファイル。<br /><br /> 完全復旧モデルまたは BULK_LOGGED 復旧モデル内のファイル。<br /><br /> 実行時間の長いアクティブなトランザクションが存在している。<br /><br /> レプリケーションログリーダージョブが実行されていません。 詳細については、ホワイトペーパー「 [SQL Server 2008 の FILESTREAM ストレージ](https://go.microsoft.com/fwlink/?LinkId=209156)」を参照してください。|  
 |*last_collected_xact_seqno*|指定した FILESTREAM コンテナー内の、ガベージ コレクションが実行されたファイルに対応する最後のログ シーケンス番号 (LSN) を返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  要求されたデータベース (および FILESTREAM コンテナー) で、FILESTREAM ガベージコレクタータスクが明示的に完了するように実行します。 不要になったファイルは、ガベージ コレクション プロセスによって削除されます。 この操作の完了に必要な時間は、そのデータベースまたはコンテナー内の FILESTREAM データのサイズに加え、FILESTREAM データで最近発生した DML アクティビティの量によって異なります。 この操作はデータベースがオンラインのときに実行できますが、ガベージ コレクション プロセスによってさまざまな I/O 操作が行われるため、実行中にデータベースのパフォーマンスに影響を与える可能性があります。  
   
 > [!NOTE]  
@@ -85,10 +84,10 @@ sp_filestream_force_garbage_collection
 ## <a name="permissions"></a>アクセス許可  
  Db_owner データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベースの FILESTREAM コンテナーに対してガベージコレクターを実行し `FSDB` ます。  
   
-### <a name="a-specifying-no-container"></a>A: コンテナーを指定しない  
+### <a name="a-specifying-no-container"></a>A. コンテナーを指定しない  
   
 ```sql  
 USE FSDB;  
@@ -96,7 +95,7 @@ GO
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
 ```  
   
-### <a name="b-specifying-a-container"></a>B: コンテナーを指定する  
+### <a name="b-specifying-a-container"></a>B. コンテナーを指定する  
   
 ```sql  
 USE FSDB;  
@@ -105,7 +104,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
     @filename = N'FSContainer';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [FileStream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream および FileTable の動的管理ビュー (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

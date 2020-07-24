@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717392"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977545"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -70,7 +70,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||"**なし**"|コマンドを使用しません。|  
 ||**」**|変換先テーブルを削除します。|  
 ||**delete**|変換先テーブルを削除します。|  
-||**切捨て**|変換先テーブルを切り捨てます。|  
+||**truncate**|変換先テーブルを切り捨てます。|  
 |**pub_identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**schema_option**||指定されたアーティクルのスキーマ生成オプションのビットマップを指定します。 *schema_option*は**binary (8)** です。 詳細については、このトピックで後述する「解説」を参照してください。|  
 ||**0x00**|スナップショット エージェントによるスクリプト作成を無効にします。|  
@@ -165,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  **sp_changearticle**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  ピアツーピアトランザクションレプリケーションをサポートするパブリケーションにアーティクルが属している場合、**説明**、 **ins_cmd**、 **upd_cmd**、および**del_cmd**プロパティのみを変更できます。  
@@ -210,9 +210,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>有効なスキーマ オプション  
  次の表では、レプリケーションの種類 (上部に表示) とアーティクルの種類 (最初の列に表示されます) に基づいて*schema_option*の許容値について説明します。  
   
-|アーティクルの種類|レプリケーションの種類||  
-|------------------|----------------------|------|  
-||トランザクション|スナップショット|  
+| アーティクルの種類 | レプリケーションの種類-トランザクション | レプリケーションの種類-スナップショット |
+| ------------ | -------------------------------- | --------------------------- |
 |**logbased**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**logbased manualfilter**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**logbased manualview**|すべてのオプション|すべてのオプション ( **0x02** )|  
@@ -236,13 +235,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changearticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アーティクルのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SCOM で監視する
+title: System Center Operations Manager を使用した APS の監視
 description: Analytics Platform System (APS) アプライアンスを監視するには、System Center Operations Manager (SCOM) を使用します。
 author: mzaman1
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 539c18efe43afcf5436c6913c20cab081974b7f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400971"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941124"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>System Center Operations Manager 分析プラットフォームシステムを使用した監視
 Analytics Platform System (APS) アプライアンスを監視するには、System Center Operations Manager (SCOM) を使用します。
@@ -41,7 +41,7 @@ Analytics Platform System (APS) アプライアンスを監視するには、Sys
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>SCOM で SQL Server PDW を監視するには  
 SCOM 管理パックを構成したら、SCOM の [監視] ウィンドウをクリックし、 **SQL Server アプライアンス**にドリルダウンして、 **Microsoft SQL Server Parallel Data Warehouse**します。 Microsoft SQL Server Parallel Data Warehouse の下には、アラート、アプライアンス、アプライアンスダイアグラム、ノードの4つの選択肢があります。  
   
-### <a name="alerts"></a>警告  
+### <a name="alerts"></a>アラート  
 アラートでは、管理対象の現在のアラートを確認できます。  
   
 ![アラート](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
@@ -56,10 +56,10 @@ SCOM 管理パックを構成したら、SCOM の [監視] ウィンドウをク
   
 ![アプライアンスの図](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
-### <a name="nodes"></a>ノード  
+### <a name="nodes"></a>Nodes  
 最後に、ノードビューでは、各ノードでアプライアンスの正常性を確認できます。  
   
-![ノード](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>参照  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
