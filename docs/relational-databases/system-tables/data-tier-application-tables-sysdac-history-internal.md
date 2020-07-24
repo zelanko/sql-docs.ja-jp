@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08b90446625fb2d2f8375c44d2854f3f679cea32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890570"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123023"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>データ層アプリケーション テーブル - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85890570"
 |**dac_object_type**|**tinyint**|アクションの影響を受けるオブジェクトの種類の識別子。<br /><br /> **0** = dacpac<br /><br /> **1** = ログイン<br /><br /> **2** = データベース|  
 |**dac_object_type_name**|**varchar (8)**|アクションによって影響を受けるオブジェクトの種類の名前。<br /><br /> **dacpac** = DAC インスタンス<br /><br /> **ログイン**<br /><br /> **database**|  
 |**action_status**|**tinyint**|アクションの現在のステータスを識別するコード。<br /><br /> **0** = 保留中<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
-|**action_status_name**|**varchar (11)**|アクションの現在のステータス。<br /><br /> **pending**<br /><br /> **ブランド**<br /><br /> **オーバー**|  
+|**action_status_name**|**varchar (11)**|アクションの現在のステータス。<br /><br /> **行わ**<br /><br /> **ブランド**<br /><br /> **オーバー**|  
 |**必須**|**bit**|DAC 操作をロールバックするときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって使用されます。|  
 |**dac_object_name_pretran**|**sysname**|アクションを含むトランザクションがコミットされる前のオブジェクトの名前。 データベースおよびログインにのみ使用されます。|  
 |**dac_object_name_posttran**|**sysname**|アクションを含んでいるトランザクションをコミットした後のオブジェクトの名前。 データベースおよびログインにのみ使用されます。|  
@@ -51,12 +51,11 @@ ms.locfileid: "85890570"
 |**date_created**|**datetime**|このエントリが作成された日付と時刻。|  
 |**date_modified**|**datetime**|エントリが最後に変更された日付と時刻。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  Dac の配置や削除などの DAC 管理操作では、複数の手順が生成されます。 各アクションには、アクション識別子が割り当てられます。 各ステップには、シーケンス番号と**sysdac_history_internal**内の行が割り当てられます。この場合、ステップの状態が記録されます。 各行は、アクションステップの開始時に作成され、操作の状態を反映するために必要に応じて更新されます。 たとえば、[DAC の配置] アクションを 12 **action_id**割り当て、 **sysdac_history_internal**の4つの行を取得することができます。  
   
-|||||  
-|-|-|-|-|  
-|**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
+| action_id | sequence_id | action_type_name | dac_object_type_name |
+| --------- | ----------- | ---------------- | -------------------- |
 |12|0|create|.dacpac|  
 |12|1|create|ログイン (login)|  
 |12|2|create|database|  
@@ -79,8 +78,8 @@ WHERE instance_id NOT IN
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。 このビューへの読み取り専用アクセスは、master データベースに接続する権限を持つすべてのユーザーが使用できます。  
   
-## <a name="see-also"></a>関連項目  
- [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40;Transact-sql&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 061016b3a9f1283f82263a4f89fdb81acfc86889
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890913"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122742"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,12 +49,11 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="result-sets"></a>結果セット  
  次の列を含む結果セットが返されます。  
   
-||||  
-|-|-|-|  
-|列名|データ型|説明|  
+| 列名 | データ型 | 説明 |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|プロファイルのプロファイル id。|  
 |**name**|**sysname**|プロファイルのプロファイル名。|  
-|**description**|**nvarchar(256)**|プロファイルの説明。|  
+|**description**|**nvarchar (256)**|プロファイルの説明。|  
   
 ## <a name="remarks"></a>注釈  
  プロファイル名またはプロファイル id が指定されている場合、 **sysmail_help_profile_sp**はそのプロファイルに関する情報を返します。 それ以外の場合、 **sysmail_help_profile_sp**は、インスタンス内のすべてのプロファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -99,7 +98,7 @@ profile_id  name                          description
 56          AdventureWorks Administrator  Administrative mail profile.    
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   

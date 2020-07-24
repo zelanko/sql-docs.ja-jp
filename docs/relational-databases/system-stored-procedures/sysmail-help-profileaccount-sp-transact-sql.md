@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8fae7b7f9ec0fbd5a8310bcbdacc6a436dd232c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890872"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122702"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,9 +57,8 @@ sysmail_help_profileaccount_sp
 ## <a name="result-sets"></a>結果セット  
  次の列を含む結果セットが返されます。  
   
-||||  
-|-|-|-|  
-|列名|データ型|説明|  
+| 列名 | データ型 | 説明 |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|プロファイルのプロファイル ID。|  
 |**profile_name**|**sysname**|プロファイルの名前。|  
 |**account_id**|**int**|アカウントのアカウント ID。|  
@@ -129,7 +128,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3156ac4443bd116767ece63c37cbe0ff51198984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: df5b364408b012a186ca090b6d3a6d7de77119cf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890997"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122407"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,9 +59,8 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>解説  
  データベース メールでは次のパラメーターが使用されます。  
   
-||||  
-|-|-|-|  
-|パラメーター名|説明|Default value|  
+| パラメーター名 | 説明 | 既定値 |
+| -------------- | ----------- | ------------- |
 |*AccountRetryAttempts*|指定したプロファイル内の各アカウントを使用して、外部メール処理が電子メール メッセージの送信を試行する回数。|**1**|  
 |*AccountRetryDelay*|外部メール処理が次回のメッセージ送信の試行を待機する時間 (秒単位)。|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|外部メール処理がアクティブな状態にとどまる最小時間 (秒単位)。 データベースメールが多数のメッセージを送信している場合は、この値を大きくしてデータベースメールアクティブにして、頻繁な起動と停止のオーバーヘッドを回避します。|**600**|  
@@ -94,7 +93,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
     'MaxFileSize', '2097152' ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [sysmail_help_configure_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

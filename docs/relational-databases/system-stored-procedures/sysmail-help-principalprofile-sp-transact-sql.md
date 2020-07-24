@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 024eec5c9e74eb48ac57dcf16a40a7783d79f5b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890893"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122743"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,9 +55,8 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ## <a name="result-sets"></a>結果セット  
  返される結果セットには、次の表に示す列が含まれています。  
   
-||||  
-|-|-|-|  
-|列名|データ型|説明|  
+| 列名 | データ型 | 説明 |
+| ----------- | --------- | ----------- |
 |**principal_id**|**int**|データベース ユーザーの ID|  
 |**principal_name**|**sysname**|データベースユーザーの名前。|  
 |**profile_id**|**int**|データベースメールプロファイルの ID 番号。|  
@@ -91,7 +90,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-### <a name="b-listing-information-for-all-associations"></a>B: すべての関連付けに関する情報を一覧表示する  
+### <a name="b-listing-information-for-all-associations"></a>B. すべての関連付けに関する情報を一覧表示する  
  次の例では、インスタンス内のすべての関連付けについての情報を表示します。  
   
 ```  
@@ -107,7 +106,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
