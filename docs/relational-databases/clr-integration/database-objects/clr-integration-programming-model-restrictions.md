@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5f04017124520f6e2acd0669946d5d43d4e83f4
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: d400e0e19d381c3cce2ebfeffd9f97abe16354b9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160170"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921871"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   マネージストアドプロシージャまたはその他のマネージデータベースオブジェクトを構築する場合は、で実行される特定のコードチェックについて [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 考慮する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は、マネージコードアセンブリがデータベースに最初に登録されたとき、 **CREATE assembly**ステートメントを使用して、実行時にもチェックを実行します。 マネージド コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージコードが満たす必要のある要件は、アセンブリが**安全**、 **EXTERNAL_ACCESS** **、または安全と**して登録されているかどうかによって異なります。**安全である**ことが保証され、以下に示します。  
   
  マネージド コード アセンブリには、制限事項に加えてコード セキュリティ権限も付与されます。 共通言語ランタイム (CLR) では、マネージド コードに対してコード アクセス セキュリティ (CAS) というセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 **セーフ**、 **EXTERNAL_ACCESS**、**安全でない**アセンブリには、異なる CAS アクセス許可があります。 詳細については、「 [CLR 統合コードアクセスセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)」を参照してください。  
@@ -98,7 +98,7 @@ ms.locfileid: "86160170"
   
 -   SelfAffectingThreading  
   
--   同期  
+-   Synchronization  
   
 -   SharedState  
   

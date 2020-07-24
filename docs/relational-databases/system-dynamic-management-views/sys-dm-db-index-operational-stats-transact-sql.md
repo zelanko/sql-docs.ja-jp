@@ -20,12 +20,12 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2b473019a20a962a41c44aade08e4a1daa2a765
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f97f23edb38e7d97a6da19860cf49ca4fdb1182d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820863"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941364"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>dm_db_index_operational_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,26 +52,86 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>引数    
- *database_id* |NULL |0 |標準    
- データベースの ID です。 *database_id*は**smallint**です。 有効な入力値は、データベースの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
+
+:::row:::
+    :::column:::
+        *database_id*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
+  データベースの ID です。 *database_id*は**smallint**です。 有効な入力値は、データベースの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。 *Database_id*に null を指定した場合は、 *object_id*、 *index_id*、および*partition_number*にも null を指定する必要があります。    
     
  組み込み関数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) を指定できます。    
-    
- *object_id* |NULL |0 |標準    
+
+:::row:::
+    :::column:::
+        *object_id*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  インデックスがあるテーブルまたはビューのオブジェクト ID を指定します。 *object_id*は**int**です。    
     
  有効な入力値は、テーブルおよびビューの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
     
  NULL を指定すると、指定されたデータベース内にあるすべてのテーブルとビューに関するキャッシュされた情報が返されます。 *Object_id*に null を指定する場合は、 *index_id*と*partition_number*にも null を指定する必要があります。    
-    
- *index_id* |0 |NULL |-1 |標準    
+
+:::row:::
+    :::column:::
+        *index_id*
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        -1
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  インデックスの ID。 *index_id*は**int**です。有効な入力値は、インデックスの ID 番号です。 *object_id*がヒープ、NULL、-1、または DEFAULT である場合は0になります。 既定値は -1 です。このコンテキストでは、NULL、-1、および DEFAULT は同じ値になります。    
     
  NULL を指定すると、ベース テーブルまたはビューのすべてのインデックスに関するキャッシュされた情報が返されます。 *Index_id*に null を指定する場合は、 *partition_number*に null を指定する必要もあります。    
-    
- *partition_number* |NULL |0 |標準    
+
+:::row:::
+    :::column:::
+        *partition_number*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  オブジェクト内のパーティション番号を指定します。 *partition_number*は**int**です。有効な入力値は、インデックスまたはヒープの*partion_number* 、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。    
     
  NULL を指定すると、インデックスまたはヒープのすべてのパーティションについてキャッシュされた情報が返されます。    
@@ -128,7 +188,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページ レベルの圧縮が評価されたページの数。 大幅な節減を実現できないため圧縮されなかったページも含まれます。 列ストア インデックスでは、常に 0 です。|    
 |**page_compression_success_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページの圧縮を使用して圧縮されたデータ ページの数。 列ストア インデックスでは、常に 0 です。|    
     
-## <a name="remarks"></a>解説    
+## <a name="remarks"></a>注釈    
  この動的管理オブジェクトには、CROSS APPLY および OUTER APPLY からの相関パラメーターは受け入れられません。    
     
  **sys.dm_db_index_operational_stats** を使用すると、テーブル、インデックス、またはパーティションに対する読み書きを行うために、ユーザーが待機する必要がある時間の長さを追跡でき、重大な I/O 動作やホット スポットが発生したテーブルまたはインデックスを特定できます。    
@@ -236,14 +296,14 @@ GO
 ```    
     
 ## <a name="see-also"></a>参照    
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
- [Transact-sql&#41;&#40;インデックス関連の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+ [インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [dm_os_latch_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [dm_db_partition_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

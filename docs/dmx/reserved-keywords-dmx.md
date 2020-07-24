@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 6359b17825e1f62c38492acb6747ca52a264c7bc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669651"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970638"
 ---
 # <a name="reserved-keywords-dmx"></a>予約されているキーワード (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] は排他的に使用する特定のキーワードが予約されています。 これらのキーワードは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dmx 言語リファレンスで定義されている位置を除き、データマイニング拡張機能 (dmx) ステートメントのどこでも使用できません。 これらの制限された DMX キーワードには、次のメンバーが含まれます。  
   

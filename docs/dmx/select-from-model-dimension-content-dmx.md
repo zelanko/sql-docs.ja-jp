@@ -31,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可能。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  コンテンツ スキーマ行セットから派生する、関連する列識別子のコンマ区切りのリストです。  
@@ -40,10 +40,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  モデル識別子。  
   
  *条件式*  
- 省略可能。 列リストから返される値を制限する条件。  
+ 任意。 列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 省略可能。 スカラー値を返す式。  
+ 任意。 スカラー値を返す式。  
   
 ## <a name="remarks"></a>注釈  
  アルゴリズムプロバイダーは、返されるコンテンツとその編成方法を定義します。 たとえば、プロバイダーはディメンション コンテンツに示されるノード数を制限する場合があります。  

@@ -30,7 +30,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可能。 返す行数を指定する整数。  
+ 任意。 返す行数を指定する整数。  
   
  *式の一覧*  
  関連する列識別子 (モデルから派生したもの) または式のコンマ区切りのリスト。  
@@ -42,7 +42,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 省略可能。 スカラー値を返す式。  
+ 任意。 スカラー値を返す式。  
   
 ## <a name="remarks"></a>注釈  
  **SELECT DISTINCT FROM**ステートメントは、1つの列、または関連する列のセットでのみ機能します。 この句は、関連しない列のセットでは動作しません。  

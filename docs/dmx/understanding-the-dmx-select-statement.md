@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 689e04acc8177a55a751ffa8e8e2e46848732fd1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a31be8bc6d7bf5e747b9228229efc892c1462339
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669230"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970300"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>DMX 選択ステートメントについて
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [SELECT](../dmx/select-dmx.md)ステートメントは、でデータマイニング拡張機能 (DMX) を使用して作成するほとんどのクエリの基礎と [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] なります。 このステートメントでは、データ マイニング モデルの参照や予測などのさまざまなタスクを実行することができます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "83669230"
   
 -   [コピー](#Copying)  
   
--   [有効化](#Drillthrough)  
+-   [ドリルスルー](#Drillthrough)  
   
 ###  <a name="predicting"></a><a name="Predicting"></a>予測  
  次の種類のクエリを使用して、マイニングモデルに基づいて予測を実行できます。  
@@ -63,7 +63,7 @@ ms.locfileid: "83669230"
 |クエリの型|説明|  
 |----------------|-----------------|  
 |SELECT FROM [自然] 予測結合|マイニング モデル内の列を内部データ ソースの列に結合させることで作成される予測を返します。<br /><br /> このクエリの種類のドメインは、モデルからの予測可能列と入力データソースの列です。<br /><br /> [&#60;モデルから選択します&#62; 予測結合 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [予測クエリ &#40;データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
-|モデルから選択* \<>*|マイニング モデルにのみ基づいた、予測可能な列の最も可能性の高い状態を返します。 このクエリの型は、空の予測結合で予測を作成するための近道となります。<br /><br /> このクエリの型のドメインは、モデルからの予測可能列です。<br /><br /> [DMX&#41;&#62; &#40;&#60;モデルから選択します](../dmx/select-from-model-dmx.md)<br /><br /> [予測クエリ &#40;データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
+|SELECT FROM*\<model>*|マイニング モデルにのみ基づいた、予測可能な列の最も可能性の高い状態を返します。 このクエリの型は、空の予測結合で予測を作成するための近道となります。<br /><br /> このクエリの型のドメインは、モデルからの予測可能列です。<br /><br /> [DMX&#41;&#62; &#40;&#60;モデルから選択します](../dmx/select-from-model-dmx.md)<br /><br /> [予測クエリ &#40;データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
   
  [SELECT の型に戻る](#Select_Types)  
   
@@ -72,10 +72,10 @@ ms.locfileid: "83669230"
   
 |クエリの型|説明|  
 |----------------|-----------------|  
-|モデルから DISTINCT を選択* \<>*|指定された列のマイニングモデルからすべての状態値を返します。<br /><br /> このクエリの種類のデータドメインはデータマイニングモデルです。<br /><br /> [DMX&#41;&#62; &#40;&#60;モデルから [DISTINCT] を選択します。](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [コンテンツ クエリ &#40;データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|* \< モデル>* から選択します。情報|マイニング モデルを説明する内容を返します。<br /><br /> このクエリの種類のデータドメインは、コンテンツスキーマ行セットです。<br /><br /> [&#60;モデル&#62; から選択します。DMX&#41;のコンテンツ &#40;](../dmx/select-from-model-content-dmx.md)<br /><br /> [コンテンツ クエリ &#40;データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|* \< モデル>* から選択します。DIMENSION_CONTENT|マイニング モデルを説明する内容を返します。<br /><br /> このクエリの種類のデータドメインは、コンテンツスキーマ行セットです。<br /><br /> [&#60;モデル&#62; から選択します。DMX&#41;&#40;の DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|  
-|* \< モデル>* から選択します。PMML|この機能をサポートするアルゴリズムに対して、マイニング モデルの Predictive Model Markup Language (PMML) 表記法を返します。<br /><br /> このクエリの型のドメインは PMML スキーマ行セットです。<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
+|[DISTINCT FROM]*\<model>*|指定された列のマイニングモデルからすべての状態値を返します。<br /><br /> このクエリの種類のデータドメインはデータマイニングモデルです。<br /><br /> [DMX&#41;&#62; &#40;&#60;モデルから [DISTINCT] を選択します。](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [コンテンツ クエリ &#40;データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|[開始] を選択し *\<model>* ます。情報|マイニング モデルを説明する内容を返します。<br /><br /> このクエリの種類のデータドメインは、コンテンツスキーマ行セットです。<br /><br /> [&#60;モデル&#62; から選択します。DMX&#41;のコンテンツ &#40;](../dmx/select-from-model-content-dmx.md)<br /><br /> [コンテンツ クエリ &#40;データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|[開始] を選択し *\<model>* ます。DIMENSION_CONTENT|マイニング モデルを説明する内容を返します。<br /><br /> このクエリの種類のデータドメインは、コンテンツスキーマ行セットです。<br /><br /> [&#60;モデル&#62; から選択します。DMX&#41;&#40;の DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|  
+|[開始] を選択し *\<model>* ます。PMML|この機能をサポートするアルゴリズムに対して、マイニング モデルの Predictive Model Markup Language (PMML) 表記法を返します。<br /><br /> このクエリの型のドメインは PMML スキーマ行セットです。<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126283(v=sql.110))|  
   
  [SELECT の型に戻る](#Select_Types)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "83669230"
   
 |クエリの型|説明|  
 |----------------|-----------------|  
-|* \< 新しいモデル*の選択>|マイニングモデルのコピーを作成します。<br /><br /> このクエリの種類のドメインは、データマイニングモデルです。<br /><br /> [&#40;DMX&#41;を選択します](../dmx/select-into-dmx.md)|  
+|SELECT INTO*\<new model>*|マイニングモデルのコピーを作成します。<br /><br /> このクエリの種類のドメインは、データマイニングモデルです。<br /><br /> [&#40;DMX&#41;を選択します](../dmx/select-into-dmx.md)|  
   
  [SELECT の型に戻る](#Select_Types)  
   
@@ -93,9 +93,9 @@ ms.locfileid: "83669230"
   
 |クエリの型|説明|  
 |----------------|-----------------|  
-|* \< モデル>* から選択します。場合|マイニングモデルのトレーニングに使用するケースを返します。<br /><br /> このクエリの種類のドメインは、データマイニングモデルです。<br /><br /> [&#60;モデル&#62; から選択します。DMX&#41;&#40;ケース](../dmx/select-from-model-cases-dmx.md)<br /><br /> [DMX を使用したドリルスルー クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
-|* \< モデル>* から選択します。SAMPLE_CASES|マイニング モデルのトレーニングに使用されたケースを表すサンプル ケースを返します。<br /><br /> このクエリの種類のドメインは、データマイニングモデルです。<br /><br /> [&#60;モデル&#62; から選択します。DMX&#41;&#40;の SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|  
-|[ * \< 構造>* から選択します。 場合|マイニングモデルのトレーニングで一部の詳細が使用されていない場合でも、基になるマイニング構造から詳細なデータ行を返します。<br /><br /> [&#60;構造&#62; から選択します。場合](../dmx/select-from-structure-cases.md)<br /><br /> [ドリルスルー クエリ (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
+|[開始] を選択し *\<model>* ます。場合|マイニングモデルのトレーニングに使用するケースを返します。<br /><br /> このクエリの種類のドメインは、データマイニングモデルです。<br /><br /> [&#60;モデル&#62; から選択します。DMX&#41;&#40;ケース](../dmx/select-from-model-cases-dmx.md)<br /><br /> [DMX を使用したドリルスルー クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
+|[開始] を選択し *\<model>* ます。SAMPLE_CASES|マイニング モデルのトレーニングに使用されたケースを表すサンプル ケースを返します。<br /><br /> このクエリの種類のドメインは、データマイニングモデルです。<br /><br /> [&#60;モデル&#62; から選択します。DMX&#41;&#40;の SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|  
+|[開始] を選択し *\<structure>* ます。 場合|マイニングモデルのトレーニングで一部の詳細が使用されていない場合でも、基になるマイニング構造から詳細なデータ行を返します。<br /><br /> [&#60;構造&#62; から選択します。場合](../dmx/select-from-structure-cases.md)<br /><br /> [ドリルスルー クエリ (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
   
  [SELECT の型に戻る](#Select_Types)  
   

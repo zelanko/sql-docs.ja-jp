@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a21336db54ab6fadaa219a3ef3d743dcf860087
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: d323794af598cb621b7fb8f9939cd2ae1c0f2746
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669273"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968378"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   **Predict**関数は、指定された列の予測値 (値のセット) を返します。  
   
@@ -32,18 +32,18 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
  スカラー列参照またはテーブル列参照のいずれかです。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<スカラー列参照>  
+ \<scalar column reference>  
   
  or  
   
- \<テーブル列の参照>  
+ \<table column reference>  
   
  戻り値の型は、この関数が適用される列の型によって異なります。  
   
 > [!NOTE]  
 >  包含、排他、INPUT_ONLY、INCLUDE_STATISTICS はテーブル列参照にのみ適用され、EXCLUDE_NULL と INCLUDE_NULL はスカラー列参照にのみ適用されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  オプションには、EXCLUDE_NULL (既定)、INCLUDE_NULL、INCLUSIVE、EXCLUSIVE (既定)、INPUT_ONLY、および INCLUDE_STATISTICS が含まれています。  
   
 > [!NOTE]  

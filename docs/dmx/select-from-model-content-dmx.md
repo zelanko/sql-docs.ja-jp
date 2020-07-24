@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669591"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970600"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>[モデルから] を選択し &lt; &gt; ます。コンテンツ (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指定されたデータマイニングモデルのマイニングモデルスキーマ行セットを返します。  
   
@@ -45,8 +45,8 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *式 (expression)*  
  任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>Remarks  
- **SELECT FROM** _ \< model>_ **。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタムアプリケーションでのアソシエーションルールモデルのすべてのルールの説明を使用することができます。 **[モデルから選択]> を使用でき \< ます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
+## <a name="remarks"></a>注釈  
+ **SELECT FROM** _\<model>_ **です。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタムアプリケーションでのアソシエーションルールモデルのすべてのルールの説明を使用することができます。 SELECT FROM を使用でき** \<model> ます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
   
  次の表に、マイニングモデルコンテンツに含まれる列を示します。  
   

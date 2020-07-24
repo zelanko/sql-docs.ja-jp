@@ -32,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
   
 ## <a name="arguments"></a>引数  
  *n*  
- 省略可能。 返す行数を指定する整数値です。  
+ 任意。 返す行数を指定する整数値です。  
   
  *式の一覧*  
  関連付けられた列識別子のコンマ区切りのリストです。  
@@ -41,10 +41,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  モデル識別子。  
   
  *条件一覧*  
- 省略可能。 列リストから返される値を制限する条件。  
+ 任意。 列リストから返される値を制限する条件。  
   
  *式 (expression)*  
- 省略可能。 スカラー値を返す式。  
+ 任意。 スカラー値を返す式。  
   
 ## <a name="remarks"></a>注釈  
  サンプルケースは生成される場合があり、実際にはトレーニングデータに存在しない可能性があります。 返されたケースは、指定されたコンテンツ ノードを表します。  

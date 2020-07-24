@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 04b06d1cbe14ee83915bd5626337720acf9bd2a9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e011fc48b63aa653cd63e11678b84d8356370bd0
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670347"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969343"
 ---
 # <a name="lag-dmx"></a>ラグ (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   現在のケースの日付とトレーニングセットの最後の日付の間のタイムスライスを返します。  
   
@@ -30,7 +30,7 @@ Lag()
 ## <a name="return-type"></a>戻り値の型  
  整数型のスカラー値です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  入れ子になったテーブル内に KEY TIME 列が配置されているモデルで**Lag**関数を使用する場合、関数は、ステートメントのサブ選択内に配置する必要があります。  
   
 ## <a name="examples"></a>例  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 343d5ec73a9720085f450cde3f35a187cf4b7302
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b49fbddab49266ee5a5d530867c281e72878b6d7
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762813"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943024"
 ---
 # <a name="rightsenum"></a>RightsEnum
 オブジェクトのグループまたはユーザーの権限または権限を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**Adall の作成**|16384 (&H4000)|このユーザーまたはグループには、この種類の新しいオブジェクトを作成する権限があります。|  
 |**Adall の削除**|65536 (&H10000)|ユーザーまたはグループには、オブジェクトからデータを削除する権限が与えられています。 **テーブル**などのオブジェクトの場合、ユーザーはレコードからデータ値を削除する権限を持っています。|  
@@ -47,7 +47,12 @@ ms.locfileid: "82762813"
 |**adRightWritePermissions**|262144 (&H40000)|ユーザーまたはグループは、カタログ内のオブジェクトに対する特定の権限を変更できます。|  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[GetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|[SetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
+
+:::row:::
+    :::column:::
+        [GetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+    :::column-end:::
+    :::column:::
+        [SetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+    :::column-end:::
+:::row-end:::

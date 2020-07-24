@@ -20,7 +20,7 @@ ms.locfileid: "86971750"
 
   のデータマイニング拡張機能 (dmx) のリファレンスドキュメントでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dmx 言語を説明するために次の規則を使用します。  
   
-|表記|使用方法|  
+|表記|使用法|  
 |----------------|-----------|  
 |**太字**|表示されたとおりに正確に入力する必要がある DMX キーワードとテキスト。|  
 |*斜体*|ユーザーが指定する DMX 構文の引数を示します。|  

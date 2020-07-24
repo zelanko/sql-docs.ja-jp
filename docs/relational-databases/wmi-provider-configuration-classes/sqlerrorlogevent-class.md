@@ -78,7 +78,7 @@ WScript.Echo "Instance Name: " & logEvent.InstanceName & vbNewLine _
 Next  
 ```  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
  WQL ステートメントで*InstanceName*または*FileName*が指定されていない場合、クエリは既定のインスタンスと現在のログファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) 上の現在のログ ファイル (ERRORLOG) に含まれるすべてのログ イベントを返します。  
   
 ```  

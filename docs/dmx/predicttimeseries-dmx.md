@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666695"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970690"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   予測される時系列データの将来値を返します。 時系列データは連続していて、入れ子になったテーブルまたはケーステーブルに格納できます。 **PredictTimeSeries**関数は、常に入れ子になったテーブルを返します。  
   
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>引数  
- * \< テーブル列参照>*、 * \< スカラー列以下>*  
+ *\<table column reference>*, *\<scalar column referenc>*  
  予測する列の名前を指定します。 列には、スカラーデータまたは表形式データを含めることができます。  
   
  *n*  
@@ -52,7 +52,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n-end*は、 *n 開始*より大きい整数でなければなりません。  
   
- *\<ソースクエリの>*  
+ *\<source query>*  
  予測の作成に使用される外部データを定義します。  
   
  REPLACE_MODEL_CASES |EXTEND_MODEL_CASES  
@@ -65,9 +65,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  これらの引数は、PREDICTION JOIN ステートメントを使用して新しいデータを追加する場合にのみ使用できます。 予測結合クエリを使用し、引数を指定しない場合、既定値は EXTEND_MODEL_CASES になります。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<*テーブル式*>。  
+ \<*table expression*>。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[msCoName](../includes/msconame-md.md)]タイムシリーズアルゴリズムでは、予測結合ステートメントを使用して新しいデータを追加した場合、履歴予測はサポートされません。  
   
  予測結合では、予測プロセスは常に、元のトレーニングシリーズの最後の直後の時間ステップで開始されます。 これは、新しいデータを追加した場合でも当てはまります。 したがって、 *n*パラメーターと*n 開始*パラメーターの値には、0より大きい整数を指定する必要があります。  

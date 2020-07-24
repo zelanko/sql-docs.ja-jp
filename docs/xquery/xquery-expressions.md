@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b75a37be658fbc8909f5dbc8d3eec0e3afd1a0f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0144663029fb4e2a000eda590c85ee97d349dab6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775437"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917955"
 ---
 # <a name="xquery-expressions"></a>XQuery 式
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery 式について説明するトピックです。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "85775437"
  [XQuery &#40;の式の検証&#41;](../xquery/validate-expressions-xquery.md)  
  **Validate**式はサポートされていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

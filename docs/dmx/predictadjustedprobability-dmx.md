@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669292"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971567"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   指定された状態の調整済みの確率を返します。  
   
@@ -33,10 +33,10 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>Remarks  
- 予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 欠落状態のバケットを含めるには、予測された \< 状態の> を**INCLUDE_NULL**に設定します。  
+## <a name="remarks"></a>注釈  
+ 予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 欠落している状態バケットを含めるには、 \<predicted state> を**INCLUDE_NULL**に設定します。  
   
- 欠損状態の調整済みの確率を返すには、予測された \< 状態> を NULL に設定します。  
+ 欠損状態の調整済みの確率を返すには、を \<predicted state> NULL に設定します。  
   
  **PredictAdjustedProbability**関数は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] データマイニング仕様の OLE DB の拡張機能です。  
   

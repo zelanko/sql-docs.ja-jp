@@ -20,12 +20,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717446"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943064"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>dm_sql_referencing_entities (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,17 +60,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>引数  
- *schema_name。参照され*ている _*entity_name*  
- 参照先エンティティの名前を指定します。  
+ `schema_name.referenced_entity_name`参照先エンティティの名前を指定します。  
   
- 参照されるクラスが PARTITION_FUNCTION 場合を除き、 *schema_name*が必要です。  
+ `schema_name`参照先クラスが PARTITION_FUNCTION である場合を除き、 は必須です。  
   
- *schema_name。 referenced_entity_name*は**nvarchar (517)** です。  
+ `schema_name.referenced_entity_name`**nvarchar (517)** です。  
   
- *<referenced_class>* :: = {OBJECT |TYPE |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION}  
- は、参照先エンティティのクラスです。 ステートメントごとに1つのクラスのみを指定できます。  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`は、参照先エンティティのクラスです。 ステートメントごとに1つのクラスのみを指定できます。  
   
- *<referenced_class>* は**nvarchar**(60) です。  
+ `<referenced_class>`**nvarchar**(60) です。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -96,17 +94,17 @@ sys.dm_sql_referencing_entities (
   
  指定された参照先エンティティが番号付きストアドプロシージャの場合、エラーを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 依存関係情報は、ルール、既定値、一時テーブル、一時ストアドプロシージャ、またはシステムオブジェクトに対して作成または管理されません。  
   
 |エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
 |テーブル|はい*|はい|  
-|表示|はい|はい|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|はい|  
-|CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
-|CLR ユーザー定義関数|いいえ|はい|  
+|表示|はい|[はい]|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|[はい]|  
+|CLR ストアド プロシージャ (CLR stored procedure)|いいえ|○|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|[はい]|  
+|CLR ユーザー定義関数|いいえ|○|  
 |CLR トリガー (DML および DDL)|いいえ|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|はい|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)]データベースレベルの DDL トリガー|はい|いいえ|  
@@ -153,7 +151,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B: 指定された型を参照するエンティティを返す  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 指定された型を参照するエンティティを返す  
  次の例では、別名型を参照するエンティティを返し `dbo.Flag` ます。 結果セットは、2つのストアドプロシージャがこの型を使用することを示しています。 この型は、テーブル `dbo.Flag` 内の複数の列の定義でも使用されます `HumanResources.Employee` 。ただし、この型はテーブルの計算列、check 制約、または DEFAULT 制約の定義に含まれていないため、テーブルに対して行は返されません `HumanResources.Employee` 。  
   
 ```sql  
@@ -174,7 +172,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

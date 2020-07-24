@@ -20,21 +20,21 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a143d4f7052995dddd8bc9cc5239b8ccc7a366f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c4058d22364361da622d94c199bedf98562e0531
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718742"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920838"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>dm_resource_governor_external_resource_pools (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 現在の外部リソースプールの状態、リソースプールの現在の構成、およびリソースプールの統計に関する情報を返します。 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
-|名前の指定      |データの種類      |説明|  
+|名前の指定      |データ型      |説明|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|リソースプールの ID。 NULL 値は許可されません。 |
 | name|**sysname**|共有リソースの名前。 NULL 値は許可されません。 
@@ -55,7 +55,7 @@ ms.locfileid: "85718742"
 
 `VIEW SERVER STATE` 権限が必要です。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

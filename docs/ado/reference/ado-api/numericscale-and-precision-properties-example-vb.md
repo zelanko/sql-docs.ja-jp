@@ -1,5 +1,5 @@
 ---
-title: NumericScale および Precision プロパティの例 (VB) |Microsoft Docs
+title: NumericScale と Precision プロパティの ADO コード例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe33e513ebb5645952fcf1b57dc819e64af90315
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3a5f34efc7063e4c644734f770bd3fe80f2b51de
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762345"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942504"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale および Precision プロパティの例 (VB)
 この例では、 [numericscale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティと[precision](../../../ado/reference/ado-api/precision-property-ado.md)プロパティを使用して、 ***Pubs***データベースの***割引***テーブルのフィールドの数値の小数点以下桁数と有効桁数を表示します。  

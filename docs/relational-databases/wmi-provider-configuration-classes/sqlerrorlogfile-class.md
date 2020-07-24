@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc333e99ab9dcf2b74c8c829ca27faf77d8b08b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5949e1667040296e2eb5472dd92bdb2a12db424e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888469"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915611"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile クラス
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルの情報の表示に関するプロパティを提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,18 +39,18 @@ class SQLErrorLogFile
 ## <a name="properties"></a>Properties  
  SQLErrorLogFile クラスは、次のプロパティを定義します。  
   
-|||  
-|-|-|  
+| プロパティ | 説明 |
+| -------- | ----------- |
 |ArchiveNumber|データ型: **uint32**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルのアーカイブ番号。|  
 |InstanceName|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
 |LastModified|データ型: **datetime**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルの最終変更日。|  
 |LogFileSize|データ型: **uint32**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルのサイズ (バイト単位)。|  
 |名前|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
   
-|||  
-|-|-|  
+| Type | 名前 |
+| ---- | ---- |
 |MOF|Sqlmgmprovider xpsp2up.mof|  
 |[DLL]|Sqlmgmprovider.dll|  
 |名前空間|\root\Microsoft\SqlServer\ComputerManagement10|  
@@ -96,7 +96,7 @@ Next
   
  ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](https://go.microsoft.com/fwlink/?LinkId=178848)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SqlErrorLogEvent クラス](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   
  [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94cc5b07c97bd5c8d7c7ae6c30c179e2555b95d5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4287e836dd46c579ee81a4baf0e175e8b49acf67
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762783"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942640"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions メソッド (ADOX)
 オブジェクトの[グループ](../../../ado/reference/adox-api/group-object-adox.md)または[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)に対する権限を指定します。  
@@ -54,18 +54,23 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *ObjectTypeId*  
  任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  プロバイダーがグループまたはユーザーのアクセス権の設定をサポートしていない場合、エラーが発生します。  
   
 > [!NOTE]
 >  **SetPermissions**を呼び出す場合、 **adaccessrevoke**にアクションを設定すると、 *Rights*パラメーターの設定が上書きされます。 *Rights*パラメーターに指定された権限を有効にする場合は、*アクション*を**adaccessrevoke**に設定しないでください。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [GetPermissions および SetPermissions メソッドの例 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [GetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   

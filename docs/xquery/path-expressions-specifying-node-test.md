@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc2d295f43dfab4327ac1b0ea47382324a22db41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aaad5923695e6cb8e98e2c7f40fa2bb9a044a7ce
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786518"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915548"
 ---
 # <a name="path-expressions---specifying-node-test"></a>パス式 - ノード テストの指定
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   パス式の軸ステップには、次のコンポーネントが含まれます。  
   
@@ -93,7 +93,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>ノード テストとしてのノード型  
  要素ノード以外のノード型を照会するには、ノード型のテストを使用します。 次の表に示すように、4つのノードタイプのテストを使用できます。  
   
-|ノード型|戻り値|例|  
+|ノードの種類|戻り値|例|  
 |---------------|-------------|-------------|  
 |`comment()`|コメント ノードの場合 True です。|`following::comment()`コンテキストノードの後に表示されるすべてのコメントノードを選択します。|  
 |`node()`|任意の種類のノードの場合は True。|`preceding::node()`コンテキストノードの前に表示されるすべてのノードを選択します。|  
@@ -108,10 +108,10 @@ child::comment()
   
  同様に、は、 `/child::ProductDescription/child::Features/child::comment()` \<Features> 要素ノードの子要素ノードの子のコメントノードを取得し \<ProductDescription> ます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ノード名とノードの種類を比較します。  
   
-### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A: ノード名とノード型をノードテストとしてパス式に指定した結果  
+### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. ノード名とノード型をノードテストとしてパス式に指定した結果  
  次の例では、単純な XML ドキュメントが**xml**型の変数に割り当てられています。 別のパス式を使用してドキュメントを照会します。 その後、結果が比較されます。  
   
 ```  
@@ -199,7 +199,7 @@ text2
 text3  
 ```  
   
-### <a name="b-specifying-a-node-name-in-the-node-test"></a>B: ノードテストでのノード名の指定  
+### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. ノードテストでのノード名の指定  
  次の例では、すべてのパス式でノード名をノード テストとして指定します。 結果として、すべての式により、ノード テストに指定したノード名を持つ、軸の主ノード種別に属するノードが返されます。  
   
  次のクエリ式は、 `Warranty` テーブルに格納されている製品カタログ XML ドキュメントから <> 要素を返し `Production.ProductModel` ます。  
@@ -273,7 +273,7 @@ WHERE ProductModelID=19
   
  このクエリは、 `Maintenance` 製品カタログの XML ドキュメントのすべての名前空間にある、<> 要素ノードの子を返します。  
   
-### <a name="c-specifying-node-kind-in-the-node-test"></a>C: ノードテストでのノードの種類の指定  
+### <a name="c-specifying-node-kind-in-the-node-test"></a>C. ノードテストでのノードの種類の指定  
  次の例では、すべてのパス式でノードの種類をノード テストとして指定します。 結果として、すべての式がノード テストに指定した種類のノードを返します。  
   
  次のクエリでは、パス式で、3番目の手順でノードの種類を指定しています。  

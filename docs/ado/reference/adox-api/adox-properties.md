@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6441c637b371cb059ebaad94380d6bfd4f24c8f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764103"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942817"
 ---
 # <a name="adox-properties"></a>ADOX のプロパティ
 
-|||  
+|プロパティ|説明|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|カタログが属する ADO**接続**オブジェクトを示します。|  
 |[属性](../../../ado/reference/adox-api/attributes-property-adox.md)|列の特性について説明します。|  
-|[クラスター化インデックス](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
+|[クラスター化](../../../ado/reference/adox-api/clustered-property-adox.md)|インデックスがクラスター化されているかどうかを示します。|  
 |[コマンド](../../../ado/reference/adox-api/command-property-adox.md)|プロシージャを作成または実行するために使用できる ADO**コマンド**オブジェクトを指定します。|  
 |[Count](../../../ado/reference/ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|オブジェクトが作成された日付を示します。|  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53a391ccb25a32d628703543d95dc8e24668fcd5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748849"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942494"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset メソッド (RDS)
 空の非接続[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を作成します。  
@@ -40,7 +40,7 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *オブジェクト*  
+ *Object*  
  [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)または RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
  *ColumnsInfos*  
@@ -56,7 +56,7 @@ object.CreateRecordset(ColumnInfos)
   
  次に、一連の列配列が配列にグループ化されて、**レコードセット**が定義されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  サーバー側ビジネスオブジェクトは、結果の**レコードセット**に、株価を含むオペレーティングシステムファイルなど、OLE DB 以外のデータプロバイダーからのデータを設定できます。  
   
  次の表に、 **CreateRecordset**メソッドでサポートされる[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)の値を示します。 表示される数値は、フィールドを定義するために使用される参照番号です。  
@@ -65,7 +65,7 @@ object.CreateRecordset(ColumnInfos)
   
  変数のデータ型によっては、代入列に示されている型に型を強制的に変換することができます。 **レコードセット**が作成され、いっぱいになるまで、置換は表示されません。 その後、必要に応じて、実際のデータ型を確認できます。  
   
-|長さ|定数|Number|Substitution|  
+|長さ|定数|Number|代入|  
 |------------|--------------|------------|------------------|  
 |固定|**adTinyInt**|16||  
 |固定|**adSmallInt**|2||  
@@ -99,11 +99,16 @@ object.CreateRecordset(ColumnInfos)
 |変数|**adLongVarBinary**|205|204|  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+
+:::row:::
+    :::column:::
+        [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [CreateRecordset メソッドの例 (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [CreateRecordset メソッドの例 (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ad02b8414f2b59bf8e226b8d3d2cbbc05f161d9c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 891bad9f62174ec00451e533fe94063a21dc62af
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670181"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971687"
 ---
 # <a name="functions-dmx"></a>関数 (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   データマイニング拡張機能 (DMX) を使用してのオブジェクトのクエリを実行する場合、関数を使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データマイニングモデルまたは入力データセットの列の値だけでなく、より多くの情報を返すことができます。 たとえば、DMX クエリを使用して、列の予測値だけでなく、予測が正しい確率も返すことができます。 DMX 関数だけでなく、Microsoft Visual Basic for Applications (VBA)、Microsoft Excel、およびストアドプロシージャの関数も使用できます。  
   

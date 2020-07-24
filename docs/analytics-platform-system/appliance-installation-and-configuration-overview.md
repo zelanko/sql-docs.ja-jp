@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49ed0f26f20d081f4f9b307e6be90a3f5bd8c372
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401446"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942204"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Analytics Platform System のアプライアンスのインストールと構成
 Analytics Platform System (APS) アプライアンス管理者に、新しいアプライアンスのセットアップと使用を開始するための最初の手順を説明します。  
@@ -35,25 +35,21 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 IHV がハードウェアのインストールを実行していない場合は、次の手順を使用してハードウェアをインストールします。  
   
-|||  
+|タスク|説明|  
 |-|-|  
-|**タスク**|**説明**|  
 |ドキュメントの確認|独立系ハードウェアベンダー (IHV) から必要なすべてのドキュメントと情報を受信したことを確認します。 [IHV &#40;Analytics Platform System&#41;から入手するための情報を](information-to-obtain-from-your-ihv.md)参照してください。|  
 |ハードウェアのインストール|データセンターがアプライアンスに対応できることを確認します。 アプライアンスコンポーネントをデータセンターに移動します。 ネットワークスイッチ、Pdu、ケーブル配線をラックに収納します。 「[ハードウェアのインストール &#40;Analytics Platform System&#41;](hardware-installation.md)」を参照してください。|  
   
 ## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. アプライアンスの電源をオンにする  
   
-|||  
+|タスク|説明|  
 |-|-|  
-|**タスク**|**説明**|  
 |アプライアンスの電源をオンにする|必要に応じて各アプライアンスコンポーネントノードの電源を入れ、エラーが発生していないことを確認します。|  
   
 ## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. アプライアンスを構成する  
   
-|||  
+|タスク|説明|  
 |-|-|  
-|**タスク**|**説明**|  
-|||  
 |SQL Server PDW を使用してアプライアンスを構成し**Configuration Manager**|アプライアンスのパスワード、タイムゾーン、ネットワークとファイアウォールの設定、セキュリティ証明書、パフォーマンスなどの設定を設定するには、Configuration Manager を使用します。 「[アプライアンス構成 &#40;Analytics Platform System&#41;](appliance-configuration.md)」を参照してください。|  
   
 > [!WARNING]  
@@ -61,18 +57,16 @@ IHV がハードウェアのインストールを実行していない場合は�
   
 ## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. ソフトウェアサービスをセットアップする  
   
-|||  
+|タスク|説明|  
 |-|-|  
-|**タスク**|**説明**|  
 |更新プログラムの適用 SQL Server PDW|OptionalSQL Server PDW ソフトウェアを最新バージョンに更新するには、1つまたは複数の SQL Server PDW 更新プログラムを適用することが必要になる場合があります。 「Analytics platform [system&#41;&#40;analytics ](apply-analytics-platform-system-hotfixes.md)platform System の修正プログラムを適用する」を参照してください。|  
 |Windows Server Update Services の構成|ソフトウェアをサポートするために Windows Server Update Services から更新プログラムを受信するようにアプライアンスを構成します。 「 [Microsoft 更新プログラムのダウンロードと適用 &#40;Analytics Platform System&#41;」を](download-and-apply-microsoft-updates.md)参照してください。|  
   
 ## <a name="next-steps"></a><a name="NextSteps"></a>次のステップ  
 前の手順をすべて完了したら、アプライアンスを使用できるようになります。 お客様やその他の担当者は、次のタスクに進むことができます。  
   
-|||  
+|タスク|説明|  
 |-|-|  
-|**タスク**|**説明**|  
 |SQL Server PDW ドライバーをインストールして接続を構成する|SQL Server Data Tools、sqlcmd、ビジネスインテリジェンスソフトウェアなどのツールを使用して SQL Server PDW に接続するようにローカルコンピューターを構成します。 <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |ログオンとサーバーの役割を作成し、アクセス許可を割り当てる|ユーザーが適切なアクセス許可を使用して SQL Server PDW にログオンできるようにするログオンとサーバーの役割を計画し、作成します。 <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Azure Data Management Gateway の構成|ゲートウェイを使用すると、Azure ユーザーは、セキュリティで保護された OData フィードとして APS データを公開することで、オンプレミスの APS データにアクセスできます。 ゲートウェイは、既にコントロールノードにインストールされています。 構成については、Microsoft にお問い合わせください。|  

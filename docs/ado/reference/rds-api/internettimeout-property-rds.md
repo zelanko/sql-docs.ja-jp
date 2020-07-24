@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8862cc58889c4446c23e994a9c8e0f6a54a50d38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 30de657985eafdc5a601d61fedbd666455f3dbc9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751968"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941064"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout プロパティ (RDS)
 要求がタイムアウトするまでのミリ秒単位の待機時間を示します。  
@@ -29,17 +29,22 @@ ms.locfileid: "82751968"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  要求がタイムアウトするまでのミリ秒数を表す**Long 型**の値を設定または返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  このプロパティは、HTTP または HTTPS プロトコルを使用して送信された要求にのみ適用されます。  
   
  3層環境での要求の実行には数分かかる場合があります。 このプロパティを使用して、長時間実行される要求に追加の時間を指定します。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
-  
+
+:::row:::
+    :::column:::
+        [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [InternetTimeout プロパティの例 (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [InternetTimeout プロパティの例 (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   

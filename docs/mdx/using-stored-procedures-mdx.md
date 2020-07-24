@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c7cc3a7ba79b15b0eee36ac6907013673a5b7bf9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038007"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971490"
 ---
 # <a name="using-stored-procedures-mdx"></a>ストアド プロシージャの使用 (MDX)
 
 
-  .NET ストアド プロシージャやユーザー定義関数を記述して [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] および多次元式 (MDX) の機能を拡張できます。 詳細については、「 [ADOMD.NET Server プログラミング](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)」を参照してください。  
+  .NET ストアド プロシージャやユーザー定義関数を記述して [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] および多次元式 (MDX) の機能を拡張できます。 詳細については、「 [ADOMD.NET Server プログラミング](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)」を参照してください。  
   
  ストアドプロシージャを参照したり呼び出したりする場合は、関数名の後にかっこを指定します。 かっこ内で、パラメーターに渡されるデータを提供する引数と呼ばれる式を指定できます。 関数を呼び出す場合は、すべてのパラメーターに引数の値を指定する必要があります。また、パラメーターがユーザー定義関数で定義されているのと同じ順序で引数値を指定する必要があります。  
   
@@ -32,7 +32,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ```  
   
 > [!NOTE]  
->  *ストアドプロシージャ*は、これらの種類[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の関数で使用される用語です。 以前のバージョン[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のでは、これらの型の関数を*ユーザー定義関数*と呼びました。  
+>  *ストアドプロシージャ*は、これらの種類の関数で使用される用語です [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 以前のバージョンのでは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、これらの型の関数を*ユーザー定義関数*と呼びました。  
   
 ## <a name="types-of-stored-procedures"></a>ストアドプロシージャの種類  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は COM アセンブリと CLR アセンブリの両方をサポートします。 Clr アセンブリで使用可能なセキュリティが強化されているため、CLR アセンブリを使用することをお勧めします。 サーバーに Microsoft Office Excel がインストールされている場合、Excel 関数も使用可能です。  

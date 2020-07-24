@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8d027a76a82de3fd82b6c0c81c54ace08167039b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ffe8cb97ffa8dd01b058d5cf71fc2f0922e11501
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036612"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971480"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -40,12 +40,12 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  *Include_calc_members*  
  (省略可能)。 計算されるメンバーがドリルダウン レベルに存在する場合にそれらを含めるかどうかを示すフラグです。  
   
-## <a name="remarks"></a>Remarks  
- **ToggleDrillState**関数は、最初のセット内に存在する2番目のセットの各メンバーのドリル状態を切り替えます。 最初のセットには、任意の次元の組を含めることができますが、2番目のセットには1つの次元のメンバーが含まれている必要があります。 **ToggleDrillState**関数は、**ドリルスルーメンバー**関数と**ドリルダウンメンバー**関数を組み合わせたものです。 2番目のセットのメンバー *m*が1番目のセットに存在し、そのメンバーがドリルダウンされている (つまり、直下に子孫がある) `DrillupMember(Set_Expression1, {m})`場合は、1番目のセット内のメンバーまたは組にが適用されます。 その*m*メンバーがドリルアップされている場合 (つまり、m の直下に*m*の直後*にある子孫*が存在しない場合)、 `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])`は1番目のセットに適用されます。  
+## <a name="remarks"></a>注釈  
+ **ToggleDrillState**関数は、最初のセット内に存在する2番目のセットの各メンバーのドリル状態を切り替えます。 最初のセットには、任意の次元の組を含めることができますが、2番目のセットには1つの次元のメンバーが含まれている必要があります。 **ToggleDrillState**関数は、**ドリルスルーメンバー**関数と**ドリルダウンメンバー**関数を組み合わせたものです。 2番目のセットのメンバー *m*が1番目のセットに存在し、そのメンバーがドリルダウンされている (つまり、直下に子孫がある) 場合は、 `DrillupMember(Set_Expression1, {m})` 1 番目のセット内のメンバーまたは組にが適用されます。 その*m*メンバーがドリルアップされている場合 (つまり、m の直下に*m*の直後*にある子孫*が存在しない場合)、 `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` は1番目のセットに適用されます。  
   
  省略可能な**RECURSIVE**フラグが使用されている場合、ドリルアップとドリルダウンは再帰的に適用されます。 Recursive フラグの詳細については、「[ドリルアップメンバー](../mdx/drillupmember-mdx.md)関数と[ドリルダウンメンバー](../mdx/drilldownmember-mdx.md)関数」を参照してください。  
   
- XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「[サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
+ XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「[サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
  この関数を含むシナリオと例について[は、「Database Journal: MDX Set Functions: ToggleDrillState () 関数](https://go.microsoft.com/fwlink/?LinkId=517759)」を参照してください。  
   

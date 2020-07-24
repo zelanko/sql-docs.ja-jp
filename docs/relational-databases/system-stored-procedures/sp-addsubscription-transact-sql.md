@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716351"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918943"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-sql)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   パブリケーションにサブスクリプションを追加し、サブスクライバーの状態を設定します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
@@ -137,7 +137,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |値|説明|  
 |-----------|-----------------|  
-|true|ディストリビューションエージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに送り返しません。 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
+|true|ディストリビューションエージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに送り返しません。 双方向トランザクション レプリケーションで使用されます。 詳細については、「[双方向トランザクションレプリケーション](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
 |false|ディストリビューション エージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに戻します。|  
 |NULL (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの場合は true、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合は false に自動設定されます。|  
   
@@ -150,7 +150,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |2|オン デマンド|  
 |4|毎日|  
 |8|週次|  
-|16|月単位|  
+|16|月 1 回|  
 |32|月単位の相対|  
 |64 (既定値)|自動開始|  
 |128|繰り返し|  
@@ -164,8 +164,8 @@ sp_addsubscription [ @publication = ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |1|First|  
-|2|Second|  
-|4|第 3 週|  
+|2|秒|  
+|4|Third|  
 |8|4 番目|  
 |16|末尾|  
 |NULL (既定値)||  
@@ -179,7 +179,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |1|1 度|  
-|2|Second|  
+|2|秒|  
 |4|分|  
 |8|時間|  
 |NULL||  
@@ -320,7 +320,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>参照  
- [プッシュサブスクリプションを作成する](../../relational-databases/replication/create-a-push-subscription.md)   
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 以外のサブスクライバーのサブスクリプションを作成する](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
