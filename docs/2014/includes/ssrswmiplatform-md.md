@@ -1,1 +1,0 @@
-Windows Server 2003 Datacenter EditionWindows Server 2003 Enterprise EditionWindows Server 2003, Standard Edition;Windows VistaWindows XP Professional Service Pack \(2 SP2\)または service pack 1 \(SP1\)または Windows \(2000 のすべてのバージョン\)

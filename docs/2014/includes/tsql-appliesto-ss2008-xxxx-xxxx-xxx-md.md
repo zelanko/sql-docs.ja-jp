@@ -1,1 +1,0 @@
-**適用対象:** ![yes](media/yes-icon.png "必須") \(SQL Server 2008\) ![×](media/no-icon.png "×") ![Azure SQL Database no](media/no-icon.png "×") ![Azure SQL Data Warehouse Parallel](media/no-icon.png "×")Data Warehouse
