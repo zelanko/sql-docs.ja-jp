@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2878b4691515c835165f764e09735bafb617b0f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298099"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917869"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>[SAP BW 変換先エディター] ([マッピング] ページ)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **[SAP BW 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -77,7 +77,7 @@ ms.locfileid: "71298099"
  **入力列**  
  選択した入力列を表示します。  
   
- 同じマップ先の列に別の入力列をマップするには、リストで別の入力列を選択します。 マッピングを削除するには、 **[\<無視>]** を選択して、出力から入力列を除外します。  
+ 同じマップ先の列に別の入力列をマップするには、リストで別の入力列を選択します。 マッピングを削除するには、 **[\<ignore>]** を選択して、出力から入力列を除外します。  
   
  **変換先列**  
  マップされているかどうかにかかわらず、使用できる変換先列を表示します。  

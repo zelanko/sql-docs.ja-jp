@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d98222a9f8663dfb2495220ee43af34c1f0c02d9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298208"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920808"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>実行時の OData ソース クエリの提供
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  データ フロー タスクの **[OData ソース].[クエリ]** プロパティに*式*を追加すると、OData ソースのクエリを実行時に変更できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "71298208"
   
 1.  **[データ フロー タスク]** を右クリックし、 **[パラメーター化]** オプションを選択します。  
   
-2.  **[パラメーター化]** ダイアログで、**[プロパティ]** に対して **[\<OData ソース コンポーネント名>].[クエリ]** を選択します。  
+2.  **[パラメーター化]** ダイアログで、 **[プロパティ]** に対して **[\<Name of the OData Source Component>].[Query]** を選択します。  
   
 3.  **[新しいパラメーターの作成]** または **[既存のパラメーターを使用する]** のどちらかを選択します。  
   

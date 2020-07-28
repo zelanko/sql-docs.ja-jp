@@ -9,12 +9,12 @@ ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 2ee07ea6d3999d7ab3f0c32f7d5d47e1429f844d
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091872"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920470"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Azure Data Studio の Kqlmagic 拡張機能
 
@@ -255,5 +255,4 @@ ms.locfileid: "86091872"
 - [Kusto、Application Insights、および LogAnalytics のデータを使用してノートブック エクスペリエンスを実現する、Jupyter Notebook と Jupyter Lab への拡張 (マジック)](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
-- [ノートブックの使用方法](notebooks-guidance.md)
-- [Azure Data Studio でノートブックを管理する方法](notebooks-manage-sql-server.md)
+- [Azure Data Studio でノートブックを使用する方法](notebooks-guidance.md)

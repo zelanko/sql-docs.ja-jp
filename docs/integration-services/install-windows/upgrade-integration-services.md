@@ -16,23 +16,23 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f287a9853b27a58128176bfe740a3efc99a9258
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262791"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919988"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 以降がコンピューターに現在インストールされている場合は、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]にアップグレードできます。  
   
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] の以前のバージョンのいずれかがインストールされているコンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] にアップグレードすると、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] は以前のバージョンに対してサイド バイ サイドでインストールされます。  
   
- このサイド バイ サイド インストールで、複数のバージョンの dtexec ユーティリティがインストールされます。 正しいバージョンのユーティリティを実行していることを確認するには、コマンド プロンプトで完全なパス (\<ドライブ>:\Program Files\Microsoft SQL Server\\<バージョン\>\DTS\Binn) を入力してユーティリティを実行します。 dtexec の詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
+ このサイド バイ サイド インストールで、複数のバージョンの dtexec ユーティリティがインストールされます。 正しいバージョンのユーティリティを実行していることを確認するには、コマンド プロンプトで完全なパス (\<drive>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn) を入力してユーティリティを実行します。 dtexec の詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
 > [!NOTE]  
 >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールすると、既定で Users グループの全ユーザーが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスにアクセスできました。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]をインストールした場合、ユーザーは [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスにアクセスできません。 このサービスは既定で保護されます。 特定のユーザーに対して [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サービスへのアクセスを許可するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールした後で DCOM 構成ツール (Dcomcnfg.exe) を実行する必要があります。 詳細については、「[Integration Services サービス (SSIS サービス)](../../integration-services/service/integration-services-service-ssis-service.md)」を参照してください。  

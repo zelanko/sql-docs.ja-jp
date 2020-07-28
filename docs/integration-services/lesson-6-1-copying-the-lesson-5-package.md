@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c4c895e71da13d7de38bf5dfc64f27829206d25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8df0901617b22317b2a87616be7b769c749d298
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283113"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922131"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>レッスン 6-1:レッスン 5 のパッケージをコピーする
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -48,7 +48,7 @@ ms.locfileid: "71283113"
 
 7.  **[プロパティ]** ウィンドウで、 **[Name]** プロパティを「**Lesson 6**」に変更します。
 
-8.  **ID** プロパティのボックスを選択し、ドロップダウン矢印を選択し、 **[\<新しい ID の生成>]** を選択します。
+8.  **ID** プロパティのボックスを選択し、ドロップダウン矢印を選択し、 **[\<Generate New ID>]** を選択します。
 
 ## <a name="add-the-completed-lesson-5-package"></a>レッスン 5 を完了した状態のパッケージを追加する
 

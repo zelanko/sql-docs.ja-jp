@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a01b75cc3d3e804d9329b57676eecc28d17c121c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284169"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917458"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services のユーザー インターフェイス
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのタブ上にあるデザイン画面以外にも、パッケージに機能を追加したり、パッケージ オブジェクトのプロパティを構成するための、次に示すようなウィンドウやダイアログ ボックスが用意されています。  
@@ -51,7 +51,7 @@ ms.locfileid: "71284169"
 |**[デジタル署名]**|パッケージに署名したり、またはパッケージから署名を削除します。|**[SSIS]** メニューの **[デジタル署名]** をクリックします。<br /><br /> または<br /><br /> **[制御フロー]** タブのデザイン画面で任意の場所を右クリックし、 **[デジタル署名]** をクリックします。|  
 |**ブレークポイントを設定する**|タスク上のブレークポイントを有効にし、ブレークポイントのプロパティを設定します。|**[制御フロー]** タブのデザイン画面でタスクまたはコンテナーを右クリックし、 **[ブレークポイントの設定]** をクリックします。 パッケージ上のブレークポイントを設定するには、 **[制御フロー]** タブのデザイン画面で任意の場所を右クリックし、 **[ブレークポイントの設定]** をクリックします。|  
   
- **[作業の開始]** ウィンドウには、サンプル、チュートリアル、およびビデオへのリンクが表示されます。 その他のコンテンツへのリンクを追加するには、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に付属する SamplesSites.xml ファイルを変更します。 RSS フィードの URL を指定する \<GettingStartedSamples> 要素値は変更しないでください。 このファイルは、\<*ドライブ*>:\Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーにあります。 64 ビット コンピューターでは、このファイルは、\<*ドライブ*>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn フォルダーにあります。  
+ **[作業の開始]** ウィンドウには、サンプル、チュートリアル、およびビデオへのリンクが表示されます。 その他のコンテンツへのリンクを追加するには、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に付属する SamplesSites.xml ファイルを変更します。 RSS フィードの URL を指定する \<GettingStartedSamples> 要素値は変更しないでください。 このファイルは、 *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーにあります。 64 ビット コンピューターでは、このファイルは、 *\<drive>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn フォルダーにあります。  
   
  SamplesSites.xml ファイルが破損した場合は、ファイルの XML を次の既定の XML で置き換えてください。  
   

@@ -1,6 +1,6 @@
 ---
 title: 外部データを仮想化する
-description: このページでは、リレーショナル データ ソースに対して外部テーブルの作成ウィザードを使用する詳細な手順を説明します
+description: このページでは、ODBC データ ソースに対して外部テーブルの作成ウィザードを使用する詳細な手順を説明します
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
@@ -10,14 +10,14 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227512"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943010"
 ---
-# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>リレーショナル データ ソースで外部テーブル ウィザードを使用する
+# <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>ODBC データ ソースで外部テーブル ウィザードを使用する
 
 SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する機能です。 このプロセスにより、データを元の場所に置いたままにすることができます。 SQL Server インスタンスでデータを*仮想化*して、SQL Server 内の他のテーブルと同じようにクエリを行うことができます。 このプロセスにより、ETL プロセスの必要性が最小になります。 このプロセスは、PolyBase コネクタを使用することによって可能です。 データ仮想化の詳細については、「[PolyBase 入門](polybase-guide.md)」を参照してください。
 
@@ -33,7 +33,7 @@ SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する�
 ![データ仮想化ウィザード](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>データ ソースを選択する
 
-いずれかのデータベースからウィザードを起動した場合、出力先のドロップダウン ボックスは自動的に入力されます。 また、このページでは出力先データベースを入力または変更するためのオプションもあります。 ウィザードでサポートされている外部データ ソースの種類は、SQL Server と Oracle です。
+いずれかのデータベースからウィザードを起動した場合、出力先のドロップダウン ボックスは自動的に入力されます。 また、このページでは出力先データベースを入力または変更するためのオプションもあります。 ウィザードでサポートされている外部データ ソースの種類には、SQL Server、Oracle、MongoDB、Teradata があります。
 
 > [!NOTE]
 >SQL Server が既定で強調表示されます。
@@ -56,7 +56,7 @@ SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する�
 
 このステップでは、外部データ ソースのオブジェクトを作成するための外部データ ソースと資格情報の詳細を入力します。 資格情報は、データ ソースに接続するためにデータベース オブジェクトによって使用されます。 外部データ ソースの名前を入力します。 例では Test になっています。 外部データ ソースの SQL Server 接続の詳細を提供します。 外部データ ソースを作成する**サーバー名**と**データベース名**を入力します。
 
-次のステップで資格情報を構成します。 資格情報の名前を入力します。 この名前は、作成する外部データ ソースのサインイン情報を安全に格納するために使用されるデータベース スコープ資格情報です。 例では TestCred になっています。 ユーザー名とパスワードを入力して、データ ソースに接続します。
+次のステップで資格情報を構成します。 資格情報の名前を入力します。 この名前は、作成する外部データ ソースのサインイン情報を安全に格納するために使用されるデータベース スコープ資格情報です。 たとえば `TestCred` です。 ユーザー名とパスワードを入力して、データ ソースに接続します。
 
 ![外部データ ソースの資格情報](media/data-virtualization/data-source-credentials.png)
 
@@ -64,7 +64,7 @@ SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する�
 
 次のページで、外部ビューを作成するテーブルを選択します。 親データベースを選択すると、子テーブルも含まれます。 テーブルを選択すると、右側にマッピング テーブルが表示されます。 ここで、型を変更することができます。 また、選択した外部テーブル自体の名前を変更することもできます。
 
-![外部データ ソースの資格情報](media/data-virtualization/data-table-mapping.png)
+![外部データ ソースの資格情報](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >マッピング ビューを変更するには、別の選択したテーブルをダブルクリックします。

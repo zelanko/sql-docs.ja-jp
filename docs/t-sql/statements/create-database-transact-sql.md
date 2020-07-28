@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: SQL Server、Azure SQL Database、Azure Synapse Analytics、Analytics Platform System のデータベース構文を作成します。
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 07/21/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 095e8f93377d75c411c63150203699908dee2d26
-ms.sourcegitcommit: 7679d0c5cc0edd35274a2b29e4d09347bfbefac6
+ms.openlocfilehash: 000707710b01251741fc8594e580aba8a151b628
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664727"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914580"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -52,9 +52,7 @@ ms.locfileid: "84664727"
 
 構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
 
-## <a name="click-a-product"></a>製品をクリックしてください
-
-次の行から興味がある製品名をクリックしてみてください。 この Web ページでは、クリックした製品に合わせて、異なるコンテンツが表示されます。
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -500,11 +498,12 @@ GO
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、各データベースのデータ ファイルとログ ファイルに一定の権限が設定されます。 次の操作がデータベースに適用されるたびに、次の権限が設定されます。
 
-|||
-|-|-|
-|作成済み|変更して新しいファイルを追加|
-|アタッチ|バックアップ|
-|デタッチ|復元|
+- アタッチ
+- バックアップ
+- 作成済み
+- デタッチ
+- 変更して新しいファイルを追加
+- 復元
 
 この権限は、開く権限のあるディレクトリにファイルが存在する場合に、そのファイルが誤って書き換えられるのを防ぎます。
 
@@ -886,7 +885,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
-      | 'GP_Fsv2_72'
+      | 'GP_Fsv2_8' | 'GP_Fsv2_10' | 'GP_Fsv2_12' | 'GP_Fsv2_14' | 'GP_Fsv2_16' | 'GP_Fsv2_18'
+      | 'GP_Fsv2_20' | 'GP_Fsv2_24' | 'GP_Fsv2_32' | 'GP_Fsv2_36' | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
       | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
@@ -894,7 +894,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
-      | 'BC_M_128'
+      | 'BC_M_8' | 'BC_M_10' | 'BC_M_12' | 'BC_M_14' | 'BC_M_16' | 'BC_M_18'
+      | 'BC_M_20' | 'BC_M_24' | 'BC_M_32' | 'BC_M_64' | 'BC_M_128'
       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
@@ -913,7 +914,8 @@ CREATE DATABASE database_name
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
       | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
       | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
-      | 'GP_Fsv2_72'
+      | 'GP_Fsv2_8' | 'GP_Fsv2_10' | 'GP_Fsv2_12' | 'GP_Fsv2_14' | 'GP_Fsv2_16' | 'GP_Fsv2_18'
+      | 'GP_Fsv2_20' | 'GP_Fsv2_24' | 'GP_Fsv2_32' | 'GP_Fsv2_36' | 'GP_Fsv2_72'
       | 'GP_S_Gen5_1' | 'GP_S_Gen5_2' | 'GP_S_Gen5_4' | 'GP_S_Gen5_6' | 'GP_S_Gen5_8'
       | 'GP_S_Gen5_10' | 'GP_S_Gen5_12' | 'GP_S_Gen5_14' | 'GP_S_Gen5_16'
       | 'GP_S_Gen5_18' | 'GP_S_Gen5_20' | 'GP_S_Gen5_24' | 'GP_S_Gen5_32' | 'GP_S_Gen5_40'
@@ -921,7 +923,8 @@ CREATE DATABASE database_name
       | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
       | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
       | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
-      | 'BC_M_128'
+      | 'BC_M_8' | 'BC_M_10' | 'BC_M_12' | 'BC_M_14' | 'BC_M_16' | 'BC_M_18'
+      | 'BC_M_20' | 'BC_M_24' | 'BC_M_32' | 'BC_M_64' | 'BC_M_128'
       | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
       | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
@@ -953,7 +956,7 @@ MAXSIZE: データベースの最大サイズを指定します。 MAXSIZE は�
 **SQL Database サーバー上の単一のデータベースおよびプールされたデータベースの DTU モデル**
 
 |**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
-|-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|
+|:---|:---|:---|:---|:---|:---|
 |100 MB|√|√|√|√|√|
 |250 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|
@@ -969,12 +972,12 @@ MAXSIZE: データベースの最大サイズを指定します。 MAXSIZE は�
 |150 GB|該当なし|√|√|√|√|
 |200 GB|該当なし|√|√|√|√|
 |250 GB|該当なし|√ (D)|√ (D)|√|√|
-|300 GB|該当なし|該当なし|√|√|√|
-|400 GB|該当なし|該当なし|√|√|√|
-|500 GB|該当なし|該当なし|√|√ (D)|√|
-|750 GB|該当なし|該当なし|√|√|√|
-|1024 GB|該当なし|該当なし|√|√|√ (D)|
-|1024 GB から 4096 GB (256 GB ずつ増分)* |該当なし|該当なし|該当なし|該当なし|√|√|
+|300 GB|N/A|N/A|√|√|√|
+|400 GB|N/A|N/A|√|√|√|
+|500 GB|N/A|N/A|√|√ (D)|√|
+|750 GB|N/A|N/A|√|√|√|
+|1024 GB|N/A|N/A|√|√|√ (D)|
+|1024 GB から 4096 GB (256 GB ずつ増分)* |該当なし|N/A|N/A|該当なし|√|√|
 
 \* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
 
@@ -1006,11 +1009,17 @@ DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示す�
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |データの最大サイズ (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**General Purpose - プロビジョニング済みコンピューティング - Fsv2 シリーズ (プレビュー)**
+**General Purpose - プロビジョニング済みコンピューティング - Fsv2 シリーズ (パート 1)**
 
-|MAXSIZE|GP_Fsv2_72|
-|:----- | ------: |
-|データの最大サイズ (GB)|4096|
+|MAXSIZE|GP_Fsv2_8|GP_Fsv2_10|GP_Fsv2_12|GP_Fsv2_14|GP_Fsv2_16|GP_Fsv2_18|
+|:----- | ------: | ------: | ------: | ------: | ------: | ------: |
+|データの最大サイズ (GB)|1024|1024|1024|1024|1536|1536|
+
+**General Purpose - プロビジョニング済みコンピューティング - Fsv2 シリーズ (パート 2)**
+
+|MAXSIZE|GP_Fsv2_20|GP_Fsv2_24|GP_Fsv2_32|GP_Fsv2_36|GP_Fsv2_72|
+|:----- | ------: | ------: | ------: | ------: | ------: |
+|データの最大サイズ (GB)|1536|1536|3072|3072|4096|
 
 **General Purpose - サーバーレス コンピューティング - Gen5 (パート 1)**
 
@@ -1054,11 +1063,17 @@ DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示す�
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |データの最大サイズ (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**Business Critical - プロビジョニング済みコンピューティング - M シリーズ (プレビュー)**
+**Business Critical - プロビジョニング済みコンピューティング - M シリーズ (パート 1)**
 
-|MAXSIZE|BC_M_128|
-|:----- | -------: |
-|データの最大サイズ (GB)|4096|
+|MAXSIZE|BC_M_8|BC_M_10|BC_M_12|BC_M_14|BC_M_16|BC_M_18|
+|:----- | -------: | -------: | -------: | -------: | -------: | -------: |
+|データの最大サイズ (GB)|512|640|768|896|1024|1152|
+
+**Business Critical - プロビジョニング済みコンピューティング - M シリーズ (パート 2)**
+
+|MAXSIZE|BC_M_20|BC_M_24|BC_M_32|BC_M_64|BC_M_128|
+|:----- | -------: | -------: | -------: | -------: | -------: |
+|データの最大サイズ (GB)|1280|1536|2048|4096|4096|
 
 仮想コア モデルを使用するときに `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コア モデルのリソースの制限事項の詳細については、[仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
 
@@ -1071,10 +1086,10 @@ SERVICE_OBJECTIVE
 
 - **単一のデータベースおよびプールされたデータベースの場合**
 
-  - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`GP_Fsv2_72`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80`、`BC_M_128` です。
+  - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`S0`、`S1`、`S2`、`S3`、`S4`、`S6`、`S7`、`S9`、`S12`、`P1`、`P2`、`P4`、`P6`、`P11`、`P15`、`GP_GEN4_1`、`GP_GEN4_2`、`GP_GEN4_3`、`GP_GEN4_4`、`GP_GEN4_5`、`GP_GEN4_6`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_7`、`GP_GEN4_8`、`GP_GEN4_9`、`GP_GEN4_10`、`GP_GEN4_16`、`GP_GEN4_24`、`BC_GEN4_1`、`BC_GEN4_2`、`BC_GEN4_3`、`BC_GEN4_4`、`BC_GEN4_5`、`BC_GEN4_6`、`BC_GEN4_7`、`BC_GEN4_8`、`BC_GEN4_9`、`BC_GEN4_10`、`BC_GEN4_16`、`BC_GEN4_24`、`GP_Gen5_2`、`GP_Gen5_4`、`GP_Gen5_6`、`GP_Gen5_8`、`GP_Gen5_10`、`GP_Gen5_12`、`GP_Gen5_14`、`GP_Gen5_16`、`GP_Gen5_18`、`GP_Gen5_20`、`GP_Gen5_24`、`GP_Gen5_32`、`GP_Gen5_40`、`GP_Gen5_80`、`GP_Fsv2_8`、`GP_Fsv2_10`、`GP_Fsv2_12`、`GP_Fsv2_14`、`GP_Fsv2_16`、`GP_Fsv2_18`、`GP_Fsv2_20`、`GP_Fsv2_24`、`GP_Fsv2_32`、`GP_Fsv2_36`、`GP_Fsv2_72`、`BC_Gen5_2`、`BC_Gen5_4`、`BC_Gen5_6`、`BC_Gen5_8`、`BC_Gen5_10`、`BC_Gen5_12`、`BC_Gen5_14`、`BC_Gen5_16`、`BC_Gen5_18`、`BC_Gen5_20`、`BC_Gen5_24`、`BC_Gen5_32`、`BC_Gen5_40`、`BC_Gen5_80`、`BC_M_8`、`BC_M_10`、`BC_M_12`、`BC_M_14`、`BC_M_16`、`BC_M_18`、`BC_M_20`、`BC_M_24`、`BC_M_32`、`BC_M_64`、`BC_M_128` です。
 
 - **サーバーレス データベースの場合**
-
+- 
   - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`GP_S_Gen5_1`、`GP_S_Gen5_2`、`GP_S_Gen5_4`、`GP_S_Gen5_6`、`GP_S_Gen5_8`、`GP_S_Gen5_10`、`GP_S_Gen5_12`、`GP_S_Gen5_14`、`GP_S_Gen5_16`、`GP_S_Gen5_18`、`GP_S_Gen5_20`、`GP_S_Gen5_24`、`GP_S_Gen5_32`、`GP_S_Gen5_40` です。
 
 - **ハイパースケール サービス層の単一データベースの場合**

@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76257fd464a7107297d609bfb6a4ef150d6f58bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687191"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913657"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 接続マネージャー
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Azure Storage 接続マネージャーにより、SQL Server Integration Services (SSIS) パッケージは Azure ストレージ アカウントに接続できます。 接続マネージャーは、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。 
   
@@ -33,11 +33,15 @@ Azure Storage 接続マネージャーにより、SQL Server Integration Service
 
 - **サービス:** 接続先のストレージ サービスを指定します。
 - **アカウント名:** ストレージ アカウント名を指定します。
-- **認証:** 使用する認証方法を指定します。 AccessKey と ServicePrincipal の認証がサポートされています。
+- **認証:** 使用する認証方法を指定します。 AccessKey、ServicePrincipal、および SharedAccessSignature の認証がサポートされています。
     - **AccessKey:** この認証方法には、**アカウント キー**を指定します。
     - **ServicePrincipal:** この認証方法には、サービス プリンシパルの**アプリケーション ID**、**アプリケーション キー**、**テナント ID** を指定します。
       **テスト接続**が機能するためには、サービス プリンシパルには少なくともストレージ アカウントに対する**ストレージ BLOB データ閲覧者**の役割を割り当てる必要があります。
       詳細については、「[Azure portal で RBAC を使用して Azure BLOB とキューのデータへのアクセスを付与する](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)」を参照してください。
+    - **SharedAccessSignature:** この認証方法では、Shared Access Signature の、少なくとも**トークン**を指定します。
+      接続をテストするには、テスト対象のリソース スコープをさらに指定します。 これは、**サービス**、**コンテナー**、または **BLOB** である可能性があります。
+      **コンテナー**と **BLOB** には、コンテナー名と BLOB パスをそれぞれ指定します。
+      詳細については、[Azure Storage Shared Access Signature の概要](https://docs.microsoft.com/azure/storage/common/storage-sas-overview)に関する記事を参照してください。
 - **環境:** ストレージ アカウントをホストするクラウド環境を指定します。
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Azure リソース認証用のマネージド ID

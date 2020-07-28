@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c1d3d2c727deea49e68e9f58e3ad0bf14245899
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294195"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919792"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>[データ プロファイル タスク エディター] ([全般] ページ)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **[データ プロファイル タスク エディター]** の **[全般]** ページを使用すると、次のオプションを構成できます。  
@@ -62,9 +62,9 @@ ms.locfileid: "71294195"
  **宛先**  
  データ プロファイル出力を含むファイル接続マネージャーまたはパッケージ変数を指定します。  
   
--   **[DestinationType]** オプションが **[FileConnection]** に設定されている場合、 **[Destination]** オプションには使用可能なファイル接続マネージャーが表示されます。 これらの接続マネージャーのいずれかを選択するか、[\<新しいファイル接続>] を選択して新しいファイル接続マネージャーを作成します。  
+-   **[DestinationType]** オプションが **[FileConnection]** に設定されている場合、 **[Destination]** オプションには使用可能なファイル接続マネージャーが表示されます。 これらの接続マネージャーのいずれかを選択するか、[\<New File connection>] を選択して新しいファイル接続マネージャーを作成します。  
   
--   **[DestinationType]** オプションが **[Variable]** に設定されている場合、 **[Destination]** オプションでは使用可能なパッケージ変数が **[Destination]** の一覧に表示されます。 これらの変数のいずれかを選択するか、[\<新しい変数>] を選択して新しい変数を作成します。  
+-   **[DestinationType]** オプションが **[Variable]** に設定されている場合、 **[Destination]** オプションでは使用可能なパッケージ変数が **[Destination]** の一覧に表示されます。 これらの変数のいずれかを選択するか、[\<New Variable>] を選択して新しい変数を作成します。  
   
  **[OverwriteDestination]**  
  出力ファイルが既に存在する場合に、その出力ファイルを上書きするかどうかを指定します。 既定値は **False**です。 このプロパティの値は、[DestinationType] オプションが [FileConnection] に設定されている場合にのみ使用されます。 [DestinationType] オプションが [Variable] に設定されている場合は、変数の以前の値が常に上書きされます。  
@@ -80,7 +80,7 @@ ms.locfileid: "71294195"
  Data Profile Viewer を開きます。 スタンドアロンの Data Profile Viewer は、データ プロファイル タスクのデータ プロファイル出力を表示します。 データ プロファイル出力は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内でデータ プロファイル タスクを実行してデータ プロファイルを計算した後に表示できます。  
   
 > [!NOTE]  
->  *\<ドライブ>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーの DataProfileViewer.exe を実行して、Data Profile Viewer を開くこともできます。  
+>  Data Profile Viewer を開くには、 *\<drive>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーの DataProfileViewer.exe を実行する方法もあります。  
   
 ## <a name="see-also"></a>参照  
  [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   

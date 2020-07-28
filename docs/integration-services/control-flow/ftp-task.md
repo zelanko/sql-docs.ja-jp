@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c33ec0b3d8b597e46403337a11b4f3d99bc3393
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294139"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918237"
 ---
 # <a name="ftp-task"></a>FTP タスク
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   FTP タスクは、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理します。 たとえば、パッケージは、リモート サーバーまたはインターネット サイトから、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部としてデータ ファイルをダウンロードできます。 FTP タスクは、次の目的で使用できます。  
@@ -85,7 +85,7 @@ ms.locfileid: "71294139"
   
 ### <a name="options"></a>Options  
  **[FtpConnection]**  
- 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして接続マネージャーを作成します。  
+ 既存の FTP 接続マネージャーを選択するか、[\<**New connection...**>] をクリックして接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  FTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
@@ -148,13 +148,13 @@ ms.locfileid: "71294139"
   
 #### <a name="isremotepathvariable--true"></a>[IsRemotePathVariable] = [True]  
  **[RemoteVariable]**  
- 既存のユーザー定義変数を選択するか、[\<**新しい変数...** >] をクリックしてユーザー定義変数を作成します。  
+ 既存のユーザー定義変数を選択するか、[\<**New variable...**>] をクリックしてユーザー定義変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、変数の追加  
   
 #### <a name="isremotepathvariable--false"></a>[IsRemotePathVariable] = [False]  
  **[RemotePath]**  
- 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして接続マネージャーを作成します。  
+ 既存の FTP 接続マネージャーを選択するか、[\<**New connection...**>] をクリックして接続マネージャーを作成します。  
   
  **関連トピック:** [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -162,13 +162,13 @@ ms.locfileid: "71294139"
   
 #### <a name="islocalpathvariable--true"></a>[IsLocalPathVariable] = [True]  
  **[LocalVariable]**  
- 既存のユーザー定義変数を選択するか、[\<**新しい変数...** >] をクリックして変数を作成します。  
+ 既存のユーザー定義変数を選択するか、[\<**New variable...**>] をクリックして変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、変数の追加  
   
 #### <a name="islocalpathvariable--false"></a>[IsLocalPathVariable] = [False]  
  **[LocalPath]**  
- 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして、接続マネージャーを作成します。  
+ 既存のファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして接続マネージャーを作成します。  
   
  **関連トピック:** [フラット ファイル接続マネージャー](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

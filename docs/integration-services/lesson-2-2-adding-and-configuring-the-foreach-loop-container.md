@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ada4d9c133bbcb96e1a5c19fa505c4d51eb8b343
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296047"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917268"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>レッスン 2-2:Foreach ループ コンテナーを追加して構成する
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -70,7 +70,7 @@ Foreach ループ コンテナーを追加したら、フォルダー内の各�
   
 1.  **[変数のマッピング]** を選択します。  
   
-2.  **[変数のマッピング]** ページで、 **[変数]** 列の空いているセルをクリックし、 **[\<新しい変数...>]** を選択します。  
+2.  **[変数のマッピング]** ページで、 **[変数]** 列の空いているセルをクリックし、 **[\<New Variable...>]** を選択します。  
   
 3.  **[変数の追加]** ダイアログ ボックスで、 **[名前]** ボックスに「**varFileName**」と入力します。  
   

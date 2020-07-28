@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a99770eded434ef15966535f082bbd25e07aece7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298526"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923122"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 接続マネージャー
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   MSMQ 接続マネージャーを使用すると、Message Queuing (MSMQ) を使用するメッセージ キューにパッケージが接続できるようになります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれるメッセージ キュー タスクでは、MSMQ 接続マネージャーを使用します。  
@@ -43,8 +43,8 @@ ms.locfileid: "71298526"
   
 |[キューの種類]|パスのサンプル|  
 |----------------|-----------------|  
-|パブリック|\<コンピューター名>\\<キュー名\>|  
-|プライベート|\<コンピューター名>\Private$\\<キュー名\>|  
+|パブリック|\<computer name>\\<queue name\>|  
+|プライベート|\<computer name>\Private$\\<queue name\>|  
   
  ピリオド (.) を使用してローカル コンピューターを表すことができます。  
   
@@ -75,8 +75,8 @@ ms.locfileid: "71298526"
   
 |[キューの種類]|パスのサンプル|  
 |----------------|-----------------|  
-|パブリック|\<コンピューター名>\\<キュー名\>|  
-|プライベート|\<コンピューター名>\Private$\\<キュー名\>|  
+|パブリック|\<computer name>\\<queue name\>|  
+|プライベート|\<computer name>\Private$\\<queue name\>|  
   
  "." を使用してローカル コンピューターを表すことができます。  
   

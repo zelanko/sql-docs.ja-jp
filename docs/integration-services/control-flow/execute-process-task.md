@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a47088f610dc016fe904b9b772e261b9bd2adcf0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298335"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920688"
 ---
 # <a name="execute-process-task"></a>プロセス実行タスク
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   プロセス実行タスクでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部として、アプリケーションまたはバッチ ファイルが実行されます。 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] や [!INCLUDE[ofprword](../../includes/ofprword-md.md)]などの標準的なアプリケーションを開くためにプロセス実行タスクを使用することもできますが、一般に、このタスクはデータ ソースを処理対象とするビジネス アプリケーションやバッチ ファイルを実行する場合に使用します。 たとえば、プロセス実行タスクを使用して、圧縮されたテキスト ファイルを展開できます。 さらに、そのテキスト ファイルをパッケージ内のデータ フローのデータ ソースとして使用できます。 その他の例として、プロセス実行タスクを使用し、毎日の売り上げレポートを生成するカスタムの [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを実行することもできます。 その後、このレポートをメール送信タスクに添付し、配信リストに転送できます。  
@@ -116,15 +116,15 @@ ms.locfileid: "71298335"
  実行可能ファイルが置かれているフォルダーのパスを入力するか、参照ボタン ( **[...]** ) をクリックしてフォルダーを指定します。  
   
  **[StandardInputVariable]**  
- プロセスへの入力を指定する変数を選択するか、\<[**新しい変数>]** をクリックして新しい変数を作成します。  
+ プロセスが入力する変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **[StandardOutputVariable]**  
- プロセスの出力をキャプチャする変数を選択するか、\<[**新しい変数]** をクリックして新しい変数を作成します。  
+ プロセスの出力をキャプチャする変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
  **[StandardErrorVariable]**  
- プロセッサのエラー出力をキャプチャする変数を選択するか、\<[**新しい変数>]** をクリックして新しい変数を作成します。  
+ プロセッサのエラー出力をキャプチャする変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
  **[FailTaskIfReturnCodeIsNotSuccessValue]**  
  プロセス終了コードが **[SuccessValue]** で指定されている値と異なった場合、タスクを終了するかどうかを指定します。  

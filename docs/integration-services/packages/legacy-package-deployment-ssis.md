@@ -31,16 +31,16 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ab6bc0a45ec2ac3b72fb029e6ef3ec74601c183
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287396"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919210"
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、開発コンピューターから実稼働サーバーまたは他のコンピューターへのパッケージの配置を簡素化するツールとウィザードが含まれています。  
@@ -488,7 +488,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |CreateDeploymentUtility|プロジェクトのビルド時にパッケージ配置ユーティリティを作成するかどうかを指定する値。 配置ユーティリティを作成するには、このプロパティが **True** である必要があります。|  
 |DeploymentOutputPath|配置ユーティリティの場所。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトから見た相対的な位置。|  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトをビルドすると、\<プロジェクト名>.SSISDeploymentManifest.xml というマニフェスト ファイルが作成され、プロジェクトのパッケージのコピーおよびパッケージの依存関係と共に、プロジェクトの bin\Deployment フォルダーまたは DeploymentOutputPath プロパティで指定された場所に格納されます。 マニフェスト ファイルには、プロジェクトに含まれるパッケージ、パッケージの構成、およびその他のファイルの一覧が記述されます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトをビルドすると、\<project name>.SSISDeploymentManifest.xml というマニフェスト ファイルが作成され、プロジェクトのパッケージのコピーおよびパッケージの依存関係と共に、プロジェクトの bin\Deployment フォルダーまたは DeploymentOutputPath プロパティで指定された場所に格納されます。 マニフェスト ファイルには、プロジェクトに含まれるパッケージ、パッケージの構成、およびその他のファイルの一覧が記述されます。  
   
  配置フォルダーの内容は、プロジェクトをビルドするたびに更新されます。 つまり、このフォルダーに保存されているフォルダーのうち、ビルド プロセスで再度このフォルダーにコピーされなかったファイルはすべて、削除されます。 たとえば、配置フォルダーに保存されたパッケージ構成ファイルは削除されます。  
   
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
-3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、 **[配置ユーティリティ]** をクリックします。  
+3.  **[\<project name> プロパティ ページ]** ダイアログ ボックスで、 **[配置ユーティリティ]** をクリックします。  
   
 4.  パッケージの配置時にパッケージの構成を更新するには、 **[AllowConfigurationChanges]** を **True**に設定します。  
   
@@ -517,7 +517,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  配置フォルダーのパスは、配置ユーティリティを作成した [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの DeploymentOutputPath プロパティで指定されます。 既定のパスは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを基準とする bin\Deployment です。 詳細については、「 [配置ユーティリティを作成する](../../integration-services/packages/create-a-deployment-utility.md)」を参照してください。  
   
- パッケージ インストール ウィザードを使用してパッケージをインストールします。 ウィザードを起動し、配置フォルダーをサーバーにコピーしてから、配置ユーティリティ ファイルをダブルクリックします。 このファイルは、\<プロジェクト名>.SSISDeploymentManifest という名前で、インストール先のコンピューターの配置フォルダーにあります。  
+ パッケージ インストール ウィザードを使用してパッケージをインストールします。 ウィザードを起動し、配置フォルダーをサーバーにコピーしてから、配置ユーティリティ ファイルをダブルクリックします。 このファイルは、\<project name>.SSISDeploymentManifest という名前で、インストール先のコンピューターの配置フォルダーにあります。  
   
 > [!NOTE]  
 >  配置するパッケージのバージョンによっては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の異なるバージョンがサイド バイ サイドでインストールされている場合にエラーが発生する可能性があります。 このエラーが発生するのは、.SSISDeploymentManifest ファイル名拡張子が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のすべてのバージョンで同じであるためです。 このファイルをダブルクリックすると、最後にインストールしたバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインストーラー (dtsinstall.exe) が呼び出されますが、配置ユーティリティ ファイルとはバージョンが異なる場合があります。 この問題を回避するには、コマンド ラインから正しいバージョンの dtsinstall.exe を実行し、配置ユーティリティ ファイルのパスを指定します。  
@@ -540,7 +540,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  ターゲット コンピューターの配置フォルダーを開きます。  
   
-2.  \<プロジェクト名>.SSISDeploymentManifest という名前のマニフェスト ファイルをダブルクリックしてパッケージ インストール ウィザードを起動します。  
+2.  \<project name>.SSISDeploymentManifest という名前のマニフェスト ファイルをダブルクリックして、パッケージ インストール ウィザードを起動します。  
   
 3.  **[SSIS パッケージの配置]** ページで、 **[SQL Server に配置]** オプションを選択します。  
   

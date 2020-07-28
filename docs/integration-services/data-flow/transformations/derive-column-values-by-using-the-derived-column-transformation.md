@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13ab80fe810559105027070e15ca64c87ddc4161
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3ef2d8078dedfb15c1f4be27d4970c7eaaf4731a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903930"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919399"
 ---
 # <a name="derive-column-values-with-the-derived-column-transformation"></a>派生列変換を使用して列の値を取得する
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   派生列変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -48,7 +48,7 @@ ms.locfileid: "77903930"
     > [!NOTE]  
     >  式が有効でない場合、式のテキストは強調表示され、列のツールヒントにエラーの説明が表示されます。  
   
-7.  **[派生列]** 一覧で、 **[\<新しい列として追加>]** を選択して式の評価結果を新しい列に書き込みます。または、既存の列を選択し、評価結果で更新します。  
+7.  **[派生列]** 一覧で、 **[\<add as new column>]** を選択して式の評価結果を新しい列に書き込みます。または、既存の列を選択し、評価結果で更新します。  
   
      新しい列を使用することを選択した場合は、 **[派生列変換エディター]** ダイアログ ボックスによって式が評価され、データ型、長さ、有効桁数、小数点以下桁数、およびコード ページに応じて列にデータ型が割り当てられます。  
   

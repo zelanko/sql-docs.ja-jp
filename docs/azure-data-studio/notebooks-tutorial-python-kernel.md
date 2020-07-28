@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
-ms.date: 04/27/2020
-ms.openlocfilehash: e4c431cba395b8e0c732fa7ac4ab96942cac7144
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/01/2020
+ms.openlocfilehash: 7eb7af0577cb74f180991bf455c36c9122972643
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728860"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920461"
 ---
 # <a name="create-and-run-a-python-notebook"></a>Python ノートブックを作成して実行する
 
@@ -26,7 +26,7 @@ ms.locfileid: "85728860"
 
 - [Azure Data Studio をインストールしていること](download-azure-data-studio.md)
 
-## <a name="new-notebook"></a>新しいノートブック
+## <a name="create-a-notebook"></a>ノートブックを作成する
 
 次の手順では、Azure Data Studio でノートブック ファイルを作成する方法を示しています。
 
@@ -34,57 +34,64 @@ ms.locfileid: "85728860"
 
 1. **[ファイル]** メニューで **[新しいノートブック]** を選択します。
 
-1. **[カーネル]** で **[Python 3]** を選択します。
+1. **[カーネル]** で **[Python 3]** を選択します。 **[アタッチ先]** は "localhost" に設定されています。
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="カーネルを設定する":::
 
-1. Python を構成するように求めるメッセージが表示されたら、 **[ノートブック用 Python の構成]** で次のいずれかの操作を行います。
+ノートブックを保存するには、 **[ファイル]** メニューで **[保存]** または **[名前を付けて保存...]** コマンドを使用します。 
 
-   - **[新しい Python インストール]** を選択して、Azure Data Studio 用の Python の新しいコピーをインストールする
-   - **[既存の Python インストールを使用する]** を選択して、既存の Python インストールのパスを指定する
+ノートブックを開くには、 **[ファイル]** メニューで **[ファイルを開く...]** コマンドを使用して、 **[ようこそ]** ページで **[ファイルを開く]** を選択するか、コマンド パレットで **File:Open** コマンドを使用します。
 
-## <a name="run-a-notebook-cell"></a>ノートブック セルを実行する
+## <a name="change-the-python-kernel"></a>Python カーネルを変更する
 
-コードまたはテキストを含むセルを作成できます。 作成したコード セルは実行することができ、セルの実行が完了すると、結果がノートブックに表示されます。 テキスト セルを使用すると、書式設定されたドキュメントにコードを配置することができます。
+ノートブックの Python カーネルに初めて接続するときには、 **[ノートブック用 Python の構成]** ページが表示されます。 次のいずれかを選択できます。
 
-### <a name="code"></a>コード
+- **[新しい Python インストール]** を選択して、Azure Data Studio 用の Python の新しいコピーをインストールする
+- **[既存の Python インストールを使用する]** を選択して、Azure Data Studio で使用する既存の Python インストールのパスを指定する
 
-ツールバーの **[+Code]** コマンドを選択して、新しい Python コード セルを追加します。
-
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="ノートブック ツール バー":::
-
-この例では、単純な数値演算を実行します。
+アクティブな Python カーネルの場所とバージョンを表示するには、コード セルを作成し、次の Python コマンドを実行します。
 
 ```python
-a = 1
-b = 2
-c = a/b
-print(c)
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
 ```
-セルの左側にある再生ボタンをクリックして、セルを実行します。 結果は下部に表示されます。
 
-:::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="ノートブック セルを実行する":::
+別の Python インストールに接続するには、次の操作を実行します。
 
-### <a name="text"></a>Text
+1. **[ファイル]** メニューから、 **[基本設定]** を選択し、次に **[設定]** を選択します。
+1. **[拡張機能]** の下にある **[Notebook 構成]** までスクロールします。
+1. **[Use Existing Python]\(既存の Python の使用\)** で、[Local path to a preexisting python installation used by Notebooks]\(Notebooks で使用する既存の Python インストールのローカル パス\) オプションをオフにします。
+1. Azure Data Studio を再起動します。
 
-ツールバーの **[+Text]** コマンドを選択して、新しいテキスト セルを追加します。
+Azure Data Studio が起動したら、Python カーネルに接続します。 **[ノートブック用 Python の構成]** ページが表示されたら、新しい Python インストールを作成するか、既存のインストールへのパスを指定するかを選択できます。
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python-text.png" alt-text="ノートブック ツール バー":::
+## <a name="run-a-code-cell"></a>コード セルを実行する
 
-セルは編集モードに変わり、マークダウンを入力できるようになります。入力すると、プレビューも同時に表示されます。
+その場で実行できる SQL コードを含むセルを作成するには、セルの左側にある **[セルの実行]** ボタン (黒の円矢印) をクリックします。 セルの実行が完了した後、結果がノートブックに表示されます。
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-cell-python.png" alt-text="マークダウン セル":::
+次に例を示します。
 
-テキスト セルの外側を選択すると、マークダウン テキストだけが表示されます。
+1. ツールバーの **[+Code]** コマンドを選択して、新しい Python コード セルを追加します。
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-preview-python.png" alt-text="マークダウン テキスト":::
+   :::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="ノートブック ツール バー":::
+
+1. 次の例をコピーしてセルに貼り付け、 **[セルの実行]** をクリックします。 この例では、単純な数値演算を実行し、結果が下に表示されます。
+
+   ```python
+   a = 1
+   b = 2
+   c = a/b
+   print(c)
+   ```
+
+   :::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="ノートブック セルを実行する":::
 
 ## <a name="next-steps"></a>次のステップ
 
 ノートブックについてさらに学習します:
 
-- [SQL Server でノートブックを使用する方法](notebooks-guidance.md)
-
+- [Kqlmagic を使用して Python を拡張する](notebooks-kqlmagic.md)
+- [Azure Data Studio でノートブックを使用する方法](notebooks-guidance.md)
 - [SQL Server ノートブックを作成して実行する](notebooks-tutorial-sql-kernel.md)
-
-- [Azure Data Studio でノートブックを管理する方法](notebooks-manage-sql-server.md)

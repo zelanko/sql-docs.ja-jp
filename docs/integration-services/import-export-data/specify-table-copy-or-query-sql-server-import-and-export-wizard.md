@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da112bf3a58d33fd7fae154d5a437c309ab7d2a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296251"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914347"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定] \(SQL Server インポートおよびエクスポート ウィザード)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   データの出力先とデータへの接続方法を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[テーブルのコピーまたはクエリの指定]** が表示されます。 このページで、次のいずれかのオプションを選択します。
@@ -56,7 +56,7 @@ ms.locfileid: "71296251"
 通常、SQL クエリを記述しない場合でも、エクスポートするテーブルの名前がわかっている限り、 **[クエリを記述する]** オプションを使用できます。 **[次へ]** をクリックした後に表示される **[基になるクエリの指定]** ダイアログ ボックスで、`SELECT * FROM <name of table>` としてクエリを入力します。 テーブルの名前にスペースや特殊文字が含まれる場合は、角かっこで名を囲みます。`SELECT * FROM [<name of table>]`
 
 ### <a name="more-info"></a>詳細情報
- **[1 つ以上のテーブルまたはビューからデータをコピーする]** オプションは、ProviderDescriptors.xml ファイルに ProviderDescription セクションがあるプロバイダーでのみ使用できます。 (既定では、このファイルは、\<*ドライブ*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors に格納されています)。このファイルの各 ProviderDescription セクションには、対応するプロバイダーからメタデータを取得するのに必要な情報が含まれています。    
+ **[1 つ以上のテーブルまたはビューからデータをコピーする]** オプションは、ProviderDescriptors.xml ファイルに ProviderDescription セクションがあるプロバイダーでのみ使用できます。 (既定では、このファイルは、\<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors に格納されています。)このファイルの各 ProviderDescription セクションには、対応するプロバイダーからメタデータを取得するのに必要な情報が含まれています。    
     
  既定では、ProviderDescriptors.xml ファイルには、次の一覧のプロバイダーの ProviderDescription セクションのみが含まれています。    
     

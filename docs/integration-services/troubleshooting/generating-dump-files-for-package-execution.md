@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60ec7105d0942383ad1ebcd963665a8a47eab60c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669911"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913762"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>パッケージ実行用のダンプ ファイルを生成する
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、パッケージの実行に関する情報を提供するデバッグ ダンプ ファイルを作成できます。 このファイル内の情報は、パッケージの実行に関する問題のトラブルシューティングに役立ちます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "83669911"
   
 -   .tmp デバッグ ダンプ ファイル。 これはテキスト形式のファイルです。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既定では、これらのファイルは *\<ドライブ>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既定では、これらのファイルは *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。  
   
  次の表では、.tmp ファイル内の特定のセクションのみについて説明します。 .tmp ファイルには、次の表に記載されていないデータが他にも含まれています。  
   

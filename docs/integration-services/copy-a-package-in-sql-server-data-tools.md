@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b374955ea4a07cd94de88202fe02ffbb572d0a1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52368632a7e2d871f91f4e7c60aad0a7f03dbcf9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293646"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923268"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools でのパッケージのコピー
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   このトピックでは、既存のパッケージをコピーして新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを作成する方法、および新しいパッケージの **Name** プロパティと **GUID** プロパティを更新する方法について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "71293646"
   
 3.  コピーするパッケージがソリューション エクスプローラーで選択されていること、またはパッケージが含まれている SSIS デザイナーのタブがアクティブになっていることを確認します。  
   
-4.  **[ファイル]** メニューの **[名前を付けて \<パッケージ名> を保存]** をクリックします。  
+4.  **[ファイル]** メニューの **[名前を付けて \<package name> を保存]** をクリックします。  
   
     > [!NOTE]  
     >  **[ファイル]** メニューに **[名前を付けて保存]** オプションを表示するには、SSIS デザイナーでパッケージを開いておく必要があります。  
@@ -52,7 +52,7 @@ ms.locfileid: "71293646"
   
 9. 必要に応じて、 **[制御フロー]** タブの背景をクリックし、 **[プロパティ]** をクリックします。  
   
-10. プロパティ ウィンドウで、ID プロパティの値をクリックし、ドロップダウン リストの **[\<新しい ID の生成>]** をクリックします。  
+10. [プロパティ] ウィンドウで、ID プロパティの値をクリックし、ドロップダウン リストの **[\<Generate New ID>]** をクリックします。  
   
 11. **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックし、新しいパッケージを保存します。  
   

@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f334633fa164a22f8e23175fd3ba6b25c4f6423
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298302"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917929"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -148,7 +148,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  **関連トピック:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)、[ODBC 接続マネージャー](../../integration-services/connection-manager/odbc-connection-manager.md)、[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)、[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **接続**  
- 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...** >] を選択します。  
+ 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**New connection...**>] を選択します。  
   
  **[SQLSourceType]**  
  タスクが実行する SQL ステートメントのソースの種類を選択します。  
@@ -190,13 +190,13 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
 #### <a name="sqlsourcetype--file-connection"></a>[SQLSourceType] = [ファイル接続]  
  **[FileConnection]**  
- 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
+ 既存のファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして、新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>[SQLSourceType] = [変数]  
  **[SourceVariable]**  
- 既存の変数を選択するか、\<**新しい変数...** > をクリックして新しい変数を作成します。  
+ 既存の変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -205,7 +205,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
 ### <a name="options"></a>Options  
  **[変数名]**  
- **[追加]** をクリックしてパラメーター マッピングを追加した後で、システム変数またはユーザー定義変数を一覧から選択するか、[\<**新しい変数...** >] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
+ **[追加]** をクリックしてパラメーター マッピングを追加した後で、システム変数またはユーザー定義変数を一覧から選択するか、[\<**New variable...**>] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -244,7 +244,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  
   
  **[変数名]**  
- 変数を選択して変数に結果セットをマップするか、[\<**新しい変数...** >] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
+ 変数を選択して変数に結果セットをマップするか、[\<**New variable...**>] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
   
  **追加**  
  結果セットのマッピングを追加します。  
@@ -282,7 +282,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
 |接続の種類|パラメーター マーカー|パラメーター名|SQL コマンドの例|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO (ADO)|?|Param1、Param2、...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<パラメーター名>|\@\<パラメーター名>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1、2、3、...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL および OLE DB|?|0、1、2、3、…|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -421,7 +421,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
     |接続の種類|パラメーター マーカー|  
     |---------------------|----------------------|  
     |ADO (ADO)|?|  
-    |ADO.NET および SQLMOBILE|\@\<パラメーター名>|  
+    |ADO.NET および SQLMOBILE|\@\<parameter name>|  
     |ODBC|?|  
     |EXCEL および OLE DB|?|  
   
@@ -444,7 +444,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
     |接続の種類|パラメーター名|  
     |---------------------|--------------------|  
     |ADO (ADO)|Param1、Param2、...|  
-    |ADO.NET および SQLMOBILE|\@\<パラメーター名>|  
+    |ADO.NET および SQLMOBILE|\@\<parameter name>|  
     |ODBC|1、2、3、...|  
     |EXCEL および OLE DB|0、1、2、3、…|  
   
@@ -511,7 +511,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
  結果セットの種類が " **単一行**" の場合、列名を結果セットの名前として使用し、返される結果の列を変数にバインドしたり、列一覧の列の序数を結果セットの名前として使用できます。 たとえば、クエリ `SELECT Color FROM Production.Product WHERE ProductID = ?` の結果セットの名前は **Color** または **0**となります。 クエリが複数の列を返す場合に、すべての列の値にアクセスするには、各列を異なる変数にバインドする必要があります。 数字を結果セットの名前として使用し、列を変数にマップする場合、その数字はクエリの列一覧に列が表示される順序を示します。 たとえば、クエリ `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`では、 **Color** 列に 0 を、 **ListPrice** 列に 1 を使用します。 列名を結果セットの名前として使用できるかどうかは、タスクの構成で指定されているプロバイダーによって異なります。 すべてのプロバイダーで列名が使用できるわけではありません。  
   
- 単一の値を返す一部のクエリには、列名が含まれないことがあります。 たとえば、ステートメント `SELECT COUNT (*) FROM Production.Product` からは列名が返されません。 返される結果にアクセスするには、結果名として序数位置 0 を使用します。 列名で返される結果にアクセスするには、列名を指定する AS \<エイリアス名> 句をクエリに含める必要があります。 ステートメント `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`では、 **CountOfProduct** 列を指定します。 その後、 **CountOfProduct** 列名または序数位置 0 を使用して、返された結果列にアクセスできます。  
+ 単一の値を返す一部のクエリには、列名が含まれないことがあります。 たとえば、ステートメント `SELECT COUNT (*) FROM Production.Product` からは列名が返されません。 返される結果にアクセスするには、結果名として序数位置 0 を使用します。 列名で返される結果にアクセスするには、列名を指定する AS \<alias name> 句をクエリに含める必要があります。 ステートメント `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`では、 **CountOfProduct** 列を指定します。 その後、 **CountOfProduct** 列名または序数位置 0 を使用して、返された結果列にアクセスできます。  
   
  結果セットの種類が " **完全な結果セット** " または " **XML**" の場合、結果セット名には 0 を使用する必要があります。  
   

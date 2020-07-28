@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94be603d8982e4c05baed997b1072afbe66c2eec
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294099"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915258"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
@@ -120,7 +120,7 @@ ms.locfileid: "71294099"
  Message Queuing (MSMQ) の 2000 形式を使用するかどうかを指定します。 既定値は **False**です。  
   
  **[MSMQConnection]**  
- 既存の MSMQ 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして、新しい接続マネージャーを作成します。  
+ 既存の MSMQ 接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 接続マネージャー エディター](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -230,7 +230,7 @@ ms.locfileid: "71294099"
 |**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]** が表示されます。|  
   
  **変数**  
- 変数の名前を入力するか、[\<**新しい変数...** >] をクリックして新しい変数を設定します。  
+ 変数の名前を入力するか、[\<**New variable...**>] をクリックして新しい変数を設定します。  
   
  **関連トピック:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -275,7 +275,7 @@ ms.locfileid: "71294099"
  **[Compare]** オプションが **[なし]** に設定されていない場合、メッセージと比較する文字列を入力します。  
   
  **変数**  
- 受信したメッセージを格納する変数の名前を入力するか、\<[**新しい変数...>]** をクリックして新しい変数を設定します。  
+ 受信したメッセージを格納する変数の名前を入力するか、[\<**New variable...**>] をクリックして新しい変数を設定します。  
   
  **関連トピック:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

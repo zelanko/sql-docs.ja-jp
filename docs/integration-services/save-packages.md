@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb26be1034632ce747c21239636f9b0a4ec08114
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295736"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913268"
 ---
 # <a name="save-packages"></a>パッケージを保存する
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してパッケージを構築し、XML ファイル (.dtsx ファイル) としてファイル システムに保存します。 パッケージ XML ファイルのコピーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の msdb データベースまたはパッケージ ストアに保存することもできます。 パッケージ ストアとは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが管理するファイル システムの場所にあるフォルダーのことです。  
@@ -60,7 +60,7 @@ ms.locfileid: "71295736"
   
 1.  ソリューション エクスプローラーで、コピーを保存するパッケージをダブルクリックします。  
   
-2.  **[ファイル]** メニューの **[\<パッケージ ファイル> のコピーに名前を付けて保存]** をクリックします。  
+2.  **[ファイル]** メニューの **[\<package file> のコピーに名前を付けて保存]** をクリックします。  
   
 3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、 **[パッケージの場所]** 一覧からパッケージの保存場所を選択します。 次のオプションを使用できます。  
     -   SQL Server
@@ -110,7 +110,7 @@ ms.locfileid: "71295736"
   
 2.  ソリューション エクスプローラーで、プロジェクトを右クリックして **[追加]** をポイントし、 **[新しい項目]** をクリックします。  
   
-3.  **[新しい項目の追加 - \<プロジェクト名>]** ダイアログ ボックスで、テンプレートとして使うパッケージをクリックします。  
+3.  **[新しい項目の追加 - \<project name>]** ダイアログ ボックスで、テンプレートとして使うパッケージをクリックします。  
   
      テンプレートの一覧には、"新しい SSIS パッケージ" という名前の既定のパッケージ テンプレートがあります。 パッケージ テンプレートとして使用できるテンプレートは、パッケージ アイコンで示されます。  
   

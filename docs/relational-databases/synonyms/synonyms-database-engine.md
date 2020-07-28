@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e992a6629f3dbff2e8ed5e3b2b9cc568a7b8811
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787255"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918068"
 ---
 # <a name="synonyms-database-engine"></a>シノニム (データベース エンジン)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   シノニムは、次の目的で機能するデータベース オブジェクトです。  
   
 -   ベース オブジェクトと呼ばれる別のデータベース オブジェクトの代替名を提供します。ベース オブジェクトは、ローカル サーバーまたはリモート サーバーに配置できます。  
@@ -35,17 +35,37 @@ ms.locfileid: "85787255"
 このような問題の両方に対処するには、 **Server1**の **Employee** テーブルに対して、 **Server2** に **EmpTable**というシノニムを作成できます。 これで、クライアント アプリケーションから **Employee**テーブルを参照するときに、 **EmpTable** という 1 部構成の名前を使用するだけで済みます。 また、 **Employee** テーブルの場所が変更された場合は、 **Employee**テーブルの新しい場所を指すように、シノニムである **EmpTable** を変更する必要があります。 ALTER SYNONYM というステートメントは存在しないので、 **EmpTable**というシノニムをいったん削除してから、 **Employee**の新しい場所を指す同じ名前のシノニムを作成する必要があります。  
   
 シノニムはスキーマに属しています。したがって、スキーマ内の他のオブジェクトと同様に、シノニムの名前は一意にする必要があります。 シノニムは、次のデータベース オブジェクトに対して作成できます。  
-  
-|||  
-|-|-|  
-|アセンブリ (CLR) ストアド プロシージャ|アセンブリ (CLR) テーブル値関数|  
-|アセンブリ (CLR) スカラー関数|アセンブリ (CLR) 集計関数|  
-|レプリケーション フィルター プロシージャ|拡張ストアド プロシージャ|  
-|SQL スカラー関数|SQL テーブル値関数|  
-|SQL インライン テーブル値関数|SQL ストアド プロシージャ|  
-|表示|テーブル* (ユーザー定義)|  
-  
- *ローカル一時テーブルとグローバル一時テーブルが含まれます。  
+
+:::row:::
+    :::column:::
+        アセンブリ (CLR) ストアド プロシージャ
+
+        アセンブリ (CLR) スカラー関数
+
+        レプリケーション フィルター プロシージャ
+
+        SQL スカラー関数
+
+        SQL インライン テーブル値関数
+
+        表示
+    :::column-end:::
+    :::column:::
+        アセンブリ (CLR) テーブル値関数
+
+        アセンブリ (CLR) 集計関数
+
+        アセンブリ (CLR) 集計関数
+
+        SQL テーブル値関数
+
+        SQL ストアド プロシージャ
+
+        テーブル* (ユーザー定義)
+    :::column-end:::
+:::row-end:::
+
+*ローカル一時テーブルとグローバル一時テーブルが含まれます。  
   
 > [!NOTE]  
 > 4 部構成の関数ベース オブジェクト名はサポートされません。  
@@ -63,23 +83,48 @@ ms.locfileid: "85787255"
 シノニムに対する権限を許可できるのは、シノニムの所有者、 **db_owner**、または **db_ddladmin** のみです。  
   
 次に示すシノニムに対する権限は、すべてまたはいくつかに `GRANT`、`DENY`、および `REVOKE` を行うことができます。  
-  
-|||  
-|-|-|  
-|CONTROL|DELETE|  
-|EXECUTE|INSERT|  
-|SELECT|TAKE OWNERSHIP|  
-|UPDATE|VIEW DEFINITION|  
-  
+
+:::row:::
+    :::column:::
+      CONTROL
+
+      EXECUTE
+
+      SELECT
+
+      UPDATE
+    :::column-end:::
+    :::column:::
+      DELETE
+
+      INSERT
+
+      TAKE OWNERSHIP
+
+      VIEW DEFINITION
+    :::column-end:::
+:::row-end:::
+
 ## <a name="using-synonyms"></a>シノニムの使用  
- いくつかの SQL ステートメントや式のコンテキストでは、参照先のベース オブジェクトの代わりにシノニムを使用できます。 次の表に、これに該当するステートメントや式のコンテキストを示します。  
-  
-|||  
-|-|-|  
-|SELECT|INSERT|  
-|UPDATE|DELETE|  
-|EXECUTE|副選択式|  
-  
+ いくつかの SQL ステートメントや式のコンテキストでは、参照先のベース オブジェクトの代わりにシノニムを使用できます。 次の列に、これに該当するステートメントや式のコンテキストを示します。  
+
+:::row:::
+    :::column:::
+        SELECT
+
+        UPDATE
+
+        EXECUTE
+    :::column-end:::
+    :::column:::
+        INSERT
+
+        DELETE
+
+        副選択式
+    :::column-end:::
+:::row-end:::
+ 
  前に示したコンテキストでシノニムを扱っているときは、ベース オブジェクトが影響を受けます。 たとえば、シノニムが参照するベース オブジェクトがテーブルの場合に、シノニムに行を挿入すると、実際に参照先のテーブルに行が挿入されます。  
   
 > [!NOTE]  
@@ -97,19 +142,36 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ```  
   
 次の権限ステートメントは、シノニムのみに関連付けられ、ベース オブジェクトには影響しません。  
-  
-|||  
-|-|-|  
-|GRANT|DENY|  
-|REVOKE||  
-  
+
+:::row:::
+    :::column:::
+        GRANT
+
+        REVOKE
+    :::column-end:::
+    :::column:::
+        DENY
+    :::column-end:::
+:::row-end:::
+
 シノニムはスキーマ バインド オブジェクトではないので、次のスキーマ バインド式コンテキストからは参照できません。  
-  
-|||  
-|-|-|  
-|CHECK 制約|計算列|  
-|既定式|ルール式|  
-|スキーマ バインド ビュー|スキーマ バインド関数|  
+
+:::row:::
+    :::column:::
+        CHECK 制約
+
+        既定式
+
+        スキーマ バインド ビュー
+    :::column-end:::
+    :::column:::
+        計算列
+
+        ルール式
+
+        スキーマ バインド関数
+    :::column-end:::
+:::row-end:::
   
 スキーマ バインド関数の詳細については、「[ユーザー定義関数の作成 &#40;データベース エンジン&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)」を参照してください。  
   

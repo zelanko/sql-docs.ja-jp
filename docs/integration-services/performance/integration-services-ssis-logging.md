@@ -29,16 +29,16 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba8e26a75af5508e2fe18390e92fda3aea73c648
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287886"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918354"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
@@ -230,7 +230,7 @@ ms.locfileid: "79287886"
   
 3.  **[プロバイダーの種類]** 一覧からログ プロバイダーを選択し、 **[追加]** をクリックします。  
   
-4.  **[構成]** 列で、接続マネージャーを選択するか、または **[\<新しい接続>]** をクリックしてこのログ プロバイダーに適した種類の接続マネージャーを新しく作成します。 選択したプロバイダーに応じて、次のいずれかの接続マネージャーを使用します。  
+4.  **[構成]** 列で、接続マネージャーを選択するか、 **[\<New connection>]** をクリックして、このログ プロバイダーに適した種類の接続マネージャーを新しく作成します。 選択したプロバイダーに応じて、次のいずれかの接続マネージャーを使用します。  
   
     -   テキスト ファイル用には、ファイル接続マネージャーを使用します。 詳細については、「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -312,7 +312,7 @@ ms.locfileid: "79287886"
  [説明] フィールドは編集可能です。 クリックして、ログの既定の説明を変更します。  
   
  **構成**  
- 既存の接続マネージャーを一覧から選択するか、**[\<新しい接続>]** をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
+ 既存の接続マネージャーを一覧から選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
   
  関連項目:「 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 」、「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)」  
   

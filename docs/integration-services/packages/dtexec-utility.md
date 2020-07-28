@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53a05fea022a2ea0232bc44646509ee3a84028af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761856"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919222"
 ---
 # <a name="dtexec-utility"></a>dtexec ユーティリティ
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **dtexec** コマンド プロンプト ユーティリティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの構成と実行に使用します。 **dtexec** ユーティリティを使用すると、パラメーター、接続、プロパティ、変数、ログ記録、進行状況インジケーターなど、パッケージの構成と実行に関するすべての機能にアクセスできます。 また **dtexec** ユーティリティでは、さまざまな変換元 ([!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー、.ispac プロジェクト ファイル、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システム) からパッケージを読み込むことができます。  
@@ -68,22 +68,22 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> 64 ビット コンピューターでのインストールに関する注意点  
  64 ビット コンピューターには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって 64 ビット版の **dtexec** ユーティリティ (dtexec.exe) がインストールされます。 特定のパッケージを 32 ビット モードで実行する必要がある場合は、32 ビット版の **dtexec** ユーティリティをインストールする必要があります。 32 ビット版の **dtexec** ユーティリティをインストールするには、セットアップ中に [クライアント ツール] または [ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ] を選択する必要があります。  
   
- 既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです (通常、32 ビットのディレクトリ パスは *\<ドライブ>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn で、64 ビットのディレクトリ パスは *\<ドライブ>* :\Program Files\Microsoft SQL Server\110\DTS\Binn です)。  
+ 既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです (通常、32 ビットのディレクトリ パスは *\<drive>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn で、64 ビットのディレクトリ パスは *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn です)。  
   
 > **注:** SQL Server エージェントを使用してユーティリティを実行する場合は、SQL Server エージェントによって 64 ビット バージョンのユーティリティが自動的に使用されます。 SQL Server エージェントでは、PATH 環境変数ではなくレジストリを使用してユーティリティの適切な実行可能ファイルが特定されます。  
   
  コマンド プロンプトで 64 ビット バージョンのユーティリティが実行されるようにするには、次のいずれかの操作を実行します。  
   
--   コマンド プロンプト ウィンドウを開いて、64 ビット バージョンのユーティリティが格納されたディレクトリ ( *\<ドライブ>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) に移動し、その場所からユーティリティを実行します。  
+-   コマンド プロンプト ウィンドウを開いて、64 ビット バージョンのユーティリティが格納されたディレクトリ ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) に移動し、その場所からユーティリティを実行します。  
   
--   コマンド プロンプトで、64 ビット バージョンのユーティリティの完全なパス ( *\<ドライブ>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) を入力してユーティリティを実行します。  
+-   コマンド プロンプトで、64 ビット バージョンのユーティリティの完全なパス ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) を入力してユーティリティを実行します。  
   
--   PATH 環境変数で、64 ビットのパス ( *\<ドライブ>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) を 32 ビットのパス ( *\<ドライブ>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) より前に配置してパスの順序を永続的に変更します。  
+-   PATH 環境変数で、64 ビットのパス ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) を、その変数内にある 32 ビットのパス ( *\<drive>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) より前に配置してパスの順序を永続的に変更します。  
   
 ##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> サイド バイ サイド インストールを使用しているコンピューターに関する注意点  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] を、 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] または [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] がインストールされているコンピューターにインストールすると、複数のバージョンの **dtexec** ユーティリティがインストールされます。  
   
- 正しいバージョンのユーティリティを実行していることを確認するには、コマンド プロンプトで完全なパス ( *\<ドライブ>* :\Program Files\Microsoft SQL Server\\<バージョン\>\DTS\Binn) を入力してユーティリティを実行します。  
+ 正しいバージョンのユーティリティを実行していることを確認するには、コマンド プロンプトで完全なパス ( *\<drive>* :\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn) を入力してユーティリティを実行します。  
   
 ##  <a name="phases-of-execution"></a><a name="phases"></a> 実行のフェーズ  
  このユーティリティの実行には、4 つのフェーズがあります。 それらのフェーズを次に示します。  
@@ -243,7 +243,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _error code_:[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既定では、デバッグ ダンプ ファイルは \<*ドライブ*>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。  
+     **/Dump** _error code_:[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既定では、デバッグ ダンプ ファイルは *\<drive>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。  
   
     > **注:** デバッグ ダンプ ファイルには機密情報が含まれている場合があります。 アクセス制御リスト (ACL) を使用してファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーしてください。 たとえば、デバッグ ファイルを Microsoft サポート サービスに送信する前には、機密性の高い情報をすべて削除することをお勧めします。  
   
@@ -255,7 +255,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**:(省略可) パッケージの実行中にエラーが発生した場合に、デバッグ ダンプ ファイル (.mdmp および .tmp) を作成します。  
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既定では、デバッグ ダンプ ファイルは *\<ドライブ>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の既定では、デバッグ ダンプ ファイルは *\<drive>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps フォルダーに格納されます。  
   
     > **注:** デバッグ ダンプ ファイルには機密情報が含まれている場合があります。 アクセス制御リスト (ACL) を使用してファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーしてください。 たとえば、デバッグ ファイルを Microsoft サポート サービスに送信する前には、機密性の高い情報をすべて削除することをお勧めします。  
   

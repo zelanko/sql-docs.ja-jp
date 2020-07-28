@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e26918f5b545068ad5e121452dc704f7d72abe35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297877"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919514"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   スクリプト コンポーネントはスクリプトをホストします。これにより、パッケージにカスタム スクリプト コードを含めて実行できます。 スクリプト コンポーネントは、パッケージ内で次の目的に使用できます。  
@@ -133,7 +133,7 @@ ms.locfileid: "71297877"
  接続を表す一意な名前を入力します。  
   
  **接続マネージャー**  
- 使用できる接続マネージャーの一覧から選択するか、[ **\<新しい接続>** ] を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
+ 使用できる接続マネージャーの一覧から選択するか、 **[\<New connection>]** を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
   
  **説明**  
  接続の説明を入力します。  

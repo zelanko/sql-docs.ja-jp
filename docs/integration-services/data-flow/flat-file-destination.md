@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf49a6cd604350ca9b3e73ee96bb6c61b1977a60
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292530"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920885"
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号を使用した固定幅形式、または幅合わせしない形式を使用できます。  
@@ -91,7 +91,7 @@ ms.locfileid: "71292530"
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。 出力から列を除外するには、 **[\<無視>]** を選択します。  
+ このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。 出力から列を除外するには、 **[\<ignore>]** を選択します。  
   
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  

@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ab34cf592628a92f2dcf536e2eda400aecf80ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293525"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920884"
 ---
 # <a name="ado-net-destination"></a>ADO NET 変換先
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   ADO NET 変換先では、データベースのテーブルやビューを使用する、さまざまな [!INCLUDE[vstecado](../../includes/vstecado-md.md)]互換データベースにデータを読み込みます。 このデータを既存のテーブルやビューに読み込むことができますが、新しいテーブルを作成して、そこにデータを読み込むこともできます。  
@@ -131,7 +131,7 @@ ms.locfileid: "71293525"
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- 選択した入力列を表示します。 出力から列を除外するために **\<無視>** を選択することで、マッピングを削除できます。  
+ 選択した入力列を表示します。 出力から列を除外するために **[\<ignore>]** を選択することで、マッピングを削除できます。  
   
  **変換先列**  
  マップするかどうかにかかわらず、使用できる変換先列を表示します。  

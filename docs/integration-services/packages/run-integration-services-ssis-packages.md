@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29d9fce968a000a2212ada9776d1b5f3a812c25f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287386"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919172"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージの実行
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行するには、それらのパッケージの格納場所に応じていくつかのツールのうちの 1 つを使用できます。 次の表にツールを示します。  
@@ -85,7 +85,7 @@ ms.locfileid: "79287386"
   
 1.  ソリューション エクスプローラーで、実行するパッケージが含まれる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクト フォルダーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  [ **\<プロジェクト名> プロパティ ページ**] ダイアログ ボックスで、 **[ビルド]** をクリックします。  
+2.  **[\<project name> プロパティ ページ]** ダイアログ ボックスで、 **[ビルド]** をクリックします。  
   
 3.  OutputPath プロパティの値を更新して、デザイン時配置用に使用するフォルダーを指定し、 **[OK]** をクリックします。  
 

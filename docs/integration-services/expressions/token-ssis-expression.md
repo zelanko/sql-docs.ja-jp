@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c025eac60079e601d755439573b35257038d9275
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca682adb998ad20b04e40cda29d5a083f4c4e58f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297354"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913488"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 式)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   文字列内のトークンを区切る指定された区切り記号、および返されるトークンを表すトークン数に基づいて、文字列からトークン (サブストリング) を返します。  
@@ -44,7 +44,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>解説  
- この関数は、<character_expression> 文字列を <delimiter_string> で指定された区切り記号で区切ったトークンのセットに分割した後、N 番目のトークンを返します。N は\<occurrence> パラメーターで指定されたトークンの発生回数です。 この関数のサンプルについては、「使用例」のセクションを参照してください。  
+ この関数は、<character_expression> 文字列を <delimiter_string> で指定された区切り記号で区切ったトークンのセットに分割した後、N 番目のトークンを返します。N は \<occurrence> パラメーターで指定されたトークンの発生回数です。 この関数のサンプルについては、「使用例」のセクションを参照してください。  
   
  TOKEN 関数には次の解説が適用されます。  
   

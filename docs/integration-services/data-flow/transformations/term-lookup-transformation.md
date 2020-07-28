@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 61dad85fb7857b8694712f79b860f58d88e7d650
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da1331e4586fff4f239c9dc3cb80552dc0ea4692
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291202"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914258"
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   用語参照変換は、変換入力列内のテキストから抽出された用語を、参照テーブルの用語と照合します。 次に、入力データセットで参照テーブル内の用語が検出された回数をカウントし、その数を参照テーブルの用語と共に変換出力の列に書き込みます。 この変換は、単語の使用頻度を示す統計付きのユーザー定義の単語一覧を、入力テキストから作成する場合に便利です。  
@@ -69,7 +69,7 @@ ms.locfileid: "71291202"
 |参照用語|Windows, Windows 7 Professional|  
 |Output|Windows|  
   
- 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ です。  
+ 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%, @, &, $, #, \*、:、;、.、 **、** 、!、?、\<, >、+、=、^、~、|、\\、/、(、)、[、]、{、}、"、' です。  
   
 ## <a name="data-types"></a>データ型  
  用語参照変換で使用できる列は、DT_WSTR または DT_NTEXT データ型のどちらかの列のみです。 列にテキストが含まれていても、これらのデータ型ではない場合、データ変換の変換では、DT_WSTR または DT_NTEXT データ型の列をデータ フローに追加し、列の値を新しい列にコピーできます。 その後、データ変換の変換からの出力を、用語参照変換への入力として使用できます。 詳細については、「 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)」を参照してください。  

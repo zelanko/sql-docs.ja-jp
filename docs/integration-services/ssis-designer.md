@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4941e8bfbb47a5d4d4e7139a6c761483dec7ad8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295664"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921965"
 ---
 # <a name="ssis-designer"></a>SSIS デザイナー
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの作成および管理に使用できるグラフィカル ツールです。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの一部として使用できます。  
@@ -158,7 +158,7 @@ ms.locfileid: "71295664"
  **削除**  
  イベント ハンドラーを選択し、 **[削除]** をクリックすると、パッケージからイベント ハンドラーを削除できます。  
   
- **実行可能ファイル \<executable name\> の \<event handler name\> を作成するには、ここをクリックします**  
+ **実行可能ファイル \<executable name\> の \<event handler name\> を作成するにはここをクリックします**  
  イベント ハンドラーを作成する場合にクリックします。  
   
  制御フローを作成するには、 [!INCLUDE[ssIS](../includes/ssis-md.md)] タスクおよびコンテナーを表すグラフィカル オブジェクトを、 **ツールボックス** から **[イベント ハンドラー]** タブのデザイン画面にドラッグします。次に、優先順位制約を使用してオブジェクトどうしを接続して、その実行の順序を定義します。  

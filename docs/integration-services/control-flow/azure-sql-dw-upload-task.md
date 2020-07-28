@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52b4f561f29d78c170b334a4ea97486a30ba41c4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947195"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918898"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW アップロード タスク
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -61,7 +61,7 @@ RetainFiles|Azure Storage にアップロードしたファイルを保持する
 CompressionType|Azure Storage にファイルをアップロードするときに使用する圧縮形式を指定します。 ローカル ソースは影響を受けません。
 CompressionLevel|圧縮形式に使用する圧縮レベルを指定します。
 AzureDwConnection|Azure SQL DW の ADO.NET 接続マネージャーを指定します。
-TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、 **[\<新しいテーブル...>]** を選択して新規作成します。
+TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、 **[\<New Table ...>]** を選択して新規作成します。
 TableDistribution|新しいテーブルの配布方法を指定します。 **TableName**に新しいテーブル名が指定されている場合に適用されます。
 HashColumnName|ハッシュ テーブル配分に使用される列を指定します。 **TableDistribution** に **HASH**が指定されている場合に適用されます。
 
@@ -76,7 +76,7 @@ BlobDirectory|ソース データが存在する BLOB ディレクトリ (仮想
 [列区切り記号]|各列の終わりに印を付ける 1 つ以上の文字を指定します。 例: &#124; (パイプ)、\t (タブ)、' (単一引用符)、" (二重引用符)、および 0x5c (バック スラッシュ)。
 CompressionType|ソース データに使用される圧縮形式を指定します。
 AzureDwConnection|Azure SQL DW の ADO.NET 接続マネージャーを指定します。
-TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、 **[\<新しいテーブル...>]** を選択して新規作成します。
+TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、 **[\<New Table ...>]** を選択して新規作成します。
 TableDistribution|新しいテーブルの配布方法を指定します。 **TableName**に新しいテーブル名が指定されている場合に適用されます。
 HashColumnName|ハッシュ テーブル配分に使用される列を指定します。 **TableDistribution** に **HASH**が指定されている場合に適用されます。
 

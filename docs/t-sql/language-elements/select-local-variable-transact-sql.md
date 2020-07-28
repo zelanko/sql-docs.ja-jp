@@ -1,5 +1,5 @@
 ---
-title: SELECT @local_variable (Transact-SQL) | Microsoft Docs
+title: SELECT @local_variable (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 415c2ff263a4a501de441cc04c0f845a1e3592bb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2f1d8bad77c52fcabb3190e28767c945718e1d72
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630256"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910606"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   ローカル変数を式の値に設定します。  
@@ -48,38 +49,43 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
     [ ,...n ] [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
+
 @*local_variable*  
  値を割り当てる宣言された変数です。  
   
-{= | += | -= | \*= | /= | %= | &= | ^= | |= }   
+{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
 右側の値を左側の変数に代入します。  
   
 複合代入演算子です。  
-  |operator |action |   
-  |-----|-----|  
-  | = | 後続の式を変数に代入します。 |  
-  | += | 加算して代入 |   
-  | -= | 減算して代入 |  
-  | \*= | 乗算して代入 |  
-  | /= | 除算して代入 |  
-  | %= | 剰余を代入 |  
-  | &= | ビットごとの AND 演算を行って代入 |  
-  | ^= | ビットごとの XOR 演算を行って代入 |  
-  | \|= | ビットごとの OR 演算を行って代入 |  
-  
- *式 (expression)*  
- 任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 これには、スカラー サブクエリが含まれます。  
-  
-## <a name="remarks"></a>解説  
- SELECT @*local_variable* は通常、変数に 1 つの値を返すときに使用します。 ただし、*expression* が列名の場合は、複数の値を返すことができます。 SELECT ステートメントが複数の値を返した場合は、最後に返された値が変数に割り当てられます。  
-  
- SELECT ステートメントが行を返さない場合、変数は現在の値を保ちます。 *expression* が値を返さないスカラー サブクエリの場合、変数は NULL に設定されます。  
-  
- 1 つの SELECT ステートメントで複数のローカル変数を初期化できます。  
-  
-> [!NOTE]  
->  変数の割り当てを含む SELECT ステートメントを、同時に通常の結果セットの取得に使用することはできません。  
+
+| operator | action |  
+| -------- | ------ |  
+| = | 後続の式を変数に代入します。 |  
+| += | 加算して代入 |  
+| -= | 減算して代入 |  
+| \*= | 乗算して代入 |  
+| /= | 除算して代入 |  
+| %= | 剰余を代入 |  
+| &= | ビットごとの AND 演算を行って代入 |  
+| ^= | ビットごとの XOR 演算を行って代入 |  
+| \|= | ビットごとの OR 演算を行って代入 |  
+
+*式 (expression)*  
+任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 これには、スカラー サブクエリが含まれます。  
+
+## <a name="remarks"></a>解説
+
+SELECT @*local_variable* は通常、変数に 1 つの値を返すときに使用します。 ただし、*expression* が列名の場合は、複数の値を返すことができます。 SELECT ステートメントが複数の値を返した場合は、最後に返された値が変数に割り当てられます。  
+
+SELECT ステートメントが行を返さない場合、変数は現在の値を保ちます。 *expression* が値を返さないスカラー サブクエリの場合、変数は NULL に設定されます。  
+
+1 つの SELECT ステートメントで複数のローカル変数を初期化できます。  
+
+> [!NOTE]
+> 変数の割り当てを含む SELECT ステートメントを、同時に通常の結果セットの取得に使用することはできません。  
   
 ## <a name="examples"></a>例  
   
@@ -99,7 +105,7 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
+ ```
  Company Name  
  ------------------------------  
  Generic Name  
@@ -121,7 +127,7 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 Company Name  
 ----------------------------  
 NULL  
@@ -132,5 +138,3 @@ NULL
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  

@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 19f179ae869a175ea6238ba4ade9e5f87d663e08
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d200856e098317f3158c2ace61c8e7cbb0001e88
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297797"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917108"
 ---
 # <a name="dtutil-utility"></a>Encrypt
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **dtutil** コマンド プロンプト ユーティリティは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの管理に使用します。 このユーティリティを使用して、パッケージのコピー、移動、削除を行ったり、パッケージの存在を確認することができます。 これらの操作は [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ上で実行できます。このパッケージは、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のいずれかに格納されます。 このユーティリティが **msdb**に格納されているパッケージにアクセスする場合、コマンド プロンプトでユーザー名とパスワードが必要となる場合があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合、コマンド プロンプトではユーザー名とパスワードの両方が必要です。 ユーザー名を入力しない場合、 **dtutil** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にログオンしようとします。 パッケージのストレージ型は **SQL**、 **FILE**、および **DTS** オプションで指定します。  
@@ -66,18 +66,18 @@ ms.locfileid: "71297797"
   
  64 ビット コンピューターには、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって 64 ビット版の **dtexec** ユーティリティ (dtexec.exe) および **dtutil** ユーティリティ (dtutil.exe) がインストールされます。 32 ビット版のこれらの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ツールをインストールするには、セットアップ中に [クライアント ツール] または [ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ] を選択する必要があります。  
   
- 既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです (通常、32 ビットのディレクトリ パスは *\<ドライブ>* :\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn で、64 ビットのディレクトリ パスは *\<ドライブ>* :\Program Files\Microsoft SQL Server\130\DTS\Binn です。)  
+ 既定では、64 ビットと 32 ビットの両方のバージョンの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] コマンド プロンプト ユーティリティがインストールされている 64 ビット コンピューターでは、コマンド プロンプトで 32 ビット バージョンが実行されます。 これは、PATH 環境変数で、32 ビット バージョンのディレクトリ パスが 64 ビット バージョンのディレクトリ パスより前に配置されているためです (通常、32 ビットのディレクトリ パスは *\<drive>* :\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn で、64 ビットのディレクトリ パスは *\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn です)。  
   
 > [!NOTE]  
 >  SQL Server エージェントを使用してユーティリティを実行する場合は、SQL Server エージェントによって 64 ビット バージョンのユーティリティが自動的に使用されます。 SQL Server エージェントでは、PATH 環境変数ではなくレジストリを使用してユーティリティの適切な実行可能ファイルが特定されます。  
   
  コマンド プロンプトで 64 ビット バージョンのユーティリティが実行されるようにするには、次のいずれかの操作を実行します。  
   
--   コマンド プロンプト ウィンドウを開いて、64 ビット バージョンのユーティリティが格納されたディレクトリ *(\<ドライブ>* :\Program Files\Microsoft SQL Server\130\DTS\Binn) に移動し、その場所からユーティリティを実行します。  
+-   コマンド プロンプト ウィンドウを開いて、64 ビット バージョンのユーティリティが格納されたディレクトリ *(\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn) に移動し、その場所からユーティリティを実行します。  
   
--   コマンド プロンプトで、64 ビット バージョンのユーティリティの完全なパス ( *\<ドライブ>* :\Program Files\Microsoft SQL Server\130\DTS\Binn) を入力してユーティリティを実行します。  
+-   コマンド プロンプトで、64 ビット バージョンのユーティリティの完全なパス ( *\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn) を入力してユーティリティを実行します。  
   
--   PATH 環境変数で、64 ビットのパス ( *\<ドライブ>* :\Program Files\Microsoft SQL Server\130\DTS\Binn) を 32 ビットのパス ( *\<ドライブ>* :\ Program Files(x86)\Microsoft SQL Server\130\DTS\Binn) より前に配置してパスの順序を永続的に変更します。  
+-   PATH 環境変数で、64 ビットのパス ( *\<drive>* :\Program Files\Microsoft SQL Server\130\DTS\Binn) を、その変数内にある 32 ビットのパス ( *\<drive>* :\ Program Files(x86)\Microsoft SQL Server\130\DTS\Binn) より前に配置してパスの順序を永続的に変更します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -96,7 +96,7 @@ dtutil /option [value] [/option [value]]...
 |/DestP[assword] *password*|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用している [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続するために SQL オプションで使用されるパスワードを指定します。 コマンド ラインで *DESTPASSWORD* オプションを指定せずに *DTSUSER* を指定すると、エラーが生成されます。<br /><br /> 注: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。|  
 |/DestS[erver] *server_instance*|保存先が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]となる操作で使用されるサーバー名を指定します。 これは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージの保存時に、ローカル以外のサーバーまたは既定以外のサーバーを識別するために使用されます。 コマンド ラインで *と関連する操作を指定せずに* DESTSERVER [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定すると、エラーになります。 このオプションとの組み合わせが適しているのは、 *SIGN SQL*、 *COPY SQL*、または *MOVE SQL* オプションなどの操作を行うコマンドです。<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス名は、円記号とインスタンス名をサーバー名に追加することによって指定します。|  
 |/DestU[ser] *username*|*認証を使用する*インスタンスへ接続するために、 *SIGN SQL*オプション、 *COPY SQL* オプション、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] MOVE SQL [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オプションで使用するユーザー名を指定します。 コマンド ラインで *DESTUSER* オプション、 *SIGN SQL*オプション、または *COPY SQL*オプションを指定せずに *MOVE SQL* を指定すると、エラーになります。|  
-|/Dump *process ID*|(省略可) 指定したプロセス ( **dtexec** ユーティリティまたは **dtsDebugHost.exe** プロセス) を一時停止し、デバッグ ダンプ ファイル (.mdmp および .tmp) を作成します。<br /><br /> 注: **/Dump**オプションを使用するには、Debug Programs ユーザー権限 (SeDebugPrivilege) が割り当てられている必要があります。<br /><br /> 一時停止するプロセスの *process ID* を見つけるには、Windows タスク マネージャーを使用します。<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の既定では、デバッグ ダンプ ファイルは *\<ドライブ>* :\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps フォルダーに格納されます。<br /><br /> **dtexec** ユーティリティおよび **dtsDebugHost.exe** プロセスの詳細については、「 [dtexec Utility](../integration-services/packages/dtexec-utility.md) 」および「 [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)」を参照してください。<br /><br /> デバッグ ダンプ ファイルの詳細については、「 [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。<br /><br /> 注: デバッグ ダンプ ファイルには機密情報が含まれている場合があります。 アクセス制御リスト (ACL) を使用してファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーしてください。|  
+|/Dump *process ID*|(省略可) 指定したプロセス ( **dtexec** ユーティリティまたは **dtsDebugHost.exe** プロセス) を一時停止し、デバッグ ダンプ ファイル (.mdmp および .tmp) を作成します。<br /><br /> 注: **/Dump**オプションを使用するには、Debug Programs ユーザー権限 (SeDebugPrivilege) が割り当てられている必要があります。<br /><br /> 一時停止するプロセスの *process ID* を見つけるには、Windows タスク マネージャーを使用します。<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の既定では、デバッグ ダンプ ファイルは *\<drive>* :\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps フォルダーに格納されます。<br /><br /> **dtexec** ユーティリティおよび **dtsDebugHost.exe** プロセスの詳細については、「 [dtexec Utility](../integration-services/packages/dtexec-utility.md) 」および「 [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)」を参照してください。<br /><br /> デバッグ ダンプ ファイルの詳細については、「 [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。<br /><br /> 注: デバッグ ダンプ ファイルには機密情報が含まれている場合があります。 アクセス制御リスト (ACL) を使用してファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーしてください。|  
 |/DT[S] *filespec*|実行される [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージが [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアに存在することを指定します。 *filespec* 引数には、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアのルートから始まるフォルダー パスを指定する必要があります。 既定では、構成ファイル内のルート フォルダーの名前は "MSDB" と "File System" です。 空白を含むパスは、二重引用符で囲む必要があります。<br /><br /> DT[S] オプションが、次のオプションのいずれかと同じコマンド ライン上に指定された場合、DTEXEC_DTEXECERROR が返されます。<br /><br /> **FILE**<br /><br /> **SQL**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
 |/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(省略可能)。 読み込まれたパッケージを指定された保護レベルおよびパスワードで暗号化し、それを *Path*で指定された場所に保存します。 パスワードが必要かどうかは、 *ProtectionLevel* で判断されます。<br /><br /> *SQL* - Path には保存先となるパッケージ名を指定します。<br /><br /> *FILE* - Path にはパッケージの完全修飾パスとファイル名を指定します。<br /><br /> *DTS* - このオプションは現在サポートされていません。<br /><br /> *ProtectionLevel* オプション:<br /><br /> Level 0: 重要な情報を切り離します。<br /><br /> Level 1: ローカル ユーザーの資格情報を使用して重要な情報を暗号化します。<br /><br /> Level 2: 必要なパスワードを使用して重要な情報を暗号化します。<br /><br /> Level 3: 必要なパスワードを使用してパッケージを暗号化します。<br /><br /> Level 4: ローカル ユーザーの資格情報を使用してパッケージを暗号化します。<br /><br /> Level 5: パッケージは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ストレージの暗号化を使用します。|  
 |/Ex[ists]|(省略可能)。 パッケージが存在するかどうかを判断するために使用されます。 **dtutil** は、 *SQL*オプション、 *DTS* オプション、または *FILE* オプションのいずれかによって指定されたパッケージを検索します。 **dtutil** が指定されたパッケージを見つけることができない場合、DTEXEC_DTEXECERROR が返されます。|  

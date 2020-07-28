@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8dbc3df45f628c55e0d9e1cbf7f3b05b1a746091
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297784"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914298"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]のマージ変換およびマージ結合変換では、入力データが並べ替えられている必要があります。 入力データは物理的に並べ替える必要があります。さらに、変換元の出力および出力列、または上流の変換の出力および出力列に対して、並べ替えオプションを設定する必要があります。 並べ替えオプションでデータの並べ替えを設定していても、実際にデータの並べ替えが行われない場合、マージ操作やマージ結合操作で予測できない結果が発生します。  
@@ -75,7 +75,7 @@ ms.locfileid: "71297784"
   
 5.  **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
-6.  **[\<コンポーネント名> 出力]** をクリックし、**IsSorted** プロパティを **True** に設定します。  
+6.  **[\<component name> 出力]** をクリックし、**IsSorted** プロパティを **True** に設定します。  
   
     > [!NOTE]  
     >  出力の **IsSorted** プロパティを手動で **True** に設定したにもかかわらず、データが並べ替えられない場合、パッケージの実行時に、下流の結合変換またはマージ結合変換で、データの欠落、または不良データの比較が生じている可能性があります。  

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f145b536072314594af473488bc0b933c443230e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294690"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922529"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   CDC デザイナー コンソールを使用して、作成したインスタンスに関する情報を表示し、インスタンスの操作を管理することができます。  
@@ -107,17 +107,17 @@ ms.locfileid: "71294690"
     -   **[書き込まれた変更]** : SQL Server 変更テーブルに書き込まれた変更の数です。  
   
  **Oracle**  
- CDC インスタンスと、Oracle データベースに対する CDC インスタンスの接続に関する情報が表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、 **[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<インスタンス> のプロパティ] ダイアログ ボックスを開きます。  
+ CDC インスタンスと、Oracle データベースに対する CDC インスタンスの接続に関する情報が表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、 **[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<instance> のプロパティ] ダイアログ ボックスを開きます。  
   
  これらのプロパティとその編集方法については、「 [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)」を参照してください。  
   
  **テーブル**  
- CDC インスタンスに含まれるテーブルについての情報を表示します。 列情報も表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、 **[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<インスタンス> のプロパティ] ダイアログ ボックスを開きます。  
+ CDC インスタンスに含まれるテーブルについての情報を表示します。 列情報も表示されます。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、 **[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<instance> のプロパティ] ダイアログ ボックスを開きます。  
   
  これらのプロパティとその編集方法については、「 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)」を参照してください。  
   
  **詳細**  
- CDC インスタンスの詳細プロパティとプロパティ値を表示します。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、 **[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<インスタンス> のプロパティ] ダイアログ ボックスを開きます。  
+ CDC インスタンスの詳細プロパティとプロパティ値を表示します。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、 **[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<instance> のプロパティ] ダイアログ ボックスを開きます。  
   
  これらのプロパティとその編集方法については、「 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)」を参照してください。  
   

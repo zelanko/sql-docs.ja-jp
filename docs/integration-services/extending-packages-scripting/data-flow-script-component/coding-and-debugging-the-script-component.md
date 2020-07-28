@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7273296d1c316cb16ae40b5e7194d6b6d8846e0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286542"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913447"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>スクリプト コンポーネントのコーディングおよびデバッグ
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 **[スクリプト変換エディター]** を開くと、スクリプト コンポーネントはメタデータ デザイン モードになります。このモードでは、メタデータを構成し、コンポーネントのプロパティを設定します。 メタデータ デザイン モードで、スクリプト コンポーネントのプロパティを設定して、入力と出力を構成したら、コード デザイン モードに切り替えてカスタム スクリプトを記述できます。 メタデータ デザイン モードとコード デザイン モードについて詳しくは、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」をご覧ください。  
@@ -40,7 +40,7 @@ ms.locfileid: "71286542"
 ### <a name="script-component-development-environment"></a>スクリプト コンポーネント開発環境  
  スクリプトを記述するには、 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開きます。 VSTA IDE には、色分け表示が可能な [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] エディター、IntelliSense、オブジェクト ブラウザーなど、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 環境での標準機能がすべて含まれています。  
   
- スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、**[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。  
+ スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、 **[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。  
   
  スクリプト コンポーネントで作成したスクリプトは、パッケージ定義に格納されます。 スクリプト ファイルが別途存在するわけではありません。 したがって、スクリプト コンポーネントを使用してもパッケージの配置には影響しません。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "71286542"
   
     -   **Connections** コレクション クラス。[スクリプト変換エディター] の [接続マネージャー] ページで選択された、接続への参照が含まれています。  
   
-    -   **Variables** コレクション クラス。**[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariable** および **ReadWriteVariables** プロパティに入力された変数への参照が含まれています。  
+    -   **Variables** コレクション クラス。 **[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariable** および **ReadWriteVariables** プロパティに入力された変数への参照が含まれています。  
   
--   **BufferWrapper** プロジェクト アイテム。**[スクリプト変換エディター]** の **[入力および出力]** ページで構成された各入力および出力に対して、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から継承されたクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。  
+-   **BufferWrapper** プロジェクト アイテム。 **[スクリプト変換エディター]** の **[入力および出力]** ページで構成された各入力および出力に対して、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から継承されたクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。  
   
  これらのオブジェクト、メソッド、およびプロパティの使用方法については、「[スクリプト コンポーネントのオブジェクト モデルについて](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)」をご覧ください。 特定の種類のスクリプト コンポーネントで、これらのクラスのメソッドおよびプロパティを使用する方法については、セクション「[その他のスクリプト コンポーネントの例](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)」をご覧ください。 サンプルについてのトピックでは、完全なコード例も示します。  
   

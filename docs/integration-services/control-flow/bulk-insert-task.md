@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81ac32f8fff04a1a81d4397cc196c506eab164d2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294327"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923313"
 ---
 # <a name="bulk-insert-task"></a>一括挿入タスク
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   一括挿入タスクは、大量のデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューにコピーするための効率的な方法です。 たとえば、会社で 100 万行の製品リストをメインフレーム システムに格納し、電子商取引システムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して Web ページを構成しているとします。 また、メインフレームにあるマスター製品リストを使用して、夜間に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の製品テーブルを更新する必要があるものとします。 このテーブルを更新するには、製品リストをタブ区切り形式で保存し、一括挿入タスクを使用してデータを直接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにコピーします。  
@@ -125,7 +125,7 @@ ms.locfileid: "71294327"
   
 ### <a name="options"></a>Options  
  **接続**  
- OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...** >] をクリックして新しい接続を作成します。  
+ OLE DB 接続マネージャーを一覧から選択するか、[\<**New connection...**>] をクリックして新しい接続を作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71294327"
 |**[指定]**|フォーマットを指定します。 このオプションを選択すると、動的オプションの **[RowDelimiter]** および **[ColumnDelimiter]** が表示されます。|  
   
  **[最近使ったファイル]**  
- ファイル接続マネージャーまたはフラット ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続...** >] をクリックして新しい接続を作成します。  
+ ファイル接続マネージャーまたはフラット ファイル接続マネージャーを一覧から選択するか、[\<**New connection...**>] をクリックして新しい接続を作成します。  
   
  このファイルの場所は、このタスクの接続マネージャーに指定されている SQL Server データベース エンジンを基準とする相対パスです。 SQL Server データベース エンジンは、サーバーのローカル ハード ドライブ、共有、または SQL Server にマップされたドライブでこのテキスト ファイルにアクセスできる必要があります。 SSIS ランタイムはこのファイルにアクセスしません。  
   

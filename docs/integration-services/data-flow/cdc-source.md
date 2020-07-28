@@ -15,16 +15,16 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 668b7343ae893d302a27c0a68aec58e536cffcc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 397936fb2bd6314c83460b233a59ef6e72e113d7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293279"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915486"
 ---
 # <a name="cdc-source"></a>CDC ソース
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   CDC ソースは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブルから変更データの範囲を読み取り、変更内容を下流の他の SSIS コンポーネントに伝えます。  
@@ -82,11 +82,11 @@ use <cdc-enabled-database-name>
   
  各値の説明:  
   
--   \<cdc-enabled-database-name> は、変更テーブルが含まれている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの名前です。  
+-   \<cdc-enabled-database-name> は、変更テーブルが含まれる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの名前です。  
   
 -   \<value-from-state-cs> は、CDC 状態変数に、CS/\<value-from-state-cs>/ として示される値です (CS は Current-processing-range-Start (現在の処理範囲の開始) の略語です)。  
   
--   \<value-from-state-ce> は、CDC 状態変数に、CE/\<value-from-state-ce>/ として示される値です (CE は Current-processing-range-End (現在の処理範囲の終了) の略語です)。  
+-   \<value-from-state-ce> は、CDC 状態変数に、CE/\<value-from-state-cs>/ として示される値です (CE は Current-processing-range-End (現在の処理範囲の開始) の略語です)。  
   
 -   \<mode> は、CDC の処理モードです。 この処理モードは、 **[すべて]** 、 **[古い値を含むすべて]** 、 **[差分]** 、 **[更新マスクを含む差分]** 、 **[結合を含む差分]** のいずれかの値です。  
   
@@ -151,7 +151,7 @@ use <cdc-enabled-database-name>
  **[キャプチャ インスタンス]**  
  読み取る CDC テーブルの CDC キャプチャ インスタンスの名前を選択または入力します。  
   
- キャプチャされたソース テーブルには、スキーマの変更によりテーブル定義のシームレスな遷移を処理するためのキャプチャされたインスタンスが 1 ～ 2 個含まれることがあります。 キャプチャ対象のソース テーブルに複数のキャプチャ インスタンスが定義されている場合は、ここで使用するキャプチャ インスタンスを選択してください。 [スキーマ].[テーブル] という形式のテーブルの既定のキャプチャ インスタンス名は \<スキーマ>_\<テーブル> ですが、使用される実際のキャプチャ インスタンス名は異なる可能性があります。 読み取り元の実際のテーブルは、**cdc .\<キャプチャ インスタンス>_CT** という形式の CDC テーブルです。  
+ キャプチャされたソース テーブルには、スキーマの変更によりテーブル定義のシームレスな遷移を処理するためのキャプチャされたインスタンスが 1 ～ 2 個含まれることがあります。 キャプチャ対象のソース テーブルに複数のキャプチャ インスタンスが定義されている場合は、ここで使用するキャプチャ インスタンスを選択してください。 [schema].[table] という形式のテーブルの既定のキャプチャ インスタンス名は \<schema>_\<table> ですが、使用される実際のキャプチャ インスタンス名は異なる可能性があります。 読み取り元の実際のテーブルは、**cdc .\<capture-instance>_CT** という形式の CDC テーブルです。  
   
  **[CDC 処理モード]**  
  処理上のニーズに最も適した処理モードを選択します。 オプションは次のとおりです。  

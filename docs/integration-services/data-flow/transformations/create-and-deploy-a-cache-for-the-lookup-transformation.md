@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e53569a8680ec3a6414aeeaa83e9322e77568ecf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0f402739a63d4e11983c4ad1b50d0c2f337a9e1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297973"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918858"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>参照変換用のキャッシュを作成および配置する
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   参照変換用のキャッシュ ファイル (.caw) を作成および配置できます。 参照データセットはキャッシュ ファイルに格納されます。  
@@ -90,7 +90,7 @@ ms.locfileid: "71297973"
   
 4.  配置ユーティリティを作成するようにプロジェクトを構成し、プロジェクトをビルドします。 詳細については、「 [配置ユーティリティを作成する](../../../integration-services/packages/create-a-deployment-utility.md)」を参照してください。  
   
-     マニフェスト ファイル \<*プロジェクト名*>.SSISDeploymentManifest.xml が作成されて、プロジェクトに含まれるその他のファイル、パッケージ、およびパッケージ構成の一覧が示されます。  
+     マニフェスト ファイル \<*project name*>.SSISDeploymentManifest.xml が作成され、プロジェクトに含まれるその他のファイル、パッケージ、およびパッケージ構成の一覧が示されます。  
   
 5.  パッケージをファイル システムに配置します。 詳細については、「 [配置ユーティリティを使用してパッケージを配置する](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md)」を参照してください。  
   

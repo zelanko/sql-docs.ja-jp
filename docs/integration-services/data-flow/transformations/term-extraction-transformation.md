@@ -28,16 +28,16 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c76fff59151ffd2e291cd259fbe35fdffd9c4eec
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297755"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914273"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   用語抽出変換は、変換入力列内のテキストから用語を抽出し、変換出力列に書き込みます。 この変換で処理されるテキストは英語テキストのみで、独自の英語辞書および英語に関する言語情報を使用します。  
@@ -153,7 +153,7 @@ ms.locfileid: "71297755"
   
 -   数字、句読点、および英文字の組み合わせ。 たとえば、 *A23B#99* は、用語 *A23B*を返します。  
   
--   %、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、"、' 文字。  
+-   %、@、&、$、#、\*、:、;、.、 **、** 、!、?、\<, >、+、=、^、~、|、\\、/、(、)、[、]、{、}、"、' 文字。  
   
     > [!NOTE]  
     >  1 つ以上のピリオド (.) が含まれる頭字語は、複数の文に分割されません。  

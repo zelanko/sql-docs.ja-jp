@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283270"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922228"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>レッスン 3-2:ログ記録の追加および構成
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "71283270"
   
 5.  必要に応じて、 **[説明]** の内容を修正します。  
   
-6.  **[構成]** 列で、 **[\<新しい接続>]** を選択し、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がログ情報を書き込む場所を指定します。  
+6.  **[構成]** 列で、 **[\<New Connection>]** を選択し、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がログ情報を書き込む場所を指定します。  
   
     **[ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[使用法の種類]** ボックスの一覧から **[ファイルの作成]** を選択し、 **[参照]** を選択します。 既定では、 **[ファイルの選択]** ダイアログにこのプロジェクトのフォルダーが表示されますが、ログ情報を別の場所に保存することもできます。  
   

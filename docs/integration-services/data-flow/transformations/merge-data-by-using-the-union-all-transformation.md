@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 42c556b3c348205833f4d080199c184dd30c8cf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18ae2128e0f0bcbec5f3fb78a63778f44f260bf5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291255"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915243"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>全体結合変換を使用してデータをマージする
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   全体結合変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 2 つのデータ ソースがあらかじめ含まれている必要があります。  
@@ -42,7 +42,7 @@ ms.locfileid: "71291255"
   
 4.  全体結合変換をダブルクリックします。  
   
-5.  **[全体結合変換エディター]** で、入力の一覧の行をクリックして次に列を選択し、入力の列を **[出力列の名前]** 一覧にある列にマップします。 列のマッピングをスキップするには、入力の一覧で **[\<無視>]** を選択します。  
+5.  **[全体結合変換エディター]** で、入力の一覧の行をクリックして次に列を選択し、入力の列を **[出力列の名前]** 一覧にある列にマップします。 列のマッピングをスキップするには、入力の一覧で **[\<ignore>]** を選択します。  
   
     > [!NOTE]  
     >  2 つの列の間のマッピングでは、列のメタデータが一致する必要があります。  

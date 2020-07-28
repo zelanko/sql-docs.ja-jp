@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f899ec9c1e006212483a49133ad343e93f20173
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287846"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918332"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>実行中のパッケージとその他の操作の監視
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   次の 1 つ以上のツールを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行、プロジェクトの検証、およびその他の操作を監視できます。 データ タップなどの特定のツールは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されたプロジェクトに対してのみ使用できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "79287846"
  9 つの状態の種類を使用して、操作の状態を示します。 状態の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。  
 
 ## <a name="active-operations-dialog-box"></a><a name="active_ops"></a> [アクティブな操作] ダイアログ ボックス
-  配置、検証、パッケージの実行など、** サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、**[アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
+  配置、検証、パッケージの実行など、 **サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、** [アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
   
  関連 [!INCLUDE[tsql](../../includes/tsql-md.md)] ビューの詳細については、「[catalog.operations (SSISDB データベース)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」、「[catalog.validations (SSISDB データベース)](../../integration-services/system-views/catalog-validations-ssisdb-database.md)」、「[catalog.executions (SSISDB データベース)](../../integration-services/system-views/catalog-executions-ssisdb-database.md)」を参照してください。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "79287846"
  **"すべての検証" レポート** には、サーバーで実行されたすべての [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の検証の概要が表示されます。 この概要には、状態、開始時刻、終了時刻など、各検証の情報が表示されます。 各概要エントリには、検証中に生成されたメッセージへのリンクが含まれます。 Integration Services ダッシュボードと同様に、テーブルにフィルターを適用して、表示される情報を絞り込むことができます。  
   
 ### <a name="custom-reports"></a>カスタム レポート  
- **の** [Integration Services カタログ] **ノードの下の** [SSISDB] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]カタログ ノードに、カスタム レポート (.rdl ファイル) を追加できます。 レポートを追加する前に、ソース テーブルなど、参照するオブジェクトを完全修飾するための 3 つの要素で構成される名前付け規則を使用していることを確認します。 そうでない場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でエラーが表示されます。 名前付け規則は、\<データベース>.\<所有者>.\<オブジェクト> です。 たとえば、SSISDB.internal.executions などです。  
+ **の** [Integration Services カタログ] **ノードの下の** [SSISDB] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]カタログ ノードに、カスタム レポート (.rdl ファイル) を追加できます。 レポートを追加する前に、ソース テーブルなど、参照するオブジェクトを完全修飾するための 3 つの要素で構成される名前付け規則を使用していることを確認します。 そうでない場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でエラーが表示されます。 名前付け規則は、\<database>.\<owner>.\<object> です。たとえば、SSISDB.internal.executions などです。  
   
 > [!NOTE]  
 >  **[データベース]** ノードの下の **[SSISDB]** ノードにカスタム レポートを追加した場合、SSISDB プレフィックスは必要ありません。  

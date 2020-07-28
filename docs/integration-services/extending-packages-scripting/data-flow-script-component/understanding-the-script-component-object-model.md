@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e265f95741ba3957902e7f502232bc4c08bbcbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286588"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914238"
 ---
 # <a name="understanding-the-script-component-object-model"></a>スクリプト コンポーネントのオブジェクト モデルについて
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   「[スクリプト コンポーネントのコーディングおよびデバッグ](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」で説明したように、スクリプト コンポーネント プロジェクトには、次の 3 つのプロジェクト アイテムがあります。  
@@ -130,7 +130,7 @@ public override void PreExecute()
   
 -   **ProcessInput** メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に **PreExecute** メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 **ProcessInput** は **\<inputbuffer>_ProcessInput** メソッドに処理を渡します。 次に **ProcessInput** メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な **FinishOutputs** メソッドとプライベート メソッド **MarkOutputsAsFinished** を呼び出します。 **MarkOutputsAsFinished** メソッドは、次に最後の出力バッファーの **SetEndOfRowset** を呼び出します。  
   
--   **\<inputbuffer>_ProcessInput** メソッドのオーバーライド可能な実装。 この既定の実装では、単に各入力行の間をループし、 **\<inputbuffer>_ProcessInputRow** を呼び出します。  
+-   **\<inputbuffer>_ProcessInput** メソッドのオーバーライド可能な実装。 この既定の実装では、単に各入力行をループし、 **\<inputbuffer>_ProcessInputRow** を呼び出します。  
   
 -   **\<inputbuffer>_ProcessInputRow** メソッドのオーバーライド可能な実装。 既定の実装では、空のままです。 このメソッドは、カスタム データ処理コードを記述するために、通常はオーバーライドして使用します。  
   
@@ -139,7 +139,7 @@ public override void PreExecute()
   
 -   入力行が渡されるたびにそのデータを処理するには、 **\<inputbuffer>_ProcessInputRow** をオーバーライドします。  
   
--   入力行をループするときに追加の処理を行う必要がある場合にのみ、 **\<inputbuffer>_ProcessInput** をオーバーライドします (たとえば、すべての行が処理された後に他のアクションを実行するために **EndOfRowset** をテストする必要がある場合)。行の処理を実行するには、 **\<inputbuffer>_ProcessInputRow** を呼び出します。  
+-   入力行をループするときに追加の処理を行う必要がある場合にのみ、 **\<inputbuffer>_ProcessInput** をオーバーライドします。 (たとえば、すべての行が処理された後に他のアクションを実行するために **EndOfRowset** をテストする必要がある場合)。行の処理を実行するには、 **\<inputbuffer>_ProcessInputRow** を呼び出します。  
   
 -   出力を閉じる前に、出力に対して何らかの処理を行う場合は、**FinishOutputs** をオーバーライドします。  
   

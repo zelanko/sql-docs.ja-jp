@@ -1,5 +1,6 @@
 ---
 title: 結合 (SQL Server) | Microsoft Docs
+description: SQL Server で採用される結合演算の種類について説明します。 SQL Server では、結合演算を使用して、テーブルの列分割、または列記憶がサポートされます。
 ms.custom: ''
 ms.date: 07/19/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009688"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915848"
 ---
 # <a name="joins-sql-server"></a>結合 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -245,7 +246,7 @@ WHERE [fo].[Quantity] = 361;
 - データベース互換性レベルが 140 以上である。
 - クエリが `SELECT` ステートメントである (現在、データ変更ステートメントは使えません)。
 - 結合が、インデックス付きのネステッド ループ結合またはハッシュ結合の両方の物理アルゴリズムで実行できる。
-- クエリ全体に列ストア インデックスが存在することにより、または列ストア インデックス テーブルを結合で直接参照することにより、ハッシュ結合が[バッチ モード](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)を使っている。
+- クエリ全体に列ストア インデックスが存在すること、列ストア インデックス テーブルを結合で直接参照すること、または[行ストア機能でバッチ モード](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)を使用することにより、有効化されたバッチ モードをハッシュ結合が使っている。
 - ネステッド ループ結合とハッシュ結合の生成された代替ソリューションが、同じ最初の子 (外部参照) を持っている。
 
 ### <a name="adaptive-threshold-rows"></a>アダプティブしきい値行

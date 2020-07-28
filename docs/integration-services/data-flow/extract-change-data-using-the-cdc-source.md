@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 35e8d152cbffb5a5f34be4cda5c7e97fc8140d2d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56eda2d73e9d60367529e078829900433bd8617e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292805"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906582"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>CDC ソースを使用した変更データ抽出
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   CDC ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの CDC 制御タスクがあらかじめ含まれている必要があります。  
@@ -44,7 +44,7 @@ ms.locfileid: "71292805"
   
 7.  読み取る CDC テーブルの **CDC キャプチャ インスタンス** の名前を選択または入力します。  
   
-     キャプチャされたソース テーブルには、スキーマの変更によりテーブル定義のシームレスな遷移を処理するためのキャプチャされたインスタンスが 1 ～ 2 個含まれることがあります。 キャプチャ対象のソース テーブルに複数のキャプチャ インスタンスが定義されている場合は、ここで使用するキャプチャ インスタンスを選択してください。 [スキーマ].[テーブル] という形式のテーブルの既定のキャプチャ インスタンス名は \<スキーマ>_\<テーブル> ですが、使用される実際のキャプチャ インスタンス名は異なる可能性があります。 読み取り元の実際のテーブルは、**cdc .\<キャプチャ インスタンス>_CT** という形式の CDC テーブルです。  
+     キャプチャされたソース テーブルには、スキーマの変更によりテーブル定義のシームレスな遷移を処理するためのキャプチャされたインスタンスが 1 ～ 2 個含まれることがあります。 キャプチャ対象のソース テーブルに複数のキャプチャ インスタンスが定義されている場合は、ここで使用するキャプチャ インスタンスを選択してください。 [schema].[table] という形式のテーブルの既定のキャプチャ インスタンス名は \<schema>_\<table> ですが、使用される実際のキャプチャ インスタンス名は異なる可能性があります。 読み取り元の実際のテーブルは、**cdc .\<capture-instance>_CT** という形式の CDC テーブルです。  
   
 8.  処理上のニーズに最も適した処理モードを選択します。 オプションは次のとおりです。  
   

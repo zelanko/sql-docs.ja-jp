@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 581cdcddc2138b2d5cd78790be412e0ad0a9fdda
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293930"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920478"
 ---
 # <a name="send-mail-task"></a>メール送信タスク
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   メール送信タスクは、電子メール メッセージを送信します。 メール送信タスクを使用すると、パッケージ ワークフロー内のタスクが成功または失敗した場合にパッケージからメッセージを送信したり、実行時にパッケージで発生するイベントに応答してメッセージを送信したりできます。 たとえば、データベースのバックアップ タスクが成功または失敗したことを、メール送信タスクからデータベース管理者に通知できます。  
@@ -105,7 +105,7 @@ ms.locfileid: "71293930"
   
 ### <a name="options"></a>Options  
  **[SMTPConnection]**  
- 一覧で SMTP 接続マネージャーを選択するか、[ **\<新しい接続...>** ] をクリックして新しい接続マネージャーを作成します。  
+ SMTP 接続マネージャーを一覧から選択するか、 **[\<New connection...>]** をクリックして新しい接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  SMTP 接続マネージャーでは、匿名認証と Windows 認証のみがサポートされています。 基本認証はサポートされていません。  
@@ -153,13 +153,13 @@ ms.locfileid: "71293930"
   
 #### <a name="messagesourcetype--file-connection"></a>[MessageSourceType] = [ファイル接続]  
  **[MessageSource]**  
- ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続...>** ] をクリックして新しい接続マネージャーを作成します。  
+ 一覧でファイル接続マネージャーを選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>[MessageSourceType] = [変数]  
  **[MessageSource]**  
- 一覧で変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
+ 一覧で変数を選択するか、[\<**New variable...**>] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

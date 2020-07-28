@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216899"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920339"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   このチュートリアルでは、SSIS パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに SQL ビューとして公開する詳細な手順について説明します。  
@@ -164,9 +164,9 @@ ms.locfileid: "80216899"
   
 1.  SQL Server Management Studio を起動します。  
   
-2.  \<**コンピューター名**>、 **[データベース]** 、\<**ウィザードで選択したデータベース**>、 **[ビュー]** の順に展開します。  
+2.  [\<**machine name**>]、 **[データベース]** 、[\<**database you selected in the wizard**>]、 **[ビュー]** を展開します。  
   
-3.  ウィザードで作成した \<**ウィザードで作成したビュー**> を右クリックし、 **[上位 1000 行を選択]** をクリックします。  
+3.  ウィザードで作成した [\<**view created by the wizard**>] を右クリックし、 **[上位 1000 行を選択]** をクリックします。  
   
 4.  SSIS パッケージの結果が表示されることを確認します。  
   

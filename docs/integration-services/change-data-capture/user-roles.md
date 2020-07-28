@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 194eb7232aaf0ffd1f323d6291c0efb06f88a397
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f9f27f5964f92e876822af83a091926d727f921
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298591"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916698"
 ---
 # <a name="user-roles"></a>ユーザー ロール
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   ここでは、Change Data Capture Service for Oracle by Attunity のユーザー ロールについて説明します。 ここで説明するロールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロール、Windows ロール、または Oracle データベース ロールです。  

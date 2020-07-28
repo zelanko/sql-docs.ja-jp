@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a4aebf354f999b26be59efc2f3c25a205dd3d9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b9fc8c8f8b5072afff038c590c82898776534a3c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298787"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921624"
 ---
 # <a name="error-handling"></a>エラー処理
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Oracle CDC インスタンスでは、単一の Oracle ソース データベース (Oracle RAC クラスターは単一のデータベースと見なされます) から変更を検出し、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる CDC データベースの変更テーブルにコミット済みの変更を書き込みます。  

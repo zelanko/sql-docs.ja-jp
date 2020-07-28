@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db56206a629a4bf392ef56641564208ff1a9d3c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293799"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913818"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Web サービス タスクは、Web サービス メソッドを実行します。 Web サービス タスクは、次の目的で使用できます。  
@@ -87,7 +87,7 @@ ms.locfileid: "71293799"
   
 ### <a name="options"></a>Options  
  **[HTTPConnection]**  
- 接続マネージャーを一覧から選択するか、\<[**新しい接続...>]** をクリックして新しい接続マネージャーを作成します。  
+ 接続マネージャーを一覧から選択するか、[\<**New connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
@@ -173,13 +173,13 @@ ms.locfileid: "71293799"
   
 #### <a name="outputtype--file-connection"></a>[OutputType] = [ファイル接続]  
  **[最近使ったファイル]**  
- ファイル接続マネージャーを一覧から選択するか、\<[**新しい接続...>]** をクリックして新しい接続マネージャーを作成します。  
+ 一覧でファイル接続マネージャーを選択するか、[\<**New Connection...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>[OutputType] = [変数]  
  **変数**  
- 一覧で変数を選択するか、\<[**新しい変数...>]** をクリックして新しい変数を作成します。  
+ 一覧で変数を選択するか、[\<**New Variable...**>] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

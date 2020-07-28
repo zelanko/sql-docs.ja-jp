@@ -15,16 +15,16 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ca597190bb5ace7a2f81532ae6482b3e423c81f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298213"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914773"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   ODBC 入力先は、ODBC でサポートされているデータベース テーブルにデータを一括で読み込みます。 ODBC 入力先は ODBC 接続マネージャーを使用してデータ ソースに接続します。  
@@ -132,7 +132,7 @@ ms.locfileid: "71298213"
  使用できる変換先列の一覧です。 使用できる入力列に変換先列をドラッグ アンド ドロップして、列をマップできます。  
   
 #### <a name="input-column"></a>入力列  
- 選択した入力列を表示します。 出力から列を除外するために **\<無視>** を選択することで、マッピングを削除できます。  
+ 選択した入力列を表示します。 出力から列を除外するために **[\<ignore>]** を選択することで、マッピングを削除できます。  
   
 #### <a name="destination-column"></a>変換先列  
  使用できるすべての変換先列を表示します (マップ済みの列とマップされていない列を両方とも含む)。  

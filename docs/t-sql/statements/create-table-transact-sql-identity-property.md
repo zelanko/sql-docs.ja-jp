@@ -21,12 +21,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f9b8cf8fd74f980c6ea85a335058779cd5736b
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 48b8dbac5a4ad484103dcceedb243a52cc7e621d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834733"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943095"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (プロパティ)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -49,7 +49,10 @@ IDENTITY [ (seed , increment) ]
  テーブルに読み込まれる最初の行に使用される値です。  
   
  *increment*  
- 読み込まれている前の行の ID 値に加算される増分の値です。  
+ 読み込まれている前の行の ID 値に加算される増分の値です。
+
+ > [!NOTE]
+ > Azure Synapse Analytics では、データ ウェアハウスの分散アーキテクチャにより、ID の値は増分になりません。 詳細については、「[Synapse SQL プールで IDENTITY を使用して代理キーを作成する](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values)」を参照してください。
   
  seed と increment の両方を指定するか、またはどちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
   
@@ -62,8 +65,11 @@ IDENTITY [ (seed , increment) ]
   
  列の ID プロパティでは、次の点は保証されません。  
   
--   **値の一意性**: **PRIMARY KEY** 制約、**UNIQUE** 制約、または **UNIQUE** インデックスを使用して、一意性を強制する必要があります。  
-  
+-   **値の一意性**: **PRIMARY KEY** 制約、**UNIQUE** 制約、または **UNIQUE** インデックスを使用して、一意性を強制する必要があります。 - 
+ 
+> [!NOTE]
+> Azure Synapse Analytics では、**PRIMARY KEY** 制約、**UNIQUE** 制約、または **UNIQUE** インデックスはサポートされません。 詳細については、「[Synapse SQL プールで IDENTITY を使用して代理キーを作成する](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key)」を参照してください。
+
 -   **トランザクション内の連続する値**: 複数行を挿入するトランザクションは、テーブルで同時に他の挿入が実行される可能性があるため、その複数行の連続する値を取得するとは限りません。 連続した値にする必要がある場合、トランザクションはテーブル上で排他ロックを使用するか、**SERIALIZABLE** 分離レベルを使用する必要があります。  
   
 -   **サーバーの再起動または他のエラーが発生した後の連続した値** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パフォーマンス上の理由から ID 値をキャッシュすることがあります。割り当てられた値の一部は、データベースの障害やサーバーの再起動が発生したときに失われることがあります。 その結果、挿入時に非連続的な ID 値が生成される場合があります。 非連続的な値が許可されない場合、アプリケーションは独自のメカニズムを使用してキー値を生成する必要があります。 シーケンス ジェネレーターを **NOCACHE** オプションを指定して使用すると、非連続的な値を絶対にコミットされないトランザクションに制限することができます。  
