@@ -2,26 +2,26 @@
 title: R + T-SQL チュートリアル:モデルのトレーニング
 description: SQL Server ストアド プロシージャと T-SQL 関数を使用して R モデルをトレーニング、シリアル化、および保存する方法を示すチュートリアルです。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 406f8e1c60c5820f9edaaf7760b7aeed321d2611
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ada26cbf8091b7e7b29e22378be5aa5f2b880314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725226"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>レッスン 3:T-SQL を使用したモデルのトレーニングと保存
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事は、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
 
-このレッスンでは、R を使用して機械学習モデルをトレーニングする方法について説明します。前のレッスンで作成したデータの特徴量を使用してモデルをトレーニングし、トレーニング済みのモデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。 この場合、R パッケージは [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]と共に既にインストールされているため、SQL からすべてを実行できます。
+このレッスンでは、R を使用して機械学習モデルをトレーニングする方法について説明します。前のレッスンで作成したデータ機能を使用してモデルをトレーニングし、トレーニング済みのモデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。 この場合、R パッケージは [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]と共に既にインストールされているため、SQL からすべてを実行できます。
 
 ## <a name="create-the-stored-procedure"></a>ストアド プロシージャを作成する
 
@@ -60,13 +60,13 @@ T-SQL から R を呼び出すときは、システムストアドプロシー�
     GO
     ```
 
-    - モデルをテストするために一部のデータが残っていることを確認してください。トレーニング目的で、データの70% がタクシー データ テーブルからランダムに選択されます。
+    - モデルをテストするために一部のデータが残っていることを確認するために、トレーニング目的で、データの70% がタクシー データ テーブルからランダムに選択されます。
 
-    - SELECT クエリによって、カスタムのスカラー関数 *fnCalculateDistance* が使用され、乗車位置と降車位置の直線距離が計算されます。 クエリの結果は R の既定の入力変数 `InputDataset` に格納されます。
+    - SELECT クエリによって、カスタムのスカラー関数 *fnCalculateDistance* が使用され、乗車位置と降車位置直線距離が計算されます。 クエリの結果は R の既定の入力変数 `InputDataset` に格納されます。
   
     - R スクリプトは、ロジスティック回帰モデルを作成するために、[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] に含まれる拡張 R 関数の 1 つである **rxLogit** 関数を呼び出します。
   
-        二値変数 _tipped_ が *ラベル* または結果列として使用され、モデルは、  _passenger_count_、 _trip_distance_、 _trip_time_in_secs_、および _direct_distance_ の特徴量列を使用して調整されます。
+        二項変数 _tipped_ が *ラベル* または結果列として使用され、モデルは、  _passenger_count_、 _trip_distance_、 _trip_time_in_secs_、および _direct_distance_の機能列を使用して調整されます。
   
     - R 変数 `logitObj` に保存されたトレーニング済みのモデルはシリアル化され、出力パラメーターとして返されます。
 
@@ -90,7 +90,7 @@ T-SQL から R を呼び出すときは、システムストアドプロシー�
 
 3.  ステートメントが完了したら、テーブル *nyc_taxi_models* を開きます。 データの処理とモデルの調整には、しばらく時間がかかる場合があります。
 
-    _[model]_ 列にシリアル化されたモデル、および _[name]_ 列にモデル名 **RxTrainLogit_model** を含む、1 つの新しい行が追加されていることがわかります。
+    _[モデル]_ 列にシリアル化されたモデル、および _[名前]_ 列にモデル名 **RxTrainLogit_model** を含む、1 つの新しい行が追加されていることがわかります。
 
     ```sql
     model                        name
@@ -106,5 +106,5 @@ T-SQL から R を呼び出すときは、システムストアドプロシー�
 
 ## <a name="previous-lesson"></a>前のレッスン
 
-[レッスン 2:R と T-SQL 関数を使用したデータの特徴量の作成](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[レッスン 2:R と T-SQL 関数を使用したデータ機能の作成](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

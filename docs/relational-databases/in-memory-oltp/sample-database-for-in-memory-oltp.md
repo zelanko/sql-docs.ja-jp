@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735038"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245209"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -465,14 +465,12 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  データベースが作成された後のスナップショット:  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|Default|0|  
 |MEMORYCLERK_XTP|Default|0|  
-||||
   
  既定のメモリ クラークは比較的小さく、システム全体のメモリ構造が含まれています。 ユーザー データベースのメモリ クラーク (この場合は ID 5 のデータベース) は約 900 MB です。  
   
@@ -490,9 +488,8 @@ WHERE t.type='U'
   
  サンプルの新しいインストールに対するこのクエリの結果を次の表に示します。  
   
-||||  
-|-|-|-|  
-|**テーブル名**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| テーブル名 | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SpecialOfferProduct_inmem|64|3840|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
@@ -500,7 +497,6 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-||||
 
  テーブルがかなり小さいことがわかります。SalesOrderHeader_inmem は約 7 MB、SalesOrderDetail_inmem は約 15 MB です。  
   
@@ -516,14 +512,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|Default|0|  
 |MEMORYCLERK_XTP|Default|0|  
-||||
 
  このように、SQL Server がサンプル データベースのメモリ最適化テーブルおよびインデックスに対して使用しているビットは 8 GB を下回ります。  
   
@@ -538,9 +532,8 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
-||||  
-|-|-|-|  
-|**テーブル名**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| テーブル名 | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
 |SpecialOffer_inmem|2|8192|  
@@ -548,7 +541,6 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-||||
 
  データの合計サイズが約 6.5 GB であることがわかります。 SalesOrderHeader_inmem テーブルと SalesOrderDetail_inmem テーブルのインデックスのサイズが、販売注文を挿入する前のインデックスのサイズと同じであることに注意してください。 インデックスのサイズが変わらなかったのは、この両方のテーブルがハッシュ インデックスを使用しているからです。ハッシュ インデックスは静的です。  
   
@@ -564,14 +556,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|Default|0|  
 |MEMORYCLERK_XTP|Default|0|  
-||||
 
  これは想定されている動作です。メモリはトランザクション ワークロードの実行中に再利用されます。  
   
@@ -584,14 +574,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|Default|0|  
 |MEMORYCLERK_XTP|Default|0|  
-||||
 
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>メモリ最適化テーブルのディスク使用率  
  特定の時点におけるデータベースのチェックポイント ファイルに対する、全体的なディスク上のサイズを確認するには、次のクエリを使用します。  
@@ -616,11 +604,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**On-disk size in MB**|  
+| On-disk size in MB |
+| ------------------ |
 |2312|  
-||
 
  チェックポイント ファイルのディスク上のサイズ (2.3 GB) と実際のデータ サイズ (約 30 MB) に大きな違いがあることがわかります。  
   
@@ -643,14 +629,12 @@ ORDER BY state, file_type
   
  サンプルの初期状態については、このクエリ結果は、16 個の論理プロセッサを持つサーバーに対する結果と似ています。  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  領域のほとんどが、事前作成されたデータとデルタ ファイルによって使用されていることがわかります。 SQL Server では、1 組のファイル ペア (データとデルタ) が論理プロセッサごとに事前作成されます。 また、さらに効率よくデータを挿入できるように、データ ファイルは 128 MB に、デルタ ファイルは 8 MB に事前にサイズ調整されています。  
   
@@ -666,11 +650,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**On-disk size in MB**|  
+| On-disk size in MB |
+| ------------------ |
 |8828|
-||
   
  ディスク上のサイズは 9 GB に迫っています。これは、データのインメモリ サイズに近い数値です。  
   
@@ -691,14 +673,12 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  事前作成された 16 組のファイル ペアはまだあり、チェックポイントが閉じているので、準備状態です。  
   
@@ -716,11 +696,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**On-disk size in MB**|  
+| On-disk size in MB |
+| ------------------ |
 |11839|
-||
   
  ディスク サイズは 12 GB 近くあり、デモをリセットする前の 9 GB を大幅に上回っています。 これは、一部のチェックポイント ファイルのマージが開始されたにもかかわらず、まだインストールされていないマージ ターゲットがあるためです。また、クリーン アップされていないマージ ソース ファイルの存在も原因となっています。これを次に示します。  
   
@@ -739,9 +717,8 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -750,7 +727,6 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-|||||
 
  トランザクション アクティビティがシステムで発生すると、マージ ターゲットがインストールされ、マージされたソースがクリーン アップされます。  
   
@@ -773,16 +749,14 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
-|||||
 
  この場合、"under construction" 状態のチェックポイント ファイルのペアが 2 組あります。これは、複数のファイル ペアが、おそらくワークロードにおける高レベルのコンカレンシーが原因で、"under construction" 状態に移行されたことを意味します。 一方、複数の同時実行スレッドには新しいファイル ペアが必要だったため、ペアの状態が "precreated" から "under construction" に移行されました。  
   

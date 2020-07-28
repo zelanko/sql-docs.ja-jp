@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51e9e14fc53c4b9904e64180307f7da8939408ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ff264c620123dcbb73c58373871f568ff1d249e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924634"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243403"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>JDBC ドライバーの JDBC 4.2 への準拠
 
@@ -59,14 +59,12 @@ ms.locfileid: "80924634"
   
 ## <a name="sqlserverresultset-class"></a>SQLServerResultSet クラス
   
-||||  
-|-|-|-|  
 |新しいメソッド|説明|注目に値する実装|  
+|-|-|-|  
 ||指定した列を Object 値で更新します。 新しい SQLType インターフェイスをサポートする 4 つの新しい (オーバーロードされた) メソッドがあります。|java.sql.ResultSet インターフェイスの説明に従って実装されています。 詳細については、「[java.sql.ResultSet](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html)」をご覧ください。|  
   
  Java Database Connectivity API 4.2 仕様は Microsoft JDBC Driver 4.2 for SQL Server によってサポートされ、以下のようにデータ型がマッピングされています。  
   
-|||  
-|-|-|  
 |新しいデータ型のマッピング|説明|  
+|-|-|  
 |**Java 8 の新しい Java クラス:** <br /> <br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **新しい JDBC の型:**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|SQL Server では、REF_CURSOR はサポートされていません。 この型を使用すると、ドライバーは SQLFeatureNotSupportedException 例外をスローします。 その他のすべての新しい Java 型および JDBC 型のマッピングは、JDBC 4.2 仕様で指定されているとおりにサポートされます。|  

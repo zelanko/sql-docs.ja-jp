@@ -2,6 +2,7 @@
 title: SQL Server 2019 のプライバシーの補足情報 | Microsoft Docs
 ms.date: 09/20/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
@@ -10,16 +11,16 @@ helpviewer_keywords: ''
 author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 393656057ae547c770f37e1e7db4c5b5373ac1bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71150295"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914678"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>SQL Server 2019 のプライバシーの補足情報
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 この記事では、機能使用状況および診断データを匿名で収集して Microsoft に送信する、インターネット対応機能の概要を説明します。 SQL Server では、標準的なコンピューター情報、および使用とパフォーマンスに関するデータが収集される場合があります。これらの情報は Microsoft に送信され、製品の品質、セキュリティ、および信頼性を向上させる目的で分析されます。 この記事は、[Microsoft のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=521839)全体の内容を補うものです。 この記事のデータ分類は、SQL Server オンプレミス製品のバージョンにのみ適用されます。 次のアイテムには適用されません。
 

@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs
+title: DBCC CHECKCONSTRAINTS (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f704b064998c584461e4708b52d9c2aa68f20fe7
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786560"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485073"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 現在のデータベースで、指定した制約や指定したテーブルのすべての制約に関する整合性をチェックします。
@@ -52,8 +53,10 @@ DBCC CHECKCONSTRAINTS
     ]  
 ```  
   
-## <a name="arguments"></a>引数  
- *table_name* | *table_id* | *constraint_name* | *constraint_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
+ *table_name* \| *table_id* \| *constraint_name* \| *constraint_id*  
  チェックするテーブルまたは制約を指定します。 *table_name* または *table_id* を指定した場合は、そのテーブルで有効な制約がすべてチェックされます。 *constraint_name* または *constraint_id* を指定した場合は、その制約のみがチェックされます。 テーブル識別子も制約識別子も指定しない場合は、現在のデータベース内にあるすべてのテーブルで有効なすべての制約がチェックされます。  
  制約名によって、その制約が属するテーブルが一意に識別されます。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   

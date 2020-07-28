@@ -2,7 +2,7 @@
 title: 廃止されたデータベース エンジンの機能
 description: SQL Server 2019 (15.x)、SQL Server 2016 (13.x)、および以前のバージョンで廃止されたデータベース エンジンの機能について説明します。
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -36,12 +36,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2137021617ecf15375be480021ca54b50627464d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0aada5da9da6b0eadb1c190690f98c4a3d3cb3b8
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920284"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110248"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server で廃止されたデータベース エンジンの機能
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "86920284"
 
 - ActiveX サブシステムは廃止されました。 代わりに、コマンド ラインまたは PowerShell スクリプトを使用してください。
 
-- 起動時のパラメーター **-h** および **-g**。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)」を参照してください。
+- 起動時のパラメーター **-h** および **-g**。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)」を参照してください。
 
 - Secure Sockets Layer (SSL) での暗号化は廃止されました。 代わりに、トランスポート層セキュリティ (TLS) を使用してください。 詳細については、「[データベース エンジンへの暗号化接続の有効化](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。
 
 ## <a name="previous-versions"></a>以前のバージョン
 
-- [SQL Server 2014 で廃止されたデータベース エンジンの機能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [SQL Server 2014 で廃止されたデータベース エンジンの機能](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
 ### <a name="see-also"></a>参照
 

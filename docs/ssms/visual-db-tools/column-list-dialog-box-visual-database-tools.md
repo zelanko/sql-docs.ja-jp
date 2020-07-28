@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: dc6739dff9103c842aca1439fe0cbe1a168794ad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 553a6da4bbc6527339f366d7b4b319fc21a17504
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241252"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003829"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>[列一覧] ダイアログ ボックス (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 クエリを記述するときに、選択したテーブル値オブジェクトで利用可能な列の一覧を確認できると便利なことがあります。  
   
 このダイアログ ボックスを **[クエリ デザイナー]** メニューから表示するには、ダイアグラム ペインでテーブル値オブジェクトのヘッダーを右クリックして、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウで、 **[列一覧]** フィールドをクリックします。 次に、フィールドの右側にある省略記号 ( **[...]** ) をクリックします。  

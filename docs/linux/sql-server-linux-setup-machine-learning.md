@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a38a6f46ca742dc280135590c2a4cece40ff13f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 34e33ea3fbb3ff0ef10e237bc7bdc0ad61c223db
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882489"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484629"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -276,7 +276,7 @@ sudo zypper install mssql-mlservices-packages-r
 
 追加の構成には、主に [mssql-conf ツール](sql-server-linux-configure-mssql-conf.md)を利用します。
 
-1. SQL Server サービスの実行に使用する mssql ユーザー アカウントを追加します。
+1. パッケージのインストールが完了したら、mssql-conf setup を実行し、プロンプトに従って SA パスワードを設定して、エディションを選択します。 SQL Server on Linux をまだ構成していない場合にのみ、このステップを実行します。 
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -384,21 +384,21 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 ### <a name="rhel7-paths"></a>RHEL/7 パス
 
-|||
+|Package|ダウンロード場所|
 |--|----|
 | mssql/mlservices パッケージ | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | microsoft-r-open パッケージ | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 ### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 パス
 
-|||
+|Package|ダウンロード場所|
 |--|----|
 | mssql/mlservices パッケージ | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | microsoft-r-open パッケージ | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 ### <a name="sles12-paths"></a>SLES/12 パス
 
-|||
+|Package|ダウンロード場所|
 |--|----|
 | mssql/mlservices パッケージ | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | microsoft-r-open パッケージ | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 

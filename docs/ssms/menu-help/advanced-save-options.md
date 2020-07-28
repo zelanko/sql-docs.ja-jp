@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1210df560b91cab1239e6fa4b1b2ca0a6446b04a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b0466252ead4c5bc1dca28d69890c9d04ef1824
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253283"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001684"
 ---
 # <a name="advanced-save-options"></a>[保存オプションの詳細設定]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 **[保存オプションの詳細設定]** ダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[名前を付けて** <query name> **.sql を保存]** をクリックします。 **[名前を付けてファイルを保存]** ダイアログ ボックスが開くので、 **[保存]** ボタンにある下矢印をクリックして、 **[エンコード付きで保存]** をクリックします。  
   
 ## <a name="options"></a>オプション  

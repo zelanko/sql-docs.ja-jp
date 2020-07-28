@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b57c86074f91d5be0790294641dafe1cf0ccfc6e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e9e0fca818c4988acacfbfa89af718eda8d8ac5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767983"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246585"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM の有効化と構成
 
@@ -76,9 +76,8 @@ ms.locfileid: "85767983"
   
 -   RAID レベルを設定および調整して、フォールト トレランスとアプリケーションで求められるパフォーマンスを実現します。  
   
-||||||  
-|-|-|-|-|-|  
 |RAID レベル|書き込みパフォーマンス|読み取りパフォーマンス|フォールト トレランス|解説|  
+|-|-|-|-|-|   
 |RAID 5|Normal|Normal|[非常に良い]|パフォーマンスは、1 台のディスクまたは JBOD よりも高く、RAID 0 またはストライピング機能を備えた RAID 5 よりも低くなります。|  
 |RAID 0|[非常に良い]|[非常に良い]|なし||  
 |RAID 5 + ストライピング|[非常に良い]|[非常に良い]|[非常に良い]|最も高価なオプションです。|  

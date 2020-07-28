@@ -14,12 +14,12 @@ ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b752acb72d4dd0a02f69670e181014e9aa596006
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4281b67d44e7a1aa7404e89b07a505416f38260f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757704"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243323"
 ---
 # <a name="ddl-events"></a>DDL イベント
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,88 +31,795 @@ ms.locfileid: "85757704"
 ## <a name="ddl-statements-that-have-server-or-database-scope"></a>サーバー スコープまたはデータベース スコープを持つ DDL ステートメント  
  DDL トリガーまたはイベント通知は、そのトリガーまたはイベント通知が作成されたデータベース、またはサーバー インスタンスのあらゆる場所で、次に示すイベントが発生したときにそのイベントに応答して起動されるように作成できます。  
   
-||||  
-|-|-|-|  
-|CREATE_APPLICATION_ROLE (CREATE APPLICATION ROLE ステートメントと **sp_addapprole**に適用されます。 新しいスキーマが作成されると、このイベントは CREATE_SCHEMA イベントもトリガーします。)|ALTER_APPLICATION_ROLE (ALTER APPLICATION ROLE ステートメントと **sp_approlepassword**に適用されます。)|DROP_APPLICATION_ROLE (DROP APPLICATION ROLE ステートメントと **sp_dropapprole**に適用されます。)|  
-|CREATE_ASSEMBLY|ALTER_ASSEMBLY|DROP_ASSEMBLY|  
-|CREATE_ASYMMETRIC_KEY|ALTER_ASYMMETRIC_KEY|DROP_ASYMMETRIC_KEY|  
-|ALTER_AUTHORIZATION|ALTER_AUTHORIZATION_DATABASE (ON DATABASE が指定されている場合の ALTER AUTHORIZATION ステートメント、および **sp_changedbowner**に適用されます。)||  
-|CREATE_BROKER_PRIORITY|CREATE_BROKER_PRIORITY|CREATE_BROKER_PRIORITY|  
-|CREATE_CERTIFICATE|ALTER_CERTIFICATE|DROP_CERTIFICATE|  
-|CREATE_CONTRACT|DROP_CONTRACT||  
-|CREATE_CREDENTIAL|ALTER_CREDENTIAL|DROP_CREDENTIAL|  
-|GRANT_DATABASE|DENY_DATABASE|REVOKE_DATABASE|  
-|CREATE_DATABASE_AUDIT_SPEFICIATION|ALTER_DATABASE_AUDIT_SPEFICIATION|DENY_DATABASE_AUDIT_SPEFICIATION|  
-|CREATE_DATABASE_ENCRYPTION_KEY|ALTER_DATABASE_ENCRYPTION_KEY|DROP_DATABASE_ENCRYPTION_KEY|  
-|CREATE_DEFAULT|DROP_DEFAULT||  
-|BIND_DEFAULT ( **sp_bindefault**に適用されます。)|UNBIND_DEFAULT ( **sp_unbindefault**に適用されます。)||  
-|CREATE_EVENT_NOTIFICATION|DROP_EVENT_NOTIFICATION||  
-|CREATE_EXTENDED_PROPERTY ( **sp_addextendedproperty**に適用されます。)|ALTER_EXTENDED_PROPERTY ( **sp_updateextendedproperty**に適用されます。)|DROP_EXTENDED_PROPERTY ( **sp_dropextendedproperty**に適用されます。)|  
-|CREATE_FULLTEXT_CATALOG (CREATE FULLTEXT CATALOG ステートメントと、 **create** が指定されている場合の *sp_fulltextcatalog* に適用されます。)|ALTER_FULLTEXT_CATALOG (ALTER FULLTEXT CATALOG ステートメント、 **start_incremental** 、 *start_full*、 *Stop*、または *Rebuild*が指定されている場合の *sp_fulltextcatalog* 、および **enable** が指定されている場合の *sp_fulltext_database* に適用されます。)|DROP_FULLTEXT_CATALOG (DROP FULLTEXT CATALOG ステートメントと、 **drop** が指定されている場合の *sp_fulltextcatalog* に適用されます。)|  
-|CREATE_FULLTEXT_INDEX (CREATE FULLTEXT INDEX ステートメントと、 **create** が指定されている場合の *sp_fulltexttable* に適用されます。)|ALTER_FULLTEXT_INDEX (ALTER FULLTEXT INDEX ステートメント、 **start_full** 、 *start_incremental*、または *stop*が指定されている場合の *sp_fulltextcatalog* 、 **sp_fulltext_column**、および **create** または *drop* 以外のアクションが指定されている場合の *sp_fulltext_table* に適用されます。)|DROP_FULLTEXT_INDEX (DROP FULLTEXT INDEX ステートメントと、 **drop** が指定されている場合の *sp_fulltexttable* に適用されます。)|  
-|CREATE_FULLTEXT_STOPLIST|ALTER_FULLTEXT_STOPLIST|DROP_FULLTEXT_STOPLIST|  
-|CREATE_FUNCTION|ALTER_FUNCTION|DROP_FUNCTION|  
-|CREATE_INDEX|ALTER_INDEX (ALTER INDEX ステートメントと **sp_indexoption**に適用されます。)|DROP_INDEX|  
-|CREATE_MASTER_KEY|ALTER_MASTER_KEY|DROP_MASTER_KEY|  
-|CREATE_MESSAGE_TYPE|ALTER_MESSAGE_TYPE|DROP_MESSAGE_TYPE|  
-|CREATE_PARTITION_FUNCTION|ALTER_PARTITION_FUNCTION|DROP_PARTITION_FUNCTION|  
-|CREATE_PARTITION_SCHEME|ALTER_PARTITION_SCHEME|DROP_PARTITION_SCHEME|  
-|CREATE_PLAN_GUIDE ( **sp_create_plan_guide**に適用されます。)|ALTER_PLAN_GUIDE (ENABLE、ENABLE ALL、DISABLE、または DISABLE ALL が指定されている場合の **sp_control_plan_guide** に適用されます。)|DROP_PLAN_GUIDE (DROP または DROP ALL が指定されている場合の **sp_control_plan_guide** に適用されます。)|  
-|CREATE_PROCEDURE|ALTER_PROCEDURE (ALTER PROCEDURE ステートメントと **sp_procoption**に適用されます。)|DROP_PROCEDURE|  
-|CREATE_QUEUE|ALTER_QUEUE|DROP_QUEUE|  
-|CREATE_REMOTE_SERVICE_BINDING|ALTER_REMOTE_SERVICE_BINDING|DROP_REMOTE_SERVICE_BINDING|  
-|CREATE_SPATIAL_INDEX|||  
-|RENAME ( **sp_rename**に適用されます。)|||  
-|CREATE_ROLE (CREATE ROLE ステートメント、 **sp_addrole**、および **sp_addgroup**に適用されます。)|ALTER_ROLE|DROP_ROLE (DROP ROLE ステートメント、 **sp_droprole**、および **sp_dropgroup**に適用されます。)|  
-|ADD_ROLE_MEMBER|DROP_ROLE_MEMBER||  
-|CREATE_ROUTE|ALTER_ROUTE|DROP_ROUTE|  
-|CREATE_RULE|DROP_RULE||  
-|BIND_RULE ( **sp_bindrule**に適用されます。)|UNBIND_RULE ( **sp_unbindrule**に適用されます。)||  
-|CREATE_SCHEMA (CREATE SCHEMA ステートメント、 **sp_addrole**、 **sp_adduser**、 **sp_addgroup**、および **sp_grantdbaccess**に適用されます。)|ALTER_SCHEMA (ALTER SCHEMA ステートメントと **sp_changeobjectowner**に適用されます。)|DROP_SCHEMA|  
-|CREATE_SEARCH_PROPERTY_LIST|ALTER_SEARCH_PROPERTY_LIST|DROP_SEARCH_PROPERTY_LIST|  
-|CREATE_SEQUENCE_EVENTS|CREATE_SEQUENCE_EVENTS|CREATE_SEQUENCE_EVENTS|  
-|CREATE_SERVER_ROLE|ALTER_SERVER_ROLE|DROP_SERVER_ROLE|  
-|CREATE_SERVICE|ALTER_SERVICE|DROP_SERVICE|  
-|ALTER_SERVICE_MASTER_KEY|BACKUP_SERVICE_MASTER_KEY|RESTORE_SERVICE_MASTER_KEY|  
-|ADD_SIGNATURE (非スキーマ スコープ オブジェクト (データベース、アセンブリ、トリガー) の署名操作用)|DROP_SIGNATURE||  
-|ADD_SIGNATURE_SCHEMA_OBJECT (スキーマ スコープ オブジェクト (ストアド プロシージャ、関数) 用)|DROP_SIGNATURE_SCHEMA_OBJECT||  
-|CREATE_SPATIAL_INDEX|ALTER_INDEX は、空間インデックスに使用できます。|DROP_INDEX は、空間インデックスに使用できます。|  
-|CREATE_STATISTICS|DROP_STATISTICS|UPDATE_STATISTICS|  
-|CREATE_SYMMETRIC_KEY|ALTER_SYMMETRIC_KEY|DROP_SYMMETRIC_KEY|  
-|CREATE_SYNONYM|DROP_SYNONYM||  
-|CREATE_TABLE|ALTER_TABLE (ALTER TABLE ステートメントと **sp_tableoption**に適用されます。)|DROP_TABLE|  
-|CREATE_TRIGGER|ALTER_TRIGGER (ALTER TRIGGER ステートメントと **sp_settriggerorder**に適用されます。)|DROP_TRIGGER|  
-|CREATE_TYPE (CREATE TYPE ステートメントと **sp_addtype**に適用されます。)|DROP_TYPE (DROP TYPE ステートメントと **sp_droptype**に適用されます。)||  
-|CREATE_USER (CREATE USER ステートメント、 **sp_adduser**、および **sp_grantdbaccess**に適用されます。)|ALTER_USER (ALTER USER ステートメントと **sp_change_users_login**に適用されます。)|DROP_USER (DROP USER ステートメント、 **sp_dropuser**、および **sp_revokedbaccess**に適用されます。)|  
-|CREATE_VIEW|ALTER_VIEW|DROP_VIEW|  
-|CREATE_XML_INDEX|ALTER_INDEX は、XML インデックスに使用できます。|DROP_INDEX は、XML インデックスに使用できます。|  
-|CREATE_XML_SCHEMA_COLLECTION|ALTER_XML_SCHEMA_COLLECTION|DROP_XML_SCHEMA_COLLECTION|  
-  
+:::row:::
+    :::column:::
+        CREATE_APPLICATION_ROLE (CREATE APPLICATION ROLE ステートメントと **sp_addapprole**に適用されます。 新しいスキーマが作成されると、このイベントは CREATE_SCHEMA イベントもトリガーします。)
+    :::column-end:::
+    :::column:::
+        ALTER_APPLICATION_ROLE (ALTER APPLICATION ROLE ステートメントと **sp_approlepassword**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_APPLICATION_ROLE (DROP APPLICATION ROLE ステートメントと **sp_dropapprole**に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_ASSEMBLY
+    :::column-end:::
+    :::column:::
+        ALTER_ASSEMBLY
+    :::column-end:::
+    :::column:::
+        DROP_ASSEMBLY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_ASYMMETRIC_KEY
+    :::column-end:::
+    :::column:::
+        ALTER_ASYMMETRIC_KEY
+    :::column-end:::
+    :::column:::
+        DROP_ASYMMETRIC_KEY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER_AUTHORIZATION
+    :::column-end:::
+    :::column:::
+        ALTER_AUTHORIZATION_DATABASE (ON DATABASE が指定されている場合の ALTER AUTHORIZATION ステートメント、および **sp_changedbowner**に適用されます。)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_BROKER_PRIORITY
+    :::column-end:::
+    :::column:::
+        CREATE_BROKER_PRIORITY
+    :::column-end:::
+    :::column:::
+        CREATE_BROKER_PRIORITY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_CERTIFICATE
+    :::column-end:::
+    :::column:::
+        ALTER_CERTIFICATE
+    :::column-end:::
+    :::column:::
+        DROP_CERTIFICATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_CONTRACT
+    :::column-end:::
+    :::column:::
+        DROP_CONTRACT
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_CREDENTIAL
+    :::column-end:::
+    :::column:::
+        ALTER_CREDENTIAL
+    :::column-end:::
+    :::column:::
+        DROP_CREDENTIAL
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GRANT_DATABASE
+    :::column-end:::
+    :::column:::
+        DENY_DATABASE
+    :::column-end:::
+    :::column:::
+        REVOKE_DATABASE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_DATABASE_AUDIT_SPEFICIATION
+    :::column-end:::
+    :::column:::
+        ALTER_DATABASE_AUDIT_SPEFICIATION
+    :::column-end:::
+    :::column:::
+        DENY_DATABASE_AUDIT_SPEFICIATION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_DATABASE_ENCRYPTION_KEY
+    :::column-end:::
+    :::column:::
+        ALTER_DATABASE_ENCRYPTION_KEY
+    :::column-end:::
+    :::column:::
+        DROP_DATABASE_ENCRYPTION_KEY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_DEFAULT
+    :::column-end:::
+    :::column:::
+        DROP_DEFAULT
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BIND_DEFAULT ( **sp_bindefault**に適用されます。)
+    :::column-end:::
+    :::column:::
+        UNBIND_DEFAULT ( **sp_unbindefault**に適用されます。)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_EVENT_NOTIFICATION
+    :::column-end:::
+    :::column:::
+        DROP_EVENT_NOTIFICATION
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_EXTENDED_PROPERTY ( **sp_addextendedproperty**に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_EXTENDED_PROPERTY ( **sp_updateextendedproperty**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_EXTENDED_PROPERTY ( **sp_dropextendedproperty**に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_FULLTEXT_CATALOG (CREATE FULLTEXT CATALOG ステートメントと、 **create** が指定されている場合の *sp_fulltextcatalog* に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_FULLTEXT_CATALOG (ALTER FULLTEXT CATALOG ステートメント、 **start_incremental** 、 *start_full*、 *Stop*、または *Rebuild*が指定されている場合の *sp_fulltextcatalog* 、および **enable** が指定されている場合の *sp_fulltext_database* に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_FULLTEXT_CATALOG (DROP FULLTEXT CATALOG ステートメントと、 **drop** が指定されている場合の *sp_fulltextcatalog* に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_FULLTEXT_INDEX (CREATE FULLTEXT INDEX ステートメントと、 **create** が指定されている場合の *sp_fulltexttable* に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_FULLTEXT_INDEX (ALTER FULLTEXT INDEX ステートメント、 **start_full** 、 *start_incremental*、または *stop*が指定されている場合の *sp_fulltextcatalog* 、 **sp_fulltext_column**、および **create** または *drop* 以外のアクションが指定されている場合の *sp_fulltext_table* に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_FULLTEXT_INDEX (DROP FULLTEXT INDEX ステートメントと、 **drop** が指定されている場合の *sp_fulltexttable* に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_FULLTEXT_STOPLIST
+    :::column-end:::
+    :::column:::
+        ALTER_FULLTEXT_STOPLIST
+    :::column-end:::
+    :::column:::
+        DROP_FULLTEXT_STOPLIST
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_FUNCTION
+    :::column-end:::
+    :::column:::
+        ALTER_FUNCTION
+    :::column-end:::
+    :::column:::
+        DROP_FUNCTION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_INDEX
+    :::column-end:::
+    :::column:::
+        ALTER_INDEX (ALTER INDEX ステートメントと **sp_indexoption**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_INDEX
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_MASTER_KEY
+    :::column-end:::
+    :::column:::
+        ALTER_MASTER_KEY
+    :::column-end:::
+    :::column:::
+        DROP_MASTER_KEY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_MESSAGE_TYPE
+    :::column-end:::
+    :::column:::
+        ALTER_MESSAGE_TYPE
+    :::column-end:::
+    :::column:::
+        DROP_MESSAGE_TYPE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_PARTITION_FUNCTION
+    :::column-end:::
+    :::column:::
+        ALTER_PARTITION_FUNCTION
+    :::column-end:::
+    :::column:::
+        DROP_PARTITION_FUNCTION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_PARTITION_SCHEME
+    :::column-end:::
+    :::column:::
+        ALTER_PARTITION_SCHEME
+    :::column-end:::
+    :::column:::
+        DROP_PARTITION_SCHEME
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_PLAN_GUIDE ( **sp_create_plan_guide**に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_PLAN_GUIDE (ENABLE、ENABLE ALL、DISABLE、または DISABLE ALL が指定されている場合の **sp_control_plan_guide** に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_PLAN_GUIDE (DROP または DROP ALL が指定されている場合の **sp_control_plan_guide** に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_PROCEDURE
+    :::column-end:::
+    :::column:::
+        ALTER_PROCEDURE (ALTER PROCEDURE ステートメントと **sp_procoption**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_PROCEDURE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_QUEUE
+    :::column-end:::
+    :::column:::
+        ALTER_QUEUE
+    :::column-end:::
+    :::column:::
+        DROP_QUEUE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_REMOTE_SERVICE_BINDING
+    :::column-end:::
+    :::column:::
+        ALTER_REMOTE_SERVICE_BINDING
+    :::column-end:::
+    :::column:::
+        DROP_REMOTE_SERVICE_BINDING
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SPATIAL_INDEX
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        RENAME ( **sp_rename**に適用されます。)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_ROLE (CREATE ROLE ステートメント、 **sp_addrole**、および **sp_addgroup**に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_ROLE
+    :::column-end:::
+    :::column:::
+        DROP_ROLE (DROP ROLE ステートメント、 **sp_droprole**、および **sp_dropgroup**に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ADD_ROLE_MEMBER
+    :::column-end:::
+    :::column:::
+        DROP_ROLE_MEMBER
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_ROUTE
+    :::column-end:::
+    :::column:::
+        ALTER_ROUTE
+    :::column-end:::
+    :::column:::
+        DROP_ROUTE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_RULE
+    :::column-end:::
+    :::column:::
+        DROP_RULE
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BIND_RULE ( **sp_bindrule**に適用されます。)
+    :::column-end:::
+    :::column:::
+        UNBIND_RULE ( **sp_unbindrule**に適用されます。)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SCHEMA (CREATE SCHEMA ステートメント、 **sp_addrole**、 **sp_adduser**、 **sp_addgroup**、および **sp_grantdbaccess**に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_SCHEMA (ALTER SCHEMA ステートメントと **sp_changeobjectowner**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_SCHEMA
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SEARCH_PROPERTY_LIST
+    :::column-end:::
+    :::column:::
+        ALTER_SEARCH_PROPERTY_LIST
+    :::column-end:::
+    :::column:::
+        DROP_SEARCH_PROPERTY_LIST
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SEQUENCE_EVENTS
+    :::column-end:::
+    :::column:::
+        CREATE_SEQUENCE_EVENTS
+    :::column-end:::
+    :::column:::
+        CREATE_SEQUENCE_EVENTS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SERVER_ROLE
+    :::column-end:::
+    :::column:::
+        ALTER_SERVER_ROLE
+    :::column-end:::
+    :::column:::
+        DROP_SERVER_ROLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SERVICE
+    :::column-end:::
+    :::column:::
+        ALTER_SERVICE
+    :::column-end:::
+    :::column:::
+        DROP_SERVICE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER_SERVICE_MASTER_KEY
+    :::column-end:::
+    :::column:::
+        BACKUP_SERVICE_MASTER_KEY
+    :::column-end:::
+    :::column:::
+        RESTORE_SERVICE_MASTER_KEY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ADD_SIGNATURE (非スキーマ スコープ オブジェクト (データベース、アセンブリ、トリガー) の署名操作用)
+    :::column-end:::
+    :::column:::
+        DROP_SIGNATURE
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ADD_SIGNATURE_SCHEMA_OBJECT (スキーマ スコープ オブジェクト (ストアド プロシージャ、関数) 用)
+    :::column-end:::
+    :::column:::
+        DROP_SIGNATURE_SCHEMA_OBJECT
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SPATIAL_INDEX
+    :::column-end:::
+    :::column:::
+        ALTER_INDEX は、空間インデックスに使用できます。
+    :::column-end:::
+    :::column:::
+        DROP_INDEX は、空間インデックスに使用できます。
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_STATISTICS
+    :::column-end:::
+    :::column:::
+        DROP_STATISTICS
+    :::column-end:::
+    :::column:::
+        UPDATE_STATISTICS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SYMMETRIC_KEY
+    :::column-end:::
+    :::column:::
+        ALTER_SYMMETRIC_KEY
+    :::column-end:::
+    :::column:::
+        DROP_SYMMETRIC_KEY
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SYNONYM
+    :::column-end:::
+    :::column:::
+        DROP_SYNONYM
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_TABLE
+    :::column-end:::
+    :::column:::
+        ALTER_TABLE (ALTER TABLE ステートメントと **sp_tableoption**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_TABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_TRIGGER
+    :::column-end:::
+    :::column:::
+        ALTER_TRIGGER (ALTER TRIGGER ステートメントと **sp_settriggerorder**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_TRIGGER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_TYPE (CREATE TYPE ステートメントと **sp_addtype**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_TYPE (DROP TYPE ステートメントと **sp_droptype**に適用されます。)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_USER (CREATE USER ステートメント、 **sp_adduser**、および **sp_grantdbaccess**に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_USER (ALTER USER ステートメントと **sp_change_users_login**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_USER (DROP USER ステートメント、 **sp_dropuser**、および **sp_revokedbaccess**に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_VIEW
+    :::column-end:::
+    :::column:::
+        ALTER_VIEW
+    :::column-end:::
+    :::column:::
+        DROP_VIEW
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_XML_INDEX
+    :::column-end:::
+    :::column:::
+        ALTER_INDEX は、XML インデックスに使用できます。
+    :::column-end:::
+    :::column:::
+        DROP_INDEX は、XML インデックスに使用できます。
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_XML_SCHEMA_COLLECTION
+    :::column-end:::
+    :::column:::
+        ALTER_XML_SCHEMA_COLLECTION
+    :::column-end:::
+    :::column:::
+        DROP_XML_SCHEMA_COLLECTION
+    :::column-end:::
+:::row-end:::
+ 
 ## <a name="ddl-statements-that-have-server-scope"></a>サーバー スコープを持つ DDL ステートメント  
  DDL トリガーまたはイベント通知は、サーバー インスタンスのあらゆる場所で次に示すイベントが発生したときに、そのイベントに応答して起動されるように作成できます。  
   
-||||  
-|-|-|-|  
-|ALTER_AUTHORIZATION_SERVER|ALTER_SERVER_CONFIGURATION|ALTER_INSTANCE (ローカル サーバー インスタンスが指定されている場合の **sp_configure** と **sp_addserver** に適用されます。)|  
-|CREATE_AVAILABILITY_GROUP|ALTER_AVAILABILITY_GROUP|DROP_AVAILABILITY_GROUP|  
-|CREATE_CREDENTIAL|ALTER_CREDENTIAL|DROP_CREDENTIAL|  
-|CREATE_CRYPTOGRAPHIC_PROVIDER|ALTER_CRYPTOGRAPHIC_PROVIDER|DROP_CRYPTOGRAPHIC_PROVIDER|  
-|CREATE_DATABASE|ALTER_DATABASE (ALTER DATABASE ステートメントと **sp_fulltext_database**に適用されます。)|DROP_DATABASE|  
-|CREATE_ENDPOINT|ALTER_ENDPOINT|DROP_ENDPOINT|  
-|CREATE_EVENT_SESSION|ALTER_EVENT_SESSION|DROP_EVENT_SESSION|  
-|CREATE_EXTENDED_PROCEDURE ( **sp_addextendedproc**に適用されます。)|DROP_EXTENDED_PROCEDURE ( **sp_dropextendedproc**に適用されます。)||  
-|CREATE_LINKED_SERVER ( **sp_addlinkedserver**に適用されます。)|ALTER_LINKED_SERVER ( **sp_serveroption**に適用されます。)|DROP_LINKED_SERVER (リンク サーバーが指定されている場合の **sp_dropserver** に適用されます。)|  
-|CREATE_LINKED_SERVER_LOGIN ( **sp_addlinkedsrvlogin**に適用されます。)|DROP_LINKED_SERVER_LOGIN ( **sp_droplinkedsrvlogin**に適用されます。)||  
-|CREATE_LOGIN (暗黙的に作成する必要がある存在しないログインで使用される場合の CREATE_LOGIN ステートメント、 **sp_addlogin**、 **sp_grantlogin**、 **xp_grantlogin**、および **sp_denylogin** に適用されます。)|ALTER_LOGIN ( **Auto_Fix**が指定されている場合の ALTER LOGIN ステートメント、 **sp_defaultdb**、 **sp_defaultlanguage**、 **sp_password** 、および *sp_change_users_login* に適用されます。)|DROP_LOGIN (DROP LOGIN ステートメント、 **sp_droplogin**、 **sp_revokelogin**、および **xp_revokelogin**に適用されます。)|  
-|CREATE_MESSAGE ( **sp_addmessage**に適用されます。)|ALTER_MESSAGE ( **sp_altermessage**に適用されます。)|DROP_MESSAGE ( **sp_dropmessage**に適用されます。)|  
-|CREATE_REMOTE_SERVER ( **sp_addserver**に適用されます。)|ALTER_REMOTE_SERVER ( **sp_setnetname**に適用されます。)|DROP_REMOTE_SERVER (リモート サーバーが指定されている場合の **sp_dropserver** に適用されます。)|  
-|CREATE_RESOURCE_POOL|ALTER_RESOURCE_POOL|DROP_RESOURCE_POOL|  
-|GRANT_SERVER|DENY_SERVER|REVOKE_SERVER|  
-|ADD_SERVER_ROLE_MEMBER|DROP_SERVER_ROLE_MEMBER||  
-|CREATE_SERVER_AUDIT|ALTER_SERVER_AUDIT|DROP_SERVER_AUDIT|  
-|CREATE_SERVER_AUDIT_SPECIFICATION|ALTER_SERVER_AUDIT_SPECIFICATION|DROP_SERVER_AUDIT_SPECIFICATION|  
-|CREATE_WORKLOAD_GROUP|ALTER_WORKLOAD_GROUP|DROP_WORKLOAD_GROUP|  
-  
+:::row:::
+    :::column:::
+        ALTER_AUTHORIZATION_SERVER
+    :::column-end:::
+    :::column:::
+        ALTER_SERVER_CONFIGURATION
+    :::column-end:::
+    :::column:::
+        ALTER_INSTANCE (ローカル サーバー インスタンスが指定されている場合の **sp_configure** と **sp_addserver** に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_AVAILABILITY_GROUP
+    :::column-end:::
+    :::column:::
+        ALTER_AVAILABILITY_GROUP
+    :::column-end:::
+    :::column:::
+        DROP_AVAILABILITY_GROUP
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_CREDENTIAL
+    :::column-end:::
+    :::column:::
+        ALTER_CREDENTIAL
+    :::column-end:::
+    :::column:::
+        DROP_CREDENTIAL
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_CRYPTOGRAPHIC_PROVIDER
+    :::column-end:::
+    :::column:::
+        ALTER_CRYPTOGRAPHIC_PROVIDER
+    :::column-end:::
+    :::column:::
+        DROP_CRYPTOGRAPHIC_PROVIDER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_DATABASE
+    :::column-end:::
+    :::column:::
+        ALTER_DATABASE (ALTER DATABASE ステートメントと **sp_fulltext_database**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_DATABASE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_ENDPOINT
+    :::column-end:::
+    :::column:::
+        ALTER_ENDPOINT
+    :::column-end:::
+    :::column:::
+        DROP_ENDPOINT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_EVENT_SESSION
+    :::column-end:::
+    :::column:::
+        ALTER_EVENT_SESSION
+    :::column-end:::
+    :::column:::
+        DROP_EVENT_SESSION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_EXTENDED_PROCEDURE ( **sp_addextendedproc**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_EXTENDED_PROCEDURE ( **sp_dropextendedproc**に適用されます。)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_LINKED_SERVER ( **sp_addlinkedserver**に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_LINKED_SERVER ( **sp_serveroption**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_LINKED_SERVER (リンク サーバーが指定されている場合の **sp_dropserver** に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_LINKED_SERVER_LOGIN ( **sp_addlinkedsrvlogin**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_LINKED_SERVER_LOGIN ( **sp_droplinkedsrvlogin**に適用されます。)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_LOGIN (暗黙的に作成する必要がある存在しないログインで使用される場合の CREATE_LOGIN ステートメント、 **sp_addlogin**、 **sp_grantlogin**、 **xp_grantlogin**、および **sp_denylogin** に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_LOGIN ( **Auto_Fix**が指定されている場合の ALTER LOGIN ステートメント、 **sp_defaultdb**、 **sp_defaultlanguage**、 **sp_password** 、および *sp_change_users_login* に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_LOGIN (DROP LOGIN ステートメント、 **sp_droplogin**、 **sp_revokelogin**、および **xp_revokelogin**に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_MESSAGE ( **sp_addmessage**に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_MESSAGE ( **sp_altermessage**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_MESSAGE ( **sp_dropmessage**に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_REMOTE_SERVER ( **sp_addserver**に適用されます。)
+    :::column-end:::
+    :::column:::
+        ALTER_REMOTE_SERVER ( **sp_setnetname**に適用されます。)
+    :::column-end:::
+    :::column:::
+        DROP_REMOTE_SERVER (リモート サーバーが指定されている場合の **sp_dropserver** に適用されます。)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_RESOURCE_POOL
+    :::column-end:::
+    :::column:::
+        ALTER_RESOURCE_POOL
+    :::column-end:::
+    :::column:::
+        DROP_RESOURCE_POOL
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GRANT_SERVER
+    :::column-end:::
+    :::column:::
+        DENY_SERVER
+    :::column-end:::
+    :::column:::
+        REVOKE_SERVER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ADD_SERVER_ROLE_MEMBER
+    :::column-end:::
+    :::column:::
+        DROP_SERVER_ROLE_MEMBER
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SERVER_AUDIT
+    :::column-end:::
+    :::column:::
+        ALTER_SERVER_AUDIT
+    :::column-end:::
+    :::column:::
+        DROP_SERVER_AUDIT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_SERVER_AUDIT_SPECIFICATION
+    :::column-end:::
+    :::column:::
+        ALTER_SERVER_AUDIT_SPECIFICATION
+    :::column-end:::
+    :::column:::
+        DROP_SERVER_AUDIT_SPECIFICATION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE_WORKLOAD_GROUP
+    :::column-end:::
+    :::column:::
+        ALTER_WORKLOAD_GROUP
+    :::column-end:::
+    :::column:::
+        DROP_WORKLOAD_GROUP
+    :::column-end:::
+:::row-end:::
+ 
 ## <a name="see-also"></a>参照  
  [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)   
  [イベント通知](../../relational-databases/service-broker/event-notifications.md)   

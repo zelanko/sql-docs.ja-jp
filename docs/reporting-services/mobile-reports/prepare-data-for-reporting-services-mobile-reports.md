@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbd04e9eef6d0775407e9b9893c59daefd7dc0a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b138877b9afd07f85b90cb5ae2f7197790475c79
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448380"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942314"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート用にデータを準備する
   
@@ -23,14 +23,15 @@ ms.locfileid: "79448380"
 ## <a name="date-and-time-formats"></a>日付および時刻の形式 
 モバイル レポートで使用する日付と時間の間隔を扱うときには (特に TimeNavigator を使用する場合)、 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] が識別できるように日付/時刻列の書式を正しく設定することが重要です。 次に、有効な日付/時刻形式の例を示します。  
   
-    05/01/2009    
-    2009-05-01    
-    05/01/2009 14:57:32.8    
-    2009-05-01 14:57:32.8    
-    2009-05-01T14:57:32.8375298-04:00    
-    5/01/2008 14:57:32.80 -07:00    
-    1 May 2008 2:57:32.8 PM    
-    Fri, 15 May 2009 20:10:57 GMT    
+`05/01/2009`    
+`2009-05-01`    
+`05/01/2009 14:57:32.8`    
+`2009-05-01 14:57:32.8`    
+`2009-05-01T14:57:32.8375298-04:00`    
+`5/01/2008 14:57:32.80 -07:00`    
+`1 May 2008 2:57:32.8 PM`    
+`Fri, 15 May 2009 20:10:57 GMT`    
+
   
 日付と時刻に基づくデータセットは、ほとんどの場合、1 つまたは複数の日付/時間間隔 (時間単位、日単位、月単位、四半期単位、年単位など) によって記述できます。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] では、異なる粒度の複数のテーブルを結合し、それらを 1 つのモバイル レポートに表示できます。 ただし、元のデータセットと関連する間隔を覚えておいてください。これらは、どのような日付/時刻フィルター オプションで最終的なモバイル レポートでユーザーに提示するかを決定するときに役立ちます。  
 

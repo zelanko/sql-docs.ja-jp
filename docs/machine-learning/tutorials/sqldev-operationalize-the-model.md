@@ -2,22 +2,22 @@
 title: R + T-SQL チュートリアル:予測の実行
 description: このチュートリアルでは、T-SQL 関数を使用して SQL Server ストアド プロシージャに埋め込まれた R スクリプトを運用化する方法を学びます
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b8e516d2e96c1cc4812a36800fd22371729445d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bb530360e04df0e43c3c881ad203cd84af0f7678
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670803"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>レッスン 4:ストアド プロシージャに埋め込まれた R を使用して予測を実行する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事は、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
 
@@ -69,7 +69,7 @@ GO
 
 より一般的なシナリオは、バッチ モードで複数の観測の予測を生成することです。 この手順では、バッチ スコアリングのしくみを見てみましょう。
 
-1.  最初に、使用する入力データの小さなセットを取得します。 このクエリは、予測に必要な乗客数とその他の特徴量を利用し、乗車の "上位 10" 一覧を作成します。
+1.  最初に、使用する入力データの小さなセットを取得します。 このクエリは、予測に必要な乗客数とその他の機能を利用し、乗車の "上位 10" 一覧を作成します。
   
     ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -168,7 +168,7 @@ GO
 
 2. 手動で値を指定し、お試しください。
   
-    新しい **クエリ** ウィンドウを開き、ストアド プロシージャを呼び出して、各パラメーターの値を指定します。 パラメーターは、モデルで使用される特徴量列を表し、必須です。
+    新しい **クエリ** ウィンドウを開き、ストアド プロシージャを呼び出して、各パラメーターの値を指定します。 パラメーターは、モデルで使用される特徴列を表し、必須です。
 
     ```sql
     EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',

@@ -22,12 +22,12 @@ ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f2cda4a044f6980a5998371f1a7b0f70397e259
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 915cf95799a80a0d8841206f4b23b04fba5fec5f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737993"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112370"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -45,6 +45,8 @@ ms.locfileid: "85737993"
 PARSENAME ('object_name' , object_piece )
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数
 
 *'object_name'* は、取得対象となるオブジェクトの名前を保持するパラメーターです。 このパラメーターは、必要に応じて修飾されたオブジェクト名です。 オブジェクト名のすべての部分が修飾される場合、この名前には、サーバー名、データベース名、スキーマ名、オブジェクト名の 4 つの部分を指定可能です。  'object_name' 文字列の各部分は、nvarchar(128) または 256 バイトに相当する *sysname* 型です。 文字列のいずれかの部分が 256 バイトを超える場合、有効な sysname ではないため、PARSENAME はその部分に対して NULL を返します。

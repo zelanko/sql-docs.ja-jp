@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6db50af7454526c910b3c2688e0a81fe261c2167
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a486cc868c445e664977e67fd108aaca2873a595
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632202"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552747"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -38,9 +38,7 @@ ms.locfileid: "81632202"
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## <a name="click-a-product"></a>製品をクリックしてください
-
-次の行から興味がある製品名をクリックしてみてください。 この Web ページでは、クリックした製品に合わせて、異なるコンテンツが表示されます。
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -143,7 +141,7 @@ NAME = newUserName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 > [!NOTE]
 > **ALTER ANY USER** 権限を持つユーザーは、任意のユーザーの既定のスキーマを変更できます。 変更されたスキーマを所有するユーザーは、知らずに間違ったテーブルからデータを選択したり、間違ったスキーマからコードを実行する可能性があります。
@@ -317,7 +315,7 @@ ALTER USER userName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 > [!NOTE]
 > **ALTER ANY USER** 権限を持つユーザーは、任意のユーザーの既定のスキーマを変更できます。 変更されたスキーマを所有するユーザーは、知らずに間違ったテーブルからデータを選択したり、間違ったスキーマからコードを実行する可能性があります。
@@ -537,7 +535,7 @@ ALTER USER userName
 - 別名 - 名前は Azure AD に存在できません。
 - その他のすべての場合、この構文は失敗します。
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 > [!NOTE]
 > **ALTER ANY USER** 権限を持つユーザーは、任意のユーザーの既定のスキーマを変更できます。 変更されたスキーマを所有するユーザーは、知らずに間違ったテーブルからデータを選択したり、間違ったスキーマからコードを実行する可能性があります。
@@ -694,7 +692,7 @@ ALTER USER userName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 > [!NOTE]
 > **ALTER ANY USER** 権限を持つユーザーは、任意のユーザーの既定のスキーマを変更できます。 変更されたスキーマを所有するユーザーは、知らずに間違ったテーブルからデータを選択したり、間違ったスキーマからコードを実行する可能性があります。
@@ -805,7 +803,7 @@ ALTER USER userName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-## <a name="security"></a>Security
+## <a name="security"></a>セキュリティ
 
 > [!NOTE]
 > **ALTER ANY USER** 権限を持つユーザーは、任意のユーザーの既定のスキーマを変更できます。 変更されたスキーマを所有するユーザーは、知らずに間違ったテーブルからデータを選択したり、間違ったスキーマからコードを実行する可能性があります。

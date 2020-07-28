@@ -1,5 +1,6 @@
 ---
 title: 利用状況モニター | Microsoft Docs
+description: 利用状況モニターを使用し、SQL Server プロセスに関する情報や、それらのプロセスが SQL Server の現在のインスタンスに影響を与える様子を表示する方法について説明します。
 ms.custom: ''
 ms.date: 04/07/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 45d2e41fa88d0ea586832ab91a927832b82ab0fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d634a2e790edb01747014e930e677e18a1f8b0a3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787496"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243813"
 ---
 # <a name="activity-monitor"></a>利用状況モニター
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85787496"
 
 ## <a name="more-information"></a>詳細情報  
    
-|||  
+|説明|トピック|  
 |-|-|  
 |利用状況モニターを開く方法、および利用状況モニターの更新間隔の設定方法について説明します。|[利用状況モニターを開く方法 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|  
 |サーバー パフォーマンスおよびアクティビティの監視に関するトピックを紹介します。|[サーバーのパフォーマンスと利用状況の監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|  

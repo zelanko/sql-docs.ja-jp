@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 41cf0607ae8d308d4d1f243e8b987ca6c9d541fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1985ba159951718772d6a7bc16b4ea76f59d5686
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737959"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111916"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85737959"
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *objectid*  
  セキュリティ保護可能なリソースの ID を指定します。 *objectid* を指定しない場合、ビットマップ値には現在のユーザーのステートメント権限が含まれます。それ以外の場合、ビットマップ値には現在のユーザーのセキュリティ保護可能なリソースについての権限が含まれます。 指定したセキュリティ保護可能なリソースは、現在のデータベースに存在する必要があります。 [objectid](../../t-sql/functions/object-id-transact-sql.md) 値を確認するには、*OBJECT_ID* 関数を使用します。  
   

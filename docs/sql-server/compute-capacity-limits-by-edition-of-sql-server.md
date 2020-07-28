@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 11/07/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a3be2f37257195edb6c3305a79237c39ea930bf
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 89a0398fe2e76e02daa123edfaef725de121760f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000423"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918822"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server のエディション別の計算容量制限
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の各エディションの計算容量の制限と、ハイパースレッド プロセッサを持つ物理環境と仮想化環境での違いについて説明します。  
   
  ![容量制限計算のためのマッピング](../sql-server/media/compute-capacity-limits.gif "容量制限計算のためのマッピング")  

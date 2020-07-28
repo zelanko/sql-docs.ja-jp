@@ -2,21 +2,21 @@
 title: Azure Data Studio のノートブック (Python、R)
 description: SQL Server Machine Learning Services を使用して Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する方法について説明します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6bb16013b75765ee5fdf6b1b52ab0bd65de37f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1c5e16667f311c3afff9b2ada9e17c8ffe3751c2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487571"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916628"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services を使用して Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) を使用して [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) ノートブックで Python スクリプトと R スクリプトを実行する方法について説明します。 Azure Data Studio は、クロスプラットフォームのデータベース ツールです。
 
@@ -26,11 +26,9 @@ ms.locfileid: "81487571"
 
 - SQL Server Machine Learning Services がインストールされ、有効になっているサーバー。 Machine Learning Services は、Windows、Linux、またはビッグ データ クラスターで使用できます。
 
-    - [Windows に SQL Server Machine Learning Services をインストールする](sql-machine-learning-services-windows-install.md)。
-
-    - [Linux に SQL Server Machine Learning Services をインストールする](../../linux/sql-server-linux-setup-machine-learning.md)。
-
-    - [SQL Server ビッグ データ クラスターで Machine Learning Services を使用して Python スクリプトと R スクリプトを実行する](../../big-data-cluster/machine-learning-services.md)。
+  - [Windows に SQL Server Machine Learning Services をインストールする](sql-machine-learning-services-windows-install.md)。
+  - [Linux に SQL Server Machine Learning Services をインストールする](../../linux/sql-server-linux-setup-machine-learning.md)。
+  - [SQL Server ビッグ データ クラスターで Machine Learning Services を使用して Python スクリプトと R スクリプトを実行する](../../big-data-cluster/machine-learning-services.md)。
 
 ## <a name="create-a-sql-notebook"></a>SQL ノートブックを作成する
 
@@ -125,5 +123,7 @@ R スクリプトを実行するには、次の手順に従います。
 
 ## <a name="next-steps"></a>次のステップ
 
+- [Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/notebooks-guidance.md)
+- [SQL Server ノートブックを作成して実行する](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
 - [クイック スタート: SQL Server Machine Learning Services を使用してシンプルな Python スクリプトを実行する](../tutorials/quickstart-python-create-script.md)
 - [クイック スタート: SQL Server Machine Learning Services を使用してシンプルな R スクリプトを実行する](../tutorials/quickstart-r-create-script.md)

@@ -2,22 +2,22 @@
 title: R での OLAP キューブからのデータの使用
 description: この記事では、olapR API について説明します。また、多次元キューブ データベースを初めて使用する R ユーザーのために、OLAP と MDX の概要についても説明します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 99f67fb0fb52717eaa42e229a1b60c82f6223fad
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f27866a242cb03839a67a8f68478bc786222aa64
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117235"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968033"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R での OLAP キューブからのデータの使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **olapR** パッケージは、Microsoft により、Machine Learning Server および SQL Server で使用するために提供される R パッケージです。これにより、MDX クエリを実行して、OLAP キューブからデータを取得できます。 このパッケージでは、リンク サーバーの作成や、フラット化した行セットのクリーンアップは必要ありません。OLAP データを R から直接使用できます。
 
@@ -99,7 +99,7 @@ SQL Server Management Studio などのクライアントを使って Analysis Se
 
 サーバー プロパティのクエリの詳細については、次の記事を参照してください。
 
-+ [OLE DB for OLAP Schema 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [OLE DB for OLAP Schema 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>書き戻しはサポートされていません
 

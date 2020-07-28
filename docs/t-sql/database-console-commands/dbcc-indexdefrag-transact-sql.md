@@ -1,5 +1,5 @@
 ---
-title: DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs
+title: DBCC INDEXDEFRAG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d1894e33de743e8e4b7f4053b7b77746cca3e124
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ca27b41cffa6ee319acf27e62bc26e1f27a82c44
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901659"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484295"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 指定されたテーブルまたはビューのインデックスをデフラグします。
@@ -54,17 +55,19 @@ DBCC INDEXDEFRAG
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## <a name="arguments"></a>引数  
- *database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
+ *database_name* \| *database_id* \| 0  
  断片化を解消するインデックスが含まれているデータベースを指定します。 0 を指定すると、現在のデータベースが選択されます。 データベース名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   
- *table_name* | *table_id* | *view_name* | *view_id*  
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  断片化を解消するインデックスが含まれているテーブルまたはビューを指定します。 テーブル名とビュー名は、識別子の規則に従っている必要があります。  
   
- *index_name* | *index_id*  
+ *index_name* \| *index_id*  
  断片化を解消するインデックスの ID または名前を指定します。 インデックス ID を指定しないと、ステートメントは指定されたテーブルまたはビューのすべてのインデックスをデフラグします。 インデックス名は、識別子の規則に従っている必要があります。  
   
- *partition_number* | 0  
+ *partition_number* \| 0  
  デフラグするインデックスのパーティション番号です。 パーティション番号を指定しない場合、またはパーティション番号に 0 を指定した場合、ステートメントは指定されたインデックス内のすべてのパーティションをデフラグします。  
   
  WITH NO_INFOMSGS  

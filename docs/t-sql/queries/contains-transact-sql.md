@@ -34,16 +34,16 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736322"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552577"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での検索、または重み付き検索を行います。 CONTAINS は [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの [WHERE 句](../../t-sql/queries/where-transact-sql.md)で使用される述語です。文字ベースのデータ型を含むフルテキスト インデックス列で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。  
   
@@ -140,7 +140,9 @@ CONTAINS (
   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *column_name*  
  FROM 句で指定されたテーブルのフルテキスト インデックス付き列の名前を指定します。 列には、**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary**、**varbinary(max)** のいずれかの型を指定できます。  
   
@@ -318,18 +320,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  0\.0 から 1.0 の間で重み値を指定します。 *\<weighted_term>* 内の各コンポーネントには、*weight_value* を含めることができます。 *weight_value* は、クエリのさまざまな部分に影響を与える、クエリに一致する各行に割り当てられる順位値を変更することです。 WEIGHT は CONTAINS クエリの結果に影響しませんが、WEIGHT は [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) クエリ内のランクに影響します。  
   
 > [!NOTE]  
->  小数点区切り文字は、オペレーティング システムのロケールにかかわらず常にピリオドです。  
+> 小数点区切り文字は、オペレーティング システムのロケールにかかわらず常にピリオドです。  
   
- { AND | & } | { AND NOT | &! } | { OR | | }  
+ { AND \| & } \| { AND NOT \| &! } \| { OR \| \| }  
  2 つの contains 検索条件の間の論理演算を指定します。  
   
- { AND | & }  
+ { AND \| & }  
  一致条件として、2 つの contains 検索条件を満たすことを指定します。 アンパサンド記号 (&) は、AND キーワードの代わりに使用して、AND 演算子を表すことができます。  
   
- { AND NOT | &! }  
+ { AND NOT \| &! }  
  2 番目の検索条件が存在しないことを、一致条件として指定します。 アンパサンドとその次の感嘆符 (&!) は、AND NOT キーワードの代わりに使用して、AND NOT 演算子を表すことができます。  
   
- { OR | | }  
+ { OR \| \| }  
  一致条件として、2 つの contains 検索条件のいずれかを満たすことを指定します。 垂直バー記号 (|) は、OR キーワードの代わりに使用して、OR 演算子を表すことができます。  
   
  *\<contains_search_condition>* 内にかっこで囲まれたグループが含まれる場合は、かっこで囲まれたグループが最初に評価されます。 かっこで囲まれたグループを評価した後は、contains 検索条件で使用される論理演算子に対して次の規則が適用されます。  

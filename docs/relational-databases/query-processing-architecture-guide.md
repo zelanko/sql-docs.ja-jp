@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726149"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247622"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -481,13 +481,61 @@ GO
 
 特定の実行に対する以下のいずれかの SET オプションを変更すると、プランを再利用する機能に影響します。これは、[!INCLUDE[ssde_md](../includes/ssde_md.md)]で[定数のたたみ込み](#ConstantFolding)が行われ、これらのオプションがこのような式の結果に影響するためです。
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>同じクエリに対する複数のプランのキャッシュ 
 クエリおよび実行プランは、[!INCLUDE[ssde_md](../includes/ssde_md.md)]で一意に識別でき、指紋とよく似ています。
@@ -671,16 +719,70 @@ sql_handle
 `sql_statement_recompile` 拡張イベント (xEvent) によりステートメントレベルの再コンパイルが報告されます。 この xEvent は、ステートメントレベルの再コンパイルが何らかのバッチにより要求されるときに発生します。 ストアド プロシージャ、トリガー、アドホック バッチ、クエリなどが相当します。 バッチは、sp_executesql、動的 SQL、Prepare メソッド、Execute メソッドなど、いくつかのインターフェイスを使用して送信できます。
 `sql_statement_recompile` xEvent の `recompile_cause` 列には、再コンパイルの理由を示す整数コードが含まれます。 考えられる理由をまとめたのが次の表です。
 
-|||
-|----|----|  
-|スキーマの変更|統計の変更|  
-|コンパイルの遅延|SET オプションの変更|  
-|一時テーブルの変更|リモート行セットの変更|  
-|`FOR BROWSE` アクセス許可の変更|クエリ通知環境の変更|  
-|パーティション ビューの変更|カーソル オプションの変更|  
-|`OPTION (RECOMPILE)` の要求|パラメーター化されたプランのフラッシュ|  
-|プランに影響を与えるデータベース バージョンの変更|クエリ ストア プラン強制ポリシーの変更|  
-|クエリ ストア プラン強制の失敗|クエリ ストアにプランがない|
+:::row:::
+    :::column:::
+        スキーマの変更
+    :::column-end:::
+    :::column:::
+        統計の変更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        コンパイルの遅延
+    :::column-end:::
+    :::column:::
+        SET オプションの変更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        一時テーブルの変更
+    :::column-end:::
+    :::column:::
+        リモート行セットの変更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `FOR BROWSE` アクセス許可の変更
+    :::column-end:::
+    :::column:::
+        クエリ通知環境の変更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        パーティション ビューの変更
+    :::column-end:::
+    :::column:::
+        カーソル オプションの変更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` の要求
+    :::column-end:::
+    :::column:::
+        パラメーター化されたプランのフラッシュ
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        プランに影響を与えるデータベース バージョンの変更
+    :::column-end:::
+    :::column:::
+        クエリ ストア プラン強制ポリシーの変更
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        クエリ ストア プラン強制の失敗
+    :::column-end:::
+    :::column:::
+        クエリ ストアにプランがない
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > xEvents が利用できない [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バージョンの場合、ステートメントレベルの再コンパイルの報告という同じ目的に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロファイラー [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) トレース イベントを利用できます。

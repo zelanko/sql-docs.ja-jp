@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE (Transact-SQL) | Microsoft Docs
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/24/2020
 ms.prod: sql
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766952"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482129"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -343,6 +343,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数
 
 *database_name*: テーブルが作成されるデータベースの名前です。 *database_name* には、既存のデータベース名を指定する必要があります。 指定しない場合、*database_name* は現在のデータベースに設定されます。 現在の接続に対するログインには、*database_name* で指定されたデータベース内の既存のユーザー ID を関連付け、そのユーザー ID に CREATE TABLE 権限を許可しておく必要があります。
@@ -578,7 +580,7 @@ FOREIGN KEY REFERENCES: 1 つ以上の列内のデータに参照整合性を持
 
 **(** *ref_column* [ **,** ... *n* ] **)** : FOREIGN KEY 制約によって参照されるテーブルの、列または列のリストです。
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }: 作成したテーブルの行が参照関係を持ち、参照される行が親テーブルから削除された場合に、その行に対して実行されるアクションを指定します。 既定値は NO ACTION です。
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }: 作成したテーブルの行が参照関係を持ち、参照される行が親テーブルから削除された場合に、その行に対して実行されるアクションを指定します。 既定値は NO ACTION です。
 
 NO ACTION: [!INCLUDE[ssDE](../../includes/ssde-md.md)] がエラーを生成し、親テーブルでの行の削除アクションがロールバックされます。
 
@@ -598,7 +600,7 @@ SET DEFAULT: 親テーブル内の対応する行が削除されると、外部�
 
 これに対し、`NO ACTION` が指定されている場合、**ProductVendor** テーブルに **Vendor** テーブルの行を参照する行が 1 つでもあると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] でエラーが発生し、Vendor 行の削除操作をロールバックします。
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }: 変更対象のテーブル内の行が参照関係を持ち、親テーブルで参照先の行が更新された場合、その行に対して実行されるアクションを指定します。 既定値は NO ACTION です。
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT }: 変更対象のテーブル内の行が参照関係を持ち、親テーブルで参照先の行が更新された場合、その行に対して実行されるアクションを指定します。 既定値は NO ACTION です。
 
 NO ACTION: [!INCLUDE[ssDE](../../includes/ssde-md.md)]でエラーが発生し、親テーブルの行の更新アクションがロールバックされます。
 

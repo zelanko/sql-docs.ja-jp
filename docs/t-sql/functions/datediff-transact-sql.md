@@ -31,12 +31,12 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 847b69965c0bd7edb0b559fef95e6a2019cdbf7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e5f0fa70dc5c46d984a4d7003fc1ae6a00906a7
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011415"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112090"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 
@@ -54,7 +54,9 @@ ms.locfileid: "86011415"
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 
 *datepart*  
 **DATEDIFF** で _startdate_ と _enddate_ の違いを報告する場合の単位。 一般的に使用される _datepart_ の単位には、`month` または `second` が含まれます。
