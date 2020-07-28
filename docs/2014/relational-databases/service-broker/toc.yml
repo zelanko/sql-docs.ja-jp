@@ -1,9 +1,0 @@
-- name: イベント通知
-  href: event-notifications.md
-  items:
-    - name: イベント通知の実装
-      href: implement-event-notifications.md
-    - name: イベント通知のダイアログ セキュリティの構成
-      href: configure-dialog-security-for-event-notifications.md
-    - name: イベント通知に関する情報の取得
-      href: get-information-about-event-notifications.md
