@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 52884c4fb103f57e999d7a63d770181cf8cc8999
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52044ea389e964397b457e2758a312e651eae188
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224639"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008901"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>複数の列でテーブルを結合する (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 テーブルの結合は、複数の列を使用して行うこともできます。 つまり、2 つのテーブルの行が複数の条件を満たす場合だけこれらのテーブルの行を対応させるクエリを作成できます。 データベースのリレーションシップによって、複数存在する外部キー列を他方のテーブルの複数列にわたる主キーと一致させる場合、このリレーションシップを使用して複数列結合を作成できます。 詳しくは、「[テーブルの自動結合 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)」をご覧ください。  
   
 複数列の外部キー リレーションシップがデータベースにない場合でも、この結合を手動で作成できます。  

@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: d0e419703d83e0881912be76c58467db4bc83ceb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6e66b277a52282fee2a5fc18cf8fdb39eb77760
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258001"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011088"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>[インデックスの列] ダイアログ ボックス (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 このダイアログ ボックスでは、インデックスの列を選択し、その並べ替え順を設定できます。 インデックスは 1 つ以上の列を使用できます。また、各列は昇順または降順に並べ替えることができます。 このダイアログ ボックスを表示するには、 **[インデックス/キー]** ダイアログ ボックスの **[全般]** セクションで、 **[列]** 行の参照ボタンをクリックします。  
   
 ## <a name="options"></a>オプション  

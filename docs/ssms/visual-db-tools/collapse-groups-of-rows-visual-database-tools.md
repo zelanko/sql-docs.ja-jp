@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 81c66fe885c7e700366cc12129734710094824d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d810785665e4ecb2e8c59ba3832687724e65c7b1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255516"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007400"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>行グループの集約 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 基になるデータの行グループ全体に結果の各行が対応するようなクエリ結果を作成することができます。 行を集約するときは、次の点に注意してください。  
   
 -   **重複する行を除外する** クエリによっては、同じ行が複数出現する結果セットが作成されます。 たとえば、著者の居住地の市町村名と州名を各行に含む結果セットを作成するとします。この場合、複数の著者が住む市町村があると、同じ行が複数作成されます。 結果の SQL ステートメントは次のようになります。  

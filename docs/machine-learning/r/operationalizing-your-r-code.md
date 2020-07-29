@@ -2,22 +2,22 @@
 title: ストアド プロシージャで R コードをデプロイする
 description: R 言語コードを SQL Server ストアド プロシージャに埋め込んで、SQL Server データベースにアクセスできる任意のクライアント アプリケーションで使用できるようにします。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486811"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242326"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services でストアド プロシージャを使用して R コードを運用可能にする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server Machine Learning Services の R および Python 機能を使用しているとき、ソリューションを運用環境に移行するアプローチとして最も一般的なのは、コードをストアド プロシージャに埋め込むことです。 この記事では、SQL Server を使用して R コードを運用可能にするときの SQL 開発者を対象とした重要な考慮事項についてまとめます。
 
@@ -46,7 +46,7 @@ R または Python コードで事前に最適化をいくつか行うと、お�
 
 + リアルタイム スコアリング。小規模なバッチ用に最適化
 + 単一行スコアリング。アプリケーションからの呼び出し
-+ [ネイティブ スコアリング](../sql-native-scoring.md)。R を呼び出さずに SQL Server から高速バッチ予測
++ [ネイティブ スコアリング](../predictions/native-scoring-predict-transact-sql.md)。R を呼び出さずに SQL Server から高速バッチ予測
 
 このチュートリアルでは、バッチ モードと単一行モードの両方における、ストア ドプロシージャを使用したスコアリングの例を示します。
 

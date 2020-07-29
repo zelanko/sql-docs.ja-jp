@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: d25aeb06239ac1f9a0087516771d13e797330adb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fcc5b07a6b89e448568b4c41c6d50f2961cf72cb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255097"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010634"
 ---
 # <a name="save-queries-visual-database-tools"></a>クエリの保存 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 クエリを後で使用する場合は保存します。 クエリを実行しても、クエリに対して行った変更は保存されませんので注意してください。  
   
 ### <a name="to-save-a-query"></a>クエリを保存するには  

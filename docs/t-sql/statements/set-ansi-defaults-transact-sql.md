@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3886e6688f6e880a736885b55e5427dc0a98b8d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6d1cc88f04a85957f21cb215a19c56efa8dc7d9b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634528"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112784"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,14 +55,40 @@ ANSI_DEFAULTS はサーバー側の設定であり、すべてのクライアン
   
 有効 (ON) に設定すると、次の ISO 設定が有効になります。  
   
-|||  
-|-|-|  
-|[SET ANSI_NULLS]|[SET CURSOR_CLOSE_ON_COMMIT]|  
-|[SET ANSI_NULL_DFLT_ON]|[SET IMPLICIT_TRANSACTIONS]|  
-|[SET ANSI_PADDING]|[SET QUOTED_IDENTIFIER]|  
-|[SET ANSI_WARNINGS]||  
-|||
-  
+:::row:::
+    :::column:::
+        [SET ANSI_NULLS]
+    :::column-end:::
+    :::column:::
+        [SET CURSOR_CLOSE_ON_COMMIT]
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [SET ANSI_NULL_DFLT_ON]
+    :::column-end:::
+    :::column:::
+        [SET IMPLICIT_TRANSACTIONS]
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [SET ANSI_PADDING]
+    :::column-end:::
+    :::column:::
+        [SET QUOTED_IDENTIFIER]
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [SET ANSI_WARNINGS]
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
 また、ユーザーの作業セッション時や、トリガーまたはストアド プロシージャの実行時は、これらの ISO 標準 SET オプションは、クエリ処理環境を定義します。 ただし、これらの SET オプションには ISO 標準に準拠するために必要なオプションがすべて含まれているわけではありません。  
   
 計算列およびインデックス付きビューにおいてインデックスを操作する場合は、これらの 4 つの既定値 (`ANSI_NULLS`、`ANSI_PADDING`、`ANSI_WARNINGS`、および `QUOTED_IDENTIFIER`) を ON に設定する必要があります。 これは、計算列とインデックス付きビューにおいてインデックスを作成および変更するときに、指定された値に設定する必要がある 7 つの SET オプションの中の 4 つのオプションです。 その他の SET オプションは、`ARITHABORT` (ON)、`CONCAT_NULL_YIELDS_NULL` (ON)、および `NUMERIC_ROUNDABORT` (OFF) です。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメントの使用に関する留意事項](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements)」を参照してください。  
@@ -71,12 +97,31 @@ ANSI_DEFAULTS はサーバー側の設定であり、すべてのクライアン
   
 SET ANSI_DEFAULTS を実行すると、QUOTED_IDENTIFIER は解析時に設定され、次のオプションは実行時に設定されます。  
   
-|||  
-|-|-|  
-|[SET ANSI_NULLS]|[SET ANSI_WARNINGS]|  
-|[SET ANSI_NULL_DFLT_ON]|[SET CURSOR_CLOSE_ON_COMMIT]|  
-|[SET ANSI_PADDING]|[SET IMPLICIT_TRANSACTIONS]|  
-  
+:::row:::
+    :::column:::
+        [SET ANSI_NULLS]
+    :::column-end:::
+    :::column:::
+        [SET ANSI_WARNINGS]
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [SET ANSI_NULL_DFLT_ON]
+    :::column-end:::
+    :::column:::
+        [SET CURSOR_CLOSE_ON_COMMIT]
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [SET ANSI_PADDING]
+    :::column-end:::
+    :::column:::
+        [SET IMPLICIT_TRANSACTIONS]
+    :::column-end:::
+:::row-end:::
+
 ## <a name="permissions"></a>アクセス許可  
 ロール **public** のメンバーシップが必要です。  
   

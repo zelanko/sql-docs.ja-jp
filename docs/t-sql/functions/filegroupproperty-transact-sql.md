@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8804b058a851f6053f62ef8654f76edc5df3e980
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48c0d9a2a3b83256e8ae32a13d615e3a36b10ccb
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899014"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111544"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85899014"
 FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *filegroup_name*  
 **によって名前付けされたプロパティ情報が返されるファイル グループの名前を表す、** sysname`FILEGROUPPROPERTY` 型の式を指定します。  
   

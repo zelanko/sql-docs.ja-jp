@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: bf6436ae1ec235c2fb750df5ed57e640326c56aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: db85a1a3c3eb10d7fcf67d85964a4dda0ee4bbd2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254318"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010402"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>結果の挿入クエリの作成 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 結果の挿入クエリを使用すると、テーブル間またはテーブル内で行をコピーできます。 たとえば、 `titles` テーブルで結果の挿入クエリを使用すると、特定の出版社のすべての書名に関する情報を別のテーブルにコピーして、その出版社に提供できます。 結果の挿入クエリは、テーブルの作成と似ていますが、既存のテーブルに行をコピーする点が異なります。  
   
 > [!TIP]  

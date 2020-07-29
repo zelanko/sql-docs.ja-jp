@@ -1,7 +1,7 @@
 ---
 title: 構成ファイルを使用した SQL Server のインストール | Microsoft Docs
 description: SQL Server セットアップを使用して構成ファイルを生成し、統一された構成を使用して組織全体に SQL Server を配置できます。
-ms.date: 09/07/2017
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 800be0666d97ea1503fa5b1a8dd261543d0b4a10
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899672"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110215"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>構成ファイルを使用した SQL Server のインストール
 
@@ -23,7 +23,7 @@ ms.locfileid: "85899672"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、システムの既定値および実行時入力に基づいて構成ファイルを生成する機能が用意されています。 構成ファイルを使用すると、同じ構成の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を企業全体に配置できます。 また、Setup.exe を起動するバッチ ファイルを作成して、企業全体で手動によるインストールを標準化することもできます。 
  
-この記事は SQL Server バージョン 2016 以降に対して維持されます。 古いバージョンの SQL Server については、「[構成ファイルを使用した SQL Server 2014 のインストール](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014)」をご覧ください。
+この記事は SQL Server バージョン 2016 以降に対して維持されます。 古いバージョンの SQL Server については、「[構成ファイルを使用した SQL Server 2014 のインストール](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014)」をご覧ください。
  
 セットアップでは、コマンド プロンプトからのみ構成ファイルを使用できます。 以下に、構成ファイルを使用する際のパラメーターの処理順序について説明します。  
   

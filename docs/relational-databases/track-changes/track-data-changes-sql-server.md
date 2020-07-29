@@ -20,12 +20,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94e1353d8fb3d49a71b98e53f6ec92a6db469e2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f854ae440a51d1f9b3b873dad9f0aa21e88f3ab5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786074"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247291"
 ---
 # <a name="track-data-changes-sql-server"></a>データ変更の追跡 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -159,9 +159,8 @@ ms.locfileid: "85786074"
   
 ## <a name="related-tasks-required"></a>関連タスク (必須)  
   
-|||  
+|タスク|トピック|  
 |-|-|  
-|**タスク**|**トピック**|  
 |変更データ キャプチャの概要を示します。|[変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)|  
 |データベースまたはテーブルに対して変更データ キャプチャを有効または無効にする方法について説明します。|[変更データ キャプチャの有効化と無効化 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |変更データ キャプチャを管理および監視する方法について説明します。|[変更データ キャプチャの管理と監視 &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  

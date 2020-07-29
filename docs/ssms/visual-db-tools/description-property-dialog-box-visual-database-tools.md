@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5972e47097591118fb731f03c1e7f1237dda27e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb550a5981c22128dc5386ee13906855ea5e2477
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254657"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008316"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>[説明のプロパティ] ダイアログ ボックス (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **[説明のプロパティ]** ダイアログ ボックスには編集可能な領域が用意されており、ユーザーは、テーブル、列、外部キー制約などのデータベース オブジェクトの詳細な説明を記述できます。 このダイアログ ボックスを表示するには、テーブルやビューなどのオブジェクトがデザイナーで選択されている場合はオブジェクトのプロパティ ウィンドウ、インデックス、CHECK 制約などのオブジェクトの場合はダイアログ ボックス、テーブル列の場合はテーブル デザイナーの **[列のプロパティ]** タブを使用します。 説明は、オブジェクトの拡張プロパティとして保存されます。  
   
 ## <a name="see-also"></a>参照  

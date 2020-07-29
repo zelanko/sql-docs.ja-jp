@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 808fcde7587a68f45bda472ba51e03bddc0884af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1370fcb02e75a5ed9173c8111a79ce17eea8490
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245739"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007859"
 ---
 # <a name="options-environment---general-page"></a>[オプション] ([環境]/[全般] ページ)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して **[全般]** をクリックします。
 
-## <a name="uielement-list"></a>UI 要素の一覧
+## <a name="ui-element-list"></a>UI 要素の一覧
 
 **[Close button affects active tool window only] ([閉じる] ボタンを、アクティブになっているツール ウィンドウに対してのみ実行する\)**
 
