@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158920"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485580"
 ---
 # <a name="thread-and-task-architecture-guide"></a>スレッドおよびタスクのアーキテクチャ ガイド
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -111,6 +111,9 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP]
 > 親タスクの場合、列 `parent_task_address` は常に NULL になります。 
 
+> [!TIP]
+> 非常にビジーな [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、予約されたスレッドによって設定された制限を超えて、アクティブなタスクが多数表示される可能性があります。 これらのタスクは、使用されなくなっていて、過渡的な状態にあり、クリーンアップされるのを待っている分岐に属する場合があります。 
+
 [!INCLUDE[ssResult](../includes/ssresult-md.md)] 現在実行中の分岐に対して 17 個のアクティブなタスクがあることに注目してください。予約されたスレッドに対応する 16 個の子タスクと、親タスク (調整タスク) です。
 
 |parent_task_address|task_address|task_state|scheduler_id|worker_address|
@@ -133,9 +136,6 @@ ORDER BY parent_task_address, scheduler_id;
 |0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
 |0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
 
-> [!TIP]
-> 非常にビジーな [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、予約されたスレッドによって設定された制限を超えて、アクティブなタスクが多数表示される可能性があります。 これらのタスクは、使用されなくなっていて、過渡的な状態にあり、クリーンアップされるのを待っている分岐に属する場合があります。 
-
 16 個の子タスクのそれぞれに異なるワーカー スレッドが割り当てられているものの (`worker_address` 列に表示)、すべてのワーカーが 8 つのスケジューラ (0、5、6、7、8、9、10、11) の同じプールに割り当てられている点に注目してください。また、親タスクはこのプール以外のスケジューラ (3) に割り当てられています。
 
 > [!IMPORTANT]
@@ -147,7 +147,7 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP] 
 > 上に示した DMV の出力では、すべてのアクティブなタスクが SUSPENDED 状態になっています。 待機中のタスクの詳細を確認するには、[sys. dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md) DMV に対してクエリを実行してください。 
 
-要約すると、並列要求によって複数のタスクが生成されます。各タスクは 1 つのワーカー スレッドに割り当てられる必要があり、各ワーカー スレッドは 1 つのスケジューラに割り当てられる必要があります。 そのため、使用中のスケジューラの数は、分岐ごとの並列タスクの数 (MaxDOP で設定) を超えることはできません。 
+要約すると、並列要求では複数のタスクが生成されます。 各タスクは、単一のワーカー スレッドに割り当てられる必要があります。 各ワーカー スレッドは、単一のスケジューラに割り当てられる必要があります。 そのため、使用中のスケジューラの数は、分岐ごとの並列タスクの数を超えることはできません。この数は、MaxDOP 構成、または MaxDOP クエリ ヒントによって設定されます。 調整スレッドは、MaxDOP の制限に寄与しません。 
 
 ### <a name="allocating-threads-to-a-cpu"></a>CPU へのスレッドの割り当て
 既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各インスタンスによってそれぞれのスレッドが開始され、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスのスレッドは、オペレーティング システムにより、負荷に基づいてコンピューターのプロセッサ (CPU) 間に分散されます。 処理関係がオペレーティング システム レベルで有効な場合、オペレーティング システムによって各スレッドが特定の CPU に割り当てられます。 これに対し、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] では、ラウンドロビン方式で CPU 間に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **ワーカー スレッド**を均等に分散する**スケジューラ**にスレッドを割り当てます。

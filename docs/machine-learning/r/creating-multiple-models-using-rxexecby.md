@@ -2,22 +2,22 @@
 title: rxExecBy で複数のモデルを作成する
 description: RevoScaleR ライブラリの rxExecBy 関数を使用して、SQL Server に格納されているマシン データに対して複数のミニモデルを構築します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dbba63ae69997c9c5dbdccf49ec590b3f4eba652
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f4f0da1fdee47d166fe1b06fd8ce6e8ddea64f4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723850"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>rxExecBy を使用して複数のモデルを作成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 RevoScaleR の **rxExecBy** 関数では、複数の関連モデルの並列処理がサポートされています。 データ サイエンティストは、複数の類似エンティティのデータに基づいて 1 つの大きなモデルをトレーニングするのではなく、1 つのエンティティに固有のデータをそれぞれ使用して、多数の関連モデルをすばやく作成できます。 
 

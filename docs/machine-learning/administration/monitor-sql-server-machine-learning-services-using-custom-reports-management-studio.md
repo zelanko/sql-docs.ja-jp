@@ -2,22 +2,22 @@
 title: カスタム レポートを使用したスクリプトの監視
 description: SQL Server Management Studio (SSMS) のカスタム レポートを使用して、外部スクリプト (Python と R) の実行、使用されたリソース、問題の診断、SQL Server Machine Learning Services のパフォーマンスの調整を監視します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dad4cebf8259241b85497a0ff894228d125e839b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 708d805ff810876ba5871b2e1e887dd97aceba3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659623"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>SQL Server Management Studio のカスタムレポートを使用して Python および R のスクリプトの実行を監視する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server Management Studio (SSMS) のカスタム レポートを使用して、外部スクリプト (Python と R) の実行、使用されたリソース、問題の診断、SQL Server Machine Learning Services のパフォーマンスの調整を監視します。
 
@@ -68,11 +68,11 @@ SQL Server Management Studio のレポートの詳細については、「[Manag
 | レポート | 説明 |
 |-|-|
 | Active sessions | 現在、SQL Server インスタンスに接続し、Python または R のスクリプトを実行しているユーザー。 |
-| Configuration | Machine Learning Services のインストール設定および Python または R のランタイムのプロパティ。 |
-| Configure Instance | Machine Learning Services を構成します。 |
-| Execution Statistics | Machine Learning Services の実行統計 たとえば、外部スクリプト実行の合計数と並列実行数を取得できます。 |
-| Extended Events | 外部スクリプトの実行に関する追加の洞察を得るために使用できる拡張イベント。 |
-| Packages | SQL Server インスタンスにインストールされている R または Python のパッケージと、バージョンや名前などのプロパティを一覧表示します。 |
+| 構成 | Machine Learning Services のインストール設定および Python または R のランタイムのプロパティ。 |
+| インスタンスを構成する | Machine Learning Services を構成します。 |
+| 実行の統計 | Machine Learning Services の実行統計 たとえば、外部スクリプト実行の合計数と並列実行数を取得できます。 |
+| 拡張イベント | 外部スクリプトの実行に関する追加の洞察を得るために使用できる拡張イベント。 |
+| パッケージ | SQL Server インスタンスにインストールされている R または Python のパッケージと、バージョンや名前などのプロパティを一覧表示します。 |
 | Resource Usage | SQL Server の CPU、メモリ、IO 消費量、および外部スクリプトの実行を表示します。 外部のリソース プールのメモリ設定を表示することもできます。 |
 
 ## <a name="next-steps"></a>次のステップ

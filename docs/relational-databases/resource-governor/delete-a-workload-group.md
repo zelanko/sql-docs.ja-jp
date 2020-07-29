@@ -1,5 +1,6 @@
 ---
 title: ワークロード グループの削除 | Microsoft Docs
+description: SQL Server Management Studio か Transact-SQL を使用し、ワークロード グループまたはリソース共有元を削除する方法について説明します。 CONTROL SERVER 権限が必要です。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 11a0723882b5af2002ead9d8645b047f69aae43e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 160f7f998aa42ed86a9f46d9fab70e38ac1b2d02
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729298"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457904"
 ---
 # <a name="delete-a-workload-group"></a>ワークロード グループの削除
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

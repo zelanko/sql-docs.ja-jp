@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243890"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236915"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio のツール ウィンドウ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、開発と管理のあらゆる段階で使用できる強力なツール ウィンドウが数多く用意されています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のあらゆるコンポーネントで使用できるツールもあれば、特定のコンポーネントだけで使用できるツールもあります。 次の表に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのコンポーネントで使用できるツールを示します。  
   
-|||  
-|-|-|  
-|**ツール**|**目的**|  
+|ツール|目的|  
+|-|-|   
 |[[オブジェクト エクスプローラー]](../ssms/object/object-explorer.md)|サーバー内の表示、オブジェクトの作成と検索、データ ソースの管理、ログの表示を行います。 このツールには、 **[表示]** メニューからアクセスできます。|  
 |[ソリューション エクスプローラー](../ssms/solution/solution-explorer.md)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スクリプトというプロジェクトにスクリプトや関連する接続情報を格納して整理します。 複数の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スクリプトをソリューションとして格納することや、ソース管理を使用してスクリプトの開発過程を管理することも可能です。 このツールには、 **[表示]** メニューからアクセスできます。|  
 |[テンプレート エクスプローラー](../ssms/template/template-explorer.md)|既存のテンプレートに基づいてクエリを作成します。 カスタム クエリを作成することや、既存のテンプレートをそれぞれのシナリオに合わせて変更することも可能です。 このツールには、 **[表示]** メニューからアクセスできます。|  

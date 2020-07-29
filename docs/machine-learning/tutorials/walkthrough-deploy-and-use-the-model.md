@@ -2,22 +2,22 @@
 title: R チュートリアル:モデルの配置
 description: データベース内分析のために SQL Server に R モデルを配置する方法を示すチュートリアル。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781785"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R モデルを配置して SQL Server で使用する (チュートリアル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このレッスンでは、ストアド プロシージャからトレーニング済みのモデルを呼び出すことによって、運用環境に R モデルを配置する方法について説明します。 R または [!INCLUDE[tsql](../../includes/tsql-md.md)] をサポートするアプリケーション プログラミング言語 (C#、Java、Python など) からストアド プロシージャを呼び出し、モデルを使用して新しい観察結果を予測することができます。
 
@@ -120,11 +120,11 @@ ms.locfileid: "81115735"
 
 ## <a name="single-row-scoring"></a>単一行のスコアリング
 
-個別スコアリング モードでは、一度に 1 つの予測が生成され、個別の値のセットが入力としてストアド プロシージャに渡されます。 値は、モデル内の特徴量に対応しています。モデルではこの特徴量を使用して、予測の作成や、確率値などの別の結果の生成が行われます。 その後、その値をアプリケーションまたはユーザーに返すことができます。
+個別スコアリング モードでは、一度に 1 つの予測が生成され、個別の値のセットが入力としてストアド プロシージャに渡されます。 値は、モデル内の特徴に対応しています。モデルではこの特徴を使用して、予測の作成や、確率値などの別の結果の生成が行われます。 その後、その値をアプリケーションまたはユーザーに返すことができます。
 
-予測のために行単位でモデルを呼び出す場合は、個々のケースの特徴量を表す値のセットを渡します。 その後、ストアド プロシージャによって 1 つの予測または確率が返されます。 
+予測のために行単位でモデルを呼び出す場合は、個々のケースの特徴を表す値のセットを渡します。 その後、ストアド プロシージャによって 1 つの予測または確率が返されます。 
 
-ストアド プロシージャ *PredictTipSingleMode* で、このアプローチを確認できます。 これは、特徴量の値 (乗客数や走行距離など) を表す複数のパラメーターを入力として受け取り、格納されている R モデルを使用してこれらの特徴量をスコア付けし、チップの確率を出力します。
+ストアド プロシージャ *PredictTipSingleMode* で、このアプローチを確認できます。 これは、特徴の値 (乗客数や走行距離など) を表す複数のパラメーターを入力として受け取り、格納されている R モデルを使用してこれらの特徴をスコア付けし、チップの確率を出力します。
 
 1. ストアド プロシージャを作成するには、次の Transact-SQL ステートメントを実行します。
 

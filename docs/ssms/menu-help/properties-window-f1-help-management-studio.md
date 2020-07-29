@@ -1,10 +1,7 @@
 ---
 title: '[プロパティ] ウィンドウの F1 ヘルプ (Management Studio)'
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -23,20 +20,26 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6301ce8d1500cb4c71bbcf725e5abe81fa2130b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: d6cbc1291e5370053f0cf1ebf70265f02187e449
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243859"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246431"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>[プロパティ] ウィンドウの F1 ヘルプ (Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 **[プロパティ]** ウィンドウを使用すると、選択した要素のプロパティを表示できます。 また、 **[プロパティ]** ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティを表示することもできます。 **[プロパティ]** ウィンドウは、 **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックすると表示されます。  
   
 **[プロパティ]** ウィンドウには、さまざまな種類の編集フィールドが表示されます。表示されるフィールドは、特定のプロパティで必要となる内容に応じて異なります。 淡色で表示されているプロパティは変更できません。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>オプション
+
 **オブジェクト名です。**  
 現在選択している 1 つまたは複数のオブジェクトを一覧に表示します。 アクティブなエディターまたはデザイナーのオブジェクトのみが表示されます。  
   
@@ -52,6 +55,6 @@ ms.locfileid: "75243859"
 **説明ペイン**  
 説明ペインは **[プロパティ]** ウィンドウの下部に配置され、プロパティの種類とプロパティの簡単な説明を表示します。 ショートカット メニューの **[説明]** を使用して、プロパティの説明の表示と非表示を切り替えることができます。  
   
-## <a name="see-also"></a>参照  
-[Management Studio の [プロパティ] ウィンドウの使用](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
-  
+## <a name="see-also"></a>参照
+
+- [Management Studio の [プロパティ] ウィンドウの使用](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)

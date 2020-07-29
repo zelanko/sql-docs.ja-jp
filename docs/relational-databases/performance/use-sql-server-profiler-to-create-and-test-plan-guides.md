@@ -1,7 +1,7 @@
 ---
 title: プラン ガイドの作成とテスト
 titleSuffix: SQL Server Profiler
-description: SQL Server Profiler でのプラン ガイドの作成とテスト。
+description: SQL Server Profiler を使用し、SQL Server の sp_create_plan_guide ストアド プロシージャの statement_text 引数で使用するクエリ テキストを正確にキャプチャします。
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7ee56255d55a8676fd55b903af70c002cefc9bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd63a1de999b04ed1c6c3b80efabdf9fc5dc1919
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737104"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455904"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler を使用したプラン ガイドの作成とテスト
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

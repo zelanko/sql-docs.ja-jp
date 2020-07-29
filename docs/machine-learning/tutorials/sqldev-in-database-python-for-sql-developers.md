@@ -2,22 +2,22 @@
 title: Python + T-SQL:モデルの開発
 description: SQL Server ストアド プロシージャおよび T-SQL 関数に Python コードを埋め込む方法について説明します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bafc3a524ec854dc9bf1669660827d5a6bc80f7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d5cdec0ad291fecf0606650d116f0c7979831c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785636"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向けの Python データ分析
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL プログラマー向けのこのチュートリアルでは、SQL Server で [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) データベースを使用して Python ベースの機械学習ソリューションをビルドしてデプロイすることによる Python の統合について説明します。 T-SQL、SQL Server Management Studio、およびデータベース エンジン インスタンスを [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) および Python 言語サポートと共に使用します。
 
@@ -33,7 +33,7 @@ SQL プログラマー向けのこのチュートリアルでは、SQL Server �
 機械学習ソリューションを構築するプロセスは、複数のツールおよび複数の段階にわたる該当分野の専門家の連携に関連する可能性がある複雑なものです。
 
 + データの取得とクリーニング
-+ モデリングに役立つデータの探索と特徴量の構築
++ モデリングに役立つデータと構築機能の探索
 + モデルのトレーニングと最適化
 + 運用環境に展開する
 
@@ -43,7 +43,7 @@ Python を初めて使用する SQL プログラマーであろうと、SQL を�
 
 + [レッスン 1:Python を使用したデータの探索および視覚化](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [レッスン 2:カスタム SQL 関数を使用してデータの特徴量を作成する](sqldev-py4-create-data-features-using-t-sql.md)
++ [レッスン 2:カスタム SQL 関数を使用してデータ機能を作成する](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [レッスン 3:T-SQL を使用して Python モデルをトレーニングし保存する](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
@@ -61,7 +61,7 @@ Python を初めて使用する SQL プログラマーであろうと、SQL を�
 
 すべてのタスクは、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを使用して実行できます。
 
-このチュートリアルでは、データベースとテーブルの作成、データのインポート、SQL クエリの作成などの基本的なデータベース操作について理解していることを前提としています。 Python を理解していることは前提としていません。 そのため、すべての Python コードが提供されています。 
+このチュートリアルでは、データベースと表の作成、データのインポート、SQL クエリの作成などの基本的なデータベース操作について理解していることを前提としています。 Python を理解していることは前提としていません。 そのため、すべての Python コードが提供されています。 
 
 ## <a name="next-steps"></a>次のステップ
 

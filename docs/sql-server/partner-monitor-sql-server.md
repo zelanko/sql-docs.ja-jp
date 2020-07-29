@@ -1,22 +1,22 @@
 ---
 title: SQL Server 監視のパートナー | Microsoft Docs
 description: サーバー監視のソリューションを提供しているサードパーティ パートナーの一覧を表示します。
-services: sql-server
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: acecd9a5ef362f591d71eee15550ee7daa96dfc4
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 5b2ea5e22800d2fc8f65282f62fa52ce19e87722
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002810"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921773"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視パートナー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 SQL Server サービスを監視するためのツールを、業界をリードする豊富な種類の中から選びます。 この記事では、Microsoft SQL Server をサポートする監視ソリューションを提供する Microsoft パートナー会社を示します。
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft の監視パートナー

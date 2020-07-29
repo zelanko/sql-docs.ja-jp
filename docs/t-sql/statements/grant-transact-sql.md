@@ -1,5 +1,5 @@
 ---
-title: GRANT (Transact-SQL) | Microsoft Docs
+title: GRANT (Transact-SQL)
 ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4618de753675ef1b3d7ccd2f7a187f22aab9c683
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b89b170d50e23c14cf08da78597e83c674050de0
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010738"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483813"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   セキュリティ保護可能なリソースに対する権限をプリンシパルに許可します。  一般的な概念は、\<some object> に対する \<some permission> を \<some user, login, or group> に付与することです。 権限の概要については、「[権限 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)」を参照してください。  
@@ -54,9 +55,9 @@ GRANT { ALL [ PRIVILEGES ] }
 ```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-GRANT   
+GRANT
     <permission> [ ,...n ]  
-    [ ON [ <class_type> :: ] securable ]   
+    [ ON [ <class_type> :: ] securable ]
     TO principal [ ,...n ]  
     [ WITH GRANT OPTION ]  
 [;]  
@@ -75,68 +76,73 @@ GRANT
 }  
 ```  
   
-## <a name="arguments"></a>引数  
- ALL  
- このオプションは旧バージョンとの互換性のためだけに保持されており、非推奨とされます。 実際にはすべての権限が許可されるわけではありません。 ALL を指定すると、次のアクセス許可が許可されます。 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
+
+ALL  
+このオプションは旧バージョンとの互換性のためだけに保持されており、非推奨とされます。 実際にはすべての権限が許可されるわけではありません。 ALL を指定すると、次のアクセス許可が許可されます。
+
+  - セキュリティ保護可能なリソースがデータベースの場合、ALL は BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW を意味します。  
   
--   セキュリティ保護可能なリソースがデータベースの場合、ALL は BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW を意味します。  
+  - セキュリティ保護可能なリソースがスカラー関数の場合、EXECUTE および REFERENCES。  
   
--   セキュリティ保護可能なリソースがスカラー関数の場合、EXECUTE および REFERENCES。  
+  - セキュリティ保護可能なリソースがテーブル値関数の場合、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
--   セキュリティ保護可能なリソースがテーブル値関数の場合、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+  - セキュリティ保護可能なリソースがストアド プロシージャの場合、EXECUTE。  
   
--   セキュリティ保護可能なリソースがストアド プロシージャの場合、EXECUTE。  
+  - セキュリティ保護可能なリソースがテーブルの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
   
--   セキュリティ保護可能なリソースがテーブルの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
-  
--   セキュリティ保護可能なリソースがビューの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
-  
+  - セキュリティ保護可能なリソースがビューの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
+
 PRIVILEGES  
- ISO 準拠のために用意されています。 ALL の動作は変更されません。  
+ISO 準拠のために用意されています。 ALL の動作は変更されません。  
   
 *permission*  
- 権限の名前を指定します。 アクセス許可とセキュリティ保護可能なリソースの有効な組み合わせについては、後のトピックを参照してください。  
+権限の名前を指定します。 アクセス許可とセキュリティ保護可能なリソースの有効な組み合わせについては、後のトピックを参照してください。  
   
 *column*  
- 権限を許可するテーブルの列の名前を指定します。 かっこ () で囲む必要があります。  
+権限を許可するテーブルの列の名前を指定します。 かっこ () で囲む必要があります。  
   
 *class*  
- 権限を許可するセキュリティ保護可能なリソースのクラスを指定します。 スコープ修飾子 **::** が必要です。  
+権限を許可するセキュリティ保護可能なリソースのクラスを指定します。 スコープ修飾子 **::** が必要です。  
   
 *securable*  
- 権限を許可するセキュリティ保護可能なリソースを指定します。  
+権限を許可するセキュリティ保護可能なリソースを指定します。  
   
 TO *principal*  
- プリンシパルの名前です。 セキュリティ保護可能なリソースに対する権限を許可できるプリンシパルは、そのリソースによって異なります。 有効な組み合わせについては、後のトピックを参照してください。  
+プリンシパルの名前です。 セキュリティ保護可能なリソースに対する権限を許可できるプリンシパルは、そのリソースによって異なります。 有効な組み合わせについては、後のトピックを参照してください。  
   
 GRANT OPTION  
- 権限が許可された被付与者が、この権限を他のプリンシパルにも許可できることを示します。  
+権限が許可された被付与者が、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *principal*  
- AS <principal> 句は、権限の許可者として記録されるプリンシパルは、ステートメントを実行しているユーザー以外のプリンシパルでなければならないことを示すために使います。 たとえば、ユーザー Mary の principal_id は 12、ユーザー Raul の principal_id は 15 であるものとします。 Mary が `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` を実行します。ステートメントは実際にはユーザー 13 (Mary) によって実行されましたが、sys.database_permissions テーブルでは、grantor_prinicpal_id は 15 (Raul) であることが示されます。
+AS <principal> 句は、権限の許可者として記録されるプリンシパルは、ステートメントを実行しているユーザー以外のプリンシパルでなければならないことを示すために使います。 たとえば、ユーザー Mary の principal_id は 12、ユーザー Raul の principal_id は 15 であるものとします。 Mary が `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` を実行します。ステートメントは実際にはユーザー 13 (Mary) によって実行されましたが、sys.database_permissions テーブルでは、grantor_prinicpal_id は 15 (Raul) であることが示されます。  
 
 一般に、AS 句の使用は、権限チェーンを明示的に定義する必要がある場合を除き、推奨されません。 詳しくは、「[権限 (データベース エンジン)](../../relational-databases/security/permissions-database-engine.md)」の「**権限チェック アルゴリズムの概要**」セクションをご覧ください。
 
-このステートメントで AS を使っても、別のユーザーを偽装できることは意味しません。 
-  
-## <a name="remarks"></a>解説  
- GRANT ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 セキュリティ保護可能なリソースに対するアクセス許可を許可するための完全な構文については、後の記事を参照してください。  
-  
- 許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT によってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
-  
- 権限を許可すると、指定したセキュリティ保護可能なリソースに対する権限の DENY または REVOKE は削除されます。 対象のセキュリティ保護可能なリソースの上位スコープで同じ権限が拒否されている場合は、その DENY ステートメントが優先されますが、 上位スコープで許可されている権限を取り消そうとしても、その REVOKE ステートメントは優先されません。  
-  
- データベース レベルの権限は、指定されたデータベースのスコープ内で許可されます。 ユーザーが別のデータベースのオブジェクトに対する権限を必要とする場合、そのデータベースにユーザー アカウントを作成するか、または現在のデータベースへのアクセス権と同様に、そのデータベースへのアクセス権もユーザー アカウントに与えます。  
-  
+このステートメントで AS を使っても、別のユーザーを偽装できることは意味しません。
+
+## <a name="remarks"></a>解説
+
+GRANT ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 セキュリティ保護可能なリソースに対するアクセス許可を許可するための完全な構文については、後の記事を参照してください。  
+
+許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT によってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
+
+権限を許可すると、指定したセキュリティ保護可能なリソースに対する権限の DENY または REVOKE は削除されます。 対象のセキュリティ保護可能なリソースの上位スコープで同じ権限が拒否されている場合は、その DENY ステートメントが優先されますが、 上位スコープで許可されている権限を取り消そうとしても、その REVOKE ステートメントは優先されません。  
+
+データベース レベルの権限は、指定されたデータベースのスコープ内で許可されます。 ユーザーが別のデータベースのオブジェクトに対する権限を必要とする場合、そのデータベースにユーザー アカウントを作成するか、または現在のデータベースへのアクセス権と同様に、そのデータベースへのアクセス権もユーザー アカウントに与えます。  
+
 > [!CAUTION]  
->  テーブル レベルの DENY は列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。 将来のリリースでは削除される予定です。  
+> テーブル レベルの DENY は列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。 将来のリリースでは削除される予定です。  
+
+システム ストアド プロシージャ sp_helprotect では、データベース レベルのセキュリティ保護可能なリソースに対する権限をレポートします。  
+
+## <a name="with-grant-option"></a>WITH GRANT OPTION
+
+**GRANT** ...**WITH GRANT OPTION** は、権限を受け取るセキュリティ プリンシパルが、指定された権限を他のセキュリティ アカウントに付与する能力を与えられることを意味します。 権限を与えられるプリンシパルがロールまたは Windows グループである場合、グループまたはロールのメンバーではないユーザーにオブジェクト権限をさらに付与する必要があるときは、**AS** 句を使用する必要があります。 **GRANT** ステートメントを実行できるのはグループまたはロールではなくユーザーだけなので、グループまたはロールの特定のメンバーは、権限を付与するときに、**AS** 句を使用して、ロールまたはグループのメンバーシップを明示的に呼び出す必要があります。 次の例では、ロールまたは Windows グループに付与するときの **WITH GRANT OPTION** の使用方法を示します。  
   
- システム ストアド プロシージャ sp_helprotect では、データベース レベルのセキュリティ保護可能なリソースに対する権限をレポートします。  
-  
-## <a name="with-grant-option"></a>WITH GRANT OPTION  
- **GRANT** ...**WITH GRANT OPTION** は、権限を受け取るセキュリティ プリンシパルが、指定された権限を他のセキュリティ アカウントに付与する能力を与えられることを意味します。 権限を与えられるプリンシパルがロールまたは Windows グループである場合、グループまたはロールのメンバーではないユーザーにオブジェクト権限をさらに付与する必要があるときは、**AS** 句を使用する必要があります。 **GRANT** ステートメントを実行できるのはグループまたはロールではなくユーザーだけなので、グループまたはロールの特定のメンバーは、権限を付与するときに、**AS** 句を使用して、ロールまたはグループのメンバーシップを明示的に呼び出す必要があります。 次の例では、ロールまたは Windows グループに付与するときの **WITH GRANT OPTION** の使用方法を示します。  
-  
-```  
+```sql
 -- Execute the following as a database owner  
 GRANT EXECUTE ON TestProc TO TesterRole WITH GRANT OPTION;  
 EXEC sp_addrolemember TesterRole, User1;  
@@ -145,23 +151,26 @@ EXEC sp_addrolemember TesterRole, User1;
 GRANT EXECUTE ON TestMe TO User2;  
 -- The following succeeds because User1 invokes the TesterRole membership  
 GRANT EXECUTE ON TestMe TO User2 AS TesterRole;  
-```  
-  
-## <a name="chart-of-sql-server-permissions"></a>SQL Server 権限の一覧表  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのアクセス許可を示した pdf 形式のポスター サイズの一覧表については、[https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster) を参照してください。  
-  
-## <a name="permissions"></a>アクセス許可  
- 権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。 AS オプションを使用する場合は、追加の要件を満たす必要があります。 詳細については、セキュリティ保護可能なリソース別の記事を参照してください。  
-  
- オブジェクトの所有者は、所有するオブジェクトの権限を許可できます。 セキュリティ保護可能なリソースに対して CONTROL 権限があるプリンシパルは、そのリソースの権限を許可できます。  
-  
- sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を許可できます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を許可できます。  
-  
-## <a name="examples"></a>例  
- 次の表は、セキュリティ保護可能なリソースと、その構文について説明している記事の一覧です。  
-  
-|||  
-|-|-|  
+```
+
+## <a name="chart-of-sql-server-permissions"></a>SQL Server 権限の一覧表
+
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのアクセス許可を示した pdf 形式のポスター サイズの一覧表については、[https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster) を参照してください。  
+
+## <a name="permissions"></a>アクセス許可
+
+権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。 AS オプションを使用する場合は、追加の要件を満たす必要があります。 詳細については、セキュリティ保護可能なリソース別の記事を参照してください。
+
+オブジェクトの所有者は、所有するオブジェクトの権限を許可できます。 セキュリティ保護可能なリソースに対して CONTROL 権限があるプリンシパルは、そのリソースの権限を許可できます。
+
+sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を許可できます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を許可できます。
+
+## <a name="examples"></a>例
+
+次の表は、セキュリティ保護可能なリソースと、その構文について説明している記事の一覧です。  
+
+| セキュリティ保護可能 | GRANT 構文|
+| ---------| ------ |
 |アプリケーション ロール|[GRANT (データベース プリンシパルの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |アセンブリ|[GRANT (アセンブリの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
 |非対称キー|[GRANT (非対称キーの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
@@ -194,15 +203,14 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |User|[GRANT (データベース プリンシパルの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |表示|[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |XML スキーマ コレクション|[GRANT (XML スキーマ コレクションの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
-  
-## <a name="see-also"></a>参照  
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
-  
-  
+
+## <a name="see-also"></a>参照
+
+- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)
+- [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)
+- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)
+- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)
+- [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)
+- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)
+- [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)
+- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)

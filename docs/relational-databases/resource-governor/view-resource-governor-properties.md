@@ -1,5 +1,6 @@
 ---
 title: リソース ガバナーのプロパティの表示 | Microsoft Docs
+description: SQL Server Management Studio の [Resource Governor のプロパティ] ページを使用し、Resource Governor エンティティを作成または構成する方法について説明します。
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c19adf7c918fa4a2bd2f48227a8109cef26c64f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ff1c4429b14e359ae249f7a9e9baf2f5da46224
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729265"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457824"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +73,7 @@ ms.locfileid: "85729265"
  **[リソース プール]**  
  提供されるグリッドを使用して、リソース プールおよび外部リソース プールの構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **Name**  
+ **名前**  
  リソース プールの名前を指定します。  
   
  **[最小 CPU %]**  
@@ -92,7 +93,7 @@ ms.locfileid: "85729265"
  **[リソース プールのワークロード グループ]**  
  提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **Name**  
+ **名前**  
  ワークロード グループの名前を指定します。  
   
  **重要度**  

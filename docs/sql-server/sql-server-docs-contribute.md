@@ -2,18 +2,19 @@
 title: SQL Server のドキュメントに投稿する方法 | Microsoft Docs
 ms.date: 08/13/2018
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d947ae25f6f01740e7c5826a7edf332ff422a9de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286326"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247385"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する方法
 
@@ -23,7 +24,7 @@ ms.locfileid: "79286326"
 
 2 つの主要なワークフローを使って投稿することができます。
 
-|||
+|ワークフロー|説明|
 |---|---|
 | [ブラウザーで編集する](#githubui) | 任意の記事のちょっとした編集を簡単に行うのに適しています。 |
 | [ツールを使ってローカルに編集する](#tools) | 複雑な編集、複数の記事が関係する編集、および docs.microsoft.com への頻繁な投稿に適しています。 |
@@ -36,7 +37,7 @@ ms.locfileid: "79286326"
 
 次の手順は、このプロセスをまとめたものです。 
 
-1. フィードバックがあるページで、右上の **[Edit]\(編集\)** リンクを選択します。
+1. フィードバックがあるページで、右上の **[編集]** リンクを選択します。
 1. 次のページで、右上の**鉛筆**アイコンを選択します。
 1. 次のページの **[Edit file]\(ファイルの編集\)** テキスト ウィンドウで、変更するテキストを直接編集します。
     新規または変更されたテキストの書式設定に関するヘルプが必要な場合は、「[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)」(マークダウンのカンニング ペーパー) を参照してください。
@@ -53,7 +54,7 @@ ms.locfileid: "79286326"
 
 ## <a name="edit-locally-with-tools"></a><a id="tools"></a> ツールを使ってローカルに編集する
 
-もう 1 つの編集オプションは、**sql-docs** または **azure-docs** リポジトリをフォークして、お使いのコンピューターにローカルにクローンします。 その後、Markdown エディターと git クライアントを使って、変更を送信することができます。 このワークフローは、複雑で複数のファイルが関係する編集に適しています。 また、docs.microsoft.com に頻繁に投稿する場合にも適しています。
+もう 1 つの編集オプションは、**sql-docs** または **azure-docs** リポジトリをフォークして、お使いのコンピューターにローカルに複製します。 その後、Markdown エディターと git クライアントを使って、変更を送信することができます。 このワークフローは、複雑で複数のファイルが関係する編集に適しています。 また、docs.microsoft.com に頻繁に投稿する場合にも適しています。
 
 この方法で投稿する場合は、次の記事を参照してください。
 
@@ -93,7 +94,7 @@ SQL Server の各記事には、タイトルの後に **applies-to** インク�
 **appliesto-ss-asdb-asdw-pdw-md.md** インクルード ファイルの Markdown の例を次に示します。
 
 ```Markdown
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 このインクルード ファイルにより、記事の上部に次のテキストが追加されます。

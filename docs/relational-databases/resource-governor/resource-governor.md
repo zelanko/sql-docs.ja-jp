@@ -1,5 +1,6 @@
 ---
 title: リソース ガバナー | Microsoft Docs
+description: 受信したアプリケーション要求で使用できる CPU、物理 I/O、メモリの量を制限する SQL Server Resource Governor 機能について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cc24afebe163f3fbab8c7f1a2317b62d8c818223
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8654f25318bfc947394b0acaf0df19a8f7eb2bc3
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729295"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457829"
 ---
 # <a name="resource-governor"></a>[リソース ガバナー]
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

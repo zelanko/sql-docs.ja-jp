@@ -2,22 +2,22 @@
 title: ODBC を使用して R オブジェクトを保存し、読み込む
 description: RevoScaleR パッケージには、パフォーマンスを大幅に向上させ、オブジェクトをよりコンパクトに格納する、シリアル化および逆シリアル化の関数が含まれています。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 98a14848db4854c0bcb19167e7fcf7d43eca5f2e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c6f6f8611885a0628d3b2cf719947006a7c5094c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753356"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>ODBC を使用して SQL Server に R オブジェクトを保存し、読み込む
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server R Services ではシリアル化された R オブジェクトをテーブルに格納した後で、必要に応じてテーブルからオブジェクトを読み込むことができます。その際に、R コードを再実行したり、モデルを再トレーニングしたりする必要はありません。 データベースで R オブジェクトを保存するこの機能は、モデルをトレーニングして保存し、後でスコアリングや分析にそれを使用するなどのシナリオでは重要です。
 

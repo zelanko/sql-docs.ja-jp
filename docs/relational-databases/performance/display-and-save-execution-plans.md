@@ -1,5 +1,6 @@
 ---
 title: 実行プランの表示と保存 | Microsoft Docs
+description: SQL Server Management Studio を使用して実行プランを表示する方法と XML 形式でファイルに実行プランを保存する方法について説明します。
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2d049990cd2c60db36105d3c03da36bc25b4f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19c0cee8d1ff56167032f7a0ff918b3adee24056
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749538"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457297"
 ---
 # <a name="display-and-save-execution-plans"></a>実行プランの表示と保存
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

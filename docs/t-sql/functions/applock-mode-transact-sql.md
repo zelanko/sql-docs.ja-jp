@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba622c928d2ec1300dbe9eec29ea3a249b7ca89a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3d171d77cf3462eb68893f4ac5f6230d73b8b11
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684965"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113187"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85684965"
 APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 '*database_principal*'  
 データベース内のオブジェクトに対するアクセス許可を許可されるユーザー、ロール、またはアプリケーション ロールです。 関数を正常に呼び出すには、関数の呼び出し元が *database_principal*、dbo、または、db_owner 固定データベース ロールのメンバーである必要があります。
   

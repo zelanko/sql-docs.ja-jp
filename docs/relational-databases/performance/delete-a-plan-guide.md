@@ -1,5 +1,6 @@
 ---
 title: プラン ガイドの削除 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用し、SQL Server でプラン ガイドを削除またはドロップする方法について説明します。 Transact-SQL を使用すると、あるデータベース内のすべてのガイドが削除されます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3138d4fcda123d56af975b2f2cfd5d5e4c76536b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93982c0ad59b7016902c64cd4dd81d0f81c270f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655614"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457314"
 ---
 # <a name="delete-a-plan-guide"></a>プラン ガイドの削除
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85655614"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **プラン ガイドの削除に使用するもの:**  
   

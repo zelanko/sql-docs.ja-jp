@@ -1,6 +1,6 @@
 ---
 title: DTA からの出力
-description: データベース エンジン チューニング アドバイザー (DTA) からの出力を表示および操作します。
+description: SQL Server インストールでデータベース エンジン チューニング アドバイザーによって作成されるサマリー、推奨設定、レポート、チューニング ログを使用する方法について説明します。
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 75a8ee28972b2b80fc1244a80b35b7c9d5d6daee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737086"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458577"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>データベース エンジン チューニング アドバイザー (DTA) からの出力を表示および操作する
 

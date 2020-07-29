@@ -8,16 +8,16 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 657dab5c2d80bc4ae4c404872386eb993e242235
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75558457"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896534"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio Code を使用して Transact-SQL スクリプトを作成して実行する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Visual Studio Code の **mssql** 拡張機能を使用して SQL Server データベースを開発する方法について説明します。 Visual Studio Code はクロスプラットフォームであるため、Linux、macOS、および Windows で **mssql** 拡張機能を使用できます。
 

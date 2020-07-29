@@ -2,22 +2,22 @@
 title: コマンド プロンプトからのインストール
 description: SQL Server のコマンド ライン セットアップを実行して、R 言語と Python の統合を SQL Server データベース エンジンのインスタンスに追加します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a9bc48c3bb2631fc9f25a0c0aba761fd5bfaee56
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b3c3d469cb016a562f069473923f470ce750dd5e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118265"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883898"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>コマンド ラインから SQL Server Machine Learning R および Python コンポーネントをインストールする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 この記事では、コマンド ラインから SQL Server の機械学習コンポーネントをインストールする手順について説明します。
 

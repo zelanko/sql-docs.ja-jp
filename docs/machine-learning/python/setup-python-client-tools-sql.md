@@ -2,22 +2,22 @@
 title: Python データ サイエンス クライアントを設定する
 description: Python で SQL Server Machine Learning Services にリモート接続するための Python ローカル環境 (Jupyter Notebook または PyCharm) を設定します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1857ba03808c4309f2573a7d8e58801d5f80199d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117775"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897212"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services で Python 開発用のデータ サイエンス クライアントを設定する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [Machine Learning Services (データベース内) インストール](../install/sql-machine-learning-services-windows-install.md)に Python オプションを含めると、SQL Server 2017 以降で Python 統合を使用できます。 
 
@@ -51,9 +51,9 @@ SSMS は個別にダウンロードします。これは、Python コードが�
 
 1. インストール スクリプトをダウンロードします。
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) では、バージョン 9.2.1 の Microsoft Python パッケージがインストールされます。 このバージョンは、既定の SQL Server インスタンスに対応します。 
+   + [https://aka.ms/mls-py](https://aka.ms/mls-py) では、バージョン 9.2.1 の Microsoft Python パッケージがインストールされます。 このバージョンは、既定の SQL Server インスタンスに対応します。 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) では、バージョン 9.3 の Microsoft Python パッケージがインストールされます。 このバージョンは、リモート SQL Server インスタンスが [Machine Learning Server 9.3 にバインド](../install/upgrade-r-and-python.md)されている場合に適しています。
+   + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) では、バージョン 9.3 の Microsoft Python パッケージがインストールされます。 このバージョンは、リモート SQL Server インスタンスが [Machine Learning Server 9.3 にバインド](../install/upgrade-r-and-python.md)されている場合に適しています。
 
 2. 特権を持つ管理者権限で PowerShell ウィンドウを開きます ( **[管理者として実行]** を右クリックする)。
 
@@ -79,7 +79,7 @@ SSMS は個別にダウンロードします。これは、Python コードが�
 
 2. 「`dir *.exe`」と入力して、実行可能ファイルをリストします。 **python.exe**、**pythonw.exe**、および **uninstall-anaconda.exe** が表示されるはずです。
 
-  ![Python 実行可能ファイルのリスト](media/powershell-python-exe.png)
+   ![Python 実行可能ファイルのリスト](media/powershell-python-exe.png)
    
 複数のバージョンの Python があるシステムで、**revoscalepy** やその他の Microsoft パッケージを読み込む場合は、必ず、この特定の Python.exe を使用してください。
 
@@ -94,17 +94,17 @@ Anaconda には Jupyter Notebook が含まれています。 次の手順とし�
 
 1. PowerShell プロンプトで、引き続き C:\Program Files\Microsoft\PyForMLS ディレクトリにある Scripts フォルダーの Jupyter Notebook を開きます。
 
-  ```powershell
-  .\Scripts\jupyter-notebook
-  ```
+   ```powershell
+   .\Scripts\jupyter-notebook
+   ```
 
-  ノートブックは、既定のブラウザーの `https://localhost:8889/tree` で開くはずです。
+   ノートブックは、既定のブラウザーの `https://localhost:8889/tree` で開くはずです。
 
-  起動するもう 1 つの方法は、**jupyter-notebook.exe** をダブルクリックすることです。 
+   起動するもう 1 つの方法は、**jupyter-notebook.exe** をダブルクリックすることです。 
 
 2. **[新規]** 、 **[Python 3]** の順にクリックします。
 
-  ![新しい Python 3 が選択された状態の Jupyter Notebook](media/jupyter-notebook-new-p3.png)
+   ![新しい Python 3 が選択された状態の Jupyter Notebook](media/jupyter-notebook-new-p3.png)
 
 3. 「`import revoscalepy`」と入力し、コマンドを実行して、Microsoft 固有のライブラリのいずれかを読み込みます。
 
@@ -112,17 +112,17 @@ Anaconda には Jupyter Notebook が含まれています。 次の手順とし�
 
 4. より複雑な一連のステートメントを入力します。 この例では、ローカル データ セットで [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) を使用して、概要の統計情報を生成します。 その他の関数では、サンプル データの場所を取得し、ローカルの .xdf ファイルのデータ ソース オブジェクトを作成します。
 
-  ```python
-  import os
-  from revoscalepy import rx_summary
-  from revoscalepy import RxXdfData
-  from revoscalepy import RxOptions
-  sample_data_path = RxOptions.get_option("sampleDataDir")
-  print(sample_data_path)
-  ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
-  summary = rx_summary("ArrDelay+DayOfWeek", ds)
-  print(summary)
-  ```
+   ```python
+   import os
+   from revoscalepy import rx_summary
+   from revoscalepy import RxXdfData
+   from revoscalepy import RxOptions
+   sample_data_path = RxOptions.get_option("sampleDataDir")
+   print(sample_data_path)
+   ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+   summary = rx_summary("ArrDelay+DayOfWeek", ds)
+   print(summary)
+   ```
 
 次のスクリーンショットでは入力と、出力の一部が示されており、簡潔にするためにトリミングされています。
 

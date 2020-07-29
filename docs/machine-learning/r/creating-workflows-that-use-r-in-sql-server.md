@@ -2,21 +2,21 @@
 title: R での SSIS と SSRS のワークフローを作成する
 description: SQL Server Machine Learning Services と R Services、Reporting Services (SSRS)、および SQL Server Integration Services (SSIS) を組み合わせた統合シナリオ。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680365"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server で R を使用して SSIS および SSRS ワークフローを作成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事では、次に示す 2 つの重要な SQL Server 機能を備えた SQL Server Machine Learning Services の言語およびデータ サイエンス能力を使用して、埋め込み R と Python スクリプトを使用する方法について説明します。その機能とは、SQL Server Integration Services (SSIS) および SQL Server Reporting Services SSRS です。 SQL Server の R および Python ライブラリには、統計関数と予測関数が用意されています。 SSIS と SSRS は、それぞれ連携した ETL 変換と視覚化を提供します。 この記事では、これらのすべての機能をこのワークフロー パターンにまとめる方法について説明します。
 
