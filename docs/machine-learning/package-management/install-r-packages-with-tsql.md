@@ -2,22 +2,22 @@
 title: T-SQL (CREATE EXTERNAL LIBRARY) を使用して R パッケージをインストールする
 description: R パッケージを SQL Server 2016 R Services または SQL Server Machine Learning Services (データベース内) に追加します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4e9aa1b7b2b21883e3034d32959a8267d67d56c0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: cc65081551da08f74730b728869db0847928f4ac
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606907"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242355"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL (CREATE EXTERNAL LIBRARY) を使用して SQL Server に R パッケージをインストールする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事では、機械学習が有効になっている SQL Server のインスタンスに、新しい Python パッケージをインストールする方法について説明します。 複数のアプローチから選択できます。 R に慣れていないサーバー管理者については、T-SQL を使用することをお勧めします。
 
@@ -48,7 +48,7 @@ T-SQL ステートメント `CREATE EXTERNAL LIBRARY` を実行して、zip 形�
 たとえば、次のステートメントは、**randomForest** パッケージを含む miniCRAN リポジトリとその依存関係を、パッケージ ソースとして指定します。 
 
 ```sql
-CREATE EXTERNAL LIBRARY randomForest
+CREATE EXTERNAL LIBRARY [randomForest]
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
 ```

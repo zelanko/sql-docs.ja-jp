@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: fbebb46cc091d8a4a033480237827cf95b6b0c59
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a9903504e0b593d5081df2f9d563712cf68cd416
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822412"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112386"
 ---
 # <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "82822412"
 OBJECT_SCHEMA_NAME ( object_id [, database_id ] )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *object_id*  
  使用するオブジェクトの ID です。 *object_id* のデータ型は **int** です。指定したデータベース コンテキスト、または現在のデータベース コンテキストのスキーマ スコープ オブジェクトと見なされます。  
   

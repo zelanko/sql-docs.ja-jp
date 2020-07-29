@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 039ad2ec8ea2e0d05eae0ec2d627c07117580bf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c865561f66f9f40ce131e9b8dce563f77ca187aa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258921"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001801"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio のプロパティ ページ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のプロパティ ページのダイアログ ボックスでは、カテゴリの展開や折りたたみができる共通の形式で情報が表示されます。 表示されるフィールドは、プロパティごとに異なります。 淡色で表示されているプロパティは変更できません。 [項目別] および [アルファベット順] ボタンはプロパティ ページの上部にあります。  
   
 以下の表に、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のプロパティ ページのダイアログ ボックスで使用される共通の要素について示します。  

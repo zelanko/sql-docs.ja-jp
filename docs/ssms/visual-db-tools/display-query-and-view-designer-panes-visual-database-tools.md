@@ -16,17 +16,16 @@ helpviewer_keywords:
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7ce2afd0dd8fd7c63e348b72c9499314494c49ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83534e704d4460e32a5d7c62307dbd8a9adba08e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244170"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004965"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>クエリおよびビュー デザイナーのペインの表示 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 クエリおよびビュー デザイナーは、ダイアグラム ペイン、検索条件ペイン、SQL ペイン、および結果ペインの 4 つのペインで構成されます。 通常、ビューを開くか、新しいクエリを作成するときには、4 つのウィンドウがすべて開きますが、この 4 つのウィンドウのいずれかを開く必要がある場合は、クエリおよびビュー デザイナーが開いていれば開くことができます。  
   
 ### <a name="to-display-query-and-view-designer-panes"></a>クエリおよびビュー デザイナーのペインを表示するには  

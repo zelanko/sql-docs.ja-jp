@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1988a31f085619604198b889138bb8e62eb8f28b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2c41f99d32803914b20ffa65dfb22722f62143b0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251924"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999562"
 ---
 # <a name="create-a-new-solution"></a>新しいソリューションの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 プロジェクトを作成すると、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって、そのプロジェクトを含むソリューションが作成されます。 同時に開くことのできるソリューションは 1 つだけです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、プロジェクト内にフォルダーを作成することはできません。 作業を整理するには、複数のプロジェクトを作成してください。  
   
 ソリューション エクスプローラーにアクセスするには、 **[表示]** メニューの **[ソリューション エクスプローラー]** をクリックします。  

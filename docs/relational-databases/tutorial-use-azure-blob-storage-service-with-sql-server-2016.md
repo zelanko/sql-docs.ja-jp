@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用'
 ms.custom: seo-dt-2019
-ms.date: 01/10/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd01280d2777fdab926c2e733224dc94b5fef834
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906048"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247271"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 
@@ -37,7 +37,7 @@ SQL Server による Microsoft Azure Blob Storage サービスの統合のサポ
 - 無料の [Azure アカウント](https://azure.microsoft.com/offers/ms-azr-0044p/)を取得する。
 - [Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)を作成します。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
-- [SQL Server を実行している Azure VM](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/) をプロビジョニングする
+- [SQL Server を実行している Azure VM](https://azure.microsoft.com/services/virtual-machines/sql-server/) をプロビジョニングする
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 - [AdventureWorks2016 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
 - ユーザー アカウントを [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) のロールに割り当て、[alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 権限を付与する。 
@@ -180,7 +180,7 @@ SQL Server 資格情報を作成するには、次の手順を実行します。
 このセクションでは、オンプレミスの SQL Server 2016 インスタンス内の AdventureWorks2016 データベースを、[セクション 1](#1---create-stored-access-policy-and-shared-access-storage) で作成した Azure コンテナーにバックアップします。
   
 > [!NOTE]  
-> この Azure コンテナーに SQL Server 2012 SP1 CU2 以降のデータベースまたは SQL Server 2014 データベースをバックアップする場合、 [こちら](https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) に記載されている非推奨の構文を使用すれば、WITH CREDENTIAL 構文で URL へのバックアップを行うことができます。  
+> この Azure コンテナーに SQL Server 2012 SP1 CU2 以降のデータベースまたは SQL Server 2014 データベースをバックアップする場合、 [こちら](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) に記載されている非推奨の構文を使用すれば、WITH CREDENTIAL 構文で URL へのバックアップを行うことができます。  
   
 BLOB ストレージにデータベースをバックアップするには、次の手順に従います。  
   

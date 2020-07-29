@@ -1,6 +1,6 @@
 ---
 title: 拡張機能の作成
-description: 拡張機能を作成して Azure Data Studio に追加する方法について学習します
+description: 拡張機能を作成して Azure Data Studio に公開する方法について学習します
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: adfff7f2aa0fbda1b5e8bdacaddfaef36d16342f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 63a4c95f12aefafec97a58a186d33a5095b90dc2
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774633"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483846"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 拡張機能を作成することで機能を拡張する
 
@@ -31,14 +31,16 @@ Azure Data Studio の拡張に関心がある場合は、独自の拡張機能�
 
 ***前提条件***
 
-拡張機能を開発するには、Node.js をインストールし、自分の $PATH で利用できるようにする必要があります。 Node.js には、拡張機能ジェネレーターのインストールに使用される npm (Node.js パッケージ マネージャー) が含まれています。
+拡張機能を開発するには、[Node.js](https://nodejs.org/) をインストールし、自分の `$PATH` で利用できるようにする必要があります。 Node.js には、拡張機能ジェネレーターのインストールに使用される npm (Node.js パッケージ マネージャー) が含まれています。
 
-新しい拡張機能を開始するには、Azure Data Studio 拡張機能ジェネレーターを使用できます。 この Yeoman [拡張機能ジェネレーター](https://www.npmjs.com/package/generator-azuredatastudio)を使用すると、シンプルな拡張機能プロジェクトをとても簡単に作成できます。 ジェネレーターを起動するには、コマンド プロンプトで次のように入力します。
+新しい拡張機能を作成するには、Azure Data Studio 拡張機能ジェネレーターを使用できます。 この Yeoman [拡張機能ジェネレーター](https://www.npmjs.com/package/generator-azuredatastudio)は、拡張機能プロジェクトの使用を開始するうえで便利です。 ジェネレーターを起動するには、コマンド プロンプトで次のように入力します。
 
-`npm install -g yo generator-azuredatastudio`
+```
+npm install -g yo generator-azuredatastudio # Install the generator
+yo azuredatastudio
+```
 
-`yo azuredatastudio`
-
+拡張機能テンプレートの使用を開始する方法に関する詳細なガイドについては、[拡張機能の作成](https://docs.microsoft.com/sql/azure-data-studio/tutorial-create-extension?view=sql-server-ver15)に関する記事を参照してください。この記事では、キーマップ拡張機能の作成について説明しています。
 
 **機能拡張の参照**
 
@@ -50,19 +52,24 @@ Azure Data Studio 機能拡張の詳細については、[拡張機能の概要]
 Visual Studio Code 拡張機能の [Azure Data Studio Debug](https://github.com/kevcunnane/sqlops-debug) を使用して、新しい拡張機能をデバッグできます。
 
 手順
-- [Visual Studio Code](https://code.visualstudio.com/) で拡張機能を開きます。
-- Azure Data Studio Debug 拡張機能をインストールします。
-- **F5** キーを押すか、デバッグ アイコンをクリックして **[開始]** をクリックします。
-- Azure Data Studio の新しいインスタンスが特別なモード (拡張機能開発ホスト) で起動し、この新しいインスタンスによってご利用の拡張機能が認識されています。
+1. [Visual Studio Code](https://code.visualstudio.com/) で拡張機能を開きます。
+1. Azure Data Studio Debug 拡張機能をインストールします。
+1. **F5** キーを押すか、デバッグ アイコンをクリックして **[開始]** をクリックします。
+1. Azure Data Studio の新しいインスタンスが特別なモード (拡張機能開発ホスト) で起動し、この新しいインスタンスによってご利用の拡張機能が認識されています。
 
 
 ## <a name="create-an-extension-package"></a>拡張機能パッケージを作成する
 
-拡張機能を作成した後は、VSIX パッケージを作成して、Azure Data Studio にインストールできるようにする必要があります。 [vsce](https://github.com/Microsoft/vscode-vsce) を使用して、VSIX パッケージを作成できます。
+拡張機能を作成した後は、VSIX パッケージを作成して、Azure Data Studio にインストールできるようにする必要があります。 [vsce](https://github.com/Microsoft/vscode-vsce) (Visual Studio Code Extensions) を使用して、VSIX パッケージを作成できます。 
 
-`npm install -g vsce`
+```
+npm install -g vsce
+cd myExtensionName
+vsce package
+# The myExtensionName.vsix file has now been generated
+```
 
-`vsce package`
+VSIX パッケージを使用すると、`.vsix` ファイルを共有し、コマンド パレットからコマンド **Extensions: Install From VSIX File** を使用して拡張機能を Azure Data Studio にインストールすることで、その拡張機能をローカルおよびプライベートに共有することができます。
 
 
 ## <a name="publish-an-extension"></a>拡張機能を公開する
@@ -76,4 +83,6 @@ Azure Data Studio に新しい拡張機能を公開するには、次の操作�
 
 拡張機能が確認され、拡張機能ギャラリーに追加されます。
 
-**拡張機能の更新プログラムを公開する** 更新プログラムを公開するプロセスは、拡張機能の公開と同様です。 バージョンが package.json で更新されていることを確認してください。
+**拡張機能の更新プログラムの公開**
+
+更新プログラムを公開するプロセスは、拡張機能の公開と同様です。 バージョンが package.json で更新されていることを確認してください。

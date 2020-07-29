@@ -1,5 +1,5 @@
 ---
-title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs
+title: IS_SRVROLEMEMBER (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb44adf219905a585b922fc280215f1c81465cda
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784511"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248516"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが、指定したサーバー ロールのメンバーであるかどうかを示します。  
@@ -40,19 +41,23 @@ ms.locfileid: "85784511"
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  **'** *role* **'**  
  確認するサーバー ロールの名前です。 *role* は **sysname**です。  
   
  *role* の有効な値は、ユーザー定義サーバー ロールと、次の固定サーバー ロールです。  
-  
-|||  
-|-|-|  
-|[sysadmin]|serveradmin|  
-|dbcreator|setupadmin|  
-|bulkadmin|securityadmin|  
-|diskadmin|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> public|  
-|processadmin||  
+
+- [sysadmin]
+- serveradmin
+- dbcreator
+- setupadmin  
+- bulkadmin
+- securityadmin  
+- diskadmin
+- public  
+- processadmin
   
  **'** *login* **'**  
  確認する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前です。 *login* のデータ型は **sysname** で、既定値は NULL です。 値を指定しない場合、結果は現在の実行コンテキストに基づきます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
@@ -69,7 +74,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="remarks"></a>解説  
  現在のユーザーがサーバー ロールの権限を必要とするアクションを実行できるかどうかを判断するには IS_SRVROLEMEMBER を使用します。  
   
- Contoso\Mary5 などの Windows ログインを *login* に指定した場合、**IS_SRVROLEMEMBER** は、そのログインに  **への直接アクセスが許可または拒否されている場合を除き、** NULL[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を返します。  
+ Contoso\Mary5 などの Windows ログインを *login* に指定した場合、**IS_SRVROLEMEMBER** は、そのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスが許可または拒否されている場合を除き、**NULL** を返します。  
   
  省略可能な *login* パラメーターを指定しない場合、*login* が Windows ドメインのログインであると、そのログインは、Windows グループのメンバーシップを通じて、固定サーバー ロールのメンバーになっている可能性があります。 そのような間接的なメンバーシップを解決するために、IS_SRVROLEMEMBER は、Windows グループのメンバーシップ情報をドメイン コントローラーに要求します。 ドメイン コントローラーにアクセスできないか、またはドメイン コントローラーが応答しない場合、**IS_SRVROLEMEMBER** はユーザーとそのローカル グループのみを考慮したロール メンバーシップ情報を返します。 指定されたユーザーが現在のユーザーでない場合、IS_SRVROLEMEMBER が返す値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対する認証システム (Active Directory など) の最後のデータ更新と異なることがあります。  
   

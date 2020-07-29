@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fe0605cdfd2d2cf341ff6ab51939fee2c78ae797
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e16612058617d324d0b3c0e4534716b39a09527f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216279"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552424"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) の File および Filegroup オプション
 
@@ -57,9 +57,7 @@ ms.locfileid: "80216279"
 
 構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
 
-## <a name="click-a-product"></a>製品をクリックしてください
-
-次の行から興味がある製品名をクリックしてみてください。 この Web ページでは、クリックした製品に合わせて、異なるコンテンツが表示されます。
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -72,7 +70,7 @@ ms.locfileid: "80216279"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 {
     <add_or_modify_files>
@@ -279,7 +277,7 @@ REMOVE FILEGROUP *filegroup_name*: データベースからファイルグルー
 
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。
 
-\<filegroup_updatability_option>: ファイル グループに読み取り専用、または読み取り/書き込みのプロパティを設定します。
+\<filegroup_updatability_option> ファイル グループに読み取り専用、または読み取り/書き込みのプロパティを設定します。
 
 DEFAULT: 既定のデータベース ファイル グループを *filegroup_name* に変更します。 データベース内の 1 つのファイル グループだけを、既定のファイル グループにすることができます。 詳細については、「 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)」を参照してください。
 
@@ -692,7 +690,7 @@ GO
 
 ## <a name="syntax-for-databases-in-a-managed-instance"></a>マネージド インスタンスのデータベースでの構文
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 {
     <add_or_modify_files>
@@ -812,7 +810,7 @@ REMOVE FILEGROUP *filegroup_name*: データベースからファイルグルー
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。
 
-\<filegroup_updatability_option>: ファイル グループに読み取り専用、または読み取り/書き込みのプロパティを設定します。
+\<filegroup_updatability_option> ファイル グループに読み取り専用、または読み取り/書き込みのプロパティを設定します。
 
 DEFAULT: 既定のデータベース ファイル グループを *filegroup_name* に変更します。 データベース内の 1 つのファイル グループだけを、既定のファイル グループにすることができます。 詳細については、「 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)」を参照してください。
 

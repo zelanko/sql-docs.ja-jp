@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 804cec4cbfe25f92b6b244b25b25a4498a09f1fa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 82ddc00bcf23aae923047ef204587728107b0ada
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245039"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000210"
 ---
 # <a name="arguments-dialog-box"></a>[引数] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **[引数]** ダイアログ ボックスでは、ツールの新しい引数または既存の引数を指定します。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスで **[起動時に引数を入力]** オプションをオンにしている外部ツールを起動したときに表示されます。  
   
 ## <a name="options"></a>オプション  

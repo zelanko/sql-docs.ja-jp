@@ -1,5 +1,5 @@
 ---
-title: sql_variant (Transact-SQL) | Microsoft Docs
+title: sql_variant (Transact-SQL)
 ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81914007c22cf850693d2a38b0da83cd64cde6c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a16ac1b62c5a0aad216db06dc4e11c8c7263da65
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754805"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556208"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 このデータ型には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートしている各種データ型の値が格納されます。
@@ -36,10 +37,12 @@ ms.locfileid: "85754805"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 sql_variant  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>解説  
 **sql_variant** 列、パラメーター、変数、およびユーザー定義関数の戻り値で使用できます。 **sql_variant** 他のデータ型の値をサポートするためにこれらのデータベース オブジェクトを使用します。
   
@@ -97,18 +100,24 @@ ODBC でサポートされていません **sql_variant**です。 クエリで�
 ## <a name="converting-sql_variant-data"></a>sql_variant 型データの変換  
 処理するときに、 **sql_variant** データ型の場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] するには、他のデータ型のオブジェクトの暗黙的な変換をサポートしている、 **sql_variant** 型です。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からの暗黙的な変換をサポートしていない **sql_variant** 別のデータ型のオブジェクトへのデータです。
   
-## <a name="restrictions"></a>制限  
-次の表は、種類の値を使用して格納することはできませんが **sql_variant**:
-  
-|||  
-|-|-|  
-|**varchar(max)**|**varbinary(max)**|  
-|**nvarchar(max)**|**xml**|  
-|**text**|**ntext**|  
-|**画像**|**rowversion** (**タイムスタンプ**)|  
-|**sql_variant**|**geography**|  
-|**hierarchyid**|**geometry**|  
-|ユーザー定義データ型|**datetimeoffset**<sup>1</sup>| 
+## <a name="restrictions"></a>制限
+
+次に、**sql_variant** を使用して格納できない値の種類を示します。
+
+- **datetimeoffset**<sup>1</sup>
+- **geography**
+- **geometry**
+- **hierarchyid**
+- **image**
+- **ntext**
+- **nvarchar(max)**
+- **rowversion** (**タイムスタンプ**)
+- **text**
+- **varchar(max)**
+- **varbinary(max)**
+- **sql_variant**
+- ユーザー定義データ型
+- **xml**
 
 <sup>1</sup> SQL Server 2012 およびそれ以降では、**datetimeoffset** を制限していません。
 

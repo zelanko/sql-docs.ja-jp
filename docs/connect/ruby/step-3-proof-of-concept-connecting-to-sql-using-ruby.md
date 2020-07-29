@@ -1,7 +1,7 @@
 ---
 title: 'ステップ 3: Ruby を使用した SQL への接続を概念実証する | Microsoft Docs'
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10ff3f651695b172396b89dc7de97d62a2824e84
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0431ce7aaa9c7e40196c689591b7d56ec5d42ef
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926716"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263786"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>ステップ 3: Ruby を使用した SQL への接続を概念実証する
 
@@ -25,7 +25,7 @@ ms.locfileid: "80926716"
   
 [TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds) 関数を使用して SQL データベースに接続します。  
   
-``` ruby
+```ruby
     require 'tiny_tds'  
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
     host: 'yourserver.database.windows.net', port: 1433,  
@@ -36,11 +36,13 @@ ms.locfileid: "80926716"
   
 次のコードをコピーして、空のファイルに貼り付けます。 test.rb という名前を付けます。 次に、次のコマンドを入力してコマンド プロンプトからこれを実行します。  
   
+```ruby
     ruby test.rb  
+```
   
 このコード サンプルでは、[TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds) 関数を使用して、SQL データベースに対するクエリから結果セットを取得しています。 この関数はクエリを受け取り、結果セットを返します。 結果セットは [result.each do |行|](https://github.com/rails-sqlserver/tiny_tds) を使用して反復処理されます。  
   
-``` ruby 
+```ruby 
     require 'tiny_tds'    
     print 'test'       
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
@@ -60,7 +62,7 @@ Azure で TinyTDS を使用する場合、いくつかの `SET` ステートメ�
   
 Microsoft SQL Server の [datetime](../../t-sql/data-types/datetime-transact-sql.md) 形式に合わせるには、[strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) 関数を使用して対応する datetime 形式にキャストします。  
   
-``` ruby
+```ruby
     require 'tiny_tds'  
     client = TinyTds::Client.new username: 'yourusername@yourserver', password: 'yourpassword',  
     host: 'yourserver.database.windows.net', port: 1433,  

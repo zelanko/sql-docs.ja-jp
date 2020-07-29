@@ -2,22 +2,22 @@
 title: インターネットへのアクセスなしでのインストール
 description: ネットワーク ファイアウォールの背後に隔離されたコンピューターに SQL Server Machine Learning R および Python をインストールします。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bdcec8602a9552fdc7ffac0be3badb26b19646e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118255"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247984"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>インターネットにアクセスできないコンピューターに SQL Server Machine Learning R および Python をインストールする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 既定では、インストーラーは Microsoft ダウンロード サイトに接続して、SQL Server 上での機械学習に必要なコンポーネントおよび更新されたコンポーネントを取得します。 ファイアウォールの制約によって、インストーラーがこれらのサイトにアクセスできない場合は、インターネットに接続されたデバイスを使ってファイルをダウンロードし、オフラインのサーバーにファイルを転送してから、セットアップを実行できます。
 
@@ -215,4 +215,4 @@ SQL Server R Services の初回オフライン インストールには、オン
 
 ## <a name="next-steps"></a>次のステップ
 
-見慣れないメッセージやログ エントリに関するヘルプについては、[アップグレードとインストールの FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md) に関する記事をご覧ください。
+見慣れないメッセージやログ エントリに関するヘルプについては、[アップグレードとインストールの FAQ - Machine Learning Services](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md) に関する記事をご覧ください。

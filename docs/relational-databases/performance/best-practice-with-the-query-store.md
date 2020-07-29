@@ -1,5 +1,6 @@
 ---
 title: クエリ ストアを使用する際のベスト プラクティス | Microsoft Docs
+description: 最新の SQL Server Management Studio や Query Performance Insight を使用するなど、ワークロードに SQL Server クエリ ストアを使用する際のベスト プラクティスについて説明します。
 ms.custom: ''
 ms.date: 03/04/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006008"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970083"
 ---
 # <a name="best-practices-with-query-store"></a>クエリ ストアを使用する際のベスト プラクティス
 
@@ -179,7 +180,7 @@ SET QUERY_STORE = ON
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO,
       MAX_PLANS_PER_QUERY = 200,
-      WAIT_STATS_CAPTURE_MODE = ON,
+      WAIT_STATS_CAPTURE_MODE = ON
     );
 ```
 

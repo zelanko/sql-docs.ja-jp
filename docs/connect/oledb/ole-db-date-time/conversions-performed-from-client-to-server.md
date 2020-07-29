@@ -12,15 +12,15 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995139"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244890"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -70,9 +70,8 @@ ms.locfileid: "67995139"
 |15|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] より前のバージョンの **datetime** に対する変換セマンティクスが保持されます。 秒は、1/300 秒単位に丸められます。|  
 |16|SSVARIANT クライアントの構造体に埋め込まれた (特定の型の) 値の変換動作は、SSVARIANT クライアントの構造体に埋め込まれていない場合の同一の値および型の動作と同じです。|  
   
-||||  
-|-|-|-|  
 |種類|長さ (文字数)|スケール|  
+|-|-|-|  
 |DBTIME2|8、10..18|0、1..9|  
 |DBTIMESTAMP|19、21..29|0、1..9|  
 |DBTIMESTAMPOFFSET|26、28..36|0、1..9|  
