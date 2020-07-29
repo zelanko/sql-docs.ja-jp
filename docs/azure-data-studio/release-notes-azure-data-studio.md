@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/15/2020
-ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.date: 07/17/2020
+ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406255"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458887"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="july-2020-hotfix"></a>2020 年 7 月 (修正プログラム)
+
+2020 年 7 月 17 日 &nbsp; / &nbsp; バージョン: 1.20.1
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| バグの修正 #11372 オブジェクト エクスプローラーのドラッグ アンド ドロップ テーブルでテーブル名が正しくラップされない | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
+| バグの修正 #11356 ダーク テーマが既定のテーマになってしまう | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>既知の問題
+
+- 一部のユーザーが、このリリースに含まれている新しい Microsoft.Data.SqlClient v2.0.0 からの接続エラーを報告しました。 ユーザーは、[次の手順に従う](https://github.com/microsoft/azuredatastudio/issues/11367#issuecomment-659614111)ことで、接続が正常に行われることを発見しました
 
 ## <a name="july-2020"></a>2020 年 7 月
 

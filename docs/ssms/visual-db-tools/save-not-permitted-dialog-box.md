@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 9dde13a71dac042d8bf5c351cb4f9655f322acd8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b6bd4471f14d662b6167c00d599eccf61b7dcced
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255124"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010645"
 ---
 # <a name="save-not-permitted-dialog-box"></a>[保存 (許可されない)] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 **[保存 (許可されない)]** ダイアログ ボックスには、変更を保存できないことを示す警告が表示されます。変更を行うには、一覧表示されているテーブルを削除して再作成する必要があります。  
   
 次の操作を行うには、テーブルを再作成する必要がある場合があります。  

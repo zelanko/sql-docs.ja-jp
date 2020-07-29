@@ -2,22 +2,22 @@
 title: R + T-SQL チュートリアル:データの探索
 description: チュートリアルでは、R 関数を使用して SQL Server データを探索および視覚化する方法を示しています。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/03/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bc5434483fd6f63a73362fb42b1bd17aa749ebd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757099"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1:データの探索および視覚化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事は、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
 
@@ -58,13 +58,13 @@ ms.locfileid: "81632112"
     |派生列名|ルール|
     |-|-|
      |tipped|tip_amount > 0 の場合、tipped = 1、それ以外では tipped = 0|
-    |tip_class|クラス 0: tip_amount = $0<br /><br />クラス 1: tip_amount > $0 かつ tip_amount <= $5<br /><br />クラス 2: tip_amount > $5 かつ tip_amount <= $10<br /><br />クラス 3: tip_amount > $10 かつ tip_amount <= $20<br /><br />クラス 4: tip_amount > $20|
+    |tip_class|クラス 0: tip_amount = $0<br /><br />クラス 1: tip_amount > $0 および tip_amount <= $5<br /><br />クラス 2: tip_amount > $5 および tip_amount <= $10<br /><br />クラス 3: tip_amount > $10 および tip_amount <= $20<br /><br />クラス 4: tip_amount > $20|
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>rxHistogram を使用してデータをプロットするストアド プロシージャを作成する
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!IMPORTANT]
-> SQL Server 2019 から、分離メカニズムが変更されています。 そのため、プロット ファイルが格納されているディレクトリに適切なアクセス許可を付与する必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
+> SQL Server 2019 から、分離メカニズムが変更されています。 そのため、プロット ファイルが格納されているディレクトリに適切なアクセス許可を付与する必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
 ::: moniker-end
 
 プロットを作成するには、[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) で提供されている拡張 R 関数の 1 つである [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) を使用します。 この手順では、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアド プロシージャ **RxPlotHistogram** でラップすることができます。
@@ -79,7 +79,7 @@ ms.locfileid: "81632112"
     BEGIN
       SET NOCOUNT ON;
       DECLARE @query nvarchar(max) =  
-      N'SELECT tipped FROM nyctaxi_sample'  
+      N'SELECT tipped FROM [dbo].[nyctaxi_sample]'  
       EXECUTE sp_execute_external_script @language = N'R',  
                                          @script = N'  
        image_file = tempfile();  
@@ -122,7 +122,7 @@ ms.locfileid: "81632112"
     
     *plot* *0xFFD8FFE000104A4649...*
   
-2. PowerShell コマンド プロンプトを開き、次のコマンドを実行します。引数として適切なインスタンス名、データベース名、ユーザー名、資格情報を指定します。 Windows ID を使用する場合は、 **-U** や **-P** を **-T**に置き換えることができます。
+2. PowerShell コマンド プロンプトを開き、次のコマンドを実行します。引数として適切なインスタンス名、データベース名、ユーザー名、資格情報を指定します。 Windows ID を使用する場合は、 **-U** や **-P** を **T**に置き換えることができます。
   
     ```powershell
     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
@@ -284,7 +284,7 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[レッスン 2:T-SQL を使用してデータの特徴量を作成する](sqldev-create-data-features-using-t-sql.md)
+[レッスン 2:T-SQL を使用してデータ機能を作成する](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 

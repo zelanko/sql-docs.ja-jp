@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 89404b754b51edfbe5a1bd36b7f4e5999f50fb39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5de48555ba3ac29546ee6f96b3bd7384d62e8247
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254521"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749235"
 ---
 # <a name="alert-properties---new-alert-options-page"></a>[警告のプロパティ] - [新しい警告] ([オプション] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。

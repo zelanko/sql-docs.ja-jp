@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 38dfe12c0690e87ee0e57555a2d8ff67e6ff7673
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a58e332836d99b236eb0a09916ec6f16f2a8761
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253516"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011723"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>行を含めるまたは除外する (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 選択クエリによって返される行の数を制限するには、検索条件またはフィルター条件を作成します。 SQL では、ステートメントの WHERE 句、または集計クエリの作成中に HAVING 句で検索条件が表示されます。  
   
 > [!NOTE]  

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774651"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483860"
 ---
 # <a name="azure-data-studio-extensibility"></a>Azure Data Studio の拡張性
 
@@ -48,9 +48,9 @@ Azure Data Studio のコア プラットフォームは Visual Studio Code に�
 
 IntelliSense は、azuredatastudio 内でサポートされています。
 
-## <a name="contributes-dashboard"></a>ダッシュボードへの提供
+### <a name="dashboard-contribution-points"></a>ダッシュボードのコントリビューション ポイント
 
-タブ、コンテナー、分析情報ウィジェットをダッシュボードに提供します。
+タブ、コンテナー、分析情報ウィジェットをダッシュボードに投稿します。
 
 ![ダッシュボード](media/extensibility/dashboard-page.png)
 

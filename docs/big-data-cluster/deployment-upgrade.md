@@ -9,16 +9,16 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
-ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
+ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80607837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764067"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 アップグレード パスは、SQL Server ビッグ データ クラスター (BDC) の現在のバージョンによって異なります。 一般配布リリース (GDR)、累積的な更新プログラム (CU)、または Quick Fix Engineering (QFE) 更新プログラムを含め、サポートされているリリースからアップグレードするには、インプレース アップグレードを行うことができます。 Customer Technology Preview (CTP) またはリリース候補バージョンの BDC からのインプレース アップグレードはサポートされていません。 クラスターを削除し、再作成する必要があります。 次のセクションでは、各シナリオの手順について説明します。
 

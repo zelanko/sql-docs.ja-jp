@@ -1,6 +1,6 @@
 ---
 title: FailureConditionLevel プロパティ設定の構成
-describes: 'Use the FailureConditionLevel property to set the conditions for the Always On Failover Cluster Instance (FCI) to fail over or restart. '
+description: FailureConditionLevel プロパティを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) がフェールオーバーまたは再起動するための状態を設定します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: be3b4fee27dccddc3ae3dc2d240304014a698af5
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: f1b92e0ce9e3d705587b81604dac28a2e927d3e2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925112"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882965"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel プロパティ設定の構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   FailureConditionLevel プロパティを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) がフェールオーバーまたは再起動するための状態を設定します。 このプロパティへの変更はすぐに適用され、Windows Server フェールオーバー クラスター サービス (WSFC) または FCI リソースの再起動を必要としません。  
   
 -   **作業を開始する準備:** [FailureConditionLevel プロパティの設定](#Restrictions)、[セキュリティ](#Security)  

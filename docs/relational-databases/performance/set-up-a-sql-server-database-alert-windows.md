@@ -1,5 +1,6 @@
 ---
 title: SQL Server データベースの警告のセットアップ (Windows) | Microsoft Docs
+description: システム モニター カウンターがしきい値に到達したときに発生する警告を作成する方法について説明します。 システム モニターでは、応答としてアプリケーションを起動できます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1a4cb551f72b408210064f88e0387c2fc4f3d638
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 982feaae1638250c80091778cdbacbfc21b0b3af
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716884"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458704"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>SQL Server データベースの警告のセットアップ (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85716884"
   
 10. **[スケジュール]** タブで、警告スキャンの開始と停止のスケジュールを設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server データベース警告の作成](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)  
   
   

@@ -2,22 +2,22 @@
 title: R データ サイエンス クライアントをセットアップする
 description: SQL Server にリモート接続するために、開発ワークステーションにローカルの R ライブラリとツールをインストールします。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 160365ea9782f50376a34eb87a3bf6893ce404c9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a42d3203455d4273410b9b216c19e7a9d1da4e3a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117375"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896385"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server で R 開発用のデータ サイエンス クライアントをセットアップする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) または [SQL Server Machine Learning Services (データベース内)](../install/sql-machine-learning-services-windows-install.md) のインストール時に R 言語オプションを含めた場合、SQL Server 2016 以降で R 統合を使用できます。 
 
@@ -48,12 +48,12 @@ Microsoft の R パッケージは、複数の製品およびサービスで利�
 
 2. インストール ウィザードで、既定のインストール パスに同意するかまたは変更し、コンポーネントの一覧に同意するかまたは変更し、Microsoft R Client ライセンス条項に同意します。
 
-  インストールが完了すると、ようこそ画面に製品とドキュメントが紹介されます。
+   インストールが完了すると、ようこそ画面に製品とドキュメントが紹介されます。
 
 3. Intel Math Kernel Library (MKL) 計算での一貫性のある出力を保証するために、MKL_CBWR システム環境変数を作成します。
 
-  + コントロール パネルで、 **[システムとセキュリティ]**  >  **[システム]**  >  **[システムの詳細設定]**  >  **[環境変数]** の順にクリックします。
-  + **MKL_CBWR** という名前の新しいシステム変数を作成し、値を **AUTO** に設定します。
+   + コントロール パネルで、 **[システムとセキュリティ]**  >  **[システム]**  >  **[システムの詳細設定]**  >  **[環境変数]** の順にクリックします。
+   + **MKL_CBWR** という名前の新しいシステム変数を作成し、値を **AUTO** に設定します。
 
 ## <a name="2---locate-executables"></a>2 - 実行可能ファイルの検索
 
@@ -74,7 +74,7 @@ SQL Server と共に R をインストールすると、RGui、Rterm などの�
 
 1. C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 を開き、 **[RGui]** をダブルクリックして、R コマンド プロンプトで R セッションを開始します。
 
-  Microsoft プログラム フォルダーから R セッションを開始すると、RevoScaleR を含むいくつかのパッケージが自動的に読み込まれます。 
+   Microsoft プログラム フォルダーから R セッションを開始すると、RevoScaleR を含むいくつかのパッケージが自動的に読み込まれます。 
 
 2. RevoScaleR パッケージのバージョン情報を返すには、コマンド プロンプトで「`print(Revo.version)`」と入力します。 RevoScaleR のバージョン 9.2.1 または 9.3.0 が必要です。
 
@@ -103,7 +103,7 @@ SQL Server と共に既定でインストールされないパッケージをコ
 
 ## <a name="5---test-connections"></a>5 - 接続のテスト
 
- 検証手順として、**RGUI** と RevoScaleR を使用して、リモート サーバーへの接続性を確認します。 SQL Server が[リモート接続](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)に対して有効になっている必要があります。また、接続先のユーザー ログインやデータベースなどのアクセス許可が必要です。 
+検証手順として、**RGUI** と RevoScaleR を使用して、リモート サーバーへの接続性を確認します。 SQL Server が[リモート接続](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)に対して有効になっている必要があります。また、接続先のユーザー ログインやデータベースなどのアクセス許可が必要です。 
 
 次の手順では、[NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md) のデモ データベース、および Windows 認証を想定しています。
 
@@ -113,78 +113,78 @@ SQL Server と共に既定でインストールされないパッケージをコ
 
 3. リモート サーバーで実行するデモ スクリプトを入力します。 次のサンプル スクリプトを変更して、リモート SQL Server インスタンスの有効な名前を含める必要があります。 このセッションはローカル セッションとして開始されますが、**rxSummary** 関数はリモート SQL Server インスタンスで実行されます。
 
-  ```R
-  # Define a connection. Replace server with a valid server name.
-  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   ```R
+   # Define a connection. Replace server with a valid server name.
+   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   
-  # Specify the input data in a SQL query.
-  sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
+   # Specify the input data in a SQL query.
+   sampleQuery <-"SELECT DISTINCT TOP(100) tip_amount FROM [dbo].nyctaxi_sample ORDER BY tip_amount DESC;"
   
-  # Define a remote compute context based on the remote server.
-  cc <-RxInSqlServer(connectionString=connStr)
+   # Define a remote compute context based on the remote server.
+   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Execute the function using the remote compute context.
-  rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
-  ```
+   # Execute the function using the remote compute context.
+   rxSummary(formula = ~ ., data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr), computeContext=cc)
+   ```
 
-  **結果:**
+   **結果:**
 
-  このスクリプトは、リモート サーバー上のデータベースに接続し、クエリを提供し、リモート コードの実行のためにコンピューティング コンテキスト `cc` 命令を作成します。次に、RevoScaleR 関数 **rxSummary** を提供して、クエリ結果の統計サマリーを返します。
+   このスクリプトは、リモート サーバー上のデータベースに接続し、クエリを提供し、リモート コードの実行のためにコンピューティング コンテキスト `cc` 命令を作成します。次に、RevoScaleR 関数 **rxSummary** を提供して、クエリ結果の統計サマリーを返します。
 
-  ```R
-    Call:
-  rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
-      connectionString = connStr), computeContext = cc)
+   ```R
+     Call:
+   rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
+       connectionString = connStr), computeContext = cc)
 
-  Summary Statistics Results for: ~.
-  Data: RxSqlServerData(sqlQuery = sampleQuery, connectionString = connStr) (RxSqlServerData Data Source)
-  Number of valid observations: 100 
+   Summary Statistics Results for: ~.
+   Data: RxSqlServerData(sqlQuery = sampleQuery, connectionString = connStr) (RxSqlServerData Data Source)
+   Number of valid observations: 100 
   
-  Name       Mean   StdDev   Min Max ValidObs MissingObs
-  tip_amount 63.245 31.61087 36  180 100      0     
-  ```
+   Name       Mean   StdDev   Min Max ValidObs MissingObs
+   tip_amount 63.245 31.61087 36  180 100      0     
+   ```
 
 4. コンピューティング コンテキストを取得して設定します。 コンピューティング コンテキストを設定すると、セッションの間は有効なままになります。 計算がローカルとリモートのどちらなのかわからない場合は、次のコマンドを実行して確認します。接続文字列が明示される結果は、リモートのコンピューティング コンテキストであることを示します。
 
-  ```R
-  # Return the current compute context.
-  rxGetComputeContext()
+   ```R
+   # Return the current compute context.
+   rxGetComputeContext()
 
-  # Revert to a local compute context.
-  rxSetComputeContext("local")
-  rxGetComputeContext()
+   # Revert to a local compute context.
+   rxSetComputeContext("local")
+   rxGetComputeContext()
 
-  # Switch back to remote.
-  connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
-  cc <-RxInSqlServer(connectionString=connStr)
-  rxSetComputeContext(cc)
-  rxGetComputeContext()
-  ```  
+   # Switch back to remote.
+   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   cc <-RxInSqlServer(connectionString=connStr)
+   rxSetComputeContext(cc)
+   rxGetComputeContext()
+   ```  
 
 5. 名前と型を含む、データ ソース内の変数に関する情報を返します。
 
-  ```R
-  rxGetVarInfo(data = inDataSource)
-  ```
-  結果には 23 個の変数が含まれます。
+   ```R
+   rxGetVarInfo(data = inDataSource)
+   ```
+   結果には 23 個の変数が含まれます。
 
 
 6. 散布図を生成して、2 つの変数の間に依存関係があるかどうかを調べます。 
 
-  ```R
-  # Set the connection string. Substitute a valid server name for the placeholder.
-  connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
+   ```R
+   # Set the connection string. Substitute a valid server name for the placeholder.
+   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 
-  # Specify a query on the nyctaxi_sample table.
-  # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
-  sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
-  cc <-RxInSqlServer(connectionString=connStr)
+   # Specify a query on the nyctaxi_sample table.
+   # For variables on each axis, remove nulls. Use a WHERE clause and <> to do this.
+   sampleQuery <-"SELECT DISTINCT TOP 100 * from [dbo].[nyctaxi_sample] WHERE fare_amount <> '' AND  tip_amount <> ''"
+   cc <-RxInSqlServer(connectionString=connStr)
 
-  # Generate a scatter plot.
-  rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
-  ```
+   # Generate a scatter plot.
+   rxLinePlot(fare_amount ~ tip_amount, data = RxSqlServerData(sqlQuery=sampleQuery, connectionString=connStr, computeContext=cc), type="p")
+   ```
 
-  次のスクリーンショットでは、入力と散布図の出力が示されています。
+   次のスクリーンショットでは、入力と散布図の出力が示されています。
 
    ![RGUI の散布図](media/rclient-setup-scatterplot.png "NYC タクシーのデモ データでの散布図")
 
@@ -206,10 +206,10 @@ IDE から ベース R、RevoScaleR などのローカル R ライブラリを�
 
 1. RStudio で [R パスを更新して](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R)、RevoScaleR、Microsoft R Open、およびその他の Microsoft パッケージを提供する R 環境を参照するようにします。 
 
-  + R Client のインストールの場合は、C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 を探します
-  + スタンドアロン サーバーの場合は、C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library または C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library を探します
+   + R Client のインストールの場合は、C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 を探します
+   + スタンドアロン サーバーの場合は、C:\Program Files\Microsoft SQL Server\140\R_SERVER\Library または C:\Program Files\Microsoft SQL Server\130\R_SERVER\Library を探します
 
-2. RStudio を閉じ、その後すぐに開きます。
+1. RStudio を閉じ、その後すぐに開きます。
 
 RStudio を再度開くと、R クライアント (またはスタンドアロン サーバー) の R 実行可能ファイルが既定の R エンジンになります。
 
@@ -230,16 +230,16 @@ RStudio を再度開くと、R クライアント (またはスタンドアロ�
 
 2. 左側のウィンドウには、プレインストールされたテンプレートの一覧が表示されます。 **[R]** をクリックし、 **[R プロジェクト]** を選択します。 **[名前]** ボックスに「`dbtest`」と入力し、 **[OK]** をクリックします。 
 
-  Visual Studio によって、新しいプロジェクト フォルダーと既定のスクリプト ファイル `Script.R` が作成されます。 
+   Visual Studio によって、新しいプロジェクト フォルダーと既定のスクリプト ファイル `Script.R` が作成されます。 
 
 3. スクリプト ファイルの最初の行に「`.libPaths()`」を入力し、CTRL + ENTER キーを押します。
 
-  現在の R ライブラリのパスは、 **[R インタラクティブ]** ウィンドウに表示されます。 
+   現在の R ライブラリのパスは、 **[R インタラクティブ]** ウィンドウに表示されます。 
 
 4. **[R Tools]** メニューをクリックし、 **[ウィンドウ]** を選択して、ワークスペースに表示できる他の R 固有のウィンドウの一覧を表示します。
  
-  + CTRL + 3 キーを押すと、現在のライブラリのパッケージに関するヘルプを表示します。
-  + CTRL + 8 キーを押すと、**変数エクスプローラー**の R 変数を確認します。
+   + CTRL + 3 キーを押すと、現在のライブラリのパッケージに関するヘルプを表示します。
+   + CTRL + 8 キーを押すと、**変数エクスプローラー**の R 変数を確認します。
 
 ## <a name="next-steps"></a>次のステップ
 

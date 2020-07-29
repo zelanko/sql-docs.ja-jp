@@ -1,5 +1,6 @@
 ---
 title: Deadlock Graph の保存 (SQL Server Profiler) | Microsoft Docs
+description: SQL Server プロファイラーを利用し、デッドロック グラフを保存する方法について説明します。 Deadlock Graph は XML ファイルとして保存されます。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5dba428d744a2384b9733f06955298ae31c58dca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 874597d5d62f13556072fb129931fa9e4faf1a85
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758846"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458731"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Deadlock Graph の保存 (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "85758846"
   
  デッドロック ファイルを保存した後は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でファイルを開くことができます。 詳細については、「[デッドロック ファイルを開く、表示、および印刷する方法 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance/open-view-and-print-a-deadlock-file-sql-server-management-studio.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Profiler を使用したデッドロックの分析](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
   
   

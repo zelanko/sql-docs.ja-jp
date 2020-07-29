@@ -1,5 +1,6 @@
 ---
 title: CPU 使用率の監視 | Microsoft Docs
+description: CPU 使用率が通常の範囲内にあるかどうかを判断する SQL Server インスタンスを監視します。 システム モニターを使用して、スレッドの実行に CPU が費やした時間を確認します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0ba69baf585aca6d6dd30c6a0ab0016a76ef6047
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e81db69a70a54365ffe7da6fbe9933bb98848db
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787463"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458561"
 ---
 # <a name="monitor-cpu-usage"></a>CPU 使用率の監視
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85787463"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのユーザー プロセスの実行にプロセッサが費やす時間比率を示します。  
   
--   **System: Processor Queue Length**  
+-   **System:Processor Queue Length**  
   
      プロセッサ時間を待っているスレッドの数を示します。 プロセスのスレッドが、使用できるよりも多くのプロセッサ サイクルを必要とする場合は、プロセッサのボトルネックが生じます。 複数のプロセスがプロセッサ時間を利用する場合、状況によっては、より高速なプロセッサのインストールが必要になります。 多重プロセッサ システムを使用している場合は、プロセッサの追加も可能です。  
   

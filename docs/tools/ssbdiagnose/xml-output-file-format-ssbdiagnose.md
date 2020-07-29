@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 1b039d5441ed39c85a8cf1e9468eddfe165aad1c
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: bef30df17ccc1bcabe471135b835450e811d2ddb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729533"
 ---
 # <a name="xml-output-file-format-ssbdiagnose"></a>XML 出力ファイルの形式 (ssbdiagnose)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **ssbdiagnose** ユーティリティは、 **-XML** スイッチを指定して実行した場合、その出力を XML ファイルとして配布します。 XML 出力ファイルでは、ヘッダー情報と、分析された [!INCLUDE[ssSB](../../includes/sssb-md.md)] の構成またはメッセージ交換で検出されたエラーが示されます。 ファイルに示されたエラーを分析して報告するためのアプリケーションを作成することができます。 また、XML ファイルを XML Notepad などの一般的な XML エディターで表示することもできます。  
   

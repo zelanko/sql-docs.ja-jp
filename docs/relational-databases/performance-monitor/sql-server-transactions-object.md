@@ -1,5 +1,6 @@
 ---
 title: 'SQL Server: Transactions オブジェクト | Microsoft Docs'
+description: データベース エンジンのアクティブ トランザクションと SQL Server のトランザクションの影響を監視するためのカウンターを提供する Transactions オブジェクトについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 635bb13a1d6e44f5fc8f694cb2618a19c08831f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a7d51ee275f234de0be33a5bfa618684ee2e07e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758957"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458770"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server: Transactions オブジェクト
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85758957"
 |**Free Space in tempdb (KB)**|**tempdb**の使用可能な領域 (KB)。 スナップショット分離レベルのバージョン ストアと、この [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスで作成された新しいすべての一時オブジェクトの両方を保持するには、十分な空き領域が必要です。|  
 |**Longest Transaction Running Time**|現在のトランザクションの中で最も長くアクティブになっているトランザクションが開始してから現在までの継続時間 (秒)。 このカウンターがアクティビティを示すのは、データベースが READ COMMITTED スナップショット分離レベルの場合のみです。 データベースが他の分離レベルの場合、アクティビティはログに記録されません。|  
 |**NonSnapshot Version Transactions**|スナップショット分離レベルを使用していない現在アクティブなトランザクションのうち、データ変更を行ったトランザクションの数。データを変更すると、 **tempdb** のバージョン ストアに行バージョンが生成されます。|  
-|**Snapshot Transactions**|スナップショット分離レベルを使用している現在アクティブなトランザクションの数。<br /><br /> 注: **Snapshot Transactions** オブジェクト カウンターは、 `BEGIN TRANSACTION` ステートメントが発行されたときではなく、最初のデータ アクセスが行われたときに応答します。|  
+|**Snapshot Transactions**|スナップショット分離レベルを使用している現在アクティブなトランザクションの数。<br /><br /> 注:**Snapshot Transactions** オブジェクト カウンターは、`BEGIN TRANSACTION` ステートメントが発行されたときではなく、最初のデータ アクセスが行われたときに応答します。|  
 |**トランザクション**|現在アクティブなトランザクションの数。すべての種類が含まれます。|  
 |**Update conflict ratio**|この 1 秒間で更新の競合が発生した、スナップショット分離レベルを使用しているトランザクションの割合。 更新の競合が発生するのは、別のトランザクションによって最後に変更が行われ、スナップショット分離レベルのトランザクションの開始時にはコミットされていなかった行に対して、スナップショット分離レベルのトランザクションが変更を試行したときです。|  
 |**Update conflict ratio base**|内部使用専用です。|

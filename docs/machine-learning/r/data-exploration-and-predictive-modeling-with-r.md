@@ -2,22 +2,22 @@
 title: R を使用した予測モデリング
 description: この記事では、SQL Server との統合によって実現するデータ サイエンス プロセスの機能強化について説明します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 40dadfebdb37ca9be0d220a8f63cfba6021a7c90
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f3c5b72f562f4ba90de68f53911c067baa37189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117655"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735072"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>SQL Server での R によるデータ探索および予測モデリング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事では、SQL Server との統合によって実現するデータ サイエンス プロセスの機能強化について説明します。
 

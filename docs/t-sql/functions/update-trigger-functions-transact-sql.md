@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6baeb311e52588c63fc24d38143a0e5a54c96801
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 528f02ccc8e341700b64cc0a73e0e3185d16a8ee
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714532"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113264"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - トリガー関数 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,9 @@ ms.locfileid: "85714532"
 UPDATE ( column )   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *column*  
  INSERT 動作または UPDATE 動作をテストする列の名前です。 トリガーの ON 句にテーブル名が指定されているため、列名の前にテーブル名を含めないでください。 この列の[データ型](../../t-sql/data-types/data-types-transact-sql.md)は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がサポートしているものであれば、どのようなデータ型でもかまいません。 ただし、計算列を使用することはできません。  
   

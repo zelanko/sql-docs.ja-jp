@@ -2,22 +2,22 @@
 title: 結果のパフォーマンス チューニング
 description: この記事では、さまざまな最適化方法をテストした 2 つのケース スタディの方法、結果、および結論をまとめています。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486781"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242332"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services のパフォーマンス: 結果とリソース
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 これは、R Services のパフォーマンスの最適化について説明する、シリーズの最後となる 4 番目の記事です。 この記事では、さまざまな最適化方法をテストした 2 つのケース スタディの方法、結果、および結論をまとめています。
 
@@ -337,7 +337,7 @@ R ジョブへの影響を評価するために、履歴書照合シナリオで
 
 多くのユーザーは、R (または Python) ランタイムが初めて読み込まれたときに、短い一時停止が発生することに気付いています。 このため、これらのテストで説明したように、最初の実行時間は通常測定されますが、後に破棄されます。 後続のキャッシュにより、最初の実行と 2 回目の実行の間で、パフォーマンスが顕著に異なる場合があります。 また、SQL Server と外部ランタイム間でデータが移動される場合、特にデータが SQL Server から直接読み込まれるのではなくネットワーク経由で渡される場合にも、オーバーヘッドが発生します。
 
-パフォーマンスへの影響はタスクによって大きく異なるため、これらすべての理由に対して、この最初の読み込む時間を軽減する唯一のソリューションはありません。 たとえば、バッチでの単一行のスコアリングではキャッシュが行われます。そのため、連続したスコアリング操作がはるかに高速になり、モデルも R ランタイムも再読み込みされません。 [ネイティブ スコアリング](../sql-native-scoring.md)を使用して、R ランタイム全体が読み込まれないようにすることもできます。
+パフォーマンスへの影響はタスクによって大きく異なるため、これらすべての理由に対して、この最初の読み込む時間を軽減する唯一のソリューションはありません。 たとえば、バッチでの単一行のスコアリングではキャッシュが行われます。そのため、連続したスコアリング操作がはるかに高速になり、モデルも R ランタイムも再読み込みされません。 [ネイティブ スコアリング](../predictions/native-scoring-predict-transact-sql.md)を使用して、R ランタイム全体が読み込まれないようにすることもできます。
 
 大規模なモデルをトレーニングしたり、大きなバッチでスコアリングしたりする場合、データの移動を回避したり、ストリーミングや並列処理を行ったりすることによる利益と比較して、オーバーヘッドはごくわずかであるかもしれません。 その他のパフォーマンス ガイダンスについては、こちらのブログ記事を参照してください。
 

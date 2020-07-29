@@ -1,5 +1,6 @@
 ---
 title: クエリ ストアのワークロードを使用してデータベースをチューニングする | Microsoft Docs
+description: データベース エンジン チューニング アドバイザーでは、クエリ ストアを使用し、チューニングすべきワークロードを自動選択するというオプションがサポートされています。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7e279c7fe8cb6dd1ea2a716cd2a7a15d73c68e2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737126"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457584"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>クエリ ストアのワークロードを使用してデータベースをチューニングする
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85737126"
 この機能は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** 以降で使用できます。 
   
 ## <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>データベース エンジン チューニング アドバイザー GUI でクエリ ストアからのワークロードをチューニングする方法
-DTA の GUI で、**[全般]** ペインの **[クエリ ストア]** をクリックして、この機能を有効にします (以下の図を参照)。
+DTA の GUI で、 **[全般]** ペインの **[クエリ ストア]** をクリックして、この機能を有効にします (以下の図を参照)。
 
 ![クエリ ストアからの DTA ワークロード](../../relational-databases/performance/media/dta-workload-from-query-store.gif)
  
@@ -35,9 +36,9 @@ DTA の GUI で、**[全般]** ペインの **[クエリ ストア]** をクリ�
 コマンド ライン (dta.exe) で **-iq** オプションを選択して、クエリ ストアからワークロードを選択します。 
 
 コマンドラインでは 2 つの追加オプションがあり、クエリ ストアからのワークロード選択時に DTA の動作をチューニングするのに役立ちます。 これらのオプションは、GUI では使用できません。
-  1. **チューニングするワークロードのイベントの数**: このオプションは **-n** コマンドライン引数を使用して指定され、チューニングするクエリ ストアからのイベントの数を制御することができます。 DTA でのこのオプションの既定値は 1000 です。 DTA は常に、総実行時間に対して最もコストの高いイベントを選択します。 
+  1. **チューニングするワークロードのイベントの数**:このオプションは **-n** コマンドライン引数を使用して指定され、チューニングするクエリ ストアからのイベントの数を制御することができます。 DTA でのこのオプションの既定値は 1000 です。 DTA は常に、総実行時間に対して最もコストの高いイベントを選択します。 
   
-  2. **チューニングするイベントの時刻ウィンドウ**: クエリ ストアにはかなり前に実行されたクエリが含まれている場合があるので、このオプションを使用して、DTA でのチューニングのためにクエリが実行されたはずの過去の期間 (時間) を指定することができます。 このオプションは **-I** コマンドライン引数を使用して指定します。 
+  2. **チューニングするイベントの時刻ウィンドウ**:クエリ ストアにはかなり前に実行されたクエリが含まれている場合があるので、このオプションを使用して、DTA でのチューニングのためにクエリが実行されたはずの過去の期間 (時間) を指定することができます。 このオプションは **-I** コマンドライン引数を使用して指定します。 
 
 詳細については、「[dta Utility](../../tools/dta/dta-utility.md)」(dta ユーティリティ) をご参照ください。
 
@@ -46,6 +47,6 @@ DTA の GUI で、**[全般]** ペインの **[クエリ ストア]** をクリ�
 
 ## <a name="see-also"></a>参照  
 [データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[チュートリアル: データベース エンジン チューニング アドバイザー](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
+[チュートリアル:データベース エンジン チューニング アドバイザー](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [クエリ ストアがデータを収集するしくみ](../../relational-databases/performance/how-query-store-collects-data.md)     
 [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)

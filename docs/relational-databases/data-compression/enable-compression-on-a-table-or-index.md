@@ -1,5 +1,6 @@
 ---
 title: テーブルまたはインデックスの圧縮の有効化 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用し、SQL Server のテーブルまたはインデックスで圧縮を有効にする方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d8ad2b1ccc0951276dccaf085c554fa7385b6e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8d168265fbd400f94939103411a6f56afe901f07
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003913"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457534"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の有効化
 

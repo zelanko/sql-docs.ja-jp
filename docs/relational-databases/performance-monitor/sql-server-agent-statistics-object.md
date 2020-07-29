@@ -1,5 +1,6 @@
 ---
 title: SQL Server エージェントの Statistics オブジェクト | Microsoft Docs
+description: SQL Server エージェントについての情報を報告するパフォーマンス カウンターが含まれる、SQL Server エージェントの Statistics パフォーマンス オブジェクトについて説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ff7d2c619a1dad619676092b8f2c937890d681f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b40c3f32a119cb0a7ef459d38187f6cf13c7d3c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787367"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458854"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server エージェントの Statistics オブジェクト
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85787367"
   
  次の表では、 **SQLAgent:Statistics** カウンターを示します。  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |**SQL Server restarted**|前回の SQL Server エージェントの起動以降に Microsoft SQL Server が SQL Server エージェントによって正常に再起動された回数。|  
   

@@ -2,25 +2,25 @@
 title: データ サイエンス ソリューション テンプレート
 description: この記事では、機械学習ソリューションを実装する際に役立つベスト プラクティスと構成要素を提供する業界固有のテンプレートについて説明します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d323178152e07726c818971c8c7e8ee297c20af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728645"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>データ サイエンスのシナリオとソリューション テンプレート
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事では、さまざまな SQL Server 機械学習ソリューション テンプレートについて説明します。 これらのテンプレートにはベスト プラクティスが示されており、機械学習ソリューションを短時間で実装する際に役立つ構成要素が提供されます。 各テンプレートは、特定の業種または業界に固有のデータ サイエンスに関する問題を解決するように設計されています。
-各テンプレートのタスクは、データ準備や特徴量エンジニアリングから、モデルのトレーニングとスコアリングまで、多岐にわたります。 
+各テンプレートのタスクは、データ準備や機能エンジニアリングから、モデルのトレーニングとスコアリングまで、多岐にわたります。 
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 これらのテンプレートを使用して、[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] のしくみを学習します。 その後で、独自のシナリオに合わせてテンプレートをカスタマイズし、カスタム ソリューションを構築できます。
@@ -104,7 +104,7 @@ ms.locfileid: "81116985"
   
 -   **R**:このソリューションに必要なすべての R 開発コードが含まれています。 このソリューションには、Microsoft R Server に含まれるライブラリが必要ですが、任意の R IDE で開き、編集することができます。 この R コードは、SQL Server インスタンスに対する計算コンテキストを設定し、計算が "データベース内で" 実行されるように最適化されています。
   
--   **SQLR**:[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] などの SQL 環境で実行して、データ処理、特徴量エンジニアリング、モデル デプロイなど、関連するタスクを実行するストアド プロシージャを作成できる複数の .sql ファイルが含まれています。
+-   **SQLR**:[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] などの SQL 環境で実行して、データ処理、機能エンジニアリング、モデル デプロイなど、関連するタスクを実行するストアド プロシージャを作成できる複数の .sql ファイルが含まれています。
   
     このフォルダーには、すべてのスクリプトを呼び出し、包括的な環境を作成できる PowerShell スクリプトも含まれています。 スクリプトは、必ず実際の環境似合わせて編集してください。
 

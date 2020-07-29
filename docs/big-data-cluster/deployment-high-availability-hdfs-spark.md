@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 688031d9301710ada0ba5952ab45dba02bf46de0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75720860"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774528"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>高可用性構成で HDFS 名前ノードと共有 Spark サービスを展開する
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 可用性グループを使用して、高可用性構成で SQL Server マスター インスタンスを展開するだけでなく、他のミッション クリティカルなサービスをビッグ データ クラスターに展開し、確実に信頼性のレベルを高めることができます。 `HDFS name node` と、`sparkhead` の下にグループ化された共有 Spark サービスを追加のレプリカで構成できます。 この場合、次のサービス用のクラスター コーディネーターおよびメタデータ ストアとして機能するように、`Zookeeper` もビッグ データ クラスターに展開されます。 
 

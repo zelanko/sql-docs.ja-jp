@@ -1,5 +1,6 @@
 ---
 title: SQL Server の Plan Cache オブジェクト | Microsoft Docs
+description: ストアド プロシージャやトリガーなどのオブジェクトを格納する目的でメモリが SQL Server によって使用されている状況を監視するためのカウンターを提供する Plan Cache オブジェクトについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5bdbff06c1dbda2f31aa8e456878649e8d7f9508
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: faf553c33cf2f515abcad904bfc3c64bf228b546
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775787"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458763"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server の Plan Cache オブジェクト
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

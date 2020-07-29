@@ -1,5 +1,6 @@
 ---
 title: デッドロック ファイルを開く、表示、印刷する (SSMS)
+description: SQL Server プロファイラーによって生成されるデッドロック情報をキャプチャし、それを SQL Server Management Studio で表示する方法について説明します。
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61204492bad49c3d3d8ec01442cb9baca538a0f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c55ad170e9d6a9fe58865ab28ac75f018b6905b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758871"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458467"
 ---
 # <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) でデッドロック ファイルを開く、表示、印刷する
 
@@ -30,13 +31,13 @@ ms.locfileid: "85758871"
   
 ## <a name="open-and-view-a-deadlock-file"></a>デッドロック ファイルを開いて表示する  
   
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[ファイル]** メニューの **[開く]** をポイントし、**[ファイル]** を選択します。  
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** を選択します。  
   
 2. **[ファイルを開く]** ダイアログ ボックスで、 **[ファイルの種類]** ボックスの一覧から [SQL デッドロック ファイル] を選択します。 これにより、デッドロック ファイルだけが一覧表示されます。  
   
 ## <a name="print-a-deadlock-file"></a>デッドロック ファイルを印刷する  
   
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[ファイル]** メニューの **[開く]** をポイントし、**[ファイル]** を選択します。  
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** を選択します。  
   
 2. **[ファイルを開く]** ダイアログ ボックスで、 **[ファイルの種類]** ボックスの一覧から [SQL デッドロック ファイル] を選択します。 これにより、デッドロック ファイルだけが一覧表示されます。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85758871"
   
 4. **[ファイル]** メニューの **[印刷]** を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Deadlock Graph の保存 (SQL Server Profiler)](../../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)  
   
   

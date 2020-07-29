@@ -2,22 +2,22 @@
 title: olapR を使って R で MDX クエリを作成する
 description: SQL Server の olapR パッケージ ライブラリを使用して、R 言語スクリプトで MDX クエリを記述します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 05/22/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dceaaa9848b754de65d213e570f33780c3be95bd
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 501449396ee20b763047ac16d23e32b3e98aa366
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722535"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>olapR を使って R で MDX クエリを作成する方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) パッケージでは、SQL Server Analysis Services でホストされているキューブに対する MDX クエリがサポートされています。 既存のキューブに対してクエリを作成したり、ディメンションやその他のキューブ オブジェクトを調べたり、既存の MDX クエリを貼り付けてデータを取得したりできます。
 

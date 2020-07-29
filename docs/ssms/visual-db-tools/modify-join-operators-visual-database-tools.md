@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 019b75ba1c7d74a371fe380b47ec5f3e42d11ddc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3d040785075bc122e8ccf8a4d4d71001c3b8e81a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257711"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008518"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>結合演算子の変更 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) の既定では、等号を使用してテーブルが結合されます (等結合)。等結合では、2 つの結合列の値が一致します。 必要に応じて、結合列の値の比較に使用する演算子を変更できます。  
   
 ### <a name="to-modify-join-operators"></a>結合演算子を変更するには  

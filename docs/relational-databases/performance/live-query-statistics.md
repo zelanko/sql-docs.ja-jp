@@ -1,5 +1,6 @@
 ---
 title: '[ライブ クエリ統計] | Microsoft Docs'
+description: SQL Server Management Studio でアクティブ クエリのライブ実行プランを表示する方法について説明します。 実行統計値を利用し、クエリ パフォーマンス問題をデバッグします。
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2705923e404273046b828b2cc4144a3f65c296a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731803"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457893"
 ---
 # <a name="live-query-statistics"></a>[ライブ クエリ統計]
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "85731803"
   
 ## <a name="to-view-live-query-statistics-for-any-query"></a>任意のクエリのライブ クエリ統計を表示するには 
 
-ライブ実行プランは、**[プロセス]** または **[アクティブなコストの高いクエリ]** テーブルの任意のクエリを右クリックすることで、**[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)** からもアクセスできます。  
+ライブ実行プランは、 **[プロセス]** または **[アクティブなコストの高いクエリ]** テーブルの任意のクエリを右クリックすることで、 **[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)** からもアクセスできます。  
   
  ![利用状況モニターでの [ライブ クエリ統計] ボタン](../../relational-databases/performance/media/livequerystatsactmon.png "利用状況モニターでの [ライブ クエリ統計] ボタン")  
   

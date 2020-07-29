@@ -1,5 +1,6 @@
 ---
 title: データベース エンジン チューニング アドバイザーの起動および使用 | Microsoft Docs
+description: SQL Server でデータベース エンジン チューニング アドバイザーを起動し、使用してワークロードを作成し、データベースを調整し、XML 入力ファイルを作成する方法について説明します。
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 00441600bb5d2059686f6fe2bc388146e880d4ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737151"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457619"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -268,7 +269,7 @@ ms.locfileid: "85737151"
     dta -E -D DatabaseName -if WorkloadFile -s SessionName  
     ```  
   
-     このコマンドの `-E` はチューニング セッションで (ログイン ID とパスワードではなく) 信頼関係接続を使用することを指定し、 `-D` はチューニングするデータベースの名前を指定します。 既定では、ユーティリティは、ローカル コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 (リモート データベースを指定したり、名前付きインスタンスを指定したりするには、次の手順で示すように `-S` オプションを使用します)。`-if` オプションは、ワークロード ファイル ([!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトまたはトレース ファイルが使用可能) の名前とファイル パスを指定し、`-s` はチューニング セッションの名前を指定します。  
+     このコマンドの `-E` はチューニング セッションで (ログイン ID とパスワードではなく) 信頼関係接続を使用することを指定し、 `-D` はチューニングするデータベースの名前を指定します。 既定では、ユーティリティは、ローカル コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 (リモート データベースを指定したり、名前付きインスタンスを指定したりするには、次の手順で示すように `-S` オプションを使用します)。 `-if` オプションは、ワークロード ファイル ( [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトまたはトレース ファイルが使用可能) の名前とファイル パスを指定し、 `-s` はチューニング セッションの名前を指定します。  
   
      ここで示した 4 つのオプション (データベース名、ワークロード、接続の種類、およびセッション名) は必ず指定する必要があります。  
   

@@ -20,12 +20,12 @@ ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 572936a187f4331744ead22ec7790c57bcd0e32d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 79988d91775fb7ae1bda2734148e434e5c161723
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002278"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113139"
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "86002278"
 ASIN ( float_expression )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 *float_expression*  
 [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に float 型に変換できる**式**を指定します。 -1.00 ～ 1.00 の範囲の値のみが有効です。 この範囲外の値を指定すると、NULL が返され、ASIN がドメイン エラーを報告します。
   

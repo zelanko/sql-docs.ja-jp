@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5b870368136055ea2df6e5473c1b33640cea57b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 17ecd6435258e255538cfedc345a835610f55a97
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75234539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755166"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server エージェントのプロパティ ([警告システム] ページ)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
@@ -43,7 +42,7 @@ ms.locfileid: "75234539"
 > 電子メール システムを変更したら、変更内容を有効にするために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを再起動する必要があります。  
   
 **[メール プロファイル]**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するプロファイルを設定します。 **[\<新しいデータベース メール プロファイル>]** を選択して新しいプロファイルを作成できます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するプロファイルを設定します。 **[\<new Database Mail profile...>]** を選択して、新しいプロファイルを作成することもできます。  
   
 **[ポケットベル メール]**  
 このセクションのオプションを使用すると、ポケットベル アドレスに送信される電子メール メッセージをポケットベル システムに対応させることができます。  

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80f6a13c952c09153713a36e3e0f8f979ee7bcd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76037174"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001590"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) とは何か?
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) は、SQLインフラストラクチャを管理するための統合環境です。 SSMS を使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Azure SQL Database、および SQL Data Warehouse のすべてコンポーネントのアクセス、構成、管理、運営、および開発を行います。 SSMS には、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターを結合して、あらゆるスキル レベルの開発者やデータベース管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にアクセスできる包括的なユーティリティが 1 つ用意されています。
 

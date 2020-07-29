@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f4960a10a44e3a84b42c0bf43872a38be05be292
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 415a669546fcd91a7b504d419874dc539ed5c0ec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230135"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895874"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>フェールオーバー クラスター インスタンスの IP アドレスの変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、Always On フェールオーバー クラスター インスタンス (FCI) の IP アドレス リソースを変更する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
 -   **作業を開始する準備:** [セキュリティ](#Security)  

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3208c2543292fd67ec36ad25dd5a065e08988ca6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 643c58adfed622b6a5d57e6056dcea316b6cf5ec
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245788"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243748"
 ---
 # <a name="specify-job-responses"></a>ジョブ応答の指定
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
@@ -46,9 +45,8 @@ ms.locfileid: "75245788"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
+|説明|トピック|  
 |-|-|  
-|**説明**|**トピック**|  
 |オペレーターにジョブの状態を通知する方法について説明します。|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
 |ジョブの状態を Windows アプリケーション ログに書き込む方法について説明します。|[Windows アプリケーション ログへのジョブ状態の書き込み](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   

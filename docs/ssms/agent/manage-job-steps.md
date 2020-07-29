@@ -23,18 +23,17 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256111"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247396"
 ---
 # <a name="manage-job-steps"></a>ジョブ ステップの管理
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
@@ -203,9 +202,8 @@ SSIS カタログにパッケージを配置し、 **[SSIS カタログ]** を�
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
+|説明|トピック|  
 |-|-|  
-|**説明**|**トピック**|  
 |実行可能プログラムを使用してジョブ ステップを作成する方法について説明します。|[CmdExec ジョブ ステップの作成](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアクセス許可をリセットする方法について説明します。|[SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップを作成する方法について説明します。|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
