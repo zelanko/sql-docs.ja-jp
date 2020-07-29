@@ -2,22 +2,22 @@
 title: Azure 仮想マシンにインストールする
 description: Azure クラウドの仮想マシンの SQL Server Machine Learning Services で、Python と R のデータ サイエンス ソリューションおよび機械学習ソリューションを実行できます。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d81237f67c82fd7cc8b9259fcd7a0202ffb7fd4b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7516d23ade89b4d82858c209f46498207f06cde5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118445"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882131"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Azure 仮想マシンに SQL Server Machine Learning Services と共に Python および R をインストールする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Azure の仮想マシンに SQL Server Machine Learning Services と共に Python および R をインストールする方法について説明します。 これにより、Machine Learning Services のインストールと構成タスクが不要になります。
 

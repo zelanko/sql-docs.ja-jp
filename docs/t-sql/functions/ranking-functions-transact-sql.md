@@ -18,12 +18,12 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b8e84e35e2af64a83c323474bfc46a81553c7c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8aa10e165dff3f32227f52880afebb8de24f2d12
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003749"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248523"
 ---
 # <a name="ranking-functions-transact-sql"></a>順位付け関数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,11 +31,23 @@ ms.locfileid: "86003749"
   順位付け関数により、パーティションの各行の順位値が返されます。 使用する関数によっては、いくつかの行で、他の行と同じ値を受け取る場合があります。 順位付け関数は非決定的です。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] には、次の順位付け関数があります。  
-  
-|||  
-|-|-|  
-|[RANK](../../t-sql/functions/rank-transact-sql.md)|[NTILE](../../t-sql/functions/ntile-transact-sql.md)|  
-|[DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)|[ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)|  
+
+:::row:::
+    :::column:::
+        [RANK](../../t-sql/functions/rank-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [NTILE](../../t-sql/functions/ntile-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## <a name="examples"></a>例  
  以下の例では、同じクエリ内で 4 つの順位付け関数を使用します。 関数に固有の例については、各順位付け関数を参照してください。  
