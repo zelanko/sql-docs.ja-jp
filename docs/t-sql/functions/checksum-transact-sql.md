@@ -20,12 +20,12 @@ ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f5fca41d59ed5b35451a1e63993b7ec6235244a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 496c08f2bdf9942349ccdda83c90a97336767203
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732649"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110608"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,9 @@ ms.locfileid: "85732649"
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 \*  
 この引数は、チェックサムの計算がすべてのテーブル列をカバーしていることを指定します。 列のいずれかが比較できないデータ型である場合、`CHECKSUM` ではエラーが返されます。 比較できないデータ型は次のとおりです。
 

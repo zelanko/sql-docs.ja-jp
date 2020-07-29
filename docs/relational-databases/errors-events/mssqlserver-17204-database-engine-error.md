@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 63f8e2729492d66eb498b0634e015a0a3d4638ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a094a2baf20ccdf29514a82f4ff749c6d9e18be3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780795"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236153"
 ---
 # <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ FCB::Open failed: Could not open file c:\Program Files\Microsoft SQL Server\MSSQ
 1. エラー 17204 を解決するには、関連付けられているオペレーティング システムのエラー コードを理解し、そのエラーを診断する必要があります。 オペレーティング システムのエラー状態が解決されたら、(ALTER DATABASE SET ONLINE などを使用して) データベースを再起動するか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動して、影響を受けたデータベースをオンラインにすることができます。 場合によっては、オペレーティング システムのエラーを解決できないことがあります。 その場合、特定の是正措置を講じる必要があります。 このセクションでは、それらの操作について説明します。
 1. 17204 エラー メッセージにエラー コードのみが含まれていて、エラーの説明が含まれていない場合は、オペレーティング システムのシェルから次のコマンドを使用して、エラー コードの解決を試みることができます: net helpmsg <error code> 。 エラー コードとして 8 桁の状態コードを取得している場合は、「[HRESULT を Win32 エラー コードに変換する方法](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133)」などの情報源を参照して、これらの状態コードを OS エラーにデコードできます。
 1. `Access is Denied` オペレーティング システム エラー = 5 を取得している場合は、次の方法を検討してください。
-   -  エクスプローラーでファイルのプロパティを参照して、ファイルに設定されているアクセス許可を確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows グループを使用して、さまざまなファイル リソースに Access Control をプロビジョニングします。 適切なグループ [SQLServerMSSQLUser$ComputerName$MSSQLSERVER や SQLServerMSSQLUser$ComputerName$InstanceName などの名前] に、エラー メッセージで言及されているデータベース ファイルに対して必要なアクセス許可が付与されていることを確認します。 詳細については、「[データベース エンジン アクセスのファイル システム権限の構成](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)」を参照してください。 Windows グループに、実際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントまたはサービス SID が含まれていることを確認します。
+   -  エクスプローラーでファイルのプロパティを参照して、ファイルに設定されているアクセス許可を確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows グループを使用して、さまざまなファイル リソースに Access Control をプロビジョニングします。 適切なグループ [SQLServerMSSQLUser$ComputerName$MSSQLSERVER や SQLServerMSSQLUser$ComputerName$InstanceName などの名前] に、エラー メッセージで言及されているデータベース ファイルに対して必要なアクセス許可が付与されていることを確認します。 詳細については、「[データベース エンジン アクセスのファイル システム権限の構成](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014)」を参照してください。 Windows グループに、実際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントまたはサービス SID が含まれていることを確認します。
    -  現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの実行に使用されているユーザー アカウントを確認します。 Windows タスク マネージャーを使用して、この情報を取得できます。 実行可能ファイル "sqlservr.exe" の "ユーザー名" の値を探します。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを最近変更した場合は、SQL Server 構成マネージャー ユーティリティを使用してこの操作を実行する方法がサポートされています。 これについて詳しくは、「[SQL Server 構成マネージャー](../sql-server-configuration-manager.md)」をご覧ください。 
    -  操作の種類 (サーバー起動中にデータベースを開く、データベースのアタッチ、データベースの復元など) によっては、偽装とデータベース ファイルへのアクセスに使用されるアカウントが異なる場合があります。 トピック「[データ ファイルとログ ファイルのセキュリティ保護](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN)」を確認して、どの操作によってどのアクセス許可が、どのアカウントに設定されるかを理解してください。 Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) などのツールを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのサービス開始アカウント [またはサービス SID]、または偽装されたアカウントのセキュリティ コンテキストにおいて、ファイルへのアクセスが行われているかどうかを把握します。
 

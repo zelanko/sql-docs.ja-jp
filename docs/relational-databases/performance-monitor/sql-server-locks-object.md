@@ -1,5 +1,6 @@
 ---
 title: SQL Server:Locks オブジェクト | Microsoft Docs
+description: 各リソースの種類の SQL Server ロックに関する情報を提供する SQLServer:Locks オブジェクトについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 853a19af5644e9c29659c5595a8ce9ee6357f499
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775824"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458129"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server:Locks オブジェクト
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85775824"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、以下のリソースをロックできます。  
   
-|アイテム|説明|  
+|項目|説明|  
 |----------|-----------------|  
 |**_Total**|すべてのロックに関する情報。|  
 |**AllocUnit**|アロケーション ユニットのロック。|  
@@ -48,7 +49,7 @@ ms.locfileid: "85775824"
 |**Extent**|連続した 8 ページのグループのロック。|  
 |**[最近使ったファイル]**|データベース ファイルのロック。|  
 |**Heap/BTree**|ヒープまたは BTree (HOBT)。 データ ページのヒープまたはインデックスの BTree 構造のロック。|  
-|**[キー]**|インデックスの行のロック。|  
+|**キー**|インデックスの行のロック。|  
 |**Metadata**|カタログ情報 (メタデータ) のロック。|  
 |**Object**|すべてのデータとインデックスを含む、テーブル、ストアド プロシージャ、ビューなどのロック。 このオブジェクトには、 **sys.all_objects**内のエントリを持つ任意のアイテムが含まれます。|  
 |**ページ**|データベース内の 8 KB のページのロック。|  

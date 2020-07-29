@@ -1,5 +1,6 @@
 ---
 title: リソース ガバナーを無効にしたとき | Microsoft Docs
+description: SQL Server Management Studio か Transact-SQL を使用し、Resource Governor を無効にする方法について説明します。 CONTROL SERVER 権限が必要です。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 892227281f86bf25205d34c1df3457689de149c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc4aea056c466aaf7cbacc8a6871fac488d31ef7
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720474"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457896"
 ---
 # <a name="disable-resource-governor"></a>リソース ガバナーを無効にしたとき
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

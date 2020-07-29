@@ -1,5 +1,6 @@
 ---
 title: 'SQL Server: User Settable オブジェクト | Microsoft Docs'
+description: 既存のカウンターでは監視されないサーバーの要素を監視するために SQL Server でカスタム カウンター インスタンスを作成する User Settable オブジェクトについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 427f24bdce5c7af4d0bd9c6b5c0c030112f8a5a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f61f4013c02148485994ebcb5b579c0d0ef78b2b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758899"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458634"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server: User Settable オブジェクト
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **User Settable** オブジェクトを使用すると、カスタムのカウンター インスタンスを作成できます。 カスタムのカウンター インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー独自のコンポーネントなど、既存のカウンターでは監視されないサーバーの特性を監視するために使用します。たとえば、ログに記録された顧客注文数や製品在庫数などを監視できます。  
   
- **User Settable** オブジェクトには、 **ユーザー カウンター 1** から **ユーザー カウンター 10**まで、クエリ カウンターの 10 個のインスタンスが含まれています。 これらのカウンターは、 **sp_user_counter1** から **sp_user_counter10** までの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャに対応します。 ユーザー アプリケーションからこれらのストアド プロシージャが実行されると、ストアド プロシージャによって設定された値がシステム モニターに表示されます。 1 つのカウンターは、1 日に発生した特定製品の注文件数を数えるストアド プロシージャなど、任意の整数値を 1 つ監視できます。  
+ **User Settable** オブジェクトには、**ユーザー カウンター 1** から **ユーザー カウンター 10** まで、クエリ カウンターの 10 個のインスタンスが含まれています。 これらのカウンターは、 **sp_user_counter1** から **sp_user_counter10** までの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャに対応します。 ユーザー アプリケーションからこれらのストアド プロシージャが実行されると、ストアド プロシージャによって設定された値がシステム モニターに表示されます。 1 つのカウンターは、1 日に発生した特定製品の注文件数を数えるストアド プロシージャなど、任意の整数値を 1 つ監視できます。  
   
 > [!NOTE]  
 >  ユーザー カウンターのストアド プロシージャは、システム モニターから自動的にポーリングされることはありません。 カウンター値を更新するには、ユーザー アプリケーションから明示的にストアド プロシージャを実行する必要があります。 カウンター値を自動的に更新するには、トリガーを使用します。 たとえば、テーブルの行数を監視するカウンターを作成するには、テーブルに対する INSERT と DELETE のトリガーを作成し、 `SELECT COUNT(*) FROM table`というステートメントが実行されるようにします。 テーブルに対する INSERT 操作か DELETE 操作が発生するとトリガーが起動され、システム モニター カウンターが自動的に更新されます。  

@@ -1,5 +1,5 @@
 ---
-title: ISNULL (Transact-SQL) | Microsoft Docs
+title: ISNULL (Transact-SQL)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb356779514e175a56644a8c020746bd110e3893
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 985b556fbfbbcb9722b93a950e4a8a75dc33c0c6
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999799"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111963"
 ---
-# <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
+# <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL) 
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 NULL 値を、指定された値に置き換えます。  
@@ -42,7 +43,9 @@ NULL 値を、指定された値に置き換えます。
 ISNULL ( check_expression , replacement_value )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *check_expression*  
  NULL かどうかを調べる[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *check_expression* は任意のデータ型です。  
   

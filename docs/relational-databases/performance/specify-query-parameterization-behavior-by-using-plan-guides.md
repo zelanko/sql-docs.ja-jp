@@ -1,5 +1,6 @@
 ---
 title: プラン ガイドを使用したクエリのパラメーター化動作の設定
+description: パラメーターが SQL Server のクエリに含まれるリテラル値の代用になるパラメーター化のオプションについて説明します。
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f9f7c65eb69a79ff2190ab1371c594fa7b305093
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df9520716c559b2f567d6c4a674b4ea9d250321d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716872"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458613"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>プラン ガイドを使用したクエリのパラメーター化動作の指定
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -2,22 +2,22 @@
 title: R チュートリアル:データの探索
 description: SQL Server でのデータベース内分析に R 関数を使用して、統計の概要を視覚化および生成する方法を示すチュートリアル。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e74224851d2c475cd89160b362ba163d53c00f61
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18fd4df2d2ae5764b5f3e9becaa872f863ed5ee5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781777"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>R を使用した SQL Server データの表示と集計 (チュートリアル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このレッスンでは、**RevoScaleR** パッケージの関数について説明し、次のタスクについて説明します。
 
@@ -132,7 +132,7 @@ RevoScaleR や RevoScaleR などの Microsoft R ライブラリを使用する�
 
     **rxGetVarInfo** は便利な機能です。任意のデータ フレームまたはリモート データ オブジェクト内のデータ セットでこれを呼び出して、最大値や最小値、データ型、因子列内のレベル数などの情報を取得します。
     
-    あらゆる種類のデータ入力、特徴量変換、または特徴量エンジニアリングの後にこの関数を実行することを検討してください。 そうすることで、モデルで使用するすべての特徴量が予期したデータ型を持つことを確認し、エラーを回避できます。
+    あらゆる種類のデータ入力、機能変換、または機能エンジニアリングの後にこの関数を実行することを検討してください。 そうすることで、モデルで使用するすべての機能が予期したデータ型を持つことを確認し、エラーを回避できます。
   
     ```R
     rxGetVarInfo(data = inDataSource)

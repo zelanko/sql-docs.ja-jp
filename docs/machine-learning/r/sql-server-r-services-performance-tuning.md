@@ -2,22 +2,22 @@
 title: R のパフォーマンス チューニング
 description: この記事では、R Services のパフォーマンスの最適化について説明します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d7b6b91ac3aeaa45c5e6c3e05c12176f5f60b28
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 991f9f0ddbe58e5591a89ff16bf8455d5a5cdca4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756476"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server での R のパフォーマンス チューニング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事は、次の 2 つのケース スタディに基づいて、R Services のパフォーマンスの最適化について説明するシリーズの、4 つの記事のうちの最初の記事です。
 

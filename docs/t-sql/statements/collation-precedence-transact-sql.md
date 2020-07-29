@@ -26,12 +26,12 @@ ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51c3975cb0db2b93ebcaefcc6d2c423da62ba0e0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 09d9ff8e9944faa4d5dcbd9f24f2ab5a359962e2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011331"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111205"
 ---
 # <a name="collation-precedence"></a>照合順序の優先順位
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -227,16 +227,63 @@ CAST、CONVERT、および COLLATE の各関数は、**char**、**varchar**、**
  入力が文字列ではなく文字列を返す組み込み関数の場合、その結果文字列は強制可能な既定照合順序となり、現在のデータベースの照合順序、あるいはその関数を参照しているユーザー定義関数、ストアド プロシージャ、またはトリガーを含むデータベースの照合順序が割り当てられます。  
   
  次の関数は、照合順序依存です。その出力文字列は、入力文字列の照合順序ラベルを持ちます。  
-  
-|||  
-|-|-|  
-|CHARINDEX|[REPLACE]|  
-|DIFFERENCE|REVERSE|  
-|ISNUMERIC|RIGHT|  
-|LEFT|SOUNDEX|  
-|LEN|STUFF|  
-|[LOWER]|[SUBSTRING]|  
-|PATINDEX|[UPPER]|  
+
+:::row:::
+    :::column:::
+        CHARINDEX
+    :::column-end:::
+    :::column:::
+        [REPLACE]
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DIFFERENCE
+    :::column-end:::
+    :::column:::
+        REVERSE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ISNUMERIC
+    :::column-end:::
+    :::column:::
+        RIGHT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LEFT
+    :::column-end:::
+    :::column:::
+        SOUNDEX
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LEN
+    :::column-end:::
+    :::column:::
+        STUFF
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [LOWER]
+    :::column-end:::
+    :::column:::
+        [SUBSTRING]
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        PATINDEX
+    :::column-end:::
+    :::column:::
+        [UPPER]
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>参照  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   

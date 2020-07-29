@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 0c9d69f04fc7825b0902e101d1c8f8f40494da72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f16ffac1272a0dd9bfc847d33b3232179d306c3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751454"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>新しいデータベース ダイアグラムの作成 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 オブジェクト エクスプローラーを使用すると、新しいデータベース ダイアグラムを作成できます。 データベース ダイアグラムは、データベースの構造をグラフィカル表示するツールです。 データベース ダイアグラムを使用すると、テーブル、列、リレーションシップ、キーを作成および変更できます。 また、インデックスや制約を変更することもできます。  
   
 ### <a name="to-create-a-new-database-diagram"></a>新しいデータベース ダイアグラムを作成するには  

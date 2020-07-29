@@ -1,5 +1,6 @@
 ---
 title: ワークロード グループの移動 | Microsoft Docs
+description: SQL Server Management Studio か Transact-SQL を使用し、Resource Governor のワークロード グループを別のリソース共有元リソース共有元に移動する方法について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d7db094db50938b08125b6605040eba935b77273
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3ff2eff8f72499506aa129b064690693f1b14ff
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720465"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456727"
 ---
 # <a name="move-a-workload-group"></a>ワークロード グループの移動
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

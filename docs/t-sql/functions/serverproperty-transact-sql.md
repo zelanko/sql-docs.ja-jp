@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97979dbef582835c5fcb8a8e3ec04fdf99b5d205
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ba9181d1b34bf39711dac702a11687b3ca38f604
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003659"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113350"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -47,7 +47,9 @@ SERVERPROPERTY ( 'propertyname' )
 > [!IMPORTANT]
 > SQL Server と Azure SQL Database のデータベース エンジンのバージョン番号は類似のものではありません。別個の製品に与えられる内部製造番号になっています。 Azure SQL Database のデータベース エンジンは SQL Server データベース エンジンと同じコードに基づいています。 最も重要なことですが、Azure SQL Database のデータベース エンジンには常に最新の SQL データベース エンジン ビットが与えられます。 Azure SQL Database のバージョン 12 は SQL Server のバージョン 15 より新しくなります。
 
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 
 *propertyname*  
 サーバーについて、返されるプロパティ情報を含む式を指定します。 *propertyname* 値は次のいずれかを指定することができます。  

@@ -5,25 +5,25 @@ description: azdata bdc gateway status コマンドに関するリファレン�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1c74439be0a696197f35a86a0d493a8ad01e28ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30410e4acbaa6b52228c89334c9ee8a26a80d5b4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820926"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243061"
 ---
 # <a name="azdata-bdc-gateway-status"></a>azdata bdc gateway status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-以下の記事では、`azdata` ツールの `bdc gateway status` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。
 
 ## <a name="commands"></a>コマンド
-|     |     |
+| command | 説明 |
 | --- | --- |
 [azdata bdc gateway status show](#azdata-bdc-gateway-status-show) | ゲートウェイ サービスの状態。
 ## <a name="azdata-bdc-gateway-status-show"></a>azdata bdc gateway status show
@@ -58,7 +58,7 @@ azdata bdc gateway status show --resource gateway
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 

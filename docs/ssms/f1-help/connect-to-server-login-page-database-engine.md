@@ -2,7 +2,6 @@
 title: '[サーバーへの接続] ([ログイン] ページ) (データベース エンジン)'
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -10,18 +9,19 @@ f1_keywords:
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: d854098dfb9046c9f1c059bb4e2549257f924e25
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: ed86ffb259b01a31fefca17eedefd8f4f4dab1a9
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809767"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123053"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>[サーバーへの接続] ([ログイン] ページ) (データベース エンジン)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] に接続するときのオプションを表示または指定できます。 ほとんどの場合、 **[サーバー名]** ボックスにデータベース サーバーのコンピューター名を入力し、 **[接続]** をクリックすることで接続できます。 名前付きインスタンスに接続する場合は、コンピューター名の後に円記号とインスタンス名を付けて使用します。 たとえば、「 `mycomputer\myinstance` 」のように入力します。 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] に接続する場合は、コンピューター名の後に **\sqlexpress** を付けて使用します。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続する機能に影響する要因は多数あります。 ヘルプのための次のリソースが見つかりません。

@@ -2,22 +2,22 @@
 title: DMV を使用してスクリプトを監視する
 description: 動的管理ビュー (DMV) を使用して、SQL Server Machine Learning Services での Python および R の外部スクリプトの実行を監視します。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d9590dbe7c4ee7682cc326b4a5b97ab220f0418
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2313b13a009ea4c3fb5ec6a8dae6da75716f0b1b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118925"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726579"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>動的管理ビュー (DMV) を使用して SQL Server Machine Learning Services を監視する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 動的管理ビュー (DMV) を使用して、外部スクリプト (Python と R) の実行、使用されたリソース、問題の診断、SQL Server Machine Learning Services のパフォーマンスの調整を監視します。
 
@@ -119,9 +119,9 @@ ON s.session_id = r.session_id;
 | last_wait_type | 要求がブロックされていた場合の最後の待機の種類。 |
 | total_elapsed_time | 要求を受信してから経過した総時間 (ミリ秒単位)。 |
 | cpu_time | 要求で使用される CPU 時間 (ミリ秒単位)。 |
-| reads | 要求で実行された読み取りの数。 |
+| 読み取り | 要求で実行された読み取りの数。 |
 | logical_reads | 要求で実行された論理読み取りの数。 |
-| writes | 要求で実行された書き込みの数。 |
+| 書き込み | 要求で実行された書き込みの数。 |
 | language | サポートされているスクリプト言語を表すキーワードです。 |
 | degree_of_parallelism | 作成された並列処理の数を示す数値です。 この値は、要求された並列処理の数と異なる場合があります。 |
 | external_user_name | スクリプトが実行されたときの Windows ワーカー アカウント。 |
@@ -280,8 +280,8 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 |--------|-------------|
 | Package | インストールされているパッケージの名前。 |
 | Version | パッケージのバージョン。 |
-| Depends | インストールされているパッケージが依存しているパッケージを一覧表示します。 |
-| License | インストールされているパッケージのライセンス。 |
+| 依存 | インストールされているパッケージが依存しているパッケージを一覧表示します。 |
+| ライセンス | インストールされているパッケージのライセンス。 |
 | LibPath | パッケージが格納されているディレクトリ。 |
 
 ### <a name="installed-packages-for-python"></a>Python 用にインストールされたパッケージ
@@ -306,7 +306,7 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 |--------|-------------|
 | Package | インストールされているパッケージの名前。 |
 | Version | パッケージのバージョン。 |
-| Location | パッケージが格納されているディレクトリ。 |
+| 場所 | パッケージが格納されているディレクトリ。 |
 
 ## <a name="next-steps"></a>次のステップ
 

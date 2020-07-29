@@ -2,23 +2,23 @@
 title: データ ラングリング タスクのコードを生成する
 titleSuffix: Azure Data Studio
 description: この記事では、Azure Data Studio の PROSE コード アクセラレータを使用して、一般的なデータ ラングリング タスクのコードを自動的に生成する方法について説明します。
-author: MikeRayMSFT
-ms.author: mikeray
+author: dphansen
+ms.author: davidph
 ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67957683"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243443"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE コード アクセラレータを使用したデータ ラングリング
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 PROSE コード アクセラレータでは、データ ラングリング タスク用の読み取り可能な Python コードが生成されます。 Azure Data Studio 内のノートブックで作業するときに、生成されたコードと手書きコードをシームレスに混在させることができます。 この記事では、コード アクセラレータの使用方法の概要について説明します。
 
@@ -113,8 +113,8 @@ builder.learn().code()
 もう 1 つの一般的なシナリオは、クリーニングまたはグループ化の目的で文字列の列のパターンを検出することです。 たとえば、日付が複数の異なる形式の日付列があるとします。 値を標準化するために、正規表現を使用して条件付きステートメントを記述することが必要な場合があります。
 
 
-|   |Name                      |BirthDate      |
-|---|:-------------------------|:--------------|
+|行|名前                      |BirthDate      |
+|--:|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |

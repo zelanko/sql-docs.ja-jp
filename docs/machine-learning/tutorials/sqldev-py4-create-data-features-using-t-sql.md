@@ -1,42 +1,42 @@
 ---
-title: Python + T-SQL:データの特徴量
+title: Python + T-SQL:データ機能
 description: Python machine learning モデルで使用するために計算をストアド プロシージャに追加する方法を示すチュートリアルです。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb7f7b271c49922698058e396b69b91444c5b65a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 98a1ca3b012c5580e55dd6ea963c3869269f7136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115925"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775339"
 ---
-# <a name="create-data-features-using-t-sql"></a>T-SQL を使用してデータの特徴量を作成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="create-data-features-using-t-sql"></a>T-SQL を使用してデータ機能を作成する
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-データ探索を行うと、データからインサイトが収集されているので、 "*特徴量エンジニアリング*"に移ることができます。 生データから特徴量を作成するこのプロセスは、高度な分析のモデリングにおいて重要な手順となり得ます。
+データ探索を行うと、データからインサイトが収集されているので、 *機能エンジニアリング*に移ることができます。 生データから機能を作成するこのプロセスは、高度な分析のモデリングにおいて重要な手順となり得ます。
 
 この記事は、[SQL 開発者向けのデータベース内 Python analytics](sqldev-in-database-python-for-sql-developers.md) チュートリアルの一部です。 
 
-この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数を利用し、生データから特徴量を作成する方法について説明します。 その後、その関数をストアド プロシージャから呼び出し、特徴量の値を含むテーブルを作成します。
+この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数を利用し、生データから機能を作成する方法について説明します。 その後、その関数をストアド プロシージャから呼び出し、機能の値を含むテーブルを作成します。
 
 ## <a name="define-the-function"></a>関数を定義する
 
 元のデータで報告されている距離の値は報告されたメーター距離に基づき、必ずしも地理的距離や走行距離を表しません。 そのため、ソースである NYC タクシー データセットの座標を利用し、乗車地点と降車地点の間の直接距離を計算する必要があります。 カスタム [関数で](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 式 [!INCLUDE[tsql](../../includes/tsql-md.md)] を利用し、この計算を実行できます。
 
-1 つ目のカスタム T-SQL 関数、 _fnCalculateDistance_ を利用し、Haversine 式で距離を計算し、2 つ目のカスタム T-SQL 関数、 _fnEngineerFeatures_ を利用し、すべての特徴量を含むテーブルを作成します。
+1 つ目のカスタム T-SQL 関数、 _fnCalculateDistance_を利用し、Haversine 式で距離を計算し、2 つ目のカスタム T-SQL 関数、 _fnEngineerFeatures_を利用し、すべての機能を含むテーブルを作成します。
 
 ### <a name="calculate-trip-distance-using-fncalculatedistance"></a>fnCalculateDistance を利用して乗車距離を計算する
 
 1.  このチュートリアルの準備の一環として関数 _fnCalculateDistance_ がダウンロードされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録されているはずです。 少し時間をかけてコードを確認してください。
   
     [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]** 、 **[関数]** 、 **[スカラー値関数]** の順に展開します。
-    _fnCalculateDistance_ を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
+    _fnCalculateDistance_を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
   
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -66,13 +66,13 @@ ms.locfileid: "81115925"
 - この関数はスカラー値関数であり、事前定義されている種類の単一データ値を返します。
 - 乗車場所と降車場所から取得した緯度値と経度値を入力値として受け取ります。 Haversine 式は場所をラジアンに変換し、その値を利用して 2 場所間の直接距離をマイルで計算します。
 
-計算された値をモデルのトレーニングに利用できるテーブルに追加するには、別の関数、 _fnEngineerFeatures_ を利用します。
+計算された値をモデルのトレーニングに利用できるテーブルに追加するには、別の関数、 _fnEngineerFeatures_を利用します。
 
-### <a name="save-the-features-using-_fnengineerfeatures_"></a>_fnEngineerFeatures_ を利用して特徴量を保存する
+### <a name="save-the-features-using-_fnengineerfeatures_"></a>_fnEngineerFeatures_ を利用して機能を保存する
 
-1.  カスタム T-SQL 関数、 _fnEngineerFeatures_ のコードを再確認します。この関数は、このチュートリアルの一環として自動的に作成されているはずです。
+1.  カスタム T-SQL 関数、 _fnEngineerFeatures_のコードを再確認します。この関数は、このチュートリアルの一環として自動的に作成されているはずです。
   
-    この関数はテーブル値関数であり、複数の列を入力値として受け取り、複数の特徴量列を含むテーブルを出力します。  この関数の目的は、モデルの構築に利用する特徴量セットを作成することです。 関数 _fnEngineerFeatures_ は先に作成した T-SQL 関数 _fnCalculateDistance_ を呼び出し、乗車場所と降車場所の間の直接距離を取得します。
+    この関数はテーブル値関数であり、複数の列を入力値として受け取り、複数の機能列を含むテーブルを出力します。  この関数の目的は、モデルの構築に利用する機能セットを作成することです。 関数 _fnEngineerFeatures_ は先に作成した T-SQL 関数 _fnCalculateDistance_を呼び出し、乗車場所と降車場所の間の直接距離を取得します。
   
     ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (
@@ -110,7 +110,7 @@ ms.locfileid: "81115925"
   
     ご覧のとおり、メーターによって報告された距離と地理的距離は常に一致しているわけではありません。 そのため、フィーチャー エンジニアリングが重要となります。
 
-次の手順では、これらのデータの特徴量を利用し、Python による機械学習モデルを作成してトレーニングします。
+次の手順では、これらのデータ機能を利用し、Python による機械学習モデルを作成してトレーニングします。
 
 ## <a name="next-step"></a>次のステップ
 

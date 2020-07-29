@@ -2,22 +2,22 @@
 title: R チュートリアル:モデルの構築と保存
 description: SQL Server のデータベース内分析に使用される R 言語モデルを構築する方法を示すチュートリアルです。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4cb806c0a6286ec8a6608b346d12e666a8e9a09f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8ae0de4af29dd68e71300de52875044a8c2d64b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115775"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730428"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R モデルを構築して SQL Server に保存する (チュートリアル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このステップでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で機械学習モデルを構築し、モデルを保存する方法について説明します。 モデルを保存することにより、システム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) または [PREDICT (T-SQL) 関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードから直接呼び出すことができます。
 
@@ -100,7 +100,7 @@ GO
      *trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
      *direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
      *---*
-     *Signif. codes:  0 '\*\*\*' 0.001 '\*\*' 0.01 '\*' 0.05 '.' 0.1 ' ' 1*
+     *Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
      *Condition number of final variance-covariance matrix: 48.3933*
      *Number of iterations: 4*
    ```
@@ -117,7 +117,7 @@ GO
       table = "taxiScoreOutput"  )
     ```
 
-    + この例を単純にするために、ロジスティック回帰モデルへの入力は、モデルのトレーニングに使用したものと同じ特徴量を持つデータ ソース (`sql_feature_ds`) とします。  多くの場合、スコアリングには新しいデータを使用したり、テスト用とトレーニング用のデータを別に確保したりします。
+    + この例を単純にするために、ロジスティック回帰モデルへの入力は、モデルのトレーニングに使用したものと同じ特徴を持つデータ ソース (`sql_feature_ds`) とします。  多くの場合、スコアリングには新しいデータを使用したり、テスト用とトレーニング用のデータを別に確保したりします。
   
     + 予測結果は _taxiscoreOutput_ というテーブルに保存されます。 rxSqlServerData を使用して作成した場合、このテーブルのスキーマは定義されていないことに注意してください。 スキーマは、rxPredict 出力から取得されます。
   

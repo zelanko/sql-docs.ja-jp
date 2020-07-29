@@ -1,5 +1,6 @@
 ---
 title: 実行プラン | Microsoft Docs
+description: SQL Server データベース エンジンでクエリを実行する目的でクエリ オプティマイザーによって作成される実行プランまたはクエリ プランについて説明します。
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 8f9a92ee9ac1ed87a20515a267a80b8372c95366
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751788"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457260"
 ---
 # <a name="execution-plans"></a>実行プラン
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85751788"
   `TableC`、 `TableB`、 `TableA`、または  
   `TableB`、 `TableA`、 `TableC`、または  
   `TableB`、 `TableC`、 `TableA`、または  
-  `TableC`、`TableA`、`TableB`  
+  `TableC`, `TableA`, `TableB`  
 
 - **各テーブルからデータを取り出すための方法。**  
   通常、各テーブルのデータにアクセスする方法にも何とおりかあります。 特定のキー値を持つ数行だけが必要な場合、データベース サーバーではインデックスを使用できます。 テーブル内のすべての行が必要な場合は、インデックスを無視してテーブル スキャンを実行できます。 テーブル内のすべての行が必要で、 `ORDER BY`で指定されたキー列のインデックスがある場合、テーブル スキャンではなくインデックス スキャンを行うと、結果セットの並べ替えを個別に行わずに済みます。 テーブルが非常に小さい場合は、テーブルにどのようにアクセスするときでもテーブル スキャンが最も効率的な方法です。

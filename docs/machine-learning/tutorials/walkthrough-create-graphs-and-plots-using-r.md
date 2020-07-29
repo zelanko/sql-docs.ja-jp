@@ -2,22 +2,22 @@
 title: R チュートリアル:グラフとプロットの作成
 description: SQL Server で R 言語関数を使用してグラフやプロットを作成する方法を示すチュートリアル。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34ec0c2814dda7d2cf4bada10e5e53c05f8e08b9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781817"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL と R を使用してグラフとプロットを作成する (チュートリアル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 チュートリアルのこのパートでは、R を使用して SQL Server データでプロットとマップを生成する方法について説明します。 単純なヒストグラムを作成してから、より複雑なマップ プロットを作成します。
 
@@ -111,4 +111,4 @@ ms.locfileid: "81115745"
 ## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [R と SQL を使用してデータの特徴量を作成する](walkthrough-create-data-features.md)
+> [R と SQL を使用してデータ機能を作成する](walkthrough-create-data-features.md)

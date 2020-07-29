@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606643"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773652"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのマスター インスタンスとは
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 この記事では、SQL Server 2019 ビッグ データ クラスターでの *SQL Server マスター インスタンス*の役割について説明します。 マスター インスタンスとは、ビッグ データ クラスターで実行される、接続、スケールアウト クエリ、メタデータとユーザー データベース、機械学習サービスを管理する SQL Server のインスタンスです。
 

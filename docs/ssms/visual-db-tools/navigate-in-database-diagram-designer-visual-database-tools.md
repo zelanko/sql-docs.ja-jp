@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 3a43ab4d45ddb30a655beefa9b39713f1d451054
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0500a5354c549baec2fc718f93be6cacd67c17b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75225549"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009279"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナー内でのナビゲーション (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 データベース ダイアグラム デザイナーでの作業には、キーボードとマウスが使用できます。 データベース ダイアグラム デザイナーで使用する特定の方法については、次の表を参照してください。  
   
 |**To**|**ショートカット キー**|  

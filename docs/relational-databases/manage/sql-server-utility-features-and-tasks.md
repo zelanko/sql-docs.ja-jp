@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755694"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242966"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server ユーティリティの機能とタスク
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,8 @@ ms.locfileid: "85755694"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの基礎知識については、次の各トピックを参照してください。  
   
-|||  
+|説明|トピック|  
 |-|-|  
-|**説明**|**トピック**|  
 |ユーティリティ コレクション セットと非ユーティリティ コレクション セットを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同じインスタンス上で実行するようにサーバーを構成する際の注意点について説明します。|[SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |SQL Server ユーティリティ コントロール ポイントを作成する方法について説明します。|[SQL Server ユーティリティ コントロール ポイントの作成 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |SQL Server ユーティリティに接続する方法について説明します。|[SQL Server ユーティリティへの接続](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch_object
 - retrieving data, as an object
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992740"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893168"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,6 @@ PHP オブジェクトとしてデータの次の行を取得します。
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, row[, ]offset]]])  
 ```  
   
@@ -81,17 +80,21 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 名前のないフィールドが返された場合、 **sqlsrv_fetch_object** はフィールド値を破棄し、警告を発行します。 たとえば、データベース テーブルに値を挿入し、サーバーが生成したプライマリ キーを取得する、この Transact-SQL ステートメントがあります。  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 このクエリで返される結果が **sqlsrv_fetch_object**で取得される場合、 `SELECT SCOPE_IDENTITY()` で返される値は破棄され、警告が発行されます。 これを回避するために、Transact-SQL ステートメントに返されたフィールドの名前を指定できます。 次は、Transact-SQL に列名を指定する方法の 1 つです。  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="example"></a>例  
 次の例では、結果セットの各行を PHP オブジェクトとして取得します。 この例では、SQL Server と [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
-```  
+``` 
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -234,12 +237,16 @@ sqlsrv_close( $conn);
   
 名前のないフィールドが返された場合、 **sqlsrv_fetch_object** はフィールド値を破棄し、警告を発行します。 たとえば、データベース テーブルに値を挿入し、サーバーが生成したプライマリ キーを取得する、この Transact-SQL ステートメントがあります。  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 このクエリで返される結果が **sqlsrv_fetch_object**で取得される場合、 `SELECT SCOPE_IDENTITY()` で返される値は破棄され、警告が発行されます。 これを回避するために、Transact-SQL ステートメントに返されたフィールドの名前を指定できます。 次は、Transact-SQL に列名を指定する方法の 1 つです。  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="see-also"></a>参照  
 [データの取得](../../connect/php/retrieving-data.md)  

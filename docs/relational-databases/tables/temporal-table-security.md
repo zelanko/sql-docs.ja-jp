@@ -11,12 +11,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eb809ddbd1acfdd3a01f5601b30e9cf6e9259e0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6f9392a6ef282d1a3201e5edb2a4fa026adc5752
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555257"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122777"
 ---
 # <a name="temporal-table-security"></a>テンポラル テーブル セキュリティ
 
@@ -58,15 +58,15 @@ SYSTEM_VERSIONING がオンに設定されているとき、スキーマ変更�
 
 ## <a name="security-of-the-create-temporal-table-statement"></a>CREATE Temporal TABLE ステートメントのセキュリティ
 
-||新しい履歴テーブルを作成する|既存の履歴テーブルを再利用する|
-|-|------------------------------|----------------------------------|
+| 特徴量 | 新しい履歴テーブルを作成する | 既存の履歴テーブルを再利用する |
+| ------- | ------------------------ | ---------------------------- |
 |必要な権限|データベースの**CREATE TABLE** 権限<br /><br /> 現行テーブルと履歴テーブルが作成されるスキーマの**ALTER** 権限|データベースの**CREATE TABLE** 権限<br /><br /> 現行テーブルが作成されるスキーマの**ALTER** 権限<br /><br /> テンポラル テーブルを作成する**CONTROL** ステートメントの一部として指定される履歴テーブルの **CONTROL** 権限|
 |Audit|監査により、ユーザーが 2 つのオブジェクトを作成しようとしたことが示されます。 データベースにテーブルを作成する権限がないため、あるいはどちらかのテーブルのスキーマを変更する権限がないため、操作が失敗することがあります。|監査により、テンポラル テーブルが作成されたことが示されます。 データベースにテーブルを作成する権限がないため、テンポラル テーブルのスキーマを変更する権限がないため、あるいは履歴テーブルに対する権限がないため、操作が失敗することがあります。|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>ALTER Temporal TABLE SET (SYSTEM_VERSIONING オン/オフ) ステートメントのセキュリティ
 
-||新しい履歴テーブルを作成する|既存の履歴テーブルを再利用する|
-|-|------------------------------|----------------------------------|
+| 特徴量 | 新しい履歴テーブルを作成する | 既存の履歴テーブルを再利用する |
+| ------- | ------------------------ | ---------------------------- |
 |必要な権限|データベースの**CONTROL** 権限<br /><br /> データベースの**CREATE TABLE** 権限<br /><br /> 履歴テーブルが作成されるスキーマの**ALTER** 権限|変更される元のテーブルの**CONTROL** 権限<br /><br /> **ALTER TABLE** ステートメントの一部として指定される履歴テーブルの **CONTROL** 権限|
 |Audit|監査により、テンポラル テーブルが変更され、同時に履歴テーブルが作成されたことが示されます。 データベースにテーブルを作成する権限がないため、履歴テーブルのスキーマを変更する権限がないため、あるいはテンポラル テーブルを変更する権限がないため、操作が失敗することがあります。|監査により、テンポラル テーブルが変更されたが、操作には履歴テーブルへのアクセス許可が必要であったことが示されます。 履歴テーブルに対する権限がないため、あるいは現行テーブルに対する権限がないため、操作が失敗することがあります。|
 

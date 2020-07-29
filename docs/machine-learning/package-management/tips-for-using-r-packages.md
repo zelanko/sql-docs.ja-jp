@@ -4,21 +4,21 @@ description: R または SQL Server を初めて使用するユーザー向け�
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a8402432904e724c0eee769f0f899ff12498ac8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ad2650317958ffd43b0f4b910585d429249115b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730538"
 ---
 # <a name="tips-for-using-r-packages"></a>R パッケージを使用するためのヒント
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 この記事では、SQL Server で R パッケージを使用する際に役立つヒントについて説明します。 これらのヒントは、R に不慣れな DBA と、SQL Server インスタンスでのパッケージ アクセスには不慣れで R の経験は豊富な開発者向けです。
 
@@ -93,6 +93,6 @@ SQL Server に R パッケージをインストールする方法の詳細につ
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [R ツールを使用してパッケージをインストールする](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [sqlmlutils で新しい R パッケージをインストールする](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

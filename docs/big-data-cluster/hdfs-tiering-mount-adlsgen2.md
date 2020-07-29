@@ -5,16 +5,16 @@ description: この記事では、外部の Azure Data Lake Storage ファイル
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730647"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための ADLS Gen2 をマウントする方法
 
@@ -48,7 +48,7 @@ OAuth 資格情報を使用してマウントするには、次の手順に従�
 1. 右のナビゲーション バーで [アプリの登録] を選択し、新しい登録を作成します
 1. Web アプリケーションを作成し、ウィザードに従います。 **ここで作成したアプリの名前を忘れないでください**。 この名前を承認されたユーザーとして ADLS アカウントに追加する必要があります。 また、アプリを選択したときの [概要] のアプリケーション クライアント ID も記録しておきます。
 1. Web アプリケーションが作成されたら、[Certificates&secrets]\(証明書とシークレット\) に移動し、**新しいクライアント シークレット**を作成して、キーの期間を選択します。 シークレットを**追加**します。
-1.     [アプリの登録] ページに戻り、上部にある [エンドポイント] をクリックします。 **OAuth トークン エンドポイント (v2) の URL を記録しておきます**
+1. [アプリの登録] ページに戻り、上部にある [エンドポイント] をクリックします。 **OAuth トークン エンドポイント (v2) の URL を記録しておきます**
 1. ここまでで、OAuth に関する次の内容をメモしておく必要があります。
 
     - Web アプリケーションの "アプリケーション クライアント ID"
@@ -71,13 +71,13 @@ OAuth 資格情報を使用してマウントするには、次の手順に従�
 
 資格情報を指定するときは、コンマ "," の間の改行または空白文字を削除する必要があることに**注意してください**。 以下の書式設定は、読みやすくするためのものです。
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## <a name="use-access-keys-to-mount"></a>アクセス キーを使用してマウントする
 
@@ -94,10 +94,10 @@ Azure portal で ADLS アカウント用に取得できるアクセス キーを
 
 資格情報を指定するときは、コンマ "," の間の改行または空白文字を削除する必要があることに**注意してください**。 以下の書式設定は、読みやすくするためのものです。
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> リモート HDFS ストレージをマウントする
 

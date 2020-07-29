@@ -1,5 +1,6 @@
 ---
 title: システム モニターの起動 (Windows) | Microsoft Docs
+description: プロセッサやメモリの使用など、SQL Server リソースの場合、ロック数やトランザクション数など、パフォーマンス データ カウンターをシステム モニターを使用して収集します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 58027f9fa617b5fb77fc02f1268197930ea169cf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e03d2d02e970a4e76988664254e0f6f26a78355b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655222"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457602"
 ---
 # <a name="start-system-monitor-windows"></a>システム モニターの起動 (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85655222"
   
 **[スタート]** ボタンをクリックして **[ファイル名を指定して実行]** をポイントし、 **[ファイル名を指定して実行]** ダイアログ ボックスで「**perfmon**」と入力し、 **[OK]** を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム モニターの実行](../../relational-databases/performance-monitor/run-system-monitor.md)  
   
   

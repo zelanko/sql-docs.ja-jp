@@ -1,5 +1,6 @@
 ---
 title: 統計の作成 |Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用し、SQL Server のテーブルまたはインデックス付きビューの列に関するクエリ最適化統計値を作成する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0989fda3e2650843b24719e51cd0944713a9ac2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d7b91e2a3438e09de30a6be3c66bb4c22f9bd1ad
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012246"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458250"
 ---
 # <a name="create-statistics"></a>統計の作成
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86012246"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **統計を作成するために使用するもの:**  
   
@@ -81,7 +82,7 @@ ms.locfileid: "86012246"
      **[統計の列]**  
      このグリッドに、この統計の対象となる列が表示されます。 グリッド内のすべての値は読み取り専用です。  
   
-     **Name**  
+     **名前**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
      **[データ型]**  
@@ -90,7 +91,7 @@ ms.locfileid: "86012246"
      **[サイズ]**  
      各列のデータ型のサイズが表示されます。  
   
-     **[ID]**  
+     **ID**  
      オンの場合、ID 列を示します。  
   
      **[NULL を許容]**  
@@ -119,11 +120,11 @@ ms.locfileid: "86012246"
      **[フィルター式]**  
      フィルター処理された統計情報にどのデータ行を含めるかを定義します。 たとえば、`Production.ProductSubcategoryID IN ( 1,2,3 )` のように指定します。  
   
-5.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページで、**[追加]** をクリックします。  
+5.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページで、 **[追加]** をクリックします。  
   
      **[列の選択]** ダイアログ ボックスに次のプロパティが表示されます。 この情報は読み取り専用です。  
   
-     **Name**  
+     **名前**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
      **[データ型]**  
@@ -132,7 +133,7 @@ ms.locfileid: "86012246"
      **[サイズ]**  
      各列のデータ型のサイズが表示されます。  
   
-     **[ID]**  
+     **ID**  
      オンの場合、ID 列を示します。  
   
      **[NULL を許容]**  
@@ -140,7 +141,7 @@ ms.locfileid: "86012246"
   
 6.  **[列の選択]** ダイアログ ボックスで、統計を作成する列のチェック ボックスをオンにし、 **[OK]** をクリックします。  
   
-7.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスで、**[OK]** をクリックします。  
+7.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   

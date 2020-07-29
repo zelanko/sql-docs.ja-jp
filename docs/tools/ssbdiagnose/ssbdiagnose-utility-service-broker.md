@@ -23,20 +23,19 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9454e30cefa778a45b4fda2a1db7e3ef9c60eb7a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: e9b797710617be71643cbe1a7b2c721c90fe5a5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748609"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 **ssbdiagnose** ユーティリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換または [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスの構成に関する問題を報告します。 構成チェックは 2 つまたは 1 つのサービスに対して実行できます。 問題点は、コマンド プロンプト ウィンドウにユーザーが解釈できる形式で報告されるか、ファイルまたは別のプログラムにリダイレクトできる XML 形式で報告されます。
 
@@ -170,7 +169,7 @@ WHERE database_id = DB_ID();
  **RUNTIME**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の実行時エラーの原因である問題に関するレポートを要求します。 **-NEW** も **-ID** も指定されていない場合、 **ssbdiagnose** では、接続オプションで指定されたすべてのデータベース内のメッセージ交換をすべて監視します。 **-NEW** または **-ID** が指定されている場合、 **ssbdiagnose** では、パラメーターで指定された ID の一覧が作成されます。  
   
- **ssbdiagnose[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、実行中に、実行時エラーを示す ** イベントをすべて記録します。 また、指定された ID に対して発生するイベントに加え、システムレベルのイベントも記録します。 実行時エラーが検出されると、 **ssbdiagnose** では、関連付けられている構成に対して構成レポートを実行します。  
+ **ssbdiagnose[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、実行中に、実行時エラーを示す**  イベントをすべて記録します。 また、指定された ID に対して発生するイベントに加え、システムレベルのイベントも記録します。 実行時エラーが検出されると、 **ssbdiagnose** では、関連付けられている構成に対して構成レポートを実行します。  
   
  既定では、出力レポートに実行時エラーは含まれず、構成の分析結果のみが含まれます。 レポートに実行時エラーを含めるには、 **-SHOWEVENTS** を使用してください。  
   

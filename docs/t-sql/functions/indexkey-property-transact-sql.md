@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 17b73a3a6cbbec9ed904ca6d0ca6b41d6d24eb85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 631a2380d8a491fd495e5d60d52284a476c9aab7
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894290"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110957"
 ---
 # <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "85894290"
 INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *object_ID*  
  テーブルまたはインデックス付きビューのオブジェクト ID 番号です。 *object_ID* は **int** です。  
   
