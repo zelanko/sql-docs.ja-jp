@@ -13,12 +13,12 @@ ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 091632ca752092ff28d5211c48d76a8b9516536f
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 34e357ce88d75942d4784dbbbb7b43ad40150fa3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293629"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396661"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>SQL Server への接続 (OracleToSQL)
 Oracle データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2、または2012または2014に移行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これらのターゲットインスタンスのいずれかに接続する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 接続すると、SSMA はインスタンス内のすべてのデータベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取得し、メタデータエクスプローラーにデータベースのメタデータを表示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA は、接続されているのインスタンスに関する情報を格納し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ますが、パスワードは保存しません。  
@@ -82,15 +82,14 @@ Oracle データベースオブジェクトを構文に変換する前に、Orac
   
 -   作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトが 2012 SQL Server 場合は、2012および2014および2016に接続できます。  
   
-||||||||  
+|プロジェクトの種類と対象サーバーのバージョン|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(バージョン:13. x)|Azure SQL DB|  
 |-|-|-|-|-|-|-|  
-|**プロジェクトの種類 Vs ターゲットサーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(バージョン:13. x)|Azure SQL DB|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|はい|はい|はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|はい|はい|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|はい|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||はい|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||はい||
-|Azure SQL DB||||||はい|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|○|○|○|○|○||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||○|○|○|○||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||○|○|○||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||○|○||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||○||
+|Azure SQL DB||||||○|
   
 > [!IMPORTANT]
 > データベースオブジェクトの変換は、プロジェクトの種類に従って実行されますが、接続しているのバージョンによっては実行されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 プロジェクトの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008、2012、また [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は2014または 2016) に接続している場合でも、変換は2005ごとに実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  

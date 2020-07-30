@@ -20,15 +20,15 @@ ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae7fd97640b048d504dd03599bf991e9ae91929d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4bf49fd0d828bd4f287431f2b95c47e07315448
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827848"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396726"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>dm_resource_governor_resource_pools (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   リソース プールの現在の状態、現在の構成、および統計に関する情報を返します。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "82827848"
 |io_issue_delay_total_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> スケジュールされた問題と IO の実際の問題との間の合計時間 (ミリ秒単位)。 NULL 値が許可されます。 リソースプールに IO が適用されていない場合は Null です。 つまり、リソースプールの MIN_IOPS_PER_VOLUME と MAX_IOPS_PER_VOLUME の設定は0です。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  Resource Governor ワークロードグループと Resource Governor リソースプールには、多対一のマッピングがあります。 このため、多くのリソース プール統計が、ワークロード グループ統計から派生しています。  
   
  この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、resource_governor_resource_pools カタログビューを使用します。  
@@ -87,7 +87,7 @@ ms.locfileid: "82827848"
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

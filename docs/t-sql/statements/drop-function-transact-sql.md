@@ -22,15 +22,15 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cc1eb2d3c2953fd2bdf24fdf3c13c94872f6632
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d0f955bbb373c48f55b9769485354050c2c86a3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77144186"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396752"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   1 つまたは複数のユーザー定義関数を現在のデータベースから削除します。 ユーザー定義関数は [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) を使って作成し、[ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md) を使って変更します。  
   
@@ -40,14 +40,14 @@ ms.locfileid: "77144186"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
  -- SQL Server, Azure SQL Database 
 
 DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]   
 [;]
 ```
 
-```  
+```syntaxsql
  -- Azure SQL Data Warehouse, Parallel Data Warehouse 
 
 DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
@@ -76,7 +76,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-dropping-a-function"></a>A. 関数を削除する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの `Sales` スキーマから、`fn_SalesByStore` ユーザー定義関数を削除します。 この関数を作成する方法については、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」の例 B をご覧ください。  
+ 次の例では、`fn_SalesByStore` サンプル データベースの `Sales` スキーマから、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ユーザー定義関数を削除します。 この関数を作成する方法については、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」の例 B をご覧ください。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

@@ -16,18 +16,18 @@ helpviewer_keywords:
 - uniqueidentifier data type
 - NEWID function
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fff840992f0b24af961acb069268cb41c550da2a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843653"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397101"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   **uniqueidentifier** 型の一意の値を作成します。  
   
@@ -71,7 +71,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 **適用対象**:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 次の例では、**uniqueidentifier** データ型を使用して `cust` テーブルを作成し、NEWID を使用してテーブルに既定値を入力します。 `NEWID()` の既定値が代入されると、新しい行と既存の行の `CustomerID` 列にそれぞれ一意な値が設定されます。  
+ 次の例では、`cust`uniqueidentifier**データ型を使用して** テーブルを作成し、NEWID を使用してテーブルに既定値を入力します。 `NEWID()` の既定値が代入されると、新しい行と既存の行の `CustomerID` 列にそれぞれ一意な値が設定されます。  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  

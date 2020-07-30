@@ -18,15 +18,15 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02cff18af9c0824d7f28e5685f5fc63a0bf45128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821244"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396781"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>dm_exec_function_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   キャッシュされた関数の集計パフォーマンス統計を返します。 ビューは、キャッシュされた関数プランごとに1行の値を返します。行の有効期間は、関数がキャッシュされたままである限り保持されます。 関数がキャッシュから削除されると、対応する行がこのビューから削除されます。 その時点で、**sys.dm_exec_query_stats** と同様にパフォーマンス統計 SQL トレース イベントが発生します。 メモリ内の関数や CLR スカラー関数など、スカラー関数に関する情報を返します。 テーブル値関数に関する情報は返しません。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "82821244"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、平均経過時間で識別される上位10個の関数に関する情報を返します。  
   
 ```  

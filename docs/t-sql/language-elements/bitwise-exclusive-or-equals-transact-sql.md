@@ -23,15 +23,15 @@ ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f459aa18d5f744d64dc5ca385c6773ca4937416
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 753895903264d3047fce823c247ce122fcda48cb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919696"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396223"
 ---
 # <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^= (ビットごとの排他的 OR 代入) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   2 つの整数値の間でビットごとの排他的 OR 演算を実行し、値に演算の結果を設定します。  
   

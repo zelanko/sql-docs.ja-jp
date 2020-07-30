@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138325"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396562"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
 型マッピングプロジェクトの設定を使用すると、SSMA プロジェクトの既定の型マッピングを設定できます。  
@@ -25,7 +25,7 @@ ms.locfileid: "68138325"
   
 -   [既定のプロジェクトの設定] ダイアログボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 型マッピングの設定にアクセスするには、[ツール] メニューの [既定のプロジェクト設定] をクリックし、[移行**先のバージョン**] ドロップダウンから表示/変更が必要な設定を選択して、左側のウィンドウの [種類のマッピング] をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
   
 ##### <a name="source-type"></a>ソースの種類  
 これは MySQL データ型で、ターゲットデータベースのデータ型にマップする必要があります。  
@@ -36,7 +36,7 @@ ms.locfileid: "68138325"
 ##### <a name="add"></a>追加  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-##### <a name="edit"></a>[編集]  
+##### <a name="edit"></a>編集  
 [マッピング] ボックスの一覧で選択したデータ型を編集する場合にクリックします。  
   
 ##### <a name="remove"></a>[削除]  
@@ -48,9 +48,8 @@ ms.locfileid: "68138325"
 ## <a name="type-mappings"></a>型のマッピング  
 次の表は、ソースとターゲットのデータ型の既定のマッピングを示しています。  
   
-|||  
+|MySQL データ型|SQL Server データ型|  
 |-|-|  
-|**MySQL データ型**|**SQL Server データ型**|  
 |bigint|bigint|  
 |bigint [*..255]|bigint|  
 |binary|バイナリ [1]|  
@@ -69,7 +68,7 @@ ms.locfileid: "68138325"
 |blob [0 ..1]|varbinary [1]|  
 |blob [2.. 8000]|varbinary [*]|  
 |blob [8001.. *]|varbinary(max)|  
-|bool|bit|  
+|[bool]|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
 |char byte|バイナリ [1]|  
@@ -86,28 +85,28 @@ ms.locfileid: "68138325"
 |DATETIME|datetime2 [0]|  
 |dec|decimal|  
 |dec [*..65]|decimal [*] [0]|  
-|dec [*..65] [\*..?|decimal [*] [\*]|  
+|dec [*..65] [ \* ..?|decimal [*] [ \* ]|  
 |decimal|decimal|  
 |decimal [*..65]|decimal [*] [0]|  
-|decimal [*..65] [\*..?|decimal [*] [\*]|  
+|decimal [*..65] [ \* ..?|decimal [*] [ \* ]|  
 |double|float [53]|  
 |double precision|float [53]|  
-|倍精度浮動小数点型 [*..255] [\*..?|数値 [*] [\*]|  
-|double [*..255] [\*..?|数値 [*] [\*]|  
+|倍精度浮動小数点型 [*..255] [ \* ..?|数値 [*] [ \* ]|  
+|double [*..255] [ \* ..?|数値 [*] [ \* ]|  
 |固定|numeric|  
-|修正済み [*..65] [\*..?|数値 [*] [\*]|  
+|修正済み [*..65] [ \* ..?|数値 [*] [ \* ]|  
 |float|float [24]|  
-|float [*..255] [\*..?|数値 [*] [\*]|  
+|float [*..255] [ \* ..?|数値 [*] [ \* ]|  
 |float [*..53]|float [53]|  
 |INT|INT|  
-|int [*..255]|int|  
-|整数|int|  
-|integer [*..255]|int|  
+|int [*..255]|INT|  
+|整数 (integer)|INT|  
+|integer [*..255]|INT|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|int|  
-|mediumint[*..255]|int|  
+|mediumint|INT|  
+|mediumint[*..255]|INT|  
 |mediumtext|nvarchar(max)|  
 |national char|nchar [1]|  
 |national char [0 ..1]|nchar [1]|  
@@ -132,13 +131,13 @@ ms.locfileid: "68138325"
 |nchar [2.. 255]|nchar [*]|  
 |numeric|numeric|  
 |数値 [*..65]|数値 [*] [0]|  
-|数値 [*..65] [\*..?|数値 [*] [\*]|  
+|数値 [*..65] [ \* ..?|数値 [*] [ \* ]|  
 |nvarchar|nvarchar [1]|  
 |nvarchar [0 ..1]|nvarchar [1]|  
 |nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |real|float [53]|  
-|real [*..255] [\*..?|数値 [*] [\*]|  
+|real [*..255] [ \* ..?|数値 [*] [ \* ]|  
 |serial|bigint|  
 |smallint|smallint|  
 |smallint [*..255]|smallint|  
@@ -146,7 +145,7 @@ ms.locfileid: "68138325"
 |テキスト [0 ..1]|nvarchar [1]|  
 |テキスト [2.. 4000]|nvarchar [*]|  
 |テキスト [4001.. *]|nvarchar(max)|  
-|時間|time|  
+|time|time|  
 |timestamp|DATETIME|  
 |tinyblob|varbinary [255]|  
 |tinyint|smallint|  
@@ -156,32 +155,32 @@ ms.locfileid: "68138325"
 |符号なし bigint [*..255]|bigint|  
 |unsigned dec|decimal|  
 |unsigned dec [*..65]|decimal [*] [0]|  
-|unsigned dec [*..65] [\*..?|decimal [*] [\*]|  
+|unsigned dec [*..65] [ \* ..?|decimal [*] [ \* ]|  
 |符号なし10進|decimal|  
 |符号なし10進数 [*..65]|decimal [*] [0]|  
-|符号なし10進数 [*..65] [\*..?|decimal [*] [\*]|  
+|符号なし10進数 [*..65] [ \* ..?|decimal [*] [ \* ]|  
 |符号なし double|float [53]|  
 |符号なし倍精度|float [53]|  
-|符号なし倍精度 [*..255] [\*..?|数値 [*] [\*]|  
-|unsigned double [*..255] [\*..?|数値 [*] [\*]|  
+|符号なし倍精度 [*..255] [ \* ..?|数値 [*] [ \* ]|  
+|unsigned double [*..255] [ \* ..?|数値 [*] [ \* ]|  
 |unsigned fixed|numeric|  
-|unsigned fixed [*..65] [\*..?|数値 [*] [\*]|  
+|unsigned fixed [*..65] [ \* ..?|数値 [*] [ \* ]|  
 |unsigned float|float [24]|  
-|unsigned float [*..255] [\*..?|数値 [*] [\*]|  
+|unsigned float [*..255] [ \* ..?|数値 [*] [ \* ]|  
 |unsigned float [*..53]|float [53]|  
 |unsigned int|bigint|  
 |unsigned int [*..255]|bigint|  
 |符号なし整数|bigint|  
 |符号なし整数 [*..255]|bigint|  
-|署名されていない mediumint|int|  
-|署名されていない mediumint [*..255]|int|  
+|署名されていない mediumint|INT|  
+|署名されていない mediumint [*..255]|INT|  
 |符号なし数値|numeric|  
 |符号なし数値 [*..65]|数値 [*] [0]|  
-|符号なし数値 [*..65] [\*..?|数値 [*] [\*]|  
+|符号なし数値 [*..65] [ \* ..?|数値 [*] [ \* ]|  
 |符号なし実数|float [53]|  
-|unsigned real [*..255 [[\*..?|数値 [*] [\*]|  
-|unsigned smallint|int|  
-|unsigned smallint [*..255]|int|  
+|unsigned real [*..255 [[ \* ..?|数値 [*] [ \* ]|  
+|unsigned smallint|INT|  
+|unsigned smallint [*..255]|INT|  
 |unsigned tinyint|tinyint|  
 |unsigned tinyint [*..255]|tinyint|  
 |varbinary [0 ..1]|varbinary [1]|  
@@ -197,7 +196,7 @@ ms.locfileid: "68138325"
 ##### <a name="add"></a>追加  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-##### <a name="edit"></a>[編集]  
+##### <a name="edit"></a>編集  
 [マッピング] ボックスの一覧でデータ型を編集する場合にクリックします。  
   
 ##### <a name="remove"></a>[削除]  

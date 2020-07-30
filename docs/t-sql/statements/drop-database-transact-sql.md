@@ -25,16 +25,16 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5dc64b473319421eab790c438ba75c073852d3c5
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982190"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397008"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 1 つ以上のユーザー データベースまたはデータベース スナップショットを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスから削除します。
 
@@ -42,12 +42,12 @@ ms.locfileid: "73982190"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- SQL Server Syntax
 DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ] [;]
 ```
 
-```
+```syntaxsql
 -- Azure SQL Database, Azure SQL Data Warehouse and Analytics Platform System Syntax
 DROP DATABASE database_name [;]
 ```
