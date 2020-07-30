@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df1539bde5064dc9ae9211029631bb233be0f469
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68112873"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396789"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>SSMA for Sybase Console の操作 (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA)、Sybase Adaptive Server Enterprise (ASE) のリリースは、コマンドラインでコンソールアプリケーションを使用してアクセスできるようになりました。 スクリプトファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 SSMA では、コンソールアプリケーションとして、スクリプトレベルのインターフェイスを有効にし、移行サイクルを短縮し、移行作業をスケールします。  
@@ -23,9 +23,8 @@ ms.locfileid: "68112873"
   
 このセクションでは、次のトピックについて説明します。  
   
-|||  
+|トピック|説明|  
 |-|-|  
-|**トピック**|**説明**|  
 |[SSMA for Sybase コンソールのはじめに &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|コンソールアプリケーションを実行する手順について説明します。|  
 |[SSMA コンソールのコマンドラインオプション &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|SSMA コンソールアプリケーションを操作するためのコマンドラインオプションとパラメーターについて説明します。|  
 |[SybaseToSQL&#41;&#40;スクリプトファイルを作成しています](../../ssma/sybase/creating-script-files-sybasetosql.md)|スクリプトファイルの作成方法について説明します。|  

@@ -24,16 +24,16 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 890c84330005c3d9f6c4b30a06662d67dfef46f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c76ef14e97a44b2e33c816c678700e9f4496ae2d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941658"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397053"
 ---
 # <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されなくなります。 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はステートメントの実行方法に関する詳細情報を、整形式の XML ドキュメントで返します。
 
@@ -41,7 +41,7 @@ ms.locfileid: "67941658"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 SET SHOWPLAN_XML { ON | OFF }
 ```
 
@@ -61,7 +61,7 @@ SET SHOWPLAN_XML はストアド プロシージャ内では指定できませ�
 SET SHOWPLAN_XML では、情報が XML ドキュメントのセットとして返されます。 SET SHOWPLAN_XML を ON にした後で実行された各バッチの情報は、それぞれ 1 つの出力ドキュメントに反映されます。 各ドキュメントには、バッチ内のステートメントのテキストと実行ステップの詳細が含まれ、 推定コスト、行数、アクセスしたインデックス、実行された演算子の種類、結合順序、および実行プランに関するその他の情報が示されます。
 
 > [!NOTE]
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[実際の実行プランを含める]** を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、 **[実際の実行プランを含める]** ボタンの選択を解除してください。
+> **で**[実際の実行プランを含める][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、 **[実際の実行プランを含める]** ボタンの選択を解除してください。
 
 ### <a name="location-of-showplan-output"></a>SHOWPLAN 出力の場所
 

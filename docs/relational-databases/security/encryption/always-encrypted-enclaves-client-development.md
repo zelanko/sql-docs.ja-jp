@@ -12,15 +12,15 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ec032a9a6bd6d02372d77d8844d5e4938fbe945
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 971cce5ddf61f528e9e4ffdc0377603b6ce96946
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74492005"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411385"
 ---
 # <a name="develop-applications-using-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) を使うと、[Always Encrypted](always-encrypted-database-engine.md) が拡張され、暗号化された機密データベース列に対するアプリケーション クエリの高度な機能が有効になります。 セキュリティで保護されたエンクレーブのテクノロジを利用することで、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] のクエリ Executor は、暗号化された列に対する計算を、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] プロセス内のセキュリティで保護されたエンクレーブにデリゲートできるようになります。
 
