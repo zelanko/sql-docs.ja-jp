@@ -1,5 +1,5 @@
 ---
-title: IRow::GetColumns を使用した列のフェッチ (OLE DB) | Microsoft Docs
+title: 'IRow:: GetColumns を使用して列をフェッチする (Native Client OLE DB provider) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +13,19 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db4a869049b0092f314e2cb89035d4a5549c0760
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 645c627f70b3135792b882a1ae62504948f2839a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004551"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247871"
 ---
-# <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
+# <a name="fetch-columns-in-sql-server-native-client-using-irowgetcolumns-ole-db"></a>IRow:: GetColumns (OLE DB) を使用して SQL Server Native Client 内の列をフェッチする
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRow** インターフェイスでは、結果セット内の単一行の列に直接アクセスできます。 つまり、**IRow** では、1 つの行の結果セットから効率的に列を取得できます。  
   
- **IRow** を使用して単一行をフェッチする方法を示したコード サンプルがあります。 このサンプルでは、行から一度に 1 つの列を取得します。 このサンプルでは、次の方法が示されています。  
+ **IRow**を使用して単一の行をフェッチする方法を示すコードサンプルが用意されています。 このサンプルでは、行から一度に 1 つの列を取得します。 このサンプルでは、次の方法が示されています。  
   
 -   列のグループを (順番に) フェッチする方法。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86004551"
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L "(local)" から L "(local) \\ \ name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、サンプルで使用したテーブルを削除します。  
   

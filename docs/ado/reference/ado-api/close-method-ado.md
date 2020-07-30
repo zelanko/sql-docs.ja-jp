@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 939bf1d65c73b2aa83c54c7a5b936e3228719ba5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748918"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242792"
 ---
 # <a name="close-method-ado"></a>Close メソッド (ADO)
 開いているオブジェクトとすべての依存オブジェクトを閉じます。  
@@ -34,7 +34,7 @@ ms.locfileid: "82748918"
 object.Close  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Close**メソッドを使用して、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)、または[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトを閉じて、関連付けられているシステムリソースを解放します。 オブジェクトを閉じると、メモリから削除されません。プロパティの設定を変更し、後でもう一度開くことができます。 オブジェクトをメモリから完全に削除するには、オブジェクトを閉じて、オブジェクト変数を*Nothing* (Visual Basic) に設定します。  
   
 ## <a name="connection"></a>Connection  
@@ -54,12 +54,18 @@ object.Close
  [Clone](../../../ado/reference/ado-api/clone-method-ado.md)メソッドを使用して、開いている**レコードセット**オブジェクトのコピーを作成する場合、元のまたは複製を閉じると、他のコピーには影響しません。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [Open および Close メソッドの例 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open および Close メソッドの例 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   

@@ -18,13 +18,14 @@ ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 882b36eec471e09ad5fe998b6ce6042a6b986581
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bd4d2bb25f1f576c83e35fe57de4d3de99cc4bc4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010474"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243847"
 ---
-# <a name="schema-rowsets---distributed-query-support"></a>スキーマ行セット - 分散クエリのサポート
+# <a name="schema-rowsets---distributed-query-support-in-sql-server-native-client"></a>スキーマ行セット-SQL Server Native Client での分散クエリのサポート
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   分散クエリをサポートするために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider **IDBSchemaRowset**インターフェイスは、リンクサーバー上のメタデータを返します。  

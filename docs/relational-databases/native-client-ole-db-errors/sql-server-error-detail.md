@@ -1,5 +1,5 @@
 ---
-title: SQL Server エラーの詳細 | Microsoft Docs
+title: SQL Server エラーの詳細 (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fdb803531ae271f59dda6268cca986abb166b1f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3b491e14b7109af533eb2e7cfa3bc05658436e31
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010516"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331882"
 ---
-# <a name="sql-server-error-detail"></a>SQL Server エラーの詳細
+# <a name="sql-server-native-client-error-detail"></a>SQL Server Native Client エラーの詳細
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、プロバイダー固有のエラーインターフェイス[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)を定義します。 このインターフェイスにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの詳細が返されるので、コマンドの実行や行セットの操作が失敗したときに役立ちます。  

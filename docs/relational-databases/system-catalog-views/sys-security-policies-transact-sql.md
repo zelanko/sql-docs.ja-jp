@@ -21,15 +21,15 @@ ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ccada998c6508d7dccfcee149f954e2e6978ff6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135309"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395267"
 ---
 # <a name="syssecurity_policies-transact-sql"></a>security_policies (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   データベース内のセキュリティポリシーごとに1行のデータを返します。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "68135309"
 ## <a name="see-also"></a>参照  
  [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md)   
  [security_predicates &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
- [Transact-sql&#41;&#40;セキュリティポリシーを作成する](../../t-sql/statements/create-security-policy-transact-sql.md)   
- [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
+ [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

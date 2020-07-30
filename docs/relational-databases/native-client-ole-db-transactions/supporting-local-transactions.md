@@ -1,5 +1,5 @@
 ---
-title: ローカル トランザクションのサポート | Microsoft Docs
+title: ローカルトランザクションのサポート (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd6640c497226bbe2c97cbafaa9931582e9b5d6c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 39de80135212acb962953c1054187e4d04e61af8
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005784"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332281"
 ---
-# <a name="supporting-local-transactions"></a>ローカル トランザクションのサポート
+# <a name="supporting-local-transactions-in-sql-server-native-client"></a>SQL Server Native Client でのローカルトランザクションのサポート
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   セッションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのローカルトランザクションのトランザクションスコープを区切ります。 コンシューマーの指示によっ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] て、Native client OLE DB プロバイダーがの接続されたインスタンスに要求を送信すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB プロバイダーの作業単位になります。 ローカルトランザクションでは、1つの Native Client OLE DB プロバイダーセッションで、1つまたは複数の作業単位が常にラップさ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れます。  
@@ -129,6 +130,6 @@ if (FAILED(hr))
   
 ## <a name="see-also"></a>参照  
  [トランザクション](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
- [スナップショット分離を使用した作業](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
+ [スナップショット分離の使用](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   
   

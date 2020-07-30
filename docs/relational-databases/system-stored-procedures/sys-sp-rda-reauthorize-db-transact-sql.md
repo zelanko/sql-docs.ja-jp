@@ -1,5 +1,6 @@
 ---
 title: sp_rda_reauthorize_db (Transact-sql) |Microsoft Docs
+description: ローカル Stretch 対応データベースとリモートデータベースの間の認証された接続を復元するために、sp_rda_reauthorize_db を使用する方法について説明します。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3fcac7c16de9acf851c623cf7eb1c582e78025c
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 5bb6c7ff0d9e2025e5036043c8a48616b0679a54
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053026"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247569"
 ---
 # <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -55,7 +57,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>アクセス許可  
  Db_owner のアクセス許可が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  [Sp_rda_reauthorize_db (transact-sql)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)を実行してリモートの Azure データベースに再接続すると、この操作によってクエリモードが自動的に LOCAL_AND_REMOTE にリセットされます。これは Stretch Database の既定の動作です。 つまり、クエリはローカルとリモートの両方のデータから結果を返します。  
   
 ## <a name="example"></a>例  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595517"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411458"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) を使うと、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセキュリティで保護されたエンクレーブ内で、データベースの列に対するインプレースでの暗号化操作がサポートされます。 インプレース暗号化を使うと、そのような操作のためにデータをデータベースの外部に移動する必要がなくなり、暗号化操作の速度と信頼性が向上します。 
 

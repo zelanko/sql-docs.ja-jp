@@ -22,14 +22,14 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a436ee66b42f59994ba902b75d84ba94c29b5008
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 86c7ba71c46c8e571ac30f2e5b0c2b814c17833c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976600"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245919"
 ---
-# <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング
+# <a name="sql-server-native-client-data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピングの SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   行セットとパラメーター値として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 関数**IColumnsInfo:: GetColumnInfo**および**ICommandWithParameters:: getparameterinfo**で報告される OLE DB 次の定義データ型を使用してデータを表します。  

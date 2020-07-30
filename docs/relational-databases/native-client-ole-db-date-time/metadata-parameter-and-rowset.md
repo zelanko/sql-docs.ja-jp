@@ -1,5 +1,5 @@
 ---
-title: パラメーターと行セットのメタデータ | Microsoft Docs
+title: パラメーターと行セットのメタデータ (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79bf81886795d4772a4eac08ee51912b775cc4c8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1fb12ebfb1e158ae71c2e8bbc72a7159a10a91e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005433"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245815"
 ---
-# <a name="metadata---parameter-and-rowset"></a>メタデータ - パラメーターと行セット
+# <a name="metadata---parameter-and-rowset-in-sql-server-native-client"></a>SQL Server Native Client のメタデータパラメーターと行セット
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、OLE DB の日付および時刻の機能強化に関連する、次の型と型メンバーについて説明します。  
@@ -39,10 +40,10 @@ ms.locfileid: "86005433"
   
 |パラメーターの型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|クリア|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21.. 27|0..7|オン|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28.. 34|0..7|オン|  
   
@@ -84,10 +85,10 @@ ms.locfileid: "86005433"
   
 |列の型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|クリア|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|オン|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|オン|  
   
@@ -118,10 +119,10 @@ ms.locfileid: "86005433"
   
 |パラメーターの型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|クリア|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|オン|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|オン|  
   

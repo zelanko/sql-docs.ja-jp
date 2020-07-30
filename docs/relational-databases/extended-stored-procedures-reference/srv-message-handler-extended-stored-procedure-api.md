@@ -1,5 +1,6 @@
 ---
 title: srv_message_handler (拡張ストアド プロシージャ API)
+description: Srv_message_handler と、インストールされている拡張ストアドプロシージャ API メッセージハンドラーを呼び出す方法について説明します。
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5841cdb3f57c0c4b6e33737d8c08b3ff0437e800
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2edc96558c00b43dfe9d9b346ad75c32b42af1cd
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756736"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332358"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +100,7 @@ oserrtextlen
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **srv_message_handler** 関数を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の集中型エラー ログ機能とレポート機能に拡張ストアド プロシージャを統合できるようになります。 拡張ストアド プロシージャからのイベントに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の警告を設定し、警告条件を SQL Server エージェントで監視できます。  
   
  エラー メッセージが長い場合は、412 バイトに切り捨てられます。  

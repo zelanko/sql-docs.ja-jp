@@ -10,15 +10,15 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 4547fe6ae7282aa95ed2b1e46c47a5a07aa20f11
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627409"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395247"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースからデータを選択し、リモート サーバー上の SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内の新しいテーブルにデータをコピーします。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、MPP クエリのすべてのメリットを活用し、アプライアンスを使用して、リモート コピーのデータを選択します。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能を必要とするシナリオに使用します。  
   

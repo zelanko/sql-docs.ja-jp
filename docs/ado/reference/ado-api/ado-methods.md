@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747257"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242862"
 ---
 # <a name="ado-methods"></a>ADO メソッド
 
-|||  
+|Method|説明|  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|更新可能な**レコードセット**オブジェクトの新しいレコードを作成します。|  
 |[Append](../../../ado/reference/ado-api/append-method-ado.md)|オブジェクトをコレクションに追加します。 コレクションが**フィールド**の場合は、コレクションに追加する前に新しい**Field**オブジェクトを作成できます。|  
@@ -31,7 +31,7 @@ ms.locfileid: "82747257"
 |[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|保留中の非同期メソッド呼び出しの実行を取り消します。|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|保留中のバッチ更新をキャンセルします。|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|**Update**メソッドを呼び出す前に、**レコードセット**オブジェクトの現在または新しい行、または**レコード**オブジェクトの**Fields**コレクションに対して行われたすべての変更を取り消します。|  
-|[クリア](../../../ado/reference/ado-api/clear-method-ado.md)|**エラーコレクションから**すべての**エラー**オブジェクトを削除します。|  
+|[[クリア]](../../../ado/reference/ado-api/clear-method-ado.md)|**エラーコレクションから**すべての**エラー**オブジェクトを削除します。|  
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|既存の**レコード**セットオブジェクトから、重複する**レコードセット**オブジェクトを作成します。 必要に応じて、複製が読み取り専用であることを指定します。|  
 |[[閉じる]](../../../ado/reference/ado-api/close-method-ado.md)|開いているオブジェクトとすべての依存オブジェクトを閉じます。|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|2つのブックマークを比較し、それらの相対値を示す値を返します。|  
@@ -44,8 +44,8 @@ ms.locfileid: "82747257"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|ファイルまたはディレクトリ、およびそのすべてのサブディレクトリを削除します。|  
 |[Execute (ADO コマンド)](../../../ado/reference/ado-api/execute-method-ado-command.md)|**CommandText**プロパティで指定されたクエリ、SQL ステートメント、またはストアドプロシージャを実行します。|  
 |[Execute (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|指定されたクエリ、SQL ステートメント、ストアドプロシージャ、またはプロバイダー固有のテキストを実行します。|  
-|[［検索］](../../../ado/reference/ado-api/find-method-ado.md)|**レコードセット**内で、指定した条件を満たす行を検索します。|  
-|[揃える](../../../ado/reference/ado-api/flush-method-ado.md)|ADO バッファーに残っている**ストリーム**の内容を、**ストリーム**が関連付けられている基になるオブジェクトに強制的に適用します。|  
+|[Find](../../../ado/reference/ado-api/find-method-ado.md)|**レコードセット**内で、指定した条件を満たす行を検索します。|  
+|[フラッシュ](../../../ado/reference/ado-api/flush-method-ado.md)|ADO バッファーに残っている**ストリーム**の内容を、**ストリーム**が関連付けられている基になるオブジェクトに強制的に適用します。|  
 |[get_OLEDBCommand メソッド](../../../ado/reference/ado-api/get-oledbcommand-method.md)|基になる OLEDB コマンドを返します。最初に ADO コマンドで設定されたパラメーター情報を OLEDB コマンドに反映します。|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|この**レコード**によって表されるディレクトリ内のファイルとサブディレクトリを表す行を含む**レコードセット**を返します。|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|大きなテキストまたはバイナリデータ**フィールド**オブジェクトの内容のすべて、または一部を返します。|  
@@ -65,7 +65,7 @@ ms.locfileid: "82747257"
 |[put_OLEDBCommand メソッド](../../../ado/reference/ado-api/put-oledbcommand-method.md)|このメソッドは操作を実行しません。常に S_OK を返します。|  
 |[読み取り](../../../ado/reference/ado-api/read-method.md)|**ストリーム**オブジェクトから指定されたバイト数を読み取ります。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|テキスト**ストリーム**オブジェクトから指定された数の文字を読み取ります。|  
-|[更新](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーによって使用可能なオブジェクトを反映するように、コレクション内のオブジェクトを更新します。|  
+|[[更新]](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーによって使用可能なオブジェクトを反映するように、コレクション内のオブジェクトを更新します。|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|オブジェクトの基になっているクエリを再実行することによって、**レコードセット**オブジェクトのデータを更新します。|  
 |[再同期](../../../ado/reference/ado-api/resync-method.md)|基になるデータベースから、現在の**レコードセット**オブジェクトまたは**レコード**オブジェクトの**Fields**コレクションのデータを更新します。|  
 |[および](../../../ado/reference/ado-api/save-method.md)|ファイルまたは**ストリーム**オブジェクトに**レコードセット**を保存します。|  

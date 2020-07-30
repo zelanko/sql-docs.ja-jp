@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68572a642333e4e9c2c334cd7680b96b0cacced3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cc5d48ab323dd3e75ba40f406ec88505957153c7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760378"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242772"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 コマンド引数をどのように解釈するかを指定します。  
   
  ユーザーが指定した*Commandstring*値を検証して、ADO にとって危険な可能性のあるコマンドを挿入する機会をアプリケーションユーザーに与えないようにすることが重要です。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|は、コマンドの型引数を指定していません。|  
 |**Adodb.commandtypeenum.adcmdtext**|1|[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)をコマンドまたはストアドプロシージャの呼び出しのテキスト定義として評価します。|  
@@ -51,9 +51,17 @@ ms.locfileid: "82760378"
 |AdoEnums. TABLEDIRECT|  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[CommandType プロパティ (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Requery メソッド](../../../ado/reference/ado-api/requery-method.md)||
+
+:::row:::
+    :::column:::
+        [CommandType プロパティ (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)  
+        [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+    :::column-end:::
+    :::column:::
+        [Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+        [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+    :::column-end:::
+    :::column:::
+        [Requery メソッド](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

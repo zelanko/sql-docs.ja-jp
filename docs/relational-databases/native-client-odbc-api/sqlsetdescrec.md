@@ -13,11 +13,12 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 785c5f308745f93070dae4ca5a5e7355e8359764
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b51fce31e0fb94348eb20bab4d507cf842fd1fe9
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012400"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332191"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,8 +46,8 @@ ms.locfileid: "86012400"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec による機能強化された日付と時刻のサポート  
  日付型または時刻型に対して許可される値を次に示します。  
   
-||*Type*|*内部*|*[データ型]*|*[精度]*|*スケール*|  
-|-|------------|---------------|--------------|-----------------|-------------|  
+| 属性 | *Type* | *内部* | *[データ型]* | *[精度]* | *スケール* |
+| --------- | ------ | --------- | -------- | ----------- | ------- |
 |DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  

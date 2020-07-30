@@ -29,12 +29,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764869"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332641"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath のデータ型 (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "85764869"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ノード セットで位置の選択は実行されません。たとえば、XPath クエリ `Customer[3]` は 3 番目の顧客を意味しますが、このような位置の選択は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではサポートされていません。 したがって、XPath 仕様で説明されているように、ノードセットから**文字列**への変換またはノードセットから**数値**への変換は実装されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XPath 仕様で "先頭" の意味で指定されているものが "任意" の意味として扱われます。 たとえば、W3C XPath 仕様に基づき、XPath クエリは、 `Order[OrderDetail/@UnitPrice > 10.0]` **UnitPrice**が10.0 より大きい最初の**orderdetail**を持つ注文を選択します。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この XPath クエリは、 **UnitPrice**が10.0 より大きい**orderdetail**を持つ注文を選択します。  
   
- **ブール型**に変換すると存在テストが生成されます。このため、XPath クエリ `Products[@Discontinued=true()]` は sql 式 "products. 廃止されたが null" ではなく、sql 式 "products. 廃止 = 1" に相当します。 後者の SQL 式と同等のクエリを作成するには、まず、ノードセットを**number**などの非**ブール**型に変換します。 たとえば、`Products[number(@Discontinued) = true()]` のようにします。  
+ **ブール型**に変換すると存在テストが生成されます。このため、XPath クエリ `Products[@Discontinued=true()]` は sql 式 "products. 廃止されたが null" ではなく、sql 式 "products. 廃止 = 1" に相当します。 後者の SQL 式と同等のクエリを作成するには、まず、ノードセットを**number**などの非**ブール**型に変換します。 たとえば、「 `Products[number(@Discontinued) = true()]` 」のように入力します。  
   
  大半の演算子は、ノード セット内の 1 つ以上のノードに対して TRUE であれば TRUE となるように定義されているので、これらの演算はノード セットが空の場合は常に FALSE となります。 したがって、A が空の場合、`A = B` と `A != B` は両方とも FALSE になり、`not(A=B)` と `not(A!=B)` は TRUE になります。  
   
@@ -126,12 +126,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  次の表に示すように、これは、リテラルや複合式など、他の XPath 式に適用される変換と同じです。  
   
-||||||  
-|-|-|-|-|-|  
-||X が不明|X は**文字列**です。|X は**数値**です|X は**ブール型**です。|  
-|string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
-|number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN (X) > 0|X != 0|-|  
+|   | X が不明 | X は文字列です。 | X は数値です | X はブール型です。 |
+| - | ------------ | ----------- | ----------- | ------------ |
+| **string(X)** |CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
+| **number(X)** |CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
+| **boolean(X)** |-|LEN (X) > 0|X != 0|-|  
   
 ## <a name="examples"></a>例  
   
@@ -150,7 +149,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  文字列に "E-" プレフィックスが追加され、結果が `N'E-1'` と比較されます。  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B: XPath クエリ内で複数のデータ型変換を実行する  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. XPath クエリ内で複数のデータ型変換を実行する  
  注釈付き XSD スキーマに対して指定される XPath クエリ `OrderDetail[@UnitPrice * @OrderQty > 98]` を考えてみます。  
   
  この XPath クエリは、述語を満たすすべての要素を返し **\<OrderDetail>** `@UnitPrice * @OrderQty > 98` ます。 注釈付きスキーマで、固定された**14.4**データ型を使用して**UnitPrice**に注釈が付けられている場合、この述語は SQL 式に相当します。  

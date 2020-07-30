@@ -11,13 +11,14 @@ ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1033410d6dbc65f9acd3b68c6dd0247775f5dd6b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8dd0a5edb17e50283a6260d7ba2c14f1ff0b450f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011120"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247838"
 ---
-# <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB)
+# <a name="send-data-to-a-filestream-column-using-irowsetfastupload-sql-server-native-client-ole-db"></a>IRowsetFastUpload SQL Server Native Client (OLE DB) を使用して FILESTREAM 列にデータを送信する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルでは、IRowsetFastUpload インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  

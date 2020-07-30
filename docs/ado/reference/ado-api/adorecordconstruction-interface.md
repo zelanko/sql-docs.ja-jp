@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4dca796e9ba3c353d48fd3620c34a141c35a3fe8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747175"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242832"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction インターフェイス
 **ADORecordConstruction**インターフェイスは、C/c + + アプリケーションの OLE DB **ROW**オブジェクトから ADO**レコード**オブジェクトを構築するために使用されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "82747175"
   
 ## <a name="properties"></a>プロパティ  
   
-|||  
+|プロパティ|説明|  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|書き込み専用です。<br />この ADO **Record**オブジェクトの OLE DB **Row**オブジェクトのコンテナーを設定します。|  
 |[行](../../../ado/reference/ado-api/row-property-ado.md)|読み取り/書き込み。<br />この ADO **Record**オブジェクトから OLE DB **Row**オブジェクトを取得/設定します。|  
@@ -37,7 +37,7 @@ ms.locfileid: "82747175"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="remarks"></a>解説  

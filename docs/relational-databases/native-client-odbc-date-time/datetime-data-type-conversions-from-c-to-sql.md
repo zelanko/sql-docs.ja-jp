@@ -13,11 +13,12 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02dacc3323d331c2442e12518146681bdc45cb23
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 298e16b814251cf0068436cb5c1a6331aef8c1b4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004370"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332417"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime データ型の C から SQL への変換
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,23 +27,22 @@ ms.locfileid: "86004370"
   
  次の表で説明する変換は、クライアントで行われる変換に当てはまります。 サーバーで定義されているものとは異なるパラメーターの秒の小数部の有効桁数をクライアントが指定している場合、クライアントの変換は成功する可能性がありますが、 **Sqlexecute**または**sqlexecutedirect**が呼び出されると、サーバーからエラーが返されます。 特に、ODBC では、秒の小数部の切り捨てがエラーとして処理されます。一方、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime2 (6)** から**datetime2 (2)** に進むと丸めが発生します。 datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
   
-|||||||||  
-|-|-|-|-|-|-|-|-|  
-||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1|-|-|1、6|1、5、6|1、13|1、13|  
-|SQL_C_TIME|-|1|1|1、7|1、5、7|1、13|1、13|  
-|SQL_C_SS_TIME2|-|1、3|1、10|1、7|1、5、7|1、13|1、13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|該当なし|該当なし|1、10、11|該当なし|該当なし|該当なし|該当なし|  
-|SQL_C_TYPE_TIMESTAMP|1、2|1、3、4|1、4、10|1、10|1、5、10|1、13|1、13|  
-|SQL_C_SS_TIMESTAMPOFFSET|1、2、8|1、3、4、8|1、4、8、10|1、8、10|1、10|1、13|1、13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|該当なし|該当なし|該当なし|該当なし|1、10、11|該当なし|該当なし|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9、6|9、5、6|該当なし|該当なし|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9、3|9、10|9、7、10|9、5、7、10|該当なし|該当なし|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9、2|9、3、4|9、4、10|9、10|9、5、10|該当なし|該当なし|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9、2、8|9、3、4、8|9、4、8、10|9、8、10|9、10|該当なし|該当なし|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1、11|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
+|   | SQL_TYPE_DATE | SQL_TYPE_TIME | SQL_SS_TIME2 | SQL_TYPE_TIMESTAMP | SQL_SS_TIMSTAMPOFFSET | SQL_CHAR | SQL_WCHAR |
+| - | ------------- | ------------- | ------------ | ------------------ | --------------------- | -------- | --------- |
+| **SQL_C_DATE** |1|-|-|1、6|1、5、6|1、13|1、13|  
+| **SQL_C_TIME** |-|1|1|1、7|1、5、7|1、13|1、13|  
+| **SQL_C_SS_TIME2** |-|1、3|1、10|1、7|1、5、7|1、13|1、13|  
+| **SQL_C_BINARY(SQL_SS_TIME2_STRUCT)** |該当なし|該当なし|1、10、11|該当なし|該当なし|該当なし|該当なし|  
+| **SQL_C_TYPE_TIMESTAMP** |1、2|1、3、4|1、4、10|1、10|1、5、10|1、13|1、13|  
+| **SQL_C_SS_TIMESTAMPOFFSET** |1、2、8|1、3、4、8|1、4、8、10|1、8、10|1、10|1、13|1、13|  
+| **SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)** |該当なし|該当なし|該当なし|該当なし|1、10、11|該当なし|該当なし|  
+| **SQL_C_CHAR/SQL_WCHAR (date)** |9|9|9|9、6|9、5、6|該当なし|該当なし|  
+| **SQL_C_CHAR/SQL_WCHAR (time2)** |9|9、3|9、10|9、7、10|9、5、7、10|該当なし|該当なし|  
+| **SQL_C_CHAR/SQL_WCHAR (datetime)** |9、2|9、3、4|9、4、10|9、10|9、5、10|該当なし|該当なし|  
+| **SQL_C_CHAR/SQL_WCHAR (datetimeoffset)** |9、2、8|9、3、4、8|9、4、8、10|9、8、10|9、10|該当なし|該当なし|  
+| **SQL_C_BINARY(SQL_DATE_STRUCT)** |1、11|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
+| **SQL_C_BINARY(SQL_TIME_STRUCT)** |該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
+| **SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)** |該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
@@ -78,10 +78,10 @@ ms.locfileid: "86004370"
   
      秒の小数部の桁数 (小数点以下桁数) は、次の表に従って、変換先の列のサイズによって決まります。  
   
-    ||||  
-    |-|-|-|  
-    |Type|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1.. 9|  
-    |SQL_C_TYPE_TIMESTAMP|19|21..29|  
+    |   | 暗黙の小数点以下桁数 | 暗黙の小数点以下桁数 |
+    | - | ------------- | ------------- |
+    | **Type** | 0 | 1.. 9 |  
+    |**SQL_C_TYPE_TIMESTAMP** |19|21..29|  
   
      ただし、SQL_C_TYPE_TIMESTAMP では、データを損失することなく秒の小数部を 3 桁で表すことができる場合で、かつ、列のサイズが 23 以上である場合、ちょうど 3 桁になるように秒の小数部が生成されます。 この動作により、以前の ODBC ドライバーを使用して開発されたアプリケーションの下位互換性が保証されます。  
   

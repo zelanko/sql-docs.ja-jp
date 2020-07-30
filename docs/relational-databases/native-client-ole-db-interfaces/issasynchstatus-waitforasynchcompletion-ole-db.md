@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft Docs
+title: 'ISSAsynchStatus:: WaitForAsynchCompletion (Native Client OLE DB provider) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8f806124958f1b162e2b8f369345459be1ce1fd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f5c3af0d700ff8ad4d06af98a4b0387bd9e0f850
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005343"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246904"
 ---
-# <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
+# <a name="issasynchstatuswaitforasynchcompletion-in-sql-server-native-client-ole-db"></a>SQL Server Native Client の ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   非同期で実行している操作が完了するまで、またはタイムアウトが発生するまで待機します。  
@@ -55,7 +56,7 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  **ISSAsynchStatus::WaitForAsynchCompletion** メソッドでは、上記のリターン コード値以外に、主要な OLEDB **ICommand::Execute** メソッドや **IDBInitialize::Initialize** メソッドによって返されたリターン コード値もサポートします。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  タイムアウト値 (ミリ秒) が経過するか、保留になっている操作が完了するまでは、**ISSAsynchStatus::WaitForAsynchCompletion** メソッドから制御が戻りません。 **Command**オブジェクトには、クエリがタイムアウトするまでに実行される秒数を制御する**CommandTimeout**プロパティがあります。**ISSAsynchStatus:: WaitForAsynchCompletion**メソッドと共に使用する場合、 **CommandTimeout**プロパティは無視されます。  
   
  非同期操作では、タイムアウト プロパティが無視されます。 **ISSAsynchStatus::WaitForAsynchCompletion** のタイムアウト パラメーターに、制御が呼び出し元に返されるまでに経過する最大時間を指定します。 タイムアウトが発生すると、DB_S_ASYNCHRONOUS が返されます。 タイムアウトによって非同期操作が取り消されることはありません。 タイムアウト期間内に完了しない非同期操作をアプリケーションで取り消す必要がある場合、タイムアウトを待機後、DB_S_ASYNCHRONOUS が返されたときに明示的に操作を取り消す必要があります。  

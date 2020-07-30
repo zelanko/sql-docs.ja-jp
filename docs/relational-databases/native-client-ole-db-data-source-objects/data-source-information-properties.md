@@ -17,14 +17,14 @@ ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31dc87fa160a0bf036e623b406da3d47cb0449b2
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 6bd0f6a5cd28d4b8ec2f7ba8063de551c45d6b94
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976652"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247031"
 ---
-# <a name="data-source-information-properties"></a>データ ソース情報のプロパティ
+#  <a name="sql-server-native-client-data-source-information-properties"></a>データソース情報のプロパティの SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERDATASOURCEINFO には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにより、次のデータ ソース情報プロパティが定義されます。  

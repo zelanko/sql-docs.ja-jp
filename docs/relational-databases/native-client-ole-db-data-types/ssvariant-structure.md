@@ -1,5 +1,5 @@
 ---
-title: SSVARIANT 構造体 | Microsoft Docs
+title: SSVARIANT 構造 (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,20 +15,21 @@ ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d87c4a4537683d9dbb9817a0a3c022f23f2b846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ddd98b45cf44f840dfc236f8a0a1b5d809db7288
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998207"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331979"
 ---
-# <a name="ssvariant-structure"></a>SSVARIANT 構造体
+# <a name="ssvariant-structure-in-sql-server-native-client"></a>SQL Server Native Client の SSVARIANT 構造体
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sqlncli で定義されている**Ssvariant**構造体は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLEDB プロバイダーの DBTYPE_SQLVARIANT 値に対応しています。  
   
  **SSVARIANT** は、識別共用体です。 vt メンバーの値に応じて、コンシューマーは読み取るメンバーを決めることができます。 vt 値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に対応します。 したがって、**SSVARIANT** 構造体には、任意の SQL Server 型を格納できます。 標準の OLE DB 型のデータ構造体の詳細については、「[型インジケーター](https://go.microsoft.com/fwlink/?LinkId=122171)」を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  DataTypeCompat==80 の場合、いくつかの **SSVARIANT** サブタイプが文字列になります。 たとえば、次の vt 値は **SSVARIANT** では VT_SS_WVARSTRING として表されます。  
   
 -   VT_SS_DATETIMEOFFSET  

@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastLoad::Commit (OLE DB) | Microsoft Docs
+title: 'IRowsetFastLoad:: Commit (Native Client OLE DB provider) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 19de9128-b91a-4626-847f-af721edaa24e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db51a486634dfa363adb68df871e5b10b72496dc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2fae107876ae517a8f13670ddba92ff379803ca
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002343"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243935"
 ---
-# <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
+# <a name="irowsetfastloadcommit-native-client-ole-db-provider"></a>IRowsetFastLoad:: Commit (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   挿入される行のバッチの終わりをマークし、挿入された行を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに書き込みます。 サンプルについては、「[IRowsetFastLoad を使用したデータの一括コピー (OLE DB)](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)」と「[IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 (OLE DB)](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)」を参照してください。  
@@ -49,7 +50,7 @@ HRESULT Commit(
  E_UNEXPECTED  
  既に **IRowsetFastLoad::Commit** メソッドによって無効になっている一括コピー行セットに対して呼び出されました。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーの一括コピー行セットは、遅延更新モードの行セットとして動作します。 ユーザーが行セットを使用して行データを挿入すると、挿入された行は、**IRowsetUpdate** をサポートする行セットでの保留中の挿入と同様の形式で扱われます。  
   
  コンシューマーは、**IRowsetUpdate::Update** メソッドを使用して保留中の行を SQL Server のインスタンスに送信するのと同様に、一括コピー行セットに対して **Commit** メソッドを呼び出して、挿入された行を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに書き込む必要があります。  

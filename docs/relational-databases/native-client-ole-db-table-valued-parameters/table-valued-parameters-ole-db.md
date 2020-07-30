@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーター (OLE DB) | Microsoft Docs
+title: テーブル値パラメーター (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +14,19 @@ ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 674c52724484890dd385e76f1eb73d0c901a7b88
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 40fe9932ca65af3087b8bcccc569adc2e0451952
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012980"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331876"
 ---
-# <a name="table-valued-parameters-ole-db"></a>テーブル値パラメーター (OLE DB)
+# <a name="table-valued-parameters--in-sql-server-native-client-ole-db"></a>SQL Server Native Client のテーブル値パラメーター (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでのテーブル値パラメーターのサポートについて説明します。 追加の概要情報については、「[テーブル値パラメーター &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)」を参照してください。 サンプルについては、「[テーブル値パラメーターの使用 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)」を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  現時点では、複数行データを、パラメーター セット (**ICommand::Execute** の DBPARAMS パラメーター) と共にプロシージャのパラメーターとしてサーバーに送信できます。 パラメーター セットを使用する場合、セットの各要素は、個別のリモート プロシージャ コール (RPC) の要求でサーバーに送信する必要があります。 テーブル値パラメーターの機能は似ていますが、サーバーとの統合はより緊密になっています。 これにより、RPC 要求の数が減少し、サーバーでセットベースの操作が可能になります。  
   
  テーブル値パラメーターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB**行セット**オブジェクトとして Native Client OLE DB プロバイダーでサポートされています。 コンシューマー (つまり、Native Client OLE DB プロバイダーを使用するクライアントアプリケーション) は、任意の**行セット**オブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル値パラメーターのパラメーターのプレースホルダーとして提供できます。 テーブル値パラメーターは、他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パラメーターの型と同じように扱われます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって、作成、検索、指定、バインド、およびスキーマのインターフェイスが提供されます。  
