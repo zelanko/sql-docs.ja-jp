@@ -1,5 +1,5 @@
 ---
-title: .sys (Transact-sql) |Microsoft Docs
+title: sys.sysユーザー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae0f80f4d77e04906b60549270763d3f2b0881c1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018063"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393127"
 ---
-# <a name="syssysusers-transact-sql"></a>.sys (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+# <a name="syssysusers-transact-sql"></a>sys.sysユーザー (Transact-sql)
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  データベース内の windows ユーザー [!INCLUDE[msCoName](../../includes/msconame-md.md)] 、windows グループ、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ロールごとに1行のデータを格納します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]データベース内の windows ユーザー、windows グループ、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー、またはロールごとに1行のデータを格納 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -50,7 +50,7 @@ ms.locfileid: "68018063"
 |**gid**|**smallint**|このユーザーが所属するグループ ID です。 **Uid**が**gid**と同じ場合、このエントリはグループを定義します。 グループとユーザーの合計数が32767を超える場合は、オーバーフローまたは NULL を返します。|  
 |**environ**|**varchar(255)**|予約済み。|  
 |**hasdbaccess**|**int**|1 = アカウントはデータベースにアクセスできます。|  
-|**islogin**|**int**|1 = アカウントは、Windows グループ、Windows ユーザー、また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はログインアカウントを持つユーザーです。|  
+|**islogin**|**int**|1 = アカウントは、Windows グループ、Windows ユーザー、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインアカウントを持つユーザーです。|  
 |**isntname**|**int**|1 = アカウントは、Windows グループまたは Windows ユーザーです。|  
 |**isntgroup**|**int**|1 = アカウントは Windows グループです。|  
 |**isntuser**|**int**|1 = アカウントは Windows ユーザーです。|  

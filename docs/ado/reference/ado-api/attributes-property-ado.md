@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 488fe5a46b994ed664c6355e24fe8d567d5ff11d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe649e6636f33dfc73ee5aac949830b4175cd3ec
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762909"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242452"
 ---
 # <a name="attributes-property-ado"></a>Attributes プロパティ (ADO)
 オブジェクトの1つまたは複数の特性を示します。  
@@ -47,12 +47,18 @@ ms.locfileid: "82762909"
 >  **リモートデータサービスの使用状況**このプロパティは、クライアント側の**接続**オブジェクトでは使用できません。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|  
-|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|[Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)  
+        [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [Attributes と Name プロパティの例 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Attributes と Name プロパティの例 (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

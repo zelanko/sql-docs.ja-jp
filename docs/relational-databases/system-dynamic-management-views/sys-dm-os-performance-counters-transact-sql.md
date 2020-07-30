@@ -20,15 +20,15 @@ ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14ce6a581a89d9f3740b6c018109b20ec3ff39c4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3d03cac764cb5668cd184b6798c0af618c3de2ec
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833736"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394395"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   サーバーによって管理されているパフォーマンス カウンターごとに 1 つの行を返します。 各パフォーマンスカウンターの詳細については、「 [SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)」を参照してください。  
   
@@ -57,12 +57,12 @@ SELECT COUNT(*) FROM sys.dm_os_performance_counters;
 
 パフォーマンスカウンターは、 `cntr_type` 列の値が272696576、1073874176、および1073939712で、インスタントスナップショットではなく、累積カウンター値が表示されます。 そのため、スナップショットのような読み取りを行うには、2つのコレクションポイント間の差分を比較する必要があります。
 
-## <a name="permission"></a>アクセス許可
+## <a name="permission"></a>権限
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
  
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、スナップショットカウンターの値を表示するすべてのパフォーマンスカウンターを返します。  
   
 ```sql  

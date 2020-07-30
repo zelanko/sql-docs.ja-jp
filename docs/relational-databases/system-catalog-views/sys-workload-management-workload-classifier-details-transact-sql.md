@@ -12,20 +12,20 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 58b3f3315309a734a22e2732af5207b64e2f0a9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fbbc52f13bebbb46a3afc7d2dd450765d28a21a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632927"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393972"
 ---
 # <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>workload_management_workload_classifier_details (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   各分類子の詳細を返します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|分類子の ID。  NULL 値は許可されません。|
 |classifier_type|**sysname**|[Workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md)に参加しています。|`membername`</br>`wlm_label`</br>`wlm_context`</br>`start_time`</br>`end_time`|

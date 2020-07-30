@@ -1,5 +1,5 @@
 ---
-title: sysdatabases (Transact-sql) |Microsoft Docs
+title: sys.sysデータベース (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b0dab1ca5f21ced6a54192a4b0173ead68fd6f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c32503ffe44cf45dbff9608e0baa9127e39b1a4d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089162"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393424"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内のデータベースごとに1行のデータを格納します。 が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最初にインストールされるときに、 **sysdatabases**には**master**、 **model**、 **msdb**、および**tempdb**の各データベースのエントリが格納されます。  
+  のインスタンス内のデータベースごとに1行のデータを格納 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が最初にインストールされるときに、 **sysdatabases**には**master**、 **model**、 **msdb**、および**tempdb**の各データベースのエントリが格納されます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -48,7 +48,7 @@ ms.locfileid: "68089162"
 |**確保**|**datetime**|将来利用するために予約されています。|  
 |**category**|**int**|レプリケーションに使用される情報のビットマップが含まれます。<br /><br /> 1 = スナップショットレプリケーションまたはトランザクションレプリケーション用にパブリッシュされます。<br /><br /> 2 = スナップショットパブリケーションまたはトランザクションパブリケーションをサブスクライブしています。<br /><br /> 4 = マージレプリケーション用にパブリッシュされます。<br /><br /> 8 = マージ パブリケーションにサブスクライブしています。<br /><br /> 16 = ディストリビューションデータベース。|  
 |**cmptlevel**|**tinyint**|データベースの互換性レベル。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|  
-|**/db**|**nvarchar(260)**|データベースのプライマリ ファイルのオペレーティング システム パスと名前です。<br /><br /> **ファイル名**は、 **dbcreator**、 **sysadmin**、データベース所有者、CREATE ANY database 権限、または次の権限のいずれかを持つているユーザーに表示されます: ALTER any DATABASE、CREATE any database、VIEW any DEFINITION。 パスとファイル名を返すには、 [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)互換ビューまたは[database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)ビューに対してクエリを実行します。|  
+|**ファイル名**|**nvarchar(260)**|データベースのプライマリ ファイルのオペレーティング システム パスと名前です。<br /><br /> **ファイル名**は、 **dbcreator**、 **sysadmin**、データベース所有者、CREATE ANY database 権限、または次の権限のいずれかを持つているユーザーに表示されます: ALTER any DATABASE、CREATE any database、VIEW any DEFINITION。 パスとファイル名を返すには、 [sys.sysファイル](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)の互換性ビューまたは[database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)ビューに対してクエリを実行します。|  
 |**version**|**smallint**|このデータベースが作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コードの内部バージョン番号です。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>参照  

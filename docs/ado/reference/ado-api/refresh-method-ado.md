@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756534"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242582"
 ---
 # <a name="refresh-method-ado"></a>Refresh メソッド (ADO)
 プロバイダーによって使用可能なオブジェクトを反映するように、コレクション内のオブジェクトを更新します。  
@@ -34,7 +34,7 @@ ms.locfileid: "82756534"
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Refresh**メソッドは、呼び出し元のコレクションに応じてさまざまなタスクを行います。  
   
 ### <a name="parameters"></a>パラメーター  
@@ -54,17 +54,35 @@ collection.Refresh
  一部のオブジェクトの**プロパティ**コレクションで**Refresh**メソッドを使用すると、プロバイダーが公開する動的プロパティがコレクションに設定されます。 これらのプロパティは、ADO によってサポートされる組み込みプロパティ以外の、プロバイダー固有の機能に関する情報を提供します。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-||||  
-|-|-|-|  
-|[Axes コレクション](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Columns コレクション](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs コレクション](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Dimensions コレクション](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Errors コレクション](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields コレクション](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Groups コレクション](../../../ado/reference/adox-api/groups-collection-adox.md)|[階層のコレクション](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Indexes コレクション](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Keys コレクション](../../../ado/reference/adox-api/keys-collection-adox.md)|[レベルのコレクション](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Members コレクション](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Parameters コレクション](../../../ado/reference/ado-api/parameters-collection-ado.md)|[位置のコレクション](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Procedures コレクション](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables コレクション](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users コレクション](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Views コレクション](../../../ado/reference/adox-api/views-collection-adox.md)|||  
-  
+
+:::row:::
+    :::column:::
+        [Axes コレクション](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+        [Columns コレクション](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [CubeDefs コレクション](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+        [Dimensions コレクション](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+        [Errors コレクション](../../../ado/reference/ado-api/errors-collection-ado.md)  
+        [Fields コレクション](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Groups コレクション](../../../ado/reference/adox-api/groups-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [階層のコレクション](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+        [Indexes コレクション](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Keys コレクション](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [レベルのコレクション](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+        [Members コレクション](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+        [Parameters コレクション](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [位置のコレクション](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+        [Procedures コレクション](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
+        [Tables コレクション](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Users コレクション](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [Views コレクション](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [Refresh メソッドの例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh メソッドの例 (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   

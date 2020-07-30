@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca14531410942a77add7c6c99756b64bf99e785c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 89de6b52bd7987a2bdd2b8bee8e5c58b38d6074f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764523"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242702"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの1つまたは複数の属性を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|プロバイダーがフィールド値をキャッシュし、それ以降の読み取りがキャッシュから実行されることを示します。|  
 |**adFldFixed**|0x10|フィールドに固定長のデータが含まれていることを示します。|  
@@ -64,7 +64,12 @@ ms.locfileid: "82764523"
 |AdoEnums FieldAttribute|  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)  
+    :::column-end:::
+:::row-end:::

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72fa5fd287b285ca7f917c5969b0e27e11837d25
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c727f73abed5fe9a30ebf191e2c6da60f8baa13a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749297"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242892"
 ---
 # <a name="ado-dynamic-properties"></a>ADO の動的プロパティ
 動的プロパティは、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、または[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加できます。 これらのプロパティのソースは、データプロバイダー ( [SQL Server の OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)、 [OLE DB 用の Microsoft Cursor service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)などのサービスプロバイダー) のいずれかです。 特定の動的プロパティの詳細については、適切なデータプロバイダーまたはサービスプロバイダーのドキュメントを参照してください。  
@@ -26,7 +26,7 @@ ms.locfileid: "82749297"
   
  次の動的プロパティは特に興味深いものであり、前述のソースにも記載されています。 ADO を使用した特殊な機能については、次の一覧の ADO ヘルプトピックを参照してください。  
   
-|||  
+|動的プロパティ|説明|  
 |-|-|  
 |[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|このフィールドにインデックスを作成するかどうかを指定します。|  
 |[プロンプト](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|OLE DB プロバイダーがユーザーに初期化情報の入力を求めるかどうかを指定します。|  

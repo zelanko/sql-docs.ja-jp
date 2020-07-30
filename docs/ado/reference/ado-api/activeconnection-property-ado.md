@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 375f0a0b81f71294b67200f8137ee381a638b8ac
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764573"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242912"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection プロパティ (ADO)
 指定した[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが現在どの[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに属しているかを示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "82764573"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  接続が閉じられている場合は接続の定義を含む**文字列**値、または接続が開いている場合は現在の**接続**オブジェクトを含む**バリアント**を設定または返します。 既定値は null オブジェクト参照です。 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **ActiveConnection**プロパティを使用して、指定した**コマンド**オブジェクトを実行する**接続**オブジェクトを決定します。指定した**レコードセット**が開かれます。  
   
 ## <a name="command"></a>コマンド  
@@ -68,11 +68,19 @@ ms.locfileid: "82764573"
 >  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-||||  
-|-|-|-|  
-|[Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92e42fd172a694e7c320399c113f8ed8f857e0ed
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110265"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363005"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,20 +37,20 @@ ms.locfileid: "87110265"
 ##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 可用性グループをサポートする .Net 修正プログラム  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で使用する [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]コンポーネントと機能によっては、次の表で指定されている追加の .Net 修正プログラムのインストールが必要になる場合があります。 これらの修正プログラムは任意の順序でインストールできます。  
   
-||依存機能|修正プログラム|Link|  
-|------|-----------------------|------------|----------|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 の修正プログラムは、SQL クライアントに読み取り目的、読み取り専用、multisubnetfailover の Always On 機能のサポートを追加します。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347:[Always On 機能のサポートを追加する .Net 3.5 SP1 の修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|依存機能|修正プログラム|Link|  
+|-----------------------|------------|----------|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 の修正プログラムは、SQL クライアントに読み取り目的、読み取り専用、multisubnetfailover の Always On 機能のサポートを追加します。 修正プログラムは、各 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーにインストールする必要があります。|KB 2654347:[Always On 機能のサポートを追加する .Net 3.5 SP1 の修正プログラム](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> チェック リスト:要件 (Windows システム)  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の機能を利用するには、1 つまたは複数の可用性グループに参加するすべてのコンピューターが、次の基本要件を満たしている必要があります。  
   
-||要件|Link|  
-|------|-----------------|----------|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|システムがドメイン コントローラーではないことを確認します。|可用性グループは、ドメイン コントローラーではサポートされていません。|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|すべてのコンピューターで Windows Server 2012 以降のバージョンが実行されていることを確認します。|[SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|各コンピューターが WSFC のノードであることを確認します。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|必要な可用性グループの構成に耐える十分なノードが WSFC に存在することを確認します。|クラスター ノードでは、可用性グループのレプリカを 1 つホストできます。 同じノードで、同じ可用性グループのレプリカを 2 つホストすることはできません。 クラスター ノードは複数の可用性グループに参加できます。その際、各グループからのレプリカは 1 つです。 <br /><br /> 予定している可用性グループの可用性レプリカをサポートするために必要なクラスター ノードの数については、データベース管理者にお問い合わせください。<br /><br /> [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
+|要件|Link|  
+|-----------------|----------|  
+|システムがドメイン コントローラーではないことを確認します。|可用性グループは、ドメイン コントローラーではサポートされていません。|  
+|すべてのコンピューターで Windows Server 2012 以降のバージョンが実行されていることを確認します。|[SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
+|各コンピューターが WSFC のノードであることを確認します。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
+|必要な可用性グループの構成に耐える十分なノードが WSFC に存在することを確認します。|クラスター ノードでは、可用性グループのレプリカを 1 つホストできます。 同じノードで、同じ可用性グループのレプリカを 2 つホストすることはできません。 クラスター ノードは複数の可用性グループに参加できます。その際、各グループからのレプリカは 1 つです。 <br /><br /> 予定している可用性グループの可用性レプリカをサポートするために必要なクラスター ノードの数については、データベース管理者にお問い合わせください。<br /><br /> [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
 
   
 > [!IMPORTANT]  
@@ -129,17 +129,17 @@ ms.locfileid: "87110265"
   
 ###  <a name="checklist-prerequisites-server-instance"></a><a name="PrerequisitesSI"></a> チェック リスト:前提条件 (サーバー インスタンス)  
   
-||前提条件|リンク|  
-|-|------------------|-----------|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|このホスト コンピューターは WSFC ノードである必要があります。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは、クラスターの別のノードに存在します。 別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができます。 SQL Server 2016 には分散型可用性グループが導入されています。 分散型可用性グループでは、2 つの可用性グループが別々のクラスターに存在します。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [分散型可用性グループ (Always On 可用性グループ)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループで Kerberos を操作するには:<br /><br /> 可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで、同じ SQL Server サービス アカウントを使用する必要があります。<br /><br /> ドメイン管理者は、可用性グループ リスナーの仮想ネットワーク名 (VNN) の SQL Server サービス アカウントに、Active Directory でサーバー プリンシパル名 (SPN) を手動で登録する必要があります。 SQL Server サービス アカウント以外のアカウントに SPN が登録されている場合は、認証が失敗します。<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> SQL Server サービス アカウントを変更した場合は、ドメイン管理者が SPN を手動で再登録する必要があります。|[Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡単な説明:**<br /><br /> Kerberos と SPN は相互認証を行います。 SPN は、SQL Server サービスを起動する Windows アカウントにマップされます。 SPN が正常に登録されていないか登録に失敗した場合、Windows セキュリティ レイヤーは、SPN に関連するアカウントを決定することができず、Kerberos 認証は使用できません。<br /><br /> <br /><br /> 注:NTLM には、この要件はありません。|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と要件](#FciArLimitations) (この記事の後半)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Always On 可用性グループに参加するために、各サーバー インスタンスで同じバージョンの SQL Server が実行されている必要がある。|[SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014)、[SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016)、[SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017) の各エディションとサポートされる機能|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|特定の可用性グループの可用性レプリカをホストするすべてのサーバー インスタンス間で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の照合順序を統一する必要があります。|[サーバーの照合順序の設定または変更](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を有効にします。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のサーバー インスタンスは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 環境がサポートする範囲内であれば、1 台のコンピューターでいくつでも有効にすることができます。|[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> WSFC を破棄してから再作成した場合は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効にしていた、元のクラスター上の各サーバー インスタンスについて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を無効にしてからもう一度有効にする必要があります。|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|すべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。 このエンドポイントは、サーバー インスタンス上のミラーリング監視サーバーとデータベース ミラーリング パートナー、および可用性レプリカすべてによって共有されます。<br /><br /> 可用性レプリカのホストとして選んだサーバー インスタンスがドメイン ユーザー アカウントで実行されていて、まだデータベース ミラーリング エンドポイントが存在しない場合、 [新しい可用性グループ ウィザード](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (または [可用性グループへのレプリカの追加ウィザード](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) でエンドポイントを作成し、サーバー インスタンス サービス アカウントに CONNECT 権限を許可することができます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。ウィザードは、サーバー インスタンス上でデータベース ミラーリング エンドポイントを作成できなくなります。 この場合は、データベース ミラーリング エンドポイントを手動で作成してからウィザードを起動することをお勧めします。<br /><br /> <br /><br /> <b>\*\* セキュリティに関する注意 \*\*</b>[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のトランスポート セキュリティは、データベース ミラーリングと同じです。|[データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|FILESTREAM を使用するデータベースを可用性グループに追加する場合は、その可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで FILESTREAM が有効になっていることを確認してください。|[FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|包含データベースを可用性グループに追加する場合は、その可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで **contained database authentication** サーバー オプションが **1** に設定されていることを確認してください。|[contained database authentication サーバー構成オプション](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [サーバー構成オプション &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
+|前提条件|リンク|  
+|------------------|-----------|  
+|このホスト コンピューターは WSFC ノードである必要があります。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは、クラスターの別のノードに存在します。 別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができます。 SQL Server 2016 には分散型可用性グループが導入されています。 分散型可用性グループでは、2 つの可用性グループが別々のクラスターに存在します。|[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [分散型可用性グループ (Always On 可用性グループ)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
+|可用性グループで Kerberos を操作するには:<br /><br /> 可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで、同じ SQL Server サービス アカウントを使用する必要があります。<br /><br /> ドメイン管理者は、可用性グループ リスナーの仮想ネットワーク名 (VNN) の SQL Server サービス アカウントに、Active Directory でサーバー プリンシパル名 (SPN) を手動で登録する必要があります。 SQL Server サービス アカウント以外のアカウントに SPN が登録されている場合は、認証が失敗します。<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> SQL Server サービス アカウントを変更した場合は、ドメイン管理者が SPN を手動で再登録する必要があります。|[Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **簡単な説明:**<br /><br /> Kerberos と SPN は相互認証を行います。 SPN は、SQL Server サービスを起動する Windows アカウントにマップされます。 SPN が正常に登録されていないか登録に失敗した場合、Windows セキュリティ レイヤーは、SPN に関連するアカウントを決定することができず、Kerberos 認証は使用できません。<br /><br /> <br /><br /> 注:NTLM には、この要件はありません。|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と要件](#FciArLimitations) (この記事の後半)|  
+|Always On 可用性グループに参加するために、各サーバー インスタンスで同じバージョンの SQL Server が実行されている必要がある。|[SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014)、[SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016)、[SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017) の各エディションとサポートされる機能|  
+|特定の可用性グループの可用性レプリカをホストするすべてのサーバー インスタンス間で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の照合順序を統一する必要があります。|[サーバーの照合順序の設定または変更](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
+|可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を有効にします。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のサーバー インスタンスは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 環境がサポートする範囲内であれば、1 台のコンピューターでいくつでも有効にすることができます。|[AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* 重要 \*\*</b> WSFC を破棄してから再作成した場合は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を有効にしていた、元のクラスター上の各サーバー インスタンスについて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能を無効にしてからもう一度有効にする必要があります。|  
+|すべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。 このエンドポイントは、サーバー インスタンス上のミラーリング監視サーバーとデータベース ミラーリング パートナー、および可用性レプリカすべてによって共有されます。<br /><br /> 可用性レプリカのホストとして選んだサーバー インスタンスがドメイン ユーザー アカウントで実行されていて、まだデータベース ミラーリング エンドポイントが存在しない場合、 [新しい可用性グループ ウィザード](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (または [可用性グループへのレプリカの追加ウィザード](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) でエンドポイントを作成し、サーバー インスタンス サービス アカウントに CONNECT 権限を許可することができます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがビルトイン アカウント (Local System、Local Service、Network Service など) で実行されている場合または非ドメイン アカウントで実行されている場合は、エンドポイント認証に証明書を使用する必要があります。ウィザードは、サーバー インスタンス上でデータベース ミラーリング エンドポイントを作成できなくなります。 この場合は、データベース ミラーリング エンドポイントを手動で作成してからウィザードを起動することをお勧めします。<br /><br /> <br /><br /> <b>\*\* セキュリティに関する注意 \*\*</b>[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のトランスポート セキュリティは、データベース ミラーリングと同じです。|[データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|FILESTREAM を使用するデータベースを可用性グループに追加する場合は、その可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで FILESTREAM が有効になっていることを確認してください。|[FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
+|包含データベースを可用性グループに追加する場合は、その可用性グループの可用性レプリカをホストするすべてのサーバー インスタンスで **contained database authentication** サーバー オプションが **1** に設定されていることを確認してください。|[contained database authentication サーバー構成オプション](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [サーバー構成オプション &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
 ###  <a name="thread-usage-by-availability-groups"></a><a name="ThreadUsage"></a> 可用性グループによるスレッドの使用  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] には、ワーカー スレッドに関する次の要件があります。  
@@ -223,9 +223,9 @@ ms.locfileid: "87110265"
   
 ###  <a name="checklist-prerequisites-fcis"></a><a name="PrerequisitesFCI"></a> チェック リスト:前提条件 (FCI)  
   
-||前提条件|Link|  
-|-|------------------|----------|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|標準の SQL Server フェールオーバー クラスター インスタンスのインストールと同様、各 SQL Server フェールオーバー クラスター インスタンス (FCI) が必要な共有ストレージを所有していることを確認してください。||  
+|前提条件|Link|  
+|------------------|----------|  
+|標準の SQL Server フェールオーバー クラスター インスタンスのインストールと同様、各 SQL Server フェールオーバー クラスター インスタンス (FCI) が必要な共有ストレージを所有していることを確認してください。||  
   
 ###  <a name="related-tasks-fcis"></a><a name="RelatedTasksFCIs"></a> 関連タスク (FCI)  
   
@@ -276,9 +276,9 @@ ms.locfileid: "87110265"
 ###  <a name="prerequisites-availability-groups"></a><a name="RequirementsAG"></a> 前提条件 (可用性グループ)  
  可用性グループの構成を作成したり再構成したりする場合は、次の要件を満たす必要があります。  
   
-||前提条件|説明|  
-|-|------------------|-----------------|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と制限](#FciArLimitations) (このトピックの前半)|  
+|前提条件|説明|  
+|------------------|-----------------|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と制限](#FciArLimitations) (このトピックの前半)|  
   
 ###  <a name="security-availability-groups"></a><a name="SecurityAG"></a> セキュリティ (可用性グループ)  
   
@@ -331,19 +331,19 @@ ms.locfileid: "87110265"
 ###  <a name="checklist-requirements-availability-databases"></a><a name="RequirementsDb"></a> チェック リスト:要件 (可用性データベース)  
  可用性グループに追加するデータベースは、次の条件を満たしている必要があります。  
   
-||必要条件|Link|  
-|-|------------------|----------|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|ユーザー データベースであること。 システム データベースを可用性グループに追加することはできません。||  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループの作成先となる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上に存在し、そのサーバー インスタンスからアクセスできること。||  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|読み取り/書き込み可能なデータベースであること。 読み取り専用データベースを可用性グループに追加することはできません。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**is_read_only** = 0)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|マルチユーザー データベースであること。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**user_access** = 0)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|AUTO_CLOSE が使用されていないこと。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**is_auto_close_on** = 0)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|完全復旧モデル (完全復旧モードとも呼ばれます) を使用すること。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**recovery_model** = 1)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|データベースの完全バックアップが少なくとも 1 つ存在すること。<br /><br /> 注:データベースを完全復旧モードに設定した後、完全復旧ログ チェーンを開始するには完全バックアップが必要です。|[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|既存の可用性グループに属していないこと。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**group_database_id** = NULL)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|データベース ミラーリング用に構成されていないこと。|[sys.database_mirroring](../../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) (データベースがミラー化の対象となっていない場合、"mirroring_" で始まるすべての列は NULL)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|FILESTREAM を使用するデータベースを可用性グループに追加する前に、その可用性グループの可用性レプリカをホストしている (またはこれからホストする) すべてのサーバー インスタンスで FILESTREAM が有効になっていることを確認してください。|[FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|包含データベースを可用性グループに追加する前に、その可用性グループの可用性レプリカをホストしている (またはこれからホストする) 各サーバー インスタンスで、 **contained database authentication** サーバー オプションが **1** に設定されていることを確認してください。|[contained database authentication サーバー構成オプション](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [サーバー構成オプション &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
+|必要条件|Link|  
+|------------------|----------|  
+|ユーザー データベースであること。 システム データベースを可用性グループに追加することはできません。||  
+|可用性グループの作成先となる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上に存在し、そのサーバー インスタンスからアクセスできること。||  
+|読み取り/書き込み可能なデータベースであること。 読み取り専用データベースを可用性グループに追加することはできません。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**is_read_only** = 0)|  
+|マルチユーザー データベースであること。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**user_access** = 0)|  
+|AUTO_CLOSE が使用されていないこと。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**is_auto_close_on** = 0)|  
+|完全復旧モデル (完全復旧モードとも呼ばれます) を使用すること。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**recovery_model** = 1)|  
+|データベースの完全バックアップが少なくとも 1 つ存在すること。<br /><br /> 注:データベースを完全復旧モードに設定した後、完全復旧ログ チェーンを開始するには完全バックアップが必要です。|[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
+|既存の可用性グループに属していないこと。|[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) (**group_database_id** = NULL)|  
+|データベース ミラーリング用に構成されていないこと。|[sys.database_mirroring](../../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) (データベースがミラー化の対象となっていない場合、"mirroring_" で始まるすべての列は NULL)|  
+|FILESTREAM を使用するデータベースを可用性グループに追加する前に、その可用性グループの可用性レプリカをホストしている (またはこれからホストする) すべてのサーバー インスタンスで FILESTREAM が有効になっていることを確認してください。|[FILESTREAM の有効化と構成](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
+|包含データベースを可用性グループに追加する前に、その可用性グループの可用性レプリカをホストしている (またはこれからホストする) 各サーバー インスタンスで、 **contained database authentication** サーバー オプションが **1** に設定されていることを確認してください。|[contained database authentication サーバー構成オプション](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [サーバー構成オプション &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、サポートされているすべてのデータベース互換性レベルで動作します。  

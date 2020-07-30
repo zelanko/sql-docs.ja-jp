@@ -20,15 +20,15 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d39fe1b573e038459853857496c651e9ad2af83b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2413e629e969fb0aa7dff93dc2959f1b7a007b10
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831474"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394016"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>query_context_settings (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   クエリに関連付けられたコンテキスト設定に影響するセマンティクスに関する情報を格納します。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリのセマンティクスに影響を与える (クエリの正しい結果を定義する) いくつかのコンテキスト設定が使用できます。 異なる設定でコンパイルされた同じクエリテキストでは、(基になるデータに応じて) 異なる結果が生成される場合があります。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82831474"
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|主キー この値は、Showplan XML for queries で公開されています。|  
 |**set_options**|**varbinary (8)**|いくつかの SET オプションの状態を反映するビットマスク。 詳細については、「 [sys. dm_exec_plan_attributes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)」を参照してください。|  
-|**language_id**|**smallint**|言語の id。 詳細については、「 [sys.syslanguages &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)」を参照してください。|  
+|**language_id**|**smallint**|言語の id。 詳細については、「 [sys.sys言語 &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)」を参照してください。|  
 |**date_format**|**smallint**|日付の形式。 詳しくは、「[SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)」をご覧ください。|  
 |**date_first**|**tinyint**|日付の最初の値。 詳しくは、「[SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)」をご覧ください。|  
 |**status**|**varbinary (2)**|クエリが実行されたクエリまたはコンテキストの種類を示すビットマスクフィールドです。 <br />列の値は、複数のフラグの組み合わせにすることができます (16 進数で表現)。<br /><br /> 0x0-通常のクエリ (特定のフラグなし)<br /><br /> 0x1-カーソル Api ストアドプロシージャのいずれかを使用して実行されたクエリ<br /><br /> 0x2-通知のクエリ<br /><br /> 0x4-内部クエリ<br /><br /> 0x8-汎用パラメーター化を使用しない自動パラメーター化クエリ<br /><br /> 0x10-カーソルフェッチ更新クエリ<br /><br /> 0x20-カーソル更新要求で使用されているクエリ<br /><br /> 0x40-カーソルを開いたときに最初の結果セットが返される (Cursor Auto Fetch)<br /><br /> 0x80-暗号化されたクエリ<br /><br /> 0x100-行レベルのセキュリティ述語のコンテキストでのクエリ|  
@@ -59,8 +59,8 @@ ms.locfileid: "82831474"
  [query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのクエリストア](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

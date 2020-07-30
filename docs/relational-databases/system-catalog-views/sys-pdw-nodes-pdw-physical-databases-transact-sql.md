@@ -12,17 +12,17 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64d74d28c4b99e75c114effdf651a58d01a614d6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399916"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394047"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>pdw_nodes_pdw_physical_databases (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  コンピューティングノードの物理データベースごとに1行のデータを格納します。 物理データベース情報を集計して、データベースに関する詳細情報を取得します。 情報を結合するには`sys.pdw_nodes_pdw_physical_databases` 、を`sys.pdw_database_mappings`テーブル`sys.databases`とテーブルに結合します。  
+  コンピューティングノードの物理データベースごとに1行のデータを格納します。 物理データベース情報を集計して、データベースに関する詳細情報を取得します。 情報を結合するには、を `sys.pdw_nodes_pdw_physical_databases` `sys.pdw_database_mappings` テーブルとテーブルに結合し `sys.databases` ます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 868acb8dec7ed8a6bd22f3cc5551dede63a50408
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e7465ee994a0e09cf62b80d3317948479354780b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757138"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242712"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 プロバイダーがコマンドを実行する方法を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|コマンドを非同期的に実行することを示します。<br /><br /> この値は、 [Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値**Adcmdtabledirect**と組み合わせることはできません。|  
 |**adAsyncFetch**|0x20|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティで指定された初期数量の後の残りの行を非同期に取得することを示します。|  
@@ -40,15 +40,21 @@ ms.locfileid: "82757138"
   
 |定数|  
 |--------------|  
-|AdoEnums を実行します。|  
-|AdoEnums (ASYNCFETCH)|  
-|AdoEnums を指定します。|  
-|AdoEnums NORECORDS|  
-|AdoEnums。指定されていません。|  
+|AdoEnums.ExecuteOption. ASYNCEXECUTE|  
+|AdoEnums.ExecuteOption. ASYNCFETCH|  
+|AdoEnums.ExecuteOption。 ASYNCFETCHNONBLOCKING ブロッキング|  
+|AdoEnums.ExecuteOption. NORECORDS|  
+|AdoEnums.ExecuteOption です。指定されていません。|  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)|[Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|  
-|[Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Requery メソッド](../../../ado/reference/ado-api/requery-method.md)|
+
+:::row:::
+    :::column:::
+        [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+        [Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+    :::column-end:::
+    :::column:::
+        [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Requery メソッド](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

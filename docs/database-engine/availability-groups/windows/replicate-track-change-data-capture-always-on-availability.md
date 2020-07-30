@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d09e76a26e0364857c70469ef1308f21e298727b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888049"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395047"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>レプリケーション、変更の追跡、変更データ キャプチャ - Always On 可用性グループ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -205,13 +205,12 @@ Always On 可用性グループに含まれるデータベースで変更デー�
 ### <a name="restrictions"></a>制限  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーションでサポートされている組み合わせは次のとおりです。  
   
-|||||  
+|レプリケーション|Publisher|ディストリビューター|サブスクライバー (Subscriber)|  
 |-|-|-|-|  
-||**発行元**|**ディストリビューター**|**サブスクライバー**|  
-|**トランザクション**|はい<br /><br /> 注:双方向の相互トランザクション レプリケーションのサポートは含まれません。|はい|はい| 
+|**トランザクション**|はい<br /><br /> 注:双方向の相互トランザクション レプリケーションのサポートは含まれません。|はい|○| 
 |**P2P**|いいえ|いいえ|いいえ|  
-|**[マージ]**|はい|いいえ|いいえ|  
-|**スナップショット**|はい|いいえ|はい|
+|**[マージ]**|○|いいえ|いいえ|  
+|**スナップショット**|○|いいえ|[はい]|
   
  **データベース ミラーリングでディストリビューター データベースを使用することはできません。  
   

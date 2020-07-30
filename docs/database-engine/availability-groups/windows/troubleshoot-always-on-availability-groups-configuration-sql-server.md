@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5e4972b2e6207a2ffcd33be6f0a95a848d8d8bdc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c8c06e55f1f376c93e1abcba8572e09665d5fb76
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882415"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363182"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Always On 可用性グループの構成のトラブルシューティング (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -132,14 +132,14 @@ ms.locfileid: "85882415"
 ##  <a name="read-only-routing-is-not-working-correctly"></a><a name="ROR"></a> 読み取り専用ルーティングが正常に動作しない  
  次の構成値の設定を確認し、必要に応じて修正します。  
   
-||対象|アクション|説明|Link|  
-|------|---------|------------|--------------|----------|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|現在のプライマリ レプリカ|可用性グループ リスナーがオンラインであることを確認します。|**リスナーがオンラインになっているかどうかを確認するには:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **オフラインのリスナーを再起動するには:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|現在のプライマリ レプリカ|READ_ONLY_ROUTING_LIST に、読み取り可能なセカンダリ レプリカをホストしているサーバー インスタンスだけが含まれていることを確認します。|**読み取り可能なセカンダリ レプリカを識別するには:** sys.availability_replicas  (**secondary_role_allow_connections_desc** 列)<br /><br /> **読み取り専用ルーティング リストを表示するには:** sys.availability_read_only_routing_lists<br /><br /> **読み取り専用ルーティング リストを変更するには:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL ポートが Windows ファイアウォールでブロックされていないことを確認します。|-|[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|read_only_routing_list にあるすべてのレプリカ|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで次のことを確認します:<br /><br /> SQL Server のリモート接続が有効になっている。<br /><br /> TCP/IP が有効になっている。<br /><br /> IP アドレスが正しく構成されている。|-|[サーバー プロパティの表示または変更 &#40;SQL Server&#41;](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) に正しい完全修飾ドメイン名 (FQDN) とポート番号が含まれていることを確認します。|-|[AlwaysOn の read_only_routing_url の計算](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|クライアント システム|クライアント ドライバーが読み取り専用のルーティングをサポートしていることを確認します。|-|[Always On クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
+|対象|アクション|説明|Link|  
+|---------|------------|--------------|----------|  
+|現在のプライマリ レプリカ|可用性グループ リスナーがオンラインであることを確認します。|**リスナーがオンラインになっているかどうかを確認するには:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **オフラインのリスナーを再起動するには:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|現在のプライマリ レプリカ|READ_ONLY_ROUTING_LIST に、読み取り可能なセカンダリ レプリカをホストしているサーバー インスタンスだけが含まれていることを確認します。|**読み取り可能なセカンダリ レプリカを識別するには:** sys.availability_replicas  (**secondary_role_allow_connections_desc** 列)<br /><br /> **読み取り専用ルーティング リストを表示するには:** sys.availability_read_only_routing_lists<br /><br /> **読み取り専用ルーティング リストを変更するには:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL ポートが Windows ファイアウォールでブロックされていないことを確認します。|-|[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
+|read_only_routing_list にあるすべてのレプリカ|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで次のことを確認します:<br /><br /> SQL Server のリモート接続が有効になっている。<br /><br /> TCP/IP が有効になっている。<br /><br /> IP アドレスが正しく構成されている。|-|[サーバー プロパティの表示または変更 &#40;SQL Server&#41;](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
+|read_only_routing_list にあるすべてのレプリカ|READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) に正しい完全修飾ドメイン名 (FQDN) とポート番号が含まれていることを確認します。|-|[AlwaysOn の read_only_routing_url の計算](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|クライアント システム|クライアント ドライバーが読み取り専用のルーティングをサポートしていることを確認します。|-|[Always On クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3970ab8d8f446c4269e4b79c306d2dd9d2cf0426
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38a44aeac4a2238e7d0087ec458df9f77086aa0c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762331"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242632"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale プロパティ (ADO)
 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)または[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの数値の小数点以下桁数を示します。  
@@ -37,11 +37,16 @@ ms.locfileid: "82762331"
  **フィールド**オブジェクトの場合、 **numericscale**は通常読み取り専用です。 ただし、[レコード](../../../ado/reference/ado-api/record-object-ado.md)の[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに追加された新しい**フィールド**オブジェクトの場合は、**フィールド**の[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティが指定され、データプロバイダーが[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションの[Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出して新しい**フィールド**を正常に追加した後にのみ、 **numericscale**が読み取り/書き込みになります。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [NumericScale および Precision プロパティの例 (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale および Precision プロパティの例 (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   

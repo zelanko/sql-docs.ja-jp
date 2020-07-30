@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88754f7dbd0064c765314d88b0fcc0d06f05bbb2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c109ea1c44fc44a4cdbb585e2c612ebf8c9b2909
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763403"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242608"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)が入力パラメーター、出力パラメーター、入力パラメーターと出力パラメーターの両方、またはストアドプロシージャからの戻り値を表すかどうかを指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|既定値。 パラメーターが入力パラメーターを表すことを示します。|  
 |**adParamInputOutput**|3|パラメーターが入力パラメーターと出力パラメーターの両方を表すことを示します。|  
@@ -45,7 +45,12 @@ ms.locfileid: "82763403"
 |AdoEnums. ParameterDirection. 不明|  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|[Direction プロパティ](../../../ado/reference/ado-api/direction-property.md)|
+
+:::row:::
+    :::column:::
+        [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Direction プロパティ](../../../ado/reference/ado-api/direction-property.md)  
+    :::column-end:::
+:::row-end:::

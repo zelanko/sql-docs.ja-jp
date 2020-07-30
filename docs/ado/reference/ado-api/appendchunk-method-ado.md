@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9e3d58ae93285accc9cf7a71e43579be4f54b21d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762941"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242462"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk メソッド (ADO)
 大きなテキストまたはバイナリデータ[フィールド](../../../ado/reference/ado-api/field-object.md)、または[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトにデータを追加します。  
@@ -59,11 +59,16 @@ object.AppendChunk Data
  **パラメーター**オブジェクトの最初の**appendchunk**呼び出しは、データをパラメーターに書き込み、既存のデータを上書きします。 **パラメーター**オブジェクトに対する後続の**appendchunk**呼び出しは、既存のパラメーターデータにを追加します。 Null 値を渡す**Appendchunk**呼び出しは、すべてのパラメーターデータを破棄します。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [AppendChunk および GetChunk メソッドの例 (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk および GetChunk メソッドの例 (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   

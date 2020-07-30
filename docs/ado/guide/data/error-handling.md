@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa18c5d93617963afa1cf8d472651d03db6ed493
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c42645873b78a3ac398af7f3a2f41ff086dd9b3d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761018"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242472"
 ---
-# <a name="error-handling"></a>エラー処理
+# <a name="error-handling-in-ado"></a>ADO でのエラー処理
 ADO では、いくつかの異なるメソッドを使用して、発生したエラーをアプリケーションに通知します。 このセクションでは、ADO を使用しているときに発生する可能性があるエラーの種類と、アプリケーションに通知する方法について説明します。 最後に、これらのエラーを処理する方法についての提案を行います。  
   
 ## <a name="how-does-ado-report-errors"></a>ADO はどのようにエラーを報告しますか。  

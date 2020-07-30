@@ -13,26 +13,26 @@ ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3dc052e9b950cfb10cf9265132e880dc91a39e8e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 396a13fc410426059d34a5a13159127c060d64d0
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721608"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362713"
 ---
 # <a name="mssql_eng021797"></a>MSSQL_ENG021797
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>メッセージの詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|21797|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |シンボル名||  
-|メッセージ テキスト|'%s' は次の形式の有効な Windows ログインにしてください: 'MACHINE\Login' または 'DOMAIN\Login'。 '%s' については、マニュアルを参照してください。|  
+|メッセージ テキスト|'%s' には 'MACHINE\Login' または 'DOMAIN\Login' の形式で有効な Windows ログインを指定してください。 '%s' については、マニュアルを参照してください。|  
   
 ## <a name="explanation"></a>説明  
  このエラーは、`@job_login` パラメーターに指定された値が NULL または無効の場合に、以下のレプリケーション ストアド プロシージャにより発生します。 このエラーは、 **db_owner** 固定データベース ロールのメンバーが、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのスクリプトを実行すると発生する場合があります。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではセキュリティ モデルが変更されたため、これらのスクリプトは更新する必要があります。  

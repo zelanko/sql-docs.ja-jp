@@ -12,15 +12,15 @@ ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d45995610f706bb978c9902623821199fc4a3c63
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 220661cd5573d6160f69130760ef3046c986ae1e
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627029"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394861"
 ---
 # <a name="sysdm_pdw_query_stats_xe-transact-sql"></a>dm_pdw_query_stats_xe (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   この DMV は非推奨とされており、今後のリリースでは削除される予定です。 このリリースでは、0行が返されます。  
   
@@ -34,8 +34,8 @@ ms.locfileid: "84627029"
 |読み取り|**int**|イベントの開始以降の論理読み取りの数。||  
 |書き込み|**int**|イベントの開始以降の論理書き込みの数。||  
 |sql_text|**nvarchar (4000)**|||  
-|client_app_name|**nvarchar(255)**|||  
-|tsql_stack|**nvarchar(255)**|||  
+|client_app_name|**nvarchar (255)**|||  
+|tsql_stack|**nvarchar (255)**|||  
 |pdw_node_id|**int**|この Xevent インスタンスが実行されているノード。|  
   
 ## <a name="see-also"></a>参照  

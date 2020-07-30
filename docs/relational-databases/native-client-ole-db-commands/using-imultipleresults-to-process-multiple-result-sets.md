@@ -16,13 +16,14 @@ ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 513e7846ace058a3d0013351b9d21157401ff463
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a9ad3e29da828e22a656b151659062149a65bf42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002781"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242275"
 ---
-# <a name="using-imultipleresults-to-process-multiple-result-sets"></a>IMultipleResults を使用した複数の結果セットの処理
+# <a name="using-imultipleresults-to-process-multiple-result-sets-in-sql-server-native-client"></a>IMultipleResults を使用して SQL Server Native Client で複数の結果セットを処理する
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   コンシューマーは、 **IMultipleResults**インターフェイスを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコマンド実行によって返される結果を処理します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーが実行するコマンドを送信すると、は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントを実行し、結果を返します。  
