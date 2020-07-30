@@ -17,13 +17,14 @@ ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf5497fbddb255a9964d97094838dd3a7ece583e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e22fcf286b0f1d336eebdbc5726af7b2c9f15ff0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009855"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246738"
 ---
-# <a name="using-encryption-without-validation"></a>検証を伴わない暗号化の使用
+# <a name="using-encryption-without-validation-in-sql-server-native-client"></a>SQL Server Native Client での検証を伴わない暗号化の使用
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、常に、ログインに関連するネットワーク パケットを暗号化します。 サーバーの起動時に証明書がサーバーに提供されないと、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はログイン パケットの暗号化に使用される自己署名入りの証明書を生成します。  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f233104501a17f384eb837d5e7390705a44ddc4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e0b69deb64cc4ea04c007fd3d3328cb4154cc3e8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762301"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242619"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 オブジェクトが開いているか閉じられているか、データソースに接続しているか、コマンドを実行しているか、データを取得しているかを指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|オブジェクトが閉じていることを示します。|  
 |**adStateOpen**|1|オブジェクトが開いていることを示します。|  
@@ -41,11 +41,20 @@ ms.locfileid: "82762301"
 |AdoEnums を終了しました。|  
 |AdoEnums を開きます。|  
 |AdoEnums。接続しています。|  
-|AdoEnums を実行しています。|  
+|AdoEnums.ObjectState.EXE|  
 |AdoEnums を取得します。|  
   
 ## <a name="applies-to"></a>適用対象  
   
 |||  
 |-|-|  
-|[State プロパティ (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)|[State プロパティ (ADO)](../../../ado/reference/ado-api/state-property-ado.md)|
+|||
+
+:::row:::
+    :::column:::
+        [State プロパティ (ADO)](../../../ado/reference/ado-api/state-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [State プロパティ (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
+    :::column-end:::
+:::row-end:::

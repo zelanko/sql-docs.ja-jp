@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e155e9c6f0e8a85eaf7ec905f9c9b471160a9ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2706faaf181e609df6209758e60b2a46c87aa46
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885907"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248642"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 統合のコード アクセス セキュリティ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "85885907"
 ## <a name="accessing-external-resources"></a>外部リソースへのアクセス  
  ユーザー定義型 (UDT)、ストアドプロシージャ、またはその他の種類のコンストラクトアセンブリが**安全**なアクセス許可セットに登録されている場合、そのコンストラクトで実行されるマネージコードは外部リソースにアクセスできません。 ただし、 **EXTERNAL_ACCESS**または**UNSAFE**アクセス許可セットが指定され、マネージコードが外部リソースにアクセスしようとすると、に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よって次の規則が適用されます。  
   
-|状況|Then|  
+|状況|THEN|  
 |--------|----------|  
 |実行コンテキストが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに対応している場合。|外部リソースへのアクセスが拒否され、セキュリティ例外が発生します。|  
 |実行コンテキストが Windows ログインに対応していると同時に、本来の呼び出し元である場合。|外部リソースへのアクセスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストで行われます。|  
@@ -104,14 +104,13 @@ ms.locfileid: "85885907"
 ## <a name="permission-set-summary"></a>権限セットの概要  
  次の表は、 **SAFE**、 **EXTERNAL_ACCESS**、および**UNSAFE**アクセス許可セットに付与される制限とアクセス許可をまとめたものです。  
   
-|||||  
+|機能|**SAFE**|**EXTERNAL_ACCESS**|**起こす**|   
 |-|-|-|-|  
-||**SAFE**|**EXTERNAL_ACCESS**|**起こす**|  
-|**コードアクセスセキュリティのアクセス許可**|実行のみ|実行および外部リソースへのアクセス|無制限 (P/Invoke を含む)|  
-|**プログラミング モデルの制限事項**|[はい]|はい|制限事項なし|  
-|**検証可能性の要件**|[はい]|はい|いいえ|  
-|**ローカルデータアクセス**|[はい]|はい|はい|  
-|**ネイティブ コードを呼び出す機能**|いいえ|いいえ|はい|  
+|コードアクセスセキュリティのアクセス許可|実行のみ|実行および外部リソースへのアクセス|無制限 (P/Invoke を含む)|  
+|プログラミング モデルの制限事項|○|はい|制限事項なし|  
+|検証可能性の要件|○|はい|いいえ|  
+|ローカルデータアクセス|○|○|はい|  
+|ネイティブ コードを呼び出す機能|いいえ|いいえ|はい|  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

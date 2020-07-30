@@ -11,13 +11,14 @@ ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20e8e7b5211408f7d8989f1265115ed18ddd4cac
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61136e639b154492e883f145cde8c235551cecb0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011170"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247822"
 ---
-# <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>IBCPSession を使用した FILESTREAM 列のファイルへの読み取り (OLE DB)
+# <a name="read-a-filestream-column-to-file-using-ibcpsession-in-sql-server-native-client-ole-db"></a>SQL Server Native Client の IBCPSession を使用してファイルへの FILESTREAM 列を読み取ります (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルでは、IBCPSession インターフェイスを使用して filestream 列をファイルに読み取り、フォーマット ファイルを作成します。  

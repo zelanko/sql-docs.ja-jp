@@ -1,5 +1,5 @@
 ---
-title: 出力パラメーターの BLOB のストリーミング サポート | Microsoft Docs
+title: BLOB 出力パラメーターのストリーミングサポート (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29b96935cae07db3da6f65ef35da57a61c24ef84
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0e14ca101644c49630d837e6d31646ae792a3111
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002859"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332165"
 ---
-# <a name="streaming-support-for-blob-output-parameters"></a>BLOB 出力パラメーターのストリーミング サポート
+# <a name="streaming-support-for-blob-output-parameters-in-sql-server-native-client"></a>SQL Server Native Client での BLOB 出力パラメーターのストリーミングサポート
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、BLOB 出力パラメーターのストリーミング サポートを示すサンプルを紹介します。このストリーミング サポートでは、BLOB 出力パラメーターを ISequentialStreams としてバインドします。  

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPExec (OLE DB) | Microsoft Docs
+title: 'IBCPSession:: BCPExec (Native Client OLE DB provider) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0ee6699908f1a194ff10e51c6df07121de6b7c2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ab4bcd943b88585b34f8e2c78e414b73a65b0e72
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998175"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247775"
 ---
-# <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
+# <a name="ibcpsessionbcpexec-native-client-ole-db-provider"></a>IBCPSession:: BCPExec (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   一括コピー操作を実行します。  
@@ -35,7 +36,7 @@ HRESULT BCPExec(
       DBROWCOUNT *pRowsCopied);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **BCPExec** メソッドでは、[IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドで使用されている *eDirection* パラメーターの値に従って、データをユーザー ファイルからデータベース テーブルに、またはデータベース テーブルからユーザー ファイルにコピーします。  
   
  **BCPExec** を呼び出す前に、有効なユーザー ファイル名を指定して **BCPInit** メソッドを呼び出します。 この操作を行わないと、エラーが発生します。 唯一の例外は、一括コピーの出力操作にクエリを使用する場合です。 この場合は、**BCPInit** メソッドでテーブル名に NULL を指定してから、BCP_OPTION_HINTS オプションを使用してクエリを指定します。  

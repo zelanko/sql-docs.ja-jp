@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs
+title: 'IBCPSession:: BCPReadFmt (Native Client OLE DB provider) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e21d4361ff07829d74db04af5b95e13e7631d3a2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fda3b39b227b959c28268d47ced774821ad7041b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008465"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247741"
 ---
-# <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
+# <a name="ibcpsessionbcpreadfmt-native-client-ole-db-provider"></a>IBCPSession:: BCPReadFmt (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   フォーマット ファイルから列ごとにフォーマット情報を読み取ります。  
@@ -35,7 +36,7 @@ HRESULT BCPReadFmt(
       const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **BCPReadFmt** メソッドは、データ ファイルのデータ形式を指定するフォーマット ファイルからデータを読み取る場合に使用されます。 このメソッドでは、適切なバージョンのフォーマット ファイルを検出することができます。 また、フォーマット ファイルが xml 形式か、または古いスタイルのテキスト形式かを自動的に検出し、フォーマット ファイルに適した動作をします。 Native Client OLE DB プロバイダー BCP でサポートされているフォーマットファイルのバージョン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、6.0 以降です。  
   
  **BCPReadFmt** メソッドは形式の値を読み取ると、適宜、[IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) メソッドを呼び出します。 ユーザーがフォーマット ファイルを解析し、これらのメソッドを呼び出す必要はありません。  

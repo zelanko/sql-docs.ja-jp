@@ -1,5 +1,5 @@
 ---
-title: FAST_FORWARD カーソルの取得 | Microsoft Docs
+title: FAST_FORWARD カーソルを取得する (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd52acb22e4ce5304e0a1598b44fc562607b48b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3864444202d96ae5e2bd8a1e80eaac6cc26d8535
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006480"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244031"
 ---
-# <a name="obtain-a-fast_forward-cursor"></a>FAST_FORWARD カーソルの取得
+# <a name="obtain-a-fast_forward-cursor-native-client-ole-db-provider"></a>FAST_FORWARD カーソルを取得する (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   読み取り専用の順方向専用カーソルを取得するには、行セット プロパティ DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT、および DBPROP_OWNUPDATEDELETE を VARIANT_TRUE に設定します。  
@@ -42,7 +43,7 @@ ms.locfileid: "86006480"
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L "(local)" から L "(local) \\ \ name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

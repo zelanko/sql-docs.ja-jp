@@ -1,5 +1,5 @@
 ---
-title: IRow による 1 行のフェッチ | Microsoft Docs
+title: IRow を使用して単一の行をフェッチする (Native Client OLE DB provider) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d055ddc7a5f9d7b55827e30cf42fc68a7af3ff9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 453bc37d3cbe763cfa379339de01d523fa63307b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998480"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247615"
 ---
-# <a name="fetching-a-single-row-with-irow"></a>IRow による 1 行のフェッチ
+# <a name="fetching-a-single-row-with-irow-native-client-ole-db-provider"></a>IRow (Native Client OLE DB Provider) を使用した単一行のフェッチ
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Native Client OLE DB プロバイダーでの**IRow**インターフェイスの実装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、パフォーマンスを向上させるために簡略化されています。 **IRow** では、1 つの行オブジェクトの列に直接アクセスできます。 コマンドの実行結果が正確に 1 行になることが事前にわかっている場合、**IRow** でその行の列を取得できます。 結果セットが複数の行で構成される場合は、**IRow** では先頭の行だけが公開されます。  

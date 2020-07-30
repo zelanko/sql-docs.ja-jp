@@ -1,5 +1,6 @@
 ---
 title: srv_getbindtoken (拡張ストアド プロシージャ API) | Microsoft Docs
+description: Srv_getbindtoken が、拡張ストアドプロシージャを呼び出す現在のクライアントセッションでトランザクションのバインドトークンを取得する方法について説明します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 254bec49759ceff269f112d65156042271471b81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60e552bda81690d6c7a2dcc387389030bd929584
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756766"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248460"
 ---
 # <a name="srv_getbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ bindtoken
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ### <a name="to-bind-an-extended-stored-procedure-session-to-the-client-session-that-called-it-so-they-share-the-same-transaction-lock-space"></a>同じトランザクション ロック領域を共有するために、拡張ストアド プロシージャのセッションを呼び出し元のクライアント セッションにバインドするには  
   
@@ -75,7 +76,7 @@ bindtoken
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)  
   

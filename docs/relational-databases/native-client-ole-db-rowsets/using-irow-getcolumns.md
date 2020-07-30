@@ -18,13 +18,14 @@ ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 092c573e808aefc0f35f04e73b54e150a62bebac
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8984b5d883229dfed1219463adcb0b02292d036b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013077"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246820"
 ---
-# <a name="using-irowgetcolumns"></a>IRow::GetColumns の使用
+# <a name="using-irowgetcolumns-in-sql-server-native-client"></a>SQL Server Native Client での IRow:: GetColumns の使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRow** の実装では、列に対して順方向専用の順次アクセスを実行できます。 **IRow::GetColumns** を 1 回だけ呼び出して、行内のすべての列にアクセスすることができます。また、行内の複数の列にアクセスするたびに、毎回 **IRow::GetColumns** を呼び出すこともできます。  

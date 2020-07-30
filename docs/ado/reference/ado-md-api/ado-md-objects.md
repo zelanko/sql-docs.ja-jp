@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3e655647e7f485a27764280faba1adac091f0b7b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765253"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242552"
 ---
 # <a name="ado-md-objects"></a>ADO MD オブジェクト
 
-|||  
+|Object|説明|  
 |-|-|  
 |[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|1つ以上のディメンションの選択されたメンバーを含むセルセットの位置指定軸またはフィルター軸を表します。|  
-|[Catalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|多次元データプロバイダー (.MDP) に固有の多次元スキーマ情報 (つまり、キューブおよび基になるディメンション、階層、レベル、およびメンバー) が含まれています。|  
+|[カタログ](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|多次元データプロバイダー (.MDP) に固有の多次元スキーマ情報 (つまり、キューブおよび基になるディメンション、階層、レベル、およびメンバー) が含まれています。|  
 |[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|セルセットに含まれる軸の座標の交差部分にあるデータを表します。|  
 |[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|多次元クエリの結果を表します。 これは、キューブまたは他のセルセットから選択されたセルのコレクションです。|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|多次元スキーマから、関連するディメンションのセットを含むキューブを表します。|  
-|[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|メンバーの1つ以上の階層を含む多次元キューブのディメンションの1つを表します。|  
+|[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|メンバーの1つ以上の階層を含む多次元キューブのディメンションの1つを表します。|  
 |[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|ディメンションのメンバーを集計または "ロールアップ" できる1つの方法を表します。 ディメンションは、1つまたは複数の階層に沿って集計できます。|  
 |[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|にはメンバーのセットが含まれており、各メンバーは階層内で同じランクを持ちます。|  
 |[Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)|キューブ内のレベルのメンバー、レベルのメンバーの子、またはセルセットの軸に沿った位置のメンバーを表します。|  

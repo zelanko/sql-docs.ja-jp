@@ -1,5 +1,6 @@
 ---
 title: srv_convert (拡張ストアド プロシージャ API) | Microsoft Docs
+description: 拡張ストアドプロシージャ API を srv_convert して、データをあるデータ型から別のデータ型に変更する方法について説明します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60acbb6044842c097aa222b7a831addac7cf11d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3148ecd51a44bf6c0c9f03546d3bf750c1df1c0
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678703"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332371"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +79,7 @@ destlen
  *desttype*  
  変換先のデータ型を指定します。 このパラメーターには、拡張ストアド プロシージャ API の任意のデータ型を使用できます。  
   
- *dest*  
+ *先*  
  変換したデータを受け取る出力先変数を指すポインターです。 このポインターが NULL である場合、ユーザーが指定したエラー ハンドラーがあれば **srv_convert** はそのエラー ハンドラーを呼び出し、-1 を返します。  
   
  *desttype* が SRVDECIMAL または SRVNUMERIC である場合、*dest* パラメーターは DBNUMERIC 構造体または DBDECIMAL 構造体を指すポインターである必要があります。その際、構造体の有効桁数と小数点以下桁数のフィールドには、必要な値を設定しておきます。 既定の有効桁数を指定するには DEFAULTPRECISION を、既定の小数点以下桁数を指定するには DEFAULTSCALE を使用できます。  
@@ -89,7 +90,7 @@ destlen
 ## <a name="returns"></a>戻り値  
  データ型の変換が成功した場合は、変換後のデータの長さをバイト数で返します。 **srv_convert** がサポートしていないデータ型への変換要求を受けた場合は、開発者の定義したエラー ハンドラーがあればそれを呼び出し、グローバル エラー番号を設定して -1 を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **srv_willconvert** 関数は、特定の変換が可能かどうかを判断する関数です。  
   
  概数データ型 SRVFLT4 または SRVFLT8 への変換では、有効桁数の一部が失われることがあります。 概数データ型 SRVFLT4 または SRVFLT8 から SRVCHAR または SRVTEXT への変換でも有効桁数の一部が失われることがあります。  
@@ -113,7 +114,7 @@ destlen
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [srv_setutype &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_willconvert &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   

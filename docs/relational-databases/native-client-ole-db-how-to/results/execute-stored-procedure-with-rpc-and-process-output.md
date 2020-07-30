@@ -14,13 +14,14 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bdf96d5f352f4b35f45112e86e16fa09a28a90a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dd73e4da91d94a920ca8463e1d8df905be343c6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006445"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247015"
 ---
-# <a name="execute-stored-procedure-with-rpc-and-process-output"></a>RPC と処理の出力でのストアド プロシージャの実行
+# <a name="execute-sql-server-native-client-stored-procedure-with-rpc-and-process-output"></a>RPC とプロセスの出力を使用して SQL Server Native Client ストアドプロシージャを実行する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドが複数の結果を返す場合は、**IMultipleResults::GetResult** が DB_S_NORESULT を返すとき、または **IMultipleResults** インターフェイスが完全に解放されるとき、いずれか早いほうの時点で、出力パラメーター データを使用できるようになります。  

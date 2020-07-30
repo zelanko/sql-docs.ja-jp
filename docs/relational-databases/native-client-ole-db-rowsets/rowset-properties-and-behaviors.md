@@ -1,5 +1,5 @@
 ---
-title: 行セットのプロパティと動作 | Microsoft Docs
+title: 行セットのプロパティと動作 (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d66aa7280bb2ce7f92211054713469626b4f6a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15f9884944eb5d0298e5536fa5b2f43f3aa46c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013135"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246851"
 ---
-# <a name="rowset-properties-and-behaviors"></a>行セットのプロパティと動作
+# <a name="rowset-properties-and-behaviors-native-client-ole-db-provider"></a>行セットのプロパティと動作 (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーの行セットプロパティを次に示します。  
@@ -78,7 +79,7 @@ ms.locfileid: "86013135"
 |DBPROP_REPORTMULTIPLECHANGES|この行セットプロパティは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_RETURNPENDINGINSERTS|R/W: 読み取り専用<br /><br /> 既定値はVARIANT_FALSE<br /><br /> 説明: 行をフェッチするメソッドが呼び出されると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、保留中の挿入行を返しません。|  
 |DBPROP_ROWRESTRICT|R/W: 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの行セットは、行に基づくアクセス権をサポートしていません。 行セットで **IRowsetChange** インターフェイスが公開されている場合、**SetData** メソッドをコンシューマーから呼び出すことができます。|  
-|DBPROP_ROWSET_ASYNCH|R/W:読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明 : 行セットの非同期処理を提供します。 このプロパティは、Rowset プロパティ グループおよび DBPROPSET_ROWSET プロパティ セットに含まれています。 型は VT_14 です。<br /><br /> Native Client でサポートされているビットマスクの唯一の値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は**DBPROPVAL_ASYNCH_INITIALIZE**です。|  
+|DBPROP_ROWSET_ASYNCH|R/W:読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明: 非同期の行セット処理を提供します。 このプロパティは、Rowset プロパティ グループおよび DBPROPSET_ROWSET プロパティ セットに含まれています。 型は VT_14 です。<br /><br /> Native Client でサポートされているビットマスクの唯一の値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は**DBPROPVAL_ASYNCH_INITIALIZE**です。|  
 |DBPROP_ROWTHREADMODEL|R/W: 読み取り専用<br /><br /> 既定値 : DBPROPVAL_RT_FREETHREAD <br /><br /> 説明: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、1つのコンシューマーの複数の実行スレッドからオブジェクトへのアクセスをサポートします。|  
 |DBPROP_SERVERCURSOR|R/W:読み取り/書き込み<br /><br /> 既定値はVARIANT_FALSE<br /><br /> 説明 : このプロパティを設定すると、行セットのサポートに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルが使われます。 詳細については、「[行セットと SQL Server カーソル](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)」を参照してください。|  
 |DBPROP_SERVERDATAONINSERT|R/W:読み取り/書き込み<br /><br /> 既定値はVARIANT_FALSE<br /><br /> 説明 : 挿入時にサーバー データを使用するかどうか。<br /><br /> VARIANT_TRUE: 挿入要求がサーバーに転送される時点で、プロバイダーがデータをサーバーから取得して、ローカルの行キャッシュを更新します。<br /><br /> VARIANT_FALSE: プロバイダーは新しく行を挿入するためにサーバーの値を取得しません。|  

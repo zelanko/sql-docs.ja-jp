@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46718126ede409caa749b3a49dfaaffe118afc77
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7bfa47120814058adbc5c2e5f3650a79b2202afb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761830"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243183"
 ---
 # <a name="type-property-ado"></a>Type プロパティ (ADO)
 [パラメーター](../../../ado/reference/ado-api/parameter-object.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトの操作の種類またはデータ型を示します。  
@@ -35,11 +35,19 @@ ms.locfileid: "82761830"
  他のすべてのオブジェクトについては、 **Type**プロパティは読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-||||  
-|-|-|-|  
-|[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|[Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [Type プロパティの例 (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Type プロパティの例 (プロパティ) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   

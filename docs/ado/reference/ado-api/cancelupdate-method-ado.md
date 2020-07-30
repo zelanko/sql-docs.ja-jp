@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d62837bd06798fd8ce7b51b0345cf5e5a6463e4b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ecc08dde974826846058d4d8927df202367d28d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763163"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242409"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate メソッド (ADO)
 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出す前に、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの現在または新しい行、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに対して行われたすべての変更をキャンセルします。  
@@ -45,11 +45,16 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
  **CancelUpdate**メソッドでは、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの保留中の挿入または削除がキャンセルされ、既存のフィールドの保留中の更新が取り消され、元の値に復元されます。 **Fields**コレクション内のすべてのフィールドの[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)プロパティは、 **adFieldOK**に設定されています。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [Update および CancelUpdate メソッドの例 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update および CancelUpdate メソッドの例 (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

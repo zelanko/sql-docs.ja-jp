@@ -1,5 +1,5 @@
 ---
-title: OLE DB の使用法に関するトピック | Microsoft Docs
+title: 操作方法に関するトピック (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 539ad29e5dd3be3ebc5bce165e7480cd2217bf5a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 12c76eaf2a48fcea81ecaf348e8907daecbeee08
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006475"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244022"
 ---
-# <a name="ole-db-how-to-topics"></a>OLE DB の使用法に関するトピック
+# <a name="ole-db-how-to-topics-native-client-ole-db-provider"></a>OLE DB 操作方法に関するトピック (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Native Client OLE DB プロバイダーを使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーへの接続を作成し、コマンドを実行して結果を処理する方法を理解する必要があります。  

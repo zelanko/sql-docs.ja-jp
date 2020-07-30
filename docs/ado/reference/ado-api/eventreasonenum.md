@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28d923476d8abff4dfa283e58eb6394bdb3b9593
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94b36cbab5ffe7c22f4d1941e61af8fabc8b9973
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755187"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242732"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 イベントの発生原因となった理由を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|操作によって新しいレコードが追加されました。|  
 |**adRsnClose**|9|操作が**レコードセット**を閉じました。|  
@@ -65,8 +65,14 @@ ms.locfileid: "82755187"
 |AdoEnums を更新します。|  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[WillChangeRecord および RecordChangeComplete イベント (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|[WillChangeRecordset および RecordsetChangeComplete イベント (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|  
-|[WillMove および MoveComplete イベント (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)||
+
+:::row:::
+    :::column:::
+        [WillChangeRecord および RecordChangeComplete イベント (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+
+        [WillChangeRecordset および RecordsetChangeComplete イベント (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+    :::column-end:::
+    :::column:::
+        [WillMove および MoveComplete イベント (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+    :::column-end:::
+:::row-end:::

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727638"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246397"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 統合のアーキテクチャ - CLR ホスト環境
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -154,9 +154,8 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>セキュリティ : 権限セット  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースに配置されるコードの信頼性とセキュリティに関する要件をユーザーが指定できます。 アセンブリがデータベースにアップロードされると、アセンブリの作成者は、そのアセンブリに対して SAFE、EXTERNAL_ACCESS、UNSAFE の3つのアクセス許可セットのいずれかを指定できます。  
   
-|||||  
+|機能|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|権限セット|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |コード アクセス セキュリティ|実行のみ|実行および外部リソースへのアクセス|無制限|  
 |プログラミング モデルの制限事項|はい|はい|制限事項なし|  
 |検証可能性の要件|はい|はい|いいえ|  
@@ -177,7 +176,7 @@ Thread.EndThreadAffinity();
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 **Sharedstate**、 **Synchronization**、 **externalprocessmgmt**の各ホスト保護属性で注釈が付けられた .NET Framework api の呼び出しも許可されません。 これにより、SAFE アセンブリと EXTERNAL_ACCESS アセンブリで、状態の共有、同期の実行、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性のあるすべての API が呼び出されなくなります。 詳細については、「 [CLR 統合プログラミングモデルの制限](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: srv_rpcname (拡張ストアド プロシージャ API) | Microsoft Docs
+description: 拡張ストアドプロシージャ API の srv_rpcname が、現在のリモートストアドプロシージャのプロシージャ名コンポーネントを返す方法について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 999f949466efe5ed39fe20534f99138d5013f588
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 99e901a9ae1a14644d522b23747f1d242f8c95d3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755919"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248293"
 ---
 # <a name="srv_rpcname-extended-stored-procedure-api"></a>srv_rpcname (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ len
 ## <a name="returns"></a>戻り値  
  現在のリモート ストアド プロシージャのリモート ストアド プロシージャ名部分に対応した NULL 終端文字列を指す DBCHAR ポインターを返します。 現在のリモート ストアド プロシージャがない場合は、NULL が返され、*len* が -1 に設定されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、リモート ストアド プロシージャの名前のみを返します。 所有者、データベース名、およびリモート ストアド プロシージャ番号に対応する省略可能な指定子は含まれません。  
   
  リモート ストアド プロシージャがなくても **srv_rpcname** を呼び出すことは有効であるため (情報エラーは発生しない)、この関数にはリモート ストアド プロシージャが存在するかどうかを判断する手段が用意されています。  

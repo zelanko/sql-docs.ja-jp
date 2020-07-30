@@ -1,5 +1,6 @@
 ---
 title: srv_sendrow (拡張ストアド プロシージャ API) | Microsoft Docs
+description: 拡張ストアドプロシージャ API での srv_sendrow について説明します。 srv_sendrow は、データの行をクライアントに送信します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0209cfb01c0fa76fdf66dfe806f9d528489cfb79
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1cbe5886d19ca1da9bdc2bdea09ce86d142b44d9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755836"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248217"
 ---
 # <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ srvproc
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **srv_sendrow** 関数は、クライアントに送信される各行につき 1 回呼び出されます。 **srv_sendmsg**、**srv_status**、または **srv_senddone** を使用してメッセージ、状態値、または完了状態を送信する前に、すべての行をクライアントに送信しておく必要があります。  
   
  **srv_describe** によってすべての列を定義していない行を送信すると、拡張ストアド プロシージャ API アプリケーションで情報エラー メッセージが生成され、クライアントに FAIL が返されます。 この場合、その行は送信されません。  
@@ -61,7 +62,7 @@ srvproc
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [srv_describe &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   

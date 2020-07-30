@@ -13,13 +13,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9274597eef66091a048b9ff07943e8bc8a15936b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3e4e183c58de8eb3749a01fc95c32a1b405e04e8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010590"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245874"
 ---
-# <a name="conversions-performed-from-server-to-client"></a>サーバーからクライアントへの変換
+# <a name="sql-server-native-client-conversions-performed-from-server-to-client"></a>サーバーからクライアントに対して実行される SQL Server Native Client 変換
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB で作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
@@ -27,7 +28,7 @@ ms.locfileid: "86010590"
 ## <a name="conversions"></a>変換  
  次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターでは、ICommandWithParameters::SetParameterInfo が呼び出され、*pwszDataSourceType* で指定された型が実際のサーバーの型と一致しない場合、サーバーによって暗黙的な変換が実行され、クライアントに返された型は ICommandWithParameters::SetParameterInfo を介して指定された型と一致します。 これにより、サーバーの変換規則がこのトピックで説明したものと異なる場合に、予期しない変換結果が発生する可能性があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  
   
-|To -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|To -><br /><br /> ソース|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Date|1、7|[OK]|-|-|1|1、3|1、7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
 |Time|5、6、7|-|9|[OK]|6|3、6|5、6|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  

@@ -1,5 +1,6 @@
 ---
 title: srv_describe (拡張ストアド プロシージャ API) | Microsoft Docs
+description: 拡張ストアドプロシージャ API を使用して、行の特定の列の列名、変換元、変換先のデータ型を定義 srv_describe する方法について説明します。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2dc77e2ff3314664b28647980b62dabdde450fc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678597"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248470"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +102,7 @@ srcdata
 ## <a name="returns"></a>戻り値  
  記述された列の番号を返します。 最初の列は列 1 です。 エラーが発生すると 0 を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **srv_sendrow** を初めて呼び出す前に、行内の各列に対して 1 回ずつ **srv_describe** 関数を呼び出しておく必要があります。 行内の列は任意の順で記述できます。  
   
  完全な結果セットの送信が完了する前に行内の各列のソース データの位置および長さを変更するには、それぞれ **srv_setcoldata** と **srv_setcollen** を使用します。  
@@ -113,7 +114,7 @@ srcdata
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://msdn.microsoft.com/security/)をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [srv_sendrow &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
  [srv_setutype &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  

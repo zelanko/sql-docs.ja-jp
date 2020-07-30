@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3fd3c1ffea99abf859a4a328e21da288bc9378a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e609a51d6b9f42cb6101ff485633302193757fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762533"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242652"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 編集中にレコードに適用されるロックの種類を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|オプティミスティックバッチ更新を示します。 バッチ更新モードでは必須です。|  
 |**adLockOptimistic**|3|オプティミスティックロック、レコードごとのレコードを示します。 プロバイダーはオプティミスティックロックを使用し、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出したときにのみレコードをロックします。|  
@@ -38,15 +38,21 @@ ms.locfileid: "82762533"
   
 |定数|  
 |--------------|  
-|AdoEnums. BATCHOPTIMISTIC|  
+|AdoEnums.LockType.BATCHOPTIMISTIC|  
 |AdoEnums|  
 |AdoEnums|  
 |AdoEnums|  
 |AdoEnums|  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Clone メソッド (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)|[LockType プロパティ (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)|  
-|[Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[WillExecute イベント (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)|
+
+:::row:::
+    :::column:::
+        [Clone メソッド (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
+        [LockType プロパティ (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [WillExecute イベント (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+    :::column-end:::
+:::row-end:::

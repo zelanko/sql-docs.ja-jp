@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755870"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243203"
 ---
 # <a name="save-method"></a>Save メソッド
 ファイルまたは[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を保存します。  
@@ -34,7 +34,7 @@ recordset.Save Destination, PersistFormat
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Destination (宛先)*  
+ *宛先*  
  任意。 **レコードセット**を保存するファイルの完全なパス名、または**ストリーム**オブジェクトへの参照を表す**バリアント**。  
   
  *PersistFormat*  
@@ -88,11 +88,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  XML 形式で保存された**レコードセット**は、utf-8 形式を使用して保存されます。 このようなファイルが ADO ストリームに読み込まれた場合、ストリームの Charset プロパティが UTF-8 形式の適切な値に設定されていない限り、stream オブジェクトはストリームから**レコードセット**を開こうとしません。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [Save および Open メソッドの例 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Save および Open メソッドの例 (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   

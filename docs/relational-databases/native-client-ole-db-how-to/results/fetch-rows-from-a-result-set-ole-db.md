@@ -1,5 +1,5 @@
 ---
-title: 結果セットからの行のフェッチ (OLE DB) | Microsoft Docs
+title: 結果セットから行をフェッチする (Native Client OLE DB プロバイダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d9e9f52e17f68a453227ef58b8b00dd5eb79e54
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d806106ab93dc2e7c74b15457fb4017496aec552
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006419"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247005"
 ---
-# <a name="fetch-rows-from-a-result-set-ole-db"></a>結果セットからの行のフェッチ (OLE DB)
+# <a name="fetch-rows-from-a-result-set-native-client-ole-db-provider"></a>結果セットから行をフェッチする (Native Client OLE DB プロバイダー)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルでは、結果セットから行をフェッチする方法を示します。 このサンプルは IA64 ではサポートされていません。  
@@ -32,7 +33,7 @@ ms.locfileid: "86006419"
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L "(local)" から L "(local) \\ \ name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ### <a name="code"></a>コード  
   

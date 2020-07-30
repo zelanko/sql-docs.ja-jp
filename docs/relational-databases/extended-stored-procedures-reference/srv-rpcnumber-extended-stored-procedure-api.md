@@ -1,5 +1,6 @@
 ---
 title: srv_rpcnumber (拡張ストアド プロシージャ API) | Microsoft Docs
+description: 拡張ストアドプロシージャ API の srv_rpcnumber が、現在のリモートストアドプロシージャ呼び出しの数値コンポーネントを返す方法について説明します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d828ad55c93f5341370e9daa98ead6ece0997f02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b8a58274af4be774698b8fd8b987e7d05c055e3
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755894"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332491"
 ---
 # <a name="srv_rpcnumber-extended-stored-procedure-api"></a>srv_rpcnumber (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ srvproc
 ## <a name="returns"></a>戻り値  
  現在のリモート ストアド プロシージャの番号部分です。 クライアントがリモート ストアド プロシージャの実行時に番号部分を使用していない場合、またはリモート ストアド プロシージャがない場合は、-1 を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、リモート ストアド プロシージャの番号部分のみを返します。 所有者、リモート ストアド プロシージャ名、およびデータベース名の省略可能な指定子は含まれません。  
   
 > [!IMPORTANT]  

@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: 70cbcae2-1686-4507-9326-b95206b3089b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 72d45934394e191d01dd06417e1b833439e1f137
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e3301242a143c25ed31d3ab79bdf6b5741d01a8d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641458"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246010"
 ---
 # <a name="localdb_error_invalid_parameter"></a>LOCALDB_ERROR_INVALID_PARAMETER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |
+| --------- | ----- |
 |製品名|SQL Server|  
 |イベント ID|257|  
 |イベント ソース|SQL Server Local Database Runtime 12.0|  

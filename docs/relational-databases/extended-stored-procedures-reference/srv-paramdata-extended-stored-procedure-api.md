@@ -1,5 +1,6 @@
 ---
 title: srv_paramdata (拡張ストアド プロシージャ API) | Microsoft Docs
+description: Srv_paramdata について説明します。 srv_paramdata は、リモートストアドプロシージャ呼び出しのパラメーターの値を返します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83af5231fd9403e0c77d6cad8a5abda5d27275d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e3f1471b1ae4b449955e3ad5f8b170b39d0da2b9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756750"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248440"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +73,7 @@ n
   
  \*   データが NULL 終端ではないため、255 文字を超えるデータが切り捨てられても警告は発生しません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パラメーター名がわかっている場合は、**srv_paramnumber** でパラメーター番号を取得できます。 パラメーターが NULL かどうかを判断する場合は、**srv_paramlen** を使用します。  
   
  パラメーターを指定してリモート ストアド プロシージャを呼び出す場合、パラメーターは名前で指定することも、名前を使用せずにその位置を指定して渡すこともできます。 名前によるパラメーター指定と位置によるパラメーター指定を混合してリモート ストアド プロシージャを呼び出すと、エラーが発生します。 エラーが発生しても SRV_RPC ハンドラーは呼び出されますが、パラメーターが存在しないと見なされ、**srv_rpcparams** は 0 を返します。  
@@ -80,7 +81,7 @@ n
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [srv_rpcparams &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

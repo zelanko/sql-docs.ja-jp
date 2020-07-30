@@ -9,14 +9,14 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245391"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243476"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
+# <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>並列データウェアハウスで PolyBase を構成して Hadoop の外部データにアクセスする
 
 この記事では、APS アプライアンスで PolyBase を使用して Hadoop の外部データを照会する方法について説明します。
 
@@ -63,7 +63,7 @@ PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (
 
 3. Hadoop コンピューターで、Hadoop 構成ディレクトリ内の対応するファイルを検索します。 このファイル内の構成キー yarn.application.classpath の値をコピーします。  
   
-4. [コントロール] ノードの**yarn ファイル**で、 **yarn**プロパティを見つけます。これは、 Hadoop コンピューターからこの値要素に値を貼り付けます。  
+4. [コントロール] ノードの**yarn.site.xml ファイル**で、 **yarn**プロパティを見つけます。 Hadoop コンピューターからこの値要素に値を貼り付けます。  
   
 5. すべての CDH 5.X バージョンで、yarn.site.xml file の最後か mapred-site.xml file に mapreduce.application.classpath 構成パラメーターを追加する必要があります。 HortonWorks では、yarn.application.classpath 構成内にこれらの構成が含まれます。 例については、「[PolyBase の構成](../relational-databases/polybase/polybase-configuration.md)」を参照してください。
 
@@ -227,7 +227,7 @@ Hadoop データ ソース内のデータのクエリを実行するには、Tra
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. [CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)を使用して外部データソースを作成します。
+3. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

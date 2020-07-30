@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 77e1dc6a2e0039c8ff9a2f66c6b3ed45a2176a17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ecd829cbd3de8845f38a367e1e23d5af39ec48
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898101"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363012"
 ---
 # <a name="managing-a-domain"></a>ドメインの管理
 
@@ -44,7 +44,7 @@ ms.locfileid: "85898101"
 ## <a name="in-this-section"></a>このセクションの内容  
  ドメインを使用すると、次の操作を実行できます。  
   
-|||  
+|操作の説明|トピック|  
 |-|-|  
 |特定のデータ型を持つデータ フィールドのセマンティック表現を作成し、ドメインの作成方法を指定して、ドメインの出力形式を設定する|[ドメインの作成](../data-quality-services/create-a-domain.md)|  
 |ドメインを別のドメインにリンクして、ドメインが同じ設定と値を共有できるようにする|[リンク ドメインの作成](../data-quality-services/create-a-linked-domain.md)|  

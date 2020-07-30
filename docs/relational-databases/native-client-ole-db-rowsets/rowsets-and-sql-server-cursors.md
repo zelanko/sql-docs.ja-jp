@@ -1,5 +1,5 @@
 ---
-title: 行セットと SQL Server カーソル | Microsoft Docs
+title: 行セットと SQL Server カーソル (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fe60226cef05b8f7925a15be40b0c8cbea9d7c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1829d375ad8a870f1d2d24a40bfd26f6e790e261
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013119"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246838"
 ---
-# <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
+# <a name="rowsets-and-sql-server-cursors-native-client-ole-db-provider"></a>行セットと SQL Server カーソル (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、2 種類の方法でコンシューマーに結果セットが返されます。  
@@ -143,7 +144,7 @@ ms.locfileid: "86013119"
   
  行セット プロパティの特定のセットに対して選択されるカーソル モデルは、次のようにして決まります。  
   
- 行セット プロパティの指定されたコレクションから、上の表に示したプロパティのサブセットを取得します。 これらのプロパティを、各行セット プロパティのフラグ値 (必須 (T、F) または省略可能 (-)) に応じて、2 つのサブグループに分けます。 最初の表から始め、左から右に向かってカーソル モデルごとに、2 つのサブグループ内のプロパティの値を、その列の対応するプロパティの値と比較します。 必須プロパティに不一致がなく、かつオプション プロパティの不一致が最も少ないカーソル モデルが選択されます。 複数のカーソル モデルが該当する場合は、一番左側のモデルが選択されます。  
+ 行セット プロパティの指定されたコレクションから、上の表に示したプロパティのサブセットを取得します。 これらのプロパティを、各行セット プロパティのフラグ値 (必須 (T、F) または省略可能 (-)) に応じて、2 つのサブグループに分けます。 各カーソルモデルに対して、最初のテーブルから開始し、左から右へ移動します。 2つのサブグループのプロパティの値を、その列の対応するプロパティの値と比較します。 必須プロパティに不一致がなく、かつオプション プロパティの不一致が最も少ないカーソル モデルが選択されます。 複数のカーソル モデルが該当する場合は、一番左側のモデルが選択されます。  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server カーソル ブロックのサイズ  
  カーソルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの行セットをサポートする場合、 **IRowset:: GetNextRows**または**IRowsetLocate:: getrowsat**メソッドの行ハンドル配列パラメーター内の要素の数によって、カーソルブロックサイズが定義されます。 配列内のハンドルで指定される行が、カーソル ブロックのメンバーです。  

@@ -1,5 +1,5 @@
 ---
-title: 大きなデータの取得 | Microsoft Docs
+title: 大きなデータの取得 (Native Client OLE DB プロバイダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9ba0351a3ea398661642a2e737a58fb7adecf8d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 298a442dbb93ca2c0bb95d79e341d712cd3651ea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005839"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243684"
 ---
-# <a name="getting-large-data"></a>大きなデータの取得
+# <a name="getting-large-data-from-a-sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダーからの大きなデータの取得
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   一般に、コンシューマーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ISequentialStream**インターフェイスポインターによって参照されていないデータを処理する他のコードから、Native Client OLE DB プロバイダーストレージオブジェクトを作成するコードを分離する必要があります。  

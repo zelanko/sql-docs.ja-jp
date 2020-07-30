@@ -13,13 +13,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5621df514df7ae00f28371336cac8a8727487eef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5fe44586362595f4d1c86a88ccfce0f0f0ec3de6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998190"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245859"
 ---
-# <a name="conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換
+# <a name="sql-server-native-client-conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換が実行される SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB を使用して作成されたクライアント アプリケーションと [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降) との間で実行される日付または時刻の変換について説明します。  
@@ -29,7 +30,7 @@ ms.locfileid: "85998190"
   
  ICommandWithParameters::SetParameterInfo が呼び出されない場合、DBTYPE_DBTIMESTAMP バインドは **datetime2** の場合と同様に変換されます。  
   
-|To -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|To -><br /><br /> ソース|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1、2|1、3、4|4、12|1、12|1、12|1、12|1、5、12|1、12|1、12|1、12<br /><br /> datetime2(0)|  
 |DBDATE|1|-|-|1、6|1、6|1、6|1、5、6|1、10|1、10|1<br /><br /> date|  

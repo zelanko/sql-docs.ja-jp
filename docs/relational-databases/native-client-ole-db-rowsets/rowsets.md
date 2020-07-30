@@ -1,5 +1,5 @@
 ---
-title: 行セット | Microsoft Docs
+title: 行セット (Native Client OLE DB プロバイダー)
 description: すべてのデータプロバイダーが結果セットのデータを表形式で公開できるようにします。 OLE DB では、データ列を含む行のセットである行セット機能を使用します。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,13 +18,14 @@ ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0006be5acbff458e278d1719fcc5e6fe7d34ec6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2254c566e30cec9e0869e1a09c850e7013e0482a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013114"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246837"
 ---
-# <a name="rowsets"></a>行セット
+# <a name="rowsets-native-client-ole-db-provider"></a>行セット (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   行セットとは、データの列を含む行の集まりです。 行セットは、すべての OLE DB データ プロバイダーが表形式で結果セット データを公開できるようにするための重要な機能を持つオブジェクトです。  
@@ -61,7 +62,7 @@ ms.locfileid: "86013114"
   
 -   [IRow による 1 行のフェッチ](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
--   [ブックマーク](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
+-   [Bookmarks](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
   
 -   [行セット内のデータの更新](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
   

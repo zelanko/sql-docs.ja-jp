@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036593"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362652"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -31,7 +31,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *パーセント*  
+ *Percentage*  
  返される組の割合を指定する有効な数値式です。  
   
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **TopPercent**関数は、指定されたセットに対して評価される指定された数値式の合計を計算し、セットを降順に並べ替えます。 次に、合計値の累積割合が指定されている割合以上になるように、最も値の大きい方から要素を返します。 この関数は、累積合計が指定した割合以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
   
 > [!WARNING]  
@@ -67,7 +67,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  上記の式では、次の結果が生成されます。  
   
-||Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3508904.84|  
 |London|$1521530.09|  
@@ -102,7 +102,7 @@ FROM [Adventure Works]
   
  上記のクエリは、次の結果を返します。見やすくするために、中間部の行は削除してあります。  
   
-||Reseller Sales Amount|再販業者の製品コストの合計|Reseller Gross Profit|  
+|ツーリング バイク|Reseller Sales Amount|再販業者の製品コストの合計|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |ツーリング-2000 Blue、50|$157444.56|$163112.57|($5668.01)|  
 |ツーリング-2000 Blue、46|$321027.03|$333021.50|($11994.47)|  
@@ -122,7 +122,7 @@ FROM [Adventure Works]
   
  クエリでは 100% (100%) が要求されることに注意してください。これは、すべての行が返されることを意味します。 ただし、 *Numeric_Expression*には負の値があるため、1行だけが返されます。  
   
-||Reseller Sales Amount|再販業者の製品コストの合計|Reseller Gross Profit|  
+|ツーリング バイク|Reseller Sales Amount|再販業者の製品コストの合計|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |ツーリング-2000 Blue、50|$157444.56|$163112.57|($5668.01)|  
   

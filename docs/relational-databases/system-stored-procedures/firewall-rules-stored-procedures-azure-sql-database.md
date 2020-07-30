@@ -17,26 +17,38 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4b4e6427f3ad91f06708e02bacca50b4e7c279a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d06646127c59dca8e72f061b049cabb42f8073ab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73843881"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246691"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>ファイアウォールルールのストアドプロシージャ (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  ここでは、ファイアウォール規則を設定または削除する次のストアドプロシージャについて説明します。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)]ファイアウォール規則は、および[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]と共に使用できます。 詳細については、「 [Azure SQL Database ファイアウォール規則の構成-概要](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)」を参照してください。
+  ここでは、ファイアウォール規則を設定または削除する次のストアドプロシージャについて説明します。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)]ファイアウォール規則は、およびと共に使用でき [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ます。 詳細については、「 [Azure SQL Database ファイアウォール規則の構成-概要](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)」を参照してください。
+
+:::row:::
+    :::column:::
+        [sp_set_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)
+    :::column-end:::
+    :::column:::
+        [sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sp_set_database_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)
+    :::column-end:::
+    :::column:::
+        [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
   
- 
-  
-|  |  |  
-| - | - |  
-|[sp_set_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|[sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)|  
-|[sp_set_database_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)|[sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)|  
-  
-の[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]場合は、ウィンドウのファイアウォール規則を使用します。 詳しくは、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」をご覧ください。   
+の場合 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、ウィンドウのファイアウォール規則を使用します。 詳しくは、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」をご覧ください。   
   
 
 

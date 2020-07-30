@@ -18,14 +18,14 @@ ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9740c208db10484ee1e3c5ef807c5223fe6adfd6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 9943b2c5e05d9cdc90efa8752aedf933ec624db9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977736"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87241622"
 ---
-# <a name="creating-sql-server-tables"></a>SQL Server テーブルの作成
+# <a name="creating-sql-server-native-client-tables"></a>SQL Server Native Client テーブルの作成
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **Itabledefinition:: CreateTable**関数を公開し、コンシューマーがテーブルを作成できるようにし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 コンシューマーは**CreateTable**を使用して、コンシューマーという名前のパーマネントテーブル、および Native Client OLE DB プロバイダーによって生成された一意の名前を持つパーマネントテーブルまたは一時テーブルを作成し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  

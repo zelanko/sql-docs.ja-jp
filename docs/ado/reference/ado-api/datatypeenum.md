@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 456b11972fcb9b7bb20ee07b58e36d2daa5cc0da
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757628"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242385"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 [フィールド](../../../ado/reference/ado-api/field-object.md)、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)のデータ型を指定します。 対応する OLE DB 型インジケーターは、次の表の説明列にかっこで囲まれています。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|他のデータ型の配列を示すフラグ値。常に別のデータ型定数と結合されます。 ADOX には適用されません。|  
 |**adBigInt**|20|8バイト符号付き整数 (DBTYPE_I8) を示します。|  
@@ -115,8 +115,14 @@ ms.locfileid: "82757628"
 |AdoEnums|  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
-|[CreateRecordset メソッド (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+        [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [CreateRecordset メソッド (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
+        [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)  
+    :::column-end:::
+:::row-end:::

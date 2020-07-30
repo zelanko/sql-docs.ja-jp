@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85039834"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243080"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>スケールアウト MPP データウェアハウスである Analytics Platform System の新機能
 Microsoft Analytics Platform System (APS) の最新のアプライアンス更新プログラムの新機能を参照してください。 APS は、MPP SQL Server 並列データウェアハウスをホストする、スケールアウトされたオンプレミスのアプライアンスです。 
@@ -65,10 +65,12 @@ APS CU 7.3 では、SQL クエリオプティマイザーにおける共通部�
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Informatica 10.2.0 公開された APS Informatica connector
 Informatica バージョン10.2.0 および10.2.0 修正プログラム1で動作する APS 用の Informatica コネクタの新しいバージョンをリリースしました。 新しいコネクタは、[ダウンロードサイト](https://www.microsoft.com/download/details.aspx?id=57472)からダウンロードできます。
+> [!NOTE]
+> Informatica 10.2.0 または10.2.0 修正プログラム1の APS Informatica connector は、厳格な TLS 1.2 では動作せず、TLS 1.0 と1.1 を完全に機能させる必要があります。
 
 #### <a name="supported-versions"></a>サポートされているバージョン
 
-| APS バージョン | Informatica PowerCenter | ドライバー |
+| APS バージョン | Informatica PowerCenter | Driver |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 2.x |
 | APS 2016 以降 | 10.2.0、10.2.0 Hotfix 1 | SQL Server Native Client 2.x |
@@ -138,7 +140,7 @@ SMO を使用する代わりに、メタデータ呼び出しに catalog オブ�
 ### <a name="bug-fixes"></a>バグの修正
 APS CU 7.1 で SQL Server 2016 SP2 CU2 にアップグレードしました。 このアップグレードでは、以下に示すいくつかの問題が修正されます。
 
-| Title | 説明 |
+| タイトル | 説明 |
 |:---|:---|
 | **考えられる組ムーバーのデッドロック** |このアップグレードでは、分散トランザクションと組ムーバーのバックグラウンドスレッドでデッドロックが発生する可能性があることを修正しました。 CU 7.1 をインストールした後、TF634 を使用してタプルムーバーを停止すると SQL Server スタートアップパラメーターまたはグローバルトレースフラグとして削除できます。 | 
 | **特定のラグ/リードクエリが失敗する** |遅延/リード関数が入れ子になっている CCI テーブルに対する特定のクエリは、このアップグレードによって修正されました。 | 

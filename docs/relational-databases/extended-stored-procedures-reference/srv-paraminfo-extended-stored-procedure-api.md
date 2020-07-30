@@ -1,5 +1,6 @@
 ---
 title: srv_paraminfo (拡張ストアド プロシージャ API) | Microsoft Docs
+description: 拡張ストアドプロシージャ API の srv_paraminfo がパラメーターに関する情報を返す方法について説明します。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a291487402d4299176b583f4bc6e25e297f314a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 78057c092942455e41f48e0f9f12a9502c1a67ee
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756710"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332342"
 ---
 # <a name="srv_paraminfo-extended-stored-procedure-api"></a>srv_paraminfo (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,10 +88,10 @@ pfNull
 ## <a name="returns"></a>戻り値  
  パラメーター情報が正常に取得された場合は SUCCEED を返し、それ以外の場合は FAIL を返します。 FAIL が返されるのは、現在のリモート ストアド プロシージャがない場合、および *n* 番目のリモート ストアド プロシージャ パラメーターがない場合です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **セキュリティに関する注意** 拡張ストアド プロシージャのソース コードを十分に確認し、コンパイルした DLL をテストしたうえで実稼働サーバーにインストールしてください。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張ストアド プロシージャのプログラマーズ リファレンス](../../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  
   
   

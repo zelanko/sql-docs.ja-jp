@@ -1,5 +1,6 @@
 ---
 title: srv_sendmsg (拡張ストアド プロシージャ API) | Microsoft Docs
+description: 拡張ストアドプロシージャ API の srv_sendmsg と、クライアントにメッセージを送信する方法について説明します。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 757712cd6e390c4369cea08aa7d0e59d727b7d39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3737b6633710a3831cf8cbcb3801263582369dc7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755848"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248244"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -105,7 +106,7 @@ msglen
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、エラー メッセージまたは情報メッセージをクライアントに送信する場合に使用します。 メッセージが送信されるたびに呼び出されます。  
   
  メッセージは、**srv_sendrow** によるすべての行 (あれば) の送信前後に任意の順序で **srv_sendmsg** を使用してクライアントに送信できます。 すべてのメッセージ (あれば) は **srv_senddone** で完了状態が送信される前にクライアントに送信しておく必要があります。  

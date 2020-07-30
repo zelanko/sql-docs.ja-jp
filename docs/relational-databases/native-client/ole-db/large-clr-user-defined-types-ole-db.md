@@ -13,13 +13,14 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d67e41f3dfaed9ef59e586368d8b80dda2936669
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e851332ad3f8485e7c716101942b1cdc0c6838bb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010500"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243890"
 ---
-# <a name="large-clr-user-defined-types-ole-db"></a>大きな CLR ユーザー定義型 (OLE DB)
+# <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>SQL Server Native Client での大きな CLR ユーザー定義型 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の OLE DB に対する変更について説明します。  
@@ -74,7 +75,7 @@ ms.locfileid: "86010500"
   
 |列の型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|NULL|NULL|クリア|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~0|NULL|NULL|オン|DB_ALL_EXCEPT_LIKE|0|  
   
  UDT には次の列も定義されています。  
@@ -91,7 +92,7 @@ ms.locfileid: "86010500"
   
 |パラメーターのタイプ|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|~0|~0|クリア|  
+|DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|~0|~0|Clear|  
 |DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~0|~0|~0|オン|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>COLUMNS 行セット (スキーマ行セット)  
@@ -99,7 +100,7 @@ ms.locfileid: "86010500"
   
 |列の型|DATA_TYPE|COLUMN_FLAGS、DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|クリア|*n*|  
+|DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|Clear|*n*|  
 |DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|オン|0|  
   
  UDT には、次の追加の列が定義されています。  
