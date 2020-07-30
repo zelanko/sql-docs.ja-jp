@@ -10,12 +10,12 @@ ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 855f84253db65da29bc871fa3b37dd9780a5cab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1f760d2cc97c7f54be18281c7b55a6527eb8ec2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68256656"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392097"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>SSMA for Oracle コンソールの操作 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コマンドラインでコンソールアプリケーションを使用して、Oracle 用の Migration Assistant (SSMA) リリースにアクセスできるようになりました。 スクリプトファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 SSMA では、コンソールアプリケーションとして、スクリプトレベルのインターフェイスを有効にし、移行サイクルを短縮し、移行作業をスケールします。  
@@ -24,9 +24,8 @@ ms.locfileid: "68256656"
   
 このセクションでは、次のトピックについて説明します。  
   
-|||  
+|トピック|説明|  
 |-|-|  
-|**トピック**|**説明**|  
 |[SSMA for Oracle コンソールでのはじめに &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|コンソールアプリケーションを実行する手順について説明します。|  
 |[SSMA コンソールのコマンドラインオプション &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|SSMA コンソールアプリケーションを操作するためのコマンドラインオプションとパラメーターについて説明します。|  
 |[OracleToSQL&#41;&#40;のスクリプトファイルの作成](../../ssma/oracle/creating-script-files-oracletosql.md)|スクリプトファイルの作成方法について説明します。|  
