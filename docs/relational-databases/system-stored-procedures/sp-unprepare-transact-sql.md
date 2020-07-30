@@ -18,15 +18,15 @@ ms.assetid: 14320251-c551-49d8-b933-057406114978
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 715b050bc73816b9b1c7f6841e9c6fbb12fdaf90
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c11e03c511634bc255b6a94ff03bfec16d386164
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820232"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394553"
 ---
 # <a name="sp_unprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Sp_prepare ストアドプロシージャによって作成された実行プランを破棄します。 sp_unprepare は、ID = 15 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
@@ -42,7 +42,7 @@ sp_unprepare handle
  *扱え*  
  Sp_prepare によって返される*ハンドル*値です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、単純なステートメントを準備し、実行し、準備を解除します。  
   
 ```SQL  

@@ -14,12 +14,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0da744d41c2135038e14a8aef71e088df7ba851d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001026"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332651"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,9 +68,8 @@ ms.locfileid: "86001026"
 ## <a name="tools"></a>ツール  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、証明書および厳密な名前のキー ファイルを生成するツールとユーティリティを提供しています。 これらのツールでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構文よりも柔軟にキーを生成できます。 これらのツールを使用することで、より複雑なキー長の RSA キーを作成して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートできます。 これらのツールの入手先を次の表に示します。  
   
-|||  
-|-|-|  
-|ツール|目的|  
+| ツール | 目的 |
+| ---- | ------- |
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|自己署名証明書を作成します。|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|証明書を作成します。 **New-SelfSignedCertificate** を優先するために非推奨になりました。|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|対称キーの厳密名を作成します。|  

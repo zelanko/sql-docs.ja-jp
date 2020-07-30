@@ -11,21 +11,21 @@ ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c8920361fafe9ecd26ff401110d4661c278de88
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1e0341c16a8aa78497aa0e1e347d5cc079a26b6b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828153"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394093"
 ---
 # <a name="sysexternal_tables-transact-sql"></a>external_tables (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベース内の外部テーブルごとに1行のデータを格納します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|\<継承された列>||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。||  
+|\<inherited columns>||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。||  
 |max_column_id_used|**int**|このテーブルで使用される最大列 ID。||  
 |uses_ansi_nulls|**bit**|テーブルは、SET ANSI_NULLS データベース オプションが ON の場合に作成されます。||  
 |data_source_id|**int**|外部データソースのオブジェクト ID。||  
@@ -41,7 +41,7 @@ ms.locfileid: "82828153"
 |remote_object_name|**sysname**|外部テーブルの SHARD_MAP_MANAGER 外部データソースは、リモートデータベース上のベーステーブルの名前です (外部テーブルの名前と異なる場合)。||  
   
 ## <a name="permissions"></a>アクセス許可  
- カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [external_file_formats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   

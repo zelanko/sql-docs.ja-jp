@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e78ab5988d88447539da7c492f0b02943693844
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9a25677f79ede93f8ea24e979d80dd13adff4fe
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762613"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242762"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 [接続](../../../ado/reference/ado-api/connection-object-ado.md)のデータを変更したり、[レコード](../../../ado/reference/ado-api/record-object-ado.md)を開いたり、**レコード**および[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトの[Mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティの値を指定したりするために使用できるアクセス許可を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|読み取り専用のアクセス許可を示します。|  
 |**adModeReadWrite**|3|読み取り/書き込みアクセス許可を示します。|  
@@ -53,8 +53,14 @@ ms.locfileid: "82762613"
 |AdoEnums を作成します。|  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
+
+:::row:::
+    :::column:::
+        [Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
+        [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+    :::column-end:::
+    :::column:::
+        [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+        [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::

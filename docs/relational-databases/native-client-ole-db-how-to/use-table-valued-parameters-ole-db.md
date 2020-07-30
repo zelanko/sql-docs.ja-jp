@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーターの使用 (OLE DB) | Microsoft Docs
+title: テーブル値パラメーターを使用する (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,13 +11,14 @@ ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e112aa6a8fa2770ed96234ffe71a063c7fb4720
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 02f9960443d9ff9c5b3eb82577cf12180376b9e7
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004851"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394096"
 ---
-# <a name="use-table-valued-parameters-ole-db"></a>テーブル値パラメーターの使用 (OLE DB)
+# <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>SQL Server Native Client でテーブル値パラメーターを使用する (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 このサンプルでは、次の処理を実行します。  
@@ -41,7 +42,7 @@ ms.locfileid: "86004851"
   
  3 つ目のコード リストを OLEDBUtils.hpp という名前のファイルに含めます。  
   
- ole32.lib と oleaut32.lib を使用して 4 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して 4 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L "(local)" から L "(local) \\ \ name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  5 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用したデータベースを削除します。  
   
