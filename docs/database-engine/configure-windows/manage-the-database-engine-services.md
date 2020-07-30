@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 162cf9d1f062d69daf671ed0bf8962b9ddb7ddf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb2cfc1df70f22f3e0fb90cd3d9cf552e6e01d60
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680977"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362242"
 ---
 # <a name="manage-the-database-engine-services"></a>データベース エンジン サービスの管理
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,20 +56,53 @@ ms.locfileid: "85680977"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではありません。そのため、Windows 8.0 を実行している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開くには、 **検索** チャームで、 **[アプリ]** の下に「 **SQLServerManager12.msc** 」( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の場合) と入力し ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の場合は「 **SQLServerManager11.msc** 」、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]の場合は「 **SQLServerManager10.msc** 」と入力し)、 **Enter**キーを押します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
-  
-|||  
-|-|-|  
-|[サービスの管理に関するセキュリティ要件](../../database-engine/configure-windows/security-requirements-for-managing-services.md)|[SQL Server のインスタンスの自動開始の回避 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)|  
-|[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|[SQL Server のサービス開始アカウントの変更 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)|  
-|[ネットワークを使用する場合とネットワークを使用しない場合の SQL Server の実行](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)|[サーバーのスタートアップ オプションの構成 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)|  
-|[SQL Server Browser サービス &#40;データベース エンジンと SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)|[SQL Server で使用されるアカウントのパスワードの変更 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)|  
-|[データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)|[SQL Server エラー ログの構成](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)|  
-|[データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|[サーバーの認証モードの変更](../../database-engine/configure-windows/change-server-authentication-mode.md)|  
-|[シングル ユーザー モードでの SQL Server の起動](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)|[SQL ライター サービス](../../database-engine/configure-windows/sql-writer-service.md)|  
-|[最小構成での SQL Server の起動](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)|[シャットダウン メッセージのブロードキャスト &#40;コマンド プロンプト&#41;](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)|  
-|[別のコンピューターへの接続 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)|[SQL Server インスタンスへのログイン &#40;コマンド プロンプト&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)|  
-|[SQL Server のインスタンスが自動的に開始されるようにする設定 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[データベース エンジン アクセスのファイル システム権限の構成](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
-  
+
+:::row:::
+    :::column:::
+        [サービスの管理に関するセキュリティ要件](../../database-engine/configure-windows/security-requirements-for-managing-services.md)
+
+        [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
+
+        [データベース エンジン アクセスのファイル システム権限の構成](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)
+
+        [ネットワークを使用する場合とネットワークを使用しない場合の SQL Server の実行](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)
+
+        [SQL Server Browser サービス &#40;データベース エンジンと SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)
+
+        [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+
+        [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
+
+        [シングル ユーザー モードでの SQL Server の起動](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)
+
+        [最小構成での SQL Server の起動](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)
+    :::column-end:::
+    :::column:::
+        [別のコンピューターへの接続 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)
+
+        [SQL Server のインスタンスが自動的に開始されるようにする設定 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)
+
+        [SQL Server のインスタンスの自動開始の回避 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)
+
+        [SQL Server のサービス開始アカウントの変更 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)
+
+        [サーバーのスタートアップ オプションの構成 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
+
+        [SQL Server で使用されるアカウントのパスワードの変更 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)
+
+        [SQL Server エラー ログの構成](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)
+    :::column-end:::
+    :::column:::
+        [サーバーの認証モードの変更](../../database-engine/configure-windows/change-server-authentication-mode.md)
+
+        [SQL ライター サービス](../../database-engine/configure-windows/sql-writer-service.md)
+
+        [シャットダウン メッセージのブロードキャスト &#40;コマンド プロンプト&#41;](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)
+
+        [SQL Server インスタンスへのログイン &#40;コマンド プロンプト&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>関連コンテンツ  
  [SQL Server エージェントの構成](../../ssms/agent/configure-sql-server-agent.md)  
   

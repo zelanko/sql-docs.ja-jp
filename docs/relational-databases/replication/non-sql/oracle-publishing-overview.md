@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7814090b688f362737e7cd045bca9edd32c34bcb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3326dab096a1b275bc06bfb0949eeb88b2d4fe30
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883633"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397169"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle パブリッシングの概要  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85883633"
 
 -   Oracle に対するデータのパブリッシュには次の制限があります。  
 
-  |       | 2016 以前 |2017 以降 |
+  |シナリオ| 2016 以前 |2017 以降 |
   |-------|-------|--------|
   |Oracle からのレプリケーション |Oracle 10g 以前のみをサポート |Oracle 10g 以前のみをサポート |
   |Oracle へのレプリケーション |Oracle 12c まで |サポートされていません |
@@ -52,8 +52,8 @@ ms.locfileid: "85883633"
  Oracle パブリケーションを作成すると、Oracle データベース内のパブリッシュされた各テーブルに対してトリガーと追跡テーブルが作成されます。 パブリッシュされたテーブルのデータが変更されると、テーブルのデータベース トリガーが起動されて、変更された各行の情報がレプリケーション追跡テーブルに挿入されます。 その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターのログ リーダー エージェントが、そのデータ変更情報を追跡テーブルからディストリビューターのディストリビューション データベースへと移動します。 最後に、標準のトランザクション レプリケーションと同じように、ディストリビューション エージェントが変更をディストリビューターからサブスクライバーに移動します。  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Glossary of Terms for Oracle Publishing (Oracle パブリッシングの用語)](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
+ [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+ [Oracle パブリッシングの用語](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [異種データベース レプリケーション](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  
   
   

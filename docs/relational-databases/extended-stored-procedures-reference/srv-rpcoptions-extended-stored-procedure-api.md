@@ -1,5 +1,6 @@
 ---
 title: srv_rpcoptions (拡張ストアド プロシージャ API) | Microsoft Docs
+description: 拡張ストアドプロシージャ API の srv_rpcoptions が、現在のリモートストアドプロシージャの実行時オプションを返す方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a4bc6bf4a8fe1b600ec7bd7b3ba1877023751db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3d4bd331b54b4bb555fcc6cdbe59155a553332eb
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755885"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332471"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ srvproc
 ## <a name="returns"></a>戻り値  
  現在のリモート ストアド プロシージャの実行時フラグを論理 OR で結合して格納したビットマップを返します。 リモート ストアド プロシージャがない場合は、0 を返し、メッセージを生成します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表では、各実行時フラグについて説明します。  
   
 |実行時フラグ|説明|  

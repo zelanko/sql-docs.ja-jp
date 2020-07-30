@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287146"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411384"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>ホスト ガーディアン サービスの構成証明の計画
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) を使用する場合は、クライアント アプリケーションが [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] プロセス内の信頼できるエンクレーブと通信していることを確認します。 仮想化ベースのセキュリティ (VBS) エンクレーブの場合、この要件には、エンクレーブ内のコードが有効であることと、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] をホストしているコンピューターが信頼できることの確認も含まれます。 リモート構成証明では、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターの ID (および必要に応じて構成) を検証できるサード パーティを導入することによって、この目標が達成されます。 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] でエンクレーブを使用してクエリを実行するには、事前に、その動作環境に関する情報を構成証明サービスに提供して正常性証明書を取得しておく必要があります。 その後、この正常性証明書はクライアントに送信され、クライアントでは構成証明サービスを使用してその信頼性を個別に確認できるようになります。 クライアントでは、正常性証明書を信頼したら、信頼できる VBS エンクレーブと通信しているものと認識し、そのエンクレーブを使用するクエリを発行します。
 
