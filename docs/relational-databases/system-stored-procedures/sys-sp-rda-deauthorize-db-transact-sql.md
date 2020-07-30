@@ -1,5 +1,6 @@
 ---
 title: sp_rda_deauthorize_db (Transact-sql) |Microsoft Docs
+description: ローカル Stretch 対応データベースとリモート Azure データベース間の認証された接続を削除するために、sp_rda_deauthorize_db を使用する方法について説明します。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc01f07e3a07200970066e6ed505b29b3ccb9c09
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 11e039ad6c0550942632be6f34d23972e1897e2b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053405"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243363"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>sp_rda_deauthorize_db (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +43,7 @@ sp_rda_deauthorize_db
 ## <a name="permissions"></a>アクセス許可  
  Db_owner のアクセス許可が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  **Sp_rda_deauthorize_db**を実行すると、Stretch が有効なデータベースとテーブルに対するすべてのクエリが失敗します。 つまり、クエリモードは [無効] に設定されます。 このモードを終了するには、次のいずれかの操作を行います。  
   
 -   [Transact-sql&#41;&#40;sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)を実行して、リモートの Azure データベースに再接続します。 この操作により、クエリモードが自動的に LOCAL_AND_REMOTE にリセットされます。これは Stretch Database の既定の動作です。 つまり、クエリはローカルとリモートの両方のデータから結果を返します。  

@@ -13,18 +13,19 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7974e0f902f990c664fc6442cb5fb6a3203811c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b9a79a82eaf8f3623435bd2330d87686eb9834c7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013033"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246742"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB テーブル値パラメーターの型のサポート (プロパティ)
+# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>SQL Server Native Client でのテーブル値パラメーターの型のサポートの OLE DB (プロパティ)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、テーブル値パラメーターの行セット オブジェクトに関連付けられている OLE DB プロパティおよびプロパティ セットについて説明します。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  次に、テーブル値パラメーターの行セット オブジェクトの IRowsetInfo::GetProperties メソッドを使用して公開されるプロパティの一覧を示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 したがって、IOpenRowset::OpenRowset メソッドまたは ITableDefinitionWithConstraints::CreateTableWithConstraints メソッドを使用してプロパティを既定値以外の値に設定しようとすると、エラーが発生し、オブジェクトは作成されません。  
   
  テーブル値パラメーターの行セット オブジェクトで実装されていないプロパティは、次の一覧には含まれていません。 すべてのプロパティの一覧は、Windows Data Access Components の OLE DB に関するドキュメントを参照してください。  

@@ -1,5 +1,6 @@
 ---
 title: sp_rda_reconcile_columns (Transact-sql) |Microsoft Docs
+description: 詳細については、「sp_rda_reconcile_columns」を参照してください。 このストアドプロシージャを使用して、リモート Azure テーブルの列と Stretch が有効な SQL Server テーブルの列を調整します。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a528609b8ab33f913a45e9bd61a1409bc3927930
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 939bc5cbe299ce144b8617391fd33d740011b08a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053123"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245749"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sp_rda_reconcile_columns (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -52,7 +54,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>アクセス許可  
  Db_owner のアクセス許可が必要です。  
    
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  Stretch 対応の SQL Server テーブルに存在しなくなったリモートの Azure テーブルに列が存在している場合、これらの余分な列が Stretch Database の正常な動作を妨げることはありません。 必要に応じて余分の列を手動で削除できます。  
   
 ## <a name="example"></a>例  

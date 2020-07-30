@@ -1,5 +1,6 @@
 ---
 title: srv_rpcowner (拡張ストアド プロシージャ API) | Microsoft Docs
+description: 拡張ストアドプロシージャ API の srv_rpcowner が、現在のリモートストアドプロシージャの所有者コンポーネントを返す方法について説明します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c427b572b6c9320c3ebe320c4469f3571641fa4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64e9fa0970367ccac5d4fca5bf6b9815ad0e0e17
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755874"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248271"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ len
 ## <a name="returns"></a>戻り値  
  現在のリモート ストアド プロシージャの所有者部分を表した  NULL 終端文字列を指す DBCHAR ポインターです。 現在のリモート ストアド プロシージャがない場合は、NULL が返され、*len* が - 1 に設定されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、リモート ストアド プロシージャの所有者部分だけを返します。 名前、リモート ストアド プロシージャ名、およびリモート ストアド プロシージャ番号の省略可能な各指定子は含まれません。  
   
 > [!IMPORTANT]  

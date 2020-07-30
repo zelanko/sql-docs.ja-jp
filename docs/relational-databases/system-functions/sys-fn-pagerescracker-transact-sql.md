@@ -1,6 +1,6 @@
 ---
 title: fn_PageResCracker (Transact-sql) |Microsoft Docs
-description: Sys. fn_PageResCracker システム関数に関するドキュメント。
+description: Fn_PageResCracker システム関数について説明します。 例を参照して、使用可能なその他のリソースを確認してください。
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 460f1990a7020d7a57ea7ad543f3253576756d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a48b5ba06223130a83980bf6cf8ec410bd58e5a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790430"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247581"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>fn_PageResCracker (Transact-sql)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -56,7 +56,7 @@ sys.fn_PageResCracker ( page_resource )
 |file_id|**int**|ファイル ID|  
 |page_id|**int**|ページ ID|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `sys.fn_PageResCracker`は、データベースページの8バイトの16進数表現を、ページのデータベース ID、ファイル ID、およびページ ID を含む行セットに変換するために使用されます。   
 
 有効なページリソースを取得するには、 `page_resource` [Dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動的管理ビュー、または[sys.sys](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)の &#40;システムビュー] の列を使用します。 無効なページリソースが使用されている場合、戻り値は NULL になります。  
@@ -65,7 +65,7 @@ sys.fn_PageResCracker ( page_resource )
 ## <a name="permissions"></a>アクセス許可  
 ユーザーは、 `VIEW SERVER STATE` サーバーに対する権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 関数は、 `sys.fn_PageResCracker` [Dm_db_page_info &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)と組み合わせて使用して、でのページ関連の待機とブロックに関するトラブルシューティングを行うことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  次のスクリプトは、特定の種類のページリソースで現在待機しているすべてのアクティブな要求について、データベースページ情報を収集するためにこれらの関数を使用する方法の例です。 
   
 ```sql  
@@ -75,7 +75,7 @@ CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r
 CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [dm_db_page_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
  [sys.sysプロセス &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  

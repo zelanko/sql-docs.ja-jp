@@ -1,5 +1,5 @@
 ---
-title: OLE DB の日付/時刻の強化に対するデータ型のサポート | Microsoft Docs
+title: 日付と時刻の機能強化に対するデータ型のサポート (Native Client OLE DB プロバイダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,14 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d414c4aaf8e316d4662448f7e19b847468bee0c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0a39a9c4d99ed94db0d70575f0047698b1a15074
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005468"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245835"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付/時刻の強化に対するデータ型のサポート
+# <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付と時刻の機能強化のためのデータ型のサポート SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日付/時刻データ型をサポートする OLE DB (Native Client) 型について説明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
@@ -73,7 +74,7 @@ ms.locfileid: "86005468"
   
  次の既存の OLE DB 構造体の実装は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しい日付と時刻のデータ型をサポートするように変更されました。 ただし、定義は変更されていません。  
   
--   DBTYPE_DATE (オートメーション DATE 型です。 内部では **double** として表されます。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は 1 日の端数になります。 この型の精度は 1 秒なので、有効な小数点以下桁数は 0 です。)  
+-   DBTYPE_DATE (オートメーション DATE 型です。 これは、内部的に**double**として表現されます。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は 1 日の端数になります。 この型の精度は 1 秒なので、有効な小数点以下桁数は 0 です。)  
   
 -   DBTYPE_DBDATE  
   
@@ -179,7 +180,7 @@ enum SQLVARENUM {
 |DBTYPE_DBTIME2|**time**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために、 *DBBFILE Desc bscale*メンバーを検査します。|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために、 *DBBFILE Desc bscale*メンバーを検査します。|  
   
- アプリケーションで *wType* に DBTYPE_DBTIMESTAMP を指定した場合、*pwszTypeName* に型名を指定することで、**datetime2** へのマッピングをオーバーライドします。 **datetime** を指定する場合、*bScale* は 3 にする必要があります。 **smalldatetime** を指定する場合、*bScale* は 0 にする必要があります。 *Bscale*が*Wtype*および*pwszTypeName*と一致しない場合、DB_E_BADSCALE が返されます。  
+ アプリケーションで *wType* に DBTYPE_DBTIMESTAMP を指定した場合、*pwszTypeName* に型名を指定することで、**datetime2** へのマッピングをオーバーライドします。 **datetime** を指定する場合、*bScale* は 3 にする必要があります。 **smalldatetime** を指定する場合、*bScale* は 0 にする必要があります。 *bScale* が *wType* および *pwszTypeName* と一致しない場合、DB_E_BADSCALE が返されます。  
   
 ## <a name="see-also"></a>参照  
  [日付と時刻の強化機能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

@@ -9,14 +9,14 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289680"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243498"
 ---
-# <a name="polybase-configuration-and-security-for-hadoop"></a>PolyBase の構成と Hadoop 用のセキュリティ
+# <a name="configure-polybase-hadoop-security"></a>PolyBase Hadoop のセキュリティを構成する
 
 この記事では、Hadoop への APS PolyBase 接続に影響するさまざまな構成設定について説明します。 PolyBase の概要については、「 [polybase とは](configure-polybase-connectivity-to-external-data.md)」を参照してください。
 
@@ -115,7 +115,7 @@ MIT KDC を使用して Kerberos で保護された Hadoop クラスターに接
 4. 各 Hadoop ユーザーの認証情報を指定するデータベース スコープ資格情報オブジェクトを作成します。 「 [PolyBase T-SQL オブジェクト](../relational-databases/polybase/polybase-t-sql-objects.md)」を参照してください。
 
 ## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Hadoop 暗号化ゾーンのセットアップ
-Hadoop 暗号化ゾーンを使用している場合は、次のように core-site.xml と hdfs-site.xml を変更します。 KMS サービスが実行されている ip アドレスを、対応するポート番号を使用して指定します。 CDH の KMS の既定のポートは16000です。
+Hadoop 暗号化ゾーンを使用している場合は、core-site.xml を変更し、次のように hdfs-site.xml します。 KMS サービスが実行されている ip アドレスを、対応するポート番号を使用して指定します。 CDH の KMS の既定のポートは16000です。
 
 **core-site.xml**
 ```xml

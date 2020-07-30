@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aeeb7bcbb79231a2d6ed842459355a09e2889e4f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759498"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243173"
 ---
 # <a name="update-method"></a>Update メソッド
 レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの現在の行、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに対して行ったすべての変更を保存します。  
@@ -34,11 +34,11 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *フィールド*  
- 任意。 1つの名前、または変更するフィールドの名前または序数を表す**バリアント**配列を**表すバリアント配列**。  
+ *Fields*  
+ 省略可能。 1つの名前、または変更するフィールドの名前または序数を表す**バリアント**配列を**表すバリアント配列**。  
   
  *値*  
- 任意。 単一の値を表す**バリアント**、または新しいレコードのフィールドの値を表す**バリアント**配列。  
+ 省略可能。 単一の値を表す**バリアント**、または新しいレコードのフィールドの値を表す**バリアント**配列。  
   
 ## <a name="remarks"></a>解説  
   
@@ -67,11 +67,16 @@ record.Fields.Update
  たとえば、 **Delete**メソッドを使用して削除されたフィールドは、直ちに削除対象としてマークされますが、コレクション内に残ります。 これらのフィールドをプロバイダーのコレクションから実際に削除するには、 **Update**メソッドを呼び出す必要があります。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [Update および CancelUpdate メソッドの例 (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update および CancelUpdate メソッドの例 (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

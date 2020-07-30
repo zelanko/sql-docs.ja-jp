@@ -1,5 +1,6 @@
 ---
 title: sp_rda_reconcile_batch (Transact-sql) |Microsoft Docs
+description: Sp_rda_reconcile_batch を使用して、リモート Azure テーブルに格納されているバッチ ID を使用して、Stretch が有効な SQL Server テーブル内のバッチ ID を調整する方法について説明します。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8ce7b946005eca97d57ef709557ec9b4334339c
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: aa97030851e13eac020564eec7931a00595b8884
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053175"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247091"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>sp_rda_reconcile_batch (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -48,7 +50,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="permissions"></a>アクセス許可  
  Db_owner のアクセス許可が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  Azure に既に移行されているデータを削除する場合は、次の操作を行います。  
   
 1.  データ移行を一時停止します。 詳細については、「[データ移行の一時停止と再開 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)」を参照してください。  

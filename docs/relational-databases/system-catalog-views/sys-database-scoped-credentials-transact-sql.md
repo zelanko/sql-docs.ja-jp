@@ -18,15 +18,15 @@ ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03687ea50b04c96aa4dbafab9d02d2bbc33a14b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13d5138d5ebc318947d010e60d6d5cc175d89c62
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079422"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396194"
 ---
 # <a name="sysdatabase_scoped_credentials-transact-sql"></a>database_scoped_credentials (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   データベース内のデータベーススコープ資格情報ごとに1行のデータを返します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68079422"
 |credential_identity|**nvarchar (4000)**|使用する識別情報の名前。 通常、これは Windows ユーザーです。 一意である必要はありません。|  
 |create_date|**datetime**|データベーススコープの資格情報が作成された時刻。|  
 |modify_date|**datetime**|データベーススコープの資格情報が最後に変更された時刻。|  
-|target_type|**nvarchar (100)**|データベーススコープ資格情報の種類。 データベース`NULL`スコープの資格情報に対してを返します。|  
+|target_type|**nvarchar (100)**|データベーススコープ資格情報の種類。 `NULL`データベーススコープの資格情報に対してを返します。|  
 |target_id|**int**|データベーススコープの資格情報のマップ先のオブジェクトの ID。 データベーススコープの資格情報の場合は0を返します|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -49,7 +49,7 @@ ms.locfileid: "68079422"
  [Transact-sql&#41;&#40;データベーススコープの資格情報を作成する](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [Transact-sql&#41;&#40;データベーススコープの資格情報の変更](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [Transact-sql&#41;&#40;データベーススコープの資格情報を削除します。](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [Transact-sql&#41;&#40;の資格情報の作成](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   

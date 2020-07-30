@@ -19,14 +19,14 @@ ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a308a4c7dfbff5462080d696675759c8c781815f
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 5fa2776bf9e14ccd42a3aecb871dbdbce817448d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976639"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245939"
 ---
-# <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition でのデータ型のマッピング
+# <a name="sql-server-native-client-data-type-mapping-in-itabledefinition"></a>ITableDefinition でのデータ型マッピングの SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **Itabledefinition:: CreateTable**関数を使用してテーブルを作成する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーコンシューマーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 渡される Dbcolumndesc 配列の*pwszTypeName*メンバーにデータ型を指定できます。 コンシューマーが列のデータ型を名前で指定する場合、DBCOLUMNDESC 構造体の *wType* メンバーで示される OLE DB データ型のマッピングは無視されます。  

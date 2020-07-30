@@ -1,5 +1,6 @@
 ---
 title: sp_rda_get_rpo_duration (Transact-sql) |Microsoft Docs
+description: Sp_rda_get_rpo_duration を使用して、リモートの Azure データベースを完全に復元するためにステージングテーブルに保持 SQL Server れる、移行されたデータの時間数を取得します。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e903c3b41a8a191122fdf8499ee6b4c82dbe308
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 3e50e313e49b955b40497f28b2cb9265cf7717e3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053032"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243356"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sp_rda_get_rpo_duration (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,7 +48,7 @@ sp_rda_get_rpo_duration @durationinhours output
 ## <a name="permissions"></a>アクセス許可    
  Db_owner のアクセス許可が必要です。    
     
-## <a name="remarks"></a>注釈    
+## <a name="remarks"></a>解説    
  [Transact-sql&#41;&#40;sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)を実行して値を変更します。    
     
 ## <a name="see-also"></a>参照    

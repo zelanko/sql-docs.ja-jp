@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756310"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243213"
 ---
 # <a name="resync-method"></a>Resync メソッド
 基になるデータベースから、現在の[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトまたは[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションのデータを更新します。  
@@ -37,12 +37,12 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>パラメーター  
  *AffectRecords*  
- 任意。 再**同期**メソッドによって影響を受けるレコードの数を決定する[AffectEnum](../../../ado/reference/ado-api/affectenum.md)値。 既定値は**adAffectAll**です。 この値は、**レコード**オブジェクトの**Fields**コレクションの**Resync**メソッドでは使用できません。  
+ 省略可能。 再**同期**メソッドによって影響を受けるレコードの数を決定する[AffectEnum](../../../ado/reference/ado-api/affectenum.md)値。 既定値は**adAffectAll**です。 この値は、**レコード**オブジェクトの**Fields**コレクションの**Resync**メソッドでは使用できません。  
   
  *ResyncValues*  
- 任意。 基になる値が上書きされるかどうかを指定する[ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)値です。 既定値は**adResyncAllValues**です。  
+ 省略可能。 基になる値が上書きされるかどうかを指定する[ResyncEnum](../../../ado/reference/ado-api/resyncenum.md)値です。 既定値は**adResyncAllValues**です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="recordset"></a>レコードセット  
  現在の**レコードセット**内のレコードを基になるデータベースと再同期するには、 **Resync**メソッドを使用します。 これは、静的カーソルまたは順方向専用カーソルを使用していても、基になるデータベースの変更を確認する場合に便利です。  
@@ -65,11 +65,16 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  **再同期は**、再**同期**が呼び出されたときにエラーが発生しない限り、**フィールド**オブジェクトの**状態**値を変更しません。 たとえば、フィールドが存在しなくなった場合、プロバイダーは、 **adFieldDoesNotExist**などの**フィールド**オブジェクトに対して適切な**状態**値を返します。 返された**状態**値は、 **status**プロパティの値内で論理的に結合できます。  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [Resync メソッドの例 (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Resync メソッドの例 (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   

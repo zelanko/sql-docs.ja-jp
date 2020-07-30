@@ -11,13 +11,14 @@ ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7216ae29d82f51d0788ddfd03bc259407033ff5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: efdc485c139e6b35a025b87b39c2bfd7c21caf9e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999628"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243663"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
+# <a name="send-data-to-filestream-in-sql-server-native-client---isequentialstream-bound-to-icommandtext"></a>ISequentialStream SQL Server Native Client の FILESTREAM にデータを送信する-ICommandText にバインドされている
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルでは、ICommandText パラメーターにバインドされた ISequentialStream インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  

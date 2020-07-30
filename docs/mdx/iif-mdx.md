@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105335"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247136"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -28,7 +28,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>引数  
- IIf 関数は、iif (\<condition>、 \<branch>、 \<else 分岐>) の3つの引数を受け取ります。  
+ IIf 関数は、iif ( \<condition> ,,) という3つの引数を受け取ります \<then branch> \<else branch> 。  
   
  *Logical_Expression*  
  **True** (1) または**false** (0) に評価される条件。 有効な多次元式 (MDX) の論理式を指定する必要があります。  
@@ -39,7 +39,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Expression2 ヒント [一括 |Strict |Lazy]]*  
  論理式が**false**に評価されるときに使用されます。 Expression2 には、有効な多次元式 (MDX) を指定する必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  論理式で指定された条件は、この式の値が0の場合は**false**に評価されます。 その他の値は**true**に評価されます。  
   
  条件が**true**の場合、 **IIf**関数は最初の式を返します。 それ以外の場合、関数は2番目の式を返します。  
@@ -63,9 +63,9 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  集中と厳密はヒントで相互に排他的です。これらは、異なる式で同じ IIF (,,) で使用できます。  
   
- 詳細については、「 [SQL Server Analysis Services 2008 の IIF 関数のクエリヒント](https://go.microsoft.com/fwlink/?LinkId=269540)」および「 [MDX の IIF 関数と CASE ステートメントの実行プランとプランヒント](https://go.microsoft.com/fwlink/?LinkId=269565)」を参照してください。  
+ 詳細については、「 [SQL Server Analysis Services 2008 の IIF 関数のクエリヒント](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008)」および「 [MDX の IIF 関数と CASE ステートメントの実行プランとプランヒント](https://go.microsoft.com/fwlink/?LinkId=269565)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のクエリは、計算されるメジャー内の**IIF**を使用して、Internet Sales Amount メジャーが $1万より大きいか、または未満の場合に、2つの異なる文字列値のいずれかを返す簡単な方法を示しています。  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  

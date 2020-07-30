@@ -14,13 +14,14 @@ ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f214bd650a16dceddd68ec90ded84980d9333ef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3daa573e198ec95daeecccee0e433e86d2366c49
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013015"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246711"
 ---
-# <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>OLE DB テーブル値パラメーター向けに変更されたスキーマ行セット
+# <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters-in-sql-server-native-client"></a>SQL Server Native Client で OLE DB テーブル値パラメーターのスキーマ行セットが変更されました
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   テーブル値パラメーターをサポートするために変更または追加されたスキーマ行セットは次のとおりです。  

@@ -1,5 +1,6 @@
 ---
 title: srv_paramset (拡張ストアド プロシージャ API) | Microsoft Docs
+description: 拡張ストアドプロシージャ API の srv_paramset が、リモートストアドプロシージャ呼び出しの戻りパラメーターの値を設定する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8a2f3caa15eeb6e7ff25f511b4a0e92de68b383
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 645b87be7c1b5955975a370e9e1b49e6608272b3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756681"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248380"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (拡張ストアド プロシージャ API)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ len
  *n*  
  設定するパラメーターの番号を示します。 最初のパラメーターは 1 です。  
   
- *データ*  
+ *data*  
  リモート ストアド プロシージャの戻りパラメーターとしてクライアントに返されるデータ値を指すポインターです。  
   
  *len*  
@@ -87,7 +88,7 @@ len
 |IG は値が無視されることを示します。||  
 |valid はデータを指す任意の有効なポインターを示します。||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パラメーターには、リモート ストアド プロシージャを使用してクライアントとアプリケーションとの間で受け渡しされるデータが格納されます。 クライアントは戻りパラメーターとして特定のパラメーターを指定できます。 この戻りパラメーターには、Open Data Services サーバー アプリケーションがクライアントに返す値を格納することができます。 戻りパラメーターの使用は、パラメーターの参照渡しに類似しています。  
   
  戻りパラメーターとして呼び出されていないパラメーターには、戻り値を設定できません。 パラメーターがどのように呼び出されたかを判別するには **srv_paramstatus** を使用します。  
@@ -99,7 +100,7 @@ len
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://www.microsoft.com/msrc?rtc=1)をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [srv_paramsetoutput &#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

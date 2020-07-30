@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c84ab6806924649bdad9bb712f730c24011cdb38
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759448"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243163"
 ---
 # <a name="value-property-ado"></a>Value プロパティ (ADO)
 
@@ -43,11 +43,19 @@ ADO では、 **Value**プロパティを使用して長いバイナリデータ
 > [レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに追加された新しい**Field**オブジェクトの場合は、他の**フィールド**プロパティを指定する前に、 **Value**プロパティを設定する必要があります。 最初に、**値**プロパティの特定の値が割り当てられており、という**フィールド**コレクションで[更新](../../../ado/reference/ado-api/update-method.md)されている必要があります。 その後、[型](../../../ado/reference/ado-api/type-property-ado.md)や[属性](../../../ado/reference/ado-api/attributes-property-ado.md)などの他のプロパティにアクセスできます。
   
 ## <a name="applies-to"></a>適用対象
-  
-||||  
-|-|-|-|  
-|[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|[Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
-  
+
+:::row:::
+    :::column:::
+        [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照
 
 [Value プロパティの例 (VB)](../../../ado/reference/ado-api/value-property-example-vb.md) 

@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a7484de48edaecea56fc135ca3b803875f9557c
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977779"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247122"
 ---
-# <a name="cursors"></a>カーソル
+# <a name="odbc-cursors"></a>ODBC カーソル
 アプリケーションは*カーソル*を使用してデータをフェッチします。 カーソルは、結果セットとは異なります。結果セットは、特定の検索条件に一致する行のセットです。一方、カーソルは、それらの行をアプリケーションに返すソフトウェアです。 データベースに適用される名前*カーソル*。これは、コンピューターターミナルの点滅カーソルから発生することがあります。 カーソルが画面上の現在位置を示し、型指定された単語が次に表示されるのと同様に、結果セットのカーソルは結果セット内の現在の位置と、次に返される行を示します。  
   
  ODBC のカーソルモデルは、embedded SQL のカーソルモデルに基づいています。 これらのモデルの注目すべき点の1つは、カーソルを開く方法です。 Embedded SQL では、カーソルを使用する前に、明示的に宣言して開いておく必要があります。 ODBC では、結果セットを作成するステートメントが実行されると、カーソルが暗黙的に開かれます。 カーソルが開かれると、結果セットの最初の行の前に配置されます。 Embedded SQL と ODBC の両方で、アプリケーションの使用が終了したら、カーソルを閉じる必要があります。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13a24320f7b49d8d2a0e1341bff2d9a4cca575dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5e504b442116f0a137d40a0932b00e51753deae5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765323"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243153"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection プロパティ (ADO MD)
 現在のセルセットまたはカタログが現在どの ADO[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに属しているかを示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "82765323"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  接続または**接続**オブジェクトを定義する文字列を含む**Variant**を設定します。値の取得もできます。 既定値は空です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このプロパティは、有効な ADO**接続**オブジェクトまたは有効な接続文字列に設定できます。 このプロパティが接続文字列に設定されている場合、プロバイダーはこの定義を使用して新しい**接続**オブジェクトを作成し、接続を開きます。  
   
  [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md)メソッドの*ActiveConnection*引数を使用して[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクトを開くと、 **ActiveConnection**プロパティは引数の値を継承します。  
@@ -57,11 +57,16 @@ ms.locfileid: "82765323"
 ```  
   
 ## <a name="applies-to"></a>適用対象  
-  
-|||  
-|-|-|  
-|[Catalog オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Catalog オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

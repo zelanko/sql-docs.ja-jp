@@ -18,13 +18,14 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b46af0e58d433f51fe4417bfe9245a35fbe1b629
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009870"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243903"
 ---
-# <a name="using-large-value-types"></a>大きな値をとるデータ型の使用
+# <a name="using-large-value-types-in-sql-server-native-client"></a>SQL Server Native Client での大きな値型の使用
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンでは、大きな値をとるデータ型を使用して作業する場合に特別な処理が必要でした。 大きな値のデータ型とは、最大行サイズの 8 KB を超えるデータ型のことです。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、 **varchar**、 **nvarchar** 、および**varbinary**データ型の**max**指定子が導入され、2 ^ 31-1 バイトの大きさの値を格納できるようになりました。 テーブルの列と変数では [!INCLUDE[tsql](../../../includes/tsql-md.md)] 、 **varchar (max)**、 **nvarchar (max)** 、または**varbinary (max)** データ型を指定できます。  
