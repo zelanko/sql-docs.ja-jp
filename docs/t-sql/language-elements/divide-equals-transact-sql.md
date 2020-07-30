@@ -21,15 +21,15 @@ ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2198e25408dcf9c62a49d89d224c4c80a43d535a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 80b042cd4ee35bc6cc08e0b555335fbc2d2b5eba
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921458"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394198"
 ---
 # <a name="-division-assignment-transact-sql"></a>/= (除算代入) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   1 つの数値を別の数値で除算し、値に演算の結果を設定します。 たとえば、変数 @x が 34 である場合、`@x /= 2` は @x の元の値を取得し、2 で除算して、@x にその新しい値 (17) を設定します。  
   

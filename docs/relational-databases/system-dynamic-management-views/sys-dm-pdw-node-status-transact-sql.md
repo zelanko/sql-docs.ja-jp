@@ -12,23 +12,23 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 11c31d586fadfb8919cef1e7c1c6743be60e0548
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e13043774528228eaa46e70abe5ee00f9e51ac9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819388"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395937"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>dm_pdw_node_status (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   すべてのアプライアンスノードのパフォーマンスと状態に関する追加情報 ( [dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) を保持します。 アプライアンス内のノードごとに1行が一覧表示されます。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|ノードに関連付けられている一意の数値 id。<br /><br /> このビューのキー。|種類に関係なく、アプライアンス全体で一意です。|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
+|process_name|**nvarchar (255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |allocated_memory|**bigint**|このノードで割り当てられたメモリの合計。||  
 |available_memory|**bigint**|このノードで使用可能なメモリの合計。||  
 |process_cpu_usage|**bigint**|プロセス CPU 使用率の合計 (ティック単位)。||  

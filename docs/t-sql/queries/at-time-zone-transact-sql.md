@@ -16,16 +16,16 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a315658aa6d4278e12dbccd13bfa4817dec36976
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e27399d2decb00317895017f8a375deb89581d05
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807877"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395085"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 *inputdate* を対応する *datetimeoffset* 値に変換先のタイム ゾーンで変換します。 *inputdate* がオフセット情報なしで提供されると、この関数は、*inputdate* が変換先のタイム ゾーン内であるものと想定して、タイム ゾーンのオフセットを適用します。 *inputdate* が *datetimeoffset* 値として与えられる場合、**AT TIME ZONE** 句はタイム ゾーン変換規則を利用して変換先のタイム ゾーンにそれを変換します。  
 

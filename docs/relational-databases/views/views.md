@@ -13,15 +13,15 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48614fa846903b2104ee27f00dc57cc154adef92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ef24d6eeb1739d40fb88eccd2fb18220ef6fea9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68131992"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395711"
 ---
 # <a name="views"></a>ビュー
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   ビューとは、クエリによって内容が定義される仮想テーブルです。 ビューは、テーブルと同様に、一連の名前の付いた列とデータ行で構成されます。 インデックスが設定されていないと、データベース内に保存された一連のデータ値としてビューが作成されることはありません。 データは、ビューを定義するクエリが参照するテーブルから取り出され、ビューの行と列はビューを参照したときに動的に作成されます。  
   
  ビューは、ビューが参照する基になるテーブルに対するフィルターの役目を果たします。 ビューを定義するクエリでは、1 つ以上のテーブルを参照することも、現在のデータベースや他のデータベースのビューを参照することもできます。 参照先が複数で種類が異なる場合、ビューの定義に分散クエリも使用できます。 分散クエリは、組織のデータを地域ごとのサーバーに保存している場合に、複数のサーバーから同じ構造のデータを結合するときなどに便利です。  

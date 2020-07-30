@@ -17,16 +17,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 28a61eb05b015be7eee85a7376a3c0ce84cac27f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112865"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394794"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 **OPENJSON** は、JSON テキストを解析し、JSON 入力からのオブジェクトとプロパティを行と列として返すテーブル値関数です。 つまり、**OPENJSON** は、JSON ドキュメントに対する行セット ビューを提供します。 行セット内の列と、それらの列に入力するために使用する JSON プロパティのパスを明示的に指定できます。 **OPENJSON** は一連の行を返すため、他のテーブル、ビュー、またはテーブル値関数で使用するのと同じように、**OPENJSON** を [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの `FROM` 句で使用できます。  
   

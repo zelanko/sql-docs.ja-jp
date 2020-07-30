@@ -22,15 +22,15 @@ ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fd9255bc39b041f97e60cd3f64f0416cf49ac31
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a7bb8a457873a40eb4023ce780946428e6294430
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916253"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394129"
 ---
 # <a name="-bitwise-or-assignment-transact-sql"></a>|= (ビットごとの OR 代入) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中で、バイナリ式に変換された 2 つの指定される整数値に対して、ビットごとの論理和演算を実行し、値に演算の結果を設定します。  
   

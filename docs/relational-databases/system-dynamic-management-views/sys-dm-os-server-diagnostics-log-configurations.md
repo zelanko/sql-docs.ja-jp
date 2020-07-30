@@ -21,15 +21,15 @@ ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14d874e26e9cbaa5a97d65675f384f2dce7ba30d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 797cdece07651499a9b770ba59972792805828a5
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829302"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395231"
 ---
 # <a name="sysdm_os_server_diagnostics_log_configurations"></a>sys.dm_os_server_diagnostics_log_configurations
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   フェールオーバークラスター診断ログの現在の構成を含む1行を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これらのプロパティ設定によって、診断ログがオンになっているかどうか、およびログファイルの場所、数、およびサイズが決まります。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82829302"
 ## <a name="permissions"></a>アクセス許可  
  SQL Server フェールオーバー クラスター インスタンスに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、sys.dm_os_server_diagnostics_log_configurations を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー診断ログのプロパティ設定を返します。  
   
 ```  
@@ -55,7 +55,7 @@ FROM sys.dm_os_server_diagnostics_log_configurations;
   
 |IS_ENABLED|PATH|MAX_SIZE|MAX_FILES|  
 |-----------------|----------|---------------|----------------|  
-|1|\<C:\Program Server\MSSQL13\MSSQL\Log SQL>|10|10|  
+|1|\<C:\Program Files\Microsoft SQL Server\MSSQL13\MSSQL\Log>|10|10|  
   
 ## <a name="see-also"></a>参照  
  [フェールオーバー クラスター インスタンスの診断ログを表示して読む方法](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  

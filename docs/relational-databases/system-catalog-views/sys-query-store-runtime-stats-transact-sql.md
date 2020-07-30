@@ -21,15 +21,15 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90e93d0c56d96cc88b5be0eeed8680bf29c83cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834120"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395147"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>query_store_runtime_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   クエリのランタイム実行統計情報に関する情報を格納します。  
   
@@ -93,11 +93,11 @@ ms.locfileid: "82834120"
 |**min_log_bytes_used**|**bigint**|集計間隔内で、クエリプランによって使用されるデータベースログの最小バイト数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
 |**max_log_bytes_used**|**bigint**|集計間隔内で、クエリプランによって使用されるデータベースログ内の最大バイト数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
 |**stdev_log_bytes_used**|**float**|集計間隔内で、クエリプランによって使用されるデータベースログ内のバイト数の標準偏差。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
-|**avg_tempdb_space_used**|**float**|集計間隔内のクエリプランの平均ページ読み取り回数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] )および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
-|**last_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] )および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
-|**min_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] )および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
-|**max_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] )および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
-|**stdev_tempdb_space_used**|**float**|集計間隔内のクエリプランに対するページ読み取りの標準偏差。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] )および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。|
+|**avg_tempdb_space_used**|**float**|集計間隔内のクエリプランの平均ページ読み取り回数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**last_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**min_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**max_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**stdev_tempdb_space_used**|**float**|集計間隔内のクエリプランに対するページ読み取りの標準偏差。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
 |**avg_page_server_io_reads**|**float**|集計間隔内のクエリプランに対するページサーバー i/o 読み取りの平均数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
 |**last_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
 |**min_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
@@ -116,7 +116,7 @@ ms.locfileid: "82834120"
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのクエリストア](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

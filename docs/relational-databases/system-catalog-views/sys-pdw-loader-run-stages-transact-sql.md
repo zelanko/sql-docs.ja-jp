@@ -12,21 +12,20 @@ ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 27f51f85b2723aa010c8f8d37756bb0a049f5a83
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 0b25a615f6b420b9cc08fe5d7600249cb0e5fb03
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627319"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394239"
 ---
 # <a name="syspdw_loader_run_stages-transact-sql"></a>pdw_loader_run_stages (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   で実行中および完了した読み込み操作に関する情報を格納 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] します。 情報は、システムの再起動の間で永続化します。  
   
-|||||  
-|-|-|-|-|  
-|列名|データ型|説明|Range|  
+| 列名 | データ型 | 説明 | Range |
+| ----------- | --------- | ----------- | ----- |
 |run_id|**int**|ローダー実行の一意識別子。||  
 |準備|**nvarchar(30)**|実行の現在のステージ。|' CREATE_STAGING '、' DMS_LOAD '、' LOAD_INSERT '、' LOAD_CLEANUP '|  
 |request_id|**nvarchar(32)**|このステージを実行している要求の ID。||  

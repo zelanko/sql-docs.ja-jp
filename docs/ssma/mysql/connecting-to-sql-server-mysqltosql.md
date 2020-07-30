@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 462b209d73f48217cf9941adf2e3af45d62371cd
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293959"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394288"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server への接続 (MySQLToSQL)
 MySQL データベースを SQL Server に移行するには、SQL Server のターゲットインスタンスに接続する必要があります。 接続すると、SSMA は SQL Server インスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Server メタデータエクスプローラーにデータベースのメタデータを表示します。 SSMA は、接続している SQL Server のインスタンスの情報を格納しますが、パスワードは保存しません。  
@@ -78,15 +78,14 @@ MySQL データベースオブジェクトを SQL Server 構文に変換する�
   
 5.  "SQL Azure" に対して、より高いバージョンの互換性は無効です。  
   
-||||||||  
+|プロジェクトの種類と対象サーバーのバージョン|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(バージョン:13. x)|SQL Azure|  
 |-|-|-|-|-|-|-|  
-|**プロジェクトの種類 Vs ターゲットサーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(バージョン:13. x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|はい|はい|はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|はい|はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||はい||  
-|SQL Azure||||||はい|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|○|○|○|○|○||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||○|○|○|○||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||○|○|○||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||○|○||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||○||  
+|SQL Azure||||||○|  
   
 > [!IMPORTANT]  
 > データベースオブジェクトの変換は、プロジェクトの種類に従って実行されますが、接続されているのバージョンによっては実行されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 プロジェクトの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より上位のバージョン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) に接続している場合でも、変換は2005に従って実行されます。  

@@ -13,15 +13,15 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: fd886217b2fb2caf0fe3f32e88b7bf0215ece1a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcfa1bf254bc60ee1bd2c65ddb813851d0bd369e
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145677"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394322"
 ---
 # <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>pdw_nodes_dm_exec_sql_text (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 指定された*sql_handle*によって識別される SQL バッチのテキストを返します。 このテーブル値関数は、システム関数 **fn_get_sql** に代わるものです。  
    
@@ -35,11 +35,11 @@ ms.locfileid: "73145677"
 |**暗号**|**bit**|1: SQL テキストは暗号化されています。<br /><br /> 0: SQL テキストは暗号化されていません。|  
 |**text**|**nvarchar(max)**|SQL クエリのテキスト。<br /><br /> 暗号化されているオブジェクトの場合は NULL になります。|  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 [Dm_exec_sql_text](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql?view=sql-server-ver15)適用される同じコメント。  
   
 ## <a name="permissions"></a>アクセス許可  
- サーバーに対する**sysadmin**サーバー `VIEW SERVER STATE`ロールまたは権限が必要です。  
+ サーバーに対する**sysadmin**サーバーロールまたは権限が必要 `VIEW SERVER STATE` です。  
   
 ## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

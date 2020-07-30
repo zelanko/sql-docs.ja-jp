@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c7687b678e755f508f363fa1b327950232038c04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbff8b99dffebdc32e3d4d7e681eccc451899016
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090842"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394954"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL コンソールの使用 (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コマンドラインでコンソールアプリケーションを使用して、MySQL の Migration Assistant (SSMA) にアクセスできるようになりました。 スクリプトファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 SSMA では、コンソールアプリケーションとして、スクリプトレベルのインターフェイスを有効にし、移行サイクルを短縮し、移行作業をスケールします。  
@@ -23,9 +23,8 @@ ms.locfileid: "68090842"
   
 このセクションでは、次のトピックについて説明します。  
   
-|||  
+|トピック|説明|  
 |-|-|  
-|**トピック**|**説明**|  
 |[SSMA for MySQL コンソールでのはじめに &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|コンソールアプリケーションを実行する手順について説明します。|  
 |[SSMA コンソールのコマンドラインオプション &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|SSMA コンソールアプリケーションを操作するためのコマンドラインオプションとパラメーターについて説明します。|  
 |[MySQLToSQL&#41;&#40;のスクリプトファイルの作成](../../ssma/mysql/creating-script-files-mysqltosql.md)|スクリプトファイルの作成方法について説明します。|  

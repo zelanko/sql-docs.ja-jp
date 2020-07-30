@@ -22,15 +22,15 @@ ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91c9dd145cdc939a3b41d76c5cf6b7936b56fd0f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f24d5937b7f573951051fa3e27aaf111bdacaa40
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923600"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395905"
 ---
 # <a name="--subtraction-transact-sql"></a>- (減算) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   2 つの値で減算を行います (算術減算演算子)。 日付から日数を減算することもできます。  
   

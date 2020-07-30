@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d70d9599dda2f71edff911ad42821fdf101b524c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637817"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363174"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>セカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)
 
@@ -62,7 +62,7 @@ ms.locfileid: "85637817"
 
 既定では、レプリカには読み取り/書き込み接続のリダイレクトは設定されていません。 接続要求がセカンダリ レプリカによってどのように処理されるかは、セカンダリ レプリカが接続を許可するように設定されているかどうかと、接続文字列内の `ApplicationIntent` 設定によって決まります。 次の表は、`SECONDARY_ROLE (ALLOW CONNECTIONS = )` と `ApplicationIntent` に基づくセカンダリ レプリカによる接続の処理方法を示しています。
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|`ApplicationIntent` 値|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/> Default|接続失敗|接続失敗|接続成功<br/>読み取り成功<br/>書き込み失敗|
 |`ApplicationIntent=ReadOnly`|接続失敗|接続成功|接続成功
@@ -73,7 +73,7 @@ ms.locfileid: "85637817"
 
 読み取り/書き込み接続のリダイレクトを設定すると、レプリカによる接続要求の処理方法が変わります。 接続動作は、引き続き `SECONDARY_ROLE (ALLOW CONNECTIONS = )` と `ApplicationIntent` の設定によって決まります。 次の表は、`READ_WRITE_ROUTING` が設定されたセカンダリ レプリカによる `SECONDARY_ROLE (ALLOW CONNECTIONS = )` と `ApplicationIntent` に基づく接続の処理方法を示しています。
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|`ApplicationIntent` 値|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>Default|接続失敗|接続失敗|プライマリへの接続のルーティング|
 |`ApplicationIntent=ReadOnly`|接続失敗|接続成功|接続成功

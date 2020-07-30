@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 27b32c1c4e0f3f4d5359af287ba07d40b033af00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c94765dfe76bc5a1ef188328a6fe27e96671efb1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301813"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363135"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 関数
 **互換性**  
  導入されたバージョン: ODBC 3.0: Windows XP Service Pack 2、Windows Server 2003 Service Pack 1、およびそれ以降のオペレーティングシステムでは非推奨となりました。  
   
  **まとめ**  
- **Sqlremovedrivermanager**は、システム情報の odbcinst .ini エントリから ODBC コアコンポーネントに関する情報を変更または削除します。  
+ **Sqlremovedrivermanager**は、システム情報の Odbcinst.ini エントリから ODBC コアコンポーネントに関する情報を変更または削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,7 +49,7 @@ BOOL SQLRemoveDriverManager(
  関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。 この関数が呼び出されたときにシステム情報にエントリが存在しない場合、関数は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlremovedrivermanager**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **Sqlremovedrivermanager**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連する* \* pferrorcode*値を取得できます。 次の表は、 **Sqlインストーラエラー**によって返される可能性がある* \* pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
 |*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
@@ -77,17 +77,27 @@ BOOL SQLRemoveDriverManager(
  **Sqlremovedrivermanager**は、実際にはファイルを削除しません。 呼び出し元のプログラムは、ファイルを削除し、ファイルの使用量のカウントを保持する役割を担います。 ただし、これらのファイルは、ファイルの使用量が増加していない他のアプリケーションによって使用されている可能性があるため、コンポーネントの使用量とファイルの使用数の両方がゼロになった場合は、ドライバーマネージャーファイルを削除しないでください。  
   
  **Sqlremovedrivermanager**は、アンインストールプロセスの一部として呼び出されます。 ODBC core コンポーネント (ドライバーマネージャー、カーソルライブラリ、インストーラー、言語ライブラリ、管理者、サンキングファイルなどが含まれます) は、全体としてアンインストールされます。 アンインストールプロセスの一部として**Sqlremovedrivermanager**を呼び出すと、次のファイルは削除されません。  
-  
-|||  
-|-|-|  
-|ODBC32DLL|ODBCCP32.DLL|  
-|ODBCCR32.DLL|ODBC16GT.DLL|  
-|ODBCCU32.DLL|ODBC32GT.DLL|  
-|ODBCINT。DLL|DS16GT.DLL|  
-|ODBCTRAC.DLL.DLL|DS32GT.DLL|  
-|MSVCRT40.DLL|ODBCAD32.EXE.EXCEL.EXE|  
-|ODBCCP32.CPL||  
-  
+
+:::row:::
+    :::column:::
+        ODBC32DLL  
+        ODBCCR32.DLL  
+        ODBCCU32.DLL  
+        ODBCINT.DLL  
+        ODBCTRAC.DLL  
+        MSVCRT40.DLL  
+        ODBCCP32.CPL  
+    :::column-end:::
+    :::column:::
+        ODBCCP32.DLL  
+        ODBC16GT.DLL  
+        ODBC32GT.DLL  
+        DS16GT.DLL  
+        DS32GT.DLL  
+        ODBCAD32.EXE  
+    :::column-end:::
+:::row-end:::
+
  **Sqlremovedrivermanager**は、アップグレードプロセスの一部としても呼び出されます。 アプリケーションでアップグレードを実行する必要があることが検出され、ドライバーが既にインストールされている場合は、ドライバーを削除してから再インストールする必要があります。  
   
  コンポーネントの使用回数を減らすには、最初に**Sqlremovedrivermanager**を呼び出す必要があります。 コンポーネントの使用量を増やすには、 **Sqlinstalldriverex**を呼び出す必要があります。 アプリケーションセットアッププログラムは、古いコアコンポーネントファイルを新しいファイルに置き換える必要があります。 ファイルの使用量カウントは変わりません。また、古いバージョンのコアコンポーネントファイルを使用するその他のアプリケーションでは、新しいバージョンのファイルが使用されるようになります。  

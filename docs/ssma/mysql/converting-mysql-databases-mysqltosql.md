@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: ce84ae70a1b09cd744528b132dcc7052cdde8816
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293669"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394277"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>MySQL データベースの変換 (MySQLToSQL)
 MySQL への接続、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure への接続、およびプロジェクトおよびデータマッピングのオプションの設定が完了したら、mysql データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure データベースオブジェクトに変換できます。  
@@ -31,12 +31,11 @@ MySQL への接続、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 ## <a name="conversion-results"></a>変換結果  
 次の表は、変換される MySQL オブジェクトと、結果として得られるオブジェクトを示してい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-|||  
+|MySQL オブジェクト|結果の SQL Server オブジェクト|  
 |-|-|  
-|**MySQL オブジェクト**|**結果の SQL Server オブジェクト**|  
-|インデックスなどの依存オブジェクトを含むテーブル|SSMA は、依存オブジェクトを含むテーブルを作成します。 テーブルは、すべてのインデックスと制約に変換されます。 インデックスは、個別のオブジェクトに変換され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br />**空間データ型のマッピング**は、テーブルノードレベルでのみ実行できます。<br /><br />テーブル変換の設定の詳細については、「[変換の設定](conversion-settings-mysqltosql.md)」を参照してください。|  
-|機能|関数を Transact-sql に直接変換できる場合は、SSMA によって関数が作成されます。 場合によっては、関数をストアドプロシージャに変換する必要があります。 これは、プロジェクト設定の**関数変換**を使用して行うことができます。 この場合、SSMA はストアドプロシージャを作成し、ストアドプロシージャを呼び出す関数を作成します。<br /><br />**指定された選択肢:**<br /><br />プロジェクト設定に従って変換する<br /><br />関数に変換<br /><br />ストアドプロシージャへの変換<br /><br />関数の変換設定の詳細については、「[変換の設定](conversion-settings-mysqltosql.md)」を参照してください。|  
-|手順|プロシージャを Transact-sql に直接変換できる場合は、SSMA によってストアドプロシージャが作成されます。 場合によっては、独立したトランザクションでストアドプロシージャを呼び出す必要があります。 この場合、SSMA は、プロシージャを実装するストアドプロシージャと、実装するストアドプロシージャを呼び出すために使用する2つのストアドプロシージャを作成します。|  
+|インデックスなどの依存オブジェクトを含むテーブル|SSMA によって、依存オブジェクトを含むテーブルが作成されます。 テーブルは、すべてのインデックスと制約に変換されます。 インデックスは、個別のオブジェクトに変換され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br />**空間データ型のマッピング**は、テーブルノードレベルでのみ実行できます。<br /><br />テーブル変換の設定の詳細については、「[変換の設定](conversion-settings-mysqltosql.md)」を参照してください。|  
+|関数|関数を Transact-SQL に直接変換できる場合は、SSMA によって関数が作成されます。 場合によっては、関数をストアド プロシージャに変換する必要があります。 これは、プロジェクト設定の**関数変換**を使用して行うことができます。 この場合、SSMA によってストアド プロシージャが作成され、ストアド プロシージャを呼び出す関数が作成されます。<br /><br />**指定された選択肢:**<br /><br />プロジェクト設定に従って変換する<br /><br />関数に変換<br /><br />ストアドプロシージャへの変換<br /><br />関数の変換設定の詳細については、「[変換の設定](conversion-settings-mysqltosql.md)」を参照してください。|  
+|手順|プロシージャを Transact-SQL に直接変換できる場合は、SSMA によってストアド プロシージャが作成されます。 場合によっては、独立したトランザクションでストアドプロシージャを呼び出す必要があります。 この場合は、SSMA によって 2 つのストアド プロシージャが作成されます。1 つはプロシージャを実装するストアド プロシージャで、もう 1 つは実装ストアド プロシージャを呼び出すために使用されるものです。|  
 |データベースの変換|MySQL オブジェクトとしてのデータベースは、SSMA for MySQL によって直接変換されるわけではありません。 MySQL データベースはスキーマ名と同様に処理され、すべての物理パラメーターは変換時に失われます。 SSMA for MySQL は[、mysql データベースを SQL Server スキーマ &#40;MySQLToSQL&#41;にマッピング](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)して、mysql データベースから適切な SQL Server データベース/スキーマのペアにオブジェクトをマップします。|  
 |トリガーの変換|**SSMA は、次の規則に基づいてトリガーを作成します。**<br /><br />T-sql トリガーではなくトリガーがに変換される前<br /><br />AFTER トリガーは、行ごとにイテレーションがあるか、または指定されていない場合に、に変換されます。|  
 |変換の表示|SSMA により、依存オブジェクトを含むビューが作成されます。|  
