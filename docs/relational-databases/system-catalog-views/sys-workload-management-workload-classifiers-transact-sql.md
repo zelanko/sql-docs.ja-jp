@@ -12,20 +12,20 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 585eb4551fb688f4f6a620729310b0245462cbff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69d06d021bfdc7a9208f8177ad93708008104653
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632962"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393955"
 ---
 # <a name="sysworkload_management_workload_classifiers-transact-sql"></a>workload_management_workload_classifiers (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
  ワークロード分類子の詳細を返します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|分類子の一意の ID。 Null 値はありません||
 group_name|**sysname**|分類子が割り当てられているワークロードグループの名前。 NULL 値は許可されません。 Workload_management_workload_groups に参加可能 ||

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36cc006382bab28a93beed1ce8c6e48896719674
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944628"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395177"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>ユーザー インターフェイス リファレンス (MySQLToSQL)
 ここでは、SQL Server Migration Assistant (SSMA) for MySQL のヘルプトピックについて説明します。  
@@ -22,13 +22,12 @@ ms.locfileid: "67944628"
 ## <a name="in-this-section"></a>このセクションの内容  
 次の表に、SSMA ダイアログボックスの一覧を示します。  
   
-|||  
+|トピック|説明|  
 |-|-|  
-|**トピック**|**説明**|  
 |[MySQLToSQL&#41;&#40;の高度なオブジェクトの選択](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|[**オブジェクト選択の詳細設定**] ダイアログボックスを使用すると、フィルター条件を使用してデータベースオブジェクトを検索し、それらのオブジェクトをオンまたはオフにできます。|  
 |[評価レポート &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|このレポートを使用して、MySQL オブジェクトを Transact-sql 構文に変換した結果を表示し、移行の時間と複雑さを SQL Server に見積もることができます。|  
 |[MySQL &#40;MySQLToSQL に接続&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|[ **Mysql への接続**] ダイアログボックスを使用して、移行する mysql データベースに接続します。|  
-|[SQL Server に接続する](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|[ **SQL Server への接続**] ダイアログボックスを使用して、移行先の SQL Server のインスタンスに接続します。|  
+|[SQL Server に接続します](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|[ **SQL Server への接続**] ダイアログボックスを使用して、移行先の SQL Server のインスタンスに接続します。|  
 |[Azure SQL DB への接続 &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|[ **SQL Azure への接続**] ダイアログボックスを使用して、移行先の SQL Azure のインスタンスに接続します。|  
 |[変換の設定 (MySQL)](https://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|[**設定**] タブを使用すると、ノードレベルの設定を設定できます。|  
 |[データ移行レポート &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|MySQL から SQL Server または SQL Azure にデータを移行した結果を表示します。|  

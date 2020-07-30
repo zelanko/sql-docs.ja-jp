@@ -18,15 +18,15 @@ ms.assetid: 796322df-e62a-45bf-b519-89e1d521abce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2521d9543c71d9dee298fbb58518163fd45fbfdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b78875b7c6f3440bd747045d1b90d0f8ef323c4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999529"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394887"
 ---
 # <a name="sysdatabase_credentials-transact-sql"></a>database_credentials (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   データベース内のデータベーススコープ資格情報ごとに1行のデータを返します。  
 > [!IMPORTANT]  
@@ -50,7 +50,7 @@ ms.locfileid: "67999529"
  [Transact-sql&#41;&#40;データベーススコープの資格情報を作成する](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [Transact-sql&#41;&#40;データベーススコープの資格情報の変更](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [Transact-sql&#41;&#40;データベーススコープの資格情報を削除します。](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [Transact-sql&#41;&#40;の資格情報の作成](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   

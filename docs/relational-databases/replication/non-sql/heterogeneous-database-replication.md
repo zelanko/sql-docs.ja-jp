@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f6a2540f4b1a3cb35f697ce4e27a51b99f5bdf84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f392b232e81c0f6dcb2fcd546acf91a714f5c7ee
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893334"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394392"
 ---
 # <a name="heterogeneous-database-replication"></a>異種データベース レプリケーション  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85893334"
 
 -   Oracle に対するデータのパブリッシュには次の制限があります。  
 
-  | |2016 以前 |2017 以降 |
+  |シナリオ|2016 以前 |2017 以降 |
   |-------|-------|--------|
   |Oracle からのレプリケーション |Oracle 10g 以前のみをサポート |Oracle 10g 以前のみをサポート |
   |Oracle へのレプリケーション |Oracle 12c まで |サポートされていません |

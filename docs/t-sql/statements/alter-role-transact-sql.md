@@ -22,15 +22,15 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2af9386dc25fec5309d13d64f02ec8997f60792d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d4b00464aaa9651f353a3c525cdf43badf72b88c
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626983"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395495"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   データベース ロールのメンバーを追加または削除するか、ユーザー定義のデータベース ロールの名前を変更します。  
   

@@ -29,16 +29,16 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: a3be9148e4ae5e8daae7528923506fc0bbde665d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: fd1523d0c1cb9d21240887f2d801e447828def0e
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484394"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395207"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   指定された [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のテーブルの現在の ID 値をチェックし、必要に応じて ID 値を変更します。 ID 列の新しい現在の ID 値を手動で設定する場合に DBCC CHECKIDENT を使用することもできます。  
   

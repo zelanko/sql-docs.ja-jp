@@ -13,15 +13,15 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 96b499ea5bc38d2a4cf9c380116108009ea46086
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a11571ab7e4de54dbae73ae1f1252c88c2e2dca
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145637"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395939"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>pdw_nodes_dm_exec_query_plan (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 プラン ハンドルで指定されたバッチのプラン表示を XML 形式で返します。 プラン ハンドルで指定するプランは、キャッシュ内のもの、または現在実行中のものを指定できます。  
 
@@ -36,11 +36,11 @@ ms.locfileid: "73145637"
 |**暗号**|**bit**|対応するプロシージャが暗号化されているかどうか。<br /><br /> 0 = 暗号化されていない<br /><br /> 1 = 暗号化されている<br /><br /> NULL 値は許可されません。|  
 |**query_plan**|**xml**|*Plan_handle*で指定されたクエリ実行プランのコンパイル時のプラン表示表現を格納します。 プラン表示は XML 形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。<br /><br /> NULL 値は許可されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 [Dm_exec_query_plan](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql?view=sql-server-ver15)適用される同じコメント。  
   
 ## <a name="permissions"></a>アクセス許可  
- サーバーに対する**sysadmin**サーバー `VIEW SERVER STATE`ロールまたは権限が必要です。  
+ サーバーに対する**sysadmin**サーバーロールまたは権限が必要 `VIEW SERVER STATE` です。  
   
 ## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

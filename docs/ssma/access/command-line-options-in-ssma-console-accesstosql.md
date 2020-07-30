@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b78f6ccae739b6fe70fc813959daa44adca7c22
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265534"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394877"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA コンソールのコマンドラインオプション (フル実行 Sql)
 Microsoft では、SSMA アクティビティを実行および制御するための、堅牢な一連のコマンドラインオプションを提供しています。 後続のセクションでは、追加の詳細情報を提供します。  
@@ -25,7 +25,7 @@ Microsoft では、SSMA アクティビティを実行および制御するた�
   
 このセクションでは、"option" という用語は "switch" とも呼ばれます。  
   
-オプションでは大文字と小文字が区別されず**-**、' '**/** または ' ' 文字で始めることができます。  
+オプションでは大文字と小文字が区別されず、' **-** ' または ' ' 文字で始めることができ **/** ます。  
   
 オプションを指定する場合は、対応するオプションパラメーターを指定することが必須です。  
   
@@ -117,16 +117,12 @@ Xmloutput には、次の2つのオプションがあります。
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-||  
-|-|  
-||  
-  
 ### <a name="secure-password-option--psecurepassword"></a>セキュリティで保護されたパスワードオプション:-p/securepassword  
 このオプションは、サーバー接続の暗号化されたパスワードを示します。 これは、移行関連のアクティビティでスクリプトやヘルプを実行しないという点で、他のすべてのオプションとは異なりますが、移行プロジェクトで使用されるサーバー接続のパスワード暗号化の管理に役立ちます。  
   
 コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「[パスワードの管理](managing-passwords-accesstosql.md)」セクションを参照してください。  
   
-で`-p/securepassword`は、次のサブオプションがサポートされています。  
+では、次のサブオプションがサポートされてい `-p/securepassword` ます。  
   
 -   指定したサーバー ID またはサーバー接続ファイルで定義されているすべてのサーバー id の保護された記憶域にパスワードを追加したり、既存のパスワードを更新したりするには、次のようにします。  
   

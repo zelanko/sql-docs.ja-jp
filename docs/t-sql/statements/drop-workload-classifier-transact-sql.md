@@ -19,16 +19,16 @@ helpviewer_keywords:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5db3c50e4b0a21e2e1acf9512995870b62375dd8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 244166a9aefb08c5fe037776d47cf5a578c50481
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73632833"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394467"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 既存のユーザー定義のワークロード管理分類子を削除します。  要求が実行されている場合、または要求キュー内で中断状態にある場合、要求の分類は維持されるので、分類子をすぐに削除することができます。 重要度が異なる分類子を削除および再作成することは、既に分類済みの要求に影響しません。
   

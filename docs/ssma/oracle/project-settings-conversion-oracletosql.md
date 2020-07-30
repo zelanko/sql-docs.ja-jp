@@ -11,12 +11,12 @@ ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 86cc0909140190ca7731ddc647fc979a6cd21c7a
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: a822aa1e9c30e245b61bd43c0af60b94fae33fe1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293624"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394914"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>プロジェクトの設定 (変換) (OracleToSQL)
 [**プロジェクトの設定**] ダイアログボックスの [変換] ページには、Ssma が Oracle 構文を構文に変換する方法をカスタマイズする設定が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -29,16 +29,14 @@ ms.locfileid: "84293624"
   
 ## <a name="conversion-messages"></a>変換メッセージ  
   
-|||  
-|-|-|  
 |期間|定義|  
+|-|-|  
 |**適用された問題に関するメッセージを生成する**|SSMA が変換中に情報メッセージを生成し、出力ペインに表示し、変換されたコードに追加するかどうかを指定します。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティックモード:** 違います<br /><br />**フルモード:** 違います|  
   
 ## <a name="miscellaneous-options"></a>その他のオプション  
   
-|||  
-|-|-|  
 |期間|定義|  
+|-|-|  
 |**ROWNUM 式を整数としてキャストする**|SSMA が ROWNUM 式を変換すると、式が TOP 句に変換され、その後に式が変換されます。 次の例では、Oracle の DELETE ステートメントで ROWNUM を示しています。<br /><br />`DELETE FROM Table1`<br /><br />`WHERE ROWNUM < expression and Field1 >= 2`<br /><br />次の例は、結果のを示してい [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。<br /><br />`DELETE TOP (expression-1)`<br /><br />`FROM Table1`<br /><br />`WHERE Field1>=2`<br /><br />TOP では、TOP 句の式が整数に評価される必要があります。 整数が負の値の場合、ステートメントによってエラーが生成されます。<br /><br />[**はい**] を選択すると、ssma は式を整数としてキャストします。<br /><br />[**いいえ**] を選択すると、ssma は、変換されたコード内のすべての整数以外の式をエラーとしてマークします。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/フルモード:** 違います<br /><br />**オプティミスティックモード:** うん|  
 |**既定のスキーママッピング**|この設定では、Oracle スキーマを SQL Server スキーマにマップする方法を指定します。 この設定では、次の2つのオプションを使用できます。<br /><br />**データベースへのスキーマ:** このモードでは、Oracle スキーマ ' sch1 ' は、既定で SQL Server データベース ' sch1 ' の ' dbo ' SQL Server スキーマにマップされます。<br /><br />スキーマ**からスキーマへ:** このモードでは、Oracle スキーマ ' sch1 ' は、既定では、接続ダイアログで指定された既定の SQL Server データベースの ' sch1 ' SQL Server スキーマにマップされます。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** データベースへのスキーマ|  
 |**MERGE ステートメントの変換方法**|**Insert、update、delete ステートメントを使用して**を選択した場合、ssma は、マージステートメントを INSERT、UPDATE、delete ステートメントに変換します。<br /><br />[ **Merge ステートメントを使用**する] を選択した場合、ssma は、のマージステートメントを merge ステートメントに変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。<br /><br />**注:** このプロジェクト設定オプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、2012、2014でのみ使用でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** MERGE ステートメントの使用|  
@@ -52,7 +50,7 @@ ms.locfileid: "84293624"
 |**レコードを分離される変数の一覧として変換する**|SSMA は、Oracle レコードを変換して変数を分離し、特定の構造を持つ XML 変数に変換することができます。<br /><br />[**はい**] を選択した場合、ssma は、可能であれば、変数を分離した一覧にレコードを変換します。<br /><br />[**いいえ**] を選択した場合、ssma は、特定の構造を持つ XML 変数にレコードを変換します。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** うん|  
 |**SUBSTR 関数呼び出しから SUBSTRING 関数呼び出しへの変換**|SSMA は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、パラメーターの数に応じて、ORACLE SUBSTR 関数呼び出しを**substring**関数呼び出しに変換できます。 SSMA で SUBSTR 関数呼び出しを変換できない場合、またはパラメーターの数がサポートされていない場合、SSMA は SUBSTR 関数呼び出しをカスタム SSMA 関数呼び出しに変換します。<br /><br />[**はい**] を選択すると、ssma は、3つのパラメーターを使用する SUBSTR 関数呼び出しを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **部分文字列**に変換します。 その他の SUBSTR 関数は、カスタム SSMA 関数を呼び出すように変換されます。<br /><br />[**いいえ**] を選択すると、SSMA は SUBSTR 関数呼び出しをカスタム ssma 関数呼び出しに変換します。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティックモード:** うん<br /><br />**フルモード:** 違います|  
 |**サブタイプの変換**|SSMA では、次の2つの方法で PL/SQL のサブタイプを変換できます。<br /><br />[**はい**] を選択すると、ssma は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブタイプからユーザー定義型を作成し、このサブタイプの各変数に対して使用します。<br /><br />[**いいえ**] を選択すると、ssma は、サブタイプのすべてのソース宣言を基になる型に置き換え、結果を通常どおりに変換します。 この場合、追加の型はで作成されません。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** 違います|  
-|**シノニムの変換**|次の Oracle オブジェクトのシノニムは、に移行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br />テーブルとオブジェクトテーブル<br /><br />ビューとオブジェクトビュー<br /><br />ストアドプロシージャと関数<br /><br />具体化されたビュー<br /><br />**次のシノニム**Oracle オブジェクトは、次のようにオブジェクトを直接参照することで置き換えることができます。<br /><br />シーケンス<br /><br />パッケージ<br /><br />Java クラススキーマオブジェクト<br /><br />ユーザー定義オブジェクト型<br /><br />その他のシノニムは移行できません。 SSMA は、シノニムとシノニムを使用するすべての参照のエラーメッセージを生成します。<br /><br />[**はい**] を選択すると、ssma は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前の一覧に従ってシノニムとダイレクトオブジェクト参照を作成します。<br /><br />[**いいえ**] を選択した場合、ssma はここに記載されているすべてのシノニムに対して直接オブジェクト参照を作成します。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** うん|  
+|**シノニムの変換**|次の Oracle オブジェクトのシノニムは、に移行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br />テーブルとオブジェクト テーブル<br /><br />ビューとオブジェクト ビュー<br /><br />ストアドプロシージャと関数<br /><br />具体化されたビュー<br /><br />**次のシノニム**Oracle オブジェクトは、次のようにオブジェクトを直接参照することで置き換えることができます。<br /><br />シーケンス<br /><br />パッケージ<br /><br />Java クラス スキーマ オブジェクト<br /><br />ユーザー定義オブジェクト型<br /><br />その他のシノニムは移行できません。 SSMA は、シノニムとシノニムを使用するすべての参照のエラーメッセージを生成します。<br /><br />[**はい**] を選択すると、ssma は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前の一覧に従ってシノニムとダイレクトオブジェクト参照を作成します。<br /><br />[**いいえ**] を選択した場合、ssma はここに記載されているすべてのシノニムに対して直接オブジェクト参照を作成します。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** うん|  
 |**変換 TO_CHAR (日付、形式)**|SSMA では、Oracle TO_CHAR (date、format) を sysdb データベースのプロシージャに変換できます。<br /><br />[ **TO_CHAR_DATE 関数を使用**する] を選択した場合、ssma は TO_CHAR (DATE, format) を変換に英語 (*) を使用して TO_CHAR_DATE 関数に変換します。<br /><br />[ **TO_CHAR_DATE_LS 関数 (NLS ケア) を使用**する] を選択した場合、ssma は、変換にセッション言語を使用して、TO_CHAR (DATE、format) を TO_CHAR_DATE_LS 関数に変換します。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティックモード:** TO_CHAR_DATE 関数の使用<br /><br />**フルモード:** TO_CHAR_DATE_LS 関数の使用 (NLS ケア)|  
 |**トランザクション処理ステートメントの変換**|SSMA は、Oracle トランザクション処理ステートメントを変換できます。<br /><br />[**はい**] を選択した場合、Ssma は Oracle トランザクション処理ステートメントをステートメントに変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。<br /><br />[**いいえ**] を選択した場合、ssma はトランザクション処理ステートメントを変換エラーとしてマークします。<br /><br />**注:** Oracle はトランザクションを暗黙的に開きます。 でこの動作をエミュレートするに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、トランザクションを開始する BEGIN TRANSACTION ステートメントを手動で追加する必要があります。 または、セッションの開始時に SET IMPLICIT_TRANSACTIONS ON コマンドを実行します。 SSMA では、自律トランザクションでサブルーチンを変換するときに、SET IMPLICIT_TRANSACTIONS が自動的に追加されます。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** うん|  
 |**ORDER BY 句での Oracle の null 動作のエミュレート**|と Oracle では、NULL 値は異なる順序で並べ替えられ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br />で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、NULL 値は順序付きリストの最小値です。 昇順の一覧では、NULL 値が最初に表示されます。<br /><br />Oracle では、NULL 値は順序付きリストの最大値です。 既定では、NULL 値は昇順の一覧の最後に表示されます。<br /><br />Oracle には、最初の null と NULL の最後の句があります。これにより、Oracle の注文を Null にする方法を変更できます。<br /><br />SSMA では、NULL 値をチェックすることにより、Oracle ORDER BY の動作をエミュレートできます。 次に、指定した順序で NULL 値によって並べ替えられた後、他の値で並べ替えられます。<br /><br />[**はい**] を選択すると、ssma は oracle ステートメントを、ORACLE ORDER BY 動作をエミュレートするように変換します。<br /><br />[**いいえ**] を選択した場合、ssma は Oracle ルールを無視し、NULL の FIRST 句と NULL の最後の句が検出されるとエラーメッセージを生成します。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティックモード:** 違います<br /><br />**フルモード:** うん|  
@@ -69,18 +67,16 @@ ms.locfileid: "84293624"
   
 ## <a name="returning-clause-conversion"></a>返す句の変換  
   
-|||  
-|-|-|  
 |期間|定義|  
+|-|-|  
 |**DELETE ステートメントの戻り句を OUTPUT に変換します**|Oracle では、削除された値をすぐに取得する手段として、返される句が提供されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OUTPUT 句を使用してこの機能を提供します。<br /><br />[**はい**] を選択すると、SSMA は DELETE ステートメント内の句を返すを OUTPUT 句に変換します。 テーブルのトリガーによって値が変更される可能性があるため、戻り値は、Oracle の場合とは異なる場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br />[**いいえ**] を選択すると、ssma は、返された値を取得するために DELETE ステートメントの前に select ステートメントを生成します。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** うん|  
 |**INSERT ステートメントの戻り句を OUTPUT に変換します**|Oracle では、挿入された値をすぐに取得する手段として、返される句が提供されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OUTPUT 句を使用してこの機能を提供します。<br /><br />[**はい**] を選択すると、SSMA は INSERT ステートメント内の返す句を出力に変換します。 テーブルのトリガーによって値が変更される可能性があるため、戻り値は、Oracle の場合とは異なる場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br />[**いいえ**] を選択した場合、ssma は参照テーブルから値を挿入して選択することによって Oracle の機能をエミュレートします。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** うん|  
 |**UPDATE ステートメント内の句を OUTPUT に変換します**|Oracle では、更新された値をすぐに取得する手段として、戻り値の句が提供されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OUTPUT 句を使用してこの機能を提供します。<br /><br />[**はい**] を選択すると、SSMA は UPDATE ステートメント内の句を返すを OUTPUT 句に変換します。 テーブルのトリガーによって値が変更される可能性があるため、戻り値は、Oracle の場合とは異なる場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br />[**いいえ**] を選択すると、SSMA は UPDATE ステートメントの後に select ステートメントを生成し、戻り値を取得します。<br /><br />[**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。<br /><br />**既定/オプティミスティック/フルモード:** うん|  
   
 ## <a name="sequence-conversion"></a>シーケンス変換  
   
-|||  
-|-|-|  
 |期間|定義|  
+|-|-|  
 |**シーケンスジェネレーターの変換**|Oracle では、シーケンスを使用して一意の識別子を生成できます。<br /><br />SSMA では、シーケンスを次のように変換できます。<br /><br />SQL Server シーケンスジェネレーターを使用する (このオプションは、SQL Server 2012 および SQL Server 2014) に変換する場合にのみ使用できます。<br /><br />SSMA シーケンスジェネレーターを使用します。<br /><br />列 id を使用します。<br /><br />SQL Server 2012 または SQL Server 2014 に変換する場合の既定のオプションは SQL Server シーケンスジェネレーターを使用することです。 ただし、SQL Server 2012 および SQL Server 2014 では、現在のシーケンス値 (Oracle sequence の値のメソッドなど) の取得はサポートされていません。 Oracle シーケンスのこのメソッドの移行に関するガイダンスについては、SSMA チームのブログサイトを参照してください。<br /><br />SSMA には、Oracle シーケンスを SSMA シーケンスエミュレーターに変換するオプションも用意されています。 2012より前の SQL Server に変換する場合、これが既定のオプションです。<br /><br />最後に、テーブルの列に割り当てられたシーケンスを変換して、id 値を SQL Server することもできます。 [Oracle**テーブル**] タブの id 列へのシーケンス間のマッピングを指定する必要があります|  
 |**トリガーの外部の中の VAL を変換する**|Convert シーケンスジェネレーターが**列 id を使用**するように設定されている場合にのみ表示されます。 Oracle シーケンスはテーブルとは別のオブジェクトであるため、シーケンスを使用する多くのテーブルでは、トリガーを使用して新しいシーケンス値を生成して挿入します。 SSMA は、これらのステートメントをコメントアウトするか、コメントアウトによってエラーが生成されるときにエラーとしてマークします。<br /><br />[**はい**] を選択した場合、ssma は、変換されたシーケンスに対する外部トリガーへのすべての参照を警告付きでマークします。<br /><br />[**いいえ**] を選択すると、ssma は、変換されたシーケンスで、外部トリガーへのすべての参照をエラーとしてマークします。|  
   

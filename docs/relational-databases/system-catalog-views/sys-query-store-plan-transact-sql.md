@@ -21,15 +21,15 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc78decc0c911376b61cc429ba538be11cbaded6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831439"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393993"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   クエリに関連付けられている各実行プランに関する情報を格納します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82831439"
 |**is_forced_plan**|**bit**|ユーザーがストアドプロシージャの**sp_query_store_force_plan**を実行するときに、Plan が forced とマークされます。 強制メカニズムでは、 **query_id**によって参照されるクエリに対してこのプランが確実に使用されることは*保証されません*。 プランの強制を実行すると、クエリが再コンパイルされ、通常は**plan_id**によって参照されるプランに対してまったく同じまたは類似したプランが生成されます。 プランの強制が成功しなかった場合、 **force_failure_count**がインクリメントされ、エラーの理由で**last_force_failure_reason**が設定されます。 <br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
 |**is_natively_compiled**|**bit**|プランには、ネイティブコンパイルメモリ最適化プロシージャが含まれています。 (0 = FALSE、1 = TRUE)。 <br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
 |**force_failure_count**|**bigint**|このプランを強制する回数が失敗しました。 クエリが再コンパイルされる (*すべての実行ではなく*) 場合にのみ、増分できます。 **Is_plan_forced**が**FALSE**から**TRUE**に変更されるたびに0にリセットされます。 <br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
-|**last_force_failure_reason**|**int**|プランの強制に失敗した理由。<br /><br /> 0: 失敗しません。それ以外の場合、強制に失敗する原因となったエラーのエラー番号<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<その他の値>: GENERAL_FAILURE <br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
+|**last_force_failure_reason**|**int**|プランの強制に失敗した理由。<br /><br /> 0: 失敗しません。それ以外の場合、強制に失敗する原因となったエラーのエラー番号<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<other value>: GENERAL_FAILURE <br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc の説明テキスト。<br /><br /> ONLINE_INDEX_BUILD: ターゲットテーブルにオンラインでビルドされているインデックスがあるときに、クエリでデータを変更しようとしています<br /><br /> INVALID_STARJOIN: プランに無効な StarJoin 仕様が含まれています<br /><br /> TIME_OUT: オプティマイザーによって指定されたプランを検索しているときに、オプティマイザーが許可された操作の数を超えました<br /><br /> NO_DB: プランに指定されたデータベースが存在しません<br /><br /> HINT_CONFLICT: プランがクエリヒントと競合するため、クエリをコンパイルできません<br /><br /> DQ_NO_FORCING_SUPPORTED: プランが分散クエリまたはフルテキスト操作の使用と競合しているため、クエリを実行できません。<br /><br /> NO_PLAN: クエリプロセッサはクエリプランを作成できませんでした。強制されたプランをクエリに対して有効であることを確認できませんでした<br /><br /> NO_INDEX: プランに指定されたインデックスは存在しません<br /><br /> VIEW_COMPILE_FAILED: プランで参照されているインデックス付きビューで問題が発生したため、クエリプランを強制できませんでした<br /><br /> GENERAL_FAILURE: 一般的なエラー (上記の理由では説明されていません) <br/>**注:** Azure SQL Data Warehouse は常に*NONE*を返します。|  
 |**count_compiles**|**bigint**|コンパイルの統計を計画します。|  
 |**initial_compile_start_time**|**datetimeoffset**|コンパイルの統計を計画します。|  
@@ -94,7 +94,7 @@ ms.locfileid: "82831439"
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

@@ -10,15 +10,15 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266549"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394864"
 ---
 # <a name="running-test-cases-oracletosql"></a>テスト ケースの実行 (OracleToSQL)
-SSMA Tester がテストケースを実行すると、テスト用に選択されたオブジェクトが実行され、検証結果に関するレポートが作成されます。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Oracle と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の間のオブジェクトの対応は、現在の ssma プロジェクトのスキーママッピングの設定に従って決定されます。  
+SSMA Tester がテストケースを実行すると、テスト用に選択されたオブジェクトが実行され、検証結果に関するレポートが作成されます。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Oracle との間のオブジェクトの対応 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、現在の SSMA プロジェクトのスキーママッピングの設定に従って決定されます。  
   
 テストを成功させるために必要な要件は、すべての Oracle オブジェクトが変換され、ターゲットデータベースに読み込まれることです。 また、両方のプラットフォームのテーブルの内容が同期されるように、テーブルデータを移行する必要があります。  
   
@@ -41,9 +41,8 @@ SSMA Tester は、テストを開始する前に、テストの実行ですべ�
   
 検証されたテーブルに USER_TABLE という名前が付けられているとします。 このようなテーブルの場合、次の補助オブジェクトが Oracle で作成されます。  
   
-||||  
-|-|-|-|  
 |名前|Type|説明|  
+|-|-|-|  
 |USER_TABLE $ Trg|トリガー (trigger)|検証されたテーブルの変更の監査をトリガーします。|  
 |USER_TABLE $ AUD|table|削除された行と上書きされた行が保存されるテーブル。|  
 |USER_TABLE $ AUDID|table|新しい行と変更された行が保存されるテーブル。|  
@@ -52,18 +51,16 @@ SSMA Tester は、テストを開始する前に、テストの実行ですべ�
 |USER_TABLE $ NEW_ID|view|挿入および変更された行の識別。|  
 |USER_TABLE $ OLD|view|削除行と上書き行の簡略化された表現。|  
   
-次のオブジェクトは、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]検証されたテーブルのスキーマで作成されます。  
+次のオブジェクトは、で検証されたテーブルのスキーマで作成され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-||||  
-|-|-|-|  
 |名前|Type|説明|  
+|-|-|-|  
 |USER_TABLE $ Trg|トリガー (trigger)|検証されたテーブルの変更の監査をトリガーします。|  
   
-次のオブジェクトは、ssmatesterdb データベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のに作成されます。  
+次のオブジェクトは、ssmatesterdb データベースのに作成され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-||||  
-|-|-|-|  
 |名前|Type|説明|  
+|-|-|-|  
 |USER_TABLE $ Aud|table|削除された行と上書きされた行が保存されるテーブル。|  
 |USER_TABLE $ AudID|table|新しい行と変更された行が保存されるテーブル。|  
 |USER_TABLE|view|テーブル変更の簡略化された表現。|  

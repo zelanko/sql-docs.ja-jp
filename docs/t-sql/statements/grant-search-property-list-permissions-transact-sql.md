@@ -20,15 +20,15 @@ ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76d96e9342ca66f4133b8993b2409960e6091301
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d022af78318203a9f7c5d4f1e7c5d01c2f091ce1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75246151"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395992"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>GRANT (検索プロパティ リスト権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   検索プロパティ リストに対する権限を許可します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "75246151"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ] ON   
     SEARCH PROPERTY LIST :: search_property_list_name  
@@ -133,7 +133,7 @@ GRANT permission [ ,...n ] ON
 ## <a name="examples"></a>例  
   
 ### <a name="granting-permissions-to-a-search-property-list"></a>検索プロパティ リストに対する権限を許可する  
- 次の例では、検索プロパティ リスト `DocumentTablePropertyList` に対する `VIEW DEFINITION` 権限を `Mary` に許可します。  
+ 次の例では、検索プロパティ リスト `Mary` に対する `VIEW DEFINITION` 権限を `DocumentTablePropertyList` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION  

@@ -13,20 +13,20 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145657"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394349"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>dm_pdw_nodes_exec_query_profiles (Transact-sql)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 クエリの実行中にリアルタイムのデータウェアハウスのクエリの進行状況を監視します。   
   
 ## <a name="table-returned"></a>返されたテーブル  
-返されるカウンターは、スレッドごとの演算子ごとになります。 結果は動的であり、クエリの終了時にのみ出力を作成`SET STATISTICS XML ON`するなど、既存のオプションの結果とは一致しません。  
+返されるカウンターは、スレッドごとの演算子ごとになります。 結果は動的であり、 `SET STATISTICS XML ON` クエリの終了時にのみ出力を作成するなど、既存のオプションの結果とは一致しません。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "73145657"
 |request_id|**int**|ターゲット要求を識別します。 Dm_exec_sessions を参照しています。 request_id。|  
 |sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 sql_handle。|  
 |plan_handle|**varbinary(64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 plan_handle。|  
-|physical_operator_name|**nvarchar(256)**|物理操作名。|  
+|physical_operator_name|**nvarchar (256)**|物理操作名。|  
 |node_id|**int**|クエリ ツリー内の演算子ノードを識別します。|  
 |thread_id|**int**|同じクエリ演算子ノードに属している (並列クエリの) スレッドを識別します。|  
 |task_address|**varbinary (8)**|このスレッドが使用している SQLOS タスクを識別します。 Dm_os_tasks を参照しています。 task_address。|  
@@ -66,9 +66,9 @@ ms.locfileid: "73145657"
 |segment_read_count|**int**|これまでのセグメント先行読み取りの数。|  
 |segment_skip_count|**int**|これまでにスキップされたセグメントの数。| 
 |actual_read_row_count|**bigint**|残存述語が適用される前に演算子によって読み取られた行の数。| 
-|estimated_read_row_count|**bigint**|**適用対象:**[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 以降。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
+|estimated_read_row_count|**bigint**|**適用対象:** SP1 以降 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 [Dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15)適用される同じコメント。  
 
 ## <a name="permissions"></a>アクセス許可  
