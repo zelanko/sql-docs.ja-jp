@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca7b3d5fa16be44bf4c2ef8f8df8953ae081235d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a188c607c499e16652e314c67c37914f6cc9b85f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293402"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362770"
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同期実行 (ポーリング メソッド)
 ODBC 3.8 および Windows 7 SDK より前の場合、非同期操作はステートメント関数でのみ許可されていました。 詳細については、このトピックの「**ステートメントの実行**」を参照してください。  
@@ -36,19 +36,43 @@ ODBC 3.8 および Windows 7 SDK より前の場合、非同期操作はステ�
   
 ## <a name="executing-statement-operations-asynchronously"></a>ステートメント操作の非同期実行  
  次のステートメント関数は、データソースに対して動作し、非同期的に実行できます。  
-  
-||||  
-|-|-|-|  
-|[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|[SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)|[SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
-|[SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)|[SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|[SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
-|[SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|[SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|[SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|[SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)|[SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)|[SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)|  
-|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|[SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
-|[SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|[SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|[SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)|  
-|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|[SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
-|[SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|[SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
-  
+
+:::row:::
+    :::column:::
+        [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)  
+        [SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)  
+        [SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
+        [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)  
+        [SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)  
+        [SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
+        [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)  
+        [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)  
+        [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
+        [SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)  
+        [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)  
+        [SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
+        [SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)  
+        [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)  
+        [SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)  
+        [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)  
+        [SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
+        [SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
+        [SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)  
+        [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)  
+        [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)  
+        [SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)  
+        [SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)  
+        [SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)  
+        [SQLTables](../../../odbc/reference/syntax/sqltables-function.md)  
+    :::column-end:::
+:::row-end:::
+
  非同期ステートメントの実行は、データソースに応じて、ステートメントごとに、または接続ごとに制御されます。 つまり、アプリケーションでは、特定の関数が非同期に実行されることを指定しますが、特定のステートメントで実行される関数は非同期に実行されます。 サポートされているものを確認するために、アプリケーションは SQL_ASYNC_MODE のオプションを使用して[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)を呼び出します。 接続レベルの非同期実行 (ステートメントハンドルの場合) がサポートされている場合は SQL_AM_CONNECTION が返されます。ステートメントレベルの非同期実行がサポートされている場合は SQL_AM_STATEMENT。  
   
  特定のステートメントを使用して実行される関数を非同期に実行するように指定するには、アプリケーションは SQL_ATTR_ASYNC_ENABLE 属性を使用して**SQLSetStmtAttr**を呼び出し、SQL_ASYNC_ENABLE_ON に設定します。 接続レベルの非同期処理がサポートされている場合、SQL_ATTR_ASYNC_ENABLE statement 属性は読み取り専用となり、その値は、ステートメントが割り当てられた接続の接続属性と同じになります。 ステートメントの割り当て時刻またはそれ以降に statement 属性の値が設定されているかどうかは、ドライバーによって異なります。 設定しようとすると、SQL_ERROR と SQLSTATE HYC00 が返されます (省略可能な機能は実装されていません)。  
@@ -156,12 +180,22 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 -   効率的な非同期 ODBC 呼び出しと接続操作をキャンセルする機能により、アプリケーションは、タイムアウトを待つことなく、ユーザーが低速な操作をキャンセルできるようにします。  
   
  次の関数は、接続ハンドルに対して動作し、非同期的に実行できるようになりました。  
-  
-||||  
-|-|-|-|  
-|[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-  
+
+:::row:::
+    :::column:::
+        [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)  
+        [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)  
+        [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)  
+        [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)  
+    :::column-end:::
+:::row-end:::
+
  ドライバーがこれらの関数に対する非同期操作をサポートしているかどうかを判断するために、アプリケーションは SQL_ASYNC_DBC_FUNCTIONS で**SQLGetInfo**を呼び出します。 非同期操作がサポートされている場合は SQL_ASYNC_DBC_CAPABLE が返されます。 非同期操作がサポートされていない場合は SQL_ASYNC_DBC_NOT_CAPABLE が返されます。  
   
  特定の接続で実行される関数を非同期に実行するように指定するには、アプリケーションが**SQLSetConnectAttr**を呼び出し、SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 属性を SQL_ASYNC_DBC_ENABLE_ON に設定します。 接続を確立する前に接続属性を設定することは、常に同期的に実行されます。 また、 **SQLSetConnectAttr**を使用して接続属性 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE を設定する操作は、常に同期的に実行されます。  

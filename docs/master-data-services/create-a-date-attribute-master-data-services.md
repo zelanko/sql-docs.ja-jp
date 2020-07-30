@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dbf5182a41c9b5c52a73e9d005c768b48cc1fae4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cb52caebef0a9c042e3f7a077aa098cdc42b7ff4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811835"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363158"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>日付属性を作成する (マスター データ サービス)
 
@@ -75,7 +75,7 @@ ms.locfileid: "85811835"
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>datetime 値の時刻部分を表示するには  
  ユーザー インターフェイスに datetime 値の時刻部分を表示するには、属性に対する適切な入力マスクを選択する必要があります。 Datetime 属性にそのための組み込みのマスクは存在しませんが、時刻を表示するための新しいマスクを独自に追加することはできます。 そのためには、組み込みのマスクが格納されている MDS データベースの mdm.tblList テーブルに行を追加します。 この行には、次の値が存在する必要があります。  
   
-|||  
+|列|値|  
 |-|-|  
 |ListCode|lstInputMask|  
 |ListName|[定型入力]|  
@@ -89,7 +89,7 @@ ms.locfileid: "85811835"
   
  [定型入力] は、カスタムの .NET DateTime 書式設定文字列です。 詳しくは、「 [カスタム日時書式指定文字列](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性 &#40;マスターデータサービス&#41;](../master-data-services/attributes-master-data-services.md)   
  [属性名とデータ型 &#40;マスターデータサービスに変更&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [ドメインベースの属性 &#40;マスターデータサービスを作成&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

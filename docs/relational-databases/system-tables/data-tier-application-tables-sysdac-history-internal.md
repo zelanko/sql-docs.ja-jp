@@ -51,7 +51,7 @@ ms.locfileid: "87123023"
 |**date_created**|**datetime**|このエントリが作成された日付と時刻。|  
 |**date_modified**|**datetime**|エントリが最後に変更された日付と時刻。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  Dac の配置や削除などの DAC 管理操作では、複数の手順が生成されます。 各アクションには、アクション識別子が割り当てられます。 各ステップには、シーケンス番号と**sysdac_history_internal**内の行が割り当てられます。この場合、ステップの状態が記録されます。 各行は、アクションステップの開始時に作成され、操作の状態を反映するために必要に応じて更新されます。 たとえば、[DAC の配置] アクションを 12 **action_id**割り当て、 **sysdac_history_internal**の4つの行を取得することができます。  
   
 | action_id | sequence_id | action_type_name | dac_object_type_name |

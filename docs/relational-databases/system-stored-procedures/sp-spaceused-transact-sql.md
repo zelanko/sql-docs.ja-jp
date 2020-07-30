@@ -18,15 +18,15 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152132"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393954"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースのテーブル、インデックス付きビュー、または [!INCLUDE[ssSB](../../includes/sssb-md.md)] キューで使用されている、行数、ディスクの予約領域、およびディスク使用領域を表示します。また、データベース全体で使用されているディスクの予約領域とディスク使用領域を表示します。  
   
@@ -60,7 +60,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *Mode*引数には、次の値を指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |ALL|ローカル部分とリモート部分の両方を含む、オブジェクトまたはデータベースのストレージの統計を返します。|  
 |LOCAL_ONLY|オブジェクトまたはデータベースのローカル部分のみのストレージ統計情報を返します。 オブジェクトまたはデータベースで Stretch が有効になっていない場合、は = ALL と同じ統計を返し @mode ます。|  
@@ -70,7 +70,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 `[ @oneresultset = ] oneresultset`1つの結果セットを返すかどうかを示します。 *Oneresultset*引数には、次の値を指定できます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |0|* \@ Objname*が null またはが指定されていない場合、2つの結果セットが返されます。 2つの結果セットが既定の動作です。|  
 |1|* \@ Objname* = null またはが指定されていない場合、1つの結果セットが返されます。|  
@@ -97,7 +97,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**確保**|**varchar (18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
-|**データ**|**varchar (18)**|データの使用領域の合計。|  
+|**data**|**varchar (18)**|データの使用領域の合計。|  
 |**index_size**|**varchar (18)**|インデックスによって使用されている領域の合計サイズ。|  
 |**未使用**|**varchar (18)**|データベース内のオブジェクト用に予約されている領域の合計サイズ。ただし、まだ使用されていません。|  
   
@@ -109,7 +109,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**には、データファイルとログファイルの両方が含まれます。|  
 |**未割り当て領域**|**varchar (18)**|データベースオブジェクト用に予約されていないデータベース内の領域。|  
 |**確保**|**varchar (18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
-|**データ**|**varchar (18)**|データの使用領域の合計。|  
+|**data**|**varchar (18)**|データの使用領域の合計。|  
 |**index_size**|**varchar (18)**|インデックスによって使用されている領域の合計サイズ。|  
 |**未使用**|**varchar (18)**|データベース内のオブジェクト用に予約されている領域の合計サイズ。ただし、まだ使用されていません。|  
   
@@ -120,7 +120,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**name**|**nvarchar(128)**|領域の使用情報を要求したオブジェクトの名前。<br /><br /> オブジェクトのスキーマ名は返されません。 スキーマ名が必要な場合は、 [dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)または[sys dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動的管理ビューを使用して、同等のサイズ情報を取得します。|  
 |**レコード**|**char (20)**|テーブルに含まれる行数。 指定されたオブジェクトが [!INCLUDE[ssSB](../../includes/sssb-md.md)] キューの場合、この列はキュー内のメッセージの数を示します。|  
 |**確保**|**varchar (18)**|*Objname*の予約済み領域の合計サイズ。|  
-|**データ**|**varchar (18)**|*Objname*のデータによって使用されている領域の合計サイズ。|  
+|**data**|**varchar (18)**|*Objname*のデータによって使用されている領域の合計サイズ。|  
 |**index_size**|**varchar (18)**|*Objname*のインデックスによって使用されている領域の合計サイズ。|  
 |**未使用**|**varchar (18)**|*Objname*用に予約されていますが、まだ使用されていない領域の合計。|  
  
@@ -137,7 +137,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**確保**|**varchar (18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
-|**データ**|**varchar (18)**|データの使用領域の合計。|  
+|**data**|**varchar (18)**|データの使用領域の合計。|  
 |**index_size**|**varchar (18)**|インデックスによって使用されている領域の合計サイズ。|  
 |**未使用**|**varchar (18)**|データベース内のオブジェクト用に予約されている領域の合計サイズ。ただし、まだ使用されていません。|
 
@@ -157,7 +157,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_size**|**varchar (18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**には、データファイルとログファイルの両方が含まれます。 データベースに MEMORY_OPTIMIZED_DATA ファイルグループがある場合は、ファイルグループ内のすべてのチェックポイントファイルのディスク上の合計サイズが含まれます。|
 |**未割り当て領域**|**varchar (18)**|データベースオブジェクト用に予約されていないデータベース内の領域。 データベースに MEMORY_OPTIMIZED_DATA ファイルグループがある場合は、ファイルグループで状態が PRECREATED になっているチェックポイントファイルのディスク上の合計サイズが含まれます。|  
 |**確保**|**varchar (18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
-|**データ**|**varchar (18)**|データの使用領域の合計。|  
+|**data**|**varchar (18)**|データの使用領域の合計。|  
 |**index_size**|**varchar (18)**|インデックスによって使用されている領域の合計サイズ。|  
 |**未使用**|**varchar (18)**|データベース内のオブジェクト用に予約されている領域の合計サイズ。ただし、まだ使用されていません。|
 |**xtp_precreated**|**varchar (18)**|状態が事前に作成されたチェックポイントファイルの合計サイズ (KB 単位)。 これは、データベース全体の未割り当て領域にカウントされます。 データベースに少なくとも1つのコンテナーを含む memory_optimized_data ファイルグループがない場合は、NULL を返します。 *この列は、 @include_total_xtp_storage = 1 の場合にのみ含ま*れます。| 
@@ -249,9 +249,9 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [SQL&#41;&#40;Transact-sql のインデックス](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [SQL&#41;&#40;Transact-sql のパーティション分割](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

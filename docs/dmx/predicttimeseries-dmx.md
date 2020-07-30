@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970690"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363522"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -67,7 +67,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>戻り値の型  
  \<*table expression*>。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  [!INCLUDE[msCoName](../includes/msconame-md.md)]タイムシリーズアルゴリズムでは、予測結合ステートメントを使用して新しいデータを追加した場合、履歴予測はサポートされません。  
   
  予測結合では、予測プロセスは常に、元のトレーニングシリーズの最後の直後の時間ステップで開始されます。 これは、新しいデータを追加した場合でも当てはまります。 したがって、 *n*パラメーターと*n 開始*パラメーターの値には、0より大きい整数を指定する必要があります。  
@@ -147,7 +147,7 @@ ON
   
  元の予測:  
   
-||||  
+|モデル領域|ReportingDate|Quantity|  
 |-|-|-|  
 |M200 太平洋|7/25/2008 12:00:00 AM|46|  
 |M200 太平洋|8/25/2008 12:00:00 AM|44|  
@@ -155,7 +155,7 @@ ON
   
  更新された予測:  
   
-||||  
+|モデル領域|ReportingDate|Quantity|  
 |-|-|-|  
 |M200 太平洋|7/25/2008 12:00:00 AM|91|  
 |M200 太平洋|8/25/2008 12:00:00 AM|89|  

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8022ee6fd8cb9bf9de79a7a83d3ee0d6166606b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971840"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362222"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>引数  
- *データ*  
+ *structure*  
  マイニング モデルが追加されるマイニング構造の名前です。  
   
  *model*  
@@ -58,12 +58,12 @@ USING <algorithm> [(<parameter list>)]
 >  現在のプロバイダーでサポートされているアルゴリズムの一覧は[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))を使用して取得できます。 の現在のインスタンスでサポートされているアルゴリズムを表示するには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、「[データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
   
  *パラメーターリスト*  
- 任意。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
+ 省略可能。 アルゴリズムに対してプロバイダーが定義したパラメーターのコンマ区切りのリスト。  
   
  *フィルター条件*  
  ケーステーブルの列に適用されるフィルター式。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  マイニング構造に複合キーが含まれている場合、マイニングモデルには、構造体で定義されているすべてのキー列が含まれている必要があります。  
   
  クラスタリングアルゴリズムとシーケンスクラスターアルゴリズムを使用して作成されたモデルなど、予測可能な列がモデルに必要ない場合は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] ステートメントに列定義を含める必要はありません。 結果として得られるモデルのすべての属性が入力として扱われます。  
@@ -108,9 +108,8 @@ USING <algorithm> [(<parameter list>)]
 > [!NOTE]  
 >  NOT_NULL モデリングフラグは、マイニング構造列に適用されます。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
   
-|||  
-|-|-|  
 |期間|定義|  
+|-|-|  
 |**リグレッサー**|アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。|  
 |**MODEL_EXISTENCE_ONLY**|属性列の値が属性の有無ほど重要ではないことを示します。|  
   
@@ -119,7 +118,7 @@ USING <algorithm> [(<parameter list>)]
 ### <a name="prediction-clause"></a>予測句  
  予測句では、予測列の使用方法を記述します。 次の表は、使用可能な句を示しています。  
   
-|||  
+|句|説明|  
 |-|-|  
 |**将来**|この列はモデルによって予測できます。また、その値を入力として使用して、その他の予測可能列の値を予測することもできます。|  
 |**PREDICT_ONLY**|この列はモデルによって予測できますが、その値を入力ケースで使用して他の予測可能列の値を予測することはできません。|  

@@ -8,77 +8,243 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4654733b2f8f0b59ee01ae881d55519d9ca48c23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b47a6860d73e72be54dbe9caa1f18ab95c6cff
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68003459"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362782"
 ---
 # <a name="mdx-reserved-words"></a>MDX の予約語
 
 
   次の表に、多次元式 (MDX) で使用する予約語を示します。 これらの単語は、MDX のキューブ名やユーザー定義関数名などの識別子の一部として使用しないでください。  
-  
-|||||  
-|-|-|-|-|  
-|ABSOLUTE|DESC|LEAVES|SELF_BEFORE_AFTER|  
-|ACTIONPARAMETERSET|DESCENDANTS|LEVEL|SESSION|  
-|ADDCALCULATEDMEMBERS|Description|LEVELS|SET|  
-|AFTER|多次元|LINKMEMBER|SETTOARRAY|  
-|AGGREGATE|ディメンジョン|LINREGINTERCEPT|SETTOSTR|  
-|ALL|DISTINCT|LINREGPOINT|SORT|  
-|ALLMEMBERS|DISTINCTCOUNT|LINREGR2|STDDEV|  
-|ANCESTOR|DRILLDOWNLEVEL|LINREGSLOPE|STDDEVP|  
-|ANCESTORS|DRILLDOWNLEVELBOTTOM|LINREGVARIANCE|[STDEV]|  
-|AND|DRILLDOWNLEVELTOP|LOOKUPCUBE|STDEVP|  
-|AS|DRILLDOWNMEMBER|[MAX]|記憶域|  
-|ASC|DRILLDOWNMEMBERBOTTOM|措置|STRIPCALCULATEDMEMBERS|  
-|先祖|DRILLDOWNMEMBERTOP|MEDIAN|STRTOMEMBER|  
-|AVERAGE|DRILLUPLEVEL|MEMBER|STRTOSET|  
-|AXIS|DRILLUPMEMBER|MEMBERS|STRTOTUPLE|  
-|BASC|DROP|MEMBERTOSTR|STRTOVAL|  
-|BDESC|EMPTY|[MIN]|STRTOVALUE|  
-|BEFORE|END|MTD|抽出|  
-|BEFORE_AND_AFTER|ERROR|NAME|[SUM]|  
-|BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
-|BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
-|BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
-|BY|FALSE|NO_ALLOCATION|TOPCOUNT|  
-|CACHE|FILTER|NO_PROPERTIES|TOPPERCENT|  
-|CALCULATE|FIRSTCHILD|NON|TOPSUM|  
-|算出|FIRSTSIBLING|NONEMPTYCROSSJOIN|累計|  
-|CALCULATIONCURRENTPASS|FOR|NOT_RELATED_TO_FACTS|trEE|  
-|CALCULATIONPASSVALUE|FREEZE|NULL|TRUE|  
-|CALCULATIONS|FROM|ON|TUPLETOSTR|  
-|CALL|GENERATE|OPENINGPERIOD|TYPE|  
-|CELL|GLOBAL|OR|UNION|  
-|CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
-|CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
-|CHILDREN|HEAD|PARENT|UPDATE|  
-|CLEAR|HIDDEN|PASS|USE|  
-|CLOSINGPERIOD|HIERARCHIZE|PERIODSTODATE|USE_EQUAL_ALLOCATION|  
-|COALESCEEMPTY|層|POST|USE_WEIGHTED_ALLOCATION|  
-|COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
-|COLUMNS|IIF|PREVMEMBER|USERNAME|  
-|相関関係|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|[COUNT]|INDEX|PROPERTY|値|  
-|いとこ|INTERSECT|QTD|VAR|  
-|COVARIANCE|IS|RANK|variance|  
-|COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
-|CREATE|ISEMPTY|RELATIVE|[VARP]|  
-|CREATEPROPERTYSET|ISGENERATION|ROLLUPCHILDREN|見た目|  
-|CREATEVIRTUALDIMENSION|ISLEAF|ROOT|VISUALTOTALS|  
-|CROSSJOIN|ISSIBLING|ROWS|WHERE|  
-|CUBE|アイテム|SCOPE|WITH|  
-|CURRENT|LAG|SECTIONS|WTD|  
-|CURRENTCUBE|LASTCHILD|SELECT|XOR|  
-|CURRENTMEMBER|LASTPERIODS|SELF|YTD|  
-|DEFAULT_MEMBER|LASTSIBLING|SELF_AND_AFTER||  
-|DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
-  
+
+:::row:::
+    :::column:::
+        ABSOLUTE  
+        ACTIONPARAMETERSET  
+        ADDCALCULATEDMEMBERS  
+        AFTER  
+        AGGREGATE  
+        ALL  
+        ALLMEMBERS  
+        ANCESTOR  
+        ANCESTORS  
+        AND  
+        AS  
+        ASC  
+        先祖  
+        AVERAGE  
+        AXIS  
+        BASC  
+        BDESC  
+        BEFORE  
+        BEFORE_AND_AFTER  
+        BOTTOMCOUNT  
+        BOTTOMPERCENT  
+        BOTTOMSUM  
+        BY  
+        CACHE  
+        CALCULATE  
+        算出  
+        CALCULATIONCURRENTPASS  
+        CALCULATIONPASSVALUE  
+        CALCULATIONS  
+        CALL  
+        CELL  
+        CELLFORMULASETLIST  
+        CHAPTERS  
+        CHILDREN  
+        CLEAR  
+        CLOSINGPERIOD  
+        COALESCEEMPTY  
+        COLUMN  
+        COLUMNS  
+        相関関係  
+        [COUNT]  
+        いとこ  
+        COVARIANCE  
+        COVARIANCEN  
+        CREATE  
+        CREATEPROPERTYSET  
+        CREATEVIRTUALDIMENSION  
+        CROSSJOIN  
+        CUBE  
+        CURRENT  
+        CURRENTCUBE  
+        CURRENTMEMBER  
+        DEFAULT_MEMBER  
+        DEFAULTMEMBER  
+    :::column-end:::
+    :::column:::
+        DESC  
+        DESCENDANTS  
+        Description  
+        多次元  
+        ディメンジョン  
+        DISTINCT  
+        DISTINCTCOUNT  
+        DRILLDOWNLEVEL  
+        DRILLDOWNLEVELBOTTOM  
+        DRILLDOWNLEVELTOP  
+        DRILLDOWNMEMBER  
+        DRILLDOWNMEMBERBOTTOM  
+        DRILLDOWNMEMBERTOP  
+        DRILLUPLEVEL  
+        DRILLUPMEMBER  
+        DROP  
+        EMPTY  
+        End  
+        ERROR  
+        EXCEPT  
+        EXCLUDEEMPTY  
+        EXTRACT  
+        FALSE  
+        FILTER  
+        FIRSTCHILD  
+        FIRSTSIBLING  
+        FOR  
+        FREEZE  
+        FROM  
+        GENERATE  
+        GLOBAL  
+        GROUP  
+        GROUPING  
+        HEAD  
+        HIDDEN  
+        HIERARCHIZE  
+        層  
+        IGNORE  
+        IIF  
+        INCLUDEEMPTY  
+        INDEX  
+        INTERSECT  
+        IS  
+        ISANCESTOR  
+        ISEMPTY  
+        ISGENERATION  
+        ISLEAF  
+        ISSIBLING  
+        アイテム  
+        LAG  
+        LASTCHILD  
+        LASTPERIODS  
+        LASTSIBLING  
+        LEAD  
+    :::column-end:::
+    :::column:::
+        LEAVES  
+        LEVEL  
+        LEVELS  
+        LINKMEMBER  
+        LINREGINTERCEPT  
+        LINREGPOINT  
+        LINREGR2  
+        LINREGSLOPE  
+        LINREGVARIANCE  
+        LOOKUPCUBE  
+        [MAX]  
+        措置  
+        MEDIAN  
+        MEMBER  
+        MEMBERS  
+        MEMBERTOSTR  
+        [MIN]  
+        MTD  
+        NAME  
+        NAMETOSET  
+        NEST  
+        NEXTMEMBER  
+        NO_ALLOCATION  
+        NO_PROPERTIES  
+        NON  
+        NONEMPTYCROSSJOIN  
+        NOT_RELATED_TO_FACTS  
+        NULL  
+        ON  
+        OPENINGPERIOD  
+        OR  
+        PAGES  
+        PARALLELPERIOD  
+        PARENT  
+        PASS  
+        PERIODSTODATE  
+        POST  
+        PREDICT  
+        PREVMEMBER  
+        PROPERTIES  
+        PROPERTY  
+        QTD  
+        RANK  
+        RECURSIVE  
+        RELATIVE  
+        ROLLUPCHILDREN  
+        ROOT  
+        ROWS  
+        SCOPE  
+        SECTIONS  
+        SELECT  
+        SELF  
+        SELF_AND_AFTER  
+        SELF_AND_BEFORE  
+    :::column-end:::
+    :::column:::
+        SELF_BEFORE_AFTER  
+        SESSION  
+        SET  
+        SETTOARRAY  
+        SETTOSTR  
+        SORT  
+        STDDEV  
+        STDDEVP  
+        [STDEV]  
+        STDEVP  
+        記憶域  
+        STRIPCALCULATEDMEMBERS  
+        STRTOMEMBER  
+        STRTOSET  
+        STRTOTUPLE  
+        STRTOVAL  
+        STRTOVALUE  
+        抽出  
+        [SUM]  
+        TAIL  
+        THIS  
+        TOGGLEDRILLSTATE  
+        TOPCOUNT  
+        TOPPERCENT  
+        TOPSUM  
+        累計  
+        trEE  
+        TRUE  
+        TUPLETOSTR  
+        TYPE  
+        UNION  
+        UNIQUE  
+        UNIQUENAME  
+        UPDATE  
+        USE  
+        USE_EQUAL_ALLOCATION  
+        USE_WEIGHTED_ALLOCATION  
+        USE_WEIGHTED_INCREMENT  
+        USERNAME  
+        VALIDMEASURE  
+        値  
+        VAR  
+        variance  
+        VARIANCEP  
+        [VARP]  
+        見た目  
+        VISUALTOTALS  
+        WHERE  
+        WITH  
+        WTD  
+        XOR  
+        YTD  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [予約済みキーワード &#40;MDX 構文&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
  [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
-  
-  

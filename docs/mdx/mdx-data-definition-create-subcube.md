@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887438"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362802"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX データ操作 - CREATE SUBCUBE
 
@@ -37,7 +37,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Select ステートメントと**NON VISUAL**句の構文の詳細については、「 [SELECT ステートメント &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md) 」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定のメンバーがサブキューブの定義で除外されると、それに応じて座標が変わります。 集計できる属性の場合、既定のメンバーは [All] メンバーに移動されます。 集計が不可能な属性の場合、既定のメンバーはサブキューブ内に存在するメンバーに移動します。 次の表には、サブキューブと既定のメンバーの組み合わせの例が含まれています。  
   
 |元の既定のメンバー|集計可能/不可能|サブセレクト|変更後の既定のメンバー|  
@@ -89,9 +89,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  では、次の結果が生成されます。  
   
-|||||  
+|ビジネスタイプ + カテゴリ|All Products|アクセサリ|衣服|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$2031079.39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767388.52|$175,002.81|$592,385.71|  
 |Warehouse|$1263690.86|$331,169.64|$932,521.23|  
@@ -118,9 +117,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  では、次のような結果が生成されます。  
   
-|||||  
+|ビジネスタイプ + カテゴリ|All Products|アクセサリ|衣服|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

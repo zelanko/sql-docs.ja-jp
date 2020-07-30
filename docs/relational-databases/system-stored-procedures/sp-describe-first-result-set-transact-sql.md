@@ -18,15 +18,15 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831183"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394381"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   バッチの最初の使用可能な結果セットのメタデータを返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 バッチが結果を返さない場合は、空の結果セットを返します。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 静的分析を実行することによって実行される最初のクエリのメタデータをが判別できない場合に、エラーが発生します。 動的管理ビューの[dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)は同じ情報を返します。  
   
@@ -154,7 +154,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="permissions"></a>アクセス許可  
  Tsql 引数を実行する権限が必要です \@ 。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="typical-examples"></a>一般的な例  
   
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- 結果: \< 不明な列名> **varchar (20) NULL**  
+ 結果: \<Unknown Column Name> **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>別名を使用して列名を強制的に同一にする  
  前の例と同じですが、列の別名を使用して列名を同じにしています。  

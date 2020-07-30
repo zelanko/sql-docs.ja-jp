@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 638a5f791f7997cc96b22bde47f41198a9946133
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 517e672cdb5bb7a6991f83b72f25f937ecbb6359
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882779"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362822"
 ---
 # <a name="importing-and-exporting-knowledge"></a>ナレッジのインポートとエクスポート
 
@@ -28,7 +28,7 @@ ms.locfileid: "85882779"
 ## <a name="in-this-section"></a>このセクションの内容  
  次のインポート操作とエクスポート操作を実行することができます。  
   
-|||  
+|操作の説明|トピック|  
 |-|-|  
 |ナレッジ ベースのドメインを .dqs データ ファイルにエクスポートする|[.dqs ファイルへのドメインのエクスポート](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |ドメインを .dqs データ ファイルから既存のナレッジ ベースへインポートする|[.dqs ファイルからのドメインのインポート](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  

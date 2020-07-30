@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105303"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363412"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -53,7 +53,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2 が見つからない|ゼロ (0)|  
 |start が Len (String2) を超えています。|ゼロ (0)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!WARNING]  
 >  **Instr**は、常に大文字と小文字を区別しない比較を実行します。  
@@ -95,9 +95,8 @@ from [Adventure Works]
   
  取得した結果を次の表に示します。  
   
-|||  
+|メジャーのフィールド|結果|  
 |-|-|  
-||結果|  
 |小文字の文字列で小文字が見つかりました|16|  
 |小文字の文字列で大文字が見つかりました|16|  
 |検索した文字列が空|0|  

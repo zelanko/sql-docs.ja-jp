@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d31d5fe8aea1df4e7937104580efb820ba6f031
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306183"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363426"
 ---
 # <a name="level-1-interface-conformance"></a>レベル 1 インターフェイスの適合性
 レベル1のインターフェイスの準拠レベルには、コアインターフェイスの準拠レベルの機能に加え、OLTP リレーショナル DBMS で通常使用できるトランザクションなどの追加機能が含まれています。 レベル1のインターフェイスに準拠したドライバーを使用すると、アプリケーションは、コアインターフェイスの準拠レベルの機能に加えて、次の操作を実行できます。  
   
-|||  
+|機能番号|説明|  
 |-|-|  
 |101|データベースのテーブルとビューのスキーマを指定します (2 つの部分で構成される名前を使用)。 (詳細については、「[レベル2のインターフェイスの準拠](../../../odbc/reference/develop-app/level-2-interface-conformance.md)」の3部構成の名前付け機能201を参照してください)。|  
 |102|ODBC 関数の非同期実行を呼び出します (該当する ODBC 関数がすべて同期されている場合、または特定の接続で非同期の場合)。|  

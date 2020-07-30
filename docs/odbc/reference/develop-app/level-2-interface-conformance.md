@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ee57d716cbb93f855e1fd78d41bff62a681eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b8c18a77cfd843a6bb7b70494e62dcb9efc4582
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306164"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363392"
 ---
 # <a name="level-2-interface-conformance"></a>レベル 2 インターフェイスの適合性
 レベル2のインターフェイスの準拠レベルには、レベル1のインターフェイスの準拠レベルの機能に加え、次の機能が含まれています。  
   
-|||  
+|機能番号|説明|  
 |-|-|  
 |201|データベースのテーブルとビューには、3つの部分で構成される名前を使用します。 (詳細については、「[レベル1のインターフェイス](../../../odbc/reference/develop-app/level-1-interface-conformance.md)への準拠」の2部構成の名前付けサポート機能101を参照してください)。|  
 |202|**SQLDescribeParam**を呼び出して、動的パラメーターについて説明します。|  

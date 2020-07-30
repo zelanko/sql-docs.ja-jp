@@ -69,7 +69,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="permissions"></a>アクセス許可  
  この関数はパブリックであり、特別な権限は必要ありません。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  次の表に、1 つ、2 つ、または 3 つのパラメーターを使用した場合の効果を示します。  
   
 |このパラメーターリスト...|次の結果がある...|  

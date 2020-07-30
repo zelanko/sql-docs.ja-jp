@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 895dcfdd5acaa580b8ee719a3edac67d7308f605
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c9375c6050c3f401a47857c385348da1478f21ca
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897551"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362690"
 ---
 # <a name="building-a-knowledge-base"></a>ナレッジ ベースの作成
 
@@ -25,7 +25,7 @@ ms.locfileid: "85897551"
 ## <a name="in-this-section"></a>このセクションの内容  
  ナレッジ ベースで次の操作を実行できます。  
   
-|||  
+|操作の説明|トピック|  
 |-|-|  
 |ナレッジ ベースを既存のナレッジ ベースまたは .dqs データ ファイルから新規に作成します。|[ナレッジベースの作成](../data-quality-services/create-a-knowledge-base.md)|  
 |既存のナレッジ ベースを開き、ナレッジ検出やドメイン管理の実行、または照合ポリシーの追加を行います。|[ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)|  

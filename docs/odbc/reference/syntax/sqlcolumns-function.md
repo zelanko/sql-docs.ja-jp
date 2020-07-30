@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36293c1f2393e9a57351fc8cd19dcc6e3338f5cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 26d71bbe370e41683da44aafecd32c9e3050a223
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301258"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362758"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 関数
 **互換性**  
@@ -102,7 +102,7 @@ SQLRETURN SQLColumns(
 |24000|カーソル状態が無効|*StatementHandle*でカーソルが開かれました。 **sqlfetch**または**sqlfetchscroll**が呼び出されました。 このエラーは、 **Sqlfetch**または**sqlfetchscroll**が SQL_NO_DATA 返されなかった場合にドライバーマネージャーによって返されます。また、 **Sqlfetch**または**sqlfetchscroll**が SQL_NO_DATA を返した場合は、ドライバーによって返されます。<br /><br /> *StatementHandle*でカーソルが開いていましたが、 **sqlfetch**または**sqlfetchscroll**が呼び出されていません。|  
 |40001|シリアル化エラー|別のトランザクションでリソースのデッドロックが発生したため、トランザクションがロールバックされました。|  
 |40003|ステートメントの完了が不明です|この関数の実行中に関連付けられた接続に失敗しました。トランザクションの状態を確認できません。|  
-|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 * \* Messagetext*バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。|  
 |HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、 **SQLCancel**または**Sqlcancelhandle**が*StatementHandle*で呼び出されました。 次に、 *StatementHandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
 |HY009|Null ポインターの使い方が正しくありません|SQL_ATTR_METADATA_ID statement 属性が SQL_TRUE に設定されました。 *CatalogName*引数は null ポインターで、SQL_CATALOG_NAME *InfoType*はカタログ名がサポートされていることを返します。<br /><br /> (DM) SQL_ATTR_METADATA_ID statement 属性が SQL_TRUE に設定され、 *SchemaName*、 *TableName*、または*ColumnName*引数が null ポインターでした。|  
@@ -148,16 +148,25 @@ SQLRETURN SQLColumns(
 |RADIX|NUM_PREC_RADIX|  
   
  **Sqlcolumns** for ODBC 3 によって返される結果セットには、次の列が追加されています。*x*:  
-  
-|||  
-|-|-|  
-|CHAR_OCTET_LENGTH|ORDINAL_POSITION|  
-|COLUMN_DEF|SQL_DATA_TYPE|  
-|IS_NULLABLE|SQL_DATETIME_SUB|  
-  
+
+:::row:::
+    :::column:::
+        CHAR_OCTET_LENGTH  
+        COLUMN_DEF  
+    :::column-end:::
+    :::column:::
+        IS_NULLABLE  
+        ORDINAL_POSITION  
+    :::column-end:::
+    :::column:::
+        SQL_DATA_TYPE  
+        SQL_DATETIME_SUB  
+    :::column-end:::
+:::row-end:::
+
  次の表に、結果セット内の列の一覧を示します。 列 18 (IS_NULLABLE) を超える追加の列は、ドライバーで定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウントすることで、ドライバー固有の列にアクセスする必要があります。 詳細については、「[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)」を参照してください。  
   
-|列名|列<br /><br /> number|データの種類|説明|  
+|列名|列<br /><br /> number|データ型|説明|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|カタログ名。データソースに適用されない場合は NULL です。 ドライバーが一部のテーブルのカタログをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など)、カタログを持たないテーブルに対して空の文字列 ("") が返されます。|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマ名;データソースに適用されない場合は NULL です。 ドライバーがいくつかのテーブルのスキーマをサポートしていても、他のテーブルではサポートされていない場合 (ドライバーが異なる Dbms からデータを取得する場合など) は、スキーマがないテーブルに対して空の文字列 ("") を返します。|  

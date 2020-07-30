@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97b9f5fd13a6cfb017f128564f0f0cf93c22ad58
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967373"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362792"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX データ操作 - SELECT
 
@@ -109,7 +109,7 @@ FROM
  *MemberProperty_Name*  
  メンバー プロパティを表す有効な文字列です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  `<SELECT slicer axis clause>` 式には、指定した `<SELECT query axis clause>` 式で参照されるディメンションと階層以外のメンバーを指定する必要があります。  
   
  指定した `<SELECT query axis clause>` 式と `<SELECT slicer axis clause>` 値でキューブ内の属性が省略されている場合は、属性の既定のメンバーが暗黙的にスライサー軸に追加されます。  
@@ -159,9 +159,8 @@ FROM
   
  取得される結果セットは次のとおりです。  
   
-|||||  
+|モデル名とメジャー|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
@@ -211,9 +210,8 @@ FROM
   
  次の結果から、両方のセット (Top10SellingProducts と Preferred10Products) が同一であることがわかります。  
   
-|||||  
+|モデル名とメジャー|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0.04%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
@@ -245,9 +243,8 @@ FROM
   
  結果セットは、次のようになります。  
   
-|||||  
+|モデル名とメジャー|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
@@ -303,9 +300,8 @@ FROM
   
  結果セットは、次のようになります。  
   
-|||||  
+|モデル名とメジャー|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
@@ -332,9 +328,8 @@ FROM
   
  次の結果セットは、shallow Autoexists の動作を示しています。  
   
-|||||  
+|モデル名とメジャー|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0.13%**|  
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
@@ -375,9 +370,8 @@ WHERE
   
  結果は、次のようになります。  
   
-|||||||  
+|ビジネスタイプ + カテゴリ|All Products|アクセサリ|バイク|衣服|Components|  
 |-|-|-|-|-|-|  
-||**すべての製品**|**アクセサリ**|**バイク**|**衣服**|**コンポーネント**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -399,9 +393,8 @@ WHERE
   
  結果は、次のようになります。  
   
-|||||  
+|ビジネスタイプ + カテゴリ|All Products|アクセサリ|衣服|  
 |-|-|-|-|  
-||**すべての製品**|**アクセサリ**|**衣服**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**ウェアハウス**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
@@ -426,9 +419,8 @@ WHERE
   
  上記のクエリの結果は、次のようになります。  
   
-|||||  
+|ビジネスタイプ + カテゴリ|All Products|アクセサリ|衣服|  
 |-|-|-|-|  
-||All Products|アクセサリ|衣服|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
@@ -457,9 +449,8 @@ WHERE
   
  上記のクエリの結果は、次のようになります。  
   
-|||||  
-|-|-|-|-|  
 |Reseller Sales Amount|再販業者の製品コストの合計|Reseller Gross Profit|再販業者の売上総利益率|  
+|-|-|-|-|  
 |$80,450,596.98|$79980114.38|$470482.60|0.58%|  
   
 ## <a name="see-also"></a>参照  

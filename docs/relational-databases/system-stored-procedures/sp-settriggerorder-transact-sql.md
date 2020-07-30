@@ -68,7 +68,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 ## <a name="dml-triggers"></a>DML トリガー  
  1つのテーブルに対して、ステートメントごとに1つの**最初**と**最後**のトリガーを1つだけ指定できます。  

@@ -19,12 +19,12 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: a345e41f42cc70e941e4a87e3510312313d4dc03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aad472489192516d367185572d1c9ac67eb78154
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764672"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248780"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>fulltext_semantic_languages (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,9 +33,8 @@ ms.locfileid: "85764672"
   
  このカタログビューは、 [fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)に似ています。  
     
-||||  
-|-|-|-|  
-|**列名**|**Type**|**説明**|  
+|列名|Type|説明|  
+|-|-|-|   
 |lcid|INT|言語の Microsoft Windows ロケール識別子 (LCID) です。|  
 |name|sysname|はsys.sys言語のエイリアスの値 &#40;**lcid**の値に対応する[transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)か、数値の lcid の文字列形式です。|  
   
@@ -45,12 +44,12 @@ ms.locfileid: "85764672"
 ## <a name="metadata"></a>Metadata  
  セマンティックインデックス作成をサポートするためにインストールされているセマンティック言語統計データベースの詳細については、カタログビューの[fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)に対するクエリを実行してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 **fulltext_semantic_languages**クエリを実行し、の現在のインスタンスでセマンティックインデックス作成に登録されているすべての言語モデルに関する情報を取得する方法を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
@@ -58,7 +57,7 @@ SELECT * FROM sys.fulltext_semantic_languages;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

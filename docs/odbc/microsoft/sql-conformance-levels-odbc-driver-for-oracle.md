@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 969296e377d398615ad95cf1337c3f9f97d5eb5c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300682"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363402"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL への準拠レベル (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -32,42 +32,94 @@ ms.locfileid: "81300682"
 -   左外部結合と右外部結合  
   
 -   数値関数:  
-  
-    |||||  
-    |-|-|-|-|  
-    |Abs|ログ|round|tan|  
-    |Ceiling|Log10|second|切捨て|  
-    |Cos|Mod|署名||  
-    |Exp|Pi|sin||  
-    |床|Power|sqrt||  
-  
+
+    :::row:::
+        :::column:::
+            Abs  
+            Ceiling  
+            Cos  
+            Exp  
+            床  
+        :::column-end:::
+        :::column:::
+            ログ  
+            Log10  
+            Mod  
+            Pi  
+            Power  
+        :::column-end:::
+        :::column:::
+            round  
+            second  
+            署名  
+            sin  
+            sqrt  
+        :::column-end:::
+        :::column:::
+            tan  
+            truncate  
+        :::column-end:::
+    :::row-end:::
+    
 -   日付関数:   
-  
-    |||||  
-    |-|-|-|-|  
-    |Curdate|Dayofweek|monthname|second|  
-    |Curtime|Dayofyear|minute|week|  
-    |Dayname|時|now|year|  
-    |Dayofmonth|月|quarter||  
-  
+
+    :::row:::
+        :::column:::
+            Curdate  
+            Curtime  
+            Dayname  
+            Dayofmonth  
+        :::column-end:::
+        :::column:::
+            Dayofweek  
+            Dayofyear  
+            時間  
+            Month  
+        :::column-end:::
+        :::column:::
+            monthname  
+            minute  
+            now  
+            quarter  
+        :::column-end:::
+        :::column:::
+            second  
+            week  
+            year  
+        :::column-end:::
+    :::row-end:::
+
 -   文字列関数:   
-  
-    |||||  
-    |-|-|-|-|  
-    |Ascii|Left|right|ucase|  
-    |Char|長さ|rtrim||  
-    |Concat|Ltrim|soundex||  
-    |Lcase|Replace|substring||  
-  
+
+    :::row:::
+        :::column:::
+            Ascii  
+            Char  
+            Concat  
+            Lcase  
+        :::column-end:::
+        :::column:::
+            Left  
+            長さ  
+            Ltrim  
+            Replace  
+        :::column-end:::
+        :::column:::
+            right  
+            rtrim  
+            soundex  
+            substring  
+        :::column-end:::
+        :::column:::
+            ucase  
+        :::column-end:::
+    :::row-end:::
+
 -   型変換関数:  
-  
-    ||  
-    |-|  
-    |Convert|  
-  
+
+    Convert  
+
 -   システム関数:  
   
-    ||  
-    |-|  
-    |Ifnull|  
-    |ユーザー|
+    Ifnull  
+    User

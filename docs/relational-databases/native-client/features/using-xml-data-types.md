@@ -30,13 +30,14 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc526febaed2fd049fb8fa95fd0b0585933fff9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6606da2bec127b6eb70eea0f5e676dd23a974e0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009835"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248800"
 ---
-# <a name="using-xml-data-types"></a>XML データ型の使用
+# <a name="using-xml-data-types-in-sql-server-native-clients"></a>SQL Server ネイティブクライアントでの XML データ型の使用
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] には **xml** データ型が導入されています。このデータ型を使用すると XML ドキュメントや XML フラグメントを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに格納できます。 **xml** データ型は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] での組み込みデータ型の 1 つであり、**int** や **varchar** などの他の組み込みデータ型といくつかの点で似ています。 **xml** データ型は、他の組み込みデータ型と同様に、テーブル作成時の列の型、変数の型、パラメーターの型、または関数の戻り値の型として使用したり、CAST 関数や CONVERT 関数でも使用できます。  
@@ -83,13 +84,13 @@ ms.locfileid: "86009835"
 |データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **XML 以外から**|サーバーからの<br /><br /> **XML**|サーバーからの<br /><br /> **XML 以外から**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|パス スルー<sup>6、7</sup>|エラー<sup>1</sup>|OK<sup>11、6</sup>|エラー<sup>8</sup>|  
-|DBTYPE_BYTES|パス スルー<sup>6、7</sup>|N/A<sup>2</sup>|可 <sup>11、6</sup>|該当なし <sup>2</sup>|  
-|DBTYPE_WSTR|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|OK<sup>4、6、12</sup>|該当なし <sup>2</sup>|  
-|DBTYPE_BSTR|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|可 <sup>3</sup>|該当なし <sup>2</sup>|  
-|DBTYPE_STR|OK<sup>6、9、10</sup>|該当なし <sup>2</sup>|可<sup>5、6、12</sup>|該当なし <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|**ISequentialStream** 経由のバイト ストリーム<sup>7</sup>|該当なし <sup>2</sup>|**ISequentialStream** 経由のバイト ストリーム<sup>11</sup>|該当なし <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|パス スルー<sup>6、7</sup>|該当なし <sup>2</sup>|該当なし|該当なし <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|可<sup>3</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_BYTES|パス スルー<sup>6、7</sup>|N/A<sup>2</sup>|可 <sup>11、6</sup>|N/A <sup>2</sup>|  
+|DBTYPE_WSTR|パス スルー<sup>6、10</sup>|N/A <sup>2</sup>|OK<sup>4、6、12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|パス スルー<sup>6、10</sup>|N/A <sup>2</sup>|可 <sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_STR|OK<sup>6、9、10</sup>|N/A <sup>2</sup>|可<sup>5、6、12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|**ISequentialStream** 経由のバイト ストリーム<sup>7</sup>|N/A <sup>2</sup>|**ISequentialStream** 経由のバイト ストリーム<sup>11</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|パス スルー<sup>6、7</sup>|N/A <sup>2</sup>|該当なし|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|パス スルー<sup>6、10</sup>|N/A <sup>2</sup>|可<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>DBTYPE_XML 以外のサーバー型が **ICommandWithParameters::SetParameterInfo** で指定され、アクセサー型が DBTYPE_XML の場合、ステートメントの実行時にエラーが発生します (DB_E_ERRORSOCCURRED、パラメーターの状態は DBSTATUS_E_BADACCESSOR)。それ以外の場合は、データがサーバーに送信されますが、XML 型からパラメーターのデータ型への暗黙の変換が行われないことを示すエラーがサーバーから返されます。  
   

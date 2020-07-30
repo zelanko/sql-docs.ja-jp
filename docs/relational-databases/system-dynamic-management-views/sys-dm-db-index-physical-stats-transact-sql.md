@@ -120,7 +120,7 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|元のデータ行の外部に保持されているバージョンレコードの数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|長期間と見なされるバージョンレコードの数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  sys.dm_db_index_physical_stats 動的管理関数は、DBCC SHOWCONTIG ステートメントの代わりに使用できます。  
   
 ## <a name="scanning-modes"></a>スキャン モード  
@@ -183,7 +183,7 @@ GO
   
  **論理的な断片化**  
   
- これは、インデックスのリーフ ページでの順序が不正なページの割合です。 順序が不正なページとは、インデックスに割り当てられている次の物理的なページと、現在のリーフ ページの次ページ** ポインターが示すページが異なるページのことです。  
+ これは、インデックスのリーフ ページでの順序が不正なページの割合です。 順序が不正なページとは、インデックスに割り当てられている次の物理的なページと、現在のリーフ ページの*次ページ* ポインターが示すページが異なるページのことです。  
   
  **エクステントの断片化**  
   

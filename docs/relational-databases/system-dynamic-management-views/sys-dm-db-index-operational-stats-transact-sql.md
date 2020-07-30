@@ -20,15 +20,15 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f97f23edb38e7d97a6da19860cf49ca4fdb1182d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 1b2bc0b80ec19865c89376ac53dd333624524d18
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86941364"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394777"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>dm_db_index_operational_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   データベース内のテーブルまたはインデックスの各パーティションについて、現在の下位レベルの i/o、ロック、ラッチ、およびアクセスメソッドのアクティビティを返します。    
     
@@ -188,7 +188,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページ レベルの圧縮が評価されたページの数。 大幅な節減を実現できないため圧縮されなかったページも含まれます。 列ストア インデックスでは、常に 0 です。|    
 |**page_compression_success_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページの圧縮を使用して圧縮されたデータ ページの数。 列ストア インデックスでは、常に 0 です。|    
     
-## <a name="remarks"></a>注釈    
+## <a name="remarks"></a>解説    
  この動的管理オブジェクトには、CROSS APPLY および OUTER APPLY からの相関パラメーターは受け入れられません。    
     
  **sys.dm_db_index_operational_stats** を使用すると、テーブル、インデックス、またはパーティションに対する読み書きを行うために、ユーザーが待機する必要がある時間の長さを追跡でき、重大な I/O 動作やホット スポットが発生したテーブルまたはインデックスを特定できます。    

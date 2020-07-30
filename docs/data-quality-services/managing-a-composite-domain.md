@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0f6c31e8e1cb40c5fbb00eaaf42c8734a8392f74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d463b65247dc5606605f1760ef6a259b5f534e9
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898085"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363062"
 ---
 # <a name="managing-a-composite-domain"></a>複合ドメインの管理
 
@@ -29,7 +29,7 @@ ms.locfileid: "85898085"
 ## <a name="in-this-section"></a>このセクションの内容  
  複合ドメインを使用して、次の操作を実行できます。  
   
-|||  
+|操作の説明|トピック|  
 |-|-|  
 |解析されない複数の関連用語で構成されるデータ フィールドのセマンティック表現を作成します。|[複合ドメインの作成](../data-quality-services/create-a-composite-domain.md)|  
 |複合データを複合ドメインにマッピングする場合は、区切り記号での解析に加えて、ナレッジに基づいてデータを解析できます。 DQS では最初に単一ドメインに関するナレッジを使用して、複合文字列の各部分が単一ドメインにどのように属しているか確認します。|[複合ドメインの作成](../data-quality-services/create-a-composite-domain.md)|  

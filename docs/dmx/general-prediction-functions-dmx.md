@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cde2fe9da61ca9d877f0c905609d8baf832ea509
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6db4adccfa0786e2acb1ce45725758d6b302b51f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971678"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363022"
 ---
 # <a name="general-prediction-functions-dmx"></a>一般的な予測関数 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,15 +22,23 @@ ms.locfileid: "86971678"
   
 ## <a name="common-functions"></a>[共通の関数]  
  関数を使用すると、マイニングモデルから返される結果を拡張できます。 テーブル式を返す**SELECT**ステートメントには、次の関数を使用できます。  
-  
-|||  
-|-|-|  
-|[DMX&#41;&#40;下数](../dmx/bottomcount-dmx.md)|[DMX&#41;&#40;RangeMin](../dmx/rangemin-dmx.md)|  
-|[DMX&#41;&#40;の割合](../dmx/bottompercent-dmx.md)|[DMX&#41;&#40;TopCount](../dmx/topcount-dmx.md)|  
-|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[DMX&#41;&#40;TopPercent](../dmx/toppercent-dmx.md)|  
-|[DMX&#41;&#40;RangeMax](../dmx/rangemax-dmx.md)|[DMX&#41;&#40;TopSum](../dmx/topsum-dmx.md)|  
-|[&#40;DMX&#41;の RangeMid](../dmx/rangemid-dmx.md)||  
-  
+
+:::row:::
+    :::column:::
+        [DMX&#41;&#40;下数](../dmx/bottomcount-dmx.md)  
+        [DMX&#41;&#40;の割合](../dmx/bottompercent-dmx.md)  
+        [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
+        [DMX&#41;&#40;RangeMax](../dmx/rangemax-dmx.md)  
+        [&#40;DMX&#41;の RangeMid](../dmx/rangemid-dmx.md)  
+    :::column-end:::
+    :::column:::
+        [DMX&#41;&#40;RangeMin](../dmx/rangemin-dmx.md)  
+        [DMX&#41;&#40;TopCount](../dmx/topcount-dmx.md)  
+        [DMX&#41;&#40;TopPercent](../dmx/toppercent-dmx.md)  
+        [DMX&#41;&#40;TopSum](../dmx/topsum-dmx.md)  
+    :::column-end:::
+:::row-end:::
+
  また、ほぼすべてのモデルの種類で次の関数がサポートされています。  
   
 -   [DMX&#41;&#40;存在](../dmx/exists-dmx.md)  
@@ -58,7 +66,7 @@ ms.locfileid: "86971678"
   
  DMX の関数に関する一般的な情報については、「[データマイニング拡張機能 &#40;dmx&#41; 関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
-|クエリの種類|サポートされる関数|注釈|  
+|クエリの種類|サポートされる関数|解説|  
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM \<model>](../dmx/select-distinct-from-model-dmx.md)|[DMX&#41;&#40;RangeMin](../dmx/rangemin-dmx.md)<br /><br /> [&#40;DMX&#41;の RangeMid](../dmx/rangemid-dmx.md)<br /><br /> [DMX&#41;&#40;RangeMax](../dmx/rangemax-dmx.md)|これらの関数を使用すると、列が連続しているか分離されているかどうかにかかわらず、数値データ型を含む任意の列に対して最大値、最小値、および平均値を指定できます。|  
 |[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|この関数は、モデル内の指定されたノードの子ノードを取得します。また、この関数を使用すると、たとえば、マイニング モデル コンテンツのノードを繰り返し処理できます。 マイニングモデルコンテンツ内のノードの配置は、モデルの種類によって異なります。 各マイニングモデルの種類の構造については、「[マイニングモデルコンテンツ &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」を参照してください。<br /><br /> マイニングモデルコンテンツをディメンションとして保存した場合は、属性階層のクエリに使用できる他の多次元式 (MDX) 関数を使用することもできます。|  
