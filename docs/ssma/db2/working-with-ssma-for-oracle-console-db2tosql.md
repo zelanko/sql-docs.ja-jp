@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 01aa8586e97677ed8d1071ec4dc2cb65a6aa0436
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62136073116141c206c36d5fcca8dd5b417de0e4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086187"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396424"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>SSMA for Oracle コンソールの使用 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 の Migration Assistant (SSMA) リリースは、コマンドラインでコンソールアプリケーションを使用してアクセスできるようになりました。 スクリプトファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 SSMA では、コンソールアプリケーションとして、スクリプトレベルのインターフェイスを有効にし、移行サイクルを短縮し、移行作業をスケールします。  
@@ -23,9 +23,8 @@ ms.locfileid: "68086187"
   
 このセクションでは、次のトピックについて説明します。  
   
-|||  
+|トピック|説明|  
 |-|-|  
-|**トピック**|**説明**|  
 |[SSMA for DB2 コンソールでのはじめに &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|コンソールアプリケーションを実行する手順について説明します。|  
 |[SSMA コンソールのコマンドラインオプション &#40;DB2ToSQL&#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|SSMA コンソールアプリケーションを操作するためのコマンドラインオプションとパラメーターについて説明します。|  
 |[DB2ToSQL&#41;&#40;のスクリプトファイルの作成](../../ssma/db2/creating-script-files-db2tosql.md)|スクリプトファイルの作成方法について説明します。|  

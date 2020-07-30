@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0022e0e740e9c4268ddf08340029c2e74a101437
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 77b0617fbaa8ea90388f40e16ed2b61cfd3bb2b8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922872"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396501"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "86922872"
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではないため、新しいバージョンの Windows では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 ファイル名には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のバージョン番号を表す番号が含まれます。 [ファイル名を指定して実行] コマンドから構成マネージャーを開くとき、最新の 4 つのバージョンのパスは次のようになります (Windows が C ドライブにインストールされているとき)。  
   
-    |||  
+    |Version|Path|  
     |-|-|
     |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
     |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  

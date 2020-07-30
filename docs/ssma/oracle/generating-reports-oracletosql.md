@@ -14,31 +14,30 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 971d7e8dde2ae56da02205b50b2f6576a875bd70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca9490b53cd55c9d8fdae5d24a045ceaf5a2e83e
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264456"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396231"
 ---
 # <a name="generating-reports-oracletosql"></a>レポートの生成 (OracleToSQL)
 コマンドを使用して実行される特定のアクティビティのレポートは、SSMA コンソールのオブジェクトツリーレベルで生成されます。  
   
 レポートを生成するには、次の手順に従います。  
   
-1.  [**書き込みの概要-レポート先**] パラメーターを指定します。 関連するレポートは、ファイル名 (指定されている場合) または指定したフォルダーに格納されます。 次の表で説明するように、ファイル名はシステムで定義されています。 ** &lt;n&gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+1.  [**書き込みの概要-レポート先**] パラメーターを指定します。 関連するレポートは、ファイル名 (指定されている場合) または指定したフォルダーに格納されます。 次の表で説明するように、ファイル名はシステムで定義されています。 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
     Reports vis vis コマンドは次のとおりです。  
   
-    ||||  
+    |法. いいえ。|コマンド|レポート タイトル|  
     |-|-|-|  
-    |**Sl. いいえ。**|**コマンド**|**レポート タイトル**|  
-    |1|生成-評価-レポート|AssessmentReport&lt;n&gt;XML|  
-    |2|変換-スキーマ|SchemaConversionReport&lt;n&gt;XML|  
-    |3|データの移行|DataMigrationReport&lt;n&gt;XML|  
-    |4|convert-sql ステートメント|ConvertSQLReport&lt;n&gt;。XML|  
-    |5|同期-ターゲット|Target同期レポート&lt;n&gt;。XML|  
-    |6|データベースからの更新|SourceDBRefreshReport&lt;n&gt;XML|  
+    |1|生成-評価-レポート|AssessmentReport &lt; n &gt;XML|  
+    |2|変換-スキーマ|SchemaConversionReport &lt; n &gt;XML|  
+    |3|データの移行|DataMigrationReport &lt; n &gt;XML|  
+    |4|convert-sql ステートメント|ConvertSQLReport &lt; n &gt; 。XML|  
+    |5|同期-ターゲット|Target同期レポート &lt; n &gt; 。XML|  
+    |6|データベースからの更新|SourceDBRefreshReport &lt; n &gt;XML|  
   
     > [!IMPORTANT]  
     > 出力レポートは、評価レポートとは異なります。 前者は、実行中のコマンドのパフォーマンスに関するレポートです。後者は、プログラムで使用するための XML レポートです。  
@@ -47,9 +46,8 @@ ms.locfileid: "68264456"
   
 2.  レポートの詳細設定を使用して、出力レポートに必要な詳細の範囲を指定します。  
   
-    ||||  
+    |法. いいえ。|コマンドとパラメーター|出力の説明|  
     |-|-|-|  
-    |**Sl. いいえ。**|**コマンドとパラメーター**|**出力の説明**|  
     |1|verbose = "false"|アクティビティの概要レポートを生成します。|  
     |2|verbose = "true"|各活動の概要と詳細な状態レポートを生成します。|  
   
@@ -58,9 +56,8 @@ ms.locfileid: "68264456"
   
 3.  エラー報告の設定を使用して、エラーレポートに必要な詳細の範囲を指定します。  
   
-    ||||  
+    |法. いいえ。|コマンドとパラメーター|出力の説明|  
     |-|-|-|  
-    |**Sl. いいえ。**|**コマンドとパラメーター**|**出力の説明**|  
     |1|レポート-エラー = "false"|エラー/警告/情報メッセージについての詳細はありません。|  
     |2|レポート-エラー = "true"|詳細なエラー/警告/情報メッセージ。|  
   
@@ -88,7 +85,7 @@ ms.locfileid: "68264456"
 ```  
   
 ### <a name="synchronize-target"></a>同期-ターゲット:  
-コマンド**synchronize-target**には、同期操作のエラーレポートの場所を指定する "**レポートエラー-エラー-** パラメーター" があります。 次に、名前を指定してファイルを**&lt;target同期し&gt;ます。XML**は、指定した場所に作成されます。ここ** &lt;&gt; **で、n は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+コマンド**synchronize-target**には、同期操作のエラーレポートの場所を指定する "**レポートエラー-エラー-** パラメーター" があります。 次に、名前を指定してファイルを**Target同期し &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
 **注:** フォルダーパスが指定されている場合、' report-errors-to ' パラメーターは、コマンド ' synchronize-target ' の省略可能な属性になります。  
   
@@ -114,7 +111,7 @@ ms.locfileid: "68264456"
 -   失敗-スクリプト  
   
 ### <a name="refresh-from-database"></a>データベースからの更新:  
-[**データベースからの更新**] コマンドには、[**レポート-エラー-** ] パラメーターがあります。これにより、更新操作のエラーレポートの場所が指定されます。 次に、 **Sourcedbrefreshreport&lt;n&gt;という名前のファイルを作成します。XML**は、指定した場所に作成されます。ここ** &lt;&gt; **で、n は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+[**データベースからの更新**] コマンドには、[**レポート-エラー-** ] パラメーターがあります。これにより、更新操作のエラーレポートの場所が指定されます。 次に、Sourcedbrefreshreport n という名前のファイルを作成し** &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
 **注:** フォルダーパスが指定されている場合、' report-errors-to ' パラメーターは、コマンド ' synchronize-target ' の省略可能な属性になります。  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0b52f18f8a7247faae24f266c6d8dba3d6c2ea4c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d7fe937b95049788f4b488df2d36451df67c4c09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293639"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396401"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL と SQL Server 文字セットのマッピング (MySQLToSQL)
 文字セット (Charset) は、MySQL 文字のデータ型、式、およびリテラルに指定できます。  
@@ -77,9 +77,8 @@ ms.locfileid: "84293639"
   
     MySQL データベースと、ルートメタデータノードレベルでのターゲットデータベースとの文字セットマッピングを以下に示します。  
   
-    ||||  
+    |文字セット名|文字セットの説明|ターゲット文字セットの種類 (既定値)|  
     |-|-|-|  
-    |**文字セット名**|**文字セットの説明**|**ターゲット文字セットの種類 (既定値)**|  
     |big5|Big5 繁体字中国語|NCHAR/NVARCHAR (既定値)|  
     |dec8|DEC (西ヨーロッパ)|CHAR/VARCHAR (既定値)|  
     |cp850|DOS 西ヨーロッパ|CHAR/VARCHAR (既定値)|  

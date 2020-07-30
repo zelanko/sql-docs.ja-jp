@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 103b965afbd1d0e750d79fb645e17de30b2e58db
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b19bc2719abf59c0ab347c677b172ac9797a00d4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112425"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396358"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   GROUP BY リスト内の指定した列の式が集計されるかどうかを示します。 GROUPING は結果セットで、集計される場合は 1 を、集計されない場合は 0 を返します。 GROUPING は、GROUP BY が指定されている場合に、SELECT \<select> リスト、HAVING、ORDER BY 句でのみ使用できます。  
   

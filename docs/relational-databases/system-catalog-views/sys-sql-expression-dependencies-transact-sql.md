@@ -20,15 +20,15 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833961"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396671"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   現在のデータベース内のユーザー定義エンティティに対して、名前ごとの依存関係ごとに1行のデータを格納します。 これには、ネイティブコンパイル、スカラーユーザー定義関数、およびその他のモジュール間の依存関係が含まれ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 2つのエンティティ間の依存関係は、*参照先*エンティティと呼ばれる1つのエンティティが、別のエンティティの永続化された SQL 式 (参照*元エンティティ*と呼ばれます) で名前によって表示される場合に作成されます。 たとえば、ビューの定義でテーブルが参照されている場合、参照元エンティティとしてのビューは、参照先エンティティであるテーブルに依存します。 テーブルが削除された場合、ビューは使用できません。  
   
@@ -70,26 +70,26 @@ ms.locfileid: "82833961"
 > [!NOTE]
 > Azure SQL Data Warehouse および並列データウェアハウスでは、この一覧からテーブル、ビュー、フィルター選択された統計情報、および Transact-sql ストアドプロシージャのエンティティ型をサポートしています。  依存関係情報は、テーブル、ビュー、およびフィルター選択された統計情報に対してのみ作成および管理されます。  
   
-|エンティティ型|参照元エンティティ|参照先エンティティ|  
+|エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
 |テーブル|はい*|はい|  
-|View|はい|はい|  
-|フィルター選択されたインデックス|可**|いいえ|  
-|フィルター選択された統計情報|可**|いいえ|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ***|はい|はい|  
-|CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
-|CLR ユーザー定義関数|いいえ|はい|  
+|表示|○|○|  
+|フィルター選択されたインデックス|はい**|いいえ|  
+|フィルター選択された統計情報|はい**|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ***|○|○|  
+|CLR ストアド プロシージャ (CLR stored procedure)|いいえ|[はい]|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|○|○|  
+|CLR ユーザー定義関数|いいえ|[はい]|  
 |CLR トリガー (DML および DDL)|いいえ|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|はい|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)]データベースレベルの DDL トリガー|はい|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|はい|いいえ|  
-|拡張ストアド プロシージャ|いいえ|はい|  
-|キュー|いいえ|はい|  
-|シノニム|いいえ|はい|  
-|型 (別名および CLR ユーザー定義型)|いいえ|はい|  
-|XML スキーマ コレクション|いいえ|はい|  
-|パーティション関数|いいえ|はい|  
+|拡張ストアド プロシージャ|いいえ|[はい]|  
+|キュー|いいえ|[はい]|  
+|シノニム|いいえ|[はい]|  
+|型 (別名および CLR ユーザー定義型)|いいえ|[はい]|  
+|XML スキーマ コレクション|いいえ|[はい]|  
+|パーティション関数|いいえ|[はい]|  
   
  \*テーブルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算列、check 制約、または DEFAULT 制約の定義でモジュール、ユーザー定義型、または XML スキーマコレクションを参照している場合にのみ、参照元エンティティとして追跡されます。  
   

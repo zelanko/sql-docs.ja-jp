@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c470cf8ea61851b80f04bce716bc7c83c54929b0
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259784"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396901"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>SSMA for Access コンソールを使用した作業 (アクセス権のある Sql)
 コマンドラインでコンソールアプリケーションを使用して、アクセスの Microsoft SQL Server Migration Assistant (SSMA) にアクセスできるようになりました。 スクリプトファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 SSMA では、コンソールアプリケーションとして、スクリプトレベルのインターフェイスを有効にし、移行サイクルを短縮し、移行作業をスケールします。  
@@ -24,9 +24,8 @@ ms.locfileid: "68259784"
   
 このセクションでは、次のトピックについて説明します。  
   
-|||  
+|トピック|説明|  
 |-|-|  
-|**トピック**|**説明**|  
 |[SSMA for Access コンソールを使用したはじめに &#40;アクセス権を持つ Sql&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|コンソールアプリケーションを実行する手順について説明します。|  
 |[SSMA コンソールのコマンドラインオプション &#40;、Sql&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|SSMA コンソールアプリケーションを操作するためのコマンドラインオプションとパラメーターについて説明します。|  
 |[&#40;にスクリプトファイルを作成する Sql&#41;](../../ssma/access/creating-script-files-accesstosql.md)|スクリプトファイルの作成方法について説明します。|  

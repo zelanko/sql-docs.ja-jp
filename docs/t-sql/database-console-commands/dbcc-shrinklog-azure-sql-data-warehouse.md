@@ -11,16 +11,16 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ddba1a36bfc1006d4e7c93d843431832fecf397
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 70b6d2237042a5d69be8e1076d72b7b0b5c87958
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484799"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396241"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
 現在の  *データベースの "* アプライアンス全体[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]" でトランザクション ログのサイズを減らします。 トランザクション ログの圧縮するのには、データを最適化します。 時間の経過と共に、データベースのトランザクション ログは、断片化され非効率的になります。 断片化を軽減し、ログのサイズを小さくするには、DBCC SHRINKLOG を使用します。
   
