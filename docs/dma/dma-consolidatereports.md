@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868381"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435166"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>DMA で企業を評価し評価レポートを統合する
 
@@ -36,8 +36,8 @@ ms.locfileid: "83868381"
   - [Power BI デスクトップ](/power-bi/fundamentals/desktop-get-the-desktop)。
   - [Azure PowerShell モジュール](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - ダウンロードと抽出:
-  - [DMA は Power BI テンプレートを報告](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)します。
-  - [Loadwarehouse スクリプト](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip)。
+  - [DMA は Power BI テンプレートを報告](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip)します。
+  - [Loadwarehouse スクリプト](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip)。
 
 ## <a name="loading-the-powershell-modules"></a>PowerShell モジュールを読み込んでいます
 
@@ -46,7 +46,7 @@ Powershell モジュールを PowerShell modules ディレクトリに保存す�
 モジュールを読み込むには、次の手順を実行します。
 
 1. C:\Program Files\WindowsPowerShell\Modules に移動し、 **DataMigrationAssistant**という名前のフォルダーを作成します。
-2. [PowerShell モジュール](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip)を開き、作成したフォルダーに保存します。
+2. [PowerShell モジュール](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip)を開き、作成したフォルダーに保存します。
 
       ![PowerShell モジュール](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -80,7 +80,6 @@ PowerShell スクリプトを実行して SQL Server を評価する前に、評
 >
 > 既定のインスタンスの場合は、[インスタンス名] を「MSSQLServer」に設定します。
 
-
 Csv ファイルを使用してデータをインポートする場合は、データ**インスタンス名**と**データベース名**の列が2つだけであり、列にヘッダー行がないことを確認します。
 
  ![csv ファイルの内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -97,7 +96,7 @@ Csv ファイルを使用してデータをインポートする場合は、デ�
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server テーブルの内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
+![SQL Server テーブルの内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 このデータベースがツールコンピューター上にない場合は、ツールコンピューターにこの SQL Server インスタンスへのネットワーク接続があることを確認してください。
 
@@ -105,10 +104,21 @@ CSV ファイルに対して SQL Server テーブルを使用する利点は、[
 
 オブジェクトの数とその複雑さによっては、評価に非常に長い時間 (時間 +) がかかることがあるので、評価を管理しやすいチャンクに分けることが賢明です。
 
+### <a name="if-using-an-instance-inventory"></a>インスタンスインベントリを使用する場合
+
+**Estateinventory**という名前のデータベースと、 **instanceinventory**という名前のテーブルを作成します。 このインベントリデータを含むテーブルには、次の4つの列が存在する限り、任意の数の列を含めることができます。
+
+- ServerName
+- InstanceName
+- Port
+- AssessmentFlag
+
+![SQL Server テーブルの内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+
 ## <a name="running-a-scaled-assessment"></a>スケーリングされた評価の実行
 
 PowerShell モジュールを modules ディレクトリに読み込んでインベントリを作成したら、PowerShell を開き、dmaDataCollector 関数を実行して、スケーリングされた評価を実行する必要があります。
- 
+
   ![dmaDataCollector 関数の一覧](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
 
 次の表では、dmaDataCollector 関数に関連付けられているパラメーターについて説明します。
@@ -119,19 +129,20 @@ PowerShell モジュールを modules ディレクトリに読み込んでイン
 |**csvPath** | CSV インベントリファイルへのパスです。  **GetServerListFrom**が**CSV**に設定されている場合にのみ使用されます。 |
 |**Server** | **GetServerListFrom**パラメーターで**SqlServer**を使用する場合の、インベントリの SQL Server インスタンス名。 |
 |**databaseName** | インベントリテーブルをホストしているデータベース。 |
+|**useInstancesOnly** | 評価にインスタンスのリストを使用するかどうかを指定するビットフラグです。  0に設定すると、データベースインベントリテーブルが評価ターゲットリストの作成に使用されます。 |
 |**AssessmentName** | DMA 評価の名前。 |
-|**TargetPlatform** | 実行する評価ターゲットの種類。  指定できる値は、 **AzureSQLDatabase**、 **SQLServer2012**、 **SQLServer2014**、 **Sqlserver2016-ssei-expr**、 **SQLServerLinux2017**、 **SQLServerWindows2017**、および**managedsqlserver**です。 |
+|**TargetPlatform** | 実行する評価ターゲットの種類。  指定できる値は、 **AzureSQLDatabase**、 **managedsqlserver**、 **SQLServer2012**、 **SQLServer2014**、 **Sqlserver2016-ssei-expr**、 **SQLServerLinux2017**、 **SQLServerWindows2017**、 **SqlServerWindows2019**、および**SqlServerLinux2019**です。  |
 |**AuthenticationMethod** | 評価するターゲット SQL Server に接続するための認証方法。 指定できる値は、 **sqlauth**と**windowsauth**です。 |
 |**OutputLocation** | JSON 評価出力ファイルを格納するディレクトリ。 評価されるデータベースの数とデータベース内のオブジェクトの数によっては、評価に非常に長い時間がかかることがあります。 すべての評価が完了した後で、ファイルが書き込まれます。 |
 
 予期しないエラーが発生した場合、このプロセスによって開始されたコマンドウィンドウは終了します。  エラーログを確認して、失敗した原因を特定します。
- 
+
   ![エラー ログの場所](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
 
 ## <a name="consuming-the-assessment-json-file"></a>評価 JSON ファイルを使用しています
 
 評価が完了したら、分析のために SQL Server にデータをインポートする準備が整いました。 評価 JSON ファイルを使用するには、PowerShell を開き、dmaProcessor 関数を実行します。
- 
+
   ![dmaProcessor 関数の一覧表示](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
 次の表では、dmaProcessor 関数に関連付けられているパラメーターについて説明します。
@@ -157,8 +168,8 @@ DmaProcessor が評価ファイルの処理を完了すると、データが Rep
     このスクリプトは、DMAReporting データベースの ReportData テーブルからデータを取得し、ウェアハウスに読み込みます。  この読み込み処理中にエラーが発生した場合、ディメンションテーブルにエントリが欠落している可能性があります。
 
 2. データウェアハウスを読み込みます。
- 
-      ![LoadWarehouse のコンテンツが読み込まれました](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+  ![LoadWarehouse のコンテンツが読み込まれました](../dma/media//dma-consolidatereports/dma-load-warehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>データベースの所有者を設定する
 
@@ -166,7 +177,7 @@ DmaProcessor が評価ファイルの処理を完了すると、データが Rep
 
 LoadWarehouse スクリプトを使用して、データベース所有者を設定するための基本的な TSQL ステートメントを指定することもできます。
 
-  ![LoadWarehouse 設定所有者](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+  ![LoadWarehouse 設定所有者](../dma/media//dma-consolidatereports/dma-load-warehouse-set-owners.png)
 
 ## <a name="dma-reports"></a>DMA レポート
 
@@ -250,7 +261,7 @@ Power BI レポートに表示される詳細については、次のセクシ�
 - 準備ができていません
 
 ### <a name="issues-word-cloud"></a>Word Cloud を発行する
- 
+
   ![DMA が WordCloud を発行する](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
 このビジュアルは、選択コンテキスト内で現在発生している問題を示しています (すべて、インスタンス、データベース [のマルチプル])。 画面に表示される単語が大きいほど、そのカテゴリの問題の数が多くなります。 マウスポインターを word の上に置くと、そのカテゴリで発生した問題の数が表示されます。
@@ -280,7 +291,7 @@ Power BI レポートに表示される詳細については、次のセクシ�
   ![DMA 修復プランレポート](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
 また、[**視覚化フィルター (視覚エフェクトフィルター** )」ブレードのフィルターを使用して、独自の修復プランレポートを作成することもできます。
- 
+
   ![DMA 修復プランレポートのフィルターオプション](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>スクリプトの免責事項
