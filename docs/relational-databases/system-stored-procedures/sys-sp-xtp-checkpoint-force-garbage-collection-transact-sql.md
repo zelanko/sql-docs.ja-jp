@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45eb999d6101902ebf9d079235f56d28e343f8e9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: df25b33677d4494d32bd60bb55b5c60791bcad30
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814489"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442414"
 ---
 # <a name="syssp_xtp_checkpoint_force_garbage_collection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   マージ操作で使用されるソースファイルをログシーケンス番号 (LSN) でマークします。その後、これらは不要になり、ガベージコレクションできます。 また、関連付けられている LSN がログの切り捨てポイントよりも小さいファイルを filestream ガベージコレクションに移動します。  
   
@@ -48,7 +48,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>結果セット  
  返される行には次の情報が含まれます。  
   
-|Column|説明|  
+|列|説明|  
 |------------|-----------------|  
 |num_collected_items|Filestream ガベージコレクションに移動されたファイルの数を示します。 これらのファイルのログ シーケンス番号 (LSN) は、ログの切り捨てポイントの LSN よりも小さい値になっています。|  
 |num_marked_for_collection_items|ログの最後の LSN のログブロック id を使用して LSN が更新されたデータ/デルタファイルの数を示します。|  

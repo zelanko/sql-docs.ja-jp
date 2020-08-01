@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 37e03d7552f1297fe4410d68e69bdc15ddeb47ed
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834222"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442421"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   テーブルまたはインデックス付きビューの行数またはチェックサム情報を返すか、あるいは提供された行数またはチェックサム情報を指定のテーブルまたはインデックス付きビューと比較します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行され、サブスクライバー側でサブスクリプションデータベースに対して実行されます。 *Oracle パブリッシャーではサポートされていません*。  
   
@@ -63,7 +63,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast`行数を計算するために使用されるメソッドです。 *full_or_fast*は**tinyint**,、既定値は**2**,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|COUNT(*) を使用してフル カウントします。|  
 |**1**|Sysindexes から高速にカウントさ**れ**ます。 **Sysindexes**での行のカウントは、実際のテーブルの行をカウントするよりもはるかに高速です。 ただし、 **sysindexes**は遅延更新されるため、行数が正確でない場合があります。|  
@@ -80,7 +80,7 @@ sp_table_validation [ @table = ] 'table'
   
  行数の検証を実行し、予想される行数がテーブルの数と等しい場合、 **sp_table_validation**はテーブルが行数の検証に合格したというメッセージを返します。 それ以外の場合は、テーブルが同期されていない可能性があるというメッセージを返し、予想される行数と実際の行数との差を報告します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_table_validation**は、すべての種類のレプリケーションで使用されます。 **sp_table_validation**は、Oracle パブリッシャーではサポートされていません。  
   
  Checksum は、ページ上の行イメージ全体で32ビット巡回冗長検査 (CRC) を計算します。 チェックサムは、列を選択して検査するわけではなく、テーブルのビューや列方向のパーティションで動作できません。 また、チェックサムでは、 **text**列と**image**列の内容がスキップされます (仕様)。  

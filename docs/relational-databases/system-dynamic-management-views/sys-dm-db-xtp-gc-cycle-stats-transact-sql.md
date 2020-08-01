@@ -20,15 +20,15 @@ ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed687f9a0f29359e60c05439e36853504e1ab6b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e0edb4d46ae47b4c45dc01f7d2e33f856424352
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830816"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442571"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>dm_db_xtp_gc_cycle_stats (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   1 つ以上の行を削除したコミット済みトランザクションの現在の状態を出力します。 アイドル状態のガベージコレクションスレッドは、最後のガベージコレクションサイクル以降にコミットされた DML トランザクションの数が内部しきい値を超えたときに、1分ごとに起動されます。 ガベージ コレクション サイクルの一環として、コミット済みトランザクションは、generation と関連付けられている 1 つ以上のキューに移動されます。 古いバージョンを生成したトランザクションは、次のようにして、16 の generation にわたり 16 トランザクションごとの単位にグループ化されます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82830816"
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
   
-|列名|種類|説明|  
+|列名|種類|Description|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|ガベージコレクションサイクルの一意の識別子。|  
 |ticks_at_cycle_start|**bigint**|サイクルが開始されたときのタイマー刻み。|  

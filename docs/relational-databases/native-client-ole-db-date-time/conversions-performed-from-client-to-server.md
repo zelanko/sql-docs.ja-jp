@@ -13,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fe44586362595f4d1c86a88ccfce0f0f0ec3de6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: da80b44c2b24d58906d4b8fab6c0989caceec544
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245859"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472268"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換が実行される SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,19 +39,19 @@ ms.locfileid: "87245859"
 |DBTIMESTAMP|1、2|1、3、4|1、4、10|1、10、14|1、10、15|1、10|1、5、10|1、10、11|1、10、11|1、10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1、2、8|1、3、4、8|1、4、8、10|1、8、10、14|1、8、10、15|1、8、10|1、10|1、10、11|1、10、11|1、10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1、2|1、3、4|1、4、13|1、13|1、13|1、13|1、5、13|1、13|1、10|1、13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|該当なし|該当なし|該当なし|  
-|VARIANT|1|1|1|1、10|1、10|1、10|1、10|該当なし|該当なし|1、10|  
-|SSVARIANT|1、16|1、16|1、16|1、10、16|1、10、16|1、10、16|1、10、16|該当なし|該当なし|1、16|  
-|BSTR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|該当なし|該当なし|該当なし|  
-|STR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|該当なし|該当なし|該当なし|  
-|WSTR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|該当なし|該当なし|該当なし|  
+|BYTES|-|-|-|-|-|-|-|N/A|該当なし|該当なし|  
+|VARIANT|1|1|1|1、10|1、10|1、10|1、10|N/A|該当なし|1、10|  
+|SSVARIANT|1、16|1、16|1、16|1、10、16|1、10、16|1、10、16|1、10、16|N/A|該当なし|1、16|  
+|BSTR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|N/A|該当なし|該当なし|  
+|STR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|N/A|該当なし|該当なし|  
+|WSTR|1、9|1、9|1、9、10|1、9、10|1、9、10|1、9、10|1、9、10|N/A|該当なし|該当なし|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
 |Symbol|意味|  
 |------------|-------------|  
 |-|変換はサポートされていません。 IAccessor::CreateAccessor の呼び出し時にバインドが検証される場合、DBBINDSTATUS_UPSUPPORTEDCONVERSION が *rgStatus* で返されます。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
-|該当なし|適用不可。|  
+|N/A|適用不可。|  
 |1|指定されたデータが有効でない場合、DBSTATUS_E_CANTCONVERTVALUE が設定されます。 入力データが検証されてから変換が適用されるので、コンポーネントは後続の変換で無視されることがあっても、変換を成功させるには有効である必要があります。|  
 |2|時刻フィールドは無視されます。|  
 |3|秒の小数部は 0 である必要があります。そうでなければ、DBSTATUS_E_DATAOVERFLOW が設定されます。|  
@@ -69,9 +69,8 @@ ms.locfileid: "87245859"
 |15|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンの **datetime** に対する変換セマンティクスが保持されます。 秒は、1/300 秒単位に丸められます。|  
 |16|SSVARIANT クライアントの構造体に埋め込まれた (特定の型の) 値の変換動作は、SSVARIANT クライアントの構造体に埋め込まれていない場合の同一の値および型の動作と同じです。|  
   
-||||  
+|種類|長さ (文字数)|スケール|  
 |-|-|-|  
-|Type|長さ (文字数)|スケール|  
 |DBTIME2|8、10..18|0、1..9|  
 |DBTIMESTAMP|19、21..29|0、1..9|  
 |DBTIMESTAMPOFFSET|26、28..36|0、1..9|  

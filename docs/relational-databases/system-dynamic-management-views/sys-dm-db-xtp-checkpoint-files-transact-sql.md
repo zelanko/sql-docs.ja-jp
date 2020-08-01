@@ -21,15 +21,15 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddf365b81a6e973da8348ad011dea9e23aabba50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4c4579fa8c2b891644e462ffd896e67862be8ca
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677523"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442587"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>dm_db_xtp_checkpoint_files (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   ファイルサイズ、物理的な場所、トランザクション ID など、チェックポイントファイルに関する情報を表示します。  
   
@@ -41,15 +41,15 @@ ms.locfileid: "85677523"
   
  詳細については、「[メモリ最適化オブジェクトのストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)」を参照してください。  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降  
+##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降    
  次の表では、以降のの列について説明し `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** ます。  
   
-|列名|Type|説明|  
+|列名|種類|Description|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 [Database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)の file_id と結合します。|  
 |container_guid|**uniqueidentifier**|ルート、データ、またはデルタファイルが含まれているコンテナーの GUID。 Database_files テーブルの file_guid と結合します。|  
 |checkpoint_file_id|**uniqueidentifier**|チェックポイントファイルの GUID。|  
-|relative_file_path|**nvarchar(256)**|マップ先のコンテナーを基準としたファイルの相対パス。|  
+|relative_file_path|**nvarchar (256)**|マップ先のコンテナーを基準としたファイルの相対パス。|  
 |file_type|**smallint**|-1 (無料)<br /><br /> データファイルの場合は0です。<br /><br /> デルタファイルの場合は1。<br /><br /> ルートファイルの場合は2<br /><br /> 3 (大規模なデータファイルの場合)|  
 |file_type_desc|**nvarchar(60)**|FREE-空きとして保持されているすべてのファイルを割り当て可能です。 空きファイルのサイズは、システムによって予想されるニーズによって異なります。 最大サイズは 1 GB です。<br /><br /> データデータファイルには、メモリ最適化テーブルに挿入された行が含まれています。<br /><br /> デルタデルタファイルには、削除されたデータファイル内の行への参照が含まれています。<br /><br /> ルートルートファイルには、メモリ最適化オブジェクトおよびネイティブコンパイルオブジェクト用のシステムメタデータが含まれています。<br /><br /> 大規模なデータ-大規模なデータファイルには、(n) varchar (max) 列と varbinary (max) 列に挿入された値、およびメモリ最適化テーブルの列ストアインデックスの一部である列セグメントが含まれています。|  
 |internal_storage_slot|**int**|内部ストレージ配列内のファイルのインデックス。 ルートの場合は NULL、状態が1以外の場合はです。|  
@@ -70,12 +70,12 @@ ms.locfileid: "85677523"
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  次の表では、の列について説明し `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** ます。  
   
-|列名|Type|説明|  
+|列名|種類|Description|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 [Database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)の file_id と結合します。|  
 |container_guid|**uniqueidentifier**|データファイルまたはデルタファイルが含まれているコンテナーの GUID。|  
 |checkpoint_file_id|**GUID**|データファイルまたはデルタファイルの ID。|  
-|relative_file_path|**nvarchar(256)**|コンテナーの場所を基準とする、データ ファイルまたはデルタ ファイルの相対パス。|  
+|relative_file_path|**nvarchar (256)**|コンテナーの場所を基準とする、データ ファイルまたはデルタ ファイルの相対パス。|  
 |file_type|**tinyint**|0 はデータ ファイルに対応。<br /><br /> 1 はデルタ ファイルに対応。<br /><br /> State 列が7に設定されている場合は NULL になります。|  
 |file_type_desc|**nvarchar(60)**|ファイルの種類: DATA_FILE、DELTA_FILE、または [状態] 列が7に設定されている場合は NULL です。|  
 |internal_storage_slot|**int**|内部ストレージ配列内のファイルのインデックス。 State 列が2または3でない場合は NULL になります。|  
@@ -98,7 +98,7 @@ ms.locfileid: "85677523"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW DATABASE STATE` 権限が必要です。  
   
-## <a name="use-cases"></a>ユース ケース  
+## <a name="use-cases"></a>例  
  インメモリ OLTP によって使用されているストレージを推定するには、次のようにします。  
   
 ```  
@@ -122,7 +122,7 @@ ORDER BY state, file_type
   
 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

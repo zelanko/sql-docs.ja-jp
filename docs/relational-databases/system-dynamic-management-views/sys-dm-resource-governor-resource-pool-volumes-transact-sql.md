@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7b77d42eb45831eb6fbb800a5648d4706d738e1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 73a99b7db59061df8b01c5baffacb22a0ab4c83d
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827861"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442730"
 ---
 # <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>dm_resource_governor_resource_pool_volumes (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   各ディスクボリュームの現在のリソースプール IO 統計に関する情報を返します。 この情報は、 [sys. dm_resource_governor_resource_pools &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)のリソースプールレベルでも使用できます。 transact-sql&#41;を参照してください。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "82827861"
  VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

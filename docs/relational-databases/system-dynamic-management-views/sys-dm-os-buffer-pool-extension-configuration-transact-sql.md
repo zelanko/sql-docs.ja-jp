@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8924d703085b3f93fe2ae36084025e945ff3fda
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0654796ace5d5026539fc50f514b0407362633fc
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820871"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442736"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>dm_os_buffer_pool_extension_configuration (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   のバッファープール拡張に関する構成情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 バッファープール拡張ファイルごとに1行の値を返します。  
   

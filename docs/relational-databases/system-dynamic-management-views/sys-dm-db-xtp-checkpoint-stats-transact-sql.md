@@ -21,15 +21,15 @@ ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29e08f4fd023717a186a900f288e47f864af218e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72af811bb5c3f9f5b3fdded8589bec4ef34806fb
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677439"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442839"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   現在のデータベースのインメモリ OLTP チェックポイント操作に関する統計を返します。 データベースにインメモリ OLTP オブジェクトが存在しない場合、は空の結果セットを返します。  
   
@@ -42,10 +42,10 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]は、より新しいバージョンとは大幅に異なります。 [SQL Server 2014](#bkmk_2014)のトピックでは、この点について説明します。**
   
-## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降  
+## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降    
  次の表では、で始まるの列について説明し `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** ます。  
   
-|列名|Type|説明|  
+|列名|種類|Description|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|コントローラーによって表示される最後の LSN。|  
 |end_of_log_lsn|**数値 (38)**|ログの末尾の LSN。|  
@@ -87,7 +87,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  次の表では、の列について説明し `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** ます。  
   
-|列名|Type|説明|  
+|列名|種類|Description|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|スレッドの現在のログシーケンス番号 (LSN) とログの末尾との間のログバイト数。|  
 |total_log_blocks_processed|**bigint**|サーバーの起動後に処理されたログブロックの合計数。|  
@@ -108,7 +108,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW DATABASE STATE` 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

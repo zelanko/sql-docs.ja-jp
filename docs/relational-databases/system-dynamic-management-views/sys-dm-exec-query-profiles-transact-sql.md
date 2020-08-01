@@ -20,15 +20,15 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8efc79ed772d92986af87a707cf64f4c0f9cbdcf
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812047"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442552"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 クエリの実行中にリアルタイムでクエリの進行状況を監視します。 たとえば、この DMV を使用して、クエリのどの部分が低速で実行されているかを判断します。 この DMV をシステムの他の DMV と結合するには、説明フィールドで特定されている列を使用します。 または、timestamp 列を使用して、この DMV を他のパフォーマンスカウンター (Performance Monitor、xperf など) に結合します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82812047"
 |request_id|**int**|ターゲット要求を識別します。 Dm_exec_sessions を参照しています。 request_id。|  
 |sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 sql_handle。|  
 |plan_handle|**varbinary(64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 plan_handle。|  
-|physical_operator_name|**nvarchar(256)**|物理操作名。|  
+|physical_operator_name|**nvarchar (256)**|物理操作名。|  
 |node_id|**int**|クエリ ツリー内の演算子ノードを識別します。|  
 |thread_id|**int**|同じクエリ演算子ノードに属している (並列クエリの) スレッドを識別します。|  
 |task_address|**varbinary (8)**|このスレッドが使用している SQLOS タスクを識別します。 Dm_os_tasks を参照しています。 task_address。|  
@@ -83,7 +83,7 @@ ms.locfileid: "82812047"
   
 -   並列スキャンがある場合、この DMV では、スキャンで使用される並列スレッドごとにカウンターがレポートされます。
  
-SP1 以降では [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 、*標準のクエリ実行統計プロファイルインフラストラクチャ*は、*軽量のクエリ実行統計プロファイルインフラストラクチャ*とサイドバイサイドで存在します。 `SET STATISTICS XML ON`と `SET STATISTICS PROFILE ON` は、常に*標準のクエリ実行統計プロファイルインフラストラクチャ*を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
+SP1 以降では [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 、*標準のクエリ実行統計プロファイルインフラストラクチャ*は、*軽量のクエリ実行統計プロファイルインフラストラクチャ*とサイドバイサイドで存在します。 `SET STATISTICS XML ON`と `SET STATISTICS PROFILE ON` は、常に*標準のクエリ実行統計プロファイルインフラストラクチャ*を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
 
 >[!NOTE]
 > 調査対象のクエリは、クエリのプロファイルインフラストラクチャが有効になっ**た後**に開始する必要があります。クエリを開始した後で有効にすると、で結果が生成されません `sys.dm_exec_query_profiles` 。 クエリプロファイルインフラストラクチャを有効にする方法の詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。
@@ -124,6 +124,6 @@ ORDER BY node_id;
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
  

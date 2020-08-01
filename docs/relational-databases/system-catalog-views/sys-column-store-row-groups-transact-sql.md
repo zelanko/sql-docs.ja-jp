@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c98acb87e180dce32a00e77ba6c1af9fbd48b6fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9722eb458485d8b0635c226dbfa952a7b6cfca48
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140007"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442580"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   では、管理者がシステム管理の決定を行うのに役立つ、セグメント単位でクラスター化列ストアインデックス情報が提供されます。 **column_store_row_groups**には、物理的に格納された行の合計数 (削除済みとしてマークされている行を含む) の列と、削除済みとしてマークされた行の数の列があります。 削除された行の割合が高く、再構築する必要がある行グループを確認するには、 **column_store_row_groups**を使用します。  
    
@@ -38,7 +38,7 @@ ms.locfileid: "68140007"
 |**partition_number**|**int**|行グループ row_group_id を保持するテーブル パーティションの ID。 Partition_number を使用して、この DMV を sys パーティションに参加させることができます。|  
 |**row_group_id**|**int**|この行グループに関連付けられている行グループ番号。 これは、パーティション内で一意です。<br /><br /> -1 = メモリ内のテーブルの末尾。|  
 |**delta_store_hobt_id**|**bigint**|デルタストア内の開いている行グループの hobt_id。<br /><br /> 行グループがデルタストアに存在しない場合は NULL になります。<br /><br /> メモリ内のテーブルの末尾の場合は NULL です。|  
-|**state**|**tinyint**|State_description に関連付けられている ID 番号。<br /><br /> 0 = 非表示<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = 圧縮 <br /><br /> 4 = 廃棄標識|  
+|**状態**|**tinyint**|State_description に関連付けられている ID 番号。<br /><br /> 0 = 非表示<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = 圧縮 <br /><br /> 4 = 廃棄標識|  
 |**state_description**|**nvarchar(60)**|行グループの永続的な状態の説明。<br /><br /> 非表示-デルタストア内のデータから構築されるプロセス内の非表示の圧縮セグメント。 非表示の圧縮されたセグメントが完了するまで、読み取りアクションでデルタ ストアが使用されます。 その後、新しいセグメントが表示されると、ソース デルタ ストアは削除されます。<br /><br /> OPEN-新しいレコードを受け入れる読み取り/書き込み行グループ。 開いている行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> CLOSED-組ムーバープロセスによってまだ圧縮されていない、いっぱいになっている行グループ。<br /><br /> 圧縮-格納され、圧縮された行グループ。|  
 |**total_rows**|**bigint**|行グループに物理的に格納されている行の合計。 削除されたものの、まだ保存されているものもあります。 行グループ内の行の最大数は 1048576 (16 進数 FFFFF) です。|  
 |**deleted_rows**|**bigint**|削除済みとマークされた行グループ内の行の合計数。 これはデルタ行グループの場合は常に 0 です。|  
@@ -77,13 +77,13 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>参照  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [&#40;Transact-sql&#41;の列](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [computed_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
- [列ストアインデックスガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)     
+ [列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)     
  [column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   

@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7bceaef8321248bc29be2faad3886319a9267391
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112765"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472209"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>dm_db_index_physical_stats (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,33 +55,33 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>引数  
- *database_id* |NULL |0 |標準  
+ *database_id* \|NULL \| 0 の \| 既定値  
  データベースの ID を示します。 *database_id*は**smallint**です。 有効な入力値は、データベースの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。 *Database_id*に null を指定した場合は、 *object_id*、 *index_id*、および*partition_number*にも null を指定する必要があります。  
   
  組み込み関数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) を指定できます。 データベース名を指定しないで DB_ID を使用する場合、現在のデータベースの互換性レベルが 90 以上である必要があります。  
   
- *object_id* |NULL |0 |標準  
+ *object_id* \|NULL \| 0 の \| 既定値  
  インデックスがあるテーブルまたはビューのオブジェクト ID を示します。 *object_id*は**int**です。  
   
  有効な入力値は、テーブルおよびビューの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、有効な入力には、service broker のキュー名またはキューの内部テーブル名も含まれます。 既定のパラメーター (つまり、すべてのオブジェクト、すべてのインデックスなど) が適用されると、すべてのキューの断片化情報が結果セットに含まれます。  
   
  NULL を指定すると、指定されたデータベース内にあるすべてのテーブルとビューに関する情報が返されます。 *Object_id*に null を指定する場合は、 *index_id*と*partition_number*にも null を指定する必要があります。  
   
- *index_id* |0 |NULL |-1 |標準  
+ *index_id* \|0 \| NULL \| -1 \| 既定値  
  インデックスの ID です。 *index_id*は**int**です。有効な入力値は、インデックスの ID 番号です。 *object_id*がヒープ、NULL、-1、または DEFAULT である場合は0になります。 既定値は -1 です。 このコンテキストでは、NULL、-1、および DEFAULT は同じ値です。  
   
  NULL を指定すると、ベース テーブルまたはビューのすべてのインデックスに関する情報が返されます。 *Index_id*に null を指定する場合は、 *partition_number*に null を指定する必要もあります。  
   
- *partition_number* |NULL |0 |標準  
+ *partition_number* \|NULL \| 0 の \| 既定値  
  オブジェクトのパーティション番号です。 *partition_number*は**int**です。有効な入力値は、インデックスまたはヒープの*partion_number* 、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。  
   
  NULL を指定すると、所有するオブジェクトのすべてのパーティションに関する情報が返されます。  
   
  *partition_number*は1から始まるです。 非パーティションインデックスまたはヒープの*partition_number*が1に設定されています。  
   
- *mode* |NULL |標準  
+ *モード* \|NULL の \| 既定値  
  モードの名前を指定します。 *モード*統計を取得するために使用するスキャンレベルを指定します。 *モード*は**sysname**です。 有効な入力値は DEFAULT、NULL、LIMITED、SAMPLED、DETAILED です。 既定値 (NULL) は LIMITED です。  
   
 ## <a name="table-returned"></a>返されるテーブル  
@@ -120,7 +120,7 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|元のデータ行の外部に保持されているバージョンレコードの数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|長期間と見なされるバージョンレコードの数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sys.dm_db_index_physical_stats 動的管理関数は、DBCC SHOWCONTIG ステートメントの代わりに使用できます。  
   
 ## <a name="scanning-modes"></a>スキャン モード  

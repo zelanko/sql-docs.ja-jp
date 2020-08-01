@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7cfca8eea2051ab8c1f070e0da9603604c5296a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: de629f6ae966f8ea64dffa01676811650ac38b43
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829942"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442636"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sp_xtp_unbind_db_resource_pool (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   このシステムプロシージャは、メモリ使用量を追跡するために、データベースとリソースプールの間の既存のバインドを削除し [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ます。  指定したデータベースに現在バインドされたプールがない場合、成功が返されます。 データベースがバインド解除されると、以前に割り当てられたメモリ最適化オブジェクトのメモリは、前のリソースプールに割り当てられたままになります。 割り当てられたメモリを解放するには、データベースを再起動する必要があります。 データベースがリソースプールからバインド解除されると、バインドは既定のリソースプールに並べ替えられます。  
   
@@ -70,7 +70,7 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
 -   CONTROL SERVER 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルを含むデータベースをリソースプールにバインドする](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [データベースを作成してリソース プールにバインドする方法については、「](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   
