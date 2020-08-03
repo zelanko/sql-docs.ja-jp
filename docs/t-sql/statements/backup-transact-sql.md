@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29a53d4ccb5958a191bf06f4565cc8f908376086
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552777"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332511"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -65,10 +65,17 @@ SQL Database をバックアップします。
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -234,9 +241,9 @@ TO \<backup_device> [ **,** ...*n* ]: 関連する[バックアップ デバイ�
 
 バックアップ操作に使用する論理または物理バックアップ デバイスを指定します。
 
-{ *logical_device_name* |  **@** _logical\_device\_name\_var_ } **適用対象:** SQL Server: データベースのバックアップが作成されるバックアップ デバイスの論理名です。 論理名は、識別子のルールに従う必要があります。 変数 (@*logical_device_name_var*) として指定する場合、バックアップ デバイス名を文字列定数 (@_logical\_device\_name\_var_ **=** logical backup device name) として指定するか、**ntext** または **text** データ型以外の文字列データ型の変数として指定できます。
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **適用対象:** SQL Server: データベースのバックアップが作成されるバックアップ デバイスの論理名です。 論理名は、識別子のルールに従う必要があります。 変数 (@*logical_device_name_var*) として指定する場合、バックアップ デバイス名を文字列定数 (@_logical\_device\_name\_var_ **=** logical backup device name) として指定するか、**ntext** または **text** データ型以外の文字列データ型の変数として指定できます。
 
-{ DISK | TAPE | URL} **=** { **'** _physical\_device\_name_ **'**  |  **@** _physical\_device\_name\_var_ | 'NUL' } **適用対象:** SQL Server に適用する DISK、TAPE、URL。
+{ DISK \| TAPE \| URL} **=** { **'** _physical\_device\_name_ **'** \| **@** _physical\_device\_name\_var_ \| 'NUL' } **適用対象:** SQL Server に適用する DISK、TAPE、URL。
 ディスク ファイルまたはテープ デバイス、あるいは Microsoft Azure BLOB ストレージ サービスを指定します。 URL の形式は、Microsoft Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 チュートリアルについては、「[チュートリアル: Microsoft Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)」を参照してください。
 
 > [!NOTE]
@@ -664,7 +671,7 @@ BACKUP ステートメントの `TO` 句で指定する各バックアップ デ
 > [!NOTE]
 > テープ メディアが空の場合、またはディスクのバックアップ ファイルが存在しない場合は、これらすべての相関関係によってメディア ヘッダーが記述され、続行されます。 ただし、メディアが空でなく、有効なメディア ヘッダーがない場合、これらの操作によって、有効な MTF メディアでないことを示すフィードバックが返され、バックアップ操作が中断されます。
 
-||NOINIT|INIT|
+|スキップ オプション|NOINIT|INIT|
 |------|------------|----------|
 |NOSKIP|ボリュームに有効なメディア ヘッダーが含まれる場合は、`MEDIANAME` が指定されていれば、その値とメディア名が一致していることを確認します。 メディア名が一致した場合は、すべての既存のバックアップ セットはそのままにして、バックアップ セットを追加します。<br /> ボリュームに有効なメディア ヘッダーが含まれない場合は、エラーが発生します。|ボリュームに有効なメディア ヘッダーが含まれている場合は、次のチェックを実行します。<br /><ul><li>`MEDIANAME` を指定した場合は、指定されているメディア名がメディア ヘッダーのメディア名と一致していることを確認します。<sup>1</sup></li><li>メディア上に失効前のバックアップ セットが既に存在していないことを確認します。 存在している場合は、バックアップを中断します。</li></ul><br />上のチェックにパスした場合は、メディア ヘッダーだけをそのままにして、メディア上のすべてのバックアップ セットを上書きします。<br /> ボリュームに有効なメディア ヘッダーが含まれない場合は、`MEDIANAME` および `MEDIADESCRIPTION` が指定されていれば、これらのオプションを使用してメディア ヘッダーを生成します。|
 |SKIP|ボリュームに有効なメディア ヘッダーが含まれる場合は、すべての既存のバックアップ セットをそのまま保持して、バックアップ セットを追加します。|ボリュームに有効な<sup>2</sup> メディア ヘッダーが含まれる場合は、メディア ヘッダーだけをそのままにして、メディア上のすべてのバックアップ セットを上書きします。<br /> メディアが空の場合は、`MEDIANAME` および `MEDIADESCRIPTION` が指定されていれば、これらのオプションを使用してメディア ヘッダーを生成します。|
@@ -929,9 +936,17 @@ WHERE r.command LIKE 'BACKUP%'
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1111,9 +1126,17 @@ WITH STATS = 5, COPY_ONLY;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
