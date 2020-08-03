@@ -18,16 +18,16 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6d18996610899fd348b179495ab78af2e2717f83
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091676"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396001"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 この記事では、Azure SQL Data Warehouse で COPY ステートメントを使用して、外部ストレージ アカウントからの読み込みを行う方法について説明します。 COPY ステートメントを使用すると、SQL Data Warehouse への高スループットのデータ インジェストで最大の柔軟性が確保されます。 次の機能に COPY を使用します。
 
@@ -217,7 +217,7 @@ ERRORFILE でストレージ アカウントの完全なパスが定義されて
 *MAXERRORS = max_errors*</br>
 *MAXERRORS* では、読み込みで拒否できる行の最大数を指定します。この最大数に達すると、COPY 操作は取り消されます。 COPY 操作でインポートできない行は無視され、それぞれ 1 つのエラーとしてカウントされます。 max_errors が指定されていない場合、既定値は 0 です。
 
-*COMPRESSION = { 'DefaultCodec '| ’Snappy’ | ‘GZIP’ | ‘NONE’}*</br>
+*COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}*</br>
 *COMPRESSION* は省略可能で、外部データのデータ圧縮方法を指定します。
 
 - CSV は GZIP をサポートしています
@@ -250,7 +250,7 @@ ROW TERMINATOR の UTF-8 では、拡張 ASCII およびマルチバイト文字
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* は CSV に適用され、COPY コマンドに対して、すべてのファイルで最初に読み取られる行番号を指定します。 値は 1 から始まり、これが既定値です。 2 に設定すると、データが読み込まれるときに、すべてのファイルの最初の行 (ヘッダー行) がスキップされます。 行は、行ターミネータの存在に基づいてスキップされます。
 
-*DATEFORMAT = { ‘mdy’ | ‘dmy’ | ‘ymd’ | ‘ydm’ | ‘myd’ | ‘dym’ }*</br>
+*DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
 DATEFORMAT は CSV にのみ適用され、SQL Server 日付形式に対する日付の日付形式のマッピングを指定します。 Transact-SQL の日付と時刻のデータ型および関数の概要については、「[日付と時刻のデータ型および関数 (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15)」を参照してください。 COPY コマンド内の DATEFORMAT は、[セッション レベルで構成された DATEFORMAT](set-dateformat-transact-sql.md?view=sql-server-ver15) よりも優先されます。
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>

@@ -1,5 +1,6 @@
 ---
 title: ストアド プロシージャ (データベース エンジン) | Microsoft Docs
+description: SQL Server のストアド プロシージャが 1 つ以上の Transact-SQL ステートメントのグループ、または .NET Framework 共通言語ランタイム メソッドの参照になるしくみについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73243b7be6587b1e811ac040c5977207748b3889
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68fbf67a8ff58c4f768c56a84e45c11fd4480c05
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003104"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332227"
 ---
 # <a name="stored-procedures-database-engine"></a>ストアド プロシージャ (データベース エンジン)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,9 +80,8 @@ ms.locfileid: "86003104"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
-|-|-|  
-|**タスクの説明**|**トピック**|  
+| タスクの説明 | トピック |
+| ---------------- | ----- |
 |ストアド プロシージャの作成方法を説明する|[ストアド プロシージャの作成](../../relational-databases/stored-procedures/create-a-stored-procedure.md)|  
 |ストアド プロシージャの変更方法を説明する|[ストアド プロシージャの変更](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)|  
 |ストアド プロシージャの削除方法を説明する|[ストアド プロシージャの削除](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)|  

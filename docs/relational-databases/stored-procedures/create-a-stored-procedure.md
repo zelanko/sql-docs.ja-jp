@@ -1,5 +1,6 @@
 ---
 title: ストアド プロシージャの作成 | Microsoft Docs
+description: SQL Server Management Studio と Transact-SQL CREATE PROCEDURE ステートメントを使用し、Transact-SQL ストアド プロシージャを作成する方法について説明します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a401e9120283f2235124c71653aa8418fe701afe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dde2beed868314f315bf51e9fa8174ba01b09e3e
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001018"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332661"
 ---
 # <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

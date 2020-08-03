@@ -1,6 +1,6 @@
 ---
 title: PostgreSQL の拡張機能 (プレビュー)
-description: Azure Data Studio 用の PostgreSQL 拡張機能 (プレビュー)
+description: Postgres データベースに接続し、クエリを実行し、開発することを可能にする Azure Data Studio PostgreSQL 拡張機能をインストールする方法について説明します。
 ms.custom: seodec18
 ms.date: 03/19/2019
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 5c5c12a45ee49456ff0b4742e258ee5ad2936600
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a273850f64168caeb48304606e50703ba8fc54f4
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735292"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411328"
 ---
 # <a name="postgresql-extension-preview"></a>PostgreSQL の拡張機能 (プレビュー)
 

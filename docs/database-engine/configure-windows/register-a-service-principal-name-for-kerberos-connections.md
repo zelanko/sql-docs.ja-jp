@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4618c69eb24901580118a6fc6b4119689f1e9663
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651750"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362669"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 接続用のサービス プリンシパル名の登録
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,9 +94,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
     > [!NOTE]
     > 新しい SPN の形式では、ポート番号は必要ありません。 つまり、複数ポートのサーバーまたはポート番号を使用しないプロトコルで Kerberos 認証を使用できます。  
    
-|||  
+|SPN の形式|説明|  
 |-|-|  
-|MSSQLSvc/\<FQDN>:<port>|TCP が使用される場合にプロバイダーが生成する既定の SPN。 \<port> は、TCP ポート番号です。|  
+|MSSQLSvc/\<FQDN>:\<port>|TCP が使用される場合にプロバイダーが生成する既定の SPN。 \<port> は、TCP ポート番号です。|  
 |MSSQLSvc/\<FQDN>|TCP 以外のプロトコルが使用される場合に、既定のインスタンスに対してプロバイダーが生成する既定の SPN。 \<FQDN> は、完全修飾ドメイン名です。|  
 |MSSQLSvc/\<FQDN>:\<instancename>|TCP 以外のプロトコルが使用される場合に、名前付きインスタンスに対してプロバイダーが生成する既定の SPN。 \<instancename> は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前です。|  
 

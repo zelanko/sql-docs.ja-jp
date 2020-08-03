@@ -1,6 +1,6 @@
 ---
 title: クイック スタート:SQL Server に対する接続およびクエリ
-description: このクイック スタートでは、Azure Data Studio を使用して SQL Server に接続し、クエリを実行する方法を示します
+description: クイックスタートで Azure Data Studio を使用して SQL Server に接続し、Transact-SQL (T-SQL) ステートメントを使用してデータベースを作成します。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: quickstart
@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: d5fc104e5c4a848c24c6bc45ab09419dc10d1818
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764112"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411288"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>クイック スタート:Azure Data Studio を使用して、SQL Server に接続してクエリを実行する
 

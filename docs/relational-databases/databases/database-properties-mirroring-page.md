@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2be2bcf872af3be6caf8bb2b13af70347fcf1106
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630983"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361425"
 ---
 # <a name="database-properties-mirroring-page"></a>[データベースのプロパティ] ([ミラーリング] ページ)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85630983"
   
  ウィザードが正常に完了すると、ミラーリングが既に開始されているかどうかに応じて、次の動作が行われます。  
   
-|||  
+|ミラーリング状態|実行した操作|  
 |-|-|  
 |ミラーリングがまだ開始されていない場合|プロパティ ページは、その接続の情報をキャッシュします。また、ミラー データベースにパートナーのプロパティ セットが収められているかどうかを示す値もキャッシュされます。<br /><br /> ウィザードの最後に、既定のサーバー ネットワーク アドレスと動作モードを使用したデータベース ミラーリングを開始するように要求されます。 アドレスまたは動作モードを変更する場合は、 **[ミラーリングを開始しない]** をクリックします。|  
 |ミラーリングが開始されている場合|ウィザードでミラーリング監視サーバーの構成が変更された場合、それに従って設定されます。|  

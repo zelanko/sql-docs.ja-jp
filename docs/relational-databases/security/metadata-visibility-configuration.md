@@ -21,12 +21,12 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 80b0606f38f50b067f706bc5dad4d094ea49a4b2
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85979504"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332041"
 ---
 # <a name="metadata-visibility-configuration"></a>メタデータ表示の構成
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,21 +43,43 @@ GO
   
 ## <a name="scope-and-impact-of-metadata-visibility-configuration"></a>メタデータ表示の構成のスコープと影響  
  メタデータ表示の構成は、次のセキュリティ保護可能なメタデータにのみ適用されます。  
-  
-|||  
-|-|-|  
-|カタログ ビュー|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** ストアド プロシージャ|  
-|メタデータ公開組み込み関数|情報スキーマ ビュー|  
-|互換性ビュー|拡張プロパティ|  
+
+:::row:::
+    :::column:::
+        カタログ ビュー
+
+        メタデータ公開組み込み関数
+
+        互換性ビュー
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** ストアド プロシージャ
+
+        情報スキーマ ビュー
+
+        拡張プロパティ
+    :::column-end:::
+:::row-end:::
   
  メタデータ表示の構成は、次のセキュリティ保護可能なメタデータには適用されません。  
-  
-|||  
-|-|-|  
-|ログ配布システム テーブル|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント システム テーブル|  
-|データベース メンテナンス プラン システム テーブル|バックアップ システム テーブル|  
-|レプリケーション システム テーブル|レプリケーション ストアド プロシージャと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **sp_help** ストアド プロシージャ|  
-  
+
+:::row:::
+    :::column:::
+        ログ配布システム テーブル
+
+        データベース メンテナンス プラン システム テーブル
+
+        レプリケーション システム テーブル
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント システム テーブル
+
+        バックアップ システム テーブル
+
+        レプリケーション ストアド プロシージャと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **sp_help** ストアド プロシージャ
+    :::column-end:::
+:::row-end:::
+
  メタデータへのアクセスを制限すると、次のような影響があります。  
   
 -   メタデータへの **パブリック** なアクセスを前提とするアプリケーションは機能しません。  
@@ -118,26 +140,28 @@ GO
     -   ユーザーがオブジェクトに対する VIEW DEFINITION 権限を拒否されておらず、そのオブジェクトに対する CONTROL、ALTER、TAKE OWNERSHIP のいずれかの権限を許可されている場合。 他のすべてのユーザーには NULL 値が表示されます。  
   
 -   次のカタログ ビューの定義列。  
-  
-    |||  
-    |-|-|  
-    |**sys.all_sql_modules**|**sys.sql_modules**|  
-    |**sys.server_sql_modules**|**sys.check_constraints**|  
-    |**sys.default_constraints**|**sys.computed_columns**|  
-    |**sys.numbered_procedures**||  
-  
+
+    - **sys.all_sql_modules**  
+    - **sys.server_sql_modules**  
+    - **sys.default_constraints**
+    - **sys.numbered_procedures**
+    - **sys.sql_modules**
+    - **sys.check_constraints**
+    - **sys.computed_columns**
+
 -   **syscomments** 互換性ビューの **ctext** 列。  
   
 -   **sp_helptext** プロシージャの出力。  
   
--   情報スキーマ ビューの次の列。  
-  
-    |||  
-    |-|-|  
-    |INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE|INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT|INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION|INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION|  
-  
+-   情報スキーマ ビューの次の列。
+
+    - INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE
+    - INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION
+    - INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION
+
 -   OBJECT_DEFINITION() 関数  
   
 -   **sys.sql_logins**の password_hash 列に格納された値。  CONTROL SERVER 権限が許可されていないユーザーには、この列に NULL 値が表示されます。  
@@ -177,19 +201,45 @@ GO
   
  DB_ID() 関数と DB_NAME() 関数で返されるメタデータは、すべてのユーザーが表示できます。  
   
- 次の表に、 **public** ロールで表示できるカタログ ビューを示します。  
-  
-|||  
-|-|-|  
-|**sys.partition_functions**|**sys.partition_range_values**|  
-|**sys.partition_schemes**|**sys.data_spaces**|  
-|**sys.filegroups**|**sys.destination_data_spaces**|  
-|**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
-|**sys.sql_dependencies**|**sys.type_assembly_usages**|  
-|**sys.parameter_type_usages**|**sys.column_type_usages**|  
-  
+ これは **public** ロールで表示できるカタログ ビューの一覧です。  
+
+:::row:::
+    :::column:::
+        **sys.partition_functions**
+
+        **sys.partition_schemes**
+
+        **sys.filegroups**
+
+        **sys.database_files**
+
+        **sys.partitions**
+
+        **sys.schemas**
+
+        **sys.sql_dependencies**
+
+        **sys.parameter_type_usages**
+    :::column-end:::
+    :::column:::
+        **sys.partition_range_values**
+
+        **sys.data_spaces**
+
+        **sys.destination_data_spaces**
+
+        **sys.allocation_units**
+
+        **sys.messages**
+
+        **sys.configurations**
+
+        **sys.type_assembly_usages**
+
+        **sys.column_type_usages**
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>参照  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   

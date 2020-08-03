@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9da1c78f9f312574a0a914f0956357412a35d4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1847c47622dc36bbdb92db675a90765ff6f197f6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216032"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332151"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase の機能と制限事項
 
@@ -26,28 +26,26 @@ ms.locfileid: "80216032"
 ## <a name="feature-summary-for-product-releases"></a>製品リリースの機能の概要
 
 PolyBase の主な機能と、これらの機能を利用できる製品を一覧表示した表を次に示します。  
-  
-||||||
-|-|-|-|-|-|   
-|**機能**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
+
+|**機能** |**SQL Server 2016** |**Azure SQL Database** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
+|---------|---------|---------|---------|---------|
 |で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|いいえ|いいえ|はい|
 |Hadoop からデータをインポートする|はい|いいえ|いいえ|はい|
 |データを Hadoop にエクスポートする  |はい|いいえ|いいえ| はい|
 |Azure HDInsight のクエリ、インポート、エクスポート |いいえ|いいえ|いいえ|いいえ
 |クエリの計算を Hadoop にプッシュダウンする|はい|いいえ|いいえ|はい|  
-|Azure Blob Storage からデータをインポートする|はい|いいえ|はい|はい| 
+|Azure Blob Storage からデータをインポートする|はい|いいえ|はい|はい|
 |Azure Blob Storage にデータをエクスポートする|はい|いいえ|はい|はい|  
-|Azure Data Lake Store からデータをインポートする|いいえ|いいえ|はい|いいえ|    
+|Azure Data Lake Store からデータをインポートする|いいえ|いいえ|はい|いいえ|
 |Azure Data Lake Store からデータをエクスポートする|いいえ|いいえ|はい|いいえ|
-|Microsoft BI ツールから PolyBase クエリを実行する|はい|いいえ|はい|はい|   
+|Microsoft BI ツールから PolyBase クエリを実行する|はい|いいえ|はい|はい|
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 演算子でサポートされるプッシュダウン計算
 
-SQL Server および APS では、すべての T-SQL 演算子を Hadoop クラスターにプッシュダウンできるわけではありません。 この表は、サポートされているすべての演算子と、サポートされていない演算子のサブセットを一覧表示しています。 
+SQL Server および APS では、すべての T-SQL 演算子を Hadoop クラスターにプッシュダウンできるわけではありません。 この表は、サポートされているすべての演算子と、サポートされていない演算子のサブセットを一覧表示しています。
 
-||||
-|-|-|-| 
-|**演算子の種類**|**Hadoop にプッシュ可能**|**Blob Storage にプッシュ可能**|
+|**演算子の種類** |**Hadoop にプッシュ可能** |**Blob Storage にプッシュ可能** |
+|---------|---------|---------|
 |列のプロジェクション|はい|いいえ|
 |述語|はい|いいえ|
 |集計|部分的|いいえ|
@@ -63,9 +61,9 @@ PolyBase には次の制限事項があります。
 
 - PolyBase を使用するには、データベースでの sysadmin または CONTROL SERVER レベルのアクセス許可が必要です。
 
-- 可変長列の全長を含む最大行サイズは、SQL Server で 32 KB 以下、または Azure SQL Data Warehouse で 1 MB 以下にする必要があります。
+- 可変長列の全長を含む最大行サイズは、SQL Server で 32 KB 以下、または Azure Synapse Analytics で 1 MB 以下にする必要があります。
 
-- SQL Server または SQL Data Warehouse からデータが ORC ファイル形式にエクスポートされるときに、テキストの量が多い列が制限される可能性があります。 Java のメモリ不足エラー メッセージにより、わずか 50 列に制限される場合があります。 この問題を回避するには、列のサブセットだけをエクスポートします。
+- SQL Server または Azure Synapse Analytics からデータが ORC ファイル形式にエクスポートされるときに、テキストの量が多い列が制限される可能性があります。 Java のメモリ不足エラー メッセージにより、わずか 50 列に制限される場合があります。 この問題を回避するには、列のサブセットだけをエクスポートします。
 
 - KNOX が有効になっている場合、PolyBase は、Hortonworks インスタンスに接続できません。
 

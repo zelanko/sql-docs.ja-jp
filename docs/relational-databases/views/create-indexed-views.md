@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03cff187ee251278274af6f7c97e4598235fde38
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727069"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363449"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
 
@@ -107,10 +107,14 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
 
 - ビューは、`WITH SCHEMABINDING` オプションを使用して作成する必要があります。
 - ビューが、ビューと同じデータベース内のベース テーブルのみを参照していること。 ビューでは、他のビューを参照できません。
+
+- `GROUP BY` が存在する場合、VIEW 定義には `COUNT_BIG(*)` を含める必要があります。`HAVING` を含めることはできません。 このような `GROUP BY` 制限は、インデックス付きビュー定義にのみ適用されます。 クエリがこの `GROUP BY` 制限を満たしていない場合でも、実行プランでインデックス付きビューを使用することはできます。
+- ビュー定義に `GROUP BY` 句が含まれている場合、一意のクラスター化インデックスのキーでは、`GROUP BY` 句で指定した列のみを参照できます。
+
 - ビュー定義の SELECT ステートメントには、次の Transact-SQL 要素を使用できません。
 
-   ||||
-   |-|-|-|
+   | Transact-SQL の要素 | (続き) | (続き) |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|行セット関数 (`OPENDATASOURCE`、`OPENQUERY`、`OPENROWSET`、`OPENXML`)|`OUTER` 結合 (`LEFT`、`RIGHT`、または `FULL`)|
    |派生テーブル (`FROM` 句で `SELECT` ステートメントを指定することで定義される)|自己結合|`SELECT *` または `SELECT <table_name>.*` を使用して列を指定|
    |`DISTINCT`|`STDEV`、`STDEVP`、`VAR`、`VARP`、または `AVG`|共通テーブル式 (CTE)|
@@ -121,15 +125,11 @@ SET オプションと決定的な関数の要件に加えて、次の要件を�
    |テーブル変数|`OUTER APPLY` または `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |スパース列セット|インライン (TVF) または複数ステートメントのテーブル値関数 (MSTVF)|`OFFSET`|
    |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup> インデックス付きビューには **float** 列を含めることができますが、このような列はクラスター化インデックス キーには含めることができません。
 
-- `GROUP BY` が存在する場合、VIEW 定義には `COUNT_BIG(*)` を含める必要があります。`HAVING` を含めることはできません。 このような `GROUP BY` 制限は、インデックス付きビュー定義にのみ適用されます。 クエリがこの `GROUP BY` 制限を満たしていない場合でも、実行プランでインデックス付きビューを使用することはできます。
-- ビュー定義に `GROUP BY` 句が含まれている場合、一意のクラスター化インデックスのキーでは、`GROUP BY` 句で指定した列のみを参照できます。
+   <sup>1</sup> インデックス付きビューには **float** 列を含めることができますが、このような列はクラスター化インデックス キーには含めることができません。
 
-> [!IMPORTANT]
-> テンポラル クエリ (`FOR SYSTEM_TIME` 句を使うクエリ) 上では、インデックス付きビューはサポートされていません。
+   > [!IMPORTANT]
+   > テンポラル クエリ (`FOR SYSTEM_TIME` 句を使うクエリ) 上では、インデックス付きビューはサポートされていません。
 
 ### <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項
 

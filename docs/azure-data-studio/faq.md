@@ -1,6 +1,6 @@
 ---
 title: Azure Data Studio に関する FAQ
-description: Azure Data Studio に関してよく寄せられる質問 (FAQ) について説明します。
+description: "\"これは何をするものなのか?\"、\"これは誰が使うものなのか?\"、\"これはいくらするのか?\" など、Azure Data Studio に関してよく寄せられる質問の回答を用意しました。"
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774615"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411098"
 ---
 # <a name="azure-data-studio-faq"></a>Azure Data Studio に関する FAQ
 
@@ -80,14 +80,14 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 |特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure サインイン|はい|はい|
+|Azure サインイン|○|○|
 |ダッシュボード|はい| |
 |拡張機能|はい| |
 |統合ターミナル|はい||
-|オブジェクト エクスプローラー|はい|はい|
-|オブジェクト スクリプト作成|はい|はい|
+|オブジェクト エクスプローラー|○|○|
+|オブジェクト スクリプト作成|○|○|
 |プロジェクト システム|はい||
-|テーブルからの選択|はい|はい|
+|テーブルからの選択|○|○|
 |ソース コード管理|はい||
 |タスク ウィンドウ|はい||
 |テーマ|はい||
@@ -104,8 +104,8 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 |:---|:---|:---|
 |グラフ ビューアー|はい||
 |結果を CSV、JSON、XLSX にエクスポート|はい||
-|IntelliSense|はい|はい|
-|スニペット|はい|はい|
+|IntelliSense|○|○|
+|スニペット|○|○|
 |プラン表示|プレビュー|はい|
 |クライアント統計||はい|
 |ライブ クエリ統計||はい|
@@ -120,7 +120,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 |特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|はい|はい|
+|Windows|○|○|
 |macOS|はい||
 |Linux|はい||
 
@@ -136,7 +136,7 @@ Azure Data Studio とそのデータ プロバイダーのソース コードは
 
 |特徴量|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|バックアップ/復元|はい|はい|
+|バックアップ/復元|○|○|
 |フラット ファイルのインポート|プレビュー|はい|
 |SQL エージェント|プレビュー|はい|
 |SQL Profiler|プレビュー|はい|

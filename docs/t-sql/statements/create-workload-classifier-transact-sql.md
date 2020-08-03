@@ -20,16 +20,16 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9125903880247cd3aece0715ffcd3a9e34b35a36
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112253"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396185"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 ワークロード管理で使用する分類子オブジェクトを作成します。  分類子では、受信要求が分類子ステートメントの定義に指定されたパラメーターに基づいて、ワークロード グループに割り当てられます。  分類子は要求が送信されるごとに評価されます。  要求が分類子と一致しない場合、要求は既定のワークロード グループに割り当てられます。  既定のワークロード グループは、smallrc リソース クラスです。
 
@@ -40,7 +40,7 @@ ms.locfileid: "79112253"
   
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
     (   WORKLOAD_GROUP = 'name'  
@@ -84,7 +84,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-要求を分類できるセッション コンテキスト値を指定します。  コンテキストは、nvarchar(255) 型の省略可能なパラメーターです。  セッション コンテキストを設定する要求を送信する前に、`wlm_context` と同じ変数名と共に [sys. sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest) を使用します。
+要求を分類できるセッション コンテキスト値を指定します。  コンテキストは、nvarchar(255) 型の省略可能なパラメーターです。  セッション コンテキストを設定する要求を送信する前に、[ と同じ変数名と共に ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)sys. sp_set_session_context`wlm_context` を使用します。
 
 例:
 
@@ -118,7 +118,7 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
  ,END_TIME       = '02:00' )
 ```
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+*IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 要求の相対的な重要度を指定します。  重要度は次のいずれかです。
 
 - LOW

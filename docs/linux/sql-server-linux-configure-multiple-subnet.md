@@ -2,19 +2,19 @@
 title: 複数サブネットの可用性グループと FCI の構成 (Linux)
 description: 複数サブネットの Always On 可用性グループとフェールオーバー クラスター インスタンス (FCI) を SQL Server on Linux に構成する方法について説明します。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.date: 12/01/2017
+author: liweiSecurity
+ms.author: liweiyin
+ms.reviewer: VanMSFT
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5abe1d99f753e0f41ca74a0864079293800dc1df
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196970"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362977"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>複数サブネットの Always On 可用性グループとフェールオーバー クラスター インスタンスを構成する
 
@@ -57,28 +57,42 @@ Windows の世界では、Windows Server フェールオーバー クラスタ�
 2. 生成されたファイルを編集します。 `<resources>` セクションを探します。 AG または FCI に対して作成されたさまざまなリソースが表示されます。 IP アドレスに関連付けられたものを探します。 2 番目の IP アドレスの情報を含む `<instance attributes>` セクションを、既存のセクションの前後いずれか、ただし `<operations>` の前に追加します。 構文は次のようになります。
 
     ```xml
-    <instance attributes id="<NameForAttribute>" score="<Score>">
-        <rule id="<RuleName>" score="INFINITY">
-            <expression id="<ExpressionName>" attribute="\#uname" operation="eq" value="<NodeNameInSubnet2>" />
-        </rule>
-        <nvpair id="<NameForSecondIP>" name="ip" value="<IPAddress>"/>
-        <nvpair id="<NameForSecondIPNetmask>" name="cidr\_netmask" value="<Netmask>"/>
+    <instance attributes id="<NameForAttribute>">
+        <nvpair id="<NameForIP>" name="ip" value="<IPAddress>"/>
     </instance attributes>
     ```
     
-    ここで、*NameForAttribute* はこの属性の一意名、*Score* は属性に割り当てられる数 (プライマリ サブネットの数よりも大きくする必要がある)、*RuleName* はルールの名前、*ExpressionName* は式の名前、*NodeNameInSubnet2* は他のサブネットのノードの名前、*NameForSecondIP* は 2 番目の IP アドレスに関連付けられる名前、*IPAddress* は 2 番目のサブネットの IP アドレス、*NameForSecondIPNetmask* はネットマスクに関連付けられた名前、*Netmask* は 2 番目のサブネットのネットマスクです。
+    *NameForAttribute* はこの属性の一意の名前、*NameForIP* は IP アドレスに関連付けられている名前、*IPAddress* は 2 つ目のサブネットの IP アドレスです。
     
     次に例を示します。
     
     ```xml
-    <instance attributes id="Node3-2nd-IP" score="2">
-        <rule id="Subnet2-IP" score="INFINITY">
-            <expression id="Subnet2-Node" attribute="\#uname" operation="eq" value="Node3" />
-        </rule>
-        <nvpair id="IP-In-Subnet-2" name="ip" value="192.168.2.102"/>
-        <nvpair id="Netmask-For-IP2" name="cidr\_netmask" value="24" />
+    <instance attributes id="virtualip-instance_attributes">
+        <nvpair id="virtualip-instance_attributes-ip" name="ip" value="192.168.1.102"/>
     </instance attributes>
     ```
+    
+    既定では、エクスポートされた CIB XML ファイルには <instance/> が 1 つだけあります。 2 つのサブネットがあるとします。<instance/> エントリが 2 つ必要です。
+    2 つのサブネットのエントリの例を次に示します。
+    
+    ```xml
+    <instance attributes id="virtualip-instance_attributes1">
+        <rule id="Subnet1-IP" score="INFINITY" boolean-op="or">
+            <expression id="Subnet1-Node1" attribute="#uname" operation="eq" value="Node1" />
+            <expression id="Subnet1-Node2" attribute="#uname" operation="eq" value="Node2" />
+        </rule>
+        <nvpair id="IP-In-Subnet1" name="ip" value="192.168.1.102"/>
+    </instance attributes>
+    <instance attributes id="virtualip-instance_attributes2">
+        <rule id="Subnet2-IP" score="INFINITY">
+            <expression id="Subnet2-Node1" attribute="#uname" operation="eq" value="Node3" />
+        </rule>
+        <nvpair id="IP-In-Subnet2" name="ip" value="192.168.2.102"/>
+    </instance attributes>
+    ```
+   
+   "boolean-op="or"" は、サブネットに複数のサーバーがあるときに使用されます。
+
 
 3. 変更した CIB をインポートし、Pacemaker を再構成します。
 
@@ -99,6 +113,11 @@ Windows の世界では、Windows Server フェールオーバー クラスタ�
 ### <a name="check-and-verify-failover"></a>フェールオーバーを確認して検証する
 
 1. CIB が更新済みの構成に正常に適用されたら、Pacemaker で IP アドレス リソースに関連付けられている DNS 名に対して ping を実行します。 これは、現在 AG または FCI をホストしているサブネットに関連付けられた IP アドレスを反映する必要があります。
+
 2. AG または FCI を他のサブネットにフェールオーバーします。
+
 3. AG または FCI が完全にオンラインになったら、IP アドレスに関連付けられている DNS 名に対して ping を実行します。 これは、2 番目のサブネットの IP アドレスを反映する必要があります。
+
 4. 必要であれば、AG または FCI を元のサブネットにフェールオーバーします。
+
+次の CSS 投稿では、3 つのサブネットに CIB を構成する方法を確認できます。詳細については、「[CIB を変更し、複数サブネット AlwaysOn 可用性グループを構成する](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838)」を参照してください。

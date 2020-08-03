@@ -1,6 +1,6 @@
 ---
 title: リリース ノート
-description: Azure Data Studio リリース ノート
+description: この記事では、2017 年 11 月から現在までの Azure Data Studio リリースのリリース ノートを取り上げています。 まとめられている問題の多くについては、追加詳細のリンクがあります。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 07/17/2020
-ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: b064c24ff7717fc5a03ee1413b1e85fbb71530dc
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458887"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411263"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 

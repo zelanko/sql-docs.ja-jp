@@ -1,5 +1,6 @@
 ---
 title: ストアド プロシージャの名前の変更 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用し、SQL Server 2019 (15.x) のストアド プロシージャの名前を変更する方法について説明します。
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71d0fefec2a0b0ba867b7c96a0d8b852884e08d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddf1685f89d24c5b1b6dec4956c3e0c7542ac236
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767493"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332531"
 ---
 # <a name="rename-a-stored-procedure"></a>ストアド プロシージャの名前の変更
 
@@ -32,7 +33,7 @@ ms.locfileid: "85767493"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ストアド プロシージャの名前を変更するために使用するもの:**  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85767493"
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  CREATE PROCEDURE  
- データベースの CREATE PROCEDURE 権限およびプロシージャの作成先となるスキーマの ALTER 権限、または、 **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
+ データベースの CREATE PROCEDURE 権限およびプロシージャの作成先となるスキーマの ALTER 権限、または、**db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
  ALTER PROCEDURE  
  プロシージャの ALTER 権限、または **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  

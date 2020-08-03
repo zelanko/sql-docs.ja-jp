@@ -21,12 +21,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 72cba47c520749a2e78ae529d941b12ddcccf105
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 61b67a70b3193763a46a7aa99783397ee57d0e92
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900263"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362613"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services のアップグレード
 
@@ -77,7 +77,7 @@ ms.locfileid: "85900263"
   
  基礎知識を得るために、次の表には互換性レベルがまとめられていますが、詳細記事を確認して、各レベルが提供する機能を把握する必要があります。  
   
-||||  
+|データベース モデル|互換性レベル|互換性のあるバージョン|  
 |-|-|-|  
 |表形式|1400|SQL Server 2017|
 |表形式|1200|SQL Server 2016|  
@@ -88,7 +88,7 @@ ms.locfileid: "85900263"
   
  詳しくは、「[多次元データベースの互換性レベル &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services)」および「[Compatibility level for Analysis Services tabular models](https://docs.microsoft.com/analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services)」(Analysis Services 表形式モデルの互換性レベル) をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Power Pivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
   

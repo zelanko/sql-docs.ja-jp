@@ -106,8 +106,8 @@ SQL Server on Linux をインストールしたら、運用シナリオでのパ
 
 SQL Server の管理には、**sqlcmd** 以外に次のクロスプラットフォーム ツールを使用できます。
 
-|||
-|---|---|
+| ツール | 説明 |
+| ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | クロスプラットフォームの GUI データベース管理ユーティリティ。 |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Transact-SQL ステートメントを mssql 拡張機能を使用して実行するクロスプラットフォーム GUI コードエディター。 |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | コマンドレットを使用する、クロスプラットフォームの自動化および構成ツール。 |
@@ -129,12 +129,10 @@ Windows で実行し、Linux 上の SQL Server に接続するその他のツー
 
 他のインストール シナリオについては、次のリソースを参照してください。
 
-|||
-|---|---|
-| [アップグレード](../linux/sql-server-linux-setup.md#upgrade) | Linux 上の SQL Server のアップグレード方法および既存のインストールについて説明する |
-| [アンインストール](../linux/sql-server-linux-setup.md#uninstall) | Linux 上の SQL Server をアンインストールする |
-| [無人インストール](../linux/sql-server-linux-setup.md#unattended) | プロンプトを表示せずにインストールするスクリプトを作成する方法を説明する |
-| [オフライン インストール](../linux/sql-server-linux-setup.md#offline) | オフライン インストール パッケージを手動でダウンロードする方法を説明する |
+* [アップグレード](../linux/sql-server-linux-setup.md#upgrade):Linux 上の SQL Server のアップグレード方法および既存のインストールについて説明する
+* [Uninstall](../linux/sql-server-linux-setup.md#uninstall):Linux 上の SQL Server をアンインストールする
+* [無人インストール](../linux/sql-server-linux-setup.md#unattended):プロンプトを表示せずにインストールするスクリプトを作成する方法を説明する
+* [オフライン インストール](../linux/sql-server-linux-setup.md#offline):オフライン インストール パッケージを手動でダウンロードする方法を説明する
 
 > [!TIP]
 > よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](../linux/sql-server-linux-faq.md)」を参照してください。

@@ -34,16 +34,16 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 246cf0c526e04c5f4df33067286b0cefaf9913cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636201"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397081"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 句と JOIN、APPLY、PIVOT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 Transact-SQL では、FROM 句は次のステートメントで利用できます。
 
@@ -383,14 +383,14 @@ ON (p.ProductID = v.ProductID);
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- これまでの時間内には、指定位置で行ごとに実際の値を含む (現在) の 1 つのレコードを含むテーブルを返します。 内部的には、テンポラル テーブルとその履歴テーブルの結合が行われ、結果がフィルター処理されて、 *\<date_time>* パラメーターで指定された特定の時点で有効だった行の値が返されます。 *system_start_time_column_name* 値が *\<date_time>* パラメーター値と等しいかそれよりも小さく、*system_end_time_column_name* 値が *\<date_time>* パラメーター値より大きい場合に、行の値は有効と見なされます。   
+ これまでの時間内には、指定位置で行ごとに実際の値を含む (現在) の 1 つのレコードを含むテーブルを返します。 内部的には、共用体はテンポラル テーブルとその履歴テーブルの間に実行されます。結果はフィルター処理され、 *\<date_time>* パラメーターによって指定される時点で有効であった行で値を返します。 *system_start_time_column_name* 値が *\<date_time>* パラメーター値と等しいかそれよりも小さく、*system_end_time_column_name* 値が *\<date_time>* パラメーター値より大きい場合に、行の値は有効と見なされます。   
   
  FROM \<start_date_time> TO \<end_date_time>
 
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
   
- 指定した時間範囲内でアクティブだったすべての行バージョンの値を含むテーブルを返します。FROM 引数の *\<start_date_time>* パラメーター値の前にアクティブになったか、TO 引数の *\<end_date_time>* パラメーター値の後にアクティブでなくなったかに無関係です。 内部的には、共用体が一時的なテーブルとその履歴テーブルの間実行され、結果をフィルター処理すると、指定した時間範囲の中にいつでもにアクティブだったすべての行のバージョンの値を返します。 FROM エンドポイントによって定義されている下限の境界で正確にアクティブになった行のサイズが含まれ、宛先エンドポイントによって定義された境界の上限で正確にアクティブになった行は含まれません。  
+ FROM 引数の *\<start_date_time>* パラメーター値の前からアクティブ状態が始まったかどうかに関係なく、または、TO 引数の *\<end_date_time>* パラメーター値の後でアクティブ状態を止めたかどうかに関係なく、指定の時間範囲内でアクティブであったすべてのレコード バージョンの値を含むテーブルを返します。 内部的には、共用体が一時的なテーブルとその履歴テーブルの間実行され、結果をフィルター処理すると、指定した時間範囲の中にいつでもにアクティブだったすべての行のバージョンの値を返します。 FROM エンドポイントによって定義されている下限の境界で正確にアクティブになった行のサイズが含まれ、宛先エンドポイントによって定義された境界の上限で正確にアクティブになった行は含まれません。  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 

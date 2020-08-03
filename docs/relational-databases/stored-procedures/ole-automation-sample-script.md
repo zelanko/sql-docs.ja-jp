@@ -1,5 +1,6 @@
 ---
 title: OLE オートメーションのサンプル スクリプト | Microsoft Docs
+description: OLE オートメーション ストアド プロシージャを使用して、SQL-DMO SQLServer オブジェクトを作成および使用する Transact-SQL ステートメント バッチの例について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab7633bf3bc321a82b44f3ac5373563adb7dd64c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 41dfe839f76f860a3909b38cf0302c84050e087a
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000930"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332555"
 ---
 # <a name="ole-automation-sample-script"></a>OLE オートメーションのサンプル スクリプト
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

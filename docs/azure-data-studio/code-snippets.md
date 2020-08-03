@@ -1,6 +1,6 @@
 ---
 title: 再利用可能なコード スニペットの作成
-description: Azure Data Studio で SQL コード スニペットを作成して使用する方法について学習します
+description: データベースとデータベース オブジェクトの作成を簡単にする Azure Data Studio SQL コード スニペットを作成し、使用する方法について説明します。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ef725a83a0800dbe5027e4d76bc8f7f51f7f3b
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774693"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411168"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Azure Data Studio でコード スニペットを作成して使用し、Transact-SQL (T-SQL) スクリプトをすばやく作成する
 

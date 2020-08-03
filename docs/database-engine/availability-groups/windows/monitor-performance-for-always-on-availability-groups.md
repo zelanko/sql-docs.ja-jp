@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897347"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362689"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 可用性グループのパフォーマンスを監視する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,9 +26,8 @@ ms.locfileid: "85897347"
   
  ![可用性グループのデータ同期](media/always-onag-datasynchronization.gif "可用性グループのデータ同期")  
   
-|||||  
+|Sequence|ステップの説明|説明|有用なメトリック|  
 |-|-|-|-|  
-|**Sequence**|**ステップの説明**|**コメント**|**有用なメトリック**|  
 |1|ログの生成|ログ データがディスクにフラッシュされます。 このログはセカンダリ レプリカにレプリケートする必要があります。 ログ レコードによって送信キューが入力されます。|[SQL Server: データベース > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|キャプチャ|各データベースに関するログがキャプチャされ、対応するパートナー キュー (データベース レプリカ ペアごとに 1 つ) に送信されます。 このキャプチャ プロセスは、可用性レプリカが接続されていて何らかの理由でデータ移動が中断されていない限り、継続されます。データベース レプリカのペアは同期中または同期済みのいずれかであると表示されます。 キャプチャ プロセスによるメッセージのスキャンおよびエンキューに時間がかかる場合は、ログ送信キューがビルドされます。|[SQL Server: 可用性レプリカ > レプリカに送信されたバイト数\秒](~/relational-databases/performance-monitor/sql-server-availability-replica.md)。可用性レプリカのキューに配置されたすべてのデータベース メッセージの合計を集計したものです。<br /><br /> プライマリ レプリカの [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) と[log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/秒)。|  
 |3|Send|各データベース レプリカ キュー内のメッセージがデキューされ、それぞれのセカンダリ レプリカにネットワーク経由で送信されます。|[SQL Server: 可用性レプリカ > トランスポートに送信されたバイト数\秒](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
@@ -41,9 +40,8 @@ ms.locfileid: "85897347"
   
  次の表に示すように、ログはプライマリ レプリカ上でキャプチャされると、フロー制御の 2 つのレベルの影響を受けるようになります。  
   
-|||||  
+|Level|ゲート数|メッセージ数|有用なメトリック|  
 |-|-|-|-|  
-|**Level**|**ゲート数**|**メッセージ数**|**有用なメトリック**|  
 |トランスポート|可用性レプリカごとに 1 つ|8192|拡張イベント **database_transport_flow_control_action**|  
 |データベース|可用性データベースごとに 1 つ|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 拡張イベント **hadron_database_flow_control_action**|  
   

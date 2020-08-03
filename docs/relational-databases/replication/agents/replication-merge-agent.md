@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a4dff5292a3cd0bfcd46e2615bc755665ff3e49d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4f65282964494ba1fdb160b1e755922a60ad80d8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897889"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394987"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ replmerg [-?]
  **-DistributorPassword** _distributor_password_  
  ディストリビューターのパスワードです。  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  ディストリビューターのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  
   
  **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
@@ -165,7 +165,7 @@ replmerg [-?]
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  パブリケーションでパラメーター化された行フィルターを使用する場合のフィルター選択されたデータ スナップショット ファイルの位置です。  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  接続確立時にマージ エージェントが使用するトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) の暗号化レベルです。  
   
 |EncryptionLevel の値|説明|  
@@ -179,7 +179,7 @@ replmerg [-?]
 
  詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
- **-ExchangeType** [ **1**| **2**| **3**]  
+ **-ExchangeType** [ **1**\| **2**\| **3**]  
 > [!WARNING]
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] アップロードを制限するには、**sp_addmergearticle** の **\@subscriber_upload_options** を代わりに使用します。  
   
@@ -195,13 +195,13 @@ replmerg [-?]
   
  **ExchangeType** を使用してマージ レプリケーションのアップロード フェーズとダウンロード フェーズを個別のセッションとして分ける場合は、 **ExchangeType** を 1 に設定してマージ エージェントを実行し、その後でこのパラメーターの値を 2 に設定してマージ エージェントを再度実行する必要があります。 どちらのパラメーターを使用してもマージ エージェントの実行が失敗する場合、メタデータが削除され、サブスクリプションの再初期化 (アップロードは行わない) を要求される可能性があります。  
   
- **-FastRowCount** [**0**|**1**]  
+ **-FastRowCount** [**0**\|**1**]  
  行数の検証に使用する行数計算方法の種類を指定します。 値 **1** (既定) は高速計算法を示します。 値 **0** は、完全行数計算法を示します。  
   
- **-FileTransferType** [**0**|**1**]  
+ **-FileTransferType** [**0**\|**1**]  
  ファイル転送の種類を指定します。 **0** の値は UNC (汎用名前付け規則) を示し、 **1** の値は FTP (ファイル転送プロトコル) を示します。  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
+ **-ForceConvergenceLevel** [**0**\|**1**\|**2** ( **Publisher**\| **Subscriber**\| **Both**)]  
  マージ エージェントが使用する収束のレベルを指定します。次のいずれかを指定できます。  
   
 |ForceConvergenceLevel の値|説明|  
@@ -222,7 +222,7 @@ replmerg [-?]
  **-FtpUserName** _ftp_user_name_  
  FTP サービスに接続するときに使用するユーザー名です。 この引数を指定しない場合は、匿名が使用されます。  
   
- **-HistoryVerboseLevel** [**1**|**2**|**3**]  
+ **-HistoryVerboseLevel** [**1**\|**2**\|**3**]  
  マージ操作中にログに記録する履歴の量を指定します。 **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
   
 |HistoryVerboseLevel の値|説明|  
@@ -235,7 +235,7 @@ replmerg [-?]
  **-Hostname** _host_name_  
  ローカル コンピューターのネットワーク名です。 既定値は、ローカル コンピューターの名前になります。  
   
- **-InteractiveResolution** [**0**|**1**]  
+ **-InteractiveResolution** [**0**\|**1**]  
  同期中に競合が発生した場合に、インタラクティブ競合回避を使用するかどうかを指定します。 既定値の **0**は、インタラクティブ競合回避を使用しないことを示します。  
   
  **-InternetLogin** _internet_login_  
@@ -253,7 +253,7 @@ replmerg [-?]
  **-InternetProxyServer**  *internet_proxy_server*  
  *internet_url*で指定した HTTP リソースへのアクセス時に使用するプロキシ サーバーを指定します。  
   
- **-InternetSecurityMode** [**0**|**1**]  
+ **-InternetSecurityMode** [**0**\|**1**]  
  Web 同期時の Web サーバーとの接続に使用される IIS セキュリティ モードを指定します。 値 **0** は基本認証を示し、値 **1** は Windows 統合認証 (既定値) を指定します。  
   
  **-InternetTimeout** _internet_timeout_  
@@ -282,16 +282,16 @@ replmerg [-?]
  **-MaxUploadChanges** _number_of_upload_changes_  
  サブスクライバーからパブリッシャーにアップロードする必要のある変更済みの行の最大数を指定します。 アップロードする行数が、指定した最大数より多くなる場合があります。完全な生成結果が処理されること、および並列の対象スレッドが実行されて最初のパスでそれぞれ 100 以上の変更が処理されることが原因です。 既定では、アップロードの準備が整っている変更がすべて送信されます。  
   
- **-MetadataRetentionCleanup** [**0**|**1**]  
+ **-MetadataRetentionCleanup** [**0**\|**1**]  
  パブリケーション保有期間に基づいて、メタデータを [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)、 [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)、 [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)、 [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)、および [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) から削除するかどうかを指定します。 既定値の **1**は、クリーンアップを行う必要があることを示します。 値 **0** は、クリーンアップを自動的に実行しないことを示します。  
   
  **-Output** _output_path_and_file_name_  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
   
- **-OutputVerboseLevel** [**0**|**1**|**2**]  
+ **-OutputVerboseLevel** [**0**\|**1**\|**2**]  
  出力を詳細表示にするかどうかを指定します。 詳細レベルが **0**の場合、エラー メッセージだけが出力されます。 詳細レベルが **1**の場合、すべての実行状況報告メッセージが印刷されます。 詳細レベルが **2** (既定値) の場合、すべてのエラー メッセージと実行状況報告メッセージが出力されます。これはデバッグ時に便利です。  
   
- **-ParallelUploadDownload** [**0**|**1**]  
+ **-ParallelUploadDownload** [**0**\|**1**]  
  パブリッシャーにアップロードする変更とサブスクライバーにダウンロードする変更をマージ エージェントが並列で処理するかどうかを指定します。帯域幅が広いネットワークを使用している大容量環境で有用です。 **ParallelUploadDownload** が **1**の場合は、並列処理が有効です。  
   
  **-PacketSize**  
@@ -312,7 +312,7 @@ replmerg [-?]
  **-PublisherPassword** _publisher_password_  
  パブリッシャーのパスワードです。 **PublisherSecurityMode** が **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証) の場合、このパラメーターの指定は必須です。  
   
- **-PublisherSecurityMode** [**0**|**1**]  
+ **-PublisherSecurityMode** [**0**\|**1**]  
  パブリッシャーのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  
   
  **-QueryTimeOut** _query_time_out_seconds_  
@@ -327,7 +327,7 @@ replmerg [-?]
  **-SubscriberDatabasePath** _subscriber_database_path_  
  **SubscriberType** が **2** の場合、Jet データベース (.mdb) ファイルへのパスを指定します。この指定では、ODBC データ ソース名 (DSN) なしで Jet データベースに接続することができます。  
   
- **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
+ **-SubscriberDBAddOption** [**0**\| **1**\| **2**\| **3**]  
  既存のサブスクライバー データベースがあるかどうかを指定します。  
   
 |SubscriberDBAddOption の値|説明|  
@@ -346,22 +346,22 @@ replmerg [-?]
  **-SubscriberPassword** _subscriber_password_  
  サブスクライバーのパスワードです。 **SubscriberSecurityMode** が **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード) の場合は、このパラメーターを指定しなければなりません。  
   
- **-SubscriberSecurityMode** [ **0**| **1**]  
+ **-SubscriberSecurityMode** [ **0**\| **1**]  
  サブスクライバーのセキュリティ モードを指定します。 値 **0** は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証モード (既定値) を示し、値 **1** は Windows 認証モードを示します。  
   
- **-SubscriberConflictClean** [ **0**| **1**]  
+ **-SubscriberConflictClean** [ **0**\| **1**]  
  同期処理中にサブスクライバーで競合テーブルがクリーンアップされるかどうかを示します。値 **1** は、サブスクライバーで競合テーブルがクリーンアップされることを示します。 このパラメーターは、競合のログ記録が集中管理されていないパブリケーションに対するサブスクリプションにのみ使用されます。  
   
- **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
+ **-SubscriberType** [ **0**\| **1**\| **3**\| **4**\| **5**\| **6**\| **7**\| **8**]  
  マージ エージェントによって使用されるサブスクライバー接続の種類を指定します。 このパラメーターでは、既定値の **0** のみがサポートされています。  
   
- **-SubscriptionType**[ **0**| **1**| **2**]  
+ **-SubscriptionType**[ **0**\| **1**\| **2**]  
  ディストリビューションのサブスクリプションの種類を指定します。 値 **0** は、プッシュ サブスクリプション (既定値) を示します。値 **1** はプル サブスクリプションを示し、値 **2** は匿名サブスクリプションを示します。  
   
- **-SyncToAlternate** **[0|1]**  
+ **-SyncToAlternate** [ **0\|1**]  
  マージ エージェントがサブスクリプションと代替パブリッシャー間での同期を実行しているかどうかを指定します。 値 **1** は、これが代替パブリッシャーであることを示します。 既定値は **0**です。  
  
- **-T** **[101|102]**  
+ **-T** [**101\|102**]  
  マージ エージェントの追加機能を有効にするトレース フラグ。 値 **101** を指定すると、マージ レプリケーション同期プロセスの各ステップにかかる時間を特定するのに役立つ追加の詳細ログ情報が有効になります。 値 **102** を指定すると、トレース フラグ **101** と同じ統計情報が書き込まれますが、書き込み先は <Distribution server>..msmerge_history テーブルとなります。 トレース フラグ 101 を使用する場合は、`-output` パラメーターと `-outputverboselevel` パラメーターを使用してマージ エージェントのログ記録を有効にします。  たとえば、次のパラメーターをマージ エージェントに追加してから、エージェントを再起動します: `-T 101, -output, -outputverboselevel` 
  
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
@@ -376,7 +376,7 @@ replmerg [-?]
  **-UseInprocLoader**  
  マージ エージェントでスナップショット ファイルをサブスクライバーに適用するときに BULK INSERT コマンドを使用することによって、初期スナップショットのパフォーマンスが向上します。 このパラメーターは XML データ型との互換性がないため非推奨とされます。 XML データをレプリケートしない場合にのみ、このパラメーターを使用できます。 このパラメーターは、キャラクター モードのスナップショットでは使用できません。 このパラメーターを使用する場合は、サブスクライバー側の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントに、スナップショットの .bcp データ ファイルが格納されたディレクトリの読み取り権限が必要です。 このパラメーターを使用しない場合、エージェントによって読み込まれた ODBC ドライバーがファイルから読み取るので、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストは使用されません。  
   
- **-Validate** [**0**|**1**|**2**|**3**]  
+ **-Validate** [**0**\|**1**\|**2**\|**3**]  
  マージ セッションの最後に検証を行うかどうかを指定し、行う場合は検証の種類も指定します。 推奨値は **3** です。  
   
 |Validate の値|説明|  

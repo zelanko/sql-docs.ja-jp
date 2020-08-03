@@ -20,15 +20,15 @@ ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f7233d92e3b6a568d64f0b23817838d65dcbc74
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000449"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396281"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 16 バイトの GUID です。
   
@@ -37,7 +37,7 @@ ms.locfileid: "68000449"
 -   [NEWID](../../t-sql/functions/newid-transact-sql.md) または [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) 関数を使用する。    
 -   *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx* の形式の文字列定数を変換する。各 *x* は 0 ～ 9 または a ～ f の 16 進数です。 たとえば、6F9619FF-8B86-D011-B42D-00C04FC964FF は有効な **uniqueidentifier** 値です。  
   
-比較演算子で使用できる **uniqueidentifier** 値。 しかし、2 つの値のビット パターンを比較することによって、順序付けは実装されません。 **uniqueidentifier** 型の値に対して行うことができる操作は、比較 (=、<>、\<、>、\<=、>) および NULL であるかどうかのチェック (IS NULL と IS NOT NULL) だけです。 他の算術演算子は使用できません。 **uniqueidentifier** データ型では、IDENTITY 以外のすべての列制約とプロパティを使用できます。
+比較演算子で使用できる **uniqueidentifier** 値。 しかし、2 つの値のビット パターンを比較することによって、順序付けは実装されません。 **uniqueidentifier** 型の値に対して行うことができる操作は、比較 (=、<>、\<, >、\<=, >=) および NULL であるかどうかのチェック (IS NULL と IS NOT NULL) だけです。 他の算術演算子は使用できません。 **uniqueidentifier** データ型では、IDENTITY 以外のすべての列制約とプロパティを使用できます。
   
 更新サブスクリプションでのマージ レプリケーションとトランザクション レプリケーションでは、テーブルの複数のコピーの間で列を確実に一意に識別するため、**uniqueidentifier** 列が使用されます。
   

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 4d03eef91636b454b03f20d40c7a602ea8dc3fc5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111263"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331993"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -524,7 +524,7 @@ DATE_CORRELATION_OPTIMIZATION を ON に設定するには、データベース�
 **\<db_encryption_option> ::=**      
 データベース暗号化の状態を制御します。
 
-ENCRYPTION { ON | **OFF** | SUSPEND | RESUME }     
+ENCRYPTION { ON \| **OFF** \| SUSPEND \| RESUME }     
 ON     
 暗号化するデータベースを設定します。
 
@@ -797,7 +797,7 @@ OFF
 
 SIZE_BASED_CLEANUP_MODE は **nvarchar** 型です。
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 現在アクティブなクエリのキャプチャ モードを指定します。 各モードでは、特定のクエリ キャプチャ ポリシーを定義します。
 
 > [!NOTE]
@@ -924,7 +924,7 @@ PAGE_VERIFY オプションを使用する場合は、次に示す重要な点�
 
 そのデータベースについて Stretch Database を有効または無効にします。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。
 
-REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> \| FEDERATED_SERVICE_ACCOUNT = ON \| OFF } )\| **OFF**     
 ON     
 データベースの Stretch Database を有効にします。 追加の前提条件を含む詳細については、「[データベースに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)」を参照してください。
 
@@ -1914,7 +1914,7 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE は **nvarchar** 型です。
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 現在アクティブなクエリのキャプチャ モードを指定します。 各モードでは、特定のクエリ キャプチャ ポリシーを定義します。   
 
 > [!NOTE]
@@ -2093,7 +2093,7 @@ OFF
 
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_arithabort_on` 列を調べることでこのオプションの状態を判断できます。 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsArithmeticAbortEnabled` プロパティを調べることで状態を判断することもできます。
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 詳しくは、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」をご覧ください。
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     
@@ -2740,7 +2740,7 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE は **nvarchar** 型です。
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 現在アクティブなクエリのキャプチャ モードを指定します。
 
 ALL     
@@ -2914,7 +2914,7 @@ OFF
 
   [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_arithabort_on` 列を調べることでこのオプションの状態を判断できます。 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsArithmeticAbortEnabled` プロパティを調べることで状態を判断することもできます。
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 詳しくは、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」をご覧ください。
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     

@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08056878aabb707433dc22ca891798feb96ef329
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245231"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411044"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,10 +51,10 @@ CREATE LOGIN はトランザクションに参加します。 CREATE LOGIN が�
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -284,10 +284,10 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />単一データベース/エラスティック プール \*_**
+        **_\* Azure SQL Database<br />単一データベース/エラスティック プール \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -402,10 +402,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />マネージド インスタンス \*_**
+        **_\* Azure SQL<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -495,7 +495,7 @@ SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認
 - Azure AD プリンシパルを対象とした次の操作を実行できるのは、`sysadmin` ロールの一部である SQL サーバーレベルのプリンシパル (ログイン) のみです。
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
-- 別の Azure AD ディレクトリからインポートされた外部 (ゲスト) ユーザーを、マネージド インスタンスの Azure AD 管理者として直接構成することはできません。 代わりに、外部ユーザーを Azure AD のセキュリティが有効なグループに参加させ、そのグループをインスタンス管理者として構成します。
+- 別の Azure AD ディレクトリからインポートされた外部 (ゲスト) ユーザーを、Azure portal で SQL Managed Instance の Azure AD 管理者として直接構成することはできません。 代わりに、外部ユーザーを Azure AD のセキュリティが有効なグループに参加させ、そのグループをインスタンス管理者として構成します。 PowerShell または Azure CLI を使用して、個々のゲスト ユーザーをインスタンス管理者として設定できます。
 - ログインは、フェールオーバー グループのセカンダリ インスタンスにはレプリケートされません。 ログインは、システム データベースである master データベースに保存されるため、geo レプリケートされません。 これを解決するには、ユーザーはセカンダリ インスタンスに同じ SID を使用したログインを作成する必要があります。
 
 ```SQL
@@ -601,10 +601,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -729,10 +729,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)

@@ -29,15 +29,15 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fa18ece825ba55479eac3d5c421c6d5acba363c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7125460527a0ca6aa231d771cff8714db7891b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633272"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396270"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 行ストア テーブルをクラスター化された列ストア インデックスに変換するか、クラスター化されていない列ストア インデックスを作成します。 OLTP ワークロードに対して効率的に運用分析をリアルタイムで実行するには、またはデータ ウェアハウスに対するワークロードのデータ圧縮とクエリのパフォーマンスを向上させるには、列ストア インデックスを使用します。  
   
@@ -516,7 +516,7 @@ GO
     -   これは、クラスター化列ストア インデックスに変換されるときにインデックスに新しい名前を指定する場合にのみ行ってください。 クラスター化インデックスを削除しない場合は、新しいクラスター化列ストア インデックスに同じ名前が付けられます。  
   
         > [!NOTE]  
-        > インデックスの名前に自分の名前を使用すると記憶しやすくなります。 すべての行ストア クラスター化インデックスは、既定の名前である 'ClusteredIndex_\<GUID>' を使用します。  
+        > インデックスの名前に自分の名前を使用すると記憶しやすくなります。 すべての行ストア クラスター化インデックスは、既定の名前である "ClusteredIndex_\<GUID>" を使用します。  
   
     ```sql  
     --Process for dropping a clustered index.  
