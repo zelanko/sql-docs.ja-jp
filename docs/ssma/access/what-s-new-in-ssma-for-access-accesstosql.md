@@ -4,21 +4,31 @@ description: 各リリースのアクセス用 (SSMA) の SQL Server Migration A
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 7e898fa94dda37342765001ba87283b986ac9eb1
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 06fd04921d217bf81861c76a5b09769039be5ee7
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091766"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477374"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access の新機能 (アクセス可能な Sql)
 
 この記事では、各リリースでのアクセス変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+SSMA for Access の v1.0 リリースには、次の変更が含まれています。
+
+* `BigInt`( `Large Number` ) データ型のサポート
+* 列の型の解決の向上
+* 列検証ルールの変換の改善
+* データ移行に使用可能な最新の ACE OLE DB プロバイダーの使用
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 

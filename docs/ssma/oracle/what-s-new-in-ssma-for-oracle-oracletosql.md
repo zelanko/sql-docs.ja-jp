@@ -4,21 +4,31 @@ description: 各リリースの SQL Server Migration Assistant (SSMA) for Oracle
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: c0465466a00eb9e7c1eb3b75035d136687672fef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011294"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477454"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle の新機能 (OracleToSQL)
 
 この記事では、各リリースでの Oracle の変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+SSMA for Oracle の v1.0 リリースには、次の変更が含まれています。
+
+* `INSERT` / `UPDATE` / `MERGE` / `DELETE` ステートメント内でのサブクエリのファクタリング句のサポート
+* `ON DELETE SET NULL`複数パスまたは循環参照の場合の句の変換メッセージ
+* 動的 SQL 文字列から作成されたカーソルの変換の改善
+* ODP.NET を v 19.8 に更新する
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 
@@ -286,7 +296,7 @@ SSMA for Oracle の2016年5月のリリースには、次の変更が含まれ�
   > SQL Server 2016 では、次のようないくつかの Oracle フラッシュバック機能はサポートされていません。
   >
   >   * Oracle フラッシュバックトランザクションクエリ
-  >   * `DBMS_FLASHBACK`パック
+  >   * `DBMS_FLASHBACK` [パッケージ]
   >   * フラッシュバックトランザクション
   >   * フラッシュバックデータアーカイブ
   >   * フラッシュバックテーブル

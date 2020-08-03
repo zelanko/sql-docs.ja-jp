@@ -4,21 +4,28 @@ description: リリースごとに SQL Server Migration Assistant (SSMA) for MyS
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 1c0292d05624e2d3cb8640d719fc2c0e29474cb0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0511e67a355f960dcc3af90324142d5662b38627
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000369"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477364"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL の新機能 (MySqlToSql)
 
 この記事では、各リリースでの MySQL 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+SSMA for MySQL の v1.0 リリースには、次の変更が含まれています。
+
+* 一時テーブル DDL の変換
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 
