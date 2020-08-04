@@ -18,15 +18,15 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831180"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522546"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   バッチ内の宣言されていないパラメーターに関するメタデータを含む結果セットを返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 ** \@ Tsql**バッチで使用されているが、 ** \@ params**で宣言されていない各パラメーターを考慮します。 結果セットが返されます。この結果セットには、そのパラメーターに対して推測される型情報が含まれる、このようなパラメーターごとに1行のデータが含まれます。 ** \@ Tsql**入力バッチにパラメーターがない場合、このプロシージャは空の結果セットを返します ( ** \@ params**で宣言されているものを除く)。  
   
@@ -87,7 +87,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|内部使用です。|  
 |**suggested_tds_length**|**int NOT NULL**|内部使用です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  **sp_describe_undeclared_parameters**は常に0の戻り値の状態を返します。  
   
  最も一般的な使用方法は、パラメーターを含み、それらのパラメーターを任意の方法で処理する必要がある [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがアプリケーションで指定される場合です。 たとえば、ユーザーが ODBC パラメーターの構文に基づくクエリを提供するユーザー インターフェイス (ODBCTest または RowsetViewer など) があります。 アプリケーションは、パラメーターの数を動的に検出し、各パラメーターの入力をユーザーに求める必要があります。  
@@ -111,7 +111,7 @@ sp_describe_undeclared_parameters
 ## <a name="parameter-selection-algorithm"></a>パラメーター選択アルゴリズム  
  宣言されていないパラメーターを持つクエリの場合、宣言されていないパラメーターのデータ型の推論は、3つの手順で行われます。  
   
- **手順 1**  
+ **ステップ 1**  
   
  宣言されていないパラメーターを持つクエリのデータ型の推論の最初の手順は、宣言されていないパラメーターに依存しないデータ型を持つすべてのサブ式のデータ型を見つけることです。 型は、次の式に対して決定できます。  
   
@@ -137,7 +137,7 @@ SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)
 SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)  
 ```
   
- **手順 2**  
+ **ステップ 2**  
   
  宣言されて \@ いないパラメーター p の場合、型推論アルゴリズムでは、p を含む最も内側の式 E (p) が検索され、 \@ \@ 次のいずれかになります。  
   
@@ -177,7 +177,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      \@P1、p2、および p3 のデータ型は、 \@ \@ c1 のデータ型、戻り値のデータ型は dbo です。また、それぞれ dbo. データ型のパラメーターデータ型になります。  
   
-     特殊なケースとして、 \@ p が \< 、、>、 \< =、または >= 演算子の引数である場合、単純な推論規則は適用されません。 型推論アルゴリズムでは、次のセクションで説明する一般的な推論ルールが使用されます。 たとえば、c1 がデータ型 char(30) の列である場合に、以下の 2 つのクエリについて考えてみます。  
+     特殊なケースとして、 \@ p が, = 演算子の引数である場合、 \<, > \<=, or > 単純な推論規則は適用されません。 型推論アルゴリズムでは、次のセクションで説明する一般的な推論ルールが使用されます。 たとえば、c1 がデータ型 char(30) の列である場合に、以下の 2 つのクエリについて考えてみます。  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
@@ -225,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      この場合、E ( \@ p) は Col_Int + p であり、 \@ TT ( \@ p) は**Int**です。暗黙的な変換が生成されないため、p には**int**が選択されてい \@ ます。 その他の任意のデータ型では、少なくとも1つの暗黙的な変換が生成されます。  
   
-2.  変換の最小数に対して複数のデータ型が関連付けられている場合は、優先順位の高いデータ型が使用されます。 例  
+2.  変換の最小数に対して複数のデータ型が関連付けられている場合は、優先順位の高いデータ型が使用されます。 次に例を示します。  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
