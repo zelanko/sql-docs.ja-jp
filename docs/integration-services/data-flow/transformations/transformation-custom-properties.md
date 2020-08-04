@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916688"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472520"
 ---
 # <a name="transformation-custom-properties"></a>変換のカスタム プロパティ
 
@@ -60,19 +60,42 @@ ms.locfileid: "86916688"
  変換のプロパティの一部は、プロパティ式を使用して設定できます。 詳細については、「 [式を使って設定できるデータ フロー プロパティ](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)」をご覧ください。  
   
 ## <a name="transformations-with-custom-properties"></a>カスタム プロパティを持つ変換  
-  
-||||  
-|-|-|-|  
-|[集計](#aggregate)|[列エクスポート](#extract)|[行数](#rowcount)|  
-|[監査](#audit)|[あいまいグループ化](#fgroup)|[行サンプリング](#rowsamp)|  
-|[キャッシュ変換](#cachetransform)|[あいまい参照](#flookup)|[スクリプト コンポーネント](#script)|  
-|[文字マップ](#charmap)|[列インポート](#insert)|[緩やかに変化するディメンション](#scd)|  
-|[条件分割](#condsplit)|[Lookup](#lookup)|[Sort](#sort)|  
-|[列コピー](#copymap)|[マージ結合](#mjoin)|[用語抽出](#textract)|  
-|[データ変換](#dataconv)|[OLE DB コマンド](#oledbcmd)|[用語参照](#tlookup)|  
-|[データ マイニング クエリ](#dmquery)|[比率サンプリング](#percent)|[ピボット解除](#unpivot)|  
-|[[派生列]](#derived)|[ピボット](#pivot)||  
-  
+
+:::row:::
+    :::column:::
+        [集計](#aggregate)  
+        [監査](#audit)  
+        [キャッシュ変換](#cachetransform)  
+        [文字マップ](#charmap)  
+        [条件分割](#condsplit)  
+        [列コピー](#copymap)  
+        [データ変換](#dataconv)  
+        [データ マイニング クエリ](#dmquery)  
+        [[派生列]](#derived)  
+    :::column-end:::
+    :::column:::
+        [列エクスポート](#extract)  
+        [あいまいグループ化](#fgroup)  
+        [あいまい参照](#flookup)  
+        [列インポート](#insert)  
+        [Lookup](#lookup)  
+        [マージ結合](#mjoin)  
+        [OLE DB コマンド](#oledbcmd)  
+        [比率サンプリング](#percent)  
+        [ピボット](#pivot)  
+    :::column-end:::
+    :::column:::
+        [行数](#rowcount)  
+        [行サンプリング](#rowsamp)  
+        [スクリプト コンポーネント](#script)  
+        [緩やかに変化するディメンション](#scd)  
+        [Sort](#sort)  
+        [用語抽出](#textract)  
+        [用語参照](#tlookup)  
+        [ピボット解除](#unpivot)  
+    :::column-end:::
+:::row-end:::
+
 ### <a name="transformations-without-custom-properties"></a>カスタム プロパティを持たない変換  
  コンポーネント、入力、出力といういずれのレベルでも、[マージ変換](../../../integration-services/data-flow/transformations/merge-transformation.md)、[マルチキャスト変換](../../../integration-services/data-flow/transformations/multicast-transformation.md)、[全体結合変換](../../../integration-services/data-flow/transformations/union-all-transformation.md)にはカスタム プロパティがありません。 これらの変換は、すべてのデータ フロー コンポーネントとの共通プロパティのみを使用します。  
   

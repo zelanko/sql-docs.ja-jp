@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52147ff689b88876512afd6cb428e78c6c00d621
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 87bbb8455169ae0c50475781b3b9e25e9967fd93
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913873"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472553"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight クラスターの削除タスク
 
@@ -36,9 +36,8 @@ ms.locfileid: "86913873"
   
 次の表で、ダイアログ ボックスの各フィールドについて説明します。  
   
-|||  
+|フィールド|説明|  
 |-|-|  
-|**フィールド**|**説明**|  
 |AzureResourceManagerConnection|既存の Azure Resource Manager 接続マネージャーを選択するか、HDInsight クラスターを削除するために使用する新しいものを作成します。|
 |SubscriptionId|HDInsight クラスターが存在するサブスクリプションの ID を指定します。|
 |ResourceGroup|HDInsight クラスターが存在する Azure リソース グループを指定します。|

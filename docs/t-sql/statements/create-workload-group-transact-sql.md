@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 19d5c9abe85d308f93f0aa085ff813ab7a3ca8f7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 806a687037d2b23a2800552a6f4467ce02b7ccc0
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111181"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472628"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -142,7 +142,7 @@ request_min_resource_grant_percent のガイドラインとして、リソース
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
 要求ごとに割り当てられるリソースの最大量を設定します。 *value* は省略可能な 10 進数のパラメーターで、既定値は request_min_resource_grant_percent と同じ値です。 *value* は request_min_resource_grant_percent 以上である必要があります。 request_max_resource_grant_percent の値が request_min_resource_grant_percent より大きく、システム リソースが使用可能な場合は、追加のリソースが要求に割り当てられます。
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>        
+*IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>        
 ワークロード グループに対する要求の既定の重要度を指定します。 重要度は次のいずれかで、NORMAL が既定値です。
 
 - LOW

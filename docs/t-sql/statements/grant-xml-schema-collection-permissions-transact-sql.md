@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 190a0a74c230ce59cf8e36715ff405ec9decf7a1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 550b947a910da66e87c5efdddc5ec13fdc9d761c
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485177"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544335"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT (XML スキーマ コレクションの権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -128,7 +128,7 @@ GRANT permission  [ ,...n ] ON
 ## <a name="examples"></a>例  
  次の例では、XML スキーマ コレクション `EXECUTE` の `Invoices4` 権限をユーザー `Wanida` に許可します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
   
- ```
+ ```sql
  USE AdventureWorks2012;  
  GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
  GO

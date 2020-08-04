@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a63b7d9565f93a770061fc39a9aac7eb4e496366
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 922e42698f3b911912ffc1f745d171498c37151f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554777"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435556"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,6 @@ ms.locfileid: "86554777"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 <OUTPUT_CLAUSE> ::=  
 {  
     [ OUTPUT <dml_select_list> INTO { @table_variable | output_table } [ ( column_list ) ] ]  
@@ -72,8 +71,8 @@ ms.locfileid: "86554777"
   
 <column_name> ::=  
 { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
-```  
+    | $action
+```
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -129,10 +128,10 @@ ms.locfileid: "86554777"
   
  たとえば、次の DELETE ステートメントの `OUTPUT DELETED.*` は、`ShoppingCartItem` テーブルから削除されるすべての列を返します。  
   
-```  
-DELETE Sales.ShoppingCartItem  
-    OUTPUT DELETED.*;  
-```  
+```sql
+DELETE Sales.ShoppingCartItem
+    OUTPUT DELETED.*;
+```
   
  *column_name*  
  明示的な列参照です。 変更するテーブルへのすべての参照は、たとえばINSERTED **.** _column\_name_ のように、INSERTED プレフィックスまたは DELETED プレフィックスで正しく修飾されている必要があります。  
@@ -233,21 +232,22 @@ DELETE Sales.ShoppingCartItem
 ## <a name="queues"></a>キュー  
  OUTPUT を、テーブルをキューとして使用するアプリケーションで使用したり、中間結果セットを保持するために使用することができます。 つまり、アプリケーションは、テーブルに対して、常に行の追加または削除を行っています。 次の例では、DELETE ステートメント内で OUTPUT 句を使用し、削除された行を呼び出し元アプリケーションに返します。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DELETE TOP(1) dbo.DatabaseLog WITH (READPAST)  
 OUTPUT deleted.*  
 WHERE DatabaseLogID = 7;  
-GO  
-  
-```  
+GO
+```
   
  この例では、一度のアクションで、キューとして使用されているテーブルから行を削除し、削除された値を処理アプリケーションに返します。 テーブルを使用したスタックの実装など、別のセマンティクスも実装できます。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、OUTPUT 句を使用した場合に DML ステートメントが行を処理する順序や返す順序は保証されません。 必要なセマンティクスを保証する適切な WHERE 句を含むかどうかはアプリケーションに依存します。また、複数の行が DML 操作の対象となる場合には順序が保証されないという点に注意してください。 次の例では、必要な順序付けセマンティクスを実装するために、サブクエリを使用します。この例では、`DatabaseLogID` 列が一意であるということを前提にしています。  
   
-```  
-USE tempdb;  
-GO  
+```sql
+USE tempdb;
+GO
+
 CREATE TABLE dbo.table1  
 (  
     id INT,  
@@ -301,9 +301,8 @@ DROP TABLE dbo.table1;
 --id          employee  
 ------------- ------------------------------  
 --2           Tom  
---4           Alice  
-  
-```  
+--4           Alice
+```
   
 > [!NOTE]  
 >  複数のアプリケーションの同じテーブルへの破壊的な読み取りを許可する場合は、UPDATE ステートメントおよび DELETE ステートメントで READPAST テーブル ヒントを使用します。 これにより、テーブル内の最初の該当レコードを別のアプリケーションが既に読み込み中である場合に発生するロックの問題が起こらなくなります。  
@@ -318,9 +317,10 @@ DROP TABLE dbo.table1;
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. OUTPUT INTO を単純な INSERT ステートメントと共に使用する  
  次の例では、`ScrapReason` テーブルに 1 行を挿入し、`OUTPUT` 句を使用してステートメントの結果を `@MyTableVar``table` 変数に返します。 `ScrapReasonID` 列が IDENTITY プロパティで定義されているため、`INSERT` ステートメントではこの列の値を指定していません。 ただし、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によってこの列用に生成された値が、`OUTPUT` 句で `inserted.ScrapReasonID` 列に返されます。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -334,34 +334,33 @@ SELECT NewScrapReasonID, Name, ModifiedDate FROM @MyTableVar;
 --Display the result set of the table.  
 SELECT ScrapReasonID, Name, ModifiedDate   
 FROM Production.ScrapReason;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="b-using-output-with-a-delete-statement"></a>B. OUTPUT を DELETE ステートメントと共に使用する  
  次の例では、`ShoppingCartItem` テーブル内のすべての行を削除します。 `OUTPUT deleted.*` 句は、`DELETE` ステートメントの結果 (つまり削除された行のすべての列) を、呼び出し元アプリケーションに返すことを指定します。 後続の `SELECT` ステートメントは、`ShoppingCartItem` テーブルへの削除操作の結果を確認します。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
   
 --Verify the rows in the table matching the WHERE clause have been deleted.  
 SELECT COUNT(*) AS [Rows in Table] FROM Sales.ShoppingCartItem WHERE ShoppingCartID = 20621;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. OUTPUT INTO を UPDATE ステートメントと共に使用する  
  次の例では、`VacationHours` テーブル内の最初の 10 個の行について、`Employee` 列を 25% 増しに更新します。 `OUTPUT` 句は、`VacationHours` を適用する前の `UPDATE` 列の `deleted.VacationHours` の値と、`inserted.VacationHours` 列の更新後の値を `@MyTableVar` テーブル変数に返します。  
   
  この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
   
 DECLARE @MyTableVar table(  
     EmpID int NOT NULL,  
@@ -386,15 +385,15 @@ GO
 SELECT TOP (10) BusinessEntityID, VacationHours, ModifiedDate  
 FROM HumanResources.Employee;  
 GO  
-  
-```  
-  
+```
+
 ### <a name="d-using-output-into-to-return-an-expression"></a>D. OUTPUT INTO を使用して式を返す  
  次の例は例 C を基に構築され、更新後の `VacationHours` の値と更新が適用される前の `VacationHours` の値の差として、`OUTPUT` 句の中で式を定義しています。 この式の値は、`VacationHoursDifference` 列の `@MyTableVar``table` 変数に返されます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
-GO  
+GO
+
 DECLARE @MyTableVar table(  
     EmpID int NOT NULL,  
     OldVacationHours int,  
@@ -419,16 +418,16 @@ FROM @MyTableVar;
 GO  
 SELECT TOP (10) BusinessEntityID, VacationHours, ModifiedDate  
 FROM HumanResources.Employee;  
-GO  
-  
-```  
-  
+GO
+```
+
 ### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. OUTPUT INTO を UPDATE ステートメント内で from_table_name と共に使用する  
  次の例は、`WorkOrder` テーブルの `ScrapReasonID` 列の、指定された `ProductID` と `ScrapReasonID` を持つすべての作業指示を更新します。 `OUTPUT INTO` 句は、更新するテーブルの値 (`WorkOrder`) と、`Product` テーブルの値を返します。 更新する行を指定するために、`Product` テーブルを `FROM` 句の中で使用します。 `WorkOrder` テーブルには `AFTER UPDATE` トリガーが定義されているため、`INTO` キーワードが必要です。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTestVar table (  
     OldScrapReasonID int NOT NULL,   
     NewScrapReasonID int NOT NULL,   
@@ -453,16 +452,16 @@ FROM Production.WorkOrder AS wo
 SELECT OldScrapReasonID, NewScrapReasonID, WorkOrderID,   
     ProductID, ProductName   
 FROM @MyTestVar;  
-GO  
-  
-```  
-  
+GO
+```
+
 ### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. OUTPUT INTO を DELETE ステートメント内で from_table_name と共に使用する  
  次の例では、`ProductProductPhoto` テーブルの行を、`FROM` ステートメントの `DELETE` 句内で定義された検索条件に基づいて削除します。 `OUTPUT` 句は削除するテーブルの各列 (`deleted.ProductID`、`deleted.ProductPhotoID`) と、`Product` テーブルの列を返します。 このテーブルは、削除する行を指定するために `FROM` 句内で使用します。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -484,16 +483,16 @@ JOIN Production.Product as p
 SELECT ProductID, ProductName, ProductModelID, PhotoID   
 FROM @MyTableVar  
 ORDER BY ProductModelID;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="g-using-output-into-with-a-large-object-data-type"></a>G. OUTPUT INTO をラージ オブジェクト データ型と共に使用する  
  次の例では、`DocumentSummary` テーブル内の `nvarchar(max)` 列である `Production.Document` の部分的な値を、`.WRITE` 句を使用して更新します。 置換する語、既存データ内で置換される語の開始位置 (オフセット)、置換する文字数 (長さ) を指定することにより、`components` という語が、`features` という語で置換されます。 またこの例では、`OUTPUT` 句を使用して、`DocumentSummary` 列の前イメージと後イメージを `@MyTableVar``table` 変数に返します。 `DocumentSummary` 列の完全な前イメージと後イメージが返される点に注意してください。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     SummaryBefore nvarchar(max),  
     SummaryAfter nvarchar(max));  
@@ -507,16 +506,16 @@ WHERE Title = N'Front Reflector Bracket Installation';
   
 SELECT SummaryBefore, SummaryAfter   
 FROM @MyTableVar;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="h-using-output-in-an-instead-of-trigger"></a>H. OUTPUT を INSTEAD OF トリガー内で使用する  
  次の例では、トリガー内で `OUTPUT` 句を使用し、トリガー操作の結果を返しています。 まず、`ScrapReason` テーブルでビューを作成し、次にそのビューに対して `INSTEAD OF INSERT` トリガーを定義して、ユーザーがベース テーブルの `Name` 列しか変更できないようにします。 列 `ScrapReasonID` はベース テーブルの `IDENTITY` 列であるため、トリガーはユーザーが指定した値を無視します。 これにより、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は正しい値を自動的に生成できるようになります。 また、ユーザーが `ModifiedDate` に指定した値も無視され、現在の日付が設定されます。 `OUTPUT` 句は、`ScrapReason` テーブルに実際に挿入された値を返します。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID('dbo.vw_ScrapReason','V') IS NOT NULL  
     DROP VIEW dbo.vw_ScrapReason;  
 GO  
@@ -540,9 +539,8 @@ END
 GO  
 INSERT vw_ScrapReason (ScrapReasonID, Name, ModifiedDate)  
 VALUES (99, N'My scrap reason','20030404');  
-GO  
-  
-```  
+GO
+```
   
  以下に、2004 年 4 月 12 日 ('`2004-04-12'`) に生成された結果セットを示します。 `ScrapReasonIDActual` 列と `ModifiedDate` 列では、`INSERT` ステートメントで指定された値ではなく、トリガー操作で生成された値が反映されていることに注意してください。  
   
@@ -555,9 +553,10 @@ GO
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. OUTPUT INTO を、ID 列および計算列と共に使用する  
  次の例では、`EmployeeSales` テーブルを作成し、`INSERT` ステートメントを使用してこのテーブルに複数行を挿入します。基になるテーブルからデータを取得するために、`SELECT` ステートメントも使用します。 `EmployeeSales` テーブルには、ID 列 (`EmployeeID`) および計算列 (`ProjectedSales`) があります。  
   
-```  
-USE AdventureWorks2012 ;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
     DROP TABLE dbo.EmployeeSales;  
 GO  
@@ -596,16 +595,16 @@ FROM @MyTableVar;
 GO  
 SELECT EmployeeID, LastName, FirstName, CurrentSales, ProjectedSales  
 FROM dbo.EmployeeSales;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>J. OUTPUT と OUTPUT INTO を単一のステートメント内で使用する  
  次の例では、`ProductProductPhoto` テーブルの行を、`FROM` ステートメントの `DELETE` 句内で定義された検索条件に基づいて削除します。 `OUTPUT INTO` 句は削除するテーブルの各列 (`deleted.ProductID`、`deleted.ProductPhotoID`) と、`Product` テーブルの列を、`@MyTableVar``table` 変数に返します。 `Product` テーブルは、削除する行を指定するために `FROM` 句内で使用します。 `OUTPUT` 句は、`deleted.ProductID` 列、`deleted.ProductPhotoID` 列、および `ProductProductPhoto` テーブルから行を削除した日付と時刻を、呼び出し元アプリケーションに返します。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -627,16 +626,16 @@ WHERE p.ProductID BETWEEN 800 and 810;
 --Display the results of the table variable.  
 SELECT ProductID, ProductName, PhotoID, ProductModelID   
 FROM @MyTableVar;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="k-inserting-data-returned-from-an-output-clause"></a>K. OUTPUT 句から返されたデータを挿入する  
  次の例では、`OUTPUT` ステートメントの `MERGE` 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 `MERGE` ステートメントは、`SalesOrderDetail` テーブル内で処理された注文に基づいて、`ProductInventory` テーブルの `Quantity` 列を毎日更新します。 また、在庫が `0` 以下になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID(N'Production.ZeroInventory', N'U') IS NOT NULL  
     DROP TABLE Production.ZeroInventory;  
 GO  
@@ -663,9 +662,10 @@ WHERE Action = 'DELETE';
 IF @@ROWCOUNT = 0  
 PRINT 'Warning: No rows were inserted';  
 GO  
-SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
-  
-```  
+SELECT DeletedProductID, RemovedOnDate
+FROM Production.ZeroInventory;
+GO
+```
   
 ## <a name="see-also"></a>参照  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
@@ -673,6 +673,4 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [テーブル &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
-  
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

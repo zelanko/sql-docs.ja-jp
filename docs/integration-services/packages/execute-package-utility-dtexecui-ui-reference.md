@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e41b5ffc1ff1cbd524298a17e32f5f677954f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919220"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472510"
 ---
 # <a name="execute-package-utility-dtexecui"></a>パッケージ実行ユーティリティ (dtexecui)
 
@@ -68,9 +68,8 @@ ms.locfileid: "86919220"
  **[パッケージ ソース]**  
  以下のオプションを使用して、パッケージを実行する場所を指定します。  
   
-|||  
-|-|-|  
 |値|説明|  
+|-|-|  
 |**SQL Server**|パッケージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に存在する場合は、このオプションを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証に使用するユーザー名とパスワードを指定します。 各ユーザー名とパスワードによって、 **/USER** _ユーザー名_ および **/PASSWORD** _パスワード_ オプションがコマンド プロンプトに追加されます。|  
 |**ファイル システム**|パッケージがファイル システムに存在する場合は、このオプションを選択します。|  
 |**[SSIS パッケージ ストア]**|パッケージが [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに存在する場合は、このオプションを選択します。|  

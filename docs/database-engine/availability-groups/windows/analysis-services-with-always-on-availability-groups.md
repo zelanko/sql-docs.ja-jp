@@ -12,16 +12,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e520363adc8fb8bff12688aa8c99b879bb510dd
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892895"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522436"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services と Always On 可用性グループ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   AlwaysOn 可用性グループは SQL Server リレーショナル データベースの事前に定義されたコレクションで、その中の 1 つのデータベースが条件に従ってフェールオーバーするときに一緒にフェールオーバーし、同じ可用性グループの別のインスタンスのミラー化されたデータベースに要求をリダイレクトします。 高可用性ソリューションとして可用性グループを使用している場合、そのグループ内のデータベースを Analysis Services テーブルまたは多次元ソリューションのデータ ソースとして使用できます。 可用性データベースを使用すると、次の Analysis Services の操作はすべて予期したとおりに動作します。その操作とは、データの処理またはインポート、リレーショナル データへの直接クエリ (ROLAP ストレージまたは DirectQuery モードを使用)、および書き戻しです。  
   

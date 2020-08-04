@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 5d3ee42f28fed73a4dd513b10d01948552fdd6d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901539"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472188"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf ツールを使用して SQL Server on Linux を構成する
 
@@ -24,7 +24,7 @@ ms.locfileid: "85901539"
 
 **mssql-conf** は、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、Ubuntu 用に SQL Server 2017 と共にインストールされる構成スクリプトです。 これは、構成値が格納されている [**mssql conf ファイル**](#mssql-conf-format)を変更します。 **mssql-conf** ユーティリティを使用すると、次のパラメーターを設定できます。
 
-|||
+|パラメーター|説明|
 |---|---|
 | [エージェント](#agent) | SQL Server エージェントを有効にします。 |
 | [Collation](#collation) | SQL Server on Linux に新しいコロケーションを設定します。 |
@@ -52,7 +52,7 @@ ms.locfileid: "85901539"
 
 **mssql-conf** は、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、Ubuntu 用に [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] と共にインストールされる構成スクリプトです。 このユーティリティを使用すると、次のパラメーターを設定できます。
 
-|||
+|パラメーター|説明|
 |---|---|
 | [エージェント](#agent) | SQL Server エージェントを有効にする |
 | [Collation](#collation) | SQL Server on Linux に新しいコロケーションを設定します。 |

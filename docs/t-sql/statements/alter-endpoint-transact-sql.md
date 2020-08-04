@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b07cc17344e27d82155ceaae8e55494deb0bd57
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eed0eb24fc38f3ff2856d8b9693265d888d5a8e2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065668"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442720"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   既存のエンドポイントを、次の方法で変更できるようにします。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68065668"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER ENDPOINT endPointName [ AUTHORIZATION login ]  
 [ STATE = { STARTED | STOPPED | DISABLED } ]  

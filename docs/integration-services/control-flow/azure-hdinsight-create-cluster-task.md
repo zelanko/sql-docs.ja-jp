@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6b44b5d7e8c83f1ee47462e8cfd297a77e836cf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3fff08c4259424319621127d3e91762beaa46885
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918911"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472423"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight Create Cluster Task
 
@@ -37,9 +37,8 @@ ms.locfileid: "86918911"
   
 次の表で、このダイアログ ボックスの各フィールドについて説明します。  
   
-|||  
+|フィールド|説明|  
 |-|-|  
-|**フィールド**|**説明**|  
 |AzureResourceManagerConnection|既存の Azure Resource Manager 接続マネージャーを選択するか、HDInsight クラスターを作成するために使用する新しいものを作成します。|  
 |AzureStorageConnection|既存の Azure ストレージ接続マネージャーを選ぶか、HDInsight クラスターに関連付けられている Azure ストレージ アカウントを参照する新しい接続マネージャーを作成します。|
 |SubscriptionId|HDInsight クラスターが作成されるサブスクリプションの ID を指定します。|
