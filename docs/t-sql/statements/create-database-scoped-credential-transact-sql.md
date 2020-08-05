@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0283446412b8556646aed49b4f27ebc4e22c68da
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 7ba0b83c6c03c761264fb6e85b8d93c09debef49
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392770"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523364"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -55,7 +55,7 @@ WITH IDENTITY = 'identity_name'
 IDENTITY **='** _identity\_name_ **'** サーバーの外部に接続するときに使用するアカウントの名前を指定します。 共有キーを使用して Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。 データを SQL DW に読み込むには、任意の有効な値を ID に使用できます。 Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。
 
 > [!NOTE]
-Azure Blob Storage 内のコンテナーで匿名アクセスが有効になっている場合は、WITH IDENTITY を使用する必要はありません。 Azure Blob Storage に対するクエリの例については、「[Azure Blob Storage に格納されているファイルからテーブルへのインポート](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)」を参照してください。
+> Azure Blob Storage 内のコンテナーで匿名アクセスが有効になっている場合は、WITH IDENTITY を使用する必要はありません。 Azure Blob Storage に対するクエリの例については、「[Azure Blob Storage に格納されているファイルからテーブルへのインポート](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)」を参照してください。
 
 SECRET **='** _secret_ **'** 送信の認証に必要なシークレットを指定します。 `SECRET` は、Azure Blob Storage からファイルをインポートするために必要です。 Azure Blob Storage から SQL DW または Parallel Data Warehouse に読み込むには、シークレットが Azure Storage キーである必要があります。
 > [!WARNING]
