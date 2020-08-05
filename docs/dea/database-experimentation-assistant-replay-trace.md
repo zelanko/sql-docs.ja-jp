@@ -1,6 +1,6 @@
 ---
 title: SQL Server アップグレードのトレースを再生する
-description: SQL Server アップグレードのために Database Experimentation Assistant を使用したトレースの再生
+description: SQL Server アップグレードのために Database Experimentation Assistant でキャプチャしたトレースを再生する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289150"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565501"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Database Experimentation Assistant でトレースを再生する
 
@@ -118,7 +118,7 @@ SQL Server は、ステートフルなリレーショナルデータベース管
 
 **Q: 再生中に収集されたトレースイベントを確認するにはどうすればよいですか。**
 
-ターゲットトレースファイルを開き、SQL Profiler で表示します。 または、再生キャプチャを変更する場合、すべての SQL Server スクリプトは、C\\: Program Files (x86)\\Microsoft Corporation\\Database Experimentation Assistant\\scripts\\startreplaycapture. SQL で入手できます。
+ターゲットトレースファイルを開き、SQL Profiler で表示します。 または、再生キャプチャを変更する場合、すべての SQL Server スクリプトは、C: \\ Program Files (x86) \\ Microsoft Corporation \\ Database Experimentation Assistant \\ scripts \\ startreplaycapture. SQL で入手できます。
 
 **Q: 再生中に収集されるトレースイベントにはどのようなものがありますか。**
 
@@ -133,11 +133,11 @@ DEA は、パフォーマンスに関連する情報を含むトレースイベ�
 - ユーザーが必要なユーザー権限を持っていることを確認します。
 - 分散再生クライアントのサービスアカウントに SQL Server を実行しているコンピューターへのアクセス権があることを確認します。
 
-詳細については、% temp%\\dea のログを参照してください。 問題が解決しない場合は、製品チームにお問い合わせください。
+詳細については、% temp% dea のログを参照 \\ してください。 問題が解決しない場合は、製品チームにお問い合わせください。
 
 **Q: 分散再生コントローラーに接続できないのはなぜですか。**
 
-- コントローラーコンピューターで分散再生コントローラーサービスが実行されていることを確認してください。 確認するには、分散再生管理ツールを使用します`dreplay.exe status -f 1`(コマンドを実行します)。
+- コントローラーコンピューターで分散再生コントローラーサービスが実行されていることを確認してください。 確認するには、分散再生管理ツールを使用します (コマンドを実行し `dreplay.exe status -f 1` ます)。
 - 再生がリモートで開始された場合:
   - DEA を実行しているコンピューターがコントローラーに対して ping を正常に実行できることを確認します。 [**再生環境の構成**] ページの指示に従って、ファイアウォールの設定によって接続が許可されていることを確認します。 詳細については、「 [SQL Server 分散再生](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017)」を参照してください。
   - 分散再生コントローラーのユーザーに対して、DCOM リモート起動とリモートアクティブ化が許可されていることを確認します。

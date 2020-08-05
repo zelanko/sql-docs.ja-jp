@@ -1,6 +1,6 @@
 ---
 title: コマンドプロンプトで Database Experimentation Assistant を実行する
-description: コマンドプロンプトで Database Experimentation Assistant を実行する
+description: コマンドプロンプトから、Database Experimentation Assistant (DEA) でトレースをキャプチャし、結果を分析する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 02/25/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215489"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565531"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>コマンドプロンプトで Database Experimentation Assistant を実行する
 
@@ -40,7 +40,7 @@ ms.locfileid: "85215489"
 
 `Deacmd.exe -o StartCapture -n sql2008capture -x 0 -h localhost -f adventureworks -e --trust -m 0 -l c:\test  -d 60`
 
-**追加オプション**
+**その他のオプション**
 
 コマンドを使用して新しいワークロードキャプチャを開始するときに `Deacmd.exe` 、次の追加オプションを使用できます。
 
@@ -111,7 +111,7 @@ ms.locfileid: "85215489"
 
 これらのトレースファイルの分析レポートを表示するには、GUI を使用してグラフや構成されたメトリックを表示する必要があります。  ただし、指定された SQL Server インスタンスに分析データベースが書き込まれるため、生成された分析テーブルに対して直接クエリを実行することもできます。
 
-**追加オプション**
+**その他のオプション**
 
 DEA コマンドを使用してトレースを分析する場合は、次の追加オプションを使用できます。
 

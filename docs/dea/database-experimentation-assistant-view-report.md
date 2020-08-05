@@ -1,6 +1,6 @@
 ---
 title: SQL Server アップグレードの分析レポートの表示
-description: Database Experimentation Assistant で分析レポートを表示する
+description: Database Experimentation Assistant (DEA) でパフォーマンスに関する洞察の分析レポートを表示して理解する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5850f3f78590b5ceccea49033b401055180d715e
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76977597"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565491"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Database Experimentation Assistant で分析レポートを表示する
 

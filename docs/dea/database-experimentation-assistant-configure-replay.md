@@ -1,6 +1,6 @@
 ---
 title: SQL Server アップグレードの再生の構成
-description: Database Experimentation Assistant の分散再生を構成する
+description: 分散再生ツールにアクセスするには、Database Experimentation Assistant (DEA) を使用します。 ツールを使用すると、アップグレードされたテスト環境に対してキャプチャされたトレースを再生できます。
 ms.custom: seo-lt-2019
 ms.date: 01/24/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2715667fc474335ffec54259ebb821fe2e5904a
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761536"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565520"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Database Experimentation Assistant の分散再生を構成する
 
@@ -43,8 +43,8 @@ Database Experimentation Assistant (DEA) は、SQL Server インストールの�
 
 コントローラーサービスを設定するには:
 
-1. SQL Server インストーラーを使用して、分散再生コントローラーをインストールします。 分散再生コントローラーを構成する SQL Server インストーラーウィザードの手順をスキップした場合は、構成ファイルを使用してコントローラーを構成できます。 一般的なインストールでは、構成ファイルは C:\Program Files (x86) \Microsoft SQL Server\<version\>\Tools\DReplayController\DReplayController.config. にあります。
-2. 分散再生コントローラーのログは、C:\Program Files (x86) \Microsoft SQL Server\<version\>\Tools\DReplayController\Log. にあります。
+1. SQL Server インストーラーを使用して、分散再生コントローラーをインストールします。 分散再生コントローラーを構成する SQL Server インストーラーウィザードの手順をスキップした場合は、構成ファイルを使用してコントローラーを構成できます。 一般的なインストールでは、構成ファイルは C:\Program Files (x86) \Microsoft SQL Server\Tools\DReplayController\DReplayController.config にあり \<version\> ます。
+2. 分散再生コントローラーのログは、C:\Program Files (x86) \Microsoft SQL Server \Tools\DReplayController\Log. にあります。 \<version\>
 3. Services.msc を開き、 **SQL Server 分散再生 Controller**サービスにアクセスします。
 4. サービスを右クリックし、[**プロパティ**] を選択します。 サービスアカウントを、ネットワーク内のコントローラーとクライアントコンピューターに共通のアカウントに設定します。
 5. [ **OK** ] を選択して、[**プロパティ**] ウィンドウを閉じます。
@@ -59,10 +59,10 @@ Database Experimentation Assistant (DEA) は、SQL Server インストールの�
 
 この構成は、コントローラーコンピューターでのみ必要です。
 
-1. Dcomcnfg.exe を開きます。
-2. [**コンポーネントサービス** > ] [**コンピューター** > **マイコンピューター** > **DCOM 構成**] の順に展開します。
+1. dcomcnfg.exe を開きます。
+2. [**コンポーネントサービス**] [  >  **コンピューター**  >  **マイコンピューター**  >  **DCOM 構成**] の順に展開します。
 3. [ **DCOM の構成**] で、[ **Dreplaycontroller**] を右クリックし、[**プロパティ**] を選択します。
-4. [**セキュリティ**] タブを選択します。
+4. **[セキュリティ]** タブをクリックします。
 5. [**起動とアクティブ化のアクセス許可**] で、[**カスタマイズ**] を選択し、[**編集**] を選択します。
 6. 再生を開始するユーザーを追加します。 ユーザーにローカル起動とローカルのアクティブ化のアクセス許可を与えます。 ユーザーがリモートでの起動またはアクティブ化を計画している場合は、[リモート起動] と [リモートからのアクティブ化] のアクセス許可をユーザーに付与します。
 7. [ **OK** ] を選択して変更をコミットし、[**セキュリティ**] タブに戻ります。
@@ -82,16 +82,16 @@ Database Experimentation Assistant (DEA) は、SQL Server インストールの�
 1. SQL Server インストーラーを使用して分散再生クライアントをインストールします。
 2. Services.msc を開き、SQL Server 分散再生クライアントサービスにアクセスします。
 3. サービスを右クリックし、[**プロパティ**] を選択します。 サービスアカウントを、ネットワーク内のコントローラーコンピューターとクライアントコンピューターの両方に共通するアカウントに設定します。
-4. [ **OK** ] を選択して、[**プロパティ**] ウィンドウを閉じます。 分散再生クライアントを構成するために SQL Server インストーラーウィザードの手順をスキップした場合は、構成ファイルを使用して構成できます。 一般的なインストールでは、構成ファイルは C:\Program Files (x86) \Microsoft SQL Server\<version\>\Tools\DReplayClient\DReplayClient.config. にあります。
-5. DReplayClient .config ファイルにコントローラーとして登録するためのコントローラーの名前が含まれていることを確認します。
+4. [ **OK** ] を選択して、[**プロパティ**] ウィンドウを閉じます。 分散再生クライアントを構成するために SQL Server インストーラーウィザードの手順をスキップした場合は、構成ファイルを使用して構成できます。 一般的なインストールでは、構成ファイルは C:\Program Files (x86) \Microsoft SQL Server\Tools\DReplayClient\DReplayClient.config にあり \<version\> ます。
+5. DReplayClient.config ファイルに、登録用のコントローラーとしてのコントローラーコンピューターの名前が含まれていることを確認します。
 6. Services.msc から SQL Server 分散再生クライアントサービスを再起動します。 また、コマンドラインから次のコマンドを実行してサービスを再起動することもできます。
 
     `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
 
-    分散再生コントローラーのログは、C:\Program Files (x86) \Microsoft SQL Server\<version\>\Tools\DReplayClient\Log. にあります。 ログには、クライアントが自身をコントローラーに登録できるかどうかが示されます。
+    分散再生コントローラーのログは、C:\Program Files (x86) \Microsoft SQL Server \Tools\DReplayClient\Log. にあります。 \<version\> ログには、クライアントが自身をコントローラーに登録できるかどうかが示されます。
 
-    構成が成功した場合、ログには**コントローラー <コントローラー名\>に登録さ**れているメッセージが表示されます。
+    構成が成功した場合、ログには**コントローラー <コントローラー名 \> に登録さ**れているメッセージが表示されます。
 
 構成オプションの詳細については、「 [Configure 分散再生](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)」を参照してください。
 
@@ -99,10 +99,10 @@ Database Experimentation Assistant (DEA) は、SQL Server インストールの�
 
 分散再生管理ツールを使用すると、分散再生が環境内で適切に機能しているかどうかをすばやくテストできます。 構成のテストは、複数のクライアントコンピューターがコントローラーに登録されている環境で特に役立ちます。 管理ツールを入手するには、SQL Server Management Studio (SSMS) のインストールが必要になる場合があります。
 
-1. SSMS のインストール場所に移動し、分散再生管理ツールの dreplay とその依存コンポーネントを探します。
-2. コマンドプロンプトで、を実行`dreplay.exe status -f 1`します。
+1. SSMS のインストール場所に移動し、分散再生管理ツール dreplay.exe とそれに依存するコンポーネントを探します。
+2. コマンドプロンプトで、を実行 `dreplay.exe status -f 1` します。
 
-前の手順が成功した場合、コンソール出力は、コントローラーがクライアントを`READY`状態で認識できることを示しています。
+前の手順が成功した場合、コンソール出力は、コントローラーがクライアントを状態で認識できることを示してい `READY` ます。
 
 ## <a name="configure-the-firewall-for-remote-distributed-replay-access"></a>リモート分散再生アクセスできるようにファイアウォールを構成する
 
@@ -110,8 +110,8 @@ Database Experimentation Assistant (DEA) は、SQL Server インストールの�
 
 1. **[セキュリティが強化**された**Windows ファイアウォール**] を開きます。
 2. [**受信の規則**] にアクセスします。
-3. プログラム C:\Program Files (x86) \Microsoft SQL Server\<バージョン\>\Tools\DReplayController\DReplayController.exe. 用の新しい受信ファイアウォール規則を作成します。
-4. DReplayController のすべてのポートに対するドメインレベルのアクセスを許可して、コントローラーサービスとリモートで通信できるようにします。
+3. プログラム C:\Program Files (x86) \Microsoft SQL Server\Tools\DReplayController\DReplayController.exe 用の新しい受信ファイアウォール規則を作成 \<version\> します。
+4. DReplayController.exe のすべてのポートに対するドメインレベルのアクセスを許可して、コントローラーサービスとリモートで通信できるようにします。
 5. ルールを保存します。
 
 ## <a name="set-up-target-computers"></a>ターゲットコンピューターの設定

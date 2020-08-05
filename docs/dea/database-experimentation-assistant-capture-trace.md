@@ -1,6 +1,6 @@
 ---
 title: SQL Server アップグレードのトレースをキャプチャする
-description: SQL Server アップグレードのために Database Experimentation Assistant でトレースをキャプチャする
+description: Database Experimentation Assistant (DEA) を使用して、キャプチャされたサーバーイベントのログを含むトレースファイルを作成します。
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289830"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565594"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Database Experimentation Assistant でトレースをキャプチャする
 
@@ -134,11 +134,11 @@ DEA を使用すると、サーバー内のすべてのデータベースまた�
 - SQL Server を実行しているコンピューターの名前が有効です。 確認するには、SQL Server Management Studio (SSMS) を使用して SQL Server を実行しているコンピューターに接続します。
 - ファイアウォールの構成により、SQL Server を実行しているコンピューターへの接続がブロックされることはありません。
 - ユーザーには、[再生 FAQ](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)に記載されているアクセス許可があります。
-- トレース名は、標準のロールオーバー規則 (Capture\_1) に従っていません。 代わりに、Capture\_1A や Capture1 などのトレース名を試してください。
+- トレース名は、標準のロールオーバー規則 (Capture 1) に従っていません \_ 。 代わりに、Capture 1a や Capture1 などのトレース名を試してください \_ 。
 
 表示される可能性のあるエラーとその解決策を次に示します。
 
-|考えられるエラー|ソリューション|  
+|考えられるエラー|解決策|  
 |---|---|  
 |ターゲット SQL Server でトレースを開始できません。必要なアクセス許可があるかどうか、および指定されたトレースファイルパスに対する書き込みアクセス権が SQL Server アカウントにあるかどうかを確認してください。 Sql エラーコード (53)|DEA ツールを実行するユーザーは、SQL Server を実行しているコンピューターにアクセスできる必要があります。 ユーザーに sysadmin ロールが割り当てられている必要があります。|  
 |ターゲット SQL Server でトレースを開始できません。必要なアクセス許可があるかどうか、および指定されたトレースファイルパスに対する書き込みアクセス権が SQL Server アカウントにあるかどうかを確認してください。 Sql エラーコード (19062)|指定されたトレースパスが存在しないか、フォルダーに SQL Server サービスを実行しているアカウント (NETWORK SERVICE など) に対する書き込みアクセス許可がありません。 パスが存在し、トレースを開始するために必要なアクセス許可を持っている必要があります。|  

@@ -16,15 +16,15 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7a6de1ad7652e7b948d741acdeebdd186f590b44
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: e6ee5d0f6a2b26dc10c901297097b99338ba9091
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627578"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544375"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
 Azure SQL database または Azure SQL Data Warehouse について、エディション (サービスレベル)、サービス目標 (価格レベル)、およびエラスティックプール名 (存在する場合) を返します。 Azure SQL Database サーバーの master データベースにログオンしている場合は、すべてのデータベースの情報が返されます。 Azure SQL Data Warehouse の場合は、master データベースに接続する必要があります。  
   
@@ -35,12 +35,12 @@ Azure SQL database または Azure SQL Data Warehouse について、エディ�
   
  Database_service_objectives ビューには、次の列が含まれています。  
   
-|列名|データの種類|説明|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|INT|データベースの ID。 Azure SQL Database server のインスタンス内で一意です。 [Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)に付属しています。|  
 |edition|sysname|データベースまたはデータウェアハウスのサービスレベル: **Basic**、 **Standard**、 **Premium** 、または**data warehouse**。|  
 |service_objective|sysname|データベースの価格レベル。 データベースがエラスティックプール内にある場合、は**ElasticPool**を返します。<br /><br /> **Basic**レベルでは、は**basic**を返します。<br /><br /> **Standard サービスレベルの単一データベースで**は、次のいずれかが返されます。 S0、S1、S2、S3、S4、S6、S7、S9、または S12。<br /><br /> **Premium レベルの単一のデータベース**は、次の値を返します: P1、P2、P4、P6、P11、または P15。<br /><br /> **SQL Data Warehouse**は DW30000C から DW100 を返します。<br /><br /> 詳細については、「[単一データベース](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[エラスティックプール](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)、[データウェアハウス](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)」を参照してください。|  
-|elastic_pool_name|sysname|データベースが属する[エラスティックプール](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)の名前。 データベースが単一データベースまたはデータ warehoue の場合は**NULL**を返します。|  
+|elastic_pool_name|sysname|データベースが属する[エラスティックプール](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)の名前。 データベースが単一データベースまたはデータウェアハウスの場合は**NULL**を返します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  Master データベースに対する**dbManager**権限が必要です。  データベースレベルでは、ユーザーは作成者または所有者である必要があります。  

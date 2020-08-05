@@ -19,15 +19,15 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9bc37626879b743eb3a5d0864490dc3543a8d8a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c64e9a9773ae01d4714e5c36d49097ae4f4856f2
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70152063"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544405"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL データベース)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーのサーバーレベルのファイアウォールの設定を作成または更新します。 このストアドプロシージャを使用できるのは、master データベースで、サーバーレベルプリンシパルログインまたは Azure Active Directory プリンシパルが割り当てられている場合のみです。  
   
@@ -42,15 +42,15 @@ sp_set_firewall_rule [@name =] 'name',
 ```  
   
 ## <a name="arguments"></a>引数  
- 次の表は、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]サポートされている引数とオプションを示しています。  
+ 次の表は、でサポートされている引数とオプションを示して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] います。  
   
 |名前|データ型|説明|  
 |----------|--------------|-----------------|  
-|[@name =]指定|**NVARCHAR (128)**|サーバーレベルのファイアウォールの設定を説明し、区別するための名前です。|  
-|[@start_ip_address =]' start_ip_address '|**VARCHAR (50)**|サーバーレベルのファイアウォール設定の範囲の最下位の IP アドレスです。 この IP アドレス以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試行できます。 設定できる最下位の IP アドレスは `0.0.0.0` です。|  
-|[@end_ip_address =]' end_ip_address '|**VARCHAR (50)**|サーバーレベルのファイアウォール設定の範囲の最上位の IP アドレスです。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 設定できる最上位の IP アドレスは `255.255.255.255` です。<br /><br /> 注: このフィールドと*start_ip_address*フィールドの両方がと等しい`0.0.0.0`場合は、Azure の接続試行が許可されます。|  
+|[ @name =] ' name '|**NVARCHAR (128)**|サーバーレベルのファイアウォールの設定を説明し、区別するための名前です。|  
+|[ @start_ip_address =] ' start_ip_address '|**VARCHAR (50)**|サーバーレベルのファイアウォール設定の範囲の最下位の IP アドレスです。 この IP アドレス以上の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試行できます。 設定できる最下位の IP アドレスは `0.0.0.0` です。|  
+|[ @end_ip_address =] ' end_ip_address '|**VARCHAR (50)**|サーバーレベルのファイアウォール設定の範囲の最上位の IP アドレスです。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 設定できる最上位の IP アドレスは `255.255.255.255` です。<br /><br /> 注: このフィールドと*start_ip_address*フィールドの両方がと等しい場合は、Azure の接続試行が許可され `0.0.0.0` ます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー レベルのファイアウォール設定の名前は一意である必要があります。 ストアド プロシージャの設定の名前がファイアウォール設定テーブルに既に存在する場合、開始 IP アドレスと終了 IP アドレスが更新されます。 そうでない場合は、新しいサーバー レベルのファイアウォール設定が作成されます。  
   
  開始 IP アドレスおよび終了 IP アドレスが `0.0.0.0` であるサーバーレベルのファイアウォール設定を追加すると、Azure から [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーにアクセスできるようになります。 *Name*パラメーターに値を指定します。これは、サーバーレベルのファイアウォール設定の内容を思い出すのに役立ちます。  
@@ -60,7 +60,7 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="permissions"></a>アクセス許可  
  サーバーレベルのファイアウォールルールを作成または変更できるのは、プロビジョニング処理によって作成されたサーバーレベルのプリンシパルログイン、または管理者として割り当てられた Azure Active Directory プリンシパルだけです。 Sp_set_firewall_rule を実行するには、ユーザーが master データベースに接続されている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のコードでは、Azure からのアクセスを有効にする、`Allow Azure` という名前のサーバーレベルのファイアウォール設定を作成します。 仮想 master データベースで次のを実行します。  
   
 ```  
@@ -69,7 +69,7 @@ exec sp_set_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- 次のコードでは、IP アドレス `Example setting 1` だけを許可する、`0.0.0.2` という名前のサーバーレベルのファイアウォールの設定を作成します。 次に、 `sp_set_firewall_rule`そのファイアウォール設定で、終了 IP アドレスをに`0.0.0.4`更新するために、ストアドプロシージャが再度呼び出されます。 これにより、IP アドレス`0.0.0.2`、 `0.0.0.3`、および`0.0.0.4`がサーバーにアクセスできるようになる範囲が作成されます。  
+ 次のコードでは、IP アドレス `Example setting 1` だけを許可する、`0.0.0.2` という名前のサーバーレベルのファイアウォールの設定を作成します。 次に、 `sp_set_firewall_rule` `0.0.0.4` そのファイアウォール設定で、終了 IP アドレスをに更新するために、ストアドプロシージャが再度呼び出されます。 これにより、IP アドレス、、およびがサーバーにアクセスできるようになる範囲が作成さ `0.0.0.2` `0.0.0.3` `0.0.0.4` れます。  
   
 ```  
 -- Create server-level firewall setting for only IP 0.0.0.2  

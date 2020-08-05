@@ -1,6 +1,6 @@
 ---
 title: Database Experimentation Assistant の概要
-description: Database Experimentation Assistant の概要
+description: Database Experimentation Assistant (DEA) の詳細については、特定のワークロードの対象となるバージョンの SQL Server を評価する方法などを参照してください。
 ms.date: 12/12/2019
 ms.prod: sql
 ms.suite: sql
@@ -11,12 +11,12 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94bfd77da2658a4cb6b0e5e07868605f1c12140c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759158"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565552"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Database Experimentation Assistant の概要
 
@@ -32,7 +32,7 @@ Database Experimentation Assistant (DEA) は SQL Server アップグレードの
 
 ## <a name="get-dea"></a>DEA を取得する
 
-DEA をインストールするには、最新バージョンのツールを[ダウンロード](https://www.microsoft.com/download/details.aspx?id=54090)します。 次に、 **DatabaseExperimentationAssistant**ファイルを実行します。
+DEA をインストールするには、最新バージョンのツールを[ダウンロード](https://www.microsoft.com/download/details.aspx?id=54090)します。 次に、 **DatabaseExperimentationAssistant.exe**ファイルを実行します。
 
 ## <a name="solution-architecture-for-comparing-workloads"></a>ワークロードを比較するためのソリューションアーキテクチャ
 
@@ -105,7 +105,7 @@ DEA にはインターネット対応の機能があり、製品のエクスペ�
 テレメトリデータの収集と送信は任意です。 収集されるイベントと収集されるイベントを指定するには、次の手順を実行します。
 
 1. DEA がインストールされている場所 (たとえば、C: \\ Program Files (x86) \\ Microsoft Corporation Database Experimentation Assistant) に移動し \\ ます。
-2. 必要に応じて、**構成ファイル (** アプリケーションの場合) と**DEACMD .exe** (CLI の場合) を開いて変更し、シナリオに対処します。
+2. 必要に応じてシナリオに対処するには、 **DEA.exe.config** (アプリケーションの場合) および**DEACmd.exe.config** (CLI の場合) を開いて変更します。
     - イベントの種類の収集を停止するには、*イベント*の値 ( **traceevent**など) を**false**に設定します。 イベントの収集を再開するには、値を**true**に設定します。
     - イベントのローカルコピーの保存を停止するには、 **TraceLoggerEnabled**の値を**false**に設定します。 ローカルコピーの保存を再び開始するには、値を**true**に設定します。
     - Microsoft へのイベントの送信を停止するには、 **AppInsightsLoggerEnabled**の値を**false**に設定します。 再度 Microsoft へのイベント送信を開始するには、値を**true**に設定します。
