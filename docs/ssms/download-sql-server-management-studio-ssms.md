@@ -19,21 +19,22 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-author: dnethi
-ms.author: dinethi
-ms.reviewer: sstein, maghan
+author: dzsquared
+ms.author: drskwier
+manager: viharp
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 04/07/2020
-ms.openlocfilehash: 294a1ee5cf728498f9564f93ac1f61815ed574f1
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.date: 07/22/2020
+ms.openlocfilehash: 2d1eb8e37de9956352dad852d74760fecdc8086b
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138267"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943084"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 SQL Server Management Studio (SSMS) は、SQL Server から Azure SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS には、SQL Server とデータベースのインスタンスを構成、監視、および管理するためのツールが備わっています。 SSMS を使用して、ご利用のアプリケーションで使われるデータ層コンポーネントを配置、監視、アップグレードしたり、クエリとスクリプトを作成したりすることができます。
 
@@ -43,19 +44,19 @@ SSMS は無料です。
 
 ## <a name="download-ssms"></a>SSMS のダウンロード
 
-**[![ダウンロード](media/download-icon.png) SQL Server Management Studio (SSMS) のダウンロード](https://aka.ms/ssmsfullsetup)**
+:::image type="icon" source="media/download-icon.png" border="false"::: **[SQL Server Management Studio (SSMS) のダウンロード](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.5 は、最新の一般提供 (GA) バージョンの SSMS です。 以前の GA バージョンの SSMS 18 がインストールされている場合は、SSMS 18.5 をインストールするとそれが 18.5 にアップグレードされます。
+SSMS 18.6 は、最新の一般提供 (GA) バージョンの SSMS です。 以前の GA バージョンの SSMS 18 がインストールされている場合は、SSMS 18.6 をインストールするとそれが 18.6 にアップグレードされます。
 
 ### <a name="version-information"></a>バージョン情報
 
-- リリース番号:18.5  
-- ビルド番号:15.0.18330.0  
-- リリース日: 2020 年 4 月 7 日  
+- リリース番号:18.6
+- ビルド番号:15.0.18338.0
+- リリース日: 2020 年 7 月 22 日
 
-コメントや提案がある場合、または問題を報告する場合、SSMS チームに連絡する最適な方法は [UserVoice](https://aka.ms/sqlfeedback) です。
+コメントや提案がある場合、または問題を報告する場合、SSMS チームに連絡する最適な方法は [SQL Server ユーザー フィード](https://aka.ms/sqlfeedback)にあります。
 
-SSMS 18.x のインストールでは、17.x 以前のバージョンの SSMS がアップグレードまたは置き換えられることはありません。 SSMS 18.x は以前のバージョンとは別にサイド バイ サイドでインストールされるので、両方のバージョンを使用できます。 ただし、"*プレビュー*" 版の SSMS 18.x がインストールされている場合は、それをアンインストールしてから SSMS 18.5 をインストールする必要があります。 プレビュー版がインストールされているかどうかを確認するには、 **[ヘルプ]、[バージョン情報]** の順に移動します。
+SSMS 18.x のインストールでは、17.x 以前のバージョンの SSMS がアップグレードまたは置き換えられることはありません。 SSMS 18.x は以前のバージョンとは別にサイド バイ サイドでインストールされるので、両方のバージョンを使用できます。 ただし、"*プレビュー*" 版の SSMS 18.x がインストールされている場合は、それをアンインストールしてから SSMS 18.6 をインストールする必要があります。 プレビュー版がインストールされているかどうかを確認するには、 **[ヘルプ]、[バージョン情報]** の順に移動します。
 
 コンピューターに SSMS のサイド バイ サイドのインストールが含まれている場合は、特定のニーズに応じて適切なバージョンを起動してください。 最新バージョンには、**Microsoft SQL Server Management Studio 18** というラベルが付いています。
 
@@ -66,8 +67,8 @@ SSMS 18.x のインストールでは、17.x 以前のバージョンの SSMS �
 
 SSMS の今回のリリースは、次の言語でインストールできます。
 
-SQL Server Management Studio 18.5:  
-[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
+SQL Server Management Studio 18.6:  
+[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2135491&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールです。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)」を参照してください。
@@ -76,7 +77,7 @@ SQL Server Management Studio 18.5:
 
 このリリースの新機能の詳細については、「[SSMS リリース ノート](release-notes-ssms.md)」を参照してください。
 
-このリリースには、[既知の問題](release-notes-ssms.md#known-issues-185)がいくつかあります。
+このリリースには、[既知の問題](release-notes-ssms.md#known-issues-186)がいくつかあります。
 
 ## <a name="previous-versions"></a>以前のバージョン
 
@@ -93,45 +94,67 @@ GUI プロンプトを使用しないでバックグラウンドで SSMS をイ�
 2. コマンド プロンプトで、次のコマンドを入力します。
 
     ```console
-    start "" <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    start "" /w <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
     ```
 
     例:
 
     ```console
-    start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
+    start "" /w %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
     ```
 
     */Quiet* ではなく、 */Passive* を渡して、セットアップ UI を表示することもできます。
 
 3. すべて正常に進んだ場合、例に基づいて %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" にインストールされた SSMS を確認できます。 何らかの問題が発生した場合は、返されたエラー コードを調べたり、%TEMP%\SSMSSetup でログ ファイルを確認したりすることが可能です。
 
-## <a name="supported-sql-offerings-ssms-185"></a>サポートされる SQL オファリング (SSMS 18.5)
+## <a name="uninstall"></a>アンインストール
+
+SSMS をアンインストールした後、インストールされたままの共有コンポーネントがあります。
+
+インストールされたままになっている共有コンポーネントは次のとおりです。
+
+- Microsoft .NET Framework 4.7.2
+- Microsoft OLE DB Driver for SQL Server
+- Microsoft ODBC Driver 17 for SQL Server
+- Microsoft Visual C++ 2013 再頒布可能パッケージ (x86)
+- Microsoft Visual C++ 2017 再頒布可能パッケージ (x86)
+- Microsoft Visual C++ 2017 再頒布可能パッケージ (x64)
+- Microsoft Visual Studio Tools for Applications 2017
+
+これらのコンポーネントは、他の製品と共有できるため、アンインストールされません。 アンインストールされた場合は、他の製品を無効にするリスクが発生する可能性があります。
+
+## <a name="supported-sql-offerings"></a>サポートされる SQL 製品
 
 - このバージョンの SSMS は、すべての[サポート対象バージョンである SQL Server 2008 から [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) で動作し、Azure SQL Database および Azure SQL Data Warehouse で最新のクラウド機能と連携するための最大レベルのサポートを提供します。
 - また、SSMS 18.x は、SSMS 17.x、SSMS 16.x または SQL Server 2014 SSMS 以前とサイドバイサイドでインストールできます。
 - SQL Server Integration Services (SSIS) - SSMS バージョン 17.x 以降では、レガシ SQL Server Integration Services サービスへの接続はサポートされません。 以前のバージョンのレガシ Integration Services に接続するには、SQL Server のバージョンに対応する SSMS のバージョンを使用します。 たとえば、レガシ SQL Server 2016 Integration Services サービスに接続する場合は、SSMS 16.x を使用します。 SSMS 17.x および SSMS 16.x は、同じコンピューターにサイドバイサイドでインストールすることができます。 SQL Server 2012 のリリース以降では、SSIS カタログ データベースである SSISDB を使用して、Integration Services パッケージの格納、管理、実行、監視を行うことをお勧めします。 詳細については、「[SSIS カタログ](../integration-services/catalog/ssis-catalog.md)」をご覧ください。
 
-## <a name="supported-operating-systems-ssms-185"></a>サポートされるオペレーティング システム (SSMS 18.5)
+## <a name="ssms-system-requirements"></a>SSMS のシステム要件
 
 SSMS の今回のリリースでは、最新の Service Pack を使用した次の 64 ビット プラットフォームがサポートされます。
 
-- Windows 10 (64 ビット) <sup>*</sup>
+サポートされているオペレーティング システム:
+
+- Windows 10 (64 ビット) バージョン 1607 (10.0.14393) 以降
 - Windows 8.1 (64 ビット)
 - Windows Server 2019 (64 ビット)
-- Windows Server 2016 (64 ビット) <sup>*</sup>
+- Windows Server 2016 (64 ビット)
 - Windows Server 2012 R2 (64 ビット)
 - Windows Server 2012 (64 ビット)
 - Windows Server 2008 R2 (64 ビット)
 
-<sup>*</sup> バージョン 1607 (10.0.14393) 以降が必要
+サポートされているハードウェア:
+
+- 1.8 GHz 以上のプロセッサ。 デュアル コア以上を推奨
+- 2 GB の RAM (4 GB の RAM を推奨) (仮想マシン上で実行される場合は最小 2.5 GB)
+- ハードディスク領域: 最低でも 2 GB、最大 10 GB の使用可能な領域
 
 > [!NOTE]
 > SSMS は Windows (AMD または Intel) 上でのみ動作します。 Windows 以外のプラットフォーム上で実行されるツールが必要な場合は、Azure Data Studio をご覧ください。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行される新しいクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is.md) に関する記事をご覧ください。
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="next-steps"></a>次のステップ
 
 - [チュートリアル:SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio のドキュメント](sql-server-management-studio-ssms.md)
