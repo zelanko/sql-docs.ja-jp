@@ -1,6 +1,6 @@
 ---
 title: SQL Server 中央管理サーバーの拡張機能
-description: Azure Data Studio 用の SQL Server 中央管理サーバーの拡張機能 (プレビュー) をインストールして使用する
+description: サーバーをグループ化し、グループにアクションを適用するための拡張機能である SQL Server Central Management Servers 拡張機能 (プレビュー) をインストールして使用する方法について説明します。
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
 ms.technology: ''
@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 5c866ee04194bcbb1d26598766483f03019ebb47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6f28601245c239b9ffed0379b43123a300d23d30
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758351"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522496"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server 中央管理サーバーの拡張機能 (プレビュー)
 

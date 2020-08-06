@@ -1,6 +1,6 @@
 ---
 title: SQL Server インポートの拡張機能
-description: Azure Data Studio 用の SQL Server インポートの拡張機能をインストールして使用する
+description: .txt ファイルと .csv ファイルを SQL テーブルに変換するウィザードである、Azure Data Studio 用の SQL Server インポート拡張機能 (プレビュー) をインストールして使用する方法について説明します。
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a2795282c7a43c5ae582a059ae8b56d1f592e6e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758341"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522456"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server インポートの拡張機能 (プレビュー)
 

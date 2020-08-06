@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196074"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472478"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps ツール
 
@@ -117,7 +117,7 @@ cat log.txt
 
 しかし、特定の種類の認証がサポートされるかどうかは、宛先サーバーの種類やエージェントの種類によって異なります。 サポート マトリックスの詳細を一覧にしたものが下の表になります。
 
-| |Microsoft によってホストされるエージェント|自己ホスト エージェント|
+|宛先サーバーの種類|Microsoft によってホストされるエージェント|自己ホスト エージェント|
 |---------|---------|---------|
 |オンプレミスの SQL サーバーまたは VM |該当なし|Windows 認証|
 |Azure SQL|SQL Server 認証 <br> Active Directory - パスワード|SQL Server 認証 <br> Active Directory - パスワード <br> Active Directory - 統合|
@@ -197,7 +197,7 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 
 しかし、特定の種類の認証がサポートされるかどうかは、宛先サーバーの種類やエージェントの種類によって異なります。 サポート マトリックスの詳細を一覧にしたものが下の表になります。
 
-| |Microsoft によってホストされるエージェント|自己ホスト エージェント|
+|宛先サーバーの種類|Microsoft によってホストされるエージェント|自己ホスト エージェント|
 |---------|---------|---------|
 |オンプレミスの SQL サーバーまたは VM |該当なし|Windows 認証|
 |Azure SQL|SQL Server 認証 <br> Active Directory - パスワード|SQL Server 認証 <br> Active Directory - パスワード <br> Active Directory - 統合|
@@ -294,7 +294,7 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 
 ##### <a name="folder-attributes"></a>フォルダー属性
 
-|プロパティ  |説明  |Notes  |
+|プロパティ  |説明  |メモ  |
 |---------|---------|---------|
 |name  |カタログ フォルダーの名前。|フォルダーが存在しない場合は作成されます。|
 |description|カタログ フォルダーの説明。|*null* の値はスキップされます。|
@@ -303,7 +303,7 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 
 ##### <a name="project-attributes"></a>プロジェクト属性
 
-|プロパティ  |説明  |Notes  |
+|プロパティ  |説明  |メモ  |
 |---------|---------|---------|
 |name|プロジェクトの名前。 |プロジェクトが親フォルダーに存在しない場合、プロジェクト オブジェクトはスキップされます。|
 |parameters|パラメーター オブジェクトの配列です。 各オブジェクトには、パラメーターの構成情報が含まれています。|パラメーター オブジェクトのスキーマについては、「*パラメーター属性*」を参照してください。|
@@ -311,7 +311,7 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 
 ##### <a name="parameter-attributes"></a>パラメーター属性
 
-|プロパティ  |説明  |Notes  |
+|プロパティ  |説明  |メモ  |
 |---------|---------|---------|
 |name|パラメーターの名前。|<li>パラメーターには、プロジェクト パラメーターまたはパッケージ パラメーターを使用できます。 <li>存在しない場合は、パラメーターはスキップされます。 <li>パラメーターが接続マネージャー プロパティの場合、名前は **CM.\<Connection Manager Name>.\<Property Name>** の形式である必要があります。 |
 |container|パラメーターのコンテナー。|<li>パラメーターがプロジェクト パラメーターの場合、*container* はプロジェクト名である必要があります。 <li>パッケージ パラメーターの場合、*container* は、拡張子が **.dtsx** のパッケージ名である必要があります。|
@@ -327,7 +327,7 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 
 ##### <a name="environment-attributes"></a>環境属性
 
-|プロパティ  |説明  |Notes  |
+|プロパティ  |説明  |メモ  |
 |---------|---------|---------|
 |name|環境の名前。|環境が存在しない場合は作成されます。|
 |description|環境の説明。|*null* の値はスキップされます。|
@@ -335,7 +335,7 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 
 ##### <a name="variable-attributes"></a>変数属性
 
-|プロパティ  |説明  |Notes  |
+|プロパティ  |説明  |メモ  |
 |---------|---------|---------|
 |name|環境変数の名前。|環境変数が存在しない場合は作成されます。|
 |type|環境変数のデータ型。|有効な型は次のとおりです。 <br> *boolean* <br> *byte* <br> *datetime* <br> decimal <br> *double* <br> *int16* <br> *int32* <br> *int64* <br> *sbyte* <br> *single* <br> *string* <br> *uint32* <br> *uint64*|

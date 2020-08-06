@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484423"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435588"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
@@ -131,7 +131,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 -  また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって暗黙の `GROUP BY O_CUSTKEY on ORDERS` が推論され、IndexSpool と StreamAggregate を使用して実装されています。
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、すべての演算子で並列処理が使用されるようになっています。
 
-UDF 内のロジックの複雑さによっては、結果として得られるクエリ プランがさらに大きくて複雑になる可能性があります。 ご覧のように、UDF の内部の演算がブラック ボックス化されなくなっており、そのため、クエリ オプティマイザーでコストを計算でき、これらの演算を最適化できます。 また、UDF がプランに含まれなくなったため、反復的な UDF の呼び出しは、関数呼び出しのオーバーヘッドがまったくないプランに置き換えられています。
+UDF 内のロジックの複雑さによっては、結果として得られるクエリ プランがさらに大きくて複雑になる可能性があります。 このように、UDF の内部の演算が不透明なボックスではなくなっており、そのため、クエリ オプティマイザーでコストを計算でき、これらの演算を最適化できます。 また、UDF がプランに含まれなくなったため、反復的な UDF の呼び出しは、関数呼び出しのオーバーヘッドがまったくないプランに置き換えられています。
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>インライン化可能なスカラー UDF の要件
 <a name="requirements"></a> 以下のすべての条件に該当する場合、スカラー T-SQL UDF はインライン化できます。

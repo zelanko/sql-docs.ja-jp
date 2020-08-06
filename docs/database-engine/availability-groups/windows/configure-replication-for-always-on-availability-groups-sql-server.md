@@ -14,23 +14,23 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 04bdf5678284b07ecf74799e4e6caaf55af1086b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196896"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522954"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 可用性グループでレプリケーションを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でのレプリケーションおよび AlwaysOn 可用性グループの構成には、7 つのステップが必要です。 各ステップの詳細については、以下のセクションで説明します。  
   
 ##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1.データベースのパブリケーションとサブスクリプションを構成する  
  **ディストリビューターの構成**  
   
- SQL Server 2012 と SQL Server 2014 では、ディストリビューション データベースを可用性グループに配置することはできません。 SQL 2016 以降では、可用性グループへのディストリビューション データベースの配置がサポートされています。 詳しくは、[可用性グループ内のディストリビューション データベースの構成](../../../relational-databases/replication/configure-distribution-availability-group.md)に関する記事をご覧ください。
+ SQL Server 2012 と SQL Server 2014 では、ディストリビューション データベースを可用性グループに配置することはできません。 ディストリビューション データベースを可用性グループに配置することは、SQL 2016 以降でサポートされています。ただし、マージ、双方向、またはピア ツー ピアのレプリケーション トポロジで使用されるディストリビューション データベースは除きます。 詳しくは、[可用性グループ内のディストリビューション データベースの構成](../../../relational-databases/replication/configure-distribution-availability-group.md)に関する記事をご覧ください。
   
 1.  ディストリビューター側のディストリビューションを構成します。 ストアド プロシージャを使用して構成する場合は、 **sp_adddistributor**を実行します。 *\@password* パラメーターを使用して、リモート パブリッシャーからディストリビューターに接続するときに使用するパスワードを指定します。 このパスワードは、各リモート パブリッシャーでリモート ディストリビューターを設定するときにも必要になります。  
   

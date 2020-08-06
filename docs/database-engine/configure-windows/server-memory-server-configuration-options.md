@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751903"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442812"
 ---
 # <a name="server-memory-configuration-options"></a>サーバー メモリの構成オプション
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,9 +77,14 @@ ms.locfileid: "85751903"
   
 2.  **[メモリ]** ノードをクリックします。  
   
-3.  **[サーバー メモリ オプション]** で、 **[最小サーバー メモリ]** と **[最大サーバー メモリ]** と同じ量を入力します。  
+3.  **[サーバー メモリ オプション]** で、 **[最小サーバー メモリ]** と **[最大サーバー メモリ]** に必要な数値を入力します。  
   
      既定の設定を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更できるようになります。 **max server memory** は[上記](#max_server_memory)のように設定することが推奨されます。 
+
+次のスクリーンショットは、3 つの手順すべてを示したものです。 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="SSMS でメモリを構成する":::
+
   
 ## <a name="lock-pages-in-memory-lpim"></a>Lock Pages in Memory (LPIM) 
 この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。 メモリ内のページをロックすると、ディスクへのメモリのページングが発生した際に、サーバーの応答性を維持できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard エディション以上のインスタンスでは、sqlservr.exe の実行権限があるアカウントに Windows の *Lock Pages in Memory* (LPIM) ユーザー権利が付与されている場合、**Lock Pages in Memory** オプションはオンに設定されます。  

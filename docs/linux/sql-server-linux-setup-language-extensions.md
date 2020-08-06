@@ -1,7 +1,7 @@
 ---
 title: SQL Server の言語拡張を Linux にインストールする
 titleSuffix: ''
-description: Red Hat、Ubuntu、SUSE 上に SQL Server の言語拡張をインストールする方法について説明します。
+description: Red Hat、Ubuntu、SUSE Linux に SQL Server の言語拡張をインストールする方法について説明します。
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eecea181dc6ac96021df2db0707537e86d4a50ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 29c0d209ada9ea624c588b4510191b8ae8b7e91c
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895297"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522874"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>SQL Server の言語拡張を Linux にインストールする
 
@@ -264,19 +264,20 @@ Java 機能の統合には、ライブラリは含まれませんが、`grep -r 
 
 #### <a name="redhat7-paths"></a>RedHat/7 パス
 
-|||
+|Package|ダウンロード場所|
 |--|----|
 | mssql/extensibility-java パッケージ | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 パス
 
-|||
+|Package|ダウンロード場所|
 |--|----|
 | mssql/extensibility-java パッケージ | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>SUSE/12 パス
 
-|||
+
+|Package|ダウンロード場所|
 |--|----|
 | mssql/extensibility-java パッケージ | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 

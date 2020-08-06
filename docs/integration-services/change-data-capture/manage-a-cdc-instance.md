@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 929e6730ade53eeff07552652ff2905665fc4a49
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922529"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472558"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
 
@@ -71,7 +71,7 @@ ms.locfileid: "86922529"
   
 -   **[状態]** : CDC インスタンスの現在の状態を示すアイコンです。 これらの状態を次に示します。  
   
-    |||  
+    |アイコン|状態と説明|  
     |-|-|  
     |![Error](../../integration-services/change-data-capture/media/error.gif "エラー")|**エラー**。 再試行できないエラーが発生したため、Oracle CDC インスタンスは実行されていません。 次の副状態が利用できます。<br /><br /> **間違った構成**: 手動の介入を必要とする構成エラーが発生しました。<br /><br /> **パスワードが必要**: Oracle CDC インスタンスのパスワードが設定されていないか、パスワードが無効です。<br /><br /> **予期しないエラー**: その他すべての回復できないエラーです。|  
     |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**実行中**: CDC インスタンスが実行されていて、変更レコードが処理されています。 次の副状態が利用できます。<br /><br /> **アイドル状態**: すべての変更レコードが処理され、ターゲット変更テーブルに格納されました。 アクティブなトランザクションはこれ以上ありません。<br /><br /> **処理**: 変更テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  

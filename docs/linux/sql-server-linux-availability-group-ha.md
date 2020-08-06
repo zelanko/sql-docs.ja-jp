@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a7a6ce8832db85d54ad9513d8258af2863dab2e5
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892253"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472422"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループ構成の高可用性とデータ保護
 
@@ -59,7 +59,7 @@ SQL Server 2017 では、クラスター リソース設定 `REQUIRED_SYNCHRONIZ
 
 3 つの同期レプリカを持つ可用性グループでは、読み取りスケール、高可用性、およびデータ保護を提供できます。 次の表は、可用性の動作について説明したものです。 
 
-| |読み取りスケール|高可用性と </br> データの保護 | データ保護|
+|可用性の動作 |読み取りスケール|高可用性と </br> データの保護 | データ保護|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |プライマリ停止 |自動フェールオーバー。 新しいプライマリは読み取り/書き込みです。 |自動フェールオーバー。 新しいプライマリは読み取り/書き込みです。 |自動フェールオーバー。 前のプライマリが復旧してセカンダリとして可用性グループに参加するまで、新しいプライマリはユーザー トランザクション用には使用できません。 |
@@ -77,7 +77,7 @@ SQL Server 2017 では、クラスター リソース設定 `REQUIRED_SYNCHRONIZ
 
 2 つの同期レプリカを持つ可用性グループでは、読み取りスケールとデータ保護が提供されます。 次の表は、可用性の動作について説明したものです。 
 
-| |読み取りスケール |データ保護|
+|可用性の動作 |読み取りスケール |データ保護|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |プライマリ停止 | 手動フェールオーバー。 データが失われる可能性があります。 新しいプライマリは読み取り/書き込みです。| 自動フェールオーバー。 前のプライマリが復旧してセカンダリとして可用性グループに参加するまで、新しいプライマリはユーザー トランザクション用には使用できません。|
@@ -103,7 +103,7 @@ SQL Server 2017 では、クラスター リソース設定 `REQUIRED_SYNCHRONIZ
 
 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` の既定値は 0 です。 次の表は、可用性の動作について説明したものです。 
 
-| |高可用性と </br> データの保護 | データ保護|
+|可用性の動作 |高可用性と </br> データの保護 | データ保護|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |プライマリ停止 | 自動フェールオーバー。 新しいプライマリは読み取り/書き込みです。 | 自動フェールオーバー。 新しいプライマリはユーザー トランザクション用には使用できません。 |
@@ -170,7 +170,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 > [!NOTE]
 > 上記のコマンドを実行すると、プライマリは一時的にセカンダリに降格され、再度昇格されます。 リソースが更新されると、すべてのレプリカが停止して再起動します。 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` の新しい値は、直ちにではなく、レプリカが再起動されたとき設定されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Linux 上の可用性グループ](sql-server-linux-availability-group-overview.md)
 

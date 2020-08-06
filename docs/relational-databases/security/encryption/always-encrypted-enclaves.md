@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ad3743b35570ddb0f4644b909ca06339444143e
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410938"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435448"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -27,7 +27,7 @@ SQL Server 2016 で導入された Always Encrypted は、注意が必要なデ�
 
 この記事で説明されている機能強化を設定しないと、Always Encrypted では、クライアント側でデータを暗号化し、データまたは対応する暗号化キーが SQL Server Engine 内でプレーンテキストで表示されないようにすることで、データが保護されます。 その結果、データベース内の暗号化された列に対する機能が大幅に制限されます。 暗号化されたデータに対して SQL Server で実行できる操作は、等価比較のみです (決定論的暗号化でのみ使用できます)。 暗号化操作 (最初のデータ暗号化、キーの交換) や高度な計算 (パターン マッチングなど) などの他のすべての操作は、データベース内ではサポートされていません。 ユーザーがクライアント側でこのような操作を実行するには、データベースの外部にデータを移動する必要があります。
 
-*セキュリティで保護されたエンクレーブ*が設定された Always Encrypted では、サーバー側でセキュリティで保護されたエンクレーブ内のプレーンテキストに対する計算を許可することで、このような制限に対応しています。 セキュリティで保護されたエンクレーブは、SQL Server プロセス内のメモリの保護された領域であり、SQL Server エンジン内の機密データを処理するための信頼できる実行環境として機能します。 セキュリティで保護されたエンクレーブは、その他の SQL Server やホスティング マシン上の他のプロセスに対してはブラック ボックスに見えます。 デバッガーを使用しても、外部からエンクレーブ内のデータやコードを表示する方法はありません。  
+*セキュリティで保護されたエンクレーブ*が設定された Always Encrypted では、サーバー側でセキュリティで保護されたエンクレーブ内のプレーンテキストに対する計算を許可することで、このような制限に対応しています。 セキュリティで保護されたエンクレーブは、SQL Server プロセス内のメモリの保護された領域であり、SQL Server エンジン内の機密データを処理するための信頼できる実行環境として機能します。 セキュリティで保護されたエンクレーブは、他の SQL Server やホスティング マシン上の他のプロセスからは、不透明なボックスに見えます。 デバッガーを使用しても、外部からエンクレーブ内のデータやコードを表示する方法はありません。  
 
 
 Always Encrypted は、次の図のようにセキュリティで保護されたエンクレーブを使用します。

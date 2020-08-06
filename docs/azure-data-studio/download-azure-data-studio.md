@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 7/17/2020
-ms.openlocfilehash: a5f16cc15fc44a1b07b11159ac0accc6a47afc60
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c0b701bb23b5ada0f3a4a58d23064bd79acd80ad
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411178"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442386"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio のダウンロードとインストール
 
@@ -172,7 +172,9 @@ Azure Data Studio は、Windows、macOS、および Linux 上で実行されま�
 
 ## <a name="check-for-updates"></a>更新プログラムをチェックする
 
-最新の更新プログラムを確認するには、ウィンドウの左下にある歯車アイコンをクリックし、 **[更新プログラムのチェック]** をクリックします。
+最新の更新プログラムを確認するには、ウィンドウの左下にある歯車アイコンをクリックし、 **[更新プログラムの確認]** をクリックします。
+
+オフライン環境では、前にインストールされていたバージョンの上に直接[最新バージョンをインストールする](#download-and-install-azure-data-studio)ことにより、更新プログラムを適用できます。  現在インストールされているアプリケーションがある場合は、インストーラーによって更新されるため、以前のバージョンの Azure Data Studio をアンインストールする必要はありません。
 
 ## <a name="supported-sql-offerings"></a>サポートされる SQL 製品
 

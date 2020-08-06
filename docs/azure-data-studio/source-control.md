@@ -1,6 +1,6 @@
 ---
 title: ソース管理
-description: Azure Data Studio でソース管理を構成する方法について説明します
+description: Azure Data Studio を使用すると、ソース コントロール管理 (SCM) 用に Git をサポートできます。 既存の Git リポジトリを開く方法と、新しい Git リポジトリを初期化する方法について説明します。
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c4f586e355ad31422c75a5abb10a4c7e42f5eda6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8b3ad59ac518eebefa9fbb073544fdb7791a419
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758378"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522506"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Azure Data Studio のソース管理
 
