@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: df94b295e7695dc79c78876b5d42f8a0ece7dce6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 0023e6d04b2f339fbd67337b7b241da2df275a79
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897578"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938046"
 ---
 # <a name="managing-passwords-accesstosql"></a>パスワードの管理 (管理用 Sql)
 このセクションでは、データベースのパスワードをセキュリティで保護する方法と、サーバー間でインポートまたはエクスポートする手順について説明します。  
@@ -130,6 +130,6 @@ SSMA コンソールアプリケーションを使用すると、ローカルコ
 
 7. パスワードを確認入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [SSMA コンソール (アクセス) の実行](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

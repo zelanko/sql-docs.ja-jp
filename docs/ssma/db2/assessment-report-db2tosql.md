@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7b95d5861b0041055b2936a5b1e601b60081124d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 711c2437ba26e99050b281fec957198586c1284c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394692"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937131"
 ---
 # <a name="assessment-report-db2tosql"></a>評価レポート (DB2ToSQL)
 [評価レポート] ウィンドウには、データベースオブジェクトを構文に変換した結果が表示され [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。また、移行プロジェクトの複雑さとコストを見積もるのにも役立ちます。  
   
 評価レポートにアクセスするには、ソースメタデータエクスプローラーで変換するオブジェクトを選択し、[**スキーマ**] または [**シノニム**] を右クリックして、[**レポートの作成**] を選択します。  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>オプション  
   
 |期間|定義|  
 |-|-|  

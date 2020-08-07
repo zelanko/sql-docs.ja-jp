@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 374630b5e5eab1602bb33e176e6f205ee1375af9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: ebb39ea8b86ac20e49d49387b981969a9366dd9e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264427"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934839"
 ---
 # <a name="global-settings-logging-oracletosql"></a>グローバル設定 (ログ) (OracleToSQL)
 [**グローバル設定**] ダイアログボックスを使用して、ssma のログ設定を指定します。 通常、これらの設定を変更するのは、製品サポートを使用する場合のみです。  
@@ -30,15 +30,15 @@ ms.locfileid: "68264427"
 |----------|---------------|  
 |**[すべてのカテゴリ]**|次のすべてのオプションのログ記録レベルを設定するために使用します。|  
 |**コレクター**|送信元スキーマに関するメタデータを収集し、プロジェクトに保存します。|  
-|**Converter**|テーブルやストアドプロシージャなどのソースデータベースオブジェクトの構造を、対応する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構造体に変換します。|  
-|**データ migrator**|転送元データベースからにデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行します。|  
-|**フォーマッタ**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマのスクリプトを生成するコンバーターのサブコンポーネント。|  
+|**Converter**|テーブルやストアドプロシージャなどのソースデータベースオブジェクトの構造を、対応する構造体に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|**データ migrator**|転送元データベースからにデータを移行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。|  
+|**フォーマッタ**|スキーマのスクリプトを生成するコンバーターのサブコンポーネント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**グラフィカルユーザーインターフェイス**|SSMA ツールを使用するときに表示されるメッセージ。|  
 |**リンカー**|SQL 識別子を解決し、他のコンポーネントに情報を提供します。|  
 |**その他**|他のカテゴリに含まれていないすべてのメッセージ。|  
 |**Parser**|送信元スキーマを解析します。|  
-|**シンクロナイザー**|ソースデータベースオブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込みます。|  
-|**TreeConverter**|ソースメタデータ内のオブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータに変換します。|  
+|**シンクロナイザー**|ソースデータベースオブジェクトをに読み込み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|**TreeConverter**|ソースメタデータ内のオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メタデータに変換します。|  
 |**テスト担当者**|SSMA Tester を使用するときに表示されるメッセージ。|  
   
 [**メッセージレベル**] の各オプションについて、ssma の次のいずれかのログ記録レベルを構成します。  
@@ -46,7 +46,7 @@ ms.locfileid: "68264427"
 |||  
 |-|-|  
 |**致命的なエラー**|致命的なエラーメッセージのみをログに書き込みます。|  
-|**エラー**|エラーメッセージと致命的なエラーメッセージをログに書き込みます。|  
+|**Error**|エラーメッセージと致命的なエラーメッセージをログに書き込みます。|  
 |**警告**|警告、エラー、および致命的なエラーメッセージをログに書き込みます。|  
 |**情報**|情報、警告、エラー、および致命的なエラーメッセージをログに書き込みます。|  
 |**デバッグ**|デバッグメッセージを含むすべてのメッセージをログに書き込みます。|  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2982f3c078e23529eff2c8cb050ea66628d49da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 57f889fdbf7e52b470c1ceb8b4015cad78e4cad9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864523"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934361"
 ---
 # <a name="common-language-runtime-integration"></a>共通言語ランタイムの統合
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "87864523"
 
 ## <a name="when-to-use-clr-modules"></a>CLR モジュールを使用する場合
 
-CLR 統合を使用すると、正規表現、外部リソース (サーバー、web サービス、データベース) にアクセスするためのコード、カスタム暗号化など、.Net Framework で利用できる複雑な機能を実装できます。サーバー側の CLR 統合の利点の一部を次に示します。
+CLR 統合を使用すると、正規表現、外部リソース (サーバー、web サービス、データベース) にアクセスするためのコード、カスタム暗号化など、.NET Framework で使用できる複雑な機能を実装できます。サーバー側の CLR 統合の利点の一部を次に示します。
   
 -   **優れたプログラミング モデル。** .NET Framework 言語では、以前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の開発者が使用できなかった構造や機能が提供されるので、多くの点で Transact-SQL よりも優れています。 また、開発者は .NET Framework ライブラリの機能も使用できます。.NET Framework ライブラリには、プログラミングに関する問題を、迅速かつ効率的に解決する際に使用できる幅広いクラスのセットが用意されています。  
   
 -   **安全性とセキュリティの強化。** マネージコードは、データベースエンジンによってホストされる共通言語ランタイム環境で実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれを利用して、旧バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張ストアド プロシージャに代わる、より安全で確実な機能を提供します。  
   
--   **データ型や集計関数を定義する機能。** ユーザー定義型とユーザー定義集計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストレージ機能とクエリ機能を拡張する新しい 2 つのマネージド データベース オブジェクトです。  
+-   **データ型や集計関数を定義する機能。** ユーザー定義型とユーザー定義集計は、のストレージ機能とクエリ機能を拡張する2つの新しいマネージデータベースオブジェクトです [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   **標準化された環境による効率的な開発。** データベース開発は、今後リリースされる [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET 開発環境に統合されます。 開発者は、データベース オブジェクトやスクリプトの開発およびデバッグを行う際に、中間層またはクライアント層の .NET Framework コンポーネントやサービスを作成する場合と同じツールを使用できます。  
   

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 604f9ce8e26e3d2221cd9a4bf7732c56ba3296c0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823467"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935391"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL と SQL Server データ型のマッピング (MySQLToSQL)
-MySQL データベースの種類 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、または SQL Azure データベースの種類とは異なります。 MySQL データベースオブジェクトをまたは SQL Azure オブジェクトに変換する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、mysql からまたは SQL Azure にデータ型をマップする方法を指定する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の手順に示すように、既定のデータ型マッピングをそのまま使用することも、マッピングをカスタマイズすることもできます。  
+MySQL データベースの型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、型または Azure SQL Database 型とは異なります。 MySQL データベースオブジェクトをまたは SQL Azure オブジェクトに変換する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、mysql からまたは SQL Azure にデータ型をマップする方法を指定する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の手順に示すように、既定のデータ型マッピングをそのまま使用することも、マッピングをカスタマイズすることもできます。  
   
 ## <a name="default-mappings"></a>既定のマップ  
 SSMA には、データ型マッピングの既定のセットがあります。 既定のマッピングの一覧については、「[プロジェクトの設定 &#40;Type Mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)」を参照してください。  
@@ -68,9 +68,9 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
     これにより、データマップをカスタマイズして、同じデータ型の小さい値と大きい値を指定できます。 [**ターゲットの種類**] で、ターゲット SQL Server または SQL Azure データ型を選択します。  
   
-    1.  一部の型では、対象のデータ型の長さが必要です。 必要に応じて、[置換後の**文字列**] ボックスに新しいデータ長を入力し、[ **OK**] をクリックします。  
+    -  一部の型では、対象のデータ型の長さが必要です。 必要に応じて、[置換後の**文字列**] ボックスに新しいデータ長を入力し、[ **OK**] をクリックします。  
   
-    2.  一部の型では、ターゲットデータ型の**有効桁数**と**小数点以下桁数**が必要です。 必要に応じて、[置換後の**文字列**] ボックスに新しい有効桁数と小数点以下桁数を入力し、[ **OK** ] をクリックします。  
+    -  一部の型では、ターゲットデータ型の**有効桁数**と**小数点以下桁数**が必要です。 必要に応じて、[置換後の**文字列**] ボックスに新しい有効桁数と小数点以下桁数を入力し、[ **OK**] をクリックします。  
   
 -   **データ型マッピングを削除するには、次の手順を実行します。**  
   

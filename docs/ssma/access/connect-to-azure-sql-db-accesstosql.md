@@ -8,17 +8,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 34e25824ee95745bd5069a6ed601318d47a96e81
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f67bb072ce30117ebab93c3165545b13b6513df9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865250"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938871"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>Azure SQL Database への接続 (アクセス先の SQL)
-[SQL Azure への接続] ダイアログボックスを使用して、移行する SQL Azure データベースに接続します。  
+[SQL Azure への接続] ダイアログボックスを使用して、移行する Azure SQL Database 内のデータベースに接続します。  
   
 このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **SQL Azure に接続**] を選択します。 以前に接続している場合、コマンドは**SQL Azure に再接続します。**  
   
@@ -27,7 +27,7 @@ ms.locfileid: "87865250"
   
 SQL Azure に接続するためのサーバー名を選択または入力します。  
   
-**[データベース]**  
+**データベース**  
   
 データベース名を選択、入力、または**参照**します。  
   
@@ -36,7 +36,7 @@ SQL Azure に接続するためのサーバー名を選択または入力しま�
   
 **ユーザー名**  
   
-SSMA が SQL Azure データベースへの接続に使用するユーザー名を入力します。  
+SSMA が接続に使用するユーザー名を入力し Azure SQL Database  
   
 **パスワード**  
   

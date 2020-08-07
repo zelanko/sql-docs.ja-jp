@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e9ca0ef87aac60849d114d0e43dd349e063e8c83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68222220"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938512"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>SSMA for Access コンソールでのはじめに (アクセス可能な Sql)
 このセクションでは、Access コンソールアプリケーションを起動して開始する手順について説明します。 また、ここでは、一般的な SSMA コンソールの出力ウィンドウで使用される規則についても説明します。  
@@ -26,7 +26,7 @@ SSMA コンソールアプリケーションを起動するには、次の手順
   
 2.  [**アクセスの SQL Server Migration Assistant] コマンドプロンプト**ショートカットをクリックします。  
   
-    ここには、コンソールアプリケーションの使用を`(/? Help)`開始するための Ssma コンソールの [使用状況] メニューとが表示されます。  
+    ここには、コンソールアプリケーションの使用を開始するための SSMA コンソールの [使用状況] メニューとが表示され `(/? Help)` ます。  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 Windows システムでコンソールが正常に起動したら、次の手順を使用して操作できます。  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 84abdd92-682c-404b-879d-7879bdf5b468
-author: Jtoland
-ms.author: Jtoland
-manager: murato
-ms.openlocfilehash: af779e1c68e4ab7db113072fc7b0d97a252b5f80
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: a88f1ff774d3c731600f4db718b86ed3b3433c59
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294059"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932863"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>Oracle の SQL Server Migration Assistant (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)]Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用の Migration Assistant (SSMA) は、oracle データベースをに移行する [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ためのツールです。2012、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 on Windows および linux、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] windows および linux での2019、Azure SQL Database。 SSMA for Oracle は、Oracle データベースオブジェクトをデータベースオブジェクトに変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、それらのオブジェクトをで作成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] した後、oracle からにデータを移行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  

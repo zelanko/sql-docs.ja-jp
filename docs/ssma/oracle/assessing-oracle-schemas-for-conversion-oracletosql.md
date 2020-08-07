@@ -9,21 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Analyzing Conversion Problems
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: f8aaa58da9e9ace704d6214dcc56cab997fe082e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264550"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935068"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>変換のための Oracle Schemas へのアクセス (OracleToSQL)
-オブジェクトを読み込み、データをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行する前に、移行の複雑さと移行にかかる時間を決定する必要があります。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーの原因となる具体的な問題を確認することもできます。  
+オブジェクトを読み込み、データをに移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行の複雑さと移行にかかる時間を決定する必要があります。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーの原因となる具体的な問題を確認することもできます。  
   
 ## <a name="creating-assessment-reports"></a>評価レポートの作成  
-この評価レポートを作成すると、SSMA は、選択した Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースオブジェクトを構文に変換し、結果を表示します。  
+この評価レポートを作成すると、SSMA は、選択した Oracle データベースオブジェクトを構文に変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] し、結果を表示します。  
   
 **評価レポートを作成するには**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68264550"
   
     -   Oracle では、Oracle オブジェクトを変更して、問題のあるコードを削除または修正できます。 更新されたコードを SSMA に読み込むには、メタデータを更新する必要があります。 詳細については、「 [Oracle Database &#40;OracleToSQL&#41;への接続](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)」を参照してください。  
   
-    -   オブジェクトを移行から除外することができます。 メタ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データエクスプローラーと Oracle メタデータエクスプローラーで、オブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をに読み込んで oracle からデータを移行する前に、項目の横のチェックボックスをオフにします。  
+    -   オブジェクトを移行から除外することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータエクスプローラーと Oracle メタデータエクスプローラーで、オブジェクトをに読み込んで oracle からデータを移行する前に、項目の横のチェックボックスをオフにし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="next-step"></a>次の手順  
 [Oracle スキーマ &#40;OracleToSQL&#41;の変換](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  

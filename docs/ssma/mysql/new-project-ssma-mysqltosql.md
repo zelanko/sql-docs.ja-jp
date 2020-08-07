@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1d1e6b634fbb5c131e7f9e7ffdce1c374ca40162
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908851"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935302"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>新しいプロジェクト (SSMA) (MySQLToSQL)
 新しい SSMA プロジェクトを作成するには、[**新しいプロジェクト**] ダイアログボックスを使用します。 [**新しいプロジェクト**] ダイアログボックスにアクセスするには、[**ファイル**] メニューの [**新しいプロジェクト**] をクリックします。  
   
-## <a name="options"></a>Options  
-**名前**  
+## <a name="options"></a>オプション  
+**Name**  
   
 プロジェクトの名前を入力します。 SSMA によってファイル拡張子が追加されます。  
   

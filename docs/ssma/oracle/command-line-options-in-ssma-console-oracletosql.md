@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6bddaddeda73133b83d6a7669c98fd89af96cd2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264511"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934991"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA コンソールのコマンド ライン オプション (OracleToSQL)
 Microsoft では、SSMA アクティビティを実行および制御するための強固な set コマンドラインオプションを提供しています。 以降のセクションでも同じことが説明されています。  
@@ -30,7 +30,7 @@ Microsoft では、SSMA アクティビティを実行および制御するた�
   
 このセクションでは、"option" という用語は "switch" とも呼ばれます。  
   
--   オプションでは大文字と小文字が区別され**-** ず、' '**/** または ' ' 文字で始めることができます。  
+-   オプションでは大文字と小文字が区別されず、' **-** ' または ' ' 文字で始めることができ **/** ます。  
   
 -   オプションが指定されている場合は、対応するオプションパラメーターを指定することが必須になります。  
   
@@ -127,7 +127,7 @@ Xmloutput には、可視化の2つのオプションを使用できます。
   
 コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「[パスワードの管理](managing-passwords-oracletosql.md)」セクションを参照してください。  
   
-で`-p/securepassword`は、次のサブオプションがサポートされています。  
+では、次のサブオプションがサポートされてい `-p/securepassword` ます。  
   
 -   指定したサーバー ID またはサーバー接続ファイルで定義されているすべてのサーバー Id の保護された記憶域にパスワードを追加する。 次の-overwrite オプションは、既に存在する場合、パスワードを更新します。  
   

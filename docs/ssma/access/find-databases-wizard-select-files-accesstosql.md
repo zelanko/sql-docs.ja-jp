@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3cd166f0e85a4a9a58a43feca8e1f3ba4fc211b7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006549"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938717"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>データベースの検索ウィザード ([ファイルの選択])
 [データベースの検索] ウィザードの [ファイルの選択] ページには、検索中に見つかったファイルが一覧表示されます。 SSMA に追加するファイルを選択するには、ファイル名を含む行を選択します。 ファイルの選択が完了したら、[**次へ**] をクリックして [選択の確認] ページを表示します。  
@@ -38,16 +38,16 @@ SSMA に追加する Access データベースファイルの名前を表示し�
 **所有者**  
 ファイルの所有者を表示します。  
   
-**[ファイル パス]**  
+**ファイル パス**  
 Access データベースファイルのパスが表示されます。  
   
 **[サイズ]**  
 データベースのサイズ (バイト単位)。  
   
-**作成**  
+**Created**  
 データベースが作成された日付と時刻。  
   
-**[更新日時]**  
+**変更**  
 データベースが最後に更新された日時。  
   
 ## <a name="see-also"></a>参照  

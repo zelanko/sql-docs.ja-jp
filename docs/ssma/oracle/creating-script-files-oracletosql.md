@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Script File Creation, Non-Configurable option
 - Script File Creation, Script File Validation
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a4ee7047e2c517f05f311bf4e842f8f4c64ca8fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: ce9479bd7cb7be5516cd1c87a5f6a2c20649347f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264242"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934979"
 ---
 # <a name="creating-script-files-oracletosql"></a>スクリプト ファイルの作成 (OracleToSQL)
 SSMA コンソールアプリケーションを起動する前の最初の手順は、スクリプトファイルを作成し、必要に応じて変数値ファイルとサーバー接続ファイルを作成することです。  
@@ -324,9 +324,9 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     次の2つのケースが発生します。  
   
-    1.  Override オプションが**false**の場合、検索の順序は "保護され&gt;たストレージ-&gt;スクリプトファイル-サーバー&gt;接続ファイル-プロンプトユーザー" になります。  
+    1.  Override オプションが**false**の場合、検索の順序は "保護されたストレージ- &gt; スクリプトファイル- &gt; サーバー接続ファイル-プロンプトユーザー" になり &gt; ます。  
   
-    2.  Override オプションが**true**の場合、検索の順序は、スクリプトファイル&gt;サーバー接続ファイルの&gt;プロンプトユーザーになります。  
+    2.  Override オプションが**true**の場合、検索の順序は、スクリプトファイル &gt; サーバー接続ファイルの &gt; プロンプトユーザーになります。  
   
     **例:**  
   
@@ -348,7 +348,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
 ## <a name="script-commands"></a>スクリプト コマンド  
 このスクリプトファイルには、一連の移行ワークフローコマンドが XML 形式で含まれています。 SSMA コンソールアプリケーションは、スクリプトファイルに表示されるコマンドの順序で移行を処理します。  
   
-たとえば、Oracle データベース内の特定のテーブルの典型的なデータ移行は、スキーマ&gt;テーブルの階層に従います。  
+たとえば、Oracle データベース内の特定のテーブルの典型的なデータ移行は、スキーマテーブルの階層に従い &gt; ます。  
   
 スクリプトファイル内のすべてのコマンドが正常に実行されると、SSMA コンソールアプリケーションが終了し、コントロールがユーザーに返されます。 スクリプトファイルの内容は、OracleToSQL&#41;またはの変数[値 &#40;ファイルの作成](../../ssma/oracle/creating-variable-value-files-oracletosql.md)に含まれる変数情報と、変数の値に対するスクリプトファイル内の別のセクションに含まれていますが、静的ではありません。  
   
@@ -379,15 +379,15 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
 ```  
 3つのスクリプトファイル (さまざまなシナリオを実行するため)、変数値ファイル、およびサーバー接続ファイルで構成されるテンプレートは、product ディレクトリの Sample Console Scripts フォルダーにあります。  
   
--   AssessmentReportGenerationSample  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample  
+-   ConversionAndDataMigrationSample.xml  
   
--   SqlStatementConversionSample  
+-   SqlStatementConversionSample.xml  
   
--   変数の形式  
+-   VariableValueFileSample.xml  
   
--   すべてのファイル  
+-   ServersConnectionFileSample.xml  
   
 テンプレート (ファイル) は、関連性を確認するために表示されるパラメーターを変更した後に実行できます。  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Working with SSMA projects, Open project
 - Working with SSMA projects, Save project
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2d9bec916103214169f549a0b555a46fd0d65fdb
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 98315541dc7eb2df1e77e32bcd34744b98708557
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862493"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935121"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA プロジェクトでの作業 (MySQLToSQL)
 MySQL データベースを SQL Server または SQL Azure に移行するには、まず SSMA プロジェクトを作成する必要があります。 プロジェクトは、次の情報を含むファイルです。  
@@ -83,7 +83,7 @@ MySQL データベースから SQL Server または SQL Azure にデータを移
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   Azure SQL データベース  
+    -   Azure SQL Database  
   
 [ **OK** ] をクリックします。  
   
@@ -105,7 +105,7 @@ SSMA により、プロジェクトファイルが作成されます。
   
 1.  [**メタデータが存在しません**] の状態を示すデータベースごとに、データベース名の横にあるチェックボックスをオンにします。 メタデータの保存には数分かかる場合があります。 この時点でメタデータを保存しない場合は、チェックボックスをオンにしないでください。  
   
-2.  **[保存]** をクリックします。  
+2.  **[Save]** (保存) をクリックします。  
   
 SSMA は MySQL スキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   

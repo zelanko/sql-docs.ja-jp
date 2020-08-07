@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 79c86ee63638dcc520aa9bb590b8a616172cb1e4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396562"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935177"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
 型マッピングプロジェクトの設定を使用すると、SSMA プロジェクトの既定の型マッピングを設定できます。  
@@ -25,7 +25,7 @@ ms.locfileid: "87396562"
   
 -   [既定のプロジェクトの設定] ダイアログボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 型マッピングの設定にアクセスするには、[ツール] メニューの [既定のプロジェクト設定] をクリックし、[移行**先のバージョン**] ドロップダウンから表示/変更が必要な設定を選択して、左側のウィンドウの [種類のマッピング] をクリックします。  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>オプション  
   
 ##### <a name="source-type"></a>ソースの種類  
 これは MySQL データ型で、ターゲットデータベースのデータ型にマップする必要があります。  
@@ -36,10 +36,10 @@ ms.locfileid: "87396562"
 ##### <a name="add"></a>追加  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-##### <a name="edit"></a>編集  
+##### <a name="edit"></a>[編集]  
 [マッピング] ボックスの一覧で選択したデータ型を編集する場合にクリックします。  
   
-##### <a name="remove"></a>[削除]  
+##### <a name="remove"></a>削除  
 クリックすると、選択したデータ型マッピングが [マッピング] ボックスの一覧から削除されます。  
   
 ##### <a name="reset-to-default"></a>[既定値にリセット]  
@@ -196,10 +196,10 @@ ms.locfileid: "87396562"
 ##### <a name="add"></a>追加  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-##### <a name="edit"></a>編集  
+##### <a name="edit"></a>[編集]  
 [マッピング] ボックスの一覧でデータ型を編集する場合にクリックします。  
   
-##### <a name="remove"></a>[削除]  
+##### <a name="remove"></a>削除  
 クリックすると、選択したデータ型マッピングが [マッピング] ボックスの一覧から削除されます。  
   
 ##### <a name="reset-to-default"></a>[既定値にリセット]  

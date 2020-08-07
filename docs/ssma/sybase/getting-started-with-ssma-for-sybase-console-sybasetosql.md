@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a577a2b187112dd0b80cedf50d42d13112208970
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029110"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931555"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>SSMA for Sybase コンソールを使用したはじめに (SybaseToSQL)
 このセクションでは、SSMA for Sybase コンソールアプリケーションを起動して作業を開始する手順について説明します。 ここでは、一般的な SSMA コンソールの出力ウィンドウで使用される規則についても説明します。  
@@ -30,7 +30,7 @@ SSMA コンソールアプリケーションを起動するには、次の手順
   
 2.  [ **Sybase コマンドプロンプトの SQL Server Migration Assistant** ] ショートカットをクリックします。  
   
-    ここには、コンソールアプリケーションの使用を`(/? Help)`開始するための Ssma コンソールの [使用状況] メニューとが表示されます。  
+    ここには、コンソールアプリケーションの使用を開始するための SSMA コンソールの [使用状況] メニューとが表示され `(/? Help)` ます。  
   
 ## <a name="using-the-ssma-console"></a>SSMA コンソールの使用  
 Windows システムでコンソールが正常に起動されたら、次の手順を使用して操作できます。  

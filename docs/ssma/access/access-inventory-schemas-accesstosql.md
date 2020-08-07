@@ -34,17 +34,17 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068953"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934153"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>インベントリスキーマへのアクセス (アクセスアクセス Sql)
-次のセクションでは、にアクセススキーマを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エクスポートするときに ssma によって作成されるテーブルについて説明します。  
+次のセクションでは、にアクセススキーマをエクスポートするときに SSMA によって作成されるテーブルについて説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="databases"></a>データベース  
 データベースメタデータは**SSMA_Access_InventoryDatabases**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
@@ -79,7 +79,7 @@ ms.locfileid: "68068953"
 |**DatabaseId**|**uniqueidentifier**|このテーブルを含むデータベースを識別します。|  
 |**TableId**|**uniqueidentifier**|テーブルを一意に識別する GUID。 この列は、テーブルの主キーでもあります。|  
 |**TableName**|**nvarchar (4000)**|テーブルの名前。|  
-|**RowsCount**|**int**|テーブルに含まれる行数です。|  
+|**RowsCount**|**int**|表の行数。|  
 |**ValidationRule**|**nvarchar (4000)**|テーブルの有効な入力を定義するルール。 検証規則が存在しない場合、フィールドには空の文字列が含まれます。|  
 |**LinkedTable**|**nvarchar (4000)**|テーブルにリンクされている別のテーブル (存在する場合)。 テーブルをリンクすると、このテーブルを使用して、他のテーブルの追加、削除、および更新を行うことができます。|  
 |**ExternalSource**|**nvarchar (4000)**|テーブルに関連付けられているデータソース (存在する場合)。 テーブルがリンクされている場合、このフィールドには外部データソースが指定されています。|  
@@ -92,15 +92,15 @@ ms.locfileid: "68068953"
 |**DatabaseId**|**uniqueidentifier**|この列を含むデータベースを識別します。|  
 |**TableId**|**uniqueidentifier**|この列を含むテーブルを識別します。|  
 |**ColumnId**|**int**|列を識別するインクリメント整数。 **ColumnId**は、テーブルの主キーです。|  
-|**[ColumnName]**|**nvarchar (4000)**|列の名前です。|  
+|**[ColumnName]**|**nvarchar (4000)**|列の名前。|  
 |**IsNullable**|**bit**|列に null 値を含めることができるかどうかを指定します。 値が1の場合、列に null 値を含めることができます。 値が0の場合、列に null 値を含めることはできません。 検証規則は、null 値を防ぐためにも使用できます。|  
 |**DataType**|**nvarchar (4000)**|**Text**や**Long**など、列のアクセスデータ型。|  
 |**IsAutoIncrement**|**bit**|列が自動的に整数値をインクリメントするかどうかを指定します。 値が1の場合、整数は自動的にインクリメントされます。|  
-|**数値**|**smallint**|テーブル内の列の順序。0から始まります。|  
-|**DefaultValue**|**nvarchar (4000)**|列の既定値です。|  
+|**Ordinal**|**smallint**|テーブル内の列の順序。0から始まります。|  
+|**DefaultValue**|**nvarchar (4000)**|列の既定値。|  
 |**ValidationRule**|**nvarchar (4000)**|列に追加または更新されたデータの検証に使用されるルール。|  
   
-## <a name="indexes"></a>インデックス  
+## <a name="indexes"></a>Indexes  
 インデックスメタデータは**SSMA_Access_InventoryIndexes**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
@@ -152,7 +152,7 @@ ms.locfileid: "68068953"
 |**FormId**|**int**|フォームを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
 |**FormName**|**nvarchar (4000)**|フォームの名前。|  
   
-## <a name="macros"></a>マクロ  
+## <a name="macros"></a>[マクロ]  
 マクロのメタデータが**SSMA_Access_InventoryMacros**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  

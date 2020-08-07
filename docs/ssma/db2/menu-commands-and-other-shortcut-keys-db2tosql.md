@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074149"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933723"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>メニューコマンドとその他のショートカットキー (DB2ToSQL)
 以下のセクションでは、SSMA for DB2 アプリケーションのさまざまなダイアログボックスで使用されるメニューコマンドやその他のショートカットキーにアクセスするためのキーボードショートカットについて説明します。  
@@ -79,7 +79,7 @@ ms.locfileid: "68074149"
 |レポートを作成します。|ALT + T + C|  
 |スキーマを変換します。|ALT + T + N または CTRL + R|  
 |DB2 データベースから更新します。|Alt + T + R|  
-|SQL Server または SQL Azure データベースと同期します。|ALT + T + S|  
+|SQL Server または Azure SQL Database と同期します。|ALT + T + S|  
 |スクリプトとして保存します。|ALT + T + A|  
 |データを移行します。|Alt + T + M|  
 |現在の操作を停止します。|ALT + T + O|  

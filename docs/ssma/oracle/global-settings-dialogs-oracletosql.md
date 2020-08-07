@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 4fc68e8b8d3fc009b766f0fb0be97f1124797764
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 715bc5d1a407380d47c05313954adab5cdf53dc6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259650"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934826"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>グローバル設定 (ダイアログ) (OracleToSQL)
 [**グローバル設定**] ダイアログボックスの [ダイアログ] ページを使用して、ssma の既定のユーザー操作と警告設定を指定します。  

@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ae7b5af8-eeb5-4c40-9f76-ebbab3d29e5d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: aad656fb2958de67336c9ac4c3e937528fef6466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 813b234dad111ad231c8fc3a15a3922ff7c55917
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266470"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932683"
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>ショートカット キー (OracleToSQL)
-SSMA アプリケーション内を移動するには、キーボードショートカットを使用します。 詳しくは、次のトピックをご覧ください。  
+SSMA アプリケーション内を移動するには、キーボードショートカットを使用します。 詳細については、次の各トピックを参照してください。  
   
 -   [メニューコマンドやその他のショートカットキー&#40;Oracle から SQL&#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
   

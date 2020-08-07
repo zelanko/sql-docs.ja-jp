@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 360325063258b2bc208115f91357f341c68b7150
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020913"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934601"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>移行されたデータベース オブジェクトのテスト (SybaseToSQL)
 Sybase Tester の Microsoft SQL Server Migration Assistant (SSMA Tester) は、データベースオブジェクトの変換と SSMA によって行われたデータの移行を自動的にテストします。 SSMA の移行手順がすべて完了したら、SSMA Tester を使用して、変換されたオブジェクトが同じように動作することと、すべてのデータが適切に転送されたことを確認します。  
@@ -43,20 +43,20 @@ SSMA Tester は、Sybase のテスト用に選択されたオブジェクトと�
 -   結果セットが同一かどうか。  
   
 > [!NOTE]  
-> 気! 実稼働システムでは SSMA Tester を使用しないでください。 テスト担当者の実行中に、送信元スキーマとデータが変更されます。 一方、テスト対象のコードの種類によっては、元の状態を完全に復元できない場合があります。  
+> 注意 実稼働システムでは SSMA Tester を使用しないでください。 テスト担当者の実行中に、送信元スキーマとデータが変更されます。 一方、テスト対象のコードの種類によっては、元の状態を完全に復元できない場合があります。  
   
 ## <a name="prerequisites"></a>前提条件  
 SSMA Tester を使用する場合は、[**テスト担当者データベースをインストール**する] オプションをオンにして Ssma Sybase Extension Pack をインストールします。  
   
 さらに、次のことを確認します。  
   
--   を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行しているコンピューターに Sybase OLE DB プロバイダーがインストールされている。  
+-   を実行しているコンピューターに Sybase OLE DB プロバイダーがインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースエンジンで共通言語ランタイム (CLR) 統合が有効になっています。  
+-   データベースエンジンで共通言語ランタイム (CLR) 統合が有効になってい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 SSMA Tester の現在のバージョンでは、同じソースサーバーまたは対象サーバー上の異なるユーザーによる並列実行はサポートされていないことに注意してください。  
   
-## <a name="getting-started"></a>作業の開始  
+## <a name="getting-started"></a>はじめに  
 [SybaseToSQL&#41;&#40;テストケースの作成](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  

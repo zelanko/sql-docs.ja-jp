@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fb68a40da645046d94dcd5e8b14ac90f0c53d8bc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 57a6f527da05c4f62d9055b70193af6ce74275f7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822626"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935551"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>SQL Server への変換されたデータベース オブジェクトの読み込み (MySQLToSQL)
-MySQL データベースをまたは SQL Azure に変換した後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、結果として得られるデータベースオブジェクトをまたは SQL Azure に読み込むことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA を使用してオブジェクトを作成するか、オブジェクトのスクリプトを作成して自分でスクリプトを実行することができます。 また、SSMA で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、または SQL Azure データベースの実際の内容でターゲットメタデータを更新することもできます。  
+MySQL データベースをまたは SQL Azure に変換した後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、結果として得られるデータベースオブジェクトをまたは SQL Azure に読み込むことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA を使用してオブジェクトを作成するか、オブジェクトのスクリプトを作成して自分でスクリプトを実行することができます。 また、SSMA では、または Azure SQL Database の実際の内容でターゲットメタデータを更新することもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>同期とスクリプトの選択  
 変換されたデータベースオブジェクトを変更せずにまたは SQL Azure に読み込む場合は、SSMA を使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] てデータベースオブジェクトを直接作成または再作成することができます。 この方法は短時間で簡単ですが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトまたは SQL Azure オブジェクトを定義する transact-sql コードをカスタマイズすることはできません。  
@@ -25,10 +25,10 @@ MySQL データベースをまたは SQL Azure に変換した後 [!INCLUDE[ssNo
 オブジェクトの作成に使用される Transact-sql を変更する場合、またはオブジェクトの作成をより細かく制御する場合は、SSMA を使用してスクリプトを作成します。 これらのスクリプトを変更し、各オブジェクトを個別に作成し、SQL Server エージェントを使用してこれらのオブジェクトの作成をスケジュールすることもできます。  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>SSMA を使用してオブジェクトを SQL Server と同期させる  
-SSMA を使用して SQL Server または SQL Azure データベースオブジェクトを作成するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、または SQL Azure メタデータエクスプローラーでオブジェクトを選択し、次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 手順に示すように、または SQL Azure を使用してオブジェクトを同期します。 既定では、オブジェクトが既にまたは SQL Azure に存在する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma メタデータの一部のローカルな変更や、それらのオブジェクトの定義に対する更新がある場合、SSMA はまたは SQL Azure のオブジェクト定義を変更し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定の動作を変更するには、**プロジェクトの設定**を編集します。  
+SSMA を使用して SQL Server オブジェクトまたは Azure SQL Database オブジェクトを作成するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、または SQL Azure メタデータエクスプローラーでオブジェクトを選択し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次の手順に示すように、または SQL Azure を使用してオブジェクトを同期します。 既定では、オブジェクトが既にまたは SQL Azure に存在する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssma メタデータの一部のローカルな変更や、それらのオブジェクトの定義に対する更新がある場合、SSMA はまたは SQL Azure のオブジェクト定義を変更し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定の動作を変更するには、**プロジェクトの設定**を編集します。  
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MySQL データベースから変換されなかった既存のデータベースオブジェクトまたは SQL Azure データベースオブジェクトを選択できます。 ただし、これらのオブジェクトは SSMA によって再作成または変更されることはありません。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MySQL データベースから変換されなかった既存のオブジェクトまたは Azure SQL Database オブジェクトを選択できます。 ただし、これらのオブジェクトは SSMA によって再作成または変更されることはありません。  
   
 ##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>SQL Server または SQL Azure とオブジェクトを同期するには  
   

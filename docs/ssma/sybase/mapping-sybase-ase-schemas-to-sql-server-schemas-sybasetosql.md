@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acd4b7c13b2f8674f120c7f5b49f503a7f8fb5bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865330"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931227"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE スキーマの SQL Server スキーマへのマッピング (SybaseToSQL)
-Sybase Adaptive Server Enterprise (ASE) では、各データベースに1つ以上のスキーマがあります。 既定では、SSMA は、データベース内のすべてのオブジェクトとスキーマを、または SQL Azure の同じデータベースおよびスキーマに移行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ただし、ASE と SQL Azure データベースおよびスキーマ間のマッピングはカスタマイズでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+Sybase Adaptive Server Enterprise (ASE) では、各データベースに1つ以上のスキーマがあります。 既定では、SSMA は、データベース内のすべてのオブジェクトとスキーマを、または SQL Azure の同じデータベースおよびスキーマに移行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ただし、ASE と Azure SQL Database の間のマッピングをカスタマイズすることはでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>ASE および SQL Server または SQL Azure スキーマ  
 ASE と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure は、両方とも*データベース*とそのスキーマを指定します。これは、2つの部分で構成されるスキーマとして使用します。 たとえば、ASE**デモ**データベースでは、 **dbo**スキーマが存在する可能性があります。 そのデータベースとスキーマのペアは、 **demo. dbo**として指定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure に同じデータベースとスキーマが指定されている場合は、そのペアも**demo. dbo**として指定されます。  
@@ -51,7 +51,7 @@ SSMA では、ASE スキーマを任意の使用可能 [!INCLUDE[ssNoVersion](..
   
 -   SQL Azure へのマッピング  
   
-ソースデータベースは、接続されているターゲット SQL Azure データベース、または接続されているターゲット SQL Azure データベースの任意のスキーマにマップできます。 送信元スキーマを [接続されたターゲットデータベース] の既存ではないスキーマにマップすると、 **"スキーマはターゲットメタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか?[はい] をクリックし**ます。  
+接続先のターゲット Azure SQL Database、または接続されているターゲット Azure SQL Database 内の任意のスキーマに、ソースデータベースをマップできます。 送信元スキーマを [接続されたターゲットデータベース] の既存ではないスキーマにマップすると、 **"スキーマはターゲットメタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか?[はい] をクリックし**ます。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>既定のデータベースとスキーマに戻す  
 ASE スキーマとまたは SQL Azure スキーマ間のマッピングをカスタマイズする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マッピングを既定値に戻すことができます。  

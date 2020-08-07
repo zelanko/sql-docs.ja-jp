@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 663a4b1e49d1f81ce040254a2c8f39a1a1f84b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b2237d2226644799b7360c53948ae2ecd9445cfa
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028680"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930741"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>プロジェクトの設定 (同期) (SybaseToSQL)
-[**プロジェクトの設定**] ダイアログボックスの [同期] ページには、ssma がテーブルやストアドプロシージャなどのデータベースオブジェクトを読み込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]方法をカスタマイズする設定が含まれています。この設定は、または SQL Azure にあります。  
+[**プロジェクトの設定**] ダイアログボックスの [同期] ページには、ssma がテーブルやストアドプロシージャなどのデータベースオブジェクトを読み込む方法をカスタマイズする設定が含まれています。この設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、または SQL Azure にあります。  
   
 同じ設定を含む2つの異なる同期ページにアクセスできます。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "68028680"
   
 ## <a name="options"></a>オプション  
 **ログオン**  
-がオブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込むときに実行する試行回数を指定します。 現在の試行でに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込まれていないオブジェクトは、ssma が現在の同期プロセスの最大試行回数に達するまで再試行されます。  
+がオブジェクトをに読み込むときに実行する試行回数を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 現在の試行でに読み込まれていないオブジェクト [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、SSMA が現在の同期プロセスの最大試行回数に達するまで再試行されます。  
   
 ## <a name="synchronization-for-sql-server"></a>SQL Server の同期  
 **ローカルオブジェクトとリモートオブジェクトの変更時にローカルオブジェクトを最新の状態に更新**  
