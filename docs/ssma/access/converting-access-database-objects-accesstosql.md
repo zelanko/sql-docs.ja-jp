@@ -28,17 +28,17 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6109f523cce37e64bd13ccf9bf783b07a26fe94e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84302807"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939146"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access データベースオブジェクトの変換 (アクセス許可 Sql)
-Access データベースを追加し、または SQL Azure に接続すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SSMA によって、access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースオブジェクトまたは SQL Azure データベースオブジェクトのメタデータが表示されます。 これで、Access データベースオブジェクトを選択して、スキーマを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure スキーマに変換できるようになりました。  
+Access データベースを追加し、または SQL Azure に接続すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SSMA によって、access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトまたは Azure SQL Database オブジェクトのメタデータが表示されます。 これで、Access データベースオブジェクトを選択して、スキーマを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure スキーマに変換できるようになりました。  
   
 ## <a name="the-conversion-process"></a>変換処理  
 データベースオブジェクトを変換すると、Access メタデータからオブジェクトの定義が取得され、それが同等の構文に変換され [!INCLUDE[tsql](../../includes/tsql-md.md)] て、この情報がプロジェクトに読み込まれます。 または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure メタデータエクスプローラーを使用して、または SQL Azure オブジェクトとそのプロパティを表示でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -57,12 +57,12 @@ Access データベースを追加し、または SQL Azure に接続すると [
 |Access オブジェクト|結果の SQL Server オブジェクト|  
 |-----------------|-------------------------------|  
 |table|table|  
-|列|列|  
+|column|column|  
 |インデックス (index)|インデックス (index)|  
 |外部キー (foreign key)|外部キー (foreign key)|  
 |query|ビュー<br /><br />ほとんどの SELECT クエリはビューに変換されます。 更新クエリなどの他のクエリは移行されません。<br /><br />パラメーターを受け取るクエリは変換されません。また、クロス集計クエリも選択できません。|  
 |report|未変換|  
-|フォーム|未変換|  
+|form|未変換|  
 |マクロ|未変換|  
 |name|未変換|  
 |既定値|既定値|  
@@ -88,7 +88,7 @@ Access データベースオブジェクトを変換するには、まず、変�
   
     -   個々のテーブルを変換または省略するには、データベースを展開し、[**テーブル**] を展開して、テーブルの横にあるチェックボックスをオンまたはオフにします。  
   
-3.  次のいずれかの操作を行います。  
+3.  以下のいずれかを実行します。  
   
     -   スキーマを変換するには、[**データベース**] を右クリックし、[**スキーマの変換**] をクリックします。  
   
@@ -115,7 +115,7 @@ Access データベースオブジェクトを変換するには、まず、変�
   
 これで、コードの変更を [ **SQL** ] タブで確認できるようになりました。  
   
-## <a name="next-step"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 移行プロセスの次の手順では、 [SQL Server に変換](loading-converted-database-objects-into-sql-server-accesstosql.md)されたデータベースオブジェクトを読み込みます。  
   
 ## <a name="see-also"></a>参照  

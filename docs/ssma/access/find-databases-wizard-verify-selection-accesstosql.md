@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c03d8cf571974e7c84f31659a40c67d832d0b6ef
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68024743"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938601"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>データベースの検索ウィザード (選択の確認) (データベースへの参照)
 [データベースの検索] ウィザードの [選択の確認] ページには、SSMA に追加するファイルの一覧が表示されます。 ファイルの一覧が正しくない場合は、[**戻る**] をクリックして一覧を変更します。 それ以外の場合は、[**完了**] をクリックしてファイルを追加します。  
@@ -27,7 +27,7 @@ ms.locfileid: "68024743"
 **[ファイル名]**  
 SSMA に追加する Access データベースファイルの名前を表示します。  
   
-**[ファイル パス]**  
+**ファイル パス**  
 Access データベースファイルのパスを表示します。  
   
 **所有者**  

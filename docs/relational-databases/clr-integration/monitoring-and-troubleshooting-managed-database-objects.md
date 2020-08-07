@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728453"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87948279"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>マネージド データベース オブジェクトの監視とトラブルシューティング
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85728453"
   
 |Event|説明|  
 |-----------|-----------------|  
-|[Assembly Load イベントクラス](/sql/database-engine/assembly-load-event-class)|アセンブリの読み込み要求 (成功と失敗) の監視に使用されます。|  
+|[Assembly Load イベント クラス](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|アセンブリの読み込み要求 (成功と失敗) の監視に使用されます。|  
 |[Sql: BatchStarting イベントクラス](../../relational-databases/event-classes/sql-batchstarting-event-class.md)、 [Sql: Batchstarting イベントクラス](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|開始または完了した [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチに関する情報を提供します。|  
 |[Sp: Starting イベントクラス](../../relational-databases/event-classes/sp-starting-event-class.md)、 [Sp: Completed イベントクラス](../../relational-databases/event-classes/sp-completed-event-class.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの実行の監視に使用されます。|  
 |[Sql: StmtStarting イベントクラス](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)、 [Sql: StmtCompleted イベントクラス](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|CLR および [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンの実行の監視に使用されます。|  
@@ -84,7 +84,7 @@ ms.locfileid: "85728453"
 |[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行中の各要求に関する情報を返します。|  
 |[dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|CLR メモリ クラークなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内でアクティブになっているすべてのメモリ クラークを返します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR &#40;共通言語ランタイム&#41; 統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

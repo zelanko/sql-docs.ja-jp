@@ -11,27 +11,30 @@ helpviewer_keywords:
 - migrating databases, one-click
 - one-click migration
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b4c161ef3abdb67351a16840336ef290ff57effd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006640"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938805"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>変換、読み込み、移行 (によって Sql)
+
 [変換、**読み込み**、移行] ダイアログボックスでは、[変換]、[読み込み]、[移行] の各ボタンまたは移行ウィザードを使用すると、移行の状態がレポートされます。  
   
-移行が完了したら、各セクションのリンクをクリックして、情報メッセージ、警告メッセージ、エラーメッセージを表示できます。 リンクには、"0 件のエラー, 4 つの警告" など、使用できるエラーメッセージ、警告メッセージ、および情報メッセージの数が表示されます。  
+移行が完了したら、各セクションのリンクを選択して、情報メッセージ、警告メッセージ、エラーメッセージを表示できます。 各リンクの背後の詳細には、使用可能なエラー、警告、および情報メッセージ ("0 エラー、4個の警告" など) が表示されます。  
   
-ページの [**選択したオブジェクトのデータを移行**する] セクションにも [**レポート**] ボタンがあります。 このボタンをクリックすると、データ移行レポートを表示できます。  
+ページの [**選択したオブジェクトのデータを移行**する] セクションにも [**レポート**] ボタンがあります。 このボタンを選択すると、データ移行レポートを表示できます。  
   
-## <a name="options"></a>オプション  
-**レポート**  
+## <a name="options"></a>オプション
+
+**Report**  
 関連付けられている変換または移行レポートを表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
 [ユーザーインターフェイスリファレンス (アクセス)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
 [移行ウィザード](migration-wizard-accesstosql.md)  
   

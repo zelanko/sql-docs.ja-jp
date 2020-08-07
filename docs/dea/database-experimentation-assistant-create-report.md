@@ -8,16 +8,16 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 09f8ab0b3f4950e06c96b67c74f9cdcbc09269d5
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 7a50504923a825a437ea4456a1bb9394cd0635db
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565569"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951327"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Database Experimentation Assistant で分析レポートを作成する (SQL Server)
 
@@ -88,7 +88,7 @@ DEA をインストールした後に初めて分析レポートを生成する�
 |---|---|  
 |RInterop は起動時にエラーになります。 RInterop ログを確認してから、操作をやり直してください。|DEA は、依存する R パッケージをダウンロードするためにインターネットアクセスを必要とします。 % Temp% rinterop の RInterop ログを確認 \\ し、% temp% dea のログを破棄して \\ ください。 RInterop が正しく初期化されなかった場合、または正しい R パッケージを使用せずに初期化された場合は、DEA ログの初期化前の手順の後に "新しい分析レポートを生成できませんでした" という例外が表示されることがあります。<br><br>RInterop ログには、"jsonlite パッケージが使用できません" というエラーが表示されることもあります。 コンピューターがインターネットにアクセスできない場合は、必要な jsonlite R パッケージを手動でダウンロードできます。<br><br><li>\\コンピューターのファイルシステムの% userprofile% dearpackages フォルダーにアクセスします。 このフォルダーは、DEA で R が使用するパッケージで構成されています。</li><br><li>インストールされているパッケージの一覧に jsonlite フォルダーがない場合は、インターネットにアクセスできるコンピューターで、からの jsonlite1.4.zip のリリースバージョンをダウンロードする必要があり \_ [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html) ます。</li><br><li>DEA を実行しているコンピューターに .zip ファイルをコピーします。  Jsonlite フォルダーを抽出し、% userprofile% \\ dearpackages にコピーします。 この手順により、自動的に jsonlite パッケージが R にインストールされます。フォルダーは**jsonlite**という名前にする必要があります。コンテンツは、以下の1レベルではなくフォルダー内に直接配置する必要があります。</li><br><li>DEA を閉じて再度開いてから、もう一度分析を試してください。</li><br>RGUI を使用することもできます。 [**パッケージ**] [  >  **zip からインストール**] にアクセスします。 前の手順でダウンロードしたパッケージにアクセスし、をインストールします。<br><br>RInterop が初期化され、正しく設定されている場合は、RInterop ログに "依存する R パッケージ jsonlite をインストールしています" と表示されます。|  
 |SQL Server インスタンスに接続できません。サーバー名が正しいことを確認し、ログインしているユーザーに必要なアクセス権があるかどうかを確認してください。|サーバーにアクセス権がないか、サーバー名が正しくない可能性があります。|
-|RInterop プロセスがタイムアウトしました。DEA および RInterop ログを確認し、タスクマネージャーで RInterop プロセスを停止してから、操作をやり直してください。<br><br>または<br><br>RInterop は faulted 状態にあります。 タスクマネージャーで RInterop プロセスを停止してから、操作をやり直してください。|% Temp% rinterop でログを確認し \\ て、エラーを確認してください。 タスクマネージャーから RInterop プロセスを削除してから、操作をやり直してください。 問題が解決しない場合は、製品チームにお問い合わせください。|
+|RInterop プロセスがタイムアウトしました。DEA および RInterop ログを確認し、タスクマネージャーで RInterop プロセスを停止してから、操作をやり直してください。<br><br>or<br><br>RInterop は faulted 状態にあります。 タスクマネージャーで RInterop プロセスを停止してから、操作をやり直してください。|% Temp% rinterop でログを確認し \\ て、エラーを確認してください。 タスクマネージャーから RInterop プロセスを削除してから、操作をやり直してください。 問題が解決しない場合は、製品チームにお問い合わせください。|
 
 **Q: レポートが生成されましたが、データが不足しています**
 

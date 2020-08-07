@@ -20,14 +20,14 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 757c0e040a047f96a6dcf364638f76593904adf1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 612921c1640b97135c96a5f81c3099722bf5bb4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395862"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939150"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>SQL Server への接続 (SQL server)
 Access データベースをに移行するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、の対象インスタンスに接続する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 接続すると、SSMA はのインスタンス内のデータベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取得し、メタデータエクスプローラーにデータベースのメタデータを表示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA は、接続先ののインスタンスに関する情報を格納し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ますが、パスワードは保存しません。  
@@ -81,7 +81,7 @@ Access データベースオブジェクトを構文に変換する前に、 [!I
   
 6.  セキュリティで保護された接続の場合は、2つのコントロールが追加され、[**接続の暗号化**] チェックボックスと [ **trustservercertificate** ] チェックボックスが **暗号化接続**チェックボックスがオンになっている場合にのみ、 **trustservercertificate**チェックボックスが表示されます。 [**暗号化接続**] がオンになっていて (true)、 **trustservercertificate**がオフになっている場合 (false)、は SQL Server の SSL 証明書を検証します。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 これを実現するには、証明書をクライアント側とサーバー側の両方にインストールする必要があります。  
   
-7.  **[Connect]** をクリックします。  
+7.  **[接続]** をクリックします。  
   
 **より新しいバージョンの互換性**  
   
@@ -97,12 +97,12 @@ Access データベースオブジェクトを構文に変換する前に、 [!I
   
 |プロジェクトの種類と対象サーバーのバージョン|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (バージョン:13. x)|SQL Azure|  
 |-|-|-|-|-|-|-|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|○|○|○|○|○||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||○|○|○|○||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||○|○|○||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||○|○||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||○||
-|SQL Azure||||||○|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|はい|はい|はい||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|はい|はい||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||はい|はい||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||はい||
+|SQL Azure||||||はい|
   
 > [!IMPORTANT]  
 > データベースオブジェクトの変換は、プロジェクトの種類に従って実行されますが、に接続されている SQL Server のバージョンごとには実行されません。 SQL Server 2005 プロジェクトの場合、SQL Server の上位バージョンに接続している場合でも、SQL Server 2005 に従って変換が実行されます (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016)。  

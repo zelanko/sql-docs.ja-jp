@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929395"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937766"
 ---
 # <a name="project-settings-migration-accesstosql"></a>プロジェクトの設定 (移行) (Sql server への移行)
-移行プロジェクトの設定を使用して、データを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する方法や SQL Azure する方法を構成できます。  
+移行プロジェクトの設定を使用して、データを移行する方法や SQL Azure する方法を構成でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 [移行] ウィンドウは、[**プロジェクトの設定**] ダイアログボックスと [**既定のプロジェクトの設定**] ダイアログボックスで使用できます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67929395"
 -   **フルモード**: False  
   
 **[トリガーを起動する]**  
-データをテーブルに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]追加するときに ssma が挿入トリガーを起動するかどうかを指定します。  
+データをテーブルに追加するときに SSMA が挿入トリガーを起動するかどうかを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   **既定のモード**: False  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67929395"
 -   **フルモード**: False  
   
 **[ID を保持する]**  
-にデータを追加するときに、SSMA がアクセス id [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の値を保持するかどうかを指定します。 この値が False の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、によって id 値が割り当てられます。  
+にデータを追加するときに、SSMA がアクセス id の値を保持するかどうかを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 この値が False の場合、によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] id 値が割り当てられます。  
   
 -   **既定のモード**: True  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67929395"
 -   **フルモード**: False  
   
 **[NULL を保持する]**  
-で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定されている既定値に関係なく、ソースデータのに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを追加するときに、ssma がソースデータ内の null 値を保持するかどうかを指定します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で指定されている既定値に関係なく、ソースデータのにデータを追加するときに、SSMA がソースデータ内の null 値を保持するかどうかを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 -   **既定のモード**: True  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67929395"
 -   **フルモード**: True  
   
 **サポートされていない日付の置換**  
-SSMA が、最も古い[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 日付よりも前のアクセス日付を修正する必要があるかどうかを指定します (1753 年1月01日)。  
+SSMA が、最も古い datetime 日付よりも前のアクセス日付を修正する必要があるかどうかを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます (1753 年1月01日)。  
   
 -   現在の日付の値を保持するには、[**何もしない**] を選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]datetime 列では、1753年1月01日より前の日付は受け付けられません。 古い日付を使用する場合は、datetime 値を文字値に変換する必要があります。  
   
@@ -83,7 +83,7 @@ SSMA が、最も古い[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 -   1753年1月01日より前の日付をサポートされる日付に置き換えるには、[**サポートされている最も近い日付で置き換える**] を選択します。 この値を選択した場合、既定では、サポートされている日付の最も近い日付が 01 January 1753 として選択されます。  
   
-**バッチサイズ**  
+**バッチ サイズ**  
 データ移行中に使用されるバッチサイズ。 トランザクションは、各バッチの後に記録されます。 既定では、すべてのスキームのバッチサイズは1万です。  
   
 ## <a name="see-also"></a>参照  

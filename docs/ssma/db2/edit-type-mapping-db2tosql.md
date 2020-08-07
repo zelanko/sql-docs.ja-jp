@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5dc6cd8939dbc7d5d42417b06c938c9ae8d3f7e8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989700"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937268"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>型マッピングの編集 (DB2ToSQL)
 [**型マッピングの編集**] ダイアログボックスでは、転送元データベースオブジェクトと転送先データベースオブジェクトの間で型がどのようにマップされるかを指定できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "67989700"
   
 ## <a name="options"></a>オプション  
 **ソースの種類**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型にマップするソースデータ型を選択します。  
+データ型にマップするソースデータ型を選択し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 データ型が可変長の場合、[**ソースの種類**] の下に次のフィールドが表示されます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67989700"
 このマッピングの最大長を指定します。 たとえば、 **nchar**データ型の場合は、「20」と入力すると、このマッピングが**nchar (20)** で終わる範囲に対して指定されます。  
   
 **変換後の型**  
-変換元[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータ型がマップされるデータ型を選択します。 SSMA に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よってテーブルまたはストアドプロシージャが作成されると、変換元のデータ型はこのデータ型に変更されます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換元のデータ型がマップされるデータ型を選択します。 SSMA によってテーブルまたはストアドプロシージャが作成されると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、変換元のデータ型はこのデータ型に変更されます。  
   
 データ型が可変長の場合、[**対象の型**] の下に次のフィールドが表示されます。  
   

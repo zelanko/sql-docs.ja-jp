@@ -17,15 +17,15 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: b27d773bc8fd928e7db2e29c7a01492fb97df78f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d622396e9e650aa3e9fc1b3855e1dfc1634bc34e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823950"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938831"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>アクセスのための SQL Server Migration Assistant の概要 (アクセス用 SQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access の Migration Assistant (SSMA) を使用すると、Access データベースオブジェクトを Azure SQL Database またはオブジェクトに簡単に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、結果のオブジェクトをまたは Azure SQL Database にアップロードしたり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスからまたは Azure SQL Database にデータを移行したりすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 必要に応じて、または Azure SQL Database テーブルにアクセステーブルをリンクして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 既存のアクセスフロントエンドアプリケーションをまたは Azure SQL Database で引き続き使用できるようにすることもでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  

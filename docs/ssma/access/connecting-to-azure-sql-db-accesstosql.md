@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3bb372b329ce516cae2ab26ece02721d7934b228
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822519"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938931"
 ---
 # <a name="connecting-to-azure-sql-database-accesstosql"></a>Azure SQL Database への接続 (SQL server)
 Access データベースを SQL Azure に移行するには、SQL Azure のターゲットインスタンスに接続する必要があります。 接続すると、SSMA は SQL Azure インスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Azure メタデータエクスプローラーにデータベースのメタデータを表示します。 SSMA には、接続している SQL Azure のインスタンスに関する情報が格納されますが、パスワードは保存されません。  
@@ -72,7 +72,7 @@ Access データベースオブジェクトを SQL Azure 構文に変換する�
 SQL Azure アカウントにデータベースが存在しない場合は、[**参照**のクリック] ボタンに表示される [ **Azure データベースの作成**] オプションを使用して最初のデータベースを作成できます。  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>SQL Azure メタデータの同期  
-SQL Azure データベースに関するメタデータは自動的に更新されません。 SQL Azure メタデータエクスプローラーのメタデータは、最初に SQL Azure に接続したとき、またはメタデータを手動で更新したときにメタデータのスナップショットになります。 すべてのデータベース、または任意の1つのデータベースまたはデータベースオブジェクトのメタデータを手動で更新できます。  
+Azure SQL Database 内のデータベースに関するメタデータは、自動的に更新されません。 SQL Azure メタデータエクスプローラーのメタデータは、最初に SQL Azure に接続したとき、またはメタデータを手動で更新したときにメタデータのスナップショットになります。 すべてのデータベース、または任意の1つのデータベースまたはデータベースオブジェクトのメタデータを手動で更新できます。  
   
 **メタデータを同期するには**  
   
@@ -96,10 +96,10 @@ SQL Azure への接続は、プロジェクトを閉じるまでアクティブ�
   
 SQL Azure に再接続する手順は、接続を確立する手順と同じです。  
   
-## <a name="next-step"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
--   Access スキーマと SQL Azure データベースおよびスキーマ間のマッピングをカスタマイズするには、「 [SQL Server スキーマへの Access データベースのマッピング](mapping-source-and-target-databases-accesstosql.md)」を参照してください。  
+-   アクセススキーマと Azure SQL Database 間のマッピングをカスタマイズするには、「 [SQL Server スキーマへの Access データベースのマッピング](mapping-source-and-target-databases-accesstosql.md)」を参照してください。  
   
 -   プロジェクトの構成オプションをカスタマイズするには、「[プロジェクトオプションの設定](setting-conversion-and-migration-options-accesstosql.md)」を参照してください。  
   

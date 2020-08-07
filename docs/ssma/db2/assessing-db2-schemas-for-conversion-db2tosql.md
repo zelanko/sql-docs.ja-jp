@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 506b9a32b465c9006fe4030bd6fcbb8ba4d0f136
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b889b896a70fa43ee3909ff251a3d91125e878b8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938333"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937471"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>変換のための DB2 スキーマの評価 (DB2ToSQL)
-オブジェクトを読み込み、データをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行する前に、移行の複雑さと移行にかかる時間を決定する必要があります。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーの原因となる具体的な問題を確認することもできます。  
+オブジェクトを読み込み、データをに移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行の複雑さと移行にかかる時間を決定する必要があります。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーの原因となる具体的な問題を確認することもできます。  
   
 ## <a name="creating-assessment-reports"></a>評価レポートの作成  
-この評価レポートを作成すると、SSMA は、選択した DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースオブジェクトを構文に変換し、結果を表示します。  
+この評価レポートを作成すると、SSMA は、選択した DB2 データベースオブジェクトを構文に変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] し、結果を表示します。  
   
 **評価レポートを作成するには**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67938333"
   
     -   DB2 では、DB2 オブジェクトを変更して、問題のあるコードを削除または修正できます。 更新されたコードを SSMA に読み込むには、メタデータを更新する必要があります。 詳細については、「 [DB2 データベースへの接続 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)」を参照してください。  
   
-    -   オブジェクトを移行から除外することができます。 メタ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データエクスプローラーおよび Db2 メタデータエクスプローラーで、オブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をに読み込んで db2 からデータを移行する前に、項目の横のチェックボックスをオフにします。  
+    -   オブジェクトを移行から除外することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータエクスプローラーおよび Db2 メタデータエクスプローラーで、オブジェクトをに読み込んで db2 からデータを移行する前に、項目の横のチェックボックスをオフにし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="next-step"></a>次の手順  
 [DB2 スキーマ &#40;DB2ToSQL&#41;の変換](../../ssma/db2/converting-db2-schemas-db2tosql.md)  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 724f0fc6a38388d9366f3c46090ddaf22cd64a34
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40ad7c3d165b0869f3cba9e6f703cd9e33ef199f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887814"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87948403"
 ---
 # <a name="creating-an-assembly"></a>アセンブリの作成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -130,12 +130,9 @@ WITH PERMISSION_SET = UNSAFE;
   
  各設定のアクセス許可の詳細については、「 [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [アセンブリを変更する](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [アセンブリの削除](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR 統合のコードアクセスセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md)   
- [部分的に信頼される呼び出し元の許容](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
-  
-  
+ [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md)

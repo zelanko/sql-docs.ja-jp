@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - New Project dialog box
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: db042e18beb0b33f50639b63f76dde21863c19a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 61c14895f2e464713661f74890b2eb1d5ccc79f5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112297"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937904"
 ---
 # <a name="new-project-ssma-accesstosql"></a>新しいプロジェクト (SSMA) (Sql server への追加)
 新しい SSMA プロジェクトを作成するには、[**新しいプロジェクト**] ダイアログボックスを使用します。 [**新しいプロジェクト**] ダイアログボックスにアクセスするには、[**ファイル**] メニューの [**新しいプロジェクト**] をクリックします。  
   
-## <a name="options"></a>Options  
-**名前**  
+## <a name="options"></a>オプション  
+**Name**  
   
 プロジェクトの名前を入力します。 SSMA によってファイル拡張子が追加されます。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "79112297"
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> ' SQL Azure ' 型の新しいプロジェクトでは、SQL Azure データベースにアクセステーブルをリンクするには、SQL Server Native Client (SNAC) バージョン10.5 以降が必要です。   
+> ' SQL Azure ' 型の新しいプロジェクトでは、アクセステーブルを Azure SQL Database にリンクするために、SQL Server Native Client (SNAC) バージョン10.5 以上が必要です。   
 > 最新バージョンの SNAC は、 [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)から入手できます。  
   

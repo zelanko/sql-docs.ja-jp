@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b384190b6ffeee077f6658d0701f036c3f7746a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396827"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928701"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>dm_os_sys_info (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "87396827"
 |**scheduler_total_count**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のスケジューラの総数を表します。 NULL 値は許可されません。|  
 |**deadlock_monitor_serial_number**|**int**|現在のデッドロック監視シーケンスの ID を指定します。 NULL 値は許可されません。|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|最後に開始されたときの**ms_tick**番号を表し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 現在の ms_ticks 列と比較します。 NULL 値は許可されません。|  
-|**sqlserver_start_time**|**datetime**|最後に開始された日時を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 NULL 値は許可されません。|  
+|**sqlserver_start_time**|**datetime**|最後に開始されたローカルシステムの日付と時刻を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 NULL 値は許可されません。|  
 |**affinity_type**|**int**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> 現在使用中のサーバー CPU プロセス関係の種類を指定します。 NULL 値は許可されません。 詳細については、「 [ALTER SERVER CONFIGURATION &#40;transact-sql&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)」を参照してください。<br /><br /> 1 = MANUAL<br /><br /> 2 = 自動|  
 |**affinity_type_desc**|**varchar(60)**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> **Affinity_type**列について説明します。 NULL 値は許可されません。<br /><br /> MANUAL = 少なくとも 1 台の CPU に関係が設定されています。<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、cpu 間でスレッドを自由に移動できます。|  
 |**process_kernel_time_ms**|**bigint**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> すべて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスレッドがカーネルモードで費やした合計時間 (ミリ秒単位)。 この値にはサーバー上のすべてのプロセッサの時間が含まれるため、単一のプロセッサ クロックより大きくなる場合があります。 NULL 値は許可されません。|  

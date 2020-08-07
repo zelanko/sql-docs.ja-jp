@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021023"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930503"
 ---
 # <a name="running-test-cases-sybasetosql"></a>テスト ケースの実行 (SybaseToSQL)
-SSMA Tester がテストケースを実行すると、テスト用に選択されたオブジェクトが実行され、検証結果に関するレポートが作成されます。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Sybase と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の間のオブジェクトの対応は、現在の ssma プロジェクトのスキーママッピングの設定に従って決定されます。  
+SSMA Tester がテストケースを実行すると、テスト用に選択されたオブジェクトが実行され、検証結果に関するレポートが作成されます。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Sybase との間のオブジェクトの対応 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、現在の SSMA プロジェクトのスキーママッピングの設定に従って決定されます。  
   
 テストを成功させるために必要な要件は、すべての Sybase オブジェクトが変換され、ターゲットデータベースに読み込まれることです。 また、両方のプラットフォームのテーブルの内容が同期されるように、テーブルデータを移行する必要があります。  
   
@@ -38,25 +38,25 @@ SSMA Tester がテストケースを実行すると、テスト用に選択さ�
 SSMA Tester は、テストを開始する前に、テストの実行ですべての前提条件が満たされているかどうかを確認します。 条件が満たされていない場合は、エラーメッセージが表示されます。  
   
 ### <a name="initialization"></a>初期化  
-この手順では、SSMA Tester が Sybase と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の両方に補助オブジェクト (テーブル、トリガー、およびビュー) を作成します。 テーブル比較モードが変更された場合に**のみ**、検証対象として選択された影響を受けるテーブルでの変更のトレースを許可します。  
+この手順では、SSMA Tester が Sybase との両方に補助オブジェクト (テーブル、トリガー、およびビュー) を作成し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 テーブル比較モードが変更された場合に**のみ**、検証対象として選択された影響を受けるテーブルでの変更のトレースを許可します。  
   
 検証されたテーブルに USER_TABLE という名前が付けられているとします。 このようなテーブルの場合、Sybase では次の補助オブジェクトが作成されます。  
   
-次のオブジェクトは、Sybase の SSMATESTER2005db データベースまたは SSMATESTER2008db データベース、および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssmatesterdb_syb データベースに作成されます。  
+次のオブジェクトは、Sybase の SSMATESTER2005db データベースまたは SSMATESTER2008db データベース、および ssmatesterdb_syb データベースに作成され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-|名前|Type|説明|  
+|名前|種類|説明|  
 |--------|--------|---------------|  
 |USER_TABLE $ Trg|トリガー|検証されたテーブルの変更の監査をトリガーします。|  
 |USER_TABLE $ Aud|テーブル|削除された行と上書きされた行が保存されるテーブル。|  
 |USER_TABLE $ AudID|テーブル|新しい行と変更された行が保存されるテーブル。|  
-|USER_TABLE|表示|テーブル変更の簡略化された表現。|  
-|USER_TABLE $ new|表示|挿入行と上書き行の簡略化された表現。|  
-|USER_TABLE $ new_id|表示|挿入および変更された行の識別。|  
-|USER_TABLE $ old|表示|削除行と上書き行の簡略化された表現。|  
+|USER_TABLE|View|テーブル変更の簡略化された表現。|  
+|USER_TABLE $ new|View|挿入行と上書き行の簡略化された表現。|  
+|USER_TABLE $ new_id|View|挿入および変更された行の識別。|  
+|USER_TABLE $ old|View|削除行と上書き行の簡略化された表現。|  
   
-次のオブジェクトは、Sybase と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で検証済みテーブルのデータベースに作成されます。  
+次のオブジェクトは、Sybase とで検証済みテーブルのデータベースに作成され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-|名前|Type|説明|  
+|名前|種類|説明|  
 |--------|--------|---------------|  
 |USER_TABLE $ Trg|トリガー|検証されたテーブルの変更の監査をトリガーします。|  
   

@@ -21,18 +21,18 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823850"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938446"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>SQL Server Azure SQL Database への Access アプリケーションのリンク (アクセス許可)
-既存の Access アプリケーションをで使用する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行されたテーブルまたは SQL Azure のテーブルに元の access テーブルをリンクすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 リンクを使用すると Access データベースが変更されるため、クエリ、フォーム、レポート、およびデータアクセスページで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、access データベースのデータではなく、または SQL Azure データベースのデータが使用されます。  
+既存の Access アプリケーションをで使用する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行されたテーブルまたは SQL Azure のテーブルに元の access テーブルをリンクすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 リンクを使用すると Access データベースが変更されるため、クエリ、フォーム、レポート、およびデータアクセスページで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、access データベースのデータではなく、または Azure SQL Database のデータが使用されます。  
   
 > [!NOTE]  
 > アクセステーブルは引き続きアクセスできますが、更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure 更新と共に更新されることはありません。 テーブルをリンクして機能を確認したら、Access テーブルを削除することができます。  

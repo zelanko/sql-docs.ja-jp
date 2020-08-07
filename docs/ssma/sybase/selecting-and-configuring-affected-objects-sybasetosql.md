@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020992"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930443"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>影響を受けるオブジェクトの選択と構成 (SybaseToSQL)
 このページでは、前の手順で選択したオブジェクトの実行結果が SSMA によって検証されるときに、テーブルと外部キーを選択できます。また、これらの変更を比較する必要があります。 また、検証パラメーターをカスタマイズすることもできます。  
@@ -33,13 +33,13 @@ SSMA Tester がこれらのオブジェクトのいずれかを確認できな�
   
 -   データ型  
   
--   Precision  
+-   有効桁数  
   
 -   スケール  
   
 -   ルール  
   
--   Default  
+-   既定  
   
 -   ID  
   
@@ -48,7 +48,7 @@ SSMA Tester がこれらのオブジェクトのいずれかを確認できな�
 ## <a name="sql"></a>Sql  
 [SQL] タブには、選択したテーブルの "Create table" SQL が含まれています。  
   
-## <a name="data"></a>データ  
+## <a name="data"></a>Data  
 [データ] タブ選択したテーブルに存在するデータが表示されます。  
   
 ## <a name="properties"></a>Properties  
@@ -110,9 +110,9 @@ SSMA Tester がこれらのオブジェクトのいずれかを確認できな�
 -   **False**を選択した場合、比較では大文字と小文字の区別が考慮されます。  
   
 ## <a name="comparing-sql"></a>比較 (SQL を)  
-SSMA Tester によって生成された SELECT ステートメントは、[ **SQL の比較**] ページで確認できます。 テスト担当者は、これらのステートメントの結果セットを行ごとに比較します。 Sybase の結果セットの次の行は、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成された結果セットの次の行と同じである必要があります。  
+SSMA Tester によって生成された SELECT ステートメントは、[ **SQL の比較**] ページで確認できます。 テスト担当者は、これらのステートメントの結果セットを行ごとに比較します。 Sybase の結果セットの次の行は、で生成された結果セットの次の行と同じである必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-これらの SELECT ステートメントを編集して、カスタム検証を行うことができます。 Sybase および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメントで変更を保存するには、ソースとターゲットの SQL の下にある [**適用**] ボタンを使用します。  
+これらの SELECT ステートメントを編集して、カスタム検証を行うことができます。 Sybase およびステートメントで変更を保存するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ソースとターゲットの SQL の下にある [**適用**] ボタンを使用します。  
   
 ## <a name="next-step"></a>次の手順  
 [呼び出し順序のカスタマイズ &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  

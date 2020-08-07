@@ -16,25 +16,25 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 894dec18ab2d487eca22a65542e1d77d6c2e2f77
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 9e07c42e272728943f30198c8800c86aaa9443e3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293753"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938161"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>ソースデータベースとターゲットデータベースのマッピング (Sql server)
-または SQL Azure に接続する場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、移行するターゲットデータベースを指定する必要があります。 複数の Access データベースがある場合は、複数のデータベース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (またはスキーマ)、または接続されている SQL Azure データベースの複数のスキーマにマップできます。  
+または SQL Azure に接続する場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、移行するターゲットデータベースを指定する必要があります。 複数の Access データベースがある場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、複数のデータベース (またはスキーマ)、または接続された Azure SQL Database の複数のスキーマにマップできます。  
   
-## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server または SQL Azure データベーススキーマ  
+## <a name="sql-server-or-azure-sql-database-schemas"></a>スキーマの SQL Server または Azure SQL Database  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースでは、スキーマの概念を使用して、データベース内のオブジェクトを論理グループに分割します。 たとえば、ライブラリデータベースでは、 **books**、 **audio**、video という3つのスキーマを使用して、書籍、オーディオ、およびビデオオブジェクトを相互に**分離すること**ができます。 既定では、access データベースは、の**master**データベースおよび**dbo**スキーマに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure の接続されたデータベースおよび**dbo**スキーマにマップされます。  
   
 各 Access データベースとデータベースおよびスキーマ間のマッピングをカスタマイズしない限り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SSMA は、access データベースに関連付けられているすべてのスキーマとデータを、マップされた既定のデータベースに移行します。  
   
 ## <a name="modifying-the-target-database-and-schema"></a>ターゲットデータベースとスキーマの変更  
-SSMA を使用すると、各 Access データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure データベースおよびスキーマにマップできます。 次の手順では、データベースごとにマッピングをカスタマイズする方法について説明します。  
+SSMA を使用すると、各 Access データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database にマップできます。 次の手順では、データベースごとにマッピングをカスタマイズする方法について説明します。  
   
 **ターゲットデータベースとスキーマを変更するには**  
   
@@ -61,7 +61,7 @@ SSMA を使用すると、各 Access データベースを [!INCLUDE[ssNoVersion
 接続先データベースまたは接続先データベースの任意のスキーマに、ソースデータベースをマップでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 送信元スキーマを [接続されたターゲットデータベース] の既存ではないスキーマにマップすると、 **"スキーマはターゲットメタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか?[はい] をクリックし**ます。  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>最初のデータベースとスキーマに戻す  
-Access データベースと、または SQL Azure データベースとスキーマ間のマッピングをカスタマイズする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続したとき、または SQL Azure したときに指定したデータベースにマッピングを戻すことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+Access データベースとまたはの Azure SQL Database 間のマッピングをカスタマイズする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続時に指定したデータベース、または SQL Azure にマッピングを戻すことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 **既定のデータベースとスキーマにリセットするには**  
   

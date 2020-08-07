@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864919"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87950977"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインから Data Migration Assistant を実行する
 
@@ -106,7 +106,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**ターゲットプラットフォーム SQL Azure データベースの単一データベース評価。結果を json および .csv ファイルに保存します**
+**ターゲットプラットフォームの Azure SQL Database に対する単一データベース評価、結果を json および .csv ファイルに保存する**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -155,7 +155,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**ターゲットプラットフォーム SQL Azure データベースの単一データベース評価。結果を json および .csv ファイルに保存します**
+**ターゲットプラットフォームの Azure SQL Database に対する単一データベース評価、結果を json および .csv ファイルに保存する**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -304,7 +304,7 @@ DmaCmd.exe
 |`/SkuRecommendationSubscriptionId` | サブスクリプション ID です。 | Y <br> (最新の価格の場合)
 |`/SkuRecommendationDatabasesToRecommend` | 推奨するデータベースのスペース区切りの一覧 (例: "Database1" "Database2" "Database3")。 名前は大文字と小文字が区別され、二重引用符で囲む必要があります。 省略した場合、すべてのデータベースの推奨事項が表示されます。 | N
 |`/AzureAuthenticationTenantId` | 認証テナント。 | Y <br> (最新の価格の場合)
-|`/AzureAuthenticationClientId` | 認証に使用される AAD アプリのクライアント ID。 | Y <br> (最新の価格の場合)
+|`/AzureAuthenticationClientId` | 認証に使用される Azure AD アプリのクライアント ID。 | Y <br> (最新の価格の場合)
 |`/AzureAuthenticationInteractiveAuthentication` | ウィンドウをポップアップ表示するには true に設定します。 | Y <br> (最新の価格の場合) <br>(3 つの認証オプションのいずれかを選択してください-オプション 1)
 |`/AzureAuthenticationCertificateStoreLocation` | 証明書ストアの場所 (例: "CurrentUser") に設定します。 | Y <br>(最新の価格の場合) <br> (3 つの認証オプションのいずれかを選択します。オプション 2)
 |`/AzureAuthenticationCertificateThumbprint` | 証明書の拇印に設定します。 | Y <br> (最新の価格の場合) <br>(3 つの認証オプションのいずれかを選択します。オプション 2)

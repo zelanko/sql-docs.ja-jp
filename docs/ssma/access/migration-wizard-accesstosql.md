@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Migration Wizard, New Project
 - Migration Wizard, Selecting objects to migrate
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8413487d4b367426c22795f7e82e58ec029706c3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083591"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938011"
 ---
 # <a name="migration-wizard-accesstosql"></a>移行ウィザード (移動用 Sql)
-移行ウィザードでは、または SQL Azure へ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアクセスから、1つまたは複数のデータベースを移行できます。 ウィザードを使用して、プロジェクトを作成し、データベースをプロジェクトに追加し、移行するオブジェクトを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または SQL Azure に接続します。 また、アクセススキーマとデータの変換、読み込み、移行を行います。 必要に応じて、テーブルまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure テーブルにアクセステーブルをリンクすることもできます。  
+移行ウィザードでは、または SQL Azure へのアクセスから、1つまたは複数のデータベースを移行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ウィザードを使用して、プロジェクトを作成し、データベースをプロジェクトに追加し、移行するオブジェクトを選択して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure に接続します。 また、アクセススキーマとデータの変換、読み込み、移行を行います。 必要に応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたは SQL Azure テーブルにアクセステーブルをリンクすることもできます。  
   
 移行ウィザードのほとんどのページには、既存の SSMA ダイアログボックスと同じオプションが含まれています。 そのため、ここではウィザードのページについて説明します。また、各オプションの詳細については、リンクが用意されています。 ページに一意のオプションが含まれている場合は、ここに記載されています。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68083591"
 [新しいプロジェクトの作成] ページには、プロジェクトのファイル名、場所と移行プロジェクトの種類 (移行に使用するターゲット SQL Server のバージョン) を入力します。 詳細については、「[新しいプロジェクト (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3) 」を参照してください。  
   
 ## <a name="add-access-databases-page"></a>[Access データベースの追加] ページ  
-[Access データベースの追加] ページでは、プロジェクトに1つ以上の Access データベースを追加します。 個々のデータベースを追加するには、[**データベースの追加**] をクリックし、[**開く**] ウィンドウからデータベースを選択します。 または、[**データベースの検索**] ボタンを使用してデータベースを検索することもできます。 詳細については、以下のトピックを参照してください。  
+[Access データベースの追加] ページでは、プロジェクトに1つ以上の Access データベースを追加します。 個々のデータベースを追加するには、[**データベースの追加**] をクリックし、[**開く**] ウィンドウからデータベースを選択します。 または、[**データベースの検索**] ボタンを使用してデータベースを検索することもできます。 詳細については、次のトピックを参照してください。  
   
 -   [Access データベースファイルの追加と削除](adding-and-removing-access-database-files-accesstosql.md)  
   
@@ -75,25 +75,25 @@ ms.locfileid: "68083591"
 フィルター処理の詳細については、「[高度なオブジェクトの選択 (SSMA Common)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)」の「オプション」セクションを参照してください。  
   
 ## <a name="connect-to-sql-server-page"></a>SQL Server ページに接続する  
-[接続先[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ] ページで、接続プロパティを指定し、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続します。 詳細については、「 [SQL Server への接続](connect-to-sql-server-accesstosql.md)」を参照してください。
+[接続先 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ] ページで、接続プロパティを指定し、に接続し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「 [SQL Server への接続](connect-to-sql-server-accesstosql.md)」を参照してください。
   
 > [!IMPORTANT]  
 > 接続が成功するとすぐに [テーブルの**リンク**] ページが表示され、そこにテーブルをリンクするオプションが表示されます。 [**次へ**] をクリックして、移行を開始します。  
   
 ## <a name="connect-to-sql-azure-page"></a>SQL Azure ページに接続する  
-[SQL Azure への接続] ページで、接続プロパティを指定し、SQL Azure に接続します。 新しい azure データベースを作成するには、[**参照**のクリック] ボタンに表示される [ **Azure データベースの作成**] オプションを使用します。 詳細については、「 [Connect to SQL Azure](connect-to-azure-sql-db-accesstosql.md) 」を参照してください。  
+[SQL Azure への接続] ページで、接続プロパティを指定し、SQL Azure に接続します。 新しい Azure データベースを作成するには、[**参照**のクリック] ボタンに表示される [ **Azure データベースの作成**] オプションを使用します。 詳細については、「 [Connect to SQL Azure](connect-to-azure-sql-db-accesstosql.md) 」を参照してください。  
   
 > [!IMPORTANT]  
 > 接続が成功するとすぐに [テーブルの**リンク**] ページが表示され、そこにテーブルをリンクするオプションが表示されます。 [リンク] ページの [**次へ**] ボタンをクリックして、移行を開始します。  
   
 ## <a name="link-tables-page"></a>[テーブルのリンク] ページ  
-[テーブルのリンク] ページを使用すると、元の Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを、移行されたテーブルまたは SQL Azure テーブルにリンクすることができます。 テーブルをリンクすると、access データベースが変更されます。これにより、クエリ、フォーム、レポート、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]およびデータアクセスページで、access データベースのデータではなく、または SQL Azure データベースのデータが使用されるようになります。  
+[テーブルのリンク] ページを使用すると、元の Access テーブルを、移行された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたは SQL Azure テーブルにリンクすることができます。 テーブルをリンクすると、access データベースが変更されます。これにより、クエリ、フォーム、レポート、およびデータアクセスページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] access データベースのデータではなく、または Azure SQL Database のデータが使用されるようになります。  
   
 **リンクテーブル**  
-[**テーブルのリンク**] チェックボックスをオンにすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行されたテーブルまたは SQL Azure テーブルにアクセステーブルをリンクできます。 移行を開始するには、[**次へ**] ボタンをクリックする必要があります。  
+[**テーブルのリンク**] チェックボックスをオンにすると、移行された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたは SQL Azure テーブルにアクセステーブルをリンクできます。 移行を開始するには、[**次へ**] ボタンをクリックする必要があります。  
   
 ## <a name="migration-status-page"></a>[移行の状態] ページ  
-[移行の状態] ページには、または SQL Azure スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアクセススキーマの変換、変換さ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れたスキーマのまたは SQL Azure への読み込み、データの移行の進行状況が表示されます。  
+[移行の状態] ページには、または SQL Azure スキーマへのアクセススキーマの変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、変換されたスキーマのまたは SQL Azure への読み込み、データの移行の進行状況が表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 このページの詳細については、「[変換、読み込み、移行](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)」を参照してください。  
   

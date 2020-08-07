@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,refresh-from-database report
 - Sybase Console,synchronize-target report
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 564385c15d9877454d30892f9cce54fbca6cf802
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: df30186091344addef429bfb125e90b898d21467
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396391"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931545"
 ---
 # <a name="generating-reports-sybasetosql"></a>レポートの生成 (SybaseToSQL)
 コマンドを使用して実行される特定のアクティビティのレポートは、SSMA コンソールのオブジェクトツリーレベルで生成されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "87396391"
   
     Reports vis vis コマンドは次のとおりです。  
   
-    |法. いいえ。|コマンド|レポート タイトル|  
+    |法. いいえ。|command|レポート タイトル|  
     |-|-|-|  
     |1|生成-評価-レポート|AssessmentReport &lt; n &gt;XML|  
     |2|変換-スキーマ|SchemaConversionReport &lt; n &gt;XML|  
