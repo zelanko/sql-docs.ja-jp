@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f70cf22db8d4a9c957465ea86f286c41098538c5
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293723"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823637"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>MySQL データベースの SQL Server スキーマへのマッピング (MySQLToSQL)
 既定では、SSMA for MySQL は、MySQL スキーマ内のすべてのオブジェクトを、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スキーマのという名前のまたは SQL Azure データベースに移行します。 ただし、MySQL スキーマと SQL Azure データベース間のマッピングはカスタマイズでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -71,7 +71,7 @@ MySQL オブジェクトから SQL Server または SQL Azure オブジェクト
   
 ## <a name="see-also"></a>参照  
 [プロジェクト設定 &#40;変換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
-[Azure SQL DB &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Azure SQL Database &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [SQL Server &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   

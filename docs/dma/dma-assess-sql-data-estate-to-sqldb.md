@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054265"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864939"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server のデータ資産の準備状況を評価する
 
@@ -99,7 +99,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 1. 左側でアイコンを選択 **+** し、[評価]**プロジェクトタイプ**を選択します。
 2. プロジェクト名を指定し、移行元サーバーと移行先サーバーの種類を選択します。
 
-    オンプレミスの SQL Server インスタンスを SQL Server の新しいバージョンまたは Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を**SQL Server**に設定します。 Azure SQL Database (PaaS) ターゲット準備の評価の対象サーバーの種類を**Azure SQL Database Managed Instance**に設定します。
+    オンプレミスの SQL Server インスタンスを SQL Server の新しいバージョンまたは Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を**SQL Server**に設定します。 Azure SQL Database (PaaS) ターゲット準備の評価については、対象サーバーの種類を**AZURE SQL Managed Instance**に設定します。
 
 3. **［作成］** を選択します
 
@@ -159,7 +159,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
    ![Azure Migrate-準備の結果を確認する](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
     評価された**データベースインスタンス**: これまでに評価された SQL Server インスタンスの数。
-    **評価**されたデータベース: 1 つ以上の SQL Server インスタンスで評価されたデータベースの総数: **SQL DB の準備ができて**いるデータベースの数: Azure SQL Database (PaaS) に移行する準備ができているデータベースの数。
+    **評価**されたデータベース: 1 つ以上の SQL Server インスタンスで評価されたデータベースの総数: **SQL Database の準備ができて**いるデータベースの数: Azure SQL Database (PaaS) に移行する準備ができているデータベースの数。
     **AZURE SQL VM の準備ができているデータベース**: データベースの数は、Azure SQL Database (PaaS) に1つ以上の移行ブロックを構成しますが、Azure SQL Server vm に移行する準備ができています。
 
 3. [評価された**データベースインスタンス**] を選択して SQL Server インスタンスレベルビューに移動します。

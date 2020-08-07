@@ -1,5 +1,5 @@
 ---
-title: SQL Server への Access アプリケーションのリンク-Azure SQL DB |Microsoft Docs
+title: SQL Server への Access アプリケーションへのリンク-Azure SQL Database |Microsoft Docs
 description: SQL Server または Azure SQL Database で既存の Access アプリケーションを使用できるように、移行されたテーブルにアクセステーブルをリンクする方法について説明します。
 ms.prod: sql
 ms.custom: ''
@@ -24,14 +24,14 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293769"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823850"
 ---
-# <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server への Access アプリケーションのリンク-Azure SQL DB (アクセス許可 Sql)
+# <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>SQL Server Azure SQL Database への Access アプリケーションのリンク (アクセス許可)
 既存の Access アプリケーションをで使用する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行されたテーブルまたは SQL Azure のテーブルに元の access テーブルをリンクすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 リンクを使用すると Access データベースが変更されるため、クエリ、フォーム、レポート、およびデータアクセスページで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、access データベースのデータではなく、または SQL Azure データベースのデータが使用されます。  
   
 > [!NOTE]  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aec9e25008c8dfe3b14bbe838f8122bb93fb756
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed3ae93d1b2bd87decb43050e03624bb9a7ed62c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717403"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864999"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @value = ] 'value'`指定されたプロパティの値です。 *値*は**nvarchar (255)**,、既定値は NULL です。  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`は SQL Database マネージインスタンスに必要です。は、Azure SQL Database ストレージボリュームのアクセスキーと一致している必要があります。 
+`[ @storage_connection_string = ] 'storage_connection_string'`SQL Managed Instance には、Azure SQL Database ストレージボリュームのアクセスキーと一致する必要があります。 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -64,7 +64,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証を使用します。 *これは、以外* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のでは変更できません。*パブリッシャー。*|  
 |**working_directory**||パブリケーションのデータおよびスキーマ ファイルを保存するために使用する作業ディレクトリです。|  
 |NULL (既定値)||使用可能なすべての*プロパティ*オプションが印刷されます。| 
-|**storage_connection_string**| アクセス キー | データベースが Azure SQL Database Managed Instance ときの作業ディレクトリのアクセスキー。 
+|**storage_connection_string**| アクセス キー | データベースが Azure SQL Managed Instance の場合の作業ディレクトリのアクセスキー。 
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -75,11 +75,11 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changedistpublisher**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+## <a name="see-also"></a>参照  
+ [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [sp_helpdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

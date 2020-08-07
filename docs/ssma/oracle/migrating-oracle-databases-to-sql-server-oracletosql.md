@@ -11,18 +11,18 @@ ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 67fb6eeba0a1385d3d764dfa2d8e55f40f34455a
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f6d6860f1f30c970148555d81a158a7ec98a72f3
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294052"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863500"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>SQL Server への Oracle のデータの移行 (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for Oracle は、Oracle データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、AZURE SQL DB、または Azure SQL Data Warehouse に迅速に移行するのに役立つ包括的な環境です。 SSMA for Oracle を使用すると、データベースオブジェクトとデータの確認、移行のためのデータベースの評価、データベースオブジェクトのへの移行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE SQL db、または Azure SQL Data Warehouse、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、AZURE sql db、または Azure SQL Data Warehouse へのデータの移行を行うことができます。 SYS およびシステム Oracle スキーマは移行できないことに注意してください。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for Oracle は、Oracle データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database または Azure SQL Data Warehouse にすばやく移行するのに役立つ包括的な環境です。 SSMA for Oracle を使用すると、データベースオブジェクトとデータを確認したり、データベースの移行を評価したり、データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database、または Azure SQL Data Warehouse に移行したり、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Azure SQL Database、または Azure SQL Data Warehouse に移行したりすることができます。 SYS およびシステム Oracle スキーマは移行できないことに注意してください。
   
 ## <a name="recommended-migration-process"></a>推奨される移行プロセス  
-オブジェクトとデータを Oracle データベースから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、AZURE SQL DB、または Azure SQL Data Warehouse に正常に移行するには、次の手順を使用します。
+オブジェクトとデータを Oracle データベースから、Azure SQL Database、または Azure SQL Data Warehouse に正常に移行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次の手順を使用します。
   
 1.  [新しい SSMA プロジェクトを作成](working-with-ssma-projects-oracletosql.md)します。  
   

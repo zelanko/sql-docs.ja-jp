@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754149"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865280"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,9 +52,9 @@ SQL Server プロセスを管理するジョブオブジェクトの構成と、
 |process_physical_affinity|**nvarchar (3072)**|SQL Server プロセスが各プロセッサグループで使用できる論理プロセッサを示すビットマスク。 この列の値は、それぞれ中かっこで囲まれた1つ以上の値のペアで形成されます。 各ペアでは、最初の値はプロセッサグループ番号、2番目の値はそのプロセッサグループの関係ビットマスクです。 たとえば、値は、 `{{0,a}{1,2}}` プロセッサグループの関係マスク `0` が `a` ( `1010` プロセッサ2と4が使用されていることを示すバイナリ) で、プロセッサグループの関係マスクが `1` `2` ( `10` プロセッサ2が使用されていることを示すバイナリ) であることを意味します。|
   
 ## <a name="permissions"></a>アクセス許可  
-SQL Database Managed Instance では、 `VIEW SERVER STATE` 権限が必要です。 SQL Database では、データベースにおける `VIEW DATABASE STATE` アクセス許可が必要です。  
+SQL Managed Instance では、 `VIEW SERVER STATE` 権限が必要です。 SQL Database では、データベースにおける `VIEW DATABASE STATE` アクセス許可が必要です。  
  
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 
-マネージインスタンスの詳細については、「 [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)」を参照してください。
+マネージインスタンスの詳細については、「 [SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)」を参照してください。
   

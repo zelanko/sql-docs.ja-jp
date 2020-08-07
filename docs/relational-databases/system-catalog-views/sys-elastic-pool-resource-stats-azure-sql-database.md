@@ -18,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 34f524eb8e6c7a64a53f64eda67a370aace745c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c6d2e7cccc7e1aa07327480415c0acd2a3db192
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648900"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822933"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85648900"
 |**max_session_percent**|**decimal (5, 2)**|プールの限度に対する割合で表した最大同時実行セッション数。|  
 |**elastic_pool_dtu_limit**|**int**|この期間中のこのエラスティック プールに対する現在の最大エラスティック プール DTU 設定。|  
 |**elastic_pool_storage_limit_mb**|**bigint**|この期間中のこのエラスティック プールに対する現在の最大エラスティック プール ストレージ制限 (メガバイト単位)。|
-|**avg_allocated_storage_percent**|**decimal (5, 2)**|エラスティックプール内のすべてのデータベースによって割り当てられたデータ領域の割合。  これは、エラスティックプールのデータの最大サイズに割り当てられたデータ領域の比率です。  詳細については、「 [SQL DB でのファイル領域の管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|  
+|**avg_allocated_storage_percent**|**decimal (5, 2)**|エラスティックプール内のすべてのデータベースによって割り当てられたデータ領域の割合。  これは、エラスティックプールのデータの最大サイズに割り当てられたデータ領域の比率です。  詳細については[、「SQL Database でのファイル領域管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|  
   
 ## <a name="remarks"></a>Remarks
 
@@ -57,7 +57,7 @@ ms.locfileid: "85648900"
 
  **Dbmanager**ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
  次の例では、現在の SQL Database サーバーのすべてのエラスティックデータベースプールについて、最新の時刻によって並べ替えられたリソース使用率データを返します。  
   
@@ -77,7 +77,7 @@ WHERE elastic_pool_name = '<your pool name>'
 ORDER BY end_time DESC;  
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
  [エラスティックデータベースによる爆発的な成長の緩和](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [SQL Database エラスティックデータベースプールの作成と管理 (プレビュー)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   

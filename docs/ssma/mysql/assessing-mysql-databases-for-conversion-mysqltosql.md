@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85923b0252eb24012c12e0c19937e076806b78bd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139205"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823807"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>変換のための MySQL データベースの評価 (MySQLToSQL)
-オブジェクトを読み込み、データをまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure に移行する前に、移行の複雑さと移行にかかる時間を決定する必要があります。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーの原因となる具体的な問題を確認することもできます。  
+オブジェクトを読み込み、データをまたは SQL Azure に移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行の複雑さと移行にかかる時間を決定する必要があります。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーの原因となる具体的な問題を確認することもできます。  
   
 ## <a name="creating-assessment-reports"></a>評価レポートの作成  
-この評価レポートを作成すると、SSMA は、選択した MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースオブジェクトをまたは SQL Azure 構文に変換し、結果を表示します。  
+この評価レポートを作成すると、SSMA は、選択した MySQL データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure 構文に変換し、結果を表示します。  
   
 **評価レポートを作成するには**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68139205"
   
     SSMA により、ウィンドウの下部にあるステータスバーに進行状況が表示されます。 出力ウィンドウが表示されている場合は、[出力] ウィンドウにメッセージも表示されます。  
   
-    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for MySQL の [評価レポート] ウィンドウが表示されます。  
+    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant For MySQL の [評価レポート] ウィンドウが表示されます。  
   
 ## <a name="using-assessment-reports"></a>評価レポートの使用  
 [評価レポート] ウィンドウには、次の3つのペインがあります。  
@@ -76,11 +76,11 @@ ms.locfileid: "68139205"
   
 -   MySQL では、問題のあるコードを削除または修正するために MySQL オブジェクトを変更できます。 更新されたコードを SSMA に読み込むには、メタデータを更新する必要があります。 詳細については、「 [MySQL への接続 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)」を参照してください。  
   
--   オブジェクトを移行から除外することができます。 また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は SQL Azure メタデータエクスプローラーおよび Mysql メタデータエクスプローラーで、項目の横のチェックボックスをオフにして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、mysql からのオブジェクトの読み込みまたは SQL Azure と移行を実行します。  
+-   オブジェクトを移行から除外することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータエクスプローラーおよび Mysql メタデータエクスプローラーで、項目の横のチェックボックスをオフにして、mysql からのオブジェクトの読み込み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure と移行を実行します。  
   
 ## <a name="next-step"></a>次の手順  
 [MySQL データベース &#40;MySQLToSQL&#41;に変換しています](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>参照  
-[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

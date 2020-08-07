@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734696"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865320"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -116,10 +116,10 @@ ms.locfileid: "85734696"
 |**min_spills**|**bigint**|このクエリで1回の実行中に書き込まれたページの最小数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |**max_spills**|**bigint**|このクエリで1回の実行中に書き込まれたページの最大数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |**pdw_node_id**|**int**|このディストリビューションが配置されているノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-|**total_page_server_reads**|**bigint**|このプランがコンパイルされてから、このプランの実行でリモートページサーバーの読み取り回数の合計。<br /><br /> **適用対象:** Azure SQL DB のハイパースケール |  
-|**last_page_server_reads**|**bigint**|プランを最後に実行したときに実行されたリモートページサーバーの読み取り回数。<br /><br /> **適用対象:** Azure SQL DB のハイパースケール |  
-|**min_page_server_reads**|**bigint**|このプランの1回の実行で行われたリモートページサーバー読み取りの最小数。<br /><br /> **適用対象:** Azure SQL DB のハイパースケール |  
-|**max_page_server_reads**|**bigint**|このプランで1回の実行で行われたリモートページサーバー読み取りの最大数。<br /><br /> **適用対象:** Azure SQL DB のハイパースケール |  
+|**total_page_server_reads**|**bigint**|このプランがコンパイルされてから、このプランの実行でリモートページサーバーの読み取り回数の合計。<br /><br /> **適用対象:** Azure SQL Database ハイパースケール |  
+|**last_page_server_reads**|**bigint**|プランを最後に実行したときに実行されたリモートページサーバーの読み取り回数。<br /><br /> **適用対象:** Azure SQL Database ハイパースケール |  
+|**min_page_server_reads**|**bigint**|このプランの1回の実行で行われたリモートページサーバー読み取りの最小数。<br /><br /> **適用対象:** Azure SQL Database ハイパースケール |  
+|**max_page_server_reads**|**bigint**|このプランで1回の実行で行われたリモートページサーバー読み取りの最大数。<br /><br /> **適用対象:** Azure SQL Database ハイパースケール |  
 > [!NOTE]
 > <sup>1</sup>ネイティブコンパイルストアドプロシージャの統計コレクションが有効になっている場合、ワーカー時間はミリ秒単位で収集されます。 クエリが1ミリ秒未満で実行された場合、値は0になります。  
   
@@ -153,7 +153,7 @@ GROUP BY query_stats.query_hash
 ORDER BY 2 DESC;  
 ```  
   
-### <a name="b-returning-row-count-aggregates-for-a-query"></a>B: クエリの行数集計を返す  
+### <a name="b-returning-row-count-aggregates-for-a-query"></a>B. クエリの行数集計を返す  
  次の例では、クエリに対して行数の集計情報 (行の総数、最小行数、最大行数、および最後の行) を返します。  
   
 ```sql  

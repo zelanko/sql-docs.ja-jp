@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942381"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824067"
 ---
 # <a name="installation-and-configuration"></a>インストールと構成
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ Bacpac を新しい SQL Database にインポートするには、Management Stu
 
 ### <a name="full-text-indexing"></a>フルテキスト インデックス作成
 
-サンプルデータベースでは、フルテキストインデックスを使用できます。 ただし、この機能は既定では SQL Server と共にインストールされません。 SQL Server セットアップ中に選択する必要があります (Azure SQL DB では既定で有効になっています)。 そのため、インストール後の手順が必要です。
+サンプルデータベースでは、フルテキストインデックスを使用できます。 ただし、この機能は既定では SQL Server と共にインストールされません。 SQL Server セットアップ中に選択する必要があります (Azure SQL Database では既定で有効になっています)。 そのため、インストール後の手順が必要です。
 
 1. SQL Server Management Studio で、WideWorldImporters データベースに接続し、新しいクエリウィンドウを開きます。
 2. 次の T-sql コマンドを実行して、データベースでフルテキストインデックスの使用を有効にします。`EXECUTE Application.Configuration_ApplyFullTextIndexing`

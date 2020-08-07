@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d9bec916103214169f549a0b555a46fd0d65fdb
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904901"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862493"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA プロジェクトでの作業 (MySQLToSQL)
 MySQL データベースを SQL Server または SQL Azure に移行するには、まず SSMA プロジェクトを作成する必要があります。 プロジェクトは、次の情報を含むファイルです。  
@@ -57,7 +57,7 @@ SSMA には、データベースの変換と読み込み、データの移行、
   
 -   データ型のマッピング設定の詳細については、「[プロジェクトの設定 &#40;Type mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)」を参照してください。  
   
--   SQL Azure 設定の詳細については、「 [AZURE SQL DB&#41; &#40;MySQLToSQL&#41;&#40;のプロジェクト設定](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)」を参照してください。  
+-   SQL Azure 設定の詳細については、「[プロジェクトの設定 &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)」を参照してください。  
   
 > [!NOTE]  
 > SQL Azure 設定は、プロジェクトの作成中に [ **SQL Azure に移行**] を選択した場合にのみ表示されます。  
@@ -73,7 +73,7 @@ MySQL データベースから SQL Server または SQL Azure にデータを移
   
 3.  [**場所**] ボックスで、プロジェクトのフォルダーを入力または選択します。  
   
-4.  [**移行先**] ドロップダウンで、移行に使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットのバージョンを選択します。 次の方法を使用できます。  
+4.  [**移行先**] ドロップダウンで、移行に使用するターゲットのバージョンを選択し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の方法を使用できます。  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -83,7 +83,7 @@ MySQL データベースから SQL Server または SQL Azure にデータを移
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   Azure SQL DB  
+    -   Azure SQL データベース  
   
 [ **OK** ] をクリックします。  
   
@@ -105,7 +105,7 @@ SSMA により、プロジェクトファイルが作成されます。
   
 1.  [**メタデータが存在しません**] の状態を示すデータベースごとに、データベース名の横にあるチェックボックスをオンにします。 メタデータの保存には数分かかる場合があります。 この時点でメタデータを保存しない場合は、チェックボックスをオンにしないでください。  
   
-2.  **[Save]** (保存) をクリックします。  
+2.  **[保存]** をクリックします。  
   
 SSMA は MySQL スキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   
@@ -133,7 +133,7 @@ SSMA は MySQL スキーマを解析し、メタデータをプロジェクト�
   
 ## <a name="see-also"></a>参照  
 [MySQL &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [SQL Server &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[Azure SQL DB &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[Azure SQL Database &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

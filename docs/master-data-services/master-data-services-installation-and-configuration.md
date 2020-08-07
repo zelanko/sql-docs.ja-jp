@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834773"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823757"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
@@ -130,16 +130,16 @@ ms.locfileid: "85834773"
   
 3.  [**データベースサーバー** ] ページで、SQL Server インスタンスを指定します。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス**の値を、Azure SQL Database マネージインスタンスのホストに設定します。 たとえば、`xxxxxx.xxxxxx.database.windows.net` のようにします。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス**の値をマネージインスタンスのホストに設定します。 たとえば、`xxxxxx.xxxxxx.database.windows.net` のようにします。
 
 4. 認証の**種類**を選択し、[**接続のテスト**] をクリックして、選択した認証の種類の資格情報を使用してデータベースに接続できることを確認します。 **[次へ]** をクリックします。
 
-    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]で Azure SQL Database マネージインスタンスに接続するには、次のいずれかの認証の種類を使用します。
+    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]でマネージインスタンスに接続するには、次のいずれかの認証の種類を使用します。
     >
     >- Azure Active Directory 統合認証:**現在のユーザー– Active Directory 統合**
     >- SQL Server 認証: **SQL Server アカウント**。
     >
-    >Azure SQL Database マネージインスタンスでは、ユーザーは固定サーバーロールのメンバーである必要があり `sysadmin` ます。
+    >SQL Managed Instance では、ユーザーは固定サーバーロールのメンバーである必要があり `sysadmin` ます。
 
     > [!NOTE]  
     >  認証の種類として [**現在のユーザー-統合セキュリティ**] を選択すると、[**ユーザー名**] ボックスは読み取り専用になり、コンピューターにログオンしている Windows ユーザーアカウントの名前が表示されます。 Azure 仮想マシン (VM) 上で [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] が実行されている場合、**[ユーザー名]** ボックスに、VM の名前と、VM 上のローカル管理者アカウントのユーザー名が表示されます。 
@@ -204,7 +204,7 @@ ms.locfileid: "85834773"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **[適用]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、https://*server name* / *web application*/です。 
+15. **[Apply]** をクリックします。 **[構成の完了]** メッセージ ボックスが表示されます。 メッセージ ボックスで **[OK]** をクリックして、Web アプリケーションを起動します。 Web サイトのアドレスは、https://*server name* / *web application*/です。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -289,7 +289,7 @@ ms.locfileid: "85834773"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のデータの構造を構築するモデルとエンティティを使用する方法の概要については、「[マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
     
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスターデータサービスデータベース](../master-data-services/master-data-services-database.md)   
  [マスターデータマネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)   
  [[データベースの構成] ページ &#40;マスターデータサービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790402"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877965"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -177,7 +177,7 @@ sp_execute_external_script
 を指定することにより、スクリプトを並列で実行でき `@parallel=1` ます。 入力クエリを並列化できる場合は、 `@parallel=1` 引数の一部としてをに設定する必要があり `sp_execute_external_script` ます。 既定では、クエリオプティマイザーは `@parallel=1` 256 行を超えるテーブルで動作しますが、これを明示的に処理する場合、このスクリプトにはパラメーターがデモンストレーションとして含まれます。
 
 > [!Tip]
-> トレーニング ワークロードの場合、Microsoft-rx 以外のアルゴリズムを使用している場合でも、任意のトレーニング スクリプトで `@parallel` を使用できます。 通常、SQL Server のトレーニング シナリオで並列処理が提供されるのは、RevoScaleR アルゴリズム (rx プレフィックスが付いたもの) だけです。 ただし、SQL Server vNext の新しいパラメーターを使用すると、その機能を使用して特に設計されていない関数を呼び出すスクリプトを並列化できます。
+> トレーニング ワークロードの場合、Microsoft-rx 以外のアルゴリズムを使用している場合でも、任意のトレーニング スクリプトで `@parallel` を使用できます。 通常、SQL Server のトレーニング シナリオで並列処理が提供されるのは、RevoScaleR アルゴリズム (rx プレフィックスが付いたもの) だけです。 ただし、SQL Server 2019 以降の新しいパラメーターを使用すると、その機能を使用して特に設計されていない関数を呼び出すスクリプトを並列化できます。
 ::: moniker-end
 
 ### <a name="streaming-execution-for-python-and-r-scripts"></a>Python および R スクリプトのストリーミング実行  
@@ -189,9 +189,9 @@ sp_execute_external_script
 > [!NOTE]  
 > ストリーミングと並列処理は、Enterprise Edition でのみサポートされています。 標準エディションのクエリには、エラーを発生させることなくパラメーターを含めることができますが、パラメーターが無効になり、R スクリプトが1つのプロセスで実行されます。  
   
-## <a name="restrictions"></a>制限事項  
+## <a name="restrictions"></a>制限  
 
-### <a name="data-types"></a>データ型
+### <a name="data-types"></a>データの種類
 
 次のデータ型は、 **sp_execute_external_script**プロシージャの入力クエリまたはパラメーターで使用されている場合はサポートされません。また、サポートされていない型エラーを返します。  
 
@@ -225,11 +225,11 @@ Float 値 (たとえば、、 `+Inf` 、 `-Inf` `NaN` ) は、両方の言語で
 
 **すべての外部スクリプトデータベースの実行**権限が必要です。  
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 このセクションでは、を使用して、このストアドプロシージャを使用して R または Python スクリプトを実行する方法の例について説明 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。
 
-### <a name="a-return-an-r-data-set-to-sql-server"></a>A: R データセットを SQL Server に返す  
+### <a name="a-return-an-r-data-set-to-sql-server"></a>A. R データセットを SQL Server に返す  
 
 次の例では、 **sp_execute_external_script**を使用して、R に含まれる虹彩データセットを返すストアドプロシージャを作成します。  
 
@@ -252,7 +252,7 @@ END;
 GO
 ```
 
-### <a name="b-create-a-python-model-and-generate-scores-from-it"></a>B: Python モデルを作成し、それからスコアを生成する
+### <a name="b-create-a-python-model-and-generate-scores-from-it"></a>B. Python モデルを作成し、それからスコアを生成する
 
 この例では、を使用し `sp_execute_external_script` て、単純な Python モデルでスコアを生成する方法を示します。
 
@@ -289,7 +289,7 @@ GO
 Python コードで使用される列見出しは SQL Server に出力されません。したがって、SQL で使用する列の名前とデータ型を指定するには、WITH RESULT ステートメントを使用します。
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-### <a name="c-generate-an-r-model-based-on-data-from-sql-server"></a>C: SQL Server からのデータに基づいて R モデルを生成する  
+### <a name="c-generate-an-r-model-based-on-data-from-sql-server"></a>C. SQL Server からのデータに基づいて R モデルを生成する  
 
 次の例では、 **sp_execute_external_script**を使用して、虹彩モデルを生成し、モデルを返すストアドプロシージャを作成します。  
 

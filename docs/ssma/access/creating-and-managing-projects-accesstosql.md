@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 034d15572b214a6afbd34be78528c57241a21caa
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006615"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823857"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>プロジェクトの作成と管理 (管理用 Sql)
-Access データベースをまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure に移行するには、まず ssma プロジェクトを作成する必要があります。 このプロジェクトは、移行先[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のアクセスデータベースに関するメタデータ、移行されたオブジェクトとデータ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続情報、およびプロジェクト設定を受け取る SQL Azure の対象インスタンスに関するメタデータを含むファイルです。  
+Access データベースをまたは SQL Azure に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、まず SSMA プロジェクトを作成する必要があります。 このプロジェクトは、移行先または SQL Azure のアクセスデータベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移行されたオブジェクトとデータ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続情報、およびプロジェクト設定を受け取る SQL Azure の対象インスタンスに関するメタデータを含むファイルです。  
   
 ## <a name="reviewing-default-project-settings"></a>既定のプロジェクト設定の確認  
 SSMA には、データベースオブジェクトを変換および同期したり、データを変換したりするためのオプションがいくつか用意されています。 これらのオプションの既定の設定は、多くのユーザーに適しています。 ただし、新しい SSMA プロジェクトを作成する前に、オプションを確認し、必要に応じて、すべての新しいプロジェクトで使用される既定の設定を変更する必要があります。  
@@ -55,7 +55,7 @@ SSMA には、データベースオブジェクトを変換および同期した
 **メモ**SQL Azure 設定は、プロジェクトの作成中に [SQL Azure に移行] を選択した場合にのみ使用できます。  
   
 ## <a name="creating-new-projects"></a>新しいプロジェクトの作成  
-SSMA は、既定のプロジェクトを読み込まずに起動します。 Access データベースからまたは SQL Azure に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行するには、プロジェクトを作成する必要があります。  
+SSMA は、既定のプロジェクトを読み込まずに起動します。 Access データベースからまたは SQL Azure にデータを移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、プロジェクトを作成する必要があります。  
   
 **新しいプロジェクトを作成するには**  
   
@@ -67,7 +67,7 @@ SSMA は、既定のプロジェクトを読み込まずに起動します。 Ac
   
 3.  [**場所**] ボックスで、プロジェクトのフォルダーを入力または選択します。  
   
-4.  [移行先] ドロップダウンで、SQL Server 2005/SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016/Azure SQL DB のいずれかを選択し、[ **OK**] をクリックします。  
+4.  [移行先] ドロップダウンで、SQL Server 2005/SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016/Azure SQL Database のいずれかを選択し、[ **OK**] をクリックします。  
   
 SSMA により、プロジェクトファイルが作成されます。 これで、 [1 つ以上の Access データベースを追加](adding-and-removing-access-database-files-accesstosql.md)する次の手順を実行できます。  
   
@@ -89,12 +89,12 @@ SSMA により、プロジェクトファイルが作成されます。 これ�
   
         メタデータの保存には数分かかる場合があります。 この時点でメタデータを保存しない場合は、チェックボックスをオンにしないでください。  
   
-    2.  **[Save]** (保存) をクリックします。  
+    2.  **[保存]** をクリックします。  
   
         SSMA は、アクセススキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   
 ## <a name="opening-projects"></a>プロジェクトを開く  
-プロジェクトを開くと、そのプロジェクトはまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure から切断されます。 これにより、オフラインで作業できるようになります。 メタデータを更新するに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、データベースオブジェクトをまたは SQL Azure に読み込みます。 データを移行するには、また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は SQL Azure に再接続する必要があります。  
+プロジェクトを開くと、そのプロジェクトはまたは SQL Azure から切断され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これにより、オフラインで作業できるようになります。 メタデータを更新するには、データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure に読み込みます。 データを移行するには、または SQL Azure に再接続する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 **プロジェクトを開くには**  
   
@@ -104,7 +104,7 @@ SSMA により、プロジェクトファイルが作成されます。 これ�
   
     -   [**ファイル**] メニューの [**プロジェクトを開く**] を選択し、a2ssproj プロジェクトファイルを見つけて、ファイルを選択し、[**開く**] をクリックします。  
   
-2.  に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再接続するには、[**ファイル**] メニューの [ **SQL Server に再接続**] を選択します。  
+2.  に再接続するには、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ファイル**] メニューの [ **SQL Server に再接続**] を選択します。  
   
 3.  SQL Azure に再接続するには、[**ファイル**] メニューの [ **SQL Azure に再接続**] を選択します。  
   

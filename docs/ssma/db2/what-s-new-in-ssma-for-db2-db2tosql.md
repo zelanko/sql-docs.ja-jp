@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: c9a6d0b5eee611de7009247484dbb9b7591982d5
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477254"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862479"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新機能 (DB2ToSQL)
 
@@ -152,9 +152,9 @@ SSMA for DB2 の v2.0 リリースが拡張され、品質と変換メトリッ�
 
 SSMA for DB2 の v2.0 リリースが拡張され、品質と変換メトリックの向上を目的とした修正プログラムが提供されるようになりました。 このリリースには、次の新機能も用意されています。
 
-* ターゲットとしての**Azure SQL Database Managed Instance**のサポート。 Azure SQL Database Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
+* ターゲットとしての**AZURE SQL Managed Instance**のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
 
-  ![SQL DB MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
 * 変換後の**修正アドバイザー**。 詳細について[は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
 

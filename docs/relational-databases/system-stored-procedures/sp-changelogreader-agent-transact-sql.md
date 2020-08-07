@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c776d68cb997f5f360e7b79180a8dfaea86fd6e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a46432317ebf320af3e3860c1c1973fc04119b5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771498"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864969"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_login = ] 'job_login'`エージェントを実行するアカウントのログインを指定します。 *job_login*は**nvarchar (257)**,、既定値は NULL です。 Azure SQL Database Managed Instance で、SQL Server アカウントを使用します。 *これは、以外* [!INCLUDE[msCoName](../../includes/msconame-md.md)] のでは変更できません。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*パブリッシャー。*  
+`[ @job_login = ] 'job_login'`エージェントを実行するアカウントのログインを指定します。 *job_login*は**nvarchar (257)**,、既定値は NULL です。 Azure SQL Managed Instance で、SQL Server アカウントを使用します。 *これは、以外* [!INCLUDE[msCoName](../../includes/msconame-md.md)] のでは変更できません。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*パブリッシャー。*  
   
 `[ @job_password = ] 'job_password'`エージェントを実行するアカウントのパスワードを指定します。 *job_password*は**sysname**,、既定値は NULL です。  
   
@@ -77,8 +77,8 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changelogreader_agent**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーションのセキュリティ設定を表示および変更する](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+## <a name="see-also"></a>参照  
+ [レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_helplogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   

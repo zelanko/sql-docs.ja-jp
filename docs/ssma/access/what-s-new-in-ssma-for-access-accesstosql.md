@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 06fd04921d217bf81861c76a5b09769039be5ee7
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 1175a66a0d87296204825542dfb4021b568c30e6
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477374"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863843"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access の新機能 (アクセス可能な Sql)
 
@@ -114,9 +114,9 @@ SSMA for Access の v2.0 リリースは、品質と変換メトリックの向�
 
 SSMA for Access の v2.0 リリースは、品質と変換メトリックの向上を目的とした修正を対象として強化されています。 このリリースには、次の新機能も用意されています。
 
-* ターゲットとしての**Azure SQL Database Managed Instance**のサポート。 Azure SQL Database Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
+* ターゲットとしての**AZURE SQL Managed Instance**のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
 
-  ![SQL DB MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
 * 変換後の**修正アドバイザー**。 詳細について[は、こちら](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733)を参照してください。
 
@@ -231,8 +231,8 @@ SSMA for Access の2016年1月のメンテナンスリリースには、次の�
 
 SSMA for Access の2014年7月のリリースには、次の変更が含まれています。
 
-* Azure SQL DB のコード変換が改善されました。
-* 拡張パックの機能をスキーマに移動し、Azure SQL DB をサポートするようになりました。
+* Azure SQL Database コード変換が改善されました。
+* 拡張パックの機能をスキーマに移動し、Azure SQL Database をサポートしました。
 * 10,000 を超えるオブジェクトを含むデータベースのパフォーマンスの向上をテストしました。
 * 多数のオブジェクトを処理するための UI の機能強化が追加されました。
 * "既知の" LOB スキーマの強調表示のサポートが追加されました (そのため、変換では無視できます)。

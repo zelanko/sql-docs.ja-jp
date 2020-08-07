@@ -1,5 +1,5 @@
 ---
-title: プロジェクトの設定 (Azure SQL DB) (データベースの設定) |Microsoft Docs
+title: プロジェクトの設定 (Azure SQL Database) (SQL server による) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 60140559f94cdeebea935b423fbbeef24bce7a08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67d80ae6457a4b02e4520d634acfb5f06aa747ec
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929466"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823931"
 ---
-# <a name="project-settings-azure-sql-db-accesstosql"></a>プロジェクトの設定 (Azure SQL DB) (Sql server による)
+# <a name="project-settings-azure-sql-database-accesstosql"></a>プロジェクトの設定 (Azure SQL Database) (SQL server による)
 SQL Azure プロジェクトの設定を使用すると、接続ダイアログに追加する SQL Azure データベースサフィックスを構成し、SQL Azure 接続でハートビートメカニズムを実装することもできます。  
   
 SQL Azure ウィンドウは、[プロジェクトの**設定**] ダイアログボックスと [**既定のプロジェクトの設定**] ダイアログボックスで使用できます。  

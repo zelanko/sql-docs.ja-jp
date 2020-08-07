@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944687"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863523"
 ---
 # <a name="setting-project-options-mysqltosql"></a>プロジェクト オプションの設定 (MySQLToSQL)
 SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションでは、オブジェクトの変換方法、データの移行方法、およびソースデータ型とターゲットデータ型のマッピング方法を指定します。  オブジェクトを SQL Server に変換したり、SQL Server または SQL Azure にデータを SQL Azure または移行したりする前に、構成オプションがプロジェクトに適していることを確認してください。  
@@ -60,7 +60,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   [プロジェクト設定 &#40;同期&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [Azure SQL DB&#41; &#40;MySQLToSQL&#41;のプロジェクト設定 &#40;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [プロジェクト設定 &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>プロジェクト オプションの設定  
 SSMA では、すべてのプロジェクトの既定の設定を構成できます。 これらの設定は、SSMA 構成ファイルに保存され、作成した新しいプロジェクトに適用されます。  

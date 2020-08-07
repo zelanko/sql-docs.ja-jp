@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: d74cb91c6e0cb9bc9a1c8dce53f8e93d355df5d2
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885799"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823604"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant の概要
 
@@ -30,7 +30,7 @@ Data Migration Assistant (DMA) を使用すると、新しいバージョンの 
   
 ## <a name="get-data-migration-assistant"></a>Data Migration Assistant を入手する
 
-DMA をインストールするには、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53595)から最新バージョンのツールをダウンロードし、 **DataMigrationAssistant**ファイルを実行します。
+DMA をインストールするには、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53595)から最新バージョンのツールをダウンロードし、 **DataMigrationAssistant.msi**ファイルを実行します。
 
 ## <a name="capabilities"></a>機能
 
@@ -48,9 +48,9 @@ DMA をインストールするには、 [Microsoft ダウンロードセンタ�
 
 - アップグレード後にデータベースが恩恵を受けることのできるターゲット SQL Server プラットフォームの新機能について説明します。 これらは、機能に関する推奨事項として説明されており、次のカテゴリに分類されています。
 
-  - [パフォーマンス]
+  - パフォーマンス
   - セキュリティ
-  - Storage
+  - ストレージ
 
 - オンプレミスの SQL Server インスタンスを、オンプレミスでホストされている最新の SQL Server インスタンスに、またはオンプレミスネットワークからアクセス可能な Azure 仮想マシン (VM) に移行します。 Azure VM には、VPN またはその他のテクノロジを使用してアクセスできます。 移行ワークフローは、次のコンポーネントを移行するのに役立ちます。
 
@@ -61,13 +61,13 @@ DMA をインストールするには、 [Microsoft ダウンロードセンタ�
 
 - 移行が成功すると、アプリケーションはターゲット SQL Server データベースにシームレスに接続できるようになります。
 
-- Azure SQL Database または Azure SQL Database マネージインスタンスに移行するオンプレミスの SQL Server Integration Services (SSIS) パッケージを評価します。 この評価は、移行に影響する可能性がある問題を発見するのに役立ちます。 これらは、互換性の問題として記述され、次のカテゴリに分類されます。
+- Azure SQL Database または Azure SQL Managed Instance に移行するオンプレミスの SQL Server Integration Services (SSIS) パッケージを評価します。 この評価は、移行に影響する可能性がある問題を発見するのに役立ちます。 これらは、互換性の問題として記述され、次のカテゴリに分類されます。
 
   - 移行ブロッカー: ソースパッケージの Azure への移行を妨げる互換性の問題を検出します。 DMA は、これらの問題に対処するための推奨事項を提供します。
 
   - 情報に関する問題: ソースパッケージで使用される部分的にサポートされている機能または非推奨の機能を検出します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 評価を実行するには、SQL Server **sysadmin**ロールのメンバーである必要があります。
 
@@ -83,7 +83,7 @@ DMA を使用すると、以前のバージョンの SQL Server アップグレ�
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
--  Windows 上の SQL Server 2017
+- SQL Server 2017 on Windows
 
 **ターゲット**
 
@@ -93,7 +93,7 @@ DMA を使用すると、以前のバージョンの SQL Server アップグレ�
 - Windows および Linux での SQL Server 2017
 - SQL Server 2019
 - Azure SQL Database 単一データベース
-- Azure SQL Database マネージド インスタンス
+- Azure SQL Managed Instance
 - Azure 仮想マシンで実行されている SQL server
 
 ## <a name="see-also"></a>関連項目

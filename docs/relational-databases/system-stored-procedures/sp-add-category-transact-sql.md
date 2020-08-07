@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 251c9992285084123df7afb3c27678c2886b531c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 323a86b4efbaa63d8858341c68908e30258d4889
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880004"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865290"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85880004"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+ > [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では、ほとんどの SQL Server エージェント機能は現在サポートされていません。 詳細については[、「AZURE sql Managed Instance t-sql の相違 SQL Server 点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ sp_add_category
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'`追加するカテゴリのクラス。 *クラス*は**varchar (8)** で、既定値は JOB,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |ジョブ|ジョブカテゴリを追加します。|  
 |ALERT|アラートカテゴリを追加します。|  
@@ -55,11 +55,11 @@ sp_add_category
   
 `[ @type = ] 'type'`追加するカテゴリの種類。 *型*は**varchar (12)**,、既定値は**LOCAL**,、これらの値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |LOCAL|ローカル ジョブ カテゴリ|  
 |マルチサーバー|マルチサーバージョブカテゴリ。|  
-|なし|JOB 以外のクラスのカテゴリ **。**|  
+|NONE|JOB 以外のクラスのカテゴリ **。**|  
   
 `[ @name = ] 'name'`追加するカテゴリの名前。 名前は、指定されたクラス内で一意である必要があります。 *名前*は**sysname**,、既定値はありません。  
   
@@ -75,7 +75,7 @@ sp_add_category
 ## <a name="permissions"></a>アクセス許可  
  **Sp_add_category**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AdminJobs` というローカル ジョブ カテゴリを作成します。  
   
 ```  
@@ -89,7 +89,7 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

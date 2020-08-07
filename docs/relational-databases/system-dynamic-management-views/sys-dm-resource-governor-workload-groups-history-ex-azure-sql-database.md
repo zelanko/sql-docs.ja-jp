@@ -18,17 +18,17 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 41378ba13c6c85059313595161aeeb4226c6731e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b112762df3ca05411594b1e1c03a04817c094d9
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718733"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823320"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Azure SQL Database のリソースプール統計の最後の32分 (合計 128) の20秒間隔でスナップショットを返します。
+Azure SQL Database のリソースプール統計の最後の32分 (合計128秒間) について、20秒間隔でスナップショットを返します。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -86,7 +86,7 @@ Azure SQL Database のリソースプール統計の最後の32分 (合計 128) 
 > [!IMPORTANT]
 > この DMV によって提示されるデータのほとんどは、内部使用を目的としており、変更される可能性があります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、ユーザープールによって各スナップショットの最大ログレートデータと消費量を返します。
 
@@ -100,7 +100,7 @@ WHERE name LIKE 'User%'
 ORDER BY snapshot_time DESC;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [翻訳ログレートガバナンス](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [エラスティック プールの DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9ff6619109e198a50d15c21aecbe958a6183d2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42dffc53fbce2350314d773ce4cd376fae84256a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716464"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864989"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -90,7 +90,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-`[ @job_login = ] 'job_login'`エージェントを実行するアカウントのログインを指定します。 Azure SQL Database Managed Instance SQL Server アカウントを使用します。 *job_login*は**nvarchar (257)** で、既定値は NULL です。 この Windows アカウントは、エージェントがディストリビューターに接続するとき、および Windows 統合認証を使用してサブスクライバーに接続するときに必ず使用されます。  
+`[ @job_login = ] 'job_login'`エージェントを実行するアカウントのログインを指定します。 Azure SQL Managed Instance SQL Server アカウントを使用します。 *job_login*は**nvarchar (257)** で、既定値は NULL です。 この Windows アカウントは、エージェントがディストリビューターに接続するとき、および Windows 統合認証を使用してサブスクライバーに接続するときに必ず使用されます。  
   
 `[ @job_password = ] 'job_password'`エージェントを実行するアカウントのパスワードを指定します。 *job_password*は**sysname**であり、既定値はありません。  
   
@@ -106,7 +106,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1**|1 回|  
 |**2**|オン デマンド|  
 |**4**|毎日|  
-|**8**|週次|  
+|**8**|週単位|  
 |**16**|月単位|  
 |**32**|月単位の相対|  
 |**64** (既定値)|自動開始|  
@@ -122,8 +122,8 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|First|  
-|**2**|Second|  
-|**4**|第 3 週|  
+|**2**|秒|  
+|**4**|Third|  
 |**8**|4 番目|  
 |**16**|末尾|  
   
@@ -134,7 +134,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|Second|  
+|**2**|秒|  
 |**4** (既定値)|分|  
 |**8**|時間|  
   
@@ -185,8 +185,8 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_addpushsubscription_agent**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [プッシュサブスクリプションを作成する](../../relational-databases/replication/create-a-push-subscription.md)   
+## <a name="see-also"></a>参照  
+ [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 以外のサブスクライバーのサブスクリプションを作成する](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

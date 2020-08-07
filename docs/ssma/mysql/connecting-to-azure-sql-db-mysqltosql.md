@@ -1,5 +1,5 @@
 ---
-title: Azure SQL DB への接続 (MySQLToSQL) |Microsoft Docs
+title: Azure SQL Database に接続しています (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103189"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822561"
 ---
-# <a name="connecting-to-azure-sql-db-mysqltosql"></a>Azure SQL DB への接続 (MySQLToSQL)
+# <a name="connecting-to-azure-sql-database-mysqltosql"></a>Azure SQL Database に接続しています (MySQLToSQL)
 MySQL データベースを SQL Azure に移行するには、SQL Azure のターゲットインスタンスに接続する必要があります。 接続すると、SSMA は SQL Azure インスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Azure メタデータエクスプローラーにデータベースのメタデータを表示します。 SSMA は、接続している SQL Azure のインスタンスの情報を格納しますが、パスワードは保存しません。  
   
 SQL Azure への接続は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、サーバーへのアクティブな接続が必要な場合は SQL Azure に再接続する必要があります。 データベースオブジェクトを SQL Azure に読み込んでデータを移行するまで、オフラインで作業することができます。  
@@ -29,7 +29,7 @@ SQL Azure のインスタンスに関するメタデータは、自動的には�
 ## <a name="required-sql-azure-permissions"></a>必要な SQL Azure アクセス許可  
 SQL Azure に接続するために使用するアカウントには、アカウントが実行するアクションに応じて、異なるアクセス許可が必要です。  
   
--   MySQL オブジェクトを構文に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換したり、SQL Azure からメタデータを更新したり、変換された構文をスクリプトに保存したりするには、アカウントに SQL Azure のインスタンスにログオンする権限が必要です。  
+-   MySQL オブジェクトを構文に変換し [!INCLUDE[tsql](../../includes/tsql-md.md)] たり、SQL Azure からメタデータを更新したり、変換された構文をスクリプトに保存したりするには、アカウントに SQL Azure のインスタンスにログオンする権限が必要です。  
   
 -   データベースオブジェクトを SQL Azure に読み込むには、ターゲットデータベースの**db_owner**データベースロールのメンバーシップである最低限の権限が必要です。  
   
@@ -57,7 +57,7 @@ MySQL データベースオブジェクトを SQL Azure 構文に変換する前
   
 6.  SSMA では、SQL Azure への暗号化接続を推奨しています。  
   
-7.  **[Connect]** をクリックします。  
+7.  **[接続]** をクリックします。  
   
 > [!IMPORTANT]  
 > SSMA for MySQL は、SQL Azure の**master**データベースへの接続をサポートしていません。  
@@ -87,5 +87,5 @@ SQL Azure データベースに関するメタデータは自動的に更新さ�
 -   これらのタスクを実行する必要がない場合は、MySQL データベースオブジェクト定義を SQL Azure オブジェクト定義に変換できます。 詳細については、「 [MySQL データベース &#40;MySQLToSQL の変換](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)」を参照してください&#41;  
   
 ## <a name="see-also"></a>参照  
-[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

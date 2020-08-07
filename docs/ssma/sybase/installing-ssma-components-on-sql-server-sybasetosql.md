@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06bddd3929efa4477039300f38fbdcf301680085
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 1c66255f57a69db0807ab1620cafd60444f296c8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411600"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865390"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server での SSMA コンポーネントのインストール (SybaseToSQL)
 
@@ -109,7 +109,7 @@ SSMA for Sybase サーバーコンポーネントをにインストールする�
 3. [機能の選択] ページで、ODBC、OLE DB および ADO.NET データプロバイダーを選択します。
 4. 選択した機能を確認し、[**完了**] をクリックしてデータプロバイダーをインストールします。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [SSMA for Sybase クライアントのインストール](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)
-- [SQL Server への Sybase ASE データベースの移行-Azure SQL DB](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Sybase ASE データベースの SQL Server Azure SQL Database への移行](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

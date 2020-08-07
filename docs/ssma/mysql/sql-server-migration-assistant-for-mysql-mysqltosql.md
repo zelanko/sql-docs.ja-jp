@@ -11,12 +11,12 @@ ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 author: Jtoland
 ms.author: Jtoland
 manager: murato
-ms.openlocfilehash: ff0f81088d4da835a24b59c1629dc7d59ef2e5b1
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: de1adf21d1a4706fb8e15b3d8ae93ab1f5a95426
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293609"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863540"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL の SQL Server Migration Assistant (MySQLToSQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "84293609"
 |[SSMA for MySQL の新機能](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|SSMA for MySQL のこのバージョンの新機能|  
 |[SSMA for MySQL のインストール &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|SQL Server を実行しているコンピューターに SSMA for MySQL クライアントおよび必須コンポーネントをインストールするための前提条件と手順を説明する記事が含まれています。|  
 |[SSMA for MySQL のはじめに &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)|ユーザーインターフェイス、プロジェクト、および構成オプションについて説明します。|  
-|[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)|変換プロセスの概要と、プロセスの各手順に関する詳細情報について説明します。|  
+|[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)|変換プロセスの概要と、プロセスの各手順に関する詳細情報について説明します。|  
 |[ユーザーインターフェイスリファレンス &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)|SSMA for MySQL のダイアログボックスのドキュメントが含まれています。|  
 |[SSMA for MySQL コンソールの操作](working-with-ssma-for-mysql-console-mysqltosql.md)|SSMA コンソールアプリケーションに関するドキュメントが含まれています。|  
 |[SSMA for MySQL のサポートを取得する](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|追加のサポートを受ける方法について説明します。|  

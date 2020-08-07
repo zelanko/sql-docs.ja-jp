@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c65c19ee3b95303afb0e1ae0a950efe548c8f0af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8941c243b6741b42b7c3e628305431812ad3f8d7
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083529"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864839"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>変換のための SAP ASE データベースオブジェクトの評価 (SybaseToSQL)
-オブジェクトを読み込んで、または Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL にデータを移行する前に、移行の複雑さと所要時間を決定する必要があります。 SSMA では、に[!INCLUDE[tsql](../../includes/tsql-md.md)]正常に変換されるオブジェクトとプロシージャの割合を示す評価レポートを作成できます。 SSMA では、変換エラーの原因となる可能性のある特定の問題を確認することもできます。  
+オブジェクトを読み込んで、または Azure SQL にデータを移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行の複雑さと所要時間を決定する必要があります。 SSMA では、に正常に変換されるオブジェクトとプロシージャの割合を示す評価レポートを作成でき [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 SSMA では、変換エラーの原因となる可能性のある特定の問題を確認することもできます。  
   
 ## <a name="create-assessment-reports"></a>評価レポートの作成  
-この評価レポートを作成すると、SSMA は、選択した SAP Adaptive Server Enterprise (ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) データベースオブジェクトをまたは Azure SQL 構文に変換し、結果を表示します。  
+この評価レポートを作成すると、SSMA は、選択した SAP Adaptive Server Enterprise (ASE) データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE SQL 構文に変換し、結果を表示します。  
   
 **評価レポートを作成するには**  
   
@@ -71,11 +71,11 @@ ms.locfileid: "68083529"
   
     -   ASE では、ASE オブジェクトを変更して、問題のあるコードを削除または修正できます。 更新されたコードを SSMA に読み込むには、メタデータを更新する必要があります。 詳細については、「 [SYBASE ASE &#40;SybaseToSQL&#41;への接続](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)」を参照してください。  
   
-    -   オブジェクトを移行から除外することができます。 また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は Azure Sql metadata Explorer と Sybase メタデータエクスプローラーで、オブジェクトをまたは azure sql に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込む前に項目の横のチェックボックスをオフにし、ASE からデータを移行します。
+    -   オブジェクトを移行から除外することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または AZURE Sql Metadata explorer と Sybase メタデータエクスプローラーで、オブジェクトをまたは AZURE sql に読み込む前に項目の横のチェックボックスをオフにし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ASE からデータを移行します。
   
 ## <a name="next-steps"></a>次のステップ  
 [SAP ASE データベースオブジェクトの &#40;SybaseToSQL&#41;への変換](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>参照  
-[SAP ASE データベースの SQL Server への移行-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[SAP ASE データベースの SQL Server Azure SQL Database &#40;SybaseToSQL&#41;への移行](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 8e9edc319a539d438cdb7eb126694812d9084d24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a670a9766388d4ba1d1908a71ef7a32147f60fc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084623"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824041"
 ---
 # <a name="new-project-db2tosql"></a>新しいプロジェクト (DB2ToSQL)
 新しい SSMA プロジェクトを作成するには、[**新しいプロジェクト**] ダイアログボックスを使用します。 [**新しいプロジェクト**] ダイアログボックスにアクセスするには、[**ファイル**] メニューの [**新しいプロジェクト**] をクリックします。  
   
-## <a name="options"></a>Options  
-**名前**  
+## <a name="options"></a>オプション  
+**Name**  
 プロジェクトの名前を入力します。 SSMA によってファイル拡張子が追加されます。  
   
 **場所**  
@@ -35,5 +35,5 @@ ms.locfileid: "68084623"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   Azure SQL DB  
+-   Azure SQL データベース  
   

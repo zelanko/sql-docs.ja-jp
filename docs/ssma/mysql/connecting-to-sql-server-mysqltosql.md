@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 462b209d73f48217cf9941adf2e3af45d62371cd
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f79784b6498f080b15f1ef370e8a3f31be81a871
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394288"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823301"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server への接続 (MySQLToSQL)
 MySQL データベースを SQL Server に移行するには、SQL Server のターゲットインスタンスに接続する必要があります。 接続すると、SSMA は SQL Server インスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Server メタデータエクスプローラーにデータベースのメタデータを表示します。 SSMA は、接続している SQL Server のインスタンスの情報を格納しますが、パスワードは保存しません。  
@@ -80,12 +80,12 @@ MySQL データベースオブジェクトを SQL Server 構文に変換する�
   
 |プロジェクトの種類と対象サーバーのバージョン|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(バージョン:13. x)|SQL Azure|  
 |-|-|-|-|-|-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|○|○|○|○|○||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||○|○|○|○||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||○|○|○||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||○|○||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||○||  
-|SQL Azure||||||○|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||はい||  
+|SQL Azure||||||はい|  
   
 > [!IMPORTANT]  
 > データベースオブジェクトの変換は、プロジェクトの種類に従って実行されますが、接続されているのバージョンによっては実行されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 プロジェクトの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より上位のバージョン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016) に接続している場合でも、変換は2005に従って実行されます。  
@@ -115,5 +115,5 @@ SQL Server データベースに関するメタデータは自動的に更新さ
 -   これらのタスクを実行する必要がない場合は、MySQL データベースオブジェクト定義を SQL Server オブジェクト定義に変換できます。 詳細については、「 [MySQL データベース &#40;MySQLToSQL の変換](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)」を参照してください&#41;  
   
 ## <a name="see-also"></a>参照  
-[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 1b90c4a0339481eb32839c026b56d157000f90ae
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 84c9a0a994e087314fcd8d1ae66e1bb5a79fedba
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394704"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863656"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>SQL Server に接続しています (DB2eToSQL)
-DB2 データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、2014、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE SQL DB に移行するには、これらのターゲットインスタンスのいずれかに接続する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 接続すると、SSMA はインスタンス内のすべてのデータベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取得し、メタデータエクスプローラーにデータベースのメタデータを表示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA は、接続されているのインスタンスに関する情報を格納し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ますが、パスワードは保存しません。  
+DB2 データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、2014、Azure SQL Database に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらのターゲットインスタンスのいずれかに接続する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 接続すると、SSMA はインスタンス内のすべてのデータベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取得し、メタデータエクスプローラーにデータベースのメタデータを表示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA は、接続されているのインスタンスに関する情報を格納し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ますが、パスワードは保存しません。  
   
 への接続 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、サーバーへのアクティブな接続が必要な場合は、に再接続する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 データベースオブジェクトをに読み込んでデータを移行するまで、オフラインで作業することができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -68,9 +68,9 @@ DB2 データベースオブジェクトを構文に変換する前に、DB2 デ
   
 6.  セキュリティで保護された接続では、[**暗号化接続**] チェックボックスと [ **trustservercertificate** ] チェックボックスの2つのコントロールが追加されます。 [**暗号化接続**] をオンにした場合にのみ、[ **trustservercertificate** ] チェックボックスが表示されます。 [**暗号化接続**] がオンになっている場合 (true)、 **trustservercertificate**がオフになっている場合 (false)、SQL Server の SSL 証明書が検証されます。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 これを実現するには、証明書をクライアント側とサーバー側の両方にインストールする必要があります。  
   
-7.  **[Connect]** をクリックします。  
+7.  **[接続]** をクリックします。  
   
-**より高いバージョンの互換性**  
+**より新しいバージョンの互換性**  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移行プロジェクトが "2005" の場合、2008と2012、2014、および2016に接続でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
@@ -78,15 +78,15 @@ DB2 データベースオブジェクトを構文に変換する前に、DB2 デ
   
 -   作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトが 2012 SQL Server 場合は、2012および2014および2016に接続できます。  
   
-|プロジェクトの種類と対象サーバーのバージョン|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(バージョン:13. x)|Azure SQL DB|  
+|プロジェクトの種類と対象サーバーのバージョン|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(バージョン:13. x)|Azure SQL データベース|  
 |-|-|-|-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|○|○|○||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||○|○||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014|||○||  
-|Azure SQL DB||||○|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014|||はい||  
+|Azure SQL データベース||||はい|  
   
 > [!IMPORTANT]  
-> データベースオブジェクトの変換は、プロジェクトの種類に従って実行されますが、接続しているのバージョンによっては実行されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、または Azure SQL DB の場合。  
+> データベースオブジェクトの変換は、プロジェクトの種類に従って実行されますが、接続しているのバージョンによっては実行されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、または Azure SQL Database の場合。  
   
 ## <a name="synchronizing-sql-server-metadata"></a>SQL Server メタデータの同期  
 データベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は自動的に更新されません。 メタデータエクスプローラーのメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、最初に接続したとき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または前回手動でメタデータを更新したときのメタデータのスナップショットです。 すべてのデータベース、または任意の1つのデータベースまたはデータベースオブジェクトのメタデータを手動で更新できます。  

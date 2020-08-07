@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477324"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864709"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE の新機能 (SybaseToSQL)
 
@@ -114,9 +114,9 @@ SSMA for SAP ASE の v2.0 リリースは、品質と変換のメトリックを
 
 SSMA for SAP ASE の v2.0 リリースは、品質と変換メトリックの向上を目的とした修正を対象として強化されています。 また、このリリースでは、次の新機能が提供されています。
 
-* ターゲットとしての**Azure SQL Database Managed Instance**のサポート。 Azure SQL Database Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
+* ターゲットとしての**AZURE SQL Managed Instance**のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
 
-  ![SQL DB MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
+  ![SQL Database MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
 * 変換後の**修正アドバイザー**。 詳細について[は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
 
@@ -236,8 +236,8 @@ SSMA for Sybase の2016年1月のメンテナンスリリースには、次の�
 
 SSMA for Sybase の2014年7月のリリースには、次の変更が含まれています。
 
-* Azure SQL DB のコード変換が改善されました。
-* 拡張パックの機能をスキーマに移動し、Azure SQL DB をサポートするようになりました。
+* Azure SQL Database コード変換が改善されました。
+* 拡張パックの機能をスキーマに移動し、Azure SQL Database をサポートしました。
 * 10,000 を超えるオブジェクトを含むデータベースに対してテストされたパフォーマンスの改善。
 * 多数のオブジェクトを処理するための UI の機能強化が追加されました。
 * 既知の LOB スキーマを強調表示する機能が追加されました (そのため、変換では無視できます)。

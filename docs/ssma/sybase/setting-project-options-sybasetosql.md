@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 2c8d074db2fc1e8a9d29ecf5fdc0405524e9bb1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2b16054a0a866d7772243a04cb8f5955931cfc4
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020922"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864749"
 ---
 # <a name="setting-project-options-sybasetosql"></a>プロジェクト オプションの設定 (SybaseToSQL)
-SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、SQL azure、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換したり、データ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を SQL Azure または SQL Azure に移行したりする前に、構成オプションがプロジェクトに適していることを確認してください。  
+SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、SQL azure、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトをに変換したり、データを SQL Azure または SQL Azure に移行したりする前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、構成オプションがプロジェクトに適していることを確認してください。  
   
 SSMA では、すべてのプロジェクトの既定のオプションを構成できます。 これらのオプションは、作成するすべての新しいプロジェクトに適用されます。 その後、各プロジェクトのオプションをカスタマイズできます。  
   
@@ -46,7 +46,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 4.  Custom  
   
-ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティックモードでは、現在の Sybase Adaptive Server Enterprise (ASE) 構文がより多く保持されるため、読みやすくなります。 ただし、現在の構文を維持するのは正確ではない可能性があります。 ASE 構文を同等[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure 構文に変換する必要がある場合、フルモードでは完全な変換が実行されますが、結果のコードは読みにくくなる可能性があります。 カスタムモードでは、オプションを設定します。  
+ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティックモードでは、現在の Sybase Adaptive Server Enterprise (ASE) 構文がより多く保持されるため、読みやすくなります。 ただし、現在の構文を維持するのは正確ではない可能性があります。 ASE 構文を同等または SQL Azure 構文に変換する必要がある場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、フルモードでは完全な変換が実行されますが、結果のコードは読みにくくなる可能性があります。 カスタムモードでは、オプションを設定します。  
   
 設定については、このドキュメントの「ユーザーインターフェイスリファレンス」で説明されています。 各モードでの設定と設定の適用方法の詳細については、次のトピックを参照してください。  
   
@@ -60,7 +60,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   [プロジェクト設定 &#40;型マッピング&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)  
   
--   [プロジェクト設定 &#40;Azure SQL DB &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
+-   [プロジェクト設定 &#40;Azure SQL Database &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)  
   
 ## <a name="setting-project-options"></a>プロジェクト オプションの設定  
 SSMA では、すべてのプロジェクトの既定の設定を構成できます。 これらの設定は、SSMA 構成ファイルに保存され、作成した新しいプロジェクトに適用されます。  
@@ -93,13 +93,13 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 3.  **[OK]** をクリックして設定を保存します。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズする場合は、「 [SYBASE ASE と SQL Server のデータ型 &#40;SybaseToSQL&#41;にマップ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)する」を参照してください。  
   
--   それ以外の場合は、Sybase データベースオブジェクト定義を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure オブジェクト定義に変換できます。 詳細については、「 [SYBASE ASE データベースオブジェクトの &#40;SybaseToSQL&#41;の変換](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)」を参照してください。  
+-   それ以外の場合は、Sybase データベースオブジェクト定義を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure オブジェクト定義に変換できます。 詳細については、「 [SYBASE ASE データベースオブジェクトの &#40;SybaseToSQL&#41;の変換](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[Sybase ASE データベースの SQL Server への移行-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE データベースを SQL Server Azure SQL Database &#40;SybaseToSQL&#41;に移行する](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

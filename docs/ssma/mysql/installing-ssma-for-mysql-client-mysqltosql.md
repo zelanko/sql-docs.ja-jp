@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7dc2cb4216386e13c57d31f121809a604e91b67d
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: d6bda2cad0761dbb53fcc4bb66d29829841f249d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411610"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824045"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>SSMA for MySQL クライアントのインストール (MySQLToSQL)
 
@@ -42,7 +42,7 @@ SSMA をインストールする前に、コンピューターが次の要件を
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] バージョン4.7.2 以降のバージョン。 これは[.NET Framework デベロッパーセンター](https://go.microsoft.com/fwlink/?LinkId=48882)から入手できます。
 - MySQL ODBC 5.1 ドライバーと、移行する MySQL データベースへの接続。 Mysql は、MySQL Web サイトからインストールできます。 接続の詳細については、「 [MySQL への接続 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)」を参照してください。
 - にアクセスし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースオブジェクトとデータを移行するのターゲットインスタンスをホストするコンピューターに対して十分なアクセス許可を付与します。 詳細については、「 [SQL Server &#40;MySQLToSQL&#41;への接続](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)」を参照してください。
-- プロジェクトの場合は [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 、 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] データベースオブジェクトとデータを移行するのインスタンスに対する十分なアクセス許可とアクセス許可が必要です。 詳細については、「 [AZURE SQL DB への接続 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)」を参照してください。
+- プロジェクトの場合は [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 、 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] データベースオブジェクトとデータを移行するのインスタンスに対する十分なアクセス許可とアクセス許可が必要です。 詳細については、「 [Azure SQL Database &#40;MySQLToSQL&#41;への接続](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)」を参照してください。
 - 4 GB の RAM を推奨します。
 
 ## <a name="installing-ssma-for-mysql-client"></a>SSMA for MySQL クライアントのインストール
@@ -65,6 +65,6 @@ SSMA クライアントをインストールするには:
 
 既定のインストール場所は `C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL` です。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [MySQL データベースの SQL Server への移行-Azure SQL DB](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+- [MySQL データベースの SQL Server Azure SQL Database への移行](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

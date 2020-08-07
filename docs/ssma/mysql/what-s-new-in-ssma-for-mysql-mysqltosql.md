@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 0511e67a355f960dcc3af90324142d5662b38627
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477364"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863468"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL の新機能 (MySqlToSql)
 
@@ -114,9 +114,9 @@ SSMA for MySQL の v2.0 リリースは、品質と変換のメトリックを�
 
 SSMA for MySQL の v2.0 リリースは、品質と変換メトリックの向上を目的とした修正を対象として強化されています。 このリリースには、次の新機能も用意されています。
 
-* ターゲットとしての**Azure SQL Database Managed Instance**のサポート。 Azure SQL Database Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
+* ターゲットとしての**AZURE SQL Managed Instance**のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
 
-  ![SQL DB MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
 * 変換後の**修正アドバイザー**。 詳細について[は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
 
@@ -238,8 +238,8 @@ SSMA for MySQL の2016年1月のメンテナンスリリースには、次の変
 
 SSMA for MySQL の2014年7月のリリースには、次の変更が含まれています。
   
-* Azure SQL DB のコード変換が改善されました。
-* 拡張パックの機能は、Azure SQL DB をサポートするためにスキーマに移行されました。
+* Azure SQL Database コード変換が改善されました。
+* 拡張パックの機能は、Azure SQL Database をサポートするためにスキーマに移行されました。
 * 10,000 を超えるオブジェクトがあるデータベースでテストされたパフォーマンスの向上。
 * 多数のオブジェクトを処理するための UI の機能強化。
 * 既知の LOB スキーマの強調表示 (そのため、変換では無視できます)。

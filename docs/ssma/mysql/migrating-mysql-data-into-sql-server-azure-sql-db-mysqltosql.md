@@ -1,5 +1,5 @@
 ---
-title: MySQL データの SQL Server への移行-Azure SQL DB (MySQLToSQL) |Microsoft Docs
+title: MySQL データの SQL Server Azure SQL Database への移行 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9679651e80e036fce923daac76130be01cb5a07a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908832"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862711"
 ---
-# <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>MySQL データの SQL Server への移行-Azure SQL DB (MySQLToSQL)
-変換されたオブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure に正常に同期した後、MySQL から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure にデータを移行できます。  
+# <a name="migrating-mysql-data-into-sql-server---azure-sql-database-mysqltosql"></a>MySQL データの SQL Server Azure SQL Database への移行 (MySQLToSQL)
+変換されたオブジェクトをまたは SQL Azure に正常に同期した後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、MySQL からまたは SQL Azure にデータを移行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 > [!IMPORTANT]  
 > 使用されているエンジンがサーバー側のデータ移行エンジンである場合、データを移行する前に、ssma を実行しているコンピューターに SSMA for MySQL Extension Pack と MySQL プロバイダーをインストールする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスも実行されている必要があります。 拡張機能パックをインストールする方法の詳細については、「 [SQL Server での SSMA コンポーネントのインストール (MySQL から SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1) 」を参照してください。  
   
 ## <a name="setting-migration-options"></a>移行オプションの設定  
-または SQL Azure に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行する前に、[プロジェクトの**設定**] ダイアログボックスでプロジェクトの移行オプションを確認してください。  
+または SQL Azure にデータを移行する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [プロジェクトの**設定**] ダイアログボックスでプロジェクトの移行オプションを確認してください。  
   
 -   このダイアログボックスを使用すると、移行バッチサイズ、テーブルロック、制約チェック、null 値処理、id 値処理などのオプションを設定できます。 プロジェクトの移行設定の詳細については、「[プロジェクトの設定 (移行)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)」を参照してください。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67908832"
 > **クライアント側のデータ移行**オプションは、SQL Azure に対してのみ使用できます。  
   
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>SQL Server または SQL Azure へのデータの移行  
-データの移行は、データの行を MySQL テーブルからまたはトランザクション内の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure テーブルに移動する一括読み込み操作です。 各トランザクションでに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込まれる行の数は、プロジェクトの設定で構成されます。  
+データの移行は、データの行を MySQL テーブルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはトランザクション内の SQL Azure テーブルに移動する一括読み込み操作です。 各トランザクションでに読み込まれる行の数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、プロジェクトの設定で構成されます。  
   
 移行メッセージを表示するには、[出力] ウィンドウが表示されていることを確認します。 それ以外の場合は、[**表示**] メニューの [**出力**] を選択します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "67908832"
   
         1.  SSMA for MySQL Extension Pack は SQL Server のインスタンスにインストールされます。  
   
-        2.  エージェント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスは、のインスタンスで実行されて SQL Server  
+        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスは、のインスタンスで実行されて SQL Server  
   
     -   **サーバー側のデータ移行**を実行するには、[**プロジェクトの設定**] ダイアログボックスで [**サーバー側のデータ移行エンジン**] オプションを選択します。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67908832"
   
     ターゲットデータベースが SQL Server 場合は、[ **SQL Server への接続**] ダイアログボックスで接続資格情報を入力し、[**接続**] をクリックします。 SQL Server に接続する方法の詳細については、「 [Connect to SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536) 」を参照してください。  
   
-    ターゲットデータベースが SQL Azure 場合は、[ **SQL Azure への接続**] ダイアログボックスで接続資格情報を入力し、[**接続**] をクリックします。 SQL Azure に接続する方法の詳細については、「 [AZURE SQL DB への接続 &#40;MySQLToSQL](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md) 」を参照してください&#41;  
+    ターゲットデータベースが SQL Azure 場合は、[ **SQL Azure への接続**] ダイアログボックスで接続資格情報を入力し、[**接続**] をクリックします。 SQL Azure に接続する方法の詳細については、「 [Connect to Azure SQL Database &#40;MySQLToSQL](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md) 」を参照してください&#41;  
   
     メッセージが [**出力**] ウィンドウに表示されます。 移行が完了すると、**データ移行レポート**が表示されます。 データが移行されなかった場合は、エラーが含まれている行をクリックし、[**詳細**] をクリックします。 レポートの作成が完了したら、[**閉じる**] をクリックします。 データ移行レポートの詳細については、「[データ移行レポート (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241) 」を参照してください。  
   
@@ -108,5 +108,5 @@ ms.locfileid: "67908832"
 > ターゲットデータベースとして SQL Express edition を使用すると、クライアント側のデータの移行のみが許可され、サーバー側のデータ移行はサポートされません。  
   
 ## <a name="see-also"></a>参照  
-[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

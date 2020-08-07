@@ -1,5 +1,5 @@
 ---
-title: Azure SQL DB への接続 (MySQLToSQL) |Microsoft Docs
+title: Azure SQL Database への接続 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103242"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823795"
 ---
-# <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB への接続 (MySQLToSQL)
+# <a name="connect-to-azure-sql-database-mysqltosql"></a>Azure SQL Database への接続 (MySQLToSQL)
 [SQL Azure への接続] ダイアログボックスを使用して、移行する SQL Azure データベースに接続します。  
   
 このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **SQL Azure に接続**] を選択します。 以前に接続している場合、コマンドは**SQL Azure に再接続します。**  
   
 ## <a name="options"></a>オプション  
-**サーバー名**  
+**[サーバー名]**  
   
 SQL Azure に接続するためのサーバー名を選択または入力します。  
   

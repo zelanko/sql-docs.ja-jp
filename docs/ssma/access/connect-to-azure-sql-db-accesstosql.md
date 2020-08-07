@@ -1,5 +1,5 @@
 ---
-title: Azure SQL DB への接続 (アクセス先) |Microsoft Docs
+title: Azure SQL Database への接続 (アクセス先の SQL) |Microsoft Docs
 ms.prod: sql
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0b26ddaef1373544e0df2fd9186cdf56fdafd801
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34e25824ee95745bd5069a6ed601318d47a96e81
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68040631"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865250"
 ---
-# <a name="connect-to-azure-sql-db-accesstosql"></a>Azure SQL DB への接続 (アクセス先)
+# <a name="connect-to-azure-sql-database-accesstosql"></a>Azure SQL Database への接続 (アクセス先の SQL)
 [SQL Azure への接続] ダイアログボックスを使用して、移行する SQL Azure データベースに接続します。  
   
 このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **SQL Azure に接続**] を選択します。 以前に接続している場合、コマンドは**SQL Azure に再接続します。**  
   
 ## <a name="options"></a>オプション  
-**サーバー名**  
+**[サーバー名]**  
   
 SQL Azure に接続するためのサーバー名を選択または入力します。  
   
@@ -46,8 +46,8 @@ SSMA が SQL Azure データベースへの接続に使用するユーザー名�
   
 SSMA では、SQL Azure への暗号化接続を推奨しています。  
   
-## <a name="create-azure-database"></a>Azure データベースの作成  
-新しい azure データベースを作成するには、次の手順に従います。  
+## <a name="create-database"></a>データベースの作成  
+新しいデータベースを作成するには、次の手順に従います。  
   
 1.  [SQL Azure への接続] ダイアログボックスに表示されている [参照] ボタンをクリックします。  
   
@@ -55,7 +55,7 @@ SSMA では、SQL Azure への暗号化接続を推奨しています。
   
     1.  **(データベースが見つかりません)** が無効化され、常にグレー表示になっている  
   
-    2.  常に有効になっている**新しいデータベースを作成**し、ユーザーが SQL Azure アカウントで新しい azure データベースを作成できるようにします。 このメニュー項目をクリックすると、[azure データベースの作成] ダイアログボックスにデータベースの名前とサイズが表示されます。  
+    2.  常に有効になっている**新しいデータベースを作成**し、ユーザーが新しいデータベースを作成できるようにします。 このメニュー項目をクリックすると、[データベースの作成] ダイアログボックスにデータベースの名前とサイズが表示されます。  
   
 3.  データベースの作成時に、これらの2つのパラメーターは入力として指定されます。  
   

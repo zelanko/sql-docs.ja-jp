@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: ae88f4473414e83a2ffbddee5c47fa40c552115a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565501"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823367"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Database Experimentation Assistant でトレースを再生する
 
@@ -48,7 +48,7 @@ Database Experimentation Assistant (DEA) では、アップグレードされた
     - **再生トレースの場所**: トレースの再生に関連付けられているトレースファイル/xevent を格納するパスを指定します。
 
         > [!NOTE]
-        > Azure SQL Database または Azure SQL Database マネージインスタンスの場合は、Azure blob ストレージアカウントの SAS URI を指定する必要があります。
+        > Azure SQL Database または Azure SQL Managed Instance については、Azure blob ストレージアカウントの SAS URI を指定する必要があります。
 
 3. **[はい、データベースを手動で復元しまし**た] チェックボックスをオンにして、データベースが復元されたことを確認します。
 

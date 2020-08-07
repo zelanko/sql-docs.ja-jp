@@ -1,6 +1,6 @@
 ---
 title: Data Migration Assistant を使用して SSIS 移行評価を作成する
-description: Azure SQL Database または Azure SQL Database マネージインスタンスに移行する前に、Data Migration Assistant を使用してオンプレミスの SQL Server 統合サービス (SSIS) を評価する方法について説明します。
+description: Azure SQL Database または Azure SQL Managed Instance に移行する前に、Data Migration Assistant を使用してオンプレミスの SQL Server 統合サービス (SSIS) を評価する方法について説明します
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74687160"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822197"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 統合サービスの移行評価を実行する
 
@@ -34,7 +34,7 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 
 ## <a name="performance-assessments"></a>パフォーマンス評価
 
-次の手順では、Data Migration Assistant を使用して、SQL Server 統合サービス (SSIS) パッケージを Azure SQL Database または Azure SQL Database マネージインスタンスに移行するための最初の評価を行う方法について説明します。
+次の手順では、Data Migration Assistant を使用して SQL Server 統合サービス (SSIS) パッケージを Azure SQL Database または Azure SQL Managed Instance に移行するための最初の評価を実行する方法について説明します。
 
 ## <a name="create-an-assessment"></a>評価を作成する
 
@@ -42,9 +42,9 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 
 1. ソースとターゲットのサーバーの種類を設定します。
 
-    ソースを**SQL Server**として選択し、対象サーバーの種類を**Azure SQL Database**または**Azure SQL Database マネージインスタンス**として設定します。
+    ソースを**SQL Server**として選択し、対象サーバーの種類を**Azure SQL Database**または**Azure SQL Managed Instance**として設定します。
 
-1. **[作成]** をクリックします。
+1. **Create** をクリックしてください。
 
     ![評価の作成](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
@@ -74,5 +74,5 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 ## <a name="next-steps"></a>次のステップ
 
 - [オンプレミスの SSIS ワークロードを ADF の SSIS に移行する方法の概要](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [SQL Server Integration Services パッケージを Azure SQL Database マネージド インスタンスに移行する](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [SQL Server Integration Services パッケージを Azure SQL Managed Instance に移行する](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [SQL Server Integration Services パッケージを Azure SQL Database に再デプロイする](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

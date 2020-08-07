@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: db29fe499889ce67af5979821d07f2eef2a91f75
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 236edb86bf1b66393ba441daf06993baea7012a6
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394934"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824017"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL のインストール (MySQLToSQL)
 MySQL の SQL Server Migration Assistant (SSMA) は、MySQL からまたは SQL Azure への移行を実行するために使用するクライアントアプリケーションで構成さ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れています。 また、データの移行と、移行したデータベースでの MySQL システム関数の使用をサポートする拡張パックも含まれています。  
@@ -36,5 +36,5 @@ SSMA for MySQL の新しいバージョンにアップグレードする場合�
 |[SSMA for MySQL コンポーネントの削除 &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|クライアントプログラムをアンインストールする手順について説明します。|  
   
 ## <a name="see-also"></a>参照  
-[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 288b6458fc8429077472ba3ba7ad49e6d6fd7565
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 5907a7cc5b93594beef8f7bd54f27f20b93fbb99
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411170"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864859"
 ---
 # <a name="installing-ssma-for-sap-ase-client-sybasetosql"></a>SSMA for SAP ASE クライアントのインストール (SybaseToSQL)
 
@@ -33,7 +33,7 @@ SSMA をインストールする前に、コンピューターが次の要件を
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows インストーラー3.1 以降のバージョン。
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)].NET Framework バージョン4.7.2 以降のバージョン。 これは[.NET Framework デベロッパーセンター](https://go.microsoft.com/fwlink/?LinkId=48882)から入手できます。
 - Sybase OLE DB/ADO.Net/ODBC プロバイダーと、移行するデータベースが格納されている SAP ASE データベースサーバーへの接続。 プロバイダーは、SAP ASE 製品メディアからインストールできます。 接続の詳細については、「 [SYBASE ASE &#40;SybaseToSQL&#41;への接続](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)」を参照してください。
-- へのアクセス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] データベースオブジェクトとデータの移行先となる、またはのターゲットインスタンスをホストするコンピューターに対する十分なアクセス許可。 詳細については[ ](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)、「 / [Azure sql DB &#40;sybasetosql&#41;に接続](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)するための SQL Server &#40;sybasetosql&#41;への接続」を参照してください。
+- へのアクセス、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] データベースオブジェクトとデータの移行先となる、またはのターゲットインスタンスをホストするコンピューターに対する十分なアクセス許可。 詳細については[ ](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)、「 / [Azure SQL Database &#40;sybasetosql&#41;に接続](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)するための SQL Server &#40;sybasetosql&#41;への接続」を参照してください。
 - 4 GB の RAM を推奨します。
 
 ## <a name="installing-the-ssma-for-sybase-client"></a>SSMA for Sybase クライアントのインストール
@@ -58,7 +58,7 @@ SSMA クライアントをインストールするには:
 
 SSMA プログラムファイルに加えて、SSMA for Sybase Extension Pack もインストールする必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「 [SQL Server &#40;SybaseToSQL&#41;での SSMA コンポーネントのインストール](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [SQL Server での SSMA コンポーネントのインストール](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-- [SQL Server への Sybase ASE データベースの移行-Azure SQL DB](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Sybase ASE データベースの SQL Server Azure SQL Database への移行](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

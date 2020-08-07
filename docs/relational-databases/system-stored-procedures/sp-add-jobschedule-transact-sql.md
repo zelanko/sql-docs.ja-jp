@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f69b827981a53024dbf22d4b3e3d2f64fd4b720f
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879972"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865121"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879972"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+  > [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では、ほとんどの SQL Server エージェント機能は現在サポートされていません。 詳細については[、「AZURE sql Managed Instance t-sql の相違 SQL Server 点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 ## <a name="syntax"></a>構文  
   
@@ -68,11 +68,11 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type`ジョブがいつ実行されるかを示す値。 *frequency_type*は**int**,、既定値は**0**,、値は次のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
 |**4**|毎日|  
-|**8**|週次|  
+|**8**|週単位|  
 |**16**|月単位|  
 |**32**|毎月、frequency_interval を基準と*します。*|  
 |**64**|エージェントサービスが開始されたときに実行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。|  
@@ -80,7 +80,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_interval = ] frequency_interval`ジョブが実行された日。 *frequency_interval*は**int**で、既定値は0です。次の表に示すように、 *frequency_type*の値に依存します。  
   
-|[値]|結果|  
+|値|結果|  
 |-----------|------------|  
 |**1** (1 回)|*frequency_interval*は使用されていません。|  
 |**4** (毎日)|*Frequency_interval*日ごと。|  
@@ -92,7 +92,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_type = ] frequency_subday_type`*Frequency_subday_interval*の単位を指定します。 *frequency_subday_type*は**int**,、既定値はありませんは、次のいずれかの値を指定します。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**0x1**|指定された時間|  
 |**0x4**|分|  
@@ -104,11 +104,11 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval*は**int**,、既定値はありませんは、次のいずれかの値を指定します。  
   
-|[値]|説明 (単位)|  
+|値|説明 (単位)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Second|  
-|**4**|第 3 週|  
+|**2**|秒|  
+|**4**|Third|  
 |**8**|4 番目|  
 |**16**|末尾|  
   
@@ -162,7 +162,7 @@ EXEC msdb.dbo.sp_add_jobschedule
         @active_start_time = 20000 -- 2:00 AM
 ```
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スケジュールを作成してジョブにアタッチする](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [ジョブのスケジュール設定](../../ssms/agent/schedule-a-job.md)   
  [スケジュールを作成する](../../ssms/agent/create-a-schedule.md)   

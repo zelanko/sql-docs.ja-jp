@@ -1,5 +1,5 @@
 ---
-title: Sybase ASE データベースを SQL Server に移行する-Azure SQL DB |Microsoft Docs
+title: Sybase ASE データベースを SQL Server に移行する-Azure SQL Database |Microsoft Docs
 description: この推奨プロセスを使用して、SQL Server Migration Assistant (SSMA) を使用して SQL Server または Azure SQL Database に SAP Adaptive Server Enterprise データベースを移行します。
 ms.custom: ''
 ms.date: 11/30/2017
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a9bcca5d23fe147394a350ff8c640680ec674675
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 15c3b7d8594f9b0700c7cb1f429a89947c16655b
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292819"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865300"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>SQL Server Azure SQL Database への SAP ASE データベースの移行 (SybaseToSQL)
 SAP Adaptive Server Enterprise (ASE) の SQL Server Migration Assistant (SSMA) は、SAP ASE データベースをまたは Azure SQL Database に迅速に移行するのに役立つ包括的な環境です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 SSMA for SAP ASE を使用することにより、データベースオブジェクトとデータを確認し、データベースの移行を評価し、データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database に移行した後、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database に移行できます。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6a2cc2c6dcb1eb1d9068a5107f504683eb516bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf9351455ffa21978821590e06edaa93e7f70405
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879976"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865350"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879976"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+ > [AZURE SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)では、ほとんどの SQL Server エージェント機能は現在サポートされていません。 詳細については[、「AZURE sql Managed Instance t-sql の相違 SQL Server 点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
  
 ## <a name="syntax"></a>構文  
   
@@ -73,12 +73,12 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level`このジョブの Microsoft Windows アプリケーションログにエントリを配置するタイミングを示す値。 *eventlog_level*は**int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|行わない|  
 |**1**|成功時|  
 |**2** (既定値)|失敗時|  
-|**3**|常に表示する|  
+|**3**|Always (常に)|  
   
 `[ @notify_level_email = ] email_level`このジョブの完了時に電子メールを送信するタイミングを示す値。 *email_level*は**int**,、既定値は**0**,、しないことを示します。 *email_level*は*eventlog_level*と同じ値を使用します。  
   
@@ -141,7 +141,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B: ポケットベル、電子メール、および net send の情報を含むジョブの追加  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B. ポケットベル、電子メール、および net send の情報を含むジョブの追加  
  この例では、ジョブが失敗した `Ad hoc Sales Data Backup` `François Ajenstat` 場合に (ポケットベル、電子メール、またはネットワークのポップアップメッセージによって) 通知されるという名前のジョブを作成し、正常に完了したときにジョブを削除します。  
   
 > [!NOTE]  
@@ -167,7 +167,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_add_jobserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

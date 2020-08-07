@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4d069d7b34b590f8d2681a136f91ed327755d5a3
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 5b9679451c1052423cb412b85bf8dde25c4a8351
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411620"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823717"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>SSMA for DB2 クライアントのインストール (DB2ToSQL)
 
@@ -39,7 +39,7 @@ SSMA をインストールする前に、コンピューターが次の要件を
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows インストーラー3.1 以降のバージョン。
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] バージョン4.7.2 以降のバージョン。 これは[.NET Framework デベロッパーセンター](https://go.microsoft.com/fwlink/?LinkId=48882)から入手できます。
 - Microsoft OLE DB Provider for DB2 バージョン5以降のバージョン、および移行する DB2 データベースへの接続。
-- にアクセスし、データベースオブジェクトとデータの移行先となる、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE SQL DB のターゲットインスタンスをホストするコンピューターに対して十分なアクセス許可を付与します。 詳細については、「 [SQL Server &#40;DB2eToSQL&#41;への接続](../../ssma/db2/connecting-to-sql-server-db2etosql.md)」を参照してください。
+- にアクセスし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースオブジェクトとデータを移行する、または Azure SQL Database のターゲットインスタンスをホストするコンピューターに対して十分なアクセス許可を付与します。 詳細については、「 [SQL Server &#40;DB2eToSQL&#41;への接続](../../ssma/db2/connecting-to-sql-server-db2etosql.md)」を参照してください。
 - 4 GB の RAM を推奨します。
 
 ## <a name="microsoft-ole-db-provider-for-db2"></a>Microsoft OLE DB Provider for DB2
@@ -64,7 +64,7 @@ SSMA クライアントをインストールするには:
 
 既定のインストール場所は `C:\Program Files\Microsoft SQL Server Migration Assistant for DB2` です。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [SQL Server での SSMA コンポーネントのインストール](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)
 - [DB2 データベースの SQL Server への移行](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)

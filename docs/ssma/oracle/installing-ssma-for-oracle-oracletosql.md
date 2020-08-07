@@ -11,15 +11,15 @@ ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: b97da15fb97c348afa694eb399d2a0c9a2f08928
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 3938d01e98bfb2a57057d9573ee7199f0b12fc14
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292909"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864849"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>SSMA for Oracle のインストール (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for Oracle は、Oracle からおよび Azure SQL DB への移行を実行するために使用するクライアントアプリケーションで構成さ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れています。 また、データの移行と、移行したデータベースでの Oracle システム関数の使用をサポートする拡張パックも含まれています。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for Oracle は、Oracle からへの移行を実行するために使用するクライアントアプリケーションで構成さ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れ、Azure SQL Database ます。 また、データの移行と、移行したデータベースでの Oracle システム関数の使用をサポートする拡張パックも含まれています。  
   
 移行手順を実行するコンピューターにクライアントアプリケーションをインストールします。 移行されたデータベースをホストするコンピューターに拡張パックファイルをインストールする必要があります。 コンピューターが実行されている必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   

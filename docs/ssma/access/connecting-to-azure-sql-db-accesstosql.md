@@ -1,5 +1,5 @@
 ---
-title: Azure SQL DB に接続しています (接続先) |Microsoft Docs
+title: Azure SQL Database への接続 (SQL server への接続) |Microsoft Docs
 description: Azure SQL Database のターゲットインスタンスに接続して Access データベースを移行する方法について説明します。 SSMA は Azure SQL Database のデータベースに関するメタデータを取得します。
 ms.prod: sql
 ms.custom: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293129"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822519"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB への接続 (Sql server への接続)
+# <a name="connecting-to-azure-sql-database-accesstosql"></a>Azure SQL Database への接続 (SQL server)
 Access データベースを SQL Azure に移行するには、SQL Azure のターゲットインスタンスに接続する必要があります。 接続すると、SSMA は SQL Azure インスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Azure メタデータエクスプローラーにデータベースのメタデータを表示します。 SSMA には、接続している SQL Azure のインスタンスに関する情報が格納されますが、パスワードは保存されません。  
   
 SQL Azure への接続は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、サーバーへのアクティブな接続が必要な場合は SQL Azure に再接続する必要があります。 データベースオブジェクトを SQL Azure に読み込んでデータを移行するまで、オフラインで作業することができます。  
@@ -64,7 +64,7 @@ Access データベースオブジェクトを SQL Azure 構文に変換する�
   
 6.  SSMA では、SQL Azure への暗号化接続を推奨しています。  
   
-7.  **[Connect]** をクリックします。  
+7.  **[接続]** をクリックします。  
   
 > [!IMPORTANT]  
 > SSMA for Access は、SQL Azure の**master**データベースへの接続をサポートしていません。  

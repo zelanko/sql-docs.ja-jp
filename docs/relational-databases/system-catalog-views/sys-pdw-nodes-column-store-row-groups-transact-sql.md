@@ -1,7 +1,7 @@
 ---
 title: pdw_nodes_column_store_row_groups (Transact-sql)
 ms.custom: seo-dt-2019
-ms.date: 03/03/2017
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 88dd890b9d3f691fa671916b34daf8b2258aa2bc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197352"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823907"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>pdw_nodes_column_store_row_groups (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "86197352"
 |**pdw_node_id**|**int**|ノードの一意の id [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|  
 |**distribution_id**|**int**|ディストリビューションの一意の id。|
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  クラスター化または非クラスター化列ストアインデックスを持つ各テーブルの列ストア行グループごとに1行の値を返します。  
   
  行グループに含まれる行の数と行グループのサイズを決定するには、 **pdw_nodes_column_store_row_groups**を使用します。  
@@ -56,7 +56,7 @@ ms.locfileid: "86197352"
 ## <a name="examples-sssdw-and-sspdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、 **pdw_nodes_column_store_row_groups**テーブルを他のシステムテーブルに結合して、特定のテーブルに関する情報を返します。 計算済みの `PercentFull` 列は、行グループの効率の推定値を示します。 1つのテーブルに関する情報を検索するには、WHERE 句の前にあるコメントハイフンを削除し、テーブル名を指定します。  
   
-```  
+```sql
 SELECT IndexMap.object_id,   
   object_name(IndexMap.object_id) AS LogicalTableName,   
   i.name AS LogicalIndexName, IndexMap.index_id, NI.type_desc,   
@@ -75,14 +75,15 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
-AND CSRowGroups.index_id = NI.index_id      
+    AND CSRowGroups.index_id = NI.index_id      
+WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
 次の例では、 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] クラスター化列ストアのパーティションごとの行と、開いている、閉じた、または圧縮された行グループに含まれる行の数をカウントします。  
 
-```
+```sql
 SELECT
     s.name AS [Schema Name]
     ,t.name AS [Table Name]
@@ -92,19 +93,21 @@ SELECT
     ,SUM(CASE WHEN rg.State = 2 THEN rg.Total_Rows ELSE 0 END) AS [Rows in Closed Row Groups]
     ,SUM(CASE WHEN rg.State = 3 THEN rg.Total_Rows ELSE 0 END) AS [Rows in COMPRESSED Row Groups]
 FROM sys.pdw_nodes_column_store_row_groups rg
-JOIN sys.pdw_nodes_tables pt
-ON rg.object_id = pt.object_id AND rg.pdw_node_id = pt.pdw_node_id AND pt.distribution_id = rg.distribution_id
-JOIN sys.pdw_table_mappings tm
-ON pt.name = tm.physical_name
-INNER JOIN sys.tables t
-ON tm.object_id = t.object_id
-INNER JOIN sys.schemas s
-ON t.schema_id = s.schema_id
+  JOIN sys.pdw_nodes_tables pt
+    ON rg.object_id = pt.object_id
+    AND rg.pdw_node_id = pt.pdw_node_id
+    AND pt.distribution_id = rg.distribution_id
+  JOIN sys.pdw_table_mappings tm
+    ON pt.name = tm.physical_name
+  INNER JOIN sys.tables t
+    ON tm.object_id = t.object_id
+  INNER JOIN sys.schemas s
+    ON t.schema_id = s.schema_id
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [Transact-sql&#41;&#40;列ストアインデックスの作成](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [pdw_nodes_column_store_segments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   

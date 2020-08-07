@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885830"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864909"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>オンプレミスデータベースの適切な Azure SQL Database/Managed Instance SKU を特定する
 
 データベースをクラウドに移行することは、特にデータベースに最適な Azure データベースターゲットと SKU を選択する場合には複雑になることがあります。 データベース Migration Assistant (DMA) の目標は、これらの質問に対処し、ユーザーにわかりやすい出力でこれらの SKU の推奨事項を提供することで、データベースの移行を容易にすることです。
 
-この記事では、DMA の Azure SQL Database SKU に関する推奨事項について説明します。 Azure SQL Database には、次のようないくつかの展開オプションがあります。
+この記事では、DMA の Azure SQL Database SKU に関する推奨事項について説明します。 Azure SQL Database と Azure SQL Managed Instance には、次のようないくつかのデプロイオプションがあります。
 
 - 単一データベース
 - エラスティック プール
 - マネージド インスタンス
 
-SKU の推奨事項機能を使用すると、データベースをホストしているコンピューターから収集されたパフォーマンスカウンターに基づいて、最小推奨 Azure SQL Database 単一データベースまたはマネージインスタンス SKU の両方を識別できます。 この機能は、価格レベル、コンピューティングレベル、最大データサイズに関連する推奨事項と、1か月あたりの推定コストを提供します。 また、推奨されるすべてのデータベースに対して、単一データベースとマネージインスタンスを Azure に一括でプロビジョニングする機能も用意されています。
+SKU の推奨事項機能を使用すると、データベースをホストしているコンピューターから収集されたパフォーマンスカウンターに基づいて、推奨される最小 Azure SQL Database 単一データベースまたは Azure SQL Managed Instance SKU の両方を識別できます。 この機能は、価格レベル、コンピューティングレベル、最大データサイズに関連する推奨事項と、1か月あたりの推定コストを提供します。 また、推奨されるすべてのデータベースに対して、単一データベースとマネージインスタンスを一括でプロビジョニングする機能も用意されています。
 
 > [!NOTE]
 > 現在、この機能は、コマンドラインインターフェイス (CLI) を介してのみ使用できます。
 
-次に示すのは、Azure SQL Database SKU の推奨事項を特定し、対応する単一データベースまたは Azure のマネージインスタンスを DMA を使用してプロビジョニングするための手順です。
+次に、Azure で DMA を使用して、SKU の推奨事項を確認し、対応する単一データベースまたはマネージインスタンスをプロビジョニングする方法について説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - 最新バージョンの[DMA](https://aka.ms/get-dma)をダウンロードしてインストールします。 以前のバージョンのツールが既にある場合は、それを開くと、DMA をアップグレードするように求められます。
 - すべてのスクリプトを実行するために必要な[PowerShell バージョン 5.1](https://www.microsoft.com/download/details.aspx?id=54616)以降がコンピューターにインストールされていることを確認します。 コンピューターにインストールされている PowerShell のバージョンを確認する方法については、「 [Windows powershell 5.1 をダウンロードしてインストール](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)する」を参照してください。
 - コンピューターに Azure Powershell モジュールがインストールされていることを確認します。 詳細については、「 [Install the Azure PowerShell module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)」を参照してください。
-- パフォーマンスカウンターを収集するために必要な PowerShell ファイル**SkuRecommendationDataCollectionScript**が、DMA フォルダーにインストールされていることを確認します。
+- パフォーマンスカウンターを収集するために必要な PowerShell ファイル**SkuRecommendationDataCollectionScript.ps1**が、DMA フォルダーにインストールされていることを確認します。
 - このプロセスを実行するコンピューターに、データベースをホストしているコンピューターに対する管理者権限があることを確認します。
 
 ## <a name="collect-performance-counters"></a>パフォーマンス カウンターを収集します。
@@ -52,7 +52,7 @@ SKU の推奨事項機能を使用すると、データベースをホストし�
 
 各データベースに対してこのタスクを個別に実行する必要はありません。 コンピューターから収集されたパフォーマンスカウンターは、コンピューターでホストされているすべてのデータベースの SKU を推奨するために使用できます。
 
-1. DMA フォルダーで、PowerShell ファイル SkuRecommendationDataCollectionScript を見つけます。 このファイルは、パフォーマンスカウンターを収集するために必要です。
+1. DMA フォルダーで、PowerShell ファイル SkuRecommendationDataCollectionScript.ps1 を見つけます。 このファイルは、パフォーマンスカウンターを収集するために必要です。
 
     ![PowerShell ファイルが DMA フォルダーに表示される](../dma/media/dma-sku-recommend-data-collection-file.png)
 
@@ -80,9 +80,9 @@ SKU の推奨事項機能を使用すると、データベースをホストし�
 
 シングルデータベースオプションの場合、DMA は、Azure SQL Database 単一データベースの価格レベル、コンピューティングレベル、およびコンピューター上の各データベースの最大データサイズに関する推奨事項を提供します。 コンピューターに複数のデータベースがある場合は、推奨されるデータベースを指定することもできます。 DMA では、各データベースの月額料金を見積もることもできます。
 
-マネージインスタンスの場合、推奨事項でリフトアンドシフトのシナリオがサポートされます。 その結果、DMA によって、Azure SQL Database マネージインスタンスの価格レベル、コンピューティングレベル、およびコンピューター上のデータベースセットの最大データサイズに関する推奨事項が提供されます。 ここでも、コンピューターに複数のデータベースがある場合は、推奨設定を行うデータベースを指定することもできます。 また、DMA を使用すると、マネージインスタンスの月額料金を見積もることができます。
+マネージインスタンスの場合、推奨事項でリフトアンドシフトのシナリオがサポートされます。 その結果、DMA によって、Azure SQL Managed Instance の価格レベル、コンピューティングレベル、コンピューター上のデータベースセットの最大データサイズに関する推奨事項が提供されます。 ここでも、コンピューターに複数のデータベースがある場合は、推奨設定を行うデータベースを指定することもできます。 また、DMA を使用すると、マネージインスタンスの月額料金を見積もることができます。
 
-DMA CLI を使用して SKU の推奨事項を取得するには、コマンドプロンプトで次の引数を指定して dmacmd を実行します。
+DMA CLI を使用して SKU の推奨事項を取得するには、コマンドプロンプトで次の引数を指定して dmacmd.exe を実行します。
 
 - **/Action = SkuRecommendation**: SKU 評価を実行するには、この引数を入力します。
 - **/SkuRecommendationInputDataFilePath**: 前のセクションで収集したカウンターファイルへのパスです。
@@ -176,15 +176,15 @@ DMA CLI を使用して SKU の推奨事項を取得するには、コマンド�
 出力ファイルの各列の説明は次のとおりです。
 
 - **DatabaseName** -データベースの名前。
-- **Metrictype** -単一データベース/マネージインスタンス層 Azure SQL Database 推奨されます。
-- **Metricvalue** -単一データベース/マネージインスタンス SKU の Azure SQL Database をお勧めします。
+- **Metrictype** -推奨されるパフォーマンスレベル。
+- **Metricvalue** -推奨される SKU。
 - **PricePerMonth** –対応する SKU の月あたりの推定料金です。
 - **Regionname** –対応する SKU のリージョン名。 
 - **I(推奨**)-各レベルに対して SKU の最小推奨事項を作成します。 次に、ヒューリスティックを適用して、データベースの適切なレベルを決定します。 これは、データベースに推奨されるレベルを表します。 
 - **ExclusionReasons** -この値は、レベルが推奨されている場合は空白です。 推奨されていない階層ごとに、選択されなかった理由が示されます。
 - 適用された規則-適用され**た規則の**短い表記。
 
-最終的に推奨されるレベル ( **Metrictype**) と値 (つまり**metrictype**) は、 **Iの推奨**列が TRUE である場合に、オンプレミスデータベースに似た成功率で Azure で実行するためにクエリに必要な最小 SKU を反映しています。 マネージインスタンスの場合、現在のところ、DMA では、最も一般的に使用される8vcore から 40vcore Sku への推奨事項がサポートされています。 たとえば、standard レベルでは、推奨される最小 SKU が S4 の場合、S3 以下を選択すると、クエリがタイムアウトになるか、実行に失敗します。
+最終的に推奨されるレベル ( **Metrictype**) と値 (つまり**metrictype**) は、 **Iの推奨**列が TRUE である場合に、オンプレミスデータベースに似た成功率で Azure で実行するためにクエリに必要な最小 SKU を反映しています。 Azure SQL Managed Instance の場合、現時点では、最もよく使用される8vcore から40vcore の Sku に対する推奨事項が DMA によってサポートされています。 たとえば、standard レベルでは、推奨される最小 SKU が S4 の場合、S3 以下を選択すると、クエリがタイムアウトになるか、実行に失敗します。
 
 HTML ファイルには、この情報がグラフィック形式で含まれています。 最終的な推奨事項を表示し、プロセスの次の部分をプロビジョニングするためのわかりやすい手段を提供します。 HTML 出力の詳細については、次のセクションを参照してください。
 
@@ -198,7 +198,7 @@ HTML ファイルには、この情報がグラフィック形式で含まれて
 
 **単一データベースの推奨事項**
 
-![Azure SQL DB SKU の推奨事項画面](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+![Azure SQL Database SKU の推奨事項画面](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
 1. HTML ファイルを開き、次の情報を入力します。
     - **サブスクリプション id** -データベースのプロビジョニング先となる Azure サブスクリプションのサブスクリプション id。
@@ -214,7 +214,7 @@ HTML ファイルには、この情報がグラフィック形式で含まれて
 
     このプロセスでは、HTML ページで選択したすべてのデータベースが作成されます。
 
-**マネージインスタンスの推奨事項について**
+**Azure SQL Managed Instance の推奨事項について**
 
 ![Azure SQL MI SKU の推奨事項画面](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 

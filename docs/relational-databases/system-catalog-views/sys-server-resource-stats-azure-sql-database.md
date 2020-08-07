@@ -19,19 +19,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772979"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864493"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデータを返します。 データは、5 分間隔で収集と集計が実行されます。 15 秒ごとの報告につき 1 行作成されます。 返されるデータには、CPU 使用率、ストレージ サイズ、IO 使用率、マネージド インスタンス SKU が含まれます。 履歴データは約 14 日間保持されます。
+Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデータを返します。 データは、5 分間隔で収集と集計が実行されます。 15 秒ごとの報告につき 1 行作成されます。 返されるデータには、CPU 使用率、ストレージサイズ、IO 使用率、SKU が含まれます。 履歴データは約 14 日間保持されます。
 
-**Server_resource_stats**ビューには、データベースが関連付けられている Azure SQL マネージインスタンスのバージョンに応じて、さまざまな定義があります。 新しいサーバーバージョンにアップグレードするときに、これらの違いとアプリケーションで必要な変更を検討してください。
+**Server_resource_stats**ビューには、データベースが関連付けられている Azure SQL Managed Instance のバージョンによって異なる定義があります。 新しいサーバーバージョンにアップグレードするときに、これらの違いとアプリケーションで必要な変更を検討してください。
  
   
  次の表では、v12 サーバーで使用できる列について説明します。  
@@ -47,7 +47,7 @@ Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデ�
 |virtual_core_count|INT|インスタンスあたりの仮想コア数 (パブリックプレビューの場合は8、16、24) を表します。|
 |avg_cpu_percent|decimal (5, 2)|インスタンスによって使用される Managed Instance サービス階層の制限の割合での平均コンピューティング使用率。 この値は、インスタンス内のすべてのデータベースのすべてのリソースプールの CPU 時間の合計として計算され、指定された間隔でその層の使用可能な CPU 時間で除算されます。|
 |reserved_storage_mb|bigint|インスタンスあたりの予約済みストレージ (顧客がマネージインスタンスに対して購入したストレージ領域の量)|
-|storage_space_used_mb|decimal (18, 2)|すべてのマネージインスタンスデータベースのファイル (ユーザーデータベースとシステムデータベースの両方を含む) によって使用されるストレージ|
+|storage_space_used_mb|decimal (18, 2)|マネージインスタンス内のすべてのデータベースファイルで使用されるストレージ (ユーザーデータベースとシステムデータベースの両方を含む)|
 |io_request|bigint|間隔内の i/o 物理操作の合計数|
 |io_bytes_read|bigint|間隔内に読み取られた物理バイトの数|
 |io_bytes_written|bigint|間隔内に書き込まれた物理バイト数|
@@ -62,7 +62,7 @@ Azure SQL Managed Instance の CPU 使用率、IO、およびストレージデ�
 ## <a name="remarks"></a>Remarks  
  **Server_resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルで許容される最大限度に対する割合として表される、avg_cpu 以外のバイトまたはメガバイト (列名で示される) で使用される合計として表現されます。  
  
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、過去1週間のコンピューティング使用率の平均が80% 以上のすべてのデータベースを返します。  
   
 ```sql  
@@ -77,5 +77,5 @@ GROUP BY resource_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Managed Instance サービスレベル](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fce303bf12158014dd2dfc28da19b900f2cd46f3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 401fd85dec1370f81845b77de6e078ea18269891
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877815"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823334"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -81,7 +81,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、OLE DB を使用してアクセスできるデータソース用にリンクサーバーを設定する方法を示します。 リンクサーバーは、特定のデータソースに対して複数の方法で設定できます。1つのデータソースの種類に対して複数の行を指定できます。 このテーブルには、リンクサーバーの設定に使用される**sp_addlinkedserver**パラメーター値も表示されます。  
   
 |リモート OLE DB データ ソース|OLE DB プロバイダー|product_name|provider_name|data_source|location|provider_string|catalog|  
@@ -152,7 +152,7 @@ EXEC sp_addlinkedserver
    @datasrc=N'S1\instance1';  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-microsoft-access"></a>B: Microsoft OLE DB Provider for Microsoft Access を使用する  
+### <a name="b-using-the-microsoft-ole-db-provider-for-microsoft-access"></a>B. Microsoft OLE DB Provider for Microsoft Access を使用する  
  Microsoft Jet OLEDB プロバイダーは、2002-2003 形式を使用する Microsoft Access データベースに接続します。 次の例では、`SEATTLE Mktg` というリンク サーバーを作成します。  
   
 > [!NOTE]  
@@ -181,7 +181,7 @@ EXEC sp_addlinkedserver
 GO  
 ```  
   
-### <a name="c-using-the-microsoft-ole-db-provider-for-odbc-with-the-data_source-parameter"></a>C: Data_source パラメーターを使用して Microsoft OLE DB Provider for ODBC を使用する  
+### <a name="c-using-the-microsoft-ole-db-provider-for-odbc-with-the-data_source-parameter"></a>C. Data_source パラメーターを使用して Microsoft OLE DB Provider for ODBC を使用する  
  次の例では、 `SEATTLE Payroll` [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB PROVIDER for ODBC ( `MSDASQL` ) および*data_source*パラメーターを使用するという名前のリンクサーバーを作成します。  
   
 > [!NOTE]  
@@ -196,7 +196,7 @@ EXEC sp_addlinkedserver
 GO  
 ```  
   
-### <a name="d-using-the-microsoft-ole-db-provider-for-excel-spreadsheet"></a>D: Microsoft OLE DB Provider for Excel スプレッドシートの使用  
+### <a name="d-using-the-microsoft-ole-db-provider-for-excel-spreadsheet"></a>D. Microsoft OLE DB Provider for Excel スプレッドシートの使用  
  Jet の OLE DB Provider を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] 1997-2003 形式の excel スプレッドシートにアクセスするリンクサーバー定義を作成するには、まず、選択する excel ワークシートの列と行を指定して、excel で名前付き範囲を作成します。 こうすると、分散クエリで範囲の名前をテーブル名として参照できるようになります。  
   
 ```sql  
@@ -295,7 +295,7 @@ EXEC sp_addlinkedserver
   
 ```sql  
 -- Configure the linked server  
--- Add one Azure SQL DB as Linked Server  
+-- Add one Azure SQL Database as Linked Server  
 EXEC sp_addlinkedserver  
   @server='myLinkedServer', -- here you can specify the name of the linked server  
   @srvproduct='',       
@@ -324,9 +324,9 @@ EXEC ('INSERT INTO t1tutut2 VALUES(1),(2),(3)') at myLinkedServer
 SELECT * FROM myLinkedServer.myDatabase.dbo.myTable  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [分散クエリストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   

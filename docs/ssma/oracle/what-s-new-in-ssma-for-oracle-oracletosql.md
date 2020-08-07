@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477454"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862403"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle の新機能 (OracleToSQL)
 
@@ -159,16 +159,16 @@ SSMA for Oracle の v2.0 リリースは、品質と変換のメトリックを�
 
 SSMA for Oracle の v2.0 リリースは、品質と変換メトリックの向上を目的とした修正プログラムによって強化されています。 このリリースには、次の新機能も用意されています。
 
-* ターゲットとしての**Azure SQL Database Managed Instance**のサポート。 Azure SQL Database Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
+* ターゲットとしての**AZURE SQL Managed Instance**のサポート。 Azure SQL Managed Instance をターゲットとする新しいプロジェクトを作成できるようになりました。
 
-  ![SQL DB MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI プロジェクト](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
-  > SSMA for Oracle 拡張パックも更新され、Azure SQL Database Managed Instance でのリモートインストールが可能になりました。
+  > SSMA for Oracle Extension Pack も更新され、Azure SQL Managed Instance でのリモートインストールが可能になりました。
   >
   > ![SSMA for Oracle Extension Pack](../media/ssma-oracle-ext-pack.png)
 
-  テスト担当者やサーバー側のデータ移行を含む一部の機能は、Azure SQL Database Managed Instance を対象とする場合はサポートされません。 詳細については、[こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)を参照してください。
+  テスト担当者やサーバー側のデータ移行を含む一部の機能は、Azure SQL Managed Instance を対象とする場合はサポートされていません。 詳細については、[こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)を参照してください。
 
 * 変換後の**修正アドバイザー**。 詳細について[は、こちら](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)を参照してください。
 
@@ -336,8 +336,8 @@ SSMA for Oracle の2014年1月のメンテナンスリリースには、次の�
 
 SSMA for Oracle の2014年7月のリリースには、次の変更が含まれています。
 
-* Azure SQL DB のサポートが追加されました。
-* 拡張パックの機能は、Azure SQL DB をサポートするためにスキーマに移行されました。
+* Azure SQL Database のサポートが追加されました。
+* 拡張パックの機能は、Azure SQL Database をサポートするためにスキーマに移行されました。
 * Oracle の具体化されたビューのサポートを追加しました。
 * SQL Server 2014 メモリ最適化テーブルのサポートが追加されました。
 * 10,000 を超えるオブジェクトを含むデータベースに対してテストされたパフォーマンスの向上。

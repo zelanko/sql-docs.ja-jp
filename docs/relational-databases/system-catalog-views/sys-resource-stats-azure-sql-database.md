@@ -19,12 +19,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717575"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822922"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "85717575"
 |dtu_limit|**int**|この期間中のこのデータベースの現在の最大データベース DTU 設定です。 |
 |xtp_storage_percent|**decimal (5, 2)**|サービス層の制限 (レポート間隔の終了時) に対するインメモリ OLTP のストレージ使用率。 これには、メモリ最適化テーブル、インデックス、およびテーブル変数の、次のインメモリ OLTP オブジェクトのストレージに使用されるメモリが含まれます。 また、ALTER TABLE 操作の処理に使用されるメモリも含まれています。<br /><br /> インメモリ OLTP がデータベースで使用されていない場合は0を返します。|
 |avg_login_rate_percent|**decimal (5, 2)**|単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。|
-|avg_instance_cpu_percent|**decimal (5, 2)**|SQL DB プロセスに対する平均データベース CPU 使用率 (%)。|
-|avg_instance_memory_percent|**decimal (5, 2)**|SQL DB プロセスに対する平均データベースメモリ使用率 (%)。|
+|avg_instance_cpu_percent|**decimal (5, 2)**|SQL Database プロセスに対する平均データベース CPU 使用率 (%)。|
+|avg_instance_memory_percent|**decimal (5, 2)**|平均データベースメモリ使用量を SQL Database プロセスに対する割合として計算します。|
 |cpu_limit|**decimal (5, 2)**|この期間中のこのデータベースの仮想コア数。 DTU ベースのモデルを使用しているデータベースの場合、この列は NULL になります。|
-|allocated_storage_in_megabytes|**float**|データベースデータを格納するために使用できる、フォーマットされたファイル領域のサイズ (MB)。 フォーマットされたファイル領域は、割り当てられたデータ領域とも呼ばれます。  詳細については、「 [SQL DB でのファイル領域管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|
+|allocated_storage_in_megabytes|**float**|データベースデータを格納するために使用できる、フォーマットされたファイル領域のサイズ (MB)。 フォーマットされたファイル領域は、割り当てられたデータ領域とも呼ばれます。  詳細については、「 [SQL Database でのファイル領域管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|
   
 > [!TIP]  
 >  これらの制限とサービスレベルの詳細については、「[サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」を参照してください。  
@@ -68,7 +68,7 @@ ms.locfileid: "85717575"
   
  このデータをより詳細に表示するには、ユーザーデータベースの**dm_db_resource_stats**動的管理ビューを使用します。 このビューでは、15秒ごとにデータをキャプチャし、1時間の履歴データを保持します。  詳細については、「 [sys. dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)」を参照してください。  
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、過去1週間のコンピューティング使用率の平均が80% 以上のすべてのデータベースを返します。  
   
 ```sql  
@@ -83,7 +83,7 @@ GROUP BY database_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [サービス層の機能と制限](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

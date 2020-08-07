@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924626"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864899"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 
@@ -43,7 +43,7 @@ Data Migration Assistant の v1.0 リリースでは、次の機能がサポー�
 
 ## <a name="data-migration-assistant-v45"></a>Data Migration Assistant version 4.5
 
-Data Migration Assistant の version 4.5 リリースでは、ファイルシステムでホストされている SQL Server Integration Services (SSIS) パッケージを Azure SQL Database または Azure SQL Database マネージインスタンスに移行するための評価がサポートされています。
+Data Migration Assistant の version 4.5 リリースでは、ファイルシステムでホストされている SQL Server Integration Services (SSIS) パッケージを Azure SQL Database または SQL Managed Instance に移行するための評価がサポートされています。
 
 ## <a name="data-migration-assistant-v44"></a>Data Migration Assistant v1.0
 
@@ -53,9 +53,9 @@ Data Migration Assistant の version 4.4 リリースでは、Azure Migrate へ�
 
 Data Migration Assistant の v1.0 リリースでは、次のことがサポートされています。
 
-- ワークロード評価に基づく Azure SQL Database マネージインスタンスの SKU に関する推奨事項。
+- ワークロード評価に基づく Azure SQL Managed Instance の SKU に関する推奨事項。
 - RDS SQL Server 評価のソースとして使用されます。
-- ターゲットとして Azure SQL Database マネージインスタンスのエージェントジョブの評価。
+- ターゲットとしての Azure SQL Managed Instance のエージェントジョブの評価。
 - 特定の評価規則を無視する機能。DMA で構成された ' ignoreErrorCodes ' プロパティに指定されているエラーコードの一覧は、DMA 評価の結果に表示されません。
 - ジョブアクティビティステップでの T-sql クエリの評価と適切な推奨事項の提供
 - 拡張イベントの評価 (パブリックプレビュー)。
@@ -67,15 +67,15 @@ Data Migration Assistant の v1.0 リリースでは、次のことがサポー�
 
 ## <a name="data-migration-assistant-v42"></a>Data Migration Assistant v5.0
 
-Data Migration Assistant のバージョン4.2 リリースでは、オンプレミスの SQL Server から Azure SQL Database マネージインスタンスに移行するときに、1つまたは複数のサーバーインスタンスのターゲット準備状態評価がコマンドラインでサポートされます。 Data Migration Assistant コマンドラインを使用して、データベーススキーマに関するメタデータを収集し、ブロッカーを検出し、Azure SQL Database マネージインスタンスへの移行に影響する部分的にサポートされている機能またはサポートされていない機能について学習できるようになりました。 その後、提供された Power BI テンプレートを使用して結果を表示できます。
+Data Migration Assistant のバージョン4.2 リリースでは、オンプレミスの SQL Server から SQL Managed Instance に移行するときに、1つまたは複数のサーバーインスタンスのターゲット準備状態評価がコマンドラインでサポートされます。 Data Migration Assistant コマンドラインを使用して、データベーススキーマに関するメタデータを収集し、ブロッカーを検出し、SQL Managed Instance への移行に影響する部分的にサポートされている機能やサポートされていない機能について学習できるようになりました。 その後、提供された Power BI テンプレートを使用して結果を表示できます。
 
 ## <a name="data-migration-assistant-v41"></a>Data Migration Assistant v1.0
 
-Data Migration Assistant の v2.0 リリースでは Azure SQL Database マネージインスタンスに移行するオンプレミスの SQL Server データベースの包括的な評価がサポートされるようになりました。
+Data Migration Assistant の version 4.1 リリースでは、SQL Managed Instance に移行するオンプレミスの SQL Server データベースの包括的な評価がサポートされています。
 
-評価ワークフローは、Azure SQL Database マネージインスタンスへの移行に影響する可能性がある次の問題を検出するのに役立ちます。
+評価ワークフローは、SQL Managed Instance への移行に影響する可能性がある次の問題を検出するのに役立ちます。
 
-- サポート**されていない機能または部分的にサポートされる機能**。 Data Migration Assistant は、ターゲット Azure SQL Database Managed Instance で部分的にサポートされているかサポートされていない使用中の機能について、ソース SQL Server データベースを評価します。 このツールでは、一連の推奨事項、Azure で利用可能なその他のアプローチ、および移行プロジェクトを計画する際にお客様がこの情報を考慮できるようにするための対策を講じます。
+- サポート**されていない機能または部分的にサポートされる機能**。 Data Migration Assistant は、ターゲット SQL Managed Instance で部分的にサポートされているかサポートされていない使用中の機能について、ソース SQL Server データベースを評価します。 このツールでは、一連の推奨事項、Azure で利用可能なその他のアプローチ、および移行プロジェクトを計画する際にお客様がこの情報を考慮できるようにするための対策を講じます。
 
 - **互換性の問題**。 Data Migration Assistant は、次の領域に関連する互換性の問題も識別します。
 
@@ -83,7 +83,7 @@ Data Migration Assistant の v2.0 リリースでは Azure SQL Database マネ�
   - 動作の変更: 報告されたスキーマオブジェクトは引き続き機能しますが、パフォーマンスの低下など、動作が異なる場合があります。
   - 情報に関する問題: これらのオブジェクトは移行に影響を与えることはありませんが、機能 SQL Server のリリースで非推奨とされる可能性があります。
 
-評価が完了したら、 [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) を使用して、SQL Server データベースの Azure SQL Database Managed Instance への移行を実行します。  DMS では、[オフライン](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)(1 回限り) と[オンライン](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)(最小限のダウンタイム) のデータベース移行の両方がサポートされており、Azure SQL Database Managed Instance になります。
+評価が完了したら、 [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) を使用して、SQL Server データベースの SQL Managed Instance への移行を実行します。  DMS では、SQL Managed Instance への[オフライン](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)(1 回限り) および[オンライン](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)(最小限のダウンタイム) データベースの移行がサポートされています。
 
 ## <a name="data-migration-assistant-v40"></a>Data Migration Assistant v4.0
 
@@ -124,7 +124,7 @@ Data Migration Assistant の v1.1 リリースには、次の追加情報が含�
 - Azure SQL Database への移行のソースとして SQL Server 2017 がサポートされます。
 - 安定性、パフォーマンス、および評価ルールの正確性に関する機能強化。
 
-## <a name="ddata-migration-assistant-v33"></a>DData Migration Assistant v1.0
+## <a name="data-migration-assistant-v33"></a>Data Migration Assistant v1.0
 
 Data Migration Assistant の v2.0 リリースでは、Windows と Linux の両方で、オンプレミスの SQL Server インスタンスを SQL Server 2017 の新しいバージョンに移行できます。 Windows と Linux の移行の全体的なワークフローは同じですが、Linux 用の SQL Server 2017 に移行する場合は、いくつかの追加の考慮事項が必要です。
 
@@ -185,9 +185,9 @@ Data Migration Assistant の v1.0 リリースは最初のリリースであり�
   - 動作の変更
   - 非推奨の機能
 - アップグレード後にデータベースが恩恵を受けることのできるターゲット SQL Server プラットフォームの新機能の検出。 すべての結果は、機能に関する推奨事項として説明されており、次の領域に分類されています。
-  - [パフォーマンス]
+  - パフォーマンス
   - セキュリティ
-  - Storage
+  - ストレージ
 - 評価を実行する最新のユーザーエクスペリエンス。
 
 ## <a name="see-also"></a>関連項目

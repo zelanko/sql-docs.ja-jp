@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 36cc006382bab28a93beed1ce8c6e48896719674
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8cbc8606354f6f5ebdcb19c3f14f1717d29ff878
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395177"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863478"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>ユーザー インターフェイス リファレンス (MySQLToSQL)
 ここでは、SQL Server Migration Assistant (SSMA) for MySQL のヘルプトピックについて説明します。  
@@ -28,7 +28,7 @@ ms.locfileid: "87395177"
 |[評価レポート &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|このレポートを使用して、MySQL オブジェクトを Transact-sql 構文に変換した結果を表示し、移行の時間と複雑さを SQL Server に見積もることができます。|  
 |[MySQL &#40;MySQLToSQL に接続&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|[ **Mysql への接続**] ダイアログボックスを使用して、移行する mysql データベースに接続します。|  
 |[SQL Server に接続します](https://msdn.microsoft.com/d73abd3a-80df-4293-b973-1723069db049)|[ **SQL Server への接続**] ダイアログボックスを使用して、移行先の SQL Server のインスタンスに接続します。|  
-|[Azure SQL DB への接続 &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|[ **SQL Azure への接続**] ダイアログボックスを使用して、移行先の SQL Azure のインスタンスに接続します。|  
+|[Azure SQL Database &#40;MySQLToSQL&#41;に接続します](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|[ **SQL Azure への接続**] ダイアログボックスを使用して、移行先の SQL Azure のインスタンスに接続します。|  
 |[変換の設定 (MySQL)](https://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|[**設定**] タブを使用すると、ノードレベルの設定を設定できます。|  
 |[データ移行レポート &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|MySQL から SQL Server または SQL Azure にデータを移行した結果を表示します。|  
 |[データの移行設定](data-migration-settings-mysqltosql.md)|[**拡張データ移行の設定**] タブを使用すると、データ移行のためのカスタムクエリを作成できます。|  
@@ -42,12 +42,12 @@ ms.locfileid: "87395177"
 |[プロジェクト設定 &#40;GUI&#41;  &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-gui-mysqltosql.md)|[**プロジェクトの設定**] ダイアログボックスの [GUI] ページを使用すると、[**データ**] タブに表示されるデータの量を指定できます。|  
 |[プロジェクト設定 &#40;同期&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)|SSMA for MySQL が MySQL から SQL Server にデータを移行する方法をカスタマイズするには、[**プロジェクトの設定**] ダイアログボックスの [移行] ページを使用します。|  
 |[プロジェクト設定 &#40;移行&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)|[**プロジェクトの設定**] ダイアログボックスの [同期] ページを使用すると、ssma for MySQL が SQL Server で移行されたデータベースオブジェクトを作成または変更する方法をカスタマイズできます。|  
-|[Azure SQL DB&#41; &#40;MySQLToSQL&#41;のプロジェクト設定 &#40;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)|[**プロジェクトの設定**] ダイアログボックスの [SQL Azure] ページを使用すると、MySQL から SQL Azure にデータを移行するための接続設定をカスタマイズできます。|  
+|[プロジェクト設定 &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)|[**プロジェクトの設定**] ダイアログボックスの [SQL Azure] ページを使用すると、MySQL から SQL Azure にデータを移行するための接続設定をカスタマイズできます。|  
 |[プロジェクト設定 &#40;型マッピング&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)|SSMA for MySQL プロジェクトのすべてのデータベースとデータベースオブジェクトの既定の型マッピングを指定するには、の [**プロジェクトの設定**] ダイアログボックスの [型マッピング] ページを使用します。|  
 |[データベース &#40;MySQLToSQL からの更新&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|MySQL データベースから更新するオブジェクトを選択するには、[**データベースから更新**] ダイアログボックスを使用します。|  
 |[メタデータ &#40;MySQLToSQL&#41;に保存](../../ssma/mysql/save-metadata-mysqltosql.md)|メタデータを保存していないプロジェクトを保存すると、[**メタデータの保存**] ダイアログボックスが表示されます。|  
   
 ## <a name="see-also"></a>参照  
 [SSMA for MySQL のはじめに &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
-[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

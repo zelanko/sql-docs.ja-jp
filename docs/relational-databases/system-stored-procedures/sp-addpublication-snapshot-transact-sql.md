@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8b5f827126afca81baeafe5f5c35e3d94666fcc
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716534"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865260"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -88,7 +88,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |**1**|1 度|  
-|**2**|Second|  
+|**2**|秒|  
 |**4** (既定値)|分|  
 |**8**|時間|  
   
@@ -117,7 +117,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  認証情報をスクリプトファイルに保存しないでください。 セキュリティを強化するために、実行時にログイン名とパスワードを指定することをお勧めします。  
   
-`[ @job_login = ] 'job_login'`エージェントを実行するアカウントのログインを指定します。 Azure SQL Database Managed Instance で、SQL Server アカウントを使用します。 *job_login*は**nvarchar (257)**,、既定値は NULL です。 このアカウントは、ディストリビューターへのエージェント接続に常に使用されます。 新しいスナップショットエージェントジョブを作成するときに、このパラメーターを指定する必要があります。  
+`[ @job_login = ] 'job_login'`エージェントを実行するアカウントのログインを指定します。 Azure SQL Managed Instance で、SQL Server アカウントを使用します。 *job_login*は**nvarchar (257)**,、既定値は NULL です。 このアカウントは、ディストリビューターへのエージェント接続に常に使用されます。 新しいスナップショットエージェントジョブを作成するときに、このパラメーターを指定する必要があります。  
   
 > [!NOTE]
 >  以外のパブリッシャーの場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、これは[Sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)で指定されたログインと同じである必要があります。  

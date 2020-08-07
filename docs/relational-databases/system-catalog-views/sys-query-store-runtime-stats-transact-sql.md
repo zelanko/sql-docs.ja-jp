@@ -21,12 +21,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8956eda2e25ecd96df58f863743ae39d0bb88d8f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395147"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823727"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>query_store_runtime_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -98,11 +98,11 @@ ms.locfileid: "87395147"
 |**min_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
 |**max_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
 |**stdev_tempdb_space_used**|**float**|集計間隔内のクエリプランに対するページ読み取りの標準偏差。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**avg_page_server_io_reads**|**float**|集計間隔内のクエリプランに対するページサーバー i/o 読み取りの平均数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
-|**last_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
-|**min_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
-|**max_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
-|**stdev_page_server_io_reads**|**float**|ページサーバー i/o の数は、集計間隔内のクエリプランの標準偏差を読み取ります。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
+|**avg_page_server_io_reads**|**float**|集計間隔内のクエリプランに対するページサーバー i/o 読み取りの平均数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL Database、Azure SQL Managed Instance (ハイパースケール以外) は常にゼロ (0) を返します。|
+|**last_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL Database、Azure SQL Managed Instance (ハイパースケール以外) は常にゼロ (0) を返します。|
+|**min_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL Database、Azure SQL Managed Instance (ハイパースケール以外) は常にゼロ (0) を返します。|
+|**max_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL Database、Azure SQL Managed Instance (ハイパースケール以外) は常にゼロ (0) を返します。|
+|**stdev_page_server_io_reads**|**float**|ページサーバー i/o の数は、集計間隔内のクエリプランの標準偏差を読み取ります。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL Database、Azure SQL Managed Instance (ハイパースケール以外) は常にゼロ (0) を返します。|
   
 ## <a name="permissions"></a>アクセス許可  
 `VIEW DATABASE STATE` アクセス許可が必要です。  

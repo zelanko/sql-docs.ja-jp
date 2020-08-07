@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435166"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823244"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>DMA で企業を評価し評価レポートを統合する
 
@@ -197,7 +197,7 @@ LoadWarehouse スクリプトを使用して、データベース所有者を設
 
 DMA レポートを操作するには、次の方法でブックマークとスライサーを使用してフィルター処理を行います。
 
-- 評価の種類 (Azure SQL DB、Azure SQL MI、オンプレミスの SQL) 
+- 評価の種類 (Azure SQL Database、Azure SQL Managed Instance、SQL Server) 
 - インスタンス名
 - データベース名
 - チーム名
@@ -212,8 +212,8 @@ DMA レポートを操作するには、次の方法でブックマークとス�
 
 ブックマークを使用すると、次のようにレポートコンテキストを切り替えることができます。
 
-- Azure SQL DB クラウドの評価
-- Azure SQL MI クラウドの評価
+- Azure SQL Database クラウドの評価
+- Azure SQL Managed Instance クラウドの評価
 - オンプレミスの評価
 
 ![DMA レポートビューのブックマーク](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
@@ -274,7 +274,7 @@ Power BI レポートに表示される詳細については、次のセクシ�
 
 - InstanceDatabase
 - ChangeCategory
-- タイトル
+- Title
 - ObjectType
 - ImpactedObjectName
 

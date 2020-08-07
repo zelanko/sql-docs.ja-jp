@@ -1,6 +1,6 @@
 ---
 title: マネージインスタンスでデータベースをホストする
-description: この記事では、マネージインスタンスでマスターデータサービス (MDS) データベースを構成する方法について説明します。
+description: マスターデータサービス (MDS) データベースを作成および構成し、Azure SQL Managed Instance でホストする方法について説明します。
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812920"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878939"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>マネージインスタンスで MDS データベースをホストする
 
@@ -27,19 +27,19 @@ ms.locfileid: "85812920"
   
 ## <a name="preparation"></a>準備
 
-準備を行うには、Azure SQL Database マネージインスタンスを作成して構成し、web アプリケーションコンピューターを構成する必要があります。
+準備を行うには、Azure SQL Managed Instance を作成して構成し、web アプリケーションコンピューターを構成する必要があります。
 
 ### <a name="create-and-configure-the-database"></a>データベースを作成し、構成する
 
-1. 仮想ネットワークを使用して Azure SQL Database マネージインスタンスを作成します。 詳細については[、「クイックスタート: Azure SQL Database マネージインスタンスを作成](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)する」を参照してください。
+1. 仮想ネットワークを使用してマネージインスタンスを作成します。 詳細については[、「クイックスタート: SQL Managed Instance の作成](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)」を参照してください。
 
 1. ポイント対サイト接続を構成します。 手順については、「[ネイティブ Azure 証明書 Azure portal 認証を使用して VNet へのポイント対サイト接続を構成](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)する」を参照してください。
 
-1. SQL Database マネージインスタンスを使用して Azure Active Directory 認証を構成します。 詳細については[、「SQL での Azure Active Directory 認証の構成と管理](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)」を参照してください。
+1. SQL Managed Instance で Azure Active Directory 認証を構成します。 詳細については[、「SQL での Azure Active Directory 認証の構成と管理](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)」を参照してください。
 
 ### <a name="configure-web-application-machine"></a>Web アプリケーションコンピューターの構成
 
-1. コンピューターが SQL Database マネージインスタンスにアクセスできることを確認するには、ポイント対サイト接続証明書と VPN をインストールします。 手順については、 [Azure portal 「ネイティブ Azure 証明書認証を使用した VNet へのポイント対サイト接続の構成](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)」を参照してください。
+1. コンピューターがマネージインスタンスにアクセスできるようにするには、ポイント対サイト接続証明書と VPN をインストールします。 手順については、 [Azure portal 「ネイティブ Azure 証明書認証を使用した VNet へのポイント対サイト接続の構成](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)」を参照してください。
 
 1. 次の役割と機能をインストールします。
    - ロール: 
@@ -70,7 +70,7 @@ ms.locfileid: "85812920"
        > [!NOTE]
        > WebDAV 発行をインストールしない
 
-   - 機能: 
+   - 機能:
      - .NET Framework 3.5 (.NET 2.0 および 3.0 を含む)
      - .NET Framework 4.5 Advanced Services
      - ASP.NET 4.5
@@ -203,7 +203,7 @@ MDS では、次の接続文字列の例に示すように、Active Directory �
 
 **SQL Server 2019 の累積的な更新プログラム**をインストールします。 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]自動的に更新されます。
 
-### <a name="upgrade-sql-server"></a>SQL Server のアップグレード
+### <a name="upgrade-sql-server"></a>SQL Server をアップグレードする
 
 `The client version is incompatible with the database version` **SQL Server 2019 の累積的な更新プログラム**のインストール後に、次のエラーが表示されることがあります。
 ![SQLServer2019--Config-MI-UpgradeDBPage](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "SQLServer2019-Config-MI_UpgradeDBPage")

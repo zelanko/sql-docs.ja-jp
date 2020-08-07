@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a351723f12261e07c4cdbd1d707224278067522e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: c66e88ff81cc8f7d06d3d946be8e476b175d1b47
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293679"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823683"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>DB2 データベースの SQL Server への移行 (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2 は、DB2 データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE SQL DB にすばやく移行するのに役立つ包括的な環境です。 SSMA for DB2 を使用することにより、データベースオブジェクトとデータの確認、移行のためのデータベースの評価、データベースオブジェクトの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE SQL db への移行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE sql db へのデータの移行を行うことができます。 SYS スキーマとシステム DB2 スキーマは移行できないことに注意してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2 は、DB2 データベースをまたは Azure SQL Database に迅速に移行するのに役立つ包括的な環境です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 SSMA for DB2 を使用することにより、データベースオブジェクトとデータを確認し、データベースの移行を評価したり、データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database に移行したり、データをまたは Azure SQL Database に移行したりすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SYS スキーマとシステム DB2 スキーマは移行できないことに注意してください。  
   
 ## <a name="recommended-migration-process"></a>推奨される移行プロセス  
-オブジェクトとデータを DB2 データベースからまたは Azure SQL DB に正常に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次の手順を使用します。  
+オブジェクトとデータを DB2 データベースからまたは Azure SQL Database に正常に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次の手順を使用します。  
   
 1.  [新しい SSMA プロジェクト](https://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0)。  
   
