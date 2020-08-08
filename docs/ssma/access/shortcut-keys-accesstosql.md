@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 25a06221-0045-4fb6-a150-1245649768ab
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 59d1d5f4da95b7f152a92a8d780af5ca9f3d3394
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ac23b2e17227bbb85612148deb685c0cb668ca77
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051516"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933887"
 ---
 # <a name="shortcut-keys-accesstosql"></a>ショートカットキー (キーによる Sql)
-SSMA アプリケーション内を移動するには、キーボードショートカットを使用します。 詳しくは、次のトピックをご覧ください。  
+SSMA アプリケーション内を移動するには、キーボードショートカットを使用します。 詳細については、次の各トピックを参照してください。  
   
 -   [メニューコマンドやその他のショートカットキー &#40;、Sql&#41;](../../ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md)  
   

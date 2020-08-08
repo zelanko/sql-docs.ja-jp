@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c6d83e81253430f243fcaed55b66f6d0de6299ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 11b47065fe180956d58361ec80eda1dac25fa4b1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083499"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932323"
 ---
 # <a name="assessment-report-sybasetosql"></a>評価レポート (SybaseToSQL)
-[評価レポート] ウィンドウには、データベースオブジェクトを構文に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換した結果が表示されます。また、移行プロジェクトの複雑さとコストを見積もるのにも役立ちます。  
+[評価レポート] ウィンドウには、データベースオブジェクトを構文に変換した結果が表示され [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。また、移行プロジェクトの複雑さとコストを見積もるのにも役立ちます。  
   
 評価レポートにアクセスするには、ソースメタデータエクスプローラーで変換するオブジェクトを選択し、[**データベース**] を右クリックして、[**レポートの作成**] を選択します。  
   
@@ -32,12 +32,12 @@ ms.locfileid: "68083499"
 選択したオブジェクトの変換の統計情報を表示します。 このペインは、コードを持つ個々のオブジェクトが左側のウィンドウで選択されている場合にのみ表示されます。 このペインを表示するには、**統計**の展開が必要になる場合があります。  
   
 **ソースナビゲーション**  
-選択したオブジェクトの ASE コードを表示し、に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換されなかったコードを強調表示します。 このペインは、コードを持つ個々のオブジェクトが左側のウィンドウで選択されている場合にのみ表示されます。  
+選択したオブジェクトの ASE コードを表示し、に変換されなかったコードを強調表示し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 このペインは、コードを持つ個々のオブジェクトが左側のウィンドウで選択されている場合にのみ表示されます。  
   
 ブックマークを設定またはクリアするには、行番号をクリックします。 ウィンドウの上部にあるボタンを使用して、コード内を移動します。  
   
 **ターゲットナビゲーション**  
-選択したオブジェクトの[!INCLUDE[tsql](../../includes/tsql-md.md)]変換結果のコード、および変換されなかったコードのエラーメッセージが表示されます。 このペインは、コードを持つ個々のオブジェクトが左側のウィンドウで選択されている場合にのみ表示されます。  
+選択したオブジェクトの変換結果のコード、および変換されなかった [!INCLUDE[tsql](../../includes/tsql-md.md)] コードのエラーメッセージが表示されます。 このペインは、コードを持つ個々のオブジェクトが左側のウィンドウで選択されている場合にのみ表示されます。  
   
 ブックマークを設定またはクリアするには、行番号をクリックします。 ウィンドウの上部にあるボタンを使用して、コード内を移動します。  
   

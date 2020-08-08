@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1d2f1c02b9a9400236381cdd30fb3deb570500c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028764"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934656"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>プロジェクトの設定 (変換) (SybaseToSQL)
-[**プロジェクトの設定**] ダイアログボックスの [変換] ページには、Ssma が Sybase Adaptive Server ENTERPRISE (ASE) 構文[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をまたは SQL Azure 構文に変換する方法をカスタマイズする設定が含まれています。  
+[**プロジェクトの設定**] ダイアログボックスの [変換] ページには、Ssma が Sybase Adaptive Server ENTERPRISE (ASE) 構文を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure 構文に変換する方法をカスタマイズする設定が含まれています。  
   
 [変換] ペインは、[**プロジェクトの設定**] ダイアログボックスと [**既定のプロジェクトの設定**] ダイアログボックスで使用できます。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68028764"
 **@@ERROR**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure と ASE では、異なるエラーコードが使用されます。  
   
-この設定を使用して、ASE コード内で **@@ERROR **への参照が検出されたときに、ssma が出力またはエラー一覧ペインに表示するメッセージの種類 (警告またはエラー) を指定します。  
+この設定を使用して、ASE コード内で **@ @ERROR **への参照が検出されたときに、ssma が出力またはエラー一覧ペインに表示するメッセージの種類 (警告またはエラー) を指定します。  
   
 -   [変換] を選択し、[**警告付きでマーク**] を選択すると、ssma はステートメントを変換し、警告コメントでマークします。  
   
@@ -87,7 +87,7 @@ Numeric 型を datatype 引数として使用して、変換またはキャス�
   
 -   **空の文字列定数をスペースで置換する**  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 動作を使用するには、[**現在の構文を保持**する] を選択します。  
+-   /SQL Azure 動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[**現在の構文を保持**する] を選択します。  
   
 [**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
@@ -96,13 +96,13 @@ Numeric 型を datatype 引数として使用して、変換またはキャス�
 **フルモード:** すべての文字列式をスペースで置換する  
   
 **変換し、バイナリ文字列変換をキャストする**  
-バイナリ値を数値に変換すると、異なるプラットフォームで異なる値が返される場合があります。 たとえば、x86 プロセッサでは、CONVERT (integer, 0x00000100) は ASE と256の65536を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返します。 ASE では、バイトの順序によって異なる値も返されます。  
+バイナリ値を数値に変換すると、異なるプラットフォームで異なる値が返される場合があります。 たとえば、x86 プロセッサでは、CONVERT (integer, 0x00000100) は ASE と256の65536を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ASE では、バイトの順序によって異なる値も返されます。  
   
 この設定を使用して、SSMA がバイナリ値を含む CONVERT および CASE 式を変換する方法を制御します。  
   
 -   警告や修正を行わずに式を変換するには、[**単純変換**] を選択します。 ASE サーバーにバイナリ値の変更を必要としないバイト順があることがわかっている場合は、この設定を使用します。  
   
--   SSMA 変換を行い、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用する式を修正するには、[**変換と修正**] を選択します。 リテラル定数内のバイト順序は逆になります。 その他のバイナリ値 (バイナリ変数や列など) には、エラーが表示されます。 ASE サーバーにバイナリ値の変更を必要とするバイト順があることがわかっている場合は、この値を使用します。  
+-   SSMA 変換を行い、で使用する式を修正するには、[**変換と修正**] を選択し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 リテラル定数内のバイト順序は逆になります。 その他のバイナリ値 (バイナリ変数や列など) には、エラーが表示されます。 ASE サーバーにバイナリ値の変更を必要とするバイト順があることがわかっている場合は、この値を使用します。  
   
 -   SSMA で式を変換して修正するには、[変換] を選択して [**警告付き**] を選択し、変換されたすべての式を警告コメントでマークします。  
   
@@ -128,9 +128,9 @@ Numeric 型を datatype 引数として使用して、変換またはキャス�
 **フルモード:** エラーでマーク  
   
 **等値チェックの変換**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure では、ANSI_NULLS 設定が on の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、等値比較に null 値が含まれている場合、/SQL Azure は不明な値を返します。 ANSI_NULLS がオフの場合、null 値を含む等値比較では、比較対象の列と式、または2つの式が両方とも null の場合に true が返されます。 既定では (ANSINULL OFF) Sybase ASE 等値比較[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、ANSI_NULLS OFF を使用して/SQL Azure のように動作します。  
+/SQL Azure では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_NULLS 設定が on の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等値比較に null 値が含まれている場合、/SQL AZURE は不明な値を返します。 ANSI_NULLS がオフの場合、null 値を含む等値比較では、比較対象の列と式、または2つの式が両方とも null の場合に true が返されます。 既定では (ANSINULL OFF) Sybase ASE 等値比較は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_NULLS OFF を使用して/SQL Azure のように動作します。  
   
--   **単純な変換**を選択した場合、ssma は、null [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]値に対して追加のチェックを行わずに、ASE コードを/SQL Azure 構文に変換します。 この設定は、ANSI_NULLS が/SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でオフになっている場合、またはケースごとに等価比較を変更する場合に使用します。  
+-   **単純な変換**を選択した場合、ssma は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] null 値に対して追加のチェックを行わずに、ASE コードを/SQL Azure 構文に変換します。 この設定は、ANSI_NULLS が/SQL Azure でオフになっている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはケースごとに等価比較を変更する場合に使用します。  
   
 -   [ **Null 値を考慮**する] を選択した場合、ssma では、is null 句と IS not null 句を使用して null 値のチェックが追加されます。  
   
@@ -141,7 +141,7 @@ Numeric 型を datatype 引数として使用して、変換またはキャス�
 **フルモード:** NULL 値を考慮する  
   
 **書式指定文字列**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure では、PRINT ステートメントと RAISERROR ステートメントで*format_string*引数がサポートされなくなりました。 *Format_string*変数は、置換可能なパラメーターを文字列に直接配置し、実行時にパラメーターを置換することをサポートしています。 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、文字列リテラルまたは変数を使用して作成された文字列のいずれかを使用して、完全な文字列が必要になります。 詳細については、オンラインブックの[!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「印刷 ()」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure では、PRINT ステートメントと RAISERROR ステートメントで*format_string*引数がサポートされなくなりました。 *Format_string*変数は、置換可能なパラメーターを文字列に直接配置し、実行時にパラメーターを置換することをサポートしています。 代わりに、で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、文字列リテラルまたは変数を使用して作成された文字列のいずれかを使用して、完全な文字列が必要になります。 詳細については、オンラインブックの「印刷 ()」を参照してください [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 SSMA が*format_string*引数を検出すると、変数を使用して文字列リテラルを作成するか、新しい変数を作成し、その変数を使用して文字列を構築できます。  
   
@@ -178,11 +178,11 @@ SSMA が*format_string*引数を検出すると、変数を使用して文字列
         CAST (@arg2 AS varchar(max)))  
     PRINT @print_format_1  
     ```  
-    **Create new string** mode を使用する場合、ssma は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプション CONCAT_NULL_YIELDS_NULL がオフであると想定しています。 そのため、SSMA は null 引数をチェックしません。  
+    **Create new string** mode を使用する場合、ssma は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプション CONCAT_NULL_YIELDS_NULL がオフであると想定しています。 そのため、SSMA は null 引数をチェックしません。  
   
 -   SSMA で PRINT ステートメントと RAISERROR ステートメントごとに新しい変数を作成し、その変数を文字列値として使用するには、[**新しい変数の作成**] を選択します。  
   
-    このモードでは、PRINT ステートメントまたは RAISERROR ステートメントでプレースホルダーとローカル変数が使用されていない場合、SSMA は、すべての二重パーセント文字 (%%) を置き換えます。/SQL Azure 構文に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]準拠するには、1パーセントの文字を使用します。  
+    このモードでは、PRINT ステートメントまたは RAISERROR ステートメントでプレースホルダーとローカル変数が使用されていない場合、SSMA は、すべての二重パーセント文字 (%%) を置き換えます。/SQL Azure 構文に準拠するには、1パーセントの文字を使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
     PRINT ステートメントまたは RAISERROR ステートメントで、次の例のように、プレースホルダーと1つ以上のローカル変数が使用されている場合。  
   
@@ -250,7 +250,7 @@ SSMA が*format_string*引数を検出すると、変数を使用して文字列
 **フルモード:** 違います  
   
 **プロキシテーブルの変換**  
-ASE プロキシテーブルをテーブルに変換する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]か SQL Azure テーブルに変換するかを指定します。変換されていない場合は、コードがエラーコメントでマークされます。  
+ASE プロキシテーブルをテーブルに変換するか SQL Azure テーブルに変換するかを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。変換されていない場合は、コードがエラーコメントでマークされます。  
   
 -   [**変換**] を選択して、プロキシテーブルを通常のテーブルに変換します。  
   
@@ -261,9 +261,9 @@ ASE プロキシテーブルをテーブルに変換する[!INCLUDE[ssNoVersion]
 **既定/オプティミスティック/フルモード:** エラーでマーク  
   
 **RAISERROR base メッセージ番号**  
-ASE ユーザーメッセージは、各データベースに格納されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーメッセージは一元的に格納され、 **sys. messages**カタログビューを介して使用できるようになります。 さらに、ASE ユーザーメッセージは2万から開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]されますが、エラーメッセージは50001から開始されます。  
+ASE ユーザーメッセージは、各データベースに格納されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーメッセージは一元的に格納され、 **sys. messages**カタログビューを介して使用できるようになります。 さらに、ASE ユーザーメッセージは2万から開始さ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] れますが、エラーメッセージは50001から開始されます。  
   
-この設定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーメッセージに変換するために ASE ユーザーメッセージ番号に追加する番号を指定します。 が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **システム**カタログビューにユーザーメッセージを持っている場合は、この数をより大きな値に変更することが必要になる場合があります。 これは、変換されたメッセージ番号が既存のメッセージ番号と競合しないようにするためです。  
+この設定では、ユーザーメッセージに変換するために ASE ユーザーメッセージ番号に追加する番号を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **システム**カタログビューにユーザーメッセージを持っている場合は、この数をより大きな値に変更することが必要になる場合があります。 これは、変換されたメッセージ番号が既存のメッセージ番号と競合しないようにするためです。  
   
 次のことを考慮してください。  
   
@@ -273,7 +273,7 @@ ASE ユーザーメッセージは、各データベースに格納されます�
   
 -   参照されるメッセージ番号が変数または式である場合は、SSMA によって中間のローカル変数が作成されます。  
   
--   オプティミスティックモードでは、SSMA は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプション CONCAT_NULL_YIELDS_NULL がオフであり、NULL 引数のチェックを行わないことを前提としています。  
+-   オプティミスティックモードでは、SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はオプション CONCAT_NULL_YIELDS_NULL がオフであり、NULL 引数のチェックを行わないことを前提としています。  
   
 -   フルモードでは、SSMA が null 引数をチェックします。  
   
@@ -283,7 +283,7 @@ ASE ユーザーメッセージは、各データベースに格納されます�
   
 **既定/オプティミスティック/Full モード:** 30001  
   
-**システム オブジェクト**  
+**システムオブジェクト**  
 この設定を使用して、ASE システムオブジェクトの使用が検出されたときに [出力] ペインまたは [エラー一覧] ペインに表示されるメッセージの種類 (警告またはエラー) を指定します。  
   
 -   [変換] を選択し、[**警告付きでマーク**] を選択した場合、ssma は参照をシステムオブジェクトに変換し、警告コメント付きのステートメントをマークします。  
@@ -315,7 +315,7 @@ ASE では、CHARINDEX は、すべての入力式が NULL の場合にのみ NU
   
 -   ASE の動作を使用するには、[**置換関数**] を選択します。 CHARINDEX 関数のすべての呼び出しは、Sybase ASE の動作をエミュレートするために渡されたパラメーターの型 (スキーマ名の2つの下のユーザーデータベースで作成された) に基づいて、CHARINDEX_VARCHAR または CHARINDEX_NVARCHAR のユーザー定義関数の呼び出しに置き換えられます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 動作を使用するには、[**現在の構文を保持**する] を選択します。  
+-   /SQL Azure 動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[**現在の構文を保持**する] を選択します。  
   
 [**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
@@ -324,11 +324,11 @@ ASE では、CHARINDEX は、すべての入力式が NULL の場合にのみ NU
 **フルモード:** Replace 関数  
   
 **DATALENGTH 関数**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure と ASE は、値が単一の空白である場合に、DATALENGTH 関数によって返される値と異なります。 この場合、/ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure は0を返し、ASE は1を返します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure と ASE は、値が単一の空白である場合に、DATALENGTH 関数によって返される値と異なります。 この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure は0を返し、ASE は1を返します。  
   
 -   ASE の動作を使用するには、[**置換関数**] を選択します。 DATALENGTH 関数のすべての呼び出しは、Sybase ASE の動作をエミュレートするために CASE 式と置き換えられます。  
   
--   既定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure の動作を使用するには、[**現在の構文を保持**する] を選択します。  
+-   既定/SQL Azure の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[**現在の構文を保持**する] を選択します。  
   
 [**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
@@ -337,7 +337,7 @@ ASE では、CHARINDEX は、すべての入力式が NULL の場合にのみ NU
 **フルモード:** Replace 関数  
   
 **INDEX_COL 関数**  
-ASE は、INDEX_COL 関数に対して省略可能な*user_id*引数をサポートしています。ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure はこの引数をサポートしていません。 *User_id*引数を使用した場合、この関数を/SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文に変換することはできません。  
+ASE は、INDEX_COL 関数に対して省略可能な*user_id*引数をサポートしています。ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure はこの引数をサポートしていません。 *User_id*引数を使用した場合、この関数を/SQL Azure 構文に変換することはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   ASE の動作を使用するには、[**関数の変換**] を選択します。 コードに*user_id*引数が含まれている場合は、ssma によってエラーが表示されます。  
   
@@ -388,7 +388,7 @@ Sybase ASE の動作に一致するように PATINDEX 関数を変換するか�
   
 -   ASE の動作を使用するには、[**使用**] を選択します。  
   
--   既定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure の動作を使用するには、[**使用しない**] を選択します。  
+-   既定/SQL Azure の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[**使用しない**] を選択します。  
   
 [**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
@@ -401,7 +401,7 @@ REPLICATE 関数は、指定された回数だけ文字列を繰り返します�
   
 -   ASE の動作を使用するには、[**置換関数**] を選択します。 レプリケート関数のすべての呼び出しは、Sybase ASE の動作をエミュレートするために渡されたパラメーターの型 (スキーマ名の2つの下のユーザーデータベースで作成された) に基づいて、REPLICATE_VARCHAR または REPLICATE_NVARCHAR ユーザー定義関数の呼び出しに置き換えられます。  
   
--   既定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure の動作を使用するには、[**置換関数**] を選択します。  
+-   既定/SQL Azure の動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[**置換関数**] を選択します。  
   
 [**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
@@ -419,11 +419,11 @@ REPLICATE 関数は、指定された回数だけ文字列を繰り返します�
 **既定/オプティミスティックモード/フルモード:** Replace 関数  
   
 **SUBSTRING 関数**  
-ASE では、式`SUBSTRING(expression, start, length)`の中の文字数よりも大きい値が指定されている場合、または長さが0の場合、関数は NULL を返します。 / [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure では、同等の式は空の文字列を返します。  
+ASE では、 `SUBSTRING(expression, start, length)` 式の中の文字数よりも大きい値が指定されている場合、または長さが0の場合、関数は NULL を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure では、同等の式は空の文字列を返します。  
   
 -   ASE の動作を使用するには、[**置換関数**] を選択します。 SUBSTRING 関数のすべての呼び出しは、Sybase ASE の動作をエミュレートするために渡されたパラメーターの型 (スキーマ名の2つの下のユーザーデータベースで作成された) に基づいて、SUBSTRING_VARCHAR または SUBSTRING_NVARCHAR または SUBSTRING_VARBINARY ユーザー定義関数への呼び出しに置き換えられます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure 動作を使用するには、[**現在の構文を保持**する] を選択します。  
+-   /SQL Azure 動作を使用するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[**現在の構文を保持**する] を選択します。  
   
 [**モード**] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
@@ -433,7 +433,7 @@ ASE では、式`SUBSTRING(expression, start, length)`の中の文字数より�
   
 ## <a name="tables"></a>TABLES  
 **主キーの追加**  
-アクセステーブルに主キーまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一意のインデックスがない場合は、テーブルまたは SQL Azure テーブルに新しい主キーを作成します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセステーブルに主キーまたは一意のインデックスがない場合は、テーブルまたは SQL Azure テーブルに新しい主キーを作成します。  
   
 -   **既定のモード**: False  
   

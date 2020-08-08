@@ -15,14 +15,14 @@ helpviewer_keywords:
 - saving metadata
 - saving projects
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 034d15572b214a6afbd34be78528c57241a21caa
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ed3c26296f856c87875e2f50766a57c3f6d0c66e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823857"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934073"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>プロジェクトの作成と管理 (管理用 Sql)
 Access データベースをまたは SQL Azure に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、まず SSMA プロジェクトを作成する必要があります。 このプロジェクトは、移行先または SQL Azure のアクセスデータベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移行されたオブジェクトとデータ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続情報、およびプロジェクト設定を受け取る SQL Azure の対象インスタンスに関するメタデータを含むファイルです。  
@@ -89,7 +89,7 @@ SSMA により、プロジェクトファイルが作成されます。 これ�
   
         メタデータの保存には数分かかる場合があります。 この時点でメタデータを保存しない場合は、チェックボックスをオンにしないでください。  
   
-    2.  **[保存]** をクリックします。  
+    2.  **[Save]** (保存) をクリックします。  
   
         SSMA は、アクセススキーマを解析し、メタデータをプロジェクトファイルに保存します。  
   

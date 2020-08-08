@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: df1539bde5064dc9ae9211029631bb233be0f469
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8a5921282769cb4c8a696a4718ad07bb3f8d7622
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396789"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934531"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>SSMA for Sybase Console の操作 (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA)、Sybase Adaptive Server Enterprise (ASE) のリリースは、コマンドラインでコンソールアプリケーションを使用してアクセスできるようになりました。 スクリプトファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 SSMA では、コンソールアプリケーションとして、スクリプトレベルのインターフェイスを有効にし、移行サイクルを短縮し、移行作業をスケールします。  

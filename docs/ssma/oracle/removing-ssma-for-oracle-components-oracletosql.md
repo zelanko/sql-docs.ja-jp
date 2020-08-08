@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Uninstalling the Extension Pack
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0434f88c46d14672c84f5f7939488a827b229e27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 4fbac66cfd7cf549a6321534901ca8a33900f986
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266560"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933153"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>SSMA for Oracle コンポーネントの削除 (OracleToSQL)
-Oracle からへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースの移行が完了したら、ssma コンポーネントのアンインストールが必要になる場合があります。 クライアントコンポーネントはいつでもアンインストールできます。 ただし、移行したデータベースで**sysdb**データベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**ssma_oracle**スキーマの関数が使用されなくなっていない限り、から拡張パックをアンインストールしないでください。  
+Oracle からへのデータベースの移行が完了したら [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、SSMA コンポーネントのアンインストールが必要になる場合があります。 クライアントコンポーネントはいつでもアンインストールできます。 ただし、移行した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで**sysdb**データベースの**ssma_oracle**スキーマの関数が使用されなくなっていない限り、から拡張パックをアンインストールしないでください。  
   
 ## <a name="uninstalling-the-ssma-for-oracle-client"></a>SSMA for Oracle クライアントのアンインストール  
 SSMA をアンインストールするには、[**プログラムの追加と削除**] を使用します。  
@@ -48,13 +48,13 @@ SSMA をアンインストールするには、[**プログラムの追加と削
   
 5.  [接続パラメーター] ページで、認証方法を選択し、[**次へ**] をクリックします。  
   
-    Windows 認証では、Windows 資格情報を使用しての[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスにログオンしようとします。 [認証] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を選択した場合は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ログイン名とパスワードを入力する必要があります。  
+    Windows 認証では、Windows 資格情報を使用してのインスタンスにログオンしようとし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [認証] を選択した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン名とパスワードを入力する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 6.  [操作が完了しました] ページで、[ **OK]** をクリックします。  
   
 7.  [完了] ページで、[**終了**] をクリックします。  
   
-アンインストール後、を使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して、 **ssma_oracle**スキーマのオブジェクトと、場合によっては**sysdb**データベース全体が削除されたことを確認できます。 ただし、他の SSMA 製品を使用する場合は、 **sysdb**データベースも使用します。 データベースが存在し、他のデータベースがこのデータベース内のオブジェクトを参照していない場合は、データベースをデタッチできます。  
+アンインストール後、を使用して、 **ssma_oracle**スキーマのオブジェクトと、場合によっては**sysdb**データベース全体が削除されたことを確認でき [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。 ただし、他の SSMA 製品を使用する場合は、 **sysdb**データベースも使用します。 データベースが存在し、他のデータベースがこのデータベース内のオブジェクトを参照していない場合は、データベースをデタッチできます。  
   
 ## <a name="see-also"></a>参照  
 [SSMA for Oracle Client &#40;OracleToSQL&#41;のインストール](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  

@@ -7,19 +7,19 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b55228d51099c8c48c181a85d2615039f764b8a4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029403"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932173"
 ---
 # <a name="data-migration-report-sybasetosql"></a>データ移行レポート (SybaseToSQL)
-[**データ移行レポート**] ダイアログボックスは、にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行した後に表示されます。  
+[**データ移行レポート**] ダイアログボックスは、にデータを移行した後に表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
 **状態**  
 転送元データベースから転送先データベースへのデータ移行の状態が表示されます。  
   

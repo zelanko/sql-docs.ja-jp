@@ -1,20 +1,20 @@
 ---
 title: Oracle HR スキーマを SQL Server on Linux | に移行します。Microsoft Docs
 description: サンプル Oracle スキーマを SQL Server on Linux に変換する
-author: shamikg
-ms.author: shamikg
-manager: shamikg
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d28458896d4ae4806db1b0f705c5e33badddfb7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266518"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932753"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant を使用して Oracle スキーマを Linux 上の SQL Server 2017 に移行する
 
@@ -73,7 +73,7 @@ SSMA for Oracle では、既定では Oracle サンプルスキーマが使用�
 
 1. 次いで **[Connect]** をクリックします。 SSMA for Oracle は、しばらくしてデータベースに接続し、そのメタデータを読み取ります。
 
-## <a name="create-a-report"></a>レポートの作成
+## <a name="create-a-report"></a>レポートを作成する
 
 移行レポートを生成するには、次の手順に従います。
 
@@ -128,7 +128,7 @@ SSMA for Oracle では、既定では Oracle サンプルスキーマが使用�
 
 より複雑な Orcale スキーマの場合、変換プロセスには、クライアントアプリケーションに対してより多くの時間、テスト、および可能性のある変更が含まれます。 このチュートリアルの目的は、移行プロセス全体の一部として SSMA for Oracle を使用する方法を説明することです。
 
-このチュートリアルでは、次の作業を行う方法を学びました。
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
 > * SSMA を Windows にインストールする
 > * 新しい SSMA プロジェクトを作成する

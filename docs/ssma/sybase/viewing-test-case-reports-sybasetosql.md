@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Case Reports
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8a6d45f7e621f9b6516d4cc1211a8627174ae9b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 99bad46468ff0138c07f531c9e32cdecc4fda5be
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944605"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934526"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>テスト ケースのレポートの表示 (SybaseToSQL)
 テストケースレポートには、テスト検証の結果と一般的なテスト情報が表示されます。 テストエラーが発生した場合、検証されたオブジェクト内の一致しないデータに関する情報も表示されます。  
@@ -35,7 +35,7 @@ ms.locfileid: "67944605"
 **前提条件のエラー**  
 **前提条件**の手順で発生したすべてのエラーを表示します。 通常はスキップされます。  
   
-**イニシャライズ**  
+**初期化**  
 実行の状態を**成功**または**失敗**として表示します。  
   
 **テストオブジェクトの結果**  

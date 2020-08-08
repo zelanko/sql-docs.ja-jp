@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fbb0a90d9cfd628e9251a55de3df8b66a22f1ef7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 17798a2ccc0099210874a4bebb4fd05074c43639
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989658"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933873"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>SSMA for DB2 Console (DB2ToSQL) を使用したはじめに
 このセクションでは、DB2 コンソールアプリケーションを起動して開始する手順について説明します。 また、ここでは、一般的な SSMA コンソールの出力ウィンドウで使用される規則についても説明します。  
@@ -24,9 +24,9 @@ SSMA コンソールアプリケーションを起動するには、次の手順
   
 1.  [**スタート**] にアクセスし、[**すべてのプログラム**] をポイントします。  
   
-2.  [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2 コマンドプロンプト**] ショートカットをクリックします。  
+2.  [ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MIGRATION ASSISTANT For DB2 コマンドプロンプト**] ショートカットをクリックします。  
   
-    ここには、コンソールアプリケーションの使用を`(/? Help)`開始するための Ssma コンソールの [使用状況] メニューとが表示されます。  
+    ここには、コンソールアプリケーションの使用を開始するための SSMA コンソールの [使用状況] メニューとが表示され `(/? Help)` ます。  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 Windows システムでコンソールが正常に起動したら、次の手順を使用して操作できます。  

@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Configuration Options and Modes
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: e104c2ed456567074b796d68d5a82769ac67e5ac
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266528"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932963"
 ---
 # <a name="setting-project-options-oracletosql"></a>プロジェクト オプションの設定 (OracleToSQL)
-SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に変換または移行する前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、構成オプションがプロジェクトに適していることを確認してください。  
+SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトをに変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、構成オプションがプロジェクトに適していることを確認してください。  
   
 SSMA では、すべてのプロジェクトの既定のオプションを構成できます。 これらのオプションは、作成するすべての新しいプロジェクトに適用されます。 その後、各プロジェクトのオプションをカスタマイズできます。  
   
@@ -39,7 +39,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 また、これらの設定を構成するための4つのモードもあります。  
   
--   Default  
+-   既定  
   
 -   Optimistic  
   
@@ -47,7 +47,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   Custom  
   
-ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティックモードでは、現在の Oracle 構文がより多く保持されるため、読みやすくなります。 ただし、現在の構文を維持するのは正確ではない可能性があります。 Oracle 構文を同等[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の構文に変換する必要がある場合、フルモードでは最も完全な変換が実行されますが、結果のコードが読みにくくなる可能性があります。 カスタムモードでは、オプションを設定します。  
+ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティックモードでは、現在の Oracle 構文がより多く保持されるため、読みやすくなります。 ただし、現在の構文を維持するのは正確ではない可能性があります。 Oracle 構文を同等の構文に変換する必要がある場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、フルモードでは最も完全な変換が実行されますが、結果のコードが読みにくくなる可能性があります。 カスタムモードでは、オプションを設定します。  
   
 各モードでの設定と設定の適用方法の詳細については、次のトピックを参照してください。  
   
@@ -92,12 +92,12 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 3.  **[OK]** をクリックして設定を保存します。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズする方法については、「 [OracleToSQL&#41;&#40;Oracle SQL Server とデータ型のマッピング](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)」を参照してください。  
   
--   それ以外の場合は、Oracle データベースオブジェクト定義を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義に変換できます。 詳細については、「 [Oracle スキーマ &#40;OracleToSQL&#41;の変換](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)」を参照してください。  
+-   それ以外の場合は、Oracle データベースオブジェクト定義を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト定義に変換できます。 詳細については、「 [Oracle スキーマ &#40;OracleToSQL&#41;の変換](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [Oracle と SQL Server のデータ型のマッピング &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  

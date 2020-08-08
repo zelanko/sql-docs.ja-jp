@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b1b77b5ac7562ffcf39e065fb99df9da5b1f6ca6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b1a55f836879c351378b7605126d41e7dc74d85e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266574"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933113"
 ---
 # <a name="project-settings-gui-oracletosql"></a>プロジェクトの設定 (GUI) (OracleToSQL)
 GUI プロジェクトの設定を使用すると、[**データ**] タブでのデータの表示方法と、変換後に評価レポートを表示するかどうかを構成できます。  

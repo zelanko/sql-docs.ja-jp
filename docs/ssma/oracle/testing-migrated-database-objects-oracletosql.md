@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 9e7c63986cde88c7a1ccbf67f8dd3751bb6d41b0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266480"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932833"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>移行されたデータベース オブジェクトのテスト (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle Tester (SSMA Tester) の Migration Assistant は、SSMA によって行われたデータベースオブジェクトの変換とデータ移行を自動的にテストします。 SSMA の移行手順がすべて完了したら、SSMA Tester を使用して、変換されたオブジェクトが同じように動作することと、すべてのデータが適切に転送されたことを確認します。  
@@ -32,7 +32,7 @@ SSMA Tester を使用して、次のオブジェクトの種類をテストで�
   
 -   スタンドアロンステートメント。  
   
-SSMA Tester は、Oracle のテスト用に選択された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトと、の対応するオブジェクトを実行します。 その後、次の条件に従って結果を比較します。  
+SSMA Tester は、Oracle のテスト用に選択されたオブジェクトと、の対応するオブジェクトを実行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 その後、次の条件に従って結果を比較します。  
   
 -   テーブルデータの変更は同じですか。  
   
@@ -43,7 +43,7 @@ SSMA Tester は、Oracle のテスト用に選択された[!INCLUDE[ssNoVersion]
 -   結果セットが同一かどうか。  
   
 > [!NOTE]  
-> 気! 実稼働システムでは SSMA Tester を使用しないでください。 テスト担当者の実行中に、送信元スキーマとデータが変更されます。 一方、テスト対象のコードの種類によっては、元の状態を完全に復元できない場合があります。  
+> 注意 実稼働システムでは SSMA Tester を使用しないでください。 テスト担当者の実行中に、送信元スキーマとデータが変更されます。 一方、テスト対象のコードの種類によっては、元の状態を完全に復元できない場合があります。  
   
 ## <a name="prerequisites"></a>前提条件  
 SSMA Tester を使用する場合は、[**テスト担当者データベースをインストール**する] オプションをオンにして Ssma Oracle Extension Pack をインストールします。  
@@ -52,13 +52,13 @@ SSMA Tester を使用する場合は、[**テスト担当者データベース�
   
 さらに、次のことを確認します。  
   
--   Oracle クライアントツールは、を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行するコンピューターにインストールされます。  
+-   Oracle クライアントツールは、を実行するコンピューターにインストールされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースエンジンで共通言語ランタイム (CLR) 統合が有効になっています。  
+-   データベースエンジンで共通言語ランタイム (CLR) 統合が有効になってい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 SSMA Tester の現在のバージョンでは、同じソースサーバーまたは対象サーバー上の異なるユーザーによる並列実行はサポートされていないことに注意してください。  
   
-## <a name="getting-started"></a>作業の開始  
+## <a name="getting-started"></a>はじめに  
 [OracleToSQL&#41;&#40;のテストケースの作成](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  

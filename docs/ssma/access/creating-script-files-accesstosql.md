@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b81892edd4605960a50c63aa61ed65d1522d42ec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259837"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934002"
 ---
 # <a name="creating-script-files-accesstosql"></a>スクリプトファイルの作成 (Sql server)
 SSMA コンソールアプリケーションを起動する前の最初の手順は、スクリプトファイルを作成し、必要に応じて変数値ファイルとサーバー接続ファイルを作成することです。  
@@ -320,9 +320,9 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     次の2つのケースが発生します。  
   
-    1.  Override オプションが**false**の場合、検索の順序は "保護され&gt;たストレージ-&gt;スクリプトファイル-サーバー&gt;接続ファイル-プロンプトユーザー" になります。  
+    1.  Override オプションが**false**の場合、検索の順序は "保護されたストレージ- &gt; スクリプトファイル- &gt; サーバー接続ファイル-プロンプトユーザー" になり &gt; ます。  
   
-    2.  Override オプションが**true**の場合、検索の順序は、スクリプトファイル&gt;サーバー接続ファイルの&gt;プロンプトユーザーになります。  
+    2.  Override オプションが**true**の場合、検索の順序は、スクリプトファイル &gt; サーバー接続ファイルの &gt; プロンプトユーザーになります。  
   
     **例:**  
   
@@ -344,7 +344,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
 ## <a name="script-commands"></a>スクリプト コマンド  
 このスクリプトファイルには、一連の移行ワークフローコマンドが XML 形式で含まれています。 SSMA コンソールアプリケーションは、スクリプトファイルに表示されるコマンドの順序で移行を処理します。  
   
-たとえば、Access データベース内の特定のテーブルの典型的なデータ移行は、データベース&gt;テーブルの階層に従います。  
+たとえば、Access データベース内の特定のテーブルの典型的なデータ移行は、データベーステーブルの階層に従い &gt; ます。  
   
 スクリプトファイル内のすべてのコマンドが正常に実行されると、SSMA コンソールアプリケーションが終了し、コントロールがユーザーに返されます。 スクリプトファイルの内容は、変数の[値のファイル](creating-variable-value-files-accesstosql.md)に含まれる変数情報、または変数の値をスクリプトファイル内の別のセクションに格納することにより、静的なものになります。  
   
@@ -375,13 +375,13 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
 ```  
 3つのスクリプトファイル (さまざまなシナリオを実行するため)、変数値ファイル、およびサーバー接続ファイルで構成されるテンプレートは、product ディレクトリの Sample Console Scripts フォルダーにあります。  
   
--   AssessmentReportGenerationSample  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample  
+-   ConversionAndDataMigrationSample.xml  
   
--   変数の形式  
+-   VariableValueFileSample.xml  
   
--   すべてのファイル  
+-   ServersConnectionFileSample.xml  
   
 テンプレート (ファイル) は、関連性を確認するために表示されるパラメーターを変更した後に実行できます。  
   

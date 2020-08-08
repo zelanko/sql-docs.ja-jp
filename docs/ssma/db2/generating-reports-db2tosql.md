@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3b8b0425cf8a22931b3b8f8d2a0d42d698d4142e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1ae04ceabe7a2063f8b9806894ff8e4d55c577fd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396578"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933801"
 ---
 # <a name="generating-reports-db2tosql"></a>レポートの生成 (DB2ToSQL)
 コマンドを使用して実行される特定のアクティビティのレポートは、SSMA コンソールのオブジェクトツリーレベルで生成されます。  
@@ -25,7 +25,7 @@ ms.locfileid: "87396578"
   
     Reports vis vis コマンドは次のとおりです。  
   
-    |法. いいえ。|コマンド|レポート タイトル|  
+    |法. いいえ。|command|レポート タイトル|  
     |-|-|-|  
     |1|生成-評価-レポート|AssessmentReport &lt; n &gt;XML|  
     |2|変換-スキーマ|SchemaConversionReport &lt; n &gt;XML|  

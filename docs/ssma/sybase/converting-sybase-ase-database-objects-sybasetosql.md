@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Converting Database Objects
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0785c3ecc6335494ed4c34f8919e3ad766236631
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f52700e0b85c2630d30c7ffe32193cbd96ce9d1e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394514"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932283"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE データベースオブジェクトの変換 (SybaseToSQL)
 SAP Adaptive Server Enterprise (ASE) に接続した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE sql に接続し、プロジェクトとデータのマッピングオプションを設定した後、Sap Adaptive Server enterprise (ase) データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または azure sql database オブジェクトに変換できます。  

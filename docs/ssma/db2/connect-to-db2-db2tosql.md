@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7180e78e7ec34e9c75d25dac51101e28291b1f4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141093"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933845"
 ---
 # <a name="connect-to-db2-db2tosql"></a>DB2 への接続 (DB2ToSQL)
 [ **Db2 への接続**] ダイアログボックスを使用して、移行する db2 データベースに接続します。  

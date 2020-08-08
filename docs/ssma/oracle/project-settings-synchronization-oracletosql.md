@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 743ed010107c9557c84b1683f7a81b369ca7cf3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 697bf746f438d45731e78c0c39d28677c3be6ddd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266587"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933206"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>プロジェクトの設定 (同期) (OracleToSQL)
-[**プロジェクトの設定**] ダイアログボックスの [同期] ページには、ssma によってテーブルやストアドプロシージャなどのデータベースオブジェクトがに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込まれて更新される方法をカスタマイズする設定が含まれています。  
+[**プロジェクトの設定**] ダイアログボックスの [同期] ページには、ssma によってテーブルやストアドプロシージャなどのデータベースオブジェクトがに読み込まれて更新される方法をカスタマイズする設定が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 既定のアクションオプションでは、Oracle データベースからオブジェクトを更新し、オブジェクトを SQL Server データベースと同期するための既定の設定を指定します。 詳細については、「[データベースからの更新-Oracle](../../ssma/oracle/refresh-from-database-oracletosql.md)」を参照してください。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68266587"
   
 ## <a name="miscellaneous-options"></a>その他のオプション  
 **ログオン**  
-がオブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込むときに実行する試行回数を指定します。 現在の試行でに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込まれていないオブジェクトは、ssma が現在の同期プロセスの最大試行回数に達するまで再試行されます。 既定値の設定は**2**です  
+がオブジェクトをに読み込むときに実行する試行回数を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 現在の試行でに読み込まれていないオブジェクト [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、SSMA が現在の同期プロセスの最大試行回数に達するまで再試行されます。 既定値の設定は**2**です  
   
 ## <a name="synchronization-for-oracle-options"></a>Oracle オプションの同期  
 **ローカルおよびリモートオブジェクトの変更に対するアクション**  

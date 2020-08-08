@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: f1f760d2cc97c7f54be18281c7b55a6527eb8ec2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d99fb680e6b2ca9b8ce044d8f8c322c6bce06cec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392097"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932993"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>SSMA for Oracle コンソールの操作 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コマンドラインでコンソールアプリケーションを使用して、Oracle 用の Migration Assistant (SSMA) リリースにアクセスできるようになりました。 スクリプトファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 SSMA では、コンソールアプリケーションとして、スクリプトレベルのインターフェイスを有効にし、移行サイクルを短縮し、移行作業をスケールします。  

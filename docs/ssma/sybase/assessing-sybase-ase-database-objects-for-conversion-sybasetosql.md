@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8941c243b6741b42b7c3e628305431812ad3f8d7
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fba4692780b9f9f2c556634bf1676bc00bbba169
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864839"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932613"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>変換のための SAP ASE データベースオブジェクトの評価 (SybaseToSQL)
 オブジェクトを読み込んで、または Azure SQL にデータを移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、移行の複雑さと所要時間を決定する必要があります。 SSMA では、に正常に変換されるオブジェクトとプロシージャの割合を示す評価レポートを作成でき [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 SSMA では、変換エラーの原因となる可能性のある特定の問題を確認することもできます。  

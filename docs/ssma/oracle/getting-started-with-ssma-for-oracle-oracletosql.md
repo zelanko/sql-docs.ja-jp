@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 985d6e58d00dee705a684b7ef2f6516a5459f0df
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 7ee753bd032cb8ad69f472888a99cc53cc5760d9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293870"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934903"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 入門 (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle 用の Migration Assistant (SSMA) を使用すると、Oracle データベーススキーマをスキーマに簡単に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、その結果のスキーマをにアップロード [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] し、oracle からにデータを移行することができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -76,7 +76,7 @@ Oracle メタデータエクスプローラーには、Oracle スキーマに関
   
 メタデータエクスプローラーで行った変更は、ソースまたはターゲットのデータベースではなく、プロジェクトのメタデータに反映されます。  
   
-### <a name="toolbars"></a>[ツール バー]  
+### <a name="toolbars"></a>ツールバー  
 SSMA には、[プロジェクト] ツールバーと [移行] ツールバーの2つのツールバーがあります。  
   
 #### <a name="the-project-toolbar"></a>[プロジェクト] ツールバー  
@@ -85,7 +85,7 @@ SSMA には、[プロジェクト] ツールバーと [移行] ツールバー�
 #### <a name="migration-toolbar"></a>移行ツールバー  
 次の表は、移行ツールバーのコマンドを示しています。  
   
-|Button|関数|  
+|Button|機能|  
 |------|--------|  
 |**レポートの作成**|選択した Oracle オブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構文に変換し、変換が成功したかどうかを示すレポートを作成します。<br /><br />このコマンドは、Oracle メタデータエクスプローラーでオブジェクトが選択されていない限り、無効になっています。|  
 |**スキーマの変換**|選択した Oracle オブジェクトをオブジェクトに変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br />このコマンドは、Oracle メタデータエクスプローラーでオブジェクトが選択されていない限り、無効になっています。|  
@@ -98,7 +98,7 @@ SSMA メニューを次の表に示します。
 |メニュー|説明|  
 |----|-----------|  
 |**[最近使ったファイル]**|プロジェクトを操作したり、Oracle に接続したり、に接続したりするためのコマンドが含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
-|**[編集]**|[ [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL の詳細] ペインからコピーするなど、詳細ページ内のテキストを検索して操作するためのコマンドが含まれています。 には、[**ブックマークの管理**] オプションも含まれています。このオプションを使用すると、既存のブックマークの一覧を表示できます。 ダイアログの右側にあるボタンを使用して、ブックマークを管理できます。|  
+|**編集**|[ [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL の詳細] ペインからコピーするなど、詳細ページ内のテキストを検索して操作するためのコマンドが含まれています。 には、[**ブックマークの管理**] オプションも含まれています。このオプションを使用すると、既存のブックマークの一覧を表示できます。 ダイアログの右側にあるボタンを使用して、ブックマークを管理できます。|  
 |**表示**|**メタデータエクスプローラーの同期**コマンドを含みます。 これにより、Oracle メタデータエクスプローラーとメタデータエクスプローラーの間でオブジェクトが同期され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 には、**出力**ペインおよび**エラー一覧**ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトを管理するためのオプション**レイアウト**も含まれています。|  
 |**ツール**|レポートを作成し、オブジェクトとデータを移行するためのコマンドが含まれています。 [**グローバル設定**] および [プロジェクトの**設定**] ダイアログボックスへのアクセスも提供します。|  
 |**テスト担当者**|テストケース、リポジトリ、およびバックアップ管理システムを作成および操作するためのコマンドが含まれています。|  

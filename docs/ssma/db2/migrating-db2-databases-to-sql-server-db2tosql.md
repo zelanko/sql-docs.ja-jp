@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c66e88ff81cc8f7d06d3d946be8e476b175d1b47
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c0a762cbe49a3186a29feb5aa3424b083d2f8978
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823683"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933743"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>DB2 データベースの SQL Server への移行 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2 は、DB2 データベースをまたは Azure SQL Database に迅速に移行するのに役立つ包括的な環境です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 SSMA for DB2 を使用することにより、データベースオブジェクトとデータを確認し、データベースの移行を評価したり、データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database に移行したり、データをまたは Azure SQL Database に移行したりすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SYS スキーマとシステム DB2 スキーマは移行できないことに注意してください。  

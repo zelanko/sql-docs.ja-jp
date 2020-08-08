@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b9534020525ace1df2976ee732d9016c02d5ed2e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 76f088100ecdf0172cfb7403bffa4a1546113b6b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293929"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933273"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>メニュー コマンドやその他のショートカット キー (OracleToSQL)
 以下のセクションでは、SSMA for Oracle アプリケーションのさまざまなダイアログボックスで使用されるメニューコマンドやその他のショートカットキーにアクセスするためのキーボードショートカットについて説明します。  
@@ -81,7 +81,7 @@ ms.locfileid: "84293929"
 |レポートを作成します。|ALT + T + C|  
 |スキーマを変換します。|ALT + T + N または CTRL + R|  
 |Oracle データベースから更新します。|Alt + T + R|  
-|SQL Server または SQL Azure データベースと同期します。|ALT + T + S|  
+|SQL Server または Azure SQL Database と同期します。|ALT + T + S|  
 |スクリプトとして保存します。|ALT + T + A|  
 |データを移行します。|Alt + T + M|  
 |現在の操作を停止します。|ALT + T + O|  

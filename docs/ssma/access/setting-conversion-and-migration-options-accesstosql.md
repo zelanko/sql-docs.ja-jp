@@ -14,17 +14,17 @@ helpviewer_keywords:
 - project settings
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e89cfd6768aeedd970889cbaea46bb3e1ceae4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e074f603586afa0322d62872c49abb52fe47f047
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051498"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933963"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>変換オプションと移行オプションの設定 (アップグレード)
-SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションでは、オブジェクトの変換方法、データの移行方法、およびソースデータ型とターゲットデータ型のマッピング方法を指定します。 オブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換したり、データ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を SQL Azure または SQL Azure に移行したりする前に、構成オプションがプロジェクトに適していることを確認してください。  
+SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションでは、オブジェクトの変換方法、データの移行方法、およびソースデータ型とターゲットデータ型のマッピング方法を指定します。 オブジェクトをに変換したり、データを SQL Azure または SQL Azure に移行したりする前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、構成オプションがプロジェクトに適していることを確認してください。  
   
 ## <a name="configuration-options-and-modes"></a>構成オプションとモード  
 SSMA には、4セットの構成設定と4つのモードがあります。既定、オプティミスティック、Full、および Custom です。 ほとんどのユーザーには、既定のモードを使用することをお勧めします。 単純な変換にはオプティミスティックモードを使用します。 すべてのメッセージを表示する場合は、フルモードを使用します。 カスタムモードでは、オプションを設定します。  
@@ -75,14 +75,14 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 3.  **[OK]** をクリックして設定を保存します。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズするには、「[ソースとターゲットのデータ型のマッピング](mapping-source-and-target-data-types-accesstosql.md)」を参照してください。  
   
 -   ソースデータベースとターゲットデータベースのマッピングをカスタマイズするには、「[ソースデータベースとターゲットデータベースのマッピング](mapping-source-and-target-databases-accesstosql.md)」を参照してください。  
   
--   それ以外の場合は、Access データベースオブジェクト定義を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure オブジェクト定義に変換できます。 詳細については、「 [Access データベースオブジェクトの変換](converting-access-database-objects-accesstosql.md)」を参照してください。  
+-   それ以外の場合は、Access データベースオブジェクト定義を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure オブジェクト定義に変換できます。 詳細については、「 [Access データベースオブジェクトの変換](converting-access-database-objects-accesstosql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

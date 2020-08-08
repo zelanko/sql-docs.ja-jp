@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Project Options Setting
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b2b16054a0a866d7772243a04cb8f5955931cfc4
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 04efa94a93cc313e520eaebb8448c48e1b106ec6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864749"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934631"
 ---
 # <a name="setting-project-options-sybasetosql"></a>プロジェクト オプションの設定 (SybaseToSQL)
 SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、SQL azure、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトをに変換したり、データを SQL Azure または SQL Azure に移行したりする前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、構成オプションがプロジェクトに適していることを確認してください。  
@@ -38,7 +38,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 また、これらの設定を構成するための4つのモードもあります。  
   
-1.  Default  
+1.  既定  
   
 2.  Optimistic  
   

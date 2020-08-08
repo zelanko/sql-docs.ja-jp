@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d65cac7c857e8b6357dc31ca130dcdbdaa43b58f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 42042451cb0b2197dd54270d4eca1bb990eb233d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910698"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934053"
 ---
 # <a name="advanced-object-selection--accesstosql"></a>高度なオブジェクトの選択 (拡張機能 Sql)
 [オブジェクトの**詳細設定**] ダイアログボックスでは、オブジェクト名に文字列と部分文字列を使用してデータベースオブジェクトをフィルター処理し、そのオブジェクトを選択または選択解除できます。 SSMA は、選択したオブジェクトに対して変換操作と移行操作を実行します。  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 84c9a0a994e087314fcd8d1ae66e1bb5a79fedba
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d04d44abe758ffb15e57944a624ac5b7a87546d4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863656"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933943"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>SQL Server に接続しています (DB2eToSQL)
 DB2 データベースを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、2014、Azure SQL Database に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらのターゲットインスタンスのいずれかに接続する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 接続すると、SSMA はインスタンス内のすべてのデータベースに関するメタデータ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取得し、メタデータエクスプローラーにデータベースのメタデータを表示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SSMA は、接続されているのインスタンスに関する情報を格納し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ますが、パスワードは保存しません。  
@@ -78,7 +78,7 @@ DB2 データベースオブジェクトを構文に変換する前に、DB2 デ
   
 -   作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトが 2012 SQL Server 場合は、2012および2014および2016に接続できます。  
   
-|プロジェクトの種類と対象サーバーのバージョン|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(バージョン:13. x)|Azure SQL データベース|  
+|プロジェクトの種類と対象サーバーのバージョン|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(バージョン:13. x)|Azure SQL Database|  
 |-|-|-|-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|はい|はい|はい||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||はい|はい||  

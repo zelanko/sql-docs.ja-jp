@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864899"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988498"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 
@@ -154,8 +154,8 @@ Data Migration Assistant の v2.0 リリースには、次の追加情報が含�
 
 Data Migration Assistant のバージョン3.1 リリースには、次の追加機能が含まれています。
 
-- データベース照合順序、サポートされていないシステムストアドプロシージャの使用、および CLR オブジェクトに関して、Azure SQL データベースの評価に関する推奨事項が改善されました。
-- Azure SQL データベースに移行するときの互換性レベル130、120、110、および100の評価ガイダンス。
+- データベースの照合順序、サポートされていないシステムストアドプロシージャの使用、および CLR オブジェクトに関して、Azure SQL Database の評価に関する推奨事項が向上しました。
+- Azure SQL Database に移行するときの互換性レベル130、120、110、および100の評価ガイダンス。
 
 ## <a name="data-migration-assistant-v30"></a>Data Migration Assistant v1.0
 
@@ -181,7 +181,7 @@ V2.0 リリースの Data Migration Assistant には、ストレージの節約�
 Data Migration Assistant の v1.0 リリースは最初のリリースであり、次の機能を備えています。
 
 - オンプレミスバージョンの SQL Server へのアップグレードに影響する可能性がある問題の検出。 すべての結果は互換性の問題として記述されており、次の領域に分類されています。
-  - 互換性に影響する変更
+  - 重大な変更
   - 動作の変更
   - 非推奨の機能
 - アップグレード後にデータベースが恩恵を受けることのできるターゲット SQL Server プラットフォームの新機能の検出。 すべての結果は、機能に関する推奨事項として説明されており、次の領域に分類されています。

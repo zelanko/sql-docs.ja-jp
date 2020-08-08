@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8f6ea6e9b9e0971967b58b005e4fe554b397edb0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028885"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934673"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>メニュー コマンドやその他のショートカット キー (SybaseToSQL)
 以下のセクションでは、SSMA for Sybase アプリケーションのさまざまなダイアログボックスで使用されるメニューコマンドやその他のショートカットキーにアクセスするためのキーボードショートカットについて説明します。  
@@ -79,7 +79,7 @@ ms.locfileid: "68028885"
 |レポートを作成します。|ALT + T + C|  
 |スキーマを変換します。|ALT + T + N または CTRL + R|  
 |Sybase データベースから更新します。|Alt + T + R|  
-|SQL Server または SQL Azure データベースと同期します。|ALT + T + S|  
+|SQL Server または Azure SQL Database と同期します。|ALT + T + S|  
 |スクリプトとして保存します。|ALT + T + A|  
 |データを移行します。|Alt + T + M|  
 |現在の操作を停止します。|ALT + T + O|  

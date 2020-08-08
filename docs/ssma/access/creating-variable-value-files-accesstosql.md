@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6d208be8fb7ebf8d1c33b0df5d7c49dd28a412a7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006593"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933971"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>変数値ファイルの作成 (「に」)
 変数値ファイルは、サーバーの移行間で頻繁に変更されるコマンドのパラメーター値 (転送元または転送先のサーバー名など) を構成する XML ファイルです。 多数のデータベースの移行が行われると、コマンドラインで **-v**スイッチを使用して、各ソースサーバーの値を格納するための複数の変数ファイルが作成され、マスタースクリプトファイルに参照されます。 この動作により、複数の変数ファイルの変数値を使用して、少数のスクリプトファイルで静的な値を保持することができます。  
   
 > [!NOTE]  
 > -  変数名の先頭には $ (ドル) 記号が付きます。 変数に変数値ファイルの値が割り当てられていない場合は、スクリプトファイルの解析中にエラーが発生し、コンソールの実行プロセスが停止します。  
-> -  の**$** エスケープ文字は**$$** です。 パラメーターの変数または静的な値に**$** (ドル) 記号が含まれている場合**$$** は、を変数ではなく文字として扱うように指定する必要があります。  
-> -  保守性を確保するために、ユーザー `'variable-group'`定義変数を論理的に分離するために、要素内で変数を宣言できます。  この要素の使用は必須ではありません。  
+> -  のエスケープ文字 **$** は **$$** です。 パラメーターの変数または静的な値に (ドル) 記号が含まれている場合は、を変数では **$** **$$** なく文字として扱うように指定する必要があります。  
+> -  保守性を確保するために、 `'variable-group'` ユーザー定義変数を論理的に分離するために、要素内で変数を宣言できます。  この要素の使用は必須ではありません。  
   
 **例:**  
   

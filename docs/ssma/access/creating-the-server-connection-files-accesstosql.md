@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b74cf86e6a68653a2047aebefc7ca86ab6868475
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006604"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933983"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>サーバー接続ファイルの作成 (の場合)
-サーバー情報は、スクリプトファイルの [サーバー] セクションで指定できます。 サーバー情報は、別のサーバー接続ファイルで指定することもできます。 サーバー接続ファイルのコマンドラインパラメーターが`-c <serverconnectionfile>`です。 スクリプトファイルとサーバー接続ファイルの両方に同じサーバー id が存在する場合は、スクリプトファイル内のサーバー定義が考慮されます。  
+サーバー情報は、スクリプトファイルの [サーバー] セクションで指定できます。 サーバー情報は、別のサーバー接続ファイルで指定することもできます。 サーバー接続ファイルのコマンドラインパラメーターが `-c <serverconnectionfile>` です。 スクリプトファイルとサーバー接続ファイルの両方に同じサーバー id が存在する場合は、スクリプトファイル内のサーバー定義が考慮されます。  
   
 ```xml  
 <!--Sample of server connection file commands -->  

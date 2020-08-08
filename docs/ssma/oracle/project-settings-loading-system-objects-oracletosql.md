@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a5e8feb6c083c787d877cbc5491c533b8a35d740
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 93e008c9d7518e7e171e7548c7353e4f83ccb8a1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266606"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933223"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>プロジェクトの設定 (システム オブジェクトの読み込み) (OracleToSQL)
-[**プロジェクトの設定**] ダイアログボックスの [システムオブジェクトの読み込み] ページでは、ssma に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって変換および読み込まれる Oracle システムオブジェクトを指定できます。  
+[**プロジェクトの設定**] ダイアログボックスの [システムオブジェクトの読み込み] ページでは、ssma によって変換および読み込まれる Oracle システムオブジェクトを指定でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 [システムオブジェクトの読み込み] ウィンドウは、[**プロジェクトの設定**] ダイアログボックスと [既定のプロジェクトの**設定**] ダイアログボックスで使用できます。  
   

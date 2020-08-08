@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d45df17f82bf52d6d059b2efbf69a39cedb949f0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910690"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934103"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>変換のためのアクセスデータベースオブジェクトの評価 (アクセス許可 Sql)
-オブジェクトを読み込み、データをまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure に移行する前に、移行が成功する量と、変換にかかる時間を決定する必要があります。 SSMA では、評価レポートを作成して、正常に変換された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトの割合、または移行を実行するための構文と時間の推定 SQL Azure を示すことができます。 SSMA では、変換エラーの原因となった特定の問題を確認することもできます。  
+オブジェクトを読み込み、データをまたは SQL Azure に移行する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移行が成功する量と、変換にかかる時間を決定する必要があります。 SSMA では、評価レポートを作成して、正常に変換されたオブジェクトの割合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または移行を実行するための構文と時間の推定 SQL Azure を示すことができます。 SSMA では、変換エラーの原因となった特定の問題を確認することもできます。  
   
 ## <a name="creating-assessment-reports"></a>評価レポートの作成  
-評価レポートを作成すると、SSMA は、選択した Access データベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトをまたは SQL Azure 構文に変換し、結果を表示します。  
+評価レポートを作成すると、SSMA は、選択した Access データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure 構文に変換し、結果を表示します。  
   
 **評価レポートを作成するには**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67910690"
   
     SSMA は、ウィンドウの下部にあるステータスバーに進行状況を表示します。 出力ウィンドウが表示されている場合は、[出力] ウィンドウにメッセージも表示されます。  
   
-評価が完了すると、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセスの Migration Assistant: 評価レポート] ウィンドウが表示されます。  
+評価が完了すると、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスの Migration Assistant: 評価レポート] ウィンドウが表示されます。  
   
 ## <a name="using-assessment-reports"></a>評価レポートの使用  
 [評価レポート] ウィンドウには、エクスプローラー、詳細ウィンドウ、およびメッセージウィンドウの3つのペインがあります。  

@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 13afcabf85515b211d8493990a59950dc97d72f5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989865"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933933"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマの変換 (DB2ToSQL)
-DB2 に接続し、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続して、プロジェクトとデータのマッピングオプションを設定したら、db2 データベースオブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースオブジェクトに変換できます。  
+DB2 に接続し、に接続して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトとデータのマッピングオプションを設定したら、db2 データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースオブジェクトに変換できます。  
   
 ## <a name="the-conversion-process"></a>変換処理  
-データベースオブジェクトを変換すると、DB2 からオブジェクトの定義が取得[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]され、類似のオブジェクトに変換されて、ssma メタデータに読み込まれます。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに情報は読み込まれません。 その後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータエクスプローラーを使用して、オブジェクトとそのプロパティを表示できます。  
+データベースオブジェクトを変換すると、DB2 からオブジェクトの定義が取得され、類似のオブジェクトに変換され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] て、SSMA メタデータに読み込まれます。 のインスタンスに情報は読み込まれません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 その後、メタデータエクスプローラーを使用して、オブジェクトとそのプロパティを表示でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 変換中に SSMA は出力メッセージを出力ウィンドウに出力し、エラーメッセージをエラー一覧ウィンドウに出力します。 出力とエラーの情報を使用して、必要な変換結果を取得するために DB2 データベースまたは変換プロセスを変更する必要があるかどうかを判断します。  
   
@@ -28,7 +28,7 @@ DB2 に接続し、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]�
 オブジェクトを変換する前に、[**プロジェクトの設定**] ダイアログボックスでプロジェクトの変換オプションを確認してください。 このダイアログボックスを使用すると、SSMA が関数とグローバル変数を変換する方法を設定できます。 詳細については、「[プロジェクトの設定 &#40;変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)」を参照してください。  
   
 ## <a name="conversion-results"></a>変換結果  
-次の表は、変換される DB2 オブジェクトと、結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]として得られるオブジェクトを示しています。  
+次の表は、変換される DB2 オブジェクトと、結果として得られるオブジェクトを示してい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 |DB2 オブジェクト|結果の SQL Server オブジェクト|  
 |-----------|----------------------------|  
@@ -69,7 +69,7 @@ DB2 に接続し、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]�
 |変数|マップされます。|  
 |例外、ハンドラー、および条件|**SSMA は、"例外処理" を次の例外と共にマップします。**<br /><br />終了ハンドラー-マップされます。<br /><br />元に戻すハンドラー-マップされます。<br /><br />CONTINUE ハンドラー-マップされていません。<br /><br />条件-SQL server のセマンティクスにはマップされません。|  
 |動的 SQL|マップされていません。|  
-|エイリアス|マップされます。|  
+|Aliases|マップされます。|  
 |ニックネーム|部分マッピング。 基になるオブジェクトには手動処理が必要です|  
 |シノニム|マップされます。|  
 |DB2 の標準関数|SSMA maps DB2 standard 関数は、SQL Server で同等の関数を使用できる場合に使用できます。|  
@@ -143,7 +143,7 @@ DB2 データベースオブジェクトを変換するには、まず変換す�
   
 -   DB2 データベース内のオブジェクトを変更して、問題のあるコードを削除または修正することができます。 更新されたコードを SSMA に読み込むには、メタデータを更新する必要があります。 詳細については、「 [DB2 データベースへの接続 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)」を参照してください。  
   
--   オブジェクトを移行から除外することができます。 メタ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データエクスプローラーおよび Db2 メタデータエクスプローラーで、オブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を db2 に読み込んでデータを移行する前に、項目の横のチェックボックスをオフにします。  
+-   オブジェクトを移行から除外することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータエクスプローラーおよび Db2 メタデータエクスプローラーで、オブジェクトを db2 に読み込んでデータを移行する前に、項目の横のチェックボックスをオフにし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="next-step"></a>次の手順  
 移行プロセスの次の手順では、[変換されたオブジェクトを SQL Server に読み込み](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)ます。  
