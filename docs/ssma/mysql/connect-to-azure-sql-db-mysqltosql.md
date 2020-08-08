@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823795"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935991"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Azure SQL Database への接続 (MySQLToSQL)
-[SQL Azure への接続] ダイアログボックスを使用して、移行する SQL Azure データベースに接続します。  
+[SQL Azure への接続] ダイアログボックスを使用して、移行する Azure SQL Database 内のデータベースに接続します。  
   
 このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **SQL Azure に接続**] を選択します。 以前に接続している場合、コマンドは**SQL Azure に再接続します。**  
   
@@ -26,7 +26,7 @@ ms.locfileid: "87823795"
   
 SQL Azure に接続するためのサーバー名を選択または入力します。  
   
-**[データベース]**  
+**データベース**  
   
 データベース名を選択、入力、または**参照**します。  
   
@@ -35,7 +35,7 @@ SQL Azure に接続するためのサーバー名を選択または入力しま�
   
 **ユーザー名**  
   
-SSMA が SQL Azure データベースへの接続に使用するユーザー名を入力します。  
+SSMA が接続に使用するユーザー名を入力し Azure SQL Database  
   
 **パスワード**  
   

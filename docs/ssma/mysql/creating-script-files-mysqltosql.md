@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Creating script files, script file validation
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 54b8dd8d58158997793f6c32da51a10136d02fce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103062"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935751"
 ---
 # <a name="creating-script-files-mysqltosql"></a>スクリプト ファイルの作成 (MySQLToSQL)
 SSMA コンソールアプリケーションを起動する前の最初の手順は、スクリプトファイルを作成し、必要に応じて変数値ファイルとサーバー接続ファイルを作成することです。  
@@ -324,9 +324,9 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
   
     次の2つのケースが発生します。  
   
-    1.  Override オプションが**false**の場合、検索の順序は "保護され&gt;たストレージ-&gt;スクリプトファイル-サーバー&gt;接続ファイル-プロンプトユーザー" になります。  
+    1.  Override オプションが**false**の場合、検索の順序は "保護されたストレージ- &gt; スクリプトファイル- &gt; サーバー接続ファイル-プロンプトユーザー" になり &gt; ます。  
   
-    2.  Override オプションが**true**の場合、検索の順序は、スクリプトファイル&gt;サーバー接続ファイルの&gt;プロンプトユーザーになります。  
+    2.  Override オプションが**true**の場合、検索の順序は、スクリプトファイル &gt; サーバー接続ファイルの &gt; プロンプトユーザーになります。  
   
     **例:**  
   
@@ -348,7 +348,7 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
 ## <a name="script-commands"></a>スクリプト コマンド  
 このスクリプトファイルには、一連の移行ワークフローコマンドが XML 形式で含まれています。 SSMA コンソールアプリケーションは、スクリプトファイルに表示されるコマンドの順序で移行を処理します。  
   
-たとえば、MySQL データベース内の特定のテーブルの典型的なデータ移行は、データベース&gt;テーブルの階層構造に従います。  
+たとえば、MySQL データベース内の特定のテーブルの典型的なデータ移行は、データベーステーブルの階層構造に従い &gt; ます。  
   
 スクリプトファイル内のすべてのコマンドが正常に実行されると、SSMA コンソールアプリケーションが終了し、コントロールがユーザーに返されます。 スクリプトファイルの内容は、変数の[値のファイル](creating-variable-value-files-mysqltosql.md)に含まれる変数情報、または変数の値をスクリプトファイル内の別のセクションに格納することにより、静的なものになります。  
   
@@ -379,15 +379,15 @@ SSMA コンソールアプリケーションを起動する前の最初の手順
 ```  
 3つのスクリプトファイル (さまざまなシナリオを実行するため)、変数値ファイル、およびサーバー接続ファイルで構成されるテンプレートは、product ディレクトリの Sample Console Scripts フォルダーにあります。  
   
--   AssessmentReportGenerationSample  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample  
+-   ConversionAndDataMigrationSample.xml  
   
--   SqlStatementConversionSample  
+-   SqlStatementConversionSample.xml  
   
--   変数の形式  
+-   VariableValueFileSample.xml  
   
--   すべてのファイル  
+-   ServersConnectionFileSample.xml  
   
 テンプレート (ファイル) は、関連性を確認するために表示されるパラメーターを変更した後に実行できます。  
   

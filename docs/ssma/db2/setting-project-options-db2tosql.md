@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: be1cc5ca7d48d72ee9c87ceb2c421a0c411548dc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060032"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936654"
 ---
 # <a name="setting-project-options-db2tosql"></a>プロジェクトオプションの設定 (DB2ToSQL)
-SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に変換または移行する前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、構成オプションがプロジェクトに適していることを確認してください。  
+SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトをに変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、構成オプションがプロジェクトに適していることを確認してください。  
   
 SSMA では、すべてのプロジェクトの既定のオプションを構成できます。 これらのオプションは、作成するすべての新しいプロジェクトに適用されます。 その後、各プロジェクトのオプションをカスタマイズできます。  
   
@@ -36,7 +36,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 また、これらの設定を構成するための4つのモードもあります。  
   
--   Default  
+-   既定  
   
 -   Optimistic  
   
@@ -44,7 +44,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   Custom  
   
-ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティックモードでは、現在の DB2 構文が多く保持されるため、読みやすくなります。 ただし、現在の構文を維持するのは正確ではない可能性があります。 DB2 構文を同等[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の構文に変換する必要がある場合、フルモードでは最も完全な変換が実行されますが、結果のコードが読みにくくなる可能性があります。 カスタムモードでは、オプションを設定します。  
+ほとんどのユーザーには、既定のモードを使用することをお勧めします。 オプティミスティックモードでは、現在の DB2 構文が多く保持されるため、読みやすくなります。 ただし、現在の構文を維持するのは正確ではない可能性があります。 DB2 構文を同等の構文に変換する必要がある場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、フルモードでは最も完全な変換が実行されますが、結果のコードが読みにくくなる可能性があります。 カスタムモードでは、オプションを設定します。  
   
 各モードでの設定と設定の適用方法の詳細については、次のトピックを参照してください。  
   
@@ -89,12 +89,12 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 3.  **[OK]** をクリックして設定を保存します。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
 -   ソースとターゲットのデータ型のマッピングをカスタマイズするには、「 [DB2 と SQL Server のデータ型 &#40;DB2ToSQL&#41;にマッピング](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)する」を参照してください。  
   
--   それ以外の場合は、DB2 データベースオブジェクト定義を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義に変換できます。 詳細については、「 [DB2 スキーマ &#40;DB2ToSQL&#41;の変換](../../ssma/db2/converting-db2-schemas-db2tosql.md)」を参照してください。  
+-   それ以外の場合は、DB2 データベースオブジェクト定義を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト定義に変換できます。 詳細については、「 [DB2 スキーマ &#40;DB2ToSQL&#41;の変換](../../ssma/db2/converting-db2-schemas-db2tosql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [DB2 と SQL Server のデータ型のマッピング &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  

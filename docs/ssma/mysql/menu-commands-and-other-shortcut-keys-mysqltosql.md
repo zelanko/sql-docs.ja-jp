@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fc847eecec3f84cda54e2820a444036a016ec9a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293603"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935271"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>メニュー コマンドやその他のショートカット キー (MySQLToSQL)
 以下のセクションでは、SSMA for MySQL アプリケーションのさまざまなダイアログボックスで使用されるメニューコマンドやその他のショートカットキーにアクセスするためのキーボードショートカットについて説明します。  
@@ -80,7 +80,7 @@ ms.locfileid: "84293603"
 |レポートを作成します。|ALT + T + C|  
 |スキーマを変換します。|ALT + T + N または CTRL + R|  
 |MySQL データベースから更新します。|Alt + T + R|  
-|SQL Server または SQL Azure データベースと同期します。|ALT + T + S|  
+|SQL Server または Azure SQL Database と同期します。|ALT + T + S|  
 |スクリプトとして保存します。|ALT + T + A|  
 |データを移行します。|Alt + T + M|  
 |現在の操作を停止します。|ALT + T + O|  

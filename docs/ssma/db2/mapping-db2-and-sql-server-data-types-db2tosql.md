@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141007"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936921"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 と SQL Server のデータ型のマッピング (DB2ToSQL)
-DB2 データベースの種類は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベースの種類とは異なります。 DB2 データベースオブジェクトをオブジェクトに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換する場合は、db2 のデータ型をに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マップする方法を指定する必要があります。 既定のデータ型マッピングをそのまま使用することも、次のセクションに示すようにマッピングをカスタマイズすることもできます。  
+DB2 データベースの種類は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データベースの種類とは異なります。 DB2 データベースオブジェクトをオブジェクトに変換する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、db2 のデータ型をにマップする方法を指定する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 既定のデータ型マッピングをそのまま使用することも、次のセクションに示すようにマッピングをカスタマイズすることもできます。  
   
 ## <a name="default-mappings"></a>既定のマップ  
 SSMA には、データ型マッピングの既定のセットがあります。 既定のマッピングの一覧については、「[プロジェクトの設定 &#40;Type Mapping&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)」を参照してください。  
@@ -56,7 +56,7 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
         これにより、データマップをカスタマイズして、同じデータ型の小さい値と大きい値を指定できます。  
   
-    4.  [**対象の型**] で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対象のデータ型を選択します。  
+    4.  [**対象の型**] で、対象のデータ型を選択し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
         一部の型では、対象のデータ型の長さが必要です。 必要に応じて、[**置換後の文字列**] ボックスに新しいデータ長を入力します。  
   
@@ -72,7 +72,7 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
         これにより、データマップをカスタマイズして、同じデータ型の小さい値と大きい値を指定できます。  
   
-    4.  [**対象の型**] で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]対象のデータ型を選択します。  
+    4.  [**対象の型**] で、対象のデータ型を選択し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
         一部の型では、対象のデータ型の長さが必要です。 必要に応じて、[置換後の**文字列**] ボックスに新しいデータ長を入力し、[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -80,11 +80,11 @@ SSMA の [**型マッピング**] タブを表示すると、背景は、継承�
   
     1.  [型マッピング] ボックスの一覧で、削除するデータ型マッピングが含まれている行を選択します。  
   
-    2.  **[除去]** をクリックします。  
+    2.  **[削除]** をクリックします。  
   
         継承されたマッピングを削除することはできません。 ただし、継承されたマッピングは、特定のオブジェクトまたはオブジェクトカテゴリのカスタムマッピングによって上書きされます。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
 移行プロセスの次の手順では、[評価レポート &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md) 、または[DB2 スキーマ &#40;DB2ToSQL&#41;に変換](../../ssma/db2/converting-db2-schemas-db2tosql.md)します。 評価レポートを作成する場合、DB2 オブジェクトは評価中に自動的に変換されます。  
   
 ## <a name="see-also"></a>参照  

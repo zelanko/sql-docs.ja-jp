@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 017136669bd6478bb4e08ed0ff5c2adc01786d20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c941cca65bd5ccd3a234da7da0aa3b710ecb4ae3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103249"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936001"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA コンソールのコマンド ライン オプション (MySQLToSQL)
 Microsoft では、SSMA アクティビティを実行および制御するための強固な set コマンドラインオプションを提供しています。 以降のセクションでも同じことが説明されています。  
@@ -34,7 +34,7 @@ Microsoft では、SSMA アクティビティを実行および制御するた�
   
 このセクションでは、"option" という用語は "switch" とも呼ばれます。  
   
-オプションでは大文字と小文字が区別され**-** ず、' '**/** または ' ' 文字で始めることができます。  
+オプションでは大文字と小文字が区別されず、' **-** ' または ' ' 文字で始めることができ **/** ます。  
   
 オプションが指定されている場合は、対応するオプションパラメーターを指定することが必須になります。  
   
@@ -131,7 +131,7 @@ Xmloutput には、可視化の2つのオプションを使用できます。
   
 コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「[パスワードの管理](managing-passwords-mysqltosql.md)」セクションを参照してください。  
   
-で`-p/securepassword`は、次のサブオプションがサポートされています。  
+では、次のサブオプションがサポートされてい `-p/securepassword` ます。  
   
 -   指定したサーバー ID またはサーバー接続ファイルで定義されているすべてのサーバー Id の保護された記憶域にパスワードを追加する。 次の-overwrite オプションは、既に存在する場合、パスワードを更新します。  
   

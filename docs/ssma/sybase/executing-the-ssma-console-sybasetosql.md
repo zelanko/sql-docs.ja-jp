@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029153"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931678"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA コンソールの実行 (SybaseToSQL)
 Microsoft では、SSMA アクティビティを実行および制御するための、堅牢なスクリプトファイルコマンドのセットを提供しています。 以降のセクションでも同じことが説明されています。  
@@ -201,7 +201,7 @@ Microsoft では、SSMA アクティビティを実行および制御するた�
   
 -   `write-summary-report-to:`レポートが生成されるパスを指定します。  
   
-    フォルダーパスのみが指定されている場合は、 **AssessmentReport&lt;n&gt;という名前でファイルを指定します。XML**が作成されます。 (省略可能な属性)  
+    フォルダーパスのみが指定されている場合は、AssessmentReport n という名前でファイルを指定し** &lt; &gt; ます。XML**が作成されます。 (省略可能な属性)  
   
     レポートの作成には、次の2つのサブカテゴリがあります。  
   
@@ -267,7 +267,7 @@ or
   
 -   `write-summary-report-to:`概要レポートが生成されるパスを指定します。  
   
-    フォルダーパスのみが指定されている場合は、 **SchemaConversionReport&lt;n&gt;という名前でファイルを指定します。XML**が作成されます。 (省略可能な属性)  
+    フォルダーパスのみが指定されている場合は、SchemaConversionReport n という名前でファイルを指定し** &lt; &gt; ます。XML**が作成されます。 (省略可能な属性)  
   
     レポートの作成には、次の2つのサブカテゴリがあります。  
   
@@ -320,7 +320,7 @@ or
   
 -   `write-summary-report-to:`レポートが生成されるパスを指定します。  
   
-    フォルダーパスのみが指定されている場合は、 **DataMigrationReport&lt;n&gt;という名前でファイルを指定します。XML**が作成されます。 (省略可能な属性)  
+    フォルダーパスのみが指定されている場合は、DataMigrationReport n という名前でファイルを指定し** &lt; &gt; ます。XML**が作成されます。 (省略可能な属性)  
   
     レポートの作成には、次の2つのサブカテゴリがあります。  
   
@@ -411,7 +411,7 @@ sql-server-schema="<target-schema>"/>
   
     -   失敗-スクリプト  
   
--   `report-errors-to:`同期操作のエラーレポートの場所を指定します (省略可能)。 フォルダーのパスのみが指定されている場合は、名前による**Targetの同期レポート .xml**が作成されます。  
+-   `report-errors-to:`同期操作のエラーレポートの場所を指定します (省略可能)。 フォルダーのパスのみを指定した場合は、[名前でファイルを**TargetSynchronizationReport.XML** ] が作成されます。  
   
 **構文の例:**  
   
@@ -472,7 +472,7 @@ or
   
     -   失敗-スクリプト  
   
--   `report-errors-to:`更新操作のエラーレポートの場所を指定します (省略可能)。 フォルダーのパスのみが指定されている場合は、 **Sourcedbrefreshreport .xml**という名前でファイルが作成されます。  
+-   `report-errors-to:`更新操作のエラーレポートの場所を指定します (省略可能)。 フォルダーのパスのみを指定した場合は、[名前でファイルを**SourceDBRefreshReport.XML** ] が作成されます。  
   
 **構文の例:**  
   
@@ -576,13 +576,13 @@ or
   
     **既定値:** false。 (省略可能な属性)  
   
--   `write-converted-sql-to`変換された T-sql を格納するファイル (またはフォルダー) のパスを指定します。 フォルダーパスが`sql-files`属性と共に指定されている場合、各ソースファイルには、指定されたフォルダーの下に作成される対応するターゲット t-sql ファイルがあります。 フォルダーパスが`sql`属性と共に指定されている場合、変換された t-sql は、指定したフォルダーの下に、Result という名前のファイルに書き込まれます。  
+-   `write-converted-sql-to`変換された T-sql を格納するファイル (またはフォルダー) のパスを指定します。 フォルダーパスが属性と共に指定されている場合 `sql-files` 、各ソースファイルには、指定されたフォルダーの下に作成される対応するターゲット t-sql ファイルがあります。 フォルダーパスが属性と共に指定されている場合、変換された `sql` t-sql は、指定したフォルダーの下に、Result という名前のファイルに書き込まれます。  
   
 -   `sql`変換する Sybase sql ステートメントを指定します。1つ以上のステートメントを ";" で区切ることができます。  
   
 -   `sql-files`T-sql コードに変換する必要がある sql ファイルのパスを指定します。  
   
--   `write-summary-report-to`概要レポートが生成されるパスを指定します。 フォルダーパスのみが指定されている場合は、**名前で**ファイルを指定してファイルを作成します。 (省略可能な属性)  
+-   `write-summary-report-to`概要レポートが生成されるパスを指定します。 フォルダーパスのみが指定されている場合は、[名前でファイルを**ConvertSQLReport.XML** ] が作成されます。 (省略可能な属性)  
   
     概要レポートの作成には、次の2つのサブカテゴリがあります。  
   
@@ -660,7 +660,7 @@ or
 />  
 ```  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 コマンドラインオプションの詳細については、 [SSMA コンソールのコマンドラインオプション](../access/command-line-options-in-ssma-console-accesstosql.md)に関する情報を参照してください。  
   
 サンプルコンソールスクリプトファイルの詳細については、「 [Working Basetosql &#40;サンプルコンソールスクリプトファイルの操作](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)」を参照してください&#41;  

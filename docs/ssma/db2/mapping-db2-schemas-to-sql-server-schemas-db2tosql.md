@@ -7,27 +7,27 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 50845a9bdf3c3185d7b69bb86a75b2a3d332ef6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ed1535a9e8af398b9cac7742ab955822cb6034d0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074174"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936873"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>DB2 スキーマを SQL Server スキーマ (DB2ToSQL) にマッピングする
-DB2 では、各データベースに1つ以上のスキーマがあります。 既定では、SSMA は、DB2 スキーマ内のすべての[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトを、スキーマのという名前のデータベースに移行します。 ただし、DB2 スキーマと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース間のマッピングをカスタマイズすることはできます。  
+DB2 では、各データベースに1つ以上のスキーマがあります。 既定では、SSMA は、DB2 スキーマ内のすべてのオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、スキーマのという名前のデータベースに移行します。 ただし、DB2 スキーマとデータベース間のマッピングをカスタマイズすることはでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="db2-and-sql-server-schemas"></a>DB2 および SQL Server スキーマ  
-DB2 データベースにはスキーマが含まれています。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスには複数のデータベースが含まれており、それぞれが複数のスキーマを持つことができます。  
+DB2 データベースにはスキーマが含まれています。 のインスタンスには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複数のデータベースが含まれており、それぞれが複数のスキーマを持つことができます。  
   
-DB2 のスキーマの概念は、データベースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]概念とそのスキーマの1つにマップされます。 たとえば、DB2 に**HR**という名前のスキーマがあるとします。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスには、 **HR**という名前のデータベースがあり、そのデータベース内にはスキーマがあります。 1つのスキーマは、 **dbo** (またはデータベース所有者) スキーマです。 既定では、DB2 スキーマの**hr**はデータベースとスキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**hr. dbo**にマップされます。 SSMA とは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマとしてのデータベースとスキーマの組み合わせを意味します。  
+DB2 のスキーマの概念は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの概念とそのスキーマの1つにマップされます。 たとえば、DB2 に**HR**という名前のスキーマがあるとします。 のインスタンスには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **HR**という名前のデータベースがあり、そのデータベース内にはスキーマがあります。 1つのスキーマは、 **dbo** (またはデータベース所有者) スキーマです。 既定では、DB2 スキーマの**hr**は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースとスキーマの**hr. dbo**にマップされます。 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とは、スキーマとしてのデータベースとスキーマの組み合わせを意味します。  
   
-DB2 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマ間のマッピングを変更できます。  
+DB2 とスキーマ間のマッピングを変更でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="modifying-the-target-database-and-schema"></a>ターゲットデータベースとスキーマの変更  
-SSMA では、使用可能な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]任意のスキーマに DB2 スキーマをマップできます。  
+SSMA では、使用可能な任意のスキーマに DB2 スキーマをマップでき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 **データベースとスキーマを変更するには**  
   
@@ -37,7 +37,7 @@ SSMA では、使用可能な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 2.  右ペインで、[**スキーママッピング**] タブをクリックします。  
   
-    すべての DB2 スキーマの一覧が表示され、その後にターゲット値が表示されます。 このターゲットは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトとデータを移行する2つの部分表記 (*データベーススキーマ*) で示されています。  
+    すべての DB2 スキーマの一覧が表示され、その後にターゲット値が表示されます。 このターゲットは、のオブジェクトとデータを移行する2つの部分表記 (*データベーススキーマ*) で示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ています。  
   
 3.  変更するマッピングを含む行を選択し、[**変更**] をクリックします。  
   
@@ -49,17 +49,17 @@ SSMA では、使用可能な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 -   SQL Server へのマッピング  
   
-ソースデータベースを任意のターゲットデータベースにマップできます。 既定では、ソースデータベースは SSMA を使用して接続したターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースにマップされます。 マップされているターゲットデータベースがに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存在しない場合は、 **"データベースまたはスキーマがターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか? "** [はい] をクリックします。 同様に、スキーマを、同期中に作成される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットデータベース下に存在しないスキーマにマップすることもできます。  
+ソースデータベースを任意のターゲットデータベースにマップできます。 既定では、ソースデータベースは SSMA を使用して接続したターゲットデータベースにマップされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 マップされているターゲットデータベースがに存在しない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **"データベースまたはスキーマがターゲットメタデータに存在しません" というメッセージが表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。同期中に作成されます。続行しますか? "** [はい] をクリックします。 同様に、スキーマを、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同期中に作成されるターゲットデータベース下に存在しないスキーマにマップすることもできます。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>既定のデータベースとスキーマに戻す  
-DB2 スキーマと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマ間のマッピングをカスタマイズする場合は、マッピングを既定値に戻すことができます。  
+DB2 スキーマとスキーマ間のマッピングをカスタマイズする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マッピングを既定値に戻すことができます。  
   
 **既定のデータベースとスキーマに戻すには**  
   
 1.  [スキーママッピング] タブで、任意の行を選択し、[既定**値にリセット**] をクリックして既定のデータベースとスキーマに戻します。  
   
-## <a name="next-steps"></a>次のステップ  
-DB2 オブジェクトからオブジェクトへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の変換を分析する場合は、[データ移行レポート (ssma Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)を使用できます。  
+## <a name="next-steps"></a>次の手順  
+DB2 オブジェクトからオブジェクトへの変換を分析する場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、[データ移行レポート (Ssma Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)を使用できます。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server &#40;DB2eToSQL&#41;に接続しています](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  

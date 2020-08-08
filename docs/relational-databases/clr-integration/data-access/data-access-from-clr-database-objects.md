@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f89fa45ce0ca73d3406a87c7739ce6e7d777918
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aedd4461b08c1d3c61eb3d96f8ce78fdf5a401d9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887824"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943216"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR データベース オブジェクトからのデータ アクセス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "85887824"
  [CLR 統合とトランザクション](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  System.Transactions 名前空間で提供される新しいトランザクション フレームワークを ADO.NET および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 統合と統合する方法について説明します。  
   
- [CLR データベース オブジェクトからの XML シリアル化](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
+ [CLR データベース オブジェクトからの XML シリアル化](https://docs.microsoft.com/dotnet/standard/serialization/introducing-xml-serialization)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部で CLR データベース オブジェクトの XML シリアル化のシナリオを有効にする方法について説明します。  
   
   
