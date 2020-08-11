@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee3ac3901c09ab4a0f73803d00a2e4651af51df7
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786277"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051121"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -106,7 +106,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |"**なし**"|テーブルがサブスクライバーに既に存在する場合、アクションは実行されません。|  
 |**delete**|サブセットフィルターの WHERE 句に基づいて削除を発行します。|  
 |**drop** (既定値)|テーブルを再作成する前に削除します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] のサブスクライバーをサポートするために必要です。|  
-|**切捨て**|変換先テーブルを切り捨てます。|  
+|**truncate**|変換先テーブルを切り捨てます。|  
   
 `[ @creation_script = ] 'creation_script'`サブスクリプションデータベースでアーティクルを作成するために使用する、オプションのアーティクルスキーマスクリプトのパスと名前を指定します。 *creation_script*は**nvarchar (255)**,、既定値は NULL です。  
   
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1**は、署名が信頼できるソースからのものかどうかを確認することを指定します。  
   
-`[ @destination_object = ] 'destination_object'`サブスクリプションデータベース内のオブジェクトの名前を指定します。 *destination_object*のデータ型は**sysname**で、既定値は** \@ source_object**になります。 このパラメーターは、アーティクルがストアドプロシージャ、ビュー、Udf などのスキーマのみのアーティクルである場合にのみ指定できます。 指定したアーティクルがテーブルアーティクルの場合、の値は *@source_object* *destination_object*の値よりも優先されます。  
+`[ @destination_object = ] 'destination_object'`サブスクリプションデータベース内のオブジェクトの名前を指定します。 *destination_object*のデータ型は**sysname**で、既定値は** \@ source_object**になります。 このパラメーターは、アーティクルがストアドプロシージャ、ビュー、Udf などのスキーマのみのアーティクルである場合にのみ指定できます。 指定したアーティクルがテーブルアーティクルの場合、 * \@ source_object*の値は*destination_object*の値よりも優先されます。  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`アーティクルに対してインタラクティブ競合回避モジュールの使用を有効または無効にします。 *allow_interactive_resolver*は**nvarchar (5)**,、既定値は FALSE です。 **true**にすると、アーティクルでインタラクティブ競合回避モジュールを使用できるようになります。**false**を無効にします。  
   
@@ -355,15 +355,15 @@ sp_addmergearticle [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールまたは**db_owner**固定データベースロールのメンバーシップが必要です。  
+ **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
- [アーティクルの定義](../../relational-databases/replication/publish/define-an-article.md)   
- [データとデータベースオブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
+## <a name="see-also"></a>参照  
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [sp_changemergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
