@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: ed9b17969e54f620ee22c237526f59e2f49700b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 69c4ab82bf6fc29464bf689c53358d11e9b0a428
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900244"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87952660"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint のアップグレード
 
@@ -351,7 +351,7 @@ Get-PowerPivotSystemService
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を実行するすべてのコンピューターでサービスが実行されていることを確認します。|[PowerPivot for SharePoint サーバーの開始または停止](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
 |サイト コレクション レベルでの機能のアクティブ化を確認します。|[サイト コレクションを対象とした Power Pivot 機能の統合をサーバーの全体管理でアクティブ化する方法](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  
 |ブックを開き、フィルターおよびスライサーをクリックしてクエリを開始することで、個々の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックが適切に読み込まれることを確認します。|ハード ドライブのキャッシュ ファイルの存在をチェックします。 キャッシュ ファイルが存在する場合は、データ ファイルがその物理サーバーに読み込まれたことを示します。 c:\Program Files\Microsoft SQL Server\MSAS13.POWERPIVOT\OLAP\Backup フォルダー内のキャッシュ ファイルを探します。|  
-|データ更新が構成されているブックを選択して、データ更新をテストします。|データ更新をテストする最も簡単な方法は、データ更新スケジュールを変更することです。具体的には、 **[さらに、できるだけ早く更新を行います]** チェック ボックスをオンにして、データ更新がすぐに実行されるようにします。 この手順によって、データ更新が現在のブックに対して成功するかどうかが判明します。 他のよく使用されるブックにもこの手順を実行して、データ更新が機能することを確認します。 データ更新のスケジュール設定については、「 [データ更新のスケジュール (PowerPivot for SharePoint)](https://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)」を参照してください。|  
+|データ更新が構成されているブックを選択して、データ更新をテストします。|データ更新をテストする最も簡単な方法は、データ更新スケジュールを変更することです。具体的には、 **[さらに、できるだけ早く更新を行います]** チェック ボックスをオンにして、データ更新がすぐに実行されるようにします。 この手順によって、データ更新が現在のブックに対して成功するかどうかが判明します。 他のよく使用されるブックにもこの手順を実行して、データ更新が機能することを確認します。 データ更新のスケジュール設定については、「 [データ更新のスケジュール (PowerPivot for SharePoint)](https://docs.microsoft.com/sharepoint/administration/data-refresh-using-the-unattended-data-refresh-account)」を参照してください。|  
 |随時、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードのデータ更新レポートを監視して、データ更新エラーがないことを確認します。|[Power Pivot 管理ダッシュボードと使用状況データ](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 設定と機能を構成する方法の詳細については、「 [サーバーの全体管理での PowerPivot サーバーの管理と構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)」を参照してください。  
@@ -360,6 +360,6 @@ Get-PowerPivotSystemService
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 のエディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [Power Pivot for SharePoint 2010 のインストール](https://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
+ [Power Pivot for SharePoint 2010 のインストール](https://sharepointgeorge.com/2012/installing-sql-server-powerpivot-sharepointstep-step-guide/)  
   
   

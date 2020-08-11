@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 860d2a8c903a918e95ef38214e25a18efc3590d2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1cc1a575ba2159fc995022df97f5f2079b26206
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893092"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928663"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のエディションとサポートされる機能
 
@@ -245,6 +245,5 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
  [SQL Server 2019 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [SQL Server 2014 の各エディションとサポートされる機能 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [SQL Server をインストールする](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [SQL Server の製品仕様](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)

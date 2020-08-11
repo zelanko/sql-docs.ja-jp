@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247622"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934392"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -147,7 +147,7 @@ GO
 - 定数のみから構成される数式 (1+1、5/3*2 など)。
 - 定数のみから構成される論理式 (1=1、1>2 AND 3>4 など)。
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってたたみ込み可能と判断された組み込み関数 (`CAST`、`CONVERT` など)。 固有の関数は、通常はたたみ込み可能です。ただし結果が関数への入力のみによって決まらず、SET オプション、言語設定、データベース オプション、暗号化キーなどの、状況によって変わりうる他の情報を交えて決まる場合は例外です。 非決定的関数はたたみ込み不可能です。 組み込みの決定的関数はたたみ込み可能ですが、一部例外があります。
-- CLR ユーザー定義型の決定的メソッドおよび決定的スカラー値 CLR ユーザー定義関数 ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降)。 詳細については、「[CLR ユーザー定義関数およびメソッドの定数たたみ込み](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)」を参照してください。
+- CLR ユーザー定義型の決定的メソッドおよび決定的スカラー値 CLR ユーザー定義関数 ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降)。 詳細については、「[CLR ユーザー定義関数およびメソッドの定数たたみ込み](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15)」を参照してください。
 
 > [!NOTE] 
 > 例外の 1 つは LOB 型です。 たたみ込み処理の出力の種類がラージ オブジェクト型 (text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)、または XML) である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では式はたたみ込まれません。

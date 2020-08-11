@@ -85,12 +85,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 78d413af670dd62d3eb761babf1e0df846117c14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 190f757b7c9849866788646fe3288086d73f8811
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892345"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934386"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -883,7 +883,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine,PolyBase|PolyBase エンジンをインストールします。|  
   
 ##  <a name="role-parameters"></a><a name="RoleParameters"></a> ロール パラメーター  
- セットアップ ロール パラメーター (/Role パラメーター) は、あらかじめ構成された機能の選択内容をインストールするために使用されます。 SSAS ロールでは、既存の SharePoint ファーム、または新しい未構成のファームのどちらかに SSAS インスタンスがインストールされます。 これらのシナリオをサポートするために、2 つのセットアップ ロールが用意されています。 インストールするために選択できるセットアップ ロールは一度に 1 つだけです。 セットアップ ロールを選択すると、そのロールに所属する機能とコンポーネントがセットアップによってインストールされます。 ロールに指定されている機能とコンポーネントは変更できません。 機能ロール パラメーターの使用方法の詳細については、「 [コマンド プロンプトからの Power Pivot のインストール](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)」をご覧ください。 
+ セットアップ ロール パラメーター (/Role パラメーター) は、あらかじめ構成された機能の選択内容をインストールするために使用されます。 SSAS ロールでは、既存の SharePoint ファーム、または新しい未構成のファームのどちらかに SSAS インスタンスがインストールされます。 これらのシナリオをサポートするために、2 つのセットアップ ロールが用意されています。 インストールするために選択できるセットアップ ロールは一度に 1 つだけです。 セットアップ ロールを選択すると、そのロールに所属する機能とコンポーネントがセットアップによってインストールされます。 ロールに指定されている機能とコンポーネントは変更できません。 機能ロール パラメーターの使用方法の詳細については、「 [コマンド プロンプトからの Power Pivot のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」をご覧ください。 
   
  AllFeatures_WithDefaults ロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの既定の動作であり、このロールを指定した場合は、ユーザーに対して表示されるダイアログ ボックスの数が減少します。 このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]以外の SQL Server エディションをインストールするときに、コマンド ラインから指定できます。 
   

@@ -10,16 +10,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f7c80f8cfd68d8389baf80998be37ec4d8119d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7bb7151b0a36267fa1cd9cad24432f5d72f96b11
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726002"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934344"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>米国英語と英国英語に使用されるワード ブレーカーを変更する方法
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、英語用のワード ブレーカーおよびステマーの新しいバージョン (バージョン 14.0.4999.1038) がインストールされて、前のバージョン (バージョン 12.0.6828.0) が置き換えられます。 新しいコンポーネントで変更された動作の詳細については、「 [フルテキスト検索の動作の変更](/sql/database-engine/behavior-changes-to-full-text-search)」を参照してください。 このトピックでは、これらのコンポーネントの新しいバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。 クラスターのインストールでは、これらの変更を、すべてのプライマリ ノードとパッシブ ノードで行う必要があります。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、英語用のワード ブレーカーおよびステマーの新しいバージョン (バージョン 14.0.4999.1038) がインストールされて、前のバージョン (バージョン 12.0.6828.0) が置き換えられます。 新しいコンポーネントで変更された動作の詳細については、「 [フルテキスト検索の動作の変更](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)」を参照してください。 このトピックでは、これらのコンポーネントの新しいバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。 クラスターのインストールでは、これらの変更を、すべてのプライマリ ノードとパッシブ ノードで行う必要があります。  
   
  前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、米国英語 (LCID 1033) と英国英語 (LCID 2057) に対し、異なる CLSID で表される異なるワード ブレーカーが使用されていました。 このリリースでは、次の表に示すように、両方の LCID で同じ CLSID を持つ同じコンポーネントが使用されます。  
   
@@ -126,6 +126,6 @@ ms.locfileid: "85726002"
   
 ## <a name="see-also"></a>参照  
  [検索で使用するワード ブレーカーを以前のバージョンに戻す](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [フルテキスト検索の動作の変更](/sql/database-engine/behavior-changes-to-full-text-search)  
+ [フルテキスト検索の動作の変更](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)  
   
   
