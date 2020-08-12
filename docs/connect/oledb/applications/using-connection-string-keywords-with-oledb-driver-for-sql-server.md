@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, connection string keywords
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c1e7a40207665515e164ba4449715f8443616c17
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9883323fd6474c05a2bf3a830206c01f52274272
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633907"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007004"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server での接続文字列キーワードの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -98,12 +98,13 @@ ms.locfileid: "81633907"
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|**Network** のシノニム。|  
 |**Network**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|**Network** のシノニム。|  
-|**PacketSize**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
+|**PacketSize**|SSPROP_INIT_PACKETSIZE|表形式データ ストリーム (TDS) パケット サイズ。 既定値は 0 です (実際の値はサーバーによって決定されます)。|  
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|文字列 `yes` と `no` を値として受け取ります。 `no` が使用される場合、データ ソース オブジェクトには機密の認証情報を保持できません|  
 |**PWD**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン パスワード。|  
 |**[サーバー]**|DBPROP_INIT_DATASOURCE|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前。 ネットワーク上のサーバーの名前、IP アドレス、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーの別名を指定する必要があります。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> **Address** キーワードは、**Server** キーワードをオーバーライドします。<br /><br /> 次のいずれかを指定することで、ローカル サーバー上の既定のインスタンスに接続できます。<br /><br /> **Server=;**<br /><br /> **Server=.;**<br /><br /> **Server=(local);**<br /><br /> **Server=(local);**<br /><br /> **Server=(localhost);**<br /><br /> **Server=(localdb)\\** *instancename* **;**<br /><br /> LocalDB のサポートの詳細については、「[LocalDB 用 OLE DB Driver for SQL Server のサポート](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)」を参照してください。<br /><br /> 名前付きインスタンスを指定する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、追加 **\\** _InstanceName_します。<br /><br /> サーバーを指定しなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続されます。<br /><br /> IP アドレスを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認します。<br /><br /> **Server** キーワードの完全な構文は次のとおりです。<br /><br /> **Server=** ["_プロトコル_" **:** ]"*サーバー*"[ **,** "_ポート_"]<br /><br /> _protocol_ には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。<br /><br /> 名前付きパイプを指定する例を次に示します。<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 上の行では、名前付きパイプのプロトコル (`np`)、ローカル コンピューター上の名前付きパイプ (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前 (`MSSQL$MYINST01`)、および名前付きパイプの既定の名前 (`sql/query`) を指定しています。<br /><br /> *protocol* も **Network** キーワードも指定されない場合、OLE DB Driver for SQL Server では [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで指定されたプロトコルの順序が使用されます。<br /><br /> *port* は、指定したサーバー上の接続先のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。<br /><br /> OLE DB Driver for SQL Server を使用する場合、接続文字列の **Server** に渡される値の先頭のスペースは無視されます。|   
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列を使用すると、OLE DB Driver for SQL Server ではプロバイダーが生成した SPN が既定値として使用されます。|  
 |**タイムアウト**|DBPROP_INIT_TIMEOUT|データ ソースの初期化が完了するのを待機する秒数。|  
+|**TransparentNetworkIPResolution**|SSPROP_INIT_TNIR|ホスト名の解決された最初の IP が応答せず、ホスト名に複数の IP が関連付けられている場合は、接続シーケンスに影響があります。 TNIR では、MultiSubnetFailover と連動して、さまざまな接続シーケンスが提供されます。 設定可能な値は `Yes` および `No` です。 既定値は `Yes` です。 詳しくは、「[透過的なネットワーク IP の解決の使用](../../oledb/features/using-transparent-network-ip-resolution.md)」をご覧ください。|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|`yes` の場合、ログインの検証に Windows 認証を使用するように OLE DB Driver for SQL Server に指示します。 それ以外の場合は、OLE DB Driver for SQL Server により、ログインの検証に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザー名とパスワードが使用されるため、UID キーワードと PWD キーワードを指定する必要があります。|  
 |**TrustServerCertificate**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|文字列 `yes` と `no` を値として受け取ります。 既定値は `no` です。これはサーバー証明書が検証されることを示します。|  
 |**UID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン名。|  
@@ -160,11 +161,12 @@ ms.locfileid: "81633907"
 |**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性グループまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **MultiSubnetFailover=True** を指定してください。 **MultiSubnetFailover=True** の場合、(現在) アクティブなサーバーをより迅速に検出し、接続するように OLE DB Driver for SQL Server が構成されます。 設定可能な値は `True` および `False` です。 既定では、 `False`です。 次に例を示します。<br /><br /> `MultiSubnetFailover=True`<br /><br /> [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の OLE DB Driver for SQL Server によるサポートの詳細については、「[OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのネットワーク アドレス。<br /><br /> 有効なアドレス構文の詳細については、このトピックの **Address** キーワードに関する説明を参照してください。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
-|**Packet Size**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
+|**Packet Size**|SSPROP_INIT_PACKETSIZE|表形式データ ストリーム (TDS) パケット サイズ。 既定値は 0 です (実際の値はサーバーによって決定されます)。|  
 |**パスワード**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン パスワード。|  
 |**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|文字列 `true` と `false` を値として受け取ります。 `false` の場合、データ ソース オブジェクトには機密の認証情報を保持できません|  
 |**プロバイダー**||OLE DB Driver for SQL Server では、これを "MSOLEDBSQL" にする必要があります。|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列を使用すると、OLE DB Driver for SQL Server ではプロバイダーが生成した SPN が既定値として使用されます。|  
+|**TransparentNetworkIPResolution**|SSPROP_INIT_TNIR|ホスト名の解決された最初の IP が応答せず、ホスト名に複数の IP が関連付けられている場合は、接続シーケンスに影響があります。 TNIR では、MultiSubnetFailover と連動して、さまざまな接続シーケンスが提供されます。 設定可能な値は `True` および `False` です。 既定値は `True` です。 詳しくは、「[透過的なネットワーク IP の解決の使用](../../oledb/features/using-transparent-network-ip-resolution.md)」をご覧ください。|  
 |**Trust Server Certificate**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|文字列 `true` と `false` を値として受け取ります。 既定値は `false` です。これはサーバー証明書が検証されることを示します。|  
 |**Use Encryption for Data**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|データをネットワークに送信する前に暗号化するかどうかを指定します。 設定可能な値は `true` および `false` です。 既定値は `false` です。|  
 |**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] およびそれ以降に接続する場合のメタデータの取得方法を制御します。 設定可能な値は `true` および `false` です。 既定値は `false` です。<br /><br />既定では、OLE DB Driver for SQL Server は [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) および [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) ストアド プロシージャを使用して、メタデータを取得します。 これらのストアド プロシージャにはいくつかの制限があります (たとえば、一時テーブルで操作するとエラーが発生します)。 **Use FMTONLY** を `true` に設定すると、[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) を使用して代わりにメタデータを取得するようにドライバーに指示されます。|  
@@ -219,11 +221,12 @@ ms.locfileid: "81633907"
 |**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性グループまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **MultiSubnetFailover=True** を指定してください。 **MultiSubnetFailover=True** の場合、(現在) アクティブなサーバーをより迅速に検出し、接続するように OLE DB Driver for SQL Server が構成されます。 設定可能な値は `True` および `False` です。 既定では、 `False`です。 次に例を示します。<br /><br /> `MultiSubnetFailover=True`<br /><br /> [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の OLE DB Driver for SQL Server によるサポートの詳細については、「[OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート](../features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのネットワーク アドレス。<br /><br /> 有効なアドレス構文の詳細については、このトピックの **Address** キーワードに関する説明を参照してください。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
-|**Packet Size**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
+|**Packet Size**|SSPROP_INIT_PACKETSIZE|表形式データ ストリーム (TDS) パケット サイズ。 既定値は 0 です (実際の値はサーバーによって決定されます)。|  
 |**パスワード**|DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン パスワード。|  
 |**Persist Security Info**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|文字列 `true` と `false` を値として受け取ります。 `false` の場合、データ ソース オブジェクトには機密の認証情報を保持できません。|  
 |**プロバイダー**||OLE DB Driver for SQL Server の場合、値は `MSOLEDBSQL` です。|  
 |**Server SPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列を使用すると、OLE DB Driver for SQL Server ではプロバイダーが生成した SPN が既定値として使用されます。|  
+|**TransparentNetworkIPResolution**|SSPROP_INIT_TNIR|ホスト名の解決された最初の IP が応答せず、ホスト名に複数の IP が関連付けられている場合は、接続シーケンスに影響があります。 TNIR では、MultiSubnetFailover と連動して、さまざまな接続シーケンスが提供されます。 設定可能な値は `True` および `False` です。 既定値は `True` です。 詳しくは、「[透過的なネットワーク IP の解決の使用](../../oledb/features/using-transparent-network-ip-resolution.md)」をご覧ください。|  
 |**Trust Server Certificate**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|文字列 `true` と `false` を値として受け取ります。 既定値は `false` です。これはサーバー証明書が検証されることを示します。|  
 |**Use Encryption for Data**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|データをネットワークに送信する前に暗号化するかどうかを指定します。 設定可能な値は `true` および `false` です。 既定値は `false` です。|  
 |**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] およびそれ以降に接続する場合のメタデータの取得方法を制御します。 設定可能な値は `true` および `false` です。 既定値は `false` です。<br /><br />既定では、OLE DB Driver for SQL Server は [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) および [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) ストアド プロシージャを使用して、メタデータを取得します。 これらのストアド プロシージャにはいくつかの制限があります (たとえば、一時テーブルで操作するとエラーが発生します)。 **Use FMTONLY** を `true` に設定すると、[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) を使用して代わりにメタデータを取得するようにドライバーに指示されます。|  

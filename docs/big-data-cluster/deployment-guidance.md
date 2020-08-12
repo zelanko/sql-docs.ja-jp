@@ -5,53 +5,51 @@ description: Kubernetes 上に SQL Server ビッグ データ クラスターを
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 828ad42bd6ecdc31d6e1c99a489fb4cbe8548d0e
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 4bca65dbae188c02ddc85bc385f6ada912111efb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531083"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159370"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Kubernetes 上に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 SQL Server ビッグ データ クラスターは、Kubernetes クラスター上に Docker コンテナーとして展開されます。 ここでは、セットアップと構成の手順の概要を説明します。
 
-- 単一の VM 上、VM のクラスター上、または Azure Kubernetes Service (AKS) に、Kubernetes クラスターを設定します。
+- 単一の VM、VM のクラスター、Azure Kubernetes Service (AKS)、Red Hat OpenShift、または Azure Red Hat OpenShift (ARO) で Kubernetes クラスターを設定します。
 - クライアント コンピューター上にクラスター構成ツール `azdata` をインストールする。
 - Kubernetes クラスターに SQL Server ビッグ データ クラスターを展開する。
 
-## <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 のビッグ データ ツールをインストールする
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
-SQL Server 2019 ビッグ データ クラスターを展開する前に、まず、[ビッグ データ ツールをインストール](deploy-big-data-tools.md)します。
+SQL Server ビッグ データ クラスターを展開するために検証されるさまざまな Kubernetes プラットフォームの完全な一覧については、「[サポートされているプラットフォーム](release-notes-big-data-cluster.md#supported-platforms)」を参照してください。
 
-- `azdata`
-- `kubectl`
-- Azure Data Studio
-- Azure Data Studio 用の[データ仮想化の拡張機能](../azure-data-studio/data-virtualization-extension.md)
+### <a name="sql-server-editions"></a>SQL Server のエディション
 
-## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Kubernetes の前提条件
+|Edition|Notes|
+|---------|---------|
+|Enterprise<br/>Standard<br/>Developer| ビッグ データ クラスターのエディションは、SQL Server マスター インスタンスのエディションによって決まります。 展開時に、Developer エディションが既定で展開されます。 エディションは、展開後に変更できます。 [SQL Server マスター インスタンスの構成](../big-data-cluster/configure-sql-server-master-instance.md)に関するページを参照してください。 |
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]では、サーバーとクライアント (kubectl) の両方に、最小の Kubernetes バージョンとして v1.13 以上が必要です。
-
-> [!NOTE]
-> クライアントとサーバーでの Kubernetes のバージョンは、マイナー バージョンが +1 または -1 の範囲内になっている必要があることに注意してください。 詳細については、[Kubernetes のリリース ノートとバージョン スキューの SKU ポリシー](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)に関するページを参照してください。
+## <a name="kubernetes"></a><a id="prereqs"></a> Kubernetes
 
 ### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Kubernetes クラスターの設定
 
 上記の前提条件を満たす Kubernetes クラスターを既にお持ちの場合は、[展開の手順](#deploy)に直接進むことができます。 このセクションでは、Kubernetes の概念の基本的な理解を前提としています。  Kubernetes の詳細については、[Kubernetes のドキュメント](https://kubernetes.io/docs/home)を参照してください。
 
-次の3つの方法のいずれかを選んで、Kubernetes を展開できます。
+次の方法で Kubernetes を展開できます。
 
 | Kubernetes の展開先: | 説明 | Link |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | Azure にあるマネージド Kubernetes コンテナー サービス。 | [手順](deploy-on-aks.md) |
 | **単一または複数のマシン (`kubeadm`)** | `kubeadm` を使用して物理または仮想マシン上に展開された Kubernetes クラスター | [手順](deploy-with-kubeadm.md) |
+|**Azure Red Hat OpenShift** | Azure で実行されている OpenShift のマネージド オファリング。 | [手順](deploy-openshift.md)|
+|**Red Hat OpenShift**|ハイブリッド クラウド、エンタープライズ Kubernetes アプリケーション プラットフォーム。| [手順](deploy-openshift.md)|
 
 > [!TIP]
 > また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](notebooks-deploy.md)において、この操作を行う方法を確認してください。
@@ -75,6 +73,16 @@ Kubernetes クラスターを構成したら、新しい SQL Server ビッグ �
 
 AKS で展開する場合、ストレージ セットアップは必要ありません。 AKS には、動的にプロビジョニングするためのストレージ クラスが組み込まれています。 ストレージクラス (`default` または `managed-premium`) は、展開構成ファイルでカスタマイズできます。 組み込みプロファイルでは、`default` ストレージ クラスが使用されます。 `kubeadm` を使用して展開した Kubernetes クラスターで展開する場合、望ましいスケールのクラスターのために十分なストレージがあることを確認し、使用できるように構成しておく必要があります。 ストレージの使用方法をカスタマイズする場合、続行前にそれを行ってください。 「[Kubernetes 上の SQL Server ビッグ データ クラスターでのデータ永続化](concept-data-persistence.md)」を参照してください。
 
+## <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 のビッグ データ ツールをインストールする
+
+SQL Server 2019 ビッグ データ クラスターを展開する前に、まず、[ビッグ データ ツールをインストール](deploy-big-data-tools.md)します。
+
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- Azure Data Studio 用の[データ仮想化の拡張機能](../azure-data-studio/data-virtualization-extension.md)
+
+
 ## <a name="deployment-overview"></a><a id="deploy"></a> 展開の概要
 
 ほとんどのビッグ データ クラスター設定は、JSON 展開構成ファイルに定義されています。 AKS および `kubeadm` によって作成された Kubernetes クラスター用の既定の展開プロファイルを使用しても、セットアップ中に使用する独自の展開構成ファイルをカスタマイズしてもかまいません。 セキュリティ上の理由から、認証設定は環境変数を介して渡されます。
@@ -94,23 +102,18 @@ AKS で展開する場合、ストレージ セットアップは必要ありま
 azdata bdc config list -o table 
 ```
 
-たとえば、SQL Server 2019 RTM サービス更新 (GDR1) リリースの場合は、以下が返されます。
-
-```
-Result
-----------------
-aks-dev-test
-aks-dev-test-ha
-kubeadm-dev-test
-kubeadm-prod
-```
+SQL Server 2019 CU5 では、次のテンプレートを使用できます。 
 
 | 展開プロファイル | Kubernetes 環境 |
 |---|---|
 | `aks-dev-test` | Azure Kubernetes Service (AKS) に SQL Server ビッグ データ クラスターを展開します|
 | `aks-dev-test-ha` | Azure Kubernetes Service (AKS) に SQL Server ビッグ データ クラスターを展開します。 SQL Server マスターや HDFS の名前ノードなどのミッション クリティカルなサービスは、高可用性を実現するように構成されています。|
+| `aro-dev-test`|開発とテストのために、SQL Server ビッグ データ クラスターを Azure Red Hat OpenShift に展開します。 <br/><br/>SQL Server 2019 CU 5 で導入されています。|
+| `aro-dev-test-ha`|開発とテストのために、高可用性を備えた SQL Server ビッグ データ クラスターを Red Hat OpenShift クラスターに展開します。 <br/><br/>SQL Server 2019 CU 5 で導入されています。|
 | `kubeadm-dev-test` | 1 つまたは複数の物理マシンまたは仮想マシンを使用して、kubeadm によって作成された Kubernetes クラスター上に SQL Server ビッグ データ クラスターを展開します。|
 | `kubeadm-prod`| 1 つまたは複数の物理マシンまたは仮想マシンを使用して、kubeadm によって作成された Kubernetes クラスター上に SQL Server ビッグ データ クラスターを展開します。 ビッグ データ クラスター サービスを Active Directory と統合できるようにするには、このテンプレートを使用します。 SQL Server マスター インスタンスや HDFS 名前ノードなどのミッション クリティカルなサービスは、高可用性構成で展開されます。  |
+| `openshift-dev-test`|開発とテストのために、SQL Server ビッグ データ クラスターを Red Hat OpenShift クラスターに展開します。 <br/><br/>SQL Server 2019 CU 5 で導入されています。|
+| `openshift-prod`|高可用性を備えた SQL Server ビッグ データ クラスターを Red Hat OpenShift クラスターに展開します。 <br/><br/>SQL Server 2019 CU 5 で導入されています。|
 
 `azdata bdc create` を実行することで、ビッグ データ クラスターを展開できます。 これにより、既定の構成の 1 つを選択するよう求めるメッセージが表示され、展開へと進みます。
 
@@ -127,7 +130,7 @@ azdata bdc create --accept-eula=yes
 
 ## <a name="custom-configurations"></a><a id="customconfig"></a> カスタムの構成
 
-実行する予定のワークロードに合わせて展開をカスタマイズすることもできます。 展開後にビッグ データ クラスター サービスのスケール (レプリカの数) またはストレージ設定を変更することはできないため、展開構成を慎重に計画して容量の問題を回避する必要があることに注意してください。 展開をカスタマイズするには、次の手順に従います。
+実行する予定のワークロードに合わせて展開をカスタマイズすることもできます。 展開後にビッグ データ クラスター サービスのスケール (レプリカの数) またはストレージ設定を変更できないため、展開構成を慎重に計画して容量の問題を回避する必要があります。 展開をカスタマイズするには、次の手順に従います。
 
 1. Kubernetes 環境に適合する標準の展開プロファイルの 1 つを使用して開始します。 `azdata bdc config list` コマンドを使用して、それらの一覧を表示できます。
 
@@ -171,8 +174,8 @@ azdata bdc create --accept-eula=yes
 
 | 環境変数 | 要件 |説明 |
 |---|---|---|
-| `AZDATA_USERNAME` | 必須 |SQL Server ビッグ データ クラスター管理者のユーザー名。 同じ名前の sysadmin ログインが SQL Server マスター インスタンス内に作成されます。 セキュリティのベスト プラクティスとして、`sa` アカウントは無効になっています。 |
-| `AZDATA_PASSWORD` | 必須 |上記で作成したユーザー アカウントのパスワード。 `root` ユーザーには、Knox ゲートウェイと HDFS をセキュリティで保護するために使用されたのと同じパスワードが使用されます。 |
+| `AZDATA_USERNAME` | 必須 |SQL Server ビッグ データ クラスター管理者のユーザー名。 同じ名前の sysadmin ログインが SQL Server マスター インスタンス内に作成されます。 セキュリティのベスト プラクティスとして、`sa` アカウントは無効になっています。 <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
+| `AZDATA_PASSWORD` | 必須 |上記で作成したユーザー アカウントのパスワード。 SQL Server 2019 CU5 より前に展開されたクラスターでは、Knox ゲートウェイと HDFS のセキュリティ保護のために、`root` ユーザーに同じパスワードが使用されます。 |
 | `ACCEPT_EULA`| `azdata` を初めて使用する場合は必須| "yes" に設定します。 環境変数として設定された場合、SQL Server と `azdata` の両方に EULA が適用されます。 環境変数として設定されない場合、`azdata` コマンドの初めての使用時に `--accept-eula=yes` を含めることができます。|
 | `DOCKER_USERNAME` | 省略可能 | コンテナー イメージがプライベート リポジトリに格納されている場合に、それらにアクセスするためのユーザー名。 ビッグ データ クラスターの展開にプライベート Docker リポジトリを使用する方法の詳細については、[オフライン展開](deploy-offline.md)に関するトピックを参照してください。|
 | `DOCKER_PASSWORD` | 省略可能 |上記のプライベート リポジトリにアクセスするためのパスワード。 |
@@ -193,9 +196,9 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> Knox ゲートウェイには、上記のパスワードを持つ `root` ユーザーを使用する必要があります。 `root` は、この基本認証 (ユーザー名とパスワード) でサポートされている唯一のユーザーです。
+> SQL Server 2019 CU5 より前に展開されたクラスターでは、上記のパスワードを持つ Knox ゲートウェイの `root` ユーザーを使用する必要があります。 `root` は、この基本認証 (ユーザー名とパスワード) でサポートされている唯一のユーザーです。
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 > 基本認証を使用して SQL Server に接続するには、AZDATA_USERNAME および AZDATA_PASSWORD の[環境変数](#env)と同じ値を使用します。 
-
 
 環境変数を設定したら、`azdata bdc create` を実行して展開をトリガーする必要があります。 この例では、上記で作成したクラスター構成プロファイルを使用します。
 

@@ -1,5 +1,6 @@
 ---
 title: SQL Server のインストール計画 | Microsoft Docs
+description: この記事は、SQL Server のインストールを計画する際に役立ちます。 SQL Server のインストールに必要なリソースへのリンクが含まれています。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -9,17 +10,17 @@ ms.topic: quickstart
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 56adbb10af74ef8e0e71012378b4aa13a2d818d2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce94f99ac38a6d87dfc39a9ba01ad672f1cd70a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79428183"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902301"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするには、次の手順を実行します。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "79428183"
  [SQL Server インストールの新機能](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  この記事では、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのインストールに関する、新しい機能や強化された機能について説明します。  
   
- [SQL Server 2016 および 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、または [SQL Server on Linux](../../linux/sql-server-linux-setup.md) のインストールのためのハードウェアとソフトウェアの要件。この記事では、SQL Server のインスタンスをインストールして実行するためのハードウェアとソフトウェアの最小要件について説明します。 。  
+ [SQL Server 2016 および 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、[SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、または [SQL Server on Linux](../../linux/sql-server-linux-setup.md) のインストールのためのハードウェアとソフトウェアの要件。この記事では、SQL Server のインスタンスをインストールして実行するためのハードウェアとソフトウェアの最小要件について説明します。 .  
   
  [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール前と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール後で考慮する必要があるセキュリティのベスト プラクティスについて説明します。  

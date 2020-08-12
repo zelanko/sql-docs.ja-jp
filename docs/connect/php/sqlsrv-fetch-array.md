@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_fetch_array | Microsoft Docs
+title: sqlsrv_fetch_array
+description: SQL Server 用 Driver for PHP の sqlsrv_fetch_array 関数の API リファレンスです。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015035"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391807"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +38,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$stmt*: 実行されたステートメントに対応するステートメント リソースです。  
+*$stmt*: 実行されたステートメントに対応するステートメント リソース。  
   
 *$fetchType* [省略可能]: 定義済みの定数。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
   
@@ -58,7 +59,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 1.1 に、スクロール可能なカーソルのサポートが追加されました。  
   
-*offset* [省略可能]: SQLSRV_SCROLL_ABSOLUTE と SQLSRV_SCROLL_RELATIVE と共に使用し、取得する行を指定します。 結果セットの最初のレコードは 0 です。  
+*offset* [省略可能]: SQLSRV_SCROLL_ABSOLUTE および SQLSRV_SCROLL_RELATIVE と共に使用して、取得する行を指定します。 結果セットの最初のレコードは 0 です。  
   
 ## <a name="return-value"></a>戻り値  
 データ行が取得された場合は、 **配列** が返されます。 取得する行がなくなった場合、 **null** が返されます。 エラーが発生した場合は、 **false** が返されます。  
@@ -73,7 +74,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-このステートメントの `SELECT SCOPE_IDENTITY()` 部分によって返される結果セットが連想配列として取得される場合、返される列には名前がないので、返される値のキーは空の文字列 ("") になります。 これを回避するには、結果を数値配列として取得するか、または返される列の名前を Transact-SQL ステートメントに指定します。 次は、Transact-SQL に列名を指定する方法の 1 つです。  
+このステートメントの `SELECT SCOPE_IDENTITY()` 部分によって返される結果セットが連想配列として取得される場合、返される列には名前がないので、返される値のキーは空の文字列 ("") になります。 これを回避するには、結果を数値配列として取得するか、または返される列の名前を Transact-SQL ステートメントに指定します。 次のステートメントは、Transact-SQL に列名を指定する方法の 1 つです。  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -176,7 +177,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-**sqlsrv_fetch_array** 関数は、常に [Default PHP Data Types](../../connect/php/default-php-data-types.md) パラメーターに基づいてデータを返します。 PHP データ型を指定する方法については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+**sqlsrv_fetch_array** 関数は、常に [Default PHP Data Types](../../connect/php/default-php-data-types.md) パラメーターに基づいてデータを返します。 PHP データ型を指定する方法については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 名前のないフィールドが取得された場合、配列要素の連想キーは空の文字列 ("") になります。 詳細については、「 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)」を参照してください。  
   

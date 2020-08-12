@@ -12,26 +12,26 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bdd7e624fea2f6c225c8839450e1d1d5f91a9de5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257159"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001926"
 ---
 # <a name="object-dependencies"></a>[オブジェクトの依存関係]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 一部のデータベース オブジェクトには、他のデータベース オブジェクトと依存関係があります。 たとえば、ビューとストアド プロシージャは、そのビューまたはプロシージャが返すデータを格納するテーブルの存在に依存します。 現在のオブジェクトの **[オブジェクトの依存関係]\([全般] ページ)** には、オブジェクトが正常に動作するために必要なデータベース オブジェクト、および選択されているオブジェクトに依存するオブジェクトの両方が一覧表示されます。 オブジェクトは、その定義で別のオブジェクトを参照する場合 (この定義はシステム カタログに格納されます)、 *参照元エンティティ*と呼ばれます。 別のオブジェクトによって参照されるオブジェクトは、 *参照先エンティティ*と呼ばれます。  
   
 現在のオブジェクトの **[オブジェクトの依存関係]\([詳細設定] ページ)** には、オブジェクトに依存する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトおよび [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクトが一覧表示されます。 それらのオブジェクトは、別のサーバーに格納されている場合もあります。  
   
 このダイアログ ボックスを使用すると、選択されているオブジェクトを変更または削除する前に依存関係について理解できます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
-**[** _選択したオブジェクト\<> に依存するオブジェクト]_  
+## <a name="ui-element-list"></a>UI 要素の一覧  
+**_\<selected object>_ に依存するオブジェクト**  
 このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトに依存するオブジェクトの一覧が表示されます。  
   
-**[** _\<選択したオブジェクト>_ **が依存するオブジェクト]**  
+**** _\<selected object>_ が依存するオブジェクト****  
 このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトが依存するオブジェクトの一覧が表示されます。  
   
 **依存関係**  

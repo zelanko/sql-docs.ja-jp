@@ -1,5 +1,6 @@
 ---
-title: システム要件 (ODBC Driver for SQL Server) | Microsoft Docs
+title: システム要件 (ODBC Driver for SQL Server)
+description: ここでは、Linux オペレーティング システムおよび macOS オペレーティング システムでの ODBC Driver for SQL Server のシステム要件について説明します。
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2459a9f57f3591db1107994d0b18770690f22724
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921176"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391757"
 ---
-# <a name="system-requirements"></a>システム要件
+# <a name="system-requirements-linux-and-macos"></a>システム要件 (Linux および macOS)
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -33,7 +34,7 @@ Linux および macOS ドライバーの SQL バージョンの互換性は、[W
 
 ## <a name="operating-system-support"></a>オペレーティング システムのサポート
 
-Linux および macOS ドライバーのバージョン 17、13.1、13 は、次の 64 ビット バージョンのオペレーティング システムでサポートされています。
+Linux ドライバーおよび macOS ドライバーのバージョン 17、13.1、13 は、次のオペレーティング システムの x64 アーキテクチャでサポートされています。
 
 |サポートされるオペレーティング システム     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|--|
@@ -66,7 +67,7 @@ Linux と macOS 上の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
   
 * 64 ビット UnixODBC 2.3.0 Driver Manager (64 ビット SQLLEN/SQLULEN 向けの設計)。 これよりも新しいバージョンの 64 ビット UnixODBC Driver Manager は、Linux 上の ODBC ドライバーではサポートされません。 詳細については、「 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) 」をご覧ください。  
   
-* **Red Hat Enterprise Linux 5 (64 ビット)** 用の ODBC ドライバーには次のパッケージが必要であり、ここからダウンロードできます。[Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+* **Red Hat Enterprise Linux 5 (64 ビット)** 用 ODBC ドライバーの場合、次のパッケージが必要です。また、[SQL Server 用 Microsoft ODBC Driver 11 - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321) のページでダウンロードできます。  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -74,7 +75,7 @@ Linux と macOS 上の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
   * `krb5-libs`  
   * `openssl`  
   
-* **Red Hat Enterprise Linux 6 (64 ビット)** 用の ODBC ドライバーには次のパッケージが必要であり、ここからダウンロードできます。[Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+* **Red Hat Enterprise Linux 6 (64 ビット)** 用 ODBC ドライバーの場合、次のパッケージが必要です。また、[SQL Server 用 Microsoft ODBC Driver 11 - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321) のページでダウンロードできます。  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -82,7 +83,7 @@ Linux と macOS 上の [!INCLUDE[msCoName](../../../includes/msconame_md.md)] OD
   * `krb5-libs`  
   * `openssl`  
   
-* **SUSE Linux Enterprise 11 Service Pack 2 (64 ビット)** 用の ODBC ドライバーには次のパッケージが必要であり、ここからダウンロードできます。[Microsoft ODBC Driver 11 プレビュー for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
+* **SUSE Linux Enterprise 11 サービス パック 2 (64 ビット)** 用 ODBC ドライバーの場合、次のパッケージが必要です。また、[SQL Server 用 Microsoft ODBC Driver 11 (Preview) - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916) のページでダウンロードできます。  
   * `glibc`  
   * `libstdc++46`  
   * `libgcc46`  

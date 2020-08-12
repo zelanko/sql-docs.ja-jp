@@ -13,18 +13,17 @@ f1_keywords:
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 6b4cd862310c0b53a1bda9bf5a563ed2977e1ed2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11bcce44741929165ced7dbd7b3ae00fc109d9ff
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255507"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012603"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>[名前の選択] ダイアログ ボックス (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-このダイアログ ボックスは、**[ファイル]** メニューの **[\<テーブル名**> を保存]、**[<DiagramName> を保存]**、または **[<ViewName> を保存]** を選択したときに表示されます。  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+このダイアログボックスは、 **[ファイル]** メニューで **[\<TableName**> の保存]、 **[<DiagramName> の保存]** 、または **[<ViewName> の保存]** を選択すると表示されます。  
   
 **[テーブルの名前を入力してください]、[ダイアグラムの名前を入力してください]、または [ビュー名を入力してください]**  
 テーブル、ダイアグラム、またはビューの名前を入力するためのテキスト ボックスが用意されています。  

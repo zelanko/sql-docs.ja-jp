@@ -1,5 +1,6 @@
 ---
-title: JDBC ドライバーに関する問題の診断 | Microsoft Docs
+title: JDBC ドライバーに関する問題の診断
+description: エラー処理、ドライバー バージョンの確認、トレースなどの問題の診断とトラブルシューティングの方法について説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3728ac03477099b81ee51e8cbb779d9773984dbb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f51f21c3ede1a3bd11cb73e5b9b2fbecfdd851d9
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922428"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381032"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>JDBC ドライバーに関する問題の診断
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "80922428"
 |[接続のトラブルシューティング](../../connect/jdbc/troubleshooting-connectivity.md)|データベース接続のトラブルシューティングを行う方法について説明します。|  
 |[拡張イベント ログの診断情報へのアクセス](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|サーバーの拡張イベント ログを使用して、接続エラーに関する情報を得る方法について説明します。|  
   
-## <a name="see-also"></a>参照 
+## <a name="see-also"></a>関連項目 
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

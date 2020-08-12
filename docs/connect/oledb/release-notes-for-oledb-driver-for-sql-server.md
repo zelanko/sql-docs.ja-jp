@@ -1,23 +1,23 @@
 ---
 title: OLE DB Driver のリリース ノート
 description: このリリース ノート記事では、Microsoft OLE DB Driver for SQL Server の各リリースにおける変更点について説明します。
-ms.date: 02/27/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 70f3239f1e644850bc391a0be5ef8918e1e9e617
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81727972"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011917"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server のリリース ノート
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 このページでは、Microsoft OLE DB Driver for SQL Server の各バージョンで追加された内容について説明します。
 
@@ -27,6 +27,37 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1840"></a>18.4.0
+![ダウンロード](../../ssms/media/download-icon.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2129954)  
+![ダウンロード](../../ssms/media/download-icon.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2131003)  
+
+リリース日:2020 年 5 月
+
+自動的に検出されたもの以外の言語でインストーラーをダウンロードする必要がある場合は、以下の直接リンクを使用できます。  
+X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)  
+X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)  
+
+### <a name="features-added"></a>追加された機能
+
+| 追加された機能 | 詳細 |
+| :------------ | :------ |
+| 透過的なネットワーク IP の解決 (TNIR) のサポート |[透過的なネットワーク IP の解決 (TNIR)](features/using-transparent-network-ip-resolution.md)|
+| UTF-8 クライアント エンコードのサポート | [OLE DB Driver for SQL Server の UTF-8 のサポート](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+
+### <a name="bugs-fixed"></a>修正されたバグ
+
+| 修正されたバグ | 詳細 |
+| :-------- | :------ |
+| [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) インターフェイスのさまざまなバグを修正しました | マルチバイトのコード ページに影響を与えるいくつかのバグにより、読み取り操作の完了前にインターフェイスでストリームの末尾が報告されました。|
+| [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) インターフェイスのメモリ リークを修正しました | `SSPROP_IRowsetFastLoad` プロパティが有効になっている場合の [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) インターフェイスのメモリ リークを修正しました。 |
+| `sql_variant` データ型と非 ASCII 文字列に関連するシナリオのバグを修正しました | `sql_variant` データ型と非 ASCII 文字列に関連する特定のシナリオを実行すると、データが破損する可能性があります。 詳細については、次の情報を参照してください。[既知の問題](ole-db-data-types/ssvariant-structure.md#known-issues)。 |
+| [UDL 構成ダイアログ](help-topics/data-link-pages.md)の *[テスト接続]* ボタンの問題を修正しました | [UDL 構成ダイアログ](help-topics/data-link-pages.md)の *[テスト接続]* ボタンで、 *[すべて]* タブで設定された初期化プロパティを利用できるようになりました。 |
+| `SSPROP_INIT_PACKETSIZE` プロパティの既定値の処理を修正しました | `SSPROP_INIT_PACKETSIZE` プロパティが `0` の既定値に設定されている場合の予期しないエラーを修正しました。 このプロパティの詳細については、「[初期化プロパティと承認プロパティ](ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。 |
+| [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) でのバッファー オーバーフローの問題を修正しました | 不適切なデータ ファイルを使用する場合のバッファー オーバーフローの問題を修正しました。 |
+| アクセシビリティの問題を修正しました | インストーラー UI と [SQL Server ログイン ダイアログ](help-topics/sql-server-login-dialog.md) (コンテンツの読み取り、タブ ストップ) でのアクセシビリティの問題を修正しました。 |
+
+## <a name="previous-releases"></a>以前のリリース
 
 ## <a name="1830"></a>18.3.0
 
@@ -53,8 +84,6 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 | :-------- | :------ |
 | [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) のインデックスの削除ロジックが修正されました。 | 以前のバージョンの OLE DB ドライバーでは、インデックスの所有者のスキーマ ID とユーザー ID が同じでない場合、主キー インデックスを削除できません。 |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>以前のリリース
 
 以前のバージョンの OLE DB Driver をダウンロードするには、次のセクションのダウンロード リンクをクリックします。
 

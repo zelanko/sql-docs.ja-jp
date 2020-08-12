@@ -1,5 +1,6 @@
 ---
 title: '[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([詳細設定] タブ)'
+description: ダンプ ディレクトリやインスタンス ID など、[レポート サーバーのプロパティ] ダイアログ ボックスの [詳細設定] タブのオプションについて説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 42cc01602f1f09958bbff07af7525bb48bca3cc8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6d5cb99e8c449b8768bcb3a6d692a769fae79bc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306365"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895922"
 ---
 # <a name="report-server-properties-advanced-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   このサービスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] です。 カスタム プロパティが定義されていれば、そのプロパティと値がこのタブに表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[カスタマー フィードバック レポート]**  
  サービス品質の監視がこのサービスで有効になっているかどうかを示します。 カスタマー フィードバック報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。  
   

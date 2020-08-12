@@ -1,5 +1,6 @@
 ---
-title: 方法:パラメーター化クエリを実行する | Microsoft Docs
+title: 方法:パラメーター化クエリを実行する
+description: Drivers for PHP for SQL Server を使用して、少ない手順でパラメーター化クエリを使用する方法について説明します。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53669aad61234676bb4b051f577e3a52e5432d61
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1fb2cb13055a53ba12a500b1a552e6fc2cdb431c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916179"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392810"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>方法:パラメーター化クエリを実行する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

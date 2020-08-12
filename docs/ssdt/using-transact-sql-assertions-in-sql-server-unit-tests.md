@@ -1,21 +1,21 @@
 ---
 title: SQL Server の単体テストでの Transact-SQL アサーションの使用
+description: Transact-SQL アサーションについて説明します。 SQL Server の単体テストでアサーションを使用するタイミング、テスト条件を使用するタイミング、およびアサーションの使用例を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243509"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898980"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>SQL Server の単体テストでの Transact-SQL アサーションの使用
 
@@ -85,5 +85,5 @@ Transact\-SQL スクリプトで RAISERROR ステートメントを使用する�
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [SQL Server の単体テストでのテスト条件の使用](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [SQL Server の単体テストを使用したデータベース コードの検証](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[SQL Server の単体テストを開いて編集する方法](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[方法:  SQL Server の単体テストを開いて編集する](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

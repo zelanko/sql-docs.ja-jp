@@ -25,19 +25,20 @@ helpviewer_keywords:
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cf55425be19e1f7d2bc201c222209f4693b5368e
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 8bec01c994df45975ac42faa25f0fb389443eb82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151444"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998549"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 > Linux 上で bcp を使用する場合は、[Linux への sqlcmd と bcp のインストール](../linux/sql-server-linux-setup-tools.md)に関する記事を参照してください。
 >
@@ -68,7 +69,7 @@ ms.locfileid: "83151444"
 
 ### <a name="system-requirements"></a>システム要件
 
-Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016
+Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016、Windows Server 2019
 
 このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver for SQL Server 17](https://www.microsoft.com/download/details.aspx?id=56567) の両方が必要です。
 
@@ -126,13 +127,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
  次に示すように、一括コピーの方向を指定します。  
   
--   **in**<a name="in"></a> はファイルからデータベース テーブルまたはビューへのコピーを行います。  
+- **in**<a name="in"></a> はファイルからデータベース テーブルまたはビューへのコピーを行います。  
   
--   **out**<a name="out"></a> はデータベース テーブルまたはビューからファイルへのコピーを行います。 既存のファイルを指定すると、ファイルは上書きされます。 **bcp** ユーティリティは、データを抽出するときに、空文字列を NULL 文字列で、NULL 文字列を空文字列で表します。  
+- **out**<a name="out"></a> はデータベース テーブルまたはビューからファイルへのコピーを行います。 既存のファイルを指定すると、ファイルは上書きされます。 **bcp** ユーティリティは、データを抽出するときに、空文字列を NULL 文字列で、NULL 文字列を空文字列で表します。  
   
--   **queryout**<a name="qry_out"></a> はクエリからのコピーを行います。データをクエリから一括コピーする場合にのみ指定する必要があります。  
+- **queryout**<a name="qry_out"></a> はクエリからのコピーを行います。データをクエリから一括コピーする場合にのみ指定する必要があります。  
   
--   **format**<a name="format"></a> は、指定されたオプション ( **-n**、 **-c**、 **-w**、 **-N**) と、テーブルやビューの区切り記号に基づいてフォーマット ファイルを作成します。 データを一括コピーするとき、**bcp** コマンドはフォーマット ファイルを参照することができるため、フォーマット情報を対話的に再入力する必要がなくなります。 **format** オプションには **-f** オプションが必要です。XML フォーマット ファイルを作成する場合には、 **-x** オプションも必要です。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)」をご覧ください。 値として **nul** を指定する必要があります (**format nul**)。  
+- **format**<a name="format"></a> は、指定されたオプション ( **-n**、 **-c**、 **-w**、 **-N**) と、テーブルやビューの区切り記号に基づいてフォーマット ファイルを作成します。 データを一括コピーするとき、**bcp** コマンドはフォーマット ファイルを参照することができるため、フォーマット情報を対話的に再入力する必要がなくなります。 **format** オプションには **-f** オプションが必要です。XML フォーマット ファイルを作成する場合には、 **-x** オプションも必要です。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)」をご覧ください。 値として **nul** を指定する必要があります (**format nul**)。  
   
  _**owner**_<a name="schema"></a>  
  テーブルまたはビューの所有者の名前を指定します。 操作を実行するユーザーが指定のテーブルまたはビューを所有している場合、*owner* は省略可能です。 *owner* が指定されず、操作を実行するユーザーが指定のテーブルまたはビューを所有していない場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からエラー メッセージが返され、操作は取り消されます。  
@@ -198,9 +199,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-f** _**format\_file**_<a name="f"></a>  
  フォーマット ファイルの完全パスを指定します。 このオプションの意味は、オプションが使用されている環境によって次のように異なります。  
   
--   **-f** を **format** オプションと共に使用した場合、指定されたテーブルまたはビューに対して、指定された *format_file* が作成されます。 XML フォーマット ファイルを作成するには、 **-x** オプションも指定します。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)」をご覧ください。  
+- **-f** を **format** オプションと共に使用した場合、指定されたテーブルまたはビューに対して、指定された *format_file* が作成されます。 XML フォーマット ファイルを作成するには、 **-x** オプションも指定します。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)」をご覧ください。  
   
--   **in** または **out** オプションと共に使用する場合、 **-f** を使うには既存のフォーマット ファイルが必要です。  
+- **in** または **out** オプションと共に使用する場合、 **-f** を使うには既存のフォーマット ファイルが必要です。  
   
     > [!NOTE]
     > **in** または **out** オプションを使う場合、フォーマット ファイルは省略可能です。 **-f** オプションを省略すると、 **-n**、 **-c**、 **-w**、または **-N** を指定しなかった場合に、コマンドによってフォーマット情報が要求され、それに対する応答がフォーマット ファイルに保存されます (既定のファイル名は Bcp.fmt)。
@@ -221,7 +222,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > 現在、AAD 統合認証と対話型認証は、Linux または macOS 上でサポートされていません。
 
 > [!TIP]
-> お使いのバージョンの bcp に Azure Active Directory 認証 (AAD) のサポートが含まれているかどうかを確認するには、「**bcp --** 」(bcp\<スペース>\<ダッシュ>\<ダッシュ>) と入力し、使用できる引数の一覧に -G が表示されることを確認します。
+> お使いのバージョンの bcp に Azure Active Directory 認証 (AAD) のサポートが含まれているかどうかを確認するには、「**bcp --** 」 (bcp\<space>\<dash>\<dash>) と入力して、使用できる引数の一覧に "-G" が表示されることを確認します。
 
 - **Azure Active Directory のユーザー名とパスワード:** 
 
@@ -401,7 +402,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-T**<a name="T"></a>  
  **bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続することを指定します。 ネットワーク ユーザーのセキュリティ資格情報である *login_id*および *password* は必要ありません。 **-T** を指定しない場合、正常にログインするには **-U** と **-P** を指定する必要があります。
- 
+
 > [!IMPORTANT]
 > **bcp** ユーティリティが、統合セキュリティを使用したセキュリティ接続で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続している場合は、 **user name** と *password* の組み合わせではなく、 *-T* オプション (セキュリティ接続) を使用します。 **bcp** ユーティリティが SQL Database または SQL Data Warehouse に接続している場合、Windows 認証または Azure Active Directory 認証の使用はサポートされません。 **-U** および **-P** オプションを使用します。 
   
@@ -446,9 +447,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 - **bcp** 13.0 クライアントは、 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のツールをインストールしたときにインストールされます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] と以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の両方のツールがインストールされている場合、PATH 環境変数の値の順番によっては、 **bcp** 13.0 クライアントではなく、以前の **bcp** クライアントを使用している可能性があります。 この環境変数によって Windows で実行可能ファイルを探すときに使用されるディレクトリのセットが定義されます。 使用しているバージョンを確認するには、Windows のコマンド プロンプトで **bcp /v** または **bcp -v** コマンドを実行します。 PATH 環境変数でコマンド パスを設定する方法については、[環境変数](https://docs.microsoft.com/windows/win32/shell/user-environment-variables)に関する記事を参照するか、Windows ヘルプで「環境変数」を検索してください。
 
     最新バージョンの bcp ユーティリティを確実に実行するには、以前のバージョンの bcp ユーティリティをすべて削除する必要があります。
-    
+
     すべてのバージョンの bcp ユーティリティがインストールされている場所を確認するには、コマンド プロンプトに次のように入力します。
-    
+
     ```cmd
     where bcp.exe
     ```
@@ -481,35 +482,35 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子には、空白や引用符などを埋め込むことができます。 これらの識別子は次のように扱う必要があります。  
   
--   コマンド プロンプトで空白や引用符を含む識別子またはファイル名を指定する場合、識別子を二重引用符 (" ") で囲みます。  
-  
-     たとえば、次の `bcp out` コマンドでは、 `Currency Types.dat`という名前のデータ ファイルが作成されます。  
-  
-    ```  
+- コマンド プロンプトで空白や引用符を含む識別子またはファイル名を指定する場合、識別子を二重引用符 (" ") で囲みます。  
+
+    たとえば、次の `bcp out` コマンドでは、 `Currency Types.dat`という名前のデータ ファイルが作成されます。  
+
+    ```cmd
     bcp AdventureWorks2012.Sales.Currency out "Currency Types.dat" -T -c  
-    ```  
+    ```
   
--   空白や引用符を含むデータベース名を指定するには、 **-q** オプションを使用する必要があります。  
+- 空白や引用符を含むデータベース名を指定するには、 **-q** オプションを使用する必要があります。  
   
--   空白文字や引用符を含んでいる所有者、テーブル、またはビューの名前については、次のうちのいずれかを行うことができます。  
+- 空白文字や引用符を含んでいる所有者、テーブル、またはビューの名前については、次のうちのいずれかを行うことができます。  
   
-    -   **-q** オプションを指定します。  
+    - **-q** オプションを指定します。  
   
-    -   所有者名、テーブル名、またはビュー名を、引用符内でかっこ ([ ]) を使用して囲みます。  
+    - 所有者名、テーブル名、またはビュー名を、引用符内でかっこ ([ ]) を使用して囲みます。  
 
 ## <a name="data-validation"></a>データ検証
 
  **bcp** によってデータ検証とデータ チェックが実行されるようになったため、無効なデータを含むデータ ファイルに対して実行した場合、このスクリプトは失敗する可能性があります。 たとえば、 **bcp** では次の検証が行われます。  
   
--   float データ型または real データ型のネイティブ表記が有効かどうか。  
+- float データ型または real データ型のネイティブ表記が有効かどうか。  
   
--   Unicode データが偶数バイト長かどうか。  
+- Unicode データが偶数バイト長かどうか。  
   
  以前のリリースでは、クライアントが無効なデータにアクセスを試みるまでは失敗が発生することはありませんでしたが、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で一括インポート可能であった無効な形式のデータが、新しいバージョンでは読み込みに失敗する場合があります。 今回のリリースでは検証機能が追加されたため、一括読み込み後のクエリで発生する問題を最小限に抑えられます。  
 
 ## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML ドキュメントの一括エクスポートまたは一括インポート
 
- SQLXML データを一括エクスポートまたは一括インポートする場合、フォーマット ファイルのデータ型には次のいずれかを使用します。  
+SQLXML データを一括エクスポートまたは一括インポートする場合、フォーマット ファイルのデータ型には次のいずれかを使用します。  
   
 |データ型|結果|  
 |---------------|------------|  
@@ -523,17 +524,17 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **bcp in** 操作には、対象となるテーブルでの SELECT/INSERT 権限が最低限必要となります。 また、次のうちのいずれかに該当する場合は、ALTER TABLE 権限が必要です。  
   
--   制約が存在するため、CHECK_CONSTRAINTS ヒントを指定しません。  
+- 制約が存在するため、CHECK_CONSTRAINTS ヒントを指定しません。  
   
     > [!NOTE]
     > 制約の無効化は既定の動作です。 制約を明示的に有効にするには、CHECK_CONSTRAINTS ヒントと共に **-h** オプションを使用します。
   
--   トリガーが存在するため、FIRE_TRIGGER ヒントを指定しません。  
+- トリガーが存在するため、FIRE_TRIGGER ヒントを指定しません。  
   
     > [!NOTE]
     > 既定では、トリガーは起動しません。 トリガーを明示的に起動するには、FIRE_TRIGGERS ヒントと共に **-h** オプションを使用します。
   
--   **-E** オプションを使用して、データ ファイルから ID 値をインポートします。  
+- **-E** オプションを使用して、データ ファイルから ID 値をインポートします。  
   
 > [!NOTE]
 > [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]からは、対象テーブルでの ALTER TABLE 権限が必要となりました。 この新しい要件により、対象テーブルでの ALTER TABLE 権限がユーザー アカウントに与えられていないと、トリガーおよび制約チェックを実行しない **bcp** スクリプトは失敗する可能性があります。
@@ -542,11 +543,11 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  このセクションでは、キャラクター モード (-c) およびネイティブ モード (-n) の推奨事項について説明します。  
   
--   (管理者/ユーザー) 可能であれば、ネイティブ形式 (-n) を使用して、区切り記号の問題を回避します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用してエクスポートおよびインポートを行うには、ネイティブ形式を使用します。 データを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のデータベースにインポートする場合は、データを[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からエクスポートするときに -c または -w オプションを使用します。  
+- (管理者/ユーザー) 可能であれば、ネイティブ形式 (-n) を使用して、区切り記号の問題を回避します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用してエクスポートおよびインポートを行うには、ネイティブ形式を使用します。 データを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のデータベースにインポートする場合は、データを[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からエクスポートするときに -c または -w オプションを使用します。  
   
--   (管理者) BCP OUT を使用するときに、データを検証します。 たとえば、BCP OUT、BCP IN、その後 BCP OUT を使用する場合、データが正しくエクスポートされ、ターミネータ値がデータ値の一部として使用されていないことを確認します。 ターミネータ値とデータ値の競合を回避するために、-t および -r オプションを使用して、既定のターミネータ値をランダムな 16 進数値でオーバーライドすることを検討してください。  
+- (管理者) BCP OUT を使用するときに、データを検証します。 たとえば、BCP OUT、BCP IN、その後 BCP OUT を使用する場合、データが正しくエクスポートされ、ターミネータ値がデータ値の一部として使用されていないことを確認します。 ターミネータ値とデータ値の競合を回避するために、-t および -r オプションを使用して、既定のターミネータ値をランダムな 16 進数値でオーバーライドすることを検討してください。  
   
--   (ユーザー) 実際の文字列値と競合する可能性を最小限に抑えるために、長くて一意のターミネータ (バイトまたはキャラクターの任意のシーケンス) を使用します。 これには、-t および -r オプションを使用します。  
+- (ユーザー) 実際の文字列値と競合する可能性を最小限に抑えるために、長くて一意のターミネータ (バイトまたはキャラクターの任意のシーケンス) を使用します。 これには、-t および -r オプションを使用します。  
 
 ## <a name="examples"></a>例
 
@@ -621,15 +622,15 @@ bcp -v
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
- - **拡張**  
-`StockItemTransactions_native.bcp` という名前のデータ ファイルを作成し、 **ネイティブ** 形式を使用してテーブルのデータをこのデータ ファイルにコピーします。  この例では、構文エラーの最大数、エラー ファイル、出力ファイルも指定しています。
+- **拡張** この例では、`StockItemTransactions_native.bcp` という名前のデータ ファイルを作成し、**ネイティブ**形式を使用してテーブルのデータをそこにコピーします。  この例では、構文エラーの最大数、エラー ファイル、出力ファイルも指定しています。
 
     コマンド プロンプトで、次のコマンドを入力します。
-    ```
+
+    ```cmd
     bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
     ```
 
-`Error_out.log` と `Output_out.log`を確認します。  `Error_out.log` は、空白にする必要があります。  `StockItemTransactions_character.bcp` と `StockItemTransactions_native.bcp`のファイル サイズを比較します。 
+`Error_out.log` と `Output_out.log`を確認します。  `Error_out.log` は、空白にする必要があります。  `StockItemTransactions_character.bcp` と `StockItemTransactions_native.bcp`のファイル サイズを比較します。
 
 ### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>C. データ ファイルへのテーブル行のコピー (混合モード認証を使用)
 
@@ -734,7 +735,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTr
 
 次の部分的なコード例は、コード ページ 65001 を指定した bcp インポートを示しています。
 
-```
+```cmd
 bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...  
 ```
 
@@ -744,20 +745,18 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 |---|
 |一括インポートまたは一括エクスポートのデータ形式 (SQL Server)<br />&emsp;&#9679;&emsp;[ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[文字形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[フィールド ターミネータと行ターミネータの指定 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[一括インポート中の NULL の保持または既定値の使用 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[データの一括インポート時の ID 値の保持 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)<br />&emsp;&#9679;&emsp;[フォーマット ファイルの作成 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[データの一括インポートでのフォーマット ファイルの使用 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>  </p>|
 
-## <a name="see-also"></a>参照
+## <a name="considerations-and-limitations"></a>考慮事項と制限事項
+
+- bcp ユーティリティには、エラー メッセージには 512 バイトの文字しか表示されないという制限があります。 エラー メッセージの最初の 512 バイトのみが表示されます。
+
+## <a name="next-steps"></a>次のステップ
 
 - [一括エクスポートまたは一括インポートのデータの準備 &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
-
 - [BULK INSERT &#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)
-
 - [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)
-
 - [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)
-
 - [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-
 - [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
-
 - [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
 
 ## <a name="feedback"></a>フィードバック

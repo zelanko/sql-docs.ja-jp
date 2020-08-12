@@ -1,21 +1,21 @@
 ---
 title: データベース コード分析ルールの機能拡張
+description: データベース コード分析ルールのさまざまなコンポーネントについてと、それらが SQL Server Data Tools でどのように対話するかについて理解します。 カスタム ルールの作成について説明します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef4ab84a123252dd35da85213110b8b4abb616ad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e67b6dabc0d8db2b3644a6183b4a6855738e54ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251963"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897623"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>データベース コード分析ルールの機能拡張の概要
 
@@ -30,9 +30,9 @@ SQL Server Data Tools を含む Visual Studio エディションには、Transac
   
 ![データベース コード分析ルールのコンポーネント](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "データベース コード分析ルールのコンポーネント")  
   
-静的コード分析を直接実行するか (詳細については、「[方法: Transact-SQL コードを分析して障害を検出する](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)」を参照してください)、ビルドを実行して、データベース コード分析ルール機能を使用すると、すべてのルールが読み込まれ、プロジェクトの構成に従って使用されます。 詳細については、「[方法: データベース コードのスタティック分析の特定の規則を有効または無効にする](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)」を参照してください。 拡張機能マネージャーには、作成、登録したカスタム ルール アセンブリも読み込まれます。 詳細については、「[方法: 機能拡張のインストールと管理](../ssdt/how-to-install-and-manage-feature-extensions.md)」を参照してください。  
+静的コード分析を直接実行するか (詳細については、「[方法: Transact-SQL コードを分析して障害を検出する](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)」を参照してください)、ビルドを実行して、データベース コード分析ルール機能を使用すると、すべてのルールが読み込まれ、プロジェクトの構成に従って使用されます。 詳細については、「[データベース コードのスタティック分析の特定の規則を有効または無効にする](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)」を参照してください。 拡張機能マネージャーには、作成、登録したカスタム ルール アセンブリも読み込まれます。 詳細については、「[機能拡張のインストールと管理](../ssdt/how-to-install-and-manage-feature-extensions.md)」を参照してください。  
   
-カスタムのコード分析ルール クラスは、[SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx) から継承します。 カスタムのルール クラスからは、ルール実行コンテキスト経由で便利なオブジェクトにアクセスできます。 チェックの内容は次のとおりです  
+カスタムのコード分析ルール クラスは、[SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx) から継承します。 カスタムのルール クラスからは、ルール実行コンテキスト経由で便利なオブジェクトにアクセスできます。 これには以下が含まれます。  
   
 -   ルール自体に関するメタデータ。  
   

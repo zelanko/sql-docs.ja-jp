@@ -1,23 +1,24 @@
 ---
 title: フェールオーバー クラスター インスタンスを作成する
+description: SQL Server フェールオーバー クラスターのインストールについて説明します。 SQL Server セットアップを実行して、フェールオーバー クラスター インスタンスを作成および構成します。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 574f8f557eab10fa43be721f9b73bfc446b04687
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230622"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897659"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server フェールオーバー クラスターのインストール
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のフェールオーバー クラスターをインストールするには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行してフェールオーバー クラスター インスタンスを作成し、構成する必要があります。  
   
 ## <a name="installing-a-failover-cluster"></a>フェールオーバー クラスターのインストール  
@@ -25,7 +26,7 @@ ms.locfileid: "75230622"
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストール、構成、および管理するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを使用します。  
   
-    -   フェールオーバー クラスター インスタンスの作成に必要な情報 (クラスター ディスク リソース、IP アドレス、ネットワーク名など)、およびフェールオーバーで利用できるノードを確認します。 詳細:  
+    -   フェールオーバー クラスター インスタンスの作成に必要な情報 (クラスター ディスク リソース、IP アドレス、ネットワーク名など)、およびフェールオーバーで利用できるノードを確認します。 詳細情報:  
   
         -   [フェールオーバー クラスタリングをインストールする前に](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)  
   
@@ -39,7 +40,7 @@ ms.locfileid: "75230622"
   
     -   フェールオーバー クラスター内のすべてのノードは、32 ビットまたは 64 ビットのいずれかの同一プラットフォームで構成され、エディションおよびバージョンが同じオペレーティング システムを実行している必要があります。 また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の 64 ビット エディションは、64 ビット版の Windows オペレーティング システムを実行する 64 ビット ハードウェアにインストールする必要があります。 このリリースのフェールオーバー クラスタリングでは、WOW64 がサポートされません。  
   
-3.  フェールオーバー クラスター インスタンスごとに複数の IP アドレスを指定します。 各サブネットに複数の IP アドレスを指定することができます。 同じサブネットに複数の IP アドレスがある場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは依存関係を AND に設定します。 複数のサブネットにわたってノードをクラスター化している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは依存関係を OR に設定します。  
+3.  フェールオーバー クラスター インスタンスごとに複数の IP アドレスを指定します。 各サブネットに複数の IP アドレスを指定することができます。 同じサブネットに複数の IP アドレスがある場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは依存関係を AND に設定します。 複数のサブネットにわたってノードをクラスター化している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは依存関係を OR に設定します。  
 
 4.  SQL Server フェールオーバー クラスター インスタンス (FCI) では、クラスター ノードをドメイン参加させる必要があります。 次の構成は**サポートされていません**。
     - ワークグループ クラスター上の SQL FCI。 

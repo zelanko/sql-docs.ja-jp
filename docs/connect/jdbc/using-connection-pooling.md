@@ -1,5 +1,6 @@
 ---
-title: 接続プールの使用 | Microsoft Docs
+title: 接続プールの使用
+description: Java で接続プールをサポートするために JDBC Driver for SQL Server が JDBC に準拠しているインターフェイスをどのように提供するかついて説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4551e5a058e03d7a45d2dd21d91821a628e1da3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3bcacec5f85150f7de437d936463a3b3807f9ef
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924029"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391750"
 ---
 # <a name="using-connection-pooling"></a>接続プールの使用
 
@@ -40,6 +41,6 @@ ms.locfileid: "80924029"
 > [!NOTE]  
 > 現在 JDBC ドライバーは、接続をプールに返すとき sp_reset_connection ストアド プロシージャを呼び出しません。 ただし、接続を元の状態に戻すときは、サードパーティの Java アプリケーション サーバーに依存します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

@@ -1,6 +1,6 @@
 ---
 title: 強制クォーラムによるディザスター リカバリー
-description: クォーラム障害からの復旧には、手動による介入が必要になります。 この記事では、SQL Server フェールオーバー クラスター インスタンス (FCI) の障害が発生した場合にクォーラムを強制する方法について説明します。
+description: クォーラム障害からの復旧には、手動による介入が必要になります。 SQL Server フェールオーバー クラスター インスタンスの障害が発生した場合にクォーラムを強制する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20beee1d78975cdb4da4338ca85eff14a32b8153
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821983"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896695"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC の強制クォーラムによる災害復旧 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   クォーラム障害は、通常、システム障害、永続的な通信障害、または WSFC クラスター内の複数のノードにおける不適切な構成が原因で発生します。  クォーラム障害からの復旧には、手動による介入が必要になります。  
   
 -   **開始前の準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  

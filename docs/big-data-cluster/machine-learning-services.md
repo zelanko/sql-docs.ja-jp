@@ -7,17 +7,17 @@ ms.author: davidph
 ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
-ms.openlocfilehash: d105db3da8a6732c2884af7e42a71441eef6f077
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: a14258c15ac1af1445b201f7b999dbec1682555d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643338"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196927"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターで Machine Learning Services を使用して Python および R のスクリプトを実行する
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [Machine Learning Services](../machine-learning/index.yml) を使用して [SQL Server ビッグ データ クラスター](big-data-cluster-overview.md)のマスター インスタンスで Python や R のスクリプトを実行できます。
 
@@ -119,7 +119,7 @@ service/mymaster-2 exposed
 
 次の図は、このプロセスを示しています。
 
-[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+[![デモ](media/machine-learning-services/example-kube-enable-scripts.png "Kubernetes でのデモンストレーション対応機能")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
 
 ビッグ データ クラスターのマスター インスタンスで、Python および R のスクリプトを実行する準備ができました。 初めてスクリプトを実行する場合は、「[次のステップ](#next-steps)」の下のクイックスタートを参照してください。
 
@@ -141,7 +141,7 @@ kubectl delete svc mymaster-2 -n mssql-cluster
 
 ## <a name="next-steps"></a>次のステップ
 
-+ [クイック スタート: SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](../machine-learning/tutorials/quickstart-python-create-script.md)
-+ [クイック スタート: SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする](../machine-learning/tutorials/quickstart-python-train-score-model.md)
-+ [クイック スタート: SQL Server Machine Learning Services で簡単な R スクリプトを作成して実行する](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [クイック スタート: SQL Server Machine Learning Services を使用して R で予測モデルを作成してスコア付けする](../machine-learning/tutorials/quickstart-r-train-score-model.md)
++ [単純な Python スクリプトを実行する](../machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json)
++ [Python での予測モデルのトレーニングとスコア付け](../machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json)
++ [単純な R スクリプトを実行する](../machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json)
++ [R での予測モデルのトレーニングとスコア付け](../machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json)

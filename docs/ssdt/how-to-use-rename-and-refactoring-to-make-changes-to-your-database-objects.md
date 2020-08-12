@@ -1,5 +1,6 @@
 ---
 title: 名前の変更とリファクタリングによってデータベース オブジェクトを変更する
+description: Transact-SQL エディターの [名前の変更] メニューと [リファクター] メニューについて説明します。 型の名前の変更、オブジェクト スキーマの切り替え、ワイルドカードの展開、および名前の完全な修飾を行う方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,18 +13,17 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ca1ef866a86f71eaa1b5f7dfa94821c94da5588
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244237"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895831"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する方法
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>方法:名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する
 
 Transact\-SQL エディターの [リファクター] コンテキスト メニューを使用すると、オブジェクトの名前を変更することも別のスキーマに移動することもできます。また、変更をコミットする前に、影響を受ける領域をすべてプレビューすることもできます。 [リファクター] メニューでは、データベース オブジェクトへのすべての参照を完全修飾することも、データベース プロジェクト内の `SELECT` ステートメントに含まれるワイルドカード文字を展開することもできます。  
   
@@ -32,7 +32,7 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 ### <a name="to-rename-a-type"></a>型名を変更するには  
   
-1.  **ソリューション エクスプローラー**で **Products** テーブル (Products.sql) を右クリックし、**[コードの表示]** をクリックして、Transact\-SQL エディターでスクリプトを開きます。  
+1.  **ソリューション エクスプローラー**で **Products** テーブル (Products.sql) を右クリックし、 **[コードの表示]** をクリックして、Transact\-SQL エディターでスクリプトを開きます。  
   
 2.  スクリプト内の `[Products]` を右クリックし、 **[リファクター]** をポイントして **[名前の変更]** をクリックします。  
   

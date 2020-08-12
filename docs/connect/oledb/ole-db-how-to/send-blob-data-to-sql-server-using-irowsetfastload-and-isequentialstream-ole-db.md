@@ -2,7 +2,7 @@
 title: IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL Server への BLOB データの送信 | Microsoft Docs
 description: IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL Server への BLOB データの送信
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2add5bbc762709122a6cf7c7292fd139c42cd39f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015543"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001480"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -26,15 +26,17 @@ ms.locfileid: "68015543"
   
  このサンプルの既定では、IRowsetFastLoad を使用して、インライン バインドによって可変長の BLOB データを行ごとに送信する方法が示されます。 インライン BLOB データは、使用できるメモリ容量に合わせる必要があります。 BLOB データが数 MB 未満の場合はストリームのオーバーヘッドが追加されないため、このメソッドを使用するとパフォーマンスが最も高くなります。 数 MB を超えるデータ (特にブロックで利用できないデータ) の場合は、ストリーミングした方がパフォーマンスが向上します。  
   
- ソース コードで #define USE_ISEQSTREAM のコメント化を解除した場合、このサンプルでは ISequentialStream が使用されます。 サンプルにストリームの実装を定義すると、MAX_BLOB を変更するだけであらゆるサイズの BLOB データを送信できます。 ストリーム データの場合、メモリ容量に合わせる必要も、1 ブロックにする必要もありません。 このプロバイダーを呼び出すには、IRowsetFastLoad::InsertRow を使用します。 IRowsetFastLoad::InsertRow を使用して、ストリームから読み出すことができるデータ量と一緒に、ポインターをデータ バッファー (rgBinding.obValue オフセット) のストリームの実装に渡します。 プロバイダーによっては、バインドするときにデータの長さを渡す必要がない場合があります。 その場合は、バインドから長さを省略できます。  
+ ソース コードで `#define USE_ISEQSTREAM` のコメント化を解除する場合、このサンプルでは ISequentialStream が使用されます。 サンプルにストリームの実装を定義すると、MAX_BLOB を変更するだけであらゆるサイズの BLOB データを送信できます。 ストリーム データの場合、メモリ容量に合わせる必要も、1 ブロックにする必要もありません。 このプロバイダーを呼び出すには、IRowsetFastLoad::InsertRow を使用します。 IRowsetFastLoad::InsertRow を使用して、ストリームから読み出すことができるデータ量と一緒に、ポインターをデータ バッファー (rgBinding.obValue オフセット) のストリームの実装に渡します。 プロバイダーによっては、バインドするときにデータの長さを渡す必要がない場合があります。 その場合は、バインドから長さを省略できます。  
   
- このサンプルでは、プロバイダーにデータを書き込む際に、プロバイダーのストリーム インターフェイスを使用しません。 代わりに、プロバイダーがデータを読み出すために使用するストリーム オブジェクトにポインターを渡します。 通常、Microsoft のプロバイダー (SQLOLEDB、SQLNCLI、MSOLEDBSQL) では、すべてのデータが処理されるまで、オブジェクトからデータを 1024 バイト単位で読み取ります。 SQLOLEDB、SQLNCLI、MSOLEDBSQL のいずれにも、コンシューマーからプロバイダーのストリーム オブジェクトへのデータの書き込みができる完全な実装はありません。 プロバイダーのストリーム オブジェクトを使用して送信できるのは、長さ 0 のデータだけです。  
+ このサンプルでは、プロバイダーにデータを書き込む際に、プロバイダーのストリーム インターフェイスを使用しません。 代わりに、プロバイダーがデータを読み出すために使用するストリーム オブジェクトにポインターを渡します。 通常、Microsoft のプロバイダー (SQLOLEDB、SQLNCLI、MSOLEDBSQL) では、データを 1024 バイト単位で読み取ります。 プロバイダーは、すべてのデータが処理されるまで、オブジェクトから読み取ります。 SQLOLEDB、SQLNCLI、MSOLEDBSQL のいずれにも、コンシューマーからプロバイダーのストリーム オブジェクトへのデータの書き込みができる完全な実装はありません。 プロバイダーのストリーム オブジェクトを使用して送信できるのは、長さ 0 のデータだけです。  
   
- コンシューマーに実装された ISequentialStream オブジェクトは、行セット データ (IRowsetChange::InsertRow、IRowsetChange::SetData) と共に使用できます。DBTYPE_IUNKNOWN としてパラメーターをバインドすることで、パラメーターとも共に使用できます。  
+ コンシューマーに実装された ISequentialStream オブジェクトは、行セット データ (IRowsetChange::InsertRow、IRowsetChange::SetData) と共に使用できます。 また、DBTYPE_IUNKNOWN としてパラメーターをバインドすることで、パラメーターとも共に使用することもできます。  
   
- DBTYPE_IUNKNOWN はバインドのデータ型として指定されているため、列または対象パラメーターの型と一致している必要があります。 データを行セット インターフェイスから ISequentialStream を使用して送信する場合は、変換できません。 パラメーターの場合は、ICommandWithParameters::SetParameterInfo を使用しないで、別の型を指定して強制的に変換させます。そのためには、BLOB データをすべてローカルにキャッシュするプロバイダーを使用して、SQL Server に送信する前にそのデータを変換する必要があります。 大きな BLOB をキャッシュし、ローカルに変換すると、パフォーマンスが低下します。  
-  
- 詳細については、「[BLOB と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)」を参照してください。  
+ DBTYPE_IUNKNOWN はバインドのデータ型として指定されているため、列または対象パラメーターの型と一致している必要があります。 データを行セット インターフェイスから ISequentialStream を使用して送信する場合は、変換できません <a href="#conversion_note"><sup>**1**</sup></a>。 パラメーターの場合は、ICommandWithParameters::SetParameterInfo を使用しないで、別の型を指定して強制的に変換させます。 これを行うには、プロバイダーは、BLOB データをすべてローカルにキャッシュして、SQL Server に送信する前にそのデータを変換する必要があります。 大きな BLOB をキャッシュし、ローカルに変換すると、パフォーマンスが低下します。  
+
+ 詳細については、「[BLOB と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)」を参照してください。
+
+ <b id="conversion_note">[1]:</b>変換はできませんが、サーバーで UTF-8 がサポートされていない場合でも、UTF-8 とデータベースの照合順序のコード ページの間での変換は発生する可能性があります。 詳細については、「[OLE DB Driver for SQL Server の UTF-8 のサポート](../features/utf-8-support-in-oledb-driver-for-sql-server.md)」を参照してください。
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
@@ -46,12 +48,12 @@ ms.locfileid: "68015543"
   
  3 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したテーブルを削除します。  
   
-```  
+```sql
 use master  
 create table fltest(col1 int, col2 int, col3 image)  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #include <windows.h>  
   
@@ -479,7 +481,7 @@ void wmain() {
 }  
 ```  
   
-```  
+```sql
 use master  
 drop table fltest  
 ```  

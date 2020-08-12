@@ -2,7 +2,7 @@
 title: JDBC ドライバーでの Always Encrypted の使用
 description: Java アプリケーション内で JDBC driver for SQL Server と共に Always Encrypted を使用し、サーバー上の機密データを暗号化する方法について説明します。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886355"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279619"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
 
@@ -44,11 +44,11 @@ Microsoft JDBC Driver for SQL Server は、**SQLServerColumnEncryptionKeyStorePr
 ### <a name="using-built-in-column-master-key-store-providers"></a>組み込み列マスター キー ストア プロバイダーを使用する
 Microsoft JDBC Driver for SQL Server には、次の組み込みの列マスター キー ストア プロバイダーが付属しています。 これらのプロバイダーの中には、特定のプロバイダー名 (プロバイダーの検索に使用) に事前に登録されているものもあれば、追加の資格情報または明示的な登録のいずれかを必要とするものもあります。
 
-| クラス                                                 | 説明                                        | プロバイダー (検索) 名  | 事前登録されているか |
-| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure Key Vault のキーストアのプロバイダー。 | AZURE_KEY_VAULT         | JDBC ドライバーの 7.4.1 より前のバージョンでは "_いいえ_" ですが、JDBC ドライバーのバージョン 7.4.1 以降は "_はい_" です。 |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 証明書ストアのプロバイダー。      | MSSQL_CERTIFICATE_STORE | _はい_                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java キーストアのプロバイダー。                  | MSSQL_JAVA_KEYSTORE     | _はい_                |
+| クラス                                                 | 説明                                        | プロバイダー (検索) 名  | 事前登録されているか | プラットフォーム |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- | :------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure Key Vault のキーストアのプロバイダー。 | AZURE_KEY_VAULT         | JDBC ドライバーの 7.4.1 より前のバージョンでは "_いいえ_" ですが、JDBC ドライバーのバージョン 7.4.1 以降は "_はい_" です。 | Windows、Linux、macOS |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 証明書ストアのプロバイダー。      | MSSQL_CERTIFICATE_STORE | _はい_                | Windows |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java キーストアのプロバイダー。                  | MSSQL_JAVA_KEYSTORE     | _はい_                | Windows、Linux、macOS |
 |||||
 
 事前登録されたキーストア プロバイダーに対しては、これらのプロバイダーを使用するためにアプリケーション コードを変更する必要はありませんが、次の項目に注意してください。
@@ -152,7 +152,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> この記事の他のキーストア プロバイダーは、ドライバーでサポートされているすべてのプラットフォームで利用できますが、JDBC ドライバーの SQLServerColumnEncryptionCertificateStoreProvider 実装は、Windows オペレーティング システムでのみ使用できます。 これにはドライバー パッケージで使用可能な mssql-jdbc_auth-\<バージョン>-\<arch>.dll への依存関係があります。 このプロバイダーを使用するには、JDBC ドライバーがインストールされているコンピューターの Windows システム パス上のディレクトリに mssql-jdbc_auth-\<バージョン>-\<arch>.dll ファイルをコピーします。 または、java.library.path システム プロパティを設定して mssql-jdbc_auth-\<バージョン>-\<arch>.dll のディレクトリを指定することもできます。 32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの mssql-jdbc_auth-\<バージョン>-x86.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの mssql-jdbc_auth-\<バージョン>-x64.dll ファイルを使用してください。 たとえば、32 ビットの JVM を使用していて、JDBC ドライバーが既定のディレクトリにインストールされている場合、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用することで、DLL の場所を指定できます。`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> この記事の他のキーストア プロバイダーは、ドライバーでサポートされているすべてのプラットフォームで利用できますが、JDBC ドライバーの SQLServerColumnEncryptionCertificateStoreProvider 実装は、Windows オペレーティング システムでのみ使用できます。 これにはドライバー パッケージで使用可能な mssql-jdbc_auth-\<version>-\<arch>.dll への依存関係があります。 このプロバイダーを使用するには、JDBC ドライバーがインストールされているコンピューターの Windows システム パス上のディレクトリに mssql-jdbc_auth-\<version>-\<arch>.dll ファイルをコピーします。 または、java.library.path システム プロパティを設定して、mssql-jdbc_auth-\<version>-\<arch>.dll のディレクトリを指定することもできます。 32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの mssql-jdbc_auth-\<version>-x86.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの mssql-jdbc_auth-\<version>-x64.dll ファイルを使用してください。 たとえば、32 ビットの JVM を使用していて、JDBC ドライバーが既定のディレクトリにインストールされている場合、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用することで、DLL の場所を指定できます。`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Java キーストア プロバイダーの使用
 JDBC ドライバーには、Java キー ストアの組み込みキー ストア プロバイダー実装が含まれています。 接続文字列に **keyStoreAuthentication** 接続文字列プロパティが存在し、それが "JavaKeyStorePassword" に設定されている場合、ドライバーによって Java キーストア用のプロバイダーが自動的にインスタンス化されて登録されます。 Java キー ストア プロバイダーの名前は MSSQL_JAVA_KEYSTORE です。 この名前は、SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API を使用して照会することもできます。 

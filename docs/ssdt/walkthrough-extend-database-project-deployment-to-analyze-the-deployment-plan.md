@@ -1,23 +1,23 @@
 ---
 title: 配置計画を分析するためにデータベース プロジェクトの配置を拡張する
+description: DeploymentPlanExecutor 配置コントリビューターを作成します。 データベース プロジェクトを配置するときに発生するイベントの記録を保持するコントリビューターを設定します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242683"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897473"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>チュートリアル: 配置計画を分析するためのデータベース プロジェクトの配置の拡張
+# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>チュートリアル:配置計画を分析するためにデータベース プロジェクトの配置を拡張する
 
 配置コントリビューターを作成して、SQL プロジェクトの配置時にカスタム アクションを実行できます。 DeploymentPlanModifier または DeploymentPlanExecutor を作成できます。 計画の実行前に計画を変更する場合は DeploymentPlanModifier を使用し、計画の実行中に操作を実行する場合は DeploymentPlanExecutor を使用します。 このチュートリアルでは、データベース プロジェクトの配置時に実行されるアクションに関するレポートを作成する、DeploymentUpdateReportContributor という名前の DeploymentPlanExecutor を作成します。 このビルド コントリビューターはレポートを生成するかどうかを制御するパラメーターを受け取るため、追加のステップを実行する必要があります。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "75242683"
   
 -   [配置コントリビューターのテスト](#TestDeploymentContributor)  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
 このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   C# または VB の開発をサポートする、SQL Server Data Tools (SSDT) を含む Visual Studio のバージョンがインストールされていること。  
@@ -64,7 +64,7 @@ ms.locfileid: "75242683"
   
 4.  [フレームワーク] タブで **System.ComponentModel.Composition** を選択します。  
   
-5.  必要な SQL 参照を追加します。この操作を行うには、プロジェクト ノードを右クリックし、 **[参照の追加]** をクリックします。 **[参照]** をクリックし、**C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** フォルダーに移動します。 **Microsoft.SqlServer.Dac.dll**、**Microsoft.SqlServer.Dac.Extensions.dll**、および **Microsoft.Data.Tools.Schema.Sql.dll** の各エントリを選択し、 **[追加]** 、 **[OK]** の順にクリックします。  
+5.  必要な SQL 参照を追加します。この操作を行うには、プロジェクト ノードを右クリックし、 **[参照の追加]** をクリックします。 **[参照]** をクリックし、**C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** フォルダーに移動します。 **Microsoft.SqlServer.Dac.dll**、**Microsoft.SqlServer.Dac.Extensions.dll**、および **Microsoft.Data.Tools.Schema.Sql.dll** の各エントリを選択し、**[追加]**、**[OK]** の順にクリックします。  
   
     次に、コードをクラスに追加します。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "75242683"
   
     この OnExecute メソッドに、[DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) オブジェクトが渡され、指定されたすべての引数、ソースとターゲットのデータベース モデル、ビルド プロパティ、および拡張ファイルにアクセスできるようになります。 この例では、モデルを取得し、そのモデルに関する情報を出力するヘルパー関数を呼び出します。 ここでは、発生したエラーを報告するために、基本クラスで PublishMessage ヘルパー メソッドを使用します。  
   
-    その他の重要な型とメソッドは、[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx)、および [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx) です。  
+    その他の重要な型およびメソッドは、[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx)、[SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx) です。  
   
     次に、配置計画の詳細を調査するヘルパー クラスを定義します。  
   
@@ -741,7 +741,7 @@ ms.locfileid: "75242683"
 出力 XML ファイルの処理を実行するには、追加のツールを作成できます。 これは、[DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) の一例にすぎません。 また、[DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) を作成し、実行前に配置プランを変更することもできます。  
   
 ## <a name="see-also"></a>参照  
-[チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[チュートリアル: 配置計画を変更するためのデータベース プロジェクトの配置の拡張](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[チュートリアル:配置計画を変更するためにデータベース プロジェクトの配置を拡張する](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

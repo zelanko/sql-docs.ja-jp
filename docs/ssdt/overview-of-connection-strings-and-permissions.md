@@ -1,25 +1,25 @@
 ---
 title: 接続文字列とアクセス許可
+description: SQL Server 単体テストを実行するために必要な接続文字列、アカウント、アクセス許可について説明します。 接続文字列を構成する方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 292901b39a4c4f6732290ba7425f26f0bc1e6c48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243758"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901103"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>接続文字列とアクセス許可の概要
 
-SQL Server 単体テストを実行するには、1 つまたは 2 つの特定の接続文字列を使用してデータベース サーバーに接続する必要があります。 各接続文字列は、テストの一部として特定のスクリプトでタスクまたはタスク セットを実行するために必要な特定のアクセス許可を保持するアカウントを表します。 これらの文字列は、 **[SQL Server テスト構成]** ダイアログ ボックスで指定するか、テスト プロジェクトの app.config ファイルを手動で編集することにより指定できます。  
+SQL Server 単体テストを実行するには、1 つまたは 2 つの特定の接続文字列を使用してデータベース サーバーに接続する必要があります。 各接続文字列は、テストの一部として特定のスクリプトでタスクまたはタスク セットを実行するために必要な特定のアクセス許可を保持するアカウントを表します。 これらの文字列は、**[SQL Server テスト構成]** ダイアログ ボックスで指定するか、テスト プロジェクトの app.config ファイルを手動で編集することにより指定できます。  
   
 ## <a name="connection-strings"></a>接続文字列  
 **[SQL Server テスト構成]** ダイアログ ボックスで、次の各アカウントの接続文字列を指定できます。  

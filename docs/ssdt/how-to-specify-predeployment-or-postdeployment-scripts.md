@@ -1,23 +1,23 @@
 ---
 title: 配置前または配置後スクリプトを指定する
+description: 配置前スクリプトと配置後スクリプトを使用してメインの配置スクリプトを実行する前後に Transact-SQL ステートメントを実行する方法について説明します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf8067047edf1c3b9b6a837ed12d49cb5d95df1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244274"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901125"
 ---
-# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>配置前スクリプトまたは配置後スクリプトを指定する方法
+# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>方法:配置前スクリプトまたは配置後スクリプトを指定する
 
 配置前スクリプトと配置後スクリプトでは、データベース プロジェクトから生成されるメインの配置スクリプトの前後に Transact\-SQL ステートメントが実行されます。 Visual Studio でスキーマ比較結果からターゲットを更新するとき、配置前スクリプトは実行されません。 1 つのプロジェクトに含めることができる配置前スクリプトと配置後スクリプトはそれぞれ 1 つだけです。 これらのスクリプトはさまざまな目的で使用できます。 次に例を示します。  
   

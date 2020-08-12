@@ -1,27 +1,27 @@
 ---
 title: SQL Server Data Tools (SSDT) リリース ノート
+description: Visual Studio 2017 およびそれ以前のバージョンの Visual studio で動作する SQL Server Data Tools (SSDT) のすべてのバージョンのリリース ノートを表示します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-author: markingmyname
-ms.author: maghan
-manager: jroth
-ms.reviewer: ''
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 79ee8bba588f7d429cf0a6fd279ec4b8d0271262
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 212cf0c286ec0f55a76d16c27a66fac6a6f1f5e4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742326"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003950"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) リリース ノート
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 これらのリリース ノートは、Visual Studio (VS) 用 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) に関するものです。
 
@@ -42,8 +42,45 @@ For questions, contact CraigG or SStein or GeneMi.
 
 GeneMi , 2019/03/22.
 
-P.S.  There is no need to keep this large HTML comment indefinitely.
+P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1595nbsp-ssdt-for-vs-2017"></a>15.9.5、VS 2017 用 &nbsp; SSDT
+
+_リリース済み:_ &nbsp; 2020 年 5 月 27 日  
+_ビルド番号:_ &nbsp; 14.0.16218.0  
+_Visual Studio 2017 用 SSDT。_
+
+### <a name="whats-new"></a>新機能
+
+| New Item | 詳細 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | SSIS ツールボックスに検索ボックスを追加して、タスクおよびパイプライン コンポーネントを検索するためのサポートを追加しました。 |
+| Integration Services (SSIS) | ターゲット サーバーのバージョンを切り替えるときの進行状況バーを追加しました。 |
+| Integration Services (SSIS) | Azure 対応プロジェクトのクラウド構成を追加し、Azure でパッケージを実行するための Windows 認証サポートを追加しました。 |
+| Integration Services (SSIS) | Azure 対応プロジェクトにおいて Azure で実行されるパッケージの評価を追加しました。 |
+| Integration Services (SSIS) | VS インスタンスをインストーラーに表示できない場合があるという問題を修正しました。 |
+| Integration Services (SSIS) | VS インスタンスがアンインストールされている場合に、この運用環境をアンインストールできないという問題を修正しました。 |
+| Integration Services (SSIS) | ターゲット サーバーのバージョンが SQL Server 2019 よりも低い場合に、同じパッケージ内の別のスクリプト コンポーネントからコピーされたスクリプト コンポーネントをデバッグ中に正しく読み込むことができない問題を修正しました。 |
+| Integration Services (SSIS) | パッケージ デザイナー ウィンドウの下にあるコンポーネント コネクタの線の輝度比率が 3:1 未満であるというアクセシビリティの問題を修正しました。 |
+| Integration Services (SSIS) | パッケージ デザイナー ウィンドウの下に表示される "ビューをウィンドウ サイズに合わせる" コントロールの輝度比率が 3:1 未満であるというアクセシビリティの問題を修正しました。 |
+| Integration Services (SSIS) | ファイルストリームを含むファイルグループがデータベースにある場合に、データベース転送タスクが機能しないという問題を修正しました。 |
+| Integration Services (SSIS) | Foreach ループ コンポーネントで ODBC コンポーネントを使用すると、パッケージの実行中に、2 回目のループで ODBC コンポーネントに "関数シーケンス エラー" が発生するという問題を修正しました。 |
+| Integration Services (SSIS) | インデックスの再構築タスクの UI が低解像度モードで表示されないという問題を修正しました。 |
+| Integration Services (SSIS) | 高 DPI モードで [サインイン] ボタンが表示されないという問題を修正しました。 |
+| Integration Services (SSIS) | 高 DPI モードで接続マネージャーの要素の表示が大きすぎるという問題を修正しました。 |
+| Integration Services (SSIS) | 高 DPI モードで実行結果が重ねて表示される問題を修正しました。 |
+
+### <a name="known-issues"></a>既知の問題
+
+| 既知の問題 | 詳細 |
+| :---------- | :------ |
+| ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 | この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。 |
+| SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースは OData v4 をサポートしない可能性があります。 | &nbsp; |
+| SSIS と SSAS が同じ Visual Studio インスタンスにインストールされている場合、Power Query ソースでは Oracle への接続に ODBC を使用できない可能性があります。 | &nbsp; |
+| Power Query ソースはローカライズされていません | &nbsp; |
+| SQL Server 2017 と、CU19 またはそれ以降の CU の修正プログラムが適用された SQL Server 2017 を並行してターゲットにする場合、Run64BitRuntime が true に設定されていると、ブレークポイントのあるスクリプト タスクまたはコンポーネントを含むパッケージのデバッグがハングします。 | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1594nbsp-ssdt-for-vs-2017"></a>15.9.4、VS 2017 用 &nbsp; SSDT
 
@@ -60,7 +97,7 @@ _Visual Studio 2017 用 SSDT。_
 | Integration Services (SSIS) | SSIS プロジェクトも読み込まれているソリューションに属する SSAS プロジェクトをデプロイするとき、Azure インタラクティブ ログイン ページが表示されない問題を修正しました。 |
 | Integration Services (SSIS) | SQL Server がインストールされていないとき、MSOLAP ドライバー プロパティ ボタンをクリックすると DTS ウィザードがクラッシュする問題を修正しました。 |
 | Integration Services (SSIS) | MSOLEDBSQL ドライバーでは、DTS ウィザードで AAD 認証がサポートされない問題を修正しました。 |
-| Integration Services (SSIS) | SQL Server 2012 を対象にしているとき、XML 変換元と ADO.NET 変換先を正しく固定できない問題を修正しました。 |
+| Integration Services (SSIS) | SQL Server 2012 を対象にしているとき、XML 変換元と ADO.NET 変換先を正しく永続化できないという問題を修正しました。 |
 | Integration Services (SSIS) | Web サービス タスク エディターの "WSDL ダウンロード" ボタンが正しく表示されない問題を修正しました。 |
 | Integration Services (SSIS) | 参照変換エディターの [接続マネージャー] ページでテーブルを選択できないことがある問題を修正しました。 |
 | Integration Services (SSIS) | キャッシュ変換エディターのレイアウトが壊れることがある問題を修正しました。 |
@@ -181,7 +218,7 @@ _Visual Studio 2017 用 SSDT。_
 | Integration Services (SSIS) | ADF 2017 の SSIS 用の Power Query ソース (プレビュー) を追加します。 |
 | Integration Services (SSIS) | SQL Server 2012 のサポートが再び追加されます。 |
 | Integration Services (SSIS) | SQL Server 2019 用の Oracle ソース/ターゲットを追加します。 |
-| Integration Services (SSIS) | SQL Server 2019 をターゲットとする Oracle ソースとターゲットは、SSDT によって既にインストールされています。 <br/></br> 2017 以前のバージョンのサーバーをターゲットとするパッケージを設計するには、Microsoft ダウンロード サイトから該当する Oracle コネクターのバージョンをダウンロードして SSDT マシン上にインストールします。 <br/></br> [Attunity による SQL Server 2017 をターゲットとする Microsoft Connector Version 5.0 for Oracle ](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [Attunity による SQL Server 2016 をターゲットとする Microsoft Connector Version 4.0 for Oracle ](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [Attunity による SQL Server 2014 をターゲットとする Microsoft Connector Version 3.0 for Oracle ](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [Attunity による SQL Server 2012 をターゲットとする Microsoft Connector Version 2.0 for Oracle ](https://www.microsoft.com/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | SQL Server 2019 をターゲットとする Oracle ソースとターゲットは、SSDT によって既にインストールされています。 <br/></br> 2017 以前のバージョンのサーバーをターゲットとするパッケージを設計するには、Microsoft ダウンロード サイトから該当する Oracle コネクタのバージョンをダウンロードして SSDT マシン上にインストールします。 <br/></br> [Attunity による SQL Server 2017 をターゲットとする Microsoft Connector Version 5.0 for Oracle ](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [Attunity による SQL Server 2016 をターゲットとする Microsoft Connector Version 4.0 for Oracle ](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [Attunity による SQL Server 2014 をターゲットとする Microsoft Connector Version 3.0 for Oracle ](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [Attunity による SQL Server 2012 をターゲットとする Microsoft Connector Version 2.0 for Oracle ](https://www.microsoft.com/download/details.aspx?id=29283 ) |
 | Integration Services (SSIS) | 以前のバージョンの SSIS から移行する際に、スクリプト タスク/コンポーネントを読み込みできないという問題を修正します。 |
 | Integration Services (SSIS) | Windows 7 SP1 および Windows 8.1 でデータ ビューアーが機能しないという問題を修正します。 |
 | Integration Services (SSIS) | パッケージの保存時に Visual Studio がクラッシュすることがあるという問題を修正します。 |
@@ -232,7 +269,6 @@ _Visual Studio 2017 用 SSDT。_
 
 - ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
 - スクリプト タスク/フラット ファイルの変換先が含まれるパッケージを含む SSIS プロジェクトを Azure-SSIS に展開すると、Azure-SSIS でのパッケージの実行が失敗します。
-
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8、&nbsp;VS 2017 用 SSDT
 
@@ -295,7 +331,6 @@ _Visual Studio 2017 用 SSDT。_
 - コンボボックスを編集しようとすると *[参照の解決]* ダイアログが消える問題を解決。  
 - *[Hadoop 接続マネージャー]* の F1 ヘルプ リンクが機能しない問題を解決。  
 - SQL Server 2016 が対象のとき、コンテナーに含まれていない場合、スクリプト タスク コードが失われる問題を解決。  
-
 
 **インストーラー:**
 
@@ -366,8 +401,8 @@ _Visual Studio 2017 用 SSDT。_
 
 Visual Studio 2017 (15.5.1) はバージョン 15.5.0 と同じリリースですが、インストーラーの次のバグが修正されています。
 
-1.  SQL Server Integration Services のインストールの後処理でインストーラーが応答を停止する問題を修正しました。
-2.  次のエラー メッセージで設定が失敗する問題を修正します。「要求されたメタファイル操作はサポートされていません (0x800707D3)」
+1. SQL Server Integration Services のインストールの後処理でインストーラーが応答を停止する問題を修正しました。
+2. 次のエラー メッセージで設定が失敗する問題を修正します。「要求されたメタファイル操作はサポートされていません (0x800707D3)」
 
 以上の 2 つのバグ修正に加え、15.5.0 の次の詳細が 15.5.1 にも当てはまります。
 
@@ -413,7 +448,6 @@ _Visual Studio 2015 用 SSDT。_
 
 **Integration Services (IS)**
 - ADF で Azure SSIS IR にデプロイするときのデプロイ ウィザードにパッケージ検証手順が追加されました。Azure SSIS IR で実行する SSIS パッケージの互換性問題を検出します。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](../integration-services/lift-shift/ssis-azure-validate-packages.md)」を参照してください。
-
 
 ### <a name="bug-fixes"></a>バグの修正
 
@@ -463,7 +497,6 @@ _Visual Studio 2017 用 SSDT。_
 - お客様のフィードバックに基づいて、インストーラーの一部のメッセージが修正されます。
 - インストーラーがアップグレードに対応していない問題が修正されます。
 
-
 ### <a name="ssis"></a>SSIS
 
 - Azure 機能パックがインストールされているときに Import/Export ウィザードがデータ ソースを一覧表示できない問題が修正されます。
@@ -473,12 +506,10 @@ _Visual Studio 2017 用 SSDT。_
 - DTSWizard.exe をダブルクリックして [フラット ファイル ソース] を選んだときに、フラット ファイル ソース構成ダイアログ ボックスが正しく表示されない問題が修正されます。
 - SQL Server 2017 を対象にした場合に Azure Feature Pack のタスク/コンポーネントを含むパッケージが実行できない問題が修正されます。
 
-
 **既知の問題**
 
 - インストーラーはローカライズされていません。
 - *ExecuteOutOfProcess* が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。
-
 
 ## <a name="1730nbsp-ssdt-for-vs-2015"></a>17.30、&nbsp;VS 2015 用 SSDT
 
@@ -509,12 +540,12 @@ _Visual Studio 2015 用 SSDT。_
 - 新しいレポート プロジェクト形式は、ソース管理バインディングを保持せず、次のメッセージのようなエラーが発生します。
 
    *プロジェクト ファイル C:\path はソース管理にバインドされていませんが、ソリューションはソース管理のバインド情報を含んでいます。*
- 
+
    この問題を回避するには、ソリューションを開くたびに **[ソリューション バインドを使用する]** をクリックします。
 
 - プロジェクトを新しい MSBuild 形式にアップグレードした後に、次のようなメッセージで保存が失敗することがあります。
 
-   *"パラメーター '{0}' を NULL にすることはできません。"*
+   *"パラメーター "unevaluatedValue" を NULL にすることはできません。"*
 
    この問題を回避するには、 *[プロジェクト構成]* を更新し、 *[プラットフォーム]* プロパティを設定してください。
 
@@ -582,7 +613,6 @@ _Visual Studio 2017 用 SSDT。_
 
 このプレビューは、SSDT for Visual Studio 2017 の最初のバージョンです。 このリリースでは、Visual Studio 2017 (15.3 以降) での SQL Server データベース、Analysis Services、Reporting Services、および Integration Services のプロジェクトに対してスタンドアロン Web インストール エクスペリエンスを導入します。
 
-
 **既知の問題**
 
 - インストーラーはローカライズされていません。
@@ -598,12 +628,10 @@ _Visual Studio 2015 用 SSDT。_
 
 ### <a name="whats-new"></a>新機能
 
-
 **AS プロジェクト:**
 - 1400 互換性レベル表形式モデルでの高度なセキュリティの *[ロール]* ダイアログでオブジェクト レベルのセキュリティを構成できるようになりました。
 - VS2017 の SSDT AS プロジェクトの AS Azure モデルにメール アドレスがないユーザーに対する新しい AAD ロール メンバー選択。
 - ADAL 資格情報のキャッシュ動作をカスタマイズするための SSDT AS テーブル プロジェクトでの新しい AS Azure の "Always Prompt" プロジェクト プロパティ。
-
 
 ### <a name="bug-fixes"></a>バグの修正
 
@@ -787,7 +815,6 @@ _SQL Server 2016 までのサポート。_
 
 **新機能**
 
-
 ### <a name="connection-improvements"></a>接続の強化
 
 * **[参照]** タブの新しい検索ボックスを使用すると、ローカル サーバー、ネットワーク サーバー、および Azure SQL データベースをフィルター処理できます。 これは、多数のサーバーまたはデータベースがリストに表示される場合に便利です。
@@ -849,7 +876,7 @@ SSAS 表形式デザイナーの DAX パーサーにおいて、大きな DAX �
 
 **データベース ツール**
 
-* [接続のバグ 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) - 明示的なスキーマを使用する CROSS APPLY OPENJSON から列を選択できません
+* [接続のバグ 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-can't-be-selected-from-cross-apply-openjson-with-explicit-schema) - 明示的なスキーマを使用する CROSS APPLY OPENJSON から列を選択できません
 * 修正 - 自動生成された履歴テーブルのインデックスに関する問題。再配置の際に DacFx がインデックスを削除します
 * 修正 - DacFx のバッチ パーサーがエスケープした角かっこ "]" を解析しない問題。これにより、発行が失敗していました
 * 強化 - SqlPackage のヘルプ出力に各アクションの説明が含まれるようになりました
@@ -924,7 +951,6 @@ _SQL Server 2016 の場合。_
     - 列マスター キーまたは列暗号化キーを作成する際、[データベースの更新] のクリック直後に SQL Server オブジェクト エクスプローラーに変更が反映されない可能性があります。 回避するには、SQL Server オブジェクト エクスプローラーでデータベース ノードを更新します。
     - SQL Server オブジェクト エクスプローラーからデータを含むテーブル内の列を暗号化しようとすると、エラーが発生する可能性があります。 現在、この機能は SSDT データベース プロジェクトと SSMS でのみサポートされています。 SQL Server オブジェクト エクスプローラーのサポートは今後のリリースで有効になる予定です。
 
-
 **更新と修正点**
 * **データベース ツール:**
     - **SSDT:**
@@ -959,7 +985,6 @@ _SQL Server 2016 の場合。_
 - **テンポラル テーブルのサポートの強化:** テンポラル テーブルのリンクを変更前に解除し、これらが完了したら再リンクするようにして、処理を簡略化しました。 つまり、サポートされる操作に関して、テンポラル テーブルが他の種類のテーブル (標準、メモリ内) と同等になります。 
 - **SqlPackage.exe とインストールの変更:** SSDT を SQL Server エンジンと SSMS の更新から切り離すための変更を行いました。 詳しくは、「[Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)」(SSDT と SqlPackage.exe のインストールおよび更新の変更) をご覧ください。
 
- 
 
 **更新と修正点**
 * **データベース ツール:**
@@ -971,8 +996,7 @@ _SQL Server 2016 の場合。_
     * データ フェーズの完了後の model.xml ファイルへの書き込みによってファイルの内容の書き換えが発生するため、大量のデータを使用したエクスポートに時間がかかる問題を修正しました。
     * Azure SQL DW および APS 接続用のセキュリティ フォルダーにユーザーが表示されない問題を修正しました。
 
-
- * **Analysis Services と Reporting Services:**
+* **Analysis Services と Reporting Services:**
     * MSOLAP OLEDB プロバイダーに関する SxS の問題を修正しました。この場合、32 ビット プロバイダーだけがインストールされて、SQL Server 2014 に接続する 64 ビットの Excel 2016 に影響を及ぼします (Office365 からの ClickOnce のインストールでは再現せず、MSI Excel のインストールでのみ発生します)。
     * 貼り付けられたテーブルを含む AS モデルを 1103 から 1200 互換性レベルにアップグレードすると、"リレーションシップで無効な列 ID が使用されています" というエラーが発生し、コーナー ケースがより強固になる問題を修正しました。
     * SSDT-BI 2013 が同じコンピューター上にある場合の SxS の問題を修正しました。この場合、SSDT 2015 のアンインストール後に AS モデル内のデータをインポートできません (カートリッジ共有のレジストリ設定)。
@@ -989,8 +1013,7 @@ _SQL Server 2016 の場合。_
     * コード ビューで model.bim プロジェクト ファイルのプロパティを表示する際に発生するオブジェクト参照が設定されていないという例外を修正しました。 
     * 貼り付けされたテーブルを作成するために AS モデルのグリッドにデータを貼り付けると、コンマを小数点として使用する国際ロケールで正しくない値が生成される問題を修正しました。 
     * SSDT で 2008 RS プロジェクトを開き、そのプロジェクトをアップグレードしないよう選択する際の問題を修正しました。 
-    * 1200 互換性レベル モデルの計算テーブルの UI において、列の種類の既定の書式設定を使用して UI から書式設定の種類の変更を許可する際の問題を修正しました。 
-    
+    * 1200 互換性レベル モデルの計算テーブルの UI において、列の種類の既定の書式設定を使用して UI から書式設定の種類の変更を許可する際の問題を修正しました。
 
 ## <a name="june-2016nbsp-ssdt-for-vs-2015"></a>2016 年 6 月、&nbsp;VS 2015 用 SSDT
 
@@ -1001,10 +1024,9 @@ _SQL Server 2016 の場合。_
 SSDT の一般提供 (GA) がリリースされました。 2016 年 6 月の SSDT GA の更新では、SQL Server 2016 RTM の最新の更新プログラムのサポートとさまざまなバグ修正が追加されました。 詳しくは、「[SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)」(2016 年 6 月の SQL Server Data Tools の GA 更新) をご覧ください。
 
 ## <a name="additional-resources"></a>その他のリソース
-  
-[SQL Server Data Tools &#40;SSDT&#41; のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)  
-[以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
-[データベース エンジンの新機能](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Analysis Services の新機能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
-[Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
-  
+
+- [SQL Server Data Tools &#40;SSDT&#41; のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)
+- [データベース エンジンの新機能](https://msdn.microsoft.com/library/bb510411.aspx)
+- [Analysis Services の新機能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)
+- [Integration Services の新機能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)

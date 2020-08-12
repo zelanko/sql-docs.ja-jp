@@ -2,21 +2,21 @@
 title: Python および R コンポーネントのアップグレード
 description: SQL Server Machine Learning Services または SQL Server R Services で、sqlbindr.exe を使用した Machine Learning Server へのバインドにより、Python および R をアップグレードします。
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4aebb9e64c73762166aa81aebd1bfbab22191bfc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900072"
 ---
 # <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>SQL Server のインスタンス内の機械学習 (Python および R) コンポーネントをアップグレードする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 SQL Server での Python および R の統合には、オープンソースのパッケージと Microsoft 独自のパッケージが含まれます。
                                                                                
@@ -263,9 +263,9 @@ SQL Server セットアップを実行して、Python および R の機能を�
 
 |名前|説明|
 |------|------|
-|*list*| 現在のコンピューター上にあるすべての SQL データベース インスタンスの ID を一覧表示します|
-|*bind*| 指定した SQL データベース インスタンスを R Server の最新バージョンにアップグレードし、インスタンスが R Server の今後のアップグレードを自動的に取得するようにします|
-|*unbind*|指定した SQL データベース インスタンスから R Server の最新バージョンをアンインストールし、R Server の今後のアップグレードがインスタンスに影響を与えないようにします|
+|*list*| 現在のコンピューター上にあるすべての SQL Server インスタンスの ID を一覧表示します|
+|*bind*| 指定した SQL Server インスタンスを R Server の最新バージョンにアップグレードし、インスタンスが R Server の今後のアップグレードを自動的に取得するようにします|
+|*unbind*|指定した SQL Server インスタンスから R Server の最新バージョンをアンインストールし、R Server の今後のアップグレードがインスタンスに影響を与えないようにします|
 
 <a name="sqlbindr-error-codes"><a/>
 

@@ -1,5 +1,6 @@
 ---
-title: 接続文字列のセキュリティ保護 | Microsoft Docs
+title: 接続文字列のセキュリティ保護
+description: JDBC Driver for SQL Server を使用する場合に接続文字列情報をセキュリティで保護する方法について説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8f783db5fef7c0da10fb0ec856f3766388be49f5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b8fc42c778e0a8971ea36b8c0588765e82ee8fd2
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928430"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391147"
 ---
 # <a name="securing-connection-strings"></a>接続文字列のセキュリティ保護
 
@@ -29,6 +30,6 @@ ms.locfileid: "80928430"
 
 外部ソースからの接続文字列情報 (ユーザーが入力するユーザー ID やパスワードなど) を受け取る場合は、ソースからの入力をすべて検証して、正しい書式に従っていること、接続に影響を及ぼすパラメータが追加されていないことを確認する必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)

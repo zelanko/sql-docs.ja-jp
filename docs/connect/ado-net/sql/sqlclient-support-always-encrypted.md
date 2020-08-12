@@ -1,7 +1,7 @@
 ---
 title: SqlClient で Always Encrypted を使用する
 description: データの安全性を維持するために、Microsoft.Data.SqlClient と Always Encrypted を使用してアプリケーションを開発する方法について説明します。
-ms.date: 05/06/2020
+ms.date: 07/09/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b4634d1d9bed66aed6d7871d1e2c14813e5ec34
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1bdb50bccf859bdd640e1da1650dc160d1d79c1e
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886469"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217770"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Always Encrypted と Microsoft .NET Data Provider for SQL Server を使用する
 
@@ -74,6 +74,9 @@ Microsoft.Data.SqlClient バージョン 1.1.0 以降のドライバーでは、
 3. 接続文字列で `Attestation Protocol` キーワードを設定して、使用する構成証明プロトコルを指定します。 このキーワードの値は、"HGS" に設定する必要があります。
 
 詳しいチュートリアルについては、「[チュートリアル: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET アプリケーションを開発する](tutorial-always-encrypted-enclaves-develop-net-apps.md)」を参照してください。
+
+> [!NOTE]
+> セキュア エンクレーブを使用する Always Encrypted は、Windows でのみサポートされています。
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>暗号化された列のデータを取得および変更する
 
@@ -288,13 +291,13 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 ### <a name="using-built-in-column-master-key-store-providers"></a>組み込み列マスター キー ストア プロバイダーを使用する
 
-**Microsoft .NET Data Provider for SQL Server** には、次の組み込み列マスター キー ストア プロバイダーが付属しており、これらは特定のプロバイダー名 (プロバイダーの検索に使用) で事前に登録されています。
+**Microsoft .NET Data Provider for SQL Server** には、次の組み込み列マスター キー ストア プロバイダーが付属しており、これらは特定のプロバイダー名 (プロバイダーの検索に使用) で事前に登録されています。 これらの組み込みキー ストア プロバイダーは、Windows でのみサポートされています。
 
-| クラス | 説明 | プロバイダー (検索) 名 |
-|:---|:---|:---|
-|[SqlColumnEncryptionCertificateStoreProvider クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Windows 証明書ストアのプロバイダー。 | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | [Microsoft Cryptography API:Next Generation (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal) をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。 | MSSQL_CNG_STORE |
-| [SqlColumnEncryptionCspProvider クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | [Microsoft Cryptography API (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers)をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。 | MSSQL_CSP_PROVIDER |
+| クラス | 説明 | プロバイダー (検索) 名 | プラットフォーム |
+|:---|:---|:---|:---|
+|[SqlColumnEncryptionCertificateStoreProvider クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Windows 証明書ストアのプロバイダー。 | MSSQL_CERTIFICATE_STORE | Windows |
+|[SqlColumnEncryptionCngProvider クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | [Microsoft Cryptography API:Next Generation (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal) をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。 | MSSQL_CNG_STORE | Windows |
+| [SqlColumnEncryptionCspProvider クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | [Microsoft Cryptography API (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers)をサポートするキー ストアのプロバイダー。 通常、このタイプのストアは、デジタル キーを保護および管理し、暗号化処理を提供する物理デバイスである、ハードウェア セキュリティ モジュールです。 | MSSQL_CSP_PROVIDER | Windows |
 
 これらのプロバイダーを使用するために、アプリケーション コードを変更する必要はありませんが、次のことに注意してください。
 
@@ -303,7 +306,11 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault プロバイダーを使用する
 
-Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 **Microsoft .NET Data Provider for SQL Server** には、Azure Key Vault 用の組み込み列マスター キー ストア プロバイダーは含まれませんが、アプリケーションと容易に統合できる NuGet パッケージとしてこれを利用できます。 詳細については、「 [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault (Always Encrypted - データ暗号化によって SQL データベースの機密データを保護し、Azure Key Vault に暗号化キーを格納する)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)」を参照してください。
+Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 **Microsoft .NET Data Provider for SQL Server** には、Azure Key Vault 用の組み込み列マスター キー ストア プロバイダーは含まれませんが、アプリケーションと容易に統合できる NuGet パッケージ ([Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider)) としてこれを利用できます。 詳細については、「 [Always Encrypted - Protect sensitive data in SQL Database with data encryption and store your encryption keys in the Azure Key Vault (Always Encrypted - データ暗号化によって SQL データベースの機密データを保護し、Azure Key Vault に暗号化キーを格納する)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)」を参照してください。
+
+| クラス | 説明 | プロバイダー (検索) 名 | プラットフォーム |
+|:---|:---|:---|:---|
+|[SqlColumnEncryptionAzureKeyVaultProvider クラス](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Azure Key Vault 用のプロバイダー。 | AZURE_KEY_VAULT | Windows、Linux、macOS |
 
 Azure Key Vault で暗号化と暗号化解除を実行する例については、[Azure Key Vault と Always Encrypted の連携](azure-key-vault-example.md)に関するページおよび [Azure Key Vault と、セキュリティで保護されたエンクレーブが設定された Always Encrypted の連携](azure-key-vault-enclave-example.md)に関するページを参照してください。
 
@@ -508,7 +515,8 @@ SqlBulkCopy を使用して、データの暗号化解除を行うことなく�
 - Always Encrypted を有効にせずに、ソース テーブルとターゲット テーブルへの両方のデータベース接続を構成します。
 - `AllowEncryptedValueModifications` オプションを設定します ([SqlBulkCopyOptions](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions) に関するページを参照してください)。
 
-注:データベースが破損する可能性があるので、`AllowEncryptedValueModifications` を指定する際には注意が必要です。**Microsoft .NET Data Provider for SQL Server** は、データが実際に暗号化されているかどうか、またはターゲット列と同じ暗号化の種類、アルゴリズム、およびキーを使用して正しく暗号化されているかどうかをチェックしないためです。
+> [!NOTE]
+> データベースが破損する可能性があるので、`AllowEncryptedValueModifications` を指定する際には注意が必要です。**Microsoft .NET Data Provider for SQL Server** は、データが実際に暗号化されているかどうか、またはターゲット列と同じ暗号化の種類、アルゴリズム、およびキーを使用して正しく暗号化されているかどうかをチェックしないためです。
 
 次の例は、テーブル間でデータをコピーする方法を示しています。 SSN 列と BirthDate 列は暗号化されていると仮定します。
 

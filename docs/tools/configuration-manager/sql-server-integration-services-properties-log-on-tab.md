@@ -1,5 +1,6 @@
 ---
 title: '[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)'
+description: SQL Server の [SQL Server Integration Services のプロパティ] ダイアログ ボックスの [ログオン] タブについて説明します。 アカウントを指定して、サービスを開始または停止する方法を確認します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59fd7444eecfd0beb6310ecfec3380eaf1b8b3f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2d601e389f75661becbc5756fd5fdd6525b0a623
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306856"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896198"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  [ **の**プロパティ[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]] ダイアログ ボックスの **[ログオン]** タブでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスで使用するアカウントの指定や、そのサービスの開始、停止を行います。  
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+  **のプロパティ]** ダイアログ ボックスの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **[ログオン]** タブでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[ローカル システム アカウント]**  
  ローカル システム アカウントを指定します。このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスと他のサーバーとの対話が制限されることもあります。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "75306856"
  **[パスワードの確認入力]**  
  アカウントのパスワードを再度入力します。  
   
- **[開始]**  
+ **Start**  
  サービスを開始します。  
   
  **Stop**  

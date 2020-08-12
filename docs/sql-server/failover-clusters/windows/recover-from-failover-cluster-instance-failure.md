@@ -1,6 +1,6 @@
 ---
 title: フェールオーバー クラスター インスタンス障害からの復旧
-description: SQL Server フェールオーバー クラスター インスタンスのフェールオーバーから復旧する方法について説明します。
+description: SQL Server でフェールオーバーが発生した後にフェールオーバー クラスター マネージャー スナップインを使用して、フェールオーバー クラスター インスタンスのフェールオーバーから復旧する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44f178d5433a1d3de1670b762b6e1d7e60bad033
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821993"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901200"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>フェールオーバー クラスター インスタンス障害からの復旧
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]でフェールオーバーが発生した後にフェールオーバー クラスター マネージャー スナップインを使用してクラスター障害から復旧する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
 -   [修復不可能な障害からの復旧](#Scenario1)  

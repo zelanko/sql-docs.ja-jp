@@ -1,6 +1,6 @@
 ---
 title: SSMS のトラブルシューティングを行うために完全メモリ ダンプを取得する
-Description: 完全メモリ ダンプを収集することで、SSMS のハングやクラッシュの問題を解決する
+Description: 完全メモリ ダンプを収集して SSMS の応答停止やクラッシュの問題のトラブルシューティングを行う
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,18 +11,18 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247171"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091260"
 ---
 # <a name="get-full-memory-dump"></a>完全メモリ ダンプの取得
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-この記事では、SQL Server Management Studio (SSMS) で発生するクラッシュやハングを解決する目的で診断情報を取得する方法について紹介します。
+この記事では、SQL Server Management Studio (SSMS) で発生するクラッシュやシステムの応答停止を解決する目的で診断情報を取得する方法について紹介します。
 
 問題解決のために診断情報を取得するには、以下の手順を行います。
 

@@ -1,24 +1,24 @@
 ---
 title: SQL Server Data Tools (SSDT) のダウンロード
+description: SQL Server Data Tools (SSDT) について説明します。 Visual Studio 2019 と Visual Studio 2017 を使用してこのデータベース開発ツール セットをインストールする方法を確認します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
 ms.topic: conceptual
 keywords: ssdt のインストール, ssdt のダウンロード, 最新の ssdt
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-author: markingmyname
-ms.author: maghan
-manager: jroth
-ms.reviewer: ''
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: ca30249097fa9ad4eec386ca0fc0698976e5362a
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809588"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279002"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>SQL Server Data Tools (SSDT) for Visual Studio のダウンロード
 
@@ -39,19 +39,19 @@ Visual Studio 2019 では、Analysis Services、Integration Services、Reporting
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Visual Studio 2019 で SSDT をインストールする
 
-[Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) が既にインストールされている場合、ワークロードの一覧を編集して SSDT を含めることができます。
+[Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) が既にインストールされている場合、ワークロードの一覧を編集して SSDT を含めることができます。 Visual Studio 2019 をインストールしていない場合は、[Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/) をダウンロードしてインストールできます。
 
-* SQL Database プロジェクトの場合、 **[データの保存と処理]** の下にある **[SQL Server Data Tools]** を選択します。
+* SQL データベース プロジェクトの場合、ワークロードの一覧で **[データの保存と処理]** の下にある **[SQL Server Data Tools]** を選択します。
 
    ![[データの保存と処理] ワークロード](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
 * Analysis Services、Integration Services、または Reporting Services プロジェクトの場合は、 *[ツール] > [拡張機能と更新プログラム]* または [[Marketplace]](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) から適切な[拡張機能](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)をインストールできます。
 
-Visual Studio 2019 をインストールしていない場合は、[Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/) をダウンロードしてインストールできます。 
+* [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
 
-* SQL Database プロジェクトの場合、インストール中に、ワークロードの一覧で **[データの保存と処理]** の下にある **[SQL Server Data Tools]** を選択します。
+* [統合サービス](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
 
-* Analysis Services、Integration Services、または Reporting Services プロジェクトの場合は、 *[ツール] > [拡張機能と更新プログラム]* または [[Marketplace]](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) から適切な[拡張機能](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)をインストールできます。
+* [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 ## <a name="ssdt-for-visual-studio-2017"></a>SSDT for Visual Studio 2017
 
@@ -79,10 +79,10 @@ Analysis Services、Integration Services、Reporting Services プロジェクト
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (スタンドアロン インストーラー)
 
-[![ダウンロード](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.9.4) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2124518 )
+:::image type="icon" source="media/download.png" border="false"::: **[SSDT for Visual Studio 2017 (15.9.5) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2131035)**
 
 > [!IMPORTANT]
-> * SSDT for Visual Studio 2017 (15.9.4) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
+> * SSDT for Visual Studio 2017 (15.9.5) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。 
 > * SQL Server 2017 用の受信トレイ コンポーネント Power Query ソースが削除されました。 すぐに使用できるコンポーネントとして SQL Server 2017 および 2019 用の Power Query ソースを発表しました。これは[こちら](https://www.microsoft.com/download/details.aspx?id=100619)からダウンロードできます。
 > * Oracle および Teradata コネクタを使用し、SQL 2019 より前の以前のバージョンの SQL Server をターゲットとするパッケージを設計するには、[SQL 2019 用の Microsoft Oracle Connector](https://www.microsoft.com/download/details.aspx?id=58228) および [SQL 2019 用の Microsoft Teradata Connector](https://www.microsoft.com/download/details.aspx?id=100599) に加えて、対応するバージョンの Microsoft Connector for Oracle and Teradata by Attunity もインストールする必要があります。
 >    * [SQL Server 2017 をターゲットとする Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -102,17 +102,17 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 
 **SSDT for VS 2017** の今回のリリースは、次の言語でインストールできます。
 
-* [簡体中国語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x804)
-* [繁体中国語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x404)
-* [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x409)
-* [フランス語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40c)
-* [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x407)
-* [イタリア語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x410)
-* [日本語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x411)
-* [韓国語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x412)
-* [ポルトガル語 (ブラジル)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x416)
-* [ロシア語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x419)
-* [スペイン語]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40a)
+* [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
+* [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
+* [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
+* [フランス語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
+* [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
+* [イタリア語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
+* [日本語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
+* [韓国語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
+* [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
+* [ロシア語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
+* [スペイン語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>考慮事項と制限事項
 
@@ -139,7 +139,7 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 1. `vs_setup.exe --NoWeb` を実行して、VS2017 Shell と SQL Server Data Project をインストールします。
 
 2. レイアウト フォルダーから `SSDT-Setup-ENU.exe /install` を実行し、SSIS/SSRS/SSAS を選択します。
-   * 無人インストールを実行する場合は、`SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive` を実行します。
+   a. 無人インストールを実行する場合は、`SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive` を実行します。
 
 利用可能なオプションについては、`SSDT-Setup-ENU.exe /help` を実行します。
 
@@ -162,6 +162,16 @@ SSDT for Visual Studio 2015 と SSDT for Visual Studio 2017 は、両方とも D
 
 Visual Studio 2015 の SSDT、または古いバージョンの SSDT をダウンロードしてインストールするには、「[SQL Server Data Tools (SSDT と SSDT-BI) の以前のリリース](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)」を参照してください。
 
+## <a name="see-also"></a>参照
+
+* [SSDT MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
+
+* [SSDT チーム ブログ](https://blogs.msdn.com/b/ssdt/)
+
+* [DACFx API リファレンス](https://msdn.microsoft.com/library/dn645454.aspx)
+
+* [SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)
+
 ## <a name="next-steps"></a>次のステップ
 
 SSDT をインストールした後、次のチュートリアルを参照して、SSDT を使ったデータベース、パッケージ、データ モデル、レポートの作成方法を学ぶことができます。
@@ -175,13 +185,3 @@ SSDT をインストールした後、次のチュートリアルを参照して
 * [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-## <a name="see-also"></a>参照
-
-* [SSDT MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
-
-* [SSDT チーム ブログ](https://blogs.msdn.com/b/ssdt/)
-
-* [DACFx API リファレンス](https://msdn.microsoft.com/library/dn645454.aspx)
-
-* [SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)

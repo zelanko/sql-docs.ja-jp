@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153224"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091806"
 ---
 # <a name="list-of-bugs-fixed"></a>修正されたバグの一覧
 
@@ -51,8 +51,8 @@ ms.locfileid: "82153224"
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-174-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバグ修正
 
-- 複数のアクティブな結果セット (MARS) が有効な場合に断続的にハングする問題を修正しました
-- 非同期通知が有効な場合に接続の復元性がハングする問題を修正しました
+- ドライバーが応答を停止し、複数のアクティブな結果セット (MARS) が有効となっている場合の断続的な問題を修正しました
+- ドライバーが応答を停止し、非同期通知が有効となっている場合の接続の回復性の問題を修正しました
 - マルチスレッド接続試行の診断レコードを取得するときのクラッシュを修正しました
 - SQL_USER_NAME および SQL_DATA_SOURCE_READ_ONLY を使用して SQLGetInfo() を呼び出した後、再接続時に発生する 'サポートされない暗号化' を修正しました
 - Azure Active Directory 対話型認証の実行中の COM 初期化エラーを修正しました
@@ -94,7 +94,7 @@ ms.locfileid: "82153224"
 
 - Kerberos 認証を使用すると、一括挿入が "アクセスが拒否されました" エラーで失敗するバグを修正しました
 - 2\.3.1 より前のバージョンに存在する unixODBC のバグ (ドライバーから unixODBC に渡される特定のバッファーのサイズは 2 倍になっていました) の回避策を削除しました
-- ColumnEncryption=enabled を使用するときの接続の回復性 (再接続) の切断を修正しました
+- ColumnEncryption=enabled を使用する場合に応答が停止する接続の回復性 (再接続) を修正しました
 - [Active Directory 対話型認証] オプションを使用すると、Azure 認証ウィンドウが応答しなくなる DSN 作成のバグを修正しました (Windows)
 - 非同期実行が有効な場合に ODBC シャットダウン時にまれに発生するクラッシュを修正しました (接続ハンドルをクリアするときに発生しました)
 - 長いストアド プロシージャの実行中に SQL ドライバーの CPU 使用率が高くなる問題を修正しました

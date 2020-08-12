@@ -9,18 +9,18 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286046"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279463"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>高可用性を使用して SQL Server ビッグ データ クラスターを展開する
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-SQL Server ビッグ データ クラスターは、コンテナー化アプリケーションとして Kubernetes 上にあり、ステートフル セットや永続ストレージなどの機能を使用するため、このインフラストラクチャには、サービスの正常性を維持するためにクラスター コンポーネントで利用される、正常性監視、障害検出、およびフェールオーバー メカニズムが組み込まれています。 信頼性を向上させるために、高可用性構成で追加のレプリカを使用して展開するように、SQL Server マスター インスタンスまたは HDFS 名前ノードと Spark 共有サービスを構成することもできます。 監視、障害検出、および自動フェールオーバーは、ビッグ データ クラスター管理サービス、つまり、制御サービスによって管理されます。 このサービスでは、可用性グループのセットアップから、データベース ミラーリング エンドポイントの構成、可用性グループへのデータベースの追加またはフェールオーバーとアップグレードの調整まですべて、ユーザーの介入なしで提供されます。 
+SQL Server ビッグ データ クラスターは、コンテナー化アプリケーションとして Kubernetes 上にあり、ステートフル セットや永続ストレージなどの機能を使用するため、このインフラストラクチャには、サービスの正常性を維持するためにクラスター コンポーネントで利用される、正常性監視、障害検出、およびフェールオーバー メカニズムが組み込まれています。 信頼性を向上させるために、高可用性構成で追加のレプリカを使用して展開するように、SQL Server マスター インスタンスまたは HDFS 名前ノードと Spark 共有サービスを構成することもできます。 監視、障害検出、および自動フェールオーバーは、ビッグ データ クラスター管理サービス、つまり、制御サービスによって管理されます。 このサービスでは、可用性グループのセットアップ、データベース ミラーリング エンドポイントの構成から、可用性グループへのデータベースの追加またはフェールオーバーとアップグレードの調整まですべて、ユーザーの介入なしで提供されます。 
 
 次の図は、SQL Server ビッグ データ クラスターに可用性グループが展開される方法を示しています。
 

@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server の UTF-8 のサポート | Microsoft Docs
 description: OLE DB Driver for SQL Server の UTF-8 のサポート
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,24 +10,28 @@ ms.topic: reference
 ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: c18870d1d252ba849e11ce0bd040bbce89bd5855
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d2074ea992872da02a781ef48f633cd8539c931f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928274"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85986691"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server の UTF-8 のサポート
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 Microsoft OLE DB Driver for SQL Server (version 18.2.1) によって、UTF-8 サーバーのエンコードのサポートが追加されます。 SQL Server の UTF-8 のサポートについては、以下を参照してください。
 - [照合順序と Unicode のサポート](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8 のサポート](#ctp23)
+- [UTF-8 のサポート](../../../relational-databases/collations/collation-and-unicode-support.md#utf8)
 
-> [!IMPORTANT]
-> Microsoft OLE DB Driver for SQL Server では [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) 関数を使用して、DBTYPE_STR 入力バッファーのエンコードを決定します。 GetACP が UTF-8 エンコードを返すシナリオはサポートされていません。 バッファーで Unicode データを格納する必要がある場合は、バッファー データ型を DBTYPE_WSTR (UTF-16 エンコード) に設定する必要があります。
+ドライバーの version 18.4.0 によって、UTF-8 クライアントのエンコードに対するサポートが追加されます (Windows 10 の [地域の設定] で [世界各国の言語のサポートに Unicode UTF-8 を使用する] チェックボックスをオンにします)。
+
+> [!NOTE]  
+> Microsoft OLE DB Driver for SQL Server では [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) 関数を使用して、DBTYPE_STR 入力バッファーのエンコードを決定します。
+>
+> GetACP によって UTF-8 のエンコードが返されるシナリオ (Windows 10 の [地域の設定] で [世界各国の言語のサポートに Unicode UTF-8 を使用する] チェックボックスをオンにします) は、version 18.4 以降でサポートされています。 以前のバージョンでは、バッファーで Unicode データを格納する必要がある場合は、バッファー データ型を *DBTYPE_WSTR* (UTF-16 エンコード) に設定する必要があります。
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>UTF-8 でエンコードされた CHAR または VARCHAR 列へのデータの挿入
 挿入用の入力パラメーター バッファーが作成されるとき、そのバッファーは、[DBBINDING 構造体](https://go.microsoft.com/fwlink/?linkid=2071182)の配列を使用して記述されます。 各 DBBINDING 構造体では単一のパラメーターがコンシューマーのバッファーに関連付けられ、データ値の長さや型などの情報が含まれます。 CHAR 型の入力パラメーター バッファーでは、DBBINDING 構造体の *wType* を DBTYPE_STR に設定する必要があります。 WCHAR 型の入力パラメーター バッファーでは、DBBINDING 構造体の *wType* を DBTYPE_WSTR に設定する必要があります。
@@ -50,23 +54,11 @@ Microsoft OLE DB Driver for SQL Server (version 18.2.1) によって、UTF-8 サ
 
 結果のバッファーの型インジケーターが DBTYPE_WSTR の場合は、ドライバーによって UTF-8 エンコード データが UTF-16 エンコードに変換されます。
 
-<a name="ctp23"></a>
+## <a name="communication-with-servers-that-dont-support-utf-8"></a>UTF-8 をサポートしていないサーバーとの通信
+Microsoft OLE DB Driver for SQL Server を使用すると、サーバーが認識できる方法で、データがサーバーに公開されるようになります。 UTF-8 が有効になっているクライアントからデータを挿入する場合、ドライバーは、UTF-8 でエンコードされた文字列を、データベースの照合順序のコード ページに変換してからサーバーに送信します。
 
-### <a name="utf-8-support-sql-server-2019-ctp-23"></a>UTF-8 のサポート (SQL Server 2019 CTP 2.3)
-
-[!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] では、インポートまたはエクスポートのエンコードとして、あるいはテキスト データのデータベース レベルまたは列レベルの照合順序として、広く使用されている UTF-8 文字エンコードの完全なサポートが導入されています。 UTF-8 は、`CHAR` および `VARCHAR` データ型で許可されており、`UTF8` サフィックスを持つようにオブジェクトの照合順序を作成するか変更すると有効になります。
-
-たとえば、`LATIN1_GENERAL_100_CI_AS_SC` を `LATIN1_GENERAL_100_CI_AS_SC_UTF8` に変更するような場合です。 UTF-8 は、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] で導入された補助文字をサポートする Windows 照合順序にのみ使用できます。 `NCHAR` および `NVARCHAR` では UTF-16 エンコードのみが許可され、変更されていません。
-
-使用されている文字セットによっては、この機能によりストレージを大幅に節約できます。 たとえば、ASCII (ラテン) 文字列の既存の列データ型を、UTF-8 対応の照合順序を使用して `NCHAR(10)` から `CHAR(10)` に変更すると、必要なストレージが 50% 削減されます。 このように減るのは、`NCHAR(10)` を保存するには 20 バイト必要であるのに対し、`CHAR(10)` では同じ Unicode 文字列に 10 バイトしか必要ないためです。
-
-詳細については、「 [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
-
-**CTP 2.1** 既定で [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] の設定中に UTF-8 照合順序を選択するためのサポートが追加されました。
-
-**CTP 2.2** SQL Server レプリケーションで UTF-8 文字エンコードを使用するためのサポートが追加されました。
-
-**CTP 2.3** BIN2 照合順序 (UTF8_BIN2) で UTF-8 文字エンコードを使用するためのサポートが追加されました。
+> [!NOTE]  
+> [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) インターフェイスを使用して UTF-8 でエンコードされたデータをレガシ テキスト列に挿入することは、UTF-8 をサポートするサーバーのみに制限されます。 詳細については、「[BLOB と OLE オブジェクト](../ole-db-blobs/blobs-and-ole-objects.md)」を参照してください。
 
 ## <a name="see-also"></a>参照  
 [OLE DB Driver for SQL Server の機能](../../oledb/features/oledb-driver-for-sql-server-features.md) 

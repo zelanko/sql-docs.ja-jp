@@ -1,31 +1,31 @@
 ---
-title: SSMS でのハングまたはクラッシュのトラブルシューティング
+title: SSMS でのシステムの応答停止またはクラッシュのトラブルシューティング
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: dnethi
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: f994a44d6fe0f458ae8f8d8be0351421322e7967
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98ed3868008808ff18a9847a009108ee41205d12
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243881"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091298"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>SQL Server Management Studio (SSMS) がクラッシュした後に診断データを取得する
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>ハングまたはクラッシュ後に完全メモリ ダンプを取得する
+## <a name="get-full-memory-dump-after-an-unresponsive-system-or-crash"></a>システムの応答停止またはクラッシュが発生した後に完全メモリ ダンプを取得する
 
-SQL Server Management Studio (SSMS) がハングまたはクラッシュしたときに、その完全メモリ ダンプを取得します。
+SQL Server Management Studio (SSMS) が応答停止またはクラッシュした場合に、その完全メモリ ダンプを取得します。
 
-SSMS のクラッシュまたはハングをトラブルシューティングするために診断情報を取得するには、以下の手順を行います。
+診断情報を取得して SSMS のクラッシュまたは応答停止のトラブルシューティングを行うには、以下の手順を行います。
 
 1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx) をダウンロードします。
 

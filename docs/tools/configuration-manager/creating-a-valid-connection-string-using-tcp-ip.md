@@ -1,5 +1,6 @@
 ---
 title: TCP/IP を使用した有効な接続文字列の作成
+description: TCP/IP を使用して SQL Server のインスタンスに接続するときに有効な接続文字列を作成する方法について説明します。 有効な文字列の例を確認します。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1d257a0b1f6a6022ff5816ce6fab7378f05f89e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c1c8e7dfa12a270ee32cc7740efc6770026d1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306474"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899710"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>TCP/IP を使用した有効な接続文字列の作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   TCP/IP を使用した有効な接続文字列を作成するには、次の操作を行ってください。  
   
 -   **[別名]** を指定します。  

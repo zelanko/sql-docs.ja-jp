@@ -1,5 +1,6 @@
 ---
-title: SQLSRV Driver API Reference | Microsoft Docs
+title: SQLSRV ドライバー API リファレンス
+description: PHP 用 SQLSRV ドライバー API リファレンスでは、使用可能な関数、そのパラメーター、戻り値について説明します。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a05b7a39bce6fb263b63bdbfa4644c78175a584c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01dfb59cd433a545efbe7376fd369c897ee4f693
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928238"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381076"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV ドライバー API リファレンス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "80928238"
 ## <a name="in-this-section"></a>このセクションの内容  
 SQLSRV ドライバーには、次の関数が含まれています。  
   
-|Function|説明|  
+|機能|説明|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|トランザクションを開始します。|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|ステートメントを取り消します。ステートメントの保留中の結果がある場合は破棄します。|  

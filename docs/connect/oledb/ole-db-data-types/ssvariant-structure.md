@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0583e1cdbf7f1e336698a794bef29f804a053318
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 0d11a6f839fba1905055aefafa65353008530f8d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219251"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004524"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 構造体
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -74,13 +74,83 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|**time**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型がサポートされています。<br /><br /> 次のメンバーを含みます。<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**BYTE**) *tTime2Val* 値の小数点以下桁数を指定します。|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|**datetime2**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型がサポートされています。<br /><br /> 次のメンバーを含みます。<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**BYTE**) *tsDataTimeVal* 値の小数点以下桁数を指定します。|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|**datetimeoffset**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型がサポートされています。<br /><br /> 次のメンバーを含みます。<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**BYTE**) *tsoDateTimeOffsetVal* 値の小数点以下桁数を指定します。|  
-|NCharVal|対応する OLE DB 型インジケーターはありません。|**struct _NCharVal**|**VT_SS_WVARSTRING、**<br /><br /> **VT_SS_WSTRING**|**nchar** と **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型がサポートされています。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (**SHORT**) *pwchNCharVal* がポイントする文字列の実際の長さを指定します。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (**SHORT**) *pwchNCharVal* がポイントする文字列の最大長を指定します。<br /><br /> *pwchNCharVal* (**WCHAR** \*) 文字列へのポインター。<br /><br /> 使用されていないメンバー: *rgbReserved*、*dwReserved*、および *pwchReserved*。|  
-|CharVal|対応する OLE DB 型インジケーターはありません。|**struct _CharVal**|**VT_SS_STRING、**<br /><br /> **VT_SS_VARSTRING**|**char** と **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型がサポートされています。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (**SHORT**) *pchCharVal* がポイントする文字列の実際の長さを指定します。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (**SHORT**) *pchCharVal* がポイントする文字列の最大長を指定します。<br /><br /> *pchCharVal* (**CHAR** \*) 文字列へのポインター。<br /><br /> 使用されないメンバー :<br /><br /> *rgbReserved*、*dwReserved*、および *pwchReserved*。|  
+|NCharVal|対応する OLE DB 型インジケーターはありません。|**struct _NCharVal**|**VT_SS_WVARSTRING、**<br /><br /> **VT_SS_WSTRING**|**nchar** と **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型がサポートされています。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (**SHORT**) *pwchNCharVal* がポイントする文字列の実際の長さを指定します。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (**SHORT**) *pwchNCharVal* がポイントする文字列の最大長を指定します。<br /><br /> *pwchNCharVal* (**WCHAR** \*) 文字列へのポインター。<br /><br /> *rgbReserved* (**BYTE[5]** ) 照合順序情報を指定します。<br /><br /> 使用されていないメンバー: *dwReserved*、および *pwchReserved*。|  
+|CharVal|対応する OLE DB 型インジケーターはありません。|**struct _CharVal**|**VT_SS_STRING、**<br /><br /> **VT_SS_VARSTRING**|**char** と **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型がサポートされています。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (**SHORT**) *pchCharVal* がポイントする文字列の実際の長さを指定します。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (**SHORT**) *pchCharVal* がポイントする文字列の最大長を指定します。<br /><br /> *pchCharVal* (**CHAR** \*) 文字列へのポインター。<br /><br /> *rgbReserved* (**BYTE[5]** ) 照合順序情報を指定します。<br /><br /> 使用されないメンバー :<br /><br /> *dwReserved*、および *pwchReserved*。|  
 |BinaryVal|対応する OLE DB 型インジケーターはありません。|**struct _BinaryVal**|**VT_SS_VARBINARY、**<br /><br /> **VT_SS_BINARY**|**binary** と **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型がサポートされています。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (**SHORT**) *prgbBinaryVal* がポイントするデータの実際の長さを指定します。<br /><br /> *sMaxLength* (**SHORT**) *prgbBinaryVal* がポイントするデータの最大長を指定します。<br /><br /> *prgbBinaryVal* (**BYTE** \*) バイナリ データへのポインター。<br /><br /> 使用されていないメンバー: *dwReserved*。|  
 |UnknownType|未使用|未使用|未使用|未使用|  
 |BLOBType|未使用|未使用|未使用|未使用|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
+## <a name="known-issues"></a>既知の問題
+### <a name="possible-narrow-string-data-corruption"></a>ナロー文字列データの破損の可能性
+バージョン 18.4 より前の OLE DB ドライバーでは、次のすべての条件に当てはまる場合、`sql_variant` 列に挿入すると、サーバーのデータが破損する可能性がありました。
+- クライアント コンピューターのコード ページが、データベース照合順序のコード ページと一致しない。
+- 挿入するクライアント バッファーに、クライアントのコード ページでエンコードされた非 ASCII ナロー文字列文字が含まれている。
+- 次のいずれかの条件に該当する。
+  - `sql_variant` 列に対応するパラメーターを記述する `DBPARAMBINDINFO` 構造の `pwszDataSourceType` フィールドが、`L"DBTYPE_SQLVARIANT"`、`L"DBTYPE_VARIANT"`、または `L"sql_variant"` に設定されている。 詳細については、次の情報を参照してください。「[ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85))」。
+
+    *or*
+  - 挿入に使用されるパラメーター化された SQL クエリが準備されている。
+
+具体的には、OLE DB ドライバーでは、データが挿入前にデータベース照合順序のコード ページに変換されませんでした。 ただし、データベース照合順序のコード ページでデータがエンコードされたことが、ドライバーによって誤ってサーバーに示されていました。 この動作が原因で、データと、`sql_variant` 列に格納されている対応するコード ページが一致しませんでした。
+
+同様に、同じ値が取得されたとき、OLE DB ドライバーでは、文字列がクライアントのコード ページに変換されませんでした。 ただし、挿入されたデータは既にクライアントのコード ページにあるため (上の段落を参照)、クライアント アプリケーションではデータを正しく解釈できました。 それでも、他のドライバーを使用するアプリケーションでは、これらの値が破損した形式で取得されました。 破損が発生したのは、他のドライバーによってデータベース照合順序のコード ページで文字列が解釈され、それをクライアントのコード ページに変換することが試行されたためです。
+
+バージョン 18.4 以降では、OLE DB ドライバーでは、挿入前にナロー文字列がデータベース照合順序のコード ページに変換されます。 同様に、ドライバーでは、取得時にデータがクライアントのコード ページに再変換されます。 その結果、上記のバグに依存するクライアント アプリケーションでは、以前のバージョンの OLE DB ドライバーを使用して挿入されたデータを取得するときに問題が発生する可能性があります。 次の[復旧手順](#recovery-procedure)は、これらの問題を解決するためのガイダンスを提供することを目的としています。
+
+### <a name="recovery-procedure"></a>復旧手順
+> [!IMPORTANT]  
+> 次の復旧手順を実行する前に、既存のデータを必ずバックアップしてください。
+
+バージョン 18.4 の OLE DB ドライバーに切り替えた後に、アプリケーションで `sql_variant` 列からのデータの取得時に問題が発生した場合は、データが格納されているデータベースと同じ照合順序になるように破損データを修正する必要があります。 次のスクリプトを使用すると、`sql_variant` 列の 1 つの値を復旧できます。 このスクリプトはテンプレートであり、シナリオに合わせて調整する必要があります。
+
+> [!IMPORTANT]  
+> データの元のコード ページは格納されていないため、データが最初にどのようにエンコードされたかをサーバーに通知する必要があります。 これを行うには、最初にデータを挿入したクライアントのコード ページと同じコード ページを持つデータベースのコンテキスト内で、スクリプトを実行します。 たとえば、コード ページ `932` で構成されたクライアントから破損データが挿入された場合は、日本語の照合順序 (例: `Japanese_XJIS_100_CS_AI`) を使用してデータベースのコンテキスト内で、次のスクリプトを実行する必要があります。
+
+```sql
+/*
+    Description:
+        Template that can be used to recover the corrupted value inserted into the sql_variant column.
+
+    Scenario:
+        The database is named [YourDatabase] and it contains a table named [YourTable], which contains the corrupted value.
+        Schema is named [dbo].
+        The corrupted value is stored in a column of type sql_variant named [YourColumn].
+        The corrupted value is sql_variant of BaseType char. For details on sql_variant properties, see:
+            https://docs.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql
+*/
+
+-- Base type in sql_variant can hold a maximum of 8000 bytes
+-- For details see: 
+--  https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql#remarks
+DECLARE @bin VARBINARY(8000)
+
+-- In the following lines we convert the sql_variant base type to binary.
+-- <FilterExpression>
+--      Is a placeholder and must be replaced with an expression that filters a single corrupted value to be recovered.
+--      Therefore, the expression must result in a single value being returned only.
+SET @bin = (SELECT CAST([YourColumn] AS VARBINARY(8000)) FROM [YourDatabase].[dbo].[YourTable] WHERE <FilterExpression>)
+
+-- In the following lines we store the binary value in char(59) (a fixed-size character data type).
+-- IMPORTANT NOTE: 
+--      This example assumes the corrupted sql_variant's base type is char(59).
+--      You MUST adjust the type (that is, char/varchar) and size to match your scenario exactly.
+DECLARE @char CHAR(59)
+SET @char = CAST((@bin) AS CHAR(59))
+DECLARE @sqlvariant sql_variant
+
+-- The following lines recover the corrupted value by translating the value to the collation of the database.
+-- <DBCollation>
+--      Must be replaced with the collation (for example, Latin1_General_100_CI_AS_SC_UTF8) of the database holding the data.
+SET @sqlvariant = @char collate <DBCollation>
+
+-- Finally, we update the corrupted value with the recovered value.
+-- "<FilterExpression>"
+--      Is a placeholder and must be replaced with an expression that filters a single corrupted value to be recovered.
+--      Therefore, the expression must result in a single value being returned only.
+UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <FilterExpression>
+```
+
 ## <a name="see-also"></a>参照  
  [データ型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   

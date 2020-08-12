@@ -1,5 +1,6 @@
 ---
 title: テーブル内のデータを表示および編集する
+description: データ エディターを使用して既存のテーブルのデータを表示、編集、削除する方法について説明します。 変更をスクリプト フォームに表示してスクリプト ファイルに保存する方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,18 +10,17 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 557b5d5c5986b47eab22bb9d70bd8103c5032eeb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c8321f4f1264b8bf0352f459bde02a07e439dd3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226760"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895789"
 ---
-# <a name="how-to-view-and-edit-data-in-a-table"></a>テーブル内のデータを表示および編集する方法
+# <a name="how-to-view-and-edit-data-in-a-table"></a>方法:テーブル内のデータを表示および編集する
 
 ビジュアル データ エディターを使用すると、既存のテーブルのデータを表示、編集、および削除できます。  
   
