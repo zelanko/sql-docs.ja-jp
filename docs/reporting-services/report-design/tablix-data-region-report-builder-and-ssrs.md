@@ -1,5 +1,6 @@
 ---
 title: Tablix データ領域 (レポート ビルダー) | Microsoft Docs
+description: ページ分割されたレポート データをセルに表示する方法を確認します。 レポート ビルダーの Tablix データ領域を使用して、データを行と列に編成します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a37105db6639b7d7db35c3beb1fc85020015d7e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98c23ceae7ced6bdd31e55319db67aefa5a6e848
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067070"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域 (レポート ビルダーおよび SSRS)
-  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]の Tablix データ領域は、行と列で構成されたセルにページ分割されたレポート データを表示する、汎用のレイアウト レポート アイテムです。 レポート データには、データ ソースから取得される詳細データや、指定したグループに分類される集計詳細データなどがあります。 各 Tablix セルには、テキスト ボックスや画像、Tablix 領域などの他のデータ領域、グラフ、ゲージなど、任意のレポート アイテムを含めることができます。 複数のレポート アイテムをセルに追加するには、まず、コンテナーとして機能する四角形を追加します。 次に、四角形にレポート アイテムを追加します。  
+  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]の Tablix データ領域は、行と列で構成されたセルにページ分割されたレポート データを表示する、汎用のレイアウト レポート アイテムです。 レポート データには、データ ソースから取得される詳細データや、指定したグループに分類される集計詳細データなどがあります。 各 Tablix セルには、テキスト ボックスや画像、Tablix 領域などの他のデータ領域、グラフ、ゲージなど、任意のレポート アイテムを含めることができます。 複数のレポート アイテムをセルに追加するには、まず、コンテナーとして機能する四角形を追加します。 次に、四角形にレポート アイテムを追加します。 
   
  テーブル、マトリックス、一覧などのデータ領域は、基になる Tablix データ領域のテンプレートによってリボン上に表されます。 これらのテンプレートのいずれかをレポートに追加すると、実際には、特定のデータ レイアウトに最適化された Tablix データ領域が追加されます。 既定では、テーブル テンプレートはグリッド レイアウトに詳細データを表示し、マトリックスはグリッド レイアウトにグループ データを表示し、一覧は自由な形式のレイアウトに詳細データを表示します。  
   

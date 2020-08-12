@@ -1,23 +1,23 @@
 ---
 title: ローカル データベースでビルドおよび配置を行う
+description: SQL Server 2012 で提供されるローカル サーバー インスタンスについて説明します。 このインスタンスを使用して開発プロジェクトをビルド、テスト、デバッグする方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7503049f0ea68b38206764eb3163a5a80a0b2d7
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241605"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518922"
 ---
-# <a name="how-to-build-and-deploy-to-a-local-database"></a>ローカル データベースでビルドおよび配置を行う方法
+# <a name="how-to-build-and-deploy-to-a-local-database"></a>方法:ローカル データベースでビルドおよび配置を行う
 
 Microsoft SQL Server 2012 では、ローカルのオンデマンド サーバー インスタンスが提供されます。これは SQL Server Express Local Database Runtime と呼ばれるもので、SQL Server データベース プロジェクトをデバッグする際にアクティブ化されます。 このローカル サーバー インスタンスは、プロジェクトのビルド、テスト、およびデバッグ用のサンドボックスとして使用できます。 インストールされているどの SQL Server インスタンスからも独立しており、SQL Server Data Tools (SSDT) の外ではアクセスできません。 運用データベースへのアクセスが制限または禁止されている開発者が、許可されたユーザーによってプロジェクトが運用環境に配置される前に、ローカルでプロジェクトをテストする場合、このような環境が最適です。 これに加えて、SQL Azure 用にデータベース ソリューションを開発する場合、このローカル サーバーで提供される便利さを利用して、データベース プロジェクトをクラウドに配置する前に、ローカルで開発およびテストできます。  
   
@@ -49,7 +49,7 @@ Microsoft SQL Server 2012 では、ローカルのオンデマンド サーバ�
   
 7.  **メッセージ** ペインに "(0 行処理されました)" というメッセージが表示され、**結果**ペインには行が返されません。 これは、実データが格納されている接続されたデータベースではなく、ローカル データベースに対してクエリを実行しているためです。  
   
-    このことは、ローカルの **TradeDev** データベースの下にある **Products** テーブルを右クリックし、**[データの表示]** をクリックすると確認できます。 テーブルが空であることがわかります。  
+    このことは、ローカルの **TradeDev** データベースの下にある **Products** テーブルを右クリックし、 **[データの表示]** をクリックすると確認できます。 テーブルが空であることがわかります。  
   
 ### <a name="to-replicate-real-data-to-the-local-database"></a>実データをローカル データベースにレプリケートするには  
   

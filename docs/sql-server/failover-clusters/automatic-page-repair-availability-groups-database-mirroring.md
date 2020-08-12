@@ -1,6 +1,6 @@
 ---
 title: 可用性グループとデータベース ミラーリングのページの自動修復
-description: 'データベースが Always On 可用性グループまたはデータベース ミラーリング リレーションシップに参加している場合、特定の種類のページ破損が自動修復されます。 このトピックでは、エラーの種類とその解決策について説明します。 '
+description: データベースが Always On 可用性グループまたはデータベース ミラーリングに参加しているとき、特定の種類のページ破損を自動修復する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 861ffae3a6bb9451ca9dc9d5c8684e5b211a3b93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729127"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>ページの自動修復 (可用性グループ: データベース ミラーリング)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ページの自動修復は、データベース ミラーリングおよび [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]でサポートされます。 特定の種類のエラーによってページが破損し、読み取りができなくなると、データベース ミラーリング パートナー (プリンシパルまたはミラー) または可用性レプリカ (プライマリまたはセカンダリ) が自動的にページの修復を試みます。 ページの読み取りができないパートナー/レプリカは、そのページの新しいコピーを自分のパートナーまたは別のレプリカから要求します。 要求が受け入れられ、新しいコピーを取得できた場合は、読み取り不可能なページが読み取り可能なコピーに置き換えられます。通常、これによりエラーは解決します。  
   
  一般に、データベース ミラーリングと [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] は、I/O エラーが同じ方法で処理されます。 ただし、わずかながら異なる部分もあります。ここでは、そうした違いについて説明します。  
@@ -63,7 +63,7 @@ ms.locfileid: "74822644"
   
 -   ページ 9 (データベースのブート ページ)。  
   
--   アロケーション ページ。これには、グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
+-   アロケーション ページ:グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページ。  
   
  
 ##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> プリンシパル/プライマリ データベースでの I/O エラーの処理  
@@ -96,7 +96,7 @@ ms.locfileid: "74822644"
  ページの自動修復は、バックグラウンドで実行される非同期プロセスです。 したがって、読み取ることのできないページを要求した場合はデータベース操作に失敗し、その原因を示すエラー コードが返されます。 ミラー化されたデータベースまたは可用性データベースのアプリケーションを開発するときは、失敗した操作を例外として処理できるようにする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー コードが 823、824、または 829 のときは、その操作を後で再試行してください。  
   
 
-##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> 方法:ページの自動修復の試行結果を表示する  
  以下の動的管理ビューは、特定の可用性データベースまたはミラー化された特定のデータベースに対して最近試行されたページの自動修復に対応する行を返します (データベースあたり最大 100 行)。  
   
 -   **Always On 可用性グループ:**  

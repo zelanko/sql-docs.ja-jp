@@ -1,5 +1,6 @@
 ---
 title: レンダリングの動作 (レポート ビルダーおよび SSRS) | Microsoft Docs
+description: レポート ビルダーでレポートがレンダリングされるときに、レポート本文とそのコンテンツに適用される規則について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24b196927e582d1b21bf9f11bd7ea824ecf8ba7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0214df6c7299f0a3240b904bbd00e965988d95dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576454"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048251"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>レンダリングの動作 (レポート ビルダーおよび SSRS)
   選択したレンダラーによっては、レポートをレンダリングする際に、レポート本文とそのコンテンツに特定の規則が適用されます。 レポート アイテムが 1 ページにまとめられる際の方法は、次に示す要因の組み合わせによって決まります。  

@@ -1,5 +1,6 @@
 ---
 title: Level 関数 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーの Level 関数について説明します。 この関数は、再帰型階層における現在の深さのレベルを返します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e70847a25230be39166ac6fa489f1fdc3f23e43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b582a1c62f92fc001b4c6047319b9100b4e27ac9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048237"
 ---
 # <a name="report-builder-functions---level-function"></a>レポート ビルダー関数 - Level 関数
   再帰型階層の現在の深さのレベルを返します。  

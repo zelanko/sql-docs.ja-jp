@@ -1,5 +1,6 @@
 ---
 title: '[データ ツール操作] ウィンドウ'
+description: '[データ ツール操作] ウィンドウを使用して、データベースの展開、結果の発行、およびその他の操作の進行状況を表示する方法について説明します。'
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e37dc1f3cf3c78d3c1162c94f835dfab050467f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1eae246680e35f52d10a5c5338e866b58843ec3
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241670"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518722"
 ---
 # <a name="data-tools-operations-window"></a>[データ ツール操作] ウィンドウ
 
@@ -36,7 +36,7 @@ ms.locfileid: "75241670"
   
 -   **SQL Server オブジェクト エクスプローラー**からのオブジェクトの削除。 詳細については、「[オブジェクトを削除し、依存関係を解決する方法](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)」を参照してください。  
   
--   結果の公開。 詳細については、「[ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)」を参照してください。  
+-   結果の公開。 詳細については、「[ ターゲット プラットフォームを変更し、データベース プロジェクトを公開する](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   
 -   配置。 詳細については、「[ローカル データベースでビルドおよび配置を行う方法](../ssdt/how-to-build-and-deploy-to-a-local-database.md)」を参照してください。  
   

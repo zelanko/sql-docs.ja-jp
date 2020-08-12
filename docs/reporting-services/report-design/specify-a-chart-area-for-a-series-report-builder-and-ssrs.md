@@ -1,5 +1,6 @@
 ---
 title: 系列のグラフ領域の指定 (レポート ビルダー) | Microsoft Docs
+description: 外枠、グラフのタイトル、および凡例を含む、レポート ビルダーの最上位レベルのコンテナーであるグラフ エリアについて説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32f16dd226167c180de81a456a6493f1c717b481
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a537d0319bb3cb035a8bff5891c24449de77777
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080947"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057568"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>系列のグラフ領域の指定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、 *グラフ* は、外側の境界、グラフのタイトル、および凡例を含んでいる最上位レベルのコンテナーです。 既定では、グラフには既定の *グラフ領域*が 1 つ含まれています。 グラフ領域はグラフの表面上に見えませんが、グラフ領域を 1 つまたは複数の系列の軸ラベル、軸タイトル、およびプロット エリアのみを含んでいるコンテナーと考えることができます。 次の図は、1 つのグラフ内にある複数のグラフ領域の概念を示しています。  

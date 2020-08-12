@@ -1,5 +1,6 @@
 ---
 title: インストール ウィザードのヘルプ | Microsoft Docs
+description: SQL Server のインストール ウィザードの [インスタンスの構成] を使用し、SQL Server の既定のインスタンスか名前付きインスタンスを作成するように指定します。
 ms.custom: ''
 ms.date: 08/16/2019
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 robots: noindex,nofollow
-ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 040136a7867d2a56e8ec97f183227c6b8d7268f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730765"
 ---
 # <a name="installation-wizard-help"></a>インストール ウィザードのヘルプ
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの構成ページの一部について説明します。
 
@@ -85,7 +86,7 @@ ms.locfileid: "79286566"
 **インスタンス ID**: 既定では、インスタンス名がインスタンス ID として使用されます。 この ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 既定のインスタンスの場合も名前付きインスタンスの場合も、同じ動作が発生します。 既定のインスタンスの場合、インスタンス名とインスタンス ID は、MSSQLSERVER になります。 既定以外のインスタンス ID を使用するには、**Instance ID** フィールドで指定します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、 **[インスタンスの構成]** ページに表示されるインスタンス ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep プロセスのイメージの準備手順で指定したインスタンス ID です。 イメージの完了手順では別のインスタンス ID を指定できません。
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、**[インスタンスの構成]** ページに表示されるインスタンス ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep プロセスのイメージの準備手順で指定したインスタンス ID です。 イメージの完了手順では別のインスタンス ID を指定できません。
 
 > [!NOTE]  
 >  アンダースコア (_) で始まるインスタンス ID や、シャープ記号 (#) またはドル記号 ($) を含むインスタンス ID はサポートされません。  
@@ -127,11 +128,11 @@ ms.locfileid: "79286566"
 
 ## <a name="analysis-services-configuration---data-directories-page"></a>[Analysis Services の構成] - [データ ディレクトリ] ページ
 
-次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルへのアクセス許可は、ローカル管理者と、セットアップ中に作成およびプロビジョニングされる SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  
+次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルへのアクセス許可は、ローカル管理者と、セットアップ中に作成およびプロビジョニングされる SQLServerMSASUser$\<instance> セキュリティ グループのメンバーに付与されます。  
   
-### <a name="uielement-list"></a>UIElement の一覧  
+### <a name="ui-element-list"></a>UI 要素の一覧  
   
-|説明|既定のディレクトリ|Recommendations|  
+|説明|既定のディレクトリ|推奨事項|  
 |-----------------|-----------------------|---------------------|  
 |**データ ルート ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |\Program files\Microsoft SQL Server\ フォルダーが権限の制限により保護されていることを確認してください。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパフォーマンスは、多くの構成で、データ ディレクトリが配置されているストレージのパフォーマンスに依存します。 このディレクトリは、システムに割り当てられている中でパフォーマンスが最も高いストレージに配置してください。 フェールオーバー クラスターのインストールの場合は、データ ディレクトリが共有ディスク上に配置されるようにしてください。|  
 |**ログ ファイル ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |このディレクトリは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリであり、FlightRecorder ログを含んでいます。 フライト レコーダーの時間を増加する場合、ログ ディレクトリに十分な容量があることを確認してください。|  
@@ -160,11 +161,11 @@ ms.locfileid: "79286566"
   
 ### <a name="analysis-services-configuration---data-directories-page"></a>[Analysis Services の構成] - [データ ディレクトリ] ページ
 
-次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルへのアクセス許可は、ローカル管理者と、セットアップ中に作成およびプロビジョニングされる SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  
+次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルへのアクセス許可は、ローカル管理者と、セットアップ中に作成およびプロビジョニングされる SQLServerMSASUser$\<instance> セキュリティ グループのメンバーに付与されます。  
   
-#### <a name="uielement-list"></a>UIElement の一覧
+#### <a name="ui-element-list"></a>UI 要素の一覧
   
-|説明|既定のディレクトリ|Recommendations|  
+|説明|既定のディレクトリ|推奨事項|  
 |-----------------|-----------------------|---------------------|  
 |**データ ルート ディレクトリ** |\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |\Program files\Microsoft SQL Server\ フォルダーが権限の制限により保護されていることを確認してください。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパフォーマンスは、多くの構成で、データ ディレクトリが配置されているストレージのパフォーマンスに依存します。 このディレクトリは、システムに割り当てられている中でパフォーマンスが最も高いストレージに配置してください。 フェールオーバー クラスターのインストールの場合は、データ ディレクトリが共有ディスク上に配置されるようにしてください。|  
 |**ログ ファイル ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |このディレクトリは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリであり、FlightRecorder ログを含んでいます。 フライト レコーダーの時間を増加する場合、ログ ディレクトリに十分な容量があることを確認してください。|  
@@ -211,7 +212,7 @@ ms.locfileid: "79286566"
 > [!IMPORTANT]  
 > セットアップ時に新規インストール用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者を明示的に用意する必要があります。 セットアップは、この手順を完了するまで続行できません。
   
-**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者の指定]** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの Windows プリンシパルを少なくとも 1 つ指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** ボタンを選択します。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** を選択し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。  
+**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者の指定]** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの Windows プリンシパルを少なくとも 1 つ指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** ボタンを選択します。 システム管理者の一覧に対してアカウントを追加または削除するには、**[追加]** または **[削除]** を選択し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスについて管理者特権を持っているユーザー、グループ、またはコンピューターの一覧を編集します。  
   
 一覧の編集が完了したら、 **[OK]** を選択し、構成ダイアログ ボックスで管理者の一覧を確認します。 一覧が完成したら、 **[次へ]** を選択します。  
   
@@ -283,9 +284,9 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
   
 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスでの、サポートされているストレージの種類と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ中に構成できる既定のディレクトリの一覧です。  
   
-### <a name="uielement-list"></a>UIElement の一覧
+### <a name="ui-element-list"></a>UI 要素の一覧
   
-|説明|サポートされているストレージの種類|既定のディレクトリ|Recommendations|  
+|説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**データ ルート ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリのアクセス制御リスト (ACL) が構成され、構成の一部として継承が無効になります。|  
 |**ユーザー データベース ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。|  
@@ -298,7 +299,7 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
 
 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフェールオーバー クラスター インスタンスでの、サポートされているストレージの種類と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ中に構成できる既定のディレクトリの一覧です。  
   
-|説明|サポートされているストレージの種類|既定のディレクトリ|Recommendations|  
+|説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**データ ルート ディレクトリ**|共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで**共有ディスク**を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。|  
 |**ユーザー データベース ディレクトリ**|共有ストレージ、SMB ファイル サーバー|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで**共有ディスク**を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。|  
@@ -342,7 +343,7 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
 
 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスでの、サポートされているストレージの種類と、セットアップ中に構成できる既定のディレクトリの一覧です。  
   
-|説明|サポートされているストレージの種類|既定のディレクトリ|Recommendations|  
+|説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**データ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。<br /><br /> **tempdb** ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。 データ ファイルを複数のボリュームに分散させるには、複数のフォルダーまたはドライブを指定します。|  
 |**ログ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|ログ ディレクトリに十分な領域があることを確認してください。|  
@@ -353,16 +354,16 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
 
 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフェールオーバー クラスター インスタンスでの、サポートされているストレージの種類と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ中に構成できる既定のディレクトリの一覧です。  
   
-|説明|サポートされているストレージの種類|既定のディレクトリ|Recommendations|  
+|説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**tempdb データ ディレクトリ**|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで**共有ディスク**を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。<br /><br /> 指定のディレクトリ (複数のファイルが指定される場合、ディレクトリも複数になります) はすべてのクラスター ノードで有効にします。 フェールオーバー中に、**tempdb** のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、SQL Server リソースはオンラインへの移行に失敗します。|  
 |**tempdb ログ ディレクトリ**|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで**共有ディスク**を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。<br /><br /> 指定したディレクトリがすべてのクラスター ノードで有効であることを確認してください。 フェールオーバー中に、**tempdb** のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、SQL Server リソースはオンラインへの移行に失敗します。<br /><br /> ログ ディレクトリに十分な領域があることを確認してください。|  
   
-### <a name="uielement-list"></a>UIElement の一覧
+### <a name="ui-element-list"></a>UI 要素の一覧
 
 作業負荷と要件に合わせて **tempdb** の設定を構成します。 次の設定は、 **tempdb** データ ファイルに適用されます。  
   
-* **ファイル数** は **tempdb**のデータ ファイルの合計数です。 既定値は 8 とセットアップ時に検出された論理コア数の小さいほうになります。 一般的なルールとして、論理プロセッサの数が 8 以下の場合、論理プロセッサと同じ数のデータ ファイルを使用します。 論理プロセッサの数が 8 より大きい場合、8 つのデータ ファイルを使用します。 競合が発生する場合は、競合が許容できるレベルに低下するまでデータ ファイルの数を 4 の倍数分ずつ増やすか(最大で、論理プロセッサの数まで)、ワークロードまたはコードを変更します。
+* **ファイル数** は **tempdb**のデータ ファイルの合計数です。 既定値は 8 とセットアップ時に検出された論理コア数の小さいほうになります。 一般的なルールとしては、論理プロセッサの数が 8 以下の場合、論理プロセッサと同じ数のデータ ファイルを使用します。 論理プロセッサの数が 8 より大きい場合、8 つのデータ ファイルを使用します。 競合が発生する場合は、競合が許容できるレベルに低下するまでデータ ファイルの数を 4 の倍数分ずつ増やすか(最大で、論理プロセッサの数まで)、ワークロードまたはコードを変更します。
   
 * **初回サイズ (MB)** は各 **tempdb** データ ファイルの初回サイズです (メガバイト単位)。 既定値は 8 MB です (または、[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] の場合は 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] では、最大初期ファイル サイズ 262,144 MB (256 GB) が導入されます。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] の最大初期ファイル サイズは 1024 MB です。 すべての **tempdb** データ ファイルの初回サイズは同じです。 **tempdb** は SQL Server が起動するか、フェールオーバーするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定します。 起動時にさらに効率的に **tempdb** を作成するには、[データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を有効にします。  
   
@@ -423,7 +424,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 セットアップ中にこのページをスキップした場合、MaxDOP の既定値は、以前のバージョン (0) に対する [!INCLUDE[ssde_md](../../includes/ssde_md.md)] の既定値ではなく、このページに表示される推奨値になります。 また、このページでこの設定を手動で構成し、インストール後にこの設定を変更することができます。 
 
-### <a name="uielement-list"></a>UIElement の一覧
+### <a name="ui-element-list"></a>UI 要素の一覧
 
 * **[並列処理の最大限度] (MaxDOP)** は、1 つのステートメントの並列実行中に使用するプロセッサの最大数の値です。 既定値は、「[max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)」の並列処理の最大限度ガイドラインと一致します。
 
@@ -431,11 +432,11 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 **[最小サーバー メモリ]** では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] でバッファー プールとその他のキャッシュに使用されるメモリの下限が決まります。 既定値は 0 で、推奨値も 0 です。 **最小サーバー メモリ**の効果について詳しくは、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)」をご覧ください。
 
-**[最大サーバー メモリ]** では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] でバッファー プールとその他のキャッシュに使用されるメモリの上限が決まります。 既定値は 2,147,483,647 メガバイト (MB) であり、計算された推奨値は、「[サーバー メモリの構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)」の、既存のシステム メモリに基づくスタンドアロン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対するメモリ構成ガイドラインと一致します。 **最大サーバー メモリ**の効果について詳しくは、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)」をご覧ください。
+**[最大サーバー メモリ]** では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] でバッファー プールとその他のキャッシュに使用されるメモリの上限が決まります。 既定値は 2,147,483,647 メガバイト (MB) であり、計算された推奨値は、「[サーバー メモリの構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)」の、既存のシステム メモリに基づくスタンドアロン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対するメモリ構成ガイドラインと一致します。 **最大サーバー メモリ**の効果について詳しくは、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)」をご覧ください。
 
 セットアップの間にこのページをスキップした場合に使用される既定の**最大サーバー メモリ**の値は、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] の既定値 (2,147,483,647 メガバイト) です。 **[推奨]** ラジオ ボタンを選択すると、このページでこれらの設定を手動で構成でき、インストール後にこれらの設定を変更できます。 詳細については、 [サーバー メモリ構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)の設定を参照してください。
 
-### <a name="uielement-list"></a>UIElement の一覧
+### <a name="ui-element-list"></a>UI 要素の一覧
   
 **既定**:このラジオ ボタンは既定で選択されており、**最小サーバー メモリ**と**最大サーバー メモリ**の設定は [!INCLUDE[ssde_md](../../includes/ssde_md.md)] の既定値に設定されます。 
 
@@ -453,7 +454,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 このページを使用すると、このインストールの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に対して FILESTREAM を有効にすることができます。 FILESTREAM では、**varbinary(max)** BLOB (バイナリ ラージ オブジェクト) データをファイル システム内のファイルとして格納することにより、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] と NTFS ファイル システムが統合されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、FILESTREAM データの挿入、更新、クエリ、検索、およびバックアップを行うことができます。 Microsoft Win32 ファイル システム インターフェイスによるデータへのストリーミング アクセスが可能になります。 
   
-### <a name="uielement-list"></a>UIElement の一覧
+### <a name="ui-element-list"></a>UI 要素の一覧
   
 **[Transact-SQL アクセスに対して FILESTREAM を有効にする]** : [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする場合にオンにします。 他のオプションを使用するには、先にこのチェック ボックスをオンにする必要があります。  
   

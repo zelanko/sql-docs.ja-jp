@@ -1,5 +1,6 @@
 ---
 title: テーブル デザイナーを使用してデータベース オブジェクトを作成する
+description: SQL Server オブジェクト エクスプローラーで新しいデータベースを作成する方法について説明します。 テーブル デザイナーで新しいテーブル、制約、および外部キー参照を作成する方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,18 +10,17 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241501"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518782"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>テーブル デザイナーを使用してデータベース オブジェクトを作成する方法
+# <a name="how-to-create-database-objects-using-table-designer"></a>方法:テーブル デザイナーを使用してデータベース オブジェクトを作成する
 
 **SQL Server オブジェクト エクスプローラー**の新しい **[SQL Server]** ノードは視覚的に SSMS とよく似ていますが、それだけではなく、SSMS で提供されるものとよく似た機能を持つコンテキスト メニューを使用して、新しいオブジェクトを作成することもできます。  
   
@@ -61,17 +61,17 @@ ms.locfileid: "75241501"
   
 6.  これまでの手順を繰り返して、テーブルをもう 1 つ、**Customer** という名前で作成します。 今回は列グリッドを使用して、以下に示す列を Customer テーブルに追加します。 さらに、テーブルの名前が `[dbo].[Customer]` になるようにスクリプトを変更します。  
   
-    |Name|データ型|**[NULL を許容]**|  
+    |名前|データ型|**[NULL を許容]**|  
     |--------|-------------|-------------------|  
     |Id|INT|チェック解除|  
-    |Name|nvarchar (128)|チェック解除|  
+    |名前|nvarchar (128)|チェック解除|  
   
 7.  もう 1 つ、**Products** という名前のテーブルを作成します。 列グリッドを使用して、以下に示す列を Products テーブルに追加します。 さらに、テーブルの名前が `[dbo].[Products]` になるようにスクリプトを変更します。  
   
-    |Name|データ型|**[NULL を許容]**|  
+    |名前|データ型|**[NULL を許容]**|  
     |--------|-------------|-------------------|  
     |Id|INT|チェック解除|  
-    |Name|nvarchar (128)|チェック解除|  
+    |名前|nvarchar (128)|チェック解除|  
     |ShelfLife|INT|チェック|  
     |SupplierId|INT|チェック|  
     |CustomerId|INT|チェック|  

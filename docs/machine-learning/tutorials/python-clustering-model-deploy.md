@@ -1,32 +1,35 @@
 ---
 title: Python のチュートリアル:クラスター モデルのデプロイ
+titleSuffix: SQL machine learning
 description: この 4 部構成のチュートリアル シリーズのパート 4 では、SQL 機械学習を使用して Python でクラスタリング モデルをデプロイします。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b01f213ccac6d6ede0965cc55f3e11a12623ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606445"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730524"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習を使用して顧客を分類するモデルをデプロイする
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して、Python で開発されたクラスタリング モデルを SQL データベースにデプロイします。
+この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して、Python で開発されたクラスタリング モデルをデータベースにデプロイします。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-この 4 部構成チュートリアルシリーズの第 4 部では、SQL Server Machine Learning Services を使用して、Python で開発されたクラスター モデルを SQL データベースにデプロイします。
+この 4 部構成チュートリアルシリーズの第 4 部では、SQL Server Machine Learning Services を使用して、Python で開発されたクラスター モデルをデータベースにデプロイします。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズのパート 4 では、Azure SQL Managed Instance Machine Learning Services を使用して、Python で開発されたクラスタリング モデルをデータベースにデプロイします。
 ::: moniker-end
 
 新しい顧客が登録する際、クラスターを定期的に実行するには、どのアプリからでも Python スクリプトを呼び出せる必要があります。 これを行うには、SQL ストアド プロシージャ内に Python スクリプトを配置して、データベースに Python スクリプトをデプロイします。 モデルはデータベースで実行されるため、データベースに格納されているデータに対して、容易にトレーニングできます。
@@ -42,7 +45,7 @@ ms.locfileid: "83606445"
 
 [パート 1 ](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
 
-[パート 2 ](python-clustering-model-prepare-data.md)では、SQL データベースからデータを準備してクラスタリングを実行する方法を学びました。
+[パート 2 ](python-clustering-model-prepare-data.md)では、データベースからデータを準備してクラスタリングを実行する方法を学びました。
 
 [第 3 部](python-clustering-model-build.md)では、Python で K-Means クラスタリング モデルを作成し、トレーニングする方法を学びました。
 
@@ -130,7 +133,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>SQL Database 上でのクラスタリング実行
+## <a name="perform-clustering"></a>クラスタリングを実行する
 
 ストアド プロシージャが作成されたので、以下のスクリプトを実行し、プロシージャを使ってクラスタリングを実行します。
 

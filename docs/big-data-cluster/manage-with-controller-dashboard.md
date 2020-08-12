@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c051a634199bf6a8adc9a0b52a73196f68901893
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730602"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>SQL Server コントローラー ダッシュボードのビッグ データ クラスターを管理する
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 **azdata** とクラスターの状態ノートブックに加えて、SQL Server ビッグ データ クラスターの状態を表示する別の方法があります。 **接続** Viewlet を使用して、SQL Server ビッグ データ クラスター コントローラーを追加できます。 これにより、ダッシュボードを使用してクラスターの正常性を表示できます。
 
@@ -27,8 +27,8 @@ ms.locfileid: "73531939"
 
 ノートブックを起動するには、次の前提条件が要件です。
 
-* [Azure Data Studio Insiders ビルド](https://docs.microsoft.com/sql/big-data-cluster/deploy-big-data-tools?view=sqlallproducts-download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)の最新バージョン
-* [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 拡張機能が Azure Data Studio にインストールされている
+* [Azure Data Studio](https://aka.ms/getazuredatastudio) の最新版
+* [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 拡張機能が Azure Data Studio にインストールされている](../azure-data-studio/data-virtualization-extension.md)
 
 上記に加えて、SQL Server 2019 ビッグ データ クラスターでは以下のものも必要です。
 

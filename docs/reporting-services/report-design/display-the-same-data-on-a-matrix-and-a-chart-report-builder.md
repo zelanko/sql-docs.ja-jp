@@ -1,5 +1,6 @@
 ---
 title: マトリックスとグラフでの同じデータの表示 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、同じデータをマトリックスとグラフに表示することができます。 これらのデータ領域のプロパティを設定して、それら詳細が含まれるようにする方法を説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b444cd40a8141ca3b9398181944aef3a6e61915c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056553"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>マトリックスとグラフでの同じデータの表示 (レポート ビルダー)
   マトリックスとグラフで同じデータを表示するには、フィルター、グループ、並べ替え、およびデータに対して同じデータセットを指定するだけでなく、同じ式も指定するプロパティを両方のデータ領域に対して設定する必要があります。  

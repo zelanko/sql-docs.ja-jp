@@ -1,5 +1,6 @@
 ---
 title: 列の挿入または削除 (レポート ビルダー) | Microsoft Docs
+description: ページ分割されたレポートの Tablix データ領域の列を追加または削除します。 レポート ビルダーでは、Tablix データ領域は、テーブル、マトリックス、リストのいずれかです。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243b6ea1838e3e6d8666114172ca9c51684878b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b625462a1f4898bae7388842e5825c915eaf93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061743"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>列の挿入または削除 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートの Tablix データ領域では、列を追加したり削除したりできます。 Tablix データ領域は、テーブル、マトリックス、一覧のいずれかです。 次の手順は、グラフおよびゲージのデータ領域には適用されません。  
@@ -47,7 +48,7 @@ ms.locfileid: "77082027"
   
 ## <a name="to-insert-a-column-in-a-group-in-a-selected-data-region"></a>選択したデータ領域のグループに列を挿入するには  
   
--   Tablix データ領域の列グループ領域で、列の挿入位置にある列グループ セルを右クリックし、 **[列の挿入]** をクリックした後、 **[左 - 外側のグループ]** 、 **[左 - 内側のグループ]** 、 **[右 - 内側のグループ]** 、または **[右 - 外側のグループ]** をクリックします。  
+-   Tablix データ領域の列グループ領域で、列の挿入位置にある列グループ セルを右クリックし、 **[列の挿入]** をクリックした後、 **[左 - 外側のグループ]**、 **[左 - 内側のグループ]**、 **[右 - 内側のグループ]**、または **[右 - 外側のグループ]** をクリックします。  
   
      クリックした列グループのセルに対応するグループの内側または外側に列が追加されます。  
   

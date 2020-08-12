@@ -1,5 +1,6 @@
 ---
 title: 範囲グラフ (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで範囲グラフを使用すると、同じカテゴリの複数の値によってそれぞれ定義された、一連のデータ ポイントを表示できます。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3df3a377b466a84f325fbc5bee13f94bf9d08da7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eaeebef414b5bcb57ef59fa1400a288097704bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057581"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>範囲グラフ (レポート ビルダーおよび SSRS)
   範囲グラフでは、同じカテゴリの複数の値によってそれぞれ定義された、一連のデータ ポイントが表示されます。 値は、マーカーの高さ (値軸) で表されます。 カテゴリのラベルは、カテゴリ軸に表示されます。 一般的な範囲グラフでは、各データ ポイントの最高値と最低値の間の領域が設定されます。  

@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 63c271c4e1d59c9446495607b42b0b5ad13ea246
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ac7bbbb10d736b68d3e9930fafd7ae6e50f739f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671025"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>SQL 機械学習用の R チュートリアル
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この記事では、[SQL Server 上の Machine Learning Services](../sql-server-machine-learning-services.md) および [ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)用の R のチュートリアルおよびクイックスタートについて説明します。
@@ -31,17 +30,28 @@ ms.locfileid: "83606924"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 この記事では、[SQL Server 2016 R サービス](../r/sql-server-r-services.md)用の R のチュートリアルおよびクイックスタートについて説明します。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この記事では、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) 用の Python のチュートリアルおよびクイックスタートについて説明します。
+::: moniker-end
 
 <a name="bkmk_sqltutorials"></a>
 
 ## <a name="r-tutorials"></a>R のチュートリアル
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 | チュートリアル | 説明 |
 |------|-------------|
 | [デシジョン ツリーでスキー レンタルを予測する](r-predictive-model-introduction.md) | R とデシジョン ツリー モデルを使用して、将来のスキー レンタルの数を予測します。 Azure Data Studio のノートブックを使用してデータの準備とモデルのトレーニングを行い、T-SQL を使用してモデルを展開します。 |
 | [K-Means クラスタリングを使用した顧客の分類](r-clustering-model-introduction.md) | R を使用して、顧客を分類するための K-Means クラスタリング モデルを開発および展開します。 Azure Data Studio のノートブックを使用してデータの準備とモデルのトレーニングを行い、T-SQL を使用してモデルを展開します。 |
-| [データ サイエンティスト向けのデータベース内 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | SQL Server を初めて使用する R 開発者向けに、このチュートリアルでは SQL Server で一般的なデータ サイエンス タスクを実行する方法について説明します。 データを読み込んで視覚化し、モデルをトレーニングして SQL Server に保存し、予測分析にモデルを使用します。 |
-| [SQL 開発者向けのデータベース内 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md) | [!INCLUDE[tsql](../../includes/tsql-md.md)] ツールのみを使用して、完全な R ソリューションを構築し、展開します。 ソリューションを運用環境に移行することに重点を置いています。 ストアド プロシージャに R コードをラップし、R モデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに保存し、パラメーター化された呼び出しを R モデルに行い、予測を実行する方法について学習します。 |
+| [データ サイエンティスト向けのデータベース内 R 分析](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | SQL 機械学習を初めて使用する R 開発者向けに、このチュートリアルでは SQL で一般的なデータ サイエンス タスクを実行する方法について説明します。 データを読み込んで視覚化し、モデルをトレーニングしてデータベースに保存し、そのモデルを予測分析に使用します。 |
+| [SQL 開発者向けのデータベース内 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md) | SQL ツールのみを使用して、完全な R ソリューションを構築および展開します。 ソリューションを運用環境に移行することに重点を置いています。 ストアド プロシージャに R コードをラップし、R モデルをデータベースに保存して、予測のために R モデルに対してパラメーター化された呼び出しを行う方法について説明します。 |
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current"
+| チュートリアル | 説明 |
+|------|-------------|
+| [デシジョン ツリーでスキー レンタルを予測する](r-predictive-model-introduction.md) | R とデシジョン ツリー モデルを使用して、将来のスキー レンタルの数を予測します。 Azure Data Studio のノートブックを使用してデータの準備とモデルのトレーニングを行い、T-SQL を使用してモデルを展開します。 |
+| [K-Means クラスタリングを使用した顧客の分類](r-clustering-model-introduction.md) | R を使用して、顧客を分類するための K-Means クラスタリング モデルを開発および展開します。 Azure Data Studio のノートブックを使用してデータの準備とモデルのトレーニングを行い、T-SQL を使用してモデルを展開します。 |
+::: moniker-end
 
 ## <a name="r-quickstarts"></a>R のクイックスタート
 
@@ -55,4 +65,4 @@ SQL 機械学習を初めて使用する場合は、R のクイックスター�
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server での R の技術的な詳細については、「[SQL Server の R 言語拡張機能](../concepts/extension-r.md)」を参照してください。
++ [SQL Server の Python 拡張機能](../concepts/extension-r.md)

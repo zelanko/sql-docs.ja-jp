@@ -1,21 +1,21 @@
 ---
 title: SQL Server の単体テストのカスタム テスト条件
+description: SQL Server 単体テストのカスタム テスト条件をインストールする方法について説明します。 作成していないテスト条件のインストールに伴うリスクを表示します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 829132cdd70afb725720ba629ae556ea07f09a56
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245531"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518742"
 ---
 # <a name="custom-test-conditions-for-sql-server-unit-tests"></a>SQL Server の単体テストのカスタム テスト条件
 
@@ -39,9 +39,9 @@ SQL Server 単体テストにはカスタムのテスト条件を追加できま
   
 SQL Server 単体テストのカスタムのテスト条件の詳細については、以下を参照してください。  
   
--   [SQL Server 単体テスト デザイナーのテスト条件を作成する方法](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
+-   [方法:  SQL Server 単体テスト デザイナーのテスト条件を作成する](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
   
--   [Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
+-   [方法:  Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
   
 -   [チュートリアル: カスタム テスト条件を使用してストアド プロシージャの結果を検証する](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
   

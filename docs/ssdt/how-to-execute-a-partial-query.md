@@ -1,23 +1,23 @@
 ---
 title: 部分クエリを実行する
+description: 複雑なクエリのセクションのデバッグに関するヘルプを表示します。 Transact-SQL エディターを使用して、特定のスクリプト セグメントを強調表示し、1 つのクエリとして実行します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5786127626a655e47e2f6eb4ba96f0a16b740258
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f9aaa7712726b37d03c7d7de0994bb8abe01a7d9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241417"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518802"
 ---
-# <a name="how-to-execute-a-partial-query"></a>部分クエリを実行する方法
+# <a name="how-to-execute-a-partial-query"></a>方法:部分クエリを実行する
 
 Transact\-SQL エディターでは、スクリプトの一部を選択し、その部分を単一のクエリとして実行することができます。 これにより、複雑なクエリをセクションに分けて、セクションごとに容易にデバッグできるようになります。  
   
@@ -26,7 +26,7 @@ Transact\-SQL エディターでは、スクリプトの一部を選択し、そ
   
 ## <a name="to-partially-execute-a-query"></a>クエリを部分的に実行するには  
   
-1. **SQL Server オブジェクト エクスプローラー**で、**[ビュー]** の下にある **PerishableFruits** をダブルクリックし、Transact\-SQL エディターで開きます。  
+1. **SQL Server オブジェクト エクスプローラー**で、 **[ビュー]** の下にある **PerishableFruits** をダブルクリックし、Transact\-SQL エディターで開きます。  
   
 2. コード内の「`SELECT p.Id, p.Name FROM dbo.Product p`」という部分を選択し、右クリックして、 **[クエリの実行]** をクリックします。  
   

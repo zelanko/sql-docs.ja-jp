@@ -1,5 +1,6 @@
 ---
 title: ページ ヘッダーまたはページ フッターの追加および削除 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、ページ ヘッダーまたはフッターに、静的テキスト、画像、線、四角形、および罫線を追加する方法について説明します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adb2d9d24bc353c7d1c64c328b342b24022faef8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab6d1585b254e8c03d9e471b32d3429cc489f8a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056543"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>ページ ヘッダーまたはページ フッターの追加および削除 (レポート ビルダーおよび SSRS)
   ページ ヘッダーまたはページ フッターには、静的テキスト、画像、線、四角形、および罫線を追加できます。 ヘッダーまたはフッターに変数または計算されたデータを使用する場合は、式およびデータバインド画像をテキスト ボックスに配置できます。  

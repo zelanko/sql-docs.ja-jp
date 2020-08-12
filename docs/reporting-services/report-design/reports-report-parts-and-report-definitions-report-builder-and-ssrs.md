@@ -1,5 +1,6 @@
 ---
 title: レポート、レポート パーツ、およびレポート定義 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのレポートのさまざまな状態を表すために使用されている、用語について説明します。 これらの状態には、初期定義とパブリッシュされたレポートが含まれます。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 11236a29e22877e1d785d7ac2325898cc11bac7e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 53e8c7fcd6765742af0056fb44659386cf652561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039716"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 初期定義、パブリッシュされたレポート、ユーザーに表示される表示レポートなど、改ページ調整されたレポートの異なる状態を示すさまざまな用語が使用されます。  

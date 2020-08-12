@@ -9,16 +9,16 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cf0d79e08025d52b248175485ba2e3272e18dcb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ad3cc263ea81b9e3bda5cb34ea27cfabba1ae716
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730712"
 ---
 # <a name="resources-deployed-with-big-data-cluster"></a>ビッグ データ クラスターに展開されるリソース
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 この記事では、SQL Server ビッグ データ クラスターで展開されるリソースについて説明します。
 
@@ -30,7 +30,7 @@ ms.locfileid: "80665463"
 kubectl get pods -n <namespace>
 ```
 
-`<namespace>` は、実際のビッグ データ クラスターの Kubernetes 名前空間に置き換えてください。 
+`<namespace>` をビッグ データ クラスターの名前に置き換えます。 
 
 詳細については、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md#configfile)」を参照してください。
 

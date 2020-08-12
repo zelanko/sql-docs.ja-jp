@@ -8,16 +8,16 @@ ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f9cca7e761b8f8ec3f5b87e9a195a0eb8b5da6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94719ef65023b1afd4edcf7770887323d0267127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730621"
 ---
 # <a name="manage-big-data-cluster-access-in-active-directory-mode"></a>Active Directory モードでビッグ データ クラスター アクセスを管理する
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 この記事では、clusterAdmins と clusterUsers の展開時に提供される Active Directory グループを更新する方法について説明します。
 
@@ -81,7 +81,7 @@ ms.locfileid: "76259460"
 
 1. 前の接続を使用して、roles テーブルに行を挿入します。 大文字で「*REALM*」という値を入力します。
 
-   管理者のアクセス許可を付与する場合は、 *\<ロール名>* に *bdcAdmin* ロールを使用します。 管理者以外のユーザーの場合は、*bdcUser* ロールを使用します。
+   管理者のアクセス許可を付与する場合は、 *\<role name>* に *bdcAdmin* ロールを使用します。 管理者以外のユーザーの場合は、*bdcUser* ロールを使用します。
 
    ```sql
    USE controller;

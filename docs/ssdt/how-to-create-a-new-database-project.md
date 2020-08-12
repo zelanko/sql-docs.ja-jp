@@ -1,5 +1,6 @@
 ---
 title: 新しいデータベース プロジェクトを作成する
+description: 新しいデータベース プロジェクトを作成する方法について説明します。 既存のデータベースから新しいプロジェクトにスキーマをインポートする方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -13,22 +14,21 @@ f1_keywords:
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3ce0ac6afc902803afe8aa6e20c71f38998f8286
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f4e89dcf95cc02f3eea7cf681e9cdfc48d906367
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241535"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518992"
 ---
-# <a name="how-to-create-a-new-database-project"></a>新しいデータベース プロジェクトを作成する方法
+# <a name="how-to-create-a-new-database-project"></a>方法:新しいデータベース プロジェクトを作成する
 
 新しいデータベース プロジェクトを作成し、既存のデータベース、.sql スクリプト ファイル、またはデータ層アプリケーション (.dacpac) からデータベース スキーマをインポートすることができます。 その後で、接続されたデータベース開発で使用できるものと同じビジュアル デザイナー ツール (Transact\-SQL エディター、テーブル デザイナー) を起動し、オフライン データベース プロジェクトに変更を加えて、その変更を元の実稼働データベースに公開できます。 変更を後で公開できるようにスクリプトとして保存することもできます。 **プロジェクトのプロパティ** ペインを使用すると、ターゲット プラットフォームを別のバージョンの SQL Server (SQL Azure を含む) に変更することもできます。  
   
-以下に示す 2 つの手順では、新しいデータベース プロジェクトを作成し、既存のデータベースからスキーマをインポートすることによって、基本的に同じ結果を得ることができます。 **ソリューション エクスプローラー**では、各データベース オブジェクトが SQL スクリプト ファイル (.sql) として表されます。 スナップショットからデータベース スキーマをインポートする方法について詳しくは、「[プロジェクトのスナップショットを作成する方法](../ssdt/how-to-create-a-snapshot-of-a-project.md)」をご覧ください。  
+以下に示す 2 つの手順では、新しいデータベース プロジェクトを作成し、既存のデータベースからスキーマをインポートすることによって、基本的に同じ結果を得ることができます。 **ソリューション エクスプローラー**では、各データベース オブジェクトが SQL スクリプト ファイル (.sql) として表されます。 スナップショットからデータベース スキーマをインポートする方法の詳細については、「[プロジェクトのスナップショットを作成する方法](../ssdt/how-to-create-a-snapshot-of-a-project.md)」を参照してください。  
   
 > [!WARNING]  
 > 以下に示す手順では、「[接続されているデータベース開発](../ssdt/connected-database-development.md)」に示されているこれまでの手順で作成したエンティティを使用します。  
@@ -76,5 +76,5 @@ ms.locfileid: "75241535"
 9. **ソリューション エクスプローラー**で **TradeDev** プロジェクトを右クリックし、 **[ビルド]** をクリックしてデータベース プロジェクトをビルドします。  
   
 ## <a name="see-also"></a>参照  
-[ターゲット プラットフォームを変更し、データベース プロジェクトを公開する方法](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+[方法:  ターゲット プラットフォームを変更し、データベース プロジェクトを公開する](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

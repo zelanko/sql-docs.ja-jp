@@ -4,24 +4,32 @@ description: SQL Server Machine Learning Services と SQL Server R Services に�
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 05/27/2020
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 78dc96f3568bd2a19f2604d76d47010f9d9104a0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 877728812d36a7d4db8370254c0fdccbe1011350
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723943"
 ---
 # <a name="get-r-package-information"></a>R パッケージ情報の取得
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-この記事では、SQL Server Machine Learning Services と SQL Server R Services にインストールされている R パッケージに関する情報を取得する方法について説明します。 R スクリプトの例では、インストール パスやバージョンなどのパッケージ情報を一覧表示する方法を示しています。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+この記事では、[SQL Server 上の Machine Learning Services](../sql-server-machine-learning-services.md) および[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)にインストールされている R パッケージに関する情報を取得する方法について説明します。 R スクリプトの例では、インストール パスやバージョンなどのパッケージ情報を一覧表示する方法を示しています。
+::: moniker-end
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+この記事では、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) にインストールされている R パッケージに関する情報を取得する方法について説明します。 R スクリプトの例では、インストール パスやバージョンなどのパッケージ情報を一覧表示する方法を示しています。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この記事では、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) にインストールされている R パッケージに関する情報を取得する方法について説明します。 R スクリプトの例では、インストール パスやバージョンなどのパッケージ情報を一覧表示する方法を示しています。
+::: moniker-end
 
 ## <a name="default-r-library-location"></a>R ライブラリの既定の場所
 
@@ -90,7 +98,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 次の Microsoft R パッケージは、セットアップ時に R 機能を選択すると、SQL Server Machine Learning Services と共にインストールされます。
 
@@ -174,6 +182,6 @@ print(packageDescription("MicrosoftML"))
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [R ツールを使用してパッケージをインストールする](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [sqlmlutils で新しい R パッケージをインストールする](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

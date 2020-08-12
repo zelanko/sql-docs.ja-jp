@@ -1,6 +1,7 @@
 ---
 title: トレース表示の既定値を設定する
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler によってフォントの種類、サイズ、スタイルなどのトレースで既定で使用されるツール オプションを確認し、それらを調整する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4a1958ee112b1453a6b86a5e520737b0945147c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a1e746b4f418c23e22dafc6c07b211c188b8a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726870"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>トレース表示の既定値の設定 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] がトレースをトレース ウィンドウに表示する際に使用するフォントの種類やサイズ、スタイルを指定するツール オプションを設定する方法について説明します。 また、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] により、すべての日付と時刻を、オペレーティング システムに構成されている地域設定で表示するよう指定することもできます。  
   

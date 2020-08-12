@@ -2,20 +2,20 @@
 title: アプリケーション展開とは
 titleSuffix: SQL Server Big Data Clusters
 description: この記事では、SQL Server 2019 ビッグ データ クラスターへのアプリケーションの展開について説明します。
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831575"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215451"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>ビッグ データ クラスターへのアプリケーション展開とは
 
@@ -52,6 +52,28 @@ output: #output parameter the app expects and the type
 ReplicaSet が作成され、ポッドが開始されると、`spec.yaml` ファイルで `schedule` が設定されている場合は、cron ジョブが作成されます。 最後に、アプリケーションの管理と実行に使用できる Kubernetes サービスが作成されます (以下を参照)。
 
 アプリケーションが実行されると、アプリケーションの Kubernetes サービスによって、レプリカに対する要求がプロキシされ、結果が返されます。
+
+## <a name="security-considerations-for-applications-deployments-on-openshift"></a><a id="app-deploy-security"></a> OpenShift でのアプリケーション展開のセキュリティに関する考慮事項
+
+SQL Server 2019 CU5 により、Red Hat OpenShift でのビッグ データ クラスターの展開、および BDC の更新されたセキュリティ モデルがサポートされるため、特権コンテナーは不要になります。 SQL Server 2019 CU5 を使用するすべての新しいデプロイでは、非特権だけでなく、コンテナーも既定では非ルート ユーザーとして実行されます。
+
+CU5 リリースの時点では、[アプリ展開](concept-application-deployment.md)インターフェイスを使用して展開されたアプリケーションのセットアップ手順は、引き続き *ルート* ユーザーとして実行されます。 これは、セットアップ中に、アプリケーションで使用する追加のパッケージがインストールされるために必要です。 アプリケーションの一部として展開された他のユーザー コードは、特権の低いユーザーとして実行されます。 
+
+また、**CAP_AUDIT_WRITE** 機能は、cron ジョブを使用して SSIS アプリケーションをスケジュールするために必要なオプションの機能です。 アプリケーションの yaml 仕様ファイルでスケジュールが指定されている場合、アプリケーションは cron ジョブによってトリガーされるため、追加の機能が必要になります。  または、Web サービスの呼び出しを使用して *azdata app run* で必要に応じてアプリケーションをトリガーすることもできます。この場合、CAP_AUDIT_WRITE 機能は必要ありません。 
+
+> [!NOTE]
+> この機能は、ビッグ データ クラスターの既定のデプロイでは必須ではないため、[OpenShift デプロイの記事](deploy-openshift.md) のカスタム SCC には含まれていません。 この機能を有効にするには、まず、カスタム SCC yaml ファイルを更新して、CAP_AUDIT_WRITE を含める必要があります。 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
 
 ## <a name="how-to-work-with-application-deployment"></a>アプリケーション展開を使用する方法
 

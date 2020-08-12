@@ -1,5 +1,6 @@
 ---
 title: テーブル内のグラフまたはマトリックスでのデータの整列 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーでのスパークラインとデータ バーの用途について説明します。 これらの小さい単純なグラフによって、最小限の詳細情報で大量の情報が伝えられます。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6cb82188a6ded92fadf96385f193f504c29bf56
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30b2c4ad2bb1c4c4a6254d5563ab547b11c3f52c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081516"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994572"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>テーブル内のグラフまたはマトリックスでのデータの整列 (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは小さく単純なグラフであり、余分な情報を最小限に抑えて多くの情報を伝えます。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、このオプションをオンにすると、基礎となるデータに欠落した値がある場合でも、スパークラインおよびデータ バーの値がテーブルまたはマトリックスのさまざまなセルに整列します。  

@@ -1,23 +1,23 @@
 ---
 title: SQL Server の単体テストの実行を構成する
+description: SQL Server の単体テストの実行を構成する方法について説明します。 接続文字列を指定する方法とデータベース スキーマを配置する方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241567"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519032"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>SQL Server の単体テストの実行を構成する方法
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>方法:SQL Server の単体テストの実行を構成する
 
 テスト プロジェクトを構成することによって、SQL Server 単体テストの実行方法を制御するいくつかの設定を指定できます。 これらの構成設定は、テスト プロジェクトの app.config ファイルに格納されます。 このファイルを直接編集する場合は、新しい値が [テストの構成] ダイアログ ボックスに表示されます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75241567"
   
     -   単体テストを実行するデータベース接続をクリックします。  
   
-    -   テストの実行を別のデータベース接続に対して検証する場合は、 **[セカンダリ データ接続を使用して単体テストを検証]** チェック ボックスをオンにして、一覧でデータベース接続をクリックします。  
+    -   テストの実行を別のデータベース接続に対して検証する場合は、**[セカンダリ データ接続を使用して単体テストを検証]** チェック ボックスをオンにして、一覧でデータベース接続をクリックします。  
   
     -   **[新しい接続]** をクリックし、いずれかの一覧に接続を追加します。 **[接続の編集]** をクリックして、既存の接続の設定を変更することもできます。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "75241567"
   
 4.  **[配置]** では、次の操作を実行できます。  
   
-    -   テストの実行前に、対象のデータベース プロジェクトに加えたスキーマ変更を確実にコミットするには、 **[単体テストの実行前に自動的にデータベース プロジェクトを配置]** チェック ボックスをオンにします。  
+    -   テストの実行前に、対象のデータベース プロジェクトに加えたスキーマ変更を確実にコミットするには、**[単体テストの実行前に自動的にデータベース プロジェクトを配置]** チェック ボックスをオンにします。  
   
     -   **[データベース プロジェクト]** で、配置するデータベース プロジェクトをクリックするか、参照ボタンをクリックして別のプロジェクトを参照します。 データベース プロジェクト ファイルの拡張子は .dbproj です。  
   

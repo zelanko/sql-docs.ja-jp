@@ -1,23 +1,23 @@
 ---
 title: 機能拡張のインストールと管理
+description: SQL Server Data Tools の機能を向上させるために機能拡張をインストールする方法について説明します。 さまざまな種類の拡張機能をインストールする場所を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 7ef7a61b87c11c63070d1e7713d2aae0ad87f547
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241385"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518982"
 ---
-# <a name="how-to-install-and-manage-feature-extensions"></a>方法: 機能拡張のインストールと管理
+# <a name="how-to-install-and-manage-feature-extensions"></a>方法:機能拡張のインストールと管理
 
 データベース コードを分析するルール、データベース単体テストの条件、およびビルド/配置コントリビューターを追加すると、SQL Server Data Tools などの Visual Studio エディションに用意されている機能を拡張できます。 ただし、機能拡張を自分で作成したか、他のユーザーが作成したかにかかわらず、機能拡張を使用するには、あらかじめインストールしておく必要があります。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75241385"
 |拡張機能の種類|コマンド ライン サービス|インストール フォルダー|  
 |------------------|------------------------|------------------|  
 |SQL Server の単体テストのカスタム テスト条件|MSBuild または MSTest を使用して、Visual Studio 2013 の開発者コマンド プロンプトなどのコマンド ライン ツールから単体テストを実行できます。|Visual Studio 内で実行する場合と同じです。|  
-|ビルド コントリビューター<br /><br />配置コントリビューター|[SqlPackage.exe](../tools/sqlpackage.md)。または、データベース プロジェクトをビルドするときに MSBuild のターゲットの配置または公開を使用します。|MSBuild: Visual Studio 内で実行する場合と同じです。<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): Visual Studio ディレクトリ内にある場合は、上記と同じです。<br /><br />SqlPackage.exe と他の DacFx DLL がそのディレクトリ以外の場所にある場合、機能拡張は同じディレクトリか、C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions 内に配置する必要があります。|  
+|ビルド コントリビューター<br /><br />配置コントリビューター|[SqlPackage.exe](../tools/sqlpackage.md)。または、データベース プロジェクトをビルドするときに MSBuild のターゲットの配置または公開を使用します。|MSBuild:Visual Studio 内で実行する場合と同じです。<br /><br />[SqlPackage.exe](../tools/sqlpackage.md):Visual Studio ディレクトリ内にある場合は、上記と同じです。<br /><br />SqlPackage.exe と他の DacFx DLL がそのディレクトリ以外の場所にある場合、機能拡張は同じディレクトリか、C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions 内に配置する必要があります。|  
 |静的コード分析ルール|MSBuild を使用して、プロジェクトをビルドし、静的コード分析を実行できます。<br /><br />また、作成したアプリケーションから、CodeAnalysisService API を使用してコード分析を実行することもできます。 この場合、機能拡張のルックアップ ルールは、SqlPackage.exe を使用する場合と同様に機能します。|ビルド コントリビューターと配置コントリビューターで同じフォルダーが使用されます|  
   
 > [!NOTE]  

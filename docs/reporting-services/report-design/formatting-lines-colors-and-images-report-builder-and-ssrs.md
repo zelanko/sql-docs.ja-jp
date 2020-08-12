@@ -1,5 +1,6 @@
 ---
 title: 線、色、および画像の書式設定 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで線、色、データ領域、および画像を使用する方法について説明します。 レポート ビルダーで視覚的にアイテムを結合すると、判読しやすくなります。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8567c1f331c17cd0875c2d4f1b94423b3c3ce347
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc3cacd9321b65dc652fa7323553b445949501fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079861"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048258"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>線、色、および画像の書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、線、色、データ領域、画像、その他のレポート アイテムの書式を設定する機能が用意されています。  

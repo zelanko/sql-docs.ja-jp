@@ -5,23 +5,22 @@ description: この 4 部構成のチュートリアル シリーズの第 2 部
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 25ccde4580e43ce68b74ef32f37f9c92cad12dfe
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 436546f7b84d561a3605912a7af55a0a1ad19315
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730502"
 ---
 # <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習を使用して顧客を分類するデータを準備する
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用してデータベースからデータを復元して準備します。 このシリーズの後半では、このデータを使用して、ビッグ データ クラスター上の SQL Server Machine Learning Services を使用して Python でクラスタリング モデルをトレーニングし展開します。
@@ -29,18 +28,21 @@ ms.locfileid: "83606847"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用してデータベースからデータを復元して準備します。 このシリーズの後半では、このデータを使用して、SQL Server Machine Learning Services を使用する Python でクラスタリング モデルをトレーニングし展開します。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用してデータベースからデータを復元して準備します。 このシリーズの後半では、本データを使用して、Azure SQL Managed Instance Machine Learning Services とともに Python でクラスタリング モデルをトレーニングし、デプロイします。
+::: moniker-end
 
 この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
 > * Python を使用して異なるディメンションに沿って顧客を分離する
-> * SQL データベースから Python データ フレームにデータを読み込む
+> * データベースから Python データ フレームにデータを読み込む
 
 [パート 1 ](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
 
 [第 3 部](python-clustering-model-build.md)では、Python で K-Means クラスタリング モデルを作成し、トレーニングする方法を学びました。
 
-[第 4 部](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できるストアド プロシージャをデータベースに作成する方法について学びます。
+[パート 4 ](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できるストアド プロシージャをデータベースに作成する方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -75,7 +77,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=tpcxbb_1gb; UID=<username>; PWD=<password>')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,

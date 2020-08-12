@@ -4,27 +4,30 @@ titleSuffix: SQL machine learning
 description: この 4 部構成のチュートリアル シリーズのパート 4 では、SQL 機械学習を使用して、スキー レンタルを予測する Python モデルをデータベースにデプロイします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1771cc70a2e5b36109ba028c86939ce66fa00993
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 030a172d35800becce17f804f67973368581fc05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730492"
 ---
 # <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習で線形回帰モデルをデプロイする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズのパート 4 では、Machine Learning Services またはビッグ データ クラスターを使用して、Python で開発された線形回帰モデルを SQL Server データベースにデプロイします。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズのパート 4 では、Machine Learning Services を使用して、Python で開発された線形回帰モデルを SQL Server データベースにデプロイします。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズのパート 4 では、Machine Learning Services を使用して、Python で開発された線形回帰モデルを Azure SQL Managed Instance データベースにデプロイします。
 ::: moniker-end
 
 この記事では、次の方法について学習します。

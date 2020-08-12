@@ -1,48 +1,50 @@
 ---
 title: チュートリアル:R でクラスタリングを実行するためのデータを準備する
 titleSuffix: SQL machine learning
-description: この 4 部構成のチュートリアル シリーズのパート 2 では、SQL 機械学習を使用して R でクラスタリングを実行するために、SQL データベースからデータを準備します。
+description: この 4 部構成のチュートリアル シリーズのパート 2 では、SQL 機械学習を使用して R でクラスタリングを実行するために、データベースからデータを準備します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adeda8bf04333bb256daea8ebc3cab1288f9aebf
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a83268efebbe53a12806c3e52a38e3c5ea2d94e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728550"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>チュートリアル:SQL 機械学習を使用して R でクラスタリングを実行するためのデータを準備する
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズのパート 2 では、SQL Database Machine Learning Services またはビッグ データ クラスターを使用して R でクラスタリングを実行するために、SQL データベースからデータを準備します。
+この 4 部構成のチュートリアル シリーズのパート 2 では、SQL Server Machine Learning Services を使用して、またはビッグ データ クラスターで R でクラスタリングを実行するために、データベースからデータを準備します。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズのパート 2 では、SQL Database Machine Learning Services を使用して R でクラスタリングを実行するために、SQL データベースからデータを準備します。
+この 4 部構成のチュートリアル シリーズのパート 2 では、SQL Server Machine Learning Services を使用して R でクラスタリングを実行するために、データベースからデータを準備します。
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズのパート 2 では、SQL Database R Services を使用して R でクラスタリングを実行するために、SQL データベースからデータを準備します。
+この 4 部構成のチュートリアル シリーズのパート 2 では、SQL Server 2016 R Services を使用して R でクラスタリングを実行するために、データベースからデータを準備します。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズのパート 2 では、Azure SQL Managed Instance の Machine Learning Services を使用して R でクラスタリングを実行するために、データベースからデータを準備します。
 ::: moniker-end
 
 この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
 > * R を使用してさまざまな特徴に従って顧客を分類する
-> * SQL データベースから R データ フレームにデータを読み込む
+> * データベースから R データ フレームにデータを読み込む
 
 [パート 1 ](r-clustering-model-introduction.md)では、前提条件をインストールしてサンプル データベースを復元しました。
 
 [パート 3 ](r-clustering-model-build.md)では、R で K-Means クラスタリング モデルを作成し、トレーニングする方法を学びます。
 
-[パート 4 ](r-clustering-model-deploy.md)では、新しいデータに基づいて R でクラスタリングを実行できるストアド プロシージャを SQL データベースに作成する方法について説明します。
+[パート 4](r-clustering-model-deploy.md) では、新しいデータに基づいて R でクラスタリングを実行できるストアド プロシージャをデータベースに作成する方法について学びます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -63,9 +65,9 @@ SQL クエリで、次の特徴に従って顧客を分類しています。
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;uid=Username;pwd=Password"
 
-#Define the query to select data from SQL Server
+#Define the query to select data
 input_query <- "
 SELECT ss_customer_sk AS customer
     ,round(CASE 
@@ -124,7 +126,7 @@ LEFT OUTER JOIN (
         SUM(sr_return_amt) AS returns_money
     FROM store_returns
     GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
+    ) returned ON ss_customer_sk = sr_customer_sk";
 ```
 
 ## <a name="load-the-data-into-a-data-frame"></a>データをデータ フレームに読み込む
@@ -132,7 +134,7 @@ LEFT OUTER JOIN (
 ここで、次のスクリプトを使用すると、クエリの結果が R データ フレームに返されます。
 
 ```r
-# Query SQL Server using input_query and get the results back
+# Query using input_query and get the results back
 # to data frame customer_data
 
 library(RODBC)
@@ -141,7 +143,7 @@ ch <- odbcDriverConnect(connStr)
 
 customer_data <- sqlQuery(ch, input_query)
 
-# Take a look at the data just loaded from SQL Server
+# Take a look at the data just loaded
 head(customer_data, n = 5);
 ```
 
@@ -165,7 +167,7 @@ head(customer_data, n = 5);
 このチュートリアル シリーズのパート 2 で学習した内容は次のとおりです。
 
 * R を使用してさまざまな特徴に従って顧客を分類する
-* SQL データベースから R データ フレームにデータを読み込む
+* データベースから R データ フレームにデータを読み込む
 
 顧客データを使用する機械学習モデルをトレーニングするには、このチュートリアル シリーズの第 3 部に従ってください。
 

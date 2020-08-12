@@ -5,20 +5,20 @@ description: この記事では、SQL Server ビッグ データ クラスター
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 10/23/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77074430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730682"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のセキュリティの概念
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 この記事では、ビッグ データ クラスターのセキュリティに関する重要な概念について説明します
 
@@ -83,17 +83,21 @@ Hadoop コンポーネントでは混合モード認証がサポートされま�
 デプロイ時に定義する必要があるログイン資格情報には、以下が含まれます。
 
 クラスター管理者のユーザー名:
+
  + `AZDATA_USERNAME=<username>`
 
 クラスター管理者のパスワード:  
  + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
-> 非 AD モードでは、HDFS/Spark にアクセスするためにゲートウェイ (Knox) に対して認証を行うために、ユーザー名 "root" を上記のパスワードと組み合わせて使用する必要があることに注意してください。
+> 非 AD モードでは、HDFS/Spark にアクセスするためにゲートウェイ (Knox) に対して認証を行うために、ユーザー名を上記のパスワードと組み合わせて使用する必要があることにご注意ください。 SQL Server 2019 CU5 より前では、ユーザー名は `root` でした。
+> 
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ## <a name="next-steps"></a>次のステップ
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] の詳細については、次のリソースを参照してください。
+[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)
 
-- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)
-- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] アーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+[ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] アーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+
+[Kubernetes RBAC](kubernetes-rbac.md)

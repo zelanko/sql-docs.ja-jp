@@ -1,5 +1,6 @@
 ---
 title: ストアド プロシージャをデバッグする
+description: Transact-SQL デバッガーを使用してストアド プロシージャを対話的にデバッグする方法について説明します。 SQL 呼び出し履歴、ローカル変数、パラメーターを表示する方法を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: efd64369a6a8e666d67f2c277df62dc9af9c4e99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc60da27d0176057fb7340b4db743786efe27017
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241440"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518872"
 ---
 # <a name="how-to-debug-stored-procedures"></a>方法:ストアド プロシージャをデバッグする
 
@@ -55,7 +55,7 @@ Transact\-SQL デバッガーでは、SQL ストアド プロシージャの SQL
   
 6.  左ウィンドウの余白部分をクリックし、`EXEC` ステートメントにブレークポイントを追加します。  
   
-7.  Transact\-SQL エディターのツール バーにある緑色の矢印ボタンのドロップダウン矢印をクリックし、 **[デバッガーで実行]** をクリックすることにより、デバッグをオンにしてクエリを実行します。  
+7.  Transact\-SQL エディターのツール バーにある緑色の矢印ボタンのドロップダウン矢印をクリックし、**[デバッガーで実行]** をクリックすることにより、デバッグをオンにしてクエリを実行します。  
   
 8.  または、SQL Server オブジェクト エクスプローラーからデバッグを開始することもできます。 **AddProduct** ストアド プロシージャ ( **[ローカル]**  -> **TradeDev** データベース -> **[プログラミング]**  ->  **[ストアド プロシージャ]** の順に選択して表示) を右クリックします。 **[プロシージャのデバッグ...]** をクリックします。オブジェクトにパラメーターが必要な場合には、 **[プロシージャのデバッグ]** ダイアログ ボックスに、各パラメーターの行を含むテーブルが表示されます。 テーブルの各行には、パラメーター名の列およびパラメーター値の列があります。 各パラメーターの値を入力して、[OK] をクリックします。  
   
@@ -67,7 +67,7 @@ Transact\-SQL デバッガーでは、SQL ストアド プロシージャの SQL
   
 12. F10 キーを押して、残りのコードをステップ オーバーで実行します。  
   
-13. SQL Server オブジェクト エクスプローラーで、**Product** テーブルのデータ ビューに新しいコンテンツを表示するために、 **[TradeDev]** データベース ノードを更新します。  
+13. SQL Server オブジェクト エクスプローラーで、**Product** テーブルのデータ ビューに新しいコンテンツを表示するために、**[TradeDev]** データベース ノードを更新します。  
   
 14. SQL Server オブジェクト エクスプローラーの **[ローカル]** ノードの下で、**TradeDev** データベースの **Product** テーブルを探します。  
   

@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: 分散再生コントローラーおよびクライアントのサービス アカウントを変更し、アクセス制御リストを再度適用する方法について学習します。
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4c8a0f29addf80905ef6edaf5920e479fbaa48e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681162"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>コントローラー サービスとクライアント サービスのアカウントを変更する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 このトピックでは、分散再生コントローラーと分散再生クライアントのサービス アカウントを変更し、アクセス制御リスト (ACL) を再度適用する方法について説明します。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "83000460"
   
 1.  分散再生サービスがインストールされているコンピューターで、コマンド プロンプトから、「 **dcomcnfg**」と入力します。  
   
-2.  **[サービス]** をダブルクリックし、下へスクロールして、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生 \<サービス名>]** を右クリックします。次に、 **[開始]** または **[停止]** をクリックします。  
+2.  **[サービス]** をダブルクリックし、下へスクロールして、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生 \<service name>]** を右クリックします。次に、 **[開始]** または **[停止]** をクリックします。  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>分散再生コントローラー サービスを変更するには  
   

@@ -1,5 +1,6 @@
 ---
 title: 四角形と線 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、ページ分割されたレポートに視覚効果を作成する方法について説明します。 色や画像、ツールヒント、ブックマークなどの機能を追加できます。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d4448fba4e9faf1c3d51bb6233723385d111230
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c33ff26c9cf77e95e5f17b8bb2e31bc73b794d97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057555"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>四角形と線 (レポート ビルダーおよび SSRS)
   四角形と線は、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートに視覚効果を与えることができます。 [ホーム] タブの [罫線] セクションでこれらのレポート アイテムの表示プロパティを設定し、プロパティ ペインでその他のプロパティを設定できます。 背景色、背景画像、ツールヒント、ブックマークなどの機能を、四角形に追加できます。  

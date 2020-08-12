@@ -1,21 +1,21 @@
 ---
 title: SQL Server での一括コピー操作
 description: .NET Data Provider for SQL Server のバルク コピー機能について説明します。
-ms.date: 09/30/2019
+ms.date: 06/15/2020
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c827ae70d9aa344f52de1d76c482beaef90c09aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4896bfdb419cfbd8e2cf6302a0a818407d6a596c
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78897035"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107010"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server での一括コピー操作
 
@@ -32,7 +32,7 @@ Microsoft SQL Server には、SQL Server データベースのテーブルまた
 - トランザクション内での一括コピー操作  
   
 > [!NOTE]
->  <xref:Microsoft.Data.SqlClient.SqlBulkCopy> クラスがサポートされていない、バージョン 1.1 以前の .NET Framework では、<xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを使用して、SQL Server Transact-SQL **BULK INSERT** ステートメントを実行できます。  
+>  <xref:Microsoft.Data.SqlClient.SqlBulkCopy> クラスがサポートされていない、バージョン 1.1 以前の .NET Framework では、**オブジェクトを使用して、SQL Server Transact-SQL**BULK INSERT<xref:Microsoft.Data.SqlClient.SqlCommand> ステートメントを実行できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [一括コピーのセットアップ例](bulk-copy-example-setup.md)  
@@ -46,6 +46,9 @@ Microsoft SQL Server には、SQL Server データベースのテーブルまた
   
 [トランザクションと一括コピー操作](transaction-bulk-copy-operations.md)  
 トランザクション内で一括コピー操作を実行する方法、およびトランザクションをコミットまたはロールバックする方法について説明します。  
+
+[一括コピー操作の順序のヒント](bulk-copy-order-hints.md)  
+順序のヒントを使用して一括コピーのパフォーマンスを向上させる方法について説明します。
   
 ## <a name="next-steps"></a>次のステップ
 - [SQL Server と ADO.NET](index.md)

@@ -1,23 +1,23 @@
 ---
 title: クエリを使用して既存のテーブルを編集する
+description: Transact-SQL クエリを使用して、テーブルの定義またはデータを編集する方法について説明します。 テーブル定義を編集し、テーブルに行を挿入する例を示します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1ebdca633ff866d51fcc20aa05993bb5969e4b2
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241414"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518812"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>クエリを使用して既存のテーブルを編集する方法
+# <a name="how-to-edit-an-existing-table-using-queries"></a>方法:クエリを使用して既存のテーブルを編集する
 
 Transact\-SQL クエリを記述することによって、テーブルまたはそのデータの定義を編集することができます。 テーブルの表示またはテーブルへのデータ入力を視覚的に行うには、データ エディターを使用します。データ エディターの詳細については、「[接続されているデータベース開発](../ssdt/connected-database-development.md)」を参照してください。  
   
@@ -32,7 +32,7 @@ Transact\-SQL クエリを記述することによって、テーブルまたは
   
 3.  **Address** 列の **[Null を許容]** チェック ボックスをオンにします。 直ちに、スクリプト ペイン内の対応するコードが `NULL` に変わります。  
   
-4.  「[接続されているデータベースを Power Buffer で更新する方法](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)」の手順に従ってデータベースを更新します。  
+4.  「[接続されているデータベースを Power Buffer で更新する方法](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)」のトピックの手順に従ってデータベースを更新します。  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>Transact\-SQL クエリを使用して新しいテーブルにデータを設定するには  
   

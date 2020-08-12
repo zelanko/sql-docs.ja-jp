@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用して、SQL 機械学習によりスキー レンタルを予測するデータを準備します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75f475f8a2b4b0d23d95498a69f5e5d745f7510d
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 424d61e24e9cd1163854d86961a34770eee36260
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730481"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習で線形回帰モデルをトレーニングするためのデータを準備する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用してデータベースからデータを準備します。 このシリーズの後半では、本データを使用して、ビッグ データ クラスター上の SQL Server Machine Learning Services を使用して Python で線形回帰モデルをトレーニングし、デプロイします。
@@ -26,11 +26,14 @@ ms.locfileid: "83606724"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用してデータベースからデータを準備します。 このシリーズの後半では、本データを使用して、SQL Server Machine Learning Services とともに Python で線形回帰モデルをトレーニングし、デプロイします。
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用してデータベースからデータを準備します。 このシリーズの後半では、本データを使用して、Azure SQL Managed Instance Machine Learning Services とともに Python で線形回帰モデルをトレーニングし、デプロイします。
+::: moniker-end
 
 この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
-> * SQL Server データベースから **pandas** データ フレームにデータを読み込む
+> * データベースから **pandas**データ フレームにデータを読み込む
 > * いくつかの列を削除して Python でデータを準備する
 
 [第 1 部](python-ski-rental-linear-regression.md)では、サンプル データベースを復元する方法を学習しました。
@@ -47,7 +50,7 @@ ms.locfileid: "83606724"
 
 Python でデータを使用するために、データベースから、pandas データ フレームにデータを読み込みます。
 
-Azure Data Studio で新しい Python notebook を作成し、次のスクリプトを実行します。 `<SQL Server>` を独自の SQL Server 名に置換します。
+Azure Data Studio で新しい Python notebook を作成し、次のスクリプトを実行します。 
 
 次の Python スクリプトでは、データベースの **dbo.rental_data** テーブルから、データセットを pandas データ フレーム **df** にインポートします。
 
@@ -60,7 +63,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=TutorialDB; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=TutorialDB;UID=<username>;PWD=<password>)
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 

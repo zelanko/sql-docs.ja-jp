@@ -1,5 +1,6 @@
 ---
 title: Count 関数 (レポート ビルダー) | Microsoft Docs
+description: 式で指定した null 以外の値の数を、指定したスコープのコンテキストで評価して返す Count 関数について説明します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e0213d580935112e48df2f8a774ac49202ee7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081300"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044089"
 ---
 # <a name="report-builder-functions---count-function"></a>レポート ビルダー関数 - Count 関数
   式で指定された NULL 以外の値の数を、指定されたスコープのコンテキストで評価して返します。  

@@ -1,5 +1,6 @@
 ---
 title: データ領域でのグループの追加または削除 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのデータ領域に、特定の値または式のセットでデータが整理されるグループを追加して、表示または計算されるようにすることを検討してください。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e559dc00246fb0b990c81de99c8036356a64034f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7db1160377fa16f2b00b150dcd2957c20f62af8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056555"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートで、計算や表示の対象として、特定の値または式のセットによってデータを整理する場合は、グループをデータ領域に追加します。 グループには、データセットのどのデータがそのグループに含まれるかを示す名前と式を割り当てます。 グループの詳細については、「 [グループについて (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  

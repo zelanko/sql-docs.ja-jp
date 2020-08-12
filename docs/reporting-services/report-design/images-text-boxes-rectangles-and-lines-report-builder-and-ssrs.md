@@ -1,5 +1,6 @@
 ---
 title: 画像、テキスト ボックス、四角形、線 (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーで、視覚効果の追加、重要な情報の強調表示、関連情報の提供を行うことができます。 画像、テキスト ボックス、四角形、および罫線を追加します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a57bef0be8819674142526d62ec824078ded04e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 18afd1d921969d84f0015b6e982b634feb46b097
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061032"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>画像、テキスト ボックス、四角形、および罫線 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、視覚的な効果の追加、重要な情報の強調、または関連情報の提供のために、テーブル、マトリックス、グラフなどのデータ領域以外にも、画像、テキスト ボックス、四角形などのレポート アイテムが使用されます。 レポート アイテムの書式設定は変更できます。 たとえば、罫線または余白の追加、初期表示または方向の変更、またはアイテムの正確なサイズと位置の指定を行うことができます。  

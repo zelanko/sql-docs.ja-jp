@@ -1,6 +1,7 @@
 ---
 title: トレース定義の既定値を設定する
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler を使用して、各プロバイダーまたは各サーバーに対して SQL Server と Analysis Services によって既定で使用されるテンプレートを設定する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 76144d1e3b115bca73683b198abb328ac72fae8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 48728a7557edc0d2ddfa5d3e1dbf3e9acb868aa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726851"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>トレース定義の既定値の設定 (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 トレース定義の既定値は、プロバイダーまたはサーバーごとに使用される既定のトレース テンプレートです。 既定のトレース テンプレートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に設定できます。  
   

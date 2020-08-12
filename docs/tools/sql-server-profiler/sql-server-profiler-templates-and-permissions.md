@@ -1,6 +1,7 @@
 ---
 title: SQL Server プロファイラーのテンプレートと権限
 titleSuffix: SQL Server Profiler
+description: SQL Server プロファイラーのしくみ、それを使用してイベントをトレースする方法、その機能に関する詳細が見つかる場所について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a5bb7c38fe1a9984c66dd83414aed9d3b853aa6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 96c78bc0fee624170b94b3360f75e00d876dc218
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729559"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server プロファイラーのテンプレートと権限
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] には、クエリが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部でどのように解決されるのかが表示されます。 これにより管理者は、どのような [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたは多次元式がサーバーに送信されるのか、また、そのサーバーではどのようにデータベースやキューブに接続して結果セットを返すのかを正確に知ることができます。  
   

@@ -3,28 +3,33 @@ title: 新しい R パッケージのインストール
 description: qlmlutils を使用して、新しい Python パッケージを、SQL Server Machine Learning Services のインスタンスにインストールする方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/11/2020
-ms.topic: conceptual
+ms.date: 06/04/2020
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: efea0d4306c71607de93652e08f347586a17450e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 23a3e746996615cac0fa902e21733f9ce3ea4f45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723975"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils で新しい R パッケージをインストールする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-この記事では、[**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) パッケージの関数を使用して SQL Server Machine Learning Services のインスタンスに新しい R パッケージをインストールする方法について説明します。 インストールするパッケージは、[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL ステートメントを使用してデータベース内で実行されている R スクリプトで使用できます。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+この記事では、[**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) パッケージの関数を使用して、[SQL Server 上の Machine Learning Services](../sql-server-machine-learning-services.md) および[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)のインスタンスに新しい R パッケージをインストールする方法について説明します。 インストールするパッケージは、[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL ステートメントを使用してデータベース内で実行されている R スクリプトで使用できます。
 
 > [!NOTE]
-> この記事で説明されている **sqlmlutils** パッケージは SQL Server 2019 以降で R パッケージを追加するために使用されます。 SQL Server 2017 以前の場合は、「[R ツールを使用してパッケージをインストールする](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)」を参照してください。
+> この記事で説明されている **sqlmlutils** パッケージは SQL Server 2019 以降で R パッケージを追加するために使用されます。 SQL Server 2017 以前の場合は、「[R ツールを使用してパッケージをインストールする](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017)」を参照してください。
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+この記事では、[**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) パッケージの関数を使用して、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) のインスタンスに新しい R パッケージをインストールする方法について説明します。 インストールするパッケージは、[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL ステートメントを使用してデータベース内で実行されている R スクリプトで使用できます。
+::: moniker-end
 
 ## <a name="prerequisites"></a>前提条件
 

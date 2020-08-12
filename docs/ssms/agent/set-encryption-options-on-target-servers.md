@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0638821e198ab99ae9eaa065ccf6ede543af77a1
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: ee53a4f973537dad629a24bb442e8a1076eebd11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644524"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>ターゲット サーバーでの暗号化オプションの設定
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 マスター サーバーと一部またはすべてのターゲット サーバーの間で トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) 暗号通信の証明書を使用できない場合、これらの間のチャネルを暗号化するには、必要なセキュリティ レベルを使用するようにターゲット サーバーを構成します。  
   
-マスター サーバーとターゲット サーバーの間の特定の通信チャネルに求められる適切なセキュリティ レベルを構成するには、ターゲット サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのレジストリ サブキー **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\** \<*instance_name*> **\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** を、次のいずれかの値に設定します。 \<*instance_name*> の値は **MSSQL.** _n_ です。 たとえば、 **MSSQL.1** や **MSSQL.3**となります。  
+マスター サーバーとターゲット サーバーの間の特定の通信チャネルに求められる適切なセキュリティ レベルを構成するには、ターゲット サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registry subkey **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\** \<*instance_name*> **\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** を、次のいずれかの値に設定します。 \<*instance_name*> の値は **MSSQL.** _n_ です。 たとえば、 **MSSQL.1** や **MSSQL.3**となります。  
   
 |値|説明|  
 |---------|---------------|  

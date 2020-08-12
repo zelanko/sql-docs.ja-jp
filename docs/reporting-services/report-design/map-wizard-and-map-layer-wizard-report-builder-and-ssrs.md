@@ -1,5 +1,6 @@
 ---
 title: マップ ウィザードおよびマップ レイヤー ウィザード (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーのマップ ウィザードまたはマップ レイヤー ウィザードで、マップの作成、マップ レイヤーの追加、マップ レイヤー オプションの変更を自動化する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078568"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048330"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
   
  マップをレポートに追加したりマップ レイヤーをマップに追加したりするには、次の情報を事前に用意します。  
   
--   **空間データ ソース :** 空間データを提供するソースの場所またはソースへの接続です。たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前と空間データを格納しているデータベース、または Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの空間データを指定できます。  
+-   **空間データ ソース :** 空間データを提供するソースの場所またはソースへの接続です。たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前と空間データを格納しているデータベース、または Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの空間データを指定できます。  
   
 -   **Spatial data.** 位置を指定する座標セットを格納している空間データ ソースのフィールドです。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "77078568"
   
  ウィザード ページのタイトルをクリックすると、対応するヘルプ コンテンツが表示されます。 表示されるページは、選択したマップの種類、空間データのソース、および分析データのソースによって異なります。  
   
-1.  [[空間データのソースを選択]](#SpatialDataSource): 空間データは、マップのギャラリー、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースの空間データを指定できます。  
+1.  [[空間データのソースを選択]](#SpatialDataSource): マップ ギャラリーの空間データ、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースの空間データを指定できます。  
   
     -   [空間データとは](#SpatialData)  
   
@@ -119,7 +120,7 @@ ms.locfileid: "77078568"
  マップ ギャラリーを拡張するには、マップ ギャラリー ディレクトリのレポートを追加または削除したり、マップを整理するためのフォルダーを追加したりします。 詳細については、「[マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)」を参照してください。  
   
 ###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI シェープファイルは、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル空間データ形式に準拠するデータが格納されたファイルのセットです。 通常、ファイルのセットには、空間データが格納されている *\<filename>* .shp ファイルと、サポート ファイルの *\<filename>* .dbf が含まれます。  
+ ESRI シェープファイルは、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル空間データ形式に準拠するデータが格納されたファイルのセットです。 このファイルのセットには、通常、空間データを含む . *\<filename>* .shp ファイルとサポート ファイル *\<filename>* .dbf が含まれます。  
   
  シェープファイルを空間データ ソースとして指定し、このファイルがローカル コンピューター上にある場合は、空間データが自動的にレポートに埋め込まれます。 ESRI ファイルの空間データを動的に使用するには、次の操作を行う必要があります。  
   

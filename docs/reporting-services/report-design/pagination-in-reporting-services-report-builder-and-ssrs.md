@@ -1,6 +1,6 @@
 ---
 title: レポートの改ページ位置の自動修正 (レポート ビルダーおよび SSRS) | Microsoft Docs
-description: 改ページ位置の自動修正とは、ページ分割されたレポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 Reporting Services での改ページは、レポートの閲覧と作成に使用する表示拡張機能によって異なります。
+description: レポート ビルダーのページ分割されたレポートのページ数と、これらのページ上でレポート アイテムがどのように配置されるかについて説明します。
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b308503f2aafb1fcbfd88b3e7509906cafad8a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006164"
 ---
 # <a name="pagination-in-reports-report-builder--and-ssrs"></a>レポートの改ページ位置の自動修正 (レポート ビルダーおよび SSRS)
   改ページ位置の自動修正とは、ページ分割されたレポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] での改ページは、レポートの閲覧と作成に使用する表示拡張機能によって異なります。 レポート サーバーでレポートを実行した場合は HTML レンダラーが使用されます。 HTML には、特定の改ページ規則が適用されます。 たとえば、同じレポートを PDF にエクスポートした場合は、PDF レンダラーが使用され、異なる規則が適用されるため、レポートの改ページも異なります。 レポート作成に使用するレンダラーに最適化された、ユーザーにとって見やすいレポートをデザインするには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]における改ページの制御規則を理解しておく必要があります。  
@@ -70,7 +70,7 @@ ms.locfileid: "75247338"
   
 -   ResetPageNumber は、改ページが生じたときにページ番号を 1 にリセットするかどうかを指定します。 このプロパティによって True に評価された場合、ページ番号はリセットされます。  
   
- **[Tablix のプロパティ]** 、 **[四角形のプロパティ]** 、または **[グループのプロパティ]** ダイアログ ボックスの BreakLocation プロパティを設定できますが、レポート ビルダーのプロパティ ペインで Disabled、ResetPageNumber、および PageName の各プロパティを設定する必要があります。 プロパティ ペインのプロパティがカテゴリごとに整理されている場合、これらのプロパティは **PageBreak** カテゴリ内にあります。 グループの場合、 **PageBreak** カテゴリは、 **Group** カテゴリ内にあります。  
+ **[Tablix のプロパティ]**、 **[四角形のプロパティ]**、または **[グループのプロパティ]** ダイアログ ボックスの BreakLocation プロパティを設定できますが、レポート ビルダーのプロパティ ペインで Disabled、ResetPageNumber、および PageName の各プロパティを設定する必要があります。 プロパティ ペインのプロパティがカテゴリごとに整理されている場合、これらのプロパティは **PageBreak** カテゴリ内にあります。 グループの場合、 **PageBreak** カテゴリは、 **Group** カテゴリ内にあります。  
   
  定数と、単純型または複合型の式を使用して、Disabled および ResetPageNumber プロパティの値を設定します。 ただし、BreakLocation プロパティを持つ式は使用できません。 式の記述と使用の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」をご覧ください。  
   

@@ -1,5 +1,6 @@
 ---
 title: ゲージへの最小値または最大値の設定 (レポート ビルダー) | Microsoft Docs
+description: ページ分割されたレポートでゲージとグラフがどのように違うかについて説明します。 レポート ビルダーでは、スケールの最小値と最大値を定義します。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab0aa643285b4afb0129c2bcd33455967571c750
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2277867a1709ddaa735c00934468800c23841548
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886583"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>ゲージへの最小値または最大値の設定 (レポート ビルダーおよび SSRS)
   複数のグループが定義されている、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのグラフとは異なり、ゲージには 1 つの値しか表示されません。 レポート ビルダーおよびレポート デザイナーは、ゲージに表示される値のコンテキストや相対的な有意性を判断することができないため、スケールの最小値と最大値は独自に定義する必要があります。   

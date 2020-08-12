@@ -1,5 +1,6 @@
 ---
 title: 図形グラフ (レポート ビルダー) | Microsoft Docs
+description: レポート ビルダーの図形グラフで、全体に占める割合 (パーセント) として、値データがどのように表示されるかについて説明します。 図形グラフは、通常、セット内の複数の値を相対的に比較するために使用します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e1d8d10837708b7cde4f83056a23a0e143662ab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5cf834c986827fa83617f8eafc30e8798314e40b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006071"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>図形グラフ (レポート ビルダーおよび SSRS)
   図形グラフでは、全体に占める割合 (パーセント) として値データが表示されます。 図形グラフは、通常、セット内の異なる値間での相対的な比較を示すために使用されます。 カテゴリは、図形の個々のセグメントによって表されます。 セグメントのサイズは、値によって決まります。 図形グラフは円グラフに用途が似ていますが、カテゴリは大きい方から順に並べられます。  

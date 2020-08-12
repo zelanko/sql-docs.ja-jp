@@ -1,23 +1,23 @@
 ---
 title: SQL Server 単体テスト デザイナーのテスト条件を作成する
+description: TestCondition クラスを拡張して SQL Server 単体テスト デザイナーのカスタム テスト条件を作成する方法について説明します。 カスタム テスト条件の例を確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e34ca98e6a6a9423bd0237c980e15b91fcdd9aa6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241481"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518892"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>SQL Server 単体テスト デザイナーのテスト条件を作成する方法
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>方法:SQL Server 単体テスト デザイナーのテスト条件を作成する
 
 新しいテスト条件の作成には、拡張可能な [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) クラスを利用できます。 たとえば、列数や結果セットの値を検証するテスト条件を作成することができます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75241481"
   
 10. [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) クラスから、独自のクラスを派生します。  
   
-11. アセンブリに厳密な名前で署名します。 詳細については、「[方法 : 厳密な名前でアセンブリに署名する](https://msdn.microsoft.com/library/xc31ft41.aspx)」を参照してください。  
+11. アセンブリに厳密な名前で署名します。 詳細については、「[厳密な名前でアセンブリに署名する](https://msdn.microsoft.com/library/xc31ft41.aspx)」を参照してください。  
   
 12. クラス ライブラリをビルドします。  
   

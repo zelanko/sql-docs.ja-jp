@@ -2,7 +2,7 @@
 title: Azure Active Directory 認証を利用した接続
 description: Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証機能を使用する Java アプリケーションを開発する方法について説明します。
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 06/17/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 73b377076dfea329ba82c0219c28bf9c955d7e7f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 16e6758e6846c6258c0345bd8ceca8aed3c3f3c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634813"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054255"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を利用した接続
 
@@ -31,7 +31,7 @@ Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証をサポ�
     * **ActiveDirectoryMSI**
         * ドライバー バージョン **v7.2** 以降でサポートされています。`authentication=ActiveDirectoryMSI` を使用して、"ID" サポートが有効になっている Azure リソース内から Azure SQL Database および Data Warehouse に接続することができます。 必要に応じて、この認証モードと共に、**msiClientId** を Connection または DataSource プロパティで指定することもできます。これには、接続を確立するための **accessToken** を取得するために使用される、マネージド サービス ID のクライアント ID が含まれている必要があります。
     * **ActiveDirectoryIntegrated**
-        * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryIntegrated` を使用し、統合認証を使って Azure SQL Database および Data Warehouse に接続することができます。 この認証モードを使用するには、オンプレミスの Active Directory フェデレーション サービス (ADFS) をクラウドの Azure Active Directory とフェデレーションする必要があります。 これが設定されたら、ネイティブ ライブラリ "mssql-jdbc_auth-\<バージョン>-\<arch>.dll" を Windows OS のアプリケーション クラス パスに追加するか、クロスプラットフォーム認証をサポートするための Kerberos チケットを設定することで接続できます。 ドメインに参加しているマシンにログインしているときに資格情報の入力を求められることなく、Azure SQL DB または DW にアクセスできるようになります。
+        * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryIntegrated` を使用し、統合認証を使って Azure SQL Database および Data Warehouse に接続することができます。 この認証モードを使用するには、オンプレミスの Active Directory フェデレーション サービス (ADFS) をクラウドの Azure Active Directory とフェデレーションする必要があります。 これが設定されたら、Windows OS のアプリケーション クラス パスにネイティブ ライブラリ 'mssql-jdbc_auth-\<version>-\<arch>.dll' を追加するか、クロスプラットフォーム認証されるよう Kerberos チケットを設定します。 ドメインに参加しているマシンにログインしているときに資格情報の入力を求められることなく、Azure SQL DB または DW にアクセスできるようになります。
     * **ActiveDirectoryPassword**
         * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryPassword` を使用し、Azure AD プリンシパル名とパスワードを使って Azure SQL Database および Data Warehouse に接続することができます。
     * **SqlPassword**
@@ -67,7 +67,7 @@ Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証をサポ�
 ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 //Optional
-ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
 ```
 
 ActiveDirectoryMSI 認証モードを使用する例:
@@ -108,7 +108,7 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>ActiveDirectoryIntegrated 認証モードを使用した接続
 バージョン 6.4 では、Microsoft JDBC Driver によって、複数のプラットフォーム (Windows、Linux、および macOS) で Kerberos チケットを使用した ActiveDirectoryIntegrated 認証のサポートが追加されています。
-詳細については、「[Windows、Linux、macOS で Kerberos チケットを設定する](#set-kerberos-ticket-on-windows-linux-and-macos)」をご覧ください。 また、Windows では、JDBC ドライバーを使用した ActiveDirectoryIntegrated 認証に mssql-jdbc_auth-\<バージョン>-\<arch>.dll を使用することもできます。
+詳細については、「[Windows、Linux、macOS で Kerberos チケットを設定する](#set-kerberos-ticket-on-windows-linux-and-macos)」をご覧ください。 また、Windows では、JDBC ドライバーを使用した ActiveDirectoryIntegrated 認証に mssql-jdbc_auth-\<version>-\<arch>.dll を使用することもできます。
 
 > [!NOTE]
 >  古いバージョンのドライバーを使う場合は、こちらの[リンク](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)で、この認証モードを使用するために必要な該当する依存関係を確認してください。 

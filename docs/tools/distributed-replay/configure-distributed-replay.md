@@ -12,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b1385a3bcc755844f5af803f16d247f0692d9fbb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5ec828e6aa1df2ad38c7a3f831d9f8432dc681b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681865"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生構成の詳細は、分散再生コントローラー、クライアント、および管理ツールがインストールされている場所の XML ファイルで指定されます。 このようなファイルには、次のファイルが含まれます。  
   
 -   [コントローラー構成ファイル](#DReplayController)  
@@ -34,7 +34,7 @@ ms.locfileid: "82999382"
 ##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a> コントローラー構成ファイル:DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller サービスを開始すると、コントローラー構成ファイル `DReplayController.config`からログ記録レベルが読み込まれます。 このファイルは、Distributed Replay Controller サービスをインストールしたフォルダーにあります。  
   
- **\<コントローラーのインストール パス>\DReplayController.config**  
+ **\<controller installation path>\DReplayController.config**  
   
  コントローラー構成ファイルによって指定されるログ記録レベルには、次の内容が含まれます。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "82999382"
 ##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a> クライアント構成ファイル:DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client サービスを開始すると、クライアント構成ファイル `DReplayClient.config`から構成設定が読み込まれます。 このファイルは、各クライアントの Distributed Replay Client サービスをインストールしたフォルダーにあります。  
   
- **\<クライアントのインストール パス>\DReplayClient.config**  
+ **\<client installation path>\DReplayClient.config**  
   
  クライアント構成ファイルによって指定される設定には、次の内容が含まれます。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "82999382"
   
  既定の前処理構成ファイルは管理ツールのインストール フォルダーにあります。  
   
- **\<管理ツールのインストール パス>\DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  前処理構成の設定は、前処理構成ファイル内の `<PreprocessModifiers>` 要素の子である XML 要素で指定されています。 これらの設定には、次の内容が含まれています。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "82999382"
   
  既定の再生構成ファイルは管理ツールのインストール フォルダーにあります。  
   
- **\<管理ツールのインストール パス>\DReplayAdmin\DReplay.exe.replay.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
   
  再生構成の設定は、再生構成ファイルの `<ReplayOptions>` 要素および `<OutputOptions>` 要素の子である XML 要素で指定されています。  
   

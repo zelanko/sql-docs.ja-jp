@@ -1,5 +1,6 @@
 ---
 title: テキスト ボックス (レポート ビルダー) | Microsoft Docs
+description: テキスト ボックスも含むテーブルまたはマトリックスのセルについて調べます。これにより、レポート ビルダーのスタンドアロン テキスト ボックスと同じ方法で書式設定できます。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db8676a7b00b3cfbf70bca4fecee7539437e1bc2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef1ef6df82fcbb10e70793480e04a2be5baaefb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067075"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>テキスト ボックス (レポート ビルダーおよび SSRS)
   テキスト ボックスといえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint のように領域にテキストを含むスタンド アロンのボックスを思い浮かべると思います。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、同じように、タイトル、説明、ラベルの静的なテキストや、式に基づく動的なテキストを表示できます。 ただし、テーブルまたはマトリックス (Tablix データ領域) の各セルにはテキスト ボックスがあり、レポート内のスタンドアロン テキスト ボックスと同じ方法で書式設定することもできます。  

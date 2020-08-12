@@ -1,5 +1,6 @@
 ---
 title: ドキュメント マップの作成 (レポート ビルダー) | Microsoft Docs
+description: ドキュメント マップを使用して、レポート ビルダーで表示レポート内のレポート アイテムへの一連のナビゲーション リンクを提供する方法について説明します。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6f1d18c8559625c6e58b45b4e9810ed29e0ef28
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bfb17d88af0c5901e0cb4ee0097d02c0225693d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061052"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
 

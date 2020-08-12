@@ -6,20 +6,20 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728035"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の Spark History Server の Spark アプリケーションのデバッグと診断
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 この記事では、拡張 Spark History Server を使用して、SQL Server ビッグ データ クラスターで Spark アプリケーションをデバッグおよび診断する方法に関するガイダンスを提供します。 これらのデバッグ機能と診断機能は、Microsoft が提供する Spark History Server に組み込まれています。 拡張機能には、データ タブ、グラフ タブ、診断タブがあります。データ タブで、ユーザーは Spark ジョブの入力データと出力データを確認できます。 グラフ タブで、ユーザーはデータフローを確認し、ジョブ グラフを再生できます。 診断タブで、ユーザーはデータ スキュー、時間のずれ、および実行プログラムの使用状況の分析を参照できます。
 
@@ -28,7 +28,7 @@ ms.locfileid: "83606504"
 オープン ソースの Spark History Server ユーザー エクスペリエンスは、ジョブ固有のデータや、ビッグ データ クラスターのジョブ グラフとデータ フローの対話型の視覚化などの情報によって強化されています。 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>URL を指定して Spark History Server Web UI を開く
-次の URL を参照して Spark History Server を開き、`<Ipaddress>` と `<Port>` をビッグ データ クラスター固有の情報に置き換えます。 基本認証 (ユーザー名/パスワード) のビッグ クラスター セットアップでは、ゲートウェイ (Knox) エンドポイントにログインするように求められたとき、ユーザー **root** を指定する必要があります。 詳細については、次の情報を参照してください。[SQL Server ビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md)
+次の URL を参照して Spark History Server を開き、`<Ipaddress>` と `<Port>` をビッグ データ クラスター固有の情報に置き換えます。 SQL Server 2019 CU 5 より前のバージョンで展開されるクラスターで、基本認証 (ユーザー名とパスワード) のビッグ クラスター セットアップを使用する場合、ゲートウェイ (Knox) エンドポイントにログインするように求められたときに、ユーザー **root** を指定する必要があります。 [SQL Server ビッグ データ クラスターの展開](quickstart-big-data-cluster-deploy.md)に関する記事を参照してください。 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -193,7 +193,13 @@ Spark History Server Web UI は次のような外観です。
 + 色アイコンをクリックして、すべての下書きの対応する内容を選択または選択解除します。
 
     ![グラフの選択](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## <a name="spark--yarn-logs"></a>Spark ログと Yarn ログ
+Spark History Server に加えて、Spark と Yarn のログはそれぞれ次の場所で見つけることができます。
+* Spark イベント ログ: hdfs:///system/spark-events
+* Yarn ログ: hdfs:///tmp/logs/root/logs-tfile
 
+注:これらのログは両方とも、既定の保持期間は 7 日間です。 保持期間を変更する場合は、[Apache Spark と Apache Hadoop の構成](configure-spark-hdfs.md)に関するページを参照してください。 場所は変更することが**できません**。
 
 ## <a name="known-issues"></a>既知の問題
 Spark History Server には、次の既知の問題があります。

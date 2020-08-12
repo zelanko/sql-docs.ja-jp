@@ -1,5 +1,6 @@
 ---
 title: テーブル (レポート ビルダーおよび SSRS) | Microsoft Docs
+description: 1 つまたは複数のフィールドを使用するか、レポート ビルダーのページ分割されたレポートで独自の式を記述して、詳細データまたはグループ化されたデータを表示します。
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cac6edf23b15cbb6dc100c84a7035b425798d9d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574739"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067106"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>テーブル (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]で、テーブルを使用すると、ページ分割されたレポートに詳細データまたはグループ化されたデータ、あるいはその両方を組み合わせて表示できます。   
@@ -42,7 +43,7 @@ ms.locfileid: "65574739"
   
  ![デザイン画面上のテーブル テンプレート、選択](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "デザイン画面上のテーブル テンプレート、選択")  
   
- データ行の行ハンドルは、詳細シンボル (![詳細行の 3 本の平行線がある行ハンドル](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")) を示します。 これらの行にデータを表示するには、レポート データ ペインからヘッダーまたは詳細行のテーブル セルにフィールドをドラッグします。 両方の行に同時にデータが表示されます。 列を追加するには、挿入ポイントが表示されるまでフィールドをテーブルにドラッグします。 テーブルにデータセット フィールドを追加した後、日付と通貨の既定の書式を変更して、これらの値がレポートに表示される方法を制御できます。 次の図に、Date、Order、Product、Qty、および Line Total フィールドを含むテーブル データ領域を示します。  
+ データ行の行ハンドルは、詳細シンボル (![詳細行の 3 本の平行線がある行ハンドル](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")) を示します。 これらの行にデータを表示するには、レポート データ ペインからヘッダーまたは詳細行のテーブル セルにフィールドをドラッグします。 両方の行に同時にデータが表示されます。 列を追加するには、挿入ポイントが表示されるまでフィールドをテーブルにドラッグします。 テーブルにデータセット フィールドを追加した後、日付と通貨の既定の書式を変更して、これらの値がレポートに表示される方法を制御できます。 次の図は、次のフィールドを含むテーブル データ領域を示しています:Date、Order、Product、Qty、および Line Total です。  
   
  ![デザイン、列ヘッダーが太字のテーブル](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "デザイン、列ヘッダーが太字のテーブル")  
   
